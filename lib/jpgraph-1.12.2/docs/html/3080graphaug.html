@@ -1,0 +1,379 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="3070adjscalelabels.html">Previous</A>
+<A HREF="3090axisform.html">Next</A>
+<HR>
+<H2><A NAME="6_13">6.13 Adding arbitrary text strings to the graph</A></H2>
+ To add clarification or other information text strings to the graph you
+ can add arbitrary lines of text anywhere you like onto the graph. The
+ text might have multiple lines and you can shoose the paragraph
+ alignment.
+<P> To add text you have to create one or more instances of the<A href="../ref/Text.html#_C_TEXT">
+ Text()</A> object and then add the text object to the graph with the<A href="../ref/Graph.html#_GRAPH_ADDTEXT">
+ AddText()</A> method.</P>
+<P> The position of these text boxes are given as fraction of the width
+ and height of the graph. When you are positioning these text boxes you
+ migt also choose what part of the text box should be considered the
+ anchor point for the position you specify.</P>
+<P> By default the anchor point is the upper left corner of the bounding
+ box for the text.</P>
+<P> To show some ways of positioning the text we use a very simple bar
+ graph not to distact from the text. We first just add a single text
+ line with most of the settings their default value by adding the
+ following lines to the graph
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $txt</FONT><FONT color="#006600">
+=new</FONT><FONT color="#0000CC"> Text</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;This is a text&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$txt</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Pos</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+0</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">0</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$txt</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;red&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">AddText</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$txt</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P> The result is shown below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example25.html"> <IMG border="0" HEIGHT="200"
+ src="img/example25.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 1:</B> Adding a single text string in the upper
+ left corner<A href="exframes/frame_example25.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P>Not too exiting. Let's make it more interesting by having a
+ background color, using larger fonts and framing the text box and
+ adding a drop shadow to the text box by using the methods<A href="../ref/Text.html#_TEXT_SETBOX">
+ SetBox()</A> and<A href="../ref/Text.html#_TEXT_SETSHADOW"> SetBox()</A>
+</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example25.1.html"> <IMG border="0" HEIGHT="200"
+ src="img/example25.1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 2:</B> Making the text more interesting<A href="exframes/frame_example25.1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> That's better. Now we get some attention. If you want to add a text
+ with several lines you just need to separate the lines with a newline
+ ('\n' character). The default paragraph alignment is left edge but you
+ can also use right and center alignment.</P>
+<P> As an illustration let's add a couple of more lines to the previous
+ text, center the text box in the middle of the graph and also use
+ centered paragraph alignment for the text. To adjust the paragarph
+ alignemtn of the text you have to use the<A href="../ref/Text.html#_TEXT_PARAGRAPHALIGN">
+ Text::ParagraphAlign()</A></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example25.2.html"> <IMG border="0" HEIGHT="200"
+ src="img/example25.2.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 3:</B> Text with multiple lines and centered
+ paragraph alignment<A href="exframes/frame_example25.2.html"> [src]</A></EM>
+</SMALL></DIV></P>
+<P> Of course there is no limit to the number of text string you can add
+ to the graph.</P>
+<P> From version 1.12 it is also possible to add text strings to a graph
+ using the scale coordinates instead. This is accomplished by using the<A
+href="../ref/Text.html#_TEXT_SETSCALEPOS"> Text::SetScalePos()</A> Which
+ is completely analogue to SetPos() with the only difference that the
+ positions given are interpretated as scale values instead of fractions
+ of the width and height.</P>
+<H2><A NAME="6_14">6.14 Adding titles and footers to the Graph</A></H2>
+ Each graph can have up to three differenet titles accessed by the three
+ properties
+<OL>
+<LI> title</LI>
+<LI> subtitle</LI>
+<LI> subsubtitle</LI>
+</OL>
+ All of these three properties is a standard text object which means
+ that you can have individual font, colors, margins and sizes of these
+ tree titles.
+<P> The only thing you need to think of is that you probably want to add
+ some extra margin to make room for the titles (using<A href="../ref/Graph.html#_GRAPH_SETMARGIN">
+ Graph::SetMargin()</A> )</P>
+<P> The individual positioning of these titles are done automatically
+ and will adjust to the font size beeing used.</P>
+<P> If you for, aesthetic reasons, would like increase the distance from
+ the top where the title is positioned (or the intra distance between
+ title and sub title) you can use the<A href="../ref/Text.html#_TEXT_SETMARGIN">
+ Text::SetMargin()</A> method. For example the line</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetMargin</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+20</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P> will set the distance between the top of the title string and the
+ top of the graph to 20 pixels. If you instead call the SetMargin()
+ method for the subtitle it will adjust the distance between the top of
+ the subtitle and the bottom of the title.</P>
+<P> The titles will be positioned at the top and be centered in the
+ graph. Each of these titles may have multiple lines each separated by a
+ &quot;\n&quot; (newline) character. By default the paragraph alignment for each
+ title is centered but may of course be changed (using the
+ ParagraphAlign()) method.</P>
+<P> Each graph can also have a footer. This footer is actually three
+ footers. Left, center and right. The 'left' footer is aligned to the
+ left, the 'center' at the bottom center and the right to the right.</P>
+<P> Each of these three positions is a standard Text object which means
+ you can change color, font and size as you please individually on each
+ of these footer positions.</P>
+<P> You access the footer through the Graph::footer property as the
+ following example shows</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">footer</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">left</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+Set</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">&quot;(C) 2002
+ KXY&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">footer</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+center</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">Set</FONT><FONT
+color="#006600">(</FONT><FONT color="#CC0000">&quot;CONFIDENTIAL&quot;</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">footer</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+center</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">&quot;red&quot;</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">footer</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+center</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetFont</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+FF_FONT2</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_BOLD</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">footer</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+right</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">Set</FONT><FONT
+color="#006600">(</FONT><FONT color="#CC0000">&quot;19 Aug 2002&quot;</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P></P>
+<HR> <SMALL><STRONG> Note:</STRONG> If you enable the brand timing
+ argument you should leave the left footer empty.</SMALL>
+<HR>
+<H2><A NAME="6_15">6.15 Adding a tab title</A></H2>
+ A variant of the titles is the<I> tab title</I>. This is just another
+ option you have of putting a name on the graph. The apperance of this
+ type is a tab on top of the plotarea with text inside.
+<P> You can access the tab using the 'tabtitle' property of the graph.</P>
+<P> The following figure shows an example of how this can look.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_tabtitleex1.html"> <IMG border="0" HEIGHT="200"
+ src="img/tabtitleex1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 4:</B> Using the tabbed title style<A href="exframes/frame_tabtitleex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> As usual you have full freedom to specify font and colors for this
+ type of title. Please see the class reference regarding<A href="../ref/GraphTabTitle.html#_C_GRAPHTABTITLE">
+ GraphTabTitle()</A> for more information.</P>
+<H2><A NAME="6_16">6.16 Using background images</A></H2>
+ Insetad of having a single color background you can easily have an
+ arbitrary image as the background. The image may be in either PNG, JPG
+ or GIF format depending on what your installation supports.
+<P></P>
+<HR> <SMALL><STRONG> A note on GD:</STRONG> If you are using GD 2.xx you
+ must make sure that the define USE_TRUECOLOR is set to true. This is
+ also the default. Failure to do so in combination with GD 2.xx will
+ make the background image just look like a solid black square.</SMALL>
+<HR>
+<P> To use a specific image as the background you just have to use the
+ method<A href="../ref/Graph.html#_GRAPH_SETBACKGROUNDIMAGE">
+ Graph::SetBackgroundImage()</A> The arguments specify file-name, how
+ the image should be positioned in the graph and finally the format of
+ the image (if it is in JPG, PNG or GIF) format. If the format is
+ specified as &quot;auto&quot; (the default) then the appropriate image format
+ will be determined from the extension of the image file.</P>
+<P> The file name is of course obvious but the second argument might not
+ be. This arguments determine how the image should be copied onto the
+ graph image. You can specify three different variants here</P>
+<OL>
+<LI> BGIMG_ COPY This will just copy the image unchanged onto the graph
+ from the top left corner.</LI>
+<LI> BGIMG_CENTER This will just copy the image unchanged onto the graph
+ but it will center the image in the graph.</LI>
+<LI> BGIMG_FILLFRAME This will scale the image to exactly fit the whole
+ graph image.</LI>
+<LI> BGIMG_FILLPLOT This will scale the image to exactly fit just the
+ plot area of the graph.</LI>
+</OL>
+ You might often find yourself wanting to use a background image as a
+ &quot;waterstamp&quot;. This usually means taking the original image, import it
+ to some image editing program and then &quot;bleeching&quot; the color
+ saturation, reducing the contrast and so on. Finally you save the
+ modified image which you then use as a bacvkground image.
+<P> This whole process can be automatically accomplished in JpGraph by
+ using the method<A href="../ref/Graph.html#_GRAPH_ADJBACKGROUNDIMAGE">
+ Graph::AdjBackgroundImage()</A> which allow you to adjust color
+ saturation, brightness and contrast of the background image.</P>
+<P> For example, in the image below I have used the settings</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">AdjBackgroundImage</FONT><FONT color="#006600">
+(...)</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> to achive the &quot;watercolor&quot; effect to avoid the image being too
+ intrusive in the graph.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_backgroundex03.html"> <IMG border="0" HEIGHT="200"
+ src="img/backgroundex03.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 5:</B> Example on using a watermark type
+ background image<A href="exframes/frame_backgroundex03.html"> [src]</A></EM>
+</SMALL></DIV></P>
+<P></P>
+<HR> <SMALL><STRONG> Sidenote:</STRONG> The background image used above
+ is my primary means of summer transportation. A 1998 Triumph Tiger.
+ This bike is a nice 900cc quarter-of-a-metric-ton on/off-road bike.
+ This is one of the few bikes I found which I can ride comfortable in
+ despite me being 6' 4''.</SMALL>
+<HR>
+<H2><A NAME="6_17">6.17 Using a background gradient</A></H2>
+ In addition to the background image you can also add a background color
+ gradient. This gradient can be covering the entire graph, just the plot
+ area or just the margins. This flexibility allows you to combine a
+ background image with a background color gradient. You can for example
+ use a background image in the plot area and a color gradient out in the
+ margins.
+<P> You specify a color gradient background by calling the<A href="../ref/Graph.html#_GRAPH_SETBACKGROUNDGRADIENT">
+ Graph::SetBackgroundGradient()</A> method. All details are available in
+ the class reference (follow the link above). We finally give a quick
+ example on what kind of effect you can achieve using this feature.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_gradbkgex1.html"> <IMG border="0" HEIGHT="200"
+ src="img/gradbkgex1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 6:</B> Using a background color gradient with
+ the SetBackgroundGradient() method<A href="exframes/frame_gradbkgex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<P> Finally we like to mention that in the &quot;/utils/misc/&quot; directory you
+ will find a small utility script called &quot;mkgrad.php&quot;. Running this
+ script presents you with a UI that makes it a breeze to create a
+ gradient image on it's own.</P>
+<P> The UI for the utility is so obvious that we won't discuss it
+ further, we just show it below. <IMG alt="The UI for the mkgrad.php utility"
+HEIGHT="273"  src="img/mkgrad_fig1.png" WIDTH="372"><I> The UI for the
+ mkgrad.php utility</I></P>
+<P> In the example below I have used this utility to get a more
+ interesting plot area.</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_inyaxisex2.html"> <IMG border="0" HEIGHT="300"
+ src="img/inyaxisex2.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 7:</B> Example of the use of a gradient
+ background<A href="exframes/frame_inyaxisex2.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<H2><A NAME="6_18">6.18 Using callbacks for Plot marks</A></H2>
+ An interesting enhancement when using Plotmarks is the possibility to
+ add a callback function to control the size and color of the plotmarks.
+<P> This callback function will get called with the current Y-value (for
+ the plotmark) as it's argument. As return value the callback function
+ must return an array containing three (possible null) values. The
+ values returned must be</P>
+<OL>
+<LI> Plot mark Weight</LI>
+<LI> Plot mark Color</LI>
+<LI> Plot mark Fill color</LI>
+</OL>
+ The exact meaning of the parameters will of course depend on the type
+ of plot marks being used.
+<P> The callback must be a global function and is installed with a call
+ to<A href="../ref/PlotMark.html#_PLOTMARK_SETCALLBACK">
+ PlotMark::SetCallback()</A></P>
+<P> So for example to install a callback that changes the fill color for
+ all marks with a (Y) value higher than 90 you could add the lines</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#006600">
+ function</FONT><FONT color="#0000CC"> MarkCallback</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$aVal</FONT><FONT color="#006600">) {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;if(</FONT><FONT color="#0000CC"> $aVal</FONT><FONT color="#006600">
+ &gt;</FONT><FONT color="#0000CC"> 90</FONT><FONT color="#006600">)
+<BR /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$fcolor</FONT><FONT color="#006600">
+=</FONT><FONT color="#CC0000">&quot;red&quot;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#006600">else
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$fcolor</FONT><FONT color="#006600">
+=</FONT><FONT color="#CC0000">&quot;&quot;</FONT><FONT color="#006600">;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;return array(</FONT><FONT color="#CC0000">&quot;&quot;</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000">&quot;&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$fcolor</FONT><FONT color="#006600">);
+<BR />}
+<BR />...
+<BR /></FONT><FONT color="#0000CC">$plot</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">mark</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetCallback</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;MarkCallback&quot;</FONT><FONT color="#006600">);
+<BR />...</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> As you can see in the above example we have left some of the return
+ values blank. Doing this will just ignore any change of these value and
+ use the global settings for the plotmarks.</P>
+<P> If you also let the (Y) value affect the size of the plot marks you
+ can get what is sometimes known as a &quot;balloon plot&quot;. The example below
+ is basically a scatter plot that uses filled circles to mark the
+ points. A format callback is then used to change the color and size
+ depending on the Y-value for each plot.</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_balloonex1.html"> <IMG border="0" HEIGHT="300"
+ src="img/balloonex1.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 8:</B> Creating a balloon plot by using plot
+ mark callback function<A href="exframes/frame_balloonex1.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+<H2><A NAME="6_19">6.19 Rotating graphs 90 degrees</A></H2>
+ In section<A href="7adv.html#10_2"> 10.2</A> you can read about
+ arbitrary rotation of the graphs. For most practical purposes rotation
+ of 90 degrees is most usefull. This could for example be used to plot
+ horizontal bar graphs.
+<P> The slight complication with general rotation is that the margins
+ also rotates, this means that if you rotate a graph 90 degrees the left
+ margin in the image was originally the bottom margin. In additional by
+ default the center of the rotation is the center of the plot area and
+ not the entire image (if all the margins are symetrical then they will
+ of course coincide). This means that depending on your margin the
+ center of the rotation will move. You can read more about this and how
+ to manually set the center for rotation in the sectin about rotation,<A href="7adv.html#10_2">
+ 10.2</A></P>
+<P> This is just a slight inconvinience which you have to take into
+ account when you need to set an explicit margin with a call to<A href="../ref/Graph.html#_GRAPH_SETMARGIN">
+ Graph::SetMargin()</A></P>
+<P> However, in order to make a rotation of 90 degrees much easier you
+ can easily rotate a graph 90 degrees and set the correct margin with a
+ call to<A href="../ref/Graph.html#_GRAPH_SET90ANDMARGIN">
+ Graph::Set90AndMargin()</A> The parameter to this method lets you
+ specify the margins as you will se them in the image without having to
+ think of what becomes what after the rotation.</P>
+<P> So, the only thing you need to do is call this method and then the
+ graph will have been rotated 90 degrees.</P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="3070adjscalelabels.html">Previous</A>
+<A HREF="3090axisform.html">Next</A>
+</BODY>
+</HTML>

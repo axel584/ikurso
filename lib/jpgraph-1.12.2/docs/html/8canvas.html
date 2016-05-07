@@ -1,0 +1,1027 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="7adv.html">Previous</A>
+<A HREF="A00utilities.html">Next</A>
+<HR>
+<H1><A NAME="12">12 Working with canvas graphs</A></H1>
+ Canvas graphing is an advanced feature that comes in handy where you
+ need to draw some more arbitrary graphics. To give you a flavour of
+ what you can do the following example shows an architecture overview of
+ JpGraph which was drawn using a canvas.
+<P><DIV align="center">
+<BR><A href="exframes/frame_canvas_jpgarchex.html"> <IMG border="0" HEIGHT="650"
+ src="img/canvas_jpgarchex.png" WIDTH="700"></A>
+<BR><SMALL><EM><B>Figure 1:</B> Example of what you can draw on a canvas<A
+href="exframes/frame_canvas_jpgarchex.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P> Working with canvas requires more understanding of JpGraph as well
+ as more programming and fine tuning.</P>
+<H2><A NAME="12_1">12.1 Introduction</A></H2>
+ Canvas graph is really not a graph. It a blank sheet of paper which you
+ can use to draw arbitrary shapes and still have access to some of the
+ convinient features of JpGraph.
+<P> You can work with a canvas in different levels of complexity. You
+ can for example work directly with the Image class which provides a
+ large number of primitives for drawing but requires that you use
+ absolute pixel coordinates.</P>
+<P> You can also make life a little bit easier by using a canvas scale.
+ This lets you define your own scale on the canvas which often makes it
+ easier by letting you work on a grid you have specified yourself. It
+ also makes it very easy to re-scale you image automtically by just
+ changing your scale. For example to half the size of you drawing you
+ just make the scale twice as large.</P>
+<P> To give you some help in working with different canvas you should
+ include the &quot;jpgraph_canvtools.php&quot; file when working on canvases. This
+ is not strictly necessary but it will give you some nice abstraction to
+ help you create your masterpieces.</P>
+<P> As another (concrete) example on the use of a canvas the figure
+ below is a listing of font styles available with JpGraph.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_listfontsex1.html"> <IMG border="0" HEIGHT="450"
+ src="img/listfontsex1.png" WIDTH="550"></A>
+<BR><SMALL><EM><B>Figure 2:</B> Another example of using a canvas to
+ draw a number of text boxes<A href="exframes/frame_listfontsex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H2><A NAME="12_2">12.2 Creating a simple canvas</A></H2>
+ In order to create a canvas graph you need to include the file
+ &quot;jpgraph_canvas.php&quot; in addition to the standard &quot;jpgraph.php&quot; file.
+ You might also want to include the &quot;jpgraph_canvtools.php&quot; to get
+ access to some supporting classes that may (or not) come in handy.
+<P> Creating a canvas gives you the opportunity draw arbitrary shapes on
+ a &quot;white&quot; piece of paper. Let's first show a simple exmaple were we
+ just draw a text box. We first show you the code which we will walk
+ through<DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: canvasex01.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php
+<BR /></FONT><FONT color="#FF9900">// $Id: canvasex01.php,v 1.3
+ 2002/10/23 08:17:23 aditus Exp $
+<BR /></FONT><FONT color="#006600">include</FONT><FONT color="#CC0000">
+ &quot;../jpgraph.php&quot;</FONT><FONT color="#006600">;
+<BR />include</FONT><FONT color="#CC0000"> &quot;../jpgraph_canvas.php&quot;</FONT><FONT
+color="#006600">;
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Setup a basic canvas we can work
+<BR /></FONT><FONT color="#0000CC"> $g</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> CanvasGraph</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">400</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">300</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+'auto'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetMargin</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+5</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">11</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">6</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">11</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetShadow</FONT><FONT color="#006600">();
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetMarginColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;teal&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// We need to stroke the plotarea and
+ margin before we add the
+<BR />// text since we otherwise would overwrite the text.
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">InitFrame</FONT><FONT color="#006600">();
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Draw a text box in the middle
+<BR /></FONT><FONT color="#0000CC">$txt</FONT><FONT color="#006600">=</FONT><FONT
+color="#CC0000">&quot;This\nis\na TEXT!!!&quot;</FONT><FONT color="#006600">;
+<BR /></FONT><FONT color="#0000CC">$t</FONT><FONT color="#006600"> = new</FONT><FONT
+color="#0000CC"> Text</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$txt</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">200</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">10</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$t</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetFont</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+FF_ARIAL</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_BOLD</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">40</FONT><FONT
+color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// How should the text box interpret
+ the coordinates?
+<BR /></FONT><FONT color="#0000CC">$t</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Align</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'center'</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">'top'</FONT><FONT
+color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// How should the paragraph be
+ aligned?
+<BR /></FONT><FONT color="#0000CC">$t</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">ParagraphAlign</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'center'</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Add a box around the text, white
+ fill, black border and gray shadow
+<BR /></FONT><FONT color="#0000CC">$t</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetBox</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;white&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;black&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">&quot;gray&quot;</FONT><FONT
+color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Stroke the text
+<BR /></FONT><FONT color="#0000CC">$t</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$g</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">img</FONT><FONT
+color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Stroke the graph
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Stroke</FONT><FONT color="#006600">();
+<BR />
+<BR /></FONT><FONT color="#0000CC">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV> The example above starts by creating a
+ (400x200) sized image. We set the margins to get a nice frame around
+ the image. For canvases the margins has no effect in the way you enter
+ coordinates. Top left is (0,0) and bottom right (including any
+ potential margin and shadow) is the maximum. In this case the
+ coordinates are X:0-399, and Y:0-199</P>
+<P> We then call the<A href="../ref/CanvasGraph.html#_CANVASGRAPH_INITFRAME">
+ InitFrame()</A> method which actually strokes the margin and plotarea
+ to the graph. Since everything is stroked in the order you issue the
+ commands you must make sure that the graphical objects you want on top
+ is stroked last. This is different from the way you normally work with
+ JpGraph since it queues upp all you addition and then makes sure thay
+ are stroked in the correct order.</P>
+<P> We then create a<A href="../ref/Text.html#_C_TEXT"> Text</A> object,
+ setup it's properties, inculding the absolute screen position where we
+ want the text, and then stroke it. Her it might be a need for a closer
+ explanation of the, perhaps misnamed, method<A href="../ref/Text.html#_TEXT_ALIGN">
+ Text::Align()</A> This method states<STRONG> how the text coordinates
+ should be interpreted</STRONG> , i.e when we specify (200,10) as the
+ coordinates for the text paragraph should that be interpreted as the
+ top left corner, bottom-left corner or somthing else (of the bounding
+ box)? In the code above we have choosen to interpet the X-coordinate as
+ beeing the center of the bounding box and the Y-coordinate as the top.
+ Hence the text will be aligned so that the (200,100) point iun the
+ graph is aligned with the middle of the top line of the paragraphs
+ bounding box.</P>
+<P> We also specify that the lines within the paragraph should be
+ centered with a call to<A href="../ref/Text.html#_TEXT_PARAGRAPHALIGN">
+ Text::ParagraphAlign()</A> Since we also choose to have a box around
+ the text we have to make use of the method<A href="../ref/Text.html#_TEXT_SETBOX">
+ Text::SetBox()</A> which is used to specify the fill color, the border
+ color and the shadow color (if you leave out shadow color or set it to
+ '', no shadow will be used).</P>
+<P> Now we are ready to stroke the text onto the canvas. In order to do
+ so we must specify the basic Image drawing class we want to use.
+ Without discussin this further we just state that a suitable image
+ class can always be found as the<STRONG> img</STRONG> property of the
+ Graph class.</P>
+<P> Finally we are ready to stroke the entire graph, which in effect
+ sends the canvas back to the browser. Below you can see the effect of
+ all this code</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_canvasex01.html"> <IMG border="0" HEIGHT="300"
+ src="img/canvasex01.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 3:</B> A simple canvas drawing with a text box
+ in the middle<A href="exframes/frame_canvasex01.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<H2><A NAME="12_3">12.3 Adding lines and rectangles to a canvas</A></H2>
+ A canvas also makes a good background for using standard graphic
+ primitives, for example circles and lines. What you first have to
+ remember is that you are (so far) working with absolute screen
+ coordinates and secondly all drawing primitives are found in the<A href="../ref/Image.html#_C_IMAGE">
+ Image Class</A> accesssible as a proeprty of the Graph class. So for
+ example to draw a line between coordinate (0,0) and (100,100) you would
+ have to add the line
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Line</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+0</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">0</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">100</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">100</FONT><FONT color="#006600">);</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV>
+<P></P>
+<P> To your code. The following example shows some of the graphic
+ primitives you have access to in the Image class<DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: canvasex02.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php
+<BR /></FONT><FONT color="#FF9900">// $Id: canvasex02.php,v 1.1
+ 2002/08/27 20:08:57 aditus Exp $
+<BR /></FONT><FONT color="#006600">include</FONT><FONT color="#CC0000">
+ &quot;../jpgraph.php&quot;</FONT><FONT color="#006600">;
+<BR />include</FONT><FONT color="#CC0000"> &quot;../jpgraph_canvas.php&quot;</FONT><FONT
+color="#006600">;
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Setup a basic canvas we can work
+<BR /></FONT><FONT color="#0000CC"> $g</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> CanvasGraph</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">400</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">200</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+'auto'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetMargin</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+5</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">11</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">6</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">11</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetShadow</FONT><FONT color="#006600">();
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetMarginColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;teal&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// We need to stroke the plotarea and
+ margin before we add the
+<BR />// text since we otherwise would overwrite the text.
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">InitFrame</FONT><FONT color="#006600">();
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Add a black line
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'black'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+Line</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">0</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">100</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">100</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// .. and a circle (x,y,diameter)
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+Circle</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">100</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">100</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">50</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// .. and a filled circle
+ (x,y,diameter)
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">'red'</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+FilledCircle</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+200</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">100</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">50</FONT><FONT color="#006600">
+);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// .. add a rectangle
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'green'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+FilledRectangle</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+10</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">10</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">50</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">50</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// .. add a filled rounded rectangle
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'green'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+FilledRoundedRectangle</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+300</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">30</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">350</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">80</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">10</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#FF9900">// .. with a darker border
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'darkgreen'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+RoundedRectangle</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+300</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">30</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">350</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">80</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">10</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Stroke the graph
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Stroke</FONT><FONT color="#006600">();
+<BR />
+<BR /></FONT><FONT color="#0000CC">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV> Pleas note the way to access these routines
+ through the img property of the Graph class. Please alos keep in mind
+ that the coordinates are absolute.</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_canvasex02.html"> <IMG border="0" HEIGHT="200"
+ src="img/canvasex02.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 4:</B> Example of graphic primitives<A href="exframes/frame_canvasex02.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<P></P>
+<HR> <SMALL><STRONG> A note on GD</STRONG> For those of you using GD
+ 1.xx you might notice that the large &quot;filled circle&quot; isn't completely
+ filled. This is because in GD 1.xx there are no low level primitives to
+ fill an ellipse or circle so JpGraph tries to make the best out of a
+ bad situation and manually fake a filled circle. For interest of speed
+ JpGraph does not ontain a complete (for example) Bresenham-circle fill
+ but cheats by using some existing GD routines. This is not a perfect
+ solution and for large filled circles like this you get some
+ moire-patterns in the circle. If you upgrade to GD 2.x JpGraph will be
+ able to make full use of those new existing methods and the fill will
+ be perfect.</SMALL>
+<HR>
+<P> We refer you to the class refernce to find out what other graphic
+ primitives are available for use.</P>
+<H2><A NAME="12_4">12.4 Using a canvas scale</A></H2>
+ The previsou method using absolute coordinates works. But nothing more.
+ It doesn't give you any chance to easily scale the image (unless you
+ manually recalulate all used coordinates) , it gets tedious to work
+ with pixel level resilution. Especially if you just like to draw a few
+ basic shapes.
+<P> To help with this you can use a scale for the canvas. This lets you
+ define a &quot;work-space&quot; of your choice. You can for example set the
+ coordinates to be between X:0-10, Y:0-10. This makes it easier to
+ position objects on the canvas. This also has two additinal advantages:</P>
+<UL>
+<LI> If you increase the size of the canvas all objects will be
+ automtically scale to keep their proportions without any changes.</LI>
+<LI> You can shrink/enlarge your drawing (not the image) by just using
+ another scale. For example if you originally draw the image using a
+ (0:10, 0:10) scale and then change the scale to (0:20, 0:20) then the
+ effect will be that you drawings will &quot;shrink&quot; to half their size.</LI>
+</UL>
+<P> To use this type of scaling you must make sure you include the file
+ &quot;jpgraph_canvtools.php&quot; . In addition to the scaling class their are
+ also a couple of other utiity classes that may come in handy,
+ especially the<A href="../ref/Shape.html#_C_SHAPE"> Shape</A> class.</P>
+<P> Using the scale is quite simple. You first instantiate a scale
+ object passing the graph as a parameter and then specify the scale you
+ want to use. This means you need to add the lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $scale</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> CanvasScale</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$scale</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Set</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+0</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">$xmax</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$ymax</FONT><FONT color="#006600">);</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> to your code. You can then use one of the translation methods (for
+ example<A href="../ref/CanvasScale.html#_CANVASSCALE_TRANSLATE">
+ CanvasScale::Translate()</A>) in the canvas scale class to translate
+ between your world coordinates and the absolute screen coordinates.
+ This means you could take the code in the example above and just add
+ the lines, for example,
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#006600">
+ list(</FONT><FONT color="#0000CC">$x1</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$y1</FONT><FONT color="#006600">) =</FONT><FONT color="#0000CC">
+ $this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">scale</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">Translate</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$x1</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$y1</FONT><FONT color="#006600">);
+<BR />list(</FONT><FONT color="#0000CC">$x2</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$y2</FONT><FONT color="#006600">) =</FONT><FONT
+color="#0000CC"> $this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+Translate</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">$x2</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">$y2</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+Line</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">$x1</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">$y1</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$x2</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$y2</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> Since this pattern has to be repeated for every object that has to
+ be drawn it makes good sense to encapsulate this in a separate class.
+ This is exactly why the canvas tools file also have a utility class
+ called<A href="../ref/Shape.html#_C_SHAPE"> Shape</A> This class is
+ mainly a wrapper around the most commonly used methods in the basic
+ Image class (with one important exception) and does all these the
+ translation for you. Please see the class reference for a complete list
+ of the available methodsTo set up the Shape class you instantiate it
+ with the graphic context and the scale you want to use as argument as
+ in</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $shape</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> Shape</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$g</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$scale</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P></P>
+<P> You are then ready to use all the methods in the shape class. Using
+ a scale and imitating the previous example we would get the source
+ shown below.<DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: canvasex03.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php
+<BR /></FONT><FONT color="#FF9900">// $Id: canvasex03.php,v 1.1
+ 2002/08/27 20:08:57 aditus Exp $
+<BR /></FONT><FONT color="#006600">include</FONT><FONT color="#CC0000">
+ &quot;../jpgraph.php&quot;</FONT><FONT color="#006600">;
+<BR />include</FONT><FONT color="#CC0000"> &quot;../jpgraph_canvas.php&quot;</FONT><FONT
+color="#006600">;
+<BR />include</FONT><FONT color="#CC0000"> &quot;../jpgraph_canvtools.php&quot;</FONT><FONT
+color="#006600">;
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Define work space
+<BR /></FONT><FONT color="#0000CC">$xmax</FONT><FONT color="#006600">=</FONT><FONT
+color="#0000CC">20</FONT><FONT color="#006600">;
+<BR /></FONT><FONT color="#0000CC">$ymax</FONT><FONT color="#006600">=</FONT><FONT
+color="#0000CC">20</FONT><FONT color="#006600">;
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Setup a basic canvas we can work
+<BR /></FONT><FONT color="#0000CC"> $g</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> CanvasGraph</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">400</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">200</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+'auto'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetMargin</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+5</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">11</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">6</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">11</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetShadow</FONT><FONT color="#006600">();
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetMarginColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;teal&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// We need to stroke the plotarea and
+ margin before we add the
+<BR />// text since we otherwise would overwrite the text.
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">InitFrame</FONT><FONT color="#006600">();
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Create a new scale
+<BR /></FONT><FONT color="#0000CC">$scale</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> CanvasScale</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$scale</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Set</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+0</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">$xmax</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$ymax</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// The shape class is wrapper around
+ the Imgae class which translates
+<BR />// the coordinates for us
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> Shape</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$g</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$scale</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'black'</FONT><FONT color="#006600">);
+<BR />
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Add a black line
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'black'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Line</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+0</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">0</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">20</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">20</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// .. and a circle (x,y,diameter)
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Circle</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+5</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">14</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">2</FONT><FONT color="#006600">
+);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// .. and a filled circle
+ (x,y,diameter)
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'red'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">FilledCircle</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+11</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">8</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">3</FONT><FONT color="#006600">
+);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// .. add a rectangle
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'green'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">FilledRectangle</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">15</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+8</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">19</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">14</FONT><FONT color="#006600">
+);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// .. add a filled rounded rectangle
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'green'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">FilledRoundedRectangle</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">2</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+3</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">8</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">6</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#FF9900">// .. with a darker border
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'darkgreen'</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$shape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">RoundedRectangle</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">2</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+3</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">8</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">6</FONT><FONT color="#006600">
+);
+<BR />
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Stroke the graph
+<BR /></FONT><FONT color="#0000CC">$g</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Stroke</FONT><FONT color="#006600">();
+<BR />
+<BR /></FONT><FONT color="#0000CC">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV> The source above gives the following result</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_canvasex03.html"> <IMG border="0" HEIGHT="200"
+ src="img/canvasex03.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 5:</B> Drawing shapes on a canvas using a
+ scale.<A href="exframes/frame_canvasex03.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P> If we like to make a smaller image we could just change the image
+ size and everyting will be rescaled without any further code changes.
+ SO for example making the image half the size would give the result</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_canvasex04.html"> <IMG border="0" HEIGHT="100"
+ src="img/canvasex04.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 6:</B> Shrinking the image to half the size is
+ easy since the scaling will maintain the relative position of the
+ objects<A href="exframes/frame_canvasex04.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P> If we instead wanted to keep the image size but shrink the shapes we
+ could just make the scale twice as large which would result in</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_canvasex05.html"> <IMG border="0" HEIGHT="200"
+ src="img/canvasex05.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 7:</B> Shrinking hte graphic object by making
+ the scale twice as large<A href="exframes/frame_canvasex05.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+<P> We previously mentioned that the Shape class was a wrapper around
+ the image class with one exception. So what is the exception? Well,
+ glad you asked. The exception is that it contain an additional method
+ which draws an &quot;indented rectangle&quot;. An indented rectangle is a
+ rectangle where one of it's four corners have been moved into the
+ rectangle. You create an indented rectangle by calling either<A href="../ref/Shape.html#_SHAPE_INDENTEDRECTANGLE">
+ Shape::IndentedRectangle()</A> or A few examples illustrates what this
+ shape looks like.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_canvasex06.html"> <IMG border="0" HEIGHT="200"
+ src="img/canvasex06.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 8:</B> Examples of filled indented rectangles<A href="exframes/frame_canvasex06.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<P> As a final note we mention the class<A href="../ref/CanvasRectangleText.html#_C_CANVASRECTANGLETEXT">
+ CanvasRectangleText</A> Which can be used to add a text with a rounded
+ rectangle (possibly filled) onto the canvas. The previous example where
+ all the available fonts were drawn were using this class. We don't
+ describe it further but refeer the interested reader to the class
+ reference and the 'listfontsex1.php' example file.</P>
+<H2><A NAME="12_5">12.5 Sample application: Drawing DB schema</A></H2>
+ As a final example we shortly discuss how the canvas type of graph was
+ used to generate the DB schema for the DDDA architecture.
+<P> The library php file &quot;utils/misc/imgdbschema.php&quot; included in the
+ distribution contains some utility classes to make the drawing of table
+ schemes easier. It contains two basic classes, Class ImgDBTable and
+ Class ImgDBSchema. The first class understand how to draw an image
+ illustrating a single table. The second class is responsible for
+ automaticially extract all the relevant information from a DB to draw a
+ complete DB Schema.</P>
+<P> Before going into this a little bit more we show what an example of
+ this might look like.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_dbschemaex1.html"> <IMG border="0" HEIGHT="750"
+ src="img/dbschemaex1.png" WIDTH="600"></A>
+<BR><SMALL><EM><B>Figure 9:</B> Example of using the canvas graph style
+ together with the imgdbschema.php library to semi-automatically
+ generate a DB schema<A href="exframes/frame_dbschemaex1.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+<P> Before going on it should be noted that the ImgDBSchema assumes that
+ the DB can be accessed through a DB abstraction layer modelled after
+ the abstraction layer available in the 'jpdb.php' file in the DDDA
+ architecture. This abstraction layer assumes a MySQL database in the
+ bottom. This specific dependency of this particular abstraction layer
+ is the reason I have not included these classes in the generic canvas
+ tools file.</P>
+<P> The second thing you should note that this library does not contain
+ a complete automatic-layout engine but rather a very simple automatic
+ system which, if nothing else is specified, just puts the table in a
+ rectangular grid. A complete graph layout engine would simple be to
+ much to write in this context. This is also a very difficult
+ optimization problem and sofar not even any of the professional
+ programs I have seen that tries this can achieve a satisfactory layout
+ without manual intervention.</P>
+<P> The critical lines int the code to generate the above graph is
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $tblposadj</FONT><FONT
+color="#006600">=array(</FONT><FONT color="#0000CC">$tlo</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$tblwidth</FONT><FONT color="#006600">+</FONT><FONT color="#0000CC">
+$tlo</FONT><FONT color="#006600">+</FONT><FONT color="#0000CC">2</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">2</FONT><FONT color="#006600">*</FONT><FONT
+color="#0000CC">$tblwidth</FONT><FONT color="#006600">+</FONT><FONT color="#0000CC">
+$tlo</FONT><FONT color="#006600">+</FONT><FONT color="#0000CC">4</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">
+,-</FONT><FONT color="#0000CC">1</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">16</FONT><FONT color="#006600">,-</FONT><FONT color="#0000CC">
+1</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">16</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$dbschema</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> ImgDBSchema</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;jpgraph_doc&quot;</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000">&quot;FormatTblName&quot;</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000">&quot;FormatFldName&quot;</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$dbschema</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetMargin</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$leftm</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$topm</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$dbschema</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetTableWidth</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$tblwidth</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$dbschema</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+img</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">$this</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">iscale</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$tblposadj</FONT><FONT color="#006600">);</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> The rest of the code in the file is just to setup the canvas, add an
+ indented rectangle to group some tables and generate a footer with the
+ date and time this image was generated.</P>
+<P> The first line instantiates a new ImgDBSCheme layout engine asking
+ it to draw an imge for the database 'jpgraph_doc'. The following two
+ arguments specify two callback functions for formatting the text for
+ header and each field in a table.</P>
+<P> The next line specify the top left margin where the drawing of the
+ tables should be started.</P>
+<P> The third line speicfy the width of a single table. The final lines
+ starts the engine and draws all tables in the database to the canvas.
+ The final argument requires some further explanation. This is an offset
+ (x,y) from the top left corner how each individual table should be
+ positioned. If the value is -1 indicates that the default value should
+ be used. If this array is not specified then the tables will simple
+ arranged line by line.</P>
+<P> The full source code for drawing this DB schema example is shown
+ below.</P>
+<P><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: dbschemaex1.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php
+<BR /></FONT><FONT color="#FF9900">
+/*=======================================================================
+<BR />// File: &nbsp;&nbsp;&nbsp;&nbsp;DBSCHEMAEX1.PHP
+<BR />// Description:&nbsp;&nbsp;&nbsp;&nbsp;Draw a DB schema of the DDDA architecture
+<BR />// Created: &nbsp;&nbsp;&nbsp;&nbsp;2002-08-25
+<BR />// Author:&nbsp;&nbsp;&nbsp;&nbsp;Johan Persson (johanp@aditus.nu)
+<BR />// Ver:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$Id: dbschemaex1.php,v 1.1 2002/08/27 20:08:57
+ aditus Exp $
+<BR />//
+<BR />// License:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This code is released under QPL
+<BR />//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright (C) 2001,2002 Johan Persson
+<BR />// Note:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The actual drawing of the tables are
+ semi-automatically
+<BR />//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but you can easily adjust the individual tables
+ position
+<BR />//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with the 'tblposadj' array.
+<BR /> //
+<BR />
+//========================================================================
+<BR />*/
+<BR /></FONT><FONT color="#006600">include</FONT><FONT color="#CC0000">
+ &quot;../jpgraph.php&quot;</FONT><FONT color="#006600">;
+<BR />include</FONT><FONT color="#CC0000"> &quot;../jpgraph_canvas.php&quot;</FONT><FONT
+color="#006600">;
+<BR />include</FONT><FONT color="#CC0000"> &quot;../jpgraph_canvtools.php&quot;</FONT><FONT
+color="#006600">;
+<BR />include</FONT><FONT color="#CC0000">
+ &quot;../utils/misc/imgdbschema.inc&quot;</FONT><FONT color="#006600">;
+<BR />include</FONT><FONT color="#CC0000"> &quot;../utils/jpdocgen/jpdb.php&quot;</FONT><FONT
+color="#006600">;
+<BR />
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Global callback to format the
+ table header names
+<BR /></FONT><FONT color="#006600">function</FONT><FONT color="#0000CC">
+ FormatTblName</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$aName</FONT><FONT color="#006600">) {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">// We want to replace any specifi
+ references to the
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;// 'JpGraph' project with the generic '&lt;project&gt;'
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#006600">return</FONT><FONT color="#0000CC">
+ str_replace</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'JpGraph'</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+'&lt;project&gt;'</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+ $aName</FONT><FONT color="#006600">);
+<BR />}
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Global callback to format each
+ field name in the table
+<BR /></FONT><FONT color="#006600">function</FONT><FONT color="#0000CC">
+ FormatFldName</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$aName</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">$aTable</FONT><FONT
+color="#006600">) {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;return</FONT><FONT color="#0000CC"> $aName</FONT><FONT color="#006600">
+;
+<BR />}
+<BR />
+<BR />
+<BR />class</FONT><FONT color="#0000CC"> Driver</FONT><FONT color="#006600">
+ {
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;var</FONT><FONT color="#0000CC"> $ig</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC"> $img</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC"> $iscale</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+ $ishape</FONT><FONT color="#006600">;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;var</FONT><FONT color="#0000CC"> $iymax</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$ixmax</FONT><FONT color="#006600">;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;var</FONT><FONT color="#0000CC"> $iwidth</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$iheight</FONT><FONT color="#006600">;
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;function</FONT><FONT color="#0000CC"> Driver</FONT><FONT color="#006600">
+() {
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">// Define Image size and
+ coordinate grid space to work within
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">iwidth</FONT><FONT color="#006600"> =</FONT><FONT
+color="#0000CC"> 600</FONT><FONT color="#006600">;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">iheight</FONT><FONT color="#006600">=</FONT><FONT
+color="#0000CC"> 750</FONT><FONT color="#006600">;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">iymax&nbsp;&nbsp;</FONT><FONT color="#006600">=</FONT><FONT
+color="#0000CC"> 50</FONT><FONT color="#006600">;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">ixmax&nbsp;&nbsp;</FONT><FONT color="#006600">=</FONT><FONT
+color="#0000CC"> 55</FONT><FONT color="#006600">;
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">// Setup a basic canvas
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">ig</FONT><FONT color="#006600"> = new</FONT><FONT
+color="#0000CC"> CanvasGraph</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">iwidth</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">iheight</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">'auto'</FONT><FONT color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">img</FONT><FONT color="#006600"> =</FONT><FONT
+color="#0000CC"> $this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+ig</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">img</FONT><FONT
+color="#006600">;
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">// Define the scale to be used
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">iscale</FONT><FONT color="#006600"> = new</FONT><FONT
+color="#0000CC"> CanvasScale</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">ig</FONT><FONT
+color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">iscale</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Set</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+0</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">$this</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">ixmax</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+iymax</FONT><FONT color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">ishape</FONT><FONT color="#006600"> = new</FONT><FONT
+color="#0000CC"> Shape</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">ig</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">iscale</FONT><FONT color="#006600">);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">// A small frame around the
+ canvas
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">ig</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetMargin</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+2</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">3</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">2</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">3</FONT><FONT color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">ig</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetMarginColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;teal&quot;</FONT><FONT color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">ig</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">InitFrame</FONT><FONT color="#006600">();
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;}
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;function</FONT><FONT color="#0000CC"> Run</FONT><FONT color="#006600">
+() {
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$leftm</FONT><FONT color="#006600">
+=</FONT><FONT color="#0000CC">1.5</FONT><FONT color="#006600">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#FF9900">// Left margin (for table schemes)
+<BR /> &nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$topm</FONT><FONT color="#006600">
+=</FONT><FONT color="#0000CC">5</FONT><FONT color="#006600">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#FF9900">// Top margin (for table schemes)
+<BR /> &nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tblwidth</FONT><FONT color="#006600">
+=</FONT><FONT color="#0000CC">15</FONT><FONT color="#006600">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#FF9900">// Individual table width
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tlo</FONT><FONT color="#006600">
+=</FONT><FONT color="#0000CC">1</FONT><FONT color="#006600">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#FF9900">// Offset for top line
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;// Add the background color for the project specific tables
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">ishape</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">IndentedRectangle</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$leftm</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$topm</FONT><FONT color="#006600">-</FONT><FONT color="#0000CC">1</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">3</FONT><FONT color="#006600">
+*</FONT><FONT color="#0000CC">$tblwidth</FONT><FONT color="#006600">+</FONT><FONT
+color="#0000CC">$tlo</FONT><FONT color="#006600">+</FONT><FONT color="#0000CC">
+6</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">45</FONT><FONT
+color="#006600">,
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC"> $tlo</FONT><FONT color="#006600">
++</FONT><FONT color="#0000CC">2</FONT><FONT color="#006600">*</FONT><FONT
+color="#0000CC">$tblwidth</FONT><FONT color="#006600">+</FONT><FONT color="#0000CC">
+2</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">30</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">CORNER_BOTTOMLEFT</FONT><FONT
+color="#006600">,
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#CC0000"> 'lightblue'</FONT><FONT
+color="#006600">);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">// Stroke the tables (series of
+ x,y offsets, If =-1 then use the
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;// automtic positioning
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tblposadj</FONT><FONT color="#006600">
+=array(</FONT><FONT color="#0000CC">$tlo</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$tblwidth</FONT><FONT color="#006600">+</FONT><FONT color="#0000CC">$tlo</FONT><FONT
+color="#006600">+</FONT><FONT color="#0000CC">2</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">2</FONT><FONT color="#006600">*</FONT><FONT color="#0000CC">
+$tblwidth</FONT><FONT color="#006600">+</FONT><FONT color="#0000CC">$tlo</FONT><FONT
+color="#006600">+</FONT><FONT color="#0000CC">4</FONT><FONT color="#006600">
+,
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC"> 0</FONT><FONT color="#006600">
+,-</FONT><FONT color="#0000CC">1</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">16</FONT><FONT color="#006600">,-</FONT><FONT color="#0000CC">
+1</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">16</FONT><FONT
+color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$dbschema</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> ImgDBSchema</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">'jpgraph_doc'</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000">'FormatTblName'</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000">'FormatFldName'</FONT><FONT color="#006600">
+);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$dbschema</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetMargin</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$leftm</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$topm</FONT><FONT color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$dbschema</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetTableWidth</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$tblwidth</FONT><FONT color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$dbschema</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+img</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">$this</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">iscale</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$tblposadj</FONT><FONT color="#006600">);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> CanvasRectangleText</FONT><FONT color="#006600">
+();
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFillColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">''</FONT><FONT color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">''</FONT><FONT color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFontColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">'navy'</FONT><FONT color="#006600">);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">// Add explanation
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFont</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">FF_ARIAL</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_NORMAL</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">12</FONT><FONT
+color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Set</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'Project specific tables'</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$tblwidth</FONT><FONT color="#006600">+</FONT><FONT color="#0000CC">
+$leftm</FONT><FONT color="#006600">+</FONT><FONT color="#0000CC">3</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">16</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">15</FONT><FONT color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+img</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">$this</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">iscale</FONT><FONT color="#006600">
+);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">// Add title
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">''</FONT><FONT color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFont</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">FF_VERDANA</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_BOLD</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">26</FONT><FONT
+color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Set</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'DDDA - DB Schema'</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">9</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+0.5</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">30</FONT><FONT
+color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+img</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">$this</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">iscale</FONT><FONT color="#006600">
+);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">// Add a version and date
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFillColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">'yellow'</FONT><FONT color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFont</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">FF_FONT1</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_NORMAL</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">10</FONT><FONT
+color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Set</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;Generated: &quot;</FONT><FONT color="#006600">.</FONT><FONT color="#0000CC">
+date</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">&quot;ymd H:i&quot;</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">time</FONT><FONT color="#006600">
+()),</FONT><FONT color="#0000CC">1</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+iymax</FONT><FONT color="#006600">*</FONT><FONT color="#0000CC">0.96</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">15</FONT><FONT color="#006600">
+);
+<BR /> &nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$tt</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$this</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+img</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">$this</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">iscale</FONT><FONT color="#006600">
+);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000CC">$this</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">ig</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Stroke</FONT><FONT color="#006600">();
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;}
+<BR />}
+<BR />
+<BR /></FONT><FONT color="#0000CC">$driver</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> Driver</FONT><FONT color="#006600">
+();
+<BR /></FONT><FONT color="#0000CC">$driver</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Run</FONT><FONT color="#006600">();
+<BR />
+<BR /></FONT><FONT color="#0000CC">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV></P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="7adv.html">Previous</A>
+<A HREF="A00utilities.html">Next</A>
+</BODY>
+</HTML>

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="3050scatterplot.html">Previous</A>
+<A HREF="3060combplots.html">Next</A>
+<HR>
+<H2><A NAME="6_7">6.7 Box and Stock charts</A></H2>
+ JpGraph offers two variation on what is usually known as stock charts,
+ candle-charts or box plot.
+<H3><A NAME="6_7_1">6.7.1  Stock Charts</A></H3>
+ Stock charts is used to display data values where one is interested in
+ 4 different values for each data point. This could for example be used
+ to display a stock's open,close, min and max value during a specific
+ day. Hence the name Stock chart (or Stock plot).
+<P> The figure below illustrates a sample Stock chart plot</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_stockex1.html"> <IMG border="0" HEIGHT="200"  src="img/stockex1.png"
+WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 1:</B> A simple stock plot<A href="exframes/frame_stockex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> For this type of plot the Y-data array must be consist of a number
+ of quadruples of data where each quadruple consists of
+ (open,close,min,max). The open and close values determine the min max
+ for the middle bar and the min,max determine the end points of the
+ &quot;error-lines&quot; at the top and bottom of of each bar.</P>
+<P> Note that the data follows the following rules</P>
+<UL>
+<LI> min &lt; max</LI>
+<LI> min &lt; min(open.close)</LI>
+<LI> max &gt; max(open,close)</LI>
+</UL>
+ To separate the two cases where &quot;open &gt; close&quot; or &quot;open &lt; close &quot;
+ different colors are used. These colors are specified with the<A href="../ref/StockPlot.html#_STOCKPLOT_SETCOLOR">
+ SetColor()</A> method. By default a positive bar (close &gt; open) have a
+ fill color of white and for the negative case where (close &lt; open) the
+ bars have a red color.
+<P> You can specify the width of the bar by setting the width (in
+ pixels) with a call to the method<A href="../ref/StockPlot.html#_STOCKPLOT_SETWIDTH">
+ SetWidth()</A></P>
+<P> The final variation of stock plots you can have is to determine
+ whether or not the end point for the min,max lines should have the
+ horizontal line marking the end of the line or not. This can be
+ adjusted with a call to method<A href="../ref/StockPlot.html#_STOCKPLOT_HIDEENDLINES">
+ HideEndLine()</A>.</P>
+<H3><A NAME="6_7_2">6.7.2 BoxPLots : Stock charts with a median line</A></H3>
+ A minor variation of stock charts is the &quot;BoxPlot()&quot; this is almost the
+ same as StockPlot() but with the very small difference that in addition
+ to the open,close,min, max values you also specify a median value . The
+ median lies between the open and close value and is illustrated as a
+ horizontal line within the bar.
+<P><DIV align="center">
+<BR><A href="exframes/frame_boxstockex1.html"> <IMG border="0" HEIGHT="200"
+ src="img/boxstockex1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 2:</B> A simple box type stock plot<A href="exframes/frame_boxstockex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> You may modify the median line color for positive and negative data
+ points / bars by using the<A href="../ref/BoxPlot.html#_BOXPLOT_SETMEDIANCOLOR">
+ SetMedianColor()</A> method.</P>
+<H3><A NAME="6_7_3">6.7.3 Image maps for Box and Stock charts</A></H3>
+ In the same way as for other plots you may associate an image map with
+ these plots. The &quot;hot&quot; area for each plot is the mid &quot;bar&quot; section. In
+ the same way as other plot types you use the<A href="../ref/Plot.html#_PLOT_SETCSIMTARGETS">
+ SetCSIMTargets()</A> to set the URL's you want to use.
+<P> Note: These plot types, though normally used without explicit
+ X-values, can of course handle a supplied X-coordinate array without
+ any problem.</P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="3050scatterplot.html">Previous</A>
+<A HREF="3060combplots.html">Next</A>
+</BODY>
+</HTML>

@@ -1,0 +1,100 @@
+$Id: README,v 1.4 2002/08/06 08:42:19 aditus Exp $
+
+DDDA Public Release
+===================
+
+This directory contains all the files necessary to
+run the DDDA (Database Driven Documentation Architecture).
+
+1. Introduction
+---------------
+The DDDA system lets you parse a project which may consist
+of multiple PHP source file and record all classes, methods 
+and global functions in a database.
+
+When this is done you can add comments and examples which
+is also stored in the database. All this is done through a
+GUI provided in this application.
+
+Whenever the source is changed you just update the DB
+and the new methods and classes will be added while keeping
+any old comments and description.
+
+It will automatically calculate a percentage figure for
+each class and method that indicates how well it is documented.
+
+When you are happy with the result you can automatically
+generate reference documentation from this DB.
+
+2. Installation
+---------------
+1. Copy all the files to a directory of your choice.
+2. Edit 'de_utils.php' to match your MySQL DB server 
+settings (user and pwd)
+3. Point your browser to jpdocedit.php. The first time
+this script is run it will setup a few DB tables.
+
+3. Usage
+--------
+Most of the use should be self explaining. 
+
+The basic usage cycle (after the initial setup) is:
+
+1. Parse files after code changes
+2. Add documentation to classes and methods
+3. Generate documentation
+
+Go back to 1.
+
+In the opening project window you have options to 
+setup and edit one or several projects. 
+
+The first thing you must do is to create a project 
+and define a number of files belonging to this project. 
+After that you need to update the DB by first going 
+into the project view and then pressing the 'Update DB' 
+button. Note that the update function is smart enough
+not to parse files which are up to date. 
+(By clicking the 'Force' checkbox you can force all files
+in the project to be parsed)
+
+Then click on the methods or class names where you
+want to add documentation. To help keep track of your
+documentation effort there is a weighted tracking system
+built in which will give you, as a percentage, the 
+documentation coverage. This will help direct your efforts
+to the classes most in need of more documentation.
+
+When you like to generate the documentation you just need
+to press the "Generate docs" button and the HTML files
+will be written to the output directory you have specified.
+
+Some notes:
+The button "Check DB" performs a consistency check on
+the DB. 
+The button "Show documentation" opens the generated 
+documentations.
+The button "Update DB" runs the parser of any files that
+has been modified since the last time parsing was done.
+
+
+4. Browser compatibility
+------------------------
+I have only tested this with Opera 6.x and at the moment
+it will not work with MS IE due to (what I consider) bugs
+in IE. 
+
+When I get some time I will add some workarounds for the
+bugs in IE.
+
+Appendix
+A. Release history
+----------------------------------------------------------
+Date            Version     Comment	
+----------------------------------------------------------
+15 July 2002	 1.3        Added global project directory 
+4  July 2002     1.2        First public release
+ 
+[EOF]
+
+

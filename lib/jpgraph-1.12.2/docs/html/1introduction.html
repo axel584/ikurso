@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="0aboutmanual.html">Previous</A>
+<A HREF="2installation.html">Next</A>
+<HR>
+<H1><A NAME="2">2 Introduction</A></H1>
+<H2><A NAME="2_1">2.1 Version</A></H2>
+ This manual covers version 1.13 of JpGraph. A 2D graph plotting library
+ for PHP 4.1 and above.
+<P> Note that this library will not work with versions prior to PHP 4.1
+ due to extension in the object model that is used in this library.</P>
+<H2><A NAME="2_2">2.2 Software License</A></H2>
+ JpGraph 1.x is released under a dual license QPL 1.0 (Qt-License) for
+ non-commercial (including educational) use of the library and the
+ JpGraph Professional License for commercial use.
+<H4>2.2.0.1 Why is it not altogether free?</H4>
+ JpGraph is free software as in free speech but not as in free beer.
+ Every hour I spend working on this library means one less hour spend on
+ my consultancy work needed to pay silly things like rent and food. If
+ you are a large company making use of the library in a commercial
+ context you are both morally and legally bound to get the Professional
+ JpGraph License.
+<P> The license fee corresponds to the cost for roughly 35 min of work
+ for a professional IT consultant (average according to IDG for 2002)</P>
+<P> The professional version also contains additional features not
+ available in the free version</P>
+<UL>
+<LI> Additional plot module for tachometer plots</LI>
+<LI> Off-line class reference</LI>
+<LI> PDF version of the documentation</LI>
+</UL>
+<H2><A NAME="2_3">2.3 JpGraph Features</A></H2>
+ This is a truly OO graph library which makes it easy to both draw a
+ &quot;quick and dirty&quot; graph with a minimum of code and quite complex graphs
+ which requires a very fine grain of control. The library tries to
+ assign sensible default values for most parameters hence making the
+ learning curve quite flat since for most of the time very few commands
+ is required to draw graphs with a pleasing esthetical look.
+<P> Some highlights of available features are</P>
+<UL>
+<LI> Flexible scales, supports text-lin, text-log, lin-lin, lin-log,
+ log-lin and log-log and integer scales.</LI>
+<LI> Supports both PNG, GIF and JPG graphic formats. Note that the
+ available formats are dependent on the specific PHP installation where
+ the library is used.</LI>
+<LI>Supports caching of generated graphs to lessen burden of a HTTP
+ server.</LI>
+<LI> Supports batch mode to only generate images to a file</LI>
+<LI>Supports client side image maps which makes it easy to produce drill
+ down images.</LI>
+<LI>Intelligent autoscaling which gravitates towards esthetical values,
+ i.e. multiples of 2:s and 5:s</LI>
+<LI>Fully supports manual scaling, with fine grain control of position
+ of ticks.</LI>
+<LI>Supports background images with different formatting options</LI>
+<LI>Supports color and brightness adjustments of images directly in PHP.</LI>
+<LI>User specified grace for autoscaling</LI>
+<LI> Supports up to two different y-scale, it is possible to have
+ different left and right y-scale and add plots to both</LI>
+<LI>Supports, line-plots, filled line-plots, accumulated line-plots, bar
+ plots, accumulated bar plots, grouped bar plots, error plots, line
+ error plots, scatter plots, gantt-charts, radar plots, 2D and 3D pie
+ charts.</LI>
+<LI>Supports unlimited number of plots in each graph, makes it easy to
+ compose complex graph which consists of several plot types</LI>
+<LI>User specified position of axis</LI>
+<LI>Supports color gradient fill in seven styles</LI>
+<LI>Designed as a flexible OO framework which makes it easy to add new
+ types of plots</LI>
+<LI>Supports automatic legend generation</LI>
+<LI>Supports both vertical and horizontal grids</LI>
+<LI>Supports anti-alising of lines</LI>
+<LI>Supports rotation of linear graphs</LI>
+<LI>More then 400 named colors</LI>
+<LI>Designed modularly - you don't have to include code which isn't used</LI>
+</UL>
+ In addition to these high level features the library has been designed
+ to be orthogonal and very coherent in its' naming convention. For
+ example, to specify color each object (i.e. axis, grids, texts, titles
+ etc) within the graph implements the method SetColor() with the same
+ signature.
+<H2><A NAME="2_4">2.4  Getting the latest version</A></H2>
+ The latest version of jpgraph can always be found on<A href="http://www.aditus.nu/jpgraph/">
+ http://www.aditus.nu/jpgraph/</A>
+<P> The current version as of this writing is 1.8</P>
+<P> Note. I keep a straitforward version scheme to avoid the version
+ number inflation. This means</P>
+<UL>
+<LI>1.x -&gt; 1.x.1, Bug fix release for version 1.x</LI>
+<LI>1.x -&gt; 1.(x+1), Added functionality. Mostly keeping backwards
+ compatibility unless a very good reason not to. All SC breaks will be
+ well announced in release notes and might be small things like a
+ misspelled method name compared to the proper english spelling.</LI>
+<LI>1.x -&gt; 2.0, Substantially new functionality which might break
+ backward compatibility</LI>
+</UL>
+<H2><A NAME="2_5">2.5 Planned future addition</A></H2>
+ All the following features, which have not been marked as tentatively,
+ will be added. The timeframe for these versions are:
+<UL>
+<LI> Version 2.0, (Q1 2004) Adapted for PHP 5</LI>
+</UL>
+ No time frames have been determined for version 2.x and above. If you
+ like these timeframes to move forward either get involved in the
+ development yourself or conside make a donation. Changes, bugfixes and
+ additions are always welcome. For the latest upate on planned future
+ version see the web-site for JpGraph at http://www.aditus.nu/jpgraph/
+<H2><A NAME="2_6">2.6 Known bugs and omissions</A></H2>
+<UL>
+<LI>Background images does not work as expected for rotated graphs</LI>
+</UL>
+<H2><A NAME="2_7">2.7  Acknowledgements</A></H2>
+ The idea for writing this library grew out of my own needs for a high
+ quality graph drawing library for PHP4. Before reinventing the wheel I
+ searched the net to see if there where anything already available that
+ would meet my needs. When searching I found three other PHP graph
+ plotting libraries:
+<OL>
+<LI> &quot;chart 0.3&quot; http://quimby.gnus.org/circus/chart/chart-0.3.tar.gz,
+ by Lars Magne Ingebrigtsen</LI>
+<LI> &quot;ykcee.php&quot;, http://ykcee.sourceforge.net</LI>
+<LI> &quot;phplot.php&quot;, http://www.phplot.com</LI>
+</OL>
+ All these libraries implements some fine graphic features but
+ unfortunately none of those completely fulfilled my needs either for
+ available functionality (for example none of these supported both two
+ Y-scales, auto-scaling, and logarithmic scales), or general
+ flexibility, I especially needed the option of two Y-scales, which none
+ of the above packages supported. My own preference for design was
+ closest to &quot;chart 0.3&quot; so I started by fixing some small bugs in that
+ package and adding some new features. However I soon realized that to
+ add all the features and flexibility I wanted to &quot;chart 0.3&quot; it would
+ require a complete rewrite since the original design wasn't flexible
+ enough, especially adding a second Y-scale would require a more
+ flexible OO architecture. Since at the time I was also interested in
+ giving PHP a try to see how well it would support a fully object
+ oriented design so I started designing this library. The library is
+ completely written from scratch but I have taken some ideas, especially
+ the caching feature from &quot;chart 0.3&quot; and implemented this. I'm
+ therefore thankful for those ideas. Any bugs and faults within the code
+ are completely my own.
+<H2><A NAME="2_8">2.8 A note on Implementing an OO library in PHP4</A></H2>
+ In terms of OO support PHP is still at loss to Java, Eiffel or C++ but
+ since it always been my view that OO design is more a state of mind
+ then of implementation details it is still possible to arrive with a
+ decent OO design even in PHP. One of the big obstacles is probably the
+ very different assigning semantics used by PHP as compared to other OO
+ languages since it is always copies of the object that is passed around
+ by default and not references. This took some time for me personally to
+ get used to (giving my own background in OO design in Java, Eiffel and
+ C++). There is also a bug (present in all versions &lt;=4.04pl1) that
+ makes it impossible to use a reference to the '$this' pointer in the
+ constructor. This has an easy workaround by adding an extra method, say
+ Init(), which is called immediately after the constructor and may
+ safely use a reference to '$this' pointer. As an example of JpGraph's
+ OO features this is, to my knowledge, the only piece of PHP code to
+ fully implement the Observer pattern.
+<H2><A NAME="2_9">2.9 Reporting bugs and suggesting improvements</A></H2>
+ Bug reports and suggestions are always welcome. I only ask you to make
+ sure that you read the requirements and the FAQ before submitting bugs
+ and making sure you have an up to date version of PHP4, the necessary
+ graphic libraries etc. I will unfortunately not be able to answer
+ standard OO or PHP4 questions. Neither do I have the time to give
+ PHP/GD/TTF/Apache installation support. Please see the corresponding
+ documentation and relevant FAQ. I simply don't have the bandwith to
+ help with these kinds of installations. Please note that this library
+ will not work with versions prior to PHP4.02. Bug reports and
+ suggestions should be sent to jpgraph@aditus.nu<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="0aboutmanual.html">Previous</A>
+<A HREF="2installation.html">Next</A>
+</BODY>
+</HTML>

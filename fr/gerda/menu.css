@@ -1,0 +1,86 @@
+body {
+  background-color:#FFF;
+  color:#333;
+  font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+  margin:0;
+  padding:0;
+}
+
+hr {
+  display:none;
+}
+
+.menu, .ssmenu {
+  background-color:#FFF;
+  color:#333;
+  border:0.1em solid #333;
+  margin:1em;
+}
+
+.menu span, .ssmenu span {
+  display:none;
+}
+
+.menu a, .ssmenu a {
+  text-decoration:none;
+  color:#333;
+}
+
+.menu {
+  padding:0 1em;
+}
+
+.ssmenu {
+  padding:0;
+}
+
+.ssmenu li {
+  list-style-type:disc;
+  list-style-position:inside;
+  padding-left:0.2em;
+  color:#F93;
+}
+
+.ssmenu li:hover, .ssmenu a:hover, .ssmenu a:focus  {
+  background-color:#F93;
+  color:#FFF;
+}
+
+.ssmenu li:hover {
+  list-style-type:circle;
+}
+
+#access a, #texte a {
+  color:#F93;
+}
+
+#access a:hover, #texte a:hover {
+  text-decoration:none;
+}
+
+#access a:focus, #texte a:focus {
+  text-decoration:none;
+  background-color:#F93;
+  color:#FFF;
+}
+
+#access {
+  margin:1em;
+  padding:0;
+}
+
+#texte {
+  text-align:justify;
+  margin:1em;
+  padding:0;
+}
+
+#texte p {
+  text-indent:1em;
+}
+
+#copy {
+  padding:1em;
+  margin:0;
+  text-align:center;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="5gantt.html">Previous</A>
+<A HREF="7adv.html">Next</A>
+<HR>
+<H1><A NAME="10">10 Polar plots</A></H1>
+<H2><A NAME="10_1">10.1 Overview</A></H2>
+ Each data point in a polar plot is represented by a tuple consisting of
+ a radius and an angle. The polar plot itself can be either outlined or
+ filled. In addition each point may have a standard marker (the same as
+ for line and scatter plots).
+<P> The scale for the radius can be either linear or logarithmic.</P>
+<P> A polar graph is created by creating an instance of<A href="../ref/PolarGraph.html#_POLARGRAPH_POLARGRAPH">
+ PolarGraph::PolarGraph()</A>. The polar graph type inherits all the
+ capabilities of ordinary X-Y graphs, i.e they can have background
+ images, background gradients, tabbed titles and so on.</P>
+<P> Polar graphs comes in two basic types, they can either show a full
+ 360 degree graph or a half 180 degree graph. The two examples below
+ show these two basic types of graphs.</P>
+<P><DIV align="center">
+<TABLE>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_polarex0.html"> <IMG border="0" HEIGHT="250"  src="img/polarex0.png"
+WIDTH="250"></A>
+<BR><SMALL><EM><B>Figure 1:</B> A simple 360 degree polar graph<A href="exframes/frame_polarex0.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_polarex0-180.html"> <IMG border="0" HEIGHT="250"
+ src="img/polarex0-180.png" WIDTH="250"></A>
+<BR><SMALL><EM><B>Figure 2:</B> The 180 degree variant polar plot.<A href="exframes/frame_polarex0-180.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+</TABLE>
+</DIV></P>
+<H2><A NAME="10_2">10.2 Adjusting the radius scale</A></H2>
+ The radius axis can be shown in either a linear or logarithmic scale.
+ This is controlled, as usual, by a call to<A href="../ref/PolarGraph.html#_POLARGRAPH_SETSCALE">
+ PolarGraph::SetScale()</A> The two examples below show the same plot in
+ either linear or logarithmic scale<DIV align="center">
+<TABLE>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_polarex3.html"> <IMG border="0" HEIGHT="300"  src="img/polarex3.png"
+WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 3:</B> Using a logarithmic scale<A href="exframes/frame_polarex3.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_polarex3-lin.html"> <IMG border="0" HEIGHT="300"
+ src="img/polarex3-lin.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 4:</B> Using a linear scale<A href="exframes/frame_polarex3-lin.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+</TABLE>
+</DIV> Please note that the maximum values of the scales are different.
+<P> By default the scale will be autoscaled depending on the data. You
+ can also specify a manual scale by supplying an extra argument to the
+ SetScale() value. The only difference from the manual scaling with the
+ other X-Y-graphs is that for polar graph you only specify a manual
+ maximu. The minimum will always be 0 for the linear scale and a scaled
+ value of 10 (i.e 1, 0.1, 0.001 and so on) for the logarithmic scale.</P>
+<P> The plot is clipped to the plot area so if you specify a smaller
+ scale then the maximum value that part of the plot that are outside the
+ plotarea will be clipped.</P>
+<H2><A NAME="10_3">10.3 Adjusting the gridlines</A></H2>
+ As usual you have full freedom to select what gridlines you like to
+ show (and what colors they should have). There are three different
+ types of gridlines you may adjust. The radius minor and major gridlines
+ and the angle gridlines.
+<P> You select what gridlines to show with a call to<A href="../ref/PolarAxis.html#_POLARAXIS_SHOWGRID">
+ PolarAxis::ShowGrid()</A> The two example below shows a logarithmic
+ plot with either just major gridlines or both minor and major
+ gridlines.<DIV align="center">
+<TABLE>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_polarex4.html"> <IMG border="0" HEIGHT="350"  src="img/polarex4.png"
+WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 5:</B> Using a logarithmic scale with just
+ major gridlines<A href="exframes/frame_polarex4.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_polarex5.html"> <IMG border="0" HEIGHT="350"  src="img/polarex5.png"
+WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 6:</B> Using a logarithmic scale with both
+ minor and major gridlines<A href="exframes/frame_polarex5.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+</TABLE>
+</DIV> The colors of the gridlines are specified with a call to<A href="../ref/PolarAxis.html#_POLARAXIS_SETGRIDCOLOR">
+ PolarAxis::SetGridColor()</A></P>
+<P> For the angle grid lines it is possible to specify the angle
+ division between each gridline with the method<A href="../ref/PolarAxis.html#_POLARAXIS_SETANGLESTEP">
+ PolarAxis::SetAngleStep()</A> You specify the step distance in degrees.
+ By default the step size is 15 degrees.</P>
+<H2><A NAME="10_4">10.4 Adjusting the label fonts</A></H2>
+ You can individually specify different fonts and colors for the angle
+ and the radius labels. The radius font is specified with
+ PolarAxis::SetFont() and the angle font is specified with a call to<A href="../ref/PolarAxis.html#_POLARAXIS_SETANGLEFONT">
+ PolarAxis::SetAngleFont()</A>
+<P> You can adjust the color with the method<A href="../ref/PolarAxis.html#_POLARAXIS_SETCOLOR">
+ PolarAxis::SetColor()</A> ?&gt;</P>
+<P> The following example specifies different colro for the labels. it
+ also shows that you can add both a radis axis title as well as a tabbed
+ title. In this example we have also chosen not to show the frame around
+ the edge of the plot.</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_polarex9.html"> <IMG border="0" HEIGHT="320"  src="img/polarex9.png"
+WIDTH="350"></A>
+<BR><SMALL><EM><B>Figure 7:</B> Different colors for labels, specifying
+ both a tabbed title as well as a axis title<A href="exframes/frame_polarex9.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H2><A NAME="10_5">10.5 Adjusting the labels</A></H2>
+ As can be seen from the previous examples the angle labels have a small
+ superscripted &quot;o&quot; after each label. You can select if you like to show
+ this degree mark or not witha call to the<A href="../ref/PolarAxis.html#_POLARAXIS_SHOWANGLEDEGREEMARK">
+ PolarAxis::SetANgleDegreeMark()</A> method by which you can enable or
+ disable that mark after the angels.
+<P> For the radius labels all standard formatting that can be done to
+ the X-Y axis such as format string or format callbacks are supported.</P>
+<P> A common modification for polar plots is probbaly to disable the
+ display the last label when using a 360 degree plot since the last
+ label will &quot;collide&quot; with the plot box around the plot area. It is
+ possible to disable the last label with a call to<A href="../ref/Axis.html#_AXIS_HIDELASTTICKLABEL">
+ Axis::HideLastTickLabel()</A> As you can see this has been sude in some
+ of the examples in this chapter.</P>
+<H2><A NAME="10_6">10.6 Image maps</A></H2>
+ If you have specified markers for the polar plot (by setting the mark
+ property of the plot) each marker can be a hotspot in a client side
+ image map. The target URL are as usual specified with the
+ SetCSIMTargets() as the following short code excerpt shows
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#FF9900">
+ // Start by specifying the proper URL targets
+<BR /></FONT><FONT color="#0000CC">$targets</FONT><FONT color="#006600">
+ = array(</FONT><FONT color="#CC0000">&quot;#1&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;#2&quot;</FONT><FONT color="#006600">, ....... );
+<BR /></FONT><FONT color="#0000CC">$polarplot</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> PoalrPlot</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$data</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$polarplot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">mark</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetType</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+MARK_SQUARE</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$polarplot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetCSIMTargets</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">targets</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$polarplot</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">StrokeCSIM</FONT><FONT color="#006600">();</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV>
+<P></P>
+<H2><A NAME="10_7">10.7 A final example</A></H2>
+ As a final example we show a full 360 degree polar plot with square
+ markers as well as background color gradient and a legend for the plot.
+<P><DIV align="center">
+<BR><A href="exframes/frame_polarex7-2.html"> <IMG border="0" HEIGHT="400"
+ src="img/polarex7-2.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 8:</B> A polar plot with both legend and
+ background gradient fill.<A href="exframes/frame_polarex7-2.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="5gantt.html">Previous</A>
+<A HREF="7adv.html">Next</A>
+</BODY>
+</HTML>

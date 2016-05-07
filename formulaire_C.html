@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Exercice javascript</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<script type="text/javascript">
+		function choixsexe(form) {
+			if (form.choix[0].checked) {
+				alert("vous avez choisi la proposition " + form.choix[0].value);
+			} else if (form.choix[1].checked) {
+				alert("vous avez choisi la proposition " + form.choix[1].value);
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>formulaires B : les boutons de choix unique</h1>
+	<form name="form">
+		<input type="radio" name="choix" value="1">masculin<br>
+		<input type="radio" name="choix" value="2">féminin<br>
+		<input type="button" name="but" value="Votre choix ?" onclick="choixsexe(form);">
+	</form>
+</body>
+</html>

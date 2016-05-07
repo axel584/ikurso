@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="2230colors.html">Previous</A>
+<A HREF="3xyplots.html">Next</A>
+<HR>
+<H1><A NAME="5">5 Understanding the JpGraph caching system</A></H1>
+ To reduce load on the web server JpGraph implements an advanced caching
+ system which avoids the burden of always having to run the full image
+ script.
+<P> Depending on the complexity of the image script (for example if it
+ is doing several DB lookups) this could significantly improve
+ performance.</P>
+<P> The rationale behind this is of course performance, and the
+ observation that very few graphs are really real-time, i.e. needs to be
+ updated absolutely every time the graphing script is called.</P>
+<P></P>
+<H2><A NAME="5_1">5.1 Enabling the cache system</A></H2>
+ The enabling disabling of the cache system is controlled by two defines
+ (in jpgraph.php)
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> DEFINE</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;USE_CACHE&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">true</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">DEFINE</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;READ_CACHE&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+true</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P></P>
+<P> The first of these, USE_CACHE, is the master-switch which must be
+ set to true to enable the caching system. The second switch READ_CACHE
+ very seldom needs to be changed.</P>
+<P> This second switch basically tells whether or not JpGraph should
+ ever look in the cache. Setting this to false and the master-switch to
+ true would then always generate an new updated image file in the cache
+ and this new image woudl be send back to the browser. The main use for
+ this (admittedly) strange setting is if you like to have the side
+ effect of the script that a fresh image is always stored in the cache
+ directory.</P>
+<P> Once you have enabled the cache you must also make sure that a valid
+ cache directory is setup. The cache directory is specified with the
+ define</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> DEFINE</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;CACHE_DIR&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;/tmp/jpgraph_cache/&quot;</FONT><FONT color="#006600">);</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> You can of course change the default directory to whatever directory
+ you fancy. But, you must remember one important thing.<STRONG> The
+ cache directory must be writable for the user running Apache/PHP</STRONG>
+.</P>
+<H2><A NAME="5_2">5.2 Using the cache in your script</A></H2>
+ To use caching in your script you must supply a suitable file name
+ which will be used to store the image in the cache. You can also supply
+ a timeout value indicating how many minutes the cached image should be
+ considered valid.
+<P> These parameters are supplied in the initial Graph() method call
+ which should be among the first in your script. Instead of manually
+ specifying a file name to be used you could often use the special name
+ &quot;auto&quot;. If the filename is specified as &quot;auto&quot; the cashed image will
+ then be named the same as the image script but with the correct
+ extension depending on what image format have been chosen.</P>
+<P> If you don't specify a file name no caching will be used no matter
+ the settings of USE_CACHE (without a file name it is impossible!)</P>
+<P> The following call to Graph() shows a typical use of the cache.</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> Graph</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">300</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+200</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">&quot;auto&quot;</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">60</FONT><FONT color="#006600">
+)</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> The above code will use the automatic filename and a make the cache
+ valid for 60 minutes.</P>
+<P> So, how does this all work now?</P>
+<P> The first time you call your script (no cached image) everything
+ will be as usual, the script will run and you will in the end send back
+ the image to the browser. However if you have the caching enabled
+ JpGraph will automatically have stored a copy of the generated image in
+ the cache directory.</P>
+<P> The next time you call the script the first thing that happens in
+ the initial Graph() is that it will go and check in the cache directory
+ if the named image exists there. If this is the case it will also
+ checks that the image isn't too old (as compared to the specified
+ timeout value). If the image is valid then the image will be streamed
+ straight back from the image file to the browser and the script will
+ end it's execution.</P>
+<P> Hence, if the image is found in the cache<STRONG> no code lines
+ after the initial Graph() call will be executed</STRONG></P>
+<P> The design decision behind this is that your image script code never
+ has to include anything special to make full use of the cache. It will
+ just automatically work.</P>
+<H2><A NAME="5_3">5.3 Using the cache with Client Side Image Maps</A></H2>
+ You can also use the cache system for CSIM as well. The cache system
+ interface is slightly different in this case since the cache needs to
+ store<STRONG> both</STRONG> the cached image and the cached image-map.
+ It also needs to change due to the way CSIM HTML paradigm work. The two
+ major differences from the &quot;standard&quot; cache is
+<OL>
+<LI> The cached version will<STRONG> not</STRONG> be stored in the
+ previous defined cache directory. See more below.</LI>
+<LI> You must call an extra method, CheckCSIMCache(), to check the
+ cache, see more below.</LI>
+</OL>
+<P> The performace benefits even for simple CSIM images is around 50% if
+ the cache can be used and can of course be several 1000% if
+ construction of the image requires DB calls and other complex
+ operations which can be avoided.</P>
+<P> Before reading further you should have an understanding on how the
+ CSIM works by reading the section &quot;<A href="6csimdoc.html">Using Client
+ side image maps</A>&quot;.</P>
+<P> Please remember that when using CSIM you must end your script with a
+ call to<A href=""> Graph::StrokeCSIM()</A> method insetad of the<A href="">
+ Graph::Stroke()</A> used for non-csim.</P>
+<P> To use the cache with CSIM you have to call the<A href="">
+ Graph::CheckCSIMCache()</A>. As with the caching for non-CSIM you have
+ to supply a name to be used for the cached version as well as an
+ optional timeout value. The default timeout value if nothing else is
+ specified is 60 minutes.</P>
+<P> The name argument requires some more explanations. You must specify
+ a relative name here. For example &quot;myimage&quot; or perhaps
+ &quot;firstpage/image3&quot;. Depending on your installation of JpGraph this will
+ now end up in the directory specified in the CSIMCACHE_DIR define. This
+ must also be a directory accessible by the normal web server. By
+ default a directory called &quot;csimcache&quot; will be created in the same
+ directory as the image script itself.</P>
+<P> This has the drawback that the directory from where the script is
+ executed must be writeable by the process running PHP. Best practice
+ for this is to keep the number of writeable directory for PHP down to a
+ minimum and re-use the same directory as is used for the standard
+ cache. This however, require that your system administrator setup that
+ cache directory so that it also accessible by the HTTP server from the
+ htdocs root.</P>
+<P> The CheckCSIMCache() method checks the cache for an existing cached
+ version and if found it returns it and halts execution of the script.
+ So, this call should be the first call after the creation of the
+ Graph() and before any heavy work is done to create the image so that
+ you can minimize the execution of the script in the case a match is
+ found.</P>
+<P> So, the general structure of a script that uses CSIM and the cache
+ is
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> Graph</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">400</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+300</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Check cache, 10 min timeout
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">CheckCSIMCache</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;image1&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">10</FONT><FONT
+color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// !! If cached version exists,
+ execution halts here !!
+<BR />
+<BR />//
+<BR />// ... Construct the image with heavy DB calls etc, etc
+<BR />//
+<BR />
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">StrokeCSIM</FONT><FONT color="#006600">();</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> Please note that you<STRONG> do not</STRONG> need to pass any
+ argument to the final call to StrokeCSIM() as you do when not using the
+ cache.</P>
+<HR> <SMALL><STRONG> Technical note:</STRONG> The CSIM caching works by
+ storing two files in the cache directory. One file being the image and
+ the other file being the corresponding image map as a pure HTML file.</SMALL>
+<HR>
+<H2><A NAME="5_4">5.4 Some final comments</A></H2>
+<UL>
+<LI>If you want the timeout value to be &quot;forever&quot; then you can specify a
+ 0 as the timeout value (or leave the parameter blank). To regenerate
+ the image you will have to remove the image files from the cache. This
+ removal could for example be handled by a nightly cron-job</LI>
+<LI> If you use images where you have enabled the anti-aliasing you
+ should strongly consider using caching since anti-aliasing is quite
+ time consuming compared to standard line drawings.</LI>
+</UL>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="2230colors.html">Previous</A>
+<A HREF="3xyplots.html">Next</A>
+</BODY>
+</HTML>

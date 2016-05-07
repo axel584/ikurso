@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="3080graphaug.html">Previous</A>
+<A HREF="3095bands.html">Next</A>
+<HR>
+<H2><A NAME="6_20">6.20 Formatting the axis</A></H2>
+ To get the exact type of axis you want in your graph there are a number
+ of adjustments available for you. You may change, color, size, position
+ and general apperance.
+<P></P>
+<H3><A NAME="6_20_1">6.20.1  Standard two axis graphs</A></H3>
+ Assuming we start with the traditonal two axis graph, one X and one Y
+ axis. You may then change the position of each axis by calling<A href="../ref/Axis.html#_AXIS_SETPOS">
+ Axis::SetPos($aPosition)</A> You have to remember that you need to
+ specify the position on the other axis. SO you need to specify the
+ world-coordinate for the position. By default the axis are each
+ positoined at the 0-point on the other axis, i.e. the axis will cross
+ at the 0,0 point in the graph.
+<P> In additio to the standard positioning you may also use the two
+ special position markers &quot;min&quot; and &quot;max&quot;. This will position the axis
+ at the minimum (or maximum) position of the other axis.</P>
+<P> For example, to make sure that the X-axis is always at the bottom of
+ the graph (at lowest possible Y-value) you would have to add the line</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">xaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetPos</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;min&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P></P>
+<P> To change the color and width of the axis you have to make use of
+ the<A href="../ref/Axis.html#_AXIS_SETCOLOR"> Axis::SetColor()</A> and<A
+href="../ref/Axis.html#_AXIS_SETWEIGHT"> Axis::SetWeight()</A> methods.</P>
+<HR> <SMALL><STRONG> Invisible axis</STRONG> Even though JpGraph (1.7)
+ doesn't directly support &quot;hidden&quot; axis wher the labels are still drawn
+ it is very easy to achive this effect by setting the colors of the axis
+ to be the same as the background. See the example barintex2.php in the
+ Example directory. To completely hide an axis you can make use of the<A href="../ref/Axis.html#_AXIS_HIDE">
+ Hide()</A></SMALL>
+<HR>
+<P> You might also want to add titles to the axis. This is done through
+ the<A href="../ref/Axis.html#_AXIS_SETTITLE"> Axis::SetTitle()</A>
+ method. This is actually just a shortcut for accessing the title
+ proeprty direct. Axis::title::Set() which also allow you to set the
+ alignment in one call.</P>
+<P> By default the position of the title is to the far right for the
+ X-axis and in the middle (and 90 degrees rotated) for the Y-axis.</P>
+<P> You can adjust the position of the title with the help of the second
+ argument to the<A href="../ref/Axis.html#_AXIS_SETTITLE">
+ Axis::SetTitle()</A> method.</P>
+<P> The possible positions are &quot;high&quot;,&quot;middle&quot; and &quot;low&quot; which refers to
+ the scale values on the axis.</P>
+<P> One common modification you might want to do to the title is to
+ increase the margin between the axis and the actual title. This is
+ often necessary to do for the Y-axis if the values displayed are large.
+ You may adjust the distance (in pixels) between the axis and the title
+ by using the method<A href="../ref/Axis.html#_AXIS_SETTITLEMARGIN">
+ Axis::SetTitleMargin()</A></P>
+<P> So for example to increase the margin on the Y-axis you might add
+ the line</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">yaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetTitleMargin</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+40</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P></P>
+<P> to your code.</P>
+<P> Finally we mention something about the positioning of tick marks and
+ labels on the axis. You have the possibility to choose what side of the
+ axis the tick marks and the labels should be at. For the X-axis this
+ can be specified as either on the the top (inside the plotarera) or at
+ bottom (outside of the plotarea). In the same way you can specify for
+ the Y-axis if the labels ( or ticks) should be on the left or right
+ side.</P>
+<P> To adjust the label positioning you have to use the method<A href="../ref/Axis.html#_AXIS_SETTITLESIDE">
+ Axis::SetTitleSide()</A> and to adjust the position of the tick mark
+ you have to use the method<A href="../ref/Axis.html#_AXIS_SETTICKSIDE">
+ SetTickSide()</A></P>
+<HR> <SMALL> Note: There is also an alias for this method,
+ SetTickDirection() which is deprecated from version 1.7 but kept for
+ backwards compatibility.</SMALL>
+<HR> Valid arguments for these methods are
+<UL>
+<LI> SIDE_UP</LI>
+<LI> SIDE_DOWN</LI>
+<LI> SIDE_LEFT</LI>
+<LI> SIDE_RIGHT</LI>
+</UL>
+ For example, the following lines added to a script would change side of
+ the labels and tickmarks for the X-axis.
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">xaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetLabelPos</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+SIDE_UP</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">xaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetTickSide</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+SIDE_DOWN</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P></P>
+<P> This technique is for example used if you position the X-axis at the
+ top of the graph as the following example shows.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_topxaxisex1.html"> <IMG border="0" HEIGHT="200"
+ src="img/topxaxisex1.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 1:</B> Example of both how to adjust the
+ position of the X-axis as well as adjusting the side for the tick and
+ axis title<A href="exframes/frame_topxaxisex1.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<H3><A NAME="6_20_2">6.20.2 Scientific style axis</A></H3>
+ In scientific style plots it is often common to duplicate each axis so
+ that all sides of the graph have a labeled axis. This is of course also
+ fully supported by JpGraph.
+<P> Before we continue we show a small example to illustrate this
+ feature</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_funcex1.html"> <IMG border="0" HEIGHT="350"  src="img/funcex1.png"
+WIDTH="450"></A>
+<BR><SMALL><EM><B>Figure 2:</B> Example of scientific axis<A href="exframes/frame_funcex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<P> The example above shows the basic configuration. There are now
+ several modifications you may do to these axis like</P>
+<UL>
+<LI> Choose if the labels should be inside ot outside the plotarea</LI>
+<LI> Choose if the tickmarks should be inside or outside the plotarea</LI>
+</UL>
+ The style of axis is determined by the method<A href="../ref/Graph.html#_GRAPH_SETAXISSTYLE">
+ Graph::SetAxisStyle()</A> The available type of axis are
+<UL>
+<LI> AXSTYLE_SIMPLE, The standard two axis graph</LI>
+<LI> AXSTYLE_BOXIN, Four axis scientific style with labels and tickmarks
+ on the inside</LI>
+<LI> AXSTYLE_BOXOUT, Four axis scientific style with labels and
+ tickmarks on the outside</LI>
+</UL>
+<H3><A NAME="6_20_3">6.20.3  Adjusting the position of the scale labels</A>
+</H3>
+ How to adjust the actual labels are discussed elsewhere in this manual
+ (see ???,???). Howver we like to mention here that you can adjust the
+ label margin (distance betweeen the axis and the labels) with the
+ method<A href="../ref/Axis.html#_AXIS_SETLABELMARGIN">
+ Axis::SetLabelMargin()</A>
+<P> to adjust the actual label format (like font, color, angle) you need
+ to access the<A href="../ref/Axis.html#_AXIS_SETFONT"> Axis::SetFont()</A>
+ and the<A href="../ref/Axis.html#_AXIS_SETCOLOR"> Axis::SetColor()</A>
+ methods. If you investigate the<A href="../ref/Axis.html#_C_AXIS"> Axis</A>
+ class you will discover more methods to adjust the many aspects of the
+ axis layout.</P>
+<P> As a final note we also mention the methods<A href="../ref/Axis.html#_AXIS_SETLABELALIGN">
+ Axis::SetLabelAlign()</A> and<A href="../ref/Axis.html#_AXIS_SETLABELANGLE">
+ Axis::SetLabelAngle()</A> This first method is really only mentioned
+ here for completenesss since it is mostly used for internal purposes.
+ However on som occasion you might want to adjust the alignment of the
+ labels. By default they are centered in respect to the tickmark. By
+ using the method you might override this positioning should you choose
+ to do so.</P>
+<P> The second of these methods adjusts the angle of the label in
+ regards to the axis. This is very usefull for X-axis that have long
+ labels.</P>
+<H3><A NAME="6_20_4">6.20.4 Formatting the scale labels</A></H3>
+ [TODO]<A gref=""> Graph::SetLabelFormatCallback();</A><A gref="">
+ Graph::SetLabelFormat();</A>
+<H3><A NAME="6_20_5">6.20.5 Inverting the Y-axis</A></H3>
+ One good way of illutrsate the usefullness of label callbacks in a
+ slightly different context is to show how we can achieve the effect of
+ an inverted Y-scale.
+<P> An inverted Y-scale has the lowest number at the top and the scale
+ values increases downwards.</P>
+<P> Even though JpGraph doesn't directly support this feature it is
+ wuite easy to achieve with just a few extra lines of code in your image
+ script.</P>
+<P> Before we continue we give an example of what we are referring to.</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_inyaxisex2.html"> <IMG border="0" HEIGHT="300"
+ src="img/inyaxisex2.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 3:</B> Inverted Y-axis<A href="exframes/frame_inyaxisex2.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<P> Two achieve this effect there are two simple steps to take:</P>
+<OL>
+<LI> Negate all you Y-value in the data</LI>
+<LI> Create a callback that negates the scale labels so they appear to
+ be positive.</LI>
+</OL>
+ And that's it! We refeer you to the code in the example above for the
+ details.
+<H2><A NAME="6_21">6.21 Adjusting the autoscaling limits - grace value</A>
+</H2>
+ By default the autoscaling algorithm tries to make best possible use of
+ screen estate by making the scale as large as possible, i.e. the
+ extreme values (min/max) will be on the top and bottom of the scale if
+ they happen to fall on a scale-tick. So for example doing a simple line
+ plot could look like the plot shown in the below.
+<P><DIV align="center">
+<BR><A href="exframes/frame_example3.2.html"> <IMG border="0" HEIGHT="200"
+ src="img/example3.2.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 4:</B> A typical graph with autoscaling and
+ grace=0<A href="exframes/frame_example3.2.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P> However you might sometime want to add some extra to the minimum and
+ maximum values so that there is some &quot;air&quot; in the graph between the end
+ of the scale values and the extreme points in the graphs. This can be
+ done by adding a &quot;grace&quot; percentage to the scale. So for example adding
+ 10% to the y-scale in the image above is done by calling the<A href="../ref/LinearScale.html#_LINEARSCALE_SETGRACE">
+ SetGrace()</A> method on the yscale as in</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">yaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetGrace</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">10</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">10</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> These lines add a minimum of 10% to the top and bottom values of the
+ scale. Note that we say &quot;minimum&quot; since depending on the specific tick
+ values choose this might be a little bit more to make the end of the
+ scale fall on an even tick mark.</P>
+<P> Adding this line to the previous graph will result in the following
+ example</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example3.2.1.html"> <IMG border="0" HEIGHT="200"
+ src="img/example3.2.1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 5:</B> Adding 10% grace value to top and bottom
+ of the Y-scale<A href="exframes/frame_example3.2.1.html"> [src]</A></EM>
+</SMALL></DIV></P>
+<P> Since we haven't adjusted the positoin of the X-axis it will remain
+ at Y=0 which might not necessary be waht we would like so we therefor
+ also add the line</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">xaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetPos</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;min&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P></P>
+<P> So that the X-axis always will remain at the lowest possible
+ Y-value. Doing this will then result in the example below</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example3.2.2.html"> <IMG border="0" HEIGHT="200"
+ src="img/example3.2.2.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 6:</B> Using grace but also adjusting the
+ position of the X-axis<A href="exframes/frame_example3.2.2.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="3080graphaug.html">Previous</A>
+<A HREF="3095bands.html">Next</A>
+</BODY>
+</HTML>

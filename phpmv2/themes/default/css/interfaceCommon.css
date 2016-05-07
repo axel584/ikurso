@@ -1,0 +1,23 @@
+/* style de la page */
+BODY {
+background: #FFFFFF;
+margin: 0;
+}
+
+/* Cadre general */
+#main {
+margin: 5px;
+margin-top:20px;
+text-align: left;
+background: #FFFFFF;
+}
+/* cadre dans lequel se trouve les donnees */
+
+#contenu {
+font-size: 90%;
+line-height: 1.4em;
+width: 860px;
+border: 1px solid #00008B;
+margin: auto;
+padding: 0.5em;
+}

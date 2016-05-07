@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="3030barplot.html">Previous</A>
+<A HREF="3050scatterplot.html">Next</A>
+<HR>
+<H2><A NAME="6_4">6.4 Error plots</A></H2>
+ Error plots are used to visually indicate uncertainty in data points.
+ This is done by for each X value by giving both a minimum and a maximum
+ Y-value.
+<P> Before you can use error plots you must remember to include the file
+ &quot;jpgraph_error.php&quot; in your script.</P>
+<P> The following example illustrates a simple error bar. We will have 5
+ points, so we need 10 Y-values. We also would like the error bars to be
+ red and 2 pixels wide. All this is accomplished by creating an<A href="../ref/ErrorPlot.html#_C_ERRORPLOT">
+ ErrorPlot()</A> in much the same way as, for example, a normal line
+ plot. Doing this would now give the example shown below.</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example13.html"> <IMG border="0" HEIGHT="200"
+ src="img/example13.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 1:</B> A simple error bar<A href="exframes/frame_example13.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> You might notice that there is one displeasing aesthetical quality
+ of this graph. The X-scale is just wide enough to just accompany the
+ number of error bars and hence the first bar is drawn on the Y-axis and
+ the and last bar just at the edge of the plot area. To adjust this you
+ might call the<A href="../ref/Plot.html#_PLOT_SETCENTER"> SetCenter()</A>
+ method which will adjust the X-scale so it does not use the full width
+ of the X-axis.</P>
+<P> The following example illustrates the use of this feature by
+ applying this technique to the previous example</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example14.html"> <IMG border="0" HEIGHT="200"
+ src="img/example14.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 2:</B> Adjusting the X-scale not to use the
+ full width of the X-axis.<A href="exframes/frame_example14.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="6_4_1">6.4.1 Using line error plots</A></H3>
+ A line error plot is an error plot with the addition that a line is
+ drawn between the average value of each error pair. You use this type
+ of plot the exact same way you would use an error plot. The only change
+ is that you must instantiated an<A href="../ref/ErrorPlot.html#_C_ERRORPLOT">
+ ErrorLinePlot()</A> instead and make sure you have included the
+ &quot;jpgraph_line.php&quot; since the line error plot makes use of the line plot
+ class to stroke the line.
+<P> To control the various properties of the line drawn the &quot;line&quot;
+ property of the error line plot may be accessed. So, for example, if
+ you want the line to be 2 pixels wide and blue you would have to add
+ the following two lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $elplot</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">line</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetWeight</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">2</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$elplot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">line</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;blue&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> to generate the graph as shown below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example15.html"> <IMG border="0" HEIGHT="200"
+ src="img/example15.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 3:</B> Linear error plot<A href="exframes/frame_example15.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> You may of course add legends to none, one or both of the line types
+ in the above graph. So for example if we wanted the legend &quot;Min/Max&quot;
+ for the red error bars and a legend &quot;Average&quot; for the blue line you
+ would have to add the lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $errplot</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">SetLegend</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;Min/Max&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$errplot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">line</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetLegend</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;Average&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> The resulting graph will now look like (note that we are using the
+ default placement of the legend box)</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example16.html"> <IMG border="0" HEIGHT="200"
+ src="img/example16.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 4:</B> Addding a legend box to the line error
+ plot.<A href="exframes/frame_example16.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P></P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="3030barplot.html">Previous</A>
+<A HREF="3050scatterplot.html">Next</A>
+</BODY>
+</HTML>

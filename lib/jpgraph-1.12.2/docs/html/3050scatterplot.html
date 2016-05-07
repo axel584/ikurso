@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="3040errorplot.html">Previous</A>
+<A HREF="3055stockplot.html">Next</A>
+<HR>
+<H2><A NAME="6_5">6.5 Scatter plots</A></H2>
+ Scatter plots are very simple; they plot a number of points specified
+ by their X- and Y-coordinate. Each point is stroked on the image with a
+ mark as with lineplots. The stroked marks can also be connected with an
+ optional line.
+<P></P>
+<HR> <SMALL><STRONG> Sidenote:</STRONG> Even though it is only scatter
+ plot that was designed to be used with X,Y plots it is perfectly
+ possible to use use both X,Y coordinates for bar and line plots as
+ well.</SMALL>
+<HR>
+<P> Even though you would normally supply X-coordinates it is still
+ perfectly possible to use a text-scale for X-coordinates to just
+ enumerate the points. This is especially usefull when using the
+ &quot;Impuls&quot; type of scatter plot as is shown below.</P>
+<P> Scatter pots are created by including the jpgraph extension
+ &quot;jpgraph_scatter.php&quot; and then creating an instance of plot type of
+ ScatterPlot(). To specify the mark you want to use you access the mark
+ with the instance variable &quot;mark&quot; in the scatter plot. The default is
+ to use an unfilled small circle.</P>
+<P> To create a scatter plot you will create an instance</P>
+<P> A simple example using just default values will illustrate this</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_scatterex1.html"> <IMG border="0" HEIGHT="200"
+ src="img/scatterex1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 1:</B> The simplest possible scatter plot<A href="exframes/frame_scatterex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P>We can easily adjust the size and colors fo the markers to get
+ another effect as shown below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_scatterex2.html"> <IMG border="0" HEIGHT="200"
+ src="img/scatterex2.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 2:</B> The simplest possible scatter plot with
+ adjusted marks<A href="exframes/frame_scatterex2.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P> Another possible vaiant of scatter plot is impuls-scatter plots.
+ This is a variant of normal scatter plot where each mark have a line
+ from the mark to the Y=0 base line. To change a scatter plot into an
+ impuls scatter plot you have to call the method<A href="../ref/ScatterPlot.html#_SCATTERPLOT_SETIMPULS">
+ SetImpuls()</A> on the scatter plot.</P>
+<P> This type of plots are often used to illustrate signals in
+ conjunction with digital signal processing. The following two examples
+ illustrates simple use of impuls plots.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_impulsex1.html"> <IMG border="0" HEIGHT="200"
+ src="img/impulsex1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 3:</B> A simple impuls plot<A href="exframes/frame_impulsex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> The next example shows how to modify the color and width of the
+ impuls plot</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_impulsex2.html"> <IMG border="0" HEIGHT="200"
+ src="img/impulsex2.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 4:</B> A modified impuls plot<A href="exframes/frame_impulsex2.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<HR> <SMALL><STRONG> Sidebar:</STRONG> You may draw impuls graphs
+ without any mark by specifying the mark type as (-1) . That way only
+ the impuls lines will be drawn.</SMALL>
+<HR> As a final touch we show two more advanced impuls graphs . In these
+ graphs we have used more advanced formatting for the Y-axis labels as
+ well as adjusted the position of the axis position.
+<P><DIV align="center">
+<BR><A href="exframes/frame_impulsex3.html"> <IMG border="0" HEIGHT="200"
+ src="img/impulsex3.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 5:</B> In this imuplsplot we have adjusted the
+ position of the X-axis to the bottom and also added more decimals to
+ the labels on the Y-axis<A href="exframes/frame_impulsex3.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_impulsex4.html"> <IMG border="0" HEIGHT="250"
+ src="img/impulsex4.png" WIDTH="500"></A>
+<BR><SMALL><EM><B>Figure 6:</B> In this impuls plot we have also added a
+ lineplot with a dotted line style.<A href="exframes/frame_impulsex4.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H2><A NAME="6_6">6.6 Field plots</A></H2>
+ A variant of scatter plot is the so called<I> Field Plots</I> this is
+ basically a scatter plot where each scatter point is an arrow with a
+ direction between 0 to 359 degrees. This effectively allows the
+ visualization of 3 parameters at each point (x,y,angle). As an
+ additional bonus there is also possible to define a callback for each
+ scatter plot to also define the color for each point.
+<P> To create a field plot you create an instance of<A href="../ref/FieldPlot.html#_C_FIELDPLOT">
+ FieldPlot</A> in the same way as you reated a normal scatter plot. The
+ arguments to this method are Y-coordinate, X-coordinate and angle. To
+ specify a callback you use<A href="../ref/FieldPlot.html#_FIELDPLOT_SETCALLBACK">
+ FieldPlot::SetCallback()</A></P>
+<P> The following example (and code) illustrates the usage of the field
+ plot type.</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_fieldscatterex1.html"> <IMG border="0" HEIGHT="200"
+ src="img/fieldscatterex1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 7:</B> Example of the Field plot type<A href="exframes/frame_fieldscatterex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> In addition to the parameters mentioned above you can also adjust
+ both the general size of the arrow and also the specific size of the
+ arrowhead. The arrow size is specified in pixels and the arrow head is
+ specified as an integers between 0 and 10. These sizes are specified
+ witha call to<A href="../ref/FieldArrow.html#_FIELDARROW_SETSIZE">
+ FieldPlot::arrow::SetSize()</A></P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="3040errorplot.html">Previous</A>
+<A HREF="3055stockplot.html">Next</A>
+</BODY>
+</HTML>

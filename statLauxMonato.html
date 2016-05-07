@@ -1,0 +1,783 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>ikurso: Statistiques/statLauxMonato.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="ikurso, cours, esperanto, cours d'esperanto, esperanto-jeunes" />
+<link href="http://esperanto-jeunes.org/favicon.ico" type="image/ico" rel="icon" />
+<link type="text/css" rel="stylesheet" href="style/bleu.css" title="bleu" />
+
+</head>
+<body>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+	_uacct = "UA-1302916-3";
+	urchinTracker();
+</script>
+	<div id="menuo">
+		<table>
+			<tr><td class="unua">
+					<h1>axel584</h1>
+					<p><a href="eliri.php">Fermer la session</a></p>
+				</td>
+				<td>
+					<h2>Personnel</h2>
+					<p><a href="forum/index.php?sid=">
+					Forum (10)					</a></p>
+					<p><a href="javascript:void(0);" onClick="window.open('forum/chatbox_mod/chatbox.php','12_ChatBox','scrollbars=no,width=700,height=550')">Discussion en ligne</a></p>
+					<p><a href="personinformoj.php">Donn&eacute;es personnelles</a></p>
+				</td>
+							<td>
+					<h2>Correcteur</h2>
+					<p><a href="statLauxKategorio.php">Statistiques</a></p>
+					<p><a href="helppagxo.php">Guide du correcteur</a></p>
+					<p><a href="miajlernantoj.php">Mes &eacute;l&egrave;ves</a></p>
+				</td>
+													<td class="elemento">
+					<h2>Administrateur</h2>
+					<p><a href="stirpanelo.php">Panneau de contr&ocirc;le</a></p>
+					<p><a href="administri.php">G&eacute;rer les utilisateurs</a></p>
+				</td>
+						</tr>
+		</table>
+	</div>
+<!-- 
+*
+* page = menu lateral + onglets (facultatifs) + contenu 
+*
+-->
+<div id="pagxo">
+	<div id="subpagxo">
+		<div id="pagxmenuo">
+			
+			<!-- boutons pour choisir l'affichage avec les accents ou avec les x -->
+			<table class="nula">
+				<tr><td valign="top">
+					Mode d'affichage :<br />
+					<a href="http://ikurso.esperanto-jeunes.org/statLauxMonato.php?metodo=U" title="Unikode">
+					<img src="style/bouton-U.gif" title="Afficher les lettres accentu&eacute;es" class="jes" />
+					</a>
+					<a href="http://ikurso.esperanto-jeunes.org/statLauxMonato.php?metodo=X" title="X-sistemo">
+					<img src="style/bouton-X.gif" title="Afficher des x pour les accents" class="ne" />
+					</a>
+				</td><td valign="top">
+					<br /><a href="/helpo.php"><button>&nbsp;&nbsp;&nbsp;Aide&nbsp;&nbsp;&nbsp;</button></a>
+				</td></tr></table>
+			<h2><a href="http://ikurso.esperanto-jeunes.org/sxangxiNBlernantoj.php">Mes &eacute;l&egrave;ves</a></h2>			<table title="cliquez ici pour modifier le nombre de vos &eacute;l&egrave;ves">
+				<thead>
+					<tr><td colspan="3"><a href="http://ikurso.esperanto-jeunes.org/sxangxiNBlernantoj.php">
+					Modifier le nombre de mes &eacute;l&egrave;ves ?</a></td></tr>
+					<tr>
+						<td>cours</td>
+						<td>&eacute;l&egrave;ves<br/>en cours</td>
+						<td>nombre<br/>maximum</td>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+	<td class='col1'>Logiciel "Kurso de Esperanto"</td>
+	<td>8</td>
+	<td><span style="color:red">6</span></td>
+	</tr>
+<tr>
+	<td class='col1'>DLEK : Cours en 10 le&#231;ons</td>
+	<td>8</td>
+	<td><span style="color:red">7</span></td>
+	</tr>
+<tr>
+	<td class='col1'>Gerda Malaperis</td>
+	<td>3</td>
+	<td>3</td>
+	</tr>
+				</tbody>
+			</table>
+									<h2>Cours</h2>
+			<ul class="niv1">
+				<li><a href="fr/intro.php?temo=eo">Pr&eacute;sentation</a></li>
+				<li class="ligo">
+				<a href="fr/cge/intro.php?temo=intro">Cours en dix le&ccedil;ons</a>
+					<ul class="niv2">
+						<li><a href="fr/cge/intro.php?temo=intro">Introduction</a></li>
+						<li><a href="fr/cge/lec01.php">Premi&egrave;re le&ccedil;on</a></li><li><a href="fr/cge/lec02.php">Deuxi&egrave;me le&ccedil;on</a></li><li><a href="fr/cge/lec03.php">Troisi&egrave;me le&ccedil;on</a></li><li><a href="fr/cge/lec04.php">Quatri&egrave;me le&ccedil;on</a></li><li><a href="fr/cge/lec05.php">Cinqui&egrave;me le&ccedil;on</a></li><li><a href="fr/cge/lec06.php">Sixi&egrave;me le&ccedil;on</a></li><li><a href="fr/cge/lec07.php">Septi&egrave;me le&ccedil;on</a></li><li><a href="fr/cge/lec08.php">Huiti&egrave;me le&ccedil;on</a></li><li><a href="fr/cge/lec09.php">Neuvi&egrave;me le&ccedil;on</a></li><li><a href="fr/cge/lec10.php">Dixi&egrave;me le&ccedil;on</a></li>					<li><a href="fr/cge/vocabula.php">Lexique</a></li>
+					</ul>
+				</li>
+				<li class="ligo">
+				<a href="aligxi.php">Kurso de esperanto</a>
+					<ul class="niv2">
+						<li><a href="aligxi.php">Inscription</a></li>
+						<li><a href="fr/cge/vocabula.php">Lexique</a></li>
+					</ul>
+				</li>
+				<li class="ligo">
+				<a href="fr/gerda/index.php">Gerda malaperis</a>
+					<ul class="niv2 gerda">
+					<li><a href="fr/gerda/index.php">Introduction</a></li>
+					<li><a href="fr/gerda/cxap01.php">1 : Unua &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap02.php">2 : Dua &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap03.php">3 : Tria &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap04.php">4 : Kvara &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap05.php">5 : Kvina &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap06.php">6 : Sesa &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap07.php">7 : Sepa &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap08.php">8 : Oka &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap09.php">9 : Na&#365;a &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap10.php">10 : Deka &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap11.php">11 : Dek-Unua &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap12.php">12 : Dek-Dua &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap13.php">13 : Dek-Tria &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap14.php">14 : Dek-Kvara &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap15.php">15 : Dek-Kvina &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap16.php">16 : Dek-Sesa &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap17.php">17 : Dek-Sepa &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap18.php">18 : Dek-Oka &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap19.php">19 : Dek-Na&#365;a &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap20.php">20 : Dudeka &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap21.php">21 : Dudek-Unua &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap22.php">22 : Dudek-Dua &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap23.php">23 : Dudek-Tria &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap24.php">24 : Dudek-Kvara &#265;apitro</a></li>
+<li><a href="fr/gerda/cxap25.php">25 : Dudek-Kvina &#265;apitro</a></li>
+					</ul>
+				</li>
+				<li><a href="fr/gerda/lasu00.php">Lasu min paroli plu!</a></li>					 
+				<li class="lasta"><a href="helpo.php?temo=elsxutoj">T&eacute;l&eacute;chargements</a></li>					 
+			</ul>
+
+			<h2>L&rsquo;esp&eacute;ranto</h2>
+			<ul class="niv1">
+				<li class="lasta"><a href="ressources.php">En savoir plus...</a></li>					 
+			</ul>
+
+			<h2>Comment faire ?</h2>
+			<ul class="niv0">
+				<li><a href="/helpo.php">Aide et informations utiles</a></li>
+				<li><a href="/fr/intro.php?temo=enskribo">S&rsquo;inscrire &agrave; un cours</a></li>
+				<li><a href="#" onClick="window.open('pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');" >
+				Retrouver son mot de passe</a></li>
+				<li class="lasta">
+								
+					<a href="reago.php">
+					Nous contacter :					
+					<input type="image" src="bildoj/koverto.gif">
+					</a>
+				</li>
+			</ul>
+
+			<h2>Farbskatol&rsquo;</h2>
+				<ul>
+					<li class="nenio">
+						<p style="text-align:center" id="farbskatol">
+						<a href="http://farbskatol.net">
+						Vid&eacute;os en esp&eacute;ranto</a></p>
+					</li>
+				</ul>
+
+				<p class="meze">&nbsp;
+				Ce site est g&eacute;r&eacute; par :<a href="http://www.esperanto-jeunes.org"> 
+				<img alt="jefo-logeto" src="bildoj/logo_JEFO.gif" /></a><br />
+				avec le soutien de 
+				<a href="http://www.linguaforce.com/esperanto/traduction.htm" alt="linguaforce"><img src="bildoj/linguaforce.gif" align="center" border="0"></a>
+				</p>
+		</div> <!-- pagxmenuo -->
+		<div class="stylenavbar">
+		</div>	
+	
+		<h1>Statistiques</h1>
+		<!-- decommenter ceci pour afficher un message en cas de travaux sur le site
+		<div style="border:2px solid red;background:white">
+		<p class="eraro">
+		Samedi 16 juin 2007</p>
+		<p class="eraro">Ce site est en travaux. Tant que ce message est affiché, veuillez de ne pas envoyer vos exercices. Merci de revenir dans quelques heures.
+		</p>
+		</div>
+		-->
+
+			<div id="enhavo">
+			<ul id="tabnav">
+				<li ><a href="statLauxKategorio.php">par catégorie</a></li>
+				<li  class='aktiva'><a href="statLauxMonato.php">par mois</a></li>
+				<li ><a href="statLauxLando.php">par pays</a></li>
+				<li ><a href="statLauxKurso.php">par cours</a></li>
+			</ul>
+			<div id="kadro">
+			<h2>Répartition par mois : 
+			<a href="#" onClick="window.open('stat-monatoj.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
+			<img src="bildoj/grafiko.png"></a></h2>
+			<p>Entre parenthèses figure une estimation pour le mois en cours</p>
+			<table class="stat">
+<thead>
+<tr>
+<td class='vide'>&nbsp;</td>
+<td class='vide'>&nbsp;</td>
+<td class='col1'>élèves	<a href="#" onClick="window.open('stat-monatoj.php?filtre=K','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
+	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
+	</a></td>
+	<td class='col1'>Ont abandonné	<a href="#" onClick="window.open('stat-monatoj.php?filtre=H','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
+	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
+	</a></td>
+	<td class='col1'>Ont fini le cours	<a href="#" onClick="window.open('stat-monatoj.php?filtre=F','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
+	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
+	</a></td></tr>
+	</thead>
+	
+	<tr>
+<td class='col1'>Octobre 2007</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200710&nomoMonato=Octobre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;73&nbsp;(91)</td>
+<td>&nbsp;51&nbsp;(63)</td>
+<td>&nbsp;10&nbsp;(12)</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Septembre 2007</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200709&nomoMonato=Septembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;64</td>
+<td>&nbsp;99</td>
+<td>&nbsp;7</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Ao&ucirc;t 2007</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200708&nomoMonato=Ao&ucirc;t','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;69</td>
+<td>&nbsp;48</td>
+<td>&nbsp;7</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Juillet 2007</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200707&nomoMonato=Juillet','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;56</td>
+<td>&nbsp;26</td>
+<td>&nbsp;9</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Juin 2007</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200706&nomoMonato=Juin','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;69</td>
+<td>&nbsp;60</td>
+<td>&nbsp;16</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Mai 2007</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200705&nomoMonato=Mai','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;64</td>
+<td>&nbsp;38</td>
+<td>&nbsp;10</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Avril 2007</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200704&nomoMonato=Avril','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;49</td>
+<td>&nbsp;21</td>
+<td>&nbsp;11</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Mars 2007</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200703&nomoMonato=Mars','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;71</td>
+<td>&nbsp;55</td>
+<td>&nbsp;19</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>F&eacute;vrier 2007</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200702&nomoMonato=F&eacute;vrier','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;66</td>
+<td>&nbsp;58</td>
+<td>&nbsp;11</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Janvier 2007</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200701&nomoMonato=Janvier','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;90</td>
+<td>&nbsp;85</td>
+<td>&nbsp;9</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>D&eacute;cembre 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200612&nomoMonato=D&eacute;cembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;64</td>
+<td>&nbsp;61</td>
+<td>&nbsp;7</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Novembre 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200611&nomoMonato=Novembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;82</td>
+<td>&nbsp;51</td>
+<td>&nbsp;8</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Octobre 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200610&nomoMonato=Octobre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;78</td>
+<td>&nbsp;153</td>
+<td>&nbsp;6</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Septembre 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200609&nomoMonato=Septembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;68</td>
+<td>&nbsp;56</td>
+<td>&nbsp;7</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Ao&ucirc;t 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200608&nomoMonato=Ao&ucirc;t','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;84</td>
+<td>&nbsp;99</td>
+<td>&nbsp;9</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Juillet 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200607&nomoMonato=Juillet','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;56</td>
+<td>&nbsp;47</td>
+<td>&nbsp;5</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Juin 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200606&nomoMonato=Juin','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;74</td>
+<td>&nbsp;130</td>
+<td>&nbsp;11</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Mai 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200605&nomoMonato=Mai','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;90</td>
+<td>&nbsp;61</td>
+<td>&nbsp;13</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Avril 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200604&nomoMonato=Avril','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;79</td>
+<td>&nbsp;60</td>
+<td>&nbsp;12</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Mars 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200603&nomoMonato=Mars','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;95</td>
+<td>&nbsp;59</td>
+<td>&nbsp;11</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>F&eacute;vrier 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200602&nomoMonato=F&eacute;vrier','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;79</td>
+<td>&nbsp;33</td>
+<td>&nbsp;17</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Janvier 2006</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200601&nomoMonato=Janvier','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;106</td>
+<td>&nbsp;89</td>
+<td>&nbsp;17</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>D&eacute;cembre 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200512&nomoMonato=D&eacute;cembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;63</td>
+<td>&nbsp;50</td>
+<td>&nbsp;16</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Novembre 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200511&nomoMonato=Novembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;74</td>
+<td>&nbsp;63</td>
+<td>&nbsp;21</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Octobre 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200510&nomoMonato=Octobre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;80</td>
+<td>&nbsp;68</td>
+<td>&nbsp;14</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Septembre 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200509&nomoMonato=Septembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;89</td>
+<td>&nbsp;95</td>
+<td>&nbsp;16</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Ao&ucirc;t 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200508&nomoMonato=Ao&ucirc;t','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;86</td>
+<td>&nbsp;33</td>
+<td>&nbsp;16</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Juillet 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200507&nomoMonato=Juillet','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;101</td>
+<td>&nbsp;65</td>
+<td>&nbsp;18</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Juin 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200506&nomoMonato=Juin','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;73</td>
+<td>&nbsp;67</td>
+<td>&nbsp;12</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Mai 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200505&nomoMonato=Mai','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;81</td>
+<td>&nbsp;76</td>
+<td>&nbsp;16</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Avril 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200504&nomoMonato=Avril','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;93</td>
+<td>&nbsp;41</td>
+<td>&nbsp;17</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Mars 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200503&nomoMonato=Mars','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;100</td>
+<td>&nbsp;81</td>
+<td>&nbsp;20</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>F&eacute;vrier 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200502&nomoMonato=F&eacute;vrier','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;92</td>
+<td>&nbsp;58</td>
+<td>&nbsp;10</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Janvier 2005</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200501&nomoMonato=Janvier','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;82</td>
+<td>&nbsp;37</td>
+<td>&nbsp;9</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>D&eacute;cembre 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200412&nomoMonato=D&eacute;cembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;71</td>
+<td>&nbsp;42</td>
+<td>&nbsp;10</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Novembre 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200411&nomoMonato=Novembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;99</td>
+<td>&nbsp;52</td>
+<td>&nbsp;21</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Octobre 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200410&nomoMonato=Octobre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;67</td>
+<td>&nbsp;49</td>
+<td>&nbsp;16</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Septembre 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200409&nomoMonato=Septembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;71</td>
+<td>&nbsp;72</td>
+<td>&nbsp;6</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Ao&ucirc;t 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200408&nomoMonato=Ao&ucirc;t','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;60</td>
+<td>&nbsp;29</td>
+<td>&nbsp;8</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Juillet 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200407&nomoMonato=Juillet','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;58</td>
+<td>&nbsp;35</td>
+<td>&nbsp;13</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Juin 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200406&nomoMonato=Juin','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;180</td>
+<td>&nbsp;72</td>
+<td>&nbsp;9</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Mai 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200405&nomoMonato=Mai','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;47</td>
+<td>&nbsp;41</td>
+<td>&nbsp;10</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Avril 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200404&nomoMonato=Avril','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;41</td>
+<td>&nbsp;25</td>
+<td>&nbsp;2</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Mars 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200403&nomoMonato=Mars','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;49</td>
+<td>&nbsp;22</td>
+<td>&nbsp;6</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>F&eacute;vrier 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200402&nomoMonato=F&eacute;vrier','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;29</td>
+<td>&nbsp;22</td>
+<td>&nbsp;6</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Janvier 2004</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200401&nomoMonato=Janvier','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;49</td>
+<td>&nbsp;27</td>
+<td>&nbsp;7</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>D&eacute;cembre 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200312&nomoMonato=D&eacute;cembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;35</td>
+<td>&nbsp;22</td>
+<td>&nbsp;7</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Novembre 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200311&nomoMonato=Novembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;39</td>
+<td>&nbsp;13</td>
+<td>&nbsp;7</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Octobre 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200310&nomoMonato=Octobre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;32</td>
+<td>&nbsp;22</td>
+<td>&nbsp;8</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Septembre 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200309&nomoMonato=Septembre','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;31</td>
+<td>&nbsp;30</td>
+<td>&nbsp;4</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Ao&ucirc;t 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200308&nomoMonato=Ao&ucirc;t','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;35</td>
+<td>&nbsp;10</td>
+<td>&nbsp;4</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Juillet 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200307&nomoMonato=Juillet','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;34</td>
+<td>&nbsp;7</td>
+<td>&nbsp;5</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Juin 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200306&nomoMonato=Juin','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;45</td>
+<td>&nbsp;16</td>
+<td>&nbsp;3</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Mai 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200305&nomoMonato=Mai','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;27</td>
+<td>&nbsp;9</td>
+<td>&nbsp;4</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Avril 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200304&nomoMonato=Avril','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;23</td>
+<td>&nbsp;14</td>
+<td>&nbsp;2</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Mars 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200303&nomoMonato=Mars','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;26</td>
+<td>&nbsp;13</td>
+<td>&nbsp;5</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>F&eacute;vrier 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200302&nomoMonato=F&eacute;vrier','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;31</td>
+<td>&nbsp;</td>
+<td>&nbsp;1</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Janvier 2003</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200301&nomoMonato=Janvier','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;26</td>
+<td>&nbsp;1</td>
+<td>&nbsp;1</td>
+</tr>
+</tbody>
+<tr>
+<td class='col1'>Juillet 2002</td>
+<td><a href='#' onClick="window.open('stat-monatoj-pie.php?idMonato=200207&nomoMonato=Juillet','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');">
+			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>
+<td>&nbsp;2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td>Total</td>
+<td>&nbsp;</td><td>3847</td>
+<td>2819&nbsp;&nbsp;&nbsp;(73.28%)</td>
+<td>582&nbsp;&nbsp;&nbsp;(15.13%)</td>
+</tr>
+</tfoot>
+</table>
+		
+		</div>
+	</div>
+<p class="dato">
+ĝisdatigita je : 
+2005-10-01</p>
+<p style="text-align:center">
+	Des commentaires ou des questions à propos de cette page ? <a href="reago.php?q=Statistiques">
+					<br />Contactez-nous :					
+					<input type="image" src="bildoj/koverto.gif">
+					</a>
+</p>
+</div> <!-- fin div subpagxo -->
+</div>  <!-- fin div pagxo -->
+<div class="antauxpiedo">&nbsp;</div>
+<div id="piedo">&nbsp;</div>
+
+</body>
+</html>  
+        

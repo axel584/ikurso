@@ -1,0 +1,352 @@
+body {
+   font: 12px verdana, arial, sans-serif;
+	color: #003366;
+	background-color : #F4FCFF;
+	margin: 5px 0 0 0;
+}
+
+blockquote {
+  text-align : justify;
+}
+
+img.lernu {
+	position: relative;
+	float: right;
+	vertical-align: text-top;
+	margin: 1px;
+}
+
+img.titolo { 
+	height: 5px; 
+	width: 800px;
+	margin: 0px;
+}
+
+table.enhavo,
+table.klarigo,
+table.rakonto {
+	width:100%;
+   font:12px verdana, arial, sans-serif;
+	color:#003366;
+	background-color:white;
+	border-right-color:#7B8795;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-left-color:#7B8795;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-bottom-color:#7B8795;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	padding:20px 40px;
+}
+
+table.rakonto td {
+	text-align:justify;
+}
+
+table.enhavo {
+	padding:20px 5px 20px 20px;
+}
+
+table.klarigo ul {
+	list-style:none;
+}
+table.klarigo ul li a {
+	color:#000;
+	text-decoration:none;
+	display:block;
+}
+table.klarigo ul li a:hover {
+	background:#CCC;
+}
+table p {
+   font: 12px verdana, arial, sans-serif;
+	line-height: 18px;
+}
+tr.tabtitolo {
+	font-family: arial,verdana, helvetica, sans-serif;
+	font-size: 12px; 
+	background-color: #F4FCFF; 
+	text-align: center;
+	height: 30px;
+	padding: 0px;
+	margin: 0px; 
+}
+
+h1 {
+	font-family: arial,verdana, helvetica, sans-serif;
+	font-size: 32px; 
+	font-weight: bold; 
+	text-align: center;
+	padding: 0px;
+	color: #7B8795;
+}
+h3 {
+	margin-bottom: 5px;
+}
+
+.kapo {
+	font-family: arial,verdana, helvetica, sans-serif;
+  font-size: 20px;
+  text-align : left;
+  background-color : #CCE6FF;
+}
+
+.titolo { 
+	font-family: arial,verdana, helvetica, sans-serif;
+	font-size: 32px; 
+	font-weight : bold; 
+	text-align : center;
+	color: #7B8795;
+}
+
+.rim {
+	display : block;
+	text-align : justify;
+	font-size: 12px;  
+	background-color : #FFFFFF;
+	color : #3366CC;
+	margin-left : 80px;
+	margin-right : 80px;
+	padding : 5px;
+	border : dotted;
+	border-width : 2px;
+	border-color : #A8E1F7;
+}
+
+.mar50 {
+	margin-left: 50px;
+}
+
+.ekzerco {
+  background-color : #AAA;
+  page-break-inside : avoid;
+}
+
+.kadro {
+	border : solid;
+	border-width : 1px;
+	border-color : #339965;
+	background-color : #FFFFFF;
+}
+
+.kapv-eo {
+	vertical-align : top;
+	color : #339965;
+}
+
+.kapv-fr {
+	vertical-align : top;
+	color : #003366;
+}
+
+.ekz-eo {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	vertical-align : top;
+	color : blue;
+}
+
+.maldekstren {
+  margin-left : 0%;
+}
+
+.justify {
+  text-align : justify;
+}
+
+.normala {
+	font-family: arial, Helvetica, verdana, sans-serif; 
+	font-size: 11px; 
+	font-weight : bold; 
+	color: #000000
+	}
+
+.fajna {
+	font-family: arial, Helvetica, verdana, sans-serif; 
+	font-size: 12px; 
+	font-weight : normal; 
+	color: #000000
+}
+
+.artifiko {  
+	font-family: arial, Helvetica, verdana, sans-serif;
+	font-size: 12px; 
+	font-style: italic; 
+	color: #000}
+
+.eraro { 
+	font-family: arial, Helvetica, verdana, sans-serif; 
+	font-size: 22px; 
+	font-style: italic; 
+	color: #FF0000}
+
+#kurso { 
+	position:relative;
+	top:0px;
+	left:0px;
+	width: 650px;
+	background-color: #F4FCFF; 
+	color: #003366;
+	padding:0px;
+	float:left;
+	margin-left:5px;
+}
+
+ul#tabnav {
+   font: 11px verdana, arial, Helvetica, sans-serif;
+   list-style-type: none;
+   padding-bottom: 24px;
+   border-bottom: 1px solid #7B8795;
+   margin: 0;
+	list-style-image: none;
+	}
+	
+ul#tabnav li {
+   float: left;
+   height: 21px;
+   margin: 2px 2px 0 2px;
+   border: 1px solid #7B8795;
+	background-color: #EEE;
+}
+ul#tabnav li.aktiva {
+   border-bottom: 1px solid #FFF;
+   background-color: #FFF;
+}
+
+ul#tabnav li.meze {
+	margin-left: 20px;
+}
+
+ul#tabnav li.dekstre {
+	float: right;
+   border: 1px solid #7B8795;
+}
+
+#tabnav a {
+   float: left;
+   display: block;
+   color: #000;
+   text-decoration: none;
+   padding: 4px;
+}
+
+#tabnav a:hover {
+   background: #FFF;   
+}
+
+.aligxilo {
+	width: 650px;
+   font: 12px verdana, arial, Helvetaca, sans-serif;
+	color: #003366;
+	background-color: #F4FCFF;
+	border: 0px;
+	padding: 10px;
+	margin: 0px; 
+}
+
+.aligxilo p {
+	text-align: left;
+}
+
+.aligxilo table {
+	font-size: 12px;
+}
+ul.enhavo {
+	background: #FFF;
+	padding: 0px;
+   list-style-type: none;
+   display: block;
+}
+ul.enhavo li {
+	text-align: left;
+	padding: 1px;
+}
+
+ul.enhavo li a {
+	color: #000;
+	text-decoration: none;
+	display: block;
+}
+
+ul.enhavo li a:hover {
+   background: #EEE;   
+	display: block;
+}
+
+dl.vortlisto
+{
+	width: 600px;
+	margin: 0;
+	padding: 0;
+}
+
+.vortlisto dt
+{
+	float: left;
+	width: 80px;
+	margin: 0 0 0 0;
+	padding: .5em;
+	font-weight: bold;
+	color : #339965;
+}
+
+.vortlisto dd
+{
+	width: 500px;
+	margin: 0 0 0 85px;
+	padding: .5em;
+}
+
+#menu{
+	float:left;
+	margin: 38px 0 0 5px;
+	padding: 0;
+	background-color: #F4FCFF;
+	border:none;
+	visibility:visible;
+	width:13em;
+}
+#menu dt {
+	cursor: hand;
+	background-color: #F4FCFF;
+	height: 24px;
+	line-height: 24px;
+	margin: 2px 0;
+	border: 1px solid #7B8795;
+	padding: 1px 2px;
+	text-align:left;
+}
+
+#menu dt a {
+	color:#000;
+	text-decoration: none;
+	display:block;
+}
+#menu dt a:hover {
+	background-color: #FFF;
+}
+
+#menu dd {
+	position: absolute;
+	z-index: 100;
+	margin-top: -25px;
+	margin-left: 110px;
+	width: 15em;
+	background: #EEE;
+	border: 1px solid #7B8795;
+   font: 11px verdana, arial, Helvetica, sans-serif;
+	line-height: 1.5em;
+	text-align:left;
+	padding:1px;
+	visibility:hidden;
+}
+
+#menu dd a{
+	color: #000;
+	text-decoration: none;
+	display:block;
+}
+#menu dd a:hover{
+	background: #FFF;
+}

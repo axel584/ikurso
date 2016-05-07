@@ -1,0 +1,990 @@
+                     -1538657330<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>phpMyVisites stats by RSS</title>
+    <link>http://www.phpmyvisites.us</link>
+    <description>Enjoy phpmyvisites power ! :)</description>
+    <pubDate>Sun, 20 Sep 2009 08:33:06 +0200</pubDate>
+    <generator>phpMyVisites</generator>
+    <language>fr</language>
+    <lastBuildDate>Sun, 20 Sep 2009 08:33:06 +0200</lastBuildDate>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:32:45 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=2&amp;mod=view_visits&amp;date=2009-09-19</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=2&amp;mod=view_visits&amp;date=2009-09-19</link>
+      <title>Site jefo le Samedi 19</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site jefo le Samedi 19&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;jefo&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;19&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;19&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;24&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;1.3&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;3.5&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;22 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;17 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;89%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=2&amp;mod=view_visits&amp;date=2009-09-19&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:32:26 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=5&amp;mod=view_visits&amp;date=2009-09-19</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=5&amp;mod=view_visits&amp;date=2009-09-19</link>
+      <title>Site espéranto-france le Samedi 19</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site espéranto-france le Samedi 19&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;espéranto-france&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;28&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;24&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;49&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;2.0&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;3.1&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;2min 47s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;1min 35s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;64%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=5&amp;mod=view_visits&amp;date=2009-09-19&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:32:49 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=1&amp;mod=view_visits&amp;date=2009-09-19</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=1&amp;mod=view_visits&amp;date=2009-09-19</link>
+      <title>Site ikurso le Samedi 19</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site ikurso le Samedi 19&lt;h2 &gt;
+Pas de visite sur cette période.
+&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:32:33 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=4&amp;mod=view_visits&amp;date=2009-09-19</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=4&amp;mod=view_visits&amp;date=2009-09-19</link>
+      <title>Site samopiniuloj le Samedi 19</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site samopiniuloj le Samedi 19&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;samopiniuloj&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;34&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;14&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;171&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;12.2&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;7.8&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;3min 15s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;38 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;41%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=4&amp;mod=view_visits&amp;date=2009-09-19&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:32:39 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=3&amp;mod=view_visits&amp;date=2009-09-19</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=3&amp;mod=view_visits&amp;date=2009-09-19</link>
+      <title>Site farbskatol le Samedi 19</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site farbskatol le Samedi 19&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;farbskatol&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;14&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;14&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;23&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;1.6&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;2.8&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;1min 27s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;53 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;64%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=3&amp;mod=view_visits&amp;date=2009-09-19&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:31:09 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=1&amp;mod=view_visits&amp;date=2009-09-18</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=1&amp;mod=view_visits&amp;date=2009-09-18</link>
+      <title>Site ikurso le Vendredi 18</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site ikurso le Vendredi 18&lt;h2 &gt;
+Pas de visite sur cette période.
+&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:31:05 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=2&amp;mod=view_visits&amp;date=2009-09-18</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=2&amp;mod=view_visits&amp;date=2009-09-18</link>
+      <title>Site jefo le Vendredi 18</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site jefo le Vendredi 18&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;jefo&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;25&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;25&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;41&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;1.6&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;3.7&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;59 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;36 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;76%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=2&amp;mod=view_visits&amp;date=2009-09-18&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:30:59 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=3&amp;mod=view_visits&amp;date=2009-09-18</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=3&amp;mod=view_visits&amp;date=2009-09-18</link>
+      <title>Site farbskatol le Vendredi 18</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site farbskatol le Vendredi 18&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;farbskatol&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;22&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;21&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;37&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;1.8&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;4.0&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;1min 4s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;38 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;77%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=3&amp;mod=view_visits&amp;date=2009-09-18&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:30:53 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=4&amp;mod=view_visits&amp;date=2009-09-18</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=4&amp;mod=view_visits&amp;date=2009-09-18</link>
+      <title>Site samopiniuloj le Vendredi 18</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site samopiniuloj le Vendredi 18&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;samopiniuloj&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;33&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;17&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;145&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;8.5&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;7.6&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;1min 53s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;25 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;48%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=4&amp;mod=view_visits&amp;date=2009-09-18&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:30:46 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=5&amp;mod=view_visits&amp;date=2009-09-18</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=5&amp;mod=view_visits&amp;date=2009-09-18</link>
+      <title>Site espéranto-france le Vendredi 18</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site espéranto-france le Vendredi 18&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;espéranto-france&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;35&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;31&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;74&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;2.4&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;4.0&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;1min 27s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;41 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;63%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=5&amp;mod=view_visits&amp;date=2009-09-18&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:29:25 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=2&amp;mod=view_visits&amp;date=2009-09-17</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=2&amp;mod=view_visits&amp;date=2009-09-17</link>
+      <title>Site jefo le Jeudi 17</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site jefo le Jeudi 17&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;jefo&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;26&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;21&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;74&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;3.5&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;7.9&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;11min 27s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;4min 1s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;73%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=2&amp;mod=view_visits&amp;date=2009-09-17&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:29:19 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=3&amp;mod=view_visits&amp;date=2009-09-17</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=3&amp;mod=view_visits&amp;date=2009-09-17</link>
+      <title>Site farbskatol le Jeudi 17</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site farbskatol le Jeudi 17&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;farbskatol&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;18&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;17&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;24&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;1.4&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;2.5&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;31 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;23 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;78%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=3&amp;mod=view_visits&amp;date=2009-09-17&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:29:30 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=1&amp;mod=view_visits&amp;date=2009-09-17</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=1&amp;mod=view_visits&amp;date=2009-09-17</link>
+      <title>Site ikurso le Jeudi 17</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site ikurso le Jeudi 17&lt;h2 &gt;
+Pas de visite sur cette période.
+&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:29:13 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=4&amp;mod=view_visits&amp;date=2009-09-17</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=4&amp;mod=view_visits&amp;date=2009-09-17</link>
+      <title>Site samopiniuloj le Jeudi 17</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site samopiniuloj le Jeudi 17&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;samopiniuloj&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;35&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;15&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;187&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;12.5&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;7.9&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;3min 51s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;43 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;37%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=4&amp;mod=view_visits&amp;date=2009-09-17&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+    <item>
+      <pubDate>Sun, 20 Sep 2009 08:29:06 +0200</pubDate>
+      <guid>http://ikurso.esperanto-jeunes.org/phpmv2/?site=5&amp;mod=view_visits&amp;date=2009-09-17</guid>
+      <link>http://ikurso.esperanto-jeunes.org/phpmv2/?site=5&amp;mod=view_visits&amp;date=2009-09-17</link>
+      <title>Site espéranto-france le Jeudi 17</title>
+      <author>phpmyvisites@gmail.com (phpMyVisites)</author>
+      <description>Site espéranto-france le Jeudi 17&lt;h3 style=&quot;padding-left:20px;font-size: 110%;color: #00008B;&quot;&gt;Statistiques (&lt;strong&gt;espéranto-france&lt;/strong&gt;)&lt;/h3&gt;
+&lt;div class=&quot;centrer&quot;&gt;
+&lt;table  cellpadding=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th colspan=&quot;2&quot; 
+style=&quot;text-align:left; border-top: 1px solid rgb(80, 100, 133);border-right: 1px solid rgb(80, 100, 133);font-weight: bold;background-color: rgb(96, 115, 165);color: #ffffff;padding:7px;padding-right:4px;
+padding-left:4px;empty-cells: hide;&quot;
+&gt;
+&lt;strong&gt;Pour la période sélectionnée&lt;/strong&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;
+Visites
+&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;
+&lt;strong&gt;34&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Visiteurs uniques&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;32&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages vues&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;49&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Pages vues par visiteur&lt;/td&gt;
+&lt;td 
+style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;1.5&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Pages par visite significative&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;2.5&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Temps moyen de visite&lt;/td&gt;
+&lt;td	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;1min 20s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;Temps moyen par page vue&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;&lt;strong&gt;55 s&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: white;padding:4;&quot;
+&gt;Taux de visites à une page&lt;/td&gt;
+&lt;td 	style=&quot;text-align:left; border: 1px solid rgb(226, 227, 228);color: #00008B;padding-top:3px;padding-bottom:3px;background-color: rgb(241, 242, 243);padding:4;&quot;
+&gt;&lt;strong&gt;71%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://ikurso.esperanto-jeunes.org/phpmv2/index.php?site=5&amp;mod=view_visits&amp;date=2009-09-17&quot;&gt;Aller aux statistiques détaillés&lt;/a&gt;</description>
+    </item>
+  </channel>
+</rss>

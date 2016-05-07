@@ -1,0 +1,87 @@
+<style type="text/css">
+		<!--
+		A:link        {font-family: helvetica, arial, geneva, sans-serif; font-size: x-small; text-decoration: none; color: #0000ff}
+		A:visited     {font-family: helvetica, arial, geneva, sans-serif; font-size: x-small; text-decoration: none; color: #0000ff}
+		A:hover       {font-family: helvetica, arial, geneva, sans-serif; font-size: x-small; text-decoration: underline; color: #FF0000}
+		th            {font-family: helvetica, arial; color : blue; font-size:85%; background : lightgrey; border-right:black solid 1pt; border-bottom:black solid 1pt;}
+		//-->
+		</style><hr><a name="_C_FIELDPLOT"><div style="background-color:yellow;font-family:courier new;"></a>CLASS <b>FieldPlot</b> EXTENDS <a href="Plot.html#_C_PLOT" style="font-face:arial;font-weight:bold;">Plot</a></div>
+<i>(Defined in: jpgraph_scatter.php : 61)</i><table border=1><tr><td>&nbsp;<a href="FieldPlot.html" style="font-family:arial;font-weight:bold;color:darkblue;">FieldPlot</a>&nbsp;</td><td>&nbsp;<a href="Plot.html" style="font-family:arial;font-weight:bold;color:darkblue;">Plot</a>&nbsp;</td></tr><tr><td valign=top>&nbsp;<a href="FieldPlot.html#_FIELDPLOT_FIELDPLOT">FieldPlot()</a>&nbsp;<br>
+&nbsp;<a href="FieldPlot.html#_FIELDPLOT_SETCALLBACK">SetCallback()</a>&nbsp;<br>
+</td><td valign=top>&nbsp;<a href="Plot.html#_PLOT_SETCENTER">SetCenter()</a>&nbsp;<br>
+&nbsp;<a href="Plot.html#_PLOT_SETCOLOR">SetColor()</a>&nbsp;<br>
+&nbsp;<a href="Plot.html#_PLOT_SETCSIMTARGETS">SetCSIMTargets()</a>&nbsp;<br>
+&nbsp;<a href="Plot.html#_PLOT_SETLEGEND">SetLegend()</a>&nbsp;<br>
+&nbsp;<a href="Plot.html#_PLOT_SETLINEWEIGHT">SetLineWeight()</a>&nbsp;<br>
+</td></tr></table>&nbsp;<p><div style="font-weight:bold;font-family:arial;font-size:100%;">Class usage and Overview</div>A variant of scatter plot is the so called <i>Field Plots</i> this is
+basically a scatter plot where each scatter point is an arrow with a
+direction between 0 to 359 degrees. This effectively allows the
+visualization of 3 parameters at each point (x,y,angle). As an
+additional bonus there is also possible to define a callback for each
+scatter plot to also define the color for each point. <p> &nbsp;
+<div style="font-weight:bold;font-family:arial;font-size:85%;">See also related classes:</div><a href="FieldArrow.html">FieldArrow</a> <p> &nbsp;<hr><span style="font-family:arial;font-size:120%;font-weight:bold;">Class Methods</span><hr><p>
+<p>&nbsp; <p> &nbsp; <span style='font-size:110%;'><a name="_FIELDPLOT_FIELDPLOT"><div style="border-top:solid black 2pt;background-color:lightblue;font-family:courier new;font-size:90%;font-weight:bold;"><b><font color="#000000">
+<font color="#0000CC"></font><font color="#006600">function </font><font color="#0000CC">FieldPlot</font><font color="#006600">(</font><font color="#0000CC">$datay</font><font color="#006600">,</font><font color="#0000CC">$datax</font><font color="#006600">,</font><font color="#0000CC">$angles</font><font color="#006600">)</font><font color="#0000CC"></font>
+</font>
+</b></div></a></span>
+
+<span style='font-family:arial;font-size:90%;'><i>Create an instance of FieldPlot</i></span><p>
+
+<table cellspacing=0 style='border:black solid 1pt;' width=100%>
+<tr><th width=25%>Argument</th><th width=15%>Default</th><th width=60%>Description</th></tr>
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$datay</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Y-coordinate</td></tr>
+
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$datax</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>X-coordinate</td></tr>
+
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$angles</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Angle</td></tr>
+</table>
+
+<div style="font-weight:bold;font-family:arial;font-size:85%;">Description</div>Create a new instance of a field plot&nbsp;<br>
+
+<div style="font-weight:bold;font-family:arial;font-size:85%;"><p>Example</div><span style="font-family:courier;font-size:85%;"><font color="#000000">
+<font color="#0000CC">$fp </font><font color="#006600">= new </font><font color="#0000CC">FieldPlot</font><font color="#006600">(</font><font color="#0000CC">$datay</font><font color="#006600">,</font><font color="#0000CC">$datax</font><font color="#006600">,</font><font color="#0000CC">$angle</font><font color="#006600">);</font><font color="#0000CC"></font>
+</font>
+</span><br>
+<p>
+<p>&nbsp; <p> &nbsp; <span style='font-size:110%;'><a name="_FIELDPLOT_SETCALLBACK"><div style="border-top:solid black 2pt;background-color:lightblue;font-family:courier new;font-size:90%;font-weight:bold;"><b><font color="#000000">
+<font color="#0000CC"></font><font color="#006600">function </font><font color="#0000CC">SetCallback</font><font color="#006600">(</font><font color="#0000CC">$aFunc</font><font color="#006600">)</font><font color="#0000CC"></font>
+</font>
+</b></div></a></span>
+
+<span style='font-family:arial;font-size:90%;'><i>Specify callback for each arrow in the field plot</i></span><p>
+
+<table cellspacing=0 style='border:black solid 1pt;' width=100%>
+<tr><th width=25%>Argument</th><th width=15%>Default</th><th width=60%>Description</th></tr>
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$aFunc</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Function name</td></tr>
+</table>
+
+<div style="font-weight:bold;font-family:arial;font-size:85%;">Description</div>Specify a callback that gets clled for each arrow in the field plot 
+The callback should return an array with the elements
+<ol>
+<li> Color
+<li> Size of arrow (in pixels)
+<li> Arrow head size (as integer between0 and 9)
+</ol>
+&nbsp;<br>
+
+<div style="font-weight:bold;font-family:arial;font-size:85%;"><p>Example</div><span style="font-family:courier;font-size:85%;"><font color="#000000">
+<font color="#0000CC"></font><font color="#FF9900">// Gradient. Make the arrows red at the pole and colder (blue)<br />// teh further we get from the pole<br /></font><font color="#006600">function </font><font color="#0000CC">FldCallback</font><font color="#006600">(</font><font color="#0000CC">$x</font><font color="#006600">,</font><font color="#0000CC">$y</font><font color="#006600">,</font><font color="#0000CC">$a</font><font color="#006600">) {<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000CC">$polex</font><font color="#006600">=</font><font color="#0000CC">4</font><font color="#006600">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000CC">$poley</font><font color="#006600">=</font><font color="#0000CC">40</font><font color="#006600">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000CC">$maxr </font><font color="#006600">= </font><font color="#0000CC">3000</font><font color="#006600">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#FF9900">// Size and arrow size is constant<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000CC">$size</font><font color="#006600">=</font><font color="#CC0000">""</font><font color="#006600">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000CC">$arrowsize</font><font color="#006600">=</font><font color="#CC0000">""</font><font color="#006600">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#FF9900">// Since we have different scales we need the data points<br />&nbsp;&nbsp;&nbsp;&nbsp;// to be of the same magnitude to give it a distance<br />&nbsp;&nbsp;&nbsp;&nbsp;// interpretation.<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000CC">$x </font><font color="#006600">*= </font><font color="#0000CC">10</font><font color="#006600">; <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#FF9900">// Colors gets colder the further out we go from the center<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000CC">$r </font><font color="#006600">= (</font><font color="#0000CC">$x</font><font color="#006600">-</font><font color="#0000CC">$polex</font><font color="#006600">*</font><font color="#0000CC">10</font><font color="#006600">)*(</font><font color="#0000CC">$x</font><font color="#006600">-</font><font color="#0000CC">$polex</font><font color="#006600">*</font><font color="#0000CC">10</font><font color="#006600">)+(</font><font color="#0000CC">$y</font><font color="#006600">-</font><font color="#0000CC">$poley</font><font color="#006600">)*(</font><font color="#0000CC">$y</font><font color="#006600">-</font><font color="#0000CC">$poley</font><font color="#006600">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000CC">$f </font><font color="#006600">= </font><font color="#0000CC">$r</font><font color="#006600">/</font><font color="#0000CC">$maxr</font><font color="#006600">;<br />&nbsp;&nbsp;&nbsp;&nbsp;if( </font><font color="#0000CC">$f </font><font color="#006600">&gt; </font><font color="#0000CC">1 </font><font color="#006600">) </font><font color="#0000CC">$f</font><font color="#006600">=</font><font color="#0000CC">1</font><font color="#006600">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000CC">$red </font><font color="#006600">= </font><font color="#0000CC">floor</font><font color="#006600">((</font><font color="#0000CC">1</font><font color="#006600">-</font><font color="#0000CC">$f</font><font color="#006600">)*</font><font color="#0000CC">255</font><font color="#006600">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000CC">$blue </font><font color="#006600">= </font><font color="#0000CC">floor</font><font color="#006600">(</font><font color="#0000CC">$f</font><font color="#006600">*</font><font color="#0000CC">255</font><font color="#006600">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000CC">$color </font><font color="#006600">= array(</font><font color="#0000CC">$red</font><font color="#006600">,</font><font color="#0000CC">0</font><font color="#006600">,</font><font color="#0000CC">$blue</font><font color="#006600">);<br />&nbsp;&nbsp;&nbsp;&nbsp;return array(</font><font color="#0000CC">$color</font><font color="#006600">,</font><font color="#0000CC">$size</font><font color="#006600">,</font><font color="#0000CC">$arrowsize</font><font color="#006600">);<br />}<br /><br /></font><font color="#FF9900">// Setup the field plot<br /></font><font color="#0000CC">$fp </font><font color="#006600">= new </font><font color="#0000CC">FieldPlot</font><font color="#006600">(</font><font color="#0000CC">$datay</font><font color="#006600">,</font><font color="#0000CC">$datax</font><font color="#006600">,</font><font color="#0000CC">$angle</font><font color="#006600">);<br /><br /></font><font color="#FF9900">// Setup formatting callback<br /></font><font color="#0000CC">$fp</font><font color="#006600">-&gt;</font><font color="#0000CC">SetCallback</font><font color="#006600">(</font><font color="#CC0000">'FldCallback'</font><font color="#006600">);</font><font color="#0000CC"></font>
+</font>
+</span><br>
+<p> <hr> <p>

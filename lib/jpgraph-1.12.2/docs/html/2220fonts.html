@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="2210intro.html">Previous</A>
+<A HREF="2230colors.html">Next</A>
+<HR>
+<H2><A NAME="4_6">4.6  Working with fonts in JpGraph</A></H2>
+ JpGraph supports both a set of built in bit-mapped fonts as well as
+ True Type Fonts. For scale values on axis it is strongly recommended
+ that you just use the built in bitmap fonts for the simple reason that
+ they are, for most people, easier to read (they are also quicker to
+ render). Try to use TTF only for headlines and perhaps the title for a
+ graph and it's axis. By default the TTF will be drawn with
+ anti-aliasing turned on.
+<P> In many of the example you can see examples of both TrueType and
+ BitMap fonts.</P>
+<P> There are a number of subtle differences in the way builtin fonts
+ and TrueType fonts are rendered to the screen. However, JpGraph,
+ abstracts away 99.9% of the differences so it will be, for the user,
+ completely transparent to switch between the different fonts.</P>
+<H3><A NAME="4_6_1">4.6.1 Installing TrueType fonts</A></H3>
+ Since Internally TrueType fonts are rendered by locating a font
+ specification file you must install the accompanying TrueType fonts in
+ directory of your choice. You must then tell JpGraph where these fonts
+ may be found by specifying the font-path in the FONT_PATH defione (in
+ jpgraph.php). Please note that this must be the absolute file path and
+ not relative to the htdocs directory. By default the path is set to
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> DEFINE</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;TTF_DIR&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;/usr/local/fonts/ttf/&quot;</FONT><FONT color="#006600">);</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV>
+<P> Since JpGraph must be able to tell the difference between the italic
+ and bold versions of the same font family a standard naming convention
+ is used to name the files. The available fonts are also defined by
+ DEFINES and hence you can't just copy your own TTF files to the
+ directory and expect it to work. At the moment there is no &quot;easy&quot; way
+ to add new fonts but to make some (small) mods to the code. However
+ this is expected to change in future version of JpGraph.</P>
+<H3><A NAME="4_6_2">4.6.2 Specifying fonts</A></H3>
+ All graph objects that uses text allows you to specify the font to be
+ used by calling the SetFont() method and specifying three parameters
+<OL>
+<LI> Font family, Specified with a FF_ define</LI>
+<LI> Font style, Specified with a FS_ define</LI>
+<LI> Font size, Numeric value (only used for TTF fonts)</LI>
+</OL>
+ For the builtin fonts the third, size, parameter is ignored since the
+ size is fixed for the three builtin fonts. The available font families
+ and the corresponding name (in JpGraph 1.7) are listed in the table
+ below.
+<P></P>
+<TABLE border="1">
+<TR><TD>Font family</TD><TD>Type</TD><TD>Note</TD></TR>
+<TR><TD>FF_FONT0</TD><TD>Builtin font</TD><TD>A very small font, only
+ one style</TD></TR>
+<TR><TD>FF_FONT1</TD><TD>Builtin font</TD><TD>A medium sized font</TD></TR>
+<TR><TD>FF_FONT2</TD><TD>Builtin font</TD><TD>The largest bit mapped
+ font</TD></TR>
+<TR><TD>FF_ARIAL</TD><TD>TTF font</TD><TD>Arial font</TD></TR>
+<TR><TD>FF_VERDANA</TD><TD>TTF font</TD><TD>Verdana font</TD></TR>
+<TR><TD>FF_COURIER</TD><TD>TTF font</TD><TD>Fix pitched courier</TD></TR>
+<TR><TD>FF_BOOK</TD><TD>TTF font</TD><TD>Bookman</TD></TR>
+<TR><TD>FF_COMIC</TD><TD>TTF font</TD><TD>Comic sans</TD></TR>
+<TR><TD>FF_HANDWRT</TD><TD>TTF font</TD><TD>Lucida handwriting</TD></TR>
+<TR><TD>FF_TIMES</TD><TD>TTF font</TD><TD>Times New Roman</TD></TR>
+</TABLE>
+<P> Please note that not all font families support all styles. The
+ figure below illustrates each of the available font families and what
+ styles you may use.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_listfontsex1.html"> <IMG border="0" HEIGHT="450"
+ src="img/listfontsex1.png" WIDTH="550"></A>
+<BR><SMALL><EM><B>Figure 1:</B> Illustration of all available fonts in
+ JpGraph<A href="exframes/frame_listfontsex1.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<P> We finally show some example of valid font specifications
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetFont</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+FF_FONT2</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetFont</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+FF_FONT2</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_BOLD</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetFont</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+FF_ARIAL</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetFont</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+FF_ARIAL</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_BOLD</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">24</FONT><FONT
+color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+</P>
+<P></P>
+<H3><A NAME="4_6_3">4.6.3 Adding additional fonts to JpGraph</A></H3>
+<STRONG> Note:</STRONG> This information is only given here for very
+ advanced users. No free support will ge given in the case you run into
+ difficulties trying to add new fonts. At the moment adding new fonts
+ require code modifications as outlined below.
+<P> In order to add you favourite fonts there are three steps you need
+ to follow :</P>
+<OL>
+<LI>Get the TTF file(s) and add it to your font directory. You need
+ separate files for each of the styles you want to support. These
+ different files uses the following naming conventions:
+<UL>
+<LI> Normal fonts file = [basename].ttf</LI>
+<LI> Bold font file = [basename]&quot;bd&quot;.ttf</LI>
+<LI> Italic font file = [basename]&quot;i&quot;.ttf</LI>
+<LI> Bold Italic font file = [basename]&quot;bi&quot;.ttf</LI>
+</UL>
+</LI>
+<LI> Define a new &quot;FF_&quot; constant naming your font family</LI>
+<LI> Update the Class TTF constructor in jpgraph.php with the mapping
+ between your new constant and the [basefilename]</LI>
+</OL>
+<H2><A NAME="4_7">4.7 Understanding text alignment in JpGraph</A></H2>
+ For everyday use of JpGraph understanding of the alignment of text
+ strings in not necessary. However, if you like to add arbitrary strings
+ to the graph (with Graph::AddText()) or when working directly on a
+ canvas it will help understand this.
+<P> Text is added to a graph with the creation of a<A href="../ref/Text.html#_C_TEXT">
+ Text()</A> object. And the alignment is specified with<A href="../ref/Text.html#_TEXT_ALIGN">
+ Text::Align()</A> Text alignment might actually be a misguiding name.
+ What you specify is rather the anchor point for the text, i.e. when you
+ specify that a texr should be positioned at position<I> (x,y)</I> how
+ is that coordinate to be interpretated.</P>
+<P> The image below shows a text string aligned in the 9 possible
+ combinations. In the image the red crosses indicate what coordinate
+ that text string was positioned at. The alignment used for each of the
+ cases is shown below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_textalignex1.html"> <IMG border="0" HEIGHT="503"
+ src="img/textalignex1.png" WIDTH="480"></A>
+<BR><SMALL><EM><B>Figure 2:</B> Specifying alignment (anchor-point) for
+ text strings<A href="exframes/frame_textalignex1.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<P></P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="2210intro.html">Previous</A>
+<A HREF="2230colors.html">Next</A>
+</BODY>
+</HTML>

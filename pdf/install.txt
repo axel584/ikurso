@@ -1,0 +1,29 @@
+FPDF est constitué des éléments suivants :
+
+- le fichier principal fpdf.php contenant la classe
+- les fichiers de métrique des polices (contenus dans le répertoire font de cette archive)
+
+Les fichiers de métrique sont indispensables dès que l'on veut écrire du texte dans un document.
+Ils peuvent se trouver en trois endroits différents :
+
+- dans le répertoire courant (celui du script en cours d'exécution)
+- dans un des répertoires définis par le paramètre include_path
+- dans le répertoire défini par la constante FPDF_FONTPATH
+
+Voici un exemple pour le dernier cas (notez le slash final obligatoire) :
+
+define('FPDF_FONTPATH','/home/www/font/');
+require('fpdf.php');
+
+Si ces fichiers ne sont pas accessibles, la méthode SetFont() produira l'erreur suivante :
+
+FPDF error: Could not include font metric file
+
+Vérifiez alors que vous avez correctement défini la constante.
+
+Remarques :
+
+- Vous pouvez aussi définir FPDF_FONTPATH directement au début de fpdf.php
+- Seuls les fichiers correspondant aux polices effectivement utilisées sont nécessaires
+
+Les tutoriels fournis dans l'archive sont prêts à être exécutés.

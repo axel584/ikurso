@@ -1,0 +1,33 @@
+phpMyVisites
+============
+
+Presentation
+------------
+phpMyVisites is a free and powerful open source (GNU/GPL) application
+for websites statistics/analytics.
+
+Installation
+------------
+Upload the directory on your webserver. Chmod 777 the root directory (phpmv2/)
+Go to http://www.your_site_url.com/your_phpmyvisites_directory/
+And follow installation instructions.
+You must have created a database before (or use an existed database).
+
+Update
+------
+Upload the new phpMyVisites directory on your webserver. Go to 
+http://www.your_site_url.com/your_phpmyvisites_directory/
+And follow updates instructions
+
+Help / Support
+--------------
+FAQ : http://www.phpmyvisites.us/faq/
+Forums : http://www.phpmyvisites.us/forums/
+
+Bug Tracker
+-----------
+BugTracker : http://www.phpmyvisites.net/bugtracker/
+
+Contacts
+--------
+Email us : http://www.phpmyvisites.us/contact.html

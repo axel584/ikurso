@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>svnphpmv</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>net.sourceforge.phpeclipse.parserbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.trustudio.oss.core.PHPscriptbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.trustudio.oss.core.scriptnature</nature>
+		<nature>org.trustudio.php.core.phpnature</nature>
+		<nature>net.sourceforge.phpeclipse.phpnature</nature>
+	</natures>
+</projectDescription>

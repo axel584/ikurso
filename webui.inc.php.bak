@@ -1,0 +1,153 @@
+<?
+// 
+function pagxkapo() {
+echo "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"  dir=\"LTR\"><tr>
+<td background=\"bildoj/fond.jpg\"><img src=\"http://ikurso.esperanto-jeunes.org/bildoj/titre2.jpg\" width=\"800\" height=\"90\"></td>
+<td>&nbsp;</td>
+</tr>
+</table>";
+}
+
+
+
+// tiu funkcio konstruas la menuo
+// $nomo : nomo de la uzanto
+// $rajto : rajto de tiu uzanto
+// P : Persono (nenia rajto)
+// S : Studanto (havas korektanton)
+// K : Korekanto (havas multajn studantojn kaj studanta maksimumo)
+// A : administrato (cxiaj rajtoj)
+function menuo($nomo,$rajto) {
+global $lgv_persona,$lgv_korekanta,$lgv_administranta,$lgv_sxangipersoninformojn,$lgv_eliru,$lgv_zorgistudantojn,$lgv_zorgiuzantojn,$lgv_lernantalisto,$lgv_zorgiferiojn,$lgv_ferioj,$lgv_stirpanelo,$lgv_statistiko,$lgv_forumo,$phpbb2mysql_sid;
+	echo vmenuo($nomo,$rajto,"");
+}
+function kursoligo($nomo,$rajto){
+		$demando="select personoj.id as id from personoj where personoj.enirnomo='$nomo'"; 
+		mysql_select_db( "ikurso");
+		$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando);
+		$row = mysql_fetch_array($result);
+		$demando2 = "select nuna_kurso.nunleciono as nunleciono,nuna_kurso.kurso as kurso from nuna_kurso where nuna_kurso.studanto='".$row['id']."' and (nuna_kurso.stato='K' or nuna_kurso.stato='N')";
+		$result2 = mysql_query($demando2) or die (  "SELECT : malbona demando :".$demando2);
+		$row2 = mysql_fetch_array($result2);
+		if ($row2["kurso"]!=""){
+			$leciono=$row2["nunleciono"]+1;
+			$demando3="select lecionoj.retpagxo from lecionoj where lecionoj.kurso='".$row2["kurso"]."' and lecionoj.numero='$leciono' and lecionoj.lingvo='FR'";
+			$result3 = mysql_query($demando3) or die (  "INSERT : malbona demando :".$demando3);
+			$row3 = mysql_fetch_array($result3);
+			if ($row2["kurso"]=="CG") {return("fr/cge/".$row3['retpagxo']);}
+			elseif ($row2["kurso"]=="GR") {return("fr/gerda/".$row3['retpagxo']);}
+			else {return("");}
+		} else {return("");}
+}
+// tiu funkcio konstruas la menuo kaj sendas gxian valuon.
+// $nomo : nomo de la uzanto
+// $rajto : rajto de tiu uzanto
+// $vojo : vojo por trovi dosierojn (../ el forumo, nenio por la cetero)
+// P : Persono (nenia rajto)
+// S : Studanto (havas korektanton)
+// K : Korekanto (havas multajn studantojn kaj studanta maksimumo)
+// A : administrato (cxiaj rajtoj)
+function vmenuo($nomo,$rajto,$vojo) {
+global $lgv_persona,$lgv_korekanta,$lgv_administranta,$lgv_sxangipersoninformojn,$lgv_eliru,$lgv_zorgistudantojn,$lgv_zorgiuzantojn,$lgv_lernantalisto,$lgv_zorgiferiojn,$lgv_ferioj,$lgv_stirpanelo,$lgv_statistiko,$lgv_forumo,$phpbb2mysql_sid,$persono_id;
+if ($rajto=="P" || $rajto=="S") { $largeco="50"; }
+if ($rajto=="K") { $largeco="75"; }
+if ($rajto=="A" || $rajto=="I") { $largeco="100"; }
+if ($rajto=="S"){
+	$ligo=kursoligo($nomo,$rajto);
+}
+$res = "<!-- komenco de la menuo -->
+	<table width=\"$largeco%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+  <tr> 
+  <td rowspan=\"2\" class=\"titolo\" nowrap> 
+  <div align=\"center\">$nomo</div>";
+$res.="<div align=\"center\"><a href=\"".$vojo."eliri.php\" class=\"ligo\">$lgv_eliru</a> </div>";
+  $res.="</td>
+  <td bgcolor=\"#d0d8df\" width=\"2%\">&nbsp;</td>
+  <td class=\"normala\" valign=\"middle\" nowrap> 
+  <div align=\"center\">:: $lgv_persona ::</div>
+  </td><td bgcolor=\"#d0d8df\" width=\"2%\">&nbsp;</td>";
+  
+if ($rajto=="K" || $rajto=="A"|| $rajto=="I") {  
+  $res = $res."<td class=\"normala\" nowrap> 
+  <div align=\"center\">:: $lgv_korekanta ::</div>
+  </td>
+  <td bgcolor=\"#d0d8df\" width=\"2%\">&nbsp;</td>";}
+
+if ($rajto=="A" || $rajto=="I") {    
+  $res = $res."<td class=\"normala\" nowrap> 
+  <div align=\"center\">:: $lgv_administranta ::</div>
+  </td>";}
+  
+  $res = $res."</tr>
+  <tr> 
+  <td bgcolor=\"#d0d8df\">&nbsp;</td>
+  <td nowrap>";
+    $res.="<div align=\"center\"><a href=\"".$vojo."forum/index.php?sid=".$phpbb2mysql_sid."\" class=\"ligo\">$lgv_forumo ".phpbb_nombre_nouveau_message($persono_id)."</a> </div>";
+   if (($rajto=="S")&&($ligo!="")){
+   	$res.="<div align=\"center\"><a href=\"".$vojo.$ligo."\" class=\"ligo\">Acc&egrave;s au cours</a></div>";
+	}
+	else {
+   	$res.="<div align=\"center\"><a href=\"#\" onClick=\"window.open('".$vojo."elektiLecionon.php','','resizable=no,scrollbars,location=no,top=200,left=200,width=350,height=380');\" class=\"ligo\">Acc&egrave;s aux cours</a></div>";
+	}
+  $res.="<div align=\"center\"><a href=\"".$vojo."personinformoj.php\" class=\"ligo\">$lgv_sxangipersoninformojn</a></div>
+<!-- Vacances à rajouter plus tard...  -->
+
+  <!-- <div align=\"center\"><a href=\"".$vojo."aldoniferion.php\"   class=\"ligo\">$lgv_zorgiferiojn</a></div> -->
+	</td>
+	<td bgcolor=\"#d0d8df\">&nbsp;</td>";
+  
+  // menuo por korektantoj
+if ($rajto=="K" || $rajto=="A") {    
+  $res = $res."<td nowrap> 
+  <div align=\"center\"><a href=\"".$vojo."statistikoj.php\" class=\"ligo\">$lgv_statistiko</a></div>
+  <div align=\"center\"><a href=\"".$vojo."helppagxo.php\" class=\"ligo\">Guide du correcteur</a></div>
+  <div align=\"center\"><a href=\"".$vojo."miajlernantoj.php\" class=\"ligo\">Mes &eacute;l&egrave;ves</a></div>
+ </td>
+  <td bgcolor=\"#d0d8df\">&nbsp;</td>"; }
+  
+  
+  // statistikoj por informantoj
+  if ($rajto=="I") {    
+  $res = $res."<td nowrap> 
+  <div align=\"center\"><a href=\"".$vojo."statistikoj.php\" class=\"ligo\">$lgv_statistiko</a></div>
+  </td>
+  <td bgcolor=\"#d0d8df\">&nbsp;</td>"; }  
+  
+  // menuo por administrantoj
+if ($rajto=="A") {      
+  $res = $res."<td nowrap> 
+<!--  Vacances à rajouter plus tard... -->
+<!--  <div align=\"center\"><a href=\"".$vojo."cxiesferioj.php\" class=\"ligo\">$lgv_ferioj</a></div> -->
+  
+  <div align=\"center\"><a href=\"".$vojo."stirpanelo.php\" class=\"ligo\">$lgv_stirpanelo</a></div>
+  <div align=\"center\"><a href=\"".$vojo."administri.php\" class=\"ligo\">$lgv_zorgiuzantojn</a><a href=\"vidikorektantojn.php3\" class=\"ligo\"></a>
+    </div>
+  </td>";}
+  
+  // menuo por informantoj
+  if ($rajto=="I") {      
+  $res = $res."<td nowrap> 
+  <div align=\"center\"><a href=\"".$vojo."administri.php\" class=\"ligo\">$lgv_zorgiuzantojn</a><a href=\"vidikorektantojn.php3\" class=\"ligo\"></a>
+    </div>
+  </td>";}
+  
+  $res = $res."</tr>
+  <tr bgcolor=\"#d0d8df\"> 
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>";
+  
+if ($rajto=="K" || $rajto=="A" || $rajto=="I") {      
+  $res = $res."<td>&nbsp;</td>
+  <td>&nbsp;</td>";}
+  
+if ($rajto=="A" || $rajto=="I") {    
+  $res = $res."<td>&nbsp;</td>";}
+  
+  $res = $res."</tr>
+  </table>
+<!--  fin du menu -->";
+return $res;
+}
+?>

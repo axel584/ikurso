@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="55polar.html">Previous</A>
+<A HREF="8canvas.html">Next</A>
+<HR>
+<H1><A NAME="11">11 Miscellaneous features</A></H1>
+<H2><A NAME="11_1">11.1 Anti-aliasing in JpGraph</A></H2>
+ From version 1.2 JpGraph supports drawing of anti-aliased lines. There
+ are a few caveats in order to use this which is discussed in this
+ section.
+<P></P>
+<HR> <SMALL><STRONG> Sidebar</STRONG> Note that anti-alising will not be
+ used for either horizontal, vertical or 45 degree lines since they are
+ by their nature are sampled at adequate rate.</SMALL>
+<HR>
+<H3><A NAME="11_1_1">11.1.1 Enabling anti-aliased lines</A></H3>
+ Anti-aliased lines are enabled by calling the method<A href="../ref/Image.html#_IMAGE_SETANTIALIASING">
+ SetAntiAliasing()</A> in the<A href="../ref/Image.html#_C_IMAGE"> Image
+ class</A> in the script where you want to use anti-aliasing.
+<P> The anti-aliasing for lines works by &quot;smoothing&quot; out the edges on
+ the line by using a progressive scale of colors interpolated between
+ the background color and the line color.</P>
+<P></P>
+<HR> <SMALL><STRONG> Sidenote:</STRONG> The algorithm used for
+ anti-aliasing of lines is quite simple. It would be possible to achieve
+ even better result by doing some real 2D signal processing. However,
+ doing real time 2D signal processing on a HTTP server would be madness
+ so I deliberately kept it simple. To achieve best visual result always
+ use a dark line color on a light background.</SMALL>
+<HR>
+<P> An example will show that this, quite simple algorithm, gives a
+ reasonable good result. The figures below shows a radar plot with and
+ without anti-aliasing.</P>
+<TABLE>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_radarex8.html"> <IMG border="0" HEIGHT="200"  src="img/radarex8.png"
+WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 1:</B> Spiderplot without anti-aliasing<A href="exframes/frame_radarex8.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_radarex8.1.html"> <IMG border="0" HEIGHT="200"
+ src="img/radarex8.1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 2:</B> Spiderplot with anti-aliasing<A href="exframes/frame_radarex8.1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+</TABLE>
+<P> One thing you need to keep in mind when deciding to use
+ anti-aliasing is that it could have potentially a dramatic effect on
+ the time it takes to generate the image. Line drawing with
+ anti-aliasing turned on is roughly 8 times slower than the normal line
+ drawing so treat this feature wisely.</P>
+<P> Furthermore there are a couple of &quot;gotchas&quot; you should be aware of
+ when using anti-aliasing.</P>
+<OL>
+<LI> Anti-aliased lines uses up more of the available color-palette. The
+ exact number of colors used is dependent on the line-angle, a near
+ horizontal or near vertical line uses more colors (number of lines with
+ different angles uses more colors). Hence it might not be possible to
+ use anti-aliasing with color-gradient fill since the number of
+ available colors in the palette might not be enough. A normal palette
+ can keep around 256 colors. This means that you are advised to use a
+ truecolor image when using anti-aliasing.</LI>
+<LI> Anti-aliasing does not work very well together with background
+ images since it assumes a the same solid color on each side of the
+ line. Doing a more advanced anti-aliasing algorithm would simple take
+ to much processing power.</LI>
+<LI>Anti-aliased lines will ignore the line width specified. They will
+ always have a width of roughly 1.</LI>
+</OL>
+<H2><A NAME="11_2">11.2 Rotating the graphs</A></H2>
+ JpGraph provide the possibility for you to rotate the generated graph
+ an arbitrary angle. This will only affect the actual graph (axis, axis
+ titles, labels and so on) and not fixed elements on the graph like
+ title or footer.
+<P> Rotation is probably most used to rotate a graph 90 degrees, for
+ example a bar graph to get the effect of horizontal bars.</P>
+<P></P>
+<HR> <SMALL><STRONG> Performance note:</STRONG> Adding a rotation
+ transformation will make the graph generation slightly slower since
+ each point of the graph as to go through a transformation step before
+ being stroked on to the image. JpGraph optimises this by using a
+ pre-calculated transformation matrice and also optimises the special
+ case 90 degrees.</SMALL>
+<HR>
+<P> By default the center of the rotation will be the center of the plot
+ area, which may or may not coincide with the center of the entire
+ image.</P>
+<P> To control the rotation you use the two methods</P>
+<UL>
+<LI><A href="../ref/RotImage.html#_ROTIMAGE_SETANGLE">
+ Graph::image::SetAngle()</A>, Specify rotation angle in degrees.</LI>
+<LI><A href="../ref/RotImage.html#_ROTIMAGE_SETCENTER">
+ Graph::image::SetCenter()</A>, Specify center of rotation in absolute
+ image pixels</LI>
+</UL>
+ For example
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">image</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetAngle</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+45</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV>
+<P></P>
+<P> There is actually a third method that you could use, adding a
+ translation to the graph<STRONG> after</STRONG> the rotation. Since
+ this probably a very little used method we don't discuss it further but
+ refer the reader to the class reference instead<A href="../ref/RotImage.html#_ROTIMAGE_SETTRANSLATION">
+ Graph:image::SetTranslation()</A></P>
+<P> When you rotate an image you should be aware of that the individual
+ labels on the axis are not rotated. The design decision behind this is
+<BR><STRONG> a)</STRONG> Bit mapped font can't be rotated
+<BR><STRONG> b)</STRONG> Maintain readability</P>
+<P> Please remember that you may still rotate the labels by calling the<A
+href="../ref/Axis.html#_AXIS_SETLABELANGLE"> Axis::SetLabelAngle()</A>
+ method.</P>
+<P> Since the anchor point for labels is by default the optimum for
+ graph at 0 degree you might want to adjust the anchor point and
+ alignment for the labels on the axis to get a better visual appearance
+ on you rotated graph. This is accomplished by the method<A href="../ref/Axis.html#_AXIS_SETLABELALIGN">
+ Axis::SetLabelAlign()</A> For a detailed discussion on how to do this
+ please see the section on horizontal bar graphs, (<A href="3030barplot.html">
+ Working with bar plots</A> )</P>
+<P> The table below shows some examples on different kinds of rotation
+ to give you an idea of how changing the angle and rotation center may
+ be used to generate different effects. The top left graph is the
+ original image. The point of rotation has been marked with a red-cross
+ in each of the images.</P>
+<P></P>
+<TABLE border="0">
+<TR><TD valign="top">
+<P><DIV align="center">
+<BR><A href="exframes/frame_rotex0.html"> <IMG border="0" HEIGHT="170"  src="img/rotex0.png"
+WIDTH="270"></A>
+<BR><SMALL><EM><B>Figure 3:</B> Original image<A href="exframes/frame_rotex0.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD valign="top">
+<P><DIV align="center">
+<BR><A href="exframes/frame_rotex1.html"> <IMG border="0" HEIGHT="170"  src="img/rotex1.png"
+WIDTH="270"></A>
+<BR><SMALL><EM><B>Figure 4:</B> Rotated 45 degrees around center of plot
+ area<A href="exframes/frame_rotex1.html"> [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+<TR><TD valign="top">
+<P><DIV align="center">
+<BR><A href="exframes/frame_rotex2.html"> <IMG border="0" HEIGHT="170"  src="img/rotex2.png"
+WIDTH="270"></A>
+<BR><SMALL><EM><B>Figure 5:</B> Rotated 90 degrees around center of plot
+ area<A href="exframes/frame_rotex2.html"> [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD valign="top">
+<P><DIV align="center">
+<BR><A href="exframes/frame_rotex3.html"> <IMG border="0" HEIGHT="170"  src="img/rotex3.png"
+WIDTH="270"></A>
+<BR><SMALL><EM><B>Figure 6:</B> Rotated 45 degrees around center of the
+ image<A href="exframes/frame_rotex3.html"> [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+<TR><TD valign="top">
+<P><DIV align="center">
+<BR><A href="exframes/frame_rotex4.html"> <IMG border="0" HEIGHT="170"  src="img/rotex4.png"
+WIDTH="270"></A>
+<BR><SMALL><EM><B>Figure 7:</B> Rotated 90 degrees around center of the
+ image<A href="exframes/frame_rotex4.html"> [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD valign="top">
+<P><DIV align="center">
+<BR><A href="exframes/frame_rotex5.html"> <IMG border="0" HEIGHT="170"  src="img/rotex5.png"
+WIDTH="270"></A>
+<BR><SMALL><EM><B>Figure 8:</B> Rotated -30 degrees around the lower
+ left point of the plot area<A href="exframes/frame_rotex5.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+</TABLE>
+ As you can see from the images above if you rotate about any other
+ point than the center of the plot area the plot can be placed outside
+ the image after rotation.
+<P> Since the rotation, by design, only affects the plot area it is
+ often most effective to use when the color of the margin is the same as
+ the background color.</P>
+<H2><A NAME="11_3">11.3 Adjusting brightness and contrast for images and
+ backgrounds</A></H2>
+ It is often desirable to have a background image look a little bit
+ &quot;washed&quot; out so it doesn't take the concentration away from the actual
+ graph. There are basically two ways of accomplish this
+<OL>
+<LI> Prepare the image with an external images editor to adjust the
+ level of brightnes and contrasty to a desirable level</LI>
+<LI> Use JpGraph:s built int adjustment for contrast, brightness and
+ color saturation.</LI>
+</OL>
+ To adjust the background image call The levels for both brightness and
+ constrast are real numbers in the range [-1, 1] You can choose to
+ adjust for example just the background image or you might also choose
+ to adjust the whole image. To change the background image just use the
+ method<A href="../ref/Graph.html#_GRAPH_ADJBACKGROUNDIMAGE">
+ Graph::AdjBackgroundImage()</A> to specify a suitable value. Let's show
+ some example on what we can do with this. The following example have
+ been generated by using the small utility &quot;adjimg.php&quot; which you can
+ find in the &quot;utils/&quot; directory.
+<TABLE border="0" cellpadding="0" cellspacing="0">
+<TR><TD><IMG alt="" border="0" HEIGHT="244"  src="img/imgadj_orig.jpg" WIDTH="246">
+<BR> Brightness=0, contrast=0, saturation = -1 (Original image)</TD><TD><IMG
+alt="" border="0" HEIGHT="244"  src="img/imgadj_b00c00sat-1.jpg" WIDTH="246">
+<BR> Brightness=0, contrast=0, saturation = -1 (Black White image)</TD></TR>
+<TR><TD><IMG alt="" border="0" HEIGHT="244"  src="img/imgadj_b03c-03sat0.jpg" WIDTH="246">
+<BR> Brightness=0.3, contrast=-0.3, saturation=0</TD><TD><IMG alt="" border="0"
+HEIGHT="244"  src="img/imgadj_b04c-07sat0.jpg" WIDTH="246">
+<BR> Brightness=0.4, contrast=-0.7, saturation=0</TD></TR>
+<TR><TD><IMG alt="" border="0" HEIGHT="244"  src="img/imgadj_b04c-07sat-1.jpg"
+WIDTH="246">
+<BR> Brightness=0.4, contrast=-0.7, saturation=-1</TD><TD><IMG alt="" border="0"
+HEIGHT="244"  src="img/imgadj_b0c0sat1.jpg" WIDTH="246">
+<BR> Brightness=0, contrast=0, saturation=1</TD></TR>
+</TABLE>
+<H2><A NAME="11_4">11.4 Timing the generation of graphs</A></H2>
+ During development and optimization it can be very handy to have the
+ actual time it took to generate the image as a footnote. The following
+ example shows the usage of this feature
+<P><DIV align="center">
+<BR><A href="exframes/frame_example11.html"> <IMG border="0" HEIGHT="200"
+ src="img/example11.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 9:</B> Timing of a graph<A href="exframes/frame_example11.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> To enable this feature you can proceed in two ways.</P>
+<OL>
+<LI> You can either set the global define BRAND_TIMIING (in jpgraph.php)
+ to true. This will add the timing string to all graphs generated.</LI>
+<LI> .. or you can enable it for a specific graph by setting the global
+ variable $gJpgBrandTiming as in
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $gJpgBrandTiming</FONT><FONT
+color="#006600">=</FONT><FONT color="#0000CC">true</FONT><FONT color="#006600">
+;</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></LI>
+<P> in the beginning of the script.</P>
+</OL>
+ If you like you might also change the way the timing is formatted by
+ setting the string defined by BRAND_TIMING_FORMAT (in jpgraph.php).
+ This string represents a standard printf() format string.
+<HR> <SMALL><STRONG> Sidenote:</STRONG> JpGraph contains a utility class
+ called JpgTimer which you can use yourself should you need ms timing of
+ part of your own code. The API is really simple. The class supports
+ multiple running timers and you start a timer simply by calling the
+ Push() method. This will start a new timer and put it on the top of the
+ timer stack. To stop the timer, pop it from the stack and return the
+ timing value simply call Pop().</SMALL>
+<HR><HR>
+<A HREF="index.html">Contents</A>
+<A HREF="55polar.html">Previous</A>
+<A HREF="8canvas.html">Next</A>
+</BODY>
+</HTML>

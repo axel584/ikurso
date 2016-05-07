@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="4nonxy.html">Previous</A>
+<A HREF="4020pieplot.html">Next</A>
+<HR>
+<H2><A NAME="7_1">7.1 Radar plots</A></H2>
+ Spider plots are most often used to display how a number of results
+ compare to some set targets. They make good use of the human ability to
+ spot symmetry (or rather un-symmetry) . the figure below show an
+ example of a spider (sometimes called a web-plot). Spiderplots are not
+ suitable if you want very accurate readings from the graph since, by
+ it's nature, it can be difficult to read out very detailed values.
+<P><DIV align="center">
+<BR><A href="exframes/frame_radarex7.html"> <IMG border="0" HEIGHT="200"  src="img/radarex7.png"
+WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 1:</B> A typical radar graph with two plots<A href="exframes/frame_radarex7.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<UL>
+<LI>There is one axis for each data point</LI>
+<LI>Each axis may have an arbitrary title which is automatically
+ positioned</LI>
+<LI>A spider plot may be filled or open</LI>
+<LI>You can control color, weight of lines as you are already used to</LI>
+<LI>A spider plot can, as usual, have a title and a legend</LI>
+<LI>The first axis is always oriented vertical and is the only axis with
+ labels</LI>
+<LI>Grids may be used (dashed in the figure above)</LI>
+<LI>You may have ticks (although suppressed in the figure above</LI>
+<LI>You can control the size and position within the frame of the graph</LI>
+<LI>You may have several plots within the same graph</LI>
+</UL>
+ In the following section we show how to draw both simple and complex
+ radar graph. As we will show all the settings will follow the same
+ pattern as for the more standard linear graphs.
+<H3><A NAME="7_1_1">7.1.1 Simple radar plots</A></H3>
+ Let's start by creating a very simple radar plot based on 5 data points
+ using mostly default values.
+<P> As the first thing you must remember to include the extension module
+ that contains the radar plot. &quot;jpgraph_radar.php&quot;.</P>
+<P> A very simple radar plot is created by the code<DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: radarex1.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php
+<BR /></FONT><FONT color="#006600">include (</FONT><FONT color="#CC0000">
+&quot;../jpgraph.php&quot;</FONT><FONT color="#006600">);
+<BR />include (</FONT><FONT color="#CC0000">&quot;../jpgraph_radar.php&quot;</FONT><FONT
+color="#006600">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;
+<BR /></FONT><FONT color="#FF9900">// Some data to plot
+<BR /></FONT><FONT color="#0000CC">$data</FONT><FONT color="#006600"> =
+ array(</FONT><FONT color="#0000CC">55</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">80</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+46</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">71</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">95</FONT><FONT color="#006600">
+);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;
+<BR /></FONT><FONT color="#FF9900">// Create the graph and the plot
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> RadarGraph</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">250</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">200</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;auto&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$plot</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> RadarPlot</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$data</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Add the plot and display the graph
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$plot</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Stroke</FONT><FONT color="#006600">();
+<BR /></FONT><FONT color="#0000CC">?&gt;</FONT></FONT></CODE></DIV> and
+ would give the result</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_radarex1.html"> <IMG border="0" HEIGHT="200"  src="img/radarex1.png"
+WIDTH="250"></A>
+<BR><SMALL><EM><B>Figure 2:</B> A first very simple radar plot using
+ default settings<A href="exframes/frame_radarex1.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P> To change the size and position of the radar graph is similair to
+ the pie plot and you do it by using the methods<A href="../ref/SpiderGraph.html#_SPIDERGRAPH_SETSIZE">
+ SetSize()</A> and<A href="../ref/SpiderGraph.html#_SPIDERGRAPH_SETCENTER">
+ SetCenter()</A></P>
+<P> If you want a filled radar plot you need to specify the fill color
+ with the method<A href="../ref/SpiderPlot.html#_SPIDERPLOT_SETFILLCOLOR">
+ SetFillColor()</A> The following example shows these methods in action</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_radarex2.html"> <IMG border="0" HEIGHT="200"  src="img/radarex2.png"
+WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 3:</B> Changing size, position and adding fill
+ color to the radar plot.<A href="exframes/frame_radarex2.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="7_1_2">7.1.2 Specifying titles for the axis and legends for
+ the plots</A></H3>
+ We normally would like something more meaningful as description of each
+ axis than it's number. Specifying the titles are accomplished through
+ the use of the method SetTitles() of the graph. Let's say that each
+ axis corresponds to a month. We could then use the code
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $titles</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> $gDateLocale</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">GetShortMonth</FONT><FONT color="#006600">
+();
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetTitles</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$titles</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P> As you can see the way radar plot is constructed will assign the
+ titles (and plot points) in a counter-clockwise direction. If you want
+ them in clock-wise order you will have to inverse your input data array
+ as well as the title array.</P>
+<P> To specify a legend you (as with the other plot) make use of the<A href="../ref/SpiderPlot.html#_SPIDERPLOT_SETLEGEND">
+ SetLegend();</A> method on each radar plot.</P>
+<H3><A NAME="7_1_3">7.1.3 Adding gridline to the radar plot</A></H3>
+ Each major ticvk mark can also be connected togehter to create a grid.
+ The grid is accessed through the 'grid' property of the graph. To
+ enable the grid and set the line style to &quot;dotted&quot; you would have to
+ add the lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">grid</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Show</FONT><FONT color="#006600">();
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">grid</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetLineStyle</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;dotted&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P> and would result in the followin graph</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_radarex4.html"> <IMG border="0" HEIGHT="200"  src="img/radarex4.png"
+WIDTH="250"></A>
+<BR><SMALL><EM><B>Figure 4:</B> Adding dotted gridlines to the graph<A href="exframes/frame_radarex4.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P>By design the plot is above the gridline but beneath the axis in
+ image depth, hence some part of the gridlines are hidden.</P>
+<P> To have the gridlines more &quot;visible&quot; just change their color, say
+ to, dark red by invoking the SetColor() method on the gridlines which
+ would give the following result</P>
+<P> Another simple change we could do would be to just change the
+ background color of the radargraph. This is (not surprisingly) done by
+ a call to the method SetColor() invoked on the graph object.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_radarex6.html"> <IMG border="0" HEIGHT="200"  src="img/radarex6.png"
+WIDTH="250"></A>
+<BR><SMALL><EM><B>Figure 5:</B> Changing the background color<A href="exframes/frame_radarex6.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="7_1_4">7.1.4 Adding several plots to the same radar graph</A>
+</H3>
+ You can easily create several radar plot which are added to the same
+ radar graph. The thing to remember is that if you use filled radar
+ plots and they overlap each other that the order which they are added
+ will be the order they are drawn.
+<P> A simple example of this is shown below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_radarex6.1.html"> <IMG border="0" HEIGHT="200"
+ src="img/radarex6.1.png" WIDTH="250"></A>
+<BR><SMALL><EM><B>Figure 6:</B> Several radar plots in one radar graph<A href="exframes/frame_radarex6.1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="4nonxy.html">Previous</A>
+<A HREF="4020pieplot.html">Next</A>
+</BODY>
+</HTML>

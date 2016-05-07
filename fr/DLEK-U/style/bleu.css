@@ -1,0 +1,650 @@
+* { margin:0; padding:0; }
+
+body
+{
+	margin-bottom: 25px;
+	font-family: "Arial Unicode MS", Arial, Geneva, Helvetica, sans-serif; 
+	font-size: 13px;
+	background: #EEE;
+	text-align: center;
+}	
+div#pagxo {
+	text-align:left;
+	width:775px;
+	margin:auto;
+}
+#pagxo h1 {
+	font-size: 30px;
+	color: #369;
+	text-align:center;
+}
+textarea,
+input,
+select,
+option {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-size: 13px;
+	color: #036;
+}
+
+h2 {font-size:16px;}
+h3 {font-size:14px;}
+.popup h3 {font-size: 14px;}
+img {border:0px;}
+em {
+	font-style: italic;
+	color:#369;
+}
+hr {
+	margin:10px 10px 10px 20px;
+	height: 1px;
+	color: #668CB2;
+}
+option {
+	padding:0 2px;
+}
+
+table {
+	font-size: 13px;
+}
+.meze {
+	text-align: center;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.dekstre {
+	text-align: right;
+	margin:2px;
+}
+.meze table,
+.meze table tr,
+.meze table tr td {
+	width:auto;
+	text-align: center;
+	border:solid 1px #668CB2;
+	border-collapse: collapse;
+	padding:2px 10px;
+}
+table.voca
+{
+	padding:2px;
+	margin: 0px 0px 10px 20px;
+	border: 1px solid #690;
+	background: #E6F3C0;
+	font-size:11px;
+}
+
+table.voca tr td {
+	padding: 2px;
+	vertical-align: top;
+}
+table.lernanto {
+	border:none;
+	border-collapse:collapse;
+	border:solid 1px #690;
+	font-size:11px;
+	margin-bottom:5px;
+}
+div.lernanto {
+	font-size: 11px;
+	margin-bottom: 5px;
+	padding:10px;
+	position:relative;
+}
+div.gauche {
+	float: left;
+}
+
+div.lien {
+	display:block;
+}
+a {
+	text-decoration:none;
+	color:#668CB2;
+}
+
+p.note {
+	font-size:11px;
+	color:#369;
+	padding-left:100px;
+}
+.eraro {
+	font-size: 16px;
+	font-weight:bold;
+	color: #C30;
+}
+.rimarko {
+	font-size:11px;
+}
+
+
+
+/**********************************
+ * contenu "utile" de la page
+ **********************************
+ */
+#enhavo p, 
+#enhavo table,
+#enhavo ol {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+}
+#enhavo {
+	margin:10px;
+	color: #369;
+}
+div#adminejo {
+	margin:5px;
+	padding:0;
+	color: #369;
+}
+#enhavo h2, h3, h4, h5
+{
+	margin: 10px 10px 10px 0px;
+	padding-top: 5px ;
+	color: #668CB2;
+	font-size: 24px;
+}
+#enhavo h3
+{
+	font-size: 16px;
+	border-bottom: 1px solid #668CB2 ;
+}
+#enhavo h4
+{
+	font-size: 14px;
+	color: #690;
+}
+#enhavo h5
+{
+	font-size: 12px;
+	color: #690;
+}
+
+#enhavo p {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	padding: 2px 0px;
+}
+.encadre
+{
+	margin:2px;
+	padding:2px ;
+	border: 1px dashed #690;
+	font-size:12px;
+	background: #E6F3C0;
+}
+.aligne {
+	clear:right;
+  	height: 0;
+}
+/*
+ * pied de page
+ */
+ 
+.antauxpiedo {
+  height: 0;
+  clear: both;
+}
+#piedo {
+	clear: both; 
+}
+p.dato {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-size:11px;
+	text-align:right;
+	color:#690;
+	margin-right:15px;
+	padding-top:0px;
+}
+
+/**********************************
+ * onglets
+ **********************************
+ */
+#tabnav,
+.subnav {
+	font-family: Verdana, Geneva, Arial, sans-serif; 
+   font-size: 11px;
+   list-style-type: none;
+   padding-bottom: 24px;
+   border-bottom: 1px solid #690;
+	list-style-image: none;
+	}
+	
+.subnav {
+	display:none;
+	border:none;
+	position:relative;
+	top:-12px;
+	left:-12px;
+}	
+#tabnav li,
+.subnav li {
+   float: left;
+   height: 21px;
+   margin: 2px 2px 0 2px;
+   border: 1px solid #690;
+	background-color: #E6F3C0;
+}
+.subnav li {
+	margin:1px;
+}
+#tabnav li.aktiva,
+.subnav li.aktiva {
+   border-bottom: 1px solid white;
+   background-color: white;
+}
+
+#tabnav li.meze,
+.subnav li.meze {
+	margin-left: 20px;
+}
+
+#tabnav li.dekstre {
+	float: right;
+   border: 1px solid #690;
+}
+#tabnav li.dekstraktiva {
+	float: right;
+   border-bottom: 1px solid white;
+   background-color: white;
+}
+
+#tabnav a,
+.subnav a {
+   float: left;
+   display: block;
+   color: black;
+   text-decoration: none;
+   padding: 4px;
+}
+
+#tabnav a:hover,
+.subnav a:hover {
+   background: white;   
+}
+
+#kadro {
+	color:black;
+	border: 1px solid #690;
+	border-top:none;
+	padding: 15px;
+	background: #FFF;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+}
+#kadro p {
+	margin-left:20px;
+}
+
+#kadro h3, h4, h5 {
+	margin-left:20px;
+}
+
+/*************************************************
+ * table de présentation des données personnelles
+ *************************************************
+ */
+table.perso {
+	border: 0px;
+	text-align:left;
+	color: #369;
+}
+table.perso thead {
+	color:#369;
+}
+table.perso td {
+	text-align:left;
+	vertical-align: text-top;
+	padding:2px;
+}
+
+table.perso td.col1 {
+	color: #690;
+	text-align:right;
+}
+table.perso p {
+	color:#668CB2;
+	text-align:left;
+}
+/**********************************
+ * tableau de statistiques
+ **********************************
+ */
+table.stat {
+	border: 1px solid #690;
+	color: #369;
+	border-collapse: collapse;
+}
+
+table.stat thead {
+	color: black;
+	text-align:center;
+}
+
+table.stat thead tr td {
+	text-align:center;
+	border: 1px solid #690;
+	padding:0 0.5em;
+}
+
+table.stat thead tr td.vide{
+	text-align:center;
+	border: 0;
+}
+table.stat tbody tr td {
+	text-align:center;
+	border: 1px solid #690;
+}
+
+table.stat tbody tr td.col1 {
+	color: #668CB2;
+	text-align:left;
+	padding:0 0.5em;
+}
+
+table.stat tbody tr td.dekstre {
+	text-align:right;
+	padding:0 0.3em;
+}
+
+table.stat tfoot {
+	color: #369;
+	text-align:center;
+	font-weight:bold;
+	background:#E6F3C0;
+}
+
+table.stat tfoot tr td {
+	border: 1px solid #690;
+}
+
+
+/**********************************
+ *        pages de cours
+ **********************************
+ */
+
+.rakonto {
+	display:block;
+	padding:10px 10% 10px 5%;
+}
+.rakonto a,
+.klarigo a {
+	font-weight:bold;
+	text-decoration:none;
+	color:#369;
+}
+.rakonto a:hover,
+.klarigo a:hover {
+	background:#E6F3C0;
+	color:#690;
+}
+.rakonto h4 a {
+	text-decoration:none;
+	color: #668CB2;
+}
+.lasu {
+	padding:10px 100px 10px 60px;
+}
+.lasu a {
+	vertical-align: super;
+	font-size: 10px;
+}
+.rakonto img {
+	float: right;
+	vertical-align: text-top;
+	margin: 5px;
+}
+.rakonto .onglet a {
+	vertical-align: baseline;
+	font-size: 14px;
+	color: #668CB2;
+	border:solid 1px #690;
+	padding:2px;
+}
+.rakonto h2 {
+	text-align: center;
+}
+.rakonto p {
+	line-height:1.5;
+	font-size:12px;
+	text-align: justify;
+}
+.rakonto p.citajxo {
+	text-align:left;
+	margin-left: 50px;
+}
+.rakonto ol,
+.rakonto ul {
+	line-height:1.5;
+	font-size:13px;
+	margin-left:50px;
+	text-align: left;
+}
+.rakonto ul {
+	list-style-image: url(triangle.gif);
+}
+.klarigo ul {
+	line-height:1.5;
+	font-size:13px;
+	margin-left:50px;
+	text-align: left;
+	list-style-image: url(triangle.gif);
+}
+.klarigo li {
+	padding-bottom:5px;
+}
+.klarigo ul li a {
+	color:black;
+	text-decoration:none;
+	font-weight:normal;
+	color:#369;
+	/* display:block; */
+}
+.klarigo ul li a:hover {
+	background:#E6F3C0;
+	color:#690;
+}
+.klarigo ul.sommaire {
+	margin-left: 50px;
+	line-height:1.5;
+	font-size:12px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+}
+.klarigo ul.sommaire li {
+	list-style-image:"http://ikurso.esperanto-jeunes.org/bildoj/triangle.gif";
+}
+.klarigo ul.cadre li {
+	width: 200px;
+}
+
+.klarigo ol  {
+	margin-left: 50px;
+}
+
+.klarigo p {
+	line-height:1.5;
+}
+.klarigo textarea {
+	margin-left: 10px;
+	padding: 5 px;
+}
+
+.ekz {color : #668CB2;}
+.ekz2 {color : brown;}
+.fr {color : #003366;}
+.eo {color : #339965;}
+
+.vortlisto dt
+{
+	float: left;
+	width: 100px;
+	margin: 0 0 0 0;
+	padding: .5em;
+	font-weight: bold;
+	color : #339965;
+}
+
+.vortlisto dd
+{
+	margin: 0 0 0 105px;
+	padding: .5em;
+}
+.retrait {
+	margin-left: 50px;
+}
+.retrait tr td {
+	vertical-align: top;
+}
+.grava {
+	color:#C30;
+}
+.grava a {
+	color:#C30;
+}
+.aligxilo {
+	color: #369;
+	background-color: #E6F3C0;
+	margin-top:10px;
+	border:1px dashed #690;
+}
+
+.aligxilo p {
+	text-align: left;
+}
+
+.aligxilo table {
+	border:none;
+	font-size:12px;
+}
+.rim {
+	display : block;
+	text-align : justify;
+	font-size: 11px;  
+	background-color : #F0F3F8;
+	color : #369;
+	margin : 10px 10px 10px 80px;
+	border : dashed 1px #668CB2;
+}
+.rim p {
+	margin:5px;
+	padding:2px;
+}
+.ekzerco {
+	color: #003366;
+	background-color: #E6F3C0;
+	border:1px dashed #690 ;
+	margin:5px 30px;
+}
+/**********************************
+ *        exercice
+ **********************************
+ */
+div.tasko {
+	font-family: inherit;
+	background-color: #E6F3C0;
+	border:1px dashed #690;
+	margin: 0px 0px 10px 20px;
+}
+div.tasko p {
+	color:#369;
+	margin-top:3px;
+	margin-bottom:4px;
+	line-height:180%;
+}
+div.tasko table {
+	border:none;
+	border-collapse: collapse;
+	padding:5px;
+}
+div.tasko table td {
+	padding:5px;
+}
+/*****************************************
+ * insert pour lernu
+ *****************************************
+ */
+div#lernu {
+	position:relative bottom right;
+}
+/*********************************************
+ * tableau de présentation avec bordures fines
+ *********************************************
+ */
+
+table.prezento {
+	border: solid 1px #690;
+	border-collapse: collapse;
+	text-align:left;
+	cellpadding:2px;
+	cellspacing:5px;
+	color: #668CB2;
+	background:white;
+}
+
+table.prezento tr td {
+	padding:2;
+	text-align:left;
+	vertical-align: text-top;
+	border: solid 1px #690;
+}
+
+table.prezento h2,
+table.prezento h3 {
+	padding-top: 0;
+	margin-top:0;
+	text-align:center;
+}
+table.prezento h2 a,
+table.prezento h3 a {
+	text-decoration: none;
+	color: #668CB2;
+}
+table.prezento h4 {
+	font-weight:normal;
+	color: #369;
+	font-size:12px;
+}
+table.prezento img {
+	text-align:center;
+	border:1px;
+	border-color: #690;
+}
+table.prezento td.txt {
+	color:black;	
+}
+table.prezento form {
+	text-align:center;
+}
+table.hejmo h3 {
+	background: #FFF url(degrade.gif) repeat-y;
+	display:block;
+}
+table.hejmo h4 {
+	color: #369;
+}
+table.hejmo p {
+	text-align:justify;
+	margin:2px 10px;
+	font-size:11px;
+}
+input.bouton {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+	color:black;
+}
+/*****************************************
+ * listes de choix de styles (A SUPPRIMER)
+ *****************************************
+ */
+/* 
+div.stylenavbar {
+	margin-top:5px;
+	margin-left:210px;
+	font-size: 11px; 
+	padding: 6px;
+}
+div.stylenavbar a:hover{
+	font-weight:bold;
+ }
+*/

@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="1introduction.html">Previous</A>
+<A HREF="22working.html">Next</A>
+<HR>
+<H1><A NAME="3">3 Installation</A></H1>
+<H2><A NAME="3_1">3.1 Preparation</A></H2>
+ In general the only thing you need to do is to make sure your PHP files
+ can include the required library files (as described below) and that
+ your PHP installation supports at least one graphic format, i.e. it
+ supports the &quot;image&quot; extension to PHP.
+<P> You can easily verify this by making sure that your installation of
+ PHP supports some of the 'imagecreate()' functions.</P>
+<P> This means that you
+<!--string-->
+ must have a working GD-library together with PHP
+ before even thinking of running JpGraph. Please make sure you have
+ verion 4.02 or above of PHP since JpGraph will<STRONG> not</STRONG>
+ work with versions prior to PHP 4.02 that. Ideally you should use at
+ least PHP 4.1.x</P>
+<P> If you want to use TTF fonts you must also make sure that your PHP
+ installation supports TTF fonts (either through FreeType 1 or FreeType
+ 2 libraries). In additions to this you need at least a couple of TTF
+ fonts. In preparation of using TTF fonts with JpGRaph you must specify,
+ in jpgraph.php , where those font files can be found.</P>
+<P> JpGraph uses a naming convention for the TTF font files in order to
+ be able to find the correct font files. You should therefore use the
+ font files that can be downloaded together with JpGraph.</P>
+<P> In order to make sure that you have GD installed you could try by
+ running the following example which creates a very simple image using
+ just pure GD calls and outputs an image in PNG format.
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> header</FONT><FONT color="#006600">
+ (</FONT><FONT color="#CC0000">&quot;Content-type: image/png&quot;</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$im</FONT><FONT color="#006600"> = @</FONT><FONT
+color="#0000CC">ImageCreate</FONT><FONT color="#006600"> (</FONT><FONT color="#0000CC">
+50</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC"> 100</FONT><FONT
+color="#006600">)
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;or die (</FONT><FONT color="#CC0000">&quot;Cannot create a new GD
+ image.&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$background_color</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> ImageColorAllocate</FONT><FONT color="#006600">
+ (</FONT><FONT color="#0000CC">$im</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC"> 255</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+ 255</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC"> 255</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$text_color</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> ImageColorAllocate</FONT><FONT color="#006600">
+ (</FONT><FONT color="#0000CC">$im</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC"> 233</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+ 14</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC"> 91</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">ImageString</FONT><FONT color="#006600">
+ (</FONT><FONT color="#0000CC">$im</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC"> 1</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+ 5</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC"> 5</FONT><FONT
+color="#006600">,&nbsp;&nbsp;</FONT><FONT color="#CC0000">&quot;A Simple Text String&quot;</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC"> $text_color</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">ImagePng</FONT><FONT color="#006600">
+ (</FONT><FONT color="#0000CC">$im</FONT><FONT color="#006600">);</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> The above script<STRONG> must</STRONG> work before you will have any
+ chance of getting JpGraph working.</P>
+<H2><A NAME="3_2">3.2 Customizing the installation</A></H2>
+ In order for JpGraph to work you must adjust the cache and TTF
+ directory to suit your installation. By default the TTF directory is
+ &quot;/usr/local/fonts/ttf/&quot; and for the cache &quot;/tmp/jpgraph_cache/&quot;. These
+ are defined as PHP defines at the top of jpgraph.php
+<P> Please make sure that PHP has write permissions to the cache
+ directory if you plan to use the cache feature. If not you will get a
+ &quot;Can't write file xxx.yyy&quot; error when you try to genereate a graph. You
+ can read more about how to use the cache in the chapter<A href="2240cache.html">
+ Making sense of caching system in JpGraph</A></P>
+<H2><A NAME="3_3">3.3  Required files</A></H2>
+ This is the base library files, which you must have
+<UL>
+<LI> Jpgraph.php, base library, always needed</LI>
+</UL>
+<H3><A NAME="3_3_1">3.3.1 Plot extension modules</A></H3>
+ To add plots to the graph you will need one or more of the following
+ files plot extension files dependiong on what kind of graph you need to
+ create.
+<UL>
+<LI>jpgraph_log.php, Plot extension to support logarithmic X and Y
+ scales</LI>
+<LI>jpgraph_line.php, Plot extension. Needed to draw various line plots</LI>
+<LI>jpgraph_bar.php, Plot extension. Needed to draw various bar plots</LI>
+<LI>jpgraph_error.php, Plot extension. Needed to draw various error
+ plots</LI>
+<LI>jpgraph_scatter.php, Plot extension. Needed to draw scatter and
+ impuls plots.</LI>
+<LI>jpgraph_spider.php, Plot extension. Needed to draw spider plots.</LI>
+<LI>jpgraph_pie.php, Plot extension. Needed to draw Pie plots</LI>
+<LI>jpgraph_pie3d.php, Plot extension. Needed to draw 3D Pie plots</LI>
+<LI>jpgraph_gantt.php, Plot extension. Needed to create gantt plots</LI>
+<LI>jpgraph_canvas.php, Plot extension to make it possible to draw
+ arbitrary graphic on a canvas.</LI>
+<LI>jpgraph_canvtools.php, Add on to the canvas graph to privide an
+ easier way to rdaw arbitrary shapes.</LI>
+</UL>
+<H2><A NAME="3_4">3.4 Graphic libraries requirements for PHP 4.02 and
+ above</A></H2>
+ Per default the standard GD image library supports PNG graphic formats.
+ You will need to have that installed together with your PHP module for
+ this library to work at all. Please refer to PHP documentation on
+ specifics. Note that the newer versions of GD does not support the GIF
+ format due to copyright problems. Hence by default only PNG is
+ supported.
+<P> If you want JPEG support you will also need an additional library
+ for PHP, again please see PHP documentation for specifics. For most
+ practical purposes PNG is a better format since it normally achieves
+ better compression then GIF (typically by a factor of 2 for the types
+ of images generated by JpGraph). In comparison with JPEG format PNG is
+ also better for the type of images generated by this library. So, the
+ bottom line is, you should have a very good reason to choose any other
+ format then PNG.</P>
+<P> By default the image format is set to &quot;auto&quot;. This means that
+ JpGraph automatically chooses the best available graphic using the
+ preferred order &quot;PNG&quot;, &quot;GIF&quot;, &quot;JPG&quot;.</P>
+<P> <SMALL><STRONG> Note:</STRONG> The reason that my site
+ (www.aditus.nu) only displays GIF images is that my Web hotell doesn't
+ support a newer version of GD which allows PNG format. One of lifes
+ small pains. This is the reason that I in most places just displays the
+ PNG images directly in the img tag on my site without going through
+ Jpgraph since the GIF format gives much bigger files and would make my
+ site slower.</SMALL></P>
+<HR> <SMALL><STRONG> Sidenote 2:</STRONG> To get background images
+ working with GD 2.0.1 you MUST enable Truecolor images by setting the
+ constant USE_TRUECOLOR to true. If you don't do this the background
+ images will just be a black rectangle. The bad thing with this is that
+ the antialias for Truetypes is broken using truecolor images in GD
+ 2.0.1. This means you can't have background and TTF fonts in the same
+ image.
+<P> <SMALL> You can find a bug fix for GD 2.01 and the TTF problem
+ together with Truecolor images at</SMALL></P>
+<P> <SMALL><A href="http://www.coupin.net/gd-freetype/">
+ http://www.coupin.net/gd-freetype/</A></SMALL></P>
+<P> <SMALL> NOTE: This bug fix has _nothing_ to do with JpGraph and I
+ can't guarantee anything nor answer any questions regarding this
+ specific fix.</SMALL></P>
+<HR>
+<H2><A NAME="3_5">3.5 Detailed steps to install JpGraph</A></H2>
+<OL>
+<LI>Make sure your PHP is AT LEAST 4.04 (preferrable 4.1.1) and that you
+ have compiled support for GD library. You must make aboslutely sure
+ that you have GD working. Please run phpinfo() to check if GD library
+ is supported in your installation. Please not that JpGraph only fully
+ supports GD 1.x. There are known issues with GD 2.0.1 , see the notes
+ section below.</LI>
+<LI>Unzip and copy the files to a directory of your choice.</LI>
+<LI>Set up the directory paths in jpgraph.php where the cache directory
+ should be and where your TTF directory is. Note that Apache/PHP must
+ have write permission in your cache directory.</LI>
+<LI> Check that all rest of the DEFINE in the top of JpGraph.php is
+ setup to your preference. The default should be fine for most users.
+ (See also Note 5. below) Specifically check that the settings of
+ USE_GD2_LIBRARY reflects your installation, (should be true if you have
+ GD2 installed, false otherwise).</LI>
+<LI>Make sure PHP have write privileges to your cache directory if you
+ plan on using the cache feature.</LI>
+<LI> Some windows installations seems to have a problem with a PHP
+ script ending in a newline (This newline seems to be sent to the
+ browser and will cause a Header already sent error). If you have this
+ problem try remove all trailing newlines in the jpgraph* files</LI>
+<LI>It has been reported that PHP 4.06 under IIS has problem correctly
+ interpreting file paths. This can be solved by hardcoding the
+ CACHE_DIRECTORY and FONT_DIRECTORY constants directly in the code
+ instead of using the defined constants.</LI>
+<LI> Read (really!)<A href="http://www.aditus.nu/jpgraph/jpg_faq.html">
+ the JpGraph FAQ</A>.</LI>
+</OL>
+<H2><A NAME="3_6">3.6 Troubleshooting your installation</A></H2>
+<OL>
+<LI>Any PHP errors about function &quot;imagecreate&quot; does not exist indicates
+ that your PHP installation does not include the GD library. This must
+ be present.</LI>
+<LI> Any error about &quot;parent::&quot; undefined means that you are not using
+ PHP 4.02 or above. You _NEED_ PHP 4.02 or higher. This problem has also
+ been reported to sometimes occur under Windows. This problem has also
+ been reported by people running Zend-cache and is a bug in Zend. A
+ workaround is to move all files into one single file.</LI>
+<LI> If you don't get any background images (but rather a solid black
+ box) you are using GD 2.x but have forgotten to enable truecolor
+ support. Correct this by enabling the USE_TRUECOLOR define.</LI>
+<LI> If background images does not work make sure the settings of
+ USE_GD2_LIBRARY corresponds to your installation, i.e. If you don't
+ have GD2 then this define must be false!</LI>
+<LI> If you are running PHP 4.06 and get an error saying &quot;GD was not
+ built with truetype support&quot; you should know that this is a known
+ problem with GD+PHP 4.06. There are some workarounds (search the net!)
+ but it is really recommended that you instead upgrade to at least PHP
+ 4.1.1 and configure PHP with --with-gd-native-ttf (Please also note
+ that the built in TTF uses point size for fonts whereas Truetype 2 uses
+ pixels.) Please DON't ask me how to resolve the GD Font problem. All
+ mail regarding this will go straight to /dev/null. Upgrade to 4.1.1!</LI>
+<LI> If you are running IIS and Win2k and get the error &quot;Can't find
+ font&quot; when trying to use TTF fonts then try to change you paths to UNIX
+ style, i.e. &quot;/usr/local/fonts/ttf/&quot;. Remember that the path is absolute
+ and not relative to the htdocs catalogue.</LI>
+<LI> If you are using the cache please make sure that you have set the
+ permissions correctly for the cache directory so that Apache/PHP can
+ write to that directory.</LI>
+<LI> If you have problem building GD 2.0.1 for PHP you might want to try
+ the following tip from Rasmus L.</LI>
+<P></P>
+<PRE>
+  ----&lt;QUOTE &gt;----
+
+   Build GD 2.0.1 with these two lines in your GD2 Makefile
+
+   CFLAGS=-g -DHAVE_LIBPNG -DHAVE_LIBJPEG -DHAVE_LIBFREETYPE
+   LIBS=libgd.a -lpng -lz -ljpeg -freetype -lm
+
+   Don't install the lib anywhere, just leave it in the GD-2.1.1
+   directory.
+
+   Then build PHP using a minimum of:
+
+   --with-gd=/home/
+<!--your_dir-->
+/gd-2.0.1
+   --with-freetype-dir=/use
+   --enable-gd-native-ttf
+   --enable-gd-imgstrttf
+   --with-jpeg-dir=/usr
+   --with-png-dir=/usr
+   --with-xpm-dir=/usr/X11R6
+
+   The above assumes you have freetype2 installed along with the
+   libjpeg and libpng libs under /usr
+
+   ---- &lt;END QUOTE &gt;----
+</PRE>
+</OL>
+</SMALL><HR>
+<A HREF="index.html">Contents</A>
+<A HREF="1introduction.html">Previous</A>
+<A HREF="22working.html">Next</A>
+</BODY>
+</HTML>

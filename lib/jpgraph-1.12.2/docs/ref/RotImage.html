@@ -1,0 +1,155 @@
+<style type="text/css">
+		<!--
+		A:link        {font-family: helvetica, arial, geneva, sans-serif; font-size: x-small; text-decoration: none; color: #0000ff}
+		A:visited     {font-family: helvetica, arial, geneva, sans-serif; font-size: x-small; text-decoration: none; color: #0000ff}
+		A:hover       {font-family: helvetica, arial, geneva, sans-serif; font-size: x-small; text-decoration: underline; color: #FF0000}
+		th            {font-family: helvetica, arial; color : blue; font-size:85%; background : lightgrey; border-right:black solid 1pt; border-bottom:black solid 1pt;}
+		//-->
+		</style><hr><a name="_C_ROTIMAGE"><div style="background-color:yellow;font-family:courier new;"></a>CLASS <b>RotImage</b> EXTENDS <a href="Image.html#_C_IMAGE" style="font-face:arial;font-weight:bold;">Image</a></div>
+<i>(Defined in: jpgraph.php : 6437)</i><table border=1><tr><td>&nbsp;<a href="RotImage.html" style="font-family:arial;font-weight:bold;color:darkblue;">RotImage</a>&nbsp;</td><td>&nbsp;<a href="Image.html" style="font-family:arial;font-weight:bold;color:darkblue;">Image</a>&nbsp;</td></tr><tr><td valign=top>&nbsp;<a href="RotImage.html#_ROTIMAGE_SETANGLE">SetAngle()</a>&nbsp;<br>
+&nbsp;<a href="RotImage.html#_ROTIMAGE_SETCENTER">SetCenter()</a>&nbsp;<br>
+&nbsp;<a href="RotImage.html#_ROTIMAGE_SETMARGIN">SetMargin()</a>&nbsp;<br>
+&nbsp;<a href="RotImage.html#_ROTIMAGE_SETTRANSLATION">SetTranslation()</a>&nbsp;<br>
+</td><td valign=top>&nbsp;<a href="Image.html#_IMAGE_FILLEDBEVEL">FilledBevel()</a>&nbsp;<br>
+&nbsp;<a href="Image.html#_IMAGE_ROUNDEDRECTANGLE">RoundedRectangle()</a>&nbsp;<br>
+&nbsp;<a href="Image.html#_IMAGE_SETALPHABLENDING">SetAlphaBlending()</a>&nbsp;<br>
+&nbsp;<a href="Image.html#_IMAGE_SETANTIALIASING">SetAntiAliasing()</a>&nbsp;<br>
+&nbsp;<a href="Image.html#_IMAGE_SETCANVASCOLOR">SetCanvasColor()</a>&nbsp;<br>
+&nbsp;<a href="Image.html#_IMAGE_SETEXPIRED">SetExpired()</a>&nbsp;<br>
+&nbsp;<a href="Image.html#_IMAGE_SETIMGFORMAT">SetImgFormat()</a>&nbsp;<br>
+<a href="Image.html#_IMAGE_SETMARGIN" style="color:darkgrey;">SetMargin()&nbsp;</a><br>
+&nbsp;<a href="Image.html#_IMAGE_SETQUALITY">SetQuality()</a>&nbsp;<br>
+&nbsp;<a href="Image.html#_IMAGE_SETTRANSPARENT">SetTransparent()</a>&nbsp;<br>
+</td></tr></table>&nbsp;<p><div style="font-weight:bold;font-family:arial;font-size:100%;">Class usage and Overview</div>A subclass of Image class which implements a rotated version of all methods in the base Image class.
+
+The Image class used in JpGraph is actually not the class Image but rather this class as we want to have the rotating possibility.
+
+The rotation is accomplished by standard 2D rotation matrices. <p> &nbsp;
+<div style="font-weight:bold;font-family:arial;font-size:85%;">See also related classes:</div><a href="Image.html">Image</a> <p> &nbsp;<hr><span style="font-family:arial;font-size:120%;font-weight:bold;">Class Methods</span><hr><p>
+<p>&nbsp; <p> &nbsp; <span style='font-size:110%;'><a name="_ROTIMAGE_SETANGLE"><div style="border-top:solid black 2pt;background-color:lightblue;font-family:courier new;font-size:90%;font-weight:bold;"><b><font color="#000000">
+<font color="#0000CC"></font><font color="#006600">function </font><font color="#0000CC">SetAngle</font><font color="#006600">(</font><font color="#0000CC">$a</font><font color="#006600">)</font><font color="#0000CC"></font>
+</font>
+</b></div></a></span>
+
+<span style='font-family:arial;font-size:90%;'><i>Specify rotation angle</i></span><p>
+
+<table cellspacing=0 style='border:black solid 1pt;' width=100%>
+<tr><th width=25%>Argument</th><th width=15%>Default</th><th width=60%>Description</th></tr>
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$a</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Angle in degrees</td></tr>
+</table>
+
+<div style="font-weight:bold;font-family:arial;font-size:85%;">Description</div>Specify the rotation angle for the other graphic primitives in this class.
+
+The rotation is performed around point (0,0). 
+&nbsp;<br>
+ &nbsp; <div style="font-weight:bold;font-family:arial;font-size:85%;">See also</div><a href="RotImage.html#_ROTIMAGE_SETTRANSLATION">RotImage::SetTranslation</a> and <a href="RotImage.html#_ROTIMAGE_SETCENTER">RotImage::SetCenter</a>
+<div style="font-weight:bold;font-family:arial;font-size:85%;"><p>Example</div><span style="font-family:courier;font-size:85%;"><font color="#000000">
+<font color="#0000CC">$graph</font><font color="#006600">-&gt;</font><font color="#0000CC">img</font><font color="#006600">-&gt;</font><font color="#0000CC">SetAngle</font><font color="#006600">(</font><font color="#0000CC">45</font><font color="#006600">);<br /></font><font color="#0000CC"></font>
+</font>
+</span><br>
+<p>
+<p>&nbsp; <p> &nbsp; <span style='font-size:110%;'><a name="_ROTIMAGE_SETCENTER"><div style="border-top:solid black 2pt;background-color:lightblue;font-family:courier new;font-size:90%;font-weight:bold;"><b><font color="#000000">
+<font color="#0000CC"></font><font color="#006600">function </font><font color="#0000CC">SetCenter</font><font color="#006600">(</font><font color="#0000CC">$dx</font><font color="#006600">,</font><font color="#0000CC">$dy</font><font color="#006600">)</font><font color="#0000CC"></font>
+</font>
+</b></div></a></span>
+
+<span style='font-family:arial;font-size:90%;'><i>Set rotation center</i></span><p>
+
+<table cellspacing=0 style='border:black solid 1pt;' width=100%>
+<tr><th width=25%>Argument</th><th width=15%>Default</th><th width=60%>Description</th></tr>
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$dx</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Specify rotation center X</td></tr>
+
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$dy</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Specify rotation center Y</td></tr>
+</table>
+
+<div style="font-weight:bold;font-family:arial;font-size:85%;">Description</div>Specify center of rotation. (0,0) is the upper left most point in the image. By default the rotation point is choosen as tjhe midpoint of the image when the RotImage class is initially created.
+&nbsp;<br>
+ &nbsp; <div style="font-weight:bold;font-family:arial;font-size:85%;">See also</div><a href="RotImage.html#_ROTIMAGE_SETTRANSLATION">RotImage::SetTranslation</a> and <a href="RotImage.html#_ROTIMAGE_SETANGLE">RotImage::SetAngle</a>
+<div style="font-weight:bold;font-family:arial;font-size:85%;"><p>Example</div><span style="font-family:courier;font-size:85%;"><font color="#000000">
+<font color="#0000CC">$width</font><font color="#006600">=</font><font color="#0000CC">600</font><font color="#006600">; </font><font color="#0000CC">$height</font><font color="#006600">=</font><font color="#0000CC">400</font><font color="#006600">;<br /></font><font color="#0000CC">$graph </font><font color="#006600">= new </font><font color="#0000CC">Graph</font><font color="#006600">(</font><font color="#0000CC">$width</font><font color="#006600">,</font><font color="#0000CC">$height</font><font color="#006600">);<br /></font><font color="#0000CC">$graph</font><font color="#006600">-&gt;</font><font color="#0000CC">img</font><font color="#006600">-&gt;</font><font color="#0000CC">SetMargin</font><font color="#006600">(</font><font color="#0000CC">$leftm</font><font color="#006600">,</font><font color="#0000CC">$rightm</font><font color="#006600">,</font><font color="#0000CC">$topm</font><font color="#006600">,</font><font color="#0000CC">$bottomm</font><font color="#006600">);<br /></font><font color="#0000CC">$graph</font><font color="#006600">-&gt;</font><font color="#0000CC">SetAngle</font><font color="#006600">(</font><font color="#0000CC">20</font><font color="#006600">);<br /><br /></font><font color="#FF9900">// Rotate graph around the plots (0,0) point, i.e<br />// where the graph axis intersect.<br /></font><font color="#0000CC">$graph</font><font color="#006600">-&gt;</font><font color="#0000CC">img</font><font color="#006600">-&gt;</font><font color="#0000CC">SetCenter</font><font color="#006600">(</font><font color="#0000CC">$leftm</font><font color="#006600">,</font><font color="#0000CC">$height</font><font color="#006600">-(</font><font color="#0000CC">$topm</font><font color="#006600">+</font><font color="#0000CC">$bottomm</font><font color="#006600">));<br /></font><font color="#0000CC"></font>
+</font>
+</span><br>
+<p>
+<p>&nbsp; <p> &nbsp; <span style='font-size:110%;'><a name="_ROTIMAGE_SETMARGIN"><div style="border-top:solid black 2pt;background-color:lightblue;font-family:courier new;font-size:90%;font-weight:bold;"><b><font color="#000000">
+<font color="#0000CC"></font><font color="#006600">function </font><font color="#0000CC">SetMargin</font><font color="#006600">(</font><font color="#0000CC">$lm</font><font color="#006600">,</font><font color="#0000CC">$rm</font><font color="#006600">,</font><font color="#0000CC">$tm</font><font color="#006600">,</font><font color="#0000CC">$bm</font><font color="#006600">)</font><font color="#0000CC"></font>
+</font>
+</b></div></a></span>
+
+<span style='font-family:arial;font-size:90%;'><i>Specify margin for plot</i></span><p>
+
+<table cellspacing=0 style='border:black solid 1pt;' width=100%>
+<tr><th width=25%>Argument</th><th width=15%>Default</th><th width=60%>Description</th></tr>
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$lm</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Left margin</td></tr>
+
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$rm</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Right margin</td></tr>
+
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$tm</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Top margin</td></tr>
+
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$bm</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Bottom margin</td></tr>
+</table>
+
+<div style="font-weight:bold;font-family:arial;font-size:85%;">Description</div>Specify the margin, i.e. the area on the side of the actual plot which is used for titles, labels, legends ans so on.
+&nbsp;<br>
+
+<div style="font-weight:bold;font-family:arial;font-size:85%;"><p>Example</div><span style="font-family:courier;font-size:85%;"><font color="#000000">
+<font color="#0000CC">$graph</font><font color="#006600">-&gt;</font><font color="#0000CC">img</font><font color="#006600">-&gt;</font><font color="#0000CC">SetMargin</font><font color="#006600">(</font><font color="#0000CC">30</font><font color="#006600">,</font><font color="#0000CC">30</font><font color="#006600">,</font><font color="#0000CC">50</font><font color="#006600">,</font><font color="#0000CC">20</font><font color="#006600">);<br /></font><font color="#0000CC"></font>
+</font>
+</span><br>
+<p>
+<p>&nbsp; <p> &nbsp; <span style='font-size:110%;'><a name="_ROTIMAGE_SETTRANSLATION"><div style="border-top:solid black 2pt;background-color:lightblue;font-family:courier new;font-size:90%;font-weight:bold;"><b><font color="#000000">
+<font color="#0000CC"></font><font color="#006600">function </font><font color="#0000CC">SetTranslation</font><font color="#006600">(</font><font color="#0000CC">$dx</font><font color="#006600">,</font><font color="#0000CC">$dy</font><font color="#006600">)</font><font color="#0000CC"></font>
+</font>
+</b></div></a></span>
+
+<span style='font-family:arial;font-size:90%;'><i>Specify translation (in pixels)</i></span><p>
+
+<table cellspacing=0 style='border:black solid 1pt;' width=100%>
+<tr><th width=25%>Argument</th><th width=15%>Default</th><th width=60%>Description</th></tr>
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$dx</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Horizontal translation</td></tr>
+
+<tr><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'><font color="#000000">
+<font color="#0000CC">$dy</font>
+</font>
+
+</td><td style='border-right:black solid 1pt;font-family:courier;font-size:90%;font-weight:bold;'>&nbsp;</td><td>Vertical translation</td></tr>
+</table>
+
+<div style="font-weight:bold;font-family:arial;font-size:85%;">Description</div>The translation is applied after the rotation of the image.&nbsp;<br>
+ &nbsp; <div style="font-weight:bold;font-family:arial;font-size:85%;">See also</div><a href="RotImage.html#_ROTIMAGE_SETCENTER">RotImage::SetCenter</a> and <a href="RotImage.html#_ROTIMAGE_SETANGLE">RotImage::SetAngle</a>
+<div style="font-weight:bold;font-family:arial;font-size:85%;"><p>Example</div><span style="font-family:courier;font-size:85%;"><font color="#000000">
+<font color="#0000CC">$graph</font><font color="#006600">-&gt;</font><font color="#0000CC">img</font><font color="#006600">-&gt;</font><font color="#0000CC">SetTranslation</font><font color="#006600">(</font><font color="#0000CC">10</font><font color="#006600">,</font><font color="#0000CC">10</font><font color="#006600">)</font><font color="#0000CC"></font>
+</font>
+</span><br>
+<p> <hr> <p>

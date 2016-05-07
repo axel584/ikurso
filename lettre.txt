@@ -1,0 +1,126 @@
+Voilà les lettres !
+Lisa.
+
+----- Original Message -----
+From: axel584 <axel584@free.fr>
+To: <lisa.bannier@wanadoo.fr>
+Sent: Monday, February 11, 2002 9:57 AM
+Subject: Fwd: Gestion des eleves
+
+
+-> A la reception de l'aligxilo:
+1 - message a l'eleve
+
+Bonjour !
+
+Nous avons bien reçu votre demande d'adhésion au cours internet de la langue
+internationale Espéranto.
+
+Un correcteur va vous être attribué très bientôt. Vous recevrez ses
+coordonnées par mail dans les jours suivants.
+
+A bientôt !
+
+ 
+Traduko :
+Saluton !
+Ni bone ricevis vian aligxilan mendon por interrete lerni la internacian lingvon Esperanto.
+Vi baldaux ricevos la nomon kaj adreson de via korektanto per reta mesagxo.
+Gxis !
+
+-> A l'affectation du correcteur
+2 - Un pour l'eleve (contient le prenom et l'email du correcteur)
+
+Bonjour !
+
+Votre demande d'adhésion au cours internet d'Esperanto a été acceptée. Votre
+correcteur s'appelle #PRENOM DU CORRECTEUR# et vous pourrez lui envoyez vos
+devoirs à l'adresse suivante :
+#ADRESSE DU CORRECTEUR#
+
+Il sera votre interlocuteur privilégié durant toute la période de votre
+apprentissage. Vous pourrez aussi lui poser des questions sur l'histoire de la langue, la
+culture, le mouvement et les rencontres d'Espéranto.
+
+Nous vous rappelons que vous vous êtes inscrits sous le pseudo :
+#PSEUDO DE L'ELEVE#.
+
+Bonne découverte !
+
+Taduko :
+Saluton !
+Via aligxo al interreta kurso de Esperanto estis akceptita. Via korektanto nomigxas #NOMO de K# kaj vi povos sendi al li/sxi viajn korektotajn taskojn je la jena adreso :
+#ADRESO DE K#
+Li/Sxi estos via persona kontaktulo dum la tuta periodo de via lernado. Vi povos ankaux demandi al li/sxi pri la historio de la lingvo, gxia kulturo, la esperanta movado kaj la esperantaj renkontigxoj.
+Ni memorigas vin ke vi enskribigxis sub la pseuxdonimo :
+#PSEUXDO#
+Bonan malkovron !
+ 
+
+3 - Un autre pour le correcteur (contient des infos sur l'eleve)
+
+Saluton !
+
+Vi havas novan Eo-lernanton. Li/Sxi nomigxas :
+#PSEUDO DE L'ELEVE#
+
+La lernanto donis la jenajn informojn pri si :
+* Adreso :
+* Agxo :
+* Sxatokupoj :
+* Profesio/Studento pri :
+{Je ne sais pas s'il y a d'autres champs qui sont remplis par l'élève}
+
+La lernanto ricevis mesagxon kun via nomo kaj interreta adreso. Vi certe
+ricevos lian/sxian unuan taskon.
+
+Bonan laboron !
+
+-> Quand l'eleve a termine
+4 - a l'admin (avec l'identifiant de l'eleve)
+
+Saluton !
+
+La lernanto, #PSEUDO DE L'ELEVE#, finis la kursojn.
+Li komencis je #DATO DE KOMENCIGXO# kun #NOMO DE LA INSTRUISTO#.
+{Je ne vois pas trop ce que l'on doit indiquer ? Est-ce que l'on doit
+rappeler à l'administrateur qu'il doit conserver ses coordonnées quelque
+part dans une liste ou bien ... ?}
+
+
+
+5 - a l'eleve
+
+{Pour cette lettre, il vaut mieux mettre les 2 versions, d'abord Eo, puis F, car ça fera un dernier exercice pour l'élève !}
+ 
+Saluton !
+ 
+Vi jxus finis la kursojn per granda sukceso !
+ 
+Ni invitas vin dauxrigi vian malkovron de Esperanto : vi povas aligxi al la asocio Esperanto-Jeunes, aboni al gazetoj, partopreni renkontigxojn, acxeti esperantajn librojn aux t-cxemizojn... Vi ankaux povas pliprofundigi vian lernadon per korespondaj kursoj, klasaj kursoj aux lernolibroj.
+ 
+Por pli da informoj, kontaktu vian korektanton aux :
+ 
+Gxis tre baldaux !
+ 
+ 
+Version française :
+Bonjour !
+ 
+Vous venez de finir le cours avec succès !
+ 
+Nous vous invitons à pousuivre la découverte de l'Espéranto : vous pourrez à loisir adhérer à l'association Espéranto-Jeunes, vous abonner à des revues, participer à des rencontres, achetez des livres ou des T-shirts en Espéranto...
+ 
+Vous pouvez aussi approfondir votre apprentissage en participant à des cours par correspondance, des cours à heure fixe ou en achetant des livres avec des méthodes d'auto-apprentisage.
+ 
+Pour plus d'information, contactez votre correcteur ou  :
+Esperanto-Jeunes
+4 bis rue de la Cerisaie
+75011 Paris
+ 
+A très bientôt !
+ 
+{Je rajouterais bien le n° de téléphone de la Cerisaie ( je ne le connais pas) et le formulaire d'inscription à JEFO}
+  
+{Je rajouterais bien le n° de téléphone de la Cerisaie ( je ne le connais pas) et le formulaire d'inscription à JEFO}
+ 

@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="3090axisform.html">Previous</A>
+<A HREF="4nonxy.html">Next</A>
+<HR>
+<H2><A NAME="6_22">6.22 Adding bands of pattern and color to graphs</A></H2>
+ As an additional way of emphasizing certain areas of the graph it is
+ possible to add bands (either vertical or horizontal) to any one of the
+ standard X-Y coordinate system based graphs. A band is a rectangualr
+ area that stretches one entire axis. This means that if you define a
+ band between X-coordinates 3 and 5 the band area will occupy an area
+ between the X-coordinates and the entiry Y-range.
+<P> At the time of this writing (current as of JpGraph 1.8) the table
+ below illustrates the 8 basic types of patterns available. We will
+ shortly show you how you can customize these patterns, To keep these
+ examples clear we have only used one pattern in each figure.</P>
+<P></P>
+<TABLE>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_smallstaticbandsex1.html"> <IMG border="0" HEIGHT="150"
+ src="img/smallstaticbandsex1.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 1:</B><A href="exframes/frame_smallstaticbandsex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_smallstaticbandsex2.html"> <IMG border="0" HEIGHT="150"
+ src="img/smallstaticbandsex2.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 2:</B><A href="exframes/frame_smallstaticbandsex2.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_smallstaticbandsex7.html"> <IMG border="0" HEIGHT="150"
+ src="img/smallstaticbandsex7.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 3:</B><A href="exframes/frame_smallstaticbandsex7.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_smallstaticbandsex6.html"> <IMG border="0" HEIGHT="150"
+ src="img/smallstaticbandsex6.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 4:</B><A href="exframes/frame_smallstaticbandsex6.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_smallstaticbandsex9.html"> <IMG border="0" HEIGHT="150"
+ src="img/smallstaticbandsex9.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 5:</B><A href="exframes/frame_smallstaticbandsex9.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_smallstaticbandsex10.html"> <IMG border="0" HEIGHT="150"
+ src="img/smallstaticbandsex10.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 6:</B><A href="exframes/frame_smallstaticbandsex10.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_smallstaticbandsex3.html"> <IMG border="0" HEIGHT="150"
+ src="img/smallstaticbandsex3.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 7:</B><A href="exframes/frame_smallstaticbandsex3.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_smallstaticbandsex8.html"> <IMG border="0" HEIGHT="150"
+ src="img/smallstaticbandsex8.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 8:</B><A href="exframes/frame_smallstaticbandsex8.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+</TABLE>
+<P> To add a one of these patterns to your graph you need to call the
+ method<A href="../ref/PlotBand.html#_PLOTBAND_PLOTBAND">
+ PlotBand::PlotBand()</A> The arguments is fairly easy to understand.
+ The pattern you would like to use is specified by using the correct
+ constant. You can see the name of the correct constants in the figures
+ above. You also need to specify if the band should stretch along the
+ vertical or horizontal axis as well as the min and max coordinates for
+ the band. As coordinates you may also use the special values &quot;min&quot; and
+ &quot;max&quot; which automtically sets the value to the minimum/maximum value of
+ the scale. The specified numeric value will be automatically truncated
+ to fit within the plot area.</P>
+<P> We don't discuss the other arguments further here, instead we refer
+ you to the class reference.</P>
+<H3><A NAME="6_22_1">6.22.1  Customizing the patterns</A></H3>
+ All patterns can be customized by
+<UL>
+<LI> ... altering the colors of the band
+<BR> &nbsp;</LI>
+<LI> ... altering the density of the patterns using the method<A href="../ref/PlotBand.html#_PLOTBAND_SETDENSITY">
+ PlotBand::SetDensity()</A> The desnity is specified as an integer in
+ range 1 to 100 where a higher number means a higher density (smaller
+ distance between the lines). For example setting the density of the 3D
+ plane above to 60 gives the result</LI>
+<P><DIV align="center">
+<BR><A href="exframes/frame_smallstaticbandsex4.html"> <IMG border="0" HEIGHT="150"
+ src="img/smallstaticbandsex4.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 9:</B> Increasing the desnity in a pattern<A href="exframes/frame_smallstaticbandsex4.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P>
+<BR> &nbsp;</P>
+<LI> ... enabling or disabling a frame around the pattern by using the
+ method<A href="../ref/PlotBand.html#_PLOTBAND_SHOWFRAME">
+ PlotBand::ShowFrame()</A> The band will ge given the same color as the
+ band.
+<BR> &nbsp;</LI>
+<LI> ... finally you can change whether the band should be drawn on top
+ of the plots or beneath, (by default the bands are under the plots),
+ using the<A href="../ref/PlotBand.html#_PLOTBAND_SETORDER">
+ PlotBand::SetOrder()</A> as the following example show</LI>
+<P><DIV align="center">
+<BR><A href="exframes/frame_smallstaticbandsex5.html"> <IMG border="0" HEIGHT="150"
+ src="img/smallstaticbandsex5.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 10:</B> Stroking the pattern on top of the
+ plots<A href="exframes/frame_smallstaticbandsex5.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+</UL>
+<HR><STRONG> Sidenote.</STRONG> <SMALL> 3D planes actually carry another
+ possible modification. You can specify the vanish point to change the
+ perspective used. You can't acces the method to change the horizon
+ directly but you can access it through</SMALL>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $band</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">prect</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetHorizon</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$aHorizon</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P> <SMALL> assuming that the band is a 3D plane.</SMALL></P>
+<HR>
+<P> To finish this section we give one final, more creative, example on
+ how to use the bands.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_staticbandbarex7.html"> <IMG border="0" HEIGHT="300"
+ src="img/staticbandbarex7.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 11:</B> Combining 3D plane, solid band and a
+ sttaic line<A href="exframes/frame_staticbandbarex7.html"> [src]</A></EM>
+</SMALL></DIV></P>
+<P></P>
+<H2><A NAME="6_23">6.23  Adding static lines to the plot</A></H2>
+ In addition to the bands you can also add static lines to the graph. An
+ example of that is actually shown in figure 11 above. You create a line
+ as an instance of<A href="../ref/PlotLine.html#_C_PLOTLINE"> class
+ PlotLine</A> . So for example the lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $sline</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> PlotLine</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">HORIZONTAL</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;black&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">2</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$sline</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P></P>
+<P> will add a 2-pixel wide horizontal static line at Y-position zero.</P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="3090axisform.html">Previous</A>
+<A HREF="4nonxy.html">Next</A>
+</BODY>
+</HTML>

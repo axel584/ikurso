@@ -1,0 +1,354 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<H1><A NAME="CONTENTS">JpGraph Manual</A></H1>
+<i>(Version:  6 Apr 2003 19:56)</i><h2>Table Of Contents</h2>
+<BR><B><A HREF="0aboutmanual.html#1">1 About this manual</A></B>
+<UL>
+<LI><A HREF="0aboutmanual.html#1_1">1.1 Version history</A></LI>
+<LI><A HREF="0aboutmanual.html#1_2">1.2 How was this manual produced?</A>
+</LI>
+</UL>
+<B><A HREF="1introduction.html#2">2 Introduction</A></B>
+<UL>
+<LI><A HREF="1introduction.html#2_1">2.1 Version</A></LI>
+<LI><A HREF="1introduction.html#2_2">2.2 Software License</A></LI>
+<LI><A HREF="1introduction.html#2_3">2.3 JpGraph Features</A></LI>
+<LI><A HREF="1introduction.html#2_4">2.4  Getting the latest version</A></LI>
+<LI><A HREF="1introduction.html#2_5">2.5 Planned future addition</A></LI>
+<LI><A HREF="1introduction.html#2_6">2.6 Known bugs and omissions</A></LI>
+<LI><A HREF="1introduction.html#2_7">2.7  Acknowledgements</A></LI>
+<LI><A HREF="1introduction.html#2_8">2.8 A note on Implementing an OO
+ library in PHP4</A></LI>
+<LI><A HREF="1introduction.html#2_9">2.9 Reporting bugs and suggesting
+ improvements</A></LI>
+</UL>
+<B><A HREF="2installation.html#3">3 Installation</A></B>
+<UL>
+<LI><A HREF="2installation.html#3_1">3.1 Preparation</A></LI>
+<LI><A HREF="2installation.html#3_2">3.2 Customizing the installation</A>
+</LI>
+<LI><A HREF="2installation.html#3_3">3.3  Required files</A></LI>
+<UL>
+<LI><A HREF="2installation.html#3_3_1">3.3.1 Plot extension modules</A></LI>
+</UL>
+<LI><A HREF="2installation.html#3_4">3.4 Graphic libraries requirements
+ for PHP 4.02 and above</A></LI>
+<LI><A HREF="2installation.html#3_5">3.5 Detailed steps to install
+ JpGraph</A></LI>
+<LI><A HREF="2installation.html#3_6">3.6 Troubleshooting your
+ installation</A></LI>
+</UL>
+<B><A HREF="22working.html#4">4  Working with jpGraph</A></B>
+<UL>
+<LI><A HREF="22working.html#4_1">4.1 What you will learn in this chapter</A>
+</LI>
+<LI><A HREF="2210intro.html#4_2">4.2 How to generate images with PHP</A></LI>
+<LI><A HREF="2210intro.html#4_3">4.3 The basic principle of JpGraph and
+ the creation of images</A></LI>
+<LI><A HREF="2210intro.html#4_4">4.4  Chosing the image format for
+ JpGraph</A></LI>
+<LI><A HREF="2210intro.html#4_5">4.5 Alternatives to streaming back the
+ image</A></LI>
+<LI><A HREF="2220fonts.html#4_6">4.6  Working with fonts in JpGraph</A></LI>
+<UL>
+<LI><A HREF="2220fonts.html#4_6_1">4.6.1 Installing TrueType fonts</A></LI>
+<LI><A HREF="2220fonts.html#4_6_2">4.6.2 Specifying fonts</A></LI>
+<LI><A HREF="2220fonts.html#4_6_3">4.6.3 Adding additional fonts to
+ JpGraph</A></LI>
+</UL>
+<LI><A HREF="2220fonts.html#4_7">4.7 Understanding text alignment in
+ JpGraph</A></LI>
+<LI><A HREF="2230colors.html#4_8">4.8 Specifying colors in JpGraph</A></LI>
+<UL>
+<LI><A HREF="2230colors.html#4_8_1">4.8.1 Adjusting the transparency</A></LI>
+<LI><A HREF="2230colors.html#4_8_2">4.8.2 Available named colors</A></LI>
+<LI><A HREF="2230colors.html#4_8_3">4.8.3 Theme colors for pie:s</A></LI>
+</UL>
+</UL>
+<B><A HREF="2240cache.html#5">5 Understanding the JpGraph caching system</A>
+</B>
+<UL>
+<LI><A HREF="2240cache.html#5_1">5.1 Enabling the cache system</A></LI>
+<LI><A HREF="2240cache.html#5_2">5.2 Using the cache in your script</A></LI>
+<LI><A HREF="2240cache.html#5_3">5.3 Using the cache with Client Side
+ Image Maps</A></LI>
+<LI><A HREF="2240cache.html#5_4">5.4 Some final comments</A></LI>
+</UL>
+<B><A HREF="3xyplots.html#6">6  Introducing X-Y plot type</A></B>
+<UL>
+<LI><A HREF="3010intro.html#6_1">6.1 Common feature for all graphs</A></LI>
+<UL>
+<LI><A HREF="3010intro.html#6_1_1">6.1.1 Clipping</A></LI>
+<LI><A HREF="3010intro.html#6_1_2">6.1.2  Commonly used properties</A></LI>
+<LI><A HREF="3010intro.html#6_1_3">6.1.3  Commonly used methods</A></LI>
+</UL>
+<LI><A HREF="3020lineplot.html#6_2">6.2 Line plots</A></LI>
+<UL>
+<LI><A HREF="3020lineplot.html#6_2_1">6.2.1 Adding plot marks to
+ line-plots XXX</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_2">6.2.2 Displaying the values for
+ each data point</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_3">6.2.3 Adding several plots to the
+ same graph</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_4">6.2.4 Adding a second Y-scale</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_5">6.2.5 Adding a legend to the graph</A>
+</LI>
+<LI><A HREF="3020lineplot.html#6_2_6">6.2.6 Handling null-values in
+ lineplots</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_7">6.2.7 Using the step-style to
+ render line plots</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_8">6.2.8 Using logarithmic scale</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_9">6.2.9 More on scales</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_10">6.2.10 Adjusting the gridlines in
+ the plot</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_11">6.2.11 Using filled gridlines</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_12">6.2.12 Specifying text labels for
+ the X-axis</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_13">6.2.13 Adjusting the ticks on a
+ text scale</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_14">6.2.14 Using filled line graphs</A>
+</LI>
+<LI><A HREF="3020lineplot.html#6_2_15">6.2.15 Using accumulated line
+ graphs</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_16">6.2.16 Constructing smooth
+ lineplots with Cubic Splines</A></LI>
+<LI><A HREF="3020lineplot.html#6_2_17">6.2.17 Adding plot marks to a
+ line plot</A></LI>
+</UL>
+<LI><A HREF="3030barplot.html#6_3">6.3 Bar graphs</A></LI>
+<UL>
+<LI><A HREF="3030barplot.html#6_3_1">6.3.1 Adjusting the width of the
+ bars</A></LI>
+<LI><A HREF="3030barplot.html#6_3_2">6.3.2 Displaying the value of each
+ bar</A></LI>
+<LI><A HREF="3030barplot.html#6_3_3">6.3.3 Adding a drop shadow to the
+ bar</A></LI>
+<LI><A HREF="3030barplot.html#6_3_4">6.3.4 Adjusting the alignment of
+ bars ona text scale</A></LI>
+<LI><A HREF="3030barplot.html#6_3_5">6.3.5 Using grouped bar plots</A></LI>
+<LI><A HREF="3030barplot.html#6_3_6">6.3.6 Using accumulated bar plots</A>
+</LI>
+<LI><A HREF="3030barplot.html#6_3_7">6.3.7 Using grouped accumulated bar
+ graphs</A></LI>
+<LI><A HREF="3030barplot.html#6_3_8">6.3.8 Horizontal bar graphs</A></LI>
+<LI><A HREF="3030barplot.html#6_3_9">6.3.9 Using gradient fill for bar
+ graphs</A></LI>
+<LI><A HREF="3030barplot.html#6_3_10">6.3.10  Creating semi-filled bar
+ graphs</A></LI>
+</UL>
+<LI><A HREF="3040errorplot.html#6_4">6.4 Error plots</A></LI>
+<UL>
+<LI><A HREF="3040errorplot.html#6_4_1">6.4.1 Using line error plots</A></LI>
+</UL>
+<LI><A HREF="3050scatterplot.html#6_5">6.5 Scatter plots</A></LI>
+<LI><A HREF="3050scatterplot.html#6_6">6.6 Field plots</A></LI>
+<LI><A HREF="3055stockplot.html#6_7">6.7 Box and Stock charts</A></LI>
+<UL>
+<LI><A HREF="3055stockplot.html#6_7_1">6.7.1  Stock Charts</A></LI>
+<LI><A HREF="3055stockplot.html#6_7_2">6.7.2 BoxPLots : Stock charts
+ with a median line</A></LI>
+<LI><A HREF="3055stockplot.html#6_7_3">6.7.3 Image maps for Box and
+ Stock charts</A></LI>
+</UL>
+<LI><A HREF="3060combplots.html#6_8">6.8 Combining different graph types</A>
+</LI>
+<LI><A HREF="3070adjscalelabels.html#6_9">6.9 Specifying the scale
+ manually</A></LI>
+<LI><A HREF="3070adjscalelabels.html#6_10">6.10 Adjusting the automatic
+ tick marks</A></LI>
+<LI><A HREF="3070adjscalelabels.html#6_11">6.11 Handling date/time
+ scales</A></LI>
+<LI><A HREF="3070adjscalelabels.html#6_12">6.12 Adjusting labels on a
+ text scale</A></LI>
+<LI><A HREF="3080graphaug.html#6_13">6.13 Adding arbitrary text strings
+ to the graph</A></LI>
+<LI><A HREF="3080graphaug.html#6_14">6.14 Adding titles and footers to
+ the Graph</A></LI>
+<LI><A HREF="3080graphaug.html#6_15">6.15 Adding a tab title</A></LI>
+<LI><A HREF="3080graphaug.html#6_16">6.16 Using background images</A></LI>
+<LI><A HREF="3080graphaug.html#6_17">6.17 Using a background gradient</A>
+</LI>
+<LI><A HREF="3080graphaug.html#6_18">6.18 Using callbacks for Plot marks</A>
+</LI>
+<LI><A HREF="3080graphaug.html#6_19">6.19 Rotating graphs 90 degrees</A></LI>
+<LI><A HREF="3090axisform.html#6_20">6.20 Formatting the axis</A></LI>
+<UL>
+<LI><A HREF="3090axisform.html#6_20_1">6.20.1  Standard two axis graphs</A>
+</LI>
+<LI><A HREF="3090axisform.html#6_20_2">6.20.2 Scientific style axis</A></LI>
+<LI><A HREF="3090axisform.html#6_20_3">6.20.3  Adjusting the position of
+ the scale labels</A></LI>
+<LI><A HREF="3090axisform.html#6_20_4">6.20.4 Formatting the scale
+ labels</A></LI>
+<LI><A HREF="3090axisform.html#6_20_5">6.20.5 Inverting the Y-axis</A></LI>
+</UL>
+<LI><A HREF="3090axisform.html#6_21">6.21 Adjusting the autoscaling
+ limits - grace value</A></LI>
+<LI><A HREF="3095bands.html#6_22">6.22 Adding bands of pattern and color
+ to graphs</A></LI>
+<UL>
+<LI><A HREF="3095bands.html#6_22_1">6.22.1  Customizing the patterns</A></LI>
+</UL>
+<LI><A HREF="3095bands.html#6_23">6.23  Adding static lines to the plot</A>
+</LI>
+</UL>
+<B><A HREF="4nonxy.html#7">7 Working with non X,Y-plots</A></B>
+<UL>
+<LI><A HREF="4010radarplot.html#7_1">7.1 Radar plots</A></LI>
+<UL>
+<LI><A HREF="4010radarplot.html#7_1_1">7.1.1 Simple radar plots</A></LI>
+<LI><A HREF="4010radarplot.html#7_1_2">7.1.2 Specifying titles for the
+ axis and legends for the plots</A></LI>
+<LI><A HREF="4010radarplot.html#7_1_3">7.1.3 Adding gridline to the
+ radar plot</A></LI>
+<LI><A HREF="4010radarplot.html#7_1_4">7.1.4 Adding several plots to the
+ same radar graph</A></LI>
+</UL>
+<LI><A HREF="4020pieplot.html#7_2">7.2 Pie plots</A></LI>
+<UL>
+<LI><A HREF="4020pieplot.html#7_2_1">7.2.1 Creating 3D pie plots</A></LI>
+<LI><A HREF="4020pieplot.html#7_2_2">7.2.2 Exploding pie slices</A></LI>
+<LI><A HREF="4020pieplot.html#7_2_3">7.2.3 Specifying and adjusting
+ labels on pie plots</A></LI>
+<LI><A HREF="4020pieplot.html#7_2_4">7.2.4 Specifying slice colors and
+ using themes</A></LI>
+<LI><A HREF="4020pieplot.html#7_2_5">7.2.5 Adding drop shadows to the
+ slices</A></LI>
+<LI><A HREF="4020pieplot.html#7_2_6">7.2.6 Another variant of 2D Pie
+ plots</A></LI>
+</UL>
+</UL>
+<B><A HREF="6csimdoc.html#8">8 Using image maps with JpGraph</A></B>
+<UL>
+<LI><A HREF="6csimdoc.html#8_1">8.1 The basic structure of an image map
+ script</A></LI>
+<LI><A HREF="6csimdoc.html#8_2">8.2 Specifying targets for image map
+ plots</A></LI>
+<LI><A HREF="6csimdoc.html#8_3">8.3 Using StrokeCSIM()</A></LI>
+<LI><A HREF="6csimdoc.html#8_4">8.4 Examples of Image maps</A></LI>
+<UL>
+<LI><A HREF="6csimdoc.html#8_4_1">8.4.1 Client maps with Bar graphs</A></LI>
+<LI><A HREF="6csimdoc.html#8_4_2">8.4.2 Client maps with Pie graphs</A></LI>
+<LI><A HREF="6csimdoc.html#8_4_3">8.4.3 Client maps with Scatter graphs</A>
+</LI>
+</UL>
+<LI><A HREF="6csimdoc.html#8_5">8.5 How does StrokeCSIM() work?</A></LI>
+<LI><A HREF="6csimdoc.html#8_6">8.6 Getting hold of the image map</A></LI>
+<LI><A HREF="6csimdoc.html#8_7">8.7 Image maps and the cache system</A></LI>
+</UL>
+<B><A HREF="5gantt.html#9">9 Gantt charts</A></B>
+<UL>
+<LI><A HREF="5gantt.html#9_1">9.1 Purpose of this tutorial</A></LI>
+<LI><A HREF="5gantt.html#9_2">9.2 Some notes on format and files used in
+ this tutorial</A></LI>
+<LI><A HREF="5gantt.html#9_3">9.3 Why use Gantt charts?</A></LI>
+<LI><A HREF="5gantt.html#9_4">9.4 Capabilities in JpGraph Gantt module</A>
+</LI>
+<LI><A HREF="5gantt.html#9_5">9.5 A simple Gantt chart</A></LI>
+<LI><A HREF="5gantt.html#9_6">9.6  The structure of a Gantt chart</A></LI>
+<LI><A HREF="5gantt.html#9_7">9.7 Creating a GanttChart</A></LI>
+<LI><A HREF="5gantt.html#9_8">9.8 Positioning objects in the Gantt plot</A>
+</LI>
+<LI><A HREF="5gantt.html#9_9">9.9 Gantt bars</A></LI>
+<UL>
+<LI><A HREF="5gantt.html#9_9_1">9.9.1 Specifying vertical position</A></LI>
+<LI><A HREF="5gantt.html#9_9_2">9.9.2 Specifying start and end position
+ for a bar</A></LI>
+<LI><A HREF="5gantt.html#9_9_3">9.9.3 Milestones</A></LI>
+<LI><A HREF="5gantt.html#9_9_4">9.9.4 Vertical line</A></LI>
+<LI><A HREF="5gantt.html#9_9_5">9.9.5 Adding markers to a gantt bar</A></LI>
+<LI><A HREF="5gantt.html#9_9_6">9.9.6 Adjusting the minimum distance
+ between bars</A></LI>
+</UL>
+<LI><A HREF="5gantt.html#9_10">9.10 Formatting the scale headers</A></LI>
+<UL>
+<LI><A HREF="5gantt.html#9_10_1">9.10.1 Day scale</A></LI>
+<LI><A HREF="5gantt.html#9_10_2">9.10.2 Week scale</A></LI>
+<LI><A HREF="5gantt.html#9_10_3">9.10.3 Month scale</A></LI>
+<LI><A HREF="5gantt.html#9_10_4">9.10.4 Year scale</A></LI>
+</UL>
+<LI><A HREF="5gantt.html#9_11">9.11 More formatting for bars</A></LI>
+<UL>
+<LI><A HREF="5gantt.html#9_11_1">9.11.1 Adding caption to bars</A></LI>
+<LI><A HREF="5gantt.html#9_11_2">9.11.2 Adding progress indicators to
+ bars</A></LI>
+</UL>
+<LI><A HREF="5gantt.html#9_12">9.12 Grouping activities</A></LI>
+<LI><A HREF="5gantt.html#9_13">9.13 More general Gantt formatting</A></LI>
+<UL>
+<LI><A HREF="5gantt.html#9_13_1">9.13.1 Adding a table title</A></LI>
+<LI><A HREF="5gantt.html#9_13_2">9.13.2 Modifying the divider lines</A></LI>
+<LI><A HREF="5gantt.html#9_13_3">9.13.3 Modifying the box around the
+ plot</A></LI>
+</UL>
+<LI><A HREF="5gantt.html#9_14">9.14 Simplifying the drawing of Gantt
+ graphs</A></LI>
+<LI><A HREF="5gantt.html#9_15">9.15 Adding CSIM (Client side Image Maps)
+ to Gantt charts</A></LI>
+<LI><A HREF="5gantt.html#9_16">9.16 Adding constrains between your
+ activities</A></LI>
+<LI><A HREF="5gantt.html#9_17">9.17 Advanced formatting</A></LI>
+<UL>
+<LI><A HREF="5gantt.html#9_17_1">9.17.1 Showing only part of the graph</A>
+</LI>
+<LI><A HREF="5gantt.html#9_17_2">9.17.2 Specifying start day of week</A></LI>
+</UL>
+<LI><A HREF="5gantt.html#9_18">9.18 Localizing</A></LI>
+</UL>
+<B><A HREF="55polar.html#10">10 Polar plots</A></B>
+<UL>
+<LI><A HREF="55polar.html#10_1">10.1 Overview</A></LI>
+<LI><A HREF="55polar.html#10_2">10.2 Adjusting the radius scale</A></LI>
+<LI><A HREF="55polar.html#10_3">10.3 Adjusting the gridlines</A></LI>
+<LI><A HREF="55polar.html#10_4">10.4 Adjusting the label fonts</A></LI>
+<LI><A HREF="55polar.html#10_5">10.5 Adjusting the labels</A></LI>
+<LI><A HREF="55polar.html#10_6">10.6 Image maps</A></LI>
+<LI><A HREF="55polar.html#10_7">10.7 A final example</A></LI>
+</UL>
+<B><A HREF="7adv.html#11">11 Miscellaneous features</A></B>
+<UL>
+<LI><A HREF="7adv.html#11_1">11.1 Anti-aliasing in JpGraph</A></LI>
+<UL>
+<LI><A HREF="7adv.html#11_1_1">11.1.1 Enabling anti-aliased lines</A></LI>
+</UL>
+<LI><A HREF="7adv.html#11_2">11.2 Rotating the graphs</A></LI>
+<LI><A HREF="7adv.html#11_3">11.3 Adjusting brightness and contrast for
+ images and backgrounds</A></LI>
+<LI><A HREF="7adv.html#11_4">11.4 Timing the generation of graphs</A></LI>
+</UL>
+<B><A HREF="8canvas.html#12">12 Working with canvas graphs</A></B>
+<UL>
+<LI><A HREF="8canvas.html#12_1">12.1 Introduction</A></LI>
+<LI><A HREF="8canvas.html#12_2">12.2 Creating a simple canvas</A></LI>
+<LI><A HREF="8canvas.html#12_3">12.3 Adding lines and rectangles to a
+ canvas</A></LI>
+<LI><A HREF="8canvas.html#12_4">12.4 Using a canvas scale</A></LI>
+<LI><A HREF="8canvas.html#12_5">12.5 Sample application: Drawing DB
+ schema</A></LI>
+</UL>
+<B><A HREF="A00utilities.html#13">13  Utilities in JpGraph</A></B>
+<UL>
+<LI><A HREF="A00utilities.html#13_1">13.1  Under the utils/misc
+ directory</A></LI>
+<LI><A HREF="A00utilities.html#13_2">13.2  Under the utils/jpdcgen</A></LI>
+</UL>
+<B><A HREF="A01codedef.html#14">14 Code defines in JpGraph</A></B></BODY>
+</HTML>

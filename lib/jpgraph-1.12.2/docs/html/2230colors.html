@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="2220fonts.html">Previous</A>
+<A HREF="2240cache.html">Next</A>
+<HR>
+<H2><A NAME="4_8">4.8 Specifying colors in JpGraph</A></H2>
+ Colors can be specified in three different ways
+<OL>
+<LI> By using one of the, roughly, 400 pre-defined color names, e.g
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> SetColor</FONT><FONT
+color="#006600">(</FONT><FONT color="#CC0000">&quot;khaki&quot;</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></LI>
+<P> A named color can also be modified by adding a adjustment factor. An
+ adjustment factor, 0 &lt; f &lt; 1, a smaller value will give a darker
+ version and a value of 0 or 1 will return the original color. A value &gt;
+ 1 will make the color brighter. A few examples
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> SetColor</FONT><FONT
+color="#006600">(</FONT><FONT color="#CC0000">&quot;khaki:0.5&quot;</FONT><FONT color="#006600">
+);</FONT><FONT color="#FF9900"> // A darker version of &quot;khaki&quot;
+<BR /></FONT><FONT color="#0000CC">SetColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;yellow:1.2&quot;</FONT><FONT color="#006600">
+);</FONT><FONT color="#FF9900"> // A slightly lighter version of
+ &quot;yellow&quot;</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<LI> By specifying a RGB triple, e.g.
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> SetColor</FONT><FONT
+color="#006600">(array(</FONT><FONT color="#0000CC">65</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">100</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">176</FONT><FONT color="#006600">));</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></LI>
+<P></P>
+<LI> By specifying the color as a hex string value
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> SetColor</FONT><FONT
+color="#006600">(</FONT><FONT color="#CC0000">&quot;#A16BFF&quot;</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></LI>
+<P></P>
+</OL>
+<H3><A NAME="4_8_1">4.8.1 Adjusting the transparency</A></H3>
+ From version 1.10 JpGraph also supports the use of Alpha Blending
+ together with GD2.x This lets you specify how much of the underlying
+ color should be visible. You specify the amount of transparency for a
+ color by adding an extra parameter to the clor specification separated
+ by an '@' (at) character.
+<P> For example to specify a red color which is 40% transparent you
+ write
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> SetColor</FONT><FONT
+color="#006600">(</FONT><FONT color="#CC0000">&quot;red@0.4&quot;</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> or to specify 90% transperancy you write
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> SetColor</FONT><FONT
+color="#006600">(</FONT><FONT color="#CC0000">&quot;red@0.9&quot;</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> Below is an example of how a bar graph with a background image can
+ make use of transperancy</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_alphabarex1.html"> <IMG border="0" HEIGHT="250"
+ src="img/alphabarex1.png" WIDTH="450"></A>
+<BR><SMALL><EM><B>Figure 1:</B> Using alpha blending in a bar graph<A href="exframes/frame_alphabarex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="4_8_2">4.8.2 Available named colors</A></H3>
+ The chart below shows all available named colors. <IMG HEIGHT="1240"  src="img/color_chart01.png"
+WIDTH="700">
+<BR> <IMG HEIGHT="1240"  src="img/color_chart02.png" WIDTH="700">
+<BR> <IMG HEIGHT="1240"  src="img/color_chart03.png" WIDTH="700">
+<BR> <IMG HEIGHT="1240"  src="img/color_chart04.png" WIDTH="700">
+<H3><A NAME="4_8_3">4.8.3 Theme colors for pie:s</A></H3>
+ For more on how to use the different themes see<A href="4020pieplot.html">
+ Working with 2D 3D pie plots</A> <IMG border="1" HEIGHT="355"  src="img/theme01.png"
+WIDTH="700">
+<BR><STRONG> Theme 1:</STRONG> Earth
+<P> &nbsp; <IMG border="1" HEIGHT="290"  src="img/theme02.png" WIDTH="700">
+<BR><STRONG> Theme 2:</STRONG> Pastel</P>
+<P> &nbsp; <IMG border="1" HEIGHT="225"  src="img/theme03.png" WIDTH="700">
+<BR><STRONG> Theme 3:</STRONG> Water</P>
+<P> &nbsp; <IMG border="1" HEIGHT="225"  src="img/theme04.png" WIDTH="700">
+<BR><STRONG> Theme 4:</STRONG> Sand</P>
+<P></P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="2220fonts.html">Previous</A>
+<A HREF="2240cache.html">Next</A>
+</BODY>
+</HTML>

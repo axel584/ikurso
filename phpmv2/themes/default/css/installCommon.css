@@ -1,0 +1,66 @@
+body {
+  background-color: #eee;
+  text-align: center;
+}
+
+/* Cadre general */
+#main {
+margin: 5px;
+margin-top:20px;
+text-align: left;
+}
+/* cadre dans lequel se trouve les donnees */
+
+#contenu {
+font-size: 90%;
+line-height: 1.4em;
+width: 860px;
+border: 1px solid #00008B;
+text-align: $rightouleft;
+margin: auto;
+background: #FFFFFF;
+padding: 0.5em;
+}
+
+
+#generalInstall {
+width: 40%;
+float: left;
+font-size:90%;
+}
+#generalInstall UL {
+list-style-type: decimal;
+}
+P.next_step {
+font-weight: bold;
+background-color: #eee;
+border: 1px solid #ddd;
+padding: 0.5em;
+}
+P.next_step A {
+color: #ae0000;
+text-decoration: underline;
+}
+#instalpercent {
+width: 100%;
+height: 1.5em;
+margin: 0;
+padding: 0;
+background-color: #eee;
+border: 1px solid #ddd;
+}
+#instalpercent P {
+height: 1.5em;
+background-color: #8aaecc;
+margin: 0;
+padding: 0;
+}
+LI.futureStep {
+color: #d3d3d3;
+}
+LI.actualStep {
+font-weight: bold;
+}
+LI.pastStep {
+color: #008000;
+}

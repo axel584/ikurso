@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="A00utilities.html">Previous</A>
+<HR>
+<H1><A NAME="14">14 Code defines in JpGraph</A></H1>
+ Various settings in JpGraph are controilled by overall DEFINEs at the
+ top of jpgraph.php. Most of these defines should not have to be changed
+ by the regular user but left at their defualt values. Below is a
+ complete table of all defines and their meaning.
+<TABLE cellspacing="3" style="border:blue solid 2pt;">
+<TR style="background-color:blue;color:white;"><TH>Define, default value</TH><TH>
+Comment</TH></TR>
+<TR><TD valign="top">&quot;CACHE_DIR&quot;,&quot;/tmp/jpgraph_cache/&quot;</TD><TD>The full
+ absolute name of directory to be used as a cache. This directory<STRONG>
+ must</STRONG> be readable and writable for PHP. Must end with '/'</TD></TR>
+<TR><TD valign="top">&quot;TTF_DIR&quot;,&quot;/usr/local/fonts/ttf/&quot;</TD><TD>Directory
+ for jpGraph TTF fonts. Must end with '/' Note: The fonts must follow
+ the naming conventions as used by the supplied TTF fonts in JpGraph.</TD>
+</TR>
+<TR><TD valign="top">&quot;USE_LIBRARY_GD2&quot;,false</TD><TD>Specify if we
+ should use GD 2.x or GD 1.x If you have GD 2.x installed it is
+ recommended that you use it since it will give a slightly, slightly
+ better visual apperance for arcs. If you don't have GD2 installed this
+ must be set to false!</TD></TR>
+<TR><TD valign="top">'USE_TRUECOLOR',true</TD><TD>Should the image be a
+ truecolor image? Note 1: Can only be used with GD 2.0.2 and above. Note
+ 2: GD 2.0.1 + PHP 4.0.6 on Win32 crashes when trying to use trucolor.
+ Truecolor support is to be considered alpha since GD 2.x is still not
+ considered stable (especially on Win32). Note 3: MUST be enabled to get
+ background images working with GD2 Note 4: If enabled then truetype
+ fonts will look very ugly =&gt; You can't have both background images and
+ truetype fonts in the same image until these bugs has been fixed in GD
+ 2.01</TD></TR>
+<TR><TD valign="top">&quot;USE_CACHE&quot;,false</TD><TD>Should the cache be used
+ at all? By setting this to false no files will be generated in the
+ cache directory. The difference from READ_CACHE being that setting
+ READ_CACHE to false will still create the image in the cache directory
+ just not use it. By setting USE_CACHE=false no files will even be
+ generated in the cache directory.</TD></TR>
+<TR><TD valign="top">&quot;READ_CACHE&quot;,true</TD><TD>Should we try to find an
+ image in the cache before generating it? Set this define to false to
+ bypass the reading of the cache and always regenerate the image. Note
+ that even if reading the cache is disabled the cached will still be
+ updated with the newly generated image. Set also &quot;USE_CACHE&quot; below.</TD>
+</TR>
+<TR><TD valign="top">&quot;DEFAULT_GFORMAT&quot;,&quot;auto&quot;</TD><TD>Deafult graphic
+ format set to &quot;auto&quot; which will automtically choose the best available
+ format in the order png,gif,jpg (The supported format depends on what
+ your PHP installation supports)</TD></TR>
+<TR><TD valign="top">&quot;USE_IMAGE_ERROR_HANDLER&quot;,true</TD><TD> Determine
+ if the error handler should be image based or purely text based. Image
+ based makes it easier since the script will always return an image even
+ in case of errors.</TD></TR>
+<TR><TD valign="top">&quot;USE_APPROX_COLORS&quot;,true</TD><TD>If the color
+ palette is full should JpGraph try to allocate the closest match? If
+ you plan on using background image or gradient fills it might be a good
+ idea to enable this. If not you will otherwise get an error saying that
+ the color palette is exhausted. The drawback of using approximations is
+ that the colors might not be exactly what you specified. Note1: This
+ does only apply to paletted images, not truecolor images since they
+ don't have the limitations of maximum number of colors.</TD></TR>
+<TR><TD valign="top">&quot;LANGUAGE_CYRILLIC&quot;,false</TD><TD>Special unicode
+ language support</TD></TR>
+<TR><TD valign="top">&quot;ERR_DEPRECATED&quot;,false</TD><TD>Should usage of
+ deprecated functions and parameters give a fatal error? (Useful to
+ check if code is future proof.)</TD></TR>
+<TR><TD valign="top">&quot;BRAND_TIMING&quot;,false</TD><TD>Should the time taken
+ to generate each picture be branded to the lower left in corner in each
+ generated image? Useful for performace measurements generating graphs</TD>
+</TR>
+<TR><TD valign="top">&quot;BRAND_TIME_FORMAT&quot;,&quot;Generated in: %01.3fs&quot;</TD><TD>
+What format should be used for the timing string?</TD></TR>
+</TABLE>
+<P> The following defines should very rarely need to be changed</P>
+<P></P>
+<TABLE cellspacing="3" style="border:blue solid 2pt;">
+<TR style="background-color:blue;color:white;"><TH>Define, default value</TH><TH>
+Comment</TH></TR>
+<TR><TD valign="top">&quot;CACHE_FILE_GROUP&quot;,&quot;wwwadmin&quot;</TD><TD>What group
+ should the cached file belong to (Set to &quot;&quot; will give the default group
+ for the &quot;PHP-user&quot;) Please note that the Apache user must be a member
+ of the specified group since otherwise it is impossible for Apache to
+ set the specified group.</TD></TR>
+<TR><TD valign="top">&quot;CACHE_FILE_MOD&quot;,0664</TD><TD>What permissions
+ should the cached file have (Set to &quot;&quot; will give the default
+ persmissions for the &quot;PHP-user&quot;)</TD></TR>
+<TR><TD valign="top">&quot;USE_BRESENHAM&quot;,false</TD><TD>Decide if we should
+ use the bresenham circle algorithm or the built in Arc(). Bresenham
+ gives better visual apperance of circles but is more CPU intensive and
+ slower then the built in Arc() function in GD. Turned off by default
+ for speed</TD></TR>
+<TR><TD valign="top">&quot;JPG_DEBUG&quot;,false</TD><TD>Enable some extra
+ internal debug information to be shown. (Should only be changed if your
+ first name is Johan and you happen to know what you are doing. You have
+ been warned.)</TD></TR>
+<TR><TD valign="top">&quot;_CSIM_SPECIALFILE&quot;,&quot;_csim_special_&quot;</TD><TD>
+Special file name to indicate that we only want to calc the image map in
+ the call to Graph::Stroke() used internally from the GetHTMLCSIM()
+ method.</TD></TR>
+<TR><TD valign="top">&quot;_CSIM_DISPLAY&quot;,&quot;_jpg_csimd&quot;</TD><TD>HTTP GET
+ argument that is used with image map to indicate to the script to just
+ generate the image and not the full CSIM HTML page.</TD></TR>
+</TABLE>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="A00utilities.html">Previous</A>
+</BODY>
+</HTML>

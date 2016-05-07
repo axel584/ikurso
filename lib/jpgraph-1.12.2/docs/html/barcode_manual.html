@@ -1,0 +1,152 @@
+<?php
+include_once ('jpgtutlib.inc');
+?>
+
+<body>
+
+<h1> Barcodes with JpGraph </h1>
+
+<h2> Introduction </h2>
+
+With the barcode extension to JpGraph you can now easily create
+barcodes using all the commonly accepted symbologies. 
+You can choose to have the resulting
+barcode being created as an image (in either PNG or JPEG format) or as
+a Postscript file ready for printing on high resolution printers.
+
+The barcode extension provides extensive data verification which makes
+sure you can't create an invalid barcode.
+
+<H3> Verification </h3>
+
+All generated barcodes (except CODE 11) have been extensively verified
+using Metrologic CCD-47 handheld scanner.
+
+<h2> Features </h2>
+
+This is a summary of the features available in the JpGraph barcode
+extension.
+
+<ul>
+<li> Supports the following symbologies:
+<ol>
+<li> UPC A
+<li> UPC E
+<li> EAN 128
+<li> EAN 13
+<li> EAN 8
+<li> CODE 11 (USD-8)
+<li> CODE 39
+<li> CODE 128
+<li> Industrial 2 of 5
+<li> Interleaved 2 of 5
+<li> Codabar
+<li> Bookland (ISBN)
+</ol>
+<li> Input data is verified against the official specification of each
+symbologies and makes it impossible to create invalid barcodes.
+<li> Output format
+<ol>
+<li> Image format, either JPEG or PNG
+<li> Postscript
+<li> Encapsulated postscript
+</ol>
+
+<li> Formatting options
+<ol>
+<li> User specified module width
+<li> Automatic calculation of optional checksum for symbologies where
+the checksum is optional
+<li> User specified scaling of resulting barcode
+<li> Horizontal or vertical barcode layout
+<li> Supression of human readable text on barcodes
+<li> 
+</ol>
+
+</ul>
+
+<h3> Sample application </h3>
+
+Even though primarily the JpGraph barcodes are meant, and designed, to
+be used as a library within a larger system there is a small demo
+barcode creation application included in the distribution. This
+application can be used to easily create barcode through it's WEB
+interface.
+<p>
+This application is primarily included as a demo on the features
+available and not as a finalized product.
+<p>
+You can find the application in the "barcode/" subdirectory in the
+distribution. 
+
+
+<h2> Creating barcodes - Quick start </h2>
+
+All barcode creation follows the follwing simple steps :
+
+<ol>
+<li> Create an encoder for you choose of symbology
+<li> Create a backend for your choosen output format
+<li> Encode your data 
+</ol>
+
+So for example to create an image barcode representing the data string
+"ABC123" using symbology "CODE 39" you would have to write
+
+<?php
+$s='$symbology = BarcodeFactory::Create(ENCODING_CODE39);
+$barcode = BackendFactory::Create('IMAGE',$symbology);
+$barcode->Stroke('ABC123');';
+ShowCodeSnippet($s);
+?>
+
+As you can see from the code above the basic interface to the library
+makes use of two abstract factories which creates the appropriate
+encoder and output backend. This design makes the addition of new
+output formats and new symbologies transparent for the end user of the
+library. 
+<p>
+If you instead wanted to encode the data string using symbology "CODE
+128" instead, you would only have to modify the first line in the
+above code snippet to
+<?php
+$s='$symbology = BarcodeFactory::Create(ENCODING_CODE128);
+// ... same as above ...';
+ShowCodeSnippet($s);
+?>
+
+<h3> Adjusting the output </h3>
+
+As mentioned in the introduction you have some flexibility in how the
+generated barcodes is formatted. Two common modifications is to either
+change the module width used (=the width of a unit line in the bar) or
+supress the printing of the human readable version of the data
+string. 
+<p>
+To adjust the module width you make use of the "SetModuleWidth()"
+method of the backend. So for example to augument the previous example
+and change the module width to 2 and hude the human readable text we
+would change the code to
+
+<?php
+$s='$symbology = BarcodeFactory::Create(ENCODING_CODE39);
+$barcode = BackendFactory::Create('IMAGE',$symbology);
+$barcode->SetModuleWidth(2);
+$barcode->HideText();
+$barcode->Stroke('ABC123');';
+ShowCodeSnippet($s);
+?>
+
+A note on the module width might be in order here. For image type
+backends this specifies the number of pixels used for a module and for
+Postscript (and Encapsulated PS) this specifies the width in points
+(i.e. 1/72 inch). This also means that for image type backends only
+integer values makes sense.
+<p>
+You should keep in mind that depending on the quality of the printer
+(and paper) very small module width might not be readable with all
+barcode readers. For images it is therefore recommended to use "2"
+pixels as the minimum module width and for postscript output the minimum
+recommended width is "0.8" pt. 
+
+</body>

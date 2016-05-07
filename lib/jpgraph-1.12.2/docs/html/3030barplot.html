@@ -1,0 +1,534 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="3020lineplot.html">Previous</A>
+<A HREF="3040errorplot.html">Next</A>
+<HR>
+<H2><A NAME="6_3">6.3 Bar graphs</A></H2>
+ Jpgraph also supports 2D vertical bar plots. Before you can use any bar
+ plots you must make sure that you included the file &quot;jpgraph_bar.php&quot;
+ in your script.
+<P> Using bar plots is quite straightforward and works in much the same
+ way as line plots which you are already familiar with from the previous
+ examples. Assuming you have a data array consisting of the values
+ [12,8,19,3,10,5] and you want to display them as a bar plot. This is
+ the simplest way to do this:
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $datay</FONT><FONT color="#006600">
+=array(</FONT><FONT color="#0000CC">12</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">8</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+19</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">3</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">10</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">5</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$bplot</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> BarPlot</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$datay</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$bplot</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> If you comapre this to the previous line examples you can see that
+ the only change necessary was that instead of createing a new line plot
+ (via the new LinePlot(...) call) we used the statement new<A href="../ref/BarPlot.html#_C_BARPLOT">
+ BarPplot().</A></P>
+<P> The other change we should do is to make sure the X-axis have an
+ text-scale (it is perfectly fine to use a linear X-scale but in most
+ cases this is not the effect you want when you use a bar graph, see
+ more below). With this two simple change we will now get a bar graph as
+ displayed in the following image</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example18.html"> <IMG border="0" HEIGHT="200"
+ src="img/example18.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 1:</B> A very simple bar graph<A href="exframes/frame_example18.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> You can of course modify the apperance of the bar graph. So for
+ example to change the fill color you would use the<A href="../ref/BarPlot.html#_BARPLOT_SETFILLCOLOR">
+ BarPlot::SetFillColor()</A> method. MAking this small change to the
+ previous example would give the expected effect as can be seen in the
+ next example.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example19.html"> <IMG border="0" HEIGHT="200"
+ src="img/example19.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 2:</B> A very simple bar graph with changed
+ fill color<A href="exframes/frame_example19.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P><STRONG> Sidebar:</STRONG> You should note from the previous two
+ graphs that slight change in apperance for the X-scale. The bar graphs
+ gets automatically centered between the tick marks when using as text
+ x-scale. If you were to use a linear scale they would instead start at
+ the left edge of the X-axis and the X-axis would be labeled with a
+ linear scale. As is illustrated in the (small) example below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example19.1.html"> <IMG border="0" HEIGHT="100"
+ src="img/example19.1.png" WIDTH="260"></A>
+<BR><SMALL><EM><B>Figure 3:</B> A small example with a bar graph using a
+ linear X-scale<A href="exframes/frame_example19.1.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<H3><A NAME="6_3_1">6.3.1 Adjusting the width of the bars</A></H3>
+ JpGraph allows you to easy customize the apperance of the bar graph,
+ for example to change the width of each bar. The width of each bar can
+ be specified either as a fraction of the width between each major tick
+ or as an absolute width (in pixels).
+<P> To set the width in fraction you use the method<A href="../ref/BarPlot.html#_BARPLOT_SETWIDTH">
+ SetWidth()</A> and to set the width in pixels you use the<A href="../ref/BarPlot.html#_BARPLOT_SETABSWIDTH">
+ SetAbsWidth()</A></P>
+<P> As an example let's take the previous example and set the width to
+ 100% of the distance between the ticks. The example will now become</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example20.html"> <IMG border="0" HEIGHT="200"
+ src="img/example20.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 4:</B> Setting the width of the bars to 100% of
+ the tick width<A href="exframes/frame_example20.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<H3><A NAME="6_3_2">6.3.2 Displaying the value of each bar</A></H3>
+ You can easily choose to display the value (and it's format) on top of
+ each bar by accessing the bar's 'value' property. So for example by
+ just adding the line
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $barplot</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">value</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Show</FONT><FONT color="#006600">();</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV>
+<P> Will enable the values in it's simplest form and will give the
+ result</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example20.1.html"> <IMG border="0" HEIGHT="200"
+ src="img/example20.1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 5:</B> Showing the values for each bar<A href="exframes/frame_example20.1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> You cane see a small nuiance in this graph. The autoscaling
+ algorithm chooses quite tight limits for the scale so that the bars
+ just fit. Adding the value on top of the bar makes it collide with the
+ top of the graph. To remedy this we tell the autoscaling algorithm to
+ allow for more &quot;grace&quot; space at the top of the scale by using the
+ method<A href="../ref/LinearScale.html#_LINEARSCALE_SETGRACE">
+ SetGrace()</A> which is used to tell the scale to add a percentage (of
+ the total scale span) more space to either one end or both ends of the
+ scale. In this case we add 20% more space at the top to make more room
+ for the values with the line
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">yaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetGrace</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">20</FONT><FONT
+color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+</P>
+<P></P>
+<P> This will then give the graph as shown below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example20.2.html"> <IMG border="0" HEIGHT="200"
+ src="img/example20.2.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 6:</B> Adding some grace space to the top of
+ the Y-scale<A href="exframes/frame_example20.2.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<P> You can also adjust the general position of the value in respect to
+ the bar by using the<A href="../ref/BarPlot.html#_BARPLOT_SETVALUEPOS">
+ BarPlot::SetValuePos()</A> method. You can set the position to either
+ 'top' (the default) , 'center' or 'bottom'. The graph below shows the
+ value being positioned in the center. In this example we have also
+ adjusted the format to just display the value as an integer without any
+ decimals.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example20.5.html"> <IMG border="0" HEIGHT="200"
+ src="img/example20.5.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 7:</B> Putting the values in the middle of the
+ bar.<A href="exframes/frame_example20.5.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P> It is also possible to specify a more fine grained control on how
+ you want the values presented. You can for example, rotate them, change
+ font, change color. It is also possible to adjust the actual value
+ displayed by either using a printf()-type format string or with the
+ more advanced technique of a format callback routine.</P>
+<P> To show what you can do we just give another example for you to
+ examine without much further explanations. Just remember that to have
+ text at an angle other than 0 or 90 degrees we have to use TTF fonts.
+ Even though we haven't explained the SetFont() method it should be
+ fairly obvious.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example20.3.html"> <IMG border="0" HEIGHT="200"
+ src="img/example20.3.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 8:</B> Making the displayed values more
+ interesting<A href="exframes/frame_example20.3.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<H3><A NAME="6_3_3">6.3.3 Adding a drop shadow to the bar</A></H3>
+ One simple way of making the bar graph more attracting is to add a drop
+ shadow to each bar. This is done by calling the<A href="../ref/BarPlot.html#_BARPLOT_SETSHADOW">
+ SetShadow()</A> method. An example will clarify this.
+<P><DIV align="center">
+<BR><A href="exframes/frame_example20.4.html"> <IMG border="0" HEIGHT="200"
+ src="img/example20.4.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 9:</B> Adding a drop shadow to each bar<A href="exframes/frame_example20.4.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="6_3_4">6.3.4 Adjusting the alignment of bars ona text scale</A>
+</H3>
+ As you have seen from the previous examples bar graphs are normally
+ centered between the trick marks on a text scale. However, you can
+ modify this behavious by calling the method<A href="../ref/BarPlot.html#_BARPLOT_SETALIGN">
+ BarPlot::SetAlign()</A>
+<H3><A NAME="6_3_5">6.3.5 Using grouped bar plots</A></H3>
+ These types of bar graph is used to easy group two or more bars
+ together around each tick (X-value). The bars will be placed
+ immediately beside each other and as a group centred on each tick mark.
+ A grouped bar is created by aggregating two or more ordinary bar graphs
+ and creating a<A href="../ref/GroupBarPlot.html#_C_GROUPBARPLOT">
+ GroupBarPlot()</A> From two ordinary bar graphs along the lines of
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#FF9900">
+ // Create the bar plots
+<BR /></FONT><FONT color="#0000CC">$b1plot</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> BarPlot</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$data1y</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$b1plot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFillColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;orange&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#0000CC">$b2plot</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> BarPlot</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$data2y</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$b2plot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFillColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;blue&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Create the grouped bar plot
+<BR /></FONT><FONT color="#0000CC">$gbplot</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> GroupBarPlot</FONT><FONT color="#006600">
+(array(</FONT><FONT color="#0000CC">$b1plot</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$b2plot</FONT><FONT color="#006600">));
+<BR />
+<BR /></FONT><FONT color="#FF9900">// ...and add it to the graPH
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$gbplot</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P> The following example illustrates this type of graph</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example21.html"> <IMG border="0" HEIGHT="200"
+ src="img/example21.png" WIDTH="310"></A>
+<BR><SMALL><EM><B>Figure 10:</B> A grouped bar plot<A href="exframes/frame_example21.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> There is no limit on the number of plots you may group together.</P>
+<P> If you use the SetWidth() method on the GroupBarPlot() this will
+ affect the total width used by all the added plots. Each individual bar
+ width will be the same for all added bars. The default width for
+ grouped bar is 70%.</P>
+<P> Setting the grouped with to 0.9 would result in the image below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example22.html"> <IMG border="0" HEIGHT="200"
+ src="img/example22.png" WIDTH="310"></A>
+<BR><SMALL><EM><B>Figure 11:</B> Adjusting the width for a gropued bar
+ plot.<A href="exframes/frame_example22.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P></P>
+<H3><A NAME="6_3_6">6.3.6 Using accumulated bar plots</A></H3>
+ The final varietys of group bars you can have are accumulated bars.
+ They work in much the same way as accumulated line plots described
+ above. Each plot is stacked on top of each other.
+<P> You create accumulated bar plots in the same way as grouped bar
+ plots by first creating a number of ordinary bar plots that are then
+ aggregated with a call to<A href="../ref/AccBarPlot.html#_ACCBARPLOT_ACCBARPLOT">
+ AccBarPlot();</A></P>
+<P> An example makes this clear. Let's use the same data as in the two
+ examples above but instead of grouping the bars we accumulate (or
+ stack) them. The code would be very similar (actually only one line has
+ to change)</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example23.html"> <IMG border="0" HEIGHT="200"
+ src="img/example23.png" WIDTH="310"></A>
+<BR><SMALL><EM><B>Figure 12:</B> Accumulated bar plots<A href="exframes/frame_example23.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="6_3_7">6.3.7 Using grouped accumulated bar graphs</A></H3>
+ It is perfectly possible to combine the previous bar types to have
+ grouped accumulated bar plots. This is done by just adding the
+ different accumulated plots to a group bar plot, for example the
+ following code would do that.
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#FF9900">
+ // Create all the 4 bar plots
+<BR /></FONT><FONT color="#0000CC">$b1plot</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> BarPlot</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$data1y</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$b1plot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFillColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;orange&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$b2plot</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> BarPlot</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$data2y</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$b2plot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFillColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;blue&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$b3plot</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> BarPlot</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$data3y</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$b3plot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFillColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;green&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$b4plot</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> BarPlot</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$data4y</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$b4plot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFillColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;brown&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Create the accumulated bar plots
+<BR /></FONT><FONT color="#0000CC">$ab1plot</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> AccBarPlot</FONT><FONT color="#006600">
+(array(</FONT><FONT color="#0000CC">$b1plot</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$b2plot</FONT><FONT color="#006600">));
+<BR /></FONT><FONT color="#0000CC">$ab2plot</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> AccBarPlot</FONT><FONT color="#006600">
+(array(</FONT><FONT color="#0000CC">$b3plot</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$b4plot</FONT><FONT color="#006600">));
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Create the grouped bar plot
+<BR /></FONT><FONT color="#0000CC">$gbplot</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> GroupBarPlot</FONT><FONT color="#006600">
+(array(</FONT><FONT color="#0000CC">$ab1plot</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$ab2plot</FONT><FONT color="#006600">));
+<BR />
+<BR /></FONT><FONT color="#FF9900">// ...and add it to the graph
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$gbplot</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P> Putting this together in an example would then produce the graph as
+ whown below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example24.html"> <IMG border="0" HEIGHT="200"
+ src="img/example24.png" WIDTH="310"></A>
+<BR><SMALL><EM><B>Figure 13:</B> Combining grouped and accumulated bar
+ plots<A href="exframes/frame_example24.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P></P>
+<H3><A NAME="6_3_8">6.3.8 Horizontal bar graphs</A></H3>
+ It can often come in handy to have horizontal bar graphs especially if
+ you have a large number of values to display. Even though JpGraph
+ doesn't directly support horizontal bar graphs this is easy achived by
+ constructing a normal vertical bar graph which is then rotated 90
+ degrees.
+<P> The example below shows a simple example of this</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_horizbarex3.html"> <IMG border="0" HEIGHT="500"
+ src="img/horizbarex3.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 14:</B> A typical horizontal bar graph with the
+ Y-axis at the bottom<A href="exframes/frame_horizbarex3.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+<P> In order to achieve this effect you should study the above example
+ carefully and you might notice two things</P>
+<UL>
+<LI> We dont simply rotate the graph we also specify that we want the
+ rotation center to be the middle of the entire image. The reason for
+ this is that by default (See the section on rotating plots) the pivot
+ point for rotation is the center of<STRONG> the plotarea</STRONG>.
+ Since the center of the plotarea is not necessary the center of the
+ entire image the rotation might be a little bit difficult to predict
+ since it will depend on the margins specified. &lt;</LI>
+<LI> The size of the plotarea is determined from the original width and
+ height of the image taking the specified margin into account. When the
+ the plotartea is rotated 90 degrees clockwise what was the left margin
+ now in effect becomw the upper margin and so on. This is a small nuance
+ since we conceptually want to specify the margins directly in the
+ rotated plot.
+<BR> I have choosen not to add any special margin method specifically
+ for a 90 degree rotated plot. Since to compensate for this since is
+ fairly easy once you understood this problem.For this reason the
+ example code let's you specify the percived margins and they are then
+ backwards converted to their horizontal equivalent. If the width and
+ height differs we must also take that into account.
+<BR> The code below extracts the lines that makes this simple conversion
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#FF9900">
+ // Since we swap width for height (since we rotate it 90 degrees)
+<BR />// we have to adjust the margin to take into account for that
+<BR /></FONT><FONT color="#0000CC">$top</FONT><FONT color="#006600"> =</FONT><FONT
+color="#0000CC"> 50</FONT><FONT color="#006600">;
+<BR /></FONT><FONT color="#0000CC">$bottom</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> 30</FONT><FONT color="#006600">;
+<BR /></FONT><FONT color="#0000CC">$left</FONT><FONT color="#006600"> =</FONT><FONT
+color="#0000CC"> 50</FONT><FONT color="#006600">;
+<BR /></FONT><FONT color="#0000CC">$right</FONT><FONT color="#006600"> =</FONT><FONT
+color="#0000CC"> 20</FONT><FONT color="#006600">;
+<BR /></FONT><FONT color="#0000CC">$adj</FONT><FONT color="#006600"> = (</FONT><FONT
+color="#0000CC">$height</FONT><FONT color="#006600">-</FONT><FONT color="#0000CC">
+$width</FONT><FONT color="#006600">)/</FONT><FONT color="#0000CC">2</FONT><FONT
+color="#006600">;
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetMargin</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$top</FONT><FONT color="#006600">-</FONT><FONT color="#0000CC">$adj</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">$bottom</FONT><FONT color="#006600">
+-</FONT><FONT color="#0000CC">$adj</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$right</FONT><FONT color="#006600">+</FONT><FONT color="#0000CC">
+$adj</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">$left</FONT><FONT
+color="#006600">+</FONT><FONT color="#0000CC">$adj</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></LI>
+<P></P>
+</UL>
+ We finally show three more examples of horizontal bar plots. In the
+ first plot we have hidden the Y-axus and in the second we have
+ positioned the Y - axis at top as opposed to the bottom as the first
+ example shows.
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_horizbarex1.html"> <IMG border="0" HEIGHT="500"
+ src="img/horizbarex1.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 15:</B> Horizontal bar graph with hidden Y axis<A
+href="exframes/frame_horizbarex1.html"> [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_horizbarex2.html"> <IMG border="0" HEIGHT="500"
+ src="img/horizbarex2.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 16:</B> Horizontal bar graph with Y axis at the
+ top<A href="exframes/frame_horizbarex2.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P></P>
+<P> In the final example which is almost similair to the two first we
+ illustrate the use of labels with more than one line.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_horizbarex4.html"> <IMG border="0" HEIGHT="500"
+ src="img/horizbarex4.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 17:</B> Horizontal bar graph with manual
+ integer scale as well as multiple line labels<A href="exframes/frame_horizbarex4.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="6_3_9">6.3.9 Using gradient fill for bar graphs</A></H3>
+ It is possible to use color gradient fill for the individual bars in
+ the bar graph.
+<P> Color gradient fill fills a rectangle with a smooth transition
+ between two colors. In what direction the transition goes (from left to
+ right, down and up, fomr the middle and out etc) is determined by the
+ style of the gradient fill. JpGraph currently supports 7 different
+ styles. All supported styles are displayed in the figure below.</P>
+<TABLE>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_bargradsmallex1.html"> <IMG border="0" HEIGHT="150"
+ src="img/bargradsmallex1.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 18:</B><A href="exframes/frame_bargradsmallex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_bargradsmallex2.html"> <IMG border="0" HEIGHT="150"
+ src="img/bargradsmallex2.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 19:</B><A href="exframes/frame_bargradsmallex2.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_bargradsmallex3.html"> <IMG border="0" HEIGHT="150"
+ src="img/bargradsmallex3.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 20:</B><A href="exframes/frame_bargradsmallex3.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_bargradsmallex4.html"> <IMG border="0" HEIGHT="150"
+ src="img/bargradsmallex4.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 21:</B><A href="exframes/frame_bargradsmallex4.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_bargradsmallex5.html"> <IMG border="0" HEIGHT="150"
+ src="img/bargradsmallex5.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 22:</B><A href="exframes/frame_bargradsmallex5.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_bargradsmallex6.html"> <IMG border="0" HEIGHT="150"
+ src="img/bargradsmallex6.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 23:</B><A href="exframes/frame_bargradsmallex6.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_bargradsmallex7.html"> <IMG border="0" HEIGHT="150"
+ src="img/bargradsmallex7.png" WIDTH="200"></A>
+<BR><SMALL><EM><B>Figure 24:</B><A href="exframes/frame_bargradsmallex7.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD> &nbsp;</TD><TD> &nbsp;</TD></TR>
+</TABLE>
+ To specify a gradient fill for the bar plots you make use of the method<A
+href="../ref/BarPlot.html#_BARPLOT_SETFILLGRADIENT">
+ BarPlot::SetFillGradient()</A> . See the class reference for details of
+ this function.
+<P> When using gadient fills there are a couple of caveats you should be
+ aware of:</P>
+<UL>
+<LI>gradient filling is computational expensive. Large plots with
+ gradient fill will take in the order of 6 times longer to fill then for
+ a normal one-color fill. This might to some extent be helped by making
+ use of the cache feature of JpGraph so that the graph is only generated
+ a few times.</LI>
+<LI>gradient filling will make use of much more colors (by definition)
+ this will make the color palette for the image bigger and hence make
+ the overall image larger. It might also have some severe effect on
+ using anti-aliased line in the same image as color gradient filling
+ since anti-aliased lines also have the possibility to make use of many
+ colors. Hence the color palette might not be big enough for all the
+ colors you need. So if you use gadient fills you should also be using a
+ true-color image since you otherwise run out of colors.
+<BR> This problem is often seen as that for no apperant reason some
+ color you have specified in the image does appear as another color.
+ (This is not a bug in JpGraph!) This is something to especially watch
+ out for when enabling anti-alising since that also uses a lot of
+ colors. Since the numbers of colors used with anti-alising depends on
+ the angle on the lines it is impossible to foresee the number of colors
+ used for this.</LI>
+</UL>
+<H3><A NAME="6_3_10">6.3.10  Creating semi-filled bar graphs</A></H3>
+ Semi filled bar graphs are in principle the same as normal filled bar
+ graphs but with the additional feature that you can choose to only fill
+ a specified range (or ranges) of X-coordinates. The figure below
+ illustrates this
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_partiallyfilledlineex1.html"> <IMG border="0"
+HEIGHT="300"  src="img/partiallyfilledlineex1.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 25:</B> Semi-filled line graph<A href="exframes/frame_partiallyfilledlineex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<P> I this example we defined two areas along the X-axis to be filled.
+ You can add filled areas by using the method<A href="../ref/LinePlot.html#_LINEPLOT_ADDAREA">
+ AddArea()</A> and specifying range and color for the filled area.</P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="3020lineplot.html">Previous</A>
+<A HREF="3040errorplot.html">Next</A>
+</BODY>
+</HTML>

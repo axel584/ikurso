@@ -1,0 +1,1105 @@
+<h1>JpGraph FAQ</h1>
+
+<h2>Index</h2>
+
+<h3>1. Error messages </h3>
+
+<table>
+<tr>
+<td valign=top>1.1</td><td>
+<a href="#F1_1">I try to generate a graph and I get an error "Fatal error: Undefined class name 'parent' in jpgraph.php on line xxxx"</a>
+</td></tr>
+
+
+<tr>
+<td valign=top>1.2</td><td>
+<a href="#F1_2">I get an error "Fatal error: Font cant be found".</a>
+</td></tr>
+
+<tr>
+<td valign=top>1.3</td><td>
+<a href="#F1_3">I get an error saying "Unknown function imagecreate"</a>
+</td></tr>
+
+<tr>
+<td valign=top>1.4</td><td>
+<a href="#F1_4">I get an error saying "Unknown function imagecreatejpeg"</a>
+</td></tr>
+
+<tr>
+<td valign=top>1.5</td><td>
+<a href="#F1_5">I am using Zend Cache add on to PHP in my installation 
+and I get an error message saying something like
+" 'parent::' not valid in context."</a>
+</td></tr>
+
+<tr>
+<td valign=top>1.6</td><td>
+<a href="#F1_6">I get the error "Warning: MkDir failed (Permission denied) in jpgraph.php on line XXXX"</a>
+</td></tr>
+
+<tr>
+<td valign=top>1.7</td><td>
+<a href="#F1_7">I get an error saying "Warning: Cannot add header information - 
+headers already sent ...<snip>"</a>
+</td></tr>
+
+<tr>
+<td valign=top>1.8</td><td>
+<a href="#F1_8">I get the error "Date is out side specified scale range" when I try 
+to create a Gantt chart?</a>
+</td></tr>
+
+<tr>
+<td valign=top>1.9</td><td>
+<a href="#F1_9">I get the error "Can't find font file FONT_PATHarial.ttf" (or some other font).
+</a>
+</td></tr>
+
+<tr>
+<td valign=top>1.10</td><td>
+<a href="#F1_10">I get the error "Invalid file handle in jpgraph.php at line XXXX"</a><br>
+</td></tr>
+
+<tr>
+<td valign=top>1.11</td><td>
+<a href="#F1_11">I get the error "Fatal error: Call to undefined
+function: getcsimareas() in jpgraph.php on line XXXX"
+</a><br>
+</td></tr>
+
+
+</table>
+
+<h3>2. Formatting problems</h3>
+
+<table>
+<tr>
+<td valign=top>2.1</td><td>
+<a href="#F2_1">I try to mix bar and line graphs and the bars doesn't get centered and
+the labels are not correctly aligned?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.2</td><td>
+<a href="#F2_2">How do I turn off anti-aliasing for TTF fonts?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.3</td><td>
+<a href="#F2_3">I can't seem to set the scale limits manually with SetScale(). What is wrong ?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.4</td><td>
+<a href="#F2_4">The autoscaling algorithm chooses very tight limits around my Y-values.
+How do I get a more "space" between the end of the scale and the min/max values?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.5</td><td>
+<a href="#F2_5">I specify color X in the image but the color displayed is not
+exactly what I specified?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.6</td><td>
+<a href="#F2_6">When I used filled line plots with negative values the fill doesn't
+work correctly?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.7</td><td>
+<a href="#F2_7"> Can I have labels at an arbitrary angle on the X-axis?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.8</td><td>
+<a href="#F2_8">Is it possible to have horizontal bar graphs?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.9</td><td>
+<a href="#F2_9">Line weight does not seem to work in my graphs?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.10</td><td>
+<a href="#F2_10">How can I have more space between the Y-axis and the title?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.11</td><td>
+<a href="#F2_11">How can I display values for each slice close to the pie?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.12</td><td>
+<a href="#F2_12">Can I display the actual value as labels on the pie bar instead of the
+percentage?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.13</td><td>
+<a href="#F2_13">Can I display stock box-charts (open, close, high, low) with JpGraph?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.14</td><td>
+<a href="#F2_14">Is there any way to specify a newline in the legend box for a specific legend?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.15</td><td>
+<a href="#F2_15">How can I print unicode characters?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.16</td><td>
+<a href="#F2_16">My truetype fonts looks very ugly with GD 2.0.1?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.17</td><td>
+<a href="#F2_17">My background images doesn't display properly. It 
+just shows a black solid square?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.18</td><td>
+<a href="#F2_18">How do I make each bar in a bar plot have it's own color?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.19</td><td>
+<a href="#F2_19">How can I change between percentage and absolute values for pie slices?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.20</td><td>
+<a href="#F2_20">
+How can I adjust the position of the axis title?</a>
+</td></tr>
+
+<tr>
+<td valign=top>2.21</td><td>
+<a href="#F2_21">
+How can I change the image format, i.e jpeg, gif or png?</a>
+</td></tr>
+
+
+<tr>
+<td valign=top>2.22</td><td>
+<a href="#F2_22">
+How do I specify the font for legends?</a>
+</td></tr>
+
+
+
+
+</table>
+
+<h3>3. 3D Pies </h3>
+
+<table><tr>
+<td valign=top>3.1</td><td>
+<a href="#F3_1">How can I have an exploded slice with 3D pie plots?</a>
+</td></tr></table>
+
+<h3>4. Miscellaneous </h3>
+
+
+<table>
+<tr>
+<td valign=top>4.1</td><td>
+<a href="#F4_1">Can I use JpGraph with Windows/Unix/Linux etc?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.2</td><td>
+<a href="#F4_2">My webadmin does not allow PHP any write permissions and hence I can't use 
+the cache feature of JpGraph. Is there any way to completely turn off the caching feature?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.3</td><td>
+<a href="#F4_3">I'm having trouble with getting PHP 4.0.x + GD 1.8.x and TTF working. 
+I get the error "Warning: ImageTtfBBox: No TTF support in this PHP build"</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.4</td><td>
+<a href="#F4_4">I have problem reading the Word/HTML manual? Can't you supply a clean HTML version or
+at an LaTeX/DocBook/ASCII (take your pick) version?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.5</td><td>
+<a href="#F4_5">The Client side image map examples does not work on my machine?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.6</td><td>
+<a href="#F4_6">I see that you are using CVS. Do you have an anonymous CVS account?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.7</td><td>
+<a href="#F4_7">When I try to run 'gencolorchart.php' I get an error 
+"Fatal error: Cannot instantiate non-existent class: timer in
+/www/htdocs/jpgraph/gencolorchart.php on line 144" </a>
+</td></tr>
+
+<tr>
+<td valign=top>4.8</td><td>
+<a href="#F4_8">When I run 'testsuit_jpgraph.php' I get a warning
+"Due to isufficient permission the source files can't be automatically created"</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.9</td><td>
+<a href="#F4_9">How can I pass data to my image generating script?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.10</td><td>
+<a href="#F4_10">How do I pass data from MySQL (or a file) to a script to produce a graph?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.11</td><td>
+<a href="#F4_11">I change my data but my image does not get updated? The old image
+is still send back to the browser?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.12</td><td>
+<a href="#F4_12">Can I run JpGraph in batch-mode just outputting an image directly to a file and
+not streamed back to the browser?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.13</td><td>
+<a href="#F4_13">Is there a mailing list for JpGraph?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.14</td><td>
+<a href="#F4_14">Do you offer a commercial version of JpGraph with better documentation
+and full support and no QPL? </a>
+</td></tr>
+
+<tr>
+<td valign=top>4.15</td><td>
+<a href="#F4_15">Some of my script just return a blank image and no error mesages? </a>
+</td></tr>
+
+<tr>
+<td valign=top>4.16</td><td>
+<a href="#F4_16">I can see the generated image fine in the browser but I can't print it? </a>
+</td></tr>
+
+ <tr>
+<td valign=top>4.17</td><td>
+<a href="#F4_17">How can I generate an image directly to disk without streaming it back to the browser? </a>
+</td></tr>
+
+<tr>
+<td valign=top>4.18</td><td>
+<a href="#F4_18">Why are you such a rude bastard and not answering my mailquestions ???</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.19</td><td>
+<a href="#F4_19">When will there be image maps for Gantt charts?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.20</td><td>
+<a href="#F4_20">When will there be support for hours (and minutes) scale for Gantt charts?</a>
+</td></tr>
+
+<tr>
+<td valign=top>4.21</td><td>
+<a href="#F4_21">Who is developing JpGraph and where?</a>
+</td></tr>
+
+</table>
+
+
+
+
+
+
+<h2><a name="faq1">1.</a> Error messages </h2>
+
+
+
+
+
+<strong><a name="F1_1">1.1</a> Q: I try to generate a graph and I get an error
+"Fatal error: Undefined class name 'parent' in jpgraph.php on line xxxx"</strong><br>
+<b>A:</b><i> You are using an older version of PHP. JpGraph <b>requires</b> at least PHP 4.02 </i>
+<p>
+
+<strong><a name="F1_2">1.2</a> Q: I get an error "Fatal error: Font cant be found".</strong> 
+<br>
+<b>A:</b> <i>You have either not specified a correct path where your fonts are stored
+(see top of jpgraph.php) or you have tried to use a font you do not have installed.</i>
+<p>
+
+<strong><a name="F1_3">1.3</a> Q: I get an error saying "Unknown function imagecreate".</strong>
+<br>
+<b>A:</b><i> You have not compiled PHP with support for the GD graphic library.
+See PHP documentation for details. Note that you also need to configure PHP to use
+GD and/or TTF fonts.</i>
+<p>
+
+
+<strong><a name="F1_4">1.4</a> Q: I get an error saying "Unknown function imagecreatejpeg".</strong>
+<br>
+<b>A:</b><i> You have not compiled PHP with support for the JPG format. See PHP
+documentation for details.</i>
+<p>
+
+<strong><a name="F1_5">1.5</a> Q: I am using Zend Cache add on to PHP in my installation 
+and I get an error message saying something like
+" 'parent::' not valid in context."</strong><br>
+<b>A:</b><i> There seems to be a bug with Zend cache together with the 'parent'
+meta class if the referenced parent class is in another file that is
+included. The workaround seems to be to put all classes in the same
+physical file.</i> 
+<p>
+
+<strong>
+<a name="F1_6">1.6</a> Q: I get the error "Warning: MkDir failed (Permission denied) in jpgraph.php on line XXXX"
+</strong><br>
+<b>A:</b><i>
+This is a permission problem. To use the cache Apache/PHP 
+must have write permission to the cache directory. Make sure that Apache/PHP
+have sufficient permissions to write to the specified cache directory.
+</i>
+<p>
+
+
+<strong><a name="F1_7">1.7</a> Q: I get an error saying "Warning: Cannot add header information - 
+headers already sent ...<snip>".</strong>
+<br>
+<b>A:</b><i> 
+First, this is not a problem with JpGraph per se. What has happened is that your PHP file
+which produces the image has already returned some data to the browser before
+the image has been sent. 
+This is most often caused by one or more spaces before the first '&lt;?php' 
+The browser will now implicitely set the header to plain text. 
+<p>When later JpGraph
+tries to send the correct image header the browser gets confused since it has already
+received a header for the current document. (Each document can only have one and only one
+type). 
+<p>
+Check your files for any output (even a single space) before the call to Graph::Graph() 
+(or Graph::Stroke())
+<p>
+If you are running on Windows this problem could be caused by a blank line
+at the end of any of the jpgraph_*.php files. All files in jpgraph ends in a 
+newline which some configurations on Windows doesn't like. 
+Remove the newline so that the file ends just after the final '?>'
+</i>
+<p>
+
+<strong>
+<a name="F1_8">1.8</a> Q: I get the error "Date is out side specified scale range" when I try 
+to create a Gantt chart?
+</strong><br>
+<b>A:</b><i>
+As the error says, you start or end date for a activity is larger/smaller than
+the max/min value in the scale. If you get this error and you are using
+automatic scale then you are probably using a null value (empty string "") as 
+start or end date. Check your data!
+</i>
+<p>
+
+
+<strong>
+<a name="F1_9">1.9</a> Q: I get the error "Can't find font file FONT_PATHarial.ttf" (or some other font).
+</strong><br>
+<b>A:</b><i>
+You are running on Windows? Right? This seems to be caused by a bug in 
+PHP/Apache (or PHP/IIS) 
+specifically on Windows. The  problem seems to be that PHP
+doesn't remember a DEFINE() setting across two or more include directive.
+A simple workaround is to hardcode the font path in class TTF in file
+jpgraph.php.
+<p>
+Note: If you have this problem you will most likely also have a problem 
+with the
+path to the cache directory.
+</i>
+<p>
+
+<strong>
+<a name="F1_10">1.10</a> Q: I get the error "Inavlid file handle in jpgraph.php at line XXXX"
+</strong><br>
+<b>A:</b><i>
+This is a permission problem. Check that your cache directory has the right
+permissions to let JpGraph access and write to it.
+</i>
+<p>
+
+<strong>
+<a name="F1_11">1.11</a> Q: I get the error "Fatal error: Call to undefined
+function: getcsimareas() in jpgraph.php on line XXXX"
+</strong><br>
+<b>A:</b><i>
+You have enabled the 
+<code>
+DEFINE("JPG_DEBUG",true) 
+</code>
+in jpgraph.php. This is an internal debug flag which should always be
+left untouched. 
+As the comments say, you should only touch it if your first name is Johan :-)
+</i>
+<p>
+
+
+
+<small><a href="jpg_faq.php#contents">[FAQ Contents]</a></small>
+
+<h2><a name="faq2">2.</a> Formatting problems</h2>
+
+<strong>
+<a name="F2_1">2.1</a> Q: I try to mix bar and line graphs and the bars doesn't get centered and
+the labels are not correctly aligned?
+</strong><br>
+<b>A:</b><i>
+This is a known problem. The best way to partly solve this is to make
+sure you add the bar plot as the last plot to the graph. This problem
+was introduced in JpGraph 1.2 due to the added functionality SetCenter()
+for line graphs. This problem is planned to be solved to 2.0 the reason
+behind this problem is that plot that gets added to the graph internally
+makes modification to the alignment of the plot. Since each plot does not know
+what other plot has been added it will happily overwrite previous plots
+settings in the graph. Hence the workaround by adding the bar last.
+(This will be solved by adding a server which the plots makes
+a request to. The server object will know what other requests have been made
+and disregard conflicting settings.)
+</i>
+<p>
+
+<strong>
+<a name="F2_2">2.2</a> Q: How do I turn off anti-aliasing for TTF fonts?
+</strong><br>
+<b>A:</b><i>
+There is not any built in support in JpGraph at the moment to do this.
+</i>
+<p>
+
+<strong>
+<a name="F2_3">2.3</a> Q: I can't seem to set the scale limits manually with SetScale(). What is wrong ?
+</strong><br>
+<b>A:</b><i>
+When you specify a scale manually you must also specify what ticksteps
+you would like to use. So for axample if you use $graph->SetScale("textlin",10,50)
+(to specify an Y-scale from 10 to 50) you must also call
+$graph->yscale->ticks->Set(??,??) where you specify your major and minor tick
+step, for example Set(10,5).
+</i>
+<p>
+
+<strong>
+<a name="F2_4">2.4</a> Q: The autoscaling algorithm chooses very tight limits around my Y-values.
+How do I get a more "space" between the end of the scale and the min/max values?
+</strong><br>
+<b>A:</b><i>
+Use the SetGrace() to specify some extra space (as percentage of the scale)
+between the min/max value and the limits of the scale. For example
+$graph->yscale->SetGrace(10) gives 10% extra space at the ends.
+</i>
+<p>
+
+<strong>
+<a name="F2_5">2.5</a> Q: I specify color X in the image but the color displayed is not
+exactly what I specified?
+</strong><br>
+<b>A:</b><i>
+This is a result of a finite color palette for GIF, PNG formats. 
+If you are using anti-aliasing,
+perhaps a background image or even gradient fill you might exhaust the color
+palette supported in the GD library.<p> Try set the constant USE_APPROX_COLORS
+to false and generate the picture again. If you now get an error message
+saying that no more colors can be allocated this is the problem. There is
+really no good workaround since for PNG the GD library does not currently 
+support "True-color" (AFAIK). <p>If you are using a background image try to
+"degrade" it to have a smaller color palette or turn of anti-aliasing and 
+you might have enough free palette entries to cater for all the colors
+you want.
+</i>
+<p>
+
+<strong>
+<a name="F2_6">2.6</a> Q: When I used filled line plots with negative values the fill doesn't
+work correctly?
+</strong><br>
+<b>A:</b><i>No it doesn't. The
+fill will not work correctly with negative values at the moment. 
+No workarounds exist. I don't consider this a big priority since filled
+line plots are to 99% used with positive-only values.
+</i>
+<p>
+
+<strong>
+<a name="F2_7">2.7</a> Q: Can I have labels at an arbitrary angle on the X-axis?
+</strong><br>
+<b>A:</b><i>
+Sure (it's all in the manual). For example to have the labels
+at 45 degrees angle use</i>
+<pre>
+...
+$graph->xaxis->SetTickLabels($labels);
+$graph->xaxis->SetLabelAngle(45);
+...
+</pre>
+<i>Note: Internal fonts support 0 and 90 degrees text. If you need to use, say
+45 degree (or any other arbitrary angle), you <strong>must</strong> use TTF fonts.</i>
+<p>
+<strong>
+2.7 Q: Can I have the autoscaling algorithm restrict itself to whole numbers?
+</strong><br>
+<b>A:</b><i>
+Yes, use the "int" scale specification.
+</i>
+<p>
+
+<strong>
+<a name="F2_8">2.8</a> Q: Is it possible to have horizontal bar graphs?
+</strong><br>
+<b>A:</b><i>
+No. This is actually harder to implement then what it first appears
+to be due to some assumption in the design of JpGraph. There are currently
+no plans of supporting this.
+<p>
+You could always just plot a normal bar graph and then rotate the final image
+90 degrees. I haven't tried it but it should work pretty much stright forward
+with the builtin support for rotating images in JpGraph.
+</i>
+<p>
+ 
+<strong>
+<a name="F2_9">2.9</a> Q: Line weight does not seem to work in my graphs?
+</strong><br>
+<b>A:</b><i>
+You have probably enabled Anti-asliasing. If anti-aliasing is enabled setting line-weight 
+will have no affect.
+</i>
+<p>
+
+<strong>
+<a name="F2_10">2.10</a> Q: How can I have more space between the Y-axis and the title?
+</strong><br>
+<b>A:</b><i>
+Use the Axis::SetTitleMargin() method. For example to have a 25 pixels margin
+for the Y-title you could use: 
+<pre>
+...
+$mygraph->yaxis->SetTitleMargin(25);
+...
+</pre>
+</i>
+<p>
+
+<strong>
+<a name="F2_11">2.11</a> Q: How can I display values for each slice close to the pie?
+</strong><br>
+<b>A:</b><i>
+Use the method PiePlot::value->Show()
+<pre>
+...
+$pieplot->value->Show();
+...
+</pre>
+Also See 2.12 and 2.19
+</i><p>
+
+<strong>
+<a name="F2_12">2.12</a> Q: Can I display the actual value as labels on the pie bar instead of the
+percentage?
+</strong><br>
+<b>A:</b><i>
+Yes, this feature was introduced in 1.3.1
+<pre>
+...
+$pieplot->SetLabelType(PIE_LABEL_ABS);
+...
+</pre>
+and make sure labels are not hidden.
+</i><p>
+
+
+<strong>
+<a name="F2_13">2.13</a> Q: Can I display stock box-charts (open, close, high, low) with JpGraph?
+</strong><br>
+<b>A:</b><i>
+No.
+</i><p>
+
+
+<strong>
+<a name="F2_14">2.14</a> Q: Is there any way to specify a newline in the legend box for a specific legend?
+</strong><br>
+<b>A:</b><i>
+From version 1.5 and forward there is a beginning of multiline support for text
+objects. However, the legends layout does not yet take this into account so for now
+the answer is no.
+</i><p>
+
+ 
+<strong>
+<a name="F2_15">2.15</a> Q: How can I print unicode characters?
+</strong><br>
+<b>A:</b>
+<i>
+Use &#XXXX coding in your strings. From version 1.5 there is some support for
+cyrrillic characters if that feature is turned on.
+</i><p>
+
+
+<strong>
+<a name="F2_16">2.16</a> Q: My truetype fonts looks very ugly with GD 2.0.1?
+</strong><br>
+<b>A:</b><i>
+You are using truecolor images, right? Well, you are out of luck. As the Readme says
+this is a known bug in GD 2.0.1 with no known workarounds. You can only use the builtin
+fonts if you are using a truecolor image (which you have to do to make background images
+work properly in GD 2.0.1 (at least if the background images are PNG)). 
+<br>
+If you are really desperate you have to switch back to GD 1.8.3
+<br>
+You can find a bug fix for GD 2.01 and the TTF problem together with 
+Truecolor images at 
+<a href="http://www.coupin.net/gd-freetype/">http://www.coupin.net/gd-freetype/</a>
+NOTE: This bug fix has _nothing_ to do with JpGraph and 
+I can't guarantee anything nor answer any questions regarding this specific fix. 
+</i>
+<p>
+
+
+<strong>
+<a name="F2_17">2.17</a> Q: My background images doesn't display properly. It 
+just shows a black solid square?
+</strong><br>
+<b>A:</b><i>
+You are using GD 2.0.1, right? Well, background images only work if you
+use a truecolor image, (enable the USE_TRUECOLOR constant). Some people
+have reported that it works as long as the background image is not in PNG
+format so you might want to try that. The drawback with truecolor images
+is that truefont doesn't work properly (See 2.15 above).
+<br>
+If you are really desperate you have to switch back to GD 1.8.3
+</i>
+<p>
+
+
+<strong>
+<a name="F2_18">2.18</a> Q: How do I make each bar in a bar plot have it's own color?
+</strong><br>
+<b>A:</b><i>
+Specify an array as argument to BarPlot::SetColor() as in <br>
+<pre>
+  ...
+  $mybarplot->SetColor(array("red","green","blue","gray"));
+  ...
+</pre>
+</i>
+<p>
+
+<strong>
+<a name="F2_19">2.19</a> Q: How can I change between percentage and absolute values for pie slices?
+</strong><br>
+<b>A:</b><i>
+Use PiePlot::SetValueType($aType) where $aType is either PIE_VALUE_ABS or
+PIE_VALUE_PERCENTAGE. To hide/show values on the pie you access the value property
+of the plot (just like in line plots)
+If you want some special format of the string you also need to specify a 
+format string. By default just a number gets printed. If you (for example) 
+want percent with a "%" sign you should use a format string like "%d%%" 
+(assuming you just want to display whole numbers)
+</i>
+<pre>
+  ...
+  $mypieplot->value->SetFormat("%d%%");
+  $mypieplot->value->Show(); // Defaults to TRUE
+  $mypieplot->SetValueType(PIE_VALUE_PERCENTAGE);
+  ...
+</pre>
+
+Also see 2.12 and 2.11
+<p>
+
+
+<strong>
+<a name="F2_20">2.20</a> Q: How can I adjust the position of the axis title?
+</strong><br>
+<b>A:</b><i>
+You can add an alignement parameter when you specify the title. You specify
+one of 'high', 'low' or 'center' as in
+<pre>
+$mygraph->xaxis->SetTitle('mytitle','high');
+$mygraph->xaxis->SetTitle('mytitle','center');
+$mygraph->xaxis->SetTitle('mytitle','low');
+</pre>
+</i>
+<p>
+
+
+
+<strong>
+<a name="F2_21">2.21</a> Q: How can I change the image format, i.e jpeg, gif or png?
+</strong><br>
+<b>A:</b><i>
+Use the Image::SetImgFormat() method at runtime. You can also change the default
+value with the DEFAULT_GFORMAT define in jpgraph.php. This is normally set to
+'auto' format which means that JpGraph will automatically choose the format depending on what
+is available.
+
+<pre>
+$graph->img->SetImgFormat('jpeg');
+</pre>
+</i>
+<p>
+
+
+<strong>
+<a name="F2_22">2.22</a> Q: How do I specify the font for legends?
+</strong><br>
+<b>A:</b><i>
+Use the Legend::SetFont() method.
+
+<pre>
+$graph->legend->SetFont(FF_FONT1,FS_BOLD);
+</pre>
+</i>
+<p>
+
+
+<small><a href="jpg_faq.php#contents">[FAQ Contents]</a></small>
+
+<h2><a name="faq3">3.</a> Doing 3D Pies</h2>
+
+<strong>
+<a name="F3_1">3.1</a>Q: How can I have an exploded slice with 3D pie plots?</strong><br>
+<b>A:</b><i>
+Use either Pi3DPLot::ExplodeSlice() or Pie3DPlot::Explode()
+</i>
+
+<p>
+<small><a href="jpg_faq.php#contents">[FAQ Contents]</a></small>
+
+<h2><a name="faq4">4.</a> Miscellaneous</h2>
+<strong>
+<a name="F4_1">4.1</a> Q: Can I use JpGraph with Windows/Unix/Linux etc?
+</strong><br>
+<b>A:</b>
+<i>
+Sure, as long as you have a WEB server which supports PHP 4.02 (or above) and have the GD library. Please note though that the behaviour of PHP/Apache on Unix and Windows seems to have some subtle diffrences which might affcte things 
+like path specification using '/' ot '\'.
+
+</i><p>
+
+<strong>
+<a name="F4_2">4.2</a> Q: My webadmin does not allow PHP any write permissions and hence I can't use 
+the cache feature of JpGraph. Is there any way to completely turn off the caching feature?
+</strong><br>
+<b>A:</b>
+<i>
+Sure, set the constant "USE_CACHE" to FALSE in jpgraph.php. This way will skip writing file
+even if a filename has been submitted in the Graph() creation call. You can also accomplish 
+this by not having any file name at all in the call to Graph().
+</i><p>
+
+
+<strong>
+<a name="F4_3">4.3</a> Q: I'm having trouble with getting PHP 4.0.x + GD 1.8.x and TTF working. 
+I get the error "Warning: ImageTtfBBox: No TTF support in this PHP build"<br>
+Can you help
+with the configuration of my PHP installation?
+</strong><br>
+<b>A:</b>
+<i>I can't give individual support on how to get PHP+GD+TTF working since
+I just don't have the time. <br> 
+
+There seems to be some problem with
+PHP 4.0.6 + GD 1.8.3 + FreeType 2.0. Several people have reported problem
+with this configuration. Personally i got this working after some twiddling but
+the TTF fonts seems to have a scaling problem. The fonts get roughly 20% larger then
+specified (as compared with PHP 4.0.4). 
+One person have reported this problem to go away by backing out to PHP 4.0.5
+<br>
+This problem seems to be related to if the TTF font size is interpretated as pixels or
+points. The problem with "No TTF support ..." seems be down to PHP 4.0.6 + deault
+GD library/interface having some bugs. Please npote the spelling error in 4.0.6 configuration
+where you need to say use-native-tt (and NOT use-native-ttf, note the missing 'f').
+<br>
+Your best solution is to upgrade to PHP 4.1.1 which seems to work much better.
+</i><p>
+
+
+<strong>
+<a name="F4_4">4.4</a> Q: I have problem reading the Word/HTML manual? Can't you supply a clean HTML version or
+at an LaTeX/DocBook/ASCII (take your pick) version?
+</strong><br>
+<b>A:</b>
+<i>
+This would be nice. Since for some good reasons I had to start writing the manual in Word
+(mainly since I wrote the manual on commuter flights and that's what I had accessible on 
+my laptop)
+and I haven't had time to convert it. My goal is still to use LaTeX as the native format and 
+any help with his is surely appreciated. Complaining that the manual isn't available in 
+format X won't make it happen any faster. 
+</i><p>
+
+<strong>
+<a name="F4_5">4.5</a> Q: The Client side image map examples does not work on my machine?
+</strong><br>
+<b>A:</b>
+<i>
+In order to run the examples the code generates HTML to read the image from the
+cache directory <strong>as Apache sees it</strong>. You must adjust the image tag
+to have the correct path to your cache directory.
+</i><p>
+
+<strong>
+<a name="F4_6">4.6</a> Q: I see that you are using CVS. Do you have an anonymous CVS account?
+</strong><br>
+<b>A:</b>
+<i>
+Yes. 
+<a href="http://cvs.php.net/cvs.php/jpgraph">Public CVS</a> hosted at PHP:s main CVS repository. 
+Use either the WEB interface to retrieve the latest development 
+tree or use command line CVS.
+For instructions on accessing the CVS see 
+<a href="http://www.php.net/cvs-php.html">instructions</a>. The JpGraph tree 
+is available at the repository root as "jpgraph". 
+</i>
+<p>
+<i>
+<b>Please note</b> that there is <b>no</b> guarantee that the current state of the
+tree is runnable. There might be horrible bugs, cpu-eaters, memory-killers etc. Approach
+CVS tree with extreme caution!
+</i><p>
+
+<strong>
+<a name="F4_7">4.7</a> Q: When I try to run 'gencolorchart.php' I get an error 
+"Fatal error: Cannot instantiate non-existent class: timer in
+/www/htdocs/jpgraph/gencolorchart.php on line 144"
+</strong><br>
+<b>A:</b>
+<i>
+Upgrade to 1.5 ! (This is an old "bug-ette")<br>
+('gencolorchart.php" is, as all the docs say, unsupported after all :-) )<br>
+This is beacuse I had forgot
+to update 'gencolorchart.php' since I renamed my Timer class to JpgTimer to avoid
+conflict with other peoples code. (The name 'Timer' is often used.) Just change
+line 144 to <pre>$timer = new JpgTimer();</pre> and it should all work.
+<br><b>Note:</b> Depending on your cache directory setup (relative or absolute) 
+you might not be able to click 
+on the generated link page. If that is the case just set the links to your cache 
+directory (as your web server sees it) on line 153,154.
+<br>(You can also have a look at the colorchart <a href=colorchart.html>here</a>.)
+</i><p>
+
+
+<strong>
+<a name="F4_8">4.8</a> Q: When I run 'testsuit_jpgraph.php' I get a warning
+"Due to isufficient permission the source files can't be automatically created"
+</strong><br>
+<b>A:</b>
+<i>
+('testsuit_jpgraph.php" is, as all the docs say, unsupported after all :-) )<br>
+This is not a serious problem. When the testsuit is run it tries to create a symbolic link
+with the same base name as the individual testfile but with extension ".phps". This is just so
+it is possible to click on an image and then view the source syntax coloured. If Apache doesn't
+have write permissions to the directory where 'testsuit_jpgraph.php' is executed from you will
+get this warning.<br>
+If you want to use this feature just change the permissions so Apache may write to the directory.
+</i><p>
+
+<strong>
+<a name="F4_9">4.9</a> Q: How can I pass data to my image generating script?
+</strong><br>
+<b>A:</b>
+<i>
+There are basically three(four) ways:
+<ol>
+<li> Read the data from a file
+<li> Read the data from a DB
+<li> Pass the data in the &lt;img&gt; tag. For example
+<pre>
+             &lt;img src="myimg.php?d1=2&d2=7&d3=12" border=0&gt;
+</pre>
+This method is not suitable for large data sets since there is an
+upper bound to the length of an URL specification (around 255 characters 
+if my memory serves me right). 
+<li> A fourth way (although I have never used this myself) might be to
+use session variables to pass the data between different scripts.
+</ol>
+For large data sets the only practical way is to read the data from a
+file or from a DB to construct the data vectors. 
+</i><p>
+
+
+<strong>
+<a name="F4_10">4.10</a>> Q: How do I pass data from MySQL to a script to produce a graph?
+</strong><br>
+<b>A:</b>
+<i>
+Quite simple just fill the data array passed into JpGraph with values
+resulting from your query. Watch out for empty values and strings. JpGraph
+doesn't know how to plot strings. Any value passed into JpGraph should be
+only valid numeric data.</i>
+<p>
+<i>
+See the online discussions on populating from a DB 
+<a href="http://jpgraph.fan-atics.com/viewtopic.php?t=8">jpgraph.fan-atics.com/viewtopic.php?t=8</a> or the discussion on how to read data from file
+<a href=="http://jpgraph.fan-atics.com/viewtopic.php?t=239">jpgraph.fan-atics.com/viewtopic.php?t=239</a>
+</i><p>
+
+<strong>
+<a name="F4_11">4.11</a> Q: I change my data but my image does not get updated? The old image
+is still send back to the browser?
+</strong><br>
+<b>A:</b>
+<i>
+What you are seeing is the cached version. To turn off the cache you 
+can either
+<ul>
+<li> Not specify a cache name in the call to Graph(). Just call new Graph(200,200)
+for example.
+<li> Turn off the reading from the cache by setting READ_CACHE to false (in jpgraph.php)
+<li> Turn off the reading and writing from the cache by setting USE_CACHE to false (in jpgraph.php)
+<li> Use cache but with a timeout so that the image will be re-generated if the cached image
+is older then the specified timeout value in the call to Graph().
+</ul>
+</i><p>
+
+ 
+<strong>
+<a name="F4_12">4.12</a> Q: Can I run JpGraph in batch-mode just outputting an image directly to a file and
+not streamed back to the browser?
+</strong><br>
+<b>A:</b>
+<i>
+Sure, just specify an absolute file name in the call to Graph::Stroke() as in
+$myGraph->Stroke("/tmp/myimage.png")
+</i><p>
+
+ 
+<strong>
+<a name="F4_13">4.13</a> Q: Is there a mailing list for JpGraph?
+</strong><br>
+<b>A:</b>
+<i>
+No, but there is a user community forum at 
+<a href="http://jpgraph.fan-atics.com"> http://jpgraph.fan-atics.com </a>
+</i><p>
+
+ 
+<strong>
+<a name="F4_14">4.14</a> Q: Do you offer a commercial version of JpGraph with better documentation
+and full support and no QPL? 
+</strong><br>
+<b>A:</b>
+<i>
+Yes, For commercial (non-open-source) you will need to get the "JpGraph Professional License". This
+allows you you deploy JpGraph in a commercial context. Further details upon contact.
+</i><p>
+
+<strong>
+<a name="F4_15">4.15</a> Q: Some of my script just return a blank image and no error mesages? 
+</strong><br>
+<b>A:</b>
+<i>
+This could potentially be a lot of things depending on which browser 
+you are using. One thing you might want to chek is that your script doesn't
+take to long time. In that case they might hit the time limit for running
+a PHP script as specified in php.ini. You can adjust that timelimit with
+a call to set_time_limit()
+</i><p>
+
+<strong>
+<a name="F4_16">4.16</a> Q: I can see the generated image fine in the browser but I can't print it? 
+</strong><br>
+<b>A:</b>
+<i>
+This is again browser dependent. Some browser does not like to print an image which is 
+genetrated on-line and does exist as a *.jpg, *.png etc file. I'm not aware of any
+workaround. Some browsers (and versions) can print others not. The only real safe
+way (if you need printing) is to generate the image on disk and then have the
+browser read the image from there.
+</i><p>
+
+<strong>
+<a name="F4_17">4.17</a> Q: How can I generate an image directly to disk without streaming it back to the browser? 
+</strong><br>
+<b>A:</b>
+<i>
+Two ways: <br>
+<ol>
+<li> (Preferred way) If you supply a filename in the call to $graph->Stroke() the image will be
+written to that file and <b>not</b> be streamed beack to the browser.
+<li> If you prefer to have the image going to the cache directory but not streamed back
+then you could just set the '$aInlineFlag' in the initial call to Graph() (fifth argument)
+to false as in <br>'$mygraph = new Graph(200,200,"auto",0,false)<br>
+The "auto" argument makes an
+automatic file name in the cache based on the script name. The 0 indicates that we have no timeout. 
+The advantage with this method is that you can specify a timeout to avoid having the
+image generated to often.
+</ol>
+</i><p>
+
+<strong>
+<a name="F4_18">4.18</a> Q: Why are you such a rude bastard and not answer my mail???##!!??
+</strong><br>
+<b>A:</b>
+<i>
+Short answer: I have a life (and a girlfriend, so far...) <br>
+Long answer: Seriously, Since I now a days get roughly 40-80 mails/day just about JpGraph
+I could probably spend all my free time just answering mail. I will not do that for obvious reasons.
+I honestly try but there is simply not enough time for me to do that. A short example will
+convince you. Assume 70 mails (which I got yesterday), half I can answer with 3min each=roughly 1,5 hours
+the other half I probably have to write a short bit of test code to figure something 
+out, let's say 20min per mail = 700min = 12h !!. So that mean I (on peak days) should have
+to spend 13.5 h answering mail (without even going to the restroom...) Will I do that..hmm.. let 
+me think.... ugh,hmm, NO!
+<br>
+As a small comfort I actually try hard to read all mail so most of the suggestions you make
+will eventually find it's way into JpGraph if I agree it's a good thing and I have time
+to do that.
+</i><p>
+ 
+
+<strong>
+<a name="F4_19">4.19</a> Q: When will there be image maps for Gantt charts?
+</strong><br>
+<b>A:</b>
+<i>
+Sometimes. There is no plans to implement this at the moment since I must focus
+on my paid work. I have a rent to pay after all :-) If you are willing to sponsor
+this development please contact me.
+</i><p>
+
+
+<strong>
+<a name="F4_20">4.20</a> Q: When will there be support for hours (and minutes) scale for Gantt charts?
+</strong><br>
+<b>A:</b>
+<i> See answer for 4.19.
+</i><p>
+
+
+<strong>
+<a name="F4_21">4.21</a> Q: Who is developing JpGraph and where is it done?
+</strong><br>
+<b>A:</b>
+<i> JpGraph is developed and documented by one person, me. The development happens mostly in the
+northern part of Sweden (above the arctic circle) in the land of the midnight sun.
+</i><p>
+

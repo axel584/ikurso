@@ -1,0 +1,114 @@
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td nowrap><div align="center" class="titolo"><? echo $lgv_aligxo; ?></div></td>
+	</tr>
+	<tr> 
+		<td bgcolor="#d0d8df">&nbsp;</td>
+	</tr>
+	<tr> 
+		<td nowrap> 
+			<table width="100%" border="0">
+				<tr>
+					<td nowrap class="normala"><div align="right"><? echo $lgv_familinomo; ?> :</div></td>
+					<td nowrap class="normala">
+						<input type="text" name="familinomo" value="<? echo $aligxilo["familinomo"];?>"></td>
+					<td nowrap class="normala"><div align="right"><? echo $lgv_personnomo; ?> :</div></td>
+					<td nowrap class="normala">
+						<input type="text" name="personnomo" value="<? echo $aligxilo["personnomo"];?>">
+						<!-- <td nowrap class="normala"><div align="right" nowrap>
+						-->
+						<? echo $lgv_vira; ?><input type="radio" name="sekso" value="M" <?if ($aligxilo["sekso"]=="M"){echo "checked";}?>>
+						<? echo $lgv_virina; ?><input type="radio" name="sekso" value="I" <?if ($aligxilo["sekso"]=="I"){echo "checked";}?>>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td nowrap class="normala"><div align="right"><? echo $lgv_adreso1; ?> :</div></td>
+					<td nowrap class="normala"><input type="text" name="adreso1"  value="<? echo $aligxilo["adreso1"];?>"></td>
+					<td nowrap class="normala"><div align="right"><? echo $lgv_adreso2; ?> :</div></td>
+					<td nowrap class="normala"><input type="text" name="adreso2" value="<? echo $aligxilo["adreso2"];?>"></td>
+				</tr>
+				<tr>
+					<td class="normala"><div align="right"><?=$lgv_posxtkodo; ?> :</div></td>
+					<td><input type="text" name="posxtkodo" value="<? echo $aligxilo["posxtkodo"];?>"></td>
+					<td  class="normala"><div align="right"><? echo $lgv_urbo; ?> :</div></td>
+					<td><input type="text" name="urbo" value="<? echo $aligxilo["urbo"];?>"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><div align="center" class="artifiko"><?=$lgv_enirnomohelpo; ?></div></td>
+					<td colspan="2"><div align="center" class="artifiko"><? echo $lgv_pasvortohelpo; ?></div></td>
+				</tr>
+				<tr>
+					<td nowrap>
+						<div align="right" class="normala"><?=$lgv_enirnomo; ?> <i>(*)</i>: </div>			
+					<td nowrap class="normala"><input type="text" name="enirnomo" value="<?=$aligxilo["enirnomo"];?>"></td>
+					<td nowrap>
+						<div align="right" class="normala"><? echo $lgv_pasvorto1; ?> <i>(*)</i>: </div>					
+					<td nowrap class="normala"><input type="password" name="pasvorto"></td>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+					<td nowrap><div align="right" class="normala"><?=$lgv_pasvorto2; ?> : </div></td>
+					<td nowrap><input type="password" name="pasvorto2"></td>
+				</tr>
+				<tr>
+<!--					<td nowrap><div align="right" class="normala"><?=$lgv_lingvo; ?> :</div></td>
+					<td nowrap class="normala"><? simplaVorto("nomo","lingvoj"," where kodo='$lingvo'"); ?></td>
+-->				
+					<td nowrap class="normala"><div align="right"><?=$lgv_lando; ?> :</div></td>
+					<td nowrap class="normala" colspan="2">
+						<? konstruiMenuon("lando","landoj","kodo","nomo",$aligxilo["lando"]," where lingvo='$lingvo' order by nomo"); ?>
+					</td>
+					<td colspan="2">&nbsp;</td>
+				<tr>
+					<td nowrap class="normala"><div align="right"><? echo $lgv_retadreso; ?> <i>(*)</i>:</div></td>
+					<td nowrap colspan="2" class="normala"><input type="text" size="50" name="retadreso" value="<?=$aligxilo["retadreso"];?>"></td>
+				</tr>
+				<tr>
+					<td nowrap height="34" class="normala">
+						<div align="right"><?=$lgv_naskigxdato; ?> :</div></td>
+					<td nowrap height="34">
+						<input type="text" name="naskigxdato_tago" size="3" maxlength="2" value="<? echo $aligxilo["naskigxdato_tago"];?>">
+						<? konstruiMenuon("naskigxdato_monato","monatoj","kodo","nomo",$aligxilo["naskigxdato_monato"]," where lingvo='$lingvo'"); ?>
+						<input type="text" name="naskigxdato_jaro" size="5"  maxlength="4" value="<? echo $aligxilo["naskigxdato_jaro"];?>">
+					</td>
+				</tr>
+				<tr>
+					<td nowrap><div align="right" class="normala"><? echo $lgv_sekvitakurso; ?> :</div></td>
+					<td colspan="2" class="normala">
+						<? if (isset($kurso)){
+								simplaVorto("nomo","kursoj"," where kodo='$kurso' and lingvo='$lingvo'");}
+							else {
+								konstruiMenuon("kurso","kursoj","kodo","nomo",$aligxilo["kurso"]," where lingvo='$lingvo'");}
+						?>
+					</td>
+				</tr>
+				<tr> 
+					<td colspan="4"><i><font size="2" face="Arial, Helvetica, sans-serif">
+						Je d&eacute;sire recevoir la lettre mensuelle d'information de l'association Esp&eacute;ranto-Jeunes 
+						par courrier &eacute;lectronique: <input type="checkbox" name="verdakrabo" checked>
+						</font></i>
+	 					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="normala"> <div align="left"><?=$lgv_kialo; ?></div></td></tr>
+				<tr>
+					<td colspan="4"> <div align="center">
+					<textarea name="kialo" cols="70" row="3"><?=stripslashes($aligxilo["kialo"]);?></textarea></div>
+				</td>
+				</tr>
+				<tr>
+					<td colspan="4"> <div align="center">
+					<input type="submit" name="Submit" value="<? echo $lgv_sendu; ?>"></div></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+<!--	<tr>
+		<td bgcolor="#d0d8df">&nbsp;</td>
+	</tr>
+-->
+</table>
+<p class="artifiko" align="center"><? echo $lgv_aligxpiedo1; ?><? echo $lgv_aligxpiedo2; ?></p>
+</center>

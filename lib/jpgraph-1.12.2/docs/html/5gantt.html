@@ -1,0 +1,1640 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="6csimdoc.html">Previous</A>
+<A HREF="55polar.html">Next</A>
+<HR>
+<H1><A NAME="9">9 Gantt charts</A></H1>
+<H2><A NAME="9_1">9.1 Purpose of this tutorial</A></H2>
+ This tutorial aims to introduce how to use the Gantt chart module of
+ JpGraph. The only assumptions made is that you have a working knowledge
+ of PHP and have a basic understanding of JpGraph, most likely you
+ should have read the JpGraph documentation.
+<P> This tutorial specifically will<STRONG> not</STRONG> teach you how
+ to install PHP, Apache, TTF fonts, the GD library or any other
+ infrastructure that you need to make JpGraph work.</P>
+<H2><A NAME="9_2">9.2 Some notes on format and files used in this
+ tutorial</A></H2>
+ All source code displayed in the tutorial are separate files which are
+ included in the same directory as this tutorial. It is always the exact
+ code that generated the image that is shown and not a hand made copy.
+ The PHP source is syntax highlighted to make it easier to follow. The
+ actual file name appears for the code can always be found in the first
+ line of the displayed source.
+<P> Sometimes (to save space) the full source is not included in the
+ running text. For example if a new example is just a very minor
+ modification to a previous example. In that case I just show the
+ difference. For all images in this tutorial the full source can always
+ be seen by clicking on the &quot;[src]&quot; tag at the end of the caption for
+ that image.</P>
+<P> My hope is that these convention will make it easier to follow the
+ tutorial and will give a balanced mix of full source versus space and
+ ease of reading.</P>
+<H2><A NAME="9_3">9.3 Why use Gantt charts?</A></H2>
+ The cynical view: To explain why your project is over-due and
+ over-budget.
+<P> The pragmatic view: To keep management of our back and know what we
+ have forgotten</P>
+<P> The common view: As a tool to help identify project issues and
+ highlight problem areas.</P>
+<P> Basically, Gantt charts are used to show the state of a number of
+ activites (possible grouped) against time.</P>
+<H2><A NAME="9_4">9.4 Capabilities in JpGraph Gantt module</A></H2>
+<UL>
+<LI> Both automatic and manual scaling of date</LI>
+<LI> Full support for independent CSIM for both labels and activity bars</LI>
+<LI> Support for visualization of grouped activities</LI>
+<LI> Gant charts can be automatically sized according to the number of
+ bars and scale used. This means you don't have to supply a specific
+ size when creating a graph.</LI>
+<LI> Unlimited number of activities</LI>
+<LI> Supports platform independent Week number calculation according to
+ ISO:8601</LI>
+<LI> Rich possibility to display a variety of scales or combination of
+ scales supports both day, week, month, year. Each scale header is
+ totally configurable in terms of font, size, color, background etc</LI>
+<LI> User configurable date format in the scale headlines</LI>
+<LI> Visualization of constrains between activities, start-to-start,
+ start-to-end, end-to-start and end-to-end</LI>
+<LI> Scales have &quot;intelligent&quot; grids</LI>
+<LI> Supports title and subtitle with user specifed font, size and color</LI>
+<LI> Activity bars can have multiple patterns and colors</LI>
+<LI> Activity bar may have shadows</LI>
+<LI> Activity bars can have internal progress bars displayed to show how
+ much of a given task has been accomplished</LI>
+<LI> Activity titles can have individual fonts, colors and backgrounds</LI>
+<LI> Activity bars can have captions</LI>
+<LI> Activity bars can have specified left- and right end markers</LI>
+<LI> Bar heights can be specified in absolute pixels or in percent of
+ the activity line width</LI>
+<LI> Supports milestones with many different marks</LI>
+<LI> Supports vertical marker lines with text</LI>
+<LI> Can easiliy be localized</LI>
+<LI> Fully OO API which makes the API consistent and easy to learn</LI>
+<LI> ... and more</LI>
+</UL>
+<H2><A NAME="9_5">9.5 A simple Gantt chart</A></H2>
+ Time to show you an example of a Gantt chart and how easy it is to make
+ one. Lets make it the simplest possible gantt chart. One activity,
+ named &quot;Project&quot;, which lasts from &quot;2001-11-01&quot; to &quot;2002-02-20&quot;.
+<P> All it takes to do this (using default values for everything) is the
+ following code.<DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: ganttex00.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php
+<BR /></FONT><FONT color="#006600">include (</FONT><FONT color="#CC0000">
+&quot;../jpgraph.php&quot;</FONT><FONT color="#006600">);
+<BR />include (</FONT><FONT color="#CC0000">&quot;../jpgraph_gantt.php&quot;</FONT><FONT
+color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// A new graph with automatic size
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> GanttGraph</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;auto&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">//&nbsp;&nbsp;A new activity on row '0'
+<BR /></FONT><FONT color="#0000CC">$activity</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> GanttBar</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;Project&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;2001-12-21&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;2002-02-20&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$activity</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Display the Gantt chart
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Stroke</FONT><FONT color="#006600">();
+<BR /></FONT><FONT color="#0000CC">?&gt;
+<BR /></FONT></FONT></CODE></DIV> The resulting image is shown in Figure
+ 1 below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex00.html"> <IMG border="0" HEIGHT="121"
+ src="img/ganttex00.png" WIDTH="732"></A>
+<BR><SMALL><EM><B>Figure 1:</B> Your first simple Gantt chart.<A href="exframes/frame_ganttex00.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> Let's note a few things with the above image and code:</P>
+<UL>
+<LI> You always need to include both jpgraph.php and jpgraph_gantt.php</LI>
+<LI> A bar is specified a minimum of four parameters, vertical position
+ (more about that in a second), a title, start and end date.</LI>
+<LI> If you don't specify a size for the image it will be automtically
+ decided based on the min and max dates for the bars rounded to a full
+ week.</LI>
+<LI> By default the week and day scale are displayed.</LI>
+<LI> Weekend background are displayed default in a slightly gray color</LI>
+<LI> Sundays are written in red.</LI>
+<LI> Weeks are numbered according to ISO 8601</LI>
+<LI> Activity bars are rendered as blue stripes on a white background by
+ default.</LI>
+</UL>
+ So, lets start making this graph a little bit more interesting. First
+ we are going to add a title, then we will add a month scale and finally
+ we will change the color of the bar.
+<P> All that is taken care of in the code below.<DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: ganttex01.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php
+<BR /></FONT><FONT color="#006600">include (</FONT><FONT color="#CC0000">
+&quot;../jpgraph.php&quot;</FONT><FONT color="#006600">);
+<BR />include (</FONT><FONT color="#CC0000">&quot;../jpgraph_gantt.php&quot;</FONT><FONT
+color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> GanttGraph</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;auto&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetShadow</FONT><FONT color="#006600">();
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Add title and subtitle
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+Set</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">&quot;A nice
+ main title&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetFont</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+FF_ARIAL</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_BOLD</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">12</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">subtitle</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+Set</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">&quot;(Draft
+ version)&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Show day, week and month scale
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">ShowHeaders</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+GANTT_HDAY</FONT><FONT color="#006600"> |</FONT><FONT color="#0000CC">
+ GANTT_HWEEK</FONT><FONT color="#006600"> |</FONT><FONT color="#0000CC">
+ GANTT_HMONTH</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Instead of week number show the
+ date for the first day in the week
+<BR />// on the week scale
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+week</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">SetStyle</FONT><FONT
+color="#006600">(</FONT><FONT color="#0000CC">WEEKSTYLE_FIRSTDAY</FONT><FONT
+color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Make the week scale font smaller
+ than the default
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+week</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">SetFont</FONT><FONT
+color="#006600">(</FONT><FONT color="#0000CC">FF_FONT0</FONT><FONT color="#006600">
+);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Use the short name of the month
+ together with a 2 digit year
+<BR />// on the month scale
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+month</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetStyle</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+MONTHSTYLE_SHORTNAMEYEAR2</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Format the bar for the first
+ activity
+<BR />// ($row,$title,$startdate,$enddate)
+<BR /></FONT><FONT color="#0000CC">$activity</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> GanttBar</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;Project&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;2001-12-21&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;2002-02-20&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Yellow diagonal line pattern on a
+ red background
+<BR /></FONT><FONT color="#0000CC">$activity</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetPattern</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">BAND_RDIAG</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;yellow&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$activity</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFillColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;red&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Finally add the bar to the graph
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$activity</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// ... and display it
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Stroke</FONT><FONT color="#006600">();
+<BR /></FONT><FONT color="#0000CC">?&gt;
+<BR /></FONT></FONT></CODE></DIV> The resulting image is shown in Figure
+ 2 below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex01.html"> <IMG border="0" HEIGHT="160"
+ src="img/ganttex01.png" WIDTH="732"></A>
+<BR><SMALL><EM><B>Figure 2:</B> Making the Gantt chart a little bit more
+ interesting with title and more colors.<A href="exframes/frame_ganttex01.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> From the above example you might note a few things</P>
+<UL>
+<LI> The margins adjust automtically to the added title and subtitle</LI>
+<LI> The height of the scale headers adjust automatically when you
+ change the font.</LI>
+<LI> You have great flexibility in choosing what format the scale labels
+ will have. If you for example wanted the full 4 digit year in the month
+ header all you have to change is use the constant
+ MONTHSTYLE_SHORTNAMEYEAR2 in the code above to
+ MONTHSTYLE_SHORTNAMEYEAR4</LI>
+<LI> You have full freedom of manipulating headers in terms of font,
+ color, background and size.</LI>
+</UL>
+ To show that this is really simple let's show the full year in the
+ month, and set the header style to be white text on a dark blue
+ background by adding the lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#FF9900">
+ // Use the short name of the month together with a 4 digit year
+<BR />// on the month scale
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+month</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetStyle</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+MONTHSTYLE_SHORTNAMEYEAR4</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+month</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetTextColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;white&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+month</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetBackgroundColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;blue&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P> to the code above. The resulting image is shown in Figure 3</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex02.html"> <IMG border="0" HEIGHT="120"
+ src="img/ganttex02.png" WIDTH="417"></A>
+<BR><SMALL><EM><B>Figure 3:</B> Enhancing the scale headers.<A href="exframes/frame_ganttex02.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H2><A NAME="9_6">9.6  The structure of a Gantt chart</A></H2>
+ A Gantt chart is made up of four distinct areas.
+<OL>
+<LI>On the left side there is the activity title column.</LI>
+<LI>On the top there is the scale headers (up to four headers may be
+ displayed)</LI>
+<LI>The actual plot area where all the Gantt bars and markers go</LI>
+<LI>The margin area, where for example the titles are shown</LI>
+</OL>
+ Since a Gantt chart inherits all the usual properties of a JpGraph
+ Graph() you have the access to the same method to formatting the image
+ as before. For example to have a shadow around the image you call
+ Graph::SetShadow() and to set the margin color you can use
+ Graph::SetMarginColor(). Please refer to the reference documentation
+ for a full list of supported features.
+<P> To create a Gantt chart you<STRONG> add</STRONG> objects to it. As
+ of this writing you may add the following object by the use of the
+ GanttChart::Add() method</P>
+<UL>
+<LI> Gantt bars (indicates the length of an activity)</LI>
+<LI> Milestones, a single mark at a specific date</LI>
+<LI> Vertical line, might be use to mark phases in projects</LI>
+</UL>
+ All these objects may be extensivly modified in terms of formatting.
+ You can specify color (both fill- and frame color), size, titles, style
+ and patterns and so on. All these objects comes with (in my mind)
+ sensible default so you don't have to specify a lot of parameters. But
+ if you need a fine grain control or if you disagree with my taste you<STRONG>
+ can</STRONG>.
+<H2><A NAME="9_7">9.7 Creating a GanttChart</A></H2>
+ You create a new Gantt Chart with a call to GanttChart(). The signature
+ for GanttGraph is the same as for ordinary JpGraph graphs, i.e
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#006600">
+ function</FONT><FONT color="#0000CC"> GanttGraph</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$aWidth</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$aHeight</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$aCachedName</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$aTimeOut</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$aInline</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P> The only real difference is that for GanttCharts you can specify one
+ or both of the dimension parameters (width and height) as -1 in which
+ case that dimension will be automatically sized determined by scale and
+ fonts choosen. The following examples shows some possible ways of
+ creating a new graph</P>
+<UL>
+<LI> $graph=new GanttGraph()
+<BR> The size of the graph will be determined automtically, no caching
+ will be used and the graph will be generated inline.</LI>
+<LI> $graph=new GanttGraph(-1,-1,&quot;auto&quot;)
+<BR> The size of the graph will be determined automtically, caching will
+ be used (the name will be based on the script name), no timeout will be
+ used and the graph will be generated inline</LI>
+<LI> $graph=new GanttGraph(450,-1,&quot;auto&quot;,5)
+<BR> Same as the previous entry but the width is fixed to 450 points and
+ the cached image will have a timeout of 5 min.</LI>
+<LI> $graph=new GanttGraph(-1,-1,&quot;auto&quot;,5,false)
+<BR> The image will not be generated inline, only the cache will be
+ updated if it has timed out, otherwise nothing will happen.</LI>
+</UL>
+ Since GanttGraph() inherits all the methods (that make sense for
+ GanttGraph) from Graph you can specify shadow, color etc of the general
+ frame.
+<H2><A NAME="9_8">9.8 Positioning objects in the Gantt plot</A></H2>
+ Bars and Milestones need both a vertical position and a horizontal
+ position. The horizontal start position is specified as a date, e.g.
+ &quot;2001-06-23&quot;, and the vertical positions are specified as a number
+ [0,1,2,3,...]. This vertical number indicates the position from the top
+ where the object should be placed. To understand this you might imagine
+ a number of &quot;invisible&quot; horizontal bands with a certain height. If you
+ specify 0 as the vertical position the bar will be placed in the first
+ band, specify 3 and the bar will be placed in the fourth band and so
+ on.
+<P> It is perfectly legal, and perhaps even desirable to leave &quot;gaps&quot;
+ when laying out bands to group related activiies. So, for example you
+ could have three activities/bars at positions 1,2,3 and then another 2
+ bars at position 6,7 leaving band 0,4,5 empty.</P>
+<P> All these &quot;invisible bands&quot; have the same height (equspaced). The
+ height of each band is automatically determined and depends on both the
+ method of layout ( as specified by (GanttChart::SetLayout()) and the
+ individual heights of the individual bars and titles. The rules are
+ quite simple:</P>
+<UL>
+<LI> If you use layout=GANTT_FROMTOP (the default and most common) the
+ height will equal the height (+ a margin) of the highest gantt bar. The
+ height calculation of each bar takes into accout both the actual bar,
+ the title, and any left- right-marks (more about that later) that may
+ be present. The name &quot;fromtop&quot; refers to that when you have explicetly
+ specified a height the bars will usually be added from band 0 and
+ onwards and hence beeing added from the top. (This might leave empty
+ space at the bottom of the plot area in the graph if the height of the
+ graph has been explicetly specified).</LI>
+<LI> If you use layout=GANTT_EVEN the bars are evenly (hence the name)
+ spread out over the available height in the gantt chart and no
+ consideration is taken of the individual bars heights. Note that if you
+ use automtic sizing you cant use even layout. It just doesn't make
+ sence. Even layout is for those cases when you deliberately specify a
+ very large image and whant the bars evenly distributed using the full
+ height.</LI>
+</UL>
+<H2><A NAME="9_9">9.9 Gantt bars</A></H2>
+ The most common of all object in a Gantt chart is of course the
+ activity bar (GanttBar()). In terms of formatting this object has a
+ very large flexibility. The full signature for the GanttBar constructor
+ is
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#006600">
+ function</FONT><FONT color="#0000CC"> GanttBar</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$aVPos</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$aTitle</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$aStart</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">$aEnd</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">$aCaption</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$aHeight</FONT><FONT color="#006600">)</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV>
+<P></P>
+<TABLE border="0">
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aVPos</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>The
+ vertical position for the bar, [0..n]</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aTitle</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>Title
+ for the activity</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aStart</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>Start
+ date for the activity given as string, e.g &quot;2001-09-22&quot;</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aEnd</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>End
+ date for activity given as<B> either</B> a date (a string) or as the
+ duration (in days) of the activity, e.g both &quot;2001-10-15&quot; and 20.5 are
+ valid inputs</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aCaption</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>
+Text string (caption) to appear at the end (right side) of the bar</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aHeight</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>
+Height of bar given as<B> either</B> a value in range [0,1] in which
+ case this is interpretated as what fraction of the vertical position
+ should the bar occupy. The height can also be given in absolute pixels
+ [1..200]</TD></TR>
+</TABLE>
+<H3><A NAME="9_9_1">9.9.1 Specifying vertical position</A></H3>
+ As described above vertical positions are specified as a numeric value
+ [0..n] where 'n' is an arbitrary constant. (For practical purposes n is
+ most likely &lt; 100)
+<P> Using our previous example we will illustrate this parametger by
+ changing the position of our 'Project' activity to position 7. Therefor
+ we change the call to GanttBar() to
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $activity</FONT><FONT
+color="#006600"> = new</FONT><FONT color="#0000CC"> GanttBar</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">7</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;Project&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;2001-12-21&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;2002-02-20&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> and we then get the chart as shown below in Figure 4.</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex03.html"> <IMG border="0" HEIGHT="288"
+ src="img/ganttex03.png" WIDTH="732"></A>
+<BR><SMALL><EM><B>Figure 4:</B> Changing the vertical position to 7<A href="exframes/frame_ganttex03.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> Note that the height of each position (vertical position) will
+ depend on the actual height of the bar.</P>
+<H3><A NAME="9_9_2">9.9.2 Specifying start and end position for a bar</A>
+</H3>
+ Start of bars are given as a date string. The formar depends on the
+ current locale. Examples of valid date strings are
+<UL>
+<LI> &quot;2001-10-22&quot;</LI>
+<LI> &quot;22 October 2001&quot;</LI>
+<LI> &quot;22 Oct 2001&quot;</LI>
+</UL>
+ Even if several format are supported it is recommended to use all
+ numeric dates, i.e in the form &quot;2001-10-22&quot;.
+<P> Specifying the end position may be done in two different ways,
+ either by the end date in the same way as for the start date. The other
+ way is to specify the<B> length</B> of the activity in number of days
+ (and fractions thereof). Examples of valid end dates are:</P>
+<UL>
+<LI> &quot;2001-11-15&quot;</LI>
+<LI> &quot;15 Nov 2001&quot;</LI>
+<LI> 22, (specifies duration of 22 days)</LI>
+<LI> 22.7, (specifies duration of 22.7 days)</LI>
+</UL>
+<B> Note:</B> Duration is specified as numerical values and<B> not</B>
+ strings.
+<H3><A NAME="9_9_3">9.9.3 Milestones</A></H3>
+ Milestones are similair to bars but have no end date since milestones
+ just apply to one single date. Milestones are created much the same way
+ as activities but using method MileStone() instead.
+<P> The full signature for milestones are
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#006600">
+ function</FONT><FONT color="#0000CC"> MileStone</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$aVPos</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$aTitle</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$aDate</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$aCaption</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P></P>
+<TABLE border="0">
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aVPos</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>The
+ vertical position for the bar, [0..n]</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aTitle</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>Title
+ for the activity</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aDate</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>Date
+ for the milestone</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aCaption</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>
+Text to the right of the milestone</TD></TR>
+</TABLE>
+Valid milestones are for example
+<UL>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> $milestone</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> MileStone</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">3</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;Code complete&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;2001-12-01&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></DIV></LI>
+<P></P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> $milestone</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> MileStone</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">3</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;Code complete&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;2001-12-01&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;(2001-12-01)&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></DIV></LI>
+<P></P>
+</UL>
+ By default milestones are rendered as a filled &quot;Diamond&quot; shape. This
+ may be optionally modified. The actual shape is specified by the 'mark'
+ property of milestone which is an instance of the PlotMark() class
+ (same class responsible for the marks in line graphs).
+<P> To change the shape of a milestone to, say a triangle, you use the
+ SetType() method as in
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $milestone</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">mark</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetType</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">MARK_DTRIANGLE</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> Let's put this into practice and add a milestone to our previous
+ example by adding the followinf two lines of code which result in
+ Figure 5 shown below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex04.html"> <IMG border="0" HEIGHT="197"
+ src="img/ganttex04.png" WIDTH="744"></A>
+<BR><SMALL><EM><B>Figure 5:</B> Illustration of how to add a milestone
+ to a gantt chart<A href="exframes/frame_ganttex04.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<P> You may note that by default the title color is red for milestones.
+ If you like to change this to be instead, say bold black, you would
+ invoke the SetColor() and SetFont() methods on the title property of
+ milestones as in
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $milestone</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">title</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFont</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">FF_FONT1</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FF_BOLD</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$milestone</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;black&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> and thew result would now (not surprisingly be)</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex05.html"> <IMG border="0" HEIGHT="197"
+ src="img/ganttex05.png" WIDTH="753"></A>
+<BR><SMALL><EM><B>Figure 6:</B> Modifying the milestone title color and
+ font<A href="exframes/frame_ganttex05.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P> To modify the caption you do exactly the same but act on property
+ 'caption' instead of 'title', i.e.
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $milestone</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">caption</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFont</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">FF_FONT1</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FF_BOLD</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$milestone</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">caption</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;black&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P></P>
+<P> It is worth noting that you modify the bar title and caption the
+ exact same way by acting on the 'title' and 'caption' property for the
+ bars.</P>
+<H3><A NAME="9_9_4">9.9.4 Vertical line</A></H3>
+ The final object you may add to a Gantt chart is simple, but quite
+ useful, a straight vertical line extending over the whole plot height.
+ This could for example be used to illustrate different phases in a
+ project. You create a line object by a call to GanttVLine()
+<P> The full signature for GanttVLine() is
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#006600">
+ function</FONT><FONT color="#0000CC"> GanttVLine</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$aDate</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$aTitle</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$aColor</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$aWeight</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$aStyle</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P></P>
+<TABLE border="0">
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aDate</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>Date
+ for the milestone</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aTitle</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>Title
+ for the line. The title is displayed at the bottom of the line</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aColor</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>Color
+ for the line</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aWeight</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>Line
+ width</TD></TR>
+<TR><TD valign="top">
+<!--span style="font-family:times;font-size:85%;font-weight:bold;"-->
+<CODE><FONT color="#000000"><FONT color="#0000CC">
+ &lt;?php $aStyle</FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>Line
+ style,&quot;dashed&quot;, &quot;dotted&quot; and so on</TD></TR>
+</TABLE>
+Valid creations of lines are for example
+<UL>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> $vline</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> GanttVLine</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;2001-12-24&quot;</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV></LI>
+<P></P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> $vline</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> GanttVLine</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;2001-12-24&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;Phase 1&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></DIV></LI>
+<P></P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> $vline</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> GanttVLine</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;2001-12-24&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;Phase 1&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;darkred&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></DIV></LI>
+<P></P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> $vline</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> GanttVLine</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;2001-12-24&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;Phase 1&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;darkred&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">5</FONT><FONT
+color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV>
+</LI>
+<P></P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> $vline</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> GanttVLine</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;2001-12-24&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;Phase 1&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;darkred&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">5</FONT><FONT
+color="#006600">,</FONT><FONT color="#CC0000">&quot;dotted&quot;</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV></LI>
+<P></P>
+</UL>
+ To add the line to the graph you just have to call GanttGraph::Add() as
+ with milestones and bars. Let's illustrate the use of vertical lines by
+ adding a line to the previous example.
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $vline</FONT><FONT color="#006600">
+ = new</FONT><FONT color="#0000CC"> GanttVLine</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;2001-12-24&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;Phase 1&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$vline</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+<P> and the example (See 7) now becomes</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex06.html"> <IMG border="0" HEIGHT="197"
+ src="img/ganttex06.png" WIDTH="753"></A>
+<BR><SMALL><EM><B>Figure 7:</B> Adding a vertical line with a title to
+ the Gantt chart<A href="exframes/frame_ganttex06.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P> From the above figure you can see that by default the line is drawn
+ at the beginning of the day of the specified date and in a 'dashed'
+ style. This can (of course!) be modified so that the line is
+ drawn/aligned anywhere in the specified day. You modify this by
+ invoking the method SetDayOffset() with an argument specifying the
+ fraction of the day where you want the line positioned.</P>
+<P> If you, for example, want to display the line in the middle of the
+ day just add the line
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $vline</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetDayOffset</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">0.5</FONT><FONT color="#006600">);</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> to the previous code and the result will be</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex07.html"> <IMG border="0" HEIGHT="197"
+ src="img/ganttex07.png" WIDTH="753"></A>
+<BR><SMALL><EM><B>Figure 8:</B> Modifying the position of the line
+ within the day<A href="exframes/frame_ganttex07.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<P> As usual you may modify the font, size and color by invoking the
+ appropriate method (SetFont(), SetColor()) on the 'title' property of
+ lines.</P>
+<H3><A NAME="9_9_5">9.9.5 Adding markers to a gantt bar</A></H3>
+ You can easily add a variety of masrkers both to the start and end of
+ the gantt bar. They could for example be used as an alternate way to
+ illustrate important milestones or anticipated deliveries.
+<P> The left and right markers are accessed through the two properties
+ 'leftMark' and 'rightMark'. They are both instances of the general
+ 'PlotMark' class which is also used for the milestones (and in line
+ graphs). The 'PlotMark' class supports several different styles, for
+ example, diamond (the default for milestones), filled and unfilled
+ circles, squares, stares, and so on. Please refer to the reference
+ section for a complete listing.</P>
+<P> Let's illustrate this by adding a right marker to the previous
+ example. We will use a style of a filled (red) circle with a white
+ title, say, &quot;M5&quot;. In order to accomplish this we must augument the
+ previous example with the following lines:
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $activity</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">rightMark</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Show</FONT><FONT color="#006600">();&nbsp;&nbsp;&nbsp;&nbsp;
+<BR /></FONT><FONT color="#0000CC">$activity</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">rightMark</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+Set</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">&quot;M5&quot;</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$activity</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">rightMark</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetType</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+MARK_FILLEDCIRCLE</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$activity</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">rightMark</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetWidth</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+10</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$activity</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">rightMark</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;red&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$activity</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">rightMark</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetFillColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;red&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$activity</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">rightMark</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetFont</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+FF_ARIAL</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_BOLD</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">12</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$activity</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">rightMark</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;white&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> This might seem like a lot of lines but this is as complicated as it
+ possible can get. As an illustration I have changed more or less
+ everything that is changeable. I changed the defult font, font-color,
+ fill-color, frame-color and width of marker. The two lines only really
+ necessary are the first two, showing the mark and setting a title. You
+ could get away with using default values for the rest of the
+ properties.</P>
+<P> The resulting image can be seen in Figure 9 below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex08.html"> <IMG border="0" HEIGHT="251"
+ src="img/ganttex08.png" WIDTH="753"></A>
+<BR><SMALL><EM><B>Figure 9:</B> Adding a right marker to a bar.<A href="exframes/frame_ganttex08.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> I have deliberately introduced a &quot;strangeness&quot; here. If you compare
+ the two previous examples you can see that the last example is larger
+ than the previous one. Why?</P>
+<P> The explanation is simple if you remember that the height of bars
+ are sized relative to the horizontal spacing. The horizontal spacing
+ are based on the highest single bar including title size and, here come
+ the explanation, marker size. The horizontal spacing has grown since
+ the minimum height is now based on 10 points(=the height of the mark).
+ The bar still occupy the same percentage of the height so it seems to
+ have grown.</P>
+<P> If this behaviour is unwanted it is always possible to specify an
+ absolute size for the bar heigh, say 8 pixels, with a call
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $activity</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">SetHeight</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">8</FONT><FONT color="#006600">);</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> and achive the result in Figure 10 below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex09.html"> <IMG border="0" HEIGHT="251"
+ src="img/ganttex09.png" WIDTH="753"></A>
+<BR><SMALL><EM><B>Figure 10:</B> Specifying an absolute size for the
+ height of the bar.<A href="exframes/frame_ganttex09.html"> [src]</A></EM>
+</SMALL></DIV></P>
+<P> It is worth noting that the height reserved for each bar is still
+ the same since we haven't changed the height of the marker and the
+ reserved space is the maximum height used by any bar.</P>
+<H3><A NAME="9_9_6">9.9.6 Adjusting the minimum distance between bars</A>
+</H3>
+ Let's see what happens if we set the height of each bar to be 100% of
+ the reserved height by adding another activity/bar below the first one
+ and set the height of each bar to 100% by adding the lines (I omit the
+ added lines to add another bar since they are just a copy of the first
+ bar)
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $activity</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">SetHeight</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">1.0</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$activity2</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetHeight</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">1.0</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV>
+<P> to the previous example. (Note that a value in the range [0..1] is
+ interpretated as the fraction of the reserved height while a value &gt; 1
+ is interpretated as the absolute size in pizels.)</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex10.html"> <IMG border="0" HEIGHT="251"
+ src="img/ganttex10.png" WIDTH="753"></A>
+<BR><SMALL><EM><B>Figure 11:</B> Setting the height for each bar to 100%<A
+href="exframes/frame_ganttex10.html"> [src]</A></EM></SMALL></DIV></P>
+<P> Aha.. What we are trying to do doesn't really make sence. Since we
+ have specified that the bar will always occupy 100% of the available
+ reserved with there will be no distance between the bars. So what if we
+ specify the bar as 10 pixel absolute by changing the lines to
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $activity</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">SetHeight</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">10</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$activity2</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetHeight</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">10</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> we instead get</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex11.html"> <IMG border="0" HEIGHT="251"
+ src="img/ganttex11.png" WIDTH="753"></A>
+<BR><SMALL><EM><B>Figure 12:</B> Setting both bars height to 10 pixels<A href="exframes/frame_ganttex11.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> So what can we actually do? Well if you remember the reserved height
+ for each bar is the maximum height of all bars including titles. This
+ guarantees that no two bars will ever overlap. To guarantee that titles
+ don't end up too close together there is a<B> Vertical Label Margin</B>
+ which basically specifies some extra &quot;air&quot; in between the titles. The
+ amount of air is specified in percent of the title height. To set the
+ margin you use
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> GanttGraph</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">SetLabelVMarginFactor</FONT><FONT
+color="#006600">(</FONT><FONT color="#0000CC">$aMargin</FONT><FONT color="#006600">
+)</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> As an example let's set that margin in the previous example to 0 and
+ see what happens.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex12.html"> <IMG border="0" HEIGHT="220"
+ src="img/ganttex12.png" WIDTH="753"></A>
+<BR><SMALL><EM><B>Figure 13:</B> Setting the vertical label margin to 0%<A
+href="exframes/frame_ganttex12.html"> [src]</A></EM></SMALL></DIV></P>
+<P> As you would perhaps expect the two bars just barely touches now
+ since there are no extra margin added. If the two bars hadn't had the
+ extra right marker it would have looked very compressed.</P>
+<P> By default the vertical margin is set to 40%.</P>
+<H2><A NAME="9_10">9.10 Formatting the scale headers</A></H2>
+ The scale headers allow you to view up to four different scales at the
+ same time. The four basic scales are:
+<UL>
+<LI> Day scale</LI>
+<LI> Week scale</LI>
+<LI> Month scale</LI>
+<LI> Year scale</LI>
+</UL>
+ You can choose what scale to include and exclude by using the
+ SetScale() method. For example, for a detailed gantt you might choose
+ to display days and weeks by specifying
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">ShowHeaders</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC"> GANTT_HWEEK</FONT><FONT color="#006600"> |</FONT><FONT color="#0000CC">
+ GANTT_DAY</FONT><FONT color="#006600"> );</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P> If you instead wanted &quot;the big picture&quot; it might be enough to show
+ year and months by specifying
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">ShowHeaders</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC"> GANTT_YEAR</FONT><FONT color="#006600"> |</FONT><FONT color="#0000CC">
+ GANTT_MONTH</FONT><FONT color="#006600"> );</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> You can choose freely the combination of scales that you want, but a
+ chart must at least have one scale of course.</P>
+<P> Once you have decided what level of details you need ou can then
+ fine tune the exact layout/formatting of each of the enabled scales as
+ described below.</P>
+<P> These scale header are all accessed through the graph instance
+ variables 'scale' as in
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">week</FONT></FONT></CODE></DIV></P>
+<P> or
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">day</FONT></FONT></CODE></DIV></P>
+<P> . All these headers share the following properties.</P>
+<UL>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> Show</FONT><FONT color="#006600">
+()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV></LI>
+<P> Determine if the scale should be shown or not</P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> SetFont</FONT><FONT color="#006600">
+()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV></LI>
+<P> Font for text in header</P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> SetFontColor</FONT><FONT color="#006600">
+()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV></LI>
+<P> Specify the color of the header text</P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> SetStyle</FONT><FONT color="#006600">
+()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV></LI>
+<P> Specify what date format should be used, for example in the week
+ scale it is possible to show either week number, the start date of the
+ week and so on.</P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> SetBackgroundColor</FONT><FONT
+color="#006600">()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV>
+</LI>
+<P> As it says, the background color for the header</P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> SetFrameWeight</FONT><FONT color="#006600">
+()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV></LI>
+<P> The line weight of the box around the scale</P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> SetFrameColor</FONT><FONT color="#006600">
+()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV></LI>
+<P> The line color for the frame</P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> SetTitleVertMargin</FONT><FONT
+color="#006600">()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV>
+</LI>
+<P> The margin, in percent, below and above the title text</P>
+</UL>
+ In addition to these methods each scale also has the property 'grid'
+ which determines the appearance of gridlines for that specific scale.
+ You may modify the appearance of gridliens by the &quot;normal&quot; line
+ methods, i.e. SetColor(),SetWeight() SetStyle() and Show(). So for
+ example to set the week gridline red you would use
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">week</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+grid</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">SetColor</FONT><FONT
+color="#006600">(</FONT><FONT color="#CC0000">&quot;red&quot;</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+<P> Each of the scales also have some specific formatting possibilities
+ as described below.</P>
+<H3><A NAME="9_10_1">9.10.1 Day scale</A></H3>
+ Days are shown as &quot;one letter boxes&quot;. The extra formatting
+ possibilities you have for days is the possibility to specify a
+ different color for the weekend background and for the Sunday.
+<UL>
+<LI>
+<BR>&nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> SetWeekendColor</FONT><FONT color="#006600">
+()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV></LI>
+<P> Set the background color for weekends. (Defaults to light gray)</P>
+<LI>
+<BR>&nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> SetSundayFontColor</FONT><FONT
+color="#006600">()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV>
+</LI>
+<P> The Sunday font color. (Defaults to red)</P>
+</UL>
+ In addition to this there is also a possibility to choose whether or
+ not the weekend background should be extended vertically down over the
+ plotare. By default it is. Since that is a property more of the whole
+ plot you modify this behaviour with a call to the method
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> UseWeekendBackground</FONT><FONT
+color="#006600">()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV>
+<P> of the scale, e.g.
+<BR> &nbsp;
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">UseWeekendBackground</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">false</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<H3><A NAME="9_10_2">9.10.2 Week scale</A></H3>
+ Week scales, if enabled, by default shows the week number in range 1 to
+ 53 (as defined by ISO-8601, see the reference section).
+<P> It might be worth pointing out here that the week number calculation
+ is carried out within JpGraph and does not rely on the underlying OS
+ date libraries. This makes the behaviour consistent over several OS:s
+ (at least M$ Windows does<B> not</B> comply to ISO-8601 or supply any
+ way of doing this through the normal libraries, e.g. strftime())</P>
+<P> You may modify the week behaviour in three ways. You can specify
+ (with SetStyle()) a different date format using the constants</P>
+<UL>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> WEEKSTYLE_WNBR</FONT></FONT>
+</CODE></DIV></LI>
+<P> Show weeknumber To further modify the formatting of the actual week
+ number you can optionally supply a format string witha call to
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> SetLabelFormatString</FONT><FONT
+color="#006600">()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></DIV>
+</P>
+<P> The format of the string should be a standard sprintf() syntax
+ expecting an integer (the weeknumber). By default a 'W' is prefixed to
+ the number.</P>
+<LI>
+<BR> &nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> WEEKSTYLE_FIRSTDAY</FONT></FONT>
+</CODE></DIV></LI>
+<P> Show date of first day in week.</P>
+</UL>
+<H3><A NAME="9_10_3">9.10.3 Month scale</A></H3>
+ For month scale you can use the SetStyle() method to choose between a
+ variety of formats.
+<UL>
+<LI>
+<BR>&nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> MONTHSTYLE_SHORTNAME</FONT></FONT>
+</CODE></DIV></LI>
+<P> Display the month name in its locale specific short form, i.e Jan,
+ Feb etc</P>
+<LI>
+<BR>&nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> MONTHSTYLE_SHORTNAMEYEAR2</FONT>
+</FONT></CODE></DIV></LI>
+<P> Display the month name in its locale specific short form together
+ with a 2 digit year , i.e Jan '01, Feb '01 etc</P>
+<LI>
+<BR>&nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> MONTHSTYLE_SHORTNAMEYEAR4</FONT>
+</FONT></CODE></DIV></LI>
+<P> Display the month name in its locale specific short form together
+ with a 4 digit year , i.e Jan 2001, Feb 2001 etc</P>
+<LI>
+<BR>&nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> MONTHSTYLE_LONGNAME</FONT></FONT>
+</CODE></DIV></LI>
+<P> Display the month name in its locale specific long name, i.e.
+ January, February</P>
+<LI>
+<BR>&nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> MONTHSTYLE_LONGNAMEYEAR2</FONT>
+</FONT></CODE></DIV></LI>
+<P> Display the month name in its locale specific long name together
+ with a 2 digit year , i.e January '01, February '01 etc</P>
+<LI>
+<BR>&nbsp;
+<BR><DIV style="font-family:courier;font-size:85%;font-weight:bold;"><CODE>
+<FONT color="#000000"><FONT color="#0000CC"> MONTHSTYLE_LONGNAMEYEAR4</FONT>
+</FONT></CODE></DIV></LI>
+<P> Display the month name in its locale specific long name together
+ with a 4 digit year , i.e January 2001, February 2001 etc</P>
+</UL>
+<H3><A NAME="9_10_4">9.10.4 Year scale</A></H3>
+ Year scale has no extra formatting possibilities. (Simply because I
+ couldn't come up with any usefull modification of a simple year. If you
+ have any suggestion of fancy formatting you think could be usefull
+ please drop me a note and I have something to do for the next version)
+<H2><A NAME="9_11">9.11 More formatting for bars</A></H2>
+ This section shows some further modification you might do to activity
+ bars.
+<H3><A NAME="9_11_1">9.11.1 Adding caption to bars</A></H3>
+ Caption for bars are placed at the far right side of the bars. They can
+ for example be used to indicate the resources assigned to a task, the
+ duration of the task or the progress of the activity.
+<P> Caption text for a bar is specified either when creating a bar or
+ later by accessing the 'caption' property of bars. So the two lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $activity</FONT><FONT
+color="#006600"> = new</FONT><FONT color="#0000CC"> GanttBar</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;Activity 1&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;2001-11-21&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;2001-12-20&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;[BS,ER]&quot;</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> and
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $activity</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">caption</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Set</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;[BS,ER]&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> are both ways of specifying the caption &quot;[BS,ER]&quot; for the activity.
+ Since activity is a standard JpGraph text object you can easiliy modify
+ font, color and size with calls to SetFont() and SetColor(), (e.g.
+<BR>&nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $activity</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">caption</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFont</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">FF_ARIAL</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FF_BOLD</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">9</FONT><FONT
+color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+</P>
+<P></P>
+<P> The figure below illustrates the use of caption</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex13.html"> <IMG border="0" HEIGHT="194"
+ src="img/ganttex13.png" WIDTH="354"></A>
+<BR><SMALL><EM><B>Figure 14:</B> Illustration of the use of captions<A href="exframes/frame_ganttex13.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="9_11_2">9.11.2 Adding progress indicators to bars</A></H3>
+ To indicate the progress of a specific activity it is also possible to
+ add a progress indicator to each bar. This progress indicator consists
+ of a smaller bar within the bar. By default this progress bar is black
+ and 70% of the height of the bar. These parameter can (of course) all
+ be changed.
+<P> The properties for the progress indicator are accessed through the
+ 'progress' property and it's methods.</P>
+<P> To set the progress for a specific activity you only specify the
+ percent as a fraction. As in
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $activity</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">progress</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Set</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">0.4</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> In Figure 15 the previous example is modified to indicate the
+ progress of each activity by the default progress indicator. A solid
+ bar. To make it clearer I have also modified the caption to reflect the
+ displayed progress. (At the same time I slightly modified the scale
+ headers just for fun).</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex14.html"> <IMG border="0" HEIGHT="199"
+ src="img/ganttex14.png" WIDTH="354"></A>
+<BR><SMALL><EM><B>Figure 15:</B> Adding progress indicators.<A href="exframes/frame_ganttex14.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> To specify a different format for the progress you use the
+ SetPattern() method as in
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $activity</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">progress</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetPattern</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">BAND_RDIAG</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;blue&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> In the reference section you can see the exact parameters and all
+ available methods.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex15.html"> <IMG border="0" HEIGHT="199"
+ src="img/ganttex15.png" WIDTH="354"></A>
+<BR><SMALL><EM><B>Figure 16:</B> Changing the style of the progress
+ indicators.<A href="exframes/frame_ganttex15.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P></P>
+<H2><A NAME="9_12">9.12 Grouping activities</A></H2>
+ It is common to group activities. We have used this feature in the
+ examples of constrains. There is no special type for actvity bars that
+ are used to illustrate grouping. The common way of illustrating this
+ (as have been used above) is to add &quot;half&quot; a triangle marker at both
+ ends of the bar. The special provision that JpGraph does is that if you
+ add a left or right marker of type MARK_LEFTTRIANGLE or
+ MARK_RIGHTTRIANGLE those triangles will be drawn under the bars to give
+ the effect as show in the examples above. In the example above we also
+ have made the grouping bars have slightly less heigh since the end
+ trinagles will visually &quot;grow&quot; the bar.
+<P> So to get the effect we want for a group bar we have to use the two
+ lines:
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $groupbar</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">leftMark</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Set</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;MARK_LEFTTRIANGLE&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$groupbar</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">rightMark</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Set</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;MARK_RIGHTTRIANGLE&quot;</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> As of the current verion (1.10) There is not yet any formatting
+ support to accomplish the effect of indentation for the titles so this
+ is accomplished by using a fixed width font and adding spaces in front
+ of the title.</P>
+<H2><A NAME="9_13">9.13 More general Gantt formatting</A></H2>
+ In this section we will show a few more way by which you may customize
+ the gantt chart itself. This includes
+<UL>
+<LI> Adding a table title (not to be confused with the graph title)</LI>
+<LI> Adjusting appearance of the various lines in the bar chart</LI>
+</UL>
+<H3><A NAME="9_13_1">9.13.1 Adding a table title</A></H3>
+ The (default) white area in the top left of the gantt table may have a
+ title. This is accessed by the 'tableTitle' property of the gantt
+ scale. Using this is straightforward as the following lines show.
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">tableTitle</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+Set</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">&quot;(Rev:
+ 1.22)&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+tableTitle</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetFont</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+FF_FONT1</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_BOLD</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetTableTitleBackground</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;silver&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P> The example lines above also changes the default white background to
+ silver. Adding these lines to the previous example gives the following
+ result:</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex16.html"> <IMG border="0" HEIGHT="199"
+ src="img/ganttex16.png" WIDTH="354"></A>
+<BR><SMALL><EM><B>Figure 17:</B> Adding a table title.<A href="exframes/frame_ganttex16.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> From the above example you might notice that the width of the left
+ column (which holds all the titles) have automtically adjusted itself
+ to make the table title fit.</P>
+<H3><A NAME="9_13_2">9.13.2 Modifying the divider lines</A></H3>
+ The vertical and horizontal lines between the titles and the bars can
+ be modified by accessing the 'divider' and 'dividerh' properties of the
+ scale. Again, this is straightforward as the following example shows:
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">divider</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetWeight</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">3</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+divider</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;navy&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+dividerh</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetWeight</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">3</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+dividerh</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;navy&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P> The effect of this is shown in Figure 18 below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex17.html"> <IMG border="0" HEIGHT="199"
+ src="img/ganttex17.png" WIDTH="354"></A>
+<BR><SMALL><EM><B>Figure 18:</B> Modifying the dividing line<A href="exframes/frame_ganttex17.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="9_13_3">9.13.3 Modifying the box around the plot</A></H3>
+ In a similair manner to the other plots in JpGraph you modify the Box
+ round the plot with the standard graph method 'SetBox()' as in
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetBox</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">true</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;navy&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">3</FONT><FONT
+color="#006600">)</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+<P> which will result in a thicker plot box around the area as shown
+ below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex18.html"> <IMG border="0" HEIGHT="199"
+ src="img/ganttex18.png" WIDTH="354"></A>
+<BR><SMALL><EM><B>Figure 19:</B> Modifying the box around the plotarea<A href="exframes/frame_ganttex18.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<P> <SMALL><B> Note:</B> You might notice the slight discrepancy in
+ design that here you use a method and in the previous cases accessed a
+ property which you modified. This is the unfortunate affect of over a
+ years development of JpGraph. My own design preference has simply
+ changed over time. For revision 2.x I plan on taking the opportunity to
+ make things like this more conform since I have now convinced myself
+ that this is a better design.</SMALL></P>
+<H2><A NAME="9_14">9.14 Simplifying the drawing of Gantt graphs</A></H2>
+ As we have shown in the previous examples constructing a Gantt chart
+ consists of a number of repetetive tasks; Create the individual
+ activity bars and add them to the graph.
+<P> Now when you have a basic understanding of how this works you are
+ ready to appreciate a small helper method.<A href="">
+ GanttGraph::CreateSimple()</A>. This method takes a few arrays of data
+ which specifies you Gantt chart and then constructs this chart. By
+ using this method you sacrifies a few adjustment possibilities for
+ simplicity. This method is nothing magical it just takes the data for
+ the activities,(start and end date, titles, progress, any constrains
+ and so on) and constructs the activities and adds them to the graph.</P>
+<P> The activities are specified in data array which for each activity
+ have the following fields</P>
+<UL>
+<LI> What row the activity should be on</LI>
+<LI> Activity type, controls the apperance. Can be one of
+<OL>
+<LI> ACTYPE_NORMAL, A standard activty bar</LI>
+<LI> ACTYPE_GROUP, A Grouping bar</LI>
+<LI> ACTYPE_MILESTONE, A milestone</LI>
+<LI></LI>
+</OL>
+</LI>
+<LI> Title text</LI>
+<LI> Start date</LI>
+<LI> End date (NOT FOR Milestones!)</LI>
+<LI> Caption</LI>
+</UL>
+<P> So for example to create a Gantt chart consisting of two activities
+ which are grouped and a milestone one would have to use somthing
+ similair to the following code</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $data</FONT><FONT color="#006600">
+ = array(
+<BR />&nbsp;&nbsp;array(</FONT><FONT color="#0000CC">0</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">ACTYPE_GROUP</FONT><FONT color="#006600">
+,&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#CC0000">&quot;Phase 1&quot;</FONT><FONT color="#006600">
+,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#CC0000">&quot;2001-10-26&quot;</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000">&quot;2001-11-23&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;&quot;</FONT><FONT color="#006600">),
+<BR />&nbsp;&nbsp;array(</FONT><FONT color="#0000CC">1</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">ACTYPE_NORMAL</FONT><FONT color="#006600">
+,&nbsp;&nbsp;&nbsp;</FONT><FONT color="#CC0000">&quot;&nbsp;&nbsp;Label 2&quot;</FONT><FONT color="#006600">
+,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#CC0000">&quot;2001-10-26&quot;</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000">&quot;2001-11-13&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;[KJ]&quot;</FONT><FONT color="#006600">),
+<BR />&nbsp;&nbsp;array(</FONT><FONT color="#0000CC">2</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">ACTYPE_NORMAL</FONT><FONT color="#006600">
+,&nbsp;&nbsp;&nbsp;</FONT><FONT color="#CC0000">&quot;&nbsp;&nbsp;Label 3&quot;</FONT><FONT color="#006600">
+,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#CC0000">&quot;2001-11-20&quot;</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000">&quot;2001-11-22&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;[EP]&quot;</FONT><FONT color="#006600">),
+<BR />&nbsp;&nbsp;array(</FONT><FONT color="#0000CC">3</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">ACTYPE_MILESTONE</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000">&quot;&nbsp;&nbsp;Phase 1 Done&quot;</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000"> &quot;2001-11-23&quot;</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000">&quot;M2&quot;</FONT><FONT color="#006600">) );
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Create the basic graph
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> GanttGraph</FONT><FONT color="#006600">
+();
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+Set</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">&quot;Gantt
+ Graph using CreateSimple()&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Setup scale
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">ShowHeaders</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+GANTT_HYEAR</FONT><FONT color="#006600"> |</FONT><FONT color="#0000CC">
+ GANTT_HMONTH</FONT><FONT color="#006600"> |</FONT><FONT color="#0000CC">
+ GANTT_HDAY</FONT><FONT color="#006600"> |</FONT><FONT color="#0000CC">
+ GANTT_HWEEK</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+week</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">SetStyle</FONT><FONT
+color="#006600">(</FONT><FONT color="#0000CC">WEEKSTYLE_FIRSTDAY</FONT><FONT
+color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Add the specified activities
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">CreateSimple</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$data</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// .. and stroke the graph
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Stroke</FONT><FONT color="#006600">();
+<BR /></FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> This will then show up as</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttsimpleex1.html"> <IMG border="0" HEIGHT="240"
+ src="img/ganttsimpleex1.png" WIDTH="459"></A>
+<BR><SMALL><EM><B>Figure 20:</B> Using the simplified way via
+ CreateSimple() method<A href="exframes/frame_ganttsimpleex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> You may (slightly) modify the apperance of the simple Gantt charts
+ by means of the methods<A href=""> GanttGraph::SetSimpleFont()</A> and<A
+href=""> GanttGraph::SetSimpleStyle()</A> But not anything else,
+ remember that the purpose with this way of constructing graphs is to be
+ simple. If you need full advanced control you have to construct all the
+ activities in the &quot;normal&quot; way.</P>
+<P> You can also specify constrains and progress for each bar by
+ supplying additoinal data arrays to GanttGraph::CreateSimple().</P>
+<H2><A NAME="9_15">9.15 Adding CSIM (Client side Image Maps) to Gantt
+ charts</A></H2>
+ Gantt charts can have independent (different targets) hot spots in both
+ the activities and in the associated labels for each activity.
+<P> You specify the target and the associated &quot;Alt&quot; text for an activity
+ bar by calling the<A href="../ref/GanttPlotObject.html#_GANTTPLOTOBJECT_SETCSIMTARGET">
+ GanttBar::SetCSIMTarget()</A> and<A href="../ref/GanttPlotObject.html#_GANTTPLOTOBJECT_SETCSIMALT">
+ GanttBar::SetCSIMAlt()</A></P>
+<P> In a similar way you set the target and Alt texts for the activity
+ title as the following code extract shows.
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $bar</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetCSIMTarget</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;http://localhost/abc/&quot;</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$bar</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetCSIMAlt</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;Alt Text for the bar&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$bar</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetCSIMTarget</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;http://localhost/abc&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$bar</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetCSIMAlt</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;Alt Text for the title&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> The above code assumes that your activity is availabel in the
+ variable 'bar'. In the example directory there is a complete example of
+ how to use CSIM together with Gantt charts in the &quot;ganttcsimex1.php&quot;
+ file. (Please note that this example makes use of the simplified Gantt
+ chart specification using the CreateSimple() method.</P>
+<H2><A NAME="9_16">9.16 Adding constrains between your activities</A></H2>
+ With Gantt charts there is often the need to illustrate constrans
+ between one or several activities. One of the most common constrain is
+ that on activity can't start before an other activity finish.
+<P> JpGraph support visualizing the following types of constrains</P>
+<UL>
+<LI> Start to End</LI>
+<LI> Start to Start</LI>
+<LI> End to Start</LI>
+<LI> End to End</LI>
+</UL>
+ An example will clarify how to specify a constrain between two
+ activities.
+<P> Assume that we start with the Gantt schema as illustrated below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttconstrainex0.html"> <IMG border="0" HEIGHT="240"
+ src="img/ganttconstrainex0.png" WIDTH="459"></A>
+<BR><SMALL><EM><B>Figure 21:</B> The original Gantt schema we wich to
+ add constrains to<A href="exframes/frame_ganttconstrainex0.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P> We would now like to add the constrains that the activity &quot;Label 3&quot;
+ cant start before activity &quot;Label 2&quot; has finished and that the
+ milestone &quot;Phase 1 done&quot; is depending on when activity &quot;Label 3&quot; is
+ done.</P>
+<P> The principle of adding constrains is that you for each activity you
+ want to have a constrain you have to tell to what other activity this
+ costrain should be to. That other activity is specified by telling on
+ what row that activity lies. Depending on what type of constrain, e.g.
+ Start-to-End, an arrow will now connect the two activities in acorrect
+ way.</P>
+<P> The way to do this is to call the<A href="../ref/GanttPlotObject.html#_GANTTPLOTOBJECT_SETCONSTRAIN">
+ SetConstrain()</A> method on the activity. In this method you specify
+ the type of constrain as well as to what other activity this constrain
+ should be to. If you read the class reference you can also see that you
+ can specify the type and size of arrow used. For now we will just use
+ the default sizes and type.</P>
+<P> So for example to add an End-To-Start constrain between &quot;Label 2&quot;
+ and &quot;Label 3&quot; you could write
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $bar2</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetConstrain</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">2</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">CONSTRAIN_ENDSTART</FONT><FONT color="#006600">)</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> The first parameter in the call above &quot;2&quot; is the row of the target
+ activity (i.e. the row where &quot;Label 3&quot;) activty is. In the example
+ below we have added the constrains we wanted.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttconstrainex1.html"> <IMG border="0" HEIGHT="240"
+ src="img/ganttconstrainex1.png" WIDTH="459"></A>
+<BR><SMALL><EM><B>Figure 22:</B> Adding constrains to a gantt chart<A href="exframes/frame_ganttconstrainex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> A note: The actual path followed by the arrow is controlled by some
+ heuristics to make it clear what the costrain is. It has been a design
+ decision that in order to keep the API simple the user has no further
+ detailed controlled on the actual path followed. However, in future
+ version the heuristics may be extended and provide some
+ user-controllable parameters.</P>
+<H2><A NAME="9_17">9.17 Advanced formatting</A></H2>
+<H3><A NAME="9_17_1">9.17.1 Showing only part of the graph</A></H3>
+ You can choose to only display a vertical slice of the overall Gantt
+ chart by explicetly sepcifying a date range with the method
+ GanttGraph::SetDateRange(). This will cap any bars to only be displayed
+ in between the start and end date given as paramneters. For exampel
+ specifying
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetDateRange</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;2001-12-20&quot;</FONT><FONT color="#006600">,</FONT><FONT
+color="#CC0000">&quot;2002-01-20&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV>
+<P> will show the part of the Gantt chart between the 20 Dec 2001 and 20
+ of January 2002. Please note that the format depends on the locale
+ setting.</P>
+<H3><A NAME="9_17_2">9.17.2 Specifying start day of week</A></H3>
+ You can set the week start day with a call to
+ GanttScale::SetWeekStart(). This method takes an integer [0,6] as input
+ which represents the startday of the week, 0 means Sunday, 1 Monday, 2
+ Tuesday and so on. The default is to start the week on Monday.
+<H2><A NAME="9_18">9.18 Localizing</A></H2>
+ Depending on your installation of PHP you might have support for
+ several locales. By default the locale is set up to use the default
+ locale on the server.
+<P> To specifically set a locale you specify the wanted locale with a
+ locale string (ala standard PHP), for exampel american english is
+ pecified with the string 'EN_US', brittish english with 'EN_UK' 'nl_NL'
+ for Dutch and so on. If your current installation does not support the
+ specified locale an error message will be given.
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">scale</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetDateLocale</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;se_SE&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> The result is displayed below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_ganttex19.html"> <IMG border="0" HEIGHT="199"
+ src="img/ganttex19.png" WIDTH="354"></A>
+<BR><SMALL><EM><B>Figure 23:</B> Using swedish locale. (Can you spot the
+ difference from English?)<A href="exframes/frame_ganttex19.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="6csimdoc.html">Previous</A>
+<A HREF="55polar.html">Next</A>
+</BODY>
+</HTML>

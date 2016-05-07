@@ -1,0 +1,1046 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Manual (ver: 6 Apr 2003 19:56)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<A HREF="index.html">Contents</A>
+<A HREF="3010intro.html">Previous</A>
+<A HREF="3030barplot.html">Next</A>
+<HR>
+<H2><A NAME="6_2">6.2 Line plots</A></H2>
+ The first example draws a line graph consisting of 10 Y-values. In this
+ first example we show the full code. In the following examples we will
+ only show interesting piece of the code. The full code for the examples
+ shown below is always available by clicking the '[src]' link in the
+ caption of the images below.<DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: example0.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php
+<BR /></FONT><FONT color="#006600">include (</FONT><FONT color="#CC0000">
+&quot;../jpgraph.php&quot;</FONT><FONT color="#006600">);
+<BR />include (</FONT><FONT color="#CC0000">&quot;../jpgraph_line.php&quot;</FONT><FONT
+color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Some data
+<BR /></FONT><FONT color="#0000CC">$ydata</FONT><FONT color="#006600"> =
+ array(</FONT><FONT color="#0000CC">11</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">3</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+8</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">12</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">5</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">1</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">9</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+13</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">5</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">7</FONT><FONT color="#006600">
+);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Create the graph. These two calls
+ are always required
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> Graph</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">350</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+250</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">&quot;auto&quot;</FONT><FONT
+color="#006600">);&nbsp;&nbsp;&nbsp;&nbsp;
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetScale</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;textlin&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Create the linear plot
+<BR /></FONT><FONT color="#0000CC">$lineplot</FONT><FONT color="#006600">
+=new</FONT><FONT color="#0000CC"> LinePlot</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$ydata</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$lineplot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;blue&quot;</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Add the plot to the graph
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$lineplot</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Display the graph
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Stroke</FONT><FONT color="#006600">();
+<BR /></FONT><FONT color="#0000CC">?&gt;
+<BR /></FONT></FONT></CODE></DIV>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example0.html"> <IMG border="0" HEIGHT="250"  src="img/example0.png"
+WIDTH="350"></A>
+<BR><SMALL><EM><B>Figure 1:</B> A simple line graph<A href="exframes/frame_example0.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<P> You might note a few things</P>
+<UL>
+<LI>Both the X and Y axis have been automatically scaled. We will later
+ on show how you might control the autoscaling how it determines the
+ number of ticks which is displayed.</LI>
+<LI>By default the Y-grid is displayed in a &quot;soft&quot; color</LI>
+<LI>By default the image is bordered and the margins are slightly gray.</LI>
+<LI>By default the 0 label on the Y-axis is not displayed</LI>
+</UL>
+ This is a perfect fine graph but looks a littel bit &quot;sparse&quot;. To make
+ it more interesting we might want to add a few things like
+<UL>
+<LI>A title for the graph</LI>
+<LI> Title for the axis</LI>
+<LI>Increase the margins to account for the title of the axis</LI>
+</UL>
+ From looking at the previous example you can see that you access all
+ properties of JpGraph through the objects you create. Graph(),
+ LinePlot() and so on. In general all objects you can see in the graph
+ is accessed through a named instance.
+<P> For example the title of the graph is accessed through the
+ 'Graph::title' property. So to specify a title string you make a call
+ to the 'Set()' method on the title property as in:</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Set</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+'Example 2'</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> So by adding just a few more lines to the previous code we get a
+ graph as shown below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example2.html"> <IMG border="0" HEIGHT="200"  src="img/example2.png"
+WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 2:</B> Same basic graph as in previous figure
+ but with a titles for graph and axis.<A href="exframes/frame_example2.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P>To achieve this we just needed to add a few more lines. (We only show
+ the part of example 1 we changed, to looka t the full source just click
+ the [src] link in the caption. )
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#FF9900">
+ // Setup margin and titles
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">img</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetMargin</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">40</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">20</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">20</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">40</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+Set</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">&quot;Example
+ 2&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">xaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">Set</FONT><FONT
+color="#006600">(</FONT><FONT color="#CC0000">&quot;X-title&quot;</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">yaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">Set</FONT><FONT
+color="#006600">(</FONT><FONT color="#CC0000">&quot;Y-title&quot;</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> Again there are a couple of things you should note here</P>
+<UL>
+<LI>A default font and size is used for the text</LI>
+<LI>The default position for the title of the graph is to be centered at
+ the top</LI>
+<LI>The default position for the title of the x-axis is the far right
+ and for the y-axis centered and rotated in a 900 angle.</LI>
+</UL>
+<P> A nice change would now be to have all the titles in a bold font and
+ the line plot a little bit thicker and in blue color. Let's do that by
+ adding the lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">title</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetFont</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+FF_FONT1</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_BOLD</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">yaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">SetFont</FONT><FONT
+color="#006600">(</FONT><FONT color="#0000CC">FF_FONT1</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">FS_BOLD</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">xaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+title</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">SetFont</FONT><FONT
+color="#006600">(</FONT><FONT color="#0000CC">FF_FONT1</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">FS_BOLD</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$lineplot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;blue&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$lineplot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetWeight</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">2</FONT><FONT color="#006600">);&nbsp;&nbsp;</FONT><FONT color="#FF9900">
+// Two pixel wide</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+</P>
+<P> Again please note the consistent interface. To change font you just
+ have to invoke the SetFont() method on the appropriate object. This
+ principle is true for most methods you will learn. The methods may be
+ applied to a variety of objects in JpGraph. So for example it might not
+ come as a big surprise that to have the Y-axis in red you have to say:
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">yaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;red&quot;</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P> or perhaps we also want to make the Y-axis a bit wider by
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">yaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetWidth</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+2</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P> As a final touch let's add a frame and a drop shadow around the
+ image since this is by default turned off. This is done with
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetShadow</FONT><FONT color="#006600">()</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> The result of all these modifications are shown below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example3.html"> <IMG border="0" HEIGHT="200"  src="img/example3.png"
+WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 3:</B> Making the image a little bit more
+ interesting by adding som colors and changing the fonts<A href="exframes/frame_example3.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="6_2_1">6.2.1 Adding plot marks to line-plots XXX</A></H3>
+ It might sometimes be desirable to highlight the data-points with marks
+ in the intersection between the given x and Y-coordinates. This is
+ accomplished by specifying the wanted plot mark type for the &quot;mark&quot;
+ property of the line graph. A full list of all available marks is given
+ in the class reference<A href="../ref/PlotMark.html#_PLOTMARK_SETTYPE">
+ PlotMarks</A>
+<P> For now let's just add a triangle shape marker to our previous graph
+ by adding the line
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $lineplot</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">mark</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetType</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">MARK_UTRIANGLE</FONT><FONT color="#006600">);</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> Thiw will give the graph as shown below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example3.1.html"> <IMG border="0" HEIGHT="200"
+ src="img/example3.1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 4:</B> Adding markers to the previous example<A href="exframes/frame_example3.1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<P> If you like you can ofd course both change the size, fill-color and
+ frame color of the choosen plot mark.</P>
+<P> The colors of the marks will, if you don't specify them explicitly,
+ follow the line color. Please note that if you want different colors
+ for the marks and the line the call to SetColor() for the marks must be
+ done after the call to the line since the marks color will always be
+ reset to the lines color when you set the line.</P>
+<H3><A NAME="6_2_2">6.2.2 Displaying the values for each data point</A></H3>
+ As a final easy modification we can enable the display of the data
+ value above each data point. The value is represented by the 'value'
+ property in the plot. (You can read more about the possibilities of the<A
+href="../ref/DisplayValue.html#_C_DISPLAYVALUE"> display value</A> in
+ the class reference.)
+<P> To enable the display of the value you just need to call the Show()
+ method of the value as in
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $lineplot</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">value</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Show</FONT><FONT color="#006600">()</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> Adding that line to the previous line plot would give the result
+ shown below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example3.3.html"> <IMG border="0" HEIGHT="200"
+ src="img/example3.3.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 5:</B> Displaying the value for each data point<A
+href="exframes/frame_example3.3.html"> [src]</A></EM></SMALL></DIV></P>
+<P> We can of course change both color, font and format of the displyed
+ value. So for example if we wanted the display values to be dark red,
+ use a bold font and have a '$' in front we need to add the lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $lineplot</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">value</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;darkred&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$lineplot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">value</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetFont</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+FF_FONT1</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+FS_BOLD</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$lineplot</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">value</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetFormat</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;</FONT><FONT color="#006600">$</FONT><FONT color="#CC0000"> %0.1f&quot;</FONT><FONT
+color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+</P>
+<P> This would then result in the following image</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example3.4.html"> <IMG border="0" HEIGHT="200"
+ src="img/example3.4.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 6:</B> Making the display values a little bit
+ more interesting<A href="exframes/frame_example3.4.html"> [src]</A></EM>
+</SMALL></DIV></P>
+<P></P>
+<HR> <SMALL><STRONG> Sidebar:</STRONG> You can achieve more advanced
+ formatting by using not just the printf() style format string by a
+ format callback function. This could allow you to change the displayed
+ value with more advanced formatting such as displaying money values
+ with &quot;,&quot; to spearte thousends.</SMALL>
+<HR>
+<H3><A NAME="6_2_3">6.2.3 Adding several plots to the same graph</A></H3>
+ What if we want to add a second plot to the graph we just produced?
+ Well, this is quite straightforward and just requires two simple step:
+<OL>
+<LI>Create the second plot</LI>
+<LI>Add it to the gaph</LI>
+</OL>
+ To create the second plot we need some data (we could of course use the
+ same data as for the first plot but then we wouldn't be able to see the
+ new plot!)
+<P> The following lines show how to create the new plot and add it to
+ the graph (we only show the new lines - not the full script)
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $ydata2</FONT><FONT
+color="#006600"> = array(</FONT><FONT color="#0000CC">1</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">19</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">15</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+7</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">22</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">14</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">5</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">9</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+21</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">13</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$lineplot2</FONT><FONT color="#006600">
+=new</FONT><FONT color="#0000CC"> LinePlot</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$ydata2</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$lineplot2</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;orange&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$lineplot2</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetWeight</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">2</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$lineplot2</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> Making these changes to the previous graph script would generate a
+ new graph as illustrated below.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example4.html"> <IMG border="0" HEIGHT="200"  src="img/example4.png"
+WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 7:</B> Adding a second plot to the previous
+ graph<A href="exframes/frame_example4.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P> There is a few things worth noting here</P>
+<UL>
+<LI>The Y-scale has changed to accommodate the larger range of Y-values
+ for the second graph.</LI>
+<LI>If you add several plots to the same graph they should contain the
+ same number of data points. This is not a requirement (the graph will
+ be automatically scaled to accommodate the plot with the largest number
+ of points) but it will not look very good since one of the plot end in
+ the middle of the graph.</LI>
+</UL>
+<H3><A NAME="6_2_4">6.2.4 Adding a second Y-scale</A></H3>
+ As you saw in the preceding example you could add multiple plots to the
+ same graph and Y-axis. However what if the two plots you want to
+ display in the graph has very different ranges. One might for example
+ have Y-values like above but the other might have Y-values in the
+ 100:s. Even though it is perfectly possible to add them as above the
+ graph with the smallest values will have a very low dynamic range since
+ the scale must accomplish the bigger dynamic range of the second plot.
+<P> The solution to this is to use a second Y-axis with a different
+ scale and add the second plot to this Y-axis instead. Let's take a look
+ at how that is accomplished.</P>
+<P> First we need to create a new data array with large values and
+ secondly we need to specify a scale for the Y2 axis. This is done by
+ the lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $y2data</FONT><FONT
+color="#006600"> = array(</FONT><FONT color="#0000CC">354</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">200</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">265</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+99</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">111</FONT><FONT
+color="#006600">,</FONT><FONT color="#0000CC">91</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">198</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">225</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+293</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">251</FONT><FONT
+color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetY2Scale</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;lin&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P> and finally we create a new line plot and add that to the second
+ Y-axis. Note that we here use a new method, AddY2(), since we want this
+ plot to be added to the second Y-axis. Note that JpGraph will only
+ support two different Y-axis. This is not considered a limitation since
+ using more than two scales in the same graph would make it very
+ difficult to interpret the meaning of the graph.</P>
+<P> To make the graph a little bit more aesthetical pleasing we use
+ different colors for the different plots and let the two different
+ Y-axis get the same colors as the plots.</P>
+<P> The resulting graph is shown below. source)</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example5.html"> <IMG border="0" HEIGHT="200"  src="img/example5.png"
+WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 8:</B> Adding a second Y-scale plot to the same
+ graph<A href="exframes/frame_example5.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P></P>
+<H3><A NAME="6_2_5">6.2.5 Adding a legend to the graph</A></H3>
+ With more than one plot on the same graph it is necessary to somehow
+ indicate which plot is which. This is noramlly done by adding a legend
+ to the graph.
+<P> You will see that each plot type has a 'SetLegend()' method which is
+ used to name that plot in the legend. SO to name the two plots in the
+ example we have been working with so far we need to add the lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $lineplot</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">SetLegend</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;Plot 1&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$lineplot2</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetLegend</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;Plot 2&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> to the previous code. The resulting graph is shown below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example5.1.html"> <IMG border="0" HEIGHT="200"
+ src="img/example5.1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 9:</B> Adding a legend to the graph<A href="exframes/frame_example5.1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> As you can see the legend gets automatically sized depending on how
+ many plots there are that have legend texts to display. By default it
+ is placed with it's top right corner close to the upper right edge of
+ the image. Depending on the image you might want to adjust this or you
+ might want to add a larger margin which is big enough to accompany the
+ legend. Let's do both.</P>
+<P> First we increase the right margin and then we place the legend so
+ that it is roughly centred. We will also enlarge the overall image so
+ the plot area doesn't get too squeezed.</P>
+<P> To modify the legend you access the 'legend' property of the graph.
+ For a full reference on all the possibilities (changing colors, layout,
+ etc) see<A href="../ref/Legend.html#_C_LEGEND/"> class legend</A> in
+ the class reference</P>
+<P> For this we use the legends 'SetPos()' method as in
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">legend</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Pos</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+0.05</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">0.5</FONT><FONT
+color="#006600">,</FONT><FONT color="#CC0000">&quot;right&quot;</FONT><FONT color="#006600">
+,</FONT><FONT color="#CC0000">&quot;center&quot;</FONT><FONT color="#006600">);</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> Doing this small modification will give the result shown below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example6.html"> <IMG border="0" HEIGHT="200"  src="img/example6.png"
+WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 10:</B> Adjusting the layout to give more rooms
+ for the legend<A href="exframes/frame_example6.html"> [src]</A></EM></SMALL>
+</DIV></P>
+<P> The above method 'SetPos()' deserves some explanation since it might
+ not be obvious. You specify the position as a fraction of the overall
+ width and height of the entire image. This makes it possible for you to
+ resize the image within disturbing the relative position of the legend.
+ We will later see that the same method is just to place arbitrary text
+ in the image.</P>
+<P> To give added flexibility one must also specify to what edge of the
+ legend the position given should be relative to. In the example above
+ we have specified &quot;right&quot; edge on the legend for the for the horizontal
+ positioning and &quot;center&quot; for the vertical position.</P>
+<P> This means that the right edge of the legend should be position 5 %
+ of the image width from the right. If you had specified &quot;left&quot; the the
+ legends left edge would be positioned 5 % of hte image width from the
+ image left side.</P>
+<P> By default the legends in the legend box gets stacked on top of each
+ other. The other possibility is to have them sideways. To adjust this
+ you use the<A href="../ref/Legend.html#_LEGEND_SETLAYOUT"> SetLayout()</A>
+ method. Using a horizontal layout with the previous example give the
+ following result.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example6.1.html"> <IMG border="0" HEIGHT="240"
+ src="img/example6.1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 11:</B> Using a horizontal layout for the
+ legends<A href="exframes/frame_example6.1.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P></P>
+<H3><A NAME="6_2_6">6.2.6 Handling null-values in lineplots</A></H3>
+ JpGraph offers two ways of handling null values (or discontinuties) in
+ the data. You can either have a &quot;whole&quot; in the data or the line may be
+ extended between the previous and next data point in the graph.
+<P> If the data value is null (&quot;&quot;) or the special value &quot;x&quot; then the
+ data point will not be plotted and will leave a gap in the line.</P>
+<P> If the data value is &quot;-&quot; then the line will be drawn between the
+ previous and next point in the data ignoring the &quot;-&quot; point.</P>
+<P> The following example shows both these posibilities.</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_nullvalueex01.html"> <IMG border="0" HEIGHT="250"
+ src="img/nullvalueex01.png" WIDTH="400"></A>
+<BR><SMALL><EM><B>Figure 12:</B> Handling null values in line graphs<A href="exframes/frame_nullvalueex01.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="6_2_7">6.2.7 Using the step-style to render line plots</A></H3>
+ Step style refers to an alternate way of rendering line plots by not
+ drawing a direct line between two adjacent points but rather draw two
+ segements. The first segment being a horizontal line to the next
+ X-value and then a vertical line from that point to the correct
+ Y-value. This is perhaps easier demonstrated by an example as seen
+ below.
+<P> You specify that you want the plot to ber rendered with this style
+ by calling the method<A href="../ref/LinePlot.html#_LINEPLOT_SETSTEPSTYLE">
+ SetStepStyle()</A> on the lineplot.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example6.2.html"> <IMG border="0" HEIGHT="240"
+ src="img/example6.2.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 13:</B> Rendering a line plot with the step
+ style<A href="exframes/frame_example6.2.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P></P>
+<H3><A NAME="6_2_8">6.2.8 Using logarithmic scale</A></H3>
+ Using a logarithmic scale requires you to include the logarithmic add
+ on module in &quot;jpgraph_log.php&quot;. So you must have the line
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#006600">
+ include(</FONT><FONT color="#CC0000">&quot;jpgraph_log.php&quot;</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+<P> on the top of your code. To Illustrate how to use a logarithmic
+ scale let's make the right Y scale in the previous example a
+ logarithmic scale. This is done by the line
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetY2Scale</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;log&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> This will then give the following result</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example7.html"> <IMG border="0" HEIGHT="200"  src="img/example7.png"
+WIDTH="350"></A>
+<BR><SMALL><EM><B>Figure 14:</B> Using a logarithmic scale for both the
+ Y2 axis<A href="exframes/frame_example7.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P></P>
+<P> You can of course also use a logarithmic X-scale as well. The
+ following example shows this.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_loglogex1.html"> <IMG border="0" HEIGHT="300"
+ src="img/loglogex1.png" WIDTH="500"></A>
+<BR><SMALL><EM><B>Figure 15:</B> Example of using log scale on both X
+ and Y axis together with a linear Y2 scale<A href="exframes/frame_loglogex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P> Even though we have so far only shown line graphs logarithmic scale
+ can also be used for bar, error, scatter plots as well. Even radar
+ plots supports the use of logarithmic plots. The following example
+ shows how to use a logarithmic scale for a bar graph.</P>
+<P></P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_logbarex1.html"> <IMG border="0" HEIGHT="250"
+ src="img/logbarex1.png" WIDTH="500"></A>
+<BR><SMALL><EM><B>Figure 16:</B> Example of using logarithmic scale
+ togther with bar plots<A href="exframes/frame_logbarex1.html"> [src]</A>
+</EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="6_2_9">6.2.9 More on scales</A></H3>
+ As you saw in the previous example it is possible to use different
+ types of scales. In JpGraph you can use the following scales
+<UL>
+<LI>Linear scale, the standard &quot;scale&quot;</LI>
+<LI>Logarithmic scale</LI>
+<LI>Integer scale, very similair to linear scale but restricts the scale
+ values (and labels) to integer values.</LI>
+<LI>Text scale, Similair to integer scale and used when only the
+ numbering of items is relevant. A text scale is almost exclusivly used
+ for the X-axis. A typical example for this is the X-axis for a bar
+ plot. The labels for the text scale is ususally replaced by user
+ supplied texts. Text scales can only be used for the X-axis (it doesn't
+ make sense for the Y-scale).</LI>
+</UL>
+ Any combination of these may be used. Linear and logarithmic scales are
+ pretty straightforward. The text scale might deserve some explanation.
+ The easiest way to think of the text scale is as a linear scale
+ consisting of only natural numbers, i.e. 0,1,2,3,4,... . This scale is
+ used when you just have a number of Y-values you want to plot in a
+ consecutive order and don't care about the X-values. For the above
+ example it will also work fine to use a linear X-scale (try it!).
+ However, the scale is now treated as consisting or real numbers so the
+ autoscaling, depending on the size of the image an the number of data
+ points, might decide to display other labels then the natural numbers.,
+ i.e. a label might be 2.5 say. This is not going to happen if you use a
+ text scale.
+<P> The normal practice for text scale is to specify text strings as
+ labels instead as the default natural numbers. You can specify text
+ strings for the labels by calling the<A href="../ref/Axis.html#_AXIS_SETTICKLABELS">
+ SetTickLabels()</A> method on the Axis.</P>
+<P> To specify the scale you use the<A href="../ref/Graph.html#_GRAPH_SETSCALE">
+ SetScale()</A> method. A few examples might help clarify this.</P>
+<UL>
+<LI> &quot;textlin&quot;, text-scale for X-axis, Linear scale for Y-axis</LI>
+<LI> &quot;linlin&quot;, linear-scale for X-axis, Linear scale for Y-axis</LI>
+<LI> &quot;linlog&quot;, linear-scale for X-axis, Logarithmic scale for Y-axi</LI>
+<LI> &quot;loglog&quot;, Logarithmic scale for X-axis, Logarithmic scale for
+ Y-axis</LI>
+<LI> &quot;textlog&quot;, Text scale for X-axis, Logarithmic scale for Y-axis</LI>
+</UL>
+ As you can see all your graphs will require at least one call to
+ SetScale() in the beginning of your script. Normally it will come right
+ after the creation of the Graph().
+<P> To specify the scale for the Y2 axis you use the<A href="../ref/Graph.html#_GRAPH_SETY2SCALE">
+ SetY2Scale()</A> Since you only specify one axis you only specify
+ &quot;half&quot; of the string in the previous examples. So to set a logarithmic
+ Y2 scale you will call
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetY2Scale</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;log&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<H3><A NAME="6_2_10">6.2.10 Adjusting the gridlines in the plot</A></H3>
+ By default only the Y-axis have grid lines and then only on major
+ ticks, i.e. ticks which have a label. It is of course possible to
+ change this. Both the X , Y and Y2 can have grid lines. It is also
+ possible to let the gridlines also be drawn on the minor tick marks,
+ i.e. ticks without a label. Lets see how we can apply this to the graph
+ above.
+<P> The grid is modified by accessing the xgrid (or ygrid) component of
+ the graph. So to disply minor grid lines for the Y graph we make the
+ call
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">ygrid</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Show</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+true</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">true</FONT><FONT
+color="#006600">)</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+</P>
+<P> The first parameter determines if the grid should be displayed at
+ all and the second parameter determines whether or not the minor grid
+ lines should be displayed.</P>
+<P> If you also wanted the gridlines to be displayed for the Y2 axis you
+ would call
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">y2grid</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Show</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+true</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">true</FONT><FONT
+color="#006600">)</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+</P>
+<P><STRONG> Note.</STRONG> In general it is not a good idea to display
+ both the Y and Y2 gridlines since the resulting image becomes difficult
+ to read for a viewer.</P>
+<P> We can also enable the X-gridlines with the call
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $graph</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">xgrid</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Show</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+true</FONT><FONT color="#006600">)</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P></P>
+<P> In the above line we will of course only just enable the major grid
+ lines.</P>
+<P> To bring all this together we will display a graph with gridlines
+ for both Y and X axis enabled.</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example8.html"> <IMG border="0" HEIGHT="200"  src="img/example8.png"
+WIDTH="350"></A>
+<BR><SMALL><EM><B>Figure 17:</B> Enabling major and minor gridlines for
+ Y-axis and major grid lines for the X-axis<A href="exframes/frame_example8.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P><STRONG> Note:</STRONG> If you think the first value of the Y-axis is
+ to close to the first label of the X-axis you have the option of either
+ increasing the margin (with a call to<A href="../ref/Axis.html#_AXIS_SETLABELMARGIN">
+ SetLabelMargin()</A> ) or to hide the first label (with a call to<A href="../ref/Axis.html#_AXIS_HIDEFIRSTTICKLABEL">
+ HideFirstTickLabel()</A> )</P>
+<P></P>
+<H3><A NAME="6_2_11">6.2.11 Using filled gridlines</A></H3>
+ Another option for the gridlines is the possibility to have the area
+ between the gridlines filled with alternating two colors. The example
+ below illustrates this.
+<P><DIV align="center">
+<BR><A href="exframes/frame_filledgridex1.html"> <IMG border="0" HEIGHT="200"
+ src="img/filledgridex1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 18:</B> Using two alternating colors between
+ the gridlines<A href="exframes/frame_filledgridex1.html"> [src]</A></EM>
+</SMALL></DIV></P>
+<P> In the example above we have also made use of alphablending
+ (requires GD 2.x or higher). By default the filled grid lines are
+ disabled. To enable this style you have to call the<A href="../ref/Grid.html#_GRID_SETFILL">
+ Grid::SetFill()</A> method.</P>
+<H3><A NAME="6_2_12">6.2.12 Specifying text labels for the X-axis</A></H3>
+ You might want to have specific labels you want to use for the X-axis
+ when this has been specified as a &quot;text&quot; scale. In the previous example
+ each Y-point might represent a specific measurement for each of the
+ first 10 month. We might then want to display the name of the months as
+ X-scale.
+<P> To specify the labels on the scale you make use of the<A href="../ref/Axis.html#_AXIS_SETTICKLABELS">
+ SetTickLabels()</A> method.</P>
+<P> To get a localized version of the name of the month you can use a
+ nice feature in JpGraph, the global '$gDateLocal' object which is an
+ instance of the<A href="../ref/DateLocale.html#_C_DATELOCALE">
+ DateLocale</A></P>
+<P> This class has a number of methods to get localized versions of
+ relevant names for dates, (months and weekdays).</P>
+<P> So to specify the X-axis with the short form of the month names we
+ use the construction
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $a</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> $gDateLocale</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">GetShortMonth</FONT><FONT color="#006600">
+();
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">xaxis</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">
+SetTickLabels</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$a</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P> This will, now result in the image displayed below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example9.html"> <IMG border="0" HEIGHT="200"  src="img/example9.png"
+WIDTH="350"></A>
+<BR><SMALL><EM><B>Figure 19:</B> Specifying text labels for the X-axis<A href="exframes/frame_example9.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P><STRONG> Note:</STRONG> It is also perfectly legal to override the
+ default labels for the Y (and Y2) axis in the same way, however there
+ is seldom need for that. Please note that the supplied labels will be
+ applied to each major tick label. If there are insufficient number of
+ supplied labels the non-existent positions will have empty labels.</P>
+<H3><A NAME="6_2_13">6.2.13 Adjusting the ticks on a text scale</A></H3>
+ As can be seen in the previous example the X-axis is slightly cluttered
+ with the labels very close to each other. We might rectify this by
+ either enlarging the image or just displaying fewer tick label on the
+ x-axis.
+<P> Specifying that we only want, for example, to print every second
+ label on the axis is done by a call to the method<A href="../ref/Axis.html#_AXIS_SETTEXTLABELINTERVAL">
+ SetTextLabelInterval()</A> Which would result in the graph</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example9.1.html"> <IMG border="0" HEIGHT="200"
+ src="img/example9.1.png" WIDTH="350"></A>
+<BR><SMALL><EM><B>Figure 20:</B> Just printing every second label on the
+ X-axis<A href="exframes/frame_example9.1.html"> [src]</A></EM></SMALL></DIV>
+</P>
+<P></P>
+<P> If the text labels are long (for example full dates) then another
+ way might bne to adjust the angle of the text. We could for example
+ choose to rotate the labels on the X-axis by 90 degrees. With the help
+ of the<A href="../ref/Axis.html#_AXIS_SETLABELANGLE"> SetLabelAngle()</A>
+</P>
+<P> Which would then result in the image below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example9.2.html"> <IMG border="0" HEIGHT="200"
+ src="img/example9.2.png" WIDTH="350"></A>
+<BR><SMALL><EM><B>Figure 21:</B> Rotating the X-labels 90 degrees<A href="exframes/frame_example9.2.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P><STRONG> Note:</STRONG> The internal fonts which we have been using
+ so only supports 0 or 90 degrees rotation. To use arbitrary angles you
+ must specify TTF fonts. More on fonts later.</P>
+<H3><A NAME="6_2_14">6.2.14 Using filled line graphs</A></H3>
+ Using a filled line plot is not much different from using a normal line
+ plot, in fact the only difference is that you must call the method<A href="../ref/LinePlot.html#_LINEPLOT_SETFILLCOLOR">
+ SetFillColor()</A> on a normal line plot. This will then fill the area
+ under the line graph with the chosen color.
+<P> In the example below we have also, as an example, specified plot
+ marks (see previous sections).</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_filledlineex01.html"> <IMG border="0" HEIGHT="200"
+ src="img/filledlineex01.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 22:</B> Filled line graph with plot marks<A href="exframes/frame_filledlineex01.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P><STRONG> Note 1.</STRONG> If you add multiple filled line plots to
+ one graph make sure you add the one with the highest Y-values first
+ since it will otherwise overwrite the other plots and they will not be
+ visible. Plots are stroked in the order they are added to the graph, so
+ the graph you want front-most must be added last.</P>
+<P><STRONG> Note 2.</STRONG> When using legends with filled line plot
+ the legend will show the fill color and not the bounding line color.</P>
+<P><STRONG> Note 3.</STRONG> Filled line plots is only supposed to be
+ used with positive values. Filling line plots which have negative data
+ values will probably not have the apperance you expect.</P>
+<P> As you can see from the graph above the gridlines are below the
+ filled line graph. If you want the gridlines in front of the graph you
+ can adjust the depth with call to<A href="../ref/Graph.html#_GRAPH_SETGRIDDEPTH">
+ Graph::SetGridDepth()</A> As the following example shows</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_filledlineex01.1.html"> <IMG border="0" HEIGHT="200"
+ src="img/filledlineex01.1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 23:</B> Adjusting the depth of the gridlines<A href="exframes/frame_filledlineex01.1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="6_2_15">6.2.15 Using accumulated line graphs</A></H3>
+ Accumulated line graphs are line graphs that are &quot;stacked&quot; on top of
+ each other. That is, the values in the supplied data for the Y-axis is
+ not the absolute value but rather the relative value from graph below.
+ For example if you have two line graphs with three points each, say
+ [3,7,5] and [6,9,7]. The first graph will be plotted on the absolute
+ Y-values [3,7,5] the second plot will be plotted at [3+6, 7+9, 5+7],
+ hence the values of the previous graphs will be used as offsets.
+<P> You may add any number of ordinary line graphs together. If you want
+ to use three line plots in an accumulated line plot graph you write the
+ following code</P>
+<P>
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#FF9900">
+ // First create the individual plots
+<BR /></FONT><FONT color="#0000CC">$p1</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> LinePlot</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$datay_1</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$p2</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> LinePlot</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$datay_2</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$p3</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> LinePlot</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$datay_3</FONT><FONT color="#006600">);
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Then add them together to form a
+ accumulated plot
+<BR /></FONT><FONT color="#0000CC">$ap</FONT><FONT color="#006600"> =
+ new</FONT><FONT color="#0000CC"> AccLinePlot</FONT><FONT color="#006600">
+(array(</FONT><FONT color="#0000CC">$p1</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$p2</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$p3</FONT><FONT color="#006600">));
+<BR />
+<BR /></FONT><FONT color="#FF9900">// Add the accumulated line plot to
+ the graph
+<BR /></FONT><FONT color="#0000CC">$graph</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">Add</FONT><FONT color="#006600">(</FONT><FONT color="#0000CC">
+$ap</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV></P>
+<P> You might of course also fill each line plot by adding the lines
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $p1</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetFillColor</FONT><FONT color="#006600">
+(</FONT><FONT color="#CC0000">&quot;red&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$p2</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetFillColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;blue&quot;</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$p3</FONT><FONT color="#006600">-&gt;</FONT><FONT
+color="#0000CC">SetFillColor</FONT><FONT color="#006600">(</FONT><FONT color="#CC0000">
+&quot;green&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> Using some appropriate data this might then give a graph perhaps
+ like the one showed in the figure below</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_example17.html"> <IMG border="0" HEIGHT="200"
+ src="img/example17.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 24:</B> Accumulated filled line graph<A href="exframes/frame_example17.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+<H3><A NAME="6_2_16">6.2.16 Constructing smooth lineplots with Cubic
+ Splines</A></H3>
+ If you only have access to a few data points but still want a smooth
+ curve between those datapoints JpGraph can help you achieving that by
+ letting you construct cubic splines. If you never have heard of cubic
+ splines before, don't worry. You only have to supply the datapoints you
+ know tell JpGraph how many interpolated points in total you want in the
+ graph. JpGraph will now take care of constructing a smooth curve
+ between all you data points. The new, smooth, curve will be made up of
+ exactly as many interpolated points as you have specified.
+<P> To construct a spline you need both the X and Y coordinates for the
+ known data points.</P>
+<P> You start by constructing a new<A href=""> Spline</A> instance. To
+ get access to the Spline class you must first remember to include the
+ file &quot;jpgraph_regstat.php&quot;. You instantiate this class by calling it
+ with your two known data arrays (X and Y) as follows.
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $spline</FONT><FONT
+color="#006600"> = new</FONT><FONT color="#0000CC"> Spline</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$xdata</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$ydata</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> This call initilaizes the spline with the data points you have.
+ These datapoints are also known as<I> Cotrol points</I> for the spline.
+ This helper class doesn't draw any line itself. Instead it is mearly
+ used to get a new (larger) data array which have all the interpolated
+ values. You then use these new value in your plot. This way give you
+ great flexibility in how you want to use this interpolated data.</P>
+<P> Continuing the above line we now use the<A href=""> Spline::Get()</A>
+ method to get an interpolated array containing a specified number of
+ points. So for example the line
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"></FONT><FONT color="#006600">
+ list(</FONT><FONT color="#0000CC">$sdatax</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$sdatay</FONT><FONT color="#006600">) =</FONT><FONT color="#0000CC">
+ $spline</FONT><FONT color="#006600">-&gt;</FONT><FONT color="#0000CC">Get</FONT><FONT
+color="#006600">(</FONT><FONT color="#0000CC">50</FONT><FONT color="#006600">
+);</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> Will construct the two new data arrays '$sdatax' and '$sdatay' which
+ contains 50 data points. These two arrays are constructed from the
+ control poin we specified when we created the '$spline' object.</P>
+<P> You would then use these two new data array in exactly the same way
+ as you would form ordinary dat vectors.</P>
+<P> The following example illustrates this</P>
+<P><DIV align="center">
+<BR><A href="exframes/frame_splineex1.html"> <IMG border="0" HEIGHT="200"
+ src="img/splineex1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 25:</B> Using spline to get a smooth curve
+ between the control points.<A href="exframes/frame_splineex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P>Note: In order to make the example more interesting we actually use
+ two plots. First a line plot to get the smooth curve and then a
+ standard scatter plot which is used to illustrate where the control
+ points are.</P>
+<H3><A NAME="6_2_17">6.2.17 Adding plot marks to a line plot</A></H3>
+ To emphasize the specific data points it is possible to add plot marks
+ at each data point. Plot marks can be either
+<UL>
+<LI> Simple shapes, (e.g. square, circle, cross, etc)</LI>
+<LI> Arbitrary images loaded from a file</LI>
+<LI> One of the built-in images</LI>
+</UL>
+ You access the plot mark through the &quot;mark&quot; instance variable in the
+ plot, as in
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $lineplot</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">mark</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetColor</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">&quot;red&quot;</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV>
+<P> To choose between the different plot marks you call the<A href="../ref/PlotMark.html#_PLOTMARK_SETTYPE">
+ PlotMark::SetType()</A> method with the correct define to choose the
+ plot type you want to use.</P>
+<P> The simple shape type of plot marks are</P>
+<UL>
+<LI> MARK_SQUARE</LI>
+<LI> MARK_UTRIANGLE</LI>
+<LI> MARK_DTRIANGLE</LI>
+<LI> MARK_DIAMOND</LI>
+<LI> MARK_CIRCLE</LI>
+<LI> MARK_FILLEDCIRCLE</LI>
+<LI> MARK_CROSS</LI>
+<LI> MARK_STAR</LI>
+<LI> MARK_X</LI>
+<LI> MARK_LEFTTRIANGLE</LI>
+<LI> MARK_RIGHTTRIANGLE</LI>
+<LI> MARK_FLASH</LI>
+</UL>
+ To specify an arbitrary image you use the special define
+<UL>
+<LI> MARK_IMG</LI>
+</UL>
+ In this case you must also specify a image file name and an optional
+ scaling constant. For example as in
+<BR> &nbsp;
+<BR><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:85%;font-weight:bold;">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> $lineplot</FONT><FONT
+color="#006600">-&gt;</FONT><FONT color="#0000CC">mark</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetTYPE</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">MARK_IMG</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+&quot;myimage.jpg&quot;</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+1.5</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC"></FONT></FONT>
+</CODE></B></DIV>
+<P></P>
+<P> If you want to use one of the built-in images the following images
+ are available. Please note that not all images are available in all
+ possible colors. The available colors for each image is listed below.</P>
+<P> The following shape (the first class) plot marks are available</P>
+<OL>
+<LI>MARK_SQUARE, A filled square</LI>
+<LI>MARK_UTRIANGLE, A triangle pointed upwards</LI>
+<LI>MARK_DTRIANGLE, A triangle pointed downwards</LI>
+<LI>MARK_DIAMOND, A diamond</LI>
+<LI>MARK_CIRCLE, A circle</LI>
+<LI>MARK_FILLEDCIRCLE, A filled circle</LI>
+<LI>MARK_CROSS, A cross</LI>
+<LI>MARK_STAR, A star</LI>
+<LI>MARK_X, An 'X'</LI>
+<LI>MARK_FLASH, A &quot;flash&quot; shape</LI>
+<LI>MARK_IMAGE, Use the image specified with the filename and scale as
+ the second and third argument as the mark.</LI>
+</OL>
+<P> For the second class (built-in images) the following table list the
+ different images as well as what color they are available in. For the
+ built-in images you specify the color with the second argument.</P>
+<P> Note that some of the images are available in different sizes. The
+ reason is that even though you can scale them by the third argument
+ there is a visual degradation to scale an image larger than it's
+ original size since some pixels needs to be interpolated. Reducing the
+ size with a scale &lt; 1.0 gives much better visual apperance.</P>
+<P> The scaling works with both GD 1 and GD 2 but with GD 2 the quality
+ of the scaling is much better.</P>
+<P> Built-in images and available colors:</P>
+<TABLE border="1">
+<TR><TH>Type</TH><TH>Description</TH><TH>Colors</TH></TR>
+<TR><TD>MARK_IMG_PUSHPIN, MARK_IMG_SPUSHPIN</TD><TD> Push-pin image</TD><TD>
+'red','blue','green','pink','orange'</TD></TR>
+<TR><TD>MARK_IMG_LPUSHPIN</TD><TD> A larger Push-pin image</TD><TD>
+'red','blue','green','pink','orange'</TD></TR>
+<TR><TD>MARK_IMG_BALL, MARK_IMAGE_SBALL</TD><TD>A round 3D rendered ball</TD><TD>
+'bluegreen','cyan','darkgray','greengray',
+ 'gray','graypurple','green','greenblue','lightblue',
+ 'lightred','navy','orange','purple','red','yellow'</TD></TR>
+<TR><TD>MARK_IMAGE_MBALL</TD><TD>A medium sized round 3D rendered ball</TD><TD>
+ 'blue','bluegreen','brown','cyan',
+ 'darkgray','greengray','gray','green',
+ 'greenblue','lightblue','lightred', 'purple','red','white','yellow'</TD>
+</TR>
+<TR><TD>MARK_IMAGE_LBALL</TD><TD>A large sized round 3D rendered ball</TD><TD>
+ 'blue','lightblue','brown','darkgreen',
+ 'green','purple','red','gray','yellow','silver','gray'</TD></TR>
+<TR><TD>MARK_IMAGE_SQUARE</TD><TD>A 3D rendered square</TD><TD>
+'bluegreen','blue','green', 'lightblue','orange','purple','red','yellow'</TD>
+</TR>
+<TR><TD>MARK_IMG_STAR</TD><TD>A 3D rendered star image</TD><TD>
+'bluegreen','lightblue','purple','blue','green','pink','red','yellow'</TD>
+</TR>
+<TR><TD>MARK_IMG_DIAMOND</TD><TD>A 3D rendered diamond</TD><TD>
+'lightblue','darkblue','gray', 'blue','pink','purple','red','yellow'</TD>
+</TR>
+<TR><TD>MARK_IMG_BEVEL</TD><TD>A 3D rendered bevel style round ring</TD><TD>
+'green','purple','orange','red','yellow'</TD></TR>
+</TABLE>
+ Below we give two examples of images using these features.
+<TABLE>
+<TR><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_imgmarkerex1.html"> <IMG border="0" HEIGHT="200"
+ src="img/imgmarkerex1.png" WIDTH="300"></A>
+<BR><SMALL><EM><B>Figure 26:</B> Using an arbitrary image as plot mark<A href="exframes/frame_imgmarkerex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD><TD>
+<P><DIV align="center">
+<BR><A href="exframes/frame_builtinplotmarksex1.html"> <IMG border="0" HEIGHT="200"
+ src="img/builtinplotmarksex1.png" WIDTH="350"></A>
+<BR><SMALL><EM><B>Figure 27:</B> Using the built-in images<A href="exframes/frame_builtinplotmarksex1.html">
+ [src]</A></EM></SMALL></DIV></P>
+<P></P>
+</TD></TR>
+</TABLE>
+<HR>
+<A HREF="index.html">Contents</A>
+<A HREF="3010intro.html">Previous</A>
+<A HREF="3030barplot.html">Next</A>
+</BODY>
+</HTML>

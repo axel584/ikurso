@@ -1,4 +1,4 @@
-<?
+<?php
 // cxiuj
 $lgv_direkto="RTL";
 // index.php3

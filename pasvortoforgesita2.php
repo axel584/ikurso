@@ -1,4 +1,4 @@
-<?
+<?php
 //error_reporting(1);
 $retadreso=$_POST['retadreso'];
 include "util.php";

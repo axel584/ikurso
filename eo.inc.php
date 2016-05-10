@@ -1,4 +1,4 @@
-<?
+<?php
 // cxiuj
 $lgv_direkto="LTR";
 // index.php

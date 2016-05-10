@@ -1,11 +1,13 @@
-<?
+<?php
 //include_once $vojo."util.php";
-$url=$_SERVER["SCRIPT_URI"];
+if (!isset($vojo)) { $vojo="";}
+$url=$_SERVER['REQUEST_URI'];
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
 
-if ($_COOKIE["metodo"]=="") {
-	if ($_GET["metodo"]=="X") {
+
+if (!isset($_COOKIE["metodo"])) {
+	if (isset($_GET["metodo"]) && $_GET["metodo"]=="X") {
 		$metodo="X";
 		setcookie("metodo", "X", time()+8640*3600, "/");
 	} else {
@@ -20,7 +22,7 @@ if ($_COOKIE["metodo"]=="") {
 	}
 }
 
-$style=$_GET["style"];
+$style=isset($_GET["style"])?$_GET["style"]:"";
 if ($style==""){
 	$style=$_COOKIE["style"];
 	if ($style==""){
@@ -48,7 +50,7 @@ ob_start("konvX");
 	_uacct = "UA-1302916-3";
 	urchinTracker();
 </script>
-<? if ($persono_id!="") { ?>
+<?php if ($persono_id!="") { ?>
 	<div id="menuo">
 		<table>
 			<tr><td class="unua">
@@ -116,7 +118,7 @@ ob_start("konvX");
 			// pour un correcteur : afficher la table avec le nombre d'eleves
 			//
 			if (($rajto=="K")||($rajto=="A")) {
-				echo "<h2><a href=\"http://ikurso.esperanto-jeunes.org/sxangxiNBlernantoj.php\">".$lgv_miajlernantoj."</a></h2>";
+				echo "<h2><a href=\"http://ikurso.esperanto-jeunes.org/sxangxiNBlernantoj.php\">Mes &eacute;l&egrave;ves</a></h2>";
 			?>
 			<table title="cliquez ici pour modifier le nombre de vos &eacute;l&egrave;ves">
 				<thead>
@@ -132,31 +134,30 @@ ob_start("konvX");
 				<? kalkuliStudantojn(); ?>
 				</tbody>
 			</table>
-			<? } ?>
-			<? if ($persono_id=="") {
+			<?php } ?>
+			<?php if ($persono_id=="") {
 			//
 			// menu si l'utilisateur n'est pas connecte
 			//
 			?>
-				<h2><? echo $lgv_jamaligxi; ?></h2>
+				<h2>Déjà inscrit ?</h2>
 				<ul class="niv0">
-					<form name="eniro" action="<?=$vojo?>eniri.php" method="post">
-					<p class="klarigo dekstre">
-					<? echo $lgv_enirnomo; ?> : 
+					<form name="eniro" action="<?php echo $vojo; ?>eniri.php" method="post">
+					<p class="klarigo dekstre">Identifiant : 
 					<input type="text" name="enirnomo" size="12">&nbsp;</p>
-					<p class="klarigo dekstre"><? echo $lgv_pasvorto; ?> :
+					<p class="klarigo dekstre">Mot de passe :
 					<input type="password" name="pasvorto" size="12">&nbsp;</p>
-					<p class="dekstre"><input class="bouton" type="submit" name="Submit" value="&nbsp;&nbsp;<?=$lgv_eniriProgramon?>&nbsp;&nbsp;">&nbsp;</p>
+					<p class="dekstre"><input class="bouton" type="submit" name="Submit" value="&nbsp;&nbsp;Entrer&nbsp;&nbsp;">&nbsp;</p>
 					</form>
 					<li class="ligo">
 						<a href="#" title="Cliquez ici pour retrouver votre identifiant ou votre mot de passe" onClick="window.open('<?=$vojo?>pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');" >
-						<? echo $lgv_pasvortoForgesita?></a>
+						Mot de passe oubli&eacute;</a>
 					</li>
 					<li class="lasta">
-						<a href="<?=$vojo?>/fr/intro.php?temo=enskribo">Comment s&rsquo;inscrire ?</a>
+						<a href="<?php echo $vojo; ?>/fr/intro.php?temo=enskribo">Comment s&rsquo;inscrire ?</a>
 					</li>
 				</ul>
-			<? } ?>
+			<?php } ?>
 			<h2>Cours</h2>
 			<ul class="niv1">
 				<li><a href="<?echo $vojo."fr/intro.php?temo=eo"; ?>">Pr&eacute;sentation</a></li>
@@ -164,12 +165,11 @@ ob_start("konvX");
 				<a href="<?=$vojo?>fr/cge/intro.php?temo=intro">Cours en dix le&ccedil;ons</a>
 					<ul class="niv2">
 						<li><a href="<?=$vojo?>fr/cge/intro.php?temo=intro">Introduction</a></li>
-						<?
+						<?php
 							$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj 
 							where lecionoj.kurso='CG' and lecionoj.lingvo='FR'";
-							mysql_select_db( "ikurso");
-							$result = mysql_query($demando) or die ("INSERT : malbona demando :".$demando);
-							while($row = mysql_fetch_array($result)) {
+							$result = $bdd->query($demando) or die ("INSERT : malbona demando :".$demando);
+							while($row = $result->fetch()) {
 								echo "<li><a href=\"".$vojo."fr/cge/".$row['retpagxo']."\">".$row['titolo']."</a></li>";
 							}
 							?>
@@ -187,7 +187,7 @@ ob_start("konvX");
 				<a href="<?=$vojo;?>fr/gerda/index.php">Gerda malaperis</a>
 					<ul class="niv2 gerda">
 					<li><a href="<?=$vojo?>fr/gerda/index.php">Introduction</a></li>
-					<?
+					<?php
 						$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj 
 						where lecionoj.kurso='GR' and lecionoj.lingvo='FR'";
 						mysql_select_db( "ikurso");
@@ -251,7 +251,7 @@ ob_start("konvX");
 		<div class="stylenavbar">
 		</div>	
 	
-		<h1><?=$pagxtitolo?></h1>
+		<h1><?php echo $pagxtitolo;?></h1>
 		<!-- decommenter ceci pour afficher un message en cas de travaux sur le site
 		<div style="border:2px solid red;background:white">
 		<p class="eraro">

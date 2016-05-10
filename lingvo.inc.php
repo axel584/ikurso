@@ -1,6 +1,6 @@
-<?
-if ($_GET["lgv"]!="") {$lgv=$_GET["lgv"];}
-if ($_GET["lingvo"]!="") {$lingvo=$_GET["lingvo"];}
+<?php
+$lgv = isset($_GET["lgv"])?$_GET["lgv"]:"";
+$lingvo = isset($_GET["lingvo"])?$_GET["lingvo"]:"";
 // @include "fr.inc.php";
 /* tant pis pour le multilinguisme : faisons d'abord un truc qui marche !
 */

@@ -1,4 +1,4 @@
-<?
+<?php
 include "db.inc.php";
 malfermidatumbazon();
 // ER 05.10.2015 correction pour passage en PHP 5.4

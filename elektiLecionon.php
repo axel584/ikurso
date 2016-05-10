@@ -1,4 +1,4 @@
-<?
+<?php
 include "lingvo.inc.php";
 include "db.inc.php";
 malfermidatumbazon();

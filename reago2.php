@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 $pagxtitolo="Envoi de message";
 include "pagxkapo.inc.php";

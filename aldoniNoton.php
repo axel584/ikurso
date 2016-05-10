@@ -1,4 +1,4 @@
-<?
+<?php
 include "lingvo.inc.php";
 require("db.inc.php");
 $teksto=addslashes($_POST['teksto']);

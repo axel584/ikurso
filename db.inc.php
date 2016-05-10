@@ -1,8 +1,9 @@
-<?
+<?php
 // tiu funkcio kunligas la datumbazon. 
 // Elirvaluo : referenco pri la datumbazo
 function malfermiDatumbazon () {
-     $link = mysql_connect("localhost","jefo","***REMOVED***") or die ("Connexion impossible");
+    global $bdd;
+     $bdd = new PDO('mysql:host=localhost;dbname=ikurso;charset=utf8', 'jefo', '***REMOVED***');
 }
 
 

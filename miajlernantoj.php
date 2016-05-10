@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 $pagxtitolo=$lgv_miajlernantoj;
 $gxisdatigDato="2007-06-16";

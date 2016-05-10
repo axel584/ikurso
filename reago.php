@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 $pagxtitolo="Envoi de message";
 $persono_id=$_SESSION["persono_id"];

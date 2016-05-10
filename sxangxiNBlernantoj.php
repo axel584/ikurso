@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 $pagxtitolo=$lgv_sxangiNBlernantoj;
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}

@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 $pagxtitolo=$lgv_personinformoj;
 $persono_id=$_SESSION["persono_id"];

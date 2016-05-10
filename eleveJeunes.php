@@ -1,4 +1,4 @@
-<?
+<?php
 include "db.inc.php";
 include "etiquettes.php";
 malfermiDatumbazon();

@@ -1,10 +1,10 @@
-<?
+<?php
 include "util.php";
 $pagxtitolo="Bienvenue sur le site d’ikurso !";
 $gxisdatigDato="2016-01-21";
 malfermiDatumbazon();
-$persono_id = $_SESSION["persono_id"];
-$erarkodo=$_GET['erarkodo'];
+$persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
+$erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 if ($persono_id) {
 	$persono = apartigiPersonon($persono_id);
 	$forum_sid = $_SESSION["phpbb2mysql_sid"];
@@ -16,20 +16,20 @@ if ($persono_id) {
 include "pagxkapo.inc.php";
 ?>
 <div id="enhavo">
-		<? if ($erarkodo=="1") { // mot de passe incorrect : on propose d'envoyer son mot de passe par mail
+		<?php if ($erarkodo=="1") { // mot de passe incorrect : on propose d'envoyer son mot de passe par mail
 			echo '<form target="_NEW" name="pasvorto" method="post" action="pasvortoforgesita2.php">';
 			echo '<p class="eraro"><i>'.$lgv_eraro1.'</i></p>';
 			echo '<p class="eraro"><i>Pour recevoir votre mot de passe, <br/>indiquez votre adresse &eacute;lectronique :</i><br/><input type="text" name="retadreso" size="60"></p><input class="bouton" type="submit" value="'.$lgv_ek.'">';
 			echo '</form>';
 		}
 		?>
-		<? if ($erarkodo=="4") echo "<p class='eraro'><i>$lgv_eraro4</i></p>"; ?>
-		<? if ($erarkodo=="8") {
+		<?php if ($erarkodo=="4") echo "<p class='eraro'><i>$lgv_eraro4</i></p>"; ?>
+		<?php if ($erarkodo=="8") {
 			if ($_COOKIE["PHPSESSID"]=="") {echo "<p class='eraro'><i>$lgv_eraro14</i></p>";}
 			else {echo "<p class='eraro'><i>$lgv_eraro8</i></p>";}
 		}
 		?>
-		<? if ($erarkodo=="12") echo "<p class='eraro'><i>$lgv_eraro12</i></p>"; ?>
+		<?php if ($erarkodo=="12") echo "<p class='eraro'><i>$lgv_eraro12</i></p>"; ?>
 
 		<p>L’association <a href="http://esperanto-jeunes.org">Espéranto-Jeunes</a> propose trois cours par Internet,  
 		pour lesquels elle a mis en place un service de correction gratuit :</p>
@@ -82,15 +82,10 @@ include "pagxkapo.inc.php";
 			</tr>
 			<tr>
 			<td>
-			<? 
+			<?php 
 			echo file_get_contents('http://esperanto-jeunes.org/local/ikurso.php?departement='.$_REQUEST["departement"]."&host=".$REMOTE_HOST); 
 			?>
 			</td>
-			<? 
-			//include('http://esperanto-jeunes.org/local/ikurso.php?departement='.$_REQUEST["departement"]); 
-			?>
-			
-			
 			
 				<td colspan="2">
 					<h3><a href="http://www.lernu.net"><i>lernu!</i></a></h3>

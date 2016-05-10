@@ -1,4 +1,4 @@
-<?
+<?php
 if ($_SESSION["admin_id"]!=""){
 	$_SESSION["persono_id"]=$_SESSION["admin_id"];
 	$_SESSION["admin_id"]="";

@@ -1,4 +1,5 @@
-<?
+<?php
+session_start();
 $lingvo="FR";
 ini_set('session.gc_maxlifetime', 86400);
 ini_set('session.cookie_lifetime', 86400);
@@ -12,7 +13,7 @@ include_once("db/kursoj.inc.php");
 include_once("db/landoj.inc.php");
 include_once("db/nuna_kurso.inc.php");
 include_once("db/protokolo.inc.php");
-$url=$_SERVER['SCRIPT_URI'];
+$url=$_SERVER['REQUEST_URI'];
 
 // tiu funkcio konvertas la unikodan tekston al teksto en X-sistemo
 function konvX($buff) {
@@ -158,7 +159,7 @@ function adminTabebo() {
 }
 
 malfermiDatumbazon();
-$persono_id=$_SESSION["persono_id"];
+$persono_id = isset($_SESSION["persono_id"]) ? $$_SESSION["persono_id"] : "";
 if ($persono_id=="") {
 	$rajto="V";		// vizitanto
 	$enirnomo="";

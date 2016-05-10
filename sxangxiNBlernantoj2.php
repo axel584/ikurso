@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 malfermidatumbazon();
 $persono_id=$_SESSION["persono_id"];

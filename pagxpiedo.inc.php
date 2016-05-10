@@ -1,6 +1,6 @@
 <p class="dato">
 ĝisdatigita je : 
-<? if ($gxisdatigDato) {
+<?php if ($gxisdatigDato) {
 		echo $gxisdatigDato;
 	} else {
 		echo "2005-10-01";
@@ -19,4 +19,4 @@
 <div id="piedo">&nbsp;</div>
 </body>
 </html>  
-<? ob_flush();?>
+<?php ob_flush();?>

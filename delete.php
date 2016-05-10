@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 $pagxtitolo="Suppression d'une personne";
 $persono_id=$_SESSION["persono_id"];

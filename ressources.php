@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 $subjekto="ressources.php";
 $temo=$_GET["temo"];

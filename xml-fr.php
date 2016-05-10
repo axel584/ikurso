@@ -1,4 +1,4 @@
-<?
+<?php
 include "db.inc.php";
 malfermiDatumbazon();
 mysql_select_db( "ikurso");

@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 //session_start();
 // ER 05.10.2015 : correction pour passage en PHP 5.4

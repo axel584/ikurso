@@ -1,4 +1,4 @@
-<?
+<?php
 function debug($s) {
 	//{echo $s;}
 }

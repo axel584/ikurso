@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 malfermidatumbazon();
 mysql_select_db("ikurso");

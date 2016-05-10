@@ -1,4 +1,4 @@
-<?
+<?php
 //include_once $vojo."util.php";
 $url=$_SERVER["SCRIPT_URI"];
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);

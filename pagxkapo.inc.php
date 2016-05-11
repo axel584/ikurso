@@ -238,10 +238,6 @@ ob_start("konvX");
 						Vid&eacute;os en esp&eacute;ranto</a></p>
 					</li>
 				</ul>-->
-				<p class="meze">&nbsp;
-				Ce site est g&eacute;r&eacute; par :<a href="http://www.esperanto-jeunes.org"> 
-				<img alt="jefo-logeto" src="<?php echo $vojo;?>bildoj/logo_JEFO.gif" /></a>
-				</p>
 		</div> <!-- pagxmenuo -->
 		<div class="stylenavbar">
 		</div>	

@@ -36,11 +36,11 @@ ob_start("konvX");
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title>ikurso: <?=$pagxtitolo?>/<?=$subjekto?></title>
+<title>ikurso: <?php echo $pagxtitolo;?>/<?php echo $subjekto;?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="ikurso, cours, esperanto, cours d'esperanto, esperanto-jeunes" />
 <link href="http://esperanto-jeunes.org/favicon.ico" type="image/ico" rel="icon" />
-<link type="text/css" rel="stylesheet" href="<?=$vojo;?>style/<?=$style?>.css" title="<?=$style?>" />
+<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/<?php echo $style;?>.css" title="<?php echo $style;?>" />
 
 </head>
 <body>
@@ -54,37 +54,37 @@ ob_start("konvX");
 	<div id="menuo">
 		<table>
 			<tr><td class="unua">
-					<h1><?=$enirnomo?></h1>
-					<p><a href="<?echo $vojo."eliri.php"?>"><?=$lgv_eliru?></a></p>
+					<h1><?php echo $enirnomo;?></h1>
+					<p><a href="<?php echo $vojo."eliri.php"?>">Fermer la session</a></p>
 				</td>
 				<td>
-					<h2><?=$lgv_persona?></h2>
-					<!--<p><a href="<?echo $vojo."forum/index.php?sid=".$phpbb2mysql_sid;?>">
+					<h2>Personnel</h2>
+					<p><a href="<?php echo $vojo."forum/index.php?sid=".$phpbb2mysql_sid;?>">
 					<? echo $lgv_forumo." ".@phpbb_nombre_nouveau_message($persono_id);?>
 					</a></p>
-					<p><a href="javascript:void(0);" onClick="window.open('<?=$vojo?>forum/chatbox_mod/chatbox.php','12_ChatBox','scrollbars=no,width=700,height=550')">Discussion en ligne</a></p>-->
-					<p><a href="<?echo $vojo."personinformoj.php";?>"><?=$lgv_sxangipersoninformojn?></a></p>
+					<p><a href="javascript:void(0);" onClick="window.open('<?php echo $vojo;?>forum/chatbox_mod/chatbox.php','12_ChatBox','scrollbars=no,width=700,height=550')">Discussion en ligne</a></p>
+					<p><a href="<?echo $vojo."personinformoj.php";?>">Donn&eacute;es personnelles</a></p>
 				</td>
 			<? if ($rajto=="K" || $rajto=="A"){ ?>
 				<td>
-					<h2><?=$lgv_korektanta?></h2>
-					<p><a href="<?echo $vojo."statLauxKategorio.php";?>"><?=$lgv_statistiko?></a></p>
-					<p><a href="<?echo $vojo."helppagxo.php";?>"><?=$lgv_helppagxo?></a></p>
-					<p><a href="<?echo $vojo."miajlernantoj.php";?>"><?=$lgv_zorgistudantojn?></a></p>
+					<h2>Correcteur</h2>
+					<p><a href="<?php echo $vojo."statLauxKategorio.php";?>">Statistiques</a></p>
+					<p><a href="<?php echo $vojo."helppagxo.php";?>">Guide du correcteur</a></p>
+					<p><a href="<?php echo $vojo."miajlernantoj.php";?>">Mes &eacute;l&egrave;ves</a></p>
 				</td>
 			<? } ?>
 			<? if ($rajto=="I"){ ?>
 				<td class="elemento">
-					<h2><?=$lgv_administranta?></h2>
-					<p><a href="<?echo $vojo."statLauxKategorio.php";?>"><?=$lgv_statistiko?></a></p>
-					<p><a href="<?echo $vojo."stirpanelo.php";?>"><?=$lgv_zorgiuzantojn?></a></p>
+					<h2>Administrateur</h2>
+					<p><a href="<?php echo $vojo."statLauxKategorio.php";?>">Statistiques</a></p>
+					<p><a href="<?php echo $vojo."stirpanelo.php";?>">G&eacute;rer les utilisateurs</a></p>
 				</td>
 			<? } ?>
 			<? if ($rajto=="A"){ ?>
 				<td class="elemento">
-					<h2><?=$lgv_administranta?></h2>
-					<p><a href="<?echo $vojo."stirpanelo.php";?>"><?=$lgv_stirpanelo?></a></p>
-					<p><a href="<?echo $vojo."administri.php";?>"><?=$lgv_zorgiuzantojn?></a></p>
+					<h2>Administrateur</h2>
+					<p><a href="<?php echo $vojo."stirpanelo.php";?>">Panneau de contr&ocirc;le</a></p>
+					<p><a href="<?php echo $vojo."administri.php";?>">G&eacute;rer les utilisateurs</a></p>
 				</td>
 			<? } ?>
 			</tr>
@@ -104,14 +104,14 @@ ob_start("konvX");
 			<table class="nula">
 				<tr><td valign="top">
 					Mode d'affichage :<br />
-					<a href="<?=$url?>?metodo=U" title="Unikode">
-					<img src="<?=$vojo?>style/bouton-U.gif" title="Afficher les lettres accentu&eacute;es" class="<?if ($metodo=="U"){echo "jes";}else{echo "ne";}?>" />
+					<a href="<?php echo $url; ?>?metodo=U" title="Unikode">
+					<img src="<?php echo $vojo;?>style/bouton-U.gif" title="Afficher les lettres accentu&eacute;es" class="<?if ($metodo=="U"){echo "jes";}else{echo "ne";}?>" />
 					</a>
-					<a href="<?=$url?>?metodo=X" title="X-sistemo">
-					<img src="<?=$vojo?>style/bouton-X.gif" title="Afficher des x pour les accents" class="<?if ($metodo!="U"){echo "jes";}else{echo "ne";}?>" />
+					<a href="<?php echo $url; ?>?metodo=X" title="X-sistemo">
+					<img src="<?php echo $vojo;?>style/bouton-X.gif" title="Afficher des x pour les accents" class="<?if ($metodo!="U"){echo "jes";}else{echo "ne";}?>" />
 					</a>
 				</td><td valign="top">
-					<br /><a href="<?=$vojo?>/helpo.php"><button>&nbsp;&nbsp;&nbsp;Aide&nbsp;&nbsp;&nbsp;</button></a>
+					<br /><a href="<?php echo $vojo;?>/helpo.php"><button>&nbsp;&nbsp;&nbsp;Aide&nbsp;&nbsp;&nbsp;</button></a>
 				</td></tr></table>
 			<? 
 			//
@@ -150,7 +150,7 @@ ob_start("konvX");
 					<p class="dekstre"><input class="bouton" type="submit" name="Submit" value="&nbsp;&nbsp;Entrer&nbsp;&nbsp;">&nbsp;</p>
 					</form>
 					<li class="ligo">
-						<a href="#" title="Cliquez ici pour retrouver votre identifiant ou votre mot de passe" onClick="window.open('<?=$vojo?>pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');" >
+						<a href="#" title="Cliquez ici pour retrouver votre identifiant ou votre mot de passe" onClick="window.open('<?php echo $vojo;?>pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');" >
 						Mot de passe oubli&eacute;</a>
 					</li>
 					<li class="lasta">
@@ -160,11 +160,11 @@ ob_start("konvX");
 			<?php } ?>
 			<h2>Cours</h2>
 			<ul class="niv1">
-				<li><a href="<?echo $vojo."fr/intro.php?temo=eo"; ?>">Pr&eacute;sentation</a></li>
+				<li><a href="<?php echo $vojo."fr/intro.php?temo=eo"; ?>">Pr&eacute;sentation</a></li>
 				<li class="ligo">
-				<a href="<?=$vojo?>fr/cge/intro.php?temo=intro">Cours en dix le&ccedil;ons</a>
+				<a href="<?php echo $vojo; ?>fr/cge/intro.php?temo=intro">Cours en dix le&ccedil;ons</a>
 					<ul class="niv2">
-						<li><a href="<?=$vojo?>fr/cge/intro.php?temo=intro">Introduction</a></li>
+						<li><a href="<?php echo $vojo;?>fr/cge/intro.php?temo=intro">Introduction</a></li>
 						<?php
 							$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj 
 							where lecionoj.kurso='CG' and lecionoj.lingvo='FR'";
@@ -173,51 +173,50 @@ ob_start("konvX");
 								echo "<li><a href=\"".$vojo."fr/cge/".$row['retpagxo']."\">".$row['titolo']."</a></li>";
 							}
 							?>
-					<li><a href="<?=$vojo?>fr/cge/vocabula.php">Lexique</a></li>
+					<li><a href="<?php echo $vojo;?>fr/cge/vocabula.php">Lexique</a></li>
 					</ul>
 				</li>
 				<li class="ligo">
-				<a href="<?=$vojo?>aligxi.php">Kurso de esperanto</a>
+				<a href="<?php echo $vojo; ?>aligxi.php">Kurso de esperanto</a>
 					<ul class="niv2">
-						<li><a href="<?=$vojo?>aligxi.php">Inscription</a></li>
-						<li><a href="<?=$vojo?>fr/cge/vocabula.php">Lexique</a></li>
+						<li><a href="<?php echo $vojo;?>aligxi.php">Inscription</a></li>
+						<li><a href="<?php echo $vojo;?>fr/cge/vocabula.php">Lexique</a></li>
 					</ul>
 				</li>
 				<li class="ligo">
-				<a href="<?=$vojo;?>fr/gerda/index.php">Gerda malaperis</a>
+				<a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a>
 					<ul class="niv2 gerda">
-					<li><a href="<?=$vojo?>fr/gerda/index.php">Introduction</a></li>
+					<li><a href="<?php echo $vojo;?>fr/gerda/index.php">Introduction</a></li>
 					<?php
 						$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj 
 						where lecionoj.kurso='GR' and lecionoj.lingvo='FR'";
-						mysql_select_db( "ikurso");
-						$result = mysql_query($demando) or die ("INSERT : malbona demando :".$demando);
-						while($row = mysql_fetch_array($result)) {
+						$result = $bdd->query($demando) or die ("INSERT : malbona demando :".$demando);
+						while($row = $result->fetch()) {
 							echo "<li><a href=\"".$vojo."fr/gerda/".$row['retpagxo']."\">".$row['titolo']."</a></li>\n";
 						}
 					?>
 					</ul>
 				</li>
-				<li><a href="<?=$vojo;?>fr/gerda/lasu00.php">Lasu min paroli plu!</a></li>					 
-				<li class="lasta"><a href="<?=$vojo;?>helpo.php?temo=elsxutoj">T&eacute;l&eacute;chargements</a></li>					 
+				<li><a href="<?php echo $vojo;?>fr/gerda/lasu00.php">Lasu min paroli plu!</a></li>					 
+				<li class="lasta"><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">T&eacute;l&eacute;chargements</a></li>					 
 			</ul>
 
 			<h2>L&rsquo;esp&eacute;ranto</h2>
 			<ul class="niv1">
-				<li class="lasta"><a href="<?=$vojo?>ressources.php">En savoir plus...</a></li>					 
+				<li class="lasta"><a href="<?php echo $vojo;?>ressources.php">En savoir plus...</a></li>					 
 			</ul>
 
 			<h2>Comment faire ?</h2>
 			<ul class="niv0">
-				<li><a href="<?=$vojo?>/helpo.php"><? echo $lgv_helpo?></a></li>
-				<li><a href="<?=$vojo?>/fr/intro.php?temo=enskribo">S&rsquo;inscrire &agrave; un cours</a></li>
-				<li><a href="#" onClick="window.open('<?=$vojo?>pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');" >
+				<li><a href="<?php echo $vojo;?>/helpo.php"><? echo $lgv_helpo?></a></li>
+				<li><a href="<?php echo $vojo;?>/fr/intro.php?temo=enskribo">S&rsquo;inscrire &agrave; un cours</a></li>
+				<li><a href="#" onClick="window.open('<?php echo $vojo;?>pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');" >
 				Retrouver son mot de passe</a></li>
 				<li class="lasta">
 								
-					<a href="<?=$vojo?>reago.php">
+					<a href="<?php echo $vojo;?>reago.php">
 					<? echo $lgv_skribi;?> :					
-					<input type="image" src="<?=$vojo?>bildoj/koverto.gif">
+					<input type="image" src="<?php echo $vojo;?>bildoj/koverto.gif">
 					</a>
 				</li>
 			</ul>
@@ -241,11 +240,11 @@ ob_start("konvX");
 				</ul>-->
 				<p class="meze">&nbsp;
 				Découvrez Tintin en espéranto :
-				<a href="http://esperanto-france.org/Tincxjo-La-templo-de-l-suno"><img alt="la templo de l suno" src="<?=$vojo?>bildoj/tintin_ikurso.jpg" /></a>
+				<a href="http://esperanto-france.org/Tincxjo-La-templo-de-l-suno"><img alt="la templo de l suno" src="<?php echo $vojo;?>bildoj/tintin_ikurso.jpg" /></a>
 				</p>
 				<p class="meze">&nbsp;
 				Ce site est g&eacute;r&eacute; par :<a href="http://www.esperanto-jeunes.org"> 
-				<img alt="jefo-logeto" src="<?=$vojo?>bildoj/logo_JEFO.gif" /></a>
+				<img alt="jefo-logeto" src="<?php echo $vojo;?>bildoj/logo_JEFO.gif" /></a>
 				</p>
 		</div> <!-- pagxmenuo -->
 		<div class="stylenavbar">

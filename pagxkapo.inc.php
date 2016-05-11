@@ -90,7 +90,7 @@ ob_start("konvX");
 			</tr>
 		</table>
 	</div>
-<? } ?>
+<?php } ?>
 <!-- 
 *
 * page = menu lateral + onglets (facultatifs) + contenu 
@@ -105,15 +105,15 @@ ob_start("konvX");
 				<tr><td valign="top">
 					Mode d'affichage :<br />
 					<a href="<?php echo $url; ?>?metodo=U" title="Unikode">
-					<img src="<?php echo $vojo;?>style/bouton-U.gif" title="Afficher les lettres accentu&eacute;es" class="<?if ($metodo=="U"){echo "jes";}else{echo "ne";}?>" />
+					<img src="<?php echo $vojo;?>style/bouton-U.gif" title="Afficher les lettres accentu&eacute;es" class="<?php if ($metodo=="U"){echo "jes";}else{echo "ne";}?>" />
 					</a>
 					<a href="<?php echo $url; ?>?metodo=X" title="X-sistemo">
-					<img src="<?php echo $vojo;?>style/bouton-X.gif" title="Afficher des x pour les accents" class="<?if ($metodo!="U"){echo "jes";}else{echo "ne";}?>" />
+					<img src="<?php echo $vojo;?>style/bouton-X.gif" title="Afficher des x pour les accents" class="<?php if ($metodo!="U"){echo "jes";}else{echo "ne";}?>" />
 					</a>
 				</td><td valign="top">
 					<br /><a href="<?php echo $vojo;?>/helpo.php"><button>&nbsp;&nbsp;&nbsp;Aide&nbsp;&nbsp;&nbsp;</button></a>
 				</td></tr></table>
-			<? 
+			<?php 
 			//
 			// pour un correcteur : afficher la table avec le nombre d'eleves
 			//
@@ -131,7 +131,7 @@ ob_start("konvX");
 					</tr>
 				</thead>
 				<tbody>
-				<? kalkuliStudantojn(); ?>
+				<?php kalkuliStudantojn(); ?>
 				</tbody>
 			</table>
 			<?php } ?>
@@ -215,7 +215,7 @@ ob_start("konvX");
 				<li class="lasta">
 								
 					<a href="<?php echo $vojo;?>reago.php">
-					<? echo $lgv_skribi;?> :					
+					<?php echo $lgv_skribi;?> :					
 					<input type="image" src="<?php echo $vojo;?>bildoj/koverto.gif">
 					</a>
 				</li>

@@ -102,4 +102,4 @@ include "pagxkapo.inc.php";
 			</tr>
 		</table>
 	</div>
-<? include "pagxpiedo.inc.php";?>
+<?php include "pagxpiedo.inc.php";?>

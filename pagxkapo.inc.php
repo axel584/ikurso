@@ -168,7 +168,7 @@ ob_start("konvX");
 						<?php
 							$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj 
 							where lecionoj.kurso='CG' and lecionoj.lingvo='FR'";
-							$result = $bdd->query($demando) or die ("INSERT : malbona demando :".$demando);
+							$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 							while($row = $result->fetch()) {
 								echo "<li><a href=\"".$vojo."fr/cge/".$row['retpagxo']."\">".$row['titolo']."</a></li>";
 							}
@@ -190,7 +190,7 @@ ob_start("konvX");
 					<?php
 						$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj 
 						where lecionoj.kurso='GR' and lecionoj.lingvo='FR'";
-						$result = $bdd->query($demando) or die ("INSERT : malbona demando :".$demando);
+						$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 						while($row = $result->fetch()) {
 							echo "<li><a href=\"".$vojo."fr/gerda/".$row['retpagxo']."\">".$row['titolo']."</a></li>\n";
 						}

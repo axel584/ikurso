@@ -239,10 +239,6 @@ ob_start("konvX");
 					</li>
 				</ul>-->
 				<p class="meze">&nbsp;
-				Découvrez Tintin en espéranto :
-				<a href="http://esperanto-france.org/Tincxjo-La-templo-de-l-suno"><img alt="la templo de l suno" src="<?php echo $vojo;?>bildoj/tintin_ikurso.jpg" /></a>
-				</p>
-				<p class="meze">&nbsp;
 				Ce site est g&eacute;r&eacute; par :<a href="http://www.esperanto-jeunes.org"> 
 				<img alt="jefo-logeto" src="<?php echo $vojo;?>bildoj/logo_JEFO.gif" /></a>
 				</p>

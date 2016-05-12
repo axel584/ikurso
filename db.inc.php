@@ -19,6 +19,7 @@ function fermiDatumbazon() {
 // $retadreso - uzita por sendi mesagxon kun la nomo de la korektanto (por la studantoj) aux de la studanto (por la Korektantoj)
 // Elirvaluo : id de la persono (unika nombro por retrovi iun)
 function kreiPersonon($enirnomo,$pasvorto,$retadreso,$lingvo) {
+    global $bdd;
      $query = "insert into personoj";
      $query .="(enirnomo,pasvorto,retadreso,ekdato,lingvo) ";
      $query .="values ('$enirnomo','$pasvorto','$retadreso',now(),'$lingvo')";
@@ -35,6 +36,7 @@ function kreiPersonon($enirnomo,$pasvorto,$retadreso,$lingvo) {
 // ndjaro : jaro de la naskigxdato per 4 ciferoj (ekz. : 1978)
 // lingvo : uzita lingvo de la persono : TRE GRAVA AFERO !!! cxiuj franclingvaj korektantoj korektas franclingvajn studantojn. cxiuj brazillingvaj korektantoj korektas brazillingvajn studantojn ktp.
 function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$ndtago,$ndmonato,$ndjaro,$kialo,$maksimumo,$kurso,$sistemo,$stopInfo) {
+    global $bdd;
      $query = "update personoj set ";
      $query .= "sekso='$sekso',";
      $query .= "familinomo='$familinomo',";
@@ -97,7 +99,7 @@ function kontroliPersonon($enirnomo,$pasvorto) {
  * $samideanoj = listo de la korektantoj au lernantoj de la sama departemento
 */
 function listoDepartemento($idDepartemento, $rajtoj) {
-	
+	global $bdd;
 	// ni sercas la liston de ciuj korektantoj au lernantoj de la sama departemento
 	if ($rajtoj=="K")
 		$demando = "select distinct personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,personoj.posxtkodo,personoj.urbo from personoj,nuna_kurso where personoj.id=nuna_kurso.korektanto and posxtkodo like '".$idDepartemento."%' and lando='FR'";
@@ -138,6 +140,7 @@ function listoDepartemento($idDepartemento, $rajtoj) {
 // aliavaluo + aliavidigito = alia valuo kiu ne ekzistas en la tabelo
 // kie = kondicio por elekti la bonajn vicojn (povas malpleni)
 function konstruiMenuon($nomo,$tabelo,$valuo,$vidigito,$elektita,$kie,$unuavaluo) {
+    global $bdd;
      $demando =  "select $valuo,$vidigito from $tabelo $kie"; 
      mysql_select_db( "ikurso"); 
      $result = mysql_query($demando) or die (  "INSERT : malbona demando :".$demando); 
@@ -170,11 +173,12 @@ function konstruiMenuon($nomo,$tabelo,$valuo,$vidigito,$elektita,$kie,$unuavaluo
  * $listo : liste de choix à afficher
  */
 function konstruiListon($tabelo,$valuo,$vidigito,$kie) {
+    global $bdd;
 	 $demando =  "select $valuo,$vidigito from $tabelo $kie"; 
-	 mysql_select_db( "ikurso"); 
-	 $result = mysql_query($demando) or die (  "INSERT : malbona demando :".$demando); 
+	 $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	 
 	 $i=0;
-	 while($row = mysql_fetch_array($result)) {
+	 while($row = $result->fetch()) {
 	 	$menuo[$i]["valuo"] = al_utf8($row["$valuo"]);
 	 	$menuo[$i]["vidigito"] = al_utf8($row["$vidigito"]);
 	 	$i++;
@@ -183,16 +187,18 @@ function konstruiListon($tabelo,$valuo,$vidigito,$kie) {
 }
 
 function simplaVorto($valuo,$tabelo,$kie) {
+    global $bdd;
      $demando =  "select $valuo from $tabelo $kie"; 
-     mysql_select_db( "ikurso"); 
-     $result = mysql_query($demando) or die (  "INSERT : malbona demando :".$demando); 
-     while($row = mysql_fetch_array($result)) {
+     $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+     
+     while($row = $result->fetch()) {
          echo $row["$valuo"];  
      }
 }
 
 
 function konstruiKorektantliston($lingvo) {
+    global $bdd;
      echo "<select name=\"korektanto\" class=\"input_text_box\">";
      $query = "select personoj.id,personoj.enirnomo from personoj left join nuna_kurso on personoj.id=nuna_kurso.korektanto where personoj.rajtoj='A' or personoj.rajtoj='K' and personoj.lingvo='$lingvo' and nuna_kurso.korektanto IS NULL";
      mysql_select_db( "ikurso"); 

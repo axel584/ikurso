@@ -6,8 +6,8 @@ include "util.php";
 $_SESSION['persono_id']=$persono_id;
 $enirnomo=$_REQUEST["enirnomo"];
 $pasvorto=$_REQUEST["pasvorto"];
-$admin_id=$_SESSION["admin_id"];
-if ($admin_id) {
+$admin_id=isset($_SESSION["admin_id"])?$_SESSION["admin_id"]:"";
+if ($admin_id!="") {
 	$enirnomo=$_GET["enirnomo"];
 	$pasvorto=$_GET["pasvorto"];
 }

@@ -60,6 +60,7 @@ function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$p
 // parametro : id : unika numero
 // elirvaluo : $persono : objekto
 function apartigiPersonon($id) {
+	global $bdd;
 	$query = "select * from personoj where id=$id";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$persono = $result->fetch();

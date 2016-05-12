@@ -92,74 +92,8 @@ function kalkuliStudantojn() {
 		echo "\t</tr>\n";
 	}
 }
-function adminTabebo() {
-	//if ((($rajto=="A")||($rajto=="I"))&&($pagxtitolo==$lgv_zorgiuzantojn)) {
-	// tableau pour la page d'admin -->
-	/*
-		<div id="entete">
-			<div align="right">
-					<form name="administri" method="post" action="administri.php">
-					<select name="kategorio" onChange="document.administri.submit();">
-					<option <? if ($kategorio=="") echo "selected"; ?> value="P"><?=$lgv_elektuKategorion ?></option>
-					<option <? if ($kategorio=="P") echo "selected"; ?> value="P"><?=$lgv_atendasKorektanton ?></option>
-					<option <? if ($kategorio=="S0") echo "selected"; ?> value="S0"><?=$lgv_jamRicevisKorektanton ?></option>
-					<option <? if ($kategorio=="S") echo "selected"; ?> value="S"><?=$lgv_aliajLernantoj ?></option>
-					<option <? if ($kategorio=="H") echo "selected"; ?> value="H"><?=$lgv_haltis ?></option>
-					<option <? if ($kategorio=="F") echo "selected"; ?> value="F"><?=$lgv_finis ?></option>
-					<option <? if ($kategorio=="K") echo "selected"; ?> value="K"><?=$lgv_korektantoj ?></option>
-					<option <? if ($kategorio=="A") echo "selected"; ?> value="A"><?=$lgv_administrantoj ?></option>
-					<option <? if ($kategorio=="I") echo "selected"; ?> value="I"><?=$lgv_informantoj ?></option>
-					</select><br>
-				<?  if ($kategorio!='') 
-					echo "<select name=\"celpersono_id\" size=\"4\" onChange=\"document.administri.submit();\">";
-					switch ($kategorio) {
-						case 'P' : listi_P();
-						break;
-						case 'S0' :listi_S0();
-						break;
-						case 'S' : listi_S();
-						break;
-						case 'H' : listi_H();
-						break;
-						case 'F' : listi_F();
-						break;
-						case 'K' : listi_korektantoj();
-						break;
-						case 'A' : listi_A();
-						break;
-						case 'I' : listi_I();
-						break;
-					}
-					if ($kategorio!='') echo "</select>";
-				?>
-			</div>
-			</form>
-		</div>
-		<? } elseif (($rajto=="K")||($rajto=="A")){ ?>
-
-		<!-- tableau pour les correcteurs -->
-		<div id="entete">
-		<table 
-			style="cursor:pointer" title="cliquez sur la table pour modifier votre nombre d'&eacute;l&egrave;ves" 
-			onClick="window.open('sxangxiNBlernantoj.php','', 'resizable=no,scrollbars=no,location=no,top=200,left=200,width=450,height=250');">
-			<thead>
-				<tr>
-					<td>cours</td>
-					<td>&eacute;l&egrave;ves<br>en cours</td>
-					<td>nombre<br>maximum</td>
-				</tr>
-				</thead>
-					<tbody>
-					<? kalkuliStudantojn(); ?>
-					</tbody>
-				</table>
-			</div>
-		<? } ?>
-	*/
-}
-
 malfermiDatumbazon();
-$persono_id = isset($_SESSION["persono_id"]) ? $$_SESSION["persono_id"] : "";
+$persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 if ($persono_id=="") {
 	$rajto="V";		// vizitanto
 	$enirnomo="";

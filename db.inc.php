@@ -61,7 +61,8 @@ function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$p
 // elirvaluo : $persono : objekto
 function apartigiPersonon($id) {
 	global $bdd;
-	$query = "select * from personoj where id=$id";
+	echo $id;
+	$query = "select * from personoj where id=".$id;
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$persono = $result->fetch();
 	return $persono;

@@ -6,13 +6,6 @@ ini_set('session.cookie_lifetime', 86400);
 include_once("db.inc.php");
 include_once("webui.inc.php");
 include_once("forum/includes/forum.lib.php");
-include_once("db/Db.inc.php");
-include_once("db/personoj.inc.php");
-include_once("db/korektebla_kurso.inc.php");
-include_once("db/kursoj.inc.php");
-include_once("db/landoj.inc.php");
-include_once("db/nuna_kurso.inc.php");
-include_once("db/protokolo.inc.php");
 $url=$_SERVER['REQUEST_URI'];
 
 // tiu funkcio konvertas la unikodan tekston al teksto en X-sistemo
@@ -101,11 +94,10 @@ if ($persono_id=="") {
 	$lgv="FR";
 }
 else {
-	$persono=new personoj();
-	$persono->load_by_id($persono_id);
-	$rajto=$persono->rajtoj->get_kodo();
-	$enirnomo=$persono->get_enirnomo();
-	$lingvo=$persono->lingvo->get_kodo();
+	$persono  = apartigiPersonon($persono_id)
+	$rajto=$persono["rajtoj"];
+	$enirnomo=$persono["enirnomo"];
+	$lingvo=$persono["lingvo"]";
 	$lgv=$lingvo;	// langue de l'interface = par defaut la langue des donnees
 }
 include "lingvo.inc.php";

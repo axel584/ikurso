@@ -94,7 +94,7 @@ if ($persono_id=="") {
 	$lgv="FR";
 }
 else {
-	$persono  = apartigiPersonon($persono_id)
+	$persono  = apartigiPersonon($persono_id);
 	$rajto=$persono["rajtoj"];
 	$enirnomo=$persono["enirnomo"];
 	$lingvo=$persono["lingvo"]";

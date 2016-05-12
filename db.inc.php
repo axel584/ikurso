@@ -78,7 +78,9 @@ function kontroliPersonon($enirnomo,$pasvorto) {
 	$enirnomo=strtoupper($enirnomo);
 	$query = "select * from personoj where upper(enirnomo)='$enirnomo' and upper(pasvorto)='$pasvorto'";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
-	if (!$row = $result->fetch()) {
+	$row = $result->fetch();
+	echo "row : ".$row;
+	if (!$row) {
 		return "0";
 	} else {
 		$row['id'];

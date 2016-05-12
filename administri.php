@@ -3,11 +3,9 @@ function debug($s) {
 	//{echo $s;}
 }
 include "util.php";
-$pagxtitolo=$lgv_zorgiuzantojn;
-$persono_id=$_SESSION["persono_id"];
-if ($_POST["celpersono_id"]) {
-	$celpersono_id=$_POST["celpersono_id"];}
-else {$celpersono_id=$_GET["celpersono_id"];}
+$pagxtitolo="G&eacute;rer les utilisateurs";
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
+$celpersono_id=isset($_REQUEST["celpersono_id"])?$_REQUEST["celpersono_id"]:"";
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
 if ($celpersono_id!="") {$celpersono = apartigiPersonon($celpersono_id);}
@@ -573,15 +571,15 @@ include "adminkapo.inc.php";
 				<li <?if ($kategorio=="I"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=I"><?=$lgv_informantoj?></a></li>
 			</ul>
 			<div id="kadro">
-				<? if ($erarkodo=="9") echo "<p class='eraro'><i>$lgv_eraro9</i></p>"; ?>
-				<? if ($erarkodo=="11") echo "<p class='eraro'><i>$lgv_eraro11</i></p>"; ?>
+				<?php if ($erarkodo=="9") echo "<p class='eraro'><i>$lgv_eraro9</i></p>"; ?>
+				<?php if ($erarkodo=="11") echo "<p class='eraro'><i>$lgv_eraro11</i></p>"; ?>
 			
 			<div id="adminG">
 
 			<!-- page d'administration -->
 				<form name="administri" method="post" action="<?=$vojo?>administri.php?kategorio=<?=$kategorio?>">
 				<input type="hidden" name="kategorio" value="<?=$kategorio?>">
-			<? if ($kategorio!='') echo "<select id=\"celpersono\" name=\"celpersono_id\" size=\"30\" onChange=\"document.administri.submit();\">";
+			<?php if ($kategorio!='') echo "<select id=\"celpersono\" name=\"celpersono_id\" size=\"30\" onChange=\"document.administri.submit();\">";
 					switch ($kategorio) {
 						case 'P' : listi_P();
 						break;
@@ -611,83 +609,83 @@ include "adminkapo.inc.php";
 					<table class="perso">
 						<tr>
 							<td nowrap>
-								<input type="hidden" name="celpersono_id" value="<? echo $celpersono["id"]; ?>">
-								<div align="right" nowrap><? echo $lgv_vira; ?>
-								<input type="radio" name="sekso" value="M" <? if ($celpersono["sekso"]=='M') echo "checked"; ?>>
-								<? echo $lgv_virina; ?>
-								<input type="radio" name="sekso" value="I" <? if ($celpersono["sekso"]=='I') echo "checked"; ?>>
+								<input type="hidden" name="celpersono_id" value="<?php echo $celpersono["id"]; ?>">
+								<div align="right" nowrap><?php echo $lgv_vira; ?>
+								<input type="radio" name="sekso" value="M" <?php if ($celpersono["sekso"]=='M') echo "checked"; ?>>
+								<?php echo $lgv_virina; ?>
+								<input type="radio" name="sekso" value="I" <?php if ($celpersono["sekso"]=='I') echo "checked"; ?>>
 								</div>
 							</td>
-							<td class="col1"><? echo $lgv_familinomo; ?> :</td>
-							<td nowrap><input type="text" name="familinomo" size="25" value="<? echo $celpersono["familinomo"]; ?>"></td>
-							<td class="col1"><? echo $lgv_personnomo; ?> :</td>
-							<td nowrap><input type="text" name="personnomo" size="25" value="<? echo $celpersono["personnomo"]; ?>"></td>
+							<td class="col1"><?php echo $lgv_familinomo; ?> :</td>
+							<td nowrap><input type="text" name="familinomo" size="25" value="<?php echo $celpersono["familinomo"]; ?>"></td>
+							<td class="col1"><?php echo $lgv_personnomo; ?> :</td>
+							<td nowrap><input type="text" name="personnomo" size="25" value="<?php echo $celpersono["personnomo"]; ?>"></td>
 						</tr>
 						<tr>
-							<td colspan="2" class="col1"><? echo $lgv_adreso1; ?> :</td>
-							<td nowrap><input type="text" name="adreso1" size="25" value="<? echo $celpersono["adreso1"]; ?>"></td>
+							<td colspan="2" class="col1"><?php echo $lgv_adreso1; ?> :</td>
+							<td nowrap><input type="text" name="adreso1" size="25" value="<?php echo $celpersono["adreso1"]; ?>"></td>
 							<td class="col1"><?=$lgv_adreso2; ?> :</td>
-							<td nowrap><input type="text" name="adreso2" size="25" value="<? echo $celpersono["adreso2"]; ?>"></td>	
+							<td nowrap><input type="text" name="adreso2" size="25" value="<?php echo $celpersono["adreso2"]; ?>"></td>	
 						</tr>
 						<tr>
-							<td colspan="2" class="col1"><? echo $lgv_posxtkodo; ?> :</td>
-							<td><input type="text" name="posxtkodo" value="<? echo $celpersono["posxtkodo"]; ?>"></td>
-							<td class="col1"><? echo $lgv_urbo; ?> :</td>
-							<td><input type="text" name="urbo" size="25" value="<? echo $celpersono["urbo"]; ?>"></td>
+							<td colspan="2" class="col1"><?php echo $lgv_posxtkodo; ?> :</td>
+							<td><input type="text" name="posxtkodo" value="<?php echo $celpersono["posxtkodo"]; ?>"></td>
+							<td class="col1"><?php echo $lgv_urbo; ?> :</td>
+							<td><input type="text" name="urbo" size="25" value="<?php echo $celpersono["urbo"]; ?>"></td>
 						</tr>
 						<tr>
-							<td colspan="2" class="col1"><? echo $lgv_enirnomo; ?> <i>(*)</i>: </td>
-							<td nowrap><input type="text" name="celenirnomo" value="<? echo $celpersono["enirnomo"]; ?>"></td>
-							<td class="col1"><? echo $lgv_pasvorto1; ?> <i>(*)</i>: </td>
-							<td nowrap><input type="text" name="pasvorto" value="<? echo $celpersono["pasvorto"]; ?>"></td>
+							<td colspan="2" class="col1"><?php echo $lgv_enirnomo; ?> <i>(*)</i>: </td>
+							<td nowrap><input type="text" name="celenirnomo" value="<?php echo $celpersono["enirnomo"]; ?>"></td>
+							<td class="col1"><?php echo $lgv_pasvorto1; ?> <i>(*)</i>: </td>
+							<td nowrap><input type="text" name="pasvorto" value="<?php echo $celpersono["pasvorto"]; ?>"></td>
 						</tr>
 						<tr>
-							<? /*
+							<?php /*
 							<td colspan="2" class="col1">Visible ? O:
-								<input type="radio" name="videbla" value="J" <? if ($celpersono["videbla"]=='J') echo "checked"; ?>>
-								N:<? // echo $lgv_virina; ?>
-								<input type="radio" name="videbla" value="N" <? if ($celpersono["videbla"]=='N') echo "checked"; ?>>
+								<input type="radio" name="videbla" value="J" <?php if ($celpersono["videbla"]=='J') echo "checked"; ?>>
+								N:<?php // echo $lgv_virina; ?>
+								<input type="radio" name="videbla" value="N" <?php if ($celpersono["videbla"]=='N') echo "checked"; ?>>
 							</td> */ ?>
 							<td colspan="2" class="col1"><?=$lgv_rajtoj ?>:</td>
 							<td nowrap>
-								<? listi_rajtojn ($celpersono["rajtoj"], $lingvo);?>
+								<?php listi_rajtojn ($celpersono["rajtoj"], $lingvo);?>
 							</td>
-							<td nowrap class="col1"><? echo $lgv_lingvo; ?> :</td>
-							<td nowrap><? simplaVorto("nomo","lingvoj"," where kodo='$lingvo'"); ?></td>
+							<td nowrap class="col1"><?php echo $lgv_lingvo; ?> :</td>
+							<td nowrap><?php simplaVorto("nomo","lingvoj"," where kodo='$lingvo'"); ?></td>
 						</tr>
 						<tr>
-							<td nowrap colspan="2" class="col1"<? echo $lgv_lando; ?> :</td>
+							<td nowrap colspan="2" class="col1"<?php echo $lgv_lando; ?> :</td>
 							<td nowrap>
-								<? listi_landojn ($celpersono["lando"], $lingvo);?>
+								<?php listi_landojn ($celpersono["lando"], $lingvo);?>
 							</td>
-							<td nowrap class="col1"><? echo $lgv_retadreso; ?> <i>(*)</i>:</td>
-							<td nowrap><input type="text" name="retadreso" size="25" value="<? echo $celpersono["retadreso"]; ?>"></td>
+							<td nowrap class="col1"><?php echo $lgv_retadreso; ?> <i>(*)</i>:</td>
+							<td nowrap><input type="text" name="retadreso" size="25" value="<?php echo $celpersono["retadreso"]; ?>"></td>
 						</tr>
 						<tr>
 							<td colspan="2" class="col1"><?=$lgv_mesagxsistemo;?></td>
 							<td nowrap>
-								<input type="radio" name="sistemo" value="U" checked><? echo "&nbsp;".$lgv_unikode." "; ?><br>
+								<input type="radio" name="sistemo" value="U" checked><?php echo "&nbsp;".$lgv_unikode." "; ?><br>
 								<input type="radio" name="sistemo" value="X" 
-								<?if ($celpersono["sistemo"]=='X'){echo "checked";}?>><? echo "&nbsp;".$lgv_ikse." "; ?>
+								<?if ($celpersono["sistemo"]=='X'){echo "checked";}?>><?php echo "&nbsp;".$lgv_ikse." "; ?>
 							</td>
 							<td class="col1">stop-mailing :</td>
-							<td><input type="checkbox" name="stopInfo" <? if ($celpersono["stop_info"]=="J") {echo "checked";}?>>
+							<td><input type="checkbox" name="stopInfo" <?php if ($celpersono["stop_info"]=="J") {echo "checked";}?>>
 							</td>
 						</tr>
 						<tr>
-							<td nowrap colspan="2" class="col1"><? echo $lgv_naskigxdato; ?> :</td>
+							<td nowrap colspan="2" class="col1"><?php echo $lgv_naskigxdato; ?> :</td>
 							<td nowrap>
-								<? afixsi_naskigxdaton ($celpersono["naskigxdato"], $lingvo); ?>
+								<?php afixsi_naskigxdaton ($celpersono["naskigxdato"], $lingvo); ?>
 							</td>
-							<td nowrap class="col1"><? echo $lgv_sekvitakurso; ?> :</td>
+							<td nowrap class="col1"><?php echo $lgv_sekvitakurso; ?> :</td>
 							<td nowrap>
-								<? listi_kursojn ($celpersono["kurso"], $lingvo);?>
+								<?php listi_kursojn ($celpersono["kurso"], $lingvo);?>
 							</td>
 						</tr>
 						<tr>
-							<td nowrap colspan="2" class="col1"><? echo $lgv_aligxo ?> : </td>
+							<td nowrap colspan="2" class="col1"><?php echo $lgv_aligxo ?> : </td>
 							<td nowrap>
-								<? ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $celpersono["ekdato"],$ekdt);
+								<?php ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $celpersono["ekdato"],$ekdt);
 									echo $ekdt[3]." ";
 									$demando =  "select kodo,nomo from monatoj where kodo=".$ekdt[2]." and lingvo='$lingvo'";
 									mysql_select_db( "ikurso"); 
@@ -716,31 +714,31 @@ include "adminkapo.inc.php";
 										$lastdato=$lstdt[3]." ".$row["nomo"]." ".$lstdt[1];
 									}
 								?>
-							<td><? echo $lastdato; ?></td>
+							<td><?php echo $lastdato; ?></td>
 						</tr>
 						<tr>
 							<td nowrap colspan="2" class="col1" valign="top">
 								Commentaire de l'&eacute;l&egrave;ve :
 							</td>
 							<td colspan="3"  valign="top">
-								<textarea name="kialo" cols="90" rows="6"><? echo stripslashes($celpersono['kialo'])?></textarea>
+								<textarea name="kialo" cols="90" rows="6"><?php echo stripslashes($celpersono['kialo'])?></textarea>
 							</td>
 						</tr>
 					</table>
 			
-							<? if ($persono["rajtoj"]=='A') { ?>
+							<?php if ($persono["rajtoj"]=='A') { ?>
 							<table class="perso">
 								<tr>
 									<td valign="middle">
-										<? if ($celpersono_id=="") { ?>
+										<?php if ($celpersono_id=="") { ?>
 											<a href="javascript:document.administri2.action='sercxi.php';document.administri2.submit();">
 											<img src="bildoj/find.png"></a>
-										<? } else { 
+										<?php } else { 
 											$_SESSION["admin_id"]=$_SESSION["persono_id"];
 										?>
 											<a href="javascript:window.location.href='eniri.php?enirnomo=<?=$celpersono['enirnomo'];?>&pasvorto=<?=$celpersono['pasvorto'];?>';">
 											<img src="bildoj/kdmconfig.png" border="0"></a>
-										<? } ?>
+										<?php } ?>
 									</td>
 									<td valign="middle">
 										<a href="javascript:document.administri2.submit();">
@@ -752,10 +750,10 @@ include "adminkapo.inc.php";
 									</td>
 								</tr>
 							</table>
-							<? } ?>
+							<?php } ?>
 						</div>
 					
-					<?
+					<?php
 					// liste des cours déjà suivis
 					// ne liste rien pour l'écran vide ou pour les correcteurs/administrateurs
 					debug ("recherche des cours déjà suivis : rajtoj=".$celpersono['rajtoj']."<br>");
@@ -774,7 +772,7 @@ include "adminkapo.inc.php";
 								</tr>
 								<thead>
 								<tbody>
-									<? $havasKurson = 0;
+									<?php $havasKurson = 0;
 										$havasSekvitanKurson = 0;
 										// en théorie, il n'y en a qu'un seul dont le correcteur est modifiable 
 										// (celui qui est N ou K ou H)
@@ -798,7 +796,7 @@ include "adminkapo.inc.php";
 											debug ("<br>havasKurson=".$havasKurson."<br>");
 											?>
 										<tr>
-										<? // le cours demandé est un cours actuellement suivi
+										<?php // le cours demandé est un cours actuellement suivi
 										debug ("verifier si le cours demande est actuellement suivi<br>");
 										debug ("cours demande=".$celpersono["kurso"]." et cours suivi=".$nuna_kursoj[$i]->kurso->get_kodo()."<br>");
 										if (($celpersono["kurso"]==$nuna_kursoj[$i]->kurso->get_kodo())
@@ -811,17 +809,17 @@ include "adminkapo.inc.php";
 										<td>
 											<a href="javascript:document.administri2.action='administriNunanKurson.php';document.administri2.submit();">
 											<img src="bildoj/filesaveas.png"  align="middle"></a></td>
-										<td><? listi_Korektantoj_laux_kurso($celpersono_id,$nuna_kursoj[$i]->kurso->get_kodo()); ?></td>
-									<? } else { ?>
+										<td><?php listi_Korektantoj_laux_kurso($celpersono_id,$nuna_kursoj[$i]->kurso->get_kodo()); ?></td>
+									<?php } else { ?>
 										<td><img src="bildoj/1rightarrow.png" align="middle"></td>
 										<td><strong><a href="administri.php?celpersono_id=<?=$nuna_kursoj[$i]->korektanto->get_id()?>">
 										<?=$nuna_kursoj[$i]->korektanto->get_enirnomo() ?></a></strong></td>
-									<? } ?>
+									<?php } ?>
 									<!-- <td><strong><a href="administri.php?celpersono_id=<?=$nuna_kursoj[$i]->korektanto->get_id()?>"> -->
 									<?=$nuna_kursoj[$i]->korektanto->get_enirnomo() ?></a></strong></td>
 									<td><?=$nuna_kursoj[$i]->kurso->get_nomo() ?></td>
 									<td>
-									<? if ($nuna_kursoj[$i]->nunleciono->get_titolo()=="") { echo $lgv_neniuLeciono;;}
+									<?php if ($nuna_kursoj[$i]->nunleciono->get_titolo()=="") { echo $lgv_neniuLeciono;;}
 										else {
 											echo $nuna_kursoj[$i]->nunleciono->get_titolo();
 											$lastdato=$nuna_kursoj[$i]->get_lastdato();
@@ -831,13 +829,13 @@ include "adminkapo.inc.php";
 									?>
 									</td>
 			
-									<? } else { // ceci n'est pas un cours actuellement suivi ?>
+									<?php } else { // ceci n'est pas un cours actuellement suivi ?>
 									<td>&nbsp;</td>
 									<td><strong><a href="administri.php?celpersono_id=<?=$nuna_kursoj[$i]->korektanto->get_id()?>">
 									<?=$nuna_kursoj[$i]->korektanto->get_enirnomo() ?></a></strong></td>
 									<td><?=$nuna_kursoj[$i]->kurso->get_nomo() ?></td>
 									<td>
-										<? if ($nuna_kursoj[$i]->nunleciono->get_titolo()=="") { echo $lgv_neniuLeciono;;} 
+										<?php if ($nuna_kursoj[$i]->nunleciono->get_titolo()=="") { echo $lgv_neniuLeciono;;} 
 											else {
 												echo $nuna_kursoj[$i]->nunleciono->get_titolo();
 												$lastdato=$nuna_kursoj[$i]->get_lastdato();
@@ -846,41 +844,41 @@ include "adminkapo.inc.php";
 											}
 										?>
 									</td>
-								<? } ?>
+								<?php } ?>
 							</tr>
-							<? }
+							<?php }
 								// on ne propose d'affecter un correcteur que sous 2 conditions :
 								// - il n'a pas déjà suivi le cours en question
 								// - il n'a pas déjà un cours qu'il suit actuellement
 								debug ("faut-il proposer un nouveau correcteur ?<br>");
 								if (($havasKurson==0) && ($havasSekvitanKurson==0)) {
 									// aucun cours suivi : c'est un élève a qui on doit affecter un correcteur ?>
-									<? debug ("pas de cours en cours : proposer un correcteur<br>"); ?>
+									<?php debug ("pas de cours en cours : proposer un correcteur<br>"); ?>
 								<tr>
 									<td>
 										<a href="javascript:document.administri2.action='administriNunanKurson.php';document.administri2.submit();">
 										<img src="bildoj/filesaveas.png"  align="middle"></a></td>
-									<td><? listi_Korektantoj_laux_kurso($celpersono["id"],$celpersono["kurso"]); ?></td>
+									<td><?php listi_Korektantoj_laux_kurso($celpersono["id"],$celpersono["kurso"]); ?></td>
 									<td>
-									<? $kurso = $celpersono["kurso"];
+									<?php $kurso = $celpersono["kurso"];
 										simplaVorto("nomo","kursoj"," where kodo='$kurso' and lingvo='$lingvo' "); ?>
 								</td>
 								<td><?= $lgv_neniuLeciono; ?></td>
 							</tr>
-						<? } ?>
+						<?php } ?>
 						</tbody>
 						</table>
 						</div>
-						<? } // fin de la liste des cours suivis ?>
+						<?php } // fin de la liste des cours suivis ?>
 						
 						<div class="encadre">
 							<table class="perso">
 								<tr>
-							<? if ($persono["rajtoj"]=='A') { ?>
+							<?php if ($persono["rajtoj"]=='A') { ?>
 									<td>
 							<p class="klarigo"><?=$lgv_korektantaNoto ?>:</p>
 						</form>
-							<?								
+							<?php								
 								// notoj aldoneblaj per la korektanto
 								$demando5 = "select * from komentoj where komentoj.studanto='".$celpersono["id"]."'";
 								$result5 = mysql_query($demando5) or die (  "SELECT : malbona demando :".$demando5);
@@ -904,17 +902,17 @@ include "adminkapo.inc.php";
 								echo "</form>";	
 							?>
 							</td>
-							<? } ?>
+							<?php } ?>
 						</tr>
 						</table>
 					</div>
 					
-					<? // liste les élèves uniquement pour les correcteurs et les administrateurs
+					<?php // liste les élèves uniquement pour les correcteurs et les administrateurs
 					if (($celpersono["rajtoj"]=='A') ||($celpersono["rajtoj"]=='K')) { ?>
 						<h1><?=$lgv_siajLernantoj?> :</h1>
 						<p><?=$lgv_maksiLauxKurso?> :</p>
 						<p>
-							<? // mettre ici le nombre d'élèves voulu par cours. 
+							<?php // mettre ici le nombre d'élèves voulu par cours. 
 							$sql = sprintf("SELECT kursoj.nomo as kurso,kiom_lernantoj as kiom FROM korektebla_kurso,kursoj WHERE korektebla_kurso.kurso=kursoj.kodo and kursoj.lingvo='%s' and korektebla_kurso.korektanto=%s",$lingvo,$celpersono["id"]);
 							mysql_select_db( "ikurso");
 							$result = mysql_query($sql) or die (  "SELECT : malbona demando :".$demando);
@@ -925,9 +923,9 @@ include "adminkapo.inc.php";
 							?>
 						</p>
 									
-						<? listi_S_laux_K($celpersono_id); ?>
-						<? } ?>
+						<?php listi_S_laux_K($celpersono_id); ?>
+						<?php } ?>
 
 					<!-- fino de la administra parto -->
 				</div>
-<? include "pagxpiedo.inc.php"; ?>
+<?php include "pagxpiedo.inc.php"; ?>

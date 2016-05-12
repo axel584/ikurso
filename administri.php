@@ -14,6 +14,8 @@ else {
 	$celpersono = array(
     	'id' => '',
     	'sekso' => '',
+    	'ekdato' => '',
+    	'retadreso' => '',
     	'enirnomo' => '',
     	'pasvorto' => '',
     	'rajtoj' => '',

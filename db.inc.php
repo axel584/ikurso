@@ -72,14 +72,16 @@ function apartigiPersonon($id) {
 // elirvaluo : 0 se la persono ne ekzistas (la pasvorto maltrafas...)
 // > 0 : la unika numero de la persono
 function kontroliPersonon($enirnomo,$pasvorto) {
-     $pasvorto=strtoupper($pasvorto);
-     $enirnomo=strtoupper($enirnomo);
-     $query = "select * from personoj where upper(enirnomo)='$enirnomo' and upper(pasvorto)='$pasvorto'";
-     mysql_select_db("ikurso");
-     $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-     if (mysql_num_rows($result) =="0") return 0;
-     $persono = mysql_fetch_array($result);
-     return $persono["id"];
+	global $bdd;
+	$pasvorto=strtoupper($pasvorto);
+	$enirnomo=strtoupper($enirnomo);
+	$query = "select * from personoj where upper(enirnomo)='$enirnomo' and upper(pasvorto)='$pasvorto'";
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	if (!$row = $result->fetch()) {
+		return 0;
+	} else {
+		$row['id'];
+	}
 }
 
 /**********************************************************************************

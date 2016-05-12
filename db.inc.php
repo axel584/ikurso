@@ -81,9 +81,10 @@ function kontroliPersonon($enirnomo,$pasvorto) {
 	$row = $result->fetch();
 	echo "row : ".print_r($row);
 	if (!$row) {
+		echo "pas trouvé";
 		return "0";
 	} else {
-		$row['id'];
+		return $row['id'];
 	}
 }
 

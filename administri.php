@@ -9,6 +9,25 @@ $celpersono_id=isset($_REQUEST["celpersono_id"])?$_REQUEST["celpersono_id"]:"";
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
 if ($celpersono_id!="") {$celpersono = apartigiPersonon($celpersono_id);}
+else {
+	// on créer un tableau $celpersono vide pour afficher le formulaire "vide" (pour faire des recherches ou un ajout)
+	$celpersono = array(
+    	'id' => '',
+    	'sekso' => '',
+    	'enirnomo' => '',
+    	'pasvorto' => '',
+    	'rajtoj' => '',
+    	'naskigxdato' => '',
+    	'stop_info' => '',
+    	'familinomo' => '',
+    	'personnomo' => '',
+    	'adreso1' => '',
+    	'adreso2' => '',
+    	'posxtkodo' => '',
+    	'urbo' => '',
+    	'lando' => '',
+    	);
+}
 if ($rajto!='A' && $rajto!='I'){header("Location:index.php?erarkodo=4");}
 $kategorio=$_GET["kategorio"];
 
@@ -21,7 +40,7 @@ $kategorio=$_GET["kategorio"];
 function listi_rajtojn ($rajtoj, $lingvo) {
 	echo "<select name=\"rajtoj\">";
 	echo "<option value=\"\">&nbsp;</option>";
-	$listo = konstruiListon("rajtoj","kodo","nomo"," where lingvo='$lingvo' order by nomo");	     
+	$listo = konstruiListon("rajtoj","kodo","nomo"," where lingvo='fr' order by nomo");	     
 	foreach ($listo as $listero) {
 		echo "<option value='".$listero['valuo']."'";
 		if ($listero['valuo']==$rajtoj) { echo " selected";}
@@ -37,7 +56,7 @@ function listi_landojn ($lando, $lingvo) {
 	global $aliavidigito, $defaultCharset;
 	echo "<select name=\"lando\">";
 	echo "<option value=\"\">&nbsp;</option>";
-	$listo = konstruiListon("landoj","kodo","nomo"," where lingvo='$lingvo' order by nomo");	     
+	$listo = konstruiListon("landoj","kodo","nomo"," where lingvo='fr' order by nomo");	     
 	foreach ($listo as $listero) {
 		echo "<option value='".$listero['valuo']."'";
 		if ($listero['valuo']==$lando) { echo " selected";}
@@ -59,7 +78,7 @@ function listi_kursojn ($kurso, $lingvo) {
 	global $aliavidigito;
 	echo "<select name=\"kurso\">";
 	echo "<option value=\"\">&nbsp;</option>";
-	$listo = konstruiListon("kursoj","kodo","nomo"," where lingvo='$lingvo' order by nomo");	     
+	$listo = konstruiListon("kursoj","kodo","nomo"," where lingvo='fr' order by nomo");	     
 	foreach ($listo as $listero) {
 		echo "<option value='".$listero['valuo']."'";
 		if ($listero['valuo']==$kurso) { echo " selected";}
@@ -79,17 +98,18 @@ function listi_kursojn ($kurso, $lingvo) {
 
 function afixsi_naskigxdaton ($dato, $lingvo) {
 	global $aliavidigito;
-	ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $dato,$nskdt);
+	//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $dato,$nskdt);
+	$nskdt = explode("-",$dato);
 	echo "<input type=\"text\" name=\"naskigxdato_tago\" size=\"3\" maxlength=\"2\" value=\"";
-	if ($nskdt[3]!="00") {echo $nskdt[3];}
+	if ($nskdt[2]!="00") {echo $nskdt[2];}
 	echo "\">";
-	$monato = $nskdt[3];
+	$monato = $nskdt[2];
 	echo "&nbsp;<select name=\"naskigxdato_monato\">";
 	echo "<option value=\"\">&nbsp;</option>";
-	$listo = konstruiListon("monatoj","kodo","nomo"," where lingvo='$lingvo' order by nomo");	     
-	if ($nskdt[2]!="00") {$monato=$nskdt[2];}
+	$listo = konstruiListon("monatoj","kodo","nomo"," where lingvo='fr' order by nomo");	     
+	if ($nskdt[1]!="00") {$monato=$nskdt[1];}
 	else $monato="";
-	$listo = konstruiListon("monatoj", "kodo", "nomo"," where lingvo='$lingvo'");
+	$listo = konstruiListon("monatoj", "kodo", "nomo"," where lingvo='fr'");
 	foreach ($listo as $listero) {
 		echo "<option value='".$listero['valuo']."'";
 		if ($listero['valuo']==$monato) { echo " selected";}
@@ -100,7 +120,7 @@ function afixsi_naskigxdaton ($dato, $lingvo) {
 	echo "</select>&nbsp;";
 	
 	echo "<input type=\"text\" name=\"naskigxdato_jaro\" size=\"5\"  maxlength=\"4\" value=\"";
-	if ($nskdt[1]!="0000") echo $nskdt[1];
+	if ($nskdt[0]!="0000") echo $nskdt[0];
 	echo "\">";
 }
 
@@ -290,11 +310,10 @@ function listi_S_laux_K($korektanto_id) {
 
 //tiu funkcio konstruas la liston de Personoj 'P'
 function listi_P() {
-	global $lingvo;
+	global $lingvo,$bdd;
 	$demando =  "select id,enirnomo,personnomo,familinomo from personoj where rajtoj='P' and lingvo='$lingvo'";
-	mysql_select_db( "ikurso");
-	$result = mysql_query($demando) or die (  "INSERT : malbona demando :".$demando);
-	while($row = mysql_fetch_array($result)) {
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while($row = $result->fetch()) {
 		echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]." (".$row["personnomo"]." ".$row["familinomo"].")</option>";
 	}
 }
@@ -443,8 +462,8 @@ include "adminkapo.inc.php";
 				<li <?if ($kategorio=="I"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=I"><?=$lgv_informantoj?></a></li>
 			</ul>
 			<div id="kadro">
-				<?php if ($erarkodo=="9") echo "<p class='eraro'><i>$lgv_eraro9</i></p>"; ?>
-				<?php if ($erarkodo=="11") echo "<p class='eraro'><i>$lgv_eraro11</i></p>"; ?>
+				<?php if (isset($erarkodo) && $erarkodo=="9") echo "<p class='eraro'><i>Cet élève a déjà un correcteur.</i></p>"; ?>
+				<?php if (isset($erarkodo) && $erarkodo=="11") echo "<p class='eraro'><i>Choisissez un correcteur avant de sauvegarder</i></p>"; ?>
 			
 			<div id="adminG">
 
@@ -482,9 +501,9 @@ include "adminkapo.inc.php";
 						<tr>
 							<td nowrap>
 								<input type="hidden" name="celpersono_id" value="<?php echo $celpersono["id"]; ?>">
-								<div align="right" nowrap><?php echo $lgv_vira; ?>
+								<div align="right" nowrap>H.
 								<input type="radio" name="sekso" value="M" <?php if ($celpersono["sekso"]=='M') echo "checked"; ?>>
-								<?php echo $lgv_virina; ?>
+								F.
 								<input type="radio" name="sekso" value="I" <?php if ($celpersono["sekso"]=='I') echo "checked"; ?>>
 								</div>
 							</td>
@@ -557,13 +576,14 @@ include "adminkapo.inc.php";
 						<tr>
 							<td nowrap colspan="2" class="col1"><?php echo $lgv_aligxo ?> : </td>
 							<td nowrap>
-								<?php ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $celpersono["ekdato"],$ekdt);
-									echo $ekdt[3]." ";
-									$demando =  "select kodo,nomo from monatoj where kodo=".$ekdt[2]." and lingvo='$lingvo'";
+								<?php //ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $celpersono["ekdato"],$ekdt);
+									$ekdt = explode("-",$celpersono["ekdato"]);
+									echo $ekdt[2]." ";
+									$demando =  "select kodo,nomo from monatoj where kodo=".$ekdt[1]." and lingvo='fr'";
 									mysql_select_db( "ikurso"); 
 									if (($result = mysql_query($demando))){
 										$row = mysql_fetch_array($result);
-										echo $row["nomo"]." ".$ekdt[1]; 
+										echo $row["nomo"]." ".$ekdt[0]; 
 									}
 								?>
 							</td>

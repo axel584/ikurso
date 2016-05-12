@@ -146,35 +146,7 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 	//recherche si l'élève en cours a un correcteur et le rajoute à sa liste si besoin
 	$studantakurso = new nuna_kurso;
 	$studantakurso->find_one(array("studanto"=>$studanto_id,"kurso"=>$kurso));
-	/*
-	if ($studantakurso->korektanto->get_id() != "")
-	{
-		$cxiukorektantoj = array_merge($korektantoj, $administrantoj,array($studantakurso->get_korektanto()));
-	} else {
-  		$cxiukorektantoj = array_merge($korektantoj, $administrantoj);
-	}
-	$obj_korektebla_kurso = new korektebla_kurso;
-	$obj_nuna_kurso = new nuna_kurso;
-	// affiche tous les correcteurs dans un tableau dont l'indice est fonction du "remplissage" des correcteurs, ce qui permet de les triers
-	// la valeur de ce tableau est la chaine de caractere du menu deroulant.
-	for ($k=0;$k<count($cxiukorektantoj);$k++) {
-		$nunaj_kursoj = $obj_nuna_kurso->find(array("korektanto"=>$cxiukorektantoj[$k]->get_id(),"kurso"=>$kurso,"stato"=>"K"));
-		$nunaj_kursoj2 = $obj_nuna_kurso->find(array("korektanto"=>$cxiukorektantoj[$k]->get_id(),"kurso"=>$kurso,"stato"=>"N"));
-		$NbLernantoj = count($nunaj_kursoj) + count($nunaj_kursoj2);
-		$obj_korektebla_kurso->load_by_korektanto_kaj_kurso($cxiukorektantoj[$k]->get_id(),$kurso); // nur unu linio
-		if (($studantakurso->korektanto->get_id()==$cxiukorektantoj[$k]->get_id()) || ($obj_korektebla_kurso->get_kiom_lernantoj()!="" && $obj_korektebla_kurso->get_kiom_lernantoj()!="0")) {
-			// si le nombre d'élève voulu est de 0 (cas o�st le correcteur en cours, alors le pourcentage est de 100)
-			$percentajxo=($obj_korektebla_kurso->get_kiom_lernantoj()==0) ? 100 : floor(100*$NbLernantoj/$obj_korektebla_kurso->get_kiom_lernantoj());
-			if ($studantakurso->korektanto->get_id()==$cxiukorektantoj[$k]->get_id()) {
-				//$tabulo[($percentajxo*100)+$cxiukorektantoj[$k]->get_id()]="<option selected value=\"".$cxiukorektantoj[$k]->get_id()."\">=>".$cxiukorektantoj[$k]->get_enirnomo()." (".$NbLernantoj."/".$obj_korektebla_kurso->get_kiom_lernantoj()." : ".$percentajxo."%)</option>\n";
-				$tabulo[$percentajxo]="<option selected value=\"".$cxiukorektantoj[$k]->get_id()."\">=>".$cxiukorektantoj[$k]->get_enirnomo()." (".$NbLernantoj."/".$obj_korektebla_kurso->get_kiom_lernantoj()." : ".$percentajxo."%)</option>\n";
-			} else {
-				//$tabulo[($percentajxo*100)+$cxiukorektantoj[$k]->get_id()]="<option value=\"".$cxiukorektantoj[$k]->get_id()."\">".$cxiukorektantoj[$k]->get_enirnomo()." (".$NbLernantoj."/".$obj_korektebla_kurso->get_kiom_lernantoj()." : ".$percentajxo."%)</option>\n";
-				$tabulo[$percentajxo]="<option value=\"".$cxiukorektantoj[$k]->get_id()."\">".$cxiukorektantoj[$k]->get_enirnomo()." (".$NbLernantoj."/".$obj_korektebla_kurso->get_kiom_lernantoj()." : ".$percentajxo."%)</option>\n";
-			}
-		}
 
-	}*/
 
 	// mi ordigas la tabulon kaj skribi gxin
 	/*ksort($tabulo);
@@ -291,29 +263,6 @@ function listi_S_laux_K($korektanto_id) {
 			echo $lstdt[3]."/".$lstdt[2]."/".$lstdt[1]."<br>\n";
 		}
 
-/*		$demando2="select (TO_DAYS(NOW()) - TO_DAYS(ekdato)) as numtagoj from nuna_kurso where studanto='".$row["id"]."' and stato='N'";
-		$result2 = mysql_query($demando2) or die (  "INSERT : malbona demando :".$demando2);
-		while($row2 = mysql_fetch_array($result2)) {
-			echo $row2["numtagoj"];	
-		}
-                echo "</td><td>";
-		echo "<a href=\"mailto:".$row["retadreso"]."\"><img src=\"bildoj/skribi.gif\" border=\"0\"></a>";
-		echo "<a href=\"administri.php?celpersono_id=".$row["id"]."\">".$row["enirnomo"]."</a><br>";
-		echo $lgv_nekomencita;
-		echo "</td><td>";
-		echo $row["personnomo"]." ".$row["familinomo"]."<br>";
-		if ($row["adreso1"]!="") echo $row["adreso1"]."<br>";
-		if ($row["adreso2"]!="") echo $row["adreso2"]."<br>";
-		echo $row["lando"]."-".$row["posxtkodo"]." ".$row["urbo"]."<br>";
-		echo "</td></tr>";
-		echo "<tr";
-		if ($i%2==1) { echo " bgcolor=\"#d0d8df\"";}
-		echo "><td colspan=\"3\">";
-		if ($row["kialo"]!="") { 
-			echo "<span class='klarigo'>commentaire de l'&eacute;l&egrave;ve : </span> ";
-			echo $row["kialo"]."<br>"; 
-		}
-*/
 
 		// colonne 3: commentaires
 		echo "</div><div class='lernanto' clear='both'>";
@@ -338,83 +287,6 @@ function listi_S_laux_K($korektanto_id) {
 			echo "<p>".$lgv_neniuLernanto."</p>";
 	}
 }
-
-/*		// notoj aldoneblaj per la korektanto
-		$demando3 = "select * from komentoj where komentoj.studanto='".$row["id"]."'";
-		$result3 = mysql_query($demando3) or die (  "SELECT : malbona demando :".$demando3);
-		while ($row3 = mysql_fetch_array($result3)){
-			$demando4 = "select enirnomo from personoj where personoj.id='".$row3['korektanto']."'";
-			$result4 = mysql_query($demando4) or die (  "SELECT : malbona demando :".$demando4);
-			$row4 = mysql_fetch_array($result4);
-			echo " <span class='klarigo'>de ".$row4['enirnomo']." le ".$row3['dato']."</span> :\n";
-			echo " ".$row3["teksto"]."\n";
-			echo "<br>\n";
-		}	
-		echo "</td></tr>";     
-
-		$i++;
-	}
-*/
-/*	// studantoj kiu jam komencis lerni (stato de nuna_kurso valoras 'K' kiel Komencita)
-	$demando =  "select personoj.id as id,personoj.kurso as kurso,nuna_kurso.nunleciono as leciono,personoj.enirnomo as enirnomo,personoj.familinomo as familinomo,personoj.personnomo as personnomo,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.noto as noto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='$lingvo' and nuna_kurso.stato='K' and nuna_kurso.korektanto='$korektanto_id';";
-	mysql_select_db( "ikurso");
-	$result = mysql_query($demando) or die (  "INSERT : malbona demando :".$demando);
-	while($row = mysql_fetch_array($result)) {
-		echo "<tr";
-		if ($i%2==1) { echo " bgcolor=\"#d0d8df\"";}
-		echo "><td>";
-		// atentu ke la studanto ne movigxis antaux 15 tagoj
-		$demando2="select (TO_DAYS(NOW()) - TO_DAYS(lastdato)) as numtagoj,lastdato from nuna_kurso where studanto='".$row["id"]."' and stato='K'";
-		$result2 = mysql_query($demando2) or die (  "INSERT : malbona demando :".$demando2);
-		while($row2 = mysql_fetch_array($result2)) {
-			echo $row2["numtagoj"];
-		}
-		echo "</td><td>";
-		echo "<a href=\"mailto:".$row["retadreso"]."\"><img src=\"bildoj/skribi.gif\" border=\"0\"></a>";
-		echo "<a href=\"administri.php?celpersono_id=".$row["id"]."\">".$row["enirnomo"]."</a><br>";
-		$demando2="select titolo from lecionoj where numero='".$row["leciono"]."' and kurso='".$row["kurso"]."' and lingvo='$lingvo'";
-		$result2 = mysql_query($demando2) or die (  "INSERT : malbona demando :".$demando2);
-		while($row2 = mysql_fetch_array($result2)) {
-			echo $lgv_nuna_leciono." : ".$row2["titolo"]."<br>";
-
-		}
-		echo "</td><td>";
-		echo $row["personnomo"]." ".$row["familinomo"]."<br>";
-		if ($row["adreso1"]!="") echo $row["adreso1"]."<br>";
-		if ($row["adreso2"]!="") echo $row["adreso2"]."<br>";
-		echo $row["lando"]."-".$row["posxtkodo"]." ".$row["urbo"]."<br>";
-		echo "</td></tr>";
-		echo "<tr";
-		if ($i%2==1) { echo " bgcolor=\"#d0d8df\"";}
-		echo "><td colspan=\"3\">";
-		if ($row["kialo"]!="") { 
-			echo "<span class='fajna' style=\"color:gray\">commentaire de l'&eacute;l&egrave;ve : </span>";
-			echo $row["kialo"]."<br>"; 
-		}
-
-		// notoj aldoneblaj per la korektanto
-		// echo "<font color=\"red\">".$row["noto"]."</font></td><td>";
-				// notoj aldoneblaj per la korektanto
-		$demando3 = "select * from komentoj where komentoj.studanto='".$row["id"]."'";
-		$result3 = mysql_query($demando3) or die (  "SELECT : malbona demando :".$demando3);
-		echo "<span class='normala'>";
-		while ($row3 = mysql_fetch_array($result3)){
-			$demando4 = "select enirnomo from personoj where personoj.id='".$row3['korektanto']."'";
-			$result4 = mysql_query($demando4) or die (  "SELECT : malbona demando :".$demando4);
-			$row4 = mysql_fetch_array($result4);
-			echo " <span class='fajna' style=\"color:gray\">de ".$row4['enirnomo']." le ".$row3['dato']."</span> :\n";
-			echo "<span class='normala' style=\"color:navy\">\n";
-			echo " ".$row3["teksto"]."\n";
-			echo "</span><br>\n";
-		}	
-		echo "</td></tr>";     
-
-		$i++;
-	}
-	if ($i==0) { echo "<tr><td>".$lgv_neniuLernanto."</td></tr>";}
-	echo "</table>";
-}
-*/
 
 //tiu funkcio konstruas la liston de Personoj 'P'
 function listi_P() {

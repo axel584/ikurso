@@ -61,7 +61,6 @@ function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$p
 // elirvaluo : $persono : objekto
 function apartigiPersonon($id) {
 	global $bdd;
-	echo "identifiant recherché :".$id;
 	$query = "select * from personoj where id=".$id;
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$persono = $result->fetch();
@@ -79,9 +78,7 @@ function kontroliPersonon($enirnomo,$pasvorto) {
 	$query = "select * from personoj where upper(enirnomo)='$enirnomo' and upper(pasvorto)='$pasvorto'";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$row = $result->fetch();
-	echo "row : ".print_r($row);
 	if (!$row) {
-		echo "pas trouvé";
 		return "0";
 	} else {
 		return $row['id'];
@@ -253,10 +250,9 @@ function vidiKorektantojn($lingvo) {
 
 }
 function protokolo($persono_id,$kategorio,$teksto) {
-   global $lingvo;
+   global $lingvo,$bdd;
    $ip = $_SERVER['REMOTE_ADDR'];
    $query = "insert into protokolo(id,persono_id,horo,ip,kategorio,teksto,lingvo) values ('','$persono_id',now(),'$ip','$kategorio','$teksto','$lingvo')";
-   mysql_select_db( "ikurso"); 
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query); 
+   $bdd->exec($query);
 }
 ?>

@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="Konsiloj por la kursfinintoj";
 include "gerdakapo.inc.php"; 
 ?>
@@ -45,7 +45,7 @@ include "gerdakapo.inc.php";
 	<p>
 	  Plejparte tiuj, kiuj finis la kurson <i>Gerda</i>, anta&#365;e finis la
 	  kurson <i>DLEK (Dek Leciona Kurso)</i> a&#365; <i>"Kurso de Esperanto</i>. 
-<?
+<?php
 // voir si on met ici les stats sur le nb d'eleves qui ont termine Gerda
 ?>
 	
@@ -520,4 +520,4 @@ include "gerdakapo.inc.php";
 	vidpunkto	(vid-punkto) point de vue
 	vivkunulo	(viv-kun-ulo) compagnon, personne avec qui l'on vit
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

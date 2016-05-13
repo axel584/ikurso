@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="23 (dudek tri)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -37,4 +37,4 @@ include "gerdakapo.inc.php";
 			<p>La kofro, kiun ili eltiris, ne estis tre granda, nek speciale
 			bela a&#365; valora. &#284;i estis &#349;losita. Per siaj iloj, ili &#285;in malfermis.</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

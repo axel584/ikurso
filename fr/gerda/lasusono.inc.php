@@ -1,4 +1,4 @@
-<?
+<?php
 $sono="http://ikurso.esperanto-jeunes.org/fr/gerda/son/".$dosiero;
 ?>
 		<div class="sono">

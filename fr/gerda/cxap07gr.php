@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="7 (sep)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -51,4 +51,4 @@ include "gerdakapo.inc.php";
 		<p><span class='ekz'>li venis la postan tagon</span> : il est venu le jour d'apr&egrave;s</p>
 		<p><span class='ekz'>&#285;i estas unu metron alta</span> : cela est haut d'un m&egrave;tre</p>
 	</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

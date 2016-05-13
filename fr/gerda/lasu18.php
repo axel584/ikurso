@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="18a";
 include "gerdakapo.inc.php";
 ?>
@@ -128,4 +128,4 @@ include "gerdakapo.inc.php";
 	miaj zorgoplenaj gepatroj. Ne. Rilate al leterskribado, mi ne estis
 	bona filo. Neniam rompis plumon pro troskribo mi.</p>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

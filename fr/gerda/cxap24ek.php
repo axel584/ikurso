@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="24 (dudek kvar)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -6,7 +6,7 @@ include "gerdakapo.inc.php";
 		<h3>Demandoj</h3>
 		<input type="hidden" name="013_cxap24.0" value="Demandoj">
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "Kiel aspektis la trezoro?",
 				2 => "Kion legis Ronga?",
 				3 => "Kiam Marta eksciis pri la trezoro de la lumoser&#265;antoj?",
@@ -112,7 +112,7 @@ include "gerdakapo.inc.php";
 		  ---> Observate de la studentoj li ne kura&#285;is foriri.</em></p>
 
 		<div class="tasko">
-		<? $demandoj=array(
+		<?php $demandoj=array(
 			7 => "La HOMOJ, KIUJ FORIROS, ne plu zorgos pri sia laboro.",
 			8 => "La INFANOJ, KIUJ LERNAS, ekstaras, kiam la instruisto envenas.",
 			9 => "POST KIAM LI longe PRIPENSIS la aferon, li decidis ekagi.",
@@ -130,4 +130,4 @@ include "gerdakapo.inc.php";
 			?>
 			</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

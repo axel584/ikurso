@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="7 (sep)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -6,7 +6,7 @@ include "gerdakapo.inc.php";
 			<h3>Demandoj</h3>
 			<input type="hidden" name="013_cxap07.0" value="Demandoj">
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "&#264;u Gerda ankora&#365; vivas? (jes / ne)",
 				2 => "Kiel batas la koro de Gerda? (forte / malforte / nekonscie / konscie / ver&#349;ajne)",
 				3 => "Kiun Tom volas informi? (la blondulon / la profesoron pri lingvistiko / la a&#365;toritatojn / spionon)",
@@ -27,7 +27,7 @@ include "gerdakapo.inc.php";
 		<p>-- Nun faru vi:</p>
 
 			<div class="tasko">
-				<? $demandoj=array (
+				<?php $demandoj=array (
 					5 => "La [sukerpeco/sukerpecon] falis en la [kafo/kafon].",
 					6 => "Sed [mi/min] ne deziras [sukero/sukeron] en [mia/mian] [kafo/kafon].",
 					7 => "Jen [Linda/Lindan] venas en la [restoracio/restoracion]!",
@@ -57,7 +57,7 @@ include "gerdakapo.inc.php";
 		<br><p>-- Nun faru vi:</p>
 
 			<div class="tasko">
-				<? $demandoj=array (
+				<?php $demandoj=array (
 					17 => "[Kiel/Ol] vi scias, Bob estas pli alta [kiel/ol] Tom, sed malpli alta [kiel/ol] la stranga blondulo.",
 					18 => "Mi preferus resti &#265;i tie [kiel/ol] iri informi la a&#365;toritatojn.",
 					19 => "La vero ofte &#349;ajnas pli absurda [kiel/ol] imaga&#309;oj.",
@@ -68,4 +68,4 @@ include "gerdakapo.inc.php";
 			?>
 			</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

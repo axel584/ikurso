@@ -1,4 +1,4 @@
-<? 
+<?php 
 $&#265;ap="03"; 
 $titolo="3 (tri)";
 include "vlkapo.inc.php";
@@ -181,5 +181,5 @@ d&eacute;sapprouvent.)
 
 </PRE>
 
-<? include "vlpiedo.inc.php"; ?>
+<?php include "vlpiedo.inc.php"; ?>
 </body></html>

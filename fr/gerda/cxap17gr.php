@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="17"; 
 $titolo="17 (dek sep)";
 include "gerdakapo.inc.php";
@@ -26,4 +26,4 @@ include "gerdakapo.inc.php";
 			<p><span class="ekz">Jozefo kaj Marta geedzi&#285;is</span> : Joseph et Martha se sont mari&eacute;s 
 			(litt. "sont devenus mari et femme")</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

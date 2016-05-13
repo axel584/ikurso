@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="2 (du)";
 include "dlekkapo.inc.php";
 
@@ -292,82 +292,82 @@ suffiront pour le moment.</p>
 					<input type="hidden" name="900 resp 01" value="mal, mauvais, malade/mauvais, mauvais, malade/contraire, mauvais, malade/(pas de réponse)">
 					01. Que signifient respectivement 'mala', 'malbona', 'malsana'?
 				</p><p>
-					<input style="display:none;" type="radio" name="900 01" <?if($memorkurso["900_01"]==""){echo "checked";}?>>
-					<input type="radio" name="900 01" value="1" <?if($memorkurso["900_01"]=="1"){echo "checked";}?>> mal, mauvais, malade<br>
-					<input type="radio" name="900 01" value="2" <?if($memorkurso["900_01"]=="2"){echo "checked";}?>> mauvais, mauvais, malade<br>
-					<input type="radio" name="900 01" value="3" <?if($memorkurso["900_01"]=="3"){echo "checked";}?>> contraire, mauvais, malade<br>
+					<input style="display:none;" type="radio" name="900 01" <?php if($memorkurso["900_01"]==""){echo "checked";}?>>
+					<input type="radio" name="900 01" value="1" <?php if($memorkurso["900_01"]=="1"){echo "checked";}?>> mal, mauvais, malade<br>
+					<input type="radio" name="900 01" value="2" <?php if($memorkurso["900_01"]=="2"){echo "checked";}?>> mauvais, mauvais, malade<br>
+					<input type="radio" name="900 01" value="3" <?php if($memorkurso["900_01"]=="3"){echo "checked";}?>> contraire, mauvais, malade<br>
 				</p><p>
 					<input type="hidden" name="900 dmd 02" value="Que signifie 'malbelaj virinoj'?">
 					02. Que signifie 'malbelaj virinoj'?
 					<input type="hidden" name="900 resp 02" value="des hommes laids/de belles femmes/des femmes laides/(pas de réponse)">
 				</p><p>
-					<input style="display:none;" type="radio" name="900 02" <?if($memorkurso["900_02"]==""){echo "checked";}?>>
-					<input type="radio" name="900 02" value="1" <?if($memorkurso["900_02"]=="1"){echo "checked";}?>> des hommes laids<br>
-					<input type="radio" name="900 02" value="2" <?if($memorkurso["900_02"]=="2"){echo "checked";}?>> de belles femmes<br>
-					<input type="radio" name="900 02" value="3" <?if($memorkurso["900_02"]=="3"){echo "checked";}?>> des femmes laides<br>
+					<input style="display:none;" type="radio" name="900 02" <?php if($memorkurso["900_02"]==""){echo "checked";}?>>
+					<input type="radio" name="900 02" value="1" <?php if($memorkurso["900_02"]=="1"){echo "checked";}?>> des hommes laids<br>
+					<input type="radio" name="900 02" value="2" <?php if($memorkurso["900_02"]=="2"){echo "checked";}?>> de belles femmes<br>
+					<input type="radio" name="900 02" value="3" <?php if($memorkurso["900_02"]=="3"){echo "checked";}?>> des femmes laides<br>
 				</p><p>
 					<input type="hidden" name="900 dmd 03" value="Quel est le féminin pluriel de 'mia granda amiko'?">
 				<input type="hidden" name="900 resp 03" value="miaj grandaj amikinoj/mia granda amikinoj/miaj grandinaj amikinoj/(pas de réponse)">
 					03. Quel est le féminin pluriel de 'mia granda amiko'?
 				</p><p>
-					<input style="display:none;" type="radio" name="900 03" <?if($memorkurso["900_03"]==""){echo "checked";}?>>
-					<input type="radio" name="900 03" value="1" <?if($memorkurso["900_03"]=="1"){echo "checked";}?>> miaj grandaj amikinoj<br>
-					<input type="radio" name="900 03" value="2" <?if($memorkurso["900_03"]=="2"){echo "checked";}?>> mia granda amikinoj<br>
-					<input type="radio" name="900 03" value="3" <?if($memorkurso["900_03"]=="3"){echo "checked";}?>> miaj grandinaj amikinoj<br>
+					<input style="display:none;" type="radio" name="900 03" <?php if($memorkurso["900_03"]==""){echo "checked";}?>>
+					<input type="radio" name="900 03" value="1" <?php if($memorkurso["900_03"]=="1"){echo "checked";}?>> miaj grandaj amikinoj<br>
+					<input type="radio" name="900 03" value="2" <?php if($memorkurso["900_03"]=="2"){echo "checked";}?>> mia granda amikinoj<br>
+					<input type="radio" name="900 03" value="3" <?php if($memorkurso["900_03"]=="3"){echo "checked";}?>> miaj grandinaj amikinoj<br>
 				</p><p>
 					<input type="hidden" name="900 dmd 04" value="Traduisez 'la boutique est vieille':">
 					04. Traduisez 'la boutique est vieille':
 					<input type="hidden" name="900 resp 04" value="la butiko estas malbela/la butiko estas malnovan/la butiko estas malnova/(pas de réponse)">
 				</p><p>
-					<input style="display:none;" type="radio" name="900 04" <?if($memorkurso["900_04"]==""){echo "checked";}?>>
-					<input type="radio" name="900 04" value="1" <?if($memorkurso["900_04"]=="1"){echo "checked";}?>> la butiko estas malbela<br>
-					<input type="radio" name="900 04" value="2" <?if($memorkurso["900_04"]=="2"){echo "checked";}?>> la butiko estas malnovan<br>
-					<input type="radio" name="900 04" value="3" <?if($memorkurso["900_04"]=="3"){echo "checked";}?>> la butiko estas malnova<br>
+					<input style="display:none;" type="radio" name="900 04" <?php if($memorkurso["900_04"]==""){echo "checked";}?>>
+					<input type="radio" name="900 04" value="1" <?php if($memorkurso["900_04"]=="1"){echo "checked";}?>> la butiko estas malbela<br>
+					<input type="radio" name="900 04" value="2" <?php if($memorkurso["900_04"]=="2"){echo "checked";}?>> la butiko estas malnovan<br>
+					<input type="radio" name="900 04" value="3" <?php if($memorkurso["900_04"]=="3"){echo "checked";}?>> la butiko estas malnova<br>
 				</p><p>
 					<input type="hidden" name="900 dmd 05" value="Traduisez 'je ne bois pas d’eau':">
 					05. Traduisez 'je ne bois pas d’eau':
 					<input type="hidden" name="900 resp 05" value="mi maltrinkas akvon/mi ne trinkas akvon/mi trinkas ne akvon/(pas de réponse)">
 				</p><p>
-					<input style="display:none;" type="radio" name="900 05" <?if($memorkurso["900_05"]==""){echo "checked";}?>>
-					<input type="radio" name="900 05" value="1" <?if($memorkurso["900_05"]=="1"){echo "checked";}?>> mi maltrinkas akvon<br>
-					<input type="radio" name="900 05" value="2" <?if($memorkurso["900_05"]=="2"){echo "checked";}?>> mi ne trinkas akvon<br>
-					<input type="radio" name="900 05" value="3" <?if($memorkurso["900_05"]=="3"){echo "checked";}?>> mi trinkas ne akvon<br>
+					<input style="display:none;" type="radio" name="900 05" <?php if($memorkurso["900_05"]==""){echo "checked";}?>>
+					<input type="radio" name="900 05" value="1" <?php if($memorkurso["900_05"]=="1"){echo "checked";}?>> mi maltrinkas akvon<br>
+					<input type="radio" name="900 05" value="2" <?php if($memorkurso["900_05"]=="2"){echo "checked";}?>> mi ne trinkas akvon<br>
+					<input type="radio" name="900 05" value="3" <?php if($memorkurso["900_05"]=="3"){echo "checked";}?>> mi trinkas ne akvon<br>
 				</p><p>
 					<input type="hidden" name="900 dmd 06" value="Traduisez 'j’ai oublié la limonade' :">
 					06. Traduisez 'j’ai oublié la limonade':
 					<input type="hidden" name="900 resp 06" value="mi petis limonadon/mi havas forgesi la limonadon/mi forgesis la limonadon/(pas de réponse)">
 				</p><p>
-					<input style="display:none;" type="radio" name="900 06"  <?if($memorkurso["900_06"]==""){echo "checked";}?>>
-					<input type="radio" name="900 06" value="1" <?if($memorkurso["900_06"]=="1"){echo "checked";}?>> mi petis limonadon<br/>
-					<input type="radio" name="900 06" value="2" <?if($memorkurso["900_06"]=="2"){echo "checked";}?>> mi havas forgesi la limonadon<br/>
-					<input type="radio" name="900 06" value="3" <?if($memorkurso["900_06"]=="3"){echo "checked";}?>> mi forgesis la limonadon<br/>
+					<input style="display:none;" type="radio" name="900 06"  <?php if($memorkurso["900_06"]==""){echo "checked";}?>>
+					<input type="radio" name="900 06" value="1" <?php if($memorkurso["900_06"]=="1"){echo "checked";}?>> mi petis limonadon<br/>
+					<input type="radio" name="900 06" value="2" <?php if($memorkurso["900_06"]=="2"){echo "checked";}?>> mi havas forgesi la limonadon<br/>
+					<input type="radio" name="900 06" value="3" <?php if($memorkurso["900_06"]=="3"){echo "checked";}?>> mi forgesis la limonadon<br/>
 				</p><p>
 					<input type="hidden" name="900 dmd 07" value="Quel est le complément d'objet direct dans 'mon frère boira de l’eau lundi'?">
 					07. Quel est le complément d'objet direct dans 'mon frère boira de l’eau lundi'?
 					<input type="hidden" name="900 resp 07" value="mon frère/de l’eau/lundi/(pas de réponse)">
 				</p><p>
-					<input style="display:none;" type="radio" name="900 07"  <?if($memorkurso["900_07"]==""){echo "checked";}?>>
-					<input type="radio" name="900 07" value="1" <?if($memorkurso["900_07"]=="1"){echo "checked";}?>> mon frère<br/>
-					<input type="radio" name="900 07" value="2" <?if($memorkurso["900_07"]=="2"){echo "checked";}?>> de l’eau<br/>
-					<input type="radio" name="900 07" value="3" <?if($memorkurso["900_07"]=="3"){echo "checked";}?>> lundi<br/>
+					<input style="display:none;" type="radio" name="900 07"  <?php if($memorkurso["900_07"]==""){echo "checked";}?>>
+					<input type="radio" name="900 07" value="1" <?php if($memorkurso["900_07"]=="1"){echo "checked";}?>> mon frère<br/>
+					<input type="radio" name="900 07" value="2" <?php if($memorkurso["900_07"]=="2"){echo "checked";}?>> de l’eau<br/>
+					<input type="radio" name="900 07" value="3" <?php if($memorkurso["900_07"]=="3"){echo "checked";}?>> lundi<br/>
 				</p><p>
 					<input type="hidden" name="900 dmd 08" value="Quel est le complément d’objet direct dans 'que boira mon frère lundi'?">
 					08. Quel est le complément d’objet direct dans 'que boira mon frère lundi'?
 					<input type="hidden" name="900 resp 08" value="que/mon frère/lundi/(pas de réponse)">
 				</p><p>
-					<input style="display:none;" type="radio" name="900 08"  <?if($memorkurso["900_08"]==""){echo "checked";}?>>
-					<input type="radio" name="900 08" value="1" <?if($memorkurso["900_08"]=="1"){echo "checked";}?>> que<br/>
-					<input type="radio" name="900 08" value="2" <?if($memorkurso["900_08"]=="2"){echo "checked";}?>> mon frère<br/>
-					<input type="radio" name="900 08" value="3" <?if($memorkurso["900_08"]=="3"){echo "checked";}?>> lundi<br/>
+					<input style="display:none;" type="radio" name="900 08"  <?php if($memorkurso["900_08"]==""){echo "checked";}?>>
+					<input type="radio" name="900 08" value="1" <?php if($memorkurso["900_08"]=="1"){echo "checked";}?>> que<br/>
+					<input type="radio" name="900 08" value="2" <?php if($memorkurso["900_08"]=="2"){echo "checked";}?>> mon frère<br/>
+					<input type="radio" name="900 08" value="3" <?php if($memorkurso["900_08"]=="3"){echo "checked";}?>> lundi<br/>
 				</p><p>
 					<input type="hidden" name="900 dmd 09" value="Quelle est la fonction de 'médecin' dans 'tu seras médecin'?">
 					09. Quelle est la fonction de 'médecin' dans 'tu seras médecin'?
 					<input type="hidden" name="900 resp 09" value="sujet/complément d’objet direct/attribut du sujet/(pas de réponse)">
 				</p><p>
-					<input style="display:none;" type="radio" name="900 09"  <?if($memorkurso["900_09"]==""){echo "checked";}?>>
-					<input type="radio" name="900 09" value="1" <?if($memorkurso["900_09"]=="1"){echo "checked";}?>> sujet<br/>
-					<input type="radio" name="900 09" value="2" <?if($memorkurso["900_09"]=="2"){echo "checked";}?>> complément d’objet direct<br/>
-					<input type="radio" name="900 09" value="3" <?if($memorkurso["900_09"]=="3"){echo "checked";}?>> attribut du sujet<br/>
+					<input style="display:none;" type="radio" name="900 09"  <?php if($memorkurso["900_09"]==""){echo "checked";}?>>
+					<input type="radio" name="900 09" value="1" <?php if($memorkurso["900_09"]=="1"){echo "checked";}?>> sujet<br/>
+					<input type="radio" name="900 09" value="2" <?php if($memorkurso["900_09"]=="2"){echo "checked";}?>> complément d’objet direct<br/>
+					<input type="radio" name="900 09" value="3" <?php if($memorkurso["900_09"]=="3"){echo "checked";}?>> attribut du sujet<br/>
 				</p>
 		</div>
 <? include "dlekpiedo.inc.php"; ?>

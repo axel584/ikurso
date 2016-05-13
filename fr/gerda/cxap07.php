@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="7 (sep)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -30,4 +30,4 @@ include "gerdakapo.inc.php";
 			<p><b>Tom:</b>	Tamen, kiam iu perdis la konscion, tio estas la &#285;usta pozicio,
 			se mi bone memoras, kion oni instruis al mi.</p>
 		</div>
-<? include "gerdapiedo.inc.php" ?>
+<?php include "gerdapiedo.inc.php" ?>

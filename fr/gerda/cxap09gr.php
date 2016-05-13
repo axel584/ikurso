@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="9 (na&#365;)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -59,4 +59,4 @@ include "gerdakapo.inc.php";
 			<p><span class='ekz'>li diras ion ajn</span> : il dit n'importe quoi</p>
 			<p><span class='ekz'>iru ien ajn</span> : va n'importe o&ugrave; ; va o&ugrave; tu veux</p>
 	</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

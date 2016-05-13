@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="14 (dek kvar)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -68,4 +68,4 @@ include "gerdakapo.inc.php";
 			<p>"Mi timas," ankora&#365; diris la unua, dum la bruoj klarigis al
 			Gerda, ke la du knaboj forkuras kaj lasas &#349;in sola, sola, sola...</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="4 (kvar)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -54,4 +54,4 @@ include "gerdakapo.inc.php";
 			<p><b>Tom:</b>	Jes, por mi, Linda estas la sola bela virino en la tuta mondo.</p>
 			<p><b>Bob:</b>	Diable! Vi ver&#349;ajne amas &#349;in.</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

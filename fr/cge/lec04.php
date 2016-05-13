@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="4 (kvar)";
 include "dlekkapo.inc.php";
 ?>
@@ -47,9 +47,9 @@ répondre par <i>oui</i> ou par <i>non</i> (questions &#171;fermées&#187;).
 <h3>Exercices - quatrième leçon, 1<sup>ère</sup> partie</h3>	
 <p>Transformez les phrases suivantes en questions:</p>
 <input type="hidden" name="013_cxap04.1" value="1. Transformez les phrases suivantes en questions.">
-<? atentigo();	?>
+<?php atentigo();	?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	1 => "Lia patrino faras panon.",
 	2 => "Mia filo forgesis la teon.",
@@ -375,7 +375,7 @@ Par ailleurs, les prénoms de femme en <b>-a</b> sont assez fréquents.</p>
 <input type="hidden" name="013_cxap04.2" value="2. Traduisez en français.">
 
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	4 => "Simeono estas la edzo de Fatima. Li amas &#349;in. Li, la edzino kaj la infanoj lo&#285;as en E&#365;ropo, en granda domo.",
 	5 => "Fatima deziras a&#265;eti novajn &#349;uojn al la infanoj.",
@@ -391,9 +391,9 @@ Par ailleurs, les prénoms de femme en <b>-a</b> sont assez fréquents.</p>
 
 <p>Traduisez les questions en espéranto (sans y répondre):</p>
 <input type="hidden" name="013_cxap04.3" value="3. Traduisez les questions en espéranto (sans y répondre).">
-<? atentigo();	?>
+<?php atentigo();	?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	9 => "Est-ce que ton père collectionne les timbres de mon pays&#160;? (collectionner = KOLEKTI)",
 	10 => "Est-ce que son fils a oublié le thé et le lait&#160;?",
@@ -415,9 +415,9 @@ seulement par un oui ou un non). Vous pouvez utiliser <em>sed</em> (mais)
 dans les réponses négatives :
 Ex.:  &#348;i ne man&#285;as &#265;okoladon, sed panon.</p>
 <input type="hidden" name="013_cxap04.4" value="4. Répondre maintenant en espéranto avec des phrases complètes (pas seulement par un oui ou un non). Vous pouvez utiliser <em>sed</em> (mais) dans les réponses négatives.">
-<?atentigo();?>
+<?phpatentigo();?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	20 => "Est-ce que le lait est froid&nbsp;?",
 	21 => "Avez-vous goûté le gâteau&nbsp;?",
@@ -437,4 +437,4 @@ vous reste un doute. Par ailleurs, vous voyez que malgré un vocabulaire
 encore limité vous êtes déjà capable de faire de vraies phrases et de
 comprendre un petit récit. 
 </p>
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

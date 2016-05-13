@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="3 (tri)";
 include "gerdakapo.inc.php";
 ?>
@@ -44,4 +44,4 @@ include "gerdakapo.inc.php";
 			<p>(On utilise aussi <span class='ekz'>&#349;i aspektas juna</span>, 
 			ce que certains puristes d&eacute;sapprouvent.)</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

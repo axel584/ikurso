@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="19";
 include "gerdakapo.inc.php";
 ?>
@@ -52,4 +52,4 @@ include "gerdakapo.inc.php";
 		<li><span class="eo">Nenifaro</span> : = neni(o)-faro, faro de nenio.</li>
 	</ol>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

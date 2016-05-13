@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="Vortlisto";
 include "gerdakapo.inc.php";
 ?>
@@ -981,4 +981,4 @@ include "gerdakapo.inc.php";
 </table>
 </form>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

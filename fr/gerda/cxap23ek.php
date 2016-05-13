@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="23 (dudek tri)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -6,7 +6,7 @@ include "gerdakapo.inc.php";
 		<h3>Demandoj</h3>
 		<input type="hidden" name="013_cxap23.0" value="Demandoj">
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "Kiel Bob sukcesis anta&#365;i la bandon?",
 				2 => "Kiom da trezorser&#265;antoj envenis la kavernon?",
 				3 => "Kio mirigas la tri studentojn?",
@@ -121,7 +121,7 @@ include "gerdakapo.inc.php";
 		<em>Mi ser&#265;as monujon, kiun mi perdis.---> Mi ser&#265;as perditan monujon.</em></p>
 
 		<div class="tasko">
-		<? $demandoj=array(
+		<?php $demandoj=array(
 			5 => "La strangulo parolas al si mem, ne atentante la studentojn, kiuj lin rigardas.",
 			6 => "La studento redonas la librojn, kiujn li jam legis.",
 			7 => "Kato, kiu man&#285;is, normale volas dormi.",
@@ -139,4 +139,4 @@ include "gerdakapo.inc.php";
 			?>
 			</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="24 (dudek kvar)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -17,7 +17,7 @@ include "gerdakapo.inc.php";
 		esprimmanieroj de Esperanto pli bone meti&#285;os en vian kapeton...
 		</p>
 		<div class="tasko">
-		<? $demandoj=array(
+		<?php $demandoj=array(
 			1 => "&#264;u vi konas la respondon ?"
 			);
 			ekzerco("U", 10);
@@ -38,7 +38,7 @@ include "gerdakapo.inc.php";
 		<p>-- Respondu per multegaj vortoj!</p>
 
 		<div class="tasko">
-		<? $demandoj=array(
+		<?php $demandoj=array(
 			2 => "Kiom da Esperanto vi jam sciis, kiam vi komencis la GERDA-kurson? Kiel vi lernis Esperanton anta&#365;e?",
 			3 => "&#264;u la GERDA-kurso estis por vi utila? &#264;u vi sukcesis multe lerni per &#285;i? &#264;u vi &#285;uis &#285;in?",
 			4 => "&#264;u vi pensas, ke la teksto uzita (la rakonto &quot;Gerda malaperis!&quot;) estis bone elektita? &#264;u &#285;ia lingva&#309;o estas tro simpla? &#264;u la rakonto estas tro stulta, infaneca a&#365; malinteresa?",
@@ -52,4 +52,4 @@ include "gerdakapo.inc.php";
 			?>
 			</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

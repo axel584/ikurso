@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="18 (dek ok)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -66,4 +66,4 @@ include "gerdakapo.inc.php";
 			helpos vin pensadi." Kaj tion dirante, li &#309;etas al &#349;i belegan pomon.
 			Gerda sentas sin, kvaza&#365; Eva &#265;e l' serpento.</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

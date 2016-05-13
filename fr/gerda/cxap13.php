@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="13 (dek tri)";
 include "gerdakapo.inc.php";
 ?>
@@ -64,4 +64,4 @@ include "gerdakapo.inc.php";
 			&#285;i. Kara spionino, vere! Kion li volis diri? &#264;u li suspektus? Nia
 			kompatinda Linda ne scias, kion pensi.</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

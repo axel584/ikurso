@@ -1,10 +1,10 @@
-<?
+<?php
 $titolo="7";
 $gxisdatigDato="2006-10-27";
 $dosiero="Lasu07.mp3";
 include "gerdakapo.inc.php";
 ?>
-	<? include "lasusono.inc.php";?>
+	<?php include "lasusono.inc.php";?>
 	<div class="rakonto lasu">
 	<h2>Oni venis el alia mondo</h2>
 	
@@ -100,4 +100,4 @@ include "gerdakapo.inc.php";
 		<li>Alimondaj (= alia-mond-aj)</li>
 	</ol>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

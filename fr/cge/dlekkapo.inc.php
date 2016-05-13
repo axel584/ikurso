@@ -1,4 +1,4 @@
-<?
+<?php
 include_once "../../util.php";
 $lingvo="FR";
 $kurso="CG";
@@ -114,23 +114,23 @@ include "../../pagxkapo.inc.php";
 <script type="text/javascript" src="../../xAlUtf8.js"></script>
 		<div id="enhavo">
 			<ul id="tabnav">
-				<li <? if ($temo=="intro") {echo " class='aktiva'";} ?>><a href="intro.php?temo=intro">Pr&eacute;ambule</a></li>
+				<li <?php if ($temo=="intro") {echo " class='aktiva'";} ?>><a href="intro.php?temo=intro">Pr&eacute;ambule</a></li>
 				<!-- suppression de la page sommaire : n'apporte rien de plus que les onglets
 				et de plus contient les cours zippés qui ne sont plus à jour
-				<li <? if ($temo=="temaro") {echo " class='aktiva'";} ?>><a href="intro.php?temo=temaro">Sommaire</a></li>
+				<li <?php if ($temo=="temaro") {echo " class='aktiva'";} ?>><a href="intro.php?temo=temaro">Sommaire</a></li>
 				-->
-				<li <? if ($numcxap=="01") {echo " class='aktiva'";} ?>><a href="lec01.php">&nbsp;1&nbsp;</a></li>
-				<li <? if ($numcxap=="02") {echo " class='aktiva'";} ?>><a href="lec02.php">&nbsp;2&nbsp;</a></li>
-				<li <? if ($numcxap=="03") {echo " class='aktiva'";} ?>><a href="lec03.php">&nbsp;3&nbsp;</a></li>
-				<li <? if ($numcxap=="04") {echo " class='aktiva'";} ?>><a href="lec04.php">&nbsp;4&nbsp;</a></li>
-				<li <? if ($numcxap=="05") {echo " class='aktiva'";} ?>><a href="lec05.php">&nbsp;5&nbsp;</a></li>
-				<li <? if ($numcxap=="06") {echo " class='aktiva'";} ?>><a href="lec06.php">&nbsp;6&nbsp;</a></li>
-				<li <? if ($numcxap=="07") {echo " class='aktiva'";} ?>><a href="lec07.php">&nbsp;7&nbsp;</a></li>
-				<li <? if ($numcxap=="08") {echo " class='aktiva'";} ?>><a href="lec08.php">&nbsp;8&nbsp;</a></li>
-				<li <? if ($numcxap=="09") {echo " class='aktiva'";} ?>><a href="lec09.php">&nbsp;9&nbsp;</a></li>
-				<li <? if ($numcxap=="10") {echo " class='aktiva'";} ?>><a href="lec10.php">&nbsp;10&nbsp;</a></li>
-				<li <? if ($temo=="listo") {echo " class='aktiva'";} ?>><a href="vocabula.php">&nbsp;Lexique&nbsp;</a></li>
-				<li <? if ($temo=="enhavo") {echo " class='aktiva'";} ?>><a href="enhavo.php">&nbsp;Index&nbsp;</a></li>
+				<li <?php if ($numcxap=="01") {echo " class='aktiva'";} ?>><a href="lec01.php">&nbsp;1&nbsp;</a></li>
+				<li <?php if ($numcxap=="02") {echo " class='aktiva'";} ?>><a href="lec02.php">&nbsp;2&nbsp;</a></li>
+				<li <?php if ($numcxap=="03") {echo " class='aktiva'";} ?>><a href="lec03.php">&nbsp;3&nbsp;</a></li>
+				<li <?php if ($numcxap=="04") {echo " class='aktiva'";} ?>><a href="lec04.php">&nbsp;4&nbsp;</a></li>
+				<li <?php if ($numcxap=="05") {echo " class='aktiva'";} ?>><a href="lec05.php">&nbsp;5&nbsp;</a></li>
+				<li <?php if ($numcxap=="06") {echo " class='aktiva'";} ?>><a href="lec06.php">&nbsp;6&nbsp;</a></li>
+				<li <?php if ($numcxap=="07") {echo " class='aktiva'";} ?>><a href="lec07.php">&nbsp;7&nbsp;</a></li>
+				<li <?php if ($numcxap=="08") {echo " class='aktiva'";} ?>><a href="lec08.php">&nbsp;8&nbsp;</a></li>
+				<li <?php if ($numcxap=="09") {echo " class='aktiva'";} ?>><a href="lec09.php">&nbsp;9&nbsp;</a></li>
+				<li <?php if ($numcxap=="10") {echo " class='aktiva'";} ?>><a href="lec10.php">&nbsp;10&nbsp;</a></li>
+				<li <?php if ($temo=="listo") {echo " class='aktiva'";} ?>><a href="vocabula.php">&nbsp;Lexique&nbsp;</a></li>
+				<li <?php if ($temo=="enhavo") {echo " class='aktiva'";} ?>><a href="enhavo.php">&nbsp;Index&nbsp;</a></li>
 			<?
   
 		   // ligo al la aliaj partoj de la kursoj
@@ -139,7 +139,7 @@ include "../../pagxkapo.inc.php";
 			</ul>
 			<div id="kadro">
 				<h2><?=$titolo;?></h2>
-				<?			
+				<?php			
 				if ($erarkodo=="1") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro1</span></div>";}
 				if ($erarkodo=="2") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro2</span></div>";}
 				if ($erarkodo=="3") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro3</span></div>";}
@@ -151,7 +151,6 @@ include "../../pagxkapo.inc.php";
 				if (($temo!="intro") && ($numcxap!="01")) {
 				?>
 				<div class="reklamo" id="spiru">
-				<!--<img src="etaprinco.gif" alt="Couverture" align="right"/>-->
 				<img src="http://esperanto-jeunes.org/couvertures/61518.mini.jpg" alt="Couverture" height="200" align="right"/>
 				<font size="+1"> Les cours sont donnés <b>gratuitement</b> par l'association Espéranto-France.<br/></font><br/>
 				Soutenez l'association en commandant <i>La templo de l'suno</i> (62 pages) au prix de 12,50 euros et 3,50 euros de frais de port pour la France.<br/>
@@ -174,12 +173,12 @@ include "../../pagxkapo.inc.php";
 				<img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
 				</form>
 				</div>
-				<? } ?>
+				<?php } ?>
 				
 					<a name="<?=$subjekto?>"></a>
 					<form method="post" action="../korekti.php">
 					<input type="hidden" name="path" value="./">
-				<?
+				<?php
 					echo "<input type=\"hidden\" name=\"010_subjekto\" value=\"".$subjekto."\">\n";
 					echo "<input type=\"hidden\" name=\"010_adreso\" value=\"$url\">\n";
 					echo "<input type=\"hidden\" name=\"nunleciono\" value=$nunleciono>\n";

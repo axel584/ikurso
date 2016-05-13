@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="13"; 
 $titolo="13 (dek tri)";
 include "gerdakapo.inc.php";
@@ -10,4 +10,4 @@ include "gerdakapo.inc.php";
 		<p><span class='ekz'>koncerne vian proponon</span> : pour ce qui est de votre proposition</p>
 		<p><span class='ekz'>kiom koncernas min</span> : pour autant que je sois concern&eacute;</p>
 	</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 $lingvo="FR";
 $kurso="GR";
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
@@ -254,12 +254,12 @@ function savData(lien) {
 </script>
 
 		<div id="enhavo">
-			<? if ($parto=="ek") { ?>
+			<?php if ($parto=="ek") { ?>
 				<form name="mia_Formularo" method="post" action="../korekti.php">
 				<input type="hidden" name="path" value="./">
-			<? } ?>
+			<?php } ?>
 			<ul id="tabnav">
-			<? 
+			<?php 
 				if (($parto=="index")||($parto=="konsiloj")) {
 					// onglets pour la presentation et la table des matieres
 					echo "<li";
@@ -376,7 +376,7 @@ function savData(lien) {
 				?>
 			</ul>
 			<div id="kadro">
-				<?			
+				<?php			
 				if ($erarkodo=="1") {echo "<span class=\"eraro\"><br>$lgv_eraro1</span>";}
 				if ($erarkodo=="2") {echo "<span class=\"eraro\"><br>$lgv_eraro2</span>";}
 				if ($erarkodo=="3") {echo "<span class=\"eraro\"><br>$lgv_eraro3</span>";}
@@ -384,21 +384,21 @@ function savData(lien) {
 				if ($erarkodo=="7") {echo "<span class=\"eraro\"><br>$lgv_eraro7</span>";}
 				if ($erarkodo=="8") {echo "<span class=\"eraro\"><br>$lgv_eraro8</span>";}
 				?>
-				<? if (($parto=="ek")&&($numcxap!="01")){
+				<?php if (($parto=="ek")&&($numcxap!="01")){
 					// ce qui suit ne s'applique pas la première fois
 				?>
-						<? if ($persono_id) { ?>
+						<?php if ($persono_id) { ?>
 							<div class="encadre">
 								<p class="rimarko">Vous êtes connecté(e) avec l’identifiant 
-								<strong><? echo $persono['enirnomo'];?></strong>. 
+								<strong><?php echo $persono['enirnomo'];?></strong>. 
 								Si vous souhaitez utiliser un autre compte pour envoyer vos exercices, 
 								il faut d’abord vous 
 								<a href="../../eliri.php">déconnecter.</a></p>
 							</div>
-						<? } 
+						<?php } 
 					atentigo();
 					} ?>
-				<?
+				<?php
 				echo "<input type=\"hidden\" name=\"010_subjekto\" value=\"".substr($subjekto,0,6)."\">\n";
 				echo "<input type=\"hidden\" name=\"010_adreso\" value=\"".$url."\">\n";
 				echo "<input type=\"hidden\" name=\"kurso\" value=\"".$kurso."\">\n";

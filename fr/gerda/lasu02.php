@@ -1,10 +1,10 @@
-<?
+<?php
 $titolo="2";
 $gxisdatigDato="2006-10-27";
 $dosiero="Lasu02.mp3";
 include "gerdakapo.inc.php";
 ?>
-	<? include "lasusono.inc.php";?>
+	<?php include "lasusono.inc.php";?>
 	<div class="rakonto lasu">
 		<h2>Stranga strangulo</h2>
 		<p>Tiu ulo estas stranga. &#264;u vi vidas lin&nbsp;? Tiu granda
@@ -50,4 +50,4 @@ include "gerdakapo.inc.php";
 		Stranga ulo. Mi vere demandas al mi, kiu li estas. Li
 		certe ne estas nova studento. Li estas tro maljuna.</p>
 	</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

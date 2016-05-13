@@ -1,10 +1,10 @@
-<?
+<?php
 $titolo="4";
 $gxisdatigDato="2006-10-27";
 $dosiero="Lasu04.mp3";
 include "gerdakapo.inc.php";
 ?>
-	<? include "lasusono.inc.php";?>
+	<?php include "lasusono.inc.php";?>
 	<div class="rakonto lasu">
 	<h2>Lingvistiko</h2>
 	<p>Mi deziras, ke vi komprenu, ke lingvistiko estas scienco inter multaj
@@ -40,4 +40,4 @@ include "gerdakapo.inc.php";
 	tio lingvo ekzistas. Por tio multaj lingvoj ekzistas. Por tio ni
 	lernas ilin. Por rilati inter ni, ne nur mane, sed anka&#365; parole.</p>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

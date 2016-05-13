@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="4 (kvar)";
 $gxisdatigDato="2005-11-09";
 include "gerdakapo.inc.php"; 
@@ -9,7 +9,7 @@ include "gerdakapo.inc.php";
 			<input type="hidden" name="013_cxap04.0" value="Demandoj">
 		
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "Pri kio Linda kaj Tom parolis? (pri Bob / pri amo / pri la blondulo / pri kripta&#309;o-scienco)",
 				2 => "Kiu sidas kun la viro, pri kiu Linda kaj Tom parolis? (Gerda / Ronga / blonda junulo / Bob / neniu)",
 				3 => "Kiu scias, kiu estas Gerda? (Bob / Linda / Tom)",
@@ -32,7 +32,7 @@ include "gerdakapo.inc.php";
 			  ---> <input value="Mi" size="2"> diris <input value="tion" size="4"> al <input value="vi" size="2">.</em><br><br></p>
 
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				8 => "[Ili/Ilin] demandas [mi/min].",
 				9 => "[Multo/Multon] diras [li/lin] al la studentoj.",
 				10 => "Al la studentoj li demandas [tio/tion], [kio/kion] [li/lin] ne scias, sed [ili/ilin] diras [nenio/nenion].",
@@ -51,4 +51,4 @@ include "gerdakapo.inc.php";
 			</div>
 
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

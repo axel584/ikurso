@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="10";
 include "gerdakapo.inc.php";
 ?>
@@ -46,4 +46,4 @@ include "gerdakapo.inc.php";
 	Viretoj i&#285;is por li timindaj. Same kiel la plej etaj aferetoj. &#264;u la
 	vivo ne estas stranga?</p>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

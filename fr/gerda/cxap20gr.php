@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="20"; 
 $titolo="20 (dudek)";
 include "gerdakapo.inc.php";
@@ -19,4 +19,4 @@ include "gerdakapo.inc.php";
 			<span class="ekz">savinto</span> : sauveur (apr&egrave;s le sauvetage)</p>
 		
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

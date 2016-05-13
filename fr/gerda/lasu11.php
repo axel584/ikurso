@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="11";
 include "gerdakapo.inc.php";
 ?>
@@ -86,4 +86,4 @@ include "gerdakapo.inc.php";
 		<li><span class="eo">Perdi la kapon</span> : ekmispensi, ekpensi fu&#349;e, perdi la povon &#285;uste pensi.</li>
 	</ol>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

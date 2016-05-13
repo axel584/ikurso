@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="15 (dek kvin)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -56,4 +56,4 @@ include "gerdakapo.inc.php";
 			<p>"Jes, dankon. Mi plezure trinkos plian tason da teo. Dankon,
 			Tom, kara. Nu, do..."</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="9 (na&#365;)";
 include "dlekkapo.inc.php";
 ?>
@@ -251,14 +251,14 @@ espérantiste dans le monde.
 </p>
 
 <h3>Exercices - neuvième leçon</h3>
-<? atentigo(); ?>
+<?php atentigo(); ?>
 <p>
 Traduisez les articles suivants puisés dans diverses revues. Le vocabulaire nouveau se trouve à la fin de l’exercice.
 <a href="../son/l09-1.wav"><img src="../pix/icon20.gif"></a>&nbsp;<a href="../son/l09-1.rm"><img src="../pix/icon20-1.gif"></a>
 </p>
 <input type="hidden" name="013_cxap09.1" value="1. Traduisez les articles suivants puisés dans diverses revues.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	1 => "<br>19 geinstruistoj gvidas Esperanto-kursojn por 303 gelernantoj en la brazila urbo Salvadoro. Kiel en la resto de la lando, anka&#365; en Salvadoro oni sentas kreskon de la intereso pri la Internacia Lingvo post la 66a Universala Kongreso en Brazilio.",
 	2 => "<br>Bela parketo en la centro de la sud-franca urbo Pau &#309;us ricevis la nomon Zamenhof. La urb-estro de Pau, André Labarrère, fari&#285;is ministro en majo. Li dufoje subtenis le&#285;proponojn, kiuj celas meti Esperanton en egalan situacion kun aliaj lingvoj. Li estas honora membro de la loka Esperanto-societo, kaj pasint-jare li persone malfermis ekspozicion pri Esperanto, kiu restis unu monaton en la urba biblioteko.",
@@ -315,4 +315,4 @@ Traduisez les articles suivants puisés dans diverses revues. Le vocabulaire nou
 	<td class="eo">Nederlando</td><td class="fr">Pays-Bas</td>
 </tr>
 </table>
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

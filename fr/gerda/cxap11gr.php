@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="11"; 
 $titolo="11 (dek unu)";
 include "gerdakapo.inc.php";
@@ -34,4 +34,4 @@ include "gerdakapo.inc.php";
 		<p><span class='ekz'>mia a&#365;to paneas, &#285;i ekpaneis hiera&#365;
 		</span> : mon auto est en panne, elle est tomb&eacute;e en panne hier</p>
 	</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

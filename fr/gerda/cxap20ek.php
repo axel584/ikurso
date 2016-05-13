@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="20 (dudek)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -6,7 +6,7 @@ include "gerdakapo.inc.php";
 		<h3>Demandoj</h3>
 		<input type="hidden" name="013_cxap20.0" value="Demandoj">
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "Kion a&#365;das Gerda?",
 				2 => "Kiel &#349;i scias, ke ne estas la kutima vizitanto?",
 				3 => "Kiujn prezentas la policano al Gerda?",
@@ -28,7 +28,7 @@ include "gerdakapo.inc.php";
 		<p>La vortoj estas:<br>
 		<textarea rows=6 cols=70>beda&#365;ri, brako, da&#365;ri, esperi, feli&#265;a, fenestro, forgesi, &#285;entila, &#285;oji, horo, ie, iam, infano, interesi, kanti, komenci, koncerni, kovri, krii, kuri, kura&#285;a, kutimi, laca, la&#365;ta, libera, lito, ludi, mar&#349;i, momento, monto, movi, nacio, nenie, patro, perfekta, persono, pezi, plendi, plori, preciza, proponi, pura, rajti, rakonti, ridi, rimarki, roko, simili, situacio, soni, stulta, &#349;losi, veki, vo&#265;o, vojo</textarea>
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				8 => "afabla en kutima kaj &#285;usta maniero : [15].",
 				9 => "aro de lokoj trairataj por iri de unu loko al alia : [15].",
 				10 => "dolore senti perdon, esti malkontenta pro ia faro a&#365; manko : [15].",
@@ -89,4 +89,4 @@ include "gerdakapo.inc.php";
 				?>
 				</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

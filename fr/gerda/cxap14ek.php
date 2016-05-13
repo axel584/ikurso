@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="14 (dek kvar)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -6,7 +6,7 @@ include "gerdakapo.inc.php";
 		<h3>Demandoj</h3>
 		<input type="hidden" name="013_cxap14.0" value="Demandoj">
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "&#264;u Gerda sciis, kie &#349;i estas?",
 				2 => "Kiel aspektis la &#265;ambro, en kiu Gerda ku&#349;as?",
 				3 => "Kial Gerda estis lacega?",
@@ -29,7 +29,7 @@ include "gerdakapo.inc.php";
 			<textarea rows=4 cols=70>absurda, a&#309;o, deziri, drogo, eta, evidenta, fakto, fora, ideo, imagi, instrui, ka&#349;i, kiam, komuniki, koni, konsenti, lerni, mesa&#285;o, nomo, paro, peco, plena, promeni, pulvoro, respondi, sekreto, subita, super, &#349;ajni, temo</textarea>
 		
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				10 => "afero : [15].",
 				11 => "akiri scion : [15].",
 				12 => "aspekti : [15].",
@@ -65,4 +65,4 @@ include "gerdakapo.inc.php";
 				?>
 				</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

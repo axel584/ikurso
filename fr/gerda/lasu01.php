@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="1";
 include "gerdakapo.inc.php";
 ?>
@@ -27,4 +27,4 @@ include "gerdakapo.inc.php";
 			en la spegulo estas nur Izabela, la plej malbela knabino en
 			la tuta mondo. Vere la nuna mondo ne estas bela.&#187;</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

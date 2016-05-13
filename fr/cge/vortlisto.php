@@ -1,4 +1,4 @@
-<? 
+<?php 
 $gxisdatigDato="2009/10/01";
 $vojo="../../";
 include "../../util.php";
@@ -16,8 +16,8 @@ include "../../pagxkapo.inc.php";
 	
 			<div id="kadro">
 				<div class="klarigo">
-<? include "vortlisto.inc.php"; ?>
+<?php include "vortlisto.inc.php"; ?>
 				</div>
 			</div>
 		</div>
-<? include "../../pagxpiedo.inc.php"; ?>
+<?php include "../../pagxpiedo.inc.php"; ?>

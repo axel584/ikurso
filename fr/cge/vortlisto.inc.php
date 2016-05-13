@@ -25,7 +25,7 @@
 	<td width="12%" class="eo">&nbsp;</td><td width="20%" class="eo">&nbsp;</td>
 	<td width="12%" class="eo">&nbsp;</td><td width="20%" class="eo">&nbsp;</td>
 </tr>
-<?
+<?php
 $filename = "vortlisto.txt";
 $fd = fopen($filename, "r");
 $i=0;

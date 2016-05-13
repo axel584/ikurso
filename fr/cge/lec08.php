@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="8 (ok)";
 include "dlekkapo.inc.php";
 ?>
@@ -166,9 +166,9 @@ les exemples suivants&#160;:
 
 <p>Traduisez en espéranto en utilisant la terminaison verbale appropriée.</p>
 <input type="hidden" name="013_cxap08.1" value="1. Traduisez en espéranto en utilisant la terminaison verbale appropriée.">
-<? atentigo(); ?>
+<?php atentigo(); ?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	1 => "Si elle venait &agrave; 8h nous pourrions manger à 8h30.",
 	2 => "Je désire qu’elle vienne &agrave; 8h mais je crois qu’elle ne viendra pas avant 9h.",
@@ -192,7 +192,7 @@ fin de l’exercice.
 <input type="hidden" name="013_cxap08.2" value="2. Veuillez donc traduire en français les anecdotes suivantes.">
 
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	9 => "<br>Ju&#285;isto:  &#264;u vi do asertas, ke vi iris en la domon opiniante, ke &#285;i estas via domo&#160;?<br>Akuzato: Jes, sinjoro ju&#285;isto.<br>Ju&#285;isto:  Sed kial vi forkuris, kiam la sinjorino envenis&#160;?<br>Akuzato: Mi opiniis, ke &#349;i estas mia edzino&#160;!",
 	10 => "<br>Patrino en tramo: Jo&#265;jo, kial vi sidas kun fermitaj okuloj&#160;? &#264;u vi estas laca&#160;?<br>Jo&#265;jo: Ne&#160;! Ne pla&#265;as al mi vidi starantajn virinojn."
@@ -247,7 +247,7 @@ possessif réfléchi correspondant.
 fin de l’exercice.</p>
 <input type="hidden" name="013_cxap08.3" value="3. Même exercice.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	11 => "<br>- Incitas min, ke mia edzino da&#365;re parolas pri sia anta&#365;a edzo.<br>- Tio estas nenio&#160;! La mia paroladas pri sia estonta edzo&#160;!",
 	12 => "<br>En kafejo:<br>- Kial vi rigardadas al la pordo&#160;?<br>- Mi observadas, &#265;u ne iu foriras kun mia surtuto. Kun la via jam anta&#365; dek minutoj foriris iu.",
@@ -324,4 +324,4 @@ enfin, bonne nouvelle&#160;!, il ne vous reste plus qu’une autre leçon avant
 de passer le petit examen qui constitue la 10ème leçon. Ensuite, on vous
 décernera une attestation de cours.
 </p>
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

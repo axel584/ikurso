@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="19 (dek na&#365;)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -6,7 +6,7 @@ include "gerdakapo.inc.php";
 		<h3>Demandoj</h3>
 		<input type="hidden" name="013_cxap19.0" value="Demandoj">
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "Kiuj estas Petro kaj Ralf?",
 				2 => "Kial Ralf provas timigi Petron?",
 				3 => "Kiamaniere li provas timigi lin?",
@@ -26,7 +26,7 @@ include "gerdakapo.inc.php";
 		<textarea rows=4 cols=70>a&#265;eti, afabla, akcepti, apud, aran&#285;i, &#265;iam, dolori, fermi, fini, funkcii, glaso, &#285;emi, &#285;eni, heziti, klara, kontenta, lar&#285;a, maniero, manki, miksi, miri, morti, objekto, oportuna, ordo, panei, plezuro, polico, porti, ricevi, ripari, ripeti, sa&#285;a, se&#285;o, seka, soifi, sufi&#265;a, tia, trinki, veturi</textarea>
 
 		<div class="tasko">
-		<? $demandoj=array(
+		<?php $demandoj=array(
 			6 => "afero, io pripensebla : [15].",
 			7 => "agi farante sian taskon, servon, oficon : [15].",
 			8 => "bona sento de komforteco a&#365; &#285;ojo : [15].",
@@ -72,4 +72,4 @@ include "gerdakapo.inc.php";
 			?>
 			</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

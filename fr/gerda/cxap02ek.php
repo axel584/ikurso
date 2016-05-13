@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="2 (du)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -7,7 +7,7 @@ include "gerdakapo.inc.php";
 			<input type="hidden" name="013_cxap02.0" value="Demandoj">
 
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "Linda estas ___. (malserioza / nova studento / bela kaj pala / io stranga)",
 				2 => "Kio okazas? (Linda rigardas al la spegulo. / Malalta viro staras inter Tom kaj la pordo. / La blonda viro agas strange. / La nova studento proksimi&#285;as al Tom.)",
 				3 => "&#264;u estas io en lia mano? (jes / ne)",
@@ -36,7 +36,7 @@ include "gerdakapo.inc.php";
 			<input type="hidden" name="013_cxap02.1" value="Elektu la &#285;ustan vorton.">
 			<p>&nbsp;</p>
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				7 => "Mi ne vidas, [&#265;u/se] la junulo parolas al la knabino, a&#365; [&#265;u/se] li nur rigardas al &#349;i.",
 				8 => "Vi vidas lin tute bone, [&#265;u /se] ne?",
 				9 => "[&#264;u/Se] li agas strange, li estas strangulo.",
@@ -50,4 +50,4 @@ include "gerdakapo.inc.php";
 			?>
 			</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

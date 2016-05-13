@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="14a";
 include "gerdakapo.inc.php";
 ?>
@@ -138,4 +138,4 @@ include "gerdakapo.inc.php";
 		tago. Krome, en multaj lokoj, oficistoj ne laboras sabate.</li>
 	</ol>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

@@ -1,4 +1,4 @@
-<? 
+<?php 
 $gxisdatigDato="2006-06-16";
 $subjekto="vocabula.php";
 $temo="listo";
@@ -8,6 +8,6 @@ if ($metodo=="") {$metodo="U";}
 include "dlekkapo.inc.php";
 ?>
 		<div class="klarigo">
-<? include "vortlisto.inc.php"; ?>
+<?php include "vortlisto.inc.php"; ?>
 		</div>
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

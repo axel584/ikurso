@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="16b";
 include "gerdakapo.inc.php";
 ?>
@@ -106,4 +106,4 @@ include "gerdakapo.inc.php";
 	via opinio povas nur esti, ke seriozajn demandojn oni priparolu
 	senride.</p>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

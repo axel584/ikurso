@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="15a";
 include "gerdakapo.inc.php";
 ?>
@@ -119,4 +119,4 @@ include "gerdakapo.inc.php";
 	malsamflanken, kaj se lia nazo estas ridinde mallonga. Vi samopinias
 	kun mi, &#265;u ne, Johana&nbsp;?</p>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

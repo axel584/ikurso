@@ -1,4 +1,4 @@
-<? 
+<?php 
 $subjekto="enhavo.php";
 $temo="enhavo";
 $titolo="Tables des matières";
@@ -111,4 +111,4 @@ include "dlekkapo.inc.php"
 
 		<h3><a href="lec10.php#lec10">Dixième Leçon</a></h3>
 	</div>
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

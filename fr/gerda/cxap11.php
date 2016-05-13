@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="11 (dek unu)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -51,4 +51,4 @@ include "gerdakapo.inc.php";
 			veturigas. Mi vere sentas grandegan dankemon al vi."</p>
 			<p>"Ne dankinde," li ripetas, kaj silentas plu, pripensema.</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="17 (dek sep)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -59,4 +59,4 @@ include "gerdakapo.inc.php";
 			kondukos nin al la malaperinta belulino. Sed pli kaj pli &#349;ajnas, ke
 			tio ne okazos.</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

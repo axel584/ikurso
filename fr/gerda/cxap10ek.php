@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="10 (dek)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -7,7 +7,7 @@ include "gerdakapo.inc.php";
 		<input type="hidden" name="013_cxap10.0" value="Demandoj">
 
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "Kiu ne emas fidi la flegistinon? (Tom / Bob / Linda / Gerda / la blondulo)",
 				2 => "Kie Tom kaj Bob retrovis sin reciproke? (en lernejo / en universitato / en la urbego, kie ili vivis tiutempe)",
 				3 => "Estas ___ flegistino(j) en la universitato. (unu / du / tri / kvar / kvin)",
@@ -29,7 +29,7 @@ include "gerdakapo.inc.php";
 		<p>-- Nun faru vi:</p><br>
 
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				7 => "Tom [3] Linda estas student[3]. En universitat[3] restoraci[3] ili observas blond[3] junul[3], kiu agas plej strange: dum li parolas [3] knabino, li ka&#349;[3] metas io[3] en &#349;i[3] kafotaso[3].",
 				8 => "Eble estis drogo, &#265;ar tuj post ki[3] &#349;i ekstaras kaj forlasas la restoracio[3], [3] la koridoro[3] &#349;i jam perdas la konscion. Intertemp[3], Bob sid[3]is &#265;e Tom kaj Linda.",
 				9 => "Li povas rakont[3] al ili[3], ki[3] estas la knabino: &#349;i estas Gerda, nova instruist[3] pri kripta&#309;oscienco ([3]novaj sekretaj lingvoj). Ronga, la profesoro pri lingvistiko, volis, ke &#349;i ven[3] al la universitato [3] instru[3] kaj labor[3] kun li.",
@@ -44,4 +44,4 @@ include "gerdakapo.inc.php";
 			</div>
 
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

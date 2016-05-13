@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="10 (dek)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -42,4 +42,4 @@ include "gerdakapo.inc.php";
 			estas travivebla. La vivo ne estas facila, kaj &#349;ajnas nun, ke la tuta
 			afero i&#285;as pli kaj pli mal&#349;atinda.</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

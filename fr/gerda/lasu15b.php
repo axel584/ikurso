@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="15b";
 include "gerdakapo.inc.php";
 ?>
@@ -100,4 +100,4 @@ include "gerdakapo.inc.php";
 		aferojn (ekzemple : man&#285;a&#309;on, vesta&#309;ojn, librojn, televidilojn...)</li>
 	</ol>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

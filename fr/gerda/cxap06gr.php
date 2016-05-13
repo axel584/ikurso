@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="6 (ses)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -21,4 +21,4 @@ include "gerdakapo.inc.php";
 		<p><span class='ekz'>kion mi diru</span> : que dois-je dire ? ; que dire ?</p>
 		<p><span class='ekz'>kion mi dirus</span> : que dirais-je (si...) ?</p>
 	</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

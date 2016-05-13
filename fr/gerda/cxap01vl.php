@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="01"; 
 $titolo="1 (unu)";
 include "gerdakapo.inc.php";
@@ -228,4 +228,4 @@ include "gerdakapo.inc.php";
 				<dd>	homme, m&acirc;le  [<i><b>vi</b>-ro (r roul&eacute;)</i>]</dd>
 			</dl>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

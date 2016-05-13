@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="";
 include "gerdakapo.inc.php";
 ?>
@@ -23,7 +23,7 @@ include "gerdakapo.inc.php";
 			t&eacute;l&eacute;charger d'un coup&nbsp;: <a href="lasu.zip">cliquez ici</a> pour
 			r&eacute;cup&eacute;rer le fichier compress&eacute; par PKZIP (200 Ko environ).</p>
 			<ul>
-			<?
+			<?php
 				$tlasu = array (
 					"01" => "&nbsp;&nbsp;1.&nbsp;&nbsp;Izabela",
 					"02" => "&nbsp;&nbsp;2.&nbsp;&nbsp;Stranga strangulo",
@@ -81,4 +81,4 @@ include "gerdakapo.inc.php";
 			?>
 			</ul>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

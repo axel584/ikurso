@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="13"; 
 $titolo="13 (dek tri)";
 include "gerdakapo.inc.php";
@@ -97,4 +97,4 @@ include "gerdakapo.inc.php";
 				<dd>	voie, route, chemin</dd>
 			</dl>	
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

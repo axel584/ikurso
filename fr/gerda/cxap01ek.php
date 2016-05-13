@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="1 (unu)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -22,7 +22,7 @@ include "gerdakapo.inc.php";
 
 			<p>-- Diru al mi :</p>
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "Kiu sidas en la angulo? (Tom / Linda / blonda viro / juna knabino / maljuna viro)",
 				2 => "Kiu iras al li? (Tom / Linda / blonda viro / juna knabino / maljuna viro)",
 				3 => "Al kio iras Tom kaj Linda? (al la angulo / al granda spegulo / al la nova studento / al la blonda viro)",
@@ -41,7 +41,7 @@ include "gerdakapo.inc.php";
 			{ -as -as est- kiu li mi ne sci- } ---> Mi ne scias, kiu li estas.</em><br>
 			-- Jen:</p>
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				6 => "{ al rigard- mi -u }",
 				7 => "{ -a -as est- grand- li -o vir- }",
 				8 => "{ -a -as en est- li -o restoraci- student- }",
@@ -59,7 +59,7 @@ include "gerdakapo.inc.php";
 			<input type="hidden" name="013_cxap01.2" value="2. Modifu la frazojn.">
 			<em>Vi laboras malmulte ---> Laboru multe !</em></p>
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				14 => "Vi laboras multe",
 				15 => "Vi rigardas al mi malsincere", 
 				16 => "Vi estas serioza",
@@ -100,12 +100,12 @@ include "gerdakapo.inc.php";
 					</tr>
 					<tr>
 						<td>&nbsp;</td>
-						<td align="center"><input class="bouton" type="submit" name="Submit" value="<? echo $lgv_sendu; ?>"></td>
+						<td align="center"><input class="bouton" type="submit" name="Submit" value="<?php echo $lgv_sendu; ?>"></td>
 					</tr>
 					<tr>
 						<td colspan="2">
 							<p><a href="#formularo" onClick="window.open('../../pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');">
-							<i><? echo $lgv_pasvortoForgesita; ?> ? : <? echo $lgv_alklaku; ?></i></a></p>
+							<i><?php echo $lgv_pasvortoForgesita; ?> ? : <?php echo $lgv_alklaku; ?></i></a></p>
 						</td>
 					</tr>
 				</table>
@@ -116,7 +116,7 @@ include "gerdakapo.inc.php";
 					je m'engage &agrave; envoyer au moins une le&ccedil;on par semaine ou de 
 					pr&eacute;venir mon correcteur de tout retard &eacute;ventuel.
 				</p>
-				<? include "../../aligxi.inc.php"; ?>
+				<?php include "../../aligxi.inc.php"; ?>
 			</div> <!-- aligxilo -->
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

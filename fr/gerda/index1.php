@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="G&eacute;n&eacute;ralit&eacute;s sur la prononciation";
 include "gerdakapo.inc.php";
 ?>
@@ -378,4 +378,4 @@ include "gerdakapo.inc.php";
 	</tr>
 </table>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

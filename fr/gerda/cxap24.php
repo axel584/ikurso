@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="24 (dudek kvar)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -65,4 +65,4 @@ include "gerdakapo.inc.php";
 			nome Gerda, komprenas tiun sekretan lingvon, kaj pri multaj aliaj
 			aferoj."</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

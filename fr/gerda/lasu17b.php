@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="17b";
 include "gerdakapo.inc.php";
 ?>
@@ -165,4 +165,4 @@ include "gerdakapo.inc.php";
 		<li><span class="eo">-anto</span> : persono, kiu ...-as, -anta homo.</li>
 	</ol>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

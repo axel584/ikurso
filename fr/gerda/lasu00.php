@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="Pr&eacute;ambule";
 $gxisdatigDato="2015-06-06";
 include "gerdakapo.inc.php";
@@ -87,4 +87,4 @@ include "gerdakapo.inc.php";
 			<li><a href='lasu25.php'>25. La tri plendoj de S-ro Kursano</a></li>
 		</ul>
 </div>
-<? include "gerdapiedo.inc.php" ?>
+<?php include "gerdapiedo.inc.php" ?>

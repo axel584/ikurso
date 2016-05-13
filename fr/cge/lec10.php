@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="10 (dek)";
 include "dlekkapo.inc.php";
 ?>
@@ -11,7 +11,7 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 <i>atestilo</i> (attestation de fin de cours) dans un envoi séparé.
 </p>
 <h3>Examen</h3>
-<? atentigo(); ?>
+<?php atentigo(); ?>
 <p>Mettez les mots suivants au pluriel</p>
 <input type="hidden" name="013_cxap10.1" value="1. Mettez les mots suivants au pluriel.">
 <div class="tasko">
@@ -20,84 +20,84 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 		<td width="15%">1. amiko</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.1' value='1. amiko:'>
-			<? if (($sist=="U")&&($metodo=="U")) { ?>
+			<?php if (($sist=="U")&&($metodo=="U")) { ?>
 				<input type='text' size='10' name='res_ekz10.1' onkeyup='xAlUtf8(this)' value="">
-			<? } else { ?>
+			<?php } else { ?>
 				<input type='text' size='10' name='res_ekz10.1' value="">
-			<? } ?>
+			<?php } ?>
 		</td>
 		<td width="15%">2. butiko</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.2' value='2. butiko:'>
-			<? if (($sist=="U")&&($metodo=="U")) { ?>
+			<?php if (($sist=="U")&&($metodo=="U")) { ?>
 				<input type='text' size='10' name='res_ekz10.2' onkeyup='xAlUtf8(this)' value=""></td>
-			<? } else { ?>
+			<?php } else { ?>
 				<input type='text' size='10' name='res_ekz10.2' value=""></td>
-			<? } ?>
+			<?php } ?>
 		<td width="15%">3. minuto</td>
 			<td width="15%">
 			<input type='hidden' name='dem_ekz10.3' value='3. minuto:'>
-			<? if (($sist=="U")&&($metodo=="U")) { ?>
+			<?php if (($sist=="U")&&($metodo=="U")) { ?>
 				<input type='text' size='10' name='res_ekz10.3' onkeyup='xAlUtf8(this)' value="">
-			<? } else { ?>
+			<?php } else { ?>
 				<input type='text' size='10' name='res_ekz10.3' value="">
-			<? } ?>
+			<?php } ?>
 		</td>
 	</tr>
 	<tr>
 		<td width="15%">4. man&#285;anta</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.4' value='4. man&#285;anta'>
-			<? if (($sist=="U")&&($metodo=="U")) { ?>
+			<?php if (($sist=="U")&&($metodo=="U")) { ?>
 				<input type='text' size='10' name='res_ekz10.4' onkeyup='xAlUtf8(this)' value="">
-			<? } else { ?>
+			<?php } else { ?>
 				<input type='text' size='10' name='res_ekz10.4' value="">
-			<? } ?>
+			<?php } ?>
 		</td>
 		<td width="15%">5. nokto</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.5' value='5. nokto:'>
-			<? if (($sist=="U")&&($metodo=="U")) { ?>
+			<?php if (($sist=="U")&&($metodo=="U")) { ?>
 				<input type='text' size='10' name='res_ekz10.5' onkeyup='xAlUtf8(this)' value="">
-			<? } else { ?>
+			<?php } else { ?>
 				<input type='text' size='10' name='res_ekz10.5' value="">
-			<? } ?>
+			<?php } ?>
 		</td>
 		<td width="15%">6. kiu</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.6' value='6. kiu:'>
-			<? if (($sist=="U")&&($metodo=="U")) { ?>
+			<?php if (($sist=="U")&&($metodo=="U")) { ?>
 				<input type='text' size='10' name='res_ekz10.6' onkeyup='xAlUtf8(this)' value="">
-			<? } else { ?>
+			<?php } else { ?>
 				<input type='text' size='10' name='res_ekz10.6' value="">
-			<? } ?>
+			<?php } ?>
 	</tr>
 	<tr>
 		<td width="15%">7. multa</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.7' value='7. multa'>
-			<? if (($sist=="U")&&($metodo=="U")) { ?>
+			<?php if (($sist=="U")&&($metodo=="U")) { ?>
 				<input type='text' size='10' name='res_ekz10.7' onkeyup='xAlUtf8(this)' value="">
-			<? } else { ?>
+			<?php } else { ?>
 				<input type='text' size='10' name='res_ekz10.7' value="">
-			<? } ?>
+			<?php } ?>
 		</td>
 		<td width="15%">8. babilema</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.8' value='8. babilema:'>
-			<? if (($sist=="U")&&($metodo=="U")) { ?>
+			<?php if (($sist=="U")&&($metodo=="U")) { ?>
 				<input type='text' size='10' name='res_ekz10.8' onkeyup='xAlUtf8(this)' value="">
-			<? } else { ?>
+			<?php } else { ?>
 				<input type='text' size='10' name='res_ekz10.8' value="">
-			<? } ?>
+			<?php } ?>
 		<td width="15%">9. legita</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.9' value='9. legita:'>
-			<? if (($sist=="U")&&($metodo=="U")) { ?>
+			<?php if (($sist=="U")&&($metodo=="U")) { ?>
 				<input type='text' size='10' name='res_ekz10.9' onkeyup='xAlUtf8(this)' value="">
-			<? } else { ?>
+			<?php } else { ?>
 				<input type='text' size='10' name='res_ekz10.9' value="">
-			<? } ?>
+			<?php } ?>
 	</tr>
 </table>
 </div>
@@ -190,11 +190,11 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 		<td width="15%">26. anta&#365;</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.26' value='26. anta&#365;:'>
-			<? if (($sist=="U")&&($metodo=="U")) { ?>
+			<?php if (($sist=="U")&&($metodo=="U")) { ?>
 				<input type='text' size='10' name='res_ekz10.26' onkeyup='xAlUtf8(this)' value="">
-			<? } else { ?>
+			<?php } else { ?>
 				<input type='text' size='10' name='res_ekz10.26' value="">
-			<? } ?>
+			<?php } ?>
 		<td width="15%">27. amo</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.27' value='27. amo:'>
@@ -205,7 +205,7 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 <p>Mettez les phrases suivantes à la forme interrogative (&#265;u):</p>
 <input type="hidden" name="013_cxap10.4" value="4. Mettez les phrases suivantes à la forme interrogative (&#265;u).">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	28 => "La pano estas blanka.",
 	29 => "&#348;i lo&#285;as en Kanado.",
@@ -219,7 +219,7 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
    l’accusatif (-n) au complément d’objet direct :</p>
 <input type="hidden" name="013_cxap10.5" value="5. Traduisez les phrases suivantes en ayant soin d’appliquer la règle de l’accusatif (-n) au complément d’objet direct.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	31 => "L’oiseau attrape des insectes.",
 	32 => "Les filles ont oublié le gâteau.",
@@ -235,7 +235,7 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
    (emploi de l’adjectif possessif) :</p>
 <input type="hidden" name="013_cxap10.6" value="6. Recopiez les phrases en choisissant la bonne réponse parmi celles qui sont proposées (emploi de l’adjectif possessif).">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	36 => "mia taso : (notre tasse) (ma tasse)",
 	37 => "via sano : (votre santé) (leur santé)",
@@ -250,7 +250,7 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 <p>Recopiez les phrases en choisissant le bon corrélatif :</p>
 <input type="hidden" name="013_cxap10.7" value="7. Recopiez les phrases en choisissant le bon corrélatif.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	41 => "Jen tri belaj fruktoj. (Tiun) (Kiun) vi deziras&#160;?",
 	42 => "La libro de mia onklo estas (nenie) (&#265;iu).",
@@ -265,7 +265,7 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 <p>Recopiez les phrases en choisissant la bonne réponse parmi celles qui sont proposées</p>
 <input type="hidden" name="013_cxap10.8" value="8. Recopiez les phrases en choisissant la bonne réponse parmi celles qui sont proposées.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	46 => "Alberto deziras iri (dum) (al) E&#365;ropo.",
 	47 => "Niaj amikoj estas (en) (&#285;is) la domo.",
@@ -280,7 +280,7 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 <p>Indiquez le préfixe ou le suffixe correspondant à l’explication puis fournissez-en un exemple :</p>
 <input type="hidden" name="013_cxap10.9" value="9. Indiquez le préfixe ou le suffixe correspondant à l’explication puis fournissez-en un exemple.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	51 => "les deux sexes réunis dans le même mot :",
 	52 => "l’être caractérisé par la racine du mot :",
@@ -295,7 +295,7 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 <p>Thème - Traduisez</p>
 <input type="hidden" name="013_cxap10.10" value="10. Thème - Traduisez.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
    56 => "<br>Bonjour&nbsp;! Mon nom est Jacques. Je suis jardinier et j’aime beaucoup les fleurs. Je travaille dans le jardin zoologique de Granby, cela veut dire que j’aime aussi les bêtes. Quand je suis en train de travailler, je chante souvent. Tous mes amis me disent que les fleurs du zoo sont belles parce que je chante avec joie. Est-ce que vous pensez que cela est possible&nbsp;?" 
 	);
@@ -306,7 +306,7 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 <p>Version - Traduisez</p>
 <input type="hidden" name="013_cxap10.11" value="11. Version - Traduisez.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	57 => "<br>Kara amikino,<br>Jen mia unua letero al vi. Mi deziras inter&#349;an&#285;i leterojn kaj amiki&#285;i kun vi. Mi estas esperantisto de nur du monatoj sed mi progresas rapide, &#265;ar mi studas la lingvon &#265;iun tagon. Mi deziras multe voja&#285;i tra la mondo kaj se mi estus ri&#265;a, tio estus tre facila. Mi kredas, ke Esperanto estas utila por trovi geamikojn en multaj landoj. Se vi opinias, ke ni povas inter&#349;an&#285;i amika&#309;ojn, skribu al mi kaj mi certe respondos. Dankon kaj &#285;is balda&#365;&nbsp;!<br>Via kanada amiko, Petro."
 	);
@@ -314,4 +314,4 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 ?>
 </div>
 
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

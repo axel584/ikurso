@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="5 (kvin)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -44,4 +44,4 @@ include "gerdakapo.inc.php";
 			<p><span class='ekz'>tiu &#265;i viro estas juna</span> : cet homme-ci est jeune</p>
 			<p><span class='ekz'>tio &#265;i estas nekomprenebla</span> : ceci est incompr&eacute;hensible</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

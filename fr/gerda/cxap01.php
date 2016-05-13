@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="1 (unu)";
 include "gerdakapo.inc.php";
 ?>
@@ -41,4 +41,4 @@ include "gerdakapo.inc.php";
 				<p><b>Linda:</b>	Kaj jen estas Tom, la plej malserioza knabo en la tuta
 				universitato.</p>
 			</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

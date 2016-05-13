@@ -1,4 +1,4 @@
-<?
+<?php
 $subjekto="intro.php";
 $temo=$_GET["temo"];
 $gxisdatigDato="2015-06-06";

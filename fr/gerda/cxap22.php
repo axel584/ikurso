@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="22 (dudek du)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -59,4 +59,4 @@ include "gerdakapo.inc.php";
 			en sia difinita loko, malanta&#365; rokoj, da kiuj oportune trovi&#285;is multe
 			en la kaverno.</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

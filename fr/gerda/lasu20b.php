@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="20a";
 include "gerdakapo.inc.php";
 ?>
@@ -156,4 +156,4 @@ include "gerdakapo.inc.php";
 		<li><span class="eo">Subskribi</span> : skribi sian nomon fine de letero a&#365; dokumento.</li>
 	</ol>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

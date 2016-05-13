@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="9 (na&#365;)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -7,7 +7,7 @@ include "gerdakapo.inc.php";
 			<input type="hidden" name="013_cxap09.0" value="Demandoj">
 
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "&#264;u la flegistino venas tuj? (jes / ne)",
 				2 => "&#264;u oni ofte svenas en koridoro? (jes / ne)",
 				3 => "Kial Tom ekhaltas? (Li estas novulo. / Gerda ne plu estas tie. / Okupi&#285;i pri malsanuloj ne estas lia fako.)",
@@ -30,7 +30,7 @@ include "gerdakapo.inc.php";
 
 		<p>-- Jen por vi:</p>
 		<div class="tasko">
-		<? $demandoj=array (
+		<?php $demandoj=array (
 			6. => "[6] diris la kuracisto? - Li diris, ke mi estu senzorga, ke mia malsano ne estas tro serioza.",
 			7. => "[6] vi resani&#285;os? - Balda&#365;. Eble post kelkaj tagoj.",
 			8. => "[6] vi iros unue post la resani&#285;o? - Unue mi iros en bonan restoracion.",
@@ -47,4 +47,4 @@ include "gerdakapo.inc.php";
 		?>
 		</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

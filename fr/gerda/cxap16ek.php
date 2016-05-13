@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="16 (dek ses)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -6,7 +6,7 @@ include "gerdakapo.inc.php";
 		<h3>Demandoj</h3>
 		<input type="hidden" name="013_cxap16.0" value="Demandoj">
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "Kion faris la junulo, post kiam li eliris el la vendejo?",
 				2 => "Kien li subite eniris?",
 				3 => "Kial Linda hezitis sekvi lin tien?",
@@ -90,7 +90,7 @@ include "gerdakapo.inc.php";
 			<p>&#264;iu mankanta vorto estas unu el: kiel, kia, kian, kiaj, kiajn.</p>
 
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				10 => "Kun [5] sako li eliris? - Li eliris kun papera sako.",
 				11 => "[5] li forveturos? - Mi pensas, ke li forveturos a&#365;te.",
 				12 => "[5] numeron vi notis? - Mi notis lian a&#365;tan numeron.",
@@ -106,4 +106,4 @@ include "gerdakapo.inc.php";
 				?>
 				</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

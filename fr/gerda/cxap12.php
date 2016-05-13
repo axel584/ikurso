@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="12 (dek du)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -51,4 +51,4 @@ include "gerdakapo.inc.php";
 			Gerda. Mi a&#365;dis nenion, mi a&#365;dis neniun bruon. Kaj subite &#265;io
 			eksplodis en mia kapo kaj mi mortis."</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

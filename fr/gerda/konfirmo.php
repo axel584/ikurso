@@ -1,29 +1,29 @@
-<?
+<?php
 $numcxap=$_GET["lec"];
 $kazo=$_GET["kazo"];
 include "gerdakapo.inc.php";
 ?>
 		<div class="klarigo">
-	<? 
+	<?php 
 		if ($kazo==1){
 	?>
 <p>Votre devoir a été envoyé par courriel à votre correcteur. Vous allez recevoir une copie du message.</p>
-	<?
+	<?php
 	}
 		elseif ($kazo==3) {
 		// le devoir n'a pas pu etre envoye pour des raisons techniques. Il est sauvegarde et sera envoye plus tard	
 		?>
 		<p>Votre devoir a été enregistré et sera envoyé à votre correcteur dès que possible. Une copie du message
 		vous sera alors adressée.</p>
-		<?
+		<?php
 		}
 		else {
 	?>
 	<p>Nous avons enregistré vos exercices. Ils seront envoyés à votre correcteur, dès que nous vous en aurons 
 	attribué un. Vous recevrez alors ses coordonnées par message électronique.</p>
 	<p>Votre correcteur recevra alors vos exercices par messagerie électronique et vous recevrez une copie de ce message.</p>
-	<?
+	<?php
 	}
 	?>         
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

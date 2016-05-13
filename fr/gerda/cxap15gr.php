@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="15"; 
 $titolo="15 (dek kvin)";
 include "gerdakapo.inc.php";
@@ -9,4 +9,4 @@ include "gerdakapo.inc.php";
 
 		<p><span class="ekz">devoji&#285;i (de + voj + i&#285;i)</span> : d&eacute;vier ; s'&eacute;carter ; d&eacute;river</p>
 	</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

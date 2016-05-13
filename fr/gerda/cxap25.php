@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="25 (dudek kvin)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -57,4 +57,4 @@ include "gerdakapo.inc.php";
 			<p>"Mi plezure trinkus glason da brando," li diris. Kaj li restis
 			mal&#285;ojeta, dum &#265;iuj aliaj ekridis.</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

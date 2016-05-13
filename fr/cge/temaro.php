@@ -1,4 +1,4 @@
-<? 
+<?php 
 $subjekto="temaro.php";
 $titolo="Index des sujets abordés";
 include "dlekkapo.inc.php"
@@ -115,4 +115,4 @@ include "dlekkapo.inc.php"
 			<li><a href="lec09.php#059">Adverbes primaires en -AŬ</a></li>
 		</ul></p>
 	</div>
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

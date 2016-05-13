@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="7 (sep)";
 include "dlekkapo.inc.php";
 ?>
@@ -866,7 +866,7 @@ explication.
 </p>
 <input type="hidden" name="013_cxap07.1" value="1. Essayez de traduire en français les mots suivants construits à partir des affixes que nous venons de voir.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	1 => "(&quot;edzo&quot; = époux): edzino, edzi&#285;i, eksedzo, geedzoj",
 	2 => "(&quot;viro&quot; = homme): virino, vireto, vira&#265;o, vira",
@@ -881,9 +881,9 @@ explication.
 Vous trouverez aussi qu’il est amusant de créer ses propres mots espéranto à partir des radicaux:
 </p>
 <input type="hidden" name="013_cxap07.2" value="2. Vous trouverez aussi qu’il est amusant de créer ses propres mots espéranto à partir des radicaux.">
-<?atentigo(); ?>
+<?php atentigo(); ?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	6 => "Cuire à petit feu (&quot;boli&quot; = bouillir):", 
 	7 => "Homme méprisable (&quot;viro&quot;):",
@@ -1007,9 +1007,9 @@ moment de la journée :
 <p>
 <p>Répondez aux questions suivantes.</p>
 <input type="hidden" name="013_cxap07.3" value="3. Répondez aux questions suivantes.">
-<? atentigo(); ?>
+<?php atentigo(); ?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	19 => "Se nun estas la dua, kioma horo estos post dudek minutoj&#160;? (&quot;Se&quot; signifie &quot;si&quot; condition)",  
 	20 => "Se nun estas la dek-unua, kioma horo estis anta&#365; dek minutoj&#160;?",
@@ -1027,4 +1027,4 @@ caractéristiques les plus originales de l’espéranto&#160;: la dérivation.
 Avec la pratique l’utilisation des préfixes et suffixes vous paraîtra
 tellement naturelle que vous n’y ferez même plus attention.
 </p>
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

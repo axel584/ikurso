@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="8 (ok)";
 include "gerdakapo.inc.php";
 ?>
@@ -55,4 +55,4 @@ include "gerdakapo.inc.php";
 			kruroj agas mem. Nu, &#265;iaokaze, jen Linda sekvas lin. Al kiu mistera
 			destino?</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

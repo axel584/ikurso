@@ -1,10 +1,10 @@
-<?
+<?php
 $titolo="3";
 $gxisdatigDato="2006-10-27";
 $dosiero="Lasu03.mp3";
 include "gerdakapo.inc.php";
 ?>
-	<? include "lasusono.inc.php";?>
+	<?php include "lasusono.inc.php";?>
 	<div class="rakonto lasu">
 	<h2>Amdeklaro</h2>
 	<p>Izabela, pardonu min, sed mia deklaro estas plej grava. Permesu, ke mi
@@ -74,4 +74,4 @@ include "gerdakapo.inc.php";
 	estas tro forta, tro grava. Ne gravas, se vi ne komprenas. La sola,
 	simpla fakto estas, ke mi amas vin. Kaj ke tio estas bona.</p>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

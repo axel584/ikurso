@@ -1,7 +1,7 @@
-<? $url=$_SERVER['SCRIPT_URI']; ?>
+<?php $url=$_SERVER['SCRIPT_URI']; ?>
 <html><head>
 <title>
-<? echo "Gerda malaperis ".$&#265;ap; ?>
+<?php echo "Gerda malaperis ".$&#265;ap; ?>
 </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--
@@ -15,7 +15,7 @@
 <body>
 <center>
 <img height=5 width=800 src="../hr05.gif">
-<?
+<?php
 if ($_ENV["COQUE"]){
 	echo "<h1>$titolo</h1>";
 } else {

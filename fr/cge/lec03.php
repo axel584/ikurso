@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="3 (tri)";
 include "dlekkapo.inc.php";
 ?>
@@ -64,7 +64,7 @@ fait attention aux terminaisons des mots :
 <p>Considérez la phrase suivante et répondez en français aux questions :</p>
 <input type="hidden" name="013_cxap03.1" value="1. Considérez la phrase suivante et répondez en français aux questions.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	1 => "Mian fraton lavis mia patrino.<br>* Qui a été lavé ?<br>* Qui a lavé ?",
 	2 => "Instruistojn viajn fratinoj niaj vidis.<br>* Qui a vu ?<br>* Qui a été vu ?"
@@ -224,9 +224,9 @@ français <em>soif</em> ne contient qu’une syllabe.
 
 <p>Traduisez en espéranto :</p>
 <input type="hidden" name="013_cxap03.2" value="2. Traduisez en espéranto.">
-<? atentigo();	?>
+<?php atentigo();	?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 		3 => "Mon frère se promènera le matin. (adv.: matinalement)",
 		4 => "Son ami a répondu chaleureusement. (adv.: dérivé de &quot;chaud&quot;)",
@@ -319,9 +319,9 @@ prennent la marque du pluriel <em>-j</em> et celle du complément d’objet
 
 <p>Traduisez en espéranto :</p>
 <input type="hidden" name="013_cxap03.3" value="3. Traduisez en espéranto.">
-<? atentigo();	?>
+<?php atentigo();	?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 		8 => "Il l’aime. (la personne aimée est une femme)",
 		9 => "Il aime sa s&oelig;ur. (il s’agit de la s&oelig;ur de sa femme)",
@@ -363,10 +363,10 @@ employée</b> dans ce cas.
 <h3>Exercices - troisième leçon, 4<sup>ème</sup> partie</h3>
 
 <p>Traduisez en espéranto :</p>
-<? atentigo();	?>
+<?php atentigo();	?>
 <input type="hidden" name="013_cxap03.4" value="4. Traduisez en espéranto.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	16 => "Soixante minutes font une heure. (utiliser le verbe &quot;esti&quot;)",
 	17 => "Seize heures font un jour; huit heures font une nuit.",
@@ -385,4 +385,4 @@ compléments grâce à la forme d’adverbe en <b>-e</b>. De plus, vous savez
 compter de 1 à 999 999 et pour cela il ne vous a fallu apprendre que...
 12 mots nouveaux. Qui dit mieux&#160;?
 </p>
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

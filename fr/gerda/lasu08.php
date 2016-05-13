@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="8";
 include "gerdakapo.inc.php";
 ?>
@@ -62,4 +62,4 @@ include "gerdakapo.inc.php";
 		tio volus diri, ke &#349;i vidis la kuraciston eniri en la &#265;ambron de la kuracisto.</li>
 	</ol>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

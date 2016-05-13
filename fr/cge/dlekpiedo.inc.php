@@ -1,4 +1,4 @@
-<?
+<?php
 	if (substr($subjekto,0,3)=="lec") {
 		if ($subjekto=="lec01.php"){ 
 			include "../../aligxi.inc.php";	 
@@ -6,7 +6,7 @@
 ?>
 
 	<h3>Envoi des exercices au tuteur</h3>
-<?
+<?php
 					if ($erarkodo=="1") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro1</span></div>";}
 					if ($erarkodo=="2") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro2</span></div>";} 
 					if ($erarkodo=="3") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro3</span></div>";} 
@@ -44,8 +44,8 @@
 		<p><input class="bouton" type="submit" name="Submit" value="Envoyer">&nbsp;&nbsp;&nbsp;&nbsp;
 		<input class="bouton" type="reset" value="Effacer tout"></p>
 	</div>
-		<? } ?>
-<? } ?>
+		<?php } ?>
+<?php } ?>
 </form>
 </div>
-<? include "../../pagxpiedo.inc.php"; ?>
+<?php include "../../pagxpiedo.inc.php"; ?>

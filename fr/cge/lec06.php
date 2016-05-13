@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="6 (ses)";
 include "dlekkapo.inc.php";
 ?>
@@ -78,7 +78,7 @@ la leçon précédente.</p>
 <p>Donnez le sens des corrélatifs suivants :</p>
 <input type="hidden" name="013_cxap06.1" value="1. Donnez le sens des corrélatifs suivants.">
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	1 => "kio",
 	2 => "kia",
@@ -245,9 +245,9 @@ Encore des <b>prépositions</b> :
 <h3>Exercices - sixième leçon, 2<sup>ème</sup> partie</h3>
 <p>Répondez en espéranto aux questions suivantes, selon les deux récits ci-dessus :</p>
 <input type="hidden" name="013_cxap06.2" value="2. Répondez en espéranto aux questions suivantes, selon les deux récits ci-dessus.">
-<? atentigo(); ?>
+<?php atentigo(); ?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	8 => "En kia klubo vi estas membro&#160;?",
 	9 => "Kie okazis la kongreso, en kiu vi partoprenis&#160;? &#264;u en Granby&#160;?",
@@ -280,7 +280,7 @@ après le verbe :
 <h3>Exercices - sixième leçon, 3<sup>ème</sup> partie</h3>
 <p>Formez des phrases avec les mots suivants puis traduisez-les en français :</p>
 <input type="hidden" name="013_cxap06.3" value="3. Formez des phrases avec les mots suivants puis traduisez-les en français.">
-<? atentigo();	?>
+<?php atentigo();	?>
 <div class="tasko">
 	<p>18. bestoj - en - Estas - interesaj - multaj - tiu - zoo.</p>
 	<p><input type='hidden' name="dem_ekz06_18" value="18 bestoj - en - Estas - interesaj - multaj - tiu - zoo.">
@@ -362,9 +362,9 @@ d’objet direct.
 <p>Remplacez la préposition des phrases suivantes par la forme "n" de
 l’accusatif.<br>Ex.:  Vi similas al via patro. --> Vi similas vian patron.</p>
 <input type="hidden" name="013_cxap06.4" value="4. Remplacez la préposition des phrases suivantes par la forme &quot;n&quot; de l’accusatif.">
-<? atentigo();	?>
+<?php atentigo();	?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	23 => "Faru vian aferon, Dio zorgos PRI la cetero. (proverbe: faru = fais (impératif))",
 	24 => "Mi feriis DUM tri semajnoj.",
@@ -453,9 +453,9 @@ montrer le but d’un mouvement en prenant la terminaison d’accusatif.
 de l’accusatif ou par rien du tout selon le cas.<br>
 Ex: &#348;i* a&#265;etas &#349;uoj* al la infanoj* -> &#348;i a&#265;etas &#349;uojn al la infanoj.
 <input type="hidden" name="013_cxap06.5" value="5. Recopiez le texte qui suit en remplaçant les étoiles "*" par la terminaison de l’accusatif ou par rien du tout selon le cas.">
-<? atentigo();?>
+<?php atentigo();?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	"" => "Mi* veturis al la zoologia* &#285;ardeno* kun Petro*. Li* tre deziris veturi tie*. En la zoo* li admiris ursoj* kaj simioj*. Kiam la blanka urso vidis Petro*, &#285;i kuris en la akvo*. Ni atendis kvin minutoj*  por vidi, kio* la urso* faros poste, sed &#285;i* ne iris el la akvo* kaj en la akvo* &#285;i nenio* faris. Ni revenis Montrealo* vespere*."
 	);
@@ -480,4 +480,4 @@ nécessairement assimilé tout le vocabulaire que nous vous avons
 présenté mais vous sentez bien qu’à chaque leçon vous faites un grand
 pas en avant.
 </p>
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

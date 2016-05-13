@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="5 (kvin)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -6,7 +6,7 @@ include "gerdakapo.inc.php";
 		<h3>Demandoj</h3>
 			<input type="hidden" name="013_cxap05.0" value="Demandoj">
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "Kio estis en la mano de la blondulo anta&#365;e? (sukerpeco / la taso de Gerda / io tre malgranda / la taso de Linda / nenio)",
 				2 => "Kio estis en lia mano poste? (sukerpeco / la taso de Gerda / io tre malgranda / la taso de Linda / nenio)",
 				3 => "Kio estas en la sukerujoj tie? (sukerpecoj / pulvora sukero / iu drogo / mistera substanco / sekreta lingvo)",
@@ -25,7 +25,7 @@ include "gerdakapo.inc.php";
 			li estus studento, mi lin konus.  ---> <input value="Se" size="2"> li estus studento, mi lin konus.</em></p>
 
 			<div class="tasko">
-				<? $demandoj=array (
+				<?php $demandoj=array (
 					6 => "Mi ne scias, [kiam/se] &#349;i venos al ni.",
 					7 => "Mi tre multe laborus, [kiam/se] mi povus.",
 					8 => "[Kiam/Se] li estas studento, li estas en la universitato.",
@@ -37,4 +37,4 @@ include "gerdakapo.inc.php";
 				?>
 			</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

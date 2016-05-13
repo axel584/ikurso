@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="14"; 
 $titolo="14 (dek kvar)";
 include "gerdakapo.inc.php";
@@ -105,4 +105,4 @@ include "gerdakapo.inc.php";
 				<dd>	voix</dd>
 			</dl>	
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

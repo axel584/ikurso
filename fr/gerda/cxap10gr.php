@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="10 (dek)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -24,4 +24,4 @@ include "gerdakapo.inc.php";
 		<p><span class='ekz'>kompreni</span> : comprendre &rarr; <span class='ekz'>miskompreni</span> : mal comprendre</p>
 		<p><span class='ekz'>pa&#349;o</span> : (un) pas &rarr; <span class='ekz'>mispa&#349;o</span> : un faux pas</p>
 	</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

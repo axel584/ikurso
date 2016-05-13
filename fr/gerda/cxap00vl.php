@@ -1,4 +1,4 @@
-<? 
+<?php 
 include "gerdakapo.inc.php";
 ?>
 		<div class="klarigo">
@@ -376,4 +376,4 @@ include "gerdakapo.inc.php";
 			</div>
 			</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

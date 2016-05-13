@@ -1,8 +1,8 @@
-<? 
+<?php 
 include "gerdakapo.inc.php"; 
 ?>
 <div class="klarigo">
-<?
+<?php
 	if ($temo=="intro") {
 ?>
 	<h2 id="antauxsciigo">Pr&eacute;sentation</h2>
@@ -80,7 +80,7 @@ include "gerdakapo.inc.php";
 		votre disque dur. Pour consulter ces pages, vous pouvez commencer par la page <i>index.htm</i>.</p>
 		<p><a href="http://ikurso.esperanto-jeunes.org/doc/gerda.zip">Télécharger tout le cours <i>Gerda malaperis</i></a>.</p>
 
-<?
+<?php
 } elseif ($temo=="enskribi") {
 ?>
 		<h2 id="registro">Inscription</h2>
@@ -123,7 +123,7 @@ include "gerdakapo.inc.php";
 			du tuteur et ne lui enverrez pas de nouvelle le&ccedil;on avant d’avoir re&ccedil;u
 			la correction des le&ccedil;ons pr&eacute;c&eacute;dentes.</li>
 		</ol>
-<? } elseif ($temo=="atentigo") {
+<?php } elseif ($temo=="atentigo") {
 ?>
 		<h3>Affichage des le&ccedil;ons</h3>
 
@@ -154,7 +154,7 @@ include "gerdakapo.inc.php";
 		Jean-Fran&ccedil;ois):</p>
 		<p>T&eacute;l&eacute;chargez-le avec <a href="Gerdamalaperis.prc">ce lien</a></p>.
 
-<? } elseif ($temo=="prononco") {
+<?php } elseif ($temo=="prononco") {
 ?>
 		<h3>G&eacute;n&eacute;ralit&eacute;s sur la prononciation</h3>
 		
@@ -549,7 +549,7 @@ include "gerdakapo.inc.php";
 			</ol>
 			</p>
 
-<? } elseif ($temo=="enhavo") {
+<?php } elseif ($temo=="enhavo") {
 ?>
 		<h2 id="enhavo">Table des mati&egrave;res du cours</h2>
 
@@ -600,6 +600,6 @@ include "gerdakapo.inc.php";
 		<ul class="sommaire cadre">
 		  <li><a href="konsiloj.php">Konsiloj al la kursfinintoj</a></li>
 		</ul>
-<? } ?>
+<?php } ?>
 </div>
-<? include "gerdapiedo.inc.php" ?>
+<?php include "gerdapiedo.inc.php" ?>

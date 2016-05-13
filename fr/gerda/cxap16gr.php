@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="16"; 
 $titolo="16 (dek ses)";
 include "gerdakapo.inc.php";
@@ -46,4 +46,4 @@ include "gerdakapo.inc.php";
 			<p>Notez que <span class="eo">okazo</span> s'utilise dans trois sens : 
 			(1) &eacute;v&eacute;nement; (2) cas; (3) occasion, opportunit&eacute;</P>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

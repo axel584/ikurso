@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="04"; 
 $titolo="4 (kvar)";
 include "gerdakapo.inc.php";
@@ -14,4 +14,4 @@ include "gerdakapo.inc.php";
 		<p>kripta&#309;o= kripta afero, io kripta</p>
 		<p>kripta&#309;oscienco = scienco pri kripta&#309;oj</p>
 	</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

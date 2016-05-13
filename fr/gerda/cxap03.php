@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="3 (tri)";
 include "gerdakapo.inc.php";
 ?>
@@ -41,4 +41,4 @@ include "gerdakapo.inc.php";
 			proksimi&#285;is al vi, kaj estis mistera esprimo sur via viza&#285;o, Linda,
 			kaj anka&#365; sur via, Tom. Kiel mi jam diris, vi aspektis kiel spionoj.</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

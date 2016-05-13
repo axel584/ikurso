@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="22"; 
 $titolo="22 (dudek du)";
 include "gerdakapo.inc.php";
@@ -9,4 +9,4 @@ include "gerdakapo.inc.php";
 			<p><span class="ekz">sola</span> : seul &rarr; <span class="ekz">soleca</span> : solitaire</p>
 			<p><span class="ekz">ru&#285;a</span> : rouge &rarr; <span class="ekz">ru&#285;eca</span> : rougeaud, rouge&acirc;tre</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

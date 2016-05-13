@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="8 (ok)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -7,7 +7,7 @@ include "gerdakapo.inc.php";
 			<input type="hidden" name="013_cxap08.0" value="Demandoj">
 
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "&#264;u Linda estas trankvila? (jes / ne)",
 				2 => "&#264;u Tom kaj Bob jam revenis? (jes / ne)",
 				3 => "&#264;u Linda scias, kio okazis al Gerda? (jes / ne)",
@@ -24,7 +24,7 @@ include "gerdakapo.inc.php";
 			<p>Elektu la &#285;ustan vorton.<br>
 			("Berlino", "Londono" kaj "Parizo" estas urbo-nomoj.)</p>
 			<div class="tasko">
-				<? $demandoj=array (
+				<?php $demandoj=array (
 					6 => "[Oni/Onin] sendis [mi/min] al [Berlino/Berlinon] por paroli kun la [spiono/spionon].",
 					7 => "En [Berlino/Berlinon] mi atendis kvar [tagoj/tagojn] sed ne vidis [li/lin].",
 					8 => "La [tuta/tutan] [tempo/tempon] ili observis la [virino/virinon] en [Londono/Londonon].",
@@ -46,7 +46,7 @@ include "gerdakapo.inc.php";
 			<p>-- Nun faru vi:</p>
 
 			<div class="tasko">
-				<? $demandoj=array (
+				<?php $demandoj=array (
 					11 => "Mi konas [min/sin]. Mi do ne volas vidi [min/sin] en la spegulo. Tom estas pli bela ol mi, kaj mi ofte vidas lin rigardi [lin/sin] en la spegulo. Kiam li turnas [lin/sin] al mi, mi plene vidas [sian/lian] belan aspekton.",
 					12 => "&#264;u vi volas piediri reen al [via/sia] &#265;ambro? Vi promenos longe, sed ne timu, ke [viaj/siaj] kruroj tro laboros kaj perdos [ilian/sian] tutan forton."
 					);
@@ -100,4 +100,4 @@ include "gerdakapo.inc.php";
 					<input type="hidden" name="dd08.14.628" value=" kuraciston."> kuraciston.</p>			
 				</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

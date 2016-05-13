@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="18b";
 include "gerdakapo.inc.php";
 ?>
@@ -151,4 +151,4 @@ include "gerdakapo.inc.php";
 		<li><span class="eo">Preni X por Y, mispreni X por Y </span> : pensi, ke estas Y, dum fakte estas X.</li>
 	</ol>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

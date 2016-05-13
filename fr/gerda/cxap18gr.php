@@ -1,4 +1,4 @@
-<? 
+<?php 
 $cxap="18"; 
 $titolo="18 (dek ok)";
 include "gerdakapo.inc.php";
@@ -19,4 +19,4 @@ include "gerdakapo.inc.php";
 			<p><span class="ekz">mi estos kun vi post du minutoj</span> : je serai avec toi dans deux minutes,
 				je suis &agrave; toi dans deux minutes</p>
 		</div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

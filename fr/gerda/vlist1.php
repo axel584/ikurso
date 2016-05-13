@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="Aide-m&eacute;moire fran&ccedil;ais-esp&eacute;ranto";
 include "gerdakapo.inc.php";
 ?>
@@ -1361,4 +1361,4 @@ include "gerdakapo.inc.php";
 </table>
 </form>
 </div>
-<? include "gerdakapo.inc.php"; ?>
+<?php include "gerdakapo.inc.php"; ?>

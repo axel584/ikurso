@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="5 (kvin)";
 include "dlekkapo.inc.php";
 ?>
@@ -332,9 +332,9 @@ Exemples :<br>
 {&#348;i} amas min  ->  Kiu amas min&#160;?<br>
 Li promenas kun {belaj} knabinoj ->  Kun kiaj knabinoj li promenas&#160;?</p>
 <input type="hidden" name="013_cxap05.1" value="1. Transformez chaque phrase en interrogation en remplaçant le texte entre accolades par un corrélatif en KI-.">
-<? atentigo();	?>
+<?php atentigo();	?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	1 => "{Simeono kaj Fatima} estas miaj amikoj.",
 	2 => "Simeono kaj Fatima estas {miaj amikoj}.",
@@ -353,9 +353,9 @@ Li promenas kun {belaj} knabinoj ->  Kun kiaj knabinoj li promenas&#160;?</p>
 
 <p>Traduisez en espéranto :</p>
 <input type="hidden" name="013_cxap05.2" value="2. Traduisez en espéranto.">
-<? atentigo(); ?>
+<?php atentigo(); ?>
 <div class="tasko">
-<?
+<?php
 	$demandoj=array (
 	11 => "Qu’est-ce que c’est ? (Quelle-chose est cette-chose&#160;?)",
 	12 => "Où est ma tasse ?",
@@ -385,4 +385,4 @@ cohérence d’ensemble, mais nous savons qu’il vous faudra de la
 pratique pour assimiler tout ça. On aura donc l’occasion d’y revenir
 souvent.
 </p>
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

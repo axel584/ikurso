@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="21a";
 include "gerdakapo.inc.php";
 ?>
@@ -90,4 +90,4 @@ include "gerdakapo.inc.php";
 		<li><span class="eo">Urbodomo</span> : domo, kie trovi&#285;as la &#265;efaj urb-administraj oficejoj.</li>
 	</ol>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

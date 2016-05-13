@@ -1,10 +1,10 @@
-<?
+<?php
 $titolo="5";
 $gxisdatigDato="2006-10-27";
 $dosiero="Lasu05.mp3";
 include "gerdakapo.inc.php";
 ?>
-	<? include "lasusono.inc.php";?>
+	<?php include "lasusono.inc.php";?>
 	<div class="rakonto lasu">
 	<h2>&#264;u vere vi ne volas labori?</h2>
 	<p>Rigardu, la sukerujo estas malplena. Se iu dezirus sukeron, li ne
@@ -95,4 +95,4 @@ include "gerdakapo.inc.php";
 		<li><span class="eo">Mi turnus min al</span>: mi irus paroli al.</li>
 	</ol>
 </div>
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

@@ -1,4 +1,4 @@
-<? 
+<?php 
 $titolo="17 (dek sep)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -6,7 +6,7 @@ include "gerdakapo.inc.php";
 		<h3>Demandoj</h3>
 		<input type="hidden" name="013_cxap17.0" value="Demandoj">
 			<div class="tasko">
-			<? $demandoj=array (
+			<?php $demandoj=array (
 				1 => "Pri kio parolas la policano?",
 				2 => "Kion precize instruas Gerda?",
 				3 => "Kiu estas la alta blondulo?",
@@ -101,7 +101,7 @@ include "gerdakapo.inc.php";
 		<p>Enmetu unu el tiuj vortoj en &#265;iun lokon.</p>
 
 		<div class="tasko">
-		<? $demandoj=array(
+		<?php $demandoj=array(
 			7 => "Mi multe lernadis [3] lingvistiko [3] sukcesi en la universitato.",
 			8 => "[3] la malfrua horo mi decidis veturi [3] a&#365;to, [3] esti pli rapida.",
 			9 => "[3] kio temas? - Mi ne scias; mi &#309;us alvenis.",
@@ -124,7 +124,7 @@ include "gerdakapo.inc.php";
 			<p>-- Forigu la vortojn kun "{}"!</p>
 
 			<div class="tasko">
-			<? $demandoj=array(
+			<?php $demandoj=array(
 				14 => "Marko pensas, ke {Marko} rompis {la} tason {de Marko}.",
 				15 => "Marko pensas, ke {Tom} rompis {la} tason {de Marko}.",
 				16 => "Tom pensas, ke {Tom} rompis {la} tason {de Marko}.",
@@ -145,4 +145,4 @@ include "gerdakapo.inc.php";
 				?>
 				</div>
 		</div> <!-- klarigo -->
-<? include "gerdapiedo.inc.php"; ?>
+<?php include "gerdapiedo.inc.php"; ?>

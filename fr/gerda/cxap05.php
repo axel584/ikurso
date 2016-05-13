@@ -1,4 +1,4 @@
-<?
+<?php
 $titolo="5 (kvin)";
 include "gerdakapo.inc.php"; 
 ?>
@@ -38,4 +38,4 @@ include "gerdakapo.inc.php";
 			<p><b>Bob:</b>	&#348;i &#349;ajnas tute normala. Ver&#349;ajne vi imagis ion draman, dum
 			temas pri tute simpla, tute natura okaza&#309;o.</p>
 		</div>
-<? include "gerdapiedo.inc.php" ?>
+<?php include "gerdapiedo.inc.php" ?>

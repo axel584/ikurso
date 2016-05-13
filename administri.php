@@ -441,14 +441,14 @@ include "adminkapo.inc.php";
 ?>
 		<div id="adminejo">
 			<ul id="tabnav">
-				<li <?if ($kategorio=="P"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=P">Attendent un correcteur</a></li>
-				<li <?if ($kategorio=="S0"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=S0">Ont reçu un correcteur</a></li>
-				<li <?if ($kategorio=="S"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=S">Autres élèves</a></li>
-				<li <?if ($kategorio=="H"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=H">Ont abandonné</a></li>
-				<li <?if ($kategorio=="F"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=F">Ont fini le cours</a></li>
-				<li <?if ($kategorio=="K"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=K">Correcteurs</a></li>
-				<li <?if ($kategorio=="A"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=A">Administrateurs</a></li>
-				<li <?if ($kategorio=="I"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=I">Informateurs</a></li>
+				<li <?php if ($kategorio=="P"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=P">Attendent un correcteur</a></li>
+				<li <?php if ($kategorio=="S0"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=S0">Ont reçu un correcteur</a></li>
+				<li <?php if ($kategorio=="S"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=S">Autres élèves</a></li>
+				<li <?php if ($kategorio=="H"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=H">Ont abandonné</a></li>
+				<li <?php if ($kategorio=="F"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=F">Ont fini le cours</a></li>
+				<li <?php if ($kategorio=="K"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=K">Correcteurs</a></li>
+				<li <?php if ($kategorio=="A"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=A">Administrateurs</a></li>
+				<li <?php if ($kategorio=="I"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=I">Informateurs</a></li>
 			</ul>
 			<div id="kadro">
 				<?php if (isset($erarkodo) && $erarkodo=="9") echo "<p class='eraro'><i>Cet élève a déjà un correcteur.</i></p>"; ?>
@@ -540,7 +540,7 @@ include "adminkapo.inc.php";
 							<td nowrap>
 								<input type="radio" name="sistemo" value="U" checked>&nbsp;lettres accentuées <br>
 								<input type="radio" name="sistemo" value="X" 
-								<?if ($celpersono["sistemo"]=='X'){echo "checked";}?>>&nbsp;système en X "; ?>
+								<?php if ($celpersono["sistemo"]=='X'){echo "checked";}?>>&nbsp;système en X "; ?>
 							</td>
 							<td class="col1">stop-mailing :</td>
 							<td><input type="checkbox" name="stopInfo" <?php if ($celpersono["stop_info"]=="J") {echo "checked";}?>>
@@ -578,12 +578,13 @@ include "adminkapo.inc.php";
 										$demando = "select * from protokolo where kategorio='ENIRO' and teksto='$teksto' order by horo DESC";
 										$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 										$row=$result->fetch();
+										// on affiche la date de la dernière connection
 										$lastdato=$row["horo"];
-										ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $lastdato, $lstdt);
-										$demando =  "select kodo,nomo from monatoj where kodo=".$lstdt[2]." and lingvo='fr'";
+										$lstdt = explode("-",$lastdato);
+										$demando =  "select kodo,nomo from monatoj where kodo=".$lstdt[1]." and lingvo='fr'";
 										$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 										if (($row=$result->fetch()){
-											$lastdato=$lstdt[3]." ".$row["nomo"]." ".$lstdt[1];
+											$lastdato=$lstdt[2]." ".$row["nomo"]." ".$lstdt[0];
 										} else {
 											$lastdato ="";
 										}

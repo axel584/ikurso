@@ -1,9 +1,9 @@
 <p class="dato">
 ĝisdatigita je : 
-<?php if ($gxisdatigDato) {
+<?php if (isset($gxisdatigDato)) {
 		echo $gxisdatigDato;
 	} else {
-		echo "2005-10-01";
+		echo "2016-05-11";
 	}
 ?>
 </p>

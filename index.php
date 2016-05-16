@@ -7,11 +7,11 @@ $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 if ($persono_id) {
 	$persono = apartigiPersonon($persono_id);
-	$forum_sid = $_SESSION["phpbb2mysql_sid"];
-	if (!$forum_sid) {
+	//$forum_sid = $_SESSION["phpbb2mysql_sid"];
+	//if (!$forum_sid) {
 		// TODO : mettre ici la fonction qui se connecte au forum...
 		//phpbb_login($persono_id);
-	}
+	//}
 }
 include "pagxkapo.inc.php";
 ?>

@@ -1,15 +1,14 @@
 <?php
 include "lingvo.inc.php";
 require("db.inc.php");
-$teksto=addslashes($_POST['teksto']);
-$stud_id=$_POST['stud_id'];
-$persono_id=$_SESSION['persono_id'];
-$pagxo=$_POST['pagxo'];
+$teksto=isset($_POST['teksto'])?addslashes($_POST['teksto']):"";
+$stud_id=isset($_POST['stud_id'])?$_POST['stud_id']:0;
+$persono_id=isset($_SESSION['persono_id'])?$_SESSION['persono_id']:0;
+$pagxo=isset($_POST['pagxo'])?$_POST['pagxo']:0;
 malfermidatumbazon();
 if ($teksto!=""){
 	$demando = "INSERT INTO komentoj (studanto,korektanto,dato,teksto) VALUES ('$stud_id','$persono_id',CURDATE(),'$teksto')";
-	mysql_select_db( "ikurso");
-	$result = mysql_query($demando) or die (  "INSERT : Invalid query :".$demando);
+	$bdd->exec($demando) or die(print_r($bdd->errorInfo()));
 }
 header("Location:".$pagxo."");
 ?>         

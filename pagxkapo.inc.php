@@ -61,33 +61,33 @@ ob_start("konvX");
 				<td>
 					<h2>Personnel</h2>
 					<p><a href="<?php echo $vojo."forum/index.php?sid=".$phpbb2mysql_sid;?>">
-					<? echo $lgv_forumo." ".@phpbb_nombre_nouveau_message($persono_id);?>
+					<?php //echo $lgv_forumo." ".@phpbb_nombre_nouveau_message($persono_id);?>
 					</a></p>
 					<p><a href="javascript:void(0);" onClick="window.open('<?php echo $vojo;?>forum/chatbox_mod/chatbox.php','12_ChatBox','scrollbars=no,width=700,height=550')">Discussion en ligne</a></p>
-					<p><a href="<?echo $vojo."personinformoj.php";?>">Donn&eacute;es personnelles</a></p>
+					<p><a href="<?php echo $vojo."personinformoj.php";?>">Donn&eacute;es personnelles</a></p>
 				</td>
-			<? if ($rajto=="K" || $rajto=="A"){ ?>
+			<?php if ($rajto=="K" || $rajto=="A"){ ?>
 				<td>
 					<h2>Correcteur</h2>
 					<p><a href="<?php echo $vojo."statLauxKategorio.php";?>">Statistiques</a></p>
 					<p><a href="<?php echo $vojo."helppagxo.php";?>">Guide du correcteur</a></p>
 					<p><a href="<?php echo $vojo."miajlernantoj.php";?>">Mes &eacute;l&egrave;ves</a></p>
 				</td>
-			<? } ?>
-			<? if ($rajto=="I"){ ?>
+			<?php } ?>
+			<?php if ($rajto=="I"){ ?>
 				<td class="elemento">
 					<h2>Administrateur</h2>
 					<p><a href="<?php echo $vojo."statLauxKategorio.php";?>">Statistiques</a></p>
 					<p><a href="<?php echo $vojo."stirpanelo.php";?>">G&eacute;rer les utilisateurs</a></p>
 				</td>
-			<? } ?>
-			<? if ($rajto=="A"){ ?>
+			<?php } ?>
+			<?php if ($rajto=="A"){ ?>
 				<td class="elemento">
 					<h2>Administrateur</h2>
 					<p><a href="<?php echo $vojo."stirpanelo.php";?>">Panneau de contr&ocirc;le</a></p>
 					<p><a href="<?php echo $vojo."administri.php";?>">G&eacute;rer les utilisateurs</a></p>
 				</td>
-			<? } ?>
+			<?php } ?>
 			</tr>
 		</table>
 	</div>
@@ -209,7 +209,7 @@ ob_start("konvX");
 
 			<h2>Comment faire ?</h2>
 			<ul class="niv0">
-				<li><a href="<?php echo $vojo;?>/helpo.php"><? echo $lgv_helpo?></a></li>
+				<li><a href="<?php echo $vojo;?>/helpo.php"><?php echo $lgv_helpo?></a></li>
 				<li><a href="<?php echo $vojo;?>/fr/intro.php?temo=enskribo">S&rsquo;inscrire &agrave; un cours</a></li>
 				<li><a href="#" onClick="window.open('<?php echo $vojo;?>pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');" >
 				Retrouver son mot de passe</a></li>

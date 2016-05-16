@@ -14,6 +14,7 @@ else {
 	$celpersono = array(
     	'id' => '',
     	'sekso' => '',
+    	'kurso' => '',
     	'ekdato' => '',
     	'retadreso' => '',
     	'enirnomo' => '',
@@ -28,10 +29,12 @@ else {
     	'posxtkodo' => '',
     	'urbo' => '',
     	'lando' => '',
+    	'kialo' => '',
+    	'sistemo' => ''
     	);
 }
 if ($rajto!='A' && $rajto!='I'){header("Location:index.php?erarkodo=4");}
-$kategorio=$_GET["kategorio"];
+$kategorio=isset($_GET["kategorio"])?$_GET["kategorio"]:"";
 
 /***********************************************
  * fonctions d'affichage des menus déroulants
@@ -39,7 +42,7 @@ $kategorio=$_GET["kategorio"];
 
 // construction de la liste déroulante des droits
 // avec sélection par défaut des droits de l'individu donné
-function listi_rajtojn ($rajtoj, "fr") {
+function listi_rajtojn ($rajtoj) {
 	echo "<select name=\"rajtoj\">";
 	echo "<option value=\"\">&nbsp;</option>";
 	$listo = konstruiListon("rajtoj","kodo","nomo"," where lingvo='fr' order by nomo");	     
@@ -54,7 +57,7 @@ function listi_rajtojn ($rajtoj, "fr") {
 
 // construction de la liste déroulante des droits
 // avec sélection par défaut du pays donné
-function listi_landojn ($lando, "fr") {
+function listi_landojn ($lando) {
 	global $aliavidigito, $defaultCharset;
 	echo "<select name=\"lando\">";
 	echo "<option value=\"\">&nbsp;</option>";
@@ -76,7 +79,7 @@ function listi_landojn ($lando, "fr") {
 
 // construction de la liste déroulante des droits
 // avec sélection par défaut du cours donné
-function listi_kursojn ($kurso, "fr") {
+function listi_kursojn ($kurso) {
 	global $aliavidigito;
 	echo "<select name=\"kurso\">";
 	echo "<option value=\"\">&nbsp;</option>";
@@ -98,10 +101,11 @@ function listi_kursojn ($kurso, "fr") {
 // construction de la liste déroulante des droits
 // avec sélection par défaut du mois pour une date donnée
 
-function afixsi_naskigxdaton ($dato, "fr") {
+function afixsi_naskigxdaton ($dato) {
 	global $aliavidigito;
 	//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $dato,$nskdt);
 	$nskdt = explode("-",$dato);
+	if (count($nskdt)==1) {$nskdt = array("00","00","0000");}
 	echo "<input type=\"text\" name=\"naskigxdato_tago\" size=\"3\" maxlength=\"2\" value=\"";
 	if ($nskdt[2]!="00") {echo $nskdt[2];}
 	echo "\">";
@@ -185,14 +189,13 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 
 function listi_korektantoj() {
 	global $bdd;
-	$obj_persono = new personoj;
-	$korektantoj = $obj_persono->load_by_rajto('K','fr');
-	usort($korektantoj,array("personoj","sort_enirnomo"));
-	for ($k=0;$k<count($korektantoj);$k++) {
-		echo stripslashes($row['kialo'])."<br>";
-		echo "<option value=\"".$korektantoj[$k]->get_id()."\">";
-		if ($korektantoj[$k]->get_id()< 4125) {echo $korektantoj[$k]->get_enirnomo();}
-		else {echo $korektantoj[$k]->get_enirnomo();}
+	$demando = "select personoj.id,personoj.enirnomo from personoj where personoj.rajtoj='K' and personoj.lingvo='fr' order by enirnomo";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while($row = $result->fetch()) {
+		// je ne comprends pas ce que foutais cette ligne en dessous ?
+		//echo stripslashes($row['kialo'])."<br>";
+		echo "<option value=\"".$row['id']."\">";
+		echo $row['enirnomo'];
 		echo "</option>\n";
 	}
 }
@@ -254,8 +257,9 @@ function listi_S_laux_K($korektanto_id) {
 
 		// colonne 1: coordonnees 
 		echo "<div class='lernanto gauche' style='border:solid #888;border-width:0 1px 1px 0;margin-right:10px;'>";
-		ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["naskigxdato"],$nskdt);
-		echo $nskdt[3]."/".$nskdt[2]."/".$nskdt[1]."<br>";
+		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["naskigxdato"],$nskdt);
+		$nskdt=explode("-", $row["naskigxdato"]);
+		echo $nskdt[2]."/".$nskdt[1]."/".$nskdt[0]."<br>";
 		echo $row["adreso1"]."<br>";
 		echo $row["adreso2"]."<br>";
 		echo $row["posxtkodo"]." ";
@@ -374,7 +378,7 @@ function listi_S() {
 
 //tiu funkcio konstruas la liston de Personoj 'H'
 function listi_H() {
-	global $bdd,;
+	global $bdd;
 	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,nuna_kurso.stato as stato,nuna_kurso.findato as findato from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='H' and personoj.lingvo='fr' order by findato desc";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
@@ -437,6 +441,14 @@ function listi_I() {
 		echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]."</option>";
 	}
 }
+
+function listi_kursojn_de_iu_studanto($studanto_id) {
+	global $bdd;
+ $demando="select nuna_kurso.id,korektanto,nunleciono,nuna_kurso.kurso,nuna_kurso.lastdato,nuna_kurso.stato, personoj.enirnomo as korektanto_enirnomo,personoj.id as korektanto_id,kursoj.nomo as kursoj_nomo,lecionoj.titolo as lecionoj_titolo from ikurso.nuna_kurso  join personoj on personoj.id=nuna_kurso.korektanto join kursoj on kursoj.kodo=nuna_kurso.kurso and kursoj.lingvo='fr' left join lecionoj on lecionoj.numero=nuna_kurso.nunleciono and lecionoj.kurso=nuna_kurso.kurso and lecionoj.lingvo='fr' where studanto=".$studanto_id." order by lastdato";
+ 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+ 	return $result;
+}
+
 include "adminkapo.inc.php";
 ?>
 		<div id="adminejo">
@@ -538,9 +550,8 @@ include "adminkapo.inc.php";
 						<tr>
 							<td colspan="2" class="col1">Préférence pour les messages :</td>
 							<td nowrap>
-								<input type="radio" name="sistemo" value="U" checked>&nbsp;lettres accentuées <br>
-								<input type="radio" name="sistemo" value="X" 
-								<?php if ($celpersono["sistemo"]=='X'){echo "checked";}?>>&nbsp;système en X "; ?>
+								<input type="radio" name="sistemo" value="U" <?php if ($celpersono["sistemo"]=='U'){echo "checked";}?>>&nbsp;lettres accentuées <br>
+								<input type="radio" name="sistemo" value="X" <?php if ($celpersono["sistemo"]=='X'){echo "checked";}?>>&nbsp;système en X
 							</td>
 							<td class="col1">stop-mailing :</td>
 							<td><input type="checkbox" name="stopInfo" <?php if ($celpersono["stop_info"]=="J") {echo "checked";}?>>
@@ -561,6 +572,7 @@ include "adminkapo.inc.php";
 							<td nowrap>
 								<?php //ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $celpersono["ekdato"],$ekdt);
 									$ekdt = explode("-",$celpersono["ekdato"]);
+									if (count($ekdt)==1) {$ekdt = array("00","00","0000");}
 									echo $ekdt[2]." ";
 									$demando =  "select kodo,nomo from monatoj where kodo=".$ekdt[1]." and lingvo='fr'";
 									$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
@@ -570,7 +582,7 @@ include "adminkapo.inc.php";
 								?>
 							</td>
 							<td class="col1">Dernière connexion :</td>
-								<?
+								<?php
 									if ($celpersono["enirnomo"]==""){
 										$lastdato="";
 									} else {
@@ -581,9 +593,10 @@ include "adminkapo.inc.php";
 										// on affiche la date de la dernière connection
 										$lastdato=$row["horo"];
 										$lstdt = explode("-",$lastdato);
+										if (count($lstdt)==1) {$lstdt = array("00","00","0000");}
 										$demando =  "select kodo,nomo from monatoj where kodo=".$lstdt[1]." and lingvo='fr'";
 										$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-										if (($row=$result->fetch()){
+										if ($row=$result->fetch()){
 											$lastdato=$lstdt[2]." ".$row["nomo"]." ".$lstdt[0];
 										} else {
 											$lastdato ="";
@@ -634,8 +647,7 @@ include "adminkapo.inc.php";
 					// ne liste rien pour l'écran vide ou pour les correcteurs/administrateurs
 					debug ("recherche des cours déjà suivis : rajtoj=".$celpersono['rajtoj']."<br>");
 					if (($celpersono_id!="") && (($celpersono["rajtoj"]=='S')||($celpersono["rajtoj"]=='P'))) {
-							$obj_nuna_kurso = new nuna_kurso;
-							$nuna_kursoj = $obj_nuna_kurso->find(array("studanto"=>$celpersono_id)); 
+							$nuna_kursoj = listi_kursojn_de_iu_studanto($celpersono_id);
 					?>
 							<div class="kadro">
 							<table class="perso" cellpadding="2">
@@ -656,16 +668,13 @@ include "adminkapo.inc.php";
 										debug ("nb total de cours=".count($nuna_kursoj)."<br>");
 										debug ("cours demandé : ".$celpersono['kurso']."<br>");
 										debug ("liste des cours déjà suivis<br>");
-										for ($i=0;$i<count($nuna_kursoj);$i++) {
-											debug ($i.":");
-											debug ($nuna_kursoj[$i]->kurso->get_kodo()." ".$nuna_kursoj[$i]->get_stato());
-											if ($celpersono["kurso"]==$nuna_kursoj[$i]->kurso->get_kodo()) {
+										while ($nuna_kurso = $nuna_kursoj->fetch()) {
+											if ($celpersono["kurso"]==$nuna_kurso['kurso']) {
 												// modif Emmanuelle - 26.12.2006
 												// si l'élève a déjà suivi un cours (terminé ou abandonné
 												// on ne considère pas qu'il est inscrit le cours de façon
 												// à pouvoir lui attribuer un nouveau correcteur
-												debug ("cours dans l'état ".$nuna_kursoj[$i]->get_stato()."<br>");
-												if (($nuna_kursoj[$i]->get_stato()!='H')&&($nuna_kursoj[$i]->get_stato()!='F')) {
+												if ($nuna_kurso['stato']!='H' && $nuna_kurso['stato']!='F') {
 													$havasKurson=1;
 												}
 											}
@@ -674,9 +683,9 @@ include "adminkapo.inc.php";
 										<tr>
 										<?php // le cours demandé est un cours actuellement suivi
 										debug ("verifier si le cours demande est actuellement suivi<br>");
-										debug ("cours demande=".$celpersono["kurso"]." et cours suivi=".$nuna_kursoj[$i]->kurso->get_kodo()."<br>");
-										if (($celpersono["kurso"]==$nuna_kursoj[$i]->kurso->get_kodo())
-											&& (($nuna_kursoj[$i]->get_stato()=='N') ||($nuna_kursoj[$i]->get_stato()=='K'))) {
+										debug ("cours demande=".$celpersono["kurso"]." et cours suivi=".$nuna_kurso['kurso']."<br>");
+										if (($celpersono["kurso"]==$nuna_kurso['kurso'])
+											&& (($nuna_kurso['stato']=='N') ||($nuna_kurso['stato']=='K'))) {
 													$havasSekvitanKurson++;
 													debug ("le cours demande est actuellement suivi<br>");
 										
@@ -685,38 +694,39 @@ include "adminkapo.inc.php";
 										<td>
 											<a href="javascript:document.administri2.action='administriNunanKurson.php';document.administri2.submit();">
 											<img src="bildoj/filesaveas.png"  align="middle"></a></td>
-										<td><?php listi_Korektantoj_laux_kurso($celpersono_id,$nuna_kursoj[$i]->kurso->get_kodo()); ?></td>
+										<td><?php listi_Korektantoj_laux_kurso($celpersono_id,$nuna_kurso['kurso']); ?></td>
 									<?php } else { ?>
 										<td><img src="bildoj/1rightarrow.png" align="middle"></td>
-										<td><strong><a href="administri.php?celpersono_id=<?=$nuna_kursoj[$i]->korektanto->get_id()?>">
-										<?=$nuna_kursoj[$i]->korektanto->get_enirnomo() ?></a></strong></td>
+										<td><strong><a href="administri.php?celpersono_id=$nuna_kurso['korektanto_id']?>">
+										<?=$nuna_kurso['korektanto_enirnomo'] ?></a></strong></td>
 									<?php } ?>
-									<!-- <td><strong><a href="administri.php?celpersono_id=<?=$nuna_kursoj[$i]->korektanto->get_id()?>"> -->
-									<?=$nuna_kursoj[$i]->korektanto->get_enirnomo() ?></a></strong></td>
-									<td><?=$nuna_kursoj[$i]->kurso->get_nomo() ?></td>
+									<?=$nuna_kurso['korektanto_enirnomo'] ?></a></strong></td>
+									<td><?=$nuna_kurso['kursoj_nomo'] ?></td>
 									<td>
-									<?php if ($nuna_kursoj[$i]->nunleciono->get_titolo()=="") { echo "Pas de leçon en cours";}
+									<?php if ($nuna_kurso['lecionoj_titolo']=="") { echo "Pas de leçon en cours";}
 										else {
-											echo $nuna_kursoj[$i]->nunleciono->get_titolo();
-											$lastdato=$nuna_kursoj[$i]->get_lastdato();
-											ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $lastdato,$lstdt);
-											echo " (".$lstdt[3].".".$lstdt[2].".".$lstdt[1].")";
+											echo $nuna_kurso['lecionoj_titolo'];
+											$lastdato=$nuna_kurso['lastdato'];
+											//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $lastdato,$lstdt);
+											$lstdt=explode("-", $lastdato);
+											echo " (".$lstdt[2].".".$lstdt[1].".".$lstdt[0].")";
 										}
 									?>
 									</td>
 			
 									<?php } else { // ceci n'est pas un cours actuellement suivi ?>
 									<td>&nbsp;</td>
-									<td><strong><a href="administri.php?celpersono_id=<?=$nuna_kursoj[$i]->korektanto->get_id()?>">
-									<?=$nuna_kursoj[$i]->korektanto->get_enirnomo() ?></a></strong></td>
-									<td><?=$nuna_kursoj[$i]->kurso->get_nomo() ?></td>
+									<td><strong><a href="administri.php?celpersono_id=<?=$nuna_kurso['korektanto_id']?>">
+									<?=$nuna_kurso['korektanto_enirnomo'] ?></a></strong></td>
+									<td><?=$nuna_kurso['kursoj_nomo'] ?></td>
 									<td>
-										<?php if ($nuna_kursoj[$i]->nunleciono->get_titolo()=="") { echo "Pas de leçon en cours";} 
+										<?php if ($nuna_kurso['lecionoj_titolo']=="") { echo "Pas de leçon en cours";} 
 											else {
-												echo $nuna_kursoj[$i]->nunleciono->get_titolo();
-												$lastdato=$nuna_kursoj[$i]->get_lastdato();
-												ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $lastdato,$lstdt);
-												echo " (".$lstdt[3].".".$lstdt[2].".".$lstdt[1].")";
+												echo $nuna_kurso['lecionoj_titolo'];
+												$lastdato=$nuna_kurso['lastdato'];
+												//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $lastdato,$lstdt);
+												$lstdt=explode("-", $lastdato);
+												echo " (".$lstdt[2].".".$lstdt[1].".".$lstdt[0].")";
 											}
 										?>
 									</td>

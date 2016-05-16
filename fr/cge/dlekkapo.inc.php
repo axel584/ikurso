@@ -6,9 +6,10 @@ $vojo="../../";
 include_once ("../../fr.inc.php");
 include_once ("../../db.inc.php");
 include_once ("../../webui.inc.php");
-$persono_id=$_SESSION["persono_id"];
-$erarkodo=$_GET["erarkodo"];
-$noto=$_GET["noto"];
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
+$erarkodo=isset($_GET["erarkodo"])?$_GET["erarkodo"]:"";
+$noto=isset($_GET["noto"])?$_GET["noto"]:"";
+$temo=isset($_GET["temo"])?$_GET["temo"]:"";
 if ($persono_id) {
 	$persono = apartigiPersonon($persono_id);}
 malfermiDatumbazon();
@@ -78,33 +79,38 @@ function ekzerco($sist, $nbLig) {
 	}
 }
 
-$url=$_SERVER['SCRIPT_URI'];
+$url=isset($_SERVER['REQUEST_URI'])?$_SERVER['REQUEST_URI']:"";
 $pagxo=explode("/", $_SERVER['SCRIPT_NAME']);
 $subjekto=$pagxo[count($pagxo)-1];
 $query="select * from lecionoj where lingvo='$lingvo' and kurso='$kurso' and retpagxo='$subjekto'";
-mysql_select_db("ikurso");
-$result = mysql_query($query) or die ("SELECT : Invalid query :".$query);
-if (mysql_num_rows($result)!="0"){
-	$row=mysql_fetch_array($result);
+$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+if ($result->rowCount()!="0"){
+	$row=$result->fetch();
 	$titolo=$row["titolo"];
 	$nunleciono=$row["numero"];
+} else {
+	$titolo="";
+	$nunleciono="";
 }
 ($subjekto=="lec01.php")?($jamaligxi="ne"):($jamaligxi="jes");
 
 if (substr($subjekto,0,5)=="intro") {
 	$parto="intro";
+	$numcxap="00";
 } else {
 	$numcxap=substr($subjekto,3,2);
 	$lec=substr($subjekto,0,3);
 	$parto=substr($subjekto,4,2);
 	if ($parto==".p") {$parto="";}
 }
-
 if ($parto!="intro") 
 	{
 		// ER 05.10.2015 : correction pour passage en PHP 5.4
 		//session_register("aligxilo");
-		$_SESSION['aligxilo']=$aligxilo;
+		// on met en session l'aligxilo
+		if (isset($aligxilo)) {
+			$_SESSION['aligxilo']=$aligxilo;
+		}
 	}
 
 $pagxtitolo="Cours d’espéranto en dix leçons"; 
@@ -131,7 +137,7 @@ include "../../pagxkapo.inc.php";
 				<li <?php if ($numcxap=="10") {echo " class='aktiva'";} ?>><a href="lec10.php">&nbsp;10&nbsp;</a></li>
 				<li <?php if ($temo=="listo") {echo " class='aktiva'";} ?>><a href="vocabula.php">&nbsp;Lexique&nbsp;</a></li>
 				<li <?php if ($temo=="enhavo") {echo " class='aktiva'";} ?>><a href="enhavo.php">&nbsp;Index&nbsp;</a></li>
-			<?
+			<?php
   
 		   // ligo al la aliaj partoj de la kursoj
 		   // echo "<li class='dekstre'><a href='helpo.php'>Helpo</a></li>\n";

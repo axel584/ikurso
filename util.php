@@ -57,26 +57,24 @@ function el_utf8($var) {
 
 
 function kalkuliStudantojn() {
-	global $lingvo,$persono_id;
-	mysql_select_db("ikurso");
-	$demando1="select nomo,kodo from kursoj where kursoj.lingvo='".$lingvo."'";
-	$result1 = mysql_query($demando1) or die (  "SELECT : malbona demando :".$demando1);
-	while($row1 = mysql_fetch_array($result1)) {
+	global $lingvo,$persono_id,$bdd;
+	$demando1="select nomo,kodo from kursoj where kursoj.lingvo='fr'";
+	$result1 = $bdd->query($demando1) or die(print_r($bdd->errorInfo()));
+	while($row1 = $result1->fetch()) {
 		echo "<tr>\n";
 		echo "\t<td class='col1'>".$row1["nomo"]."</td>\n";
 		$demando2="select count(*) as kiom from nuna_kurso,personoj where nuna_kurso.korektanto='".$persono_id."' and nuna_kurso.kurso='".$row1["kodo"]."' and personoj.id=nuna_kurso.studanto and (nuna_kurso.stato='K' or nuna_kurso.stato='N')";
-		$result2 = mysql_query($demando2) or die (  "SELECT : malbona demando :".$demando2);
-		$row2 = mysql_fetch_array($result2);
+		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
+		$row2 = $result2->fetch();
 		echo "\t<td>".$row2['kiom']."</td>\n";
 		$demando3="select * from korektebla_kurso where korektanto='".$persono_id."' and kurso='".$row1['kodo']."'";
-		$result3 = mysql_query($demando3) or die ("SELECT : malbona demando :".$demando3);
-		if (mysql_num_rows($result3)==0){
+		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
+		$row3 = $result3->fetch();
+		// si on n'a pas de lignes dans korektabla_kurso, on va en creer une
+		if (!$row3){
 			$demando3="INSERT INTO korektebla_kurso (korektanto,kurso,kiom_lernantoj) VALUES ('$persono_id','".$row1["kodo"]."',0)";
-			$result3 = mysql_query($demando3) or die ("INSERT : Invalid query :".$demando3);
-			$demando3="select * from korektebla_kurso where korektanto='".$persono_id."' and kurso='".$row1['kodo']."'";
-			$result3 = mysql_query($demando3) or die (  "SELECT : malbona demando :".$demando3);
+			$bdd->exec($demando3) or die(print_r($bdd->errorInfo()));
 		}
-		$row3 = mysql_fetch_array($result3);
 		echo "\t<td>";
 		if ($row2['kiom'] > $row3["kiom_lernantoj"]) {
 			echo "<span style=\"color:red\">".$row3["kiom_lernantoj"]."</span>";

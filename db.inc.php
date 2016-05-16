@@ -142,12 +142,10 @@ function listoDepartemento($idDepartemento, $rajtoj) {
 function konstruiMenuon($nomo,$tabelo,$valuo,$vidigito,$elektita,$kie,$unuavaluo) {
     global $bdd;
      $demando =  "select $valuo,$vidigito from $tabelo $kie"; 
-     mysql_select_db( "ikurso"); 
-     $result = mysql_query($demando) or die (  "INSERT : malbona demando :".$demando); 
-
+    $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
      echo "<select name=\"$nomo\">";
      echo "<option value=''>".$unuavaluo."</option>";  
-     while($row = mysql_fetch_array($result)) {
+     while($row = $result->fetch()) {
          echo "<option value=\"".$row["$valuo"]."\" ";
          if ($row["$valuo"]==$elektita) { echo "selected";}
          echo " >".$row["$vidigito"]."</option>";  

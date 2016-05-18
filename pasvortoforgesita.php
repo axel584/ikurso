@@ -9,13 +9,16 @@ include "util.php";
 <link type="text/css" rel="stylesheet" href="style/bleu.css">
 </head>
 <body class="popup">
-<? if ($erarkodo=="10") echo '<p class="eraro"><i>'.$lgv_eraro10.'</i></p></center>'; ?>
+<?php 
+$erarkodo=isset($_GET['erarkodo'])?$_GET['erarkodo']:"";
+if ($erarkodo=="10") echo "<p class='eraro'><i>Aucun utilisateur n’est enregistré avec cette adresse</i></p></center>"; 
+?>
 <div>
 	<form name="pasvorto" method="post" action="pasvortoforgesita2.php">
-	<p><? echo $lgv_pasvortoforgesita; ?></p>
+	<p>Entrez votre adresse électronique :</p>
 	<br>
 	<p><input type="text" name="retadreso" size="60"> 
-	<input class="bouton" type="submit" value="<? echo $lgv_ek; ?>"></p>
+	<input class="bouton" type="submit" value="Valider"></p>
 	</form>
 	<br>
 </div>

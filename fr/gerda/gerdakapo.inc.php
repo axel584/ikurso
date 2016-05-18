@@ -11,6 +11,7 @@ if ($subjekto!="korekti.php") {
 	include_once ($vojo."webui.inc.php");
 }
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
+$erarkodo=isset($_GET["erarkodo"])?$_GET["erarkodo"]:"";
 if ($persono_id) {
 	$persono = apartigiPersonon($persono_id);}
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
@@ -227,20 +228,15 @@ if ($parto=="ek") {
 	//echo "recuperation des donnees de session";
 	if ($_SESSION["memorkurso"]) {
 		$memorkurso=$_SESSION["memorkurso"];
-		/*
-		foreach($memorkurso as $key => $value) {
-				echo "key=".$key." val=".$value."<br>";
-		}
-		*/
 	}
 } else {
 	//echo "sauvegarde dans memorkurso<br>";
-	// ER 05.10.2015 : correction pour passage en PHP 5.4
-	//session_register("memorkurso");
-	$_SESSION['memorkurso']=$memorkurso;
-	foreach($_POST as $key => $value) {
-			$memorkurso[$key]=$value;
-			//echo "key=".$key." val=".$value."<br>";
+	if (isset($memorkurso)) {
+		$_SESSION['memorkurso']=$memorkurso;
+		foreach($_POST as $key => $value) {
+				$memorkurso[$key]=$value;
+				//echo "key=".$key." val=".$value."<br>";
+		}
 	}
 }
 

@@ -52,7 +52,7 @@ ob_start("konvX");
 	urchinTracker();
 </script>
 <?php if ($persono_id!="") { ?>
-	<div id="menuo">
+	<div id="menuo">XX
 		<table>
 			<tr><td class="unua">
 					<h1><?php echo $enirnomo;?></h1>

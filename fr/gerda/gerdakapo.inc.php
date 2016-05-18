@@ -10,7 +10,7 @@ if ($subjekto!="korekti.php") {
 	include_once ($vojo."db.inc.php");
 	include_once ($vojo."webui.inc.php");
 }
-$persono_id=$_SESSION["persono_id"];
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 if ($persono_id) {
 	$persono = apartigiPersonon($persono_id);}
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
@@ -18,8 +18,8 @@ header("Last-Modified: ".gmdate("D,d M Y H:i:s")." GMT");
 header("Cache-Control: no-store,no-cache, must-revalidate"); // HTTP/1.1
 header("Pragma: no-cache"); // HTTP/1.0
 malfermiDatumbazon();
-$metodo=$_GET["metodo"];
-$temo=$_GET["temo"];
+$metodo=isset($_GET["metodo"])?$_GET["metodo"]:"U";
+$temo=isset($_GET["temo"])?$_GET["temo"]:"";
 if ($temo=="") {$temo="intro";}
 
 // tiu funkcio konstruas la liston de la tekstoj "lasu min..."
@@ -167,7 +167,7 @@ function plenigEkzerco($sist) {
 	}
 }
 
-$url=$_SERVER["SCRIPT_URI"];
+$url=$_SERVER["REQUEST_URI"];
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
 
@@ -193,20 +193,21 @@ if ($subjekto=="korekti.php") {
 }
 $varcxap=$cxapitro.".php";
 $query="select * from lecionoj where lingvo='$lingvo' and kurso='$kurso' and retpagxo='$varcxap'";
-mysql_select_db("ikurso");
-$result = mysql_query($query) or die ("SELECT : Invalid query :".$query);
-if (mysql_num_rows($result)!="0"){
-	$row=mysql_fetch_array($result);
+$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+if ($row=$result->fetch()){
 	$titolo=$row["titolo"];
 	$nunleciono=$row["numero"];
+} else {
+	$titolo="";
+	$nunleciono=""
 }
 if ($parto=="index") 
 	{$titolo="un roman pour apprendre";}
 else 
 	{
-		// ER 05.10.2015 : correction pour passage en PHP 5.4
-		//session_register("aligxilo");
-		$_SESSION['aligxilo']=$aligxilo;
+		if (isset($aligxilo)) {
+			$_SESSION['aligxilo']=$aligxilo;
+		}
 	}
 
 ($subjekto=="cxap01ek.php")?($jamaligxi="ne"):($jamaligxi="jes");
@@ -344,16 +345,6 @@ function savData(lien) {
 				   echo "Lasu min...</a></li>\n";
 				}	
 
-			   // ligo al la aliaj partoj de la kursoj
-			   /*
-				if ($parto=="ek") {
-					echo "<li><a href='helpo.php' onClick=\"savData(this.href);\">";
-				} else {
-			   echo "<li class='dekstre'><a href='helpo.php'>";
-				}
-				echo "Helpo</a></li>\n";
-				*/
-				
 				// ligo al la antauxaj kaj postaj cxapitroj
 				if ($numcxap < 25){
 					$posta = $numcxap + 1;

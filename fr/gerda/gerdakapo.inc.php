@@ -177,10 +177,16 @@ if ($subjekto=="korekti.php") {
 } else {
 	if (substr($subjekto,0,5)=="index") {
 		$parto="index";
+		$numcxap="00";
+		$cxapitro="";
 	} else if (substr($subjekto,0,8)=="konsiloj") {
 		$parto="konsiloj";
+		$numcxap="00";
+		$cxapitro="";
 	} else if (substr($subjekto,0,6)=="vlist"){
 		$parto="vlist";
+		$numcxap="00";
+		$cxapitro="";
 	} else {
 		$numcxap=substr($subjekto,4,2);
 		$cxapitro=substr($subjekto,0,6);

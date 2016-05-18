@@ -9,9 +9,9 @@ include "../pagxkapo.inc.php";
 ?>
 		<div id="enhavo">
 			<ul id="tabnav">
-				<li <?if ($temo=="eo") {echo " class='aktiva'";}?>><a href="intro.php?temo=eo">L'espéranto</a></li>
-				<li <?if ($temo=="kursoj") {echo " class='aktiva'";}?>><a href="intro.php?temo=kursoj">Les cours</a></li>
-				<li <?if ($temo=="enskribo") {echo " class='aktiva'";}?>><a href="intro.php?temo=enskribo">Comment s’inscrire</a></li>
+				<li <?php if ($temo=="eo") {echo " class='aktiva'";}?>><a href="intro.php?temo=eo">L'espéranto</a></li>
+				<li <?php if ($temo=="kursoj") {echo " class='aktiva'";}?>><a href="intro.php?temo=kursoj">Les cours</a></li>
+				<li <?php if ($temo=="enskribo") {echo " class='aktiva'";}?>><a href="intro.php?temo=enskribo">Comment s’inscrire</a></li>
 			</ul>
 			<div id="kadro">
 			<div class="rakonto">

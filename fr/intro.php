@@ -1,8 +1,8 @@
-<?
+<?php
 $vojo="../";
 include "../util.php";
 $subjekto="intro.php";
-$temo=$_GET["temo"];
+$temo=isset($_GET["temo"])?$_GET["temo"]:"";
 if ($temo==""){$temo="eo";}
 $pagxtitolo="Introduction";
 include "../pagxkapo.inc.php";
@@ -15,7 +15,7 @@ include "../pagxkapo.inc.php";
 			</ul>
 			<div id="kadro">
 			<div class="rakonto">
-			<? if ($temo=="eo") { ?>
+			<?php if ($temo=="eo") { ?>
 				<h3>L’espéranto, qu’est-ce que c’est ?</h3>
 				<p>
 				L’espéranto, la Langue Internationale, est une langue destinée à
@@ -60,7 +60,7 @@ include "../pagxkapo.inc.php";
 				partout dans le monde, puisque presque tout le monde l’a appris pour
 				cette même raison.
 				</p>
-			<? } else if ($temo=="kursoj") { ?>
+			<?php } else if ($temo=="kursoj") { ?>
 				<h3>Les cours</h3>
 				<p>
 				Sur ce site, vous avez accès à trois cours différents, dont deux pour débutants.
@@ -123,7 +123,7 @@ include "../pagxkapo.inc.php";
 				vos exercices et répondra succinctement à vos questions que le cours pourrait susciter. 
 				<p>En complément du cours, nous vous proposons de lire les récits du recueil 
 				<em><a href="gerda/lasu00.php">Lasu min paroli plu!</a></em> du même auteur.</p>
-			<? } elseif ($temo=="enskribo") { ?>
+			<?php } elseif ($temo=="enskribo") { ?>
 				<h3>Comment s’inscrire</h3>
 				<p>
 				Les cours d’espéranto que nous proposons sur ce site peuvent être suivis avec l’aide d’un tuteur
@@ -145,7 +145,7 @@ include "../pagxkapo.inc.php";
 				<a href="../aligxi.php">ce formulaire</a>. 
 				</p>
 			
-			<? } elseif ($temo=="poste") { ?>
+			<?php } elseif ($temo=="poste") { ?>
 		
 				<h3>Gardez le contact</h3>
 				<p>
@@ -154,7 +154,7 @@ include "../pagxkapo.inc.php";
 				</p>
 				<p>à compléter...</p>
 		</div>
-		<? } ?>
+		<?php } ?>
 		</div>
 	</div>
-<? include "../pagxpiedo.inc.php"; ?>
+<?php include "../pagxpiedo.inc.php"; ?>

@@ -1,8 +1,7 @@
 <?php
 include "util.php";
 $subjekto="ressources.php";
-$temo=$_GET["temo"];
-if ($temo==""){$temo="intro";}
+$temo=isset($_GET["temo"])?$_GET["temo"]:"intro";
 $pagxtitolo="En savoir plus...";
 include "pagxkapo.inc.php";
 $gxisdatigDato="2006-11-02";

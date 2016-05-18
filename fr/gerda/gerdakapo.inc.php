@@ -199,7 +199,7 @@ if ($row=$result->fetch()){
 	$nunleciono=$row["numero"];
 } else {
 	$titolo="";
-	$nunleciono=""
+	$nunleciono="";
 }
 if ($parto=="index") 
 	{$titolo="un roman pour apprendre";}

@@ -5,7 +5,7 @@ function debug($s) {
 include "util.php";
 $kurso=$_REQUEST["kurso"];
 $lingvo="FR";
-$pagxtitolo=$lgv_personinformoj;
+$pagxtitolo="Donn&eacute;es personnelles";
 $persono_id=$_SESSION["persono_id"];
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
@@ -65,13 +65,7 @@ if (mysql_num_rows($result)>0) {
 		$mesagxkapo.="Bcc: <kopiokurso@esperanto-jeunes.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		$mesagxkapo.=" \n";
-		mail($studantinformoj["retadreso"],$lgv_viaKorektanto,$contents,$mesagxkapo);
-		/*	$protokolo = new protokolo;
-			$protokolo->set_persono_id($celpersono_id);
-			$protokolo->set_kategorio("ERARO");
-			$protokolo->set_teksto("mesagxo ne sendita por : ".$studantinformoj["enirnomo"]." cxe : ".$studantinformoj["retadreso"]);
-			$protokolo->store();
-		*/	 
+		mail($studantinformoj["retadreso"],"Votre correcteur I-kurso",$contents,$mesagxkapo);
 
 		// sendi mesagxon al la korektanto
 		$filename = "mails/redoniKor".$kurso.$lingvo.".html";
@@ -92,14 +86,8 @@ if (mysql_num_rows($result)>0) {
 		$mesagxkapo.="Bcc: <kopiokurso@esperanto-jeunes.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		$mesagxkapo.=" \n";
-		mail($korektantinformoj["retadreso"],$lgv_viaStudanto,$contents,$mesagxkapo);
-		/*
-			$protokolo = new protokolo;
-			$protokolo->set_persono_id($celpersono_id);
-			$protokolo->set_kategorio("ERARO");
-			$protokolo->set_teksto("mesagxo ne sendita por : ".$studantinformoj["enirnomo"]." cxe : ".$studantinformoj["retadreso"]);
-			$protokolo->store();
-		*/
+		mail($korektantinformoj["retadreso"],"Nouvel élève sur I-kurso",$contents,$mesagxkapo);
+
 	}
 } else {
 	debug ("aucun cours suivi<br>");
@@ -138,12 +126,8 @@ if (mysql_num_rows($result)>0) {
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		$mesagxkapo.=" \n";
 
-		//echo "mail eleve=".$studantinformoj["retadreso"]."<br>";
-		//echo "titre message=".$lgv_viaKorektanto."<br>";
-		//echo "contenu=".$contents."<br>";
-		//echo "entete=".$mesagxkapo."<br>";
 		debug ("envoyer le mail à l'éléve (désactivé pour le test)");
-		mail($studAdreso,$lgv_viaKorektanto,$contents,$mesagxkapo);
+		mail($studAdreso,"Votre correcteur I-kurso",$contents,$mesagxkapo);
 		
 		// sendi mesagxon al la korektanto
 		$filename = "mails/doniKor".$kurso.$lingvo.".html";
@@ -165,21 +149,8 @@ if (mysql_num_rows($result)>0) {
 		$mesagxkapo.="Bcc: <kopiokurso@esperanto-jeunes.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		$mesagxkapo.=" \n";
+		mail($korAdreso,"Nouvel élève sur I-kurso",$contents,$mesagxkapo);
 
-		//echo "mail correcteur=".$korektantinformoj["retadreso"]."<br>";
-		//echo "titre message=".$lgv_viaStudanto."<br>";
-		//echo "contenu=".$contents."<br>";
-		//echo "entete=".$mesagxkapo."<br>";
-		
-		//debug ("envoyer mail au correcteur (désactivé pour le test)");
-		mail($korAdreso,$lgv_viaStudanto,$contents,$mesagxkapo);
-		/*
-			$protokolo = new protokolo;
-			$protokolo->set_persono_id($celpersono_id);
-			$protokolo->set_kategorio("ERARO");
-			$protokolo->set_teksto("mesagxo ne sendita por : ".$studantinformoj["enirnomo"]." cxe : ".$studantinformoj["retadreso"]);
-			$protokolo->store();
-		*/
 	}
 }
 // se la lernanto jam faris taskojn de Gerda aux DLEK

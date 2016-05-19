@@ -42,33 +42,33 @@ echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
 					<p><a href="#"><a href="<?php echo $vojo."eliri.php"?>">Fermer la session</a></p>
 				</td>
 				<td>
-					<h2><?=$lgv_persona?></h2>
+					<h2>Personnel</h2>
 					<p><a href="<?php echo $vojo."forum/index.php?sid=";?>">
 					<?php //$lgv_forumo." ".phpbb_nombre_nouveau_message($persono_id);?>
 					</a></p>
 					<p><a href="javascript:void(0);" onClick="window.open('<?=$vojo?>forum/chatbox_mod/chatbox.php','12_ChatBox','scrollbars=no,width=700,height=550')">Discussion en ligne</a></p>
-					<p><a href="<?php echo $vojo."personinformoj.php";?>"><?=$lgv_sxangipersoninformojn?></a></p>
+					<p><a href="<?php echo $vojo."personinformoj.php";?>">Donn&eacute;es personnelles</a></p>
 				</td>
 			<?php if ($rajto=="K" || $rajto=="A"){ ?>
 				<td>
-					<h2><?=$lgv_korektanta?></h2>
-					<p><a href="<?php echo $vojo."statLauxKategorio.php";?>"><?=$lgv_statistiko?></a></p>
-					<p><a href="<?php echo $vojo."helppagxo.php";?>"><?=$lgv_helppagxo?></a></p>
-					<p><a href="<?php echo $vojo."miajlernantoj.php";?>"><?=$lgv_zorgistudantojn?></a></p>
+					<h2>Correcteur</h2>
+					<p><a href="<?php echo $vojo."statLauxKategorio.php";?>">Statistiques</a></p>
+					<p><a href="<?php echo $vojo."helppagxo.php";?>">Guide du correcteur</a></p>
+					<p><a href="<?php echo $vojo."miajlernantoj.php";?>">Mes &eacute;l&egrave;ves</a></p>
 				</td>
 			<?php } ?>
 			<?php if ($rajto=="I"){ ?>
 				<td class="elemento">
-					<h2><?=$lgv_administranta?></h2>
-					<p><a href="#"><?=$lgv_statistiko?></a></p>
-					<p><a href="<?php echo $vojo."stirpanelo.php";?>"><?=$lgv_stirpanelo?></a></p>
+					<h2>Administrateur</h2>
+					<p><a href="#">Statistiques</a></p>
+					<p><a href="<?php echo $vojo."stirpanelo.php";?>">Panneau de contr&ocirc;le</a></p>
 				</td>
 			<?php } ?>
 			<?php if ($rajto=="A"){ ?>
 				<td class="elemento">
 					<h2><?=$lgv_administranta?></h2>
-					<p><a href="<?php echo $vojo."stirpanelo.php";?>"><?=$lgv_stirpanelo?></a></p>
-					<p><a href="<?php echo $vojo."administri.php";?>"><?=$lgv_zorgiuzantojn?></a></p>
+					<p><a href="<?php echo $vojo."stirpanelo.php";?>">Panneau de contr&ocirc;le</a></p>
+					<p><a href="<?php echo $vojo."administri.php";?>">G&eacute;rer les utilisateurs</a></p>
 				</td>
 			<?php } ?>
 			</tr>

@@ -20,7 +20,7 @@ header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 header("Pragma: no-cache"); // HTTP/1.0
 include "pagxkapo.inc.php";
 ?>
-<? if ($erarkodo=="9") echo "<h2><i>$lgv_eraro9</i></h2>"; ?>
+<? if ($erarkodo=="9") echo "<h2><i>Cet élève a déjà un correcteur.</i></h2>"; ?>
 
 		<div id="enhavo">
 			<ul id="tabnav">

@@ -89,7 +89,7 @@ if ($pasvorto!=$pasvorto2) {
 			// creer l'eleve :
 			$nova_persono_id = kreiPersonon($enirnomo,$pasvorto,$retadreso,$lingvo);
 			// envoyer le mail eleve pour l'inviter a attendre un correcteur.
-			if (!mail($retadreso,$lgv_bonvenon,$contents,$mesagxkapo)) {
+			if (!mail($retadreso,"Bienvenue sur I-kurso",$contents,$mesagxkapo)) {
 				$protokolo = new protokolo;
 				$protokolo->set_persono_id($nova_persono_id);
 				$protokolo->set_kategorio("ERARO");
@@ -136,7 +136,7 @@ if ($pasvorto!=$pasvorto2) {
 			if ($verdakrabo=="on"){
 				$subjekto="Un de plus chez le Crabe Vert";
 			}
-			else {$subjekto=$lgv_viaStudanto;}
+			else {$subjekto="Nouvel élève sur I-kurso";}
 			//$teksto=iconv('iso-8859-1', 'utf-8', $contents);
 			$teksto=$contents;
 			mail($informistoj,$subjekto,$teksto,$mesagxkapo);

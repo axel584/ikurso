@@ -5,10 +5,10 @@ if ($celpersono_id!="") {$celpersono = apartigiPersonon($celpersono_id);}
 include "pagxkapo.inc.php";
 ?>
 		<div id="enhavo">
-			<? if ($erarkodo=="2") echo "<p class='eraro'><i>$lgv_eraro2</i></p>"; ?>
-			<? if ($erarkodo=="3") echo "<p class='eraro'><i>$lgv_eraro3</i></p>"; ?>
-			<? if ($erarkodo=="6") echo "<p class='eraro'><i>$lgv_eraro6</i></p>"; ?>
-			<? if ($erarkodo=="7") echo "<p class='eraro'><i>$lgv_eraro7</i></p>"; ?>
+			<? if ($erarkodo=="2") echo "<p class='eraro'><i>Vous n’avez pas rempli toutes les données obligatoires du formulaire d’inscription</i></p>"; ?>
+			<? if ($erarkodo=="3") echo "<p class='eraro'><i>Vous avez tapé deux mots de passe différents</i></p>"; ?>
+			<? if ($erarkodo=="6") echo "<p class='eraro'><i>Adresse électronique invalide</i></p>"; ?>
+			<? if ($erarkodo=="7") echo "<p class='eraro'><i>Cet identifiant existe déjà. Veuillez en choisir un autre, merci</i></p>"; ?>
 			<ul id="tabnav">
 				<li class="aktiva"><a href="intro.php">Inscription</a></li>
 				<li><a href="fr/cge/vortlisto.php">Lexique</a></li>

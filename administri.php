@@ -1,7 +1,4 @@
 <?php
-function debug($s) {
-	//{echo $s;}
-}
 include "util.php";
 $pagxtitolo="G&eacute;rer les utilisateurs";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
@@ -645,7 +642,6 @@ include "adminkapo.inc.php";
 					<?php
 					// liste des cours déjà suivis
 					// ne liste rien pour l'écran vide ou pour les correcteurs/administrateurs
-					debug ("recherche des cours déjà suivis : rajtoj=".$celpersono['rajtoj']."<br>");
 					if (($celpersono_id!="") && (($celpersono["rajtoj"]=='S')||($celpersono["rajtoj"]=='P'))) {
 							$nuna_kursoj = listi_kursojn_de_iu_studanto($celpersono_id);
 					?>
@@ -665,9 +661,6 @@ include "adminkapo.inc.php";
 										// en théorie, il n'y en a qu'un seul dont le correcteur est modifiable 
 										// (celui qui est N ou K ou H)
 										// on affiche les infos pour chaque cours.
-										debug ("nb total de cours=".count($nuna_kursoj)."<br>");
-										debug ("cours demandé : ".$celpersono['kurso']."<br>");
-										debug ("liste des cours déjà suivis<br>");
 										while ($nuna_kurso = $nuna_kursoj->fetch()) {
 											if ($celpersono["kurso"]==$nuna_kurso['kurso']) {
 												// modif Emmanuelle - 26.12.2006
@@ -678,16 +671,13 @@ include "adminkapo.inc.php";
 													$havasKurson=1;
 												}
 											}
-											debug ("<br>havasKurson=".$havasKurson."<br>");
 											?>
 										<tr>
 										<?php // le cours demandé est un cours actuellement suivi
-										debug ("verifier si le cours demande est actuellement suivi<br>");
-										debug ("cours demande=".$celpersono["kurso"]." et cours suivi=".$nuna_kurso['kurso']."<br>");
 										if (($celpersono["kurso"]==$nuna_kurso['kurso'])
 											&& (($nuna_kurso['stato']=='N') ||($nuna_kurso['stato']=='K'))) {
 													$havasSekvitanKurson++;
-													debug ("le cours demande est actuellement suivi<br>");
+												
 										
 										// emmanuelle (11.08.2007) : permettre de changer le correcteur d'un élève qui a été remis en attente 
 										if ($celpersono["rajtoj"]=='P') { ?>
@@ -736,10 +726,8 @@ include "adminkapo.inc.php";
 								// on ne propose d'affecter un correcteur que sous 2 conditions :
 								// - il n'a pas déjà suivi le cours en question
 								// - il n'a pas déjà un cours qu'il suit actuellement
-								debug("faut-il proposer un nouveau correcteur ?<br>");
 								if (($havasKurson==0) && ($havasSekvitanKurson==0)) {
 									// aucun cours suivi : c'est un élève a qui on doit affecter un correcteur ?>
-									<?php debug("pas de cours en cours : proposer un correcteur<br>"); ?>
 								<tr>
 									<td>
 										<a href="javascript:document.administri2.action='administriNunanKurson.php';document.administri2.submit();">

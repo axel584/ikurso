@@ -1,5 +1,4 @@
 <?php
-php_track_vars;
 include "lingvo.inc.php";
 include "db.inc.php";
 include "webui.inc.php";
@@ -41,186 +40,114 @@ header("Pragma: no-cache"); // HTTP/1.0
 if ($celpersono["sekso"]!=$sekso) { 
    // update en la normala datumbazo
    $query = "update personoj set sekso='$sekso' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-   // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["sekso"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $sekso");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["enirnomo"]!=$celenirnomo) { 
 	// update en la normala datumbazo
    $query = "update personoj set enirnomo='$celenirnomo'  where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["enirnomo"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $celenirnomo");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["familinomo"]!=$familinomo) { 
 	// update en la normala datumbazo
    $query = "update personoj set familinomo='$familinomo' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["familinomo"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $familinomo");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["personnomo"]!=$personnomo) { 
 	// update en la normala datumbazo
    $query = "update personoj set personnomo='$personnomo' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["personnomo"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $personnomo");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["adreso1"]!=$adreso1) { 
 	// update en la normala datumbazo
    $query = "update personoj set adreso1='$adreso1' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["adreso1"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $adreso1");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 if ($celpersono["adreso2"]!=$adreso2) { 
 	// update en la normala datumbazo
    $query = "update personoj set adreso2='$adreso2' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["adreso2"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $adreso2");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["pasvorto"]!=$pasvorto) { 
 	// update en la normala datumbazo
    $query = "update personoj set pasvorto='$pasvorto' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["pasvorto"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $pasvorto");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["posxtkodo"]!=$posxtkodo) { 
 	// update en la normala datumbazo
    $query = "update personoj set posxtkodo='$posxtkodo' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["posxtkodo"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $posxtkodo");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["urbo"]!=$urbo) { 
 	// update en la normala datumbazo
 
    $query = "update personoj set urbo='$urbo' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["urbo"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $urbo");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["lando"]!=$lando) { 
 	// update en la normala datumbazo
    $query = "update personoj set lando='$lando' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["lando"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $lando");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["retadreso"]!=$retadreso) { 
 	// update en la normala datumbazo
    $query = "update personoj set retadreso='$retadreso' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["retadreso"]);
-	//protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $retadreso");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 if ($celpersono["sistemo"]!=$sistemo) {
 	// update en la normala datumbazo
    $query = "update personoj set sistemo='$sistemo' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["sistemo"]);
-  	//protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $sistemo");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["stop_info"]!=$stopInfo) {
 	// update en la normala datumbazo
    $query = "update personoj set stop_info='$stopInfo' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["stop_info"]);
-  	//protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $stopInfo");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["naskigxdato"]!=$naskigxdato_jaro."-".$naskigxdato_monato."-".$naskigxdato_tago) { 
 	// update en la normala datumbazo
    $query = "update personoj set naskigxdato='$naskigxdato_jaro-$naskigxdato_monato-$naskigxdato_tago' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["naskigxdato"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $naskigxdato_jaro-$naskigxdato_monato-$naskigxdato_tago");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["rajtoj"]!=$rajtoj) { 
    // update en la normala datumbazo
    $query = "update personoj set rajtoj='$rajtoj' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["rajtoj"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $rajtoj");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
    if ($rajtoj=='K'){
    	// aldoni la uzanton al la forum-grupo "korektantoj"
 		$demando2 ="INSERT INTO phpbb_user_group (group_id,user_id,user_pending) VALUES ('4','$cel_id','0')";
-	   mysql_select_db("ikurso");
-		$result2 = mysql_query($demando2) or die ("INSERT : Invalid query :".$demando2);
+	   	$result = $bdd->exec($demando2) or die(print_r($bdd->errorInfo()));
 	}
    // se ni korektantigas iun kaj li ne sxangxis kiom da lernantoj li volas : auxtomatike, li havos 3 lernantojn.
    if (($rajtoj=='K') && ($celpersono["maksimumo"]==$maksimumo)) { 
 	   // update en la normala datumbazo
 	   $query = "update personoj set maksimumo='3' where id=$cel_id";
-	   mysql_select_db("ikurso");
-	   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-	      // insert en la protokolo por memori cxion
-	  //protokolo($cel_id,"UPDATE ADM","baznombro de lernantoj : 3");
+	  $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
    }  
 }
 
 if ($celpersono["kialo"]!=$kialo) { 
 	// update en la normala datumbazo
    $query = "update personoj set kialo='$kialo' where id=$cel_id";
-   mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["kialo"]);
-   // neniu protokolo por tio, cxar gxi estas ofte tre granda
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $kialo");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 if ($celpersono["kurso"]!=$kurso) { 
 	// update en la normala datumbazo
    $query = "update personoj set kurso='$kurso' where id=$cel_id";
    mysql_select_db("ikurso");
-   $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-      // insert en la protokolo por memori cxion
-   $malnova=addslashes($celpersono["kurso"]);
-   //protokolo($cel_id,"UPDATE ADM","malnova: $malnova -nova: $kurso");
+   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
 }
 
 header("Location:administri.php?celpersono_id=$cel_id&validi=jes");

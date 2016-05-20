@@ -1,5 +1,4 @@
 <?php
-echo "coucou";
 session_start();
 include "lingvo.inc.php";
 include "db.inc.php";

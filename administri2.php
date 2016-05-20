@@ -3,10 +3,10 @@ include "lingvo.inc.php";
 include "db.inc.php";
 include "webui.inc.php";
 malfermiDatumbazon();
-$persono_id=$_SESSION["persono_id"];
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
-$celpersono_id=$_POST["celpersono_id"];
+$celpersono_id=isset($_POST["celpersono_id"])?$_POST["celpersono_id"]:"";
 
 if ($celpersono_id!="") { $celpersono = apartigiPersonon($celpersono_id);}
 if ($persono["rajtoj"]!='A'){header("Location:index.php?erarkodo=4");}

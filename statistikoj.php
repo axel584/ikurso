@@ -1,4 +1,4 @@
-<?
+<?php
 include "lingvo.inc.php";
 include "db.inc.php";
 include "webui.inc.php";
@@ -389,8 +389,8 @@ function stat_lecionoj() {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" dir="<? echo $lgv_direkto; ?>" <? if ($validi=="jes") { echo "onLoad=\"window.alert('".$lgv_datumsavo."');\""; } ?>>
-<?
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" dir="<?php echo $lgv_direkto; ?>" <?php if ($validi=="jes") { echo "onLoad=\"window.alert('".$lgv_datumsavo."');\""; } ?>>
+<?php
 pagxkapo();
 menuo($persono->get_enirnomo(),$persono->rajtoj->get_kodo());
 ?>
@@ -411,11 +411,11 @@ menuo($persono->get_enirnomo(),$persono->rajtoj->get_kodo());
         <td nowrap>
           <p class="normala"><?=$lgv_lauxKategorio; ?></p>
           <p class="artifiko"><?=$lgv_lauxKategorioNoto; ?></p>
-          <? stat_rajtoj(); ?>
+          <?php stat_rajtoj(); ?>
         </td>
         <td nowrap>
           <p class="normala"><?= $lgv_lauxSekso; ?></p>
-          <? stat_seksoj(); ?>
+          <?php stat_seksoj(); ?>
         </td>
       </tr>
       <tr>
@@ -425,13 +425,13 @@ menuo($persono->get_enirnomo(),$persono->rajtoj->get_kodo());
           <a href="#" onClick="window.open('stat-monatoj.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
 		  <img border="0" height="14" width="14" src="bildoj/grafiko.png">
 		  </a></p>
-          <?  stat_monatoj(); ?>
+          <?php  stat_monatoj(); ?>
           <!-- <img src="stat-monatoj.php" border="0"> -->
         </td>
         <td nowrap>
           <hr>
           <p class="normala"><?= $lgv_lauxLandoj; ?></p>
-          <? stat_landoj(); ?>
+          <?php stat_landoj(); ?>
         </td>
       </tr>
       <tr>
@@ -439,7 +439,7 @@ menuo($persono->get_enirnomo(),$persono->rajtoj->get_kodo());
         <hr>
           <p class="normala"><?= $lgv_lauxLeciono;?></p>
           <p class="artifiko"><?= $lgv_lauxLecionoNoto;?></p>
-          <? stat_lecionoj(); ?>
+          <?php stat_lecionoj(); ?>
         </td>
       </tr>      
     </table>

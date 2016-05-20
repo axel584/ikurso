@@ -1,4 +1,4 @@
-<?
+<?php
 // Cette page devrait être virer du site ? (AR 8/10/10)
 include "lingvo.inc.php";
 include "db.inc.php";
@@ -117,12 +117,12 @@ function listiStudantojn() {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" dir="<? echo $lgv_direkto; ?>">
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" dir="<?php echo $lgv_direkto; ?>">
 <center>
   <table border="0" cellspacing="0" cellpadding="0">
   <tr>
   <td nowrap>
-  <div align="center" class="titolo"><? echo $lgv_lernantalisto; ?></div>
+  <div align="center" class="titolo"><?php echo $lgv_lernantalisto; ?></div>
   </td>
   </tr>
   <tr>
@@ -130,7 +130,7 @@ function listiStudantojn() {
   </tr>
   <tr>
     <td nowrap>
-    <? listiStudantojn(); ?>
+    <?php listiStudantojn(); ?>
 </center>
 
 </body>

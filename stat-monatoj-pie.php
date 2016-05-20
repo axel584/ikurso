@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 include "lib/jpgraph.php";
 include "lib/jpgraph_pie.php";

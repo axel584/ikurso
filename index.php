@@ -18,18 +18,18 @@ include "pagxkapo.inc.php";
 <div id="enhavo">
 		<?php if ($erarkodo=="1") { // mot de passe incorrect : on propose d'envoyer son mot de passe par mail
 			echo '<form target="_NEW" name="pasvorto" method="post" action="pasvortoforgesita2.php">';
-			echo '<p class="eraro"><i>'.$lgv_eraro1.'</i></p>';
-			echo '<p class="eraro"><i>Pour recevoir votre mot de passe, <br/>indiquez votre adresse &eacute;lectronique :</i><br/><input type="text" name="retadreso" size="60"></p><input class="bouton" type="submit" value="'.$lgv_ek.'">';
+			echo '<p class="eraro"><i>Le mot de passe ou l’identifiant est erroné</i></p>';
+			echo '<p class="eraro"><i>Pour recevoir votre mot de passe, <br/>indiquez votre adresse &eacute;lectronique :</i><br/><input type="text" name="retadreso" size="60"></p><input class="bouton" type="submit" value="Valider">';
 			echo '</form>';
 		}
 		?>
-		<?php if ($erarkodo=="4") echo "<p class='eraro'><i>$lgv_eraro4</i></p>"; ?>
+		<?php if ($erarkodo=="4") echo "<p class='eraro'><i>Vous n’avez pas les droits pour accéder à cette page.</i></p>"; ?>
 		<?php if ($erarkodo=="8") {
-			if ($_COOKIE["PHPSESSID"]=="") {echo "<p class='eraro'><i>$lgv_eraro14</i></p>";}
-			else {echo "<p class='eraro'><i>$lgv_eraro8</i></p>";}
+			if ($_COOKIE["PHPSESSID"]=="") {echo "<p class='eraro'><i>Vous devez activer les cookies pour utiliser ce site</i></p>";}
+			else {echo "<p class='eraro'><i>Votre session a expiré, veuillez vous identifier.</i></p>";}
 		}
 		?>
-		<?php if ($erarkodo=="12") echo "<p class='eraro'><i>$lgv_eraro12</i></p>"; ?>
+		<?php if ($erarkodo=="12") echo "<p class='eraro'><i>Vous êtes déjà inscrit - essayez de vous connecter, merci</i></p>"; ?>
 
 		<p>L’association <a href="http://esperanto-jeunes.org">Espéranto-Jeunes</a> propose trois cours par Internet,  
 		pour lesquels elle a mis en place un service de correction gratuit :</p>

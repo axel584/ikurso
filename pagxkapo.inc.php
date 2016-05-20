@@ -25,7 +25,6 @@ if (!isset($_COOKIE["metodo"])) {
 $style=isset($_GET["style"])?$_GET["style"]:"";
 if ($style==""){
 	$style=isset($_COOKIE["style"])?$_COOKIE["style"]:"";	
-	$style=$_COOKIE["style"];
 	if ($style==""){
 		$style="bleu";
 	}

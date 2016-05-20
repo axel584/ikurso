@@ -1,4 +1,4 @@
-<?
+<?php
 php_track_vars;
 include "lingvo.inc.php";
 include "db.inc.php";
@@ -37,26 +37,6 @@ header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Last-Modified: ".gmdate("D,d M Y H:i:s")." GMT");
 header("Cache-Control: no-store,no-cache, must-revalidate"); // HTTP/1.1
 header("Pragma: no-cache"); // HTTP/1.0
-
-if ($celpersono["id"]=="") { 
-   if (($retadreso=="") || ($celenirnomo=="") || ($pasvorto=="")) {
-      header("Location:administri.php?erarkodo=2");
-   } else {
-      $query .="select * from personoj where enirnomo='$celenirnomo'";
-       mysql_select_db("ikurso");
-        $result = mysql_query($query) or die ("INSERT : Invalid query :".$query);
-        if (mysql_num_rows($result) =="1") {
-        	// tiu enirnomo jam ekzistas
-          header("Location:administri.php?erarkodo=7");
-        } else {
-        	// nur kreas novan personon kun tauxgaj informoj kaj prenas tiujn informojn
-            $cel_id = kreiPersonon($enirnomo,$pasvorto,$retadreso,$lingvo);
-            $celpersono = apartigiPersonon($cel_id);
-       }
-   }
-} else {
-   $cel_id=$celpersono["id"];
-}
 
 if ($celpersono["sekso"]!=$sekso) { 
    // update en la normala datumbazo

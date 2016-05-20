@@ -33,15 +33,19 @@ def convert2utf8(texte) :
 		return texte
 	if type(texte)==long:
 		return texte	
+	texte = texte.replace(u'\u0080\u0098',u'\'')	
 	texte = texte.replace(u'\u00C2\u00B4',u'\'')	
 	texte = texte.replace(u'\u00C3\u0089',u'É')	
 	texte = texte.replace(u'\u00C3\u00A0',u'à')
+	texte = texte.replace(u'\u00C3\u0020',u'à')
 	texte = texte.replace(u'\u00C3\u0080',u'À')
+	texte = texte.replace(u'\u00C3\u00A1',u'á')
 	texte = texte.replace(u'\u00C3\u00A2',u'â')
 	texte = texte.replace(u'\u00C3\u00A7',u'ç')	
 	texte = texte.replace(u'\u00C3\u0087',u'Ç')
 	texte = texte.replace(u'\u00C3\u00A8',u'è')
 	texte = texte.replace(u'\u00C3\u00A9',u'é')
+	texte = texte.replace(u'\u00EF\u00BF\u00BD',u'é')
 	texte = texte.replace(u'\u00C3\u00AA',u'ê')
 	texte = texte.replace(u'\u00C3\u00AB',u'ë')
 	texte = texte.replace(u'\u00C3\u00AE',u'î')

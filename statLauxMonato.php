@@ -1,4 +1,4 @@
-<?
+<?php
 $temo="monato";
 include "stat.inc.php";
 function stat_monatoj() {
@@ -18,13 +18,13 @@ function stat_monatoj() {
 	<a href="#" onClick="window.open('stat-monatoj.php?filtre=K','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
 	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
 	</a></td>
-	<?
+	<?php
 	echo "<td class='col1'>".$lgv_haltis;
 		?>
 	<a href="#" onClick="window.open('stat-monatoj.php?filtre=H','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
 	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
 	</a></td>
-	<?
+	<?php
 	echo "<td class='col1'>".$lgv_finis;
 		?>
 	<a href="#" onClick="window.open('stat-monatoj.php?filtre=F','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
@@ -32,7 +32,7 @@ function stat_monatoj() {
 	</a></td></tr>
 	</thead>
 	
-	<?
+	<?php
 	mysql_select_db( "ikurso");
 
 	// laux monatoj
@@ -117,11 +117,11 @@ function stat_monatoj() {
 
 }
 ?>
-			<h2><? echo $lgv_laux.$lgv_lauxMonato." :";?> 
+			<h2><?php echo $lgv_laux.$lgv_lauxMonato." :";?> 
 			<a href="#" onClick="window.open('stat-monatoj.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
 			<img src="bildoj/grafiko.png"></a></h2>
 			<p><?=$lgv_klarigo_lauxMonato?></p>
-			<? stat_monatoj(); ?>		
+			<?php stat_monatoj(); ?>		
 		</div>
 	</div>
-<?include "pagxpiedo.inc.php";?>        
+<?phpinclude "pagxpiedo.inc.php";?>        

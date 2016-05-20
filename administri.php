@@ -234,7 +234,7 @@ function listi_S_laux_K($korektanto_id) {
 	global $bdd,$idnoto;
 	$i=0;
 	// studantoj 
-	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,personoj.familinomo as familinomo,personoj.personnomo as personnomo,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.kurso as kurso, personoj.naskigxdato as naskigxdato, nuna_kurso.lastdato as lastdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.lastdato)) as numtagoj1,nuna_kurso.ekdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.ekdato)) as numtagoj2, personoj.noto as noto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='fr' and (nuna_kurso.stato='N' or nuna_kurso.stato='K') and nuna_kurso.korektanto='$korektanto_id';";
+	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,personoj.familinomo as familinomo,personoj.personnomo as personnomo,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.kurso as kurso, personoj.naskigxdato as naskigxdato, nuna_kurso.nunleciono,nuna_kurso.lastdato as lastdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.lastdato)) as numtagoj1,nuna_kurso.ekdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.ekdato)) as numtagoj2, personoj.noto as noto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='fr' and (nuna_kurso.stato='N' or nuna_kurso.stato='K') and nuna_kurso.korektanto='$korektanto_id';";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		echo "<div class='lernantoj'>";
@@ -264,13 +264,14 @@ function listi_S_laux_K($korektanto_id) {
 		echo "</div><div class='lernanto' style='padding-left:10px;'>";
 		// cours suivi
 		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."' and kursoj.lingvo='fr'"; 
-		$result2 = mysql_query($demando2) or die (  "SELECT : malbona demando :".$demando2);
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		$row2 = $result2->fetch();
 		echo "<em>cours suivi : </em><b>".$row2["kursnomo"]."</b><br>";	
 		echo "<em>inscription le : </em>\n";
-		ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["ekdato"],$ekdt);
-		echo $ekdt[3]."/".$ekdt[2]."/".$ekdt[1]."<br>\n";
+		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["ekdato"],$ekdt);
+		$ekdt = explode('-',$row["ekdato"]);
+		echo $ekdt[2]."/".$ekdt[1]."/".$ekdt[0]."<br>\n";
+		// derniere lecon (si une derniere lecon est en cours) :
 		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='fr' and lecionoj.numero='".$row['nunleciono']."'";
 		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
 		$row3 = $result3->fetch();
@@ -279,8 +280,9 @@ function listi_S_laux_K($korektanto_id) {
 			echo "--/--/--\n";
 		}
 		else{
-			ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["lastdato"],$lstdt);
-			echo $lstdt[3]."/".$lstdt[2]."/".$lstdt[1]."<br>\n";
+			//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["lastdato"],$lstdt);
+			$lstdt = explode('-',$row["lastdato"]);
+			echo $lstdt[2]."/".$lstdt[1]."/".$lstdt[0]."<br>\n";
 		}
 
 
@@ -290,7 +292,7 @@ function listi_S_laux_K($korektanto_id) {
 		echo stripslashes($row['kialo'])."<br>";
 
 		echo "<em>commentaires du correcteur :</em><br>";
-		$demando4 = "select * from komentoj where komentoj.studanto='".$row["studanto"]."'";
+		$demando4 = "select * from komentoj where komentoj.studanto='".$row["id"]."'";
 		$result4 = $bdd->query($demando4) or die(print_r($bdd->errorInfo()));
 		while ($row4 = $result4->fetch()){
 			$demando5 = "select enirnomo from personoj where personoj.id='".$row4['korektanto']."'";
@@ -494,6 +496,10 @@ include "adminkapo.inc.php";
 			<div id="adminD">
 				<form name="administri2" method="post" action="administri2.php">
 				<p>Fiche n° <?=$celpersono["id"];?></p>
+<?php if (isset($_GET['validi'])) { ?>
+				<p>La fiche a été correctement mise à jour</p>
+<?php } ?>
+
 				<div class="encadre">
 					<table class="perso">
 						<tr>

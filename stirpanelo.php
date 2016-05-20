@@ -252,46 +252,46 @@ include "pagxkapo.inc.php";
 ?>
 		<div id="enhavo">
 		<ul id="tabnav">
-			<li <? if ($parto=="1") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=1">Derniers connect&eacute;s</a></li>
-			<li <? if ($parto=="2") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=2">Liste mails</a></li>
-			<li <? if ($parto=="3") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=3">Classement correcteurs</a></li>
-			<li <? if ($parto=="4") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=4"><?=$lgv_malfruas?></a></li>
-			<li <? if ($parto=="5") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=5">Maintenance</a></li>
+			<li <?php if ($parto=="1") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=1">Derniers connect&eacute;s</a></li>
+			<li <?php if ($parto=="2") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=2">Liste mails</a></li>
+			<li <?php if ($parto=="3") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=3">Classement correcteurs</a></li>
+			<li <?php if ($parto=="4") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=4"><?=$lgv_malfruas?></a></li>
+			<li <?php if ($parto=="5") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=5">Maintenance</a></li>
 		</ul>
 		<div id="kadro">
-			<? if ($parto=="1") { ?>
+			<?php if ($parto=="1") { ?>
 				<table class="perso">
 					<tr>
 						<td width="48%">
 							<h2><?= $lgv_lastajEnirantoj; ?></h2>
-							<? listi_eniro(25); ?>
+							<?php listi_eniro(25); ?>
 						</td>
 						<td width="48%">
 							<h2><?= $lgv_protokolo;?></h2>
-							<? listi_protokolo(500); ?>
+							<?php listi_protokolo(500); ?>
 					</td></tr>
 				</table>
-			<? } ?>
-			<? if ($parto=="2") { ?>
+			<?php } ?>
+			<?php if ($parto=="2") { ?>
 				<table class="perso">
 					<tr>
 						<td width="48%">
 							<h2><?= $lgv_listoRetadresoKorektantoj; ?></h2>
-							<? listi_korektantoj(); ?>
+							<?php listi_korektantoj(); ?>
 						</td><td width="48%">
 							<h2><?= $lgv_listoRetadresoLernantoj;?></h2>
-							<? listi_lernantoj(); ?>
+							<?php listi_lernantoj(); ?>
 						</td>
 					</tr>
 				</table>
-			<? } ?>
+			<?php } ?>
 
-			<? if ($parto=="3") { ?>
+			<?php if ($parto=="3") { ?>
 				<table border="0"><tr><td>
 				<h2>R&eacute;sultats :</h2>
-				<? listi_plejBonajKorektantoj(); ?>	
+				<?php listi_plejBonajKorektantoj(); ?>	
 				</td><td valign="top">
-				<? 
+				<?php 
 		        $demando = "select * from monatoj where lingvo='".$lgv."'";
 				$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
 				while ($row=mysql_fetch_array($result)) {
@@ -304,28 +304,28 @@ include "pagxkapo.inc.php";
 				listi_plejBonajKorektantojLauxMonato($mois,$annee); 
 				?>	
 				</td></tr></table>
-			<? } 
+			<?php } 
 			if ($parto=="4") { ?>
 				<table class="perso">
 					<tr>
 						<td width="48%">
 							<h2><?= $lgv_malfruajLernantoj; ?></h2>
-							<? listi_malfruajLernantoj(20); ?>
+							<?php listi_malfruajLernantoj(20); ?>
 						</td>
 						<td width="48%">
 							<h2><?= $lgv_malfruajKorektantoj; ?></h2>
-							<? listi_malfruajKorektantoj(30); ?>	
+							<?php listi_malfruajKorektantoj(30); ?>	
 						</td>
 					</tr>
 				</table>
-			<? } ?>
-			<?
+			<?php } ?>
+			<?php
 			if ($parto=="5") { ?>
 			<h2>Messages en attente</h2>
 			<p>Cette page est en cours de développement. Elle contiendra notamment un outil qui permettra de 
 			réenvoyer des messages qui n'auraient pas pu être envoyés pour des raisons techniques</p>
 			<p>Les messages ci-dessous n'ont pas pu être envoyés.</p>
-			<? listi_erarajMesagxoj(); ?>
-			<? } ?>
+			<?php listi_erarajMesagxoj(); ?>
+			<?php } ?>
 		</div>
-<? include "pagxpiedo.inc.php"?>                    
+<?php include "pagxpiedo.inc.php"?>                    

@@ -1,4 +1,4 @@
-<?
+<?php
 $temo="kurso";
 include "stat.inc.php";
 
@@ -119,7 +119,7 @@ function stat_lecionoj() {
 }
 
 ?>
-			<h2><? echo $lgv_laux.$lgv_lauxKurso." :";?></h2>
+			<h2><?php echo $lgv_laux.$lgv_lauxKurso." :";?></h2>
 			<p><?= $lgv_lauxLecionoNoto;?></p>
-			<? stat_lecionoj(); ?>
-<? include "pagxpiedo.inc.php" ?>
+			<?php stat_lecionoj(); ?>
+<?php include "pagxpiedo.inc.php" ?>

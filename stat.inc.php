@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 $lingvo="FR";
 $vojo="";
@@ -15,9 +15,9 @@ include "pagxkapo.inc.php";
 ?>
 		<div id="enhavo">
 			<ul id="tabnav">
-				<li <? if ($temo=="kategorio") {echo " class='aktiva'";}?>><a href="statLauxKategorio.php"><?=$lgv_lauxKategorio?></a></li>
-				<li <? if ($temo=="monato") {echo " class='aktiva'";}?>><a href="statLauxMonato.php"><?=$lgv_lauxMonato?></a></li>
-				<li <? if ($temo=="lando") {echo " class='aktiva'";}?>><a href="statLauxLando.php"><?=$lgv_lauxLando?></a></li>
-				<li <? if ($temo=="kurso") {echo " class='aktiva'";}?>><a href="statLauxKurso.php"><?=$lgv_lauxKurso?></a></li>
+				<li <?php if ($temo=="kategorio") {echo " class='aktiva'";}?>><a href="statLauxKategorio.php">par catégorie</a></li>
+				<li <?php if ($temo=="monato") {echo " class='aktiva'";}?>><a href="statLauxMonato.php">par mois</a></li>
+				<li <?php if ($temo=="lando") {echo " class='aktiva'";}?>><a href="statLauxLando.php">par pays</a></li>
+				<li <?php if ($temo=="kurso") {echo " class='aktiva'";}?>><a href="statLauxKurso.php">par cours</a></li>
 			</ul>
 			<div id="kadro">

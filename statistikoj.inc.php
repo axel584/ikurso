@@ -1,4 +1,4 @@
-<?
+<?php
 $url=$_SERVER['SCRIPT_URI'];
 $url=explode("/", $_SERVER['SCRIPT_NAME']);
 $pagxo=$url[count($url)-1];

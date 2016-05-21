@@ -6,7 +6,7 @@ include_once ("fr.inc.php");
 include_once ("db.inc.php");
 include_once ("webui.inc.php");
 $pagxtitolo=$lgv_statistiko;
-$persono_id = $_SESSION["persono_id"];
+$persono_id = isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Last-Modified: ".gmdate("D,d M Y H:i:s")." GMT");
 header("Cache-Control: no-store,no-cache, must-revalidate"); // HTTP/1.1

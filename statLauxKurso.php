@@ -2,54 +2,113 @@
 $temo="kurso";
 include "stat.inc.php";
 
-function stat_lecionoj() {
-	global $lingvo,$lgv,$lgv_nomoLeciono,$lgv_haltis,$lgv_lernante,$lgv_sumo,$lgv_neKomencis,$lgv_finis;
+function increment($valeur) {
+	if (!isset($valeur)) {
+		$valeur=1;
+	} else {
+		$valeur++;
+	}
+}
 
-	mysql_select_db( "ikurso");
+function stat_lecionoj() {
+	global $lingvo,$lgv,$lgv_nomoLeciono,$lgv_haltis,$lgv_lernante,$lgv_sumo,$lgv_neKomencis,$lgv_finis,$bdd;
+	// initialisation de la variable $stat
+	$demando = "select kodo from kursoj where lingvo='fr'"
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while($row = $result->fetch()) {
+		$stat[$row["kodo"]]["N"]=0; // pas encore commencé
+		$stat[$row["kodo"]]["K"]=0; // en cours
+		$stat[$row["kodo"]]["F"]=0; // ont fini
+		$stat[$row["kodo"]]["H"]=0; // ont abandonné
+		$stat[$row["kodo"]]["TK"]=0; // total en cours
+		$stat[$row["kodo"]]["T"]=0; // total
+	}
+	// faire une boucle sur les leçons de chaque cours
+
 
 	// laux landoj
-	$demando = "select nuna_kurso.kurso as kurso,nuna_kurso.nunleciono as numleciono,nuna_kurso.stato as stato from nuna_kurso,personoj where personoj.id=nuna_kurso.studanto and personoj.lingvo='".$lingvo."'";
-	$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
-	while($row = mysql_fetch_array($result)) {
+	$demando = "select nuna_kurso.kurso as kurso,nuna_kurso.nunleciono as numleciono,nuna_kurso.stato as stato from nuna_kurso,personoj where personoj.id=nuna_kurso.studanto and personoj.lingvo='fr'";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while($row = $result->fetch()) {
 		if ($row["stato"]=="N") {
-			$stat[$row["kurso"]]["N"]++;
-			$stat[$row["kurso"]]["T"]++;
-			$stat[$row["kurso"]]["TK"]++;
-		} elseif ($row["stato"]=="F") {
-			$stat[$row["kurso"]]["F"]++;
-			$stat[$row["kurso"]]["T"]++;
-		} elseif ($row["stato"]=="H") {
-			if ($row["numleciono"]==null) { 			
-			   $stat[$row["kurso"]]["H"]++; 
+			if (!isset($stat[$row["kurso"]]["N"])) {
+				$stat[$row["kurso"]]["N"]=1;	
+				$stat[$row["kurso"]]["T"]=1;
+				$stat[$row["kurso"]]["TK"]=1;
 			} else {
-			   $stat[$row["kurso"]][$row["numleciono"]]["H"]++;
+				$stat[$row["kurso"]]["N"]++;
+				$stat[$row["kurso"]]["T"]++;
+				$stat[$row["kurso"]]["TK"]++;
 			}
-			$stat[$row["kurso"]]["T"]++;
+		} elseif ($row["stato"]=="F") {
+			if (!isset($stat[$row["kurso"]]["F"])) {
+				$stat[$row["kurso"]]["F"]=1;
+				$stat[$row["kurso"]]["T"]=1;
+			} else {
+				$stat[$row["kurso"]]["F"]++;
+				$stat[$row["kurso"]]["T"]++;
+			}
+		} elseif ($row["stato"]=="H") {
+			if ($row["numleciono"]==null) { 
+				if (!isset($stat[$row["kurso"]]["H"])) {
+					$stat[$row["kurso"]]["H"]=1;
+				} else {
+			   		$stat[$row["kurso"]]["H"]++; 
+			   }
+			} else {
+				if (!isset($stat[$row["kurso"]][$row["numleciono"]]["H"])) {
+					$stat[$row["kurso"]][$row["numleciono"]]["H"]=1;
+				} else {
+			   	$stat[$row["kurso"]][$row["numleciono"]]["H"]++;
+			   	}
+			}
+			if (!isset($stat[$row["kurso"]]["T"])) {
+				$stat[$row["kurso"]]["T"]=1;
+			} else {
+				$stat[$row["kurso"]]["T"]++;
+			}
+			
 		} elseif ($row["stato"]=="K") {
-			$stat[$row["kurso"]][$row["numleciono"]]["K"]++;
-			$stat[$row["kurso"]]["T"]++;
-			$stat[$row["kurso"]]["TK"]++;
+			if (!isset($stat[$row["kurso"]][$row["numleciono"]]["K"])) {
+				$stat[$row["kurso"]][$row["numleciono"]]["K"]=1;
+			} else {
+				$stat[$row["kurso"]][$row["numleciono"]]["K"]++;
+			}
+			if (!isset($stat[$row["kurso"]]["T"])) {
+				$stat[$row["kurso"]]["T"]=1;
+			} else {
+				$stat[$row["kurso"]]["T"]++;
+			}
+			if (!isset($stat[$row["kurso"]]["TK"])) {
+				$stat[$row["kurso"]]["TK"]=1;
+			} else {
+				$stat[$row["kurso"]]["TK"]++;
+			}
 		}
 	}
-	$demando = "select * from lecionoj where lingvo='".$lgv."'";
-	$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
-	while ($row=mysql_fetch_array($result)) {
+	$demando = "select * from lecionoj where lingvo='fr'";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while ($row=$result->fetch()) {
 		$nomo_lecionoj[$row["kurso"]][$row["numero"]]=$row["titolo"];
 	}
-        $demando = "select * from kursoj where lingvo='".$lgv."'";
-	$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
-	while ($row=mysql_fetch_array($result)) {
+        $demando = "select * from kursoj where lingvo='fr'";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while ($row=$result->fetch()) {
 		$nomo_kursoj[$row["kodo"]]=$row["nomo"];
 	}
         
 	ksort($stat);
 	$numkurso = 0;
 	foreach($stat as $key1 => $value1) {
+		$value1['N']=isset($value1['N'])?$value1['N']:0;
+		$value1['K']=isset($value1['K'])?$value1['K']:0;
+		$value1['TK']=isset($value1['TK'])?$value1['TK']:0;
 		// nur 2 kursoj sur cxiuj lignioj
 		if ((($numkurso%2)==0)&&($numkurso!=0)) { echo "</tr>\n<tr>";}
 		$numkurso++;
 		// komenco de la kurso
 		echo "<h3>".$nomo_kursoj[$key1]."</h3>";
+		//print_r($value1);
 		echo "<table class=\"stat\">\n<thead>\n<tr>\n";
 
 		// titoloj 
@@ -83,9 +142,12 @@ function stat_lecionoj() {
 		// aliaj : valuoj
 		ksort($value1);
 		foreach($value1 as $key2 => $value2) {
+			//$value2["K"]=isset($value2["K"])?$value2["K"]:array();
+			//$value2["H"]=isset($value2["H"])?$value2["H"]:array();
 			if (($key2!="N") && ($key2!="F") && ($key2!="") && ($key2!="H") && ($key2!="T") && ($key2!="TK")) {
 				echo "<tr>\n";
-				echo "<td class='col1'>&nbsp;".$nomo_lecionoj[$key1][$key2]."</td>";
+
+				echo "<td class='col1'>&nbsp;".isset($nomo_lecionoj[$key1][$key2])?$nomo_lecionoj[$key1][$key2]:""."</td>";
 				echo "<td>&nbsp;".$value2["K"]."</td>";
 				echo "<td class='dekstre'>&nbsp;"; 
 				if ($value1["TK"]>0) { echo round(100*($value2["K"]/$value1["TK"]),2);}

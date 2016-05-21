@@ -12,16 +12,28 @@ function increment($valeur) {
 
 function stat_lecionoj() {
 	global $lingvo,$lgv,$lgv_nomoLeciono,$lgv_haltis,$lgv_lernante,$lgv_sumo,$lgv_neKomencis,$lgv_finis,$bdd;
-	// initialisation de la variable $stat
-	$demando = "select kodo from kursoj where lingvo='fr'"
+	// initialisation de la variable $stat et $nomo_kurso/$nomo_leciono
+	$demando = "select kodo,nomo from kursoj where lingvo='fr'";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
+		$stat[$row["kodo"]]=array(); 
 		$stat[$row["kodo"]]["N"]=0; // pas encore commencé
 		$stat[$row["kodo"]]["K"]=0; // en cours
 		$stat[$row["kodo"]]["F"]=0; // ont fini
 		$stat[$row["kodo"]]["H"]=0; // ont abandonné
 		$stat[$row["kodo"]]["TK"]=0; // total en cours
 		$stat[$row["kodo"]]["T"]=0; // total
+		$nomo_kursoj[$row["kodo"]]=$row["nomo"];
+		// on initialise ensuite chaque lecon
+		$demando2 = "select numero,titolo from lecionoj where kurso='".$row["kodo"]."' and lingvo='fr'";
+		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
+		while($row2 = $result2->fetch()) {
+			$stat[$row["kodo"]][$row2["numero"]]=array();
+			$stat[$row["kodo"]][$row2["numero"]]["H"]=0;
+			$stat[$row["kodo"]][$row2["numero"]]["K"]=0;
+			$nomo_lecionoj[$row["kodo"]][$row2["numero"]]=$row2["titolo"];
+		}
+
 	}
 	// faire une boucle sur les leçons de chaque cours
 
@@ -31,36 +43,17 @@ function stat_lecionoj() {
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		if ($row["stato"]=="N") {
-			if (!isset($stat[$row["kurso"]]["N"])) {
-				$stat[$row["kurso"]]["N"]=1;	
-				$stat[$row["kurso"]]["T"]=1;
-				$stat[$row["kurso"]]["TK"]=1;
-			} else {
 				$stat[$row["kurso"]]["N"]++;
 				$stat[$row["kurso"]]["T"]++;
 				$stat[$row["kurso"]]["TK"]++;
-			}
 		} elseif ($row["stato"]=="F") {
-			if (!isset($stat[$row["kurso"]]["F"])) {
-				$stat[$row["kurso"]]["F"]=1;
-				$stat[$row["kurso"]]["T"]=1;
-			} else {
 				$stat[$row["kurso"]]["F"]++;
 				$stat[$row["kurso"]]["T"]++;
-			}
 		} elseif ($row["stato"]=="H") {
 			if ($row["numleciono"]==null) { 
-				if (!isset($stat[$row["kurso"]]["H"])) {
-					$stat[$row["kurso"]]["H"]=1;
-				} else {
 			   		$stat[$row["kurso"]]["H"]++; 
-			   }
 			} else {
-				if (!isset($stat[$row["kurso"]][$row["numleciono"]]["H"])) {
-					$stat[$row["kurso"]][$row["numleciono"]]["H"]=1;
-				} else {
 			   	$stat[$row["kurso"]][$row["numleciono"]]["H"]++;
-			   	}
 			}
 			if (!isset($stat[$row["kurso"]]["T"])) {
 				$stat[$row["kurso"]]["T"]=1;
@@ -69,21 +62,9 @@ function stat_lecionoj() {
 			}
 			
 		} elseif ($row["stato"]=="K") {
-			if (!isset($stat[$row["kurso"]][$row["numleciono"]]["K"])) {
-				$stat[$row["kurso"]][$row["numleciono"]]["K"]=1;
-			} else {
 				$stat[$row["kurso"]][$row["numleciono"]]["K"]++;
-			}
-			if (!isset($stat[$row["kurso"]]["T"])) {
-				$stat[$row["kurso"]]["T"]=1;
-			} else {
 				$stat[$row["kurso"]]["T"]++;
-			}
-			if (!isset($stat[$row["kurso"]]["TK"])) {
-				$stat[$row["kurso"]]["TK"]=1;
-			} else {
 				$stat[$row["kurso"]]["TK"]++;
-			}
 		}
 	}
 	$demando = "select * from lecionoj where lingvo='fr'";
@@ -99,10 +80,7 @@ function stat_lecionoj() {
         
 	ksort($stat);
 	$numkurso = 0;
-	foreach($stat as $key1 => $value1) {
-		$value1['N']=isset($value1['N'])?$value1['N']:0;
-		$value1['K']=isset($value1['K'])?$value1['K']:0;
-		$value1['TK']=isset($value1['TK'])?$value1['TK']:0;
+	foreach($stat as $key1 => $value1) { // on balaye chaque cours
 		// nur 2 kursoj sur cxiuj lignioj
 		if ((($numkurso%2)==0)&&($numkurso!=0)) { echo "</tr>\n<tr>";}
 		$numkurso++;
@@ -142,12 +120,10 @@ function stat_lecionoj() {
 		// aliaj : valuoj
 		ksort($value1);
 		foreach($value1 as $key2 => $value2) {
-			//$value2["K"]=isset($value2["K"])?$value2["K"]:array();
-			//$value2["H"]=isset($value2["H"])?$value2["H"]:array();
-			if (($key2!="N") && ($key2!="F") && ($key2!="") && ($key2!="H") && ($key2!="T") && ($key2!="TK")) {
+			if (($key2!="N") && ($key2!="F") && ($key2!="") && ($key2!="H") && ($key2!="K") && ($key2!="T") && ($key2!="TK")) {
 				echo "<tr>\n";
 
-				echo "<td class='col1'>&nbsp;".isset($nomo_lecionoj[$key1][$key2])?$nomo_lecionoj[$key1][$key2]:""."</td>";
+				echo "<td class='col1'>&nbsp;".$nomo_lecionoj[$key1][$key2]."</td>";
 				echo "<td>&nbsp;".$value2["K"]."</td>";
 				echo "<td class='dekstre'>&nbsp;"; 
 				if ($value1["TK"]>0) { echo round(100*($value2["K"]/$value1["TK"]),2);}

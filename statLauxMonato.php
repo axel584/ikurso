@@ -2,7 +2,7 @@
 $temo="monato";
 include "stat.inc.php";
 function stat_monatoj() {
-	global $lingvo,$lgv,$lgv_sumo,$lgv_haltis,$lgv_finis,$lgv_studantoj;
+	global $lingvo,$lgv,$lgv_sumo,$lgv_haltis,$lgv_finis,$lgv_studantoj,$bdd;
 	$moisactuel = date("Ym");
 	// le dernier jour est le jour "0" du mois suivant (mois +1) ou 31 pour décembre (décembre + 1 n'a pas de sens)
 	if (date("m")==12) {
@@ -12,33 +12,49 @@ function stat_monatoj() {
 	}
 	echo "<table class=\"stat\">\n<thead>\n<tr>\n";
 	echo "<td class='vide'>&nbsp;</td>\n";
-	echo "<td class='vide'>&nbsp;</td>\n";
 	echo "<td class='col1'>".$lgv_studantoj;
 	?>
-	<a href="#" onClick="window.open('stat-monatoj.php?filtre=K','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
+	<!--a href="#" onClick="window.open('stat-monatoj.php?filtre=K','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
 	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
-	</a></td>
+	</a-->
+	</td>
 	<?php
 	echo "<td class='col1'>".$lgv_haltis;
 		?>
-	<a href="#" onClick="window.open('stat-monatoj.php?filtre=H','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
+	<!--a href="#" onClick="window.open('stat-monatoj.php?filtre=H','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
 	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
-	</a></td>
+	</a-->
+	</td>
 	<?php
 	echo "<td class='col1'>".$lgv_finis;
 		?>
-	<a href="#" onClick="window.open('stat-monatoj.php?filtre=F','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
+	<!--a href="#" onClick="window.open('stat-monatoj.php?filtre=F','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
 	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
-	</a></td></tr>
+	</a-->
+	</td></tr>
 	</thead>
 	
 	<?php
-	mysql_select_db( "ikurso");
+
+	// initialisation des totaux
+	$sumekis=0;
+	$sumhaltis=0;
+	$sumfinis=0;
+	//initialise la variable stat:
+	$anneeEnCours = date('Y');
+	for ($annee=2002;$annee<=$anneeEnCours;$annee++) {
+		for ($mois=1;$mois<=12;$mois++) {
+			$ClefDate = ($mois<10)?$annee."0".$mois:$annee.$mois;
+			$stat[$ClefDate]=array("ekis"=>0,"finis"=>0,"haltis"=>0);
+		}
+	}
 
 	// laux monatoj
-	$demando = "select nuna_kurso.id as id, nuna_kurso.stato as stato, MONTH(nuna_kurso.ekdato) as ekmonato, YEAR(nuna_kurso.ekdato) as ekjaro, MONTH(nuna_kurso.findato) as finmonato,YEAR(nuna_kurso.findato) as finjaro from nuna_kurso, personoj where nuna_kurso.studanto=personoj.id and personoj.lingvo='".$lingvo."'";
-	$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
-	while($row = mysql_fetch_array($result)) {
+	$demando = "select nuna_kurso.id as id, nuna_kurso.stato as stato, MONTH(nuna_kurso.ekdato) as ekmonato, YEAR(nuna_kurso.ekdato) as ekjaro, MONTH(nuna_kurso.findato) as finmonato,YEAR(nuna_kurso.findato) as finjaro from nuna_kurso, personoj where nuna_kurso.studanto=personoj.id and personoj.lingvo='fr' order by ekjaro,ekmonato";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+
+	while($row = $result->fetch()) {
+		// on fait les variables $ekdato à partir du mois et de l'année, ainsi avril 2010 devient : 201004
 		if ($row["ekmonato"]<10) {
 			$ekdato = $row["ekjaro"]."0".$row["ekmonato"];
 		} else {
@@ -54,28 +70,33 @@ function stat_monatoj() {
 			}
 			if ($row["stato"]=="H") {
 				$stat[$findato]["haltis"]++;
-				$stat[$ekdato]["monat-haltis"]++; // ceux qui ont arret?n ayant commenc?e mois ci
+				//$stat[$ekdato]["monat-haltis"]++; // ceux qui ont arret?n ayant commenc?e mois ci
 				$sumhaltis++;
 			} elseif ($row["stato"]=="F") {
 				$stat[$findato]["finis"]++;
-				$stat[$ekdato]["monat-finis"]++;  // ceux qui ont fini en ayant commenc?e mois ci.
+				//$stat[$ekdato]["monat-finis"]++;  // ceux qui ont fini en ayant commenc?e mois ci.
 				$sumfinis++;
 			}
 		}
 	}
-        $demando = "select * from monatoj where lingvo='".$lgv."'";
-        $result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
-        while ($row=mysql_fetch_array($result)) {
+        $demando = "select * from monatoj where lingvo='fr'";
+        $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+        while ($row=$result->fetch()) {
           $nomo_monatoj[$row["kodo"]]=$row["nomo"];
         }
 	krsort($stat);
 	foreach($stat as $key => $value) {
+		// on "cache" les mois qui n'ont aucune valeur non nulles
+		if ($value["ekis"]==0 && $value["haltis"]==0 &&$value["finis"]==0 ){
+			continue;
+		}
 		echo "<tr>\n";
-		ereg("([0-9]{4})([0-9]{2})", $key,$trancxita);
+		//ereg("([0-9]{4})([0-9]{2})", $key,$trancxita);
+		$mois = substr($key,4,2);
+		$annee = substr($key,0,4);
 		// affiche le mois contenu dans nomo_monatoj et l'ann?
-		echo "<td class='col1'>".$nomo_monatoj[$trancxita[2]]." ".$trancxita[1]."</td>\n";
-		echo "<td><a href='#' onClick=\"window.open('stat-monatoj-pie.php?idMonato=".$trancxita[1].$trancxita[2]."&nomoMonato=".$nomo_monatoj[$trancxita[2]]."','','resizable=no,scrollbars=no,location=no,top=150,left=150,width=520,height=220');\">
-			<img border='0' height='14' width='14' src='bildoj/grafiko.png'></a></td>\n";
+
+		echo "<td class='col1'>".$nomo_monatoj[$mois]." ".$annee."</td>\n";
 					
 		// affiche ceux qui ont commence                
 		echo "<td>&nbsp;".$value["ekis"];
@@ -106,7 +127,6 @@ function stat_monatoj() {
 	//sumo
 	echo "<tfoot>\n<tr>\n";
 	echo "<td>".$lgv_sumo."</td>\n";
-	echo "<td>&nbsp;</td>";
 	echo "<td>".$sumekis."</td>\n";
 	echo "<td>".$sumhaltis;
 	if ($sumekis>0) echo "&nbsp;&nbsp;&nbsp;(".round(100*$sumhaltis/$sumekis,2)."%)";
@@ -118,8 +138,8 @@ function stat_monatoj() {
 }
 ?>
 			<h2><?php echo $lgv_laux.$lgv_lauxMonato." :";?> 
-			<a href="#" onClick="window.open('stat-monatoj.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
-			<img src="bildoj/grafiko.png"></a></h2>
+			<!--a href="#" onClick="window.open('stat-monatoj.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
+			<img src="bildoj/grafiko.png"></a--></h2>
 			<p><?=$lgv_klarigo_lauxMonato?></p>
 			<?php stat_monatoj(); ?>		
 		</div>

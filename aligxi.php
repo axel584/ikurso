@@ -1,14 +1,15 @@
-<?
+<?php
 include "util.php";
 $pagxtitolo="Kurso de Esperanto";
-if ($celpersono_id!="") {$celpersono = apartigiPersonon($celpersono_id);}
+$erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
+if (isset($celpersono_id)) {$celpersono = apartigiPersonon($celpersono_id);}
 include "pagxkapo.inc.php";
 ?>
 		<div id="enhavo">
-			<? if ($erarkodo=="2") echo "<p class='eraro'><i>Vous n’avez pas rempli toutes les données obligatoires du formulaire d’inscription</i></p>"; ?>
-			<? if ($erarkodo=="3") echo "<p class='eraro'><i>Vous avez tapé deux mots de passe différents</i></p>"; ?>
-			<? if ($erarkodo=="6") echo "<p class='eraro'><i>Adresse électronique invalide</i></p>"; ?>
-			<? if ($erarkodo=="7") echo "<p class='eraro'><i>Cet identifiant existe déjà. Veuillez en choisir un autre, merci</i></p>"; ?>
+			<?php if ($erarkodo=="2") echo "<p class='eraro'><i>Vous n’avez pas rempli toutes les données obligatoires du formulaire d’inscription</i></p>"; ?>
+			<?php if ($erarkodo=="3") echo "<p class='eraro'><i>Vous avez tapé deux mots de passe différents</i></p>"; ?>
+			<?php if ($erarkodo=="6") echo "<p class='eraro'><i>Adresse électronique invalide</i></p>"; ?>
+			<?php if ($erarkodo=="7") echo "<p class='eraro'><i>Cet identifiant existe déjà. Veuillez en choisir un autre, merci</i></p>"; ?>
 			<ul id="tabnav">
 				<li class="aktiva"><a href="intro.php">Inscription</a></li>
 				<li><a href="fr/cge/vortlisto.php">Lexique</a></li>
@@ -43,7 +44,7 @@ include "pagxkapo.inc.php";
 	 				pourrons suspendre votre inscription et affecter votre correcteur à un autre élève. </p>  
 	 				
 					<form name="inscription" action="aligxi2.php" method="post"> 
-					<? echo "<input type='hidden' name='kurso' value='KE'>\n"; 
+					<?php echo "<input type='hidden' name='kurso' value='KE'>\n"; 
 					   echo "<input type='hidden' name='lingvo' value='".$lingvo."'>\n";
 					   $kurso="KE";
 						// debut de l'insertion de l'include du formulaire d'inscription
@@ -54,4 +55,4 @@ include "pagxkapo.inc.php";
 				</div>
 			</div>
 		</div>
-<? include "pagxpiedo.inc.php"; ?>
+<?php include "pagxpiedo.inc.php"; ?>

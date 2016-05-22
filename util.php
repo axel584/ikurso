@@ -5,7 +5,7 @@ ini_set('session.gc_maxlifetime', 86400);
 ini_set('session.cookie_lifetime', 86400);
 include_once("db.inc.php");
 include_once("webui.inc.php");
-include_once("forum/includes/forum.lib.php");
+//include_once("forum/includes/forum.lib.php");
 $url=$_SERVER['REQUEST_URI'];
 
 // tiu funkcio konvertas la unikodan tekston al teksto en X-sistemo

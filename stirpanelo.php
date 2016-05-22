@@ -1,45 +1,43 @@
 <?php
 include "util.php";
-$pagxtitolo=$lgv_stirpanelo;
+$pagxtitolo="Panneau de contr&ocirc;le";
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 if ($rajto!='A'){header("Location:index.php?erarkodo=4");}
-$parto=$_GET["parto"];
+$parto=isset($_GET["parto"])?$_GET["parto"]:"";
 if ($parto=="") {$parto=1;}
 
 function listi_korektantoj() {
-	global $lingvo;
-	$demando = "select distinct retadreso from personoj,korektebla_kurso where (personoj.rajtoj='K' or personoj.rajtoj='A') and lingvo='$lingvo' and personoj.id = korektebla_kurso.korektanto and korektebla_kurso.kiom_lernantoj>0";
-	$result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
+	global $bdd;
+	$demando = "select distinct retadreso from personoj,korektebla_kurso where (personoj.rajtoj='K' or personoj.rajtoj='A') and lingvo='fr' and personoj.id = korektebla_kurso.korektanto and korektebla_kurso.kiom_lernantoj>0";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         echo "<textarea rows=10 cols=45>";
-        $row=mysql_fetch_array($result);
-        echo $row["retadreso"];
-        while ($row=mysql_fetch_array($result)) {
+        echo $result->fetch()["retadreso"];
+        while ($row=$result->fetch()) {
           echo ", ".$row["retadreso"];
         }
         echo "</textarea>";
 }
 
 function listi_lernantoj() {
-	global $lingvo;
-	$demando = "select personoj.retadreso from personoj,nuna_kurso where personoj.rajtoj='S' and nuna_kurso.stato='K' and nuna_kurso.studanto=personoj.id and lingvo='$lingvo'";
-	$result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
+	global $bdd;
+	$demando = "select personoj.retadreso from personoj,nuna_kurso where personoj.rajtoj='S' and nuna_kurso.stato='K' and nuna_kurso.studanto=personoj.id and lingvo='fr'";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         echo "<textarea rows=10 cols=45>";
-        $row=mysql_fetch_array($result);
-        echo $row["retadreso"];
-        while ($row=mysql_fetch_array($result)) {
+        echo $result->fetch()["retadreso"];
+        while ($row=$result->fetch()) {
           echo ", ".$row["retadreso"];
         }
         echo "</textarea>";
 }
 
 function listi_eniro($nb) {
-	global $lingvo;
+	global $bdd;
         $demando = "select * from protokolo where kategorio='ENIRO' order by horo DESC";
-		$result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
+		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         echo "<table class='voca'>\n<thead>\n<tr>\n<td>Kiam ?</td>\n<td>Kiu ?</td>\n</tr></thead>\n<tbody>\n";
         $jam_eniri=array();
-        $i;
-        while ($row=mysql_fetch_array($result)) {
+        $i=0;
+        while ($row=$result->fetch()) {
           if (!(in_array($row["persono_id"],$jam_eniri))) {
              $i++;
              $jam_eniri[]=$row["persono_id"];
@@ -57,17 +55,17 @@ function listi_eniro($nb) {
 }
 
 function listi_protokolo($nb) {
-	global $lingvo;
+	global $bdd;
         $demando = "select * from protokolo order by horo DESC";
-			$result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
+		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         echo "<table class='voca'>\n<thead>\n<tr>\n<td>Kiam ?</td>\n<td>Kiu ?</td>\n<td>Kio ?</td>\n</tr>\n</thead>\n<tbody>";
         $i=0;
-        while ($row=mysql_fetch_array($result)) {
+        while ($row=$result->fetch()) {
          $i++;
          echo "<tr>\n<td class='col1' nowrap>";
          echo $row["horo"]."</td>\n<td nowrap>";
-         if ($row[persono_id]!=0) {
-         echo "<a href='administri.php?celpersono_id=".$row[persono_id]."'>".$row[persono_id]."</a></td>\n<td>";
+         if ($row["persono_id"]!=0) {
+         echo "<a href='administri.php?celpersono_id=".$row["persono_id"]."'>".$row["persono_id"]."</a></td>\n<td>";
         } else {
         	echo "&nbsp;</td>\n<td width='260'>";
         }
@@ -78,25 +76,25 @@ function listi_protokolo($nb) {
 }
 
 function listi_malfruajLernantoj($nb) {
-	global $lingvo;
-	$demando = "select nuna_kurso.ekdato as ekdato,nuna_kurso.id as id,nuna_kurso.studanto as studanto,nuna_kurso.korektanto as korektanto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.lingvo='$lingvo' and stato='N'";
-	$result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
+	global $bdd;
+	$demando = "select nuna_kurso.ekdato as ekdato,nuna_kurso.id as id,nuna_kurso.studanto as studanto,nuna_kurso.korektanto as korektanto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.lingvo='fr' and stato='N'";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	echo "<table class='prezento'><thead><tr><td>Dato</td><td>Studanto</td><td>Korektanto</td></tr></thead><tbody>";
-	while ($row=mysql_fetch_array($result)) {
+	while ($row=$result->fetch()) {
 		$stat[$row["id"]]=$row["ekdato"];
 		$stat_stu[$row["id"]]=$row["studanto"];
 		$stat_kor[$row["id"]]=$row["korektanto"];
 	}
-	$demando = "select nuna_kurso.lastdato as lastdato,nuna_kurso.id as id,nuna_kurso.studanto as studanto,nuna_kurso.korektanto as korektanto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.lingvo='$lingvo' and stato='K'";
-	$result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
-	while ($row=mysql_fetch_array($result)) {
+	$demando = "select nuna_kurso.lastdato as lastdato,nuna_kurso.id as id,nuna_kurso.studanto as studanto,nuna_kurso.korektanto as korektanto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.lingvo='fr' and stato='K'";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while ($row=$result->fetch()) {
 		$stat[$row["id"]]=$row["lastdato"];
 		$stat_stu[$row["id"]]=$row["studanto"];
 		$stat_kor[$row["id"]]=$row["korektanto"];
 	}
-	$demando = "select id,enirnomo from personoj where lingvo='$lingvo'";
-	$result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
-	while ($row=mysql_fetch_array($result)) {
+	$demando = "select id,enirnomo from personoj where lingvo='fr'";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while ($row=$result->fetch()) {
 		$enirnomo[$row["id"]]=$row["enirnomo"];
 	}
 	asort($stat);
@@ -120,18 +118,18 @@ function listi_malfruajLernantoj($nb) {
 }
 
 function listi_malfruajKorektantoj($nb) {
-	global $lingvo;
-	$demando = "select personoj.id,enirnomo,sum(kiom_lernantoj) as kiom from personoj,korektebla_kurso where rajtoj='K' and lingvo='$lingvo' and personoj.id=korektebla_kurso.korektanto group by korektanto";
-	$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
-	while ($row=mysql_fetch_array($result)) {
+	global $bdd;
+	$demando = "select personoj.id,enirnomo,sum(kiom_lernantoj) as kiom from personoj,korektebla_kurso where rajtoj='K' and lingvo='fr' and personoj.id=korektebla_kurso.korektanto group by korektanto";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while ($row=$result->fetch()) {
 		if ($row["kiom"]>0) {
 			$nomo_korektantoj[$row["id"]]=$row["enirnomo"];
 			$cxiuj[$row["enirnomo"]]=$row["id"];
 		}
 	}
 	$demando = "select id,persono_id from protokolo where kategorio='ENIRO' and to_days(now())-to_days(horo) <".$nb." order by horo DESC";
-	$result = mysql_query($demando) or die("SELECT : malbona demando :".$demando);
-	while ($row=mysql_fetch_array($result)) {
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while ($row=$result->fetch()) {
 		$enirintoj[]=$row["persono_id"];
 	}
 	$malfruantoj = array_diff($cxiuj,$enirintoj);
@@ -147,21 +145,21 @@ function listi_malfruajKorektantoj($nb) {
 }
 
 function listi_plejBonajKorektantoj() {
-	global $lingvo,$lgv_finis,$lgv_haltis,$lgv_procento;
-	$demando = "select * from personoj where (rajtoj='K' or rajtoj='A') and lingvo='$lingvo'";
-	$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
+	global $bdd;
+	$demando = "select * from personoj where (rajtoj='K' or rajtoj='A') and lingvo='fr'";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	echo "<table class='prezento'><thead><tr><td>Kiu ?</td>";
-	echo "<td width='50'>".$lgv_haltis."</td><td width='50'>".$lgv_finis."</td><td width='50'>".$lgv_procento."</td></tr></thead><tbody>";
-	while ($row=mysql_fetch_array($result)) {
+	echo "<td width='50'>Ont abandonné</td><td width='50'>A fini</td><td width='50'>% réussite</td></tr></thead><tbody>";
+	while ($row=$result->fetch()) {
 		$nomo_korektantoj[$row["id"]]=$row["enirnomo"];
 		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='F'";
-		$result2 = mysql_query($demando2) or die (  "SELECT : malbona demando :".$demando2.":".mysql_error());
-		$row2=mysql_fetch_array($result2);
+		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
+		$row2=$result2->fetch();
 		$listo_f[$row["id"]]=$row2["sumo"];
 
 		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='H'";
-		$result2 = mysql_query($demando2) or die (  "SELECT : malbona demando :".$demando2.":".mysql_error());
-		$row2=mysql_fetch_array($result2);
+		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
+		$row2=$result2->fetch();
 		$listo_h[$row["id"]]=$row2["sumo"];
         	if ($listo_h[$row["id"]]+$listo_f[$row["id"]]>0) { 
         		$listo_boneco[$row["id"]]=round($listo_f[$row["id"]]*100/($listo_h[$row["id"]]+$listo_f[$row["id"]]));
@@ -189,21 +187,21 @@ function listi_plejBonajKorektantoj() {
 }
 
 function listi_plejBonajKorektantojLauxMonato($mois,$annee) {
-	global $lingvo,$lgv_finis,$lgv_haltis,$lgv_procento;
-	$demando = "select * from personoj where (rajtoj='K' or rajtoj='A') and lingvo='$lingvo'";
-	$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
+	global $bdd;
+	$demando = "select * from personoj where (rajtoj='K' or rajtoj='A') and lingvo='fr'";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	echo "<table class='prezento'><thead><tr><td>Kiu ?</td>";
-	echo "<td width='50'>".$lgv_haltis."</td><td width='50'>".$lgv_finis."</td><td width='50'>".$lgv_procento."</td></tr></thead><tbody>";
-	while ($row=mysql_fetch_array($result)) {
+	echo "<td width='50'>A abandonné</td><td width='50'>A fini</td><td width='50'>% réussite</td></tr></thead><tbody>";
+	while ($row=$result->fetch()) {
 		$nomo_korektantoj[$row["id"]]=$row["enirnomo"];
 		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='F' and findato like '".$annee."-".$mois."%'";
-		$result2 = mysql_query($demando2) or die (  "SELECT : malbona demando :".$demando2.":".mysql_error());
-		$row2=mysql_fetch_array($result2);
+		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
+		$row2=$result2->fetch();
 		$listo_f[$row["id"]]=$row2["sumo"];
 
 		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='H' and findato like '".$annee."-".$mois."%'";
-		$result2 = mysql_query($demando2) or die (  "SELECT : malbona demando :".$demando2.":".mysql_error());
-		$row2=mysql_fetch_array($result2);
+		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
+		$row2=$result2->fetch();
 		$listo_h[$row["id"]]=$row2["sumo"];
         	if ($listo_h[$row["id"]]+$listo_f[$row["id"]]>0) { 
         		$listo_boneco[$row["id"]]=round($listo_f[$row["id"]]*100/($listo_h[$row["id"]]+$listo_f[$row["id"]]));
@@ -231,19 +229,19 @@ function listi_plejBonajKorektantojLauxMonato($mois,$annee) {
 }
 
 function listi_erarajMesagxoj() {
-	global $lingvo;
+	global $bdd;
 		$demando = "select * from eraraj_mesagxoj";
-		$result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
+		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 		
 		echo "<table class='voca'>\n<thead>\n<tr>\n<td>dato</td>\n<td>sendinto</td>\n<td>objekto</td>\n</tr>\n</thead>\n<tbody>";
 		$i=0;
-		while ($row=mysql_fetch_array($result)) {
-		$i++;
-		echo "<tr>\n<td nowrap>";
-		echo $row["dato"]."</td>\n<td nowrap>";
-		echo $row["enirnomo"]."</td>\n<td nowrap>";
-		echo $row["objekto"]."</td></tr>\n";
-		if ($i>$nb) break;
+		while ($row=$result->fetch()) {
+			$i++;
+			echo "<tr>\n<td nowrap>";
+			echo $row["dato"]."</td>\n<td nowrap>";
+			echo $row["enirnomo"]."</td>\n<td nowrap>";
+			echo $row["objekto"]."</td></tr>\n";
+			if ($i>$nb) break;
 		}
 		echo "</tbody></table>";
 }
@@ -255,7 +253,7 @@ include "pagxkapo.inc.php";
 			<li <?php if ($parto=="1") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=1">Derniers connect&eacute;s</a></li>
 			<li <?php if ($parto=="2") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=2">Liste mails</a></li>
 			<li <?php if ($parto=="3") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=3">Classement correcteurs</a></li>
-			<li <?php if ($parto=="4") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=4"><?=$lgv_malfruas?></a></li>
+			<li <?php if ($parto=="4") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=4">en retard</a></li>
 			<li <?php if ($parto=="5") {echo " class='aktiva'";}?>><a href="stirpanelo.php?parto=5">Maintenance</a></li>
 		</ul>
 		<div id="kadro">
@@ -263,11 +261,11 @@ include "pagxkapo.inc.php";
 				<table class="perso">
 					<tr>
 						<td width="48%">
-							<h2><?= $lgv_lastajEnirantoj; ?></h2>
+							<h2>derniers connectés</h2>
 							<?php listi_eniro(25); ?>
 						</td>
 						<td width="48%">
-							<h2><?= $lgv_protokolo;?></h2>
+							<h2>Carnet de bord :</h2>
 							<?php listi_protokolo(500); ?>
 					</td></tr>
 				</table>
@@ -276,10 +274,10 @@ include "pagxkapo.inc.php";
 				<table class="perso">
 					<tr>
 						<td width="48%">
-							<h2><?= $lgv_listoRetadresoKorektantoj; ?></h2>
+							<h2>Liste e-mail correcteurs :</h2>
 							<?php listi_korektantoj(); ?>
 						</td><td width="48%">
-							<h2><?= $lgv_listoRetadresoLernantoj;?></h2>
+							<h2>Liste e-mail des élèves :</h2>
 							<?php listi_lernantoj(); ?>
 						</td>
 					</tr>
@@ -292,9 +290,9 @@ include "pagxkapo.inc.php";
 				<?php listi_plejBonajKorektantoj(); ?>	
 				</td><td valign="top">
 				<?php 
-		        $demando = "select * from monatoj where lingvo='".$lgv."'";
-				$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
-				while ($row=mysql_fetch_array($result)) {
+		        $demando = "select * from monatoj where lingvo='fr'";
+				$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+				while ($row=$result->fetch()) {
 					$nomo_monatoj[$row["kodo"]]=$row["nomo"];
 				}
 				$mktime = mktime(date('H'), date('i'), date('s'), date('m')-1, date('d'), date('Y')); // 
@@ -309,11 +307,11 @@ include "pagxkapo.inc.php";
 				<table class="perso">
 					<tr>
 						<td width="48%">
-							<h2><?= $lgv_malfruajLernantoj; ?></h2>
+							<h2>élèves en retard :</h2>
 							<?php listi_malfruajLernantoj(20); ?>
 						</td>
 						<td width="48%">
-							<h2><?= $lgv_malfruajKorektantoj; ?></h2>
+							<h2>Correcteurs en retard :</h2>
 							<?php listi_malfruajKorektantoj(30); ?>	
 						</td>
 					</tr>

@@ -1,8 +1,8 @@
-<?
+<?php
 include "util.php";
 malfermidatumbazon();
 $gxisdatigDato="2016-01-21";
-$pagxtitolo=$lgv_helpo;
+$pagxtitolo="Aide et informations utiles";
 $temo=$_GET["temo"];
 if ($temo=="") {$temo="faq";}
 $persono_id=$_SESSION["persono_id"];
@@ -16,8 +16,7 @@ else {$videbla="N";}
 	//echo "temo=".$temo."<br>";
 
 $demando = "update personoj set videbla='N' where id='".$persono_id."'";
-mysql_select_db( "ikurso");
-$result = mysql_query($demando) or die (  "INSERT : Invalid query :".$demando);
+$bdd->exec($demando);
 
 include "pagxkapo.inc.php";
 ?>
@@ -25,18 +24,18 @@ include "pagxkapo.inc.php";
 <script type="text/javascript" src="eotajpu.js"></script>
 		<div id="enhavo">
 			<ul id="tabnav">
-				<li <?if ($temo=="nova"){echo "class='aktiva'";}?>><a href="helpo.php?temo=nova">Bienvenue</a></li>
-				<li <?if ($temo=="faq"){echo "class='aktiva'";}?>><a href="helpo.php?temo=faq">FAQ</a></li>
+				<li <?php if ($temo=="nova"){echo "class='aktiva'";}?>><a href="helpo.php?temo=nova">Bienvenue</a></li>
+				<li <?php if ($temo=="faq"){echo "class='aktiva'";}?>><a href="helpo.php?temo=faq">FAQ</a></li>
 				<!--
-				<li <?if ($temo=="ligoj"){echo "class='aktiva'";}?>><a href="helpo.php?temo=ligoj">Liens</a></li>
+				<li <?php if ($temo=="ligoj"){echo "class='aktiva'";}?>><a href="helpo.php?temo=ligoj">Liens</a></li>
 				-->
-				<li <?if ($temo=="iloj"){echo "class='aktiva'";}?>><a href="helpo.php?temo=iloj">Outils</a></li>
-				<li <?if ($temo=="elsxutoj"){echo "class='aktiva'";}?>><a href="helpo.php?temo=elsxutoj">Téléchargements</a></li>
-				<li <?if ($temo=="konvertilo"){echo "class='aktiva'";}?>><a href="helpo.php?temo=konvertilo">Convertisseur</a></li>
+				<li <?php if ($temo=="iloj"){echo "class='aktiva'";}?>><a href="helpo.php?temo=iloj">Outils</a></li>
+				<li <?php if ($temo=="elsxutoj"){echo "class='aktiva'";}?>><a href="helpo.php?temo=elsxutoj">Téléchargements</a></li>
+				<li <?php if ($temo=="konvertilo"){echo "class='aktiva'";}?>><a href="helpo.php?temo=konvertilo">Convertisseur</a></li>
 			</ul>
 			<div id="kadro">
 				<div class="klarigo">
-				<? if ($temo=="nova") { 
+				<?php if ($temo=="nova") { 
 						if (($persono["rajtoj"]=="K")||($persono["rajtoj"]=="A")) {	
 						// information specifique pour les correcteurs se connectant la première fois					
 						include "bonvenon_K.inc.php";
@@ -46,7 +45,7 @@ include "pagxkapo.inc.php";
 				} 
 			}?>
 			
-			<? if ($temo=="faq") { ?>
+			<?php if ($temo=="faq") { ?>
 				<h2>Foire aux questions</h2>
 				<p>
 				Vous trouverez ici les réponses aux questions les plus fréquentes. Si vous avez des questions sur
@@ -56,9 +55,9 @@ include "pagxkapo.inc.php";
 				<p>
 				<ul>
 					<li><a href="#infocours">Information sur les cours, inscription</a></li>
-					<? if (($persono["rajtoj"]=="K")||($persono["rajtoj"]=="A")) { ?>
+					<?php if (($persono["rajtoj"]=="K")||($persono["rajtoj"]=="A")) { ?>
 					<li><a href="#correcteur">Guide du correcteur</a></li>
-					<? } ?>
+					<?php } ?>
 					<li><a href="#accents">Les lettres accentuées : polices de caractères et affichage à l'écran</a></li>
 					<li><a href="#clavier">Les lettres accentuées : comment les taper au clavier (Windows/Mac OS/Linux)</a></li>
 					<li><a href="#courriel">Les lettres accentuées dans le courrier électronique</a></li>
@@ -71,7 +70,7 @@ include "pagxkapo.inc.php";
 		<p>Vous trouverez dans l'introduction de nos cours toutes les informations utiles à ce sujet.</p>	
 		<p><a href="fr/intro.php?temo=kursoj">> Voir l'introduction des cours</a>.</p>
 		
-		<? if (($persono["rajtoj"]=="K")||($persono["rajtoj"]=="A")) { ?>
+		<?php if (($persono["rajtoj"]=="K")||($persono["rajtoj"]=="A")) { ?>
 				<h3 name="correcteur">Guide du correcteur</h3>
 				<p>Nous recommandons à tous nos correcteurs de prendre connaissance du guide du correcteur.
 				Il existe sous forme d'un fichier PDF à télécharger et d'une série de questions-réponses :</p>
@@ -80,23 +79,23 @@ include "pagxkapo.inc.php";
 				<p>Un forum spécial existe pour les correcteurs : n'hésitez pas à le lire et à poser toutes les questions
 				concernant notre activité de correction.</p>
 					
-		<? } ?>
+		<?php } ?>
 		
-		<? include "helpo_accents.inc.php" ?>
+		<?php include "helpo_accents.inc.php" ?>
 
-		<? include "helpo_accents_mobile.inc.php" ?>
+		<?php include "helpo_accents_mobile.inc.php" ?>
 
-			<? } ?>
+			<?php } ?>
 				
-			<? if ($temo=="ligoj") { ?>
+			<?php if ($temo=="ligoj") { ?>
 				<h2>Liens utiles</h2>
 
 				<blockquote><p>
 				... à compléter ...
 				</p></blockquote>
 
-			<? } ?>
-			<? if ($temo=="iloj") { ?>
+			<?php } ?>
+			<?php if ($temo=="iloj") { ?>
 				<h2>Quelques outils</h2>
 
 				<h3>Clavier français-espéranto pour Windows</h3>
@@ -143,8 +142,8 @@ include "pagxkapo.inc.php";
 			      <li><strong>ankau</strong> : <strong>
 			      a n k a</strong> <em>AltGr-u</em></li>
 			    </ul>				   
-			<? } ?>
-			<? if ($temo=="elsxutoj") { ?>
+			<?php } ?>
+			<?php if ($temo=="elsxutoj") { ?>
 				<h3>Téléchargements</h3>
 					
 				<h4>Cours (logiciels et site internet</h4>				
@@ -175,16 +174,16 @@ include "pagxkapo.inc.php";
 					<li><a href="http://ikurso.esperanto-jeunes.org/doc/DLEK-ekz.pdf">Cahier d'exercices du cours en dix leçons</a> (pdf - 223Ko)</li>
 					<li><a href="http://ikurso.esperanto-jeunes.org/doc/LexiqueDLEK-Ikurso.pdf">Lexique Kurso de Esperanto / Cours en dix leçons</a> (pdf - 55Ko)</li>
 				</ul>
-			<? } ?>
-			<? if ($temo=="konvertilo") { ?>
+			<?php } ?>
+			<?php if ($temo=="konvertilo") { ?>
 				<h2>Convertisseur</h2>
 				<p>
 				Cet outil convertit automatiquement le texte au fur et à mesure que vous le tapez en transformant 
 				les cx, gx, ux... en lettres accentuées.
 				</p>
 				<textarea cols="80" rows="15" onkeyup="eotajpu(this,event);"></textarea>
-			<? } ?>
+			<?php } ?>
 			</div>
 		</div>
 	</div>
-<? include "pagxpiedo.inc.php"; ?>
+<?php include "pagxpiedo.inc.php"; ?>

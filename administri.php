@@ -31,7 +31,7 @@ else {
     	);
 }
 if ($rajto!='A' && $rajto!='I'){header("Location:index.php?erarkodo=4");}
-$kategorio=isset($_GET["kategorio"])?$_GET["kategorio"]:"";
+$kategorio=isset($_GET["kategorio"])?$_GET["kategorio"]:"P";
 
 /***********************************************
  * fonctions d'affichage des menus déroulants

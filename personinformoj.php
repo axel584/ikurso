@@ -3,7 +3,8 @@ include "util.php";
 $pagxtitolo=$lgv_personinformoj;
 $persono_id=$_SESSION["persono_id"];
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
-$parto=$_GET["parto"];
+$persono = apartigiPersonon($persono_id);
+$parto=isset($_GET["parto"])?$_GET["parto"]:"";
 if ($parto=="") {$parto=1;}
 
 // ***** ER 19/04/2016 : suppression de l'onglet "mes voisins" *****
@@ -21,92 +22,96 @@ include "pagxkapo.inc.php";
 			<li class="aktiva"><a href="personinformoj.php?parto=1">Donn&eacute;es personnelles</a></li>
 		</ul>
 		<div id="kadro">
-		<!--<? echo (ini_get('session.gc_maxlifetime')); ?> --> 
 		
-		<? // ***** ER 19/04/2016 ***** if ($parto=="1") { */ ?>
+		<?php // ***** ER 19/04/2016 ***** if ($parto=="1") { */ ?>
 			<table class="perso">
 			<tbody>
 				<tr>
-					<td class="col1"><?=$lgv_familinomo;?> :</td>
-					<td nowrap><?=$persono->get_familinomo();?></td>
+					<td class="col1">Nom :</td>
+					<td nowrap><?=$persono['familinomo'];?></td>
 				</tr>
 				<tr>
-					<td class="col1"><?=$lgv_personnomo;?> :</td>
-					<td nowrap><?=$persono->get_personnomo();?>
-					<?if ($persono->get_sekso()=='M'){echo " (H)";}
-						elseif ($persono->get_sekso()=='I'){echo " (F)";}
+					<td class="col1">Prénom :</td>
+					<td nowrap><?=$persono['personnomo'];?>
+					<?php if ($persono['sekso']=='M'){echo " (H)";}
+						elseif ($persono['sekso']=='I'){echo " (F)";}
 					?>
 					</td>
 				</tr>
 				<tr>
-					<td class="col1"><?=$lgv_adreso1;?> :</td>
-					<td nowrap><?=$persono->get_adreso1();?></td>
+					<td class="col1">Adresse :</td>
+					<td nowrap><?=$persono['adreso1'];?></td>
 				</tr>
-				<? if ($persono->get_adreso2()!=""){?>
+				<?php if ($persono['adreso2']!=""){?>
 				<tr>
 					<td nowrap>&nbsp;</td>
-					<td nowrap><?=$persono->get_adreso2();?></td>
+					<td nowrap><?=$persono['adreso2'];?></td>
 				</tr>
-				<?}?>
+				<?php }?>
 				<tr>
 					<td>&nbsp;</td>
-					<td><? echo $persono->get_posxtkodo()." ".$persono->get_urbo();?></td>
+					<td><?php echo $persono['posxtkodo']." ".$persono['urbo'];?></td>
 				</tr>
 				<tr>
 					<td nowrap>&nbsp;</td>
-					<td nowrap><?=$persono->lando->get_nomo();?></td>
+					<td nowrap><?=simplaVorto("nomo","landoj","where lingvo='fr' and kodo='".$persono['lando']."'");?></td>
 				</tr>
 				<tr>
-					<td class="col1"><?=$lgv_retadreso; ?> :</td>
-					<td nowrap><?=$persono->get_retadreso();?></td>
+					<td class="col1">Adresse électronique :</td>
+					<td nowrap><?=$persono['retadreso'];?></td>
 				</tr>
 				<tr>
-					<td  class="col1"><?=$lgv_naskigxdato; ?> :</td>
+					<td  class="col1">Date de naissance :</td>
 					<td>
-						<? ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",$persono->get_naskigxdato(),$nskdt);
-						if (($nskdt[1]!="00")&&($nskdt[3]!="0000")) {
-							echo $nskdt[3]." ";
-							simplaVorto("nomo","monatoj"," where kodo='$nskdt[2]' and lingvo='$lingvo'");
-							echo " ".$nskdt[1];
+						<?php 
+						//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",$persono['naskigxdato'],$nskdt);
+						$nskdt = explode("-",$persono['naskigxdato']);
+						if (($nskdt[0]!="00")&&($nskdt[2]!="0000")) {
+							echo $nskdt[2]." ";
+							simplaVorto("nomo","monatoj"," where kodo='".$nskdt[1]."' and lingvo='fr'");
+							echo " ".$nskdt[0];
 						} ?>
 					</td>
 				</tr>
 				<tr>
-				<? if ($persono->rajtoj->get_kodo()=="S" || $persono->rajtoj->get_kodo()=="P") {
+				<?php if ($persono['rajtoj']=="S" || $persono['rajtoj']=="P") {
 				?>	
-					<td class="col1"><?=$lgv_sekvitakurso;?> :</td>
-					<td><? $kurso = new kursoj;
-						$kurso->load_by_kodo($persono->get_kurso(),$persono->lingvo->get_kodo()); 
-						echo $kurso->get_nomo();?>
+					<td class="col1">Dernier cours choisi :</td>
+					<td><?php
+						simplaVorto("nomo","kursoj"," where kodo='".$persono['kurso']."' and lingvo='fr'");
+						// php $kurso = new kursoj;
+						// $kurso->load_by_kodo($persono['kurso'],$persono->lingvo['kodo']); 
+						// echo $kurso['nomo'];
+						?>
 					</td>
-				<?}else {?>
-					<td class="col1"><?=$lgv_rajtoj;?> :</td>
-					<td><?=$persono->rajtoj->get_nomo();?></td>
-				<?}?>
+				<?php }else {?>
+					<td class="col1">Droits :</td>
+					<td><?=simplaVorto("nomo","rajtoj"," where kodo='".$persono['rajtoj']."' and lingvo='fr'");;?></td>
+				<?php }?>
 				</tr>
-				<? if ($persono->rajtoj->get_kodo()=="S") { ?>
+				<?php if ($persono['rajtoj']=="S") { ?>
 				<tr>
 					<td class="col1">Mon correcteur :</td>
 					
-					<? 
+					<?php 
 					$nuna_kurso = new nuna_kurso;
-					$nuna_kurso->load_by_studanto_kaj_kurso($persono->get_id(),$kurso->get_kodo());
+					$nuna_kurso->load_by_studanto_kaj_kurso($persono['id'],$kurso['kodo']);
 					$korektanto = new personoj;
-					$korektanto->load_by_id($nuna_kurso->korektanto->get_id());
+					$korektanto->load_by_id($nuna_kurso->korektanto['id']);
 					?>
-					<td><?=$korektanto->get_personnomo();?> <?=$korektanto->get_familinomo();?> : <a href="mailto:<?=$korektanto->get_retadreso();?>"><?=$korektanto->get_retadreso();?></a></td>
+					<td><?=$korektanto['personnomo'];?> <?=$korektanto['familinomo'];?> : <a href="mailto:<?=$korektanto['retadreso'];?>"><?=$korektanto['retadreso'];?></a></td>
 				</tr>					
-				<?}?>
+				<?php }?>
 				<tr>
-					<td class="col1"><?=$lgv_mesagxsistemo;?></td>
+					<td class="col1">Préférence pour les messages :</td>
 					<td>
-						<?if ($persono->get_sistemo()=='U'){echo $lgv_unikode;}
+						<?phpif ($persono['sistemo']=='U'){echo $lgv_unikode;}
 						else {echo $lgv_ikse;}?>
 					</td>
 				</tr>
 				<tr>
-					<td class="col1" valign="top"><?=$lgv_komento; ?> :</td>
-					<td valign="top"><textarea cols="60" rows="4"><?echo stripSlashes($persono->get_kialo());?></textarea></td>
+					<td class="col1" valign="top">Commentaire :</td>
+					<td valign="top"><textarea cols="60" rows="4"><?php echo stripSlashes($persono['kialo']);?></textarea></td>
 				</tr>
 			</tbody>
 			</table>

@@ -187,7 +187,6 @@ function simplaVorto($valuo,$tabelo,$kie) {
     global $bdd;
      $demando =  "select $valuo from $tabelo $kie"; 
      $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-     
      while($row = $result->fetch()) {
          echo $row["$valuo"];  
      }

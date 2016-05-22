@@ -1,9 +1,10 @@
 <?php
+include "config.php";
 // tiu funkcio kunligas la datumbazon. 
 // Elirvaluo : referenco pri la datumbazo
 function malfermiDatumbazon () {
     global $bdd;
-     $bdd = new PDO('mysql:host=localhost;dbname=ikurso;charset=utf8', 'jefo', '***REMOVED***');
+     $bdd = new PDO('mysql:host=localhost;dbname='.$base.';charset=utf8', $login, $motDePasse);
 }
 
 

@@ -111,7 +111,7 @@ include "pagxkapo.inc.php";
 				</tr>
 				<tr>
 					<td class="col1" valign="top">Commentaire :</td>
-					<td valign="top"><textarea cols="60" rows="4"><?php echo stripSlashes($persono['kialo']);?></textarea></td>
+					<td valign="top"><?php echo stripSlashes(nl2br($persono['kialo']));?></td>
 				</tr>
 			</tbody>
 			</table>
@@ -132,43 +132,5 @@ include "pagxkapo.inc.php";
 				<a href="sxangxipersoninformojn.php">Cliquez ici pour modifier vos donn&eacute;es personnelles</a>
 				</p>
 				
-			<? // ***** ER 19/04/2016 ***** } else { ?>
-		  		<!-- Mes amis ? Mes collegues de departement ? Les Esperantistes pres de chez moi ? -->
-			   <? 
-				  /***** ER 19/04/2016 ***** 
-			   if ($persono->lando->get_kodo()=='FR') {
-					$idDepartemento=substr($persono->get_posxtkodo(),0,2);
-					// unue, ni sercas la liston de ciuj korektantoj de la sama departemento
-					$korektantoj = listoDepartemento($idDepartemento, "K");
-					$nbKorektantoj = sizeof($korektantoj);	
-					if ($nbKorektantoj > 0) {
-						echo "<h3>Ils sont correcteurs et habitent dans le même département que moi :</h3>";
-						foreach ($korektantoj as $korektanto) {
-				?>
-						<!--***** ER 19/04/2016 : suppression du lien "mp" vers le forum ***** 
-						<a href="forum/privmsg.php?mode=post&amp;u=<?=$korektanto['id']?>">
-						<img src="forum/templates/subSilver/images/lang_french/icon_pm.gif" 
-							alt="Envoyer un message privé" title="Envoyer un message privé" border='0' /></a>-->
-						&nbsp;<?=utf8_encode($korektanto['enirnomo'])?>&nbsp;(<?=utf8_encode($korektanto['personnomo'])?>)&nbsp;-&nbsp;	
-						<?=$korektanto['posxtkodo']?>&nbsp;<?=utf8_encode($korektanto['urbo'])?><br>		
-				<?		}
-					}
-					// poste ni sercas la liston de ciuj lernantoj de la sama departemento
-					$lernantoj = listoDepartemento($idDepartemento, "S");
-					$nbLernantoj = sizeof($lernantoj);	
-					if ($nbLernantoj > 0) {
-						echo "<h3>Ils sont élèves et habitent dans le même département que moi :</h3>";
-						foreach ($lernantoj as $lernanto) {
-						?>
-						<!--***** ER 19/04/2016 : suppression du lien "mp" vers le forum ***** <a href="forum/privmsg.php?mode=post&amp;u=<?=$lernanto['id']?>">
-						<img src="forum/templates/subSilver/images/lang_french/icon_pm.gif" 
-							alt="Envoyer un message privé" title="Envoyer un message privé" border='0' /></a>-->
-						&nbsp;<?=utf8_encode($lernanto['enirnomo'])?>&nbsp;(<?=utf8_encode($lernanto['personnomo'])?>)&nbsp;-&nbsp;	
-						<?=$lernanto['posxtkodo']?>&nbsp;<?=utf8_encode($lernanto['urbo'])?><br>		
-						<? }
-					}
-			   }
-			    ?>
-   		<? } */?>
    	</div>
 <? include "pagxpiedo.inc.php";?>                     

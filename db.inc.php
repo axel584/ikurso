@@ -1,9 +1,11 @@
 <?php
 include "config.php";
+
+
 // tiu funkcio kunligas la datumbazon. 
 // Elirvaluo : referenco pri la datumbazo
 function malfermiDatumbazon () {
-    global $bdd;
+    global $bdd,$base,$login,$motDePasse;
      $bdd = new PDO('mysql:host=localhost;dbname='.$base.';charset=utf8', $login, $motDePasse);
 }
 
@@ -35,27 +37,25 @@ function kreiPersonon($enirnomo,$pasvorto,$retadreso,$lingvo) {
 // ndmonato : monato de la naskigxdato (1-->12) (ekz. : 5 (por majo))
 // ndjaro : jaro de la naskigxdato per 4 ciferoj (ekz. : 1978)
 // lingvo : uzita lingvo de la persono : TRE GRAVA AFERO !!! cxiuj franclingvaj korektantoj korektas franclingvajn studantojn. cxiuj brazillingvaj korektantoj korektas brazillingvajn studantojn ktp.
-function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$ndtago,$ndmonato,$ndjaro,$kialo,$maksimumo,$kurso,$sistemo,$stopInfo) {
+function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$ndtago,$ndmonato,$ndjaro,$kialo,$sistemo,$stopInfo) {
     global $bdd;
+    $naskigxdato=$ndjaro.'-'.$ndmonato.'-'.$ndtago;
      $query = "update personoj set ";
-     $query .= "sekso='$sekso',";
-     $query .= "familinomo='$familinomo',";
-     $query .= "personnomo='$personnomo',";
-     $query .= "adreso1='$adreso1',";
-     $query .= "adreso2='$adreso2',";
-     $query .= "posxtkodo='$posxtkodo',";
-     $query .= "urbo='$urbo',";
-     $query .= "lando='$lando',";
-     $query .= "naskigxdato='$ndjaro-$ndmonato-$ndtago',";
-     $query .= "kialo='$kialo',";
-     $query .= "maksimumo='$maksimumo',";
-     $query .= "kurso='$kurso',";
-     $query .= "sistemo='$sistemo',";
-     $query .= "stop_info='$stopInfo' ";
-     $query .= "where id=$id";
-     mysql_select_db("ikurso");
-
-     $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
+     $query .= "sekso=:sekso,";
+     $query .= "familinomo=:familinomo,";
+     $query .= "personnomo=:personnomo,";
+     $query .= "adreso1=:adreso1,";
+     $query .= "adreso2=:adreso2,";
+     $query .= "posxtkodo=:posxtkodo,";
+     $query .= "urbo=:urbo,";
+     $query .= "lando=:lando,";
+     $query .= "naskigxdato=:naskigxdato,"; // $ndjaro-$ndmonato-$ndtago
+     $query .= "kialo=:kialo,";
+     $query .= "sistemo=:sistemo,";
+     $query .= "stop_info=:stopInfo ";
+     $query .= "where id=:id";
+     $requete = $bdd->prepare($query);
+     $requete->execute(array(':sekso' => $sekso, ':familinomo' => $familinomo,':personnomo'=>$personnomo,':adreso1'=>$adreso1,':adreso2'=>$adreso2,':posxtkodo'=>$posxtkodo,':urbo'=>$urbo,':lando'=>$lando,':naskigxdato'=>$naskigxdato,':kialo'=>$kialo,':sistemo'=>$sistemo,':stopInfo'=>$stopInfo,':id'=>$id)) or die(print_r($dbh->errorInfo()));
 }
 
 // tiu funkcio trovas iun per lia unika numero (id) kaj eldonas objekton kun tiu persono.

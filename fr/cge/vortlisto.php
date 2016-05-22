@@ -4,7 +4,7 @@ $vojo="../../";
 include "../../util.php";
 $subjekto="vortlisto.php";
 $pagxtitolo="Lexique";
-$metodo=$_GET["metodo"];
+$metodo=isset($_GET["metodo"])?$_GET["metodo"]:"U";
 if ($metodo=="") {$metodo="U";}
 include "../../pagxkapo.inc.php";
 ?>

@@ -43,10 +43,10 @@ echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
 				</td>
 				<td>
 					<h2>Personnel</h2>
-					<p><a href="<?php echo $vojo."forum/index.php?sid=";?>">
+					<!--p><a href="<?php echo $vojo."forum/index.php?sid=";?>">
 					<?php //$lgv_forumo." ".phpbb_nombre_nouveau_message($persono_id);?>
-					</a></p>
-					<p><a href="javascript:void(0);" onClick="window.open('<?=$vojo?>forum/chatbox_mod/chatbox.php','12_ChatBox','scrollbars=no,width=700,height=550')">Discussion en ligne</a></p>
+					</a></p-->
+					<!--p><a href="javascript:void(0);" onClick="window.open('<?=$vojo?>forum/chatbox_mod/chatbox.php','12_ChatBox','scrollbars=no,width=700,height=550')">Discussion en ligne</a></p-->
 					<p><a href="<?php echo $vojo."personinformoj.php";?>">Donn&eacute;es personnelles</a></p>
 				</td>
 			<?php if ($rajto=="K" || $rajto=="A"){ ?>

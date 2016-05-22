@@ -77,7 +77,7 @@ if (isset($_SESSION['aligxilo'])) {
 				<tr>
 					<td nowrap colspan="2" class="col1">Pays :</td>
 					<td nowrap>
-						<?php  konstruiMenuon("lando","landoj","kodo","nomo",$aligxilo["lando"]," where lingvo='$lingvo' order by nomo","-- pays --");?>
+						<?php  konstruiMenuon("lando","landoj","kodo","nomo",$aligxilo["lando"]," where lingvo='fr' order by nomo","-- pays --");?>
 					</td>
 				</tr>
 				<tr>
@@ -103,9 +103,9 @@ if (isset($_SESSION['aligxilo'])) {
 						?>
 						<input type="text" name="naskigxdato_tago" size="3" maxlength="2" value="<?php if ($nskdt[2]!="00") echo $nskdt[2];?>">
 						<?php if ($nskdt[1]!="00") {
-								konstruiMenuon( "naskigxdato_monato", "monatoj", "kodo", "nomo",$nskdt[1], " where lingvo='$lingvo'","-- mois --");
+								konstruiMenuon( "naskigxdato_monato", "monatoj", "kodo", "nomo",$nskdt[1], " where lingvo='fr'","-- mois --");
 							} else {
-								konstruiMenuon( "naskigxdato_monato", "monatoj", "kodo", "nomo", "", " where lingvo='$lingvo'","-- mois --");}
+								konstruiMenuon( "naskigxdato_monato", "monatoj", "kodo", "nomo", "", " where lingvo='fr'","-- mois --");}
 						?>
 						<input type="text" name="naskigxdato_jaro" size="5"  maxlength="4" value="<?php if ($nskdt[0]!="0000") echo $nskdt[0];?>">
 					</td>

@@ -12,26 +12,15 @@ function stat_monatoj() {
 	}
 	echo "<table class=\"stat\">\n<thead>\n<tr>\n";
 	echo "<td class='vide'>&nbsp;</td>\n";
-	echo "<td class='col1'>".$lgv_studantoj;
+	echo "<td class='col1'>élèves";
 	?>
 	<!--a href="#" onClick="window.open('stat-monatoj.php?filtre=K','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
 	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
 	</a-->
 	</td>
-	<?php
-	echo "<td class='col1'>".$lgv_haltis;
-		?>
-	<!--a href="#" onClick="window.open('stat-monatoj.php?filtre=H','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
-	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
-	</a-->
-	</td>
-	<?php
-	echo "<td class='col1'>".$lgv_finis;
-		?>
-	<!--a href="#" onClick="window.open('stat-monatoj.php?filtre=F','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
-	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
-	</a-->
-	</td></tr>
+	<td class='col1'>Ont abandonné</td>
+	<td class='col1'>Ont fini le cours</td>
+	</tr>
 	</thead>
 	
 	<?php
@@ -126,7 +115,7 @@ function stat_monatoj() {
 	
 	//sumo
 	echo "<tfoot>\n<tr>\n";
-	echo "<td>".$lgv_sumo."</td>\n";
+	echo "<td>Total</td>\n";
 	echo "<td>".$sumekis."</td>\n";
 	echo "<td>".$sumhaltis;
 	if ($sumekis>0) echo "&nbsp;&nbsp;&nbsp;(".round(100*$sumhaltis/$sumekis,2)."%)";
@@ -137,10 +126,8 @@ function stat_monatoj() {
 
 }
 ?>
-			<h2><?php echo $lgv_laux.$lgv_lauxMonato." :";?> 
-			<!--a href="#" onClick="window.open('stat-monatoj.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
-			<img src="bildoj/grafiko.png"></a--></h2>
-			<p><?=$lgv_klarigo_lauxMonato?></p>
+			<h2>Répartition par mois :</h2>
+			<p>Entre parenthèses figure une estimation pour le mois en cours</p>
 			<?php stat_monatoj(); ?>		
 		</div>
 	</div>

@@ -23,9 +23,8 @@ function kreiPersonon($enirnomo,$pasvorto,$retadreso,$lingvo) {
      $query = "insert into personoj";
      $query .="(enirnomo,pasvorto,retadreso,ekdato,lingvo) ";
      $query .="values ('$enirnomo','$pasvorto','$retadreso',now(),'$lingvo')";
-     mysql_select_db("ikurso");
-     $result = mysql_query($query) or die ("INSERT : Invalid query :".$query);
-     return mysql_insert_id();
+     $bdd->exec($query);
+     return $bdd->lastInsertId();
 }
 
 // tiu funcio aldonas (aux sxangxas) informojn pri iu
@@ -256,7 +255,7 @@ function vidiKorektantojn($lingvo) {
 function protokolo($persono_id,$kategorio,$teksto) {
    global $lingvo,$bdd;
    $ip = $_SERVER['REMOTE_ADDR'];
-   $query = "insert into protokolo(id,persono_id,horo,ip,kategorio,teksto,lingvo) values ('','$persono_id',now(),'$ip','$kategorio','$teksto','$lingvo')";
+   $query = "insert into protokolo(id,persono_id,horo,ip,kategorio,teksto,lingvo) values ('','$persono_id',now(),'$ip','$kategorio','$teksto','fr')";
    $bdd->exec($query);
 }
 ?>

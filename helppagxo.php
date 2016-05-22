@@ -1,21 +1,21 @@
-<?
+<?php
 include "util.php";
 $pagxtitolo=$lgv_helppagxo;
-$temo=$_GET["temo"];
+$temo=isset($_GET["temo"])?$_GET["temo"]:"";
 if ($temo=="") {$temo="inscription";}
-if ($celpersono_id!="") {$celpersono = apartigiPersonon($celpersono_id);}
+if (isset($celpersono_id)) {$celpersono = apartigiPersonon($celpersono_id);}
 include "pagxkapo.inc.php";
 ?>
 		<div id="enhavo">
 			<ul id="tabnav">
-				<li <?if ($temo=="inscription"){echo "class='aktiva'";}?>><a href="helppagxo.php?temo=inscription">Inscription au cours</a></li>
-				<li <?if ($temo=="suivi"){echo "class='aktiva'";}?>><a href="helppagxo.php?temo=suivi">Suivi des élèves</a></li>
-				<li <?if ($temo=="exemples"){echo "class='aktiva'";}?>><a href="helppagxo.php?temo=exemples">Messages</a></li>
-				<li <?if ($temo=="utilisation"){echo "class='aktiva'";}?>><a href="helppagxo.php?temo=utilisation">Bien utiliser ce site</a></li>
+				<li <?php if ($temo=="inscription"){echo "class='aktiva'";}?>><a href="helppagxo.php?temo=inscription">Inscription au cours</a></li>
+				<li <?php if ($temo=="suivi"){echo "class='aktiva'";}?>><a href="helppagxo.php?temo=suivi">Suivi des élèves</a></li>
+				<li <?php if ($temo=="exemples"){echo "class='aktiva'";}?>><a href="helppagxo.php?temo=exemples">Messages</a></li>
+				<li <?php if ($temo=="utilisation"){echo "class='aktiva'";}?>><a href="helppagxo.php?temo=utilisation">Bien utiliser ce site</a></li>
 			</ul>
 			<div id="kadro">
 				<div class="klarigo">
-				<? if ($temo=="inscription") { ?>
+				<?php if ($temo=="inscription") { ?>
 					<p style="text-align:right"><a href="doc/GuideDuCorrecteur.pdf">Téléchargez le guide du correcteur au format pdf</a></p> 
 					<h2>Inscription au cours</h2>
 					<blockquote><p>
@@ -85,9 +85,9 @@ include "pagxkapo.inc.php";
 						</p></blockquote>
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 	
-					<? } ?>
+					<?php } ?>
 				
-					<? if ($temo=="suivi") { ?>
+					<?php if ($temo=="suivi") { ?>
 						<p style="text-align:right"><a href="doc/GuideDuCorrecteur.pdf">Téléchargez le guide du correcteur au format pdf</a></p> 
 
 						<h2>Suivi des élèves</h2>
@@ -261,9 +261,9 @@ include "pagxkapo.inc.php";
 						</p></blockquote>
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 				
-					<? } ?>
+					<?php } ?>
 			
-					<? if ($temo=="exemples") { ?>
+					<?php if ($temo=="exemples") { ?>
 						<p style="text-align:right"><a href="doc/GuideDuCorrecteur.pdf">Téléchargez le guide du correcteur au format pdf</a></p> 
 
 							<h3>Quelles informations reçoivent les élèves lors de leur inscription ?</h3>
@@ -293,9 +293,9 @@ include "pagxkapo.inc.php";
 						<blockquote><p>
 						Vous trouverez différents exemples de lettres types dans le forum réservé aux correcteurs.
 						</p></blockquote>
-					<? } ?>
+					<?php } ?>
 			
-					<? if ($temo=="utilisation") { ?>
+					<?php if ($temo=="utilisation") { ?>
 		
 						<h2>Mieux utiliser les cours et ce site</h2>
 						<p style="text-align:right"><a href="doc/GuideDuCorrecteur.pdf">Téléchargez le guide du correcteur au format pdf</a></p> 
@@ -342,8 +342,8 @@ include "pagxkapo.inc.php";
 						<blockquote><p>				 
 						Dans ce cas, <a href="http://ikurso.esperanto-jeunes.org/reago.php">n’hésitez pas à nous écrire !</a>
 						</p></blockquote>	
-					<? } ?>
+					<?php } ?>
 				</div>
 		</div>
 	</div>
-<? include "pagxpiedo.inc.php"; ?>
+<?php include "pagxpiedo.inc.php"; ?>

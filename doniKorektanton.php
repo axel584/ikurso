@@ -30,9 +30,9 @@ if (mysql_num_rows($result)>0) {
         $mesagxkapo.="Content-type: text/html;charset=utf-8".chr(13).chr(10);
         $mesagxkapo.="From: ikurso <ikurso@esperanto-jeunes.org".chr(13).chr(10);
         $mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13).chr(10);
-        mail($studantinformoj["retadreso"],$lgv_viaKorektanto,$contents,$mesagxkapo);
+        mail($studantinformoj["retadreso"],"Votre correcteur I-kurso",$contents,$mesagxkapo);
         // sendi mesagxon al la korektanto
-        $filename = "/home/ikurso/public_html/mails/doniKor".$lingvo.".html";
+        $filename = "/home/ikurso/public_html/mails/doniKorFR.html";
         $fd = fopen($filename, "r");
         $contents = fread($fd, filesize ($filename));
         fclose($fd);
@@ -43,7 +43,7 @@ if (mysql_num_rows($result)>0) {
         $mesagxkapo.="Content-type: text/html;charset=utf-8".chr(13).chr(10);
         $mesagxkapo.="From: ikurso <ikurso@esperanto-jeunes.org".chr(13).chr(10);
         $mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13).chr(10);
-        mail($korektantinformoj["retadreso"],$lgv_viaStudanto,$contents,$mesagxkapo);
+        mail($korektantinformoj["retadreso"],"Nouvel élève sur I-kurso",$contents,$mesagxkapo);
         header("Location:administri.php");
 }
 ?>

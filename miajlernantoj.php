@@ -57,8 +57,8 @@ function listiStudantojn() {
 		echo "<form method=\"POST\" action=\"miajlernantoj2.php\">"; 
 		echo "<em>cours suivi&nbsp;:</em><b>".$row2["kursnomo"]."</b><br>";	
 		echo "<em>inscription le : </em>\n";
-		ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["ekdato"],$ekdt);
-		echo $ekdt[3]."/".$ekdt[2]."/".$ekdt[1]."<br>\n";
+		$ekdt = explode("-",$row["ekdato"]);
+		echo $ekdt[2]."/".$ekdt[1]."/".$ekdt[0]."<br>\n";
 		echo "<em>derni&egrave;re le&ccedil;on envoy&eacute;e le : </em>\n";
 		if ($row["lastdato"]==0) {
 			echo "--/--/--<br>\n";
@@ -101,7 +101,7 @@ function listiStudantojn() {
 			$row5 = $result5->fetch();
 			if ($row4["korektanto"]==$persono_id){
 				echo "<a href='forigiNoton.php?noto_id=".$row4['id']."&stud_id=".$row['studanto']."&stud_nomo=".$row['enirnomo']."&pagxo=miajlernantoj.php'>";
-				echo "<img src=\"forum/templates/subSilver/images/icon_delete.gif\" alt=\"Supprimer ce commentaire\" title=\"Supprimer ce commentaire\" border=\"0\" align=\"middle\"></a>";
+				echo "<img src=\"bildoj/icon_delete.gif\" alt=\"Supprimer ce commentaire\" title=\"Supprimer ce commentaire\" border=\"0\" align=\"middle\"></a>";
 			}
 			echo " <em>de ".$row5['enirnomo']." le ".$row4['dato']."</em> :\n";
 			echo " ".stripslashes($row4["teksto"])."\n";

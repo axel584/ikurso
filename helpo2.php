@@ -1,7 +1,7 @@
 <?
 include "util.php";
 malfermidatumbazon();
-$pagxtitolo=$lgv_helpo;
+$pagxtitolo="Aide et informations utiles";
 $temo=$_GET["temo"];
 if ($temo=="") {$temo="faq";}
 $persono_id=$_SESSION["persono_id"];

@@ -1,6 +1,6 @@
 <?php
 include "util.php";
-$pagxtitolo=$lgv_miajlernantoj;
+$pagxtitolo="Mes &eacute;l&egrave;ves";
 $gxisdatigDato="2007-06-16";
 $eksaj=$_GET["eksaj"];
 $farite=$_GET["farite"];
@@ -12,13 +12,12 @@ if (($rajto!='A')&&($rajto!='K')) {header("Location:index.php?erarkodo=4");}
 
 // tiu funkcio konstruas la liston de cxiuj studantoj
 function listiStudantojn() {
-	global $lingvo,$persono_id,$lgv_nekomencita,$lgv_neniuLernanto,$lgv_nuna_leciono,$lgv_ek,$idnoto,$lgv_sekvitakurso,$lgv_haltita,$lgv_finita;
+	global $persono_id,$bdd;
 	$i=0;
 	// studantoj kiu NE jam komencis lerni (stato de nuna_kurso valoras 'N' kiel NE komencita)
 	$demando = "select nuna_kurso.id as kursid,nuna_kurso.studanto as studanto,nuna_kurso.lastdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.lastdato)) as numtagoj1,nuna_kurso.ekdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.ekdato)) as numtagoj2, personoj.id as personid,personoj.enirnomo,personoj.personnomo,personoj.familinomo,personoj.naskigxdato as naskigxdato,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.noto as noto,nuna_kurso.nunleciono,nuna_kurso.kurso as kurso from personoj,nuna_kurso where nuna_kurso.studanto=personoj.id and nuna_kurso.korektanto=$persono_id and (nuna_kurso.stato='K' or nuna_kurso.stato='N') order by nuna_kurso.lastdato desc";
-	mysql_select_db( "ikurso");
-	$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando);
-	while($row = mysql_fetch_array($result)) {		
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while($row = $result->fetch()) {		
 		echo "<div class='lernantoj'>";
 		echo "<div class='nomo'>";
 		echo "<div class='tagoj' style='background: url(bildoj/rond-";
@@ -42,8 +41,9 @@ function listiStudantojn() {
 		
 		// colonne 1: coordonnees
 		echo "<div class='lernanto gauche' style='border:solid #888;border-width:0 1px 1px 0;margin-right:10px;'>";
-		ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["naskigxdato"],$nskdt);
-		echo $nskdt[3]."/".$nskdt[2]."/".$nskdt[1]."<br>";
+		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["naskigxdato"],$nskdt);
+		$nskdt=explode("-",$row["naskigxdato"]);
+		echo $nskdt[2]."/".$nskdt[1]."/".$nskdt[0]."<br>";
 
 		if ($row["adreso1"]!="") echo $row["adreso1"]."<br>";
 		if ($row["adreso2"]!="") echo $row["adreso2"]."<br>";
@@ -52,10 +52,9 @@ function listiStudantojn() {
 		echo "</div><div class='lernanto' style='padding-left:10px;'>";
 
 		// cours suivi
-		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."' and kursoj.lingvo='$lingvo'"; 
-		mysql_select_db( "ikurso");
-		$result2 = mysql_query($demando2) or die (  "SELECT : malbona demando :".$demando2);
-		$row2 = mysql_fetch_array($result2);
+		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."' and kursoj.lingvo='fr'"; 
+		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
+		$row2 = $result2->fetch();
 		echo "<form method=\"POST\" action=\"miajlernantoj2.php\">"; 
 		echo "<em>cours suivi&nbsp;:</em><b>".$row2["kursnomo"]."</b><br>";	
 		echo "<em>inscription le : </em>\n";
@@ -66,24 +65,25 @@ function listiStudantojn() {
 			echo "--/--/--<br>\n";
 		}
 		else{
-			ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["lastdato"],$lstdt);
-			echo $lstdt[3]."/".$lstdt[2]."/".$lstdt[1]."<br>\n";
+			//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["lastdato"],$lstdt);
+			$lstdt = explode("-",$row["lastdato"]);
+			echo $lstdt[2]."/".$lstdt[1]."/".$lstdt[0]."<br>\n";
 		}
 		echo "<select name=\"leciono\">\n";
-		echo "<option value=\"".$row["kursid"]."-N\" >".$lgv_nekomencita."</option>\n";
-		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='$lingvo'";
-		$result3 = mysql_query($demando3) or die (  "INSERT : malbona demando :".$demando3);
-		while($row3 = mysql_fetch_array($result3)) {
+		echo "<option value=\"".$row["kursid"]."-N\" >Pas encore commencé</option>\n";
+		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='fr'";
+		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
+		while($row3 = $result3->fetch()) {
 			// echo $lgv_nuna_leciono." : ".$row3["titolo"]."-".$row3["numero"]."<br>\n";	
 			echo "<option value=\"".$row["kursid"]."-".$row3["numero"]."\" ";
 			if ($row["nunleciono"]==$row3["numero"]) {echo "selected";}
 				echo ">".$row3["titolo"]."</option>\n";
 		}
-		echo "<option value=\"".$row["kursid"]."-F\" >".$lgv_finita."</option>\n";
-		echo "<option value=\"".$row["kursid"]."-H\" >".$lgv_haltita."</option>\n";
+		echo "<option value=\"".$row["kursid"]."-F\" >A fini</option>\n";
+		echo "<option value=\"".$row["kursid"]."-H\" >A abandonné</option>\n";
 		echo "</select>\n";
 		echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
-		echo "<input class=\"bouton\" type=\"submit\" value=\"".$lgv_ek."\">";
+		echo "<input class=\"bouton\" type=\"submit\" value=\"Valider\">";
 		echo "</form>\n";
 
 		// colonne 3: commentaires
@@ -94,12 +94,12 @@ function listiStudantojn() {
 		echo "<em>commentaires du correcteur : </em> <br>";
 		// notoj aldoneblaj per la korektanto
 		$demando4 = "select * from komentoj where komentoj.studanto='".$row["studanto"]."'";
-		$result4 = mysql_query($demando4) or die (  "SELECT : malbona demando :".$demando4);
+		$result4 = $bdd->query($demando4) or die(print_r($bdd->errorInfo()));
 		echo "</em>";
-		while ($row4 = mysql_fetch_array($result4)){
+		while ($row4 = $result4->fetch()){
 			$demando5 = "select enirnomo from personoj where personoj.id='".$row4['korektanto']."'";
-			$result5 = mysql_query($demando5) or die (  "SELECT : malbona demando :".$demando5);
-			$row5 = mysql_fetch_array($result5);
+			$result5 = $bdd->query($demando5) or die(print_r($bdd->errorInfo()));
+			$row5 = $result5->fetch();
 			if ($row4["korektanto"]==$persono_id){
 				echo "<a href='forigiNoton.php?noto_id=".$row4['id']."&stud_id=".$row['studanto']."&stud_nomo=".$row['enirnomo']."&pagxo=miajlernantoj.php'>";
 				echo "<img src=\"forum/templates/subSilver/images/icon_delete.gif\" alt=\"Supprimer ce commentaire\" title=\"Supprimer ce commentaire\" border=\"0\" align=\"middle\"></a>";
@@ -121,19 +121,18 @@ function listiStudantojn() {
 		$i++;
 	}
 	if ($i==0) { 
-			echo "<p>".$lgv_neniuLernanto."</p>";
+			echo "<p>Aucun élève</p>";
 	}
 }
 
 // tiu funkcio konstruas la liston de cxiuj eks-studantoj (haltintaj kaj finintaj)
 function listiEksStudantojn() {
-	global $lingvo,$persono_id,$lgv_nekomencita,$lgv_neniuLernanto,$lgv_nuna_leciono,$lgv_ek,$idnoto,$lgv_sekvitakurso,$lgv_haltita,$lgv_finita,$lgv_repreniLernanton;
+	global $persono_id,$bdd;
 	$i=0;
 	// studantoj kiu NE jam komencis lerni (stato de nuna_kurso valoras 'N' kiel NE komencita)
 	$demando = "select nuna_kurso.id as kursid,nuna_kurso.stato as stato,nuna_kurso.studanto as studanto,nuna_kurso.lastdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.lastdato)) as numtagoj1,nuna_kurso.ekdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.ekdato)) as numtagoj2, personoj.enirnomo,personoj.personnomo,personoj.familinomo,personoj.naskigxdato as naskigxdato,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.noto as noto,nuna_kurso.nunleciono,nuna_kurso.kurso as kurso from personoj,nuna_kurso where nuna_kurso.studanto=personoj.id and nuna_kurso.korektanto=$persono_id and (nuna_kurso.stato='H' or nuna_kurso.stato='F') order by nuna_kurso.lastdato desc";
-	mysql_select_db( "ikurso");
-	$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando);
-	while($row = mysql_fetch_array($result)) {		
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while($row = $result->fetch()) {		
 		echo "<div class='lernantoj'>";
 		echo "<form name='repreni".$row["studanto"]."' method='POST' action='repreniLernanton.php'>";
 		echo "<div class='nomo'>";
@@ -148,15 +147,16 @@ function listiEksStudantojn() {
 			echo "<input type='hidden' name='studanto' value='".$row["studanto"]."'>";
 			echo "<input type='hidden' name='enirnomo' value='".$row["enirnomo"]."'>";
 			echo "<input type='hidden' name='idnunaKurso' value='".$row["kursid"]."'>";
-			echo "<input class='bouton' type='submit' value=\"".$lgv_repreniLernanton."\">";
+			echo "<input class='bouton' type='submit' value=\"Récupérer l’élève\">";
 		}	
 		echo "</div></div>";
 			echo "</form>";
 
 		// colonne 1: coordonnees 
 		echo "<div class='lernanto gauche' style='border:solid #888;border-width:0 1px 1px 0;margin-right:10px;'>";
-		ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["naskigxdato"],$nskdt);
-		echo $nskdt[3]."/".$nskdt[2]."/".$nskdt[1]."<br>";
+		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["naskigxdato"],$nskdt);
+		$nskdt=explode("-",$row["naskigxdato"]);
+		echo $nskdt[2]."/".$nskdt[1]."/".$nskdt[0]."<br>";
 		if ($row["adreso1"]!="") echo $row["adreso1"]."<br>";
 		if ($row["adreso2"]!="") echo $row["adreso2"]."<br>";
 		echo $row["posxtkodo"]." ".$row["urbo"]." ";
@@ -164,17 +164,17 @@ function listiEksStudantojn() {
 		echo "</div><div class='lernanto' style='padding-left:10px;'>";
 
 		// cours suivi
-		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."' and kursoj.lingvo='$lingvo'"; 
-		mysql_select_db( "ikurso");
-		$result2 = mysql_query($demando2) or die (  "SELECT : malbona demando :".$demando2);
-		$row2 = mysql_fetch_array($result2);
+		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."' and kursoj.lingvo='fr'"; 
+		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
+		$row2 = $result2->fetch();
 		echo "<em>cours suivi&nbsp;:</em><b>".$row2["kursnomo"]."</b><br>";	
 		echo "<em>inscription le : </em>\n";
-		ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["ekdato"],$ekdt);
+		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["ekdato"],$ekdt);
+		$ekdt=explode("-",$row["ekdato"]);
 		echo $ekdt[3]."/".$ekdt[2]."/".$ekdt[1]."<br>\n";
-		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='$lingvo' and lecionoj.numero='".$row['nunleciono']."'";
-		$result3 = mysql_query($demando3) or die (  "INSERT : malbona demando :".$demando3);
-		$row3 = mysql_fetch_array($result3);
+		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='fr' and lecionoj.numero='".$row['nunleciono']."'";
+		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
+		$row3 = $result3->fetch();
 		echo "<em>derni&egrave;re le&ccedil;on : </em>".$row3['titolo']."<br>";
 		if ($row["stato"]=='F'){echo "<em>fin du cours le : </em>\n";}
 		else {echo "<em>abandon le : </em>\n";}
@@ -182,8 +182,9 @@ function listiEksStudantojn() {
 			echo "--/--/--<br>\n";
 		}
 		else{
-			ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["lastdato"],$lstdt);
-			echo $lstdt[3]."/".$lstdt[2]."/".$lstdt[1]."<br>\n";
+			//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["lastdato"],$lstdt);
+			$lstdt = explode("-",$row["lastdato"]);
+			echo $lstdt[2]."/".$lstdt[1]."/".$lstdt[0]."<br>\n";
 		}
 
 		// colonne 3: commentaires
@@ -193,11 +194,11 @@ function listiEksStudantojn() {
 		echo "<em>commentaires du correcteur :</em><br>";
 		// notoj aldoneblaj per la korektanto
 		$demando4 = "select * from komentoj where komentoj.studanto='".$row["studanto"]."'";
-		$result4 = mysql_query($demando4) or die (  "SELECT : malbona demando :".$demando4);
-		while ($row4 = mysql_fetch_array($result4)){
+		$result4 = $bdd->query($demando4) or die(print_r($bdd->errorInfo()));
+		while ($row4 = $result4->fetch()){
 			$demando5 = "select enirnomo from personoj where personoj.id='".$row4['korektanto']."'";
-			$result5 = mysql_query($demando5) or die (  "SELECT : malbona demando :".$demando5);
-			$row5 = mysql_fetch_array($result5);
+			$result5 = $bdd->query($demando5) or die(print_r($bdd->errorInfo()));
+			$row5 = $result5->fetch();
 			if ($row4["korektanto"]==$persono_id){
 				echo "<a href='forigiNoton.php?noto_id=".$row4['id']."&stud_id=".$row['studanto']."&stud_nomo=".$row['enirnomo']."&pagxo=miajlernantoj.php'>";
 				echo "<img src=\"forum/templates/subSilver/images/icon_delete.gif\" alt=\"Supprimer ce commentaire\" title=\"Supprimer ce commentaire\" border=\"0\" align=\"middle\"></a>";
@@ -219,16 +220,16 @@ function listiEksStudantojn() {
 		$i++;
 	}
 	if ($i==0) { 
-			echo "<p>".$lgv_neniuLernanto."</p>";
+			echo "<p>Aucun élève</p>";
 	}
 }
 include "pagxkapo.inc.php";
 ?>
 		<div id="enhavo">
 			<ul id="tabnav">
-				<li <?if ($eksaj=="no") {echo " class='aktiva'";}?>><a href="miajlernantoj.php"><?=$lgv_nunajLernantoj?></a></li>
-				<li <?if ($eksaj=="jes") {echo " class='aktiva'";}?>><a href="miajlernantoj.php?eksaj=jes"><?=$lgv_eksajLernantoj?></a></li>
-				<li><a href="sxangxiNBlernantoj.php"><?=$lgv_sxangiNBlernantoj?></a></li>
+				<li <?if ($eksaj=="no") {echo " class='aktiva'";}?>><a href="miajlernantoj.php">élèves en cours</a></li>
+				<li <?if ($eksaj=="jes") {echo " class='aktiva'";}?>><a href="miajlernantoj.php?eksaj=jes">Anciens élèves</a></li>
+				<li><a href="sxangxiNBlernantoj.php">Modifier le nombre d’élèves</a></li>
 		</ul>
 		<div id="kadro">
 			<? if ($farite=="jes") { ?>
@@ -240,10 +241,10 @@ include "pagxkapo.inc.php";
 			</div>
 
     		<? if ($eksaj=="jes"){
-    			echo "<h2>".$lgv_eksajLernantoj."</h2>";
+    			echo "<h2>Anciens élèves</h2>";
     			listiEksStudantojn();
 			} else {
-				echo "<h2>".$lgv_nunajLernantoj."</h2>";
+				echo "<h2>élèves en cours</h2>";
 				listiStudantojn();
 			}
 			?>

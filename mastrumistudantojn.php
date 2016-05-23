@@ -17,21 +17,20 @@ header("Pragma: no-cache"); // HTTP/1.0
 
 // tiu funkcio konstruas la liston de cxiuj studantojn
 function listiStudantojn() {
-     global $lingvo,$persono_id,$lgv_nekomencita,$lgv_haltita,$lgv_finita;
+     global $persono_id,$bdd;
      $i=1;
      $demando =  "select nuna_kurso.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,nuna_kurso.nunleciono,nuna_kurso.kurso from personoj,nuna_kurso where nuna_kurso.studanto=personoj.id and nuna_kurso.korektanto=$persono_id and (nuna_kurso.stato='K' or nuna_kurso.stato='N')";
-     mysql_select_db( "ikurso");
-     $result = mysql_query($demando) or die (  "INSERT : malbona demando :".$demando);
+     $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
      echo "<input type=\"hidden\" name=\"maksimumo\" value=\"".mysql_num_rows($result)."\">";
-     while($row = mysql_fetch_array($result)) {
+     while($row = $result->fetch()) {
         echo "<tr>";
         echo "<td class=\"normala\" width=\"50%\">";
         echo $row["enirnomo"]." (".$row["personnomo"]." ".$row["familinomo"].")";
         echo "</td><td><select name=\"studanto".$i."\">";
         echo "<option value=\"".$row["id"]."-N\" >N’ont pas encore commencé</option>";
         $demando2="select lecionoj.titolo,lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='$lingvo'";
-        $result2=mysql_query($demando2) or die (  "SELECT : malbona demando :".$demando);
-        while($row2 = mysql_fetch_array($result2)) {
+        $result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
+        while($row2 = $result2->fetch()) {
                 echo "<option value=\"".$row["id"]."-".$row2["numero"]."\" ";
                 if ($row["nunleciono"]==$row2["numero"]) { echo "selected";}
                 echo ">".$row2["titolo"]."</option>\n";
@@ -56,7 +55,7 @@ function listiStudantojn() {
 	pagxkapo();
 	menuo($persono["enirnomo"],$persono["rajtoj"]);
 ?>
-<? 
+<?php 
 /*
 <table align="center" width="80%">
 <tr><td style="color:red">
@@ -83,7 +82,7 @@ function listiStudantojn() {
 	<form name="studantojlisto" action="mastrumistudantojn2.php" method="POST">
   <table border="0" cellspacing="0" cellpadding="0" width="100%">
 
-  <? listiStudantojn(); ?>
+  <?php listiStudantojn(); ?>
   <td align="center"  colspan="2">
 		<input type="submit" value="Envoyer">
 

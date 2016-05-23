@@ -66,7 +66,7 @@ echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
 			<?php } ?>
 			<?php if ($rajto=="A"){ ?>
 				<td class="elemento">
-					<h2><?=$lgv_administranta?></h2>
+					<h2>Administrateur</h2>
 					<p><a href="<?php echo $vojo."stirpanelo.php";?>">Panneau de contr&ocirc;le</a></p>
 					<p><a href="<?php echo $vojo."administri.php";?>">G&eacute;rer les utilisateurs</a></p>
 				</td>

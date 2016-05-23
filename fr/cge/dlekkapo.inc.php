@@ -146,13 +146,13 @@ include "../../pagxkapo.inc.php";
 			<div id="kadro">
 				<h2><?=$titolo;?></h2>
 				<?php			
-				if ($erarkodo=="1") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro1</span></div>";}
-				if ($erarkodo=="2") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro2</span></div>";}
-				if ($erarkodo=="3") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro3</span></div>";}
-				if ($erarkodo=="6") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro6</span></div>";}
-				if ($erarkodo=="7") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro7</span></div>";}
-				if ($erarkodo=="8") {echo "<div class=\"eraro\"><span class=\"eraro\">$lgv_eraro8</span></div>";}
-				if ($erarkodo=="13") {echo "<div class=\"eraro\"><span class=\"eraro\">$noto : $lgv_eraro13</span></div>";} 
+				if ($erarkodo=="1") {echo "<div class=\"eraro\"><span class=\"eraro\">Le mot de passe ou l’identifiant est erroné</span></div>";}
+				if ($erarkodo=="2") {echo "<div class=\"eraro\"><span class=\"eraro\">Vous n’avez pas rempli toutes les données obligatoires du formulaire d’inscription</span></div>";}
+				if ($erarkodo=="3") {echo "<div class=\"eraro\"><span class=\"eraro\">Vous avez tapé deux mots de passe différents</span></div>";}
+				if ($erarkodo=="6") {echo "<div class=\"eraro\"><span class=\"eraro\">Adresse électronique invalide</span></div>";}
+				if ($erarkodo=="7") {echo "<div class=\"eraro\"><span class=\"eraro\">Cet identifiant existe déjà. Veuillez en choisir un autre, merci</span></div>";}
+				if ($erarkodo=="8") {echo "<div class=\"eraro\"><span class=\"eraro\">Votre session a expiré, veuillez vous identifier.</span></div>";}
+				if ($erarkodo=="13") {echo "<div class=\"eraro\"><span class=\"eraro\">$noto : Le résultat du QCM n’est pas suffisant. Veuillez recommencer.</span></div>";} 
 				
 				if (($temo!="intro") && ($numcxap!="01")) {
 				?>

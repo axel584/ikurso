@@ -1,4 +1,4 @@
-<?
+<?php
 include "lingvo.inc.php";
 include "db.inc.php";
 include "webui.inc.php";
@@ -28,7 +28,7 @@ function listiStudantojn() {
         echo "<td class=\"normala\" width=\"50%\">";
         echo $row["enirnomo"]." (".$row["personnomo"]." ".$row["familinomo"].")";
         echo "</td><td><select name=\"studanto".$i."\">";
-        echo "<option value=\"".$row["id"]."-N\" >".$lgv_nekomencita."</option>";
+        echo "<option value=\"".$row["id"]."-N\" >N’ont pas encore commencé</option>";
         $demando2="select lecionoj.titolo,lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='$lingvo'";
         $result2=mysql_query($demando2) or die (  "SELECT : malbona demando :".$demando);
         while($row2 = mysql_fetch_array($result2)) {
@@ -36,8 +36,8 @@ function listiStudantojn() {
                 if ($row["nunleciono"]==$row2["numero"]) { echo "selected";}
                 echo ">".$row2["titolo"]."</option>\n";
            }
-        echo "<option value=\"".$row["id"]."-H\" >".$lgv_haltita."</option>";
-        echo "<option value=\"".$row["id"]."-F\" >".$lgv_finita."</option>";
+        echo "<option value=\"".$row["id"]."-H\" >Ont abandonné</option>";
+        echo "<option value=\"".$row["id"]."-F\" >Ont fini le cours</option>";
         $i++;
         echo "</select></td></tr>";
      }
@@ -51,8 +51,8 @@ function listiStudantojn() {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" dir="<? echo $lgv_direkto; ?>" <? if ($validi=="jes") { echo "onLoad=\"window.alert('".$lgv_datumsavo."');\""; } ?>>
-<?
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" <?php if ($validi=="jes") { echo "onLoad=\"window.alert('Vos données ont été enregistrées');\""; } ?>>
+<?php
 	pagxkapo();
 	menuo($persono["enirnomo"],$persono["rajtoj"]);
 ?>
@@ -72,7 +72,7 @@ function listiStudantojn() {
   <table border="0" cellspacing="0" cellpadding="0">
   <tr>
   <td nowrap>
-  <div align="center" class="titolo"><? echo $lgv_zorgistudantojn; ?></div>
+  <div align="center" class="titolo">Mes &eacute;l&egrave;ves</div>
   </td>
   </tr>
   <tr>
@@ -85,7 +85,7 @@ function listiStudantojn() {
 
   <? listiStudantojn(); ?>
   <td align="center"  colspan="2">
-		<input type="submit" value="<? echo $lgv_sendu; ?>">
+		<input type="submit" value="Envoyer">
 
   </td>
   </table>

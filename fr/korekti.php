@@ -78,7 +78,7 @@ function PorInformistoj() {
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		// envoyer le mail eleve pour l'inviter a attendre un correcteur.
 		if ($verdakrabo=="on"){$objekto="Un de plus chez le Crabe Vert";}
-		else {$objekto=$lgv_viaStudanto;}
+		else {$objekto="Nouvel élève sur I-kurso";}
 		mail($informistoj,$objekto,$contents,$mesagxkapo);
 		protokolo($persono_id,"VERDA KRABO","$retadreso : $verdakrabo");
 }
@@ -248,7 +248,7 @@ if ($jamaligxi=="jes") {
 		$mesagxkapo.="Return-Path: <ikurso@esperanto-jeunes.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		// envoyer mail eleve pour l'inciter a attendre un correcteur
-		if (!mail($persono["retadreso"],$lgv_bonvenon_gerda,$contents,$mesagxkapo)) {
+		if (!mail($persono["retadreso"],"Bienvenue au cours Gerda malaperis",$contents,$mesagxkapo)) {
 			protokolo($persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$persono["retadreso"]);
 		}
 		// mail aux informateurs si nouvel eleve Gerda
@@ -344,7 +344,7 @@ if ($jamaligxi=="jes") {
 			$mesagxkapo.="Return-Path: <ikurso@esperanto-jeunes.org>\n";
 			$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 			// envoyer le mail eleve pour l'inviter a attendre un correcteur.
-			if (!mail($retadreso,$lgv_bonvenon,$contents,$mesagxkapo)) {
+			if (!mail($retadreso,"Bienvenue sur I-kurso",$contents,$mesagxkapo)) {
 				protokolo($persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$retadreso);
 				$protokolo = new protokolo;
 				$protokolo->set_persono_id($nova_persono_id);

@@ -370,12 +370,12 @@ function savData(lien) {
 			</ul>
 			<div id="kadro">
 				<?php			
-				if ($erarkodo=="1") {echo "<span class=\"eraro\"><br>$lgv_eraro1</span>";}
-				if ($erarkodo=="2") {echo "<span class=\"eraro\"><br>$lgv_eraro2</span>";}
-				if ($erarkodo=="3") {echo "<span class=\"eraro\"><br>$lgv_eraro3</span>";}
-				if ($erarkodo=="6") {echo "<span class=\"eraro\"><br>$lgv_eraro6</span>";}
-				if ($erarkodo=="7") {echo "<span class=\"eraro\"><br>$lgv_eraro7</span>";}
-				if ($erarkodo=="8") {echo "<span class=\"eraro\"><br>$lgv_eraro8</span>";}
+				if ($erarkodo=="1") {echo "<span class=\"eraro\"><br>Le mot de passe ou l’identifiant est erroné</span>";}
+				if ($erarkodo=="2") {echo "<span class=\"eraro\"><br>Vous n’avez pas rempli toutes les données obligatoires du formulaire d’inscription</span>";}
+				if ($erarkodo=="3") {echo "<span class=\"eraro\"><br>Vous avez tapé deux mots de passe différents</span>";}
+				if ($erarkodo=="6") {echo "<span class=\"eraro\"><br>Adresse électronique invalide</span>";}
+				if ($erarkodo=="7") {echo "<span class=\"eraro\"><br>Cet identifiant existe déjà. Veuillez en choisir un autre, merci</span>";}
+				if ($erarkodo=="8") {echo "<span class=\"eraro\"><br>Votre session a expiré, veuillez vous identifier.</span>";}
 				?>
 				<?php if (($parto=="ek")&&($numcxap!="01")){
 					// ce qui suit ne s'applique pas la première fois

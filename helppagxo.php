@@ -1,6 +1,6 @@
 <?php
 include "util.php";
-$pagxtitolo=$lgv_helppagxo;
+$pagxtitolo="Guide du correcteur";
 $temo=isset($_GET["temo"])?$_GET["temo"]:"";
 if ($temo=="") {$temo="inscription";}
 if (isset($celpersono_id)) {$celpersono = apartigiPersonon($celpersono_id);}

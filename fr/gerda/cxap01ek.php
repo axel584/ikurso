@@ -100,12 +100,12 @@ include "gerdakapo.inc.php";
 					</tr>
 					<tr>
 						<td>&nbsp;</td>
-						<td align="center"><input class="bouton" type="submit" name="Submit" value="<?php echo $lgv_sendu; ?>"></td>
+						<td align="center"><input class="bouton" type="submit" name="Submit" value="Envoyer"></td>
 					</tr>
 					<tr>
 						<td colspan="2">
 							<p><a href="#formularo" onClick="window.open('../../pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');">
-							<i><?php echo $lgv_pasvortoForgesita; ?> ? : <?php echo $lgv_alklaku; ?></i></a></p>
+							<i>Mot de passe oubli&eacute; ? : Cliquez ici</i></a></p>
 						</td>
 					</tr>
 				</table>

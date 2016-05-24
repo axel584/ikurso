@@ -15,22 +15,7 @@ if ($persono_id) {
 }
 include "pagxkapo.inc.php";
 ?>
-<div id="enhavo">
-		<?php if ($erarkodo=="1") { // mot de passe incorrect : on propose d'envoyer son mot de passe par mail
-			echo '<form target="_NEW" name="pasvorto" method="post" action="pasvortoforgesita2.php">';
-			echo '<p class="eraro"><i>Le mot de passe ou l’identifiant est erroné</i></p>';
-			echo '<p class="eraro"><i>Pour recevoir votre mot de passe, <br/>indiquez votre adresse &eacute;lectronique :</i><br/><input type="text" name="retadreso" size="60"></p><input class="bouton" type="submit" value="Valider">';
-			echo '</form>';
-		}
-		?>
-		<?php if ($erarkodo=="4") echo "<p class='eraro'><i>Vous n’avez pas les droits pour accéder à cette page.</i></p>"; ?>
-		<?php if ($erarkodo=="8") {
-			if ($_COOKIE["PHPSESSID"]=="") {echo "<p class='eraro'><i>Vous devez activer les cookies pour utiliser ce site</i></p>";}
-			else {echo "<p class='eraro'><i>Votre session a expiré, veuillez vous identifier.</i></p>";}
-		}
-		?>
-		<?php if ($erarkodo=="12") echo "<p class='eraro'><i>Vous êtes déjà inscrit - essayez de vous connecter, merci</i></p>"; ?>
-
+	<div id="enhavo">
 		<p>L’association <a href="http://esperanto-jeunes.org">Espéranto-Jeunes</a> propose trois cours par Internet,  
 		pour lesquels elle a mis en place un service de correction gratuit :</p>
 
@@ -102,4 +87,19 @@ include "pagxkapo.inc.php";
 			</tr>
 		</table>
 	</div>
+	<?php if ($erarkodo=="1") { // mot de passe incorrect : on propose d'envoyer son mot de passe par mail
+	echo '<div class="atentigo"><form target="_NEW" name="pasvorto" method="post" action="pasvortoforgesita2.php">';
+	echo '<p class="eraro">Le mot de passe ou l’identifiant est erroné.</p>';
+	echo '<p class="eraro">Pour recevoir votre mot de passe, <br/>indiquez votre adresse &eacute;lectronique :<br/><input type="text" name="retadreso" size="60"></p><input class="bouton" type="submit" value="Valider">';
+	echo '</form></div>';
+	}
+	?>
+	<?php if ($erarkodo=="4") echo "<div class='atentigo'><p class='eraro'>Vous n’avez pas les droits pour accéder à cette page.</p></div>"; ?>
+	<?php if ($erarkodo=="8") {
+		if ($_COOKIE["PHPSESSID"]=="") {echo "<div class='atentigo'><p class='eraro'>Vous devez activer les cookies pour utiliser ce site.</p></div>";}
+		else {echo "<div class='atentigo'><p class='eraro'>Votre session a expiré, veuillez vous identifier.</p></div>";}
+	}
+	?>
+	<?php if ($erarkodo=="12") echo "<div class='atentigo'><p class='eraro'>Vous êtes déjà inscrit - essayez de vous connecter, merci.</p></div>"; ?>
+
 <?php include "pagxpiedo.inc.php";?>

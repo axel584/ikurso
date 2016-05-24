@@ -1,6 +1,7 @@
 # coding: utf-8
 import MySQLdb
 import codecs
+import sys
 
 sortie = codecs.open('res-convert.txt','w','utf8')
 sortieSql = codecs.open('convert.sql','w','utf8')
@@ -33,6 +34,15 @@ def convert2utf8(texte) :
 	texte = texte.replace(u'\u00C2\u00AE',u'\uC2AE')
 	texte = texte.replace(u'\u00C2\u00AF',u'\uC2AF')
 	texte = texte.replace(u'\u00C2\u00B0',u'\uC2B0')
+	texte = texte.replace(u'\u00C2\u00B1',u'\uC2B1')
+	texte = texte.replace(u'\u00C2\u00B2',u'\uC2B2')
+	texte = texte.replace(u'\u00C2\u00B3',u'\uC2B3')
+	texte = texte.replace(u'\u00C2\u00B4',u'\uC2B4')
+	texte = texte.replace(u'\u00C2\u00B5',u'\uC2B5')
+	texte = texte.replace(u'\u00C2\u00B6',u'\uC2B6')
+	texte = texte.replace(u'\u00C2\u00B7',u'\uC2B7')
+	texte = texte.replace(u'\u00C2\u00B8',u'\uC2B8')
+	texte = texte.replace(u'\u00C2\u00B9',u'\uC2B9')
 	texte = texte.replace(u'\u00C2\u00BA',u'\uC2BA')
 	texte = texte.replace(u'\u00C2\u00BB',u'\uC2BB')
 	texte = texte.replace(u'\u00C3\u0089',u'É')	
@@ -47,6 +57,11 @@ def convert2utf8(texte) :
 	texte = texte.replace(u'\u00C3\u0088',u'\uC388')
 	texte = texte.replace(u'\u00C3\u0089',u'\uC389')
 	texte = texte.replace(u'\u00C3\u008A',u'\uC38A')
+	texte = texte.replace(u'\u00C3\u008B',u'\uC38B')
+	texte = texte.replace(u'\u00C3\u008C',u'\uC38C')
+	texte = texte.replace(u'\u00C3\u008D',u'\uC38D')
+	texte = texte.replace(u'\u00C3\u008E',u'\uC38E')
+	texte = texte.replace(u'\u00C3\u008F',u'\uC38F')
 	texte = texte.replace(u'\u00C3\u00A1',u'á')
 	texte = texte.replace(u'\u00C3\u00A2',u'â')
 	texte = texte.replace(u'\u00C3\u00A7',u'ç')	
@@ -54,6 +69,8 @@ def convert2utf8(texte) :
 	texte = texte.replace(u'\u00C3\u008E',u'\uC38E')
 	texte = texte.replace(u'\u00C3\u008F',u'\uC38F')
 	texte = texte.replace(u'\u00C3\u0094',u'\uC394')
+	texte = texte.replace(u'\u00C3\u0095',u'\uC395')
+	texte = texte.replace(u'\u00C3\u0096',u'\uC396')
 	texte = texte.replace(u'\u00C3\u009C',u'\uC39C')
 	texte = texte.replace(u'\u00C3\u009D',u'\uC39D')
 	texte = texte.replace(u'\u00C3\u009E',u'\uC39E')
@@ -61,9 +78,8 @@ def convert2utf8(texte) :
 	texte = texte.replace(u'\u00C3\u00A2',u'\uC3A2')
 	texte = texte.replace(u'\u00C3\u00A3',u'\uC3A3')
 	texte = texte.replace(u'\u00C3\u00A4',u'\uC3A4')
-	texte = texte.replace(u'\u00C3\u00A8',u'è')
+	texte = texte.replace(u'\u00C3\u00A8',u'\u00E8') # e grave
 	texte = texte.replace(u'\u00C3\u00A9',u'é')
-	texte = texte.replace(u'\u00EF\u00BF\u00BD',u'é')
 	texte = texte.replace(u'\u00C3\u00AA',u'ê')
 	texte = texte.replace(u'\u00C3\u00AB',u'ë')
 	texte = texte.replace(u'\u00C3\u00AC',u'\uC3AC')
@@ -80,22 +96,45 @@ def convert2utf8(texte) :
 	texte = texte.replace(u'\u00C3\u00BA',u'ú')
 	texte = texte.replace(u'\u00C3\u00BB',u'û')
 	texte = texte.replace(u'\u00C3\u00BC',u'\uC3BC')
-	texte = texte.replace(u'\u00C4\u006f',u'ĝ')
-	texte = texte.replace(u'\u00C4\u009D',u'ĝ')
-	texte = texte.replace(u'\u00C4\u009C',u'Ĝ')
-	texte = texte.replace(u'\u00C4\u0089',u'ĉ')
+	texte = texte.replace(u'\u00C4\u006f',u'\uC46F')
+	texte = texte.replace(u'\u00C4\u009B',u'\uC49B')
+	
+	texte = texte.replace(u'\u00C4\u009E',u'\uC49E')
+	texte = texte.replace(u'\u00C4\u009F',u'\uC49F')
+	#texte = texte.replace(u'\u00C4\u0088',u'\u0108') # Cx
+	#texte = texte.replace(u'\u00C4\u0089',u'\u0109') # cx
+	# texte = texte.replace(u'Äˆ',u'Ĉ') # Cx
+	# texte = texte.replace(u'Ä‰e',u'ĉ') # cx
+	texte = texte.replace(u'Äˆ',u'\u0108') # Cx
+	texte = texte.replace(u'Ä‰',u'\u0109') # cx
+	texte = texte.replace(u'\u00C4\u009C',u'\u011C') # Gx
+	texte = texte.replace(u'\u00C4\u009D',u'\u011D') # gx	
+	texte = texte.replace(u'\u00C4\u00A0',u'\uC4A0')
+	texte = texte.replace(u'\u00C4\u00A1',u'\uC4A1')
+	texte = texte.replace(u'\u00C4\u00A2',u'\uC4A2')
+	texte = texte.replace(u'\u00C4\u00A3',u'\uC4A3')
+	texte = texte.replace(u'\u00C4\u00A4',u'\u0124') # Hx
+	texte = texte.replace(u'\u00C4\u00A5',u'\u0125') # hx
+	texte = texte.replace(u'\u00C4\u00A6',u'\uC4A6')
+	texte = texte.replace(u'\u00C4\u00A7',u'\uC4A7')
+	texte = texte.replace(u'\u00C4\u00A8',u'\uC4A8')
+	texte = texte.replace(u'\u00C4\u00A9',u'\uC4A9')
 	texte = texte.replace(u'\u00C4\u00B0',u'\uC4B0')
-	texte = texte.replace(u'\u00C4\u00B4',u'\uC4B4')
-	texte = texte.replace(u'\u00C4\u00B5',u'\uC4B5')
+	texte = texte.replace(u'\u00C4\u00B4',u'\u0134') # Jx
+	texte = texte.replace(u'\u00C4\u00B5',u'\u0135') # jx
 	texte = texte.replace(u'\u00C4\u00B6',u'\uC4B6')
-	texte = texte.replace(u'\u00C5\u009D',u'ŝ')
-	texte = texte.replace(u'\u00C5\u00ad',u'ŭ')
+	texte = texte.replace(u'\u00C5\u00AC',u'\u016C') # Ux
+	texte = texte.replace(u'\u00C5\u00AD',u'ŭ')
 	texte = texte.replace(u'\u00C5\u00BA',u'\uC5BA')
-	texte = texte.replace(u'\u00C5\u0093',u'oe')
-	texte = texte.replace(u'\u00C5\u009C',u'\uC59C')
+	texte = texte.replace(u'\u00C5\u0092',u'\u0152') # OE
+	texte = texte.replace(u'\u00C5\u0093',u'\u0153') # oe
+	texte = texte.replace(u'\u00C5\u009C',u'\u015C') # Sx
+	texte = texte.replace(u'\u00C5\u009D',u'\u015D') # sx
 	texte = texte.replace(u'\u00C5\u009F',u'\uC59F')
 	texte = texte.replace(u'\u00C9\u00B4',u'\uC9B4')
-	texte = texte.replace(u'\u00e2\u0080\u0099',u'\'')
+	texte = texte.replace(u'\u00e2\u0080\u0099',u'\'')	
+	texte = texte.replace(u'â€™',u'\'')	
+
 	i=0
 	for car in texte :
 		#if ord(car)>125 and ord(car)<220 and ord(car)!=201 :
@@ -108,10 +147,34 @@ def convert2utf8(texte) :
 
 	#return texte.decode('utf8')
 
-connection = MySQLdb.connect (host = "127.0.0.1",user = "jefo",passwd = "***REMOVED***",db = "ikurso",use_unicode=True)
+def decodeUtf8Utf8(octets):
+	if octets==None :
+		return octets
+	if type(octets)==long:
+		return octets
+	try :	 
+		return octets.decode("utf8").encode("latin1").decode("utf8")
+	except UnicodeEncodeError :
+		return octets
+
+
+def debug(texte) :
+	res= ""
+	for lettre in texte :
+		if ord(lettre)>193 and ord(lettre)<200 :
+			res = res + " ===>>> " + lettre+" "+hex(ord(lettre))+" "
+		else :
+		 	res = res + lettre
+		if ord(lettre)==13:
+			print res
+			res=""
+
+connection = MySQLdb.connect (host = "127.0.0.1",user = "jefo",passwd = "***REMOVED***",db = "ikurso",charset = 'utf8',use_unicode=True)
 cursor = connection.cursor()
 cursor2 = connection.cursor()
 
+# conversion de tables
+cursor.execute("ALTER TABLE eraraj_lecionoj CONVERT TO CHARACTER SET utf8")
 
 
 def convertTable(table,clef,colonnes) :
@@ -126,6 +189,7 @@ def convertTable(table,clef,colonnes) :
 		numeroDeColonne = 0
 		for element in colonnes :
 			if row[numeroDeColonne+1] :
+				#contenuDeColonne = "'"+MySQLdb.escape_string(row[numeroDeColonne+1])+"'"
 				contenuDeColonne = "'"+row[numeroDeColonne+1].replace("\\","\\\\").replace("'","\\'").replace('\"','\\"')+"'"
 			else :
 				contenuDeColonne="NULL"	
@@ -137,8 +201,15 @@ def convertTable(table,clef,colonnes) :
 		try :
 			cursor2.execute(requete)
 		except :
-			print "requete impossible pour la clef "+clef
+			print "requete impossible pour la clef ",row[0]
+			e = sys.exc_info()[0]
+			print "erreur :",e
+			print requete
 
 convertTable("personoj","id",['enirnomo','pasvorto','personnomo','familinomo','adreso1','adreso2','urbo','kialo'])
+convertTable("komentoj","id",['teksto'])
+convertTable("eraraj_lecionoj","id",['enirnomo','fonto']); 
+convertTable("komentoj","id",['teksto']); 
+convertTable("vikio","name",['text']);
 
 sortie.close()

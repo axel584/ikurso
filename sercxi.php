@@ -90,8 +90,8 @@ include "adminkapo.inc.php";
 				<li><a href="administri.php?kategorio=I">Informateurs</a></li>
 			</ul>
 			<div id="kadro">
-				<?php if ($erarkodo=="9") echo "<p class='eraro'><i>$lgv_eraro9</i></p>"; ?>
-				<?php if ($erarkodo=="11") echo "<p class='eraro'><i>$lgv_eraro11</i></p>"; ?>
+				<?php if ($erarkodo=="9") echo "<div class='atentigo'><p class='eraro'>$lgv_eraro9</p></div>"; ?>
+				<?php if ($erarkodo=="11") echo "<div class='atentigo'><p class='eraro'>$lgv_eraro11</p></div>"; ?>
 			
 			<div id="adminG">
 

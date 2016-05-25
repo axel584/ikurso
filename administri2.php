@@ -11,7 +11,7 @@ $celpersono_id=isset($_POST["celpersono_id"])?$_POST["celpersono_id"]:"";
 echo $celpersono_id;
 if ($celpersono_id!="") { $celpersono = apartigiPersonon($celpersono_id);}
 if ($persono["rajtoj"]!='A'){header("Location:index.php?erarkodo=4");}
-$sekso=$_POST["sekso"];
+$sekso=isset($_POST["sekso"])?$_POST["sekso"]:"";
 $celenirnomo=$_POST["celenirnomo"];
 $familinomo=addslashes($_POST["familinomo"]);
 $personnomo=addslashes($_POST["personnomo"]);
@@ -20,7 +20,7 @@ $adreso2=addslashes($_POST["adreso2"]);
 $pasvorto=$_POST["pasvorto"];
 $posxtkodo=$_POST["posxtkodo"];
 $urbo=$_POST["urbo"];
-$lando=$_POST["lando"];
+$lando=isset($_POST["lando"])?$_POST["lando"]:"";
 $retadreso=$_POST["retadreso"];
 $sistemo=$_POST["sistemo"];
 $naskigxdato_jaro=$_POST["naskigxdato_jaro"];
@@ -41,84 +41,85 @@ header("Pragma: no-cache"); // HTTP/1.0
 if ($celpersono["sekso"]!=$sekso) { 
    // update en la normala datumbazo
    $query = "update personoj set sekso='$sekso' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["enirnomo"]!=$celenirnomo) { 
 	// update en la normala datumbazo
    $query = "update personoj set enirnomo='$celenirnomo'  where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["familinomo"]!=$familinomo) { 
 	// update en la normala datumbazo
    $query = "update personoj set familinomo='$familinomo' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["personnomo"]!=$personnomo) { 
 	// update en la normala datumbazo
    $query = "update personoj set personnomo='$personnomo' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["adreso1"]!=$adreso1) { 
 	// update en la normala datumbazo
    $query = "update personoj set adreso1='$adreso1' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 if ($celpersono["adreso2"]!=$adreso2) { 
 	// update en la normala datumbazo
    $query = "update personoj set adreso2='$adreso2' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["pasvorto"]!=$pasvorto) { 
 	// update en la normala datumbazo
    $query = "update personoj set pasvorto='$pasvorto' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["posxtkodo"]!=$posxtkodo) { 
 	// update en la normala datumbazo
    $query = "update personoj set posxtkodo='$posxtkodo' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["urbo"]!=$urbo) { 
 	// update en la normala datumbazo
    $query = "update personoj set urbo='$urbo' where id=$celpersono_id";
    echo $query;
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["lando"]!=$lando) { 
 	// update en la normala datumbazo
    $query = "update personoj set lando='$lando' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["retadreso"]!=$retadreso) { 
 	// update en la normala datumbazo
    $query = "update personoj set retadreso='$retadreso' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 if ($celpersono["sistemo"]!=$sistemo) {
 	// update en la normala datumbazo
    $query = "update personoj set sistemo='$sistemo' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["stop_info"]!=$stopInfo) {
 	// update en la normala datumbazo
    $query = "update personoj set stop_info='$stopInfo' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["naskigxdato"]!=$naskigxdato_jaro."-".$naskigxdato_monato."-".$naskigxdato_tago) { 
-	// update en la normala datumbazo
-   $query = "update personoj set naskigxdato='$naskigxdato_jaro-$naskigxdato_monato-$naskigxdato_tago' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+	if ($naskigxdato_tago!="" && $naskigxdato_monato!="" && $naskigxdato_jaro!="") {
+      $query = "update personoj set naskigxdato='$naskigxdato_jaro-$naskigxdato_monato-$naskigxdato_tago' where id=$celpersono_id";
+      $result = $bdd->exec($query);
+   }
 }
 
 if ($celpersono["rajtoj"]!=$rajtoj) { 
@@ -141,14 +142,13 @@ if ($celpersono["rajtoj"]!=$rajtoj) {
 if ($celpersono["kialo"]!=$kialo) { 
 	// update en la normala datumbazo
    $query = "update personoj set kialo='$kialo' where id=$celpersono_id";
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 if ($celpersono["kurso"]!=$kurso) { 
 	// update en la normala datumbazo
    $query = "update personoj set kurso='$kurso' where id=$celpersono_id";
-   mysql_select_db("ikurso");
-   $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
+   $result = $bdd->exec($query);
 }
 
 header("Location:administri.php?celpersono_id=$celpersono_id&validi=jes");

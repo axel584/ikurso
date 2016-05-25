@@ -170,7 +170,7 @@ function listiEksStudantojn() {
 		echo "<em>inscription le : </em>\n";
 		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["ekdato"],$ekdt);
 		$ekdt=explode("-",$row["ekdato"]);
-		echo $ekdt[3]."/".$ekdt[2]."/".$ekdt[1]."<br>\n";
+		echo $ekdt[2]."/".$ekdt[1]."/".$ekdt[0]."<br>\n";
 		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='fr' and lecionoj.numero='".$row['nunleciono']."'";
 		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
 		$row3 = $result3->fetch();

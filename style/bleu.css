@@ -130,9 +130,16 @@ div.atentigo {
 	-o-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
 	-ms-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
 }
+div.atentigo.sukceso{
+	background-color:#E7F3DB;
+	border: 2px solid #7ED321;
+}
 .eraro {
 	font-size: 120%;
 	color: #C30;
+}
+.sukceso .eraro {
+	color: #417505;
 }
 .rimarko {
 	font-size:11px;

@@ -463,8 +463,8 @@ include "adminkapo.inc.php";
 				<li <?php if ($kategorio=="I"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=I">Informateurs</a></li>
 			</ul>
 			<div id="kadro">
-				<?php if (isset($erarkodo) && $erarkodo=="9") echo "<p class='eraro'><i>Cet élève a déjà un correcteur.</i></p>"; ?>
-				<?php if (isset($erarkodo) && $erarkodo=="11") echo "<p class='eraro'><i>Choisissez un correcteur avant de sauvegarder</i></p>"; ?>
+				<?php if (isset($erarkodo) && $erarkodo=="9") echo "<div class='atentigo'><p class='eraro'>Cet élève a déjà un correcteur.</p></div>"; ?>
+				<?php if (isset($erarkodo) && $erarkodo=="11") echo "<div class='atentigo'><p class='eraro'>Choisissez un correcteur avant de sauvegarder.</p></div>"; ?>
 			
 			<div id="adminG">
 

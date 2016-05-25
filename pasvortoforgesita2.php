@@ -39,7 +39,7 @@ protokolo($row['id'],"PASVORTO SENDITA",$row['enirnomo']."-".$row['pasvorto']);
 <div>
 <?php
 if (!$resultat) {
-	echo "<p class='eraro'>IMPOSSIBLE D'ENVOYER LE MESSAGE</p>";
+	echo "<div class='atentigo'><p class='eraro'>Impossible d'envoyer le message.</p></div>";
 }
 ?>
 <p><?php echo $contents; ?></p>

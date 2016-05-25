@@ -23,7 +23,7 @@ header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 header("Pragma: no-cache"); // HTTP/1.0
 include "pagxkapo.inc.php";
 ?>
-<?php if ($erarkodo=="9") echo "<h2><i>Cet élève a déjà un correcteur.</i></h2>"; ?>
+<?php if ($erarkodo=="9") echo "<div class='atentigo'><p class='eraro'>Cet élève a déjà un correcteur.</p></div>"; ?>
 
 		<div id="enhavo">
 			<ul id="tabnav">

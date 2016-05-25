@@ -55,7 +55,7 @@ include "pagxkapo.inc.php";
 					&nbsp;&nbsp;&nbsp;<input class="bouton" type="submit" value="Valider"></p>
 				</form>
 			<?php if ($farite=="jes") { ?>
-				<p class="eraro">Vos donn&eacute;es ont &eacute;t&eacute; mises &agrave; jour</p>
+				<div class='atentigo sukceso'><p class="eraro">Vos donn&eacute;es ont &eacute;t&eacute; mises &agrave; jour.</p></div>
 			<?php } ?>
 			</div>
 		</div>

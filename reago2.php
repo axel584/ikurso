@@ -63,7 +63,7 @@ if (checkEmail($_POST['sendinto'])) {
 						</table>
 							<textarea name="komento" rows="8" cols="70"><?php echo stripSlashes($_POST['komento']);?></textarea></td></tr>
 						</form>
-						<p class="eraro">Votre message a &eacute;t&eacute; envoy&eacute; aux administrateurs du cours.</p>
+						<div class='atentigo sukceso'><p class="eraro">Votre message a &eacute;t&eacute; envoy&eacute; aux administrateurs du cours.</p></div>
 					</div>
 				</div>
 			</div>

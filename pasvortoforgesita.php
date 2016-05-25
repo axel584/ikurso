@@ -11,7 +11,7 @@ include "util.php";
 <body class="popup">
 <?php 
 $erarkodo=isset($_GET['erarkodo'])?$_GET['erarkodo']:"";
-if ($erarkodo=="10") echo "<p class='eraro'><i>Aucun utilisateur n’est enregistré avec cette adresse</i></p></center>"; 
+if ($erarkodo=="10") echo "<div class='atentigo'><p class='eraro'>Aucun utilisateur n’est enregistré avec cette adresse.</p></div>"; 
 ?>
 <div>
 	<form name="pasvorto" method="post" action="pasvortoforgesita2.php">

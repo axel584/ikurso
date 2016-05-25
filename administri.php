@@ -142,7 +142,7 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 	
 	//repère la liste du nombre d'élèves que les correcteurs ont des (ex. : correcteur 1 : 6 élèves)
 	$demando="select personoj.id,enirnomo,count(*) as kiom  from personoj,nuna_kurso where personoj.id=nuna_kurso.korektanto and personoj.lingvo='fr' and (nuna_kurso.stato='K' or nuna_kurso.stato='N') and nuna_kurso.kurso='".$kurso."' group by enirnomo";
-	$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando);
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		$kiom_lernantoj[$row["id"]] = $row["kiom"];	
 		$nomoj[$row["id"]] = $row["enirnomo"];
@@ -151,7 +151,7 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 	// calcul les pourcentages du remplissage des élèves : ex: correcteur 1 : 75% (6/8)
 	foreach($lernanteblecoj as $sxlosilo => $valuo) { 
 		//echo "id : ".$sxlosilo.": enirnomo : ".$nomoj[$sxlosilo].":  deja : ".$kiom_lernantoj[$sxlosilo]." sur ".$valuo."<br>\n";
-		if ($kiom_lernantoj[$sxlosilo]==""){
+		if (!isset($kiom_lernantoj[$sxlosilo])){
 			$kiom_lernantoj[$sxlosilo]=0;
 		}
 		if ($valuo==""){
@@ -166,8 +166,9 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 	asort($procentajxo);
 	
 	//recherche si l'élève en cours a un correcteur et le rajoute à sa liste si besoin
-	$studantakurso = new nuna_kurso;
-	$studantakurso->find_one(array("studanto"=>$studanto_id,"kurso"=>$kurso));
+	$demando = "select korektanto from nuna_kurso where studanto='".$studanto_id."'";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	$korektanto_id = $result->fetch()["korektanto"];
 
 
 	// mi ordigas la tabulon kaj skribi gxin
@@ -177,7 +178,7 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 	foreach($procentajxo as $key => $value) { 
 		echo "<option value='".$key."'";
 		// si le correcteur de l'élève est celui que l'on traite, le mettre en "selected"
-		if ($studantakurso->korektanto->get_id()==$key) { echo "selected";}
+		if ($korektanto_id==$key) { echo "selected";}
 		echo  ">".$nomoj[$key]."(".$kiom_lernantoj[$key]."/".$lernanteblecoj[$key].") ".$procentajxo[$key]."% </option>\n";
 	}
 	echo "</select>";
@@ -698,7 +699,7 @@ include "adminkapo.inc.php";
 										<td><strong><a href="administri.php?celpersono_id=$nuna_kurso['korektanto_id']?>">
 										<?=$nuna_kurso['korektanto_enirnomo'] ?></a></strong></td>
 									<?php } ?>
-									<?=$nuna_kurso['korektanto_enirnomo'] ?></a></strong></td>
+									</a></strong></td>
 									<td><?=$nuna_kurso['kursoj_nomo'] ?></td>
 									<td>
 									<?php if ($nuna_kurso['lecionoj_titolo']=="") { echo "Pas de leçon en cours";}

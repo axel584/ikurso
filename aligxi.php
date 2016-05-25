@@ -45,7 +45,7 @@ include "pagxkapo.inc.php";
 	 				
 					<form name="inscription" action="aligxi2.php" method="post"> 
 					<?php echo "<input type='hidden' name='kurso' value='KE'>\n"; 
-					   echo "<input type='hidden' name='lingvo' value='".$lingvo."'>\n";
+					   echo "<input type='hidden' name='lingvo' value='fr'>\n";
 					   $kurso="KE";
 						// debut de l'insertion de l'include du formulaire d'inscription
 					 	include "aligxi.inc.php"; 

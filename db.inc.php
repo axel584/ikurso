@@ -55,7 +55,7 @@ function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$p
      $query .= "stop_info=:stopInfo ";
      $query .= "where id=:id";
      $requete = $bdd->prepare($query);
-     $requete->execute(array(':sekso' => $sekso, ':familinomo' => $familinomo,':personnomo'=>$personnomo,':adreso1'=>$adreso1,':adreso2'=>$adreso2,':posxtkodo'=>$posxtkodo,':urbo'=>$urbo,':lando'=>$lando,':naskigxdato'=>$naskigxdato,':kialo'=>$kialo,':sistemo'=>$sistemo,':stopInfo'=>$stopInfo,':id'=>$id)) or die(print_r($dbh->errorInfo()));
+     $requete->execute(array(':sekso' => $sekso, ':familinomo' => $familinomo,':personnomo'=>$personnomo,':adreso1'=>$adreso1,':adreso2'=>$adreso2,':posxtkodo'=>$posxtkodo,':urbo'=>$urbo,':lando'=>$lando,':naskigxdato'=>$naskigxdato,':kialo'=>$kialo,':sistemo'=>$sistemo,':stopInfo'=>$stopInfo,':id'=>$id));
 }
 
 // tiu funkcio trovas iun per lia unika numero (id) kaj eldonas objekton kun tiu persono.
@@ -150,7 +150,7 @@ function konstruiMenuon($nomo,$tabelo,$valuo,$vidigito,$elektita,$kie,$unuavaluo
          if ($row["$valuo"]==$elektita) { echo "selected";}
          echo " >".$row["$vidigito"]."</option>";  
      }
-     if (($aliavaluo!="") || ($aliavidigito!="")) {
+     if (isset($aliavaluo) && isset($aliavidigito)) {
           echo "<option value=\"$aliavaluo\" ";
           if ($aliavaluo==$elektita) { echo "selected";}
           echo " >".$aliavidigito."</option>";

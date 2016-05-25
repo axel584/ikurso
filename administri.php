@@ -591,20 +591,10 @@ include "adminkapo.inc.php";
 										$lastdato="";
 									} else {
 										$teksto = addslashes($celpersono["enirnomo"]." eniris"); // on protege les noms qui contiennent des apostrophes
-										$demando = "select * from protokolo where kategorio='ENIRO' and teksto='$teksto' order by horo DESC";
+										$demando = "select DATE_FORMAT(horo,'%d %b %Y %T') as horo from protokolo where kategorio='ENIRO' and teksto='$teksto' order by horo DESC";
 										$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 										$row=$result->fetch();
-										// on affiche la date de la dernière connection
 										$lastdato=$row["horo"];
-										$lstdt = explode("-",$lastdato);
-										if (count($lstdt)==1) {$lstdt = array("00","00","0000");}
-										$demando =  "select kodo,nomo from monatoj where kodo=".$lstdt[1]." and lingvo='fr'";
-										$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-										if ($row=$result->fetch()){
-											$lastdato=$lstdt[2]." ".$row["nomo"]." ".$lstdt[0];
-										} else {
-											$lastdato ="";
-										}
 									}
 								?>
 							<td><?php echo $lastdato; ?></td>

@@ -7,6 +7,7 @@ include "config.php";
 function malfermiDatumbazon () {
     global $bdd,$base,$login,$motDePasse;
      $bdd = new PDO('mysql:host=localhost;dbname='.$base.';charset=utf8', $login, $motDePasse);
+     $bdd->query('SET lc_time_names = \'fr_FR\''); // Pour avoir les dates en français
 }
 
 

@@ -1,5 +1,6 @@
-<?
+<?php
 //error_reporting(1);
+session_start();
 $vojo="../";
 $lingvo=$_SESSION["lingvo"];
 if ($lingvo=="") {$lingvo="FR";}
@@ -30,7 +31,7 @@ if ($persono_id!="") {
 function PorInformistoj() {
 	global $persono_id, $lingvo, $verdakrabo, $enirnomo, $naskigxdato_tago, $naskigxdato_monato, $naskigxdato_jaro, $sekso, $personnomo, 
 	$retadreso, $familinomo, $adreso1, $adreso2, $urbo, $lando, $posxtkodo, $kurso, $kialo, $lgv_viaStudanto;
-		$demando="select retadreso from personoj where rajtoj='I' and lingvo='$lingvo'";
+		$demando="select retadreso from personoj where rajtoj='I' and lingvo='FR'";
 		mysql_select_db("ikurso");
 		$result = mysql_query($demando) or die ("INSERT : Invalid query :".$query);
 		$row=mysql_fetch_array($result);
@@ -41,7 +42,7 @@ function PorInformistoj() {
 		if ($retadreso=="richard.emmanuelle@wanadoo.fr") {$informistoj="emmanuelle@esperanto-jeunes.org";}
 		if ($retadreso=="emmrichard@gmail.com") {$informistoj="emmanuelle@esperanto-jeunes.org";}
 		if ($verdakrabo=="on"){
-			$filename = "../mails/verdakrabo".$lingvo.".html";
+			$filename = "../mails/verdakraboFR.html";
 			/* ajout dans le fichier des inscriptions VerdaKrabo
 			$fic_VK="../doc/AInscrireVerdaKrabo.txt";
 			$ficVK = fopen($fic_VK, "a+");
@@ -49,7 +50,7 @@ function PorInformistoj() {
 			fclose($ficVK);
 			 */
 		} else { 
-			$filename = "../mails/novalernanto".$lingvo.".html";
+			$filename = "../mails/novalernantoFR.html";
 		}
 		$fd = fopen($filename, "r");
 		$contents = fread($fd, filesize ($filename));
@@ -233,9 +234,9 @@ if ($jamaligxi=="jes") {
 		$naskigxdato_monato=$personoT["naskigxdato_monato"];
 		$naskigxdato_jaro=$persono["naskigxdato_jaro"];
 		$kialo=$persono["kialo"];
-		$filename = "../mails/aligxi".$kurso.$lingvo.".html";
+		$filename = "../mails/aligxi".$kurso."FR.html";
 		// si le fichier n'existe pas, met le nom du fichier sans le cours
-		if (!file_exists($filename)) { $filename = "../mails/aligxi".$lingvo.".html"; }
+		if (!file_exists($filename)) { $filename = "../mails/aligxiFR.html"; }
 		$fd = fopen($filename, "r");
 		$contents = fread($fd, filesize ($filename));
 		fclose($fd);
@@ -327,11 +328,11 @@ if ($jamaligxi=="jes") {
 			}
 			$_SESSION["persono_id"]=$persono_id;
 			$persono_id = kreiPersonon($enirnomo,$pasvorto,$retadreso,"FR");
-			phpbb_create_user($persono_id,$enirnomo,$pasvorto,$retadreso,$lingvo,$urbo);
+			//phpbb_create_user($persono_id,$enirnomo,$pasvorto,$retadreso,$lingvo,$urbo);
 			malfermidatumbazon();
-			$filename = "../mails/aligxi".$kurso.$lingvo.".html";
+			$filename = "../mails/aligxi".$kurso."FR.html";
 			// si le fichier n'existe pas, mets le nom du fichier sans le cours
-			if (!file_exists($filename)) { $filename = "../mails/aligxi".$lingvo.".html"; }
+			if (!file_exists($filename)) { $filename = "../mails/aligxiFR.html"; }
 			$fd = fopen($filename, "r");
 			$contents = fread($fd, filesize ($filename));
 			fclose($fd);

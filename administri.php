@@ -498,7 +498,7 @@ include "adminkapo.inc.php";
 				<form name="administri2" method="post" action="administri2.php">
 				<p>Fiche n° <?=$celpersono["id"];?></p>
 <?php if (isset($_GET['validi'])) { ?>
-				<p>La fiche a été correctement mise à jour</p>
+				<p >La fiche a été correctement mise à jour</p>
 <?php } ?>
 
 				<div class="encadre">

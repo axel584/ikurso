@@ -1,7 +1,6 @@
 <?php
 include "util.php";
 malfermidatumbazon();
-mysql_select_db("ikurso");
 $studanto_id=$_POST["studanto"];
 $nomo=$_POST["enirnomo"];
 $idnunaKurso=$_POST["idnunaKurso"];
@@ -15,28 +14,23 @@ if (($korektanto["rajtoj"]!='A')&&($korektanto["rajtoj"]!='K')) {header("Locatio
 // sxangxi la staton de la lernanto al 'K'
 
 $demando = "update nuna_kurso set stato='K' where id=".$idnunaKurso."";
-$result = mysql_query($demando) or die ( "UPDATE : Invalid query :".$demando);
+$result = $bdd->exec($demando);
 // trace protokolo
-$teksto="lernanto=".$nomo." (".$studanto.")";
-$protokolo = new protokolo;
-$protokolo->set_persono_id($persono->get_id());
-$protokolo->set_kategorio("REPRENIS LERNANTON");
-$protokolo->set_teksto($teksto);
-$protokolo->store();
+$teksto="lernanto=".$nomo." (".$studanto_id.")";
+protokolo($persono_id,"REPRENIS LERNANTON",$teksto);
 // cxu la studanto havas jam komencitan kurson ?
 $query = "select * from nuna_kurso where id=$idnunaKurso";
-mysql_select_db("ikurso");
-$result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-if (mysql_num_rows($result)>0) {
-	$row = mysql_fetch_array($result);
+$result = $bdd->query($query);
+$row = $result->fetch();
+if ($row["kurso"]!="") {
 	$nunleciono=$row["nunleciono"];
 	$kurso=$row["kurso"];
 	if (($nunleciono!=NULL) and ($kurso=='GR'||$kurso=='CG')){
 		($kurso=="GR")?($subjekto="gerda%"):($subjekto="lec%");
 		$query2 = "select * from eraraj_lecionoj where persono_id=$studanto_id and subjekto like '$subjekto'";
-		mysql_select_db( "ikurso");
-		$result2 = mysql_query($query2) or die ( "SELECT : Invalid query :".$query2);
-		while($row2 = mysql_fetch_array($result2)) {
+		
+		$result2 = $bdd->query($query2);
+		while($row2 = $result2->fetch()) {
 			$subjekto=$row2["subjekto"]." (".$studanto['enirnomo'].")";
 			$fonto=$row2["fonto"];
 			$korektantaretadreso=$korektanto["retadreso"];

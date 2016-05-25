@@ -12,7 +12,7 @@ $persono = apartigiPersonon($persono_id);
 $celpersono_id=$_REQUEST["celpersono_id"];
 if ($celpersono_id!="") { $celpersono = apartigiPersonon($celpersono_id);}
 if ($persono["rajtoj"]!='A'){header("Location:index.php?erarkodo=4");}
-$parto=$_GET["parto"];
+$parto=isset($_GET["parto"])?$_GET["parto"]:"";
 if ($parto=="") {$parto=1;}
 $korektanto_id=$_POST["korektanto_id"];
 
@@ -29,30 +29,25 @@ if ($korektanto_id=="") {
 debug ("chercher s'il a déjà un cours commencé<br>");
 $nunleciono=NULL;
 $query = "select * from nuna_kurso where studanto=$celpersono_id and kurso='$kurso' and (stato='K' or stato='N')";
-mysql_select_db("ikurso");
-$result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-debug ("nb de lignes trouvées dans nuna_kurso=".mysql_num_rows($result)."<br>");
-if (mysql_num_rows($result)>0) {
-	$row = mysql_fetch_array($result);
+$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+$row=$result->fetch();
+if ($row['korektanto']!="") {
 	$nunleciono=$row["nunleciono"];
-	debug ("kurso=".$row['kurso']."<br>");
-	debug ("nunleciono=".$nunleciono."<br>");
-	debug ("correcteur pour ce cours=".$row['korektanto']."<br>");
 	if ($row["korektanto"]!=$korektanto_id) { 
 		debug ("c'est un autre : il s'agit d'un changement de correcteur");
 		//echo "cas 1 : changement de correcteur<br>";
 		// la malnova korektanto malsamas la novan elektitan korektanton.
 		// jam havas korektanton : sxangxi la korektanton
 		$query = "update nuna_kurso set korektanto=$korektanto_id where studanto=$celpersono_id";
-		$result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
+		$result = $bdd->exec($query);
 		
 		// trovi informojn pri studanto kaj korektanto
 		$studantinformoj = apartigiPersonon($celpersono_id);
 		$korektantinformoj = apartigiPersonon($korektanto_id);
 		// sendi mesagxon al la nova studanto
-		$filename = "mails/redoniStu".$kurso.$lingvo.".html";
+		$filename = "mails/redoniStu".$kurso."FR.html";
 		// si le fichier n'existe pas, mets le nom du fichier sans le cours
-		if (!file_exists($filename)) { $filename = "mails/redoniStu".$lingvo.".html"; }
+		if (!file_exists($filename)) { $filename = "mails/redoniStuFR.html"; }
 		$fd = fopen($filename, "r");
 		$contents = fread($fd, filesize ($filename));
 		fclose($fd);
@@ -68,9 +63,9 @@ if (mysql_num_rows($result)>0) {
 		mail($studantinformoj["retadreso"],"Votre correcteur I-kurso",$contents,$mesagxkapo);
 
 		// sendi mesagxon al la korektanto
-		$filename = "mails/redoniKor".$kurso.$lingvo.".html";
+		$filename = "mails/redoniKor".$kurso."FR.html";
 		// si le fichier n'existe pas, mets le nom du fichier sans le cours
-		if (!file_exists($filename)) { $filename = "mails/redoniKor".$lingvo.".html"; }
+		if (!file_exists($filename)) { $filename = "mails/redoniKorFR.html"; }
 		$fd = fopen($filename, "r");
 		$contents = fread($fd, filesize ($filename));
 		fclose($fd);
@@ -90,27 +85,24 @@ if (mysql_num_rows($result)>0) {
 
 	}
 } else {
-	debug ("aucun cours suivi<br>");
 	//echo "cas 2 : n'a jamais eu de correcteur<br>";
 	// neniam havis korektanton
 	if ($korektanto_id!="") { 
-		debug ("attribuer le correcteur ".$korektanto_id."<br>");
 		// li volas korektanton
 		// update nuna_kurso
 		$query = "update personoj set rajtoj='S' where id=$celpersono_id"; // cxiukaze igas lin studanto.
-		mysql_select_db( "ikurso");
-		$result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
+		$result = $bdd->exec($query);
 		
-		$query = "INSERT INTO nuna_kurso (ekdato,korektanto,studanto,kurso) VALUES (CURDATE(),'$korektanto_id','$celpersono_id','$kurso')";
-		$result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-		
+		$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso) VALUES (NOW(),NOW(),".$korektanto_id.",".$celpersono_id.",'".$kurso."')";
+		$result = $bdd->exec($query);
+
 		// trovi informojn pri studanto kaj korektanto
 		$studantinformoj = apartigiPersonon($celpersono_id);	
 		$korektantinformoj = apartigiPersonon($korektanto_id);
 		// sendi mesagxon al la nova studanto
-		$filename = "mails/doniStu".$kurso.$lingvo.".html";
+		$filename = "mails/doniStu".$kurso."FR.html";
 		// si le fichier n'existe pas, mets le nom du fichier sans le cours
-		if (!file_exists($filename)) { $filename = "mails/doniStu".$lingvo.".html"; }
+		if (!file_exists($filename)) { $filename = "mails/doniStuFR.html"; }
 		
 		$fd = fopen($filename, "r");
 		$contents = fread($fd, filesize ($filename));
@@ -130,9 +122,9 @@ if (mysql_num_rows($result)>0) {
 		mail($studAdreso,"Votre correcteur I-kurso",$contents,$mesagxkapo);
 		
 		// sendi mesagxon al la korektanto
-		$filename = "mails/doniKor".$kurso.$lingvo.".html";
+		$filename = "mails/doniKor".$kurso."FR.html";
 		// si le fichier n'existe pas, mets le nom du fichier sans le cours
-		if (!file_exists($filename)) { $filename = "mails/doniKor".$lingvo.".html"; }
+		if (!file_exists($filename)) { $filename = "mails/doniKorFR.html"; }
 		$fd = fopen($filename, "r");
 		$contents = fread($fd, filesize ($filename));
 		fclose($fd);
@@ -159,9 +151,9 @@ if (($nunleciono==NULL) and ($kurso=='GR'||$kurso=='CG')){
 	debug ("l'élève a déjà fait une leçon : il faut lui envoyer");
 	($kurso=="GR")?($subjekto="gerda%"):($subjekto="lec%");
 	$query = "select * from eraraj_lecionoj where persono_id=$celpersono_id and subjekto like '$subjekto'";
-	mysql_select_db( "ikurso");
-	$result = mysql_query($query) or die ( "SELECT : Invalid query :".$query);
-	while($row = mysql_fetch_array($result)) {
+	
+	$result = $bdd->query($query) or die ( "SELECT : Invalid query :".$query);
+	while($row = $result->fetch()) {
 		$subjekto=$row["subjekto"];
 		$fonto=$row["fonto"];
 		$korektantaretadreso=$korektantinformoj["retadreso"];
@@ -178,8 +170,7 @@ if (($nunleciono==NULL) and ($kurso=='GR'||$kurso=='CG')){
 		else if (substr($subjekto, 0, 3)=="lec"){$nunleciono=substr($subjekto,3,2);}
 		else {$nunleciono=1;}
 		$query = "update nuna_kurso set nunleciono=$nunleciono,stato='K',lastdato=CURDATE() where studanto=$celpersono_id and (stato='N' or stato='K') and kurso='$kurso'";
-		mysql_select_db( "ikurso");
-		$result2 = mysql_query($query) or die ( "UPDATE : Invalid query :".$query);
+		$bdd->exec($query);
 	}
 }
 header("Location:administri.php?celpersono_id=$celpersono_id&validi=jes");

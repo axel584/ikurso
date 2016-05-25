@@ -1,25 +1,24 @@
-<?
+<?php
 $lingvo="FR";
 require("db.inc.php");
 malfermidatumbazon();
-mysql_select_db("ikurso");
 $leciono=$_POST["leciono"];
 $nunleciono=$_POST["nunleciono"];
 ereg("(.*)-(.*)", $leciono,$rezultoj);
 
 //sxangxi lastan lecionon por iu lernanto
 $query="select stato,nunleciono from nuna_kurso where id=".$rezultoj[1];
-$result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
-$row = mysql_fetch_array($result);
+$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+$row = $result->fetch();
 // se la nunleciono sxangxis (rezultoj 2), ni devus updati la datumbazon
 if ($rezultoj[2]!='F' and $rezultoj[2]!='H' and $rezultoj[2]!='N' and $rezultoj[2]!=$row["nunleciono"]) {
 	$query = "update nuna_kurso set nunleciono=".$rezultoj[2].",stato='K',lastdato=CURDATE() where id=".$rezultoj[1]." and (stato='N' or stato='K')";
-	$result = mysql_query($query) or die ( "UPDATE : Invalid query :".$query);
+	$result = $bdd->exec($query) or die ( "UPDATE : Invalid query :".$query);
 }
 // se la nova stato estas F(inita), sed la malnova ne estis F, ni updatas ! :-)
 if ($rezultoj[2]=='F' and $row["stato"]!='F') {
 	$query = "update nuna_kurso set stato='F',findato=CURDATE(),lastdato=CURDATE() where id=".$rezultoj[1]." and (stato='N' or stato='K')";
-	$result = mysql_query($query) or die ( "UPDATE : Invalid query :".$query);
+	$result = $bdd->exec($query) or die ( "UPDATE : Invalid query :".$query);
 	// tiam ni sendas retmesagxon al la informistoj
 	$filename = "mails/finiInf".$lingvo.".html";
 	if (file_exists($filename)) { 

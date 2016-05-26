@@ -1,5 +1,4 @@
 <?php
-$lingvo="FR";
 $kurso="GR";
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
@@ -199,7 +198,7 @@ if ($subjekto=="korekti.php") {
 	}
 }
 $varcxap=$cxapitro.".php";
-$query="select * from lecionoj where lingvo='$lingvo' and kurso='$kurso' and retpagxo='$varcxap'";
+$query="select * from lecionoj where lingvo='FR' and kurso='$kurso' and retpagxo='$varcxap'";
 $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 if ($row=$result->fetch()){
 	$titolo=$row["titolo"];

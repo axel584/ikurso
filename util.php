@@ -8,6 +8,19 @@ include_once("webui.inc.php");
 //include_once("forum/includes/forum.lib.php");
 $url=$_SERVER['REQUEST_URI'];
 
+// tiu funkcio kontrolas, cxu adreso validas kaj ekzistas
+function checkEmail($email)
+{
+     if (preg_match("/^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$]/i", $email)) {return FALSE;}
+     list($Username, $Domain) = explode("@",$email);
+     if(getmxrr($Domain, $MXHost)) {return TRUE;}
+     else {
+        if(fsockopen($Domain, 25, $errno, $errstr, 30)) {return TRUE;}
+        else {return FALSE;}
+     }
+     return (TRUE);
+}
+
 // tiu funkcio konvertas la unikodan tekston al teksto en X-sistemo
 function konvX($buff) {
 	global $metodo;

@@ -4,17 +4,7 @@ include_once ("db.inc.php");
 include_once ("lingvo.inc.php");
 //include_once ("forum/includes/forum.lib.php");
 //include_once("db/protokolo.inc.php");
-function checkEmail($email)
-{
-     if (preg_match("/^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$]/i", $email)) {return FALSE;}
-     list($Username, $Domain) = explode("@",$email);
-     if(getmxrr($Domain, $MXHost)) {return TRUE;}
-     else {
-        if(fsockopen($Domain, 25, $errno, $errstr, 30)) {return TRUE;}
-        else {return FALSE;}
-     }
-     return (TRUE);
-}
+
 malfermidatumbazon();
 $enirnomo=$aligxilo["enirnomo"]=$_POST["nova_enirnomo"];
 $pasvorto=$aligxilo["pasvorto"]=$_POST["nova_pasvorto"];

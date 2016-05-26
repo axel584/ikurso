@@ -3,17 +3,6 @@ include "util.php";
 $pagxtitolo="Envoi de message";
 include "pagxkapo.inc.php";
 
-// tiu funkcio kontrolas, cxu adreso validas kaj ekzistas
-function checkEmail($email)
-{
-	if (preg_match("/^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$]/i", $email)) {return FALSE;}
-	list($Username, $Domain) = explode("@",$email);
-	if(getmxrr($Domain, $MXHost)) {return TRUE;}
-	else {
-	  if(fsockopen($Domain, 25, $errno, $errstr, 30)) {return TRUE;}
-	  else {return FALSE;}
-     }
-}
 
 $mesagxkapo="MIME-Version: 1.0\n";
 $mesagxkapo.="Content-type:text/html;charset=utf-8\n";			

@@ -19,7 +19,7 @@ header("Cache-Control: no-store,no-cache, must-revalidate"); // HTTP/1.1
 header("Pragma: no-cache"); // HTTP/1.0
 
 function listiSercxadon($personnomo,$familinomo,$celenirnomo,$retadreso,$urbo,$posxtkodo) {
-    global $lingvo,$persono_id,$lgv_nekomencita,$lgv_neniuLernanto,$lgv_nuna_leciono,$lgv_adreso1,$lgv_ek,$idnoto,$lgv_familinomo,$bdd;
+    global $persono_id,$idnoto,$bdd;
 	$wheresql="1=1";
 	if ($personnomo!="") {
 		$wheresql=$wheresql." and personnomo like '%".$personnomo."%'";
@@ -90,8 +90,8 @@ include "adminkapo.inc.php";
 				<li><a href="administri.php?kategorio=I">Informateurs</a></li>
 			</ul>
 			<div id="kadro">
-				<?php if ($erarkodo=="9") echo "<div class='atentigo'><p class='eraro'>$lgv_eraro9</p></div>"; ?>
-				<?php if ($erarkodo=="11") echo "<div class='atentigo'><p class='eraro'>$lgv_eraro11</p></div>"; ?>
+				<?php if ($erarkodo=="9") echo "<div class='atentigo'><p class='eraro'>Cet élève a déjà un correcteur.</p></div>"; ?>
+				<?php if ($erarkodo=="11") echo "<div class='atentigo'><p class='eraro'>Choisissez un correcteur avant de sauvegarder</p></div>"; ?>
 			
 			<div id="adminG">
 

@@ -5,7 +5,7 @@ malfermiDatumbazon();
 
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $persono = apartigiPersonon($persono_id);
-$filename = "mails/aligxi".$persono["kurso"].$lingvo.".txt";
+$filename = "mails/aligxi".$persono["kurso"]."FR.txt";
 // si le fichier n'existe pas, mets le nom du fichier sans le cours
 if (!file_exists($filename)) { $filename = "mails/aligxiFR.txt"; }
 $fd = fopen($filename, "r");

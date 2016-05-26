@@ -19,7 +19,7 @@ if (mysql_num_rows($result)>0) {
         $studantinformoj = apartigiPersonon($studanto);
         $korektantinformoj = apartigiPersonon($korektanto);
         // sendi mesagxon al la nova studanto
-        $filename = "/home/ikurso/public_html/mails/doniStu".$lingvo.".html";
+        $filename = "/home/ikurso/public_html/mails/doniStuFR.html";
         $fd = fopen($filename, "r");
         $contents = fread($fd, filesize ($filename));
         fclose($fd);

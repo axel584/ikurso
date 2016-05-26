@@ -1,6 +1,6 @@
 <?php
 //error_reporting(1);
-session_start();
+//session_start();
 $vojo="../";
 include $vojo."util.php";
 include_once ($vojo."fr.inc.php");
@@ -8,19 +8,11 @@ include_once ($vojo."db.inc.php");
 include_once ($vojo."webui.inc.php");
 //ER 05.10.2015 : correction pour passage en PHP 5.4
 //session_register("memorkurso");
-$_SESSION['memorkurso']=$memorkurso;
-// tiu funkcio kontrolas, cxu adreso validas kaj ekzistas
-function checkEmail($email)
-{
-	if(eregi("^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$]", $email)) {return FALSE;}
-			list($Username, $Domain) = split("@",$email);
-		if(getmxrr($Domain, $MXHost)) {return TRUE;}
-		else {
-			if(fsockopen($Domain, 25, $errno, $errstr, 30)) {return TRUE;}
-				else {return FALSE;}
-		}
+if (isset($memorkurso)) {
+	$_SESSION['memorkurso']=$memorkurso;
 }
-$persono_id=$_SESSION["persono_id"];
+
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 if ($persono_id!="") {
 	$persono = apartigiPersonon($persono_id);
 	$enirnomo = $persono["enirnomo"];
@@ -82,34 +74,34 @@ function PorInformistoj() {
 		protokolo($persono_id,"VERDA KRABO","$retadreso : $verdakrabo");
 }
 
-$subjekto=$_POST["010_subjekto"];
-$adreso=$_POST["010_adreso"];
-$titolo=$_POST["010_titolo"];
-$kurso=$_POST["kurso"];
-$numcxap=$_POST["numcxap"];
-$nunleciono=$_POST["nunleciono"];
-$jamaligxi=$_POST["jamaligxi"];
-$ktrl_enirnomo=$_POST["ktrl_enirnomo"];
-$ktrl_pasvorto=$_POST["ktrl_pasvorto"];
-$nova_enirnomo=$_POST["nova_enirnomo"];
-$nova_pasvorto=$_POST["nova_pasvorto"];
-$pasvorto2=$_POST["pasvorto2"];
-$retadreso=$_POST["retadreso"];
+$subjekto=isset($_POST["010_subjekto"])?$_POST["010_subjekto"]:"";
+$adreso=isset($_POST["010_adreso"])?$_POST["010_adreso"]:"";
+$titolo=isset($_POST["010_titolo"])?$_POST["010_titolo"]:"";
+$kurso=isset($_POST["kurso"])?$_POST["kurso"]:"";
+$numcxap=isset($_POST["numcxap"])?$_POST["numcxap"]:"";
+$nunleciono=isset($_POST["nunleciono"])?$_POST["nunleciono"]:"";
+$jamaligxi=isset($_POST["jamaligxi"])?$_POST["jamaligxi"]:"";
+$ktrl_enirnomo=isset($_POST["ktrl_enirnomo"])?$_POST["ktrl_enirnomo"]:"";
+$ktrl_pasvorto=isset($_POST["ktrl_pasvorto"])?$_POST["ktrl_pasvorto"]:"";
+$nova_enirnomo=isset($_POST["nova_enirnomo"])?$_POST["nova_enirnomo"]:"";
+$nova_pasvorto=isset($_POST["nova_pasvorto"])?$_POST["nova_pasvorto"]:"";
+$pasvorto2=isset($_POST["pasvorto2"])?$_POST["pasvorto2"]:"";
+$retadreso=isset($_POST["retadreso"])?$_POST["retadreso"]:"";
 $adreso1=addslashes($_POST["adreso1"]);
 $adreso2=addslashes($_POST["adreso2"]);
 $familinomo=addslashes($_POST["familinomo"]);
-$personnomo=$_POST["personnomo"];
-$sekso=$_POST["sekso"];
-$posxtkodo=$_POST["posxtkodo"];
+$personnomo=isset($_POST["personnomo"])?$_POST["personnomo"]:"";
+$sekso=isset($_POST["sekso"])?$_POST["sekso"]:"";
+$posxtkodo=isset($_POST["posxtkodo"])?$_POST["posxtkodo"]:"";
 $urbo=addslashes($_POST["urbo"]);
-$lando=$_POST["lando"];
-$naskigxdato_tago=$_POST["naskigxdato_tago"];
-$naskigxdato_monato=$_POST["naskigxdato_monato"];
-$naskigxdato_jaro=$_POST["naskigxdato_jaro"];
+$lando=isset($_POST["lando"])?$_POST["lando"]:"";
+$naskigxdato_tago=isset($_POST["naskigxdato_tago"])?$_POST["naskigxdato_tago"]:"";
+$naskigxdato_monato=isset($_POST["naskigxdato_monato"])?$_POST["naskigxdato_monato"]:"";
+$naskigxdato_jaro=isset($_POST["naskigxdato_jaro"])?$_POST["naskigxdato_jaro"]:"";
 $kialo=addslashes($_POST["kialo"]);
-$verdakrabo=$_POST["verdakrabo"];
+$verdakrabo=isset($_POST["verdakrabo"])?$_POST["verdakrabo"]:"";
 // Emmanuelle (30.10.2006) : ajout information pour ceux qui ne veulent pas divulguer leurs donnees personnelles
-$stopInfo=$_POST["stopInfo"];
+$stopInfo=isset($_POST["stopInfo"])?$_POST["stopInfo"]:"";
 
 //echo "ktrl_enirnomo=".$ktrl_enirnomo." pasvorto=".$ktrl_pasvorto."<br>";
 

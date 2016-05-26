@@ -26,7 +26,7 @@ function kreiPersonon($enirnomo,$pasvorto,$retadreso,$lingvo) {
     global $bdd;
      $query = "insert into personoj";
      $query .="(enirnomo,pasvorto,retadreso,ekdato,lingvo) ";
-     $query .="values ('$enirnomo','$pasvorto','$retadreso',now(),'$lingvo')";
+     $query .="values ('$enirnomo','$pasvorto','$retadreso',now(),'FR')";
      $bdd->exec($query);
      return $bdd->lastInsertId();
 }
@@ -198,14 +198,14 @@ function simplaVorto($valuo,$tabelo,$kie) {
 function konstruiKorektantliston($lingvo) {
     global $bdd;
      echo "<select name=\"korektanto\" class=\"input_text_box\">";
-     $query = "select personoj.id,personoj.enirnomo from personoj left join nuna_kurso on personoj.id=nuna_kurso.korektanto where personoj.rajtoj='A' or personoj.rajtoj='K' and personoj.lingvo='$lingvo' and nuna_kurso.korektanto IS NULL";
+     $query = "select personoj.id,personoj.enirnomo from personoj left join nuna_kurso on personoj.id=nuna_kurso.korektanto where personoj.rajtoj='A' or personoj.rajtoj='K' and personoj.lingvo='FR' and nuna_kurso.korektanto IS NULL";
      mysql_select_db( "ikurso"); 
      $result = mysql_query($query) or die (  "INSERT : Invalid query :".$query); 
      while($row = mysql_fetch_array($result)) {
          echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]." : 0 %</option>";  
      }
 
-     $query ="select personoj.id, personoj.enirnomo,personoj.maksimumo,count(nuna_kurso.korektanto) as studantoj from personoj,nuna_kurso where personoj.id = nuna_kurso.korektanto and personoj.lingvo='$lingvo' group by nuna_kurso.korektanto";
+     $query ="select personoj.id, personoj.enirnomo,personoj.maksimumo,count(nuna_kurso.korektanto) as studantoj from personoj,nuna_kurso where personoj.id = nuna_kurso.korektanto and personoj.lingvo='FR' group by nuna_kurso.korektanto";
      $result = mysql_query($query) or die (  "INSERT : Invalid query :".$query); 
      while($row = mysql_fetch_array($result)) {
          if ($row["maksimumo"]=="0") {
@@ -236,7 +236,7 @@ function doniKorektanton($korektanto,$studanto) {
 }
 
 function vidiKorektantojn($lingvo) {
-     $query = "select * from personoj where lingvo='$lingvo' and rajtoj='A' or rajtoj='K'";
+     $query = "select * from personoj where lingvo='FR' and rajtoj='A' or rajtoj='K'";
      mysql_select_db( "ikurso"); 
      $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query); 
      while($row = mysql_fetch_array($result)) {

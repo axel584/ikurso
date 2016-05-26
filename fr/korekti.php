@@ -2,8 +2,6 @@
 //error_reporting(1);
 session_start();
 $vojo="../";
-$lingvo=$_SESSION["lingvo"];
-if ($lingvo=="") {$lingvo="FR";}
 include $vojo."util.php";
 include_once ($vojo."fr.inc.php");
 include_once ($vojo."db.inc.php");

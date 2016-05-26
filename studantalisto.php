@@ -1,5 +1,5 @@
 <?php
-// Cette page devrait être virer du site ? (AR 8/10/10)
+// Cette page devrait Ãªtre virer du site ? (AR 8/10/10)
 include "lingvo.inc.php";
 include "db.inc.php";
 include "webui.inc.php";
@@ -21,7 +21,7 @@ function listiStudantojn() {
      echo "<table width=\"100%\" border=0 class=\"normala\" cellpadding=0 cellspacing=0>";
      mysql_select_db( "ikurso");
      // studantoj kiu NE jam komencis lerni (stato de nuna_kurso valoras 'N' kiel NE komencita)
-     $demando =  "select personoj.naskigxdato as naskigxdato,personoj.id as id,personoj.enirnomo as enirnomo,personoj.familinomo as familinomo,personoj.personnomo as personnomo,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.noto as noto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='$lingvo' and nuna_kurso.stato='N' and nuna_kurso.korektanto='$persono_id';";
+     $demando =  "select personoj.naskigxdato as naskigxdato,personoj.id as id,personoj.enirnomo as enirnomo,personoj.familinomo as familinomo,personoj.personnomo as personnomo,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.noto as noto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='FR' and nuna_kurso.stato='N' and nuna_kurso.korektanto='$persono_id';";
      mysql_select_db( "ikurso");
      $result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando);
      while($row = mysql_fetch_array($result)) {
@@ -61,7 +61,7 @@ function listiStudantojn() {
         }        $i++;
      }
      // studantoj kiu jam komencis lerni (stato de nuna_kurso valoras 'K' kiel Komencita)
-     $demando =  "select personoj.naskigxdato as naskigxdato,personoj.id as id,nuna_kurso.kurso as kurso,nuna_kurso.nunleciono as leciono,personoj.enirnomo as enirnomo,personoj.familinomo as familinomo,personoj.personnomo as personnomo,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.noto as noto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='$lingvo' and nuna_kurso.stato='K' and nuna_kurso.korektanto='$persono_id';";
+     $demando =  "select personoj.naskigxdato as naskigxdato,personoj.id as id,nuna_kurso.kurso as kurso,nuna_kurso.nunleciono as leciono,personoj.enirnomo as enirnomo,personoj.familinomo as familinomo,personoj.personnomo as personnomo,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.noto as noto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='FR' and nuna_kurso.stato='K' and nuna_kurso.korektanto='$persono_id';";
      mysql_select_db( "ikurso");
      $result = mysql_query($demando) or die (  "INSERT : malbona demando :".$demando);
      while($row = mysql_fetch_array($result)) {
@@ -77,7 +77,7 @@ function listiStudantojn() {
         echo "</td><td>";
         echo "<a href=\"mailto:".$row["retadreso"]."\">".$row["enirnomo"]."</a>";
         echo "&nbsp;-&nbsp;".$row["retadreso"]."&nbsp;-&nbsp;n&eacute;(e) le ".$row["naskigxdato"]."<br>";
-        $demando2="select titolo from lecionoj where numero='".$row["leciono"]."' and kurso='".$row["kurso"]."' and lingvo='$lingvo'";
+        $demando2="select titolo from lecionoj where numero='".$row["leciono"]."' and kurso='".$row["kurso"]."' and lingvo='FR'";
         $result2 = mysql_query($demando2) or die (  "INSERT : malbona demando :".$demando2);
         while($row2 = mysql_fetch_array($result2)) {
         	echo $lgv_nuna_leciono." : ".$row2["titolo"]."<br>";	

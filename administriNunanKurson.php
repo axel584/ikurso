@@ -4,7 +4,6 @@ function debug($s) {
 }
 include "util.php";
 $kurso=$_REQUEST["kurso"];
-$lingvo="FR";
 $pagxtitolo="Donn&eacute;es personnelles";
 $persono_id=$_SESSION["persono_id"];
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}

@@ -47,7 +47,4 @@ if (!$resultat) {
 	<input class="bouton" type="button" value="Fermer" onClick="window.close();">
 </div>
 </body>
-</html>
-<?php 
-} // fin du test si des lignes sont retournées
-?>                  
+</html>                 

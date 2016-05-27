@@ -48,6 +48,6 @@ if (!$resultat) {
 </div>
 </body>
 </html>
-<? 
+<?php 
 } // fin du test si des lignes sont retournées
 ?>                  

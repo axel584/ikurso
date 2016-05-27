@@ -173,10 +173,6 @@ connection = MySQLdb.connect (host = "127.0.0.1",user = "jefo",passwd = "***REMO
 cursor = connection.cursor()
 cursor2 = connection.cursor()
 
-# conversion de tables
-cursor.execute("ALTER TABLE eraraj_lecionoj CONVERT TO CHARACTER SET utf8")
-
-
 def convertTable(table,clef,colonnes) :
 	if clef in colonnes :
 		print("ne pas indiquer la clef parmis les colonnes")

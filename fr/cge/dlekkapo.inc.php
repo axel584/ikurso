@@ -9,9 +9,11 @@ $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $erarkodo=isset($_GET["erarkodo"])?$_GET["erarkodo"]:"";
 $noto=isset($_GET["noto"])?$_GET["noto"]:"";
 $temo=isset($_GET["temo"])?$_GET["temo"]:"";
-if ($persono_id) {
-	$persono = apartigiPersonon($persono_id);}
 malfermiDatumbazon();
+if ($persono_id) {
+	$persono = apartigiPersonon($persono_id);
+}
+
 /*
 echo "memorkurso<br>";
 $memorkurso=$_SESSION["memorkurso"];
@@ -155,7 +157,7 @@ include "../../pagxkapo.inc.php";
 				
 				if (($temo!="intro") && ($numcxap!="01")) {
 				?>
-				<div class="reklamo" id="spiru">
+				<!--div class="reklamo" id="spiru">
 				<img src="http://esperanto-jeunes.org/couvertures/61518.mini.jpg" alt="Couverture" height="200" align="right"/>
 				<font size="+1"> Les cours sont donnés <b>gratuitement</b> par l'association Espéranto-France.<br/></font><br/>
 				Soutenez l'association en commandant <i>La templo de l'suno</i> (62 pages) au prix de 12,50 euros et 3,50 euros de frais de port pour la France.<br/>
@@ -177,7 +179,7 @@ include "../../pagxkapo.inc.php";
 				<input type="image" src="https://www.paypal.com/fr_FR/FR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
 				<img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
 				</form>
-				</div>
+				</div-->
 				<?php } ?>
 				
 					<a name="<?=$subjekto?>"></a>

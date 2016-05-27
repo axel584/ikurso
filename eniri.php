@@ -16,7 +16,6 @@ if ($persono_id=="0") {
 	protokolo(0,"ERARO","provis eniri : $enirnomo - $pasvorto");
 	header( "Location:index.php?erarkodo=1");
 } else {
-	echo "persono_id : ".$persono_id." :";
 	$persono = apartigiPersonon($persono_id);
 	$_SESSION["persono_id"]=$persono["id"];
 	protokolo($persono["id"],"ENIRO","$enirnomo eniris");

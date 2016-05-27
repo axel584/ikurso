@@ -206,7 +206,7 @@ suffiront pour le moment.</p>
 			<p>Traduisez en espéranto :</p>
 			<input type="hidden" name="013_cxap02.1" value="1. Traduisez en espéranto :">
 			<div class="tasko">
-			<?
+			<?php
 				$demandoj=array (
 				1 => "Un garçon en bonne santé boit du lait chaud.",
 				2 => "La nouvelle boutique vend des gâteaux secs.",
@@ -228,10 +228,10 @@ suffiront pour le moment.</p>
 			<p>Remplacez la portion de phrase entre {} par le pronom personnel
 			approprié : li, &#349;i, &#285;i ou ili</p>
 			<p>Ex.: {<i>La knabo</i>} vendas kukojn.  -> <b>Li</b> vendas kukojn. </p>
-			<? atentigo();?>
+			<?php atentigo();?>
 			<input type="hidden" name="013_cxap02.2" value="2. Remplacez la portion de phrase entre {} par le pronom personnel approprié : li, &#349;i, &#285;i ou ili">
 			<div class="tasko">
-			<?
+			<?php
 				$demandoj=array (
 				11 => "{La kuko} estas bela.",
 				12 => "{Mia amikino} estas bela.",
@@ -254,10 +254,10 @@ suffiront pour le moment.</p>
 			Attention : vous pouvez être amené &agrave; conjuguer les verbes et &agrave; mettre
 			des mots &agrave; l’accusatif.
 			</p>
-			<? atentigo();	?>
+			<?php atentigo();	?>
 			<input type="hidden" name="013_cxap02.3" value="3. Formez des phrases ayant un sens en utilisant les mots donnés.">
 			<div class="tasko">
-			<? 
+			<?php 
 				$demandoj=array (
 				20. => "amikino - la - malvarma - mia - sukeri - teo.",
 				21. => "akvo - bela - birdo - la - pura - trinki.",
@@ -370,4 +370,4 @@ suffiront pour le moment.</p>
 					<input type="radio" name="900 09" value="3" <?php if($memorkurso["900_09"]=="3"){echo "checked";}?>> attribut du sujet<br/>
 				</p>
 		</div>
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

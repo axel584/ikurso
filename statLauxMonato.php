@@ -131,4 +131,4 @@ function stat_monatoj() {
 			<?php stat_monatoj(); ?>		
 		</div>
 	</div>
-<?phpinclude "pagxpiedo.inc.php";?>        
+<?php include "pagxpiedo.inc.php";?>        

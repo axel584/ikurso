@@ -18,8 +18,8 @@
 	<div class="encadre">
 		<p id="formularo">
 		<input type="hidden" name="jamaligxi" value="jes"> 
-		<!--<? if (!$persono_id) { ?>
-		-->
+		<?php if (!$persono_id) { ?>
+		
 			La correction des exercices est réservée aux personnes qui se sont préalablement inscrites.
 			Avant de cliquer sur le bouton <em>Envoyer</em>, n’oubliez pas de donner votre identifiant 
 			d’inscription et votre mot de passe.
@@ -30,16 +30,14 @@
 			<p>Votre mot de passe :
 			<input type="password" name="ktrl_pasvorto" size="30" value=""></p>
 
-		<!--
-		<? } else { ?>		
-			Et maintenant, <strong><? echo $persono['enirnomo']; ?></strong>, il ne vous reste plus qu'à envoyer vos
+		<?php } else { ?>		
+			Et maintenant, <strong><?php echo $persono['enirnomo']; ?></strong>, il ne vous reste plus qu'à envoyer vos
 			exercices à votre tuteur en cliquant sur le bouton <em>Envoyer</em> ci-dessous. Vous pouvez ajouter
 			des commentaires qui seront également transmis à votre tuteur.
 			</p>
-		<? } ?>
-		-->
+		<?php } ?>
 		<p>Commentaires :</p>
-		<p><textarea name="kialo" rows="8" cols= "80"><? if (isset($memorkurso["kialo"])){echo  stripslashes($memorkurso["kialo"]);}?></textarea>
+		<p><textarea name="kialo" rows="8" cols= "80"><?php if (isset($memorkurso["kialo"])){echo  stripslashes($memorkurso["kialo"]);}?></textarea>
 		</p>
 		<p><input class="bouton" type="submit" name="Submit" value="Envoyer">&nbsp;&nbsp;&nbsp;&nbsp;
 		<input class="bouton" type="reset" value="Effacer tout"></p>

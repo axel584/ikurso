@@ -20,13 +20,12 @@ if ($persono_id!="") {
 
 function PorInformistoj() {
 	global $persono_id, $lingvo, $verdakrabo, $enirnomo, $naskigxdato_tago, $naskigxdato_monato, $naskigxdato_jaro, $sekso, $personnomo, 
-	$retadreso, $familinomo, $adreso1, $adreso2, $urbo, $lando, $posxtkodo, $kurso, $kialo, $lgv_viaStudanto;
+	$retadreso, $familinomo, $adreso1, $adreso2, $urbo, $lando, $posxtkodo, $kurso, $kialo,$bdd;
 		$demando="select retadreso from personoj where rajtoj='I' and lingvo='FR'";
-		mysql_select_db("ikurso");
-		$result = mysql_query($demando) or die ("INSERT : Invalid query :".$query);
-		$row=mysql_fetch_array($result);
+		$result = $bdd->query($demando);
+		$row=$result->fetch();
 		$informistoj=$row["retadreso"];
-		while ($row=mysql_fetch_array($result)) {
+		while ($row=$result->fetch()) {
 		   $informistoj=$informistoj.",".$row["retadreso"];
 		}
 		if ($retadreso=="richard.emmanuelle@wanadoo.fr") {$informistoj="emmanuelle@esperanto-jeunes.org";}
@@ -286,10 +285,9 @@ if ($jamaligxi=="jes") {
 	}
 	else {
 		$query="select * from personoj where enirnomo='$enirnomo'";
-		mysql_select_db("ikurso");
-		$result = mysql_query($query) or die ("INSERT : Invalid query :".$query);
-		if (mysql_num_rows($result) =="1") {
-			$row=mysql_fetch_array($result);
+		$result = $bdd->query($query);
+		$row=$result->fetch();
+		if (isset($row["id"])) {
 			$persono_id=$row["id"];
 			if (($row["pasvorto"]!=$pasvorto)||($row["retadreso"]!=$retadreso)){
 				// ER 05.10.2015 : correction pour passage en PHP 5.4
@@ -353,15 +351,14 @@ if ($jamaligxi=="jes") {
 // sauf pour le ikurso (c'est inutile)
 if ($kurso!="KE") {
 	$query="select * from nuna_kurso where studanto=$persono_id and (stato='K' or stato='N') and kurso='$kurso'";
-	mysql_select_db("ikurso");
-	$result = mysql_query($query) or die ("SELECT : Invalid query :".$query);
-	if (mysql_num_rows($result) =="1") {
-		$row=mysql_fetch_array($result);
+	
+	$result = $bdd->query($query);
+	$row = $result->fetch();
+	if (isset($row["korektanto"])) {
 		$korektanto_id = $row["korektanto"];
 		$query2="select retadreso, sistemo from personoj where id=".$korektanto_id;
-		mysql_select_db("ikurso");
-		$result2 = mysql_query($query2) or die ("SELECT :".mysql_error().": in query :".$query2);
-		$row2 = mysql_fetch_array($result2);
+		$result2 = $bdd->query($query2);
+		$row2 = $result2->fetch();
 		$korektantaretadreso=$row2["retadreso"];
 		$korektantsistemo=$row2["sistemo"];
 		$mesagxkapo="MIME-Version: 1.0\n";
@@ -400,21 +397,20 @@ if ($kurso!="KE") {
  		*/
 		mail($korektantaretadreso,$objekto,stripslashes($fonto),$mesagxkapo);
 		$query = "update nuna_kurso set nunleciono=".$nunleciono.",stato='K',lastdato=CURDATE() where studanto=".$persono_id." and (stato='N' or stato='K') and kurso='$kurso'";
-		$result = mysql_query($query) or die ( "UPDATE : Invalid query :".$query);
-		$kazo=1;
+		$result=$bdd->exec($query);
+		
+		$kazo=1; // A déjà un correcteur
 		protokolo($persono_id,"TASKO SENDITA","$objekto");
-	}
-	else {
+	} else {
 		// l'eleve n'a pas encore de correcteur
 		// stocker la lecon dans eraraj_lecionoj
 		// et mettre a jour l'etat dans personoj pour mettre l'eleve en attente de correcteur	
+		$kazo=2; // n'a pas encore de correcteur
 		($kurso=="GR")?($objekto="gerda ".substr($subjekto,0,6)):($objekto=substr($subjekto,0,5));
 		$query = "insert into eraraj_lecionoj(persono_id,enirnomo,dato,subjekto,fonto) values (".$persono_id.",'".$persono["enirnomo"]."',now(),'".$objekto."','".addslashes($fonto)."')";
-		mysql_select_db("ikurso");
-		$result = mysql_query($query) or die ("INSERT : Invalid query :".$query);
+		$result = $bdd->exec($query);
 		$query2 = "update personoj set rajtoj='P',kurso='$kurso' where id=".$persono_id;
-		$result = mysql_query($query2) or die ( "UPDATE : Invalid query :".$query);
-		$kazo=2;
+		$result = $bdd->exec($query2);
 		($kurso=="GR")?($objekto="gerda ".substr($subjekto,0,6)):($objekto=substr($subjekto,0,5));
 		$objekto.=" de ".$persono["enirnomo"];
 		protokolo($persono_id,"TASKO SALVITA","$objekto");

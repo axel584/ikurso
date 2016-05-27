@@ -208,14 +208,14 @@ ob_start("konvX");
 
 			<h2>Comment faire ?</h2>
 			<ul class="niv0">
-				<li><a href="<?php echo $vojo;?>/helpo.php"><?php echo $lgv_helpo?></a></li>
+				<li><a href="<?php echo $vojo;?>/helpo.php">Aide et informations utiles</a></li>
 				<li><a href="<?php echo $vojo;?>/fr/intro.php?temo=enskribo">S&rsquo;inscrire &agrave; un cours</a></li>
 				<li><a href="#" onClick="window.open('<?php echo $vojo;?>pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');" >
 				Retrouver son mot de passe</a></li>
 				<li class="lasta">
 								
 					<a href="<?php echo $vojo;?>reago.php">
-					<?php echo $lgv_skribi;?> :					
+					Nous contacter :					
 					<input type="image" src="<?php echo $vojo;?>bildoj/koverto.gif">
 					</a>
 				</li>

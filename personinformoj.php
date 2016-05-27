@@ -64,7 +64,6 @@ include "pagxkapo.inc.php";
 					<td  class="col1">Date de naissance :</td>
 					<td>
 						<?php 
-						//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",$persono['naskigxdato'],$nskdt);
 						$nskdt = explode("-",$persono['naskigxdato']);
 						if (($nskdt[0]!="00")&&($nskdt[2]!="0000")) {
 							echo $nskdt[2]." ";
@@ -105,8 +104,8 @@ include "pagxkapo.inc.php";
 				<tr>
 					<td class="col1">Préférence pour les messages :</td>
 					<td>
-						<?phpif ($persono['sistemo']=='U'){echo $lgv_unikode;}
-						else {echo $lgv_ikse;}?>
+						<?php if ($persono['sistemo']=='U'){echo "lettres accentuées";}
+						else {echo "système en X";}?>
 					</td>
 				</tr>
 				<tr>

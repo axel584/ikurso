@@ -10,7 +10,7 @@ include "dlekkapo.inc.php";
 	<p>Votre devoir a été envoyé par courriel à votre correcteur. Vous allez en recevoir une copie par message.</p>
 	<?php
 	}
-		elseif ($kazo==3) {
+		elseif ($kazo==2) {
 		// le devoir n'a pas pu etre envoye pour des raisons techniques. Il est sauvegarde et sera envoye plus tard	
 		?>
 		<p>Votre devoir a été enregistré et sera envoyé à votre correcteur dès que possible. Une copie du message

@@ -9,10 +9,13 @@ $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $erarkodo=isset($_GET["erarkodo"])?$_GET["erarkodo"]:"";
 $noto=isset($_GET["noto"])?$_GET["noto"]:"";
 $temo=isset($_GET["temo"])?$_GET["temo"]:"";
+// si on a mis les réponses en session lors d'une précédente tentative, on les récupère
+$memorkurso=isset($_SESSION["memorkurso"])?$_SESSION["memorkurso"]:array(); 
 malfermiDatumbazon();
 if ($persono_id) {
 	$persono = apartigiPersonon($persono_id);
 }
+
 
 /*
 echo "memorkurso<br>";
@@ -80,7 +83,8 @@ function ekzerco($sist, $nbLig) {
 	}
 }
 
-$url=isset($_SERVER['REQUEST_URI'])?$_SERVER['REQUEST_URI']:"";
+
+
 $pagxo=explode("/", $_SERVER['SCRIPT_NAME']);
 $subjekto=$pagxo[count($pagxo)-1];
 $query="select * from lecionoj where lingvo='FR' and kurso='$kurso' and retpagxo='$subjekto'";

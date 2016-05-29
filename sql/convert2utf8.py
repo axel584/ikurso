@@ -2,9 +2,14 @@
 import MySQLdb
 import codecs
 import sys
+import config
 
 sortie = codecs.open('res-convert.txt','w','utf8')
 sortieSql = codecs.open('convert.sql','w','utf8')
+
+connection = MySQLdb.connect (host = "127.0.0.1",user = config.user,passwd = config.passwd,db = config.db,charset = 'utf8',use_unicode=True)
+cursor = connection.cursor()
+cursor2 = connection.cursor()
 
 def convert2utf8(texte) :
 	if texte==None :
@@ -80,6 +85,8 @@ def convert2utf8(texte) :
 	texte = texte.replace(u'\u00C3\u00A4',u'\uC3A4')
 	texte = texte.replace(u'\u00C3\u00A8',u'\u00E8') # e grave
 	texte = texte.replace(u'\u00C3\u00A9',u'é')
+	texte = texte.replace(u'Ã©',u'é')
+	texte = texte.replace(u'Ã©',u'\u00E9')
 	texte = texte.replace(u'\u00C3\u00AA',u'ê')
 	texte = texte.replace(u'\u00C3\u00AB',u'ë')
 	texte = texte.replace(u'\u00C3\u00AC',u'\uC3AC')
@@ -168,10 +175,6 @@ def debug(texte) :
 		if ord(lettre)==13:
 			print res
 			res=""
-
-connection = MySQLdb.connect (host = "127.0.0.1",user = "jefo",passwd = "***REMOVED***",db = "ikurso",charset = 'utf8',use_unicode=True)
-cursor = connection.cursor()
-cursor2 = connection.cursor()
 
 def convertTable(table,clef,colonnes) :
 	if clef in colonnes :

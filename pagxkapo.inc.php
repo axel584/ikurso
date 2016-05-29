@@ -1,7 +1,8 @@
 <?php
 //include_once $vojo."util.php";
 if (!isset($vojo)) { $vojo="";}
-$url=$_SERVER['REQUEST_URI'];
+// attention, cette variable est également calculé dans utilf.php
+$url=isset($_SERVER['REQUEST_URI'])?strtok($_SERVER['REQUEST_URI'],'?'):"";
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
 

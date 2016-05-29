@@ -148,19 +148,25 @@ foreach($_POST as $key => $value) {
 		elseif (substr($key, 4, 4)!="resp"){
 			$memorkurso["900_".substr($key,4,2)]=$_POST["900_".substr($key,4,2)];
 			$tabrep=explode("/", $_POST["900_resp_".substr($key, 4, 2)]);
-			$i=${substr($subjekto,0,5)}[(integer)(substr($key,4,2))];
-			$j=$_POST["900_".substr($key, 4, 2)];
-			$fonto.=" <span style=\"color:blue\">".$tabrep[$j-1]."</span>";
-			if ($i==$j){
+			// la variable $ subjekto contient le numéro de la leçon et on récupère ainsi de la variable $lec01 ou $lec02 la valeur attendue
+			$indice_reponse_attendue=${substr($subjekto,0,5)}[(integer)(substr($key,4,2))];
+			// on récupère du POST la réponse de l'élève
+			$indice_reponse_eleve=$_POST["900_".substr($key, 4, 2)]; 
+			// si l'élève n'a pas donné de réponse, l'indice de sa réponse contient "on" (pourquoi ?)
+			if ($indice_reponse_eleve!="on") {
+				$fonto.=" <span style=\"color:blue\">".$tabrep[$indice_reponse_eleve-1]."</span>";
+			}
+			if ($indice_reponse_attendue==$indice_reponse_eleve){
       		$bonaj++;
       	}
       	else{
-      		$fonto.="<br>Non. La bonne r&eacute;ponse est : ".$tabrep[$i-1]."";
+      		$fonto.="<br>Non. La bonne r&eacute;ponse est : ".$tabrep[$indice_reponse_attendue-1]."";
       	}
       	$fonto.="</p>\n";
 		}
    }
 }
+
 if (isset($bonaj)){
 	$fonto.="<br> Resultat du QCM : ".$bonaj."/".${substr($subjekto,0,5)}[0]."<br>";
 }
@@ -185,6 +191,7 @@ if ($jamaligxi=="jes") {
       $persono = apartigiPersonon($persono_id);
     */
 	if ($persono_id==""){
+		// TODO : on ne devrait jamais passé par là, non ?
 		// si deja inscrit:
       $enirnomo = $ktrl_enirnomo;
       $pasvorto = $ktrl_pasvorto;
@@ -249,7 +256,10 @@ if ($jamaligxi=="jes") {
    // enregistrer les reponses en session "aligxilo"
    $enirnomo=$nova_enirnomo;
    $pasvorto=$nova_pasvorto;
-   $aligxilo["enirnomo"]=$ktrl_enirnomo;
+
+   $aligxilo["enirnomo"]=$enirnomo;
+   $aligxilo["pasvorto"]=$pasvorto;
+   $aligxilo["pasvorto2"]=$pasvorto2;
    $aligxilo["retadreso"]=$retadreso;
    $aligxilo["adreso1"]=$adreso1;
    $aligxilo["adreso2"]=$adreso2;
@@ -310,6 +320,7 @@ if ($jamaligxi=="jes") {
 					// ER 05.10.2015 : correction pour passage en PHP 5.4
 					//session_register("aligxilo");
 					$_SESSION['aligxilo']=$aligxilo;
+					$_SESSION['memorkurso']=$memorkurso;
 					header("Location:".$_POST["010_adreso"]."?erarkodo=13&noto=$noto");
 					exit(0);
 				}
@@ -415,6 +426,7 @@ if ($kurso!="KE") {
 		$objekto.=" de ".$persono["enirnomo"];
 		protokolo($persono_id,"TASKO SALVITA","$objekto");
 	}
+	// TODO : pourquoi on fait des "unset" ?
 	foreach($_POST as $key => $value) {
 		unset($memorkurso[$key]);
 	}

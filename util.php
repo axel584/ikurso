@@ -6,7 +6,9 @@ ini_set('session.cookie_lifetime', 86400);
 include_once("db.inc.php");
 include_once("webui.inc.php");
 //include_once("forum/includes/forum.lib.php");
-$url=$_SERVER['REQUEST_URI'];
+// on récupère l'adresse de la page appelée (et on retire les paramètres au besoin)
+// attention, c'est aussi appelé dans "pagxkapo.inc.php"
+$url=isset($_SERVER['REQUEST_URI'])?strtok($_SERVER['REQUEST_URI'],'?'):"";
 
 // tiu funkcio kontrolas, cxu adreso validas kaj ekzistas
 function checkEmail($email)

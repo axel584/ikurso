@@ -14,6 +14,9 @@ if (isset($_SESSION['aligxilo'])) {
 		"enirnomo"=>"",
 		"retadreso"=>"",
 		"naskigxdato"=>"",
+		"naskigxdato_tago"=>"",
+		"naskigxdato_monato"=>"",
+		"naskigxdato_jaro"=>"",
 		"kialo"=>""
 	);
 }
@@ -68,11 +71,11 @@ if (isset($_SESSION['aligxilo'])) {
 				</tr>
 				<tr>
 					<td colspan="2" class="col1"><b>Mot de passe</b> : </td>
-					<td nowrap><input type="password" size="30" name="nova_pasvorto" value=""><em>&nbsp;(obligatoire)</em></td>
+					<td nowrap><input type="password" size="30" name="nova_pasvorto" value="<?php echo $aligxilo["pasvorto"]; ?>"><em>&nbsp;(obligatoire)</em></td>
 				</tr>
 				<tr>
 					<td colspan="2" class="col1"><b>Mot de passe <i>(confirmez)</i></b> : </td>
-					<td><input type="password" size="30" name="pasvorto2" value="">&nbsp;<em>(obligatoire)</em></td>
+					<td><input type="password" size="30" name="pasvorto2" value="<?php echo $aligxilo["pasvorto2"]; ?>">&nbsp;<em>(obligatoire)</em></td>
 				</tr>
 				<tr>
 					<td nowrap colspan="2" class="col1">Pays :</td>
@@ -96,8 +99,14 @@ if (isset($_SESSION['aligxilo'])) {
 					<td nowrap>
 						<?php 
 						//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $aligxilo["naskigxdato"],$nskdt); 
-						$nskdt=explode("-", $aligxilo["naskigxdato"]);
-						if (count($nskdt)==1) {
+						if (isset($aligxilo["naskigxdato"])) {
+							$nskdt=explode("-", $aligxilo["naskigxdato"]);
+							if (count($nskdt)==1) {
+								$nskdt=array("00","00","0000");
+							}
+						} elseif (isset($aligxilo["naskigxdato_tago"]) && isset($aligxilo["naskigxdato_monato"]) && ($aligxilo["naskigxdato_jaro"]))  {
+							$nskdt=array($aligxilo["naskigxdato_jaro"],$aligxilo["naskigxdato_monato"],$aligxilo["naskigxdato_tago"]);
+						} else {
 							$nskdt=array("00","00","0000");
 						}
 						?>

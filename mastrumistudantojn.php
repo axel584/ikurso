@@ -7,7 +7,7 @@ malfermiDatumbazon();
 // ER 05.10.2015 : correction pour passage en PHP 5.4
 //session_register("persono_id");
 $_SESSION['persono_id']=$persono_id;
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+//if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
 if (($persono["rajtoj"]!='A')&&($persono["rajtoj"]!='K')) {header("Location:index.php?erarkodo=4");}
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");

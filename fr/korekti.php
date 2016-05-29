@@ -106,7 +106,10 @@ $stopInfo=isset($_POST["stopInfo"])?$_POST["stopInfo"]:"";
 
 $lec01=array(13,'2','2','3','2','3','4','1','4','4','1','2','3','2');
 $lec02=array(9,'3','3','1','3','2','3','2','1','3');
-if (isset(${substr($subjekto,0,5)})){$bonaj=0;}
+if (isset(${substr($subjekto,0,5)})){
+	$bonaj=0;
+	$eraroj_en_qcm = array();
+}
 $fonto="<html><head><title>".$_POST["010_adreso"]."</title>\n";
 $fonto.="<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"\n>";
 $fonto.="<style>body{font-family:\"Courier New\", Courier, sans-serif;font-size:small}</style>\n";
@@ -155,17 +158,25 @@ foreach($_POST as $key => $value) {
 			// si l'élève n'a pas donné de réponse, l'indice de sa réponse contient "on" (pourquoi ?)
 			if ($indice_reponse_eleve!="on") {
 				$fonto.=" <span style=\"color:blue\">".$tabrep[$indice_reponse_eleve-1]."</span>";
+				// pas de reponse = mauvaise réponse
+				$eraroj_en_qcm[]=substr($key, 4, 2);
 			}
 			if ($indice_reponse_attendue==$indice_reponse_eleve){
-      		$bonaj++;
-      	}
-      	else{
-      		$fonto.="<br>Non. La bonne r&eacute;ponse est : ".$tabrep[$indice_reponse_attendue-1]."";
-      	}
+				echo "bonne reponse :".substr($key, 4, 2)."<br/>";
+      			$bonaj++;
+      		} else {
+      			echo "key :".$key."<br/>";
+      			echo "mauvaise reponse :".substr($key, 4, 2)."<br/>";
+      			$eraroj_en_qcm[]=substr($key, 4, 2);
+      			$fonto.="<br>Non. La bonne r&eacute;ponse est : ".$tabrep[$indice_reponse_attendue-1]."";
+      		}
       	$fonto.="</p>\n";
 		}
    }
 }
+
+print_r($eraroj_en_qcm);
+exit(0);
 
 if (isset($bonaj)){
 	$fonto.="<br> Resultat du QCM : ".$bonaj."/".${substr($subjekto,0,5)}[0]."<br>";
@@ -321,7 +332,7 @@ if ($jamaligxi=="jes") {
 					//session_register("aligxilo");
 					$_SESSION['aligxilo']=$aligxilo;
 					$_SESSION['memorkurso']=$memorkurso;
-					header("Location:".$_POST["010_adreso"]."?erarkodo=13&noto=$noto");
+					header("Location:".$_POST["010_adreso"]."?erarkodo=13&noto=$noto&eraroj=".addslashes(urlencode(serialize($eraroj_en_qcm))));
 					exit(0);
 				}
 			}

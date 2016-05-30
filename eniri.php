@@ -35,7 +35,7 @@ if ($persono_id=="0") {
 		        break;
 		case "3":	
 		case "4":	
-	        	header("Location:forum/index.php?sid=".$phpbb2mysql_sid.".php");
+	        	header("Location:index.php");
 				break;
 	    	case "5":	/* korektanto */
 				if (($persono["videbla"]=="J")||($persono["videbla"]=="")) {
@@ -66,7 +66,7 @@ if ($persono_id=="0") {
 					if (($persono["videbla"]=="J")||($persono["videbla"]=="")) {
 						header ("Location:helpo.php?temo=nova");
 					} else {
-					header("Location:forum/index.php?sid=".$phpbb2mysql_sid.".php");
+						header("Location:index.php");
 				}
 					break;
 				case "K":
@@ -91,7 +91,7 @@ if ($persono_id=="0") {
 					}
 					break;
 				default:				
-					header("Location:forum/index.php?sid=".$phpbb2mysql_sid.".php");
+					header("Location:index.php");
 					break;
 			}
 		}

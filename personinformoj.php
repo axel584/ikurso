@@ -65,11 +65,14 @@ include "pagxkapo.inc.php";
 					<td>
 						<?php 
 						$nskdt = explode("-",$persono['naskigxdato']);
-						if (($nskdt[0]!="00")&&($nskdt[2]!="0000")) {
-							echo $nskdt[2]." ";
-							simplaVorto("nomo","monatoj"," where kodo='".$nskdt[1]."' and lingvo='fr'");
-							echo " ".$nskdt[0];
-						} ?>
+						if (count($nskdt)==3) { // si on n'arrive pas à découper la date, c'est qu'elle est vide
+							if (($nskdt[0]!="00")&&($nskdt[2]!="0000")) {
+								echo $nskdt[2]." ";
+								simplaVorto("nomo","monatoj"," where kodo='".$nskdt[1]."' and lingvo='fr'");
+								echo " ".$nskdt[0];
+							} 
+						}
+						?>
 					</td>
 				</tr>
 				<tr>
@@ -93,10 +96,8 @@ include "pagxkapo.inc.php";
 					<td class="col1">Mon correcteur :</td>
 					
 					<?php 
-					$nuna_kurso = new nuna_kurso;
-					$nuna_kurso->load_by_studanto_kaj_kurso($persono['id'],$kurso['kodo']);
-					$korektanto = new personoj;
-					$korektanto->load_by_id($nuna_kurso->korektanto['id']);
+					// on récupère les coordonnées du correcteur de l'élève
+					$korektanto = getKorektantonElLernanto($persono['id']);
 					?>
 					<td><?=$korektanto['personnomo'];?> <?=$korektanto['familinomo'];?> : <a href="mailto:<?=$korektanto['retadreso'];?>"><?=$korektanto['retadreso'];?></a></td>
 				</tr>					

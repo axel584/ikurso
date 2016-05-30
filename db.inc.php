@@ -40,7 +40,11 @@ function kreiPersonon($enirnomo,$pasvorto,$retadreso,$lingvo) {
 // lingvo : uzita lingvo de la persono : TRE GRAVA AFERO !!! cxiuj franclingvaj korektantoj korektas franclingvajn studantojn. cxiuj brazillingvaj korektantoj korektas brazillingvajn studantojn ktp.
 function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$ndtago,$ndmonato,$ndjaro,$kialo,$sistemo,$stopInfo) {
     global $bdd;
-    $naskigxdato=$ndjaro.'-'.$ndmonato.'-'.$ndtago;
+    if (($ndjaro=="")||($ndmonato=="")||($ndtago=="")) {
+        $naskigxdato=NULL;    
+    } else {
+        $naskigxdato=$ndjaro.'-'.$ndmonato.'-'.$ndtago;
+    }
      $query = "update personoj set ";
      $query .= "sekso=:sekso,";
      $query .= "familinomo=:familinomo,";
@@ -55,8 +59,15 @@ function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$p
      $query .= "sistemo=:sistemo,";
      $query .= "stop_info=:stopInfo ";
      $query .= "where id=:id";
-     $requete = $bdd->prepare($query);
-     $requete->execute(array(':sekso' => $sekso, ':familinomo' => $familinomo,':personnomo'=>$personnomo,':adreso1'=>$adreso1,':adreso2'=>$adreso2,':posxtkodo'=>$posxtkodo,':urbo'=>$urbo,':lando'=>$lando,':naskigxdato'=>$naskigxdato,':kialo'=>$kialo,':sistemo'=>$sistemo,':stopInfo'=>$stopInfo,':id'=>$id));
+     try {
+         $requete = $bdd->prepare($query);
+         $requete->execute(array(':sekso' => $sekso, ':familinomo' => $familinomo,':personnomo'=>$personnomo,':adreso1'=>$adreso1,':adreso2'=>$adreso2,':posxtkodo'=>$posxtkodo,':urbo'=>$urbo,':lando'=>$lando,':naskigxdato'=>$naskigxdato,':kialo'=>$kialo,':sistemo'=>$sistemo,':stopInfo'=>$stopInfo,':id'=>$id));
+     }
+    catch (Exception $e)
+    {
+            die('Erreur : ' . $e->getMessage());
+            exit(0);
+    }
 }
 
 // tiu funkcio trovas iun per lia unika numero (id) kaj eldonas objekton kun tiu persono.

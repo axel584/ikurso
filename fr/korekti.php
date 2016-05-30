@@ -158,15 +158,11 @@ foreach($_POST as $key => $value) {
 			// si l'élève n'a pas donné de réponse, l'indice de sa réponse contient "on" (pourquoi ?)
 			if ($indice_reponse_eleve!="on") {
 				$fonto.=" <span style=\"color:blue\">".$tabrep[$indice_reponse_eleve-1]."</span>";
-				// pas de reponse = mauvaise réponse
-				$eraroj_en_qcm[]=substr($key, 4, 2);
-			}
+				
+			} 
 			if ($indice_reponse_attendue==$indice_reponse_eleve){
-				echo "bonne reponse :".substr($key, 4, 2)."<br/>";
-      			$bonaj++;
+				$bonaj++;
       		} else {
-      			echo "key :".$key."<br/>";
-      			echo "mauvaise reponse :".substr($key, 4, 2)."<br/>";
       			$eraroj_en_qcm[]=substr($key, 4, 2);
       			$fonto.="<br>Non. La bonne r&eacute;ponse est : ".$tabrep[$indice_reponse_attendue-1]."";
       		}
@@ -174,9 +170,6 @@ foreach($_POST as $key => $value) {
 		}
    }
 }
-
-print_r($eraroj_en_qcm);
-exit(0);
 
 if (isset($bonaj)){
 	$fonto.="<br> Resultat du QCM : ".$bonaj."/".${substr($subjekto,0,5)}[0]."<br>";

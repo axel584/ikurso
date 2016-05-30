@@ -80,6 +80,9 @@ include "pagxkapo.inc.php";
 					<?php 
 					//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",$persono['naskigxdato'],$nskdt);
 					$nskdt=explode("-",$persono['naskigxdato']);
+					if (count($nskdt)!=3) {
+						$nskdt=array("","","");
+					}
 					?>
 					<input type="text" name="naskigxdato_tago" size="3" maxlength="2" value="<?=$nskdt[2];?>">
 					<?php konstruiMenuon("naskigxdato_monato","monatoj","kodo","nomo",$nskdt[1]," where lingvo='fr'","-- mois --");?>

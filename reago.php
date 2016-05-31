@@ -21,9 +21,9 @@ include "pagxkapo.inc.php";
 					<h2>Votre message</h2>
 					<form method="post" action="reago2.php">
 					<?php if ($erarkodo=="15"){
-						echo "<div class='atentigo'><p class='eraro'>".$lgv_eraro15."</p></div>";
+						echo "<div class='atentigo'><p class='eraro'>Vous devez indiquer une adresse électronique correcte</p></div>";
 					} elseif ($erarkodo=="16"){
-						echo "<div class='atentigo'><p class='eraro'>".$lgv_eraro16."</p></div>";
+						echo "<div class='atentigo'><p class='eraro'>Votre message est vide</p></div>";
 					} else {
 					?>
 						<p>Ce formulaire vous permet d'envoyer un message aux administrateurs du cours.

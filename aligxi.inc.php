@@ -67,15 +67,15 @@ if (isset($_SESSION['aligxilo'])) {
 				</tr>
 				<tr>
 					<td colspan="2" class="col1"><b>Identifiant</b> : </td>
-					<td nowrap><input type="text" size="30" name="nova_enirnomo" value="<?php echo $aligxilo["enirnomo"]; ?>"><em>&nbsp;(obligatoire)</em></td>
+					<td nowrap><input type="text" size="30" name="nova_enirnomo" value="<?php echo $aligxilo["enirnomo"]; ?>" required><em>&nbsp;(obligatoire)</em></td>
 				</tr>
 				<tr>
 					<td colspan="2" class="col1"><b>Mot de passe</b> : </td>
-					<td nowrap><input type="password" size="30" name="nova_pasvorto" value="<?php echo $aligxilo["pasvorto"]; ?>"><em>&nbsp;(obligatoire)</em></td>
+					<td nowrap><input type="password" size="30" name="nova_pasvorto" value="<?php echo $aligxilo["pasvorto"]; ?>" required><em>&nbsp;(obligatoire)</em></td>
 				</tr>
 				<tr>
 					<td colspan="2" class="col1"><b>Mot de passe <i>(confirmez)</i></b> : </td>
-					<td><input type="password" size="30" name="pasvorto2" value="<?php echo $aligxilo["pasvorto2"]; ?>">&nbsp;<em>(obligatoire)</em></td>
+					<td><input type="password" size="30" name="pasvorto2" value="<?php echo $aligxilo["pasvorto2"]; ?>" required>&nbsp;<em>(obligatoire)</em></td>
 				</tr>
 				<tr>
 					<td nowrap colspan="2" class="col1">Pays :</td>
@@ -92,7 +92,7 @@ if (isset($_SESSION['aligxilo'])) {
 				</tr>
 				<tr>
 					<td nowrap colspan="2" class="col1"><b>Adresse électronique</b> :</td>
-					<td nowrap><input type="text" name="retadreso" size="50" value="<?php echo $aligxilo["retadreso"]; ?>"><em>&nbsp;(obligatoire)</em></td>
+					<td nowrap><input type="email" name="retadreso" size="50" value="<?php echo $aligxilo["retadreso"]; ?>" required><em>&nbsp;(obligatoire)</em></td>
 				</tr>
 				<tr>
 					<td nowrap colspan="2" class="col1">Date de naissance :</td>

@@ -576,12 +576,10 @@ include "adminkapo.inc.php";
 							<td nowrap>
 								<?php //ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $celpersono["ekdato"],$ekdt);
 									$ekdt = explode("-",$celpersono["ekdato"]);
-									if (count($ekdt)==1) {$ekdt = array("00","00","0000");}
-									echo $ekdt[2]." ";
-									$demando =  "select kodo,nomo from monatoj where kodo=".$ekdt[1]." and lingvo='fr'";
-									$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-									if ($row = $result->fetch()){
-										echo $row["nomo"]." ".$ekdt[0]; 
+									if (count($ekdt)==3) { // on affiche la date que si on arrive à la découper en 3 (jours, mois, année)
+										echo $ekdt[2]." ";
+										simplaVorto("nomo","monatoj"," where kodo='".$nskdt[1]."' and lingvo='fr'");
+										echo $ekdt[0];
 									}
 								?>
 							</td>

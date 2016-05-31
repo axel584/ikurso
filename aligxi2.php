@@ -126,7 +126,7 @@ if ($pasvorto!=$pasvorto2) {
 			mail($informistoj,$subjekto,$teksto,$mesagxkapo);
 			
 			protokolo($nova_persono_id,"VERDA KRABO","$retadreso : $verdakrabo");
-			modifiPersonon($nova_persono_id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$naskigxdato_tago,$naskigxdato_monato,$naskigxdato_jaro,addslashes($kialo),"0",$kurso,"U",$stopInfo);
+			modifiPersonon($nova_persono_id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$naskigxdato_tago,$naskigxdato_monato,$naskigxdato_jaro,$kialo,"0",$kurso,"U",$stopInfo);
 			//on ne créer pas d'utilisateur phpbb pour le moment
 			//phpbb_create_user($nova_persono_id,$enirnomo,$pasvorto,$retadreso,$lingvo,$urbo);
 			$_SESSION["persono_id"]=$nova_persono_id;

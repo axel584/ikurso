@@ -578,8 +578,8 @@ include "adminkapo.inc.php";
 									$ekdt = explode("-",$celpersono["ekdato"]);
 									if (count($ekdt)==3) { // on affiche la date que si on arrive à la découper en 3 (jours, mois, année)
 										echo $ekdt[2]." ";
-										simplaVorto("nomo","monatoj"," where kodo='".$nskdt[1]."' and lingvo='fr'");
-										echo $ekdt[0];
+										simplaVorto("nomo","monatoj"," where kodo='".$ekdt[1]."' and lingvo='fr'");
+										echo " ".$ekdt[0];
 									}
 								?>
 							</td>

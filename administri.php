@@ -577,7 +577,7 @@ include "adminkapo.inc.php";
 								<?php //ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $celpersono["ekdato"],$ekdt);
 									$ekdt = explode("-",$celpersono["ekdato"]);
 									if (count($ekdt)==3) { // on affiche la date que si on arrive à la découper en 3 (jours, mois, année)
-										echo $ekdt[2]." ".$ekdt[1];
+										echo $ekdt[2]." ";
 										simplaVorto("nomo","monatoj"," where kodo='".$ekdt[1]."' and lingvo='fr'");
 										echo " ".$ekdt[0];
 									}

@@ -87,7 +87,6 @@ if ($celpersono["posxtkodo"]!=$posxtkodo) {
 if ($celpersono["urbo"]!=$urbo) { 
 	// update en la normala datumbazo
    $query = "update personoj set urbo='$urbo' where id=$celpersono_id";
-   echo $query;
    $result = $bdd->exec($query);
 }
 

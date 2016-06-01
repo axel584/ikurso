@@ -854,7 +854,7 @@ réduisant la masse du vocabulaire à apprendre par c&oelig;ur.
 </table>
 
 <h3> Exercices - septième leçon</h3>
-<? atentigo(); ?>
+<?php atentigo(); ?>
 
 <p>
 L’espéranto est fascinant, n’est-ce pas&#160;? Voici l’occasion de mettre à

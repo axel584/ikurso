@@ -415,7 +415,7 @@ seulement par un oui ou un non). Vous pouvez utiliser <em>sed</em> (mais)
 dans les réponses négatives :
 Ex.:  &#348;i ne man&#285;as &#265;okoladon, sed panon.</p>
 <input type="hidden" name="013_cxap04.4" value="4. Répondre maintenant en espéranto avec des phrases complètes (pas seulement par un oui ou un non). Vous pouvez utiliser <em>sed</em> (mais) dans les réponses négatives.">
-<?phpatentigo();?>
+<?php atentigo();?>
 <div class="tasko">
 <?php
 	$demandoj=array (

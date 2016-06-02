@@ -5,12 +5,16 @@ $persono_id=$_SESSION["persono_id"];
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
 $parto=isset($_GET["parto"])?$_GET["parto"]:"";
+$erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 if ($parto=="") {$parto=1;}
 
 // ***** ER 19/04/2016 : suppression de l'onglet "mes voisins" *****
 $parto=1;
 
 include "pagxkapo.inc.php";
+
+if ($erarkodo=="16") echo "<div class='atentigo'><p class='eraro'>Cours inconnu.</p></div>";
+if ($erarkodo=="17") echo "<div class='atentigo'><p class='eraro'>Diplome introuvable pour ce cours.</p></div>";
 ?>
 		<div id="enhavo">
 		<ul id="tabnav">
@@ -112,6 +116,14 @@ include "pagxkapo.inc.php";
 				<tr>
 					<td class="col1" valign="top">Commentaire :</td>
 					<td valign="top"><?php echo stripSlashes(nl2br($persono['kialo']));?></td>
+				</tr>
+				<tr>
+					<td class="col1" valign="top">Cours suivis :</td>
+					<td valign="top">
+						<?php
+						getCoursElLernanto($persono['id']);
+						?>
+					</td>
 				</tr>
 			</tbody>
 			</table>

@@ -684,7 +684,7 @@ include "adminkapo.inc.php";
 										<td><?php listi_Korektantoj_laux_kurso($celpersono_id,$nuna_kurso['kurso']); ?></td>
 									<?php } else { ?>
 										<td><img src="bildoj/1rightarrow.png" align="middle"></td>
-										<td><strong><a href="administri.php?celpersono_id<?=$nuna_kurso['korektanto_id']?>">
+										<td><strong><a href="administri.php?celpersono_id=<?=$nuna_kurso['korektanto_id']?>">
 										<?=$nuna_kurso['korektanto_enirnomo'] ?></a></strong></td>
 									<?php } ?>
 									</a></strong></td>

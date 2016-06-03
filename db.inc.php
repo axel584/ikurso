@@ -216,20 +216,43 @@ function getKorektantonElLernanto($lernanto_id) {
 
 function getCoursElLernanto($lernanto_id) {
     global $bdd;
-    $demando = "select stato,nunleciono,nuna_kurso.kurso,kursoj.nomo,lecionoj.titolo from nuna_kurso join kursoj on kursoj.kodo=nuna_kurso.kurso join lecionoj on lecionoj.numero=nuna_kurso.nunleciono and lecionoj.kurso=nuna_kurso.kurso where studanto=".$lernanto_id." and kursoj.lingvo='fr' and lecionoj.lingvo='fr'";
+    $demando = "select stato,nunleciono,kurso,nunleciono from nuna_kurso where studanto=".$lernanto_id;
     $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
     while ($row = $result->fetch()) {
-        echo $row["nomo"];
+        if ($row['kurso']=="GR") {
+            $prefixe_url ='fr/gerda/';
+        } elseif($row['kurso']=="CG") {
+            $prefixe_url = 'fr/cge/';
+        }
+        simplaVorto('nomo','kursoj',"where lingvo='fr' and kodo='".$row['kurso']."'");
         // TODO : vérifier pour les élèves n'ayant pas encore commencé
-        echo " - Dernière leçon suivi :".$row["titolo"];
+        if ($row['nunleciono']==null) {
+            echo " - pas encore commencé";
+        } else {
+            echo " - Dernière leçon suivi : ";
+            simplaVorto('titolo','lecionoj',"where lingvo='fr' and numero='".$row["nunleciono"]."' and kurso='".$row["kurso"]."'");
+        }
+        if ($row["stato"]=="N") { // cas des élèves pas encore commencé
+            // TODO : ici on affiche la première leçon à suivre
+            $demando2 = "select titolo,retpagxo from lecionoj where lingvo='fr' and numero='1' and kurso='".$row["kurso"]."'";
+            $row2 = $bdd->query($demando2)->fetch();
+            if (isset($row2['retpagxo'])) { // dans le cas du logiciel, il n'y a pas de leçon à afficher
+                echo " - <a href='".$prefixe_url.$row2['retpagxo']."'>Accès à la leçon : ".$row2['titolo']."</a>";
+            }
+        }
         if ($row["stato"]=="K") { // cas des élèves en cours
-            // TODO : ici on affiche ensuite la prochaine leçon à suivre
+            $prochaine_lecon = int($row['nunleciono'])+1;
+            $demando2 = "select titolo,retpagxo from lecionoj where lingvo='fr' and numero='".$prochaine_lecon."' and kurso='".$row["kurso"]."'";
+            $row2 = $bdd->query($demando2)->fetch();
+            if ($row2['retpagxo']!=null) { // dans le cas du logiciel, il n'y a pas de leçon à afficher
+                echo " - <a href='".$prefixe_url.$row2['retpagxo']."'>Accès à la leçon : ".$row2['titolo']."</a>";
+            }
         }
         if ($row["stato"]=="F") {
             // ici on affiche le lien vers le diplome
-            echo "- <a href='diplome.php?kurso=".$row["kurso"]."'>Attestation de réussite</a>";
+            echo " - <a href='diplome.php?kurso=".$row["kurso"]."'>Attestation de réussite</a>";
         }
-
+        echo "<br/>";
     }
 }
 

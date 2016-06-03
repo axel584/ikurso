@@ -216,7 +216,7 @@ function getKorektantonElLernanto($lernanto_id) {
 
 function getCoursElLernanto($lernanto_id) {
     global $bdd;
-    $demando = "select stato,nunleciono,nuna_kurso.kurso,kursoj.nomo,lecionoj.titolo from nuna_kurso join kursoj on kursoj.kodo=nuna_kurso.kurso join lecionoj on lecionoj.numero=nuna_kurso.nunleciono and lecionoj.kurso=nuna_kurso.kurso where studanto=7771 and kursoj.lingvo='fr' and lecionoj.lingvo='fr'";
+    $demando = "select stato,nunleciono,nuna_kurso.kurso,kursoj.nomo,lecionoj.titolo from nuna_kurso join kursoj on kursoj.kodo=nuna_kurso.kurso join lecionoj on lecionoj.numero=nuna_kurso.nunleciono and lecionoj.kurso=nuna_kurso.kurso where studanto=".$lernanto_id." and kursoj.lingvo='fr' and lecionoj.lingvo='fr'";
     $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
     while ($row = $result->fetch()) {
         echo $row["nomo"];

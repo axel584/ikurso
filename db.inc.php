@@ -241,7 +241,7 @@ function getCoursElLernanto($lernanto_id) {
             }
         }
         if ($row["stato"]=="K") { // cas des élèves en cours
-            $prochaine_lecon = int($row['nunleciono'])+1;
+            $prochaine_lecon = $row['nunleciono']+1;
             $demando2 = "select titolo,retpagxo from lecionoj where lingvo='fr' and numero='".$prochaine_lecon."' and kurso='".$row["kurso"]."'";
             $row2 = $bdd->query($demando2)->fetch();
             if ($row2['retpagxo']!=null) { // dans le cas du logiciel, il n'y a pas de leçon à afficher

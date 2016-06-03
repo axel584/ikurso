@@ -307,11 +307,11 @@ include "pagxkapo.inc.php";
 				<table class="perso">
 					<tr>
 						<td width="48%">
-							<h2>élèves en retard :</h2>
-							<?php listi_malfruajLernantoj(20); ?>
+							<h2>les 50 élèves les plus retard :</h2>
+							<?php listi_malfruajLernantoj(50); ?>
 						</td>
 						<td width="48%">
-							<h2>Correcteurs en retard :</h2>
+							<h2>Correcteurs non connecté depuis 30 jours :</h2>
 							<?php listi_malfruajKorektantoj(30); ?>	
 						</td>
 					</tr>

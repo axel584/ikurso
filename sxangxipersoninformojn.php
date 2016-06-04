@@ -53,7 +53,7 @@ include "pagxkapo.inc.php";
 				<td class="col1">Pays :</td>
 				<td>
 					<?php 
-					konstruiMenuon("lando","landoj","kodo","nomo",$persono['lando']," where lingvo='fr' order by nomo","-- pays --"); 
+					konstruiMenuon("lando","landoj","kodo","nomo",$persono['lando']," order by nomo","-- pays --"); 
 					?>
 				</td>
 			<tr>
@@ -85,7 +85,7 @@ include "pagxkapo.inc.php";
 					}
 					?>
 					<input type="text" name="naskigxdato_tago" size="3" maxlength="2" value="<?=$nskdt[2];?>">
-					<?php konstruiMenuon("naskigxdato_monato","monatoj","kodo","nomo",$nskdt[1]," where lingvo='fr'","-- mois --");?>
+					<?php konstruiMenuon("naskigxdato_monato","monatoj","kodo","nomo",$nskdt[1],"","-- mois --");?>
 					<input type="text" name="naskigxdato_jaro" size="5"  maxlength="4" value="<?=$nskdt[0];?>">
 				</td>
 			</tr>

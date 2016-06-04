@@ -68,7 +68,7 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 	//$informistoj="emmanuelle@esperanto-jeunes.org";
 	mail($informistoj,"un esperantiste de plus !",$contents,$mesagxkapo);
 }
-// se la nova stato estas H(altita), sed la malnova ne estis F, ni updatas ! :-)
+// se la nova stato estas H(altita), sed la malnova ne estis H, ni updatas ! :-)
 if ($rezultoj[1]=='H' and $row["stato"]!='H') {
 	$query = "update nuna_kurso set stato='H',findato=CURDATE(),lastdato=CURDATE() where id=".$rezultoj[0]." and (stato='N' or stato='K')";
 	$result = $bdd->exec($query);

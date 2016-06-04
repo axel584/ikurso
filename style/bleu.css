@@ -984,10 +984,25 @@ table.hejmo p {
 	margin:2px 10px;
 	font-size:11px;
 }
-input.bouton {
+.bouton {
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
 	font-size: 11px;
+	padding:2px 5px;
 	color:black;
+	background-color: #FFFFFF;
+	border:1px solid #668BC2;
+	color:#668BC2;
+	border-radius: 2px;		
+}
+a.bouton {
+	display:inline-block;
+	text-decoration:none;
+}
+.bouton:hover {
+	background-color:#F6F9FB;
+}
+.bouton:active {
+	background-color:#E3E7EA;
 }
 /*****************************************
  * listes de choix de styles (A SUPPRIMER)

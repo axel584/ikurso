@@ -1,6 +1,6 @@
 <?php
 include "util.php";
-$pagxtitolo=$lgv_personinformoj;
+$pagxtitolo="Données personnelles";
 $persono_id=$_SESSION["persono_id"];
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);

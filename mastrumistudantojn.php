@@ -1,5 +1,4 @@
 <?php
-include "lingvo.inc.php";
 include "db.inc.php";
 include "webui.inc.php";
 include "forum/includes/forum.lib.php";
@@ -28,7 +27,7 @@ function listiStudantojn() {
         echo $row["enirnomo"]." (".$row["personnomo"]." ".$row["familinomo"].")";
         echo "</td><td><select name=\"studanto".$i."\">";
         echo "<option value=\"".$row["id"]."-N\" >N’ont pas encore commencé</option>";
-        $demando2="select lecionoj.titolo,lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='FR'";
+        $demando2="select lecionoj.titolo,lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."'";
         $result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
         while($row2 = $result2->fetch()) {
                 echo "<option value=\"".$row["id"]."-".$row2["numero"]."\" ";

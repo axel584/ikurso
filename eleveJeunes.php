@@ -10,7 +10,7 @@ header("Pragma: no-cache"); // HTTP/1.0
 $etiquettes = new EtiquettesPDF(3, 8);
 
 mysql_select_db( "ikurso");
-$demando =  "select personnomo,familinomo,adreso1,adreso2,posxtkodo,urbo from personoj,nuna_kurso where personoj.id=nuna_kurso.studanto and lingvo='FR' and lando='FR' and adreso1 != '' and naskigxdato>'1975-01-01' order by posxtkodo ASC";
+$demando =  "select personnomo,familinomo,adreso1,adreso2,posxtkodo,urbo from personoj,nuna_kurso where personoj.id=nuna_kurso.studanto and lando='FR' and adreso1 != '' and naskigxdato>'1975-01-01' order by posxtkodo ASC";
 
 mysql_select_db( "ikurso");
 $result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando);

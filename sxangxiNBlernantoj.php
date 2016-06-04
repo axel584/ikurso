@@ -7,8 +7,8 @@ if (($rajto!='A')&&($rajto!='K')) {header("Location:index.php?erarkodo=4");}
 $farite=isset($_GET["farite"])?$_GET["farite"]:"";
 
 function NbStudantojn() {
-	global $lingvo,$persono_id,$bdd;
-	$demando1="select nomo,kodo from kursoj where kursoj.lingvo='FR'";
+	global $persono_id,$bdd;
+	$demando1="select nomo,kodo from kursoj";
 	$result1 = $bdd->query($demando1);
 	while($row1 = $result1->fetch()) {
 		echo "<tr>\n";

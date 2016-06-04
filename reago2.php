@@ -11,7 +11,7 @@ if (checkEmail($_POST['sendinto'])) {
 	if ($_POST["komento"]) {
 		$mesagxkapo.="Cc: <".$_POST['sendinto'].">\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s ").chr(13);
-		$demando="select retadreso from personoj where (rajtoj='A') and lingvo='FR'";
+		$demando="select retadreso from personoj where (rajtoj='A')";
 		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 		$row=$result->fetch(); // on recupère le 1er admin
 		$informistoj=$row["retadreso"];

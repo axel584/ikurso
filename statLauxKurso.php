@@ -11,9 +11,9 @@ function increment($valeur) {
 }
 
 function stat_lecionoj() {
-	global $lingvo,$lgv,$lgv_nomoLeciono,$lgv_haltis,$lgv_lernante,$lgv_sumo,$lgv_neKomencis,$lgv_finis,$bdd;
+	global $lgv,$lgv_nomoLeciono,$lgv_haltis,$lgv_lernante,$lgv_sumo,$lgv_neKomencis,$lgv_finis,$bdd;
 	// initialisation de la variable $stat et $nomo_kurso/$nomo_leciono
-	$demando = "select kodo,nomo from kursoj where lingvo='fr'";
+	$demando = "select kodo,nomo from kursoj";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		$stat[$row["kodo"]]=array(); 
@@ -25,7 +25,7 @@ function stat_lecionoj() {
 		$stat[$row["kodo"]]["T"]=0; // total
 		$nomo_kursoj[$row["kodo"]]=$row["nomo"];
 		// on initialise ensuite chaque lecon
-		$demando2 = "select numero,titolo from lecionoj where kurso='".$row["kodo"]."' and lingvo='fr'";
+		$demando2 = "select numero,titolo from lecionoj where kurso='".$row["kodo"]."'";
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		while($row2 = $result2->fetch()) {
 			$stat[$row["kodo"]][$row2["numero"]]=array();
@@ -39,7 +39,7 @@ function stat_lecionoj() {
 
 
 	// laux landoj
-	$demando = "select nuna_kurso.kurso as kurso,nuna_kurso.nunleciono as numleciono,nuna_kurso.stato as stato from nuna_kurso,personoj where personoj.id=nuna_kurso.studanto and personoj.lingvo='fr'";
+	$demando = "select nuna_kurso.kurso as kurso,nuna_kurso.nunleciono as numleciono,nuna_kurso.stato as stato from nuna_kurso,personoj where personoj.id=nuna_kurso.studanto ";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		if ($row["stato"]=="N") {
@@ -67,12 +67,12 @@ function stat_lecionoj() {
 				$stat[$row["kurso"]]["TK"]++;
 		}
 	}
-	$demando = "select * from lecionoj where lingvo='fr'";
+	$demando = "select * from lecionoj ";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while ($row=$result->fetch()) {
 		$nomo_lecionoj[$row["kurso"]][$row["numero"]]=$row["titolo"];
 	}
-        $demando = "select * from kursoj where lingvo='fr'";
+        $demando = "select * from kursoj ";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while ($row=$result->fetch()) {
 		$nomo_kursoj[$row["kodo"]]=$row["nomo"];

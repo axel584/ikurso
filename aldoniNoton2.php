@@ -1,5 +1,4 @@
 ﻿<?php
-include "lingvo.inc.php";
 require("db.inc.php");
 $teksto=$_POST['teksto'];
 $stud_id=$_POST['stud_id'];

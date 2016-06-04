@@ -6,7 +6,7 @@ function stat_rajtoj() {
 	global $bdd;
 
 	// On récupère la liste des cours et on initialise la variable stat
-	$demando = "select * from kursoj where lingvo='fr'";
+	$demando = "select * from kursoj";
 	$kursoj = array();
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while ($row=$result->fetch()) {
@@ -24,7 +24,7 @@ function stat_rajtoj() {
 	$stat['Total']['PlaceRestante']=0; // disponeblaj lokoj
 
 	// kiom da lernantoj ?
-	$demando = "SELECT nuna_kurso.kurso as kurso, count( nuna_kurso.kurso) as kiom FROM nuna_kurso, personoj WHERE (stato = 'K' or stato='N') and  nuna_kurso.studanto = personoj.id and personoj.lingvo = 'fr' GROUP BY nuna_kurso.kurso ";
+	$demando = "SELECT nuna_kurso.kurso as kurso, count( nuna_kurso.kurso) as kiom FROM nuna_kurso, personoj WHERE (stato = 'K' or stato='N') and  nuna_kurso.studanto = personoj.id GROUP BY nuna_kurso.kurso ";
 
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 
@@ -34,7 +34,7 @@ function stat_rajtoj() {
 	}
 
 	// kiom da disponeblaj lokoj ?
-	$demando = "SELECT korektebla_kurso.kurso as kurso, sum( korektebla_kurso.kiom_lernantoj ) as kiom,count( korektebla_kurso.kiom_lernantoj ) as kiomKorektantoj FROM korektebla_kurso, personoj where korektebla_kurso.korektanto = personoj.id and korektebla_kurso.kiom_lernantoj>0 and personoj.lingvo = 'fr' GROUP BY korektebla_kurso.kurso";
+	$demando = "SELECT korektebla_kurso.kurso as kurso, sum( korektebla_kurso.kiom_lernantoj ) as kiom,count( korektebla_kurso.kiom_lernantoj ) as kiomKorektantoj FROM korektebla_kurso, personoj where korektebla_kurso.korektanto = personoj.id and korektebla_kurso.kiom_lernantoj>0 GROUP BY korektebla_kurso.kurso";
 	
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 
@@ -46,7 +46,7 @@ function stat_rajtoj() {
 	}
 
 	// kiom da korektantoj entute ?
-	$demando = "select count(distinct personoj.id) as combien from personoj,korektebla_kurso where (rajtoj='K' or rajtoj='A') and lingvo='fr' and personoj.id=korektebla_kurso.korektanto and korektebla_kurso.kiom_lernantoj>0 order by personoj.id";
+	$demando = "select count(distinct personoj.id) as combien from personoj,korektebla_kurso where (rajtoj='K' or rajtoj='A') and personoj.id=korektebla_kurso.korektanto and korektebla_kurso.kiom_lernantoj>0 order by personoj.id";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 
 	$stat['Total']['Korektantoj'] = $result->fetch()['combien'];
@@ -94,19 +94,19 @@ function stat_seksoj() {
 	echo "<tbody>\n<tr>\n";
 
 	// kiom da viroj ?
-	$demando = "select count(*) as combien from personoj where (rajtoj='P' or rajtoj='S') and sekso='M' and personoj.lingvo='fr'";
+	$demando = "select count(*) as combien from personoj where (rajtoj='P' or rajtoj='S') and sekso='M'";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	$sumo = $result->fetch()['combien'];
 	echo "<td>".$sumo."</td>\n";
 
 	// kiom da virinoj ?
-	$demando = "select count(*) as combien from personoj where (rajtoj='P' or rajtoj='S') and sekso='I' and personoj.lingvo='fr'";
+	$demando = "select count(*) as combien from personoj where (rajtoj='P' or rajtoj='S') and sekso='I'";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	$sumo = $result->fetch()['combien'];
 	echo "<td>".$sumo."</td>\n";
 
 	// kiom da ??? sekso ?
-	$demando = "select count(*) as combien from personoj where (rajtoj='P' or rajtoj='S') and (sekso<>'M' and sekso<>'I') and personoj.lingvo='fr'";
+	$demando = "select count(*) as combien from personoj where (rajtoj='P' or rajtoj='S') and (sekso<>'M' and sekso<>'I')";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	$sumo = $result->fetch()['combien'];
 	echo "<td>".$sumo."</td>\n";

@@ -8,7 +8,7 @@ if ($parto=="") {$parto=1;}
 
 function listi_korektantoj() {
 	global $bdd;
-	$demando = "select distinct retadreso from personoj,korektebla_kurso where (personoj.rajtoj='K' or personoj.rajtoj='A') and lingvo='fr' and personoj.id = korektebla_kurso.korektanto and korektebla_kurso.kiom_lernantoj>0";
+	$demando = "select distinct retadreso from personoj,korektebla_kurso where (personoj.rajtoj='K' or personoj.rajtoj='A') and personoj.id = korektebla_kurso.korektanto and korektebla_kurso.kiom_lernantoj>0";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         echo "<textarea rows=10 cols=45>";
         echo $result->fetch()["retadreso"];
@@ -20,7 +20,7 @@ function listi_korektantoj() {
 
 function listi_lernantoj() {
 	global $bdd;
-	$demando = "select personoj.retadreso from personoj,nuna_kurso where personoj.rajtoj='S' and nuna_kurso.stato='K' and nuna_kurso.studanto=personoj.id and lingvo='fr'";
+	$demando = "select personoj.retadreso from personoj,nuna_kurso where personoj.rajtoj='S' and nuna_kurso.stato='K' and nuna_kurso.studanto=personoj.id";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         echo "<textarea rows=10 cols=45>";
         echo $result->fetch()["retadreso"];
@@ -77,7 +77,7 @@ function listi_protokolo($nb) {
 
 function listi_malfruajLernantoj($nb) {
 	global $bdd;
-	$demando = "select nuna_kurso.ekdato as ekdato,nuna_kurso.id as id,nuna_kurso.studanto as studanto,nuna_kurso.korektanto as korektanto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.lingvo='fr' and stato='N'";
+	$demando = "select nuna_kurso.ekdato as ekdato,nuna_kurso.id as id,nuna_kurso.studanto as studanto,nuna_kurso.korektanto as korektanto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and stato='N'";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	echo "<table class='prezento'><thead><tr><td>Dato</td><td>Studanto</td><td>Korektanto</td></tr></thead><tbody>";
 	while ($row=$result->fetch()) {
@@ -85,14 +85,14 @@ function listi_malfruajLernantoj($nb) {
 		$stat_stu[$row["id"]]=$row["studanto"];
 		$stat_kor[$row["id"]]=$row["korektanto"];
 	}
-	$demando = "select nuna_kurso.lastdato as lastdato,nuna_kurso.id as id,nuna_kurso.studanto as studanto,nuna_kurso.korektanto as korektanto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.lingvo='fr' and stato='K'";
+	$demando = "select nuna_kurso.lastdato as lastdato,nuna_kurso.id as id,nuna_kurso.studanto as studanto,nuna_kurso.korektanto as korektanto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and stato='K'";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while ($row=$result->fetch()) {
 		$stat[$row["id"]]=$row["lastdato"];
 		$stat_stu[$row["id"]]=$row["studanto"];
 		$stat_kor[$row["id"]]=$row["korektanto"];
 	}
-	$demando = "select id,enirnomo from personoj where lingvo='fr'";
+	$demando = "select id,enirnomo from personoj";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while ($row=$result->fetch()) {
 		$enirnomo[$row["id"]]=$row["enirnomo"];
@@ -119,7 +119,7 @@ function listi_malfruajLernantoj($nb) {
 
 function listi_malfruajKorektantoj($nb) {
 	global $bdd;
-	$demando = "select personoj.id,enirnomo,sum(kiom_lernantoj) as kiom from personoj,korektebla_kurso where rajtoj='K' and lingvo='fr' and personoj.id=korektebla_kurso.korektanto group by korektanto";
+	$demando = "select personoj.id,enirnomo,sum(kiom_lernantoj) as kiom from personoj,korektebla_kurso where rajtoj='K' and personoj.id=korektebla_kurso.korektanto group by korektanto";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while ($row=$result->fetch()) {
 		if ($row["kiom"]>0) {
@@ -146,7 +146,7 @@ function listi_malfruajKorektantoj($nb) {
 
 function listi_plejBonajKorektantoj() {
 	global $bdd;
-	$demando = "select * from personoj where (rajtoj='K' or rajtoj='A') and lingvo='fr'";
+	$demando = "select * from personoj where (rajtoj='K' or rajtoj='A')";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	echo "<table class='prezento'><thead><tr><td>Kiu ?</td>";
 	echo "<td width='50'>Ont abandonné</td><td width='50'>A fini</td><td width='50'>% réussite</td></tr></thead><tbody>";
@@ -188,7 +188,7 @@ function listi_plejBonajKorektantoj() {
 
 function listi_plejBonajKorektantojLauxMonato($mois,$annee) {
 	global $bdd;
-	$demando = "select * from personoj where (rajtoj='K' or rajtoj='A') and lingvo='fr'";
+	$demando = "select * from personoj where (rajtoj='K' or rajtoj='A')";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	echo "<table class='prezento'><thead><tr><td>Kiu ?</td>";
 	echo "<td width='50'>A abandonné</td><td width='50'>A fini</td><td width='50'>% réussite</td></tr></thead><tbody>";
@@ -290,7 +290,7 @@ include "pagxkapo.inc.php";
 				<?php listi_plejBonajKorektantoj(); ?>	
 				</td><td valign="top">
 				<?php 
-		        $demando = "select * from monatoj where lingvo='fr'";
+		        $demando = "select * from monatoj";
 				$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 				while ($row=$result->fetch()) {
 					$nomo_monatoj[$row["kodo"]]=$row["nomo"];

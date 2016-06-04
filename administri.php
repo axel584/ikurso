@@ -42,7 +42,7 @@ $kategorio=isset($_GET["kategorio"])?$_GET["kategorio"]:"P";
 function listi_rajtojn ($rajtoj) {
 	echo "<select name=\"rajtoj\">";
 	echo "<option value=\"\">&nbsp;</option>";
-	$listo = konstruiListon("rajtoj","kodo","nomo"," where lingvo='fr' order by nomo");	     
+	$listo = konstruiListon("rajtoj","kodo","nomo"," order by nomo");	     
 	foreach ($listo as $listero) {
 		echo "<option value='".$listero['valuo']."'";
 		if ($listero['valuo']==$rajtoj) { echo " selected";}
@@ -58,7 +58,7 @@ function listi_landojn ($lando) {
 	global $aliavidigito, $defaultCharset;
 	echo "<select name=\"lando\">";
 	echo "<option value=\"\">&nbsp;</option>";
-	$listo = konstruiListon("landoj","kodo","nomo"," where lingvo='fr' order by nomo");	     
+	$listo = konstruiListon("landoj","kodo","nomo"," order by nomo");	     
 	foreach ($listo as $listero) {
 		echo "<option value='".$listero['valuo']."'";
 		if ($listero['valuo']==$lando) { echo " selected";}
@@ -80,7 +80,7 @@ function listi_kursojn ($kurso) {
 	global $aliavidigito;
 	echo "<select name=\"kurso\">";
 	echo "<option value=\"\">&nbsp;</option>";
-	$listo = konstruiListon("kursoj","kodo","nomo"," where lingvo='fr' order by nomo");	     
+	$listo = konstruiListon("kursoj","kodo","nomo"," order by nomo");	     
 	foreach ($listo as $listero) {
 		echo "<option value='".$listero['valuo']."'";
 		if ($listero['valuo']==$kurso) { echo " selected";}
@@ -109,10 +109,10 @@ function afixsi_naskigxdaton ($dato) {
 	$monato = $nskdt[2];
 	echo "&nbsp;<select name=\"naskigxdato_monato\">";
 	echo "<option value=\"\">&nbsp;</option>";
-	$listo = konstruiListon("monatoj","kodo","nomo"," where lingvo='fr' order by nomo");	     
+	$listo = konstruiListon("monatoj","kodo","nomo"," order by nomo");	     
 	if ($nskdt[1]!="00") {$monato=$nskdt[1];}
 	else $monato="";
-	$listo = konstruiListon("monatoj", "kodo", "nomo"," where lingvo='fr'");
+	$listo = konstruiListon("monatoj", "kodo", "nomo","");
 	foreach ($listo as $listero) {
 		echo "<option value='".$listero['valuo']."'";
 		if ($listero['valuo']==$monato) { echo " selected";}
@@ -132,7 +132,7 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 	echo "<select name=\"korektanto_id\">";
 	$trovita_korektanto="ne";
 	// repère la dliste du nombre d'élèves qu'un correcteur accepte de corriger. (ex. : correcteur 1 : 8 élèves)
-	$demando =  "select personoj.id,personoj.enirnomo,sum(kiom_lernantoj) as kiom from personoj,korektebla_kurso where personoj.id=korektebla_kurso.korektanto and personoj.lingvo='fr' and korektebla_kurso.kurso='".$kurso."' group by enirnomo";
+	$demando =  "select personoj.id,personoj.enirnomo,sum(kiom_lernantoj) as kiom from personoj,korektebla_kurso where personoj.id=korektebla_kurso.korektanto and korektebla_kurso.kurso='".$kurso."' group by enirnomo";
 	echo "sql : ".$demando."<br>\n";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
@@ -141,7 +141,7 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 	}
 	
 	//repère la liste du nombre d'élèves que les correcteurs ont des (ex. : correcteur 1 : 6 élèves)
-	$demando="select personoj.id,enirnomo,count(*) as kiom  from personoj,nuna_kurso where personoj.id=nuna_kurso.korektanto and personoj.lingvo='fr' and (nuna_kurso.stato='K' or nuna_kurso.stato='N') and nuna_kurso.kurso='".$kurso."' group by enirnomo";
+	$demando="select personoj.id,enirnomo,count(*) as kiom  from personoj,nuna_kurso where personoj.id=nuna_kurso.korektanto and (nuna_kurso.stato='K' or nuna_kurso.stato='N') and nuna_kurso.kurso='".$kurso."' group by enirnomo";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		$kiom_lernantoj[$row["id"]] = $row["kiom"];	
@@ -150,7 +150,6 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 	
 	// calcul les pourcentages du remplissage des élèves : ex: correcteur 1 : 75% (6/8)
 	foreach($lernanteblecoj as $sxlosilo => $valuo) { 
-		//echo "id : ".$sxlosilo.": enirnomo : ".$nomoj[$sxlosilo].":  deja : ".$kiom_lernantoj[$sxlosilo]." sur ".$valuo."<br>\n";
 		if (!isset($kiom_lernantoj[$sxlosilo])){
 			$kiom_lernantoj[$sxlosilo]=0;
 		}
@@ -159,7 +158,6 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 		}
 		if (($valuo!=0) || ($kiom_lernantoj[$sxlosilo]!=0)) {
 			$procentajxo[$sxlosilo]=($valuo==0) ? 100 : floor(100*$kiom_lernantoj[$sxlosilo]/$valuo);
-			//echo "id : ".$sxlosilo.": enirnomo : ".$nomoj[$sxlosilo].":  deja : ".$kiom_lernantoj[$sxlosilo]." sur ".$valuo." : ".$procentajxo[$sxlosilo]."<br>\n";
 		}
 	}
 	
@@ -187,7 +185,7 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 
 function listi_korektantoj() {
 	global $bdd;
-	$demando = "select personoj.id,personoj.enirnomo from personoj where personoj.rajtoj='K' and personoj.lingvo='fr' order by enirnomo";
+	$demando = "select personoj.id,personoj.enirnomo from personoj where personoj.rajtoj='K' order by enirnomo";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		// je ne comprends pas ce que foutais cette ligne en dessous ?
@@ -201,18 +199,18 @@ function listi_korektantoj() {
 function listi_L_laux_S($studanto_id) {
 	global $bdd;
 	$i=0;
-	$demando =  "select personoj.kurso as kurso,nuna_kurso.nunleciono as leciono,nuna_kurso.stato as stato,nuna_kurso.ekdato as ekdato,nuna_kurso.lastdato as lastdato,nuna_kurso.findato as findato from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='fr' and nuna_kurso.studanto='$studanto_id';";
+	$demando =  "select personoj.kurso as kurso,nuna_kurso.nunleciono as leciono,nuna_kurso.stato as stato,nuna_kurso.ekdato as ekdato,nuna_kurso.lastdato as lastdato,nuna_kurso.findato as findato from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and nuna_kurso.studanto='$studanto_id';";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		// affiche le nom du cours pour cet élève
-		$demando2="select nomo  from kursoj where kodo='".$row["kurso"]."' and lingvo='fr'";
+		$demando2="select nomo  from kursoj where kodo='".$row["kurso"]."'";
 		$result2 = mysql_query($demando2) or die (  "INSERT : malbona demando :".$demando2);
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		while($row2 = $result2->fetch()) {
 			echo $row["stato"]."-".$row2["nomo"]."<br>";
 		}
 		// affiche le nom de la leçon pour cet &lève
-		$demando2="select titolo from lecionoj where numero='".$row["leciono"]."' and kurso='".$row["kurso"]."' and lingvo='fr'";
+		$demando2="select titolo from lecionoj where numero='".$row["leciono"]."' and kurso='".$row["kurso"]."'";
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		while($row2 = $result2->fetch()) {
 			echo $row2["titolo"];
@@ -235,7 +233,7 @@ function listi_S_laux_K($korektanto_id) {
 	global $bdd,$idnoto;
 	$i=0;
 	// studantoj 
-	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,personoj.familinomo as familinomo,personoj.personnomo as personnomo,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.kurso as kurso, personoj.naskigxdato as naskigxdato, nuna_kurso.nunleciono,nuna_kurso.lastdato as lastdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.lastdato)) as numtagoj1,nuna_kurso.ekdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.ekdato)) as numtagoj2, personoj.noto as noto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='fr' and (nuna_kurso.stato='N' or nuna_kurso.stato='K') and nuna_kurso.korektanto='$korektanto_id';";
+	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,personoj.familinomo as familinomo,personoj.personnomo as personnomo,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.kurso as kurso, personoj.naskigxdato as naskigxdato, nuna_kurso.nunleciono,nuna_kurso.lastdato as lastdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.lastdato)) as numtagoj1,nuna_kurso.ekdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.ekdato)) as numtagoj2, personoj.noto as noto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and (nuna_kurso.stato='N' or nuna_kurso.stato='K') and nuna_kurso.korektanto='$korektanto_id';";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		echo "<div class='lernantoj'>";
@@ -264,7 +262,7 @@ function listi_S_laux_K($korektanto_id) {
 		echo $row["urbo"]." (".$row["lando"].")";
 		echo "</div><div class='lernanto' style='padding-left:10px;'>";
 		// cours suivi
-		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."' and kursoj.lingvo='fr'"; 
+		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."'"; 
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		$row2 = $result2->fetch();
 		echo "<em>cours suivi : </em><b>".$row2["kursnomo"]."</b><br>";	
@@ -273,7 +271,7 @@ function listi_S_laux_K($korektanto_id) {
 		$ekdt = explode('-',$row["ekdato"]);
 		echo $ekdt[2]."/".$ekdt[1]."/".$ekdt[0]."<br>\n";
 		// derniere lecon (si une derniere lecon est en cours) :
-		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='fr' and lecionoj.numero='".$row['nunleciono']."'";
+		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.numero='".$row['nunleciono']."'";
 		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
 		$row3 = $result3->fetch();
 		echo "<em>dernière leçon : </em>".$row3['titolo']." ";
@@ -314,7 +312,7 @@ function listi_S_laux_K($korektanto_id) {
 //tiu funkcio konstruas la liston de Personoj 'P'
 function listi_P() {
 	global $bdd;
-	$demando =  "select id,enirnomo,personnomo,familinomo from personoj where rajtoj='P' and lingvo='fr'";
+	$demando =  "select id,enirnomo,personnomo,familinomo from personoj where rajtoj='P'";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]." (".$row["personnomo"]." ".$row["familinomo"].")</option>";
@@ -324,7 +322,7 @@ function listi_P() {
 //tiu funkcio konstruas la liston de Personoj 'S0' (kiu ne komencis lerni)
 function listi_S0() {
 	global $bdd;
-	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,personoj.personnomo as personnomo,personoj.familinomo as familinomo,nuna_kurso.ekdato as ekdato from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='fr' and nuna_kurso.stato='N' order by ekdato asc;";
+	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,personoj.personnomo as personnomo,personoj.familinomo as familinomo,nuna_kurso.ekdato as ekdato from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and nuna_kurso.stato='N' order by ekdato asc;";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		echo "<option value=\"".$row["id"]."\">";
@@ -337,7 +335,7 @@ function listi_S0() {
 //tiu funkcio konstruas la liston de Personoj 'S1'
 function listi_S1() {
 	global $bdd;
-	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,lecionoj.titolo as titolo from nuna_kurso,personoj,lecionoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='fr' and nuna_kurso.nunleciono=lecionoj.id and nuna_kurso.stato='K' and nuna_kurso.nunleciono=1;";
+	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,lecionoj.titolo as titolo from nuna_kurso,personoj,lecionoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and nuna_kurso.nunleciono=lecionoj.id and nuna_kurso.stato='K' and nuna_kurso.nunleciono=1;";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		echo "<option value=\"".$row["id"]."\">";
@@ -350,7 +348,7 @@ function listi_S1() {
 //tiu funkcio konstruas la liston de Personoj 'S2'
 function listi_S2() {
 	global $bdd;
-	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,lecionoj.titolo as titolo from nuna_kurso,personoj,lecionoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='fr' and nuna_kurso.nunleciono=lecionoj.id and nuna_kurso.stato='K' and nuna_kurso.nunleciono=2;";
+	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,lecionoj.titolo as titolo from nuna_kurso,personoj,lecionoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and nuna_kurso.nunleciono=lecionoj.id and nuna_kurso.stato='K' and nuna_kurso.nunleciono=2;";
 	$result = mysql_query($demando) or die (  "INSERT : malbona demando :".$demando);
 	while($row = $result->fetch()) {
 		echo "<option value=\"".$row["id"]."\">";
@@ -363,10 +361,10 @@ function listi_S2() {
 //tiu funkcio konstruas la liston de Personoj 'S'
 function listi_S() {
 	global $bdd;
-	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,nuna_kurso.kurso as kurso,nuna_kurso.nunleciono as nunleciono from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and personoj.lingvo='fr' and nuna_kurso.stato='K' order by nunleciono asc;";
+	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,nuna_kurso.kurso as kurso,nuna_kurso.nunleciono as nunleciono from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and personoj.rajtoj='S' and nuna_kurso.stato='K' order by nunleciono asc;";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         while($row = $result->fetch()) {
-                $demando2 = "select * from lecionoj where numero='".$row["nunleciono"]."' and kurso='".$row["kurso"]."' and lingvo='fr'";
+                $demando2 = "select * from lecionoj where numero='".$row["nunleciono"]."' and kurso='".$row["kurso"]."'";
 				$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
                 $row2=$result2->fetch();
 		echo "<option value=\"".$row["id"]."\">";
@@ -379,7 +377,7 @@ function listi_S() {
 //tiu funkcio konstruas la liston de Personoj 'H'
 function listi_H() {
 	global $bdd;
-	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,nuna_kurso.stato as stato,nuna_kurso.findato as findato from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='H' and personoj.lingvo='fr' order by findato desc";
+	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,nuna_kurso.stato as stato,nuna_kurso.findato as findato from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='H' order by findato desc";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		echo "<option value=\"".$row["id"]."\">";
@@ -391,7 +389,7 @@ function listi_H() {
 //tiu funkcio konstruas la liston de Personoj 'F'
 function listi_F() {
 	global $bdd;
-	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,nuna_kurso.findato as findato,nuna_kurso.stato as stato from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='F' and personoj.lingvo='fr' order by nuna_kurso.findato desc";
+	$demando =  "select personoj.id as id,personoj.enirnomo as enirnomo,nuna_kurso.findato as findato,nuna_kurso.stato as stato from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='F' order by nuna_kurso.findato desc";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		echo "<option value=\"".$row["id"]."\">";
@@ -409,7 +407,7 @@ function listi_K() {
 //tiu funkcio konstruas la liston de Personoj 'A'
 function listi_A() {
 	global $bdd;
-	$demando =  "select personoj.id,personoj.enirnomo,personoj.maksimumo from personoj where personoj.rajtoj='A' and personoj.lingvo='fr'";
+	$demando =  "select personoj.id,personoj.enirnomo,personoj.maksimumo from personoj where personoj.rajtoj='A' ";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		// por cxiuj, mi trovas, kiom da lernantoj ili havas (cxu 0, cxu pli ?)
@@ -435,7 +433,7 @@ function listi_A() {
 //tiu funkcio konstruas la liston de Personoj 'I'
 function listi_I() {
 	global $bdd;
-	$demando =  "select id,enirnomo from personoj where rajtoj='I' and lingvo='fr'";
+	$demando =  "select id,enirnomo from personoj where rajtoj='I'";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row =  $result->fetch()) {
 		echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]."</option>";
@@ -444,7 +442,7 @@ function listi_I() {
 
 function listi_kursojn_de_iu_studanto($studanto_id) {
 	global $bdd;
- $demando="select nuna_kurso.id,korektanto,nunleciono,nuna_kurso.kurso,nuna_kurso.lastdato,nuna_kurso.stato, personoj.enirnomo as korektanto_enirnomo,personoj.id as korektanto_id,kursoj.nomo as kursoj_nomo,lecionoj.titolo as lecionoj_titolo from ikurso.nuna_kurso  join personoj on personoj.id=nuna_kurso.korektanto join kursoj on kursoj.kodo=nuna_kurso.kurso and kursoj.lingvo='fr' left join lecionoj on lecionoj.numero=nuna_kurso.nunleciono and lecionoj.kurso=nuna_kurso.kurso and lecionoj.lingvo='fr' where studanto=".$studanto_id." order by lastdato";
+ $demando="select nuna_kurso.id,korektanto,nunleciono,nuna_kurso.kurso,nuna_kurso.lastdato,nuna_kurso.stato, personoj.enirnomo as korektanto_enirnomo,personoj.id as korektanto_id,kursoj.nomo as kursoj_nomo,lecionoj.titolo as lecionoj_titolo from ikurso.nuna_kurso  join personoj on personoj.id=nuna_kurso.korektanto join kursoj on kursoj.kodo=nuna_kurso.kurso left join lecionoj on lecionoj.numero=nuna_kurso.nunleciono and lecionoj.kurso=nuna_kurso.kurso where studanto=".$studanto_id." order by lastdato";
  	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
  	return $result;
 }
@@ -540,8 +538,8 @@ include "adminkapo.inc.php";
 							<td nowrap>
 								<?php listi_rajtojn($celpersono["rajtoj"], "fr");?>
 							</td>
-							<td nowrap class="col1">Langue :</td>
-							<td nowrap><?php simplaVorto("nomo","lingvoj"," where kodo='fr'"); ?></td>
+							<td nowrap class="col1">&nbsp;</td>
+							<td nowrap>&nbsp;</td>
 						</tr>
 						<tr>
 							<td nowrap colspan="2" class="col1">Pays :</td>
@@ -578,7 +576,7 @@ include "adminkapo.inc.php";
 									$ekdt = explode("-",$celpersono["ekdato"]);
 									if (count($ekdt)==3) { // on affiche la date que si on arrive à la découper en 3 (jours, mois, année)
 										echo $ekdt[2]." ";
-										simplaVorto("nomo","monatoj"," where kodo='".$ekdt[1]."' and lingvo='fr'");
+										simplaVorto("nomo","monatoj"," where kodo='".$ekdt[1]."'");
 										echo " ".$ekdt[0];
 									}
 								?>
@@ -732,7 +730,7 @@ include "adminkapo.inc.php";
 									<td><?php listi_Korektantoj_laux_kurso($celpersono["id"],$celpersono["kurso"]); ?></td>
 									<td>
 									<?php $kurso = $celpersono["kurso"];
-										simplaVorto("nomo","kursoj"," where kodo='$kurso' and lingvo='fr' "); ?>
+										simplaVorto("nomo","kursoj"," where kodo='$kurso'"); ?>
 								</td>
 								<td>Pas de leçon en cours</td>
 							</tr>
@@ -784,7 +782,7 @@ include "adminkapo.inc.php";
 						<p>Nb max. d’élèves pour chaque cours :</p>
 						<p>
 							<?php // mettre ici le nombre d'élèves voulu par cours. 
-							$demando = sprintf("SELECT kursoj.nomo as kurso,kiom_lernantoj as kiom FROM korektebla_kurso,kursoj WHERE korektebla_kurso.kurso=kursoj.kodo and kursoj.lingvo='fr' and korektebla_kurso.korektanto=%s",$celpersono["id"]);
+							$demando = sprintf("SELECT kursoj.nomo as kurso,kiom_lernantoj as kiom FROM korektebla_kurso,kursoj WHERE korektebla_kurso.kurso=kursoj.kodo and korektebla_kurso.korektanto=%s",$celpersono["id"]);
 							$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 							while($row = $result->fetch()) {
 								echo "<span class='klarigo'>".$row["kurso"]."</span> : ";

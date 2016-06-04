@@ -30,8 +30,8 @@ $query="select stato,nunleciono from nuna_kurso where id=".$rezultoj[1];
                 	$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
                 	$mesagxkapo.="From: Ikurso <ikurso@esperanto-jeunes.org>\n";
                 	$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
-                	//prenu la liston de cxiuj informistoj (kiu uzas la tauxgan lingvon)
-                	$demando="select retadreso from personoj where rajtoj='I' and lingvo='FR'";
+                	//prenu la liston de cxiuj informistoj 
+                	$demando="select retadreso from personoj where rajtoj='I'";
                     $result = mysql_query($demando) or die ("INSERT : Invalid query :".$query);
                     $row=mysql_fetch_array($result);
                     $informistoj=$row["retadreso"];
@@ -39,7 +39,7 @@ $query="select stato,nunleciono from nuna_kurso where id=".$rezultoj[1];
                            $informistoj=$informistoj.",".$row["retadreso"];
                     }
                     //prenu cxiuj informoj pri la studanto.
-                    $demando="select * from personoj,nuna_kurso where nuna_kurso.id=".$rezultoj[1]." and personoj.id=nuna_kurso.studanto and lingvo='FR'";
+                    $demando="select * from personoj,nuna_kurso where nuna_kurso.id=".$rezultoj[1]." and personoj.id=nuna_kurso.studanto";
                     $result = mysql_query($demando) or die ("INSERT : Invalid query :".$query);
                     $row=mysql_fetch_array($result);
                     $contents=str_replace("##ENIRNOMO##",$row["enirnomo"],$contents);
@@ -56,7 +56,7 @@ $query="select stato,nunleciono from nuna_kurso where id=".$rezultoj[1];
                     if ($row["retadreso"]=="richard.emmanuelle@wanadoo.fr")
 								{$informistoj="richard.emmanuelle@wanadoo.fr";}
                     //prenu nomon de lia kurso :
-                    $demando="select kursoj.nomo from kursoj,nuna_kurso where kursoj.kodo=nuna_kurso.kurso and nuna_kurso.id=".$rezultoj[1]." and kursoj.lingvo='FR'";
+                    $demando="select kursoj.nomo from kursoj,nuna_kurso where kursoj.kodo=nuna_kurso.kurso and nuna_kurso.id=".$rezultoj[1]."";
                     $result = mysql_query($demando) or die ("INSERT : Invalid query :".$query);
                     $row=mysql_fetch_array($result);
                     $contents=str_replace("##KURSO##",$row["nomo"],$contents);

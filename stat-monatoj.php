@@ -16,7 +16,7 @@ function unhtmlentities ($string){
 	// elektas la datumbazon
 	mysql_select_db("ikurso");
 
-	$demando = "select nuna_kurso.id as id, nuna_kurso.stato as stato, MONTH(nuna_kurso.ekdato) as ekmonato, YEAR(nuna_kurso.ekdato) as ekjaro, MONTH(nuna_kurso.findato) as finmonato,YEAR(nuna_kurso.findato) as finjaro from nuna_kurso, personoj where nuna_kurso.studanto=personoj.id and personoj.lingvo='$lingvo'";
+	$demando = "select nuna_kurso.id as id, nuna_kurso.stato as stato, MONTH(nuna_kurso.ekdato) as ekmonato, YEAR(nuna_kurso.ekdato) as ekjaro, MONTH(nuna_kurso.findato) as finmonato,YEAR(nuna_kurso.findato) as finjaro from nuna_kurso, personoj where nuna_kurso.studanto=personoj.id";
 	$result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
 	while($row = mysql_fetch_array($result)) {
 		if ($row["ekmonato"]<10) {
@@ -41,7 +41,7 @@ function unhtmlentities ($string){
 			}
 		}
 	}
-        $demando = "select * from monatoj where lingvo='$lingvo'";
+        $demando = "select * from monatoj";
         $result = mysql_query($demando) or die (  "SELECT : malbona demando :".$demando.":".mysql_error());
         while ($row=mysql_fetch_array($result)) {
           $nomo_monatoj[$row["kodo"]]=$row["nomo"];

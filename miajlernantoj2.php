@@ -28,8 +28,8 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 		$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
 		$mesagxkapo.="From: Ikurso <ikurso@esperanto-jeunes.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
-		//prenu la liston de cxiuj informistoj (kiu uzas la tauxgan lingvon)
-		$demando="select retadreso from personoj where rajtoj='I' and lingvo='fr'";
+		//prenu la liston de cxiuj informistoj
+		$demando="select retadreso from personoj where rajtoj='I'";
 		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 		$row=$result->fetch();
 		$informistoj=$row["retadreso"]; 
@@ -39,7 +39,7 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 		}
 	}
 	//prenu cxiujn informojn pri la studanto.
-	$demando="select * from personoj,nuna_kurso where nuna_kurso.id=".$rezultoj[0]." and personoj.id=nuna_kurso.studanto and lingvo='FR'";
+	$demando="select * from personoj,nuna_kurso where nuna_kurso.id=".$rezultoj[0]." and personoj.id=nuna_kurso.studanto";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	$row=$result->fetch();
 	$contents=str_replace("##ENIRNOMO##",$row["enirnomo"],$contents);
@@ -54,7 +54,7 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 	$contents=str_replace("##POSXTKODO##",$row["posxtkodo"],$contents);
 	$contents=str_replace("##URBO##",$row["urbo"],$contents);
 	//prenu nomon de lia kurso :
-	$demando="select kursoj.nomo from kursoj,nuna_kurso where kursoj.kodo=nuna_kurso.kurso and nuna_kurso.id=".$rezultoj[0]." and kursoj.lingvo='FR'";
+	$demando="select kursoj.nomo from kursoj,nuna_kurso where kursoj.kodo=nuna_kurso.kurso and nuna_kurso.id=".$rezultoj[0]."";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	$row=$result->fetch();
 	$contents=str_replace("##KURSO##",$row["nomo"],$contents);

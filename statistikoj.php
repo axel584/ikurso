@@ -1,5 +1,6 @@
 <?php
-include "lingvo.inc.php";
+// TODO : a supprimer ?
+
 include "db.inc.php";
 include "webui.inc.php";
 include "forum/includes/forum.lib.php";
@@ -20,10 +21,9 @@ header("Last-Modified: ".gmdate("D,d M Y H:i:s")." GMT");
 header("Cache-Control: no-store,no-cache, must-revalidate"); // HTTP/1.1
 header("Pragma: no-cache"); // HTTP/1.0
 
-function stat_rajtoj() {
-	global $lingvo,$lgv_studantoj,$lgv_korektantoj,$lgv_sumo,$lgv_maksimumo,$lgv_liberajLokoj;
 
-	//$sumo = mysql_num_rows($result);
+
+function stat_rajtoj() {
 
 	$obj_kursoj = new kursoj;
 	$kursoj = $obj_kursoj->get_all_objects($lingvo);

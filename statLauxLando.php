@@ -6,7 +6,7 @@ function stat_landoj() {
 	echo "<table class=\"stat\">\n<tbody>\n";
 
 	// laux landoj
-	$demando = "select personoj.lando as lando from personoj,nuna_kurso where personoj.id=nuna_kurso.studanto and (personoj.rajtoj='P' or personoj.rajtoj='S') and (nuna_kurso.stato='N' or nuna_kurso.stato='K') and personoj.lingvo='fr'";
+	$demando = "select personoj.lando as lando from personoj,nuna_kurso where personoj.id=nuna_kurso.studanto and (personoj.rajtoj='P' or personoj.rajtoj='S') and (nuna_kurso.stato='N' or nuna_kurso.stato='K') ";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 
 	while($row = $result->fetch()) {
@@ -17,7 +17,7 @@ function stat_landoj() {
 		}
         
     }	
-    $demando = "select * from landoj where lingvo='fr'";
+    $demando = "select * from landoj";
     $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
     while ($row=$result->fetch()) {
         $nomo_landoj[$row["kodo"]]=$row["nomo"];

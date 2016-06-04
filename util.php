@@ -1,6 +1,5 @@
 <?php
 session_start();
-$lingvo="FR";
 ini_set('session.gc_maxlifetime', 86400);
 ini_set('session.cookie_lifetime', 86400);
 include_once("db.inc.php");
@@ -72,8 +71,8 @@ function el_utf8($var) {
 
 
 function kalkuliStudantojn() {
-	global $lingvo,$persono_id,$bdd;
-	$demando1="select nomo,kodo from kursoj where kursoj.lingvo='fr'";
+	global $persono_id,$bdd;
+	$demando1="select nomo,kodo from kursoj";
 	$result1 = $bdd->query($demando1) or die(print_r($bdd->errorInfo()));
 	while($row1 = $result1->fetch()) {
 		echo "<tr>\n";
@@ -103,8 +102,6 @@ $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 if ($persono_id=="") {
 	$rajto="V";		// vizitanto
 	$enirnomo="";
-	$lingvo="FR";
-	$lgv="FR";
 }
 else {
 	$persono  = apartigiPersonon($persono_id);

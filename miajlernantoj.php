@@ -56,7 +56,8 @@ function listiStudantojn() {
 		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."' and kursoj.lingvo='fr'"; 
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		$row2 = $result2->fetch();
-		echo "<form method=\"POST\" action=\"miajlernantoj2.php\">"; 
+
+		// infos sur le cours suivi
 		echo "<em>cours suivi&nbsp;:</em><b>".$row2["kursnomo"]."</b><br>";	
 		echo "<em>inscription le : </em>\n";
 		$ekdt = explode("-",$row["ekdato"]);
@@ -70,22 +71,38 @@ function listiStudantojn() {
 			$lstdt = explode("-",$row["lastdato"]);
 			echo $lstdt[2]."/".$lstdt[1]."/".$lstdt[0]."<br>\n";
 		}
+		
+		// bouton pour indiquer qu'un élève a abandonné
+		echo "<form method='POST' action='miajlernantoj2.php'>"; 
+		echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
+		echo "<input type=\"hidden\" name=\"leciono\" value=\"".$row["kursid"]."-H\">";
+		echo "<input  class='bouton' type='submit' value='A abandonné'>";
+		echo " <i>(Vous liberez ainsi une place pour un nouvel élève)</i><br/>";
+		echo "</form>";
+
+		// menu déroulant pour avancer manuellement dans les leçons
+		echo "<form method=\"POST\" action=\"miajlernantoj2.php\">"; 
 		echo "<select name=\"leciono\">\n";
 		echo "<option value=\"".$row["kursid"]."-N\" >Pas encore commencé</option>\n";
 		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='fr'";
 		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
 		while($row3 = $result3->fetch()) {
-			// echo $lgv_nuna_leciono." : ".$row3["titolo"]."-".$row3["numero"]."<br>\n";	
 			echo "<option value=\"".$row["kursid"]."-".$row3["numero"]."\" ";
 			if ($row["nunleciono"]==$row3["numero"]) {echo "selected";}
 				echo ">".$row3["titolo"]."</option>\n";
 		}
-		echo "<option value=\"".$row["kursid"]."-F\" >A fini</option>\n";
-		echo "<option value=\"".$row["kursid"]."-H\" >A abandonné</option>\n";
 		echo "</select>\n";
 		echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
-		echo "<input class=\"bouton\" type=\"submit\" value=\"Valider\">";
+		echo "<input class=\"bouton\" type=\"submit\" value=\"Valider\"><br/>";
 		echo "</form>\n";
+
+		// bouton pour indiquer que l'élève a fini son cours
+		echo "<form method='POST' action='miajlernantoj2.php'>"; 
+		echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
+		echo "<input type=\"hidden\" name=\"leciono\" value=\"".$row["kursid"]."-F\">";
+		echo "<input  class='bouton' type='submit' value='A fini'>";
+		echo " <i>(l'élève recevra un message pour recevoir son diplôme)</i><br/>";
+		echo "</form>";
 
 		// colonne 3: commentaires
 		echo "</div><div class='lernanto'>";

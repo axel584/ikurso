@@ -23,7 +23,7 @@ if ($erarkodo=="17") echo "<div class='atentigo'><p class='eraro'>Attestation in
 			<li <? if ($parto=="1") {echo " class='aktiva'";}?>><a href="personinformoj.php?parto=1">Donn&eacute;es personnelles</a></li>
 			<li <? if ($parto=="2") {echo " class='aktiva'";}?>><a href="personinformoj.php?parto=2">Mes voisins</a></li>
 			-->
-			<li class="aktiva"><a href="personinformoj.php?parto=1">Donn&eacute;es personnelles</a></li>
+			<li class="aktiva"><a href="personinformoj.php?parto=1">Données personnelles</a></li>
 		</ul>
 		<div id="kadro">
 		
@@ -138,7 +138,7 @@ if ($erarkodo=="17") echo "<div class='atentigo'><p class='eraro'>Attestation in
 				<!--
 				<?=$lgv_porsxangxi?> : <input class="bouton" type="button" name="sxangxi" value="<?=$lgv_sxangxu;?>" onClick="document.location.href='sxangxipersoninformojn.php';">
 				-->
-				<a href="sxangxipersoninformojn.php">Cliquez ici pour modifier vos donn&eacute;es personnelles</a>
+				<a class="bouton" href="sxangxipersoninformojn.php">Modifier mes données personnelles</a>
 				</p>
 				
    	</div>

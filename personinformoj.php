@@ -14,7 +14,7 @@ $parto=1;
 include "pagxkapo.inc.php";
 
 if ($erarkodo=="16") echo "<div class='atentigo'><p class='eraro'>Cours inconnu.</p></div>";
-if ($erarkodo=="17") echo "<div class='atentigo'><p class='eraro'>Diplome introuvable pour ce cours.</p></div>";
+if ($erarkodo=="17") echo "<div class='atentigo'><p class='eraro'>Attestation introuvable pour ce cours.</p></div>";
 ?>
 		<div id="enhavo">
 		<ul id="tabnav">

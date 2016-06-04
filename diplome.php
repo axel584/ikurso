@@ -21,6 +21,8 @@ if ($infos==null) {
 header ("Content-type: image/png");
 if ($infos["kurso"]=="CG") {
 	$image = imagecreatefrompng("bildoj/diplomeCG.png");
+} elseif ($infos["kurso"]=="KE") {
+	$image = imagecreatefrompng("bildoj/diplomeKE.png");
 } elseif ($infos["kurso"]=="GR") {
 	$image = imagecreatefrompng("bildoj/diplomeGR.png");
 }
@@ -30,6 +32,9 @@ if ($infos["kurso"]=="CG") {
 	$blanc = imagecolorallocate($image,hexdec("FF"),hexdec("FF"),hexdec("FF"));
 	$noir = imagecolorallocate($image,hexdec("00"),hexdec("00"),hexdec("00"));
 if ($kurso=="CG") {
+	// on découpe la couleur #4A90E2 en rouge/vert/bleu :
+	$couleur = imagecolorallocate($image,hexdec("4A"),hexdec("90"),hexdec("E2"));
+} elseif ($kurso=="KE") {
 	// on découpe la couleur #4A90E2 en rouge/vert/bleu :
 	$couleur = imagecolorallocate($image,hexdec("4A"),hexdec("90"),hexdec("E2"));
 } elseif ($kurso=="GR") {
@@ -47,8 +52,8 @@ if ($persono["familinomo"]!="" || $persono["personnomo"]!="") {
 // remplissage du texte
 imagettftext($image, 16, 0, 300, 30, $couleur, 'fonts/OpenSans-Light.ttf', 'Parizo, la '.$infos["findato"]);
 imagettftext($image, 48, 0, 300, 300, $noir, 'fonts/OpenSans-Light.ttf', $nom);
-imagettftext($image, 16, 0, 600, 500, $couleur, 'fonts/OpenSans-Light.ttf', 'Instruisto korektanto :');
-imagettftext($image, 16, 0, 600, 550, $couleur, 'fonts/OpenSans-Regular.ttf', $infos["personnomo"]." ".$infos["familinomo"]); // nom-prénom du correcteur
+//imagettftext($image, 12, 0, 600, 500, $couleur, 'fonts/OpenSans-Light.ttf', 'instruisto korektanto:');
+imagettftext($image, 16, 0, 600, 570, $couleur, 'fonts/OpenSans-Regular.ttf', $infos["personnomo"]." ".$infos["familinomo"]); // nom-prénom du correcteur
 
 imagepng($image);
 

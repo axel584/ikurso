@@ -58,7 +58,7 @@ if ($erarkodo=="17") echo "<div class='atentigo'><p class='eraro'>Diplome introu
 				</tr>
 				<tr>
 					<td nowrap>&nbsp;</td>
-					<td nowrap><?=simplaVorto("nomo","landoj","where lingvo='fr' and kodo='".$persono['lando']."'");?></td>
+					<td nowrap><?=simplaVorto("nomo","landoj","where kodo='".$persono['lando']."'");?></td>
 				</tr>
 				<tr>
 					<td class="col1">Adresse électronique :</td>
@@ -72,7 +72,7 @@ if ($erarkodo=="17") echo "<div class='atentigo'><p class='eraro'>Diplome introu
 						if (count($nskdt)==3) { // si on n'arrive pas à découper la date, c'est qu'elle est vide
 							if (($nskdt[0]!="00")&&($nskdt[2]!="0000")) {
 								echo $nskdt[2]." ";
-								simplaVorto("nomo","monatoj"," where kodo='".$nskdt[1]."' and lingvo='fr'");
+								simplaVorto("nomo","monatoj"," where kodo='".$nskdt[1]."'");
 								echo " ".$nskdt[0];
 							} 
 						}
@@ -84,15 +84,12 @@ if ($erarkodo=="17") echo "<div class='atentigo'><p class='eraro'>Diplome introu
 				?>	
 					<td class="col1">Dernier cours choisi :</td>
 					<td><?php
-						simplaVorto("nomo","kursoj"," where kodo='".$persono['kurso']."' and lingvo='fr'");
-						// php $kurso = new kursoj;
-						// $kurso->load_by_kodo($persono['kurso'],$persono->lingvo['kodo']); 
-						// echo $kurso['nomo'];
+						simplaVorto("nomo","kursoj"," where kodo='".$persono['kurso']."'");
 						?>
 					</td>
 				<?php }else {?>
 					<td class="col1">Droits :</td>
-					<td><?=simplaVorto("nomo","rajtoj"," where kodo='".$persono['rajtoj']."' and lingvo='fr'");;?></td>
+					<td><?=simplaVorto("nomo","rajtoj"," where kodo='".$persono['rajtoj']."'");;?></td>
 				<?php }?>
 				</tr>
 				<?php if ($persono['rajtoj']=="S") { ?>

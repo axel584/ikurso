@@ -53,7 +53,7 @@ function listiStudantojn() {
 		echo "</div><div class='lernanto' style='padding-left:10px;'>";
 
 		// cours suivi
-		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."' and kursoj.lingvo='fr'"; 
+		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."'"; 
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		$row2 = $result2->fetch();
 
@@ -84,7 +84,7 @@ function listiStudantojn() {
 		echo "<form method=\"POST\" action=\"miajlernantoj2.php\">"; 
 		echo "<select name=\"leciono\">\n";
 		echo "<option value=\"".$row["kursid"]."-N\" >Pas encore commencé</option>\n";
-		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='fr'";
+		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."'";
 		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
 		while($row3 = $result3->fetch()) {
 			echo "<option value=\"".$row["kursid"]."-".$row3["numero"]."\" ";
@@ -182,7 +182,7 @@ function listiEksStudantojn() {
 		echo "</div><div class='lernanto' style='padding-left:10px;'>";
 
 		// cours suivi
-		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."' and kursoj.lingvo='fr'"; 
+		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."'"; 
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		$row2 = $result2->fetch();
 		echo "<em>cours suivi&nbsp;:</em><b>".$row2["kursnomo"]."</b><br>";	
@@ -190,7 +190,7 @@ function listiEksStudantojn() {
 		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["ekdato"],$ekdt);
 		$ekdt=explode("-",$row["ekdato"]);
 		echo $ekdt[2]."/".$ekdt[1]."/".$ekdt[0]."<br>\n";
-		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.lingvo='fr' and lecionoj.numero='".$row['nunleciono']."'";
+		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.numero='".$row['nunleciono']."'";
 		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
 		$row3 = $result3->fetch();
 		echo "<em>derni&egrave;re le&ccedil;on : </em>".$row3['titolo']."<br>";

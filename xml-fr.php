@@ -2,7 +2,7 @@
 include "db.inc.php";
 malfermiDatumbazon();
 mysql_select_db( "ikurso");
-$demando="select distinct(personoj.id),personoj.posxtkodo,nuna_kurso.stato,personoj.rajtoj from nuna_kurso,personoj where personoj.id=nuna_kurso.studanto and (nuna_kurso.stato='N' or nuna_kurso.stato='K') and personoj.lingvo='FR' and personoj.lando='FR'";
+$demando="select distinct(personoj.id),personoj.posxtkodo,nuna_kurso.stato,personoj.rajtoj from nuna_kurso,personoj where personoj.id=nuna_kurso.studanto and (nuna_kurso.stato='N' or nuna_kurso.stato='K') and personoj.lando='FR'";
 $result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
 while($row = mysql_fetch_array($result)) {
 		$posxtkodo=$row["posxtkodo"];
@@ -17,7 +17,7 @@ while($row = mysql_fetch_array($result)) {
 				
 		}
 	}
-$demando="select distinct(personoj.id),personoj.posxtkodo,personoj.rajtoj from nuna_kurso,personoj where personoj.id=nuna_kurso.korektanto and personoj.lingvo='FR' and personoj.lando='FR'";	
+$demando="select distinct(personoj.id),personoj.posxtkodo,personoj.rajtoj from nuna_kurso,personoj where personoj.id=nuna_kurso.korektanto and personoj.lando='FR'";	
 $result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
 while($row = mysql_fetch_array($result)) {
 		$posxtkodo=$row["posxtkodo"];

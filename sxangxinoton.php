@@ -1,5 +1,4 @@
 <?
-include "lingvo.inc.php";
 include "db.inc.php";
 malfermiDatumbazon();
 // ER 05.10.2015 : correction pour passage en PHP 5.4

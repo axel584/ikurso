@@ -11,7 +11,7 @@ function pagxkapo() {
 // K : Korekanto (havas multajn studantojn kaj studanta maksimumo)
 // A : administrato (cxiaj rajtoj)
 function menuo($nomo,$rajto) {
-global $persono_id,$persono,$lingvo,$lgv_persona,$lgv_korekanta,$lgv_administranta,$lgv_sxangipersoninformojn,$lgv_eliru,$lgv_alkursoj,$lgv_vortlisto,$lgv_zorgistudantojn,$lgv_zorgiuzantojn,$lgv_lernantalisto,$lgv_zorgiferiojn,$lgv_ferioj,$lgv_stirpanelo,$lgv_statistiko,$lgv_helppagxo,$lgv_forumo,$phpbb2mysql_sid;
+global $persono_id,$persono,$lgv_persona,$lgv_korekanta,$lgv_administranta,$lgv_sxangipersoninformojn,$lgv_eliru,$lgv_alkursoj,$lgv_vortlisto,$lgv_zorgistudantojn,$lgv_zorgiuzantojn,$lgv_lernantalisto,$lgv_zorgiferiojn,$lgv_ferioj,$lgv_stirpanelo,$lgv_statistiko,$lgv_helppagxo,$lgv_forumo,$phpbb2mysql_sid;
 	echo vmenuo($nomo,$rajto,"");
 }
 
@@ -26,7 +26,7 @@ function kursoligo($nomo,$rajto){
 // K : Korekanto (havas multajn studantojn kaj studanta maksimumo)
 // A : administrato (cxiaj rajtoj)
 function vmenuo($nomo,$rajto,$vojo,$pagxtitolo) {
-	global $lgv_persona,$persono,$lingvo,$lgv_eliru,$lgv_korektanta,$lgv_administranta,$metodo,
+	global $lgv_persona,$persono,$lgv_eliru,$lgv_korektanta,$lgv_administranta,$metodo,
 	$lgv_sxangipersoninformojn,$lgv_miajlernantoj,$lgv_eliru,$lgv_alkursoj,$lgv_vortlisto
 	,$lgv_zorgistudantojn,$lgv_zorgiuzantojn,$lgv_lernantalisto,$lgv_zorgiferiojn,$lgv_ferioj,
 	$lgv_stirpanelo,$lgv_statistiko,$lgv_helppagxo,$lgv_forumo,$lgv_skribi,$lgv_helpo, 
@@ -97,7 +97,7 @@ if (($rajto=="K"||$rajto=="A")) {
 	$res.="</tr>\n</thead>\n<tbody>";
 
 /* tableau des eleves */
-	$demando1="select nomo,kodo from kursoj where kursoj.lingvo='".$lingvo."'";
+	$demando1="select nomo,kodo from kursoj";
 	$result1 = mysql_query($demando1) or die (  "SELECT : malbona demando :".$demando1);
 	while($row1 = mysql_fetch_array($result1)) {
 		$res.="<tr>\n";
@@ -136,7 +136,7 @@ $res.="<li class='ligo'>";
 $res.="<a href='".$vojo."fr/cge/intro.php?temo=intro'>Cours en dix le&ccedil;ons</a>";
 $res.="<ul class='niv2'>";
 $res.="<li><a href='".$vojo."fr/cge/intro.php?temo=intro'>Introduction</a></li>";
-$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj where lecionoj.kurso='CG' and lecionoj.lingvo='FR'";
+$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj where lecionoj.kurso='CG'";
 mysql_select_db( "ikurso");
 $result = mysql_query($demando) or die ("INSERT : malbona demando :".$demando);
 while($row = mysql_fetch_array($result)) {
@@ -153,7 +153,7 @@ $res.="<li class='ligo'>";
 $res.="<a href='".$vojo."fr/gerda/index.php'>Gerda malaperis</a>";
 $res.="<ul class='niv2 gerda'>";
 $demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj 
-where lecionoj.kurso='GR' and lecionoj.lingvo='FR'";
+where lecionoj.kurso='GR' ";
 mysql_select_db( "ikurso");
 $result = mysql_query($demando) or die ("INSERT : malbona demando :".$demando);
 while($row = mysql_fetch_array($result)) {

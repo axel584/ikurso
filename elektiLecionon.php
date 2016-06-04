@@ -1,11 +1,10 @@
 <?php
-include "lingvo.inc.php";
 include "db.inc.php";
 malfermidatumbazon();
 $persono_id=$_SESSION["persono_id"];
 
 function listiDLEK(){
-	$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj where lecionoj.kurso='CG' and lecionoj.lingvo='FR'";
+	$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj where lecionoj.kurso='CG'";
 	mysql_select_db( "ikurso");
 	$result = mysql_query($demando) or die ("INSERT : malbona demando :".$demando);
 	while($row = mysql_fetch_array($result)) {
@@ -15,7 +14,7 @@ function listiDLEK(){
 }
 
 function listiGerda(){
-	$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj where lecionoj.kurso='GR' and lecionoj.lingvo='FR'";
+	$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj where lecionoj.kurso='GR' ";
 	mysql_select_db( "ikurso");
 	$result = mysql_query($demando) or die ("INSERT : malbona demando :".$demando);
 	while($row = mysql_fetch_array($result)) {

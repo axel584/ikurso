@@ -1,9 +1,7 @@
 <?php
 include "util.php";
 include_once ("db.inc.php");
-include_once ("lingvo.inc.php");
 //include_once ("forum/includes/forum.lib.php");
-//include_once("db/protokolo.inc.php");
 
 malfermidatumbazon();
 $enirnomo=$aligxilo["enirnomo"]=$_POST["nova_enirnomo"];
@@ -75,14 +73,14 @@ if ($pasvorto!=$pasvorto2) {
 			$mesagxkapo.="Date: ".date("D, j M Y H:i:s")."\n";
 			$mesagxkapo.=" \n";
 			// creer l'eleve :
-			$nova_persono_id = kreiPersonon($enirnomo,$pasvorto,$retadreso,"fr");
+			$nova_persono_id = kreiPersonon($enirnomo,$pasvorto,$retadreso);
 			// envoyer le mail eleve pour l'inviter a attendre un correcteur.
 			if (!mail($retadreso,"Bienvenue sur I-kurso",$contents,$mesagxkapo)) {
 				protokolo($nova_persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$retadreso);
 			} 
 			$_SESSION["persono_id"]=$persono_id;
 			
-			$demando="select retadreso from personoj where rajtoj='I' and lingvo='fr'";
+			$demando="select retadreso from personoj where rajtoj='I' ";
 			$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 			$row=$result->fetch();
 			$informistoj=$row["retadreso"];

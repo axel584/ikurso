@@ -1,5 +1,4 @@
 <?php
-include "lingvo.inc.php";
 require("db.inc.php");
 malfermidatumbazon();
 // cxu la studanto havas jam komencita kurso ?

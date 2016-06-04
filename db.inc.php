@@ -22,11 +22,11 @@ function fermiDatumbazon() {
 // $pasvorto - vorto uzita por eniri en la ttt-ejo kun la enirnomo
 // $retadreso - uzita por sendi mesagxon kun la nomo de la korektanto (por la studantoj) aux de la studanto (por la Korektantoj)
 // Elirvaluo : id de la persono (unika nombro por retrovi iun)
-function kreiPersonon($enirnomo,$pasvorto,$retadreso,$lingvo) {
+function kreiPersonon($enirnomo,$pasvorto,$retadreso) {
     global $bdd;
      $query = "insert into personoj";
-     $query .="(enirnomo,pasvorto,retadreso,ekdato,lingvo) ";
-     $query .="values ('$enirnomo','$pasvorto','$retadreso',now(),'FR')";
+     $query .="(enirnomo,pasvorto,retadreso,ekdato) ";
+     $query .="values ('$enirnomo','$pasvorto','$retadreso',now())";
      $bdd->exec($query);
      return $bdd->lastInsertId();
 }
@@ -37,7 +37,6 @@ function kreiPersonon($enirnomo,$pasvorto,$retadreso,$lingvo) {
 // ndtago : tago de la naskigxdato (1-->31) (ekz. : 11)
 // ndmonato : monato de la naskigxdato (1-->12) (ekz. : 5 (por majo))
 // ndjaro : jaro de la naskigxdato per 4 ciferoj (ekz. : 1978)
-// lingvo : uzita lingvo de la persono : TRE GRAVA AFERO !!! cxiuj franclingvaj korektantoj korektas franclingvajn studantojn. cxiuj brazillingvaj korektantoj korektas brazillingvajn studantojn ktp.
 function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$ndtago,$ndmonato,$ndjaro,$kialo,$sistemo,$stopInfo) {
     global $bdd;
     if (($ndjaro=="")||($ndmonato=="")||($ndtago=="")) {
@@ -120,13 +119,6 @@ function listoDepartemento($idDepartemento, $rajtoj) {
 	$result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
 	$i=0;
 	while ($row = mysql_fetch_array($result)){
-		/* à décommenter si on passe les pages en utf-8
-		$samideanoj[$i]['id']=utf8_encode($row['id']);
-		$samideanoj[$i]['enirnomo']=utf8_encode($row['enirnomo']);
-		$samideanoj[$i]['personnomo']=utf8_encode($row['personnomo']);
-		$samideanoj[$i]['posxtkodo']=utf8_encode($row['posxtkodo']);
-		$samideanoj[$i]['urbo']=utf8_encode($row['urbo']);
-		*/
 		$samideanoj[$i]['id']=$row['id'];
 		$samideanoj[$i]['enirnomo']=$row['enirnomo'];
 		$samideanoj[$i]['personnomo']=$row['personnomo'];
@@ -224,17 +216,17 @@ function getCoursElLernanto($lernanto_id) {
         } elseif($row['kurso']=="CG") {
             $prefixe_url = 'fr/cge/';
         }
-        simplaVorto('nomo','kursoj',"where lingvo='fr' and kodo='".$row['kurso']."'");
+        simplaVorto('nomo','kursoj',"where kodo='".$row['kurso']."'");
         // TODO : vérifier pour les élèves n'ayant pas encore commencé
         if ($row['nunleciono']==null) {
             echo " - pas encore commencé";
         } else {
             echo " - Dernière leçon suivi : ";
-            simplaVorto('titolo','lecionoj',"where lingvo='fr' and numero='".$row["nunleciono"]."' and kurso='".$row["kurso"]."'");
+            simplaVorto('titolo','lecionoj',"where numero='".$row["nunleciono"]."' and kurso='".$row["kurso"]."'");
         }
         if ($row["stato"]=="N") { // cas des élèves pas encore commencé
             // TODO : ici on affiche la première leçon à suivre
-            $demando2 = "select titolo,retpagxo from lecionoj where lingvo='fr' and numero='1' and kurso='".$row["kurso"]."'";
+            $demando2 = "select titolo,retpagxo from lecionoj where and numero='1' and kurso='".$row["kurso"]."'";
             $row2 = $bdd->query($demando2)->fetch();
             if (isset($row2['retpagxo'])) { // dans le cas du logiciel, il n'y a pas de leçon à afficher
                 echo " - <a href='".$prefixe_url.$row2['retpagxo']."'>Accès à la leçon : ".$row2['titolo']."</a>";
@@ -242,7 +234,7 @@ function getCoursElLernanto($lernanto_id) {
         }
         if ($row["stato"]=="K") { // cas des élèves en cours
             $prochaine_lecon = $row['nunleciono']+1;
-            $demando2 = "select titolo,retpagxo from lecionoj where lingvo='fr' and numero='".$prochaine_lecon."' and kurso='".$row["kurso"]."'";
+            $demando2 = "select titolo,retpagxo from lecionoj where numero='".$prochaine_lecon."' and kurso='".$row["kurso"]."'";
             $row2 = $bdd->query($demando2)->fetch();
             if ($row2['retpagxo']!=null) { // dans le cas du logiciel, il n'y a pas de leçon à afficher
                 echo " - <a href='".$prefixe_url.$row2['retpagxo']."'>Accès à la leçon : ".$row2['titolo']."</a>";
@@ -264,17 +256,17 @@ function getInfoPorDiplomoElLernanto($lernanto_id,$kurso) {
      return $row;
 }
 
-function konstruiKorektantliston($lingvo) {
+function konstruiKorektantliston() {
     global $bdd;
      echo "<select name=\"korektanto\" class=\"input_text_box\">";
-     $query = "select personoj.id,personoj.enirnomo from personoj left join nuna_kurso on personoj.id=nuna_kurso.korektanto where personoj.rajtoj='A' or personoj.rajtoj='K' and personoj.lingvo='FR' and nuna_kurso.korektanto IS NULL";
+     $query = "select personoj.id,personoj.enirnomo from personoj left join nuna_kurso on personoj.id=nuna_kurso.korektanto where personoj.rajtoj='A' or personoj.rajtoj='K' and nuna_kurso.korektanto IS NULL";
      mysql_select_db( "ikurso"); 
      $result = mysql_query($query) or die (  "INSERT : Invalid query :".$query); 
      while($row = mysql_fetch_array($result)) {
          echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]." : 0 %</option>";  
      }
 
-     $query ="select personoj.id, personoj.enirnomo,personoj.maksimumo,count(nuna_kurso.korektanto) as studantoj from personoj,nuna_kurso where personoj.id = nuna_kurso.korektanto and personoj.lingvo='FR' group by nuna_kurso.korektanto";
+     $query ="select personoj.id, personoj.enirnomo,personoj.maksimumo,count(nuna_kurso.korektanto) as studantoj from personoj,nuna_kurso where personoj.id = nuna_kurso.korektanto group by nuna_kurso.korektanto";
      $result = mysql_query($query) or die (  "INSERT : Invalid query :".$query); 
      while($row = mysql_fetch_array($result)) {
          if ($row["maksimumo"]=="0") {
@@ -304,8 +296,8 @@ function doniKorektanton($korektanto,$studanto) {
      $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
 }
 
-function vidiKorektantojn($lingvo) {
-     $query = "select * from personoj where lingvo='FR' and rajtoj='A' or rajtoj='K'";
+function vidiKorektantojn() {
+     $query = "select * from personoj where rajtoj='A' or rajtoj='K'";
      mysql_select_db( "ikurso"); 
      $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query); 
      while($row = mysql_fetch_array($result)) {
@@ -323,9 +315,9 @@ function vidiKorektantojn($lingvo) {
 
 }
 function protokolo($persono_id,$kategorio,$teksto) {
-   global $lingvo,$bdd;
+   global $bdd;
    $ip = $_SERVER['REMOTE_ADDR'];
-   $query = "insert into protokolo(id,persono_id,horo,ip,kategorio,teksto,lingvo) values ('','$persono_id',now(),'$ip','$kategorio','$teksto','fr')";
+   $query = "insert into protokolo(id,persono_id,horo,ip,kategorio,teksto) values ('','$persono_id',now(),'$ip','$kategorio','$teksto')";
    $bdd->exec($query);
 }
 ?>

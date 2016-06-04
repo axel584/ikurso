@@ -1,5 +1,4 @@
 <?php
-include "lingvo.inc.php";
 include "db.inc.php";
 include "webui.inc.php";
 malfermiDatumbazon();
@@ -26,7 +25,7 @@ function listiFeriojn() {
         ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["ekdato"],$ekdt);
         $ekdt = explode("-",$row["ekdato"]);
         echo $ekdt[2]." ";
-        simplaVorto("nomo","monatoj"," where kodo='$ekdt[1]' and lingvo='fr'");
+        simplaVorto("nomo","monatoj"," where kodo='$ekdt[1]'");
         echo " ".$ekdt[0];
         echo "&nbsp;</td>";
 
@@ -36,7 +35,7 @@ function listiFeriojn() {
         //ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["findato"],$fndt);
         $fndt = explode("-",$row["findato"]);
         echo $fndt[2]." ";
-        simplaVorto("nomo","monatoj"," where kodo='$fndt[1]' and lingvo='fr'");
+        simplaVorto("nomo","monatoj"," where kodo='$fndt[1]'");
         echo " ".$fndt[0];
         echo "&nbsp;</td>";
 
@@ -78,7 +77,7 @@ function listiFeriojn() {
         // ekdato
         echo "<td>";
         echo "<input type=\"text\" name=\"ekdt_tago\" size=\"3\" maxlength=\"2\">";
-konstruiMenuon("ekdt_monato","monatoj","kodo","nomo",""," where lingvo='fr'");
+konstruiMenuon("ekdt_monato","monatoj","kodo","nomo",""," ");
         echo "<input type=\"text\" name=\"ekdt_jaro\" size=\"5\" maxlength=\"4\">";
         echo "</td>";
 
@@ -86,7 +85,7 @@ konstruiMenuon("ekdt_monato","monatoj","kodo","nomo",""," where lingvo='fr'");
         // findato
         echo "<td>";
         echo "<input type=\"text\" name=\"findt_tago\" size=\"3\" maxlength=\"2\">";
-konstruiMenuon("findt_monato","monatoj","kodo","nomo",""," where lingvo='fr'");
+konstruiMenuon("findt_monato","monatoj","kodo","nomo","","");
         echo "<input type=\"text\" name=\"findt_jaro\" size=\"5\" maxlength=\"4\">";
         echo "</td>";
 

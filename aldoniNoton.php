@@ -1,5 +1,4 @@
 <?php
-include "lingvo.inc.php";
 require("db.inc.php");
 session_start();
 $teksto=isset($_POST['teksto'])?addslashes($_POST['teksto']):"";

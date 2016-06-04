@@ -2,7 +2,7 @@
 $temo="monato";
 include "stat.inc.php";
 function stat_monatoj() {
-	global $lingvo,$lgv,$lgv_sumo,$lgv_haltis,$lgv_finis,$lgv_studantoj,$bdd;
+	global $bdd;
 	$moisactuel = date("Ym");
 	// le dernier jour est le jour "0" du mois suivant (mois +1) ou 31 pour décembre (décembre + 1 n'a pas de sens)
 	if (date("m")==12) {
@@ -39,7 +39,7 @@ function stat_monatoj() {
 	}
 
 	// laux monatoj
-	$demando = "select nuna_kurso.id as id, nuna_kurso.stato as stato, MONTH(nuna_kurso.ekdato) as ekmonato, YEAR(nuna_kurso.ekdato) as ekjaro, MONTH(nuna_kurso.findato) as finmonato,YEAR(nuna_kurso.findato) as finjaro from nuna_kurso, personoj where nuna_kurso.studanto=personoj.id and personoj.lingvo='fr' order by ekjaro,ekmonato";
+	$demando = "select nuna_kurso.id as id, nuna_kurso.stato as stato, MONTH(nuna_kurso.ekdato) as ekmonato, YEAR(nuna_kurso.ekdato) as ekjaro, MONTH(nuna_kurso.findato) as finmonato,YEAR(nuna_kurso.findato) as finjaro from nuna_kurso, personoj where nuna_kurso.studanto=personoj.id order by ekjaro,ekmonato";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 
 	while($row = $result->fetch()) {
@@ -68,7 +68,7 @@ function stat_monatoj() {
 			}
 		}
 	}
-        $demando = "select * from monatoj where lingvo='fr'";
+        $demando = "select * from monatoj ";
         $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         while ($row=$result->fetch()) {
           $nomo_monatoj[$row["kodo"]]=$row["nomo"];

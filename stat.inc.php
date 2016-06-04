@@ -1,6 +1,5 @@
 <?php
 include "util.php";
-$lingvo="FR";
 $vojo="";
 include_once ("fr.inc.php");
 include_once ("db.inc.php");

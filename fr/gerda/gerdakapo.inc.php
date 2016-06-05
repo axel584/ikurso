@@ -198,7 +198,7 @@ if ($subjekto=="korekti.php") {
 	}
 }
 $varcxap=$cxapitro.".php";
-$query="select * from lecionoj where lingvo='FR' and kurso='$kurso' and retpagxo='$varcxap'";
+$query="select * from lecionoj where kurso='$kurso' and retpagxo='$varcxap'";
 $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 if ($row=$result->fetch()){
 	$titolo=$row["titolo"];
@@ -231,7 +231,7 @@ include $vojo."pagxkapo.inc.php";
  */
 if ($parto=="ek") {
 	//echo "recuperation des donnees de session";
-	if ($_SESSION["memorkurso"]) {
+	if (isset($_SESSION["memorkurso"])) {
 		$memorkurso=$_SESSION["memorkurso"];
 	}
 } else {

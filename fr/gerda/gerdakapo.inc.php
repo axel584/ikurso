@@ -369,12 +369,12 @@ function savData(lien) {
 			</ul>
 			<div id="kadro">
 				<?php			
-				if ($erarkodo=="1") {echo "<span class=\"eraro\"><br>Le mot de passe ou l’identifiant est erroné</span>";}
-				if ($erarkodo=="2") {echo "<span class=\"eraro\"><br>Vous n’avez pas rempli toutes les données obligatoires du formulaire d’inscription</span>";}
-				if ($erarkodo=="3") {echo "<span class=\"eraro\"><br>Vous avez tapé deux mots de passe différents</span>";}
-				if ($erarkodo=="6") {echo "<span class=\"eraro\"><br>Adresse électronique invalide</span>";}
-				if ($erarkodo=="7") {echo "<span class=\"eraro\"><br>Cet identifiant existe déjà. Veuillez en choisir un autre, merci</span>";}
-				if ($erarkodo=="8") {echo "<span class=\"eraro\"><br>Votre session a expiré, veuillez vous identifier.</span>";}
+				if ($erarkodo=="1") {echo "<div class='atentigo'><p class='eraro'>Le mot de passe ou l’identifiant est erroné</p></div>";}
+				if ($erarkodo=="2") {echo "<div class='atentigo'><p class='eraro'>Vous n’avez pas rempli toutes les données obligatoires du formulaire d’inscription.</p></div>";}
+				if ($erarkodo=="3") {echo "<div class='atentigo'><p class='eraro'>Vous avez tapé deux mots de passe différents</p></div>";}
+				if ($erarkodo=="6") {echo "<div class='atentigo'><p class='eraro'>Adresse électronique invalide</p></div>";}
+				if ($erarkodo=="7") {echo "<div class='atentigo'><p class='eraro'>Cet identifiant existe déjà. Veuillez en choisir un autre, merci&nbsp;!</p></div>";}
+				if ($erarkodo=="8") {echo "<div class='atentigo'><p class='eraro'>Votre session a expiré, veuillez vous identifier.</p></div>";}
 				?>
 				<?php if (($parto=="ek")&&($numcxap!="01")){
 					// ce qui suit ne s'applique pas la première fois

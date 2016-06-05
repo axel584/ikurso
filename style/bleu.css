@@ -150,6 +150,8 @@ div.atentigo input {margin-top:10px;}
 input.invalide { 
 	background: #fa0; 
 }
+span.qcmerr {color:red;}
+input span.qcmerr {text-decoration:line-through;}
 /**************************************
  * entete de la page (toute la largeur)
  **************************************/

@@ -18,15 +18,13 @@ include "pagxkapo.inc.php";
 			<div id="kadro">
 
 				<div class="klarigo">
-					<p>Pour aider les &eacute;l&egrave;ves du «Kurso de Esperanto», les auteurs ont mis en place 
+					<p>Pour aider les élèves du «Kurso de Esperanto», les auteurs ont mis en place 
 					un service de correction. </p>
 					<p>Pour obtenir un correcteur, remplissez ce formulaire, vous recevrez 
-					une premi&egrave;re confirmation par courrier &eacute;lectronique et d&egrave;s qu’un correcteur 
-					se lib&eacute;rera, il vous sera affect&eacute;. Vous recevrez ses coordonn&eacute;es 
-					&eacute;galement par courrier &eacute;lectronique. Notez l’adresse ainsi re&ccedil;ue dans la 
-					partie "configuration" du logiciel.</p>
-					<p>Retenez bien votre identifiant et votre mot de passe. Ils vous seront utiles pour vous 
-					connecter par la suite.</p>
+					une première confirmation par courrier électronique et dès qu’un correcteur 
+					se libérera, il vous sera affecté. Vous recevrez ses coordonnées 
+					également par courrier électronique. Notez bien cette adresse car vous l’utiliserez
+					pour correspondre avec votre correcteur et lui envoyer les réponses aux exercices du cours.</p>
 	 				<p> Par ailleurs nous vous proposons de vous abonner à une lettre d’information mensuelle 
 	 				sur les activités liées à l’espéranto. Cette lettre est éditée par l’association Espéranto-Jeunes 
 	 				et hébergée par Yahoogroupes. Vous pouvez donc très facilement vous désabonner à tout moment et 
@@ -42,6 +40,21 @@ include "pagxkapo.inc.php";
 	 				cours régulièrement et à avertir votre correcteur en cas d’arrêt 
 	 				momentané ou définitif. Sans manifestation de votre part pendant plus d’une semaine, nous
 	 				pourrons suspendre votre inscription et affecter votre correcteur à un autre élève. </p>  
+	 				<br />
+	 				<p><strong>Comment faire pour envoyer vos exercices à votre correcteur ?</strong></p>
+	 				<p>Dans chaque leçon, plusieurs exercices seront à envoyer à votre correcteur pour en obtenir la correction. 
+		 				Ces exercices sont repérés par une petite enveloppe affichée à côté de l’exercice dans le menu de la leçon. Par exemple&nbsp;:<br />
+		 				<img src="bildoj/ikurso-exemple-exo.jpg" /></p>
+	 				<p>Lorsque vous avez terminé un de ces exercices, cliquez sur le bouton représentant une enveloppe et qui se trouve dans la barre d’outils 
+		 			en bas de la fenêtre Kurso de Esperanto&nbsp;:<br />
+		 			<img src="bildoj/ikurso-envoyer-exo.jpg" /></p>
+		 			<p>Dans le logiciel que vous utilisez habituellement pour envoyer des e-mails, 
+			 			créez un nouveau message en indiquant comme destinataire l’adresse courriel de votre correcteur.</p>
+			 		<p>Dans le corps du message, copiez le contenu de l’exercice en tapant les touches Ctrl V (sous Windows) ou cmd V (sous Mac OSX).</p>
+			 		<p>Pour un meilleur suivi des leçons, nous vous conseillons de mettre le nom de la leçon comme objet du message. 
+				 		Par exemple pour la leçon 7, chapitre 15, l’objet est <b>Leciono 07 - Paĝo 15</b></p>
+				 	<p>Procédez de la même façon pour tous les exercices qui sont repérés par une petite enveloppe.</p>
+
 	 				
 					<form name="inscription" action="aligxi2.php" method="post"> 
 					<?php echo "<input type='hidden' name='kurso' value='KE'>\n"; 

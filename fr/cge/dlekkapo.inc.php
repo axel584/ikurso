@@ -87,7 +87,7 @@ function ekzerco($sist, $nbLig) {
 
 $pagxo=explode("/", $_SERVER['SCRIPT_NAME']);
 $subjekto=$pagxo[count($pagxo)-1];
-$query="select * from lecionoj where lingvo='FR' and kurso='$kurso' and retpagxo='$subjekto'";
+$query="select * from lecionoj where kurso='$kurso' and retpagxo='$subjekto'";
 $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 if ($result->rowCount()!="0"){
 	$row=$result->fetch();

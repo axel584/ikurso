@@ -33,7 +33,6 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 		$row=$result->fetch();
 		$informistoj=$row["retadreso"]; 
-		// on a mis à jour cette ligne pour que le bezouille releve les mails des eleves qui ont fini
 		while ($row=$result->fetch()) {
 		      $informistoj=$informistoj.",".$row["retadreso"];
 		}
@@ -42,6 +41,10 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 	$demando="select * from personoj,nuna_kurso where nuna_kurso.id=".$rezultoj[0]." and personoj.id=nuna_kurso.studanto";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	$row=$result->fetch();
+	// on stocke le enirnomo et la retadreso de l'élève pour lui envoyer un mail :
+	$enirnomo = $row["enirnomo"];
+	$retadreso = $row["retadreso"];
+	// on rempli le mail à destination des informateurs
 	$contents=str_replace("##ENIRNOMO##",$row["enirnomo"],$contents);
 	$contents=str_replace("##NASKIGXDATO##",$row["naskigxdato"],$contents);
 	$contents=str_replace("##PERSONNOMO##",$row["personnomo"],$contents);
@@ -54,9 +57,11 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 	$contents=str_replace("##POSXTKODO##",$row["posxtkodo"],$contents);
 	$contents=str_replace("##URBO##",$row["urbo"],$contents);
 	//prenu nomon de lia kurso :
-	$demando="select kursoj.nomo from kursoj,nuna_kurso where kursoj.kodo=nuna_kurso.kurso and nuna_kurso.id=".$rezultoj[0]."";
+	$demando="select kursoj.nomo,kursoj.kodo from kursoj,nuna_kurso where kursoj.kodo=nuna_kurso.kurso and nuna_kurso.id=".$rezultoj[0]."";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	$row=$result->fetch();
+	// on stocke le code du cours pour envoyer un message à l'élève
+	$kurso = strtoupper($row["kodo"]);
 	$contents=str_replace("##KURSO##",$row["nomo"],$contents);
 	//prenu nomon de lia korektanto
 	$demando="select personoj.enirnomo from personoj,nuna_kurso where personoj.id=nuna_kurso.korektanto and nuna_kurso.id=".$rezultoj[0];
@@ -67,6 +72,21 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 	// envoyer le mail aux informateurs
 	//$informistoj="emmanuelle@esperanto-jeunes.org";
 	mail($informistoj,"un esperantiste de plus !",$contents,$mesagxkapo);
+
+
+	// et on envoit aussi un mail à l'élève
+	$filename = "mails/finiStu".$kurso.".html";
+	$fd = fopen($filename, "r");
+	$contents = fread($fd, filesize ($filename));
+	fclose($fd);
+	$mesagxkapo="MIME-Version: 1.0\n";
+	$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
+	$mesagxkapo.="From: Ikurso <ikurso@esperanto-jeunes.org>\n";
+	$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
+	$contents=str_replace("##ENIRNOMO##",$enirnomo,$contents);
+	mail($retadreso,"Félicitations !",$contents,$mesagxkapo);
+
+
 }
 // se la nova stato estas H(altita), sed la malnova ne estis H, ni updatas ! :-)
 if ($rezultoj[1]=='H' and $row["stato"]!='H') {

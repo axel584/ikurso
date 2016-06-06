@@ -488,140 +488,81 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 	que vous désirez, mais ne tentez pas de répondre au hasard, car il 
 	y a tout de m&ecirc;me 67&nbsp;108&nbsp;864&nbsp;réponses possibles...
 	</p>
+<?php
+$eraroj=isset($_GET["eraroj"])?unserialize(urldecode($_GET["eraroj"])):array();
+echo "erreurs :";
+print_r($eraroj);
 
+if (in_array("02",$eraroj)) {
+	echo "deux en erreurs <br/>";
+}
+if (in_array("03",$eraroj)) {
+	echo "trois en erreurs <br/>";
+}
+
+function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
+	echo "<p>";
+	echo "<input type=\"hidden\" name=\"900 dmd ".$numero."\" value=\"".$question."\">";
+	echo "<input type=\"hidden\" name=\"900 resp ".$numero."\" value=\"".join("/",$propositions)."\">";
+	if (in_array($numero,$eraroj)) {
+		echo "<span class=\"qcmerr\">";
+	}
+	echo $numero.". ".$question;
+	if (in_array($numero,$eraroj)) {
+		echo "</span>";
+	}
+	echo "</p>";
+	echo "<p>";
+	// sans réponse :
+	echo "<input style=\"display:none;\" type=\"radio\" name=\"900 ".$numero."\"";
+	if ((isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]=="")) {
+		echo "checked";
+	}
+	echo ">";
+	$i = 1;
+	foreach ($propositions as $proposition ) {
+		if ($proposition=="(pas de réponse") {
+			$i++;
+			continue;
+		}
+		echo "<input type=\"radio\" name=\"900 ".$numero."\" value=\"".$i."\" ";
+
+		if ((isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]==strval($i))) {
+			echo "checked";
+		}
+		echo "> ";
+		if (in_array($numero,$eraroj) && (isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]==strval($i))) {
+			echo "<span class=\"qcmerr\">";
+		}
+		echo $proposition;
+		if (in_array($numero,$eraroj) && (isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]==strval($i))) {
+			echo "</span>";
+		}
+		echo "<br/>";
+		$i++;
+	}
+	echo "</p>";
+
+}
+
+?>
 <input type="hidden" name="013_cxap01.3" value="QCM">
 <div class="tasko" id="qcm">
-	<p>
-			<input type="hidden" name="900 dmd 01" value="Combien de syllabes y a-t-il dans 'viaj kukoj' ?">
-			<input type="hidden" name="900 resp 01" value="3/4/5/6/(pas de réponse)">
-			01. Combien de syllabes y a-t-il dans 'viaj kukoj' ?
-	</p><p>
-			<input style="display:none;" type="radio" name="900 01" <?php if ((isset($memorkurso["900_01"])) && ($memorkurso["900_01"]=="")) {echo "checked";}?>>
-			<input type="radio" name="900 01" value="1" <?php if ((isset($memorkurso["900_01"])) && ($memorkurso["900_01"]=="1")) {echo "checked";}?>> 3<br/>
-			<input type="radio" name="900 01" value="2" <?php if ((isset($memorkurso["900_01"])) && ($memorkurso["900_01"]=="2")) {echo "checked";}?>> 4<br/>
-			<input type="radio" name="900 01" value="3" <?php if ((isset($memorkurso["900_01"])) && ($memorkurso["900_01"]=="3")) {echo "checked";}?>> 5<br/>
-			<input type="radio" name="900 01" value="4" <?php if ((isset($memorkurso["900_01"])) && ($memorkurso["900_01"]=="4")) {echo "checked";}?>> 6<br/>
-	</p><p>	
-			<input type="hidden" name="900 dmd 02" value="Quelle est la place de l’accent tonique ?">
-			<input type="hidden" name="900 resp 02" value="sur la dernière voyelle/sur l’avant-dernière syllabe/sur la dernière syllabe/sur la première voyelle/(pas de réponse)">
-			02. Quelle est la place de l’accent tonique ?
-	</p><p>
-			<input style="display:none;" type="radio" name="900 02" <?php if ((isset($memorkurso["900_02"])) && ($memorkurso["900_02"]=="")) {echo "checked";}?>>
-			<input type="radio" name="900 02" value="1" <?php if ((isset($memorkurso["900_02"])) && ($memorkurso["900_02"]=="1")) {echo "checked";}?>> sur la dernière voyelle<br/>
-			<input type="radio" name="900 02" value="2" <?php if ((isset($memorkurso["900_02"])) && ($memorkurso["900_02"]=="2")) {echo "checked";}?>> sur l’avant-dernière syllabe<br/>
-			<input type="radio" name="900 02" value="3" <?php if ((isset($memorkurso["900_02"])) && ($memorkurso["900_02"]=="3")) {echo "checked";}?>> sur la dernière syllabe<br/>
-			<input type="radio" name="900 02" value="4" <?php if ((isset($memorkurso["900_02"])) && ($memorkurso["900_02"]=="4")) {echo "checked";}?>> sur la première voyelle<br/>
-	</p><p>
-			<input type="hidden" name="900 dmd 03" value="Comment se prononce la lettre 'ĝ' ?">
-			<input type="hidden" name="900 resp 03" value="comme le 'g' de 'Alger'/comme le 'g' de 'Lagos'/comme le 'dj' de 'Djibouti'/aucun de ceux-ci/(pas de réponse)">
-			03. Comment se prononce la lettre 'ĝ' ?
-	</p><p>
-			<input style="display:none;" type="radio" name="900 03" <?php if ((isset($memorkurso["900_03"])) && ($memorkurso["900_03"]=="")) {echo "checked";}?>>
-			<input type="radio" name="900 03" value="1" <?php if ((isset($memorkurso["900_03"])) && ($memorkurso["900_03"]=="1")) {echo "checked";}?>> comme le 'g' de 'Alger'<br/>
-			<input type="radio" name="900 03" value="2" <?php if ((isset($memorkurso["900_03"])) && ($memorkurso["900_03"]=="2")) {echo "checked";}?>> comme le 'g' de 'Lagos'<br/>
-			<input type="radio" name="900 03" value="3" <?php if ((isset($memorkurso["900_03"])) && ($memorkurso["900_03"]=="3")) {echo "checked";}?>> comme le 'dj' de 'Djibouti'<br/>
-			<input type="radio" name="900 03" value="4" <?php if ((isset($memorkurso["900_03"])) && ($memorkurso["900_03"]=="4")) {echo "checked";}?>> aucun de ceux-ci<br/>
-	</p><p>
-		04. Comment écrit-on en espéranto le son 'ch' du mot français 'chat' ?
-		<input type="hidden" name="900 dmd 04" value="Comment écrit-on en espéranto le son 'ch' du mot français 'chat' ?">
-		<input type="hidden" name="900 resp 04" value="ch/ŝ/ce son n’existe pas en espéranto/sch/(pas de réponse)">
-	</p><p>
-		<input style="display:none;" type="radio" name="900 04" <?php if ((isset($memorkurso["900_04"])) && ($memorkurso["900_04"]=="")) {echo "checked";}?>>
-		<input type="radio" name="900 04" value="1" <?php if ((isset($memorkurso["900_04"])) && ($memorkurso["900_04"]=="1")) {echo "checked";}?>> ch<br/>
-		<input type="radio" name="900 04" value="2" <?php if ((isset($memorkurso["900_04"])) && ($memorkurso["900_04"]=="2")) {echo "checked";}?>> ŝ<br/>
-		<input type="radio" name="900 04" value="3" <?php if ((isset($memorkurso["900_04"])) && ($memorkurso["900_04"]=="3")) {echo "checked";}?>> ce son n'existe pas en espéranto<br/>
-		<input type="radio" name="900 04" value="4" <?php if ((isset($memorkurso["900_04"])) && ($memorkurso["900_04"]=="4")) {echo "checked";}?>> sch<br/>
-	</p><p>
-		05. Comment écrit-on le son 'u' qui apparaît dans 'tutu' en français ?
-		<input type="hidden" name="900 dmd 05" value="Comment écrit-on le son 'u' qui apparaît dans 'tutu' en français ?">
-		<input type="hidden" name="900 resp 05" value="u/y/il n'existe pas en espéranto/&uuml;/(pas de réponse)">
-	</p><p>
-		<input style="display:none;" type="radio" name="900 05" <?php if ((isset($memorkurso["900_05"])) && ($memorkurso["900_05"]=="")) {echo "checked";}?>>
-		<input type="radio" name="900 05" value="1" <?php if ((isset($memorkurso["900_05"])) && ($memorkurso["900_05"]=="1")) {echo "checked";}?>> u<br/>
-		<input type="radio" name="900 05" value="2" <?php if ((isset($memorkurso["900_05"])) && ($memorkurso["900_05"]=="2")) {echo "checked";}?>> y<br/>
-		<input type="radio" name="900 05" value="3" <?php if ((isset($memorkurso["900_05"])) && ($memorkurso["900_05"]=="3")) {echo "checked";}?>> il n’existe pas en espéranto<br/>
-		<input type="radio" name="900 05" value="4" <?php if ((isset($memorkurso["900_05"])) && ($memorkurso["900_05"]=="4")) {echo "checked";}?>> &uuml;<br/>
-	</p><p>
-		06. Quel est le pronom de 3<sup>e</sup> personne féminin singulier ?
-			<input type="hidden" name="900 dmd 06" value="Quel est le pronom de 3<sup>e</sup> personne féminin singulier ?">
-			<input type="hidden" name="900 resp 06" value="mi/ili/ĝi/ŝi/(pas de réponse)">
-	</p><p>
-			<input style="display:none;" type="radio" name="900 06" <?php if ((isset($memorkurso["900_06"])) && ($memorkurso["900_06"]=="")) {echo "checked";}?>>
-			<input type="radio" name="900 06" value="1" <?php if ((isset($memorkurso["900_06"])) && ($memorkurso["900_06"]=="1")) {echo "checked";}?>> mi<br/>
-			<input type="radio" name="900 06" value="2" <?php if ((isset($memorkurso["900_06"])) && ($memorkurso["900_06"]=="1")) {echo "checked";}?>> ili<br/>
-			<input type="radio" name="900 06" value="3" <?php if ((isset($memorkurso["900_06"])) && ($memorkurso["900_06"]=="3")) {echo "checked";}?>> ĝi<br/>
-			<input type="radio" name="900 06" value="4" <?php if ((isset($memorkurso["900_06"])) && ($memorkurso["900_06"]=="4")) {echo "checked";}?>> ŝi<br/>
-	</p><p>
-		07. Quelle est la terminaison caractéristique de l'infinitif ?
-			<input type="hidden" name="900 dmd 07" value="Quelle est la terminaison caractéristique de l'infinitif ?">
-			<input type="hidden" name="900 resp 07" value="-i/-is/-ar/-j/(pas de réponse)">
-	</p><p>
-			<input style="display:none;" type="radio" name="900 07" <?php if ((isset($memorkurso["900_07"])) && ($memorkurso["900_07"]=="")) {echo "checked";}?>>
-			<input type="radio" name="900 07" value="1" <?php if ((isset($memorkurso["900_07"])) && ($memorkurso["900_07"]=="1")) {echo "checked";}?>> -i<br/>
-			<input type="radio" name="900 07" value="2" <?php if ((isset($memorkurso["900_07"])) && ($memorkurso["900_07"]=="2")) {echo "checked";}?>> -is<br/>
-			<input type="radio" name="900 07" value="3" <?php if ((isset($memorkurso["900_07"])) && ($memorkurso["900_07"]=="3")) {echo "checked";}?>> -ar<br/>
-			<input type="radio" name="900 07" value="4" <?php if ((isset($memorkurso["900_07"])) && ($memorkurso["900_07"]=="4")) {echo "checked";}?>> -j<br/>
-	</p><p>
-		08. Quelle est la terminaison caractéristique de l’adjectif ?
-			<input type="hidden" name="900 dmd 08" value="Quelle est la terminaison caractéristique de l’adjectif ?">
-			<input type="hidden" name="900 resp 08" value="-as/-o/-j/-a/(pas de réponse)">
-	</p><p>
-			<input style="display:none;" type="radio" name="900 08" <?php if ((isset($memorkurso["900_08"])) && ($memorkurso["900_08"]=="")){echo "checked";}?>>
-			<input type="radio" name="900 08" value="1" <?php if ((isset($memorkurso["900_08"])) && ($memorkurso["900_08"]=="1")) {echo "checked";}?>> -as<br/>
-			<input type="radio" name="900 08" value="2" <?php if ((isset($memorkurso["900_08"])) && ($memorkurso["900_08"]=="2")) {echo "checked";}?>> -o<br/>
-			<input type="radio" name="900 08" value="3" <?php if ((isset($memorkurso["900_08"])) && ($memorkurso["900_08"]=="3")) {echo "checked";}?>> -j<br/>
-			<input type="radio" name="900 08" value="4" <?php if ((isset($memorkurso["900_08"])) && ($memorkurso["900_08"]=="4")) {echo "checked";}?>> -a<br/>
-	</p><p>
-			09. Quelle est la terminaison caractéristique du passé ?
-			<input type="hidden" name="900 dmd 09" value="Quelle est la terminaison caractéristique du passé ?">
-			<input type="hidden" name="900 resp 09" value="-i/-j/-a/-is/(pas de réponse)">
-	</p><p>
-			<input style="display:none;" type="radio" name="900 09" <?php if ((isset($memorkurso["900_09"])) && ($memorkurso["900_09"]=="")){echo "checked";}?>>
-			<input type="radio" name="900 09" value="1" <?php if ((isset($memorkurso["900_09"])) && ($memorkurso["900_09"]=="1")) {echo "checked";}?>> -i<br/>
-			<input type="radio" name="900 09" value="2" <?php if ((isset($memorkurso["900_09"])) && ($memorkurso["900_09"]=="2")) {echo "checked";}?>> -j<br/>
-			<input type="radio" name="900 09" value="3" <?php if ((isset($memorkurso["900_09"])) && ($memorkurso["900_09"]=="3")) {echo "checked";}?>> -a<br/>
-			<input type="radio" name="900 09" value="4" <?php if ((isset($memorkurso["900_09"])) && ($memorkurso["900_09"]=="4")) {echo "checked";}?>> -is<br/>
-	</p><p>
-			10. Quelle est la terminaison caractéristique du nom ?
-			<input type="hidden" name="900 dmd 10" value="Quelle est la terminaison caractéristique du nom ?">
-			<input type="hidden" name="900 resp 10" value="-o/-os/cela dépend du genre/-a/(pas de réponse)">
-	</p><p>
-			<input style="display:none;" type="radio" name="900 10" <?php if ((isset($memorkurso["900_10"])) && ($memorkurso["900_10"]=="")){echo "checked";}?>>
-			<input type="radio" name="900 10" value="1" <?php if ((isset($memorkurso["900_10"])) && ($memorkurso["900_10"]=="1")) {echo "checked";}?>> -o<br/>
-			<input type="radio" name="900 10" value="2" <?php if ((isset($memorkurso["900_10"])) && ($memorkurso["900_10"]=="2")) {echo "checked";}?>> -os<br/>
-			<input type="radio" name="900 10" value="3" <?php if ((isset($memorkurso["900_10"])) && ($memorkurso["900_10"]=="3")) {echo "checked";}?>> cela dépend du genre<br/>
-			<input type="radio" name="900 10" value="4" <?php if ((isset($memorkurso["900_10"])) && ($memorkurso["900_10"]=="4")) {echo "checked";}?>> -a<br/>
-	</p><p>
-			11. Comment dit-on 'du thé chaud' ?
-			<input type="hidden" name="900 dmd 11" value="Comment dit-on 'du thé chaud' ?">
-			<input type="hidden" name="900 resp 11" value="la varmo tea/varma teo/varmo teo/la varma teo/(pas de réponse)">
-	</p><p>
-			<input style="display:none;" type="radio" name="900 11" <?php if ((isset($memorkurso["900_11"])) && ($memorkurso["900_11"]=="")){echo "checked";}?>>
-			<input type="radio" name="900 11" value="1" <?php if ((isset($memorkurso["900_11"])) && ($memorkurso["900_11"]=="1")) {echo "checked";}?>> la varmo tea<br/>
-			<input type="radio" name="900 11" value="2" <?php if ((isset($memorkurso["900_11"])) && ($memorkurso["900_11"]=="2")) {echo "checked";}?>> varma teo<br/>
-			<input type="radio" name="900 11" value="3" <?php if ((isset($memorkurso["900_11"])) && ($memorkurso["900_11"]=="3")) {echo "checked";}?>> varmo teo<br/>
-			<input type="radio" name="900 11" value="4" <?php if ((isset($memorkurso["900_11"])) && ($memorkurso["900_11"]=="4")) {echo "checked";}?>> la varma teo<br/>
-	</p><p>
-			12. Comment dit-on 'de bons garçons' ?
-			<input type="hidden" name="900 dmd 12" value="Comment dit-on 'de bons garçons' ?">
-			<input type="hidden" name="900 resp 12" value="bona knaboj/la bonaj knaboj/bonaj knaboj/bonoj knaboj/(pas de réponse)">
-	</p><p>
-			<input style="display:none;" type="radio" name="900 12" <?php if ((isset($memorkurso["900_12"])) && ($memorkurso["900_12"]=="")) {echo "checked";}?>>
-			<input type="radio" name="900 12" value="1" <?php if ((isset($memorkurso["900_12"])) && ($memorkurso["900_12"]=="1")) {echo "checked";}?>> bona knaboj<br/>
-			<input type="radio" name="900 12" value="2" <?php if ((isset($memorkurso["900_12"])) && ($memorkurso["900_12"]=="2")) {echo "checked";}?>> la bonaj knaboj<br/>
-			<input type="radio" name="900 12" value="3" <?php if ((isset($memorkurso["900_12"])) && ($memorkurso["900_12"]=="3")) {echo "checked";}?>> bonaj knaboj<br/>
-			<input type="radio" name="900 12" value="4" <?php if ((isset($memorkurso["900_12"])) && ($memorkurso["900_12"]=="4")) {echo "checked";}?>> bonoj knaboj<br/>
-	</p><p>
-			13. Comment dit-on 'mes fils' ?
-			<input type="hidden" name="900 dmd 13" value="Comment dit-on 'mes fils' ?">
-			<input type="hidden" name="900 resp 13" value="mia filioj/miaj filoj/miaj filioj/mia filoj/(pas de réponse)">
-	</p><p>
-			<input style="display:none;" type="radio" name="900 13" <?php if ((isset($memorkurso["900_13"])) && ($memorkurso["900_13"]=="")) {echo "checked";}?>>
-			<input type="radio" name="900 13" value="1" <?php if ((isset($memorkurso["900_13"])) && ($memorkurso["900_13"]=="1")) {echo "checked";}?>> mia filioj<br/>
-			<input type="radio" name="900 13" value="2" <?php if ((isset($memorkurso["900_13"])) && ($memorkurso["900_13"]=="2")) {echo "checked";}?>> miaj filoj<br/>
-			<input type="radio" name="900 13" value="3" <?php if ((isset($memorkurso["900_13"])) && ($memorkurso["900_13"]=="3")) {echo "checked";}?>> miaj filioj<br/>
-			<input type="radio" name="900 13" value="4" <?php if ((isset($memorkurso["900_13"])) && ($memorkurso["900_13"]=="4")) {echo "checked";}?>> mia filoj<br/>
-	</p>
+	<?php
+	questionQCM("01","Combien de syllabes y a-t-il dans 'viaj kukoj' ?",array("3","4","5","6","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("02","Quelle est la place de l’accent tonique ?",array("sur la dernière voyelle","sur l’avant-dernière syllabe","sur la dernière syllabe","sur la première voyelle","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("03","Comment se prononce la lettre 'ĝ' ?",array("comme le 'g' de 'Alger'","comme le 'g' de 'Lagos'","comme le 'dj' de 'Djibouti'","aucun de ceux-ci","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("04","Comment écrit-on en espéranto le son 'ch' du mot français 'chat' ?",array("ch","ŝ","ce son n’existe pas en espéranto","sch","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("05","Comment écrit-on le son 'u' qui apparaît dans 'tutu' en français ?",array("u","y","il n'existe pas en espéranto","&uuml;","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("06","Quel est le pronom de 3<sup>e</sup> personne féminin singulier ?",array("mi","ili","ĝi","ŝi","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("07","Quelle est la terminaison caractéristique de l'infinitif ?",array("-i","-is","-ar","-j","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("08","Quelle est la terminaison caractéristique de l’adjectif ?",array("-as","-o","-j","-a","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("09","Quelle est la terminaison caractéristique du passé ?",array("-i","-j","-a","-is","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("10","Quelle est la terminaison caractéristique du nom ?",array("-o","-os","cela dépend du genre","-a","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("11","Comment dit-on 'du thé chaud' ?",array("la varmo tea","varma teo","varmo teo","la varma teo","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("12","Comment dit-on 'de bons garçons' ?",array("bona knaboj","la bonaj knaboj","bonaj knaboj","bonoj knaboj","(pas de réponse)"),$eraroj,$memorkurso);
+	questionQCM("13","Comment dit-on 'mes fils' ?",array("mia filioj","miaj filoj","miaj filioj","mia filoj","(pas de réponse)"),$eraroj,$memorkurso);
+	?>
 </div>
 
 	<h3 id="lec01.6">1.6. épilogue</h3>

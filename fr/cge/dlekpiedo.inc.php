@@ -21,26 +21,20 @@
 		<?php if (!$persono_id) { ?>
 		
 			La correction des exercices est réservée aux personnes qui se sont préalablement inscrites.
-			Avant de cliquer sur le bouton <em>Envoyer</em>, n’oubliez pas de donner votre identifiant 
-			d’inscription et votre mot de passe.
-			Ils sont indispensables pour que nous puissions envoyer votre devoir à votre correcteur.
-			</p>
-			<p>Votre identifiant : 
-			<input type="text" name="ktrl_enirnomo" size="30" value="** obligatoire **" onFocus="this.value=''"></p>
-			<p>Votre mot de passe :
-			<input type="password" name="ktrl_pasvorto" size="30" value=""></p>
+			L'inscription est gratuite, elle se fait à la fin de la première leçon.
 
 		<?php } else { ?>		
 			Et maintenant, <strong><?php echo $persono['enirnomo']; ?></strong>, il ne vous reste plus qu'à envoyer vos
 			exercices à votre tuteur en cliquant sur le bouton <em>Envoyer</em> ci-dessous. Vous pouvez ajouter
 			des commentaires qui seront également transmis à votre tuteur.
 			</p>
+			<p>Commentaires :</p>
+			<p><textarea name="kialo" rows="8" cols= "80"><?php if (isset($memorkurso["kialo"])){echo  stripslashes($memorkurso["kialo"]);}?></textarea>
+			</p>
+			<p><input class="bouton" type="submit" name="Submit" value="Envoyer">&nbsp;&nbsp;&nbsp;&nbsp;
+			<input class="bouton" type="reset" value="Effacer tout"></p>			
 		<?php } ?>
-		<p>Commentaires :</p>
-		<p><textarea name="kialo" rows="8" cols= "80"><?php if (isset($memorkurso["kialo"])){echo  stripslashes($memorkurso["kialo"]);}?></textarea>
-		</p>
-		<p><input class="bouton" type="submit" name="Submit" value="Envoyer">&nbsp;&nbsp;&nbsp;&nbsp;
-		<input class="bouton" type="reset" value="Effacer tout"></p>
+
 	</div>
 		<?php } ?>
 <?php } ?>

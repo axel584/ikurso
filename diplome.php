@@ -17,8 +17,7 @@ if ($infos==null) {
 }
 // Afficher le résultat en PDF
 
-
-header ("Content-type: image/png");
+//header ("Content-type: image/png");
 if ($infos["kurso"]=="CG") {
 	$image = imagecreatefrompng("bildoj/diplomeCG.png");
 } elseif ($infos["kurso"]=="KE") {
@@ -54,7 +53,20 @@ imagettftext($image, 16, 0, 300, 30, $couleur, 'fonts/OpenSans-Light.ttf', 'Pari
 imagettftext($image, 48, 0, 300, 300, $noir, 'fonts/OpenSans-Light.ttf', $nom);
 //imagettftext($image, 12, 0, 600, 500, $couleur, 'fonts/OpenSans-Light.ttf', 'instruisto korektanto:');
 imagettftext($image, 16, 0, 600, 570, $couleur, 'fonts/OpenSans-Regular.ttf', $infos["personnomo"]." ".$infos["familinomo"]); // nom-prénom du correcteur
-
+ob_start();
 imagepng($image);
-
+$imagedata = ob_get_contents();
+ob_end_clean();
 ?>
+<html>
+	<head>
+		<style>
+			body {margin:10px;}
+			img {border:1px solid grey;}
+		</style>
+	</head>
+    <body>
+		<?php echo '<img src="data:image/png;base64,'.base64_encode($imagedata).'" width="842" height="595"/>'; ?>
+    </body>
+</html>
+

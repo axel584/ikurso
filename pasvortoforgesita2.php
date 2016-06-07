@@ -42,7 +42,6 @@ if (!$resultat) {
 	echo "<div class='atentigo'><p class='eraro'>Impossible d'envoyer le message.</p></div>";
 }
 ?>
-<p><?php echo $contents; ?></p>
 	<p>Votre mot de passe vous a été envoyé, vous pouvez fermer cette fenêtre</p>
 	<input class="bouton" type="button" value="Fermer" onClick="window.close();">
 </div>

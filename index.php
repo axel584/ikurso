@@ -12,6 +12,8 @@ if ($persono_id) {
 		// TODO : mettre ici la fonction qui se connecte au forum...
 		//phpbb_login($persono_id);
 	//}
+	// on redirige les personnes utilisé suivants certaines règles :
+	redirigeParDroits($persono);
 }
 include "pagxkapo.inc.php";
 ?>

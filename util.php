@@ -110,6 +110,7 @@ else {
 	$lingvo=$persono["lingvo"];
 	$lgv=$lingvo;	// langue de l'interface = par defaut la langue des donnees
 }
-include "lingvo.inc.php";
+
+
 
 ?>

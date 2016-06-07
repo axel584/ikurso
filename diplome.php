@@ -60,13 +60,15 @@ ob_end_clean();
 ?>
 <html>
 	<head>
-		<style>
-			body {margin:10px;}
-			img {border:1px solid grey;}
-		</style>
+		<link type="text/css" rel="stylesheet" href="style/bleu.css" media="screen"/>
+		<link type="text/css" rel="stylesheet" href="style/impression.css" media="print"/>
 	</head>
-    <body>
+    <body class="attestation">
 		<?php echo '<img src="data:image/png;base64,'.base64_encode($imagedata).'" width="842" height="595"/>'; ?>
+		<div class="outils">
+			<a class="bouton imprimer" href="" onclick="window.print();">Imprimer l’attestation</a>
+			<a class="bouton fermer" href="" onclick="window.close();">Fermer</a>
+		</div>
     </body>
 </html>
 

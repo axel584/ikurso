@@ -242,7 +242,9 @@ function getCoursElLernanto($lernanto_id) {
         }
         if ($row["stato"]=="F") {
             // ici on affiche le lien vers le diplome
-            echo " - <a class='bouton' href='diplome.php?kurso=".$row["kurso"]."'>Attestation de réussite</a>";
+            ?>            
+              <a class="bouton" href="diplome.php?kurso=<?php echo $row['kurso'] ?>" onclick="window.open(this.href, 'attestation', 'height=595, width=842, left='+(screen.availWidth-842)/2+', top='+(screen.availHeight-595)/2)+', toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'; return false;">Attestation de réussite</a>
+           <?
         }
         echo "<br/>";
     }

@@ -490,8 +490,6 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 	</p>
 <?php
 $eraroj=isset($_GET["eraroj"])?unserialize(urldecode($_GET["eraroj"])):array();
-echo "erreurs :";
-print_r($eraroj);
 
 if (in_array("02",$eraroj)) {
 	echo "deux en erreurs <br/>";

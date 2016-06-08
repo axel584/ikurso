@@ -624,11 +624,11 @@ include "adminkapo.inc.php";
 										<a href="javascript:document.administri2.submit();">
 										<img src="bildoj/filesaveas.png" border="0"></a>
 									</td>
-									<?php } ?>
 									<td valign="middle">
 										<a href="javascript:document.administri2.action='delete.php';document.administri2.submit();">
 										<img src="bildoj/trashcan_full.png"></a>
 									</td>
+									<?php } ?>
 								</tr>
 							</table>
 							<?php } ?>

@@ -244,7 +244,7 @@ function getCoursElLernanto($lernanto_id) {
             // ici on affiche le lien vers le diplome
             ?>            
               <a class="bouton" href="diplome.php?kurso=<?php echo $row['kurso'] ?>" onclick="window.open(this.href, 'attestation', 'height=660, width=862, left='+(screen.availWidth-862)/2+', top='+(screen.availHeight-660)/2)+', toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'; return false;">Attestation de réussite</a>
-           <?
+           <?php
         }
         echo "<br/>";
     }

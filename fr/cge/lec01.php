@@ -519,7 +519,7 @@ function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
 	echo ">";
 	$i = 1;
 	foreach ($propositions as $proposition ) {
-		if ($proposition=="(pas de réponse") {
+		if ($proposition=="(pas de réponse)") {
 			$i++;
 			continue;
 		}

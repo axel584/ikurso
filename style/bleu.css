@@ -999,6 +999,7 @@ table.hejmo p {
 a.bouton {
 	display:inline-block;
 	text-decoration:none;
+	font-weight:normal;
 }
 .bouton:hover {
 	background-color:#F6F9FB;

@@ -54,7 +54,7 @@ include "pagxkapo.inc.php";
 			 		<p>Pour un meilleur suivi des leçons, nous vous conseillons de mettre le nom de la leçon comme objet du message. 
 				 		Par exemple pour la leçon 7, chapitre 15, l’objet est <b>Leciono 07 - Paĝo 15</b></p>
 				 	<p>Procédez de la même façon pour tous les exercices qui sont repérés par une petite enveloppe.</p>
-
+				 	<p><a class="bouton" href="doc/ikurso-aide.pdf">Télécharger ce guide en PDF</a></p>
 	 				
 					<form name="inscription" action="aligxi2.php" method="post"> 
 					<?php echo "<input type='hidden' name='kurso' value='KE'>\n"; 

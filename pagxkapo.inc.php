@@ -22,16 +22,6 @@ if (!isset($_COOKIE["metodo"])) {
 	$metodo="X";
 	}
 }
-
-$style=isset($_GET["style"])?$_GET["style"]:"";
-if ($style==""){
-	$style=isset($_COOKIE["style"])?$_COOKIE["style"]:"";	
-	if ($style==""){
-		$style="bleu";
-	}
-}
-$style="bleu";
-setcookie("style", $style);
 ob_start("konvX");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -41,7 +31,7 @@ ob_start("konvX");
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="ikurso, cours, esperanto, cours d'esperanto, esperanto-jeunes" />
 <link href="http://esperanto-jeunes.org/favicon.ico" type="image/ico" rel="icon" />
-<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/<?php echo $style;?>.css" title="<?php echo $style;?>" />
+<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/bleu.css" title="bleu" />
 
 </head>
 <body>

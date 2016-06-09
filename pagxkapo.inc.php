@@ -212,23 +212,6 @@ ob_start("konvX");
 				</li>
 			</ul>
 
-			<!-- <h2>Caf&eacute; esp&eacute;ranto &agrave; Paris</h2>
-				<ul>
-					<li class="nenio">
-						<p style="text-align:center" id="farbskatol">
-						<a href="http://www.polyglot-learn-language.com/meetings.php?post_id=1512">
-						La troisi&egrave;me caf&eacute; esp&eacute;ranto aura lieu le vendredi 3 Juillet au caf&eacute; l'Impr&eacute;vu, rue Quincampoix.</a></p>
-					</li>
-				</ul> -->
-
-			<!--<h2>Farbskatol&rsquo;</h2>
-				<ul>
-					<li class="nenio">
-						<p style="text-align:center" id="farbskatol">
-						<a href="http://farbskatol.net">
-						Vid&eacute;os en esp&eacute;ranto</a></p>
-					</li>
-				</ul>-->
 		</div> <!-- pagxmenuo -->
 		<div class="stylenavbar">
 		</div>	

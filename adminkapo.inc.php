@@ -6,10 +6,6 @@ $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
 $metodo=isset($_GET["metodo"])?$_GET["metodo"]:"U";
 $style=isset($_GET["style"])?$_GET["style"]:"";
-if ($style==""){
-	$style=isset($_COOKIE["style"])?$_COOKIE["style"]:"bleu";
-}
-setcookie("style", $style);
 ob_start("konvX");
 echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
 ?>
@@ -17,7 +13,7 @@ echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
 <head>
 <title>ikurso-<?php echo $pagxtitolo;?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link type="text/css" rel="stylesheet" href="<?=$vojo;?>style/<?=$style?>.css" title="<?=$style?>">
+<link type="text/css" rel="stylesheet" href="<?=$vojo;?>style/bleu.css" title="bleu">
 
 </head>
 <body>

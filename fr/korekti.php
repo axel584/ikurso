@@ -329,8 +329,8 @@ if ($jamaligxi=="jes") {
 					exit(0);
 				}
 			}
-			$_SESSION["persono_id"]=$persono_id;
 			$persono_id = kreiPersonon($enirnomo,$pasvorto,$retadreso,"FR");
+			$_SESSION["persono_id"]=$persono_id; // on connecte automatiquement la personne qui vient de créer son compte
 			//phpbb_create_user($persono_id,$enirnomo,$pasvorto,$retadreso,$lingvo,$urbo);
 			malfermidatumbazon();
 			$filename = "../mails/aligxi".$kurso."FR.html";

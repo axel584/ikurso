@@ -73,10 +73,10 @@ if ($pasvorto!=$pasvorto2) {
 			$mesagxkapo.="Date: ".date("D, j M Y H:i:s")."\n";
 			$mesagxkapo.=" \n";
 			// creer l'eleve :
-			$nova_persono_id = kreiPersonon($enirnomo,$pasvorto,$retadreso);
+			$persono_id = kreiPersonon($enirnomo,$pasvorto,$retadreso);
 			// envoyer le mail eleve pour l'inviter a attendre un correcteur.
 			if (!mail($retadreso,"Bienvenue sur I-kurso",$contents,$mesagxkapo)) {
-				protokolo($nova_persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$retadreso);
+				protokolo($persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$retadreso);
 			} 
 			$_SESSION["persono_id"]=$persono_id;
 			
@@ -123,11 +123,11 @@ if ($pasvorto!=$pasvorto2) {
 			$teksto=$contents;
 			mail($informistoj,$subjekto,$teksto,$mesagxkapo);
 			
-			protokolo($nova_persono_id,"VERDA KRABO","$retadreso : $verdakrabo");
-			modifiPersonon($nova_persono_id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$naskigxdato_tago,$naskigxdato_monato,$naskigxdato_jaro,$kialo,"0",$kurso,"U",$stopInfo);
+			protokolo($persono_id,"VERDA KRABO","$retadreso : $verdakrabo");
+			modifiPersonon($persono_id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$naskigxdato_tago,$naskigxdato_monato,$naskigxdato_jaro,$kialo,"0",$kurso,"U",$stopInfo);
 			//on ne créer pas d'utilisateur phpbb pour le moment
 			//phpbb_create_user($nova_persono_id,$enirnomo,$pasvorto,$retadreso,$lingvo,$urbo);
-			$_SESSION["persono_id"]=$nova_persono_id;
+			$_SESSION["persono_id"]=$persono_id;
 			header("Location:atendiKorektanton.php");
 	}
 }

@@ -151,7 +151,7 @@ input.invalide {
 	background: #fa0; 
 }
 span.qcmerr {color:red;}
-input span.qcmerr {text-decoration:line-through;}
+input[type="radio"] + span.qcmerr {text-decoration:line-through;}
 /**************************************
  * entete de la page (toute la largeur)
  **************************************/

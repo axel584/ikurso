@@ -35,7 +35,11 @@ Drop table lingvoj;
 
 
 -- pour passer en V3
+ALTER TABLE personoj CHANGE `naskigxdato` `naskigxdato` DATE DEFAULT NULL;
+update `personoj` set naskigxdato=NULL WHERE `naskigxdato` = '0000-00-00';
 ALTER TABLE  `personoj` ADD  `lasteniro` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER  `ekdato` ;
+
+update `personoj` set naskigxdato=NULL where id=30;
 
 
 

@@ -498,6 +498,13 @@ p.dato {
 	padding-top:0px;
 }
 
+/*
+ * lecteur audio
+ */
+div.sono {
+	padding:10px 10% 10px 5%;
+}
+
 /**********************************
  * onglets
  **********************************

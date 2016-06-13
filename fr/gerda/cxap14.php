@@ -1,71 +1,73 @@
 <?php 
 $titolo="14 (dek kvar)";
-include "gerdakapo.inc.php"; 
+$gxisdatigDato="2016-06-13";
+include "gerdakapo.inc.php";
+include "gerdasono.inc.php";
 ?>
 		<div class="rakonto">
 			<img src="bildoj/gerda14-1.gif">
-			<p>"Kie diable mi trovi&#285;as?" diris al si Gerda, kiam &#349;i
-			veki&#285;is. &#349;i ku&#349;is sur lito -- sur malkomforta, tro mallar&#285;a lito --
-			en &#265;ambro nekonata, en domo nekonata.</p>
-			<p>Mankis al &#349;i forto, kaj &#349;ia tuta korpo iom doloris; &#349;i estis
-			laca, kvaza&#365; &#349;i estus laborinta multajn horojn sinsekve en la kampoj,
-			kvaza&#365; &#349;i estus movinta pezajn rokojn kaj &#349;tonojn dum multaj kaj
-			multaj tagoj, sen e&#265; horo da dormo, kvaza&#365; &#349;i estus mar&#349;inta dum
-			multaj kaj multaj semajnoj sur malfacila monta vojeto.  Unuvorte, &#349;i
-			estis lacega, kaj &#349;ajnis al &#349;i, ke &#265;iuj muskoloj de &#349;ia korpo
+			<p>"Kie diable mi troviĝas?" diris al si Gerda, kiam ŝi
+			vekiĝis. ŝi kuŝis sur lito -- sur malkomforta, tro mallarĝa lito --
+			en ĉambro nekonata, en domo nekonata.</p>
+			<p>Mankis al ŝi forto, kaj ŝia tuta korpo iom doloris; ŝi estis
+			laca, kvazaŭ ŝi estus laborinta multajn horojn sinsekve en la kampoj,
+			kvazaŭ ŝi estus movinta pezajn rokojn kaj ŝtonojn dum multaj kaj
+			multaj tagoj, sen eĉ horo da dormo, kvazaŭ ŝi estus marŝinta dum
+			multaj kaj multaj semajnoj sur malfacila monta vojeto.  Unuvorte, ŝi
+			estis lacega, kaj ŝajnis al ŝi, ke ĉiuj muskoloj de ŝia korpo
 			plendas pri troa laboro, nehome peza, nehome malfacila, nehome laciga.</p>
-			<p>Kaj tamen &#349;i sciis, ke &#349;i faris neniun korpan laboron; &#349;i
-			sentis sin mal&#285;oja; &#349;iaj okuloj malseki&#285;is; &#349;i ploris.</p>
-			<p>Ne estis multe da lumo en la &#265;ambro. Kvankam &#349;i sentis sin
-			tiel laca, tiel senforta, scivolo pri la situacio tamen superis &#349;ian
-			deziron plu ku&#349;i. &#349;i sekigis siajn okulojn kaj elliti&#285;is. &#349;i iris
+			<p>Kaj tamen ŝi sciis, ke ŝi faris neniun korpan laboron; ŝi
+			sentis sin malĝoja; ŝiaj okuloj malsekiĝis; ŝi ploris.</p>
+			<p>Ne estis multe da lumo en la ĉambro. Kvankam ŝi sentis sin
+			tiel laca, tiel senforta, scivolo pri la situacio tamen superis ŝian
+			deziron plu kuŝi. ŝi sekigis siajn okulojn kaj ellitiĝis. ŝi iris
 			al la eta fenestro, esperante malfermi la dikajn fenestrokovrilojn,
-			kiuj malhelpis la envenon de lumo. &#349;i anka&#365; esperis, ke &#349;i vidos la
-			sunon. Krome, estis tre varme en la &#265;ambro, kaj estus sa&#285;e malfermi
-			la fenestron por enlasi iom da pura aero. Sed &#349;i ne sukcesis. Io
-			malhelpis, ke tiu malnova fenestro movi&#285;u.</p>
-			<p>&#348;i iris al la pordo; &#285;i estis &#349;losita, kaj &#349;losilo nenie
+			kiuj malhelpis la envenon de lumo. ŝi ankaŭ esperis, ke ŝi vidos la
+			sunon. Krome, estis tre varme en la ĉambro, kaj estus saĝe malfermi
+			la fenestron por enlasi iom da pura aero. Sed ŝi ne sukcesis. Io
+			malhelpis, ke tiu malnova fenestro moviĝu.</p>
+			<p>Ŝi iris al la pordo; ĝi estis ŝlosita, kaj ŝlosilo nenie
 			videblis.</p>
-			<p>La &#265;ambro estis malbela, ne tre pura. Apud la muro staris
-			tablo kaj se&#285;o. &#349;i sidi&#285;is sur la se&#285;on, metis la brakojn sur la
-			tablon, la kapon en la manojn, kaj ploris. "En&#349;losita mi estas," &#349;i
-			pensis. "Oni en&#349;losis min!"</p>
-			<p>Anta&#365;e &#349;i ne multe pensis pri la plezuro esti libera. Liberi
-			estis io perfekte natura: &#349;i iris, kien &#349;i deziris, sen iu ajn
-			malhelpo, kaj tiu libereco &#349;ajnis rajto evidenta. Kaj nun oni
-			malliberigis &#349;in malanta&#365; &#349;losita pordo. &#349;i, kiu tiom &#349;atis &#285;oji,
-			ridi, kanti, kiu tiom &#349;atis ludi kaj promeni sub la suno, nun ne plu
-			trovis en si la humuron, kiu tiom ofte helpis &#349;in en la malfacilaj
-			horoj de la vivo. &#349;i ne povis vidi la eksteran sunon, kaj same en &#349;ia
-			koro ne plu lumis la kutima suno de &#285;ojo.</p>
+			<p>La ĉambro estis malbela, ne tre pura. Apud la muro staris
+			tablo kaj seĝo. ŝi sidiĝis sur la seĝon, metis la brakojn sur la
+			tablon, la kapon en la manojn, kaj ploris. "Enŝlosita mi estas," ŝi
+			pensis. "Oni enŝlosis min!"</p>
+			<p>Antaŭe ŝi ne multe pensis pri la plezuro esti libera. Liberi
+			estis io perfekte natura: ŝi iris, kien ŝi deziris, sen iu ajn
+			malhelpo, kaj tiu libereco ŝajnis rajto evidenta. Kaj nun oni
+			malliberigis ŝin malantaŭ ŝlosita pordo. ŝi, kiu tiom ŝatis ĝoji,
+			ridi, kanti, kiu tiom ŝatis ludi kaj promeni sub la suno, nun ne plu
+			trovis en si la humuron, kiu tiom ofte helpis ŝin en la malfacilaj
+			horoj de la vivo. ŝi ne povis vidi la eksteran sunon, kaj same en ŝia
+			koro ne plu lumis la kutima suno de ĝojo.</p>
 		</div>
 		<div class="rakonto">
 			<img src="bildoj/gerda14-2.gif3">
-			<p>Kaj jen subite &#349;i reagis: &#349;i iris al la pordo kaj &#285;in batis
-			kun plej granda forto; &#349;i faris timigan bruon, sed nenio okazis. &#349;i
-			vokis pli kaj pli la&#365;te, kriis, kriegis, samtempe piedbatante la
-			pordon, sed venis neniu respondo, neniu reago. Senespera, &#349;i revenis
-			al la lito kaj reku&#349;i&#285;is, pli laca ol iam ajn. Dum multaj horoj &#349;i
-			restis tiel, ku&#349;e, kaj fine, tro laca, &#349;i ekdormis.</p>
-			<p>Vekis &#349;in infana vo&#265;o; &#285;i venis el iu alia &#265;ambro, en la
-			sama domo, tute certe; &#285;i diris: "Neniam diru nek al via patro nek al
+			<p>Kaj jen subite ŝi reagis: ŝi iris al la pordo kaj ĝin batis
+			kun plej granda forto; ŝi faris timigan bruon, sed nenio okazis. ŝi
+			vokis pli kaj pli laŭte, kriis, kriegis, samtempe piedbatante la
+			pordon, sed venis neniu respondo, neniu reago. Senespera, ŝi revenis
+			al la lito kaj rekuŝiĝis, pli laca ol iam ajn. Dum multaj horoj ŝi
+			restis tiel, kuŝe, kaj fine, tro laca, ŝi ekdormis.</p>
+			<p>Vekis ŝin infana voĉo; ĝi venis el iu alia ĉambro, en la
+			sama domo, tute certe; ĝi diris: "Neniam diru nek al via patro nek al
 			via patrino, ke ni venis en la forlasitan domon. Estas malpermesite
-			ludi &#265;i tie. Se ili scius..." Alia vo&#265;eto respondis: "Mi neniam
+			ludi ĉi tie. Se ili scius..." Alia voĉeto respondis: "Mi neniam
 			diros. Nek al mia patro, nek al mia patrino. Ne havu zorgojn. Neniam
-			oni scios, ke ni venis ludi &#265;i tie."</p>
-			<p>Gerda diris: "Infanoj, &#265;u vi a&#365;das min?" &#349;ia koro batis
+			oni scios, ke ni venis ludi ĉi tie."</p>
+			<p>Gerda diris: "Infanoj, ĉu vi aŭdas min?" ŝia koro batis
 			espere.</p>
-			<p>"Iu parolis," sonis unu el la infanvo&#265;oj, sed a&#365;deble la
-			knabo ne parolis al Gerda, nur al sia kunulo. "&#265;u vi a&#365;dis?"</p>
-			<p>"Estis kvaza&#365; vo&#265;o de virino," diris la alia.</p>
-			<p>"Infanoj, venu, helpu min, mi estas mallibera, oni &#349;losis la
-			pordon, mi estas en&#349;losita, venu, mi petas, mi petegas, liberigu min,"
-			Gerda plu petegis. Sed la reago de la infanoj estis plej senkura&#285;iga.</p>
+			<p>"Iu parolis," sonis unu el la infanvoĉoj, sed aŭdeble la
+			knabo ne parolis al Gerda, nur al sia kunulo. "ĉu vi aŭdis?"</p>
+			<p>"Estis kvazaŭ voĉo de virino," diris la alia.</p>
+			<p>"Infanoj, venu, helpu min, mi estas mallibera, oni ŝlosis la
+			pordon, mi estas enŝlosita, venu, mi petas, mi petegas, liberigu min,"
+			Gerda plu petegis. Sed la reago de la infanoj estis plej senkuraĝiga.</p>
 			<p>"Venu!" kriis unu. "Estas fantomo!"</p>
-			<p>"Vi pravas," la dua respondis, "oni &#265;iam rakontis pri fantomo
-			en &#265;i tiu forlasita domo. Fantomino, oni diris, kaj la vo&#265;o estis
+			<p>"Vi pravas," la dua respondis, "oni ĉiam rakontis pri fantomo
+			en ĉi tiu forlasita domo. Fantomino, oni diris, kaj la voĉo estis
 			ina. Ni rapide forkuru!"</p>
-			<p>"Mi timas," ankora&#365; diris la unua, dum la bruoj klarigis al
-			Gerda, ke la du knaboj forkuras kaj lasas &#349;in sola, sola, sola...</p>
+			<p>"Mi timas," ankoraŭ diris la unua, dum la bruoj klarigis al
+			Gerda, ke la du knaboj forkuras kaj lasas ŝin sola, sola, sola...</p>
 		</div>
 <?php include "gerdapiedo.inc.php"; ?>

@@ -5,24 +5,6 @@ if (!isset($vojo)) { $vojo="";}
 $url=isset($_SERVER['REQUEST_URI'])?strtok($_SERVER['REQUEST_URI'],'?'):"";
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
-
-
-if (!isset($_COOKIE["metodo"])) {
-	if (isset($_GET["metodo"]) && $_GET["metodo"]=="X") {
-		$metodo="X";
-		setcookie("metodo", "X", time()+8640*3600, "/");
-	} else {
-		$metodo="U";
-	}
-} else {
-	if ($_GET["metodo"]=="U") {
-		$metodo="U";
-		setcookie("metodo", "", time()+8640*3600, "/");
-	} else {
-	$metodo="X";
-	}
-}
-ob_start("konvX");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
@@ -90,20 +72,6 @@ ob_start("konvX");
 <div id="pagxo">
 	<div id="subpagxo">
 		<div id="pagxmenuo">
-			
-			<!-- boutons pour choisir l'affichage avec les accents ou avec les x -->
-			<table class="nula">
-				<tr><td valign="top">
-					Mode d'affichage :<br />
-					<a href="<?php echo $url; ?>?metodo=U" title="Unikode">
-					<img src="<?php echo $vojo;?>style/bouton-U.gif" title="Afficher les lettres accentu&eacute;es" class="<?php if ($metodo=="U"){echo "jes";}else{echo "ne";}?>" />
-					</a>
-					<a href="<?php echo $url; ?>?metodo=X" title="X-sistemo">
-					<img src="<?php echo $vojo;?>style/bouton-X.gif" title="Afficher des x pour les accents" class="<?php if ($metodo!="U"){echo "jes";}else{echo "ne";}?>" />
-					</a>
-				</td><td valign="top">
-					<br /><a href="<?php echo $vojo;?>/helpo.php"><button>&nbsp;&nbsp;&nbsp;Aide&nbsp;&nbsp;&nbsp;</button></a>
-				</td></tr></table>
 			<?php 
 			//
 			// pour un correcteur : afficher la table avec le nombre d'eleves

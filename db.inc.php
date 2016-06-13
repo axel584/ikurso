@@ -37,7 +37,7 @@ function kreiPersonon($enirnomo,$pasvorto,$retadreso) {
 // ndtago : tago de la naskigxdato (1-->31) (ekz. : 11)
 // ndmonato : monato de la naskigxdato (1-->12) (ekz. : 5 (por majo))
 // ndjaro : jaro de la naskigxdato per 4 ciferoj (ekz. : 1978)
-function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$ndtago,$ndmonato,$ndjaro,$kialo,$sistemo,$stopInfo) {
+function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$ndtago,$ndmonato,$ndjaro,$kialo,$stopInfo) {
     global $bdd;
     if (($ndjaro=="")||($ndmonato=="")||($ndtago=="")) {
         $naskigxdato=NULL;    
@@ -55,12 +55,11 @@ function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$p
      $query .= "lando=:lando,";
      $query .= "naskigxdato=:naskigxdato,"; // $ndjaro-$ndmonato-$ndtago
      $query .= "kialo=:kialo,";
-     $query .= "sistemo=:sistemo,";
      $query .= "stop_info=:stopInfo ";
      $query .= "where id=:id";
      try {
          $requete = $bdd->prepare($query);
-         $requete->execute(array(':sekso' => $sekso, ':familinomo' => $familinomo,':personnomo'=>$personnomo,':adreso1'=>$adreso1,':adreso2'=>$adreso2,':posxtkodo'=>$posxtkodo,':urbo'=>$urbo,':lando'=>$lando,':naskigxdato'=>$naskigxdato,':kialo'=>$kialo,':sistemo'=>$sistemo,':stopInfo'=>$stopInfo,':id'=>$id));
+         $requete->execute(array(':sekso' => $sekso, ':familinomo' => $familinomo,':personnomo'=>$personnomo,':adreso1'=>$adreso1,':adreso2'=>$adreso2,':posxtkodo'=>$posxtkodo,':urbo'=>$urbo,':lando'=>$lando,':naskigxdato'=>$naskigxdato,':kialo'=>$kialo,':stopInfo'=>$stopInfo,':id'=>$id));
      }
     catch (Exception $e)
     {

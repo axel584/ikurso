@@ -20,84 +20,48 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 		<td width="15%">1. amiko</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.1' value='1. amiko:'>
-			<?php if (($sist=="U")&&($metodo=="U")) { ?>
-				<input type='text' size='10' name='res_ekz10.1' onkeyup='xAlUtf8(this)' value="">
-			<?php } else { ?>
-				<input type='text' size='10' name='res_ekz10.1' value="">
-			<?php } ?>
+			<input type='text' size='10' name='res_ekz10.1' onkeyup='xAlUtf8(this)' value="">
 		</td>
 		<td width="15%">2. butiko</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.2' value='2. butiko:'>
-			<?php if (($sist=="U")&&($metodo=="U")) { ?>
-				<input type='text' size='10' name='res_ekz10.2' onkeyup='xAlUtf8(this)' value=""></td>
-			<?php } else { ?>
-				<input type='text' size='10' name='res_ekz10.2' value=""></td>
-			<?php } ?>
+			<input type='text' size='10' name='res_ekz10.2' onkeyup='xAlUtf8(this)' value=""></td>
 		<td width="15%">3. minuto</td>
 			<td width="15%">
 			<input type='hidden' name='dem_ekz10.3' value='3. minuto:'>
-			<?php if (($sist=="U")&&($metodo=="U")) { ?>
-				<input type='text' size='10' name='res_ekz10.3' onkeyup='xAlUtf8(this)' value="">
-			<?php } else { ?>
-				<input type='text' size='10' name='res_ekz10.3' value="">
-			<?php } ?>
+			<input type='text' size='10' name='res_ekz10.3' onkeyup='xAlUtf8(this)' value="">
 		</td>
 	</tr>
 	<tr>
 		<td width="15%">4. man&#285;anta</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.4' value='4. man&#285;anta'>
-			<?php if (($sist=="U")&&($metodo=="U")) { ?>
-				<input type='text' size='10' name='res_ekz10.4' onkeyup='xAlUtf8(this)' value="">
-			<?php } else { ?>
-				<input type='text' size='10' name='res_ekz10.4' value="">
-			<?php } ?>
+			<input type='text' size='10' name='res_ekz10.4' onkeyup='xAlUtf8(this)' value="">
 		</td>
 		<td width="15%">5. nokto</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.5' value='5. nokto:'>
-			<?php if (($sist=="U")&&($metodo=="U")) { ?>
-				<input type='text' size='10' name='res_ekz10.5' onkeyup='xAlUtf8(this)' value="">
-			<?php } else { ?>
-				<input type='text' size='10' name='res_ekz10.5' value="">
-			<?php } ?>
+			<input type='text' size='10' name='res_ekz10.5' onkeyup='xAlUtf8(this)' value="">
 		</td>
 		<td width="15%">6. kiu</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.6' value='6. kiu:'>
-			<?php if (($sist=="U")&&($metodo=="U")) { ?>
-				<input type='text' size='10' name='res_ekz10.6' onkeyup='xAlUtf8(this)' value="">
-			<?php } else { ?>
-				<input type='text' size='10' name='res_ekz10.6' value="">
-			<?php } ?>
+			<input type='text' size='10' name='res_ekz10.6' onkeyup='xAlUtf8(this)' value="">
 	</tr>
 	<tr>
 		<td width="15%">7. multa</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.7' value='7. multa'>
-			<?php if (($sist=="U")&&($metodo=="U")) { ?>
-				<input type='text' size='10' name='res_ekz10.7' onkeyup='xAlUtf8(this)' value="">
-			<?php } else { ?>
-				<input type='text' size='10' name='res_ekz10.7' value="">
-			<?php } ?>
+			<input type='text' size='10' name='res_ekz10.7' onkeyup='xAlUtf8(this)' value="">
 		</td>
 		<td width="15%">8. babilema</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.8' value='8. babilema:'>
-			<?php if (($sist=="U")&&($metodo=="U")) { ?>
-				<input type='text' size='10' name='res_ekz10.8' onkeyup='xAlUtf8(this)' value="">
-			<?php } else { ?>
-				<input type='text' size='10' name='res_ekz10.8' value="">
-			<?php } ?>
+			<input type='text' size='10' name='res_ekz10.8' onkeyup='xAlUtf8(this)' value="">
 		<td width="15%">9. legita</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.9' value='9. legita:'>
-			<?php if (($sist=="U")&&($metodo=="U")) { ?>
-				<input type='text' size='10' name='res_ekz10.9' onkeyup='xAlUtf8(this)' value="">
-			<?php } else { ?>
-				<input type='text' size='10' name='res_ekz10.9' value="">
-			<?php } ?>
+			<input type='text' size='10' name='res_ekz10.9' onkeyup='xAlUtf8(this)' value="">
 	</tr>
 </table>
 </div>
@@ -190,11 +154,7 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 		<td width="15%">26. anta&#365;</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.26' value='26. anta&#365;:'>
-			<?php if (($sist=="U")&&($metodo=="U")) { ?>
-				<input type='text' size='10' name='res_ekz10.26' onkeyup='xAlUtf8(this)' value="">
-			<?php } else { ?>
-				<input type='text' size='10' name='res_ekz10.26' value="">
-			<?php } ?>
+			<input type='text' size='10' name='res_ekz10.26' onkeyup='xAlUtf8(this)' value="">
 		<td width="15%">27. amo</td>
 		<td width="15%">
 			<input type='hidden' name='dem_ekz10.27' value='27. amo:'>

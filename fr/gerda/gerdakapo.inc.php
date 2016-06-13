@@ -18,13 +18,11 @@ header("Last-Modified: ".gmdate("D,d M Y H:i:s")." GMT");
 header("Cache-Control: no-store,no-cache, must-revalidate"); // HTTP/1.1
 header("Pragma: no-cache"); // HTTP/1.0
 malfermiDatumbazon();
-$metodo=isset($_GET["metodo"])?$_GET["metodo"]:"U";
 $temo=isset($_GET["temo"])?$_GET["temo"]:"";
 if ($temo=="") {$temo="intro";}
 
 // tiu funkcio konstruas la liston de la tekstoj "lasu min..."
 function konstruiLasuMenuon() {
-	global $metodo;
 	$tlasu = array (
 		"01" => "&nbsp;&nbsp;1.&nbsp;&nbsp;Izabela",
 		"02" => "&nbsp;&nbsp;2.&nbsp;&nbsp;Stranga strangulo",
@@ -67,13 +65,10 @@ function konstruiLasuMenuon() {
  * rappel pour les élèves non identifiés
 */
 function atentigo() {
-	global $metodo;
-	if ($metodo!="X") {
-		echo "<p class='eo rimarko'>Por akiri supersignon vi uzu la x-stilon, ekzemple sx i&#285;os &#349;</p>\n";
-	}
+	echo "<p class='eo rimarko'>Por akiri supersignon vi uzu la x-stilon, ekzemple sx i&#285;os &#349;</p>\n";
 }
 function ekzerco($sist, $nbLig) {
-	global $demandoj, $memorkurso, $persono_id, $numcxap, $metodo;
+	global $demandoj, $memorkurso, $persono_id, $numcxap;
 	//
 	// sist = sistemo uzata en la ekzerco. Se =U, ni uzas la auxtomatan anstatauxigon de x per cxapelo
 	// nbLig = nombro da linioj por cxiuj respondo. Se = 1, ni uzas <input>, ne pli da, ni uzas <textarea>
@@ -83,9 +78,7 @@ function ekzerco($sist, $nbLig) {
 		echo "\t<p><input type='hidden' name='dem_ekz".$k."' value='".$k." ".$v."'>\n";
 		if ($nbLig==1) {
 			echo "\t<input type='text' size='65' name='res_ekz".$numcxap."_".$k."'";
-			if (($sist=="U")&&($metodo=="U")) {
-				echo " onkeyup='xAlUtf8(this)' ";
-			} 
+			echo " onkeyup='xAlUtf8(this)' ";
 			echo "value=\"";
 			$var="res_ekz".$numcxap."_".$k;
 			if (isset($memorkurso[$var])){
@@ -96,7 +89,7 @@ function ekzerco($sist, $nbLig) {
 		else
 		{
 			echo "\t<textarea cols='65' rows='".$nbLig."' name='res_ekz".$numcxap."_".$k."'";
-			if (($sist=="U")&&($metodo=="U")) {echo " onkeyup='xAlUtf8(this)' ";} 
+			echo " onkeyup='xAlUtf8(this)' ";
 			echo ">";
 			$var="res_ekz".$numcxap."_".$k;
 			if (isset($memorkurso[$var])){
@@ -137,7 +130,7 @@ function elektEkzerco() {
 }
 
 function plenigEkzerco($sist) {
-	global $demandoj, $memorkurso, $numcxap, $metodo;
+	global $demandoj, $memorkurso, $numcxap;
 	foreach ($demandoj as $k => $v) {
 		$n=1;$text="";
 		echo "<p>".$k.". ";
@@ -154,7 +147,7 @@ function plenigEkzerco($sist) {
 				$text="";
 			} elseif ($v[$i]=="]") {
 				echo $text."\"";
-				if (($sist=="U")&&($metodo=="U")) {echo " onkeyup='xAlUtf8(this)' ";}
+				echo " onkeyup='xAlUtf8(this)' ";
 				echo ">";
 				$text="";
 			} else {
@@ -287,7 +280,6 @@ function savData(lien) {
 					if ($numcxap=="ir") {$numcxap=$_GET["lec"];}
 					// ligo al la rakonto
 					$ligo="cxap".$numcxap.".php";
-					if ($metodo=="X") { $ligo.="?metodo=X";}
 				   if ($parto==""){
 				   	echo "<li class='aktiva'><a href='".$ligo."'>";
 				   } elseif ($parto=="ek") {
@@ -299,7 +291,6 @@ function savData(lien) {
 					
 					// ligo al la gramatikaj klarigoj
 					$ligo="cxap".$numcxap."gr.php";
-					if ($metodo=="X") { $ligo.="?metodo=X"; }
 		
 					if ($parto=="gr"){
 						echo "<li class='aktiva'><a href='".$ligo."'>";
@@ -312,7 +303,6 @@ function savData(lien) {
 					
 					// ligo al la vortlisto de la cxapitro
 					$ligo="cxap".$numcxap."vl.php";
-					if ($metodo=="X") { $ligo.="?metodo=X"; }
 
 					if ($parto=="vl") {
 						echo "<li class='aktiva'><a href='".$ligo."'>";
@@ -329,12 +319,10 @@ function savData(lien) {
 					} else {
 				   	echo "<li><a href='cxap".$numcxap."ek.php";
 				   }
-				   	if ($metodo=="X") { echo "?metodo=X"; }
 				   echo "'>Ekzercoj</a></li>\n";
 				
 				   // ligo al la respondaj cxapitroj de "lasu min paroli plu"
 					$ligo="lasu".$numcxap.".php";
-					if ($metodo=="X") { $ligo.="?metodo=X"; }
 
 				   if ($parto=="lasu") {
 				   	echo "<li class='aktiva'><a href='".$ligo."'>";

@@ -4,7 +4,6 @@ $persono_id=$_SESSION["persono_id"];
 $form_sekso=isset($_POST["sekso"])?$_POST["sekso"]:"";
 $form_familinomo=$_POST["familinomo"];
 $form_personnomo=$_POST["personnomo"];
-$form_sistemo=$_POST["sistemo"];
 $form_adreso1=$_POST["adreso1"];
 $form_adreso2=$_POST["adreso2"];
 $form_posxtkodo=$_POST["posxtkodo"];
@@ -49,16 +48,13 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=4");} else {
 	if ($persono['kialo']!=$form_kialo) {
 		$teksto.="kialo : malnova:".$persono['kialo']." - nova : ".$form_kialo."\n";
 	}
-	if ($persono['sistemo']!=$form_sistemo) {
-		$teksto.="sistemo: malnova:".$persono['sistemo']." - nova : ".$form_sistemo."\n";
-	}
 	if ($persono['stop_info']!=$form_stopInfo) {
 		$teksto.="stopInfo: malnova:".$persono['stop_info']." - nova : ".$form_stopInfo."\n";
 	}
 	if ($teksto!=""){
 		protokolo($persono_id,"UPDATE PERSO",$teksto);
 	}
-  modifiPersonon($persono_id,$form_sekso,$form_familinomo,$form_personnomo,$form_adreso1,$form_adreso2,$form_posxtkodo,$form_urbo,$form_lando,$form_naskigxdato_tago,$form_naskigxdato_monato,$form_naskigxdato_jaro,$form_kialo,$form_sistemo,$form_stopInfo);
+  modifiPersonon($persono_id,$form_sekso,$form_familinomo,$form_personnomo,$form_adreso1,$form_adreso2,$form_posxtkodo,$form_urbo,$form_lando,$form_naskigxdato_tago,$form_naskigxdato_monato,$form_naskigxdato_jaro,$form_kialo,$form_stopInfo);
   switch ($rapidvojo) {
 	case "1":
 		header("Location:index.php");

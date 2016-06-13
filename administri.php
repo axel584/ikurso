@@ -550,10 +550,9 @@ include "adminkapo.inc.php";
 							<td nowrap><input type="text" name="retadreso" size="25" value="<?php echo $celpersono["retadreso"]; ?>"></td>
 						</tr>
 						<tr>
-							<td colspan="2" class="col1">Préférence pour les messages :</td>
+							<td colspan="2" class="col1">&nbsp;stop-rappel</td>
 							<td nowrap>
-								<input type="radio" name="sistemo" value="U" <?php if ($celpersono["sistemo"]=='U'){echo "checked";}?>>&nbsp;lettres accentuées <br>
-								<input type="radio" name="sistemo" value="X" <?php if ($celpersono["sistemo"]=='X'){echo "checked";}?>>&nbsp;système en X
+								&nbsp;<i>(en construction)</i>
 							</td>
 							<td class="col1">stop-mailing :</td>
 							<td><input type="checkbox" name="stopInfo" <?php if ($celpersono["stop_info"]=="J") {echo "checked";}?>>

@@ -22,26 +22,7 @@ function checkEmail($email)
      return (TRUE);
 }
 
-// tiu funkcio konvertas la unikodan tekston al teksto en X-sistemo
-function konvX($buff) {
-	global $metodo;
-	if ($metodo=="X") {
-		$utf8 = array(
-			"&#264;" => "Cx",	"&#284;" => "Gx",	"&#292;" => "Hx",
-			"&#308;" => "Jx",	"&#348;" => "Sx",	"&#364;" => "Ux",
-			"&#265;" => "cx",	"&#285;" => "gx",	"&#293;" => "hx",
-			"&#309;" => "jx",	"&#349;" => "sx",	"&#365;" => "ux",
-			"Ĉ" => "Cx",		"Ĝ" => "Gx",		"Ĥ" => "Hx",
-			"Ĵ" => "Jx",		"Ŝ" => "Sx",		"Ŭ" => "Ux",
-			"ĉ" => "cx",		"ĝ" => "gx",		"ĥ" => "hx",
-			"ĵ" => "jx",		"ŝ" => "sx",		"ŭ" => "ux"
-			);
-		foreach($utf8 as $key => $val) {
-		$buff=str_replace($key,$val,$buff);
-		}
-	}
-	return($buff);
-}
+
 function konvU($buff) {
 	$utf8 = array(
 			"&#264;" => "\u0108",	"&#284;" => "\u011c",	"&#292;" => "\u0124",

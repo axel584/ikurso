@@ -65,16 +65,6 @@ include "pagxkapo.inc.php";
 				<a href="reago.php">contacter les administrateurs du cours</a>.)</td>
 			</tr>
 			<tr>
-				<td class="col1">Préférence pour les messages :</td>
-				<td>
-					<?php $sistemo=$persono['sistemo']; ?>
-					lettres accentuées<input type="radio" name="sistemo" value="U" checked>
-					<?php echo "&nbsp;&nbsp;&nbsp;système en X "; ?><input type="radio" name="sistemo" value="X" <?php if ($sistemo=="X"){echo "checked";}?>>
-					<span class="rimarko"><br>(<a href="#" 
-					onClick="window.open('tipohelpo.php?rajto=<?=$persono->rajtoj['kodo'];?>&retadreso=<?=$persono['retadreso'];?>','helpo','resizable=yes,scrollbars=yes,location=no,top=50,left=50,width=550,height=600');">Quel système choisir </a>?)</span>
-				</td>
-			</tr>
-			<tr>
 				<td class="col1">Date de naissance :</td>
 				<td>
 					<?php 

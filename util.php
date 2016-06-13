@@ -107,8 +107,6 @@ else {
 	$persono  = apartigiPersonon($persono_id);
 	$rajto=$persono["rajtoj"];
 	$enirnomo=$persono["enirnomo"];
-	$lingvo=$persono["lingvo"];
-	$lgv=$lingvo;	// langue de l'interface = par defaut la langue des donnees
 }
 
 

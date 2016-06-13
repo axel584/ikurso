@@ -243,7 +243,7 @@ if ($jamaligxi=="jes") {
 		$contents=str_replace("##STUDANTO_ID##",$enirnomo,$contents);
 		$contents=str_replace("##PASVORTO##",$pasvorto,$contents);		
 		$mesagxkapo="MIME-Version: 1.0\n";
-		$fonto=konvX($fonto);
+		//$fonto=konvX($fonto);
 		$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
 		$mesagxkapo.="From: ikurso <ikurso@esperanto-jeunes.org>\n";
 		$mesagxkapo.="Return-Path: <ikurso@esperanto-jeunes.org>\n";
@@ -342,7 +342,7 @@ if ($jamaligxi=="jes") {
 			$contents=str_replace("##STUDANTO_ID##",$enirnomo,$contents);
 			$contents=str_replace("##PASVORTO##",$pasvorto,$contents);		
 			$mesagxkapo="MIME-Version: 1.0\n";
-			$fonto=konvX($fonto);
+			//$fonto=konvX($fonto);
 			$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
 			$mesagxkapo.="From: ikurso <ikurso@esperanto-jeunes.org>\n";
 			$mesagxkapo.="Return-Path: <ikurso@esperanto-jeunes.org>\n";
@@ -378,10 +378,10 @@ if ($kurso!="KE") {
 		$korektantsistemo=$row2["sistemo"];
 		$mesagxkapo="MIME-Version: 1.0\n";
 			// si l'eleve ou le correcteur utilise le système "X", on convertit les accents
-			if (($korektantsistemo=="X") || ($persono["sistemo"]=="X")){
-				$metodo="X";
-				$fonto=konvX($fonto);
-			}
+			// if (($korektantsistemo=="X") || ($persono["sistemo"]=="X")){
+			// 	$metodo="X";
+			// 	$fonto=konvX($fonto);
+			// }
 		$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
 		$mesagxkapo.="From: ikurso <ikurso@esperanto-jeunes.org>\n";
 		$mesagxkapo.="Return-Path: <ikurso@esperanto-jeunes.org>\n";

@@ -4,8 +4,6 @@ if (!isset($vojo)) { $vojo="";}
 $url=$_SERVER['REQUEST_URI'];
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
-$metodo=isset($_GET["metodo"])?$_GET["metodo"]:"U";
-ob_start("konvX");
 echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
 ?>
 <html>

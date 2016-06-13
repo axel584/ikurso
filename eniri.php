@@ -19,6 +19,7 @@ if ($persono_id=="0") {
 	$persono = apartigiPersonon($persono_id);
 	$_SESSION["persono_id"]=$persono["id"];
 	protokolo($persono["id"],"ENIRO","$enirnomo eniris");
+	updateLastEniro($persono["id"]);
 	//phpbb_login($persono["id"]);
 	$lasturl=$_SESSION["lasturl"];
 	if ($lasturl!=""){

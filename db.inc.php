@@ -363,4 +363,13 @@ function protokolo($persono_id,$kategorio,$teksto) {
    $query = "insert into protokolo(id,persono_id,horo,ip,kategorio,teksto) values ('','$persono_id',now(),'$ip','$kategorio','$teksto')";
    $bdd->exec($query);
 }
+
+function updateLastEniro($persono_id) {
+    global $bdd;
+    if ($persono_id!=null && $persono_id!=0) {
+        $query = "update personoj set lasteniro=now() where id=".$persono_id;
+        $bdd->exec($query);
+    }
+}
+
 ?>

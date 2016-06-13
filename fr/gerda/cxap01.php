@@ -1,6 +1,8 @@
 <?php 
 $titolo="1 (unu)";
+$gxisdatigDato="2016-06-13";
 include "gerdakapo.inc.php";
+include "gerdasono.inc.php";
 ?>
 			<div class="rakonto">
 				<img src="bildoj/gerda01-2.gif">

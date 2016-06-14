@@ -209,6 +209,7 @@ if ($jamaligxi=="jes") {
 				// ER 05.10.2015 : correction pour passage en PHP 5.4
 				//session_register("aligxilo");
 				$_SESSION['aligxilo']=$aligxilo;
+				$_SESSION['memorkurso']=$memorkurso;
 				header("Location:".$_POST["010_adreso"]."?erarkodo=1");
 				exit(0);
 			} 
@@ -282,18 +283,21 @@ if ($jamaligxi=="jes") {
 		// ER 05.10.2015 : correction pour passage en PHP 5.4
 		//session_register("aligxilo");
 		$_SESSION['aligxilo']=$aligxilo;
+		$_SESSION['memorkurso']=$memorkurso;
 		header("Location:".$_POST["010_adreso"]."?erarkodo=3");
 		exit(0);
 	} elseif (($retadreso=="") || ($enirnomo=="") || ($pasvorto=="")) {
 		// ER 05.10.2015 : correction pour passage en PHP 5.4
 		//session_register("aligxilo");
 		$_SESSION['aligxilo']=$aligxilo;
+		$_SESSION['memorkurso']=$memorkurso;
 		header("Location:".$_POST["010_adreso"]."?erarkodo=2");
 		exit(0);
 	} elseif ((checkEmail($retadreso))==FALSE) {
 		// ER 05.10.2015 : correction pour passage en PHP 5.4
 		//session_register("aligxilo");
 		$_SESSION['aligxilo']=$aligxilo;
+		$_SESSION['memorkurso']=$memorkurso;
 		header("Location:".$_POST["010_adreso"]."?erarkodo=6");
 		exit(0);
 	}
@@ -307,6 +311,7 @@ if ($jamaligxi=="jes") {
 				// ER 05.10.2015 : correction pour passage en PHP 5.4
 				//session_register("aligxilo");
 				$_SESSION['aligxilo']=$aligxilo;
+				$_SESSION['memorkurso']=$memorkurso;
 				header("Location:".$_POST["010_adreso"]."?erarkodo=7");
 				exit(0);
 			} 

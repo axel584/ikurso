@@ -104,13 +104,6 @@ if ($erarkodo=="17") echo "<div class='atentigo'><p class='eraro'>Attestation in
 				</tr>					
 				<?php }?>
 				<tr>
-					<td class="col1">Préférence pour les messages :</td>
-					<td>
-						<?php if ($persono['sistemo']=='U'){echo "lettres accentuées";}
-						else {echo "système en X";}?>
-					</td>
-				</tr>
-				<tr>
 					<td class="col1" valign="top">Commentaire :</td>
 					<td valign="top"><?php echo stripSlashes(nl2br($persono['kialo']));?></td>
 				</tr>

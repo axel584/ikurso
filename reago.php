@@ -37,8 +37,6 @@ include "pagxkapo.inc.php";
 						<?php } ?>
 						 Votre réponse y est déjà peut-être !
 						<?php if ($persono["rajtoj"]) {	?>
-						<p class="grava">Et si votre question est d'ordre général, le 
-						<a href="http://ikurso.esperanto-jeunes.org/forum/index.php">forum</a> pourra aussi vous être utile.</p>
 						<?php } ?>
 						<br>
 					<?php } ?>

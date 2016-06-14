@@ -53,11 +53,7 @@
 					
 					<h4>Utilisation des accents dans le cours</h4>
 					<p>
-					Comme vous pourrez le constater, les textes en espéranto sont écrits avec les accents. 
-					Cela ne pose généralement aucun problème, mais si cela était le cas, il est possible
-					de visualiser les textes avec la méthode "en -X".
-					Il suffit pour cela de cliquer sur un des deux petits boutons se trouvant en haut à gauche de l’écran.
-					</p>
+					Comme vous pourrez le constater, les textes en espéranto sont écrits avec les accents. </p>
 					<h4>Utilisation des accents dans les messages</h3>
 					<p>
 					Quel que soit le système utilisé pour l’affichage des pages, il est possible d’utiliser deux systèmes

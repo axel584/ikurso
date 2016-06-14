@@ -1,17 +1,17 @@
 <?php
-$titolo="Pr&eacute;ambule";
-$gxisdatigDato="2015-06-06";
+$titolo="Préambule";
+$gxisdatigDato="2015-06-14";
 include "gerdakapo.inc.php";
 ?>
 <div class="klarigo">
 	
 	<h3><i>Lasu min paroli plu !</i> : un recueil de textes de lecture</h3>
 	
-	<p>Claude Piron a r&eacute;alis&eacute; un recueil de courtes histoires sp&eacute;cialement
-	adapt&eacute; pour les &eacute;tudiants du cours 
+	<p>Claude Piron a réalisé un recueil de courtes histoires spécialement
+	adapté pour les étudiants du cours 
 	<a href="index.php"><i>Gerda malaperis</i></a>. Nous remercions
 	chaleureusement Claude Piron pour son aimable permission de reproduire
-	ce texte ici-m&ecirc;me.</p>
+	ce texte ici-même.</p>
 
 	<ul class="enhavo">
 		<li><a href="#avant-propos">Avant-propos</a></li>
@@ -25,11 +25,11 @@ include "gerdakapo.inc.php";
 	<p>Pour atteindre ce but il est conseillé à l’élève qui vient d’étudier un chapitre de <i>Gerda malaperis!</i> de lire immédiatement le texte de même numéro de ce recueil. Il connaîtra tout ce qui est nécessaire, au niveau grammatical et lexical, pour comprendre ce texte. Par exemple, s’il a appris la matière des chapitres 1 à 7 inclus, il ne rencontrera dans le texte numéro 7 rien qu’il n’ait déjà étudié antérieurement. Ou plutôt il n’y rencontrera aucune nouveauté grammaticale ni aucune racine nouvelle mais il sera confronté à des mots nouveaux. La nécessité d’en deviner le sens, sur la base des éléments déjà acquis, l’initiera progressivement au système de dérivation et de 
 	composition de l’espéranto.</p>
 	<p>Affermir les connaissances acquises, tel est le second but de ce recueil. La totalité du matériau linguistique de <i>Gerda malaperis!</i> y est réutilisée et les racines qui n’apparaissent pas assez souvent dans le roman y sont répétées suffisamment pour qu’elles se fixent dans la mémoire de l’élève avec un minimum d’effort de sa part. L’effet de fixation se trouvera ici renforcé par le fait que les éléments en question sont employés dans des textes dont l’atmosphère et les thèmes sont tout autres que dans le roman.</p>
-	<p>Ce recueil se compose pour l’essentiel de monologues. L’élève peut ainsi s’exercer seul&nbsp;: en lisant le texte à haute voix il utilisera une langue parlée authentique et il pourra s’identifier au personnage tout comme le ferait un acteur. Ce type d’identification est un des ressorts psychologiques connus pour favoriser l’assimilation d’une langue.</p>
+	<p>Ce recueil se compose pour l’essentiel de monologues. L’élève peut ainsi s’exercer seul : en lisant le texte à haute voix il utilisera une langue parlée authentique et il pourra s’identifier au personnage tout comme le ferait un acteur. Ce type d’identification est un des ressorts psychologiques connus pour favoriser l’assimilation d’une langue.</p>
 	<p>Entre les numéros 13 et 24, le recueil présente deux textes en parallèle à chaque chapitre de <i>Gerda malaperis!</i>. L’élève aura loisir de choisir le morceau qui lui plaît le mieux au premier coup d’œil, à moins qu’il ne veuille lire les deux.</p>
 	<p>Si, grâce à ces exemples d’espéranto parlé, rédigés avec un vocabulaire limité, l’élève arrive à prendre conscience des possibilités multiples et diverses que lui offrent ces éléments minimaux de la langue pour s’exprimer, alors le but principal de cet ouvrage aura été atteint.</p>
 
-	<p>Claude Piron (traduction&nbsp;MB)</p>
+	<p>Claude Piron (traduction MB)</p>
 
 	<h3 id="antauxparolo">Préambule</h3>
 
@@ -41,13 +41,7 @@ include "gerdakapo.inc.php";
 	<p>Se, dank' al ĉi tiuj ekzemploj de parola Esperanto, verkitaj kun malgranda vortprovizo, la lernanto konsciiĝos, kiel multe kaj diverse minimumaj lingvo-elementoj ebligas esprimi sin, la 	ĉefa celo de ĉi tiu verko estos atingita.</p>
 	<p>Claude Piron</p>
 	
-	<h3 id="enhavo">Table des mati&egrave;res / Enhavo</h3>
-
-		<p>Les textes de ce recueil utilisent le codage Unicode (UTF8) permettant de restituer correctement les lettres accentuées de l’espéranto. Si votre système ne permet pas de restituer correctement ces caractères, vous pouvez visualiser ces textes avec la convention qui consiste à remplacer l’accent des lettres accentuées par un "x" qui suit la lettre en question. Dans ce cas, vous verrez donc s’afficher : </p>
-
-		<p class="meze">Cx, Gx, Hx, Jx, Sx, ux, cx, gx, hx, jx, sx, ux</p>
-		<p>au lieu de&nbsp;:</p>
-		<p class="meze"><img src="../cge/cxapel.jpg" align="top"></p>
+	<h3 id="enhavo">Table des matières / Enhavo</h3>
 
 		<ul>
 			<li><a href='lasu01.php'>1. Izabela</a></li>

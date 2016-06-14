@@ -307,13 +307,6 @@ include "pagxkapo.inc.php";
 						Pour l’envoi de vos messages, si vous n’avez pas la possibilité de taper vous-même 
 						les lettres accentuées, vous pourrez utiliser la méthode en -x ou en -h.</p>
 						</p></blockquote>
-						<blockquote><p>		
-						Si un de vos élèves ne parvient pas à visualiser correctement 
-						les messages avec les accents ou à répondre à de tels messages,
-						conseillez-lui de lire tout d’abord les pages d'aide de ce site. En dernier recours,
-						il pourra indiquer dans ses données personnelles qu’il souhaite que les 
-						exercices soient envoyés en utilisant la méthode en -x.
-						</p></blockquote>
 					
 							
 						<h3>Comment se connecter rapidement au site ikurso sans avoir besoin de taper son mot de 

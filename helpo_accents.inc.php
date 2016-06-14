@@ -1,15 +1,6 @@
 				  	<h3 id="accents">Les lettres accentuées : polices de caractères et affichage à l'écran</h3>
 				  	
-				  	<h4>Affichage des lettres accentuées dans ce site</h4>
-				  	
-				  	<p>
-					Dans ce site, les textes en espéranto sont écrits avec les accents, et cela fonctionne généralement bien.
-					Si toutefois, vous ne voyez pas correctement les lettres accentuées spécifiques à l'espéranto (ou si vous
-					voyez des petits carrés à la place de ces lettres), vous pourrez utiliser 
-					la «<a href="#methodes">méthode en «x»</a>.<br>
-					Pour cela, il suffit de cliquer sur l'un des deux boutons en haut à gauche de chaque page du site.
-				  	</p>
-				  			  	
+			  			  	
 				  	<h4 id="methodes">Les différentes méthodes pour représenter les accents</h4>
 				  	<p>
 					Lorsque les lettres accentuées ne sont pas disponibles, on peut avoir recours à plusieurs méthodes pour 
@@ -45,10 +36,10 @@
 				  	
 				  	<p>Les versions récentes de Windows (depuis Windows XP) contiennent déjà toutes les polices nécessaires. 
 				  	C'est le cas, entre autres, de Arial, Bookman Old Style, Garamond, Georgia, Tahoma, Times New Roman, Verdana,
-				  	Courrier New. La liste n'est pas exhaustives et d'autres polices, installées avec Microsoft Office 2007,
-				  	Windows Vista ou Windows 7, permettent aussi d'afficher les caractères accentuées en espéranto.</p>
+				  	Courrier New. La liste n'est pas exhaustives et d'autres polices, installées avec Microsoft Office depuis l'édition 2007,
+				  	Windows Vista, Windows 7 et les suivantes, permettent aussi d'afficher les caractères accentuées en espéranto.</p>
 				  	 
-					<p>Le choix de la police utilisée par défaut par le navigateur Interneta également une grande importance. 
+					<p>Le choix de la police utilisée par défaut par le navigateur Internet a également une grande importance. 
 					Dans les menus des préférences de votre navigateur Internet, il est possible de choisir entre diverses 
 					polices. Les polices précédemment cités sont adéquates comme police par défaut, de même que «Courrier New» 
 					comme police à taille fixe.</p>

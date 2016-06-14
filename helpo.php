@@ -76,8 +76,6 @@ include "pagxkapo.inc.php";
 				Il existe sous forme d'un fichier PDF à télécharger et d'une série de questions-réponses :</p>
 				<p><a href="helppagxo.php">>Voir le guide du correcteur</a>.</p>
 				
-				<p>Un forum spécial existe pour les correcteurs : n'hésitez pas à le lire et à poser toutes les questions
-				concernant notre activité de correction.</p>
 					
 		<?php } ?>
 		
@@ -126,20 +124,20 @@ include "pagxkapo.inc.php";
 			    <h4>Utilisation du clavier :</h4>
 			    <ul>
 			      <li><strong>Pour les lettres avec un accent circonflexe </strong>, comme le 
-			      <strong>c</strong> : tapez <em>AltGr+c</em>, <em>AltGr+g</em>, <em>
+			      <strong>ĉ</strong> : tapez <em>AltGr+c</em>, <em>AltGr+g</em>, <em>
 			      AltGr+h</em>, <em>AltGr+j</em>, et <em>AltGr+s</em>. Pour les majuscules 
 			      tapez <em>Shift+AltGr+Lettre</em></li>
-			      <li><strong>Pour les lettres surmontées d’une brève</strong>, comme le <strong>u</strong> : 
+			      <li><strong>Pour les lettres surmontées d’une brève</strong>, comme le <strong>ŭ</strong> : 
 			      tapez <em>AltGr+u</em>. Pour les majuscules tapez <em>Shift+AltGr+u</em></li>
 			      <li>Le fonctionnement des autres touches n’est pas modifié.</li>
 			    </ul>
 			    <h4>Exemples :</h4>
 			    <ul>
-			      <li><strong>cevalo</strong><strong>: </strong>
+			      <li><strong>ĉevalo</strong><strong>: </strong>
 			      <strong><em>AltGr-shift-c</em> <strong>e v a l o</strong></li>
-			      <li><strong>mangi</strong> :
+			      <li><strong>manĝi</strong> :
 			     <strong>m a n </strong><em>AltGr-g</em> <strong>i</strong></li>
-			      <li><strong>ankau</strong> : <strong>
+			      <li><strong>ankaŭ</strong> : <strong>
 			      a n k a</strong> <em>AltGr-u</em></li>
 			    </ul>				   
 			<?php } ?>
@@ -151,11 +149,7 @@ include "pagxkapo.inc.php";
 					<li><a href="http://www.kurso.com.br/bazo/elshuto.html?fr">
 						<em>Kurso de Esperanto</em> pour Windows, Linux et Mac</a></li>
 					<li>Tout le <a href="http://ikurso.esperanto-jeunes.org/doc/DLEK-U.zip">
-					<em>Cours en dix leçons</em></a> (avec les lettres accentuées), 
-					pour une utilisation hors ligne</li>
-					<li>Tout le <a href="http://ikurso.esperanto-jeunes.org/doc/DLEK-X.zip">
-					<em>Cours en dix leçons</em></a> (système en -x pour les accents), 
-					pour une utilisation hors ligne</li>
+					<em>Cours en dix leçons</em></a>, pour une utilisation hors ligne</li>
 					<li>Tout le <a href="http://ikurso.esperanto-jeunes.org/doc/gerda.zip">
 					cours <em>Gerda malaperis</em></a> 
 					pour une utilisation hors ligne<br>

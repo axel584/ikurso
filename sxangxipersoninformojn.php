@@ -19,6 +19,7 @@ include "pagxkapo.inc.php";
 		<div id="kadro">
 		<form name="inscription" action="sxangxipersoninformojn2.php" method="POST">
 		<?php if (isset($rapidvojo)) { echo "<input type=\"hidden\" name=\"rapidvojo\" value=\"$rapidvojo\">";} ?>
+		<input type="hidden" name="kurso" value="<?=$persono['kurso'];?>">
 		<table class="perso">
 		<tbody>
 			<tr>

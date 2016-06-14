@@ -13,6 +13,7 @@ $form_naskigxdato_tago=$_POST["naskigxdato_tago"];
 $form_naskigxdato_monato=$_POST["naskigxdato_monato"];
 $form_naskigxdato_jaro=$_POST["naskigxdato_jaro"];
 $form_kialo=$_POST["kialo"];
+$form_kurso=$_POST["kurso"];
 $form_stopInfo=isset($_POST["stopInfo"])?"J":"N";
 $teksto="";
 
@@ -54,7 +55,7 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=4");} else {
 	if ($teksto!=""){
 		protokolo($persono_id,"UPDATE PERSO",$teksto);
 	}
-  modifiPersonon($persono_id,$form_sekso,$form_familinomo,$form_personnomo,$form_adreso1,$form_adreso2,$form_posxtkodo,$form_urbo,$form_lando,$form_naskigxdato_tago,$form_naskigxdato_monato,$form_naskigxdato_jaro,$form_kialo,$form_stopInfo);
+  modifiPersonon($persono_id,$form_sekso,$form_familinomo,$form_personnomo,$form_adreso1,$form_adreso2,$form_posxtkodo,$form_urbo,$form_lando,$form_naskigxdato_tago,$form_naskigxdato_monato,$form_naskigxdato_jaro,$form_kialo,$form_kurso,$form_stopInfo);
   switch ($rapidvojo) {
 	case "1":
 		header("Location:index.php");

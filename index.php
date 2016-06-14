@@ -72,7 +72,7 @@ include "pagxkapo.inc.php";
 			<?php 
 			$departement=isset($_GET["departement"])?$_GET["departement"]:"";
 			$remote_host = isset($_SERVER['REMOTE_HOST'])?$_SERVER['REMOTE_HOST']:"";
-			//echo file_get_contents('http://esperanto-jeunes.org/local/ikurso.php?departement='.$departement."&host=".$remote_host); 
+			echo file_get_contents('http://esperanto-jeunes.org/local/ikurso.php?departement='.$departement."&host=".$remote_host); 
 			?>
 			</td>
 			

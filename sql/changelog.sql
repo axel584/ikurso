@@ -39,3 +39,6 @@ update `personoj` set naskigxdato=NULL where id in (10,1683,1681,147,92,96,731,1
 ALTER TABLE  `personoj` ADD  `lasteniro` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER  `ekdato` ;
 ALTER TABLE personoj DROP lingvo;
 ALTER TABLE personoj DROP sistemo;
+
+-- pour passer en V4
+ALTER TABLE  `personoj` ADD  `stop_rappel` ENUM(  'J',  'N' ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT  'N';

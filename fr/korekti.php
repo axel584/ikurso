@@ -376,17 +376,11 @@ if ($kurso!="KE") {
 	$row = $result->fetch();
 	if (isset($row["korektanto"])) {
 		$korektanto_id = $row["korektanto"];
-		$query2="select retadreso, sistemo from personoj where id=".$korektanto_id;
+		$query2="select retadreso from personoj where id=".$korektanto_id;
 		$result2 = $bdd->query($query2);
 		$row2 = $result2->fetch();
 		$korektantaretadreso=$row2["retadreso"];
-		$korektantsistemo=$row2["sistemo"];
 		$mesagxkapo="MIME-Version: 1.0\n";
-			// si l'eleve ou le correcteur utilise le système "X", on convertit les accents
-			// if (($korektantsistemo=="X") || ($persono["sistemo"]=="X")){
-			// 	$metodo="X";
-			// 	$fonto=konvX($fonto);
-			// }
 		$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
 		$mesagxkapo.="From: ikurso <ikurso@esperanto-jeunes.org>\n";
 		$mesagxkapo.="Return-Path: <ikurso@esperanto-jeunes.org>\n";
@@ -396,25 +390,6 @@ if ($kurso!="KE") {
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		($kurso=="GR")?($objekto="gerda ".substr($subjekto,0,6)):($objekto=substr($subjekto,0,5));
 		$objekto.=" de ".$persono['enirnomo'];
-		//echo "mesagxkapo=".$mesagxkapo." objekto=".$objekto."<br>";
-		//echo "adresse correcteur=".$korektantaretadreso."<br>";
-		/*
-		if (!mail($korektantaretadreso,$objekto,stripslashes($fonto),$mesagxkapo)) {
-			// mettre a jour les donnees dans nuna_kurso (numero et date de la derniere lecon)
-			$query = "update nuna_kurso set nunleciono=".$nunleciono.",stato='K',lastdato=CURDATE() where studanto=".$persono_id." and (stato='N' or stato='K') and kurso='$kurso'";
-			$result = mysql_query($query) or die ( "UPDATE : Invalid query :".$query);
-			$kazo=1;
-			protokolo($persono_id,"TASKO SENDITA","$objekto");
-		}
-		else
-		{
-			// sauvegarder les donnees du message pour un envoi ulterieur
-			$query = "insert into eraraj_mesagxoj(persono_id,enirnomo,dato,kapo,objekto,fonto) values (".$persono_id.",'".$persono["enirnomo"]."',now(),'".$mesagxkapo."','".$objekto."','".addslashes($fonto)."')";
-			$result = mysql_query($query) or die ("INSERT : Invalid query :".$query);
-			$kazo=3;
-			protokolo($persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$persono["retadreso"]);
- 		}
- 		*/
 		mail($korektantaretadreso,$objekto,stripslashes($fonto),$mesagxkapo);
 		$query = "update nuna_kurso set nunleciono=".$nunleciono.",stato='K',lastdato=CURDATE() where studanto=".$persono_id." and (stato='N' or stato='K') and kurso='$kurso'";
 		$result=$bdd->exec($query);

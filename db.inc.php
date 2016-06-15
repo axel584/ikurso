@@ -360,7 +360,7 @@ function vidiKorektantojn() {
 function protokolo($persono_id,$kategorio,$teksto) {
    global $bdd;
    $ip = $_SERVER['REMOTE_ADDR'];
-   $query = "insert into protokolo(id,persono_id,horo,ip,kategorio,teksto) values ('','$persono_id',now(),'$ip','$kategorio','$teksto')";
+   $query = "insert into protokolo(persono_id,horo,ip,kategorio,teksto) values ('$persono_id',now(),'$ip','$kategorio','$teksto')";
    $bdd->exec($query);
 }
 

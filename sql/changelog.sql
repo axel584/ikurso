@@ -42,3 +42,11 @@ ALTER TABLE personoj DROP sistemo;
 
 -- pour passer en V4
 ALTER TABLE  `personoj` ADD  `stop_rappel` ENUM(  'J',  'N' ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT  'N';
+CREATE TABLE takso_leciono ( 
+`id` INT NOT NULL AUTO_INCREMENT , 
+`persono_id` int(11) NOT NULL,
+`leciono_id` int(11) NOT NULL,
+`intereso` INT NOT NULL , 
+`malfacileco` INT NOT NULL , 
+`komento` TEXT NOT NULL , 
+PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;

@@ -188,14 +188,18 @@ function konstruiListon($tabelo,$valuo,$vidigito,$kie) {
 	return $menuo;
 }
 
-function simplaVorto($valuo,$tabelo,$kie) {
+function getSimplaVorto($valuo,$tabelo,$kie) {
     global $bdd;
      $demando =  "select $valuo from $tabelo $kie"; 
      echo "<!--".$demando."-->";
      $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
      while($row = $result->fetch()) {
-         echo $row["$valuo"];  
+         return $row["$valuo"];  
      }
+}
+
+function simplaVorto($valuo,$tabelo,$kie) {
+    echo getSimplaVorto($valuo,$tabelo,$kie);
 }
 
 function getKorektantonElLernanto($lernanto_id) {
@@ -206,16 +210,31 @@ function getKorektantonElLernanto($lernanto_id) {
      return $row;
 }
 
+function getUrlVenontaLeciono($kurso,$nunleciono) {
+    global $bdd;
+    $prochaine_lecon = $nunleciono+1;
+    $demando2 = "select titolo,retpagxo from lecionoj where numero='".$prochaine_lecon."' and kurso='".$kurso."'";
+    $row2 = $bdd->query($demando2)->fetch();
+    return $row2["retpagxo"];
+}   
+
+
+function getPrefixeCours($kurso) {
+    if ($kurso=="GR") {
+        return 'fr/gerda/';
+    } elseif($kurso=="CG") {
+       return 'fr/cge/';
+    } else {
+        return null;
+    }
+}
+
 function getCoursElLernanto($lernanto_id) {
     global $bdd;
     $demando = "select stato,nunleciono,kurso,nunleciono from nuna_kurso where studanto=".$lernanto_id;
     $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
     while ($row = $result->fetch()) {
-        if ($row['kurso']=="GR") {
-            $prefixe_url ='fr/gerda/';
-        } elseif($row['kurso']=="CG") {
-            $prefixe_url = 'fr/cge/';
-        }
+        $prefixe_url = getPrefixeCours($row["kurso"]);
         simplaVorto('nomo','kursoj',"where kodo='".$row['kurso']."'");
         // TODO : vérifier pour les élèves n'ayant pas encore commencé
         if ($row['nunleciono']==null) {
@@ -283,10 +302,7 @@ function redirigeParDroits($persono) {
             header("location:".$prefixe_url.$row2['retpagxo']);
         }
         if ($row["stato"]=="K") { // cas des élèves en cours
-            $prochaine_lecon = $row['nunleciono']+1;
-            $demando2 = "select titolo,retpagxo from lecionoj where numero='".$prochaine_lecon."' and kurso='".$row["kurso"]."'";
-            $row2 = $bdd->query($demando2)->fetch();
-            header("location:".$prefixe_url.$row2['retpagxo']);
+            header("location:".$prefixe_url.getUrlVenontaLeciono($row["kurso"],$row["nunleciono"]));
         }
     }
 }
@@ -371,5 +387,7 @@ function updateLastEniro($persono_id) {
         $bdd->exec($query);
     }
 }
+
+
 
 ?>

@@ -50,3 +50,35 @@ CREATE TABLE takso_leciono (
 `malfacileco` INT NOT NULL , 
 `komento` TEXT NOT NULL , 
 PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+CREATE TABLE `ikurso`.`lecioneroj` ( `id` INT AUTO_INCREMENT , `leciono_id` INT , `titolo` TEXT , `tipo` ENUM('VORTARO','QCM','TEKSTO','EKZERCARO') NULL , `enhavo` TEXT NULL , `ordo` INT, PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '59', 'Indications sur la prononciation', 'TEKSTO', '1');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '59', 'Les terminaisons usuelles', 'TEKSTO', '2');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '59', 'Vocabulaire', 'VORTARO', '3');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '59', 'Un peu de grammaire...', 'TEKSTO', '4');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '59', 'Exemples de phrases', 'TEKSTO', '5');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '59', 'Exercices', 'EKZERCARO', '6');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '59', 'QCM', 'QCM', '7');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '59', 'épilogue', 'TEKSTO', '8');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '60', 'Le féminin des noms : suffixe <i>-in</i>', 'TEKSTO', '1');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '60', 'Terminaison <i>-n</i> du complément d’objet direct', 'TEKSTO', '2');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '60', 'Autres compléments', 'TEKSTO', '3');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '60', 'Préfixe <i>mal-</i>', 'TEKSTO', '4');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '60', 'Forme négative', 'TEKSTO', '5');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '60', 'Vocabulaire', 'VORTARO', '6');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '60', 'Exercices - deuxième leçon, 1<sup>ère</sup> partie', 'EKZERCARO', '7');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '60', 'Exercices - deuxième leçon, 2<sup>ème</sup> partie', 'EKZERCARO', '8');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '60', 'Exercices - deuxième leçon, 3<sup>ème</sup> partie', 'EKZERCARO', '9');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '60', 'épilogue', 'TEKSTO', '10');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '60', 'QCM', 'QCM', '11');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Ordre des mots', 'TEKSTO', '1');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Exercices - troisième leçon, 1<sup>ère</sup> partie', 'EKZERCARO', '2');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Vocabulaire', 'VORTARO', '3');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Proverbe', 'TEKSTO', '4');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Adverbes en <i>-e</i>', 'TEKSTO', '5');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Formation des syllabes', 'TEKSTO', '6');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Exercices - troisième leçon, 2<sup>ème</sup> partie', 'EKZERCARO', '7');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Les nombres cardinaux', 'TEKSTO', '8');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Exercices - troisième leçon, 3<sup>ème</sup> partie', 'EKZERCARO', '9');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Verbes intransitifs et transitifs', 'TEKSTO', '10');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Exercices - troisième leçon, 4<sup>ème</sup> partie', 'EKZERCARO', '9');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '61', 'Épilogue', 'TEKSTO', '12');

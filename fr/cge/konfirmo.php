@@ -1,8 +1,13 @@
 <?php
 $numcxap=$_GET["lec"];
+$leciono=$_GET["lec"];
 $kazo=$_GET["kazo"];
 include "dlekkapo.inc.php";
 ?>
+<!-- ATTENTION VERRUE DE PROGRAMMATION -->
+<!--Comme on "ouvre" le formulaire dans l'en-tête, on est obligé de le fermer ici -->
+</form>
+
 		<div class="klarigo">
 	<?php 
 		if ($kazo==1){
@@ -24,6 +29,36 @@ include "dlekkapo.inc.php";
 	<p>Votre correcteur recevra alors vos exercices par messagerie électronique et vous recevrez une copie de ce message.</p>
 	<?php
 	}
+	// TODO ajouter ici la possibilité d'évaluer la leçon
+
 	?>         
+	<h2>Évaluez-nous !</h2>
+	Afin d'améliorer notre cours, merci de prendre quelques secondes pour nous faire un retour sur la leçon que vous venez d'envoyer. Cette évaluation est destinée aux administrateurs du cours et ne sera pas lu par votre correcteur.
+	<form method="post" action="../taksoLeciono.php">
+	<input type='hidden' name="kurso" value='CG'/>
+	<input type='hidden' name="leciono" value='<?=$leciono?>'/>
+	<div class="tasko">
+		<p>Notez l'intérêt que vous avez eu à effectuer la leçon : de 1 (très ennuyeux) à 5 (très amusant) </p>
+			<div class="rating">
+  				<input name="intereso" id="intereso5" value="5" type="radio"></a><label for="intereso5">★</label>
+				<input name="intereso" id="intereso4" value="4" type="radio"></a><label for="intereso4">★</label>
+				<input name="intereso" id="intereso3" value="3" type="radio"></a><label for="intereso3">★</label>
+				<input name="intereso" id="intereso2" value="2" type="radio"></a><label for="intereso2">★</label>
+				<input name="intereso" id="intereso1" value="1" type="radio"></a><label for="intereso1">★</label>
+		</div>
+		<p>Notez la difficulté que vous avez eu à effectuer la leçon : de 1 (très facile) à 5 (très compliqué) </p>
+			<div class="rating">
+  				<input name="malfacileco" id="malfacileco5" value="5" type="radio"></a><label for="malfacileco5">★</label>
+				<input name="malfacileco" id="malfacileco4" value="4" type="radio"></a><label for="malfacileco4">★</label>
+				<input name="malfacileco" id="malfacileco3" value="3" type="radio"></a><label for="malfacileco3">★</label>
+				<input name="malfacileco" id="malfacileco2" value="2" type="radio"></a><label for="malfacileco2">★</label>
+				<input name="malfacileco" id="malfacileco1" value="1" type="radio"></a><label for="malfacileco1">★</label>
+		</div>
+		<p>Laissez un commentaire (optionnel) sur la leçon : </p>
+		<textarea name="komento" rows="8" cols= "80"></textarea>
+
+		<p><input class="bouton" type="submit" value="Envoyer votre appréciation"></p>
+	</div>
+	</form>
 		</div> <!-- klarigo -->
 <?php include "dlekpiedo.inc.php"; ?>

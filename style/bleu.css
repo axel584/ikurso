@@ -1042,21 +1042,15 @@ a.bouton {
 		}
 .rating label:hover ~ label,
 .rating input:focus ~ label,
-.rating label:hover,
-		.rating a:hover,
-		.rating a:hover ~ a,
-		.rating a:focus,
-		.rating a:focus ~ a		{
+.rating label:hover {
 			color: orange;
 			cursor: pointer;
 		}
-		.rating2 {
-			direction: rtl;
-		}
-		.rating2 a {
-			float:none
-		}
 
+.rating input[type="radio"]:checked+label, 
+.rating input[type="radio"]:checked+label ~ label { 
+	color: orange;
+}
 
 /*****************************************
  * attestation

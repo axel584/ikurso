@@ -40,20 +40,24 @@ include "dlekkapo.inc.php";
 	<div class="tasko">
 		<p>Notez l'intérêt que vous avez eu à effectuer la leçon : de 1 (très ennuyeux) à 5 (très amusant) </p>
 			<div class="rating">
-  				<input name="intereso" id="intereso5" value="5" type="radio"></a><label for="intereso5">★</label>
-				<input name="intereso" id="intereso4" value="4" type="radio"></a><label for="intereso4">★</label>
-				<input name="intereso" id="intereso3" value="3" type="radio"></a><label for="intereso3">★</label>
-				<input name="intereso" id="intereso2" value="2" type="radio"></a><label for="intereso2">★</label>
-				<input name="intereso" id="intereso1" value="1" type="radio"></a><label for="intereso1">★</label>
-		</div>
+				<p>
+  				<input name="intereso" id="intereso5" value="5" type="radio"><label for="intereso5">★</label>
+				<input name="intereso" id="intereso4" value="4" type="radio"><label for="intereso4">★</label>
+				<input name="intereso" id="intereso3" value="3" type="radio"><label for="intereso3">★</label>
+				<input name="intereso" id="intereso2" value="2" type="radio"><label for="intereso2">★</label>
+				<input name="intereso" id="intereso1" value="1" type="radio"><label for="intereso1">★</label>
+				</p>
+			</div>
 		<p>Notez la difficulté que vous avez eu à effectuer la leçon : de 1 (très facile) à 5 (très compliqué) </p>
 			<div class="rating">
+				<p>
   				<input name="malfacileco" id="malfacileco5" value="5" type="radio"></a><label for="malfacileco5">★</label>
 				<input name="malfacileco" id="malfacileco4" value="4" type="radio"></a><label for="malfacileco4">★</label>
 				<input name="malfacileco" id="malfacileco3" value="3" type="radio"></a><label for="malfacileco3">★</label>
 				<input name="malfacileco" id="malfacileco2" value="2" type="radio"></a><label for="malfacileco2">★</label>
 				<input name="malfacileco" id="malfacileco1" value="1" type="radio"></a><label for="malfacileco1">★</label>
-		</div>
+				</p>
+			</div>
 		<p>Laissez un commentaire (optionnel) sur la leçon : </p>
 		<textarea name="komento" rows="8" cols= "80"></textarea>
 

@@ -44,6 +44,7 @@ ALTER TABLE personoj DROP sistemo;
 ALTER TABLE  `personoj` ADD  `stop_rappel` ENUM(  'J',  'N' ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT  'N';
 CREATE TABLE takso_leciono ( 
 `id` INT NOT NULL AUTO_INCREMENT , 
+`dato` TIMESTAMP NOT NULL,
 `persono_id` int(11) NOT NULL,
 `leciono_id` int(11) NOT NULL,
 `intereso` INT NOT NULL , 

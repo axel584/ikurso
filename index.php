@@ -78,7 +78,7 @@ include "pagxkapo.inc.php";
 			
 				<td colspan="2">
 					<h3><a href="http://www.lernu.net"><i>lernu!</i></a></h3>
-					<a href="http://www.lernu.net"><img src="bildoj/lernu.gif" alt="lernu" align="left" border=0 /></a>
+					<a href="http://www.lernu.net"><img src="bildoj/lernu.png" alt="lernu" align="left" border=0 /></a>
 					<p>Cet autre site, géré par une équipe internationale, est traduit en plus de vingt
 					langues.<br>Il s’adresse à ceux qui veulent faire connaissance avec l’espéranto, 
 					l’apprendre ou le pratiquer. Vous y trouverez des cours, des dictionnaires, 

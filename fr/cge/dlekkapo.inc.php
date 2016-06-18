@@ -153,7 +153,7 @@ include "../../pagxkapo.inc.php";
 				if ($erarkodo=="7") {echo "<div class='atentigo'><p class='eraro'>Cet identifiant existe déjà. Veuillez en choisir un autre, merci</p></div>";}
 				if ($erarkodo=="8") {echo "<div class='atentigo'><p class='eraro'>Votre session a expiré, veuillez vous identifier.</p></div>";}
 				if ($erarkodo=="13") {echo "<div class='atentigo'><p class='eraro'>$noto : Le résultat du QCM n’est pas suffisant. Veuillez recommencer.</p></div>";} 
-				if ($erarkodo=="14") {echo "<div class='atentigo'><p class='eraro'>Merci pour votre retour.</p></div>";} 
+				if ($erarkodo=="14") {echo "<div class='atentigo sukceso' onclick='this.style.display=\"none\";'><p class='informo'>Merci pour votre retour.</p></div>";} 
 				if (($temo!="intro") && ($numcxap!="01")) {
 				?>
 				<!--div class="reklamo" id="spiru">

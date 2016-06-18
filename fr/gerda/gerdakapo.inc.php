@@ -24,48 +24,48 @@ if ($temo=="") {$temo="intro";}
 // tiu funkcio konstruas la liston de la tekstoj "lasu min..."
 function konstruiLasuMenuon() {
 	$tlasu = array (
-		"01" => "&nbsp;&nbsp;1.&nbsp;&nbsp;Izabela",
-		"02" => "&nbsp;&nbsp;2.&nbsp;&nbsp;Stranga strangulo",
-		"03" => "&nbsp;&nbsp;3.&nbsp;&nbsp;Amdeklaro",
-		"04" => "&nbsp;&nbsp;4.&nbsp;&nbsp;Lingvistiko",
-		"05" => "&nbsp;&nbsp;5.&nbsp;&nbsp;&#264;u vere vi ne volas labori?",
-		"06" => "&nbsp;&nbsp;6.&nbsp;&nbsp;La ulo, kiu ne plu pensas",
-		"07" => "&nbsp;&nbsp;7.&nbsp;&nbsp;Oni venis el alia mondo",
-		"08" => "&nbsp;&nbsp;8.&nbsp;&nbsp;Iru kiel vi volas",
-		"09" => "&nbsp;&nbsp;9.&nbsp;&nbsp;Zorgi pri zorgado",
-		"10" => "10.&nbsp;&nbsp;La fortegulo",
-		"11" => "11.&nbsp;&nbsp;Malkontentas la mekanikisto",
-		"12" => "12.&nbsp;&nbsp;Jen vi ree trinkas!",
-		"13" => "13.&nbsp;&nbsp;Revenis amo, feli&#265;u ni!",
-		"14" => "14a.&nbsp;Silentu, enaj vo&#265;oj",
-		"14b" => "14b.&nbsp;Timiga diro",
-		"15" => "15a.&nbsp;Mistero en papervendejo",
-		"15b" => "15b.&nbsp;Du raportoj pri vendado",
-		"16" => "16a.&nbsp;La vesperfu&#349;ulo",
-		"16b" => "16b.&nbsp;&#264;u mal&#285;ojon memori, a&#365; imagi feli&#265;on ?",
-		"17" => "17a.&nbsp;Edzokaptaj inoj",
-		"17b" => "17b.&nbsp;Instruista amo",
-		"18" => "18a.&nbsp;La letersoifa patrino",
-		"18b" => "18b.&nbsp;Mi atendas gravan leteron",
-		"19" => "19.&nbsp;&nbsp;&nbsp;Dormu trankvile!",
-		"20" => "20a.&nbsp; La fakulo-instruisto venis de malproksime",
-		"20b" => "20b.&nbsp;Troa scivolo kondukas morten",
-		"21" => "21a.&nbsp; Ho, bela naski&#285;urbo!",
-		"21b" => "21b.&nbsp;Adia&#365;, lando amata!",
-		"22" => "22a.&nbsp;Ek al fora insulo!",
-		"22b" => "22b.&nbsp;Skribas malliberulo",
-		"23" => "23a.&nbsp;Sekreta servo",
-		"23b" => "23b.&nbsp;Ameriko, jen mi venas",
-		"24" => "24a.&nbsp;Literaturo amindas, sed tamen...",
-		"24b" => "24b.&nbsp;La &#285;ojoj de petveturado",
-		"25" => "25.&nbsp;&nbsp;&nbsp;La tri plendoj de S-ro Kursano"
+		"01" => "  1.  Izabela",
+		"02" => "  2.  Stranga strangulo",
+		"03" => "  3.  Amdeklaro",
+		"04" => "  4.  Lingvistiko",
+		"05" => "  5.  Ĉu vere vi ne volas labori?",
+		"06" => "  6.  La ulo, kiu ne plu pensas",
+		"07" => "  7.  Oni venis el alia mondo",
+		"08" => "  8.  Iru kiel vi volas",
+		"09" => "  9.  Zorgi pri zorgado",
+		"10" => "10.  La fortegulo",
+		"11" => "11.  Malkontentas la mekanikisto",
+		"12" => "12.  Jen vi ree trinkas!",
+		"13" => "13.  Revenis amo, feliĉu ni!",
+		"14" => "14a. Silentu, enaj voĉoj",
+		"14b" => "14b. Timiga diro",
+		"15" => "15a. Mistero en papervendejo",
+		"15b" => "15b. Du raportoj pri vendado",
+		"16" => "16a. La vesperfuŝulo",
+		"16b" => "16b. Ĉu malĝojon memori, aŭ imagi feliĉon ?",
+		"17" => "17a. Edzokaptaj inoj",
+		"17b" => "17b. Instruista amo",
+		"18" => "18a. La letersoifa patrino",
+		"18b" => "18b. Mi atendas gravan leteron",
+		"19" => "19.   Dormu trankvile!",
+		"20" => "20a.  La fakulo-instruisto venis de malproksime",
+		"20b" => "20b. Troa scivolo kondukas morten",
+		"21" => "21a.  Ho, bela naskiĝurbo!",
+		"21b" => "21b. Adiaŭ, lando amata!",
+		"22" => "22a. Ek al fora insulo!",
+		"22b" => "22b. Skribas malliberulo",
+		"23" => "23a. Sekreta servo",
+		"23b" => "23b. Ameriko, jen mi venas",
+		"24" => "24a. Literaturo amindas, sed tamen...",
+		"24b" => "24b. La ĝojoj de petveturado",
+		"25" => "25.   La tri plendoj de S-ro Kursano"
 	); 
 }
 /*
  * rappel pour les élèves non identifiés
 */
 function atentigo() {
-	echo "<p class='eo rimarko'>Por akiri supersignon vi uzu la x-stilon, ekzemple sx i&#285;os &#349;</p>\n";
+	echo "<p class='eo rimarko'>Por akiri supersignon vi uzu la x-stilon, ekzemple sx iĝos ŝ</p>\n";
 }
 function ekzerco($sist, $nbLig) {
 	global $demandoj, $memorkurso, $persono_id, $numcxap;
@@ -111,7 +111,7 @@ function elektEkzerco() {
 				echo $text;
 				echo "<input type=\"hidden\" name=\"dd".$numcxap."_".$k."_".$n."\" value=\"".$text."\">";
 				echo "<select name=\"rr".$numcxap."_".$k."_".$n."\">";
-				echo "<option label=\"  ?  \">&nbsp;&nbsp;?&nbsp;&nbsp;</option><option label=";
+				echo "<option label=\"  ?  \">  ?  </option><option label=";
 				$text="";
 			} elseif ($v[$i]=="]") {
 				echo "\"".$text."\">".$text."</option></select>";
@@ -259,7 +259,7 @@ function savData(lien) {
 					// onglets pour la presentation et la table des matieres
 					echo "<li";
 					if ($temo=="intro") {echo " class='aktiva'";}
-					echo "><a href='index.php?temo=intro'>Pr&eacute;sentation</a></li>";
+					echo "><a href='index.php?temo=intro'>Présentation</a></li>";
 					echo "<li";
 					if ($temo=="enskribi") {echo " class='aktiva'";}
 					echo "><a href='index.php?temo=enskribi'>Inscription</a></li>";
@@ -271,7 +271,7 @@ function savData(lien) {
 					echo "><a href='index.php?temo=prononco'>Prononciation</a></li>";
 					echo "<li";
 					if ($temo=="enhavo") {echo " class='aktiva'";}
-					echo "><a href='index.php?temo=enhavo'>Table des mati&egrave;res</a></li>";
+					echo "><a href='index.php?temo=enhavo'>Table des matières</a></li>";
 					echo "<li";
 					if ($parto=="konsiloj") {echo " class='aktiva'";}
 					echo "><a href='konsiloj.php'>...kaj poste</a></li>";
@@ -338,16 +338,16 @@ function savData(lien) {
 				if ($numcxap < 25){
 					$posta = $numcxap + 1;
 					$postacxap = sprintf('cxap%02d', $posta);
-					echo "<li class='dekstre'><a href='".$postacxap.".php'>&nbsp;".$posta."&nbsp;</a></li>\n";	   
+					echo "<li class='dekstre'><a href='".$postacxap.".php'> ".$posta." </a></li>\n";	   
 			   }
 			   if ($numcxap !=0){
 			   	$nuna=$numcxap+0;
-					echo "<li class='dekstraktiva'><a href='".$subjekto."'>&nbsp;".$nuna."&nbsp;</a></li>\n";	   
+					echo "<li class='dekstraktiva'><a href='".$subjekto."'> ".$nuna." </a></li>\n";	   
 			   }
 				if ($numcxap > 1){
 					$antauxa = $numcxap - 1;
 					$antauxacxap=sprintf('cxap%02d', $antauxa);
-					echo "<li class='dekstre'><a href='".$antauxacxap.".php'>&nbsp;".$antauxa."&nbsp;</a></li>\n";	   
+					echo "<li class='dekstre'><a href='".$antauxacxap.".php'> ".$antauxa." </a></li>\n";	   
 			   }
 			   echo "<li class='dekstre";
 			   if ($parto=="index") {echo " aktiva";}
@@ -361,7 +361,7 @@ function savData(lien) {
 				if ($erarkodo=="2") {echo "<div class='atentigo'><p class='eraro'>Vous n’avez pas rempli toutes les données obligatoires du formulaire d’inscription.</p></div>";}
 				if ($erarkodo=="3") {echo "<div class='atentigo'><p class='eraro'>Vous avez tapé deux mots de passe différents</p></div>";}
 				if ($erarkodo=="6") {echo "<div class='atentigo'><p class='eraro'>Adresse électronique invalide</p></div>";}
-				if ($erarkodo=="7") {echo "<div class='atentigo'><p class='eraro'>Cet identifiant existe déjà. Veuillez en choisir un autre, merci&nbsp;!</p></div>";}
+				if ($erarkodo=="7") {echo "<div class='atentigo'><p class='eraro'>Cet identifiant existe déjà. Veuillez en choisir un autre, merci !</p></div>";}
 				if ($erarkodo=="8") {echo "<div class='atentigo'><p class='eraro'>Votre session a expiré, veuillez vous identifier.</p></div>";}
 				if ($erarkodo=="14") {echo "<div class='atentigo'><p class='eraro'>Merci pour votre retour.</p></div>";} 
 				?>

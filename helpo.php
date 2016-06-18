@@ -144,20 +144,15 @@ include "pagxkapo.inc.php";
 			<?php if ($temo=="elsxutoj") { ?>
 				<h3>Téléchargements</h3>
 					
-				<h4>Cours (logiciels et site internet</h4>				
+				<h4>Logiciel</h4>				
 				<ul>
 					<li><a href="http://www.kurso.com.br/bazo/elshuto.html?fr">
 						<em>Kurso de Esperanto</em> pour Windows, Linux et Mac</a></li>
-					<li>Tout le <a href="http://ikurso.esperanto-jeunes.org/doc/DLEK-U.zip">
-					<em>Cours en dix leçons</em></a>, pour une utilisation hors ligne</li>
-					<li>Tout le <a href="http://ikurso.esperanto-jeunes.org/doc/gerda.zip">
-					cours <em>Gerda malaperis</em></a> 
-					pour une utilisation hors ligne<br>
-					(comprend également les récits <em>Lasu min paroli plu</em> avec 
-					6 enregistrements audio)</li>
 				</ul>
 				<h4>Fichiers audio</h4>	
 				<ul>			
+					<li>Les textes de <a href="http://ikurso.esperanto-jeunes.org/fr/gerda/son/gerda-mp3.zip"> 
+					<em>Gerda malaperis</em> en version audio (mp3)</a></li>
 					<li>Les récits 2 à 7 de <a href="http://ikurso.esperanto-jeunes.org/fr/gerda/son/lasu.zip">
 					<em>Lasu min paroli plu</em> en version audio (mp3)</a></li>
 				</ul>

@@ -1,3 +1,4 @@
+
 <?php
 $numcxap=$_GET["lec"];
 $leciono=$_GET["lec"];
@@ -33,11 +34,11 @@ include "dlekkapo.inc.php";
 
 	?>         
 	<h2>Évaluez-nous !</h2>
-	Afin d'améliorer notre cours, merci de prendre quelques secondes pour nous faire un retour sur la leçon que vous venez d'envoyer. Cette évaluation est destinée aux administrateurs du cours et ne sera pas lu par votre correcteur.
+	Pour nous permettre d'améliorer notre cours, merci de prendre quelques secondes pour nous faire un retour sur la leçon que vous venez d'envoyer. Cette évaluation est destinée aux administrateurs du cours et ne sera pas lue par votre correcteur.
 	<form method="post" action="../taksoLeciono.php">
 	<input type='hidden' name="kurso" value='CG'/>
 	<input type='hidden' name="leciono" value='<?=$leciono?>'/>
-	<div class="tasko">
+	<div class="tasko enketo">
 		<p>Notez l'intérêt que vous avez eu à effectuer la leçon : de 1 (très ennuyeux) à 5 (très amusant) </p>
 			<div class="rating">
 				<p>
@@ -48,7 +49,7 @@ include "dlekkapo.inc.php";
 				<input name="intereso" id="intereso1" value="1" type="radio"><label for="intereso1">★</label>
 				</p>
 			</div>
-		<p>Notez la difficulté que vous avez eu à effectuer la leçon : de 1 (très facile) à 5 (très compliqué) </p>
+		<p>Notez la difficulté que vous avez eue à effectuer la leçon : de 1 (très facile) à 5 (très compliqué) </p>
 			<div class="rating">
 				<p>
   				<input name="malfacileco" id="malfacileco5" value="5" type="radio"></a><label for="malfacileco5">★</label>

@@ -442,7 +442,7 @@ function listi_I() {
 
 function listi_kursojn_de_iu_studanto($studanto_id) {
 	global $bdd;
- $demando="select nuna_kurso.id,korektanto,nunleciono,nuna_kurso.kurso,nuna_kurso.lastdato,nuna_kurso.stato, personoj.enirnomo as korektanto_enirnomo,personoj.id as korektanto_id,kursoj.nomo as kursoj_nomo,lecionoj.titolo as lecionoj_titolo from ikurso.nuna_kurso  join personoj on personoj.id=nuna_kurso.korektanto join kursoj on kursoj.kodo=nuna_kurso.kurso left join lecionoj on lecionoj.numero=nuna_kurso.nunleciono and lecionoj.kurso=nuna_kurso.kurso where studanto=".$studanto_id." order by lastdato";
+ $demando="select nuna_kurso.id,korektanto,nunleciono,nuna_kurso.kurso,nuna_kurso.lastdato,nuna_kurso.stato, personoj.enirnomo as korektanto_enirnomo,personoj.id as korektanto_id,kursoj.nomo as kursoj_nomo,lecionoj.titolo as lecionoj_titolo from nuna_kurso  join personoj on personoj.id=nuna_kurso.korektanto join kursoj on kursoj.kodo=nuna_kurso.kurso left join lecionoj on lecionoj.numero=nuna_kurso.nunleciono and lecionoj.kurso=nuna_kurso.kurso where studanto=".$studanto_id." order by lastdato";
  	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
  	return $result;
 }

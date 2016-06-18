@@ -11,7 +11,7 @@ if (!is_numeric($id)) {
 		$query = "update personoj set stop_rappel='J' where id=".$id;
 		$bdd->exec($query);
 		protokolo($persono["id"],"RAPPEL MAIL OFF",$persono["enirnomo"]." a désactivé ses rappels de mail");
-		$response = "Les messages de rappel ont été désactivé";
+		$response = "Les messages de rappel ont été désactivés.";
 	}
 }
 ?>

@@ -17,7 +17,7 @@ include "dlekkapo.inc.php"
 			<li><a href="lec01.php#lec01.7">1.7. Formulaire d'inscription</a></li>
 		</ul>
 		
-		<h3><a href="lec02.php#lec02">Deuxi&egrave;me Leçon</a></h3>
+		<h3><a href="lec02.php#lec02">Deuxième Leçon</a></h3>
 		<ul>
 			<li><a href="lec02.php#lec02.1">2.1. Le féminin des noms : suffixe <i>-in</i></a></li>
 			<li><a href="lec02.php#lec02.2">2.2. Terminaison <i>-n</i> du complément d'objet direct</a></li>
@@ -25,10 +25,10 @@ include "dlekkapo.inc.php"
 			<li><a href="lec02.php#lec02.4">2.4. Préfixe <i>mal-</i></a></li>
 			<li><a href="lec02.php#lec02.5">2.5. Forme négative</a></li>
 			<li><a href="lec02.php#lec02.6">2.6. Vocabulaire</a></li>
-			<li><a href="lec02.php#lec02.7">2.7. épilogue</a></li>
+			<li><a href="lec02.php#lec02.7">2.7. Épilogue</a></li>
 		</ul>
 		
-		<h3><a href="lec03.php#lec03">Troisi&egrave;me Leçon</a></h3>
+		<h3><a href="lec03.php#lec03">Troisième Leçon</a></h3>
 		<ul>
 			<li><a href="lec03.php#lec03.1">3.1. Ordre des mots</a></li>
 			<li><a href="lec03.php#lec03.2">3.2. Vocabulaire</a></li>
@@ -37,10 +37,10 @@ include "dlekkapo.inc.php"
 			<li><a href="lec03.php#lec03.5">3.5. Formation des syllabes</a></li>
 			<li><a href="lec03.php#lec03.6">3.6. Les nombres cardinaux</a></li>
 			<li><a href="lec03.php#lec03.7">3.7. Verbes intransitifs et transitifs</a></li>
-			<li><a href="lec03.php#lec03.8">3.8. épilogue</a></li>
+			<li><a href="lec03.php#lec03.8">3.8. Épilogue</a></li>
 		</ul>
 		
-		<h3><a href="lec04.php#lec04">Quatri&egrave;me Leçon</a></h3>
+		<h3><a href="lec04.php#lec04">Quatrième Leçon</a></h3>
 		<ul>
 			<li><a href="lec04.php#lec04.1">4.1. La forme interrogative</a></li>
 			<li><a href="lec04.php#lec04.2">4.2. L'alphabet (rappel)</a></li>
@@ -49,20 +49,20 @@ include "dlekkapo.inc.php"
 			<li><a href="lec04.php#lec04.5">4.5. Les diphtongues</a></li>
 			<li><a href="lec04.php#lec04.6">4.6. Vocabulaire</a></li>
 			<li><a href="lec04.php#lec04.7">4.7. Récit</a></li>
-			<li><a href="lec04.php#lec04.8">4.8. épilogue</a></li>
+			<li><a href="lec04.php#lec04.8">4.8. Épilogue</a></li>
 		</ul>
 
-		<h3><a href="lec05.php#lec05">Cinqui&egrave;me Leçon</a></h3>
+		<h3><a href="lec05.php#lec05">Cinquième Leçon</a></h3>
 		<ul>
 			<li><a href="lec05.php#lec05.1">5.1. éléments pour converser</a></li>
 			<li><a href="lec05.php#lec05.2">5.2. Les corrélatifs</a></li>
 			<li><a href="lec05.php#lec05.3">5.3. Un peu de pratique</a></li>
 			<li><a href="lec05.php#lec05.4">5.4. La flexion des corrélatifs</a></li>
 			<li><a href="lec05.php#lec05.5">5.5. Proverbe</a></li>
-			<li><a href="lec05.php#lec05.6">5.6. épilogue</a></li>
+			<li><a href="lec05.php#lec05.6">5.6. Épilogue</a></li>
 		</ul>
 
-		<h3><a href="lec06.php#lec06">Sixi&egrave;me Leçon</a></h3>
+		<h3><a href="lec06.php#lec06">Sixième Leçon</a></h3>
 		<ul>
 			<li><a href="lec06.php#lec06.1">6.1. Révision des terminaisons</a></li>
 			<li><a href="lec06.php#lec06.2">6.2. Comment poser des questions</a></li>
@@ -77,33 +77,33 @@ include "dlekkapo.inc.php"
 			<li><a href="lec06.php#lec06.11">6.11. Complément d'objet indirect</a></li>
 			<li><a href="lec06.php#lec06.12">6.12. L'accusatif peut remplacer certaines prépositions</a></li>
 			<li><a href="lec06.php#lec06.13">6.13. Adverbes de lieu indiquant le mouvement</a></li>
-			<li><a href="lec06.php#lec06.14">6.14. épilogue</a></li>
+			<li><a href="lec06.php#lec06.14">6.14. Épilogue</a></li>
 		</ul>
 
-		<h3><a href="lec07.php#lec07">Septi&egrave;me Leçon</a></h3>
+		<h3><a href="lec07.php#lec07">Septième Leçon</a></h3>
 		<ul>
 			<li><a href="lec07.php#lec07.1">7.1. Préfixes</a></li>
 			<li><a href="lec07.php#lec07.2">7.2. Suffixes</a></li>
 			<li><a href="lec07.php#lec07.3">7.3. Proverbes</a></li>
 			<li><a href="lec07.php#lec07.4">7.4. Expression de l'heure</a></li>
-			<li><a href="lec07.php#lec07.5">7.5. épilogue</a></li>
+			<li><a href="lec07.php#lec07.5">7.5. Épilogue</a></li>
 		</ul>
 
-		<h3><a href="lec08.php#lec08">Huiti&egrave;me Leçon</a></h3>
+		<h3><a href="lec08.php#lec08">Huitième Leçon</a></h3>
 		<ul>
 			<li><a href="lec08.php#lec08.1">8.1. Le reste de la conjugaison...</a></li>
 			<li><a href="lec08.php#lec08.2">8.2. Proverbes</a></li>
 			<li><a href="lec08.php#lec08.3">8.3. Pronom personnel et adjectif possessif réfléchis</a></li>
 			<li><a href="lec08.php#lec08.4">8.4. Retour sur l'accent tonique</a></li>
-			<li><a href="lec08.php#lec08.5">8.5. épilogue</a></li>
+			<li><a href="lec08.php#lec08.5">8.5. Épilogue</a></li>
 		</ul>
 
-		<h3><a href="lec09.php#lec09">Neuvi&egrave;me Leçon</a></h3>
+		<h3><a href="lec09.php#lec09">Neuvième Leçon</a></h3>
 		<ul>
 			<li><a href="lec09.php#lec09.1">9.1. Un air connu...</a></li>
 			<li><a href="lec09.php#lec09.2">9.2. L'élision</a></li>
-			<li><a href="lec09.php#lec09.3">9.3. Quelques adverbes primaires en <b>-aux</b></a></li>
-			<li><a href="lec09.php#lec09.4">9.4. Divers mots en <b>-aux</b></a></li>
+			<li><a href="lec09.php#lec09.3">9.3. Quelques adverbes primaires en <b>-aŭ</b></a></li>
+			<li><a href="lec09.php#lec09.4">9.4. Divers mots en <b>-aŭ</b></a></li>
 			<li><a href="lec09.php#lec09.5">9.5. Autres mots invariables</a></li>
 			<li><a href="lec09.php#lec09.6">9.6. Proverbes</a></li>
 			<li><a href="lec09.php#lec09.7">9.7. Des extraits de la presse espérantiste</a></li>

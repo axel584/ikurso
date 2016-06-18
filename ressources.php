@@ -15,7 +15,7 @@ $gxisdatigDato="2006-11-02";
 					<p>Pour compléter votre étude de l’espéranto, nous vous proposons une sélection de sites dans lesquels vous trouverez diverses ressources :
 						dictionnaires, grammaires, lectures, musique, vidéos...
 					</p>
-					<p>Vous trouverez toutes ces ressource sur le site d'Espéranto-France, notamment dans les rubriques <a href="http://esperanto-france.org/apprendre">Apprendre</a>, <a href="http://esperanto-france.org/culture">Culture</a> et <a href="http://esperanto-france.org/pratiquer">Pratiquer</a>.
+					<p>Vous trouverez toutes ces ressources sur le site d'Espéranto-France, notamment dans les rubriques <a href="http://esperanto-france.org/apprendre">Apprendre</a>, <a href="http://esperanto-france.org/culture">Culture</a> et <a href="http://esperanto-france.org/pratiquer">Pratiquer</a>.
 
 		</div>
 		</div>

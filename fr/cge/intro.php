@@ -1,7 +1,7 @@
 <?php
 $subjekto="intro.php";
 $temo=$_GET["temo"];
-$gxisdatigDato="2015-06-06";
+$gxisdatigDato="2016-06-18";
 if ($temo=="") {$temo="intro";}
 include "dlekkapo.inc.php"
 ?>
@@ -17,7 +17,7 @@ include "dlekkapo.inc.php"
 					
 					<h3>Consultation hors ligne</h3>
 					
-					<p>Si vous voulez installer les leçons sur votre disque vous pouvez télécharger une version du cours pour consultation hors ligne. Les fichiers sont compressés au format zip</p> 
-					<p><a href="http://ikurso.esperanto-jeunes.org/doc/DLEK-U.zip">Tout le cours en dix leçons</a></p>
+					<p>Vous pouvez télécharger une version du cours pour consultation hors ligne :</p> 
+					<p><a href="http://ikurso.esperanto-jeunes.org/doc/DLEK.pdf">Cours en dix leçons</a> (pdf - 476Ko)</li></p>
 					</div>
 <? include "dlekpiedo.inc.php"; ?>

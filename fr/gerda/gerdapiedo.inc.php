@@ -38,8 +38,8 @@ if (($parto=="ek")&&($numcxap!="01")){ ?>
 } 
 if ($parto=="") { ?>
 <div id="lernu">
-	<i>Bildoj el : </i><a href="http://www.lernu.net/">
-	<img src="bildoj/lernu120x60b.gif" alt="lernu" align="bottom" border="0"></a>
+	<i>Bildoj el : </i><a href="http://www.lernu.net/"><br>
+	<img src="bildoj/lernu.png" alt="lernu" align="bottom" border="0"></a>
 </div>
 <?php } ?>
 				</div> <!-- kadro -->

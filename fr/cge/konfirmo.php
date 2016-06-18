@@ -30,8 +30,6 @@ include "dlekkapo.inc.php";
 	<p>Votre correcteur recevra alors vos exercices par messagerie électronique et vous recevrez une copie de ce message.</p>
 	<?php
 	}
-	// TODO ajouter ici la possibilité d'évaluer la leçon
-
 	?>         
 	<h2>Évaluez-nous !</h2>
 	Pour nous permettre d'améliorer notre cours, merci de prendre quelques secondes pour nous faire un retour sur la leçon que vous venez d'envoyer. Cette évaluation est destinée aux administrateurs du cours et ne sera pas lue par votre correcteur.

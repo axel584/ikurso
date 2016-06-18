@@ -363,6 +363,7 @@ function savData(lien) {
 				if ($erarkodo=="6") {echo "<div class='atentigo'><p class='eraro'>Adresse électronique invalide</p></div>";}
 				if ($erarkodo=="7") {echo "<div class='atentigo'><p class='eraro'>Cet identifiant existe déjà. Veuillez en choisir un autre, merci&nbsp;!</p></div>";}
 				if ($erarkodo=="8") {echo "<div class='atentigo'><p class='eraro'>Votre session a expiré, veuillez vous identifier.</p></div>";}
+				if ($erarkodo=="14") {echo "<div class='atentigo'><p class='eraro'>Merci pour votre retour.</p></div>";} 
 				?>
 				<?php if (($parto=="ek")&&($numcxap!="01")){
 					// ce qui suit ne s'applique pas la première fois

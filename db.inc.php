@@ -297,7 +297,7 @@ function redirigeParDroits($persono) {
             $prefixe_url = 'fr/cge/';
         }
         if ($row["stato"]=="N") { // cas des élèves pas encore commencé
-            $demando2 = "select titolo,retpagxo from lecionoj where and numero='1' and kurso='".$row["kurso"]."'";
+            $demando2 = "select titolo,retpagxo from lecionoj where numero='1' and kurso='".$row["kurso"]."'";
             $row2 = $bdd->query($demando2)->fetch();
             header("location:".$prefixe_url.$row2['retpagxo']);
         }

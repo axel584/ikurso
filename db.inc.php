@@ -191,7 +191,6 @@ function konstruiListon($tabelo,$valuo,$vidigito,$kie) {
 function getSimplaVorto($valuo,$tabelo,$kie) {
     global $bdd;
      $demando =  "select $valuo from $tabelo $kie"; 
-     echo "<!--".$demando."-->";
      $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
      while($row = $result->fetch()) {
          return $row["$valuo"];  

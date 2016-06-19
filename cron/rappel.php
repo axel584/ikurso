@@ -4,6 +4,13 @@ include "../config.php";
 $query = "SELECT personoj.id,enirnomo,retadreso,personnomo,familinomo,nuna_kurso.kurso,nuna_kurso.nunleciono,lastdato,nuna_kurso.korektanto FROM nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='K' and lastdato=DATE_SUB(CURDATE(), INTERVAL 6 DAY) and stop_rappel='N'";
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
+ 	// on filtre pour ne pas envoyer de messages aux élèves qui ont envoyé leur dernière leçon
+ 	if (($row['kurso']=='CG') && ($row['nunleciono']=='10')) {
+ 		continue;
+ 	}
+ 	if (($row['kurso']=='GR') && ($row['nunleciono']=='25')) {
+ 		continue;
+ 	}
  	$nomo = isset($row["personnomo"])?$row["personnomo"]:$row["enirnomo"];
     echo $row["id"].":".$row["retadreso"]; 
 

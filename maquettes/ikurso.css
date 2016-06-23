@@ -1,0 +1,209 @@
+/*
+Bootswatch paper : http://bootswatch.com/paper	
+	
+*/
+
+/*********************************/
+/*      blocs principaux         */
+/*********************************/
+body {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-content: flex-start;
+	align-items: center;
+	font-family: 'Roboto', sans-serif;	
+	font-weight: 300;
+}
+
+nav.navbar {
+	height: 64px;
+	width: 100%;
+	padding:0 1rem;
+	background-color: #2b98f0;
+}
+
+main {
+	align-self:auto;
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+footer {
+	flex: 0 1 auto;
+	height: 64px;
+	width: 100%;
+	border-top: 1px solid grey;
+	padding:0.5rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/*********************************/
+/*            entête             */
+/*********************************/
+.menuo {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.menuo .ero {
+	color: #b2dbfb;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+a.navbar-brand {
+	color: #b2dbfb;
+}
+
+/*********************************/
+/*           contenu             */
+/*********************************/
+
+article {
+	width: 50%;
+	max-width: 900px;
+	overflow-x: scroll;
+}
+
+aside {
+	width: 30%;
+	max-width:500px;
+}
+
+h1, h2 {
+	color: #444;
+	font-weight: 300;
+}
+h1 {font-size: 3rem;}
+H2 {font-size: 2rem;}
+p {  
+	font-weight: 300;
+	line-height: 1.5;
+	text-align: justify;
+	color: #4a4a4a;
+}
+button {
+	text-transform: uppercase;
+}
+/********** progression dans le cours *******/
+
+ul#lecionoj {
+	padding:0; margin: 0 0 20px 0;
+}
+ul#lecionoj li {
+	display: inline-block;
+	list-style: none;
+	background-color: #FFF;
+	border: solid 1px #dedede;
+	font-size: 12px;
+	font-weight: normal;
+  	margin-right:1px;
+  	padding:0.25em 0.5em;
+}
+ul#lecionoj li.farita {
+	background-color: #2b98f0;
+	border-color: #2b98f0;
+}
+ul#lecionoj li.nuna {
+	background-color:#FFF;
+	border:1px solid #2b98f0;
+}
+ul#lecionoj li a {
+	display: block;
+	color: #4a4a4a;	
+	text-decoration: none;
+}
+ul#lecionoj li:hover {
+	background-color: orange;
+	cursor: pointer;
+}
+ul#lecionoj li.farita a {
+	color: #FFF;
+}
+/********** sommaire de la leçon *******/
+
+ul#enhavtabelo {
+	padding:0; margin: 0;
+}
+ul#enhavtabelo li {
+	list-style: none;
+	padding-left: 20px;
+}
+
+ul#enhavtabelo li.farita {
+}
+ul#enhavtabelo li.nuna {
+}
+
+/********** progression dans la leçon *******/
+
+ul#progreso {
+	padding:0; margin: 0;
+}
+ul#progreso li {
+	display: inline-block;
+	list-style: none;
+	width: 30px;
+	height: 5px;
+	background-color: #dedede;
+	border:1px solid #dedede;
+	margin-right:3px;
+}
+
+ul#progreso li.farita {
+	background-color: #2b98f0;
+	border-color: #2b98f0;
+}
+ul#progreso li.nuna {
+	background-color:#FFF;
+	border:1px solid #2b98f0;
+}
+
+/********** fin de la leçon *******/
+
+div#leciono-fino {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+div#marko {
+}
+div#pagxoj {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top:20px;
+	font-size: 18px;
+	font-weight: 400;
+	color: #9b9b9b;
+
+}
+
+/*********************************/
+/*        pied de page           */
+/*********************************/
+.submenuo {
+	align-self: flex-end;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+}
+.submenuo .ero {
+	color: #444;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0 0.5em;
+}
+
+.informo {
+	align-self: flex-start;
+}

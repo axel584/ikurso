@@ -1,9 +1,11 @@
 <?php
+include "../db.inc.php";
 include "../util.php";
-include "../config.php";
+malfermidatumbazon();
 $query = "SELECT personoj.id,enirnomo,retadreso,personnomo,familinomo,nuna_kurso.kurso,nuna_kurso.nunleciono,lastdato,nuna_kurso.korektanto FROM nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='K' and lastdato=DATE_SUB(CURDATE(), INTERVAL 6 DAY) and stop_rappel='N'";
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
+ 	protokolo($row["id"],"ENVOIE RAPPEL","Envoie d'un message de rappel après 6 jours");
  	// on filtre pour ne pas envoyer de messages aux élèves qui ont envoyé leur dernière leçon
  	if (($row['kurso']=='CG') && ($row['nunleciono']=='10')) {
  		continue;

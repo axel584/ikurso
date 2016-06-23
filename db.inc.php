@@ -8,6 +8,8 @@ function malfermiDatumbazon () {
     global $bdd,$base,$login,$motDePasse;
      $bdd = new PDO('mysql:host=localhost;dbname='.$base.';charset=utf8', $login, $motDePasse);
      $bdd->query('SET lc_time_names = \'fr_FR\''); // Pour avoir les dates en français
+     // A décommenter pour rendre les erreurs sql plus parlante
+     //$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 
 
@@ -375,8 +377,8 @@ function vidiKorektantojn() {
 function protokolo($persono_id,$kategorio,$teksto) {
    global $bdd;
    $ip = $_SERVER['REMOTE_ADDR'];
-   $query = "insert into protokolo(persono_id,horo,ip,kategorio,teksto) values ('$persono_id',now(),'$ip','$kategorio','$teksto')";
-   $bdd->exec($query);
+    $requete = $bdd->prepare('insert into protokolo(persono_id,horo,ip,kategorio,teksto) values (:persono_id,now(),:ip,:kategorio,:teksto)');
+    $requete->execute(array('persono_id'=>$persono_id,'ip'=>$ip,'kategorio'=>$kategorio,'teksto'=>$teksto));
 }
 
 function updateLastEniro($persono_id) {

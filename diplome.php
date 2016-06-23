@@ -9,6 +9,8 @@ if ($kurso=="" || ($kurso!="CG" && $kurso!="GR" && $kurso!="KE")) {
 	// Cours inconnu 
 	header("Location:personinformoj.php?erarkodo=16");
 }
+// ajoute dans le protocole que l'élève regarde son diplome
+protokolo($persono["id"],"DIPLOME",$persono["enirnomo"]." regarde son diplome ".$kurso);
 // vérifier en base que le cours est bien terminé, récupérer le nom-prénom du correcteur, la date de fin et le statut (si le statut!=F => exit)
 $infos = getInfoPorDiplomoElLernanto($persono_id,$kurso);
 if ($infos==null) {

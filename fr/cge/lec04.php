@@ -283,7 +283,7 @@ soigneusement. Votre prononciation s’améliorera petit à petit.
 	<td class="eo">ne&#365;<u>tra</u>la</td><td class="fr">neutre</td>
 </tr>
 <tr>
-	<td class="eo">&#265;i<u>ni</u>o</td><td class="fr">Chine</td>
+	<td class="eo">&#264;i<u>ni</u>o</td><td class="fr">Chine</td>
 	<td class="eo"><u>ja&#293;</u>to</td><td class="fr">yacht</td>
 	<td class="eo"><u>o</u>vo</td><td class="fr">&oelig;uf</td>
 </tr>

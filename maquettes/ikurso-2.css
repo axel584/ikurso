@@ -1,0 +1,184 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+ }
+/*---- surcharge typographie -----*/
+@media only screen and (min-width: 1200px) {
+  html {font-size: 17px;}
+}
+
+h1 {font-size: 3.5rem; margin: 2rem 0 1rem 0;}
+h2 {font-size: 2.5rem;}
+h3 {font-size: 2rem;}
+a {color: #039be5;}
+/****************************************/
+/*           blocs principaux           */
+/****************************************/
+#logo {
+	width:15%;
+	text-align:center;
+}
+main {
+	align-self:auto;
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+footer {
+	flex: 0 1 auto;
+	padding:0.5rem 1rem;
+	margin-top:2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+/*********************************/
+/*           contenu             */
+/*********************************/
+
+article {
+	width: 45%;
+	margin-right:5%;
+}
+
+aside {
+	width: 30%;
+	margin-right:5%;
+}
+/********** progression dans le cours *******/
+
+#superrigardo {
+	margin-bottom:3rem;
+}
+ul#lecionoj {
+	padding:0; margin: 0 0 20px 0;
+}
+ul#lecionoj li {
+	display: inline-block;
+	list-style: none;
+	background-color: #FFF;
+	border: solid 1px #dedede;
+	font-size: 12px;
+	font-weight: normal;
+  	margin-right:1px;
+  	padding:0.25em 0.5em;
+}
+ul#lecionoj li.farita {
+	background-color: #9ccc65;
+	border-color: #9ccc65;
+}
+ul#lecionoj li.nuna {
+	background-color:#FFF;
+	border:1px solid #9ccc65;
+}
+ul#lecionoj li a {
+	display: block;
+	color: #4a4a4a;	
+	text-decoration: none;
+}
+ul#lecionoj li:hover {
+	background-color: #c5e1a5;
+	cursor: pointer;
+}
+ul#lecionoj li.farita a {
+	color: #FFF;
+}
+/********** sommaire de la leçon *******/
+
+#enhavtabelo {
+	width:90%;
+	margin:5% auto;
+}
+#enhavtabelo li {
+	font-size:90%;
+	line-height:1.5em;
+}
+#enhavtabelo li a {
+	color: #607d8b;
+}
+#enhavtabelo li a:hover {
+	color: #039be5;
+}
+#enhavtabelo li a:active {
+	color: #0277bd;
+}
+ul#enhavtabelo li.farita {
+}
+ul#enhavtabelo li.nuna {
+}
+
+/********** vocabulaire de la leçon *******/
+table.vortaro {
+	width:90%;
+	margin:5% auto;
+	font-size:80%;
+}
+
+/********** progression dans la leçon *******/
+
+ul#progreso {
+	padding:0; margin: 0;
+}
+ul#progreso li {
+	display: inline-block;
+	list-style: none;
+	width: 30px;
+	height: 5px;
+	background-color: #dedede;
+	border:1px solid #dedede;
+	margin-right:3px;
+}
+
+ul#progreso li.farita {
+	background-color: #039be5;
+	border-color: #039be5;
+}
+ul#progreso li.nuna {
+	background-color:#FFF;
+	border:1px solid #039be5;
+}
+
+/********** fin de la leçon *******/
+
+.ligoj {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top:20px;
+}
+#marko .visible {display: block;}
+#marko .invisible {display: none;}
+/*********************************/
+/*        pied de page           */
+/*********************************/
+.submenuo {
+	align-self: flex-end;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.submenuo .ero {
+	font-weight: 300;
+	font-size: 80%;
+	margin: 0 1em;
+}
+.submenuo .ero a {
+	color: inherit;
+}
+.asocio {
+	align-self: center;
+	font-size: 80%;
+}
+
+@media only screen and (max-width: 992px) {
+	main {display: block;}
+	article, aside {
+		width: 70%;
+		margin: 0 auto;
+	}
+	.submenuo {align-self: center;}
+}

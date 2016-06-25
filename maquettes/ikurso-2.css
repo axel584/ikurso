@@ -1,8 +1,3 @@
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
- }
 /*---- surcharge typographie -----*/
 @media only screen and (min-width: 1200px) {
   html {font-size: 17px;}
@@ -11,10 +6,15 @@ body {
 h1 {font-size: 3.5rem; margin: 2rem 0 1rem 0;}
 h2 {font-size: 2.5rem;}
 h3 {font-size: 2rem;}
-a {color: #039be5;}
+a {color: #0299e6;}
 /****************************************/
 /*           blocs principaux           */
 /****************************************/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+ }
 #logo {
 	width:15%;
 	text-align:center;
@@ -42,20 +42,27 @@ footer {
 
 article {
 	width: 45%;
-	margin-right:5%;
+	margin-right: 5%;
+	font-weight: 300;
 }
 
 aside {
 	width: 30%;
-	margin-right:5%;
+	margin-right: 5%;
+	margin-top: 6rem;
 }
 /********** progression dans le cours *******/
 
 #superrigardo {
-	margin-bottom:3rem;
+	margin: 0 0 0 15%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: baseline;
 }
+
 ul#lecionoj {
-	padding:0; margin: 0 0 20px 0;
+	padding:0; margin: 0 0 0 1rem;
 }
 ul#lecionoj li {
 	display: inline-block;
@@ -87,6 +94,13 @@ ul#lecionoj li:hover {
 ul#lecionoj li.farita a {
 	color: #FFF;
 }
+
+@media only screen and (max-width: 720px) {
+	#superrigardo {flex-direction: column;}
+	#superrigardo p {margin: 0.5em 0;}
+	ul#lecionoj {margin: 0;}
+}
+
 /********** sommaire de la leçon *******/
 
 #enhavtabelo {
@@ -148,7 +162,15 @@ ul#progreso li.nuna {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin-top:20px;
+	align-items: flex-end;
+	margin-top:0.5em;
+}
+.ligoj a {
+	color: #78909c;
+	font-size: 85%;
+}
+.ligoj a:hover, .ligoj a:active {
+	text-decoration: underline;
 }
 #marko .visible {display: block;}
 #marko .invisible {display: none;}
@@ -182,3 +204,4 @@ ul#progreso li.nuna {
 	}
 	.submenuo {align-self: center;}
 }
+

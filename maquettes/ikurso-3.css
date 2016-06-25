@@ -8,6 +8,7 @@ h1 {font-size: 3.5rem; margin: 2rem 0 1rem 0;}
 h2 {font-size: 2.5rem;}
 h3 {font-size: 2rem;}
 a {color: #0299e6;}
+
 /****************************************/
 /*           blocs principaux           */
 /****************************************/
@@ -20,6 +21,7 @@ body {
 	width:15%;
 	text-align:center;
 	font-family: 'Nothing You Could Do', cursive;
+	letter-spacing: -0.08em;
 }
 main {
 	align-self:auto;
@@ -36,6 +38,22 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+}
+
+/****************************************/
+/*           fenêtres modales           */
+/****************************************/
+
+#konektigxi {
+	left: 0;
+	right: 0;
+	height: 20em;
+	width: 20em;
+}
+.modal h4 {
+	font-size: 2em;
+	line-height: 110%;
+	margin: 1.14rem 0;
 }
 
 /*********************************/
@@ -206,7 +224,7 @@ ul#progreso li.nuna {
 @media only screen and (max-width: 992px) {
 	main {display: block;}
 	article, aside {
-		width: 70%;
+		width: 90%;
 		margin: 0 auto;
 	}
 	.submenuo {align-self: center;}

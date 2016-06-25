@@ -16,6 +16,7 @@
 
     <body>		
 	    
+		<!-- hamburger menu (petits écrans uniquement) -->
 		<ul id="menu_cours" class="dropdown-content">
 			<li><a href="#" class="blue-grey-text">Cours en 10 leçons</a></li>
 			<li><a href="#" class="blue-grey-text">Gerda malaperis</a></li>
@@ -31,6 +32,26 @@
 			<li><a href="#" class="blue-grey-text">Paramétrer son clavier</a></li>
 		</ul>
 
+		<!-- fenêtre modale connexion -->
+		<div id="konektigxi" class="modal">
+			<div class="modal-content">
+				<h4 class="blue-grey-text">Connexion</h4>
+				<form>
+				    <div class="input-field">
+				      <input id="identigilo" type="text" class="validate">
+				      <label for="identigilo">identifiant</label>
+				    </div>
+					<div class="input-field">
+						<input id="pasvorto" type="password" class="validate">
+						<label for="pasvorto">mot de passe</label>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class=" modal-action modal-close waves-effect waves-light-blue btn-flat blue-grey-text">SE CONNECTER</a>
+			</div>
+		</div>
+
 		<div class="navbar-fixed">
 			<nav role="navigation" class="blue-grey lighten-1">
 				<div class="nav-wrapper">
@@ -39,14 +60,19 @@
 						<li><a href="#">L’ESPÉRANTO</a></li>
 						<li><a href="#">COURS EN LIGNE</a></li>
 						<li><a href="#">INFORMATIONS PRATIQUES</a></li>
-						<li><a href="#">CONNEXION</a></li>
 					</ul>
 					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul class="right">
+						<!-- si utilisateur pas connecté -->
+						<li><a href="#konektigxi" class="btn waves-effect waves-light blue-grey lighten-3 modal-trigger" data-activates="konektigxi">CONNEXION</a></li>
+						<!-- si utilisateur connecté -->
+						<li class="hide"><a href="#!" class="btn-floating btn-large waves-effect waves-light blue-grey lighten-3"><i class="large material-icons">perm_identity</i>
+</a></li>
+					</ul>
 					<ul class="right hide-on-med-and-down">
 						<li><a href="#">L’ESPÉRANTO</a></li>
 						<li><a class="dropdown-button " href="#!" data-activates="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
 						<li><a class="dropdown-button" href="#!" data-activates="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>
-						<li><a href="#" class="btn waves-effect waves-light blue-grey lighten-3">CONNEXION</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -167,9 +193,10 @@ Via kanada amiko, Petro.</p>
 			</div>
 		</footer>
     
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+		<script type="text/javascript" src="init.js"></script>
           
     </body>
   </html>

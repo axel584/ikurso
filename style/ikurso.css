@@ -199,7 +199,7 @@ ul#progreso li.nuna {
 @media only screen and (max-width: 992px) {
 	main {display: block;}
 	article, aside {
-		width: 70%;
+		width: 90%;
 		margin: 0 auto;
 	}
 	.submenuo {align-self: center;}

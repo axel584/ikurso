@@ -56,6 +56,28 @@ footer {
 	margin: 1.14rem 0;
 }
 
+#uzantomenuo {
+	height: auto;
+	width: 17em !important;
+	border-radius: 0 0 4px 4px !important;
+	padding:0; margin:0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+#uzantomenuo header p {
+	line-height: auto;
+	text-align: right;
+	line-height: 1.2em;
+	margin-right: 1em;
+	font-size: 90%;
+}
+#uzantomenuo header p.retadreso {
+	font-weight: 300;
+}
+#uzantomenuo  .collection {
+    margin: 0;
+}
 /****************************************/
 /*           hamburger menu             */
 /****************************************/
@@ -72,6 +94,7 @@ footer {
 .side-nav ul ul {
 	padding-left: 2rem;
 }
+
 /*********************************/
 /*           contenu             */
 /*********************************/

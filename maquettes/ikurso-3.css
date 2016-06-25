@@ -56,6 +56,22 @@ footer {
 	margin: 1.14rem 0;
 }
 
+/****************************************/
+/*           hamburger menu             */
+/****************************************/
+
+.side-nav li {
+	line-height: 2rem;
+}
+.side-nav a {
+	font-size: 1rem;
+	height:auto;
+	line-height: 3rem;
+	padding: 0 0.5em;
+}
+.side-nav ul ul {
+	padding-left: 2rem;
+}
 /*********************************/
 /*           contenu             */
 /*********************************/

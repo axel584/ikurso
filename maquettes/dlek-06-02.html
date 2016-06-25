@@ -16,7 +16,7 @@
 
     <body>		
 	    
-		<!-- hamburger menu (petits écrans uniquement) -->
+		<!-- menus déroulants -->
 		<ul id="menu_cours" class="dropdown-content">
 			<li><a href="#" class="blue-grey-text">Cours en 10 leçons</a></li>
 			<li><a href="#" class="blue-grey-text">Gerda malaperis</a></li>
@@ -56,12 +56,31 @@
 			<nav role="navigation" class="blue-grey lighten-1">
 				<div class="nav-wrapper">
 					<a href="#" class="brand-logo" id="logo">iKurso</a>
-					<ul class="side-nav" id="nav-mobile">
-						<li><a href="#">L’ESPÉRANTO</a></li>
-						<li><a href="#">COURS EN LIGNE</a></li>
-						<li><a href="#">INFORMATIONS PRATIQUES</a></li>
-					</ul>
-					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+					<!-- hamburger menu -->
+					<div class="side-nav" id="nav-mobile">
+						<ul>
+							<li><a href="#">L’espéranto</a></li>
+							<li class="divider"></li>
+							<li><a href="#">COURS EN LIGNE</a></li>
+							<ul>
+								<li><a href="#">Cours en 10 leçons</a></li>
+								<li><a href="#">Gerda malaperis</a></li>
+								<li><a href="#">Lasu min paroli plu</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Téléchargements</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Autres cours</a></li>
+							</ul>
+							<li class="divider"></li>
+							<li><a href="#">INFORMATIONS PRATIQUES</a></li>
+							<ul>
+								<li><a href="#">Comment s'inscrire</a></li>
+								<li><a href="#">Foire aux questions</a></li>
+								<li><a href="#">Paramétrer son clavier</a></li>
+							</ul>
+						</ul>
+					</div>
+					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="small material-icons">menu</i></a>
 					<ul class="right">
 						<!-- si utilisateur pas connecté -->
 						<li><a href="#konektigxi" class="btn waves-effect waves-light blue-grey lighten-3 modal-trigger" data-activates="konektigxi">CONNEXION</a></li>

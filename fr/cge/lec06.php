@@ -578,9 +578,8 @@ pas en avant.
 						<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
 					</div>
 					<div class="ligoj">
-						<a href="#!"><i class="material-icons">chevron_left</i>6.1 Révision des conjugaisons</a>
-						<a href="#!">6.3 rappel sur la prononciation<i class="material-icons">chevron_right</i></a>
-						</div>
+						<?php getLecioneroAntauxa('CG',6,$section); ?>
+						<?php getLecioneroVenonta('CG',6,$section); ?>
 					</div>
 				</section>
 

@@ -1,22 +1,16 @@
-<p class="dato">
-ĝisdatigita je : 
-<?php if (isset($gxisdatigDato)) {
-		echo $gxisdatigDato;
-	} else {
-		echo "2016-05-11";
-	}
-?>
-</p>
-<p style="text-align:center">
-	Des commentaires ou des questions à propos de cette page ? <a href="<?=$vojo?>reago.php?q=<?=$pagxtitolo?>">
-					<br />Contactez-nous :					
-					<input type="image" src="<?=$vojo?>bildoj/koverto.gif">
-					</a>
-</p>
-</div> <!-- fin div subpagxo -->
-</div>  <!-- fin div pagxo -->
-<div class="antauxpiedo">&nbsp;</div>
-<div id="piedo">&nbsp;</div>
+		<footer class="blue-grey lighten-5 grey-text">
+			<div class="submenuo">
+				<div class="ero grey-text"><a href="#">QUI SOMMES-NOUS ?</a></div>
+				<div class="ero grey-text"><a href="#">INFORMATIONS</a></div>
+				<div class="ero grey-text"><a href="#">NOUS CONTACTER</a></div>
+			</div>
+			<div class="asocio">
+				Espéranto-France – 4 bis, rue de la Cerisaie, 75004 Paris
+			</div>
+		</footer>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<script src="<?php echo $vojo;?>js/init.js"></script>
 </body>
 </html>  
 <?php ob_flush();?>

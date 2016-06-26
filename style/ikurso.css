@@ -7,6 +7,32 @@ h1 {font-size: 3.5rem; margin: 2rem 0 1rem 0;}
 h2 {font-size: 2.5rem;}
 h3 {font-size: 2rem;}
 a {color: #0299e6;}
+
+p {font-weight: 300;}
+p.chapo {font-size: 150%;}
+
+.btn-flat.small {
+	color: #78909B;
+	text-decoration: underline;
+}
+.btn-flat.small:hover,
+.btn-flat.small:active {
+	color: #0299e6;
+}
+
+.hejmo h2 {
+	color: #828965;
+	font-weight: 300;
+}
+div.col > p:first-child {
+	margin-top:0;
+}
+article p,
+#prezento p {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    line-height: 160%;
+}
 /****************************************/
 /*           blocs principaux           */
 /****************************************/
@@ -18,8 +44,10 @@ body {
 #logo {
 	width:15%;
 	text-align:center;
+	font-family: 'Nothing You Could Do', cursive;
+	letter-spacing: -0.08em;
 }
-main {
+.dlek main {
 	align-self:auto;
 	flex: 1 0 auto;
 	display: flex;
@@ -174,6 +202,33 @@ ul#progreso li.nuna {
 }
 #marko .visible {display: block;}
 #marko .invisible {display: none;}
+
+/**************************************/
+/*        contenu des pages           */
+/**************************************/
+
+/******* home *******/
+.hejmo #enkonduko h2 span {
+	font-family: 'Nothing You Could Do', cursive;
+}
+.hejmo #enkonduko h2 {
+	margin-top: 10rem;
+}
+.hejmo #enkonduko p {
+	font-weight: 300;
+	font-size: 120%;
+}
+
+.hejmo #niaj_kursoj,
+.hejmo #aliaj_kursoj {
+	margin-bottom: 5rem;
+}
+.hejmo #niaj_kursoj h2,
+.hejmo #aliaj_kursoj h2 {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
 /*********************************/
 /*        pied de page           */
 /*********************************/
@@ -203,5 +258,14 @@ ul#progreso li.nuna {
 		margin: 0 auto;
 	}
 	.submenuo {align-self: center;}
+	.hejmo #enkonduko h2 {
+		margin-top: 2rem;
+	}
+
+@media only screen and (max-width: 600px) {
+	.hejmo #enkonduko h2 {
+		margin-top: 0;
+	}
+
 }
 

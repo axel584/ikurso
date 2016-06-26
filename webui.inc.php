@@ -201,4 +201,31 @@ $res.="<h1>".$pagxtitolo."</h1>";
 
 return $res;
 }
+
+function getTitoloLecionero($kurso,$leciono,$lecionero) {
+	global $bdd;
+	$query = "SELECT lecioneroj.titolo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero;
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$titolo = $result->fetch()['titolo'];
+	echo '<h2 id="lec'.$leciono.'.'.$lecionero.'">'.$leciono.'.'.$lecionero.'. '.$titolo.'</h2>';
+}
+
+function getEnhavtabelo($kurso,$leciono) {
+	global $bdd;
+	$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
+	echo '<li>';
+	echo '<div class="collapsible-header"><i class="material-icons">toc</i>Sommaire de la leçon</div>';
+	echo '<div class="collapsible-body">';
+	echo '<ul id="enhavtabelo" class="collection">';
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	while ($row = $result->fetch()) {
+		// TODO : changer les classes farita/nuna/nova
+		echo '<li id="'.$leciono.'-'.$row['ordo'].'" class="farita"><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a></li>';
+	}
+	echo '</ul>';
+	echo '</div>';
+	echo '</li>';
+								
+}
+
 ?>

@@ -228,4 +228,25 @@ function getEnhavtabelo($kurso,$leciono) {
 								
 }
 
+function getLecioneroAntauxa($kurso,$leciono,$lecionero) {
+	global $bdd;
+	$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo<".$lecionero." order by ordo DESC";
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$row = $result->fetch();
+	if ($row!=false) {
+		echo '<a href="'.$row['retpagxo'].'?section='.$row['ordo'].'"><i class="material-icons">chevron_left</i>'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a>';
+	}
+	
+}
+
+function getLecioneroVenonta($kurso,$leciono,$lecionero) {
+	global $bdd;
+	$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo>".$lecionero." order by ordo ASC";
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$row = $result->fetch();
+	if ($row!=false) {
+		echo '<a href="'.$row['retpagxo'].'?section='.$row['ordo'].'"><i class="material-icons">chevron_left</i>'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a>';
+	}
+}
+
 ?>

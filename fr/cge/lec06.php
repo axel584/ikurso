@@ -24,15 +24,14 @@ include "dlekkapo.inc.php";
 					</ul>
 				</section>
 				
-				<section id="leciono-enhavio">
-
+<section id="leciono-enhavio">
 
 <?php 
+getTitoloLecionero('CG',6,$section);
+
+
 if ($section=="1") {
 ?>
-
-<section id="leciono-enhavio">
-<h2 id="lec06.1">6.1. Révision des terminaisons</h2>
 
 <p>Faisons une petite révision des terminaisons vues jusqu’à maintenant&#160;:</p>
 
@@ -54,13 +53,12 @@ if ($section=="1") {
 	<tr><td>Niaj fratinoj</td><td>&#285;oje</td><td>vidis</td><td>viajn instruistojn.</td></tr>
 </table>
 
-</section>
+
 <?php 
 } // fin section 1
 if ($section=="2") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.2">6.2. Comment poser des questions</h2>
+
 
 <p>
 Nous avons vu que, pour transformer une phrase en question, il suffit
@@ -84,13 +82,12 @@ des morcea&#365; spécifiques de la phrase sans utiliser le mot "&#265;u" :
 	<tr><td class="ekz">- <b>Kiam</b> &#349;i trinkas &#265;okoladon&#160;?</td><td>- <b>Matene.</b></td></tr>
 </table>
 <p>
-</section>
+
 <?php 
 } // fin section 2
 if ($section=="3") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.3">6.3. Rappel sur la prononciation</h2>
+
 <p>
 La lettre <em>c</em> se prononce comme <em>ts</em> tout
 comme beaucoup de Québécois prononcent le <em>t</em> devant <em>u</em> et <em>i</em> (<em>tsu</em>
@@ -111,13 +108,12 @@ Notez aussi que "h" est toujours prononcé&#160;:
 	<tr><td>   (avoir)</td><td>(aider)</td><td>(moustache)</td><td>(héroique)</td></tr>
 </table>
 </p>
-</section>
+
 <?php 
 } // fin section 3
 if ($section=="4") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.4">6.4. Révision des corrélatifs</h2>
+
 <p>Voici un petit exercice pour vous remettre en mémoire ce que vous avez appris à 
 la leçon précédente.</p>
 <p>Donnez le sens des corrélatifs suivants :</p>
@@ -136,13 +132,12 @@ la leçon précédente.</p>
 	ekzerco("X", 1);
 ?>
 </div>
-</section>
+
 <?php 
 } // fin section 3
 if ($section=="5") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.5">6.5. Proverbe</h2>
+
 
 <p>à distinguer:</p>
 <table class="voca">
@@ -157,19 +152,18 @@ if ($section=="5") {
 <p><a href="../son/pv6.wav"><img src="../pix/icon20.gif"></a>
 -  Bona estas domo nova kaj amiko malnova.
 </p>
-</section>
+
 <?php 
 } // fin section 5
 if ($section=="6") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.6">6.6. Les prépositions</h2>
+
 <p>
 Les <b>prépositions</b> servent à indiquer le rapport entre deux mots&#160;:
 un verre <b>sur</b> la table... aller à l’école... mettre <b>dans</b> le sac, etc.
 En voici un premier bloc suivi d’un autre plus loin.
 </p>
-<table class="retrait">
+<table class="retrait striped">
 	<tr><td width="50" class="eo">al</td><td class="fr">- à vers (indique le but d’un mouvement ou le bénéficiaire d’une action)</td></tr>
 	<tr><td class="eo">&#265;e</td><td class="fr">- chez, auprès de, tout près de</td></tr>
 	<tr><td class="eo">de</td><td class="fr">- de, à partir de, depuis (temps, lieu)</td></tr>
@@ -181,13 +175,12 @@ En voici un premier bloc suivi d’un autre plus loin.
 	<tr><td class="eo">sub</td><td class="fr">- sous, en-dessous de</td></tr>
 	<tr><td class="eo">sur</td><td class="fr">- sur, au-dessus de (en touchant l’objet)</td></tr>
 </table>
-</section>
+
 <?php 
 } // fin section 6
 if ($section=="7") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.7">6.7. Premier récit et vocabulaire</h2>
+
 
 <p>Lisez le récit suivant en faisant attention à l’usage des prépositions&#160;:</p>
 <p class="meze"><b>Voja&#285;o al Montrealo por la Esperanto-kongreso</b></p>
@@ -202,7 +195,7 @@ if ($section=="7") {
 </blockquote>
 </p>
 <h4>Vocabulaire</h4>
-<table class="voca">
+<table class="voca striped bordered">
 <tr>
 	<td width="12%" class="eo">junularo</td><td width="20%" class="fr">jeunesse</td>
 	<td width="12%" class="eo">partopreni en</td><td width="20%" class="fr">participer à</td>
@@ -235,12 +228,11 @@ reportez-vous au <a href="vocabula.php">lexique général du cours</A>.
 } // fin section 7
 if ($section=="8") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.8">6.8. Prépositions (suite)</h2>
+
 <p>
 Encore des <b>prépositions</b> :
 </p>
-<table class="retrait">
+<table class="retrait striped bordered">
 	<tr><td class="eo" width="50">anstata&#365;</td><td class="fr" width="200">- au lieu de, à la place de</td></tr>
 	<tr><td class="eo">anta&#365;</td><td class="fr">- avant, devant</td></tr>
 	<tr><td class="eo">apud</td><td class="fr">- près de, à c&ocirc;té de</td></tr>
@@ -256,13 +248,12 @@ Encore des <b>prépositions</b> :
 	<tr><td class="eo">super</td><td class="fr">- au-dessus de</td></tr>
 	<tr><td class="eo">tra</td><td class="fr">- à travers, au travers de</td></tr>
 </table>
-</section>
+
 <?php 
 } // fin section 8
 if ($section=="9") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.9">6.9. Second récit et vocabulaire</h2>
+
 <p class="meze"><b>Vizito en zoologia &#285;ardeno</b></p>
 <blockquote><p>
   Kun miaj fratoj mi veturis per a&#365;to al la zoo (<i>zoologia &#285;ardeno</i>). &#285;i estas
@@ -276,7 +267,7 @@ if ($section=="9") {
 
 <h4>Vocabulaire&#160;:</h4>
 
-<table class="voca">
+<table class="voca striped bordered">
 	<tr>
 		<td class="eo" width="90">veturi</td><td class="fr" width="130">aller&nbsp;[1]</td>
 		<td class="eo" width="90">urbo</td><td class="fr" width="130">ville</td>
@@ -316,8 +307,7 @@ if ($section=="9") {
 } // fin section 9
 if ($section=="10") {
 ?>
-<section id="leciono-enhavio">
-<h2>Exercices - sixième leçon, 2<sup>ème</sup> partie</h2>
+
 <p>Répondez en espéranto aux questions suivantes, selon les deux récits ci-dessus :</p>
 <input type="hidden" name="013_cxap06.2" value="2. Répondez en espéranto aux questions suivantes, selon les deux récits ci-dessus.">
 <?php atentigo(); ?>
@@ -343,15 +333,13 @@ if ($section=="10") {
 } // fin section 3
 if ($section=="11") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.11">6.11. Traduction de "il y a"  </h2>
 
 <p>
 On emploie tout simplement le verbe "esti" et, en général, on met le sujet
 après le verbe :
 </p>
 
-<table class="retrait">
+<table class="retrait striped bordered">
 	<tr><td class="ekz">Estas pano en la butiko</td><td> = </td><td>"Il y a du pain dans la boutique"</td></tr>
 	<tr><td class="ekz">Estas urso en la ka&#285;o</td><td> = </td><td>"Un ours est dans la cage", "Il y a un ours dans la cage"</td></tr>
 </table>
@@ -388,14 +376,11 @@ après le verbe :
 	<input type='text' size='70' name="res_ekz06_22a" onkeyup='xAlUtf8(this)' value=""></p>
 	<p><input type='text' size='70' name="res_ekz06_22b" value=""></p>
 </div>
-</section>
+
 <?php 
 } // fin section 11
 if ($section=="12") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.12">6.12. Complément d'objet indirect</h2>
-
 <p>
 Nous avons vu dans la deuxième leçon la façon d’indiquer le
 complément d’objet <i>direct</i> par la terminaison <b>-n</b>&#160;: &#171;Birdo kaptas
@@ -416,22 +401,17 @@ Généralement le complément indirect est introduit par une préposition et
 dans ce cas il ne prend pas la terminaison de l’accusatif.
 </p>
 
-</section>
-
 <?php 
 } // fin section 12
 if ($section=="13") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.13">6.13. L’accusatif peut remplacer certaines prépositions</h2>
-
 <p>
 L’espéranto se veut clair et concis. Aussi pouvez-vous remplacer, dans
 certains cas, une préposition par la forme de l’accusatif -- pour
 indiquer le but du mouvement, le temps, la mesure ou le prix.
 </p>
 <p>Exemples :</p>
-<table class="retrait">
+<table class="retrait striped bordered">
 	<tr class="ekz"><td>Mi veturas al Montrealo<br/><span class="fr"><i>ou</i></span><br>Mi veturas Montrealon</td><td class="fr">(Je vais à Montréal)</td></tr>
 	<tr class="ekz"><td class="fr"><center>-:-:-:-:-:-</center></td><td><center>-:-:-:-:-:-</center></td><td></td></tr>
 	<tr class="ekz"><td>Mi voja&#285;is dum unu semajno<br/><span class="fr"><i>ou</i></span><br/>Mi voja&#285;is unu semajnon</td><td class="fr">(J’ai voyagé [pendant] une semaine)</td></tr>
@@ -444,20 +424,17 @@ indirects s’il n’y a pas de risque de confusion avec un complément
 d’objet direct.
 </p>
 
-<table class="retrait">
+<table class="retrait striped bordered">
 	<tr class="ekz"><td>&#348;i multe helpis al mi<br/><span class="fr"><i>ou</i></span><br/>&#348;i multe helpis min</td><td class="fr">(Elle m’a beaucoup aidé)</td></tr>
 	<tr class="ekz"><td class="fr"><center>-:-:-:-:-:-</center></td><td><center>-:-:-:-:-:-</center></td><td></td></tr>
 	<tr class="ekz"><td>Mi demandos al li pri tio<br/><span class="fr"><i>ou</i></span><br/>Mi demandos lin pri tio<br/><span class="fr"><i>ou</i></span><br/>Mi demandos tion al li</td><td class="fr">(Je lui demanderai cela, je l’interrogerai à ce sujet)</td></tr>
 </table>
 
-</section>
 
 <?php 
 } // fin section 13
 if ($section=="14") {
 ?>
-
-<h2 id="lec06.13">Exercices - sixième leçon, 4<sup>ème</sup> partie</h2>
 <p>Remplacez la préposition des phrases suivantes par la forme "n" de
 l’accusatif.<br>Ex.:  Vi similas al via patro. --> Vi similas vian patron.</p>
 <input type="hidden" name="013_cxap06.4" value="4. Remplacez la préposition des phrases suivantes par la forme &quot;n&quot; de l’accusatif.">
@@ -507,13 +484,10 @@ Si une de ces prépositions est <em>al</em> -- qui indique le but d’un mouveme
   Montrealon.&#187; mais jamais &#171;Ni veturas <s>al Montrealon</s>.&#187; qui serait un
   pléonasme.</p>
 </div>
-</section>
  <?php 
 } // fin section 14
 if ($section=="15") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.14">6.14. Adverbes de lieu indiquant le mouvement</h2>
 <p>
 La question correspondant à ce complément de lieu avec mouvement sera
 naturellement <em>kien&#160;?</em>, c’est-à-dire <em>kie&#160;?</em> avec la terminaison
@@ -549,8 +523,6 @@ montrer le but d’un mouvement en prenant la terminaison d’accusatif.
 } // fin section 15
 if ($section=="16") {
 ?>
-<section id="leciono-enhavio">
-<h2>Exercices - sixième leçon, 5<sup>ème</sup> partie</h2>
 <p>Récapitulation des différents emplois de l’accusatif&#160;:</p>
 <ol>
   <li>complément d’objet direct, 
@@ -571,14 +543,10 @@ Ex: &#348;i* a&#265;etas &#349;uoj* al la infanoj* -> &#348;i a&#265;etas &#349;
 	ekzerco("U", 5);
 ?>
 </div>
-</section>
 <?php 
 } // fin section 17
 if ($section=="17") {
 ?>
-<section id="leciono-enhavio">
-<h2 id="lec06.17">6.17. &Eacute;pilogue</h2>
-
 <p>
 Ouf&#160;! Cette leçon était bien longue. Toutefois elle consiste
 essentiellement en un approfondissement de notions déjà connues et
@@ -594,11 +562,14 @@ nécessairement assimilé tout le vocabulaire que nous vous avons
 présenté mais vous sentez bien qu’à chaque leçon vous faites un grand
 pas en avant.
 </p>
-	</section>
+
 
 <?php 
 } // fin section 17
 ?>	
+</section>
+
+
 				
 				<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le précédent et le suivant -->
 				<section id="leciono-fino">
@@ -617,28 +588,13 @@ pas en avant.
 			</article>
 			
 			<aside>
-				<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le sommaire -->
+				
 				<ul class="collapsible" data-collapsible="expandable">
-					<li>
-						<div class="collapsible-header"><i class="material-icons">toc</i>Sommaire de la leçon</div>
-						<div class="collapsible-body">
-							<ul id="enhavtabelo" class="collection">
-								<li id="06-01" class="farita"><a href="#">6.1 Révision des terminaisons</a></li>
-								<li id="06-01" class="farita"><a href="#">6.2 Comment poser des questions</a></li>
-								<li id="06-02" class="farita"><a href="#">6.3 Rappel sur la prononciation</a></li>
-								<li id="06-03" class="farita"><a href="#">6.4 Révision des corrélatifs</a></li>
-								<li id="06-04" class="farita"><a href="#">6.5 Les prépositions</a></li>
-								<li id="06-05" class="nuna"><a href="#">6.6 Premier récit et vocabulaire</a></li>
-								<li id="06-06" class="nova"><a href="#">6.7 Prépositions (suite)</a></li>
-								<li id="06-07" class="nova"><a href="#">6.10 Second récit et vocabulaire</a></li>
-								<li id="06-08" class="nova"><a href="#">6.11 Exercices 2e partie</a></li>
-								<li id="06-09" class="nova"><a href="#">6.12 L’accusatif peut remplacer certaines prépositions</a></li>
-								<li id="06-10" class="nova"><a href="#">6.13 Adverbes de lieu indiquant le mouvement</a></li>
-								<li id="06-11" class="nova"><a href="#">6.14 Exercices, 5e partie</a></li>
-								<li id="06-12" class="nova"><a href="#">6.15 Épilogue, envoi des exercices</a></li>
-							</ul>
-						</div>
-					</li>
+
+					<?php 
+					// On affiche le sommaire de la lecon
+					getEnhavtabelo('CG',6); 
+					?>
 
 					<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->
 

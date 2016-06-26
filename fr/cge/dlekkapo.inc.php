@@ -1,6 +1,7 @@
 <?php
 include_once "../../util.php";
 $kurso="CG";
+$korpo="dlek";
 $vojo="../../";
 include_once ("../../fr.inc.php");
 include_once ("../../db.inc.php");

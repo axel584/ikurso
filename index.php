@@ -1,6 +1,7 @@
 <?php
 include "util.php";
-$pagxtitolo="Bienvenue sur le site d’ikurso !";
+$pagxtitolo="Bienvenue sur le site d’iKurso !";
+$korpo="hejmo";
 $gxisdatigDato="2016-01-21";
 malfermiDatumbazon();
 $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
@@ -17,91 +18,121 @@ if ($persono_id) {
 }
 include "pagxkapo.inc.php";
 ?>
-	<div id="enhavo">
-		<p>L’association <a href="http://esperanto-jeunes.org">Espéranto-Jeunes</a> propose trois cours par Internet,  
-		pour lesquels elle a mis en place un service de correction gratuit :</p>
-
-		<table class="prezento hejmo">
-			<tr>
-			<td colspan=2><h3>2 Cours pour débutants :</h3></td>
-			<td><h3>1 Cours avancé :</h3></td> 
-			</tr>
-			<tr>
-				<td class="txt">
-					<h3><a href="http://ikurso.net">Logiciel : Kurso de Esperanto</a></h3>
-					<div align="center">
-					<a href="http://ikurso.net"><img src="bildoj/ikurso.jpg" alt="ikurso" title="cliquez ici pour en savoir plus"></a>		
-					</div>
-					<h4>Logiciel multimédia pour Windows, Linux et Mac, idéal pour débuter.</h4>
-					
-					<p>En 12 leçons, vous apprendrez les bases de l’espéranto de manière 
-					agréable et ludique. En vous inscrivant, vous pourrez suivre ce cours en compagnie 
-					d’un tuteur qui corrigera vos exercices.</p> 
-					<p>Le cours est téléchargeable <a href="http://www.kurso.com.br">ici</a>.</p>
-				</td>
-				<td class="txt">
-					<h3><a href="fr/cge/">Cours en dix leçons en ligne</a></h3>
-					<div align="center">
-					<a href="fr/cge/"><img src="bildoj/cge.jpg" alt="cge" title="cliquez ici pour en savoir plus"></a>
-					</div>
-					<h4>Cours en ligne pour débutants</h4>
-					
-					<p>Ce cours s’adresse également aux débutants. 
-					Il se présente sous forme de pages web alternant explications et exercices.</p>
-					<p>L’inscription pour recevoir un correcteur se trouve à la fin de la 
-					première leçon.</p>			
-				</td>
-				<td class="txt">
-					<h3><a href="fr/gerda/">Gerda malaperis</a></h3>
-					<div align="center">
-					<a href="fr/gerda/"><img src="bildoj/gerda.jpg" alt="gerda" title="cliquez ici pour en savoir plus"></a>
-					</div>
-					<h4>Ce roman policier est l’outil idéal pour continuer à progresser en espéranto.</h4>
-					<p>Il s’adresse à ceux qui connaissent déjà 
-					les bases de l’espéranto et fait suite aux cours précédents.</p>
-					<p>L’inscription pour recevoir un correcteur se trouve à fin de la première leçon. 
-					En parallèle, lisez aussi les récits de <a href="fr/gerda/lasu00.php"><i>Lasu min paroli plu!</i></a></p>
-					<br/>
-				</td>
-			</tr>
-			<tr>
-				<td colspan=3><h3>Il existe d'autres cours pour apprendre l'espéranto parmi lesquels nous vous recommandons :</h3></td>
-			</tr>
-			<tr>
-			<td>
-			<?php 
-			$departement=isset($_GET["departement"])?$_GET["departement"]:"";
-			$remote_host = isset($_SERVER['REMOTE_HOST'])?$_SERVER['REMOTE_HOST']:"";
-			echo file_get_contents('http://esperanto-jeunes.org/local/ikurso.php?departement='.$departement."&host=".$remote_host); 
-			?>
-			</td>
+	<main>
+		<section id="enkonduko">
+			<div class="row">
+				<div class="col s12 m5 l6">
+					<img src="<?=$vojo?>bildoj/robin-2012.jpg" alt="© Robin Guinin" class="responsive-img">
+				</div>
+				<div class="col s12 m7 l5">
+					<h2>Bienvenue sur <span>iKurso</span></h2>
+					<p>Ici, vous pourrez découvrir ce qu’est la langue internationale Espéranto.<br> 
+						Vous pourrez également l’apprendre en suivant nos cours, à votre rythme.<br>
+						Pour mieux vous aider, l’association Espéranto-France vous propose un service de correction gratuit. Pour en bénéficier, il suffit de vous inscrire.</p>
+						<p class="center"><a href="#" class="btn waves-effect waves-light blue">créer un compte</a></p>
+						<p class="center"><a href="#prezento" class="btn-flat small">en savoir plus<i class="material-icons right">arrow_drop_down</i></a></p>
+				</div>
+			</div>
+		</section>
+		
+		<section id="niaj_kursoj">
+			<h2>Nos cours en ligne</h2>
 			
-				<td colspan="2">
-					<h3><a href="http://www.lernu.net"><i>lernu!</i></a></h3>
-					<a href="http://www.lernu.net"><img src="bildoj/lernu.png" alt="lernu" align="left" border=0 /></a>
-					<p>Cet autre site, géré par une équipe internationale, est traduit en plus de vingt
-					langues.<br>Il s’adresse à ceux qui veulent faire connaissance avec l’espéranto, 
-					l’apprendre ou le pratiquer. Vous y trouverez des cours, des dictionnaires, 
-					des lectures, des jeux, des correspondants...</p>
-					<form name="lernu" action="http://www.lernu.net" method="post">
-					<div align="right"><input class="bouton" type="submit" name="Submit" value="Aller sur lernu!"></div></form>
-				</td>
-			</tr>
-		</table>
-	</div>
-	<?php if ($erarkodo=="1") { // mot de passe incorrect : on propose d'envoyer son mot de passe par mail
-	echo '<div class="atentigo"><form target="_NEW" name="pasvorto" method="post" action="pasvortoforgesita2.php">';
-	echo '<p class="eraro">Le mot de passe ou l’identifiant est erroné.</p>';
-	echo '<p class="eraro">Pour recevoir votre mot de passe, <br/>indiquez votre adresse &eacute;lectronique :<br/><input type="text" name="retadreso" size="60"></p><input class="bouton" type="submit" value="Valider">';
-	echo '</form></div>';
-	}
-	?>
-	<?php if ($erarkodo=="4") echo "<div class='atentigo'><p class='eraro'>Vous n’avez pas les droits pour accéder à cette page.</p></div>"; ?>
-	<?php if ($erarkodo=="8") {
-		if ($_COOKIE["PHPSESSID"]=="") {echo "<div class='atentigo'><p class='eraro'>Vous devez activer les cookies pour utiliser ce site.</p></div>";}
-		else {echo "<div class='atentigo'><p class='eraro'>Votre session a expiré, veuillez vous identifier.</p></div>";}
-	}
-	?>
-	<?php if ($erarkodo=="12") echo "<div class='atentigo'><p class='eraro'>Vous êtes déjà inscrit - essayez de vous connecter, merci.</p></div>"; ?>
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m4 l4">
+						<h5>Cours en 10 leçons</h5>
+						<p>Cours d’espéranto pour débutants. À suivre avec l’aide d'un correcteur ou en totale autonomie.</p>
+						<p><a href="#" class="btn waves-effect waves-light blue">voir le cours</a></p>
+					</div>
+						
+					<div class="col s12 m4 l4">
+						<h5>Gerda malaperis</h5>
+						<p>Pour ceux qui connaissent déjà les bases de l’espéranto, par exemple après le cours en 10 leçons. </p>
+						<p><a href="#" class="btn waves-effect waves-light blue">voir le cours</a></p>
+					</div>
+						
+					<div class="col s12 m4 l4">
+						<h5>Lasu min paroli plu</h5>
+						<p>Recueil de textes à lire en parallèle du cours Gerda malaperis. Permet de revoir les notions abordées dans le cours.</p>
+						<p><a href="#" class="btn waves-effect waves-light blue">voir le cours</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<section id="aliaj_kursoj">
+			<h2>Autres cours</h2>
+			
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m6 l6">
+						<h5>Kurso de Esperanto</h5>
+						<p>Logiciel multimédia pour Windows, Linux et Mac OSX.<br>
+						En 12 leçons vous apprendrez les bases de l’espéranto.</p>
+						<p><a href="#" class="btn-flat small">en savoir plus</a></p>
+					</div>
+				
+					<div class="col s12 m6 l6">
+						<h5>lernu.net</h5>
+						<p>Autre site, traduit dans plus de 20 langues.<br>
+						Pour ceux qui veulent découvrir l’espéranto, l’apprendre ou le pratiquer.</p>
+						<p><a href="http://www.lernu.net" class="btn-flat small">aller sur lernu.net</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="prezento">
+			<div class="row">
+				<div class="col s12 m10 offset-m1">
+					<h2>L’espéranto, qu’est-ce que c’est ?</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m8 offset-m1">
+					<p>L’espéranto, la Langue Internationale, est une langue destinée à faciliter la communication entre des personnes de différentes cultures. Son auteur, le docteur L. L. Zamenhof (1859-1917) publia sa « Lingvo Internacia » en 1887 sous le pseudonyme de « Docteur Esperanto ». On estime que l’espéranto est maintenant parlé par au moins deux millions de personnes dans plus de 100 pays. Il y a des milliers de livres et plus de 100 revues différentes paraissent régulièrement. Mais qu’est-ce qui en fait une langue plus internationale que le français, l’anglais ou le russe ?</p>
+					<p>L’espéranto est une langue construite (le terme « artificiel » est plutôt impropre), particulièrement destinée à un usage international / interculturel, afin que ceux qui l’utilisent puissent dialoguer sur un pied d’égalité, dans la mesure où aucun n’utilise sa langue natale. Avec les langues nationales, un individu normal n’est pas capable de s’exprimer aussi bien dans une langue étrangère que celui dont c’est la langue maternelle, à moins d’être expert. Alors que grâce à sa construction simple, logique et régulière, chacun peut apprendre l’espéranto très rapidement.</p>
+				</div>
+				<div class="col s12 m2">
+					<img src="<?php echo $vojo;?>bildoj/unua-libro.jpg" class="responsive-img">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12 m10 offset-m1">
+					<h2>Une langue vivante</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m4 offset-m1">
+					<img src="<?php echo $vojo;?>bildoj/vivanta-lingvo.jpg" class="responsive-img">
+				</div>
+				<div class="col s12 m6">
+					<p>L’espéranto s’utilise comme n’importe quelle autre langue. Néanmoins, il est plus facile à apprendre qu’une langue nationale. Même ceux qui n’arrivent pas à se souvenir d’un mot dans une langue qu’ils ont étudiée plusieurs années à l’école ou à l’université n’auront besoin que de quelques mois d’étude intensive pour parler couramment l’espéranto. L’espéranto est aussi plus utile qu’une langue nationale si votre but en apprenant une langue est de connaître des gens un peu partout dans le monde, puisque presque tout le monde l’a appris pour cette même raison.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m10 offset-m1">
+					<p>L’espéranto n’existe que depuis une centaine d’années ; il est donc la plus moderne des langues vivantes. Introduit d’abord en Europe, l’espéranto sert aujourd’hui aux échanges à l’échelle mondiale. En plus, il constitue une préparation idéale à l’étude d’une seconde langue en général et vous fait mieux apprécier le sens exact des mots de votre propre langue.</p>
+				</div>
+			</div>
+		</section>
+		
+		<section id="konkludo">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<div class="card-panel blue lighten-5 center">
+							<h5>Je veux apprendre l’espéranto&nbsp;!</h5>
+							<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
+							<p><a href="#" class="btn waves-effect waves-light blue">créer un compte</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+	
 <?php include "pagxpiedo.inc.php";?>

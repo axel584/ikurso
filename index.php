@@ -29,7 +29,7 @@ include "pagxkapo.inc.php";
 					<p>Ici, vous pourrez découvrir ce qu’est la langue internationale Espéranto.<br> 
 						Vous pourrez également l’apprendre en suivant nos cours, à votre rythme.<br>
 						Pour mieux vous aider, l’association Espéranto-France vous propose un service de correction gratuit. Pour en bénéficier, il suffit de vous inscrire.</p>
-						<p class="center"><a href="#" class="btn waves-effect waves-light blue">créer un compte</a></p>
+						<p class="center"><a href="aligxi.php" class="btn waves-effect waves-light blue">créer un compte</a></p>
 						<p class="center"><a href="#prezento" class="btn-flat small">en savoir plus<i class="material-icons right">arrow_drop_down</i></a></p>
 				</div>
 			</div>
@@ -83,7 +83,7 @@ include "pagxkapo.inc.php";
 			</div>
 		</section>
 		
-		<section id="prezento">
+		<section id="prezento" class="scrollspy">
 			<div class="row">
 				<div class="col s12 m10 offset-m1">
 					<h2>L’espéranto, qu’est-ce que c’est ?</h2>
@@ -126,7 +126,7 @@ include "pagxkapo.inc.php";
 						<div class="card-panel blue lighten-5 center">
 							<h5>Je veux apprendre l’espéranto&nbsp;!</h5>
 							<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
-							<p><a href="#" class="btn waves-effect waves-light blue">créer un compte</a></p>
+							<p><a href="aligxi.php" class="btn waves-effect waves-light blue">créer un compte</a></p>
 						</div>
 					</div>
 				</div>

@@ -7,8 +7,11 @@
        		dataType : 'json',
        		data : 'identigilo='+$( "#identigilo" ).val()+"&pasvorto="+$( "#pasvorto" ).val(),
        		success : function(reponse, statut){ 
-           		if (reponse!="ok") {
-           			alert("problème");
+           		if (reponse.mesagxo!="ok") {
+           			$("#identigilo").attr('data-error',reponse.mesagxo);
+           			$("#pasvorto").attr('data-error',reponse.mesagxo);
+           			$("#pasvorto").addClass("invalid");
+
            		}
        		},
        		error : function() {

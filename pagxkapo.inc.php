@@ -23,7 +23,7 @@ $subjekto=$pagxo[count($pagxo)-1];
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
     </head>
 
-    <body class="<?php echo $korpo;?>">		
+    <body class="<?php echo $korpo;?>">	
 	    
 		<!-- menus déroulants -->
 		<ul id="menu_cours" class="dropdown-content">
@@ -47,7 +47,7 @@ $subjekto=$pagxo[count($pagxo)-1];
 				<h4 class="blue-grey-text">Connexion</h4>
 				<form>
 				    <div class="input-field">
-				      <input id="identigilo" type="text" class="validate">
+				      <input id="identigilo" type="text" class="validate" data-error="Prout !">
 				      <label for="identigilo">identifiant</label>
 				    </div>
 					<div class="input-field">
@@ -57,7 +57,7 @@ $subjekto=$pagxo[count($pagxo)-1];
 				</form>
 			</div>
 			<div class="modal-footer">
-				<a href="#!" class=" modal-action modal-close waves-effect waves-light-blue btn-flat blue-grey-text">SE CONNECTER</a>
+				<a id="connection_button" class=" modal-action waves-effect waves-light-blue btn-flat blue-grey-text">SE CONNECTER</a>
 			</div>
 		</div>
 

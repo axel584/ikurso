@@ -8,10 +8,17 @@
        		data : 'identigilo='+$( "#identigilo" ).val()+"&pasvorto="+$( "#pasvorto" ).val(),
        		success : function(reponse, statut){ 
            		if (reponse.mesagxo!="ok") {
-           			$("#identigilo").attr('data-error',reponse.mesagxo);
-           			$("#pasvorto").attr('data-error',reponse.mesagxo);
-           			$("#pasvorto").addClass("invalid");
-
+           			if (reponse.type=="identigilo") {
+           				$("label[for='identigilo']").attr('data-error',reponse.mesagxo);
+           				$("#identigilo").addClass("invalid");
+           			}
+           			if (reponse.type=="pasvorto") {
+           				$("label[for='pasvorto']").attr('data-error',reponse.mesagxo);
+           				$("#pasvorto").addClass("invalid");	
+           			}
+           			return false;
+           		} else {
+           			window.location = reponse.url;
            		}
        		},
        		error : function() {

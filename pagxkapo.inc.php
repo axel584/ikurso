@@ -12,7 +12,6 @@ $subjekto=$pagxo[count($pagxo)-1];
 		<!--Import Google Icon Font-->
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,600,600italic,700italic,700' rel='stylesheet' type='text/css'>
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&subset=latin-ext" rel="stylesheet">		
 		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
 		
 		<!--Import materialize.css-->

@@ -160,3 +160,7 @@ CREATE TABLE personoj_lecioneroj (
 PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
 -- modification pour gérer la validation d'une inscription
 ALTER TABLE personoj ADD COLUMN `aktivigo` varchar(40) DEFAULT NULL;
+ALTER TABLE personoj ADD COLUMN `aktivigita` BOOL NOT NULL DEFAULT  '0';
+ALTER TABLE personoj ADD COLUMN `pasvorto_md5` varchar(40) DEFAULT NULL;
+update personoj set pasvorto_md5=MD5(pasvorto);
+update personoj set aktivigita='1'; -- pour rendre "actif" tous les comptes déjà existant

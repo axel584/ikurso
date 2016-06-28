@@ -5,7 +5,7 @@ $pasvorto=isset($_GET['pasvorto'])?$_GET['pasvorto']:"";
 
 $respondo = array();
 
-$query = "select aktivigita,pasvorto_md5 from personoj where enirnomo='".$identigilo."'";
+$query = "select id,aktivigita,pasvorto_md5 from personoj where enirnomo='".$identigilo."'";
 $result = $bdd->query($query);
 if (!$row = $result->fetch()) { // aucune ligne retournée
 	$respondo["mesagxo"]="Identifiant introuvable, cliquez sur le bouton <Créer un compte>";
@@ -21,8 +21,10 @@ else {
 			$respondo["type"]="pasvorto";
 		} else {
 			$respondo["mesagxo"] = "ok";
+			// on memorise l'id en session :
+			$_SESSION["persono_id"]=$row["id"];
 			// trouver l'url où l'on doit atterir
-			$respondo["url"]="http://google.com";
+			$respondo["url"]="administri.php";
 		}
 	}
 

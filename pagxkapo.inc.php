@@ -47,8 +47,8 @@ $subjekto=$pagxo[count($pagxo)-1];
 				<h4 class="blue-grey-text">Connexion</h4>
 				<form>
 				    <div class="input-field">
-				      <input id="identigilo" type="text" class="validate" data-error="Prout !">
-				      <label for="identigilo">identifiant</label>
+				      <input id="identigilo" type="text" class="validate" required="" aria-required="true">
+				      <label id="identigilo_label" for="identigilo">identifiant</label>
 				    </div>
 					<div class="input-field">
 						<input id="pasvorto" type="password" class="validate">

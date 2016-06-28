@@ -795,4 +795,4 @@ include "adminkapo.inc.php";
 
 					<!-- fino de la administra parto -->
 				</div>
-<?php include "pagxpiedo.inc.php"; ?>
+<?php include "pagxpiedo-old.inc.php"; ?>

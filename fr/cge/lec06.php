@@ -328,9 +328,9 @@ if ($section=="10") {
 	ekzerco("U", 1);
 ?>
 </div>
-</section>
+
 <?php 
-} // fin section 3
+} // fin section 10
 if ($section=="11") {
 ?>
 
@@ -345,7 +345,12 @@ après le verbe :
 </table>
 </p>
 
-<h3>Exercices - sixième leçon, 3<sup>ème</sup> partie</h3>
+<?php 
+} // fin section 11
+if ($section=="12") {
+?>
+
+
 <p>Formez des phrases avec les mots suivants puis traduisez-les en français :</p>
 <input type="hidden" name="013_cxap06.3" value="3. Formez des phrases avec les mots suivants puis traduisez-les en français.">
 <?php atentigo();	?>
@@ -378,8 +383,8 @@ après le verbe :
 </div>
 
 <?php 
-} // fin section 11
-if ($section=="12") {
+} // fin section 12
+if ($section=="13") {
 ?>
 <p>
 Nous avons vu dans la deuxième leçon la façon d’indiquer le
@@ -402,8 +407,8 @@ dans ce cas il ne prend pas la terminaison de l’accusatif.
 </p>
 
 <?php 
-} // fin section 12
-if ($section=="13") {
+} // fin section 13
+if ($section=="14") {
 ?>
 <p>
 L’espéranto se veut clair et concis. Aussi pouvez-vous remplacer, dans
@@ -432,8 +437,8 @@ d’objet direct.
 
 
 <?php 
-} // fin section 13
-if ($section=="14") {
+} // fin section 14
+if ($section=="15") {
 ?>
 <p>Remplacez la préposition des phrases suivantes par la forme "n" de
 l’accusatif.<br>Ex.:  Vi similas al via patro. --> Vi similas vian patron.</p>
@@ -485,8 +490,8 @@ Si une de ces prépositions est <em>al</em> -- qui indique le but d’un mouveme
   pléonasme.</p>
 </div>
  <?php 
-} // fin section 14
-if ($section=="15") {
+} // fin section 15
+if ($section=="16") {
 ?>
 <p>
 La question correspondant à ce complément de lieu avec mouvement sera
@@ -520,8 +525,8 @@ montrer le but d’un mouvement en prenant la terminaison d’accusatif.
 </table>
 </section>
 <?php 
-} // fin section 15
-if ($section=="16") {
+} // fin section 16
+if ($section=="17") {
 ?>
 <p>Récapitulation des différents emplois de l’accusatif&#160;:</p>
 <ol>
@@ -545,7 +550,7 @@ Ex: &#348;i* a&#265;etas &#349;uoj* al la infanoj* -> &#348;i a&#265;etas &#349;
 </div>
 <?php 
 } // fin section 17
-if ($section=="17") {
+if ($section=="18") {
 ?>
 <p>
 Ouf&#160;! Cette leçon était bien longue. Toutefois elle consiste
@@ -597,7 +602,7 @@ pas en avant.
 
 					<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->
 
-					<li>
+					<!--<li>
 						<div class="collapsible-header"><i class="material-icons">library_books</i>Vocabulaire de la leçon</div>
 						<div class="collapsible-body">
 							<table class="vortaro bordered striped responsive-table">
@@ -633,7 +638,7 @@ pas en avant.
 								<tr><td>halt/i</td><td>s’arrêter</td></tr>
 							</table>			
 						</div>
-					</li>
+					</li> -->
 				</ul>	
 				
 			</aside>

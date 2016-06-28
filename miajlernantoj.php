@@ -241,7 +241,7 @@ function listiEksStudantojn() {
 			echo "<p>Aucun élève</p>";
 	}
 }
-include "pagxkapo.inc.php";
+include "pagxkapo-old.inc.php";
 ?>
 		<div id="enhavo">
 			<ul id="tabnav">
@@ -267,5 +267,5 @@ include "pagxkapo.inc.php";
 			}
 			?>
 		</div>
-<?php include "pagxpiedo.inc.php";?>                
+<?php include "pagxpiedo-old.inc.php";?>                
 

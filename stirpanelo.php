@@ -246,7 +246,7 @@ function listi_erarajMesagxoj() {
 		echo "</tbody></table>";
 }
 
-include "pagxkapo.inc.php";
+include "pagxkapo-old.inc.php";
 ?>
 		<div id="enhavo">
 		<ul id="tabnav">
@@ -326,4 +326,4 @@ include "pagxkapo.inc.php";
 			<?php listi_erarajMesagxoj(); ?>
 			<?php } ?>
 		</div>
-<?php include "pagxpiedo.inc.php"?>                    
+<?php include "pagxpiedo-old.inc.php"?>                    

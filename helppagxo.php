@@ -4,7 +4,7 @@ $pagxtitolo="Guide du correcteur";
 $temo=isset($_GET["temo"])?$_GET["temo"]:"";
 if ($temo=="") {$temo="inscription";}
 if (isset($celpersono_id)) {$celpersono = apartigiPersonon($celpersono_id);}
-include "pagxkapo.inc.php";
+include "pagxkapo-old.inc.php";
 ?>
 		<div id="enhavo">
 			<ul id="tabnav">
@@ -339,4 +339,4 @@ include "pagxkapo.inc.php";
 				</div>
 		</div>
 	</div>
-<?php include "pagxpiedo.inc.php"; ?>
+<?php include "pagxpiedo-old.inc.php"; ?>

@@ -121,4 +121,4 @@ function stat_seksoj() {
 			<h2>Répartition par sexe :</h2>
 			<?php stat_seksoj(); ?>
 		</div>
-<?php include "pagxpiedo.inc.php";?>
+<?php include "pagxpiedo-old.inc.php";?>

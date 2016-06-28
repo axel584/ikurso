@@ -51,7 +51,7 @@ CREATE TABLE takso_leciono (
 `malfacileco` INT NOT NULL , 
 `komento` TEXT NOT NULL , 
 PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
-CREATE TABLE `ikurso`.`lecioneroj` ( `id` INT AUTO_INCREMENT , `leciono_id` INT , `titolo` TEXT , `tipo` ENUM('VORTARO','QCM','TEKSTO','EKZERCARO') NULL , `enhavo` TEXT NULL , `ordo` INT, PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+CREATE TABLE `lecioneroj` ( `id` INT AUTO_INCREMENT , `leciono_id` INT , `titolo` TEXT , `tipo` ENUM('VORTARO','QCM','TEKSTO','EKZERCARO') NULL , `enhavo` TEXT NULL , `ordo` INT, PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '59', 'Indications sur la prononciation', 'TEKSTO', '1');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '59', 'Les terminaisons usuelles', 'TEKSTO', '2');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`) VALUES (NULL, '59', 'Vocabulaire', 'VORTARO', '3');

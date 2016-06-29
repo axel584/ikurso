@@ -61,6 +61,49 @@ $subjekto=$pagxo[count($pagxo)-1];
 			</div>
 		</div>
 
+		<!-- fenêtre modale inscription -->
+		<div id="aligxi" class="modal">
+			<div class="modal-content">
+				<h4 class="blue-grey-text">Inscription</h4>
+				<form>
+				    <div class="input-field">
+				      <input id="retadreso"  placeholder="Nous enverrons un message à cette adresse pour valider votre inscription." type="text" class="validate" required="" aria-required="true">
+				      <label id="retadreso_label" for="identigilo">Adresse Email</label>
+				    </div>
+				    <div id="helpo-retadreso" class="helpilo col s11 m5 l4 offset-s1">
+				    	<p>Nous enverrons un message à cette adresse pour valider votre inscription.</p>
+			    	</div>
+				    <div class="input-field">
+				      <input id="identigilo" type="text" class="validate" required="" aria-required="true">
+				      <label id="identigilo_label" for="identigilo">identifiant</label>
+				    </div>
+					<div class="input-field">
+						<input id="pasvorto" type="password" class="validate">
+						<label for="pasvorto">mot de passe</label>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a id="inscription_button" class=" modal-action waves-effect waves-light-blue btn-flat blue-grey-text">CRÉER UN COMPTE</a>
+			</div>
+		</div>	
+
+		<!-- fenêtre modale réinitialisation mot de passe -->
+		<div id="novigi_pasvorton" class="modal">
+			<div class="modal-content">
+				<h4 class="blue-grey-text">Réinitialiser son mot de passe</h4>
+				<form>
+					<div class="input-field">
+						<input id="pasvorto" type="password" class="validate">
+						<label for="pasvorto">Nouveau mot de passe</label>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a id="inscription_button" class=" modal-action waves-effect waves-light-blue btn-flat blue-grey-text">RÉINITIALISER SON MOT DE PASSE</a>
+			</div>
+		</div>	
+
 		<!-- fenêtre modale menu utilisateur -->
 		<div  id="uzantomenuo" class="dropdown-content">
 			<header class="uzanto blue">

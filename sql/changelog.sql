@@ -163,4 +163,5 @@ ALTER TABLE personoj ADD COLUMN `aktivigita` BOOL NOT NULL DEFAULT  '0';
 ALTER TABLE personoj ADD COLUMN `pasvorto_md5` varchar(40) DEFAULT NULL;
 update personoj set pasvorto_md5=MD5(pasvorto);
 update personoj set aktivigita='1'; -- pour rendre "actif" tous les comptes déjà existant
-
+delete from landoj where id=77;
+insert into landoj (kodo,nomo) values ('TR','Turquie'); 

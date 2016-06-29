@@ -1,3 +1,18 @@
+/*---- palette personnalisée ---*/
+.primaire {background-color: #554E47 !important;}
+.primaire.moyen {background-color: #75706B !important;}
+.primaire.clair {background-color: #989490 !important;}
+.primaire.pale {background-color: #CBC9C7 !important;}
+.primaire.fond {background-color: #DDDCDA !important;}
+.primaire-texte {color: #554E47 !important;}
+.primaire-texte.texte-moyen {color: #75706B !important;}
+.primaire-texte.texte-clair {color: #989490 !important;}
+.primaire-texte.texte-pale {color: #CBC9C7 !important;}
+.primaire-texte.texte-fond {background-color: #DDDCDA !important;}
+
+.contraste-A {}
+.contraste-B {}
+
 /*---- surcharge typographie -----*/
 @media only screen and (min-width: 1200px) {
   html {font-size: 17px;}

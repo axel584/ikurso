@@ -27,24 +27,24 @@ $subjekto=$pagxo[count($pagxo)-1];
 	    
 		<!-- menus déroulants -->
 		<ul id="menu_cours" class="dropdown-content">
-			<li><a href="#" class="blue-grey-text">Cours en 10 leçons</a></li>
-			<li><a href="#" class="blue-grey-text">Gerda malaperis</a></li>
-			<li><a href="#" class="blue-grey-text">Lasu min paroli plu</a></li>
+			<li><a href="#" class="primaire-texte moyen">Cours en 10 leçons</a></li>
+			<li><a href="#" class="primaire-texte moyen">Gerda malaperis</a></li>
+			<li><a href="#" class="primaire-texte moyen">Lasu min paroli plu</a></li>
 			<li class="divider"></li>
-			<li><a href="#" class="blue-grey-text">Téléchargements</a></li>
+			<li><a href="#" class="primaire-texte moyen">Téléchargements</a></li>
 			<li class="divider"></li>
-			<li><a href="#" class="blue-grey-text">Autres cours</a></li>
+			<li><a href="#" class="primaire-texte moyen">Autres cours</a></li>
 		</ul>
 		<ul id="menu_aide" class="dropdown-content">
-			<li><a href="#" class="blue-grey-text">Comment s'inscrire</a></li>
-			<li><a href="#" class="blue-grey-text">Foire aux questions</a></li>
-			<li><a href="#" class="blue-grey-text">Paramétrer son clavier</a></li>
+			<li><a href="#" class="primaire-texte moyen">Comment s'inscrire</a></li>
+			<li><a href="#" class="primaire-texte moyen">Foire aux questions</a></li>
+			<li><a href="#" class="primaire-texte moyen">Paramétrer son clavier</a></li>
 		</ul>
 
 		<!-- fenêtre modale connexion -->
 		<div id="konektigxi" class="modal">
 			<div class="modal-content">
-				<h4 class="blue-grey-text">Connexion</h4>
+				<h4 class="primaire-texte texte-moyen">Connexion</h4>
 				<form>
 				    <div class="input-field">
 				      <input id="eniri_identigilo" type="text" class="validate" required="" aria-required="true">
@@ -57,14 +57,14 @@ $subjekto=$pagxo[count($pagxo)-1];
 				</form>
 			</div>
 			<div class="modal-footer">
-				<a id="connection_button" class=" modal-action waves-effect waves-light-blue btn-flat blue-grey-text">SE CONNECTER</a>
+				<a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a>
 			</div>
 		</div>
 
 		<!-- fenêtre modale inscription -->
 		<div id="aligxi" class="modal">
 			<div class="modal-content">
-				<h4 class="blue-grey-text">Inscription</h4>
+				<h4 class="primaire-texte texte-moyen">Inscription</h4>
 				<form>
 				    <div class="input-field">
 						<input id="aligxi_retadreso"  type="email" class="validate" required="" aria-required="true">
@@ -83,14 +83,14 @@ $subjekto=$pagxo[count($pagxo)-1];
 				</form>
 			</div>
 			<div class="modal-footer">
-				<a id="inscription_button" class="modal-action waves-effect waves-light-blue btn-flat blue-grey-text">CRÉER UN COMPTE</a>
+				<a id="inscription_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">CRÉER UN COMPTE</a>
 			</div>
 		</div>	
 
 		<!-- fenêtre modale réinitialisation mot de passe -->
 		<div id="novigi_pasvorton" class="modal">
 			<div class="modal-content">
-				<h4 class="blue-grey-text">Réinitialiser son mot de passe</h4>
+				<h4 class="primaire-texte">Réinitialiser son mot de passe</h4>
 				<form>
 					<div class="input-field">
 						<input id="pasvorto" type="password" class="validate">
@@ -99,7 +99,7 @@ $subjekto=$pagxo[count($pagxo)-1];
 				</form>
 			</div>
 			<div class="modal-footer">
-				<a id="inscription_button" class=" modal-action waves-effect waves-light-blue btn-flat blue-grey-text">RÉINITIALISER SON MOT DE PASSE</a>
+				<a id="inscription_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER SON MOT DE PASSE</a>
 			</div>
 		</div>	
 
@@ -110,15 +110,15 @@ $subjekto=$pagxo[count($pagxo)-1];
 				<p class="retadreso">#</p>
 			</header>
 			<ul class="collection">
-				<li><a href="#" class="blue-grey-text">Mes données personnelles</a></li>
-				<li><a href="#" class="blue-grey-text">Mes cours</a></li>
-				<li><a href="#" class="blue-grey-text">Déconnexion</a></li>
+				<li><a href="#" class="primaire-texte moyen">Mes données personnelles</a></li>
+				<li><a href="#" class="primaire-texte moyen">Mes cours</a></li>
+				<li><a href="#" class="primaire-texte moyen">Déconnexion</a></li>
 			</ul>
 			</span>
 		</div>
 
 		<div class="navbar-fixed">	
-			<nav role="navigation" class="blue-grey lighten-1">
+			<nav role="navigation" class="primaire">
 				<div class="nav-wrapper">
 					<a href="#" class="brand-logo" id="logo">iKurso</a>
 					<!-- hamburger menu -->
@@ -148,9 +148,9 @@ $subjekto=$pagxo[count($pagxo)-1];
 					<a href="#!" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
 					<ul class="right">
 						<!-- si utilisateur pas connecté -->
-						<li><a href="#konektigxi" class="btn waves-effect waves-light blue-grey lighten-3 modal-trigger" data-activates="konektigxi">CONNEXION</a></li>
+						<li><a href="#konektigxi" class="btn waves-effect waves-light primaire clair modal-trigger" data-activates="konektigxi">CONNEXION</a></li>
 						<!-- si utilisateur connecté -->
-						<li class="hide"><a href="#!" class="btn-floating btn-large waves-effect waves-light blue-grey lighten-3 dropdown-button" data-activates="uzantomenuo"><i class="large material-icons">perm_identity</i>
+						<li class="hide"><a href="#!" class="btn-floating btn-large waves-effect waves-light primaire clair dropdown-button" data-activates="uzantomenuo"><i class="large material-icons">perm_identity</i>
 </a></li>
 					</ul>
 					<ul class="right hide-on-med-and-down">

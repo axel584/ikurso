@@ -47,12 +47,12 @@ $subjekto=$pagxo[count($pagxo)-1];
 				<h4 class="blue-grey-text">Connexion</h4>
 				<form>
 				    <div class="input-field">
-				      <input id="identigilo" type="text" class="validate" required="" aria-required="true">
-				      <label id="identigilo_label" for="identigilo">identifiant</label>
+				      <input id="eniri_identigilo" type="text" class="validate" required="" aria-required="true">
+				      <label for="eniri_identigilo">identifiant</label>
 				    </div>
 					<div class="input-field">
-						<input id="pasvorto" type="password" class="validate">
-						<label for="pasvorto">mot de passe</label>
+						<input id="eniri_pasvorto" type="password" class="validate">
+						<label for="eniri_pasvorto">mot de passe</label>
 					</div>
 				</form>
 			</div>
@@ -67,19 +67,19 @@ $subjekto=$pagxo[count($pagxo)-1];
 				<h4 class="blue-grey-text">Inscription</h4>
 				<form>
 				    <div class="input-field">
-				      <input id="retadreso"  placeholder="Nous enverrons un message à cette adresse pour valider votre inscription." type="text" class="validate" required="" aria-required="true">
-				      <label id="retadreso_label" for="identigilo">Adresse Email</label>
+				      <input id="aligxi_retadreso"  placeholder="Nous enverrons un message à cette adresse pour valider votre inscription." type="text" class="validate" required="" aria-required="true">
+				      <label for="aligxi_retadreso">Adresse Email</label>
 				    </div>
 				    <div id="helpo-retadreso" class="helpilo col s11 m5 l4 offset-s1">
 				    	<p>Nous enverrons un message à cette adresse pour valider votre inscription.</p>
 			    	</div>
 				    <div class="input-field">
-				      <input id="identigilo" type="text" class="validate" required="" aria-required="true">
-				      <label id="identigilo_label" for="identigilo">identifiant</label>
+				      <input id="aligxi_identigilo" type="text" class="validate" required="" aria-required="true">
+				      <label for="aligxi_identigilo">identifiant</label>
 				    </div>
 					<div class="input-field">
-						<input id="pasvorto" type="password" class="validate">
-						<label for="pasvorto">mot de passe</label>
+						<input id="aligxi_pasvorto" type="password" class="validate">
+						<label for="aligxi_pasvorto">mot de passe</label>
 					</div>
 				</form>
 			</div>

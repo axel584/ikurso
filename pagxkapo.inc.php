@@ -67,24 +67,23 @@ $subjekto=$pagxo[count($pagxo)-1];
 				<h4 class="blue-grey-text">Inscription</h4>
 				<form>
 				    <div class="input-field">
-				      <input id="aligxi_retadreso"  placeholder="Nous enverrons un message à cette adresse pour valider votre inscription." type="text" class="validate" required="" aria-required="true">
-				      <label for="aligxi_retadreso">Adresse Email</label>
-				    </div>
-				    <div id="helpo-retadreso" class="helpilo col s11 m5 l4 offset-s1">
-				    	<p>Nous enverrons un message à cette adresse pour valider votre inscription.</p>
-			    	</div>
+						<input id="aligxi_retadreso"  type="email" class="validate" required="" aria-required="true">
+						<label for="aligxi_retadreso" data-error="veuillez indiquer une adresse correcte" >Adresse courriel</label>
+			    	<p id="helpo-retadreso" class="helpilo">Nous enverrons un message à cette adresse pour valider votre inscription.</p>
+					</div>
 				    <div class="input-field">
-				      <input id="aligxi_identigilo" type="text" class="validate" required="" aria-required="true">
-				      <label for="aligxi_identigilo">identifiant</label>
+						<input id="aligxi_identigilo" type="text" class="validate" required="" aria-required="true">
+						<label for="aligxi_identigilo">Identifiant</label>
+						<p id="helpo-identigilo" class="helpilo">Vous l’utiliserez pour vous connecter au site.</p>
 				    </div>
 					<div class="input-field">
 						<input id="aligxi_pasvorto" type="password" class="validate">
-						<label for="aligxi_pasvorto">mot de passe</label>
+						<label for="aligxi_pasvorto">Mot de passe</label>
 					</div>
 				</form>
 			</div>
 			<div class="modal-footer">
-				<a id="inscription_button" class=" modal-action waves-effect waves-light-blue btn-flat blue-grey-text">CRÉER UN COMPTE</a>
+				<a id="inscription_button" class="modal-action waves-effect waves-light-blue btn-flat blue-grey-text">CRÉER UN COMPTE</a>
 			</div>
 		</div>	
 

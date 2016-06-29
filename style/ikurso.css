@@ -224,17 +224,22 @@ ul#progreso li.nuna {
 
 /******* formulaires *******/
 
-.helpilo p {
-	padding-top: 2rem;
-	color: #666;
-	font-family: 'Nothing You Could Do', cursive;
+/*--- surcharge materialize ---*/
+.modal .input-field {
+	margin-top: 3rem;
 }
 
-@media only screen and (max-width: 600px) {
-	.helpilo p {
-		padding-top: 0;
-	}
+.modal .modal-footer {
+    height: 4em;
 }
+/*-----------------------------*/
+
+.input-field .helpilo {
+	color: #666;
+	font-family: 'Nothing You Could Do', cursive;
+	margin-top:0;
+}
+
 /*********************************/
 /*        pied de page           */
 /*********************************/

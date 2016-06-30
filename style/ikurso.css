@@ -42,6 +42,9 @@ p.chapo {font-size: 150%;}
 div.col > p:first-child {
 	margin-top:0;
 }
+.minusklo {
+	text-transform: lowercase;
+}
 /****************************************/
 /*           blocs principaux           */
 /****************************************/

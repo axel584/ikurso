@@ -1,8 +1,37 @@
 <?php
 $titolo="10 (dek)";
+$section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
 ?>
-		<div class="klarigo">
+
+<main class="row">
+	<article class="col s12 m10 l7 offset-m1 offset-l1">
+		<section id="leciono-kapo">
+			<h1>Leçon 10</h1>
+			<!--<ul id="progreso">
+				<li id="lec1" class="farita"></li>
+				<li id="lec2" class="farita"></li>
+				<li id="lec3" class="farita"></li>
+				<li id="lec4" class="farita"></li>
+				<li id="lec5" class="farita"></li>
+				<li id="lec6" class="nuna"></li>
+				<li id="lec7" class="nova"></li>
+				<li id="lec8" class="nova"></li>
+				<li id="lec9" class="nova"></li>
+				<li id="lec10" class="nova"></li>
+				<li id="lec11" class="nova"></li>
+			</ul>-->
+		</section>
+				
+<section id="leciono-enhavo">
+
+<?php 
+getTitoloLecionero('CG',10,$section);
+
+
+if ($section=="1") {
+?>
+
 <p>
 Vous voilà rendu à la 10<sup>e</sup> et dernière leçon de votre cours. Elle
 consistera en un petit examen qui nous permettra d’évaluer vos
@@ -10,7 +39,6 @@ connaissances de l’espéranto écrit. Votre tuteur le corrigera comme
 d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 <i>atestilo</i> (attestation de fin de cours) dans un envoi séparé.
 </p>
-<h3>Examen</h3>
 <?php atentigo(); ?>
 <p>Mettez les mots suivants au pluriel</p>
 <input type="hidden" name="013_cxap10.1" value="1. Mettez les mots suivants au pluriel.">
@@ -273,5 +301,93 @@ d’habitude, et un administrateur du cours vous fera parvenir ensuite un
 	ekzerco("X", 10);
 ?>
 </div>
+
+<?php 
+} // fin section
+if ($section=="2") {
+?>
+
+<p>bravo, vous avez terminé, il ne vous reste qu'à envoyer vos réponses à votre correcteur. Une fois que celui ci aura corrigé vos réponses, vous pourrez consulter votre attestation de réussite dans votre espace personnel.</p>
+
+<p>Afin de continuer votre apprentissage, vous pouvez suivre le cours "Gerda Malaperis", basé sur une histoire policière, ce cours vous permettra d'enrichir votre vocabulaire et de consolider vos connaissances de la langue.</p>
+
+<p>Bonne continuation dans le monde de l'espéranto !</p>
+
+<?php 
+} // fin derniere section
+?>	
+</section>
+
+
+				
+				<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le précédent et le suivant -->
+				<section id="leciono-fino">
+					<div id="marko" class="right-align">
+						<a id="nova" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j'ai fini d'étudier cette section">Terminé !</a>
+						<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
+					</div>
+					<div class="ligoj">
+						<?php getLecioneroAntauxa('CG',10,$section); ?>
+						<?php getLecioneroVenonta('CG',10,$section); ?>
+					</div>
+				</section>
+
+
+			</article>
+			
+			<aside class="col s12 m10 l4 offset-m1">
+								
+				<ul class="collapsible" data-collapsible="expandable">
+
+					<?php 
+					// On affiche le sommaire de la lecon
+					getEnhavtabelo('CG',10); 
+					?>
+
+					<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->
+
+					<!--<li>
+						<div class="collapsible-header"><i class="material-icons">library_books</i>Vocabulaire de la leçon</div>
+						<div class="collapsible-body">
+							<table class="vortaro bordered striped responsive-table">
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+							</table>			
+						</div>
+					</li> -->
+				</ul>	
+				
+			</aside>
+		</main>
+
+
 
 <?php include "dlekpiedo.inc.php"; ?>

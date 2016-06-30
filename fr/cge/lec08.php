@@ -1,9 +1,37 @@
 <?php
-$titolo="8 (ok)";
+$titolo="7 (sep)";
+$section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
+
 ?>
-		<div class="klarigo">
-<h3 id="lec08.1">8.1. Le reste de la conjugaison...</h3>
+
+<main class="row">
+	<article class="col s12 m10 l7 offset-m1 offset-l1">
+		<section id="leciono-kapo">
+			<h1>Leçon 7</h1>
+			<!--<ul id="progreso">
+				<li id="lec1" class="farita"></li>
+				<li id="lec2" class="farita"></li>
+				<li id="lec3" class="farita"></li>
+				<li id="lec4" class="farita"></li>
+				<li id="lec5" class="farita"></li>
+				<li id="lec6" class="nuna"></li>
+				<li id="lec7" class="nova"></li>
+				<li id="lec8" class="nova"></li>
+				<li id="lec9" class="nova"></li>
+				<li id="lec10" class="nova"></li>
+				<li id="lec11" class="nova"></li>
+			</ul>-->
+		</section>
+				
+<section id="leciono-enhavo">
+
+<?php 
+getTitoloLecionero('CG',6,$section);
+
+
+if ($section=="1") {
+?>
 
 <p>
 Maintenant, il ne nous reste que quelques terminaisons grammaticales &agrave;
@@ -143,7 +171,10 @@ les exemples suivants&#160;:
 	<tr><td>&nbsp;</td></tr>
 	</table>
 
-<h3 id="lec08.2">8.2. Proverbes</h3>
+<?php 
+} // fin section 1
+if ($section=="2") {
+?>
 
 <p>
 <a href="../son/pv8-1.wav"><img src="../pix/icon20.gif"></a>
@@ -162,7 +193,10 @@ les exemples suivants&#160;:
 </tr>
 </table>
 
-<h3>Exercices - huitième leçon, 1ère partie</h3>
+<?php 
+} // fin section 2
+if ($section=="3") {
+?>
 
 <p>Traduisez en espéranto en utilisant la terminaison verbale appropriée.</p>
 <input type="hidden" name="013_cxap08.1" value="1. Traduisez en espéranto en utilisant la terminaison verbale appropriée.">
@@ -183,7 +217,11 @@ les exemples suivants&#160;:
 ?>
 </div>
 
-<h3>Exercices - huitième leçon, 2<sup>ème</sup> partie</h3>
+<?php 
+} // fin section 3
+if ($section=="4") {
+?>
+
 <p>
 Vous pouvez désormais lire des textes faciles. Veuillez donc traduire en
 français les anecdotes suivantes. Le vocabulaire nouveau se trouve à la
@@ -222,8 +260,10 @@ fin de l’exercice.
 </tr>
 </table>
 
-<a id="cg056"></a>
-<h3 id="lec08.3">8.3. Pronom personnel et adjectif possessif réfléchis</h3>
+<?php 
+} // fin section 4
+if ($section=="5") {
+?>
 
 <p>
 <b>Si</b> est le <b>pronom réfléchi</b> de la 3e personne, du singulier ou du
@@ -241,7 +281,10 @@ possessif réfléchi correspondant.
 	<tr><td class="fr">= Elle a embrassé son (propre) mari</td><td class="fr">= Elle a embrassé son mari, c-&agrave;-d. le mari d’une autre femme</td></tr>
 </table>
 
-<h3>Exercices - huitième leçon, 3<sup>ème</sup> partie</h3>
+<?php 
+} // fin section 5
+if ($section=="6") {
+?>
 
 <p>Veuillez traduire ces textes en français. Le vocabulaire nouveau se trouve à la
 fin de l’exercice.</p>
@@ -289,7 +332,11 @@ fin de l’exercice.</p>
 </tr>
 </table>
 
-<h3 id="lec08.4">8.4. Retour sur l’accent tonique</h3>
+<?php 
+} // fin section 6
+if ($section=="7") {
+?>
+
 <p>
 Lisez régulièrement le texte suivant &agrave; haute voix en ayant soin
 d’appliquer l’accent tonique sur l’avant-dernière syllabe comme il se
@@ -316,7 +363,11 @@ en italien et la lettre H qui est toujours expirée comme dans les mots
 anglais "hand, hair, have".</p>
 </div>
 
-<h3 id="lec08.5">8.5. &Eacute;pilogue</h3>
+<?php 
+} // fin section 7
+if ($section=="8") {
+?>
+
 <p>
 Dans cette leçon nous avons achevé l’étude de la conjugaison. Vous
 connaissez donc dès &agrave; présent toutes les formes verbales possibles. Et
@@ -324,4 +375,82 @@ enfin, bonne nouvelle&#160;!, il ne vous reste plus qu’une autre leçon avant
 de passer le petit examen qui constitue la 10ème leçon. Ensuite, on vous
 décernera une attestation de cours.
 </p>
+
+<?php 
+} // fin derniere section
+?>	
+</section>
+
+
+				
+				<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le précédent et le suivant -->
+				<section id="leciono-fino">
+					<div id="marko" class="right-align">
+						<a id="nova" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j'ai fini d'étudier cette section">Terminé !</a>
+						<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
+					</div>
+					<div class="ligoj">
+						<?php getLecioneroAntauxa('CG',8,$section); ?>
+						<?php getLecioneroVenonta('CG',8,$section); ?>
+					</div>
+				</section>
+
+
+			</article>
+			
+			<aside class="col s12 m10 l4 offset-m1">
+								
+				<ul class="collapsible" data-collapsible="expandable">
+
+					<?php 
+					// On affiche le sommaire de la lecon
+					getEnhavtabelo('CG',8); 
+					?>
+
+					<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->
+
+					<!--<li>
+						<div class="collapsible-header"><i class="material-icons">library_books</i>Vocabulaire de la leçon</div>
+						<div class="collapsible-body">
+							<table class="vortaro bordered striped responsive-table">
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+							</table>			
+						</div>
+					</li> -->
+				</ul>	
+				
+			</aside>
+		</main>
+
+
+
 <?php include "dlekpiedo.inc.php"; ?>

@@ -1089,8 +1089,8 @@ tellement naturelle que vous n’y ferez même plus attention.
 						<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
 					</div>
 					<div class="ligoj">
-						<?php getLecioneroAntauxa('CG',6,$section); ?>
-						<?php getLecioneroVenonta('CG',6,$section); ?>
+						<?php getLecioneroAntauxa('CG',7,$section); ?>
+						<?php getLecioneroVenonta('CG',7,$section); ?>
 					</div>
 				</section>
 
@@ -1103,7 +1103,7 @@ tellement naturelle que vous n’y ferez même plus attention.
 
 					<?php 
 					// On affiche le sommaire de la lecon
-					getEnhavtabelo('CG',6); 
+					getEnhavtabelo('CG',7); 
 					?>
 
 					<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->

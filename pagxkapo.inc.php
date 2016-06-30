@@ -29,11 +29,8 @@ $subjekto=$pagxo[count($pagxo)-1];
 		<ul id="menu_cours" class="dropdown-content">
 			<li><a href="#" class="primaire-texte moyen">Cours en 10 leçons</a></li>
 			<li><a href="#" class="primaire-texte moyen">Gerda malaperis</a></li>
-			<li><a href="#" class="primaire-texte moyen">Lasu min paroli plu</a></li>
 			<li class="divider"></li>
 			<li><a href="#" class="primaire-texte moyen">Téléchargements</a></li>
-			<li class="divider"></li>
-			<li><a href="#" class="primaire-texte moyen">Autres cours</a></li>
 		</ul>
 		<ul id="menu_aide" class="dropdown-content">
 			<li><a href="#" class="primaire-texte moyen">Comment s'inscrire</a></li>

@@ -40,23 +40,18 @@ include "pagxkapo.inc.php";
 			
 			<div class="container">
 				<div class="row">
-					<div class="col s12 m4 l4">
+					<div class="col s12 m5 offset-m1">
 						<h5>Cours en 10 leçons</h5>
 						<p>Cours d’espéranto pour débutants. À suivre avec l’aide d'un correcteur ou en totale autonomie.</p>
 						<p><a href="#" class="btn waves-effect waves-light blue">voir le cours</a></p>
 					</div>
 						
-					<div class="col s12 m4 l4">
+					<div class="col s12 m5">
 						<h5>Gerda malaperis</h5>
 						<p>Pour ceux qui connaissent déjà les bases de l’espéranto, par exemple après le cours en 10 leçons. </p>
 						<p><a href="#" class="btn waves-effect waves-light blue">voir le cours</a></p>
 					</div>
 						
-					<div class="col s12 m4 l4">
-						<h5>Lasu min paroli plu</h5>
-						<p>Recueil de textes à lire en parallèle du cours Gerda malaperis. Permet de revoir les notions abordées dans le cours.</p>
-						<p><a href="#" class="btn waves-effect waves-light blue">voir le cours</a></p>
-					</div>
 				</div>
 			</div>
 		</section>
@@ -66,18 +61,25 @@ include "pagxkapo.inc.php";
 			
 			<div class="container">
 				<div class="row">
-					<div class="col s12 m6 l6">
+					<div class="col s12 m4">
 						<h5>Kurso de Esperanto</h5>
 						<p>Logiciel multimédia pour Windows, Linux et Mac OSX.<br>
 						En 12 leçons vous apprendrez les bases de l’espéranto.</p>
-						<p><a href="#" class="btn-flat small">en savoir plus</a></p>
+						<p><a href="#" class="btn-flat small minusklo">télécharger le logiciel</a></p>
 					</div>
 				
-					<div class="col s12 m6 l6">
+					<div class="col s12 m4">
 						<h5>lernu.net</h5>
 						<p>Autre site, traduit dans plus de 20 langues.<br>
 						Pour ceux qui veulent découvrir l’espéranto, l’apprendre ou le pratiquer.</p>
-						<p><a href="http://www.lernu.net" class="btn-flat small">aller sur lernu.net</a></p>
+						<p><a href="http://www.lernu.net" class="btn-flat small minusklo">aller sur lernu.net</a></p>
+					</div>
+
+					<div class="col s12 m4">
+						<h5>duolingo</h5>
+						<p>Cours ludique pour débutants.<br>
+						N’existe pour l’instant qu’en anglais. (Nous attendons avec impatience une version pour les francophones.)</p>
+						<p><a href="https://en.duolingo.com/course/eo/en/Learn-Esperanto-Online" class="btn-flat small minusklo">aller sur duolingo</a></p>
 					</div>
 				</div>
 			</div>

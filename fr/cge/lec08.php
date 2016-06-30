@@ -1,5 +1,5 @@
 <?php
-$titolo="7 (sep)";
+$titolo="8 (ok)";
 $section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
 
@@ -8,7 +8,7 @@ include "dlekkapo.inc.php";
 <main class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
 		<section id="leciono-kapo">
-			<h1>Leçon 7</h1>
+			<h1>Leçon 8</h1>
 			<!--<ul id="progreso">
 				<li id="lec1" class="farita"></li>
 				<li id="lec2" class="farita"></li>

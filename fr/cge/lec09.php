@@ -1,9 +1,38 @@
 <?php
 $titolo="9 (na&#365;)";
+$section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
+
 ?>
-		<div class="klarigo">
-<h3 id="lec09.1">9.1. Un air connu...</h3>
+
+<main class="row">
+	<article class="col s12 m10 l7 offset-m1 offset-l1">
+		<section id="leciono-kapo">
+			<h1>Leçon 9</h1>
+			<!--<ul id="progreso">
+				<li id="lec1" class="farita"></li>
+				<li id="lec2" class="farita"></li>
+				<li id="lec3" class="farita"></li>
+				<li id="lec4" class="farita"></li>
+				<li id="lec5" class="farita"></li>
+				<li id="lec6" class="nuna"></li>
+				<li id="lec7" class="nova"></li>
+				<li id="lec8" class="nova"></li>
+				<li id="lec9" class="nova"></li>
+				<li id="lec10" class="nova"></li>
+				<li id="lec11" class="nova"></li>
+			</ul>-->
+		</section>
+				
+<section id="leciono-enhavo">
+
+<?php 
+getTitoloLecionero('CG',9,$section);
+
+
+if ($section=="1") {
+?>
+
 <p>
 Une des meilleures façons d’apprendre une langue, c’est en la chantant.
 Vous n’aurez sûrement pas de difficulté à reconnaître la mélodie de
@@ -81,7 +110,11 @@ de musiciens et chanteurs espérantistes du Brésil&#160;:
 </tr>
 </table>
 
-<h3 id="lec09.2">9.2. L’élision</h3>
+<?php 
+} // fin section
+if ($section=="2") {
+?>
+
 <p>
 Vous avez remarqué l’élision du <b>-o</b> final dans certains mots
 (famili’, fra&#365;lin’), ce qui se fait couramment en poésie avec la
@@ -91,7 +124,12 @@ terminaison des noms et le <em>a</em> de l’article <em>la</em>&#160;:
 <p>L’élision ne change pas la place de l’accent tonique :</p>
 <p><span class="ekz">fra&#365;-<u>li</u>-no</span>  devient  <span class="ekz">fra&#365;-<u>lin’</u></span></p>
 
-<h3 id="lec09.3">9.3. Quelques adverbes primaires en <b>-a&#365;</b></h3>
+
+<?php 
+} // fin section
+if ($section=="3") {
+?>
+
 <p>
 Dans la 3e leçon, nous avons parlé des <b>adverbes</b> et nous avons
 expliqué que ceux qui sont dérivés d’autres mots se terminent par
@@ -140,8 +178,10 @@ en <b>-a&#365;</b> parmi les plus usités en espéranto.
 	<td class="ekz">Li preska&#365; falis.</td></tr>
 </table>
 
-<a id="cg060"></a><a id="cg061"></a>
-<h3 id="lec09.4">9.4. Divers mots en <b>-a&#365;</b></h3>
+<?php 
+} // fin section
+if ($section=="4") {
+?>
 
 <p>Voici cinq autres mots très fréquents terminés par <b>-a&#365;</b>&#160;:</p>
 <table class="retrait">
@@ -167,7 +207,7 @@ en <b>-a&#365;</b> parmi les plus usités en espéranto.
 	<td class="ekz">Ni batalas kontra&#365; la inflacio.<br/>Kontra&#365; doloro helpas bonhumoro.</td></tr>
 </table>
 
-<a id="cg063"></a>
+
 <div class="rim"><p><b>Remarque</b> : 
 Pour tous ces mots en <em>a&#365;</em> vous devez faire
 très attention à placer correctement l’accent tonique. Les
@@ -180,10 +220,13 @@ prononciation exacte est donc :</p>
 <p>hodia&#365;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ho-<u>di</u>-aw</p>
 </div>
 
-<h3 id="lec09.5">9.5. Autres mots invariables</h3>
+<?php 
+} // fin section
+if ($section=="5") {
+?>
 
 <p>Parmi les mots invariables fréquemment employés, on trouve aussi:</p>
-<a id="cg064"></a>
+
 <p><b>&#265;i</b> :  indique la proximité </p>
 
 <table class="retrait">
@@ -212,7 +255,11 @@ prononciation exacte est donc :</p>
 	<tr><td class="ekz">iru, kien ajn vi volas&#160;! :</td><td class="fr">allez (n’importe o&ugrave;) o&ugrave; vous voulez&#160;!</td></tr>
 </table>
 
-<h3 id="lec09.6">9.6. Proverbes</h3>
+<?php 
+} // fin section
+if ($section=="6") {
+?>
+
 <p>
 <table>
 	<tr>
@@ -242,7 +289,11 @@ prononciation exacte est donc :</p>
 	</tr>
 </table>
 
-<h3 id="lec09.7">9.7. Des extraits de la presse espérantiste</h3>
+<?php 
+} // fin section
+if ($section=="7") {
+?>
+
 <p>
 Il existe une centaine de publications en espéranto. Celles-ci sont
 éditées par des maisons indépendantes, par des associations
@@ -250,7 +301,11 @@ nationales ou internationales, et elles se font l’écho du mouvement
 espérantiste dans le monde.
 </p>
 
-<h3>Exercices - neuvième leçon</h3>
+<?php 
+} // fin section
+if ($section=="8") {
+?>
+
 <?php atentigo(); ?>
 <p>
 Traduisez les articles suivants puisés dans diverses revues. Le vocabulaire nouveau se trouve à la fin de l’exercice.
@@ -315,4 +370,98 @@ Traduisez les articles suivants puisés dans diverses revues. Le vocabulaire nou
 	<td class="eo">Nederlando</td><td class="fr">Pays-Bas</td>
 </tr>
 </table>
+
+<?php 
+} // fin section
+if ($section=="9") {
+?>
+<p>
+Vous venez de franchir la dernière étape de votre apprentissage. La dixième et dernière leçon consiste en un examen qui va vous permettre d'évaluer l'ensemble de vos connaissances. Les questions sont faciles, il n'y a pas de piège. Vous connaissez déjà toutes les réponses, cet examen a pour seul objectif de vous en convaincre.
+</p>
+
+<p>
+Que de chemin parcouru depuis le début de ce cours, j'espère que vous aurez pris autant plaisir à le suivre que nous en avons pris à l'élaborer. Mais ce cours n'est pas statique, il évolue en fonction de vos retours. N'hésitez pas à nous contacter si vous avez des remarques, des suggestions ou des envies que nous pourrons réaliser pour les générations futures d'élèves.
+</p>
+
+<p>
+Faites connaître ce cours autours de vous, c'est la meilleure façon qu'il continue à vivre.
+</p>
+
+<?php 
+} // fin derniere section
+?>	
+</section>
+
+
+				
+				<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le précédent et le suivant -->
+				<section id="leciono-fino">
+					<div id="marko" class="right-align">
+						<a id="nova" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j'ai fini d'étudier cette section">Terminé !</a>
+						<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
+					</div>
+					<div class="ligoj">
+						<?php getLecioneroAntauxa('CG',9,$section); ?>
+						<?php getLecioneroVenonta('CG',9,$section); ?>
+					</div>
+				</section>
+
+
+			</article>
+			
+			<aside class="col s12 m10 l4 offset-m1">
+								
+				<ul class="collapsible" data-collapsible="expandable">
+
+					<?php 
+					// On affiche le sommaire de la lecon
+					getEnhavtabelo('CG',9); 
+					?>
+
+					<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->
+
+					<!--<li>
+						<div class="collapsible-header"><i class="material-icons">library_books</i>Vocabulaire de la leçon</div>
+						<div class="collapsible-body">
+							<table class="vortaro bordered striped responsive-table">
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+							</table>			
+						</div>
+					</li> -->
+				</ul>	
+				
+			</aside>
+		</main>
+
+
+
 <?php include "dlekpiedo.inc.php"; ?>

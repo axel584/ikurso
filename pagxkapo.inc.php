@@ -65,25 +65,38 @@ $subjekto=$pagxo[count($pagxo)-1];
 		<div id="aligxi" class="modal">
 			<div class="modal-content">
 				<h4 class="primaire-texte texte-moyen">Inscription</h4>
-				<form>
-				    <div class="input-field">
-						<input id="aligxi_retadreso"  type="email" class="validate" required="" aria-required="true">
-						<label for="aligxi_retadreso" data-error="veuillez indiquer une adresse correcte" >Adresse courriel</label>
-			    	<p id="helpo-retadreso" class="helpilo">Nous enverrons un message à cette adresse pour valider votre inscription.</p>
-					</div>
-				    <div class="input-field">
-						<input id="aligxi_identigilo" type="text" class="validate" required="" aria-required="true">
-						<label for="aligxi_identigilo">Identifiant</label>
-						<p id="helpo-identigilo" class="helpilo">Vous l’utiliserez pour vous connecter au site.</p>
-				    </div>
-					<div class="input-field">
-						<input id="aligxi_pasvorto" type="password" class="validate">
-						<label for="aligxi_pasvorto">Mot de passe</label>
-					</div>
-				</form>
+				<div id="parto1">
+					<form>
+					    <div class="input-field">
+							<input id="aligxi_retadreso"  type="email" class="validate" required="" aria-required="true">
+							<label for="aligxi_retadreso" data-error="veuillez indiquer une adresse correcte" >Adresse courriel</label>
+				    	<p id="helpo-retadreso" class="helpilo">Nous enverrons un message à cette adresse pour valider votre inscription.</p>
+						</div>
+					    <div class="input-field">
+							<input id="aligxi_identigilo" type="text" class="validate" required="" aria-required="true">
+							<label for="aligxi_identigilo">Identifiant</label>
+							<p id="helpo-identigilo" class="helpilo">Vous l’utiliserez pour vous connecter au site.</p>
+					    </div>
+						<div class="input-field">
+							<input id="aligxi_pasvorto" type="password" class="validate">
+							<label for="aligxi_pasvorto">Mot de passe</label>
+						</div>
+					</form>
+				</div>
+				<div id="parto2" class="hide">
+					<p class="chapo">Vous y êtes presque !</p>
+					<p>Pour activer votre compte, veuillez cliquer sur le lien se trouvant dans le message électronique que nous venons de vous envoyer.<br>
+				Si vous ne l’avez pas reçu, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
+				Si vous n’avez rien reçu, vous pouvez demander de réenvoyer le message.</p>
+
+				</div>
 			</div>
 			<div class="modal-footer">
 				<a id="inscription_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">CRÉER UN COMPTE</a>
+				<div id="boutons2" class="hide">
+					<a id="fermer_button" class="modal-action waves-effect waves-light btn primaire">Fermer</a>
+					<a id="inscription2_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">Renvoyer le courriel d’activation</a>
+				</div>
 			</div>
 		</div>	
 

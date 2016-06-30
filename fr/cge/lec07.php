@@ -27,7 +27,7 @@ include "dlekkapo.inc.php";
 <section id="leciono-enhavo">
 
 <?php 
-getTitoloLecionero('CG',6,$section);
+getTitoloLecionero('CG',7,$section);
 
 
 if ($section=="1") {

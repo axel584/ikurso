@@ -1,8 +1,38 @@
 <?php
 $titolo="7 (sep)";
+$section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
+
 ?>
-		<div class="klarigo">
+
+<main class="row">
+	<article class="col s12 m10 l7 offset-m1 offset-l1">
+		<section id="leciono-kapo">
+			<h1>Leçon 7</h1>
+			<!--<ul id="progreso">
+				<li id="lec1" class="farita"></li>
+				<li id="lec2" class="farita"></li>
+				<li id="lec3" class="farita"></li>
+				<li id="lec4" class="farita"></li>
+				<li id="lec5" class="farita"></li>
+				<li id="lec6" class="nuna"></li>
+				<li id="lec7" class="nova"></li>
+				<li id="lec8" class="nova"></li>
+				<li id="lec9" class="nova"></li>
+				<li id="lec10" class="nova"></li>
+				<li id="lec11" class="nova"></li>
+			</ul>-->
+		</section>
+				
+<section id="leciono-enhavo">
+
+<?php 
+getTitoloLecionero('CG',6,$section);
+
+
+if ($section=="1") {
+?>
+
 <p>
 Dans la deuxième leçon nous avons dit qu’il était facile d’élargir
 le vocabulaire de l’espéranto à l’aide d’affixes (préfixes et
@@ -12,8 +42,6 @@ nécessaire de les apprendre tous en une seule fois. Contentez-vous de
 constater avec quelle facilité l’on construit de nouveaux mots tout en
 réduisant la masse du vocabulaire à apprendre par c&oelig;ur.
 </p>
-
-<h3 id="lec07.1">7.1. Préfixes</h3>
 
 <table class="retrait">
 <tr><td colspan="5" style="eo"><br><b>BO</b><span class="fr"> : <i>parenté par alliance</i></span></td></tr>
@@ -216,7 +244,10 @@ réduisant la masse du vocabulaire à apprendre par c&oelig;ur.
 </tr>
 </table>
 
-<h3 id="lec07.2">7.2. Suffixes</h3>
+<?php 
+} // fin section 1
+if ($section=="2") {
+?>
 
 <table class="retrait">
 <tr><td colspan="5" style="eo"><br><b>A&#264;</b><span class="fr"> : <i>péjoratif</i></span></td></tr>
@@ -853,7 +884,11 @@ réduisant la masse du vocabulaire à apprendre par c&oelig;ur.
 </tr>
 </table>
 
-<h3> Exercices - septième leçon</h3>
+<?php 
+} // fin section 2
+if ($section=="3") {
+?>
+
 <?php atentigo(); ?>
 
 <p>
@@ -903,7 +938,10 @@ Vous trouverez aussi qu’il est amusant de créer ses propres mots espéranto �
 ?>
 </div> 
 
-<h3 id="lec07.3">7.3. Proverbes</h3>
+<?php 
+} // fin section 3
+if ($section=="4") {
+?>
 
 <p>
 <a href="../son/pv7-1.wav"><img src="../pix/icon20.gif"></a>
@@ -940,7 +978,12 @@ faim), ou comme le sourd reproche d’un peuple affamé à ses chefs qui
 ne se privent de rien. Les proverbes sont de très courts poèmes aux
 multiples résonances.
 </p>
-<h3 id="lec07.4">7.4. Expression de l’heure</h3>
+
+
+<?php 
+} // fin section 4
+if ($section=="5") {
+?>
 
 <p>
 Il y a deux questions fondamentales : &#171;quelle heure est-il&#160;?&#187; et
@@ -1020,11 +1063,93 @@ moment de la journée :
 ?>
 </div>
 
-<h3 id="lec07.5">7.5. &Eacute;pilogue</h3>
+<?php 
+} // fin section 5
+if ($section=="6") {
+?>
+
 <p>
 Dans cette leçon vous avez fait connaissance avec l’une des
 caractéristiques les plus originales de l’espéranto&#160;: la dérivation.
 Avec la pratique l’utilisation des préfixes et suffixes vous paraîtra
 tellement naturelle que vous n’y ferez même plus attention.
 </p>
+
+<?php 
+} // fin derniere section
+?>	
+</section>
+
+
+				
+				<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le précédent et le suivant -->
+				<section id="leciono-fino">
+					<div id="marko" class="right-align">
+						<a id="nova" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j'ai fini d'étudier cette section">Terminé !</a>
+						<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
+					</div>
+					<div class="ligoj">
+						<?php getLecioneroAntauxa('CG',6,$section); ?>
+						<?php getLecioneroVenonta('CG',6,$section); ?>
+					</div>
+				</section>
+
+
+			</article>
+			
+			<aside class="col s12 m10 l4 offset-m1">
+								
+				<ul class="collapsible" data-collapsible="expandable">
+
+					<?php 
+					// On affiche le sommaire de la lecon
+					getEnhavtabelo('CG',6); 
+					?>
+
+					<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->
+
+					<!--<li>
+						<div class="collapsible-header"><i class="material-icons">library_books</i>Vocabulaire de la leçon</div>
+						<div class="collapsible-body">
+							<table class="vortaro bordered striped responsive-table">
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+								<tr><td>apud</td><td>à côté de</td></tr>
+								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+								<tr><td>ceter/a</td><td>restant, autre</td></tr>
+								<tr><td>en</td><td>en, dedans</td></tr>
+								<tr><td>ĝis</td><td>jusqu’à</td></tr>
+								<tr><td>halt/i</td><td>s’arrêter</td></tr>
+							</table>			
+						</div>
+					</li> -->
+				</ul>	
+				
+			</aside>
+		</main>
+
+
+
 <?php include "dlekpiedo.inc.php"; ?>

@@ -122,16 +122,16 @@ include "../../pagxkapo.inc.php";
 		<header id="superrigardo">
 			<p>Cours d'espéranto en dix leçons :</p>
 			<ul id="lecionoj">
-				<li id="lec01" class="farita"><a href="#">1</a></li>
-				<li id="lec02" class="farita"><a href="#">2</a></li>
-				<li id="lec03" class="farita"><a href="#">3</a></li>
-				<li id="lec04" class="farita"><a href="#">4</a></li>
-				<li id="lec05" class="farita"><a href="#">5</a></li>
-				<li id="lec06" class="nuna"><a href="#">6</a></li>
-				<li id="lec07" class="nova"><a href="#">7</a></li>
-				<li id="lec08" class="nova"><a href="#">8</a></li>
-				<li id="lec09" class="nova"><a href="#">9</a></li>
-				<li id="lec10" class="nova"><a href="#">10</a></li>
-				<li id="lexique" class="nova"><a href="#">lexique</a></li>
+				<li id="lec01" class="farita"><a href="lec01.php">1</a></li>
+				<li id="lec02" class="farita"><a href="lec02.php">2</a></li>
+				<li id="lec03" class="farita"><a href="lec03.php">3</a></li>
+				<li id="lec04" class="farita"><a href="lec04.php">4</a></li>
+				<li id="lec05" class="farita"><a href="lec05.php">5</a></li>
+				<li id="lec06" class="nuna"><a href="lec06.php">6</a></li>
+				<li id="lec07" class="nova"><a href="lec07.php">7</a></li>
+				<li id="lec08" class="nova"><a href="lec08.php">8</a></li>
+				<li id="lec09" class="nova"><a href="lec09.php">9</a></li>
+				<li id="lec10" class="nova"><a href="lec10.php">10</a></li>
+				<li id="lexique" class="nova"><a href="vocabula.php">lexique</a></li>
 			</div>
 		</header>

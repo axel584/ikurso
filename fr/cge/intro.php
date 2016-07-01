@@ -1,8 +1,7 @@
 <?php
 $subjekto="intro.php";
-$temo=$_GET["temo"];
-$gxisdatigDato="2016-06-18";
-if ($temo=="") {$temo="intro";}
+$temo=isset($_GET["temo"])?$_GET["temo"]:"intro";
+$gxisdatigDato="2016-07-01";
 include "dlekkapo.inc.php"
 ?>
 		<div class="klarigo">

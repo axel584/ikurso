@@ -1,7 +1,9 @@
   $(document).ready(function(){
+
+
   	$( "#connection_button" ).click(function() {
   		$.ajax({
-       		url : 'ajax/eniri.php',
+       		url : $urlracine+'ajax/eniri.php',
        		type : 'GET',
        		dataType : 'json',
        		data : 'identigilo='+$( "#eniri_identigilo" ).val()+"&pasvorto="+$( "#eniri_pasvorto" ).val(),
@@ -17,7 +19,7 @@
            			}
            			return false;
            		} else {
-           			window.location = reponse.url;
+           			window.location = $urlracine+reponse.url;
            		}
        		},
        		error : function() {
@@ -28,7 +30,7 @@
 
   	$( "#inscription_button" ).click(function() {
   		$.ajax({
-       		url : 'ajax/aligxi.php',
+       		url : $urlracine+'ajax/aligxi.php',
        		type : 'GET',
        		dataType : 'json',
        		data : 'identigilo='+$( "#aligxi_identigilo" ).val()+"&pasvorto="+$( "#aligxi_pasvorto" ).val()+"&retadreso="+$("#aligxi_retadreso").val(),

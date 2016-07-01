@@ -27,7 +27,7 @@ $subjekto=$pagxo[count($pagxo)-1];
 	    
 		<!-- menus déroulants -->
 		<ul id="menu_cours" class="dropdown-content">
-			<li><a href="#" class="primaire-texte moyen">Cours en 10 leçons</a></li>
+			<li><a href="fr/cge/lec01.php" class="primaire-texte moyen">Cours en 10 leçons</a></li>
 			<li><a href="#" class="primaire-texte moyen">Gerda malaperis</a></li>
 			<li class="divider"></li>
 			<li><a href="#" class="primaire-texte moyen">Téléchargements</a></li>

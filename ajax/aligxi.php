@@ -6,6 +6,21 @@ $pasvorto=isset($_GET['pasvorto'])?$_GET['pasvorto']:"";
 
 $respondo = array();
 
+if ($identigilo=="") {
+	$respondo["type"]="identigilo";
+	$respondo["mesagxo"]="Merci de choisir un identifiant";
+	echo json_encode($respondo);
+	exit();
+}
+
+
+if ($pasvorto=="") {
+	$respondo["type"]="pasvorto";
+	$respondo["mesagxo"]="Merci de choisir un mot de passe";
+	echo json_encode($respondo);
+	exit();
+}
+
 // on vérifie si l'adresse email est correcte (regexp)
 if (!checkEmail($retadreso)) {
 	$respondo["type"]="retadreso";

@@ -311,6 +311,45 @@ function redirigeParDroits($persono) {
     }
 }
 
+// cette fonction améliore la version précédente
+function getRedirectionParDroits($persono_id) {
+    global $bdd;
+    $persono = apartigiPersonon($persono_id);
+    if ($persono['rajtoj']=='A') { // administrateur
+        return "administri.php"; 
+    }
+    if ($persono['rajtoj']=='K') { // correcteurs
+        return "miajlernantoj.php";
+    }
+    if ($persono['rajtoj']=='P') {
+        return; // pour les nouveaux élèves
+    }
+    if ($persono['rajtoj']=='S') { // nouveaux élèves ou élève qui suivent déjà un cours
+        $demando = "select stato,nunleciono,kurso,nunleciono from nuna_kurso where studanto=".$persono['id']." order by CASE stato WHEN 'N' THEN 1 WHEN 'K' THEN 2 WHEN 'H' THEN 3 WHEN 'F' THEN 4 ELSE 5 END";
+        $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+        $row = $result->fetch();
+        if ($row==null) {
+            return; 
+        }
+        if ($row["kurso"]=="KE") {
+            return;
+        }
+        if ($row['kurso']=="GR") {
+            $prefixe_url ='fr/gerda/';
+        } elseif($row['kurso']=="CG") {
+            $prefixe_url = 'fr/cge/';
+        }
+        if ($row["stato"]=="N") { // cas des élèves pas encore commencé
+            $demando2 = "select titolo,retpagxo from lecionoj where numero='1' and kurso='".$row["kurso"]."'";
+            $row2 = $bdd->query($demando2)->fetch();
+            return $prefixe_url.$row2['retpagxo'];
+        }
+        if ($row["stato"]=="K") { // cas des élèves en cours
+            return $prefixe_url.getUrlVenontaLeciono($row["kurso"],$row["nunleciono"]);
+        }
+    }
+}
+
 function getInfoPorDiplomoElLernanto($lernanto_id,$kurso) {
     global $bdd;
     $demando = "SELECT findato,nuna_kurso.kurso,personoj.personnomo,personoj.familinomo FROM nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where studanto=".$lernanto_id." and nuna_kurso.kurso='".$kurso."' and stato='F'";

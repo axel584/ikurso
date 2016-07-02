@@ -6,6 +6,7 @@ $url=isset($_SERVER['REQUEST_URI'])?strtok($_SERVER['REQUEST_URI'],'?'):"";
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
+$persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 ?>
 <!DOCTYPE html>
   <html>
@@ -156,10 +157,20 @@ $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 					</div>
 					<a href="#!" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
 					<ul class="right">
+
 						<!-- si utilisateur pas connecté -->
+<?php 
+if ($persono_id=="") {
+?>						
 						<li><a href="#konektigxi" class="btn waves-effect waves-light primaire clair modal-trigger" data-activates="konektigxi">CONNEXION</a></li>
+<?php 
+} else {						
+?>
 						<!-- si utilisateur connecté -->
-						<li class="hide"><a href="#!" class="btn-floating btn-large waves-effect waves-light primaire clair dropdown-button" data-activates="uzantomenuo"><i class="large material-icons">perm_identity</i>
+						<li><a href="#!" class="btn-floating btn-large waves-effect waves-light primaire clair dropdown-button" data-activates="uzantomenuo"><i class="large material-icons">perm_identity</i>
+<?php						
+}
+?>
 </a></li>
 					</ul>
 					<ul class="right hide-on-med-and-down">

@@ -43,13 +43,13 @@ include "pagxkapo.inc.php";
 					<div class="col s12 m5 offset-m1">
 						<h5>Cours en 10 leçons</h5>
 						<p>Cours d’espéranto pour débutants. À suivre avec l’aide d'un correcteur ou en totale autonomie.</p>
-						<p><a href="#" class="btn waves-effect waves-light blue">voir le cours</a></p>
+						<p><a href="<?=$vojo?>fr/cge/intro.php" class="btn waves-effect waves-light blue">voir le cours</a></p>
 					</div>
 						
 					<div class="col s12 m5">
 						<h5>Gerda malaperis</h5>
 						<p>Pour ceux qui connaissent déjà les bases de l’espéranto, par exemple après le cours en 10 leçons. </p>
-						<p><a href="#" class="btn waves-effect waves-light blue">voir le cours</a></p>
+						<p><a href="<?=$vojo?>fr/gerda/index.php" class="btn waves-effect waves-light blue">voir le cours</a></p>
 					</div>
 						
 				</div>
@@ -65,7 +65,7 @@ include "pagxkapo.inc.php";
 						<h5>Kurso de Esperanto</h5>
 						<p>Logiciel multimédia pour Windows, Linux et Mac OSX.<br>
 						En 12 leçons vous apprendrez les bases de l’espéranto.</p>
-						<p><a href="#" class="btn-flat small minusklo">télécharger le logiciel</a></p>
+						<p><a href="http://www.kurso.com.br/" class="btn-flat small minusklo">télécharger le logiciel</a></p>
 					</div>
 				
 					<div class="col s12 m4">
@@ -128,7 +128,7 @@ include "pagxkapo.inc.php";
 						<div class="card-panel blue lighten-5 center">
 							<h5>Je veux apprendre l’espéranto&nbsp;!</h5>
 							<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
-							<p><a href="aligxi.php" class="btn waves-effect waves-light blue">créer un compte</a></p>
+							<p><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
 						</div>
 					</div>
 				</div>

@@ -71,4 +71,8 @@
     	});
 	});
 
+	$("#registriEkzercaron_button").click(function() {
+		alert($("#chefa_form").serialize());
+	});
+
   });

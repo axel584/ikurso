@@ -14,7 +14,8 @@ if (!$row) {
 		header( "Location:index.php?erarkodo=18"); // mauvaise clef d'activation
 	} else {
 		// on active le compte
-		$query = "update personoj set aktivigita=1 where retadreso=".$retadreso;
+		$query = "update personoj set aktivigita=1 where retadreso='".$retadreso."'";
+		echo $query;
 		$bdd->exec($query);
 		// on enregistre dans le compte rendu
 		protokolo($row["id"],"COMPTE ACTIF",$row["enirnomo"]." a correctement activé son compte");

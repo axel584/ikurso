@@ -1,3 +1,4 @@
+		</form> <!-- fin du formulaire principale qui commence dans la pagxokapo.inc.php -->
 		<footer class="blue-grey lighten-5 grey-text">
 			<div class="submenuo">
 				<div class="ero grey-text"><a href="#">QUI SOMMES-NOUS ?</a></div>

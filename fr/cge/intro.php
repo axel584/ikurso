@@ -44,7 +44,7 @@ include "dlekkapo.inc.php"
 						<div class="row">
 							<div class="col s12 m6">
 								<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
-								<p><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
+								<p><a href="#" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
 							</div>
 							<div class="col s12 m6">
 								<p>J’ai déjà un compte : je commence le cours tout de suite !<br>

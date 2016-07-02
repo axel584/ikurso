@@ -29,7 +29,7 @@
 	});
 
   	$( "#inscription_button" ).click(function() {
-  		$("body").css("cursor", "progress");
+  		$("#inscription_button").addClass("disabled");
   		$.ajax({
        		url : $urlracine+'ajax/aligxi.php',
        		type : 'GET',
@@ -52,7 +52,6 @@
            				$("label[for='aligxi_pasvorto']").attr('data-error',reponse.mesagxo);
            				$("#aligxi_pasvorto").addClass("invalid");	
            			}
-           			$("body").css("cursor", "default");
            			return false;
            		} else {
            			// On affiche un message qui indique qu'il faut valider le mail
@@ -62,17 +61,30 @@
            			$('#footer-creer-compte').addClass("hide");
            			$('#footer-renvoyer-activation').removeClass("hide");
            		}
-           		$("body").css("cursor", "default");
        		},
        		error : function() {
        			alert("Erreur de connection, contactez les administrateurs");
-       			$("body").css("cursor", "default");
        		}
     	});
 	});
 
 	$("#registriEkzercaron_button").click(function() {
+		$("#registriEkzercaron_button").addClass("disabled");
 		alert($("#chefa_form").serialize());
+		$.ajax({
+       		url : $urlracine+'ajax/registriEkzercaron.php',
+       		type : 'GET',
+       		dataType : 'json',
+       		data : $("#chefa_form").serialize(),
+       		success : function(reponse, statut){ 
+       			alert("ok");
+       		},
+       		error : function() {
+       			alert("Erreur de connection, contactez les administrateurs");
+       		}
+    	});
+		
+
 	});
 
   });

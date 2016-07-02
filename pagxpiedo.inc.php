@@ -26,7 +26,7 @@
 		echo "Materialize.toast('Aucun compte à activer avec cette adresse email.', 4000);\n";
 	}
 	if ($erarkodo==18) {
-		echo "Materialize.toast('Clef d'activation incorrecte.', 4000);\n";
+		echo "Materialize.toast('Clef d’activation incorrecte.', 4000);\n";
 	}
 	
 

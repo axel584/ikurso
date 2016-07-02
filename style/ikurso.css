@@ -10,8 +10,10 @@
 .primaire-texte.texte-pale {color: #CBC9C7 !important;}
 .primaire-texte.texte-fond {background-color: #DDDCDA !important;}
 
-.contraste-A {}
-.contraste-B {}
+.contraste-A {background-color: #2196F3}
+.contraste-texte-A {color: #2196F3}
+.contraste-B {background-color: #9ccc65;}
+.contraste-texte-B {color: #9ccc65;}
 
 /*---- surcharge typographie -----*/
 @media only screen and (min-width: 1200px) {
@@ -51,7 +53,9 @@ div.col > p:first-child {
 }
 
 /* remarques et notes */
-p.noto {font-size: 80%;}
+.noto {font-size: 80%;}
+
+.toast {background-color: #e65100;}
 
 /* amélioration de l'affichage s12 */
 
@@ -208,7 +212,7 @@ ul#progreso li.farita {
 }
 ul#progreso li.nuna {
 	background-color:#FFF;
-	border:1px solid #039be5;
+	border:1px solid #0299e6;
 }
 
 /********** fin de la leçon *******/
@@ -248,6 +252,13 @@ ul#progreso li.nuna {
 	text-align: center;
 	margin-bottom: 3rem;
 }
+
+/******* informoj ******/
+
+.informoj #enhavo {margin-top: 3rem;}
+.informoj #rimarko {margin-top: 3rem;}
+.informoj form {margin-top: 3rem;}
+.informoj .label {text-align: right;}
 
 /******* formulaires *******/
 
@@ -289,14 +300,10 @@ ul#progreso li.nuna {
 	font-size: 80%;
 }
 
-
 /*********************************/
 /*         typographie           */
 /*********************************/
 
-.minusklo {
-	text-transform: lowercase;
-}
 .creditphoto {
 	font-size: 0.7rem!important;
 	margin-top: 0;

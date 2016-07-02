@@ -84,7 +84,7 @@ $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 				<div id="parto2" class="hide">
 					<p class="chapo">Vous y êtes presque !</p>
 					<p>Pour activer votre compte, veuillez cliquer sur le lien se trouvant dans le message électronique que nous venons de vous envoyer.<br>
-				Si vous ne l’avez pas reçu, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
+				Si vous ne le trouvez pas, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
 				Si vous n’avez rien reçu, vous pouvez demander de réenvoyer le message.</p>
 
 				</div>

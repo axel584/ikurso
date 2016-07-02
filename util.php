@@ -12,7 +12,10 @@ $url=isset($_SERVER['REQUEST_URI'])?strtok($_SERVER['REQUEST_URI'],'?'):"";
 // tiu funkcio kontrolas, cxu adreso validas kaj ekzistas
 function checkEmail($email)
 {
-     if (preg_match("/^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$]/i", $email)) {return FALSE;}
+	if ($email=="") {
+		return FALSE;
+	}
+     if (!preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $email)) {return FALSE;}
      list($Username, $Domain) = explode("@",$email);
      if(getmxrr($Domain, $MXHost)) {return TRUE;}
      else {

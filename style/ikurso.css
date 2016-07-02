@@ -29,12 +29,16 @@ p.chapo {font-size: 150%;}
 .btn-flat.small {
 	color: #78909B;
 	text-decoration: underline;
+	font-size: smaller;
+	text-transform: none;
 }
 .btn-flat.small:hover,
 .btn-flat.small:active {
 	color: #0299e6;
 }
-
+.btn-flat.small i {
+    margin: 0;
+}
 .hejmo h2 {
 	color: #828965;
 	font-weight: 300;
@@ -42,9 +46,7 @@ p.chapo {font-size: 150%;}
 div.col > p:first-child {
 	margin-top:0;
 }
-.minusklo {
-	text-transform: lowercase;
-}
+
 /****************************************/
 /*           blocs principaux           */
 /****************************************/
@@ -280,6 +282,27 @@ ul#progreso li.nuna {
 	font-size: 80%;
 }
 
+
+/*********************************/
+/*         typographie           */
+/*********************************/
+
+.minusklo {
+	text-transform: lowercase;
+}
+.creditphoto {
+	font-size: 0.7rem!important;
+	margin-top: 0;
+}
+.creditphoto a {
+	color: inherit;
+}
+.creditphoto a:hover, .creditphoto a:active {
+	color: inherit;
+	text-decoration: underline;
+}
+
+
 @media only screen and (max-width: 992px) {
 	article, aside {
 		width: 90%;
@@ -288,11 +311,6 @@ ul#progreso li.nuna {
 	.submenuo {align-self: center;}
 	.hejmo #enkonduko h2 {
 		margin-top: 2rem;
-	}
-
-@media only screen and (max-width: 600px) {
-	.hejmo #enkonduko h2 {
-		margin-top: 0;
 	}
 
 }

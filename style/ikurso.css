@@ -23,6 +23,8 @@ h2 {font-size: 2.5rem;}
 h3 {font-size: 2rem;}
 a {color: #0299e6;}
 
+.card-panel h5 {margin-bottom: 1.5rem;}
+
 p {font-weight: 300;}
 p.chapo {font-size: 150%;}
 
@@ -31,6 +33,7 @@ p.chapo {font-size: 150%;}
 	text-decoration: underline;
 	font-size: smaller;
 	text-transform: none;
+	padding: 0;
 }
 .btn-flat.small:hover,
 .btn-flat.small:active {
@@ -47,6 +50,17 @@ div.col > p:first-child {
 	margin-top:0;
 }
 
+/* remarques et notes */
+p.noto {font-size: 80%;}
+
+/* amélioration de l'affichage s12 */
+
+@media only screen and (max-width: 600px) {
+	.row .col.s12 + .col.s12 {
+		margin-top: 2em;
+	}
+}
+ 
 /****************************************/
 /*           blocs principaux           */
 /****************************************/
@@ -205,13 +219,6 @@ ul#progreso li.nuna {
 	justify-content: space-between;
 	align-items: flex-end;
 	margin-top:0.5em;
-}
-.ligoj a {
-	color: #78909c;
-	font-size: 85%;
-}
-.ligoj a:hover, .ligoj a:active {
-	text-decoration: underline;
 }
 #marko .visible {display: block;}
 #marko .invisible {display: none;}

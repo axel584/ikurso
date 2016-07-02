@@ -28,15 +28,15 @@ $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 	    
 		<!-- menus déroulants -->
 		<ul id="menu_cours" class="dropdown-content">
-			<li><a href="fr/cge/lec01.php" class="primaire-texte moyen">Cours en 10 leçons</a></li>
-			<li><a href="#" class="primaire-texte moyen">Gerda malaperis</a></li>
+			<li><a href="<?php echo $vojo;?>fr/cge/intro.php" class="primaire-texte moyen">Cours en 10 leçons</a></li>
+			<li><a href="<?php echo $vojo;?>fr/gerda/index.php" class="primaire-texte moyen">Gerda malaperis</a></li>
 			<li class="divider"></li>
-			<li><a href="#" class="primaire-texte moyen">Téléchargements</a></li>
+			<li><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj" class="primaire-texte moyen">Téléchargements</a></li>
 		</ul>
 		<ul id="menu_aide" class="dropdown-content">
-			<li><a href="#" class="primaire-texte moyen">Comment s'inscrire</a></li>
-			<li><a href="#" class="primaire-texte moyen">Foire aux questions</a></li>
-			<li><a href="#" class="primaire-texte moyen">Paramétrer son clavier</a></li>
+			<li><a href="<?php echo $vojo;?>fr/intro.php?temo=enskribo" class="primaire-texte moyen">Comment s'inscrire</a></li>
+			<li><a href="<?php echo $vojo;?>helpo.php" class="primaire-texte moyen">Foire aux questions</a></li>
+			<li><a href="<?php echo $vojo;?>helpo.php?temo=iloj" class="primaire-texte moyen">Paramétrer son clavier</a></li>
 		</ul>
 
 		<!-- fenêtre modale connexion -->
@@ -123,9 +123,8 @@ $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 				<p class="retadreso">#</p>
 			</header>
 			<ul class="collection">
-				<li><a href="#" class="primaire-texte moyen">Mes données personnelles</a></li>
-				<li><a href="#" class="primaire-texte moyen">Mes cours</a></li>
-				<li><a href="#" class="primaire-texte moyen">Déconnexion</a></li>
+				<li><a href="<?php echo $vojo;?>personinformoj" class="primaire-texte moyen">Mes données personnelles</a></li>
+				<li><a href="<?php echo $vojo;?>eliri.php" class="primaire-texte moyen">Déconnexion</a></li>
 			</ul>
 			</span>
 		</div>
@@ -133,28 +132,25 @@ $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 		<div class="navbar-fixed">	
 			<nav role="navigation" class="primaire">
 				<div class="nav-wrapper">
-					<a href="#" class="brand-logo" id="logo">iKurso</a>
+					<a href="<?php echo $vojo;?>index.php" class="brand-logo" id="logo">iKurso</a>
 					<!-- hamburger menu -->
 					<div class="side-nav" id="nav-mobile">
 						<ul>
-							<li><a href="#">L’espéranto</a></li>
+							<!-- <li><a href="#">L’espéranto</a></li> -->
 							<li class="divider"></li>
-							<li><a href="#">COURS EN LIGNE</a></li>
+							<li>COURS EN LIGNE</li>
 							<ul>
-								<li><a href="#">Cours en 10 leçons</a></li>
-								<li><a href="#">Gerda malaperis</a></li>
-								<li><a href="#">Lasu min paroli plu</a></li>
+								<li><a href="<?php echo $vojo;?>fr/cge/intro.php">Cours en 10 leçons</a></li>
+								<li><a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a></li>
 								<li class="divider"></li>
-								<li><a href="#">Téléchargements</a></li>
-								<li class="divider"></li>
-								<li><a href="#">Autres cours</a></li>
+								<li><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">Téléchargements</a></li>
 							</ul>
 							<li class="divider"></li>
-							<li><a href="#">INFORMATIONS PRATIQUES</a></li>
+							<li>INFORMATIONS PRATIQUES</li>
 							<ul>
-								<li><a href="#">Comment s'inscrire</a></li>
-								<li><a href="#">Foire aux questions</a></li>
-								<li><a href="#">Paramétrer son clavier</a></li>
+								<li><a href="<?php echo $vojo;?>fr/intro.php?temo=enskribo">Comment s'inscrire</a></li>
+								<li><a href="<?php echo $vojo;?>helpo.php">Foire aux questions</a></li>
+								<li><a href="<?php echo $vojo;?>helpo.php?temo=iloj">Paramétrer son clavier</a></li>
 							</ul>
 						</ul>
 					</div>
@@ -167,7 +163,7 @@ $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 </a></li>
 					</ul>
 					<ul class="right hide-on-med-and-down">
-						<li><a href="#">L’ESPÉRANTO</a></li>
+						<!--<li><a href="#">L’ESPÉRANTO</a></li>-->
 						<li><a class="dropdown-button" href="#!" data-activates="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
 						<li><a class="dropdown-button" href="#!" data-activates="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>
 					</ul>

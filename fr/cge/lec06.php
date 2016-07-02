@@ -25,7 +25,6 @@ include "dlekkapo.inc.php";
 		</section>
 				
 <section id="leciono-enhavo">
-
 <?php 
 getTitoloLecionero('CG',6,$section);
 
@@ -307,7 +306,6 @@ if ($section=="9") {
 } // fin section 9
 if ($section=="10") {
 ?>
-
 <p>Répondez en espéranto aux questions suivantes, selon les deux récits ci-dessus :</p>
 <input type="hidden" name="013_cxap06.2" value="2. Répondez en espéranto aux questions suivantes, selon les deux récits ci-dessus.">
 <?php atentigo(); ?>
@@ -328,7 +326,6 @@ if ($section=="10") {
 	ekzerco("U", 1);
 ?>
 </div>
-
 <?php 
 } // fin section 10
 if ($section=="11") {
@@ -579,7 +576,7 @@ pas en avant.
 				<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le précédent et le suivant -->
 				<section id="leciono-fino">
 					<div id="marko" class="right-align">
-						<a id="nova" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j'ai fini d'étudier cette section">Terminé !</a>
+						<?php getBoutonFinSection('CG',6,$section,$persono_id); ?>
 						<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
 					</div>
 					<div class="ligoj">

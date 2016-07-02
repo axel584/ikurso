@@ -214,7 +214,7 @@ function getEnhavtabelo($kurso,$leciono) {
 	global $bdd;
 	$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
 	echo '<li>';
-	echo '<div class="collapsible-header"><i class="material-icons">toc</i>Sommaire de la leçon</div>';
+	echo '<div class="collapsible-header active"><i class="material-icons">toc</i>Sommaire de la leçon</div>';
 	echo '<div class="collapsible-body">';
 	echo '<ul id="enhavtabelo" class="collection">';
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
@@ -247,6 +247,24 @@ function getLecioneroVenonta($kurso,$leciono,$lecionero) {
 	if ($row!=false) {
 		echo '<a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'<i class="material-icons">chevron_right</i></a>';
 	}
+}
+
+function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
+	global $bdd;
+	$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo,lecioneroj.tipo,lecioneroj.lasta FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero." order by ordo ASC";
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$row = $result->fetch();
+	// si l'élève n'est pas enregistré
+	if ($persono_id=="") { 
+		return;
+	} elseif($row["tipo"]=="EKZERCARO") { // on memorise
+		echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Enregistrer mes réponses !</a>';
+	} elseif($row["lasta"]==1) { // on envoit au correcteur
+		echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
+	} else { // on envoit au correcteur
+		echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
+	}
+	//<a id="nova" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j'ai fini d'étudier cette section">Terminé !</a>
 }
 
 ?>

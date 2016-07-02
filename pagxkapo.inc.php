@@ -170,3 +170,4 @@ $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 				</div>
 			</nav>
 		</div>
+<form id="chefa_form"> <!-- on englobe chaque page d'un formulaire principal -->

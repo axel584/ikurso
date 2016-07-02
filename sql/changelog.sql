@@ -291,3 +291,12 @@ INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, 
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '93', 'Vortlisto', 'VORTARO', '3',0,0);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '93', 'Ezercoj', 'EKZERCARO', '4',0,0);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '93', 'Lasu min…', 'TEKSTO', '5',0,1);
+-- table pour les réponses des élèves
+CREATE TABLE respondoj ( 
+`id` INT NOT NULL AUTO_INCREMENT , 
+`dato` TIMESTAMP NOT NULL,
+`persono_id` int(11) NOT NULL,
+`kodo` varchar(40),
+`demando` TEXT,
+`respondo` TEXT,
+PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;

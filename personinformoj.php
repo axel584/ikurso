@@ -9,7 +9,7 @@ include "pagxkapo.inc.php";
 ?>
 
 <main class="row">
-	<article class="col s12 m9 l6 offset-m3 offset-l2">
+	<article class="col s12 m9 l6 offset-m1 offset-l1">
 		<h1>Données personnelles</h1>
 			
 		<div id="novaUzanto" class="card-panel blue lighten-5 center hide">
@@ -81,16 +81,17 @@ include "pagxkapo.inc.php";
 		</section>
 	</article>
 	
-	<aside class="col s12 m10 l3 offset-m1 offset-l1">
+	<aside class="col s12 m10 l4 offset-m1 offset-l1">
 		<!-- pour les élèves uniquement -->
 		<?php if ($persono['rajtoj']=="S" || $persono['rajtoj']=="P") { ?>
 			<h2>Mes cours</h2>
 			
-			<p>Dernier cours choisi : <?php simplaVorto("nomo","kursoj"," where kodo='".$persono['kurso']."'"); ?></p>
-			<p>Mon correcteur est 
-				<?php $korektanto = getKorektantonElLernanto($persono['id']); echo $korektanto['personnomo']." ".$korektanto['familinomo']." ("; ?>
-				<a href="mailto:<?php echo $korektanto['retadreso'];?>"><?php echo $korektanto['retadreso'];?></a></p>
-			<p>Cours suivi : <?php getCoursElLernanto($persono['id']);?>			
+			<p><span class="primaire-texte texte-moyen">Dernier cours choisi : </span><?php simplaVorto("nomo","kursoj"," where kodo='".$persono['kurso']."'"); ?></p>
+			<p><span class="primaire-texte texte-moyen">Mon correcteur est :</span><br>
+				<?php $korektanto = getKorektantonElLernanto($persono['id']); echo $korektanto['personnomo']." ".$korektanto['familinomo']; ?>
+				(<a href="mailto:<?php echo $korektanto['retadreso'];?>"><?php echo $korektanto['retadreso'];?></a>)</p>
+			<h5>Cours suivis :</h5>
+			<ul class="collection"><?php getCoursElLernanto($persono['id']);?></ul>			
 		<?php } else { ?>
 		<!-- pour correcteurs et les admin -->
 			<h2>Mes élèves</h2>

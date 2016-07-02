@@ -236,20 +236,23 @@ function getCoursElLernanto($lernanto_id) {
     $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
     while ($row = $result->fetch()) {
         $prefixe_url = getPrefixeCours($row["kurso"]);
+        echo "<li class='collection-item'><span class='title'>";
         simplaVorto('nomo','kursoj',"where kodo='".$row['kurso']."'");
+        echo "</span>";
         // TODO : vérifier pour les élèves n'ayant pas encore commencé
         if ($row['nunleciono']==null) {
-            echo " - pas encore commencé";
+            echo "<p>pas encore commencé</p>";
         } else {
-            echo " - Dernière leçon suivi : ";
+            echo "<p><span class='primaire-texte texte-moyen'>Dernière leçon suivie</span> : ";
             simplaVorto('titolo','lecionoj',"where numero='".$row["nunleciono"]."' and kurso='".$row["kurso"]."'");
+            echo "</p>";
         }
         if ($row["stato"]=="N") { // cas des élèves pas encore commencé
             // TODO : ici on affiche la première leçon à suivre
             $demando2 = "select titolo,retpagxo from lecionoj where and numero='1' and kurso='".$row["kurso"]."'";
             $row2 = $bdd->query($demando2)->fetch();
             if (isset($row2['retpagxo'])) { // dans le cas du logiciel, il n'y a pas de leçon à afficher
-                echo " - <a href='".$prefixe_url.$row2['retpagxo']."'>Accès à la leçon : ".$row2['titolo']."</a>";
+                echo "<p><a href='".$prefixe_url.$row2['retpagxo']."'>Accès à la leçon : ".$row2['titolo']."</a></p>";
             }
         }
         if ($row["stato"]=="K") { // cas des élèves en cours
@@ -257,7 +260,7 @@ function getCoursElLernanto($lernanto_id) {
             $demando2 = "select titolo,retpagxo from lecionoj where numero='".$prochaine_lecon."' and kurso='".$row["kurso"]."'";
             $row2 = $bdd->query($demando2)->fetch();
             if ($row2['retpagxo']!=null) { // dans le cas du logiciel, il n'y a pas de leçon à afficher
-                echo " - <a href='".$prefixe_url.$row2['retpagxo']."'>Accès à la leçon : ".$row2['titolo']."</a>";
+                echo "<a class='btn-flat small blue-text' href='".$prefixe_url.$row2['retpagxo']."'><i class='material-icons right'>arrow_right</i>Accès à la leçon : ".$row2['titolo']."</a>";
             }
         }
         if ($row["stato"]=="F") {
@@ -266,7 +269,7 @@ function getCoursElLernanto($lernanto_id) {
               <a class="bouton" href="diplome.php?kurso=<?php echo $row['kurso'] ?>" onclick="window.open(this.href, 'attestation', 'height=660, width=862, left='+(screen.availWidth-862)/2+', top='+(screen.availHeight-660)/2)+', toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'; return false;">Attestation de réussite</a>
            <?php
         }
-        echo "<br/>";
+        echo "</li>";
     }
 }
 

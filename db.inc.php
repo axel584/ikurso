@@ -24,11 +24,11 @@ function fermiDatumbazon() {
 // $pasvorto - vorto uzita por eniri en la ttt-ejo kun la enirnomo
 // $retadreso - uzita por sendi mesagxon kun la nomo de la korektanto (por la studantoj) aux de la studanto (por la Korektantoj)
 // Elirvaluo : id de la persono (unika nombro por retrovi iun)
-function kreiPersonon($enirnomo,$pasvorto,$retadreso) {
+function kreiPersonon($enirnomo,$pasvorto,$retadreso,$aktivigo) {
     global $bdd;
      $query = "insert into personoj";
-     $query .="(enirnomo,pasvorto,retadreso,ekdato) ";
-     $query .="values ('$enirnomo','$pasvorto','$retadreso',now())";
+     $query .="(enirnomo,pasvorto_md5,retadreso,aktivigo,ekdato) ";
+     $query .="values ('$enirnomo',md5('$pasvorto'),'$retadreso','$aktivigo',now())";
      $bdd->exec($query);
      return $bdd->lastInsertId();
 }

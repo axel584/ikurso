@@ -1,34 +1,65 @@
 <?php
 include "../util.php";
+$retadreso=isset($_GET['retadreso'])?$_GET['retadreso']:"";
 $identigilo=isset($_GET['identigilo'])?$_GET['identigilo']:"";
 $pasvorto=isset($_GET['pasvorto'])?$_GET['pasvorto']:"";
 
 $respondo = array();
 
-$query = "select id,aktivigita,pasvorto_md5 from personoj where enirnomo='".$identigilo."'";
+// on vérifie si l'adresse email est correcte (regexp)
+if (!checkEmail($retadreso)) {
+	$respondo["type"]="retadreso";
+	$respondo["mesagxo"]="Votre adresse e-mail semble erronée, merci de vérifier";
+	echo json_encode($respondo);
+	exit();
+}
+
+// on vérifie si l'adresse est déjà utilisée
+$query = "select count(*) as combien from personoj where retadreso='".$retadreso."'";
 $result = $bdd->query($query);
-if (!$row = $result->fetch()) { // aucune ligne retournée
-	$respondo["mesagxo"]="Identifiant introuvable, cliquez sur le bouton <Créer un compte>";
+$retadreso_en_base = $result->fetch()["combien"];
+if ($retadreso_en_base>0) {
+	$respondo["type"]="retadreso_jam_ekzistas";
+	$respondo["mesagxo"]="Un compte existe déjà avec cette adresse e-mail";
+	echo json_encode($respondo);
+	exit();
+}
+
+// on vérifie si l'identifiant est déjà utilisé 
+$query = "select count(*) as combien from personoj where enirnomo='".$identigilo."'";
+$result = $bdd->query($query);
+$enirnomo_en_base = $result->fetch()["combien"];
+if ($enirnomo_en_base>0) {
 	$respondo["type"]="identigilo";
-}
-else {
-	if ($row["aktivigita"]==0) { 
-		$respondo["mesagxo"] = "Ce compte n'est pas validé, merci de cliquer sur le lien reçu par email.";
-		$respondo["type"]="identigilo";
-	} else {
-		if (md5($pasvorto)!=$row["pasvorto_md5"]) {
-			$respondo["mesagxo"] = "Mot de passe incorrect";
-			$respondo["type"]="pasvorto";
-		} else {
-			$respondo["mesagxo"] = "ok";
-			// on memorise l'id en session :
-			$_SESSION["persono_id"]=$row["id"];
-			// trouver l'url où l'on doit atterir
-			$respondo["url"]="administri.php";
-		}
-	}
-
+	$respondo["mesagxo"]="Un compte existe déjà avec cet identifiant";
+	echo json_encode($respondo);
+	exit();
 }
 
+// Ici, tous les paramètres sont bons
+
+// clef de hachage unique à envoyer par mail et mettre en base
+$aktivigo = md5(uniqid(rand(), true));
+$persono_id = kreiPersonon($identigilo,$pasvorto,$retadreso,$aktivigo);
+
+
+// on envoit le lien
+$lien = $urlracine."aktivigi.php?retadreso=".$retadreso."&aktivigo=".$aktivigo;
+$filename = "../mails/aktivigi.html";
+$fd = fopen($filename, "r");
+$contents = fread($fd, filesize ($filename));
+fclose($fd);
+$contents=str_replace("##LIEN_ACTIVATION##",$lien,$contents);
+$mesagxkapo="MIME-Version: 1.0\n";
+$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
+$mesagxkapo.="From: ikurso <ikurso@esperanto-jeunes.org>\n";
+$mesagxkapo.="Return-Path: <ikurso@esperanto-jeunes.org>\n";
+$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
+// envoyer le mail eleve pour l'inviter a attendre un correcteur.
+$objekto="Activation de votre compte pour apprendre gratuitement l'espéranto";
+mail($retadreso,$objekto,$contents,$mesagxkapo);
+protokolo($persono_id,"ACTIVATION COMPTE",$retadreso." a reçu une clef d'activation");
+
+$respondo["mesagxo"] = "ok";
 echo json_encode($respondo);
 ?>

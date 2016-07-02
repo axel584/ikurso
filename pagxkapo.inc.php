@@ -5,6 +5,7 @@ if (!isset($vojo)) { $vojo="";}
 $url=isset($_SERVER['REQUEST_URI'])?strtok($_SERVER['REQUEST_URI'],'?'):"";
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
+$erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 ?>
 <!DOCTYPE html>
   <html>
@@ -89,9 +90,11 @@ $subjekto=$pagxo[count($pagxo)-1];
 				</div>
 			</div>
 			<div class="modal-footer">
-				<a id="inscription_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">CRÉER UN COMPTE</a>
-				<div id="boutons2" class="hide">
-					<a id="fermer_button" class="modal-action waves-effect waves-light btn primaire">Fermer</a>
+				<div id="footer-creer-compte">
+					<a id="inscription_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">CRÉER UN COMPTE</a>
+				</div>
+				<div id="footer-renvoyer-activation" class="hide">
+					<a id="fermer_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>
 					<a id="inscription2_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">Renvoyer le courriel d’activation</a>
 				</div>
 			</div>

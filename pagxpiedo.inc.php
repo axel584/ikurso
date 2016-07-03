@@ -4,7 +4,7 @@
 		<div class="submenuo">
 			<div class="ero primaire-texte"><a href="#">QUI SOMMES-NOUS ?</a></div>
 			<div class="ero primaire-texte"><a href="#">INFORMATIONS</a></div>
-			<div class="ero primaire-texte"><a href="#">NOUS CONTACTER</a></div>
+			<div class="ero primaire-texte"><a href="<?php echo $vojo;?>reago.php">NOUS CONTACTER</a></div>
 		</div>
 		<div class="asocio primaire-texte texte-clair">
 			Espéranto-France – 4 bis, rue de la Cerisaie, 75004 Paris

@@ -255,7 +255,9 @@ function getLecioneroAntauxa($kurso,$leciono,$lecionero) {
 	if ($row!=false) {
 		echo '<a href="'.$row['retpagxo'].'?section='.$row['ordo'].'" class="btn-flat small blue-text"><i class="material-icons left">arrow_left</i>'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a>';
 	}
-	
+	else {
+		echo "<a></a>";
+	}	
 }
 
 function getLecioneroVenonta($kurso,$leciono,$lecionero) {
@@ -265,7 +267,7 @@ function getLecioneroVenonta($kurso,$leciono,$lecionero) {
 	$row = $result->fetch();
 	if ($row!=false) {
 		echo '<a href="'.$row['retpagxo'].'?section='.$row['ordo'].'" class="btn-flat small blue-text">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'<i class="material-icons right">arrow_right</i></a>';
-	}
+	} 
 }
 
 function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {

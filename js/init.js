@@ -20,6 +20,7 @@
     $('select').material_select();
 
     $('.scrollspy').scrollSpy();
+    
     $('select').material_select();
       
   	$( '.datepicker' ).pickadate({
@@ -34,5 +35,14 @@
 	    clear: 'effacer',
 	    close: 'fermer'
 	})
+
+	$('.dropdown-button').dropdown({
+		belowOrigin: true, // Displays dropdown below the button
+		constrain_width: false, // Does not change width of dropdown to that of the activator
+		alignment: 'right'
+		}
+	);
+
+    $('.tabs-wrapper .row').pushpin({ top: $('.tabs-wrapper').offset().top });
 
 });

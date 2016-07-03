@@ -224,9 +224,7 @@ ul#progreso li.nuna {
 	align-items: flex-end;
 	margin-top:0.5em;
 }
-#marko .visible {display: block;}
-#marko .invisible {display: none;}
-
+#leciono-fino {margin-top: 2rem;}
 /**************************************/
 /*        contenu des pages           */
 /**************************************/

@@ -33,12 +33,11 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);}
 			<li><a href="<?php echo $vojo;?>fr/cge/intro.php" class="primaire-texte moyen">Cours en 10 leçons</a></li>
 			<li><a href="<?php echo $vojo;?>fr/gerda/index.php" class="primaire-texte moyen">Gerda malaperis</a></li>
 			<li class="divider"></li>
-			<li><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj" class="primaire-texte moyen">Téléchargements</a></li>
+			<li><a href="<?php echo $vojo;?>fr/elsxutoj.php" class="primaire-texte moyen">Téléchargements</a></li>
 		</ul>
 		<ul id="menu_aide" class="dropdown-content">
 			<li><a href="<?php echo $vojo;?>fr/intro.php?temo=enskribo" class="primaire-texte moyen">Comment s'inscrire</a></li>
 			<li><a href="<?php echo $vojo;?>helpo.php" class="primaire-texte moyen">Foire aux questions</a></li>
-			<li><a href="<?php echo $vojo;?>helpo.php?temo=iloj" class="primaire-texte moyen">Paramétrer son clavier</a></li>
 		</ul>
 
 		<!-- fenêtre modale connexion -->

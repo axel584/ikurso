@@ -1,6 +1,7 @@
 <?php
 include "util.php";
 $pagxtitolo="Envoi de message";
+$korpo="informoj";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $erarkodo=isset($_GET["erarkodo"])?$_GET["erarkodo"]:"";
 $q=isset($_GET["q"])?$_GET["q"]:"";
@@ -14,52 +15,56 @@ if ($persono_id!="") {
 }
 include "pagxkapo.inc.php";
 ?>
-		<div id="enhavo">
-			<ul id="tabnav"></ul>
-			<div id="kadro">
-				<div class="klarigo">
-					<h2>Votre message</h2>
-					<form method="post" action="reago2.php">
-					<?php if ($erarkodo=="15"){
-						echo "<div class='atentigo'><p class='eraro'>Vous devez indiquer une adresse électronique correcte</p></div>";
-					} elseif ($erarkodo=="16"){
-						echo "<div class='atentigo'><p class='eraro'>Votre message est vide</p></div>";
-					} else {
-					?>
-						<p>Ce formulaire vous permet d'envoyer un message aux administrateurs du cours.
-						Il ne doit être utilisé que pour des questions concernant les cours d'espéranto ou ce site.</p>
-						<p class="grava">
-						Avant de poser votre question : lisez les <a href="http://ikurso.esperanto-jeunes.org/fr/intro.php">
-						pages d'aide</a>.
-						<?php if (($persono["rajtoj"]=="K")||($persono["rajtoj"]=="A")) {	?>
-							et le <a href="http://ikurso.esperanto-jeunes.org/helppagxo.php">
-							Guide du correcteur</a>.
-						<?php } ?>
-						 Votre réponse y est déjà peut-être !
-						<?php if ($persono["rajtoj"]) {	?>
-						<?php } ?>
-						<br>
-					<?php } ?>
-					<table class="perso">
-						<tr>
-							<td class="col1">Votre adresse &eacute;lectronique :</td>
-								<td><input name="sendinto" size="60" value="<?php if (isset($_SESSION["sendinto"])) {echo $_SESSION["sendinto"];}else {echo "** obligatoire **";}?>" onFocus="this.value=''"></td>
-						</tr>
-						<tr>
-							<td class="col1">Sujet de votre message : </td>
-							<td><input name="temo" size="60" value="<?php if (isset($_SESSION["temo"])) {echo $_SESSION["temo"];}?>"></td>
-						</tr>
-					</table>
-					<table class="perso">
-						<tr><td class="col1">&nbsp;&nbsp;Commentaires / Komentoj :</td></tr>
-					</table>
-					<textarea name="komento" rows="8" cols="80"><?php if (isset($_SESSION["komento"])) {echo $_SESSION["komento"];}?></textarea></td></tr>
-					<p><input class="bouton" type="submit" value="envoyer">&nbsp;&nbsp;
-					<input class="bouton" type="reset" value="effacer"></p>
-					<p><input type="hidden" name="lastpagxo" value="<?php echo $_POST['lastpagxo'];?>"></p>
-					<input type="hidden" name="reagopagxo" value="<?=$q?>">
-					</form>
+
+<div class="row">
+	<article class="col s12 m10 l7 offset-m1 offset-l2">
+		<section id="leciono-kapo">
+			<h1>Nous contacter</h1>
+		</section>
+
+		<p>Ce formulaire vous permet d'envoyer un message aux administrateurs du cours.
+			Il ne doit être utilisé que pour des questions concernant les cours d'espéranto ou ce site.</p>
+			
+		<p>Avant de poser votre question&nbsp;: n’hésitez pas à lire les <a href="<?php echo $vojo ?>fr/intro.php">pages d'aide</a>.
+		<?php if (($persono["rajtoj"]=="K")||($persono["rajtoj"]=="A")) {	?>
+			et le <a href="<?php echo $vojo ?>helppagxo.php">Guide du correcteur</a>.
+		<?php } ?>
+		
+		Votre réponse y figure peut-être déjà&nbsp;!
+		</p>
+		<section class="card">
+
+			<form method="post" action="reago2.php">
+				<div class="card-title primaire-texte texte-moyen">Votre message</div>
+				
+				<div class="card-content">
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="sendinto"  type="email" class="validate" value="<?php if (isset($_SESSION['sendinto'])) {echo $_SESSION['sendinto'];} ?>" required="" aria-required="true">
+							<label for="sendinto" data-error="veuillez indiquer une adresse correcte" >Votre adresse courriel</label>
+						</div>
+	
+					    <div class="input-field col s12">
+							<input id="temo" type="text" class="validate" required="" aria-required="true" value="<?php if (isset($_SESSION["temo"])) {echo $_SESSION["temo"];}?>">
+							<label for="temo">Sujet de votre message</label>
+					    </div>
+	
+						<div class="input-field col s12">
+							<textarea id="komento" class="materialize-textarea"></textarea>
+							<label for="komento"><?php if (isset($_SESSION["komento"])) {echo $_SESSION["komento"];} else echo "Votre commentaire, question, remarque…"; ?></label>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-<? include "pagxpiedo.inc.php" ?>
+
+				<div class="card-action">
+					<input class="btn waves-effect waves-light blue" type="submit" value="envoyer">
+					<input class="btn-flat waves-effect waves-light blue-text" type="reset" value="effacer">
+				</div>
+				
+				<input type="hidden" name="lastpagxo" value="<?php echo $_POST['lastpagxo'];?>"></p>
+				<input type="hidden" name="reagopagxo" value="<?php echo $q?>">
+			</form>
+		</section>
+	</article>
+</div>
+<?php include "pagxpiedo.inc.php" ?>

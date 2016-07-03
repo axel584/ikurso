@@ -112,7 +112,7 @@ INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, 
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '67', 'Révision des terminaisons', 'TEKSTO', '1',1,0);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '67', 'Comment poser des questions', 'TEKSTO', '2',0,0);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '67', 'Rappel sur la prononciation', 'TEKSTO', '3',0,0);
-INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '67', 'Révision des corrélatifs', 'TEKSTO', '4',0,0);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '67', 'Révision des corrélatifs', 'EKZERCARO', '4',0,0);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '67', 'Proverbe', 'TEKSTO', '5',0,0);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '67', 'Les prépositions', 'TEKSTO', '6',0,0);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '67', 'Premier récit et vocabulaire', 'TEKSTO', '7',0,0);

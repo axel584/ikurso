@@ -228,6 +228,25 @@ function getEnhavtabelo($kurso,$leciono) {
 								
 }
 
+function getFaritajLecioneroj($kurso,$leciono,$persono_id) {
+	global $bdd;
+	if ($persono_id=="") { // Pas connecté
+		return;
+	}
+	$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecionoj.retpagxo,personoj_lecioneroj.persono_id  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
+	$result = $bdd->query($query);
+	echo '<ul id="progreso">';
+	while ($row = $result->fetch()) {
+		if ($row["persono_id"]==null) { // l'élève n'a pas fait cette section
+			echo '<li id="lecionero'.$row["id"].'" class="nova"></li>';
+		} else { // l'élève a fait cette section
+			echo '<li id="lecionero'.$row["id"].'" class="farita"></li>';
+		}
+
+	}
+	echo '</ul>';
+}
+
 function getLecioneroAntauxa($kurso,$leciono,$lecionero) {
 	global $bdd;
 	$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo<".$lecionero." order by ordo DESC";
@@ -251,7 +270,7 @@ function getLecioneroVenonta($kurso,$leciono,$lecionero) {
 
 function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	global $bdd;
-	$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo,lecioneroj.tipo,lecioneroj.lasta FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero." order by ordo ASC";
+	$query="SELECT lecioneroj.id,lecioneroj.titolo,ordo,lecionoj.retpagxo,lecioneroj.tipo,lecioneroj.lasta FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero." order by ordo ASC";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$row = $result->fetch();
 	// si l'élève n'est pas enregistré
@@ -261,8 +280,8 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 		echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Enregistrer mes réponses !</a>';
 	} elseif($row["lasta"]==1) { // on envoit au correcteur
 		echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
-	} else { // on envoit au correcteur
-		echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
+	} else { // on indique que la leçon est terminée
+		echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$row["id"].'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
 	}
 	//<a id="nova" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j'ai fini d'étudier cette section">Terminé !</a>
 }

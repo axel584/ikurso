@@ -1,5 +1,6 @@
 <?php
 $titolo="8 (ok)";
+$leciono = 8;
 $section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
 
@@ -9,19 +10,7 @@ include "dlekkapo.inc.php";
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
 		<section id="leciono-kapo">
 			<h1>Leçon 8</h1>
-			<!--<ul id="progreso">
-				<li id="lec1" class="farita"></li>
-				<li id="lec2" class="farita"></li>
-				<li id="lec3" class="farita"></li>
-				<li id="lec4" class="farita"></li>
-				<li id="lec5" class="farita"></li>
-				<li id="lec6" class="nuna"></li>
-				<li id="lec7" class="nova"></li>
-				<li id="lec8" class="nova"></li>
-				<li id="lec9" class="nova"></li>
-				<li id="lec10" class="nova"></li>
-				<li id="lec11" class="nova"></li>
-			</ul>-->
+			<?php getFaritajLecioneroj($kurso,$leciono,$persono_id); ?>
 		</section>
 				
 <section id="leciono-enhavo">
@@ -386,7 +375,7 @@ décernera une attestation de cours.
 				<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le précédent et le suivant -->
 				<section id="leciono-fino">
 					<div id="marko" class="right-align">
-						<a id="nova" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j'ai fini d'étudier cette section">Terminé !</a>
+						<?php getBoutonFinSection('CG',8,$section,$persono_id); ?>
 						<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
 					</div>
 					<div class="ligoj">

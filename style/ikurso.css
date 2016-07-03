@@ -20,9 +20,11 @@
   html {font-size: 17px;}
 }
 
-h1 {font-size: 3.5rem; margin: 2rem 0 1rem 0;}
-h2 {font-size: 2.5rem;}
-h3 {font-size: 2rem;}
+h1 {font-size: 3.5rem; margin: 2rem 0 1rem 0; color: #989490;}
+h2 {font-size: 2.5rem; color: #989490;}
+h3 {font-size: 2rem; margin: 2rem 0 1.5rem 0; color: #554E47;}
+h4 {font-size: 1.5rem; margin: 2rem 0 1.5rem 0; color: #554E47;font-weight: 300;}
+
 a {color: #0299e6;}
 
 .card-panel h5 {margin-bottom: 1.5rem;}

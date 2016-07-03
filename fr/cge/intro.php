@@ -48,7 +48,7 @@ include "dlekkapo.inc.php"
 							</div>
 							<div class="col s12 m6">
 								<p>J’ai déjà un compte : je commence le cours tout de suite !<br>
-								<a href="lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Leçon 1</a>
+								<a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Leçon 1</a>
 								</p>
 							</div>
 						</div>

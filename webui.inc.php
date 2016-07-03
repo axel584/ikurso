@@ -253,7 +253,7 @@ function getLecioneroAntauxa($kurso,$leciono,$lecionero) {
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$row = $result->fetch();
 	if ($row!=false) {
-		echo '<a href="'.$row['retpagxo'].'?section='.$row['ordo'].'"><i class="material-icons">chevron_left</i>'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a>';
+		echo '<a href="'.$row['retpagxo'].'?section='.$row['ordo'].'" class="btn-flat small blue-text"><i class="material-icons left">arrow_left</i>'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a>';
 	}
 	
 }
@@ -264,7 +264,7 @@ function getLecioneroVenonta($kurso,$leciono,$lecionero) {
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$row = $result->fetch();
 	if ($row!=false) {
-		echo '<a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'<i class="material-icons">chevron_right</i></a>';
+		echo '<a href="'.$row['retpagxo'].'?section='.$row['ordo'].'" class="btn-flat small blue-text">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'<i class="material-icons right">arrow_right</i></a>';
 	}
 }
 

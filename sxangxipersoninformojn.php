@@ -9,7 +9,7 @@ $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 include "pagxkapo.inc.php";
 ?>
 
-<main class="row">
+<div class="row">
 	<article class="col s12 m10 l7 offset-m2 offset-l2">
 		<h1>Données personnelles</h1>
 
@@ -117,5 +117,5 @@ include "pagxkapo.inc.php";
 		</div>
 
 	</article>
-</main>
+</div>
 <?php include "pagxpiedo.inc.php";?>            

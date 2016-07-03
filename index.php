@@ -12,7 +12,6 @@ if ($persono_id) {
 }
 include "pagxkapo.inc.php";
 ?>
-	<main>
 		<section id="enkonduko">
 			<div class="row">
 				<div class="col s12 m5 l6">
@@ -127,6 +126,4 @@ include "pagxkapo.inc.php";
 			</div>
 		</section>
 
-	</main>
-	
 <?php include "pagxpiedo.inc.php";?>

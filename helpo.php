@@ -1,7 +1,7 @@
 <?php
 include "util.php";
 malfermidatumbazon();
-$gxisdatigDato="2016-01-21";
+$gxisdatigDato="2016-07-03";
 $pagxtitolo="Aide et informations utiles";
 $temo=$_GET["temo"];
 if ($temo=="") {$temo="faq";}
@@ -22,6 +22,8 @@ include "pagxkapo.inc.php";
 ?>
 <script type="text/javascript" src="xAlUtf8.js"></script>
 <script type="text/javascript" src="eotajpu.js"></script>
+
+
 		<div id="enhavo">
 			<ul id="tabnav">
 				<li <?php if ($temo=="nova"){echo "class='aktiva'";}?>><a href="helpo.php?temo=nova">Bienvenue</a></li>

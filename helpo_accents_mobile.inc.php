@@ -1,4 +1,4 @@
-				  	<h3 id="mobile">Les lettres accentuées sur les terminaux mobiles</h3>
+				  	<h2 id="mobile" class="scrollspy">Les lettres accentuées sur les terminaux mobiles</h2>
 				  	
 				  	<h4>Clavier espéranto pour iPhone / iPod Touch / iPad</h4>
 				  	
@@ -8,7 +8,7 @@
 				  	</p>
 				  			  	
 
-				  	<h4>Clavier espéranto pour Androïd</h4>
+				  	<h4>Clavier espéranto pour Android</h4>
 				  	
 				  	<p>Nous vous conseillons d’installer le programme <b>AnySoftKeyboard</b>. Vous pourrez alors installer d’autres claviers
 				  	que le clavier Azerty. Nous vous conseillons cependant de conserver celui-ci et de garder le doigt sur les touches 

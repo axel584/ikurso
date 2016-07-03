@@ -35,7 +35,6 @@ p.chapo {font-size: 150%;}
 .btn-flat.small {
 	color: #78909B;
 	text-decoration: underline;
-	font-size: smaller;
 	text-transform: none;
 	padding: 0;
 }
@@ -59,6 +58,8 @@ div.col > p:first-child {
 
 .toast {background-color: #e65100;}
 
+.pinned {margin-right:1rem;}
+
 /* amélioration de l'affichage s12 */
 
 @media only screen and (max-width: 600px) {
@@ -69,6 +70,47 @@ div.col > p:first-child {
 
 /*---------------  cards ---------------*/
 .card {padding: 1rem;}
+
+/*------------ liste à puces ------------*/
+ul.listo li { 
+    padding-left: 1em; 
+    text-indent: -0.7em;
+}
+
+ul.listo li:before {
+    content: "•  ";
+    color: #989490; 
+}
+
+/*------------- collapsible ------------*/
+
+.collapsible-body{
+    padding: 1em;
+}
+.collapsible-body p,
+.collapsible-body ul.listo {
+    padding: 0.5em 2em;
+}
+.collapsible-body ul.listo li {
+    padding-left: 2em;
+    text-indent: inherit;
+}
+
+.collapsible-header i.material-icons {
+    -webkit-transition: -webkit-transform .4s;
+    -moz-transition: -moz-transform .4s;
+    -o-transition: -o-transform .4s;
+    -ms-transition: -ms-transform .4s;
+    transition: transform .4s;
+}
+.collapsible-header.active i.material-icons {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
 /****************************************/
 /*           blocs principaux           */
 /****************************************/
@@ -113,6 +155,17 @@ article p {
 aside {
 	padding-right: 5%;
 	margin-top: 6rem;
+}
+/********** drop-down uzanto *******/
+.dropdown-content li.uzanto {
+    cursor: default;
+    line-height: auto;
+    font-weight: 300;
+    font-size: 90%;
+    padding: 1em;
+    }
+.dropdown-content li.uzanto:hover {
+    background-color: inherit;
 }
 /********** progression dans le cours *******/
 
@@ -173,9 +226,10 @@ ul#lecionoj li.farita a {
 #enhavtabelo li {
 	font-size:90%;
 	line-height:1.5em;
+	font-weight: 400;
 }
 #enhavtabelo li a {
-	color: #607d8b;
+	color: #75706B;
 }
 #enhavtabelo li a:hover {
 	color: #039be5;

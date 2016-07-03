@@ -74,9 +74,11 @@
        		url : $urlracine+'ajax/registriEkzercaron.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : $("#chefa_form").serialize(),
+       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#registriEkzercaron_button").data('lecionero_id')+"&leciono="+$("#registriEkzercaron_button").data('leciono')+"&kurso="+$("#registriEkzercaron_button").data('kurso'),
        		success : function(reponse, statut){ 
-       			// TODO : rediriger vers la page suivante
+       			if (reponse.mesagxo=="ok") {
+       				window.location = $urlracine+reponse.url;
+       			}
        		},
        		error : function() {
        			alert("Erreur de connection, contactez les administrateurs");

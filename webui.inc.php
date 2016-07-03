@@ -273,17 +273,30 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	$query="SELECT lecioneroj.id,lecioneroj.titolo,ordo,lecionoj.retpagxo,lecioneroj.tipo,lecioneroj.lasta FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero." order by ordo ASC";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$row = $result->fetch();
+	$tipo = $row["tipo"];
+	$lasta = $row["lasta"];
+	$lecionero_id = $row["id"];
 	// si l'élève n'est pas enregistré
 	if ($persono_id=="") { 
 		return;
-	} elseif($row["tipo"]=="EKZERCARO") { // on memorise
-		echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Enregistrer mes réponses !</a>';
-	} elseif($row["lasta"]==1) { // on envoit au correcteur
-		echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
-	} else { // on indique que la leçon est terminée
-		echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$row["id"].'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
+	} else  {
+		// op vérifie si l'élève a déjà fait cette leçon :
+		$query = "select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
+		$result = $bdd->query($query);
+		$dejaFait = $result->fetch()["combien"];
+		if ($dejaFait>0) {
+			$classeDejaFait = "disabled";
+		} else {
+			$classeDejaFait="";
+		}
+		if($tipo=="EKZERCARO") { // on memorise
+			echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Enregistrer mes réponses !</a>';
+		} elseif($lasta==1) { // on envoit au correcteur
+			echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
+		} else { // on indique que la leçon est terminée
+			echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
+		}
 	}
-	//<a id="nova" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="j'ai fini d'étudier cette section">Terminé !</a>
 }
 
 ?>

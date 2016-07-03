@@ -47,9 +47,9 @@ include "dlekkapo.inc.php"
 								<p><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
 							</div>
 							<div class="col s12 m6">
-								<p>J’ai déjà un compte : je commence le cours tout de suite !<br>
-								<a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Leçon 1</a>
-								</p>
+									<p>J’ai déjà un compte&nbsp;: je commence le cours tout de suite !<br><span class="noto">(Je pourrai m’inscrire au service de correction à la fin de la première leçon.)</span>
+									<p><a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
+									</p>
 							</div>
 						</div>
 						<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>

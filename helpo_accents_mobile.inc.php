@@ -1,4 +1,4 @@
-				  	<h2 id="mobile">Les lettres accentuées sur les terminaux mobiles</h2>
+				  	<h2 id="mobile" class="scrollspy">Les lettres accentuées sur les terminaux mobiles</h2>
 				  	
 				  	<h4>Clavier espéranto pour iPhone / iPod Touch / iPad</h4>
 				  	

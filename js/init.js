@@ -43,4 +43,6 @@
 		}
 	);
 
+    $('.tabs-wrapper .row').pushpin({ top: $('.tabs-wrapper').offset().top });
+
 });

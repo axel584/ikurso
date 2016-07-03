@@ -8,19 +8,19 @@ $persono = apartigiPersonon($persono_id);
 include "pagxkapo.inc.php";
 ?>
 
-<main class="row">
-	<article class="col s12 m9 l6 offset-m1 offset-l1">
-		<h1>Données personnelles</h1>
+	<div class="row">
+		<article class="col s12 m9 l6 offset-m1 offset-l1">
+			<h1>Données personnelles</h1>
 			
-		<div id="novaUzanto" class="card-panel blue lighten-5 center hide">
+			<div id="novaUzanto" class="card-panel blue lighten-5 center hide">
 			<p>Votre compte est maintenant activé. Vous pouvez compléter vos informations personnelles.</p>
 		</div>
-		<section id="enhavo">
-			<div class="row">
+			<section id="enhavo">
+				<div class="row">
 				<span class="col s4 label">Nom :</span>
 				<span class="col s6"><?php echo $persono['familinomo'];?></span>
 			</div>
-			<div class="row">
+				<div class="row">
 				<span class="col s4 label">Prénom :</span>
 				<span class="col s6"><?php echo $persono['personnomo'];?>
 					<?php if ($persono['sekso']=='M'){echo " (H)";}
@@ -28,7 +28,7 @@ include "pagxkapo.inc.php";
 					?></span>
 			</div>
 			
-			<div class="row">
+				<div class="row">
 				<span class="col s4 label">Adresse :</span>
 				<span class="col s6">
 					<?php echo $persono['adreso1']; 
@@ -40,12 +40,12 @@ include "pagxkapo.inc.php";
 				</span>
 			</div>
 	
-			<div class="row">
+				<div class="row">
 				<span class="col s4 label">E-mail :</span>
 				<span class="col s6"><?php echo $persono['retadreso'];?></span>
 			</div>
 	
-			<div class="row">
+				<div class="row">
 				<span class="col s4 label">Date de naissance :</span>
 				<span class="col s6">
 					<?php $nskdt = explode("-",$persono['naskigxdato']);
@@ -60,13 +60,14 @@ include "pagxkapo.inc.php";
 				</span>
 			</div>
 			
-			<div class="row">
+				<div class="row">
 				<div class="col s10">
 					<a class="btn waves-effect waves-light blue right" href="sxangxipersoninformojn.php">Modifier</a>
 				</div>
-		</section>
+			</div>
+			</section>
 		
-		<section id="rimarko" class="rimarko primaire-texte texte-moyen">
+			<section id="rimarko" class="rimarko primaire-texte texte-moyen">
 			<div class="row">
 				<div class="col s12">
 					<p class="noto">
@@ -79,9 +80,9 @@ include "pagxkapo.inc.php";
 				</div>
 			</div>
 		</section>
-	</article>
+		</article>
 	
-	<aside class="col s12 m10 l4 offset-m1 offset-l1">
+		<aside class="col s12 m10 l4 offset-m1 offset-l1">
 		<!-- pour les élèves uniquement -->
 		<?php if ($persono['rajtoj']=="S" || $persono['rajtoj']=="P") { ?>
 			<h2>Mes cours</h2>
@@ -99,9 +100,6 @@ include "pagxkapo.inc.php";
 		<?php } ?>
 	</aside>
 
-	</article>
+	</div>
 	
-	
-</main>
-			
 <?php include "pagxpiedo.inc.php";?>

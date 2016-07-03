@@ -3,10 +3,9 @@ $titolo="6 (ses)";
 $leciono = 6;
 $section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
-
 ?>
 
-<main class="row">
+<div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
 		<section id="leciono-kapo">
 			<h1>Leçon 6</h1>
@@ -346,290 +345,290 @@ if ($section=="12") {
 	<input type='text' size='70' name="res_ekz06_18a" onkeyup='xAlUtf8(this)' value=""></p>
 	<p><input type='text' size='70' name="res_ekz06_18b" value=""></p>
 
+					<p>19. anta&#365; - &#265;iu - Dum - estos - infanoj - ka&#285;o. - la - tagman&#285;o</p>
+					<p><input type='hidden' name="dem_ekz06_19" value="19 anta&#365; - &#265;iu - Dum - estos - infanoj - ka&#285;o. - la - tagman&#285;o">
+					<input type='text' size='70' name="res_ekz06_19a" onkeyup='xAlUtf8(this)' value=""></p>
+					<p><input type='text' size='70' name="res_ekz06_19b" value=""></p>
+				
+					<p>20. apud - &#264;u - enirejo&#160;? - estis - ka&#285;oj - la - multaj</p>
+					<p><input type='hidden' name="dem_ekz06_20" value="20 apud - &#264;u - enirejo&#160;? - estis - ka&#285;oj - la - multaj">
+					<input type='text' size='70' name="res_ekz06_20a" onkeyup='xAlUtf8(this)' value=""></p>
+					<p><input type='text' size='70' name="res_ekz06_20b" value=""></p>
+				
+					<p>21. estis - Kio - la - por - tagman&#285;o -&nbsp;?</p>
+					<p><input type='hidden' name="dem_ekz06_21" value="21 estis - Kio - la - por - tagman&#285;o -&nbsp;?">
+					<input type='text' size='70' name="res_ekz06_21a" onkeyup='xAlUtf8(this)' value=""></p>
+					<p><input type='text' size='70' name="res_ekz06_21b" value=""></p>
+				
+					<p>22. arkta - blankaj - En - estas - kontinento - la - ursoj.</p>
+					<p><input type='hidden' name="dem_ekz06_22" value="22 arkta - blankaj - En - estas - kontinento - la - ursoj.">
+					<input type='text' size='70' name="res_ekz06_22a" onkeyup='xAlUtf8(this)' value=""></p>
+					<p><input type='text' size='70' name="res_ekz06_22b" value=""></p>
+				</div>
+			</section>
 	
-	<p>19. anta&#365; - &#265;iu - Dum - estos - infanoj - ka&#285;o. - la - tagman&#285;o</p>
-	<p><input type='hidden' name="dem_ekz06_19" value="19 anta&#365; - &#265;iu - Dum - estos - infanoj - ka&#285;o. - la - tagman&#285;o">
-	<input type='text' size='70' name="res_ekz06_19a" onkeyup='xAlUtf8(this)' value=""></p>
-	<p><input type='text' size='70' name="res_ekz06_19b" value=""></p>
-
-	<p>20. apud - &#264;u - enirejo&#160;? - estis - ka&#285;oj - la - multaj</p>
-	<p><input type='hidden' name="dem_ekz06_20" value="20 apud - &#264;u - enirejo&#160;? - estis - ka&#285;oj - la - multaj">
-	<input type='text' size='70' name="res_ekz06_20a" onkeyup='xAlUtf8(this)' value=""></p>
-	<p><input type='text' size='70' name="res_ekz06_20b" value=""></p>
-
-	<p>21. estis - Kio - la - por - tagman&#285;o -&nbsp;?</p>
-	<p><input type='hidden' name="dem_ekz06_21" value="21 estis - Kio - la - por - tagman&#285;o -&nbsp;?">
-	<input type='text' size='70' name="res_ekz06_21a" onkeyup='xAlUtf8(this)' value=""></p>
-	<p><input type='text' size='70' name="res_ekz06_21b" value=""></p>
-
-	<p>22. arkta - blankaj - En - estas - kontinento - la - ursoj.</p>
-	<p><input type='hidden' name="dem_ekz06_22" value="22 arkta - blankaj - En - estas - kontinento - la - ursoj.">
-	<input type='text' size='70' name="res_ekz06_22a" onkeyup='xAlUtf8(this)' value=""></p>
-	<p><input type='text' size='70' name="res_ekz06_22b" value=""></p>
-</div>
-
-<?php 
-} // fin section 12
-if ($section=="13") {
-?>
-<p>
-Nous avons vu dans la deuxième leçon la façon d’indiquer le
-complément d’objet <i>direct</i> par la terminaison <b>-n</b>&#160;: &#171;Birdo kaptas
-insekto<b>n</b>&#187;. Cette forme s’appelle l’accusatif. Lorsqu’une phrase
-contient deux compléments d’objet, l’un des deux doit être un
-complément <i>indirect</i>. Par exemple&#160;:  
-</p>
-<p><span class="ekz">Mi a&#265;etas &#349;uojn al la infanoj</span> = 
-<span class="fr">"J’achète des chaussures aux enfants".</span>
-</p>
-<table class="retrait">
-	<tr><td>Le complément d’objet direct :</td><td class="ekz"><i>&#349;uojn</i></td></tr>
-	<tr><td>Le complément d’objet indirect :</td><td class="ekz"><i>al la infanoj</i></td></tr>
-</table>
-
-<p>
-Généralement le complément indirect est introduit par une préposition et
-dans ce cas il ne prend pas la terminaison de l’accusatif.
-</p>
-
-<?php 
-} // fin section 13
-if ($section=="14") {
-?>
-<p>
-L’espéranto se veut clair et concis. Aussi pouvez-vous remplacer, dans
-certains cas, une préposition par la forme de l’accusatif -- pour
-indiquer le but du mouvement, le temps, la mesure ou le prix.
-</p>
-<p>Exemples :</p>
-<table class="retrait striped bordered">
-	<tr class="ekz"><td>Mi veturas al Montrealo<br/><span class="fr"><i>ou</i></span><br>Mi veturas Montrealon</td><td class="fr">(Je vais à Montréal)</td></tr>
-	<tr class="ekz"><td class="fr"><center>-:-:-:-:-:-</center></td><td><center>-:-:-:-:-:-</center></td><td></td></tr>
-	<tr class="ekz"><td>Mi voja&#285;is dum unu semajno<br/><span class="fr"><i>ou</i></span><br/>Mi voja&#285;is unu semajnon</td><td class="fr">(J’ai voyagé [pendant] une semaine)</td></tr>
-</table>
-
-<p>
-Notez que cette "disparition" de la préposition et son remplacement par
-l’accusatif est possible également pour certains compléments d’objet
-indirects s’il n’y a pas de risque de confusion avec un complément
-d’objet direct.
-</p>
-
-<table class="retrait striped bordered">
-	<tr class="ekz"><td>&#348;i multe helpis al mi<br/><span class="fr"><i>ou</i></span><br/>&#348;i multe helpis min</td><td class="fr">(Elle m’a beaucoup aidé)</td></tr>
-	<tr class="ekz"><td class="fr"><center>-:-:-:-:-:-</center></td><td><center>-:-:-:-:-:-</center></td><td></td></tr>
-	<tr class="ekz"><td>Mi demandos al li pri tio<br/><span class="fr"><i>ou</i></span><br/>Mi demandos lin pri tio<br/><span class="fr"><i>ou</i></span><br/>Mi demandos tion al li</td><td class="fr">(Je lui demanderai cela, je l’interrogerai à ce sujet)</td></tr>
-</table>
-
-
-<?php 
-} // fin section 14
-if ($section=="15") {
-?>
-<p>Remplacez la préposition des phrases suivantes par la forme "n" de
-l’accusatif.<br>Ex.:  Vi similas al via patro. --> Vi similas vian patron.</p>
-<input type="hidden" name="013_cxap06.4" value="4. Remplacez la préposition des phrases suivantes par la forme &quot;n&quot; de l’accusatif.">
-<?php atentigo();	?>
-<div class="tasko">
-<?php
-	$demandoj=array (
-	23 => "Faru vian aferon, Dio zorgos PRI la cetero. (proverbe: faru = fais (impératif))",
-	24 => "Mi feriis DUM tri semajnoj.",
-	25 => "La strato estas lar&#285;a JE* 50 metroj.",
-	26 => "D-ro (Doktoro) Zamenhof naski&#285;is JE* la 15a de decembro 1859. (naski&#285;i = naître)"
-	);
-	ekzerco("U", 1);
-?>
-</div>
-
-<p>* je = à, à propos de, en rapport avec, etc.</p>
-<p>
-Il s’agit d’une préposition "joker" dont le sens est indéterminé, ce qui
-veut dire qu’elle est utilisée lorsque aucune autre préposition ne
-convient.
-
-<p>Exemple : </p>
-<p><span class="ekz">Li kredas je Dio</span> = <span class="fr">Il croit en Dieu.</span></p>
-<p><span class="ekz">Je via sano&#160;!</span> = <span class="fr">à votre santé&nbsp;!</span></p>
-
-<a id="cg044"></a><p>On peut parfois utiliser <b>deux prépositions</b> à la suite l’une de l’autre
-pour nuancer le sens. </p>
-<p>Exemple : </p>
-<p><span class="ekz">La kato saltis <i>de sur</i> la tablo.</span> = 
-<span class="fr">Le chat a sauté de dessus la table.</span></p>
-
-<p>
-Si une de ces prépositions est <em>al</em> -- qui indique le but d’un mouvement
--- on aura plut&ocirc;t recours à l’accusatif pour la remplacer.
-</p>
-<p>Exemple :</p>
-<p><span class="ekz">&#348;i iris <i>al en</i> la domo.</span> = <span class="ekz">&#348;i iris en la domo<b>n</b>.</span></p>
-<p><span class="ekz">La kato kuris <i>al sub</i> la tablo.</span> = <span class="ekz">La kato kuris sub la tablo<b>n</b>.</span></p>
-
-<p>
-<div class="rim"><p><b>Remarque</b> : 
-  Cette affinité de l’accusatif avec l’idée de but d’un mouvement explique
-  pourquoi il ne faut jamais utiliser l’accusatif après les prépositions
-  qui indiquent déjà une direction ou un mouvement, comme <em>al</em>, <em>&#285;is</em>
-  ou <em>el</em>. Ainsi, l’on dira&#160;:  &#171;Ni veturas al Montrealo.&#187; ou &#171;Ni veturas
-  Montrealon.&#187; mais jamais &#171;Ni veturas <s>al Montrealon</s>.&#187; qui serait un
-  pléonasme.</p>
-</div>
- <?php 
-} // fin section 15
-if ($section=="16") {
-?>
-<p>
-La question correspondant à ce complément de lieu avec mouvement sera
-naturellement <em>kien&#160;?</em>, c’est-à-dire <em>kie&#160;?</em> avec la terminaison
-d’accusatif. Tous les adverbes de lieu ont cette possibilité de
-montrer le but d’un mouvement en prenant la terminaison d’accusatif.
-</p>
-<p>Exemple :</p>
-<table class="retrait">
-	<tr><td class="ekz" width="200">Kien vi veturis&#160;?</td><td width="200">&nbsp;</td><td class="fr" width="200">O&ugrave; &ecirc;tes-vous allés&#160;?</td></tr>
-	<tr><td>&nbsp;</td><td class="ekz">- Montrealon.</td><td class="fr">à Montréal (<i>but du mouvement</i>)</td></tr>
-	<tr><td>&nbsp;</td><td class="ekz">- ien.</td><td class="fr">quelque part (<i>but du mouvement</i>)</td></tr>
-	<tr><td>&nbsp;</td><td class="ekz">- nenien.</td><td class="fr">nulle part (<i>but du mouvement</i>)</td></tr>
-	<tr><td>&nbsp;</td><td class="ekz">- &#285;ardenen.</td><td class="fr">au jardin (<i>but du mouvement</i>)</td></tr>
-</table>
-<a id="cg047"></a>
-<table class="retrait">
-	<tr><td class="ekz" width="200">Kie vi estas&#160;?</td><td width="200">&nbsp;</td><td class="fr" width="200">O&ugrave; &ecirc;tes-vous&#160;?</td></tr>
-	<tr><td>&nbsp;</td><td class="ekz">- en Montrealo.</td></tr>
-	<tr><td>&nbsp;</td><td class="ekz">- ie.</td></tr>
-	<tr><td>&nbsp;</td><td class="ekz">- nenie.</td></tr>
-	<tr><td>&nbsp;</td><td class="ekz">- &#285;ardene.</td></tr>
-</table>
-<p>Cette opposition "kie/kien" vous rappellera peut-&ecirc;tre</p>
-
-<table class="retrait">
-	<tr><td>d&oacute;nde / a d&oacute;nde</td><td>en espagnol</td></tr>
-	<tr><td>ubi / quo</td><td>en latin</td></tr>
-	<tr><td>wo / wohin</td><td>en allemand</td></tr>
-	<tr><td>gde / kuda</td><td>en russe</td></tr>
-</table>
-</section>
-<?php 
-} // fin section 16
-if ($section=="17") {
-?>
-<p>Récapitulation des différents emplois de l’accusatif&#160;:</p>
-<ol>
-  <li>complément d’objet direct, 
-  <li>remplacement d’une préposition seule, 
-  <li>remplacement de <em>al</em> dans une combinaison de deux prépositions, 
-  <li>adverbe indiquant le mouvement vers un lieu.
-</ol>
-<p>Recopiez le texte qui suit en remplaçant les étoiles &quot;*&quot; par la terminaison
-de l’accusatif ou par rien du tout selon le cas.<br>
-Ex: &#348;i* a&#265;etas &#349;uoj* al la infanoj* -> &#348;i a&#265;etas &#349;uojn al la infanoj.
-<input type="hidden" name="013_cxap06.5" value="5. Recopiez le texte qui suit en remplaçant les étoiles "*" par la terminaison de l’accusatif ou par rien du tout selon le cas.">
-<?php atentigo();?>
-<div class="tasko">
-<?php
-	$demandoj=array (
-	"" => "Mi* veturis al la zoologia* &#285;ardeno* kun Petro*. Li* tre deziris veturi tie*. En la zoo* li admiris ursoj* kaj simioj*. Kiam la blanka urso vidis Petro*, &#285;i kuris en la akvo*. Ni atendis kvin minutoj*  por vidi, kio* la urso* faros poste, sed &#285;i* ne iris el la akvo* kaj en la akvo* &#285;i nenio* faris. Ni revenis Montrealo* vespere*."
-	);
-	ekzerco("U", 5);
-?>
-</div>
-<?php 
-} // fin section 17
-if ($section=="18") {
-?>
-<p>
-Ouf&#160;! Cette leçon était bien longue. Toutefois elle consiste
-essentiellement en un approfondissement de notions déjà connues et
-elle n’a pas d&ucirc; vous poser de problèmes insurmontables.
-</p>
-<p>
-Maintenant que nous avons entamé la deuxième moitié de ce cours, il
-n’est pas inutile de jeter un regard en arrière pour voir le chemin
-parcouru. Depuis combien de temps avez-vous commencé l’étude de ce
-cours&#160;? N’est-ce pas surprenant de voir tout ce que vous &ecirc;tes déjà
-capable de comprendre et de dire&#160;? évidemment vous n’avez pas
-nécessairement assimilé tout le vocabulaire que nous vous avons
-présenté mais vous sentez bien qu’à chaque leçon vous faites un grand
-pas en avant.
-</p>
-
-
-<?php 
-} // fin section 17
-?>	
-</section>
-
-
+			<?php 
+			} // fin section 12
+			if ($section=="13") {
+			?>
+			<section id="section13">
+		
+				<p>
+				Nous avons vu dans la deuxième leçon la façon d’indiquer le complément d’objet <i>direct</i> par la terminaison <b>-n</b>&#160;: &#171;Birdo kaptas insekto<b>n</b>&#187;. Cette forme s’appelle l’accusatif. 
+				Lorsqu’une phrase contient deux compléments d’objet, l’un des deux doit être un complément <i>indirect</i>. 
+				Par exemple&#160;:</p>
+				<p><span class="ekz">Mi a&#265;etas &#349;uojn al la infanoj</span> = 
+					<span class="fr">"J’achète des chaussures aux enfants".</span>
+				</p>
+				<table class="retrait">
+					<tr><td>Le complément d’objet direct :</td><td class="ekz"><i>&#349;uojn</i></td></tr>
+					<tr><td>Le complément d’objet indirect :</td><td class="ekz"><i>al la infanoj</i></td></tr>
+				</table>
+		
+				<p>Généralement le complément indirect est introduit par une préposition etdans ce cas il ne prend pas la terminaison de l’accusatif.</p> 
+			</section>
+		
+			<?php 
+			} // fin section 13
+			if ($section=="14") {
+			?>
+			<section id="section14">
+				<p>
+				L’espéranto se veut clair et concis. Aussi pouvez-vous remplacer, dans
+				certains cas, une préposition par la forme de l’accusatif -- pour
+				indiquer le but du mouvement, le temps, la mesure ou le prix.
+				</p>
+				<p>Exemples :</p>
+				<table class="retrait striped bordered">
+					<tr class="ekz"><td>Mi veturas al Montrealo<br/><span class="fr"><i>ou</i></span><br>Mi veturas Montrealon</td><td class="fr">(Je vais à Montréal)</td></tr>
+					<tr class="ekz"><td class="fr"><center>-:-:-:-:-:-</center></td><td><center>-:-:-:-:-:-</center></td><td></td></tr>
+					<tr class="ekz"><td>Mi voja&#285;is dum unu semajno<br/><span class="fr"><i>ou</i></span><br/>Mi voja&#285;is unu semajnon</td><td class="fr">(J’ai voyagé [pendant] une semaine)</td></tr>
+				</table>
+				<p>
+				Notez que cette "disparition" de la préposition et son remplacement par
+				l’accusatif est possible également pour certains compléments d’objet
+				indirects s’il n’y a pas de risque de confusion avec un complément
+				d’objet direct.
+				</p>
+		
+				<table class="retrait striped bordered">
+					<tr class="ekz"><td>&#348;i multe helpis al mi<br/><span class="fr"><i>ou</i></span><br/>&#348;i multe helpis min</td><td class="fr">(Elle m’a beaucoup aidé)</td></tr>
+					<tr class="ekz"><td class="fr"><center>-:-:-:-:-:-</center></td><td><center>-:-:-:-:-:-</center></td><td></td></tr>
+					<tr class="ekz"><td>Mi demandos al li pri tio<br/><span class="fr"><i>ou</i></span><br/>Mi demandos lin pri tio<br/><span class="fr"><i>ou</i></span><br/>Mi demandos tion al li</td><td class="fr">(Je lui demanderai cela, je l’interrogerai à ce sujet)</td></tr>
+				</table>
+			</section>
+	
+			<?php 
+			} // fin section 14
+			if ($section=="15") {
+			?>
+			<section id="section15">
+				<p>Remplacez la préposition des phrases suivantes par la forme "n" de
+				l’accusatif.<br>Ex.:  Vi similas al via patro. --> Vi similas vian patron.</p>
+				<input type="hidden" name="013_cxap06.4" value="4. Remplacez la préposition des phrases suivantes par la forme &quot;n&quot; de l’accusatif.">
+				<?php atentigo();	?>
+				<div class="tasko">
+				<?php
+					$demandoj=array (
+					23 => "Faru vian aferon, Dio zorgos PRI la cetero. (proverbe: faru = fais (impératif))",
+					24 => "Mi feriis DUM tri semajnoj.",
+					25 => "La strato estas lar&#285;a JE* 50 metroj.",
+					26 => "D-ro (Doktoro) Zamenhof naski&#285;is JE* la 15a de decembro 1859. (naski&#285;i = naître)"
+					);
+					ekzerco("U", 1);
+				?>
+				</div>
+		
+				<p>* je = à, à propos de, en rapport avec, etc.</p>
+				<p>
+				Il s’agit d’une préposition "joker" dont le sens est indéterminé, ce qui
+				veut dire qu’elle est utilisée lorsque aucune autre préposition ne
+				convient.</p>
+		
+				<p>Exemple : </p>
+				<p><span class="ekz">Li kredas je Dio</span> = <span class="fr">Il croit en Dieu.</span></p>
+				<p><span class="ekz">Je via sano&#160;!</span> = <span class="fr">à votre santé&nbsp;!</span></p>
+		
+				<a id="cg044"></a><p>On peut parfois utiliser <b>deux prépositions</b> à la suite l’une de l’autre
+				pour nuancer le sens. </p>
+				<p>Exemple : </p>
+				<p><span class="ekz">La kato saltis <i>de sur</i> la tablo.</span> = 
+				<span class="fr">Le chat a sauté de dessus la table.</span></p>
+		
+				<p>
+				Si une de ces prépositions est <em>al</em> -- qui indique le but d’un mouvement
+				-- on aura plut&ocirc;t recours à l’accusatif pour la remplacer.
+				</p>
+				<p>Exemple :</p>
+				<p><span class="ekz">&#348;i iris <i>al en</i> la domo.</span> = <span class="ekz">&#348;i iris en la domo<b>n</b>.</span></p>
+				<p><span class="ekz">La kato kuris <i>al sub</i> la tablo.</span> = <span class="ekz">La kato kuris sub la tablo<b>n</b>.</span></p>
+		
+				<div class="rim">
+					<p><b>Remarque</b> : 
+				  Cette affinité de l’accusatif avec l’idée de but d’un mouvement explique
+				  pourquoi il ne faut jamais utiliser l’accusatif après les prépositions
+				  qui indiquent déjà une direction ou un mouvement, comme <em>al</em>, <em>&#285;is</em>
+				  ou <em>el</em>. Ainsi, l’on dira&#160;:  &#171;Ni veturas al Montrealo.&#187; ou &#171;Ni veturas
+				  Montrealon.&#187; mais jamais &#171;Ni veturas <s>al Montrealon</s>.&#187; qui serait un
+				  pléonasme.</p>
+				</div>
+			</section>
+	
+			<?php 
+			} // fin section 15
+			if ($section=="16") {
+			?>
+			<section id="section16">
+				<p>
+				La question correspondant à ce complément de lieu avec mouvement sera
+				naturellement <em>kien&#160;?</em>, c’est-à-dire <em>kie&#160;?</em> avec la terminaison
+				d’accusatif. Tous les adverbes de lieu ont cette possibilité de
+				montrer le but d’un mouvement en prenant la terminaison d’accusatif.
+				</p>
+				<p>Exemple :</p>
+				<table class="retrait">
+					<tr><td class="ekz" width="200">Kien vi veturis&#160;?</td><td width="200">&nbsp;</td><td class="fr" width="200">O&ugrave; &ecirc;tes-vous allés&#160;?</td></tr>
+					<tr><td>&nbsp;</td><td class="ekz">- Montrealon.</td><td class="fr">à Montréal (<i>but du mouvement</i>)</td></tr>
+					<tr><td>&nbsp;</td><td class="ekz">- ien.</td><td class="fr">quelque part (<i>but du mouvement</i>)</td></tr>
+					<tr><td>&nbsp;</td><td class="ekz">- nenien.</td><td class="fr">nulle part (<i>but du mouvement</i>)</td></tr>
+					<tr><td>&nbsp;</td><td class="ekz">- &#285;ardenen.</td><td class="fr">au jardin (<i>but du mouvement</i>)</td></tr>
+				</table>
+				<a id="cg047"></a>
+				<table class="retrait">
+					<tr><td class="ekz" width="200">Kie vi estas&#160;?</td><td width="200">&nbsp;</td><td class="fr" width="200">O&ugrave; &ecirc;tes-vous&#160;?</td></tr>
+					<tr><td>&nbsp;</td><td class="ekz">- en Montrealo.</td></tr>
+					<tr><td>&nbsp;</td><td class="ekz">- ie.</td></tr>
+					<tr><td>&nbsp;</td><td class="ekz">- nenie.</td></tr>
+					<tr><td>&nbsp;</td><td class="ekz">- &#285;ardene.</td></tr>
+				</table>
+				<p>Cette opposition "kie/kien" vous rappellera peut-&ecirc;tre</p>
 				
-				<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le précédent et le suivant -->
-				<section id="leciono-fino">
-					<div id="marko" class="right-align">
-						<?php getBoutonFinSection('CG',6,$section,$persono_id); ?>
-						<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
-					</div>
-					<div class="ligoj">
-						<?php getLecioneroAntauxa('CG',6,$section); ?>
-						<?php getLecioneroVenonta('CG',6,$section); ?>
-					</div>
-				</section>
+				<table class="retrait">
+					<tr><td>d&oacute;nde / a d&oacute;nde</td><td>en espagnol</td></tr>
+					<tr><td>ubi / quo</td><td>en latin</td></tr>
+					<tr><td>wo / wohin</td><td>en allemand</td></tr>
+					<tr><td>gde / kuda</td><td>en russe</td></tr>
+				</table>
+			</section>
+	
+			<?php 
+			} // fin section 16
+			if ($section=="17") {
+			?>
+			<section id="section17">
+				<p>Récapitulation des différents emplois de l’accusatif&#160;:</p>
+				<ol>
+				  <li>complément d’objet direct, 
+				  <li>remplacement d’une préposition seule, 
+				  <li>remplacement de <em>al</em> dans une combinaison de deux prépositions, 
+				  <li>adverbe indiquant le mouvement vers un lieu.
+				</ol>
+				<p>Recopiez le texte qui suit en remplaçant les étoiles &quot;*&quot; par la terminaison
+				de l’accusatif ou par rien du tout selon le cas.<br>
+				Ex: &#348;i* a&#265;etas &#349;uoj* al la infanoj* -> &#348;i a&#265;etas &#349;uojn al la infanoj.</p>
+				<input type="hidden" name="013_cxap06.5" value="5. Recopiez le texte qui suit en remplaçant les étoiles "*" par la terminaison de l’accusatif ou par rien du tout selon le cas." />
+				<?php atentigo();?>
+				<div class="tasko">
+				<?php
+					$demandoj=array (
+					"" => "Mi* veturis al la zoologia* &#285;ardeno* kun Petro*. Li* tre deziris veturi tie*. En la zoo* li admiris ursoj* kaj simioj*. Kiam la blanka urso vidis Petro*, &#285;i kuris en la akvo*. Ni atendis kvin minutoj*  por vidi, kio* la urso* faros poste, sed &#285;i* ne iris el la akvo* kaj en la akvo* &#285;i nenio* faris. Ni revenis Montrealo* vespere*."
+					);
+					ekzerco("U", 5);
+				?>
+				</div>
+			</section>
+	
+			<?php 
+			} // fin section 17
+			if ($section=="18") {
+			?>
+			<section id="section18">
+				<p>
+				Ouf&nbsp;! Cette leçon était bien longue. Toutefois elle consiste
+				essentiellement en un approfondissement de notions déjà connues et
+				elle n’a pas dû vous poser de problèmes insurmontables.
+				</p>
+				<p>
+				Maintenant que nous avons entamé la deuxième moitié de ce cours, il
+				n’est pas inutile de jeter un regard en arrière pour voir le chemin
+				parcouru. Depuis combien de temps avez-vous commencé l’étude de ce
+				cours&nbsp;? N’est-ce pas surprenant de voir tout ce que vous êtes déjà
+				capable de comprendre et de dire ? évidemment vous n’avez pas
+				nécessairement assimilé tout le vocabulaire que nous vous avons
+				présenté mais vous sentez bien qu’à chaque leçon vous faites un grand
+				pas en avant.
+				</p>
+			</section>
+	
+			<?php 
+			} // fin section 18
+			?>	
+		</section>
 
+		<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le précédent et le suivant -->
+		<section id="leciono-fino">
+			<div id="marko" class="right-align">
+				<?php getBoutonFinSection('CG',6,$section,$persono_id); ?>
+				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
+			</div>
+			<div class="ligoj">
+				<?php getLecioneroAntauxa('CG',6,$section); ?>
+				<?php getLecioneroVenonta('CG',6,$section); ?>
+			</div>
+		</section>
 
-			</article>
+	</article>
 			
-			<aside class="col s12 m10 l4 offset-m1">
+	<aside class="col s12 m10 l3 offset-m1 push-l1">
 								
-				<ul class="collapsible" data-collapsible="expandable">
+		<ul class="collapsible" data-collapsible="expandable">
 
-					<?php 
-					// On affiche le sommaire de la lecon
-					getEnhavtabelo('CG',6); 
-					?>
+			<?php 
+			// On affiche le sommaire de la lecon
+			getEnhavtabelo('CG',6); 
+			?>
 
-					<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->
+			<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->
 
-					<!--<li>
-						<div class="collapsible-header"><i class="material-icons">library_books</i>Vocabulaire de la leçon</div>
-						<div class="collapsible-body">
-							<table class="vortaro bordered striped responsive-table">
-								<tr><td>apud</td><td>à côté de</td></tr>
-								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-								<tr><td>ceter/a</td><td>restant, autre</td></tr>
-								<tr><td>en</td><td>en, dedans</td></tr>
-								<tr><td>ĝis</td><td>jusqu’à</td></tr>
-								<tr><td>halt/i</td><td>s’arrêter</td></tr>
-								<tr><td>apud</td><td>à côté de</td></tr>
-								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-								<tr><td>ceter/a</td><td>restant, autre</td></tr>
-								<tr><td>en</td><td>en, dedans</td></tr>
-								<tr><td>ĝis</td><td>jusqu’à</td></tr>
-								<tr><td>halt/i</td><td>s’arrêter</td></tr>
-								<tr><td>apud</td><td>à côté de</td></tr>
-								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-								<tr><td>ceter/a</td><td>restant, autre</td></tr>
-								<tr><td>en</td><td>en, dedans</td></tr>
-								<tr><td>ĝis</td><td>jusqu’à</td></tr>
-								<tr><td>halt/i</td><td>s’arrêter</td></tr>
-								<tr><td>apud</td><td>à côté de</td></tr>
-								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-								<tr><td>ceter/a</td><td>restant, autre</td></tr>
-								<tr><td>en</td><td>en, dedans</td></tr>
-								<tr><td>ĝis</td><td>jusqu’à</td></tr>
-								<tr><td>halt/i</td><td>s’arrêter</td></tr>
-								<tr><td>apud</td><td>à côté de</td></tr>
-								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-								<tr><td>ceter/a</td><td>restant, autre</td></tr>
-								<tr><td>en</td><td>en, dedans</td></tr>
-								<tr><td>ĝis</td><td>jusqu’à</td></tr>
-								<tr><td>halt/i</td><td>s’arrêter</td></tr>
-							</table>			
-						</div>
-					</li> -->
-				</ul>	
+			<!--<li>
+				<div class="collapsible-header"><i class="material-icons">library_books</i>Vocabulaire de la leçon</div>
+				<div class="collapsible-body">
+					<table class="vortaro bordered striped responsive-table">
+						<tr><td>apud</td><td>à côté de</td></tr>
+						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+						<tr><td>ceter/a</td><td>restant, autre</td></tr>
+						<tr><td>en</td><td>en, dedans</td></tr>
+						<tr><td>ĝis</td><td>jusqu’à</td></tr>
+						<tr><td>halt/i</td><td>s’arrêter</td></tr>
+						<tr><td>apud</td><td>à côté de</td></tr>
+						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+						<tr><td>ceter/a</td><td>restant, autre</td></tr>
+						<tr><td>en</td><td>en, dedans</td></tr>
+						<tr><td>ĝis</td><td>jusqu’à</td></tr>
+						<tr><td>halt/i</td><td>s’arrêter</td></tr>
+						<tr><td>apud</td><td>à côté de</td></tr>
+						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+						<tr><td>ceter/a</td><td>restant, autre</td></tr>
+						<tr><td>en</td><td>en, dedans</td></tr>
+						<tr><td>ĝis</td><td>jusqu’à</td></tr>
+						<tr><td>halt/i</td><td>s’arrêter</td></tr>
+						<tr><td>apud</td><td>à côté de</td></tr>
+						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+						<tr><td>ceter/a</td><td>restant, autre</td></tr>
+						<tr><td>en</td><td>en, dedans</td></tr>
+						<tr><td>ĝis</td><td>jusqu’à</td></tr>
+						<tr><td>halt/i</td><td>s’arrêter</td></tr>
+						<tr><td>apud</td><td>à côté de</td></tr>
+						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
+						<tr><td>ceter/a</td><td>restant, autre</td></tr>
+						<tr><td>en</td><td>en, dedans</td></tr>
+						<tr><td>ĝis</td><td>jusqu’à</td></tr>
+						<tr><td>halt/i</td><td>s’arrêter</td></tr>
+					</table>			
+				</div>
+			</li> -->
+		</ul>	
 				
-			</aside>
-		</main>
-
-
-
+	</aside>
+</div>
 <?php include "dlekpiedo.inc.php"; ?>

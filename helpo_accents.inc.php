@@ -26,11 +26,10 @@
 					aux remplacements automatiques.<br>
 					</p>	
 			  		
-				  	<p><a href="http://fr.wikipedia.org/wiki/Alphabet_de_l%27esp%C3%A9ranto">
-				  	Voir aussi l'article de Wikipédia</a>&nbsp;: <a href="http://fr.wikipedia.org/wiki/Alphabet_de_l%27esp%C3%A9ranto" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Alphabet de l’espéranto</a></p>
+				  	<p>Voir aussi l'article de Wikipédia&nbsp;: <a href="http://fr.wikipedia.org/wiki/Alphabet_de_l%27esp%C3%A9ranto" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Alphabet de l’espéranto</a></p>
 				  				  	 
-					<p>Si vous connaissez déjà un peu l'espéranto, vous trouverez des informations utiles sur la  
-					<a href="http://www.bertilow.com/komputo/linukso.html" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>page de Bertilo</a>.</p>
+					<p>Si vous connaissez déjà un peu l'espéranto, vous trouverez des informations utiles sur le site de Bertilo :  
+					<a href="http://www.bertilow.com/komputo/index.html" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Esperanto en la komputilo</a>.</p>
 					
 
 					<h3 id="klavaro">Comment taper les lettres accentuées au clavier</h3>

@@ -35,7 +35,6 @@ p.chapo {font-size: 150%;}
 .btn-flat.small {
 	color: #78909B;
 	text-decoration: underline;
-	font-size: smaller;
 	text-transform: none;
 	padding: 0;
 }
@@ -58,6 +57,8 @@ div.col > p:first-child {
 .noto {font-size: 80%;}
 
 .toast {background-color: #e65100;}
+
+.pinned {margin-right:1rem;}
 
 /* amélioration de l'affichage s12 */
 
@@ -184,9 +185,10 @@ ul#lecionoj li.farita a {
 #enhavtabelo li {
 	font-size:90%;
 	line-height:1.5em;
+	font-weight: 400;
 }
 #enhavtabelo li a {
-	color: #607d8b;
+	color: #75706B;
 }
 #enhavtabelo li a:hover {
 	color: #039be5;

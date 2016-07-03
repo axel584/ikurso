@@ -1,5 +1,6 @@
 <?php
 $titolo="10 (dek)";
+$leciono = 10;
 $section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
 ?>
@@ -8,19 +9,7 @@ include "dlekkapo.inc.php";
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
 		<section id="leciono-kapo">
 			<h1>Leçon 10</h1>
-			<!--<ul id="progreso">
-				<li id="lec1" class="farita"></li>
-				<li id="lec2" class="farita"></li>
-				<li id="lec3" class="farita"></li>
-				<li id="lec4" class="farita"></li>
-				<li id="lec5" class="farita"></li>
-				<li id="lec6" class="nuna"></li>
-				<li id="lec7" class="nova"></li>
-				<li id="lec8" class="nova"></li>
-				<li id="lec9" class="nova"></li>
-				<li id="lec10" class="nova"></li>
-				<li id="lec11" class="nova"></li>
-			</ul>-->
+			<?php getFaritajLecioneroj($kurso,$leciono,$persono_id); ?>
 		</section>
 				
 <section id="leciono-enhavo">

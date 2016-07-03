@@ -9,7 +9,7 @@ function malfermiDatumbazon () {
      $bdd = new PDO('mysql:host=localhost;dbname='.$base.';charset=utf8', $login, $motDePasse);
      $bdd->query('SET lc_time_names = \'fr_FR\''); // Pour avoir les dates en français
      // A décommenter pour rendre les erreurs sql plus parlante
-     //$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 
 

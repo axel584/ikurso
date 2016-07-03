@@ -116,7 +116,7 @@ if ($parto!="intro")
 
 $pagxtitolo="Cours d’espéranto en dix leçons"; 
 
-include "../../pagxkapo.inc.php";
+include $vojo."pagxkapo.inc.php";
 ?>
 	   
 		<header id="superrigardo">

@@ -9,7 +9,7 @@ $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 ?>
 <!DOCTYPE html>
-  <html>
+  <html lang="fr">
     <head>
 		<!--Import Google Icon Font-->
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,7 +18,7 @@ $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 		
 		<!--Import materialize.css-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css"  media="screen"/>
 		
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -131,7 +131,7 @@ $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 		</div>
 
 		<div class="navbar-fixed">	
-			<nav role="navigation" class="primaire">
+			<nav class="primaire">
 				<div class="nav-wrapper">
 					<a href="<?php echo $vojo;?>index.php" class="brand-logo" id="logo">iKurso</a>
 					<!-- hamburger menu -->
@@ -181,4 +181,5 @@ if ($persono_id=="") {
 				</div>
 			</nav>
 		</div>
-<form id="chefa_form"> <!-- on englobe chaque page d'un formulaire principal -->
+	<main>
+	<form id="chefa_form"> <!-- on englobe chaque page d'un formulaire principal -->

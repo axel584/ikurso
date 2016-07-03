@@ -70,6 +70,47 @@ div.col > p:first-child {
 
 /*---------------  cards ---------------*/
 .card {padding: 1rem;}
+
+/*------------ liste à puces ------------*/
+ul.listo li { 
+    padding-left: 1em; 
+    text-indent: -0.7em;
+}
+
+ul.listo li:before {
+    content: "•  ";
+    color: #989490; 
+}
+
+/*------------- collapsible ------------*/
+
+.collapsible-body{
+    padding: 1em;
+}
+.collapsible-body p,
+.collapsible-body ul.listo {
+    padding: 0.5em 2em;
+}
+.collapsible-body ul.listo li {
+    padding-left: 2em;
+    text-indent: inherit;
+}
+
+.collapsible-header i.material-icons {
+    -webkit-transition: -webkit-transform .4s;
+    -moz-transition: -moz-transform .4s;
+    -o-transition: -o-transform .4s;
+    -ms-transition: -ms-transform .4s;
+    transition: transform .4s;
+}
+.collapsible-header.active i.material-icons {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
 /****************************************/
 /*           blocs principaux           */
 /****************************************/

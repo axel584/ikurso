@@ -7,6 +7,7 @@ $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
+if ($persono_id) {$persono = apartigiPersonon($persono_id);}
 ?>
 <!DOCTYPE html>
   <html lang="fr">
@@ -118,17 +119,12 @@ $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 		</div>	
 
 		<!-- fenêtre modale menu utilisateur -->
-		<div  id="uzantomenuo" class="dropdown-content">
-			<header class="uzanto blue">
-				<p class="uzantnomo">#</p>
-				<p class="retadreso">#</p>
-			</header>
-			<ul class="collection">
-				<li><a href="<?php echo $vojo;?>personinformoj" class="primaire-texte moyen">Mes données personnelles</a></li>
-				<li><a href="<?php echo $vojo;?>eliri.php" class="primaire-texte moyen">Déconnexion</a></li>
-			</ul>
-			</span>
-		</div>
+		<ul id="uzantomenuo" class="dropdown-content">
+			<li class="uzanto"><?php echo "<b>".$persono['enirnomo']."</b><br>".$persono['personnomo']." ".$persono['familinomo']."<br><em>".$persono['retadreso']."</em>";?></li>
+			<li class="divider"></li>
+			<li><a href="<?php echo $vojo;?>personinformoj.php" class="primaire-texte moyen">Mes données personnelles</a></li>
+			<li><a href="<?php echo $vojo;?>eliri.php" class="primaire-texte moyen">Déconnexion</a></li>
+		</ul>
 
 		<div class="navbar-fixed">	
 			<nav class="primaire">

@@ -563,7 +563,7 @@ include "dlekkapo.inc.php";
 		<section id="leciono-fino">
 			<div id="marko" class="right-align">
 				<?php getBoutonFinSection('CG',6,$section,$persono_id); ?>
-				<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
+				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
 			</div>
 			<div class="ligoj">
 				<?php getLecioneroAntauxa('CG',6,$section); ?>

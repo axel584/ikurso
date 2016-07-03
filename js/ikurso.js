@@ -70,21 +70,43 @@
 
 	$("#registriEkzercaron_button").click(function() {
 		$("#registriEkzercaron_button").addClass("disabled");
-		alert($("#chefa_form").serialize());
 		$.ajax({
        		url : $urlracine+'ajax/registriEkzercaron.php',
        		type : 'GET',
        		dataType : 'json',
        		data : $("#chefa_form").serialize(),
        		success : function(reponse, statut){ 
-       			alert("ok");
+       			// TODO : rediriger vers la page suivante
        		},
        		error : function() {
        			alert("Erreur de connection, contactez les administrateurs");
        		}
     	});
-		
-
 	});
+
+	$("#finiLecioneron_button").click(function() {
+		$("#finiLecioneron_button").addClass("disabled");
+		$.ajax({
+       		url : $urlracine+'ajax/finiLecioneron.php',
+       		type : 'GET',
+       		dataType : 'json',
+       		data : "lecionero="+$("#finiLecioneron_button").data('lecionero_id')+"&leciono="+$("#finiLecioneron_button").data('leciono')+"&kurso="+$("#finiLecioneron_button").data('kurso'),
+       		success : function(reponse, statut){ 
+       			if (reponse.mesagxo=="aucune url suivante") {
+       				alert("leçon suivante inconnu, contactez les administrateurs");
+       			} else if (reponse.mesagxo=="ok") {
+       				window.location = $urlracine+reponse.url;
+       			} else {
+       				alert("mauvais message de retour, contactez les administrateurs")
+       			}
+       		},
+       		error : function() {
+       			alert("Erreur de connection, contactez les administrateurs");
+       		}
+    	});
+	});
+
+
+
 
   });

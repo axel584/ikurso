@@ -114,6 +114,17 @@ aside {
 	padding-right: 5%;
 	margin-top: 6rem;
 }
+/********** drop-down uzanto *******/
+.dropdown-content li.uzanto {
+    cursor: default;
+    line-height: auto;
+    font-weight: 300;
+    font-size: 90%;
+    padding: 1em;
+    }
+.dropdown-content li.uzanto:hover {
+    background-color: inherit;
+}
 /********** progression dans le cours *******/
 
 #superrigardo {

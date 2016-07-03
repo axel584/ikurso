@@ -35,7 +35,7 @@ include "pagxkapo.inc.php";
 				<h2 id="infocours" class="scrollspy">Comment bien utiliser les cours&nbsp;? Comment s’inscrire&nbsp;?</h2>		
 		
 				<p>Sur ce site, vous avez accès à deux cours différents&nbsp;:</p>
-				<ul>
+				<ul class="listo">
 					<li>le <a href="#dlek">cours en dix leçons</a>&nbsp;: cours pour débutants sous forme de pages web</li>
 					<li><a href="#gerda">Gerda malaperis</a>, cours de perfectionnement basé sur un petit roman en 25&nbsp;chapitres.</li>
 				</ul>
@@ -48,7 +48,7 @@ include "pagxkapo.inc.php";
 				<?php if (($persono["rajtoj"]=="K")||($persono["rajtoj"]=="A")) { ?>
 					<h2 id="korektanto" class="scrollspy">Guide du correcteur</h2>
 					<p>Nous recommandons à tous nos correcteurs de prendre connaissance du guide du correcteur.
-					Il existe sous forme d'un fichier PDF à télécharger et d'une série de questions-réponses :</p>
+					Il existe sous forme d'un fichier PDF à télécharger et d'une série de questions-réponses&nbsp;:</p>
 					<p><a href="<?php echo $vojo;?>helppagxo.php" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Voir le guide du correcteur</a></p>
 				<?php } ?>
 			</section>

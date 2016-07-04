@@ -18,7 +18,9 @@ if ($persono_id) {
 }
 
 // on récupère les réponses précédentes que l'on va mettre dans la variable memorkurso
-$memorkurso = getRegistritajnRespondojn('CG',$leciono,$persono_id);
+if (isset($leciono)) {
+	$memorkurso = getRegistritajnRespondojn('CG',$leciono,$persono_id);
+}
 
 /*
  * rappel pour les élèves non identifiés.

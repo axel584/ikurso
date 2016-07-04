@@ -281,7 +281,7 @@ function redirigeParDroits($persono) {
         header("Location:miajlernantoj.php");
     }
     if ($persono['rajtoj']=='P') {
-        return; // pour les nouveaux élèves
+        header("location:fr/cge/intro.php"); // pour les nouveaux élèves retourne sur la première page du cours ?
     }
     if ($persono['rajtoj']=='S') { // nouveaux élèves ou élève qui suivent déjà un cours
         $demando = "select stato,nunleciono,kurso,nunleciono from nuna_kurso where studanto=".$persono['id']." order by CASE stato WHEN 'N' THEN 1 WHEN 'K' THEN 2 WHEN 'H' THEN 3 WHEN 'F' THEN 4 ELSE 5 END";
@@ -320,7 +320,7 @@ function getRedirectionParDroits($persono_id) {
         return "miajlernantoj.php";
     }
     if ($persono['rajtoj']=='P') {
-        return; // pour les nouveaux élèves
+        return "fr/cge/intro.php"; // pour les nouveaux élèves retourne sur la première page du cours ?
     }
     if ($persono['rajtoj']=='S') { // nouveaux élèves ou élève qui suivent déjà un cours
         $demando = "select stato,nunleciono,kurso,nunleciono from nuna_kurso where studanto=".$persono['id']." order by CASE stato WHEN 'N' THEN 1 WHEN 'K' THEN 2 WHEN 'H' THEN 3 WHEN 'F' THEN 4 ELSE 5 END";
@@ -431,6 +431,9 @@ function updateLastEniro($persono_id) {
 
 function getRegistritajnRespondojn($kurso,$leciono,$persono_id) {
     global $bdd;
+    if ($leciono=="") {
+        return;
+    }
     $query = "SELECT kodo,respondo FROM `respondoj` join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id where persono_id=".$persono_id." and kurso='".$kurso."' and numero=".$leciono;
     $result = $bdd->query($query);
     $retour = array();

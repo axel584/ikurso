@@ -3,7 +3,7 @@
 
   	$( "#connection_button" ).click(function() {
   		$.ajax({
-       		url : $urlracine+'ajax/eniri.php',
+       		url : $cheminAbsolu+'ajax/eniri.php',
        		type : 'GET',
        		dataType : 'json',
        		data : 'identigilo='+$( "#eniri_identigilo" ).val()+"&pasvorto="+$( "#eniri_pasvorto" ).val(),
@@ -31,7 +31,7 @@
   	$( "#inscription_button" ).click(function() {
   		$("#inscription_button").addClass("disabled");
   		$.ajax({
-       		url : $urlracine+'ajax/aligxi.php',
+       		url : $cheminAbsolu+'ajax/aligxi.php',
        		type : 'GET',
        		dataType : 'json',
        		data : 'identigilo='+$( "#aligxi_identigilo" ).val()+"&pasvorto="+$( "#aligxi_pasvorto" ).val()+"&retadreso="+$("#aligxi_retadreso").val(),
@@ -71,7 +71,7 @@
 	$("#registriEkzercaron_button").click(function() {
 		$("#registriEkzercaron_button").addClass("disabled");
 		$.ajax({
-       		url : $urlracine+'ajax/registriEkzercaron.php',
+       		url : $cheminAbsolu+'ajax/registriEkzercaron.php',
        		type : 'GET',
        		dataType : 'json',
        		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#registriEkzercaron_button").data('lecionero_id')+"&leciono="+$("#registriEkzercaron_button").data('leciono')+"&kurso="+$("#registriEkzercaron_button").data('kurso'),
@@ -89,10 +89,10 @@
 	$("#finiLecioneron_button").click(function() {
 		$("#finiLecioneron_button").addClass("disabled");
 		$.ajax({
-       		url : $urlracine+'ajax/finiLecioneron.php',
+       		url : $cheminAbsolu+'ajax/finiLecioneron.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : "lecionero="+$("#finiLecioneron_button").data('lecionero_id')+"&leciono="+$("#finiLecioneron_button").data('leciono')+"&kurso="+$("#finiLecioneron_button").data('kurso'),
+       		data : "lecionero_id="+$("#finiLecioneron_button").data('lecionero_id')+"&leciono="+$("#finiLecioneron_button").data('leciono')+"&kurso="+$("#finiLecioneron_button").data('kurso'),
        		success : function(reponse, statut){ 
        			if (reponse.mesagxo=="aucune url suivante") {
        				alert("leçon suivante inconnu, contactez les administrateurs");

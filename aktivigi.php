@@ -8,7 +8,7 @@ $query = "select * from personoj where retadreso='".$retadreso."'";
 $result = $bdd->query($query);
 $row = $result->fetch();
 if (!$row) {
-	header( "Location:index.php?erarkodo=17"); // aucun compte avec cette adresse email
+	header( "Location:index.php?erarkodo=19"); // aucun compte avec cette adresse email
 } else {
 	if ($aktivigo!=$row["aktivigo"]) {
 		header( "Location:index.php?erarkodo=18"); // mauvaise clef d'activation

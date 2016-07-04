@@ -291,8 +291,8 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 		} else {
 			$classeDejaFait="";
 		}
-		if($tipo=="EKZERCARO") { // on memorise
-			echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
+		if($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
+			echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
 		} elseif($lasta==1) { // on envoit au correcteur
 			echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
 		} else { // on indique que la leçon est terminée

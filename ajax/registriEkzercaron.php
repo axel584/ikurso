@@ -27,10 +27,20 @@ foreach(array_keys($_GET) as $key) {
 
 
 
-// on enregistre en base le résultat
+// on enregistre en base le résultat s'il aucune réponse ne s'y trouve, sinon on fait une mise à jour
 foreach(array_keys($lernantajDemandoj) as $kodo) {
-	    $requete = $bdd->prepare('insert into respondoj(persono_id,dato,kodo,demando,respondo,lecionero_id) values (:persono_id,now(),:kodo,:demando,:respondo,:lecionero_id)');
-    	$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'demando'=>$lernantajDemandoj[$kodo],'respondo'=>$lernantajRespondoj[$kodo],'lecionero_id'=>$lecionero_id));
+		if ($lernantajRespondoj[$kodo]=="") {
+			continue; // on enregistre pas les réponses vides
+		}
+		$result = $bdd->query("select count(*) as combien from respondoj where persono_id=".$persono_id." and kodo='".$kodo."' and lecionero_id=".$lecionero_id);
+		$nbReponseEnBase = $result->fetch()["combien"];
+		if ($nbReponseEnBase==0) {
+	    	$requete = $bdd->prepare('insert into respondoj(persono_id,dato,kodo,demando,respondo,lecionero_id) values (:persono_id,now(),:kodo,:demando,:respondo,:lecionero_id)');
+    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'demando'=>$lernantajDemandoj[$kodo],'respondo'=>$lernantajRespondoj[$kodo],'lecionero_id'=>$lecionero_id));
+    	} else {
+    		$requete = $bdd->prepare('update respondoj set respondo=:respondo where persono_id=:persono_id and kodo=:kodo and lecionero_id=:lecionero_id');
+    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'respondo'=>$lernantajRespondoj[$kodo],'lecionero_id'=>$lecionero_id));
+    	}
 }
 // on indique dans la table personoj_lecioneroj que la leçon a été faite :
 $requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id) values (now(),:persono_id,:lecionero_id)');

@@ -17,14 +17,9 @@ if ($persono_id) {
 	$persono = apartigiPersonon($persono_id);
 }
 
+// on récupère les réponses précédentes que l'on va mettre dans la variable memorkurso
+$memorkurso = getRegistritajnRespondojn('CG',$leciono,$persono_id);
 
-/*
-echo "memorkurso<br>";
-$memorkurso=$_SESSION["memorkurso"];
-	foreach($memorkurso as $key => $value) {
-		echo "key=".$key." val=".$value."<br>";
-	}
-*/
 /*
  * rappel pour les élèves non identifiés.
 */
@@ -45,17 +40,17 @@ function ekzerco($sist, $nbLig) {
 	}
 	foreach ($demandoj as $k => $v) {
 		echo "\t<p>".$k.". ".$v."</p>\n";
-		echo "\t<p><input type='hidden' name=\"dem_ekz".$numcxap."_".$k."\" value=\"".$k." ".$v."\">\n";
+		echo "\t<p><input type='hidden' name=\"dem_ekz".$numcxap."_".sprintf('%02d', $k)."\" value=\"".$k." ".$v."\">\n";
 		
 		if ($nbLig==1) {
-			echo "\t<input type='text' size='65' name=\"res_ekz".$numcxap."_".$k."\"";
+			echo "\t<input type='text' size='65' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			// si on n'est pas identifié et que ce n'est pas la première leçon, on empeche de remplir les exercices si on n'est pas connecté
 			if ($idenfication==False && $numcxap<>"01") {
 				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
 			echo " onkeyup='xAlUtf8(this)' ";
 			echo "value=\"";
-			$var="res_ekz".$numcxap."_".$k;
+			$var="res_ekz".$numcxap."_".sprintf('%02d', $k);
 			if (isset($memorkurso[$var])){
 				echo stripslashes($memorkurso[$var]);
 			}
@@ -63,13 +58,13 @@ function ekzerco($sist, $nbLig) {
 		}
 		else
 		{
-			echo "\t<textarea cols='65' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".$k."\"";
+			echo "\t<textarea cols='65' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			if ($idenfication==False) {
 				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
 			echo " onkeyup='xAlUtf8(this)' ";
 			echo ">";
-			$var="res_ekz".$numcxap."_".$k;
+			$var="res_ekz".$numcxap."_".sprintf('%02d', $k);
 			if (isset($memorkurso[$var])){
 				echo stripslashes($memorkurso[$var]);
 			}

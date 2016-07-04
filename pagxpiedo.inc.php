@@ -31,6 +31,9 @@
 	if ($erarkodo==19) {
 		echo "Materialize.toast('Aucun compte à activer avec cette adresse email.', 4000);\n";
 	}
+	if ($erarkodo==20) {
+		echo "Materialize.toast('Les changements ont bien été enregistrés.', 4000);\n";
+	}
 	
 
 ?>

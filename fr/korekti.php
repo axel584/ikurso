@@ -21,7 +21,7 @@ if ($persono_id!="") {
 function PorInformistoj() {
 	global $persono_id, $lingvo, $verdakrabo, $enirnomo, $naskigxdato_tago, $naskigxdato_monato, $naskigxdato_jaro, $sekso, $personnomo, 
 	$retadreso, $familinomo, $adreso1, $adreso2, $urbo, $lando, $posxtkodo, $kurso, $kialo,$bdd;
-		$demando="select retadreso from personoj where rajtoj='I' and lingvo='FR'";
+		$demando="select retadreso from personoj where rajtoj='I'";
 		$result = $bdd->query($demando);
 		$row=$result->fetch();
 		$informistoj=$row["retadreso"];

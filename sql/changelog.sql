@@ -302,3 +302,5 @@ CREATE TABLE respondoj (
 `demando` TEXT,
 `respondo` TEXT,
 PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+-- modification pour avoir des utilisateurs sans cours choisi :
+ALTER TABLE `personoj` CHANGE `kurso` `kurso` VARCHAR(2) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '';

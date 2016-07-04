@@ -9,13 +9,25 @@ $form_adreso2=$_POST["adreso2"];
 $form_posxtkodo=$_POST["posxtkodo"];
 $form_urbo=$_POST["urbo"];
 $form_lando=$_POST["lando"];
-$form_naskigxdato_tago=$_POST["naskigxdato_tago"];
-$form_naskigxdato_monato=$_POST["naskigxdato_monato"];
-$form_naskigxdato_jaro=$_POST["naskigxdato_jaro"];
-$form_kialo=$_POST["kialo"];
-$form_kurso=$_POST["kurso"];
+$form_naskigxdato=$_POST["naskigxdato"];
 $form_stopInfo=isset($_POST["stopInfo"])?"J":"N";
 $teksto="";
+
+$nomDesMois = array("Janvier"=>1,"Février"=>2,"Mars"=>3,"Avril"=>4,"Mai"=>5,"Juin"=>6,"Juillet"=>7,"Août"=>8,"Septembre"=>9,"Octobre"=>10,"Novembre"=>11,"Décembre"=>12);
+
+$elementsNaskigxdato = explode(" ",$form_naskigxdato);
+if (count($elementsNaskigxdato)==3) {
+	$form_naskigxdato_tago = $elementsNaskigxdato[0];
+	$form_naskigxdato_monato = $nomDesMois[trim($elementsNaskigxdato[1],',')];
+	$form_naskigxdato_jaro = $elementsNaskigxdato[2];
+} else {
+	$form_naskigxdato_tago="";
+	$form_naskigxdato_monato="";
+	$form_naskigxdato_jaro="";
+}
+
+
+
 
 if ($persono_id=="") {header("Location:index.php?erarkodo=4");} else {
 	// on verifie les différences pour enregistrer dans le protokolo les changements
@@ -46,37 +58,14 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=4");} else {
 	if ($persono['naskigxdato']!=$form_naskigxdato_jaro."-".$form_naskigxdato_monato."-".$form_naskigxdato_tago) {
 		$teksto.="naskigxdato : malnova:".$persono['naskigxdato']." - nova : ".$form_naskigxdato_jaro."-".$form_naskigxdato_monato."-".$form_naskigxdato_tago."\n";
 	}
-	if ($persono['kialo']!=$form_kialo) {
-		$teksto.="kialo : malnova:".$persono['kialo']." - nova : ".$form_kialo."\n";
-	}
 	if ($persono['stop_info']!=$form_stopInfo) {
 		$teksto.="stopInfo: malnova:".$persono['stop_info']." - nova : ".$form_stopInfo."\n";
 	}
 	if ($teksto!=""){
 		protokolo($persono_id,"UPDATE PERSO",$teksto);
 	}
-  modifiPersonon($persono_id,$form_sekso,$form_familinomo,$form_personnomo,$form_adreso1,$form_adreso2,$form_posxtkodo,$form_urbo,$form_lando,$form_naskigxdato_tago,$form_naskigxdato_monato,$form_naskigxdato_jaro,$form_kialo,$form_kurso,$form_stopInfo);
-  switch ($rapidvojo) {
-	case "1":
-		header("Location:index.php");
-		break;
-    	case "2":
-        	header("Location:aligxi.php");
-	        break;
-	case "3":
-        	header("Location:atendiKorekanton.php");
-        	break;
-	case "4":
-        	header("Location:personinformoj.php");
-	        break;
-    	case "5":
-        	header("Location:studantojlisto.php");
-        	break;
-    	case "6":
-        	header("Location:administri.php");
-        	break;
-	default:
-		header("Location:personinformoj.php");
-  }
+  modifiPersonon($persono_id,$form_sekso,$form_familinomo,$form_personnomo,$form_adreso1,$form_adreso2,$form_posxtkodo,$form_urbo,$form_lando,$form_naskigxdato_tago,$form_naskigxdato_monato,$form_naskigxdato_jaro,$form_stopInfo);
+  header("Location:personinformoj.php?erarkodo=20"); // l'erarkodo à 20 permet d'afficher un toast pour confirmer l'enregistrement des données
+  
 }
 ?>          

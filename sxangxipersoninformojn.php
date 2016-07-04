@@ -7,8 +7,17 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 include "pagxkapo.inc.php";
-?>
+// on converti la chaîne date en truc joliment écrit :
+$nomMois = array("01"=>"Janvier","02"=>"Février","03"=>"Mars","04"=>"Avril","05"=>"Mai","06"=>"Juin","07"=>"Juillet","08"=>"Août","09"=>"Septembre","10"=>"Octobre","11"=>"Novembre","12"=>"Décembre");
+$elementNaskigxdato = explode("-",$persono["naskigxdato"]);
+if (count($elementNaskigxdato)==3) {
+	$naskigxdato = $elementNaskigxdato[2]." ".$nomMois[$elementNaskigxdato[1]].", ".$elementNaskigxdato[0];
+} else {
+	$naskigxdato = "";
+}
 
+?>
+</form> <!-- on ferme le formulaire principal -->
 <div class="row">
 	<article class="col s12 m10 l7 offset-m2 offset-l2">
 		<h1>Données personnelles</h1>
@@ -22,7 +31,6 @@ include "pagxkapo.inc.php";
 		</p>
 		
 		<form name="inscription" action="sxangxipersoninformojn2.php" method="POST">
-			
 			<div class="row">
 				<div class="input-field col s6 l4">
 					<input id="personnomo" name="personnomo" value="<?php echo $persono['personnomo'];?>" type="text" class="validate" required="" aria-required="true">
@@ -39,7 +47,7 @@ include "pagxkapo.inc.php";
 
 				<div class="col s6 m4">
 					<label for="naskigxdato" class="">Date de naissance</label>
-					<input id="naskigxdato" type="date" class="datepicker"s>
+					<input id="naskigxdato" name="naskigxdato" type="date" value="<?php echo $naskigxdato;?>" class="datepicker"s>
 				</div>
 				<div class="col s3">
 					<input type="radio" name="sekso" id="seksoM" value="M" <?php if ($persono['sekso']=="M"){echo "checked";}?>>
@@ -72,20 +80,7 @@ include "pagxkapo.inc.php";
 				</div>
 
 				<div class="input-field col s12 m5">
-					<select name="lando" id="lando">
-					<!-- à remplacer par des données dynamiques -->
-						<option value="DE">Allemagne</option>
-						<option value="AD">Andorre</option>
-						<option value="AO">Angola</option>
-						<option value="FR">France</option>
-						<option value="GA">Gabon</option>
-						<option value="GH">Ghana</option>
-						<option value="GB">Grande Bretagne</option>
-						<option value="CZ">République Tchèque</option>
-						<option value="CH">Suisse</option>
-						<option value="TN">Tunisie</option>
-						<option value="XX">__Autre__</option>						
-					</select>
+					<?php konstruiMenuon("lando","landoj","kodo","nomo",$persono["lando"]," order by nomo","-- pays --");  ?>
 					<label for="lando">Pays</label>
 				</div>
 			</div>
@@ -108,7 +103,6 @@ include "pagxkapo.inc.php";
 					<input class="btn blue right" type="submit" name="Submit" value="Enregister les modifications">
 				</div>
 			</div>	
-		</form>
 
 		<div class="rimarko">
 			<p  class="noto">Vous disposez d’un droit d’accès, de modification, de rectification et de suppression des données 

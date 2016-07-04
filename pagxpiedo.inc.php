@@ -25,11 +25,11 @@
 	if ($erarkodo==8) {
 		echo "Materialize.toast('Votre session a expiré, veuillez vous identifier.', 4000);\n";
 	}
-	if ($erarkodo==17) {
-		echo "Materialize.toast('Aucun compte à activer avec cette adresse email.', 4000);\n";
-	}
 	if ($erarkodo==18) {
 		echo "Materialize.toast('Clef d’activation incorrecte.', 4000);\n";
+	}
+	if ($erarkodo==19) {
+		echo "Materialize.toast('Aucun compte à activer avec cette adresse email.', 4000);\n";
 	}
 	
 

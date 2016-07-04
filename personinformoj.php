@@ -34,9 +34,11 @@ include "pagxkapo.inc.php";
 					<?php echo $persono['adreso1']; 
 					if ($persono['adreso2']!="") {
 						echo "<br>".$persono['adreso2'];
+					}
 						echo "<br>".$persono['posxtkodo']." ".$persono['urbo'];
-						echo "<br>".simplaVorto("nomo","landoj","where kodo='".$persono['lando']."'");
-					} ?>
+						echo "<br>";
+						simplaVorto("nomo","landoj","where kodo='".$persono['lando']."'");
+					?>
 				</span>
 			</div>
 	

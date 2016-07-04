@@ -23,7 +23,7 @@ else {
 			$respondo["mesagxo"] = "ok";
 			// on memorise l'id en session :
 			$_SESSION["persono_id"]=$row["id"];
-			// trouver l'url où l'on doit atterir
+			// TODO : trouver l'url où l'on doit atterir
 			$respondo["url"]="administri.php";
 		}
 	}

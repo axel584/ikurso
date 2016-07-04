@@ -108,6 +108,28 @@
     	});
 	});
 
+	$("#finiLecioneron_button").click(function() {
+		$("#finiLecioneron_button").addClass("disabled");
+		$.ajax({
+       		url : $cheminAbsolu+'ajax/finiLecioneron.php',
+       		type : 'GET',
+       		dataType : 'json',
+       		data : "lecionero_id="+$("#finiLecioneron_button").data('lecionero_id')+"&leciono="+$("#finiLecioneron_button").data('leciono')+"&kurso="+$("#finiLecioneron_button").data('kurso'),
+       		success : function(reponse, statut){ 
+       			if (reponse.mesagxo=="aucune url suivante") {
+       				alert("leçon suivante inconnu, contactez les administrateurs");
+       			} else if (reponse.mesagxo=="ok") {
+       				window.location = $urlracine+reponse.url;
+       			} else {
+       				alert("mauvais message de retour, contactez les administrateurs")
+       			}
+       		},
+       		error : function() {
+       			alert("Erreur de connection, contactez les administrateurs");
+       		}
+    	});
+	});	
+
 
 
 

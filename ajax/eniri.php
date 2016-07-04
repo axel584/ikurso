@@ -24,7 +24,7 @@ else {
 			// on memorise l'id en session :
 			$_SESSION["persono_id"]=$row["id"];
 			// TODO : trouver l'url où l'on doit atterir
-			$respondo["url"]="administri.php";
+			$respondo["url"]=getRedirectionParDroits($row["id"]);
 		}
 	}
 

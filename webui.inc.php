@@ -291,7 +291,9 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 		} else {
 			$classeDejaFait="";
 		}
-		if($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
+		if($tipo=="QCM") { // on memorise (même si on a déjà mémorisé)
+			echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="Vous pourrez corriger vos mauvaises réponses avant de passer à la suite">Vérifier mes réponses !</a>';
+		} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
 			echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
 		} elseif($lasta==1) { // on envoit au correcteur
 			echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
@@ -300,5 +302,50 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 		}
 	}
 }
+
+function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
+					echo "<p>";
+					echo "<input type=\"hidden\" name=\"900 dmd ".$numero."\" value=\"".$question."\">\n";
+					echo "<input type=\"hidden\" name=\"900 resp ".$numero."\" value=\"".join("/",$propositions)."\">\n";
+					if (in_array($numero,$eraroj)) {
+						echo "<span class=\"qcmerr\">";
+					}
+					echo $numero.". ".$question;
+					if (in_array($numero,$eraroj)) {
+						echo "</span>";
+					}
+					echo "</p>\n";
+					echo "<p>";
+					// sans réponse :
+					echo "<input style=\"display:none;\" type=\"radio\" name=\"900 ".$numero."\"";
+					if ((isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]=="")) {
+						echo "checked";
+					}
+					echo ">";
+					$i = 1;
+					foreach ($propositions as $proposition ) {
+						if ($proposition=="(pas de réponse)") {
+							$i++;
+							continue;
+						}
+						echo "<input type=\"radio\" name=\"900 ".$numero."\" value=\"".$i."\" id=\"900 ".$numero.$i."\" ";
+				
+						if ((isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]==strval($i))) {
+							echo "checked";
+						}
+						echo "> ";
+						if (in_array($numero,$eraroj) && (isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]==strval($i))) {
+							echo "<span class=\"qcmerr\">";
+						}
+						echo "<label for=\"900 ".$numero.$i."\">".$proposition."</label>";
+						if (in_array($numero,$eraroj) && (isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]==strval($i))) {
+							echo "</span>";
+						}
+						echo "<br/>";
+						$i++;
+					}
+					echo "</p>\n";
+				
+				}
 
 ?>

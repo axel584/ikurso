@@ -43,4 +43,6 @@
 		}
 	);
 
+	$('.collapsible').pushpin({ top: $('.collapsible').offset()  });
+
 });

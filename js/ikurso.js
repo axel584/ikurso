@@ -108,16 +108,19 @@
     	});
 	});
 
-	$("#finiLecioneron_button").click(function() {
-		$("#finiLecioneron_button").addClass("disabled");
+	$("#kontroliQCM_button").click(function() {
 		$.ajax({
-       		url : $cheminAbsolu+'ajax/finiLecioneron.php',
+       		url : $cheminAbsolu+'ajax/kontroliQCM.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : "lecionero_id="+$("#finiLecioneron_button").data('lecionero_id')+"&leciono="+$("#finiLecioneron_button").data('leciono')+"&kurso="+$("#finiLecioneron_button").data('kurso'),
+       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#kontroliQCM_button").data('lecionero_id')+"&leciono="+$("#kontroliQCM_button").data('leciono')+"&kurso="+$("#kontroliQCM_button").data('kurso'),
        		success : function(reponse, statut){ 
-       			if (reponse.mesagxo=="aucune url suivante") {
-       				alert("leçon suivante inconnu, contactez les administrateurs");
+       			if (reponse.mesagxo=="ko") {
+       				// il y a des erreurs, on va les afficher
+       				for (erreur of reponse.eraroj) {
+       					$("#demando_"+erreur).addClass("qcmerr");
+       				}
+       				alert("Relisez bien la leçon !");
        			} else if (reponse.mesagxo=="ok") {
        				window.location = $urlracine+reponse.url;
        			} else {

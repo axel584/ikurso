@@ -34,6 +34,12 @@
 	if ($erarkodo==20) {
 		echo "Materialize.toast('Les changements ont bien été enregistrés.', 4000);\n";
 	}
+	if ($erarkodo==21) {
+		echo "Materialize.toast('Votre QCM est parfait !', 4000);\n";
+	}
+	if ($erarkodo==22) {
+		echo "Materialize.toast('Attention, relisez bien la leçon !', 4000);\n";
+	}
 	
 
 ?>

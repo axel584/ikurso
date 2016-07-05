@@ -221,20 +221,41 @@ ul#lecionoj li.farita a {
 
 #enhavtabelo {
 	width:90%;
-	margin:5% 0;
+	margin:0;
 }
 #enhavtabelo li {
 	font-size:90%;
-	line-height:1.5em;
+	line-height:1.8em;
 	font-weight: 400;
 }
 ul#enhavtabelo li::before {
 	font-family: 'Material Icons';
-	content: "done_all";
 	-webkit-font-feature-settings: 'liga';
+/*	content: "done";
 	color: transparent;
+*/}
+ul#enhavtabelo li.gramm::before {
+	font-family: 'Material Icons';
+	-webkit-font-feature-settings: 'liga';
+	content: "description";
+	color: #999;
+}
+ul#enhavtabelo li.exo::before {
+	font-family: 'Material Icons';
+	-webkit-font-feature-settings: 'liga';
+	content: "mode_edit";
+	color: #999;
+}
+ul#enhavtabelo li.qcm::before {
+	font-family: 'Material Icons';
+	-webkit-font-feature-settings: 'liga';
+	content: "mode_edit";
+	color: #999;
 }
 ul#enhavtabelo li.farita::before {
+	font-family: 'Material Icons';
+	content: "done";
+	-webkit-font-feature-settings: 'liga';
 	color: #2196F3;
 }
 #enhavtabelo li a {
@@ -246,10 +267,6 @@ ul#enhavtabelo li.farita::before {
 }
 #enhavtabelo li a:active {
 	color: #0277bd;
-}
-ul#enhavtabelo li.farita {
-}
-ul#enhavtabelo li.nuna {
 }
 
 /********** vocabulaire de la leçon *******/

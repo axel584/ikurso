@@ -285,18 +285,26 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 		// op vérifie si l'élève a déjà fait cette leçon :
 		$query = "select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
 		$result = $bdd->query($query);
-		$dejaFait = $result->fetch()["combien"];
-		if ($dejaFait>0) {
-			$classeDejaFait = "disabled";
+		$leconEnCours = $result->fetch()["combien"];
+		if ($leconEnCours>0) {
+			echo "a un correcteur";
 		} else {
 			$classeDejaFait="";
 		}
+		// on vérifie si l'élève a déjà un correcteur :
+		$query = "select count(*) as combien from nuna_kurso where studanto=".$persono_id;
+		$result = $bdd->query($query);
+		$dejaFait = $result->fetch()["combien"];
 		if($tipo=="QCM") { // on memorise (même si on a déjà mémorisé)
 			echo '<a id="kontroliQCM_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="Vous pourrez corriger vos mauvaises réponses avant de passer à la suite">Vérifier mes réponses !</a>';
 		} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
 			echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
-		} elseif($lasta==1) { // on envoit au correcteur
-			echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
+		} elseif($lasta==1) { // on envoit au correcteur si on a un correcteur, on en demande un dans le cas contraire
+			if ($leconEnCours>0) {
+				echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
+			} else { // Pas de correcteur
+				echo '<a id="petiKorektanton_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="Mes exercices lui seront envoyés">Demander un correcteur</a>';
+			}
 		} else { // on indique que la leçon est terminée
 			echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
 		}

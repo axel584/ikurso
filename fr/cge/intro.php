@@ -63,4 +63,4 @@ include "dlekkapo.inc.php"
 	
 </div>
 
-<? include "dlekpiedo.inc.php"; ?>
+<?php include "dlekpiedo.inc.php"; ?>

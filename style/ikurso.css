@@ -221,14 +221,24 @@ ul#lecionoj li.farita a {
 
 #enhavtabelo {
 	width:90%;
-	margin:5% auto;
+	margin:5% 0;
 }
 #enhavtabelo li {
 	font-size:90%;
 	line-height:1.5em;
 	font-weight: 400;
 }
+ul#enhavtabelo li::before {
+	font-family: 'Material Icons';
+	content: "done_all";
+	-webkit-font-feature-settings: 'liga';
+	color: transparent;
+}
+ul#enhavtabelo li.farita::before {
+	color: #2196F3;
+}
 #enhavtabelo li a {
+	padding-left: 0.5em;
 	color: #75706B;
 }
 #enhavtabelo li a:hover {

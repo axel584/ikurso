@@ -134,6 +134,7 @@
 	});	
 
 
-
+	// TODO : peti korektanton
+	// TODO : sendi Lecionon
 
   });

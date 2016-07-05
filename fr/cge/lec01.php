@@ -566,8 +566,8 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 			</section>
 			
 			<?php 
-			} // fin section 6
-			if ($section=="7") {
+			} // fin section 7
+			if ($section=="8") {
 			?>
 			<section id="section7">
 				<p>

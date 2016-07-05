@@ -521,13 +521,15 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 					ekzerco("U", 1);
 				?>
 				</div>
+			<?php 
+			} // fin section 6
+			if ($section=="7") {
+			?>
+
 					<p>
 					Dans l’exercice suivant, sélectionnez la réponse exacte en 
 					cliquant sur le bouton associé. Attention! L’exercice est très facile (il 
-					suffit d’avoir compris le cours), mais il est éliminatoire. Le serveur refusera
-					votre inscription si vous faites la moindre erreur. Dans ce cas, 
-					vous pouvez toujours revenir en arrière et retenter autant de fois 
-					que vous désirez, mais ne tentez pas de répondre au hasard, car il 
+					suffit d’avoir compris le cours), mais ne tentez pas de répondre au hasard, car il 
 					y a tout de m&ecirc;me 67&nbsp;108&nbsp;864&nbsp;réponses possibles...
 					</p>
 				<?php
@@ -540,50 +542,7 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 					echo "trois en erreurs <br/>";
 				}
 				
-				function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
-					echo "<p>";
-					echo "<input type=\"hidden\" name=\"900 dmd ".$numero."\" value=\"".$question."\">";
-					echo "<input type=\"hidden\" name=\"900 resp ".$numero."\" value=\"".join("/",$propositions)."\">";
-					if (in_array($numero,$eraroj)) {
-						echo "<span class=\"qcmerr\">";
-					}
-					echo $numero.". ".$question;
-					if (in_array($numero,$eraroj)) {
-						echo "</span>";
-					}
-					echo "</p>";
-					echo "<p>";
-					// sans réponse :
-					echo "<input style=\"display:none;\" type=\"radio\" name=\"900 ".$numero."\"";
-					if ((isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]=="")) {
-						echo "checked";
-					}
-					echo ">";
-					$i = 1;
-					foreach ($propositions as $proposition ) {
-						if ($proposition=="(pas de réponse)") {
-							$i++;
-							continue;
-						}
-						echo "<input type=\"radio\" name=\"900 ".$numero."\" value=\"".$i."\" ";
 				
-						if ((isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]==strval($i))) {
-							echo "checked";
-						}
-						echo "> ";
-						if (in_array($numero,$eraroj) && (isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]==strval($i))) {
-							echo "<span class=\"qcmerr\">";
-						}
-						echo $proposition;
-						if (in_array($numero,$eraroj) && (isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]==strval($i))) {
-							echo "</span>";
-						}
-						echo "<br/>";
-						$i++;
-					}
-					echo "</p>";
-				
-				}
 				
 				?>
 				<input type="hidden" name="013_cxap01.3" value="QCM">

@@ -43,6 +43,6 @@
 		}
 	);
 
-	$('.collapsible').pushpin({ top: $('.collapsible').offset()  });
+	//$('.collapsible').pushpin({ top: $('.collapsible').offset()  });
 
 });

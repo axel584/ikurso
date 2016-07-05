@@ -292,7 +292,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 			$classeDejaFait="";
 		}
 		if($tipo=="QCM") { // on memorise (même si on a déjà mémorisé)
-			echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="Vous pourrez corriger vos mauvaises réponses avant de passer à la suite">Vérifier mes réponses !</a>';
+			echo '<a id="kontroliQCM_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="Vous pourrez corriger vos mauvaises réponses avant de passer à la suite">Vérifier mes réponses !</a>';
 		} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
 			echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
 		} elseif($lasta==1) { // on envoit au correcteur
@@ -304,9 +304,9 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 }
 
 function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
-					echo "<p>";
-					echo "<input type=\"hidden\" name=\"900 dmd ".$numero."\" value=\"".$question."\">\n";
-					echo "<input type=\"hidden\" name=\"900 resp ".$numero."\" value=\"".join("/",$propositions)."\">\n";
+					echo "<p id=\"demando_".$numero."\">";
+					//echo "<input type=\"hidden\" name=\"900 dmd ".$numero."\" value=\"".$question."\">\n";
+					//echo "<input type=\"hidden\" name=\"900 resp ".$numero."\" value=\"".join("/",$propositions)."\">\n";
 					if (in_array($numero,$eraroj)) {
 						echo "<span class=\"qcmerr\">";
 					}

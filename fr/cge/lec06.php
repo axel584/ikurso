@@ -7,10 +7,6 @@ include "dlekkapo.inc.php";
 
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
-		<section id="leciono-kapo">
-			<h1>Leçon 6</h1>
-			<?php getFaritajLecioneroj($kurso,$leciono,$persono_id); ?>
-		</section>
 				
 <section id="leciono-enhavo">
 <?php 

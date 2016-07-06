@@ -8,10 +8,7 @@ include "dlekkapo.inc.php";
 
 <main class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
-		<section id="leciono-kapo">
-			<h1>Leçon 7</h1>
-			<?php getFaritajLecioneroj($kurso,$leciono,$persono_id); ?>
-		</section>
+
 				
 <section id="leciono-enhavo">
 
@@ -1075,7 +1072,6 @@ tellement naturelle que vous n’y ferez même plus attention.
 				<section id="leciono-fino">
 					<div id="marko" class="right-align">
 						<?php getBoutonFinSection('CG',7,$section,$persono_id); ?>
-						<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
 					</div>
 					<div class="ligoj">
 						<?php getLecioneroAntauxa('CG',7,$section); ?>

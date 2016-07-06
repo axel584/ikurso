@@ -6,7 +6,6 @@ $url=isset($_SERVER['REQUEST_URI'])?strtok($_SERVER['REQUEST_URI'],'?'):"";
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
-echo $erarkodo;
 $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 if ($persono_id) {$persono = apartigiPersonon($persono_id);}
 ?>

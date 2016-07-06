@@ -15,7 +15,7 @@ if ($persono_id!="") {
 }
 include "pagxkapo.inc.php";
 ?>
-
+</form>
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l2">
 		<section id="leciono-kapo">
@@ -36,7 +36,7 @@ include "pagxkapo.inc.php";
 
 			<form method="post" action="reago2.php">
 				<div class="card-title primaire-texte texte-moyen">Votre message</div>
-				
+				<form method="post" action="reago2.php">
 				<div class="card-content">
 					<div class="row">
 						<div class="input-field col s12">

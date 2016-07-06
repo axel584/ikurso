@@ -310,9 +310,10 @@ function listi_S_laux_K($korektanto_id) {
 }
 
 //tiu funkcio konstruas la liston de Personoj 'P'
+// avec le nouveau système d'inscription, on n'affiche que les personnes dont le compte est validé et qui ont fait une première leçon (c'est à dire que le "kurso" n'est pas vide)
 function listi_P() {
 	global $bdd;
-	$demando =  "select id,enirnomo,personnomo,familinomo from personoj where rajtoj='P'";
+	$demando =  "select id,enirnomo,personnomo,familinomo from personoj where rajtoj='P' and aktivigita=1 and kurso<>''";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]." (".$row["personnomo"]." ".$row["familinomo"].")</option>";

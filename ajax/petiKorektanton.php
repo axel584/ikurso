@@ -1,6 +1,7 @@
 <?php
 include "../util.php";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
+$persono = apartigiPersonon($persono_id);
 $lecionero_id=isset($_GET["lecionero_id"])?$_GET["lecionero_id"]:"";
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
@@ -11,7 +12,63 @@ if ($persono_id=="") { // personne non connecté, on ressort
 	exit();
 }
 
-echo "lecionero_id :".$lecionero_id."<br/>";
-echo "leciono :".$leciono."<br/>";
-echo "kurso :".$kurso."<br/>";
+// si le compte n'est pas activé, on le renvoit
+$query = "select aktivigita from personoj where id=".$persono_id;
+$result = $bdd->query($query);
+$aktivigita = $result->fetch()["aktivigita"];
+if($aktivigita==0) {
+	$respondo["mesagxo"] = "compteNonActif";
+	echo json_encode($respondo);
+	exit();
+}
+
+// on vérifie si l'élève a fait un exercice
+$query = "select count(*) as combien from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."'";
+$result = $bdd->query($query);
+$nbResponses = $result->fetch()["combien"];
+if ($nbResponses==0) {
+	$respondo["mesagxo"] = "aucunExercice";
+	echo json_encode($respondo);
+	exit();	
+}
+
+// on récupère quelques infos sur le cours :
+if ($kurso=="CG") {
+	$prefixeKurso = "fr/cge/";
+	$nomCours = "Cours débutant ";
+} 
+if ($kurso=="KE") {
+	$prefixeKurso = "fr/gerda/";
+	$nomCours = "Gerda Malaperis ";
+} 
+
+
+// on met le champ "kurso" de l'élève a la bonne valeur
+$query = "update personoj set kurso='".$kurso."' where id=".$persono_id;
+$bdd->exec($query);
+
+// on enregistre ses réponses dans la table 
+$fonto="<html><head><title>Cours d'Espéranto : leçon ".$leciono."</title>\n";
+$fonto.="<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"\n>";
+$fonto.="<style>body{font-family:\"Courier New\", Courier, sans-serif;font-size:small}</style>\n";
+$fonto.="</head><body>";
+
+$query = "select demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
+$result = $bdd->query($query);
+while ($row=$result->fetch()) {
+	$fonto .= "<p>".$row["demando"]."<br>\n";
+	$fonto .= "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
+}
+$fonto.="</body></html>";
+
+$query = "insert into eraraj_lecionoj (persono_id,enirnomo,dato,subjekto,fonto) values ('".$persono_id."','".$persono["enirnomo"]."',now(),'".$nomCours." ".$leciono."','".addslashes($fonto)."')";
+$bdd->exec($query);
+
+// Renvoyer la page qui permet d'évaluer la leçon
+// on trouve la leçon suivante et on récupère son url :
+
+
+$respondo["url"] = $prefixeKurso."konfirmo.php?kazo=2&lec=".$leciono;
+$respondo["mesagxo"] = "ok";
+echo json_encode($respondo);
 ?>

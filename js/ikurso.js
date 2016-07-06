@@ -134,7 +134,30 @@
 	});	
 
 
-	// TODO : peti korektanton
+	$("#petiKorektanton_button").click(function() {
+		$("#petiKorektanton_button").addClass("disabled");
+		$.ajax({
+       		url : $cheminAbsolu+'ajax/petiKorektanton.php',
+       		type : 'GET',
+       		dataType : 'json',
+       		data : "lecionero_id="+$("#petiKorektanton_button").data('lecionero_id')+"&leciono="+$("#petiKorektanton_button").data('leciono')+"&kurso="+$("#petiKorektanton_button").data('kurso'),
+       		success : function(reponse, statut){ 
+       			if (reponse.mesagxo=="compteNonActif") {
+       				alert("Votre compte n'a pas été activé, vous ne pouvez pas demander un correcteur. Vérifier dans vos e-mails et cliquez sur le lien d'activation");
+       			} else if (reponse.mesagxo=="aucunExercice") {
+					alert("Vous devez d'abord répondre aux exercices avant de demander un correcteur");
+       			} else if (reponse.mesagxo=="ok") {
+       				window.location = $urlracine+reponse.url;
+       			} else {
+       				alert("mauvais message de retour, contactez les administrateurs")
+       			}
+       		},
+       		error : function() {
+       			alert("Erreur de connection, contactez les administrateurs");
+       		}
+    	});
+	});
+
 	// TODO : sendi Lecionon
 
   });

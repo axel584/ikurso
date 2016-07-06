@@ -11,10 +11,15 @@ include "pagxkapo.inc.php";
 	<div class="row">
 		<article class="col s12 m9 l6 offset-m1 offset-l1">
 			<h1>Données personnelles</h1>
-			
-			<div id="novaUzanto" class="card-panel blue lighten-5 center hide">
+<?php
+if (isset($_GET["aktivigo"])) { 
+?>
+			<div id="novaUzanto" class="card-panel blue lighten-5 center">
 			<p>Votre compte est maintenant activé. Vous pouvez compléter vos informations personnelles.</p>
 		</div>
+<?php
+}
+?>
 			<section id="enhavo">
 				<div class="row">
 				<span class="col s4 label">Nom :</span>

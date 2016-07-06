@@ -1,26 +1,11 @@
 <?php
 $titolo="1 (unu)";
+$leciono = 1;
 $section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
 ?>
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
-		<section id="leciono-kapo">
-			<h1>Leçon 1</h1>
-			<ul id="progreso">
-				<li id="lec1" class="nuna"></li>
-				<li id="lec2" class="nova"></li>
-				<li id="lec3" class="nova"></li>
-				<li id="lec4" class="nova"></li>
-				<li id="lec5" class="nova"></li>
-				<li id="lec6" class="nova"></li>
-				<li id="lec7" class="nova"></li>
-				<li id="lec8" class="nova"></li>
-				<li id="lec9" class="nova"></li>
-				<li id="lec10" class="nova"></li>
-				<li id="lec11" class="nova"></li>
-			</ul>
-		</section>
 		
 		<section id="leciono-enhavo">
 			<?php 
@@ -28,7 +13,6 @@ include "dlekkapo.inc.php";
 			
 			if ($section=="1") {
 			?>
-			<section id="section1">
 
 				<p>Avant que vous ne commenciez cette première leçon, nous vous invitons à lire le <a href="intro.php?temo=intro">
 			préambule</a>, qui vous donnera toutes les informations utiles sur la manière de suivre ce cours.</p>
@@ -113,13 +97,12 @@ include "dlekkapo.inc.php";
 			par une voyelle voisine. Vous trouverez des exemples plus tard dans les
 			leçons à venir et nous reviendrons plus en détail sur la prononciation dans
 			la quatrième leçon.</p>
-			</section>
+
 	
 			<?php 
 			} // fin section 1
 			if ($section=="2") {
 			?>
-			<section id="section2">
 				<p>Les <b>noms communs</b> et les <b>noms propres</b> assimilés finissent
 				toujours par <b>-o</b>.</p>
 				<p>Les <b>verbes à l’infinitif</b> finissent toujours par <b>-i</b>.</p>
@@ -156,13 +139,13 @@ include "dlekkapo.inc.php";
 			<span class="ekz">a<u>mi</u>ko</span>, il vous suffit de prononcer d’abord le mot français
 			<span class="ekz">a<u>mi</u></span> puis de lui ajouter <span class="ekz">ko</span>. Entraînez-vous avec les mots de
 			vocabulaire ci-après.</p></div>
-			</section>
+
 
 			<?php 
 			} // fin section 2
 			if ($section=="3") {
 			?>
-			<section id="section3">
+
 				<h2>Vocabulaire</h2>
 			
 				<table class="voca">
@@ -202,13 +185,13 @@ include "dlekkapo.inc.php";
 				<td class="eo">sana </td><td class="fr">sain, en bonne santé</td>
 			</tr>
 			</table>
-			</section>
+
 
 			<?php 
 			} // fin section 3
 			if ($section=="4") {
 			?>
-			<section id="section4">
+
 				<p>Les <strong>pronoms personnels</strong> sont :</p>
 				<table class='retrait'>
 				<tr>
@@ -432,7 +415,6 @@ include "dlekkapo.inc.php";
 			} // fin section 4
 			if ($section=="5") {
 			?>
-			<section id="section5">
 				<p><em>Pour entendre ces phrases, cliquez sur le haut-parleur</em> :<br/>
 				<a href="../son/l01.wav"><img src="../pix/icon20.gif"></a></p>
 				<table class='retrait'>
@@ -482,7 +464,6 @@ include "dlekkapo.inc.php";
 			} // fin section 5
 			if ($section=="6") {
 			?>
-			<section id="section6">
 
 				<p>Pour bénéficier de notre service de correction, vous devrez compléter le bulletin
 d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez terminé les exercices.</p>
@@ -563,13 +544,13 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 					questionQCM("13","Comment dit-on 'mes fils' ?",array("mia filioj","miaj filoj","miaj filioj","mia filoj","(pas de réponse)"),$eraroj,$memorkurso);
 					?>
 				</div>
-			</section>
+
 			
 			<?php 
 			} // fin section 7
 			if ($section=="8") {
 			?>
-			<section id="section7">
+
 				<p>
 				Espérons que nous ne vous avons pas effrayé pour ce premier contact avec
 				l’espéranto. Vous n’avez certainement pas tout assimilé mais cela
@@ -607,7 +588,6 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 				protection des données personnelles (adresse électronique par exemple) est 
 				assurée correctement. 
 				</p>
-			</section>
 			
 			<?php 
 			} // fin section 7
@@ -621,8 +601,8 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
 			</div>
 			<div class="ligoj">
-				<?php getLecioneroAntauxa('CG',1,$section); ?>
-				<?php getLecioneroVenonta('CG',1,$section); ?>
+				<?php getLecioneroAntauxa('CG',$leciono,$section); ?>
+				<?php getLecioneroVenonta('CG',$leciono,$section); ?>
 			</div>
 		</section>
 	</article>
@@ -633,48 +613,9 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 
 			<?php 
 			// On affiche le sommaire de la lecon
-			getEnhavtabelo('CG',1); 
+			getEnhavtabelo('CG',$leciono); 
 			?>
 
-			<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->
-
-			<!--<li>
-				<div class="collapsible-header"><i class="material-icons">library_books</i>Vocabulaire de la leçon</div>
-				<div class="collapsible-body">
-					<table class="vortaro bordered striped responsive-table">
-						<tr><td>apud</td><td>à côté de</td></tr>
-						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-						<tr><td>ceter/a</td><td>restant, autre</td></tr>
-						<tr><td>en</td><td>en, dedans</td></tr>
-						<tr><td>ĝis</td><td>jusqu’à</td></tr>
-						<tr><td>halt/i</td><td>s’arrêter</td></tr>
-						<tr><td>apud</td><td>à côté de</td></tr>
-						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-						<tr><td>ceter/a</td><td>restant, autre</td></tr>
-						<tr><td>en</td><td>en, dedans</td></tr>
-						<tr><td>ĝis</td><td>jusqu’à</td></tr>
-						<tr><td>halt/i</td><td>s’arrêter</td></tr>
-						<tr><td>apud</td><td>à côté de</td></tr>
-						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-						<tr><td>ceter/a</td><td>restant, autre</td></tr>
-						<tr><td>en</td><td>en, dedans</td></tr>
-						<tr><td>ĝis</td><td>jusqu’à</td></tr>
-						<tr><td>halt/i</td><td>s’arrêter</td></tr>
-						<tr><td>apud</td><td>à côté de</td></tr>
-						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-						<tr><td>ceter/a</td><td>restant, autre</td></tr>
-						<tr><td>en</td><td>en, dedans</td></tr>
-						<tr><td>ĝis</td><td>jusqu’à</td></tr>
-						<tr><td>halt/i</td><td>s’arrêter</td></tr>
-						<tr><td>apud</td><td>à côté de</td></tr>
-						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-						<tr><td>ceter/a</td><td>restant, autre</td></tr>
-						<tr><td>en</td><td>en, dedans</td></tr>
-						<tr><td>ĝis</td><td>jusqu’à</td></tr>
-						<tr><td>halt/i</td><td>s’arrêter</td></tr>
-					</table>			
-				</div>
-			</li> -->
 		</ul>	
 				
 	</aside>

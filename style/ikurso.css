@@ -240,6 +240,12 @@ ul#enhavtabelo li.gramm::before {
 	content: "description";
 	color: #999;
 }
+ul#enhavtabelo li.vortaro::before {
+	font-family: 'Material Icons';
+	-webkit-font-feature-settings: 'liga';
+	content: "spellcheck";
+	color: #999;
+}
 ul#enhavtabelo li.exo::before {
 	font-family: 'Material Icons';
 	-webkit-font-feature-settings: 'liga';

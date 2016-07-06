@@ -211,8 +211,12 @@ function getTitoloLecionero($kurso,$leciono,$lecionero) {
 }
 
 function getEnhavtabelo($kurso,$leciono) {
-	global $bdd;
-	$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
+	global $bdd,$persono_id;
+	if ($persono_id=="") { // Pas connecté : on récupère le sommaire normal
+			$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
+	} else { // connecté, on récupère la liste des leçons effectuées
+		$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=".$persono_id." WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."'  order by ordo";
+	}
 	echo '<li>';
 	echo '<div class="collapsible-header active"><i class="material-icons">toc</i>Sommaire de la leçon</div>';
 	echo '<div class="collapsible-body">';
@@ -220,7 +224,24 @@ function getEnhavtabelo($kurso,$leciono) {
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	while ($row = $result->fetch()) {
 		// TODO : changer les classes farita/nuna/nova
-		echo '<li id="'.$leciono.'-'.$row['ordo'].'" class="farita"><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a></li>';
+		if ($row["persono_id"]==null) { // l'élève n'a pas fait cette section
+			$farita="";
+		} else { // l'élève a fait cette section
+			$farita=" farita";
+		}
+		if ($row["tipo"]=="TEKSTO") {
+			$tipoLecionero = "gramm";
+		} elseif ($row["tipo"]=="QCM") {
+			$tipoLecionero = "qcm";
+		} elseif ($row["tipo"]=="EKZERCARO") {
+			$tipoLecionero = "exo";
+		} elseif ($row["tipo"]=="VORTARO") {
+			$tipoLecionero = "vortaro";
+		}  else {
+			$tipoLecionero = "";
+		}
+
+		echo '<li id="'.$leciono.'-'.$row['ordo'].'" class="'.$farita.' '.$tipoLecionero.'"><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a></li>';
 	}
 	echo '</ul>';
 	echo '</div>';
@@ -287,7 +308,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 		$result = $bdd->query($query);
 		$leconEnCours = $result->fetch()["combien"];
 		if ($leconEnCours>0) {
-			echo "a un correcteur";
+			$classeDejaFait="disabled";
 		} else {
 			$classeDejaFait="";
 		}

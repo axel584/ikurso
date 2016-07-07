@@ -1,9 +1,19 @@
 <?php
 $titolo="3 (tri)";
+$leciono = 3;
+$section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
 ?>
-		<div class="klarigo">
-<h3 id="lec03.1">3.1. Ordre des mots</h3>
+<div class="row">
+	<article class="col s12 m10 l7 offset-m1 offset-l1">
+				
+<section id="leciono-enhavo">
+<?php 
+getTitoloLecionero('CG',$leciono,$section);
+
+
+if ($section=="1") {
+?>
 
 <p>
 Nous avons vu pas mal de choses dans la 2<sup>ème</sup> leçon. Voici un tableau qui
@@ -59,7 +69,10 @@ on peut modifier l’ordre des mots. Répondez aux questions après avoir bien
 fait attention aux terminaisons des mots :
 </p>
 	
-<h3>Exercices - troisième leçon, 1<sup>ère</sup> partie</h3>
+<?php 
+} // fin section 
+if ($section=="2") {
+?>
 
 <p>Considérez la phrase suivante et répondez en français aux questions :</p>
 <input type="hidden" name="013_cxap03.1" value="1. Considérez la phrase suivante et répondez en français aux questions.">
@@ -73,7 +86,10 @@ fait attention aux terminaisons des mots :
 ?>
 </div>
 
-<h3 id="lec03.2">3.2. Vocabulaire</h3>
+<?php 
+} // fin section 1
+if ($section=="3") {
+?>
 
 <p><table class="meze">
 <tr>
@@ -138,7 +154,10 @@ fait attention aux terminaisons des mots :
 <p>[4] <em>soifi</em> : bien prononcer le <em>o</em> et le <em>i</em> séparément (so-<u>i</u>-fi).</p>
 
 
-<h3 id="lec03.3">3.3. Proverbe</h3>
+<?php 
+} // fin section 1
+if ($section=="4") {
+?>
 
 <p>
 Expression d’une certaine &#171;sagesse populaire&#187; -- ce qui n’est pas synonyme
@@ -154,7 +173,10 @@ sonorités.
 <p><span class="ekz">Akvo kura -- akvo pura   </span>
 De l’eau courante (<i>qui court</i>) [c’est] de l’eau pure (<i>propre</i>)</p>
 
-<h3 id="lec03.4">3.4. Adverbes en <i>-e</i></h3>
+<?php 
+} // fin section
+if ($section=="5") {
+?>
 
 <p>
 Les <b>adverbes</b> jouent un peu le même r&ocirc;le que les adjectifs, mais au
@@ -206,7 +228,10 @@ Exemples :
 <tr><td class="ekz">Ni renkontos lin promene  </td><td>Nous le rencontrerons lors de la promenade.</td></tr>
 </table>
 
-<h3 id="lec03.5">3.5. Formation des syllabes</h3>
+<?php 
+} // fin section 1
+if ($section=="6") {
+?>
 
 <p>
 En espéranto, chaque voyelle (<em>a</em>, <em>e</em>, <em>i</em>, <em>o</em>,
@@ -220,7 +245,10 @@ Dans <em>soifi</em> il y a trois syllabes (<em>so-i-fi</em>), alors que le
 français <em>soif</em> ne contient qu’une syllabe.
 </p>
             
-<h3>Exercices - troisième leçon, 2<sup>ème</sup> partie</h3>
+<?php 
+} // fin section
+if ($section=="7") {
+?>
 
 <p>Traduisez en espéranto :</p>
 <input type="hidden" name="013_cxap03.2" value="2. Traduisez en espéranto.">
@@ -238,7 +266,10 @@ français <em>soif</em> ne contient qu’une syllabe.
 ?>
 </div>
 
-<h3 id="lec03.6">3.6. Les nombres cardinaux</h3>
+<?php 
+} // fin section
+if ($section=="8") {
+?>
 
 <p>
 Les <b>nombres cardinaux</b> n’ont pas de terminaison spéciale et ils restent
@@ -315,7 +346,10 @@ prennent la marque du pluriel <em>-j</em> et celle du complément d’objet
 	</tr>
 </table>
 
-<h3>Exercices - troisième leçon, 3<sup>ème</sup> partie</h3>
+<?php 
+} // fin section
+if ($section=="9") {
+?>
 
 <p>Traduisez en espéranto :</p>
 <input type="hidden" name="013_cxap03.3" value="3. Traduisez en espéranto.">
@@ -336,7 +370,10 @@ prennent la marque du pluriel <em>-j</em> et celle du complément d’objet
 ?>
 </div>
 
-<h3 id="lec03.7">3.7. Verbes intransitifs et transitifs</h3>
+<?php 
+} // fin section
+if ($section=="10") {
+?>
 <p>
 Nous avons vu de nombreux exemples de <b>verbes transitifs</b> :
 <em>vidi</em>, <em>trinki</em>, <em>skribi</em>...
@@ -360,7 +397,10 @@ employée</b> dans ce cas.
 	<tr><td class="ekz"> &#348;ia frato estas bela knabo.</td><td>&nbsp;</td><td>Son frère est (un) beau garçon.</td></tr>
 </table>
 
-<h3>Exercices - troisième leçon, 4<sup>ème</sup> partie</h3>
+<?php 
+} // fin section
+if ($section=="11") {
+?>
 
 <p>Traduisez en espéranto :</p>
 <?php atentigo();	?>
@@ -378,11 +418,45 @@ employée</b> dans ce cas.
 ?>
 </div>
 
-<h3 id="lec03.8">3.8. &Eacute;pilogue</h3>
+<?php 
+} // fin section
+if ($section=="12") {
+?>
 <p>
 Résumons-nous. Vous avez maintenant appris à former toutes sortes de
 compléments grâce à la forme d’adverbe en <b>-e</b>. De plus, vous savez
 compter de 1 à 999 999 et pour cela il ne vous a fallu apprendre que...
 12 mots nouveaux. Qui dit mieux&#160;?
 </p>
+<?php 
+} // fin section 
+?>	
+		</section>
+
+		<section id="leciono-fino">
+			<div id="marko" class="right-align">
+				<?php getBoutonFinSection('CG',$leciono,$section,$persono_id); ?>
+				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
+			</div>
+			<div class="ligoj">
+				<?php getLecioneroAntauxa('CG',$leciono,$section); ?>
+				<?php getLecioneroVenonta('CG',$leciono,$section); ?>
+			</div>
+		</section>
+
+	</article>
+			
+	<aside class="col s12 m10 l3 offset-m1 push-l1">
+								
+		<ul class="collapsible" data-collapsible="expandable">
+
+			<?php 
+			// On affiche le sommaire de la lecon
+			getEnhavtabelo('CG',$leciono); 
+			?>
+
+		</ul>	
+				
+	</aside>
+</div>
 <?php include "dlekpiedo.inc.php"; ?>

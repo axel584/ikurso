@@ -1,9 +1,19 @@
 <?php
 $titolo="5 (kvin)";
+$leciono = 5;
+$section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
 ?>
-		<div class="klarigo">
-<h3 id="lec05.1">5.1. éléments pour converser</h3>
+<div class="row">
+	<article class="col s12 m10 l7 offset-m1 offset-l1">
+				
+<section id="leciono-enhavo">
+<?php 
+getTitoloLecionero('CG',$leciono,$section);
+
+
+if ($section=="1") {
+?>
 
 <p>Retenez les expressions suivantes, elles vous serviront.</p>
 <table class="retrait">
@@ -69,7 +79,10 @@ espéranto, en vous aidant éventuellement d’un résumé en français.
         se reporter au <a href="vocabula.php">lexique général du cours</A>
 </p>
 
-<h3 id="lec05.3">5.2. Les corrélatifs</h3>
+<?php 
+} // fin section 
+if ($section=="2") {
+?>
 
 <p>
 Les corrélatifs forment un tableau très utile de petits mots reliés
@@ -262,7 +275,10 @@ parties qui le composent comme indiqué dans le schéma suivant.
 </ol>	 
 </p>
 
-<h3 id="lec05.3">5.3. Un peu de pratique</h3>
+<?php 
+} // fin section 
+if ($section=="3") {
+?>
 <p>
 Après toute cette théorie, un peu de pratique ne vous fera pas de mal.
 Regardez les mots de la liste qui suit. Décomposez chaque corrélatif,
@@ -295,7 +311,10 @@ et comparez-le avec celui qui est donné ici.
 </p>
 </div>
 
-<h3 id="lec05.4">5.4. La flexion des corrélatifs</h3>
+<?php 
+} // fin section 
+if ($section=="4") {
+?>
 
 <p>
 Les corrélatifs terminés par "-A" et "-U" prennent la forme de l’accusatif
@@ -312,7 +331,10 @@ pluriel. Tous les autres sont invariables.
 </table>
 
 <p>
-<h3 id="lec05.5">5.5. Proverbe</h3>
+<?php 
+} // fin section 
+if ($section=="5") {
+?>
 
 <p>
 <a href="../son/pv5.wav"><img src="../pix/icon20.gif"></a>
@@ -322,7 +344,10 @@ pluriel. Tous les autres sont invariables.
 </table>
 </p>
 
-<h3>Exercices - cinquième leçon</h3>
+<?php 
+} // fin section 
+if ($section=="6") {
+?>
 
 <p>Transformez chaque phrase en interrogation en remplaçant le texte
 entre accolades par un corrélatif en KI-.</p>
@@ -376,7 +401,10 @@ Li promenas kun {belaj} knabinoj ->  Kun kiaj knabinoj li promenas&#160;?</p>
 ?>
 </div>
 
-<h3 id="lec05.6">5.6.&Eacute;pilogue</h3>
+<?php 
+} // fin section 
+if ($section=="7") {
+?>
 <p>
 Toutes nos excuses pour cette leçon qui, nous le savons, est plut&ocirc;t
 indigeste. Nous avons préféré vous présenter la totalité du sujet
@@ -385,4 +413,35 @@ cohérence d’ensemble, mais nous savons qu’il vous faudra de la
 pratique pour assimiler tout ça. On aura donc l’occasion d’y revenir
 souvent.
 </p>
+<?php 
+} // fin section 
+?>	
+		</section>
+
+		<section id="leciono-fino">
+			<div id="marko" class="right-align">
+				<?php getBoutonFinSection('CG',$leciono,$section,$persono_id); ?>
+				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
+			</div>
+			<div class="ligoj">
+				<?php getLecioneroAntauxa('CG',$leciono,$section); ?>
+				<?php getLecioneroVenonta('CG',$leciono,$section); ?>
+			</div>
+		</section>
+
+	</article>
+			
+	<aside class="col s12 m10 l3 offset-m1 push-l1">
+								
+		<ul class="collapsible" data-collapsible="expandable">
+
+			<?php 
+			// On affiche le sommaire de la lecon
+			getEnhavtabelo('CG',$leciono); 
+			?>
+
+		</ul>	
+				
+	</aside>
+</div>
 <?php include "dlekpiedo.inc.php"; ?>

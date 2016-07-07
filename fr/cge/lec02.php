@@ -301,30 +301,10 @@ if ($section=="9") {
 				ekzerco("U", 1);
 			?>
 			</div>
-
+		
 <?php 
 } // fin section
 if ($section=="10") {
-?>
-			<p>
-			Résumons-nous. Vous avez maintenant appris &agrave; former le féminin de tout nom
-			d’être vivant et le contraire de tout mot (nom, adjectif, verbe, etc.) pour
-			peu que ceux-ci aient un sens. Vous avez constaté que tous les verbes se
-			conjuguent comme le verbe <span class="ekz">esti</span> que vous connaissiez déj&agrave;, et vous
-			avez appris la structure <b>-a -o -as -an -on</b> qui vous permet
-			d’exprimer l’action d’un sujet sur quelque chose ou quelqu’un d’autre. Pas
-			mal, non&#160;?
-			</p>
-			<p>
-			Pour terminer en beauté, voici un exercice facultatif mais ultra-simple, 
-			sous forme de questionnaire &agrave; choix multiples. Contrairement &agrave; celui de 
-			la première leçon, il n’est pas éliminatoire et vous recevrez sa correction 
-			en même temps que le reste.
-			</p>
-			
-<?php 
-} // fin section
-if ($section=="11") {
 ?>			
 			
 			<input type="hidden" name="013_cxap02.4" value="4. QCM">
@@ -413,14 +393,24 @@ if ($section=="11") {
 				</p>
 		</div>
 
+		
 <?php 
 } // fin section
-if ($section=="12") {
-?>		
-<p>
-Bravo, la deuxième leçon est terminée, vous pouvez envoyer votre leçon.
-</p>
-
+if ($section=="11") {
+?>
+			<p>
+			Résumons-nous. Vous avez maintenant appris &agrave; former le féminin de tout nom
+			d’être vivant et le contraire de tout mot (nom, adjectif, verbe, etc.) pour
+			peu que ceux-ci aient un sens. Vous avez constaté que tous les verbes se
+			conjuguent comme le verbe <span class="ekz">esti</span> que vous connaissiez déj&agrave;, et vous
+			avez appris la structure <b>-a -o -as -an -on</b> qui vous permet
+			d’exprimer l’action d’un sujet sur quelque chose ou quelqu’un d’autre. Pas
+			mal, non&#160;?
+			</p>
+			<p>
+			Vous pouvez maintenant envoyer vos exercices à votre correcteur.
+			</p>
+		
 <?php 
 } // fin section 
 ?>	

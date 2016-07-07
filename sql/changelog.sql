@@ -77,8 +77,8 @@ INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, 
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'Exercices - deuxième leçon, 1<sup>ère</sup> partie', 'EKZERCARO', '7',0,0);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'Exercices - deuxième leçon, 2<sup>ème</sup> partie', 'EKZERCARO', '8',0,0);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'Exercices - deuxième leçon, 3<sup>ème</sup> partie', 'EKZERCARO', '9',0,0);
-INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'Épilogue', 'TEKSTO', '10',0,0);
-INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'QCM', 'QCM', '11',0,1);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'QCM', 'QCM', '10',0,0);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'Épilogue', 'TEKSTO', '11',0,1);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '61', 'Ordre des mots', 'TEKSTO', '1',1,0);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '61', 'Exercices - troisième leçon, 1<sup>ère</sup> partie', 'EKZERCARO', '2',0,0);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '61', 'Vocabulaire', 'VORTARO', '3',0,0);

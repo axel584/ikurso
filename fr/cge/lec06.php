@@ -556,20 +556,19 @@ if ($section=="12") {
 				</p>
 			</section>
 	
-			<?php 
-			} // fin section 18
-			?>	
+<?php 
+} // fin section 
+?>	
 		</section>
 
-		<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le précédent et le suivant -->
 		<section id="leciono-fino">
 			<div id="marko" class="right-align">
-				<?php getBoutonFinSection('CG',6,$section,$persono_id); ?>
+				<?php getBoutonFinSection('CG',$leciono,$section,$persono_id); ?>
 				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
 			</div>
 			<div class="ligoj">
-				<?php getLecioneroAntauxa('CG',6,$section); ?>
-				<?php getLecioneroVenonta('CG',6,$section); ?>
+				<?php getLecioneroAntauxa('CG',$leciono,$section); ?>
+				<?php getLecioneroVenonta('CG',$leciono,$section); ?>
 			</div>
 		</section>
 
@@ -581,48 +580,9 @@ if ($section=="12") {
 
 			<?php 
 			// On affiche le sommaire de la lecon
-			getEnhavtabelo('CG',6); 
+			getEnhavtabelo('CG',$leciono); 
 			?>
 
-			<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->
-
-			<!--<li>
-				<div class="collapsible-header"><i class="material-icons">library_books</i>Vocabulaire de la leçon</div>
-				<div class="collapsible-body">
-					<table class="vortaro bordered striped responsive-table">
-						<tr><td>apud</td><td>à côté de</td></tr>
-						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-						<tr><td>ceter/a</td><td>restant, autre</td></tr>
-						<tr><td>en</td><td>en, dedans</td></tr>
-						<tr><td>ĝis</td><td>jusqu’à</td></tr>
-						<tr><td>halt/i</td><td>s’arrêter</td></tr>
-						<tr><td>apud</td><td>à côté de</td></tr>
-						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-						<tr><td>ceter/a</td><td>restant, autre</td></tr>
-						<tr><td>en</td><td>en, dedans</td></tr>
-						<tr><td>ĝis</td><td>jusqu’à</td></tr>
-						<tr><td>halt/i</td><td>s’arrêter</td></tr>
-						<tr><td>apud</td><td>à côté de</td></tr>
-						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-						<tr><td>ceter/a</td><td>restant, autre</td></tr>
-						<tr><td>en</td><td>en, dedans</td></tr>
-						<tr><td>ĝis</td><td>jusqu’à</td></tr>
-						<tr><td>halt/i</td><td>s’arrêter</td></tr>
-						<tr><td>apud</td><td>à côté de</td></tr>
-						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-						<tr><td>ceter/a</td><td>restant, autre</td></tr>
-						<tr><td>en</td><td>en, dedans</td></tr>
-						<tr><td>ĝis</td><td>jusqu’à</td></tr>
-						<tr><td>halt/i</td><td>s’arrêter</td></tr>
-						<tr><td>apud</td><td>à côté de</td></tr>
-						<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-						<tr><td>ceter/a</td><td>restant, autre</td></tr>
-						<tr><td>en</td><td>en, dedans</td></tr>
-						<tr><td>ĝis</td><td>jusqu’à</td></tr>
-						<tr><td>halt/i</td><td>s’arrêter</td></tr>
-					</table>			
-				</div>
-			</li> -->
 		</ul>	
 				
 	</aside>

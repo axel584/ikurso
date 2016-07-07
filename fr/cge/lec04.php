@@ -1,10 +1,19 @@
 <?php
 $titolo="4 (kvar)";
+$leciono = 4;
+$section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
 ?>
+<div class="row">
+	<article class="col s12 m10 l7 offset-m1 offset-l1">
+				
+<section id="leciono-enhavo">
+<?php 
+getTitoloLecionero('CG',$leciono,$section);
 
-<div class="klarigo">
-<h3 id="lec04.1">4.1. La forme interrogative</h3>
+
+if ($section=="1") {
+?>
 <p>
 Jetons un coup d’œil sur les <b>questions et réponses</b> correspondant à une
 affirmation donnée.
@@ -44,7 +53,11 @@ Fonctionnent de cette façon toutes les questions auxquelles on doit
 répondre par <i>oui</i> ou par <i>non</i> (questions &#171;fermées&#187;).
 </p>
 
-<h3>Exercices - quatrième leçon, 1<sup>ère</sup> partie</h3>	
+<?php 
+} // fin section
+if ($section=="2") {
+?>
+
 <p>Transformez les phrases suivantes en questions:</p>
 <input type="hidden" name="013_cxap04.1" value="1. Transformez les phrases suivantes en questions.">
 <?php atentigo();	?>
@@ -59,7 +72,10 @@ répondre par <i>oui</i> ou par <i>non</i> (questions &#171;fermées&#187;).
 ?>
 </div>
 
-<h3 id="lec04.2">4.2. L’alphabet (rappel)</h3>
+<?php 
+} // fin section
+if ($section=="3") {
+?>
 
 <p>L’<b>alphabet</b> espéranto comporte 28 lettres :</p>
 <p class="meze"><img alt="Alphabet" src="alfabeto.gif"></p>
@@ -93,7 +109,10 @@ forme en leur ajoutant la terminaison <b>-o</b>.
 	<i>lando</i>, et on prononce <i>Pol-<u>lan</u>-do</i>.</p>
 </div>
 
-<h3 id="lec04.3">4.3. Les voyelles</h3>
+<?php 
+} // fin section
+if ($section=="4") {
+?>
 
 <p>
 Les syllabes accentuées sont soulignées et, comme
@@ -127,7 +146,10 @@ moins ouvertes du moment
 qu’il n’y a pas de confusion possible avec les voyelles proches.</p>
 </div>
 
-<h3 id="lec04.4">4.4. Les consonnes</h3>
+<?php 
+} // fin section
+if ($section=="5") {
+?>
 <p>Elles se prononcent comme en français, sauf :</p>
 <p>
 <table>
@@ -189,7 +211,10 @@ Concernant <i>&#365;</i>, voir plus loin. On rencontre cette consonne dans les
 </ol>
 </p>
 
-<h3 id="lec04.5">4.5. Les diphtongues</h3>
+<?php 
+} // fin section
+if ($section=="6") {
+?>
 <p>
 Les combinaisons suivantes de voyelles (<em>a</em>, <em>e</em>, <em>o</em>,
 <em>u</em>) et de semi-voyelle <em>j</em> ou <em>&#365;</em> forment un seul son
@@ -229,7 +254,10 @@ deux syllabes :</p>
 <a href="../son/s3-07.au"><img src="../pix/icon20.gif"></a> balai (ba-<u>la</u>-i), balau (ba-<u>la</u>-u), neniigi (ne-ni-<u>i</u>-gi), neniu (ne-<u>ni</u>-u) etc.
 </p></div>
 
-<h3 id="lec04.6">4.6. Vocabulaire</h3>
+<?php 
+} // fin section
+if ($section=="7") {
+?>
 <p>
 Voici une liste de mots (avec traduction et accent tonique indiqué) qui 
 représentent les différents sons de l’espéranto. étudiez-les et prononcez-les
@@ -356,7 +384,10 @@ soigneusement. Votre prononciation s’améliorera petit à petit.
 	<p>(4) <b>kaj</b> = et </p>
 </div>
 
-<h3 id="lec04.7">4.7. Récit</h3>
+<?php 
+} // fin section
+if ($section=="8") {
+?>
 <p>
 Lisez les phrases suivantes qui forment de petits récits. Les
 comprenez-vous&#160;? Si oui, traduisez-les en français. Vous noterez que
@@ -369,7 +400,10 @@ communs, mais il peuvent aussi parfois garder leur forme et leur
 orthographe d’origine (par exemple <i>Shakespeare</i> ou <b>&#349;ekspiro</b>).
 Par ailleurs, les prénoms de femme en <b>-a</b> sont assez fréquents.</p>
 
-<h3>Pratique du vocabulaire - quatrième leçon, 2<sup>ème</sup> partie</h3>
+<?php 
+} // fin section
+if ($section=="9") {
+?>
 
 <p>Traduisez en français :</p>
 <input type="hidden" name="013_cxap04.2" value="2. Traduisez en français.">
@@ -387,7 +421,10 @@ Par ailleurs, les prénoms de femme en <b>-a</b> sont assez fréquents.</p>
 ?>
 </div>
 	
-	<h3>Exercices - quatrième leçon, 3<sup>ème</sup> partie</h3>
+<?php 
+} // fin section
+if ($section=="10") {
+?>
 
 <p>Traduisez les questions en espéranto (sans y répondre):</p>
 <input type="hidden" name="013_cxap04.3" value="3. Traduisez les questions en espéranto (sans y répondre).">
@@ -429,7 +466,10 @@ Ex.:  &#348;i ne man&#285;as &#265;okoladon, sed panon.</p>
 ?>
 </div>
 
-<h3 id="lec04.8">4.8. &Eacute;pilogue</h3>
+<?php 
+} // fin section
+if ($section=="11") {
+?>
 <p>
 La prononciation ne devrait plus avoir le moindre secret pour vous
 désormais. Toutefois n’hésitez pas à interroger votre correcteur s’il
@@ -437,4 +477,35 @@ vous reste un doute. Par ailleurs, vous voyez que malgré un vocabulaire
 encore limité vous êtes déjà capable de faire de vraies phrases et de
 comprendre un petit récit. 
 </p>
+<?php 
+} // fin section 
+?>	
+		</section>
+
+		<section id="leciono-fino">
+			<div id="marko" class="right-align">
+				<?php getBoutonFinSection('CG',$leciono,$section,$persono_id); ?>
+				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
+			</div>
+			<div class="ligoj">
+				<?php getLecioneroAntauxa('CG',$leciono,$section); ?>
+				<?php getLecioneroVenonta('CG',$leciono,$section); ?>
+			</div>
+		</section>
+
+	</article>
+			
+	<aside class="col s12 m10 l3 offset-m1 push-l1">
+								
+		<ul class="collapsible" data-collapsible="expandable">
+
+			<?php 
+			// On affiche le sommaire de la lecon
+			getEnhavtabelo('CG',$leciono); 
+			?>
+
+		</ul>	
+				
+	</aside>
+</div>
 <?php include "dlekpiedo.inc.php"; ?>

@@ -1,10 +1,19 @@
 <?php
 $titolo="2 (du)";
+$leciono = 2;
+$section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
 
+<div class="row">
+	<article class="col s12 m10 l7 offset-m1 offset-l1">
+				
+<section id="leciono-enhavo">
+<?php 
+getTitoloLecionero('CG',$leciono,$section);
+
+
+if ($section=="1") {
 ?>
-		<div class="klarigo">
-<h3 id="lec02.1">2.1. Le féminin des noms : suffixe <i>-in</i></h3>
 
 <p>Les <b>noms</b> désignant des êtres vivants sexués peuvent prendre la
 marque du <b>féminin</b>. Pour ce faire on remplace la terminaison
@@ -40,7 +49,10 @@ s’accordent en nombre avec les noms auxquels ils se rapportent. Par contre, il
 <td class='ekz'> la grandaj virinoj :</td><td class='fr'>les grandes femmes</td></tr>
 </table>
 
-<h3 id="lec02.2">2.2. Terminaison <i>-n</i> du complément d’objet direct</h3>
+<?php 
+} // fin section 3
+if ($section=="2") {
+?>
 
 <p>Il existe une autre terminaison, bien pratique, qui nous permet de
 reconna&icirc;tre le complément d’objet direct dans une phrase. Il s’agit de
@@ -76,7 +88,10 @@ elle-même vient toujours en dernier. Prononcez <span class='ekz'>varmajn</span>
 <em><u>var</u>m-ail-ne</em> (e muet) et <span class='ekz'>kafojn</span> comme 
 <em><u>ka</u>f-o&iuml;-ne</em> (e muet).</p></div>
 
-<h3 id="lec02.3">2.3. Autres compléments</h3>
+<?php 
+} // fin section
+if ($section=="3") {
+?>
 
 <p>En général les compléments autres que les compléments d’objet direct
 (par exemple, les compléments circonstanciels) sont introduits par des
@@ -92,7 +107,10 @@ l’attribut sont &#171;équivalents&#187;.</p>
 <i>"Elle est belle."</i>   équivaut &agrave;   <i>"Elle = belle."</i>
 </p>
 
-<h3 id="lec02.4">2.4. Préfixe <i>mal-</i></h3>
+<?php 
+} // fin section
+if ($section=="4") {
+?>
 
 <p>Le suffixe <b>-in</b> vous a déj&agrave; permis d’augmenter votre vocabulaire en
 doublant le nombre d’êtres vivants sexués que vous êtes capable de nommer.
@@ -124,7 +142,10 @@ dire aussi <em>détester</em>, <em>laid</em>, <em>droite</em>, <em>faux</em>, et
 </tr>
 </table>
 
-<h3 id="lec02.5">2.5. Forme négative</h3>
+<?php 
+} // fin section
+if ($section=="5") {
+?>
 
 <p>Pour mettre une phrase &agrave; la <b>forme négative</b> il suffit d’ajouter le mot
 <b>ne</b> avant le verbe.  </p>
@@ -142,7 +163,10 @@ dire aussi <em>détester</em>, <em>laid</em>, <em>droite</em>, <em>faux</em>, et
 Prononcez bien <span class='ekz'>ne</span> entre <em>né</em> et <em>nè</em>.
 </p></div>
 
-<h3 id="lec02.6">2.6. Vocabulaire</h3>
+<?php 
+} // fin section
+if ($section=="6") {
+?>
 
 <p>Maintenant un peu de <b>vocabulaire</b> :</p>
 <table class='voca'>
@@ -201,7 +225,10 @@ leçon.</p></div>
 <b>-is</b> au passé et <b>-os</b> au futur. Ces trois temps simples nous
 suffiront pour le moment.</p>
 
-			<h3>Exercices - deuxième leçon, 1<sup>ère</sup> partie</h3>
+<?php 
+} // fin section
+if ($section=="7") {
+?>
 			
 			<p>Traduisez en espéranto :</p>
 			<input type="hidden" name="013_cxap02.1" value="1. Traduisez en espéranto :">
@@ -223,7 +250,10 @@ suffiront pour le moment.</p>
 			?>
 			</div>
 
-			<h3>Exercices - deuxième leçon, 2<sup>ème</sup> partie</h3>
+<?php 
+} // fin section
+if ($section=="8") {
+?>
 			
 			<p>Remplacez la portion de phrase entre {} par le pronom personnel
 			approprié : li, &#349;i, &#285;i ou ili</p>
@@ -248,7 +278,10 @@ suffiront pour le moment.</p>
 			</div>
 
 
-			<h3>Exercices - deuxième leçon, 3<sup>ème</sup> partie</h3>
+<?php 
+} // fin section
+if ($section=="9") {
+?>
 			<p>
 			Formez des phrases ayant un sens en utilisant les mots donnés.<br>
 			Attention : vous pouvez être amené &agrave; conjuguer les verbes et &agrave; mettre
@@ -269,7 +302,10 @@ suffiront pour le moment.</p>
 			?>
 			</div>
 
-			<h3 id="lec02.7">2.7. épilogue</h3>
+<?php 
+} // fin section
+if ($section=="10") {
+?>
 			<p>
 			Résumons-nous. Vous avez maintenant appris &agrave; former le féminin de tout nom
 			d’être vivant et le contraire de tout mot (nom, adjectif, verbe, etc.) pour
@@ -285,6 +321,12 @@ suffiront pour le moment.</p>
 			la première leçon, il n’est pas éliminatoire et vous recevrez sa correction 
 			en même temps que le reste.
 			</p>
+			
+<?php 
+} // fin section
+if ($section=="11") {
+?>			
+			
 			<input type="hidden" name="013_cxap02.4" value="4. QCM">
 			<div class="tasko" id="qcm">
 				<p>
@@ -370,4 +412,44 @@ suffiront pour le moment.</p>
 					<input type="radio" name="900 09" value="3" <?php if($memorkurso["900_09"]=="3"){echo "checked";}?>> attribut du sujet<br/>
 				</p>
 		</div>
+
+<?php 
+} // fin section
+if ($section=="12") {
+?>		
+<p>
+Bravo, la deuxième leçon est terminée, vous pouvez envoyer votre leçon.
+</p>
+
+<?php 
+} // fin section 
+?>	
+		</section>
+
+		<section id="leciono-fino">
+			<div id="marko" class="right-align">
+				<?php getBoutonFinSection('CG',$leciono,$section,$persono_id); ?>
+				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
+			</div>
+			<div class="ligoj">
+				<?php getLecioneroAntauxa('CG',$leciono,$section); ?>
+				<?php getLecioneroVenonta('CG',$leciono,$section); ?>
+			</div>
+		</section>
+
+	</article>
+			
+	<aside class="col s12 m10 l3 offset-m1 push-l1">
+								
+		<ul class="collapsible" data-collapsible="expandable">
+
+			<?php 
+			// On affiche le sommaire de la lecon
+			getEnhavtabelo('CG',$leciono); 
+			?>
+
+		</ul>	
+				
+	</aside>
+</div>
 <?php include "dlekpiedo.inc.php"; ?>

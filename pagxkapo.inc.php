@@ -86,7 +86,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);}
 					<p class="chapo">Vous y êtes presque !</p>
 					<p>Pour activer votre compte, veuillez cliquer sur le lien se trouvant dans le message électronique que nous venons de vous envoyer.<br>
 				Si vous ne le trouvez pas, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
-				Si vous n’avez rien reçu, vous pouvez demander de réenvoyer le message.</p>
+				<!--Si vous n’avez rien reçu, vous pouvez demander de réenvoyer le message.--></p>
 
 				</div>
 			</div>
@@ -96,7 +96,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);}
 				</div>
 				<div id="footer-renvoyer-activation" class="hide">
 					<a id="fermer_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>
-					<a id="inscription2_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">Renvoyer le courriel d’activation</a>
+					<!--a id="inscription2_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">Renvoyer le courriel d’activation</a-->
 				</div>
 			</div>
 		</div>	

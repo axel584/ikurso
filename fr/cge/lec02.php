@@ -3,6 +3,7 @@ $titolo="2 (du)";
 $leciono = 2;
 $section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
+?>
 
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">

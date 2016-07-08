@@ -2,6 +2,7 @@
 
 
   	$( "#connection_button" ).click(function() {
+  		$("#connection_button").addClass("disabled");
   		$.ajax({
        		url : $cheminAbsolu+'ajax/eniri.php',
        		type : 'GET',
@@ -109,6 +110,7 @@
 	});
 
 	$("#kontroliQCM_button").click(function() {
+		$("#kontroliQCM_button").addClass("disabled");
 		$.ajax({
        		url : $cheminAbsolu+'ajax/kontroliQCM.php',
        		type : 'GET',
@@ -158,6 +160,31 @@
     	});
 	});
 
-	// TODO : sendi Lecionon
+	// TODO : sendi Lecionon sendiLecionon_button
+	$("#sendiLecionon_button").click(function() {
+		$("#sendiLecionon_button").addClass("disabled");
+		$.ajax({
+       		url : $cheminAbsolu+'ajax/sendiLecionon.php',
+       		type : 'GET',
+       		dataType : 'json',
+       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#sendiLecionon_button").data('lecionero_id')+"&leciono="+$("#sendiLecionon_button").data('leciono')+"&kurso="+$("#sendiLecionon_button").data('kurso'),
+       		success : function(reponse, statut){ 
+       			if (reponse.type=="korektanto") {
+       				alert("Vous n'avez pas de correcteur d'attribué, veuillez contacter les administrateurs.");
+       			} else if (reponse.type=="NeniuRespondo") {
+					alert("Vous devez d'abord répondre aux exercices avant d'envoyer votre leçon à votre correcteur'");
+       			} else if (reponse.mesagxo=="ok") {
+       				window.location = $urlracine+reponse.url;
+       			} else {
+       				alert("mauvais message de retour, contactez les administrateurs : "+reponse)
+       				console.log(reponse);
+       			}
+       		},
+       		error : function() {
+       			alert("Erreur de connection, contactez les administrateurs");
+       		}
+    	});
+	});
+
 
   });

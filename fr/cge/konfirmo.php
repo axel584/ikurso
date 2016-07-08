@@ -42,9 +42,6 @@ include "dlekkapo.inc.php";
 				<input type='hidden' name="leciono" value='<?=$leciono?>'/>
 				<div class="tasko enketo">
 					<p>Notez l'intérêt que vous avez eu à effectuer la leçon : de 1 (très ennuyeux) à 5 (très amusant) </p>
-					 <p class="range-field"> 
-      							<input type="range" name="intereso" id="intereso" min="0" max="5" /> 
-    					</p> 
 					<div class="rating">
 						<p><input name="intereso" type="range" value="3" min="1" max="5" step="1"></p>
 					</div>

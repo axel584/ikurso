@@ -321,7 +321,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 		} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
 			echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
 		} elseif($lasta==1) { // on envoit au correcteur si on a un correcteur, on en demande un dans le cas contraire
-			if ($leconEnCours>0) {
+			if ($dejaFait>0) {
 				echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
 			} else { // Pas de correcteur
 				echo '<a id="petiKorektanton_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="Mes exercices lui seront envoyés">Demander un correcteur</a>';

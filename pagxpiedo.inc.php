@@ -25,6 +25,9 @@
 	if ($erarkodo==8) {
 		echo "Materialize.toast('Votre session a expiré, veuillez vous identifier.', 4000);\n";
 	}
+	if ($erarkodo==14) {
+		echo "Materialize.toast('Merci pour votre retour.', 4000);\n";
+	}	
 	if ($erarkodo==18) {
 		echo "Materialize.toast('Clef d’activation incorrecte.', 4000);\n";
 	}

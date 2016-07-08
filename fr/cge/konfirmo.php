@@ -46,24 +46,11 @@ include "dlekkapo.inc.php";
       							<input type="range" name="intereso" id="intereso" min="0" max="5" /> 
     					</p> 
 					<div class="rating">
-						
-						<!--p>
-			  				<input name="intereso" id="intereso5" value="5" type="radio"><label for="intereso5">★</label>
-							<input name="intereso" id="intereso4" value="4" type="radio"><label for="intereso4">★</label>
-							<input name="intereso" id="intereso3" value="3" type="radio"><label for="intereso3">★</label>
-							<input name="intereso" id="intereso2" value="2" type="radio"><label for="intereso2">★</label>
-							<input name="intereso" id="intereso1" value="1" type="radio"><label for="intereso1">★</label>
-						</p-->
+						<p><input name="intereso" type="range" value="3" min="1" max="5" step="1"></p>
 					</div>
 					<p>Notez la difficulté que vous avez eue à effectuer la leçon : de 1 (très facile) à 5 (très compliqué) </p>
 					<div class="rating">
-						<p>
-		  				<input name="malfacileco" id="malfacileco5" value="5" type="radio"></a><label for="malfacileco5">★</label>
-						<input name="malfacileco" id="malfacileco4" value="4" type="radio"></a><label for="malfacileco4">★</label>
-						<input name="malfacileco" id="malfacileco3" value="3" type="radio"></a><label for="malfacileco3">★</label>
-						<input name="malfacileco" id="malfacileco2" value="2" type="radio"></a><label for="malfacileco2">★</label>
-						<input name="malfacileco" id="malfacileco1" value="1" type="radio"></a><label for="malfacileco1">★</label>
-						</p>
+						<p><input name="malfacileco" type="range" min="1" max="5" step="1"></p>
 					</div>
 					<div class="input-field col s12">
 						<textarea name="komento" class="materialize-textarea"></textarea>

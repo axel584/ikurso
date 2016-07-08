@@ -323,40 +323,28 @@ ul#progreso li.nuna {
 	margin-top: 2rem;
 }
 .rating {
-	font-size: 30px;
-	overflow:hidden;
-}
-.rating p {
 	text-align:left;
-	width:10em;
-	height:2em;
+	width:15em;
+	margin-bottom: 2em;
 }
-.rating input {
-	float: left;
-	opacity: 0;
+.rating input[type="range"] {
+    position: relative;
+    margin-left: 1em;
 }
-.rating a,
-.rating label {
-	float:right;
-	color: #aaa;
-	text-decoration: none;
-	-webkit-transition: color .4s;
-	-moz-transition: color .4s;
-	-o-transition: color .4s;
-	transition: color .4s;
+.rating input[type="range"]:after,
+.rating input[type="range"]:before {
+    position: absolute;
+    top: 0.5em;
+    color: #616161;
 }
-.rating label:hover ~ label,
-.rating input:focus ~ label,
-.rating label:hover {
-	color: orange;
-	cursor: pointer;
+.rating input[type="range"]:before {
+    left:0em;
+    content: attr(min);
 }
-
-.rating input[type="radio"]:checked+label, 
-.rating input[type="radio"]:checked+label ~ label { 
-	color: orange;
+.rating input[type="range"]:after {
+    right: 0em;
+    content: attr(max);
 }
-
 /**************************************/
 /*        contenu des pages           */
 /**************************************/

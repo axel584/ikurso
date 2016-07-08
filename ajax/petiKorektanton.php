@@ -35,11 +35,11 @@ if ($nbResponses==0) {
 // on récupère quelques infos sur le cours :
 if ($kurso=="CG") {
 	$prefixeKurso = "fr/cge/";
-	$nomCours = "Cours débutant ";
+	$nomCours = "lec";
 } 
 if ($kurso=="KE") {
 	$prefixeKurso = "fr/gerda/";
-	$nomCours = "Gerda Malaperis ";
+	$nomCours = "gerda cxap";
 } 
 
 
@@ -61,7 +61,7 @@ while ($row=$result->fetch()) {
 }
 $fonto.="</body></html>";
 
-$query = "insert into eraraj_lecionoj (persono_id,enirnomo,dato,subjekto,fonto) values ('".$persono_id."','".$persono["enirnomo"]."',now(),'".$nomCours." ".$leciono."','".addslashes($fonto)."')";
+$query = "insert into eraraj_lecionoj (persono_id,enirnomo,dato,subjekto,fonto) values ('".$persono_id."','".$persono["enirnomo"]."',now(),'".$nomCours.sprintf('%02d', $leciono)."','".addslashes($fonto)."')";
 $bdd->exec($query);
 
 // Renvoyer la page qui permet d'évaluer la leçon

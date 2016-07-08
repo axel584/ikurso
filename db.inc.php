@@ -431,7 +431,7 @@ function updateLastEniro($persono_id) {
 
 function getRegistritajnRespondojn($kurso,$leciono,$persono_id) {
     global $bdd;
-    if ($leciono=="") {
+    if ($leciono=="" or $persono_id=="") {
         return;
     }
     $query = "SELECT kodo,respondo FROM `respondoj` join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id where persono_id=".$persono_id." and kurso='".$kurso."' and numero=".$leciono;

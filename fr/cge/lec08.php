@@ -6,436 +6,328 @@ include "dlekkapo.inc.php";
 
 ?>
 
-<main class="row">
+<div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
-				
-<section id="leciono-enhavo">
-
-<?php 
-getTitoloLecionero('CG',8,$section);
-
-
-if ($section=="1") {
-?>
-
-<p>
-Maintenant, il ne nous reste que quelques terminaisons grammaticales &agrave;
-apprendre avant de pouvoir lire couramment en espéranto. Nous avons vu
-que les verbes se terminent en <b>-as</b> (présent), <b>-is</b> (passé), 
-<b>-os</b> (futur). Il y a aussi&#160;:
-</p>
-<a id="cg052"></a>
-<table class="retrait">
-<tr class="fr">
-	<td width="180">le <b>conditionnel</b>&#160;:</td>
-	<td class="eo" width="30"><b>-us</b></td>
-	<td class="ekz" width="300">Se mi est<b>us</b> ri&#265;a, mi voja&#285;<b>us</b> multe </td>
-</tr>
-	<tr class="fr"><td>&nbsp;</td>&nbsp;<td>&nbsp;</td><td>= Si j’étais riche, je voyagerais beaucoup</td></tr>
-	<tr class="fr"><td>&nbsp;</td></tr>
-	<tr class="fr"><td>et</td></tr>
-	<tr class="fr"><td>&nbsp;</td></tr>
-	<tr class="fr"><td>l’<b>impératif-subjonctif</b>&#160;:</td><td class="eo"><b>-u</b></td><td class="ekz">Ferm<b>u</b> la pordon kaj sidi&#285;<b>u</b>&#160;!</td></tr>
-	<tr class="fr"><td>&nbsp;</td><td>&nbsp;</td><td>= Ferme la porte et assieds-toi&#160;!</td></tr>
-	<tr class="fr"><td>&nbsp;</td><td>&nbsp;</td><td class="ekz">Li ferm<b>u</b> la pordon kaj sidi&#285;<b>u</b>&#160;!</td></tr>
-	<tr class="fr"><td>&nbsp;</td><td>&nbsp;</td><td>= Qu’il ferme la porte et qu’il s’asseye&#160;!</td></tr>
-	<tr class="fr"><td>&nbsp;</td><td>&nbsp;</td><td class="ekz">Mi volas, ke vi ven<b>u</b></td></tr>
-	<tr class="fr"><td>&nbsp;</td><td>&nbsp;</td><td>= Je veux que tu viennes</td></tr>
-</table>
-
-<div class="rim"><p><b>Remarque</b> : 
-Remarquez que, contrairement au fran&ccedil;ais :</p>
-<ol>
-	<li><p>Le conditionnel s’applique aux deux propositions 
-	de la phrase et pas seulement &agrave; la dernière.</p></li>
-	<li><p>Le conditionnel ne s’utilise pas pour montrer le 
-	futur dans le passé</p>
-	<p>je crois qu’il viendra : mi kredas, ke li venos</p>
-	<p>je croyais qu’il viendrait :  mi kredis, ke li ven<b>os</b></p>
-	</li>
-</ol>
-</p></div>
-<hr>
-
-<a id="cg053"></a><p>
-Enfin, il reste les <b>participes</b> (mots qui s’emploient comme verbes,
-adjectifs, adverbes ou noms)&#160;:
-</p>
-
-<table class="retrait">
-<caption><b>Participes de la voix active</b></caption>
-<tr class="fr">
-	<td width="150">Présent&#160;:</td>
-	<td width="50"><b>-ant</b></td>
-	<td width="200" class="ekz">Mi estas leganta</td>
-</tr>
-<tr><td colspan="2"></td><td>= Je suis lisant (en train de lire)</td></tr>
-<tr><td>Passé&#160;:</td><td><b>-int</b></td><td class="ekz">Mi estas leginta</td></tr>
-<tr><td colspan="2"></td><td>= Je suis ayant lu (j’ai lu, j’ai fini de lire)</td></tr>
-<tr><td>Futur&#160;:</td><td><b>-ont</b></td><td class="ekz">Mi estas legonta</td></tr>
-<tr><td colspan="2"></td><td>= Je suis devant lire (sur le point de lire)</td></tr>
-</table>
-<p>&nbsp;</p>
-<table class="retrait">
-<caption><b>Participes de la voix passive</b></caption>
-<tr>
-	<td width="150">Présent&#160;:</td>
-	<td width="50"><b>-at</b></td>
-	<td width="200" class="ekz">La libro estas legata</td></tr>
-<tr><td colspan="2"></td><td>= Le livre est lu (en train d’être lu)</td></tr>
-<tr><td>Passé&#160;:</td><td><b>-it</b></td><td class="ekz">La libro estas legita</td></tr>
-<tr><td colspan="2"></td><td>= Le livre est lu (ayant été lu)</td></tr>
-<tr><td>Futur&#160;:</td><td><b>-ot</b></td><td class="ekz">La libro estas legota</td></tr>
-<tr><td colspan="2"></td><td>= Le livre est devant être lu (&agrave; lire)</td></tr>
-</table>
-
-<p>En résumé :</p>
-<table class="retrait">
-	<tr class="ekz"><td width="80">leganta</td><td>=</td><td width="100">kiu legas</td><td width="150" class="fr">"qui lit", "lisant"</td></tr>
-	<tr class="ekz"><td>leginta</td><td>=</td><td>kiu legis</td><td class="fr">"qui a lu", "qui lisait", "ayant lu"</td></tr>
-	<tr class="ekz"><td>legonta</td><td>=</td><td>kiu legos</td><td class="fr">"qui lira"</td></tr>
-	<tr class="ekz"><td></td><td> </td></tr>
-	<tr class="ekz"><td>legata</td><td>=</td><td>kiun oni legas</td><td class="fr">"qu’on lit"</td></tr>
-	<tr class="ekz"><td>legita</td><td>=</td><td>kiun oni legis</td><td class="fr">"qu’on a lu", "lu"</td></tr>
-	<tr class="ekz"><td>legota</td><td>=</td><td>kiun oni legos</td><td class="fr">"qu’on lira"</td></tr>
-</table>
-
-<div class="rim"><p><b>Remarque</b> : 
-<ol>
-	<li><p>Le français dit "la porte est fermée" sans distinguer si</p>
-	<p>on est en train de fermer la porte (la pordo estas ferm<b>at</b>a)</p>
-	<p>la porte est en position fermée (la pordo estas ferm<b>it</b>a)</p></li>
-	<li><p>En combinant le verbe "esti" et les 6 formes de participes, 
-	on obtient un grand nombre de formes composées. Sachez toutefois que
-	l’espéranto préfère les formes simples et n’utilise les formes
-	composées que lorsque ces dernières apportent une précision
-	indispensable.</p></li>
-</ol>
-</p></div>
-<hr>
-<p>
-Les participes peuvent prendre la forme des adjectifs (terminaison en
-<b>-a</b>), des adverbes (<b>-e</b>), ou des noms (<b>-o</b>). 
-Leur utilisation permet beaucoup de précision, de souplesse et de concision. 
-Bien que nous ne puissions pas vous indiquer ici toute la gamme des 
-applications, nous vous invitons &agrave; saisir le sens des participes dans 
-les exemples suivants&#160;:
-</p>
-<table class="retrait">
-	<tr><td colspan="2" class="ekz">La leg<b>ant</b>o havas bonan vo&#265;on, sed la anta&#365;a leg<b>int</b>o havis pli bonan</td></tr>
-	<tr><td width="50">&nbsp;</td><td class="fr">= Le lecteur a une bonne voix, mais le lecteur précédent (en) avait une meilleure</td></tr>
-	<tr><td>&nbsp;</td></tr>
-
-	<tr><td colspan="2" class="ekz">Mi opinias tamen, ke la leg<b>ont</b>o havos la plej bonan vo&#265;on el &#265;iuj</td></tr>
-
-	<tr><td></td><td>= Je suis d’avis, toutefois, que le lecteur &agrave; venir aura la meilleure voix de tous</td></tr>
-	<tr><td>&nbsp;</td></tr>
-	 	
-	<tr><td colspan="2"  class="ekz">Leg<b>ant</b>e ni lernas</td></tr>
-	<tr><td>&nbsp;</td><td class="fr">= Nous apprenons en lisant</td></tr>
-	<tr><td>&nbsp;</td></tr>
-		 
-	<tr><td colspan="2" class="ekz">Man&#285;<b>ont</b>e la pomon, li ekvidis la vermon</td></tr>
-	
-	<tr><td>&nbsp;</td><td class="fr">= Sur le point de manger la pomme, il aperçut le ver</td></tr>
-	<tr><td>&nbsp;</td></tr>
-		 
-	<tr><td colspan="2" class="ekz">La konstru<b>at</b>a domo</td></tr>
-	
-	<tr><td>&nbsp;</td><td class="fr">= La maison en train d’être construite</td></tr>
-	<tr><td>&nbsp;</td></tr>
-	
-	<tr><td colspan="2" class="ekz">La skrib<b>ot</b>a letero</td></tr>
-	
-	<tr><td>&nbsp;</td><td class="fr">= La lettre &agrave; écrire, c-&agrave;-d. devant être écrite</td></tr>
-	<tr><td>&nbsp;</td></tr>
-		 	
-	<tr><td colspan="2" class="ekz">La ferm<b>it</b>a pordo</td></tr>
-
-	<tr><td>&nbsp;</td><td class="fr">= La porte fermée, c-&agrave;-d. qui a été fermée</td></tr>
-	<tr><td>&nbsp;</td></tr>
-	</table>
-
-<?php 
-} // fin section 1
-if ($section=="2") {
-?>
-
-<p>
-<a href="../son/pv8-1.wav"><img src="../pix/icon20.gif"></a>
-- Vivanton ni malhonoras, mortinton ni adoras.
-</p>
-<p>
-<a href="../son/pv8-2.wav"><img src="../pix/icon20.gif"></a>
-- Dancu diabloj, sed ne en mia arbaro.
-</p>
-
-<table class="voca">
-<tr>
-	<td class="eo" width="12%">honori</td><td class="fr" width="20%">honorer</td>
-	<td class="eo" width="12%">diablo</td><td class="fr" width="20%">diable</td>
-	<td class="eo" width="12%">adori</td><td class="fr" width="20%">adorer</td>
-</tr>
-</table>
-
-<?php 
-} // fin section 2
-if ($section=="3") {
-?>
-
-<p>Traduisez en espéranto en utilisant la terminaison verbale appropriée.</p>
-<input type="hidden" name="013_cxap08.1" value="1. Traduisez en espéranto en utilisant la terminaison verbale appropriée.">
-<?php atentigo(); ?>
-<div class="tasko">
-<?php
-	$demandoj=array (
-	1 => "Si elle venait &agrave; 8h nous pourrions manger à 8h30.",
-	2 => "Je désire qu’elle vienne &agrave; 8h mais je crois qu’elle ne viendra pas avant 9h.",
-	3 => "Va là-bas, assieds-toi et ouvre le sucrier&#160;!",
-	4 => "Cet imbécile veut me rencontrer &agrave; l’étable. Qu’il [y] aille en premier, et qu’il m’attende. Je viendrai quand je voudrai.",
-	5 => "Que faire&#160;? (Qu’est-ce que je &quot;dois-faire&quot;?)",
-	6 => "Il croyait que je ne viendrais pas avant 9h mais je suis venue à 8h moins 5.",
-	7 => "Sur le point de chanter, il se mit &agrave; rire. (préfixe ek-)",
-	8 => "Elle se mit &agrave; rougir en griffonnant le nom du garçon."
-	);
-	ekzerco("U", 1);
-?>
-</div>
-
-<?php 
-} // fin section 3
-if ($section=="4") {
-?>
-
-<p>
-Vous pouvez désormais lire des textes faciles. Veuillez donc traduire en
-français les anecdotes suivantes. Le vocabulaire nouveau se trouve à la
-fin de l’exercice.
-</p>
-<input type="hidden" name="013_cxap08.2" value="2. Veuillez donc traduire en français les anecdotes suivantes.">
-
-<div class="tasko">
-<?php
-	$demandoj=array (
-	9 => "<br>Ju&#285;isto:  &#264;u vi do asertas, ke vi iris en la domon opiniante, ke &#285;i estas via domo&#160;?<br>Akuzato: Jes, sinjoro ju&#285;isto.<br>Ju&#285;isto:  Sed kial vi forkuris, kiam la sinjorino envenis&#160;?<br>Akuzato: Mi opiniis, ke &#349;i estas mia edzino&#160;!",
-	10 => "<br>Patrino en tramo: Jo&#265;jo, kial vi sidas kun fermitaj okuloj&#160;? &#264;u vi estas laca&#160;?<br>Jo&#265;jo: Ne&#160;! Ne pla&#265;as al mi vidi starantajn virinojn."
-   );
-	ekzerco("X", 5);
-?>
-</div>
-<table class="voca">
-<tr>
-	<td class="eo" width="12%">ju&#285;isto</td><td class="fr" width="20%">juge</td>
-	<td class="eo" width="12%">aserti</td><td class="fr" width="20%">affirmer, prétendre</td>
-	<td class="eo" width="12%">akuzato</td><td class="fr" width="20%">l’accusé</td>
-</tr>
-<tr>
-	<td class="eo" width="12%">forkuri</td><td class="fr" width="20%"  colspan="3">se sauver, c-à-d. courir au loin</td>
-	<td class="eo" width="12%">&nbsp;</td><td class="fr" width="20%">&nbsp;</td>
-</tr>
-<tr>
-	<td class="eo" width="12%">tramo</td><td class="fr" width="20%">tramway</td>
-	<td class="eo" width="12%">okulo</td><td class="fr" width="20%">&oelig;il</td>
-	<td class="eo" width="12%">stari</td><td class="fr" width="20%">être debout</td>
-</tr>
-<tr>
-	<td class="eo" width="12%">laca</td><td class="fr" width="20%">fatigué</td>
-	<td class="eo" width="12%">pla&#265;i</td><td class="fr" width="20%">plaire</td>
-	<td class="eo" width="12%">&nbsp;</td><td class="fr" width="20%">&nbsp;</td>
-</tr>
-</table>
-
-<?php 
-} // fin section 4
-if ($section=="5") {
-?>
-
-<p>
-<b>Si</b> est le <b>pronom réfléchi</b> de la 3e personne, du singulier ou du
-pluriel, quand il se rapporte au sujet du verbe. <b>Sia</b> est l’adjectif
-possessif réfléchi correspondant.
-</p>
-<table class="retrait">
-	<tr><td width="250" class="ekz">Johano lavis sin.</td><td width="250" class="ekz">Johano lavis lin.</td></tr>
-	<tr><td class="fr">= Jean s’est lavé</td><td class="fr">= Jean l’a lavé, c-&agrave;-d. une autre personne, de sexe masculin</td></tr>
-	<tr><td>&nbsp;</td></tr>
-	<tr><td class="ekz">Sofia diris al si.</td><td class="ekz">Sofia diris al &#349;i.</td></tr>
-	<tr><td class="fr">= Sophie s’est dit, &agrave; elle-même </td><td class="fr">= Sophie lui a dit, c-&agrave;-d. &agrave; une autre personne de sexe féminin</td></tr>
-	<tr><td>&nbsp;</td></tr>
-	<tr><td class="ekz">&#348;i kisis sian edzon.</td><td class="ekz">&#348;i kisis &#349;ian edzon.</td></tr>
-	<tr><td class="fr">= Elle a embrassé son (propre) mari</td><td class="fr">= Elle a embrassé son mari, c-&agrave;-d. le mari d’une autre femme</td></tr>
-</table>
-
-<?php 
-} // fin section 5
-if ($section=="6") {
-?>
-
-<p>Veuillez traduire ces textes en français. Le vocabulaire nouveau se trouve à la
-fin de l’exercice.</p>
-<input type="hidden" name="013_cxap08.3" value="3. Même exercice.">
-<div class="tasko">
-<?php
-	$demandoj=array (
-	11 => "<br>- Incitas min, ke mia edzino da&#365;re parolas pri sia anta&#365;a edzo.<br>- Tio estas nenio&#160;! La mia paroladas pri sia estonta edzo&#160;!",
-	12 => "<br>En kafejo:<br>- Kial vi rigardadas al la pordo&#160;?<br>- Mi observadas, &#265;u ne iu foriras kun mia surtuto. Kun la via jam anta&#365; dek minutoj foriris iu.",
-	13 => "<br>La junaj geedzoj havis konflikton hejme, kaj poste dum la a&#365;to-veturado ili amba&#365; obstine silentis. Preterpasante aron da azenoj la edzo diris moke:<br>- &#264;u parencoj de vi&#160;?<br>- Jes, boparencoj&#160;!"
-	);
-	ekzerco ("X", 5);
-?>
-</div>
-<table class="voca">
-<tr>
-	<td class="eo" width="12%">inciti</td><td class="fr" width="20%">irriter</td>
-	<td class="eo" width="12%">da&#365;re</td><td class="fr" width="20%">continuellement</td>
-	<td class="eo" width="12%">estonta</td><td class="fr" width="20%">futur (participe futur de "esti")</td>
-</tr>
-<tr>
-	<td class="eo" width="12%">kafejo</td><td class="fr" width="20%">café (restaurant)</td>
-	<td class="eo" width="12%">for-iri</td><td class="fr" width="20%">partir</td>
-	<td class="eo" width="12%">surtuto</td><td class="fr" width="20%">pardessus</td>
-</tr>
-<tr>
-	<td class="eo" width="12%">jam</td><td class="fr" width="20%">déjà</td>
-	<td class="eo" width="12%">&nbsp;</td><td class="fr" width="20%">&nbsp;</td>
-	<td class="eo" width="12%">&nbsp;</td><td class="fr" width="20%">&nbsp;</td>
-</tr>
-<tr>
-	<td class="eo" width="12%">konflikto</td><td class="fr" width="20%">conflit</td>
-	<td class="eo" width="12%">hejme</td><td class="fr" width="20%">à la maison</td>
-	<td class="eo" width="12%">a&#365;to-veturado</td><td class="fr" width="20%">trajet en voiture</td>
-</tr>
-<tr>
-	<td class="eo" width="12%">amba&#365;</td><td class="fr" width="20%">tous deux</td>
-	<td class="eo" width="12%">moke</td><td class="fr" width="20%">par moquerie</td>
-	<td class="eo" width="12%">obstine</td><td class="fr" width="20%">avec obstination</td>
-</tr>
-<tr>
-	<td class="eo" width="12%">silenti</td><td class="fr" width="20%">garder le silence</td>
-	<td class="eo" width="12%">preter-pasi</td><td class="fr" width="20%">dépasser, passer (devant...)</td>
-	<td class="eo" width="12%">parenco</td><td class="fr" width="20%">parent (personne de la même famille)</td>
-</tr>
-</table>
-
-<?php 
-} // fin section 6
-if ($section=="7") {
-?>
-
-<p>
-Lisez régulièrement le texte suivant &agrave; haute voix en ayant soin
-d’appliquer l’accent tonique sur l’avant-dernière syllabe comme il se
-doit.
-</p>
-<blockquote><p>
-  La lingvo Esperanto estis kreita de Doktoro Zamenhof, por ke la homoj de
-  la diversaj nacioj povu inter&#349;an&#285;i siajn ideojn sen malfacila&#309;o.
-  Esperanto volas, ke sur la tuta mondo &#265;iu povu esprimi tion, kion li a&#365;
-  &#349;i pensas per lingvo facila por &#265;iuj popoloj, lernebla en kelkaj
-  semajnoj. Simpla, fleksebla, belsona, vere internacia en siaj elementoj,
-  la lingvo Esperanto prezentas al la mondo la solan praktikan solvon de
-  lingvo internacia, &#265;ar, facila por homoj kleraj, Esperanto estas
-  preska&#365; sen peno komprenata anka&#365; de la personoj nemulte instruitaj.
-  Mil faktoj atestas la grandan meriton de la internacia lingvo Esperanto.*
-</p>
-<p>
-  	<i>* (adapté du Nouveau cours rationnel et complet d’Espéranto - SAT-Amikaro, Paris)</i></p>
-</blockquote>
-
-<div class="rim"><p><b>Remarque</b> : 
-Surveillez attentivement la lettre R qui doit être roulée comme
-en italien et la lettre H qui est toujours expirée comme dans les mots
-anglais "hand, hair, have".</p>
-</div>
-
-<?php 
-} // fin section 7
-if ($section=="8") {
-?>
-
-<p>
-Dans cette leçon nous avons achevé l’étude de la conjugaison. Vous
-connaissez donc dès &agrave; présent toutes les formes verbales possibles. Et
-enfin, bonne nouvelle&#160;!, il ne vous reste plus qu’une autre leçon avant
-de passer le petit examen qui constitue la 10ème leçon. Ensuite, on vous
-décernera une attestation de cours.
-</p>
-
-<?php 
-} // fin derniere section
-?>	
-</section>
-
-
-				
-				<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le précédent et le suivant -->
-				<section id="leciono-fino">
-					<div id="marko" class="right-align">
-						<?php getBoutonFinSection('CG',8,$section,$persono_id); ?>
-						<a id="farita" class="btn-floating btn-large invisible light-blue darken-1"><i class="material-icons">done_all</i></a>
-					</div>
-					<div class="ligoj">
-						<?php getLecioneroAntauxa('CG',8,$section); ?>
-						<?php getLecioneroVenonta('CG',8,$section); ?>
-					</div>
-				</section>
-
-
-			</article>
+		<section id="leciono-enhavo">
+			<?php 
+			getTitoloLecionero('CG',8,$section);
 			
-			<aside class="col s12 m10 l4 offset-m1">
+			if ($section=="1") {
+			?>
+			<p class="parto">
+			Maintenant, il ne nous reste que quelques terminaisons grammaticales &agrave;
+			apprendre avant de pouvoir lire couramment en espéranto. Nous avons vu
+			que les verbes se terminent en <b>-as</b> (présent), <b>-is</b> (passé), 
+			<b>-os</b> (futur). Il y a aussi&nbsp;:
+			</p>
+			<div class="row vortlisto">
+				<p class="col s4">le <b>conditionnel</b> :</p>
+				<p class="col s1"><b>-us</b></p>
+				<p class="col s7"><span class="eo">Se mi est<b>us</b> riĉa, mi vojaĝ<b>us</b> multe.</span></p>
+				<p class="col s7 offset-s5">= Si j’étais riche, je voyagerais beaucoup.</p>
+			</div>
+			<div class="row">
+				<p class="col s12">et</p>
+			</div>
+			<div class="row vortlisto">
+				<p class="col s4">l’<b>impératif-subjonctif</b> :</p>
+				<p class="col s1"><b>-u</b></p>
+				<p class="col s7"><span class="eo">Ferm<b>u</b> la pordon kaj sidiĝ<b>u</b>!.</span></p>
+				<p class="col s7 offset-s5">= Ferme la porte et assieds-toi !</p>
+				<p class="col s7 offset-s5"><span class="eo">Li ferm<b>u</b> la pordon kaj sidiĝ<b>u</b> !</span></p>
+				<p class="col s7 offset-s5">= Qu’il ferme la porte et qu’il s’asseye !</p>
+				<p class="col s7 offset-s5"><span class="eo">Mi volas, ke vi ven<b>u</b></span></p>
+				<p class="col s7 offset-s5">= Je veux que tu viennes</p>
+			</div>
+	
+			<p class="rimarko"><strong>REMARQUE</strong> : 
+			Remarquez que, contrairement au français :</p>
+			<p><b>1.</b> Le conditionnel s’applique aux deux propositions de la phrase et pas seulement à la dernière.</p>
+			<p><b>2.</b> Le conditionnel ne s’utilise pas pour montrer le futur dans le passé.</p>
+			<div class="row">
+				<p class="col s11 offset-s1">Je crois qu’il viendra : <span class="eo">Mi kredas, ke li venos.</span></p>
+				<p class="col s11 offset-s1">Je croyais qu’il viendrait :  <span class="eo">Mi kredis, ke li ven<b>os</b>.</span></p>
+			</div>
+	
+			<p class="parto">Enfin, il reste les <b>participes</b> (mots qui s’emploient comme verbes,
+			adjectifs, adverbes ou noms)&nbsp;:
+			</p>
+	
+			<div class="row vortlisto">
+				<p class="col s8 offset-s4"><b>Participes de la voix active</b></p>
+				<p class="col s2">Présent :</p><p class="col s2"><b>-ant</b></p><p class="col s8"><span class="eo">Mi estas leganta.</span></p>
+				<p class="col s8 offset-s4">= Je suis lisant (en train de lire).</p>
+				<p class="col s2 offset-s2"><b>-int</b></p><p class="col s8"><span class="eo">Mi estas leginta.</span></p>
+				<p class="col s8 offset-s4">= Je suis ayant lu (j’ai lu, j’ai fini de lire).</p>
+				<p class="col s2 offset-s2"><b>-ont</b></p><p class="col s8"><span class="eo">Mi estas legonta.</span></p>
+				<p class="col s8 offset-s4">= Je suis devant lire (sur le point de lire).</p>
+			</div>
+			<div class="row vortlisto">
+				<p class="col s8 offset-s4"><b>Participes de la voix passive</b></p>
+				<p class="col s2">Présent :</p><p class="col s2"><b>-at</b></p><p class="col s8"><span class="eo">La libro estas legata.</span></p>
+				<p class="col s8 offset-s4">= Le livre est lu (en train d’être lu).</p>
+				<p class="col s2">Passé :</p><p class="col s2"><b>-it</b></p><p class="col s8"><span class="eo">La libro estas legita.</span></p>
+				<p class="col s8 offset-s4">= Le livre est lu (ayant été lu).</p>
+				<p class="col s2">Futur :</p><p class="col s2"><b>-ot</b></p><p class="col s8"><span class="eo">La libro estas legota.</span></p>
+				<p class="col s8 offset-s4">= Le livre est devant être lu (àlire).</p>
+			</div>
+	
+			<p>En résumé :</p>
+			<p><span class="eo">leganta</span> = <span class="eo">kiu legas</span> = qui lit, lisant</p>
+			<p><span class="eo">leginta</span> = <span class="eo">kiu legis</span> = qui a lu, qui lisait, ayant lu</p>
+			<p><span class="eo">legonta</span> = <span class="eo">kiu legos</span> = qui lira</p>
+			<p></p>
+			<p><span class="eo">legata</span> = <span class="eo">kiun oni legas</span> = qu’on lit</p>
+			<p><span class="eo">legita</span> = <span class="eo">kiun oni legis</span> = qu’on a lu, lu</p>
+			<p><span class="eo">legota</span> = <span class="eo">kiun oni legos</span> = qu’on lira</p>
+	
+			<p class="rimarko"><strong>REMARQUES</strong> : </p>
+			<ol>
+				<li>Le français dit «&nbsp;la porte est fermée&nbsp;» sans distinguer si on est en train de fermer la porte 
+				(<span class="eo">la pordo estas ferm<b>at</b>a</span>), 
+				ou si la porte est en position fermée (<span class="eo">la pordo estas ferm<b>it</b>a</span>).
+				</li>
+				<li>En combinant le verbe <span class="eo">esti</span> et les 6 formes de participes, 
+				on obtient un grand nombre de formes composées. Sachez toutefois que
+				l’espéranto préfère les formes simples et n’utilise les formes
+				composées que lorsque ces dernières apportent une précision
+				indispensable.</li>
+			</ol>
+			
+			<p class="parto">Les participes peuvent prendre la forme des adjectifs (terminaison en
+			<b>-a</b>), des adverbes (<b>-e</b>), ou des noms (<b>-o</b>). 
+			Leur utilisation permet beaucoup de précision, de souplesse et de concision. 
+			Bien que nous ne puissions pas vous indiquer ici toute la gamme des 
+			applications, nous vous invitons à saisir le sens des participes dans 
+			les exemples suivants&nbsp;:</p>
+			<div class="row vortlisto">
+				<p class="col s12 eo">La leg<b>ant</b>o havas bonan voĉon, sed la antaŭa leg<b>int</b>o havis pli bonan</p>
+				<p class="col s11 offset-s1">= Le lecteur a une bonne voix, mais le lecteur précédent (en) avait une meilleure</p>
+				<p class="col s12 eo">Mi opinias tamen, ke la leg<b>ont</b>o havos la plej bonan voĉon el ĉiuj</p>
+				<p class="col s11 offset-s1">= Je suis d’avis, toutefois, que le lecteur à venir aura la meilleure voix de tous</p>
+				<p class="col s12 eo">Leg<b>ant</b>e ni lernas</p>
+				<p class="col s11 offset-s1">= Nous apprenons en lisant</p>
+				<p class="col s12 eo">Manĝ<b>ont</b>e la pomon, li ekvidis la vermon</p>
+				<p class="col s11 offset-s1">= Sur le point de manger la pomme, il aperçut le ver</p>
+				<p class="col s12 eo">La konstru<b>at</b>a domo</p>
+				<p class="col s11 offset-s1">= La maison en train d’être construite</p>
+				<p class="col s12 eo">La skrib<b>ot</b>a letero</p>
+				<p class="col s11 offset-s1">= La lettre à écrire, c-à-d. devant être écrite</p>
+				<p class="col s12 eo">La ferm<b>it</b>a pordo</p>
+				<p class="col s11 offset-s1">= La porte fermée, c-à-d. qui a été fermée</p>
+			</div>
+		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<p><a href="../son/pv8-1.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a> <span class="eo">Vivanton ni malhonoras, mortinton ni adoras.</span></p>
+			<p>
+			<a href="../son/pv8-2.wav" type="audio/mp3"><i class="material-icons">volume_up</i></a> <span class="eo">Dancu diabloj, sed ne en mia arbaro.</span></p>
+
+			<div class="vortlisto row">
+				<p class="col s6 m4"><span class="eo">honori</span> : honorer</p>
+				<p class="col s6 m4"><span class="eo">diablo</span> : diable</p>
+				<p class="col s6 m4"><span class="eo">adori</span> : adorer</p>
+			</div>
+			
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+		<fieldset class="ekzerco">
+			<legend><strong>EXERCICE</strong> : Traduisez en espéranto en utilisant la terminaison verbale appropriée.</legend>
+			<input type="hidden" name="013_cxap08.1" value="1. Traduisez en espéranto en utilisant la terminaison verbale appropriée.">
+			<?php atentigo(); ?>
+			<div class="tasko">
+			<?php
+				$demandoj=array (
+				1 => "Si elle venait à 8h nous pourrions manger à 8h30.",
+				2 => "Je désire qu’elle vienne à 8h mais je crois qu’elle ne viendra pas avant 9h.",
+				3 => "Va là-bas, assieds-toi et ouvre le sucrier !",
+				4 => "Cet imbécile veut me rencontrer à l’étable. Qu’il [y] aille en premier, et qu’il m’attende. Je viendrai quand je voudrai.",
+				5 => "Que faire ? (Qu’est-ce que je «dois-faire» ?)",
+				6 => "Il croyait que je ne viendrais pas avant 9h mais je suis venue à 8h moins 5.",
+				7 => "Sur le point de chanter, il se mit à rire. (préfixe ek-)",
+				8 => "Elle se mit à rougir en griffonnant le nom du garçon."
+				);
+				ekzerco("U", 1);
+			?>
+			</div>
+		</fieldset>
+	
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<p>
+			Vous pouvez désormais lire des textes faciles. Traduisez le texte suivant en français. Le vocabulaire nouveau se trouve à la
+			fin de l’exercice.
+			</p>
+			<input type="hidden" name="013_cxap08.2" value="2. Veuillez donc traduire en français les anecdotes suivantes.">
+			
+			<fieldset class="ekzerco">
+				<legend><strong>EXERCICE</strong> : Traduisez en français.</legend>
+				<div class="tasko">
+				<?php
+					$demandoj=array (
+					9 => "<br>Juĝisto:  Ĉu vi do asertas, ke vi iris en la domon opiniante, ke ĝi estas via domo ?<br>Akuzato: Jes, sinjoro juĝisto.<br>Juĝisto:  Sed kial vi forkuris, kiam la sinjorino envenis ?<br>Akuzato: Mi opiniis, ke ŝi estas mia edzino !",
+					10 => "<br>Patrino en tramo: Joĉjo, kial vi sidas kun fermitaj okuloj ? Ĉu vi estas laca ?<br>Joĉjo: Ne ! Ne plaĉas al mi vidi starantajn virinojn."
+				   );
+					ekzerco("X", 5);
+				?>
+				</div>
+			</fieldset>
+
+			<div class="vortlisto row">
+				<p class="col s12 m6"><span class="eo">juĝisto</span> : juge</p>
+				<p class="col s12 m6"><span class="eo">aserti</span> : affirmer, prétendre</p>
+				<p class="col s12 m6"><span class="eo">akuzato</span> : l’accusé</p>
+				<p class="col s12 m6"><span class="eo">forkuri</span> : se sauver, c-à-d. courir au loin</p>
+				<p class="col s12 m6"><span class="eo">tramo</span> : tramway</p>
+				<p class="col s12 m6"><span class="eo">okulo</span> : œil</p>
+				<p class="col s12 m6"><span class="eo">stari</span> : être debout</p>
+				<p class="col s12 m6"><span class="eo">laca</span> : fatigué</p>
+				<p class="col s12 m6"><span class="eo">plaĉi</span> : plaire</p>
+			</div>
+			
+			<?php 
+			} // fin section 4
+			if ($section=="5") {
+			?>
+			
+			<p class="parto">
+			<b>Si</b> est le <b>pronom réfléchi</b> de la 3e personne, du singulier ou du
+			pluriel, quand il se rapporte au sujet du verbe. <b>Sia</b> est l’adjectif
+			possessif réfléchi correspondant.
+			</p>
+			
+			<div class="row">
+				<p class="col s6"><span class="eo">Johano lavis sin.</span></p><p class="col s6"><span class="eo">Johano lavis lin.</span></p>
+				<p class="col s6">= Jean s’est lavé</p><p class="col s6">= Jean l’a lavé, c-à-d. une autre personne, de sexe masculin</p>
+			</div>
+			<div class="row">
+				<p class="col s6"><span class="eo">Sofia diris al si.</span></p><p class="col s6"><span class="eo">Sofia diris al ŝi.</span></p>
+				<p class="col s6">= Sophie s’est dit, à elle-même.</p><p class="col s6">= Sophie lui a dit, c-à-d. à une autre personne de sexe féminin.</p>
+			</div>
+			<div class="row">
+				<p class="col s6"><span class="eo">Ŝi kisis sian edzon.</span></p><p class="col s6"><span class="eo">Ŝi kisis ŝian edzon.</span></p>
+				<p class="col s6">= Elle a embrassé son (propre) mari.</p><p class="col s6">= Elle a embrassé son mari, c-à-d. le mari d’une autre femme.</p>
+			</div>
+
+		<?php 
+		} // fin section 5
+		if ($section=="6") {
+		?>
+		
+			<fieldset class="ekzerco">
+				<legend><strong>EXERCICE</strong> : Traduisez ces textes en français.</legend>
+				<p>Le vocabulaire nouveau se trouve à la fin de l’exercice.</p>
+				<input type="hidden" name="013_cxap08.3" value="3. Même exercice.">
+				<div class="tasko">
+				<?php
+					$demandoj=array (
+					11 => "<br>- Incitas min, ke mia edzino da&#365;re parolas pri sia anta&#365;a edzo.<br>- Tio estas nenio&nbsp;! La mia paroladas pri sia estonta edzo&nbsp;!",
+					12 => "<br>En kafejo:<br>- Kial vi rigardadas al la pordo&nbsp;?<br>- Mi observadas, &#265;u ne iu foriras kun mia surtuto. Kun la via jam anta&#365; dek minutoj foriris iu.",
+					13 => "<br>La junaj geedzoj havis konflikton hejme, kaj poste dum la a&#365;to-veturado ili amba&#365; obstine silentis. Preterpasante aron da azenoj la edzo diris moke:<br>- &#264;u parencoj de vi&nbsp;?<br>- Jes, boparencoj&nbsp;!"
+					);
+					ekzerco ("X", 5);
+				?>
+				</div>
+			</fieldset>
+		
+			<div class="vortlisto row">
+				<p class="col s6"><span class="eo">inciti</span> : irriter</p>
+				<p class="col s6"><span class="eo">daŭre</span> : continuellement</p>
+				<p class="col s6"><span class="eo">estonta</span> : futur (participe futur de "esti")</p>
+				<p class="col s6"><span class="eo">kafejo</span> : café (restaurant)</p>
+				<p class="col s6"><span class="eo">for-iri</span> : partir</p>
+				<p class="col s6"><span class="eo">surtuto</span> : pardessus</p>
+				<p class="col s6"><span class="eo">jam</span> : déjà</p>
+				<p class="col s6"><span class="eo">konflikto</span> : conflit</p>
+				<p class="col s6"><span class="eo">hejme</span> : à la maison</p>
+				<p class="col s6"><span class="eo">aŭto-veturado</span> : trajet en voiture</p>
+				<p class="col s6"><span class="eo">ambaŭ</span> : tous deux</p>
+				<p class="col s6"><span class="eo">moke</span> : par moquerie</p>
+				<p class="col s6"><span class="eo">obstine</span> : avec obstination</p>
+				<p class="col s6"><span class="eo">silenti</span> : garder le silence</p>
+				<p class="col s6"><span class="eo">preter-pasi</span> : dépasser, passer (devant)…</p>
+				<p class="col s6"><span class="eo">parenco</span> : parent (personne de la même famille)</p>
+			</div>
+		<?php 
+		} // fin section 6
+		if ($section=="7") {
+		?>
+
+			<p>
+			Lisez régulièrement le texte suivant à haute voix en ayant soin
+			d’appliquer l’accent tonique sur l’avant-dernière syllabe comme il se
+			doit.
+			</p>
+			
+			<div class="vortlisto">
+				<p>
+				La lingvo Esperanto estis kreita de Doktoro Zamenhof, por ke la homoj de
+				la diversaj nacioj povu interŝanĝi siajn ideojn sen malfacilaĵo.
+				Esperanto volas, ke sur la tuta mondo ĉiu povu esprimi tion, kion li aŭ
+				ŝi pensas per lingvo facila por ĉiuj popoloj, lernebla en kelkaj
+				semajnoj. Simpla, fleksebla, belsona, vere internacia en siaj elementoj,
+				la lingvo Esperanto prezentas al la mondo la solan praktikan solvon de
+				lingvo internacia, ĉar, facila por homoj kleraj, Esperanto estas
+				preskaŭ sen peno komprenata ankaŭ de la personoj nemulte instruitaj.
+				Mil faktoj atestas la grandan meriton de la internacia lingvo Esperanto.
+				</p>
+				<p><i>(adapté du Nouveau cours rationnel et complet d’Espéranto - SAT-Amikaro, Paris)</i></p>
+			</div>
+			
+		<p class="rimarko"><strong>REMARQUE</strong> : </p>
+		<p>Surveillez attentivement la lettre <b>R</b> qui doit être roulée comme
+			en italien et la lettre <b>H</b> qui est toujours expirée comme dans les mots
+			anglais <i>hand</i>, <i>hair</i>, <i>have</i>.</p>
+
+		<?php 
+		} // fin section 7
+		if ($section=="8") {
+		?>
+
+			<p>
+			Dans cette leçon nous avons achevé l’étude de la conjugaison. Vous
+			connaissez donc dès à présent toutes les formes verbales possibles. Et
+			enfin, bonne nouvelle&nbsp;!, il ne vous reste plus qu’une autre leçon avant
+			de passer le petit examen qui constitue la 10<up>e</up> leçon. Ensuite, on vous
+			décernera une attestation de cours.
+			</p>
+
+		<?php 
+		} // fin derniere section
+		?>	
+		</section>
+
+		<section id="leciono-fino">
+			<div id="marko" class="right-align">
+				<?php getBoutonFinSection('CG',$leciono,$section,$persono_id); ?>
+				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
+			</div>
+			<div class="ligoj">
+				<?php getLecioneroAntauxa('CG',$leciono,$section); ?>
+				<?php getLecioneroVenonta('CG',$leciono,$section); ?>
+			</div>
+		</section>
+
+	</article>
+			
+	<aside class="col s12 m10 l3 offset-m1 push-l1">
 								
-				<ul class="collapsible" data-collapsible="expandable">
+		<ul class="collapsible" data-collapsible="expandable">
 
-					<?php 
-					// On affiche le sommaire de la lecon
-					getEnhavtabelo('CG',8); 
-					?>
+			<?php 
+			// On affiche le sommaire de la lecon
+			getEnhavtabelo('CG',$leciono); 
+			?>
 
-					<!-- TODO : il faut remplacer cette section suivante par une fonction qui va rechercher en base le vocabulaire -->
-
-					<!--<li>
-						<div class="collapsible-header"><i class="material-icons">library_books</i>Vocabulaire de la leçon</div>
-						<div class="collapsible-body">
-							<table class="vortaro bordered striped responsive-table">
-								<tr><td>apud</td><td>à côté de</td></tr>
-								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-								<tr><td>ceter/a</td><td>restant, autre</td></tr>
-								<tr><td>en</td><td>en, dedans</td></tr>
-								<tr><td>ĝis</td><td>jusqu’à</td></tr>
-								<tr><td>halt/i</td><td>s’arrêter</td></tr>
-								<tr><td>apud</td><td>à côté de</td></tr>
-								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-								<tr><td>ceter/a</td><td>restant, autre</td></tr>
-								<tr><td>en</td><td>en, dedans</td></tr>
-								<tr><td>ĝis</td><td>jusqu’à</td></tr>
-								<tr><td>halt/i</td><td>s’arrêter</td></tr>
-								<tr><td>apud</td><td>à côté de</td></tr>
-								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-								<tr><td>ceter/a</td><td>restant, autre</td></tr>
-								<tr><td>en</td><td>en, dedans</td></tr>
-								<tr><td>ĝis</td><td>jusqu’à</td></tr>
-								<tr><td>halt/i</td><td>s’arrêter</td></tr>
-								<tr><td>apud</td><td>à côté de</td></tr>
-								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-								<tr><td>ceter/a</td><td>restant, autre</td></tr>
-								<tr><td>en</td><td>en, dedans</td></tr>
-								<tr><td>ĝis</td><td>jusqu’à</td></tr>
-								<tr><td>halt/i</td><td>s’arrêter</td></tr>
-								<tr><td>apud</td><td>à côté de</td></tr>
-								<tr><td>(aŭto)bus/o</td><td>autobus</td></tr>
-								<tr><td>ceter/a</td><td>restant, autre</td></tr>
-								<tr><td>en</td><td>en, dedans</td></tr>
-								<tr><td>ĝis</td><td>jusqu’à</td></tr>
-								<tr><td>halt/i</td><td>s’arrêter</td></tr>
-							</table>			
-						</div>
-					</li> -->
-				</ul>	
+		</ul>	
 				
-			</aside>
-		</main>
-
-
-
+	</aside>
+</div>
 <?php include "dlekpiedo.inc.php"; ?>

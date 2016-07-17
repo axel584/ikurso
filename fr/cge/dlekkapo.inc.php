@@ -26,8 +26,8 @@ if (isset($leciono)&&isset($persono_id)) {
  * rappel pour les élèves non identifiés.
 */
 function atentigo() {
-	echo "<p class='eo rimarko'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <em>x</em>&nbsp;:";
-	echo "en tapant cx, sx, ux... vous obtiendrez ĉ, ŝ, ŭ...</p>\n";
+	echo "<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>&nbsp;:&nbsp;";
+	echo "en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
 }
 function ekzerco($sist, $nbLig) {
 	global $demandoj, $memorkurso, $persono_id, $numcxap;
@@ -40,12 +40,13 @@ function ekzerco($sist, $nbLig) {
 	} else {
 		$idenfication =True;
 	}
+	echo "<div class=\"row\">";
 	foreach ($demandoj as $k => $v) {
-		echo "\t<p>".$k.". ".$v."</p>\n";
-		echo "\t<p><input type='hidden' name=\"dem_ekz".$numcxap."_".sprintf('%02d', $k)."\" value=\"".$k." ".$v."\">\n";
-		
+		echo "<p class='col s12 demando'>".$k.". ".$v."</p>\n";
+		echo "<input type='hidden' name=\"dem_ekz".$numcxap."_".sprintf('%02d', $k)."\" value=\"".$k." ".$v."\">";
+
 		if ($nbLig==1) {
-			echo "\t<input type='text' size='65' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
+			echo "<div class='input-field col s12'><input name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			// si on n'est pas identifié et que ce n'est pas la première leçon, on empeche de remplir les exercices si on n'est pas connecté
 			if ($idenfication==False && $numcxap<>"01") {
 				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
@@ -56,11 +57,11 @@ function ekzerco($sist, $nbLig) {
 			if (isset($memorkurso[$var])){
 				echo stripslashes($memorkurso[$var]);
 			}
-			echo "\">";
+			echo "\"></div>";
 		}
 		else
 		{
-			echo "\t<textarea cols='65' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
+			echo "<div class='input-field col s12'><textarea class='materialize-textarea' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			if ($idenfication==False) {
 				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
@@ -70,10 +71,12 @@ function ekzerco($sist, $nbLig) {
 			if (isset($memorkurso[$var])){
 				echo stripslashes($memorkurso[$var]);
 			}
-			echo "</textarea>";
+			echo "</textarea></div>";
 		}
 		echo "</p>\n";
 	}
+	echo "</div>";
+
 }
 
 

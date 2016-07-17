@@ -8,231 +8,192 @@ include "dlekkapo.inc.php";
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
 				
-<section id="leciono-enhavo">
-<?php 
-getTitoloLecionero('CG',$leciono,$section);
+		<section id="leciono-enhavo">
+		<?php 
+		getTitoloLecionero('CG',$leciono,$section);
+		
+		
+		if ($section=="1") {
+		?>
+		
+		<p class="parto">Les <b>noms</b> désignant des êtres vivants sexués peuvent prendre la
+		marque du <b>féminin</b>. Pour ce faire on remplace la terminaison
+		<b>-o</b> du nom par la terminaison <b>-ino</b> ou, dit autrement, on
+		intercale le suffixe <b>-in</b> entre la terminaison et ce qui la précède.</p>
+		
+		<div class="vortlisto row">
+			<p class="col s6"><span class="eo">viro</span> : homme (mâle)</p>
+			<p class="col s6"><span class="eo">vir<b>in</b>o</span> : femme</p>
+			<p class="col s6"><span class="eo">amiko</span> : ami</p>
+			<p class="col s6"><span class="eo">amik<b>in</b>o</span> : amie</p>
+			<p class="col s6"><span class="eo">filo</span> : fils</p>
+			<p class="col s6"><span class="eo">fil<b>in</b>o</span> : fille</p>
+		</div>
+		
+		<p>Lors de la première leçon nous avons vu qu’en espéranto les adjectifs
+		s’accordent en nombre avec les noms auxquels ils se rapportent. Par contre, ils ne s’accordent jamais en genre.
+		</p>
+		<div class="vortlisto row">
+			<p class="col s6"><span class="eo">la grandaj viroj</span> : les grands hommes</p>
+			<p class="col s6"><span class="eo">la grandaj virinoj</span> : les grandes femmes</p>
+		</div>
+	
+		<?php 
+		} // fin section 3
+		if ($section=="2") {
+		?>
+		
+		<p class="parto">Il existe une autre terminaison, bien pratique, qui nous permet de
+		reconnaître le complément d’objet direct dans une phrase. Il s’agit de
+		la terminaison <b>-n</b> que l’on ajoute à la fin des noms, pronoms
+		et des adjectifs pour former le complément d’objet direct. On
+		reconnaîtra donc le complément d’objet direct par sa terminaison <b>-n</b>
+		que l’on nomme également <b>accusatif</b>.</p>
+		
+		<div class="vortlisto row">
+			<p class="col s6">
+				<a href="../son/l02-1.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+				<span class="eo">Mi sukeras la varma<b>n</b> kafo<b>n</b>.</span></p>
+			<p class="col s6">Je sucre le café chaud.</p>
+		</div>
+		
+		<p class="rimarko"><strong>REMARQUE :</strong> 
+		Prononcez bien le n final sans nasaliser la voyelle précédente&nbsp;: 
+		<span class="eo">varman</span> rime avec le mot français <em>Anne</em>, 
+		et <span class="eo">kafon</span> avec <em>tonne</em>.</p>
+		
+		<p>Au pluriel : </p>
+		<div class="vortlisto row">
+			<p class="col s6"><a href="../son/l02-2.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+				<span class="eo">Ni sukeras la varmaj<b>n</b> kafoj<b>n</b>.</span></p>
+			<p class="col s6">Nous sucrons les cafés chauds.</p>
+		</div>
 
+		<p class="rimarko"><strong>REMARQUE</strong> : 
+		Notez que la terminaison du pluriel vient avant celle de l’accusatif, qui
+		elle-même vient toujours en dernier. Prononcez <span class="eo">varmajn</span> comme
+		<span class="eo"><em><u>var</u>m-ail-ne</em></span> (e muet) et <span class="eo">kafojn</span> comme 
+		<span class="eo"><em><u>ka</u>f-oï-ne</em></span> (e muet).</p>
+		
+		<?php 
+		} // fin section
+		if ($section=="3") {
+		?>
+		
+		<p class="parto">En général les compléments autres que les compléments d’objet direct
+		(par exemple, les compléments circonstanciels) sont introduits par des
+		prépositions et ne prennent pas la marque de l’accusatif <b>-n</b>.  Ceci
+		car la préposition qui les introduit nous permet de reconnaître leur
+		fonction de complément. Nous verrons ces prépositions plus tard, ainsi
+		que d’autres cas dans lesquels l’usage de l’accusatif peut être utile,
+		y compris après une préposition.</p>
+		<p>Avec le verbe <i>être</i> qui n’a jamais de complément d’objet direct, on
+		n’utilise pas l’accusatif, car le verbe <i>être</i> implique que le sujet et
+		l’attribut sont « équivalents ».</p>
+		<p>« Elle est belle. » équivaut à « Elle = belle. »</p>
+	
+		<?php 
+		} // fin section
+		if ($section=="4") {
+		?>
+		
+		<p class="parto">Le suffixe <b>-in</b> vous a déj&agrave; permis d’augmenter votre vocabulaire en
+		doublant le nombre d’êtres vivants sexués que vous êtes capable de nommer.
+		Quand vous saurez dire <em>cheval</em>, <em>bélier</em>, <em>souris m&acirc;le</em>,
+		<em>acteur</em>, etc. vous saurez également dire <em>jument</em>,
+		<em>brebis</em>, <em>souris femelle</em>, <em>actrice</em>, etc. </p>
+		
+		<p class="parto">Le préfixe <b>mal-</b> fera de même en vous permettant de conna&icirc;tre le
+		contraire des mots auxquels il s’accole. Quand vous aurez assimilé
+		<em>aimer</em>, <em>beau</em>, <em>gauche</em>, <em>vrai</em>, etc. vous saurez
+		dire aussi <em>détester</em>, <em>laid</em>, <em>droite</em>, <em>faux</em>, etc.</p>
 
-if ($section=="1") {
-?>
+		<div class="vortlisto row">
+			<p class="col s6"><span class="eo">amiko</span> : ami</p>
+			<p class="col s6"><span class="eo">malamiko</span> : ennemi</p>
+			<p class="col s6"><span class="eo">bela</span> : beau, belle</p>
+			<p class="col s6"><span class="eo">malbela</span> : laid(e)</p>
+			<p class="col s6"><span class="eo">nova</span> : nouveau, nouvelle</p>
+			<p class="col s6"><span class="eo">malnova</span> : ancien(ne), vieux, vieille</p>
+		</div>
+	
+		<?php 
+		} // fin section
+		if ($section=="5") {
+		?>
+		
+		<p class="parto">Pour mettre une phrase à la <b>forme négative</b> il suffit d’ajouter le mot
+		<b>ne</b> avant le verbe.</p>
+		
+		<div class="vortlisto row">
+			<p class="col s6"><a href="../son/l02-3.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+				<span class="eo">Mi <b>ne</b> sukeras la kafon.</span></p>
+			<p class="col s6">Je ne sucre pas le café.</p>
+		</div>
 
-<p>Les <b>noms</b> désignant des êtres vivants sexués peuvent prendre la
-marque du <b>féminin</b>. Pour ce faire on remplace la terminaison
-<b>-o</b> du nom par la terminaison <b>-ino</b> ou, dit autrement, on
-intercale le suffixe <b>-in</b> entre la terminaison et ce qui la précède.</p>
-<table class='retrait'>
-<tr>
-	<td width='50' class='ekz'>viro</td>
-	<td width='120' class='fr'>homme (m&acirc;le)</td>
-	<td width='50' class='ekz'>vir<b>in</b>o :</td>
-	<td width='120' class='fr'>femme</td>
-</tr>
-<tr>
-	<td class='ekz'>amiko :</td>
-	<td class='fr'>ami</td>
-	<td class='ekz'>amik<b>in</b>o :</td>
-	<td class='fr'>amie</td>
-</tr>
-<tr>
-	<td class='ekz'>filo :</td>
-	<td class='fr'>fils</td>
-	<td class='ekz'>fil<b>in</b>o :</td>
-	<td class='fr'>fille</td>
-</tr>
-</table>
+		<p class="rimarko"><strong>REMARQUE</strong> : 
+		Prononcez bien <span class="eo">ne</span> entre <em>né</em> et <em>nè</em>.
+		</p>
+	
+		<?php 
+		} // fin section
+		if ($section=="6") {
+		?>
+		
+		<p>Maintenant un peu de <b>vocabulaire</b> :</p>
 
-<p>Lors de la première leçon nous avons vu qu’en espéranto les adjectifs
-s’accordent en nombre avec les noms auxquels ils se rapportent. Par contre, ils ne s’accordent jamais en genre.
-</p>
-<table class='retrait'>
-<tr>
-<td class='ekz'>la grandaj viroj :</td><td class='fr'>les grands hommes</td><td width='20'>&nbsp;</td>
-<td class='ekz'> la grandaj virinoj :</td><td class='fr'>les grandes femmes</td></tr>
-</table>
+		<div class="vortlisto row">
+			<div class="col s12 m4">
+				<p><span class="eo">ami</span> : aimer</p>
+				<p><span class="eo">fari</span> : faire</p>
+				<p><span class="eo">forgesi</span> : oublier</p>
+				<p><span class="eo">havi</span> : avoir</p>
+				<p><span class="eo">kapti</span> : attraper</p>
+				<p><span class="eo">lavi</span> : laver</p>
+				<p><span class="eo">porti</span> : porter</p>
+				<p><span class="eo">peti</span> : demander</p>
+			</div>
+			<div class="col s12 m4">
+				<p><span class="eo">renkonti</span> : rencontrer</p>
+				<p><span class="eo">skribi</span> : écrire</p>
+				<p><span class="eo">sukeri</span> : sucrer</p>
+				<p><span class="eo">trinki</span> : boire</p>
+				<p><span class="eo">vendi</span> : vendre</p>
+				<p><span class="eo">vidi</span> : voir</p>
+				<p><span class="eo">akvo</span> : eau</p>
+				<p><span class="eo">amo</span> : amour</p>
+			</div>
+			<div class="col s12 m4">
+				<p><span class="eo">birdo</span> : oiseau</p>
+				<p><span class="eo">butiko</span> : boutique</p>
+				<p><span class="eo">insekto</span> : insecte</p>
+				<p><span class="eo">limonado</span> : limonade</p>
+				<p><span class="eo">papero</span> : papier</p>
+				<p><span class="eo">plumo</span> : plume</p>
+				<p><span class="eo">taso</span> : tasse</p>
+				<p><span class="eo">pura</span> : propre</p>
+			</div>
+		</div>
 
-<?php 
-} // fin section 3
-if ($section=="2") {
-?>
-
-<p>Il existe une autre terminaison, bien pratique, qui nous permet de
-reconna&icirc;tre le complément d’objet direct dans une phrase. Il s’agit de
-la terminaison <b>-n</b> que l’on ajoute &agrave; la fin des noms, pronoms
-et des adjectifs pour former le complément d’objet direct. On
-reconna&icirc;tra donc le complément d’objet direct par sa terminaison <b>-n</b>
-que l’on nomme également <b>accusatif</b>.</p>
-
-<table class='retrait'>
-<tr>
-	<td width='50'><a href="../son/l02-1.wav"><img src="../pix/icon20.gif"></a></td>
-	<td width='200' class='ekz'>Mi sukeras la varma<b>n</b> kafo<b>n</b></td>
-	<td width='200' class='fr'>Je sucre le café chaud</td>
-</tr>
-</table>
-
-<div class='rim'><p><b>Remarque</b> : 
-Prononcez bien le n final sans nasaliser la voyelle précédente : 
-<span class='ekz'>varman</span> rime avec le mot français <em>Anne</em>, 
-et <span class='ekz'>kafon</span> avec <em>tonne</em>.</p></div>
-<p>Au pluriel : </p>
-<table  class='retrait'>
-<tr>
-	<td width='50'><a href="../son/l02-2.wav"><img src="../pix/icon20.gif"></a></td>
-	<td width='200' class='ekz'>Ni sukeras la varmaj<b>n</b> kafoj<b>n</b></td>
-	<td width='300' class='fr'>Nous sucrons les cafés chauds</td>
-</tr>
-</table>
-
-<div class='rim'><p><b>Remarque</b> : 
-Notez que la terminaison du pluriel vient avant celle de l’accusatif, qui
-elle-même vient toujours en dernier. Prononcez <span class='ekz'>varmajn</span> comme
-<em><u>var</u>m-ail-ne</em> (e muet) et <span class='ekz'>kafojn</span> comme 
-<em><u>ka</u>f-o&iuml;-ne</em> (e muet).</p></div>
-
-<?php 
-} // fin section
-if ($section=="3") {
-?>
-
-<p>En général les compléments autres que les compléments d’objet direct
-(par exemple, les compléments circonstanciels) sont introduits par des
-prépositions et ne prennent pas la marque de l’accusatif <b>-n</b>.  Ceci
-car la préposition qui les introduit nous permet de reconna&icirc;tre leur
-fonction de complément. Nous verrons ces prépositions plus tard, ainsi
-que d’autres cas dans lesquels l’usage de l’accusatif peut être utile,
-y compris après une préposition.</p>
-<p>Avec le verbe <i>être</i> qui n’a jamais de complément d’objet direct, on
-n’utilise pas l’accusatif, car le verbe <i>être</i> implique que le sujet et
-l’attribut sont &#171;équivalents&#187;.</p>
-<p>
-<i>"Elle est belle."</i>   équivaut &agrave;   <i>"Elle = belle."</i>
-</p>
-
-<?php 
-} // fin section
-if ($section=="4") {
-?>
-
-<p>Le suffixe <b>-in</b> vous a déj&agrave; permis d’augmenter votre vocabulaire en
-doublant le nombre d’êtres vivants sexués que vous êtes capable de nommer.
-Quand vous saurez dire <em>cheval</em>, <em>bélier</em>, <em>souris m&acirc;le</em>,
-<em>acteur</em>, etc. vous saurez également dire <em>jument</em>,
-<em>brebis</em>, <em>souris femelle</em>, <em>actrice</em>, etc. </p>
-<p>Le préfixe <b>mal-</b> fera de même en vous permettant de conna&icirc;tre le
-contraire des mots auxquels il s’accole. Quand vous aurez assimilé
-<em>aimer</em>, <em>beau</em>, <em>gauche</em>, <em>vrai</em>, etc. vous saurez
-dire aussi <em>détester</em>, <em>laid</em>, <em>droite</em>, <em>faux</em>, etc.</p>
-<table class='retrait'>
-<tr>
-	<td width='80' class='ekz'>amiko :</td>
-	<td width='120' class='fr'>ami</td>
-	<td width='80' class='ekz'>malamiko :</td>
-	<td width='120' class='fr'>ennemi</td>
-</tr>
-<tr>
-	<td class='ekz'>bela :</td>
-	<td class='fr'>beau</td>
-	<td class='ekz'>malbela :</td>
-	<td class='fr'>laid</td>
-</tr>
-<tr>
-	<td class='ekz'>nova :</td>
-	<td class='fr'>nouveau</td>
-	<td class='ekz'>malnova :</td>
-	<td class='fr'>ancien, vieux</td>
-</tr>
-</table>
-
-<?php 
-} // fin section
-if ($section=="5") {
-?>
-
-<p>Pour mettre une phrase &agrave; la <b>forme négative</b> il suffit d’ajouter le mot
-<b>ne</b> avant le verbe.  </p>
-
-<table class='retrait'>
-<tr>
-	<td width='50'><a href="../son/l02-3.wav"><img src="../pix/icon20.gif"></a></td>
-	<td width='200' class='ekz'>Mi <b>ne</b> sukeras la kafon</td>
-	<td width='200' class='fr'>Je ne sucre pas le café</td>
-</tr>
-</table>
-</p>
-<p>
-<div class='rim'><p><b>Remarque</b> : 
-Prononcez bien <span class='ekz'>ne</span> entre <em>né</em> et <em>nè</em>.
-</p></div>
-
-<?php 
-} // fin section
-if ($section=="6") {
-?>
-
-<p>Maintenant un peu de <b>vocabulaire</b> :</p>
-<table class='voca'>
-<tr>
-	<td class='eo' width='90'>ami</td><td class='fr' width='130'>aimer</td>
-	<td class='eo' width='90'>renkonti</td><td class='fr' width='130'>rencontrer</td>
-	<td class='eo' width='90'>birdo</td><td class='fr' width='130'>oiseau</td>
-</tr>
-<tr>
-	<td class='eo'>fari</td><td class='fr'>faire</td>
-	<td class='eo'>skribi</td><td class='fr'>écrire</td>
-	<td class='eo'>butiko</td><td class='fr'>boutique</td>
-</tr>
-<tr>
-	<td class='eo'>forgesi</td><td class='fr'>oublier</td>
-	<td class='eo'>sukeri</td><td class='fr'>sucrer</td>
-	<td class='eo'>insekto</td><td class='fr'>insecte</td>
-</tr>
-
-<tr>
-	<td class='eo'>havi</td><td class='fr'>avoir</td>
-	<td class='eo'>trinki</td><td class='fr'>boire</td>
-	<td class='eo'>limonado</td><td class='fr'>limonade</td>
-</tr>
-<tr>
-	<td class='eo'>kapti</td><td class='fr'>attraper</td>
-	<td class='eo'>vendi</td><td class='fr'>vendre</td>
-	<td class='eo'>papero</td><td class='fr'>papier</td>
-</tr>
-
-<tr>
-	<td class='eo'>lavi</td><td class='fr'>laver</td>
-	<td class='eo'>vidi</td><td class='fr'>voir</td>
-	<td class='eo'>plumo</td><td class='fr'>plume</td>
-</tr>
-
-<tr>
-	<td class='eo'>peti</td><td class='fr'>demander</td>
-	<td class='eo'>akvo</td><td class='fr'>eau</td>
-	<td class='eo'>taso</td><td class='fr'>tasse</td>
-</tr>
-<tr>
-	<td class='eo'>porti</td><td class='fr'>porter</td>
-	<td class='eo'>amo</td><td class='fr'>amour</td>
-	<td class='eo'>pura</td><td class='fr'>propre</td>
-</tr>	
-</table>
-
-<div class='rim'><p><b>Remarque</b> : 
-N’oubliez pas que vous connaissez aussi les féminins et les contraires
-des mots appris, quand ils sont possibles. Lisez les mots &agrave; haute voix
-en vous reportant aux indications de prononciation de la première
-leçon.</p></div>
-<p>Notez que tous les verbes se conjuguent exactement comme le verbe
-<span class='ekz'>esti</span> en changeant le <b>-i</b> final pour <b>-as</b> au présent,
-<b>-is</b> au passé et <b>-os</b> au futur. Ces trois temps simples nous
-suffiront pour le moment.</p>
-
-<?php 
-} // fin section
-if ($section=="7") {
-?>
-			
-			<p>Traduisez en espéranto :</p>
-			<input type="hidden" name="013_cxap02.1" value="1. Traduisez en espéranto :">
+		<p class="rimarko"><strong>REMARQUE</strong> : 
+		N’oubliez pas que vous connaissez aussi les féminins et les contraires
+		des mots appris, quand ils sont possibles. Lisez les mots à haute voix
+		en vous reportant aux indications de prononciation de la première
+		leçon.</p>
+		
+		<p>Notez que tous les verbes se conjuguent exactement comme le verbe
+		<span class="eo">esti</span> en changeant le <b>-i</b> final pour <b>-as</b> au présent,
+		<b>-is</b> au passé et <b>-os</b> au futur. Ces trois temps simples nous
+		suffiront pour le moment.</p>
+				
+		<?php 
+		} // fin section
+		if ($section=="7") {
+		?>
+				
+		<fieldset class="ekzerco">
+			<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
+			<input type="hidden" name="013_cxap02.1" value="1. Traduisez en espéranto.">
 			<div class="tasko">
 			<?php
 				$demandoj=array (
@@ -250,17 +211,19 @@ if ($section=="7") {
 				ekzerco ("U", 1);
 			?>
 			</div>
-
-<?php 
-} // fin section
-if ($section=="8") {
-?>
-			
-			<p>Remplacez la portion de phrase entre {} par le pronom personnel
-			approprié : li, &#349;i, &#285;i ou ili</p>
-			<p>Ex.: {<i>La knabo</i>} vendas kukojn.  -> <b>Li</b> vendas kukojn. </p>
+		</fieldset>
+		
+		<?php 
+		} // fin section
+		if ($section=="8") {
+		?>
+		
+		<fieldset class="ekzerco">
+			<legend><strong>EXERCICE</strong> : Remplacez la portion de phrase entre { } par le pronom personnel approprié. </legend>
+			<p>Choisissez parmi les pronoms suivants : li, ŝi, ĝi ou ili</p>
+			<p>Ex.: {<i>La knabo</i>} vendas kukojn. → <b>Li</b> vendas kukojn. </p>
 			<?php atentigo();?>
-			<input type="hidden" name="013_cxap02.2" value="2. Remplacez la portion de phrase entre {} par le pronom personnel approprié : li, &#349;i, &#285;i ou ili">
+			<input type="hidden" name="013_cxap02.2" value="2. Remplacez la portion de phrase entre {} par le pronom personnel approprié : li, ŝi, ĝi ou ili">
 			<div class="tasko">
 			<?php
 				$demandoj=array (
@@ -277,17 +240,15 @@ if ($section=="8") {
 				ekzerco("U", 1);
 			?>
 			</div>
-
-
-<?php 
-} // fin section
-if ($section=="9") {
-?>
-			<p>
-			Formez des phrases ayant un sens en utilisant les mots donnés.<br>
-			Attention : vous pouvez être amené &agrave; conjuguer les verbes et &agrave; mettre
-			des mots &agrave; l’accusatif.
-			</p>
+		</fieldset>
+	
+		<?php 
+		} // fin section
+		if ($section=="9") {
+		?>
+		<fieldset class="ekzerco">
+			<legend><strong>EXERCICE</strong> : Formez des phrases ayant un sens en utilisant les mots donnés.</legend>
+			<p>Attention : vous pouvez être amené à conjuguer les verbes et à mettre des mots à l’accusatif.</p>
 			<?php atentigo();	?>
 			<input type="hidden" name="013_cxap02.3" value="3. Formez des phrases ayant un sens en utilisant les mots donnés.">
 			<div class="tasko">
@@ -302,119 +263,59 @@ if ($section=="9") {
 				ekzerco("U", 1);
 			?>
 			</div>
-		
-<?php 
-} // fin section
-if ($section=="10") {
-?>			
+		</fieldset>
 			
-			<input type="hidden" name="013_cxap02.4" value="4. QCM">
-			<div class="tasko" id="qcm">
-				<p>
-					<input type="hidden" name="900 dmd 01" value="Que signifient respectivement 'mala', 'malbona', 'malsana'?">
-					<input type="hidden" name="900 resp 01" value="mal, mauvais, malade/mauvais, mauvais, malade/contraire, mauvais, malade/(pas de réponse)">
-					01. Que signifient respectivement 'mala', 'malbona', 'malsana'?
-				</p><p>
-					<input style="display:none;" type="radio" name="900 01" <?php if($memorkurso["900_01"]==""){echo "checked";}?>>
-					<input type="radio" name="900 01" value="1" <?php if($memorkurso["900_01"]=="1"){echo "checked";}?>> mal, mauvais, malade<br>
-					<input type="radio" name="900 01" value="2" <?php if($memorkurso["900_01"]=="2"){echo "checked";}?>> mauvais, mauvais, malade<br>
-					<input type="radio" name="900 01" value="3" <?php if($memorkurso["900_01"]=="3"){echo "checked";}?>> contraire, mauvais, malade<br>
-				</p><p>
-					<input type="hidden" name="900 dmd 02" value="Que signifie 'malbelaj virinoj'?">
-					02. Que signifie 'malbelaj virinoj'?
-					<input type="hidden" name="900 resp 02" value="des hommes laids/de belles femmes/des femmes laides/(pas de réponse)">
-				</p><p>
-					<input style="display:none;" type="radio" name="900 02" <?php if($memorkurso["900_02"]==""){echo "checked";}?>>
-					<input type="radio" name="900 02" value="1" <?php if($memorkurso["900_02"]=="1"){echo "checked";}?>> des hommes laids<br>
-					<input type="radio" name="900 02" value="2" <?php if($memorkurso["900_02"]=="2"){echo "checked";}?>> de belles femmes<br>
-					<input type="radio" name="900 02" value="3" <?php if($memorkurso["900_02"]=="3"){echo "checked";}?>> des femmes laides<br>
-				</p><p>
-					<input type="hidden" name="900 dmd 03" value="Quel est le féminin pluriel de 'mia granda amiko'?">
-				<input type="hidden" name="900 resp 03" value="miaj grandaj amikinoj/mia granda amikinoj/miaj grandinaj amikinoj/(pas de réponse)">
-					03. Quel est le féminin pluriel de 'mia granda amiko'?
-				</p><p>
-					<input style="display:none;" type="radio" name="900 03" <?php if($memorkurso["900_03"]==""){echo "checked";}?>>
-					<input type="radio" name="900 03" value="1" <?php if($memorkurso["900_03"]=="1"){echo "checked";}?>> miaj grandaj amikinoj<br>
-					<input type="radio" name="900 03" value="2" <?php if($memorkurso["900_03"]=="2"){echo "checked";}?>> mia granda amikinoj<br>
-					<input type="radio" name="900 03" value="3" <?php if($memorkurso["900_03"]=="3"){echo "checked";}?>> miaj grandinaj amikinoj<br>
-				</p><p>
-					<input type="hidden" name="900 dmd 04" value="Traduisez 'la boutique est vieille':">
-					04. Traduisez 'la boutique est vieille':
-					<input type="hidden" name="900 resp 04" value="la butiko estas malbela/la butiko estas malnovan/la butiko estas malnova/(pas de réponse)">
-				</p><p>
-					<input style="display:none;" type="radio" name="900 04" <?php if($memorkurso["900_04"]==""){echo "checked";}?>>
-					<input type="radio" name="900 04" value="1" <?php if($memorkurso["900_04"]=="1"){echo "checked";}?>> la butiko estas malbela<br>
-					<input type="radio" name="900 04" value="2" <?php if($memorkurso["900_04"]=="2"){echo "checked";}?>> la butiko estas malnovan<br>
-					<input type="radio" name="900 04" value="3" <?php if($memorkurso["900_04"]=="3"){echo "checked";}?>> la butiko estas malnova<br>
-				</p><p>
-					<input type="hidden" name="900 dmd 05" value="Traduisez 'je ne bois pas d’eau':">
-					05. Traduisez 'je ne bois pas d’eau':
-					<input type="hidden" name="900 resp 05" value="mi maltrinkas akvon/mi ne trinkas akvon/mi trinkas ne akvon/(pas de réponse)">
-				</p><p>
-					<input style="display:none;" type="radio" name="900 05" <?php if($memorkurso["900_05"]==""){echo "checked";}?>>
-					<input type="radio" name="900 05" value="1" <?php if($memorkurso["900_05"]=="1"){echo "checked";}?>> mi maltrinkas akvon<br>
-					<input type="radio" name="900 05" value="2" <?php if($memorkurso["900_05"]=="2"){echo "checked";}?>> mi ne trinkas akvon<br>
-					<input type="radio" name="900 05" value="3" <?php if($memorkurso["900_05"]=="3"){echo "checked";}?>> mi trinkas ne akvon<br>
-				</p><p>
-					<input type="hidden" name="900 dmd 06" value="Traduisez 'j’ai oublié la limonade' :">
-					06. Traduisez 'j’ai oublié la limonade':
-					<input type="hidden" name="900 resp 06" value="mi petis limonadon/mi havas forgesi la limonadon/mi forgesis la limonadon/(pas de réponse)">
-				</p><p>
-					<input style="display:none;" type="radio" name="900 06"  <?php if($memorkurso["900_06"]==""){echo "checked";}?>>
-					<input type="radio" name="900 06" value="1" <?php if($memorkurso["900_06"]=="1"){echo "checked";}?>> mi petis limonadon<br/>
-					<input type="radio" name="900 06" value="2" <?php if($memorkurso["900_06"]=="2"){echo "checked";}?>> mi havas forgesi la limonadon<br/>
-					<input type="radio" name="900 06" value="3" <?php if($memorkurso["900_06"]=="3"){echo "checked";}?>> mi forgesis la limonadon<br/>
-				</p><p>
-					<input type="hidden" name="900 dmd 07" value="Quel est le complément d'objet direct dans 'mon frère boira de l’eau lundi'?">
-					07. Quel est le complément d'objet direct dans 'mon frère boira de l’eau lundi'?
-					<input type="hidden" name="900 resp 07" value="mon frère/de l’eau/lundi/(pas de réponse)">
-				</p><p>
-					<input style="display:none;" type="radio" name="900 07"  <?php if($memorkurso["900_07"]==""){echo "checked";}?>>
-					<input type="radio" name="900 07" value="1" <?php if($memorkurso["900_07"]=="1"){echo "checked";}?>> mon frère<br/>
-					<input type="radio" name="900 07" value="2" <?php if($memorkurso["900_07"]=="2"){echo "checked";}?>> de l’eau<br/>
-					<input type="radio" name="900 07" value="3" <?php if($memorkurso["900_07"]=="3"){echo "checked";}?>> lundi<br/>
-				</p><p>
-					<input type="hidden" name="900 dmd 08" value="Quel est le complément d’objet direct dans 'que boira mon frère lundi'?">
-					08. Quel est le complément d’objet direct dans 'que boira mon frère lundi'?
-					<input type="hidden" name="900 resp 08" value="que/mon frère/lundi/(pas de réponse)">
-				</p><p>
-					<input style="display:none;" type="radio" name="900 08"  <?php if($memorkurso["900_08"]==""){echo "checked";}?>>
-					<input type="radio" name="900 08" value="1" <?php if($memorkurso["900_08"]=="1"){echo "checked";}?>> que<br/>
-					<input type="radio" name="900 08" value="2" <?php if($memorkurso["900_08"]=="2"){echo "checked";}?>> mon frère<br/>
-					<input type="radio" name="900 08" value="3" <?php if($memorkurso["900_08"]=="3"){echo "checked";}?>> lundi<br/>
-				</p><p>
-					<input type="hidden" name="900 dmd 09" value="Quelle est la fonction de 'médecin' dans 'tu seras médecin'?">
-					09. Quelle est la fonction de 'médecin' dans 'tu seras médecin'?
-					<input type="hidden" name="900 resp 09" value="sujet/complément d’objet direct/attribut du sujet/(pas de réponse)">
-				</p><p>
-					<input style="display:none;" type="radio" name="900 09"  <?php if($memorkurso["900_09"]==""){echo "checked";}?>>
-					<input type="radio" name="900 09" value="1" <?php if($memorkurso["900_09"]=="1"){echo "checked";}?>> sujet<br/>
-					<input type="radio" name="900 09" value="2" <?php if($memorkurso["900_09"]=="2"){echo "checked";}?>> complément d’objet direct<br/>
-					<input type="radio" name="900 09" value="3" <?php if($memorkurso["900_09"]=="3"){echo "checked";}?>> attribut du sujet<br/>
-				</p>
-		</div>
+		<?php 
+		} // fin section
+		if ($section=="10") {
+		?>			
+		<p>Résumons-nous.</p>
+		<p>Vous avez maintenant appris à former le féminin de tout nom
+		d’être vivant et le contraire de tout mot (nom, adjectif, verbe, etc.) pour
+		peu que ceux-ci aient un sens. Vous avez constaté que tous les verbes se
+		conjuguent comme le verbe <span class="eo">esti</span> que vous connaissiez déjà, et vous
+		avez appris la structure <b>-a -o -as -an -on</b> qui vous permet
+		d’exprimer l’action d’un sujet sur quelque chose ou quelqu’un d’autre. Pas
+		mal, non&nbsp;?
+		</p>
+		<p>Vous pouvez maintenant envoyer vos exercices à votre correcteur. Mais avant, nous vous proposons un petit QCM pour vous permettre de faire le point sur ce que vous avez appris. Voyez vite page suivante&nbsp;!
+		</p>
 
 		
-<?php 
-} // fin section
-if ($section=="11") {
-?>
-			<p>
-			Résumons-nous. Vous avez maintenant appris &agrave; former le féminin de tout nom
-			d’être vivant et le contraire de tout mot (nom, adjectif, verbe, etc.) pour
-			peu que ceux-ci aient un sens. Vous avez constaté que tous les verbes se
-			conjuguent comme le verbe <span class="ekz">esti</span> que vous connaissiez déj&agrave;, et vous
-			avez appris la structure <b>-a -o -as -an -on</b> qui vous permet
-			d’exprimer l’action d’un sujet sur quelque chose ou quelqu’un d’autre. Pas
-			mal, non&#160;?
-			</p>
-			<p>
-			Vous pouvez maintenant envoyer vos exercices à votre correcteur.
-			</p>
-		
-<?php 
-} // fin section 
-?>	
+	<?php 
+	} // fin section
+	if ($section=="11") {
+	?>
+	<p>Voici un petit exercice de révision. Sélectionnez la réponse exacte en 
+	cliquant sur le bouton associé. Si vous ne savez pas quelle réponse donner à une question, n’hésitez pas à relire le cours&nbsp;: toutes les réponses s’y trouvent&nbsp;!</p>
+
+	<input type="hidden" name="013_cxap02.4" value="QCM">
+	<div class="tasko" id="qcm">
+		<?php
+			questionQCM("01", "Que signifient respectivement 'mala', 'malbona', 'malsana' ?", 
+			array("mal, mauvais, malade", "mauvais, mauvais, malade", "contraire, mauvais, malade", "(pas de réponse)"),$eraroj,$memorkurso);				
+			questionQCM("02", "Que signifie 'malbelaj virinoj' ?",
+			array("des hommes laids", "de belles femmes", "des femmes laides", "(pas de réponse)"),$eraroj,$memorkurso);
+			questionQCM("03", "Quel est le féminin pluriel de 'mia granda amiko' ?",
+			array("miaj grandaj amikinoj", "mia granda amikinoj", "miaj grandinaj amikinoj", "(pas de réponse)"),$eraroj,$memorkurso);
+			questionQCM("04","Traduisez 'la boutique est vieille'", 
+			array("la butiko estas malbela", "la butiko estas malnovan","la butiko estas malnova", "(pas de réponse)"),$eraroj,$memorkurso);
+			questionQCM("05", "Traduisez 'je ne bois pas d’eau':", 
+			array("mi maltrinkas akvon", "mi ne trinkas akvon", "mi trinkas ne akvon", "(pas de réponse)"),$eraroj,$memorkurso);
+			questionQCM("06", "Traduisez 'j’ai oublié la limonade' :",
+			array("mi petis limonadon", "mi havas forgesi la limonadon", "mi forgesis la limonadon", "(pas de réponse)"),$eraroj,$memorkurso);
+			questionQCM("07", "Quel est le complément d’objet direct dans 'mon frère boira de l’eau lundi' ?",
+			array("mon frère", "de l’eau", "lundi", "(pas de réponse)"),$eraroj,$memorkurso);
+			questionQCM("08", "Quel est le complément d’objet direct dans 'que boira mon frère lundi' ?",
+			array("que", "mon frère", "lundi", "(pas de réponse)"),$eraroj,$memorkurso);
+			questionQCM("09", "Quelle est la fonction de 'médecin' dans 'tu seras médecin' ?",
+			array("sujet", "complément d’objet direct", "attribut du sujet", "(pas de réponse)"),$eraroj,$memorkurso);
+		?>
+	</div>
+			
+	<?php 
+	} // fin section 
+	?>	
 		</section>
 
 		<section id="leciono-fino">

@@ -304,3 +304,27 @@ CREATE TABLE respondoj (
 PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
 -- modification pour avoir des utilisateurs sans cours choisi :
 ALTER TABLE `personoj` CHANGE `kurso` `kurso` VARCHAR(2) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '';
+
+-- correction dans la table des leçons --
+UPDATE lecioneroj SET titolo = 'Épilogue' WHERE id= 8
+UPDATE lecioneroj SET titolo = 'Exercice 1' WHERE id=15
+UPDATE lecioneroj SET titolo = 'Exercice 2' WHERE id=16
+UPDATE lecioneroj SET titolo = 'Exercice 3' WHERE id=17
+UPDATE lecioneroj SET titolo = 'Exercice 1' WHERE id=21
+UPDATE lecioneroj SET titolo = 'Exercice 2' WHERE id=26
+UPDATE lecioneroj SET titolo = 'Exercice 3' WHERE id=28
+UPDATE lecioneroj SET titolo = 'Exercice 4' WHERE id=30
+UPDATE lecioneroj SET titolo = 'Exercice 1' WHERE id=33
+UPDATE lecioneroj SET titolo = 'Exercice 2 : pratique du vocabulaire' WHERE id=40
+UPDATE lecioneroj SET titolo = 'Exercices 3 et 4' WHERE id=41
+UPDATE lecioneroj SET titolo = 'Exercices 1 et 2' WHERE id=48
+UPDATE lecioneroj SET titolo = 'Second récit et vocabulaire' WHERE id=58
+UPDATE lecioneroj SET titolo = 'Exercice 2' WHERE id=61
+UPDATE lecioneroj SET titolo = 'Exercice 3' WHERE id=64
+UPDATE lecioneroj SET titolo = 'Exercice 4' WHERE id=66
+UPDATE lecioneroj SET titolo = 'Exercices' WHERE id=70
+UPDATE lecioneroj SET titolo = 'Exercice 1' WHERE id=76
+UPDATE lecioneroj SET titolo = 'Exercice 2' WHERE id=77
+UPDATE lecioneroj SET titolo = 'Exercice 3' WHERE id=79
+UPDATE lecioneroj SET titolo = 'Exercice' WHERE id=89
+

@@ -25,9 +25,21 @@ h2 {font-size: 2.5rem; color: #989490;}
 h3 {font-size: 2rem; margin: 2rem 0 1.5rem 0; color: #554E47;}
 h4 {font-size: 1.5rem; margin: 2rem 0 1.5rem 0; color: #554E47;font-weight: 300;}
 
-a {color: #0299e6;}
+a {color: #2196F3;}
 
 .card-panel h5 {margin-bottom: 1.5rem;}
+
+/*---- surcharge formulaires -----*/
+
+.input-field label {color: #75706B;}
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #2196F3;
+    box-shadow: 0 1px 0 0 #2196F3;
+}     
+input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #2196F3;
+}
+/*--------------------------------*/
 
 p {font-weight: 300;}
 p.chapo {font-size: 150%;}
@@ -54,11 +66,18 @@ div.col > p:first-child {
 }
 
 /* remarques et notes */
-.noto {font-size: 80%;}
+.noto {
+	margin-top:2em;
+}
 
 .toast {background-color: #e65100;}
 
 .pinned {margin-right:1rem;}
+
+/* styles specifiques */
+.eo {color: #2196F3;}
+.noto strong {color: #2196F3;}
+.eta {font-size: 85%;}
 
 /* amélioration de l'affichage s12 */
 
@@ -67,7 +86,6 @@ div.col > p:first-child {
 		margin-top: 2em;
 	}
 }
-
 /*---------------  cards ---------------*/
 .card {padding: 1rem;}
 
@@ -224,9 +242,9 @@ ul#lecionoj li.farita a {
 	margin:0;
 }
 #enhavtabelo li {
-	font-size:90%;
+	font-size:85%;
 	line-height:1.8em;
-	font-weight: 400;
+	font-weight: 300;
 }
 ul#enhavtabelo li::before {
 	font-family: 'Material Icons';
@@ -306,8 +324,53 @@ ul#progreso li.nuna {
 	border:1px solid #0299e6;
 }
 
-/********** fin de la leçon *******/
+/********** corps de la leçon *******/
 
+#leciono-enhavo a { 
+	text-decoration: underline;
+}
+#leciono-enhavo a.btn { 
+	text-decoration: none;
+}
+#leciono-enhavo a:hover {color: #0d47a1}
+#leciono-enhavo a:active {color: #673ab7;}
+
+p.parto:before {
+	font-family: 'Material Icons';
+	content: "texture";
+	-webkit-font-feature-settings: 'liga';
+	color: #2196F3;
+	padding-right: 0.5em;
+	vertical-align: middle;
+}
+
+.eo {color: #2196F3;}
+
+
+.vortlisto {
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+.vortlisto p {
+	margin-bottom: 0;
+}
+.vortlisto i.material-icons {
+	vertical-align: text-bottom;
+	color: #2196F3;
+}
+.vortlisto i.material-icons:hover {
+	color: #6d4c41;
+}
+
+a[type="audio/mp3"] i.material-icons {
+	vertical-align: text-bottom;
+}
+
+
+/********** fin de la leçon *******/
+.notoj {
+	font-size: 90%;
+}
 .ligoj {
 	display: flex;
 	flex-direction: row;
@@ -315,8 +378,37 @@ ul#progreso li.nuna {
 	align-items: flex-end;
 	margin-top:0.5em;
 }
+.ligoj i {font-size: inherit;}
 #leciono-fino {margin-top: 2rem;}
 
+/********** exercices *******/
+fieldset.ekzerco {
+	border:2px dotted #64B5F6;
+	padding:0 1em 1em 1em;
+	margin-top: 1em;
+}
+fieldset.ekzerco + fieldset.ekzerco,
+fieldset.ekzerco + div.vortlisto {
+	margin-top: 1em;
+}
+	
+fieldset.ekzerco legend:before {
+	font-family: 'Material Icons';
+	content: "edit";
+	-webkit-font-feature-settings: 'liga';
+	color: #2196F3;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	vertical-align: middle;
+}
+fieldset.ekzerco legend {
+	padding-right: 1em;
+}
+.tasko div.input-field {
+	margin-top: 0;
+	line-height: 100%;
+	margin-bottom: 1em;
+}
 /********** évaluation (fin de leçon) *******/
 
 #leciono-enketo {
@@ -350,7 +442,7 @@ ul#progreso li.nuna {
 /**************************************/
 
 /******* home *******/
-.hejmo #enkonduko h2 span {
+span.ikurso {
 	font-family: 'Nothing You Could Do', cursive;
 }
 .hejmo #enkonduko h2 {

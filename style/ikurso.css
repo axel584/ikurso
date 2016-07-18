@@ -437,6 +437,14 @@ fieldset.ekzerco legend {
     right: 0em;
     content: attr(max);
 }
+
+/********** lexique de la leçon *******/
+@media only screen and (min-width: 992px) {
+	.lexique {
+		columns: 2;
+		column-gap: 2em;
+	}
+}
 /**************************************/
 /*        contenu des pages           */
 /**************************************/

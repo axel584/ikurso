@@ -118,7 +118,7 @@ $pagxtitolo="Cours d’espéranto en dix leçons";
 
 include $vojo."pagxkapo.inc.php";
 ?>
-	   
+<script type="text/javascript" src="../../xAlUtf8.js"></script>	   
 		<header id="superrigardo">
 			<p>Cours d'espéranto en dix leçons :</p>
 			<ul id="lecionoj">

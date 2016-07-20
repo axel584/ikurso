@@ -40,20 +40,26 @@ include "dlekkapo.inc.php"
 			<div class="row">
 				<div class="col s12">
 					<div class="card-panel blue lighten-5">
-						<h5 class="center">Je veux apprendre l’espéranto&nbsp;!</h5>
-						<div class="row">
-							<div class="col s12 m6">
+						<!-- N'a pas encore de compte -->
+						<?php if ($persono_id=="") { ?>
+							<h5 class="center">Je veux apprendre l’espéranto&nbsp;!</h5>
+							<div class="row">
 								<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
 								<p><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
+							<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>
 							</div>
-							<div class="col s12 m6">
-									<p>J’ai déjà un compte&nbsp;: je commence le cours tout de suite !<br><span class="noto">(Je pourrai m’inscrire au service de correction à la fin de la première leçon.)</span>
+							<!-- A déjà un compte -->
+							<?php } else { ?>
+								<h5 class="center">Je commence le cours tout de suite !</h5>
+								<div class="row">
+									<p><span class="noto">Je lis attentivement chaque page de la leçon, je fais les exercices et je pourrai m’inscrire au service de correction à la fin de la première leçon. Mes exercices seront automatiquement envoyé à mon correcteur quand les administrateurs du cours m'en auront attribué un.</span>
 									<p><a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
 									</p>
-							</div>
+									<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>
+							</div>		
+							<?php } ?>
 						</div>
-						<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>
-					</div>
+				
 				</div>
 			</div>
 

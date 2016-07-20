@@ -262,7 +262,7 @@ include "dlekkapo.inc.php";
 				34 => "Fermez la porte et asseyez-vous ici.",
 				35 => "Nous avons admiré beaucoup de bêtes."
 				);
-				ekzerco("U",1);
+				ekzerco(True,1);
 			?>
 			</div>
 		</fieldset>
@@ -280,7 +280,7 @@ include "dlekkapo.inc.php";
 				39 => "ŝia edzo  (son mari à elle) (sa femme à lui)",
 				40 => "ilia urbo  (sa ville à lui) (leur ville à eux)"
 				);
-				ekzerco("X",1);
+				ekzerco(False,1);
 			?>
 			</div>
 		</fieldset>
@@ -331,7 +331,7 @@ include "dlekkapo.inc.php";
 				54 => "ce qui sert à augmenter, à amplifier :",
 				55 => "ce qui indique que c’est digne de quelque chose :"
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 		</fieldset>
@@ -344,7 +344,7 @@ include "dlekkapo.inc.php";
 				$demandoj=array (
 			   56 => "<br>Bonjour&nbsp;! Mon nom est Jacques. Je suis jardinier et j’aime beaucoup les fleurs. Je travaille dans le jardin zoologique de Granby, cela veut dire que j’aime aussi les bêtes. Quand je suis en train de travailler, je chante souvent. Tous mes amis me disent que les fleurs du zoo sont belles parce que je chante avec joie. Est-ce que vous pensez que cela est possible&nbsp;?" 
 				);
-				ekzerco("U", 10);
+				ekzerco(True, 10);
 			?>
 			</div>
 		</fieldset>
@@ -357,7 +357,7 @@ include "dlekkapo.inc.php";
 				$demandoj=array (
 				57 => "<br>Kara amikino,<br>Jen mia unua letero al vi. Mi deziras interŝanĝi leterojn kaj amikiĝi kun vi. Mi estas esperantisto de nur du monatoj sed mi progresas rapide, ĉar mi studas la lingvon ĉiun tagon. Mi deziras multe vojaĝi tra la mondo kaj se mi estus riĉa, tio estus tre facila. Mi kredas, ke Esperanto estas utila por trovi geamikojn en multaj landoj. Se vi opinias, ke ni povas interŝanĝi amikaĵojn, skribu al mi kaj mi certe respondos. Dankon kaj ĝis baldaŭ!<br>Via kanada amiko, Petro."
 				);
-				ekzerco("X", 10);
+				ekzerco(False, 10);
 			?>
 			</div>
 		</fieldset>

@@ -14,7 +14,7 @@ include "gerdakapo.inc.php";
 				4 => "Kiu sidas &#265;e la muro? (Tom / Bob / linda / Gerda / la flegistino)",
 				5 => "&#264;u Bob paroladas? (jes / ne)"
 				);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

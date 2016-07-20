@@ -187,4 +187,8 @@
 	});
 
 
+$(".player-audio a").click(function() {
+  aler("coucou");
+});
+
   });

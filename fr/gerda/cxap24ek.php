@@ -14,7 +14,7 @@ include "gerdakapo.inc.php";
 				5 => "Kion profesoro Kosadi eksciis pri la trezoro? Kion li ne povis kompreni?",
 				6 => "Kiel Marta eksciis pri la trezoro?"
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 
@@ -126,7 +126,7 @@ include "gerdakapo.inc.php";
 			17 => "POST KIAM &#265;iu FORGESIS &#284;IN, la libro atendis multajn jarcentojn en la biblioteko.",
 			18 => "TUJ ANTA&#365; OL LI MALFERMIS la pordon, li subite konsciis pri stranga bruo venanta de &#285;ia alia flanko."
 			);
-			ekzerco("U",1);
+			ekzerco(True,1);
 			?>
 			</div>
 		</div> <!-- klarigo -->

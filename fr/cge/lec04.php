@@ -66,7 +66,7 @@ include "dlekkapo.inc.php";
 					2 => "Mia filo forgesis la teon.",
 					3 => "La tago estas griza."
 					);
-					ekzerco("U", 1);
+					ekzerco(True, 1);
 				?>
 				</div>
 			</fieldset>
@@ -422,7 +422,7 @@ include "dlekkapo.inc.php";
 					7 => "La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.",
 					8 => "Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras a&#265;eti sandvi&#265;on. Li man&#285;os ilin vespere."
 					);
-					ekzerco("X", 2);
+					ekzerco(False, 2);
 				?>
 				</div>
 			</fieldset>
@@ -451,7 +451,7 @@ include "dlekkapo.inc.php";
 					18 => "Sont-ils de bons amis ?",
 					19 => "Ta mère vient-elle d’Europe ?",
 					);
-					ekzerco("U", 2);
+					ekzerco(True, 2);
 				?>
 				</div>
 			</fieldset>
@@ -472,7 +472,7 @@ include "dlekkapo.inc.php";
 					23 => "Avez-vous deux euros et trente centimes (euro = eŭro, centime = cendo) ?",
 					24 => "Avez-vous vu la nouvelle pièce de théâtre ?",
 					);
-					ekzerco("U", 2);
+					ekzerco(True, 2);
 				?>
 				</div>
 			</fieldset>

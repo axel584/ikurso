@@ -14,7 +14,7 @@ include "gerdakapo.inc.php";
 				4 => "Kiu ekstaras kaj iras al la pordo? (Linda / Gerda / la juna viro, kiu metis ion en la kafon de Gerda / Bob / Tom)",
 				5 => "Kiu sekvas? (Linda / Gerda / la juna viro, kiu metis ion en la kafon de Gerda / Bob / Tom)"
 				);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

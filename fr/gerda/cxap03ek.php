@@ -13,7 +13,7 @@ include "gerdakapo.inc.php";
 				4 => "Kiu ne volas esti maldiskreta? (Bob / Tom / Linda / Gerda / la blondulo)",
 				5 => "Kio estas sur la viza&#285;o de Linda? (bela deklaro / bona tago / mistera esprimo / io pli grava)"
 				);
-				ekzerco("U", 2);
+				ekzerco(True, 2);
 			?>
 			</div>
 
@@ -27,7 +27,7 @@ include "gerdakapo.inc.php";
 				7 => "{ -e -is mi post- re- -ven- }",
 				8 => "{ -a- al -as -in- -j -j jun- knab- -o -o- parol- vir- }"
 			);
-			ekzerco("U", 1);
+			ekzerco(True, 1);
 			?>
 			</div>
 		</div> <!-- klarigo -->

@@ -15,7 +15,7 @@ include "gerdakapo.inc.php";
 				6 => "Kial la &#349;tatoj persekutis ilin?",
 				7 => "Kiam la a&#265;ulo foriras?"
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

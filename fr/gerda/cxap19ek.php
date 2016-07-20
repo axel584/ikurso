@@ -13,7 +13,7 @@ include "gerdakapo.inc.php";
 				4 => "&#264;u Petro estas timigita?",
 				5 => "Kion Ralf rakontas pri la virino?"
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

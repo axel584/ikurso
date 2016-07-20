@@ -15,7 +15,7 @@ include "gerdakapo.inc.php";
 				6 => "Kie nun staras Linda?",
 				7 => "Kion &#349;i timas vidante la forveturantan a&#365;ton?"
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

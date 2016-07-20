@@ -53,7 +53,10 @@ include "dlekkapo.inc.php";
 
 		<p>Voyons l’exemple de Robert Lebrun :</p>
 		<div class="vortlisto">
-			<p><a href="../son/l05.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+			<p><a class="player-audio" href="../son/l05.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+			<p><audio src="../son/l05.mp3">Votre navigateur ne gère pas la lecture des fichiers audio</audio>
+			<button><i class="material-icons">volume_up</i></button>
+			</p>
 			<p>Saluton !<br>
 			Mia nomo estas Roberto Bruno. Mi loĝas en Kanado. Mi komencis
 			lerni Esperanton antaŭ kvar semajnoj. Ĝi estas tre facila lingvo.
@@ -309,7 +312,7 @@ include "dlekkapo.inc.php";
 			9 => "Esperanto estas {tre} facila.",
 			10 => "Mi trinkas teon kun {Fatima}."
 			);
-			ekzerco("U", 1);
+			ekzerco(True, 1);
 		?>
 		</div>
 		</fieldset>
@@ -336,7 +339,7 @@ include "dlekkapo.inc.php";
 				23 => "Je ne suis l’épouse de personne.",
 				24 => "Qui sont-ils&nbsp;?"
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 		</fieldset>

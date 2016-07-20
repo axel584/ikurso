@@ -17,7 +17,7 @@ include "gerdakapo.inc.php";
 				8 => "Kio estas Linda?",
 				9 => "Kion rimarkas Linda post la telera milito?"
 				);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

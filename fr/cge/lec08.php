@@ -151,7 +151,7 @@ include "dlekkapo.inc.php";
 				7 => "Sur le point de chanter, il se mit à rire. (préfixe ek-)",
 				8 => "Elle se mit à rougir en griffonnant le nom du garçon."
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 		</fieldset>
@@ -175,7 +175,7 @@ include "dlekkapo.inc.php";
 					9 => "<br>Juĝisto:  Ĉu vi do asertas, ke vi iris en la domon opiniante, ke ĝi estas via domo ?<br>Akuzato: Jes, sinjoro juĝisto.<br>Juĝisto:  Sed kial vi forkuris, kiam la sinjorino envenis ?<br>Akuzato: Mi opiniis, ke ŝi estas mia edzino !",
 					10 => "<br>Patrino en tramo: Joĉjo, kial vi sidas kun fermitaj okuloj ? Ĉu vi estas laca ?<br>Joĉjo: Ne ! Ne plaĉas al mi vidi starantajn virinojn."
 				   );
-					ekzerco("X", 5);
+					ekzerco(False, 5);
 				?>
 				</div>
 			</fieldset>

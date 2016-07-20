@@ -15,7 +15,7 @@ include "gerdakapo.inc.php";
 				5 => "&#264;u li a&#365;dis bruon?",
 				6 => "&#264;u Bob vere mortis?"
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 
@@ -42,7 +42,7 @@ include "gerdakapo.inc.php";
 				15 => "Gerda estas en la a&#365;to de {la} amiko {de Gerda}.",
 				16 => "{Petro kaj Ivano} ka&#349;as {Petron kaj Ivanon} sub la tablo."
 				);
-				ekzerco("U",1);
+				ekzerco(True,1);
 			?>
 			</div>
 		</div> <!-- klarigo -->

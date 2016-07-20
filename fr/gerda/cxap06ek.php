@@ -12,7 +12,7 @@ include "gerdakapo.inc.php";
 				3 => "Kiuj iras vidi? (Linda kaj Tom / Linda kaj Bob / Bob kaj Tom / &#265;iuj tri)",
 				4 => "Kiu restas por observi? (Tom / Bob / Linda / la blondulo / Gerda)"
 				);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

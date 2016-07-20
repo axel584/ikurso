@@ -88,7 +88,7 @@ la leçon précédente.</p>
 	6 => "neniu",
 	7 => "nenies"
 	);
-	ekzerco("X", 1);
+	ekzerco(False, 1);
 ?>
 </div>
 
@@ -260,7 +260,7 @@ Encore des <b>prépositions</b> :
 	16 => "Per kio vi veturis al la Zoologia &#284;ardeno&#160;?",
 	17 => "Kiuj bestoj estis por vi tre interesaj&#160;?"
 	);
-	ekzerco("U", 1);
+	ekzerco(True, 1);
 ?>
 </div>
 
@@ -371,7 +371,7 @@ l’accusatif.<br>Ex.:  Vi similas al via patro. --> Vi similas vian patron.</p>
 	25 => "La strato estas lar&#285;a JE* 50 metroj.",
 	26 => "D-ro (Doktoro) Zamenhof naski&#285;is JE* la 15a de decembro 1859. (naski&#285;i = naître)"
 	);
-	ekzerco("U", 1);
+	ekzerco(True, 1);
 ?>
 </div>
 
@@ -459,7 +459,7 @@ Ex: &#348;i* a&#265;etas &#349;uoj* al la infanoj* -> &#348;i a&#265;etas &#349;
 	$demandoj=array (
 	"" => "Mi* veturis al la zoologia* &#285;ardeno* kun Petro*. Li* tre deziris veturi tie*. En la zoo* li admiris ursoj* kaj simioj*. Kiam la blanka urso vidis Petro*, &#285;i kuris en la akvo*. Ni atendis kvin minutoj*  por vidi, kio* la urso* faros poste, sed &#285;i* ne iris el la akvo* kaj en la akvo* &#285;i nenio* faris. Ni revenis Montrealo* vespere*."
 	);
-	ekzerco("U", 5);
+	ekzerco(True, 5);
 ?>
 </div>
 

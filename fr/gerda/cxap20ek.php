@@ -15,7 +15,7 @@ include "gerdakapo.inc.php";
 				6 => "Por kio foriras Linda?",
 				7 => "Kial la policano petas, ke Bob restu kun Gerda?"			
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

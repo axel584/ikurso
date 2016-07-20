@@ -29,7 +29,7 @@ include "gerdakapo.inc.php";
 				4 => "Kiu estas (eble) la plej bela virino en la mondo? (Tom / Linda / blonda viro / bela knabino / maljuna viro)",
 				5 => "Kiu estas (eble) la plej malserioza knabo en la universitato? (Tom / Linda / blonda viro / bela knabino / maljuna viro)"
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 
@@ -51,7 +51,7 @@ include "gerdakapo.inc.php";
 				12 => "{ al -as -in- ir- knab- li -o }",
 				13 => "{ -a -as est- mal- serioz- vi }"
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 
@@ -65,7 +65,7 @@ include "gerdakapo.inc.php";
 				16 => "Vi estas serioza",
 				17 => "Vi laboras malserioze"
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 

@@ -12,7 +12,7 @@ include "gerdakapo.inc.php";
 				3 => "Kio mirigas la tri studentojn?",
 				4 => "Kie, la&#365; la malnova dokumento, trovi&#285;as la trezoro?"
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 
@@ -135,7 +135,7 @@ include "gerdakapo.inc.php";
 			15 => "Mi devis atendi la buson, kiu venis poste.",
 			16 => "&#348;i longe adia&#365;is la amikon, kiu devis foriri."
 			);
-			ekzerco("U",1);
+			ekzerco(True,1);
 			?>
 			</div>
 		</div> <!-- klarigo -->

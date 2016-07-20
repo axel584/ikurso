@@ -18,7 +18,7 @@ include "gerdakapo.inc.php";
 				6 => "Kiu estas profesoro pri lingvistiko? (Bob / Linda / Tom / Gerda / Ronga / la blondulo)",
 				7 => "Kiu estas la sola bela virino en la tuta mondo, por Tom? (Gerda / Linda / Ronga / la knabino en la angulo)",
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

@@ -12,7 +12,7 @@ include "gerdakapo.inc.php";
 				3 => "Kiun Tom volas informi? (la blondulon / la profesoron pri lingvistiko / la a&#365;toritatojn / spionon)",
 				4 => "&#264;u iu, kiu perdis la konscion, ku&#349;u kun la kapo pli alta ol la piedoj? (jes / ne)"
 				);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

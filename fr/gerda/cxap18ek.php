@@ -15,7 +15,7 @@ include "gerdakapo.inc.php";
 				6 => "Kia estas la vo&#265;o de la filino de Gerda?",
 				7 => "Kion Gerda ricevas por man&#285;i?"
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

@@ -13,7 +13,7 @@ include "gerdakapo.inc.php";
 				4 => "&#264;u estas normale promeni kun sukerpecoj en la po&#349;o? (jes / ne)",
 				5 => "Kiu ekiras for? (Linda / Gerda / Tom / Bob / la blondulo)"
 				);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

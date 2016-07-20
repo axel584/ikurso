@@ -55,7 +55,7 @@ répondre par <i>oui</i> ou par <i>non</i> (questions &#171;fermées&#187;).
 	2 => "Mia filo forgesis la teon.",
 	3 => "La tago estas griza."
 	);
-	ekzerco("U", 1);
+	ekzerco(True, 1);
 ?>
 </div>
 
@@ -383,7 +383,7 @@ Par ailleurs, les prénoms de femme en <b>-a</b> sont assez fréquents.</p>
 	7 => "La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.",
 	8 => "Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras a&#265;eti sandvi&#265;on. Li man&#285;os ilin vespere."
 	);
-	ekzerco("X", 2);
+	ekzerco(False, 2);
 ?>
 </div>
 	
@@ -407,7 +407,7 @@ Par ailleurs, les prénoms de femme en <b>-a</b> sont assez fréquents.</p>
 	18 => "Sont-ils de bons amis&#160;?",
 	19 => "Ta mère vient-elle d’Europe&#160;?",
 	);
-	ekzerco("U", 2);
+	ekzerco(True, 2);
 ?>
 </div>
 <p>Répondre maintenant en espéranto avec des phrases complètes (pas
@@ -425,7 +425,7 @@ Ex.:  &#348;i ne man&#285;as &#265;okoladon, sed panon.</p>
 	23 => "Avez-vous deux euros et trente centimes (euro = e&#365;ro, centime = cendo)&nbsp;?",
 	24 => "Avez-vous vu la nouvelle pièce de théâtre&nbsp;?",
 	);
-	ekzerco("U", 2);
+	ekzerco(True, 2);
 ?>
 </div>
 

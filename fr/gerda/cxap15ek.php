@@ -17,7 +17,7 @@ include "gerdakapo.inc.php";
 				8 => "Kial &#349;i tamen ne faras tion?",
 				9 => "Kion trinkis Linda?"
 				);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

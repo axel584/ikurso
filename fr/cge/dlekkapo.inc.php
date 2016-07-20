@@ -29,10 +29,10 @@ function atentigo() {
 	echo "<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>&nbsp;:&nbsp;";
 	echo "en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
 }
-function ekzerco($sist, $nbLig) {
+function ekzerco($x2u, $nbLig) {
 	global $demandoj, $memorkurso, $persono_id, $numcxap;
 	//
-	// sist = sistemo uzata en la ekzerco. Se =U, ni uzas la auxtomatan anstatauxigon de x per cxapelo
+	// x2u = sistemo uzata en la ekzerco. Se true, ni uzas la auxtomatan anstatauxigon de x per cxapelo
 	// nbLig = nombro da linioj por cxiuj respondo. Se = 1, ni uzas <input>, ne pli da, ni uzas <textarea>
 	//
 	if ($persono_id=="") {
@@ -51,7 +51,9 @@ function ekzerco($sist, $nbLig) {
 			if ($idenfication==False && $numcxap<>"01") {
 				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
-			echo " onkeyup='xAlUtf8(this)' ";
+			if ($x2u) {
+				echo " onkeyup='xAlUtf8(this)' ";
+			}
 			echo "value=\"";
 			$var="res_ekz".$numcxap."_".sprintf('%02d', $k);
 			if (isset($memorkurso[$var])){
@@ -65,7 +67,9 @@ function ekzerco($sist, $nbLig) {
 			if ($idenfication==False) {
 				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
-			echo " onkeyup='xAlUtf8(this)' ";
+			if ($x2u) {
+				echo " onkeyup='xAlUtf8(this)' ";
+			}
 			echo ">";
 			$var="res_ekz".$numcxap."_".sprintf('%02d', $k);
 			if (isset($memorkurso[$var])){

@@ -15,7 +15,7 @@ include "gerdakapo.inc.php";
 				5 => "Al kio rigardas la juna knabino, kiu estas kun li? (al la spegulo / al la pordo / al Linda / al Tom / al la angulo)",
 				6 => "&#264;u nun estas io en la taso? (jes / ne)"
 				);
-				ekzerco("U", 2);
+				ekzerco(True, 2);
 			?>
 			</div>
 

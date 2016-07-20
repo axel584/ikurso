@@ -14,7 +14,7 @@ include "gerdakapo.inc.php";
 				5 => "Kial oni ankora&#365; ne pridemandis la blondulon?",
 				6 => "Kiel la policano esperas retrovi Gerdan?",
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 
@@ -141,7 +141,7 @@ include "gerdakapo.inc.php";
 				27 => "Linda ne scias, ke {Marko} {Lindan} amas.",
 				28 => "Linda ne scias, ke {Marko} {Gerdan} amas."
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 				?>
 				</div>
 		</div> <!-- klarigo -->

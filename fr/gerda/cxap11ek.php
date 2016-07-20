@@ -15,7 +15,7 @@ include "gerdakapo.inc.php";
 				6 => "Pri kio Linda parolas dum la veturo?",
 				7 => "&#264;u la blondulo estas parolema?"
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

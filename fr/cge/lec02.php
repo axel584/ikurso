@@ -237,7 +237,7 @@ include "dlekkapo.inc.php";
 				18. => "{Miaj fratoj} kaptis malsanan birdon.",
 				19. => "{La virino} ne sukeris mian teon."
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 		</fieldset>
@@ -260,7 +260,7 @@ include "dlekkapo.inc.php";
 				23. => "forgesi - mi - papero - porti.",
 				24. => "bela - esti - fratino - knabino - mia."
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 		</fieldset>

@@ -125,7 +125,7 @@ include "dlekkapo.inc.php";
 				6 => "neniu",
 				7 => "nenies"
 				);
-				ekzerco("X", 1);
+				ekzerco(False, 1);
 			?>
 			</div>
 		</fieldset>
@@ -290,7 +290,7 @@ include "dlekkapo.inc.php";
 				16 => "Per kio vi veturis al la Zoologia Ĝardeno ?",
 				17 => "Kiuj bestoj estis por vi tre interesaj ?"
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 		</fieldset>
@@ -330,7 +330,7 @@ include "dlekkapo.inc.php";
 				16 => "Per kio vi veturis al la Zoologia Ĝardeno ?",
 				17 => "Kiuj bestoj estis por vi tre interesaj ?"
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 		</fieldset>
@@ -412,7 +412,7 @@ include "dlekkapo.inc.php";
 				25 => "La strato estas larĝa JE* 50 metroj.",
 				26 => "D-ro (Doktoro) Zamenhof naskiĝis JE* la 15a de decembro 1859. (naskiĝi = naître)"
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 		</fieldset>
@@ -506,7 +506,7 @@ include "dlekkapo.inc.php";
 				$demandoj=array (
 				"" => "Mi* veturis al la zoologia* ĝardeno* kun Petro*. Li* tre deziris veturi tie*. En la zoo* li admiris ursoj* kaj simioj*. Kiam la blanka urso vidis Petro*, ĝi kuris en la akvo*. Ni atendis kvin minutoj*  por vidi, kio* la urso* faros poste, sed ĝi* ne iris el la akvo* kaj en la akvo* ĝi nenio* faris. Ni revenis Montrealo* vespere*."
 				);
-				ekzerco("U", 5);
+				ekzerco(True, 5);
 			?>
 			</div>
 		</fieldset>

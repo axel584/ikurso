@@ -17,7 +17,7 @@ include "gerdakapo.inc.php";
 				8 => "Kial la infanoj ne helpis &#349;in?",
 				9 => "Kun kiu Gerda estis post la forkuro de la infanoj?"				
 				);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

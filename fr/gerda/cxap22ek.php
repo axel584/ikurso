@@ -13,7 +13,7 @@ include "gerdakapo.inc.php";
 				4 => "Kiom da homoj atendas la trezorser&#265;antojn?",
 				5 => "Kion rimarkas Linda observante la vojon?",
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 			

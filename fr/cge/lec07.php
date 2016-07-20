@@ -419,7 +419,7 @@ include "dlekkapo.inc.php";
 				4 => "(&quot;varma&quot; = chaud) : malvarma, varmeco, varmeta, malvarmiĝi",
 				5 => "(&quot;aro&quot; = groupe) : ŝiparo (ŝipo = bateau), abelaro (abelo = abeille), stelaro (stelo = étoile)"
 				);
-				ekzerco("X",2);
+				ekzerco(False,2);
 			?>
 			</div>
 		</fieldset>
@@ -566,7 +566,7 @@ include "dlekkapo.inc.php";
 				21 => "Mi revenis je la kvara kaj duono, kaj ŝi revenis dudek kvin minutojn antaŭ mi. Je la kioma ŝi revenis ?",
 				22 => "Fatima iras labori je la sepa matene kaj revenas post naŭ horoj. Je la kioma ŝi revenas ?"
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 		</fieldset>

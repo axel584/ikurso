@@ -452,7 +452,7 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 	10 => "Des garçons sains seront grands.",
 	11 => "Le pain est à toi (&quot;le pain est tien&quot;)."
 	);
-	ekzerco("U", 1);
+	ekzerco(True, 1);
 ?>
 </div>
 
@@ -467,7 +467,7 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 	15 => " ",
 	16 => " "
 	);
-	ekzerco("U", 1);
+	ekzerco(True, 1);
 ?>
 </div>
 	<p>

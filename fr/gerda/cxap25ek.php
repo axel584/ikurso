@@ -20,7 +20,7 @@ include "gerdakapo.inc.php";
 		<?php $demandoj=array(
 			1 => "&#264;u vi konas la respondon ?"
 			);
-			ekzerco("U", 10);
+			ekzerco(True, 10);
 		?>
 		</div>
 
@@ -48,7 +48,7 @@ include "gerdakapo.inc.php";
 			8 => "&#264;u vi uzis a&#365; havas iujn aliajn lernilojn, ekzemple vortaron a&#365; lernolibron pri Esperanto? Kiujn?",
 			9 => "&#264;u vi volas plulerni Esperanton? Kiel? &#264;u kurso simila al la GERDA-kurso, sed kun bonaj literaturaj tekstoj anstata&#365; la GERDA-rakonto, estus utila por vi? &#264;u vi preferus simple trastudi iun libron en Esperanto? &#264;u vi volus trastudi libron diskutante &#285;in kun iu? &#264;u vi volas lerni pli pri la historio kaj celoj de la Esperanto-Movado?",
 			);
-			ekzerco("U", 5);
+			ekzerco(True, 5);
 			?>
 			</div>
 		</div> <!-- klarigo -->

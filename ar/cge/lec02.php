@@ -243,7 +243,7 @@ suffiront pour le moment.</p>
 				18. => "{Miaj fratoj} kaptis malsanan birdon.",
 				19. => "{La virino} ne sukeris mian teon."
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 
@@ -265,7 +265,7 @@ suffiront pour le moment.</p>
 				23. => "forgesi - mi - papero - porti.",
 				24. => "bela - esti - fratino - knabino - mia."
 				);
-				ekzerco("U", 1);
+				ekzerco(True, 1);
 			?>
 			</div>
 

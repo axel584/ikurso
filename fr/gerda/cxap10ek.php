@@ -15,7 +15,7 @@ include "gerdakapo.inc.php";
 				5 => "&#264;u Tom &#349;atas la novan aventuron? (jes / ne)",
 				6 => "Kiun amas Tom? (Gerdan / Lindan / Rongan / la flegistinon)"				
 			);
-			ekzerco("U", 2);
+			ekzerco(True, 2);
 			?>
 			</div>
 

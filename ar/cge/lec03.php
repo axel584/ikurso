@@ -69,7 +69,7 @@ fait attention aux terminaisons des mots :
 	1 => "Mian fraton lavis mia patrino.<br>* Qui a été lavé ?<br>* Qui a lavé ?",
 	2 => "Instruistojn viajn fratinoj niaj vidis.<br>* Qui a vu ?<br>* Qui a été vu ?"
 	);
-	ekzerco("X", 3);
+	ekzerco(False, 3);
 ?>
 </div>
 
@@ -234,7 +234,7 @@ français <em>soif</em> ne contient qu’une syllabe.
 		6 => "La belle fille court mal. (adv.: contraire de &quot;bien&quot;)",
 		7 => "Notre père fume le soir. (adv.: dérivé de &quot;soir&quot;)"
 	);
-	ekzerco("U", 1);
+	ekzerco(True, 1);
 ?>
 </div>
 
@@ -332,7 +332,7 @@ prennent la marque du pluriel <em>-j</em> et celle du complément d’objet
 		14 => "Deuxièmement, ils ont demandé de la limonade.",
 		15 => "La boutique fait mal le pain brun."
 	);
-	ekzerco("U", 1);
+	ekzerco(True, 1);
 ?>
 </div>
 
@@ -374,7 +374,7 @@ employée</b> dans ce cas.
 	19 => "Le troisième garçon est mon second fils.",
 	20 => "J’ai neuf cent quatre-vingt dix-neuf biscuits."
 	);
-	ekzerco("U", 1);
+	ekzerco(True, 1);
 ?>
 </div>
 

@@ -72,11 +72,12 @@ $mesagxkapo="MIME-Version: 1.0\n";
 $mesagxkapo.="Content-type: text/html;charset=utf-8\n";
 $mesagxkapo.="From: ikurso <cours-esperanto@esperanto-jeunes.org>\n";
 $mesagxkapo.="Reply-To: ".$studanto["enirnomo"]." <".$studanto["retadreso"].">\n";
+$mesagxkapo.="Return-Path: ".$studanto["enirnomo"]." <".$studanto["retadreso"].">\n";
 $mesagxkapo.="Cc: ".$studanto["enirnomo"]." <".$studanto["retadreso"].">\n";
 $mesagxkapo.="Bcc: <kopiokurso@esperanto-jeunes.org>\n";
 $mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
-mail($korektantaretadreso,$subjekto,stripslashes($fonto),$mesagxkapo);
-
+$mesagxkapo.=" \n";
+$resultat = mail($korektantaretadreso,$subjekto,stripslashes($fonto),$mesagxkapo);
 
 // gxisdatigi liajn datumojn en nuna_kurso
 $query = "update nuna_kurso set nunleciono=".$leciono.",stato='K',lastdato=CURDATE() where studanto=".$persono_id." and (stato='N' or stato='K') and kurso='".$kurso."'";

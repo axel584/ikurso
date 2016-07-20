@@ -376,7 +376,7 @@ include "dlekkapo.inc.php";
 			</div>
 
 			<p class="rimarko"><strong>REMARQUE</strong> : 
-			Retenez bien ces quatre petits mots très fréquent&nbsp; :</p>
+			Retenez bien ces quatre petits mots très fréquent&nbsp;:</p>
 			<ol>
 				<li><b>al</b> indique le but d’un mouvement (<span class="eo">ŝi kuras al la lernejo</span>) ou le bénéficiaire de l’action (<span class="eo">li respondis al mi</span>).</li>
 				<li><b>de</b> indique la possession (la filo de mia frato) ou la provenance (<span class="eo">li venas de la lernejo</span>).</li>

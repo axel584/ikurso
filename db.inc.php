@@ -444,4 +444,12 @@ function getRegistritajnRespondojn($kurso,$leciono,$persono_id) {
 
 }
 
+function jamKomencisKurson($persono_id) {
+    global $bdd;
+    $query = "select count(*) as combien from nuna_kurso where studanto=".$persono_id;
+    $result = $bdd->query($query);
+    $row = $result->fetch();
+    return $row["combien"]>0;
+}
+
 ?>

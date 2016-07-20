@@ -54,9 +54,6 @@ include "dlekkapo.inc.php";
 		<p>Voyons l’exemple de Robert Lebrun :</p>
 		<div class="vortlisto">
 			<p><a class="player-audio" href="../son/l05.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
-			<p><audio src="../son/l05.mp3">Votre navigateur ne gère pas la lecture des fichiers audio</audio>
-			<button><i class="material-icons">volume_up</i></button>
-			</p>
 			<p>Saluton !<br>
 			Mia nomo estas Roberto Bruno. Mi loĝas en Kanado. Mi komencis
 			lerni Esperanton antaŭ kvar semajnoj. Ĝi estas tre facila lingvo.

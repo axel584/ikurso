@@ -377,4 +377,34 @@ function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
 				
 				}
 
+function getListoLecionoj($kurso,$leciono) {
+	global $bdd;
+	echo "<header id='superrigardo'>";
+	if ($kurso=='CG') {		
+		echo "<p>Cours d'espéranto en dix leçons :</p>";
+	}
+	echo "<ul id='lecionoj'>";
+	$query = "select * from lecionoj where kurso='".$kurso."' order by numero";
+	$res = $bdd->query($query);
+	while ($row = $res->fetch()) {
+		// leçon en cours :
+		if ($leciono==$row["numero"]) {
+			$classe = 'nuna';
+		} 
+		// leçon déjà faite :
+		if ($leciono>$row["numero"]) {
+			$classe = 'farita';
+		}
+		// leçon par encore faite 
+		if ($leciono<$row["numero"]) {
+			$classe = 'nova';
+		}
+		echo "<li id='lec".sprintf('%02d',$row["numero"])."' class='".$classe."'><a href='".$row["retpagxo"]."'>".$row["numero"]."</a></li>";
+	}
+	echo "<li id='lexique' class='nova'><a href='vocabula.php'>lexique</a></li>";
+	echo "</div>";
+	echo "</header>";
+	
+}
+
 ?>

@@ -90,8 +90,8 @@ if (isset($_GET["aktivigo"])) {
 		</article>
 	
 		<aside class="col s12 m10 l4 offset-m1 offset-l1">
-		<!-- pour les élèves uniquement -->
-		<?php if ($persono['rajtoj']=="S" || $persono['rajtoj']=="P") { ?>
+		<!-- pour les élèves uniquement qui ont commencé un cours -->
+		<?php if (jamKomencisKurson($persono_id)) { ?>
 			<h2>Mes cours</h2>
 			
 			<p><span class="primaire-texte texte-moyen">Dernier cours choisi : </span><?php simplaVorto("nomo","kursoj"," where kodo='".$persono['kurso']."'"); ?></p>
@@ -100,11 +100,15 @@ if (isset($_GET["aktivigo"])) {
 				(<a href="mailto:<?php echo $korektanto['retadreso'];?>"><?php echo $korektanto['retadreso'];?></a>)</p>
 			<h5>Cours suivis :</h5>
 			<ul class="collection"><?php getCoursElLernanto($persono['id']);?></ul>			
+			<!-- pour les administrateurs ou informateurs ou korekteur --> 
+		<?php } elseif (($persono["rajtoj"]=="I") or ($persono["rajtoj"]=="A")or ($persono["rajtoj"]=="K")) { ?>
+		echo "correcteur";
+		<!-- cas des élèves qui n'ont pas encore commencé le cours -->
 		<?php } else { ?>
-		<!-- pour correcteurs et les admin -->
-			<h2>Mes élèves</h2>
-			<p>Droits : <?=simplaVorto("nomo","rajtoj"," where kodo='".$persono['rajtoj']."'");;?></p>
+			<p><a href="<?php echo $vojo;?>fr/cge/intro.php" class="btn waves-effect waves-light" >Commencer le cours en 10 leçons</a></p>
 		<?php } ?>
+
+
 	</aside>
 
 	</div>

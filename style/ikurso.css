@@ -409,6 +409,13 @@ fieldset.ekzerco legend {
 	line-height: 100%;
 	margin-bottom: 1em;
 }
+[type="radio"]:checked+label:after {
+    background-color: #2196F3;
+    border: 2px solid #2196F3;
+}
+
+p.qcmerr {color:red;}
+input[type="radio"] + label span.qcmerr {text-decoration: line-through;}
 /********** évaluation (fin de leçon) *******/
 
 #leciono-enketo {

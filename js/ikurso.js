@@ -1,5 +1,11 @@
   $(document).ready(function(){
 
+    $(document).ajaxStart(function() {
+        $(document.body).css({'cursor' : 'progress'});
+    }).ajaxStop(function() {
+        $(document.body).css({'cursor' : 'default'});
+    });
+
 
   	$( "#connection_button" ).click(function() {
   		$("#connection_button").addClass("disabled");

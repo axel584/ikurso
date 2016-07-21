@@ -68,12 +68,12 @@ include "../pagxkapo.inc.php";
 							<h5 class="center">Je veux apprendre l’espéranto&nbsp;!</h5>
 							<div class="row">
 								<div class="col s12 m6">
-									<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
-									<p><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
+									<p class="center">En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
+									<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
 								</div>
 								<div class="col s12 m6">
-									<p>J’ai déjà un compte&nbsp;: je commence le cours tout de suite !<br><span class="noto">(Je pourrai m’inscrire au service de correction à la fin de la première leçon.)</span>
-									<p><a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
+									<p class="center">J’ai déjà un compte&nbsp;: je commence le cours tout de suite !<br><span class="noto">(Je pourrai m’inscrire au service de correction à la fin de la première leçon.)</span>
+									<p class="center"><a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
 									</p>
 								</div>
 							</div>

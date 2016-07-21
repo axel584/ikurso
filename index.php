@@ -19,7 +19,7 @@ include "pagxkapo.inc.php";
 					<p class="creditphoto primaire-texte">dessin : Robin Guinin, <a href="https://www.facebook.com/robin.guinin/">www.facebook.com/robin.guinin/</a></p>
 				</div>
 				<div class="col s12 m7 l5">
-					<h2>Bienvenue sur <span>iKurso</span></h2>
+					<h2>Bienvenue sur <span class="ikurso">iKurso</span></h2>
 					<p>Ici, vous pourrez découvrir ce qu’est la langue internationale Espéranto.<br> 
 						Vous pourrez également l’apprendre en suivant nos cours, à votre rythme.<br>
 						Pour mieux vous aider, l’association Espéranto-France vous propose un service de correction gratuit. Pour en bénéficier, il suffit de vous inscrire.</p>
@@ -40,7 +40,7 @@ include "pagxkapo.inc.php";
 						<p><a href="<?=$vojo?>fr/cge/intro.php" class="btn waves-effect waves-light blue">voir le cours</a></p>
 					</div>
 						
-					<div class="col s12 m5">
+					<div class="col s12 m5 offset-m1">
 						<h5>Gerda malaperis</h5>
 						<p>Pour ceux qui connaissent déjà les bases de l’espéranto, par exemple après le cours en 10 leçons. </p>
 						<p><a href="<?=$vojo?>fr/gerda/index.php" class="btn waves-effect waves-light blue">voir le cours</a></p>
@@ -55,22 +55,26 @@ include "pagxkapo.inc.php";
 			
 			<div class="container">
 				<div class="row">
-					<div class="col s12 m4">
+					<div class="col s12 m3 offset-m1">
 						<h5>Kurso de Esperanto</h5>
-						<p>Logiciel multimédia pour Windows, Linux et Mac OSX.<br>
-						En 12 leçons vous apprendrez les bases de l’espéranto.<br><a href="http://www.kurso.com.br/" class="btn-flat small"><i class="material-icons right">arrow_right</i>télécharger le logiciel</a></p>
+						<p>Logiciel multimédia pour Windows, Linux et Mac OSX</p>
+						<p>En 12 leçons vous apprendrez les bases de l’espéranto.<br><a href="http://www.kurso.com.br/" class="btn-flat small"><i class="material-icons right">arrow_right</i>télécharger le logiciel</a></p>
 					</div>
 				
-					<div class="col s12 m4">
+					<div class="col s12 m3 offset-m1">
 						<h5>lernu.net</h5>
 						<p>Autre site, traduit dans plus de 20 langues.<br>
-						Pour ceux qui veulent découvrir l’espéranto, l’apprendre ou le pratiquer.<br><a href="http://www.lernu.net" class="btn-flat small"><i class="material-icons right">arrow_right</i>aller sur lernu.net</a></p>
+						Pour ceux qui veulent découvrir l’espéranto, l’apprendre ou le pratiquer.</p>
+						<p class="container"><img class="responsive-img" src="<?=$vojo?>bildoj/lernu.png"></p>
+						<p><a href="http://www.lernu.net" class="btn-flat small"><i class="material-icons right">arrow_right</i>aller sur lernu.net</a></p>
 					</div>
 
-					<div class="col s12 m4">
+					<div class="col s12 m3 offset-m1">
 						<h5>duolingo</h5>
 						<p>Cours ludique pour débutants.<br>
-						N’existe pour l’instant qu’en anglais. (Nous attendons avec impatience une version pour les francophones.)<br><a href="https://en.duolingo.com/course/eo/en/Learn-Esperanto-Online" class="btn-flat small"><i class="material-icons right">arrow_right</i>aller sur duolingo</a></p>
+						N’existe pour l’instant qu’en anglais. (Nous attendons avec impatience une version pour les francophones.)</p>
+						<p class="container"><img class="responsive-img" src="<?=$vojo?>bildoj/duolingo.jpg"></p>
+						<p><a href="https://en.duolingo.com/course/eo/en/Learn-Esperanto-Online" class="btn-flat small"><i class="material-icons right">arrow_right</i>aller sur duolingo</a></p>
 					</div>
 				</div>
 			</div>

@@ -121,9 +121,9 @@ include "dlekkapo.inc.php";
 		if ($section=="2") {
 		?>
 
-			<p><a href="../son/pv8-1.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a> <span class="eo">Vivanton ni malhonoras, mortinton ni adoras.</span></p>
+			<p><a href="<?php echo $vojo;?>fr/son/pv8-1.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a> <span class="eo">Vivanton ni malhonoras, mortinton ni adoras.</span></p>
 			<p>
-			<a href="../son/pv8-2.wav" type="audio/mp3"><i class="material-icons">volume_up</i></a> <span class="eo">Dancu diabloj, sed ne en mia arbaro.</span></p>
+			<a href="<?php echo $vojo;?>fr/son/pv8-2.wav" type="audio/mp3"><i class="material-icons">volume_up</i></a> <span class="eo">Dancu diabloj, sed ne en mia arbaro.</span></p>
 
 			<div class="vortlisto row">
 				<p class="col s6 m4"><span class="eo">honori</span> : honorer</p>

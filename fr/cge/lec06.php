@@ -145,7 +145,7 @@ include "dlekkapo.inc.php";
 		<p><span class="eo">malnova amiko</span> : un vieil ami (= un ami de longue date)</p>
 		
 		<p class="parto"><b>Proverbe</b></p>
-		<p><a href="../son/pv6.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a> Bona estas domo nova kaj amiko malnova.</p>
+		<p><a href="<?php echo $vojo;?>fr/son/pv6.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a> Bona estas domo nova kaj amiko malnova.</p>
 		
 		<?php 
 		} // fin section 5
@@ -176,7 +176,7 @@ include "dlekkapo.inc.php";
 
 		<p>Lisez le récit suivant en faisant attention à l’usage des prépositions&nbsp;:</p>
 		<p><b>Vojaĝo al Montrealo por la Esperanto-kongreso</b></p>
-		<p><a href="../son/l06.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a><br>
+		<p><a href="<?php echo $vojo;?>fr/son/l06.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a><br>
 			  Mi estas membro de junulara esperantista klubo kaj mi partoprenis en
 			  la Esperanto-kongreso, kiu okazis en Montrealo. Dum preskaŭ tri horoj
 			  ni vojaĝis de Kebeko en nia buseto kaj ne haltis, ĝis ni alvenis

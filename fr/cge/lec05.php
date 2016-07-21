@@ -53,7 +53,7 @@ include "dlekkapo.inc.php";
 
 		<p>Voyons l’exemple de Robert Lebrun :</p>
 		<div class="vortlisto">
-			<p><a class="player-audio" href="../son/l05.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+			<p><a class="player-audio" href="<?php echo $vojo;?>fr/son/l05.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
 			<p>Saluton !<br>
 			Mia nomo estas Roberto Bruno. Mi loĝas en Kanado. Mi komencis
 			lerni Esperanton antaŭ kvar semajnoj. Ĝi estas tre facila lingvo.
@@ -276,7 +276,7 @@ include "dlekkapo.inc.php";
 		if ($section=="5") {
 		?>
 		
-		<p><a href="../son/pv5.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+		<p><a href="<?php echo $vojo;?>fr/son/pv5.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
 		<p><span class="eo">En ĉiu malbono estas iom da bono.</span> : Dans tout mal il y a un peu de bien.</p>
 		
 		<?php 

@@ -455,13 +455,13 @@ include "dlekkapo.inc.php";
 		if ($section=="4") {
 		?>
 		
-		<p><a href="../son/pv7-1.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+		<p><a href="<?php echo $vojo;?>fr/son/pv7-1.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
 		Se junulo ne lernis, maljunulo ne scias.
 		</p>
-		<p><a href="../son/pv7-2.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+		<p><a href="<?php echo $vojo;?>fr/son/pv7-2.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
 		Juneco ne scias, maljuneco ne povas.
 		</p>
-		<p><a href="../son/pv7-3.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+		<p><a href="<?php echo $vojo;?>fr/son/pv7-3.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
 		Estro ne malsatas.
 		</p>
 		

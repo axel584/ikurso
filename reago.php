@@ -25,7 +25,7 @@ include "pagxkapo.inc.php";
 		<p>Ce formulaire vous permet d'envoyer un message aux administrateurs du cours.
 			Il ne doit être utilisé que pour des questions concernant les cours d'espéranto ou ce site.</p>
 			
-		<p>Avant de poser votre question&nbsp;: n’hésitez pas à lire les <a href="<?php echo $vojo ?>fr/intro.php">pages d'aide</a>.
+		<p>Avant de poser votre question&nbsp;: n’hésitez pas à lire les <a href="<?php echo $vojo ?>helpo.php">pages d'aide</a>.
 		<?php if (($persono["rajtoj"]=="K")||($persono["rajtoj"]=="A")) {	?>
 			et le <a href="<?php echo $vojo ?>helppagxo.php">Guide du correcteur</a>.
 		<?php } ?>

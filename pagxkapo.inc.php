@@ -61,9 +61,10 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 						<label for="eniri_pasvorto">mot de passe</label>
 					</div>
 				</form>
+				<p class="noto">Pour toute question relative à votre inscription, vous pouvez <a href="<?php echo $vojo;?>reago.php">contacter un administrateur</a></p> 
 			</div>
 			<div class="modal-footer">
-				<a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a>
+				<p><a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a></p>
 			</div>
 		</div>
 
@@ -93,7 +94,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 					<p class="chapo">Vous y êtes presque !</p>
 					<p>Pour activer votre compte, veuillez cliquer sur le lien se trouvant dans le message électronique que nous venons de vous envoyer.<br>
 				Si vous ne le trouvez pas, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
-				<!--Si vous n’avez rien reçu, vous pouvez demander de réenvoyer le message.--></p>
+				Si vous n’avez rien reçu, vous pouvez <a href="<?php echo $vojo;?>reago.php">contacter un administrateur</a>.</p>
 
 				</div>
 			</div>

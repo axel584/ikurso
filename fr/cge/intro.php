@@ -1,5 +1,6 @@
 <?php
 $subjekto="intro.php";
+$leciono = 0;
 $temo=isset($_GET["temo"])?$_GET["temo"]:"intro";
 $gxisdatigDato="2016-07-01";
 include "dlekkapo.inc.php"

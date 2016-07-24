@@ -384,6 +384,12 @@ function getListoLecionoj($kurso,$leciono) {
 		echo "<p>Cours d'espéranto en dix leçons :</p>";
 	}
 	echo "<ul id='lecionoj'>";
+	if ($leciono==0) {
+		echo "<li id='intro' class='nuna'><a href='intro.php'>introduction</a></li>";
+	}
+	else {
+		echo "<li id='intro' class='farita'><a href='intro.php'>introduction</a></li>";
+	}
 	$query = "select * from lecionoj where kurso='".$kurso."' order by numero";
 	$res = $bdd->query($query);
 	while ($row = $res->fetch()) {

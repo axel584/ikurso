@@ -7,15 +7,15 @@ $korpo="informoj";
 $section=isset($_GET["temo"])?$_GET["temo"]:"";
 if ($section==""){$section="faq";}
 if ($section=="elsxutoj") {header("Location:fr/elsxutoj.php");}
-$persono_id=$_SESSION["persono_id"];
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 if ($persono_id!="") {
 	$persono = apartigiPersonon($persono_id);
 	$videbla=$persono["videbla"];
 	if (($videbla=="J")||($videbla=="")) {$temo="nova";}
 	//echo "videbla=".$videbla."<br>";
+} else {
+	$videbla="N";
 }
-else {$videbla="N";}
-	//echo "temo=".$temo."<br>";
 
 $demando = "update personoj set videbla='N' where id='".$persono_id."'";
 $bdd->exec($demando);

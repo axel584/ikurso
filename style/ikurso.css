@@ -75,10 +75,7 @@ div.col > p:first-child {
 	margin-top:2em;
 	font-size: 85%;
 }
-
 .toast {background-color: #e65100;}
-
-.pinned {margin-right:1rem;}
 
 /* styles specifiques */
 .eo {color: #2196F3;}

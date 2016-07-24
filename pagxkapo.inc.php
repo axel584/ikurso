@@ -7,7 +7,7 @@ $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
-if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = array("enirnomo"=>"","familinomo"=>"","personnomo"=>"","retadreso"=>"");}
+if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = array("enirnomo"=>"","familinomo"=>"","personnomo"=>"","retadreso"=>"","rajtoj"=>"");}
 ?>
 <!DOCTYPE html>
   <html lang="fr">

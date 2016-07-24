@@ -2,23 +2,21 @@
 include "gerdakapo.inc.php"; 
 ?>
 	<div class="row">
-		<article class="col s12 m10 l7 offset-m1 offset-l2">
+		<article class="col s12 m10 l7 offset-m1 offset-l1">
 			<section id="leciono-kapo">
 				<h1>Gerda malaperis</h1>
 			</section>
 			
 			<section id="leciono-enhavo">
 	
-			<?php
-			if (($temo=="intro")) {
-			?>
-				<h2 id="antauxsciigo">Présentation</h2>
+				<a id="presentation"></a>
+				<h2>Présentation</h2>
 
 				<p class="parto">
 				Ce cours s’adresse aux étudiants de l’espéranto qui connaissent déjà
 				les bases de la langue – notamment la prononciation – comme, par
-				exemple, ceux qui ont suivi au moins le <a href="../cge/index.php">
-				Cours d’espéranto en di leçons</a>
+				exemple, ceux qui ont suivi au moins le <a href="<?php echo $vojo;?>fr/cge/index.php">
+				Cours d’espéranto en dix leçons</a>
 				ou le <a href="http://ikurso.net">Kurso de Esperanto</a>.</p>
 				
 				<p class="parto"><i>Gerda malaperis</i> est un roman de Claude
@@ -39,7 +37,8 @@ include "gerdakapo.inc.php";
 				Web et d’en améliorer la présentation quand cela était possible ou
 				nécessaire.</p>
 		
-				<h3 id="kiel">Comment utiliser le cours ?</h3>
+				<a id="kiel"></a>
+				<h2>Comment utiliser le cours ?</h2>
 
 				<p class="parto">
 				Le cours comporte 25 chapitres. Chaque chapitre est constitué d’un
@@ -60,7 +59,7 @@ include "gerdakapo.inc.php";
 				correction de la leçon précédente. </p>
 					
 				<p class="parto">
-				Chaque leçon se présente comme une page xeb sans excès de fioritures
+				Chaque leçon se présente comme une page web sans excès de fioritures
 				multimédia. Les exercices sont des champs de formulaires que vous
 				remplissez. À la fin de la leçon vous pouvez envoyer vos exercices
 				au tuteur en cliquant simplement sur un bouton. Les leçons peuvent
@@ -76,26 +75,23 @@ include "gerdakapo.inc.php";
 				de chaque leçon le récit correspondant du recueil <a
 				href="lasu00.php"><i>Lasu min paroli plu!</i></a>, du même auteur.</p>
 
-			<?php
-			} elseif ($temo=="enskribi") {
-			?>
-				<h2 id="registro">Inscription</h2>
+				<h2 id="inscription">Comment s’inscrire ?</h2>
 		
 				<p class="parto">
 				Vous trouverez le formulaire de demande de correcteur à la fin de la première
 				leçon. Remplissez-le soigneusement <i><b>après avoir effectué les
 				exercices de la leçon</b></i>. </p>
 
-				<p class="rimarko"><strong>ATTENTION !</strong> : </p>
-		
-				<p>
-				Le fait que ce cours soit gratuit pour vous ne signifie pas
-				qu’il ne coûte rien à personne. Il coûte beaucoup de leur temps libre
-				à nos tuteurs. Aussi, en contrepartie, nous attendons des élèves
-				un minimum de <b>motivation</b>, de <b>sérieux</b> et
-				d’<b>assiduité</b>. Tout élève qui sans accord préalable ne nous
-				envoie plus son travail pendant plus d’une semaine sera
-				automatiquement désinscrit.</p>
+				<div class="card-panel blue lighten-5">
+					<p class="rimarko"><strong>ATTENTION !</strong><br>
+					Le fait que ce cours soit gratuit pour vous ne signifie pas
+					qu’il ne coûte rien à personne. Il coûte beaucoup de leur temps libre
+					à nos tuteurs. Aussi, en contrepartie, nous attendons des élèves
+					un minimum de <b>motivation</b>, de <b>sérieux</b> et
+					d’<b>assiduité</b>. Tout élève qui sans accord préalable ne nous
+					envoie plus son travail pendant plus d’une semaine sera
+					automatiquement désinscrit.</p>
+				</div>
 				
 				<p>Nous vous demanderons donc de vous engager sur les points suivants&nbsp;:</p>
 
@@ -114,10 +110,9 @@ include "gerdakapo.inc.php";
 					du tuteur et ne lui enverrez pas de nouvelle leçon avant d’avoir reçu
 					la correction des leçons précédentes.</li>
 				</ol>
-
-			<?php } elseif ($temo=="prononco") {
-			?>
-				<h3>Généralités sur la prononciation</h3>
+				
+				<a id="prononciation"></a>
+				<h2>Rappel sur la prononciation</h2>
 			
 				<p class="parto">
 				Ce bref exposé est destiné à ceux qui veulent commencer l’étude de
@@ -136,7 +131,7 @@ include "gerdakapo.inc.php";
 						<p class="col s12 row" style="font-size: 1.5em"><span class="col s1">&nbsp;S&nbsp;</span><span class="col s1">&nbsp;Ŝ&nbsp;</span><span class="col s1">&nbsp;T&nbsp;</span><span class="col s1">&nbsp;U&nbsp;</span><span class="col s1">&nbsp;Ŭ&nbsp;</span><span class="col s1">&nbsp;V&nbsp;</span><span class="col s1">&nbsp;Z</span></p>
 				</div>
 	
-				<p>Dans les exercices, il suffit de taper la lettre suivie d’un x,
+				<p class="parto">Dans les exercices, il suffit de taper la lettre suivie d’un x,
 				par exemple&nbsp;: <b>cx</b>, <b>sx</b>, <b>ux</b>… pour obtenir automatiquement la lettre accentuée correspondante.</p>
 
 				<div class="row">
@@ -148,15 +143,15 @@ include "gerdakapo.inc.php";
 					<p class="col s2"><b>ux</b> → ŝ</p> 
 				</div>
 
-				<p>Les <b>principes de la prononciation</b> sont très simples et sans exception :</p>
+				<p class="parto">Les <b>principes de la prononciation</b> sont très simples et sans exception :</p>
 				<ol>
 					<li>un son (phonème) unique pour chaque lettre et réciproquement</li>
 					<li>une syllabe pour chaque voyelle et réciproquement</li>
 					<li>l’accent tonique est sur l’avant-dernière syllabe</li>
 				</ol>
 				
-				<p class="rimarko"><strong>REMARQUE</strong> : </p>
-				<p>La syllabe qui porte l’accent  est prononcée avec plus de
+				<p class="rimarko"><strong>REMARQUE</strong><br>
+				La syllabe qui porte l’accent  est prononcée avec plus de
 				force que les autres syllabes du mot. On dit que cette syllabe est
 				«tonique», ou encore «accentuée» (aucun rapport avec l’accent sur les
 				lettres ĉ, ĝ etc.). En français l’accent tonique porte sur la dernière
@@ -224,37 +219,37 @@ include "gerdakapo.inc.php";
 
 				<p>b) <b>Consonnes</b> : elles ont le même son qu’en français, sauf </p>
 				<div class="row">
-					<p class="col s1"><a href="../son/s2-01.au" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+					<p class="col s1"><a href="../son/s2-01.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
 					<p class="col s5"><b>c</b> (ts comme dans <i>tsigane</i>)</p>
 					<p class="col s2 eo">ci<u>ga</u>no</p><p class="col s2 eo"><u>dan</u>ci</p><p class="col s2 eo">bi<u>ci</u>klo</p>
 				</div>
 				<div class="row">
-					<p class="col s1"><a href="../son/s2-02.au" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+					<p class="col s1"><a href="../son/s2-02.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
 					<p class="col s5"><b>ĉ</b> (tch comme dans <i>tchèque</i>)</p>
 					<p class="col s2 eo"><u>ĉe</u>ĥo</p><p class="col s2 eo"><u>ĉam</u>bro</p><p class="col s2 eo">ĉoko<u>la</u>do</p>
 				</div>
 				<div class="row">
-					<p class="col s1"><a href="../son/s2-03.au" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+					<p class="col s1"><a href="../son/s2-03.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
 					<p class="col s5"><b>g</b> (g comme dans <i>gare</i>)</p>
 					<p class="col s2 eo"><u>la</u>go</p><p class="col s2 eo">gus<u>tu</u>mi</p><p class="col s2 eo">geogra<u>fi</u>o</p>
 				</div>
 				<div class="row">
-					<p class="col s1"><a href="../son/s2-04.au"><i class="material-icons">volume_up</i></a></p>
+					<p class="col s1"><a href="../son/s2-04.mp3"><i class="material-icons">volume_up</i></a></p>
 					<p class="col s5"><b>ĝ</b> (dj comme dans <i>Abidjan</i>)</p>
 					<p class="col s2 eo"><u>lo</u>ĝi</p><p class="col s2 eo"><u>se</u>ĝo</p><p class="col s2 eo"><u>man</u>ĝi</p>
 				</div>
 				<div class="row">
-					<p class="col s1"><a href="../son/s2-05.au"><i class="material-icons">volume_up</i></a></p>
+					<p class="col s1"><a href="../son/s2-05.mp3"><i class="material-icons">volume_up</i></a></p>
 					<p class="col s5"><b>h</b> (h expiré [note 1])</p>
 					<p class="col s2 eo"><u>ha</u>vi</p><p class="col s2 eo"><u>ho</u>ro</p><p class="col s2 eo">lip<u>ha</u>ro</p>
 				</div>
 				<div class="row">
-					<p class="col s1"><a href="../son/s2-06.au"><i class="material-icons">volume_up</i></a></p>
+					<p class="col s1"><a href="../son/s2-06.mp3"><i class="material-icons">volume_up</i></a></p>
 					<p class="col s5"><b>ĥ</b> (hr [note 2])</p>
 					<p class="col s2 eo"><u>e</u>ĥo</p><p class="col s2 eo"><u>ĥo</u>ro</p><p class="col s2 eo">ĥe<u>mi</u>o</p>
 				</div>
 				<div class="row">
-					<p class="col s1"><a href="../son/s2-07.au"><i class="material-icons">volume_up</i></a></p>
+					<p class="col s1"><a href="../son/s2-07.mp3"><i class="material-icons">volume_up</i></a></p>
 					<p class="col s5"><b>j</b> (y comme dans <i>yogourt</i>)</p>
 					<p class="col s2 eo"><u>ja</u>ro</p><p class="col s2 eo"><u>ju</u>na</p>
 				</div>
@@ -264,12 +259,12 @@ include "gerdakapo.inc.php";
 					<p class="col s2 eo">ĵur<u>na</u>lo</p><p class="col s2 eo">ĵa<u>lu</u>za</p><p class="col s2 eo">tea<u>tra</u>ĵo</p>
 				</div>
 				<div class="row">
-					<p class="col s1"><a href="../son/s2-09.au"><i class="material-icons">volume_up</i></a></p>
+					<p class="col s1"><a href="../son/s2-09.mp3"><i class="material-icons">volume_up</i></a></p>
 					<p class="col s5"><b>r</b> (roulé [note 3])</p>
 					<p class="col s2 eo">te<u>a</u>tro</p><p class="col s2 eo"><u>ku</u>ri</p><p class="col s2 eo">ri<u>gar</u>di</p>
 				</div>
 				<div class="row">
-					<p class="col s1"><a href="../son/s2-10.au"><i class="material-icons">volume_up</i></a></p>
+					<p class="col s1"><a href="../son/s2-10.mp3"><i class="material-icons">volume_up</i></a></p>
 					<p class="col s5"><b>ŝ</b> (ch comme dans <i>chemise</i>)</p>
 					<p class="col s2 eo"><u>ŝa</u>ti</p><p class="col s2 eo"><u>po</u>ŝo</p><p class="col s2 eo"><u>fu</u>ŝa</p>
 				</div>
@@ -277,60 +272,60 @@ include "gerdakapo.inc.php";
 				<fieldset class="ekzerco">
 					<legend><strong></strong>Lisez à voix haute :</legend>
 					<div class="row">
-						<p class="col s1"><a href="../son/s2-01.au" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+						<p class="col s1"><a href="../son/s2-01.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
 						<p class="col s2 eo">ci<u>ga</u>no</p>
 						<p class="col s2 eo"><u>dan</u>ci</p>
 						<p class="col s2 eo">bi<u>ci</u>klo</p>	
 					</div>
 					<div class="row">
-						<p class="col s1"><a href="../son/s2-02.au" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+						<p class="col s1"><a href="../son/s2-02.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
 						<p class="col s2 eo"><u>ĉe</u>ĥo</p>
 						<p class="col s2 eo"><u>ĉam</u>bro</p>
 						<p class="col s2 eo">ĉoko<u>la</u>do</p>
 					</div>
 					<div class="row">
-						<p class="col s1"><a href="../son/s2-03.au" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+						<p class="col s1"><a href="../son/s2-03.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
 						<p class="col s2 eo"><u>la</u>go</p>
 						<p class="col s2 eo">gus<u>tu</u>mi</p>
 						<p class="col s2 eo">geogra<u>fi</u>o</p>
 					</div>
 					<div class="row">
-						<p class="col s1"><a href="../son/s2-04.au"><i class="material-icons">volume_up</i></a></p>
+						<p class="col s1"><a href="../son/s2-04.mp3"><i class="material-icons">volume_up</i></a></p>
 						<p class="col s2 eo"><u>lo</u>ĝi</p>
 						<p class="col s2 eo"><u>se</u>ĝo</p>
 						<p class="col s2 eo"><u>man</u>ĝi</p>
 					</div>
 					<div class="row">
-						<p class="col s1"><a href="../son/s2-05.au"><i class="material-icons">volume_up</i></a></p>
+						<p class="col s1"><a href="../son/s2-05.mp3"><i class="material-icons">volume_up</i></a></p>
 						<p class="col s2 eo"><u>ha</u>vi</p>
 						<p class="col s2 eo"><u>ho</u>ro</p>
 						<p class="col s2 eo">lip<u>ha</u>ro</p>
 					</div>
 					<div class="row">
-						<p class="col s1"><a href="../son/s2-06.au"><i class="material-icons">volume_up</i></a></p>
+						<p class="col s1"><a href="../son/s2-06.mp3"><i class="material-icons">volume_up</i></a></p>
 						<p class="col s2 eo"><u>e</u>ĥo</p>
 						<p class="col s2 eo"><u>ĥo</u>ro</p>
 						<p class="col s2 eo">ĥe<u>mi</u>o</p>
 					</div>
 					<div class="row">
-						<p class="col s1"><a href="../son/s2-07.au"><i class="material-icons">volume_up</i></a></p>
+						<p class="col s1"><a href="../son/s2-07.mp3"><i class="material-icons">volume_up</i></a></p>
 						<p class="col s2 eo"><u>ja</u>ro</p>
 						<p class="col s2 eo"><u>ju</u>na</p>
 					</div>
 					<div class="row">
-						<p class="col s1"><a href="../son/s2-08.au"><i class="material-icons">volume_up</i></a></p>
+						<p class="col s1"><a href="../son/s2-08.mp3"><i class="material-icons">volume_up</i></a></p>
 						<p class="col s2 eo">ĵur<u>na</u>lo</p>
 						<p class="col s2 eo">ĵa<u>lu</u>za</p>
 						<p class="col s2 eo">tea<u>tra</u>ĵo</p>
 					</div>
 					<div class="row">
-						<p class="col s1"><a href="../son/s2-09.au"><i class="material-icons">volume_up</i></a></p>
+						<p class="col s1"><a href="../son/s2-09.mp3"><i class="material-icons">volume_up</i></a></p>
 						<p class="col s2 eo">te<u>a</u>tro</p>
 						<p class="col s2 eo"><u>ku</u>ri</p>
 						<p class="col s2 eo">ri<u>gar</u>di</p>
 					</div>
 					<div class="row">
-						<p class="col s1"><a href="../son/s2-10.au"><i class="material-icons">volume_up</i></a></p>
+						<p class="col s1"><a href="../son/s2-10.mp3"><i class="material-icons">volume_up</i></a></p>
 						<p class="col s2 eo"><u>ŝa</u>ti</p>
 						<p class="col s2 eo"><u>po</u>ŝo</p>
 						<p class="col s2 eo"><u>fu</u>ŝa</p>
@@ -352,7 +347,7 @@ include "gerdakapo.inc.php";
 					le <b>s</b> ne se prononce pas comme un <b>z</b>.</li>
 				</ol>
 				
-				<p>c) <b>Diphtongues</b>:</p>
+				<p>c) <b>Diphtongues</b></p>
 				<p>
 				   Les consonnes <em>j</em> et <em>ŭ</em> sont appelées semi-voyelles du fait de leur
 				   proximité avec les voyelles <em>i</em> et <em>u</em>. Les combinaisons suivantes de
@@ -429,58 +424,76 @@ include "gerdakapo.inc.php";
 					des diphtongues, mais bel et bien deux voyelles juxtaposées, formant donc
 					deux syllabes&nbsp;:</li>
 				</ol>
-		
-			<?php } elseif ($temo=="enhavo") {
-			?>
-				<h2 id="enhavo">Table des matières du cours</h2>
 
-				<p>Les débutants sont invités à consulter d’abord le
-				<a href="index.php?temo=prononco">guide de prononciation</a>.</p>
-		
+				<a id="enhavo"></a>
+				<h2>Table des matières du cours</h2>
+
 				<p>Chaque leçon se compose de plusieurs parties :</p>
 				<ul class="sommaire">
 					<li>Rakonto : présente un chapitre du livre</li>
 					<li>Klarigo : présente quelques points de grammaire</li>
 					<li>Vorlisto : présente les nouveaux mots utilisés dans le chapitre</li>
 					<li>Ekzercoj : exercices à envoyer au tuteur pour correction</li>
-					<li>Lasu min... : chapitre correspondant du livre "Lasu min paroli pli".</li>
+					<li>Lasu min... : chapitre correspondant du livre <i>Lasu min paroli plu!</i>.</li>
 				</ul>
 				<p>En parallèlle, nous vous conseillons de lire les récits de 
-				<a href="../lasu00.php"><i>Lasu min paroli plu!</i></a></p>
+				<a href="<?php echo $vojo;?>fr/cge/gerda/lasu00.php"><i>Lasu min paroli plu!</i></a></p>
 				 
 				<h3>Chapitres de <em>Gerda malaperis</em></h3>
 				<ul class="sommaire cadre">
-					<li><a href="cxap01.php">Premier chapitre</a>
-					<li><a href="cxap02.php">Deuxième chapitre</a>
-					<li><a href="cxap03.php">Troisième chapitre</a>
-					<li><a href="cxap04.php">Quatrième chapitre</a>
-					<li><a href="cxap05.php">Cinquième chapitre</a>
-					<li><a href="cxap06.php">Sixième chapitre</a>
-					<li><a href="cxap07.php">Septième chapitre</a>
-					<li><a href="cxap08.php">Huitième chapitre</a>
-					<li><a href="cxap09.php">Neuvième chapitre</a> 
-					<li><a href="cxap10.php">Dixième chapitre</a>
-					<li><a href="cxap11.php">Onzième chapitre</a>
-					<li><a href="cxap12.php">Douzième chapitre</a>
-					<li><a href="cxap13.php">Treizième chapitre</a> 
-					<li><a href="cxap14.php">Quatorzième chapitre</a>
-					<li><a href="cxap15.php">Quinzième chapitre</a>
-					<li><a href="cxap16.php">Seizième chapitre</a>
-					<li><a href="cxap17.php">Dix-septième chapitre</a>
-					<li><a href="cxap18.php">Dix-huitième chapitre</a>
-					<li><a href="cxap19.php">Dix-neuvième chapitre</a>
-					<li><a href="cxap20.php">Vingtième chapitre</a> 
-					<li><a href="cxap21.php">Vingt-et-unième chapitre</a>
-					<li><a href="cxap22.php">Vingt-deuxième chapitre</a>
-					<li><a href="cxap23.php">Vingt-troisième chapitre</a> 
-					<li><a href="cxap24.php">Vingt-quatrième chapitre</a> 
-					<li><a href="cxap25.php">Vingt-cinquième chapitre</a> 
+					<li><a href="cxap01.php">Premier chapitre</a></li>
+					<li><a href="cxap02.php">Deuxième chapitre</a></li>
+					<li><a href="cxap03.php">Troisième chapitre</a></li>
+					<li><a href="cxap04.php">Quatrième chapitre</a></li>
+					<li><a href="cxap05.php">Cinquième chapitre</a></li>
+					<li><a href="cxap06.php">Sixième chapitre</a></li>
+					<li><a href="cxap07.php">Septième chapitre</a></li>
+					<li><a href="cxap08.php">Huitième chapitre</a></li>
+					<li><a href="cxap09.php">Neuvième chapitre</a></li>
+					<li><a href="cxap10.php">Dixième chapitre</a></li>
+					<li><a href="cxap11.php">Onzième chapitre</a></li>
+					<li><a href="cxap12.php">Douzième chapitre</a></li>
+					<li><a href="cxap13.php">Treizième chapitre</a></li>
+					<li><a href="cxap14.php">Quatorzième chapitre</a></li>
+					<li><a href="cxap15.php">Quinzième chapitre</a></li>
+					<li><a href="cxap16.php">Seizième chapitre</a></li>
+					<li><a href="cxap17.php">Dix-septième chapitre</a></li>
+					<li><a href="cxap18.php">Dix-huitième chapitre</a></li>
+					<li><a href="cxap19.php">Dix-neuvième chapitre</a></li>
+					<li><a href="cxap20.php">Vingtième chapitre</a></li>
+					<li><a href="cxap21.php">Vingt-et-unième chapitre</a></li>
+					<li><a href="cxap22.php">Vingt-deuxième chapitre</a></li>
+					<li><a href="cxap23.php">Vingt-troisième chapitre</a></li> 
+					<li><a href="cxap24.php">Vingt-quatrième chapitre</a></li>
+					<li><a href="cxap25.php">Vingt-cinquième chapitre</a></li>
 				</ul>
 				<h3>Et pour finir :</h3>
 		
 				<ul class="sommaire cadre">
 				  <li><a href="konsiloj.php">Konsiloj al la kursfinintoj</a></li>
 				</ul>
-		<?php } ?>
-		</div>
+			</section>
+		</article>
+		
+		<aside class="col s12 m10 l3 offset-m1 push-l1">
+			<ul class="collapsible" data-collapsible="expandable">
+				<li>
+					<div class="collapsible-header active"><i class="material-icons">toc</i>Sommaire</div>
+					<div class="collapsible-body">
+						<ul id="enhavtabelo" class="collection">
+							<li><a href="#presentation">Présentation</a></li>
+							<li><a href="#kiel">Comment utiliser ce cours ?</a></li>
+							<li><a href="#inscription">Comment s’inscrire ?</a></li>
+							<li><a href="#prononciation">Rappel sur la prononciation</a></li>
+							<li><a href="#enhavo">Table des matières du cours</a></li>
+						</ul>
+					</div>
+				</li>
+				<?php 
+				// On affiche le sommaire de la leçon
+				//getEnhavtabelo('CG',$leciono); 
+				?>
+			</ul>
+		</aside>	
+	</div>
 <?php include "gerdapiedo.inc.php" ?>

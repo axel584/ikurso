@@ -15,7 +15,6 @@ if (!$row) {
 	} else {
 		// on active le compte
 		$query = "update personoj set aktivigita=1 where retadreso='".$retadreso."'";
-		echo $query;
 		$bdd->exec($query);
 		// on enregistre dans le compte rendu
 		protokolo($row["id"],"COMPTE ACTIF",$row["enirnomo"]." a correctement activé son compte");

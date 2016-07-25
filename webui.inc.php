@@ -301,7 +301,12 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	$lecionero_id = $row["id"];
 	// si l'élève n'est pas enregistré
 	if ($persono_id=="") { 
-		return;
+		// on autorise uniquement le QCM
+		if($tipo=="QCM") {
+			echo '<a id="kontroliQCM_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="Vous pourrez corriger vos mauvaises réponses avant de passer à la suite">Vérifier mes réponses !</a>';
+		} else {
+			return;
+		}
 	} else  {
 		// on vérifie si l'élève a déjà fait cette leçon pour n'afficher le bouton que si il n'a pas déjà cliqué sur le bouton :
 		$query = "select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;

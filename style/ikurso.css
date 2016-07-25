@@ -41,7 +41,6 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([reado
 }
 /* surcharge style par défaut des formulaires */
 form p {
-    margin-bottom: inherit;
     text-align: inherit;
 }
 /*--------------------------------*/
@@ -103,6 +102,16 @@ ul.listo li:before {
     color: #989490; 
 }
 
+ul.klarigo { 
+    padding-left: 1em
+}
+
+ul.klarigo li:before {
+    content: "•";
+    color: #2196F3; 
+    padding-right: 1em;`
+    line-height: 160%;
+}
 /*------------- collapsible ------------*/
 
 .collapsible-body{
@@ -346,9 +355,6 @@ p.parto:before {
 	padding-right: 0.5em;
 	vertical-align: middle;
 }
-
-.eo {color: #2196F3;}
-
 
 .vortlisto {
     border: 1px solid #ccc;

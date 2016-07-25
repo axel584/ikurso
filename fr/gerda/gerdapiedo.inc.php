@@ -36,10 +36,11 @@ if (($parto=="ek")&&($numcxap!="01")){ ?>
 	</div> <!-- aligxilo -->
 <?php 
 } 
-if ($parto=="") { ?>
-<div id="lernu">
-	<i>Bildoj el : </i><a href="http://www.lernu.net/"><br>
-	<img src="bildoj/lernu.png" alt="lernu" align="bottom" border="0"></a>
+if ($section==1) { ?>
+<div class="row">
+	<p class="col s12 m10 l7 offset-m1 offset-l1">
+		<i>Bildoj el:</i><br><a href="http://www.lernu.net/"><img src="<?php echo $vojo;?>fr/gerda/bildoj/lernu.png" alt="lernu"></a>
+	</p>
 </div>
 <?php } ?>
 				</div> <!-- kadro -->

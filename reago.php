@@ -40,17 +40,17 @@ include "pagxkapo.inc.php";
 				<div class="card-content">
 					<div class="row">
 						<div class="input-field col s12">
-							<input id="sendinto"  type="email" class="validate" value="<?php if (isset($_SESSION['sendinto'])) {echo $_SESSION['sendinto'];} ?>" required="" aria-required="true">
+							<input id="sendinto" name="sendinto" type="email" class="validate" value="<?php if (isset($_SESSION['sendinto'])) {echo $_SESSION['sendinto'];} ?>" required="" aria-required="true">
 							<label for="sendinto" data-error="veuillez indiquer une adresse correcte" >Votre adresse courriel</label>
 						</div>
 	
 					    <div class="input-field col s12">
-							<input id="temo" type="text" class="validate" required="" aria-required="true" value="<?php if (isset($_SESSION["temo"])) {echo $_SESSION["temo"];}?>">
+							<input id="temo" name="temo" type="text" class="validate" required="" aria-required="true" value="<?php if (isset($_SESSION["temo"])) {echo $_SESSION["temo"];}?>">
 							<label for="temo">Sujet de votre message</label>
 					    </div>
 	
 						<div class="input-field col s12">
-							<textarea id="komento" class="materialize-textarea"></textarea>
+							<textarea id="komento" name="komento" class="materialize-textarea"></textarea>
 							<label for="komento"><?php if (isset($_SESSION["komento"])) {echo $_SESSION["komento"];} else echo "Votre commentaire, question, remarque…"; ?></label>
 						</div>
 					</div>

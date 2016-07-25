@@ -31,31 +31,30 @@ if (checkEmail($_POST['sendinto'])) {
 		mail($informistoj,$objekto,$contents,$mesagxkapo);
 		
 		?>
-			<div id="enhavo">
-				<ul id="tabnav"></ul>
-				<div id="kadro">
-					<div class="klarigo">
-						<h2>Votre message</h2>
-						<form method="post" action="reago2.php">
-						<table class="perso">
-							<tr>
-								<td class="col1">Votre adresse &eacute;lectronique :</td>
-								<td><input name="sendinto" size="50" value="<?php echo $_POST['sendinto'];?>"></td>
-							</tr>
-							<tr>
-								<td class="col1">Sujet de votre message : </td>
-								<td><input name="temo" size="50" value="<?php echo stripSlashes($_POST['temo']);?>"></td>
-							</tr>
-						</table>
-						<table class="perso">
-							<tr><td class="col1">&nbsp;&nbsp;Commentaires / Komentoj / Comments  :</td></tr>
-						</table>
-							<textarea name="komento" rows="8" cols="70"><?php echo stripSlashes($_POST['komento']);?></textarea></td></tr>
-						</form>
+		<div class="row">
+		<article class="col s12 m10 l7 offset-m1 offset-l2">
+			<section class="card">
+				<div class="card-title primaire-texte texte-moyen">Votre message</div>
+				<div class="card-content">
+					<div class="row">	
+						<div class="input-field col s12">
+							Votre adresse &eacute;lectronique :</td>
+							<input name="sendinto" size="50" value="<?php echo $_POST['sendinto'];?>">
+						</div>
+						<div class="input-field col s12">
+							Sujet de votre message : 
+							<input name="temo" size="50" value="<?php echo stripSlashes($_POST['temo']);?>">
+						</div>
+						<div class="input-field col s12">
+							Commentaires / Komentoj / Comments  :
+							<textarea name="komento" class="materialize-textarea"><?php echo stripSlashes($_POST['komento']);?></textarea>
+						</div>
 						<div class='atentigo sukceso'><p class="eraro">Votre message a &eacute;t&eacute; envoy&eacute; aux administrateurs du cours.</p></div>
-					</div>
+					</div>	
 				</div>
-			</div>
+			</section>
+		</article>	
+		</div>
 		<?php 	
 			unset ($_SESSION["sendinto"]);
 			unset ($_SESSION["komento"]);

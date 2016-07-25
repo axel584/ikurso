@@ -27,6 +27,12 @@
 	}
 	if ($erarkodo==14) {
 		echo "Materialize.toast('Merci pour votre retour.', 4000);\n";
+	}
+	if ($erarkodo==15) {
+		echo "Materialize.toast('Vous devez indiquer une adresse électronique correcte', 4000);\n";
+	}
+	if ($erarkodo==16) {
+		echo "Materialize.toast('Votre message est vide', 4000);\n";
 	}	
 	if ($erarkodo==18) {
 		echo "Materialize.toast('Clef d’activation incorrecte.', 4000);\n";

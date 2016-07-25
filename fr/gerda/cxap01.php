@@ -9,7 +9,7 @@ include "gerdakapo.inc.php";
 		
 		<section id="leciono-enhavo">
 		<?php 
-		getTitoloLecionero('GR',1,$section);
+		getTitoloLecionero('GR',$leciono,$section);
 		?>
 		<?php
 		if ($section=="1") {
@@ -453,7 +453,7 @@ include "gerdakapo.inc.php";
 		
 		<section id="leciono-fino">
 			<div id="marko" class="right-align">
-				<?php getBoutonFinSection('CG',1,$section,$persono_id); ?>
+				<?php getBoutonFinSection('GR',1,$section,$persono_id); ?>
 				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
 			</div>
 			<div class="ligoj">

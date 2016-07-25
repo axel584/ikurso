@@ -240,3 +240,8 @@ if ($parto=="ek") {
 
 ?>
 <script type="text/javascript" src="../../xAlUtf8.js"></script>
+<?php 
+if (isset($leciono)) {
+	getListoLecionoj('GR',$leciono);
+}
+?>

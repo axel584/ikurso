@@ -393,7 +393,8 @@ a[type="audio/mp3"] i.material-icons {
 #leciono-fino {margin-top: 2rem;}
 
 /********** exercices *******/
-fieldset.ekzerco {
+fieldset.ekzerco,
+fieldset.sono {
 	border:2px dotted #64B5F6;
 	padding:0 1em 1em 1em;
 	margin-top: 1em;
@@ -412,7 +413,11 @@ fieldset.ekzerco legend:before {
 	padding-right: 0.5em;
 	vertical-align: middle;
 }
-fieldset.ekzerco legend {
+fieldset.sono legend {
+	padding-left: 0.5em;	
+}
+fieldset.ekzerco legend,
+fieldset.sono legend {
 	padding-right: 1em;
 }
 .tasko div.input-field {
@@ -516,6 +521,10 @@ span.ikurso {
 	margin-top:-0.8rem;
 }
 
+/******* Gerda : dialogue ******/
+
+.dialogo p {
+}
 /*********************************/
 /*        pied de page           */
 /*********************************/

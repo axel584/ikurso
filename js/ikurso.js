@@ -116,7 +116,6 @@
 	});
 
 	$("#kontroliQCM_button").click(function() {
-		$("#kontroliQCM_button").addClass("disabled");
 		$.ajax({
        		url : $cheminAbsolu+'ajax/kontroliQCM.php',
        		type : 'GET',

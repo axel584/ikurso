@@ -267,28 +267,14 @@ include "dlekkapo.inc.php";
 			
 		<?php 
 		} // fin section
-		if ($section=="10") {
-		?>			
-		<p>Résumons-nous.</p>
-		<p>Vous avez maintenant appris à former le féminin de tout nom
-		d’être vivant et le contraire de tout mot (nom, adjectif, verbe, etc.) pour
-		peu que ceux-ci aient un sens. Vous avez constaté que tous les verbes se
-		conjuguent comme le verbe <span class="eo">esti</span> que vous connaissiez déjà, et vous
-		avez appris la structure <b>-a -o -as -an -on</b> qui vous permet
-		d’exprimer l’action d’un sujet sur quelque chose ou quelqu’un d’autre. Pas
-		mal, non&nbsp;?
-		</p>
-		<p>Vous pouvez maintenant envoyer vos exercices à votre correcteur. Mais avant, nous vous proposons un petit QCM pour vous permettre de faire le point sur ce que vous avez appris. Voyez vite page suivante&nbsp;!
-		</p>
-
 		
-	<?php 
-	} // fin section
-	if ($section=="11") {
+	if ($section=="10") {
 	?>
 	<p>Voici un petit exercice de révision. Sélectionnez la réponse exacte en 
 	cliquant sur le bouton associé. Si vous ne savez pas quelle réponse donner à une question, n’hésitez pas à relire le cours&nbsp;: toutes les réponses s’y trouvent&nbsp;!</p>
-
+	<?php
+	$eraroj=isset($_GET["eraroj"])?unserialize(urldecode($_GET["eraroj"])):array();
+	?>
 	<input type="hidden" name="013_cxap02.4" value="QCM">
 	<div class="tasko" id="qcm">
 		<?php
@@ -315,6 +301,23 @@ include "dlekkapo.inc.php";
 			
 	<?php 
 	} // fin section 
+	if ($section=="11") {
+		?>			
+		<p>Résumons-nous.</p>
+		<p>Vous avez maintenant appris à former le féminin de tout nom
+		d’être vivant et le contraire de tout mot (nom, adjectif, verbe, etc.) pour
+		peu que ceux-ci aient un sens. Vous avez constaté que tous les verbes se
+		conjuguent comme le verbe <span class="eo">esti</span> que vous connaissiez déjà, et vous
+		avez appris la structure <b>-a -o -as -an -on</b> qui vous permet
+		d’exprimer l’action d’un sujet sur quelque chose ou quelqu’un d’autre. Pas
+		mal, non&nbsp;?
+		</p>
+		<p>Vous pouvez maintenant envoyer vos exercices à votre correcteur&nbsp;!
+		</p>
+
+		
+	<?php 
+	} // fin section
 	?>	
 		</section>
 

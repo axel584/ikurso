@@ -1,15 +1,8 @@
 <?php
 include "../util.php";
-$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $lecionero_id=isset($_GET["lecionero_id"])?$_GET["lecionero_id"]:"";
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
-if ($persono_id=="") { // personne non connecté, on ressort
-	$respondo["type"]="session";
-	$respondo["mesagxo"]="Session expirée";
-	echo json_encode($respondo);
-	exit();
-}
 
 // on indique les résultats en dur en fonction de la leçon
 $QCM[1]=array(13,'2','2','3','2','3','4','1','4','4','1','2','3','2'); // 1ère leçon
@@ -46,6 +39,7 @@ if ($kurso=="KE") {
 if ($bonaj==$QCM[$leciono][0]) {
 	// on a eu les bonnes réponses, on va à la section suivante
 	$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.id>".$lecionero_id." order by ordo ASC";
+	echo $query;
 	$result = $bdd->query($query);
 	$row = $result->fetch();
 	if ($row!=false) {

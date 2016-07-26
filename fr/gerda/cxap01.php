@@ -368,56 +368,6 @@ include "gerdakapo.inc.php";
 				</div>
 			</fieldset>
 
-			<p id="formularo">La correction des exercices est réservée aux personnes qui 
-			s'inscrivent officiellement. 
-			Inversement l'inscription n'est indispensable que si vous désirez faire 
-			appel à un correcteur. Une confirmation d'inscription vous parviendra par 
-			courrier électronique dans les prochains jours. 
-			Attendez de la recevoir avant de commencer la deuxième leçon. 
-			</p>
-			<p class="important">
-			Important : si vous avez déjà suivi le <i>Cours en dix leçons</i> ou le <i>Kurso de Esperanto</i> et que
-			vous êtes donc déjà inscrit au service de correction, merci d'utiliser l'identifiant que vous avez déjà et 
-			ne pas vous réinscrire sous un nouveau nom. 
-			</p>
-			
-			<div class="aligxilo">
-			<p>
-			<input type="radio" name="jamaligxi" value="jes" checked> 
-			<input type="hidden" name="010_subjekto" value="cxap01.php">
-			J'ai déjà suivi un cours sur ce site. Mon identifiant/mot de passe est :</p>
-			<p style="font-size:80%">(si vous souhaitez continuer avec le même correcteur, veuillez l'indiquer dans la zone de commentaires («Autres précisions»), au bas de cette page).</p>
-
-			<table>
-				<tr>
-					<td>Identifiant  :</td>
-					<td><input type="text" name="ktrl_enirnomo" onFocus="this.value='';document.mia_Formularo.jamaligxi[0].checked=true;"></td>
-				</tr>
-				<tr>
-					<td>Mot de passe :</td>
-					<td><input type="password" name="ktrl_pasvorto" value=""></td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td align="center"><input class="bouton" type="submit" name="Submit" value="Envoyer"></td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<p><a href="#formularo" onClick="window.open('../../pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');">
-						<i>Mot de passe oubli&eacute; ? : Cliquez ici</i></a></p>
-					</td>
-				</tr>
-			</table>
-
-			<p>
-				<input type="radio" name="jamaligxi" value="ne">
-				Je ne suis pas encore inscrit sur ce site et je souhaite reçevoir l'aide d'un correcteur pour suivre ce cours, 
-				je m'engage à envoyer au moins une leçon par semaine ou de 
-				prévenir mon correcteur de tout retard éventuel.
-			</p>
-		<?php include "../../aligxi.inc.php"; ?>
-		</div> <!-- aligxilo -->
-			
 		<?php 
 		} // fin section 4
 		if ($section=="5") {

@@ -25,12 +25,10 @@ foreach(array_keys($_GET) as $key) {
 	}
 }
 
-
-
 // on enregistre en base le résultat s'il aucune réponse ne s'y trouve, sinon on fait une mise à jour
 foreach(array_keys($lernantajDemandoj) as $kodo) {
 		if ($lernantajRespondoj[$kodo]=="") {
-			continue; // on enregistre pas les réponses vides
+			continue; // on n'enregistre pas les réponses vides
 		}
 		$result = $bdd->query("select count(*) as combien from respondoj where persono_id=".$persono_id." and kodo='".$kodo."' and lecionero_id=".$lecionero_id);
 		$nbReponseEnBase = $result->fetch()["combien"];
@@ -50,7 +48,7 @@ $requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id)
 if ($kurso=="CG") {
 	$prefixeKurso = "fr/cge/";
 } 
-if ($kurso=="KE") {
+if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
 } 
 

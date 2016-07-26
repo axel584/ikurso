@@ -34,7 +34,7 @@ if ($combien==0) {
 if ($kurso=="CG") {
 	$prefixeKurso = "fr/cge/";
 } 
-if ($kurso=="KE") {
+if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
 } 
 

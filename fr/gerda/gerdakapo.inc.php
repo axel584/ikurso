@@ -67,39 +67,64 @@ function konstruiLasuMenuon() {
 function atentigo() {
 	echo "<p class='eo rimarko'>Por akiri supersignon vi uzu la x-stilon, ekzemple sx iĝos ŝ</p>\n";
 }
-function ekzerco($sist, $nbLig) {
+
+
+function ekzerco($x2u, $nbLig) {
 	global $demandoj, $memorkurso, $persono_id, $numcxap;
 	//
-	// sist = sistemo uzata en la ekzerco. Se =U, ni uzas la auxtomatan anstatauxigon de x per cxapelo
+	// x2u = sistemo uzata en la ekzerco. Se true, ni uzas la auxtomatan anstatauxigon de x per cxapelo
 	// nbLig = nombro da linioj por cxiuj respondo. Se = 1, ni uzas <input>, ne pli da, ni uzas <textarea>
 	//
+	if ($persono_id=="") {
+		$idenfication=False;
+	} else {
+		$idenfication =True;
+	}
+	echo "<div class=\"row\">";
 	foreach ($demandoj as $k => $v) {
-		echo "\t<p>".$k.". ".$v."</p>\n";
-		echo "\t<p><input type='hidden' name='dem_ekz".$k."' value='".$k." ".$v."'>\n";
+		echo "<p class='col s12 demando'>".$k.". ".$v."</p>\n";
+		echo "<input type='hidden' name=\"dem_ekz".$numcxap."_".sprintf('%02d', $k)."\" value=\"".$k." ".$v."\">";
+
 		if ($nbLig==1) {
-			echo "\t<input type='text' size='65' name='res_ekz".$numcxap."_".$k."'";
-			echo " onkeyup='xAlUtf8(this)' ";
+			echo "<div class='input-field col s12'><input name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
+			// si on n'est pas identifié et que ce n'est pas la première leçon, on empeche de remplir les exercices si on n'est pas connecté
+			if ($idenfication==False && $numcxap<>"01") {
+				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
+			}
+			if ($x2u) {
+				echo " onkeyup='xAlUtf8(this)' ";
+			}
 			echo "value=\"";
-			$var="res_ekz".$numcxap."_".$k;
+			$var="res_ekz".$numcxap."_".sprintf('%02d', $k);
 			if (isset($memorkurso[$var])){
 				echo stripslashes($memorkurso[$var]);
 			}
-			echo "\">";
+			echo "\"></div>";
 		}
 		else
 		{
-			echo "\t<textarea cols='65' rows='".$nbLig."' name='res_ekz".$numcxap."_".$k."'";
-			echo " onkeyup='xAlUtf8(this)' ";
+			echo "<div class='input-field col s12'><textarea class='materialize-textarea' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
+			if ($idenfication==False) {
+				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
+			}
+			if ($x2u) {
+				echo " onkeyup='xAlUtf8(this)' ";
+			}
 			echo ">";
-			$var="res_ekz".$numcxap."_".$k;
+			$var="res_ekz".$numcxap."_".sprintf('%02d', $k);
 			if (isset($memorkurso[$var])){
 				echo stripslashes($memorkurso[$var]);
 			}
-			echo "</textarea>";
+			echo "</textarea></div>";
 		}
 		echo "</p>\n";
 	}
+	echo "</div>";
+
 }
+
+
+
 function elektEkzerco() {
 	global $demandoj, $memorkurso, $numcxap;
 	foreach ($demandoj as $k => $v) {

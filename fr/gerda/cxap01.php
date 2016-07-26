@@ -16,7 +16,7 @@ include "gerdakapo.inc.php";
 			include "gerdasono.inc.php";
 		?>
 
-			<h2>En universitata restoracio</h2>
+			<h2>1. En universitata restoracio</h2>
 			<div class="row dialogo">
 				<div class="col s12 m8">
 					<p>(En universitata restoracio)</p>
@@ -294,10 +294,10 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">viro</span> : homme, mâle  [<i><b>vi</b>-ro (r roulé)</i>]</p>
 				</div>
 
-			<?php 
-			} // fin section 3
-			if ($section=="4") {
-			?>
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
 			<p class="parto">Indications pour les exercices :</p>
 			<p><b>Questionnaire (Demandoj) :</b> 
 			Il s'agit de répondre en utilisant l'une des réponses
@@ -403,7 +403,7 @@ include "gerdakapo.inc.php";
 		
 		<section id="leciono-fino">
 			<div id="marko" class="right-align">
-				<?php getBoutonFinSection('GR',1,$section,$persono_id); ?>
+				<?php getBoutonFinSection('GR',$leciono,$section,$persono_id); ?>
 				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
 			</div>
 			<div class="ligoj">

@@ -430,43 +430,15 @@ include "gerdakapo.inc.php";
 
 				<p>Chaque leçon se compose de plusieurs parties :</p>
 				<ul class="sommaire">
-					<li>Rakonto : présente un chapitre du livre</li>
-					<li>Klarigo : présente quelques points de grammaire</li>
-					<li>Vorlisto : présente les nouveaux mots utilisés dans le chapitre</li>
-					<li>Ekzercoj : exercices à envoyer au tuteur pour correction</li>
-					<li>Lasu min... : chapitre correspondant du livre <i>Lasu min paroli plu!</i>.</li>
+					<li><b>Rakonto</b> : présente un chapitre du livre</li>
+					<li><b>Klarigo</b> : présente quelques points de grammaire</li>
+					<li><b>Vorlisto</b> : présente les nouveaux mots utilisés dans le chapitre</li>
+					<li><b>Ekzercoj</b> : exercices à envoyer au tuteur pour correction</li>
+					<li><b>Lasu min…</b> : chapitre correspondant du livre <i>Lasu min paroli plu!</i>.</li>
 				</ul>
 				<p>En parallèlle, nous vous conseillons de lire les récits de 
 				<a href="<?php echo $vojo;?>fr/cge/gerda/lasu00.php"><i>Lasu min paroli plu!</i></a></p>
 				 
-				<h3>Chapitres de <em>Gerda malaperis</em></h3>
-				<ul class="sommaire cadre">
-					<li><a href="cxap01.php">Premier chapitre</a></li>
-					<li><a href="cxap02.php">Deuxième chapitre</a></li>
-					<li><a href="cxap03.php">Troisième chapitre</a></li>
-					<li><a href="cxap04.php">Quatrième chapitre</a></li>
-					<li><a href="cxap05.php">Cinquième chapitre</a></li>
-					<li><a href="cxap06.php">Sixième chapitre</a></li>
-					<li><a href="cxap07.php">Septième chapitre</a></li>
-					<li><a href="cxap08.php">Huitième chapitre</a></li>
-					<li><a href="cxap09.php">Neuvième chapitre</a></li>
-					<li><a href="cxap10.php">Dixième chapitre</a></li>
-					<li><a href="cxap11.php">Onzième chapitre</a></li>
-					<li><a href="cxap12.php">Douzième chapitre</a></li>
-					<li><a href="cxap13.php">Treizième chapitre</a></li>
-					<li><a href="cxap14.php">Quatorzième chapitre</a></li>
-					<li><a href="cxap15.php">Quinzième chapitre</a></li>
-					<li><a href="cxap16.php">Seizième chapitre</a></li>
-					<li><a href="cxap17.php">Dix-septième chapitre</a></li>
-					<li><a href="cxap18.php">Dix-huitième chapitre</a></li>
-					<li><a href="cxap19.php">Dix-neuvième chapitre</a></li>
-					<li><a href="cxap20.php">Vingtième chapitre</a></li>
-					<li><a href="cxap21.php">Vingt-et-unième chapitre</a></li>
-					<li><a href="cxap22.php">Vingt-deuxième chapitre</a></li>
-					<li><a href="cxap23.php">Vingt-troisième chapitre</a></li> 
-					<li><a href="cxap24.php">Vingt-quatrième chapitre</a></li>
-					<li><a href="cxap25.php">Vingt-cinquième chapitre</a></li>
-				</ul>
 				<h3>Et pour finir :</h3>
 		
 				<ul class="sommaire cadre">
@@ -489,10 +461,40 @@ include "gerdakapo.inc.php";
 						</ul>
 					</div>
 				</li>
-				<?php 
-				// On affiche le sommaire de la leçon
-				//getEnhavtabelo('CG',$leciono); 
-				?>
+			</ul>
+			<ul class="collapsible" data-collapsible="expandable">
+				<li>
+					<div class="collapsible-header active"><i class="material-icons">toc</i>Chapitres de <em>Gerda malaperis</em></div>
+					<div class="collapsible-body">
+						<ul id="enhavtabelo" class="collection">
+							<li><a href="cxap01.php">1. En universitata restoracio</a></li>
+							<li><a href="cxap02.php">2. Kio okazas?</a></li>
+							<li><a href="cxap03.php">3. Amdeklaro</a></li>
+							<li><a href="cxap04.php">4. Kio estas tiu Gerda?</a></li>
+							<li><a href="cxap05.php">5. Iu mistera substanco</a></li>
+							<li><a href="cxap06.php">6. Gerda falas en la koridoro</a></li>
+							<li><a href="cxap07.php">7. En la koridoro</a></li>
+							<li><a href="cxap08.php">8. Linda ne scias, kion fari</a></li>
+							<li><a href="cxap09.php">9. Gerda malaperis</a></li>
+							<li><a href="cxap10.php">10 Nefidinda flegistino</a></li>
+							<li><a href="cxap11.php">11. Linda havas ideon</a></li>
+							<li><a href="cxap12.php">12. Bob ege soifas</a></li>
+							<li><a href="cxap13.php">13. Kara spionino!</a></li>
+							<li><a href="cxap14.php">14. En la forlasita domo</a></li>
+							<li><a href="cxap15.php">15. Preciza raporto</a></li>
+							<li><a href="cxap16.php">16. Eble li ne estas via blondulo</a></li>
+							<li><a href="cxap17.php">17. Mi solvos la problemon</a></li>
+							<li><a href="cxap18.php">18. Kompatu vian filinon!</a></li>
+							<li><a href="cxap19.php">19. Mi parolas plej serioze</a></li>
+							<li><a href="cxap20.php">20. Polico!</a></li>
+							<li><a href="cxap21.php">21. La sekreta societo</a></li>
+							<li><a href="cxap22.php">22. En la kaverno</a></li>
+							<li><a href="cxap23.php">23. La trezoro de en kofro</a></li> 
+							<li><a href="cxap24.php">24. La trezoro de la Lumo</a></li>
+							<li><a href="cxap25.php">25. Tiom da riskoj kaj zorkoj</a></li>
+						</ul>
+					</div>
+				</li>
 			</ul>
 		</aside>	
 	</div>

@@ -9,7 +9,7 @@ include "gerdakapo.inc.php";
 		
 		<section id="leciono-enhavo">
 		<?php 
-		getTitoloLecionero('GR',2,$section);
+		getTitoloLecionero('GR',$leciono,$section);
 		?>
 		<?php
 		if ($section=="1") {
@@ -65,32 +65,39 @@ include "gerdakapo.inc.php";
 		?>
 
 			<h4>-iĝ- : <i>devenir, …</i></h4>
-			<p><span class="eo">proksima</span> : proche → <span class="eo">ili proksimiĝas</span> : ils se rapprochent</p>
-			<p><span class="eo">stara</span> : debout → <span class="eo">li stariĝas</span> : il se lève</p>
-			<p><span class="eo">viro</span> : homme, mâle → <span class="eo">la knabo viriĝas</span> : le garçon est en train de devenir un homme</p>
-			<p><span class="eo">rapida</span> : vite, rapide → <span class="eo">rapidiĝo</span> : accélération</p>
+			<div class="row">
+				<p class="col s6"><span class="eo">proksima</span> : proche</p><p class="col s6"><span class="eo">ili proksimiĝas</span> : ils se rapprochent</p>
+				<p class="col s6"><span class="eo">stara</span> : debout</p><p class="col s6"><span class="eo">li stariĝas</span> : il se lève</p>
+				<p class="col s6"><span class="eo">viro</span> : homme, mâle</p><p class="col s6"><span class="eo">la knabo viriĝas</span> : le garçon est en train de devenir un homme</p>
+				<p class="col s6"><span class="eo">rapida</span> : vite, rapide</p><p class="col s6"><span class="eo">rapidiĝo</span> : accélération</p>
+			</div>
 
 			<h4>re- : <i>répétition, retour</i></h4>
-			<p><span class="eo">ŝi vidas</span> : elle voit → <span class="eo">ŝi revidas</span> : elle revoit</p>
-			<p><span class="eo">vi venas</span> : vous venez → <span class="eo">vi revenas</span> : vous revenez</p>
-			<p><span class="eo">li fortiĝas</span> : il devient fort → <span class="eo">li refortiĝas</span> : il retrouve ses forces</p>
-			<p><span class="eo">bela</span> : belle → <span class="eo">ŝi rebeliĝas</span> : elle redevient belle&nbsp;; <span class="eo">rebeliĝo</span> : le fait de retrouver sa beauté</p>
+			<div class="row">
+				<p class="col s6"><span class="eo">ŝi vidas</span> : elle voit</p><p class="col s6"><span class="eo">ŝi revidas</span> : elle revoit</p>
+				<p class="col s6"><span class="eo">vi venas</span> : vous venez</p><p class="col s6"><span class="eo">vi revenas</span> : vous revenez</p>
+				<p class="col s6"><span class="eo">li fortiĝas</span> : il devient fort</p><p class="col s6"><span class="eo">li refortiĝas</span> : il retrouve ses forces</p>
+				<p class="col s6"><span class="eo">bela</span> : belle</p><p class="col s6"><span class="eo">ŝi rebeliĝas</span> : elle redevient belle<br> <span class="eo">rebeliĝo</span> : le fait de retrouver sa beauté</p>
+			</div>
 			
 			<h4>-ulo : <i>une personne</i></h4>
-			<p><span class="eo">juna</span> : jeune → <span class="eo">junulo</span> : un jeune</p>
-			<p><span class="eo">forta</span> : fort → <span class="eo">fortulo</span> : un homme fort</p>
-			<p><span class="eo">stranga</span> : bizarre → <span class="eo">strangulo</span> : un type bizarre, un original</p>
+			<div class="row">
+				<p class="col s6"><span class="eo">juna</span> : jeune</p><p class="col s6"><span class="eo">junulo</span> : un jeune</p>
+				<p class="col s6"><span class="eo">forta</span> : fort</p><p class="col s6"><span class="eo">fortulo</span> : un homme fort</p>
+				<p class="col s6"><span class="eo">stranga</span> : bizarre</p><p class="col s6"><span class="eo">strangulo</span> : un type bizarre, un original</p>
+			</div>
 
 			<h4>-n : <i>complément d'object direct d'un verbe</i></h4>
-			<p><p><span class="eo">li vidas vin, li vin vidas, vin li vidas, vidas li vin, vidas vin li,
-			</span> : il te voit<br>
-			<p><span class="eo">vi vidas lin, vi lin vidas, lin vi vidas, vidas vi lin, vidas lin vi
-			</span> : tu le vois<br>
-			<p><span class="eo">mi petas vin</span> : je te demande (de faire quelque chose), je te prie<br>
-			</p>
+			<div class="row">
+				<p class="col s12"><span class="eo">li vidas vin, li vin vidas, vin li vidas, vidas li vin, vidas vin li,
+				</span> : il te voit</p>
+				<p class="col s12"><span class="eo">vi vidas lin, vi lin vidas, lin vi vidas, vidas vi lin, vidas lin vi
+				</span> : tu le vois</p>
+				<p class="col s12"><span class="eo">mi petas vin</span> : je te demande (de faire quelque chose), je te prie</p>
+			</div>
 
 			<p class="parto">
-			Notez l'emploi de <b>estas</b> dans le sens de <em>il y a</em> :</p>
+			Notez l'emploi de <b>estas</b> dans le sens de <em>il y a</em>&nbsp;:</p>
 			<div class="row">
 				<p class="col s11 offset-s1"><span class="eo">estas io en lia mano</span> : il y a quelque chose dans sa main</p>
 				<p class="col s11 offset-s1"><span class="eo">estas nenio en lia mano</span> : il n'y a rien dans sa main, 
@@ -132,24 +139,21 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">agi</span> : agir</p>
 					<p><span class="eo">alia</span> : autre  [<i>a-<b>li</b>-a</i>]</p>
 					<p><span class="eo">alparoli</span> : adresser la parole à</p>
-					<p><span class="eo">bona</span> : bon(ne)</p>
-					<p><span class="eo">bone</span> : bien</p>
-					<p><span class="eo">certa</span> : certain(e)  [<i><b>tsèr</b>-ta</i>]</p>
-					<p><span class="eo">certe</span> : certainement</p>
+					<p><span class="eo">bona</span> : bon(ne)<br>
+						<span class="eo">bone</span> : bien</p>
+					<p><span class="eo">certa</span> : certain(e)  [<i><b>tsèr</b>-ta</i>]<br>
+						<span class="eo">certe</span> : certainement</p>
 					<p><span class="eo">ĉu</span> : est-ce que…, si (indique l'interrogation)  [<i><b>tchou</b></i>]<br>
-						<span class="eo">li venas</span> : il vient → 
-						<span class="eo">ĉu li venas?</span> : vient-il ?<br>
-						<span class="eo">vi scias</span> : tu sais → 
-						<span class="eo">ĉu vi scias</span> : est-ce que tu sais ?<br>
-						<span class="eo">ĉu li venas</span> : vient-il ? →
-						<span class="eo">rigardu, ĉu li venas</span> : regarde s'il vient<br>
-						<span class="eo">ĉu li sidas?</span> : est-il assis ? →
-						<span class="eo">mi ne scias, ĉu li sidas</span> : je ne sais pas s'il est assis</p>
-					<p><span class="eo">diable !</span> : diable !, diantre !  [<i>di-<b>a</b>-blè (trois syllabes !)</i>]</p>
+						<div class="tab"><span class="eo">li venas</span> : il vient<br>→ <span class="eo">ĉu li venas?</span> : vient-il ?<br>
+						<span class="eo">vi scias</span> : tu sais<br>→ <span class="eo">ĉu vi scias</span> : est-ce que tu sais ?<br>
+						<span class="eo">ĉu li venas</span> : vient-il ?<br>
+						→ <span class="eo">rigardu, ĉu li venas</span> : regarde s'il vient<br>
+						<span class="eo">ĉu li sidas?</span> : est-il assis ?<br>→ <span class="eo">mi ne scias, ĉu li sidas</span> : je ne sais pas s'il est assis</div></p>
+					<p><span class="eo">diable !</span> : diable !, diantre !<br>[<i>di-<b>a</b>-blè (trois syllabes !)</i>]</p>
 					<p><span class="eo">diablo</span> : diable</p>
 					<p><span class="eo">direkto</span> : direction</p>
-					<p><span class="eo">diskreta</span> : discret, discrète</p>
-					<p><span class="eo">diskrete</span> : discrètement, avec discrétion</p>
+					<p><span class="eo">diskreta</span> : discret, discrète<br>
+						<span class="eo">diskrete</span> : discrètement, avec discrétion</p>
 					<p><span class="eo">dum</span> : durant, pendant, pendant que</p>
 					<p><span class="eo">ej !</span> : hé là !</p>
 					<p><span class="eo">forta</span> : fort(e)</p>
@@ -159,58 +163,60 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">inter</span> : entre, parmi</p>
 					<p><span class="eo">io</span> : quelque chose  [<i>(deux syllabes !)</i>]<br>
 						<span class="eo">io mistera</span> : quelque chose de mystérieux</p>
-					<p><span class="eo">iom</span> : un peu [<i>(deux syllabes !)</i>]</p>
-					<p><span class="eo">iom post iom</span> : petit à petit, peu à peu</p>
+					<p><span class="eo">iom</span> : un peu [<i>(deux syllabes !)</i>]<br>
+						<span class="eo">iom post iom</span> : petit à petit, peu à peu</p>
 					<p><span class="eo">iomete</span> : un petit peu</p>
 					<p><span class="eo">junulo</span> : = jun- + -ulo</p>
-					<p><span class="eo">ke</span> : que (exemple: je sais que ..., il dit que ...)</p>
-					<p><span class="eo">kvazaŭ</span> : 	quasi-, comme si  [<i><b>kva</b>-zaou (ou bref)</i>]</p>
+					<p><span class="eo">ke</span> : que (exemple: je sais que…, il dit que…)</p>
+					<p><span class="eo">kvazaŭ</span> : 	quasi-, comme si<br>[<i><b>kva</b>-zaou (ou bref)</i>]</p>
 					<p><span class="eo">lia</span> : son, sa (à lui)</p>
 					<p><span class="eo">mano</span> : main</p>
-					<p><span class="eo">mistera</span> : mystérieux, mystérieuse</p>
-					<p><span class="eo">mistere</span> : mystérieusement</p>
-					<p><span class="eo">mistero</span> : mystère</p>
+					<p><span class="eo">mistera</span> : mystérieux, mystérieuse<br>
+						<span class="eo">mistere</span> : mystérieusement<br>
+						<span class="eo">mistero</span> : mystère</p>
 					<p><span class="eo">montri</span> : montrer, désigner</p>
 				</div>
 				<div class="col s12 l6">
-					<p><span class="eo">natura</span> : naturel(le)</p>
-					<p><span class="eo">nature</span> : naturellement</p>
-					<p><span class="eo">naturo</span> : nature</p>
-					<p><span class="eo">ne plu</span> : plus maintenant, ne... plus</p>
+					<p><span class="eo">natura</span> : naturel(le)<br>
+						<span class="eo">nature</span> : naturellement<br>
+						<span class="eo">naturo</span> : nature</p>
+					<p><span class="eo">ne plu</span> : plus maintenant, ne… plus</p>
 					<p><span class="eo">pala</span> : pâle</p>
 					<p><span class="eo">paroli</span> : parler</p>
 					<p><span class="eo">peti</span> : demander (de faire quelque chose) ; prier (de faire quelque chose)<br>
-						<i>ne pas confondre avec <span class="eo">demandi</span> (poser une question)<br>
-						on utilise <span class="eo">mi petas</span> pour dire "s'il vous/te plaît"</i></p>
+						<span class="eta">ne pas confondre avec <span class="eo">demandi</span> (poser une question). 
+						On utilise <span class="eo">mi petas</span> pour dire «s'il vous/te plaît»</span></p>
 					<p><span class="eo">plu</span> : plus, plus longtemps, plus loin</p>
 					<p><span class="eo">pordo</span> : porte</p>
 					<p><span class="eo">post</span> : après</p>
 					<p><span class="eo">prava</span> : correct(e) (opinion, comportement, etc.)</p>
 					<p><span class="eo">malprava</span> : faux, erroné</p>
-					<p><span class="eo">pravi</span> : 	avoir raison, être correct</p>
+					<p><span class="eo">pravi</span> : avoir raison, être correct</p>
 					<p><span class="eo">malpravi</span> : avoir tort, être faux</p>
 					<p><span class="eo">proksima</span> : proche</p>
 					<p><span class="eo">malproksima</span> : éloigné(e)</p>
-					<p><span class="eo">proksimiĝi</span> : 	= proksim- + -iĝ- + -i<br>s'approcher</p>
+					<p><span class="eo">proksimiĝi</span> : 	= <span class="eo">proksim</span>- + -<span class="eo">iĝ</span>- + -<span class="eo">i</span><br>s'approcher</p>
 					<p><span class="eo">rapida</span> : rapide, vif, vive</p>
 					<p><span class="eo">malrapida</span> : lent</p>
 					<p><span class="eo">reveni</span> : = re- + veni<br>revenir</p>
 					<p><span class="eo">se</span> : si (indique une condition)</p>
-					<p><span class="eo">stari</span> : 	se tenir debout, être debout</p>
-					<p><span class="eo">stranga</span> : bizarre  [<i><b>stranne</b>-ga</i>]</p>
+					<p><span class="eo">stari</span> : se tenir debout, être debout</p>
+					<p><span class="eo">stranga</span> : bizarre [<i><b>stranne</b>-ga</i>]</p>
 					<p><span class="eo">strange</span> : bizarrement<br>
-						<span class="eo">li rigardas al mi strange</span> : il me regarde bizarrement<br>
-						<span class="eo">(estas) strange!</span> : (c'est) bizarre !</p>
-					<p><span class="eo">strangulo</span> : 	= strang- + -ulo</p>
-					<p><span class="eo">ŝi</span> : 	elle [<i><b>chi</b></i>]</p>
-					<p><span class="eo">ŝia</span> : son, sa (à elle)  [<i><b>chi</b>-a</i>]</p>
+						<div class="tab">
+							<span class="eo">li rigardas al mi strange</span> : il me regarde bizarrement<br>
+							<span class="eo">(estas) strange!</span> : (c'est) bizarre !<br>
+							<span class="eo">strangulo</span> : = <span class="eo">strang</span>– + –<span class="eo">ulo</span>
+						</div></p>
+					<p><span class="eo">ŝi</span> : 	elle [<i><b>chi</b></i>]<br>
+						<span class="eo">ŝia</span> : son, sa (à elle) [<i><b>chi</b>-a</i>]</p>
 					<p><span class="eo">taso</span> : tasse</p>
 					<p><span class="eo">tre</span> : très</p>
 					<p><span class="eo">turni</span> : tourner</p>
 					<p><span class="eo">ulo</span> : type, individu</p>
 					<p><span class="eo">vidi</span> : voir</p>
-					<p><span class="eo">vin</span> : = vi + -n  [<i><b>vine</b></i>]</p>
-					<p><span class="eo">voli</span> : 	vouloir</p>
+					<p><span class="eo">vin</span> : = <span class="eo">vi</span> + -<span class="eo">n</span>  [<i><b>vine</b></i>]</p>
+					<p><span class="eo">voli</span> : vouloir</p>
 				</div>
 			</div>
 
@@ -240,19 +246,16 @@ include "gerdakapo.inc.php";
 				<legend>Elektu la ĝustan vorton.</legend>
 				<input type="hidden" name="013_cxap02.1" value="Elektu la ĝustan vorton.">
 				
-				<p><em>Turnu vin iomete, <select><option>  ?  </option>
-				<option>ĉu</option><option>se</option></select> vi volas. ---> 
-				Turnu vin iomete, <input value="se" size="2"> vi volas.</em></p>
-				<p>
-				Cet exercice attire votre attention sur la différence de sens entre
-				<b>ĉu</b> (interrogation) et <b>se</b> (condition) :<br>
-				<span class='ekz'>mi ne vidas, ĉu estas io inter mi kaj vi</span> : 
-				je ne vois pas s'il y a quelque chose entre vous et moi.
-				<br>(Y a-t-il quelque chose ? Je ne vois pas.)<br>
-				<span class='ekz'>mi ne vidas, se estas io inter mi kaj vi.</span> : 
-				s'il y a quelque chose entre moi et vous, alors je ne vois pas.
-				(Cette chose m'empêche de voir.)</p>
-				<p> </p>
+				<p><em>Turnu vin iomete, <span class="input-field"><select><option>  ?  </option>
+				<option>ĉu</option><option>se</option></select></span> vi volas.</em><br> 
+				---> <em>Turnu vin iomete, <b>se</b> vi volas.</em></p>
+				<p>Cet exercice attire votre attention sur la différence de sens entre
+				<b>ĉu</b> (interrogation) et <b>se</b> (condition)&nbsp;:</p>
+				<p><span class='eo'>mi ne vidas, ĉu estas io inter mi kaj vi</span> : 
+				je ne vois pas s'il y a quelque chose entre vous et moi. (Y a-t-il quelque chose ? Je ne vois pas.)</p>
+				<p><span class='eo'>mi ne vidas, se estas io inter mi kaj vi.</span> : 
+				s'il y a quelque chose entre moi et vous, alors je ne vois pas. (Cette chose m'empêche de voir.)</p>
+				<hr>
 				<div class="tasko">
 					<?php $demandoj=array (
 						7 => "Mi ne vidas, [ĉu/se] la junulo parolas al la knabino, aŭ [ĉu/se] li nur rigardas al ŝi.",
@@ -275,12 +278,12 @@ include "gerdakapo.inc.php";
 		?>
 
 			<h3>Stranga strangulo</h3>
-			<p>Tiu ulo estas stranga. Ĉu vi vidas lin ? Tiu granda
+			<p>Tiu ulo estas stranga. Ĉu vi vidas lin? Tiu granda
 			viro, vere forta, kiu staras proksime al la spegulo,
 			kun io en la mano. Li ne plu estas tre juna, sed li ne
-			estas maljuna. Ĉu vi vidas lin ? Ĉu vi vidas lin nun ?
+			estas maljuna. Ĉu vi vidas lin? Ĉu vi vidas lin nun?
 			</p>
-			<p>Turnu vin iomete. Jen. Nun vi certe vidas lin, ĉu ne ?</p>
+			<p>Turnu vin iomete. Jen. Nun vi certe vidas lin, ĉu ne?</p>
 			<p>Nu, tiu stranga ulo parolas tute sola. Dum vi rigardas
 			lin, li haltas, sed se vi ne rigardas, li reparolas. Li
 			iras rapide al la pordo, staras proksime al tiu alia
@@ -292,24 +295,24 @@ include "gerdakapo.inc.php";
 			nenio okazas.</p>
 			<p>Nun li malrapide proksimiĝas al la spegulo, parolas al
 			la spegulo, dum juna virino sidas tute proksime. Sed li
-			ne parolas al ŝi, li parolas al la spegulo ! Strange,
+			ne parolas al ŝi, li parolas al la spegulo! Strange,
 			ĉu ne ? Vere stranga ulo !</p>
 			<p>Nun, jen li malrapide revenas al alia angulo. Io estas
 			tute ne-natura en lia rigardo.</p>
-			<p>Ĉu vi scias, kiu estas tiu viro ? Li estas forta kaj
+			<p>Ĉu vi scias, kiu estas tiu viro? Li estas forta kaj
 			alta, sed pala, tro pala, multe tro pala. Li estas
 			ne-nature pala. Vera strangulo !</p>
-			<p>Ĉu mi demandu al li, kiu li estas ? Diable ! Mi ne plu
+			<p>Ĉu mi demandu al li, kiu li estas? Diable! Mi ne plu
 			vidas lin. Knabo kaj knabino staras inter li kaj mi.
-			Ĉu vi vidas lin nun ? Mi ne. Mi ne plu vidas lin. Ho
+			Ĉu vi vidas lin nun? Mi ne. Mi ne plu vidas lin. Ho
 			jes, jen mi lin revidas. Fakte, li nun staras iom
-			malproksime. Rigardu ! Jen, nun li iras tre malrapide
+			malproksime. Rigardu! Jen, nun li iras tre malrapide
 			al la pordo. Vere, li agas plej strange. Mi demandas
-			min...</p>
-			<p>Kio estas en lia mano ? Ĉu vi vidas ? Ha, jen li
+			min…</p>
+			<p>Kio estas en lia mano? Ĉu vi vidas? Ha, jen li
 			reproksimiĝas. Mi bone vidas nun. Nun mi vidas, kio
 			estas en lia mano. Estas taso. Estas nur taso. Rigardu,
-			li agas vere strange ! Li parolas al la taso. Li iras
+			li agas vere strange! Li parolas al la taso. Li iras
 			al tiu juna studentino, kiu sidas en la angulo, haltas,
 			staras proksime al ŝi, sed ne parolas al ŝi. Li
 			parolas nur al la taso. Li agas vere strange, vere tre
@@ -326,7 +329,7 @@ include "gerdakapo.inc.php";
 		
 		<section id="leciono-fino">
 			<div id="marko" class="right-align">
-				<?php getBoutonFinSection('CG',$leciono,$section,$persono_id); ?>
+				<?php getBoutonFinSection('GR',$leciono,$section,$persono_id); ?>
 				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
 			</div>
 			<div class="ligoj">

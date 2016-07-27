@@ -1,6 +1,6 @@
 <?php
 $kurso="GR";
-$korpo="garda";
+$korpo="gerda";
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
 if ($subjekto!="korekti.php") {
@@ -24,19 +24,19 @@ if (isset($leciono)&&isset($persono_id)) {
 // tiu funkcio konstruas la liston de la tekstoj "lasu min..."
 function konstruiLasuMenuon() {
 	$tlasu = array (
-		"01" => "  1.  Izabela",
-		"02" => "  2.  Stranga strangulo",
-		"03" => "  3.  Amdeklaro",
-		"04" => "  4.  Lingvistiko",
-		"05" => "  5.  Ĉu vere vi ne volas labori?",
-		"06" => "  6.  La ulo, kiu ne plu pensas",
-		"07" => "  7.  Oni venis el alia mondo",
-		"08" => "  8.  Iru kiel vi volas",
-		"09" => "  9.  Zorgi pri zorgado",
-		"10" => "10.  La fortegulo",
-		"11" => "11.  Malkontentas la mekanikisto",
-		"12" => "12.  Jen vi ree trinkas!",
-		"13" => "13.  Revenis amo, feliĉu ni!",
+		"01" => " 1. Izabela",
+		"02" => " 2. Stranga strangulo",
+		"03" => " 3. Amdeklaro",
+		"04" => " 4. Lingvistiko",
+		"05" => " 5. Ĉu vere vi ne volas labori?",
+		"06" => " 6. La ulo, kiu ne plu pensas",
+		"07" => " 7. Oni venis el alia mondo",
+		"08" => " 8. Iru kiel vi volas",
+		"09" => " 9. Zorgi pri zorgado",
+		"10" => "10. La fortegulo",
+		"11" => "11. Malkontentas la mekanikisto",
+		"12" => "12. Jen vi ree trinkas!",
+		"13" => "13. Revenis amo, feliĉu ni!",
 		"14" => "14a. Silentu, enaj voĉoj",
 		"14b" => "14b. Timiga diro",
 		"15" => "15a. Mistero en papervendejo",
@@ -47,10 +47,10 @@ function konstruiLasuMenuon() {
 		"17b" => "17b. Instruista amo",
 		"18" => "18a. La letersoifa patrino",
 		"18b" => "18b. Mi atendas gravan leteron",
-		"19" => "19.   Dormu trankvile!",
-		"20" => "20a.  La fakulo-instruisto venis de malproksime",
+		"19" => "19. Dormu trankvile!",
+		"20" => "20a. La fakulo-instruisto venis de malproksime",
 		"20b" => "20b. Troa scivolo kondukas morten",
-		"21" => "21a.  Ho, bela naskiĝurbo!",
+		"21" => "21a. Ho, bela naskiĝurbo!",
 		"21b" => "21b. Adiaŭ, lando amata!",
 		"22" => "22a. Ek al fora insulo!",
 		"22b" => "22b. Skribas malliberulo",
@@ -58,7 +58,7 @@ function konstruiLasuMenuon() {
 		"23b" => "23b. Ameriko, jen mi venas",
 		"24" => "24a. Literaturo amindas, sed tamen...",
 		"24b" => "24b. La ĝojoj de petveturado",
-		"25" => "25.   La tri plendoj de S-ro Kursano"
+		"25" => "25. La tri plendoj de S-ro Kursano"
 	); 
 }
 /*
@@ -135,11 +135,11 @@ function elektEkzerco() {
 			if ($v[$i]=="[") {
 				echo $text;
 				echo "<input type=\"hidden\" name=\"dd".$numcxap."_".$k."_".$n."\" value=\"".$text."\">";
-				echo "<select name=\"rr".$numcxap."_".$k."_".$n."\">";
+				echo "<span class=\"input-field\"><select name=\"rr".$numcxap."_".$k."_".$n."\">";
 				echo "<option label=\"  ?  \">  ?  </option><option label=";
 				$text="";
 			} elseif ($v[$i]=="]") {
-				echo "\"".$text."\">".$text."</option></select>";
+				echo "\"".$text."\">".$text."</option></select></span>";
 				$text="";
 			} elseif ($v[$i]=="/") {
 				echo "\"".$text."\">".$text."</option><option label=";

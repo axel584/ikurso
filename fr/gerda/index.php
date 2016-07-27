@@ -480,7 +480,7 @@ include "gerdakapo.inc.php";
 							<li><a href="cxap11.php">11. Linda havas ideon</a></li>
 							<li><a href="cxap12.php">12. Bob ege soifas</a></li>
 							<li><a href="cxap13.php">13. Kara spionino!</a></li>
-							<li><a href="cxap14.php">14. En la forlasita domo</a></li>
+							<li><a href="cxap14.php">14. En forlasita domo</a></li>
 							<li><a href="cxap15.php">15. Preciza raporto</a></li>
 							<li><a href="cxap16.php">16. Eble li ne estas via blondulo</a></li>
 							<li><a href="cxap17.php">17. Mi solvos la problemon</a></li>

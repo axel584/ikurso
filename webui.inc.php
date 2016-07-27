@@ -388,12 +388,23 @@ function getListoLecionoj($kurso,$leciono) {
 	if ($kurso=='CG') {		
 		echo "<p>Cours d'espéranto en dix leçons :</p>";
 	}
+	elseif ($kurso=="GR") {
+		echo "<p>Gerda malaperis :</p>";
+	}
 	echo "<ul id='lecionoj'>";
 	if ($leciono==0) {
-		echo "<li id='intro' class='nuna'><a href='intro.php'>introduction</a></li>";
+		if ($kurso=='CG') {
+			echo "<li id='intro' class='nuna'><a href='intro.php'>introduction</a></li>";
+		} elseif ($kurso=="GR") {
+			echo "<li id='intro' class='nuna'><a href='index.php'>introduction</a></li>";
+		}
 	}
 	else {
-		echo "<li id='intro' class='farita'><a href='intro.php'>introduction</a></li>";
+		if ($kurso=='CG') {
+			echo "<li id='intro' class='farita'><a href='intro.php'>introduction</a></li>";
+		} elseif ($kurso=="GR") {
+			echo "<li id='intro' class='farita'><a href='index.php'>introduction</a></li>";
+			}
 	}
 	$query = "select * from lecionoj where kurso='".$kurso."' order by numero";
 	$res = $bdd->query($query);

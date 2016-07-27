@@ -39,9 +39,20 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
 input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
     color: #2196F3;
 }
+
+.select-wrapper {
+	display: inline-block;
+	padding-right: 0.5em;
+}
 /* surcharge style par défaut des formulaires */
 form p {
     text-align: inherit;
+}
+
+p.col,
+form p.col {
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
 }
 /*--------------------------------*/
 
@@ -80,6 +91,7 @@ div.col > p:first-child {
 .eo {color: #2196F3;}
 .noto strong {color: #2196F3;}
 .eta {font-size: 85%;}
+.tab {padding-left: 1em;}
 
 /* amélioration de l'affichage s12 */
 
@@ -347,6 +359,10 @@ ul#progreso li.nuna {
 #leciono-enhavo a:hover {color: #0d47a1}
 #leciono-enhavo a:active {color: #673ab7;}
 
+p.parto {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
 p.parto:before {
 	font-family: 'Material Icons';
 	content: "texture";
@@ -430,6 +446,9 @@ fieldset.sono legend {
 	margin-top: 0;
 	line-height: 100%;
 	margin-bottom: 1em;
+}
+.tasko hr {
+	border: 1px solid #2196F3;
 }
 [type="radio"]:checked+label:after {
     background-color: #2196F3;

@@ -16,7 +16,7 @@ include "gerdakapo.inc.php";
 			include "gerdasono.inc.php";
 		?>
 
-			<h2>1. En universitata restoracio</h2>
+			<h3>En universitata restoracio</h3>
 			<div class="row dialogo">
 				<div class="col s12 m8">
 					<p>(En universitata restoracio)</p>
@@ -426,7 +426,7 @@ include "gerdakapo.inc.php";
 		
 		<p>
 			Elŝutu ĉiujn rakontojn (entute: 25) en unu dosiero:
-			 <a href="./son/gerda_malaperis.zip">gerda_malaperis.zip</a>
+			 <a href="<?php echo $vojo;?>fr/gerda/son/gerda-malaperis.zip">gerda-malaperis.zip</a>
 		</p>
 		
 	</aside>

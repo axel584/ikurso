@@ -294,7 +294,7 @@ include "dlekkapo.inc.php";
 		Li promenas kun {belaj} knabinoj → Kun kiaj knabinoj li promenas&nbsp;?</p>
 		
 		<input type="hidden" name="013_cxap05.1" value="1. Transformez chaque phrase en interrogation en remplaçant le texte entre accolades par un corrélatif en KI-.">
-		<?php atentigo();	?>
+		<?php atentigo(); ?>
 		<div class="tasko">
 		<?php
 			$demandoj=array (

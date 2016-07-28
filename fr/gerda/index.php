@@ -489,9 +489,9 @@ include "gerdakapo.inc.php";
 							<li><a href="cxap20.php">20. Polico!</a></li>
 							<li><a href="cxap21.php">21. La sekreta societo</a></li>
 							<li><a href="cxap22.php">22. En la kaverno</a></li>
-							<li><a href="cxap23.php">23. La trezoro de en kofro</a></li> 
+							<li><a href="cxap23.php">23. La trezoro en kofro</a></li> 
 							<li><a href="cxap24.php">24. La trezoro de la Lumo</a></li>
-							<li><a href="cxap25.php">25. Tiom da riskoj kaj zorkoj</a></li>
+							<li><a href="cxap25.php">25. Tiom da riskoj kaj zorgoj</a></li>
 						</ul>
 					</div>
 				</li>

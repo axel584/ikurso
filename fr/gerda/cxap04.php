@@ -78,6 +78,20 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<h4>-aĵo : <i>quelque chose de concret ayant la qualité de…</i></h4>
+			<div class="row">
+				<p class="col s6"><span class="eo">nova</span> : nouveau </p><p class="col s6"><span class="eo">nov<b>aĵo</b></span> : une nouvelle, nouveauté</p>
+				<p class="col s6"><span class="eo">okazi</span> : arriver, se passer, survenir </p><p class="col s6"><span class="eo">okaz<b>aĵo</b></span> : événement</p>
+				<p class="col s6"><span class="eo">arto</span> : art </p><p class="col s6"><span class="eo"> art<b>aĵo</b></span> : objet d'art</p>
+			</div>
+			<p>kriptaĵo= kripta afero, io kripta</p>
+			<p>kriptaĵoscienco = scienco pri kriptaĵoj</p>
+
+		<?php 
 		} // fin section 5
 		?>
 

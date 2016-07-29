@@ -76,6 +76,91 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+	
+				<h4>al- : <i>approche, direction vers</i></h4>
+		
+				<p><span class="eo">veni</span> : venir → <span class="eo">alveni</span> : arriver</p>
+				<p><span class="eo">iri</span> : aller → <span class="eo">aliri</span> : s'approcher</p>
+				<p><span class="eo">porti</span> : porter → <span class="eo">alporti</span> : apporter</p>
+				<p><span class="eo">paroli</span> : parler → <span class="eo">alparoli</span> : s'adresser</p>
+		
+				<p><span class="eo">kapjesi = kap + jes + i</span> : faire oui de la tête 
+				(«tête» + «oui» + fin de verbe)</p>
+				
+				<p><span class="eo">scivola = sci + vol + a</span> : curieux, curieuse 
+				(«savoir» + «vouloir» + fin d'adjectif = «qui veut savoir»)</p>
+		
+				<p><span class="eo">klarigi = klar + ig + i</span> : expliquer 
+				(«clair» + «rendre» + fin de verbe = «rendre clair»)</p>
+		
+				<p><span class="eo">survizaĝe = sur + vizaĝ + e</span> : sur son visage  
+				(«sur» + «visage» + fin d'adverbe = <span class="eo">sur (la, lia, ŝia) vizaĝo</span>)</p>
+		
+				<h4>-a → -e </h4>
+		
+				<p><span class="eo">facila laboro</span> : un travail facile</p>
+				<p><span class="eo">facile labori</span> : travailler facilement</p>
+				<p><span class="eo">la laboro estas facila</span> : le travail est facile</p>
+				<p><span class="eo">labori estas facile</span> : travailler est facile</p>
+				<p><span class="eo">estas facile labori</span> : c'est facile de travailler</p>
+				<p><span class="eo">estas bone lerni la lingvon</span> : c'est bien d'apprendre la langue</p>
+				<p><span class="eo">ripari la aŭton estas dezirinde</span> : il est souhaitable de réparer la voiture</p>
+				<p><span class="eo">riparado de la aŭto estas dezirinda</span> : la réparation de la voiture est souhaitable</p>
+		
+				<p><span class="eo">tiu demando estas nediskreta</span> : cette question est indiscrète</p>
+				<p><span class="eo">tion demandi estas nediskrete</span> : il est indiscret de demander cela</p>
+		
+				<p><span class="eo">estis klare, ke la laboron faros li</span> :  il était clair que c'est lui qui ferait le travail</p>
+				<p><span class="eo">estis klara decido, ke la laboron faros li</span> : la décision qu'il ferait le travail était claire&nbsp;; 
+				il était clairement décidé qu'il ferait le travail</p>
+		
+				<p><span class="eo">estus bone, se vi povus veni</span> : ce serait bien si tu pouvais venir</p>
+				<p><span class="eo">estus bona afero, se vi povus veni</span> : ce serait une bonne chose si tu pouvais venir</p>
+		
+				<h4>ja</h4>
+				<p><b>ja</b> introduit souvent une explication à ce qui a été affirmé précédemment, mais cette particule sert aussi à mettre en avant un 
+				point particulier&nbsp;:</p>
+		
+				<p><span class="eo">mi ne povas ĝin porti, ĝi ja estas tro granda</span> : je ne peux pas le porter, c'est trop gros</p>
+		
+				<p><span class="eo">li certe venos, li ja tre deziras vidi vin </span> : il viendra sûrement, car il a très envie de te voir</p>
+		
+				<p><span class="eo">vi ja scias …</span> : tu sais sûrement … ; assurément, tu sais …</p>
+		
+				<p><span class="eo">ĉu li ne venos? - jes ja!</span> : viendra-t-il?  - oh oui, assurément</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
+
+		<?php 
 		} // fin section 5
 		?>
 

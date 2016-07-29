@@ -92,6 +92,82 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+	
+				<h4>-ata : <i>participe présent passif</i></h4>
+			
+				<p><span class="eo">konata</span> : (qui est) connu(e)</p>
+				<p><span class="eo">rigardata</span> : que l'on regarde</p>
+			
+				<h4>-inta : <i>participe passé actif</i></h4>
+		
+				<p><span class="eo">aminta</span> : ayant aimé</p>
+				<p><span class="eo">laborinta</span> : ayant travaillé</p>
+		
+				<h4>-eco : <i>nom abstrait de la qualité</i></h4>
+		
+				<p><span class="eo">libera</span> : libre → <span class="eo">libereco</span> : liberté</p>
+				<p><span class="eo">viro</span> : homme (mâle) → <span class="eo">vireco</span> : virilité</p>
+				<p><span class="eo">unu</span> : un → <span class="eo">unueco</span> : unité</p>
+		
+				<h4>-iĝ- :<i>action, indication, de devenir</i></h4>
+		
+				<p><span class="eo">mi vekas lin</span> : je le réveille → <span class="eo">li vekiĝas</span> : il se réveille</p>
+				<p><span class="eo">mi movas ĝin</span> : je le déplace → <span class="eo">ĝi moviĝas</span> : ça se déplace</p>
+				<p><span class="eo">li komencas la rakonton</span> : il commence l'histoire</p>
+				<p><span class="eo">la rakonto komenciĝas</span> : l'histoire commence</p>
+		
+				<p><span class="eo">ellitiĝi = iĝi el lito</span> : se lever (litt. «devenir hors du lit»)</p>
+		
+				<h4>-ata → -ita : (<i>comparé à</i> -as / -is)</h4>
+		
+				<p><span class="eo">farata laboro</span> : un travail en cours</p>
+				<p><span class="eo">farita laboro</span> : un travail terminé</p>
+				<p>[comparer <span class="eo">mi faras la laboron</span> : je fais le travail ; <span class="eo">mi faris la laboron</span> : j'ai fait ce travail]</p>
+		
+				<p><span class="eo">vekata amiko</span> : un ami que j'essaie de réveiller ; un ami que l'on réveille</p>
+				<p><span class="eo">vekita amiko</span> : un ami que l'on a réveillé, et qui est éveillé</p>
+		
+				<h4>-ega /-iga : -ega <i>(augmentation)</i>, -iga <i>(causalité)</i></h4>
+		
+				<p><span class="eo">lacega</span> : épuisé(e) ; terriblement fatigué(e)</p>
+				<p><span class="eo">laciga</span> : fatigant(e) («causant de la fatigue»)</p>
+				<p><span class="eo">kuraĝega</span> : extrêmement courageux (courageuse) ; téméraire ; intrépide</p>
+				<p><span class="eo">kuraĝiga</span> : encourageant(e)</p>
+		
+				<p><span class="eo">fenestrokovrilo</span> : volet = «un instrument/outil qui sert à» (<span class="eo">ilo</span>) «couvrir» (<span class="eo">kovr-</span>)&nbsp;; «une fenêtre» (<span class="eo">fenestro</span>)</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
+
+		<?php 
 		} // fin section 5
 		?>
 

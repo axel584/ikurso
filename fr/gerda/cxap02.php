@@ -64,65 +64,52 @@ include "gerdakapo.inc.php";
 		if ($section=="2") {
 		?>
 
-			<h4>-iĝ- : <i>devenir, …</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">proksima</span> : proche</p><p class="col s6"><span class="eo">ili proksimiĝas</span> : ils se rapprochent</p>
-				<p class="col s6"><span class="eo">stara</span> : debout</p><p class="col s6"><span class="eo">li stariĝas</span> : il se lève</p>
-				<p class="col s6"><span class="eo">viro</span> : homme, mâle</p><p class="col s6"><span class="eo">la knabo viriĝas</span> : le garçon est en train de devenir un homme</p>
-				<p class="col s6"><span class="eo">rapida</span> : vite, rapide</p><p class="col s6"><span class="eo">rapidiĝo</span> : accélération</p>
-			</div>
-
-			<h4>re- : <i>répétition, retour</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">ŝi vidas</span> : elle voit</p><p class="col s6"><span class="eo">ŝi revidas</span> : elle revoit</p>
-				<p class="col s6"><span class="eo">vi venas</span> : vous venez</p><p class="col s6"><span class="eo">vi revenas</span> : vous revenez</p>
-				<p class="col s6"><span class="eo">li fortiĝas</span> : il devient fort</p><p class="col s6"><span class="eo">li refortiĝas</span> : il retrouve ses forces</p>
-				<p class="col s6"><span class="eo">bela</span> : belle</p><p class="col s6"><span class="eo">ŝi rebeliĝas</span> : elle redevient belle<br> <span class="eo">rebeliĝo</span> : le fait de retrouver sa beauté</p>
-			</div>
-			
-			<h4>-ulo : <i>une personne</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">juna</span> : jeune</p><p class="col s6"><span class="eo">junulo</span> : un jeune</p>
-				<p class="col s6"><span class="eo">forta</span> : fort</p><p class="col s6"><span class="eo">fortulo</span> : un homme fort</p>
-				<p class="col s6"><span class="eo">stranga</span> : bizarre</p><p class="col s6"><span class="eo">strangulo</span> : un type bizarre, un original</p>
-			</div>
-
-			<h4>-n : <i>complément d'object direct d'un verbe</i></h4>
-			<div class="row">
-				<p class="col s12"><span class="eo">li vidas vin, li vin vidas, vin li vidas, vidas li vin, vidas vin li,
+			<section class="klarigo">
+				<h4>-iĝ- : <i>devenir, …</i></h4>
+				<p><span class="eo">proksima</span> : proche → <span class="eo">ili proksimiĝas</span> : ils se rapprochent</p>
+				<p><span class="eo">stara</span> : debout → <span class="eo">li stariĝas</span> : il se lève</p>
+				<p><span class="eo">viro</span> : homme, mâle → <span class="eo">la knabo viriĝas</span> : le garçon est en train de devenir un homme</p>
+				<p><span class="eo">rapida</span> : vite, rapide → <span class="eo">rapidiĝo</span> : accélération</p>
+	
+				<h4>re- : <i>répétition, retour</i></h4>
+				<p><span class="eo">ŝi vidas</span> : elle voit → <span class="eo">ŝi revidas</span> : elle revoit</p>
+				<p><span class="eo">vi venas</span> : vous venez → <span class="eo">vi revenas</span> : vous revenez</p>
+				<p><span class="eo">li fortiĝas</span> : il devient fort → <span class="eo">li refortiĝas</span> : il retrouve ses forces</p>
+				<p><span class="eo">bela</span> : belle → <span class="eo">ŝi rebeliĝas</span> : elle redevient belle&nbsp;/ <span class="eo">rebeliĝo</span> : le fait de retrouver sa beauté</p>
+				
+				<h4>-ulo : <i>une personne</i></h4>
+				<p><span class="eo">juna</span> : jeune → <span class="eo">junulo</span> : un jeune</p>
+				<p><span class="eo">forta</span> : fort → <span class="eo">fortulo</span> : un homme fort</p>
+				<p><span class="eo">stranga</span> : bizarre → <span class="eo">strangulo</span> : un type bizarre, un original</p>
+	
+				<h4>-n : <i>complément d'object direct d'un verbe</i></h4>
+				<p><span class="eo">li vidas vin, li vin vidas, vin li vidas, vidas li vin, vidas vin li,
 				</span> : il te voit</p>
-				<p class="col s12"><span class="eo">vi vidas lin, vi lin vidas, lin vi vidas, vidas vi lin, vidas lin vi
+				<p><span class="eo">vi vidas lin, vi lin vidas, lin vi vidas, vidas vi lin, vidas lin vi
 				</span> : tu le vois</p>
-				<p class="col s12"><span class="eo">mi petas vin</span> : je te demande (de faire quelque chose), je te prie</p>
-			</div>
-
-			<p class="parto">
-			Notez l'emploi de <b>estas</b> dans le sens de <em>il y a</em>&nbsp;:</p>
-			<div class="row">
-				<p class="col s11 offset-s1"><span class="eo">estas io en lia mano</span> : il y a quelque chose dans sa main</p>
-				<p class="col s11 offset-s1"><span class="eo">estas nenio en lia mano</span> : il n'y a rien dans sa main, 
+				<p><span class="eo">mi petas vin</span> : je te demande (de faire quelque chose), je te prie</p>
+	
+				<p class="parto">
+				Notez l'emploi de <b>estas</b> dans le sens de <em>il y a</em>&nbsp;:</p>
+				<p><span class="eo">estas io en lia mano</span> : il y a quelque chose dans sa main</p>
+				<p><span class="eo">estas nenio en lia mano</span> : il n'y a rien dans sa main, 
 				il n'a rien dans la main</p>
-			</div>
-
-			<p class="parto">
-			Notez l'emploi de la forme d'adverbe en <b>-e</b> dans les cas suivants :</p>
-			<div class="row">
-				<p class="col s11 offset-s1"><span class="eo">estas prave</span> : c'est exact</p>
-				<p class="col s11 offset-s1"><span class="eo">prave!</span> : exact !</p>
-				<p class="col s11 offset-s1"><span class="eo">strange!</span> : bizarre !</p>
-			</div>
-
-			<p class="parto">Faites attention à la différence de sens entre
-			<b>ĉu</b> (interrogation) et <b>se</b> (condition)&nbsp;:</p>
-			<div class="row">
-				<p class="col s11 offset-s1"><span class="eo">mi ne vidas, ĉu estas io inter mi kaj vi</span> : 
+	
+				<p class="parto">
+				Notez l'emploi de la forme d'adverbe en <b>-e</b> dans les cas suivants :</p>
+				<p><span class="eo">estas prave</span> : c'est exact</p>
+				<p><span class="eo">prave!</span> : exact !</p>
+				<p><span class="eo">strange!</span> : bizarre !</p>
+	
+				<p class="parto">Faites attention à la différence de sens entre
+				<b>ĉu</b> (interrogation) et <b>se</b> (condition)&nbsp;:</p>
+				<p><span class="eo">mi ne vidas, ĉu estas io inter mi kaj vi</span> : 
 					je ne vois pas s'il y a quelque chose entre vous et moi.
 					(Y a-t-il quelque chose ? Je ne vois pas.)</p>
-				<p class="col s11 offset-s1"><span class="eo">mi ne vidas, se estas io inter mi kaj vi.</span> : 
+				<p><span class="eo">mi ne vidas, se estas io inter mi kaj vi.</span> : 
 					s'il y a quelque chose entre moi et vous, alors je ne vois pas.
 					(Cette chose m'empêche de voir.)</p>
-			</div>
-
+			</section>
 
 		<?php 
 		} // fin section 2

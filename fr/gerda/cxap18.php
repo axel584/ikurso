@@ -91,6 +91,52 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+	
+				<p><span class="eo">senigi iun je io</span> : priver quelqu'un de quelque chose (senigi = igi sen)</p>
+		
+				<h4><i>il y a + temps</i> = antaŭ</h4>
+		
+				<p><span class="eo">li laboris ĉi tie antaŭ du jaroj</span> : il travaillait ici il y a deux ans</p>
+				<p><span class="eo">ŝi alvenis antaŭ unu horo</span> : elle est arrivée il y a une heure</p>
+				<p><span class="eo">antaŭ kelkaj minutoj</span> : il y a quelques minutes</p>
+		
+				<h4>dans <i>quand il réfère à un moment du futur</i> = post</h4>
+		
+				<p><span class="eo">li revenos post du tagoj</span> : il reviendra dans deux jours</p>
+				<p><span class="eo">mi estos kun vi post du minutoj</span> : je serai avec toi dans deux minutes, je suis à toi dans deux minutes</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
+
+		<?php 
 		} // fin section 5
 		?>
 

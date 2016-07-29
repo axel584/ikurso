@@ -84,6 +84,59 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+	
+				<h4>-ano : <i>membre d'un groupe ; habitant</i></h4>
+		
+				<p><span class="eo">urbo</span> : ville → <span class="eo">urbano</span> : citadin</p>
+				<p><span class="eo">Parizo</span> : Paris → <span class="eo">parizano</span> : parisien</p>
+				<p><span class="eo">polico</span> : police → <span class="eo">policano</span> : membre des forces de police&nbsp;;
+				<span class="eo">policisto</span> : policier</p>
+				<p><span class="eo">lando</span> : pays → <span class="eo">samlandano</span> : compatriote</p>
+		
+				<h4>ge : <i>des deux sexes sans distinction</i></h4>
+		
+				<p><span class="eo">frato</span> : frère → <span class="eo">gefratoj</span> : frères et sœurs</p>
+				<p><span class="eo">patro</span> : père → <span class="eo">gepatroj</span> : parents</p>
+				<p><span class="eo">sinjoro X</span> (ikso) : M. X → <span class="eo">gesinjoroj X</span> : M. et Mme X</p>
+		
+				<h4><i>épouser, se marier</i></h4>
+		
+				<p><span class="eo">Jozefo edziĝis</span> : Joseph s'est marié (litt. «est devenu mari»)</p>
+				<p><span class="eo">Marta edziniĝis</span> : Martha s'est mariée (litt. «est devenue épouse»)</p>
+				<p><span class="eo">Jozefo kaj Marta geedziĝis</span> : Joseph et Martha se sont mariés (litt. «sont devenus mari et femme»)</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
+
+		<?php 
 		} // fin section 5
 		?>
 

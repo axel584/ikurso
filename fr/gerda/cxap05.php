@@ -66,59 +66,46 @@ include "gerdakapo.inc.php";
 		} // fin section 1
 		if ($section=="2") {
 		?>
+		
+			<section class="klarigo">
+				<h4>-us : <i>forme conditionnelle du verbe</i></h4>
+				<p><span class="eo">se mi konus lin, mi irus</span> : si je le connaissais, j'irais</p>
+				<p><span class="eo">mi dezirus demandi vin</span> : je désirerais vous demander</p>
+		
+				<h4>-n : <i>terminaison du complément d'object direct</i></h4>
+				<p><span class="eo">mi konas tiu<b>n</b> juna<b>n</b> viro<b>n</b></span> : je connais ce jeune homme</p>
+				<p><span class="eo">tiun juna<b>n</b> viro<b>n</b> mi konas</span> : je connais ce jeune homme</p>
+				<p><span class="eo">tiun juna<b>n</b> viro<b>n</b> konas mi</span> : je connais ce jeune homme</p>
+				<p><span class="eo">tiu juna viro konas mi<b>n</b></span> : ce jeune homme me connaît</p>
+				<p><span class="eo">tiu juna viro mi<b>n</b> konas</span> : ce jeune homme me connaît</p>
+				<p><span class="eo">mi<b>n</b> konas tiu juna viro</span> : ce jeune homme me connaît</p>
 
-			<h4>-us : <i>forme conditionnelle du verbe</i></h4>
-			<div class="row">
-				<p class="col s12"><span class="eo">se mi konus lin, mi irus</span> : si je le connaissais, j'irais</p>
-				<p class="col s12"><span class="eo">mi dezirus demandi vin</span> : je désirerais vous demander</p>
-			</div>
+				<p><span class="eo">kiu vidis li<b>n</b>?</span> : qui l'a vu ?</p>
+				<p><span class="eo">kiu<b>n</b> vidis li?</span> : qui a-t-il vu ?</p>
+
+				<p><span class="eo">la viro, kiu<b>n</b> rigardis la knabino</span> : l'homme que la fillette regardait</p>
+				<p><span class="eo">la viro, kiu rigardis la knabino<b>n</b></span> : l'homme qui regardait la fillette</p>
 		
-			<h4>-n : <i>terminaison du complément d'object direct</i></h4>
-			<div class="row">
-				<p class="col s12"><span class="eo">mi konas tiun junan viron</span> : je connais ce jeune homme</p>
-				<p class="col s12"><span class="eo">tiun junan viron mi konas</span> : je connais ce jeune homme</p>
-				<p class="col s12"><span class="eo">tiun junan viron konas mi</span> : je connais ce jeune homme</p>
-				<p class="col s12"><span class="eo">tiu juna viro konas min</span> : ce jeune homme me connaît</p>
-				<p class="col s12"><span class="eo">tiu juna viro min konas</span> : ce jeune homme me connaît</p>
-				<p class="col s12"><span class="eo">min konas tiu juna viro</span> : ce jeune homme me connaît</p>
-			</div>
-			<div class="row">
-				<p class="col s12"><span class="eo">kiu vidis lin?</span> : qui l'a vu ?</p>
-				<p class="col s12"><span class="eo">kiun vidis li?</span> : qui a-t-il vu ?</p>
-			</div>
-			<div class="row">
-				<p class="col s12"><span class="eo">la viro, kiun rigardis la knabino</span> : l'homme que la fillette regardait</p>
-				<p class="col s12"><span class="eo">la viro, kiu rigardis la knabinon</span> : l'homme qui regardait la fillette</p>
-			</div>
-		
-			<h4>ek- : <i>indique le commencement, le début avec soudaineté</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">iri</span> : aller</p><p class="col s6"><span class="eo">ekiri</span> : se mettre en marche</p>
-				<p class="col s6"><span class="eo">sidi</span> : être assis</p><p class="col s6"><span class="eo">eksidi</span> : s'asseoir</p>
-				<p class="col s12"><span class="eo">ek!</span> : en route !, allons-y !</p>
-			</div>
+				<h4>ek- : <i>indique le commencement, le début avec soudaineté</i></h4>
+				<p><span class="eo">iri</span> : aller → <span class="eo">ekiri</span> : se mettre en marche</p>
+				<p><span class="eo">sidi</span> : être assis → <span class="eo">eksidi</span> : s'asseoir</p>
+				<p><span class="eo">ek!</span> : en route !, allons-y !</p>
 			
-			<h4>-et- : <i>indique une diminution, une réduction</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">virino</span> : femme</p><p class="col s6"><span class="eo">virineto</span> : petite femme</p>
-				<p class="col s6"><span class="eo">bela</span> : beau (belle)</p><p class="col s6"><span class="eo">beleta</span> : mignon(ne)</p>
-				<p class="col s6"><span class="eo">mi komprenas</span> : je comprends</p><p class="col s6"><span class="eo">mi komprenetas</span> : je comprends plus ou moins, je pense comprendre</p>
-			</div>
+				<h4>-et- : <i>indique une diminution, une réduction</i></h4>
+				<p><span class="eo">virino</span> : femme → <span class="eo">virineto</span> : petite femme</p>
+				<p><span class="eo">bela</span> : beau (belle) → <span class="eo">beleta</span> : mignon(ne)</p>
+				<p><span class="eo">mi komprenas</span> : je comprends → <span class="eo">mi komprenetas</span> : je comprends plus ou moins, je pense comprendre</p>
 		
-			<h4>for- : <i>indique l'éloignement</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">iri</span> : aller</p><p class="col s6"><span class="eo">foriri</span> : s'en aller</p>
-				<p class="col s6"><span class="eo">esti</span> : être</p><p class="col s6"><span class="eo">foresti</span> : être absent<br><span class="eo">foresto</span> : absence</p>
-			</div>
+				<h4>for- : <i>indique l'éloignement</i></h4>
+				<p><span class="eo">iri</span> : aller → <span class="eo">foriri</span> : s'en aller</p>
+				<p><span class="eo">esti</span> : être → <span class="eo">foresti</span> : être absent<br><span class="eo">foresto</span> : absence</p>
 			
-			<h4>-ujo : <i>indique le contenant</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">sukero</span> : sucre</p><p class="col s6"><span class="eo">sukerujo</span> : sucrier</p>
-			</div>
-			<div class="row">
-				<p class="col s12"><span class="eo">tiu ĉi viro estas juna</span> : cet homme-ci est jeune</p>
-				<p class="col s12"><span class="eo">tio ĉi estas nekomprenebla</span> : ceci est incompréhensible</p>
-			</div>
+				<h4>-ujo : <i>indique le contenant</i></h4>
+				<p><span class="eo">sukero</span> : sucre → <span class="eo">sukerujo</span> : sucrier</p>
+
+				<p><span class="eo">tiu ĉi viro estas juna</span> : cet homme-ci est jeune</p>
+				<p><span class="eo">tio ĉi estas nekomprenebla</span> : ceci est incompréhensible</p>
+			</section>
 
 		<?php 
 		} // fin section 5

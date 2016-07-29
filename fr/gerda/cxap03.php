@@ -67,58 +67,50 @@ include "gerdakapo.inc.php";
 		} // fin section 1
 		if ($section=="2") {
 		?>
-
+		
+		<section class="klarigo">
 			<h4>-j : <i>pluriel</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">viro</span> : homme</p><p class="col s6"><span class="eo">viroj</span> : hommes</p>
-				<p class="col s6"><span class="eo">virino</span> : femme</p><p class="col s6"><span class="eo">virinoj</span> : femmes</p>
-				<p class="col s6"><span class="eo">juna viro</span> : jeune homme</p><p class="col s6"><span class="eo">junaj viroj</span> : jeunes hommes</p>
-				<p class="col s6"><span class="eo">bela tago</span> : belle journée</p><p class="col s6"><span class="eo">belaj tagoj</span> : belles journées</p>
-				<p class="col s6"><span class="eo">mi scias</span> : je sais</p><p class="col s6"><span class="eo">scio</span> : savoir (n.), connaissance</p>
-			</div>
+			<p><span class="eo">viro</span> : (une) homme → <span class="eo">viroj</span> : (des) hommes</p>
+			<p><span class="eo">virino</span> : (une) femme → <span class="eo">virinoj</span> : (des) femmes</p>
+			<p><span class="eo">juna viro</span> : (un) jeune homme → <span class="eo">junaj viroj</span> : (des) jeunes hommes</p>
+			<p><span class="eo">bela tago</span> : (une) belle journée → <span class="eo">belaj tagoj</span> : (de) belles journées</p>
+			<p><span class="eo">mi scias</span> : je sais → <span class="eo">scio</span> : savoir (n.), connaissance</p>
 			
 			<h4>-i : <i>infinitif</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">kompreni estas pardoni</span> : comprendre c'est pardonner</p>
-				<p class="col s6"><span class="eo">mi salutas lin</span> : je le salue</p>
-				<p class="col s6"><span class="eo">mi volas saluti lin</span> : je veux le saluer</p>
-				<p class="col s6"><span class="eo">li komprenas</span> : il comprend</p>
-				<p class="col s6"><span class="eo">li povas kompreni</span> : il peut comprendre</p>
-				<p class="col s6"><span class="eo">la povo kompreni</span> : la capacité de comprendre</p>
-			</div>
+			<p><span class="eo">kompreni estas pardoni</span> : comprendre c'est pardonner</p>
+
+			<p><span class="eo">mi salutas lin</span> : je le salue<br>
+				<span class="eo">mi volas saluti lin</span> : je veux le saluer</p>
+
+			<p><span class="eo">li komprenas</span> : il comprend<br>
+				<span class="eo">li povas kompreni</span> : il peut comprendre<br>
+				<span class="eo">la povo kompreni</span> : la capacité de comprendre</p>
 			
 			<h4>-is : <i>verbe, temps passé</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">mi estis</span> : j'étais, je fus, j'ai été</p>
-				<p class="col s6"><span class="eo">li venis</span> : il est venu, il vint, il venait</p>
-				<p class="col s6"><span class="eo">ŝi amis vin</span> : elle t'a aimé, elle t'aima, elle t'aimait</p>
-			</div>
+			<p><span class="eo">mi estis</span> : j'étais, je fus, j'ai été</p>
+			<p><span class="eo">li venis</span> : il est venu, il vint, il venait</p>
+			<p><span class="eo">ŝi amis vin</span> : elle t'a aimé, elle t'aima, elle t'aimait</p>
 			
 			<h4>-a (avec un pronom personnel)</h4>
 			<p>Ajoutée à la base d'un pronom personnel (<span class="eo">mi</span>, <span class="eo">vi</span>, <span class="eo">li</span>, <span class="eo">ŝi</span>, <span class="eo">ĝi</span>, <span class="eo">ni</span>, <span class="eo">ili</span>), 
 			la terminaison -<b>a</b> sert à former des adjectifs possessifs.</p>
 			
 			<h4>-ebl- : <i>possibilité</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">kompreni</span> : comprendre</p><p class="col s6"><span class="eo">komprenebla</span> : compréhensible</p>
-				<p class="col s6"><span class="eo">vidi</span> : voir</p><p class="col s6"><span class="eo">videbla</span> : visible</p><p class="col s6"><span class="eo">nevidebla</span> : invisible</p>
-				<p class="col s6"><span class="eo">ami</span> : aimer</p><p class="col s6"><span class="eo">amebla</span> : aimable ; qui peut être aimé</p>
-			</div>
+			<p><span class="eo">kompreni</span> : comprendre → <span class="eo">komprenebla</span> : compréhensible</p>
+			<p><span class="eo">vidi</span> : voir → <span class="eo">videbla</span> : visible&nbsp;/ <span class="eo">nevidebla</span> : invisible</p>
+			<p><span class="eo">ami</span> : aimer → <span class="eo">amebla</span> : aimable, qui peut être aimé</p>
 		
 			<h4>mal- : <i>utilisé pour obtenir le contraire, l'antonyme.</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">ami</span> : aimer</p><p class="col s6"><span class="eo">ne ami</span> : ne pas aimer, <span class='ekz'>malami</span> : haïr</p>
-				<p class="col s6"><span class="eo">forta</span> : fort</p><p class="col s6"><span class="eo">ne forta/neforta</span> : pas fort ; <span class='ekz'>malforta</span> : faible</p>
-			</div>
+			<p><span class="eo">ami</span> : aimer → <span class="eo">ne ami</span> : ne pas aimer, <span class='ekz'>malami</span> : haïr</p>
+			<p><span class="eo">forta</span> : fort → <span class="eo">ne forta/neforta</span> : pas fort / <span class="eo">malforta</span> : faible</p>
 		
-			<div class="row">
-				<p class="col s6"><span class="eo">tio ne gravas</span> : ça n'a pas d'importance</p>
-				<p class="col s6"><span class="eo">ne tio gravas</span> : ce n'est pas cela qui importe</p>
-				<p class="col s6"><span class="eo">li aspektas kiel studento</span> : il a l'air d'un étudiant</p>
-				<p class="col s6"><span class="eo">ŝi aspektas june</span> : elle paraît jeune<br>
+			<p><span class="eo">tio ne gravas</span> : ça n'a pas d'importance<br>
+				<span class="eo">ne tio gravas</span> : ce n'est pas cela qui importe</p>
+			<p><span class="eo">li aspektas kiel studento</span> : il a l'air d'un étudiant</p>
+			<p><span class="eo">ŝi aspektas june</span> : elle paraît jeune<br>
 				<span class="eta">(On utilise aussi <span class='eo'>ŝi aspektas juna</span>, 
 				ce que certains puristes désapprouvent.)</span></p>
-			</div>
+		</section>
 
 		<?php 
 		} // fin section 2
@@ -214,6 +206,7 @@ include "gerdakapo.inc.php";
 				?>
 				</div>
 			</fieldset>
+
 		<?php 
 		} // fin section 4
 		if ($section=="5") {

@@ -76,6 +76,64 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+	
+				<h4>-ante : <i>participe présent actif, forme adverbiale</i></h4>
+		
+				<p><span class="eo">laborante, li silentas</span> : il reste silencieux en travaillant</p>
+				<p><span class="eo">ni diskutis promenante</span> : nous parlions en nous promenant</p>
+				<p><span class="eo">vi lernis la lingvon parolante ĝin</span> : vous avez appris la langue en la parlant</p>
+		
+				<h4>-ig- : <i>rendre, faire devenir</i></h4>
+		
+				<p><span class="eo">granda</span> : grand(e) → <span class="eo">grandigi</span> : agrandir</p>
+				<p><span class="eo">(pli) forta</span> : (plus) fort(e) → <span class="eo">(pli)fortigi</span> : renforcer</p>
+				<p><span class="eo">facila</span> : facile → <span class="eo">faciligi</span> : faciliter</p>
+				<p><span class="eo">scii</span> : savoir → <span class="eo">sciigi</span> : informer ou faire savoir</p>
+				<p><span class="eo">stari</span> : se tenir debout → <span class="eo">starigi</span> : lever; mettre debout</p>
+				<p><span class="eo">kontenta</span> : content(e) → <span class="eo">kontentiga</span> : satisfaisant(e)</p>
+				<p><span class="eo">maltrankvila</span> : troublé(e) ; angoissé(e) → 
+				<span class="eo">maltrankviliga</span> : troublant(e) ; angoissant(e)</p>
+		
+				<h4>-ilo : <i>instrument, outil</i></h4>
+		
+				<p><span class="eo">labori</span> : travailler → <span class="eo">laborilo</span> : outil de travail</p>
+				<p><span class="eo">dormi</span> : dormir → <span class="eo">dormigi</span> : faire dormir → <span class="eo">dormigilo</span> : somnifère</p>
+				<p><span class="eo">veturi</span> : aller (autrement qu'à pied) → <span class="eo">veturilo</span> : véhicule</p>
+		
+				<p><span class="eo">mia aŭto paneas, ĝi ekpaneis hieraŭ</span> : mon auto est en panne, elle est tombée en panne hier</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
+
+		<?php 
 		} // fin section 5
 		?>
 

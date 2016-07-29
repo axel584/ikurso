@@ -100,6 +100,71 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+	
+				<h4>-aĉ-: <i>donne une nuance de mépris</i></h4>
+		
+				<p><span class="eo">domo</span> : maison → <span class="eo">domaĉo</span> : taudis</p>
+				<p><span class="eo">hundo</span> : chien → <span class="eo">hundaĉo</span> : cabot</p>
+				<p><span class="eo">ridi</span> : rire → <span class="eo">ridaĉi</span> : ricaner</p>
+		
+				<h4>-ido : <i>progéniture des animaux</i></h4>
+		
+				<p><span class="eo">koko</span> : coq → <span class="eo">kokido</span> : poulet →
+				<span class="eo">kokidaĵo</span> : viande de poulet (<span class="eo">kokino</span> : poule)</p>
+				<p><span class="eo">porko</span> : porc → <span class="eo">porkido</span> : porcelet 
+				(<span class="eo">porkaĵo</span> : du porc, <span class="eo">porkino</span> : truie&nbsp;; <span class="eo">virporko</span> : verrat)</p>
+				<p><span class="eo">bovo</span> : bœuf → <span class="eo">bovido</span> : veau 
+				→ <span class="eo">bovidaĵo</span> : du veau&nbsp;; <span class="eo">bovaĵo</span> : 
+				bœuf (la viande)&nbsp;; <span class="eo">bovino</span> : vache&nbsp;; <span class="eo">virbovo</span> : taureau</p>
+				<p><span class="eo">ĉevalo</span> : cheval → <span class="eo">ĉevalido</span> : poulain&nbsp;; <span class="eo">ĉevalino</span> : jument&nbsp;; <span class="eo">virĉevalo</span> : étalon</p>
+		
+				<p><span class="eo">mil naŭcent naŭdek du</span> : 1992</p>
+				<p><span class="eo">dek du mil</span> : 12 000</p>
+				<p><span class="eo">kvincent kvindek kvin</span> : 555</p>
+		
+				<h4>kiu (<i>identité</i>) / kia (<i>qualité</i>)</h4>
+		
+				<p><span class="eo">Kiu li estas? - Jozefo</span> : Qui est-il? - Joseph.</p>
+				<p><span class="eo">Kia li estas? - Bonkora</span> : Quel genre d'homme est-il? - Un bon cœur.</p>
+				<p><span class="eo">Kio li estas? - Raportisto</span> : Qu'est-il? - Un reporter.</p>
+		
+				<p><span class="eo">Kiun libron vi legas? - Gerda malaperis.</span> : Quel livre lis-tu ? - Gerda malaperis.</p>
+				<p><span class="eo">Kian libron vi legas? - Lernolibron.</span> : Quelle sorte de livre lis-tu ? - Un manuel.</p>
+		
+				<p>Notez que <span class="eo">okazo</span> s'utilise dans trois sens : (1) événement&nbsp;; (2) cas&nbsp;; (3) occasion, opportunité</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
+
+		<?php 
 		} // fin section 5
 		?>
 

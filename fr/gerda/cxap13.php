@@ -89,6 +89,44 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+	
+				<h4>koncerne … -n</h4>
+			
+				<p><span class="eo">koncerne vian proponon</span> : pour ce qui est de votre proposition</p>
+				<p><span class="eo">kiom koncernas min</span> : pour autant que je sois concerné</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
+
+		<?php 
 		} // fin section 5
 		?>
 

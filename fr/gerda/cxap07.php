@@ -53,6 +53,83 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+				<h4>-os : <i>forme future du verbe</i></h4>
+				<p><span class="eo">mi estos</span> : je serai</p>
+				<p><span class="eo">ĉu vi venos?</span> : viendras-tu ?</p>
+				<p><span class="eo">ili komprenos</span> : ils comprendront</p>
+
+			<h4>-isto : <i>indique la profession, l'occupation habituelle</i></h4>
+				<p><span class="eo">instrui</span> : enseigner → <span class="eo">instruisto</span> : enseignant</p>
+				<p><span class="eo">labori</span> : travailler → <span class="eo">laboristo</span> : travailleur</p>
+	
+				<p class="noto"><b>NOTE</b> : Au pluriel, la terminaison <em>-n</em> est ajoutée à la terminaison <em>-j</em> :</p>
+				<p><span class="eo">mi konas belajn knabinojn</span> : je connais des belles filles</p>
+				<p><span class="eo">grandajn manojn li havas</span> : il a des grandes mains</p>
+				<p><span class="eo">la viroj, kiujn ŝi amas</span> : les hommes qu'elle aime</p>
+				<p><span class="eo">la viroj, kiuj ŝin amas</span> : les hommes qui l'aiment</p>
+			
+				<h4><i>Autres utilisations de la terminaison</i> -n</h4>
+			
+				<p class="parto">En plus de montrer le complément d'objet direct, la terminaison <em>-n</em>
+				sert aussi à montrer le mouvement (complément de lieu avec mouvement).
+				Toutefois si le mouvement est déjà implicitement indiqué par la
+				préposition qui introduit le complément (par exemple grâce à une
+				préposition <b>al</b> ou <b>ĝis</b>) alors la terminaison <b>-n</b> ferait double
+				emploi et on ne l'utilise pas.</p>
+	
+				<p><span class="eo">li iris en la ĝardenon</span> : il est entré dans le jardin</p>
+				<p><span class="eo">li iris al la ĝardeno</span> : il est allé jusqu'au jardin</p>
+		
+				<p><span class="eo">li foriras Parizon</span> : il part à Paris</p>
+				<p><span class="eo">li foriras al Parizo</span> : il part à Paris</p>
+
+				<p class="parto">La terminaison <b>-n</b> n'est pas utilisée uniquement pour indiquer le
+				complément d'objet direct, ou la direction d'un mouvement, mais aussi
+				dans l'expression du moment, de la durée, de la mesure, de la valeur,
+				quand il n'y a pas de préposition&nbsp;:</p>
+	
+				<p><span class="eo">mi restis la tutan semajnon</span> : je suis resté toute la semaine</p>
+				<p>Dans ce cas la terminaison <b>-n</b> remplace la préposition qui est alors
+				sous-entendue&nbsp;; ainsi, si vous utilisez une préposition, vous ne devez
+				pas utiliser la terminaison <b>-n</b>, et vous pouvez dans ce cas exprimer la
+				même idée avec la phrase&nbsp;:</p>
+	
+				<p><span class="eo">mi restis dum la tuta semajno</span> : je suis resté durant toute la semaine</p>
+				<p><span class="eo">li venis la postan tagon</span> : il est venu le jour d'après</p>
+				<p><span class="eo">ĝi estas unu metron alta</span> : cela est haut d'un mètre</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
+
+		<?php 
 		} // fin section 5
 		?>
 

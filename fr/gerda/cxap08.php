@@ -80,6 +80,71 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+		    	<h4>-ejo : <i>indique l'emplacement, le lieu (souvent collectif)</i></h4>
+				<p><span class="eo">dormi</span> : dormir → <span class="eo">dormejo</span> : «dortoir» («chambre» se dit <span class="eo">dormoĉambro</span>)</p>
+				<p><span class="eo">lerni</span> : apprendre → <span class="eo">lernejo</span> : école</p>
+	
+				<p><span class="eo">li aŭtas en la urbo</span> : il se déplace en voiture dans la ville<br>
+					<span class="eo">li aŭtas en la urbon</span> : il se rend, en voiture, en ville</p>
+				<p><span class="eo">li aŭtas tie</span> : il se déplace en voiture là-bas<br>
+					<span class="eo">li aŭtas tien</span> : il se rend en voiture là-bas</p>
+	
+				<p><span class="eo">ŝi mem diris ĝin</span> : elle le dit elle-même<br>
+					<span class="eo">ŝi diris ĝin al si</span> : elle se le dit (mot-à-mot : elle le dit à soi)</p>
+				<p><span class="eo">li diris ĝin al si</span> : il se le dit<br>
+					<span class="eo">li diris ĝin al ŝi</span> : il le lui dit à elle)</p>
+	
+				<p><span class="eo">ili komprenos tion mem</span> : ils comprendront cela d'eux-mêmes<br>
+					<span class="eo">ili komprenos sin</span> : ils se comprendront<br>
+					<span class="eo">ili komprenos unu la alian</span> : ils se comprendront l'un l'autre<br>
+					<span class="eo">ili komprenos ilin</span> : ils les comprendront</p>
+	
+				<p><span class="eo">li servas lin</span> : il le sert<br>
+					<span class="eo">li servas sin</span> : il se sert</p>
+	
+				<p><span class="eo">li amis ŝian flegistinon</span> : il aimait son infirmière à elle<br>
+					<span class="eo">li amis lian flegistinon</span> : il aimait l'infirmière d'un autre<br>
+					<span class="eo">li amis sian flegistinon</span> : il aimait son infirmière (sa propre infirmière)</p>
+					
+				<h4><i>j'irai en voiture là-bas</i></h4>
+	
+				<p><span class="eo">mi tien iros aŭte</span> : j'irai là-bas «automobilement»</p>
+				<p><span class="eo">mi tien iros per aŭto</span> : j'irai là-bas au moyen d'une voiture</p>
+				<p><span class="eo">mi tien iros en aŭto</span> : j'irai là-bas dans une voiture</p>
+				<p><span class="eo">mi tien aŭtos</span> : j'«automobilerai» là-bas</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h4>xxxx</h4>
+
+		<?php 
 		} // fin section 5
 		?>
 

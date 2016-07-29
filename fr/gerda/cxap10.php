@@ -61,10 +61,63 @@ include "gerdakapo.inc.php";
 					estas travivebla. La vivo ne estas facila, kaj ŝajnas nun, ke la tuta
 					afero iĝas pli kaj pli malŝatinda.</p>
 					<div class="col s12 m4">
-					<img src="bildoj/gerda10-2.gif" class="responsive-img">
+						<img src="bildoj/gerda10-2.gif" class="responsive-img">
+					</div>
 				</div>
 			</div>
-		</div>
+		
+		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+		
+				<h4>-eg- : <i>augmente le caract&egrave;re, la qualité</i></h4>
+		
+				<p><span class="eo">bona</span> : bon(ne) → <span class="eo">bonega</span> : excellent(e)</p>
+				<p><span class="eo">bela</span> : beau (belle) → <span class="eo">belega</span> : splendide</p>
+				<p><span class="eo">urbo</span> : ville → <span class="eo">urbego</span> : grande ville</p>
+				<p><span class="eo">labori</span> : travailler →
+				<span class="eo">laboregi</span> : travailler énormément</p>
+		
+				<h4>-em- : <i>indique le penchant, la tendance, la disposition</i></h4>
+		
+				<p><span class="eo">paroli</span> : parler → <span class="eo">parolema</span> : bavard(e)</p>
+				<p><span class="eo">agi</span> : agir → <span class="eo">agema</span> : actif, active ; entreprenant(e)</p>
+				<p><span class="eo">timi</span> : craindre → <span class="eo">timema</span> : craintif,(-ive) ; timide</p>
+		
+		
+				<h4>mis- : <i>indique l'erreur, la maladresse</i></h4>
+		
+				<p><span class="eo">kompreni</span> : comprendre → <span class="eo">miskompreni</span> : mal comprendre</p>
+				<p><span class="eo">paŝo</span> : (un) pas → <span class="eo">mispaŝo</span> : un faux pas</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
 
 		<?php 
 		} // fin section 5

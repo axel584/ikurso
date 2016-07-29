@@ -97,6 +97,49 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+	
+				<h4>-anto : <i>une personne qui … (au présent, au moment où l'on parle)</i></h4>
+		
+				<p><span class="eo">legi</span> : lire → <span class="eo">leganto</span> : lecteur</p>
+				<p><span class="eo">aŭskulti</span> : écouter → <span class="eo">aŭskultanto</span> : auditeur</p>
+		
+				<h4>-into : <i>une personne qui a … (au passé, action terminée)</i></h4>
+				
+				<p><span class="eo">kapti</span> : capturer → <span class="eo">kaptinto</span> : ravisseur : une personne qui a capturé quelqu'un</p>
+				<p><span class="eo">savi</span> : sauver → <span class="eo">savinto</span> : sauveur (après le sauvetage)</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
+
+		<?php 
 		} // fin section 5
 		?>
 

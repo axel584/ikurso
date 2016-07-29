@@ -77,6 +77,45 @@ include "gerdakapo.inc.php";
 					<img src="bildoj/gerda22-1.gif" class="responsive-img">
 				</div>
 			</div>
+
+
+		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+				<h4>-eca : <i>relatif à, qui a l'apparence, certaines des caractéristiques</i></h4>
+				<p><span class="eo">infano</span> : enfant → <span class="eo">infaneca</span> : infantile</p>
+				<p><span class="eo">sola</span> : seul → <span class="eo">soleca</span> : solitaire</p>
+				<p><span class="eo">ruĝa</span> : rouge → <span class="eo">ruĝeca</span> : rougeaud, rougeâtre</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
+
 		<?php 
 		} // fin section 5
 		?>

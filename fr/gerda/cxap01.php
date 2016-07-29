@@ -75,80 +75,62 @@ include "gerdakapo.inc.php";
 		} // fin section 1
 		if ($section=="2") {
 		?>
-			<h3>Rappel sur les terminaisons</h3>
+			<section class="klarigo">
+				<h3>Rappel sur les terminaisons</h3>
 			
-			<h4><b>-o</b> : <i>nom</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">vera</span> : vrai</p><p class="col s6"><span class="eo">la vero</span> : la vérité</p>
-				<p class="col s6"><span class="eo">bela</span> : beau</p><p class="col s6"><span class="eo">belo</span> : beauté</p>
-				<p class="col s6"><span class="eo">ebla</span> : possible</p><p class="col s6"> <span class="eo">eblo</span> : possibilité</p>
-				<p class="col s6"><span class="eo">li demandas</span> : il demande</p><p class="col s6"><span class="eo">demando</span> : une question</p>
-				<p class="col s6"><span class="eo">mi scias</span> : je sais</p><p class="col s6"><span class="eo">scio</span> : savoir (n.), connaissance</p>
-			</div>
+				<h4><b>-o</b> : <i>nom</i></h4>
+				<p><span class="eo">vera</span> : vrai → <span class="eo">la vero</span> : la vérité</p>
+				<p><span class="eo">bela</span> : beau → <span class="eo">belo</span> : beauté</p>
+				<p><span class="eo">ebla</span> : possible → <span class="eo">eblo</span> : possibilité</p>
+				<p><span class="eo">li demandas</span> : il demande → <span class="eo">demando</span> : une question</p>
+				<p><span class="eo">mi scias</span> : je sais → <span class="eo">scio</span> : savoir (n.), connaissance</p>
 			
-			<h4><b>-a</b> : <i>adjectif</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">viro</span> : homme</p><p class="col s6"><span class="eo">vir<b>a</b></span> : masculin</p>
-				<p class="col s6"><span class="eo">angulo</span> : angle</p><p class="col s6"><span class="eo">angul<b>a</b></span> : angulaire</p>
-			</div>
+				<h4><b>-a</b> : <i>adjectif</i></h4>
+				<p><span class="eo">viro</span> : homme → <span class="eo">vir<b>a</b></span> : masculin</p>
+				<p><span class="eo">angulo</span> : angle → <span class="eo">angul<b>a</b></span> : angulaire</p>
 			
-			<h4><b>-e</b> : <i>adverbe</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">bela</span> : joli</p><p class="col s6"><span class="eo">bel<b>e</b></span> : joliment</p>
-				<p class="col s6"><span class="eo">knabino</span> : (jeune) fille</p><p class="col s6"><span class="eo">knabin<b>e</b></span> : comme une fille</p>
-				<p class="col s6"><span class="eo">vi demandas</span> : vous demandez, tu demandes</p><p class="col s6"><span class="eo">demand<b>e</b></span> : de façon interrogative</p>
-			</div>
+				<h4><b>-e</b> : <i>adverbe</i></h4>
+				<p><span class="eo">bela</span> : joli → <span class="eo">bel<b>e</b></span> : joliment</p>
+				<p><span class="eo">knabino</span> : (jeune) fille → <span class="eo">knabin<b>e</b></span> : comme une fille</p>
+				<p><span class="eo">vi demandas</span> : vous demandez, tu demandes → <span class="eo">demand<b>e</b></span> : de façon interrogative</p>
 			
-			<h4><b>-as</b> : <i>verbe, temps présent</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">serioza</span> : sérieux</p><p class="col s6"><span class="eo">mi serioz<b>as</b></span> : je suis sérieux</p>
-				<p class="col s6"><span class="eo">kunsido (kun + sido)</span> : une rencontre (littéralement : «une assis-avec», «un assis-ensemble»)</p>
-				<p class="col s6"><span class="eo">vi kunsid<b>as</b></span> : tu prends part à une réunion</p>
-			</div>
+				<h4><b>-as</b> : <i>verbe, temps présent</i></h4>
+				<p><span class="eo">serioza</span> : sérieux → <span class="eo">mi serioz<b>as</b></span> : je suis sérieux</p>
+				<p><span class="eo">kunsido (kun + sido)</span> : une rencontre (littéralement : «une assis-avec», «un assis-ensemble»)</p>
+				<p><span class="eo">vi kunsid<b>as</b></span> : tu prends part à une réunion</p>
 				
-			<h4><b>-i</b> : <i>verbe, infinitif</i></h4>
-			<p>Ce mode n'est pas utilisé dans la leçon mais il est habituel de citer les verbes à 
-			l'infinitif dans les dictionnaires. Nous suivons cette habitude dans la liste ci-dessus.
-			</p>
-			<div class="row">
-				<p><p class="col s6"><span class="eo">sid<b>i</b></span> : être assis</p><p class="col s6"><span class="eo">li sidas</span> : il est assis</p>
-			</div>
-			
-			<h4><b>-u</b> : <i>verbe, impératif</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">vi sidas</span> : tu es assis</p><p class="col s6"><span class="eo">sid<b>u</b>!</span> : assieds-toi (mot-à-mot «sois assis»)</p>
-				<p class="col s6"><span class="eo">venu!</span> : viens !, venez !</p><p class="col s6"><span class="eo">ne ven<b>u</b>!</span> : ne viens pas !, ne venez pas!</p>
-				<p class="col s6"><span class="eo">iru!</span> : va !, allez !</p><p class="col s6"><span class="eo">li ir<b>u</b>!</span> : qu'il aille !</p>
-			</div>
-			
-			<h4><b>mal-</b> : <i>opposé, contraire</i></h4>
-			<div class="row">
-				<p class="col s6"><span class="eo">alta</span> : haut</p><p class="col s6"><span class="eo"><b>mal</b>alta</span> : bas</p>
-				<p class="col s6"><span class="eo">multe</span> : beaucoup</p><p class="col s6"><span class="eo"><b>mal</b>multe</span> : peu, pas beaucoup</p>
-				<p class="col s6"><span class="eo">vero</span> : vérité</p><p class="col s6"><span class="eo"><b>mal</b>vero</span> : mensonge</p>
-			</div>
-			
-			<h4><b>-in-</b> : <i>femelle</i></h4>
-			<div class="row">
-				<p><p class="col s6"><span class="eo">knabo</span> : garçon</p><p class="col s6"><span class="eo">knab<b>in</b>o</span> : fille</p>
-			</div>
-			
-			<h3>Exemples d'utilisation de <i>kiu</i> :</h3>
-			<div class="row">
-				<p class="col s12"><span class="eo"><b>kiu</b> estas Linda?</span> : qui est Linda ?</p>
-				<p class="col s12"><span class="eo"><b>kiu</b> scias?</span> : qui sait ?</p>
-				<p class="col s12"><span class="eo"><b>kiu</b> estas tiu knabo?</span> : qui est ce garçon ?</p>
-			
-				<p class="col s12"><span class="eo"><b>kiu</b> knabo laboras?</span> : quel garçon travaille ?</p>
-				<p class="col s12"><span class="eo">al <b>kiu</b> knabino li iras?</span> : vers quelle fille va-t-il ?</p>
-				<p class="col s12"><span class="eo">en <b>kiu</b> universitato la knabino laboras?</span> : 
-				dans quelle université la fille travaille-t-elle?</p>
-				<p class="col s12"><span class="eo">la viro, <b>kiu</b> rigardas</span> : l'homme qui regarde<br>
-				<p class="col s12"><span class="eo">la universitato, en <b>kiu</b> mi laboras</span> : 
-				l'université dans laquelle je travaille</p>
-				<p class="col s12"><span class="eo">la knabo, al <b>kiu</b> vi rigardas</span> : le garçon que tu regardes</p>
+				<h4><b>-i</b> : <i>verbe, infinitif</i></h4>
+				<p>Ce mode n'est pas utilisé dans la leçon mais il est habituel de citer les verbes à 
+				l'infinitif dans les dictionnaires. Nous suivons cette habitude dans la liste ci-dessus.
 				</p>
-			</div>
+				<p><span class="eo">sid<b>i</b></span> : être assis → <span class="eo">li sidas</span> : il est assis</p>
+			
+				<h4><b>-u</b> : <i>verbe, impératif</i></h4>
+				<p><span class="eo">vi sidas</span> : tu es assis → <span class="eo">sid<b>u</b>!</span> : assieds-toi (mot-à-mot «sois assis»)</p>
+				<p><span class="eo">venu!</span> : viens !, venez ! → <span class="eo">ne ven<b>u</b>!</span> : ne viens pas !, ne venez pas!</p>
+				<p><span class="eo">iru!</span> : va !, allez ! → <span class="eo">li ir<b>u</b>!</span> : qu'il aille !</p>
+			
+				<h4><b>mal-</b> : <i>opposé, contraire</i></h4>
+				<p><span class="eo">alta</span> : haut → <span class="eo"><b>mal</b>alta</span> : bas</p>
+				<p><span class="eo">multe</span> : beaucoup → <span class="eo"><b>mal</b>multe</span> : peu, pas beaucoup</p>
+				<p><span class="eo">vero</span> : vérité → <span class="eo"><b>mal</b>vero</span> : mensonge</p>
+			
+				<h4><b>-in-</b> : <i>femelle</i></h4>
+				<p><span class="eo">knabo</span> : garçon → <span class="eo">knab<b>in</b>o</span> : fille</p>
+				
+				<h3>Exemples d'utilisation de <i>kiu</i> :</h3>
+				<p><span class="eo"><b>kiu</b> estas Linda?</span> : qui est Linda&nbsp;?</p>
+				<p><span class="eo"><b>kiu</b> scias?</span> : qui sait&nbsp;?</p>
+				<p><span class="eo"><b>kiu</b> estas tiu knabo?</span> : qui est ce garçon&nbsp;?</p>
+			
+				<p><span class="eo"><b>kiu</b> knabo laboras?</span> : quel garçon travaille&nbsp;?</p>
+				<p><span class="eo">al <b>kiu</b> knabino li iras?</span> : vers quelle fille va-t-il&nbsp;?</p>
+				<p><span class="eo">en <b>kiu</b> universitato la knabino laboras?</span> : 
+				dans quelle université la fille travaille-t-elle&nbsp;?</p>
+				<p><span class="eo">la viro, <b>kiu</b> rigardas</span> : l'homme qui regarde</p>
+				<p><span class="eo">la universitato, en <b>kiu</b> mi laboras</span> : l'université dans laquelle je travaille</p>
+				<p><span class="eo">la knabo, al <b>kiu</b> vi rigardas</span> : le garçon que tu regardes</p>
+			</section>
 			
 		<?php 
 		} // fin section 2

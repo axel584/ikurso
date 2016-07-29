@@ -76,6 +76,89 @@ include "gerdakapo.inc.php";
 			</div>
 
 		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+			<section class="klarigo">
+				<h4>-ita  : <i>participe passé passif</i></h4>
+				<p><span class="eo">fari</span> : faire → <span class="eo">farita : </span>fait</p>
+				<p><span class="eo">vidi</span> : voir → <span class="eo">vidita</span> : vu(e)</p>
+				<p><span class="eo">perdita peco</span> : une pièce perdue</p>
+				<p><span class="eo">ni estas informitaj</span> : nous sommes informés</p>
+	
+				<h4>-ad-: <i>indique une action particulièrement prolongée ou répétée</i></h4>
+				<p><span class="eo">paroli</span> : parler<span class="eo"> → paroladi</span> : faire un discours, parler longtemps</p>
+				<p><span class="eo">la penso</span> : la pensée → <span class="eo">la pensado</span> : la réflexion (cogitation)</p>
+				<p><span class="eo">memoro</span> : mémoire → <span class="eo">memorado</span> : remémoration, le fait de se rappeler</p>
+	
+				<p><span class="eo">la respondo estis longa</span> : la réponse était longue</p>
+				<p><span class="eo">la respondado estis longa</span> : le temps de réponse était long, la réponse était longue à venir</p>
+	
+				<p><span class="eo">li rigardis</span> : il regardait</p> 
+				<p><span class="eo">li ekrigardis</span> : il regarda</p> 
+				<p><span class="eo">li rigardadis</span> : il contemplait</p>
+	
+				<h4>-ar- : <i>indique le regroupement, la collectivité</i></h4>
+	
+				<p><span class="eo">vorto</span> : mot → <span class="eo">vortaro</span> : dictionnaire, vocabulaire</p>
+				<p><span class="eo">homo</span> : être humain → <span class="eo">homaro</span> : humanité</p>
+				<p><span class="eo">la studentaro</span> : le corps étudiant (d'une université)</p>
+				<p><span class="eo">la kuracistaro</span> : le corps médical, tous les médecins (des environs)</p>
+	
+				<h4>-inda : <i>indique la valeur, le mérite</i></h4>
+	
+				<p><span class="eo">ami</span> : aimer → <span class="eo">aminda</span> : aimable</p>
+				<p><span class="eo">vidi</span> : voir → <span class="eo">vidinda</span> : à voir, méritant d'être vu(e)</p>
+				<p><span class="eo">havi</span> : avoir → <span class="eo">havinda</span> : à avoir</p>
+	
+				<h4>-inda / -ebla : <i>(différences de sens)</i></h4>
+	
+				<p><span class="eo">havinda</span> : à avoir</p>
+				<p><span class="eo">havebla</span> : que l'on peut avoir, disponible</p>
+				<p><span class="eo">aminda</span> : qui mérite d'être aimé</p>
+				<p><span class="eo">amebla</span> : que l'on peut aimer</p>
+	
+				<h4>sen- : <i>sans, indique la privation</i></h4>
+	
+				<p><span class="eo">senkora</span> : sans cœur</p>
+				<p><span class="eo">senforta</span> : sans force</p>
+				<p><span class="eo">senhelpa</span> : sans aide</p>
+				<p><span class="eo">senkompate</span> : sans pitié</p>
+	
+				<h4>ajn</h4>
+				<p><span class="eo">kien ajn vi iros, mi sekvos vin</span> : où que tu ailles, je te suivrai</p>
+				<p><span class="eo">mi faros kion ajn vi diros</span> : je ferai tout ce que tu me diras</p>
+				<p><span class="eo">li diras ion ajn</span> : il dit n'importe quoi</p>
+				<p><span class="eo">iru ien ajn</span> : va n'importe où ; va où tu veux</p>
+			</section>
+
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+			<fieldset class="ekzerco">
+				<legend><b>Demandoj</b> </legend>
+				<input>
+				<div class="tasko">
+				?>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+			<h3>xxxx</h3>
+
+		<?php 
 		} // fin section 5
 		?>
 

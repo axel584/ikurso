@@ -109,6 +109,50 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">ambaŭ</span> : tous deux, tous les deux, l'un et l'autre</p>
+					<p><span class="eo">almenaŭ</span> : au moins, du moins</p>
+					<p><span class="eo">apenaŭ</span> : à peine</p>
+					<p><span class="eo">aŭtoritato</span> : autorité</p>
+					<p><span class="eo">bati</span> : battre, frapper</p>
+					<p><span class="eo">doktoro</span> : docteur</p>
+					<p><span class="eo">dormi</span> : dormir</p>
+					<p><span class="eo">fari</span> : faire</p>
+					<p><span class="eo">flegi</span> : soigner</p>
+					<p class="sekva"><span class="eo">flegisto</span> : infirmier</p>
+					<p class="sekva"><span class="eo">flegistino</span> : infirmière</p>
+					<p><span class="eo">ĝis</span> : jusqu'à</p>
+					<p><span class="eo">ĝusta</span> : correct(e), exact(e)</p>
+					<p><span class="eo">informi</span> : informer</p>
+					<p class="sekva"><span class="eo">informo</span> : information</p>
+					<p><span class="eo">kapo</span> : tête</p>
+					<p><span class="eo">komforta</span> : confortable</p>
+					<p><span class="eo">konscia</span> : conscient(e)</p>
+					<p class="sekva"><span class="eo">konscii</span> : être conscient, avoir conscience</p>
+					<p class="sekva"><span class="eo">konscio</span> : conscience</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">koro</span> : cœur</p>
+					<p><span class="eo">kuraci</span> : soigner, guérir</p>
+					<p class="sekva"><span class="eo">kuracisto</span> : médecin</p>
+					<p><span class="eo">kuŝi</span> : être couché, être étendu, reposer (gésir)</p>
+					<p><span class="eo">memori</span> : se souvenir, se rappeler</p>
+					<p><span class="eo">ol</span> : que (dans une comparaison)</p>
+					<p><span class="eo">opinii</span> : être d'avis, penser, croire</p>
+					<p class="sekva"><span class="eo">opinio</span> : opinion, avis</p>
+					<p><span class="eo">piedo</span> : pied</p>
+					<p><span class="eo">pozicio</span> : position</p>
+					<p><span class="eo">semajno</span> : semaine</p>
+					<p><span class="eo">sendi</span> : envoyer, expédier</p>
+					<p><span class="eo">unu</span> : un(e)</p>
+					<p class="sekva"><span class="eo">unua</span> : premier, première</p>
+					<p class="sekva"><span class="eo">unue</span> : premièrement, d'abord</p>
+					<p><span class="eo">vivi</span> : vivre</p>
+					<p><span class="eo">voki</span> : appeler</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

@@ -70,6 +70,37 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">ambaŭ</span> : tous deux, tous les deux, l'un et l'autre</p>
+					<p><span class="eo">aŭdi</span> : entendre</p>
+					<p><span class="eo">bruo</span> : bruit</p>
+					<p><span class="eo">decidi</span> : décider<br>
+						<span class="eo">decido</span> : décision</p>
+					<p><span class="eo">devi</span> : devoir (verbe)<br>
+							<span class="eo">vi devas</span> : tu dois, vous devez</p>
+					<p><span class="eo">devo</span> : devoir (nom)</p>
+					<p><span class="eo">diskuti</span> : discuter<br>
+						<span class="eo">diskuto</span> : discussion</p>
+					<p><span class="eo">fali</span> : tomber<br>
+						<span class="eo">falo</span> : chute</p>
+					<p><span class="eo">kafo</span> : café</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">koridoro</span> : couloir, corridor</p>
+					<p><span class="eo">meti</span> : mettre, poser, placer</p>
+					<p><span class="eo">observi</span> : observer</p>
+					<p><span class="eo">pensi</span> : penser</p>
+					<p><span class="eo">perdi</span> : perdre</p>
+					<p><span class="eo">resti</span> : rester</p>
+					<p><span class="eo">riski</span> : risquer</p>
+					<p><span class="eo">sama</span> : le même, la même, identique, pareil(le)</p>
+					<p><span class="eo">tempo</span> : temps</p>
+					<p><span class="eo">timi</span> : craindre, avoir peur</p>
+					<p><span class="eo">trankvila</span> : tranquille, calme</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

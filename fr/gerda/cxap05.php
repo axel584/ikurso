@@ -106,6 +106,68 @@ include "gerdakapo.inc.php";
 				<p><span class="eo">tiu ĉi viro estas juna</span> : cet homme-ci est jeune</p>
 				<p><span class="eo">tio ĉi estas nekomprenebla</span> : ceci est incompréhensible</p>
 			</section>
+			
+		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">afero</span> : affaire, sujet, chose</p>
+					<p><span class="eo">absurda</span> : absurde</p>
+					<p><span class="eo">ankoraŭ</span> : encore</p>
+					<p class="sekva"><span class="eo">ankoraŭ ne</span> : pas encore</p>
+					<p><span class="eo">atenti</span> : prêter attention, être attentif</p>
+					<p><span class="eo">atento</span> : attention</p>
+					<p><span class="eo">cetere</span> : d'ailleurs, du reste</p>
+					<p><span class="eo">ĉi</span> : (indique la proximité)</p>
+					<p class="sekva tab"><span class="eo">ĉi tie</span> : ici-même</p>
+					<p class="sekva tab"><span class="eo">ĉi tio</span> : ceci (cette chose-ci)</p>
+					<p class="sekva tab"><span class="eo">ĉi tiu</span> : ceci, celui-ci, celle-ci, ce… -ci</p>
+					<p><span class="eo">da</span> : de (après une expression de quantité)</p>
+					<p><span class="eo">dramo</span> : drame</p>
+					<p><span class="eo">drogo</span> : drogue</p>
+					<p><span class="eo">evidenta</span> : évident(e)</p>
+					<p><span class="eo">eta</span> : petit(e)</p>
+					<p><span class="eo">for</span> : loin, au loin</p>
+					<p><span class="eo">havi</span> : avoir</p>
+					<p><span class="eo">imagi</span> : imaginer</p>
+					<p class="sekva"><span class="eo">imago</span> : imagination</p>
+					<p><span class="eo">iu</span> : quelque, quelqu'un</p>
+					<p><span class="eo">kaŝe</span> : en cachette</p>
+					<p class="sekva"><span class="eo">kaŝi</span> : cacher, dissimuler</p>
+					<p><span class="eo">normala</span> : normal(e)
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">ofta</span> : fréquent(e)</p>
+					<p class="sekva"><span class="eo">ofte</span> : souvent, fréquemment</p>
+					<p><span class="eo">paro</span> : couple, paire</p>
+					<p><span class="eo">peco</span> : morceau, bout, pincée</p>
+					<p><span class="eo">plena</span> : plein(e)</p>
+					<p class="sekva"><span class="eo">plene</span> : pleinement, complètement, entièrement</p>
+					<p><span class="eo">poŝo</span> : poche</p>
+					<p><span class="eo">promeni</span> : se promener</p>
+					<p><span class="eo">sekundo</span> : seconde (de temps)</p>
+					<p><span class="eo">subita</span> : soudain(e)</p>
+					<p class="sekva"><span class="eo">subite</span> : soudainement</p>
+					<p><span class="eo">substanco</span> : substance</p>
+					<p><span class="eo">sukcesi</span> : réussir, avoir du succès</p>
+					<p><span class="eo">sukero</span> : sucre</p>
+					<p><span class="eo">super</span> : sur, au-dessus</p>
+					<p><span class="eo">ŝajni</span> : sembler, avoir l'air</p>
+					<p><span class="eo">tiam</span> : alors, à cet instant</p>
+					<p><span class="eo">tie</span> : là, là-bas</p>
+					<p><span class="eo">tie ĉi</span> = ĉi tie</p>
+					<p><span class="eo">tio ĉi</span> = ĉi tio</p>
+					<p><span class="eo">tiu ĉi</span> = ĉi tiu</p>
+					<p><span class="eo">tiel</span> : ainsi, de cette façon</p>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
 
 		<?php 
 		} // fin section 5

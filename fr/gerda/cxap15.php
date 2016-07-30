@@ -97,6 +97,46 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">cent</span> : cent</p>
+					<p><span class="eo">ĉefa</span> : principal(e), chef</p>
+					<p><span class="eo">ĉokolado</span> : chocolat</p>
+					<p><span class="eo">dek</span> : dix</p>
+					<p class="sekva"><span class="eo">dek kvar</span> : quatorze</p>
+					<p><span class="eo">dekstra</span> : droit(e) (côté) </p>
+					<p class="sekva">→ <span class="eo">maldekstra</span> : gauche (côté)</p>
+					<p><span class="eo">dolĉa</span> : doux; sucré</p>
+					<p><span class="eo">flanko</span> : côté</p>
+					<p><span class="eo">frue</span> : tôt, de bonne heure</p>
+					<p><span class="eo">hieraŭ</span> : hier</p>
+					<p><span class="eo">kvar</span> : quatre</p>
+					<p><span class="eo">kvardek</span> : quarante</p>
+					<p class="sekva"><span class="eo">kvardek kvar</span> : quarante-quatre</p>
+					<p><span class="eo">magazeno</span> : magasin, boutique</p>
+					<p><span class="eo">mateno</span> : matin</p>
+					<p><span class="eo">meblo</span> : meuble</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">nazo</span> : nez</p>
+					<p><span class="eo">pano</span> : pain</p>
+					<p><span class="eo">papero</span> : papier</p>
+					<p><span class="eo">plani</span> : établir un plan, projeter de</p>
+					<p class="sekva"><span class="eo">plano</span> : plan</p>
+					<p><span class="eo">plenplena</span> : complètement plein, rempli</p>
+					<p><span class="eo">poŝto</span> : poste (administation de distribution du courrier), courrier</p>
+					<p><span class="eo">raporti</span> : rapporter, annoncer</p>
+					<p><span class="eo">sako</span> : sac</p>
+					<p><span class="eo">speco</span> : sorte, espèce, genre</p>
+					<p><span class="eo">sporto</span> : sport</p>
+					<p><span class="eo">strato</span> : rue</p>
+					<p><span class="eo">ŝanco</span> : chance</p>
+					<p><span class="eo">tasko</span> : tâche, besogne, devoir (scolaire)</p>
+					<p><span class="eo">teo</span> : thé</p>
+					<p><span class="eo">vendi</span> : vendre</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

@@ -147,6 +147,62 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">aero</span> : air</p>
+					<p><span class="eo">brako</span> : bras</p>
+					<p><span class="eo">domo</span> : maison</p>
+					<p><span class="eo">du</span> : deux</p>
+					<p><span class="eo">esperi</span> : espérer</p>
+					<p><span class="eo">fantomo</span> : fantôme</p>
+					<p><span class="eo">fenestro</span> : fenêtre</p>
+					<p><span class="eo">fenestrokovrilo</span> : volet</p>
+					<p><span class="eo">horo</span> : heure</p>
+					<p><span class="eo">humuro</span> : humour</p>
+					<p><span class="eo">iam</span> : une fois, un jour</p>
+					<p><span class="eo">infano</span> : enfant</p>
+					<p><span class="eo">kampo</span> : champ</p>
+					<p><span class="eo">kanti</span> : chanter</p>
+					<p><span class="eo">kontraŭ</span> : contre</p>
+					<p><span class="eo">kovri</span> : couvrir</p>
+					<p><span class="eo">krii</span> : crier, appeler</p>
+					<p><span class="eo">kuri</span> : courir</p>
+					<p><span class="eo">kuraĝo</span> : courage</p>
+					<p class="sekva"><span class="eo">kuraĝa</span> : courageux, -euse</p>
+					<p><span class="eo">laca</span> : fatigué(e)</p>
+					<p><span class="eo">laŭta</span> : haute (voix), fort (bruit, cri), bruyante (conversation) </p>
+					<p><span class="eo">libera</span> : libre</p>
+					<p><span class="eo">lito</span> : lit</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">ludi</span> : jouer</p>
+					<p><span class="eo">lumo</span> : lumière (la ou une)</p>
+					<p><span class="eo">malantaŭ</span> = <span class="eo">mal</span>- + <span class="eo">antaŭ</span> : derrière</p>
+					<p><span class="eo">marŝi</span> : marcher</p>
+					<p><span class="eo">monto</span> : montagne</p>
+					<p><span class="eo">movi</span> : déplacer (quelque chose)</p>
+					<p><span class="eo">muskolo</span> : muscle</p>
+					<p><span class="eo">nek… nek…</span> : ni… ni…</p>
+					<p><span class="eo">nenie</span> : nulle part</p>
+					<p><span class="eo">patro</span> : père</p>
+					<p class="sekva"><span class="eo">patrino</span> : mère</p>
+					<p><span class="eo">plendi</span> : se plaindre</p>
+					<p><span class="eo">plori</span> : pleurer</p>
+					<p><span class="eo">pura</span> : propre; pur(e)</p>
+					<p><span class="eo">roko</span> : roc, rocher</p>
+					<p><span class="eo">sinsekve</span> : consécutivement</p>
+					<p><span class="eo">situacio</span> : situation</p>
+					<p><span class="eo">soni</span> : faire du bruit, sonner</p>
+					<p><span class="eo">suno</span> : soleil</p>
+					<p><span class="eo">ŝlosi</span> : fermer (à clé)</p>
+					<p><span class="eo">ŝlosilo</span> : clé</p>
+					<p><span class="eo">ŝtono</span> : pierre</p>
+					<p><span class="eo">varma</span> : chaud(e)</p>
+					<p><span class="eo">veki</span> : réveiller (quelqu'un)</p>
+					<p><span class="eo">voĉo</span> : voix</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

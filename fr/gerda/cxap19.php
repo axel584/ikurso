@@ -87,6 +87,11 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+		<section class="klarigo">
+			<p>Tous les mots ou racines de mot du chapitre 19 sont déjà connus. Vous devriez pouvoir les comprendre sans trop de difficultés.
+			</p>
+		</section>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

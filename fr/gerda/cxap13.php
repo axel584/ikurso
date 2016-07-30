@@ -106,6 +106,58 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">absorbi</span> : absorber</p>
+					<p><span class="eo">bedaŭri</span> : regretter</p>
+					<p><span class="eo">centro</span> : centre</p>
+					<p><span class="eo">daŭri</span> : durer</p>
+					<p><span class="eo">daŭrigi</span> : continuer (quelque chose)</p>
+					<p><span class="eo">ekzemplo</span> : exemple</p>
+					<p><span class="eo">feliĉa</span> : heureux, -euse</p>
+					<p class="sekva"><span class="eo">feliĉe</span> : heureusement</p>
+					<p><span class="eo">forgesi</span> : oublier</p>
+					<p><span class="eo">ĝentila</span> : poli(e), courtois</p>
+					<p><span class="eo">ĝojo</span> : joie, bonheur</p>
+					<p class="sekva"><span class="eo">ĝoja</span> : joyeux, -euse, content(e)</p>
+					<p><span class="eo">hotelo</span> : hôtel</p>
+					<p><span class="eo">ie</span> : quelque part</p>
+					<p><span class="eo">interesi</span> : intéresser</p>
+					<p class="sekva"><span class="eo">interesa</span> : intéressant(e)</p>
+					<p><span class="eo">internacia</span> : international(e)</p>
+					<p><span class="eo">komenci</span> : commencer</p>
+					<p><span class="eo">konato</span> : connaissance</p>
+					<p><span class="eo">koncerni</span> : concerner</p>
+					<p class="sekva"><span class="eo">koncerne …-n</span> : concernant</p>
+					<p><span class="eo">krome</span> : de plus, en outre</p>
+					<p><span class="eo">kutimi</span> : avoir l'habitude de, avoir coutume</p>
+				</div>
+				<div class="col s12 l6">
+					<p class="sekva"><span class="eo">kutimo</span> : habitude, coutume</p>
+					<p><span class="eo">momento</span> : moment</p>
+					<p><span class="eo">nacio</span> : nation</p>
+					<p class="sekva"><span class="eo">nacia</span> : national(e)</p>
+					<p><span class="eo">nekonato</span> : (un) inconnu</p>
+					<p><span class="eo">perfekta</span> : parfait(e)</p>
+					<p><span class="eo">persono</span> : personne</p>
+					<p><span class="eo">peza</span> : lourd, pesant</p>
+					<p><span class="eo">preciza</span> : précis(e)</p>
+					<p><span class="eo">proponi</span> : suggérer, proposer; offrir</p>
+					<p><span class="eo">rajti</span> : avoir le droit de</p>
+					<p class="sekva"><span class="eo">rajto</span> : (le) droit (de faire quelque chose)</p>
+					<p><span class="eo">rakonti</span> : raconter</p>
+					<p><span class="eo">ridi</span> : rire</p>
+					<p><span class="eo">rideti</span> : sourire</p>
+					<p><span class="eo">rimarki</span> : remarquer, noter</p>
+					<p><span class="eo">simila</span> : similaire</p>
+					<p><span class="eo">stulta</span> : stupide, idiot(e), imbécile</p>
+					<p><span class="eo">ŝofori</span> : conduire</p>
+					<p><span class="eo">ŝoforo</span> : conducteur, chauffeur</p>
+					<p><span class="eo">teatro</span> : théâtre</p>
+					<p><span class="eo">vojo</span> : voie, route, chemin</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

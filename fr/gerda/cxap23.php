@@ -72,6 +72,27 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">angla</span> : anglais</p>
+					<p><span class="eo">desegni</span> : dessiner, tracer</p>
+					<p class="sekva"><span class="eo">desegno</span> : dessin, tracé</p>
+					<p><span class="eo">ilo</span> : instrument, outil, ustensile</p>
+					<p><span class="eo">kavo</span> : cavité, trou</p>
+					<p><span class="eo">kies</span> : à qui ? dont, de qui, duquel, de laquelle, desquel(le)s</p>
+					<p><span class="eo">kofro</span> : coffre, malle</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">kontraŭ</span> : contre</p>
+					<p><span class="eo">korko</span> : liège, bouchon (bouteille)</p>
+					<p><span class="eo">literaturo</span> : littérature</p>
+					<p><span class="eo">protekti</span> : protéger</p>
+					<p><span class="eo">signo</span> : signe</p>
+					<p><span class="eo">telefono</span> : téléphone</p>
+					<p><span class="eo">tiri</span> : tirer</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

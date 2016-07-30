@@ -144,6 +144,62 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">aĉa</span> : méprisable, piètre, vil</p>
+					<p><span class="eo">alifoje</span> = <span class="eo">ali</span>- + -<span class="eo">foj</span>- + -<span class="eo">e</span></p>
+					<p><span class="eo">aliflanke</span> = <span class="eo">ali</span>- + -<span class="eo">flank</span>- + -<span class="eo">e</span></p>
+					<p><span class="eo">atmosfero</span> : atmosphère</p>
+					<p><span class="eo">bonkora</span> : qui a bon cœur, charitable</p>
+					<p><span class="eo">bruna</span> : marron</p>
+					<p><span class="eo">biero</span> : bière</p>
+					<p><span class="eo">finfine</span> : finalement, en fin de compte</p>
+					<p><span class="eo">flugi</span> : voler</p>
+					<p><span class="eo">fojo</span> : fois, occasion</p>
+					<p class="sekva tab"><span class="eo">tri fojojn</span> : trois fois</p>
+					<p class="sekva tab"><span class="eo">unufoje</span> : une fois</p>
+					<p><span class="eo">furioza</span> : furieux, -euse</p>
+					<p><span class="eo">gratuli</span> : féliciter</p>
+					<p><span class="eo">grupo</span> : groupe</p>
+					<p><span class="eo">hundo</span> : chien</p>
+					<p><span class="eo">je</span> : préposition indéfinie</p>
+					<p><span class="eo">ĵus</span> : à l'instant, justement</p>
+					<p><span class="eo">kato</span> : chat</p>
+					<p><span class="eo">kelnero</span> : serveur, garçon de café</p>
+					<p><span class="eo">kia</span> : quel, quelle sorte de</p>
+					<p><span class="eo">koko</span> : coq</p>
+					<p><span class="eo">koloro</span> : couleur</p>
+					<p><span class="eo">krom</span> : sauf, hormis, excepté</p>
+					<p><span class="eo">kuko</span> : gâteau</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">kune</span> : ensemble</p>
+					<p><span class="eo">kvin</span> : cinq</p>
+					<p><span class="eo">manĝi</span> : manger</p>
+					<p><span class="eo">menuo</span> : menu</p>
+					<p><span class="eo">mil</span> : mille</p>
+					<p><span class="eo">milito</span> : guerre</p>
+					<p><span class="eo">militservo</span> : service militaire</p>
+					<p><span class="eo">muziko</span> : musique</p>
+					<p><span class="eo">naŭ</span> : neuf</p>
+					<p><span class="eo">noti</span> : noter, prendre note</p>
+					<p><span class="eo">numero</span> : numéro (d'une maison, d'un ticket, dans une série, etc.)</p>
+					<p><span class="eo">ok</span> : huit</p>
+					<p><span class="eo">plafono</span> : plafond</p>
+					<p><span class="eo">plato</span> : plaque</p>
+					<p><span class="eo">pseŭdo-</span> : pseudo-   [<i><b>psèou</b>-do (ou bref)</i>]</p>
+					<p><span class="eo">reala</span> : vrai(e), réel(le), véritable</p>
+					<p><span class="eo">rompi</span> : rompre, briser, casser</p>
+					<p><span class="eo">salato</span> : salade</p>
+					<p><span class="eo">soldato</span> : soldat</p>
+					<p><span class="eo">supo</span> : soupe</p>
+					<p><span class="eo">telero</span> : assiette</p>
+					<p><span class="eo">tri</span> : trois</p>
+					<p><span class="eo">turka</span> : turc, turque</p>
+					<p><span class="eo">vesti</span> : vêtir, habiller, revêtir</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

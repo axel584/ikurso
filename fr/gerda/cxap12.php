@@ -140,6 +140,43 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">aĉeti</span> : acheter</p>
+					<p><span class="eo">akvo</span> : eau</p>
+					<p><span class="eo">apud</span> : à côté, près de</p>
+					<p><span class="eo">brando</span> : eau-de-vie, alcool</p>
+					<p><span class="eo">ĉio</span> : tout, toute chose</p>
+					<p><span class="eo">denove</span> : à nouveau</p>
+					<p><span class="eo">doloro</span> : douleur</p>
+					<p><span class="eo">doni</span> : donner</p>
+					<p><span class="eo">duone</span> : (à) demi</p>
+					<p><span class="eo">eksplodi</span> : exploser</p>
+					<p><span class="eo">fraŭlino</span> : Mademoiselle</p>
+					<p><span class="eo">glaso</span> : verre</p>
+					<p><span class="eo">ĝemi</span> : gémir, geindre</p>
+					<p><span class="eo">heziti</span> : hésiter</p>
+					<p><span class="eo">ja</span> : certes, bien, assurément</p>
+					<p><span class="eo">kiom</span> : combien, quelle quantité</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">klara</span> : clair(e), simple</p>
+					<p><span class="eo">kvankam</span> : bien que, quoique</p>
+					<p><span class="eo">larĝa</span> : large</p>
+					<p><span class="eo">laŭ</span> : selon, suivant; le long de</p>
+					<p><span class="eo">morti</span> : mourir</p>
+					<p><span class="eo">plezuro</span> : plaisir</p>
+					<p><span class="eo">polico</span> : police</p>
+					<p><span class="eo">porti</span> : porter</p>
+					<p><span class="eo">pripensi</span> : réfléchir à, considérer, envisager</p>
+					<p><span class="eo">ricevi</span> : recevoir</p>
+					<p><span class="eo">seĝo</span> : chaise</p>
+					<p><span class="eo">soifi</span> : avoir soif</p>
+					<p class="sekva"><span class="eo">soifo</span> : soif</p>
+					<p><span class="eo">sufiĉa</span> : suffisant(e)</p>
+					<p><span class="eo">tiom</span> : tant (de), autant</p>
+					<p><span class="eo">trinki</span> : boire</p>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

@@ -124,6 +124,55 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">atendi</span> : attendre</p>
+					<p><span class="eo">aŭ</span> : ou</p>
+					<p><span class="eo">aŭto</span> : voiture, automobile <span class="eta">[<i><b>aou</b>-to</i>]</span></p>
+					<p><span class="eo">aŭtomato</span> : automate</p>
+					<p><span class="eo">baldaŭ</span> : bientôt</p>
+					<p><span class="eo">buso</span> : car, bus, autocar</p>
+					<p><span class="eo">ĉambro</span> : chambre, pièce dans une maison ou un bâtiment</p>
+					<p class="sekva tab"><span class="eo">dormoĉambro</span> : chambre à coucher</p>
+					<p class="sekva tab"><span class="eo">manĝoĉambro</span> : salle à manger</p>
+					<p><span class="eo">ĉar</span> : parce que</p>
+					<p><span class="eo">ĉiaokaze</span> : dans tous les cas, en tout cas</p>
+					<p><span class="eo">destino</span> : destin, destinée</p>
+					<p><span class="eo">eĉ</span> : même, et en plus</p>
+					<p class="sekva tab"><span class="eo">li promenas senhalte, eĉ nokte</span> : il se promène sans cesse, même la nuit</p>
+					<p><span class="eo">ekster</span> : hors de, à l'extérieur de (préposition)</p>
+					<p class="sekva"><span class="eo">ekstere</span> : dehors, à l'extérieur (adverbe, lieu)</p>
+					<p class="sekva"><span class="eo">eksteren</span> : vers le dehors, vers l'extérieur (adverbe, direction)</p>
+					<p><span class="eo">el</span> : hors de, de</p>
+					<p><span class="eo">helpi</span> : aider</p>
+					<p><span class="eo">korpo</span> : corps</p>
+					<p><span class="eo">kruro</span> : jambe</p>
+				</div>
+				<div class="vortlisto row">
+					<p><span class="eo">longa</span> : long(ue)</p>
+					<p><span class="eo">mem</span> : soi-même</p>
+					<p class="sekva"><span class="eo">mi mem, vi mem</span> : moi-même, toi-même</p>
+					<p class="sekva">→ <span class="eo">memserva restoracio</span> : cafétéria, restaurant self-service</p>
+					<p><span class="eo">nokto</span> : nuit</p>
+					<p><span class="eo">paŝi</span> : marcher</p>
+					<p class="sekva"><span class="eo">paŝo</span> : pas (nom)</p>
+					<p><span class="eo">per</span> : par, à l'aide de (instrument, moyen de transport...)</p>
+					<p><span class="eo">ruĝa</span> : rouge</p>
+					<p><span class="eo">sekvi</span> : suivre</p>
+					<p><span class="eo">senti</span> : ressentir, sentir, éprouver</p>
+					<p><span class="eo">servi</span> : servir</p>
+					<p><span class="eo">si</span> : se, soi, lui, elle, eux (pronom réfléchi 3ème personne)</p>
+					<p><span class="eo">suspekti</span> : suspecter</p>
+					<p><span class="eo">tien</span> : vers là, vers là-bas</p>
+					<p class="sekva">iru tien !</span> : allez là-bas !</p>
+					<p class="sekva">venu ĉi tien !</span> : venez ici !</p>
+					<p><span class="eo">tomato</span> : tomate</p>
+					<p><span class="eo">tra</span> : à travers</p>
+					<p><span class="eo">urbo</span> : ville</p>
+					<p><span class="eo">vespero</span> : soir</p>	
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

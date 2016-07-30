@@ -138,6 +138,66 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">administra</span> : administratif, administrative</p>
+					<p class="sekva">administri</span> : administrer</p>
+					<p><span class="eo">ajn</span> : n'importe qu-… </p>
+					<p class="sekva"><span class="eo">iu ajn</span> : n'importe qui, n'importe quel</p>
+					<p class="sekva"><span class="eo">io ajn</span> : n'importe quoi</p>
+					<p class="sekva"><span class="eo">kiu ajn</span> : quiconque, n'importe quel… qui</p>
+					<p class="sekva"><span class="eo">kiun ajn</span> : qui que ce soit que, n'importe quel… que</p>
+					<p><span class="eo">amiko</span> : ami</p>
+					<p><span class="eo">bani</span> : baigner</p>
+					<p class="sekva"><span class="eo">bani sin</span> : se baigner</p>
+					<p><span class="eo">blua</span> : bleu(e)</p>
+					<p><span class="eo">dika</span> : épais(se)</p>
+					<p><span class="eo">epoko</span> : époque, âge</p>
+					<p><span class="eo">generacio</span> : génération</p>
+					<p><span class="eo">grasa</span> : gros(se), gras(se)</p>
+					<p><span class="eo">haro</span> : cheveu</p>
+					<p><span class="eo">homo</span> : être humain, homme</p>
+					<p><span class="eo">kelkaj</span> : quelques, peu de</p>
+					<p><span class="eo">kial</span> : pourquoi</p>
+					<p><span class="eo">kie</span> : où</p>
+					<p class="sekva tab"><span class="eo">kie ajn</span> : n'importe où que, partout où, en quelque endroit que ce soit que</p>
+					<p class="sekva tab"><span class="eo">kie ajn vi estas</span> : où que tu sois, partout où tu es</p>
+					<p><span class="eo">klaso</span> : classe</p>
+					<p><span class="eo">kompati</span> : avoir pitié, compatir</p>
+					<p class="sekva"><span class="eo">kompatinda</span> : digne de pitié, à plaindre</p>
+					<p><span class="eo">kredi</span> : croire</p>
+					<p><span class="eo">lasi</span> : laisser</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">loko</span> : endroit, lieu</p>
+					<p><span class="eo">mezo</span> : milieu</p>
+					<p class="sekva"><span class="eo">meze de</span> : au milieu de</p>
+					<p><span class="eo">minuto</span> : minute (temps)</p>
+					<p><span class="eo">muro</span> : mur</p>
+					<p><span class="eo">neniu</span> : personne; aucun</p>
+					<p><span class="eo">ofico</span> : fonction, emploi</p>
+					<p><span class="eo">oficejo</span> (= <span class="eo">ofic</span>- + -<span class="eo">ejo</span>) : bureau, office</p>
+					<p><span class="eo">okulo</span> : œil</p>
+					<p><span class="eo">okupi</span> : occuper</p>
+					<p><span class="eo">okupiĝi pri</span> : s'occuper de</p>
+					<p class="sekva"><span class="eo">okupi sin pri</span> = <span class="eo">okupiĝi pri</span></p>
+					<p><span class="eo">provi</span> : essayer</p>
+					<p><span class="eo">rondo</span> : rond (nom), cercle</p>
+					<p class="sekva"><span class="eo">ronda</span> : rond(e), circulaire</p>
+					<p><span class="eo">sana</span> : en bonne santé</p>
+					<p><span class="eo">sen</span> : sans</p>
+					<p><span class="eo">sveni</span> : s'évanouir</p>
+					<p><span class="eo">tradicio</span> : tradition</p>
+					<p><span class="eo">trovi</span> : trouver</p>
+					<p><span class="eo">tuŝi</span> : toucher</p>
+					<p><span class="eo">urĝa</span> : urgent(e)</p>
+					<p><span class="eo">vorto</span> : mot</p>
+					<p class="sekva"><span class="eo">vortaro</span> : dictionnaire</p>
+					<p><span class="eo">zorgi</span> : se faire du souci; s'occuper de, prendre soin de </p>
+					<p class="sekva"><span class="eo">zorgo</span> : souci, inquiétude; attention, sollicitude</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

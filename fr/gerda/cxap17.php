@@ -116,6 +116,54 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">aperi</span> : apparaître</p>
+					<p class="sekva">→ <span class="eo">malaperi</span> : disparaître</p>
+					<p><span class="eo">aliĝi</span> : = <span class="eo">al</span>- + -<span class="eo">iĝi</span>s : se joindre, adhérer</p>
+					<p><span class="eo">dek-sepa</span> : dix-septième</p>
+					<p><span class="eo">dua</span> : second, deuxième</p>
+					<p><span class="eo">edzo</span> : époux</p>
+					<p class="sekva"><span class="eo">edzino</span> : épouse</p>
+					<p><span class="eo">frato</span> : frère</p>
+					<p class="sekva"><span class="eo">fratino</span> : soeur</p>
+					<p><span class="eo">gardi</span> : garder</p>
+					<p class="sekva"><span class="eo">sin gardi</span> : prendre garde, surveiller, être prudent</p>
+					<p class="sekva"><span class="eo">singarda</span> : prudent</p>
+					<p><span class="eo">historio</span> : histoire</p>
+					<p><span class="eo">honesta</span> : honnête</p>
+					<p><span class="eo">ia</span> : un certain, une espèce de</p>
+					<p><span class="eo">jaro</span> : année</p>
+					<p><span class="eo">jarcento</span> : siècle</p>
+					<p><span class="eo">kapti</span> : capturer</p>
+					<p><span class="eo">konduki</span> : conduire</p>
+					<p><span class="eo">kontroli</span> : vérifier, contrôler</p>
+					<p><span class="eo">krimo</span> : crime</p>
+					<p><span class="eo">kvara</span> : quatrième</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">lasta</span> : dernier</p>
+					<p><span class="eo">marko</span> : marque (tous les sens)</p>
+					<p><span class="eo">mono</span> : argent</p>
+					<p><span class="eo">motivo</span> : motif, mobile</p>
+					<p><span class="eo">plaĉi</span> : plaire, être apprécié</p>
+					<p><span class="eo">preskaŭ</span> : presque</p>
+					<p><span class="eo">pro</span> : à cause de, pour</p>
+					<p><span class="eo">problemo</span> : problème</p>
+					<p><span class="eo">riĉa</span> : riche</p>
+					<p><span class="eo">rolo</span> : rôle</p>
+					<p><span class="eo">sep</span> : sept</p>
+					<p><span class="eo">serĉi</span> : chercher</p>
+					<p><span class="eo">solvi</span> : résoudre</p>
+					<p><span class="eo">suko</span> : jus</p>
+					<p><span class="eo">ŝteli</span> : voler, dérober</p>
+					<p class="sekva"><span class="eo">ŝtele</span> : par vol; à la dérobée, furtivement</p>
+					<p><span class="eo">tipo</span> : type, modèle</p>
+					<p><span class="eo">tria</span> : troisième</p>
+					<p><span class="eo">uzi</span> : utiliser</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

@@ -99,6 +99,28 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">aventuro</span> : aventure</p>
+					<p><span class="eo">danĝero</span> : danger</p>
+					<p><span class="eo">danki</span> : remercier</p>
+					<p><span class="eo">ege</span> : extrêmement</p>
+					<p><span class="eo">emi</span> : incliner à</p>
+					<p class="sekva"><span class="eo">ema</span> : ayant tendance à</p>
+					<p><span class="eo">facila</span> : facile</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">fidi</span> : faire confiance</p>
+					<p><span class="eo">fuŝi</span> : faire rater, gâcher, bousiller</p>
+					<p><span class="eo">reciproke</span> : réciproquement, mutuellement</p>
+					<p><span class="eo">silenti</span> : être silencieux</p>
+					<p class="sekva"><span class="eo">silento</span> : silence</p>
+					<p><span class="eo">sinjoro</span> : monsieur</p>
+					<p><span class="eo">ŝati</span> : apprécier, aimer</p>
+				</div>
+			</div>
+					
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

@@ -158,122 +158,111 @@ include "gerdakapo.inc.php";
 
 			<div class="vortlisto row">
 				<div class="col s12 m6">
-					<p><span class="eo">al</span> : à, vers [<i>al</i>]</p>
-					<p><span class="eo">alta</span> : grand(e), haut(e) [<i><b>al</b>-ta</i>]</p>
-					<p><span class="eo">angulo</span> : coin, angle  [<i>anne-<b>gou</b>-lo</i>]</p>
-					<p><span class="eo">bela</span> : beau, belle [<i><b>bè</b>-la</i>]</p>
-					<p><span class="eo">blonda</span> : blond(e) [<i><b>blonne</b>-da</i>]</p>
-					<p><span class="eo">demandas</span> : <i>présent de <b>demandi</b></i><br>
-						(je, il, elle) demande, (tu) demandes, (nous) demandons,<br>
-						(vous) demandez, (ils, elles) demandent [<i>dè-<b>manne</b>-dasse</i>]<br>
-						(j')interroge, (je) questionne…</p>
+					<p><span class="eo">al</span> : à, vers <span class="eta">[<i>al</i>]</span></p>
+					<p><span class="eo">alta</span> : grand(e), haut(e) <span class="eta">[<i><b>al</b>-ta</i>]</span></p>
+					<p><span class="eo">angulo</span> : coin, angle  <span class="eta">[<i>anne-<b>gou</b>-lo</i>]</span></p>
+					<p><span class="eo">bela</span> : beau, belle <span class="eta">[<i><b>bè</b>-la</i>]</span></p>
+					<p><span class="eo">blonda</span> : blond(e) <span class="eta">[<i><b>blonne</b>-da</i>]</span></p>
 					<p><span class="eo">demandi</span> : interroger, demander</p>
-					<p><span class="eo">demando</span> : question  [<i>dè-<b>manne</b>-do</i>]</p>
-					<p><span class="eo">diras</span> : <i>présent de <b>diri</b></i><br>
-						(je, tu) dis, (il, elle) dit, (nous) disons, (vous) dites, (ils, elles) disent<br>
-						[<i><b>di</b>-rasse (r roulé)</i>]</p>
-					<p><span class="eo">diri</span> : direÒ</p>
-					<p><span class="eo">diru</span> : <i>voir ci-après <b>-u</b></i></p>
-					<p><span class="eo">ebla</span> : possible [<i><b>è</b>-bla</i>]</p>
-					<p><span class="eo">eble</span> : possiblement, peut-être  [<i><b>è</b>-blè</i>]</p>
-					<p><span class="eo">en</span> : en, dans  [<i>ène</i>]</p>
-					<p><span class="eo">estas</span> : <i>présent de <b>esti</b></i> [<i><b>ès</b>-tasse</i>]<br>
-							(je) suis, (tu) es, (il, elle) est, (nous) sommes, (vous) êtes, (ils, elles) sont; c'est<br>
-							<span class='ekz'>vi estas bela</span> : tu es beau (belle)<br>
-							<span class='ekz'>estas fakto</span> : c'est un fait</p>
+					<p class="sekva"><span class="eo">demandas</span> <span class="eta">(<i>présent de <b>demandi</b></i>)</span>&nbsp;: (je, il, elle) demande, (tu) demandes, (nous) demandons, (vous) demandez, (ils, elles) demandent <span class="eta">[<i>dè-<b>manne</b>-dasse</i>]</span>&nbsp;;
+						(j')interroge, (je) questionne…</p>
+					<p class="sekva"><span class="eo">demando</span> : question  <span class="eta">[<i>dè-<b>manne</b>-do</i>]</span></p>
+					<p><span class="eo">diri</span> : dire</p>
+					<p class="sekva"><span class="eo">diras</span> <span class="eta">(<i>présent de <b>diri</b></i>)</span>&nbsp;:
+						(je, tu) dis, (il, elle) dit, (nous) disons, (vous) dites, (ils, elles) disent <span class="eta">[<i><b>di</b>-rasse (r roulé)</i>]</span></p>
+					<p class="sekva"><span class="eo">diru</span> : <i>voir ci-après <b>-u</b></i></p>
+					<p><span class="eo">ebla</span> : possible <span class="eta">[<i><b>è</b>-bla</i>]</span></p>
+					<p class="sekva"><span class="eo">eble</span> : possiblement, peut-être  <span class="eta">[<i><b>è</b>-blè</i>]</span></p>
+					<p><span class="eo">en</span> : en, dans  <span class="eta">[<i>ène</i>]</span></p>
 					<p><span class="eo">esti</span> : être</p>
-					<p><span class="eo">fakte</span> : en fait [<i><b>fak</b>-tè</i>]</p>
-					<p><span class="eo">fakto</span> : fait (n.) [<i><b>fak</b>-to</i>]</p>
-					<p><span class="eo">granda</span> : grand(e), parfois : gros(se)  [<i><b>granne</b>-da</i>]</p>
-					<p><span class="eo">ho</span> : oh! [<i><b>hho</b> (h expiré)</i>]</p>
-					<p><span class="eo">iras</span> : <i>présent de <b>iri</b></i><br>
-							(je) vais, (tu) vas, (il, elle) va, (nous) allons, (vous) allez, (ils, elles) vont<br>
-							[<i><b>i</b>-rasse (r roulé)</i>]</p>
+					<p class="sekva"><span class="eo">estas</span> <span class="eta">(<i>présent de <b>esti</b></i> [<i><b>ès</b>-tasse</i>])</span>&nbsp;:
+						(je) suis, (tu) es, (il, elle) est, (nous) sommes, (vous) êtes, (ils, elles) sont, c'est</p>
+					<p class="sekva tab"><span class="eo">vi estas bela</span> : tu es beau (belle)</p>
+					<p class="sekva tab"><span class="eo">estas fakto</span> : c'est un fait</p>
+					<p><span class="eo">fakte</span> : en fait <span class="eta">[<i><b>fak</b>-tè</i>]</span></p>
+					<p class="sekva"><span class="eo">fakto</span> : fait (n.) <span class="eta">[<i><b>fak</b>-to</i>]</span></p>
+					<p><span class="eo">granda</span> : grand(e), parfois : gros(se)  <span class="eta">[<i><b>granne</b>-da</i>]</span></p>
+					<p><span class="eo">ho</span> : oh! <span class="eta">[<i><b>hho</b> (h expiré)</i>]</span></p>
 					<p><span class="eo">iri</span> : aller</p>
-					<p><span class="eo">jen</span> : voici [<i><b>yène</b></i>]<br>
-							<span class='ekz'>jen (estas) Linda</span> : voici Linda</p>
-					<p><span class="eo">jes</span> : oui  [<i><b>yesse</b></i>]</p>
-					<p><span class="eo">juna</span> : jeune  [<i><b>you</b>-na</i>]</p>
-					<p><span class="eo">kaj</span> : et [<i>kaï</i>]</p>
-					<p><span class="eo">kara</span> : cher, chère [<i><b>ka</b>-ra (r roulé)</i>]<br>
-							<span class='ekz'>Tom, kara!</span> : cher Tom !, ce cher Tom !</p>
-					<p><span class="eo">kio</span> : quoi, que [<i><b>ki</b>-o (deux syllabes !)</i>]<br>
-							<span class='ekz'>kio okazas?</span> : qu'arrive-t-il ?<br>
-							<span class='ekz'>al kio vi rigardas?</span> : que regardes-tu ? (mot-à-mot à "Quoi tu regardes")</p>
-					<p><span class="eo">kiu</span> : qui  [<i><b>ki</b>-ou (deux syllabes !)</i>]</p>
-					<p><span class="eo">knabino</span> : fille, jeune fille  [<i>kna-<b>bi</b>-no</i>]</p>
-					<p><span class="eo">knabo</span> : garçon, jeune homme  [<i><b>kna</b>-bo</i>]</p>
-					<p><span class="eo">kun</span> : avec  [<i>koune</i>]</p>
-					<p><span class="eo">la</span> : le, la, les [<i>la</i>]</p>
-					<p><span class="eo">laboras</span> : <i>présent de <b>labori</b></i><br>
-							(je) travaille, (tu) travailles,… [<i>la-<b>bo</b>-rasse</i>]</p>
+					<p class="sekva"><span class="eo">iras</span> <span class="eta">(<i>présent de <b>iri</b></i>)</span>&nbsp;: (je) vais, (tu) vas, (il, elle) va, (nous) allons, (vous) allez, (ils, elles) vont <span class="eta">[<i><b>i</b>-rasse (r roulé)</i>]</span></p>
+					<p><span class="eo">jen</span> : voici <span class="eta">[<i><b>yène</b></i>]</span></p>
+					<p class="sekva tab"><span class="eo">jen (estas) Linda</span> : voici Linda</p>
+					<p><span class="eo">jes</span> : oui  <span class="eta">[<i><b>yesse</b></i>]</span></p>
+					<p><span class="eo">juna</span> : jeune  <span class="eta">[<i><b>you</b>-na</i>]</span></p>
+					<p><span class="eo">kaj</span> : et <span class="eta">[<i>kaï</i>]</span></p>
+					<p><span class="eo">kara</span> : cher, chère <span class="eta">[<i><b>ka</b>-ra (r roulé)</i>]</span></p>
+					<p class="sekva tab"><span class="eo">Tom, kara!</span> : cher Tom&nbsp;!, ce cher Tom&nbsp;!</p>
+					<p><span class="eo">kio</span> : quoi, que <span class="eta">[<i><b>ki</b>-o (deux syllabes&nbsp;!)</i>]</span></p>
+					<p class="sekva tab"><span class="eo">kio okazas?</span> : qu'arrive-t-il&nbsp;?</p>
+					<p class="sekva tab"><span class="eo">al kio vi rigardas?</span> : que regardes-tu&nbsp;? (mot-à-mot à «Quoi tu regardes»)</p>
+					<p><span class="eo">kiu</span> : qui  <span class="eta">[<i><b>ki</b>-ou (deux syllabes !)</i>]</span></p>
+					<p><span class="eo">knabino</span> : fille, jeune fille  <span class="eta">[<i>kna-<b>bi</b>-no</i>]</span></p>
+					<p class="sekva"><span class="eo">knabo</span> : garçon, jeune homme  <span class="eta">[<i><b>kna</b>-bo</i>]</span></p>
+					<p><span class="eo">kun</span> : avec  <span class="eta">[<i>koune</i>]</span></p>
+					<p><span class="eo">la</span> : le, la, les <span class="eta">[<i>la</i>]</span></p>
 					<p><span class="eo">labori</span> : travailler</p>
-					<p><span class="eo">li</span> : il, lui [<i>li</i>]</p>
+					<p class="sekva"><span class="eo">laboras</span> <span class="eta">(<i>présent de <b>labori</b></i>)</span>&nbsp;: (je) travaille, (tu) travailles,… <span class="eta">[<i>la-<b>bo</b>-rasse</i>]</span></p>
+					<p><span class="eo">li</span> : il, lui <span class="eta">[<i>li</i>]</span></p>
 					<p><span class="eo">mal-</span> : <i>voir ci-après</i></p>
-					<p><span class="eo">mi</span> : je, me, moi [<i>mi</i>]</p>
-					<p><span class="eo">mondo</span> : monde [<i><b>monne</b>-do</i>]</p>
-					<p><span class="eo">multaj</span> : plusieurs  [<i><b>moul</b>-taï</i>]</p>
-					<p><span class="eo">multe</span> : beaucoup  [<i><b>moul</b>-tè</i>]<br>
-							<span class='ekz'>vi laboras tro multe</span> : tu travailles trop, (mot-à-mot «trop beaucoup»)</p>
+					<p><span class="eo">mi</span> : je, me, moi <span class="eta">[<i>mi</i>]</span></p>
+					<p><span class="eo">mondo</span> : monde <span class="eta">[<i><b>monne</b>-do</i>]</span></p>
+					<p><span class="eo">multaj</span> : plusieurs  <span class="eta">[<i><b>moul</b>-taï</i>]</span></p>
+					<p class="sekva"><span class="eo">multe</span> : beaucoup  <span class="eta">[<i><b>moul</b>-tè</i>]
+					<p class="sekva tab"><span class="eo">vi laboras tro multe</span> : tu travailles trop, (mot-à-mot «trop beaucoup»)</p>
 				</div>
 				<div class="col s12 m6">
-					<p><span class="eo">ne</span> : non, ne... pas  [<i>nè</i>]<br>
-							<span class='ekz'>ne, mi ne scias</span> : non, je ne sais pas</p>
-					<p><span class="eo">nenio</span> : rien  [<i>nè-<b>ni</b>-o (trois syllabes !)</i>]<br>
-							<span class='ekz'>nenio speciala</span> : rien de spécial</p>
-					<p><span class="eo">nova</span> : neuf, neuve  [<i><b>no</b>-va</i>]</p>
-					<p><span class="eo">nu</span> : allons, bien, eh bien...  [<i>nou</i>]<br>
-							<span class='ekz'>nu, venu kun mi</span> : bien, viens avec moi</p>
-					<p><span class="eo">nun</span> : maintenant  [<i>noune</i>]</p>
-					<p><span class="eo">nur</span> : seulement  [<i>nour (r roulé)</i>]<br>
-							<span class='ekz'>nur vi laboras multe</span> : toi seul travailles beaucoup<br>
-							<span class='ekz'>li rigardas nur al vi</span> : il ne regarde que toi (mot-à-mot «seulement à toi»)</p>
-					<p><span class="eo">okazas</span> : <i>présent de <b>okazi</b></i><br>
-							(il) arrive  [<i>o-<b>ka</b>-zasse</i>]<br>
-							<span class='ekz'>kio okazas?</span> : que se passe-t-il<br>
-							<span class='ekz'>kio okazas al vi?</span> : qu'est-ce qui t'arrive ?</p>
+					<p><span class="eo">ne</span> : non, ne… pas  <span class="eta">[<i>nè</i>]</span></p>
+					<p class="sekva tab"><span class="eo">ne, mi ne scias</span> : non, je ne sais pas</p>
+					<p><span class="eo">nenio</span> : rien  <span class="eta">[<i>nè-<b>ni</b>-o (trois syllabes&nbsp;!)</i>]</span></p>
+					<p class="sekva">	<span class="eo">nenio speciala</span> : rien de spécial</p>
+					<p><span class="eo">nova</span> : neuf, neuve <span class="eta">[<i><b>no</b>-va</i>]</span></p>
+					<p><span class="eo">nu</span> : allons, bien, eh bien… <span class="eta">[<i>nou</i>]</span></p>
+					<p class="sekva"><span class="eo">nu, venu kun mi</span> : bien, viens avec moi</p>
+					<p><span class="eo">nun</span> : maintenant <span class="eta">[<i>noune</i>]</span></p>
+					<p><span class="eo">nur</span> : seulement <span class="eta">[<i>nour (r roulé)</i>]</span></p>
+					<p class="sekva tab"><span class="eo">nur vi laboras multe</span> : toi seul travailles beaucoup</p>
+					<p class="sekva tab"><span class="eo">li rigardas nur al vi</span> : il ne regarde que toi (mot-à-mot «seulement à toi»)</p>
 					<p><span class="eo">okazi</span> : arriver, se passer, avoir lieu</p>
-					<p><span class="eo">plej</span> : le plus, la plus [<i>plèï</i>]</p>
-					<p><span class="eo">restoracio</span> : restaurant [<i>rès-to-ra-<b>tsi</b>-o (r roulés)</i>]</p>
-					<p><span class="eo">rigardas</span> : <i>présent de <b>rigardi</b></i><br>
-							(je) regarde, (tu) regardes,… [<i>ri-<b>gar</b>-dasse (r roulés)</i>]</p>
+					<p class="sekva"><span class="eo">okazas</span> <span class="eta">(<i>présent de <b>okazi</b></i>)</span>&nbsp;: (il) arrive <span class="eta">[<i>o-<b>ka</b>-zasse</i>]</span></p>
+					<p class="sekva tab"><span class="eo">kio okazas?</span> : que se passe-t-il</p>
+					<p class="sekva tab"><span class="eo">kio okazas al vi?</span> : qu'est-ce qui t'arrive&nbsp;?</p>
+					<p><span class="eo">plej</span> : le plus, la plus <span class="eta">[<i>plèï</i>]</span></p>
+					<p><span class="eo">restoracio</span> : restaurant <span class="eta">[<i>rès-to-ra-<b>tsi</b>-o (r roulés)</i>]</span></p>
 					<p><span class="eo">rigardi</span> : regarder</p>
-					<p><span class="eo">rigardu</span> : <i>voir ci-après <b>-u</b></i></p>
-					<p><span class="eo">saluton</span> : salut ! [<i>sa-<b>lou</b>-tonne</i>]</p>
-					<p><span class="eo">scias</span> : <i>présent de <b>scii</b></i><br>
-							(je) sais, (tu) sais,… [<i><b>stsi</b>-asse</i>]</p>
+					<p class="sekva"><span class="eo">rigardas</span> <span class="eta">(<i>présent de <b>rigardi</b></i>)</span>&nbsp;: (je) regarde, (tu) regardes,… <span class="eta">[<i>ri-<b>gar</b>-dasse (r roulés)</i>]</span></p>
+					<p class="sekva"><span class="eo">rigardu</span> : <i>voir ci-après <b>-u</b></i></p>
+					<p><span class="eo">saluton</span> : salut&nbsp;! <span class="eta">[<i>sa-<b>lou</b>-tonne</i>]</span></p>
 					<p><span class="eo">scii</span> : savoir</p>
-					<p><span class="eo">sed</span> : mais  [<i>sèd</i>]</p>
-					<p><span class="eo">serioza</span> : sérieux, sérieuse  [<i>sè-ri-<b>o</b>-za (r roulé)</i>]</p>
-					<p><span class="eo">sidas</span> : <i>présent de <b>sidi</b></i><br>
-							(je) suis assis(e), (tu) es assis(e)… [<i><b>si</b>-dasse</i>]</p>
+					<p class="sekva"><span class="eo">scias</span> <span class="eta">(<i>présent de <b>scii</b></i>)</span>&nbsp;: (je) sais, (tu) sais,… <span class="eta">[<i><b>stsi</b>-asse</i>]</span></p>
+					<p><span class="eo">sed</span> : mais <span class="eta">[<i>sèd</i>]</span></p>
+					<p><span class="eo">serioza</span> : sérieux, sérieuse <span class="eta">[<i>sè-ri-<b>o</b>-za (r roulé)</i>]</span></p>
 					<p><span class="eo">sidi</span> : être assis(e)</p>
-					<p><span class="eo">sincera</span> : sincère [<i>sine-<b>tsè</b>-ra (r roulé)</i>]</p>
-					<p><span class="eo">sola</span> : seul, seule [<i><b>so</b>-la</i>]</p>
-					<p><span class="eo">speciala</span> : spécial(e)  [<i>spè-tsi-<b>a</b>-la</i>]</p>
-					<p><span class="eo">spegulo</span> : miroir [<i>spè-<b>gou</b>-lo</i>]</p>
-					<p><span class="eo">studento</span> : étudiant [<i>stou-<b>dène</b>-to</i>]</p>
-					<p><span class="eo">tiu</span> : celui-là, ce(tte) …-là  [<i><b>ti</b>-ou (deux syllabes !)</i>]<br>
-							<span class='ekz'>kiu estas tiu?</span> : qui est celui-là ?, qui est-ce ?</p>
-					<p><span class="eo">tro</span> : trop [<i>(r roulé)</i>]</p>
-					<p><span class="eo">tuta</span> : entier, entière, tout(e) le(la)/un(e)  [<i><b>tou</b>-ta</i>]<br>
-							<span class='ekz'>en la tuta restoracio</span> : dans tout le restaurant<br>
-							<span class='ekz'>en la tuta mondo</span> : dans le monde entier</p>
-					<p><span class="eo">tute</span> : entièrement, totalement [<i><b>tou</b>-tè</i>]<br>
-							<span class='ekz'>mi estas tute nova studento</span> : je suis un tout nouvel étudiant</p>
-					<p><span class="eo">universitata</span> : universitaire (adj.) [<i>ou-ni-vèr-si-<b>ta</b>-ta (r roulé)</i>]</p>
-					<p><span class="eo">universitato</span> : université  [<i>ou-ni-vèr-si-<b>ta</b>-to (r roulé)</i>]</p>
-					<p><span class="eo">venas</span> : <i>présent de <b>veni</b></i><br>
-							(je) viens, (tu) viens… [<i><b>vè</b>-nasse</i>]</p>
+					<p class="sekva"><span class="eo">sidas</span> <span class="eta">(<i>présent de <b>sidi</b></i>)</span>&nbsp;: (je) suis assis(e), (tu) es assis(e)… <span class="eta">[<i><b>si</b>-dasse</i>]</span></p>
+					<p><span class="eo">sincera</span> : sincère <span class="eta">[<i>sine-<b>tsè</b>-ra (r roulé)</i>]</span></p>
+					<p><span class="eo">sola</span> : seul, seule <span class="eta">[<i><b>so</b>-la</i>]</span></p>
+					<p><span class="eo">speciala</span> : spécial(e)  <span class="eta">[<i>spè-tsi-<b>a</b>-la</i>]</span></p>
+					<p><span class="eo">spegulo</span> : miroir <span class="eta">[<i>spè-<b>gou</b>-lo</i>]</span></p>
+					<p><span class="eo">studento</span> : étudiant <span class="eta">[<i>stou-<b>dène</b>-to</i>]</span></p>
+					<p><span class="eo">tiu</span> : celui-là, ce(tte) …-là  <span class="eta">[<i><b>ti</b>-ou (deux syllabes !)</i>]</span></p>
+					<p class="sekva tab"><span class="eo">kiu estas tiu?</span> : qui est celui-là ?, qui est-ce ?</p>
+					<p><span class="eo">tro</span> : trop <span class="eta">[<i>(r roulé)</i>]</span></p>
+					<p><span class="eo">tuta</span> : entier, entière, tout(e) le(la)/un(e)  <span class="eta">[<i><b>tou</b>-ta</i>]</span></p>
+					<p class="sekva tab"><span class="eo">en la tuta restoracio</span> : dans tout le restaurant</p>
+					<p class="sekva tab"><span class="eo">en la tuta mondo</span> : dans le monde entier</p>
+					<p class="sekva tab"><span class="eo">tute</span> : entièrement, totalement <span class="eta">[<i><b>tou</b>-tè</i>]</span></p>
+					<p class="sekva tab"><span class="eo">mi estas tute nova studento</span> : je suis un tout nouvel étudiant</p>
+					<p><span class="eo">universitata</span> : universitaire (adj.) <span class="eta">[<i>ou-ni-vèr-si-<b>ta</b>-ta (r roulé)</i>]</span></p>
+					<p class="sekva"><span class="eo">universitato</span> : université  <span class="eta">[<i>ou-ni-vèr-si-<b>ta</b>-to (r roulé)</i>]</span></p>
 					<p><span class="eo">veni</span> : venir</p>
-					<p><span class="eo">venu</span> : <i>voir ci-après <b>-u</b></i></p>
-					<p><span class="eo">vera</span> : vrai(e) [<i><b>vè</b>-ra (r roulé)</i>]</p>
-					<p><span class="eo">vere</span> : vraiment  [<i><b>vè</b>-rè (r roulé)</i>]</p>
-					<p><span class="eo">verŝajna</span> : probable [<i>vèr-<b>chaï</b>-na (r roulé)</i>]</p>
-					<p><span class="eo">verŝajne</span> : probablement [<i>vèr-<b>chaï</b>-nè (r roulé)</i>]</p>
-					<p><span class="eo">vi</span> : tu, toi, vous (2<sup>e</sup> personne sing. et pluriel)  [<i>vi</i>]</p>
-					<p><span class="eo">virino</span> : femme  [<i>vi-<b>ri</b>-no (r roulé)</i>]</p>
-					<p><span class="eo">viro</span> : homme, mâle  [<i><b>vi</b>-ro (r roulé)</i>]</p>
+					<p class="sekva"><span class="eo">venas</span> <span class="eta">(<i>présent de <b>veni</b></i>)</span>&nbsp;: (je) viens, (tu) viens… <span class="eta">[<i><b>vè</b>-nasse</i>]</span></p>
+					<p class="sekva"><span class="eo">venu</span> : <i>voir ci-après <b>-u</b></i></p>
+					<p><span class="eo">vera</span> : vrai(e) <span class="eta">[<i><b>vè</b>-ra (r roulé)</i>]</span></p>
+					<p class="sekva"><span class="eo">vere</span> : vraiment  <span class="eta">[<i><b>vè</b>-rè (r roulé)</i>]</span></p>
+					<p><span class="eo">verŝajna</span> : probable <span class="eta">[<i>vèr-<b>chaï</b>-na (r roulé)</i>]</span></p>
+					<p class="sekva"><span class="eo">verŝajne</span> : probablement <span class="eta">[<i>vèr-<b>chaï</b>-nè (r roulé)</i>]</span></p>
+					<p><span class="eo">vi</span> : tu, toi, vous (2<sup>e</sup> personne sing. et pluriel)  <span class="eta">[<i>vi</i>]</span></p>
+					<p><span class="eo">virino</span> : femme  <span class="eta">[<i>vi-<b>ri</b>-no (r roulé)</i>]</span></p>
+					<p class="sekva"><span class="eo">viro</span> : homme, mâle  <span class="eta">[<i><b>vi</b>-ro (r roulé)</i>]</span></p>
 				</div>
 
 		<?php 

@@ -122,48 +122,48 @@ include "gerdakapo.inc.php";
 			<div class="vortlisto row">
 				<div class="col s12 l6">
 					<p><span class="eo">amdeklaro</span> = <span class="eo">am</span>- + <span class="eo">deklaro</span><br>= deklaro de amo = deklaro pri amo</p>
-					<p><span class="eo">ami</span> : aimer<br>
-						<span class="eo">amo</span> : amour</p>
-					<p><span class="eo">ankaŭ</span> : aussi [<i><b>anne</b>-kaou (ou bref)</i>]</p>
-					<p><span class="eo">aspekti</span> : ressembler (à)<br>
-						<span class="eo">aspekto</span> : aspect, apparence, ressemblance</p>
+					<p><span class="eo">ami</span> : aimer</p>
+					<p class="sekva"><span class="eo">amo</span> : amour</p>
+					<p><span class="eo">ankaŭ</span> : aussi <span class="eta">[<i><b>anne</b>-kaou (ou bref)</i>]</span></p>
+					<p><span class="eo">aspekti</span> : ressembler (à)</p>
+					<p class="sekva"><span class="eo">aspekto</span> : aspect, apparence, ressemblance</p>
 					<p><span class="eo">bonan tagon</span> : bonjour</p>
 					<p><span class="eo">ĉe</span> : à (comme dans «à la table»), à côté, près de</p>
 					<p><span class="eo">de</span> : de (possession)</p>
-					<p><span class="eo">deklari</span> : déclarer<br>
-						<span class="eo">deklaro</span> : déclaration</p>
-					<p><span class="eo">esprimi</span> : exprimer<br>
-						<span class="eo">esprimo</span> : expression</p>
-					<p><span class="eo">grava</span> : important(e)<br>
-						<span class="eo">gravi</span> : avoir de l'importance</p>
-					<p><span class="eo">ĝi</span> : il, elle (pour les non-personnes : objets, animaux, abstractions…)<br>
-						<span class="eo">ĝia</span> : son, sa (à lui (neutre))</p>
+					<p><span class="eo">deklari</span> : déclarer</p>
+					<p class="sekva"><span class="eo">deklaro</span> : déclaration</p>
+					<p><span class="eo">esprimi</span> : exprimer</p>
+					<p class="sekva"><span class="eo">esprimo</span> : expression</p>
+					<p><span class="eo">grava</span> : important(e)</p>
+					<p class="sekva"><span class="eo">gravi</span> : avoir de l'importance</p>
+					<p><span class="eo">ĝi</span> : il, elle (pour les non-personnes : objets, animaux, abstractions…)</p>
+					<p class="sekva"><span class="eo">ĝia</span> : son, sa (à lui,neutre)</p>
 					<p><span class="eo">jam</span> : déjà</p>
 					<p><span class="eo">kiel</span> : comme, à (comme dans «ressembler à»)&nbsp;; comment</p>
-					<p><span class="eo">kompreneble</span> : naturellement, bien entendu</p>
 					<p><span class="eo">kompreni</span> : comprendre</p>
+					<p class="sekva"><span class="eo">kompreneble</span> : naturellement, bien entendu</p>
 					<p><span class="eo">mia</span> : mon, ma</p>
 				</div>
 				<div class="col s12 l6">
 					<p><span class="eo">ne gravas</span> : ça n'a pas d'importance, peu importe</p>
 					<p><span class="eo">ni</span> : nous</p>
-					<p><span class="eo">nia</span> : notre</p>
+					<p class="sekva"><span class="eo">nia</span> : notre</p>
 					<p><span class="eo">pardoni</span> : pardonner</p>
 					<p><span class="eo">permesi</span> : permettre</p>
 					<p><span class="eo">pli</span> : plus (en plus grande quantité)</p>
 					<p><span class="eo">povi</span> : pouvoir, être capable de</p>
 					<p><span class="eo">preferi</span> : préférer</p>
 					<p><span class="eo">pri</span> : à propos de</p>
-					<p><span class="eo">saluti</span> : saluer<br>
-						<span class="eo tab">salutis</span> : <i>voir <b>-is</b> dans la partie <i>klarigoj</i></i></p>
+					<p><span class="eo">saluti</span> : saluer</p>
+					<p class="sekva"><span class="eo tab">salutis</span> : <i>voir <b>-is</b> dans la partie <i>klarigoj</i></i></p>
 					<p><span class="eo">simpla</span> : simple</p>
 					<p><span class="eo">spiono</span> : espion</p>
 					<p><span class="eo">sur</span> : sur</p>
 					<p><span class="eo">tablo</span> : table</p>
 					<p><span class="eo">tago</span> : jour</p>
 					<p><span class="eo">tamen</span> : néanmoins, toutefois, quand même, cependant</p>
-					<p><span class="eo">tio</span> : cela, ça, cette chose-là, ce<br>
-						<span class="eo">tio estas simpla</span> : c'est simple</p>
+					<p><span class="eo">tio</span> : cela, ça, cette chose-là, ce</p>
+					<p class="sekva"><span class="eo">tio estas simpla</span> : c'est simple</p>
 					<p><span class="eo">tuj</span> : immédiatement, sur le champ</p>
 					<p><span class="eo">via</span> : votre</p>
 					<p><span class="eo">vizaĝo</span> : face, visage</p>

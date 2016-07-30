@@ -96,6 +96,37 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">aviadi</span> : voler (en avion)</p>
+					<p class="sekva"><span class="eo">aviadilo</span> : avion</p>
+					<p><span class="eo">danci</span> : danser</p>
+					<p><span class="eo">familio</span> : famille</p>
+					<p><span class="eo">gardostari</span> : monter la garde</p>
+					<p><span class="eo">hodiaŭ</span> : aujourd'hui</p>
+					<p><span class="eo">kosti</span> : coûter</p>
+					<p><span class="eo">maro</span> : mer</p>
+					<p><span class="eo">morgaŭ</span> : demain</p>
+					<p><span class="eo">multekosta</span> : cher, chère</p>
+					<p><span class="eo">pagi</span> : payer</p>
+					<p><span class="eo">parto</span> : partie</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">prepari</span> : préparer</p>
+					<p><span class="eo">rimedo</span> : moyen, ressource, remède</p>
+					<p><span class="eo">supre</span> : en-haut</p>
+					<p class="sekva">→ <span class="eo">malsupre</span> : en-bas</p>
+					<p class="sekva">→ <span class="eo">supren</span> : vers le haut (direction)</p>
+					<p class="sekva">→ <span class="eo">malsupren</span> : vers le bas (direction)</p>
+					<p><span class="eo">ŝipo</span> : bateau</p>
+					<p><span class="eo">temperaturo</span> : température</p>
+					<p><span class="eo">tendo</span> : tente</p>
+					<p><span class="eo">tero</span> : terre, sol</p>
+					<p><span class="eo">vetero</span> : temps (météo)</p>
+					<p><span class="eo">vojaĝi</span> : voyager</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

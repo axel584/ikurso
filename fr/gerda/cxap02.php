@@ -124,85 +124,86 @@ include "gerdakapo.inc.php";
 			<div class="vortlisto row">
 				<div class="col s12 l6">
 					<p><span class="eo">agi</span> : agir</p>
-					<p><span class="eo">alia</span> : autre  [<i>a-<b>li</b>-a</i>]</p>
+					<p><span class="eo">alia</span> : autre <span class="eta">[<i>a-<b>li</b>-a</i>]</span></p>
 					<p><span class="eo">alparoli</span> : adresser la parole à</p>
-					<p><span class="eo">bona</span> : bon(ne)<br>
-						<span class="eo">bone</span> : bien</p>
-					<p><span class="eo">certa</span> : certain(e)  [<i><b>tsèr</b>-ta</i>]<br>
-						<span class="eo">certe</span> : certainement</p>
-					<p><span class="eo">ĉu</span> : est-ce que…, si (indique l'interrogation)  [<i><b>tchou</b></i>]<br>
-						<div class="tab"><span class="eo">li venas</span> : il vient<br>→ <span class="eo">ĉu li venas?</span> : vient-il ?<br>
-						<span class="eo">vi scias</span> : tu sais<br>→ <span class="eo">ĉu vi scias</span> : est-ce que tu sais ?<br>
-						<span class="eo">ĉu li venas</span> : vient-il ?<br>
-						→ <span class="eo">rigardu, ĉu li venas</span> : regarde s'il vient<br>
-						<span class="eo">ĉu li sidas?</span> : est-il assis ?<br>→ <span class="eo">mi ne scias, ĉu li sidas</span> : je ne sais pas s'il est assis</div></p>
-					<p><span class="eo">diable !</span> : diable !, diantre !<br>[<i>di-<b>a</b>-blè (trois syllabes !)</i>]</p>
-					<p><span class="eo">diablo</span> : diable</p>
+					<p><span class="eo">bona</span> : bon(ne)</p>
+					<p class="sekva"><span class="eo">bone</span> : bien</p>
+					<p><span class="eo">certa</span> : certain(e) <span class="eta">[<i><b>tsèr</b>-ta</i>]</span></p>
+					<p class="sekva"><span class="eo">certe</span> : certainement</p>
+					<p><span class="eo">ĉu</span> : est-ce que…, si (indique l'interrogation) <span class="eta">[<i><b>tchou</b></i>]</span></p>
+					<p class="sekva"><span class="eo tab">li venas</span> : il vient</p>
+					<p class="sekva"><span class="tab" />→ <span class="eo">ĉu li venas?</span> : vient-il ?</p>
+					<p class="sekva"><span class="eo tab">vi scias</span> : tu sais</p>
+					<p class="sekva"><span class="tab" />→ <span class="eo">ĉu vi scias</span> : est-ce que tu sais ?</p>
+					<p class="sekva"><span class="eo tab">ĉu li venas</span> : vient-il ?</p>
+					<p class="sekva"><span class="tab" />→ <span class="eo">rigardu, ĉu li venas</span> : regarde s'il vient</p>
+					<p class="sekva"><span class="eo tab">ĉu li sidas?</span> : est-il assis ?</p>
+					<p class="sekva"><span class="tab" />→ <span class="eo">mi ne scias, ĉu li sidas</span> : je ne sais pas s'il est assis</p>
+					<p><span class="eo">diable !</span> : diable !, diantre ! <span class="eta">[<i>di-<b>a</b>-blè (trois syllabes !)</i>]</span></p>
+					<p class="sekva"><span class="eo">diablo</span> : diable</p>
 					<p><span class="eo">direkto</span> : direction</p>
-					<p><span class="eo">diskreta</span> : discret, discrète<br>
-						<span class="eo">diskrete</span> : discrètement, avec discrétion</p>
+					<p><span class="eo">diskreta</span> : discret, discrète</p>
+					<p class="sekva"><span class="eo">diskrete</span> : discrètement, avec discrétion</p>
 					<p><span class="eo">dum</span> : durant, pendant, pendant que</p>
 					<p><span class="eo">ej !</span> : hé là !</p>
 					<p><span class="eo">forta</span> : fort(e)</p>
-					<p><span class="eo">halti</span> : s'arrêter  [<i>(h expiré)</i>]</p>
-					<p><span class="eo">iĝ</span> : 	devenir [iĝas: <i><b>i</b>-djasse</i>]</p>
+					<p><span class="eo">halti</span> : s'arrêter <span class="eta">[<i>(h expiré)</i>]</span></p>
+					<p><span class="eo">iĝ</span> : 	devenir <span class="eta">[iĝas: <i><b>i</b>-djasse</i>]</span></p>
 					<p><span class="eo">ili</span> : ils</p>
 					<p><span class="eo">inter</span> : entre, parmi</p>
-					<p><span class="eo">io</span> : quelque chose  [<i>(deux syllabes !)</i>]<br>
-						<span class="eo">io mistera</span> : quelque chose de mystérieux</p>
-					<p><span class="eo">iom</span> : un peu [<i>(deux syllabes !)</i>]<br>
-						<span class="eo">iom post iom</span> : petit à petit, peu à peu</p>
+					<p><span class="eo">io</span> : quelque chose <span class="eta">[<i>(deux syllabes !)</i>]</span></p>
+					<p class="sekva"><span class="eo">io mistera</span> : quelque chose de mystérieux</p>
+					<p><span class="eo">iom</span> : un peu <span class="eta">[<i>(deux syllabes !)</i>]</span></p>
+					<p class="sekva"><span class="eo">iom post iom</span> : petit à petit, peu à peu</p>
 					<p><span class="eo">iomete</span> : un petit peu</p>
 					<p><span class="eo">junulo</span> : = jun- + -ulo</p>
 					<p><span class="eo">ke</span> : que (exemple: je sais que…, il dit que…)</p>
-					<p><span class="eo">kvazaŭ</span> : 	quasi-, comme si<br>[<i><b>kva</b>-zaou (ou bref)</i>]</p>
+					<p><span class="eo">kvazaŭ</span> : 	quasi-, comme si <span class="eta">[<i><b>kva</b>-zaou (ou bref)</i>]</span></p>
 					<p><span class="eo">lia</span> : son, sa (à lui)</p>
 					<p><span class="eo">mano</span> : main</p>
-					<p><span class="eo">mistera</span> : mystérieux, mystérieuse<br>
-						<span class="eo">mistere</span> : mystérieusement<br>
-						<span class="eo">mistero</span> : mystère</p>
-					<p><span class="eo">montri</span> : montrer, désigner</p>
+					<p><span class="eo">mistera</span> : mystérieux, mystérieuse</p>
+					<p class="sekva"><span class="eo">mistere</span> : mystérieusement</p>
+					<p class="sekva"><span class="eo">mistero</span> : mystère</p>
 				</div>
 				<div class="col s12 l6">
-					<p><span class="eo">natura</span> : naturel(le)<br>
-						<span class="eo">nature</span> : naturellement<br>
-						<span class="eo">naturo</span> : nature</p>
+					<p><span class="eo">montri</span> : montrer, désigner</p>
+					<p><span class="eo">natura</span> : naturel(le)</p>
+					<p class="sekva"><span class="eo">nature</span> : naturellement</p>
+					<p class="sekva"><span class="eo">naturo</span> : nature</p>
 					<p><span class="eo">ne plu</span> : plus maintenant, ne… plus</p>
 					<p><span class="eo">pala</span> : pâle</p>
 					<p><span class="eo">paroli</span> : parler</p>
-					<p><span class="eo">peti</span> : demander (de faire quelque chose) ; prier (de faire quelque chose)<br>
-						<span class="eta">ne pas confondre avec <span class="eo">demandi</span> (poser une question). 
+					<p><span class="eo">peti</span> : demander (de faire quelque chose) ; prier (de faire quelque chose)</p>
+					<p class="sekva"><span class="eta">ne pas confondre avec <span class="eo">demandi</span> (poser une question). 
 						On utilise <span class="eo">mi petas</span> pour dire «s'il vous/te plaît»</span></p>
 					<p><span class="eo">plu</span> : plus, plus longtemps, plus loin</p>
 					<p><span class="eo">pordo</span> : porte</p>
 					<p><span class="eo">post</span> : après</p>
-					<p><span class="eo">prava</span> : correct(e) (opinion, comportement, etc.)</p>
-					<p><span class="eo">malprava</span> : faux, erroné</p>
 					<p><span class="eo">pravi</span> : avoir raison, être correct</p>
-					<p><span class="eo">malpravi</span> : avoir tort, être faux</p>
+					<p class="sekva"><span class="eo">prava</span> : correct(e) (opinion, comportement, etc.)</p>
+					<p class="sekva"><span class="eo">malpravi</span> : avoir tort, être faux</p>
+					<p class="sekva"><span class="eo">malprava</span> : faux, erroné</p>
 					<p><span class="eo">proksima</span> : proche</p>
-					<p><span class="eo">malproksima</span> : éloigné(e)</p>
-					<p><span class="eo">proksimiĝi</span> : 	= <span class="eo">proksim</span>- + -<span class="eo">iĝ</span>- + -<span class="eo">i</span><br>s'approcher</p>
+					<p class="sekva"><span class="eo">malproksima</span> : éloigné(e)</p>
+					<p class="sekva"><span class="eo">proksimiĝi</span> = <span class="eo">proksim</span>- + -<span class="eo">iĝ</span>- + -<span class="eo">i</span> : s'approcher</p>
 					<p><span class="eo">rapida</span> : rapide, vif, vive</p>
-					<p><span class="eo">malrapida</span> : lent</p>
-					<p><span class="eo">reveni</span> : = re- + veni<br>revenir</p>
+					<p class="sekva"><span class="eo">malrapida</span> : lent</p>
+					<p><span class="eo">reveni</span> = <span class="eo">re</span>- + <span class="eo">veni</span> : revenir</p>
 					<p><span class="eo">se</span> : si (indique une condition)</p>
 					<p><span class="eo">stari</span> : se tenir debout, être debout</p>
-					<p><span class="eo">stranga</span> : bizarre [<i><b>stranne</b>-ga</i>]</p>
-					<p><span class="eo">strange</span> : bizarrement<br>
-						<div class="tab">
-							<span class="eo">li rigardas al mi strange</span> : il me regarde bizarrement<br>
-							<span class="eo">(estas) strange!</span> : (c'est) bizarre !<br>
-							<span class="eo">strangulo</span> : = <span class="eo">strang</span>– + –<span class="eo">ulo</span>
-						</div></p>
-					<p><span class="eo">ŝi</span> : 	elle [<i><b>chi</b></i>]<br>
-						<span class="eo">ŝia</span> : son, sa (à elle) [<i><b>chi</b>-a</i>]</p>
+					<p><span class="eo">stranga</span> : bizarre <span class="eta">[<i><b>stranne</b>-ga</i>]</span></p>
+					<p><span class="eo">strange</span> : bizarrement</p>
+					<p class="sekva"><span class="eo tab">li rigardas al mi strange</span> : il me regarde bizarrement</p>
+					<p class="sekva"><span class="eo tab">(estas) strange!</span> : (c'est) bizarre !</p>
+					<p class="sekva"><span class="eo tab">strangulo</span> = <span class="eo">strang</span>– + –<span class="eo">ulo</span></p>
+					<p><span class="eo">ŝi</span> : 	elle <span class="eta">[<i><b>chi</b></i>]</span></p>
+					<p class="sekva"><span class="eo">ŝia</span> : son, sa (à elle) <span class="eta">[<i><b>chi</b>-a</i>]</span></p>
 					<p><span class="eo">taso</span> : tasse</p>
 					<p><span class="eo">tre</span> : très</p>
 					<p><span class="eo">turni</span> : tourner</p>
 					<p><span class="eo">ulo</span> : type, individu</p>
 					<p><span class="eo">vidi</span> : voir</p>
-					<p><span class="eo">vin</span> : = <span class="eo">vi</span> + -<span class="eo">n</span>  [<i><b>vine</b></i>]</p>
+					<p><span class="eo">vin</span> = <span class="eo">vi</span> + -<span class="eo">n</span> <span class="eta">[<i><b>vine</b></i>]</span></p>
 					<p><span class="eo">voli</span> : vouloir</p>
 				</div>
 			</div>

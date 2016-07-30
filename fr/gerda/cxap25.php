@@ -83,6 +83,28 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">Dio</span> : Dieu</p>
+					<p><span class="eo">estimi</span> : estimer</p>
+					<p><span class="eo">farti</span> : se porter (bien ou mal)</p>
+					<p><span class="eo">insisti</span> : insister</p>
+					<p><span class="eo">inviti</span> : inviter</p>
+					<p><span class="eo">kadro</span> : cadre, structure</p>
+					<p><span class="eo">kolego</span> : collègue</p>
+					<p><span class="eo">komenti</span> : commenter</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">kurso</span> : cours (d'un professeur)</p>
+					<p><span class="eo">organizi</span> : organiser</p>
+					<p><span class="eo">paperujo</span> : malette, cartable</p>
+					<p><span class="eo">pluraj</span> : plusieurs</p>
+					<p><span class="eo">rifuzi</span> : refuser</p>
+					<p><span class="eo">stato</span> : état, condition, manière d'être, position</p>
+					<p><span class="eo">teksto</span> : texte</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

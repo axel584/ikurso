@@ -116,6 +116,56 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">antaŭ longe</span> : il y a longtemps</p>
+					<p><span class="eo">aparato</span> : appareil</p>
+					<p><span class="eo">baki</span> : cuire dans un four</p>
+					<p><span class="eo">bezoni</span> : avoir besoin</p>
+					<p><span class="eo">brakhorloĝo</span> : montre(-bracelet)</p>
+					<p><span class="eo">dokumento</span> : document</p>
+					<p><span class="eo">elporti</span> : supporter, endurer</p>
+					<p><span class="eo">filo</span> : fils</p>
+					<p class="sekva"><span class="eo">filino</span> : fille</p>
+					<p><span class="eo">frukto</span> : fruit</p>
+					<p><span class="eo">hejmo</span> : maison, domicile (chez soi)</p>
+					<p class="sekva"><span class="eo">hejme</span> : à la maison</p>
+					<p class="sekva"><span class="eo">hejmen</span> : à la maison (en y allant)</p>
+					<p><span class="eo">horloĝo</span> : horloge</p>
+					<p><span class="eo">ĵeti</span> : jeter</p>
+					<p><span class="eo">kasedo</span> : cassette</p>
+					<p><span class="eo">legi</span> : lire</p>
+					<p><span class="eo">letero</span> : lettre</p>
+					<p><span class="eo">obei</span> : obéir</p>
+					<p><span class="eo">obstina</span> : obstiné</p>
+					<p><span class="eo">oranĝo</span> : orange</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">pasi</span> : passer (quelque part), s'écouler</p>
+					<p class="sekva tab"><span class="eo">li pasas sur la strato</span> : il passe dans la rue</p>
+					<p class="sekva tab"><span class="eo">kiom da tempo pasis!</span>&nbsp;: comme le temps a passé !</p>
+					<p><span class="eo">pasigi</span> : faire passer, passer (du temps)</p>
+					<p class="sekva tab"><span class="eo">kiom da tempo mi pasigis ĉe ŝi?</span>&nbsp;: combien de temps ai-je passé chez elle&nbsp;?</p>
+					<p><span class="eo">plumo</span> : stylo, plume</p>
+					<p><span class="eo">pomo</span> : pomme</p>
+					<p><span class="eo">preni</span> : prendre</p>
+					<p><span class="eo">principo</span> : principe</p>
+					<p><span class="eo">promesi</span> : promettre</p>
+					<p><span class="eo">radio</span> : radio</p>
+					<p><span class="eo">sata</span> : rassasié</p>
+					<p class="sekva"><span class="eo">malsata</span> : affamé, qui a faim</p>
+					<p class="sekva"><span class="eo">malsati</span> : être affamé, avoir faim</p>
+					<p><span class="eo">serpento</span> : serpent</p>
+					<p><span class="eo">skribi</span> : écrire</p>
+					<p><span class="eo">suferi</span> : souffrir</p>
+					<p><span class="eo">ŝanĝi</span> : changer (quelque chose)</p>
+					<p class="sekva"><span class="eo">ŝanĝiĝi</span> : changer (devenir différent)</p>
+					<p><span class="eo">ŝiri</span> : déchirer, arracher</p>
+					<p><span class="eo">terura</span> : terrible, horrible</p>
+					<p><span class="eo">tial</span> : c'est pourquoi, à cause de cela</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

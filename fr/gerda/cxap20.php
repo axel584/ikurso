@@ -119,6 +119,46 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">amatoro</span> : amateur</p>
+					<p><span class="eo">aŭskulti</span> : écouter</p>
+					<p><span class="eo">bonvena</span> : bienvenu(e)</p>
+					<p><span class="eo">celo</span> : but, objectif</p>
+					<p><span class="eo">ĉiu</span> : tout, chaque&nbsp;; tout le monde</p>
+					<p><span class="eo">digna</span> : digne, vénérable</p>
+					<p><span class="eo">diversa</span> : varié(e), divers(e)</p>
+					<p><span class="eo">dubi</span> : douter, avoir des doutes</p>
+					<p><span class="eo">emo</span> : penchant, goût, inclination</p>
+					<p><span class="eo">esplori</span> : examiner, étudier</p>
+					<p class="sekva"><span class="eo">esploro</span> : recherche, investigation</p>
+					<p><span class="eo">kisi</span> : embrasser</p>
+					<p><span class="eo">kondiĉo</span> : condition</p>
+					<p><span class="eo">kovri</span> : couvrir</p>
+					<p><span class="eo">malkovri</span> : découvrir (tous les sens)</p>
+					<p><span class="eo">necesa</span> : nécessaire</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">nigra</span> : noir(e)</p>
+					<p><span class="eo">onklo</span> : oncle</p>
+					<p class="sekva"><span class="eo">onklino</span> : tante</p>
+					<p><span class="eo">prezenti</span> : présenter, introduire</p>
+					<p><span class="eo">salti</span> : sauter</p>
+					<p><span class="eo">savi</span> : sauver</p>
+					<p><span class="eo">seruro</span> : serrure</p>
+					<p><span class="eo">ses</span> : six</p>
+					<p><span class="eo">streĉi</span> : tendre, serrer</p>
+					<p><span class="eo">sub</span> : sous</p>
+					<p><span class="eo">teni</span> : tenir</p>
+					<p class="sekva"><span class="eo">sin teni</span> : se tenir, se comporter</p>
+					<p class="sekva"><span class="eo">sinteno</span> : attitude, comportement</p>
+					<p><span class="eo">traduki</span> : traduire</p>
+					<p><span class="eo">trans</span> : au-delà de, par-delà, par-dessus</p>
+					<p><span class="eo">verda</span> : vert(e)</p>
+					<p><span class="eo">viziti</span> : visiter</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

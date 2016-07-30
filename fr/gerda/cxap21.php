@@ -91,6 +91,61 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">adiaŭ</span> : adieu ! <span class="eta">[<i>a-<b>di</b>-aou</i>]</span></p>
+					<p><span class="eo">alpreni</span> : prendre</p>
+					<p><span class="eo">aresti</span> : arrêter</p>
+					<p><span class="eo">bando</span> : bande, gang</p>
+					<p><span class="eo">bileto</span> : billet, ticket</p>
+					<p><span class="eo">botelo</span> : bouteille</p>
+					<p><span class="eo">Budho</span> : Bouddha</p>
+					<p><span class="eo">detalo</span> : détail</p>
+					<p><span class="eo">difini</span> : définir, déterminer</p>
+					<p><span class="eo">elito</span> : élite</p>
+					<p><span class="eo">enamiĝi</span> : tomber amoureux (<span class="eo">en</span> + <span class="eo">am</span> + <span class="eo">iĝi</span>)</p>
+					<p><span class="eo">filozofio</span> : philosophie</p>
+					<p><span class="eo">firma</span> : ferme, qui tient bien</p>
+					<p><span class="eo">flughaveno</span> : aéroport</p>
+					<p><span class="eo">foto</span> : photo</p>
+					<p><span class="eo">harmonio</span> : harmonie</p>
+					<p><span class="eo">haveno</span> : port</p>
+					<p><span class="eo">indiki</span> : indiquer</p>
+					<p><span class="eo">insulo</span> : île</p>
+					<p><span class="eo">islamo</span> : Islam</p>
+					<p><span class="eo">jen… jen…</span> : tantôt… tantôt…, des fois… des fois…</p>
+					<p><span class="eo">judo</span> : juif (nom)</p>
+					<p><span class="eo">katoliko</span> : catholique (nom)</p>
+					<p><span class="eo">kaverno</span> : caverne</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">kolbaso</span> : saucisse, saucisson</p>
+					<p><span class="eo">konstante</span> : constamment</p>
+					<p><span class="eo">kopio</span> : copie</p>
+					<p><span class="eo">lakto</span> : lait</p>
+					<p><span class="eo">lando</span> : pays</p>
+					<p><span class="eo">libro</span> : livre</p>
+					<p><span class="eo">lui</span> : louer, prendre en location</p>
+					<p><span class="eo">membro</span> : membre</p>
+					<p><span class="eo">morala</span> : moral(e) </p>
+					<p><span class="eo">naski</span> : mettre au monde, enfanter</p>
+					<p class="sekva"><span class="eo">naskiĝi</span> : naître</p>
+					<p><span class="eo">ortodoksa</span> : orthodoxe (adj.)</p>
+					<p><span class="eo">persekuti</span> : persécuter</p>
+					<p><span class="eo">popolo</span> : peuple</p>
+					<p><span class="eo">protestanto</span> : protestant (nom)</p>
+					<p><span class="eo">regiono</span> : région</p>
+					<p><span class="eo">religio</span> : religion</p>
+					<p><span class="eo">signalo</span> : signal</p>
+					<p><span class="eo">sindonema</span> : dévoué(e) (= <span class="eo">ema doni sin</span>)</p>
+					<p><span class="eo">societo</span> : association, société</p>
+					<p><span class="eo">ŝtato</span> : état (peuple ou pays organisé politiquement)</p>
+					<p><span class="eo">trezoro</span> : trésor</p>
+					<p><span class="eo">valori</span> : valoir, avoir une (certaine) valeur</p>
+					<p class="sekva"><span class="eo">valoro</span> : valeur</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

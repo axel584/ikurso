@@ -92,6 +92,69 @@ include "gerdakapo.inc.php";
 			</section>
 
 		<?php 
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">afero</span> : affaire, sujet, chose</p>
+					<p><span class="eo">aĵo</span> : chose, objet (synonyme de <span class="eo">afero</span>, mais plus concret) <span class="eta">[<i><b>a</b>-jo</i>]</span></p>
+					<p><span class="eo">antaŭ</span> : avant, en avant de, devant (prép.) <span class="eta">[<i><b>anne</b>-taou</i>]</span></p>
+					<p class="sekva"><span class="eo">antaŭe</span> : avant, auparavant (adv.) <span class="eta">[<i>anne-<b>ta</b>-ouè</i>]</span></p>
+					<p><span class="eo">arto</span> : art</p>
+					<p><span class="eo">deziri</span> : désirer</p>
+					<p><span class="eo">do</span> : donc</p>
+					<p><span class="eo">ekzisti</span> : exister</p>
+					<p><span class="eo">fako</span> : spécialité, discipline, département (sens propre&nbsp;: compartiment, case)</p>
+					<p><span class="eo">ideo</span> : idée</p>
+					<p><span class="eo">instrui</span> : enseigner</p>
+					<p><span class="eo">kiam</span> : quand</p>
+					<p><span class="eo">komuniki</span> : communiquer</p>
+					<p><span class="eo">koni</span> : connaître</p>
+					<p><span class="eo">konsideri</span> : considérer</p>
+					<p><span class="eo">konsenti</span> : consentir, être en accord</p>
+					<p><span class="eo">kripta</span> : secret, volontairement inintelligible</p>
+					<p><span class="eo">kriptografio</span> : cryptographie</p>
+					<p><span class="eo">lerni</span> : apprendre</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">lingvo</span> : langue</p>
+					<p><span class="eo">lingvistiko</span> : linguistique</p>
+					<p><span class="eo">malpli</span> : moins</p>
+					<p><span class="eo">mesaĝo</span> : message</p>
+					<p><span class="eo">neniam</span> : jamais</p>
+					<p><span class="eo">nomo</span> : nom</p>
+					<p><span class="eo">oni</span> : on</p>
+					<p><span class="eo">por</span> : pour, dans le but de</p>
+					<p><span class="eo">profesoro</span> : professeur</p>
+					<p><span class="eo">respondi</span> : répondre</p>
+					<p><span class="eo">rilati</span> : avoir un rapport, une relation avec</p>
+					<p class="sekva"><span class="eo">rilato</span> : rapport, lien, relation</p>
+					<p><span class="eo">scienco</span> : science</p>
+					<p><span class="eo">sekreta</span> : secret (adj.), secrète</p>
+					<p class="sekva"><span class="eo">sekreto</span> : secret (nom)</p>
+					<p><span class="eo">temas pri</span> : (il) s'agit de</p>
+					<p class="sekva"><span class="eo">temas pri vi</span> : il s'agit de vous</p>
+					<p class="sekva"><span class="eo">la mesaĝo temas pri vi</span> : le message parle de vous</p>
+					<p><span class="eo">temo</span> : sujet, thème</p>
+					<p><span class="eo">voli diri</span> : vouloir dire, signifier</p>
+					<p><span class="eo">ne tute</span> : pas tout à fait</p>
+					<p class="sekva"><span class="eo">tute ne</span> : pas du tout</p>
+				</div>
+			</div>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
+		<?php 
 		} // fin section 5
 		?>
 

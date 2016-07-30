@@ -113,6 +113,55 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">afabla</span> : affable, gentil(le)</p>
+					<p><span class="eo">akcepti</span> : accepter</p>
+					<p><span class="eo">aldoni</span> : ajouter</p>
+					<p><span class="eo">aranĝi</span> : arranger, combiner, agencer</p>
+					<p class="sekva"><span class="eo">aranĝo</span> : combinaison, arrangement</p>
+					<p><span class="eo">banala</span> : banal(e)</p>
+					<p><span class="eo">bonvoli</span> : bien vouloir</p>
+					<p><span class="eo">ĉiam</span> : toujours</p>
+					<p><span class="eo">dankon</span> : merci</p>
+					<p><span class="eo">ne dankinde</span> : pas de quoi</p>
+					<p><span class="eo">entute</span> : en tout, au total</p>
+					<p class="sekva"><span clas="eo">ni rigardu, ĉu la aŭto entute funkcias</span> : 
+						regardons si au total la voiture fonctionne</p>
+					<p><span class="eo">fermi</span> : fermer</p>
+					<p class="sekva"><span class="eo">→ malfermi</span> : ouvrir</p>
+					<p><span class="eo">fini</span> : finir</p>
+					<p><span class="eo">funkcii</span> : fonctionner, marcher</p>
+					<p><span class="eo">ĝeni</span> : gêner, inconforter</p>
+					<p><span class="eo">igi</span> : rendre, causer, entraîner (quelqu'un à faire quelque chose quelque chose à 
+						se faire d'une certaine façon), faire (faire)</p>
+					<p><span class="eo">kiel eble plej</span> : autant que possible</p>
+					<p><span class="eo">konsentite</span> : OK, d'accord</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">kontenta</span> : content(e), satisfait(e)</p>
+					<p><span class="eo">maniero</span> : manière</p>
+					<p><span class="eo">manki</span> : manquer de</p>
+					<p><span class="eo">mekaniko</span> : mécanique, mécanisme</p>
+					<p><span class="eo">miksi</span> : mélanger</p>
+					<p><span class="eo">miri</span> : s'étonner</p>
+					<p><span class="eo">motoro</span> : moteur</p>
+					<p><span class="eo">objekto</span> : objet, chose</p>
+					<p><span class="eo">oportuna</span> : pratique, adéquat</p>
+					<p><span class="eo">ordo</span> : ordre</p>
+					<p><span class="eo">panei</span> : être en panne</p>
+					<p class="sekva"><span class="eo">paneo</span> : panne</p>
+					<p><span class="eo">ripari</span> : réparer</p>
+					<p><span class="eo">ripeti</span> : répéter</p>
+					<p><span class="eo">saĝa</span> : sage</p>
+					<p><span class="eo">seka</span> : sec</p>
+					<p><span class="eo">tia</span> : tel(le), telle sorte de</p>
+					<p><span class="eo">troviĝi</span> : se trouver</p>
+					<p><span class="eo">turni sin al</span> : s'adresser à, parler à, demander à, contacter</p>
+					<p><span class="eo">veturi</span> : aller (en utilisant un véhicule)</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

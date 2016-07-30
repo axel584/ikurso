@@ -100,6 +100,49 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<div class="vortlisto row">
+				<div class="col s12 l6">
+					<p><span class="eo">apliki</span> : appliquer (sur quelque chose ou à quelque chose)</p>
+					<p><span class="eo">biblioteko</span> : bibliothèque</p>
+					<p><span class="eo">ĉesi</span> : cesser, s'arrêter de faire quelque chose</p>
+					<p><span class="eo">defendi</span> : défendre, protéger</p>
+					<p><span class="eo">fundo</span> : fond </p>
+					<p><span class="eo">ĝenerala</span> : général(e)</p>
+					<p><span class="eo">ĝisfunde</span> : parfaitement, totalement (litt.: jusqu'au fond)</p>
+					<p><span class="eo">hazardo</span> : hasard</p>
+					<p class="sekva"><span class="eo">hazarde</span> : par hasard</p>
+					<p><span class="eo">hospitalo</span> : hôpital</p>
+					<p><span class="eo">influo</span> : influence</p>
+					<p><span class="eo">injekti</span> : injecter</p>
+					<p><span class="eo">institucio</span> : institution</p>
+					<p><span class="eo">justa</span> : juste, équitable</p>
+					<p><span class="eo">kirurgio</span> : chirurgie (science, pratique)</p>
+					<p><span class="eo">koncerna</span> : concerné(e)</p>
+					<p><span class="eo">konsisti</span> : consister (en), se composer (de)</p>
+					<p><span class="eo">konstati</span> : constater (que)</p>
+				</div>
+				<div class="col s12 l6">
+					<p><span class="eo">materio</span> : matière</p>
+					<p><span class="eo">metodo</span> : méthode</p>
+					<p><span class="eo">monato</span> : mois</p>
+					<p><span class="eo">muzeo</span> : musée</p>
+					<p><span class="eo">narkoanalizo</span> : narco-analyse</p>
+					<p><span class="eo">operacio</span> : operation</p>
+					<p><span class="eo">paĝo</span> : page</p>
+					<p><span class="eo">praktiko</span> : pratique</p>
+					<p><span class="eo">privata</span> : privé(e)</p>
+					<p><span class="eo">proksimume</span> : approximativement</p>
+					<p><span class="eo">renkonti</span> : rencontrer (quelqu'un)</p>
+					<p class="sekva"><span class="eo">renkontiĝi</span> : se rencontrer, se réunir</p>
+					<p><span class="eo">respekti</span> : respecter</p>
+					<p><span class="eo">sankta</span> : saint(e), sacré(e)</p>
+					<p><span class="eo">solena</span> : solennel(le)</p>
+					<p><span class="eo">spirito</span> : esprit</p>
+					<p><span class="eo">studi</span> : étudier</p>
+					<p><span class="eo">Vatikano</span> : Vatican</p>
+				</div>
+			</div>
+
 		<?php 
 		} // fin section 3
 		if ($section=="4") {

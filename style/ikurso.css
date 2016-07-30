@@ -397,7 +397,10 @@ a[type="audio/mp3"] i.material-icons {
 .klarigo p.parto {
 	margin-left: 0;
 }
-
+p.sekva {
+	margin-top: 0;
+	padding-top: 0;
+}
 /********** fin de la leçon *******/
 .notoj {
 	font-size: 90%;

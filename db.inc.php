@@ -320,7 +320,7 @@ function getRedirectionParDroits($persono_id) {
         return "miajlernantoj.php";
     }
     if ($persono['rajtoj']=='P') {
-        return "fr/cge/intro.php"; // pour les nouveaux élèves retourne sur la première page du cours ?
+        return "personinformoj.php"; // pour les nouveaux élèves va sur leur espace personnel (car les nouveaux élèves peuvent vouloir aller sur gerda)
     }
     if ($persono['rajtoj']=='S') { // nouveaux élèves ou élève qui suivent déjà un cours
         $demando = "select stato,nunleciono,kurso,nunleciono from nuna_kurso where studanto=".$persono['id']." order by CASE stato WHEN 'N' THEN 1 WHEN 'K' THEN 2 WHEN 'H' THEN 3 WHEN 'F' THEN 4 ELSE 5 END";

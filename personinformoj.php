@@ -105,7 +105,10 @@ if (isset($_GET["aktivigo"])) {
 			<p><a href="<?php echo $vojo;?>miajlernantoj.php" class="btn waves-effect waves-light" >Gérer mes élèves</a></p>
 		<!-- cas des élèves qui n'ont pas encore commencé le cours -->
 		<?php } else { ?>
-			<p><a href="<?php echo $vojo;?>fr/cge/intro.php" class="btn waves-effect waves-light" >Commencer le cours en 10 leçons</a></p>
+			<p>Si vous n'avez jamais suivi de cours d'espéranto,
+			<a href="<?php echo $vojo;?>fr/cge/intro.php" class="btn waves-effect waves-light" >Commencer le cours en 10 leçons</a></p>
+			<p>mais si vous avez déjà suivi quelques bases et que vous voulez approfondir,
+			<a href="<?php echo $vojo;?>fr/gerda/index.php" class="btn waves-effect waves-light" >Commencer le cours Gerda Malaperis</a></p>
 		<?php } ?>
 
 

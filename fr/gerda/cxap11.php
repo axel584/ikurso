@@ -169,8 +169,40 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
+					<input type="hidden" name="013_cxap11.0" value="Demandoj">
+					<div class="tasko">
+					<?php $demandoj=array (
+						1 => "De kiu Linda petas helpon?",
+						2 => "Ĉu la juna blonda viro estas kontenta?",
+						3 => "Kien la blondulo volas veturi?",
+						4 => "Kion volas Linda de li?",
+						5 => "Ĉu la blondulo konsentas?",
+						6 => "Pri kio Linda parolas dum la veturo?",
+						7 => "Ĉu la blondulo estas parolema?"
+					);
+					ekzerco(True, 2);
+					?>
+					</div>
+			</fieldset>
+		
+			<fieldset class="ekzerco">
+				<legend>Plenigu per la ĝusta formo: <b>iĝ</b> aŭ <b>ig</b>.</legend>
+				<input type="hidden" name="013_cxap11.1" value="Plenigu per la ĝusta formo: 'iĝ' aŭ 'ig'.">
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>Tio facil____as la laboron. La laboro facil____as.</p>
+					<p>→ Tio facil<b>ig</b>as la laboron. La laboro facil<b>iĝ</b>as.</p>
+				</div>
+					
 				<div class="tasko">
+					
+				<?php $demandoj=array(
+					1 => "Mi volis aspekti pli bele ol normale. Mi [2]is min pli bela antaŭ la promenado.<br>Antaŭ la promenado, mi [2]is pli bela. Penjo ridis pri mi, ĉar mi plibel[2]is min. Ni veturis en la urbon.<br>Vetur[2]is nin Penjo. Ŝi [2]is mia amiko tuj post mia unua tago en la laborejo.<br>Antaŭ la forveturo ŝi trovis min en mia ĉambro, kie mi plibel[2]is.",
+					2 => "La urbo trov[2]as tro malproksime de nia laborejo por iri piede.<br>Penjo ne havas aŭton, sed ŝi sukcesis hav[2]i al si la aŭton de Bob.",
+					3 => "Post longa promenado en la urbo ni volis eksidi en trinkejo.<br>Tuj post kiam ni sid[2]is ĉe tablo, iu ulo turnis sin. Li turn[2]is al ni kaj ekrigardis nin.<br>Ni eksentis nin malbonaj. Lia rigardado malbonsent[2]is nin. Ni devis agi.<br>Ni ne plu restis sidaj, ni restar[2]is, tiel dev[2]ante lin forturni sin.<br>Li komprenis, ke li ĝenis nin ade rigardante al ni.<br>Ni kompren[2]is al li, ke rigardado povas esti maldiskreta.",
+					4 => "Mi lernas multon en la urbo. Ĝi lern[2]as min pri la vivo.<br>Multhoma kunvivado lern[2]as kvazaŭ aŭtomate en la urbo."
+				);
+				plenigEkzerco("U");
 				?>
 				</div>
 			</fieldset>

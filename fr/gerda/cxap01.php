@@ -284,7 +284,7 @@ include "gerdakapo.inc.php";
 			</p>
 
 			<fieldset class="ekzerco">
-				<legend><b>Demandoj.</b> </legend>
+				<legend>Demandoj</legend>
 				<input type="hidden" name="013_cxap01.0" value="Demandoj">
 
 				<div class="tasko">
@@ -301,11 +301,13 @@ include "gerdakapo.inc.php";
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend><b>Demandoj.</b> Formu frazojn.</legend>
+				<legend>Demandoj: Formu frazojn.</legend>
 				<input type="hidden" name="013_cxap01.1" value="1. Formu frazojn.">
-				<p><em>{ -a al -as grand- ir- mi -o spegul- } ---> Mi iras al granda spegulo.</em></p>
-				<p><em>{ -as -as est- kiu li mi ne sci- } ---> Mi ne scias, kiu li estas.</em></p>
-				<p>-- Jen:</p>
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>{ -a al -as grand- ir- mi -o spegul- } → Mi iras al granda spegulo.</p>
+					<p>{ -as -as est- kiu li mi ne sci- } → Mi ne scias, kiu li estas.</p>
+				</div>
 				<div class="tasko">
 				<?php $demandoj=array (
 					6 => "{ al rigard- mi -u }",
@@ -323,10 +325,13 @@ include "gerdakapo.inc.php";
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend>Modifu la frazojn.</legend>
+				<legend><b>Modifu la frazojn.</b></legend>
 				
 				<input type="hidden" name="013_cxap01.2" value="2. Modifu la frazojn.">
-				<p><em>Vi laboras malmulte ---> Laboru multe !</em></p>
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>Vi laboras malmulte → Laboru multe!</p>
+				</div>
 				<div class="tasko">
 				<?php $demandoj=array (
 					14 => "Vi laboras multe",
@@ -361,7 +366,7 @@ include "gerdakapo.inc.php";
 			sola. Venu kun mi. Kun mi la mondo estas bela kaj granda.»
 			Sed ne venas tiu knabo, kaj en la tuta mondo nenio okazas.
 			Nenio okazas al mi, nenio nova okazas, nenio speciala
-			okazas. Nur laboro, laboro, laboro... Estas tro.»</p>
+			okazas. Nur laboro, laboro, laboro… Estas tro.»</p>
 			
 			<p>«Mi sidas tute sola. Mi rigardas al vi, spegulo. Kaj
 			en la spegulo estas nur Izabela, la plej malbela knabino en

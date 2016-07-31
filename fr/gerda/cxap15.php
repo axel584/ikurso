@@ -144,9 +144,70 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
+				<input type="hidden" name="013_cxap15.0" value="Demandoj">
 				<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Kun kiu parolas Tom?",
+					2 => "Ĉu ŝi bone dormis?",
+					3 => "Ĉu Tom raportas unue?",
+					4 => "Ĉu ŝi sukcesis paroligi la blondulon en la aŭto?",
+					5 => "Kie ŝi poste vidis lin?",
+					6 => "Kion la blondulo aĉetis?",
+					7 => "Kial Linda ofte irus al la vendejo por multon aĉeti?",
+					8 => "Kial ŝi tamen ne faras tion?",
+					9 => "Kion trinkis Linda?"
+					);
+				ekzerco(True, 2);
 				?>
+				</div>
+			</fieldset>
+
+			<fieldset class="ekzerco">
+				<legend>Trovu la vortojn.</legend>
+				<input type="hidden" name="013_cxap15.1" value="Trovu la vortojn.">
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>ne alia → ne alia : <u>sama</u></p>
+				</div>
+
+				<div class="tasko">
+					<p class="primaire-texte texte-moyen">La vortoj estas:</p>
+					<p class="primaire-texte texte-moyen">ambaŭ, aŭto, aŭtomato, baldaŭ, bruo, ĉambro, diskuti, dormi, ekster, el, flegi, helpi, informi, kapo, konscia, kuraci, nokto, observi, opinio, perdi, piedo, resti, risko, ruĝa, sama, sekvi, semajno, vespero, vivi, voki</p>
+
+					<?php $demandoj=array (
+						10 => "al ekster : [15].",
+						11 => "atente rigardi : [15].",
+						12 => "ĉiuj el la du : [15].",
+						13 => "danĝero, necerteco : [15].",
+						14 => "daŭre esti en la sama loko : [15].",
+						15 => "ekmalhavi : [15].",
+						16 => "esti senkonscia, sed sana : [15].",
+						17 => "faciligi la agadon : [15].",
+						18 => "fina parto de kruro : [15].",
+						19 => "interparoli pri io : [15].",
+						20 => "io, kio funkcias per si mem : [15].",
+						21 => "iri malantaŭ io : [15].",
+						22 => "laŭte peti, ke iu venu : [15].",
+						23 => "malbela aŭdaĵo : [15].",
+						24 => "maltago : [15].",
+						25 => "motora veturilo : [15].",
+						26 => "ne alia : [15].",
+						27 => "ne en : [15].",
+						28 => "ne esti mortinta : [15].",
+						29 => "noktiĝo : [15].",
+						30 => "parto de domo : [15].",
+						31 => "parto de la korpo, kie estas la okuloj : [15].",
+						32 => "pensanta : [15].",
+						33 => "post mallonga tempo : [15].",
+						34 => "resanigi : [15].",
+						35 => "doni sciigon : [15].",
+						36 => "sep tagoj : [15].",
+						37 => "tio, kion oni pensas pri iu temo : [15].",
+						38 => "tomatokolora : [15].",
+						39 => "zorgi pri malsanulo : [15]."
+						);
+						plenigEkzerco("U");
+						?>
 				</div>
 			</fieldset>
 

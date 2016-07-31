@@ -285,9 +285,68 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			include "lasusono.inc.php";
 		?>
 
-			<h4>xxxx</h4>
+			<h3>Iru kiel vi volas</h3>
+			<p>Oni nomas tiun restoracion «memserva restoracio», ĉar en ĝi oni
+			servas sin mem. Ne estas ulo, kiu venas al via tablo kun via tomato
+			aŭ kafo. Vi devas servi vin mem.</p>
+			
+			<p>Ĉu vi ne volas iri al memserva restoracio ? Vi preferas, ke oni servu
+			vin. Nu, bone. Kiel vi volas. Ĉiaokaze, mi ne iros kun vi. Vi devos
+			iri sola. Mi devas resti ĉi tie. Mi laboros en mia ĉambro.</p>
+			
+			<p>Kion ? Ĉu vi timas perdiĝi ? Ne timu. Miaopinie, vi ne riskas
+			perdiĝi. Estas tre simple iri tien. Nur sekvu tion, kion Tom diris al
+			vi. Tiel vi ne perdiĝos.</p>
+			
+			<p>Se vi ne volas iri al memserva restoracio, iru do al alia restoracio.
+			Ne gravas al mi. Same pri tio, ĉu vi iru buse, aŭte aŭ piede. Busi
+			eble estas pli bone ol piediri, almenaŭ rilate al la piedoj, sed la
+			buson vi devas atendi. Okazas, ke oni atendas longe. Aŭto estas pli
+			rapida ol buso, kaj vi povas foriri per ĝi, kiam vi volas, sed ĉu vi
+			havas aŭton ?</p>
+			
+			<p>Vi baldaŭ havos aŭton, ĉu ? Nu, bone, sed «baldaŭ» ne estas «nun».
+			Se vi deziras iri al la urbo nun, tre gravas, ĉu vi havas aŭton nun.
+			Ke vi havos ĝin baldaŭ, tio estas grava iurilate, mi konsentas, sed
+			tio ne helpas vin nun, eĉ iomete, por iri al la urbo, ĉu ? Por aŭti
+			ĝis la urbo, oni devas havi aŭton.</p>
+			
+			<p>Sed fakte vi povas iri tien promene. Piediri estas bone por la koro.
+			Kaj ankaŭ por la kapo, cetere. Kiam venas nokto, la urbo iĝas tiel
+			bela ! Kiam oni subite ekvidas la tutan urbon de malproksime, kaj
+			noktiĝas, oni ekhavas senton pri io mistera, io ekstermonda, eĉ
+			supermonda.</p>
+			
+			<p>Ne estas tro longe ĝis la urbo. Kompreneble, vi ne estos tie tuj, vi
+			devos tamen promeni iom da tempo. Sed ne estas tro longe. Ne timu, ke
+			viaj kruroj tro laboros kaj perdos sian tutan forton.</p>
+			
+			<p>Sed mi deziris diskuti kun vi ankaŭ pri io tute alia. Ĉu vi havas
+			informojn pri Ana ? Ŝi kuŝis en sia ĉambro kaj ne sentis sin tre
+			bone. Tom iris al ŝi kun sia kuracisto, sed ŝi ne rigardas tiun
+			kuraciston serioza, ŝi preferas sian kuraciston, ŝi vere ne amas
+			lian. Li do forsendis sian kuraciston kaj vokis ŝian. Strange, kiam
+			ŝi vidis lian kuraciston, ŝi sentis sin malbone, sed tuj kiam ŝi
+			vidis sian kuraciston eniri en ŝian ĉambron
+			<a href='#notoj'>[1]</a>, ŝi jam sentis sin pli bone.</p>
+			
+			<p>Oni sin demandas, pri kio vere temas, ĉu ne ? Ho, ĉu vi jam foriras
+			? Do, bonan vesperon, kaj ankaŭ bonan nokton ! Ĝis revido ! Ni
+			revidos nin baldaŭ, verŝajne. Do, ĝis !</p>
+			
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Ŝi vidis sian kuraciston</span> : kiu vidis ? — ŝi. La kuraciston de
+				kiu ? — de ŝi (de tiu, kiu vidis).<br>
+				<span class="eo">Eniri en ŝian cambron</span> : kiu eniris ? — ne ŝi, sed la kuracisto. 
+				En la cambron de kiu ? — ne de la kuracisto (ne de tiu, kiu eniris), sed
+				de ŝi. Se vi dirus: «Ŝi vidis la kuraciston eniri en sian ĉambron»,
+				tio volus diri, ke ŝi vidis la kuraciston eniri en la ĉambron de la kuracisto.</li>
+			</ol>
 
 		<?php 
 		} // fin section 5

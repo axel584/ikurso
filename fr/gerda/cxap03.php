@@ -212,6 +212,7 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			include "lasusono.inc.php";
 		?>
 
 			<h3>Amdeklaro</h3>

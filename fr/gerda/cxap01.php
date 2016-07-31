@@ -347,6 +347,7 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 			<h3>Izabela</h3>
 			<p>Izabela rigardas al la granda spegulo. La knabino en

@@ -153,9 +153,78 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
-				<div class="tasko">
+				<input type="hidden" name="013_cxap21.0" value="Demandoj">
+					<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Pri kio parolas Gerda kaj Bob?",
+					2 => "Kio okazas post iom da tempo?",
+					3 => "Kion promesas Gerda?",
+					4 => "Pri kio temas la papero?",
+					5 => "Kiuj estas la Lumoserĉantoj?",
+					6 => "Kial la ŝtatoj persekutis ilin?",
+					7 => "Kiam la aĉulo foriras?"
+				);
+				ekzerco(True, 2);
 				?>
+				</div>
+			</fieldset>
+
+			<fieldset class="ekzerco">
+				<legend>Trovu la vortojn.</legend>
+				<input type="hidden" name="013_cxap21.1" value="Trovu la vortojn.">
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>kunligita aro → kunligita aro : <b>grupo</b></p>
+				</div>
+		
+				<p class="primaire-texte texte-moyen">La vortoj estas:</p>
+				<p class="primaire-texte texte-moyen">bruna, dekstra, dolĉa, flanko, fojo, flugi, frua, gratuli, grupo, hieraŭ, ĵus, kelnero, koloro, kuko, mateno, meblo, milito, muziko, nazo, noto, okazi, pano, papero, plafono, plano, plata, poŝto, raporti, reala, rompi, soldato, speco, sporto, strato, supo, ŝanco, tasko, telero, vendi, vesti</p>
+				
+				<div class="tasko">
+				<?php $demandoj=array(
+					8 => "administrejo por transportado de leteroj : [15].",
+					9 => "agrable sentiganta, kiel sukero : [15].",
+					10 => "ano de la militistaro : [15].",
+					11 => "antaŭe pripensita kaj ordigita aranĝo de realigota agado : [15].",
+					12 => "aro de aĵoj kun samaj ecoj : [15].",
+					13 => "arto aranĝi sonojn en maniero plaĉa por aŭskultado : [15].",
+					14 => "ĉe la flanko kontraŭa al tiu de la koro : [15].",
+					15 => "ĉiu el la okazoj, kiam io okazas : [15].",
+					16 => "dekstra aŭ maldekstra parto : [15].",
+					17 => "ebleco de sukceso : [15].",
+					18 => "elstara parto meze de vizaĝo : [15].",
+					19 => "estiĝi, fariĝi en iu loko aŭ momento : [15].",
+					20 => "farota laboro aŭ servo : [15].",
+					21 => "fordoni ion interŝanĝe por mono, malaĉeti : [15].",
+					22 => "frua parto de tago antaŭ tagmezo : [15].",
+					23 => "granda movebla objekto por uzado en domo : [15].",
+					24 => "ĝentile esprimi al iu sian kontentecon pro ties sukceso aŭ feliĉo : [15].",
+					25 => "io plata, el kio oni manĝas : [15].",
+					26 => "je la tago antaŭ la nuna tago : [15].",
+					27 => "korpaj ludoj : [15].",
+					28 => "kovri la korpon per io portebla : [15].",
+					29 => "kunligita aro : [15].",
+					30 => "malalta aŭ maldika : [15].",
+					31 => "maldika aĵo, sur kiu oni skribas, kaj el kiu oni faras librojn : [15].",
+					32 => "mallonga memoriga skribaĵo : [15].",
+					33 => "mallonge antaŭe : [15].",
+					34 => "manĝaĵo kun multe da akvo : [15].",
+					35 => "okazanta pli antaŭe, proksime al la komencotempo : [15].",
+					36 => "pansimila sed pli dolĉa bakaĵo : [15].",
+					37 => "perforte dispecigi : [15].",
+					38 => "reciproka mortigado inter malamikaj homgrupoj : [15].",
+					39 => "restoracia servisto, kiu alportas la trinkaĵojn kaj manĝaĵojn : [15].",
+					40 => "ruĝeco, blueco, bruneco, verdeco, nigreco, ktp : [15].",
+					41 => "ruĝete terkolora : [15].",
+					42 => "sciigi al alia persono, kion oni aŭdis, vidis kaj trovis : [15].",
+					43 => "sin movi tra la aero : [15].",
+					44 => "speco de simpla manĝaĵo : [15].",
+					45 => "supra kovrilo de ĉambro : [15].",
+					46 => "vere ekzistanta kaj kontrolebla : [15].",
+					47 => "vojo inter domoj en urbo : [15]."
+					);
+					plenigEkzerco("U");
+					?>
 				</div>
 			</fieldset>
 

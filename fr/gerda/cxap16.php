@@ -207,12 +207,81 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
+				<input type="hidden" name="013_cxap16.0" value="Demandoj">
 				<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Kion faris la junulo, post kiam li eliris el la vendejo?",
+					2 => "Kien li subite eniris?",
+					3 => "Kial Linda hezitis sekvi lin tien?",
+					4 => "Kiel aspektis la restoracio?",
+					5 => "Kion man&#285;is Linda?",
+					6 => "Kion faris la soldatoj?",
+					7 => "Kia estas Linda?",
+					8 => "Kio estas Linda?",
+					9 => "Kion rimarkas Linda post la telera milito?"
+					);
+				ekzerco(True, 2);
 				?>
 				</div>
 			</fieldset>
+			
+			<h3>Notoj</h3>
+			<p class="parto">Nun vi devas lerni kelkajn novajn vortojn. La unua vorto verŝajne ne
+			estas por vi nova; ĝi estas la vorto <span class="eo">ESPERANTO</span>. Se vi tion ne jam
+			sciis, nun mi informas vin: Esperanto estas la nomo de tiu ĉi lingvo,
+			kiun vi nun lernas.</p>
+			<p>Ne ridu tro pri tiu klarigo! En kelkaj lingvoj Esperanto ja havas
+			alian nomon. Ekzemple, en la lingvo, kiun parolas pli da homoj ol iun
+			alian lingvon en la mondo, Esperanton oni nomas <em>shi4 jie4 yu3</em>. Ĉu
+			vi tion jam sciis? Mi gratulas! Aŭ ĉu eble tiu granda lingvo estas
+			via lingvo?</p>
+			<p>
+			La aliaj vortoj, kiujn mi volas nun klarigi, estas vortoj, kiuj helpos
+			nin paroli pri la lingvo.
+			<p class="parto">Ekzistas en Esperanto kvar grandaj vortklasoj (vortospecoj):</p>
+			<p><b>SUBSTANTIVOJ (o-vortoj)</b>, kiuj montras aĵojn: tablo, knabino, spegulo,libero, amo, …</p>
+			<p><b>ADJEKTIVOJ (a-vortoj)</b>, kiuj montras ecojn: bela, juna, granda, studenta, kaŝa,… </p>
+			<p><b>VERBOJ</b> (kun finaĵoj <b>-i</b>, <b>-is</b>, <b>-as</b>, <b>-os</b>, 
+			<b>-u</b>, <b>-us</b>), kiuj montras agojn aŭ situaciojn: esti, scii, rigardi, proksimigi, amikiĝi, …</p>
+			<p><b>ADVERBOJ (e-vortoj)</b>, kiuj montras manierojn: tute, kompreneble, verŝajne, fakte, kaŝe, … </p>
+			<p class="parto">Aliaj vortklasoj, pri kiuj ni volos paroli, estas:</p>
+			<p><b>PREPOZICIOJ</b>, kiuj montras rilatojn: de, al, kun, pri, da, …</p>
+			<p><b>PRONOMOJ</b>, kiuj resendas al substantivoj: mi, ni, vi, li, ŝi, ĝi, ili, si, oni.</p>
+			<p><b>ARTIKOLO</b>, kiu montras konatecon: la.</p>
+	
+			<h3>Ekzerco</h3>
+			<p>Nun mi povas klarigi, kiel <b>kia</b> kaj <b>kiel</b> estas malsamaj.</p>
+			<p>Per <span class="eo">kia</span> oni demandas pri eco, do pri adjektivo (a-vorto).</p>
+			<p>Per <span class="eo">kiel</span> oni demandas pri maniero, do pri adverbo (e-vorto).</p>
+			<p class="eo"><b>Kia</b> estas via amiko? - Li estas bel<b>a</b>.</p>
+			<p class="eo"><b>Kiel</b> vi manĝas? - Mi manĝas malrapid<b>e</b>.</p>
+			<p class="eo">Ŝia vizaĝo subite iĝis ruĝ<b>a</b>.</p>
+			<p class="eo"><b>Kia</b> ĝi iĝis? - Ĝi iĝis ruĝ<b>a</b>.</p>
+			<p class="eo"><b>Kiel</b> ĝi iĝis ruĝa? - Subit<b>e</b>.</p>
 
+			<fieldset class="ekzerco">
+				<legend>Metu la ĝustan vorton.</legend>
+				<input type="hidden" name="013_cxap16.1" value="Metu la ĝustan vorton.">
+				<p class="primaire-texte texte-moyen">Ĉiu mankanta vorto estas unu el: kiel, kia, kian, kiaj, kiajn.</p>
+	
+				<div class="tasko">
+				<?php $demandoj=array (
+					10 => "Kun [5] sako li eliris? - Li eliris kun papera sako.",
+					11 => "[5] li forveturos? - Mi pensas, ke li forveturos aŭte.",
+					12 => "[5] numeron vi notis? - Mi notis lian aŭtan numeron.",
+					13 => "[5] vi sekvis lin? - Mi sekvis lin iom malproksime.",
+					14 => "[5] li estis vestita? - Li estis vestita per multkoloraj vestoj.",
+					15 => "[5] vi sentas vin hodiaŭ? - Mi sentas min tre bone, dankon.",
+					16 => "[5] estas via sano? - Multe pli bona ol hieraŭ.",
+					17 => "[5] virojn ŝatas Linda? - Ŝi ŝatas blondulojn.",
+					18 => "[5] vi ekkonis lin? - Ni estis en la sama lernejo.",
+					19 => "[5] restas Gerda? - Ŝi restas soifa."
+					);
+					plenigEkzerco("U");
+					?>
+				</div>
+			</fieldset>
+	
 		<?php 
 		} // fin section 4
 		if ($section=="5") {

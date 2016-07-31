@@ -2,7 +2,7 @@
 .primaire {background-color: #554E47 !important;}
 .primaire.moyen {background-color: #75706B !important;}
 .primaire.clair {background-color: #989490 !important;}
-.primaire.pale {background-color: #CBC9C7 !important;}
+.primaire.pale {background-color: #cccac8 !important;}
 .primaire.fond {background-color: #DDDCDA !important;}
 .primaire-texte {color: #554E47 !important;}
 .primaire-texte.texte-moyen {color: #75706B !important;}
@@ -42,7 +42,7 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([reado
 
 .select-wrapper {
 	display: inline-block;
-	padding-right: 0.5em;
+	margin-right: 0.5em;
 }
 /* surcharge style par défaut des formulaires */
 form p {
@@ -451,10 +451,16 @@ fieldset.ekzerco legend,
 fieldset.sono legend {
 	padding-right: 1em;
 }
-.tasko div.input-field {
+.ekzemplo .input-field,
+.tasko .input-field {
 	margin-top: 0;
 	line-height: 100%;
 	margin-bottom: 1em;
+	display: inline-block;
+	width: auto;
+}
+.tasko .input-field {
+	font-weight: 400;
 }
 .tasko hr {
 	border: 1px solid #2196F3;
@@ -462,6 +468,12 @@ fieldset.sono legend {
 [type="radio"]:checked+label:after {
     background-color: #2196F3;
     border: 2px solid #2196F3;
+}
+.ekzemplo {
+	background-color: rgba(221, 220, 218, 0.5);
+	padding: 0 0.5em 0.5em 0.5em;
+	margin-bottom: 1em;
+	margin-top: 0.5em;
 }
 
 p.qcmerr {color:red;}

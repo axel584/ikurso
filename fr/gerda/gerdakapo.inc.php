@@ -86,7 +86,7 @@ function ekzerco($x2u, $nbLig) {
 		echo "<input type='hidden' name=\"dem_ekz".$numcxap."_".sprintf('%02d', $k)."\" value=\"".$k." ".$v."\">";
 
 		if ($nbLig==1) {
-			echo "<div class='input-field col s12'><input name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
+			echo "<div class=\"input-field col s12\"><input name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			// si on n'est pas identifié et que ce n'est pas la première leçon, on empeche de remplir les exercices si on n'est pas connecté
 			if ($idenfication==False && $numcxap<>"01") {
 				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
@@ -103,7 +103,7 @@ function ekzerco($x2u, $nbLig) {
 		}
 		else
 		{
-			echo "<div class='input-field col s12'><textarea class='materialize-textarea' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
+			echo "<div class=\"input-field col s12\"><textarea class='materialize-textarea' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			if ($idenfication==False) {
 				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
@@ -135,11 +135,11 @@ function elektEkzerco() {
 			if ($v[$i]=="[") {
 				echo $text;
 				echo "<input type=\"hidden\" name=\"dd".$numcxap."_".$k."_".$n."\" value=\"".$text."\">";
-				echo "<span class=\"input-field\"><select name=\"rr".$numcxap."_".$k."_".$n."\">";
+				echo "<div class=\"input-field\"><select name=\"rr".$numcxap."_".$k."_".$n."\">";
 				echo "<option label=\"  ?  \">  ?  </option><option label=";
 				$text="";
 			} elseif ($v[$i]=="]") {
-				echo "\"".$text."\">".$text."</option></select></span>";
+				echo "\"".$text."\">".$text."</option></select></div>";
 				$text="";
 			} elseif ($v[$i]=="/") {
 				echo "\"".$text."\">".$text."</option><option label=";
@@ -158,12 +158,12 @@ function plenigEkzerco($sist) {
 	global $demandoj, $memorkurso, $numcxap;
 	foreach ($demandoj as $k => $v) {
 		$n=1;$text="";
-		echo "<p>".$k.". ";
+		echo "<p><div class='input-field'></div>".$k.". ";
 		for ($i=0 ; $i<strlen($v) ; $i++) {
 			if ($v[$i]=="[") {
 				echo $text;
 				echo "<input type=\"hidden\" name=\"dd".$numcxap."_".$k."_".$n."\" value=\"".$text."\">";
-				echo "<input name=\"rr".$numcxap."_".$k."_".$n."\" value=\"";
+				echo "<div class=\"input-field\"><input name=\"rr".$numcxap."_".$k."_".$n."\" value=\"";
 				$var="rr".$numcxap."_".$k."_".$n;
 				if (isset($memorkurso[$var])){
 					echo stripslashes($memorkurso[$var]);
@@ -173,7 +173,7 @@ function plenigEkzerco($sist) {
 			} elseif ($v[$i]=="]") {
 				echo $text."\"";
 				echo " onkeyup='xAlUtf8(this)' ";
-				echo ">";
+				echo "></div>";
 				$text="";
 			} else {
 				$text.=$v[$i];

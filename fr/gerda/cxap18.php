@@ -173,9 +173,84 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
+				<input type="hidden" name="013_cxap18.0" value="Demandoj">
 				<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Kiu parolas komence de la ĉapitro, kaj pri kio?",
+					2 => "Kiel sentas sin Gerda?",
+					3 => "Kiom facile ŝi legis la dokumenton?",
+					4 => "Kial ŝi ne diras, kio estas skribita en la dokumento?",
+					5 => "Kion kunportas la aĉulo, kiam li revenas, kaj kial?",
+					6 => "Kia estas la voĉo de la filino de Gerda?",
+					7 => "Kion Gerda ricevas por manĝi?"
+				);
+				ekzerco(True, 2);
 				?>
+				</div>
+			</fieldset>
+
+			<h3>Notoj</h3>
+		
+			<p>Ĉu vi scias, kion signifas <b>signifas</b>? Se ne, jen klarigo:</p>
+			<p><b>SIGNIFI</b> estas <b>doni ideon</b>, 
+			<b>esti komprenata en certa maniero</b>.</p>
+			<p><b>SIGNIFO</b> estas la ideo donata aŭ komunikata. Oni povas paroli pri la
+			signifo de vorto (<span class="eo">Perdi</span> signifas <span class="eo">ekmalhavi</span>, ekzemple) aŭ de io
+			alia (Ruĝa lumo povas signifi <span class="eo">Haltu!</span>).</p>
+			<p>
+			Por la sekvanta ekzerco vi devos parigi la vortojn kaj la signifojn.
+			<b>Centro</b> kaj <b>mezo</b> estas bona paro, ĉar 
+			<b>centro</b> signifas <b>mezon</b> (ne precize, sed preskaŭ).
+			</p>
+
+			<h3>Ekzerco</h3>
+	
+			<fieldset class="ekzerco">
+				<legend><b>Trovu la vortojn.</b> </legend>
+				<input type="hidden" name="013_cxap18.1" value="Trovu la vortojn.">
+	
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>centro → centro : <u>mezo</u></p>
+				</div>
+		
+				<div class="tasko">
+					<p class="primaire-texte texte-moyen">La vortoj estas:</p>
+					<p  class="primaire-texte texte-moyen">amiko, aventuro, bani, bluo, danĝero, danki, ege, epoko, facila, fuŝi, homo, kial, kie, klaso, kompati, kredi, mezo, minuto, okulo, rondo, sana, sen, silenti, sveni, ŝati, tradicio, unua, urĝa, vorto, zorgi</p>
+					<?php $demandoj=array(
+					8 => "ama(n)to aŭ ŝata(n)to : [15].",
+					9 => "ameti : [15].",
+					10 => "centro : [15].",
+					11 => "en kiu loko : [15].",
+					12 => "enakvigi : [15].",
+					13 => "esprimi feliĉon pro io ricevita : [15].",
+					14 => "esti atenta, sin okupi : [15].",
+					15 => "farebla sen granda laboro : [15].",
+					16 => "fari tre malbone : [15].",
+					17 => "grupo de amikoj (ekzemple) : [15].",
+					18 => "grupo de lernantoj : [15].",
+					19 => "io kutime farata : [15].",
+					20 => "kun bone funkcianta korpo : [15].",
+					21 => "mallasta : [15].",
+					22 => "ne kun : [15].",
+					23 => "ne paroli, fari nenian bruon : [15].",
+					24 => "neĉiutaga okazaĵaro : [15].",
+					25 => "ofta okulkoloro de blonduloj : [15].",
+					26 => "parto de parolo : [15].",
+					27 => "perdi la konscion : [15].",
+					28 => "pro kio : [15].",
+					29 => "rigardi kiel veran : [15].",
+					30 => "risko de malbono : [15].",
+					31 => "senti la suferojn de alia homo : [15].",
+					32 => "sesdek sekundoj : [15].",
+					33 => "tempo en historio : [15].",
+					34 => "tia, ke oni devas tuj fari ĝin : [15].",
+					35 => "tre tre : [15].",
+					36 => "vidilo en kapo: [15].",
+					37 => "viro aŭ virino : [15]."
+					);
+					plenigEkzerco("U");
+					?>
 				</div>
 			</fieldset>
 

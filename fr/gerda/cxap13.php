@@ -165,9 +165,66 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
+				<input type="hidden" name="013_cxap13.0" value="Demandoj">
 				<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Kie sidas Linda?",
+					2 => "Kial ŝi volas paroli kun la blondulo?",
+					3 => "Ĉu la blondulo volas klarigi siajn zorgojn?",
+					4 => "Kiel Linda klarigas sian scivolon?",
+					5 => "Kien precize veturas la blondulo?",
+					6 => "Kie nun staras Linda?",
+					7 => "Kion ŝi timas vidante la forveturantan aŭton?"
+				);
+				ekzerco(True, 2);
 				?>
+				</div>
+			</fieldset>
+
+			<fieldset class="ekzerco">
+				<legend>Trovu la vortojn.</legend>
+				<input type="hidden" name="013_cxap13.1" value="Trovu la vortojn.">
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>faradi → faradi : <u>agi</u></p>
+				</div>
+				<div class="tasko">
+					<p class="primaire-texte texte-moyen">La vortoj estas:</p>
+					<p class="primaire-texte texte-moyen">agi, alia, ami, angulo, aspekti, blondo, demandi, direkti, dum, grava, iri, kara, knabo, mano, mistera, montri, nun, permesi, peti, prava, preferi, serioza, saluti, spiono, stari, stranga, studento, tago, universitato, vizaĝo</p>
+					<?php $demandoj=array (
+					8  => "antaŭa parto de la kapo : [15].",
+					9  => "atentinda : [15].",
+					10  => "centro de supera instruado : [15].",
+					11  => "ĉi tiam : [15].",
+					12  => "diri &quot;bonan tagon&quot; : [15].",
+					13  => "dudek kvar horoj : [15].",
+					14  => "eltrovisto de sekretoj : [15]. ",
+					15  => "en la tempo de : [15].",
+					16  => "faradi : [15].",
+					17  => "fina parto de brako : [15].",
+					18  => "havanta ĝustan opinion : [15].",
+					19  => "irigi laŭ la ĝusta vojo : [15].",
+					20  => "juna vira homo : [15].",
+					21  => "kiun oni amas aŭ ŝatas : [15].",
+					22  => "konsenti, ke iu faru ion : [15].",
+					23  => "lernanto ĉe universitato : [15].",
+					24  => "malnormala : [15].",
+					25  => "ne konata, ne komprenata : [15].",
+					26  => "ne la sama : [15].",
+					27  => "ne ludema, grava : [15].",
+					28  => "nek kuŝi, nek sidi, nek iel moviĝi : [15].",
+					29  => "pala koloro de haroj : [15].",
+					30  => "peti informon : [15].",
+					31  => "pli ŝati : [15].",
+					32  => "sciigi, ke oni volas ion ricevi : [15].",
+					33  => "sin movi piede : [15].",
+					34  => "ŝajni laŭvide : [15].",
+					35  => "ŝategi : [15].",
+					36  => "tie, kie muroj kuniras : [15].",
+					37  => "videbligi : [15]."
+					);
+					plenigEkzerco("U");
+					?>
 				</div>
 			</fieldset>
 

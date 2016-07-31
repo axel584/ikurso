@@ -176,7 +176,7 @@ include "gerdakapo.inc.php";
 		?>
 
 			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
+				<legend><b>Demandoj</b></legend>
 				<input type="hidden" name="013_cxap03.0" value="Demandoj">
 				<div class="tasko">
 				<?php $demandoj=array (
@@ -192,10 +192,12 @@ include "gerdakapo.inc.php";
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend><b>Formu frazojn</b> </legend>
+				<legend><b>Formu frazojn.</b></legend>
 				<input type="hidden" name="013_cxap03.1" value="Formu frazojn.">
-				<p>Ekzemple:<br>
-					<em>{ -as aspekt- ĉu kiel la -o -o student- ul- ? } ---> Ĉu la ulo aspektas kiel studento?</em></p>
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>{ -as aspekt- ĉu kiel la -o -o student- ul- ? } → Ĉu la ulo aspektas kiel studento?</p>
+				</div>
 				<div class="tasko">
 				<?php $demandoj=array (
 					6 => "{ -as -bon- mal- ne -o pardon- -ul- }",

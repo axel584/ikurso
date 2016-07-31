@@ -150,9 +150,124 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
+				<input type="hidden" name="013_cxap24.0" value="Demandoj">
 				<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Kiel aspektis la trezoro?",
+					2 => "Kion legis Ronga?",
+					3 => "Kiam Marta eksciis pri la trezoro de la lumoser&#265;antoj?",
+					4 => "Kie profesoro Kosadi faris historian esploron?",
+					5 => "Kion profesoro Kosadi eksciis pri la trezoro? Kion li ne povis kompreni?",
+					6 => "Kiel Marta eksciis pri la trezoro?"
+				);
+				ekzerco(True, 2);
 				?>
+				</div>
+			</fieldset>
+	
+			<h3>Notoj</h3>
+			<p class="parto">
+			En la antaŭa ĉapitro vi lernis pri ĉiuj ses participoj en
+			Esperanto, sed ni uzis ilin nur kiel adjektivojn. Adjektivon oni povas
+			uzi aŭ apud substantivo (<span class="eo">Ŝi vidas blondan viron.</span>), aŭ kun iuj
+			verboj, ekzemple <b>esti</b> (<span class="eo">La viro estas blonda</span>). Ankaŭ participajn
+			adjektivojn oni povas uzi en tiuj du manieroj:
+	
+	   		<p class="tab"><span class="eo">Mi vizitas la enŝlositan virinon.</span></p>
+			<p class="tab"><span class="eo">La virino estas enŝlosita.</span></p>
+
+			<p class="parto">La participaj adjektivoj havas la saman signifon en ambaŭ situacioj.</p>
+			<p>Oni povas montri la subjekton de objekta (pasiva) participo per la
+			prepozicio <b>de</b>:</p>
+
+	   		<p class="tab"><span class="eo">Mi vizitas la virinon enŝlositan de la blondulo.</span></p>
+	   		<p class="tab"><span class="eo">La virino estas enŝlosita de la blondulo.</span></p>
+
+
+	   		<p>Tiuj frazoj signifas preskaŭ same kiel:</p>
+		   	<p class="tab"><span class="eo">Mi vizitis la virinon, kiun la blondulo enŝlosis.</span></p>
+		   	<p class="tab"><span class="eo">La blondulo enŝlosis la virinon.</span></p>
+ 
+ 			<p>Tiuj lastaj frazoj estas tamen pli simplaj kaj pro tio pli bonaj.</p>
+			<p>Eblas uzi ankaŭ subjektan (aktivan) participon post la verbo <b>esti</b>:</p>
+
+		   	<p class="tab"><span class="eo">La blondulo estas enŝlosinta la virinon.</span></p>
+
+			<p>Tiaj "kunmetitaj verbotempoj" estas tamen tre maloftaj. Preskaŭ ĉiam
+			sufiĉas simple:
+			</p>
+
+		   	<p class="tab"><span class="eo">La blondulo enŝlosis la virinon.</span></p>
+
+			<p class="parto">Participoj uziĝas ne nur adjektive, sed ankaŭ adverbe kaj
+			substantive. Ni konsideru unue ilian substantivan uzadon.
+			</p>
+			<p>Participaj substantivoj havas kompreneble la finaĵon <b>-o</b>:
+			malaperinto, krieganto, kaptoto. Oni devas memori, ke participa
+			substantivo ĉiam signifas personon, aŭ ulon. <span class="eo">Malaperinto</span> estas do
+			<span class="eo">malaperinta ulo</span>, <span class="eo">krieganto</span> estas 
+			<span class="eo">krieganta ulo</span>, kaj <span class="eo">kaptoto</span>
+			estas <span class="eo">kaptota ulo</span>. Se oni volas paroli pri aĵo, oni povas uzi
+			kroman finaĵon <b>-aĵ-</b>. </p>
+			<p><span class="eo">Donitaĵo</span> estas ekzemple aĵo donita, io donita.</p>
+			<p class="parto">
+			Participaj adverboj havas la finaĵon <b>-e</b>: enirante, forironte,
+			vidinte. Pri participaj adverboj oni devas memori, ke ili ĉiam
+			rilatas al la subjekto de la frazo. Ekzemple, la frazo:
+			</p>
+
+		   	<p class="tab"><span class="eo">Bob vidis Lindan enirante la restoracion.</span></p>
+
+			<p>Devas signifi:</p>
+
+		   	<p class="tab"><span class="eo">Bob vidis Lindan, dum li (Bob) eniris la restoracion.</span></p>
+
+			<p>Jen aliaj ekzemploj:</p>
+
+		   	<p class="tab"><span class="eo">Forironte Bob turnis sin al la pordo.</span> (Bob turnis sin al la pordo por foriri.)
+		   	<p class="tab"><span class="eo"> Vidinte Lindan Bob iris al ŝia tablo.</span>
+				(Post kiam li vidis Lindan, Bob iris al ŝia tablo.)</p>
+
+			<p class="parto">Kompreneble oni povas uzi ankaŭ objektajn (pasivajn) participajn
+			adverbojn:
+			</p>
+
+		   	<p class="tab"><span class="eo">Bob forlasis la restoracion ne vidite de Linda.</span></p>
+		   	<p class="tab"><span class="eo">Observate de la studentoj li ne kuraĝis foriri.</span></p>
+		   	<p class="tab"><span class="eo">Kaptote de la malamiko li decidis sin mortigi.</span></p>
+
+			<p class="parto">
+			En skriba Esperanto oni ofte uzas tiajn frazojn kun participaj
+			adverboj, sed en parolata Esperanto ili ne estas tiom uzataj. Oni
+			preferas paroli per simplaj mallongaj frazoj.
+			</p>
+	
+			<fieldset class="ekzerco">
+				<legend>Forigu la vortojn skribitajn grandlitere, uzante participon.</legend>
+				<input type="hidden" name="013_cxap24.1" value="Forigu la vortojn skribitajn grandlitere, uzante participon.">
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>ĈAR la studentoj LIN OBSERVIS, li ne kuraĝis foriri.</p>
+					<p>→ Observate de la studentoj li ne kuraĝis foriri.</p>
+				</div>
+	
+				<div class="tasko">
+				<?php $demandoj=array(
+					7 => "La HOMOJ, KIUJ FORIROS, ne plu zorgos pri sia laboro.",
+					8 => "La INFANOJ, KIUJ LERNAS, ekstaras, kiam la instruisto envenas.",
+					9 => "POST KIAM LI longe PRIPENSIS la aferon, li decidis ekagi.",
+					10 => "Oni enŝlosis la HOMON, KIUN ONI KAPTIS, en la policejo.",
+					11 => "La HOMO, KIU MALAPERIS, estas instruisto pri malnovaj sekretaj lingvoj.",
+					12 => "DUM LI ATENDIS la buson, Tom ekhavis ideon.",
+					13 => "La HOMOJ, KIUJN LA AFERO INTERESAS, povas trovi pli da informoj en iu ajn biblioteko.",
+					14 => "La blondulo forveturis, DUM Tom kaj Linda OBSERVIS LIN.",
+					15 => "La HOMOJ, KIUJN ONI LIBERIGOS, ankoraŭ atendis la malfermon de la pordego.",
+					16 => "ĈAR la polico LIN KAPTOS, la spiono manĝis la dokumenton.",
+					17 => "POST KIAM ĉiu FORGESIS ĜIN, la libro atendis multajn jarcentojn en la biblioteko.",
+					18 => "TUJ ANTAŭ OL LI MALFERMIS la pordon, li subite konsciis pri stranga bruo venanta de ĝia alia flanko."
+					);
+					ekzerco(True,1);
+					?>
 				</div>
 			</fieldset>
 

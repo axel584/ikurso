@@ -437,7 +437,7 @@ include "gerdakapo.inc.php";
 					<li><b>Lasu min…</b> : chapitre correspondant du livre <i>Lasu min paroli plu!</i>.</li>
 				</ul>
 				<p>En parallèlle, nous vous conseillons de lire les récits de 
-				<a href="<?php echo $vojo;?>fr/cge/gerda/lasu00.php"><i>Lasu min paroli plu!</i></a></p>
+				<a href="<?php echo $vojo;?>fr/gerda/lasu00.php"><i>Lasu min paroli plu!</i></a></p>
 				 
 				<h3>Et pour finir :</h3>
 		

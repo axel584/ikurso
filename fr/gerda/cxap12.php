@@ -176,6 +176,7 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">sufiĉa</span> : suffisant(e)</p>
 					<p><span class="eo">tiom</span> : tant (de), autant</p>
 					<p><span class="eo">trinki</span> : boire</p>
+				</div>
 
 		<?php 
 		} // fin section 3
@@ -184,8 +185,45 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
+
+				<input type="hidden" name="013_cxap12.0" value="Demandoj">
 				<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Kion Bob tuj deziras?",
+					2 => "Kie oni povas trovi brandon?",
+					3 => "Kion Bob trinkas unue?",
+					4 => "Ĉu li povas bone klarigi, kio okazis?",
+					5 => "Ĉu li aŭdis bruon?",
+					6 => "Ĉu Bob vere mortis?"
+				);
+				ekzerco(True, 2);
+				?>
+				</div>
+			</fieldset>
+		
+			<fieldset class="ekzerco">
+				<legend>Forigu la vortojn kun {}.</legend>
+				<input type="hidden" name="013_cxap12.1" value="Forigu la vortojn kun {}.">
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>Marko ŝatas {la} aŭton {de Marko}. → Marko ŝatas sian aŭton.</p>
+					<p>{Petro} ŝatas {la} aŭton {de Ivano}. → Li ŝatas lian aŭton.</p>
+				</div>
+				
+				<div class="tasko">
+				<?php $demandoj=array (
+					7 => "{Linda} rigardas al {Linda} en la spegulo.",
+					8 => "{Tom} rigardas al {la blondulo}.",
+					9 => "{Tom} rigardas al {la} kunulo {de Tom}.",
+					10 => "{Tom} rigardas al {la} kunulo {de la blondulo}.",
+					11 => "{La} amiko {de Bob} amas {Lindan}.",
+					12 => "{La} amikino {de Tom} rigardas {la amikinon de Tom} en la spegulo.",
+					13 => "{La} amikino {de Ivano} amas {Ivanon}.",
+					14 => "{La blondulo} estas en {la} aŭto {de la blondulo}.",
+					15 => "Gerda estas en la aŭto de {la} amiko {de Gerda}.",
+					16 => "{Petro kaj Ivano} kaŝas {Petron kaj Ivanon} sub la tablo."
+					);
+					ekzerco(True,1);
 				?>
 				</div>
 			</fieldset>

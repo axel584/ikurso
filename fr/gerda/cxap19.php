@@ -99,9 +99,75 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
+				<input type="hidden" name="013_cxap19.0" value="Demandoj">
 				<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Kiuj estas Petro kaj Ralf?",
+					2 => "Kial Ralf provas timigi Petron?",
+					3 => "Kiamaniere li provas timigi lin?",
+					4 => "Ĉu Petro estas timigita?",
+					5 => "Kion Ralf rakontas pri la virino?"
+				);
+				ekzerco(True, 2);
 				?>
+				</div>
+			</fieldset>
+		
+			<fieldset class="ekzerco">
+				<legend>Trovu la vortojn.</legend>
+				<input type="hidden" name="013_cxap19.1" value="Trovu la vortojn.">
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>speco de agado → speco de agado : <u>maniero</u></p>
+				</div>
+		
+				<p class="primaire-texte texte-moyen">La vortoj estas:</p>
+				<p class="primaire-texte texte-moyen">aĉeti, afabla, akcepti, apud, aranĝi, ĉiam, dolori, fermi, fini, funkcii, glaso, ĝemi, ĝeni, heziti, klara, kontenta, larĝa, maniero, manki, miksi, miri, morti, objekto, oportuna, ordo, panei, plezuro, polico, porti, ricevi, ripari, ripeti, saĝa, seĝo, seka, soifi, sufiĉa, tia, trinki, veturi</p>
+				<div class="tasko">
+				<?php $demandoj=array(
+					6 => "afero, io pripensebla : [15].",
+					7 => "agi farante sian taskon, servon, oficon : [15].",
+					8 => "bona sento de komforteco aŭ ĝojo : [15].",
+					9 => "de tiu speco : [15].",
+					10 => "deziranta nenion alian ol tion, kion oni havas : [15].",
+					11 => "ekhavi : [15].",
+					12 => "ekmalfunkcii : [15].",
+					13 => "en bezonata kiomo : [15].",
+					14 => "enpreni akvon : [15].",
+					15 => "esprimi doloran senton per neparolaj sonoj : [15].",
+					16 => "facile uzebla, bona por la celo : [15].",
+					17 => "fari tre malplaĉan senton : [15].",
+					18 => "granda en la direkto nek de longo nek de diko : [15].",
+					19 => "ĝusta aranĝo aŭ dismetado : [15].",
+					20 => "havigi al si interŝanĝe por mono : [15].",
+					21 => "iri, sed ne paŝante : [15].",
+					22 => "je ĉiu tempo : [15].",
+					23 => "konsenti ricevi ion : [15].",
+					24 => "kontraŭkrima administraĵo : [15].",
+					25 => "kunmeti tiel, ke oni ne povas facile rekoni la partojn : [15].",
+					26 => "malesti, foresti, ne esti sufiĉe multe : [15].",
+					27 => "malfaciligi aŭ malhelpi ies movojn, maloportuni al iu : [15].",
+					28 => "meti en situacion aŭ pozicion, kiu malebligas eniron aŭ eliron : [15].",
+					29 => "ne daŭrigi : [15].",
+					30 => "ordigi, prizorgi : [15].",
+					31 => "plaĉa per ĝentileco, amikeco : [15].",
+					32 => "povanta bone kaj ĝuste decidi : [15].",
+					33 => "preni kun si, havi kun si : [15].",
+					34 => "pro dubo halti ne sciante, kion fari : [15].",
+					35 => "proksime al : [15].",
+					36 => "pura, travidebla, komprenebla : [15].",
+					37 => "rebonigi, refunkciigi : [15].",
+					38 => "rediri, refari : [15].",
+					39 => "senakva aŭ kun malmulte da akvo : [15].",
+					40 => "senti bezonon trinki : [15].",
+					41 => "senti strangecon, neatenditecon, nekutimecon : [15].",
+					42 => "senviviĝi : [15].",
+					43 => "sidilo : [15].",
+					44 => "speco de agado : [15].",
+					45 => "ujo por trinkaĵo : [15]."
+					);
+					plenigEkzerco("U");
+					?>
 				</div>
 			</fieldset>
 

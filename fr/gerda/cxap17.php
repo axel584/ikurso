@@ -171,9 +171,116 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
+				<input type="hidden" name="013_cxap17.0" value="Demandoj">
 				<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Pri kio parolas la policano?",
+					2 => "Kion precize instruas Gerda?",
+					3 => "Kiu estas la alta blondulo?",
+					4 => "Kiu estas Marta?",
+					5 => "Kial oni ankoraŭ ne pridemandis la blondulon?",
+					6 => "Kiel la policano esperas retrovi Gerdan?",
+				);
+				ekzerco(True, 2);
 				?>
+				</div>
+			</fieldset>
+
+			<h3>Notoj</h3>
+			<p>Jen ankoraŭ kelkaj vortoj, kiujn ni uzos por paroli pri la lingvo.</p>
+			<p class="parto">Grupon de vortoj kun verbo en la centro oni nomas FRAZO. Jen ekzemplo:</p>
+			<p><span class="eo"> Linda rigardas la blondulon.</span></p>
+			<p class="parto">Frazo normale havas subjekton. La <b>SUBJEKTO</b> estas tio, kio faras la
+			agadon de la verbo. En tiu ĉi frazo <span class="eo">Linda</span> estas la subjekto.</p>
+			<p class="parto">Frazo ofte havas objekton. La <b>OBJEKTO</b> estas tio, al kio la agado de la
+			verbo estas farata. En ĉi tiu frazo la objekto estas <span class="eo">la blondulon</span>.</p>
+			<p class="parto">Oni montras la objekton aŭ per prepozicio (<span class="eo">Linda rigardas al la
+			blondulo</span>) aŭ per la finaĵo <b>-n</b>. Tiun finaĵon <b>-n</b> oni nomas
+			<b>AKUZATIVO</b>. Kiel vi jam lernis, oni uzas akuzativon ne nur por montri la objekton en frazo, sed ankaŭ por aliaj aferoj.</p>
+			<p class="parto">Jam en la oka ĉapitro vi lernis pri la pronomo <b>si</b>.</p>
+			<p>La pronomo <b>si</b> estas la <b>REFLEKSIVA PRONOMO</b> de Esperanto. Esprimoj uzantaj ĝin estas <b>REFLEKSIVOJ</b>.</p>
+			<p>Kiel vi jam scias, <em>si</em> resendas al la subjekto.</p>
+			<p>Ekzemple:</p>
+			<p><span class="eo">Linda vidas sin.</span> signifas: <span class="eo">Linda vidas Lindan.</span></p>
+			<p class="parto">Oni devas scii, ke <b>si</b> resendas al la plej proksima subjekto. Normale
+			tio estas la subjekto de la plej malgranda frazo (aŭ <em>subfrazo</em>), en kiu ĝi aperas. Do en la frazo:</p>
+			<p><span class="eo">Tom scias, ke Linda vidas sin.</span></p>
+			<p><span class="eo">si</span> resendas al <span class="eo">Linda</span> 
+			(la subjekto de <span class="eo">vidas</span>), ne al <span class="eo">Tom</span> (la
+			subjekto de <span class="eo">scias</span>).</p>
+			<p>Pro tio, <em>si</em> neniam povas esti mem la subjekto aŭ parto de la
+			subjekto de iu verbo. Ekzemple, jena frazo estus tute neebla, se oni
+			enmetus la vorton <em>sia</em>:</p>
+			<p><span class="eo">Linda pensas, ke ___ opinio estas prava.</span></p>
+			<p>En tiu frazo <span class="eo">sia</span> devus resendi al la subjekto de <span class="eo">estas</span>, kiu
+			estas… <span class="eo">sia opinio</span>. Neeble!
+			</p>
+			<p>En ĉi tiu ĉapitro estas pli malfacila ekzerco pri refleksivoj.</p>
+
+			<h3>Ekzerco 1</h3>
+
+			<p>Nun vi scias kvar vortojn, kiuj aspektas simile: 
+			<span class="eo">per</span>, <span class="eo">por</span>, <span class="eo">pri</span>, 
+			<span class="eo">pro</span>.
+			</p>
+			<p><b>per</b> montras <b>ilon</b>: 
+			<span class="eo">Mi venis per aŭto.</span></p>
+			<p><b>por</b> montras <b>celon</b>: 
+			<span class="eo">Mi aĉetis kafon por vi (por trinki).</span> (<span class="eo">celo</span> = tio, kion oni volas havi aŭ fari.)</p>
+			<p><b>pri</b> montras <b>temon</b>: 
+			<span class="eo">Mi parolis/lernis pri historio.</span></p>
+			<p><b>pro</b> montras <b>kialon</b>: 
+			<span class="eo">Ŝi ŝatas lin pro liaj blondaj haroj.</span></p>
+
+			<fieldset class="ekzerco">
+				<legend>Enmetu unu el tiuj vortoj en ĉiun lokon.</legend>
+				<input type="hidden" name="013_cxap17.1" value="1. Enmetu unu el tiuj vortoj en ĉiun lokon.">
+
+				<div class="tasko">
+				<?php $demandoj=array(
+					7 => "Mi multe lernadis [3] lingvistiko [3] sukcesi en la universitato.",
+					8 => "[3] la malfrua horo mi decidis veturi [3] aŭto, [3] esti pli rapida.",
+					9 => "[3] kio temas? - Mi ne scias; mi ĵus alvenis.",
+					10 => "Mi dankas vin [3] via helpo.",
+					11 => "[3] la bruo en mia angulo, estis [3] mi tre malfacile aŭdi.",
+					12 => "Mi scias certe [3] tio, ke mi vidis ĝin [3] miaj propraj okuloj.",
+					13 => "Ŝi venis [3] instrui kriptaĵo-sciencon, sed mi neniam aŭdis [3] tiu fako."
+					);
+					plenigEkzerco("U");
+					?>
+				</div>
+			</fieldset>
+
+			<fieldset class="ekzerco">
+				<legend>Anstataŭigu la vortojn inter "{}" per la ĝusta pronomo.</legend>
+				<input type="hidden" name="013_cxap17.2" value="2. Anstataŭigu la vortojn inter "{}" per la ĝusta pronomo.">
+				<div class="ekzemplo">
+					<p><em>elzemle:</em></p>
+					<p>{Tom} scias, ke {Linda} rigardas al {Tom}.</p>
+					<p>→ Li scias, ke <b>ŝi</b> rigardas al <b>li</b>.</p>
+				</div>
+				<p class="primaire-texte texte-moyen">Forigu la vortojn kun "{}"!</p>
+	
+				<div class="tasko">
+				<?php $demandoj=array(
+					14 => "Marko pensas, ke {Marko} rompis {la} tason {de Marko}.",
+					15 => "Marko pensas, ke {Tom} rompis {la} tason {de Marko}.",
+					16 => "Tom pensas, ke {Tom} rompis {la} tason {de Marko}.",
+					17 => "Tom pensas, ke {Tom} rompis {la} tason {de Tom}.",
+					18 => "Tom pensas, ke {Marko} rompis {la} tason {de Tom}.",
+					19 => "De Petro {Linda} aŭdas malveran rakonton pri {Linda}.",
+					20 => "De Petro {Linda} aŭdas, ke Tom rakontis malveraĵon pri {Linda}.",
+					21 => "Ivano scias, kie {Petro} kaŝis {la} tason {de Petro}, sed {Ivano} ne scias, kie {Petro} kaŝis {la} tason {de Ivano}.",
+					22 => "{Linda} timas, ke la spiono sekvas {Lindan} tra la urbo.",
+					23 => "{Petro} timas, ke {Linda} amas {Lindan} pli ol {Petron}.",
+					24 => "{Linda} ĉiam pensas, ke {la} opinio {de Linda} estas prava.",
+					25 => "Marko diras, ke {Petro} perdis {la} tason {de Marko}.",
+					26 => "Sed Petro diras, ke {Marko} perdis {la} tason {de Marko}.",
+					27 => "Linda ne scias, ke {Marko} {Lindan} amas.",
+					28 => "Linda ne scias, ke {Marko} {Gerdan} amas."
+					);
+					ekzerco(True, 1);
+					?>
 				</div>
 			</fieldset>
 

@@ -100,9 +100,122 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
+				<input type="hidden" name="013_cxap23.0" value="Demandoj">
 				<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Kiel Bob sukcesis antaŭi la bandon?",
+					2 => "Kiom da trezorserĉantoj envenis la kavernon?",
+					3 => "Kio mirigas la tri studentojn?",
+					4 => "Kie, laŭ la malnova dokumento, troviĝas la trezoro?"
+				);
+				ekzerco(True, 2);
 				?>
+				</div>
+			</fieldset>
+
+			<h3>Notoj</h3>
+			
+			<p>En ĉapitro 9 vi lernis pri la finaĵo <b>-it-</b>. (<span class="eo">La kapo de Bob estis <b>batita</b>.</span>)</p>
+			<p>En ĉapitro 11 vi lernis pri la finaĵo <b>-ant-</b>. (<span class="eo">Linda pensas, sin <b>demandante</b>, ĉu…</span>)</p>
+			<p>Poste, en ĉapitro 14, aperas la finaĵoj <span class="eo">-at-</span> 
+			kaj <b>-int-</b>. (<span class="eo">Ĉambro <b>nekonata</b>. Kvazaŭ ŝi estus <b>laborinta</b>.</span>)</p>
+			<p>La vortoj kun <b>-ant-</b> kaj <b>-at-</b> rilatas al la nuno, 
+			al la estonteco (al tio, kio okazas aŭ estas nun).</p>
+			<p>La vortoj kun <b>-int-</b> kaj <b>-it-</b> rilatas al la estinteco (al tio, kio okazis aŭ estis antaŭe).</p>
+			<p>Ekzistas ankaŭ finaĵoj <b>-ont-</b> kaj <sb>-ot-</b> por la estonteco (tio, kio	okazos aŭ estos poste).</p>
+			<p class="parto">Vortoj kun la finaĵoj <b>-ant-</b>, <b>-at-</b>, 
+			<b>-int-</b>, <b>-it-</b>, <b>-ont-</b>, 
+			<b>-ot-</b> estas nomataj <b>PARTICIPOJ</b>, kaj tiuj
+			finaĵoj estas la <b>PARTICIPAJ FINAĴOJ</b>.</p>
+			<p>La participoj kun <b>-nt-</b> estas la <b>SUBJEKTAJ PARTICIPOJ</b>; ili rilatas al
+			la subjekto de la participigita verbo. Oni nomas ilin ankaŭ <b>AKTIVAJ PARTICIPOJ</b>.</p>
+			<p>La participoj kun nur <b>-t-</b> estas la <b>OBJEKTAJ PARTICIPOJ</b>; ili rilatas
+			al la objekto de la participigita verbo. Oni nomas ilin ankaŭ <b>PASIVAJ
+			PARTICIPOJ</b>.</p>
+			<div class="container">
+				<table class="bordered">
+					<tr>
+						<td></td><td>SUBJEKTA</td><td>OBJEKTA</td>
+					</tr>
+					<tr>
+						<td>ANTAŬE</td><td>-int-</td><td>-it</td>
+					</tr>
+					<tr>
+						<td>NUN</td><td>-ant-</td><td>-at-</td>
+					</tr>
+					<tr>
+						<td>POSTE</td><td>-ont-</td><td>-ot-</td>
+					</tr>
+				</table>
+			</div>
+
+			<p>Jen kelkaj ekzemploj:</p>
+			<p class="tab"><span class="eo">La polico serĉas malaperintan virinon [virinon, kiu malaperis].</span></p>
+			<p class="tab"><span class="eo">La virino estas enŝlosita en forlasita domo [domo, kiun oni forlasis].</span></p>
+			<p class="tab"><span class="eo">Linda rigardas la kriegantajn soldatojn [soldatojn, kiuj kriegas].</span></p>
+			<p class="tab"><span class="eo">Ŝi iomete timas pro la ĵetataj teleroj [teleroj, kiujn oni ĵetas].</span></p>
+			<p class="tab"><span class="eo">Ĉu vi streĉe atendas la venontan ĉapitron [ĉapitron, kiu venos]?</span></p>
+			<p class="tab"><span class="eo">Kion trovas la kaptotaj krimuloj [krimuloj, kiujn oni kaptos]?</span></p>
+
+			<p class="parto">Se la ĉefa parolo estas nuna (supre estas <b>serĉas</b>, <b>estas</b>, <b>rigardas</b>,…), oni povas "traduki" la participojn jene:
+			</p>
+			<div class="row">
+				<p class="col s6 l3">x-inta</p><p class="col s6 l3">→ kiu x-is</p>
+				<p class="col s6 l3">x-ita</p><p class="col s6 l3">→ kiun oni x-is</p>
+				<p class="col s6 l3">x-anta</p><p class="col s6 l3">→ kiu x-as</p>
+				<p class="col s6 l3">x-ata</p><p class="col s6 l3">→ kiun oni x-as</p>
+				<p class="col s6 l3">x-onta</p><p class="col s6 l3">→ kiu x-os</p>
+				<p class="col s6 l3">x-ota</p><p class="col s6 l3">→ kiun oni x-os</p>
+			</div>
+			<p class="parto">Tamen, se la ĉefa parolo ne estas nuna, oni normale ne povas tiel
+			simple "traduki". Ekzemple:</p>
+			<p class="tab"><span class="eo">Hieraŭ matene Bob pensis pri la farota laboro.</span></p>
+			<p class="tab">Sed eble li faris la laboron hieraŭ vespere. Se hodiaŭ oni dirus,
+			ke hieraŭ matene Bob pensis pri la laboro, kiun oni faros, tio
+			signifus, ke eĉ hodiaŭ la laboro ankoraŭ ne estas farita. Pli ĝusta
+			"traduko" estas do: Hieraŭ matene Bob pensis pri la laboro, kiu estis
+			objekto de posta faro.</p>
+			<p class="tab"><span class="eo">Morgaŭ vespere Bob rigardos la faritan laboron.</span>
+			<p class="tab">Sed eble li faros la laboron morgaŭ vespere. Se hodiaŭ oni dirus,
+			ke morgaŭ vespere Bob rigardos la laboron, kiun oni faris, tio
+			signifus, ke jam hodiaŭ la laboro estas farita. Pli ĝusta "traduko"
+			estas do: Morgaŭ vespere Bob rigardos la laboron, kiu estos objekto de
+			antaŭa faro.</p>
+
+			<p>Ĉu tiu klarigo estas komprenebla? Se ne, tio ne tro gravas, ĉar la
+			realo estas multe pli simpla ol mia klarigo. Kompreneble oni normale ne
+			tradukas participojn; oni komprenas ilin sentraduke. <span class="eo">Manĝonta</span>
+			signifas kvazaŭ <span class="eo">malsata</span>; <span class="eo">manĝanta</span> 
+			signifas kvazaŭ <span class="eo">ĉe-tabla</span>;
+			<span class="eo">manĝinta</span> signifas kvazaŭ <span class="eo">sata</span>.</p>
+	
+			<p>Provu la sekvantan ekzercon, en kiu oni devas reskribi uzante participon!</p>
+
+			<fieldset class="ekzerco">
+				<legend>Transformu la frazojn uzante participon.</legend>
+				<input type="hidden" name="013_cxap23.1" value="Transformu la frazojn uzante participon.">
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>Mi serĉas monujon, kiun mi perdis. → Mi serĉas perditan monujon.</p>
+				</div>
+
+				<div class="tasko">
+				<?php $demandoj=array(
+					5 => "La strangulo parolas al si mem, ne atentante la studentojn, kiuj lin rigardas.",
+					6 => "La studento redonas la librojn, kiujn li jam legis.",
+					7 => "Kato, kiu manĝis, normale volas dormi.",
+					8 => "La policanoj ne rekonos la krimulon, kiun ili serĉas.",
+					9 => "Li zorge purigis la aŭton, kiun li volis vendi.",
+					10 => "En la universitato Marta estas virino, kiun ĉiu konas.",
+					11 => "Ŝi provis legi la numeron de la aŭto, dum ĝi veturas.",
+					12 => "Tiam ŝi ankoraŭ havis la monujon, kiun ŝi poste perdis.",
+					13 => "Li pensis pri la suferoj, kiujn li jam travivis.",
+					14 => "Mi plendos pri la seĝoj, kiuj malaperis.",
+					15 => "Mi devis atendi la buson, kiu venis poste.",
+					16 => "Ŝi longe adiaŭis la amikon, kiu devis foriri."
+					);
+					ekzerco(True,1);
+					?>
 				</div>
 			</fieldset>
 

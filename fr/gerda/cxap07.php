@@ -159,12 +159,73 @@ include "gerdakapo.inc.php";
 		?>
 
 			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input>
+				<legend><b>Demandoj</b></legend>
+				<input type="hidden" name="013_cxap07.0" value="Demandoj">
 				<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Ĉu Gerda ankoraŭ vivas? (jes / ne)",
+					2 => "Kiel batas la koro de Gerda? (forte / malforte / nekonscie / konscie / verŝajne)",
+					3 => "Kiun Tom volas informi? (la blondulon / la profesoron pri lingvistiko / la aŭtoritatojn / spionon)",
+					4 => "Ĉu iu, kiu perdis la konscion, kuŝu kun la kapo pli alta ol la piedoj? (jes / ne)"
+					);
+				ekzerco(True, 2);
 				?>
 				</div>
 			</fieldset>
+
+			<fieldset class="ekzerco">
+				<legend><b>Elektu la ĝustan vorton.</b></legend>
+				<input type="hidden" name="013_cxap07.1" value="Elektu la ĝustan vorton.">
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p><span class="input-field"><select><option> ? </option><option>Mi</option><option>Min</option></select></span>
+					restis tie unu <span class="input-field"><select><option> ? </option><option>semajno</option><option>semajnon]</option>
+					</select></span>.</p>
+					<p>→ <b>Mi</b> restis tie unu <b>semajnon</b>.</p>
+				</div>
+					
+				<div class="tasko">
+					<?php $demandoj=array (
+						5 => "La [sukerpeco/sukerpecon] falis en la [kafo/kafon].",
+						6 => "Sed [mi/min] ne deziras [sukero/sukeron] en [mia/mian] [kafo/kafon].",
+						7 => "Jen [Linda/Lindan] venas en la [restoracio/restoracion]!",
+						8 => "Eble [ŝi/ŝin] deziras [kafo/kafon] kun [sukero/sukeron].",
+						9 => "[Tiu/Tiun] [tago/tagon] [mi/min] laboris tre multe.",
+						10 => "[Li/Lin] restis tie unu [tago/tagon]; [mi/min] restis dum [tuta/tutan] [semajno/semajnon].",
+						11 => "Demandu, [kio/kion] [li/lin] faras! --- Ne! Demandu [vi/vin]!",
+						12 => "La [kafo/kafon], [kiu/kiun] [vi /vin] havas, estas sen [sukero/sukeron].",
+						13 => "La [kafo/kafon], [kiu/kiun] [vi/vin] metis sur la [tablo/tablon], [ili/ilin] ne trinkis.",		
+						14 => "La [viro/viron], [kiu/kiun] metis [kafo/kafon] sur la [tablo/tablon], ne estas [studento/studenton].",	
+						15 => "La [tablo/tablon], sur [kiu/kiun] estas la [kafo/kafon], estas tro [malgranda/malgrandan].",
+						16 => "Ĉu [vi/vin] havas iom da [kafo/kafon]? --- [Mi/Min] havas tri [tasoj/tasojn] da [kafo/kafon]."
+						);
+					elektEkzerco();
+					?>
+				</div>
+			</fieldset>
+
+			<fieldset class="ekzerco">
+				<legend><b>Elektu la ĝustan vorton.</b></legend>
+				<input type="hidden" name="013_cxap07.2" value="Elektu la ĝustan vorton.">
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>Ĉu Tom estas same alta <span class="input-field"><select><option>  ?  </option><option>kiel</option>
+					<option>ol</option></select></span> Bob, aŭ ĉu li estas pli alta <span class="input-field"><select><option>  ?  </option>
+					<option>kiel</option><option>ol</option></select></span> Bob?</p>
+			  		<p>→ Ĉu Tom estas same alta <b>kiel</b> Bob, aŭ ĉu li estas pli alta <b>ol</b> Bob?</p>
+				</div>
+		
+					<div class="tasko">
+						<?php $demandoj=array (
+							17 => "[Kiel/Ol] vi scias, Bob estas pli alta [kiel/ol] Tom, sed malpli alta [kiel/ol] la stranga blondulo.",
+							18 => "Mi preferus resti ĉi tie [kiel/ol] iri informi la aŭtoritatojn.",
+							19 => "La vero ofte ŝajnas pli absurda [kiel/ol] imagaĵoj.",
+							20 => "Li iĝis pli kaj pli forta; li iĝis forta [kiel/ol] fortulo.",
+							21 => "Iru pli rapide, aŭ iru malpli rapide; iru [kiel/ol] vi volas!"
+						);
+						elektEkzerco();
+			?>
+				
 
 		<?php 
 		} // fin section 4

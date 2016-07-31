@@ -128,8 +128,41 @@ include "gerdakapo.inc.php";
 
 			<fieldset class="ekzerco">
 				<legend><b>Demandoj</b> </legend>
-				<input>
+				<input type="hidden" name="013_cxap10.0" value="Demandoj">
+		
 				<div class="tasko">
+				<?php $demandoj=array (
+					1 => "Kiu ne emas fidi la flegistinon? (Tom / Bob / Linda / Gerda / la blondulo)",
+					2 => "Kie Tom kaj Bob retrovis sin reciproke? (en lernejo / en universitato / en la urbego, kie ili vivis tiutempe)",
+					3 => "Estas ___ flegistino(j) en la universitato. (unu / du / tri / kvar / kvin)",
+					4 => "Pri kiu zorgas Tom? (pri Bob / pri Gerda / pri Linda / pri la flegistino)",
+					5 => "Ĉu Tom ŝatas la novan aventuron? (jes / ne)",
+					6 => "Kiun amas Tom? (Gerdan / Lindan / Rongan / la flegistinon)"				
+				);
+				ekzerco(True, 2);
+				?>
+				</div>
+			</fieldset>
+		
+			<fieldset class="ekzerco">
+				<legend><b>Anstataŭigu la stelon per la ĝusta vorto aŭ vortero.</b> </legend>
+				<input type="hidden" name="013_cxap10.1" value="Anstataŭigu la stelon per la ĝusta vorto aŭ vortero.">
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>Tom [*] Linda estas student[*]. → Tom kaj Linda estas studentoj.</p>
+				</div>
+				<div class="tasko">
+				<?php $demandoj=array (
+					7 => "Tom [3] Linda estas student[3]. En universitat[3] restoraci[3] ili observas blond[3] junul[3], kiu agas plej strange: dum li parolas [3] knabino, li kaŝ[3] metas io[3] en ŝi[3] kafotaso[3].",
+					8 => "Eble estis drogo, ĉar tuj post ki[3] ŝi ekstaras kaj forlasas la restoracio[3], [3] la koridoro[3] ŝi jam perdas la konscion. Intertemp[3], Bob sid[3]is ĉe Tom kaj Linda.",
+					9 => "Li povas rakont[3] al ili[3], ki[3] estas la knabino: ŝi estas Gerda, nova instruist[3] pri kriptaĵoscienco ([3]novaj sekretaj lingvoj). Ronga, la profesoro pri lingvistiko, volis, ke ŝi ven[3] al la universitato [3] instru[3] kaj labor[3] kun li.",
+					10 => "Kiam ili aŭdas ŝi[3] falbruon el la koridor[3], Bob kaj Tom rapidas por helpi ŝi[3]. Bob metas ŝin bone, tiel [3] ŝi kuŝu komforte, kaj Tom ir[3] vok[3] flegistinon.",
+					11 => "Tiu flegistino, dika, grasa kaj parolema, nur post long[3] diskut[3] kun Tom, konsciiĝas [3] tio, ke la afero urĝas. Se ŝi est[3] pli zorgema, ŝi [3] rapidus kaj eble ne okazus jeno:",
+					12 => "Kiam Tom fine [3]venas kun la flegistino, Gerda estas for, kaj Bob sidas ĉe la koridor[3] mur[3], bat[3]a surkape. Kion [3]tempe faras Linda? Ŝi pli kaj pli [3]trankvil[3]as, lasite sola [3] la universitata restoracio kun la blond[3] strang[3].",
+					13 => "Ŝi observ[3] lin, kaj kiam li eliras tra la pordo alurb[3], ŝi[3] sekvas li[3]. Linda estas junulino iom tim[3], certe belega. Tom am[3]as ŝin; li havas okulojn nur [3] ŝi.",
+					14 => "Li zorgas pri ŝi. Ĉu ŝi trov[4] en danĝero? Ki[3], fakte, ŝi iros? Kaj Gerda, kien ŝi[3] foriĝis? Ki[3] okaz[3] kun ŝi? La afero [4] pli kaj pli mistera!"
+				);
+				plenigEkzerco("U");
 				?>
 				</div>
 			</fieldset>

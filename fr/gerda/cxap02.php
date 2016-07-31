@@ -131,14 +131,13 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">certa</span> : certain(e) <span class="eta">[<i><b>tsèr</b>-ta</i>]</span></p>
 					<p class="sekva"><span class="eo">certe</span> : certainement</p>
 					<p><span class="eo">ĉu</span> : est-ce que…, si (indique l'interrogation) <span class="eta">[<i><b>tchou</b></i>]</span></p>
-					<p class="sekva"><span class="eo tab">li venas</span> : il vient</p>
-					<p class="sekva"><span class="tab" />→ <span class="eo">ĉu li venas?</span> : vient-il ?</p>
-					<p class="sekva"><span class="eo tab">vi scias</span> : tu sais</p>
-					<p class="sekva"><span class="tab" />→ <span class="eo">ĉu vi scias</span> : est-ce que tu sais ?</p>
-					<p class="sekva"><span class="eo tab">ĉu li venas</span> : vient-il ?</p>
-					<p class="sekva"><span class="tab" />→ <span class="eo">rigardu, ĉu li venas</span> : regarde s'il vient</p>
-					<p class="sekva"><span class="eo tab">ĉu li sidas?</span> : est-il assis ?</p>
-					<p class="sekva"><span class="tab" />→ <span class="eo">mi ne scias, ĉu li sidas</span> : je ne sais pas s'il est assis</p>
+					<p class="sekva tab"><span class="eo">li venas</span> : il vient</p>
+					<p class="sekva tab">→ <span class="eo">ĉu li venas?</span> : vient-il ?</p>
+					<p class="sekva tab"><span class="eo">vi scias</span> : tu sais</p>
+					<p class="sekva tab">→ <span class="eo">ĉu vi scias</span> : est-ce que tu sais ?</p>
+					<p class="sekva tab"><span class="eo">ĉu li venas</span> : vient-il ?</p>
+					<p class="sekva tab"><span class="eo">ĉu li sidas?</span> : est-il assis ?</p>
+					<p class="sekva tab">→ <span class="eo">mi ne scias, ĉu li sidas</span> : je ne sais pas s'il est assis</p>
 					<p><span class="eo">diable !</span> : diable !, diantre ! <span class="eta">[<i>di-<b>a</b>-blè (trois syllabes !)</i>]</span></p>
 					<p class="sekva"><span class="eo">diablo</span> : diable</p>
 					<p><span class="eo">direkto</span> : direction</p>
@@ -193,9 +192,9 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">stari</span> : se tenir debout, être debout</p>
 					<p><span class="eo">stranga</span> : bizarre <span class="eta">[<i><b>stranne</b>-ga</i>]</span></p>
 					<p><span class="eo">strange</span> : bizarrement</p>
-					<p class="sekva"><span class="eo tab">li rigardas al mi strange</span> : il me regarde bizarrement</p>
-					<p class="sekva"><span class="eo tab">(estas) strange!</span> : (c'est) bizarre !</p>
-					<p class="sekva"><span class="eo tab">strangulo</span> = <span class="eo">strang</span>– + –<span class="eo">ulo</span></p>
+					<p class="sekva tab"><span class="eo">li rigardas al mi strange</span> : il me regarde bizarrement</p>
+					<p class="sekva tab"><span class="eo">(estas) strange!</span> : (c'est) bizarre !</p>
+					<p class="sekva tab"><span class="eo">strangulo</span> = <span class="eo">strang</span>– + –<span class="eo">ulo</span></p>
 					<p><span class="eo">ŝi</span> : 	elle <span class="eta">[<i><b>chi</b></i>]</span></p>
 					<p class="sekva"><span class="eo">ŝia</span> : son, sa (à elle) <span class="eta">[<i><b>chi</b>-a</i>]</span></p>
 					<p><span class="eo">taso</span> : tasse</p>
@@ -231,19 +230,21 @@ include "gerdakapo.inc.php";
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend>Elektu la ĝustan vorton.</legend>
+				<legend><b>Elektu la ĝustan vorton.</b></legend>
 				<input type="hidden" name="013_cxap02.1" value="Elektu la ĝustan vorton.">
 				
-				<p><em>Turnu vin iomete, <span class="input-field"><select><option>  ?  </option>
-				<option>ĉu</option><option>se</option></select></span> vi volas.</em><br> 
-				---> <em>Turnu vin iomete, <b>se</b> vi volas.</em></p>
-				<p>Cet exercice attire votre attention sur la différence de sens entre
-				<b>ĉu</b> (interrogation) et <b>se</b> (condition)&nbsp;:</p>
-				<p><span class='eo'>mi ne vidas, ĉu estas io inter mi kaj vi</span> : 
-				je ne vois pas s'il y a quelque chose entre vous et moi. (Y a-t-il quelque chose ? Je ne vois pas.)</p>
-				<p><span class='eo'>mi ne vidas, se estas io inter mi kaj vi.</span> : 
-				s'il y a quelque chose entre moi et vous, alors je ne vois pas. (Cette chose m'empêche de voir.)</p>
-				<hr>
+				<div class="ekzemplo">
+					<p><em>Ekzemple:</em></p>
+					<p>Turnu vin iomete, <span class="input-field"><select><option>  ?  </option>
+					<option>ĉu</option><option>se</option></select></span> vi volas.</p>
+					<p>→ Turnu vin iomete, <b>se</b> vi volas.</p>
+					<p>Cet exercice attire votre attention sur la différence de sens entre
+					<b>ĉu</b> (interrogation) et <b>se</b> (condition)&nbsp;:</p>
+					<p><span class='eo'>mi ne vidas, ĉu estas io inter mi kaj vi</span> : 
+					je ne vois pas s'il y a quelque chose entre vous et moi. (Y a-t-il quelque chose ? Je ne vois pas.)</p>
+					<p><span class='eo'>mi ne vidas, se estas io inter mi kaj vi.</span> : 
+					s'il y a quelque chose entre moi et vous, alors je ne vois pas. (Cette chose m'empêche de voir.)</p>
+				</div>
 				<div class="tasko">
 					<?php $demandoj=array (
 						7 => "Mi ne vidas, [ĉu/se] la junulo parolas al la knabino, aŭ [ĉu/se] li nur rigardas al ŝi.",

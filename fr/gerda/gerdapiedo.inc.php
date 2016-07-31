@@ -36,7 +36,7 @@ if (($parto=="ek")&&($numcxap!="01")){ ?>
 	</div> <!-- aligxilo -->
 <?php 
 } 
-if ($section==1) { ?>
+if (isset($section) && $section==1) { ?>
 <div class="row">
 	<p class="col s12 m10 l7 offset-m1 offset-l1">
 		<i>Bildoj el:</i><br><a href="http://www.lernu.net/"><img src="<?php echo $vojo;?>fr/gerda/bildoj/lernu.png" alt="lernu"></a>

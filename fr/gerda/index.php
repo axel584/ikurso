@@ -1,4 +1,6 @@
 <?php 
+$titolo="enkonduko";
+$leciono = 0;
 include "gerdakapo.inc.php"; 
 ?>
 	<div class="row">
@@ -9,7 +11,7 @@ include "gerdakapo.inc.php";
 			
 			<section id="leciono-enhavo">
 	
-				<a id="presentation"></a>
+				<a id="presentation" class="scrollspy"></a>
 				<h2>Présentation</h2>
 
 				<p class="parto">
@@ -37,7 +39,7 @@ include "gerdakapo.inc.php";
 				Web et d’en améliorer la présentation quand cela était possible ou
 				nécessaire.</p>
 		
-				<a id="kiel"></a>
+				<a id="kiel" class="scrollspy"></a>
 				<h2>Comment utiliser le cours ?</h2>
 
 				<p class="parto">
@@ -75,7 +77,8 @@ include "gerdakapo.inc.php";
 				de chaque leçon le récit correspondant du recueil <a
 				href="lasu00.php"><i>Lasu min paroli plu!</i></a>, du même auteur.</p>
 
-				<h2 id="inscription">Comment s’inscrire ?</h2>
+				<a id="inscription" class="scrollspy"></a>
+				<h2>Comment s’inscrire ?</h2>
 		
 				<p class="parto">
 				Vous trouverez le formulaire de demande de correcteur à la fin de la première
@@ -111,7 +114,7 @@ include "gerdakapo.inc.php";
 					la correction des leçons précédentes.</li>
 				</ol>
 				
-				<a id="prononciation"></a>
+				<a id="prononciation" class="scrollspy"></a>
 				<h2>Rappel sur la prononciation</h2>
 			
 				<p class="parto">
@@ -425,8 +428,8 @@ include "gerdakapo.inc.php";
 					deux syllabes&nbsp;:</li>
 				</ol>
 
-				<a id="enhavo"></a>
-				<h2>Table des matières du cours</h2>
+				<a id="enhavo" class="scrollspy"></a>
+				<h2>Composition des leçons</h2>
 
 				<p>Chaque leçon se compose de plusieurs parties :</p>
 				<ul class="sommaire">
@@ -457,7 +460,7 @@ include "gerdakapo.inc.php";
 							<li><a href="#kiel">Comment utiliser ce cours ?</a></li>
 							<li><a href="#inscription">Comment s’inscrire ?</a></li>
 							<li><a href="#prononciation">Rappel sur la prononciation</a></li>
-							<li><a href="#enhavo">Table des matières du cours</a></li>
+							<li><a href="#enhavo">Composition des leçons</a></li>
 						</ul>
 					</div>
 				</li>

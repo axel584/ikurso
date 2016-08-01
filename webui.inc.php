@@ -396,14 +396,14 @@ function getListoLecionoj($kurso,$leciono) {
 		if ($kurso=='CG') {
 			echo "<li id='intro' class='nuna'><a href='intro.php'>introduction</a></li>";
 		} elseif ($kurso=="GR") {
-			echo "<li id='intro' class='nuna'><a href='index.php'>introduction</a></li>";
+			echo "<li id='intro' class='nuna'><a href='index.php'>enkonduko</a></li>";
 		}
 	}
 	else {
 		if ($kurso=='CG') {
 			echo "<li id='intro' class='farita'><a href='intro.php'>introduction</a></li>";
 		} elseif ($kurso=="GR") {
-			echo "<li id='intro' class='farita'><a href='index.php'>introduction</a></li>";
+			echo "<li id='intro' class='farita'><a href='index.php'>enkonduko</a></li>";
 			}
 	}
 	$query = "select * from lecionoj where kurso='".$kurso."' order by numero";
@@ -423,7 +423,26 @@ function getListoLecionoj($kurso,$leciono) {
 		}
 		echo "<li id='lec".sprintf('%02d',$row["numero"])."' class='".$classe."'><a href='".$row["retpagxo"]."'>".$row["numero"]."</a></li>";
 	}
-	echo "<li id='lexique' class='nova'><a href='vocabula.php'>lexique</a></li>";
+	if ($kurso=='GR') {
+		if ($leciono==90) {
+			echo "<li id='konsiloj' class='nuna'><a href='konsiloj.php'>konsiloj</a></li>";
+		} else {
+			echo "<li id='konsiloj' class='nova'><a href='konsiloj.php'>konsiloj</a></li>";
+		}
+	}
+	if ($leciono==99) {
+		if ($kurso=='GR') {
+			echo "<li id='lexique' class='nuna'><a href='vocabula.php'>vortlisto</a></li>";
+		} else {
+			echo "<li id='lexique' class='nuna'><a href='vocabula.php'>lexique</a></li>";
+		}
+	} else {
+		if ($kurso=='GR') {
+			echo "<li id='lexique' class='nova'><a href='vocabula.php'>vortlisto</a></li>";
+		} else {
+			echo "<li id='lexique' class='nova'><a href='vocabula.php'>lexique</a></li>";
+		}
+	}
 	echo "</div>";
 	echo "</header>";
 	

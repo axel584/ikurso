@@ -279,12 +279,296 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
+			
+			<div class="row">
+				<div class="col s12">
+					<div class="card-panel blue lighten-5">
+						En tiu ĉapitro, estas du malsamaj rakontoj de <i>Lasu min paroli plu !</i>.<br>
+						<a href="#unua">Silentu, enaj voĉoj!</a><br>
+						<a href="#dua">Timiga diro</a>
+					</div>
+				</div>
+			</div>
+
+			<a id="unua" class="scrollspy"></a>
+			<h3>Silentu, enaj voĉoj!</h3>
+			
+			<p>Mi kuŝis en la lito, en mia kara, bone varma lito. La suno jam estis
+			iom alta kaj ĝia lumo bele plenigis la ĉambron. La apenaŭ fermita
+			fenestro enlasis malvarmetan aeron. Mi pensis: nun estas tempo
+			ellitiĝi. Sed mi sentis min tiel bone en la lito! «Ĉu vere», mi
+			diris al mi, «Ĉu vere mi devas ellitiĝi tuj?» Ena voĉo respondis,
+			tute mallaŭte: «Ne. Ĝoju pri la ŝatinda kuŝa pozicio, pri la
+			feliĉiga enlita situacio, restu iom pli longe. Nenio ja urĝas».</p>
+			<p>
+			Mi tre kontentis pri tiu senvoĉa voĉo, kiu tiel amike parolis al mi,
+			en mi. Sed mi apenaŭ decidis fordoni min al la feliĉo sekvi la
+			amindan proponon de tiu en-kora voĉeto, jen alia ena voĉo ekparolis
+			en mia kapo, silente, kvankam kvazaŭ aŭdeble.</p>
+			<p>
+			Ĝi diris: «Vi devas ellitiĝi. Vi ne rajtas agi malkuraĝe. Laboro
+			atendas vin. Kaj vi ne povas fari ĝin enlite. Vi devas kuri el via
+			domo al via oficejo. Kuraĝon, amiko, el la lito elmovu vin. Kaj vi
+			sentos la feliĉon de la homo, kiu faris sian devon, kvankam liaj plej
+			malaltaj emoj provis irigi lin al alia direkto, al la malsaĝa direkto
+			de vivo tro facila, al la facila direkto de malkuraĝo».</p>
+			<p>
+			Estis ĝene aŭdi du voĉojn. Kiam oni aŭdas du malsamajn voĉojn,
+			kiuj diras malsamajn aferojn, eĉ se ne tre laŭte, ĉio
+			intermiksiĝas, kaj ne estas facile sekvi la interparolon, ĉu?</p>
+			<p>
+			Esperante eligi min el ilia interbatado, mi turnis min en la lito, kaj
+			provis endormiĝi.</p>
+			<p>
+			Sed la ĝena afero, koncerne provojn endormiĝi, estas, ke ili ne
+			estas facilaj. Mi ne scias, ĉu mi estas normala, sed ĉe mi provado
+			endormiĝi neniam sukcesas. Kiam mi enlitigas, nokte, mi endormiĝas,
+			sed neniam ĉar mi provis. Nur ĉar mi enlitiĝis kaj estis laca, kaj
+			pensis pri nenio plu. Mi devis fari nenion por dormi. Dormo venis mem.</p>
+			<p>
+			Kiam mi provas kaj provadas, ripetante al mi: «Nun mi provu dormi, nun
+			mi pensu pri nenio, nun mi dormu», mi restas maldorma la tutan tempon,
+			kaj mi pli kaj pli sentas lacecon, sed bedaŭrinde ne dormigan
+			lacecon.</p>
+			<p>
+			Min do turninte kaj returninte kaj rereturninte en la lito, mi povis
+			nur diri al mi, ke mi ne sukcesas trovi la deziratan dormemon. Kaj jen
+			ena voĉeto denove alparolis min:</p>
+			<p>
+			«Vi ne deziras dormi», ĝi diris — kaj ĝi sonis, kvazaŭ ĝi min
+			malŝatus — «vi ne deziras dormi. Vi jam dormis sufiĉe. Vi tute ne
+			estas laca. Vi nur deziras malkuraĝe resti en la lito por la plezuro
+			senti, ke vi faras nenion, dum ekstere la plimulto el la homoj laboras
+			kaj laciĝas laborante».</p>
+			<p>
+			La voĉo pravis. Mi ne deziris dormi. Eble iom dormeti, jes ja, sed
+			sufiĉe maldorme, se vi komprenas min, por senti la plezuron kuŝi en
+			bona varma lito, en ĉambro sunluma, farante nenion, nur lasante la
+			pensojn kaj imagaĵojn sekvi unu la alian, duone konscia, ke tio estas
+			libereco.</p>
+			<p>
+			«La grandeco de la homo kuŝas en libereco», mia patro kutimis diri.</p>
+			<p>
+			Nu, mia patro estis bona homo. Lia bonkoreco estis konata kaj
+			priparolata de la tuta urbeto, kie ni vivis dum mia infaneco. Kaj lia
+			ĉiama praveco ne estis malpli konata. Mia patro ŝatis prikanti la
+			bonecon de la homa libereco. Li instruis al ni ami liberecon.</p>
+			<p>
+			Ĉion ĉi mi respondis al la ena voĉeto, kiu provis ellitigi min.
+			«Dum mi kuŝas en la lito kaj nenion faras», mi diris al ĝi, «mi
+			estas libera, kaj mia patro instruis al mi alt-konsideri liberecon».</p>
+			<p>
+			Sed — la diablo eble scias kial, mi ne — tiu voĉeto ne estis facile
+			kontentigebla. «Vi vekiĝis antaŭ du horoj», ĝi diris. «La suna
+			lumo, enirante tra la fenestro en la dormoĉambron, vekis vin jam
+			antaŭ du horoj. Jam du horojn vi kuŝas, farante nenion. Senkuraĝulo! 
+			Mallaborema knabo! Vi estas viro, sed vi agas infane. Estas
+			priplorinde vidi vin. Vi min senesperigas. Por multegaj homoj, vivo
+			estas laboro, kaj vi emas nur ludi kaj kanti, kaj lasi la aliajn
+			laboradi por via komforto».</p>
+			<p>
+			Sed feliĉe la alia voĉeto intervenis: «Kial vi lasas tiun elparoli
+			similajn vortojn stultajn, kaj, krome, malĝojigajn?» ĝi rimarkigis
+			al mi. «Silentigu ĝin. Tiu voĉo ne estas aŭdinda. Ĝi malŝatas
+			liberecon, ĝi do malŝatas vian patron, kiu tiom ŝatis liberecon.
+			Ĉu oni ne instruis al vi, ke oni devas ami siajn patron kaj patrinon
+			? Ami ilin, memori pri ili? Pensu pri la tempo, kiam vi estis tute
+			malgranda, eta-eta infaneto, kaj kuŝis en la brakoj de via patrino.
+			Ĉu ŝi vekis vin, se vi dormis? Tute ne. Ŝi agis precize por ke vi
+			ne vekiĝu, sed dormu plu trankvile. Ĉu vi memoras, kiel feliĉe
+			estis, kiam vi libertempis sur la montoj, promenis en la kamparo,
+			ludis kun aliaj infanoj en la montodomo, vivis en tiu pura montara
+			aero, kuris sur la rokoj, kantis tute laŭte...? Ĉu iu kriis al vi,
+			ke tio estas malbona vivo? Ĉu via patro aŭ via patrino aŭ iu alia
+			kriis al vi, ke vi iru labori? Vi vivis libere tiutempe. Kaj libereco
+			estas feliĉiga».</p>
+			<p>
+			Sed la alia voĉo rebatis: «Kiel malsincere vi parolas! Tio, kion vi
+			diras, okazadis nur dum la libertempo. Vi forgesas, kiel estis, kiam
+			vi iris al la lernejo. Via patrino vekis vin tiam. Kaj, vole nevole,
+			vi ellitiĝis por iri al la lernejo, ofte por kuri al la lernejo, ĉar
+			normale marŝi ne sufiĉis por alveni ĝustatempe, ĉar jam tiuepoke
+			vi estis senkuraĝulo ema resti tro longe en la lito».</p>
+			<p>
+			Vere, tiuj du voĉoj estis ĝenaj. Ambaŭ voĉoj ĝenis, kvankam,
+			verdire, unu pli ol la alia. Mi ne sciis, kion fari, por silentigi
+			ilin. Ekdormi estus bona maniero eliĝi el la ĝena situacio, sed,
+			kiel mi jam diris, mi ne sukcesis. Mi do fine ellitiĝis. La penso pri
+			taso da bona varma kafo antaŭplezurigis min.</p>
+			<p>
+			Mi iris al la fenestro, rigardis tra ĝi al la suno, al la kampoj, al
+			la montoj, kiuj staris malproksime, altaj kaj belaj. La naturo
+			montriĝis tiel ŝatinda, ke mi sentis emon laŭte kanti dankokanton
+			pri ĝi, aŭ krii al ĝi mian ĝojon vivi en la kamparo, ne en
+			homplena urbego.</p>
+			<p>
+			Mi rigardis, kioma horo estas, kun iom da antaŭtimo, ke eble mi ne
+			sufiĉe atentis la horon, dum mi kuŝis enlite kaj lasis la pensojn
+			sendirekte promenadi. Mi subite min demandis, ĉu mi havos la tempon
+			trinki la varman kafon, al kiu mi nun soifis, aŭ ĉu mi devos kuri
+			kiel stultulo por alveni ĝustatempe al la oficejo. Jes, kun
+			antaŭtimo mi ekrigardis la horon kaj vidis, ke — diable! — la tempo
+			forkuris pli rapide ol mi imagis. Mi nun devos ĉion fari kun ega
+			rapideco, forgesi pri la bona varma kafo, kaj tuj kuri el la domo por
+			alveni al la oficejo en tempo plej mallonga.</p>
+			<p>
+			Sed subite mi ekmemoris. «Kio okazas al mi?» mi laŭte kriis. «Oni ne
+			laboras ĉi-tage! La oficejo estas fermita. Nun estas sabato<a href='#notoj'>[1]</a>!»</p>
+		
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Sabato</span> : la tagoj de la semajno estas: lundo, mardo, merkredo,
+				ĵaŭdo, vendredo, sabato kaj dimanĉo. Dimanĉo estas kutime senlabora
+				tago. Krome, en multaj lokoj, oficistoj ne laboras sabate.</li>
+			</ol>
+
+			<a id="dua" class="scrollspy"></a>
+			<h3>Timiga diro</h3>
+			
+			<p>Estis priplorinda travivaĵo. Vi scias, ke mi decidis diri al miaj
+			infanoj, ke mi foriros. Kiam mi decidis, mi tute ne imagis, ke estos
+			tiel malfacile. Fakte, en la momento, kiam mi volis iri paroli al ili,
+			mi konsciiĝis, ke mi ne povas. Jen venis la horo iri al iliaj
+			ĉambroj por informi ilin, kaj mi sentis min tiel malbone, ke mi
+			ekploretis. Mia tuta kuraĝo estis for.</p>
+			<p>
+			Komprenu min. Ĉu eblas al homo normalkora aliri siajn infanojn kaj
+			diri: «Mi havas novaĵon por vi. Baldaŭ mi foriros. Baldaŭ via patro
+			forlasos ĉi tiun domon por ĉiam...» Kiel oni povas tion diri al
+			infanoj, kiujn oni amas ?</p>
+			<p>
+			Kaj tamen mi devis. La afero estis decidita. Mi devis ĝin fari. Ne
+			estis alia vojo, ĉu ? Mi provis plikuraĝigi min, trovi en mi fortojn
+			novajn, per volpovo havigi al mi la forton superi miajn sentojn de
+			timo kaj malespero, por fari mian devon.</p>
+			<p>
+			Ne estis facile. Sed mi havis la senton, ke iom post iom la dezirata
+			forto envenas en min.</p>
+			<p>
+			Mi komence parolos al la knabino, mi decidis. Ŝi estis en sia
+			ĉambro, farante iun laboron por la lernejo. Ŝi rigardis min per
+			miroplenaj okuloj. Tute certe ŝi sentis, ke io estas nenormala.
+			Neniam mi havas tian esprimon, kiam mi iras diri ion al ŝi.</p>
+			<p>
+			La tuta situacio iĝis min plejpleje zorga. Tamen mi ne povis eligi
+			min el ĝi nun. Mi aliris ŝin. «Klara», mi diris, «mi... mi devas
+			informi vin pri io... Malĝojiga novaĵo, tre malĝojiga».</p>
+			<p>
+			Ŝia vizaĝo aliiĝis: mira antaŭ unu momento, ĝi nun fariĝis
+			zorga. Mi ne scias, ĉu ŝi atendis ion similan, aŭ ĉu miaj vortoj
+			estis tute neatenditaj por ŝi. Ŝia vizaĝo ekesprimis maltrankvilan
+			atenton.</p>
+			<p>
+			«Vi scias... Certe vi rimarkis, ke via patrino kaj mi... nu... nia
+			rilatado ne estas bona. Ni... Kiel diri ?... Ni ne plu sukcesas rilati
+			ame. Ni... Estas malfacile por unu vivi kun la alia, tagon post tago,
+			horon post horo, minuton post minuto. Via patrino estas tre bona
+			patrino, helpema, bonkora, klarpensa. Iumaniere mi plu amas ŝin. Sed
+			kunvivi en la sama domo ne plu estas eble. Ni decidis, ke mi
+			foriros... Ne timu, mi revenos vidi vin, ludi kun vi, paroli kun vi.
+			Kiel eble plej ofte. Sed mi vivos en alia domo».</p>
+			<p>
+			Ŝi rigardis min. Mi sentis min senkorulo seniganta hometon de la plej
+			ŝatata havaĵo.</p>
+			<p>
+			«Se vi kaj patrino tion decidis...» Ŝi komencis, kaj estis io tre
+			malĝoja en ŝia voĉo. Mi rimarkis, ke ŝi emas plori, sed kun granda
+			malfacilo sukcesas superi la ploremon. Ŝi aldonis nur: «Nu, estas
+			tiel». Kaj post ekrigardo al mi, en kiu nek malamo, nek timo vidiĝis,
+			sed nur malfeliĉo, ŝi el sia ĉambro eliris, kaj tuj poste el la
+			domo.</p>
+			<p>
+			Mi sentis min laca, ege laca. Kaj mi faris nur duonon de la devo ! Mi
+			serĉis Alanon, la knabon. Mi pli antaŭtimis ĉi tiun intervidon,
+			ĉar Alano estas pli juna kaj pli sentema. Ankaŭ pli malkaŝema, pli
+			ema sin esprimi.</p>
+			<p>
+			Kiam mi aliris lin, li ludis per siaj etaj aŭtoj. Alano havas
+			specialan ŝaton al tiuj malgrandaj veturiloj. Li oftege ludas per
+			ili. Li okazigas al ili plej neimageblajn aventurojn.</p>
+			<p>
+			Mi decidis fini la dolorigan momenton kiel eble plej tuje. «Mi venas
+			sciigi ion tre gravan al vi», mi diris per voĉo plej serioza. La
+			veturiletoj tuj haltis, kaj Alano direktis al mi siajn belajn bluajn
+			okulojn, tiom plenajn de trankvila amo, ke mia koro ekdoloris. Li
+			havas al mi grandegan amon. Mi estas por li la Patro kun granda P<a href='#notoj'>[1]</a>.
+			Patro estas, liapense, plej aminda fortulo: ulo kuraĝega, havanta la
+			povon ĉiam ĉion superforti.</p>
+			<p>
+			Kaj nun mi batfaligos tiun manieron min vidi. Miaj vortoj estos bato,
+			post kiu nenio plu restos el la imago pri mi. Jes ja, tiu maniero min
+			vidi estas pure imaga, ĝi ne estas ĝusta. Mi estas fakte nur simpla
+			homo, kun fortoj kaj malfortoj, ne la grandegulo, kiun la knabo
+			imagas. Sed ĉu estas bone, ke per unu bato, per unu timiga bato, mi
+			faru, ke tiu imagata, sed amata fortulo, subite perdu la ekziston ? Ĉu
+			li ne estas tro malforta por supervivi tian baton ? Ĉu post tiu falo
+			li povos restariĝi ? Kaj tamen mi devis paroli.</p>
+			<p>
+			Ree, mi kunigis la tuton de miaj troveblaj fortoj, kaj ekparolis:
+			«Alano, mi baldaŭ foriros. Mi ne plu vivos kun vi ĉi tie. Mi ne plu
+			vivos ĉi-dome».<br>
+			La knabo min rigardis kun hezita esprimo.</p>
+			<p>
+			Kaj li ekridis.</p>
+			<p>
+			Mi atendis ion ajn, sed ne tion. Li ne akceptis min serioze ! Por li,
+			patro estas tiel klara, evidenta, neforigebla duono de amata paro, ke
+			tiu duono ne povus serioze foriri, lasante la alian duonon sola. Por
+			li, evidente, paro estas tuto, paro estas unuo, ne du aĵoj, kiujn
+			eblas malkunigi. Ke mi foriru, tio estas tute simple neebla. Tiu diro
+			de la patro povis esti nur luda.</p>
+			<p>
+			Tamen mi devis komprenigi al li la veron. Baldaŭ mi ne plu estos en
+			la domo. Baldaŭ mi havos mian vivon aliloke, for de lia patrino, de
+			Klara, de li.</p>
+			<p>
+			«Alano», mi rekomencis, kaj mi provis igi mian voĉon kiel eble plej
+			senrida. «Alano, mi ne ridas, ĉi tio ne estas ludo. Mi komprenas, ke
+			vi ne kredis min tuj, ĉar vi tutforte esperas, ke mi ne diris la
+			veron. Sed estas vere, Alano, mi foriros. Vi restos ĉi tie kun
+			patrino kaj Klara. Kaj mi ne plu vivos kun vi. Mi...»</p>
+			<p>
+			Li sentis nun, ke ĉi tio ne estas imaga rakonto, ke mi diras la puran
+			veron. Sed li ne povis akcepti ĝin. Li rigardis min. Li subite ege
+			paliĝis. Li iĝis tiel eta, tiel malforta, tiel senhelpa, ke mi
+			sentis, kvazaŭ la tuta ĉambro turniĝus, kaj mi apenaŭ ne svenis.</p>
+			<p>
+			«Mi mortigis lin», mi pensis, kaj tiu penso, kiom ajn neakceptebla,
+			restadis dolore en mia kapo. «Mi mortigis lian koron, lian ĝojon,
+			eble lian povon ami kaj feliĉi. Mi estas la mortigisto de mia knabo».
+			En unu minuto, ĉio fariĝis nekredeble malvarma en mi.</p>
+			<p>
+			Alano ekkriis. Li elmetis siajn etajn brakojn, siajn etajn manojn,
+			batis min kun fortega, longa, nehoma krio, kaj post kelkaj ekbatoj al
+			mi, forkuris ploregante.</p>
+			<p>
+			Mi staris tie, senpensa, sensenta. Mi ne imagis, ke eblas porti tian
+			pezon de malfeliĉo. Mi sentis min la plej malaminda dolorigisto en la
+			mondo. Mi pensis pri Diana, la virino, kun kiu mi deziris kunvivi. Por
+			Diana mi deziris forlasi tiujn du belegajn, sanegajn infanojn kaj
+			ilian patrinon. Sanegajn ? Jes, ĝis nun. Sed ĉu ili povos resti same
+			sanaj post tia videble preskaŭ mortiga bato ?</p>
+			<p>
+			Ĉu mi perdis la saĝon, mi demandis al mi. Ĉu Diana povas doni al mi
+			veran feliĉon ? Aŭ ĉu por feliĉo nur imagita mi nun malfaras unubate
+			feliĉon malrapide, iom post iom kunmetitan ?</p>
+			<p>
+			Mi ne plu sciis, kiu mi estas, kion mi faru, kien direktiĝas mia
+			vivovojo. «Ĉu vere tion mi volas ?» mi demandis al mi. Sed de nenie
+			venis respondo.</p>			
+			
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">diru</span> : «po».</li>
+			</ol>
 
 		<?php 
-		} // fin section 5
+		} // fin section 6
 		?>
 
 		</section>

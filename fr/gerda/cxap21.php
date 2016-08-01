@@ -231,9 +231,201 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
+			<div class="row">
+				<div class="col s12">
+					<div class="card-panel blue lighten-5">
+						En tiu ĉapitro, estas du malsamaj rakontoj de <i>Lasu min paroli plu !</i>.<br>
+						<a href="#unua">Ho bela naskiĝurbo!</a><br>
+						<a href="#dua">Adiaŭ lando amata!</a>
+					</div>
+				</div>
+			</div>
+
+			<a id="unua" class="scrollspy"></a>
+			<h3>Ho bela naskiĝurbo!</h3>
+		
+			<p>Rigardu! Ĉi tie mi naskiĝis. Ĉu ne bela loko? Mi dubas, ĉu
+			ekzistas io simila aliloke en la mondo. Ĉu la montoj ne estas
+			nekredeble belaj? Ĉu vi konas pli mirindan vidaĵon? Rigardu la
+			urbeton, kun ĝiaj malnovaj domoj kaj ĝiaj mallarĝaj stratoj, kiuj
+			turniĝas serpente, ĉu vi ie ajn vidis ion similan? Rigardu tiujn
+			malnovajn ŝtonmurojn. Ne ofte oni ankoraŭ vidas tiel perfektan
+			urbomuregon. La tuta urbo estas plena je trezoroj multjarcentaj. Mi
+			dubas, ĉu ilia valoro estas konata. Sed certe ĝi estas tre alta.</p>
+			
+			<p>La urbodomo<a href="#notoj">[1]</a> estas mirinda artaĵo. Vi certe jam vidis fotojn de
+			ĝi, ĉu ne? Multaj venas al ĉi tiu urbeto nur por rigardi la
+			urbodomon kaj foti ĝin. Se vi havas bonan fotoaparaton, ni iros tien,
+			kaj mi indikos al vi, de kiu angulo ĝi aspektas plej bele.</p>
+			
+			<p>Fakte, multaj el tiuj mallarĝaj stratoj ne estas tre puraj, sed tio
+			ne ĝenos vin, ĉu?</p>
+			
+			<p>Mia frato volas fari libron pri nia naskiĝurbo. Li ankoraŭ vivas ĉi
+			tie. Mi foriris antaŭ longe, tuj post kiam niaj gepatroj mortis kaj
+			oni vendis la magazenon. Sed mia frato restis plu.</p>
+			
+			<p>Ĉu vi sentas la harmonion de ĉi tiu loko? Bedaŭrinde, la suno
+			ankoraŭ ne montriĝis, ĉar la lumo nun ne estas tute kontentiga por
+			foti.</p>
+			
+			<p>Via fratino foje venis ĉi tien, ĉu ne? Ŝi venis kun iu muzika
+			societo, se mi bone memoras. Mi tre ŝatas vian fratinon, vian plej
+			junan fratinon, almenaŭ. La alian mi ne konas. Sed via plej juna
+			fratino estas tre kara al mi. Ŝi estas tiel dolĉa! Dolĉa, harmonia
+			vizaĝo, kaj belega voĉo. Ne mirige, ke ŝi ludas muzikon. Estas
+			bedaŭrinde, ke ŝi estas tiel... kiel diri?... ne timema, sed...
+			ne-sinmontrema. Ŝi parolas tiel mallaŭte, ke oni sentas, kvazaŭ ŝi
+			timus, ke oni rimarkos ŝian ĉeeston. Kial bela knabino kiel ŝi
+			timas, se oni rigardas ŝin?</p>
+			
+			<p>Via fratino lernis muzikon eksterlande, ĉu ne? Mi ne memoras, en kiu
+			lando. Kaj ŝi iris al multaj diversaj landoj dank' al sia muziko.
+			Devas esti plaĉe, kaj interese, iri de lando al lando kun
+			muzikistaro. Sed eble tiu ĉiama translokiĝo estas laciga.</p>
+			
+			<p>Nun, se vi havas ankoraŭ tempon, mi kondukos vin al la alia flanko de
+			la urbo. Multaj malnovaj domoj estas vidindaj tiuflanke. Ĉi-flanke
+			estas bone por havi plenan ideon pri la urbo, ĉar ni troviĝas
+			sufiĉe alte por havi bonan rigardon al la tuto. Sed estas malpli da
+			vidindaĵoj ĉi-flanke. La plej vidindaj aferoj troviĝas trans tiu
+			larĝa strato, kiun vi vidas dekstre. Tie ja komenciĝas la malnova
+			urbo.</p>
+			
+			<p>Ĉu vi scias, ke oni daŭre esploras serĉe al malnovaĵoj ĉi-urbe?
+			Sub la monteto, sur kiu ni staras, oni trovis multajn valorajn
+			objektojn.</p>
+			
+			<p>La historiistoj ne interkonsentas inter si pri diversaj aspektoj de la
+			urba historio. Sed oni malkovris postrestaĵojn el muroj kaj domoj ĉi
+			tie ene de la monteto. Oni eĉ trovis meblojn, laborilojn kaj
+			diversajn objektojn, ekzemple pecojn de boteloj, tie ĉi, precize sub
+			la loko, kie ni nun staras.</p>
+			
+			<p>Oni kredas, ke dum persekutoj, homoj venis vivi ĉi tie sube. Antaŭ
+			kelkaj jarcentoj, la ŝtato persekutis multajn pro ilia religio. Se la
+			afero interesas vin, mi donos al vi libron pri tiu persekutado.
+			Teruraj aferoj okazis. Homa vivo ne plu havis valoron por la tiuepokaj
+			aŭtoritatoj. Ili mortigis kaj suferigis homojn sen eĉ plej eta
+			kortuŝo. La popolo terure suferis.</p>
+			
+			<p>Nu, tiel estas la vivo, ĉu ne? Ekzistas personoj, kiuj bedaŭras la
+			malnovan tempon, la pasintajn epokojn. Mi ne. La vivo estas pli bona
+			nun, almenaŭ por ni ĉi tie, ĉar ni scias, ke en la resto de la
+			mondo homa persono ne ĉiam estas konsiderata kiel la valora estaĵo,
+			kiu ĝi estas, aŭ devus esti, laŭ mia opinio.</p>
+			
+			<p>Ĉu vi sufiĉe rigardis la vidaĵon? Bone. Ni do povas iri al la alia
+			flanko, kie ni povos vidi de proksime tiujn malnovajn domojn. Venu. Mi
+			kondukos vin. Mi estas certa, ke tiu malnova urbo ege plaĉos al vi.</p>
+			
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Urbodomo</span> : domo, kie troviĝas la ĉefaj urb-administraj oficejoj.</li>
+			</ol>
+
+			<a id="dua" class="scrollspy"></a>
+			<h3>Adiaŭ lando amata!</h3>
+		
+			<p>Adiaŭ, lando de mia naskiĝo ! Mi forveturas. Mi ne plu manĝos viajn
+			sensimilajn kolbasojn. Ne plu okazos, ke mi forgesos la zorgojn,
+			perdante iom post iom la konscion pro via tro forta brando, kaj pro
+			viaj troaj trinkotradicioj.</p>
+		
+			<p>Mi ne plu legos viajn librojn multvalorajn. Mi ne plu baniĝos en via
+			kolora sed harmonia atmosfero. Mi ne plu sentos la dolĉecon de via
+			religia vivo, ĉeestanta en ĉiu urbo, en ĉiu kampo, en ĉiu domo, en
+			ĉiu plej malgrava, forperdita anguleto de la lando. Mi ne plu aŭdos
+			la kriojn de viaj vendistoj, la plendojn de la aĉetantoj, la
+			diskutojn pri la vera valoro de tio kaj tio ĉi. Mi ne plu vizitos la
+			kunvenojn de la kantosocieto, kaj via muziko ne plu aŭdeblos, kiam mi
+			promenos de strato al strato en la granda novmonda urbego, kien mi nun
+			veturos kaj kie mi sentos min perdita, plia senvalora numero en mondo
+			de senvaloraj numeroj.</p>
+			
+			<p>Adiaŭ, lando de mia juneco! Ĉi tie mi naskiĝis, ĉi tie mi vivis
+			infanecon, ĉi tie mi ekkonis mian unuan amon, ĉi tie mi suferis.</p>
+			
+			<p>Ĉu mi suferas nun? Strange, mi ne povas respondi. Mi scias, ke mi
+			forflugas al nehoma mondo, al lando timiga, kie mono valoras pli ol
+			sentoj, scioj pli ol amo, kaj laboro pli ol ludo. Ili tie altvalorigas
+			pensadon, ne kantadon, amiko diris al mi, kaj li sciis, ĉar li tie
+			estis studento. Mi scias, kion mi forlasas. Mi ne scias, kio atendas
+			min, tie transe.</p>
+			
+			<p>Lastfoje mi rigardas vin, mia popolo! Homoj surstrataj, miaj
+			samlandanoj, mi rigardas vin nun per novaj okuloj. Kiel kolore vi
+			estas vestitaj, kiel ĝoje vi alparolas unu la alian, kiel vive vi
+			ĉiuj aspektas! En tiu lando de laktotrinkantoj, kie mi baldaŭ
+			ekvivos, ĉio estas senkolora, kaj la bruoj pli esprimas furiozon ol
+			feliĉon, laŭ tio, kion mi aŭdis.</p>
+			
+			<p>Ŝtelistoj multas ĉi tie, sed ankaŭ tie, ĉu ne?, kvankam laŭdire
+			ili ne agas same. Tie estas instruitaj ŝtelistoj, kiuj vizitadas la
+			lernejojn dum longaj jaroj kaj scias funkciigi sian kapon. Ĉe ni,
+			ŝtelisto agas ŝance, per rapida faro tute simpla, ĝenerale
+			sukcesas, fojfoje kaptiĝas, nu, ĉiuj ridas, neniam estas dramo. Nur
+			momento en la vivo. Kaj ĉiuj komprenas malriĉecon. Tie ŝtelistoj
+			havas planojn. Ili planas siajn agadojn. Ili eĉ grupiĝas multhome
+			kaj kunordigas la laboron. Imagu al vi! Tie transe, ŝtelistoj nomas
+			sian okupon «laboro»! Kia stranga maniero aranĝi sian vivon! Se
+			ŝteli estas labori, kial ne simple honeste labori?</p>
+			
+			<p>Adiaŭ, ŝtelistoj mialandaj! Kaj adiaŭ ankaŭ al vi, ŝtelema
+			ŝtato! Vi tro malsatas je la mono de l' landanoj. Oni diris, ke tie
+			almenaŭ la ŝtato estas honesta, aŭ preskaŭ honesta. Ni diru:
+			«sufiĉe honesta». Almenaŭ, laŭ miaj informoj, ŝajnas, ke la ĉefa
+			celo de la ŝtatfunkciuloj tie estas io alia ol plenigi siajn poŝojn
+			per la ŝtatana mono. Ne ĉe ni. Adiaŭ ŝtatoficistoj diverstipaj,
+			altaj kaj malaltaj, junaj kaj maljunaj! Mi lasas vin al via tutlanda
+			ŝtelplanado kaj al via subtabla enmanigo de tiom kaj tiom da riĉo,
+			kiu devus servi al la feliĉo de l' popolo, ne al tio, ke vi
+			pligrasiĝu.</p>
+			
+			<p>Adiaŭ, patrolanda kamparo! Mi naskiĝis ĉe vi, ho kampoj
+			maldolĉaj, kaj mi scias, pro kio vi maldolĉas. Min naskis vi,
+			kamparanoj, kaj mi vidis vian suferon, vian nelacigeblan laboradon,
+			sed ankaŭ vian nemortigeblan povon estigi ridon kaj kantadi ĉe plej
+			aĉaj vivkondiĉoj.</p>
+			
+			<p>Adiaŭ, fantomoj, kiujn la montoj naskas ĉi-lande! Oni ne kredas je
+			vi tie, kien mi iras. Oni kredas je scienco kaj je «esploroj plene
+			dokumentitaj». Kaj vi, fantomoj, ridas super la sciencaj esploroj,
+			kiuj neniam kaptas vin. Kaj pro vi, «ili» ne komprenas nin. Kiel tiuj
+			homoj povus kompreni popolon, kiu meze de scienca laboro, sentas, ke
+			fantomo ĉeestas, kaj rimarkas ridete, ke li kredas pli je l' fantomo
+			ol je l' laboro farata? Jes, mi adiaŭas vin, fantomoj, kiuj teruris
+			mian infanecon, kaj tro emis min sekvi ien ajn. Mi forfuĝas al
+			senfantoma lando, kaj vivos fine vivon liberan je via ĝena ĉiama
+			enmiksiĝo.</p>
+			
+			<p>Adiaŭ, naskiĝlando mia! Neniu iam ajn, ie ajn, sukcesis kopii viajn
+			artojn, viajn tradiciojn, vian atmosferon. Nenie troveblas same pura
+			aero, same manĝindaj fruktoj, same veraj amikoj. Vi estas sensimila
+			lando, la plej ŝatinda lando en la mondo, la lando de mia naskiĝo.</p>
+			
+			<p>Kaj tamen mi feliĉe forveturas.</p>
+			
+			<p>Min persekutis via polico. Min ĝenis via ĉiama bezono kontroli, kion
+			mi faras, kion mi diras, kiu min vizitas, kiun mi vizitas, kaj tiom da
+			aliaj detaloj pri mia vivo. Vi tro zorgas pri viaj ŝtatanoj. Vi tro
+			okupiĝas pri la landanaro. Kaj via celo, ho ŝtato, ne estas, ke ni
+			vivu feliĉe, sed ke vi direktadu ĉiun kaj ĉion ĉi-lande.</p>
+			
+			<p>Kiel liber-ama homo povus elporti tian situacion? Kiel oni povas havi
+			dignecon en tiaj kondiĉoj? Ĉu vi ne komprenis, kiom digneco valoras
+			por homo, kiom ĝi necesas, kiom ni bezonas ĝin?</p>
+			
+			<p>Adiaŭ, naskiĝlanda polico, scivolema, kontrolema, komfort-ama polico
+			! Mi forflugas por ĉiam. Multo mankos al mi. Mankos la koloroj, la
+			muziko, la kantoj. Mankos mialingvaj libroj, kiujn mi ne povos tie
+			fore ricevi. Mankos la vizaĝoj, la voĉoj, la ridoj.</p>
+			
+			<p>Sed al mi almenaŭ, ho ŝtata polico, certe ne mankos vi.</p>
 
 		<?php 
 		} // fin section 5

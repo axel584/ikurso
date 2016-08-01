@@ -39,7 +39,7 @@ include "gerdakapo.inc.php";
 			
 			<form method="post" action="<?php echo $vojo;?>fr/taksoLeciono.php">
 				<input type='hidden' name="kurso" value='GR'/>
-				<input type='hidden' name="leciono" value='<?=$numcxap?>'/>
+				<input type='hidden' name="leciono" value='<?=$leciono?>'/>
 				<div class="tasko enketo">
 					<p>Notez l'intérêt que vous avez eu à effectuer la leçon : de 1 (très ennuyeux) à 5 (très amusant) </p>
 					<div class="rating">

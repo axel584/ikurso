@@ -274,9 +274,247 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
+			<div class="row">
+				<div class="col s12">
+					<div class="card-panel blue lighten-5">
+						En tiu ĉapitro, estas du malsamaj rakontoj de <i>Lasu min paroli plu !</i>.<br>
+						<a href="#unua">Literaturo amindas, sed tamen...</a><br>
+						<a href="#dua">La ĝojoj de petveturado</a>
+					</div>
+				</div>
+			</div>
+
+			<a id="unua" class="scrollspy"></a>
+			<h3>Literaturo amindas, sed tamen...</h3>
+		
+			<p>La terura afero, koncerne Eduardon, estas, ke nur literaturo interesas
+			lin. Ĉu vi tion konstatis ? Nur pri literaturo li okupiĝas
+			ĝisfunde. Mi konstatis tion ankoraŭ hieraŭ, kaj mi ne dubas, ke mi
+			rekonstatos ĝin morgaŭ.</p>
+			
+			<p>Kiam mi renkontis lin hieraŭ, lia edzino ĵus rakontis al mi pri tiu
+			grava problemo koncerne la koston de la domo, kiun ili farigas en la
+			apudurba kamparo. Ŝi ĵus parolis al mi tre precize pri la monaj
+			malfacilaĵoj, kiujn ili renkontis. Multaspekta afero, kiun mi
+			plejparte forgesis. Vi certe jam konstatis, ke mi neniam sentas min
+			hejme, kiam oni prezentas al mi pri-monajn konsiderojn, speciale se
+			parolas la edzino de Eduardo, ĉar ŝi emas miksi la faktojn. Ne estis
+			facile sekvi ŝiajn klarigojn.</p>
+			
+			<p>Tamen, unu aferon mi perfekte komprenis, nome, ke por ili la situacio
+			fariĝas de tago al tago pli serioza. La ŝtata institucio, kiu
+			promesis al ili monon — kontraŭ repago nur post jaroj, je tre
+			kontentigaj kondiĉoj — pro mi-ne-scias-kio subite ekdecidis pri
+			novaj kondiĉoj, tiel streĉaj, ke ili ne plu povos akcepti. Krome, la
+			onklino, kiu antaŭ longe promesis, ke kiam ŝi mortos, ŝia tuta
+			riĉo — grandega, laŭdire — estos por ili, lastminute preferis tute
+			malsaman aranĝon kaj decidis doni preskaŭ ĉion al hospitaloj,
+			muzeoj, bibliotekoj kaj similaj institucioj, tiel ke nun, kiam ŝi
+			mortis, ŝia riĉego transiras al nefamilianoj, kaj Eduardo
+			retroviĝas senigita ankaŭ je tiu espero solvi la monproblemon.</p>
+			
+			<p>Sed vi konstatos, se vi renkontos lin, ke tio ne ŝajnas tuŝi lin.
+			Ĉiu alia persono, en similaj kondiĉoj, havus gravajn zorgojn. Ne li.
+			Li paroladis al mi dum proksimume du horoj pri nova libro, kiu ĵus
+			aperis, kaj pri nova plano prezenti en proksimume dumilpaĝa libro la
+			tutan leteraron de iu literatura grandulo, al mi perfekte nekonata.</p>
+			
+			<p>Ĉu vi komprenas tian sintenon? Rimarku, ke tiu sinteno ebligas al li
+			forkuri de la malplaĉa realo, protekti sin kontraŭ doloraj zorgoj,
+			ne studi la fundon de l' problemo. Li tuŝos la fundon de malriĉeco
+			antaŭ ol konstati, ke mon-problemo stariĝas. Oni ĉesas
+			maltrankviliĝi, kiam oni forflugas en nerealecajn konsiderojn pri
+			nerealaĵoj. Kia metodo! Bona por li, verŝajne, sed ne por la
+			edzino. Ŝi portas la tutan pezon de la materiaj zorgoj, de kiuj
+			forkuras la literaturama edzo. Ĉu vi trovas tion ĵusta? Mi ne.</p>
+			
+			<p>Aliflanke, tia li estas de naskiĝo, tia li certe restos ĝismorte. Mi
+			dubas, ĉu li povus fariĝi iom pli praktika, post tiom da jaroj da
+			flugado en la alta spirita aero.</p>
+			
+			<p>«Mi respektas viajn ideojn», li foje diris al mi, «mi respektas viajn
+			sintenojn kaj preferojn, respektu do miajn. Vi estas materi-ama, mi
+			amas studadon kaj esploradon kaj literaturajn ĝojigaĵojn. Vi ĉesis
+			interesiĝi pri libroj tuj, kiam vi eliris el la lernejo. Mi ĉesis
+			okupiĝi pri sporto tiuepoke. Vi estas fortmuskola kaj korpe
+			bonfunkcianta, sed kun malplena kapo. Mi fariĝis sengrasa maldikulo,
+			mi tuj laciĝas, kiam mi faras ian braklaboron, kaj, kvankam mi estas
+			malpeza, mi eĉ ne havas la rapidmovecon de tia ulo, kiel vi, sed mia
+			kapo plenas je belaĵoj, kaj ili donas sunan koloron al mia vivo, eĉ
+			en tempoj de malfacileco».</p>
+			
+			<p>Nu, bone. Li bele parolas. Eduardo ĉiam estis senĉesa parolanto. Li
+			jam montriĝis la plej belvorta el niaj samklasanoj, kiam ni kune
+			lernejis. Sed mi ne ĉesas pensi pri lia kompatinda edzino, kies koron
+			manĝetadas zorgoj pri l' morgaŭo.</p>
+			
+			<p>«Kie ni trovos monon?» ŝi ripete demandas al si. «De kie diable mono
+			venos? La muroj de nia domo jam komencas malrapide altiĝi, sed ni
+			neniam sukcesos pagi ĝin. Kaj mi tiom antaŭĝojis je la ideo vivi en
+			nia familia domo! Havi hejmon en sia domo, kia bela celo! Sed ni ne
+			realigos ĝin. Oni forprenos la domon de ni kaj ĝin vendos, ĉar ni
+			ne povos pagi. Aŭ polico venos, arestos nin, kaj oni ĵetos nin en
+			malliberejon!»</p>
+			
+			<p>Ŝi troigas, evidente. Sed tamen! Imagu al vi! Ŝi timas retroviĝi
+			en malliberejo, kaj li, dume, revas nur pri literaturo kaj dumilpaĝaj
+			libroj! Ĉu ilia para vivo sukcesos supervivi tian streĉiĝon, tian
+			kontraŭecon en la manieroj pensi? Vere, ilia situacio min	maltrankviligas.</p>
+			
+			<p>Mi konstatis, ke ŝi multe maldikiĝis, kaj ke ŝia vizaĝo alprenis
+			aĉan koloron, nesanan. Tiel ŝatinda virineto! Mia koro ŝiriĝis,
+			kiam mi vidis ŝin tiel senhelpa.
+			</p>
+
+			<a id="dua" class="scrollspy"></a>
+			<h3>La ĝojoj de petveturado</h3>
+		
+			<p>Ĉu estas vi, Johana? Kio okazis? Kial vi ne revenis hejmen? Kial
+			vi telefonas tiel malfrue?</p>
+			<p>...</p>
+			
+			<p>Kion? Kiun vi renkontis? Mi ne komprenas. Parolu pli klare, kara,
+			bonvolu. Kio okazis al via voĉo? Mi apenaŭ rekonas ĝin.</p>
+			<p>...</p>
+			
+			<p>En la hospitalo, ĉu? Vi estas en hospitalo! Mi timas. Diru al mi,
+			kio okazis. Kion vi faras en hospitalo?</p>
+			<p>...</p>
+			
+			<p>Kion vi ĵus diris pri aŭto? Mi fakte tre malbone aŭdas vin. La
+			aŭto estas fuŝita? Kies aŭto? Ĉu mia aŭto? Johana! Kion vi
+			faris?</p>
+			<p>...</p>
+			
+			<p>Malfeliĉa hazardo, malfeliĉa hazardo! Kiajn vortojn vi uzas!
+			Ŝajnas al mi, ke vi ne ŝoforis tre atente.</p>
+			<p>...</p>
+			
+			<p>Kion? Ne vi ŝoforis! Sed mi ĉiam diris al vi, ke mi akceptas, ke vi
+			uzu mian aŭton, sed ne ke iu alia ol vi ŝoforu!</p>
+			<p>...</p>
+			
+			<p>Vi mem ne povis! Bela rimarko! Kaj kial diable vi ne povis ŝofori,
+			dum vi lernis direkti aŭton jam antaŭ pluraj jaroj? Ne, Johana.
+			Vere, mi ne komprenas vin.</p>
+			<p>...</p>
+			
+			<p>Brando! Vi trinkis tiom da brando, ke vi ne plu klare vidis! Ĉu
+			tion vi ĵus diris al mi? Kial do vi trinkis tiom da brando? Ili
+			trinkigis vin, ĉu? Sed kiuj estas tiuj «ili»?</p>
+			<p>...</p>
+			
+			<p>Vi ne scias! Vi ne konas ilin! Pli kaj pli bele! Vi renkontis
+			ulojn, kaj trinkis kun ili tiom da brando, ke vi ne plu povis direkti
+			mian aŭton, kaj vi nun telefonas el hospitalo. Vere, mi ne scias,
+			kion pensi. Kion vi ĵus diris? Mortis, ĉu? Kiu mortis?</p>
+			<p>...</p>
+			
+			<p>Li ankoraŭ ne tute mortis, sed estas nun mortanta? Ĉio ĉi estas
+			neimageble serioza. Kiu troviĝis tie, kaj mortis, aŭ mortas?</p>
+			<p>...</p>
+			
+			<p>La aŭto surveturis lin! Johana! Mi perdas la kapon! Vi parolas
+			tiel trankvile! Kion? Ha jes, ili donis trankviligan substancon al
+			vi. Jes, mi scias, kuracistoj estas tiaj. Tuj, kiam okazis io drama,
+			nuntempe, ili havigas al oni trankviligilon. Tial vi parolas tiel
+			strange. Sed kia terura okazaĵo! Vere, mia kapo turniĝas. Rediru al
+			mi — ĉar mi nenion komprenas — kiu ŝoforis, kiam la aŭto
+			surveturis tiun kompatindan sinjoron?</p>
+			<p>...</p>
+			
+			<p>Kion vi diris? La ĉefo de la polico direktis mian aŭtomobilon?</p>
+			<p>...</p>
+			
+			<p>Ne li? La ĉefo de la polico ne estis la homo en la aŭto, sed la
+			homo, sur kiu la veturilo pasis? Kion? Ĉu la mortanto estas la
+			policĉefo? Ho, Johana, ne estas vere, ĉu? Ne, ne! Filino mia,
+			kion diable vi faris?</p>
+			<p>...</p>
+			
+			<p>Ne vi faris! Sed kiu, kiu do? Kiu ŝoforis? Provu paroli pli klare,
+			mi malbone aŭdas.</p>
+			<p>...</p>
+			
+			<p>Nekonato! Sed kiel vi renkontis tiun nekonaton? Kion? Li petveturis
+			? Ha jes, kompreneble, li petveturis! Mi tion imagas perfekte. Li
+			staris apud la vojo signante al pasantaj aŭtoj, ke li deziras veturon.
+			Kaj vi, simplulino, akceptis lin kaj ...</p>
+			<p>...</p>
+			
+			<p>Bela! Li estis tre bela! Jen belega respondo! Johana, ĉu vere vi
+			estas sesjara knabino? Tion oni kredus, aŭdante vin. Bela! Mi
+			parolos al vi pri beleco kiam vi hejmenvenos! Vi aŭdos min, tion mi
+			promesas al vi.</p>
+			<p>...</p>
+			
+			<p>Kaj poste vi haltis por enaŭtigi alian. Kaj tiu havis botelon da...
+			kion vi diras? Biero, ne brando, biero, ĉu? Ha jes! Komence biero.
+			Kaj poste vi trovis brandon! Kie? La sama, ĉu? Tiu dua
+			petveturanto diris, ke li havas ankaŭ brandon, kaj vi... nekredeble!
+			Ĉu vi trinkis en la aŭto?</p>
+			<p>...</p>
+			
+			<p>Ha, feliĉe vi havis la ideon halti por trinki. Kion vi...? Tion mi
+			povas imagi, ke la naturo estis tre bela tiuloke. Ho jes, mi facile
+			prezentas al mi enkape la vidaĵon: vi en bela naturo kun du beluloj,
+			kaj... Kion vi diris?</p>
+			<p>...</p>
+			
+			<p>Nur unu estis bela! Jes, kompreneble. La alia estis nur la
+			homo-kun-biero-kaj-brando. Sed poste, kio okazis?</p>
+			<p>...</p>
+			
+			<p>Kompreneble, vi sentis vin necerta pri vi! Kiel povus esti alie, post
+			tiom da trinkado? Kaj do vi petis tiun alian ŝofori. Sed verŝajne
+			ankaŭ tiu trinkis tro multe, kaj... Terure! Rakontu do precize, kio
+			okazis, dum li direktis la aŭton.</p>
+			<p>...</p>
+			
+			<p>Jes. En kiun urbeton vi eniris? Mi ne komprenis la nomon.</p>
+			<p>...</p>
+			
+			<p>Ha jes, mi vidas, jes, tie. Kaj tuj post la unuaj domoj estas tiu vojo
+			dekstre, kaj...</p>
+			<p>...</p>
+			
+			<p>Kion? Li veturis en la nazon de alia aŭto, kiu alvenis, kaj li
+			sukcesis samtempe surveturi piediranton! Kaj tiu estis la policĉefo
+			! Johana, Johana, mia filino, kiel eblas!</p>
+			<p>...</p>
+			
+			<p>Kion? Ĉu vi diris, ke viaj du petveturantoj sukcesis forkuri, antaŭ
+			ol la polico alvenis? Kaj ĉu vere neniu ilin haltigis? Ĉu oni ne
+			kaptis ilin? Neniu rimarkis! Sed ili estis krimuloj! Almenaŭ tiu,
+			kiu ŝoforis!</p>
+			<p>...</p>
+			
+			<p>Sed vi mem, kial vi nenion diris al la homoj tie? Jes, kompreneble,
+			vi estis kelkmomente nekonscia, kaj dum tiu momento ili perdigis sin.
+			Sed... sed... se tiuj du malaperis, tiam la polico neniam kredos, ke
+			ili entute ekzistas! Ĉu iu ilin vidis?</p>
+			<p>...</p>
+			
+			<p>Ne, kompreneble. Neniu vidis ion ajn. Ĉio okazis tro rapide. Tiuj du
+			junulaĉoj malaperis for, kaj restis sur la strato vi, plena je
+			brando, mortanta policĉefo, kaj du rompaĉitaj, pecigitaj aŭtoj. Kaj
+			sur la aŭto, el kiu oni vidis vin eliri, kiam vi rekonsciiĝis,
+			troviĝas mia numerplato!</p>
+			<p>...</p>
+			
+			<p>Se almenaŭ vi ne estus mia filino, mi povus diri, ke oni ŝtelis mian
+			aŭton, sed kun vi en ĝi...</p>
+			<p>...</p>
+			
+			<p>Silentu, mi petas, Johana. Nenion diru plu. Kaj agu tuj. Jen mia koro
+			reagas strange. Mi sentas doloron. Mi petas vin, telefonu al
+			kuracisto, ke li venu tujtuj al mi. Mi... Mi timas, ke nevole, jes ja,
+			tute certe nevole, sed tamen... mi timas, ke vi mortigis du homojn!
+			Ne plu estas aero ĉi... ĉi tie. M... mi ne p... ne plu po... povas
+			paro... </p>
 
 		<?php 
 		} // fin section 5

@@ -231,9 +231,159 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
+			<h3>Revenis amo, feli&#265;u ni!</h3>
+			
+			<p>Mi devas rakonti al vi. Mi estas tiel feliĉa! Mi retrovis ŝin! Mi
+			revidis ŝin! Kiun? Karletan, kompreneble. Evidente mi parolas pri
+			Karleta. Pri kiu mi parolus? Ĉu ekzistas alia virino en la mondo?
+			Jes, mi revidis ŝin.</p>
+			<p>
+			Ŝi sidis ĉe tablo en trinkejo, sola, antaŭ taso da kafo. Mi soifis,
+			kaj eniris la trinkejon. Mi tuj rimarkis ŝin. Ŝi aspektis kiel
+			persono, kiu atendas iun. Mi min demandis, ĉu mi iru al ŝi, ĉu mi
+			iru sidi ĉe la apuda tablo, aŭ ĉu ĉe pli malproksima. Mi decidis
+			iri iom pli malproksimen. Mi trovis bonan lokon, de kie mi povis
+			facile observi ŝin.</p>
+			<p>
+				Mi volis komence observi ŝian vizaĝon, provi ekscii, laŭ ŝia
+				esprimo, ĉu ŝi feliĉas aŭ ne. Krome, mi deziris ne aliri ŝin tuj,
+				ĉar ŝajnis al mi, ke estas pli saĝe lasi mian koron trankviliĝi
+				antaŭ ol ekrilati kun ŝi.</p>
+			<p>
+			Ĉu vi memoras tiun tagon, tiun dolorigan tagon, kiam ŝi forlasis min
+			? Antaŭ longe tio okazis. Ŝi malkontentis pri mi, pri io, kion mi
+			fuŝe faris. Kaj, malsaĝe, mi malkonsentis pardonpeti pri mia fuŝo.
+			Kiel malsaĝa mi estis! Ŝi pravis, kaj mi ne. Se tiuepoke mi sincere
+			dirus: «Jes, mi mispaŝis. Bonvolu pardoni min. Mi estas fuŝulo. Mi
+			riparos la aferon.», ŝi certe plu restus kun mi, ĉar ŝi trovis min
+			plej aminda. Sed mi malsaĝe volis, ke ŝi konsideru min prava.</p>
+			<p>
+			Ŝi tiam opiniis, ke vivo kun mi ne estos ebla, se mi devas senmanke
+			senti min prava, eĉ kiam mi fuŝe agis kaj estas evidente malprava.
+			Jes, tiam ŝi foriris, lasante min sola, malĝojige sola. Mi sentis
+			min forgesita, forlasita.</p>
+			<p>
+			Kiom mi bedaŭris mian malsaĝan reagon! Sed mia bedaŭro ne helpis.
+			Simpla bedaŭro neniam helpas, ĉu?</p>
+			<p>
+			La vivo iĝis seninteresa por mi. Mi laboris laŭkutime. La ekzisto
+			estis daŭro, ne vivo. Mi eĉ min demandis, ĉu estas iu ajn intereso
+			en daŭrigo de tiu vivo. Se vivo estas senĝoja, senplezura, kial
+			daŭrigi ĝin? La ideo min mortigi envenis en mian kapon, kaj restadis
+			en ĝi dum kelka tempo. Mi hezitis: ĉu plu vivi, aŭ ĉu morti tuj?
+			Kio estas preferinda, kiam la vivo perdis ĉian intereson?</p>
+			<p>
+			Se paroli sincere, mi diru, ke mi timas la morton. Nur ĉar mi ĝin
+			timas, mi forlasis la ideon min mortigi. Mi do daŭrigis mian
+			malfeliĉan ekziston.</p>
+			<p>
+			Kaj jen Karleta trovis alian viron, kaj enamiĝis al li. Mi konis lin.
+			Li nomiĝas Jozefo. Malseriozulo. Fuŝulo. La ideo, ke ŝi emas
+			kunvivi kun simila ulo, dum mi ekzistas, estis... nu... mi ne trovas
+			vortojn por esprimi, kion mi sentis. Mi ne povis porti tiun pezon. Mia
+			koro estis peza. Pli kaj pli peza.</p>
+			<p>
+			Tamen, mia vivo... ne, vivo ne estas ĝusta vorto, tiel vivi ne estas
+			vivi, mi diru: mia ekzistado... tamen, do, mia ekzistado estis
+			seninteresa. Mi provis forgesi ŝin, sed ne povis. Amikoj proponis al
+			mi promenojn, veturadojn, agadojn, teatrovidon, diskutojn,
+			kuntrinkadon. Ili estis tre afablaj. Sed nenio interesis min.</p>
+			<p>
+			Mi eĉ pensis pri tio, ĉu mi mortigu Jozefon. Mian morton mi timas —
+			mi pensis — ne la morton de aliuloj! Ĉu vi trovas min timige
+			malŝatinda? Pardonu, mi nur sinceras pli ol kutime. Jes, komence mi
+			havis tiun ideon. Meti finon al<a href='#notoj'>[1]</a> mia doloro mortigante mian
+			malamikon.</p>
+			<p>
+			Mi malamis lin. Kaj en malamo kuŝas nekredebla forto. Ĉu vi jam
+			sentis tion? Eble vi neniam malamis. Videble, vi estas plej bonkora
+			homo.</p>
+			<p>
+			Mi tamen forlasis la ideon meti finon al la vivo de Jozefo (eble ĉar
+			mi timas la policon!). Mi provis revidi Karletan, sed Jozefo forlasis
+			la urbon, kaj Karleta sekvis lin for. Ŝi trovis alian laboron, ie,
+			kaj mi plu restis same sola.</p>
+			<p>
+			Komence mi pensis: «Ŝi ne rajtas fari tion al mi. Ŝi ne havas tiun
+			rajton. Ŝi devas vivi kun akceptinda viro, saĝa, bonkora, juna.
+			Unuvorte, kun viro kiel mi. Ne kun fuŝulo kiel Jozefo».</p>
+			<p>
+			Sed poste mia pensmaniero aliiĝis. Kion similaj pensoj ja povus
+			alporti al mi? Nenion helpan, nur bedaŭron. Fakte, mi ne pensis
+			prave, ĉu? Ŝi ja rajtas fari el sia vivo, kion ŝi volas. Kaj mi ne
+			havas rajton devigi ŝin min ami. Ŝi rajtas forlasi min, se mi agas
+			malsaĝe. Neniam ni kunigis niajn vivojn antaŭ iu urba aŭ alia
+			aŭtoritato. Mi do havis neniun rajton super ŝi. Tiuj kaj similaj
+			konsideroj helpis min forlasi mian ne-sanan pensovojon, kaj aliri
+			vojon pli bonan.</p>
+			<p>
+			Mi atendis ion ajn, sed ne tiun trinkejan revidon. Kara Karleta! Dum
+			ŝi sidis tie en la angulo, ŝi estis ankoraŭ pli bela, ol kiam mi
+			komence konatiĝis kun ŝi. Sed ŝi aspektis malĝoje.</p>
+			<p>
+			Okazis io eĉ pli neatendita ol la fakto, ke mi revidis ŝin: subite,
+			ŝi turnis la okulojn al mi, min vidis, kaj ekstaris. Ŝi ekpaŝis en
+			mia direkto, ne tre rapide, tiel ke mi havis sufiĉe da tempo por min
+			demandi, kion ŝi diros.</p>
+			<p>
+			Min tuŝis timo. Mi kvazaŭ antaŭsentis, ke doloriga bato falos sur
+			min. Mi timis, ke ŝiaj unuaj vortoj estigos eksplodon de doloraj
+			sentoj en mia kompatinda koro.</p>
+			<p>
+			Sed tute male. Apenaŭ mi povis kredi miajn okulojn: jen ŝi sidis
+			apud mi kaj ekparolis kun larĝa rideto. Ho, tiu rideto! Similan
+			rideton mi neniam vidis. Neniam en mia vivo mi sentis min tiel
+			kortuŝita. Tiu rideto estis mesaĝisto pri baldaŭaj feliĉoj.</p>
+			<p>
+			«Kara Petro!» ŝi diris. «Kiel mi ĝojas vin revidi! Se vi scius,
+			kiel feliĉa mi estas! Oni diris al mi, ke vi forlasis la urbon, kaj
+			jen mi retrovas vin. Ĉu vi ankoraŭ min malamas?»</p>
+			<p>
+			Imagu tion! Ŝi opiniis, ke mi malamas ŝin. Eble mi iomete ŝin
+			malamis, kiam ŝi forlasis min, sed tamen... Mi repensis pri miaj
+			mortig-ideoj; ili koncernis min, kaj poste Jozefon, sed ŝin neniam.</p>
+			<p>
+			«Mi neniam malamis vin», mi respondis, «nur Jozefon».</p>
+			<p>
+			Kaj tiam ŝi rakontis pri Jozefo. Liaj proponoj tute ne estis
+			seriozaj. Tuj kiam li alvenis en tiun alian urbon, li faris similajn
+			proponojn al alia virino, kaj forlasis Karletan. Estis tre dolore al
+			ŝi, ĉar ŝi imagis, ke li estos la viro en ŝia vivo. Sed iom post
+			iom ŝi retrovis sian kortrankvilon. Pli kaj pli ŝi rememoris nian
+			antaŭan amrilaton kiel vere feliĉigan.</p>
+			<p>
+			Ŝi do deziris rerilati kun mi. Sed iu malsaĝulo fuŝ-informis ŝin
+			dirante, ke mi foriris, ke mi forlasis mian laboron, kaj trovis alian
+			malproksime. Li intermiksis mian nomon kun tiu de aliulo, ĉar niaj
+			nomoj intersimilas.</p>
+			<p>
+			Mi klarigis al ŝi la vojon, kiun miaj pensoj kaj sentoj iris dum tiu
+			longa tempo malproksime de ŝi. Krome, mi diris, kiom mi nun konscias
+			mian malsaĝecon. Mi diris, kiom mi bedaŭras, ke mi lasis tro altan
+			opinion pri mi mem fuŝi belegan amon.</p>
+			<p>
+			Tiumomente ni komencis ridi unu kun la alia. Kiom ni ridis! Ni ne
+			vere scias, kial. Nur, ĉar estis tiel bone retroviĝi kune, kaj
+			rimarki, ke ni tuj povas tiel forte reami unu la alian.</p>
+			<p>
+			Ni parolis pri ĉio kaj nenio, ĉiam ridante. Ni rakontis niajn vivojn
+			unu al la alia. Ni estis ĝojaj, neimageble ĝojaj. Mi metis mian
+			manon sur ŝian manon, proksimigis mian kapon al ŝia kapo. Niaj koroj
+			batis aŭdeble, aŭ apenaŭ malpli ol aŭdeble. Ni sentis kuniĝon. Ni
+			forlasis la kafejon, promenis en la urbo, ĉiam ride diskutante, ĉiam
+			kun ĝojplenaj vizaĝoj. Ni iris al mia cambro. Ni...</p>
+			<p>
+			Nu, nu, nu, nu. Ĉu vi scias, kio estas feliĉo? Vere, amiko, se vi
+			povus imagi...</p>
+
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Meti finon al <em>x</em></span> : fari, ke x finiĝu; igi, ke <em>x</em> ne plu ekzistu.</li>
+			</ol>
 
 		<?php 
 		} // fin section 5

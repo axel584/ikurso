@@ -81,26 +81,26 @@ include "gerdakapo.inc.php";
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap12.php?section=5">12. Jen vi ree trinkas!</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap13.php?section=5">13. Revenis amo, feliĉu ni!</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap14.php?section=5">14a. Silentu, enaj voĉoj</a></li>
-							<li><a href="<?php echo $vojo;?>fr/gerda/cxap14b.php?section=5">14b. Timiga diro</a></li>
+							<li><a href="<?php echo $vojo;?>fr/gerda/cxap14.php?section=5#dua">14b. Timiga diro</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap15.php?section=5">15a. Mistero en papervendejo</a></li>
-							<li><a href="<?php echo $vojo;?>fr/gerda/cxap15b.php?section=5">15b. Du raportoj pri vendado</a></li>
+							<li><a href="<?php echo $vojo;?>fr/gerda/cxap15.php?section=5#dua">15b. Du raportoj pri vendado</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap16.php?section=5">16a. La vesperfuŝulo</a></li>
-							<li><a href="<?php echo $vojo;?>fr/gerda/cxap16b.php?section=5">16b. Ĉu malĝojon memori, aŭ imagi feliĉon ?</a></li>
+							<li><a href="<?php echo $vojo;?>fr/gerda/cxap16.php?section=5#dua">16b. Ĉu malĝojon memori, aŭ imagi feliĉon ?</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap17.php?section=5">17a. Edzokaptaj inoj</a></li>
-							<li><a href="<?php echo $vojo;?>fr/gerda/cxap17b.php?section=5">17b. Instruista amo</a></li>
+							<li><a href="<?php echo $vojo;?>fr/gerda/cxap17.php?section=5#dua">17b. Instruista amo</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap18.php?section=5">18a. La letersoifa patrino</a></li>
-							<li><a href="<?php echo $vojo;?>fr/gerda/cxap18b.php?section=5">18b. Mi atendas gravan leteron</a></li>
+							<li><a href="<?php echo $vojo;?>fr/gerda/cxap18.php?section=5#dua">18b. Mi atendas gravan leteron</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap19.php?section=5">19. Dormu trankvile!</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap20.php?section=5">20a. La fakulo-instruisto venis de malproksime</a></li>
-							<li><a href="<?php echo $vojo;?>fr/gerda/cxap20b.php?section=5">20b. Troa scivolo kondukas morten</a></li>
+							<li><a href="<?php echo $vojo;?>fr/gerda/cxap20.php?section=5#dua">20b. Troa scivolo kondukas morten</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap21.php?section=5">21a. Ho, bela naskiĝurbo!</a></li>
-							<li><a href="<?php echo $vojo;?>fr/gerda/cxap21b.php?section=5">21b. Adiaŭ, lando amata!</a></li>
+							<li><a href="<?php echo $vojo;?>fr/gerda/cxap21.php?section=5#dua">21b. Adiaŭ, lando amata!</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap22.php?section=5">22a. Ek al fora insulo!</a></li>
-							<li><a href="<?php echo $vojo;?>fr/gerda/cxap22b.php?section=5">22b. Skribas malliberulo</a></li>
+							<li><a href="<?php echo $vojo;?>fr/gerda/cxap22.php?section=5#dua">22b. Skribas malliberulo</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap23.php?section=5">23a. Sekreta servo</a></li>
-							<li><a href="<?php echo $vojo;?>fr/gerda/cxap23b.php?section=5">23b. Ameriko, jen mi venas</a></li>
+							<li><a href="<?php echo $vojo;?>fr/gerda/cxap23.php?section=5#dua">23b. Ameriko, jen mi venas</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap24.php?section=5">24a. Literaturo amindas, sed tamen...</a></li>
-							<li><a href="<?php echo $vojo;?>fr/gerda/cxap24b.php?section=5">24b. La ĝojoj de petveturado</a></li>
+							<li><a href="<?php echo $vojo;?>fr/gerda/cxap24.php?section=5#dua">24b. La ĝojoj de petveturado</a></li>
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap25.php?section=5">25. La tri plendoj de S-ro Kursano</a></li>
 						</ul>
 					</div>

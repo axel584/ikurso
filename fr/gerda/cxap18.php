@@ -257,9 +257,284 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
+			<div class="row">
+				<div class="col s12">
+					<div class="card-panel blue lighten-5">
+						En tiu ĉapitro, estas du malsamaj rakontoj de <i>Lasu min paroli plu !</i>.<br>
+						<a href="#unua">La letersoifa patrino</a><br>
+						<a href="#dua">Mi atendas gravan leteron</a>
+					</div>
+				</div>
+			</div>
+			
+			<a id="unua" class="scrollspy"></a>
+			<h3>La letersoifa patrino</h3>
+			
+			<p>Ĉiam estas ege malfacile komenci leteron. Tuj kiam mi havas plumon
+			enmane, miaj ideoj malaperas kun nekredebla rapideco, kaj mi trovas
+			min kun plumo en la mano kaj kun kapo malplena.</p>
+			<p>
+			Kiam mi estis infano, kiom da fojoj mi sentis min «malbona filo», nur
+			pro tio, ke mi neniam skribis leteron al miaj gepatroj, dum mi estis
+			for! Mi ricevadis leterojn plenajn je la dika skribo de mia patrino.
+			La skribo estis dika, ĉar ŝi ĉiam fuŝis siajn plumojn. Mia patrino
+			ja estis forta kampara virino kun fortaj manoj, kiuj rompas ĉion,
+			kion ili tuŝas. Krome, tiuepoke, la plumoj estis aĉe faritaj, kaj
+			fuŝiĝis multe pli rapide ol nun.</p>
+			<p>
+			Kion mi diris? Ha jes, mi ricevis longajn leterojn de mia patrino kaj
+			preskaŭ ne kuraĝis ilin eklegi, tiom mi timis. Mi timis, ĉar mia
+			patrino parolis pri sia sufero. Kaj rakontis kun granda precizeco, ke
+			ŝi suferas pro mi.</p>
+			<p>
+			Jen kian patrinon mi havis. Tiu larĝkorpa, dik-mana, fortabraka
+			kampulino, kiu rompaĉis meblon nur tuŝetante ĝin — mi preskaŭ
+			diris: nur rigardante ĝin — tiu virino, fortiĝinta pro jaroj kaj
+			jaroj da kampa laboro, tiu forta virino suferis, laŭ siaj leteroj,
+			pro eta mi.</p>
+			<p>
+			Mi ne scias kial, ŝi ne elportis mian poŝtan silenton. Ŝi rompis du
+			aŭ tri plumojn, verŝajne ŝiris nevole la paperon, kiun ŝi provis
+			preni el la skribmeblo, sed fine sukcesis skribi dikaplume sian
+			opinion pri mi:</p>
+			<p>
+			«Kara filo». Neniam ŝi uzis mian nomon, verŝajne pro deziro estigi
+			ian malproksimecon inter ŝi kaj mi, aŭ sentigi sian aŭtoritaton.</p>
+			<p>
+			«Kara filo», ŝi skribis. «Jam pasis du semajnoj ekde la tago, kiam vi
+			forlasis la hejmon por iri al via monta libertempo, kaj eĉ ne unufoje
+			vi pensis pri via kompatinda patrino, kiu suferas pro manko de letero
+			de vi. Vi ŝiras mian koron. Ĉu vi ne amas vian patrinon, kiu tiom
+			laboras por vi kaj por viaj fratetoj?</p>
+			<p>
+			«Mi zorgas, zorgas, zorgas. Mi min demandas, ĉu vi malsatas aŭ
+			soifas, ĉu vi manĝas sate fruktojn. Ĉi tie la pomoj komencas
+			apereti. La hejmo estas tiel malplena, kiam vi forestas, ke vi povus
+			almenaŭ skribi letereton al via amanta kaj suferanta patrino. Via
+			patro ne estas apud mi nun, li laboras en la kampoj, sed mi scias, ke
+			li plene konsentas kun mi.</p>
+			<p>
+			«Li neniam sukcesas legi viajn leterojn, pro tiu via maniero skribaĉi
+			nelegeble, sed mi laŭtlegas al li kaj tio lin feliĉigas. Aŭ pli
+			ĝuste mi voĉlegus al li, se mi havus ion por legi, ian skribaĵon de
+			vi, eĉ mallongan.</p>
+			<p>
+			«Ĉu vi forgesis vian promeson? Vi promesis skribi, kiam vi foriris.
+			Mi estas certa, ke vi havas sufiĉe da mono. Ĉu la poŝtoficejo estas
+			malproksima? Nu, tamen, granda knabo kiel vi ne lasas tiajn etajn
+			malfacilaĵojn haltigi lin.</p>
+			<p>
+			«Vi ne forĵetas vian monon en malsaĝajn aĉetojn, ĉu? Vi ne
+			ĵetadas ĝin senpripense al la vendistoj de ĉokolado kaj dolĉaĵoj,
+			espereble. Pensu, kiom multe oni devas labori por ricevi iom da mono.
+			Ne. Certe ne temas pri manko de mono. Eble vi estas laca pro tiuj
+			longaj marŝoj sur etaj malfacilaj montvojoj. Sed ĉu tro laca por
+			skribeti hejmen? Vi ne estas malsana, ĉu? Ne. Se vi malsanus, vi
+			skribus hejmen, eĉ se nur por ke mi faru vian preferatan kukon kaj
+			ĝin sendu al vi.</p>
+			<p>
+			«Mi timas la veron. La vero estas, ke vi ne sufiĉe amas vian
+			patrinon. Ho! Kiom tiu penso suferigas min! Kiel neelporteble estas
+			konscii pri la neamo de filo!</p>
+			<p>
+			«Sed verŝajne vi tamen ametas min. La prava klarigo de via malvolo
+			skribi eble estas, ke vi estas mallaborema. Atentu pri tio, filo mia.
+			Gardu vin de mallaboremo. Ĝi estas la komenco de multaj malbonoj en
+			la vivo. Sed ne forgesu, ke mi bezonas leteron de vi, kiom mi bezonas
+			aeron. Se vi ne skribos, mi mortos...»</p>
+			<p>
+			Kaj tiel plu, kaj tiel plu. Ŝi povis plenigi tiom da papero, kiom
+			troveblis hejme, per sia dika skribo, ripetante la samajn aferojn kun
+			la sama drameco, kiun mi tute ne povis preni serioze.</p>
+			<p>
+			«Faru tion», «Ne faru tion», «Mi suferas pro vi», tiuj tri ideoj
+			kovris la tuton de ŝia leterfarado.</p>
+			<p>
+			Kara patrino! Kiel drame ŝi skribis! Mi suspektas, ke tiu
+			suferpatrina rolo ege plaĉis al ŝi, eĉ se ŝi ne plene tion
+			konsciis. Jen ŝi havis okazon paroli pri sia morto, pri sia sufero,
+			pri mia malboneco, kun io drama en la vortoj, kaj en tiuj momentoj ŝi
+			certe sentis sin reale grava.</p>
+			<p>
+			Kaj tio ĉefmankis al tiu kara persono. Senti sin grava. Ŝi estis
+			bonkora, dolĉa patrino, nekredeble laborema, kun la povo elporti la
+			plej aĉajn aspektojn de la kampara vivo sen perdi sian rideton, sen
+			forĵeti eĉ momente la silentan enan ĝojon, kiu sunradiis sur ŝia
+			vizaĝo.</p>
+			<p>
+			Sed de tempo al tempo ŝi bezonis plendi. Ŝi bezonis momente forĵeti
+			la rolon de la ĉiam feliĉa laboranta kampulino, de la ĉiam rideta
+			patrino, de la edzino perfekta. Ŝiaj leteroj estis ĝusta okazo por
+			tio. Ili ebligis al ŝi malplenigi sian koron de la multegaj
+			neesprimitaj zorgoj, de la mil faktoj maltrankviligaj en tiu
+			malriĉula vivo, terure sendolĉa. Ŝi ne priskribis tiujn priokupojn.
+			Sed la plendan senton ŝi esprimis, kaj la malfeliĉon, pri kiu ŝi ne
+			havis tempon konscii dumtage. Kaj tio faris bonon al ŝi, tute certe.</p>
+			<p>
+			Vidu, kiel elturniĝema mi estas. Jen mi sukcesis certigi al mi, ke mi
+			agis saĝe kaj bonfile ne skribante al mia patrino. Se ja mi skribus,
+			ŝi ne havus tiun — por si sanigan — okazon plorletere plendi.</p>
+			<p>
+			Stranga estas la homa koro, ĉiam ema pravigi sin!</p>
+			<p>
+			Kaj tamen, kiu diros, ke ne troviĝas iom da pravo en tiu ĵus
+			esprimita ideo? Nu, eble ĝi estas iom prava. Sed pri unu alia afero
+			mi estas certa, nome, ke mia konscia deziro neniam estis agi bonfile,
+			kiam mi lasis la tempon pasi kaj tagojn sekvi tagojn sen unu vorto
+			skribita de mi.</p>
+			<p>
+			Mi ludis, mi ĝojis, mi kantis, mi promenis, mi marŝis, mi vivis
+			libertempan vivon, kaj mi tute simple forgesis pri la hejmo, kaj pri
+			miaj zorgoplenaj gepatroj. Ne. Rilate al leterskribado, mi ne estis
+			bona filo. Neniam rompis plumon pro troskribo mi.</p>
+		
+			<a id="dua" class="scrollspy"></a>
+			<h3>Mi atendas gravan leteron</h3>
+				
+			<p>Kioma horo estas? Preskaŭ la dua kaj kvin minutoj. Aŭ, se vi
+			preferas — ja uzeblas ambaŭ dirmanieroj — kvin minutoj post la dua.
+			Nu, nu, kiel rapide la tempo pasas!</p>
+		
+			<p>Mi ne vidis la leterportiston. Ĉu li jam pasis? Preskaŭ ĉiam mi
+			vidas lin. Kutime li pasas tuj post la dua.</p>
+		
+			<p>Hoho! «Kutime li pasas post la dua», tiu esprimo ne estas tre klara.
+			Oni povus pensi, ke mi volas diri: «tiu ĉi leterportisto pasas tuj
+			post la dua leterportisto». Nu, ĉu vere oni povus miskompreni
+			tiamaniere? Verŝajne ne. Kial estus tri leterportistoj pasantaj
+			samstrate? Por ke nova leterportisto povu pasi post alia
+			leterportisto, kiu mem estus nomata «dua leterportisto», devus pasi
+			tri leterportistoj entute, ĉu ne?</p>
+			
+			<p>Verŝajne do vi komprenis, ke temas pri la horo. Mi volis diri:
+			«Kutime li pasas tuj post la dua horo».</p>
+			
+			<p>Nu, mi iru vidi, ĉu li alportis ion al mi. Mi ja atendas gravan
+			leteron, kaj ĝi ankoraŭ ne alvenis. Mi ne ŝatas atendi, atendi,
+			atendadi ion, kio ne okazas. Kaj jam de kelkaj tagoj mi atendas la
+			alvenon de tiu letero.</p>
+			
+			<p>Ne. Estas nenio. Aŭ li jam pasis, kaj estis nenio por mi, aŭ li
+			ankoraŭ ne pasis. Plej verŝajne li ankoraŭ ne pasis.</p>
+			
+			<p>Eble li malfruas ĉi-foje. Li preskaŭ neniam malfruas, li kutime
+			pasas ĝustatempe. Tamen malfruo povas fojfoje okazi.</p>
+			
+			<p>Sed rigardu! Laŭ la murhorloĝo estas nur kvarono<A HREF="#notoj">[1]</A> antaŭ la dua.
+			La unua kaj kvardek kvin minutoj. La unua kaj tri kvaronhoroj. Ĉu
+			eble la murhorloĝo funkcias bone, dum mia brakhorloĝo estas 
+			fuŝita?</p>
+			
+			<p>Ne! Mi misvidis. Mi misprenis<A HREF="#notoj">[2]</A> la sekundan montrilon por la minuta.
+			Sur mia brakhorloĝo, la sekunda montrilo estas tro dika, ĝi tro
+			similas minutan, kaj mi neniam vere alkutimiĝis al tiu dika montrilo,
+			kiu montras nur la sekundojn. Mi ofte mislegas la horon pro tiu tro
+			dika sekundmontrilo.</p>
+			
+			<p>Koncerne la murhorloĝon, estas pli simple, ĉar ĝi estas tre malnova
+			kaj ne havas montrilon por la sekundoj. Tiel ne estas risko fuŝlegi
+			la horon.</p>
+			
+			<p>Kiel kutime, mi parolas senhalte kaj dume la tempo pasas. Nun estas
+			dek minutoj antaŭ la dua. Tio estas la unua kvindek. La unua horo kaj
+			kvindek minutoj kaj dek sekundoj. Nu, ni ne konsideru la sekundojn.
+			Sekundoj tute ne gravas. Estas do la unua kaj kvindek minutoj. La
+			dektria kvindek, se vi bezonas precizigi, ke nun estas posttagmeze.
+			Dek minutoj antaŭ la dekkvara. Ĉar, se la unua posttagmeze estas la
+			dektria, tiam la dua posttagmeze estas la dekkvara.</p>
+			
+			<p>Mi neniam kutimiĝis al tiu maniero esprimi la horon. Eĉ dum mia
+			militservo, kvankam mi soldatis en unuo specialigita pri komunikado,
+			kaj ni devis uzi tiun teruran dudekkvarhoran dirmanieron. Mi neniam
+			sukcesis plene lerni ĝin. Nu, mi povas uzi ĝin, sed ĉiam kun
+			sekundo da hezito. Ĝi neniam iĝis reale natura por mi.</p>
+			
+			<p>Nu, nu, leterportisto, kion vi faras? Ĉu vi venas aŭ ne? Mi volas
+			legi tiun leteron, scii, ĉu mi povos labori en tiu radiomagazeno. Mi
+			estas fakulo pri radio. Mi eklernis dum la militservo, kaj poste plu
+			interesiĝis pri radio, sekvis instruadon pri radio en vespera
+			lernejo, iĝis radiofakulo.</p>
+			
+			<p>Amiko Bip diris al mi, ke tiu laboro en la radiomagazeno estus
+			perfekta por mi, kaj mi la ĝusta homo por tiu laboro. Kial la
+			direktisto de la magazeno ne respondis tuj? Kial tiuj uloj, tiuj
+			ĉefoj, neniam respondas tuj? Kial ili ne respondis parole, tuj post
+			la intervido, ĉu ili akceptas min aŭ ne? Kial ili diris: «vi estos
+			informita perletere»? Kial, en tiuj situacioj, ili ĉiam alprenas
+			senmovan vizaĝon?</p>
+			
+			<p>Verŝajne por ke oni ne sciu, ĉu oni kontentigis ilin aŭ ne.
+			Verŝajne por ke oni daŭre sin demandu, ĉu oni havas ŝancojn aŭ ne
+			ricevi la petitan laboron. Sed kial agi tiamaniere? Ĉu vi 
+			komprenas?</p>
+			
+			<p>Estas strange, ke mi diras «vi», dum mi parolas al neniu. Se iu
+			ĉeestus ĉi tie, li trovus min ridinda. Eble mi estas strangulo. Mi
+			parolas tute sola, mi parolas al la muroj, al la tablo, al la seĝoj,
+			kaj mi uzas la vorton «vi»! Fakte, ne al la muroj, ne al la mebloj mi
+			parolas. Kaj ne estas ĝuste diri, ke mi parolas al neniu. Mi parolas
+			al iu, sed tiu «iu» ne ekzistas. Almenaŭ li ne ekzistas ekster mi. Mi
+			simple parolas al mi mem.</p>
+			
+			<p>Kaj kial do mi ne rajtus paroli al mi laŭte? Mi estas en mia hejmo.
+			Kaj hejme mi estas la plej supera aŭtoritato. Mi ĝenas neniun. Neniu
+			— bedaŭrinde — kunvivas kun mi en mia hejmo. Mi estas sola.</p>
+			
+			<p>Kiam oni vivas sola, estas normale plenigi la malplenon per la sono de
+			sia voĉo. Ne estas plaĉe vivi sola. Mi neniam kutimiĝos al tia
+			vivo. Soleco ne estas bona por la homo.</p>
+			
+			<p>Tial mi tiom atendas la leterportiston. Se oni ricevas leterojn, oni
+			sentas sin malpli sola.</p>
+			
+			<p>Jam kvin minutoj post la dua nun. La dekkvara kaj kvin. Kion ili faras
+			en la poŝtejo?</p>
+			
+			<p>Mi forte esperas, ke tiu radiomagazeno akceptos min. Labori tage, nur
+			dumtage, kia ĝojo! Mia nuna nokta laboro ne plaĉas al mi. Kaj mi
+			ricevus iom pli da mono ol nun. Estas plaĉe perlabori sufiĉe da mono
+			por aĉeti ĉiaspecajn aferojn, kiujn oni ne bezonas.</p>
+			
+			<p>Aĉeti ion bezonatan ne estas plezuro. Oni ja bezonas vivi. Sed aĉeti
+			ion senbezone, nur ĉar oni havas la monon kaj deziras aĉeti la
+			aferon, tio estas la dolĉa vivo.</p>
+			
+			<p>Mi ne iĝos riĉega, eĉ se ili akceptos min en tiun radiovendejon,
+			sed iom pli riĉa ol nun.</p>
+			
+			<p>Nun estas kvarono post la dua. Mi rigardas tra tiu fenestro jam tutan
+			duonhoron nun. Kaj tiu leterportisto ankoraŭ ne vidigis eĉ peceton
+			de sia nazo. Kio okazas al li?</p>
+			
+			<p>Mi ne longe elportos. Mi bezonas tiun leteron. Mi ne volas resti hejme
+			la tutan posttagmezon. Mi bezonas promeni, marŝi, movi min, fari ion.
+			Ne resti hejme malantaŭ fenestro, dum horoj kaj horoj pasas, kaj ne
+			pasas la leterportisto.</p>
+			
+			<p>Kaj se li pasos kaj ne havos mian leteron? Se la radioriparejo plu
+			atendigas min? Ĉu mi elportos? Diable! Mi ne kutimas elporti tiajn
+			situaciojn, kaj mi ne sentas min tre forta.</p>
+			
+			<p>Mi petas vin, leterportisto, kara juna bona aminda leterportisto,
+			venu, kaj donu al mi tiun respondon, tiun jesan respondon.</p>
+			
+			<p>Kaj se la respondo venos, kaj estos nea? Oj, oj, oj! Kia terura
+			vivo! Tion eĉ malpli mi elportos.</p>
+			
+			<p>Mi tro esperas. Tio estas la malbona flanko de mia nuna situacio. Mi
+			devus igi min esperi malpli. Tiel mi ne riskus defali de tro altaj
+			esperoj. Sed kiel fari por malgrandigi sian esperon? Ĉu vi scias?
+			Ĉu iu scias ĉi tie? Kompreneble ne. Ĉi tie estas ja neniu...</p>
+		
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Kvarono</span> : 1/4</li>
+				<li><span class="eo">Preni X por Y, mispreni X por Y </span> : pensi, ke estas Y, dum fakte estas X.</li>
+			</ol>
 
 		<?php 
 		} // fin section 5

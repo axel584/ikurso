@@ -214,6 +214,18 @@ include "gerdakapo.inc.php";
 		if ($section=="5") {
 		?>
 
+			<div class="row">
+				<div class="col s12">
+					<div class="card-panel blue lighten-5">
+						Grâce à ce que vous avez appris dans cette leçon, vous devriez sans problème pouvoir comprendre le texte suivant. L'histoire n'est pas liée à celle de <i>Gerda malaperis</i>, mais elle vous permettra de découvrir d'autres constructions de mots.
+					</div>
+				</div>
+			</div>
+
+		<?php
+			include "lasusono.inc.php";
+		?>
+
 			<h3>Amdeklaro</h3>
 			<p>Izabela, pardonu min, sed mia deklaro estas plej grava. Permesu, ke mi
 			parolu al vi. Permesu, ke mi rigardu al vi, al via bela, serioza

@@ -231,9 +231,159 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
+			<h3>Jen vi ree trinkas!</h3>
+			
+			<p>Sufiĉas! Nekredeble! Jam denove vi ektrinkas! Ne, amiketo, vi jam
+			trinkis sufiĉe. Tro estas tro. Kial vi ĉiam devas troigi? La
+			kuracisto diris: «Ne permesu, ke li ricevu tiom da glasoj. Unu jam
+			estas multe por li. Aŭ ĉu vi volas, ke li fariĝu tute malsana? Se
+			li plu soifas, akvon li trinku. Akvo estas bonega por la sano.»</p>
+			<p>
+			Kaj jen vi denove aĉetis brandon! Kion vi diris? Vi soifas, ĉu?
+			Ho jes, vi soifas. Via soifo estas senfina. Via soifo estas ĉiama.</p>
+			<p>
+			Vere mi ne komprenas vin. Vi ne plu estas knabeto. Vi eĉ ne plu estas
+			knabego. Vi estas viro, alta, forta, granda viro.</p>
+			<p>
+			Se almenaŭ vi ricevus plezuron el via trinkado! Sed pripensu iomete.
+			Ĉu brando plezurigas vin? Eĉ ne. Fakte, ĝi eĉ ne sensoifigas vin.
+			Vi tion diris al mi, ĉu ne? Laŭ vi mem, ĝi ne forsvenigas vian
+			soifegon. Laŭ viaj diroj, tiel estas: post kiam vi trinkis glason, vi
+			deziras denove trinki, vi tuj resentas la deziregon brandi.</p>
+			<p>
+			Viaj malsaĝaj diroj dolorigas al mi la koron. Kiam vi diras, ke ĉar
+			vi estas tre grandkorpa, via brandotrinkego ne faras malbonon, kiel mi
+			povus kredi vin? Mi havas okulojn kaj vidas. Kiam vi diras, ke korpa
+			laborado tuj eligas el vi la troon da brando, ke laborante kun plena
+			forto vi tuj elkorpigas la malsanigajn substancojn, permesu al mi
+			esprimi mian plenan malkonsenton.</p>
+			<p>
+			Jes ja, vi estas granda, eĉ grandega. Jes ja, via korpo estas alta
+			kaj larĝa. Vi estas forta kaj dika. Pli ol sufiĉe dika, verdire. Mi
+			eĉ diru simple: tro dika, multe tro dika, ĉar la brando dikigas vin
+			sen vin serioze fortigi.</p>
+			<p>
+			Kiam mi ekvidis vin la unuan tagon — ĉu vi memoras? — mi vin
+			ekamis, ĝuste ĉar vi aspektis tiel bele. Fortegulo vi estis
+			tiutempe. Jen bela viro, mi diris al mi, larĝa kaj forta. Tiutempe vi
+			ne estis dika. Sed vi havis fortan korpon, belan vizaĝon, kun amika,
+			plezuriga esprimo, kaj mi enamiĝis tuj. Mi ne imagis tiuepoke, ke vi
+			fuŝos ĉion ĉi per brandemo, ke vi fuŝos vin mem, ke vi fuŝos nian
+			kunan vivon, manke de volo. Mi ne imagis, ke vivi apud vi estos ĉiama
+			doloro, ke mi vivos, ne apud fortulo, kiu helpos min, sed apud
+			senvolulo, kiu fuŝos mian vivon.</p>
+			<p>
+			Ho! Mi konas viajn ĉiamajn rediraĵojn! Laŭ via opinio, mi estas
+			senkora. Laŭ via sento, mi estas nekomprenema. Laŭ viaj paroloj, mi
+			estas aŭtoritatema. Mi ŝatas Povon, laŭ vi. Mi deziras esti supera
+			al vi, laŭ via pensmaniero, kaj mi volas ĉiam diradi al vi, kion vi
+			faru. Tiel vi sentas nian rilaton, ĉu ne? Laŭ vi, mia sola deziro
+			en la vivo estas superforti vin.</p>
+			<p>
+			Ne, amiketo; tiel ne estas. Mi tiom ŝatis, kiam mi sentis vin supera
+			al mi. Ĝuste tio igis min vin ami: via maniero ĉiam superi la
+			malfacilaĵojn de la vivo. Kio ajn okazis, la ĝusta decido estis
+			klara por vi. Kio ajn okazis, vi ĉiam estis la plej forta, la plej
+			saĝa, la plej supera.</p>
+			<p>
+			Kvankam ni travivis malfacilajn tagojn — ĉu vi memoras? — en la
+			unua tempo de nia kunvivado, tamen ĉiam vi sukcesis elturni vin. Kiom
+			ŝatinda estis la vivo apud vi tiuepoke! Kiom plezuriga!</p>
+			<p>
+			Ŝajnis, ke vi havas povon super la okazaĵoj, super la vivo. Povon vi
+			havis, ĉar vi havis volon. Sed kio restas el via volo nun? Kio
+			postrestas el via volforto, el via povo voli, kaj per tiu simpla volo
+			aliigi la tutan vivon? Kie ĝi postrestis? Kien ĝi forsvenis? Kio
+			okazis al ĝi? Kion vi faris el ĝi? Vi iras aĉeti brandon. Vi
+			sidas apud glaso da brando. Vi rigardas ĝin. Vi rigardadas ĝin. Vi
+			rigardegas ĝin. Kaj vi ne plu povas malkonsenti. Vi ne plu trovas en
+			vi la volon kapnei<a href='#notoj'>[1]</a> al ĝi. Kial vi fuŝis nian vivon, kara? Kara,
+			kara mia, eta mia karulo, koro mia, vivo mia, kial vi fuŝis ĉion
+			inter ni?</p>
+			<p>
+			Kial vi permesis al tiu brando ricevi la Povon? Ĝi estas nia
+			superulo nun! Decidas ĝi, kion ni faru. Kaj ni povas nur sekvi ĝian
+			volon. Vi aĉetas ĝin, kaj tiu aĉetaĵo direktas la vivon ĉi tie.
+			Aĉetadi brandon denove kaj denove, dum la akvo estas tiel bona ĉe
+			ni, kia malsaĝa maniero vivi!</p>
+			<p>
+			Mi scias, ke vi ektrinkis brandon, kiam okazis tiuj timigaj
+			malfacilaĵoj ĉe via laboro. Ne estis facile por vi. Ne estis klare,
+			kion fari. Viaj labordonantoj ne volis, ke vi malkaŝe diru la veron.
+			Ili timegis, ke la homoj ekstere scios la veron, ke oni klarigos al la
+			tuta urbo, kion ili faris, ke la tuta urbo parolos pri ilia misfaro,
+			pri tiu gravega fuŝo, pri tiu gravega misdirektado de la aferoj. Kaj
+			ili elsendis vin for. Ili forsendis vin eksteren, timante, ke la
+			polico intervenos.</p>
+			<p>
+			Forsendita! Senoficigita! Kaj sen eblo respondi, sen eblo rebati,
+			sen eblo pravigi vin, klarigi, kion vi faris, kaj kial. Vi retrovis
+			vin senlabora. Esti senlaborulo nuntempe ne estas facila vivo. Neniam
+			estis, cetere. Vivo de senlaborulo ne estas facile akceptebla. Brando
+			akceptigis ĝin pli facile al vi, ĉu ne? Aŭ almenaŭ tion vi
+			imagis. Kun kiom da malpravo!</p>
+			<p>
+			Ĉar kvankam vi aĉetis pli kaj pli da brando, via vivo ne faciliĝis.
+			Male. Estas pli malfacile trovi laboron, kiam oni montriĝas
+			brandoplena. Kaj kvankam mi amis vin, kaj komprenis vian zorgadon, mi
+			ne povis akcepti tion. Ĉiaokaze ne la fakton, ke vi iris ĉiam denove
+			aĉeti brandon, kaj ke nia aĉetpovo pli kaj pli mallarĝiĝis.</p>
+			<p>
+			Kvankam vi ne trinkis tro multe en la unuaj tagoj, tamen mi ne
+			akceptis. Mi timis, ke post la epoko kun unu duonglaso vespere venos
+			epoko kun duonglaso posttagmeze, kaj poste epoko kun plenaj glasoj
+			dumtage kaj ĉe noktiĝo, kaj tiel plu, kaj tiel plu.</p>
+			<p>
+			Kaj evidentiĝis finfine, ke mi pravis, ĉu ne?</p>
+			<p>
+			Kvankam mi konsentas, ke mi eble ne sufiĉe komprenis viajn zorgojn de
+			senlaborulo, tamen, ĉu oni povas diri, ke se mi agus alimaniere
+			rilate al vi, vi ne trinkus tiun diablan brandon? Kvankam eble estas
+			iom da vero en tio, tamen tiu pensmaniero ŝajnas al mi neĝusta. Kiom
+			ofte mi pensis: «Jen estas la fina glaso. Post ĉi tiu li ne plu
+			trinkos brandon!» Sed tiom ofte la faktoj montris min malprava.</p>
+			<p>
+			Kaj nun, kion fari? Ĉu vi povus tion diri al mi? Kiel eligi vin el
+			tiu diabla emo? Kiel resanigi vin, kaj samokaze rebonigi nian
+			kompatindan, fuŝitan kunekziston?</p>
+			<p>
+			Se vi scius, kiom mi malamas tiun brandon! Kara, kara, se almenaŭ vi
+			komprenus min! Mi vin amas. Mi vin amegas. Ankoraŭ plu. Eĉ se de
+			tempo al tempo mi diras la malon, mia koro ankoraŭ batas amege por
+			vi.</p>
+			<p>
+			Sed kiom ĝi doloras! Kiom doloras vidi vin fordoni vian vivon al
+			brando! Karulo! Karulo mia! Ĉu vere vi ne povas forigi el vi tiun
+			diablan emon? Ĉu vi ne povus reekprovi, eĉ se nur kompate al mi?</p>
+			<p>
+			Ekzistas malsanulejoj, kie oni kuracas brandemon, mi aŭdis. Oni tie
+			akceptus vin. Mi petegas vin, konsentu iri al tia malsanulejo! Mi
+			faros ion ajn, por ke vi akceptu tiun ideon. Mi laboros ankoraŭ pli
+			multe ol nun, se ne estos eble alimaniere.</p>
+			<p>
+			Aŭ almenaŭ konsentu, ke venu vin kuraci faka kuracisto. Ekzistas
+			kuracistoj, kiuj specialiĝis pri brandotrinkemo, oni diris al mi.
+			Eble se ni rigardos la aferon malsano, eble estos por vi pli facile
+			seniĝi de ĝi. Akceptu. Mi petegas vin, karulo, akceptu almenaŭ
+			diskuti kun fakulo. Vi ne imagas, kian plezuregon tio donus al mi. Kaj
+			kiel kontentega vi mem sentus vin! Vi sentus, ke vi refariĝas viro.
+			Vi sentus reviviĝon, reviriĝon, refortiĝon. Vi refariĝus la
+			fortega bonulo, kiu tiel ame iun belan tagon ekrilatis kun mi.</p>
+			<p>
+			Vi tion faros, ĉu ne? Jes, mi vidas en viaj okuloj, ke vi pli kaj
+			pli konsentas. Mi vokos la kuracan fakulon. Li venos kaj resanigos
+			vin. Kaj vi refariĝos vera viro. Kaj ni reamos ege ege bele unu la
+			alian.</p>
+			
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Kapnei</span> (kap-ne-i) : diri «ne» per la kapo; montri per la kapo, 
+				ke oni malkonsentas.</li>
+			</ol>
 
 		<?php 
 		} // fin section 5

@@ -253,10 +253,76 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
-
+			<h3>Zorgi pri zorgado</h3>
+			
+			<p>Kion kredi? Ĉu liajn okulojn? Ĉu liajn vortojn? Liaj vortoj
+			alvokas kompaton. Li montras sin kompatinda. Li diras ion ajn, por ke
+			oni kompatu lin. Sed la okuloj! Oni povas sin demandi, ĉu ili ne
+			estas pli kredindaj ol la vortoj, kiujn li eldiras. Kaj ili ne
+			esprimas la samon. Tiuj pale bluaj okuloj estas strange senesprimaj.
+			Ĉu ne strange, ke ili restas tiel senesprimaj, dum li parolas tiel
+			bele, por ke ni kompatu lin?</p>
+			
+			<p>«Multo estas dirita, sed nenio farita», li diras. «Multe da parolado,
+			malmulte da agado», li plu diras. Sed, ĝuste, ĉu, kiam li tion
+			diras, li ne parolas pri si? «Rigardu, kiel maldika mi estas», li
+			diras, «jen kiel agas la zorgoj al mia kompatinda korpo. Mia sano iom
+			post iom forsvenas. Vidu: miaj haroj forfalas. Baldaŭ mi estos tute
+			senhara. Aŭ restos nur kelkaj haroj sur mia kapo. De tago al tago mi
+			pli kaj pli senhariĝas. Baldaŭ mi estos tute malsana, ĉar tiu
+			senhalta zorgado agas tre malbone al mia sano, tiel ke mia bela hararo</p>
+			
+			<p>«La kuracisto diris al mi: «Se vi volas, ke mi kuracu vin, kaj vi
+			resaniĝu, tiu zorgado devas halti. Sen tio, sen via kunlaboro, la
+			plej bona kuracisto ne povas sukcesi. Mi trovas vin helpinda. Mi
+			deziras kuraci vin, mi deziras nenion alian, ol ke vi plene resaniĝu,
+			sed vi devas helpi min. Por min helpi, vi devas labori super<a href='#notoj'>[1]</a> viaj
+			zorgoj. Zorgado nur povas malhelpi mian laboron. Via malsano rilatas
+			nur al via troa zorgado. Ankaŭ via maldikiĝo. Ne temas pri alia grava
+			malsano. Ne temas pri tiu serioza malsano, pri kiu vi pensadas la
+			tutan tempon. Ne. Kelkaj malsanoj estas tre seriozaj. Ne via. Temas
+			nur pri tio, ke vi tro zorgas. Kiam via troa okupiĝado pri tiuj
+			zorgoj haltos, via sano revenos. Sed mi estas senpova rilate al via
+			trozorgado. Nur vi povas helpi vin kaj kuraci vin tiurilate»».</p>
+			
+			<p>«Jen kion la kuracisto diris al mi. «Vivu senzorge», li diris, «kaj vi
+			resaniĝos». Kaj, kredu min, li estas tre bona kuracisto. Li scias,
+			pri kio li parolas. Do, kiam li petas min ne plu zorgi, mi devas ne
+			plu zorgi, se mi volas retrovi mian sanon, se mi volas, ke la falado
+			de miaj haroj finfine haltu. Sed vivi senzorge ne estas simple. Mi
+			provis ne plu zorgi, mi provis kaj provadis. Sed kion ajn mi faras, mi
+			malsukcesas. Kiel ajn mi provas ne zorgi, zorgoj revenadas. Kaj mi eĉ
+			pli kaj pli zorgas pri mia malsukcesa provado ne zorgi: mi ne sukcesas
+			ne plu zorgi, kaj tiu penso, ke mi tro zorgas, ĉar mi ne povas ne
+			zorgi, tro okupas min. La penso fariĝi senharulo estas timinda, ĉu
+			ne? Kaj tion mi pensas la tutan tagon. Kion fari, diable, kion fari?»</p>
+			
+			<p>Jen kiel li parolas. Li tute certe deziras, ke ni lin kompatu. Li
+			certe pensas: «Se ili kompatos min, ili faros la aferojn por mi, kaj
+			mi povos trankvile dormi, dum ili faras mian laboron». Tion diras liaj
+			okuloj.</p>
+			
+			<p>Estas vere, ke, antaŭe, lia korpo estis tiel grasa, ke ĝi estis tute
+			ronda, kaj nun li sengrasiĝis. Ankaŭ estas fakto, ke lia hararo,
+			tiel dika antaŭe, tre maldikiĝis. Sed dum liaj vortoj parolas pri
+			malsano, zorgado, senhariĝo, malgrasiĝo, liaj pale bluaj okuloj ne
+			elvokas<a href='#notoj'>[2]</a> kompatindan vivon. Ili esprimas la ideon «Mi estas pli
+			forta ol vi. Mia korpo eble estas maldika kaj malforta, pli malforta
+			ol la viaj, sed mi pli fortas pense. Mi havis la bonan ideon agi tiel,
+			ke vi kompatu min. Kaj nun vi kredas min malsana, kaj vi faros la
+			tutan laboron por mi. Tiel mi povos senzorge dormi, kaj regrasiĝi
+			trankvile».</p>
+		
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Labori super io</span> : labori pri io.</li>
+				<li><span class="eo">Elvoki</span> : fari, ke pensoj venas pri...</li>
+			</ol>
+		
 		<?php 
 		} // fin section 5
 		?>

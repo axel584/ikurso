@@ -348,6 +348,17 @@ include "gerdakapo.inc.php";
 		} // fin section 4
 		if ($section=="5") {
 		?>
+			<div class="row">
+				<div class="col s12">
+					<div class="card-panel blue lighten-5">
+						Grâce à ce que vous avez appris dans cette leçon, vous devriez sans problème pouvoir comprendre le texte suivant. L'histoire n'est pas liée à celle de <i>Gerda malaperis</i>, mais elle vous permettra de découvrir d'autres constructions de mots.
+					</div>
+				</div>
+			</div>
+		<?php
+			//include "lasusono.inc.php";
+		?>
+
 			<h3>Izabela</h3>
 			<p>Izabela rigardas al la granda spegulo. La knabino en
 			la granda spegulo rigardas al Izabela. Izabela scias, kiu

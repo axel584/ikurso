@@ -222,9 +222,241 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
+			<div class="row">
+				<div class="col s12">
+					<div class="card-panel blue lighten-5">
+						En tiu ĉapitro, estas du malsamaj rakontoj de <i>Lasu min paroli plu !</i>.<br>
+						<a href="#unua">Sekreta servo</a><br>
+						<a href="#dua">Ameriko, jen mi venas!</a>
+					</div>
+				</div>
+			</div>
+
+			<a id="unua" class="scrollspy"></a>
+			<h3>Sekreta servo</h3>
+			
+			<p>Kial diable mi entiriĝis<a href="#notoj">[1]</a> en tiun aferon ? Mi ne estis sufiĉe
+			singarda. Oni neniam gardas sin sufiĉe kontraŭ tiuj danĝeraj
+			decidoj. Fakte, mi eĉ ne rimarkis, ke mi ion decidas. Tiuepoke, mi
+			estis simpla soldato. Ĉar miaj gepatroj multege vojaĝis kaj
+			konstante translokiĝis de unu lando al alia, mi lernis diversajn
+			lingvojn. Tute senkonscie, fakte. Knabeto lernas rapide, eĉ se nur
+			ludante kun aliaj infanoj, kiam li vivas portempe<a href="#notoj">[2]</a> en lando, kies
+			lingvon li neniam lernis antaŭe. Li eĉ ne bezonas iradi al la
+			lernejo por kutimiĝi al tute nova maniero esprimi sin. Se li
+			allernejas, estas pli bone, sed lerneja instruado ne vere necesas por
+			lerni lingvon. Se oni estas ankoraŭ tre juna kaj vivas en la koncerna
+			lando. Konstante oni devas uzi la lingvon, ree kaj ree aperas novaj
+			okazoj ĝin uzi, en novaj kondiĉoj, tiel ke ĉiuj vortoj kaj ĉio
+			alia enkapiĝas eĉ sen plej eta fortostreĉo.</p>
+			
+			<p>Tial mi vere bone scipovis kelkajn lingvojn. Ankaŭ lingvojn ne tre
+			konatajn nialande. Kaj kiam miaj diablaj ĉefoj tion eksciis — oni
+			neniam estas tro diskreta; se mi estus imaginta la sekvojn, mi estus
+			silentinta pri miaj lingvoscioj — jes, kiam miaj ĉefoj tion eksciis,
+			ili proponis al mi oficejan laboron: traduki dokumentojn, aŭ almenaŭ
+			tiujn legi, kaj mallonge klarigi al ili, pri kio temas en tiuj
+			paperoj.</p>
+			
+			<p>Nu, mi ne speciale ŝatis la soldatan vivon, «la dolĉan vivon», kiel
+			ni tiutempe kromnomis<a href="#notoj">[3]</a> ĝin. Porti pezan sakon marŝante tuttage sur
+			sunvarmega vojo, aŭ kuŝi sur akveca tero ludante militon, ne estas
+			por mi la plej tipa tipo de vivo feliĉa. Kaj mi aŭdis, ke la
+			bonŝanculoj, kiuj militservas oficeje, ricevas multe pli bonajn
+			manĝojn ol tiuj, kiuj fortigas sian korpon kaj lernas la arton ne
+			pensi en ĉiutagaj kampaj soldatludoj.</p>
+			
+			<p>Mi ŝatas bone manĝi. Tio estas unu el miaj multaj malfortaĵoj.
+			Krome, miaj muskoloj pli rapide laciĝas ol mia kapo, kaj mi estis
+			tiel lacega fine de tiuj liber-aeraj soldattagoj, ke mi sentis,
+			kvazaŭ mi apenaŭ vivus plu. Eĉ signi per okulo estis tro lacige por
+			mi en tiuj vesperoj.</p>
+			
+			<p>Mi rakontas ĉion ĉi por klarigi al vi, kial mi tiel facile
+			entiriĝis en la Centron kun granda C. Mi kompreneble petas vian
+			protekton, ĉar... Ne. Pri tio pli poste. Min altiris tien la scio, ke
+			mi ne plu lacigos mian korpon ĝismorte rolante kiel serpento aŭ
+			hundo, aŭ kiel pezeg-portanto, en lokoj maldolĉaj. Miaj kruroj kaj
+			piedoj ne estas speciale belaj — ili eĉ estas vere malbelaj, se
+			paroli sincere — sed mi ŝatas ilin, ĉar ili ĉiam servis min amike,
+			kaj la «dolĉa vivo» de simpla soldato pli kaj pli eluzis<a href="#notoj">[4]</s> ilin,
+			tiel ke mi sentis min iĝanta iom pli malalta ĉiutage.</p>
+			
+			<p>Cetere, mia tuta korpo eluziĝis. Mi jam ne havis multe da graso
+			antaŭ ol komenci, sed tiu malmulto perdiĝis en la unuaj semajnoj.
+			Oni provis kredigi al mi, ke per tia konstanta funkciado je sia plej
+			alta povo mia korpo fariĝos ĉiurilate fortega, sanega kaj multopova
+			— «Vi estas Davidoj, mi faros Goljatoj el vi», diris unu el niaj
+			suferigistoj, forgesante, kun la tipa senkapa funkciado de la
+			militistaro, ke el tiuj du karuloj, Goljato montriĝis la perdinto —
+			sed mi havis fortajn dubojn pri miaj ŝancoj sukcesi. Laŭ ilia
+			agmaniero, eĉ se ilia celo sincere estis nin fortigi, ŝajnis al mi,
+			ke la ŝancoj perdi la vivon kaj la malmultan saĝon, kiun ni junuloj
+			havis, estis multe pli grandaj ol la ŝancoj realigi ilian celon: fari
+			supervirojn el ni.</p>
+			
+			<p>Kompare kun tiu Goljatigo, sidi en komforta oficejo tradukante paperon
+			post papero ŝajnis al mi celo plej dezirinda. Kiam oni faris al mi
+			tiucelan proponon, mi ne forĵetis ĝin. Kiel mi ĵus diris, mi ne
+			estas superhomo, kaj en similaj kondiĉoj por nee respondi necesus
+			superhoman forton.</p>
+			
+			<p>Mi neniam estis speciale sindonema. Mi ĉiam celis pli protekti mian
+			sanon kaj kontentigi mian emon bone vivi ol doni min al la Patrolando.
+			Tute ne estis certe, cetere, ke mi estos malpli patrolandama en
+			oficejo ol en la kampoj kaj montoj.</p>
+			
+			<p>Mi do alvenis en la Centron. Mi tute ne sciis, pri kio temas. Oni igis
+			min promesi, ke mi plene gardos la sekretojn pri ĉio, kion mi vidos,
+			aŭdos, tuŝos aŭ iamaniere sentos tie, kaj ĉar tiuj realistoj ne
+			kredas je simpla promesado, tuj kiam mi promesis, ili klarigis al mi,
+			kiel rapide mi malaperus<a href="#notoj">[5]</a> el ĉi tiu vivo — tiel diskrete, ke eĉ
+			la polico ne starigos al si demandojn — se ŝance mi ion dirus pri la
+			Centro kaj tio, kion ĝi faras.</p>
+			
+			<p>Traduki per si mem ne estas tia agado, kia portas vin al plejsupro de
+			feliĉo, sed almenaŭ la dokumentoj estis interesaj. Mi ĉiam multe
+			interesiĝis pri ĉio, kio okazas sur la Tero, kaj tiuj raportoj aŭ
+			aliaj skribaĵoj min interesis. Ni tradukis plej strangajn paperojn,
+			fojfoje eĉ leterojn senditajn de soldatfamilio el «malamika» lando al
+			militservanto, do plenaj je informoj pri la vivo en la devenloko, kaj
+			kaptitaj la-diablo-scias-kiel.</p>
+			
+			<p>Sed poste... Ne. Mi ne povas rakonti. Mi bezonas protekton, pli bonan
+			protekton kontraŭ ili. Ili estas tiel danĝeraj. Aŭ ĉu tion mi
+			imagas ? Ne. Ili estas grandpovaj. Ili estas kvazaŭ ŝtato en la
+			ŝtato. La malnova timo plu kuŝas malsupre en mia koro. Kaj tamen mi
+			devus rakonti. Se ne por via plezuro, almenaŭ por la sano de mia kapo
+			kaj de mia korpo, laca plu porti ĉion ĉi neniam parolante pri ĝi.
+			Ĉu gardi sekretojn tutvive estas eble al ne-superhomo ? Ĉiam gardi
+			multe da gravegaj sekretoj estas konstanta streĉo, kaj tiu streĉo
+			estas malpli kaj malpli elportebla. Eĉ kiam la sekretoj estas
+			ridindaj.</p>
+			
+			<p>Kaj mult-aspekte, la vivo en la Centro estis ridiga. Aŭ ridinda. Tiuj
+			homoj prenis sin tiel serioze ! La ideo partopreni en kaŝa, subtera,
+			subsupraĵa milito tutmonda naskis en ili senton pri graveco, kiu
+			fojfoje perdigis al ili la kapon.</p>
+			
+			<p>Krome, ni tie vivis en konstanta streĉiĝo. Kaj ridi montriĝis bona
+			rimedo por gardi nin kontraŭ la danĝeraj sekvoj de tiu ĉiam streĉa
+			atmosfero.</p>
+			
+			<p>Foje... Se vi scius... Vi ridegos, kiam vi ekscios. Foje, unu el tiuj
+			spion-ĉefoj — li nomiĝis Alb...</p>
+			
+			<p>Ho ! Kio okazas al mi ? Tra la fenestro, iu ekĵetis... mi svenas, mi
+			svenas... Kapo turniĝas. Rigardu: en la koron ĝi eniĝis, ĝi
+			teniĝas tute firme... tiu afereto... Mortiga substanco... Kial vi
+			malfermis la fenestron ? Kial vi igis min stari apud ĝi ? Ĉu vi... ?
+			Haaaaa !</p>
+		
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li>En-tir-iĝ-i.<br>
+				<li><span class="eo">Portempe</span> : por iu tempo, dum iu tempo, dum iu daŭro.</li>
+				<li><span class="eo">Krom-nomi</span> : doni kroman, anstataŭan nomon.</li>
+				<li><span class="eo">Eluzi</span> : malbonigi aŭ malgrandigi per longa uzado.</li>
+				<li>En la originalo : malaperos (preseraro). Ne temas pri futuro en
+				pasinteco, sed pri vera kondicionalo (vidu la postan "se mi dirus").</li>
+			</ol>
+			
+			<a id="dua" class="scrollspy"></a>
+			<h3>Ameriko, jen mi venas!</h3>
+		
+			<p>- Kiam vi forveturos?</p>
+		
+			<p>- Venontan<a href="#notoj">[1]</a> semajnon.</p>
+			
+			<p>- Aviadile, ĉu ne?</p>
+			
+			<p>- Jes, aviadile. Neniu plu vojaĝas al Usono<a href="#notoj">[2]</a> ŝipe en nia epoko.
+			Flugi estas tiel pli rapide!</p>
+			
+			<p>- Ĉu vi devas prepari ankoraŭ multon?</p>
+			
+			<p>- Ne, ĉio jam estas preparita. Mi havas ĉiujn dokumentojn. Mi devas
+			ankoraŭ solvi la demandon pri mono, tio restas mia sola problemo nun.</p>
+			
+			<p>- Kial estas problemo?</p>
+			
+			<p>- Mi agis stulte. Mi ne okupiĝis pri tiu afero sufiĉe frue kaj nun
+			la dolaro<a href="#notoj">[3]</a> altiĝas de tago al tago.</p>
+			
+			<p>- Vi do devus rapidi aĉeti viajn dolarojn.</p>
+			
+			<p>- Jes, sed mi aŭdis, ke nun la dolaro estas tro forta, kaj ke la
+			usonaj aŭtoritatoj volas ĝin malaltigi.</p>
+			
+			<p>- Kial? Ili estis malkontentaj, kiam la dolaro estis malforta,
+			kvazaŭ tio volus diri, ke la valoro de la tuta lando, de la tuta
+			popolo, malaltiĝis. Ĉu vere nun ili estas malĝojaj pri tio, ke la
+			dolaro fariĝis plivalora?</p>
+			
+			<p>- Jes, ĉar ili ne povas vendi tiel facile siajn produktojn<a HREF="#notoj">[4]</a>
+			eksterlande.</p>
+			
+			<p>- Prave. La valoro de la produktoj, kiuj venas de Usono, nun iĝis pli
+			alta por homoj, kiuj ne perlaboras dolarojn.</p>
+			
+			<p>- Ĝuste. Ĉio usona nun fariĝis pli multekosta por eksterlandanoj,
+			kaj pro tio Usono vendas malpli, kaj sekve suferas. Estis jam sufiĉe
+			grava senlaboreco tie. Nun, se ili vendos malpli al aliaj landoj, eble
+			la senlaboruloj iĝos eĉ pli multaj, kaj tion ili timas.</p>
+			
+			<p>- Sincere, mi dubas pri tio. Vendi eksterlande ne tiom gravas al tiel
+			granda lando. La landanaro jam aĉetas preskaŭ ĉion, kion oni
+			produktas tie. La eksteraj vendoj prezentas per si nur malgrandan
+			parton de la tuto.</p>
+			
+			<p>- Ĉu tiel estas? Se jes, mi devus ne konsideri tiun eblan malaltiĝon
+			de la dolaro.</p>
+			
+			<p>- Mi ne volas interveni en vian decidon. Estas iu risko en ambaŭ
+			eblecoj. Ĉu vi jam estis en Usono antaŭe?</p>
+			
+			<p>- Ne. Ĉu vi?</p>
+			
+			<p>- Jes, mi estis tie. Fakte, mi laboris tie, kiam mi estis juna, kaj mi
+			tien reveturis antaŭ du jaroj. Ĉiuj tie plendis pri la situacio, kaj
+			mi facile kredas, ke por malriĉulo, ekzemple por homo senlabora, la
+			vivo devas esti tre zorgiga tie. Sed tamen, dum mi travojaĝis la
+			landon, mia konstanta sento estis, ke tio estas unu el la plej riĉaj
+			landoj en la mondo.</p>
+			
+			<p>- Ĉu vere?</p>
+			
+			<p>- Jes. Ekzemple, vi ne povus imagi, kiom oni donas al vi por manĝi en
+			restoracioj. Tiom pli ol en Eŭropo, por simila kosto.</p>
+			
+			<p>- Sed ĉu la manĝaĵoj estas same plaĉaj, kiel ĉe ni?</p>
+			
+			<p>- Ne. Estas pli bone ĉe ni tiurilate. Ĉefe, en nia lando, la manĝoj
+			estas pli malsamaj. Vi povas facile ricevi ĉiutage ion malsaman en
+			restoracioj. Sed eble mi ne rajtas tiel paroli pri Usono. Mia kono de
+			tiu grandega lando estas tiel supraĵa!</p>
+			
+			<p>- Tamen, tio, kion vi diras, estas tre interesa. Mi antaŭĝojas
+			viziti tiun landon, pri kiu oni aŭdas tiom da malsamaj opinioj.</p>
+			
+			<p>- Nu, mi esperas, ke vi solvos vian dolarproblemon kontentige. Ĝis
+			revido, kaj bonan vojaĝon!</p>
+		
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Venonta</span> : kiu venos, kiu sekvos, kiu okazos post la nuna tempo
+				(venanta = kiu venas; veninta = kiu venis).</li>
+				<li><span class="eo">Usono</span> : la lando inter Kanado kaj Meksikio (kun Alasko kaj Havajo);
+				la nomo devenas de <i><b>U</b>nited <b>S</b>tates of <b>N</b>orth America.</i></li>
+				<li><span class="eo">Dolaro</span> : mon-unuo en Usono, Aŭstralio, Kanado kaj kelkaj aliaj landoj.</li>
+				<li><span class="eo">Produkti</span> : fari aŭ estigi aĵojn (produktojn), ĉefe kun la celo
+				ilin vendi aŭ havigi al iu, kiu ilin uzos.</li>
+			</ol>
 
 		<?php 
 		} // fin section 5

@@ -209,10 +209,257 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
+			<div class="row">
+				<div class="col s12">
+					<div class="card-panel blue lighten-5">
+						En tiu ĉapitro, estas du malsamaj rakontoj de <i>Lasu min paroli plu !</i>.<br>
+						<a href="#unua">Ek al fora insulo!</a><br>
+						<a href="#dua">Skribas malliberulo</a>
+					</div>
+				</div>
+			</div>
 
+			<a id="unua" class="scrollspy"></a>
+			<h3>Ek al fora insulo!</h3>
+		
+			<p>Mi saltas pro ĝojo, mi dancas pro ĝojo, mi eksplodas per rido pro
+			ĝojo. Estas aranĝite: mi forvojaĝos. Hieraŭ jam mi ricevis
+			antaŭan sciigon, ke verŝajne mia espero realiĝos. La ĉefoj bezonis
+			iun, sed mi timis, ke ili preferos Petron. Petro estas pli ŝatata,
+			ĝenerale, en la oficejo. Li estas pli laborema ol mi, tio estas
+			fakto. Sed ili bezonis lin por alia tasko, pli malfacila ol ĉi tiu.</p>
+			
+			<p>Mia tasko estos sufiĉe simpla. Nur mi estu tre firma en la diskutoj,
+			ili diris. Esti firma ne prezentas problemon al mi, feliĉe. Mia
+			firmeco estas konata de la tuta oficistaro kaj de niaj aŭtoritatoj.
+			Kiam mi decidis diri «ne», mi diras «ne», kiom ajn oni provas ŝanĝi
+			mian pozicion. Mi firme tenas mian pozicion. Tial ili fidas min
+			ĉi-okaze. Ili scias, ke mi agos laŭ iliaj interesoj. Oni fojfoje
+			plendas pri mia obstineco. Nu, ĉi-foje ĝi servos al bona celo. Oni
+			ne sukcesos min movi. Kaj tian homon ili deziris sendi, homon, kiun
+			oni ne movos de la pozicio, kiun li promesis teni.</p>
+			
+			<p>Mi do forvojaĝos. Unue aviadile. Poste ŝipe. Mi antaŭĝojas ŝipi.
+			Al aviadiloj mi ne havas specialan ŝaton. Mi ne malŝatas flugi
+			aviadile; mi tre ŝatas vojaĝi, do kial mi plendus, se miaj ĉefoj
+			sendas min malproksimen aviadile? Sed ŝipon mi antaŭĝojas. Mi
+			neniam ŝipis sur vera granda maro. Oni diris al mi, ke tio estas tre
+			malstreĉa. Kaj oni povas movi sin. Ĝuste tio min ĝenas en
+			aviadiloj. Estas tre malmulte da ebleco por moviĝi. Kaj verdire mi
+			estas tre moviĝema. Se mi ne povas movi miajn krurojn, iom promeni,
+			iri de loko al loko, mi perdas la kapon. Mi, pri kiu oni tiel ofte
+			diras, ke «mi havas la kapon sur la ĝusta loko»! Prave, se almenaŭ
+			oni permesas al mi moviĝi.</p>
+			
+			<p>Do ne gravas, ke mi devos uzi aviadilon dum parto de la vojaĝo. Sed
+			mi iras al insulo, kien oni ne povas flugi, tial ili pagas al mi, ne
+			nur la aviadilan vojaĝon, sed ankaŭ la ŝipan. Blua maro senfina!
+			La plaĉa dancado de la ŝipo! Afablaj kunuloj, kiuj ridetas la tutan
+			tempon, ĉar ili sentas sin feliĉaj, ke ili vojaĝas de insulo al
+			insulo. Ha, la sento de senfina libereco!</p>
+			
+			<p>Kaj la penso, ke tiuj aliaj vojaĝantoj certe pagis multe da mono por
+			ŝipi en la insularon, dum mi iras por mia laboro, por eĉ ne
+			malfacila laboro, nur ĉar bonŝance mi scias la bezonatan lingvon,
+			kaj ĉar mi estas konata kiel firma persono, tiu penso — ke la aliaj
+			pagas mem, kaj mi ne — estas plej plezuriga.</p>
+			
+			<p>Hodiaŭ mi ricevis la biletojn. Aviadila bileto estas tute banala. Mi
+			jam havis kelkajn en mia vivo. Sed ŝipbileton mi neniam tenis en miaj
+			manoj, kaj la tuŝo de ĝi naskas en mi plej plaĉan plezuron.
+			
+			<p>Kompreneble, la amikoj tuj rimarkis mian ĝojon, kaj ne hezitis ĝin
+			alsalti. «Vi prikantas la bele bluan maron kaj la riĉajn
+			kunŝipulojn», ili diris, «kaj kiam vi troviĝos surloke, la maro
+			estos brune verdaĉa, aŭ nigraĉa, la moviĝo de la ŝipo igos vin
+			malsana, kaj la riĉaj vojaĝantoj estos nur bando da aventuruloj, kiuj
+			konstante ĝenos vin».</p>
+			
+			<p>Mi multe ridis aŭskultante ilin. Ili ne povis agi alimaniere. Ĉiu el
+			ili ŝatus okupi mian lokon, kaj per siaj senkuraĝigaj vortoj ili
+			esprimis tiun senton, ke tro bonŝanca estas mi. Sed ili ankaŭ ŝatas
+			min, ili estas bonaj amikoj, kaj ili amike ridis pri mia troa imagado.
+			«La realo estos alia», ili ripetis. Nu, bone, eĉ se ĝi estos alia,
+			mi akceptos ĝin. Mi ne timas ŝipmalsanon aŭ verdaĉan multemovan
+			maron. Mi eĉ ne timas aventuremajn kunvojaĝantojn.</p>
+			
+			<p>Mi deziris iri al tiu insulo, mi subkomprenigis al miaj ĉefoj, ke mi
+			estas la ĝusta persono tiurilate, mi agis laŭcele, uzante la
+			ĝustajn rimedojn, mi trovis solvon al ĉiuj problemoj — aŭ
+			pseŭdoproblemoj — kaj respondon al ĉiu demando, mi agis laŭ mia
+			obstina, firma maniero, kiel kutime, kaj mi sukcesis venigi ilin al la
+			dezirata decido.</p>
+			
+			<p>Granda vojaĝo baldaŭ komenciĝos. Morgaŭ mi devos vizitadi la
+			ĉefajn magazenojn de la urbo, ĉar multon ankoraŭ necesas aĉeti.
+			Ĉiam mankas aferoj, kiam oni preparas grandan vojaĝon al malproksima
+			loko.</p>
+			
+			<p>Ne estas facile decidi pri la vestoj. Kelkfoje la vetero estas
+			malvarma tie, sed ĝenerale ĝi estas bela kaj plaĉa. Ĉu preni
+			serioze la opiniojn, ke necesas antaŭvidi malvarman veteron kaj
+			kunpreni vestojn laŭ tiu ebleco? Aŭ ĉu ili sennecese aldonos pezon
+			al la jam sufiĉa pezo de la aferoj, kiujn mi kunportos?</p>
+			
+			<p>Oni diris, ke kelkaj kavernoj estas vizitindaj, ĉar la naturo en ili
+			alprenis plej strangan aspekton, vere vidindan. Ne ekzistas io simila
+			aliloke. Eble do estus saĝe kunpreni varmajn vestojn. Kavernoj ĉiam
+			estas malsekaj kaj malvarmaj. Se krome la vetero ne montriĝos plej
+			bela...</p>
+			
+			<p>Jes, la preparado de vojaĝo ne estas ĉiurilate facila, sed tamen ĝi
+			estas interesa. Ĉar oni jam antaŭvojaĝas en-image.</p>
+			
+			<p>Multekostajn aferojn mi ne kunprenos. Oni devas konsideri la riskon de
+			ŝtelo aŭ perdo. Mi ne ŝatas multekostajn aferojn. Kaj eble mi povos
+			aĉeti tie, surloke. Mi devos informiĝi pri la vivkostoj tieaj. Eble
+			varmaj vestoj ne kostas multe kaj facile aĉeteblas. Se jes, tio
+			solvus la problemon.</p>
+			
+			<p>Estas ankaŭ montoj, kiujn oni vizitu. Supre de monto, ĝenerale, la
+			temperaturo estas malalta. Sed ĉu mi iros supren? Ĉu valoros la
+			laciĝon? Oni facile laciĝas marŝante supren en montaro. Eble oni
+			povas veturi ĝis la supro de la plej belaj montoj. Sed eĉ veture,
+			oni malvarmiĝas. Nu, mi vidos. Se estas tro multekoste por aĉeti
+			varmajn vestojn, mi ne aĉetos ilin.</p>
+			
+			<p>La Oficejo pagas al mi la vojaĝon, ĝi pagas la restadon en tre bona
+			hotelo, ĝi pagas kelkajn aliajn hotelajn tranoktadojn en tiu aŭ alia
+			lando survoje, mi tamen ne povus atendi, ke ĝi krome pagos miajn
+			vestojn! Se mi bezonos varmajn vestojn por iri al la montosuproj, kaj
+			trovos ilin tro multekostaj, mi decidos pri io alia. Mi ne iros al la
+			montosuproj kaj trovos aliajn vidindaĵojn. Ili ne mankas, oni diris
+			al mi.</p>
+			
+			<p>Mi skribos al mia familio. Ankaŭ pri tio mi antaŭĝojas. Mi ŝategas
+			skribi por rakonti miajn aventurojn. Tiam mi sentas min en tre
+			proksima rilato kun ĉiuj familianoj. Estas feliĉo havi grandan
+			familion. Multaj ne samopinias, sed al mi tio plaĉas. Mi skribos al
+			miaj gepatroj, al la gefratoj, kompreneble, sed ankaŭ al onkloj kaj
+			onklinoj, kaj al iliaj gefiloj, kaj, krom ili, al la amikoj. Mi
+			pasigos multajn noktojn leterskribante. Mi scias, ke ĉiu tre ĝojos
+			ricevi novaĵojn de mi.</p>
+			
+			<p>Multaj personoj trovus stranga mian deziron pasigi la vesperojn kaj
+			noktojn en hotelĉambro, skribante leteron post letero al tuta aro da
+			familianoj, kaj al la tuta amikaro, dum mi povus viziti la dancejojn,
+			ludejojn, teatrojn aŭ aliajn lokojn. La diablo eble scias, kiom da
+			ejoj ekzistas nur por kapti la monon de la eksterlandanoj. Vojaĝantoj
+			ofte estas monperdemaj. Eble ili estas riĉaj kaj vojaĝas per sia
+			mono. Sed mi vojaĝos en tute aliaj kondiĉoj, ĉar nur per la mono de
+			la Oficejo. Do mi ne iros danci kun nekonataj lokanoj, aŭ rigardi
+			solece teatraĵon. Mi restos enhotele kaj skribos al miaj cent
+			familianoj.</p>
+			
+			<p>Kia vivo! Kia feliĉo! Kia plezuro! Mi apenaŭ eltenas la streĉon
+			atendi ĝis venos la Tago de la Granda Forveturo. Oni diris, ke estas
+			kelkaj malsanoj tie, pri kiuj oni devas sin gardi. Nu, mi informiĝos.
+			Mia familia kuracisto certe povos diri al mi, ĉu iu aŭ alia faro
+			estas deviga, aŭ eĉ simple farinda, kiel rimedo antaŭgardi la
+			sanon. Mi forte deziras ne malsaniĝi tie. Mi ne ŝatus restadi longe
+			en malsanulejo fore de la tuta familio kaj amikaro. Mi kompreneble
+			amikiĝus kun lokanoj, se mi devus longe resti tie, sed se tio ne
+			estas necesa, mi preferas ne.</p>
+			
+			<p>Diable! Kiel rapide la tempo pasas! Jam estas preskaŭ la kvina kaj
+			duono. Tereza baldaŭ alvenos, kaj mi ankoraŭ nenion preparis. Kaj mi
+			promesis al ŝi pomkukon kaj mian specialan fruktosukan trinkaĵon.
+			Ek, al la laboro! Mi povas pensi pri mia vojaĝo ankaŭ preparante la
+			manĝon.</p>
+			
+			<a id="dua" class="scrollspy"></a>
+			<h3>Skribas malliberulo</h3>
+		
+			<p>Kara Amikino,</p>
+		
+			<p>Mi ne konas vin, sed vi permesos, ĉu ne?, ke mi nomu vin amikino. Mi
+			ne scias, kiel danki vin. Via letero estas por mi tiel neatendita
+			belaĵo, ke mi ne trovas vortojn por esprimi, kion mi sentas. Ĝi
+			estis korvarmiga. Kaj mi starigas al mi multajn demandojn: Kiel vi
+			eksciis pri mi? Kiu pri mi parolis al vi? Kiel eblas, ke vi havis
+			tiun ideon ekrilati kun mi letere? Kiu ajn intervenis por rilatigi
+			vin kun mi, mi tiun plej sincere dankas.</p>
+			
+			<p>Jes, kiel vi diras en via letero — kaj mi gratulas vin pro via
+			realeca imagpovo — vivo en malliberejo ne estas facila. Tiuj, kiuj
+			estas plene liberaj, ne konas la valoron de libereco. Libereco similas
+			al sano. Oni ekkonscias ĝian havindecon nur post kiam oni perdis
+			ĝin. Ĉu vi konas la komencon de «Sinjoro Tadeo» de Mickiewicz<a href="#notoj">[1]</a>?</p>
+			
+			<p class="citajxo">
+			Litvo<a href="#notoj">[2]</A>! Patrujo<a href="#notoj">[3]</A> mia, simila al sano,<br>
+			Vian grandan valoron ekkonas litvano<br>
+			Vin perdinte...</p>
+		
+			<p>Nu, tion saman mi povas diri pri libereco. </p>
+		
+			<p>Pri manĝoj kaj similaj aferoj mi ne tro povus plendi. Ni ne estas en
+			granda, riĉula hotelo, kompreneble, sed tiuj aspektoj de nia vivo
+			estas akcepteblaj. Kio apenaŭ estas eltenebla<A HREF="#notoj">[4]</A>, tio estas la manko
+			de libereco. Ne povi eliri. Ne povi viziti magazenojn. Neniam povi
+			decidi pri siaj movoj. Ne promeni en naturo. Ne vidi domojn, urbon,
+			kampojn. Scii, ke antaŭ longe ne estos libertempo, ne estos ebleco
+			vojaĝi al maro aŭ montoj. Tio estas... kiel mi povus diri? Ne
+			ekzistas vorto por klarigi tion... tio estas subiga. Subfaliga. Ĉu vi
+			komprenas?</p>
+			
+			<p>La alia terura afero, por viroj, en la malliberejoj de ĉi tiu lando,
+			estas la manko de virinoj. Vi ne imagas, kiom mankas virinoj al ni. Ne
+			nur por para amo aŭ por plezuro korpa. Sed nur vidi virinon, aŭdi
+			inan voĉon, rigardi la belecon kaj dolĉecon de ina persono! Tiu
+			neebleco estas terura manko por ni.</p>
+			
+			<p>Estas ĉi tie kelkaj junuloj kun bela vizaĝo kaj korpo maldika. Se vi
+			scius, kiel oni rigardas ilin! Kaj ne temas nur pri rigardoj,
+			kompreneble. Ĉu vi trovas min aĉa, ĉar mi priparolas tiajn aferojn? 
+			Pardonu min. Ili estas parto de nia realo ĉi tie, kaj la afero
+			estas perfekte komprenebla en mondo, kie virinoj tute forestas.</p>
+			
+			<p>La fakto, ke la propono interŝanĝi leterojn kun kompatinda
+			malliberulo venis de virino, igis la aferon eĉ pli kor-altiga al mi.
+			Ĉu vi komprenas mian esprimon? «Kor-altiga»: per tio, mi volas diri,
+			ke mi sentas, kvazaŭ mia koro estus pli bela, pli granda, pli sana,
+			nu, pli alta, tio estas, en pli bona pozicio.</p>
+			
+			<p>Jes, la ideo, ke iu nekonata virino pensas pri mi, deziras skribi al
+			mi, eĉ sciante, ke mi malbonagis, tio estas plaĉe varmiga al mia
+			koro. Se vi scius, kiel sola mi estas!</p>
+			
+			<p>Amikojn oni trovas mem, ĉu ne?, kaj ili estas grava parto de la
+			vivo. Oni decidas mem, ke kun tiu aŭ alia persono oni ekrilatos
+			amike. Sed ĉi tie estas neniu amiko, neniu persono estas kun ni, ĉar
+			ni decidis esti kune. Tio estas terura. Eĉ la anoj de la bando, kiuj
+			estis arestitaj kun mi, tute ne estas amikoj. Nur kunlaborantoj. Aĉaj
+			kunkrimuloj, fakte.</p>
+			
+			<p>Ĉu eble ni iĝos geamikoj? Mi tion esperas. Sed eble tio estas troa.
+			Mi ne rajtas esperi tion. Kiel vi amikus al mi, kiu mem metis min
+			ekster la normalan vivon?</p>
+			
+			<p>Pardonu min, se mi diras al vi aferojn, kiuj ne plaĉas. Mi sentas min
+			ĝenata. Mi ne scias, kion skribi, kaj mi estas tiel kontenta skribi,
+			pensi pri vi, imagi vin. Ĉu vi bonvolos sendi al mi foton de vi? Vi
+			igas min malpli sola. Vi venas aldoni al la ĉi-tiea nenormala,
+			soldateca atmosfero ion virinecan, kion ĝi vere bezonas.</p>
+			
+			<p>Nun mi devas halti. Mi tre streĉe atendas vian respondon.</p>
+			
+			<p>Via sincera amiko malliberulo,</p>
+			
+			<p>Paŭlo</p>
+		
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li>Fama verkisto. Prononcu : Mickjeviĉ.</li>
+				<li><span class="eo">Litvo</span> : unu el la du ĉefaj partoj de malnova Pollando.</li>
+				<li><span class="eo">Patrujo</span> : patrolando.</li>
+				<li><span class="eo">Elteni</span> : elporti.</li>
+			</ol>
+		
 		<?php 
 		} // fin section 5
 		?>

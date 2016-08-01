@@ -151,10 +151,108 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
-
+			<h3>La ulo, kiu ne plu pensas</h3>
+			<p>Pri kio mi pensas, li demandis. Ĉu vi aŭdis lin? Kiel strangaj tiuj
+			uloj estas ! Kvazaŭ mi scius, pri kio mi pensas. Ĉu mi vere pensis
+			ion? Ĉu oni devas pensi dum la tuta tempo? Tio ne ŝajnas al mi
+			prava.</p>
+			
+			<p>Mi perdis la forton pensi antaŭ multe da tempo. Kiam mi estis juna,
+			fakte. Mi foriris por promeni en la naturo. La naturo estis bela. Mia
+			povo pensi forfalis dum tiu promeno. Kaj nun, mi estas «la ulo, kiu ne
+			pensas».</p>
+			
+			<p>Verdire (ver-dire), mi ne estas la sola. Ankaŭ aliaj viroj kaj
+			virinoj, ankaŭ aliaj knaboj kaj knabinoj preferas ne pensi. Ankaŭ
+			multaj universitataj profesoroj neniam pensas. Ili ŝajnas pensi, sed
+			ne pensas vere. Ili agas, kvazaŭ ili pensus. Nur agas kvazaŭ ; ĉu
+			vi komprenas?</p>
+			
+			<p>Mi scias. Antaŭ iom da tempo, ankaŭ mi instruis en universitato. Sed
+			mi ne volis forperdi mian forton en absurdan agon, kiel pensi. Estas
+			tro riske. Imagu ! Se mi perdus miajn ideojn ! Mi verŝajne havas
+			ideojn. Mi ne scias tute certe — mi neniam rigardas ilin — sed plej
+			verŝajne ideojn mi havas.</p>
+			
+			<p>Se jes, miaj ideoj restas trankvilaj en iu anguleto en mi. Mi timas
+			perdi ilin kaj do neniam iras ilin vidi. Fakte, mi ne scias, ĉu ili
+			ekzistas. Verŝajne ili restas solaj en iu anguleto de mi. Solaj kaj
+			trankvilaj. Ili ne timu mian venon. Mi ne riskas veni.</p>
+			
+			<p>Ĉu vi aŭdis pri Kartezio<a href='#notoj'>[1]</a>? 
+			Li estis granda profesoro antaŭ multe
+			da tempo. Li diris: «Mi pensas, do mi estas». Mi diras malsame: «Mi ne
+			pensas, tamen mi estas. Mi ne pensas, tamen mi ekzistas». Mi scias, ke
+			mi ekzistas. Pri mia ekzisto mi estas tute certa. «Kiel vi povas tion
+			scii, se vi ne pensas?» vi eble demandas vin. Nu, karuloj, mi scias,
+			ke mi ekzistas: mi aŭdas. Mi aŭdas, do mi estas. Mi aŭdas, do mi
+			ekzistas.</p>
+			
+			<p>«Ĉu esti, ĉu ne esti, jen la demando», diris alia grandulo. Nu, por
+			mi, tio ne estas demando. Mi estas, kaj tio estas bela fakto por mi.
+			Eble mi estas stranga, sed mi amas mian ekziston. La fakto, ke mi
+			ekzistas, estas por mi — eble ne por vi ! — bela fakto. Antaŭ la
+			demando «ĉu esti, ĉu ne esti», mi tute ne timas. Mi respondas simple
+			«esti», kaj restas tute trankvila.</p>
+			
+			<p>«Mi aŭdas, do mi ekzistas», mi diris. Jes, mi aŭdas. Mi aŭdas tre
+			bone. Mi havas tre bonan aŭdpovon. Fakte, mi aŭdis vin diri ion ne
+			tre belan pri mi. Haha ! Vi pensis, ke mi ne aŭdas, ĉu ne? Sed mi
+			aŭdas plej bone. Vi povas diri ion tre malforte, kvazaŭ vi tute
+			perdus la forton paroli. Tamen mi aŭdas vin. Mia aŭdo estas tre
+			bona. Tro bona, eble. Ofte okazas, ke mi aŭdas aferojn, kiujn mi
+			devus ne aŭdi. Jes, mi aŭdas vere tre bone.</p>
+			
+			<p>Same pri mia vidpovo: mi ankaŭ vidas tre bone. Nur mia penspovo ne
+			estas bona kiel miaj aŭdo kaj vido. Mi malamas pensi. Mi ne havas la
+			tempon pensi. Mi havas tempon por neseriozaj aferoj, ne havas tempon
+			por seriozaj, ĉu vi komprenas?</p>
+			
+			<p>Se mi metas mian forton en tiun laboron — pensi estas labori, ĉu ne? 
+			— mi perdas ĝin. Mi tute ne deziras perdi mian forton. Estas bone
+			esti forta<a href='#notoj'>[2]</a>.</p>
+			
+			<p>Verdire, ŝajni forta estas ankoraŭ pli bone, en la nuna mondo,
+			ŝajnas al mi. Plej ofte gravas la aspekto. Se vi ŝajnas forta, oni
+			timas vin, kvazaŭ vi estus forta. Se vi estas forta, sed ŝajnas
+			malforta, oni ne konsideras vin serioze. Nur se la aliaj vidas, ke,
+			kun via malforta aspekto, vi tamen estas vere forta, nur tiam ili
+			konsideras vin serioze.</p>
+			
+			<p>Ĉu vi aŭdis min? Mi diris, ke mia forto estas grava por mi. Mi do ne
+			volas perdi ĝin, kaj mi do malkonsentas pensi. La aliaj pensu pri
+			tiel gravaj demandoj kiel «ĉu esti, ĉu ne esti», «ĉu mi pensas, kaj
+			do ekzistas? ĉu mi ne pensas, kaj do ne ekzistas?». Ne mi. Mi ne
+			deziras diskuti pri tiuj demandoj. Mi povas observi min multatempe, mi
+			neniam vidas deziron pripensi pri la demando de mia ekzisto. Sed mi
+			bone komprenas, ke vi eble havas aliajn dezirojn. Eble vi deziras
+			pridiskuti la demandon, ĉu vi ekzistas. Diskutu ĝin do, sed ne kun
+			mi.</p>
+			
+			<p>Pensu vi, se vi volas. Pensu, fakte, kion vi volas. Ne gravas al mi,
+			ĉu vi pensas, ĉu vi ne pensas, ĉu vi pensas prave, ĉu vi pensas
+			malprave. Tute ne gravas al mi. Viaj pensoj povas fali unu post la
+			alia sur la tablon, vi povas meti ilin en vian tason da kafo, vi povas
+			kaŝi ilin en sukerujon, tute ne gravas al mi. Se viaj pensoj faras
+			grandan bruon dum-fale, ne gravas al mi. Se ili ne falas sur la
+			tablon, kaj bruon tute ne faras, kaj restas trankvile en via poŝo,
+			same ne gravas al mi. Nur unu peton mi havas: permesu al mi ne pensi.
+			Kaj post tiu deklaro, permesu, ke mi salutu vin. Bonan tagon ! Ne
+			pensu tro ! Kaj la forto restu kun vi !</p>
+			
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Kartezio</span> = Descartes.</li>
+				<li>En Esperanto, oni diras: estas —e —i, —i estas —e, estas —e,
+				ke ... Same kiel oni diras: <i>natura ago</i>, sed <i>nature agi</i>,
+				same oni diras <i>la ago estas natura</i>, sed <i>agi estas
+				nature</i></li>
+			</ol>
+		
 		<?php 
 		} // fin section 5
 		?>

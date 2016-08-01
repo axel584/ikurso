@@ -210,11 +210,94 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
+			<h3>Malkontentas la mekanikisto</h3>
+			
+			<p>Mi miras, ke li ne dankis min. Estis tamen granda servo, kiun mi faris
+			al li. Mi helpis, ĉu ne? Mi nenion misfaris, mi nenion fuŝis, mi
+			nenion malbonigis. Nur okazis tio, ke mi malsukcesis.</p>
+			<p>
+			Kion vi volas? Mi ne povas fari mirindaĵojn. Mi estas homo, sinjoro,
+			simpla homo, kiu perlaboras la vivon<a href='#notoj'>[1]</a> laborante per siaj manoj. Kaj
+			per sia kapo. Jes, la kapo, ĉar oni devas kompreni, kio misfunkcias.
+			Nu, mi komprenis. Li tute fuŝis sian motoron. Ne mirige, kun tia
+			maniero ekrapidi, kaj subite ekmalrapidi, kaj ree eĉ pli subite
+			rerapidi. Tiuj motoroj estas malfortaj.</p>
+			<p>
+			Li do ne diru, ke mi ne helpis, ĉar mi helpis. Aŭ almenaŭ mi
+			provis. Se motoro estas tute fuŝita, ĝi ne estas riparebla tujtuj.
+			Ĉiam la sama afero: ili ne povas atendi. Sed li ne diris eĉ etan,
+			eĉ apenaŭ aŭdeblan «dankon!». Li eĉ ne danketis. 
+			Senkora homo! 
+			Vere ne helpinda.</p>
+			<p>
+			Kion ajn oni faras, li ne dankas. Eĉ misparolante, eĉ fuŝe, li
+			povus esprimi sian dankon, eĉ per la mano, eĉ per la kapo. Kiel ajn
+			li volas. Per la piedoj eĉ, se li preferas. Aŭ per la haroj. Kiel
+			ajn li deziras. Nur li danku.</p>
+			<p>
+			Konsentite, la afero ne estas finita, la servo ne estas finfarita. Sed
+			la mesaĝo estas dirita: «Vi fuŝis vian aŭton, sinjoro, mi faros
+			tion, kio eblas, ne pli, ĉar mi estas nur homo».</p>
+			<p>
+			Mi ne speciale volas, ke li longe paroladu. Mi ne deziras, ke li
+			dankadu min dum tagoj kaj tagoj, ke li esprimadu siajn dankojn ĉiam
+			kaj ĉiam, ĝis mia vivo estos finita. Nur kelkaj dankvortoj, kaj mi
+			estus kontenta. Tamen ne estas malfacile. Ekzistas homoj, kiuj
+			dankegas vin, ĉar tute malgranda servo estas al ili farita. Eta
+			helpo, kaj jen venas longa danka deklarado. Kvazaŭ dank' al vi<a href='#notoj'>[2]</A> ili
+			vivus plu, eĉ se vi faris nenion, aŭ almenaŭ nenion gravan.</p>
+			<p>
+			Sed tiu ĉi simple ne dankis. Eĉ ne unu vorto. Mi ne havis la tempon
+			rigardi, kio okazas al li, jam la pordo estis fermita, jam li estis
+			for. Tiel foriri sendanke... ĉu vi imagas? Mi ne ŝatas tian
+			manieron agi. Kvazaŭ la aliaj ne ekzistus, kvazaŭ ni ne indus
+			kelkajn vortojn de danko. Vere, li estas malbonmaniera homo.</p>
+			<p>
+			Lia motoro estas fuŝita. Kion li faris per tiu aŭto, mi iom povas
+			imagi. Tute ne estas nature, ke la motoro tiamaniere fuŝiĝis, se li
+			agis normale. Ofte oni sin demandas, kion la homoj faras per siaj
+			veturiloj. Nu, mi faris, kion mi povis. Mi longe rigardadis la
+			motoron, provis ĉu tion, ĉu tion ĉi, ĉu tion alian, rebonigis
+			kelkajn aferetojn, kiuj misfunkciis, remetis unu novan pecon. La tutan
+			farindan laboron mi faris.</p>
+			<p>
+			Sed superhomaĵojn mi ne povas fari. Se li fuŝis sian motoron tiel
+			grave, kion mi faru? Ĉiam estas la sama afero. Ili aŭtas kiel
+			malsaĝuloj, kvazaŭ ili tute perdis la kapon<a href='#notoj'>[3]</a>, jes kiel senkapaj
+			knabegoj ili irigas sian veturilon, kaj poste ili miras, ke post
+			kelkaj tagoj ĝi ankoraŭ ne estas riparita.</p>
+			<p>
+			Tiuj motoroj ne estas tre serioze faritaj. Almenaŭ oni estu afabla
+			kun ili. Se ne, ili facile fuŝiĝas.</p>
+			<p>
+			Nu, se mi devas remeti tutan novan motoron, ne mirinde, ke li kelktage
+			atendu. Mi parolis tute afable al li, ne eldiris eĉ plej etan
+			malbelan vorton, kaj tamen mi povus, se konsideri tian nekredeblan
+			manieron fuŝi belan novan veturileton.</p>
+			<p>
+			Ne mi faris, ke lia aŭto ne plu funkcias. Sed mi laboris super ĝi,
+			restis longan tempon en la laborejo ĉe tiu fuŝita motoro. Sed ĉar
+			la aŭto ne estas jam plene riparita, tiu sinjoro senigas min de la
+			simpla, unuvorta danko, kiun mi devus aŭdi.</p>
+			<p>
+			Por tiaj homoj ni laboras! La vivo vere ne estas facila. Kontentigi
+			la homojn niaepoke ne plu eblas. Mi tion diras al vi, sinjoro, ĉar
+			almenaŭ vi ŝajnas komprenema. Tia agmaniero tute senigas min de la
+			emo labori.</p>
+					
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Perlabori la vivon</span> : ekhavi, per sia laboro, tion, kion oni devas
+				havi por vivi.</li>
+				<li><span class="eo">Dank' al vi, danke al vi</span> : pro via dankinda helpo.</li>
+				<li><span class="eo">Perdi la kapon</span> : ekmispensi, ekpensi fuŝe, perdi la povon ĝuste pensi.</li>
+			</ol>
 
-		<?php 
+		<?php
 		} // fin section 5
 		?>
 

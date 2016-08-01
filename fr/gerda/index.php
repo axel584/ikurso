@@ -436,8 +436,8 @@ include "gerdakapo.inc.php";
 					<li><b>Ekzercoj</b> : exercices à envoyer au tuteur pour correction</li>
 					<li><b>Lasu min…</b> : chapitre correspondant du livre <i>Lasu min paroli plu!</i>.</li>
 				</ul>
-				<p>En parallèlle, nous vous conseillons de lire les récits de 
-				<a href="<?php echo $vojo;?>fr/cge/gerda/lasu00.php"><i>Lasu min paroli plu!</i></a></p>
+				<p>En parallèle, nous vous conseillons de lire les récits de 
+				<a href="<?php echo $vojo;?>fr/gerda/lasu00.php"><i>Lasu min paroli plu!</i></a></p>
 				 
 				<h3>Et pour finir :</h3>
 		

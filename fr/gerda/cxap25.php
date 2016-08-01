@@ -167,9 +167,85 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			//include "lasusono.inc.php";
 		?>
 
-			<h3>xxxx</h3>
+			<h3>La tri plendoj de s-ro Kursano</h3>
+		
+			<p>Sinjoro policano, mi havas plendon. Tri plendojn, fakte. Ĉu vi
+			bonvolas noti?</p>
+			
+			<p>Mi esperas, ke vi povos fari ion, ĉar mia digno malbonfartas, kaj mi
+			esperas, ke dank' al via interveno, ĝi refartos bone. Pri kio mi
+			plendas? Pri multo, sinjoro policano, mi plendas pri multo.
+			Multrilate oni malbonagis kontraŭ mi.</p>
+			
+			<p>Unue mi plendas pri provo ŝteli de mi monon. Due pri persekutado. Kaj
+			trie... atendu... lasu min pripensi momenteton, estis ankaŭ io alia,
+			sed ŝajnas, ke mi forgesis. Ha jes, kompreneble! Pri malvera
+			promeso. Malhonesta promeso, se vi preferas.</p>
+			
+			<p>Oni diris al mi, ke, se mi pagos la kurson, mi finfine scios esprimi
+			min en tiu lingvo, kaj mi konstatas, ke mi ne scias. Tio estas
+			malhonesta, ĉu ne? Oni invitis min elpoŝigi mian monon, kaj kion mi
+			ricevis? Ian komencan kaj malprecizan ideon pri la lingvo. Oni agis
+			nejuste al mi. Mi ne ricevis ion samvaloran kiel la mono, kiun mi
+			pagis. Tial mi petas vin skribi mian plendon, mian unuan: provo ŝteli
+			monon de mi.</p>
+			
+			<p>Dua plendo: oni min persekutis. Kiel oni persekutis min, vi volas scii
+			? Ĉefe la instruanto min persekutis, sed fojfoje ankaŭ la
+			kunlernantoj. Imagu tion: esti persekutata de siaj samklasanoj!
+			Nekredeble, ĉu? Tamen tio okazis. Mi diras la veron. Mi estas homo
+			sincera, kaj tial ne elportas malhonestaĵojn, kaj malhonestaĵojn mi
+			konstante travivis dum la daŭro de tiu kurso. Ili persekutis min
+			dirante, ke mia maniero min esprimi en la tutmonda lingvo ne estas
+			ĝusta. Konstante mankis iu N, ili diris; mi uzis la vortfinaĵon A
+			kiam devus esti E, ili diris, ktp ktp ( = kaj tiel plu). Ĉiufoje mi
+			aŭdis similajn rimarkojn, malestimajn. Ĉu mi povus allasi, ke oni
+			min malrespektu tiamaniere? Ne, sinjoro policano. Mi povas akcepti
+			multon malplaĉan, sed malrespekton mi firme rifuzas.</p>
+			
+			<p>Kiam homo ne rajtas paroli tute simple sen ricevi de ĉiuj flankoj
+			rimarkojn pri tio, ke li sin esprimas fuŝe, kiel nomi tion, se ne
+			persekutado? Konstante oni alsaltis min, ĉar mi diris IGI kaj ne
+			IĜI, aŭ DE kaj ne DA. Estis organizita milito kontraŭ mia sento pri
+			memdigno, kontraŭ mia memvaloro. Oni konstante provadis malaltigi min
+			kaj estigi en mi sentojn de malplivaloro. Ĉu ni ne vivas en libera
+			lando, kie, laŭtradicie, la digneco de homa persono estas respektata
+			? Mi kuraĝe rifuzis lasi ilin subigi min, sed ili insistis. Plurfoje
+			mi konstatis, ke ili trovas plezuron en la fakto diri al mi, ke mi
+			fuŝlernis. Estas faka vorto, kiu difinas tiun sintenon, sed mi
+			momente forgesis ĝin. Mia memoro ne fartas tre bone post tiu laciga
+			lingvokurso.</p>
+			
+			<p>Kaj, trie, mi prezentas plendon pri malvera promeso. Oni promesis al
+			mi, ke mi lernos facilan lingvon en plaĉa atmosfero. Fakte la lingvo
+			estas tre malfacila, kaj la atmosfero... nu, plej bone eĉ ne paroli
+			pri ĝi. Mi opiniis, ke oni uzos seriozan lernolibron, kie ĉio estas
+			bonorde prezentita kaj klare difinita. Fakte, oni uzis neinteresan
+			rakonton, pri kiu mi nenion komprenis, verŝajne ĉar nenio estis
+			kompreninda. Ili eĉ ne sukcesis uzi ĉiufoje tekston kun sama
+			longeco. Kelkfoje, la teksto, kiun ni legis kaj studis, havis malpli
+			ol unu paĝon, alifoje ĝi estis dupaĝa. Estis suferige, por mia
+			digneco de mezjuna viro, devi sekvi la knabecajn rakontojn. kiujn tiu
+			kurso proponis al ni. Jam antaŭ longe mi forlasis la infanetan
+			lernejon kaj nur persono, kies kapo fuŝe funkcias, povis imagi, ke
+			tia rakontaĉo kontentigos normalan kursanaron.</p>
+			
+			<p>Cetere, kiom koncernas la normalecon de miaj samkursanoj... nu, ankaŭ
+			ĉi-rilate estas preferinde silenti. Jen, sinjoro policano. Ĉu vi
+			notis ĉion? Ĉi tio estas mia plendo. Mi insistas, por ke vi
+			transsendu ĝin al la superaj aŭtoritatoj. Mi deziras, ke oni
+			rejustigu la situacion, ke oni repagu al mi mian monon, kaj ke oni
+			informu ĉiujn personojn, ke la lernado estos tute malsama ol ili
+			atendas.</p>
+			
+			<p>Saluton, sinjoro policano. Fartu bone. Estas tempo, ke mi foriru. Kaj
+			bonvole ne plendu, se mi brufermas la pordon. Mia furiozo devas
+			esprimiĝi iamaniere, ĉu kun, ĉu sen N ĉe la vortofino. Ĝis la
+			revido! Aŭ, pli bone eĉ, adiaŭ!
+			</p>
 
 		<?php 
 		} // fin section 5

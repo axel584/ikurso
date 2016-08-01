@@ -230,9 +230,103 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
+			include "lasusono.inc.php";
 		?>
-
-			<h3>xxxx</h3>
+		
+			<h3>Oni venis el alia mondo</h3>
+			
+			<p>La unua afero estas informi ilin. Jes, mi devos unue informi la
+			aŭtoritatojn. Mi konas min: mi jam nun timas tiun devon, kaj mi timos
+			ĝin multe pli, poste, kiam la tago venos kaj mi devos iri al ili, kaj
+			diri: «Jen kio okazis, jen kio certe okazos».</p>
+			
+			<p>Ili opinios, ke mi ne diras la veron. Tute certe ili rigardos min
+			malverulo. Ankaŭ kiam mi montros la... la «aĵon»
+			<a href='#notoj'>[1]</a>, ili ne konsentos pri la vero de miaj diroj. Ili rigardos ĝin kaj ili ne
+			komprenos. Ili diros, ke temas pri io tre stranga kaj nekomprenebla,
+			sed ili ne opinios, ke mi diras la veron. Aŭ ĉu eble tamen...?</p>
+			
+			<p>Ili eble vokos fakulojn, specialistojn. Mia koro batos ! Mi jam povas
+			imagi tion: kiel rapide mia koro batos, kiam mi staros antaŭ ili kaj
+			devos diri, kio okazis, kiel kaj de kiu (diable !) mi ekhavis tiun
+			neimageblan aĵon.</p>
+			
+			<p>Kion oni povas fari por superi la timon ? Kion faras la aliaj, kiam
+			granda forta timo envenas en ilian koron ? Mi scias pri tiuj
+			aŭtoritatoj<a href='#notoj'>[2]</a>. Ili deziros tutforte, ke mi malpravu. Ili multe
+			preferus, ke mi malpravu. Ofte la aŭtoritatoj tute ne deziras aŭdi
+			la veron. Ili konsentas kompreni ĝin, nur se la vero estas normala.
+			Kiam la faktoj estas strangaj, kiam okazis io ne normala, io pli
+			malpli supernatura, tiam ili preferas scii nenion.</p>
+			
+			<p>Ankaŭ mi preferus dormi trankvile kaj vivi trankvilan vivon. Ne mi
+			petis... eee<a href='#notoj'>[3]</a>... «tiujn» veni. Ne mi deziris aŭdi iliajn timofarajn
+			parolojn. Ĉu vi opinias, ke mi amas dramojn ? Tute ne.</p>
+			
+			<p>Kaj tamen, kion fari ? Mi faros mian devon. Mi iros. Kaj mi devos iri
+			sola. La afero, kompreneble, estas plej sekreta. Se almenaŭ mi povus
+			paroli pri ĝi kun iu ! Sed sekreto estas sekreto. Kaj kun... tiuj...
+			tiuj uloj... eee... tiuj estaĵoj, la risko estus tro granda.</p>
+			
+			<p>La simpla fakto pensi, ke mi staros tie, antaŭ la aŭtoritatoj, jam
+			faras, ke mi timas. Mi grave antaŭtimas tiun tagon. Ili sin demandos,
+			ĉu mia kapo laboras normale. Ili diros, ke miaj ideoj estas absurdaj.
+			Mi respondos, ke ne temas pri ideoj, sed pri faktoj, simplaj faktoj,
+			pri kiuj mi preferus neniam paroli.</p>
+			
+			<p>Tiam mi diros: «Estaĵoj alimondaj<a href='#notoj'>[4]</a> venis al mi. 
+			Jen. Ili petis min
+			montri al vi jenan aferon, por ke vi certiĝu, ke mi diras la veron
+			kaj ke ververe ili petis min veni por diri al vi, kion ili volas, ke
+			mi diru». Kaj mi montros la... la aĵon... kaj ili ne scios, kion
+			pensi. Sed ili certe devos diri unu al la alia, ke tiu... tiu aĵo...
+			ne povus esti niamonda (nenio sama povas ekzisti en nia mondo; oni do
+			ĝin faris alimonde; alimonduloj do ekzistas kaj venis al mi).</p>
+			
+			<p>Ili demandos kaj demandos. Mi respondos, ke mi scias nenion, ke la
+			afero same misteras al mi, kiel al ili, kaj ke mi preferus ne havi la
+			devon ilin informi. Mi respondos plu, ke estis mia devo veni, tiel ke
+			mi venis, malbonvole, eble, sed tamen venis. Se ili ne volas aŭdi
+			tion, kion mi devas diri, estas ilia afero. Ili iru al la diablo, se
+			ili preferas.</p>
+			
+			<p>Mi venis por fari mian devon. Tio estas la ĝusta faro, ĉu ne ? Kio
+			estas pli ĝusta ol tio ? Kio estus pli prava ol informi la superulojn
+			? Ankaŭ mi preferus sidi kun la kapo en imago kaj la piedoj sur la
+			tablo, se vi vidas, kion mi volas diri, sed ne gravas mia prefero, ĉu
+			? Gravas multe pli, ke iu informu la aŭtoritatojn pri tiu grava,
+			stranga, drama afero. Kion fari, se tiu «iu» nur povas esti mi ?
+			Sincere, mi preferus, ke iu alia iru.</p>
+			
+			<p>Unu eble konsentos iomete aŭdi min, sed ne la aliaj, ne la plimulto.
+			Nu, estas ilia afero. Ne, mi diras malveron al mi. Ne estas nur ilia
+			afero. Estas ankaŭ mia afero. Estas mia devo. Kiam mi ekpensas pri
+			tio, kio okazos al la tuta mondo, se oni faros nenion, kiel mi ektimas
+			! Mi preferus resti trankvile ĉi tie ol devi informi ilin.</p>
+			
+			<p>La vero ofte ŝajnas pli absurda ol imagaĵoj. Estas vere, ke la
+			aŭtoritatoj estos en malkomforta pozicio. Sed ne mi decidis, ke ili
+			havos superan, aŭtoritatan pozicion. Ili decidis mem. Ili mem tion
+			deziris.</p>
+			
+			<p>Jes, karaj granduloj, vi deziris iĝi superaj aŭtoritatoj. Vi deziris
+			la Povon, la povon super ni simpluloj. Nun, vi havas ĝin. Agu do ! Vi
+			devos komuniki la informon al la tuta mondo, tiel ke la tuta mondo
+			sciu, sed tamen ne tro timu. Ĉu tio estas ebla ? Mi timas, ke ne. Mi
+			timas, ke oni ne povas fari, ke la mondo ne timu. Sed kion fari ? Ĉu
+			fari nenion, ĝis la dramo okazos ? Ne. Neeble. Vi certe faros vian
+			devon. Mi estas kore kun vi.</p>
+		
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Aĵo</span> : afero.</li>
+				<li><span class="eo">Mi scias pri tiuj aŭtoritatoj</span> : mi scias, kiel agas tiuj aŭtoritatoj; 
+				mi scias, kiel ili reagas al okazaĵoj; mi konas tiujn aŭtoritatojn.</li>
+				<li>La viro, kiu parolas, ne scias, kiel esprimi la penson; li do diras 'eee'; 
+				en aliaj lingvoj oni diras 'hm', 'aaa', 'er', 'euh', 'nu', 'oh' ...</li>
+				<li>Alimondaj (= alia-mond-aj)</li>
+			</ol>
 
 		<?php 
 		} // fin section 5

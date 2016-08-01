@@ -27,8 +27,8 @@ include "dlekkapo.inc.php";
 				}
 				else {
 				?>
-					<p class="white-text">Nous avons enregistré vos exercices. Ils seront envoyés à votre correcteur, dès que nous vous en aurons 
-					attribué un. Vous recevrez alors ses coordonnées par message électronique.</p>
+					<p class="white-text">Nous avons enregistré vos exercices. Ils seront envoyés à votre correcteur, 
+						dès que nous vous en aurons attribué un. Vous recevrez alors ses coordonnées par message électronique.</p>
 					<p class="white-text">Votre correcteur recevra alors vos exercices par messagerie électronique et vous recevrez une copie de ce message.</p>
 				<?php
 				}
@@ -37,7 +37,7 @@ include "dlekkapo.inc.php";
 		    
 			<h2>Évaluez-nous !</h2>
 			<p>Pour nous permettre d'améliorer notre cours, merci de prendre quelques secondes pour nous faire un retour sur la leçon que vous venez d'envoyer. Cette évaluation est destinée aux administrateurs du cours et ne sera pas lue par votre correcteur.</p>
-			<form method="post" action="../taksoLeciono.php">
+			<form method="post" action="<?php echo $vojo;?>fr/taksoLeciono.php">
 				<input type='hidden' name="kurso" value='CG'/>
 				<input type='hidden' name="leciono" value='<?=$leciono?>'/>
 				<div class="tasko enketo">

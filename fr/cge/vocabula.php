@@ -1,5 +1,5 @@
 <?php 
-$gxisdatigDato="2006-06-16";
+$leciono=99;
 $subjekto="vocabula.php";
 $temo="listo";
 $pagxtitolo="Lexique";

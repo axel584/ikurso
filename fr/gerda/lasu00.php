@@ -1,12 +1,10 @@
 <?php 
+$titolo="Lasu min paroli plu";
+$leciono = 0;
 include "gerdakapo.inc.php"; 
 ?>
 	<div class="row">
 		<article class="col s12 m10 l7 offset-m1 offset-l1">
-			<section id="leciono-kapo">
-				<h1>Cours Gerda malaperis</h1>
-			</section>
-			
 			<section id="leciono-enhavo">
 				<h2><i>Lasu min paroli plu !</i> : un recueil de textes de lecture</h2>
 			

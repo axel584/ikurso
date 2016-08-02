@@ -26,7 +26,7 @@ function NbStudantojn() {
 		echo "</tr>\n";
 	}
 }
-include "pagxkapo.inc.php";
+include "pagxkapo-old.inc.php";
 ?>
 		<div id="enhavo">
 			<ul id="tabnav">
@@ -59,4 +59,4 @@ include "pagxkapo.inc.php";
 			<?php } ?>
 			</div>
 		</div>
-<?php include "pagxpiedo.inc.php";?>
+<?php include "pagxpiedo-old.inc.php";?>

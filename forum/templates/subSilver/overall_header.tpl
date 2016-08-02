@@ -229,7 +229,7 @@ input.liteoption {
 {U_MENU}
 
 <div id="kapo">
-	<img src="http://ikurso.esperanto-jeunes.org/dev2/bildoj/titre2.jpg">
+	<img src="http://ikurso.esperanto-france.org/dev2/bildoj/titre2.jpg">
 </div>
 
 {MENUO}

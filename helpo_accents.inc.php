@@ -49,10 +49,10 @@
 								<p><strong>Exemples :</strong></p>
 							    <ul class="listo">
 									<li>Téléchargez ce petit 
-									<a href="http://ikurso.esperanto-jeunes.org/klavaro.zip">
+									<a href="http://ikurso.esperanto-france.org/klavaro.zip">
 									fichier ZIP</a>. 
 									Il contient le programme d’installation et un fichier DLL (FrEo.dll dans le dossier i386)&nbsp;:<br /><br />
-									<img src="http://ikurso.esperanto-jeunes.org/bildoj/klavaro.jpg" class="responsive-img"></li>
+									<img src="http://ikurso.esperanto-france.org/bildoj/klavaro.jpg" class="responsive-img"></li>
 									<li>Double-cliquez sur le programme d’installation (*.msi)</li>
 									<li>L’installation est terminée !<br>
 									<i>Il est bien sûr possible de désinstaller cette configuration.</i></li>

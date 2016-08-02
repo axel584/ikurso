@@ -12,7 +12,7 @@ body
 	margin-bottom: 25px;
 	font-family: "Arial Unicode MS", Arial, Geneva, Helvetica, sans-serif; 
 	font-size: 13px;
-	background: #FFF url(http://ikurso.esperanto-jeunes.org/style/globe.jpg) 0 0 no-repeat;
+	background: #FFF url(http://ikurso.esperanto-france.org/style/globe.jpg) 0 0 no-repeat;
 	behavior: url(csshover.htc);	/* fichier de comportement pour Win I.E. */	}
 body.popup {
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
@@ -166,7 +166,7 @@ html>body #menuo table tr td {
 #menuo table tr td h2 {
 	font-size:16px;
 	border-bottom: solid #668CB2 1px;
-	background: #FFF url(http://ikurso.esperanto-jeunes.org/style/degrade.gif);
+	background: #FFF url(http://ikurso.esperanto-france.org/style/degrade.gif);
 }
 
 #menuo table tr td p {
@@ -239,7 +239,7 @@ html>body #pagxmenuo {
 div#pagxmenuo ul {
 	margin:0; padding:0;
 	width:200px;
-	background: #FFF url(http://ikurso.esperanto-jeunes.org/style/degrade.gif) repeat-y;
+	background: #FFF url(http://ikurso.esperanto-france.org/style/degrade.gif) repeat-y;
 	border:1px solid #668CB2;
 	-moz-border-radius:0px 0px 15px 0px;
 	voice-family:"\"}\"";
@@ -280,7 +280,7 @@ div#pagxmenuo ul.niv2 li {
 	width:198px;
 }
 div#pagxmenuo li.ligo {
-	background: url(http://ikurso.esperanto-jeunes.org/style/triangle.gif) 95% 50% no-repeat;
+	background: url(http://ikurso.esperanto-france.org/style/triangle.gif) 95% 50% no-repeat;
 }
 div#pagxmenuo ul.niv0 li.lasta,
 div#pagxmenuo ul.niv1 li.lasta,
@@ -346,7 +346,7 @@ div#pagxmenuo ul.niv1 li.ligo:hover ul.niv2 ul {
 	padding:1px;
 	text-align:center;
 	border:1px solid #668BC2;
-	background: #FFF url(http://ikurso.esperanto-jeunes.org/style/degrade.gif) repeat-y;
+	background: #FFF url(http://ikurso.esperanto-france.org/style/degrade.gif) repeat-y;
 	-moz-border-radius:0px 0px 15px 0px;
 }
 
@@ -364,11 +364,11 @@ div#pagxmenuo ul.niv1 li.ligo:hover ul.niv2 ul {
  */
 #pagxmenuo .ne {
 	border:none;
-	background: url(http://ikurso.esperanto-jeunes.org/style/bouton_blanc.gif);
+	background: url(http://ikurso.esperanto-france.org/style/bouton_blanc.gif);
 }
 #pagxmenuo .jes {
 	border:none;
-	background: url(http://ikurso.esperanto-jeunes.org/style/bouton_bleu.gif);
+	background: url(http://ikurso.esperanto-france.org/style/bouton_bleu.gif);
 }
 /**********************************
  * contenu "utile" de la page
@@ -722,14 +722,14 @@ div.lernantoj em {
 	text-align: left;
 }
 .rakonto ul {
-	list-style-image: url(http://ikurso.esperanto-jeunes.org/style/triangle.gif);
+	list-style-image: url(http://ikurso.esperanto-france.org/style/triangle.gif);
 }
 .klarigo ul {
 	line-height:1.5;
 	font-size:13px;
 	margin-left:50px;
 	text-align: left;
-	list-style-image: url(http://ikurso.esperanto-jeunes.org/style/triangle.gif);
+	list-style-image: url(http://ikurso.esperanto-france.org/style/triangle.gif);
 }
 .klarigo li {
 	padding-bottom:5px;
@@ -752,7 +752,7 @@ div.lernantoj em {
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
 }
 .klarigo ul.sommaire li {
-	list-style-image:"http://ikurso.esperanto-jeunes.org/bildoj/triangle.gif";
+	list-style-image:"http://ikurso.esperanto-france.org/bildoj/triangle.gif";
 }
 .klarigo ul.cadre li {
 	width: 200px;
@@ -914,7 +914,7 @@ table.prezento form {
 	text-align:center;
 }
 table.hejmo h3 {
-	background: #FFF url(http://ikurso.esperanto-jeunes.org/style/degrade.gif) repeat-y;
+	background: #FFF url(http://ikurso.esperanto-france.org/style/degrade.gif) repeat-y;
 	display:block;
 }
 table.hejmo h4 {
@@ -985,7 +985,7 @@ div.stylenavbar a:hover{
 					<!--
 					<a href="helpo.php"><input type="text" size="6" class="bouton" value="Aide" align="middle"></a>
 					-->
-					<a href="#"><img src="http://ikurso.esperanto-jeunes.org/bildoj/help.gif" alt="Helpo" title="aide"></a>
+					<a href="#"><img src="http://ikurso.esperanto-france.org/bildoj/help.gif" alt="Helpo" title="aide"></a>
 				</p>
 			</div>
 			<!--

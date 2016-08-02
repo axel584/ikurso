@@ -15,8 +15,8 @@ include "dlekkapo.inc.php";
 	
 	<aside class="col s12 m2">
 		<p>Téléchargez ce lexique au format PDF&nbsp;:<br> 
-		<a href="http://ikurso.esperanto-jeunes.org/doc/LexiqueDLEK-Ikurso.pdf">
-		<img src="http://ikurso.esperanto-jeunes.org/bildoj/pdf-dist.png" alt="Lexique - 55 Ko" 
+		<a href="http://ikurso.esperanto-france.org/doc/LexiqueDLEK-Ikurso.pdf">
+		<img src="http://ikurso.esperanto-france.org/bildoj/pdf-dist.png" alt="Lexique - 55 Ko" 
 		title="Lexique - 55 Ko" align="bottom" border="0"></a></p>
 	</aside>
 

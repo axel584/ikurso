@@ -88,8 +88,8 @@ $res.="<br><a href='".$vojo."helpo.php'><button>&nbsp;&nbsp;&nbsp;Aide&nbsp;&nbs
 $res.="</td></tr></table>";
 
 if (($rajto=="K"||$rajto=="A")) {
-	$res.="<h2><a href=\"http://ikurso.esperanto-jeunes.org/sxangxiNBlernantoj.php\">".$lgv_miajlernantoj."</h2></a>";
-	$res.="<a href=\"http://ikurso.esperanto-jeunes.org/sxangxiNBlernantoj.php\">";
+	$res.="<h2><a href=\"http://ikurso.esperanto-france.org/sxangxiNBlernantoj.php\">".$lgv_miajlernantoj."</h2></a>";
+	$res.="<a href=\"http://ikurso.esperanto-france.org/sxangxiNBlernantoj.php\">";
 	$res.="<table title=\"cliquez sur la table pour modifier votre nombre d'&eacute;l&egrave;ves\">";
 	$res.="<thead>\n<tr>\n<td>cours</td>\n";
 	$res.="<td>&eacute;l&egrave;ves<br>en cours</td>";

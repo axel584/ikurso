@@ -788,7 +788,7 @@ div.lernantoj em {
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
 }
 .klarigo ul.sommaire li {
-	list-style-image:"http://ikurso.esperanto-jeunes.org/bildoj/triangle.gif";
+	list-style-image:"http://ikurso.esperanto-france.org/bildoj/triangle.gif";
 }
 .klarigo ul.cadre li {
 	width: 200px;

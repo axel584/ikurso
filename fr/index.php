@@ -1,3 +1,3 @@
 <?php 
-	header("Location:http://ikurso.esperanto-jeunes.org");
+	header("Location:http://ikurso.esperanto-france.org");
 ?>

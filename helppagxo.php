@@ -303,7 +303,7 @@ include "pagxkapo-old.inc.php";
 						<h3>J’ai des problèmes pour envoyer les messages avec les accents.</h3>
 						<blockquote><p>		
 						Vous trouverez des explications utiles sur 
-						<a href="http://ikurso.esperanto-jeunes.org/helpo.php#courriel">cette page</a>.<br>
+						<a href="http://ikurso.esperanto-france.org/helpo.php#courriel">cette page</a>.<br>
 						Pour l’envoi de vos messages, si vous n’avez pas la possibilité de taper vous-même 
 						les lettres accentuées, vous pourrez utiliser la méthode en -x ou en -h.</p>
 						</p></blockquote>
@@ -320,8 +320,8 @@ include "pagxkapo-old.inc.php";
 						-	dans le menu "favoris" cliquez maintenant sur "organiser les favoris".<br>
 						Retrouvez le favori que vous venez de créer cliquer dessus avec le bouton droit 
 						de la souris et selectionnez "Proprietés"<br> 
-						-	sans la zone de l’adresse, modifiez la valeur http://ikurso.esperanto-jeunes.org 
-						par http://ikurso.esperanto-jeunes.org/eniri.php?enirnomo=identifiant&pasvorto=mot_de_passe   
+						-	sans la zone de l’adresse, modifiez la valeur http://ikurso.esperanto-france.org 
+						par http://ikurso.esperanto-france.org/eniri.php?enirnomo=identifiant&pasvorto=mot_de_passe   
 						en mettant à la place de "identifiant" votre identifiant et à la place de "mot_de_passe", 
 						votre propre mot de passe. Ainsi, au lieu de retaper votre identifiant / mot de passe à 
 						chaque fois, il vous suffira de sélectionner ce favori dans la liste de vos favoris 
@@ -333,7 +333,7 @@ include "pagxkapo-old.inc.php";
 			
 						<h3>J’ai un problème qui n'est pas expliqué dans ce guide ?</h3>
 						<blockquote><p>				 
-						Dans ce cas, <a href="http://ikurso.esperanto-jeunes.org/reago.php">n’hésitez pas à nous écrire !</a>
+						Dans ce cas, <a href="http://ikurso.esperanto-france.org/reago.php">n’hésitez pas à nous écrire !</a>
 						</p></blockquote>	
 					<?php } ?>
 				</div>

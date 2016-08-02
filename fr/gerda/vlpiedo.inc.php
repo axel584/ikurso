@@ -8,7 +8,7 @@
 			<form name="mesaxgo" action="../jefo/reago.php" method="POST">
 			<input type="hidden" name="lastpa&#285;o" value="<?php echo $url ?>">
 			<p class="artifiko">Kontaktu nin:&nbsp;
-			<input type="image" src="http://ikurso.esperanto-jeunes.org/bildoj/messagerie.gif" align="center" border="0" onClick="this.form.submit();"></p>
+			<input type="image" src="http://ikurso.esperanto-france.org/bildoj/messagerie.gif" align="center" border="0" onClick="this.form.submit();"></p>
 			</form>
 		</td>
 	</tr>

@@ -62,7 +62,7 @@ if ($kurso=="CG") {
 	$prefixeKurso = "fr/cge/";
 	$nomCours = "lec";
 } 
-if ($kurso=="KE") {
+if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
 	$nomCours = "gerda cxap";
 } 

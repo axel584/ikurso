@@ -266,18 +266,18 @@ include "gerdakapo.inc.php";
 	
 				<div class="tasko">
 				<?php $demandoj=array (
-					10 => "Kun [5] sako li eliris? - Li eliris kun papera sako.",
-					11 => "[5] li forveturos? - Mi pensas, ke li forveturos aŭte.",
-					12 => "[5] numeron vi notis? - Mi notis lian aŭtan numeron.",
-					13 => "[5] vi sekvis lin? - Mi sekvis lin iom malproksime.",
-					14 => "[5] li estis vestita? - Li estis vestita per multkoloraj vestoj.",
-					15 => "[5] vi sentas vin hodiaŭ? - Mi sentas min tre bone, dankon.",
-					16 => "[5] estas via sano? - Multe pli bona ol hieraŭ.",
-					17 => "[5] virojn ŝatas Linda? - Ŝi ŝatas blondulojn.",
-					18 => "[5] vi ekkonis lin? - Ni estis en la sama lernejo.",
-					19 => "[5] restas Gerda? - Ŝi restas soifa."
+					10 => "Kun _____ sako li eliris? - Li eliris kun papera sako.",
+					11 => "_____ li forveturos? - Mi pensas, ke li forveturos aŭte.",
+					12 => "_____ numeron vi notis? - Mi notis lian aŭtan numeron.",
+					13 => "_____ vi sekvis lin? - Mi sekvis lin iom malproksime.",
+					14 => "_____ li estis vestita? - Li estis vestita per multkoloraj vestoj.",
+					15 => "_____ vi sentas vin hodiaŭ? - Mi sentas min tre bone, dankon.",
+					16 => "_____ estas via sano? - Multe pli bona ol hieraŭ.",
+					17 => "_____ virojn ŝatas Linda? - Ŝi ŝatas blondulojn.",
+					18 => "_____ vi ekkonis lin? - Ni estis en la sama lernejo.",
+					19 => "_____ restas Gerda? - Ŝi restas soifa."
 					);
-					plenigEkzerco("U");
+					ekzerco(True, 1);
 					?>
 				</div>
 			</fieldset>

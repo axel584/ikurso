@@ -238,15 +238,15 @@ include "gerdakapo.inc.php";
 
 				<div class="tasko">
 				<?php $demandoj=array(
-					7 => "Mi multe lernadis [3] lingvistiko [3] sukcesi en la universitato.",
-					8 => "[3] la malfrua horo mi decidis veturi [3] aŭto, [3] esti pli rapida.",
-					9 => "[3] kio temas? - Mi ne scias; mi ĵus alvenis.",
-					10 => "Mi dankas vin [3] via helpo.",
-					11 => "[3] la bruo en mia angulo, estis [3] mi tre malfacile aŭdi.",
-					12 => "Mi scias certe [3] tio, ke mi vidis ĝin [3] miaj propraj okuloj.",
-					13 => "Ŝi venis [3] instrui kriptaĵo-sciencon, sed mi neniam aŭdis [3] tiu fako."
+					7 => "Mi multe lernadis ___ lingvistiko ___ sukcesi en la universitato.",
+					8 => "___ la malfrua horo mi decidis veturi ___ aŭto, ___ esti pli rapida.",
+					9 => "___ kio temas? - Mi ne scias; mi ĵus alvenis.",
+					10 => "Mi dankas vin ___ via helpo.",
+					11 => "___ la bruo en mia angulo, estis ___ mi tre malfacile aŭdi.",
+					12 => "Mi scias certe ___ tio, ke mi vidis ĝin ___ miaj propraj okuloj.",
+					13 => "Ŝi venis ___ instrui kriptaĵo-sciencon, sed mi neniam aŭdis ___ tiu fako."
 					);
-					plenigEkzerco("U");
+					ekzerco(True, 1);
 					?>
 				</div>
 			</fieldset>
@@ -362,7 +362,7 @@ include "gerdakapo.inc.php";
 			esti foje akceptitaj de lia patro. Ŝi kvazaŭ ŝtele eniris en lian
 			mondon por ŝteli lian amon, kaj la tutan riĉon, kiu iras kun ĝi, ĉe
 			tia multmona homo. Ŝi uzis plej plene sian imagon por elpensi plej
-			malsamajn manierojn enŝteliĝi<A HREF="#notoj">[3]</A> en lian vivon, kaj plaĉi al li. Sed
+			malsamajn manierojn enŝteliĝi<A HREF="#notoj">___</A> en lian vivon, kaj plaĉi al li. Sed
 			eble ŝi trouzis ilin. Eble li suspektis ŝian planon kaj la ne plene
 			honestajn motivojn, kiuj kuŝis malantaŭ ŝiaj tro oftaj aperoj ĉe
 			lia flanko.</p>
@@ -535,10 +535,10 @@ include "gerdakapo.inc.php";
 			Sed ankaŭ kunmarŝis la dudek kvin karuletoj, kio tamen mallarĝigis
 			la eblecojn de plaĉa para interparolado.</p>
 			<p>
-			Kiam mi estis libera, kaj mia kunlaboranto<A HREF="#notoj">[3]</A> ilin gardis, ŝi
+			Kiam mi estis libera, kaj mia kunlaboranto<A HREF="#notoj">___</A> ilin gardis, ŝi
 			laboris en la trinkejo. Se mi tien iris, plej ofte ankaŭ kelkaj el
 			miaj klasanoj venis. Kaj kiam ŝi interrompis la laboron, mi ne
-			estis libera, sed devis okupiĝi pri la dudek-kvino. Mia helpanto<A HREF="#notoj">[3]</A>
+			estis libera, sed devis okupiĝi pri la dudek-kvino. Mia helpanto<A HREF="#notoj">___</A>
 			ĉeestis nur dumtage, je precizaj horoj.</p>
 			<p>
 			Tamen, iom post iom, mi sukcesis trovi solvojn al la problemoj, kaj

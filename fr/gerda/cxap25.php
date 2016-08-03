@@ -129,7 +129,7 @@ include "gerdakapo.inc.php";
 				<?php $demandoj=array(
 					1 => "Ĉu vi konas la respondon ?"
 					);
-					ekzerco(True, 10);
+					ekzerco(True, 5);
 				?>
 				</div>
 			</fieldset>
@@ -159,7 +159,7 @@ include "gerdakapo.inc.php";
 					8 => "Ĉu vi uzis aŭ havas iujn aliajn lernilojn, ekzemple vortaron aŭ lernolibron pri Esperanto? Kiujn?",
 					9 => "Ĉu vi volas plulerni Esperanton? Kiel? Ĉu kurso simila al la GERDA-kurso, sed kun bonaj literaturaj tekstoj anstataŭ la GERDA-rakonto, estus utila por vi? Ĉu vi preferus simple trastudi iun libron en Esperanto? Ĉu vi volus trastudi libron diskutante ĝin kun iu? Ĉu vi volas lerni pli pri la historio kaj celoj de la Esperanto-Movado?",
 					);
-					ekzerco(True, 5);
+					ekzerco(True, 2);
 					?>
 				</div>
 			</fieldset>

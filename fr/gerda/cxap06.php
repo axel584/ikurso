@@ -116,21 +116,17 @@ include "gerdakapo.inc.php";
 					3 => "Kiuj iras vidi? (Linda kaj Tom / Linda kaj Bob / Bob kaj Tom / ĉiuj tri)",
 					4 => "Kiu restas por observi? (Tom / Bob / Linda / la blondulo / Gerda)"
 					);
-				ekzerco(True, 2);
+				ekzerco(True, 1);
 				?>
 				</div>
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton.</b></legend>
-				<input type="hidden" name="013_cxap06.1" value="Elektu la ĝustan vorton.">
+				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
+				<input type="hidden" name="013_cxap06.1" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
 				<div class="ekzemplo">
 					<p><em>Ekzemple:</em></p>
-					<p><span class="input-field"><select><option> ? </option><option>Li</option><option>Lin</option></select></span>
-					 metas <span class="input-field"><select><option> ? </option><option>ĝi</option><option>ĝin]</option>
-					 </select></span> en la <span class="input-field"><select><option> ? </option><option>poŝo</option>
-					 <option>poŝon</option></select></span>.
-					</p>
+					<p>[Li/Lin] metas [ĝi/ĝin] en la [poŝo/poŝon].</p>
 		  			<p>→ <b>Li</b> metas <b>ĝin</b> en la <b>poŝon</b>.</p>
 				</div>
 
@@ -143,7 +139,7 @@ include "gerdakapo.inc.php";
 						5 => "[Iu/Iun] perdis [aĵo/aĵon] en la [restoracio/restoracion].",
 						6 => "Ili metas [ĝi/ĝin] sur la [tablo/tablon] kaj decidas promeni al la [universitato/universitaton]. [Ili/Ilin] ekiras.",
 					);
-					elektEkzerco();
+					ekzerco(True, 2);
 					?>
 				</div>
 			</fieldset>

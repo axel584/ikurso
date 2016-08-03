@@ -230,13 +230,12 @@ include "gerdakapo.inc.php";
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton.</b></legend>
-				<input type="hidden" name="013_cxap02.1" value="Elektu la ĝustan vorton.">
+				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
+				<input type="hidden" name="013_cxap02.1" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
 				
 				<div class="ekzemplo">
 					<p><em>Ekzemple:</em></p>
-					<p>Turnu vin iomete, <span class="input-field"><select><option>  ?  </option>
-					<option>ĉu</option><option>se</option></select></span> vi volas.</p>
+					<p>Turnu vin iomete, [ĉu / se] vi volas.</p>
 					<p>→ Turnu vin iomete, <b>se</b> vi volas.</p>
 					<p>Cet exercice attire votre attention sur la différence de sens entre
 					<b>ĉu</b> (interrogation) et <b>se</b> (condition)&nbsp;:</p>
@@ -256,7 +255,7 @@ include "gerdakapo.inc.php";
 						13 => "Li estas en universitato, [ĉu/se] li estas studento.",
 						14 => "Mi ne certas, [ĉu/se] li estas studento. Li estas tro maljuna."
 						);
-						elektEkzerco();
+						ekzerco(True, 1);
 					?>
 				</div>
 			</fieldset>

@@ -186,7 +186,7 @@ include "gerdakapo.inc.php";
 					4 => "Kiu ne volas esti maldiskreta? (Bob / Tom / Linda / Gerda / la blondulo)",
 					5 => "Kio estas sur la vizaĝo de Linda? (bela deklaro / bona tago / mistera esprimo / io pli grava)"
 					);
-					ekzerco(True, 2);
+					ekzerco(True, 1);
 				?>
 				</div>
 			</fieldset>

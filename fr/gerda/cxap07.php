@@ -168,19 +168,17 @@ include "gerdakapo.inc.php";
 					3 => "Kiun Tom volas informi? (la blondulon / la profesoron pri lingvistiko / la aŭtoritatojn / spionon)",
 					4 => "Ĉu iu, kiu perdis la konscion, kuŝu kun la kapo pli alta ol la piedoj? (jes / ne)"
 					);
-				ekzerco(True, 2);
+				ekzerco(True, 1);
 				?>
 				</div>
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton.</b></legend>
-				<input type="hidden" name="013_cxap07.1" value="Elektu la ĝustan vorton.">
+				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
+				<input type="hidden" name="013_cxap07.1" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
 				<div class="ekzemplo">
 					<p><em>Ekzemple:</em></p>
-					<p><span class="input-field"><select><option> ? </option><option>Mi</option><option>Min</option></select></span>
-					restis tie unu <span class="input-field"><select><option> ? </option><option>semajno</option><option>semajnon]</option>
-					</select></span>.</p>
+					<p>[Mi/Min] restis tie unu [semajno/semajnon]</option>.</p>
 					<p>→ <b>Mi</b> restis tie unu <b>semajnon</b>.</p>
 				</div>
 					
@@ -199,19 +197,17 @@ include "gerdakapo.inc.php";
 						15 => "La [tablo/tablon], sur [kiu/kiun] estas la [kafo/kafon], estas tro [malgranda/malgrandan].",
 						16 => "Ĉu [vi/vin] havas iom da [kafo/kafon]? --- [Mi/Min] havas tri [tasoj/tasojn] da [kafo/kafon]."
 						);
-					elektEkzerco();
+					ekzerco(True, 1);
 					?>
 				</div>
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton.</b></legend>
-				<input type="hidden" name="013_cxap07.2" value="Elektu la ĝustan vorton.">
+				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
+				<input type="hidden" name="013_cxap07.2" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
 				<div class="ekzemplo">
 					<p><em>Ekzemple:</em></p>
-					<p>Ĉu Tom estas same alta <span class="input-field"><select><option>  ?  </option><option>kiel</option>
-					<option>ol</option></select></span> Bob, aŭ ĉu li estas pli alta <span class="input-field"><select><option>  ?  </option>
-					<option>kiel</option><option>ol</option></select></span> Bob?</p>
+					<p>Ĉu Tom estas same alta [kiel/ol] Bob, aŭ ĉu li estas pli alta [kiel/ol] Bob?</p>
 			  		<p>→ Ĉu Tom estas same alta <b>kiel</b> Bob, aŭ ĉu li estas pli alta <b>ol</b> Bob?</p>
 				</div>
 		
@@ -223,7 +219,7 @@ include "gerdakapo.inc.php";
 							20 => "Li iĝis pli kaj pli forta; li iĝis forta [kiel/ol] fortulo.",
 							21 => "Iru pli rapide, aŭ iru malpli rapide; iru [kiel/ol] vi volas!"
 						);
-						elektEkzerco();
+					ekzerco(True, 2);
 			?>
 				
 

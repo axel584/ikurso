@@ -163,21 +163,17 @@ include "gerdakapo.inc.php";
 					6 => "Kiu estas profesoro pri lingvistiko? (Bob / Linda / Tom / Gerda / Ronga / la blondulo)",
 					7 => "Kiu estas la sola bela virino en la tuta mondo, por Tom? (Gerda / Linda / Ronga / la knabino en la angulo)",
 				);
-				ekzerco(True, 2);
+				ekzerco(True, 1);
 				?>
 				</div>
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton.</b></legend>
-				<input type="hidden" name="013_cxap04.1" value="Elektu la ĝustan vorton.">
+				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
+				<input type="hidden" name="013_cxap04.1" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
 				<div class="ekzemplo">
 					<p><em>Ekzemple:</em></p>
-					<p><span class="input-field">
-						<span class="input-field"><select><option> ? </option><option>Mi</option><option>Min</option></select></span>
-					 diris <span class="input-field"><select><option> ? </option><option>tio</option><option>tion</option>
-					 </select></span> al <span class="input-field">
-					 <select><option> ? </option><option>vi</option><option>vin</option></select></span>.</p>
+					<p>[Mi/Min] diris [tio/tion] al [vi/vin].</p>
 					<p>→ <b>Mi</b> diris <b>tion</b> al <b>vi</b>.</p>
 				</div>
 				<div class="tasko">
@@ -195,7 +191,7 @@ include "gerdakapo.inc.php";
 					18 => "[Li/Lin] ne komprenas. [Tio/Tion] estas [mistera/misteran].",
 					19 => "[Li/Lin] preferas [sinceraj/sincerajn] [junuloj/junulojn]."
 				);
-				elektEkzerco();
+				ekzerco(True, 1);
 				?>
 				</div>
 			</fieldset>

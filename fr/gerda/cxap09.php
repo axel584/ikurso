@@ -225,7 +225,7 @@ include "gerdakapo.inc.php";
 				<input type="hidden" name="013_cxap09.1" value="Kompletigu la frazon per la ĝusta demandovorto.">
 				<div class="ekzemplo">
 					<p><em>Ekzemple:</em></p>
-					<p><div class="input-field"><input value=""></div> vi iras? - Mi iras al la urbo. </p>
+					<p> ______ vi iras? - Mi iras al la urbo. </p>
 					<p>→ <b>Kien</b> vi iras? - Mi iras al la urbo.</p>
 					<p>La demandovortoj jam lernitaj estas:
 						kio, kion, kiu, kiun, kiel, kiam, kial, kie, kien, ĉu.</p>
@@ -233,19 +233,19 @@ include "gerdakapo.inc.php";
 						
 				<div class="tasko">
 				<?php $demandoj=array (
-					6. => "[6] diris la kuracisto? - Li diris, ke mi estu senzorga, ke mia malsano ne estas tro serioza.",
-					7. => "[6] vi resaniĝos? - Baldaŭ. Eble post kelkaj tagoj.",
-					8. => "[6] vi iros unue post la resaniĝo? - Unue mi iros en bonan restoracion.",
-					9. => "[6] vi iros sola? - Ne, amikoj iros kun mi.",
-					10. => "[6] helpas vin dum la malsano? - Mia amiko Petro.",
-					11. => "[6] estas via patrino? - En sia oficejo; ŝi devas multe labori tie.",
-					12. => "[6] vi ne povas iri piede? - Ĉar miaj kruroj estas tute senfortaj.",
-					13. => "[6] vi ekmalsanis? - Mi ekmalsanis tre subite.",
-					14. => "[6] tio okazis? - En mia laborejo.",
-					15. => "[6] ili metis en vian laborlokon? - Neniun, do la laboro restas nefarita kaj atendas min.",
-					16. => "[6] ili metis neniun en vian lokon? - Ĉar laboristo por mia laboro estas malofte trovebla."
+					6. => "______ diris la kuracisto? - Li diris, ke mi estu senzorga, ke mia malsano ne estas tro serioza.",
+					7. => "______ vi resaniĝos? - Baldaŭ. Eble post kelkaj tagoj.",
+					8. => "______ vi iros unue post la resaniĝo? - Unue mi iros en bonan restoracion.",
+					9. => "______ vi iros sola? - Ne, amikoj iros kun mi.",
+					10. => "______ helpas vin dum la malsano? - Mia amiko Petro.",
+					11. => "______ estas via patrino? - En sia oficejo; ŝi devas multe labori tie.",
+					12. => "______ vi ne povas iri piede? - Ĉar miaj kruroj estas tute senfortaj.",
+					13. => "______ vi ekmalsanis? - Mi ekmalsanis tre subite.",
+					14. => "______ tio okazis? - En mia laborejo.",
+					15. => "______ ili metis en vian laborlokon? - Neniun, do la laboro restas nefarita kaj atendas min.",
+					16. => "______ ili metis neniun en vian lokon? - Ĉar laboristo por mia laboro estas malofte trovebla."
 					);
-					plenigEkzerco("U");
+					ekzerco(True, 2);
 				?>
 				</div>
 			</fieldset>

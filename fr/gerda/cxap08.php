@@ -190,19 +190,14 @@ include "gerdakapo.inc.php";
 					4 => "Kiu ekstaras kaj iras al la pordo? (Linda / Gerda / la juna viro, kiu metis ion en la kafon de Gerda / Bob / Tom)",
 					5 => "Kiu sekvas? (Linda / Gerda / la juna viro, kiu metis ion en la kafon de Gerda / Bob / Tom)"
 					);
-				ekzerco(True, 2);
+				ekzerco(True, 1);
 				?>
 				</div>
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton.</b> </legend>
-
-				<input type="hidden" name="013_cxap08.1" value="1. Elektu la ĝustan vorton.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>("Berlino", "Londono" kaj "Parizo" estas urbo-nomoj.)</p>
-				</div>
+				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
+				<input type="hidden" name="013_cxap08.1" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
 				<div class="tasko">
 					<?php $demandoj=array (
 						6 => "[Oni/Onin] sendis [mi/min] al [Berlino/Berlinon] por paroli kun la [spiono/spionon].",
@@ -211,18 +206,17 @@ include "gerdakapo.inc.php";
 						9 => "Ili sekvis [ŝi/ŝin] al [Parizo/Parizon], sed en [tiu/tiun] [urbo/urbon] [ili/ilin] perdis [ŝi/ŝin].",
 						10 => "Kiam [oni/onin] aŭdis [tiu/tiun] [novaĵo/novaĵon] el [Parizo/Parizon], [oni/onin] decidis, ke [mi/min] ne plu restu en la [urbo/urbon].",
 					);
-					elektEkzerco();
+					ekzerco(True, 2);
 				?>
 				</div>
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend><b>Konservu la ĝustajn vortojn.</b> </legend>
-				<input type="hidden" name="013_cxap08.2" value="Konservu la ĝustajn vortojn.">
+				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
+				<input type="hidden" name="013_cxap08.2" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
 				<div class="ekzemplo">
 					<p><em>Ekzemple:</em></p>
-					<p>Vi parolu pri <span class="input-field"><select><option>  ?  </option><option>vi</option>
-					<option>si</option></select></span>.</p>
+					<p>Vi parolu pri [vi/si].</p>
 					<p>→ Vi parolu pri <b>vi</b>.</p>
 				</div>
 	
@@ -231,14 +225,14 @@ include "gerdakapo.inc.php";
 						11 => "Mi konas [min/sin]. Mi do ne volas vidi [min/sin] en la spegulo. Tom estas pli bela ol mi, kaj mi ofte vidas lin rigardi [lin/sin] en la spegulo. Kiam li turnas [lin/sin] al mi, mi plene vidas [sian/lian] belan aspekton.",
 						12 => "Ĉu vi volas piediri reen al [via/sia] ĉambro? Vi promenos longe, sed ne timu, ke [viaj/siaj] kruroj tro laboros kaj perdos [ilian/sian] tutan forton."
 						);
-					elektEkzerco();
+					ekzerco(True, 2);
 				?>
 				</div>
 			</fieldset>
 				
 			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan pronomon kaj kompletigu ĝin.</b> </legend>
-				<input type="hidden" name="013_cxap08.3" value="Elektu la ĝustan pronomon kaj kompletigu ĝin.">
+				<legend><b>Elektu la ĝustan pronomon, kompletigu ĝin kaj skribu la tutan frazon.</b> </legend>
+				<input type="hidden" name="013_cxap08.3" value="Elektu la ĝustan pronomon, kompletigu ĝin kaj skribu la tutan frazon.">
 				<div class="ekzemplo">
 					<p><em>Ekzemple:</em></p>
 					<p>Mi konas [mi* / si*] vizaĝon. → Mi konas <b>mian</b> vizaĝon.</p>
@@ -246,39 +240,13 @@ include "gerdakapo.inc.php";
 				</div>
 
 				<div class="tasko">
-					<p>Ĉu vi havas informojn pri Linda? Ŝi kuŝis en 
-					<input type="hidden" name="dd08.14.61" value="Ĉu vi havas informojn pri Linda? Ŝi kuŝis en ">
-					[ŝi*/si*] <span class="input-field"><input name="rr08.14.61" size="5" onkeyup='xAlUtf8(this)'></span>
-					ĉambro kaj ne sentis <input type="hidden" name="dd08.14.102" value=" ĉambro kaj ne sentis ">
-					[ŝi*/si*] <span class="input-field"><input name="rr08.14.102" size="5" onkeyup='xAlUtf8(this)'></span>
-					tre bone. Tom iris al <input type="hidden" name="dd08.14.139" value=" tre bone. Tom iris al ">
-					[ŝi*/si*] <span class="input-field"><input name="rr08.14.139" size="5" onkeyup='xAlUtf8(this)'></span>
-					kun <input type="hidden" name="dd08.14.158" value=" kun "> 
-					[li*/si*] <span class="input-field"><input name="rr08.14.158" size="5" onkeyup='xAlUtf8(this)'></span>
-					kuracisto, sed ŝi ne rigardis tiun kuraciston serioza. Ŝi preferis 
-					<input type="hidden" name="dd08.14.245" value=" kuracisto, sed ŝi ne rigardis tiun kuraciston serioza. Ŝi preferis"> 
-					[ŝi*/si*] <input name="rr08.14.245" size="5" onkeyup='xAlUtf8(this)'> 
-					kuraciston; ŝi vere ne amas <input type="hidden" name="dd08.14.293" value=" kuraciston; ŝi vere ne amas "> 
-					[li*/si*] <input name="rr08.14.293" size="5" onkeyup='xAlUtf8(this)'>. 
-					Li do forsendis <input type="hidden" name="dd08.14.320" value=". Li do forsendis "> 
-					[li*/si*] <input name="rr08.14.320" size="5" onkeyup='xAlUtf8(this)'> kaj vokis 
-					<input type="hidden" name="dd08.14.340" value=" kaj vokis "> 
-					[ŝi*/si*] <input name="rr08.14.340" size="5" onkeyup='xAlUtf8(this)'>. 
-					Strange, kiam ŝi vidis <input type="hidden" name="dd08.14.384" value=". Strange, kiam ŝi vidis "> 
-					[li*/si*] <input name="rr08.14.384" size="5" onkeyup='xAlUtf8(this)'> 
-					kuraciston, ŝi sentis <input type="hidden" name="dd08.14.421" value=" kuraciston, ŝi sentis "> 
-					[ŝi*/si*] <input name="rr08.14.421" size="5" onkeyup='xAlUtf8(this)'> 
-					malbone, sed tuj kiam ŝi vidis 
-					<input type="hidden" name="dd08.14.472" value=" malbone, sed tuj kiam ŝi vidis "> 
-					[ŝi*/si*] <input name="rr08.14.472" size="5" onkeyup='xAlUtf8(this)'> 
-					kuraciston alveni, ŝi jam sentis 
-					<input type="hidden" name="dd08.14.525" value=" kuraciston alveni, ŝi jam sentis ">
-					[ŝi*/si*] <input name="rr08.14.525" size="5" onkeyup='xAlUtf8(this)'> 
-					pli bone. Oni <input type="hidden" name="dd08.14.554" value=" pli bone. Oni "> 
-					[oni*/si*] <input name="rr08.14.554" size="5" onkeyup='xAlUtf8(this)'> 
-					demandas, ĉu ŝi ametas <input type="hidden" name="dd08.14.598" value=" demandas, ĉu ŝi ametas ">
-					[li*/ŝi*/si*] <input name="rr08.14.598" size="5" onkeyup='xAlUtf8(this)'>  
-					<input type="hidden" name="dd08.14.628" value=" kuraciston."> kuraciston.</p>			
+					<?php $demandoj=array (
+					13 => "Ĉu vi havas informojn pri Linda? Ŝi kuŝis en [ŝi*/si*] ĉambro kaj ne sentis [ŝi*/si*] tre bone. Tom iris al [ŝi*/si*] kun [li*/si*] kuracisto, sed ŝi ne rigardis tiun kuraciston serioza. Ŝi preferis [ŝi*/si*] kuraciston; ŝi vere ne amas [li*/si*].",
+					14 => "Li do forsendis [li*/si*] kaj vokis [ŝi*/si*]. Strange, kiam ŝi vidis [li*/si*] kuraciston, ŝi sentis [ŝi*/si*] malbone, sed tuj kiam ŝi vidis [ŝi*/si*] kuraciston alveni, ŝi jam sentis [ŝi*/si*] pli bone.",
+					15 => "Oni [oni*/si*] demandas, ĉu ŝi ametas [li*/ŝi*/si*] kuraciston."
+					);			
+					ekzerco(True, 2);
+				?>
 				</div>
 			</fieldset>
 

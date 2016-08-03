@@ -179,18 +179,17 @@ include "gerdakapo.inc.php";
 					4 => "Ĉu estas normale promeni kun sukerpecoj en la poŝo? (jes / ne)",
 					5 => "Kiu ekiras for? (Linda / Gerda / Tom / Bob / la blondulo)"
 					);
-				ekzerco(True, 2);
+				ekzerco(True, 1);
 				?>
 				</div>
 			</fieldset>
 
 			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton.</b></legend>
-				<input type="hidden" name="013_cxap05.1" value="Elektu la ĝustan vorton.">
+				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
+				<input type="hidden" name="013_cxap05.1" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
 				<div class="ekzemplo">
 					<p><em>Ekzemple: </em></p>
-					<p><span class="input-field"><select><option> ? </option><option>Kiam</option><option>Se</option></select></span>
-					li estus studento, mi lin konus.</p>
+					<p>[Kiam/Se] li estus studento, mi lin konus.</p>
 					<p>→ <b>Se</b> li estus studento, mi lin konus.</p>
 				</div>
 	
@@ -203,7 +202,7 @@ include "gerdakapo.inc.php";
 						10 => "Mi volas paroli ankaŭ pri vi, [kiam/se] vi permesas.",
 						11 => "Mi parolis kun ŝi, [kiam/se] ŝi sidis en la restoracio."
 					);
-					elektEkzerco();
+					ekzerco(True, 1);
 					?>
 				</div>
 			</fieldset>

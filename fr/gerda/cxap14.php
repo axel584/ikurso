@@ -223,7 +223,7 @@ include "gerdakapo.inc.php";
 					8 => "Kial la infanoj ne helpis ŝin?",
 					9 => "Kun kiu Gerda estis post la forkuro de la infanoj?"				
 					);
-				ekzerco(True, 2);
+				ekzerco(True, 1);
 				?>
 				</div>
 			</fieldset>
@@ -240,38 +240,38 @@ include "gerdakapo.inc.php";
 					<p class="primaire-texte texte-moyen">La vortoj estas:</p>
 					<p class="primaire-texte texte-moyen">absurda, aĵo, deziri, drogo, eta, evidenta, fakto, fora, ideo, imagi, instrui, kaŝi, kiam, komuniki, koni, konsenti, lerni, mesaĝo, nomo, paro, peco, plena, promeni, pulvoro, respondi, sekreto, subita, super, ŝajni, temo</p>
 					<?php $demandoj=array (
-					10 => "afero : [15].",
-					11 => "akiri scion : [15].",
-					12 => "aspekti : [15].",
-					13 => "diri reage al demando : [15].",
-					14 => "dormigilo : [15].",
-					15 => "en kiu tempo : [15].",
-					16 => "enhavanta ĉion enhaveblan : [15].",
-					17 => "facile videbla, komprenebla : [15].",
-					18 => "fari por si ideon pri io : [15].",
-					19 => "havi ideon pri : [15].",
-					20 => "havi similan opinion : [15].",
-					21 => "io el tre malgrandaj partetoj : [15].",
-					22 => "io, kio restu kaŝita, ne konata : [15].",
-					23 => "iradi pro plezuro : [15].",
-					24 => "komunikaĵo : [15].",
-					25 => "kontraŭ la normala saĝo : [15].",
-					26 => "lernigi : [15].",
-					27 => "malgranda : [15].",
-					28 => "malmontri : [15].",
-					29 => "malproksima : [15].",
-					30 => "parto : [15].",
-					31 => "pensaĵo : [15].",
-					32 => "pli alta ol : [15].",
-					33 => "rapida, ne atendita : [15].",
-					34 => "rilatanta duo : [15].",
-					35 => "sciigi, konigi : [15].",
-					36 => "tio, pri kio io estas : [15].",
-					37 => "veraĵo : [15].",
-					38 => "voli havi : [15].",
-					39 => "vorto, per kiu persono estas konata : [15]."
+					10 => "afero :",
+					11 => "akiri scion :",
+					12 => "aspekti :",
+					13 => "diri reage al demando :",
+					14 => "dormigilo :",
+					15 => "en kiu tempo :",
+					16 => "enhavanta ĉion enhaveblan :",
+					17 => "facile videbla, komprenebla :",
+					18 => "fari por si ideon pri io :",
+					19 => "havi ideon pri :",
+					20 => "havi similan opinion :",
+					21 => "io el tre malgrandaj partetoj :",
+					22 => "io, kio restu kaŝita, ne konata :",
+					23 => "iradi pro plezuro :",
+					24 => "komunikaĵo :",
+					25 => "kontraŭ la normala saĝo :",
+					26 => "lernigi :",
+					27 => "malgranda :",
+					28 => "malmontri :",
+					29 => "malproksima :",
+					30 => "parto :",
+					31 => "pensaĵo :",
+					32 => "pli alta ol :",
+					33 => "rapida, ne atendita :",
+					34 => "rilatanta duo :",
+					35 => "sciigi, konigi :",
+					36 => "tio, pri kio io estas :",
+					37 => "veraĵo :",
+					38 => "voli havi :",
+					39 => "vorto, per kiu persono estas konata :"
 					);
-					plenigEkzerco("U");
+					ekzerco(True, 1);
 					?>
 				</div>
 			</fieldset>

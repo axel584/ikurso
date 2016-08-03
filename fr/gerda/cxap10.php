@@ -145,24 +145,24 @@ include "gerdakapo.inc.php";
 			</fieldset>
 		
 			<fieldset class="ekzerco">
-				<legend><b>Anstataŭigu la stelon per la ĝusta vorto aŭ vortero.</b> </legend>
-				<input type="hidden" name="013_cxap10.1" value="Anstataŭigu la stelon per la ĝusta vorto aŭ vortero.">
+				<legend><b>Kopiu la frazojn kaj anstataŭigu la stelon per la ĝusta vorto aŭ vortero.</b> </legend>
+				<input type="hidden" name="013_cxap10.1" value="Kopiu la frazojn kaj anstataŭigu la stelon per la ĝusta vorto aŭ vortero.">
 				<div class="ekzemplo">
 					<p><em>Ekzemple:</em></p>
 					<p>Tom [*] Linda estas student[*]. → Tom kaj Linda estas studentoj.</p>
 				</div>
 				<div class="tasko">
 				<?php $demandoj=array (
-					7 => "Tom [3] Linda estas student[3]. En universitat[3] restoraci[3] ili observas blond[3] junul[3], kiu agas plej strange: dum li parolas [3] knabino, li kaŝ[3] metas io[3] en ŝi[3] kafotaso[3].",
-					8 => "Eble estis drogo, ĉar tuj post ki[3] ŝi ekstaras kaj forlasas la restoracio[3], [3] la koridoro[3] ŝi jam perdas la konscion. Intertemp[3], Bob sid[3]is ĉe Tom kaj Linda.",
-					9 => "Li povas rakont[3] al ili[3], ki[3] estas la knabino: ŝi estas Gerda, nova instruist[3] pri kriptaĵoscienco ([3]novaj sekretaj lingvoj). Ronga, la profesoro pri lingvistiko, volis, ke ŝi ven[3] al la universitato [3] instru[3] kaj labor[3] kun li.",
-					10 => "Kiam ili aŭdas ŝi[3] falbruon el la koridor[3], Bob kaj Tom rapidas por helpi ŝi[3]. Bob metas ŝin bone, tiel [3] ŝi kuŝu komforte, kaj Tom ir[3] vok[3] flegistinon.",
-					11 => "Tiu flegistino, dika, grasa kaj parolema, nur post long[3] diskut[3] kun Tom, konsciiĝas [3] tio, ke la afero urĝas. Se ŝi est[3] pli zorgema, ŝi [3] rapidus kaj eble ne okazus jeno:",
-					12 => "Kiam Tom fine [3]venas kun la flegistino, Gerda estas for, kaj Bob sidas ĉe la koridor[3] mur[3], bat[3]a surkape. Kion [3]tempe faras Linda? Ŝi pli kaj pli [3]trankvil[3]as, lasite sola [3] la universitata restoracio kun la blond[3] strang[3].",
-					13 => "Ŝi observ[3] lin, kaj kiam li eliras tra la pordo alurb[3], ŝi[3] sekvas li[3]. Linda estas junulino iom tim[3], certe belega. Tom am[3]as ŝin; li havas okulojn nur [3] ŝi.",
-					14 => "Li zorgas pri ŝi. Ĉu ŝi trov[4] en danĝero? Ki[3], fakte, ŝi iros? Kaj Gerda, kien ŝi[3] foriĝis? Ki[3] okaz[3] kun ŝi? La afero [4] pli kaj pli mistera!"
+					7 => "Tom [*] Linda estas student[*]. En universitat[*] restoraci[*] ili observas blond[*] junul[*], kiu agas plej strange: dum li parolas [*] knabino, li kaŝ[*] metas io[*] en ŝi[*] kafotaso[*].",
+					8 => "Eble estis drogo, ĉar tuj post ki[*] ŝi ekstaras kaj forlasas la restoracio[*], [*] la koridoro[*] ŝi jam perdas la konscion. Intertemp[*], Bob sid[*]is ĉe Tom kaj Linda.",
+					9 => "Li povas rakont[*] al ili[*], ki[*] estas la knabino: ŝi estas Gerda, nova instruist[*] pri kriptaĵoscienco ([*]novaj sekretaj lingvoj). Ronga, la profesoro pri lingvistiko, volis, ke ŝi ven[*] al la universitato [*] instru[*] kaj labor[*] kun li.",
+					10 => "Kiam ili aŭdas ŝi[*] falbruon el la koridor[*], Bob kaj Tom rapidas por helpi ŝi[*]. Bob metas ŝin bone, tiel [*] ŝi kuŝu komforte, kaj Tom ir[*] vok[*] flegistinon.",
+					11 => "Tiu flegistino, dika, grasa kaj parolema, nur post long[*] diskut[*] kun Tom, konsciiĝas [*] tio, ke la afero urĝas. Se ŝi est[*] pli zorgema, ŝi [*] rapidus kaj eble ne okazus jeno:",
+					12 => "Kiam Tom fine [*]venas kun la flegistino, Gerda estas for, kaj Bob sidas ĉe la koridor[*] mur[*], bat[*]a surkape. Kion [*]tempe faras Linda? Ŝi pli kaj pli [*]trankvil[*]as, lasite sola [*] la universitata restoracio kun la blond[*] strang[*].",
+					13 => "Ŝi observ[*] lin, kaj kiam li eliras tra la pordo alurb[*], ŝi[*] sekvas li[*]. Linda estas junulino iom tim[*], certe belega. Tom am[*]as ŝin; li havas okulojn nur [*] ŝi.",
+					14 => "Li zorgas pri ŝi. Ĉu ŝi trov[4] en danĝero? Ki[*], fakte, ŝi iros? Kaj Gerda, kien ŝi[*] foriĝis? Ki[*] okaz[*] kun ŝi? La afero [4] pli kaj pli mistera!"
 				);
-				plenigEkzerco("U");
+				ekzerco(True, 2);
 				?>
 				</div>
 			</fieldset>

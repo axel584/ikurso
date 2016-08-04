@@ -230,7 +230,7 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">ŝia</span> : son, sa (àelle)</p>
 					<p><span class="eo">lia</span> : son,sa (à lui)</p>
 					<p><span class="eo">nia</span> : notre</p>
-					<p><span class="eo">ili</span> : leur</p>
+					<p><span class="eo">ilia</span> : leur</p>
 				</div>
 			</div>
 					

@@ -118,25 +118,25 @@ include "dlekkapo.inc.php";
 		if ($section=="4") {
 		?>
 		
-			<p>Les syllabes accentuées sont soulignées et, comme d’habitude, le haut-parleur vous indique la présence d’échantillons sonores
+			<p>Les syllabes accentuées sont soulignées et, comme d’habitude, le petit bouton à gauche vous indique la présence d’échantillons sonores
 			associés.
 			</p>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-01.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-01.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>a</b> (a comme dans <i>patte</i>)</p>
 				<p class="col s2 eo"><u>blan</u>ka</p>
 				<p class="col s2 eo"><u>sa</u>na</p>
 				<p class="col s2 eo"><u>gran</u>da</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-02.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-02.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>e</b> (è comme dans <i>sec</i>)</p>
 				<p class="col s2 eo"><u>be</u>la</p>
 				<p class="col s2 eo"><u>ple</u>na</p>
 				<p class="col s2 eo"><u>ver</u>da</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-03.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-03.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>i</b> (i comme dans <i>fini</i>)</p>
 				<p class="col s2 eo"><u>vi</u>vi</p>
 				<p class="col s2 eo"><u>a</u>mi</p>
@@ -166,52 +166,52 @@ include "dlekkapo.inc.php";
 			<p class="parto">Les consonnes se prononcent comme en français, sauf :</p>
 	
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-01.au" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-01.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>c</b> (ts comme dans <i>tsigane</i>)</p>
 				<p class="col s2 eo">ci<u>ga</u>no</p><p class="col s2 eo"><u>dan</u>ci</p><p class="col s2 eo">bi<u>ci</u>klo</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-02.au" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-02.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>ĉ</b> (tch comme dans <i>tchèque</i>)</p>
 				<p class="col s2 eo"><u>ĉe</u>ĥo</p><p class="col s2 eo"><u>ĉam</u>bro</p><p class="col s2 eo">ĉoko<u>la</u>do</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-03.au" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-03.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>g</b> (g comme dans <i>gare</i>)</p>
 				<p class="col s2 eo"><u>la</u>go</p><p class="col s2 eo">gus<u>tu</u>mi</p><p class="col s2 eo">geogra<u>fi</u>o</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-04.au"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-04.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>ĝ</b> (dj comme dans <i>Abidjan</i>)</p>
 				<p class="col s2 eo"><u>lo</u>ĝi</p><p class="col s2 eo"><u>se</u>ĝo</p><p class="col s2 eo"><u>man</u>ĝi</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-05.au"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-05.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>h</b> (h expiré [note 1])</p>
 				<p class="col s2 eo"><u>ha</u>vi</p><p class="col s2 eo"><u>ho</u>ro</p><p class="col s2 eo">lip<u>ha</u>ro</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-06.au"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-06.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>ĥ</b> (hr [note 2])</p>
 				<p class="col s2 eo"><u>e</u>ĥo</p><p class="col s2 eo"><u>ĥo</u>ro</p><p class="col s2 eo">ĥe<u>mi</u>o</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-07.au"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-07.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>j</b> (y comme dans <i>yogourt</i>)</p>
-				<p class="col s2 eo"><u>ja</u>ro</p><p class="col s2 eo"><u>ju</u>na</p>
+				<p class="col s2 eo"><u>jes</u></p><p class="col s2 eo"><u>ja</u>ro</p><p class="col s2 eo"><u>ju</u>na</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-08.au"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-08.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>ĵ</b> (j comme dans <i>journal</i>)</p>
 				<p class="col s2 eo">ĵur<u>na</u>lo</p><p class="col s2 eo">ĵa<u>lu</u>za</p><p class="col s2 eo">tea<u>tra</u>ĵo</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-09.au"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-09.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>r</b> (roulé [note 3])</p>
 				<p class="col s2 eo">te<u>a</u>tro</p><p class="col s2 eo"><u>ku</u>ri</p><p class="col s2 eo">ri<u>gar</u>di</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-10.au"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s2-10.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>ŝ</b> (ch comme dans <i>chemise</i>)</p>
 				<p class="col s2 eo"><u>ŝa</u>ti</p><p class="col s2 eo"><u>po</u>ŝo</p><p class="col s2 eo"><u>fu</u>ŝa</p>
 			</div>
@@ -249,42 +249,42 @@ include "dlekkapo.inc.php";
 			</p>
 				
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-01.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-01.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>aj</b> (comme dans <i>ail</i>, <i>aïe</i>)</p>
 				<p class="col s2 eo">kaj</p>
 				<p class="col s2 eo">se<u>maj</u>no</p>
 				<p class="col s2 eo"><u>ma</u>jo</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-02.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-02.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>oj</b> (comme dans <i>Tolstoï</i>)</p>
 				<p class="col s2 eo"><u>kna</u>boj</p>
 				<p class="col s2 eo"><u>koj</u>no</p>
 				<p class="col s2 eo">vo<u>ja</u>ĝi</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-03.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-03.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>ej</b> (comme dans <i>soleil</i>)</p>
 				<p class="col s2 eo">plej</p>
 				<p class="col s2 eo"><u>mej</u>lo</p>
 				<p class="col s2 eo">ler<u>ne</u>jo</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-04.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-04.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>uj</b> (comme dans <i>grenouille</i>)</p>
 				<p class="col s2 eo">tuj</p>
 				<p class="col s2 eo"><u>ki</u>uj</p>
 				<p class="col s2 eo">mo<u>nu</u>jo</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-05.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-05.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>aŭ</b> (comme l’anglais <i>now</i>)</p>
 				<p class="col s2 eo">naŭ</p>
 				<p class="col s2 eo"><u>an</u>taŭ</p>
 				<p class="col s2 eo">an<u>ta</u>ŭe</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-06.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s3-06.mp3" class="sm2_button"></a></p>
 				<p class="col s5"><b>eŭ</b> (è + w anglais)</p>
 				<p class="col s2 eo">Eŭ<u>ro</u>po</p>
 				<p class="col s2 eo">neŭ<u>tra</u>la</p>
@@ -297,7 +297,7 @@ include "dlekkapo.inc.php";
 			des diphtongues, mais bel et bien deux voyelles juxtaposées, formant donc
 			deux syllabes&nbsp;:</p>
 			<p>
-			<a href="<?php echo $vojo;?>fr/son/s3-07.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a> <span class="eo">balai</span> (<span class="eo">ba-<u>la</u>-i</span>), <span class="eo">balau</span> (<span class="eo">ba-<u>la</u>-u</span>), <span class="eo">neniigi</span> (<span class="eo">ne-ni-<u>i</u>-gi</span>), <span class="eo">neniu</span> (<span class="eo">ne-<u>ni</u>-u</span>), etc.
+			<a href="<?php echo $vojo;?>fr/son/s3-07.mp3" class="sm2_button"></a> <span class="eo">balai</span> (ba-<u>la</u>-i), <span class="eo">balau</span> (ba-<u>la</u>-u), <span class="eo">neniigi</span> (ne-ni-<u>i</u>-gi), <span class="eo">neniu</span> (ne-<u>ni</u>-u), etc.
 			</p>
 
 		<?php 
@@ -416,11 +416,11 @@ include "dlekkapo.inc.php";
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					4 => "Simeono estas la edzo de Fatima. Li amas &#349;in. Li, la edzino kaj la infanoj lo&#285;as en E&#365;ropo, en granda domo.",
-					5 => "Fatima deziras a&#265;eti novajn &#349;uojn al la infanoj.",
-					6 => "Petro, la filo de Fatima, kolektas po&#349;tmarkojn kaj bildojn el &#309;urnaloj. Maria, lia fratino, promenas bicikle.",
+					4 => "Simeono estas la edzo de Fatima. Li amas ŝin. Li, la edzino kaj la infanoj loĝas en Eŭropo, en granda domo.",
+					5 => "Fatima deziras aĉeti novajn ŝuojn al la infanoj.",
+					6 => "Petro, la filo de Fatima, kolektas poŝtmarkojn kaj bildojn el ĵurnaloj. Maria, lia fratino, promenas bicikle.",
 					7 => "La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.",
-					8 => "Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras a&#265;eti sandvi&#265;on. Li man&#285;os ilin vespere."
+					8 => "Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras aĉeti sandviĉon. Li manĝos ilin vespere."
 					);
 					ekzerco(False, 2);
 				?>
@@ -451,7 +451,7 @@ include "dlekkapo.inc.php";
 					18 => "Sont-ils de bons amis ?",
 					19 => "Ta mère vient-elle d’Europe ?",
 					);
-					ekzerco(True, 2);
+					ekzerco(True, 1);
 				?>
 				</div>
 			</fieldset>
@@ -472,7 +472,7 @@ include "dlekkapo.inc.php";
 					23 => "Avez-vous deux euros et trente centimes (euro = eŭro, centime = cendo) ?",
 					24 => "Avez-vous vu la nouvelle pièce de théâtre ?",
 					);
-					ekzerco(True, 2);
+					ekzerco(True, 1);
 				?>
 				</div>
 			</fieldset>

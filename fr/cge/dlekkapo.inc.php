@@ -122,11 +122,10 @@ $pagxtitolo="Cours d’espéranto en dix leçons";
 
 include $vojo."pagxkapo.inc.php";
 ?>
-<script type="text/javascript" src="../../xAlUtf8.js"></script>	   
+<script type="text/javascript" src="../../xAlUtf8.js"></script>	
 <?php 
 if (isset($leciono)) {
 	getListoLecionoj('CG',$leciono);
 }
 ?>
-
 

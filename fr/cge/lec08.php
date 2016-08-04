@@ -121,9 +121,9 @@ include "dlekkapo.inc.php";
 		if ($section=="2") {
 		?>
 
-			<p><a href="<?php echo $vojo;?>fr/son/pv8-1.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a> <span class="eo">Vivanton ni malhonoras, mortinton ni adoras.</span></p>
+			<p><a href="<?php echo $vojo;?>fr/son/pv8-1.mp3" class="sm2_button"></a> <span class="eo">Vivanton ni malhonoras, mortinton ni adoras.</span></p>
 			<p>
-			<a href="<?php echo $vojo;?>fr/son/pv8-2.wav" type="audio/mp3"><i class="material-icons">volume_up</i></a> <span class="eo">Dancu diabloj, sed ne en mia arbaro.</span></p>
+			<a href="<?php echo $vojo;?>fr/son/pv8-2.wav" class="sm2_button"></a> <span class="eo">Dancu diabloj, sed ne en mia arbaro.</span></p>
 
 			<div class="vortlisto row">
 				<p class="col s6 m4"><span class="eo">honori</span> : honorer</p>
@@ -295,7 +295,7 @@ include "dlekkapo.inc.php";
 			Dans cette leçon nous avons achevé l’étude de la conjugaison. Vous
 			connaissez donc dès à présent toutes les formes verbales possibles. Et
 			enfin, bonne nouvelle&nbsp;!, il ne vous reste plus qu’une autre leçon avant
-			de passer le petit examen qui constitue la 10<up>e</up> leçon. Ensuite, on vous
+			de passer le petit examen qui constitue la 10<sup>e</sup> leçon. Ensuite, on vous
 			décernera une attestation de cours.
 			</p>
 

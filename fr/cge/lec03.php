@@ -135,8 +135,7 @@ include "dlekkapo.inc.php";
 		sonorités.
 		</p>
 		
-		<p><i>Cliquez sur le haut-parleur&#160;!</i></p>
-		<p><a href="<?php echo $vojo;?>fr/son/pv3.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+		<p><i>Cliquez sur le bouton pour écouter la phrase&nbsp;: <a href="<?php echo $vojo;?>fr/son/pv3.mp3" class="sm2_button"></a></i></p>
 		<p><span class="eo">Akvo kura – akvo pura</span><br>
 		De l’eau courante (<i>qui court</i>) [c’est] de l’eau pure (<i>propre</i>)</p>
 	
@@ -182,7 +181,7 @@ include "dlekkapo.inc.php";
 
 		<div class="vortlisto row">
 			<p class="col s12">Exemples :
-			<a href="<?php echo $vojo;?>fr/son/l03-1.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+			<a href="<?php echo $vojo;?>fr/son/l03-1.mp3" class="sm2_button"></a></p>
 		
 			<p class="col s6"><span class="eo">Insektoj vivas nokte</span></p>
 			<p class="col s6">Les insectes vivent la nuit.</p>
@@ -242,7 +241,11 @@ include "dlekkapo.inc.php";
 		<p class="parto">Les <b>nombres cardinaux</b> n’ont pas de terminaison spéciale et ils restent
 		invariables.
 		</p>
-		<p>	<a href="<?php echo $vojo;?>fr/son/l03-2.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+		<p>
+			<audio controls="controls">Votre navigateur ne supporte pas la lecture du fichier audio.
+				<source src="<?php echo $vojo;?>fr/son/l03-2.mp3" type="audio/mp3">
+			</audio>
+		</p>
 		
 		<div class="vortlisto row">
 			<div class="col s6 m3">

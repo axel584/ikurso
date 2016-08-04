@@ -1,4 +1,4 @@
- <?php
+<?php
 include "util.php";
 $retadreso=isset($_GET['retadreso'])?$_GET['retadreso']:"";
 $aktivigo=isset($_GET['aktivigo'])?$_GET['aktivigo']:"";

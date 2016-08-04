@@ -39,7 +39,6 @@ if ($kurso=="KE") {
 if ($bonaj==$QCM[$leciono][0]) {
 	// on a eu les bonnes réponses, on va à la section suivante
 	$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.id>".$lecionero_id." order by ordo ASC";
-	echo $query;
 	$result = $bdd->query($query);
 	$row = $result->fetch();
 	if ($row!=false) {

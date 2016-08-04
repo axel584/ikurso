@@ -75,6 +75,16 @@
     	});
 	});
 
+    $("#aperigi_novigi_pasvorton_button").click(function () {
+      $('#konektigxi').closeModal();
+      $('#sendi_novan_pasvorton').openModal();
+    });
+
+$("#sendi_novan_pasvorton_button").click(function () {
+      $('#sendi_novan_pasvorton_button').addClass("disabled");
+      alert("pas encore codé !");
+    });
+
 	$("#registriEkzercaron_button").click(function() {
 		$("#registriEkzercaron_button").addClass("disabled");
 		$.ajax({

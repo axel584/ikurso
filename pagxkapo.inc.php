@@ -65,6 +65,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			</div>
 			<div class="modal-footer">
 				<p><a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a></p>
+				<p><a id="aperigi_novigi_pasvorton_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">Mot de passe oublié</a></p>
 			</div>
 		</div>
 
@@ -123,7 +124,23 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			<div class="modal-footer">
 				<a id="inscription_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER SON MOT DE PASSE</a>
 			</div>
-		</div>	
+		</div>
+
+		<!-- fenêtre modale pour envoie de nouveau mot de passe -->
+		<div id="sendi_novan_pasvorton" class="modal">
+			<div class="modal-content">
+				<h4 class="primaire-texte">J'ai oublié mon mot de passe, je rentre mon adresse email pour avoir un nouveau mot de passe</h4>
+				<form>
+					<div class="input-field">
+						<input id="sendi_novan_pasvorton_retadreso" type="email" class="validate">
+						<label for="sendi_novan_pasvorton_retadreso">Adresse email</label>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a id="sendi_novan_pasvorton_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RECEVOIR UN NOUVEAU MOT DE PASSE</a>
+			</div>
+		</div>			
 
 		<!-- fenêtre modale menu utilisateur -->
 		<ul id="uzantomenuo" class="dropdown-content">

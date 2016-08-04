@@ -53,7 +53,7 @@ include "dlekkapo.inc.php";
 
 		<p>Voyons l’exemple de Robert Lebrun :</p>
 		<div class="vortlisto">
-			<p><a class="player-audio" href="<?php echo $vojo;?>fr/son/l05.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
+			<p><a class="player-audio" href="<?php echo $vojo;?>fr/son/l05.mp3" class="sm2_button"></a></p>
 			<p>Saluton !<br>
 			Mia nomo estas Roberto Bruno. Mi loĝas en Kanado. Mi komencis
 			lerni Esperanton antaŭ kvar semajnoj. Ĝi estas tre facila lingvo.
@@ -276,8 +276,7 @@ include "dlekkapo.inc.php";
 		if ($section=="5") {
 		?>
 		
-		<p><a href="<?php echo $vojo;?>fr/son/pv5.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a></p>
-		<p><span class="eo">En ĉiu malbono estas iom da bono.</span> : Dans tout mal il y a un peu de bien.</p>
+		<p><a href="<?php echo $vojo;?>fr/son/pv5.mp3" class="sm2_button"></a> <span class="eo">En ĉiu malbono estas iom da bono.</span> : Dans tout mal il y a un peu de bien.</p>
 		
 		<?php 
 		} // fin section 
@@ -300,12 +299,12 @@ include "dlekkapo.inc.php";
 			$demandoj=array (
 			1 => "{Simeono kaj Fatima} estas miaj amikoj.",
 			2 => "Simeono kaj Fatima estas {miaj amikoj}.",
-			3 => "Ili lo&#285;as {en E&#365;ropo}.",
-			4 => "Simeono man&#285;os {la du ovojn} vespere.",
-			5 => "Simeono man&#285;os la du ovojn {vespere}.",
+			3 => "Ili loĝas {en Eŭropo}.",
+			4 => "Simeono manĝos {la du ovojn} vespere.",
+			5 => "Simeono manĝos la du ovojn {vespere}.",
 			6 => "Esperanto estas {facila} lingvo.",
 			7 => "Maria promenas {bicikle}.",
-			8 => "Petro a&#265;etos {tiun} bildon.", 
+			8 => "Petro aĉetos {tiun} bildon.", 
 			9 => "Esperanto estas {tre} facila.",
 			10 => "Mi trinkas teon kun {Fatima}."
 			);

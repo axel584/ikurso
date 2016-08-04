@@ -20,7 +20,18 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<!--Import materialize.css-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css"  media="screen"/>
-		
+
+		<!--Player audio-->
+		<link rel="stylesheet" type="text/css" href="<?php echo $vojo;?>soundmanager2/css/mp3-player-button.css" />
+		<script src="<?php echo $vojo;?>soundmanager2/script/soundmanager2.js"></script>
+		<script type="text/javascript" src="<?php echo $vojo;?>soundmanager2/script/mp3-player-button.js"></script>
+		<script>
+		soundManager.setup({
+		  // required: path to directory containing SM2 SWF files
+		  url: '<?php echo $vojo;?>soundmanager2/swf/'
+		});
+		</script>
+
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />

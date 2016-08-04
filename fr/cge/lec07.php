@@ -419,7 +419,7 @@ include "dlekkapo.inc.php";
 				4 => "(&quot;varma&quot; = chaud) : malvarma, varmeco, varmeta, malvarmiĝi",
 				5 => "(&quot;aro&quot; = groupe) : ŝiparo (ŝipo = bateau), abelaro (abelo = abeille), stelaro (stelo = étoile)"
 				);
-				ekzerco(False,2);
+				ekzerco(False,1);
 			?>
 			</div>
 		</fieldset>
@@ -455,13 +455,13 @@ include "dlekkapo.inc.php";
 		if ($section=="4") {
 		?>
 		
-		<p><a href="<?php echo $vojo;?>fr/son/pv7-1.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+		<p><a href="<?php echo $vojo;?>fr/son/pv7-1.mp3" class="sm2_button"></a>
 		Se junulo ne lernis, maljunulo ne scias.
 		</p>
-		<p><a href="<?php echo $vojo;?>fr/son/pv7-2.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+		<p><a href="<?php echo $vojo;?>fr/son/pv7-2.mp3" class="sm2_button"></a>
 		Juneco ne scias, maljuneco ne povas.
 		</p>
-		<p><a href="<?php echo $vojo;?>fr/son/pv7-3.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+		<p><a href="<?php echo $vojo;?>fr/son/pv7-3.mp3" class="sm2_button"></a>
 		Estro ne malsatas.
 		</p>
 		

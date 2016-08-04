@@ -52,7 +52,7 @@ include "dlekkapo.inc.php";
 		
 		<div class="vortlisto row">
 			<p class="col s6">
-				<a href="<?php echo $vojo;?>fr/son/l02-1.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+				<a href="<?php echo $vojo;?>fr/son/l02-1.mp3" class="sm2_button"></a>
 				<span class="eo">Mi sukeras la varma<b>n</b> kafo<b>n</b>.</span></p>
 			<p class="col s6">Je sucre le café chaud.</p>
 		</div>
@@ -64,7 +64,7 @@ include "dlekkapo.inc.php";
 		
 		<p>Au pluriel : </p>
 		<div class="vortlisto row">
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l02-2.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l02-2.mp3" class="sm2_button"></a>
 				<span class="eo">Ni sukeras la varmaj<b>n</b> kafoj<b>n</b>.</span></p>
 			<p class="col s6">Nous sucrons les cafés chauds.</p>
 		</div>
@@ -126,7 +126,7 @@ include "dlekkapo.inc.php";
 		<b>ne</b> avant le verbe.</p>
 		
 		<div class="vortlisto row">
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l02-3.mp3" type="audio/mp3"><i class="material-icons">volume_up</i></a>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l02-3.mp3" class="sm2_button"></a>
 				<span class="eo">Mi <b>ne</b> sukeras la kafon.</span></p>
 			<p class="col s6">Je ne sucre pas le café.</p>
 		</div>

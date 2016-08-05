@@ -343,3 +343,5 @@ UPDATE `lecioneroj` SET `titolo` = 'Ekzercoj' WHERE `id` = 204;
 UPDATE `lecioneroj` SET `titolo` = 'Ekzercoj' WHERE `id` = 209; 
 UPDATE `lecioneroj` SET `titolo` = 'Ekzercoj' WHERE `id` = 214;
 
+-- Passage en V6
+update `lecioneroj` set tipo='EKZERCARO' where leciono_id=68 and ordo='3';

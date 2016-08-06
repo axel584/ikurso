@@ -123,7 +123,7 @@ include "dlekkapo.inc.php";
 
 			<p><a href="<?php echo $vojo;?>fr/son/pv8-1.mp3" class="sm2_button"></a> <span class="eo">Vivanton ni malhonoras, mortinton ni adoras.</span></p>
 			<p>
-			<a href="<?php echo $vojo;?>fr/son/pv8-2.wav" class="sm2_button"></a> <span class="eo">Dancu diabloj, sed ne en mia arbaro.</span></p>
+			<a href="<?php echo $vojo;?>fr/son/pv8-2.mp3" class="sm2_button"></a> <span class="eo">Dancu diabloj, sed ne en mia arbaro.</span></p>
 
 			<div class="vortlisto row">
 				<p class="col s6 m4"><span class="eo">honori</span> : honorer</p>

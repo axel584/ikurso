@@ -201,19 +201,19 @@ include "dlekkapo.inc.php";
 		if ($section=="6") {
 		?>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-1.wav" class="sm2_button"></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-1.mp3" class="sm2_button"></a></p>
 				<p class="col s11"><span class="eo">Kiam kato promenas, la musoj festenas.</span></p>
 				<p class="col s11 offset-s1">Quand le chat n’est pas là, les souris dansent. (<i>festoient</i>)</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-2.wav" class="sm2_button"></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-2.mp3" class="sm2_button"></a></p>
 				<p class="col s11"><span class="eo">Kion oni volas, tion oni povas.</span></p>
 				<p class="col s11 offset-s1">Quand on veut, on peut. (<i>ce qu’on veut, on le peut</i>)</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-3.wav" class="sm2_button"></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-3.mp3" class="sm2_button"></a></p>
 				<p class="col s11"><span class="eo">Kia patro, tia filo.</span></p>
 				<p class="col s11 offset-s1">Tel père, tel fils.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-4.wav" class="sm2_button"></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-4.mp3" class="sm2_button"></a></p>
 				<p class="col s11"><span class="eo">Amiko de amiko estas ankaŭ amiko.</span></p>
 				<p class="col s11 offset-s1">L’ami de mon ami est mon ami. (<i>un ami d’ami est aussi un ami</i>)</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-5.wav" class="sm2_button"></a></p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-5.mp3" class="sm2_button"></a></p>
 				<p class="col s11"><span class="eo">Se mi scius, kie mi falos, mi tien metus tapiŝon.</span> (= <i>tapis</i>)</p>
 				<p class="col s11 offset-s1"><i>Devinez vous-même...</i></p>
 			</div>

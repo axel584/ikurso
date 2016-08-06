@@ -1,5 +1,11 @@
   $(document).ready(function(){
 
+    // méthode pour afficher la popup modale pour choisir un nouveau mot de passe si l'url contient novigiPasvorton
+    $url = window.location.href;
+    if ($url.indexOf("novigiPasvorton=")>-1) {
+      $('#novigi_pasvorton').openModal();
+    }
+
     $(document).ajaxStart(function() {
         $(document.body).css({'cursor' : 'progress'});
     }).ajaxStop(function() {
@@ -82,7 +88,59 @@
 
 $("#sendi_novan_pasvorton_button").click(function () {
       $('#sendi_novan_pasvorton_button').addClass("disabled");
-      alert("pas encore codé !");
+            $.ajax({
+          url : $cheminAbsolu+'ajax/sendiNovanPasvorton.php',
+          type : 'GET',
+          dataType : 'json',
+          data : 'retadreso='+$("#sendi_novan_pasvorton_retadreso").val(),
+          success : function(reponse, statut){ 
+              if (reponse.mesagxo!="ok") {
+                 $("label[for='sendi_novan_pasvorton_retadreso']").attr('data-error',reponse.mesagxo);
+                 $("#sendi_novan_pasvorton_retadreso").addClass("invalid"); 
+                 //$("#helpo-retadreso").hide(); // pas besoin de placeholder ?
+                return false;
+              } else {
+                // On affiche un message qui indique qu'il faut cliquer sur le mail
+                //$('#aligxi').closeModal();
+                $('#sendi_novan_pasvorton_parto1').addClass("hide");
+                $('#sendi_novan_pasvorton_parto2').removeClass("hide");
+                $('#sendi_novan_pasvorton_footer1').addClass("hide");
+                $('#sendi_novan_pasvorton_footer2').removeClass("hide");
+              }
+          },
+          error : function() {
+            alert("Erreur de connection, contactez les administrateurs");
+          }
+      });
+    });
+
+$("#novigi_pasvorton_sendi_button").click(function () {
+      $('#sendi_novan_pasvorton_button').addClass("disabled");
+            $.ajax({
+          url : $cheminAbsolu+'ajax/novigiPasvorton.php',
+          type : 'GET',
+          dataType : 'json',
+          data : 'pasvorto='+$("#pasvorto").val()+"&aktivigo="+$( "#aktivigo" ).val(),
+          success : function(reponse, statut){ 
+              // la clef d'activation est erronée
+              if (reponse.mesagxo!="ok") {
+                 $("label[for='aligxi_retadreso']").attr('data-error',reponse.mesagxo);
+                 $("#aligxi_retadreso").addClass("invalid"); 
+                 $("#helpo-retadreso").hide();
+                return false;
+              } else {
+                // On affiche un message qui indique qu'il faut valider le mail
+                //$('#aligxi').closeModal();
+                $('#novigi_pasvorton_parto1').addClass("hide");
+                $('#novigi_pasvorton_parto2').removeClass("hide");
+                $('#novigi_pasvorton_footer1').addClass("hide");
+                $('#novigi_pasvorton_footer2').removeClass("hide");
+              }
+          },
+          error : function() {
+            alert("Erreur de connection, contactez les administrateurs");
+          }
+      });
     });
 
 	$("#registriEkzercaron_button").click(function() {

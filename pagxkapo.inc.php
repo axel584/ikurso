@@ -6,6 +6,8 @@ $url=isset($_SERVER['REQUEST_URI'])?strtok($_SERVER['REQUEST_URI'],'?'):"";
 $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
+$aktivigo = isset($_GET['aktivigo']) ? $_GET['aktivigo'] : "";
+$retadreso = isset($_GET['retadreso']) ? $_GET['retadreso'] : "";
 $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = array("enirnomo"=>"","familinomo"=>"","personnomo"=>"","retadreso"=>"","rajtoj"=>"");}
 ?>
@@ -124,16 +126,28 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<!-- fenêtre modale réinitialisation mot de passe -->
 		<div id="novigi_pasvorton" class="modal">
 			<div class="modal-content">
-				<h4 class="primaire-texte">Réinitialiser son mot de passe</h4>
+				<h4 class="primaire-texte">Réinitialiser son mot de passe, choisissez un nouveau mot de passe :</h4>
+				<div id="novigi_pasvorton_parto1">
 				<form>
 					<div class="input-field">
+						<input type="hidden" name="aktivigo" value="<?=$aktivigo?>"/>
+						<input type="hidden" name="retadreso" value="<?=$retadreso?>"/>
 						<input id="pasvorto" type="password" class="validate">
 						<label for="pasvorto">Nouveau mot de passe</label>
 					</div>
 				</form>
+				</div>
+				<div id="novigi_pasvorton_parto2" class="hide">
+				<p class="chapo">Mot de passe modifié !</p>
+					<p>Votre mot de passe a bien été réinitialisé.<br>
+					Nous vous conseillons de vous reconnecter avec votre nouveau mot de passe pour permettre à votre navigateur de le mémoriser pour vous.</p>
+				</div>
 			</div>
-			<div class="modal-footer">
-				<a id="inscription_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER SON MOT DE PASSE</a>
+			<div id="novigi_pasvorton_footer1" class="modal-footer">
+				<a id="novigi_pasvorton_sendi_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER SON MOT DE PASSE</a>
+			</div>
+			<div id="novigi_pasvorton_footer2" class="modal-footer hide">
+				<a id="novigi_pasvorton_fermi_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">Fermer</a>
 			</div>
 		</div>
 
@@ -141,15 +155,27 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<div id="sendi_novan_pasvorton" class="modal">
 			<div class="modal-content">
 				<h4 class="primaire-texte">J'ai oublié mon mot de passe, je rentre mon adresse email pour avoir un nouveau mot de passe</h4>
+				<div id="sendi_novan_pasvorton_parto1">
 				<form>
 					<div class="input-field">
 						<input id="sendi_novan_pasvorton_retadreso" type="email" class="validate">
 						<label for="sendi_novan_pasvorton_retadreso">Adresse email</label>
 					</div>
 				</form>
+				</div>
+				<div id="sendi_novan_pasvorton_parto2" class="hide">
+				<p class="chapo">Un email a été envoyé !</p>
+					<p>Pour pouvoir vous connecter de nouveau, veuillez cliquer sur le lien se trouvant dans le message électronique que nous venons de vous envoyer.<br>
+					Ce lien vous permettra de choisir un nouveau mot de passe.<br>
+				Si vous ne le trouvez pas, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
+				Si vous n’avez rien reçu, vous pouvez <a href="<?php echo $vojo;?>reago.php">contacter un administrateur</a>.</p>
+				</div>
 			</div>
-			<div class="modal-footer">
-				<a id="sendi_novan_pasvorton_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RECEVOIR UN NOUVEAU MOT DE PASSE</a>
+			<div id="sendi_novan_pasvorton_footer1" class="modal-footer">
+				<a id="sendi_novan_pasvorton_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER SON MOT DE PASSE</a>
+			</div>
+			<div id="sendi_novan_pasvorton_footer2" class="modal-footer hide">
+				<a id="fermi_novan_pasvorton_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">Fermer</a>
 			</div>
 		</div>			
 

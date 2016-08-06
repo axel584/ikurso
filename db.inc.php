@@ -33,6 +33,13 @@ function kreiPersonon($enirnomo,$pasvorto,$retadreso,$aktivigo) {
      return $bdd->lastInsertId();
 }
 
+function updateAktivigo($retadreso,$aktivigo) {
+    global $bdd;
+     $query = "update personoj ";
+     $query .="set aktivigo='$aktivigo' where retadreso='$retadreso'";
+     $bdd->exec($query);
+}
+
 // tiu funcio aldonas (aux sxangxas) informojn pri iu
 // parametroj ; kompreneblaj per ili mem krom :
 // id - unika nombro redoni dum la kreado aux retrovi en la datumbazo per la enirnomo kaj la pasvorto

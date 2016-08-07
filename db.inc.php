@@ -40,6 +40,13 @@ function updateAktivigo($retadreso,$aktivigo) {
      $bdd->exec($query);
 }
 
+function updatePasvorton($retadreso,$pasvorto) {
+    global $bdd;
+     $query = "update personoj ";
+     $query .="set pasvorto_md5=md5('$pasvorto') where retadreso='$retadreso'";
+     $bdd->exec($query);
+}
+
 // tiu funcio aldonas (aux sxangxas) informojn pri iu
 // parametroj ; kompreneblaj per ili mem krom :
 // id - unika nombro redoni dum la kreado aux retrovi en la datumbazo per la enirnomo kaj la pasvorto

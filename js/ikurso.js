@@ -115,12 +115,12 @@ $("#sendi_novan_pasvorton_button").click(function () {
     });
 
 $("#novigi_pasvorton_sendi_button").click(function () {
-      $('#sendi_novan_pasvorton_button').addClass("disabled");
+      $('#novigi_pasvorton_sendi_button').addClass("disabled");
             $.ajax({
           url : $cheminAbsolu+'ajax/novigiPasvorton.php',
           type : 'GET',
           dataType : 'json',
-          data : 'pasvorto='+$("#pasvorto").val()+"&aktivigo="+$( "#aktivigo" ).val(),
+          data : 'pasvorto='+$("#novigi_pasvorton_pasvorto").val()+"&aktivigo="+$( "#novigi_pasvorton_aktivigo" ).val()+"&retadreso="+$( "#novigi_pasvorton_retadreso" ).val(),
           success : function(reponse, statut){ 
               // la clef d'activation est erronée
               if (reponse.mesagxo!="ok") {

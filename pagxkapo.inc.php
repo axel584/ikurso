@@ -130,9 +130,9 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 				<div id="novigi_pasvorton_parto1">
 				<form>
 					<div class="input-field">
-						<input type="hidden" name="aktivigo" value="<?=$aktivigo?>"/>
-						<input type="hidden" name="retadreso" value="<?=$retadreso?>"/>
-						<input id="pasvorto" type="password" class="validate">
+						<input id="novigi_pasvorton_aktivigo" type="hidden" name="aktivigo" value="<?=$aktivigo?>"/>
+						<input id="novigi_pasvorton_retadreso" type="hidden" name="retadreso" value="<?=$retadreso?>"/>
+						<input id="novigi_pasvorton_pasvorto" type="password" class="validate">
 						<label for="pasvorto">Nouveau mot de passe</label>
 					</div>
 				</form>
@@ -147,7 +147,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 				<a id="novigi_pasvorton_sendi_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER SON MOT DE PASSE</a>
 			</div>
 			<div id="novigi_pasvorton_footer2" class="modal-footer hide">
-				<a id="novigi_pasvorton_fermi_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">Fermer</a>
+				<a id="novigi_pasvorton_fermi_button" class="modal-action modal-close waves-effect waves-light-blue btn-flat primaire-texte">Fermer</a>
 			</div>
 		</div>
 

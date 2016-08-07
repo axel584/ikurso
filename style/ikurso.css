@@ -44,6 +44,16 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([reado
 	display: inline-block;
 	margin-right: 0.5em;
 }
+/* surcharge entete */
+@media only screen and (max-width: 992px)
+{
+	nav .brand-logo {
+	    left: 20%;
+	    -webkit-transform: translateX(-20%);
+	    transform: translateX(-20%);
+	}
+}
+
 /* surcharge style par défaut des formulaires */
 form p {
     text-align: inherit;

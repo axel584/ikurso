@@ -49,6 +49,8 @@ include "dlekkapo.inc.php";
 				<p class="col s11 offset-s1">Je croyais qu’il viendrait :  <span class="eo">Mi kredis, ke li ven<b>os</b>.</span></p>
 			</div>
 	
+			<a id="participes" class="scrollspy"></a>
+
 			<p class="parto">Enfin, il reste les <b>participes</b> (mots qui s’emploient comme verbes,
 			adjectifs, adverbes ou noms)&nbsp;:
 			</p>

@@ -180,8 +180,8 @@ include "dlekkapo.inc.php";
 				</div>
 			</div>
 				
-			<p class="rimarko"><strong>REMARQUE</strong> :
-			Prononcez : <span class="eo">mi-<u>ès</u>-tass</span>, 
+			<p class="rimarko"><strong>REMARQUE</strong> :</p>
+			<p>Prononcez : <span class="eo">mi-<u>ès</u>-tass</span>, 
 			<span class="eo">mi-<u>ès</u>-tiss</span>, <span class="eo">mi-<u>ès</u>-toss</span>.
 			</p>
 			
@@ -249,28 +249,28 @@ include "dlekkapo.inc.php";
 			<p><em>Pour entendre ces phrases, cliquez sur bouton à gauche de la phrase.</em></p>
 			
 			<div class="vortlisto row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-1.mp3" class="sm2_button"></a>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-1.mp3" class="sm2_button"></a></p>
 				<p class="col s11 m5"><span class="eo">Viaj filoj estas niaj amikoj.</span></p>
 				<p class="col s11 offset-s1 m6">Vos fils sont nos amis.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-2.mp3" class="sm2_button"></a>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-2.mp3" class="sm2_button"></a></p>
 				<p class="col s11 m5"><span class="eo">Iliaj kafoj estos varmaj.</span></p>
 				<p class="col s11 offset-s1 m6">Leurs cafés seront chauds.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-3.mp3" class="sm2_button"></a>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-3.mp3" class="sm2_button"></a></p>
 				<p class="col s11 m5"><span class="eo">La knaboj estas grandaj.</span></p>
 				<p class="col s11 offset-s1 m6">Les garçons sont grands.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-4.mp3" class="sm2_button"></a>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-4.mp3" class="sm2_button"></a></p>
 				<p class="col s11 m5"><span class="eo">Ŝia pano estis seka.</span></p>
 				<p class="col s11 offset-s1 m6">Son pain (à elle) était sec.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-5.mp3" class="sm2_button"></a>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-5.mp3" class="sm2_button"></a></p>
 				<p class="col s11 m5"><span class="eo">Vi estas lia filo.</span></p>
 				<p class="col s11 offset-s1 m6">Tu es son fils (à lui).</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-6.mp3" class="sm2_button"></a>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-6.mp3" class="sm2_button"></a></p>
 				<p class="col s11 m5"><span class="eo">La instruisto estas sana.</span></p>
 				<p class="col s11 offset-s1 m6">L'instituteur est en bonne santé.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-7.mp3" class="sm2_button"></a>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-7.mp3" class="sm2_button"></a></p>
 				<p class="col s11 m5"><span class="eo">Via amiko estas bela.</span></p>
 				<p class="col s11 offset-s1 m6">Ton ami est beau.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-8.mp3" class="sm2_button"></a>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-8.mp3" class="sm2_button"></a></p>
 				<p class="col s11 m5"><span class="eo">La kuko estis lia.</span></p>
 				<p class="col s11 offset-s1 m6">Le gâteau était à lui (était le sien)</p>
 			</div>
@@ -369,7 +369,6 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 				questionQCM("13","Comment dit-on 'mes fils' ?",array("mia filioj","miaj filoj","miaj filioj","mia filoj","(pas de réponse)"),$eraroj,$memorkurso);
 				?>
 			</div>
-
 			
 			<?php 
 			} // fin section 7
@@ -397,27 +396,16 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 			</p>
 			<p>Donc à bientôt pour la prochaine leçon&nbsp;!</p>
 
-			<p>
-			L’inscription n’est indispensable que si vous désirez faire appel à un
-			correcteur. Si c’est le cas, remplissez soigneusement le formulaire
-			ci-dessous <i>après avoir effectué les exercices de la leçon</i>. Une
-			confirmation d’inscription vous parviendra par courrier électronique
-			dans les prochains jours. Attendez de la recevoir avant de commencer la
-			deuxième leçon.
-			</p>
-			<p>
-			Par ailleurs nous vous proposons de vous abonner à une lettre d’information 
-			mensuelle sur les activités liées à l’espéranto. Cette lettre est 
-			éditée par l’association Espéranto-France et hébergée par Yahoogroupes. 
-			Vous pouvez donc très facilement vous désabonner à tout moment et la
-			protection des données personnelles (adresse électronique par exemple) est 
-			assurée correctement. 
-			</p>
-			
-			<?php 
-			} // fin section 7
-			?>	
-
+			<div class="card-panel blue lighten-5">
+				<p>
+				L’inscription n’est indispensable que si vous désirez faire appel à un correcteur. Les correcteurs sont bénévoles et s’occupent chacun d’un nombre limité d'élèves.</p>
+				<p>En demandant un correcteur, vous vous engagez à suivre le cours avec assiduité et informer votre correcteur en cas d’absence prolongée. Votre correcteur est là pour répondre à vos questions sur la langue espéranto, mais aussi sur l'utilisation que l’on peut faire de l’espéranto. N’hésitez pas à vous présenter et faire connaissance.</p>
+				<p>Bon apprentissage !</p>	
+			</div>
+		
+		<?php 
+		} // fin section 7
+		?>	
 		</section>
 
 		<section id="leciono-fino">

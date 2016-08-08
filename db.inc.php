@@ -261,7 +261,7 @@ function getCoursElLernanto($lernanto_id) {
         }
         if ($row["stato"]=="N") { // cas des élèves pas encore commencé
             // TODO : ici on affiche la première leçon à suivre
-            $demando2 = "select titolo,retpagxo from lecionoj where and numero='1' and kurso='".$row["kurso"]."'";
+            $demando2 = "select titolo,retpagxo from lecionoj where numero='1' and kurso='".$row["kurso"]."'";
             $row2 = $bdd->query($demando2)->fetch();
             if (isset($row2['retpagxo'])) { // dans le cas du logiciel, il n'y a pas de leçon à afficher
                 echo "<p><a href='".$prefixe_url.$row2['retpagxo']."'>Accès à la leçon : ".$row2['titolo']."</a></p>";

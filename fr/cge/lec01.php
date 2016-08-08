@@ -220,7 +220,7 @@ include "dlekkapo.inc.php";
 			être suivis par un nom, ils ont la fonction de nos pronoms possessifs.</p>
 				
 			<div class="vortlisto row">
-				<div class="col s12 m6">
+				<div class="col s12 m4">
 					<p><span class="eo">mi</span> : je</p>
 					<p><span class="eo">vi</span> : tu, vous</p>
 					<p><span class="eo">ŝi</span> : elle</p>
@@ -228,13 +228,21 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">ni</span> : nous</p>
 					<p><span class="eo">ili</span> : ils, elles</p>
 				</div>
-				<div class="col s12 m6">
+				<div class="col s12 m4">
 					<p><span class="eo">mia</span> : mon, ma</p>
 					<p><span class="eo">via</span> : ton, ta, votre</p>
-					<p><span class="eo">ŝia</span> : son, sa (àelle)</p>
-					<p><span class="eo">lia</span> : son,sa (à lui)</p>
+					<p><span class="eo">ŝia</span> : son, sa (à elle)</p>
+					<p><span class="eo">lia</span> : son, sa (à lui)</p>
 					<p><span class="eo">nia</span> : notre</p>
 					<p><span class="eo">ilia</span> : leur</p>
+				</div>
+				<div class="col s12 m4">
+					<p><span class="eo">miaj</span> : mes</p>
+					<p><span class="eo">viaj</span> : tes, vos</p>
+					<p><span class="eo">ŝiaj</span> : ses (à elle)</p>
+					<p><span class="eo">liaj</span> : ses (à lui)</p>
+					<p><span class="eo">niaj</span> : nos</p>
+					<p><span class="eo">iliaj</span> : leurs</p>
 				</div>
 			</div>
 					

@@ -14,7 +14,7 @@ if (!$row = $result->fetch()) { // aucune ligne retournée
 else {
 	if ($row["aktivigita"]==0) { 
 		$respondo["mesagxo"] = "Ce compte n'est pas validé, merci de cliquer sur le lien reçu par email.";
-		$respondo["type"]="identigilo";
+		$respondo["type"]="ne_aktivigita";
 	} else {
 		if (md5($pasvorto)!=$row["pasvorto_md5"]) {
 			$respondo["mesagxo"] = "Mot de passe incorrect";

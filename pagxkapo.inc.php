@@ -64,6 +64,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<div id="konektigxi" class="modal">
 			<div class="modal-content">
 				<h4 class="primaire-texte texte-moyen">Connexion</h4>
+				<div id="konektigxi_parto1">
 				<form>
 				    <div class="input-field">
 				      <input id="eniri_identigilo" type="text" class="validate" required="" aria-required="true">
@@ -74,11 +75,24 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 						<label for="eniri_pasvorto">mot de passe</label>
 					</div>
 				</form>
+				</div>
+				<div id="konektigxi_parto2" class="hide">
+					<p class="chapo">Le message a bien été renvoyé!</p>
+					<p>Pour activer votre compte, veuillez cliquer sur le lien se trouvant dans le message électronique que nous venons de vous envoyer.<br>
+				Si vous ne le trouvez pas, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
+				Dernière possibilité, il est possible que vous ayez fait une erreur en tapant votre adresse e-mail, vous pouvez <a href="<?php echo $vojo;?>reago.php">contacter un administrateur</a> qui vérifiera votre inscription.</p>
+				</div>
 				<p class="noto">Pour toute question relative à votre inscription, vous pouvez <a href="<?php echo $vojo;?>reago.php">contacter un administrateur</a></p> 
 			</div>
 			<div class="modal-footer">
-				<p><a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a></p>
-				<p><a id="aperigi_novigi_pasvorton_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">Mot de passe oublié</a></p>
+				<div id="footer-konektigxi1">
+					<p><a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a></p>
+					<p><a id="aperigi_novigi_pasvorton_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">Mot de passe oublié</a></p>
+					<p><a id="sendi_denove_aktivigilo_button" class=" modal-action hide waves-effect waves-light btn-flat primaire-texte">RENVOYER LE COURRIEL D'ACTIVATION</a></p>
+				</div>
+				<div id="footer-konektigxi2" class="hide">
+					<a id="fermer_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>
+				</div>
 			</div>
 		</div>
 

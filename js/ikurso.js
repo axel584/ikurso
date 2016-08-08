@@ -26,6 +26,12 @@
            				$("label[for='eniri_identigilo']").attr('data-error',reponse.mesagxo);
            				$("#eniri_identigilo").addClass("invalid");
            			}
+                // cas où la personne n'a pas activé son message
+                if (reponse.type=="ne_aktivigita") {
+                 $("label[for='eniri_identigilo']").attr('data-error',reponse.mesagxo);
+                  $("#eniri_identigilo").addClass("invalid"); 
+                  $('#sendi_denove_aktivigilo_button').removeClass("hide");
+                }
            			if (reponse.type=="pasvorto") {
            				$("label[for='eniri_pasvorto']").attr('data-error',reponse.mesagxo);
            				$("#eniri_pasvorto").addClass("invalid");	
@@ -106,6 +112,32 @@ $("#sendi_novan_pasvorton_button").click(function () {
                 $('#sendi_novan_pasvorton_parto2').removeClass("hide");
                 $('#sendi_novan_pasvorton_footer1').addClass("hide");
                 $('#sendi_novan_pasvorton_footer2').removeClass("hide");
+              }
+          },
+          error : function() {
+            alert("Erreur de connection, contactez les administrateurs");
+          }
+      });
+    });
+
+$("#sendi_denove_aktivigilo_button").click(function () {
+      alert("sendi denove");
+      $('#sendi_denove_aktivigilo_button').addClass("disabled");
+            $.ajax({
+          url : $cheminAbsolu+'ajax/sendiDenoveAktivigilon.php',
+          type : 'GET',
+          dataType : 'json',
+          data : 'identigilo='+$( "#eniri_identigilo" ).val(),
+          success : function(reponse, statut){ 
+              if (reponse.mesagxo!="ok") {
+                 $("label[for='eniri_identigilo']").attr('data-error',reponse.mesagxo);
+                 $("#eniri_identigilo").addClass("invalid"); 
+                return false;
+              } else {
+                  $("#konektigxi_parto1").addClass("hide");
+                  $("#konektigxi_parto2").removeClass("hide");
+                  $("#footer-konektigxi1").addClass("hide");
+                  $("#footer-konektigxi2").removeClass("hide");
               }
           },
           error : function() {

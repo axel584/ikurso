@@ -488,6 +488,11 @@ fieldset.sono legend {
 
 p.qcmerr {color:red;}
 input[type="radio"] + label span.qcmerr {text-decoration: line-through;}
+
+legend {
+	font-size: 75%;
+}
+legend a {color: inherit; cursor: pointer;}
 /********** évaluation (fin de leçon) *******/
 
 #leciono-enketo {

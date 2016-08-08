@@ -149,6 +149,8 @@ include "dlekkapo.inc.php";
 			personnes des deux sexes et aux non-personnes pareillement.
 			</p>
 				
+			<a id="temps"class="scrollspy"></a>
+			
 			<p class="parto">Au <b>présent</b>, les verbes remplacent leur terminaison <b>-i</b> par 
 			<b>-as</b> à toutes les personnes.</p>
 
@@ -187,6 +189,8 @@ include "dlekkapo.inc.php";
 			
 			<p class="parto">On marque le <b>pluriel</b> en ajoutant un <b>-j</b> à la fin des noms et des
 			adjectifs qui s’y rapportent.</p>
+			
+			<a id="articles" class="scrollspy"></a>
 			
 			<p class="parto">Les <b>articles indéfinis</b> (un, une, des) et <b>partitifs</b> 
 			(du, de la, des) n’existent pas en espéranto.</p>

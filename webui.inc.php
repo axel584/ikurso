@@ -430,6 +430,14 @@ function getListoLecionoj($kurso,$leciono) {
 			echo "<li id='konsiloj' class='nova'><a href='konsiloj.php'>konsiloj</a></li>";
 		}
 	}
+	if ($kurso=='CG') {
+		if ($leciono==98) {
+			echo "<li id='konsiloj' class='nuna'><a href='temaro.php'>index</a></li>";
+		} else {
+			echo "<li id='konsiloj' class='nova'><a href='temaro.php'>index</a></li>";
+		}
+	}
+	
 	if ($leciono==99) {
 		if ($kurso=='GR') {
 			echo "<li id='lexique' class='nuna'><a href='vocabula.php'>vortlisto</a></li>";

@@ -303,6 +303,7 @@ include "dlekkapo.inc.php";
 		Le <b>a</b> de <span class="eo">naŭ</span> se prononce comme «ow» anglais dans «cow», «how», «now»,
 		ou encore «au» en allemand, espagnol, italien...</p>
 		
+		<a id="ordinaux" class="scrollspy"></a>
 		<p class="parto">Les <b>nombres ordinaux</b> se forment par adjonction de la terminaison
 		<em>-a</em> d’adjectif aux nombres cardinaux. Comme tous les adjectifs, ils
 		prennent la marque du pluriel <span class="eo">-j</span> et celle du complément d’objet

@@ -345,3 +345,9 @@ UPDATE `lecioneroj` SET `titolo` = 'Ekzercoj' WHERE `id` = 214;
 
 -- Passage en V6
 update `lecioneroj` set tipo='EKZERCARO' where leciono_id=68 and ordo='3';
+CREATE TABLE personoj_lecionoj ( 
+`id` INT NOT NULL AUTO_INCREMENT , 
+`dato` TIMESTAMP NOT NULL,
+`persono_id` int(11) NOT NULL,
+`leciono_id` int(11) NOT NULL,
+PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;

@@ -105,7 +105,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 					    <div class="input-field">
 							<input id="aligxi_retadreso"  type="email" class="validate" required="" aria-required="true">
 							<label for="aligxi_retadreso" data-error="veuillez indiquer une adresse correcte" >Adresse courriel</label>
-				    	<p id="helpo-retadreso" class="helpilo">Nous enverrons un message à cette adresse pour valider votre inscription.</p>
+				    	<p id="helpo-retadreso" class="helpilo hide-on-input-message">Nous enverrons un message à cette adresse pour valider votre inscription.</p>
 						</div>
 					    <div class="input-field">
 							<input id="aligxi_identigilo" type="text" class="validate" required="" aria-required="true">

@@ -582,6 +582,11 @@ span.ikurso {
 	margin-top:-0.8rem;
 }
 
+/* Style pour cacher le "helpilo" quand y'a un message d'erreur html5 */
+.input-field input.invalid ~ .hide-on-input-message, .input-field input.valid ~ .hide-on-input-message {
+  display: none;
+}
+
 /******* Gerda : dialogue ******/
 
 .dialogo p {

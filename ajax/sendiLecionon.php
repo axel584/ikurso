@@ -53,6 +53,21 @@ if ($nbReponse==0) {
 	exit();	
 }
 
+
+// on mémorise la leçon 
+// on récupère l'id de la leçon à partir du $lecionero_id
+$query ="select leciono_id from lecioneroj where id=".$lecionero_id;
+$result = $bdd->query($query);
+$leciono_id = $result->fetch()["leciono_id"];
+$query ="select count(*) as combien from personoj_lecionoj where persono_id=".$persono_id." and leciono_id=".$leciono_id;
+$result = $bdd->query($query);
+$combien = $result->fetch()["combien"];
+// on enregistre si il n'y avait rien en base
+if ($combien==0) {
+	$requete = $bdd->prepare('insert into personoj_lecionoj(dato,persono_id,leciono_id) values (now(),:persono_id,:leciono_id)');
+	$requete->execute(array('persono_id'=>$persono_id,'leciono_id'=>$leciono_id));
+}
+
 // on récupère des infos de l'élève :
 $studanto = apartigiPersonon($persono_id);
 

@@ -121,7 +121,6 @@ $("#sendi_novan_pasvorton_button").click(function () {
     });
 
 $("#sendi_denove_aktivigilo_button").click(function () {
-      alert("sendi denove");
       $('#sendi_denove_aktivigilo_button').addClass("disabled");
             $.ajax({
           url : $cheminAbsolu+'ajax/sendiDenoveAktivigilon.php',

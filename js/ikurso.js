@@ -145,6 +145,13 @@ $("#sendi_denove_aktivigilo_button").click(function () {
       });
     });
 
+$("#fermi_konektigxi_button").click(function () {
+   $("#konektigxi_parto1").removeClass("hide");
+   $("#konektigxi_parto2").addClass("hide");
+   $("#footer-konektigxi1").removeClass("hide");
+   $("#footer-konektigxi2").addClass("hide");
+});
+
 $("#novigi_pasvorton_sendi_button").click(function () {
       $('#novigi_pasvorton_sendi_button').addClass("disabled");
             $.ajax({

@@ -91,7 +91,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 					<p><a id="sendi_denove_aktivigilo_button" class=" modal-action hide waves-effect waves-light btn-flat primaire-texte">RENVOYER LE COURRIEL D'ACTIVATION</a></p>
 				</div>
 				<div id="footer-konektigxi2" class="hide">
-					<a id="fermer_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>
+					<a id="fermi_konektigxi_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>
 				</div>
 			</div>
 		</div>

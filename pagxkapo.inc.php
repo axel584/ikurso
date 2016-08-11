@@ -189,7 +189,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 				<a id="sendi_novan_pasvorton_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER SON MOT DE PASSE</a>
 			</div>
 			<div id="sendi_novan_pasvorton_footer2" class="modal-footer hide">
-				<a id="fermi_novan_pasvorton_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">Fermer</a>
+				<a id="fermi_novan_pasvorton_button" class=" modal-action modal-close waves-effect waves-light-blue btn-flat primaire-texte">Fermer</a>
 			</div>
 		</div>			
 

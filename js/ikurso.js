@@ -42,7 +42,7 @@
            		}
        		},
        		error : function() {
-       			alert("Erreur de connection, contactez les administrateurs");
+       			alert("Erreur de connexion, contactez les administrateurs");
        		}
     	});
 	});
@@ -82,7 +82,7 @@
            		}
        		},
        		error : function() {
-       			alert("Erreur de connection, contactez les administrateurs");
+       			alert("Erreur de connexion, contactez les administrateurs");
        		}
     	});
 	});
@@ -115,7 +115,7 @@ $("#sendi_novan_pasvorton_button").click(function () {
               }
           },
           error : function() {
-            alert("Erreur de connection, contactez les administrateurs");
+            alert("Erreur de connexion, contactez les administrateurs");
           }
       });
     });
@@ -140,7 +140,7 @@ $("#sendi_denove_aktivigilo_button").click(function () {
               }
           },
           error : function() {
-            alert("Erreur de connection, contactez les administrateurs");
+            alert("Erreur de connexion, contactez les administrateurs");
           }
       });
     });
@@ -176,7 +176,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
               }
           },
           error : function() {
-            alert("Erreur de connection, contactez les administrateurs");
+            alert("Erreur de connexion, contactez les administrateurs");
           }
       });
     });
@@ -194,7 +194,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        			}
        		},
        		error : function() {
-       			alert("Erreur de connection, contactez les administrateurs");
+       			alert("Erreur de connexion, contactez les administrateurs");
        		}
     	});
 	});
@@ -216,7 +216,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        			}
        		},
        		error : function() {
-       			alert("Erreur de connection, contactez les administrateurs");
+       			alert("Erreur de connexion, contactez les administrateurs");
        		}
     	});
 	});
@@ -241,7 +241,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        			}
        		},
        		error : function() {
-       			alert("Erreur de connection, contactez les administrateurs");
+       			alert("Erreur de connexion, contactez les administrateurs");
        		}
     	});
 	});	
@@ -266,7 +266,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        			}
        		},
        		error : function() {
-       			alert("Erreur de connection, contactez les administrateurs");
+       			alert("Erreur de connexion, contactez les administrateurs");
        		}
     	});
 	});
@@ -292,7 +292,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        			}
        		},
        		error : function() {
-       			alert("Erreur de connection, contactez les administrateurs");
+       			alert("Erreur de connexion, contactez les administrateurs");
        		}
     	});
 	});

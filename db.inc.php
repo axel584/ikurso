@@ -341,10 +341,10 @@ function getRedirectionParDroits($persono_id) {
         $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         $row = $result->fetch();
         if ($row==null) {
-            return; 
+            return "personinformoj.php"; 
         }
         if ($row["kurso"]=="KE") {
-            return;
+            return "personinformoj.php"; // les élèves du logiciel vont uniquement sur leur page personnelle
         }
         if ($row['kurso']=="GR") {
             $prefixe_url ='fr/gerda/';
@@ -358,6 +358,9 @@ function getRedirectionParDroits($persono_id) {
         }
         if ($row["stato"]=="K") { // cas des élèves en cours
             return $prefixe_url.getUrlVenontaLeciono($row["kurso"],$row["nunleciono"]);
+        }
+        if ($row["stato"]=="F") { // cas des élèves qui ont fini : on les envoit vers leurs diplome et la page pour choisir un autre cours
+            return "personinformoj.php";
         }
     }
 }

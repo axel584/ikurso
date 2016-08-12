@@ -331,11 +331,11 @@ d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez term
 				<div class="tasko">
 				<?php 	
 					$demandoj=array (
-					12 => " ",
-					13 => " ",
-					14 => " ",
-					15 => " ",
-					16 => " "
+					12 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
+					13 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
+					14 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
+					15 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
+					16 => "Formez une phrase ayant un sens en combinant les mots de la leçon"
 					);
 					ekzerco(True, 1);
 				?>

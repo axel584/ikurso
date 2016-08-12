@@ -318,7 +318,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 			$classeDejaFait="";
 		}
 		// on vérifie si l'élève a déjà un correcteur :
-		$query = "select count(*) as combien from nuna_kurso where studanto=".$persono_id;
+		$query = "select count(*) as combien from nuna_kurso where kurso='".$kurso."' and studanto=".$persono_id;
 		$result = $bdd->query($query);
 		$dejaFait = $result->fetch()["combien"];
 		if($tipo=="QCM") { // on vérifie le QCM

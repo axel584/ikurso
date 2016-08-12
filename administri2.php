@@ -123,11 +123,6 @@ if ($celpersono["rajtoj"]!=$rajtoj) {
    // update en la normala datumbazo
    $query = "update personoj set rajtoj='$rajtoj' where id=$celpersono_id";
    $result = $bdd->exec($query) or die(print_r($bdd->errorInfo()));
-   if ($rajtoj=='K'){
-   	// aldoni la uzanton al la forum-grupo "korektantoj"
-		$demando2 ="INSERT INTO phpbb_user_group (group_id,user_id,user_pending) VALUES ('4','$celpersono_id','0')";
-	   	$result = $bdd->exec($demando2) or die(print_r($bdd->errorInfo()));
-	}
    // se ni korektantigas iun kaj li ne sxangxis kiom da lernantoj li volas : auxtomatike, li havos 3 lernantojn.
    if (($rajtoj=='K') && ($celpersono["maksimumo"]==$maksimumo)) { 
 	   // update en la normala datumbazo

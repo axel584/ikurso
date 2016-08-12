@@ -13,6 +13,16 @@
     });
 
 
+    // QCM
+    $( ".qcm_ok" ).click(function() {
+      $('.carousel').carousel('next');
+    });
+
+    $( ".qcm_nok" ).click(function() {
+      Materialize.toast('Mauvaise réponse, essaye encore !', 4000);
+    });
+
+
   	$( "#connection_button" ).click(function() {
   		$("#connection_button").addClass("disabled");
   		$.ajax({

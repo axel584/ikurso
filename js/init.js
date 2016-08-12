@@ -44,5 +44,13 @@
 	);
 
 	//$('.collapsible').pushpin({ top: $('.collapsible').offset()  });
+    // QCM
+    $('.carousel').carousel({full_width: true});
+
+      $('.slider').slider({
+    full_width: false,
+    interval:0,
+    transition:0,
+  });
 
 });

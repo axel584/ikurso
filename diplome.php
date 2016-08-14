@@ -62,14 +62,21 @@ ob_end_clean();
 ?>
 <html>
 	<head>
-		<link type="text/css" rel="stylesheet" href="style/bleu.css" media="screen"/>
+		<!--Import Google Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,600,600italic,700italic,700' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+		
+		<!--Import materialize.css-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+		<link type="text/css" rel="stylesheet" href="style/ikurso.css" media="screen"/>
 		<link type="text/css" rel="stylesheet" href="style/impression.css" media="print"/>
 	</head>
     <body class="attestation">
 		<?php echo '<img src="data:image/png;base64,'.base64_encode($imagedata).'" width="842" height="595"/>'; ?>
 		<div class="outils">
-			<a class="bouton imprimer" href="" onclick="window.print();">Imprimer l’attestation</a>
-			<a class="bouton fermer" href="" onclick="window.close();">Fermer</a>
+			<a class="btn waves-effect waves-light blue modal-trigger imprimer" href="" onclick="window.print();">Imprimer l’attestation</a>
+			<a class="btn waves-effect waves-light blue modal-trigger fermer" href="" onclick="window.close();">Fermer</a>
 		</div>
     </body>
 </html>

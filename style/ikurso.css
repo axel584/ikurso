@@ -638,6 +638,15 @@ span.ikurso {
 	text-decoration: underline;
 }
 
+/*****************************************
+ * attestation
+ *****************************************/
+
+body.attestation {margin:10px;text-align:center}
+.attestation img {border:1px solid grey;}
+.attestation .outils {margin-top:15px;}
+.attestation .outils a.imprimer {margin-right:50px;}
+
 
 @media only screen and (max-width: 992px) {
 	article, aside {
@@ -649,7 +658,7 @@ span.ikurso {
 		margin-top: 2rem;
 	}
 
-
-
 }
+
+
 

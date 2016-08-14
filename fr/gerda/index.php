@@ -441,12 +441,50 @@ include "gerdakapo.inc.php";
 				</ul>
 				<p>En parallèle, nous vous conseillons de lire les récits de 
 				<a href="<?php echo $vojo;?>fr/gerda/lasu00.php"><i>Lasu min paroli plu!</i></a></p>
+				
+				<a id="commencer" class="scrollspy"></a>
+				<h2>Commencer le cours</h2>
+
+				<div class="row">
+					<div class="col s12">
+						<div class="card-panel blue lighten-5">
+							<p>Si vous connaissez déjà les bases de l’espéranto, par exemple après avoir suivi le <b>Cours en dix leçons</b> ou le <b>Kurso de Esperanto</b>, vous pouvez approfondir vos connaissances en suivant le cours <b>Gerda malaperis</b>.</p>
+							<!-- N'a pas encore de compte -->
+							<?php if ($persono_id=="") { ?>
+								<h5 class="center">Je veux m’inscrire et approfondir mes connaissances&nbsp;!</h5>
+								<div class="row">
+									<div class="col s12 m5">
+										<p><b>J'ai déjà un compte :</b></p>
+										<p><a href="#konektigxi" class="btn waves-effect waves-light waves-light blue modal-trigger" data-activates="konektigxi">CONNEXION</a></p>
+									</div>
+									<div class="col s12 m7">
+										<p><b>Je n’ai pas encore de compte :</b></p>
+										<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
+									<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
+									</div>
+								</div>
+								<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>
+								<!-- A déjà un compte -->
+								<?php } else { ?>
+									<h5 class="center">Je commence le cours tout de suite !</h5>
+									<div class="row">
+										<p><span class="noto">Je lis attentivement chaque page de la leçon, je fais les exercices et je pourrai m’inscrire au service de correction à la fin de la première leçon. Mes exercices seront automatiquement envoyé à mon correcteur quand les administrateurs du cours m'en auront attribué un.</span>
+										<p><a href="<?php echo $vojo;?>fr/gerda/cxap01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
+										</p>
+										<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>
+								</div>		
+								<?php } ?>
+							</div>
+					
+					</div>
+				</div>
 				 
-				<h3>Et pour finir :</h3>
+				<h2>Et pour finir :</h2>
 		
 				<ul class="sommaire cadre">
 				  <li><a href="konsiloj.php">Konsiloj al la kursfinintoj</a></li>
 				</ul>
+				
 			</section>
 		</article>
 		
@@ -461,6 +499,7 @@ include "gerdakapo.inc.php";
 							<li><a href="#inscription">Comment s’inscrire ?</a></li>
 							<li><a href="#prononciation">Rappel sur la prononciation</a></li>
 							<li><a href="#enhavo">Composition des leçons</a></li>
+							<li><a href="#commencer">Commencer le cours</a></li>
 						</ul>
 					</div>
 				</li>

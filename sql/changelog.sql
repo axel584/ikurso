@@ -355,3 +355,7 @@ PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
 -- passage en V7
 UPDATE `lecioneroj` SET lasta=0 WHERE `leciono_id` = 71 and ordo=1;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '71', 'Bravo !', 'TEKSTO', '2',0,1);
+
+-- correction Epilogue leçon 9
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '70', 'Épilogue', 'TEKSTO', NULL, '9', '0', '1');
+UPDATE `lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 89;

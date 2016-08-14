@@ -279,13 +279,13 @@ include "dlekkapo.inc.php";
 				<p>50 : <span class="eo">kvindek</span></p>
 				<p>60 : <span class="eo">sesdek</span></p>
 				<p>70 : <span class="eo">sepdek</span></p>
-				<p>80 <span class="eo">okdek</span></p>
+				<p>80 : <span class="eo">okdek</span></p>
 				<p>90 : <span class="eo">naŭdek</span></p>
 			</div>
 			<div class="col s6 m3">
 				<p>100 : <span class="eo">cent</span></p>
 				<p>200 : <span class="eo">ducent</span></p>
-				<p>300 : <span class="eo">cent</span></p>
+				<p>300 : <span class="eo">tricent</span></p>
 				<p></p>
 				<p>1000 : <span class="eo">mil</span></p>
 			</div>

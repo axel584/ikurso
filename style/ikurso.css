@@ -490,7 +490,7 @@ fieldset.sono legend {
 /*         QCM           */
 /*********************************/
 
-.carousel {
+.carousel.carousel-slider {
 	width:100%; 
 	height:600px
 }

@@ -13,7 +13,7 @@ include "../pagxkapo.inc.php";
 			
 			<h2>Fichiers audio</h2>	
 			<ul>			
-				<li>Les textes de <a href="<?php echo $vojo;?>fr/gerda/son/gerda-mp3.zip"> 
+				<li>Les textes de <a href="<?php echo $vojo;?>fr/gerda/son/gerda-malaperis.zip"> 
 				<em>Gerda malaperis</em> en version audio (mp3)</a></li>
 				<li>Les récits 2 à 7 de <a href="<?php echo $vojo;?>fr/gerda/son/lasu.zip">
 				<em>Lasu min paroli plu</em> en version audio (mp3)</a></li>
@@ -22,8 +22,8 @@ include "../pagxkapo.inc.php";
 			<h2>Cours et exercices à imprimer</h2>			
 			<ul>	
 				<li><a href="<?php echo $vojo;?>doc/DLEK.pdf">Cours en dix leçons</a> (pdf - 476Ko)</li>
-				<li><a href="<?php echo $vojo;?>DLEsK-ekz.pdf">Cahier d'exercices du cours en dix leçons</a> (pdf - 223Ko)</li>
-				<li><a href="<?php echo $vojo;?>LexiqueDLEK-Ikurso.pdf">Lexique Kurso de Esperanto / Cours en dix leçons</a> (pdf - 55Ko)</li>
+				<li><a href="<?php echo $vojo;?>doc/DLEK-ekz.pdf">Cahier d'exercices du cours en dix leçons</a> (pdf - 223Ko)</li>
+				<li><a href="<?php echo $vojo;?>doc/LexiqueDLEK-Ikurso.pdf">Lexique Kurso de Esperanto / Cours en dix leçons</a> (pdf - 55Ko)</li>
 				<li><a href="<?php echo $vojo;?>doc/ikurso.pdf">Kurso de Esperanto : cours et exercices</a> (pdf - 935 Ko)</li>
 			</ul>
 

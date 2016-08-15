@@ -234,8 +234,8 @@ include "dlekkapo.inc.php";
 				15 => "{La akvo} estas varma.",
 				16 => "{Mia frato} lavas la tasojn.",
 				17 => "{La viro} havas novan amikon.",
-				18. => "{Miaj fratoj} kaptis malsanan birdon.",
-				19. => "{La virino} ne sukeris mian teon."
+				18 => "{Miaj fratoj} kaptis malsanan birdon.",
+				19 => "{La virino} ne sukeris mian teon."
 				);
 				ekzerco(True, 1);
 			?>
@@ -254,11 +254,11 @@ include "dlekkapo.inc.php";
 			<div class="tasko">
 			<?php 
 				$demandoj=array (
-				20. => "amikino - la - malvarma - mia - sukeri - teo.",
-				21. => "akvo - bela - birdo - la - pura - trinki.",
-				22. => "amiko - bona - limonado - vendi - via.",
-				23. => "forgesi - mi - papero - porti.",
-				24. => "bela - esti - fratino - knabino - mia."
+				20 => "amikino - la - malvarma - mia - sukeri - teo.",
+				21 => "akvo - bela - birdo - la - pura - trinki.",
+				22 => "amiko - bona - limonado - vendi - via.",
+				23 => "forgesi - mi - papero - porti.",
+				24 => "bela - esti - fratino - knabino - mia."
 				);
 				ekzerco(True, 1);
 			?>

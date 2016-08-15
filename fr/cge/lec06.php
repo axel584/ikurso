@@ -328,12 +328,7 @@ include "dlekkapo.inc.php";
 				19 => "antaŭ - ĉiu - Dum - estos - infanoj - kaĝo. - la - tagmanĝo",
 				20 => "apud - Ĉu - enirejo ? - estis - kaĝoj - la - multaj",
 				21 => "estis - Kio - la - por - tagmanĝo - ?",
-				22 => "arkta - blankaj - En - estas - kontinento - la - ursoj.",
-				13 => "Kio plaĉis al via frato ?",
-				14 => "Kie estis la blanka urso ?",
-				15 => "Kiajn ursojn vi vidis en la zoo ?",
-				16 => "Per kio vi veturis al la Zoologia Ĝardeno ?",
-				17 => "Kiuj bestoj estis por vi tre interesaj ?"
+				22 => "arkta - blankaj - En - estas - kontinento - la - ursoj."
 				);
 				ekzerco(True, 1);
 			?>

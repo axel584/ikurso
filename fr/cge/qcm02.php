@@ -16,7 +16,7 @@ include "dlekkapo.inc.php";
 		<div class="row">
 
 
-<div class="carousel carousel-slider s12" style="width:100%; height:600px">
+<div class="carousel carousel-slider s12">
     <div class="carousel-item"> 
 				<p class="col s12 m6 l5">
 					<img src="<?php echo $vojo;?>fr/cge/bildoj/img-02-01.jpg" class="responsive-img"><br>

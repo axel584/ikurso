@@ -300,8 +300,33 @@ include "dlekkapo.inc.php";
 			if ($section=="6") {
 			?>
 
-			<p>Pour bénéficier de notre service de correction, vous devrez compléter le bulletin
-d’inscription qui se trouve à la fin de cette leçon, lorsque vous aurez terminé les exercices.</p>
+				<div class="row">
+					<div class="col s12">
+						<div class="card-panel blue lighten-5">
+						<!-- N'a pas encore de compte -->
+						<?php if ($persono_id=="") { ?>
+							<div class="row">
+								<div class="col s12 m5">
+									<p><b>J'ai déjà un compte :</b></p>
+									<p>Je me connecte pour pouvoir compléter les exercices et demander l’aide d'un correcteur.</p>
+									<p><a href="#konektigxi" class="btn waves-effect waves-light waves-light blue modal-trigger" data-activates="konektigxi">CONNEXION</a></p>
+								</div>
+								<div class="col s12 m7">
+									<p><b>Je n’ai pas encore de compte :</b></p>
+									<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
+								<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
+								</div>
+							</div>
+							<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>
+							<!-- A déjà un compte -->
+							<?php } else { ?>
+								<p>Pour bénéficier de notre service de correction, il vous suffit de compléter les exercices. Cliquez ensuite sur le bouton <b>ENREGISTRER MES RÉPONSES</b>.</p>
+								<p>Lorsque vous aurez terminé la leçon, vous pourrez demander l’aide d’un correcteur à la fin section <b>1.8&nbsp;Épilogue</b>. Les exercices seront automatiquement envoyés à votre correcteur quand les administrateurs du cours vous en auront attribué un.</p>
+							<?php } ?>
+						</div>
+					</div>
+				</div>
+
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
 					<input type="hidden" name="013_cxap01.1" value="Traduisez en espéranto.">

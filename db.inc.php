@@ -246,6 +246,9 @@ function getCoursElLernanto($lernanto_id) {
     global $bdd;
     $demando = "select stato,nunleciono,kurso,nunleciono from nuna_kurso where studanto=".$lernanto_id;
     $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+    ?>
+    <ul class="collection">
+	<?php
     while ($row = $result->fetch()) {
         $prefixe_url = getPrefixeCours($row["kurso"]);
         echo "<li class='collection-item'><span class='title'>";
@@ -281,7 +284,15 @@ function getCoursElLernanto($lernanto_id) {
               <a class="bouton" href="diplome.php?kurso=<?php echo $row['kurso'] ?>" onclick="window.open(this.href, 'attestation', 'height=660, width=862, left='+(screen.availWidth-862)/2+', top='+(screen.availHeight-660)/2)+', toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'; return false;">Attestation de réussite</a>
            <?php
         }
-        echo "</li>";
+        echo "</li></ul>";
+        if (($row["stato"]=="F")&&($row['kurso']=="CG")) {
+	        // élève qui a fini DLEK : on affiche un lien vers Gerda
+	    ?>
+
+	        <p>Si vous souhaitez approfondir, nous vous conseillons de suivre le cours de 2<sup>e</sup> niveau&nbsp;:</p>
+			<p><a href="<?php echo $vojo;?>fr/gerda/index.php" class="btn waves-effect waves-light" >Commencer le cours Gerda Malaperis</a></p>
+		<?php
+        }
     }
 }
 

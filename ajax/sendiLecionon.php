@@ -13,7 +13,7 @@ if ($persono_id=="") { // personne non connecté, on ressort
 
 
 // vérifier si l'élève a déjà un correcteur pour ce cours :
-$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where studanto=".$persono_id;
+$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where kurso='".$kurso."' and studanto=".$persono_id;
 $result = $bdd->query($query);
 $row = $result->fetch();
 if (!$row) {
@@ -95,7 +95,7 @@ $mesagxkapo.=" \n";
 $resultat = mail($korektantaretadreso,$subjekto,stripslashes($fonto),$mesagxkapo);
 
 // gxisdatigi liajn datumojn en nuna_kurso
-$query = "update nuna_kurso set nunleciono=".$leciono.",stato='K',lastdato=CURDATE() where studanto=".$persono_id." and (stato='N' or stato='K') and kurso='".$kurso."'";
+$query = "update nuna_kurso set nunleciono=".$leciono.",stato='K',lastdato=CURDATE() where studanto=".$persono_id." and kurso='".$kurso."'";
 $bdd->exec($query);
 
 // indiquer que la dernière section a été faite

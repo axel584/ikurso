@@ -13,7 +13,7 @@ if ($persono_id=="") { // personne non connecté, on ressort
 
 
 // vérifier si l'élève a déjà un correcteur pour ce cours :
-$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where kurso='".$kurso."' and studanto=".$persono_id;
+$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where nuna_kurso.kurso='".$kurso."' and studanto=".$persono_id;
 $result = $bdd->query($query);
 $row = $result->fetch();
 if (!$row) {

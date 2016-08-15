@@ -358,6 +358,9 @@ include "dlekkapo.inc.php";
 			<p class="col s6 m3 eo">kvar</p><p class="col s6 m3">quatre</p>
 			<p class="col s6 m3 eo">kvarono</p><p class="col s6 m3">un quart</p>
 			<p class="col s6 m3 eo">duonhoro</p><p class="col s6 m3">demi-heure</p>
+		</div>	
+		<p><b>OP</b> : <i>forme les collectifs</i></p>
+		<div class="row">
 			<p class="col s6 m3 eo">tri</p><p class="col s6 m3">trois</p>
 			<p class="col s6 m3 eo">triope</p><p class="col s6 m3">à trois</p>
 			<p class="col s6 m3 eo">unuopa</p><p class="col s6 m3">individuel</p>

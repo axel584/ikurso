@@ -34,7 +34,7 @@ if ($nbResponses==0) {
 
 // on mémorise la leçon 
 // on récupère l'id de la leçon à partir du $lecionero_id
-$query ="select leciono_id from lecionoj where lecionero_id=".$lecionero_id;
+$query ="select leciono_id from lecioneroj where id=".$lecionero_id;
 $result = $bdd->query($query);
 $leciono_id = $result->fetch()["leciono_id"];
 $query ="select count(*) as combien from personoj_lecionoj where persono_id=".$persono_id." and leciono_id=".$leciono_id;

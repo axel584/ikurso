@@ -15,7 +15,17 @@
 
     // QCM
     $( ".qcm_ok" ).click(function() {
-      $('.carousel').carousel('next');
+      //alert("nombre d'elements : "+this.parent(".carousel-item").html()+"/"+$(".carousel-item").length);
+      //console.log($(this).parent(".carousel"));
+      var $lasta = $(this).data("lasta");
+      console.log($lasta);
+      if (!$lasta) {
+        $('.carousel').carousel('next');
+      } else {
+
+        Materialize.toast('Bravo, vous avez trouvé toutes les bonnes réponses !', 4000);
+        // TODO : faire apparaitre ici le bouton "j'ai fini ma section" que l'on va cacher par défaut
+      }
     });
 
     $( ".qcm_nok" ).click(function() {

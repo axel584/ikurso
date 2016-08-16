@@ -35,7 +35,7 @@ include "dlekkapo.inc.php";
 				 </p>
 				<p class="col s12 m6 l7">
 					<input type="radio" name="qcm2" value="1" id="002-01" class='qcm_nok'/><label for="002-01">La biskivtoj estas en pano</label><br>
-					<input type="radio" name="qcm2" value="2" id="002-02" class='qcm_ok'/><label for="002-02">La panoj estas en korbo</label><br>
+					<input type="radio" name="qcm2" value="2" id="002-02" data-lasta="true" class='qcm_ok'/><label for="002-02">La panoj estas en korbo</label><br>
 					<input type="radio" name="qcm2" value="3" id="002-03" class='qcm_nok'/><label for="002-03">La paneoj estas sekaj</label><br>
 				</p>
    </div>

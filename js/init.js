@@ -49,8 +49,9 @@
 
       $('.slider').slider({
     full_width: false,
+    no_wrap : true,
     interval:0,
-    transition:0,
+    transition:0
   });
 
 });

@@ -110,6 +110,7 @@ div.col > p:first-child {
 		margin-top: 2em;
 	}
 }
+
 /*---------------  cards ---------------*/
 .card {padding: 1rem;}
 
@@ -487,7 +488,7 @@ fieldset.sono legend {
 }
 
 /*********************************/
-/*         QCM           */
+/*               QCM             */
 /*********************************/
 
 .carousel.carousel-slider {
@@ -599,6 +600,16 @@ span.ikurso {
 /******* Gerda : dialogue ******/
 
 .dialogo p {
+}
+/*********************************/
+/*        page Mes élèves        */
+/*********************************/
+
+.collapsible-header span.badge {
+	color: #FFF;
+	right: auto;
+	border-radius: 2px;
+	font-size: 0.8rem;
 }
 /*********************************/
 /*        pied de page           */

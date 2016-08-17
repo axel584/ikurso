@@ -234,11 +234,11 @@ include "dlekkapo.inc.php";
 			<p class="col s2"><span class="eo">kio&nbsp;?</span></p><p class="col s10">quelle chose&nbsp;? quoi&nbsp;?</p>
 			<p class="col s2"><span class="eo">iam</span></p><p class="col s10">à un (certain) moment, un jour, (il était) une fois</p>
 			<p class="col s2"><span class="eo">nenie</span></p><p class="col s10">nulle part</p>
-			<p class="col s2"><span class="eo">kiel?</span></p><p class="col s10">comment&nbsp;? de quelle manière&nbsp;? (réponse&nbsp;: bien, élégamment…)</p>
-			<p class="col s2"><span class="eo">kiam?</span></p><p class="col s10">quand&nbsp;? à quel moment&nbsp;? (réponse&nbsp;: cet après-midi, le soir…)</p>
-			<p class="col s2"><span class="eo">kie?</span></p><p class="col s10">où&nbsp;? en quel lieu&nbsp;? (réponse&nbsp;: tout près, au Canada…)</p>
-			<p class="col s2"><span class="eo">kial?</span></p><p class="col s10">pourquoi&nbsp;? pour quelle raison&nbsp;? (réponse&nbsp;: parce que…)</p>
-			<p class="col s2"><span class="eo">kiom?</span></p><p class="col s10">combien&nbsp;? quelle quantité&nbsp;? (réponse&nbsp;: un peu, beaucoup…)</p>
+			<p class="col s2"><span class="eo">kiel?</span></p><p class="col s10">comment&nbsp;? de quelle manière&nbsp;? (<em>réponses possibles</em>&nbsp;: bien, élégamment…)</p>
+			<p class="col s2"><span class="eo">kiam?</span></p><p class="col s10">quand&nbsp;? à quel moment&nbsp;? (<em>réponses possibles</em>&nbsp;: cet après-midi, le soir…)</p>
+			<p class="col s2"><span class="eo">kie?</span></p><p class="col s10">où&nbsp;? en quel lieu&nbsp;? (<em>réponses possibles</em>&nbsp;: tout près, au Canada…)</p>
+			<p class="col s2"><span class="eo">kial?</span></p><p class="col s10">pourquoi&nbsp;? pour quelle raison&nbsp;? (<em>réponse possible</em>&nbsp;: parce que…)</p>
+			<p class="col s2"><span class="eo">kiom?</span></p><p class="col s10">combien&nbsp;? quelle quantité&nbsp;? (<em>réponses possibles</em>&nbsp;: un peu, beaucoup…)</p>
 			<p class="col s2"><span class="eo">ĉiam</span></p><p class="col s10">toujours</p>
 			<p class="col s2"><span class="eo">tiel</span></p><p class="col s10">ainsi, de cette façon</p>
 			<p class="col s2"><span class="eo">ie</span></p><p class="col s10">quelque part</p>

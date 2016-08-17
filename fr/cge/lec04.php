@@ -143,13 +143,15 @@ include "dlekkapo.inc.php";
 				<p class="col s2 eo"><u>trin</u>ki</p>
 			</div>
 			<div class="row">
-				<p class="col s5 offset-s1"><b>o</b> (o comme dans <i>botte</i>)</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-04.mp3" class="sm2_button"></a></p>
+				<p class="col s5"><b>o</b> (o comme dans <i>botte</i>)</p>
 				<p class="col s2 eo"><u>o</u>vo</p>
 				<p class="col s2 eo"><u>do</u>mo</p>
 				<p class="col s2 eo"><u>ki</u>o</p>
 			</div>
 			<div class="row">
-				<p class="col s5 offset-s1"><b>u</b> (ou comme dans <i>sou</i>)</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-05.mp3" class="sm2_button"></a></p>
+				<p class="col s5"><b>u</b> (ou comme dans <i>sou</i>)</p>
 				<p class="col s2 eo"><u>u</u>nu</p>
 				<p class="col s2 eo"><u>plu</u>mo</p>
 				<p class="col s2 eo"><u>su</u>no</p>

@@ -1,13 +1,13 @@
 (non traduit)\1\1\de la, du, des
 (non traduit)\1\1\un, une, des
 bo-\7\8\beau- (préfixe de parenté)
-ek-\7\8\préfixe inchoatif
+ek-\7\8\préfixe "soudaineté d’une action commençante"
 eks-\7\8\préfixe de cessation
 fi-\7\8\préfixe péjoratif
 ge-\7\8\préfixe des deux sexes
 mal-\2\8\préfixe de contraire
 mis-\7\8\préfixe d'action ratée
-pra-\7\8\préfixe d'antécédance
+pra-\7\8\préfixe d'antécédence
 re-\7\8\préfixe répétitif
 -aĉ\7\8\suffixe péjoratif
 -ad\7\8\suffixe d'action prolongée
@@ -18,7 +18,7 @@ re-\7\8\préfixe répétitif
 -er\7\9\suffixe d'élément d'un tout
 -et\7\9\suffixe diminutif
 -id\7\9\suff. de descendance
--iĝ\7\9\suffixe médial
+-iĝ\7\9\suffixe "devenir tel ou tel"
 -ind\7\9\suffixe de mérite
 -nj\7\8\suffixe d'affection (féminin)
 -op\7\9\suffixe distributif
@@ -38,13 +38,13 @@ Afrik/o\\7\Afrique
 Amerik/o\\7\Amérique
 Arkt/o\6\7\Arctique
 Azi/o\\\Asie
-ĉini/o\4\\Chine
+Ĉini/o\4\\Chine
 Eŭrop/o\4\\Europe
 Germani/o\\9\Allemagne
 Kanad/o\5\5\Canada
 Rusio\\7\Russie
 Svis/o\1\\suisse
-Uson/o\9\7\états-Unis
+Uson/o\9\7\États-Unis
 Eŭklid/o\4\\Euclide
 abel/o\\\abeille
 abon/i\\\être abonné à 
@@ -58,9 +58,9 @@ advokat/o\\\avocat (métier)
 aer/o\\\air
 afabl/a\6\7\gentil
 afer/o\6\\affaire, cas
-afi&#349;/o\\\affiche
+afiŝ/o\\\affiche
 ag/i\\\agir
-agnosk/i\\\reconnaître(accepter)
+agnosk/i\\\reconnaître (accepter)
 agrabl/a\\\agréable
 aĝ/o\\\âge
 ajn\9\11\n'importe, quelconque
@@ -69,8 +69,7 @@ akr/a\\\pointu
 akuz/i\8\10\accuser
 akv/o\2\2\eau
 al\4\\à , vers
-ali/a\5\\autre
-alia\\3\autre
+ali/a\5\3\autre
 almenaŭ\9\11\au moins
 almoz/i\\\mendier
 alport/i\\\apporter
@@ -148,7 +147,7 @@ blu/a\\3\bleu
 bol/i\7\\bouillir
 bon/a\1\1\bon
 botel/o\\\bouteille 
-bov/o\7\9\boeuf 
+bov/o\7\9\bœuf 
 brak/o\\\bras
 Brazil/o\9\5\Brésil
 bril/i\\\briller 
@@ -174,7 +173,7 @@ civiliz/i\8\\civiliser
 ĉar\8\7\car, parce que
 ĉas/i\\\chasser
 ĉe\6\\chez, auprès de
-ĉe&#293;/o\4\\Tchèque
+ĉeĥ/o\4\\Tchèque
 ĉeval/o\\8\cheval
 ĉi tie\\\ici
 ĉi-\5\\corrélatif collectif
@@ -196,7 +195,7 @@ decid/i\\\décider
 deĵor/i\\\être de service
 dek\3\3\dix
 deklar/i\\\déclarer
-dekstr/a\\8\droit (<> gauche)
+dekstr/a\\8\droit (contraire de gauche)
 demand/i\3\3\poser une question
 denove\\\à  nouveau
 dens/a\\\dense
@@ -260,7 +259,7 @@ farun/o\\7\farine
 februar/o\\\février
 feliĉ/a\\7\heureux
 fenestr/o\\\fenêtre
-feri/o\6\\vacance 
+feri/o\6\\vacances 
 ferm/i\7\8\fermer 
 fest/o\\\fête
 festen/o\9\\festin, banquet
@@ -270,7 +269,7 @@ fil/o\1\1\fils
 film/o\\\film
 fin/i\\\finir (qqch)
 fingr/o\\9\doigt
-fi&#349;/o\\\poisson
+fiŝ/o\\\poisson
 flav/a\3\3\jaune 
 fleks/i\8\\courber 
 flor/o\\1\fleur
@@ -289,7 +288,7 @@ frukt/o\5\\fruit
 fum/o\3\3\fumée
 gajn/i\\\gagner
 garaĝ/o\\7\garage
-gast/o\9\\hôte (receveur de l'hospitalité)
+gast/o\9\\hôte (convive, invité)
 gazet/o\\\journal, gazette
 geografi/o\4\5\géographie
 gest/o\\\geste
@@ -332,10 +331,10 @@ hor/o\3\3\heure
 hotel/o\\\hôtel
 humor/o\9\\humeur
 hund/o\\\chien
-ĥor/o\\\choeur
+ĥor/o\\\chœur
 i-\\\corrélatif indéfini
 ide/o\\\idée
--ig\7\9\suffixe factitif
+-ig\7\9\suffixe "faire (devant un infinitif), rendre tel ou tel"
 ili\1\\ils, elles
 imag/i\\\imaginer
 -in\7\9\suffixe féminin
@@ -353,10 +352,10 @@ intenc/i\\\avoir l'intention de
 inter\\\parmi, entre
 inter\6\\parmi, entre
 interes/i\6\7\intéresser
-inter&#349;anĝi\\3\échanger
+interŝanĝi\\3\échanger
 invit/i\\\inviter 
 ir/i\6\7\aller 
-ja&#293;t/o\4\\yacht
+jaĥt/o\4\\yacht
 jam\4\5\déjà 
 januar/o\\\janvier
 japan/o\9\\Japonais
@@ -388,7 +387,7 @@ ke\8\\que (pour que)
 kelk/a\8\\quelque
 ki-\5\\corrélatif interrog. et relatif
 kiam\\5\quand
-kie\\\o&ugrave;
+kie\\\où
 kiel\\6\comment
 kin/o\\\cinéma
 kiom\\6\combien
@@ -425,7 +424,7 @@ kontent/a\\\content
 kontinent/o\6\7\continent
 kontraŭ\7\7\contre
 kopi/i\\\copier
-kor/o\\7\coeur
+kor/o\\7\cœur
 korekt/i\\\corriger
 korespond/i\\\correspondre (par lettre)
 kost/i\\\coûter
@@ -439,24 +438,21 @@ kri/i\\\crier
 Krist/o\7\\Christ
 krom\\\excepté 
 kuir/i\\\cuisiner
-kuk/o\1\1\gâtau
+kuk/o\1\1\gâteau
 kuler/o\\\cuillère
 kun\6\7\avec (accompagnement)
 kunikl/o\\\lapin
-kunport/i\\\emporter,emmener
+kunport/i\\\emporter, emmener
 kur/i\3\3\courir
-kurac/i\\\guérir
-kurac/i\\\soigner
+kurac/i\\\guérir, soigner
 kurs/o\9\\cours
 kuŝ/i\\\être couché
 kutim/i\9\\avoir l'habitude
 kuz/o\\\cousin
 kvankam\\\bien que
-kvar\\3\quatre
-kvar\3\\quatre
+kvar\3\3\quatre
 kvazaŭ\\11\comme si, quasiment
-kvin\\3\cinq
-kvin\3\\cinq
+kvin\3\3\cinq
 la\1\\le, la, les
 labor/i\1\\travailler
 lac/a\8\10\fatigué
@@ -505,7 +501,7 @@ mart/o\\\mars
 maten/o\3\3\matin
 mebl/o\\\meuble
 mejl/o\4\4\mile, mille (distance)
-mem\\\même (soi même)
+mem\\\même (soi-même)
 membr/o\6\7\membre (tous sens)
 memor/i\\6\se souvenir
 mensog/i\\\mentir
@@ -543,8 +539,7 @@ naci/o\8\\nation
 naĝ/i\\\nager
 najbar/o\9\\voisin
 nask/i\6\\donner naissance à 
-naŭ\\3\neuf 
-naŭ\\\neuf
+naŭ\3\3\neuf 
 naz/o\\\nez
 ne\1\\non, ne pas
 neĝ/o\7\\neige
@@ -560,7 +555,6 @@ nokt/o\3\3\nuit
 nom/o\5\5\nom
 nord/o\\\nord
 nov/a\1\1\nouveau, neuf
-nov/a\1\1\neuf, neuve
 novembr/o\\\novembre
 nub/o\\\nuage
 nud/a\\\nu
@@ -575,12 +569,11 @@ obstin/a\\10\obstiné
 odor/i\\\sentir (avoir une odeur)
 ofic/o\\8\emploi, fonction
 oft/e\6\7\souvent
-ok\\3\huit
-ok\3\\huit
+ok\3\3\huit
 okaz/i\6\7\avoir lieu
 okcident/o\6\\ouest
 oktobr/o\9\\octobre
-okul/o\8\10\oeil
+okul/o\8\10\œil
 ol\\\que (comparatif)
 -on\7\8\suffixe fractionnaire
 oni\\\on
@@ -591,7 +584,7 @@ ordon/i\\\ordonner
 orel/o\\\oreille
 orient/o\\\est
 ost/o\\\os
-ov/o\4\4\oeuf
+ov/o\4\4\œuf
 pac/o\\\paix
 paf/i\\\tirer (avec une arme)
 pag/i\\\payer
@@ -603,15 +596,14 @@ park/o\9\12\parc
 parol/i\7\8\parler
 part/o\6\\partie (morceau)
 pas/i\9\10\passer
-pa&#349;/i\7\8\marcher
-pa&#349;/o\\\pas (enjambée)
+paŝ/i\7\8\marcher
+paŝ/o\\\pas (enjambée)
 patr/o\1\1\père
 pen/i\8\\s'efforcer
 pens/i\9\\penser
 pripensi\\\réfléchir
 pentr/i\\8\peindre
-per\\7\au moyen de
-per\\\avec, au moyen de
+per\\7\avec, au moyen de
 perd/i\\\perdre
 permes/i\\\permettre
 person/o\8\5\personne (quelqu'un)
@@ -630,19 +622,18 @@ plor/i\\7\pleurer
 plu\\11\plus, plus longtemps, plus loin
 plum/o\2\2\plume, stylo
 pluv/i\\\pleuvoir
-pluvo\7\\pluie
+pluv/o\7\\pluie
 polus/o\\\pôle
 pom/o\8\9\pomme
 popol/o\8\\peuple
 por\1\\pour
 pord/o\8\7\porte
 port/i\2\2\porter
-post\\7\après
-post\6\\après
+post\6\7\après
 postul/i\\\exiger
-po&#349;/o\4\\poche
-po&#349;t/o\4\\poste (PTT)
-po&#349;tmarko\\4\timbre-poste
+poŝ/o\4\\poche
+poŝt/o\4\\poste (PTT)
+poŝtmarko\\4\timbre-poste
 pov/i\6\\pouvoir
 praktik/o\8\\pratique (opp. de théorie)
 preĝ/i\7\8\prier
@@ -726,9 +717,8 @@ ses\3\3\six
 si\1\\soi
 sid/i\6\7\être assis
 signif/i\\\signifier, vouloir dire
-silent/i\8\\être silencieux;
-simi/o\\7\singe
-simi/o\6\\singe
+silent/i\8\\être silencieux
+simi/o\6\7\singe
 simil/a\6\7\semblable, pareil
 simpl/a\8\\simple
 sinjor/o\7\3\monsieur
@@ -754,36 +744,35 @@ stel/o\7\\étoile
 stir/i\\\conduire, piloter
 strat/o\6\\rue
 stud/i\1\7\étudier
-stult/a\\\bête (stupide)
-stult/a\7\9\stupide
+stult/a\7\9\bête, stupide
 sub\6\7\sous
 sud/o\\\sud
 sufiĉ/a\5\3\suffisant
 sukces/i\\\réussir
 suker/o\1\1\sucre
-sukeri\\2\sucrer
+suker/i\\2\sucrer
 sun/o\4\8\soleil
 sup/o\7\\soupe
-super\6\7\au dessus de
+super\6\7\au-dessus de
 sur\6\\sur
 surtut/o\8\10\pardessus
-svis/o\1\\Suisse
-&#349;af/o\7\8\mouton
-&#349;anc/o\\\chance
-&#349;anĝ/i\5\\changer
-&#349;at/i\4\10\aimer (qq chose)
-&#349;i\1\\elle
-&#349;ip/o\7\9\bateau
-&#349;los/i\7\9\fermer à  clef
-&#349;nur/o\\\ficelle
-&#349;ose/o\\\chaussée
-&#349;par/i\7\8\économiser
-&#349;ton/o\\\pierre
-&#349;u/o\4\4\chaussure
-&#349;uld/i\\\devoir (une dette)
+Svis/o\1\\Suisse
+ŝaf/o\7\8\mouton
+ŝanc/o\\\chance
+ŝanĝ/i\5\\changer
+ŝat/i\4\10\aimer (qq chose)
+ŝi\1\\elle
+ŝip/o\7\9\bateau
+ŝlos/i\7\9\fermer à clef
+ŝnur/o\\\ficelle
+ŝose/o\\\chaussée
+ŝpar/i\7\8\économiser
+ŝton/o\\\pierre
+ŝu/o\4\4\chaussure
+ŝuld/i\\\devoir (une dette)
 tabl/o\6\7\table
 tag/o\3\3\jour
-tajp/i\\\taper (à  la machine)
+tajp/i\\\taper (à la machine)
 tamen\8\11\cependant
 tas/o\2\2\tasse
 task/o\\\tâche, devoir
@@ -801,8 +790,7 @@ ti/o\\\ceci, cela
 tip/o\\\type
 tir/i\\\tirer
 tond/i\\\couper avec deux lames (ciseaux)
-tra\\7\à  travers, au travers de
-tra\6\\à  travers
+tra\6\7\à travers, au travers de
 traduk/i\\\traduire
 traf/i\\\atteindre (une cible)
 trajn/o\\\train
@@ -818,7 +806,7 @@ trotuar/o\\\trottoir
 trov/i\1\2\trouver
 tuj\4\11\immédiatement
 turn/i\\\tourner
-tu&#349;/i\\\toucher
+tuŝ/i\\\toucher
 tut/a\8\\tout (entier)
 universal/a\1\\universel
 universitat/o\9\\université
@@ -840,7 +828,7 @@ vent/o\7\8\vent
 ver/a\8\12\vrai
 verd/a\3\3\vert
 verk/i\\\composer, écrire (œuvre)
-verk/o\\\oeuvre
+verk/o\\\œuvre
 verm/o\8\\ver
 vesper/o\3\3\soir
 vest/i\9\\habiller
@@ -850,7 +838,7 @@ vi\1\\tu, vous
 vid/i\2\2\voir
 vin/o\\\vin
 vintr/o\\\hiver
-vir/o\1\1\homme (par opp. à  femme)
+vir/o\1\1\homme (par opp. à femme)
 virino\\1\femme
 viv/i\3\3\vivre
 vizit/i\6\7\visiter

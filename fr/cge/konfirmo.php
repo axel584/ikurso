@@ -43,11 +43,11 @@ include "dlekkapo.inc.php";
 				<div class="tasko enketo">
 					<p>Notez l'intérêt que vous avez eu à effectuer la leçon : de 1 (très ennuyeux) à 5 (très amusant) </p>
 					<div class="rating">
-						<p><input name="intereso" type="range" value="3" min="1" max="5" step="1"></p>
+						<p class="range-field"><input name="intereso" type="range" value="3" min="1" max="5" step="1"></p>
 					</div>
 					<p>Notez la difficulté que vous avez eue à effectuer la leçon : de 1 (très facile) à 5 (très compliqué) </p>
 					<div class="rating">
-						<p><input name="malfacileco" type="range" min="1" max="5" step="1"></p>
+						<p class="range-field"><input name="malfacileco" type="range" min="1" max="5" step="1"></p>
 					</div>
 					<div class="input-field col s12">
 						<textarea name="komento" class="materialize-textarea"></textarea>

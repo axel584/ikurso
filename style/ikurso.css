@@ -517,21 +517,42 @@ legend a {color: inherit; cursor: pointer;}
     position: relative;
     margin-left: 1em;
 }
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+input[type=range]::-webkit-slider-thumb,
+input[type=range]::-moz-slider-thumb,
+input[type=range]::-ms-thumb {
+    background-color: #2196F3;
+}
+input[type=range]:focus {
+    outline: none;
+}
 .rating input[type="range"]:after,
 .rating input[type="range"]:before {
     position: absolute;
+    display:inline-block;
     top: 0.5em;
     color: #616161;
 }
 .rating input[type="range"]:before {
-    left:0em;
+    left:0;
     content: attr(min);
 }
 .rating input[type="range"]:after {
-    right: 0em;
+    right: 0;
     content: attr(max);
 }
-
+input[type=range]+.thumb {
+    background-color: #2196F3;
+}
+input[type=range]+.thumb.active .value {
+	margin-left: 0px;
+	margin-top: 3px;
+	font-size: 14px;
+}
 /********** lexique de la leçon *******/
 @media only screen and (min-width: 992px) {
 	.lexique {

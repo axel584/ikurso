@@ -59,11 +59,11 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<!-- infos pour facebook -->
 		<meta property="og:url" content="http://ikurso.esperanto-france.org" />
 		<meta property="og:title" content="iKurso" />
-		<meta property="og:description" content="Ici, vous pourrez découvrir ce qu’est la langue internationale Espéranto. Vous pourrez également l’apprendre en suivant nos cours, à votre rythme. Pour mieux vous aider, l’association Espéranto-France vous propose un service de correction gratuit. Pour en bénéficier, il suffit de vous inscrire." />
+		<meta property="og:description" content="Ici, vous pourrez découvrir ce qu’est la langue internationale Espéranto et l’apprendre en suivant nos cours, à votre rythme. Pour mieux vous aider, l’association Espéranto-France vous propose un service de correction gratuit." />
 		<meta property="og:site_name" content="iKurso" />
 		<meta property="og:image" content="http://ikurso.esperanto-france.org/bildoj/ikurso-home.jpg" />
 		<meta property="fb:app_id" content="150250432081223" />
-		<meta property="og:locale" content"fr_FR" />
+		<meta property="og:locale" content="fr_FR" />
     </head>
 
     <body class="<?php echo $korpo;?>">	

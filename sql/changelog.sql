@@ -362,3 +362,7 @@ UPDATE `lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 89;
 -- passage en V8
 -- correction de la section "expression de l'heure" qui contient un exercice :
 UPDATE `lecioneroj` SET `tipo` = 'EKZERCARO' WHERE `id` = 72;
+-- décalage de toutes les sections de la leçon 2 pour y intégrer le QCM récapitulatif :
+update `lecioneroj` set ordo=id-7 WHERE leciono_id=60;
+	update `lecioneroj` set unua=0 WHERE id=9;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'Récapitulatif de la leçon 1', 'QCM', '1',1,2);	

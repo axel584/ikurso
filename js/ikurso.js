@@ -24,7 +24,7 @@
       } else {
 
         Materialize.toast('Bravo, vous avez trouvé toutes les bonnes réponses !', 4000);
-        // TODO : faire apparaitre ici le bouton "j'ai fini ma section" que l'on va cacher par défaut
+        $("#finiLecioneron_button").removeClass("hide");
       }
     });
 

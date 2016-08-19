@@ -15,6 +15,62 @@ include "dlekkapo.inc.php";
 		
 		if ($section=="1") {
 		?>
+
+		<p class="parto">Pour introduire cette leçon, nous vous proposons un petit test. Il vous permettra de réviser ce que vous avez vu dans la leçon 1 et de découvrir un peu de vocabulaire de la leçon 2.</p>
+		<p>Retrouvez le texte qui convient à l'image (attention, quelques mots sont à deviner… et seront expliqués dans la leçon 2. Soyez attentif et imaginatif&nbsp;!</p>
+
+<?php 
+QCM_bildoj(
+	array(
+		array(
+			"bildo"=>"bildoj/img-02-01.jpg",
+			"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot",
+			"auteur"=>"Denis Chabot",
+			"propositions"=>array("La kafo estas varma","La cafeo estas varma","La kafo estas ĉauda"),
+			"indices"=>array("","attention, la lettre c se prononce ts",""),
+			"reponse"=>1
+		),
+		array(
+			"bildo"=>"bildoj/img-02-02.jpg",
+			"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot",
+			"auteur"=>"Denis Chabot",
+			"propositions"=>array("La biskivtoj estas en pano","La panoj estas en korbo","La paneoj estas sekaj"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		),
+		array(
+			"bildo"=>"bildoj/img-02-03.jpg",
+			"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Katherine%20Lissitsa",
+			"auteur"=>"Katherine Lissitsa",
+			"propositions"=>array(" La filo estas kun birdoj","Patro estas kun birdoj","La knabino estas kun birdoj"),
+			"indices"=>array("","",""),
+			"reponse"=>3
+		),
+		array(
+			"bildo"=>"bildoj/img-02-04.jpg",
+			"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot",
+			"auteur"=>"Denis Chabot",
+			"propositions"=>array("La knabo lernas","La patro estas instruisto","La knabo estas sana kaj bona filo"),
+			"indices"=>array("","",""),
+			"reponse"=>1
+		),
+		array(
+			"bildo"=>"bildoj/img-02-05.jpg",
+			"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Marcel+Labont%E9",
+			"auteur"=>"Marcel Labonté",
+			"propositions"=>array("Bela filo estas mia instruisto","Bela virino estas ilia instruistino","Instruisto estas mia"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		)
+
+	)
+);
+?>
+
+		<?php 
+		}
+		if ($section=="2") {
+		?>
 		
 		<p class="parto">Les <b>noms</b> désignant des êtres vivants sexués peuvent prendre la
 		marque du <b>féminin</b>. Pour ce faire on remplace la terminaison
@@ -39,8 +95,8 @@ include "dlekkapo.inc.php";
 		</div>
 	
 		<?php 
-		} // fin section 3
-		if ($section=="2") {
+		} // fin section 
+		if ($section=="3") {
 		?>
 		
 		<p class="parto">Il existe une autre terminaison, bien pratique, qui nous permet de
@@ -77,7 +133,7 @@ include "dlekkapo.inc.php";
 		
 		<?php 
 		} // fin section
-		if ($section=="3") {
+		if ($section=="4") {
 		?>
 		
 		<p class="parto">En général les compléments autres que les compléments d’objet direct
@@ -94,7 +150,7 @@ include "dlekkapo.inc.php";
 	
 		<?php 
 		} // fin section
-		if ($section=="4") {
+		if ($section=="5") {
 		?>
 		
 		<p class="parto">Le suffixe <b>-in</b> vous a déj&agrave; permis d’augmenter votre vocabulaire en
@@ -119,7 +175,7 @@ include "dlekkapo.inc.php";
 	
 		<?php 
 		} // fin section
-		if ($section=="5") {
+		if ($section=="6") {
 		?>
 		
 		<p class="parto">Pour mettre une phrase à la <b>forme négative</b> il suffit d’ajouter le mot
@@ -137,7 +193,7 @@ include "dlekkapo.inc.php";
 	
 		<?php 
 		} // fin section
-		if ($section=="6") {
+		if ($section=="7") {
 		?>
 		
 		<p>Maintenant un peu de <b>vocabulaire</b> :</p>
@@ -188,7 +244,7 @@ include "dlekkapo.inc.php";
 				
 		<?php 
 		} // fin section
-		if ($section=="7") {
+		if ($section=="8") {
 		?>
 				
 		<fieldset class="ekzerco">
@@ -215,7 +271,7 @@ include "dlekkapo.inc.php";
 		
 		<?php 
 		} // fin section
-		if ($section=="8") {
+		if ($section=="9") {
 		?>
 		
 		<fieldset class="ekzerco">
@@ -244,7 +300,7 @@ include "dlekkapo.inc.php";
 	
 		<?php 
 		} // fin section
-		if ($section=="9") {
+		if ($section=="10") {
 		?>
 		<fieldset class="ekzerco">
 			<legend><strong>EXERCICE</strong> : Formez des phrases ayant un sens en utilisant les mots donnés.</legend>
@@ -268,7 +324,7 @@ include "dlekkapo.inc.php";
 		<?php 
 		} // fin section
 		
-	if ($section=="10") {
+	if ($section=="11") {
 	?>
 	<p>Voici un petit exercice de révision. Sélectionnez la réponse exacte en 
 	cliquant sur le bouton associé. Si vous ne savez pas quelle réponse donner à une question, n’hésitez pas à relire le cours&nbsp;: toutes les réponses s’y trouvent&nbsp;!</p>
@@ -301,7 +357,7 @@ include "dlekkapo.inc.php";
 			
 	<?php 
 	} // fin section 
-	if ($section=="11") {
+	if ($section=="12") {
 		?>			
 		<p>Résumons-nous.</p>
 		<p>Vous avez maintenant appris à former le féminin de tout nom

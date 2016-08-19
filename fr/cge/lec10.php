@@ -277,8 +277,8 @@ include "dlekkapo.inc.php";
 				36 => "mia taso : (notre tasse) (ma tasse)",
 				37 => "via sano : (votre santé) (leur santé)",
 				38 => "lia ŝuo : (sa chaussure à lui) (… à elle)",
-				39 => "ŝia edzo  (son mari à elle) (sa femme à lui)",
-				40 => "ilia urbo  (sa ville à lui) (leur ville à eux)"
+				39 => "ŝia edzo : (son mari à elle) (sa femme à lui)",
+				40 => "ilia urbo : (sa ville à lui) (leur ville à eux)"
 				);
 				ekzerco(False,1);
 			?>

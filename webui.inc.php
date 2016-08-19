@@ -300,14 +300,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	$lasta = $row["lasta"];
 	$lecionero_id = $row["id"];
 	// si l'élève n'est pas enregistré
-	if ($persono_id=="") { 
-		// on autorise uniquement le QCM
-		if($tipo=="QCM") {
-			echo '<a id="kontroliQCM_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="Vous pourrez corriger vos mauvaises réponses avant de passer à la suite">Vérifier mes réponses !</a>';
-		} else {
-			return;
-		}
-	} else  {
+	if ($persono_id!="") { 
 		// on vérifie si l'élève a déjà fait cette leçon pour n'afficher le bouton que si il n'a pas déjà cliqué sur le bouton :
 		$query = "select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
 		$result = $bdd->query($query);
@@ -322,7 +315,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 		$result = $bdd->query($query);
 		$dejaFait = $result->fetch()["combien"];
 		if($tipo=="QCM") { // on vérifie le QCM
-			echo '<a id="kontroliQCM_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="Vous pourrez corriger vos mauvaises réponses avant de passer à la suite">Vérifier mes réponses !</a>';
+			echo '<a id="finiLecioneron_button" class="hide waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
 		} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
 			echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
 		} elseif($lasta==1) { // on envoit au correcteur si on a un correcteur, on en demande un dans le cas contraire
@@ -335,6 +328,41 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 			echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
 		}
 	}
+}
+
+
+function QCM_bildoj($qcm) {
+	echo "<div class='row'>";
+	echo "<div class='carousel carousel-slider s12'>";
+	$indiceQuestion= 1;
+	foreach ($qcm as $question) {
+		echo "<div class='carousel-item'>";
+		echo "<p class='col s12 m6 l5'>";
+		echo "<img src='".$question["bildo"]."' class='responsive-img'><br>";
+		echo "<legend>photo : <a href='".$question["url"]."'>".$question["auteur"]."</a></legend>";
+		echo "</p>";
+		echo "<p class='col s12 m6 l7'>";
+		echo "</p>";
+		$indiceProposition= 1;
+		foreach ($question["propositions"] as $proposition) {
+			if ($indiceProposition==$question["reponse"]) {
+				$style = "qcm_ok";
+			} else {
+				$style = "qcm_nok";
+			}
+			if ($indiceQuestion==count($qcm)) {
+				$lasta = "data-lasta='true'";
+			} else {
+				$lasta = "";
+			}
+			echo "<input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><label for='00".$indiceQuestion."-0".$indiceProposition."'>".$proposition."</label><br>";
+			$indiceProposition++;
+		}
+		echo "</div>\n";
+		$indiceQuestion++;
+	}
+	echo "</div>";
+	echo "</div>\n";
 }
 
 function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {

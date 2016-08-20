@@ -52,7 +52,11 @@ if ($persono["familinomo"]!="" || $persono["personnomo"]!="") {
 
 // remplissage du texte
 imagettftext($image, 16, 0, 300, 30, $couleur, 'fonts/OpenSans-Light.ttf', 'Parizo, la '.$infos["findato"]);
-imagettftext($image, 48, 0, 300, 300, $noir, 'fonts/OpenSans-Light.ttf', $nom);
+if (strlen($nom)>18) {
+	imagettftext($image, 32, 0, 300, 300, $noir, 'fonts/OpenSans-Light.ttf', $nom);
+} else {
+	imagettftext($image, 38, 0, 300, 300, $noir, 'fonts/OpenSans-Light.ttf', $nom);
+}
 //imagettftext($image, 12, 0, 600, 500, $couleur, 'fonts/OpenSans-Light.ttf', 'instruisto korektanto:');
 imagettftext($image, 16, 0, 600, 570, $couleur, 'fonts/OpenSans-Regular.ttf', $infos["personnomo"]." ".$infos["familinomo"]); // nom-prénom du correcteur
 ob_start();

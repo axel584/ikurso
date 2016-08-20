@@ -34,6 +34,13 @@
     });
 
 
+$('#eniri_identigilo,#eniri_pasvorto').keyup(function(e) {    
+   if(e.keyCode == 13) { // KeyCode de la touche entrée
+          $( "#connection_button" ).click();
+ }
+});
+
+
   	$( "#connection_button" ).click(function() {
   		$("#connection_button").addClass("disabled");
   		$.ajax({

@@ -140,7 +140,7 @@ include "dlekkapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<p class="parto">Voici cinq autres mots très fréquents terminés par <b>-aŭ</b> :</p>
+			<p class="parto">Voici cinq autres mots très fréquents terminés par <b>-aŭ</b>&nbsp;:</p>
 		
 			<div class="row">
 				<p class="col s12"><b>ambaŭ</b> : tous les deux (adjectif ou pronom numéral)</p>
@@ -164,9 +164,9 @@ include "dlekkapo.inc.php";
 			
 			<div class="row">
 				<p class="col s2"><span class="eo">ĉirkaŭ</span></p><p class="col s10">(<u>tchir</u>-kaw)</p>
-				<p class="col s2"><span class="eo">morgaŭ</span></p><p class="col s10"><u>mor</u>-gaw</p>
-				<p class="col s2"><span class="eo">hieraŭ</span></p><p class="col s10">hi-<u>è</u>-raw</p>
-				<p class="col s2"><span class="eo">hodiaŭ</span></p><p class="col s10">ho-<u>di</u>-aw</p>
+				<p class="col s2"><span class="eo">morgaŭ</span></p><p class="col s10">(<u>mor</u>-gaw)</p>
+				<p class="col s2"><span class="eo">hieraŭ</span></p><p class="col s10">(hi-<u>è</u>-raw)</p>
+				<p class="col s2"><span class="eo">hodiaŭ</span></p><p class="col s10">(ho-<u>di</u>-aw)</p>
 			</div>
 
 		<?php 
@@ -174,7 +174,7 @@ include "dlekkapo.inc.php";
 		if ($section=="5") {
 		?>
 
-			<p class="parto">Parmi les mots invariables fréquemment employés, on trouve aussi:</p>
+			<p class="parto">Parmi les mots invariables fréquemment employés, on trouve aussi&nbsp;:</p>
 		
 			<div class="row">
 				<p class="col s12"><b>ĉi</b> : indique la proximité </p>
@@ -190,10 +190,10 @@ include "dlekkapo.inc.php";
 				<p class="col s6"><span class="eo">io ajn</span> : n’importe quoi</p>
 				<p class="col s5 offset-s1"><span class="eo">ie ajn</span> : n’importe où</p>
 				<p class="col s6"><span class="eo">iam ajn</span> : n’importe quand</p>
-				<p class="col s11 offset-s1"><span class="eo">iru ien !</span> : allez (allez-vous en) quelque part !</p>
-				<p class="col s11 offset-s1"><span class="eo">iru ien ajn !</span> : allez-vous en n’importe où !</p>
-				<p class="col s11 offset-s1"><span class="eo">iru, kien vi volas !</span> : allez où vous voulez !</p>
-				<p class="col s11 offset-s1"><span class="eo">iru, kien ajn vi volas !</span> : allez (n’importe où) où vous voulez !</p>
+				<p class="col s11 offset-s1"><span class="eo">iru ien!</span> : allez (allez-vous en) quelque part&nbsp;!</p>
+				<p class="col s11 offset-s1"><span class="eo">iru ien ajn!</span> : allez-vous en n’importe où&nbsp;!</p>
+				<p class="col s11 offset-s1"><span class="eo">iru, kien vi volas!</span> : allez où vous voulez&nbsp;!</p>
+				<p class="col s11 offset-s1"><span class="eo">iru, kien ajn vi volas!</span> : allez (n’importe où) où vous voulez !</p>
 			</div>
 
 		<?php 

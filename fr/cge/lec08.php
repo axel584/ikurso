@@ -32,12 +32,12 @@ include "dlekkapo.inc.php";
 			<div class="row vortlisto">
 				<p class="col s4">l’<b>impératif-subjonctif</b> :</p>
 				<p class="col s1"><b>-u</b></p>
-				<p class="col s7"><span class="eo">Ferm<b>u</b> la pordon kaj sidiĝ<b>u</b>!.</span></p>
+				<p class="col s7"><span class="eo">Ferm<b>u</b> la pordon kaj sidiĝ<b>u</b>!</span></p>
 				<p class="col s7 offset-s5">= Ferme la porte et assieds-toi !</p>
-				<p class="col s7 offset-s5"><span class="eo">Li ferm<b>u</b> la pordon kaj sidiĝ<b>u</b> !</span></p>
+				<p class="col s7 offset-s5"><span class="eo">Li ferm<b>u</b> la pordon kaj sidiĝ<b>u</b>!</span></p>
 				<p class="col s7 offset-s5">= Qu’il ferme la porte et qu’il s’asseye !</p>
-				<p class="col s7 offset-s5"><span class="eo">Mi volas, ke vi ven<b>u</b></span></p>
-				<p class="col s7 offset-s5">= Je veux que tu viennes</p>
+				<p class="col s7 offset-s5"><span class="eo">Mi volas, ke vi ven<b>u</b>.</span></p>
+				<p class="col s7 offset-s5">= Je veux que tu viennes.</p>
 			</div>
 	
 			<p class="rimarko"><strong>REMARQUE</strong> : 
@@ -71,7 +71,7 @@ include "dlekkapo.inc.php";
 				<p class="col s2">Passé :</p><p class="col s2"><b>-it</b></p><p class="col s8"><span class="eo">La libro estas legita.</span></p>
 				<p class="col s8 offset-s4">= Le livre est lu (ayant été lu).</p>
 				<p class="col s2">Futur :</p><p class="col s2"><b>-ot</b></p><p class="col s8"><span class="eo">La libro estas legota.</span></p>
-				<p class="col s8 offset-s4">= Le livre est devant être lu (àlire).</p>
+				<p class="col s8 offset-s4">= Le livre est devant être lu (à lire).</p>
 			</div>
 	
 			<p>En résumé :</p>
@@ -200,7 +200,7 @@ include "dlekkapo.inc.php";
 			?>
 			
 			<p class="parto">
-			<b>Si</b> est le <b>pronom réfléchi</b> de la 3e personne, du singulier ou du
+			<b>Si</b> est le <b>pronom réfléchi</b> de la 3<sup>e</sup> personne, du singulier ou du
 			pluriel, quand il se rapporte au sujet du verbe. <b>Sia</b> est l’adjectif
 			possessif réfléchi correspondant.
 			</p>
@@ -242,7 +242,7 @@ include "dlekkapo.inc.php";
 			<div class="vortlisto row">
 				<p class="col s6"><span class="eo">inciti</span> : irriter</p>
 				<p class="col s6"><span class="eo">daŭre</span> : continuellement</p>
-				<p class="col s6"><span class="eo">estonta</span> : futur (participe futur de "esti")</p>
+				<p class="col s6"><span class="eo">estonta</span> : futur (participe futur de <em>esti</em>)</p>
 				<p class="col s6"><span class="eo">kafejo</span> : café (restaurant)</p>
 				<p class="col s6"><span class="eo">for-iri</span> : partir</p>
 				<p class="col s6"><span class="eo">surtuto</span> : pardessus</p>

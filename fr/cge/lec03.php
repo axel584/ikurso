@@ -41,13 +41,13 @@ include "dlekkapo.inc.php";
 			</p>
 			
 			<div class="row container">
-				<div class="col s4">La fille m’a vu.</div>
-				<div class="col s8">
-					<p>= La knabino vidis <span class="eo">min</span>.</p>
-					<p>= <span class="eo">Min</span> vidis la knabino</p>
-					<p>= <span class="eo">Min</span> <span class="ekz">la knabino</span> vidis.</p>
-					<p>= …</p>
+				<div class="col s6">
+					<p><span class="eo">La knabino vidis <b>min</b></span>.</p>
+					<p><span class="eo"<b>Min</b> vidis la knabino</p>
+					<p><span class="eo"><b>Min</b> la knabino vidis.</p>
+					<p><span class="eo">…</span></p>
 				</div>
+				<div class="col s6">= La fille m’a vu.</div>
 			</div>
 
 			<p>
@@ -145,7 +145,7 @@ include "dlekkapo.inc.php";
 		?>
 	
 		<p class="parto">
-		Les <b>adverbes</b> jouent un peu le même r&ocirc;le que les adjectifs, mais au
+		Les <b>adverbes</b> jouent un peu le même rôle que les adjectifs, mais au
 		lieu de préciser les idées exprimées par des noms, ils précisent les idées
 		exprimées par des verbes, des adjectifs, d’autres adverbes ou même des
 		phrases entières.  Le plus souvent, ils expriment la manière, la cause, le
@@ -158,7 +158,7 @@ include "dlekkapo.inc.php";
 		<p>
 		Avec cette terminaison vous connaissez maintenant la totalité des
 		terminaisons qui marquent la catégorie du mot. L’idée fondamentale exprimée
-		par la racine d’un mot peut être utilisée de différentes façons gr&acirc;ce à un
+		par la racine d’un mot peut être utilisée de différentes façons grâce à un
 		simple changement de terminaison :
 		</p>
 	
@@ -200,9 +200,9 @@ include "dlekkapo.inc.php";
 		
 		<p class="parto">
 		En espéranto, chaque voyelle (<em>a</em>, <em>e</em>, <em>i</em>, <em>o</em>,
-		<em>u</em>) forme une syllabe. Le mot espéranto <em>sane</em> a donc deux
+		<em>u</em>) forme une syllabe. Le mot espéranto <span class="eo">sane</span> a donc deux
 		syllabes (<em>sa-ne</em>).  Alors qu’en français, le <em>-e</em> final est
-		généralement muet (comme, par exemple, dans <em>père</em>), il n’existe rien
+		généralement muet (comme, par exemple, sdans <em>père</em>), il n’existe rien
 		de tel en espéranto.
 		</p>
 		<p>

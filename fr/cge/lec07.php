@@ -66,7 +66,7 @@ include "dlekkapo.inc.php";
 			<p class="col s6 m3 eo">fivirino</p><p class="col s6 m3">femme de mauvaise vie</p>
 			<p class="col s6 m3 eo">komercisto</p><p class="col s6 m3">commerçant</p>
 			<p class="col s6 m3 eo">fikomercisto</p><p class="col s6 m3">mercanti</p>
-			<p class="col s6 m3 eo">fi ! : </p><p class="col s6 m3">pouah !</p>
+			<p class="col s6 m3 eo">fi!</p><p class="col s6 m3">pouah !</p>
 		</div>
 		
 		<p><b>GE</b> : <i>réunion des deux sexes</i></p>
@@ -87,7 +87,7 @@ include "dlekkapo.inc.php";
 			<p class="col s6 m3 eo">la malo</p><p class="col s6 m3">le contraire</p>
 		</div>
 
-		<p><b>MIS</b> : <i>action ratée, exécutée "de travers"</i></p>
+		<p><b>MIS</b> : <i>action ratée, exécutée «&nbsp;de travers&nbsp;»</i></p>
 		<div class="row">
 			<p class="col s6 m3 eo">kompreni</p><p class="col s6 m3">comprendre</p>
 			<p class="col s6 m3 eo">miskompreni</p><p class="col s6 m3">comprendre de travers</p>
@@ -502,10 +502,10 @@ include "dlekkapo.inc.php";
 		«&nbsp;à quelle heure…&nbsp;?&nbsp;».
 		</p>
 		<div class="vortlisto row">
-			<p class="col s6"><b>Kioma horo estas ?</b></p><p class="col s6">Quelle heure est-il ?</p>
-			<p class="col s6">– Estas la dua.</p><p class="col s6">– Il est deux heures.</p>
-			<p class="col s6">– Estas la dua kaj dek.</p><p class="col s6">– Il est deux heures dix.</p>
-			<p class="col s6">– Estas dek antaŭ la dua.</p><p class="col s6">– Il est deux heures moins dix.</p>
+			<p class="col s6"><span class="eo"><b>Kioma horo estas ?</b></span></p><p class="col s6">Quelle heure est-il ?</p>
+			<p class="col s6"><span class="eo">– Estas la dua.</span></p><p class="col s6">– Il est deux heures.</p>
+			<p class="col s6"><span class="eo">– Estas la dua kaj dek.</span></p><p class="col s6">– Il est deux heures dix.</p>
+			<p class="col s6"><span class="eo">– Estas dek antaŭ la dua.</span></p><p class="col s6">– Il est deux heures moins dix.</p>
 		</div>
 		
 		<p class="rimarko"><strong>REMARQUE</strong> : 
@@ -516,10 +516,10 @@ include "dlekkapo.inc.php";
 		</p>
 		
 		<div class="vortlisto row">
-			<p class="col s6"><b>Je kioma horo</b> ŝi venis ?</p><p class="col s6">À quelle heure est-elle venue&nbsp;? </p>
-			<p class="col s6">– Ŝi venis je la dua.</p><p class="col s6">– Elle est venue à deux heures.</p>
-			<p class="col s6">– Ŝi venis je la dua kaj dek.</p><p class="col s6">etc.</p>
-			<p class="col s12">– Ŝi venis je dek antaŭ la dua.</p>
+			<p class="col s6"><span class="eo"><b>Je kioma horo</b> ŝi venis?</span></p><p class="col s6">À quelle heure est-elle venue&nbsp;? </p>
+			<p class="col s6"><span class="eo">– Ŝi venis je la dua.</span></p><p class="col s6">– Elle est venue à deux heures.</p>
+			<p class="col s6"><span class="eo">– Ŝi venis je la dua kaj dek.</span></p><p class="col s6">etc.</p>
+			<p class="col s12"><span class="eo">– Ŝi venis je dek antaŭ la dua.</span></p>
 		</div>
 		<p>
 		Remarquez bien qu’on utilise la forme ordinale du numéral (la dua, la

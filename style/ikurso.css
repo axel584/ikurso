@@ -492,8 +492,13 @@ fieldset.sono legend {
 /*********************************/
 
 .carousel.carousel-slider {
-	width:100%; 
-	height:600px
+	height:400px;
+}
+@media only screen and (max-width: 800px) {
+	.carousel.carousel-slider {
+		width: 90%;
+		height:500px;
+	}
 }
 
 p.qcmerr {color:red;}
@@ -503,6 +508,11 @@ legend {
 	font-size: 75%;
 }
 legend a {color: inherit; cursor: pointer;}
+
+#recapitulatif_qcm {
+	-webkit-transition: width 1s linear, background-color 1s linear;
+	transition: width 1s linear, background-color 1s linear;
+}
 /********** évaluation (fin de leçon) *******/
 
 #leciono-enketo {

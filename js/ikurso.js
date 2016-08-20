@@ -23,8 +23,11 @@
         }, 1000);
       } else {
         Materialize.toast('Bravo, vous avez trouvé toutes les bonnes réponses !', 4000);
-        $("#finiLecioneron_button").removeClass("hide");
-        $("#recapitulatif_qcm").removeClass("hide");
+        setTimeout(function(){
+			$("#recapitulatif_qcm").removeClass("hide");
+            $("#carousel_qcm").addClass("hide");
+			$("#finiLecioneron_button").removeClass("hide");
+       }, 1000);
         
       }
     });

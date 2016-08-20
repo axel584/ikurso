@@ -332,11 +332,10 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 
 
 function QCM_bildoj($qcm) {
-	echo "<div class='row'>";
-	echo "<div class='carousel carousel-slider s12'>";
+	echo "<div class='carousel carousel-slider' id='carousel_qcm'>";
 	$indiceQuestion= 1;
 	foreach ($qcm as $question) {
-		echo "<div class='carousel-item'>";
+		echo "<div class='carousel-item row'>";
 		echo "<h3>Question ".$indiceQuestion."/".count($qcm)." :</h3>";
 		echo "<p class='col s12 m6 l5'>";
 		echo "<img src='".$question["bildo"]."' class='responsive-img'><br>";
@@ -365,17 +364,17 @@ function QCM_bildoj($qcm) {
 	echo "</div>";
 	// on affiche un récapitulatif :
 	echo "<div class='row hide' id='recapitulatif_qcm'>";
-	echo "<div class='col s12 m6 l5'>";
+	echo "<div class='col s12'>";
 	echo "<div class='card-panel blue lighten-5'>";
 	echo "<h3>Récapitulatif :</h3>";
 	$indiceQuestion= 1;
 	echo "<ul class='collection'>";
 	foreach ($qcm as $question) {
 		//echo "<li>".$question["propositions"][$question["reponse"]]."</li>";
-		echo "<li class='collection-item'>".$indiceQuestion.". ".$question["propositions"][$question["reponse"]-1]."</li>";
+		echo "<li class='collection-item row'>";
+		echo "<span class='col s4 l2'><img src='".$question["bildo"]."' class='responsive-img'></span><span class='col s8 l10'>".$indiceQuestion.". ".$question["propositions"][$question["reponse"]-1]."</span></li>";
 		$indiceQuestion++;
 	}
-	echo "</div>";
 	echo "</div>";
 	echo "</div>";
 	echo "</div>\n";

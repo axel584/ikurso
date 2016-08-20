@@ -24,10 +24,10 @@ include "dlekkapo.inc.php";
 			<div class="vortlisto row">
 				<div class="col s12 m6">
 					<p><span class="eo">c</span> : ts (tsar)</p>
-					<p><span class="eo">ĉ</span> : tch (Tchécoslovaquie)</p>
+					<p><span class="eo">ĉ</span> : tch (Tchèque)</p>
 					<p><span class="eo">e</span> : entre é et è</p>
 					<p><span class="eo">g</span> : g (gant)</p>
-					<p><span class="eo">ĝ</span> : dj (adjudant)</p>
+					<p><span class="eo">ĝ</span> : dj (Djibouti)</p>
 					<p><span class="eo">h</span> : h (have en anglais)</p>
 					<p><span class="eo">ĥ</span> : hr (Juan en espagnol)</p>
 					<p><span class="eo">j</span> : y (yogourt)</p>
@@ -197,12 +197,12 @@ include "dlekkapo.inc.php";
 
 			<div class="vortlisto row">
 				<div class="col s12 m6">
-					<p>un biscuit : <span class="eo">biskvito</span></p>
-					<p>des biscuits : <span class="eo">biskvitoj</span></p>
+					<p><span class="eo">biskvito</span> : un biscuit</p>
+					<p><span class="eo">biskvitoj</span> : des biscuits</p>
 				</div>
 				<div class="col s12 m6">
-					<p>du pain : <span class="eo">pano</span></p>
-					<p>du sucre : <span class="eo">sukero</span></p>
+					<p><span class="eo">pano</span> : du pain</p>
+					<p><span class="eo">sukero</span> : du sucre</p>
 				</div>
 			</div>
 
@@ -210,8 +210,8 @@ include "dlekkapo.inc.php";
 			<b>la</b>.</p>
 			<div class="vortlisto row">
 				<div class="col s12 m6">
-					<p>le biscuit : <span class="eo">la biskvito</span></p>
-					<p>les bons biscuits : <span class="eo">la bonaj biskvitoj</span></p>
+					<p><span class="eo">la biskvito</span> : le biscuit</p>
+					<p><span class="eo">la bonaj biskvitoj</span> : les bons biscuits</p>
 				</div>
 			</div>
 					
@@ -343,7 +343,7 @@ include "dlekkapo.inc.php";
 						8 => "Le pain sera sec.",
 						9 => "Un garçon en bonne santé est beau.",
 						10 => "Des garçons sains seront grands.",
-						11 => "Le pain est à toi (&quot;le pain est tien&quot;)."
+						11 => "Le pain est à toi (« le pain est tien »)."
 						);
 						ekzerco(True, 1);
 						?>

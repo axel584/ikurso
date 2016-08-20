@@ -160,11 +160,11 @@ include "dlekkapo.inc.php";
 			<tr><td class="eo">al</td><td>- à vers (indique le but d’un mouvement ou le bénéficiaire d’une action)</td></tr>
 			<tr><td class="eo">ĉe</td><td>- chez, auprès de, tout près de</td></tr>
 			<tr><td class="eo">de</td><td>- de, à partir de, depuis (temps, lieu)</td></tr>
-			<tr><td class="eo">dum</td><td>- durant, pendant (est également conjonction et signifie: pendant que, tandis que)</td></tr>
+			<tr><td class="eo">dum</td><td>- durant, pendant (est également conjonction et signifie «pendant que», «tandis que»)</td></tr>
 			<tr><td class="eo">en</td><td>- dans, en, à l’intérieur de</td></tr>
-			<tr><td class="eo">ĝis</td><td>- jusqu’à (est également conjonction et signifie alors: jusqu’à ce que)</td></tr>
+			<tr><td class="eo">ĝis</td><td>- jusqu’à (est également conjonction et signifie alors «jusqu’à ce que»)</td></tr>
 			<tr><td class="eo">por</td><td>- pour, à l’intention de</td></tr>
-			<tr><td class="eo">pro</td><td>- en raison de, à cause de («pour», «par», «de",…)</td></tr>
+			<tr><td class="eo">pro</td><td>- en raison de, à cause de («pour», «par», «de»,…)</td></tr>
 			<tr><td class="eo">sub</td><td>- sous, en-dessous de</td></tr>
 			<tr><td class="eo">sur</td><td>- sur, au-dessus de (en touchant l’objet)</td></tr>
 		</table>

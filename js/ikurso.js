@@ -15,16 +15,17 @@
 
     // QCM
     $( ".qcm_ok" ).click(function() {
-      //alert("nombre d'elements : "+this.parent(".carousel-item").html()+"/"+$(".carousel-item").length);
-      //console.log($(this).parent(".carousel"));
       var $lasta = $(this).data("lasta");
-      console.log($lasta);
       if (!$lasta) {
-        $('.carousel').carousel('next');
+        Materialize.toast('Bravo !', 4000);
+        setTimeout(function(){
+            $('.carousel').carousel('next')
+        }, 1000);
       } else {
-
         Materialize.toast('Bravo, vous avez trouvé toutes les bonnes réponses !', 4000);
         $("#finiLecioneron_button").removeClass("hide");
+        $("#recapitulatif_qcm").removeClass("hide");
+        
       }
     });
 

@@ -337,6 +337,7 @@ function QCM_bildoj($qcm) {
 	$indiceQuestion= 1;
 	foreach ($qcm as $question) {
 		echo "<div class='carousel-item'>";
+		echo "<h3>Question ".$indiceQuestion."/".count($qcm)." :</h3>";
 		echo "<p class='col s12 m6 l5'>";
 		echo "<img src='".$question["bildo"]."' class='responsive-img'><br>";
 		echo "<legend>photo : <a href='".$question["url"]."'>".$question["auteur"]."</a></legend>";
@@ -361,6 +362,21 @@ function QCM_bildoj($qcm) {
 		echo "</div>\n";
 		$indiceQuestion++;
 	}
+	echo "</div>";
+	// on affiche un récapitulatif :
+	echo "<div class='row hide' id='recapitulatif_qcm'>";
+	echo "<div class='col s12 m6 l5'>";
+	echo "<div class='card-panel blue lighten-5'>";
+	echo "<h3>Récapitulatif :</h3>";
+	$indiceQuestion= 1;
+	echo "<ul class='collection'>";
+	foreach ($qcm as $question) {
+		//echo "<li>".$question["propositions"][$question["reponse"]]."</li>";
+		echo "<li class='collection-item'>".$indiceQuestion.". ".$question["propositions"][$question["reponse"]-1]."</li>";
+		$indiceQuestion++;
+	}
+	echo "</div>";
+	echo "</div>";
 	echo "</div>";
 	echo "</div>\n";
 }

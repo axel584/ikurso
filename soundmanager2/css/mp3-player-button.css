@@ -55,3 +55,8 @@ a.sm2_button.sm2_paused,
 a.sm2_button.sm2_paused:hover {
 	background-color:#666;
 }
+
+a.sm2_button.disabled,
+a.sm2_button.disabled:hover {
+	background-color: rgba(0,0,0,0.75);
+}

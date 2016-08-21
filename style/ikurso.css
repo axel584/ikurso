@@ -639,8 +639,11 @@ span.ikurso {
 .collapsible-header span.badge {
 	color: #FFF;
 	right: auto;
-	border-radius: 2px;
+	border-radius: 4px;
 	font-size: 0.8rem;
+}
+#eleves .footer .btn {
+	margin-left: 1em;
 }
 /*********************************/
 /*        pied de page           */

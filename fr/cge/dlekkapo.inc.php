@@ -55,7 +55,7 @@ function ekzerco($x2u, $nbLig, $cols6="N") {
 			echo "<div class='input-field col s12'><input name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			// si on n'est pas identifié et que ce n'est pas la première leçon, on empeche de remplir les exercices si on n'est pas connecté
 			if ($idenfication==False && $numcxap<>"01") {
-				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
+				echo " READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
 			if ($x2u) {
 				echo " onkeyup='xAlUtf8(this)' ";
@@ -71,7 +71,7 @@ function ekzerco($x2u, $nbLig, $cols6="N") {
 		{
 			echo "<div class='input-field col s12'><textarea class='materialize-textarea' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			if ($idenfication==False) {
-				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
+				echo " READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
 			if ($x2u) {
 				echo " onkeyup='xAlUtf8(this)' ";

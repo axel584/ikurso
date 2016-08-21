@@ -135,8 +135,8 @@ include "dlekkapo.inc.php";
 		sonorités.
 		</p>
 		
-		<p><i>Cliquez sur le bouton pour écouter la phrase&nbsp;: <a href="<?php echo $vojo;?>fr/son/pv3.mp3" class="sm2_button"></a></i></p>
-		<p><span class="eo">Akvo kura – akvo pura</span><br>
+		<p><i>Cliquez sur le bouton <a class="sm2_button disabled"></a>pour écouter la phrase&nbsp;: </a></i></p>
+		<p><a href="<?php echo $vojo;?>fr/son/pv3.mp3" class="sm2_button"></a> <span class="eo">Akvo kura – akvo pura</span><br>
 		De l’eau courante (<i>qui court</i>) [c’est] de l’eau pure (<i>propre</i>)</p>
 	
 		<?php 
@@ -181,15 +181,13 @@ include "dlekkapo.inc.php";
 
 		<div class="vortlisto row">
 			<p class="col s12">Exemples :
-			<a href="<?php echo $vojo;?>fr/son/l03-1.mp3" class="sm2_button"></a></p>
-		
-			<p class="col s6"><span class="eo">Insektoj vivas nokte</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l03-1-1.mp3" class="sm2_button"></a> <span class="eo">Insektoj vivas nokte</span></p>
 			<p class="col s6">Les insectes vivent la nuit.</p>
-			<p class="col s6"><span class="eo">Li malbone skribis</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l03-1-2.mp3" class="sm2_button"></a> <span class="eo"> Li malbone skribis</span></p>
 			<p class="col s6">Il a mal écrit.</p>
-			<p class="col s6"><span class="eo">Ŝi respondis seke.</span></p>
-				<p class="col s6">Elle a répondu sèchement.</p>
-			<p class="col s6"><span class="eo">Ni renkontos lin promene.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l03-1-3.mp3" class="sm2_button"></a><span class="eo"> Ŝi respondis seke.</span></p>
+			<p class="col s6">Elle a répondu sèchement.</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l03-1-4.mp3" class="sm2_button"></a> <span class="eo">Ni renkontos lin promene.</span></p>
 			<p class="col s6">Nous le rencontrerons lors de la promenade.</p>
 		</div>
 		

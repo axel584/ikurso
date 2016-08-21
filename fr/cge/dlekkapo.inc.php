@@ -77,7 +77,6 @@ function ekzerco($x2u, $nbLig) {
 			}
 			echo "</textarea></div>";
 		}
-		echo "</p>\n";
 	}
 	echo "</div>";
 

@@ -4,45 +4,23 @@ include_once ("db.inc.php");
 //include_once ("forum/includes/forum.lib.php");
 
 malfermidatumbazon();
-$enirnomo=$aligxilo["enirnomo"]=$_POST["nova_enirnomo"];
-$pasvorto=$aligxilo["pasvorto"]=$_POST["nova_pasvorto"];
-$retadreso=$aligxilo["retadreso"]=isset($_POST["nova_retadreso"])?$_POST["nova_retadreso"]:"";
-// par defaut, l'utilisateur est inscrit avec le systeme d'envoi de message en Unicode
-// ce n'est qu'en modifiant ses donnees personnelles par la suite qu'il pourra changer
-$sistemo="U";
-$adreso1=$aligxilo["adreso1"]=addslashes($_POST["adreso1"]);
-$adreso2=$aligxilo["adreso2"]=addslashes($_POST["adreso2"]);
-$familinomo=$aligxilo["familinomo"]=addslashes($_POST["familinomo"]);
-$personnomo=$aligxilo["personnomo"]=addslashes($_POST["personnomo"]);
-$sekso=$aligxilo["sekso"]=isset($_POST["sekso"])?$_POST["sekso"]:"";
-$posxtkodo=$aligxilo["posxtkodo"]=$_POST["posxtkodo"];
-$urbo=$aligxilo["urbo"]=addslashes($_POST["urbo"]);
-$lando=$aligxilo["lando"]=$_POST["lando"];
-$naskigxdato_tago=$aligxilo["naskigxdato_tago"]=$_POST["naskigxdato_tago"];
-$naskigxdato_monato=$aligxilo["naskigxdato_monato"]=$_POST["naskigxdato_monato"];
-$naskigxdato_jaro=$aligxilo["naskigxdato_jaro"]=$_POST["naskigxdato_jaro"];
-$kurso=$aligxilo["kurso"]=$_POST["kurso"];
-$kialo=$aligxilo["kialo"]=addslashes($_POST["kialo"]);
-$verdakrabo=$aligxilo["verdakrabo"]=$_POST["verdakrabo"];
-$stopInfo=$aligxilo["stopInfo"]=isset($_POST["stopInfo"])?$_POST["stopInfo"]:"";
-if ($stopInfo=='on') {$stopInfo='J';} else {$stopInfo='N';}
-$retadreso=$aligxilo["retadreso"]=$_POST["retadreso"];
-$pasvorto2=$aligxilo["pasvorto2"]=$_POST["pasvorto2"];
-if ($pasvorto!=$pasvorto2) {
+$enirnomo=$aligxilo["enirnomo"]=isset($_POST["enirnomo"])?$_POST["enirnomo"]:"";
+$pasvorto=$aligxilo["pasvorto"]=isset($_POST["pasvorto"])?$_POST["pasvorto"]:"";
+$retadreso=$aligxilo["retadreso"]=isset($_POST["retadreso"])?$_POST["retadreso"]:"";
+
+echo "enirnomo : ".$enirnomo."<br/>";
+echo "pasvorto : ".$pasvorto."<br/>";
+echo "retadreso : ".$retadreso."<br/>";
+if (($retadreso=="") || ($enirnomo=="") || ($pasvorto=="")) {
 	// ER 05.10.2015 : correction pour passage en PHP 5.4
 	//session_register("aligxilo");
 	$_SESSION['aligxilo'] = $aligxilo;
-	header("Location:aligxi.php?erarkodo=3");
-} elseif (($retadreso=="") || ($enirnomo=="") || ($pasvorto=="")) {
-	// ER 05.10.2015 : correction pour passage en PHP 5.4
-	//session_register("aligxilo");
-	$_SESSION['aligxilo'] = $aligxilo;
-	header("Location:aligxi.php?erarkodo=2");
+	//header("Location:aligxi.php?erarkodo=2");
 } elseif ((checkEmail($retadreso))==FALSE) {
 	// ER 05.10.2015 : correction pour passage en PHP 5.4
 	//session_register("aligxilo");
 	$_SESSION['aligxilo'] = $aligxilo;
-	header("Location:aligxi.php?erarkodo=6");
+	//header("Location:aligxi.php?erarkodo=6");
 	exit(0);
 } else {
 	$query ="select * from personoj where enirnomo='$enirnomo'";

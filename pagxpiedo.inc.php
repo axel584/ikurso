@@ -18,8 +18,17 @@
 <script type="text/javascript" >	
 <?php	
 // gestion des messages d'erreur en toast
+	if ($erarkodo==2) {
+		echo "Materialize.toast('Merci de remplir tous les champs.', 4000);\n";
+	}
 	if ($erarkodo==4) {
 		echo "Materialize.toast('Vous n’avez pas les droits pour accéder à cette page.', 4000);\n";
+	}
+	if ($erarkodo==6) {
+		echo "Materialize.toast('Votre adresse email est invalide.', 4000);\n";
+	}
+	if ($erarkodo==7) {
+		echo "Materialize.toast('Cet identifiant est déjà utilisée, merci d'en choisir un autre.', 4000);\n";
 	}
 	if ($erarkodo==8) {
 		echo "Materialize.toast('Votre session a expiré, veuillez vous identifier.', 4000);\n";

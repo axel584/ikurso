@@ -118,6 +118,45 @@ $('#eniri_identigilo,#eniri_pasvorto').keyup(function(e) {
     	});
 	});
 
+    // Inscription avec le "kurso de esperanto"
+  $( "#inscription_kurso_button" ).click(function() {
+      $.ajax({
+          url : $cheminAbsolu+'ajax/aligxi_kurso.php',
+          type : 'GET',
+          dataType : 'json',
+          data : 'identigilo='+$( "#aligxi_kurso_identigilo" ).val()+"&pasvorto="+$( "#aligxi_kurso_pasvorto" ).val()+"&retadreso="+$("#aligxi_kurso_retadreso").val(),
+          success : function(reponse, statut){ 
+              if (reponse.mesagxo!="ok") {
+                if (reponse.type.startsWith("retadreso")) {
+                  $("label[for='aligxi_kurso_retadreso']").attr('data-error',reponse.mesagxo);
+                  $("#aligxi_kurso_retadreso").addClass("invalid"); 
+                  $("#helpo-retadreso").hide();
+                }
+                if (reponse.type.startsWith("identigilo")) {
+
+                  $("label[for='aligxi_kurso_identigilo']").attr('data-error',reponse.mesagxo);
+                  $("#aligxi_kurso_identigilo").addClass("invalid");
+                  $("#helpo-identigilo").hide();
+                }
+                if (reponse.type=="pasvorto") {
+                  $("label[for='aligxi_kurso_pasvorto']").attr('data-error',reponse.mesagxo);
+                  $("#aligxi_kurso_pasvorto").addClass("invalid");  
+                }
+                return false;
+              } else {
+                // On affiche un message qui indique qu'il faut valider le mail
+                //$('#aligxi').closeModal();
+                $('#parto1_kurso').addClass("hide");
+                $('#parto2_kurso').removeClass("hide");
+              }
+          },
+          error : function() {
+            alert("Erreur de connexion, contactez les administrateurs");
+          }
+      });
+  });
+
+
     $("#aperigi_novigi_pasvorton_button").click(function () {
       $('#konektigxi').closeModal();
       $('#sendi_novan_pasvorton').openModal();

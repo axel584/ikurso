@@ -33,6 +33,16 @@ function kreiPersonon($enirnomo,$pasvorto,$retadreso,$aktivigo) {
      return $bdd->lastInsertId();
 }
 
+// variante de la version au dessus uniquement pour le cours
+function kreiPersononKurso($enirnomo,$pasvorto,$retadreso,$aktivigo) {
+        global $bdd;
+     $query = "insert into personoj";
+     $query .="(enirnomo,pasvorto_md5,retadreso,aktivigo,ekdato,kurso) ";
+     $query .="values ('$enirnomo',md5('$pasvorto'),'$retadreso','$aktivigo',now(),'KE')";
+     $bdd->exec($query);
+     return $bdd->lastInsertId();
+}
+
 function updateAktivigo($retadreso,$aktivigo) {
     global $bdd;
      $query = "update personoj ";

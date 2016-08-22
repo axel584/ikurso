@@ -365,4 +365,7 @@ UPDATE `lecioneroj` SET `tipo` = 'EKZERCARO' WHERE `id` = 72;
 -- décalage de toutes les sections de la leçon 2 pour y intégrer le QCM récapitulatif :
 update `lecioneroj` set ordo=id-7 WHERE leciono_id=60;
 	update `lecioneroj` set unua=0 WHERE id=9;
-INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'Récapitulatif de la leçon 1', 'QCM', '1',1,2);	
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'Récapitulatif de la leçon 1', 'QCM', '1',1,0);	
+-- décalage des section de la leçon 1 pour intégrer les premières phrases de discution :
+update `lecioneroj` set ordo=id+1 WHERE leciono_id=59 and id>=7;
+	INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '59', 'Mes premiers mots', 'TEKSTO', '7',0,0);	

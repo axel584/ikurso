@@ -367,8 +367,26 @@ include "dlekkapo.inc.php";
 				</div>
 			</fieldset>
 			<?php 
-			} // fin section 6
+			} // fin section 
 			if ($section=="7") {
+			?>			
+			<p class="parto">Voici quelques expressions pour entamer et finir une discussion. Ces expressions sont à apprendre par coeur dans un premier temps, vous verrez un peu plus tard dans les leçons pourquoi elles se construisent ainsi.</p>
+		<div class="vortlisto">
+			<div class="row">
+				<p class="col s6 m3 eo">Saluton !</p><p class="col s6 m3">Salut !</p>
+				<p class="col s6 m3 eo">Bonan tagon !</p><p class="col s6 m3">Bonjour !</p>
+				<p class="col s6 m3 eo">Bonan matenon !</p><p class="col s6 m3">Bonjour ! (le matin)</p>
+				<p class="col s6 m3 eo">Bonan vesperon !</p><p class="col s6 m3">Bonsoir !</p>
+				<p class="col s6 m3 eo">Bonan nokton !</p><p class="col s6 m3">Bonne nuit !</p>
+			</div><div class="row">
+				<p class="col s6 m3 eo">Ĝis revido !</p><p class="col s6 m3">Au revoir !</p>
+				<p class="col s6 m3 eo">Adiaŭ !</p><p class="col s6 m3">Adieu !</p>
+			</div>
+		</div>
+		<p></p>
+			<?php 
+			} // fin section 
+			if ($section=="8") {
 			?>
 
 			<p>
@@ -409,7 +427,7 @@ include "dlekkapo.inc.php";
 			
 			<?php 
 			} // fin section 7
-			if ($section=="8") {
+			if ($section=="9") {
 			?>
 
 			<p>

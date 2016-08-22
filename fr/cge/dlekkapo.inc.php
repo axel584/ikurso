@@ -29,19 +29,25 @@ function atentigo() {
 	echo "<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>&nbsp;:&nbsp;";
 	echo "en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
 }
-function ekzerco($x2u, $nbLig) {
+function ekzerco($x2u, $nbLig, $cols6="N") {
 	global $demandoj, $memorkurso, $persono_id, $numcxap;
 	//
 	// x2u = sistemo uzata en la ekzerco. Se true, ni uzas la auxtomatan anstatauxigon de x per cxapelo
 	// nbLig = nombro da linioj por cxiuj respondo. Se = 1, ni uzas <input>, ne pli da, ni uzas <textarea>
+	// cols6 : Se "J", la demandoj estas aranĝitaj en du kolumnoj. Se ne, en nur unu kolumno.
 	//
 	if ($persono_id=="") {
 		$idenfication=False;
 	} else {
 		$idenfication =True;
 	}
-	echo "<div class=\"row\">";
+	if ($cols6!="J") {
+		echo "<div class=\"row\">";
+	}
 	foreach ($demandoj as $k => $v) {
+		if ($cols6=="J") {
+			echo "<div class=\"col s6\">";
+		}
 		echo "<p class='col s12 demando'>".$k.". ".$v."</p>\n";
 		echo "<input type='hidden' name=\"dem_ekz".$numcxap."_".sprintf('%02d', $k)."\" value=\"".$k." ".$v."\">";
 
@@ -49,7 +55,7 @@ function ekzerco($x2u, $nbLig) {
 			echo "<div class='input-field col s12'><input name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			// si on n'est pas identifié et que ce n'est pas la première leçon, on empeche de remplir les exercices si on n'est pas connecté
 			if ($idenfication==False && $numcxap<>"01") {
-				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
+				echo " READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
 			if ($x2u) {
 				echo " onkeyup='xAlUtf8(this)' ";
@@ -65,7 +71,7 @@ function ekzerco($x2u, $nbLig) {
 		{
 			echo "<div class='input-field col s12'><textarea class='materialize-textarea' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			if ($idenfication==False) {
-				echo " READONLY onClick='window.alert(\"Identifiez vous en haut à droite pour pouvoir remplir les exercices\");'";
+				echo " READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
 			if ($x2u) {
 				echo " onkeyup='xAlUtf8(this)' ";
@@ -77,8 +83,13 @@ function ekzerco($x2u, $nbLig) {
 			}
 			echo "</textarea></div>";
 		}
+		if ($cols6=="J") {
+			echo "</div>";
+		}
 	}
-	echo "</div>";
+	if ($cols6!="J") {
+		echo "</div>";
+	}
 
 }
 

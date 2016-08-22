@@ -28,140 +28,41 @@ include "dlekkapo.inc.php";
 			<?php atentigo(); ?>
 			<input type="hidden" name="013_cxap10.1" value="1. Mettez les mots suivants au pluriel.">
 			<div class="tasko row">
-				<div class="col s6">
-					<p class="col s12 demando">1. amiko</p>
-					<input type='hidden' name='dem_ekz10.1' value='1. amiko:'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.1' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">2. butiko</p>
-					<input type='hidden' name='dem_ekz10.2' value='2. butiko:'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.2' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">3. minuto</p>
-					<input type='hidden' name='dem_ekz10.3' value='3. minuto:'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.3' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">4. manĝanta</p>
-					<input type='hidden' name='dem_ekz10.4' value='4. manĝanta'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.4' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">5. nokto</p>
-					<input type='hidden' name='dem_ekz10.5' value='5. nokto:'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.5' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">6. kiu</p>
-					<input type='hidden' name='dem_ekz10.6' value='6. kiu:'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.6' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">7. multa</p>
-					<input type='hidden' name='dem_ekz10.7' value='7. multa'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.7' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">8. babilema</p>
-					<input type='hidden' name='dem_ekz10.8' value='8. babilema:'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.8' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">9. legita</p>
-					<input type='hidden' name='dem_ekz10.9' value='9. legita:'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.9' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
+			<?php
+				$demandoj=array (
+				1 => "amiko",
+				2 => "butiko",
+				3 => "minuto",
+				4 => "manĝanta",
+				5 => "nokto",
+				6 => "kiu",
+				7 => "multa",
+				8 => "babilema",
+				9 => "legita",
+				);
+				ekzerco ("U", 1, "J");
+			?>
 			</div>
 		</fieldset>
 
 		<fieldset class="ekzerco">
 			<legend><strong></strong> Donnez le féminin des noms suivants.</legend>
 			<input type="hidden" name="013_cxap10.2" value="2. Donnez le féminin des noms suivants.">
-			
 			<div class="tasko row">
-				<div class="col s6">
-					<p class="col s12 demando">10. filo</p>
-					<input type='hidden' name='dem_ekz10.10' value='10. filo'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.10' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">11. patro</p>
-					<input type='hidden' name='dem_ekz10.11' value='11. patro'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.11' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">12. amiko</p>
-					<input type='hidden' name='dem_ekz10.12' value='12. amiko'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.12' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">13. bovo</p>
-					<input type='hidden' name='dem_ekz10.13' value='13. bovo'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.13' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">14. knabo</p>
-					<input type='hidden' name='dem_ekz10.14' value='14. knabo'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.14' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">15. edzo</p>
-					<input type='hidden' name='dem_ekz10.15' value='15. edzo'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.15' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">16. junulo</p>
-					<input type='hidden' name='dem_ekz10.16' value='16. junulo'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.16' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">17. urso</p>
-					<input type='hidden' name='dem_ekz10.17' value='17. urso'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.17' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">18. doktoro</p>
-					<input type='hidden' name='dem_ekz10.18' value='18. doktoro'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.18' value="">
-					</div>
-				</div>
+			<?php
+				$demandoj=array (
+				10 => "filo",
+				11 => "patro",
+				12 => "amiko",
+				13 => "bovo",
+				14 => "knabo",
+				15 => "edzo",
+				16 => "junulo",
+				17 => "urso",
+				18 => "doktoro",
+				);
+				ekzerco ("U", 1, "J");
+			?>
 			</div>
 		</fieldset>
 			
@@ -169,69 +70,20 @@ include "dlekkapo.inc.php";
 			<legend><strong></strong> Donnez le contraire des mots suivants.</legend>
 			<input type="hidden" name="013_cxap10.3" value="3. Donnez le contraire des mots suivants.">
 			<div class="tasko row">
-				<div class="col s6">
-					<p class="col s12 demando">19. bona</p>
-					<input type='hidden' name='dem_ekz10.19' value='19. bona'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.19' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">20. bela</p>
-					<input type='hidden' name='dem_ekz10.20' value='20. bela'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.20' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">21. nova</p>
-					<input type='hidden' name='dem_ekz10.21' value='21. nova'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.21' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">22. facila</p>
-					<input type='hidden' name='dem_ekz10.22' value='22. facila'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.22' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">23. fermi</p>
-					<input type='hidden' name='dem_ekz10.23' value='23. fermi'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.23' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">24. helpi</p>
-					<input type='hidden' name='dem_ekz10.24' value='24. helpi'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.24' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">25. multe</p>
-					<input type='hidden' name='dem_ekz10.25' value='25. multe'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.25' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">26. antaŭ</p>
-					<input type='hidden' name='dem_ekz10.26' value='26. antaŭ:'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.26' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
-				<div class="col s6">
-					<p class="col s12 demando">27. amo</p>
-					<input type='hidden' name='dem_ekz10.27' value='27. amo'>
-					<div class="input-field col s12">
-						<input type='text' name='res_ekz10.27' onkeyup='xAlUtf8(this)' value="">
-					</div>
-				</div>
+			<?php
+				$demandoj=array (
+				19 => "bona",
+				20 => "bela",
+				21 => "nova",
+				22 => "facila",
+				23 => "fermi",
+				24 => "helpi",
+				25 => "multe",
+				26 => "antaŭ",
+				27 => "amo",
+				);
+				ekzerco ("U", 1, "J");
+			?>
 			</div>
 		</fieldset>
 			

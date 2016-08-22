@@ -58,12 +58,12 @@ function ekzerco($x2u, $nbLig, $cols6="N") {
 				echo " READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
 			if ($x2u) {
-				echo " onkeyup='xAlUtf8(this)' ";
+				echo " onkeyup='xAlUtf8(this)'";
 			}
-			echo "value=\"";
+			echo " value=\"";
 			$var="res_ekz".$numcxap."_".sprintf('%02d', $k);
 			if (isset($memorkurso[$var])){
-				echo stripslashes($memorkurso[$var]);
+				echo htmlspecialchars(stripslashes($memorkurso[$var]));
 			}
 			echo "\"></div>";
 		}
@@ -79,7 +79,7 @@ function ekzerco($x2u, $nbLig, $cols6="N") {
 			echo ">";
 			$var="res_ekz".$numcxap."_".sprintf('%02d', $k);
 			if (isset($memorkurso[$var])){
-				echo stripslashes($memorkurso[$var]);
+				echo htmlspecialchars(stripslashes($memorkurso[$var]));
 			}
 			echo "</textarea></div>";
 		}

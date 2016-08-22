@@ -57,8 +57,8 @@ if ($kurso=="GR") {
 } 
 
 
-// on met le champ "kurso" de l'élève a la bonne valeur
-$query = "update personoj set kurso='".$kurso."' where id=".$persono_id;
+// on met le champ "kurso" de l'élève a la bonne valeur et son champ "rajtoj" à P
+$query = "update personoj set kurso='".$kurso."',rajtoj='P' where id=".$persono_id;
 $bdd->exec($query);
 
 // on enregistre ses réponses dans la table 

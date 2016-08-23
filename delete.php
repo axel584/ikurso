@@ -5,7 +5,8 @@ $pagxtitolo="Suppression d'une personne";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $celpersono_id=isset($_POST["celpersono_id"])?$_POST["celpersono_id"]:"";
-$validperson=isset($_POST["validperson"])?$_POST["validperson"]:"";
+$celpersono_id=isset($_GET["celpersono_id"])?$_GET["celpersono_id"]:$celpersono_id;
+$validperson=isset($_GET["validperson"])?$_GET["validperson"]:"";
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 $celpersono = apartigiPersonon($celpersono_id);
 if (($celpersono_id!="") && ($validperson==$celpersono["enirnomo"])) {
@@ -16,6 +17,14 @@ if (($celpersono_id!="") && ($validperson==$celpersono["enirnomo"])) {
 	$demando = "delete from nuna_kurso where studanto='$celpersono_id'";
 	$bdd->exec($demando);
 	$demando = "delete from komentoj where studanto='$celpersono_id'";
+	$bdd->exec($demando);
+	$demando = "delete from personoj_lecioneroj where persono_id='$celpersono_id'";
+	$bdd->exec($demando);
+	$demando = "delete from personoj_lecionoj where persono_id='$celpersono_id'";
+	$bdd->exec($demando);
+	$demando = "delete from respondoj where persono_id='$celpersono_id'";
+	$bdd->exec($demando);
+	$demando = "delete from takso_leciono where persono_id='$celpersono_id'";
 	$bdd->exec($demando);
 	header("Location:administri.php?validi=jes");
 }

@@ -557,6 +557,13 @@ include "dlekkapo.inc.php";
 		<p><span class="eo">tagmezo</span> = midi (<i>milieu du jour</i>)</p>
 		<p><span class="eo">noktomezo</span> = minuit (<i>milieu de la nuit</i>)</p>
 
+
+
+		<?php 
+		} // fin section
+		if ($section=="6") {
+		?>
+
 		<fieldset class="ekzerco">
 			<legend><strong>EXERCICE</strong> : Répondez aux questions suivantes.</legend>
 			<input type="hidden" name="013_cxap07.3" value="3. Répondez aux questions suivantes.">
@@ -575,8 +582,8 @@ include "dlekkapo.inc.php";
 		</fieldset>
 
 		<?php 
-		} // fin section 5
-		if ($section=="6") {
+		} // fin section
+		if ($section=="7") {
 		?>
 
 			<p>

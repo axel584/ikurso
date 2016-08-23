@@ -380,6 +380,50 @@ function QCM_bildoj($qcm) {
 	echo "</div>\n";
 }
 
+function QCM($qcm) {
+	echo "<div class='carousel carousel-slider' id='carousel_qcm'>";
+	$indiceQuestion= 1;
+	foreach ($qcm as $question) {
+		echo "<div class='carousel-item row'>";
+		echo "<h3>Question ".$indiceQuestion."/".count($qcm)." :</h3>";
+		echo "<p>".$question["question"]."</p>";
+		$indiceProposition= 1;
+		foreach ($question["propositions"] as $proposition) {
+			if ($indiceProposition==$question["reponse"]) {
+				$style = "qcm_ok";
+			} else {
+				$style = "qcm_nok";
+			}
+			if ($indiceQuestion==count($qcm)) {
+				$lasta = "data-lasta='true'";
+			} else {
+				$lasta = "";
+			}
+			echo "<input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><label for='00".$indiceQuestion."-0".$indiceProposition."'>".$proposition."</label><br>";
+			$indiceProposition++;
+		}
+		echo "</div>\n";
+		$indiceQuestion++;
+	}
+	echo "</div>";
+	// on affiche un récapitulatif :
+	echo "<div class='row hide' id='recapitulatif_qcm'>";
+	echo "<div class='col s12'>";
+	echo "<div class='card-panel blue lighten-5'>";
+	echo "<h3>Récapitulatif :</h3>";
+	$indiceQuestion= 1;
+	echo "<ul class='collection'>";
+	foreach ($qcm as $question) {
+		//echo "<li>".$question["propositions"][$question["reponse"]]."</li>";
+		echo "<li class='collection-item row'>";
+		echo "<span class='col s6 l6'>".$question["question"]."</span><span class='col s6 l16'>".$indiceQuestion.". ".$question["propositions"][$question["reponse"]-1]."</span></li>";
+		$indiceQuestion++;
+	}
+	echo "</div>";
+	echo "</div>";
+	echo "</div>\n";
+}
+
 function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
 					echo "<p id=\"demando_".$numero."\">";
 					//echo "<input type=\"hidden\" name=\"900 dmd ".$numero."\" value=\"".$question."\">\n";

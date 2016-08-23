@@ -328,33 +328,69 @@ QCM_bildoj(
 	?>
 	<p>Voici un petit exercice de révision. Sélectionnez la réponse exacte en 
 	cliquant sur le bouton associé. Si vous ne savez pas quelle réponse donner à une question, n’hésitez pas à relire le cours&nbsp;: toutes les réponses s’y trouvent&nbsp;!</p>
+
+
+
 	<?php
-	$eraroj=isset($_GET["eraroj"])?unserialize(urldecode($_GET["eraroj"])):array();
+QCM(
+	array(
+		array(
+			"question"=>"Que signifient respectivement 'mala', 'malbona', 'malsana' ?",
+			"propositions"=>array("mal, mauvais, malade", "mauvais, mauvais, malade", "contraire, mauvais, malade"),
+			"indices"=>array("","",""),
+			"reponse"=>3
+		),
+		array(
+			"question"=>"Que signifie 'malbelaj virinoj' ?",
+			"propositions"=>array("des hommes laids", "de belles femmes", "des femmes laides"),
+			"indices"=>array("","",""),
+			"reponse"=>3
+		),
+		array(
+			"question"=>"Quel est le féminin pluriel de 'mia granda amiko' ?",
+			"propositions"=>array("miaj grandaj amikinoj", "mia granda amikinoj", "miaj grandinaj amikinoj"),
+			"indices"=>array("","",""),
+			"reponse"=>1
+		),
+		array(
+			"question"=>"Traduisez 'la boutique est vieille'",
+			"propositions"=>array("la butiko estas malbela", "la butiko estas malnovan","la butiko estas malnova"),
+			"indices"=>array("","",""),
+			"reponse"=>3
+		),
+		array(
+			"question"=>"Traduisez 'je ne bois pas d’eau':",
+			"propositions"=>array("mi maltrinkas akvon", "mi ne trinkas akvon", "mi trinkas ne akvon"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		),
+		array(
+			"question"=>"Traduisez 'j’ai oublié la limonade' :",
+			"propositions"=>array("mi petis limonadon", "mi havas forgesi la limonadon", "mi forgesis la limonadon"),
+			"indices"=>array("","",""),
+			"reponse"=>3
+		),
+		array(
+			"question"=>"Quel est le complément d’objet direct dans 'mon frère boira de l’eau lundi' ?",
+			"propositions"=>array("mon frère", "de l’eau", "lundi"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		),
+		array(
+			"question"=>"Quel est le complément d’objet direct dans 'que boira mon frère lundi' ?",
+			"propositions"=>array("que", "mon frère", "lundi"),
+			"indices"=>array("","",""),
+			"reponse"=>1
+		),
+		array(
+			"question"=>"Quelle est la fonction de 'médecin' dans 'tu seras médecin' ?",
+			"propositions"=>array("sujet", "complément d’objet direct", "attribut du sujet"),
+			"indices"=>array("","",""),
+			"reponse"=>3
+		)
+	)
+);
 	?>
-	<input type="hidden" name="013_cxap02.4" value="QCM">
-	<div class="tasko" id="qcm">
-		<?php
-			questionQCM("01", "Que signifient respectivement 'mala', 'malbona', 'malsana' ?", 
-			array("mal, mauvais, malade", "mauvais, mauvais, malade", "contraire, mauvais, malade", "(pas de réponse)"),$eraroj,$memorkurso);				
-			questionQCM("02", "Que signifie 'malbelaj virinoj' ?",
-			array("des hommes laids", "de belles femmes", "des femmes laides", "(pas de réponse)"),$eraroj,$memorkurso);
-			questionQCM("03", "Quel est le féminin pluriel de 'mia granda amiko' ?",
-			array("miaj grandaj amikinoj", "mia granda amikinoj", "miaj grandinaj amikinoj", "(pas de réponse)"),$eraroj,$memorkurso);
-			questionQCM("04","Traduisez 'la boutique est vieille'", 
-			array("la butiko estas malbela", "la butiko estas malnovan","la butiko estas malnova", "(pas de réponse)"),$eraroj,$memorkurso);
-			questionQCM("05", "Traduisez 'je ne bois pas d’eau':", 
-			array("mi maltrinkas akvon", "mi ne trinkas akvon", "mi trinkas ne akvon", "(pas de réponse)"),$eraroj,$memorkurso);
-			questionQCM("06", "Traduisez 'j’ai oublié la limonade' :",
-			array("mi petis limonadon", "mi havas forgesi la limonadon", "mi forgesis la limonadon", "(pas de réponse)"),$eraroj,$memorkurso);
-			questionQCM("07", "Quel est le complément d’objet direct dans 'mon frère boira de l’eau lundi' ?",
-			array("mon frère", "de l’eau", "lundi", "(pas de réponse)"),$eraroj,$memorkurso);
-			questionQCM("08", "Quel est le complément d’objet direct dans 'que boira mon frère lundi' ?",
-			array("que", "mon frère", "lundi", "(pas de réponse)"),$eraroj,$memorkurso);
-			questionQCM("09", "Quelle est la fonction de 'médecin' dans 'tu seras médecin' ?",
-			array("sujet", "complément d’objet direct", "attribut du sujet", "(pas de réponse)"),$eraroj,$memorkurso);
-		?>
-	</div>
-			
 	<?php 
 	} // fin section 
 	if ($section=="12") {

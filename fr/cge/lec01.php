@@ -395,35 +395,80 @@ include "dlekkapo.inc.php";
 			suffit d’avoir compris le cours), mais ne tentez pas de répondre au hasard, car il 
 			y a tout de même 67 108 864 réponses possibles…
 			</p>
-			<?php
-			$eraroj=isset($_GET["eraroj"])?unserialize(urldecode($_GET["eraroj"])):array();
-			
-			if (in_array("02",$eraroj)) {
-				echo "deux en erreurs <br/>";
-			}
-			if (in_array("03",$eraroj)) {
-				echo "trois en erreurs <br/>";
-			}
-			
+			<?php 
+QCM(
+	array(
+		array(
+			"question"=>"Combien de syllabes y a-t-il dans 'viaj kukoj",
+			"propositions"=>array("3","4","5","6"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		),
+		array(
+			"question"=>"Quelle est la place de l’accent tonique ?",
+			"propositions"=>array("sur la dernière voyelle","sur l’avant-dernière syllabe","sur la dernière syllabe","sur la première voyelle"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		),
+		array(
+			"question"=>"Comment se prononce la lettre 'ĝ' ?",
+			"propositions"=>array("comme le 'g' de 'Alger'","comme le 'g' de 'Lagos'","comme le 'dj' de 'Djibouti'","aucun de ceux-ci"),
+			"indices"=>array("","",""),
+			"reponse"=>3
+		),
+		array(
+			"question"=>"Comment écrit-on en espéranto le son 'ch' du mot français 'chat' ?",
+			"propositions"=>array("ch","ŝ","ce son n’existe pas en espéranto","sch"),
+			"reponse"=>2
+		),		
+		array(
+			"question"=>"Comment écrit-on le son 'u' qui apparaît dans 'tutu' en français ?",
+			"propositions"=>array("u","y","il n'existe pas en espéranto","&uuml;"),
+			"reponse"=>3
+		),
+		array(
+			"question"=>"Quel est le pronom de 3<sup>e</sup> personne féminin singulier ?",
+			"propositions"=>array("mi","ili","ĝi","ŝi"),
+			"reponse"=>4
+		),
+		array(
+			"question"=>"Quelle est la terminaison caractéristique de l'infinitif ?",
+			"propositions"=>array("-i","-is","-ar","-j"),
+			"reponse"=>1
+		),
+		array(
+			"question"=>"Quelle est la terminaison caractéristique de l’adjectif ?",
+			"propositions"=>array("-as","-o","-j","-a"),
+			"reponse"=>4
+		),
+		array(
+			"question"=>"Quelle est la terminaison caractéristique du passé ?",
+			"propositions"=>array("-i","-j","-a","-is"),
+			"reponse"=>4
+		),
+		array(
+			"question"=>"Quelle est la terminaison caractéristique du nom ?",
+			"propositions"=>array("-o","-os","cela dépend du genre","-a"),
+			"reponse"=>1
+		),
+		array(
+			"question"=>"Comment dit-on 'du thé chaud' ?",
+			"propositions"=>array("la varmo tea","varma teo","varmo teo","la varma teo"),
+			"reponse"=>2
+		),
+		array(
+			"question"=>"Comment dit-on 'de bons garçons' ?",
+			"propositions"=>array("bona knaboj","la bonaj knaboj","bonaj knaboj","bonoj knaboj"),
+			"reponse"=>3
+		),
+		array(
+			"question"=>"Comment dit-on 'mes fils' ?",
+			"propositions"=>array("mia filioj","miaj filoj","miaj filioj","mia filoj"),
+			"reponse"=>2
+		)		
+	)
+);
 			?>
-			<input type="hidden" name="013_cxap01.3" value="QCM">
-			<div class="tasko" id="qcm">
-				<?php
-				questionQCM("01","Combien de syllabes y a-t-il dans 'viaj kukoj' ?",array("3","4","5","6","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("02","Quelle est la place de l’accent tonique ?",array("sur la dernière voyelle","sur l’avant-dernière syllabe","sur la dernière syllabe","sur la première voyelle","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("03","Comment se prononce la lettre 'ĝ' ?",array("comme le 'g' de 'Alger'","comme le 'g' de 'Lagos'","comme le 'dj' de 'Djibouti'","aucun de ceux-ci","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("04","Comment écrit-on en espéranto le son 'ch' du mot français 'chat' ?",array("ch","ŝ","ce son n’existe pas en espéranto","sch","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("05","Comment écrit-on le son 'u' qui apparaît dans 'tutu' en français ?",array("u","y","il n'existe pas en espéranto","&uuml;","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("06","Quel est le pronom de 3<sup>e</sup> personne féminin singulier ?",array("mi","ili","ĝi","ŝi","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("07","Quelle est la terminaison caractéristique de l'infinitif ?",array("-i","-is","-ar","-j","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("08","Quelle est la terminaison caractéristique de l’adjectif ?",array("-as","-o","-j","-a","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("09","Quelle est la terminaison caractéristique du passé ?",array("-i","-j","-a","-is","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("10","Quelle est la terminaison caractéristique du nom ?",array("-o","-os","cela dépend du genre","-a","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("11","Comment dit-on 'du thé chaud' ?",array("la varmo tea","varma teo","varmo teo","la varma teo","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("12","Comment dit-on 'de bons garçons' ?",array("bona knaboj","la bonaj knaboj","bonaj knaboj","bonoj knaboj","(pas de réponse)"),$eraroj,$memorkurso);
-				questionQCM("13","Comment dit-on 'mes fils' ?",array("mia filioj","miaj filoj","miaj filioj","mia filoj","(pas de réponse)"),$eraroj,$memorkurso);
-				?>
-			</div>
 			
 			<?php 
 			} // fin section 7

@@ -300,9 +300,9 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		success : function(reponse, statut){ 
        			if (reponse.mesagxo=="ko") {
        				// il y a des erreurs, on va les afficher
-       				for (erreur of reponse.eraroj) {
-       					$("#demando_"+erreur).addClass("qcmerr");
-       				}
+       				// for (erreur of reponse.eraroj) {
+       				// 	$("#demando_"+erreur).addClass("qcmerr");
+       				// }
        				alert("Relisez bien la leçon !");
        			} else if (reponse.mesagxo=="ok") {
        				window.location = $urlracine+reponse.url;

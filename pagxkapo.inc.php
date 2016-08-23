@@ -265,11 +265,11 @@ if ($persono_id=="") {
 } else {						
 ?>
 						<!-- si utilisateur connecté -->
-						<li><a href="#!" class="btn-floating btn-large waves-effect waves-light primaire clair dropdown-button" data-activates="uzantomenuo"><i class="large material-icons">perm_identity</i>
+						<li><a href="#!" class="btn-floating btn-large waves-effect waves-light primaire clair dropdown-button" data-activates="uzantomenuo"><i class="large material-icons">perm_identity</i></a></li>
 <?php						
 }
 ?>
-</a></li>
+
 					</ul>
 					<ul class="right hide-on-med-and-down">
 						<!--<li><a href="#">L’ESPÉRANTO</a></li>-->

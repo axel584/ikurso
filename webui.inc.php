@@ -470,6 +470,9 @@ function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
 				}
 
 function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
+	if ($persono_id=="") {
+		return;
+	}
 	global $bdd;
 	echo "<div class='row' id='recapitulatif_qcm'>";
 	echo "<div class='col s12'>";

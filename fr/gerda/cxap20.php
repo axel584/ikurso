@@ -520,6 +520,7 @@ include "gerdakapo.inc.php";
 			</ol>
 
 		<?php 
+		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
 		} // fin section 5
 		?>
 

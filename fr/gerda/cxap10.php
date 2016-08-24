@@ -217,6 +217,7 @@ include "gerdakapo.inc.php";
 			vivo ne estas stranga?</p>
 
 		<?php 
+		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
 		} // fin section 5
 		?>
 

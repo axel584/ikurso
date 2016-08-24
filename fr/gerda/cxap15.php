@@ -436,6 +436,7 @@ include "gerdakapo.inc.php";
 			
 
 		<?php 
+		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
 		} // fin section 5
 		?>
 

@@ -369,8 +369,12 @@ INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, 
 -- décalage des section de la leçon 1 pour intégrer les premières phrases de discution :
 update `lecioneroj` set ordo=id+1 WHERE leciono_id=59 and id>=7;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '59', 'Mes premiers mots', 'VORTARO', '7',0,0);	
-	
 -- séparation en deux parties de la page sur l'heure
 update `lecioneroj` set ordo=7 WHERE id=73;
 update `lecioneroj` set tipo='TEKSTO' WHERE id=72;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '68', 'Exercices', 'EKZERCARO', '6',0,0);
+-- décalage pour insérer les phrases de disctuion pour la deuxième leçon:
+update `lecioneroj` set ordo=12 WHERE id=18;
+update `lecioneroj` set ordo=13 WHERE id=19;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'Comment ça va ?', 'VORTARO', '11',0,0);
+update `lecioneroj` set ordo=11 WHERE id=30;

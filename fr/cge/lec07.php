@@ -594,6 +594,7 @@ include "dlekkapo.inc.php";
 			</p>
 
 		<?php 
+			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin derniere section
 		?>	
 		</section>

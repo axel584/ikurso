@@ -491,6 +491,7 @@ include "dlekkapo.inc.php";
 			comprendre un petit récit. 
 			</p>
 		<?php 
+			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin section 
 		?>	
 		</section>

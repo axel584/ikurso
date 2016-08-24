@@ -226,6 +226,7 @@ include "dlekkapo.inc.php";
 		<p>Bonne continuation dans le monde de l'espéranto !</p>
 		
 		<?php 
+			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin derniere section
 		?>	
 		</section>

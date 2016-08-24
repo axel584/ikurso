@@ -475,7 +475,7 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 	echo "<div class='col s12'>";
 	echo "<div class='card-panel blue lighten-5'>";
 	echo "<h3>Récapitulatif :</h3>";
-	echo "Voilà ce qui sera envoyé à votre correcteur. Si vous souhaitez modifier des réponses, vous pouvez faire les modifications directement dans les pages d'exercices, enregistrer vos réponses puis revenir sur cette page";
+	echo "Voilà ce qui sera envoyé à votre correcteur. Si vous souhaitez modifier des réponses, vous pouvez faire les modifications directement dans les pages d'exercices, enregistrer vos réponses puis revenir sur cette page.";
 	$indiceQuestion= 1;
 	
 	// on récupère les réponses en base
@@ -492,7 +492,7 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 	// ajout d'un champ commentaire :
 	echo "<ul class='collection'>";
 		echo "<li class='collection-item row'>";
-		echo "Si vous souhaitez ajouter un message à l'intention de votre correcteur, vous pouvez écrire dans le cadre si dessous :";
+		echo "Si vous souhaitez ajouter un message à l'intention de votre correcteur, vous pouvez écrire dans le cadre ci-dessous :";
 		echo "<textarea name='commentaire_pour_correcteur'></textarea>";
 		echo "</li>";
 	echo "</ul>";

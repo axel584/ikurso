@@ -15,7 +15,7 @@ include "dlekkapo.inc.php";
 		if ($section=="1") {
 		?>
 
-		<p class="parto">Un petit récapitulatif des expressions que nous avons déjà vu et quelques nouvelles expressions.</p>
+		<p class="parto">Un petit récapitulatif des expressions que nous avons déjà vues et quelques nouvelles expressions.</p>
 		<div class="vortlisto">
 			<div class="row">
 				<p class="col s6 m3 eo">Saluton !</p><p class="col s6 m3">Salut !</p>

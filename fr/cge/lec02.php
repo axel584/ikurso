@@ -325,7 +325,7 @@ QCM_bildoj(
 		
 	if ($section=="11") {
 	?>
-	<p class="parto">Voici quelques expressions pour demander à quelqu'un comment il va. Apprenez les par coeur dans un premier temps, nous les reverrons par la suite.</p>
+	<p class="parto">Voici quelques expressions pour demander à quelqu’un comment il va. Apprenez-les par cœur dans un premier temps. Nous les reverrons par la suite.</p>
 		<div class="vortlisto row">
 			<p class="col s6"><span class="eo">Kiel vi fartas ?</span></p><p class="col s6">Comment allez-vous ?</p>
 			<p class="col s5 offset-s1"><span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">Bien. Et vous ?</p>

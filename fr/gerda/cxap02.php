@@ -323,6 +323,7 @@ include "gerdakapo.inc.php";
 			certe ne estas nova studento. Li estas tro maljuna.</p>
 
 		<?php 
+		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
 		} // fin section 5
 		?>
 

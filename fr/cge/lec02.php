@@ -320,11 +320,23 @@ QCM_bildoj(
 			?>
 			</div>
 		</fieldset>
-			
-		<?php 
+	<?php 
 		} // fin section
 		
 	if ($section=="11") {
+	?>
+	<p class="parto">Voici quelques expressions pour demander à quelqu'un comment il va. Apprenez les par coeur dans un premier temps, nous les reverrons par la suite.</p>
+		<div class="vortlisto row">
+			<p class="col s6"><span class="eo">Kiel vi fartas ?</span></p><p class="col s6">Comment allez-vous ?</p>
+			<p class="col s5 offset-s1"><span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">Bien. Et vous ?</p>
+			<p class="col s5 offset-s1"><span class="eo">– Bonege.</span></p><p class="col s6">Parfaitement bien.</p>
+			<p class="col s5 offset-s1"><span class="eo">– Sufiĉe bone.</span></p><p class="col s6">Assez bien. (ça va)</p>
+			<p class="col s5 offset-s1"><span class="eo">– Ne tro bone.</span></p><p class="col s6">Pas trop bien.</p>
+		</div>
+		<?php 
+		} // fin section
+		
+	if ($section=="12") {
 	?>
 	<p>Voici un petit exercice de révision. Sélectionnez la réponse exacte en 
 	cliquant sur le bouton associé. Si vous ne savez pas quelle réponse donner à une question, n’hésitez pas à relire le cours&nbsp;: toutes les réponses s’y trouvent&nbsp;!</p>
@@ -393,7 +405,7 @@ QCM(
 	?>
 	<?php 
 	} // fin section 
-	if ($section=="12") {
+	if ($section=="13") {
 		?>			
 		<p>Résumons-nous.</p>
 		<p>Vous avez maintenant appris à former le féminin de tout nom

@@ -383,7 +383,6 @@ include "dlekkapo.inc.php";
 				<p class="col s6 m3 eo">Adiaŭ !</p><p class="col s6 m3">Adieu !</p>
 			</div>
 		</div>
-		<p></p>
 			<?php 
 			} // fin section 
 			if ($section=="8") {
@@ -504,6 +503,7 @@ QCM(
 			</div>
 		
 		<?php 
+				recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin section 7
 		?>	
 		</section>

@@ -421,6 +421,9 @@ QCM(
 
 		
 	<?php 
+
+	recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
+
 	} // fin section
 	?>	
 		</section>

@@ -420,6 +420,7 @@ include "dlekkapo.inc.php";
 			12 mots nouveaux. Qui dit mieux&nbsp;?
 			</p>
 		<?php 
+			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin section 
 		?>	
 		</section>

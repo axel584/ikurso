@@ -255,7 +255,7 @@ include "gerdakapo.inc.php";
 				<legend>Anstataŭigu la vortojn inter "{}" per la ĝusta pronomo.</legend>
 				<input type="hidden" name="013_cxap17.2" value="2. Anstataŭigu la vortojn inter "{}" per la ĝusta pronomo.">
 				<div class="ekzemplo">
-					<p><em>elzemle:</em></p>
+					<p><em>Ekzemple:</em></p>
 					<p>{Tom} scias, ke {Linda} rigardas al {Tom}.</p>
 					<p>→ Li scias, ke <b>ŝi</b> rigardas al <b>li</b>.</p>
 				</div>

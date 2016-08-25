@@ -468,7 +468,7 @@ include "gerdakapo.inc.php";
 								<?php } else { ?>
 									<h5 class="center">Je commence le cours tout de suite !</h5>
 									<div class="row">
-										<p><span class="noto">Je lis attentivement chaque page de la leçon, je fais les exercices et je pourrai m’inscrire au service de correction à la fin de la première leçon. Mes exercices seront automatiquement envoyé à mon correcteur quand les administrateurs du cours m'en auront attribué un.</span>
+										<p><span class="noto">Je lis attentivement chaque page de la leçon, je fais les exercices et je pourrai m’inscrire au service de correction à la fin de la première leçon. Mes exercices seront automatiquement envoyés à mon correcteur quand les administrateurs du cours m'en auront attribué un.</span>
 										<p><a href="<?php echo $vojo;?>fr/gerda/cxap01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
 										</p>
 										<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>

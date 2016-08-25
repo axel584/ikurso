@@ -416,7 +416,7 @@ function QCM($qcm) {
 	foreach ($qcm as $question) {
 		//echo "<li>".$question["propositions"][$question["reponse"]]."</li>";
 		echo "<li class='collection-item row'>";
-		echo "<span class='col s6 l6'>".$question["question"]."</span><span class='col s6 l16'>".$indiceQuestion.". ".$question["propositions"][$question["reponse"]-1]."</span></li>";
+		echo "<span class='col s12'><b>".$question["question"]."</b></span><span class='col s12'>".$indiceQuestion.". ".$question["propositions"][$question["reponse"]-1]."</span></li>";
 		$indiceQuestion++;
 	}
 	echo "</div>";
@@ -470,9 +470,6 @@ function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
 				}
 
 function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
-	if ($persono_id=="") {
-		return;
-	}
 	global $bdd;
 	echo "<div class='row' id='recapitulatif_qcm'>";
 	echo "<div class='col s12'>";

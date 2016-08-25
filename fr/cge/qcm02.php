@@ -16,8 +16,8 @@ include "dlekkapo.inc.php";
 		<div class="row">
 
 
-<div class="carousel carousel-slider s12">
-    <div class="carousel-item"> 
+<div class="qcm s12">
+    <div class="qcm_demando"> 
 				<p class="col s12 m6 l5">
 					<img src="<?php echo $vojo;?>fr/cge/bildoj/img-02-01.jpg" class="responsive-img"><br>
 					<legend>photo : <a href="http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot">Denis Chabot</a></legend>
@@ -28,7 +28,7 @@ include "dlekkapo.inc.php";
 					<input type="radio" name="qcm1" value="3" id="001-03" class='qcm_nok'/><label for="001-03">La kafo estas ĉauda</label><br>
 				</p>
       </div>
-      <div class="carousel-item"> 
+      <div class="qcm_demando hide"> 
 				<p class="col s12 m6 l5">
 					<img src="<?php echo $vojo;?>fr/cge/bildoj/img-02-02.jpg" class="responsive-img"><br>
 					<legend>photo : <a href="http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot">Denis Chabot</a></legend>

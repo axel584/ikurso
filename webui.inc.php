@@ -332,10 +332,14 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 
 
 function QCM_bildoj($qcm) {
-	echo "<div class='carousel carousel-slider' id='carousel_qcm'>";
+	echo "<div class='qcm' id='carousel_qcm'>";
 	$indiceQuestion= 1;
 	foreach ($qcm as $question) {
-		echo "<div class='carousel-item row'>";
+		if ($indiceQuestion==1) {
+			echo "<div class='qcm_demando row'>";
+		} else {
+			echo "<div class='qcm_demando row hide'>";
+		}
 		echo "<h3>Question ".$indiceQuestion."/".count($qcm)." :</h3>";
 		echo "<p class='col s12 m6 l5'>";
 		echo "<img src='".$question["bildo"]."' class='responsive-img'><br>";

@@ -18,14 +18,17 @@
       var $lasta = $(this).data("lasta");
       if (!$lasta) {
         Materialize.toast('Bravo !', 4000);
+        $encours = $('.qcm_demando:visible');
+        
         setTimeout(function(){
-            $('.carousel').carousel('next')
-        }, 1000);
+          $encours.next().removeClass("hide");
+          $encours.addClass("hide");
+         }, 1000);
       } else {
         Materialize.toast('Bravo, vous avez trouvé toutes les bonnes réponses !', 4000);
         setTimeout(function(){
 			$("#recapitulatif_qcm").removeClass("hide");
-            $("#carousel_qcm").addClass("hide");
+            $('.qcm_demando:visible').addClass("hide");
 			$("#finiLecioneron_button").removeClass("hide");
        }, 1000);
         

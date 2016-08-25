@@ -151,7 +151,7 @@ bov/o\7\9\bœuf
 brak/o\\\bras
 Brazil/o\9\5\Brésil
 bril/i\\\briller 
-brul/i\\\bruler 
+brul/i\\\brûler 
 brun/a\3\3\brun, marron
 bub/o\\\gamin 
 bufed/o\\\buffet 

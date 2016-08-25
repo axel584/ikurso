@@ -398,7 +398,7 @@ include "dlekkapo.inc.php";
 QCM(
 	array(
 		array(
-			"question"=>"Combien de syllabes y a-t-il dans 'viaj kukoj",
+			"question"=>"Combien de syllabes y a-t-il dans 'viaj kukoj' ?",
 			"propositions"=>array("3","4","5","6"),
 			"indices"=>array("","",""),
 			"reponse"=>2
@@ -464,7 +464,7 @@ QCM(
 			"question"=>"Comment dit-on 'mes fils' ?",
 			"propositions"=>array("mia filioj","miaj filoj","miaj filioj","mia filoj"),
 			"reponse"=>2
-		)		
+		)	
 	)
 );
 			?>

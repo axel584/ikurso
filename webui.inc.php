@@ -385,10 +385,14 @@ function QCM_bildoj($qcm) {
 }
 
 function QCM($qcm) {
-	echo "<div class='carousel carousel-slider' id='carousel_qcm'>";
+	echo "<div class='qcm' id='carousel_qcm'>";
 	$indiceQuestion= 1;
 	foreach ($qcm as $question) {
-		echo "<div class='carousel-item row'>";
+		if ($indiceQuestion==1) {
+			echo "<div class='qcm_demando row'>";
+		} else {
+			echo "<div class='qcm_demando row hide'>";
+		}
 		echo "<h3>Question ".$indiceQuestion."/".count($qcm)." :</h3>";
 		echo "<p>".$question["question"]."</p>";
 		$indiceProposition= 1;
@@ -420,7 +424,7 @@ function QCM($qcm) {
 	foreach ($qcm as $question) {
 		//echo "<li>".$question["propositions"][$question["reponse"]]."</li>";
 		echo "<li class='collection-item row'>";
-		echo "<span class='col s12'><b>".$question["question"]."</b></span><span class='col s12'>".$indiceQuestion.". ".$question["propositions"][$question["reponse"]-1]."</span></li>";
+		echo "<span class='col s12'><b>".$indiceQuestion.". ".$question["question"]."</b></span><span class='col s12'>".$question["propositions"][$question["reponse"]-1]."</span></li>";
 		$indiceQuestion++;
 	}
 	echo "</div>";

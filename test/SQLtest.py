@@ -8,23 +8,23 @@ import mysql.connector
 # La première lettre de l'identifiant désigne les droits de l'utilisateur
 # l'identifaiant est celui utilisé dans www.mailinator.com pour accéder à la boite mails
 # l'adresse e-mail est celle donnée par mailinator, elle permet l'envoi de mails
-lpersonoj = [('P_persono',  'm8r-hvlxro@mailinator.com'),\
-             ('S_persono',  'm8r-rc14dw@mailinator.com'),\
-             ('S1_Persono', 'm8r-4lgnp01@mailinator.com'), \
-             ('S2_persono', 'm8r-ghmmk31@mailinator.com'),\
-             ('S3_persono', 'm8r-c94bu11@mailinator.com'),\
-             ('S4_persono', 'm8r-m032kq@mailinator.com'),\
-             ('S5_persono', 'm8r-gmklei@mailinator.com'),\
-             ('S6_persono', 'm8r-3wjyp41@mailinator.com'),\
-             ('S7_persono', 'm8r-741tkm@mailinator.com'),\
-             ('S8_persono', 'm8r-stvve01@mailinator.com'),\
-             ('S9_persono', 'm8r-6oo8b3@mailinator.com'),\
-             ('S10_persono','m8r-n744jd@mailinator.com'),\
-             ('K1_persono', 'm8r-3svfpw@mailinator.com'),\
-             ('K2_persono', 'm8r-80rhb7@mailinator.com'),\
-             ('K3_persono', 'm8r-i8lv14@mailinator.com'),\
-             ('K4_persono', 'm8r-fk20mh@mailinator.com'),\
-             ('A_persono',  'm8r-m9oy4s@mailinator.com')]
+lpersonoj = ['P_persono',\
+             'S_persono',\
+             'S1_Persono',\
+             'S2_persono',\
+             'S3_persono',\
+             'S4_persono',\
+             'S5_persono',\
+             'S6_persono',\
+             'S7_persono',\
+             'S8_persono',\
+             'S9_persono',\
+             'S10_persono',\
+             'K1_persono',\
+             'K2_persono',\
+             'K3_persono',\
+             'K4_persono',\
+             'A_persono']
 
 
 def initialisation_bases():
@@ -39,11 +39,10 @@ def initialisation_bases():
         cursor.execute("delete from korektebla_kurso")
 
         for pers in lpersonoj:   # insertion, un à un, des users dans la base 'personoj'
-                enirnomo = pers[0]
-                retadreso = pers[1]
-                print("Retadreso de " + enirnomo + " : " + retadreso)
-                familinomo = retadreso.split("@")[0]
-                personnomo = enirnomo
+                enirnomo = pers
+                retadreso = pers + "@mailinator.com"
+                familinomo = enirnomo.split("_")[1]
+                personnomo = enirnomo.split("_")[0]
                 pasvorto = "passwd"
                 cursor.execute("INSERT INTO `personoj` (`id`, `ekdato`, `lasteniro`, `sekso`, `familinomo`, `personnomo`, `enirnomo`, `pasvorto`, `adreso1`, `adreso2`,\
                  `posxtkodo`, `urbo`, `lando`, `latitudo`, `longitudo`, `retadreso`, `naskigxdato`, `rajtoj`, `kialo`, `noto`,\

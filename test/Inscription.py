@@ -19,15 +19,6 @@ class Inscription(unittest.TestCase):
         self.enirnomo = "novalernanto"
         SQLtest.initialisation_bases()
 
-    def havigiRetadreson(self, driver, nomo):        # retourne l'adresse mail temporaoreent crée via "mailinator"
-        driver.get("https://www.mailinator.com/")
-        driver.find_element_by_id("inboxfield").clear()
-        driver.find_element_by_id("inboxfield").send_keys(nomo)
-        driver.find_element_by_css_selector("button.btn.btn-dark").click()
-        retadreso = driver.find_element_by_xpath("//span[@title='This is an alternate address for this inbox']").get_attribute("innerHTML").strip()
-        print("Retadreso de " + nomo + " : " + retadreso)
-        return retadreso
-
     def openMail_by_obj(self, driver, nomo, sercobj):  # ouvre le 1er mail dont l'objet match "sercobj"
         driver.get("https://www.mailinator.com/")
         driver.find_element_by_id("inboxfield").clear()
@@ -42,7 +33,7 @@ class Inscription(unittest.TestCase):
     
     def test_inscription(self):
         driver = self.driver
-        retadreso = self.havigiRetadreson(driver, self.enirnomo)
+        retadreso = self.enirnomo + "@mailinator.com"
         #driver.get("http://127.0.0.1//phpmail.php") # Envoi d'un mail générique (pour avoir un mail avant le mail d'activation)
         driver.get("http://127.0.0.1/ikurso")
         assert u"découvrir" in driver.page_source
@@ -137,7 +128,7 @@ class Inscription(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        SQLtest.clear_bases()   # RAZ des bases 'personoj' et 'nunu_kurso'
+        SQLtest.clear_bases()   # RAZ des bases 'personoj' et 'nunu_kurso' et 'korektebla_kurso'
         self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 

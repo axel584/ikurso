@@ -77,11 +77,11 @@ $subjekto=$pagxo[count($pagxo)-1];
 			// pour un correcteur : afficher la table avec le nombre d'eleves
 			//
 			if (($rajto=="K")||($rajto=="A")) {
-				echo "<h2><a href=\"http://ikurso.esperanto-france.org/sxangxiNBlernantoj.php\">Mes &eacute;l&egrave;ves</a></h2>";
+				echo "<h2><a href=\"sxangxiNBlernantoj.php\">Mes &eacute;l&egrave;ves</a></h2>";
 			?>
 			<table title="cliquez ici pour modifier le nombre de vos &eacute;l&egrave;ves">
 				<thead>
-					<tr><td colspan="3"><a href="http://ikurso.esperanto-france.org/sxangxiNBlernantoj.php">
+					<tr><td colspan="3"><a href="sxangxiNBlernantoj.php">
 					Modifier le nombre de mes &eacute;l&egrave;ves ?</a></td></tr>
 					<tr>
 						<td>cours</td>

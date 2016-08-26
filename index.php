@@ -23,12 +23,11 @@ include "pagxkapo.inc.php";
 					<p>Ici, vous pourrez découvrir ce qu’est la langue internationale Espéranto.<br> 
 						Vous pourrez également l’apprendre en suivant nos cours, à votre rythme.<br>
 						Pour mieux vous aider, l’association Espéranto-France vous propose un service de correction gratuit. Pour en bénéficier, il suffit de vous inscrire.</p>
-						<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
+						<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-activates="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
 						<p class="center"><a href="#prezento" class="btn-flat small">L’espéranto, qu’est-ce que c’est ?<i class="material-icons right">arrow_drop_down</i></a></p>
 				</div>
 			</div>
 		</section>
-		
 		<section id="niaj_kursoj">
 			<h2>Nos cours en ligne</h2>
 			

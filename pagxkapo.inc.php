@@ -123,6 +123,21 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			</div>
 		</div>
 
+		<!-- fenêtre modale tuto inscription -->
+		<div id="tuto-inscription" class="modal">
+			<div class="modal-content">
+				<h4 class="primaire-texte texte-moyen">Comment créer un compte</h4>
+				<div class="video-container">
+					<iframe width="853" height="480" src="https://www.youtube.com/embed/geK1LfWVt9Y" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div id="footer-tuto" class="hide">
+					<a id="fermi_tuto_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>
+				</div>
+			</div>
+		</div>
+
 		<!-- fenêtre modale inscription -->
 		<div id="aligxi" class="modal">
 			<div class="modal-content">

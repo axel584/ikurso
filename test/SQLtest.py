@@ -33,9 +33,10 @@ def initialisation_bases():
         cursor = connection.cursor()
         cursor2 = connection.cursor()
  
-        # RAZ des bases "personoj" et "nuna_kurso"
+        # RAZ des bases "personoj" et "nuna_kurso" et "korektebla_kurso"
         cursor.execute("delete from personoj")
         cursor.execute("delete from nuna_kurso")
+        cursor.execute("delete from korektebla_kurso")
 
         for pers in lpersonoj:   # insertion, un à un, des users dans la base 'personoj'
                 enirnomo = pers[0]
@@ -57,6 +58,8 @@ def initialisation_bases():
         for kid, nomo in cursor.fetchall():
                 print(str(kid) + " -> " + nomo)
                 lk += [kid]
+                cursor2.execute("INSERT INTO `korektebla_kurso` (`korektanto`, `kurso`, `kiom_lernantoj`) VALUES ('"+str(kid)+"', 'CG', '3');")
+                cursor2.execute("INSERT INTO `korektebla_kurso` (`korektanto`, `kurso`, `kiom_lernantoj`) VALUES ('"+str(kid)+"', 'GR', '3');")
 
         print(u"Élèves:")
         cursor.execute("SELECT id, enirnomo FROM `personoj` WHERE `rajtoj` = 'S' ")
@@ -90,9 +93,10 @@ def clear_bases():
         # connexion à la base de données
         connection = mysql.connector.connect(host="127.0.0.1",user=config.user,passwd=config.passwd,db=config.db,charset='utf8',use_unicode=True)
         cursor = connection.cursor()
-        # RAZ des bases "personoj" et "nuna_kurso"
+        # RAZ des bases "personoj" et "nuna_kurso" et "korektebla_kurso"
         cursor.execute("delete from personoj")
         cursor.execute("delete from nuna_kurso")
+        cursor.execute("delete from korektebla_kurso")
         # fermeture de la connexion SQL
         connection.close()
         

@@ -117,34 +117,15 @@ include "dlekkapo.inc.php";
 			<tr><td><b>-al</b></td><td>kial</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
 			<tr><td><b>-es</b></td><td>...</td><td>ties</td><td>...</td><td>...</td><td>...</td></tr>
 		</table>
-		<p>
+		<p class="parto">
 		Le sens de tout corrélatif est la combinaison des sens des deux
 		parties qui le composent comme indiqué dans le schéma suivant.
 		(Insérez la partie gauche à la place du "___" de la partie droite.)
 		</p>
+		<img src="<?php echo $vojo;?>fr/cge/bildoj/correlatifs.svg" class="responsive-img">
+		<p>
+		</p>
 		
-		<pre>
-                   +===========+
-        quel(le),  | KI      O |  ___ chose (en général)
- lequel, laquelle  |           |
-                   |         A |  ___ sorte de, espèce de, genre de
-   ce, cet, cette  | TI        |
-                   |         U |  ___ personne (voir note [1])
-                   |           |
- un(e) certain(e)  | I      ES |  de ___ personne (voir note [2]) 
-                   |           |
-                   |        OM |  en ___ quantité (voir note [3])
-          tout(e)  |   I       |
-                   |        AM |  à ___ temps, moment
-                   |           |
-(ne) ... aucun(e)  | NENI   AL |  pour ___ raison, cause, motif
-                   |           |
-                   |        EL |  de ___ manière, façon
-                   |           |
-                   |         E |  à ___ lieu, endroit
-                   +===========+
-		</pre>
-				
 		<p>Exemples :</p>
 		<table class="bordered">
 			<tr>

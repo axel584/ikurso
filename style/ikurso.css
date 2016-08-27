@@ -492,16 +492,6 @@ fieldset.sono legend {
 /*               QCM             */
 /*********************************/
 
-.carousel.carousel-slider {
-	height:400px;
-}
-@media only screen and (max-width: 800px) {
-	.carousel.carousel-slider {
-		width: 90%;
-		height:500px;
-	}
-}
-
 p.qcmerr {color:red;}
 input[type="radio"] + label span.qcmerr {text-decoration: line-through;}
 
@@ -513,6 +503,10 @@ legend a {color: inherit; cursor: pointer;}
 #recapitulatif_qcm {
 	-webkit-transition: width 1s linear, background-color 1s linear;
 	transition: width 1s linear, background-color 1s linear;
+}
+.qcm label {
+	color: rgba(0,0,0,0.87);
+	margin-bottom: 0.5em;
 }
 /********** évaluation (fin de leçon) *******/
 

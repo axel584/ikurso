@@ -62,26 +62,38 @@ include "../pagxkapo.inc.php";
 				<p>Quand vous aurez terminé les dix leçons, vous recevrez une attestation de fin de cours.</p>
 				<p>L’inscription au service de correction se fait à la fin de la première leçon. Pour pouvoir bénéficier de ce service, vous devez au préalable créer un compte sur ce site.</p> 	
 
+			<?php if ($persono_id=="") { ?>
 				<div class="row">
 					<div class="col s12">
 						<div class="card-panel blue lighten-5">
-							<h5 class="center">Je veux apprendre l’espéranto&nbsp;!</h5>
-							<div class="row">
-								<div class="col s12 m6">
+							<!-- N'a pas encore de compte -->
+								<h5 class="center">Je veux apprendre l’espéranto&nbsp;!</h5>
+								<div class="row">
 									<p class="center">En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
 									<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-activates="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
+								<p class="noto">NOTE&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.<br><a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
 								</div>
-								<div class="col s12 m6">
-									<p class="center">J’ai déjà un compte&nbsp;: je commence le cours tout de suite !<br><span class="noto">(Je pourrai m’inscrire au service de correction à la fin de la première leçon.)</span>
-									<p class="center"><a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
-									</p>
-								</div>
-							</div>
-							<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>
 						</div>
 					</div>
 				</div>
-				
+			<!-- A déjà un compte -->
+			<?php } elseif ($persono['rajtoj']=="P") {
+			?>
+				<!-- N'est pas déjà inscrit à un cours -->
+				<div class="row">
+					<div class="col s12">
+						<div class="card-panel blue lighten-5">
+							<h5 class="center">Je commence le cours tout de suite !</h5>
+							<div class="row">
+								<p><span class="noto">Je lis attentivement chaque page de la leçon, je fais les exercices et je pourrai m’inscrire au service de correction à la fin de la première leçon. Mes exercices seront automatiquement envoyé à mon correcteur quand les administrateurs du cours m'en auront attribué un.</span>
+								<p><a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
+								</p>
+							</div>		
+						</div>
+					</div>
+				</div>
+			<?php } ?>
+			
 				<h3 id="gerda">Gerda malaperis</h3>
 				<p>Ce cours s’adresse à ceux qui connaissent déjà les bases de l’espéranto comme, par exemple, ceux qui ont suivi au moins le Cours en dix leçons.</a></p>
 				<p><strong>Gerda malaperis</strong> est un roman de Claude Piron spécifiquement destiné à vous apprendre progressivement à maîtriser l’espéranto parlé à partir d’une histoire captivante.</p>

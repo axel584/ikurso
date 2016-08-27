@@ -69,7 +69,7 @@ include "../pagxkapo.inc.php";
 							<div class="row">
 								<div class="col s12 m6">
 									<p class="center">En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
-									<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
+									<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-activates="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
 								</div>
 								<div class="col s12 m6">
 									<p class="center">J’ai déjà un compte&nbsp;: je commence le cours tout de suite !<br><span class="noto">(Je pourrai m’inscrire au service de correction à la fin de la première leçon.)</span>

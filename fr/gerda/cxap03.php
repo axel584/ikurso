@@ -15,7 +15,7 @@ include "gerdakapo.inc.php";
 			include "gerdasono.inc.php";
 		?>
 
-			<h3>Kio okazas?</h3>
+			<h3>Amdeklaro</h3>
 			<div class="row dialogo">
 				<div class="col s12 m8">
 					<p><b>Bob:</b> Diable! Kio okazas? Vi aspektas kiel spionoj. Ĉu mi povas sidi
@@ -250,7 +250,7 @@ include "gerdakapo.inc.php";
 			vizaĝo.</p>
 			
 			<p>Mi scias, ke vi estas mistera. Virinoj al mi aspektas mistere. Mi
-			volas ke vi, mistera virino, rigardu min, amu min. Mi volas sidi ĉe
+			volas ke vi, mistera virino, rigardu al mi, amu min. Mi volas sidi ĉe
 			via tablo, mi volas paroli kun vi dum la tuta tago, dum multaj kaj
 			multaj tutaj tagoj. Mi scias, ke mi ne esprimas min bone. Pardonu min,
 			mi petas. Mi estas certa, ke vi komprenas min. Sed eble ne. Eble vi ne

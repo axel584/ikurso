@@ -122,7 +122,7 @@ include "pagxkapo.inc.php";
 						<div class="card-panel blue lighten-5 center">
 							<h5>Je veux apprendre l’espéranto&nbsp;!</h5>
 							<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
-							<p><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
+							<p><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-activates="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
 						</div>
 					</div>
 				</div>

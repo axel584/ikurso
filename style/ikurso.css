@@ -278,9 +278,14 @@ ul#lecionoj li.farita a {
 	margin:0;
 }
 #enhavtabelo li {
-	font-size:85%;
-	line-height:1.8em;
+	line-height:2em;
 	font-weight: 300;
+}
+@media only screen and (min-width: 993px) {
+	#enhavtabelo li {
+		font-size:85%;
+		line-height:1.8em;
+	}
 }
 ul#enhavtabelo li::before {
 	font-family: 'Material Icons';

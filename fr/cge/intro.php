@@ -38,31 +38,37 @@ include "dlekkapo.inc.php"
 					
 			<p>Vous pouvez télécharger une version du cours au format PDF pour consultation hors ligne&nbsp;:<br><a href="<?php echo $vojo;?>doc/DLEK.pdf">Cours en dix leçons</a> (PDF - 476Ko)</li></p>
 
-			<div class="row">
-				<div class="col s12">
-					<div class="card-panel blue lighten-5">
-						<!-- N'a pas encore de compte -->
-						<?php if ($persono_id=="") { ?>
-							<h5 class="center">Je veux apprendre l’espéranto&nbsp;!</h5>
-							<div class="row">
-								<p class="center">En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
-								<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-activates="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
-							<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>
-							</div>
-							<!-- A déjà un compte -->
-							<?php } else { ?>
-								<h5 class="center">Je commence le cours tout de suite !</h5>
+			<?php if ($persono_id=="") { ?>
+				<div class="row">
+					<div class="col s12">
+						<div class="card-panel blue lighten-5">
+							<!-- N'a pas encore de compte -->
+								<h5 class="center">Je veux apprendre l’espéranto&nbsp;!</h5>
 								<div class="row">
-									<p><span class="noto">Je lis attentivement chaque page de la leçon, je fais les exercices et je pourrai m’inscrire au service de correction à la fin de la première leçon. Mes exercices seront automatiquement envoyé à mon correcteur quand les administrateurs du cours m'en auront attribué un.</span>
-									<p><a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
-									</p>
-									<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>
-							</div>		
-							<?php } ?>
+									<p class="center">En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
+									<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-activates="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
+								<p class="noto">NOTE&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.<br><a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
+								</div>
 						</div>
-				
+					</div>
 				</div>
-			</div>
+			<!-- A déjà un compte -->
+			<?php } elseif ($persono['rajtoj']=="P") {
+			?>
+				<!-- N'est pas déjà inscrit à un cours -->
+				<div class="row">
+					<div class="col s12">
+						<div class="card-panel blue lighten-5">
+							<h5 class="center">Je commence le cours tout de suite !</h5>
+							<div class="row">
+								<p><span class="noto">Je lis attentivement chaque page de la leçon, je fais les exercices et je pourrai m’inscrire au service de correction à la fin de la première leçon. Mes exercices seront automatiquement envoyé à mon correcteur quand les administrateurs du cours m'en auront attribué un.</span>
+								<p><a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
+								</p>
+							</div>		
+						</div>
+					</div>
+				</div>
+			<?php } ?>
 
 		</section>
 

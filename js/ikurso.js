@@ -39,6 +39,43 @@
       Materialize.toast('Mauvaise réponse, essaye encore !', 4000);
     });
 
+// outil pour évaluer la leçon, on met des phrases plus lisibles
+$('#range_intereso').on("change mousemove", function() {
+    if ($(this).val()==1) {
+      $("#libelle_intereso").html("1. Trop barbant");
+    }
+    if ($(this).val()==2) {
+      $("#libelle_intereso").html("2. Plutôt ennuyeux.");
+    }
+    if ($(this).val()==3) {
+      $("#libelle_intereso").html("3. Moyen");
+    }
+    if ($(this).val()==4) {
+      $("#libelle_intereso").html("4. Assez intéressant");
+    }
+    if ($(this).val()==5) {
+      $("#libelle_intereso").html("5. Génial ! J'ai adoré !");
+    }
+});
+
+$('#range_malfacileco').on("change mousemove", function() {
+    if ($(this).val()==1) {
+      $("#libelle_malfacileco").html("1. Les doigts dans le nez !");
+    }
+    if ($(this).val()==2) {
+      $("#libelle_malfacileco").html("2. Assez facile.");
+    }
+    if ($(this).val()==3) {
+      $("#libelle_malfacileco").html("3. Quelques difficultés mais dans l'ensemble je m'en suis sorti.");
+    }
+    if ($(this).val()==4) {
+      $("#libelle_malfacileco").html("4. Assez difficile.");
+    }
+    if ($(this).val()==5) {
+      $("#libelle_malfacileco").html("5. Trop compliqué. Je m'en suis arraché les cheveux !");
+    }
+});
+
 
 $('#eniri_identigilo,#eniri_pasvorto').keyup(function(e) {    
    if(e.keyCode == 13) { // KeyCode de la touche entrée

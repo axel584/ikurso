@@ -225,9 +225,9 @@ function simplaVorto($valuo,$tabelo,$kie) {
     echo getSimplaVorto($valuo,$tabelo,$kie);
 }
 
-function getKorektantonElLernanto($lernanto_id) {
+function getKorektantonElLernanto($lernanto_id,$lernanto_kurso) {
     global $bdd;
-     $demando =  "SELECT personnomo,familinomo,retadreso  FROM nuna_kurso join personoj on personoj.id = nuna_kurso.korektanto WHERE studanto = ".$lernanto_id; 
+     $demando =  "SELECT personnomo,familinomo,retadreso  FROM nuna_kurso join personoj on personoj.id = nuna_kurso.korektanto WHERE studanto = ".$lernanto_id." AND nuna_kurso.kurso = '".$lernanto_kurso."'"; 
      $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
      $row = $result->fetch();
      return $row;

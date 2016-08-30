@@ -122,8 +122,8 @@
                     <text font-family="Roboto-Medium, Roboto" font-size="24" font-weight="400" letter-spacing="1" fill="#2196F3">
                         <tspan x="28" y="29">o</tspan>
                     </text>
-                    <text id="quelque-chose" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" letter-spacing="0.75" fill="#616161">
-                        <tspan x="79" y="28">quelque chose</tspan>
+                    <text id="pronom" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" letter-spacing="0.75" fill="#616161">
+                        <tspan x="79" y="28">pronom</tspan>
                     </text>
                 </g>
                 <g id="a" transform="translate(45.000000, 47.000000)">
@@ -140,17 +140,8 @@
                     <text font-family="Roboto-Medium, Roboto" font-size="24" font-weight="400" letter-spacing="1" fill="#2196F3">
                         <tspan x="28" y="29">u</tspan>
                     </text>
-                    <text id="individu" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" letter-spacing="0.75" fill="#616161">
-                        <tspan x="79" y="26">individu</tspan>
-                    </text>
-                    <text id="(1)" font-family="Roboto-Regular, Roboto" font-size="14" font-weight="normal" letter-spacing="0.583333313" fill="#616161">
-                        <tspan x="152" y="20">(1)</tspan>
-                    </text>
-                    <text id="(2)" font-family="Roboto-Regular, Roboto" font-size="14" font-weight="normal" letter-spacing="0.583333313" fill="#616161">
-                        <tspan x="243" y="74">(2)</tspan>
-                    </text>
-                    <text id="(3)" font-family="Roboto-Regular, Roboto" font-size="14" font-weight="normal" letter-spacing="0.583333313" fill="#616161">
-                        <tspan x="172" y="125">(3)</tspan>
+                    <text id="adjectif" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" letter-spacing="0.75" fill="#616161">
+                        <tspan x="79" y="26">adjectif</tspan>
                     </text>
                 </g>
                 <g id="es" transform="translate(80.000000, 150.000000)">

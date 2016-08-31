@@ -168,6 +168,7 @@ include "gerdakapo.inc.php";
 		?>
 
 			<fieldset class="ekzerco">
+				
 				<legend><b>Demandoj</b> </legend>
 					<input type="hidden" name="013_cxap11.0" value="Demandoj">
 					<div class="tasko">
@@ -180,7 +181,7 @@ include "gerdakapo.inc.php";
 						6 => "Pri kio Linda parolas dum la veturo?",
 						7 => "Ĉu la blondulo estas parolema?"
 					);
-					
+					ekzerco(True, 2);
 					?>
 					</div>
 			</fieldset>

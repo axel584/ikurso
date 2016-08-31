@@ -132,12 +132,12 @@ include "gerdakapo.inc.php";
 
 				<div class="tasko">
 					<?php $demandoj=array (
-						1 => "La [blondulo/blondulon] metis [sukero/sukeron] en la [taso/tason] de [kafo/kafon].",
-						2 => "[Li/Lin] volis iri en la [restoracio/restoracion], al la [bela/belan] [knabino/knabinon], sed [li/lin] falas en la [koridoro/koridoron].",
-						3 => "Bob konsentas kun [Linda/Lindan].",
-						4 => "[Ili/Ilin] rigardas al la [studentoj/studentojn].",
-						5 => "[Iu/Iun] perdis [aĵo/aĵon] en la [restoracio/restoracion].",
-						6 => "Ili metas [ĝi/ĝin] sur la [tablo/tablon] kaj decidas promeni al la [universitato/universitaton]. [Ili/Ilin] ekiras.",
+						5 => "La [blondulo/blondulon] metis [sukero/sukeron] en la [taso/tason] de [kafo/kafon].",
+						6 => "[Li/Lin] volis iri en la [restoracio/restoracion], al la [bela/belan] [knabino/knabinon], sed [li/lin] falas en la [koridoro/koridoron].",
+						7 => "Bob konsentas kun [Linda/Lindan].",
+						8 => "[Ili/Ilin] rigardas al la [studentoj/studentojn].",
+						9 => "[Iu/Iun] perdis [aĵo/aĵon] en la [restoracio/restoracion].",
+						10 => "Ili metas [ĝi/ĝin] sur la [tablo/tablon] kaj decidas promeni al la [universitato/universitaton]. [Ili/Ilin] ekiras.",
 					);
 					ekzerco(True, 2);
 					?>

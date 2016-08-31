@@ -184,9 +184,9 @@ include "dlekkapo.inc.php";
 		<p>
 			  Mi estas membro de junulara esperantista klubo kaj mi partoprenis en
 			  la Esperanto-kongreso, kiu okazis en Montrealo. Dum preskaŭ tri horoj
-			  ni vojaĝis de Kebeko en nia buseto kaj ne haltis, ĝis ni alvenis
+			  ni vojaĝis de Kebeko en nia aŭtobuseto kaj ne haltis, ĝis ni alvenis
 			  al Montrealo. Tie ni ankaŭ vizitis esperantistajn amikojn. Por la
-			  tagmanĝo ni manĝis sandviĉojn, kiuj estis sub la sidiloj, sur kiuj
+			  tagmanĝo ni manĝis sandviĉojn, kiuj estis sub la seĝoj, sur kiuj
 			  ni sidis dum la vojaĝo.
 			</p>
 		<h3>Vocabulaire</h3>
@@ -201,7 +201,7 @@ include "dlekkapo.inc.php";
 			<p class="col s12 m7"><span class="eo">ankaŭ</span> : aussi</p>
 			<p class="col s12 m5"><span class="eo">viziti</span> : visiter</p>
 			<p class="col s12 m7"><span class="eo">tagmanĝo</span> : repas du midi (France : déjeuner, Canada : dîner)</p>
-			<p class="col s12 m6"><span class="eo">sidilo</span> : siège</p>
+			<p class="col s12 m6"><span class="eo">seĝo</span> : siège</p>
 		</div>
 
 		<p>

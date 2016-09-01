@@ -178,9 +178,9 @@ include "dlekkapo.inc.php";
 		
 			<div class="row">
 				<p class="col s12"><b>ĉi</b> : indique la proximité </p>
-				<p class="col s5 offset-s1"><span class="eo">ĉi tio</span> : cette chose-ci</p>
-				<p class="col s6"><span class="eo">ĉi tie</span> : ici</p>
-				<p class="col s5 offset-s1"><span class="eo">ĉio ĉi</span> : tout ceci</p>
+				<p class="col s5 offset-s1"><span class="eo">ĉi-tio</span> : cette chose-ci</p>
+				<p class="col s6"><span class="eo">ĉi-tie</span> : ici</p>
+				<p class="col s5 offset-s1"><span class="eo">ĉio-ĉi</span> : tout ceci</p>
 				<p class="col s6"><span class="eo">ĉi-matene</span> : ce matin</p>
 				<p class="col s11 offset-s1"><span class="eo">ĉi-foje</span> : cette fois-ci</p>
 				<p class="col s11 offset-s1"><span class="eo">tiu knabo</span> : ce garçon(-là)</p>
@@ -282,7 +282,7 @@ include "dlekkapo.inc.php";
 				</p>
 				<?php
 					$demandoj=array (
-					4 => "Kio okazas ĉe la junularaj esperantistaj asocioj de la landoj najbaraj de ni? Por respondi al tiu demando, jen nova rubriko. ĉi-numere ni donos novaĵojn pri NEJ (Nederlanda Esperantista Junularo) kaj FEJA (Flandra Esperanta Junulara Asocio). Tiuj du asocioj havas komunan bultenon. La plej interesa afero, kiun tiuj uloj organizas -- almenaŭ el nia vidpunkto -- estas la Paska Renkontio. Ĝi nun iĝis tradicia kaj, kiel la nomo antaŭsupozigas, ĝi okazas dum la Paska semajnfino."
+					4 => "Kio okazas ĉe la junularaj esperantistaj asocioj de la landoj najbaraj de ni? Por respondi al tiu demando, jen nova rubriko. Ĉi-numere ni donos novaĵojn pri NEJ (Nederlanda Esperantista Junularo) kaj FEJA (Flandra Esperanta Junulara Asocio). Tiuj du asocioj havas komunan bultenon. La plej interesa afero, kiun tiuj uloj organizas – almenaŭ el nia vidpunkto – estas la Paska Renkontiĝo. Ĝi nun iĝis tradicia kaj, kiel la nomo antaŭsupozigas, ĝi okazas dum la Paska semajnfino."
 				   );
 					ekzerco(False, 8);
 				?>

@@ -85,71 +85,41 @@ include "dlekkapo.inc.php";
 		des avantages que l’on trouve à construire des mots de façon
 		<b>systématique</b>. 
 		</p>
+
 		<p>
-		Remarquez que, dans un tableau rectangulaire de 9 lignes et 5
-		colonnes, l’on peut identifier 45 cases différentes en utilisant
-		simplement 5 lettres au début et 9 chiffres à la fin : A1, A2, C3, ...
-		H9. De la même façon, il existe en espéranto 45 mots correspondants à
-		toutes les combinaisons possibles par concaténation de 5 débuts de
-		mots et de 9 terminaisons. Ces mots sont appelés <b>corrélatifs</b>.
-		Nous avons rempli quelques cases. 
-		</p>
-		<p>À vous de compléter le tableau. La
-		signification exacte des mots trouvés vous sera expliquée ensuite.
-		</p>
-		
-		<table class="bordered">
-			<tr>
-				<td width="15%"> </td>
-				<td width="15%"><b>ki-</b></td>
-				<td width="15%"><b>ti-</b></td>
-				<td width="15%"><b>i-</b></td>
-				<td width="15%"><b>ĉi-</b></td>
-				<td width="15%"><b>neni-</b></td>
-			</tr>
-			<tr><td><b>-o</b></td><td>...</td><td>...</td><td>...</td><td>...</td><td>nenio</td></tr>
-			<tr><td><b>-a</b></td><td>kia</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
-			<tr><td><b>-e</b></td><td>...</td><td>...</td><td>ie</td><td>...</td><td>...</td></tr>
-			<tr><td><b>-u </b></td><td>...</td><td>tiu</td><td>...</td><td>...</td><td>...</td></tr>
-			<tr><td><b>-om</b></td><td>...</td><td>...</td><td>...</td><td>ĉiom</td><td>...</td></tr>
-			<tr><td><b>-am</b></td><td>...</td><td>...</td><td>iam</td><td>...</td><td>...</td></tr>
-			<tr><td><b>-el</b></td><td>...</td><td>...</td><td>...</td><td>...</td><td>neniel</td></tr>
-			<tr><td><b>-al</b></td><td>kial</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
-			<tr><td><b>-es</b></td><td>...</td><td>ties</td><td>...</td><td>...</td><td>...</td></tr>
-		</table>
-		<p class="parto">
-		Le sens de tout corrélatif est la combinaison des sens des deux
-		parties qui le composent comme indiqué dans le schéma suivant.
-		(Insérez la partie gauche à la place du "___" de la partie droite.)
+		Tout corrélatif est la combinaison de deux éléments, comme présentés dans le schéma suivant. Par exemple, si nous associons par exemple l'élément <span class="eo">ki</span>, qui permet de poser une question, avec l'élément <span class="eo">am</span>, qui a la signification de «temps, moment», on obtient le corrélatif <span class="eo">kiam</span>, qui signifie <em>quand</em>.</p>
+
 		</p>
 		<img src="<?php echo $vojo;?>fr/cge/bildoj/correlatifs.svg" class="responsive-img">
-		<p>
-		</p>
 		
-		<p>Exemples :</p>
+		<p class="parto">Le tableau suivant donne quelques exemples de corrélatifs.</p>
+
 		<table class="bordered">
 			<tr>
-				<td width="10%"><b>Corrélatif</b></td>
-				<td width="40%"><b>Composition</b></td>
-				<td width="40%"><b>Signification</b></td>
+				<td width="15%"><b>Corrélatif</b></td>
+				<td width="20%"><b>Composition</b></td>
+				<td width="65%"><b>Exemples</b></td>
 			</tr><tr>
 				<td><b>ĉiam</b></td>
-				<td span class="eo">ĉI- + -AM</td>
-				<td>"tout(e)" + "à ___ moment"<br>"à tout moment" => toujours</td>
-			</tr><tr>
-				<td><b>nenial</b></td>
-				<td class="eo">NENI- + -AL</td>
-				<td>"pour ___ raison" + "(ne) ... aucun(e)"<br>pour aucune raison</td>
+				<td><span class="eo">ĈI</span> + <span class="eo">AM</span></td>
+				<td><em>tout(e)</em> + <em>à ___ moment</em><br>à tout moment => toujours</td>
 			</tr><tr>
 				<td><b>tie</b></td>
-				<td class="eo">TI- + -E</td>
-				<td>"à ___ lieu" + "ce, cet(te)"<br/>à ce lieu => ici, là</td>
+				<td><span class="eo">TI</span> + <span class="eo">E</span></td>
+				<td><em>à ___ lieu</em> + <em>ce, cet(te)</em><br/>à ce lieu => ici, là</td>
+			</tr><tr>
+				<td><b>nenio</b></td>
+				<td><span class="eo">NENI</span> + <span class="eo">O</span></td>
+				<td><em>aucun(e)</em> + <em>pronom</em><br/>«aucune chose» => rien</td>
+			</tr>
+			</tr><tr>
+				<td><b>kiu</b></td>
+				<td><span class="eo">KI</span> + <span class="eo">U</span></td>
+				<td><em>aucun(e)</em> + <em>pronom</em><br/>«aucune chose» => rien</td>
 			</tr>
 		</table>
 
-		<p class="rimarko"><strong>NOTES</strong> : </p>
-		<p><span class="eo"><b>1.</b></span> Un corrélatif en <b>-U</b> peut avoir trois valeurs&nbsp;:</p>
-		<p>Le plus souvent c’est un <b>adjectif</b> accompagnant un nom&nbsp;:</p>
+		<p class="parto">Les corrélatifs se terminant par <b>U</b> sont souvent des adjectifs accompagnant un nom&nbsp;:</p>
 		<div class="row">
 			<p class="col s6"><span class="eo">Kiun frukton vi volas?</span></p><p class="col s6">Quel fruit veux-tu&nbsp;?</p>
 			<p class="col s6"><span class="eo">Mi volas tiun frukton.</span></p><p class="col s6">Je veux ce fruit(-là).</p>
@@ -157,7 +127,7 @@ include "dlekkapo.inc.php";
 			<p class="col s6"><span class="eo">Kiun amikon vi renkontis?</span></p><p class="col s6">Quel ami avez-vous rencontré&nbsp;?</p>
 		</div>
 
-		<p>Le nom peut parfois être sous-entendu si le contexte est clair&nbsp;:</p>
+		<p>Cependant, le nom peut parfois être sous-entendu si le contexte est clair&nbsp;:</p>
 		<div class="row">
 			<p class="col s6"><span class="eo">Jen fruktoj: kiun (frukton) vi volas?</span></p>
 			<p class="col s6">Voici des fruits : lequel veux-tu&nbsp;? </p>
@@ -169,7 +139,7 @@ include "dlekkapo.inc.php";
 			<p class="col s6">Voici le fruit que tu voulais.</p>
 		</div>
 		
-		<p>Employé seul, il s’agit le plus souvent d’un <b>pronom</b> qui désigne une personne&nbsp;:</p>
+		<p>Employé seul, un corrélatif en <b>U</b> est très souvent un <b>pronom</b> qui désigne une personne&nbsp;:</p>
 		<div class="row">
 			<p class="col s6"><span class="eo">Kiu venis ?</span></p><p class="col s6">Qui est venu ?</p>
 			<p class="col s6"><span class="eo">– Iu.</span></p><p class="col s6">– Quelqu’un.</p>
@@ -177,7 +147,7 @@ include "dlekkapo.inc.php";
 			<p class="col s6"><span class="eo">– Ĉiu.</span></p><p class="col s6">– Chacun.</p>
 		</div>
 		
-		<p><span class="eo"><b>2.</b></span> Tout corrélatif en <b>-ES</b> est associé à un pronom en <b>-U</b> et marque la possession&nbsp;:</p>
+		<p class="parto">Les corrélatifs en <b>ES</b> sont souvent associés à un pronom en <b>U</b> et marquent alors la possession&nbsp;:</p>
 		<div class="row">
 			<p class="col s3"><span class="eo">kies (= de kiu)</span></p><p class="col s9">de qui, à qui, dont, duquel</p>
 			<p class="col s3"><span class="eo">ties (= de tiu)</span></p><p class="col s9">de celui-là, à celui-là</p>
@@ -194,7 +164,7 @@ include "dlekkapo.inc.php";
 			<p class="col s6"><span class="eo">La viro, kun kies amiko ni trinkis.</span></p><p class="col s6">L’homme avec l’ami duquel nous avons bu</p>
 		</div>
 		
-		<p><span class="eo"><b>3.</b></span> Les corrélatifs en <b>-OM</b> (quantité) sont souvent suivi par la préposition <span class="eo">da</span>&nbsp;:</p>
+		<p class="parto">Les corrélatifs en <b>-OM</b> (quantité) sont souvent suivi par la préposition <span class="eo">da</span>&nbsp;:</p>
 		<div class="row">
 			<p class="col s6"><span class="eo">Kiom da kukoj vi deziras?</span></p><p class="col s6">Combien de gâteaux veux-tu ?</p>
 			<p class="col s6"><span class="eo">Mi jam manĝis tiom da ili!</span></p><p class="col s6">J’en ai déjà tellement mangé !</p>

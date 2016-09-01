@@ -15,18 +15,27 @@ include "dlekkapo.inc.php"
 
 			<h2>Préambule</h2>
 			
-			<p>Ce cours pour débutants a déjà une longue histoire. Il s’agit à l’origine d’un cours par correspondance pour anglophones, adapté par la suite au français puis au courrier électronique par la société québécoise d’espéranto (ESK). Nous vous en présentons aujourd’hui une version web, revue et corrigée intégralement, mais qui conserve le contenu et les choix pédagogiques de ses prédécesseurs.</p>  		
-			<p>À l’heure du multimédia et de l’hypertexte, ce cours peut paraître bien spartiate, bien linéaire et un brin rébarbatif. En réalité il n’en est rien et l’expérience a montré que ce cours est réellement efficace pour donner une bonne base de la langue, comme peuvent en témoigner de nombreux anciens de ce cours.</p>
-			<p> Quand vous aurez terminé le cours vous pourrez déjà comprendre des textes simples et parler un peu de vous. L’étape suivante sera alors de suivre le cours <a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a> qui vous permettra d’assimiler les connaissances acquises et vous ouvrira la porte à une utilisation active de la langue.</p>
+			<p>Voici un cours en 10 leçons pour vous initier à l’espéranto. Le défi est que, à la fin de ce parcours, vous puissiez faire des phrases simples, comprendre de courts textes ou conversations, voire de correspondre avec des étrangers espérantistes&nbsp;! Pas moins&nbsp;! À l’origine, il s'agissait d’un cours par correspondance pour anglophones, adapté par la suite au français puis au courrier électronique par la société québécoise d’espéranto (ESK). La version mise en ligne en 2016 est une proposition revue, mais qui a gardé l’esprit de départ&nbsp;: simplicité et efficacité. Et ce en mettant à profit les connaissances pédagogiques nouvelles et les évolutions du web&nbsp;!</p>
+			<p>L’étape suivante sera alors de suivre le cours <a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a> qui vous permettra d’assimiler les connaissances acquises et vous ouvrira la porte à une utilisation active de la langue. Ou encore (et même en parallèle) ce sera de rencontrer les espérantistes de votre département, votre ville ou votre région… Rien de tel que l’échange humain tout de même pour avancer&nbsp;!</p>
+				
+			<p>Pour connaître les adresses des associations ou clubs proches de chez vous, rendez-vous sur le <a href="http://esperanto-france.org/">site d’Espéranto-France</a> puis sélectionnez votre département sous la carte dans la section <b>L’espéranto près de chez vous</b>.
 
 			<h2>Comment suivre ce cours</h2>
 			
-			<p>Ce cours de compose de 10 leçons alternant explications sur le fonctionnement de la langue, vocabulaire et exercices de mise en pratique. Le cours peut être utilisé par des débutants en mode autodidacte, cependant nous vous conseillons de demander l’aide d’un tuteur qui corrigera vos exercices, sera disponible pour répondre à vos questions et vous suivra tout au long de votre apprentissage.</p>
-				<p>Si vous souhaitez bénéficier de ce service, vous devez au préalable créer un compte sur ce site en indiquant au minimum une adresse électronique valide car les échanges avec votre correcteur se feront par courriel. En aucun cas, nous ne pourrons assurer de correction autrement que par ce moyen. Il est donc exclu de recourir à l’envoi de courrier postal pour le suivi de ce cours.</p>
+			<p>Ce cours de compose de 10 leçons alternant du son, des textes, des images, des vidéos. Les leçons sont des combinaisons d’explications sur le fonctionnement de la langue, des apports de vocabulaire et de points grammaticaux. Une large place est donnée aux exercices de mise en pratique, aux QCM, aux tests afin que vous puissiez pas à pas évaluer vos progrès. Le cours peut être utilisé par des débutants en mode autodidacte, cependant nous vous conseillons de demander l’aide d’un tuteur qui corrigera vos exercices, sera disponible pour répondre à vos questions et vous suivra tout au long de votre apprentissage.</p>
 			
 			<p>Lorsque vous aurez créé votre compte, il vous suffira de commencer le cours et d’effectuer les exercices de la leçon 1. Un correcteur vous sera alors attribué en fonction des places disponibles.</p>
 			
-			<p>Nous attirons votre attention sur le fait que la gratuité de ce cours ne veut pas dire qu’il ne coûte rien : le suivi des élèves demande du temps et de l’attention de la part des correcteurs. Aussi nous demandons aux élèves qui s’inscrivent de s’engager à suivre réellement régulièrement le cours et à prévenir leur correcteur en cas de retard ou d’empêchement à poursuivre le cours.</p>
+			<h3>Pour demander l’aider d'un correcteur :</h3>
+			
+			<ol>
+				<li>Créez un compte sur ce site en indiquant au minimum une adresse électronique valide permettant les échanges entre vous et le correcteur.</li>
+				<li>Commencez la première leçon et faites les exercices demandés. À la fin de la leçon, transmettez-les en cliquant sur le bouton DEMANDER UN CORRECTEUR.</li>
+				<li>Un correcteur vous sera attribué à partir de ce moment en fonction des places disponibles. Un délai de réponse de quelques jours est possible à l’issue de ce premier envoi (les correcteurs ne suivent qu'un nombre restreint d'élèves pour une meilleure qualité des échanges).</li>
+				<li>Attendez d'avoir reçu la première correction pour poursuivre votre apprentissage&nbsp;: c'est important, car le correcteur vous donnera des informations et consignes qui pourront vous éviter bien des erreurs. Ceci ne doit pas vous empêcher de lire les cours suivants avant ce retour de correction, et de déjà préparer les exercices.</li>
+			</ol>
+			
+			<p><b>ATTENTION</b> : Les cours sont GRATUITS, mais, nous mobilisons des correcteurs, qui mobilisent du temps&nbsp;! Aussi, l’inscription à ce cours en 10 leçons est un engagement de votre part. Aussi nous vous demandons de travailler régulièrement (une leçon par semaine au minimum) et de prévenir votre correcteur en cas de retard ou d’empêchement à poursuivre le cours. Car de son côté, votre correcteur s'est engagé à vous suivre et donc à mettre tout en œuvre pour le bon déroulement de ces 10 leçons. C'est un contrat tacite réciproque qui relève du respect mutuel&nbsp;!</p>
 			
 			<h2>Note au sujet de la typographie</h3>
 			

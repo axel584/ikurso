@@ -478,35 +478,38 @@ function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
 				}
 
 function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
-	global $bdd;
-	echo "<div class='row' id='recapitulatif_qcm'>";
-	echo "<div class='col s12'>";
-	echo "<div class='card-panel blue lighten-5'>";
-	echo "<h3>Récapitulatif :</h3>";
-	echo "Voilà ce qui sera envoyé à votre correcteur. Si vous souhaitez modifier des réponses, vous pouvez faire les modifications directement dans les pages d'exercices, enregistrer vos réponses puis revenir sur cette page.";
-	$indiceQuestion= 1;
-	
-	// on récupère les réponses en base
-	$query = "select demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
-	$result = $bdd->query($query);
-	echo "<ul class='collection'>";
-	while ($row=$result->fetch()) {
-		echo "<li class='collection-item row'>";
-		echo "<b>".$row["demando"]."</b><br/>";
-		echo "&nbsp;&nbsp;&nbsp;".$row["respondo"]."<br/>";
-		echo "</li>";
+	// on n'affiche le récapitulatif que pour un élève connecté
+		if ($persono_id) {
+		global $bdd;
+		echo "<div class='row' id='recapitulatif_qcm'>";
+		echo "<div class='col s12'>";
+		echo "<div class='card-panel blue lighten-5'>";
+		echo "<h3>Récapitulatif :</h3>";
+		echo "Voilà ce qui sera envoyé à votre correcteur. Si vous souhaitez modifier des réponses, vous pouvez faire les modifications directement dans les pages d'exercices, enregistrer vos réponses puis revenir sur cette page.";
+		$indiceQuestion= 1;
+		
+		// on récupère les réponses en base
+		$query = "select demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
+		$result = $bdd->query($query);
+		echo "<ul class='collection'>";
+		while ($row=$result->fetch()) {
+			echo "<li class='collection-item row'>";
+			echo "<b>".$row["demando"]."</b><br/>";
+			echo "&nbsp;&nbsp;&nbsp;".$row["respondo"]."<br/>";
+			echo "</li>";
+		}
+		echo "</ul>";
+		// ajout d'un champ commentaire :
+		echo "<ul class='collection'>";
+			echo "<li class='collection-item row'>";
+			echo "Si vous souhaitez ajouter un message à l'intention de votre correcteur, vous pouvez écrire dans le cadre ci-dessous :";
+			echo "<textarea name='commentaire_pour_correcteur'></textarea>";
+			echo "</li>";
+		echo "</ul>";
+		echo "</div>";
+		echo "</div>";
+		echo "</div>\n";
 	}
-	echo "</ul>";
-	// ajout d'un champ commentaire :
-	echo "<ul class='collection'>";
-		echo "<li class='collection-item row'>";
-		echo "Si vous souhaitez ajouter un message à l'intention de votre correcteur, vous pouvez écrire dans le cadre ci-dessous :";
-		echo "<textarea name='commentaire_pour_correcteur'></textarea>";
-		echo "</li>";
-	echo "</ul>";
-	echo "</div>";
-	echo "</div>";
-	echo "</div>\n";
 }
 
 function getListoLecionoj($kurso,$leciono) {

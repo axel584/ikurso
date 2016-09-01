@@ -103,6 +103,7 @@ include "gerdakapo.inc.php";
 				<h4>-ujo : <i>indique le contenant</i></h4>
 				<p><span class="eo">sukero</span> : sucre → <span class="eo">sukerujo</span> : sucrier</p>
 
+				<h4>ĉi : <i>indique la proximité</i></h4>
 				<p><span class="eo">tiu ĉi viro estas juna</span> : cet homme-ci est jeune</p>
 				<p><span class="eo">tio ĉi estas nekomprenebla</span> : ceci est incompréhensible</p>
 			</section>

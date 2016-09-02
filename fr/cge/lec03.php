@@ -260,9 +260,9 @@ include "dlekkapo.inc.php";
 			</div>
 			<div class="col s6 m3">
 				<p>11 : <span class="eo">dek unu</span></p>
-				<p>2 : <span class="eo">dek du</span></p>
-				<p>3 : <span class="eo">dek tri</span></p>
-				<p>4 : <span class="eo">dek kvar</span></p>
+				<p>12 : <span class="eo">dek du</span></p>
+				<p>13 : <span class="eo">dek tri</span></p>
+				<p>14 : <span class="eo">dek kvar</span></p>
 				<p></p>
 				<p>20 : <span class="eo">dudek</span></p>
 				<p>21 : <span class="eo">dudek unu</span></p>

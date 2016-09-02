@@ -52,7 +52,13 @@ if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
 } 
 
-$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.id>".$lecionero_id." order by ordo ASC";
+// On recherche la section suivante à cette section, donc on va rechercher la valeur du "ordo" pour la section en cours :
+$query = "select ordo from lecioneroj where id=".$lecionero_id;
+$result = $bdd->query($query);
+$row = $result->fetch();
+$ordo = $row["ordo"];
+// on va ensuite prendre la section qui est dans la même leçon et dont le numéro "ordo" est strictement supérieur 
+$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo>".$ordo." order by ordo ASC";
 $result = $bdd->query($query);
 $row = $result->fetch();
 if ($row!=false) {

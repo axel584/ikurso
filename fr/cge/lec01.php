@@ -86,30 +86,46 @@ include "dlekkapo.inc.php";
 			<div class="vortlisto row">
 				<div class="col s12 m4">
 					<p><span class="eo">amiko</span> : ami</p>
+					<p><span class="eo">Aŭstralio</span> : Australie</p>
+					<p><span class="eo">biskvito</span> : biscuit</p>
+					<p><span class="eo">Brazilo</span> : Brésil</p>
+					<p><span class="eo">desegnisto</span> : dessinateur</p>
 					<p><span class="eo">filo</span> : fils</p>
+					<p><span class="eo">Francujo</span> : France</p>
 					<p><span class="eo">frato</span> : frère</p>
-					<p><span class="eo">viro</span> : homme (mâle)</p>
-					<p><span class="eo">knabo</span> : garçon</p>
-					<p><span class="eo">patro</span> : père</p>
 					<p><span class="eo">instruisto</span> : instituteur</p>
-				</div>
-				<div class="col s12 m4">
+					<p><span class="eo">knabo</span> : garçon</p>
 					<p><span class="eo">kafo</span> : café</p>
 					<p><span class="eo">kuko</span> : gâteau</p>
+					
+				</div>
+				<div class="col s12 m4">
 					<p><span class="eo">lakto</span> : lait</p>
+					<p><span class="eo">lando</span> : pays</p>
+					<p><span class="eo">patro</span> : père</p>
+					<p><span class="eo">Pollando</span> : pologne</p>
+					<p><span class="eo">profesio</span> : métier, profession</p>
+					<p><span class="eo">psikologo</span> : psychologue</p>
 					<p><span class="eo">pano</span> : pain</p>
+					<p><span class="eo">studento</span> : étudiant</p>
 					<p><span class="eo">sukero</span> : sucre</p>
 					<p><span class="eo">teo</span> : thé</p>
-					<p><span class="eo">biskvito</span> : biscuit</p>
+					<p><span class="eo">urbo</span> : ville</p>
+					<p><span class="eo">viro</span> : homme (mâle)</p>
+					<p><span class="eo">Vjetnamio</span> : Vietnam</p>
 				</div>
 				<div class="col s12 m4">
 					<p><span class="eo">bela</span> : beau</p>
-					<p><span class="eo">granda</span> : grand</p>
-					<p><span class="eo">nova</span> : nouveau</p>
 					<p><span class="eo">bona</span> : bon</p>
+					<p><span class="eo">ĉiam</span> : toujours</p>
+					<p><span class="eo">en</span> : dans, en</p>
+					<p><span class="eo">facila</span> : facile</p>
+					<p><span class="eo">granda</span> : grand</p>
+					<p><span class="eo">kiu</span> : qui</p>
+					<p><span class="eo">nova</span> : nouveau</p>
+					<p><span class="eo">sana</span> : sain, en bonne santé</p>
 					<p><span class="eo">seka</span> : sec</p>
 					<p><span class="eo">varma</span> : chaud</p>
-					<p><span class="eo">sana</span> : sain, en bonne santé</p>
 				</div>
 			</div>
 
@@ -378,7 +394,12 @@ include "dlekkapo.inc.php";
 				<p class="col s6 m3 eo">Bonan matenon !</p><p class="col s6 m3">Bonjour ! (le matin)</p>
 				<p class="col s6 m3 eo">Bonan vesperon !</p><p class="col s6 m3">Bonsoir !</p>
 				<p class="col s6 m3 eo">Bonan nokton !</p><p class="col s6 m3">Bonne nuit !</p>
-			</div><div class="row">
+			</div>
+			<div class="row">
+				<p class="col s6 m3 eo">Mi loĝas en ...</p><p class="col s6 m3">J'habite à ...</p>
+				<p class="col s6 m3 eo">Mi ŝatas ...</p><p class="col s6 m3">J'aime ... / J'apprécie ...</p>
+			</div>
+			<div class="row">
 				<p class="col s6 m3 eo">Ĝis revido !</p><p class="col s6 m3">Au revoir !</p>
 				<p class="col s6 m3 eo">Adiaŭ !</p><p class="col s6 m3">Adieu !</p>
 			</div>
@@ -386,6 +407,163 @@ include "dlekkapo.inc.php";
 			<?php 
 			} // fin section 
 			if ($section=="8") {
+			?>
+			<p class="parto">En vous aidant des expressions que l'on vient de voir et d'un peu de bon sens, essayer d'attribuer à chacune des personnes de la vidéo, son nom, son domicile et sa profession.</p>
+			<p>Ne vous attendez pas à comprendre <b>tout</b>, essayer juste de comprendre ce qui vous permettra de répondre au questionnaire. N'hésitez pas à regarder la vidéo plusieurs fois, en totalité ou partiellement, y compris avant de répondre à une question précise. Au besoin, prenez des notes sur du papier, l'exercice sera d'autant plus utile si vous essayez de répondre sérieusement aux questions. Si vous vous trompez, prenez un peu de temps pour vérifier dans la vidéo la bonne réponse avant d'essayer de donner une autre réponse.</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/pTQEn0-fuQc" frameborder="0" allowfullscreen></iframe>
+
+
+			<?php 
+QCM(
+	array(
+		array(
+			"question"=>"En kiu filmo estas Aleks ?",
+			"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		),
+		array(
+			"question"=>"En kiu filmo estas Allan ?",
+			"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
+			"indices"=>array("","",""),
+			"reponse"=>5
+		),
+		array(
+			"question"=>"En kiu filmo estas Anna Maria ?",
+			"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
+			"indices"=>array("","",""),
+			"reponse"=>3
+		),
+		array(
+			"question"=>"En kiu filmo estas Joanne ?",
+			"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
+			"indices"=>array("","",""),
+			"reponse"=>1
+		),
+		array(
+			"question"=>"En kiu filmo estas Tran Hoan ?",
+			"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
+			"indices"=>array("","",""),
+			"reponse"=>4
+		),
+		array(
+			"question"=>"Kiu loĝas en Aŭstralio ?",
+			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+			"indices"=>array("","",""),
+			"reponse"=>4
+		),	
+		array(
+			"question"=>"Kiu loĝas en Brazilo ?",
+			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		),
+		array(
+			"question"=>"Kiu loĝas en Francio ?",
+			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+			"indices"=>array("","",""),
+			"reponse"=>1
+		),
+		array(
+			"question"=>"Kiu loĝas en Pollando ?",
+			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+			"indices"=>array("","",""),
+			"reponse"=>3
+		),
+		array(
+			"question"=>"Kiu loĝas en Vjetnamio ?",
+			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+			"indices"=>array("","",""),
+			"reponse"=>5
+		),
+		
+		array(
+			"question"=>"Kiu estas desegnisto ?",
+			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+			"indices"=>array("","",""),
+			"reponse"=>4
+		),		
+		array(
+			"question"=>"Kiu estas intruisto ?",
+			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+			"indices"=>array("","",""),
+			"reponse"=>1
+		),
+		array(
+			"question"=>"Kiu estas psikologo ?",
+			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+			"indices"=>array("","",""),
+			"reponse"=>3
+		),
+		array(
+			"question"=>"Kiu estas studento ?",
+			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		),
+		array(
+			"question"=>"Kiu laboras pri importo-eksporto ?",
+			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+			"indices"=>array("","",""),
+			"reponse"=>5
+		)
+	)
+);
+			?>
+
+
+			<?php 
+			} // fin section 
+			if ($section=="9") {
+			?>
+			<p class="parto">A votre tour ! En vous aidant du vocabulaire déjà vu et de la vidéo de l'exercice précédent, essayez de vous présenter à votre correcteur en quelques mots. N'oubliez pas les formules de politesse pour dire bonjour et au revoir. Si vous ne savez pas comment dire en espéranto votre profession, ce sera l'occasion de demander à votre correcteur. Vous devriez être capable de rédiger 4/5 phrases en espéranto.</p>
+
+					<?php
+						$demandoj=array (
+						17 => "Je me présente :"
+						);
+						ekzerco(True, 5);
+						?>
+
+
+						<p class="parto">Voici un peu de vocabulaire qui peuvent vous aidez, n'apprenez pas ces mots par coeur, ils ne seront utiles que pour cet exercice.</p>
+			<div class="vortlisto row">
+				<div class="col s12 m4">
+					<p><b>Profession</b></p>
+					<p><span class="eo">emerito</span> : retraité</p>
+					<p><span class="eo">funkciulo</span> : fonctionnaire</p>
+					<p><span class="eo">ĵurnalisto</span> : journaliste</p>
+					<p><span class="eo">laboristo</span> : ouvrier</p>
+					<p><span class="eo">komputilisto</span> : informaticien</p>
+					<p><span class="eo">oficisto</span> : employé</p>
+					<p><span class="eo">senlaborulo</span> : chômeur</p>
+					
+				</div>
+				<div class="col s12 m4">
+					<p><b>Pays</b></p>
+					<p><span class="eo">Afriko</span> : Afrique</p>
+					<p><span class="eo">Belgio</span> : Belgique</p>
+					<p><span class="eo">Eŭropo</span> : Europe</p>
+					<p><span class="eo">Francujo</span> : France</p>
+					<p><span class="eo">Kanado</span> : Canada</p>
+					<p><span class="eo">Parizo</span> : Paris</p>
+					<p><span class="eo">Svislando</span> : Suisse</p>
+				</div>
+				<div class="col s12 m4">
+					<p><b>Adjectifs</b></p>
+					<p><span class="eo">donacema</span> : généreux</p>
+					<p><span class="eo">feliĉa</span> : heureux</p>
+					<p><span class="eo">juna</span> : jeune</p>
+					<p><span class="eo">maljuna</span> : vieux</p>
+					<p><span class="eo">scivola</span> : curieux, qui aime apprendre</p>
+					<p><span class="eo">sportema</span> : sportif, qui aime le sport</p>
+					<p><span class="eo">vojaĝema</span> : voyageur, qui aime voyager</p>
+				</div>
+			</div>
+
+			<?php 
+			} // fin section 
+			if ($section=="10") {
 			?>
 
 			<p>
@@ -470,8 +648,8 @@ QCM(
 			?>
 			
 			<?php 
-			} // fin section 7
-			if ($section=="9") {
+			} // fin section
+			if ($section=="11") {
 			?>
 
 			<p>
@@ -504,7 +682,7 @@ QCM(
 		
 		<?php 
 				recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
-		} // fin section 7
+		} // fin section
 		?>	
 		</section>
 

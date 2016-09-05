@@ -408,8 +408,8 @@ include "dlekkapo.inc.php";
 			} // fin section 
 			if ($section=="8") {
 			?>
-			<p class="parto">En vous aidant des expressions que l'on vient de voir et d'un peu de bon sens, essayer d'attribuer à chacune des personnes de la vidéo, son nom, son domicile et sa profession.</p>
-			<p>Ne vous attendez pas à comprendre <b>tout</b>, essayer juste de comprendre ce qui vous permettra de répondre au questionnaire. N'hésitez pas à regarder la vidéo plusieurs fois, en totalité ou partiellement, y compris avant de répondre à une question précise. Au besoin, prenez des notes sur du papier, l'exercice sera d'autant plus utile si vous essayez de répondre sérieusement aux questions. Si vous vous trompez, prenez un peu de temps pour vérifier dans la vidéo la bonne réponse avant d'essayer de donner une autre réponse.</p>
+			<p class="parto">En vous aidant des expressions que l'on vient de voir et d'un peu de bon sens, essayez d'attribuer à chacune des personnes de la vidéo son nom, son domicile et sa profession.</p>
+			<p>Ne vous attendez pas à comprendre <b>tout</b>, essayez juste de comprendre ce qui vous permettra de répondre au questionnaire. N'hésitez pas à regarder la vidéo plusieurs fois. Au besoin, prenez des notes sur du papier, l'exercice sera d'autant plus utile si vous essayez de répondre sérieusement aux questions. Si vous vous trompez, prenez un peu de temps pour vérifier dans la vidéo la bonne réponse avant d'essayer de donner une autre réponse.</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/pTQEn0-fuQc" frameborder="0" allowfullscreen></iframe>
 
 

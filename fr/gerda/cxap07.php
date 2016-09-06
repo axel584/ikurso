@@ -28,8 +28,7 @@ include "gerdakapo.inc.php";
 					vivon. La koro batas. Ĝi batas malforte, sed tamen batas. ŝi do
 					vivas. Eble ŝi apenaŭ vivas, sed ŝi vivas.</p>
 					<p><b>Bob:</b> Kion ni faru?</p>
-					<p><b>Tom:</b> Kion vi opinias?</p>
-					<p><b>Bob:</b> ŝajnas, ke ŝi dormas.</p>
+					<p><b>Tom:</b> Ŝajnas, ke ŝi dormas.</p>
 				</div>
 				<div class="col s12 m4">
 					<img src="bildoj/gerda07-1.gif" class="responsive-img">

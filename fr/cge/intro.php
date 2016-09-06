@@ -18,7 +18,7 @@ include "dlekkapo.inc.php"
 			<p>Voici un cours en 10 leçons pour vous initier à l’espéranto. Le défi est que, à la fin de ce parcours, vous puissiez faire des phrases simples, comprendre de courts textes ou conversations, voire de correspondre avec des étrangers espérantistes&nbsp;! Pas moins&nbsp;! À l’origine, il s'agissait d’un cours par correspondance pour anglophones, adapté par la suite au français puis au courrier électronique par la société québécoise d’espéranto (ESK). La version mise en ligne en 2016 est une proposition revue, mais qui a gardé l’esprit de départ&nbsp;: simplicité et efficacité. Et ce en mettant à profit les connaissances pédagogiques nouvelles et les évolutions du web&nbsp;!</p>
 			<p>L’étape suivante sera alors de suivre le cours <a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a> qui vous permettra d’assimiler les connaissances acquises et vous ouvrira la porte à une utilisation active de la langue. Ou encore (et même en parallèle) ce sera de rencontrer les espérantistes de votre département, votre ville ou votre région… Rien de tel que l’échange humain tout de même pour avancer&nbsp;!</p>
 				
-			<p>Pour connaître les adresses des associations ou clubs proches de chez vous, rendez-vous sur le <a href="http://esperanto-france.org/">site d’Espéranto-France</a> puis sélectionnez votre département sous la carte dans la section <b>L’espéranto près de chez vous</b>.
+			<p>Pour connaître les adresses des associations ou clubs proches de chez vous, rendez-vous sur le <a href="http://esperanto-france.org/">site d’Espéranto-France</a> puis sélectionnez votre département sous la carte dans la section <b>L’espéranto près de chez vous</b></p>.
 
 			<h2>Comment suivre ce cours</h2>
 			

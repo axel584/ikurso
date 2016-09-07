@@ -359,7 +359,9 @@ include "dlekkapo.inc.php";
 						8 => "Le pain sera sec.",
 						9 => "Un garçon en bonne santé est beau.",
 						10 => "Des garçons sains seront grands.",
-						11 => "Le pain est à toi (« le pain est tien »)."
+						11 => "Le pain est à toi (« le pain est tien »).",
+						12 => "Qui est le nouvel instituteur ?",
+						13 => "Quel biscuit est sec ?"
 						);
 						ekzerco(True, 1);
 						?>
@@ -372,11 +374,11 @@ include "dlekkapo.inc.php";
 				<div class="tasko">
 				<?php 	
 					$demandoj=array (
-					12 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
-					13 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
 					14 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
 					15 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
-					16 => "Formez une phrase ayant un sens en combinant les mots de la leçon"
+					16 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
+					17 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
+					18 => "Formez une phrase ayant un sens en combinant les mots de la leçon"
 					);
 					ekzerco(True, 1);
 				?>
@@ -521,7 +523,7 @@ QCM(
 
 					<?php
 						$demandoj=array (
-						17 => "Je me présente :"
+						19 => "Je me présente :"
 						);
 						ekzerco(True, 5);
 						?>

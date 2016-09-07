@@ -517,6 +517,7 @@ QCM(
 			if ($section=="9") {
 			?>
 			<p class="parto">A votre tour ! En vous aidant du vocabulaire déjà vu et de la vidéo de l'exercice précédent, essayez de vous présenter à votre correcteur en quelques mots. N'oubliez pas les formules de politesse pour dire bonjour et au revoir. Si vous ne savez pas comment dire en espéranto votre profession, ce sera l'occasion de demander à votre correcteur. Vous devriez être capable de rédiger 4/5 phrases en espéranto.</p>
+			<p>Cet exercice ne vous permettra pas uniquement de vérifier que vous avez assimilé le nouveau vocabulaire, mais également de faire connaissance avec votre correcteur qui vous sera attribué et qui corrigera vos exercices tout au long de ce cours. Aucune utilisation commerciale ne sera faite des informations que vous transmettrait.</p>
 
 					<?php
 						$demandoj=array (

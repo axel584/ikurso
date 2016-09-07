@@ -378,3 +378,15 @@ update `lecioneroj` set ordo=12 WHERE id=18;
 update `lecioneroj` set ordo=13 WHERE id=19;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'Comment ça va ?', 'VORTARO', '11',0,0);
 update `lecioneroj` set ordo=11 WHERE id=30;
+
+-- passage en V9
+update `lecioneroj` set ordo=10 WHERE id=7;
+update `lecioneroj` set ordo=11 WHERE id=8;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '59', 'Qui est qui ?', 'QCM', '8',0,0);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '59', 'Je me présente', 'EKZERCARO', '9',0,0);
+update `lecioneroj` set titolo='Ekzercoj' WHERE titolo= 'Ezercoj';
+update respondoj set kodo='ekz01_14' where lecionero_id=6 and kodo='ekz01_12';
+update respondoj set kodo='ekz01_15' where lecionero_id=6 and kodo='ekz01_13';
+update respondoj set kodo='ekz01_16' where lecionero_id=6 and kodo='ekz01_14';
+update respondoj set kodo='ekz01_17' where lecionero_id=6 and kodo='ekz01_15';
+update respondoj set kodo='ekz01_18' where lecionero_id=6 and kodo='ekz01_16';	

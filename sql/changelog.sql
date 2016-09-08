@@ -390,3 +390,5 @@ update respondoj set kodo='ekz01_15' where lecionero_id=6 and kodo='ekz01_13';
 update respondoj set kodo='ekz01_16' where lecionero_id=6 and kodo='ekz01_14';
 update respondoj set kodo='ekz01_17' where lecionero_id=6 and kodo='ekz01_15';
 update respondoj set kodo='ekz01_18' where lecionero_id=6 and kodo='ekz01_16';	
+-- oublie de l'islande comme pays :
+INSERT INTO  `ikurso`.`landoj` (`id` ,`kodo` ,`nomo`) VALUES (NULL ,  'IS',  'Islande');

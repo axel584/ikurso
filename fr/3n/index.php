@@ -3,7 +3,7 @@ $subjekto="intro.php";
 $leciono = 0;
 $temo=isset($_GET["temo"])?$_GET["temo"]:"intro";
 $gxisdatigDato="2016-07-01";
-include "dlekkapo.inc.php"
+include "kapo.inc.php"
 ?>
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l2">
@@ -36,7 +36,7 @@ include "dlekkapo.inc.php"
 				<li>Attendez d'avoir reçu la première correction pour poursuivre votre apprentissage&nbsp;: c'est important, car le correcteur vous donnera des informations et consignes qui pourront vous éviter bien des erreurs. Ceci ne doit pas vous empêcher de lire les cours suivants avant ce retour de correction, et de déjà préparer les exercices.</li>
 			</ol>
 			
-			<p><b>ATTENTION</b> : Les cours sont GRATUITS, mais, nous mobilisons des correcteurs, qui mobilisent du temps&nbsp;! Aussi, l’inscription à ce cours en 10 leçons est un engagement de votre part. Aussi nous vous demandons de travailler régulièrement (une leçon par semaine au minimum) et de prévenir votre correcteur en cas de retard ou d’empêchement à poursuivre le cours. Car de son côté, votre correcteur s'est engagé à vous suivre et donc à mettre tout en œuvre pour le bon déroulement de ces 10 leçons. C'est un contrat tacite réciproque qui relève du respect mutuel&nbsp;!</p>
+			<p><b>ATTENTION</b> : Les cours sont GRATUITS, mais, nous mobilisons des correcteurs, qui mobilisent du temps&nbsp;! Aussi, l’inscription à ce cours est un engagement de votre part. Aussi nous vous demandons de travailler régulièrement (une leçon par semaine sauf leçon spécifiquement plus longue) et de prévenir votre correcteur en cas de retard ou d’empêchement à poursuivre le cours. Car de son côté, votre correcteur s'est engagé à vous suivre et donc à mettre tout en œuvre pour le bon déroulement de ces leçons. C'est un contrat tacite réciproque qui relève du respect mutuel&nbsp;!</p>
 			
 			<h2>Note au sujet de la typographie</h3>
 			
@@ -83,4 +83,4 @@ include "dlekkapo.inc.php"
 	
 </div>
 
-<?php include "dlekpiedo.inc.php"; ?>
+<?php include "piedo.inc.php"; ?>

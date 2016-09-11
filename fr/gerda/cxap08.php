@@ -56,6 +56,7 @@ include "gerdakapo.inc.php";
 					Ĉu mi sekvu lin en la urbo?</p>
 					<p>"Se li iros piede, eble li vidos min, verŝajne li vidos min.
 					Li suspektos, ke mi lin sekvas. Li turnos sin al mi. Mi ektimos. Mi
+					paliĝos. Aŭ mia vizaĝo iĝos ruĝa kiel tomato. Jes, mi konas min. Mi
 					paliĝos kaj tuj poste ruĝiĝos. Ĉiaokaze, mi maltrankviliĝos. Jam
 					nun mi maltrankviliĝas.</p>
 					<p>"Se li iros per buso, li eĉ pli certe vidos, ke mi sekvas lin,

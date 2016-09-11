@@ -25,17 +25,17 @@ include "gerdakapo.inc.php";
 					<p>Ŝi observas la junan viron, kiu metis ion en la kafon de
 					Gerda.</p>
 					<p>Ŝi pli kaj pli maltrankviliĝas.</p>
-					<p>Tom kaj Bob estas for jam longe. Ili ne revenas. ĉu do vere
-					okazis io al Gerda? Sed kio okazis? ĉu io grava?</p>
+					<p>Tom kaj Bob estas for jam longe. Ili ne revenas. Ĉu do vere
+					okazis io al Gerda? Sed kio okazis? Ĉu io grava?</p>
 					<p>Linda observas la junulon kaj pensas:</p>
 					<p>"Kion mi faros, se li ekstaros kaj foriros?</p>
-					<p>"Ĉu mi sekvos lin? ĉu mi sekvu lin?</p>
-					<p>"Kion mi faru, se li iros eksteren? ĉu mi sekvu lin eksteren?
-					ĉu mi sekvu lin ekstere? Mi ne scias, kion mi faru. Mi ne scias, kion
+					<p>"Ĉu mi sekvos lin? Ĉu mi sekvu lin?</p>
+					<p>"Kion mi faru, se li iros eksteren? Ĉu mi sekvu lin eksteren?
+					Ĉu mi sekvu lin ekstere? Mi ne scias, kion mi faru. Mi ne scias, kion
 					mi faros. Mi ne scias, ĉu mi sekvos lin aŭ ne.</p>
-					<p>"Kaj se li foriros en aŭto? ĉu ankaŭ mi sekvu lin aŭte?</p>
+					<p>"Kaj se li foriros en aŭto? Ĉu ankaŭ mi sekvu lin aŭte?</p>
 					<p>"Jam estas vespero. Baldaŭ venos nokto. Jes. Baldaŭ
-					noktiĝos. ĉu mi sekvu lin nokte?</p>
+					noktiĝos. Ĉu mi sekvu lin nokte?</p>
 					<p>"Kaj eĉ se li ne iros eksteren de la universitato, eĉ se li
 					restos ĉi tie, ĉu mi sekvu lin?</p>
 					<p>
@@ -67,10 +67,10 @@ include "gerdakapo.inc.php";
 					fari.</p>
 					<p>Kaj jen, antaŭ ol ŝi povis decidi, antaŭ ol ŝi sukcesis
 					retrankviliĝi, jen la juna viro ekstaras. Li rigardas al la koridora
-					pordo. ĉu tien li iros? Li rigardas al la pordo, tra kiu oni eliras al
-					la urbo. ĉu tien? Jes, tien li iras.</p>
+					pordo. Ĉu tien li iros? Li rigardas al la pordo, tra kiu oni eliras al
+					la urbo. Ĉu tien? Jes, tien li iras.</p>
 					<p>Kaj Linda aŭtomate ekstaras kaj ekpaŝas al la sama pordo. Ne
-					ŝi decidis. ŝajnas, ke ŝia korpo decidis mem. ŝajnas, ke ŝiaj
+					ŝi decidis. Ŝajnas, ke ŝia korpo decidis mem. Ŝajnas, ke ŝiaj
 					kruroj agas mem. Nu, ĉiaokaze, jen Linda sekvas lin. Al kiu mistera
 					destino?</p>
 				</div>

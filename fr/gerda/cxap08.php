@@ -149,7 +149,7 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">korpo</span> : corps</p>
 					<p><span class="eo">kruro</span> : jambe</p>
 				</div>
-				<div class="vortlisto row">
+				<div class="col s12 l6">
 					<p><span class="eo">longa</span> : long(ue)</p>
 					<p><span class="eo">mem</span> : soi-même</p>
 					<p class="sekva"><span class="eo">mi mem, vi mem</span> : moi-même, toi-même</p>

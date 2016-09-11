@@ -20,7 +20,7 @@ include "gerdakapo.inc.php";
 			<div class="row dialogo">
 				<div class="col s12 m8">
 					<p>En la universitata memserva restoracio, Linda sidas kaj pensas.
-					ŝi pensas ne tre trankvile. Fakte, ŝiaj pensoj iĝas pli kaj pli
+					Ŝi pensas ne tre trankvile. Fakte, ŝiaj pensoj iĝas pli kaj pli
 					maltrankvilaj.</p>
 					<p>Ŝi observas la junan viron, kiu metis ion en la kafon de
 					Gerda.</p>

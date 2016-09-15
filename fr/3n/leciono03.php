@@ -1,6 +1,6 @@
  <?php
-$titolo="1 (unu)";
-$leciono = 1;
+$titolo="3 (tri)";
+$leciono = 3;
 $section=isset($_GET["section"])?$_GET["section"]:"1";
 include "kapo.inc.php";
 ?>
@@ -9,7 +9,7 @@ include "kapo.inc.php";
 		
 		<section id="leciono-enhavo">
 			<?php 
-			getTitoloLecionero('3N',1,$section);
+			getTitoloLecionero('3N',$leciono,$section);
 			
 			if ($section=="1") {
 			?>

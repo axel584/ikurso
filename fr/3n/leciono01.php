@@ -9,7 +9,7 @@ include "kapo.inc.php";
 		
 		<section id="leciono-enhavo">
 			<?php 
-			getTitoloLecionero('3N',1,$section);
+			getTitoloLecionero('3N',$leciono,$section);
 			
 			if ($section=="1") {
 			?>

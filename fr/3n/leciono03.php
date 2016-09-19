@@ -15,17 +15,24 @@ include "kapo.inc.php";
 			?>
 
 	
-			<p class="parto">Per minimume 100 vortoj, prezentu vin. Kiel vi nomiĝas ? Kion vi faras/is profesie ? Kie vi loĝas ? Kion vi faras dum via libertempo ? Ĉu vi havas infanojn ? Ĉu vi havas dorlotbestojn ? Kompreneble, vi ne estas devigata respondi al ĉiuj demandoj kaj vi povas aldoni informoj pri aliaj temoj por ke via korektanto pli bone konatu vin. Trankviliĝu : ni ne uzos tiun informojn por sendi reklamon !</p>
+			<p class="parto">Rakontu vian plej ŝatatan filmon. Detale priskribu la rakonton kaj diru kial vi ŝatis ĝin. Sed NE nomu tiun filmon. La aliaj lernantoj devos trovi la nomon de tiu filmo legante vian priskribon. Elektu sufiĉe konatan filmon.</p>
 
 
 			<?php
 				$demandoj=array (
-				1 => "Jen mia prezentado :"
+				1 => "Mia plej ŝatata filmo temas pri :"
 				);
 				ekzerco(True, 20);
 			?>
 
+			<p>Tie, skribu la nomon de la filmo en via lingvo aux en la originala lingvo de la filmo.</p>
 
+			<?php
+				$demandoj=array (
+				2 => "Mia plej ŝatata filmo nomiĝas :"
+				);
+				ekzerco(False, 1);
+			?>
 			
 			<?php 
 			} // fin section

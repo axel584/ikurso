@@ -15,15 +15,35 @@ include "kapo.inc.php";
 			?>
 
 	
-			<p class="parto">Per minimume 100 vortoj, prezentu vin. Kiel vi nomiĝas ? Kion vi faras/is profesie ? Kie vi loĝas ? Kion vi faras dum via libertempo ? Ĉu vi havas infanojn ? Ĉu vi havas dorlotbestojn ? Kompreneble, vi ne estas devigata respondi al ĉiuj demandoj kaj vi povas aldoni informoj pri aliaj temoj por ke via korektanto pli bone konatu vin. Trankviliĝu : ni ne uzos tiun informojn por sendi reklamon !</p>
+			<p class="parto">En la venonta paĝo, vi devos aŭskulti tekston kaj respondi al kelkaj demandoj. Ĉi-tie troviĝas kelkaj vortoj el tiu teksto. Prenu iom da tempo por legi tiujn vortojn kaj memoru ilin se vi ankoraŭ ne konas ilin.</p>
 
 
-			<?php
-				$demandoj=array (
-				1 => "Jen mia prezentado :"
-				);
-				ekzerco(True, 20);
-			?>
+		<div class="vortlisto row">
+			<div class="col s12 m4">
+				<p><span class="eo">amplifilo</span> : amplificateur</p>
+				<p><span class="eo">bendo</span> : bande</p>
+				<p><span class="eo">eltrovaĵo</span> : découverte</p>
+				<p><span class="eo">estingi</span> : éteindre</p>
+				<p><span class="eo">fajrobrigadisto</span> : pompier</p>
+				
+
+			</div>
+			<div class="col s12 m4">
+				<p><span class="eo">frekvenco</span> : fréquence</p>
+				<p><span class="eo">fritilo</span> : filtre</p>
+				<p><span class="eo">generatoro</span> : générateur</p>
+				<p><span class="eo">herco</span> : hertz</p>			
+				<p><span class="eo">kemia</span> : chimique</p>
+				
+
+			</div>
+			<div class="col s12 m4">
+				<p><span class="eo">korpusklo</span> : corpuscule</p>
+				<p><span class="eo">patento</span> : brevet</p>
+				<p><span class="eo">ŝaŭmo</span> : écume, mousse</p>
+				<p><span class="eo">toksa</span> : toxique</p>			
+			</div>
+		</div>
 
 
 			
@@ -31,14 +51,114 @@ include "kapo.inc.php";
 			} // fin section
 			if ($section=="2") {
 			?>
-
-
-			<p>Ĝis baldaŭ por la venonta leciono&nbsp;!</p>
-
-			<div class="card-panel blue lighten-5">
-				<p>Aliĝi estas devigata nur por ricevi helpon de korektanto. Korektantoj estas volontuloj kiuj laboras senpage. Ili sekvas limigitan nombron de lernantoj. Pro tio, se vi petas korektanton, provu sekvi la kurson serioze kaj regule. Se vi ne povas sendi viajn lecionojn dum pluraj semajnoj, informu vian korektanton por ke li povu klopodi la taskojn de alia lernanto.
-				<p>Agrablan vojaĝon tra niaj lecionoj !</p>	
+			<fieldset class="ekzerco">
+				<legend>Aŭskultu la tekston <b>nur unu foje</b> kaj respondu la demandon.</legend>
+			<div class="tasko">
+				<p>
+					<audio controls="controls">Votre navigateur ne supporte pas la lecture du fichier audio.
+						<source src="<?php echo $vojo;?>fr/3n/son/Estingi_fajron.mp3" type="audio/mp3">
+					</audio>
+				</p>
+<?php
+QCM(
+	array(
+		array(
+			"question"=>"Laŭ vi, en kiu kategorio de la gazeto aperis tiu artikolo ?",
+			"propositions"=>array("Politiko","Scienco","Turismo","Ekonomio"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		)
+	)
+);
+?>
 			</div>
+
+			</fieldset>
+
+			<?php 
+			} // fin section
+			if ($section=="3") {
+			?>
+
+			<fieldset class="ekzerco">
+				<legend>Aŭskultu <b>duan fojon</b> kaj respondu la demandon per vera aŭ malvera.</legend>
+			<div class="tasko">
+				<p>
+					<audio controls="controls">Votre navigateur ne supporte pas la lecture du fichier audio.
+						<source src="<?php echo $vojo;?>fr/3n/son/Estingi_fajron.mp3" type="audio/mp3">
+					</audio>
+				</p>
+<?php
+QCM(
+	array(
+		array(
+			"question"=>"Du ĉinaj inĝinieroj trovis novan metodon por estingi fajron",
+			"propositions"=>array("Vera","Malvera"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		),
+		array(
+			"question"=>"La aparato postulis 1200 dolarojn",
+			"propositions"=>array("Vera","Malvera"),
+			"indices"=>array("","",""),
+			"reponse"=>1
+		),
+		array(
+			"question"=>"La inventistoj filmis pruvon de sia funkcianta aparato",
+			"propositions"=>array("Vera","Malvera"),
+			"indices"=>array("","",""),
+			"reponse"=>1
+		),
+		array(
+			"question"=>"Tiu aparato aĉeteblas je la kosto de 600 dolaroj",
+			"propositions"=>array("Vera","Malvera"),
+			"indices"=>array("","",""),
+			"reponse"=>2
+		)
+	)
+);
+?>
+			</div>
+
+			</fieldset>
+
+			<?php 
+			} // fin section
+			if ($section=="4") {
+			?>
+
+			<fieldset class="ekzerco">
+				<legend>Aŭskultu <b>plian fojon</b> kaj respondu la demandon.</legend>
+			<div class="tasko">
+				<p>
+					<audio controls="controls">Votre navigateur ne supporte pas la lecture du fichier audio.
+						<source src="<?php echo $vojo;?>fr/3n/son/Estingi_fajron.mp3" type="audio/mp3">
+					</audio>
+				</p>
+				<p>Tiu frazo estas en la teksto sed unu vorto estis anstataŭigita per alia vorto. Kiun vorton ?</p>
+				<p><span class="eo">La eltrovaĵo ŝajnas interesa, ĉar ĝi estas pli senriska ol la kutimaj kontraŭbrulaj metodoj.</span></p>
+
+				<?php
+				$demandoj=array (
+				1 => "la ŝanĝita vorto estas :",
+				2 => "la originala vorto estis :"
+				);
+				ekzerco(True, 1);
+			?>
+
+			</div>
+
+			</fieldset>
+
+			<?php 
+			} // fin section
+			if ($section=="5") {
+			?>
+
+			<?php 
+			} // fin section
+			if ($section=="6") {
+			?>			
 		
 		<?php 
 				recapitulatif_lecon_avant_envoi('3N',$leciono,$persono_id);

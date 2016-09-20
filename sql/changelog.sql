@@ -402,7 +402,7 @@ INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '129', 'Prezentu vin', 'EKZERCARO', NULL, '1', '1', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '129', 'Envoi des exercices', 'TEKSTO', NULL, '2', '0', '1');
 -- 2eme lecon
-INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '130', 'Vocabulaire', 'VORTARO', NULL, '1', '1', '0');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '130', 'Estingi fajron per sonoj - Vocabulaire', 'VORTARO', NULL, '1', '1', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '130', 'Question - 1ère partie', 'QCM', NULL, '2', '0', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '130', 'Questions - 2ème partie', 'QCM', NULL, '3', '0', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '130', 'Questions - 3ème partie', 'QCM', NULL, '4', '0', '0');

@@ -89,12 +89,14 @@ include "gerdakapo.inc.php";
 		    	<h4>-ejo : <i>indique l'emplacement, le lieu (souvent collectif)</i></h4>
 				<p><span class="eo">dormi</span> : dormir → <span class="eo">dormejo</span> : «dortoir» («chambre» se dit <span class="eo">dormoĉambro</span>)</p>
 				<p><span class="eo">lerni</span> : apprendre → <span class="eo">lernejo</span> : école</p>
-	
+
+		    	<h4><i>Accusatif de direction</i></h4>
 				<p><span class="eo">li aŭtas en la urbo</span> : il se déplace en voiture dans la ville<br>
 					<span class="eo">li aŭtas en la urbon</span> : il se rend, en voiture, en ville</p>
 				<p><span class="eo">li aŭtas tie</span> : il se déplace en voiture là-bas<br>
 					<span class="eo">li aŭtas tien</span> : il se rend en voiture là-bas</p>
 	
+		    	<h4>si : <i>Pronom réfléchi</i></h4>
 				<p><span class="eo">ŝi mem diris ĝin</span> : elle le dit elle-même<br>
 					<span class="eo">ŝi diris ĝin al si</span> : elle se le dit (mot-à-mot : elle le dit à soi)</p>
 				<p><span class="eo">li diris ĝin al si</span> : il se le dit<br>

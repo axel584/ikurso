@@ -29,7 +29,7 @@ include "gerdakapo.inc.php";
 					<p>"Kial, diable, ŝi kuŝus meze de la koridoro?" ŝi demandas.</p>
 					<p>"Mi petas, venu urĝe. Mi ne scias, kial ŝi kuŝas tie. Mi nur
 					diras, kion mi vidis. Ni trovis ŝin tie. Eble ŝi estis malsana.  Mi
-					ne scias. ŝi svenis, ŝi perdis la konscion. Nun certe oni devas urĝe
+					ne scias. Ŝi svenis, ŝi perdis la konscion. Nun certe oni devas urĝe
 					okupiĝi pri ŝi."</p>
 					<p>"Stranga afero!"</p>
 					<p>"Nu, mi ne estas fakulo. Vi jes. Okupiĝi pri malsanaj homoj
@@ -50,7 +50,7 @@ include "gerdakapo.inc.php";
 					rapidos tien, kaj mi tuj prizorgos ŝin."</p>
 					<p>Kaj ili kune rapidas al la loko, kie Tom lasis sian amikon kun
 					Gerda.</p>
-					<p><b>Bob:</b> Pardonu min. Mi volas diri, ke io estas pli grava.</p>
+					<p>Sed jen subite Tom haltas.</p>
 				</div>
 				<div class="col s12 m4">
 					<img src="bildoj/gerda09-1.gif" class="responsive-img">
@@ -59,15 +59,14 @@ include "gerdakapo.inc.php";
 
 			<div class="row dialogo">
 				<div class="col s12 m8">
-					<p>Sed jen subite Tom haltas.</p>
 					<p>"Kio okazas? Kial vi ekhaltis?" demandas la flegistino.</p>
 					<p>"Ŝi estis ĉi tie, kaj ne plu estas, sed…"</p>
 					<p>"Sed estas iu alia, kaj <i>li</i> estas senkonscia, ŝajnas al mi. Ĉu vi konas lin?"</p>
 					<p>"Jes, estas mia amiko Bob. Kio okazis al li?"</p>
 					<p>La flegistino iras al Bob, kiu falsidas ĉe la koridora muro.
-					ŝi tuŝas lian kapon.</p>
+					Ŝi tuŝas lian kapon.</p>
 					<p>"Batita! Oni batis la kapon al li!"</p>
-					<p>"Diable! Bob, Bob! Respondu! Ĉu vi aŭdas min? Diru ion, mi petas! Kio okazis?</p>
+					<p>"Diable! Bob, Bob! Respondu! Ĉu vi aŭdas min? Diru, mi petas! Kio okazis?</p>
 					<p>Sed Bob ne respondas, kaj Tom iĝas pli kaj pli maltrankvila.</p>
 				</div>
 				<div class="col s12 m4">

@@ -412,7 +412,9 @@ include "dlekkapo.inc.php";
 			?>
 			<p class="parto">En vous aidant des expressions que l'on vient de voir et d'un peu de bon sens, essayez d'attribuer à chacune des personnes de la vidéo son nom, son domicile et sa profession.</p>
 			<p>Ne vous attendez pas à comprendre <b>tout</b>, essayez juste de comprendre ce qui vous permettra de répondre au questionnaire. N'hésitez pas à regarder la vidéo plusieurs fois. Au besoin, prenez des notes sur du papier, l'exercice sera d'autant plus utile si vous essayez de répondre sérieusement aux questions. Si vous vous trompez, prenez un peu de temps pour vérifier dans la vidéo la bonne réponse avant d'essayer de donner une autre réponse.</p>
+			<p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/pTQEn0-fuQc" frameborder="0" allowfullscreen></iframe>
+			</p>
 
 
 			<?php 
@@ -423,18 +425,6 @@ QCM(
 			"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
 			"indices"=>array("","",""),
 			"reponse"=>2
-		),
-		array(
-			"question"=>"En kiu filmo estas Allan ?",
-			"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
-			"indices"=>array("","",""),
-			"reponse"=>5
-		),
-		array(
-			"question"=>"En kiu filmo estas Anna Maria ?",
-			"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
-			"indices"=>array("","",""),
-			"reponse"=>3
 		),
 		array(
 			"question"=>"En kiu filmo estas Joanne ?",
@@ -449,22 +439,10 @@ QCM(
 			"reponse"=>4
 		),
 		array(
-			"question"=>"Kiu loĝas en Aŭstralio ?",
-			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
-			"indices"=>array("","",""),
-			"reponse"=>4
-		),	
-		array(
 			"question"=>"Kiu loĝas en Brazilo ?",
 			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
 			"indices"=>array("","",""),
 			"reponse"=>2
-		),
-		array(
-			"question"=>"Kiu loĝas en Francio ?",
-			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
-			"indices"=>array("","",""),
-			"reponse"=>1
 		),
 		array(
 			"question"=>"Kiu loĝas en Pollando ?",
@@ -486,12 +464,6 @@ QCM(
 			"reponse"=>4
 		),		
 		array(
-			"question"=>"Kiu estas intruisto ?",
-			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
-			"indices"=>array("","",""),
-			"reponse"=>1
-		),
-		array(
 			"question"=>"Kiu estas psikologo ?",
 			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
 			"indices"=>array("","",""),
@@ -504,10 +476,10 @@ QCM(
 			"reponse"=>2
 		),
 		array(
-			"question"=>"Kiu laboras pri importo-eksporto ?",
-			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+			"question"=>"Kie loĝas la instruisto ?",
+			"propositions"=>array("Aŭstralio","Brazilo","Francio","Pollando","Vjetnamio"),
 			"indices"=>array("","",""),
-			"reponse"=>5
+			"reponse"=>3
 		)
 	)
 );

@@ -29,7 +29,7 @@ function atentigo() {
 	echo "<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>&nbsp;:&nbsp;";
 	echo "en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
 }
-function ekzerco($x2u, $nbLig, $cols6="N") {
+function ekzerco($x2u, $nbLig, $cols6="N",$nbvortoj=0) {
 	global $demandoj, $memorkurso, $persono_id, $numcxap;
 	//
 	// x2u = sistemo uzata en la ekzerco. Se true, ni uzas la auxtomatan anstatauxigon de x per cxapelo
@@ -69,7 +69,10 @@ function ekzerco($x2u, $nbLig, $cols6="N") {
 		}
 		else
 		{
-			echo "<div class='input-field col s12'><textarea class='materialize-textarea' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
+			if ($nbvortoj!=0) {
+				$dataVortoj = "data-vortoj='".$nbvortoj."'";
+			}
+			echo "<div class='input-field col s12'><textarea id=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\" ".$dataVortoj." class='materialize-textarea' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			if ($idenfication==False) {
 				echo " READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'";
 			}
@@ -81,7 +84,8 @@ function ekzerco($x2u, $nbLig, $cols6="N") {
 			if (isset($memorkurso[$var])){
 				echo htmlspecialchars(stripslashes($memorkurso[$var]));
 			}
-			echo "</textarea></div>";
+			echo "</textarea><label for=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"></div>";
+
 		}
 		if ($cols6=="J") {
 			echo "</div>";

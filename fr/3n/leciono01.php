@@ -22,7 +22,7 @@ include "kapo.inc.php";
 				$demandoj=array (
 				1 => "Jen mia prezentado :"
 				);
-				ekzerco(True, 20);
+				ekzerco(True, 20,"N",5);
 			?>
 
 

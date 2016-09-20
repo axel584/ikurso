@@ -76,6 +76,22 @@ $('#range_malfacileco').on("change mousemove", function() {
     }
 });
 
+$("textarea").on('change keyup paste', function() {
+  var $id=$(this).attr('id');
+  console.log($id);
+  var $vortoj = $(this).data("vortoj");
+  if ($vortoj) {
+    var skribitajVortoj = $(this).val().trim().split(' ').length;
+    if (skribitajVortoj<$vortoj) {
+      $("#"+$id).addClass("invalid");
+      $("label[for='"+$id+"']").attr('data-error',$vortoj-skribitajVortoj);
+    } else {
+      $("#"+$id).removeClass("invalid");
+      $("label[for='"+$id+"']").attr('data-error',"");
+    }
+  }
+ // 
+});
 
 $('#eniri_identigilo,#eniri_pasvorto').keyup(function(e) {    
    if(e.keyCode == 13) { // KeyCode de la touche entrée

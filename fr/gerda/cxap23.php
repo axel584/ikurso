@@ -282,7 +282,7 @@ include "gerdakapo.inc.php";
 			hundo, aŭ kiel pezeg-portanto, en lokoj maldolĉaj. Miaj kruroj kaj
 			piedoj ne estas speciale belaj — ili eĉ estas vere malbelaj, se
 			paroli sincere — sed mi ŝatas ilin, ĉar ili ĉiam servis min amike,
-			kaj la «dolĉa vivo» de simpla soldato pli kaj pli eluzis<a href="#notoj">[4]</s> ilin,
+			kaj la «dolĉa vivo» de simpla soldato pli kaj pli eluzis<a href="#notoj">[4]</a> ilin,
 			tiel ke mi sentis min iĝanta iom pli malalta ĉiutage.</p>
 			
 			<p>Cetere, mia tuta korpo eluziĝis. Mi jam ne havis multe da graso
@@ -459,8 +459,10 @@ include "gerdakapo.inc.php";
 			</ol>
 
 		<?php 
-		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
 		} // fin section 5
+		if ($section=="6") {
+			recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
+		} // fin section 6
 		?>
 
 		</section>

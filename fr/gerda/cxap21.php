@@ -428,8 +428,10 @@ include "gerdakapo.inc.php";
 			<p>Sed al mi almenaŭ, ho ŝtata polico, certe ne mankos vi.</p>
 
 		<?php 
-		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
 		} // fin section 5
+		if ($section=="6") {
+			recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
+		} // fin section 6
 		?>
 
 		</section>

@@ -298,9 +298,11 @@ include "gerdakapo.inc.php";
 				<li><span class="eo">Perdi la kapon</span> : ekmispensi, ekpensi fuŝe, perdi la povon ĝuste pensi.</li>
 			</ol>
 
-		<?php
-		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
+		<?php 
 		} // fin section 5
+		if ($section=="6") {
+			recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
+		} // fin section 6
 		?>
 
 		</section>

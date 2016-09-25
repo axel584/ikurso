@@ -382,11 +382,13 @@ include "gerdakapo.inc.php";
 			<p>«Mi sidas tute sola. Mi rigardas al vi, spegulo. Kaj
 			en la spegulo estas nur Izabela, la plej malbela knabino en
 			la tuta mondo. Vere la nuna mondo ne estas bela.»</p>
+			
 		<?php 
-		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
 		} // fin section 5
+		if ($section=="6") {
+			recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
+		} // fin section 6
 		?>
-
 		</section>
 		
 		<section id="leciono-fino">

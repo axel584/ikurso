@@ -295,8 +295,10 @@ include "gerdakapo.inc.php";
 			simpla fakto estas, ke mi amas vin. Kaj ke tio estas bona.</p>
 
 		<?php 
-		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
 		} // fin section 5
+		if ($section=="6") {
+			recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
+		} // fin section 6
 		?>
 		</section>
 		

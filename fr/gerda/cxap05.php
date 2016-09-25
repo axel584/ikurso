@@ -304,9 +304,11 @@ include "gerdakapo.inc.php";
 				<li><span class="eo">Mi turnus min al</span>: mi irus paroli al.</li>
 			</ol>
 
-		<?php
-		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id); 
+		<?php 
 		} // fin section 5
+		if ($section=="6") {
+			recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
+		} // fin section 6
 		?>
 
 		</section>

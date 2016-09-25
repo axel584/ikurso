@@ -8,7 +8,7 @@ include "kapo.inc.php"
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l2">
 		<section id="leciono-kapo">
-			<h1>Cours de 3ème niveau</h1>
+			<h1>Cours de 3<sup>e</sup> niveau</h1>
 		</section>
 		
 		<section id="leciono-enhavo">
@@ -16,18 +16,18 @@ include "kapo.inc.php"
 			<h2>Préambule</h2>
 			
 			<p>Ce cours est destiné aux élèves qui ont déjà suivi un cours débutant et qui souhaitent approfondir leur connaissance de l'espéranto.</p>
-			<p>Des exercices variés vont permettre d'améliorer votre compréhension écrite et orale, mais aussi votre expression. Les différentes leçons ne contiennent pas de points de grammaire ou d'explications linguistiques. Nous avons préférer mettre en place des projets que vous pourrez réaliser grâce à votre connaissance de la langue.</p>
+			<p>Des exercices variés vont permettre d'améliorer votre compréhension écrite et orale, mais aussi votre expression. Les différentes leçons ne contiennent pas de points de grammaire ou d'explications linguistiques. Nous avons préféré mettre en place des projets que vous pourrez réaliser grâce à votre connaissance de la langue.</p>
 			<p>L'objectif de ce cours est de vous faire pratiquer régulièrement l'espéranto dans des situations très différentes.</p>
-			<p>Comme pour les autres cours de ce site, un correcteur pourra vous êtes attribué et il sera là pour répondre à vos questions. Mais contrairement aux autres cours, vous allez apprendre à devenir autonome et à prendre des habitudes d'apprentissage. Ainsi, vous allez pouvoir pratiquer l'espéranto quotidiennement en utilisant les clefs qui vous seront donnés lors de ce cours.</p>.
+			<p>Comme pour les autres cours de ce site, un correcteur pourra vous être attribué et il sera là pour répondre à vos questions. Mais contrairement aux autres cours, vous allez apprendre à devenir autonome et à prendre des habitudes d'apprentissage. Ainsi, vous allez pouvoir pratiquer l'espéranto quotidiennement en utilisant les clefs qui vous seront données lors de ce cours.</p>.
 
 			<h2>Comment suivre ce cours</h2>
 			
-			<p>Ce cours de compose de plusieurs leçons dont le nombre est prévu pour s’accroître au fil du temps. Les leçons contiennent du son, des textes, des images, des vidéos. Une large place est donnée aux exercices de mise en pratique, aux QCM, aux tests afin que vous puissiez pas à pas évaluer vos progrès. Les leçons sont prévues pour être de difficulté croissante. Vous pouvez néanmoins faire les leçons dans l'ordre que vous souhaitez. Nous avons tenté de rendre les leçons les plus variées possible. Certaines leçons vous demandera un travail personnel conséquent, n'hésitez pas à avancer sur les leçons suivantes, tout en gardant à l'esprit de faire l'ensemble des leçons.</p>
-			<p>Le cours peut être utilisé par en mode autodidacte, cependant nous vous conseillons de demander l’aide d’un tuteur qui corrigera vos exercices, sera disponible pour répondre à vos questions et vous suivra tout au long de votre apprentissage.</p>
+			<p>Ce cours de compose de plusieurs leçons dont le nombre est prévu de s’accroître au fil du temps. Les leçons contiennent du son, des textes, des images, des vidéos. Une large place est donnée aux exercices de mise en pratique, aux QCM, aux tests afin que vous puissiez pas à pas évaluer vos progrès. Les leçons sont prévues pour être de difficulté croissante. Vous pouvez néanmoins faire les leçons dans l'ordre que vous souhaitez. Nous avons tenté de rendre les leçons les plus variées possible. Certaines leçons vous demanderont un travail personnel conséquent, n'hésitez pas à avancer sur les leçons suivantes, tout en gardant à l'esprit de faire l'ensemble des leçons.</p>
+			<p>Le cours peut être utilisé en mode autodidacte, cependant nous vous conseillons de demander l’aide d’un tuteur qui corrigera vos exercices, sera disponible pour répondre à vos questions et vous suivra tout au long de votre apprentissage.</p>
 
 			<p>Lorsque vous aurez créé votre compte, il vous suffira de commencer le cours et d’effectuer les exercices de la leçon 1. Un correcteur vous sera alors attribué en fonction des places disponibles.</p>
 			
-			<h3>Pour demander l’aider d'un correcteur :</h3>
+			<h3>Pour demander l’aide d'un correcteur :</h3>
 			
 			<ol>
 				<li>Si vous n'en avez pas encore un, créez un compte sur ce site en indiquant au minimum une adresse électronique valide permettant les échanges entre vous et le correcteur.</li>

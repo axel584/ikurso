@@ -148,7 +148,6 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">vi</span> : vous</p>
 					<p><span class="eo">ili</span> : ils ou elles</p>
 					<p><span class="eo">oni</span> : on</p>
-					<p><span class="eo">si</span> : soi-même</p>
 				</div>
 			</div>
 

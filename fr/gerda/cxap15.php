@@ -434,10 +434,11 @@ include "gerdakapo.inc.php";
 				aferojn (ekzemple : manĝaĵon, vestaĵojn, librojn, televidilojn...)</li>
 			</ol>
 			
-
 		<?php 
-		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
 		} // fin section 5
+		if ($section=="6") {
+			recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
+		} // fin section 6
 		?>
 
 		</section>

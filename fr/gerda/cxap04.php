@@ -237,10 +237,11 @@ include "gerdakapo.inc.php";
 			lernas ilin. Por rilati inter ni, ne nur mane, sed ankaŭ parole.</p>
 
 		<?php 
-		recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
 		} // fin section 5
+		if ($section=="6") {
+			recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);
+		} // fin section 6
 		?>
-
 		</section>
 		
 		<section id="leciono-fino">

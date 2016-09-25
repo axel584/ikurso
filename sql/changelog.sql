@@ -416,3 +416,60 @@ INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '132', 'Kio ozazos ?', 'EKZERCARO', NULL, '1', '1', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '132', 'Solvo', 'EKZERCARO', NULL, '2', '0', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '132', 'Envoi des exercices', 'TEKSTO', NULL, '3', '0', '1');
+-- ajout partie à la fin de chaque chapitre Gerda pour l'envoi des exercices
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 95;
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 100
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 105
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 110
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 115
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 120
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 125
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 130
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 135
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 140
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 145
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 150
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 155
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 160
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 165
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 170
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 175
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 180
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 185
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 190
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 195
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 200
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 205
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 210
+UPDATE `ikurso`.`lecioneroj` SET `lasta` = '0' WHERE `lecioneroj`.`id` = 215
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '64', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '65', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '66', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '67', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '68', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '69', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '70', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '71', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '72', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '73', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '74', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '75', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '76', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '77', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '78', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '79', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '80', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '81', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '82', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '83', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '84', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '69', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '85', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '86', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '87', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '88', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '89', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '90', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '91', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '92', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '93', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');

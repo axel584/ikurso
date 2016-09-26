@@ -51,6 +51,9 @@ if ($kurso=="CG") {
 if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
 } 
+if ($kurso=="3N") {
+	$prefixeKurso = "fr/3n/";
+} 
 
 // On recherche la section suivante à cette section, donc on va rechercher la valeur du "ordo" pour la section en cours :
 $query = "select ordo from lecioneroj where id=".$lecionero_id;

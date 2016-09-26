@@ -55,6 +55,10 @@ if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
 	$nomCours = "gerda cxap";
 } 
+if ($kurso=="3N") {
+	$prefixeKurso = "fr/3n/";
+	$nomCours = "3a nivela kurso leciono ";
+} 
 
 
 // on met le champ "kurso" de l'élève a la bonne valeur et son champ "rajtoj" à P

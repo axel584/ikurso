@@ -139,11 +139,18 @@ QCM(
 				<p><span class="eo">La eltrovaĵo ŝajnas interesa, ĉar ĝi estas pli senriska ol la kutimaj kontraŭbrulaj metodoj.</span></p>
 
 				<?php
-				$demandoj=array (
-				1 => "la ŝanĝita vorto estas :",
-				2 => "la originala vorto estis :"
+				ekzercoMemkorektita(True, 
+					array(
+						array(
+							"question"=>"la ŝanĝita vorto estas :",
+							"reponse"=>"kutimaj"
+						),
+						array(
+							"question"=>"la originala vorto estis :",
+							"reponse"=>"tradiciaj"
+						),
+					)
 				);
-				ekzerco(True, 1);
 			?>
 
 			</div>
@@ -168,7 +175,7 @@ QCM(
 
 		<section id="leciono-fino">
 			<div id="marko" class="right-align">
-				<?php getBoutonFinSection('3N',1,$section,$persono_id); ?>
+				<?php getBoutonFinSection('3N',$leciono,$section,$persono_id); ?>
 				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
 			</div>
 			<div class="ligoj">

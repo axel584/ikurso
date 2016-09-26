@@ -247,6 +247,8 @@ function getPrefixeCours($kurso) {
         return 'fr/gerda/';
     } elseif($kurso=="CG") {
        return 'fr/cge/';
+    } elseif($kurso=="3N") {
+       return 'fr/3n/';       
     } else {
         return null;
     }

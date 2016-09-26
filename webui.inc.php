@@ -586,4 +586,47 @@ function getListoLecionoj($kurso,$leciono) {
 	
 }
 
+function ekzercoMemkorektita($convert,$strukturo) {
+	echo "<div class='qcm' id='carousel_qcm'>";
+	$indiceQuestion= 1;
+	foreach ($strukturo as $question) {
+		if ($indiceQuestion==1) {
+			echo "<div class='qcm_demando row'>";
+		} else {
+			echo "<div class='qcm_demando row hide'>";
+		}
+		echo "<h3>Question ".$indiceQuestion."/".count($strukturo)." :</h3>";
+		echo "<div class='input-field col s6 l4'>".$question["question"];
+		$indiceProposition= 1;
+		// on verifie si c'est la derniere question
+		if ($indiceQuestion==count($strukturo)) {
+			$lasta = "data-lasta='true'";
+		} else {
+			$lasta = "";
+		}
+		echo "<input type='text' name='qcm".$indiceQuestion."' class='input-field validate' id='00".$indiceQuestion."' ".$lasta." data-reponse='".$question["reponse"]."'/>";
+		echo '<a id="kontroliRespondon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-position="top" data-delay="50" data-tooltip="kontrolu mian respondon">Kontrolu !</a>';
+		echo "</div>";
+		echo "</div>\n";
+		$indiceQuestion++;
+	}
+	echo "</div>";
+	// on affiche un récapitulatif :
+	// echo "<div class='row hide' id='recapitulatif_qcm'>";
+	// echo "<div class='col s12'>";
+	// echo "<div class='card-panel blue lighten-5'>";
+	// echo "<h3>Récapitulatif :</h3>";
+	// $indiceQuestion= 1;
+	// echo "<ul class='collection'>";
+	// foreach ($qcm as $question) {
+	// 	//echo "<li>".$question["propositions"][$question["reponse"]]."</li>";
+	// 	echo "<li class='collection-item row'>";
+	// 	echo "<span class='col s12'><b>".$indiceQuestion.". ".$question["question"]."</b></span><span class='col s12'>".$question["propositions"][$question["reponse"]-1]."</span></li>";
+	// 	$indiceQuestion++;
+	// }
+	// echo "</div>";
+	// echo "</div>";
+	// echo "</div>\n";
+}
+
 ?>

@@ -84,7 +84,7 @@ $("textarea").on('change keyup paste', function() {
     var skribitajVortoj = $(this).val().trim().split(' ').length;
     if (skribitajVortoj<$vortoj) {
       $("#"+$id).addClass("invalid");
-      $("label[for='"+$id+"']").attr('data-error',$vortoj-skribitajVortoj);
+      $("label[for='"+$id+"']").attr('data-error',($vortoj-skribitajVortoj)+" vortojn");
     } else {
       $("#"+$id).removeClass("invalid");
       $("label[for='"+$id+"']").attr('data-error',"");

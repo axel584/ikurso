@@ -22,7 +22,7 @@ include "kapo.inc.php";
 				$demandoj=array (
 				1 => "Jen mia prezentado :"
 				);
-				ekzerco(True, 20,"N",5);
+				ekzerco(True, 20,"N",100);
 			?>
 
 
@@ -48,7 +48,7 @@ include "kapo.inc.php";
 
 		<section id="leciono-fino">
 			<div id="marko" class="right-align">
-				<?php getBoutonFinSection('3N',1,$section,$persono_id); ?>
+				<?php getBoutonFinSection('3N',$leciono,$section,$persono_id); ?>
 				<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
 			</div>
 			<div class="ligoj">

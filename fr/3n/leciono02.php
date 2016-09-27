@@ -162,6 +162,27 @@ QCM(
 			if ($section=="5") {
 			?>
 
+			<p class="parto">Per viaj propraj vortoj, klarigu kiel sono povas estingi fajron ? Verku minimume 100 vortojn</p>
+
+
+			<?php
+				$demandoj=array (
+				1 => "Kiel sono estingas fajron :"
+				);
+				ekzerco(True, 20,"N",100);
+			?>
+
+			<p class="parto">En diversaj landoj, la fajrobrigadistoj ne estingas la arbarajn fajrojn sed protektas nur la loĝejojn. En aliaj landoj, la fajrobrigadistoj ofte riskas siajn vivojn por protekti la arbaron. Kion vi opinias pri tiuj du vidpunktoj, kiu el ili estas la plej interesa laŭ vi ? Respondu per minimume 100 vortoj</p>
+
+
+			<?php
+				$demandoj=array (
+				2 => "Ĉu fajrobrigadistoj devus riski sian vivon por estingi fajron :"
+				);
+				ekzerco(True, 20,"N",100);
+			?>
+
+
 			<?php 
 			} // fin section
 			if ($section=="6") {

@@ -473,3 +473,26 @@ INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo
 INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '91', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
 INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '92', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
 INSERT INTO `ikurso`.`lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '93', 'Sendi la ekzercojn', 'TEKSTO', NULL, '6', '0', '1');
+--- modification du nom de l'épilogues pour les leçons de DLEK
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Épilogue et envoi des exercices' WHERE `lecioneroj`.`id` = 8;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Épilogue et envoi des exercices' WHERE `lecioneroj`.`id` = 19;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Épilogue et envoi des exercices' WHERE `lecioneroj`.`id` = 31;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Épilogue et envoi des exercices' WHERE `lecioneroj`.`id` = 42;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Épilogue et envoi des exercices' WHERE `lecioneroj`.`id` = 49;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Épilogue et envoi des exercices' WHERE `lecioneroj`.`id` = 67;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Épilogue et envoi des exercices' WHERE `lecioneroj`.`id` = 73;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Épilogue et envoi des exercices' WHERE `lecioneroj`.`id` = 81;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Épilogue et envoi des exercices' WHERE `lecioneroj`.`id` = 217;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Envoi des exercices' WHERE `lecioneroj`.`id` = 216;
+--- autres corrections dans les intertitres des leçons de DLEK
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Exercice 1' WHERE `lecioneroj`.`id` = 59;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Questions - 2<sup>e</sup> partie' WHERE `lecioneroj`.`id` = 229;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Questions - 3<sup>e</sup> partie' WHERE `lecioneroj`.`id` = 230;
+UPDATE `ikurso`.`lecioneroj` SET `titolo` = 'Questions - 4<sup>e</sup> partie' WHERE `lecioneroj`.`id` = 231;
+--- correction lignes ajoutée à tort 
+DELETE FROM `ikurso`.`lecioneroj` WHERE `lecioneroj`.`id` = 306;
+DELETE FROM `ikurso`.`lecioneroj` WHERE `lecioneroj`.`id` = 307;
+DELETE FROM `ikurso`.`lecioneroj` WHERE `lecioneroj`.`id` = 323;
+DELETE FROM `ikurso`.`lecioneroj` WHERE `lecioneroj`.`id` = 308;
+DELETE FROM `ikurso`.`lecioneroj` WHERE `lecioneroj`.`id` = 309;
+

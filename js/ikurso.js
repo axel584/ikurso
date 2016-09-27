@@ -39,6 +39,40 @@
       Materialize.toast('Mauvaise réponse, essaye encore !', 4000);
     });
 
+  // exercice autocorrigé (qui ressemble du coup à un QCM)
+    $( ".kontroliRespondon_button" ).click(function() {
+      var $id = $(this).data("id");
+      var $respondoLernanto = $("#"+$id).val();
+      var $respondoKomputilo = $("#"+$id).data("reponse");
+      var $lasta = $("#"+$id).data("lasta");
+
+      if ($respondoLernanto!=$respondoKomputilo) {
+        // Mauvaise réponse :
+        Materialize.toast('Mauvaise réponse, essaye encore !', 4000);
+      } else {
+        // bonne réponse
+      if (!$lasta) {
+        // il reste d'autres questions, on passe à la suite
+        Materialize.toast('Bravo !', 4000);
+        $encours = $('.qcm_demando:visible');
+        
+        setTimeout(function(){
+          $encours.next().removeClass("hide");
+          $encours.addClass("hide");
+         }, 1000);
+      } else {
+        // c'est la dernière question, on affiche le récapitulatif et le bouton "fini"
+        Materialize.toast('Bravo, vous avez trouvé toutes les bonnes réponses !', 4000);
+        setTimeout(function(){
+      $("#recapitulatif_qcm").removeClass("hide");
+            $('.qcm_demando:visible').addClass("hide");
+      $("#finiLecioneron_button").removeClass("hide");
+       }, 1000);
+        
+      }
+    }
+    }); 
+
 // outil pour évaluer la leçon, on met des phrases plus lisibles
 $('#range_intereso').on("change mousemove", function() {
     if ($(this).val()==1) {

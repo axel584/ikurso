@@ -478,12 +478,12 @@ function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
 				}
 
 function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
+	echo "<div class='row' id='recapitulatif_qcm'>";
+	echo "<div class='col s12'>";
+	echo "<div class='card-panel blue lighten-5'>";
 	// on n'affiche le récapitulatif que pour un élève connecté
-		if ($persono_id) {
+	if ($persono_id) {
 		global $bdd;
-		echo "<div class='row' id='recapitulatif_qcm'>";
-		echo "<div class='col s12'>";
-		echo "<div class='card-panel blue lighten-5'>";
 		echo "<h3>Récapitulatif :</h3>";
 		echo "Voilà ce qui sera envoyé à votre correcteur. Si vous souhaitez modifier des réponses, vous pouvez faire les modifications directement dans les pages d'exercices, enregistrer vos réponses puis revenir sur cette page.";
 		$indiceQuestion= 1;
@@ -506,10 +506,14 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 			echo "<textarea name='commentaire_pour_correcteur'></textarea>";
 			echo "</li>";
 		echo "</ul>";
-		echo "</div>";
-		echo "</div>";
-		echo "</div>\n";
 	}
+	// si pas connecté on affiche une information
+	else {
+		echo "L’envoi des exercices est réservé aux élèves inscrits au cours. Si vous êtes déjà inscrit, veuillez vous identifier en cliquant sur le bouton CONNEXION en haut à droite de l’écran.";		
+	}
+	echo "</div>";
+	echo "</div>";
+	echo "</div>\n";
 }
 
 function getListoLecionoj($kurso,$leciono) {

@@ -87,7 +87,7 @@ include "dlekkapo.inc.php";
 		</p>
 
 		<p>
-		Tout corrélatif est la combinaison de deux éléments, comme présentés dans le schéma suivant. Par exemple, si nous associons par exemple l'élément <span class="eo">ki</span>, qui permet de poser une question, avec l'élément <span class="eo">am</span>, qui a la signification de «temps, moment», on obtient le corrélatif <span class="eo">kiam</span>, qui signifie <em>quand</em>.</p>
+		Tout corrélatif est la combinaison de deux éléments, comme présentés dans le schéma suivant. Par exemple, si nous associons par exemple l'élément <span class="eo">ki-</span>, qui permet de poser une question, avec l'élément <span class="eo">-am</span>, qui a la signification de «temps, moment», on obtient le corrélatif <span class="eo">kiam</span>, qui signifie <em>quand</em>.</p>
 
 		</p>
 		<img src="<?php echo $vojo;?>fr/cge/bildoj/correlatifs.svg" class="responsive-img">

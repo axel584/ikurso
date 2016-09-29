@@ -492,7 +492,12 @@ fieldset.sono legend {
 	margin-bottom: 1em;
 	margin-top: 0.5em;
 }
-
+p.nbvortoj {
+    color: #F44336;
+    font-size: 80%;
+    padding-top: 0;
+    margin-top: -1em;
+}
 /*********************************/
 /*               QCM             */
 /*********************************/

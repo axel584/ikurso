@@ -18,7 +18,7 @@ include "gerdakapo.inc.php";
 			<h3>Nefidinda flegistino</h3>
 			<div class="row dialogo">
 				<div class="col s12 m8">
-					<p>Fakte, Tom ne estas ema fidi la flegistinon. Kial? ĉu vi
+					<p>Fakte, Tom ne estas ema fidi la flegistinon. Kial? Ĉu vi
 					scias, kara amiko, vi kiu sekvas ĉi tiun aventuron ekde la unua vorto?
 					ĉu vi scias, kial Tom ne emas fidi la flegistinon?</p>
 					<p>Ne. Certe vi ne scias. Ankaŭ mi ne scias. Sed fakto restas
@@ -52,10 +52,10 @@ include "gerdakapo.inc.php";
 					trovas ŝin atentema pri liaj demandoj. Verdire, li opinias ŝin ema
 					fuŝi sian laboron. Li timas, ke ŝi ofte agas fuŝe. Fuŝemaj homoj
 					ekzistas en la mondo. Kial tiu tro parolema flegistino ne estus unu el
-					ili? ĉu li mispaŝis, kiam li turnis sin al ŝi? Sed al kiu alia li
-					povus sin turni? ŝi estis la sola flegistino, kiu troviĝis en la
+					ili? Ĉu li mispaŝis, kiam li turnis sin al ŝi? Sed al kiu alia li
+					povus sin turni? Ŝi estis la sola flegistino, kiu troviĝis en la
 					universitato. Aŭ ĉu li mispensas?</p>
-					<p>Kaj nun li sentas sin ema zorgi pri Linda. ĉu tiu belega
+					<p>Kaj nun li sentas sin ema zorgi pri Linda. Ĉu tiu belega
 					knabino ne troviĝas en danĝero? Li amas ŝin, li eĉ amegas ŝin, pli
 					kaj pli, kaj la ideo, ke danĝeraj homoj povus fari ion al ŝi, apenaŭ
 					estas travivebla. La vivo ne estas facila, kaj ŝajnas nun, ke la tuta
@@ -160,7 +160,7 @@ include "gerdakapo.inc.php";
 					11 => "Tiu flegistino, dika, grasa kaj parolema, nur post long[*] diskut[*] kun Tom, konsciiĝas [*] tio, ke la afero urĝas. Se ŝi est[*] pli zorgema, ŝi [*] rapidus kaj eble ne okazus jeno:",
 					12 => "Kiam Tom fine [*]venas kun la flegistino, Gerda estas for, kaj Bob sidas ĉe la koridor[*] mur[*], bat[*]a surkape. Kion [*]tempe faras Linda? Ŝi pli kaj pli [*]trankvil[*]as, lasite sola [*] la universitata restoracio kun la blond[*] strang[*].",
 					13 => "Ŝi observ[*] lin, kaj kiam li eliras tra la pordo alurb[*], ŝi[*] sekvas li[*]. Linda estas junulino iom tim[*], certe belega. Tom am[*]as ŝin; li havas okulojn nur [*] ŝi.",
-					14 => "Li zorgas pri ŝi. Ĉu ŝi trov[4] en danĝero? Ki[*], fakte, ŝi iros? Kaj Gerda, kien ŝi[*] foriĝis? Ki[*] okaz[*] kun ŝi? La afero [4] pli kaj pli mistera!"
+					14 => "Li zorgas pri ŝi. Ĉu ŝi trov[*] en danĝero? Ki[*], fakte, ŝi iros? Kaj Gerda, kien ŝi[*] foriĝis? Ki[*] okaz[*] kun ŝi? La afero [*] pli kaj pli mistera!"
 				);
 				ekzerco(True, 2);
 				?>

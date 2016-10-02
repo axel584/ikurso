@@ -81,10 +81,24 @@ function ekzerco($x2u, $nbLig, $cols6="N",$nbvortoj=0) {
 			}
 			echo ">";
 			$var="res_ekz".$numcxap."_".sprintf('%02d', $k);
+			// si on a déjà en base une réponse pour cette question, on l'affiche ici :
 			if (isset($memorkurso[$var])){
 				echo htmlspecialchars(stripslashes($memorkurso[$var]));
+				$nbvortojVerkitaj = str_word_count($memorkurso[$var]);
+			} else {
+				$nbvortojVerkitaj = 0;
 			}
-			echo "</textarea><label for=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"></div>";
+			echo "</textarea>";
+			if ($nbvortoj!=0) {
+				// on vérifie si on a déjà écrit assez de mots
+				if ($nbvortojVerkitaj<$nbvortoj) {
+					echo "<p id='vortojPorVerki_res_ekz".$numcxap."_".sprintf('%02d', $k)."' class='nbvortoj'>".$nbvortoj." vortojn por verki</p>";
+				} else {
+					echo "<p id='vortojPorVerki_res_ekz".$numcxap."_".sprintf('%02d', $k)."' class='nbvortoj'></p>";
+				}
+			}
+			
+			echo "</div>";
 
 		}
 		if ($cols6=="J") {
@@ -117,7 +131,7 @@ if (substr($subjekto,0,5)=="intro") {
 	$parto="intro";
 	$numcxap="00";
 } else {
-	$numcxap=substr($subjekto,3,2);
+	$numcxap=substr($subjekto,7,2);
 	$lec=substr($subjekto,0,3);
 	$parto=substr($subjekto,4,2);
 	if ($parto==".p") {$parto="";}

@@ -336,7 +336,7 @@ include "dlekkapo.inc.php";
 							<!-- A déjà un compte -->
 							<?php } else { ?>
 								<p>Pour bénéficier de notre service de correction, il vous suffit de compléter les exercices. Cliquez ensuite sur le bouton <b>ENREGISTRER MES RÉPONSES</b>.</p>
-								<p>Lorsque vous aurez terminé la leçon, vous pourrez demander l’aide d’un correcteur à la fin section <b>1.8&nbsp;Épilogue</b>. Les exercices seront automatiquement envoyés à votre correcteur quand les administrateurs du cours vous en auront attribué un.</p>
+								<p>Lorsque vous aurez terminé la leçon, vous pourrez demander l’aide d’un correcteur à la fin de la section <b>Épilogue et envoi des exercices</b>. Les exercices seront automatiquement envoyés à votre correcteur quand les administrateurs du cours vous en auront attribué un.</p>
 							<?php } ?>
 						</div>
 					</div>

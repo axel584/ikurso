@@ -200,7 +200,7 @@ include "dlekkapo.inc.php";
 		En espéranto, chaque voyelle (<em>a</em>, <em>e</em>, <em>i</em>, <em>o</em>,
 		<em>u</em>) forme une syllabe. Le mot espéranto <span class="eo">sane</span> a donc deux
 		syllabes (<em>sa-ne</em>).  Alors qu’en français, le <em>-e</em> final est
-		généralement muet (comme, par exemple, sdans <em>père</em>), il n’existe rien
+		généralement muet (comme, par exemple, dans <em>père</em>), il n’existe rien
 		de tel en espéranto.
 		</p>
 		<p>

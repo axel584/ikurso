@@ -51,52 +51,58 @@ include "pagxkapo.inc.php";
 		
 		<section id="komentoj">
 			<div class="row">
-				<div class="col s12 m10 offset-m1">
+				<div class="col s12 l10 offset-l1">
 					<div class="card-panel blue lighten-5">
 						<div class="row">
 							<div class="col s12">
 								<h5>Ils ont suivi nos cours :</h5>
-								<div class="col s6 m4">
-									<div class="row">
-										<div class="col s3 center">
-											<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/gwen.jpg" alt="" class="circle responsive-img">
-											<br><span class="eta"><em>Gwen</em></span>
+								<div class="row">
+									<div class="col s12 m6 l6">
+										<div class="row">
+											<div class="col s2 center">
+												<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/gwen.jpg" alt="" class="circle responsive-img">
+												<br><span class="eta"><em>Gwen</em></span>
+											</div>
+											<div class="col s10">
+												<span>Le cours en 10 leçons d′iKurso est parfait pour commencer l’apprentissage de l’espéranto. 
+												Comptez sur vos tuteurs pour vous aider à progresser rapidement&nbsp;!</span>
+											</div>
 										</div>
-										<div class="col s7">
-											<span class="eta">Le cours en 10 leçons d′iKurso est parfait pour commencer l’apprentissage de l’espéranto. 
-											Comptez sur vos tuteurs pour vous aider à progresser rapidement&nbsp;!</span>
+									</div>
+									<div class="col s12 m6 l6">
+										<div class="row">
+											<div class="col s2 center">
+												<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Ishtima.jpg" alt="" class="circle responsive-img">
+												<br><span class="eta"><em>Ishtima</em></span>
+											</div>
+											<div class="col s10">
+												<span>Je peux témoigner que le Kurso de Esperanto est une excellente application pour découvrir la langue internationale et pour commencer à se l’approprier. Des cours bien structurés, des exercices rapidement corrigés en font une très bonne méthode que je recommande.</span>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col s6 m4">
-									<div class="row">
-										<div class="col s3 center">
-											<span class="eta"><em>Jean-Baptiste</em></span>
-										</div>
-										<div class="col s7">
-											<span class="eta">ikurso permet de très rapidement progresser en espéranto. Le fait d'avoir un-e correcteur-trice qui nous suit tour au long des leçons est vraiment un plus.</span>
-										</div>
-									</div>
-								</div>
-								<div class="col s6 m4">
-									<div class="row">
-										<div class="col s3 center">
-											<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Ishtima.jpg" alt="" class="circle responsive-img">
-											<br><span class="eta"><em>Ishtima</em></span>
-										</div>
-										<div class="col s7">
-											<span class="eta">Je peux témoigner que le Kurso de Esperanto est une excellente application pour découvrir la langue internationale et pour commencer à se l’approprier. Des cours bien structurés, des exercices rapidement corrigés en font une très bonne méthode que je recommande.</span>
+								<div class="row">
+									<div class="col s12 m11">
+										<div class="row">
+											<div class="col s2 m1 center">
+												<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Philippe-D.jpg" alt="" class="circle responsive-img">
+												<br><span class="eta"><em>Philippe</em></span>
+											</div>
+											<div class="col s9 m11">
+												<span>Le cours d’espéranto d’iKurso répond très  précisément aux besoins de l’apprenant. Dès le début, on travaille sur des textes&nbsp;; on travaille des phrases complètes. Le vocabulaire ainsi appris, en contexte, est plus facilement mémorisé grâce à l’image mentale que l’on se fait du contenu du texte.<br>De plus, et c’est loin d’être négligeable, on assigne à chaque apprenant un correcteur-motivateur bénévole et intéressé pour l’encourager à la régularité, veiller sur l’augmentation graduelle de la difficulté tout en soutenant la motivation. Le tout gratuit. Que demander de plus&nbsp;!</span>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col s12 m10">
-									<div class="row">
-										<div class="col s1 center">
-											<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Philippe-D.jpg" alt="" class="circle responsive-img">
-											<br><span class="eta"><em>Philippe</em></span>
-										</div>
-										<div class="col s9">
-											<span class="eta">Le cours d’espéranto d’iKurso répond très  précisément aux besoins de l’apprenant. Dès le début, on travaille sur des textes&nbsp;; on travaille des phrases complètes. Le vocabulaire ainsi appris, en contexte, est plus facilement mémorisé grâce à l’image mentale que l’on se fait du contenu du texte.<br>De plus, et c’est loin d’être négligeable, on assigne à chaque apprenant un correcteur-motivateur bénévole et intéressé pour l’encourager à la régularité, veiller sur l’augmentation graduelle de la difficulté tout en soutenant la motivation. Le tout gratuit. Que demander de plus&nbsp;!</span>
+								<div class="row">
+									<div class="col s12">
+										<div class="row">
+											<div class="col s2 m1">
+												<span class="eta"><em>Jean-Baptiste</em></span>
+											</div>
+											<div class="col s9 m11">
+												<span>iKurso permet de très rapidement progresser en espéranto. Le fait d'avoir un-e correcteur-trice qui nous suit tour au long des leçons est vraiment un plus.</span>
+											</div>
 										</div>
 									</div>
 								</div>

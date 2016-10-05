@@ -95,13 +95,51 @@ include "pagxkapo.inc.php";
 									</div>
 								</div>
 								<div class="row">
-									<div class="col s12">
+									<div class="col s12 l5">
 										<div class="row">
-											<div class="col s2 m1">
+											<div class="col s3">
 												<span class="eta"><em>Jean-Baptiste</em></span>
 											</div>
-											<div class="col s9 m11">
+											<div class="col s9">
 												<span>iKurso permet de très rapidement progresser en espéranto. Le fait d'avoir un-e correcteur-trice qui nous suit tour au long des leçons est vraiment un plus.</span>
+											</div>
+										</div>
+										<br>
+										<div class="row">
+											<div class="col s3 center">
+												<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Nathaël.jpg" alt="" class="circle responsive-img">
+												<br><span class="eta"><em>Nathaël</em></span>
+											</div>
+											<div class="col s9">
+												<span>L’apprentissage de l’espéranto est très simple, en particulier sur iKurso. 
+												Les cours sont clairs et équilibrent parfaitement grammaire, vocabulaire et exercices. 
+												Très vite on se sent à l’aise en espéranto. 
+												De plus nos tuteurs, dévoués, corrigent au mieux nos exercices, 
+												en prenant soin de notre bonne compréhension. Je recommande&nbsp;!</span>
+											</div>
+										</div>
+									</div>
+									<div class="col s12 l7">
+										<div class="row">
+											<div class="col s2 center">
+												<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Marko.jpg" alt="" class="circle responsive-img">
+												<br><span class="eta"><em>Marko</em></span>
+											</div>
+											<div class="col s10">
+												<span>Ikurso est un site exceptionnel.
+												Sans doute parce que l′espéranto est également une langue exceptionnelle.<br> 
+												Mon expérience personnelle m'a permis de constater que chez iKurso règnent les valeurs 
+												de fraternité, de générosité et de partage propres à l′espéranto.
+												Le cours <em>Gerda malaperis</em> est particulièrement bien structuré et complet.
+												Mais surtout, les exercices de chaque leçon ne sont pas des questions à choix multiples
+												corrigées par un ordinateur, mais des questions à développement corrigées par des 
+												correcteurs (accompagnateurs) très très humains.
+												Pour ma part, mon correcteur a fait preuve d′une telle générosité de son temps, 
+												que je crois avoir tout autant appris en correspondant librement avec lui, 
+												que j′ai appris grâce aux cours eux-mêmes.<br>
+												Alors, cent fois bravo et merci à iKurso !<br>
+												Mais surtout, mille fois bravo et merci à ces sympathiques et dévoué(e)s 
+												correcteurs(trices) bénévoles.</span>
 											</div>
 										</div>
 									</div>

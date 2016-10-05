@@ -107,7 +107,7 @@ include "pagxkapo.inc.php";
 										<br>
 										<div class="row">
 											<div class="col s3 center">
-												<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Nathaël.jpg" alt="" class="circle responsive-img">
+												<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Nathael.jpg" alt="" class="circle responsive-img">
 												<br><span class="eta"><em>Nathaël</em></span>
 											</div>
 											<div class="col s9">

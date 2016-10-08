@@ -301,31 +301,35 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	$lecionero_id = $row["id"];
 	// si l'élève n'est pas enregistré
 	if ($persono_id!="") { 
-		// on vérifie si l'élève a déjà fait cette leçon pour n'afficher le bouton que si il n'a pas déjà cliqué sur le bouton :
-		$query = "select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
-		$result = $bdd->query($query);
-		$leconEnCours = $result->fetch()["combien"];
-		if ($leconEnCours>0) {
-			$classeDejaFait="disabled";
-		} else {
-			$classeDejaFait="";
-		}
-		// on vérifie si l'élève a déjà un correcteur :
-		$query = "select count(*) as combien from nuna_kurso where kurso='".$kurso."' and studanto=".$persono_id;
-		$result = $bdd->query($query);
-		$dejaFait = $result->fetch()["combien"];
-		if($tipo=="QCM") { // on vérifie le QCM
-			echo '<a id="finiLecioneron_button" class="hide waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
-		} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
-			echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
-		} elseif($lasta==1) { // on envoit au correcteur si on a un correcteur, on en demande un dans le cas contraire
-			if ($dejaFait>0) {
-				echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
-			} else { // Pas de correcteur
-				echo '<a id="petiKorektanton_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="Mes exercices lui seront envoyés">Demander un correcteur</a>';
+		// on n'affiche le bouton DEMANDER UN CORRECTEUR que pour les élèves
+		$persono = apartigiPersonon($persono_id);
+		if (($persono['rajtoj']=="S")||($persono['rajtoj']=="P")) {
+			// on vérifie si l'élève a déjà fait cette leçon pour n'afficher le bouton que si il n'a pas déjà cliqué sur le bouton :
+			$query = "select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
+			$result = $bdd->query($query);
+			$leconEnCours = $result->fetch()["combien"];
+			if ($leconEnCours>0) {
+				$classeDejaFait="disabled";
+			} else {
+				$classeDejaFait="";
 			}
-		} else { // on indique que la leçon est terminée
-			echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
+			// on vérifie si l'élève a déjà un correcteur :
+			$query = "select count(*) as combien from nuna_kurso where kurso='".$kurso."' and studanto=".$persono_id;
+			$result = $bdd->query($query);
+			$dejaFait = $result->fetch()["combien"];
+			if($tipo=="QCM") { // on vérifie le QCM
+				echo '<a id="finiLecioneron_button" class="hide waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
+			} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
+				echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
+			} elseif($lasta==1) { // on envoit au correcteur si on a un correcteur, on en demande un dans le cas contraire
+				if ($dejaFait>0) {
+					echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
+				} else { // Pas de correcteur
+					echo '<a id="petiKorektanton_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="Mes exercices lui seront envoyés">Demander un correcteur</a>';
+				}
+			} else { // on indique que la leçon est terminée
+				echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
+			}
 		}
 	}
 }
@@ -478,34 +482,39 @@ function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
 				}
 
 function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
+	// on n'affiche le récapitulatif que pour un élève connecté
 	echo "<div class='row' id='recapitulatif_qcm'>";
 	echo "<div class='col s12'>";
 	echo "<div class='card-panel blue lighten-5'>";
-	// on n'affiche le récapitulatif que pour un élève connecté
 	if ($persono_id) {
-		global $bdd;
-		echo "<h3>Récapitulatif :</h3>";
-		echo "Voilà ce qui sera envoyé à votre correcteur. Si vous souhaitez modifier des réponses, vous pouvez faire les modifications directement dans les pages d'exercices, enregistrer vos réponses puis revenir sur cette page.";
-		$indiceQuestion= 1;
-		
-		// on récupère les réponses en base
-		$query = "select demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
-		$result = $bdd->query($query);
-		echo "<ul class='collection'>";
-		while ($row=$result->fetch()) {
-			echo "<li class='collection-item row'>";
-			echo "<b>".$row["demando"]."</b><br/>";
-			echo "&nbsp;&nbsp;&nbsp;".$row["respondo"]."<br/>";
-			echo "</li>";
+		$persono = apartigiPersonon($persono_id);
+		if (($persono['rajtoj']=="S")||($persono['rajtoj']=="P")) {
+			global $bdd;
+			echo "<h3>Récapitulatif :</h3>";
+			echo "Voilà ce qui sera envoyé à votre correcteur. Si vous souhaitez modifier des réponses, vous pouvez faire les modifications directement dans les pages d'exercices, enregistrer vos réponses puis revenir sur cette page.";
+			$indiceQuestion= 1;
+			
+			// on récupère les réponses en base
+			$query = "select demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
+			$result = $bdd->query($query);
+			echo "<ul class='collection'>";
+			while ($row=$result->fetch()) {
+				echo "<li class='collection-item row'>";
+				echo "<b>".$row["demando"]."</b><br/>";
+				echo "&nbsp;&nbsp;&nbsp;".$row["respondo"]."<br/>";
+				echo "</li>";
+			}
+			echo "</ul>";
+			// ajout d'un champ commentaire :
+			echo "<ul class='collection'>";
+				echo "<li class='collection-item row'>";
+				echo "Si vous souhaitez ajouter un message à l'intention de votre correcteur, vous pouvez écrire dans le cadre ci-dessous :";
+				echo "<textarea name='commentaire_pour_correcteur'></textarea>";
+				echo "</li>";
+			echo "</ul>";
+		} else {
+			echo "L’envoi des exercices est réservé aux élèves inscrits au cours.";		
 		}
-		echo "</ul>";
-		// ajout d'un champ commentaire :
-		echo "<ul class='collection'>";
-			echo "<li class='collection-item row'>";
-			echo "Si vous souhaitez ajouter un message à l'intention de votre correcteur, vous pouvez écrire dans le cadre ci-dessous :";
-			echo "<textarea name='commentaire_pour_correcteur'></textarea>";
-			echo "</li>";
-		echo "</ul>";
 	}
 	// si pas connecté on affiche une information
 	else {

@@ -305,7 +305,6 @@ QCM_bildoj(
 		<fieldset class="ekzerco">
 			<legend><strong>EXERCICE</strong> : Formez des phrases ayant un sens en utilisant les mots donnés.</legend>
 			<p>Attention : vous pouvez être amené à conjuguer les verbes et à mettre des mots à l’accusatif.</p>
-			<?php atentigo();	?>
 			<input type="hidden" name="013_cxap02.3" value="3. Formez des phrases ayant un sens en utilisant les mots donnés.">
 			<div class="tasko">
 			<?php 

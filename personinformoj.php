@@ -104,13 +104,22 @@ if (isset($_GET["aktivigo"])) {
 		<?php } elseif (($persono["rajtoj"]=="I") or ($persono["rajtoj"]=="A")or ($persono["rajtoj"]=="K")) { ?>
 			<p><a href="<?php echo $vojo;?>miajlernantoj.php" class="btn waves-effect waves-light" >Gérer mes élèves</a></p>
 		<!-- cas des élèves qui n'ont pas encore commencé le cours -->
-		<?php } else { ?>
+		<?php } else { 
+			// différencier le cas des élèves inscrits au ikurso des autres
+			if ($persono['kurso']=="KE") {
+			?>
+			<h2>Mes cours</h2>
+			<p><span class="primaire-texte texte-moyen">Cours choisi : </span><?php simplaVorto("nomo","kursoj"," where kodo='".$persono['kurso']."'"); ?></p>
+			<p><span class="primaire-texte texte-moyen">En attente d'attribution d'un correcteur.</span></p>
+			<?php
+			} else {
+			?>
 			<p>Si vous n'avez jamais suivi de cours d'espéranto, nous vous conseillons de commencer par le <b>Cours en 10 leçons</b>. Vous pourrez le suivre avec l’aide d'un correcteur ou en totale autonomie.<br>
 			<a href="<?php echo $vojo;?>fr/cge/intro.php" class="btn waves-effect waves-light" >Cours en 10 leçons</a></p>
 			<p>Si vous quelques bases et que vous voulez approfondir, nous vous conseillons le cours <b>Gerda malaperis</b> :<br>
 			<a href="<?php echo $vojo;?>fr/gerda/index.php" class="btn waves-effect waves-light" >cours Gerda Malaperis</a></p>
+			<?php } ?>
 		<?php } ?>
-
 
 	</aside>
 

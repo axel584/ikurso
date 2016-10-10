@@ -239,7 +239,6 @@ include "dlekkapo.inc.php";
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Traduisez les articles suivants puisés dans diverses revues.</legend>
 				<p>Le vocabulaire nouveau se trouve à la fin de l’exercice.</p>
-				<?php atentigo(); ?>
 				<input type="hidden" name="013_cxap09.1" value="1. Traduisez les articles suivants puisés dans diverses revues.">
 				<div class="tasko">
 				<p>

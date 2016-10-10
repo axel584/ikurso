@@ -40,6 +40,7 @@ include "kapo.inc.php";
 			?>
 
 			Il faut afficher le nombre total de réponses possibles pour laisser à l'élève le choix de l'exercice qu'il souhaite faire
+			<?php menuDeroulantChoixProposition("ekz03_01",232,$persono_id); ?>
 
 			<?php 
 			} // fin section

@@ -410,7 +410,7 @@ INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '130', 'Envoi des exercices', 'TEKSTO', NULL, '6', '0', '1');
 -- 3eme lecon
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '131', 'Mia plej ŝatata filmo', 'EKZERCARO', NULL, '1', '0', '1');
-INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '131', 'Divenu alies filmojn', 'QCM', NULL, '2', '0', '0');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '131', 'Divenu alies filmojn', 'TEKSTO', NULL, '2', '0', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '131', 'Envoi des exercices', 'TEKSTO', NULL, '3', '0', '1');
 -- 4ème leçon
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '132', 'Kio ozazos ?', 'EKZERCARO', NULL, '1', '1', '0');

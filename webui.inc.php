@@ -304,6 +304,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	if ($persono_id!="") { 
 		// on n'affiche le bouton DEMANDER UN CORRECTEUR que pour les élèves
 		$persono = apartigiPersonon($persono_id);
+
 		if (($persono['rajtoj']=="S")||($persono['rajtoj']=="P")) {
 			// on vérifie si l'élève a déjà fait cette leçon pour n'afficher le bouton que si il n'a pas déjà cliqué sur le bouton :
 			$query = "select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
@@ -640,6 +641,21 @@ function ekzercoMemkorektita($convert,$strukturo) {
 	echo "</div>";
 	echo "</div>";
 	echo "</div>\n";
+}
+
+function menuDeroulantChoixProposition($kodo,$lecionero_id,$persono_id) {
+	global $bdd;
+	$query = "SELECT persono_id,enirnomo FROM `respondoj` join personoj on personoj.id=respondoj.persono_id WHERE kodo='".$kodo."' and lecionero_id=".$lecionero_id." and persono_id<>'".$persono_id."' order by dato";
+	echo "<br/>";
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$i=1;
+	echo "<select name='ElektitaRespondo'>";
+	echo "<option>Elektu nomon de lernanto :";
+	while ($row = $result->fetch()) {
+		echo "<option value='".$row["persono_id"]."'>".$i.") ".$row["enirnomo"]."</option>";
+	}
+	echo "</select>";
+	echo "<a id='montriElektitanRespondon_button' class='waves-effect waves-light btn tooltipped light-blue darken-1' data-position='top' data-delay='50'>Montri Proponon de tiu lernanto</a>";
 }
 
 ?>

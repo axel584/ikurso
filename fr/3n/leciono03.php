@@ -39,13 +39,15 @@ include "kapo.inc.php";
 			if ($section=="2") {
 			?>
 
+			Il faut afficher le nombre total de réponses possibles pour laisser à l'élève le choix de l'exercice qu'il souhaite faire
 
+			<?php 
+			} // fin section
+			if ($section=="3") {
+			?>
 			<p>Ĝis baldaŭ por la venonta leciono&nbsp;!</p>
 
-			<div class="card-panel blue lighten-5">
-				<p>Aliĝi estas devigata nur por ricevi helpon de korektanto. Korektantoj estas volontuloj kiuj laboras senpage. Ili sekvas limigitan nombron de lernantoj. Pro tio, se vi petas korektanton, provu sekvi la kurson serioze kaj regule. Se vi ne povas sendi viajn lecionojn dum pluraj semajnoj, informu vian korektanton por ke li povu klopodi la taskojn de alia lernanto.
-				<p>Agrablan vojaĝon tra niaj lecionoj !</p>	
-			</div>
+
 		
 		<?php 
 				recapitulatif_lecon_avant_envoi('3N',$leciono,$persono_id);

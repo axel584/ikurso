@@ -504,7 +504,7 @@ include "dlekkapo.inc.php";
 			<div class="tasko">
 			<?php
 				$demandoj=array (
-				"" => "Mi* veturis al la zoologia* ĝardeno* kun Petro*. Li* tre deziris veturi tie*. En la zoo* li admiris ursoj* kaj simioj*. Kiam la blanka urso vidis Petro*, ĝi kuris en la akvo*. Ni atendis kvin minutoj*  por vidi, kio* la urso* faros poste, sed ĝi* ne iris el la akvo* kaj en la akvo* ĝi nenio* faris. Ni revenis Montrealo* vespere*."
+				27 => "Mi* veturis al la zoologia* ĝardeno* kun Petro*. Li* tre deziris veturi tie*. En la zoo* li admiris ursoj* kaj simioj*. Kiam la blanka urso vidis Petro*, ĝi kuris en la akvo*. Ni atendis kvin minutoj*  por vidi, kio* la urso* faros poste, sed ĝi* ne iris el la akvo* kaj en la akvo* ĝi nenio* faris. Ni revenis Montrealo* vespere*."
 				);
 				ekzerco(True, 5);
 			?>

@@ -294,6 +294,7 @@ function getLecioneroVenonta($kurso,$leciono,$lecionero) {
 function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	global $bdd;
 	$query="SELECT lecioneroj.id,lecioneroj.titolo,ordo,lecionoj.retpagxo,lecioneroj.tipo,lecioneroj.lasta FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero." order by ordo ASC";
+	//echo $query;
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$row = $result->fetch();
 	$tipo = $row["tipo"];
@@ -303,6 +304,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	if ($persono_id!="") { 
 		// on vérifie si l'élève a déjà fait cette leçon pour n'afficher le bouton que si il n'a pas déjà cliqué sur le bouton :
 		$query = "select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
+		//echo $query;
 		$result = $bdd->query($query);
 		$leconEnCours = $result->fetch()["combien"];
 		if ($leconEnCours>0) {

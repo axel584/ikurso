@@ -495,4 +495,13 @@ DELETE FROM `ikurso`.`lecioneroj` WHERE `lecioneroj`.`id` = 307;
 DELETE FROM `ikurso`.`lecioneroj` WHERE `lecioneroj`.`id` = 323;
 DELETE FROM `ikurso`.`lecioneroj` WHERE `lecioneroj`.`id` = 308;
 DELETE FROM `ikurso`.`lecioneroj` WHERE `lecioneroj`.`id` = 309;
+-- Axel peut prendre 5 élèves du cours 3ème niveau
+INSERT INTO `korektebla_kurso` (`korektanto`, `kurso`, `kiom_lernantoj`) VALUES ('12', '3N', '5');
+
+-- On ajoute quelques réponses pour l'exercice sur les films :
+INSERT INTO `respondoj` (`id`, `dato`, `persono_id`, `lecionero_id`, `kodo`, `demando`, `respondo`) VALUES (NULL, CURRENT_TIMESTAMP, '10', '232', 'ekz03_01', '1 Mia plej ŝatata filmo temas pri :', 'Dum la dua mondmilito en Francio, iu familio de kamparanoj akceptas orfean kvin-jaran knabineton, kies gepatroj estis mortitaj dum bombatako. La filo de la familio, 11-jaraĝa knabo, kaj tiu knabino amikiĝas kaj ofte ludas kune. Post enteriĝo de la hundo de la knabineto, ili komencas ludi strangan ludon: iom post iom kreas etan tombejon, kie ili enteriĝas insektojn kaj etajn bestojn. La muziko de tiu filmo, ludata per gitaro, iĝis tre fama.');
+INSERT INTO `respondoj` (`id`, `dato`, `persono_id`, `lecionero_id`, `kodo`, `demando`, `respondo`) VALUES (NULL, CURRENT_TIMESTAMP, '10', '232', 'ekz03_02', '2 Mia plej ŝatata filmo nomiĝas :', 'Jeux interdits');
+
+INSERT INTO `respondoj` (`id`, `dato`, `persono_id`, `lecionero_id`, `kodo`, `demando`, `respondo`) VALUES (NULL, CURRENT_TIMESTAMP, '518', '232', 'ekz03_01', '1 Mia plej ŝatata filmo temas pri :', 'Tiu filmo, farita de fama angla komediogrupo, estas komika kaj satira filmo, kiu rakontas la vivon de iu ulo, kiu naskiĝis en la sama tago kiel Jesuo. Ni tiam vidas lin kiam li estas plenkreskulo. Li aliĝas al iu terorista grupo, kiu agas kontraŭ la Romanioj. Iun tagon, por eskapi la Romaniojn, li agas kiel li estus iu religiano, kaj li prelegas antaŭ multaj homoj. La homamaso kredas, ke li estas la Mesio, kaj tio okazos diversajn amuzajn scenojn. En la fino de la filmo, ni vidas lin, alkroĉita ĉe granda kruĉo, samtempe kiel kelkaj rabistoj, kaj tiam, ĉiuj komencas kanti kaj fajfi kantojn, kiu diras ke "oni ĉiam rigardu la bonan flankon de la vivo".');
+INSERT INTO `respondoj` (`id`, `dato`, `persono_id`, `lecionero_id`, `kodo`, `demando`, `respondo`) VALUES (NULL, CURRENT_TIMESTAMP, '518', '232', 'ekz03_02', '2 Mia plej ŝatata filmo nomiĝas :', 'La vie de Brian');
 

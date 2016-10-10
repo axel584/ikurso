@@ -86,6 +86,10 @@ if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
 	$nomCours = "gerda cxap";
 } 
+if ($kurso=="3N") {
+	$prefixeKurso = "fr/3n/";
+	$nomCours = "leciono";
+}
 $subjekto = $nomCours.sprintf('%02d', $leciono);
 
 $mesagxkapo="MIME-Version: 1.0\n";

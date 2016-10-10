@@ -71,6 +71,8 @@ function ekzerco($x2u, $nbLig, $cols6="N",$nbvortoj=0) {
 		{
 			if ($nbvortoj!=0) {
 				$dataVortoj = "data-vortoj='".$nbvortoj."'";
+			} else {
+				$dataVortoj="";
 			}
 			echo "<div class='input-field col s12'><textarea id=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\" ".$dataVortoj." class='materialize-textarea' rows='".$nbLig."' name=\"res_ekz".$numcxap."_".sprintf('%02d', $k)."\"";
 			if ($idenfication==False) {

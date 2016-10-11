@@ -252,7 +252,7 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
-			//include "lasusono.inc.php";
+			include "lasusono.inc.php";
 		?>
 
 			<h3>Zorgi pri zorgado</h3>

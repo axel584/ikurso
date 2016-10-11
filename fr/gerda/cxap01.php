@@ -138,7 +138,7 @@ include "gerdakapo.inc.php";
 		?>
 			<p class="parto">Dans ce premier chapitre nous vous indiquons la prononciation des mots
 			pour que vous rappeliez bien les quelques difficultés de prononciation
-			de l'espéranto pour un français&nbsp;:</p>
+			de l'espéranto pour un francophone&nbsp;:</p>
 			<ul class="klarigo">
 				<li>le <b>s</b> se prononce toujours <i>ss</i> jamais comme <i>z</i></li>
 				<li>le <b>s</b> se prononce toujours même en fin de mot</li>
@@ -274,7 +274,7 @@ include "gerdakapo.inc.php";
 			Il s'agit de répondre en utilisant l'une des réponses
 			suggérées. Toutes les réponses sont grammaticalement correctes
 			(quoique parfois loufoques) mais une seule correspond au récit.
-			La réponse doit consistee en une (ou plusieurs!) phrase(s) complète(s).
+			La réponse doit consister en une (ou plusieurs!) phrase(s) complète(s).
 			</p>
 			
 			<p><b>Exercices (Ekzercoj) :</b>

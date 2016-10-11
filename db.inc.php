@@ -501,4 +501,29 @@ function jamKomencisKurson($persono_id) {
     return $row["combien"]>0;
 }
 
+// fonction spécifique au cours de troisième niveau :
+function getHazardaPriskriboDeFilmo($persono_id) {
+    global $bdd;
+    // on va calculer combien y'en a en tout
+    $query = "SELECT count(*) as kiom FROM `respondoj` WHERE kodo='ekz03_01' and lecionero_id=232 and persono_id<>'".$persono_id."'";
+    $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+    $kiom = $result->fetch()["kiom"];
+    if ($kiom==0) {
+        return null;
+    } else {
+        $hazard = mt_rand(0,$kiom-1);
+        $query = "SELECT persono_id,enirnomo,respondo FROM `respondoj` join personoj on personoj.id=respondoj.persono_id WHERE kodo='ekz03_01' and lecionero_id=232 and persono_id<>'".$persono_id."' order by dato limit ".$hazard.",1";
+        $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+        $row = $result->fetch();
+        $lernanto_id = $row["persono_id"];
+        $lernanto_nomo = $row["enirnomo"];
+        $priskribo = $row["respondo"];
+        $query = "SELECT respondo FROM `respondoj` WHERE kodo='ekz03_02' and lecionero_id=232 and persono_id='".$lernanto_id."'";
+        $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+        $row = $result->fetch();
+        $titolo = $row["respondo"];
+        return Array($lernanto_nomo,$priskribo,$titolo);
+    }
+}
+
 ?>

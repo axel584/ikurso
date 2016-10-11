@@ -465,4 +465,13 @@ $(".player-audio a").click(function() {
   aler("coucou");
 });
 
+
+// fonction spécifique au troisième niveau :
+
+$("#kontroliRespondon_button").click(function() {
+  $titolo = $(this).data("respondo");
+  Materialize.toast('La lernanto respondis "'+$titolo+'"', 4000);
   });
+
+
+});

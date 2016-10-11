@@ -25,7 +25,7 @@ include "kapo.inc.php";
 				ekzerco(True, 20);
 			?>
 
-			<p>Tie, skribu la nomon de la filmo en via lingvo aux en la originala lingvo de la filmo.</p>
+			<p>Tie, skribu la nomon de la filmo en via lingvo aŭ en la originala lingvo de la filmo.</p>
 
 			<?php
 				$demandoj=array (
@@ -38,9 +38,22 @@ include "kapo.inc.php";
 			} // fin section
 			if ($section=="2") {
 			?>
+			<p class="parto">Jen priskribo de alia lernanto elektita hazarde, provu trovi la nomon de la filmo. Klaku sur "Kontroli" por vidi la titolon de la filmo. Ne eblas kontroli ĉu vi ĝuste trovis la respondon ĉar la lernantoj povus skribi la titolon alimaniere kaj vi mem elektu ĉu via respondo estas ĝusta aŭ ne.</p>
+			<?php list($lernanto,$priskribo,$titolo) = getHazardaPriskriboDeFilmo($persono_id); ?>
+			<fieldset class="ekzerco">
+			<legend>La plej ŝatata filmo de <?=$lernanto?>.</legend>
+			<div class="tasko">
+				<p>
+					<?=$priskribo?>
+				</p>
+				<p><label for="titolo">Provu trovi la titolon de tiu filmo :</label><input id='titolo' type='text' name='titolo'/>
+				<a id="kontroliRespondon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-respondo="<?=$titolo?>" data-position="top" data-delay="50" data-tooltip="Montri la respondon de <?=$lernanto?>">Kontroli mian respondon !</a>
+				</p>
+			</div>
 
-			Il faut afficher le nombre total de réponses possibles pour laisser à l'élève le choix de l'exercice qu'il souhaite faire
-			<?php menuDeroulantChoixProposition("ekz03_01",232,$persono_id); ?>
+			</fieldset>
+
+			
 
 			<?php 
 			} // fin section

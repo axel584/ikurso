@@ -59,7 +59,7 @@ include "kapo.inc.php";
 			} // fin section
 			if ($section=="3") {
 			?>
-			<p>Ĝis baldaŭ por la venonta leciono&nbsp;!</p>
+			<p>Vi sendos vian lecionon al via korektanto. Ne forgesu ke via priskribo estos montrita al aliaj lernantoj. Se via korekanto proponas plibonigojn al via teksto, bonvolu korekti vian tekston sur la retejo. Por fari tion, sufiĉas iri sur la unua paĝo de tiu leciono, ŝanĝi vian tekston kaj klaki sur la butonon por registri vian ŝanĝon.</p>
 
 
 		

@@ -470,7 +470,8 @@ $(".player-audio a").click(function() {
 
 $("#kontroliRespondon_button").click(function() {
   $titolo = $(this).data("respondo");
-  Materialize.toast('La lernanto respondis "'+$titolo+'"', 4000);
+  //Materialize.toast('La lernanto respondis "'+$titolo+'"', 4000);
+  $("#respondo").html('<b>La lernanto respondis "'+$titolo+'"</b>');
   });
 
 

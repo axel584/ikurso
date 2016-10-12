@@ -47,7 +47,7 @@ include "kapo.inc.php";
 					<?=$priskribo?>
 				</p>
 				<p><label for="titolo">Provu trovi la titolon de tiu filmo :</label><input id='titolo' type='text' name='titolo'/>
-				<a id="kontroliRespondon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-respondo="<?=$titolo?>" data-position="top" data-delay="50" data-tooltip="Montri la respondon de <?=$lernanto?>">Kontroli mian respondon !</a>
+				<a id="kontroliRespondon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" data-respondo="<?=$titolo?>" data-position="top" data-delay="50" data-tooltip="Montri la respondon de <?=$lernanto?>">Kontroli mian respondon !</a><p id="respondo"></p>
 				</p>
 			</div>
 

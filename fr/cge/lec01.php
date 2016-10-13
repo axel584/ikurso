@@ -103,7 +103,7 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">lakto</span> : lait</p>
 					<p><span class="eo">lando</span> : pays</p>
 					<p><span class="eo">patro</span> : père</p>
-					<p><span class="eo">Pollando</span> : pologne</p>
+					<p><span class="eo">Pollando</span> : Pologne</p>
 					<p><span class="eo">profesio</span> : métier, profession</p>
 					<p><span class="eo">psikologo</span> : psychologue</p>
 					<p><span class="eo">pano</span> : pain</p>

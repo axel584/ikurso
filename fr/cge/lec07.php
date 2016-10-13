@@ -244,7 +244,7 @@ include "dlekkapo.inc.php";
 			<p class="col s6 m3 eo">ero</p><p class="col s6 m9">détail, morceau, élément, item</p>
 		</div>
 		
-		<p><b>EStr</b> : <i>celui qui commande effectivement au lieu indiqué par la racine</i></p>
+		<p><b>ESTR</b> : <i>celui qui commande effectivement au lieu indiqué par la racine</i></p>
 		<div class="row">
 			<p class="col s6 m3 eo">urbo</p><p class="col s6 m3">ville</p>
 			<p class="col s6 m3 eo">urbestro</p><p class="col s6 m3">maire</p>

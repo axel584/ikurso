@@ -71,8 +71,13 @@ if ($uneReponseManquante) {
 // a partir d'ici, on a fini toute la leçon
 
 // on indique dans la table personoj_lecioneroj que la leçon a été faite :
-$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id) values (now(),:persono_id,:lecionero_id)');
-$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id));
+// on commence par vérifier si y'en a pas déjà une ligne
+$result = $bdd->query("select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id);
+$nbReponseEnBase = $result->fetch()["combien"];
+if ($nbReponseEnBase==0) {
+	$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id) values (now(),:persono_id,:lecionero_id)');
+	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id));
+}
 
 // on trouve la leçon suivante et on récupère son url :
 if ($kurso=="CG") {

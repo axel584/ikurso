@@ -352,6 +352,9 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		dataType : 'json',
        		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#registriEkzercaron_button").data('lecionero_id')+"&leciono="+$("#registriEkzercaron_button").data('leciono')+"&kurso="+$("#registriEkzercaron_button").data('kurso'),
        		success : function(reponse, statut){ 
+            if (reponse.type=="pas fini") {
+                Materialize.toast(reponse.mesagxo, 4000);
+            }
        			if (reponse.mesagxo=="ok") {
        				window.location = $urlracine+reponse.url;
        			}

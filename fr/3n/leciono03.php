@@ -22,7 +22,7 @@ include "kapo.inc.php";
 				$demandoj=array (
 				1 => "Mia plej ŝatata filmo temas pri :"
 				);
-				ekzerco(True, 20);
+				ekzerco(True, 20,"N",100);
 			?>
 
 			<p>Tie, skribu la nomon de la filmo en via lingvo aŭ en la originala lingvo de la filmo.</p>

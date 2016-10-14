@@ -15,30 +15,48 @@ include "kapo.inc.php";
 			?>
 
 	
-			<p class="parto">Per minimume 100 vortoj, prezentu vin. Kiel vi nomiĝas ? Kion vi faras/is profesie ? Kie vi loĝas ? Kion vi faras dum via libertempo ? Ĉu vi havas infanojn ? Ĉu vi havas dorlotbestojn ? Kompreneble, vi ne estas devigata respondi al ĉiuj demandoj kaj vi povas aldoni informoj pri aliaj temoj por ke via korektanto pli bone konatu vin. Trankviliĝu : ni ne uzos tiun informojn por sendi reklamon !</p>
+			<p class="parto">Rigardu la filmon kaj detale priskribu kion vi vidas. Kiel aspektas la aktorojn, kion ili faras, kie ĝi situas.</p>
 
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/2ieAdfIQNlQ" frameborder="0" allowfullscreen></iframe>
 
 			<?php
 				$demandoj=array (
-				1 => "Jen mia prezentado :"
+				1 => "Priskribo de la filmo :"
 				);
-				ekzerco(True, 20);
+				ekzerco(True, 20,"N",100);
 			?>
 
 
+
+
+			<p>Kompreneble, mankas la fino de la filmo, sed vi certe povas imagi la sekvon...</p>
 			
+			<?php
+				$demandoj=array (
+				2 => "Divenu kion okazos :"
+				);
+				ekzerco(True, 20,"N",50);
+			?>
+
 			<?php 
 			} // fin section
 			if ($section=="2") {
 			?>
 
+			<p class="parto">Jen la tuta filmo kun la fino : </p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/TvDXGfbk78g" frameborder="0" allowfullscreen></iframe>
+				
+			<?php
+				$demandoj=array (
+				3 => "Kion vi ŝatis aŭ ne ŝatis en tiu filmo :"
+				);
+				ekzerco(True, 20,"N",50);
+			?>	
 
-			<p>Ĝis baldaŭ por la venonta leciono&nbsp;!</p>
-
-			<div class="card-panel blue lighten-5">
-				<p>Aliĝi estas devigata nur por ricevi helpon de korektanto. Korektantoj estas volontuloj kiuj laboras senpage. Ili sekvas limigitan nombron de lernantoj. Pro tio, se vi petas korektanton, provu sekvi la kurson serioze kaj regule. Se vi ne povas sendi viajn lecionojn dum pluraj semajnoj, informu vian korektanton por ke li povu klopodi la taskojn de alia lernanto.
-				<p>Agrablan vojaĝon tra niaj lecionoj !</p>	
-			</div>
+			<?php 
+			} // fin section
+			if ($section=="3") {
+			?>
 		
 		<?php 
 				recapitulatif_lecon_avant_envoi('3N',$leciono,$persono_id);

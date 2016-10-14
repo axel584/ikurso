@@ -13,11 +13,22 @@ if ($persono_id=="") { // personne non connecté, on ressort
 
 $lernantajDemandoj = array();
 $lernantajRespondoj = array();
+$aucuneReponse = true;
+$uneReponseManquante = false;
 foreach(array_keys($_GET) as $key) {
 
 	if (strncmp($key,"res_",4)==0) {
 		$kodo = substr($key,4);
 		$lernantajRespondoj[$kodo]=$_GET[$key];
+		// si on a une réponse manquante, on peut mettre la variable correspondante à "true"
+		if ($_GET[$key]=="") {
+			// reponse manquante
+			$uneReponseManquante=true;
+		} else {
+		// si on a une réponse, on peut mettre la variable "aucune réponse" à "false"
+			$aucuneReponse = false;
+		}
+
 	}
 	if (strncmp($key,"dem_",4)==0) {
 		$kodo = substr($key,4);
@@ -40,6 +51,25 @@ foreach(array_keys($lernantajDemandoj) as $kodo) {
     		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'respondo'=>$lernantajRespondoj[$kodo],'lecionero_id'=>$lecionero_id));
     	}
 }
+
+// si on n'a aucune réponse, on renvoit un message
+
+if ($aucuneReponse) {
+	$respondo["type"]="pas fini";
+	$respondo["mesagxo"]="Merci de remplir vos réponses pour pouvoir les enregistrer";
+	echo json_encode($respondo);
+	exit();
+}
+
+if ($uneReponseManquante) {
+	$respondo["type"]="pas fini";
+	$respondo["mesagxo"]="Vos réponses ont bien été enregistrées, n'oubliez pas de tout répondre avant l'envoi à votre correcteur";
+	echo json_encode($respondo);
+	exit();
+}
+
+// a partir d'ici, on a fini toute la leçon
+
 // on indique dans la table personoj_lecioneroj que la leçon a été faite :
 $requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id) values (now(),:persono_id,:lecionero_id)');
 $requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id));
@@ -54,6 +84,9 @@ if ($kurso=="GR") {
 if ($kurso=="3N") {
 	$prefixeKurso = "fr/3n/";
 } 
+
+
+
 
 // On recherche la section suivante à cette section, donc on va rechercher la valeur du "ordo" pour la section en cours :
 $query = "select ordo from lecioneroj where id=".$lecionero_id;

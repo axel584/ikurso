@@ -39,7 +39,7 @@ include "gerdakapo.inc.php";
 					<p>La flegistino iom hezitas, sed fine kapjesas.</p>
 					<p>"Ĉu mi ankaŭ voku la policon?" ŝi diras. "Li ja ricevis
 					baton, baton sufiĉe fortan, por ke li iĝu senkonscia. Laŭ mia
-					opinio, tio pravigas, ke oni venigu la policon. ĉu vi ne konsentas?"</p>
+					opinio, tio pravigas, ke oni venigu la policon. Ĉu vi ne konsentas?"</p>
 					<p>"Ankaŭ akvon," diras Bob, antaŭ ol Tom trovas la tempon
 					respondi al Marta. "Mi tre soifas. Mi trinkos brandon plezure, sed unue
 					mi trinku akvon. Bonvolu alporti al mi tre grandan glason da akvo kaj
@@ -48,10 +48,10 @@ include "gerdakapo.inc.php";
 					flegistino.</p>
 					<p>"Se vi ne alportos al mi ion por trinki, mi iros mem," diras
 					Bob. "Mi tre soifas. Vi ne povas imagi, kiom soifa mi min sentas.  Mi
-					tuj iros trinki akvon. Kaj poste mi iros aĉeti brandon. ĉu oni povas
+					tuj iros trinki akvon. Kaj poste mi iros aĉeti brandon. Ĉu oni povas
 					ricevi brandon en la memserva restoracio?"</p>
 					<p>"Ne, tute ne," Marta respondas, "sed mi havas brandon en mia
-					ĉambro. Mi alportos ĝin al vi. Aŭ venu mem, se vi povas. ĉu vi
+					ĉambro. Mi alportos ĝin al vi. Aŭ venu mem, se vi povas. Ĉu vi
 					povas stariĝi?"</p>
 					<p>"Mi povas," diras Bob, tre malrapide stariĝante kun la helpo
 					de Tom kaj de la flegistino, "kvankam dolore."</p>

@@ -70,13 +70,13 @@ include "gerdakapo.inc.php";
 					Vi povus lasi min tie. Estos plej facile por vi."</p>
 					<p>"Ĉiam scivola, ĉu ne? Vi ŝatus scii, kien mi iras," li diras
 					ridante, dum Linda sentas sin ruĝiĝi, ĉar similan rimarkon ŝi tute
-					ne atendis. Dum momento, ŝi ne scias, kiel respondi. ŝi sentas sin
+					ne atendis. Dum momento, ŝi ne scias, kiel respondi. Ŝi sentas sin
 					stulta.</p>
 					<p>"Tute ne," ŝi fine diras, malvere. "Kien vi iras, tio tute ne
 					interesas min. Mi proponis tion nur, ĉar tio ŝajnis plej facila. Sed
 					se ĝenas vin, ke mi scios, vi povas lasi min ie ajn en la centro.
 					Ekzemple ĉe la Internacia Hotelo, aŭ ĉe la Granda Teatro.
-					ĉiaokaze, mi treege dankas vin kaj mi facile trovos mian vojon. Jen.
+					Ĉiaokaze, mi treege dankas vin kaj mi facile trovos mian vojon. Jen.
 					Tie ĉi estas perfekte. Koran dankon, kaj ĝis revido, kara sinjoro."</p>
 					<p>"Ĝis revido, kara spionino!"</p>
 					<p>La aŭto forveturas, kaj Linda ne povas forturni la okulojn de

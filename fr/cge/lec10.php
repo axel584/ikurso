@@ -132,7 +132,7 @@ include "dlekkapo.inc.php";
 				39 => "ŝia edzo : (son mari à elle) (sa femme à lui)",
 				40 => "ilia urbo : (sa ville à lui) (leur ville à eux)"
 				);
-				ekzerco(False,1);
+				ekzerco(True,1);
 			?>
 			</div>
 		</fieldset>

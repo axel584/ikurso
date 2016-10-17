@@ -19,9 +19,11 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,600,600italic,700italic,700' rel='stylesheet' type='text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
 		
+		<!--Import flexslider.css-->
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/flexslider.css"  media="screen"/>
+
 		<!--Import materialize.css-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css"  media="screen"/>
 
 		<!--Player audio-->
 		<link rel="stylesheet" type="text/css" href="<?php echo $vojo;?>soundmanager2/css/mp3-player-button.css" />
@@ -33,6 +35,8 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		  url: '<?php echo $vojo;?>soundmanager2/swf/'
 		});
 		</script>
+
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css"  media="screen"/>
 
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>

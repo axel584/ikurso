@@ -489,8 +489,9 @@ QCM(
 			} // fin section 
 			if ($section=="9") {
 			?>
-			<p class="parto">A votre tour ! En vous aidant du vocabulaire déjà vu et de la vidéo de l'exercice précédent, essayez de vous présenter à votre correcteur en quelques mots. N'oubliez pas les formules de politesse pour dire bonjour et au revoir. Si vous ne savez pas comment dire en espéranto votre profession, ce sera l'occasion de demander à votre correcteur. Vous devriez être capable de rédiger 4/5 phrases en espéranto.</p>
-			<p>Cet exercice ne vous permettra pas uniquement de vérifier que vous avez assimilé le nouveau vocabulaire, mais également de faire connaissance avec votre correcteur qui vous sera attribué et qui corrigera vos exercices tout au long de ce cours. Aucune utilisation commerciale ne sera faite des informations que vous transmettrait.</p>
+			<p class="parto">À votre tour ! En vous aidant du vocabulaire déjà vu et de la vidéo de l'exercice précédent, essayez de vous présenter à votre correcteur en quelques mots. N'oubliez pas les formules de politesse pour dire bonjour et au revoir. Si vous ne savez pas comment dire en espéranto votre profession, ce sera l'occasion de demander à votre correcteur. Vous devriez être capable de rédiger 4 ou 5 phrases en espéranto.</p>
+			<p>Cet exercice ne vous permettra pas uniquement de vérifier que vous avez assimilé le nouveau vocabulaire, mais également de faire connaissance avec le correcteur qui vous sera attribué et qui corrigera vos exercices tout au long de ce cours.</p>
+			<p>Aucune utilisation commerciale ne sera faite des informations que vous transmettrez.
 
 					<?php
 						$demandoj=array (
@@ -500,7 +501,7 @@ QCM(
 						?>
 
 
-						<p class="parto">Voici un peu de vocabulaire qui peuvent vous aidez, n'apprenez pas ces mots par coeur, ils ne seront utiles que pour cet exercice.</p>
+						<p class="parto">Voici un peu de vocabulaire qui peut vous aider. Vous n'avez pas besoin de retenrir tous ces mots dès maintenant. Ils ne seront utiles que pour cet exercice.</p>
 			<div class="vortlisto row">
 				<div class="col s12 m4">
 					<p><b>Profession</b></p>
@@ -533,6 +534,9 @@ QCM(
 					<p><span class="eo">sportema</span> : sportif, qui aime le sport</p>
 					<p><span class="eo">vojaĝema</span> : voyageur, qui aime voyager</p>
 				</div>
+				<div class="col s12">
+					<p><b>Expression utile</b></p>
+					<p><span class="eo">Kiel oni diras ... en Esperanto?</span>&nbsp;: Comment dit-on ... en espéranto&nbsp;?</p>
 			</div>
 
 			<?php 

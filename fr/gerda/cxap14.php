@@ -19,7 +19,8 @@ include "gerdakapo.inc.php";
 			<div class="row dialogo">
 				<div class="col s12 m8">
 					<p>"Kie diable mi troviĝas?" diris al si Gerda, kiam ŝi
-					vekiĝis. ŝi kuŝis sur lito – sur malkomforta, tro mallarĝa lito –
+					vekiĝis. Ŝi kuŝis sur lito – sur malkomforta, tro mallarĝa lito –
+					en ĉambro nekonata, en domo nekonata.</p>
 					<p>Mankis al ŝi forto, kaj ŝia tuta korpo iom doloris; ŝi estis
 					laca, kvazaŭ ŝi estus laborinta multajn horojn sinsekve en la kampoj,
 					kvazaŭ ŝi estus movinta pezajn rokojn kaj ŝtonojn dum multaj kaj
@@ -31,25 +32,25 @@ include "gerdakapo.inc.php";
 					sentis sin malĝoja; ŝiaj okuloj malsekiĝis; ŝi ploris.</p>
 					<p>Ne estis multe da lumo en la ĉambro. Kvankam ŝi sentis sin
 					tiel laca, tiel senforta, scivolo pri la situacio tamen superis ŝian
-					deziron plu kuŝi. ŝi sekigis siajn okulojn kaj ellitiĝis. ŝi iris
+					deziron plu kuŝi. Ŝi sekigis siajn okulojn kaj ellitiĝis. Ŝi iris
 					al la eta fenestro, esperante malfermi la dikajn fenestrokovrilojn,
-					kiuj malhelpis la envenon de lumo. ŝi ankaŭ esperis, ke ŝi vidos la
+					kiuj malhelpis la envenon de lumo. Ŝi ankaŭ esperis, ke ŝi vidos la
 					sunon. Krome, estis tre varme en la ĉambro, kaj estus saĝe malfermi
 					la fenestron por enlasi iom da pura aero. Sed ŝi ne sukcesis. Io
 					malhelpis, ke tiu malnova fenestro moviĝu.</p>
 					<p>Ŝi iris al la pordo; ĝi estis ŝlosita, kaj ŝlosilo nenie
 					videblis.</p>
 					<p>La ĉambro estis malbela, ne tre pura. Apud la muro staris
-					tablo kaj seĝo. ŝi sidiĝis sur la seĝon, metis la brakojn sur la
+					tablo kaj seĝo. Ŝi sidiĝis sur la seĝon, metis la brakojn sur la
 					tablon, la kapon en la manojn, kaj ploris. "Enŝlosita mi estas," ŝi
 					pensis. "Oni enŝlosis min!"</p>
 					<p>Antaŭe ŝi ne multe pensis pri la plezuro esti libera. Liberi
 					estis io perfekte natura: ŝi iris, kien ŝi deziris, sen iu ajn
 					malhelpo, kaj tiu libereco ŝajnis rajto evidenta. Kaj nun oni
-					malliberigis ŝin malantaŭ ŝlosita pordo. ŝi, kiu tiom ŝatis ĝoji,
+					malliberigis ŝin malantaŭ ŝlosita pordo. Ŝi, kiu tiom ŝatis ĝoji,
 					ridi, kanti, kiu tiom ŝatis ludi kaj promeni sub la suno, nun ne plu
 					trovis en si la humuron, kiu tiom ofte helpis ŝin en la malfacilaj
-					horoj de la vivo. ŝi ne povis vidi la eksteran sunon, kaj same en ŝia
+					horoj de la vivo. Ŝi ne povis vidi la eksteran sunon, kaj same en ŝia
 					koro ne plu lumis la kutima suno de ĝojo.</p>
 				</div>
 				<div class="col s12 m4">
@@ -60,7 +61,7 @@ include "gerdakapo.inc.php";
 			<div class="row dialogo">
 				<div class="col s12 m8">
 					<p>Kaj jen subite ŝi reagis: ŝi iris al la pordo kaj ĝin batis
-					kun plej granda forto; ŝi faris timigan bruon, sed nenio okazis. ŝi
+					kun plej granda forto; ŝi faris timigan bruon, sed nenio okazis. Ŝi
 					vokis pli kaj pli laŭte, kriis, kriegis, samtempe piedbatante la
 					pordon, sed venis neniu respondo, neniu reago. Senespera, ŝi revenis
 					al la lito kaj rekuŝiĝis, pli laca ol iam ajn. Dum multaj horoj ŝi
@@ -74,7 +75,7 @@ include "gerdakapo.inc.php";
 					<p>Gerda diris: "Infanoj, ĉu vi aŭdas min?" ŝia koro batis
 					espere.</p>
 					<p>"Iu parolis," sonis unu el la infanvoĉoj, sed aŭdeble la
-					knabo ne parolis al Gerda, nur al sia kunulo. "ĉu vi aŭdis?"</p>
+					knabo ne parolis al Gerda, nur al sia kunulo. "Ĉu vi aŭdis?"</p>
 					<p>"Estis kvazaŭ voĉo de virino," diris la alia.</p>
 					<p>"Infanoj, venu, helpu min, mi estas mallibera, oni ŝlosis la
 					pordon, mi estas enŝlosita, venu, mi petas, mi petegas, liberigu min,"

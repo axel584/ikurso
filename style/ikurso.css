@@ -65,42 +65,19 @@ form p.col {
 	margin-bottom: 0.25em;
 }
 
-/* surcharge flexsider */
+/* surcharge slider pour témoignages */
 
-
-.flexslider {
+.slider .slides {
 	background:none;
 	border:none;
-	margin-bottom: 10px;
 }
 
 .slides li p {
 	margin-bottom: 2em;
 }
 
-.flex-control-nav {
-	position: relative;
-	bottom: auto;
-}
-
-.custom-navigation {
-	display: table;
-	width: 100%;
-	table-layout: fixed;
-}
-
-.custom-navigation > * {
-	display: table-cell;
-}
-
-.custom-navigation > a {
-	width: 50px;
-	color: inherit!important;
-	font-size:85%;
-}
-
-.custom-navigation .flex-next {
-	text-align: right;
+.slider .indicators .indicator-item.active {
+    background-color: #2196F3;
 }
 
 /*--------------------------------*/

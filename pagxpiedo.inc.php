@@ -11,8 +11,7 @@
 	</footer>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-	<script defer src="<?php echo $vojo;?>js/jquery.flexslider.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 	<script src="<?php echo $vojo;?>js/config.js"></script>
 	<script src="<?php echo $vojo;?>js/init.js"></script>
 	<script src="<?php echo $vojo;?>js/ikurso.js"></script>

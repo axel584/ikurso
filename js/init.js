@@ -15,7 +15,10 @@
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal();
 
-	$('.slider').slider({full_width: true});
+	$('.slider').slider({
+		full_width: true,
+		height: 320,
+	});
 
     $('select').material_select();
 
@@ -47,26 +50,9 @@
     // QCM
     $('.carousel').carousel({full_width: true});
 
-      $('.slider').slider({
-    full_width: false,
-    no_wrap : true,
-    interval:0,
-    transition:0
-  });
-
   $(document).ready(function(){
     $('.collapsible').collapsible({
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
   });
 });
-
-
-	// Can also be used with $(document).ready()
-	$(window).load(function() {
-	  $('.flexslider').flexslider({
-	    animation: "slide",
-	    controlsContainer: $(".custom-controls-container"),
-	    customDirectionNav: $(".custom-navigation a")
-	  });
-	});

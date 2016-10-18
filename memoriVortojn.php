@@ -16,15 +16,27 @@ include "pagxkapo.inc.php";
 
 			<section id="enhavo">
 
+			<?php
+				// on ajoute ici les mots à réviser, mais on peut le faire aussi souvent que l'on veut et où on le veut (par exemple dans le script qui indique que la leçon est terminé, ce serait très bien)
+				// le code est dans db.inc car c'est uniquement du php/sql sans affichage html
+				aldoniNovajnVortojnEnMemorilo($persono_id);
+			?>
 
-		<div class='memorilo' id='carousel_qcm'>
+			<?php
+				// ici la méthode est faite pour afficher des cartes, donc on met le code dans webui
+				kreiKartojnPorMemoriVortojn($persono_id);
+			?>
+
+
+
+<!-- 		<div class='memorilo' id='carousel_qcm'>
 			<div class='memorilo_demando row'>
 				<h3>(1/10) : pain</h3>
 				<input type='text' name='memorilo1' value='' id='001-01' />
 				<a class="waves-effect waves-light btn">vérifier</a>
 				<br>
 			</div>
-		</div>	
+		</div> -->	
 			
 
 

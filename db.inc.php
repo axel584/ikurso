@@ -341,6 +341,8 @@ function redirigeParDroits($persono) {
             $prefixe_url ='fr/gerda/';
         } elseif($row['kurso']=="CG") {
             $prefixe_url = 'fr/cge/';
+        } elseif($row['kurso']=="3N") {
+            $prefixe_url = 'fr/3n/';
         }
         if ($row["stato"]=="N") { // cas des élèves pas encore commencé
             $demando2 = "select titolo,retpagxo from lecionoj where numero='1' and kurso='".$row["kurso"]."'";
@@ -501,6 +503,18 @@ function jamKomencisKurson($persono_id) {
     return $row["combien"]>0;
 }
 
+function aldoniNovajnVortojnEnMemorilo($persono_id) {
+    global $bdd;
+    $query = "SELECT id FROM `vortoj` WHERE id not in (select vorto_id from personoj_vortoj where persono_id=".$persono_id.") and lecionero_id in (select lecionero_id from personoj_lecioneroj where persono_id=".$persono_id.")";
+    $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+    while ($row = $result->fetch()) {
+        echo "insertion : ".$row["id"]."<br/>";
+        $requete = $bdd->prepare("INSERT INTO `personoj_vortoj` (`id`, `persono_id`, `vorto_id`, `nombrilo`, `venontaFojo`) VALUES (NULL, :persono_id, :vorto_id, '1', NOW())");
+        $requete->execute(array(':persono_id'=>$persono_id,':vorto_id'=>$row["id"]));
+    }
+    // ; 
+}
+
 // fonction spécifique au cours de troisième niveau :
 function getHazardaPriskriboDeFilmo($persono_id) {
     global $bdd;
@@ -525,5 +539,8 @@ function getHazardaPriskriboDeFilmo($persono_id) {
         return Array($lernanto_nomo,$priskribo,$titolo);
     }
 }
+
+
+
 
 ?>

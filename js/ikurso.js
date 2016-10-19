@@ -472,4 +472,50 @@ $("#kontroliRespondon_button").click(function() {
   });
 
 
+// fonction spécifique pour le "memorilo"
+
+function kontroliVorton(vorto_id,persono_id,respondo) {
+      $.ajax({
+          url : $cheminAbsolu+'ajax/kontroliVorton.php',
+          type : 'GET',
+          dataType : 'json',
+          data : "vorto_id="+vorto_id+"&persono_id="+persono_id+"&respondo="+respondo,
+          success : function(reponse, statut){ 
+            alert("ok");
+            // if (reponse.mesagxo=="aucune url suivante") {
+            //   alert("leçon suivante inconnu, contactez les administrateurs");
+            // } else if (reponse.mesagxo=="ok") {
+            //   window.location = $urlracine+reponse.url;
+            // } else {
+            //   alert("mauvais message de retour, contactez les administrateurs")
+            // }
+          },
+          error : function() {
+            alert("Erreur de connexion, contactez les administrateurs");
+          }
+      });
+}
+
+// classe carte : memorilo_demando
+// si on tape sur entrée ou sur le bouton
+
+$(".memorilo_button").click(function() {
+    var $vorto_id=$(this).data('vorto_id');
+    var $persono_id=$(this).data('persono_id');
+    var $input=$(this).data('input');
+    var $respondo=$("#"+$input).val();
+    kontroliVorton($vorto_id,$persono_id,$respondo);
+});
+
+$('.memorilo_input').keypress(function(e){
+    if( e.which == 13 ){
+        var $vorto_id=$(this).data('vorto_id');
+        var $persono_id=$(this).data('persono_id');
+        var $respondo=$(this).val();
+        kontroliVorton($vorto_id,$persono_id,$respondo);
+    }
+});
+
+
+
 });

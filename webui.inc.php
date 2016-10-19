@@ -671,6 +671,7 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 	$query= "SELECT vortoj.id,eo,fr,tipo FROM `personoj_vortoj` join vortoj on personoj_vortoj.vorto_id=vortoj.id WHERE persono_id=".$persono_id." and venontaFojo<=NOW() order by RAND() limit 10";
 	$res = $bdd->query($query);
 	$indice = 1;
+	echo "<div class='memorilo' id='carousel_qcm'>";
 	while ($row = $res->fetch()) {
 		//echo $row["id"].":".$row["eo"].":".$row["fr"].":".$row["tipo"]."<br/>";
 		if ($indice!=1) {
@@ -681,10 +682,11 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 		echo "<div class='memorilo_demando row ".$style."'>";
 		echo "<p>".$indice."/".$combien."</p>";
 		echo "<h3>&nbsp;".$row["fr"]."&nbsp;<div class='chip'>".$row["tipo"]."</div></h3>";
-		echo "<input type='text' name='memorilo1' value='' id='001-01' />";
-		echo "<a class='waves-effect waves-light btn'>vérifier</a>";
+		echo "<input type='text' class='memorilo_input' name='memorilo".$indice."' value='' id='memorilo".$indice."' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."'/>";
+		echo "<a class='memorilo_button waves-effect waves-light btn' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."' data-input='memorilo".$indice."'>vérifier</a>";
 		echo "</div>";
 		$indice++;
 	}
+	echo "</div>";
 }
 ?>

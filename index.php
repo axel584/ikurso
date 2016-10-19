@@ -49,6 +49,64 @@ include "pagxkapo.inc.php";
 			</div>
 		</section>
 
+		<section id="atestadoj">
+			<div class="row">
+				<div class="col s12 m8 offset-m2">
+					<h5>Ils ont suivi nos cours :</h5>
+					<div class="card-panel blue lighten-5">
+						<div class="slider">
+							  <ul class="slides">
+								<li class="row">
+									<p class="col s12">Le cours en 10 leçons d’iKurso est parfait pour commencer l’apprentissage de l’espéranto.<br>Comptez sur vos tuteurs pour vous aider à progresser rapidement&nbsp;!</p>
+									<div class="circle responsive-img col s4 m3 l2 offset-s4 offset-m5 offset-l5 center-align">
+										<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/gwen.jpg" class="circle responsive-img" alt="" />
+									</div>
+									<br>
+									<span class="eta col s4 m2 offset-s4 offset-m5 center-align"><em>Gwen</em></span>
+								</li>
+								<li class="row">
+									<p class="col s12">Excellente application pour découvrir la langue internationale et pour commencer à se l’approprier. Des cours bien structurés, des exercices rapidement corrigés en font une très bonne méthode que je recommande.</p>
+									<div class="circle responsive-img col s4 m3 l2 offset-s4 offset-m5 offset-l5 center-align">
+										<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Ishtima.jpg" class="circle responsive-img" alt="" />
+									</div>
+									<br>
+									<span class="eta col s4 m2 offset-s4 offset-m5 center-align"><em>Ishtima</em></span>
+								</li>
+								<li class="row">
+									<p class="col s12">Dès le début, on travaille sur des textes ; on travaille des phrases complètes. Le vocabulaire appris, en contexte, est plus facilement mémorisé grâce à l’image mentale que l’on se fait du contenu du texte. On assigne à chaque apprenant un correcteur-motivateur bénévole et intéressé pour l’encourager à la régularité, veiller sur l’augmentation graduelle de la difficulté tout en soutenant la motivation. </p>
+									<div class="circle responsive-img col s4 m3 l2 offset-s4 offset-m5 offset-l5 center-align">
+										<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Philippe-D.jpg" class="circle responsive-img" alt="" />
+									</div>
+									<br>
+									<span class="eta col s4 m2 offset-s4 offset-m5 center-align"><em>Philippe</em></span>
+								</li>
+								<li class="row">
+									<p class="col s12">Les cours sont clairs et équilibrent parfaitement grammaire, vocabulaire et exercices. Très vite on se sent à l’aise en espéranto. De plus nos tuteurs, dévoués, corrigent au mieux nos exercices, en prenant soin de notre bonne compréhension. Je recommande&nbsp;!</p>
+									<div class="circle responsive-img col s4 m3 l2 offset-s4 offset-m5 offset-l5 center-align">
+										<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Nathael.jpg" class="circle responsive-img" alt="" />
+									</div>
+									<br>
+									<span class="eta col s4 m2 offset-s4 offset-m5 center-align"><em>Nathaël</em></span>
+								</li>
+								<li class="row">
+									<p class="col s12">Ikurso est site exceptionnel. Sans doute parce que l’espéranto est également une langue exceptionnelle. Le cours <em>Gerda malaperis</em> est particulièrement bien structuré et complet.</p>
+									<div class="circle responsive-img col s4 m3 l2 offset-s4 offset-m5 offset-l5 center-align">
+										<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Marko.jpg" class="circle responsive-img" alt="" />
+									</div>
+									<br>
+									<span class="eta col s4 m2 offset-s4 offset-m5 center-align"><em>Marko</em></span>
+								</li>
+								<li class="row">
+									<p class="col s12">IKurso permet de très rapidement progresser en espéranto. Le fait d'avoir un-e correcteur-trice qui nous suit tour au long des leçons est vraiment un plus.</p>
+									<span class="eta col s4 m2 offset-s4 offset-m5 center-align"><em>Jean-Baptiste</em></span>
+								</li>
+							 </ul>
+						</div>					
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section id="aliaj_kursoj">
 			<h2>Autres cours</h2>
 			

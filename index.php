@@ -59,7 +59,7 @@ include "pagxkapo.inc.php";
 								<li class="row">
 									<p class="col s12">Le cours en 10 leçons d’iKurso est parfait pour commencer l’apprentissage de l’espéranto.<br>Comptez sur vos tuteurs pour vous aider à progresser rapidement&nbsp;!</p>
 									<div class="circle responsive-img col s4 m3 l2 offset-s4 offset-m5 offset-l5 center-align">
-										<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/gwen.jpg" class="circle responsive-img" alt="" />
+										<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Gwen.jpg" class="circle responsive-img" alt="" />
 									</div>
 									<br>
 									<span class="eta col s4 m2 offset-s4 offset-m5 center-align"><em>Gwen</em></span>

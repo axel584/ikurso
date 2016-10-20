@@ -658,17 +658,20 @@ function menuDeroulantChoixProposition($kodo,$lecionero_id,$persono_id) {
 	echo "<a id='montriElektitanRespondon_button' class='waves-effect waves-light btn tooltipped light-blue darken-1' data-position='top' data-delay='50'>Montri Proponon de tiu lernanto</a>";
 }
 
-// fonction pour afficher les cartes dans l'outil "memrise-like"
-function kreiKartojnPorMemoriVortojn($persono_id) {
+
+function kiomVortojPorMemori($persono_id) {
 	global $bdd;
 	// on compte pour savoir si on a 10 cartes ou moins
 	$query= "SELECT count(*) as combien FROM `personoj_vortoj` WHERE persono_id=".$persono_id." and venontaFojo<=NOW()";
 	$combien = $bdd->query($query)->fetch()["combien"];
-	//echo $combien;
-	if ($combien>10) {
-		$combien = 10;
-	}
-	$query= "SELECT vortoj.id,eo,fr,tipo FROM `personoj_vortoj` join vortoj on personoj_vortoj.vorto_id=vortoj.id WHERE persono_id=".$persono_id." and venontaFojo<=NOW() order by RAND() limit 10";
+	return $combien;
+}
+
+// fonction pour afficher les cartes dans l'outil "memrise-like"
+function kreiKartojnPorMemoriVortojn($persono_id) {
+	global $bdd;
+	$combien = kiomVortojPorMemori($persono_id);
+	$query= "SELECT vortoj.id,eo,fr,tipo FROM `personoj_vortoj` join vortoj on personoj_vortoj.vorto_id=vortoj.id WHERE persono_id=".$persono_id." and venontaFojo<=NOW() order by RAND()";
 	$res = $bdd->query($query);
 	$indice = 1;
 	echo "<div class='memorilo' id='carousel_qcm'>";

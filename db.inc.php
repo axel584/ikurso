@@ -541,6 +541,4 @@ function getHazardaPriskriboDeFilmo($persono_id) {
 }
 
 
-
-
 ?>

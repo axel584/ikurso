@@ -481,14 +481,15 @@ function kontroliVorton(vorto_id,persono_id,respondo) {
           dataType : 'json',
           data : "vorto_id="+vorto_id+"&persono_id="+persono_id+"&respondo="+respondo,
           success : function(reponse, statut){ 
-            alert("ok");
-            // if (reponse.mesagxo=="aucune url suivante") {
-            //   alert("leçon suivante inconnu, contactez les administrateurs");
-            // } else if (reponse.mesagxo=="ok") {
-            //   window.location = $urlracine+reponse.url;
-            // } else {
-            //   alert("mauvais message de retour, contactez les administrateurs")
-            // }
+            if (reponse.mesagxo=="ok") {
+                Materialize.toast('Bravo !', 2000);
+                 $encours = $('.memorilo_demando:visible');
+                    setTimeout(function(){
+                      $encours.next().removeClass("hide");
+                      $encours.addClass("hide");
+                      $('.memorilo_input:visible').focus(); // on met le focus sur le champ
+                    }, 500);
+            }
           },
           error : function() {
             alert("Erreur de connexion, contactez les administrateurs");

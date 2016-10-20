@@ -22,6 +22,7 @@ include "pagxkapo.inc.php";
 				aldoniNovajnVortojnEnMemorilo($persono_id);
 			?>
 
+			
 			<?php
 				// ici la méthode est faite pour afficher des cartes, donc on met le code dans webui
 				kreiKartojnPorMemoriVortojn($persono_id);

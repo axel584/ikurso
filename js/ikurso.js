@@ -489,6 +489,14 @@ function kontroliVorton(vorto_id,persono_id,respondo) {
                       $encours.addClass("hide");
                       $('.memorilo_input:visible').focus(); // on met le focus sur le champ
                     }, 500);
+            } else if (reponse.mesagxo=="ko") {
+                Materialize.toast(reponse.eraroj, 2000);
+                 $encours = $('.memorilo_demando:visible');
+                    setTimeout(function(){
+                      $encours.next().removeClass("hide");
+                      $encours.addClass("hide");
+                      $('.memorilo_input:visible').focus(); // on met le focus sur le champ
+                    }, 2000);
             }
           },
           error : function() {

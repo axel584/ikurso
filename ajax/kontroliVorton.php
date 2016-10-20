@@ -18,17 +18,20 @@ $query="SELECT eo FROM vortoj where id='".$vorto_id."'";
 $result = $bdd->query($query);
 $bonaRespondo = $result->fetch()["eo"];
 
-if ($lernantaRespondo==$bonaRespondo) {
+if (strcasecmp($lernantaRespondo,$bonaRespondo)==0) { // on compare sans se soucier de la case
 	// on a une bonne réponse, on incrémente le nombre de bonne réponse dans la table personoj_vortoj et on calcule la prochaine etape
-	$query="SELECT id,nombrilo,venontaFojo FROM personoj_vortoj where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
+	$query="SELECT nombrilo FROM personoj_vortoj where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
 	$result = $bdd->query($query);
-	$row = $result->fetch();
-	$query2 = "update personoj_vortoj set nombrilo=nombrilo+1, venontaFojo=DATE_ADD(venontaFojo,INTERVAL ".getInterval($row["nombrilo"]+1)." DAY) where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
+	$nombrilo = $result->fetch()["nombrilo"];
+	$query2 = "update personoj_vortoj set nombrilo=nombrilo+1, venontaFojo=DATE_ADD(venontaFojo,INTERVAL ".getInterval($nombrilo+1)." DAY) where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
 	$bdd->exec($query2);
 	$respondo["mesagxo"] = "ok";
 	echo json_encode($respondo);
 	exit();
 } else {
-	echo "ERREUR : pas la bonne réponse";
+	$respondo["mesagxo"] = "ko";
+	$respondo["eraroj"]="La bonne réponse était&nbsp;<b>".$bonaRespondo."</b>";
+	echo json_encode($respondo);
+	exit();
 }
 ?>

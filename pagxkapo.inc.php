@@ -32,7 +32,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		  url: '<?php echo $vojo;?>soundmanager2/swf/'
 		});
 		</script>
-
+		<script type="text/javascript" src="xAlUtf8.js"></script>	
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css"  media="screen"/>
 
 		<!--Let browser know website is optimized for mobile-->

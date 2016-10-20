@@ -683,9 +683,9 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 			$style = "";
 		}
 		echo "<div class='memorilo_demando row ".$style."'>";
-		echo "<p>".$indice."/".$combien."</p>";
+		echo "<p>Encore ".(1+$combien-$indice)." mots à réviser...</p>";
 		echo "<h3>&nbsp;".$row["fr"]."&nbsp;<div class='chip'>".$row["tipo"]."</div></h3>";
-		echo "<input type='text' class='memorilo_input' name='memorilo".$indice."' value='' id='memorilo".$indice."' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."'/>";
+		echo "<input type='text' onkeyup='xAlUtf8(this)' class='memorilo_input' name='memorilo".$indice."' value='' id='memorilo".$indice."' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."'/>";
 		echo "<a class='memorilo_button waves-effect waves-light btn' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."' data-input='memorilo".$indice."'>vérifier</a>";
 		echo "</div>";
 		$indice++;

@@ -234,7 +234,7 @@ include "gerdakapo.inc.php";
 				<input type="hidden" name="013_cxap14.1" value="Trovu la vortojn.">
 				<div class="ekzemplo">
 					<p><em>Ekzemple:</em></p>
-					<p>parto → parto <u>peco</u></p>
+					<p>parto → parto : <u>peco</u></p>
 				</div>
 		
 				<div class="tasko">

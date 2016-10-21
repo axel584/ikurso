@@ -23,12 +23,12 @@ include "gerdakapo.inc.php";
 					dormis kontentige?"</p>
 					<p>"Perfekte, kara, perfekte. Sed diru do al via plej fidinda
 					amiko, kial vi ne sufiĉe dormis."</p>
-					<p>"Ĉu ne estas klare al vi? Mi tro pensis. Mi pensadis tutnokte
+					<p>"Ĉu ne estas klare al vi? Mi tro pensis. Mi pensadis dum la tuta nokto
 					pri ĉio, kio okazis hieraŭ."</p>
 					<p>"Estas fakto, ke mi ne revidis vin hieraŭ, post kiam mi eliris
 					kun Bob por okupiĝi pri Gerda. Ni lasis vin en la memserva restoracio
 					kun la tasko observi la blondulon. Kiam mi revenis, vi estis for. Kien
-					vi iris? ĉu vi faros al mi precizan raporton?"</p>
+					vi iris? Ĉu vi faros al mi precizan raporton?"</p>
 					<p>"Kun plezuro, sed ankaŭ vi raportos al mi poste, ĉu ne? Nu,
 					mi veturis al la urbocentro kun tiu junulo. Mi rakontis al li, ke io
 					fuŝa okazis al mia aŭto, kaj mi petis lin min veturigi. Li hezitis,
@@ -64,15 +64,15 @@ include "gerdakapo.inc.php";
 					mebloj apude. Nu, ne gravas, ĉu vi konas aŭ ne. Li eniris tiun
 					panejon, aŭ tiun dolĉaĵvendejon, aŭ tiun… nu… tiun pan- kaj
 					dolĉaĵvendejon, kaj eliris post minuto portante paperan sakon, kiu
-					aspektis plenplena. ŝajnis, ke li aĉetis la tutan magazenon. Mi devas
+					aspektis plenplena. Ŝajnis, ke li aĉetis la tutan magazenon. Mi devas
 					diri, ke ili vendas tre bonajn aĵojn en tiu ejo.  Mi, kiu tiom ŝatas
 					ĉokoladon kaj dolĉaĵojn, ofte irus tien kaj aĉetus multon, se mi ne
 					timus dikiĝi. Nu… e… kion mi rakontis?"</p>
 					<p>"Vi raportis pri via spiona sekvado, sed vi devojiĝis de la
 					ĉefa vojo de via raporto al flankaj konsideroj pri pano kaj ĉokolado.
 					Fakte, ĉu vi deziras iom pli da pano? Kion vi trinkas ĉi-matene?
-					Teon, mi vidas. ĉu vi ŝatus, ke mi replenigu vian tason?"</p>
-					<p>"Jes, dankon. Mi plezure trinkos plian tason da teo. Dankon,
+					Teon, mi vidas. Ĉu vi ŝatus, ke mi replenigu vian tason?"</p>
+					<p>"Jes, dankon. Mi trinkos plezure plian tason da teo. Dankon,
 					Tom, kara. Nu, do…"</p>
 				</div>
 				<div class="col s12 m4">

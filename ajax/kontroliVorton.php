@@ -14,9 +14,11 @@ function getInterval($nombrilo) {
 	}
 }
 
-$query="SELECT eo FROM vortoj where id='".$vorto_id."'";
+$query="SELECT fr,eo FROM vortoj where id='".$vorto_id."'";
 $result = $bdd->query($query);
-$bonaRespondo = $result->fetch()["eo"];
+$row = $result->fetch();
+$bonaRespondo = $row["eo"];
+$francaVorto = $row["fr"];
 
 if (strcasecmp($lernantaRespondo,$bonaRespondo)==0) { // on compare sans se soucier de la case
 	// on a une bonne réponse, on incrémente le nombre de bonne réponse dans la table personoj_vortoj et on calcule la prochaine etape
@@ -29,8 +31,11 @@ if (strcasecmp($lernantaRespondo,$bonaRespondo)==0) { // on compare sans se souc
 	echo json_encode($respondo);
 	exit();
 } else {
+	// on stocke dans le protokolo les erreurs pour pouvoir aider au besoin
+	protokolo($persono_id,"MEMORILO","Pour : ".$francaVorto." l'élève a traduit : ".$francaVorto." au lieu de ".$bonaRespondo);
 	$respondo["mesagxo"] = "ko";
 	$respondo["eraroj"]="La bonne réponse était&nbsp;<b>".$bonaRespondo."</b>";
+	$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b>".$bonaRespondo."</b>";
 	echo json_encode($respondo);
 	exit();
 }

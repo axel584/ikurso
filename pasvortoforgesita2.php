@@ -23,8 +23,8 @@ else {
 }
 $mesagxkapo="MIME-Version: 1.0".chr(13).chr(10);
 $mesagxkapo.="Content-type: text/html;charset=utf-8".chr(13).chr(10);
-$mesagxkapo.="From: Ikurso <ikurso@esperanto-jeunes.org>".chr(13).chr(10);
-$mesagxkapo.="Reply-To: Ikurso <ikurso@esperanto-jeunes.org>".chr(13).chr(10);
+$mesagxkapo.="From: Ikurso <ikurso@esperanto-france.org>".chr(13).chr(10);
+$mesagxkapo.="Reply-To: Ikurso <ikurso@esperanto-france.org>".chr(13).chr(10);
 $mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13).chr(10);
 $resultat = mail($retadreso,"Votre mot de passe pour rentrer sur I-kurso",$contents,$mesagxkapo);
 protokolo($row['id'],"PASVORTO SENDITA",$row['enirnomo']."-".$row['pasvorto']);

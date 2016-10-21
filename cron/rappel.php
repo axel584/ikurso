@@ -37,8 +37,8 @@ $result = $bdd->query($query);
 	// envoie de l'email
 	$mesagxkapo="MIME-Version: 1.0\n";
 	$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
-	$mesagxkapo.="From: ikurso <ikurso@esperanto-jeunes.org>\n";
-	$mesagxkapo.="Return-Path: <ikurso@esperanto-jeunes.org>\n";
+	$mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
+	$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
 	$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 	mail($row["retadreso"],"Cours d'espéranto",$contents,$mesagxkapo);
 }
@@ -75,8 +75,8 @@ $result = $bdd->query($query);
 		// envoie de l'email
 	$mesagxkapo="MIME-Version: 1.0\n";
 	$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
-	$mesagxkapo.="From: ikurso <ikurso@esperanto-jeunes.org>\n";
-	$mesagxkapo.="Return-Path: <ikurso@esperanto-jeunes.org>\n";
+	$mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
+	$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
 	$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 	mail($row["retadreso"],"Cours d'espéranto",$contents,$mesagxkapo);
  }

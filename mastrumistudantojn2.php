@@ -28,7 +28,7 @@ $query="select stato,nunleciono from nuna_kurso where id=".$rezultoj[1];
                 	fclose($fd);
                 	$mesagxkapo="MIME-Version: 1.0\n";
                 	$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
-                	$mesagxkapo.="From: Ikurso <ikurso@esperanto-jeunes.org>\n";
+                	$mesagxkapo.="From: Ikurso <ikurso@esperanto-france.org>\n";
                 	$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
                 	//prenu la liston de cxiuj informistoj 
                 	$demando="select retadreso from personoj where rajtoj='I'";

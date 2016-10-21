@@ -22,7 +22,7 @@ include "pagxkapo.inc.php";
 				aldoniNovajnVortojnEnMemorilo($persono_id);
 			?>
 
-			
+
 			<?php
 				// ici la méthode est faite pour afficher des cartes, donc on met le code dans webui
 				kreiKartojnPorMemoriVortojn($persono_id);
@@ -30,15 +30,16 @@ include "pagxkapo.inc.php";
 
 
 
-<!-- 		<div class='memorilo' id='carousel_qcm'>
-			<div class='memorilo_demando row'>
-				<h3>(1/10) : pain</h3>
-				<input type='text' name='memorilo1' value='' id='001-01' />
-				<a class="waves-effect waves-light btn">vérifier</a>
-				<br>
+			<div class='row hide' id='recapitulatif'>
+				<div class='col s12'>
+					<div class='card-panel blue lighten-5'>
+						<h3>Récapitulatif :</h3>
+						<ul class='collection' id='malbonaj_respondoj'>
+						</ul>	
+					</div>
+				</div>
 			</div>
-		</div> -->	
-			
+
 
 
 
@@ -51,6 +52,18 @@ include "pagxkapo.inc.php";
 					</p>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="col s12">
+				<div class="card red  lighten-4">
+	            <div class="card-content">
+	              <span class="card-title"><i class="material-icons">warning</i> Nouvelle fonctionnalité</span>
+	              <p>Cet outil est nouveau et nous avons besoin de vos retours pour l'améliorer. Contactez nous via le <a href='reago.php'>formulaire de contact</a> pour nous signaler vos remarques, suggestions ou remerciements.</p>
+	            </div>
+	          </div>
+			</div>
+			</div>
+
 		</section>
 		</article>
 	

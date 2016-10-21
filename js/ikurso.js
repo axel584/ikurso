@@ -493,6 +493,8 @@ function kontroliVorton(vorto_id,persono_id,respondo) {
                 Materialize.toast(reponse.eraroj, 2000);
                  $encours = $('.memorilo_demando:visible');
                     setTimeout(function(){
+                      $("#recapitulatif").removeClass("hide");
+                      $("#malbonaj_respondoj").prepend("<li class='collection-item row'><span>"+reponse.recapitulatif+"</span></li>");
                       $encours.next().removeClass("hide");
                       $encours.addClass("hide");
                       $('.memorilo_input:visible').focus(); // on met le focus sur le champ

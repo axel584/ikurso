@@ -692,4 +692,12 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 	}
 	echo "</div>";
 }
+
+function getLigiloAlMemorilo($persono_id) {
+	global $bdd,$cheminAbsolu;
+	$combien = kiomVortojPorMemori($persono_id);
+	if ($combien>0) {
+		echo "<p><a href='".$cheminAbsolu."memoriVortojn.php' class='waves-effect waves-light btn tooltipped light-blue darken-1 '>".$combien." mots à réviser...</a></p>";
+	}
+}
 ?>

@@ -445,6 +445,7 @@ include "dlekkapo.inc.php";
 			<?php 
 			// On affiche le sommaire de la lecon
 			getEnhavtabelo('CG',$leciono); 
+			getLigiloAlMemorilo($persono_id); 
 			?>
 
 		</ul>	

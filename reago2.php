@@ -6,7 +6,7 @@ include "pagxkapo.inc.php";
 
 $mesagxkapo="MIME-Version: 1.0\n";
 $mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
-$mesagxkapo.="From: Ikurso <ikurso@esperanto-jeunes.org>\n";
+$mesagxkapo.="From: Ikurso <ikurso@esperanto-france.org>\n";
 if (checkEmail($_POST['sendinto'])) {
 	if ($_POST["komento"]) {
 		$mesagxkapo.="Cc: <".$_POST['sendinto'].">\n";

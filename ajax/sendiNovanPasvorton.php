@@ -39,8 +39,8 @@ $contents=str_replace("##LIEN##",$lien,$contents);
 $contents=str_replace("##ENIRNOMO##",$enirnomo,$contents);
 $mesagxkapo="MIME-Version: 1.0\n";
 $mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
-$mesagxkapo.="From: ikurso <ikurso@esperanto-jeunes.org>\n";
-$mesagxkapo.="Return-Path: <ikurso@esperanto-jeunes.org>\n";
+$mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
+$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
 $mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 // envoyer le mail eleve pour l'inviter a attendre un correcteur.
 $objekto="Votre mot de passe sur les cours d'espéranto Ikurso";

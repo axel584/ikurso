@@ -55,8 +55,8 @@ if ($row['korektanto']!="") {
 		$contents=str_replace("##SENIRNOMO##",$studantinformoj["enirnomo"],$contents);
 		$mesagxkapo="MIME-Version: 1.0\n";
 		$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
-		$mesagxkapo.="From: Ikurso <cours-esperanto@esperanto-jeunes.org>\n";
-		$mesagxkapo.="Bcc: <kopiokurso@esperanto-jeunes.org>\n";
+		$mesagxkapo.="From: Ikurso <cours-esperanto@esperanto-france.org>\n";
+		$mesagxkapo.="Bcc: <kopiokurso@esperanto-france.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		$mesagxkapo.=" \n";
 		mail($studantinformoj["retadreso"],"Votre correcteur I-kurso",$contents,$mesagxkapo);
@@ -76,8 +76,8 @@ if ($row['korektanto']!="") {
 		$contents=str_replace("##SNASKIGXDATO##",$studantinformoj["naskigxdato"],$contents);
 		$mesagxkapo="MIME-Version: 1.0\n";
 		$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
-		$mesagxkapo.="From: Ikurso <cours-esperanto@esperanto-jeunes.org>\n";
-		$mesagxkapo.="Bcc: <kopiokurso@esperanto-jeunes.org>\n";
+		$mesagxkapo.="From: Ikurso <cours-esperanto@esperanto-france.org>\n";
+		$mesagxkapo.="Bcc: <kopiokurso@esperanto-france.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		$mesagxkapo.=" \n";
 		mail($korektantinformoj["retadreso"],"Nouvel élève sur I-kurso",$contents,$mesagxkapo);

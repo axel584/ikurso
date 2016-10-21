@@ -47,7 +47,7 @@ if (($retadreso=="") || ($enirnomo=="") || ($pasvorto=="")) {
 			$contents=str_replace("##PASVORTO##",$pasvorto,$contents);		
 			$mesagxkapo="MIME-Version: 1.0\n";
 			$mesagxkapo.="Content-type: text/html; charset=utf-8\n";
-			$mesagxkapo.="From: Ikurso <ikurso@esperanto-jeunes.org>\n";
+			$mesagxkapo.="From: Ikurso <ikurso@esperanto-france.org>\n";
 			$mesagxkapo.="Date: ".date("D, j M Y H:i:s")."\n";
 			$mesagxkapo.=" \n";
 			// creer l'eleve :
@@ -90,7 +90,7 @@ if (($retadreso=="") || ($enirnomo=="") || ($pasvorto=="")) {
 			$contents=str_replace("##KOMENTO##",stripslashes($kialo),$contents);
 			$mesagxkapo="MIME-Version: 1.0\n";
 			$mesagxkapo.="Content-type: text/html; charset=utf-8\n";
-			$mesagxkapo.="From: Ikurso <ikurso@esperanto-jeunes.org>\n";
+			$mesagxkapo.="From: Ikurso <ikurso@esperanto-france.org>\n";
 			$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 			$mesagxkapo.=" \n";
 			// envoyer le mail aux informateurs

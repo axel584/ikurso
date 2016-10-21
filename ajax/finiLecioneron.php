@@ -30,6 +30,10 @@ if ($combien==0) {
 	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id));
 }
 
+// on ajoute les mots étudiés dans cette section au vocabulaire à apprendre :
+aldoniNovajnVortojnEnMemorilo($persono_id);
+
+
 // on trouve la leçon suivante et on récupère son url :
 if ($kurso=="CG") {
 	$prefixeKurso = "fr/cge/";

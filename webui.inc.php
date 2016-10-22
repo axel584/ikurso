@@ -686,10 +686,12 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 		echo "<p>Encore ".(1+$combien-$indice)." mot";
 		if ($combien-$indice > 0) echo "s";
 		echo " à réviser...</p>";
+		echo "<div class='col s12'>";
+		echo "<div class='card-panel white'>";
 		echo "<h3>&nbsp;".$row["fr"]."&nbsp;<div class='chip'>".$row["tipo"]."</div></h3>";
 		echo "<input type='text' onkeyup='xAlUtf8(this)' class='memorilo_input' name='memorilo".$indice."' value='' id='memorilo".$indice."' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."'/>";
-		echo "<a class='memorilo_button waves-effect waves-light btn' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."' data-input='memorilo".$indice."'>vérifier</a>";
-		echo "</div>";
+		echo "<a class='memorilo_button waves-effect waves-light btn light-blue darken-1' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."' data-input='memorilo".$indice."'>vérifier</a>";
+		echo "</div></div></div>";
 		$indice++;
 	}
 	echo "</div>";

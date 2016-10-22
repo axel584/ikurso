@@ -683,7 +683,9 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 			$style = "";
 		}
 		echo "<div class='memorilo_demando row ".$style."'>";
-		echo "<p>Encore ".(1+$combien-$indice)." mots à réviser...</p>";
+		echo "<p>Encore ".(1+$combien-$indice)." mot";
+		if ($combien-$indice > 0) echo "s";
+		echo " à réviser...</p>";
 		echo "<h3>&nbsp;".$row["fr"]."&nbsp;<div class='chip'>".$row["tipo"]."</div></h3>";
 		echo "<input type='text' onkeyup='xAlUtf8(this)' class='memorilo_input' name='memorilo".$indice."' value='' id='memorilo".$indice."' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."'/>";
 		echo "<a class='memorilo_button waves-effect waves-light btn' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."' data-input='memorilo".$indice."'>vérifier</a>";
@@ -694,10 +696,12 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 }
 
 function getLigiloAlMemorilo($persono_id) {
-	global $bdd,$cheminAbsolu;
+	global $bdd,$vojo;
 	$combien = kiomVortojPorMemori($persono_id);
 	if ($combien>0) {
-		echo "<p><a href='".$cheminAbsolu."memoriVortojn.php' class='waves-effect waves-light btn tooltipped light-blue darken-1 '>".$combien." mots à réviser...</a></p>";
+		echo "<p><a href='".$vojo."memoriVortojn.php' class='waves-effect waves-light btn tooltipped light-blue darken-1 '>".$combien." mot";
+		if ($combien > 1) echo "s";
+		echo " à réviser...</a></p>";
 	}
 }
 ?>

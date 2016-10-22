@@ -7,10 +7,13 @@ include "dlekkapo.inc.php";
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
 				
+		<?php
+			getLigiloAlMemorilo($persono_id);
+		?>
 		<section id="leciono-enhavo">
 		<?php 
 		getTitoloLecionero('CG',$leciono,$section);
-
+		
 			if ($section=="1") {
 			?>
 			<p class="parto">Jetons un coup d’œil sur les <b>questions et réponses</b> correspondant à une

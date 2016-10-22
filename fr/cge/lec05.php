@@ -323,6 +323,9 @@ include "dlekkapo.inc.php";
 	</article>
 			
 	<aside class="col s12 m10 l3 offset-m1 push-l1">
+		<?php
+			getLigiloAlMemorilo($persono_id);
+			?>
 								
 		<ul class="collapsible" data-collapsible="expandable">
 

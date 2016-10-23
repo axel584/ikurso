@@ -113,7 +113,7 @@ if ($row['korektanto']!="") {
 		$mesagxkapo="MIME-Version: 1.0\n";
 		$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
 		$mesagxkapo.="From: ikurso <ikurso@esperanto-jeunes.org>\n";
-		$mesagxkapo.="Bcc: <kopiokurso@esperanto-jeunes.org>\n";
+		$mesagxkapo.="Bcc: <kopiokurso@esperanto-france.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		$mesagxkapo.=" \n";
 
@@ -137,7 +137,7 @@ if ($row['korektanto']!="") {
 		$mesagxkapo="MIME-Version: 1.0\n";
 		$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
 		$mesagxkapo.="From: ikurso <cours-esperanto@esperanto-jeunes.org>\n";
-		$mesagxkapo.="Bcc: <kopiokurso@esperanto-jeunes.org>\n";
+		$mesagxkapo.="Bcc: <kopiokurso@esperanto-france.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		$mesagxkapo.=" \n";
 		mail($korAdreso,"Nouvel élève sur I-kurso",$contents,$mesagxkapo);
@@ -161,7 +161,7 @@ if (($nunleciono==NULL) and ($kurso=='GR'||$kurso=='CG'||$kurso=='3N')){
 		$mesagxkapo.="From: ikurso <cours-esperanto@esperanto-jeunes.org>\n";
 		$mesagxkapo.="Reply-To: ".$celpersono["enirnomo"]." <".$celpersono["retadreso"].">\n";
 		$mesagxkapo.="Cc: ".$celpersono["enirnomo"]." <".$celpersono["retadreso"].">\n";
-		$mesagxkapo.="Bcc: <kopiokurso@esperanto-jeunes.org>\n";
+		$mesagxkapo.="Bcc: <kopiokurso@esperanto-france.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		mail($korektantaretadreso,$subjekto,stripslashes($fonto),$mesagxkapo);
 		// gxisdatigi liajn datumojn en nuna_kurso

@@ -7,6 +7,7 @@ $erarkodo=isset($_GET["erarkodo"])?$_GET["erarkodo"]:"";
 $q=isset($_GET["q"])?$_GET["q"]:"";
 if ($persono_id!="") {
 	$persono = apartigiPersonon($persono_id);
+	$_SESSION['sendinto'] = $persono["retadreso"];
 } else {
 	$persono = array(
 		"rajtoj"=>"",

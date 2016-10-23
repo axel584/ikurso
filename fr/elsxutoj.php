@@ -26,7 +26,11 @@ include "../pagxkapo.inc.php";
 				<li><a href="<?php echo $vojo;?>doc/LexiqueDLEK-Ikurso.pdf">Lexique Kurso de Esperanto / Cours en dix leçons</a> (pdf - 55Ko)</li>
 				<li><a href="<?php echo $vojo;?>doc/ikurso.pdf">Kurso de Esperanto : cours et exercices</a> (pdf - 935 Ko)</li>
 			</ul>
-
+			
+			<h2>Logiciels tiers</h2>
+			<ul>
+				<li><a href="http://nantes-esperanto.fr/logiciel-vortujo/">Vortujo</a> : développé par Christian Rivière, ce logiciel a pour but d’aider à la mémorisation du vocabulaire d’une langue étrangère. Fonctionne sous Windows.</li>
+			</ul> 
 		</article>
 	</div>
 	

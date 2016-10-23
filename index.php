@@ -19,6 +19,10 @@ include "pagxkapo.inc.php";
 					<p class="creditphoto primaire-texte">dessin : Robin Guinin, <a href="https://www.facebook.com/robin.guinin/">www.facebook.com/robin.guinin/</a></p>
 				</div>
 				<div class="col s12 m7 l5">
+					<!--[if lt IE 9]>
+					<h2>ATTENTION</h2>
+					<p>Vous utilisez un navigateur non compatible avec ce site. Veuillez <a href='http://browsehappy.com'>mettre à jour votre navigateur</a> ou contacter votre administrateur réseau pour améliorer votre navigation.</p>
+					<![endif]-->
 					<h2>Bienvenue sur <span class="ikurso">iKurso</span></h2>
 					<p>Ici, vous pourrez découvrir ce qu’est la langue internationale Espéranto.<br> 
 						Vous pourrez également l’apprendre en suivant nos cours, à votre rythme.<br>

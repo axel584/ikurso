@@ -501,7 +501,7 @@ QCM(
 						?>
 
 
-						<p class="parto">Voici un peu de vocabulaire qui peut vous aider. Vous n'avez pas besoin de retenrir tous ces mots dès maintenant. Ils ne seront utiles que pour cet exercice.</p>
+						<p class="parto">Voici un peu de vocabulaire qui peut vous aider. Vous n'avez pas besoin de retenir tous ces mots dès maintenant. Ils ne seront utiles que pour cet exercice.</p>
 			<div class="vortlisto row">
 				<div class="col s12 m4">
 					<p><b>Profession</b></p>

@@ -667,6 +667,15 @@ function kiomVortojPorMemori($persono_id) {
 	return $combien;
 }
 
+function kiomVortojPorMemoriMorgau($persono_id) {
+	global $bdd;
+	// on compte pour savoir si on a 10 cartes ou moins
+	$query= "SELECT count(*) as combien FROM `personoj_vortoj` WHERE persono_id=".$persono_id." and venontaFojo<=ADDDATE(NOW(),1)";
+	//echo $query;
+	$combien = $bdd->query($query)->fetch()["combien"];
+	return $combien;
+}
+
 // fonction pour afficher les cartes dans l'outil "memrise-like"
 function kreiKartojnPorMemoriVortojn($persono_id) {
 	global $bdd;
@@ -674,27 +683,37 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 	$query= "SELECT vortoj.id,eo,fr,tipo FROM `personoj_vortoj` join vortoj on personoj_vortoj.vorto_id=vortoj.id WHERE persono_id=".$persono_id." and venontaFojo<=NOW() order by RAND()";
 	$res = $bdd->query($query);
 	$indice = 1;
-	echo "<div class='memorilo' id='carousel_qcm'>";
-	while ($row = $res->fetch()) {
-		//echo $row["id"].":".$row["eo"].":".$row["fr"].":".$row["tipo"]."<br/>";
-		if ($indice!=1) {
-			$style = "hide";
-		} else {
-			$style = "";
+	if ($combien>0)
+	{
+		echo "<div class='memorilo' id='carousel_qcm'>";
+		while ($row = $res->fetch()) {
+			//echo $row["id"].":".$row["eo"].":".$row["fr"].":".$row["tipo"]."<br/>";
+			if ($indice!=1) {
+				$style = "hide";
+			} else {
+				$style = "";
+			}
+			echo "<div class='memorilo_demando row ".$style."'>";
+			echo "<p>Encore ".(1+$combien-$indice)." mot";
+			if ($combien-$indice > 0) echo "s";
+			echo " à réviser...</p>";
+			echo "<div class='col s12'>";
+			echo "<div class='card-panel white'>";
+			echo "<h3>&nbsp;".$row["fr"]."&nbsp;<div class='chip'>".$row["tipo"]."</div></h3>";
+			echo "<input type='text' onkeyup='xAlUtf8(this)' class='memorilo_input' name='memorilo".$indice."' value='' id='memorilo".$indice."' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."'/>";
+			echo "<a class='memorilo_button waves-effect waves-light btn light-blue darken-1' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."' data-input='memorilo".$indice."'>vérifier</a>";
+			echo "</div></div></div>";
+			$indice++;
 		}
-		echo "<div class='memorilo_demando row ".$style."'>";
-		echo "<p>Encore ".(1+$combien-$indice)." mot";
-		if ($combien-$indice > 0) echo "s";
-		echo " à réviser...</p>";
-		echo "<div class='col s12'>";
-		echo "<div class='card-panel white'>";
-		echo "<h3>&nbsp;".$row["fr"]."&nbsp;<div class='chip'>".$row["tipo"]."</div></h3>";
-		echo "<input type='text' onkeyup='xAlUtf8(this)' class='memorilo_input' name='memorilo".$indice."' value='' id='memorilo".$indice."' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."'/>";
-		echo "<a class='memorilo_button waves-effect waves-light btn light-blue darken-1' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."' data-input='memorilo".$indice."'>vérifier</a>";
-		echo "</div></div></div>";
-		$indice++;
+		echo "</div>";
+	} else {
+		echo "Aucun mot à réviser pour le moment.";
+		$combienDemain = kiomVortojPorMemoriMorgau($persono_id);
+		if ($combienDemain>0) {
+			echo "Demain, vous aurez ".$combienDemain." a réviser.";
+		}
+		echo " Vous pouvez également avancer dans le cours pour découvrir plus de mots.";
 	}
-	echo "</div>";
 }
 
 function getLigiloAlMemorilo($persono_id) {

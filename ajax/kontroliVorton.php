@@ -25,7 +25,7 @@ if (strcasecmp($lernantaRespondo,$bonaRespondo)==0) { // on compare sans se souc
 	$query="SELECT nombrilo FROM personoj_vortoj where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
 	$result = $bdd->query($query);
 	$nombrilo = $result->fetch()["nombrilo"];
-	$query2 = "update personoj_vortoj set nombrilo=nombrilo+1, venontaFojo=DATE_ADD(venontaFojo,INTERVAL ".getInterval($nombrilo+1)." DAY) where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
+	$query2 = "update personoj_vortoj set nombrilo=nombrilo+1, venontaFojo=DATE_ADD(venontaFojo,INTERVAL ".getInterval($nombrilo)." DAY) where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
 	$bdd->exec($query2);
 	$respondo["mesagxo"] = "ok";
 	echo json_encode($respondo);

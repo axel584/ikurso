@@ -508,7 +508,6 @@ function aldoniNovajnVortojnEnMemorilo($persono_id) {
     $query = "SELECT id FROM `vortoj` WHERE id not in (select vorto_id from personoj_vortoj where persono_id=".$persono_id.") and lecionero_id in (select lecionero_id from personoj_lecioneroj where persono_id=".$persono_id.")";
     $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
     while ($row = $result->fetch()) {
-        echo "insertion : ".$row["id"]."<br/>";
         $requete = $bdd->prepare("INSERT INTO `personoj_vortoj` (`id`, `persono_id`, `vorto_id`, `nombrilo`, `venontaFojo`) VALUES (NULL, :persono_id, :vorto_id, '1', NOW())");
         $requete->execute(array(':persono_id'=>$persono_id,':vorto_id'=>$row["id"]));
     }

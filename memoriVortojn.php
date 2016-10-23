@@ -30,7 +30,7 @@ include "pagxkapo.inc.php";
 			<div class='row hide' id='recapitulatif'>
 				<div class='col s12'>
 					<div class='card-panel blue lighten-5'>
-						<h3>Récapitulatif :</h3>
+						<h3>Mots à revoir :</h3>
 						<ul class='collection' id='malbonaj_respondoj'>
 						</ul>	
 					</div>

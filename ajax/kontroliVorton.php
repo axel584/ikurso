@@ -20,13 +20,14 @@ $row = $result->fetch();
 $bonaRespondo = $row["eo"];
 $francaVorto = $row["fr"];
 
+
 function kontroliVorton($lernantaRespondo,$bonaRespondo) {
 	// attention, il ne faut pas utiliser != mais !==
 	if (strpos($bonaRespondo,"|")!==false) {
 		return kontroliVorton($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliVorton($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
 		return false;
 	} else {
-		$trans = array("." => "", "," => "", "'" => ""); // liste des caractères à supprimer pour la comparaison
+		$trans = array("." => "", "," => "", "'" => "","!" => "","?" => ""); // liste des caractères à supprimer pour la comparaison
 		$bonaRespondo = strtr($bonaRespondo, $trans);
 		$lernantaRespondo = strtr($lernantaRespondo,$trans);
 		return strcasecmp($lernantaRespondo,$bonaRespondo)==0;	
@@ -47,6 +48,10 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 	// on stocke dans le protokolo les erreurs pour pouvoir aider au besoin
 	protokolo($persono_id,"MEMORILO","Pour : ".$francaVorto." l'élève a traduit : ".$francaVorto." au lieu de ".$bonaRespondo);
 	$respondo["mesagxo"] = "ko";
+	// si on a plusieurs possibilités, on n'explique que la première à l'élève :
+	if (strpos($bonaRespondo,"|")!==false) {
+		$bonaRespondo = substr($bonaRespondo, 0,strpos($bonaRespondo, "|"));
+	}
 	$respondo["eraroj"]="La bonne réponse était&nbsp;<b>".$bonaRespondo."</b>";
 	$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b>".$bonaRespondo."</b>";
 	echo json_encode($respondo);

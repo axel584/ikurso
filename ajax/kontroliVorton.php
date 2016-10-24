@@ -20,7 +20,20 @@ $row = $result->fetch();
 $bonaRespondo = $row["eo"];
 $francaVorto = $row["fr"];
 
-if (strcasecmp($lernantaRespondo,$bonaRespondo)==0) { // on compare sans se soucier de la case
+function kontroliVorton($lernantaRespondo,$bonaRespondo) {
+	// attention, il ne faut pas utiliser != mais !==
+	if (strpos($bonaRespondo,"|")!==false) {
+		return kontroliVorton($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliVorton($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
+		return false;
+	} else {
+		$trans = array("." => "", "," => "", "'" => ""); // liste des caractères à supprimer pour la comparaison
+		$bonaRespondo = strtr($bonaRespondo, $trans);
+		$lernantaRespondo = strtr($lernantaRespondo,$trans);
+		return strcasecmp($lernantaRespondo,$bonaRespondo)==0;	
+	}
+}
+
+if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se soucier de la case
 	// on a une bonne réponse, on incrémente le nombre de bonne réponse dans la table personoj_vortoj et on calcule la prochaine etape
 	$query="SELECT nombrilo FROM personoj_vortoj where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
 	$result = $bdd->query($query);

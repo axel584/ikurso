@@ -7,8 +7,6 @@ include "dlekkapo.inc.php";
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
 				
-		<?php
-			getLigiloAlMemorilo($persono_id);
 		?>
 		<section id="leciono-enhavo">
 		<?php 
@@ -514,8 +512,11 @@ include "dlekkapo.inc.php";
 			
 	<aside class="col s12 m10 l3 offset-m1 push-l1">
 								
+		<?php
+			// lien vers la révision du vocabulaire
+			getLigiloAlMemorilo($persono_id);
+		?>
 		<ul class="collapsible" data-collapsible="expandable">
-
 			<?php 
 			// On affiche le sommaire de la lecon
 			getEnhavtabelo('CG',$leciono); 

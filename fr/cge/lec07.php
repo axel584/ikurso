@@ -369,8 +369,11 @@ include "dlekkapo.inc.php";
 		
 		<p><b>UJ</b> : <i>contenant, récipient pour contenir…</i></p>
 		<div class="row">
+			<p class="col s6 m3 eo">salo</p><p class="col s6 m3">sel</p>
 			<p class="col s6 m3 eo">salujo</p><p class="col s6 m3">salière</p>
+			<p class="col s6 m3 eo">pipro</p><p class="col s6 m3">poivre</p>
 			<p class="col s6 m3 eo">piprujo</p><p class="col s6 m3">poivrière</p>
+			<p class="col s6 m3 eo">supo</p><p class="col s6 m3">soupe</p>
 			<p class="col s6 m3 eo">supujo</p><p class="col s6 m3">soupière</p>
 			<p class="col s6 m3 eo">ujo</p><p class="col s6 m3">récipient</p>
 		</div>

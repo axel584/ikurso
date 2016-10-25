@@ -164,6 +164,8 @@ include "dlekkapo.inc.php";
 			<p class="col s6 m3 eo">vortaro</p><p class="col s6 m3">dictionnaire</p>
 			<p class="col s6 m3 eo">ŝafo</p><p class="col s6 m3">mouton</p>
 			<p class="col s6 m3 eo">ŝafaro</p><p class="col s6 m3">troupeau de moutons</p>
+			<p class="col s6 m3 eo">arbo</p><p class="col s6 m3">arbre</p>
+			<p class="col s6 m3 eo">arbaro</p><p class="col s6 m3">forêt</p>
 			<p class="col s6 m3 eo">membraro</p><p class="col s9">les membres (d’une association)</p>
 		</div>
 		
@@ -369,9 +371,12 @@ include "dlekkapo.inc.php";
 		
 		<p><b>UJ</b> : <i>contenant, récipient pour contenir…</i></p>
 		<div class="row">
+			<p class="col s6 m3 eo">salo</p><p class="col s6 m3">sel</p>
 			<p class="col s6 m3 eo">salujo</p><p class="col s6 m3">salière</p>
-			<p class="col s6 m3 eo">piprujo</p><p class="col s6 m3">poivrière</p>
+			<p class="col s6 m3 eo">supo</p><p class="col s6 m3">soupe</p>
 			<p class="col s6 m3 eo">supujo</p><p class="col s6 m3">soupière</p>
+			<p class="col s6 m3 eo">mono</p><p class="col s6 m3">argent</p>
+			<p class="col s6 m3 eo">monujo</p><p class="col s6 m3">portemonnaie</p>
 			<p class="col s6 m3 eo">ujo</p><p class="col s6 m3">récipient</p>
 		</div>
 		

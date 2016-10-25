@@ -115,7 +115,7 @@ include "dlekkapo.inc.php";
 			</tr><tr>
 				<td><b>kiu</b></td>
 				<td><span class="eo">KI</span> + <span class="eo">U</span></td>
-				<td><em>aucun(e)</em> + <em>pronom</em><br/>«aucune chose» => rien</td>
+				<td><em>quel(le), lequel , laquelle</em> + <em>adjectif</em><br/>quel(le), lequel , laquelle, qui</td>
 			</tr>
 		</table>
 
@@ -271,7 +271,7 @@ include "dlekkapo.inc.php";
 			<div class="tasko">
 			<?php
 				$demandoj=array (
-				11 => "Qu’est-ce que c’est ? (Quelle-chose est cette-chose&nbsp;?)",
+				11 => "Qu’est-ce que c’est ? (Quelle-chose est cette-chose ?)",
 				12 => "Où est ma tasse ?",
 				13 => "Quel livre est le mien ?",
 				14 => "Qui a mangé mon gâteau ?",
@@ -279,12 +279,12 @@ include "dlekkapo.inc.php";
 				16 => "Tout est mouillé. (mouillé: contraire de SEKA)",
 				17 => "J’ai tout oublié.",
 				18 => "Mon crayon (krajono) est quelque part.",
-				19 => "&Agrave; ce moment, il était en bonne santé.",
-				20 => "Combien &ecirc;tes-vous&nbsp;?",
-				21 => "Comment court-elle&nbsp;?",
-				22 => "Qu’écrivez-vous&nbsp;?  (Quelle chose écrivez-vous&nbsp;?)",
+				19 => "À ce moment, il était en bonne santé.",
+				20 => "Combien êtes-vous ?",
+				21 => "Comment court-elle ?",
+				22 => "Qu’écrivez-vous ?  (Quelle chose écrivez-vous ?)",
 				23 => "Je ne suis l’épouse de personne.",
-				24 => "Qui sont-ils&nbsp;?"
+				24 => "Qui sont-ils ?"
 				);
 				ekzerco(True, 1);
 			?>

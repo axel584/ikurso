@@ -661,6 +661,7 @@ function menuDeroulantChoixProposition($kodo,$lecionero_id,$persono_id) {
 
 function kiomVortojPorMemori($persono_id) {
 	global $bdd;
+	if ($persono_id=="") {return;}
 	// on compte pour savoir si on a 10 cartes ou moins
 	$query= "SELECT count(*) as combien FROM `personoj_vortoj` WHERE persono_id=".$persono_id." and venontaFojo<=NOW()";
 	$combien = $bdd->query($query)->fetch()["combien"];
@@ -682,6 +683,7 @@ function kiomVortojPorMemoriMorgau($persono_id) {
 // fonction pour afficher les cartes dans l'outil "memrise-like"
 function kreiKartojnPorMemoriVortojn($persono_id) {
 	global $bdd;
+	if ($persono_id=="") {return;}
 	$combien = kiomVortojPorMemori($persono_id);
 	if ($combien>0)
 	{
@@ -721,6 +723,7 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 
 function getLigiloAlMemorilo($persono_id) {
 	global $bdd,$vojo;
+	if ($persono_id=="") {return;}
 	$combien = kiomVortojPorMemori($persono_id);
 	if ($combien>0) {
 		echo "<p><a href='".$vojo."memoriVortojn.php' class='waves-effect waves-light btn tooltipped light-blue darken-1 '>".$combien." mot";

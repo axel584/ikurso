@@ -12,9 +12,16 @@
 			référence au numéro de la leçon du <em>Kurso de Esperanto</em>.
 			</p>
 			
-			<div class="vortlisto">
+
+<?php
+
+	vortlisto($persono_id,"CG");
+
+?>
+
+<!-- 			<div class="vortlisto">
 				<div class="lexique">
-					<?php
+					php
 					$filename = "vortlisto.txt";
 					$fd = fopen($filename, "r");
 					$i=0;
@@ -39,5 +46,5 @@
 					
 					?>
 				</div>
-			</div>
+			</div> -->
 

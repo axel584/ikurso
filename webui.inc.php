@@ -676,15 +676,18 @@ function kiomVortojPorMemoriMorgau($persono_id) {
 	return $combien;
 }
 
+
+
+
 // fonction pour afficher les cartes dans l'outil "memrise-like"
 function kreiKartojnPorMemoriVortojn($persono_id) {
 	global $bdd;
 	$combien = kiomVortojPorMemori($persono_id);
-	$query= "SELECT vortoj.id,eo,fr,tipo FROM `personoj_vortoj` join vortoj on personoj_vortoj.vorto_id=vortoj.id WHERE persono_id=".$persono_id." and venontaFojo<=NOW() order by RAND()";
-	$res = $bdd->query($query);
-	$indice = 1;
 	if ($combien>0)
 	{
+		$query= "SELECT vortoj.id,eo,fr,tipo FROM `personoj_vortoj` join vortoj on personoj_vortoj.vorto_id=vortoj.id WHERE persono_id=".$persono_id." and venontaFojo<=NOW() order by RAND()";
+		$res = $bdd->query($query);
+		$indice = 1;		
 		echo "<div class='memorilo' id='carousel_qcm'>";
 		while ($row = $res->fetch()) {
 			//echo $row["id"].":".$row["eo"].":".$row["fr"].":".$row["tipo"]."<br/>";
@@ -725,4 +728,24 @@ function getLigiloAlMemorilo($persono_id) {
 		echo " à réviser...</a></p>";
 	}
 }
+
+function vortlisto($persono_id,$kurso) {
+	global $bdd;
+	$query = "SELECT eo,fr,vortoj.tipo,lecionoj.numero FROM vortoj join lecioneroj on vortoj.lecionero_id=lecioneroj.id join lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso='".$kurso."' order by eo";
+
+	$res = $bdd->query($query);
+	echo "<div class='vortlisto'>";
+	echo "<div class='lexique'>";
+	$i=0;
+	while ($row = $res->fetch()) {	
+		if ($i%3==0){echo "<div class='row'>";}
+		echo "<p class='col s3 eo'>".$row['eo']." ";
+		echo "<span class='numero'> (".$row['numero'].")</span>";
+		echo "</p><p class='col s3 ''> ".$row['fr']."</p>\n";
+		$i++;
+		if ($i%3==0) {echo  "</div>\n";}
+	}
+	echo "</div></div>";
+}
+
 ?>

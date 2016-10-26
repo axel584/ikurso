@@ -4,7 +4,7 @@ include "../util.php";
 malfermidatumbazon();
 
 // Premier rappel au bout de 6 jours
-$query = "SELECT personoj.id,enirnomo,retadreso,personnomo,familinomo,nuna_kurso.kurso,nuna_kurso.nunleciono,lastdato,nuna_kurso.korektanto FROM nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='K' and lastdato=DATE_SUB(CURDATE(), INTERVAL 6 DAY) and stop_rappel='N'";
+$query = "SELECT personoj.id,enirnomo,retadreso,personnomo,familinomo,nuna_kurso.kurso,nuna_kurso.nunleciono,lastdato,nuna_kurso.korektanto FROM nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='K' and lastdato=DATE_SUB(CURDATE(), INTERVAL 6 DAY) and stop_rappel='N' and nuna_kurso.kurso<>'KE'";
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
  	protokolo($row["id"],"ENVOIE RAPPEL","Envoie d'un message de rappel après 6 jours");
@@ -43,7 +43,7 @@ $result = $bdd->query($query);
 	mail($row["retadreso"],"Cours d'espéranto",$contents,$mesagxkapo);
 }
 // Deuxième rappel au bout de 10 jours
-$query = "SELECT personoj.id,enirnomo,retadreso,personnomo,familinomo,nuna_kurso.kurso,nuna_kurso.nunleciono,lastdato,nuna_kurso.korektanto FROM nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='K' and lastdato=DATE_SUB(CURDATE(), INTERVAL 10 DAY) and stop_rappel='N'";
+$query = "SELECT personoj.id,enirnomo,retadreso,personnomo,familinomo,nuna_kurso.kurso,nuna_kurso.nunleciono,lastdato,nuna_kurso.korektanto FROM nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='K' and lastdato=DATE_SUB(CURDATE(), INTERVAL 10 DAY) and stop_rappel='N' and nuna_kurso.kurso<>'KE'";
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
  	 	protokolo($row["id"],"ENVOIE RAPPEL","Envoie d'un message de rappel après 10 jours");

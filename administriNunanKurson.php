@@ -137,7 +137,6 @@ if ($row['korektanto']!="") {
 		$mesagxkapo="MIME-Version: 1.0\n";
 		$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
 		$mesagxkapo.="From: ikurso <cours-esperanto@esperanto-jeunes.org>\n";
-		$mesagxkapo.="Bcc: <kopiokurso@esperanto-france.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		$mesagxkapo.=" \n";
 		mail($korAdreso,"Nouvel élève sur I-kurso",$contents,$mesagxkapo);
@@ -148,9 +147,16 @@ if ($row['korektanto']!="") {
 // preni liajn taskojn el eraraj_lecionoj kaj sendi ilin al lia nova korektanto
 if (($nunleciono==NULL) and ($kurso=='GR'||$kurso=='CG'||$kurso=='3N')){
 	debug ("l'élève a déjà fait une leçon : il faut lui envoyer");
-	($kurso=="GR")?($subjekto="gerda%"):($subjekto="lec%");
-	$query = "select * from eraraj_lecionoj where persono_id=$celpersono_id and subjekto like '$subjekto'";
-	
+	if ($kurso=="GR") {
+		$pattern="gerda%";
+	}
+	if ($kurso=="CG") {
+		$pattern="lec%";	
+	}
+	if ($kurso=="3N") {
+		$pattern="3a nivela kurso leciono%";
+	}
+	$query = "select * from eraraj_lecionoj where persono_id=$celpersono_id and subjekto like '$pattern'";
 	$result = $bdd->query($query) or die ( "SELECT : Invalid query :".$query);
 	while($row = $result->fetch()) {
 		$subjekto=$row["subjekto"];
@@ -161,15 +167,15 @@ if (($nunleciono==NULL) and ($kurso=='GR'||$kurso=='CG'||$kurso=='3N')){
 		$mesagxkapo.="From: ikurso <cours-esperanto@esperanto-jeunes.org>\n";
 		$mesagxkapo.="Reply-To: ".$celpersono["enirnomo"]." <".$celpersono["retadreso"].">\n";
 		$mesagxkapo.="Cc: ".$celpersono["enirnomo"]." <".$celpersono["retadreso"].">\n";
-		$mesagxkapo.="Bcc: <kopiokurso@esperanto-france.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		mail($korektantaretadreso,$subjekto,stripslashes($fonto),$mesagxkapo);
 		// gxisdatigi liajn datumojn en nuna_kurso
-		if (substr($subjekto, 0, 5)=="gerda"){$nunleciono=substr($subjekto,10,2);}
-		else if (substr($subjekto, 0, 6)=="lecion"){$nunleciono=substr($subjekto,8,2);}
-		else if (substr($subjekto, 0, 3)=="lec"){$nunleciono=substr($subjekto,3,2);}
+		if ($kurso=="GR"){$nunleciono=substr($subjekto,10,2);}
+		else if ($kurso=="3N"){$nunleciono=substr($subjekto,8,2);}
+		else if ($kurso=="CG"){$nunleciono=substr($subjekto,3,2);}
 		else {$nunleciono=1;}
 		$query = "update nuna_kurso set nunleciono=$nunleciono,stato='K',lastdato=CURDATE() where studanto=$celpersono_id and (stato='N' or stato='K') and kurso='$kurso'";
+		echo $query;
 		$bdd->exec($query);
 	}
 }

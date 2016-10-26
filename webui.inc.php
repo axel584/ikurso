@@ -742,9 +742,9 @@ function vortlisto($persono_id,$kurso) {
 	$i=0;
 	while ($row = $res->fetch()) {	
 		if ($i%3==0){echo "<div class='row'>";}
-		echo "<p class='col s3 eo'>".$row['eo']." ";
+		echo "<p class='col s1 m6 l3 eo'>".$row['eo']." ";
 		echo "<span class='numero'> (".$row['numero'].")</span>";
-		echo "</p><p class='col s3 ''> ".$row['fr']."</p>\n";
+		echo "</p><p class='col s1 m6 l3'> ".$row['fr']."</p>\n";
 		$i++;
 		if ($i%3==0) {echo  "</div>\n";}
 	}

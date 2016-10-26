@@ -49,15 +49,15 @@ if ($combien==0) {
 // on récupère quelques infos sur le cours :
 if ($kurso=="CG") {
 	$prefixeKurso = "fr/cge/";
-	$nomCours = "lec";
+	$sujetMail = "lec".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 } 
 if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
-	$nomCours = "gerda cxap";
+	$sujetMail = "gerda cxap".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 } 
 if ($kurso=="3N") {
 	$prefixeKurso = "fr/3n/";
-	$nomCours = "3a nivela kurso leciono ";
+	$sujetMail = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 } 
 
 
@@ -79,7 +79,7 @@ while ($row=$result->fetch()) {
 }
 $fonto.="</body></html>";
 
-$query = "insert into eraraj_lecionoj (persono_id,enirnomo,dato,subjekto,fonto) values ('".$persono_id."','".$persono["enirnomo"]."',now(),'".$nomCours.sprintf('%02d', $leciono)."','".addslashes($fonto)."')";
+$query = "insert into eraraj_lecionoj (persono_id,enirnomo,dato,subjekto,fonto) values ('".$persono_id."','".$persono["enirnomo"]."',now(),'".$sujetMail."','".addslashes($fonto)."')";
 $bdd->exec($query);
 
 // Renvoyer la page qui permet d'évaluer la leçon

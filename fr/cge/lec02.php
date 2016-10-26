@@ -455,6 +455,10 @@ QCM(
 			?>
 
 		</ul>	
+		
+		<?php
+		pubFacebook();
+		?>
 				
 	</aside>
 </div>

@@ -259,6 +259,10 @@ include "dlekkapo.inc.php";
 			?>
 
 		</ul>	
+		
+		<?php
+		pubFacebook();
+		?>
 				
 	</aside>
 </div>

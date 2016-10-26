@@ -353,6 +353,10 @@ include "gerdakapo.inc.php";
 			?>
 		</ul>	
 		
+		<?php
+		pubFacebook();
+		?>
+		
 		<p>
 			Elŝutu ĉiujn rakontojn (entute: 25) en unu dosiero:
 			 <a href="<?php echo $vojo;?>fr/gerda/son/gerda-malaperis.zip">gerda-malaperis.zip</a>

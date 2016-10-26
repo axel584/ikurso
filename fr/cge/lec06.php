@@ -565,7 +565,9 @@ include "dlekkapo.inc.php";
 			?>
 
 		</ul>	
-				
+				<?php
+		pubFacebook();
+		?>		
 	</aside>
 </div>
 <?php include "dlekpiedo.inc.php"; ?>

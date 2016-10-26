@@ -30,7 +30,7 @@ include "kapo.inc.php";
 			</div>
 			<div class="col s12 m4">
 				<p><span class="eo">frekvenco</span> : fréquence</p>
-				<p><span class="eo">fritilo</span> : filtre</p>
+				<p><span class="eo">filtrilo</span> : filtre</p>
 				<p><span class="eo">generatoro</span> : générateur</p>
 				<p><span class="eo">herco</span> : hertz</p>			
 				<p><span class="eo">kemia</span> : chimique</p>

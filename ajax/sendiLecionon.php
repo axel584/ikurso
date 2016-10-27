@@ -6,7 +6,6 @@ $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
 $commentaire_pour_correcteur=isset($_GET["commentaire_pour_correcteur"])?$_GET["commentaire_pour_correcteur"]:"";
 
-
 if ($persono_id=="") { // personne non connecté, on ressort
 	$respondo["type"]="session";
 	$respondo["mesagxo"]="Session expirée";

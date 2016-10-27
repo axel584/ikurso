@@ -386,7 +386,6 @@ if ($kurso!="KE") {
 		$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
 		$mesagxkapo.="Reply-To: ".$persono['enirnomo']." <".$persono['retadreso'].">\n";
 		$mesagxkapo.="Cc: ".$persono['enirnomo']." <".$persono['retadreso'].">\n";
-		$mesagxkapo.="Bcc: <kopiokurso@esperanto-france.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		($kurso=="GR")?($objekto="gerda ".substr($subjekto,0,6)):($objekto=substr($subjekto,0,5));
 		$objekto.=" de ".$persono['enirnomo'];

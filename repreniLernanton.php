@@ -38,7 +38,6 @@ if ($row["kurso"]!="") {
 			$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
 			$mesagxkapo.="From: ".$studanto["enirnomo"]." <".$studanto["retadreso"].">\n";
 			$mesagxkapo.="Cc: ".$studanto["enirnomo"]." <".$studanto["retadreso"].">\n";
-			$mesagxkapo.="Bcc: kopiokurso@esperanto-france.org\n";
 			$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 			mail($korektantaretadreso,$subjekto,stripslashes($fonto),$mesagxkapo);
 			// gxisdatigi liajn datumojn en nuna_kurso

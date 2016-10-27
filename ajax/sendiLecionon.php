@@ -96,7 +96,6 @@ $mesagxkapo.="From: ikurso <cours-esperanto@esperanto-jeunes.org>\n";
 $mesagxkapo.="Reply-To: ".$studanto["enirnomo"]." <".$studanto["retadreso"].">\n";
 $mesagxkapo.="Return-Path: ".$studanto["enirnomo"]." <".$studanto["retadreso"].">\n";
 $mesagxkapo.="Cc: ".$studanto["enirnomo"]." <".$studanto["retadreso"].">\n";
-$mesagxkapo.="Bcc: <kopiokurso@esperanto-france.org>\n";
 $mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 $mesagxkapo.=" \n";
 $resultat = mail($korektantaretadreso,$subjekto,stripslashes($fonto),$mesagxkapo);

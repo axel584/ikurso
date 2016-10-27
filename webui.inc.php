@@ -707,15 +707,23 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 			echo "<h3>&nbsp;".$row["fr"]."&nbsp;<div class='chip'>".$row["tipo"]."</div></h3>";
 			echo "<input type='text' onkeyup='xAlUtf8(this)' class='memorilo_input' name='memorilo".$indice."' value='' id='memorilo".$indice."' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."'/>";
 			echo "<a class='memorilo_button waves-effect waves-light btn light-blue darken-1' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."' data-input='memorilo".$indice."'>vérifier</a>";
-			echo "</div></div></div>";
+			echo "</div></div></div>\n";
 			$indice++;
 		}
+		// message pour après la révision
+		echo "<div class='memorilo_demando row hide'>";
+		echo "<h3>Bravo, vous avez terminé votre session</h3>";
+		echo "<p>Des sessions de révisions courtes et fréquentes vous aideront à mieux mémoriser le vocabulaire.</p>";
+		echo "<p>Pour votre cerveaux, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
+		echo "</div>\n";
 		echo "</div>";
 	} else {
-		echo "Aucun mot à réviser pour le moment.";
+		echo "<h3>Aucun mot à réviser pour le moment.</h3>";
 		$combienDemain = kiomVortojPorMemoriMorgau($persono_id);
 		if ($combienDemain>0) {
-			echo "Demain, vous aurez ".$combienDemain." a réviser.";
+			echo "<p>Demain, vous aurez ".$combienDemain." mots a réviser.</p>";
+			echo "<p>Des sessions de révisions courtes et fréquentes vous aideront à mieux mémoriser le vocabulaire.</p>";
+			echo "<p>Pour votre cerveaux, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
 		}
 		echo " Vous pouvez également avancer dans le cours pour découvrir plus de mots.";
 	}

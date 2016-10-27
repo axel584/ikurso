@@ -19,9 +19,9 @@ include "gerdakapo.inc.php";
 			<div class="row dialogo">
 				<div class="col s12 m8">
 					<p>"Kie mi estis en mia raporto? Ha jes! Mi memoras. Li eliris el
-					tiu vendejo kun papera sako plena je dolĉaĵoj."</p>
+					tiu vendejo kun papera sako ŝajne plena je dolĉaĵoj."</p>
 					<p>"Eble estis ĉefe pano."</p>
-					<p>"Prave, eble pano. ĉiaokaze, jen mi ekvidis lian aŭton, kiu
+					<p>"Prave, eble pano. Ĉiaokaze, jen mi ekvidis lian aŭton, kiu
 					staris flanke de la strato. Mi pensis: nun li forveturos aŭte, kaj mi
 					ne plu povos sekvi lin. Sed ne. Li nur iris porti tiun sakon al la
 					aŭto, ĝin metis en ĝin, reŝlosis la aŭtopordon, kaj plu piediris.
@@ -67,7 +67,7 @@ include "gerdakapo.inc.php";
 					flugis tra la aero, poste du, tri, kvar, kvin aliaj teleroj, unu taso
 					eĉ flugis ĝis la plafono..."</p>
 					<p>"Kia ĝojo! Kia plezuro! Kiajn perfektajn amikojn vi trovis!"</p>
-					<p>"Ĉefe, kia bruo! ŝajnis, ke ili rompas mil glasojn samtempe,
+					<p>"Ĉefe, kia bruo! Ŝajnis, ke ili rompas mil glasojn samtempe,
 					dum cent viroj kune kriaĉas, kaj dek muzikistoj provas kune superi la
 					bruon de la telera milito."</p>
 					<p>"Tre bela atmosfero, ĉu ne? Mi gratulas vin. Estis kuraĝe
@@ -81,8 +81,8 @@ include "gerdakapo.inc.php";
 					<p>"Mi rimarkis tre bedaŭrindan aferon, nome, ke la blondulo ne
 					plu troviĝas en la restoracio. Li certe foriris, dum mi tiom
 					interesiĝis pri la intersoldata milito. Mi vere bedaŭras mian mankon
-					de observemo. Sed kion fari? Bedaŭri ne helpas, Mi fuŝis mian taskon.
-					Mi provos ne fuŝi ĝin alifoje."</p>
+					de observemo. Sed kion fari? Bedaŭri ne helpas. Mi fuŝis mian taskon.
+					Mi provos ne fuŝi ĝin alian fojon."</p>
 					<p>"Nu, prave, estas tre bedaŭrinda afero. Eĉ se nur ĉar ĝi
 					montras, ke vi tamen ne estas plene perfekta. Sed mi almenaŭ ĝojas
 					pri unu afero: vi fakte ne tiom interesiĝis pri <i>via</i> blondulo. Do
@@ -92,7 +92,7 @@ include "gerdakapo.inc.php";
 					okulojn de tiu blondulo, kvankam mi antaŭe decidis plej multe
 					informiĝi pri li?"</p>
 					<p>"Nu, verŝajne ĉar…"</p>
-					<p>"ĉar unu el tiuj junaj soldatoj estis tiel bela viro!"</p>
+					<p>"Ĉar unu el tiuj junaj soldatoj estis tiel bela viro!"</p>
 				</div>
 				<div class="col s12 m4">
 					<img src="bildoj/gerda16-2.gif" class="responsive-img">

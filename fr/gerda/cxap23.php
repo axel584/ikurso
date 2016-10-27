@@ -120,7 +120,7 @@ include "gerdakapo.inc.php";
 			<p>Poste, en ĉapitro 14, aperas la finaĵoj <span class="eo">-at-</span> 
 			kaj <b>-int-</b>. (<span class="eo">Ĉambro <b>nekonata</b>. Kvazaŭ ŝi estus <b>laborinta</b>.</span>)</p>
 			<p>La vortoj kun <b>-ant-</b> kaj <b>-at-</b> rilatas al la nuno, 
-			al la estonteco (al tio, kio okazas aŭ estas nun).</p>
+			al la estanteco (al tio, kio okazas aŭ estas nun).</p>
 			<p>La vortoj kun <b>-int-</b> kaj <b>-it-</b> rilatas al la estinteco (al tio, kio okazis aŭ estis antaŭe).</p>
 			<p>Ekzistas ankaŭ finaĵoj <b>-ont-</b> kaj <sb>-ot-</b> por la estonteco (tio, kio	okazos aŭ estos poste).</p>
 			<p class="parto">Vortoj kun la finaĵoj <b>-ant-</b>, <b>-at-</b>, 

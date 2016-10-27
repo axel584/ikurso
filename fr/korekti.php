@@ -28,8 +28,6 @@ function PorInformistoj() {
 		while ($row=$result->fetch()) {
 		   $informistoj=$informistoj.",".$row["retadreso"];
 		}
-		if ($retadreso=="richard.emmanuelle@wanadoo.fr") {$informistoj="emmanuelle@esperanto-jeunes.org";}
-		if ($retadreso=="emmrichard@gmail.com") {$informistoj="emmanuelle@esperanto-jeunes.org";}
 		if ($verdakrabo=="on"){
 			$filename = "../mails/verdakraboFR.html";
 			/* ajout dans le fichier des inscriptions VerdaKrabo

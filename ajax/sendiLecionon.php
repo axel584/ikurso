@@ -80,17 +80,16 @@ $studanto = apartigiPersonon($persono_id);
 // on récupère quelques infos sur le cours :
 if ($kurso=="CG") {
 	$prefixeKurso = "fr/cge/";
-	$nomCours = "lec";
+	$subjekto = "lec".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 } 
 if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
-	$nomCours = "gerda cxap";
+	$subjekto = "gerda cxap".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 } 
 if ($kurso=="3N") {
 	$prefixeKurso = "fr/3n/";
-	$nomCours = "leciono";
+	$subjekto = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 }
-$subjekto = $nomCours.sprintf('%02d', $leciono);
 
 $mesagxkapo="MIME-Version: 1.0\n";
 $mesagxkapo.="Content-type: text/html;charset=utf-8\n";

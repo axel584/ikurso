@@ -5,6 +5,8 @@ $persono = apartigiPersonon($persono_id);
 $lecionero_id=isset($_GET["lecionero_id"])?$_GET["lecionero_id"]:"";
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
+$commentaire_pour_correcteur=isset($_GET["commentaire_pour_correcteur"])?$_GET["commentaire_pour_correcteur"]:"";
+
 if ($persono_id=="") { // personne non connecté, on ressort
 	$respondo["type"]="session";
 	$respondo["mesagxo"]="Session expirée";
@@ -77,6 +79,9 @@ while ($row=$result->fetch()) {
 	$fonto .= "<p>".$row["demando"]."<br>\n";
 	$fonto .= "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
 }
+$fonto .= "<p>Commentaire de l'élève :<br>\n";
+$fonto .= "<span style=\"color:blue\">".$commentaire_pour_correcteur."</span></p>\n";
+$fonto.="</body></html>";
 $fonto.="</body></html>";
 
 $query = "insert into eraraj_lecionoj (persono_id,enirnomo,dato,subjekto,fonto) values ('".$persono_id."','".$persono["enirnomo"]."',now(),'".$sujetMail."','".addslashes($fonto)."')";

@@ -142,7 +142,7 @@ QCM(
 				ekzercoMemkorektita(True, 
 					array(
 						array(
-							"question"=>"la ŝanĝita vorto estas :",
+							"question"=>"la vorto kiu anstataŭigas la originalan vorton estas :",
 							"reponse"=>"kutimaj"
 						),
 						array(

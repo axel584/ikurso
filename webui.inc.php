@@ -611,7 +611,7 @@ function ekzercoMemkorektita($convert,$strukturo) {
 			echo "<div class='qcm_demando row hide'>";
 		}
 		echo "<h3>Question ".$indiceQuestion."/".count($strukturo)." :</h3>";
-		echo "<div class='input-field col s6 l4'>".$question["question"];
+		echo "<div class='input-field col s12 l12'>".$question["question"];
 		$indiceProposition= 1;
 		// on verifie si c'est la derniere question
 		if ($indiceQuestion==count($strukturo)) {

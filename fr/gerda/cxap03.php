@@ -330,6 +330,10 @@ include "gerdakapo.inc.php";
 			 <a href="<?php echo $vojo;?>fr/gerda/son/gerda-malaperis.zip">gerda-malaperis.zip</a>
 		</p>
 		
+		<?php
+		pubFacebook();
+		?>
+
 	</aside>
 </div>
 

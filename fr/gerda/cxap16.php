@@ -239,7 +239,7 @@ include "gerdakapo.inc.php";
 			La aliaj vortoj, kiujn mi volas nun klarigi, estas vortoj, kiuj helpos
 			nin paroli pri la lingvo.
 			<p class="parto">Ekzistas en Esperanto kvar grandaj vortklasoj (vortospecoj):</p>
-			<p><b>SUBSTANTIVOJ (o-vortoj)</b>, kiuj montras aĵojn: tablo, knabino, spegulo,libero, amo, …</p>
+			<p><b>SUBSTANTIVOJ (o-vortoj)</b>, kiuj montras aĵojn: tablo, knabino, spegulo, libero, amo, …</p>
 			<p><b>ADJEKTIVOJ (a-vortoj)</b>, kiuj montras ecojn: bela, juna, granda, studenta, kaŝa,… </p>
 			<p><b>VERBOJ</b> (kun finaĵoj <b>-i</b>, <b>-is</b>, <b>-as</b>, <b>-os</b>, 
 			<b>-u</b>, <b>-us</b>), kiuj montras agojn aŭ situaciojn: esti, scii, rigardi, proksimigi, amikiĝi, …</p>

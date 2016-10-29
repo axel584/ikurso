@@ -41,7 +41,7 @@ include "dlekkapo.inc.php";
 				<input type='hidden' name="kurso" value='CG'/>
 				<input type='hidden' name="leciono" value='<?=$leciono?>'/>
 				<div class="tasko enketo">
-					<p>Notez l'intérêt que vous avez eu à effectuer la leçon : de 1 (très ennuyeux) à 5 (très amusant) </p>
+					<p>Notez l'intérêt que vous avez eu à effectuer la leçon : de 1 (très ennuyeux) à 5 (très intéressant) </p>
 					<div class="row">
 						<div class="rating col s12 m6 l6">
 							<p class="range-field"><input id="range_intereso" name="intereso" type="range" value="3" min="1" max="5" step="1"></p>

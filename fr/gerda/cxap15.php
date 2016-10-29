@@ -124,7 +124,7 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">plani</span> : établir un plan, projeter de</p>
 					<p class="sekva"><span class="eo">plano</span> : plan</p>
 					<p><span class="eo">plenplena</span> : complètement plein, rempli</p>
-					<p><span class="eo">poŝto</span> : poste (administation de distribution du courrier), courrier</p>
+					<p><span class="eo">poŝto</span> : poste (administration de distribution du courrier), courrier</p>
 					<p><span class="eo">raporti</span> : rapporter, annoncer</p>
 					<p><span class="eo">sako</span> : sac</p>
 					<p><span class="eo">speco</span> : sorte, espèce, genre</p>

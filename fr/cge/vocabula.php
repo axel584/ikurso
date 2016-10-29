@@ -7,7 +7,7 @@ $metodo=isset($_GET["metodo"])?$_GET["metodo"]:"U";
 include "dlekkapo.inc.php";
 ?>
 <div class="row">
-	<article class="col s12 m12 l12">
+	<article class="col s12 m9 offset-m1">
 		<section id="leciono-enhavo">
 		<h2>Lexique</h2>
 	<?php include "vortlisto.inc.php"; ?>

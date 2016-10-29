@@ -597,13 +597,6 @@ input[type=range]+.thumb.active .value {
 	margin-top: 3px;
 	font-size: 14px;
 }
-/********** lexique de la leçon *******/
-@media only screen and (min-width: 992px) {
-	.lexique {
-		columns: 2;
-		column-gap: 2em;
-	}
-}
 /**************************************/
 /*        contenu des pages           */
 /**************************************/

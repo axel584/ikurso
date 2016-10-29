@@ -97,7 +97,7 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">knabo</span> : garçon</p>
 					<p><span class="eo">kafo</span> : café</p>
 					<p><span class="eo">kuko</span> : gâteau</p>
-					
+					<p><span class="eo">Vjetnamio</span> : Vietnam</p>
 				</div>
 				<div class="col s12 m4">
 					<p><span class="eo">lakto</span> : lait</p>
@@ -112,7 +112,6 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">teo</span> : thé</p>
 					<p><span class="eo">urbo</span> : ville</p>
 					<p><span class="eo">viro</span> : homme (mâle)</p>
-					<p><span class="eo">Vjetnamio</span> : Vietnam</p>
 				</div>
 				<div class="col s12 m4">
 					<p><span class="eo">bela</span> : beau</p>
@@ -126,6 +125,7 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">sana</span> : sain, en bonne santé</p>
 					<p><span class="eo">seka</span> : sec</p>
 					<p><span class="eo">varma</span> : chaud</p>
+					<p><span class="eo">kaj</span> : et</p>
 				</div>
 			</div>
 
@@ -387,7 +387,7 @@ include "dlekkapo.inc.php";
 			} // fin section 
 			if ($section=="7") {
 			?>			
-			<p class="parto">Voici quelques expressions pour entamer et finir une discussion. Ces expressions sont à apprendre par coeur dans un premier temps, vous verrez un peu plus tard dans les leçons pourquoi elles se construisent ainsi.</p>
+			<p class="parto">Voici quelques expressions pour entamer et finir une discussion. Ces expressions sont à apprendre par cœur dans un premier temps, vous verrez un peu plus tard dans les leçons pourquoi elles se construisent ainsi.</p>
 		<div class="vortlisto">
 			<div class="row">
 				<p class="col s6 m3 eo">Saluton !</p><p class="col s6 m3">Salut !</p>
@@ -397,20 +397,24 @@ include "dlekkapo.inc.php";
 				<p class="col s6 m3 eo">Bonan nokton !</p><p class="col s6 m3">Bonne nuit !</p>
 			</div>
 			<div class="row">
-				<p class="col s6 m3 eo">Mi loĝas en ...</p><p class="col s6 m3">J'habite à ...</p>
-				<p class="col s6 m3 eo">Mi ŝatas ...</p><p class="col s6 m3">J'aime ... / J'apprécie ...</p>
+				<p class="col s6 m3 eo">Mi loĝas en...</p><p class="col s6 m3">J’habite à...</p>
+				<p class="col s6 m3 eo">Mi ŝatas...</p><p class="col s6 m3">J’aime... / J'apprécie...</p>
 			</div>
 			<div class="row">
 				<p class="col s6 m3 eo">Ĝis revido !</p><p class="col s6 m3">Au revoir !</p>
 				<p class="col s6 m3 eo">Adiaŭ !</p><p class="col s6 m3">Adieu !</p>
+			</div>
+			<div class="row">
+				<p class="col s6 m3 eo">Bonvolu...</p><p class="col s6 m9">Veuillez... / ... s’il vous plaît</p>
+				<p class="col s6 m3 eo">Bonvolu eniri.</p><p class="col s6 m9">Veuillez entrer. / Entrez, s’il vous plaît.</p>
 			</div>
 		</div>
 			<?php 
 			} // fin section 
 			if ($section=="8") {
 			?>
-			<p class="parto">En vous aidant des expressions que l'on vient de voir et d'un peu de bon sens, essayez d'attribuer à chacune des personnes de la vidéo son nom, son domicile et sa profession.</p>
-			<p>Ne vous attendez pas à comprendre <b>tout</b>, essayez juste de comprendre ce qui vous permettra de répondre au questionnaire. N'hésitez pas à regarder la vidéo plusieurs fois. Au besoin, prenez des notes sur du papier, l'exercice sera d'autant plus utile si vous essayez de répondre sérieusement aux questions. Si vous vous trompez, prenez un peu de temps pour vérifier dans la vidéo la bonne réponse avant d'essayer de donner une autre réponse.</p>
+			<p class="parto">En vous aidant des expressions que l’on vient de voir et d’un peu de bon sens, essayez d'attribuer à chacune des personnes de la vidéo son nom, son domicile et sa profession.</p>
+			<p>Ne vous attendez pas à comprendre <b>tout</b>, essayez juste de comprendre ce qui vous permettra de répondre au questionnaire. N’hésitez pas à regarder la vidéo plusieurs fois. Au besoin, prenez des notes sur du papier, l’exercice sera d’autant plus utile si vous essayez de répondre sérieusement aux questions. Si vous vous trompez, prenez un peu de temps pour vérifier dans la vidéo la bonne réponse avant d'essayer de donner une autre réponse.</p>
 			<p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/pTQEn0-fuQc" frameborder="0" allowfullscreen></iframe>
 			</p>

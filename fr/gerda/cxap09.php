@@ -140,7 +140,7 @@ include "gerdakapo.inc.php";
 			<div class="vortlisto row">
 				<div class="col s12 l6">
 					<p><span class="eo">administra</span> : administratif, administrative</p>
-					<p class="sekva">administri</span> : administrer</p>
+					<p class="sekva"><span class="eo">administri</span> : administrer</p>
 					<p><span class="eo">ajn</span> : n'importe qu-… </p>
 					<p class="sekva"><span class="eo">iu ajn</span> : n'importe qui, n'importe quel</p>
 					<p class="sekva"><span class="eo">io ajn</span> : n'importe quoi</p>

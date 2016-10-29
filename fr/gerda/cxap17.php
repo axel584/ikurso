@@ -21,8 +21,8 @@ include "gerdakapo.inc.php";
 					<p>"Sed kial, kial, kial?" diris la policano preskaŭ krie al sia
 					edzino, kiu estis lia plej helpema kunlaboranto. "Diru al mi kial, kaj
 					mi solvos la problemon. Oni ne kaptas homon por la simpla plezuro
-					travivi aventuron! ŝi ne estas riĉa. Ne kun la espero ricevi monon
-					ili ŝin kaptis. ŝi ĉiam vivis plej trankvilan, honestan vivon. Do,
+					travivi aventuron! Ŝi ne estas riĉa. Ne kun la espero ricevi monon
+					ili ŝin kaptis. Ŝi ĉiam vivis plej trankvilan, honestan vivon. Do,
 					ne ĉar ŝi enmiksis sin en iun kriman agadon ili ŝin kaptis. Pro kio
 					do? Por kio?"</p>
 					<p>"Ŝi instruas, vi diris al mi. Kion do ŝi instruas? Kio estas
@@ -43,7 +43,7 @@ include "gerdakapo.inc.php";
 					profesorinon. Kiam Tom revenas kun la flegistino, Gerda malaperis, sed
 					ĉi-foje Bob estas senkonscia, batita al-kape.  Intertempe la blondulo
 					eliris tra la alia pordo de la memserva restoracio, kaj sekvis Linda.
-					ŝi sukcesas kunveturi en lia aŭto, sed ne sukcesas igi lin diri ion
+					Ŝi sukcesas kunveturi en lia aŭto, sed ne sukcesas igi lin diri ion
 					helpan. Tamen ŝi notas la numeron, markon kaj tipon de la aŭto..."</p>
 				</div>
 				<div class="col s12 m4">
@@ -53,7 +53,7 @@ include "gerdakapo.inc.php";
 
 			<div class="row dialogo">
 				<div class="col s12 m8">
-					<p>"Ĉu la aŭto estis lia? ĉu ne estis ŝtelita veturilo?"</p>
+					<p>"Ĉu la aŭto estis lia? Ĉu ne estis ŝtelita veturilo?"</p>
 					<p>"Ne. Verŝajne li ne suspektis, ke iu suspektos ion. Kiam ŝi
 					petis, ke li veturigu ŝin, tio al li ne plaĉis, sed li verŝajne
 					opiniis, ke estos eĉ pli suspekte malakcepti ŝin."</p>

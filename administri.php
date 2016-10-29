@@ -727,7 +727,14 @@ include "adminkapo.inc.php";
 									<td>
 										<a href="javascript:document.administri2.action='administriNunanKurson.php';document.administri2.submit();">
 										<img src="bildoj/filesaveas.png"  align="middle"></a></td>
-									<td><?php listi_Korektantoj_laux_kurso($celpersono["id"],$celpersono["kurso"]); ?></td>
+									<td>
+									<?php
+										$plejTaugaKorektanto = troviPlejTauganKorektanton($celpersono["id"],$celpersono["kurso"]);
+										$korektanto = apartigiPersonon($plejTaugaKorektanto);
+										echo "Correcteur idéal : ".$korektanto["enirnomo"]."<br/>";
+									?>
+
+									<?php listi_Korektantoj_laux_kurso($celpersono["id"],$celpersono["kurso"]); ?></td>
 									<td>
 									<?php $kurso = $celpersono["kurso"];
 										simplaVorto("nomo","kursoj"," where kodo='$kurso'"); ?>

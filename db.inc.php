@@ -465,6 +465,89 @@ function vidiKorektantojn() {
      }
 
 }
+
+
+function troviPlejTauganKorektantonLauxKriterioj($lando,$departemento,$kurso) {
+    global $bdd;
+        $demando =  "select personoj.id,sum(kiom_lernantoj) as kiom from personoj,korektebla_kurso where personoj.id=korektebla_kurso.korektanto and korektebla_kurso.kurso='".$kurso."'";
+        if ($lando!="") {
+            $demando .= " and lando='".$lando."'";
+        }
+        if ($departemento!="") {
+            $demando .= " and posxtkodo like '".$departemento."%'";
+        }
+        $demando .= " group by personoj.id";
+        $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+        while($row = $result->fetch()) {
+            $lernanteblecoj[$row["id"]] = $row["kiom"];
+        }
+    
+        //repère la liste du nombre d'élèves que les correcteurs ont des (ex. : correcteur 1 : 6 élèves)
+        $demando="select personoj.id,enirnomo,count(*) as kiom  from personoj,nuna_kurso where personoj.id=nuna_kurso.korektanto and (nuna_kurso.stato='K' or nuna_kurso.stato='N') and nuna_kurso.kurso='".$kurso."'";
+                if ($lando!="") {
+        $demando .= " and lando='".$lando."'";
+        }
+        if ($departemento!="") {
+            $demando .= " and posxtkodo like '".$departemento."%'";
+        }
+        $demando .= " group by personoj.id";
+        $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+        while($row = $result->fetch()) {
+            $kiom_lernantoj[$row["id"]] = $row["kiom"]; 
+        }
+
+    // calcul les pourcentages du remplissage des élèves : ex: correcteur 1 : 75% (6/8)
+    foreach($lernanteblecoj as $sxlosilo => $valuo) { 
+        if ($sxlosilo==1119) {
+            continue; // filtre les correcteurs indésirables
+        }
+        if (!isset($kiom_lernantoj[$sxlosilo])){
+            $kiom_lernantoj[$sxlosilo]=0;
+        }
+        if ($valuo==""){
+            $valuo=0;
+        }
+        if (($valuo!=0) || ($kiom_lernantoj[$sxlosilo]!=0)) {
+            $occupation=($valuo==0) ? 100 : floor(100*$kiom_lernantoj[$sxlosilo]/$valuo);
+            if ($occupation>=100) { // ne peut pas choisir un correcteur qui a plus de 100%
+                continue;
+            }
+            $procentajxo[$sxlosilo] = $occupation;
+        }
+    }
+    
+    asort($procentajxo);
+    return $procentajxo;
+
+}
+
+
+
+function troviPlejTauganKorektanton($persono_id,$kurso) {
+    global $bdd;
+    $meilleurCorrecteur = 0;
+    $OccupationMeilleurCorrecteur = 100.0;
+    if ($kurso=="GR" || $kurso=="3N") {
+        // cas Gerda, on regarde si l'élève avait déjà un élève pour le 1er cours
+    }
+    // cas où on n'a pas trouvé de correcteur pour un cours précédent
+    $persono = apartigiPersonon($persono_id);
+    if ($persono["lando"]!="FR" && $persono["lando"]!="") {
+        // cas du pays renseigné mais différent de france, on recherche un correcteur dans ce pays 
+        $procentajxoj = troviPlejTauganKorektantonLauxKriterioj($persono["lando"],"",$kurso);
+    } else if ($persono["lando"]=="FR" && $persono["posxtkodo"]!="") {
+        // cas du pays france et du code postal renseigné : on recherche par département
+        $procentajxoj = troviPlejTauganKorektantonLauxKriterioj("FR",substr($persono["posxtkodo"],0,2),$kurso);
+
+    }
+    if (empty($procentajxoj)) {
+        // autre cas, on n'a rien trouvé ou bien l'élève n'a pas renseigné son département
+        $procentajxoj = troviPlejTauganKorektantonLauxKriterioj("FR",substr($persono["posxtkodo"],0,2),$kurso);    
+    }
+    // on a notre variable $procentajxoj qui contient les correcteurs dans l'ordre ideal :
+    return key($procentajxoj);
+}
+
 function protokolo($persono_id,$kategorio,$teksto) {
    global $bdd;
    $ip = $_SERVER['REMOTE_ADDR'];

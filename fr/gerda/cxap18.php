@@ -105,7 +105,7 @@ include "gerdakapo.inc.php";
 				<p><span class="eo">ŝi alvenis antaŭ unu horo</span> : elle est arrivée il y a une heure</p>
 				<p><span class="eo">antaŭ kelkaj minutoj</span> : il y a quelques minutes</p>
 		
-				<h4>dans <i>quand il réfère à un moment du futur</i> = post</h4>
+				<h4>dans (<i>quand il réfère à un moment du futur</i>) = post</h4>
 		
 				<p><span class="eo">li revenos post du tagoj</span> : il reviendra dans deux jours</p>
 				<p><span class="eo">mi estos kun vi post du minutoj</span> : je serai avec toi dans deux minutes, je suis à toi dans deux minutes</p>

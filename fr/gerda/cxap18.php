@@ -24,8 +24,8 @@ include "gerdakapo.inc.php";
 					certe. Aŭ ĉu frukton? Jen, rigardu, mi havas pomon kaj oranĝon por
 					vi. Kiel belaj ili estas! Plenaj je suko, evidente. Se vi estus
 					konsentinta labori por ni, vi jam estus plene sata. Kaj jen io alia:
-					kuko. Ĉu ne bonega, belega, manĝinda kuko? Ankoraŭ varma, ĵus
-					bakita. Tuŝu, sentu mem, kiel plaĉe varmeta ĝi estas. Vi malsatas
+					kuko. Ĉu ne bonega, belega, manĝinda kuko? Ĵus bakita, ankoraŭ varma.
+					Tuŝu, sentu mem, kiel plaĉe varmeta ĝi estas. Vi malsatas
 					nur pro via stulteco. Se vi estus saĝa, vi konsentus fari la etan
 					laboron, kiun mi petas de vi, kaj vi tuj ricevus la manĝaĵojn. Mi
 					bedaŭras, ke vi estas tiel obstina. Estas bedaŭrinde, vidi tiel belan
@@ -75,7 +75,7 @@ include "gerdakapo.inc.php";
 					tiom deziras reiri hejmen. Mi petegas vin, faru tion, kion ili deziras.
 					Se ne, ili faros malbonon al mi. Ili ne diris, kion. Ili ne volas diri.
 					Sed mi scias, mi sentas, ke estos terure. Kompatu min, kara, kara
-					patrino. Kompatu vian filinon. Mi timegas. Rapidu, rapidu, ke plej frue
+					patrino. Kompatu vian filinon. Mi timegas. Rapidu, ke plej frue
 					ili liberigu min. Ili ne volas, ke mi parolu pli longe, sed mi havas
 					paperon kaj plumon, kaj mi tuj skribos leteron al vi. Mi nur petegas:
 					obeu ilin!"</p>

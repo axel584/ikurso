@@ -370,11 +370,11 @@ include "gerdakapo.inc.php";
 		
 			<p>- Kiam vi forveturos?</p>
 		
-			<p>- Venontan<a href="#notoj">[1]</a> semajnon.</p>
+			<p>- Venontan<a href="#notoj2">[1]</a> semajnon.</p>
 			
 			<p>- Aviadile, ĉu ne?</p>
 			
-			<p>- Jes, aviadile. Neniu plu vojaĝas al Usono<a href="#notoj">[2]</a> ŝipe en nia epoko.
+			<p>- Jes, aviadile. Neniu plu vojaĝas al Usono<a href="#notoj2">[2]</a> ŝipe en nia epoko.
 			Flugi estas tiel pli rapide!</p>
 			
 			<p>- Ĉu vi devas prepari ankoraŭ multon?</p>
@@ -385,7 +385,7 @@ include "gerdakapo.inc.php";
 			<p>- Kial estas problemo?</p>
 			
 			<p>- Mi agis stulte. Mi ne okupiĝis pri tiu afero sufiĉe frue kaj nun
-			la dolaro<a href="#notoj">[3]</a> altiĝas de tago al tago.</p>
+			la dolaro<a href="#notoj2">[3]</a> altiĝas de tago al tago.</p>
 			
 			<p>- Vi do devus rapidi aĉeti viajn dolarojn.</p>
 			
@@ -397,7 +397,7 @@ include "gerdakapo.inc.php";
 			popolo, malaltiĝis. Ĉu vere nun ili estas malĝojaj pri tio, ke la
 			dolaro fariĝis plivalora?</p>
 			
-			<p>- Jes, ĉar ili ne povas vendi tiel facile siajn produktojn<a HREF="#notoj">[4]</a>
+			<p>- Jes, ĉar ili ne povas vendi tiel facile siajn produktojn<a HREF="#notoj2">[4]</a>
 			eksterlande.</p>
 			
 			<p>- Prave. La valoro de la produktoj, kiuj venas de Usono, nun iĝis pli
@@ -446,7 +446,7 @@ include "gerdakapo.inc.php";
 			<p>- Nu, mi esperas, ke vi solvos vian dolarproblemon kontentige. Ĝis
 			revido, kaj bonan vojaĝon!</p>
 		
-			<a id="notoj"></a>
+			<a id="notoj2"></a>
 			<p class="rimarko"><strong>NOTOJ</strong> : 
 			<ol>
 				<li><span class="eo">Venonta</span> : kiu venos, kiu sekvos, kiu okazos post la nuna tempo

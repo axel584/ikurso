@@ -496,7 +496,7 @@ include "gerdakapo.inc.php";
 			sciigi ion tre gravan al vi», mi diris per voĉo plej serioza. La
 			veturiletoj tuj haltis, kaj Alano direktis al mi siajn belajn bluajn
 			okulojn, tiom plenajn de trankvila amo, ke mia koro ekdoloris. Li
-			havas al mi grandegan amon. Mi estas por li la Patro kun granda P<a href='#notoj'>[1]</a>.
+			havas al mi grandegan amon. Mi estas por li la Patro kun granda P<a href='#notoj2'>[1]</a>.
 			Patro estas, liapense, plej aminda fortulo: ulo kuraĝega, havanta la
 			povon ĉiam ĉion superforti.</p>
 			<p>
@@ -562,7 +562,7 @@ include "gerdakapo.inc.php";
 			vivovojo. «Ĉu vere tion mi volas ?» mi demandis al mi. Sed de nenie
 			venis respondo.</p>			
 			
-			<a id="notoj"></a>
+			<a id="notoj2"></a>
 			<p class="rimarko"><strong>NOTOJ</strong> : 
 			<ol>
 				<li><span class="eo">diru</span> : «po».</li>

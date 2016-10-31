@@ -374,12 +374,12 @@ include "gerdakapo.inc.php";
 	
 			<p>Aŭskultu, mi tamen ŝatus scii, kion vi celas finfine. Kio estas via
 			celo ? Vi staris trans la pordo, kaj vi aŭskultis, ĉu ne ? Vi
-			subaŭskultis<a href='#notoj'>[1]</a>, kiel oni diras. Mi ne dubas, ke interesas vin scii,
+			subaŭskultis<a href='#notoj2'>[1]</a>, kiel oni diras. Mi ne dubas, ke interesas vin scii,
 			kiu estas kun mi, kaj pri kio ni parolas. Sed en ĉi tiu laboro, en
 			kiu vi kun-agas kun mi, via sinteno estas neallasebla. Iom da digno,
 			mi petas.</p>
 			<p>
-			Oni subdiris<a href='#notoj'>[2]</a> al mi, ke vi transiris al niaj malamikoj. Mi tion ne
+			Oni subdiris<a href='#notoj2'>[2]</a> al mi, ke vi transiris al niaj malamikoj. Mi tion ne
 			volis kredi. Kiam vi ĝojsaltis vidante min reveni, mi kredis je vi.
 			Kiam vi kisis min kvazaŭ amoplene, mi kredis je vi. Kaj ĉu vi
 			memoras tiun fojon, kiam vi ploris kaj ploris, ĉar mi ĵus tenis min
@@ -398,7 +398,7 @@ include "gerdakapo.inc.php";
 			Kaj nun, subite, ĝuste en tempo, kiam diversaj raportaĉoj alvenas al
 			mi koncerne vin, kiam oni provas subkomprenigi al mi, ke eble mi devus
 			dubi vian honestecon, jen vi komencas subaŭskulti. Vi tamen
-			subskribis<a href='#notoj'>[3]</a> promeson ĉiam gardi la interesojn de ĉi tiu oficejo.
+			subskribis<a href='#notoj2'>[3]</a> promeson ĉiam gardi la interesojn de ĉi tiu oficejo.
 			Vi scias, ke ni havas malamikojn, kiuj serĉas ĉiaspecajn informojn
 			pri niaj esploroj, kaj kiuj sufiĉe riĉas por havigi multe da mono al
 			tiu, kiu transdonus al ili interesajn sciojn pri ni. Ĉu al ili vi
@@ -510,7 +510,7 @@ include "gerdakapo.inc.php";
 			Kaj vi... Provu kunstreĉi ĉiujn viajn fortojn, por almenaŭ morti
 			digne.</p>
 			
-			<a id="notoj"></a>
+			<a id="notoj2"></a>
 			<p class="rimarko"><strong>NOTOJ</strong> : 
 			<ol>
 				<li><span class="eo">Subaŭskulti</span> : kaŝe aŭskulti; aŭskulti ion, 

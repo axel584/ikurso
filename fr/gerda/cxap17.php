@@ -362,7 +362,7 @@ include "gerdakapo.inc.php";
 			esti foje akceptitaj de lia patro. Ŝi kvazaŭ ŝtele eniris en lian
 			mondon por ŝteli lian amon, kaj la tutan riĉon, kiu iras kun ĝi, ĉe
 			tia multmona homo. Ŝi uzis plej plene sian imagon por elpensi plej
-			malsamajn manierojn enŝteliĝi<A HREF="#notoj">___</A> en lian vivon, kaj plaĉi al li. Sed
+			malsamajn manierojn enŝteliĝi<A HREF="#notoj">[3]</A> en lian vivon, kaj plaĉi al li. Sed
 			eble ŝi trouzis ilin. Eble li suspektis ŝian planon kaj la ne plene
 			honestajn motivojn, kiuj kuŝis malantaŭ ŝiaj tro oftaj aperoj ĉe
 			lia flanko.</p>
@@ -463,7 +463,7 @@ include "gerdakapo.inc.php";
 			<p>
 			Objektoj komencis traflugi la aeron. La bruoj devus tuŝi mian
 			atenton, konsciigi min, ke aŭdeblas vortaĉoj, ke okazas
-			neallasindaj<a href='#notoj'>[1]</a> batoj, ke ploroj kaj plendoj kaj ridoj resonas tro
+			neallasindaj<a href='#notoj2'>[1]</a> batoj, ke ploroj kaj plendoj kaj ridoj resonas tro
 			brue de unu muro al alia.</p>
 			<p>
 			Sed mi kvazaŭ ne ĉeestis. Mia atento estis for. Ĝi ne direktiĝis
@@ -497,7 +497,7 @@ include "gerdakapo.inc.php";
 			Ŝia mano montris al la ejo, al la nekredeblaj militspecaj agadoj,
 			kiuj okazis en ĝi, al seĝoj kuŝantaj, al rompita taso, al kruroj,
 			kapoj, brakoj, manoj moviĝantaj ĉiadirekte, dum vortaĉoj kaj
-			militkrioj ĉie<a href='#notoj'>[2]</a> sonadis.</p>
+			militkrioj ĉie<a href='#notoj2'>[2]</a> sonadis.</p>
 			<p>
 			Nur tiam mi ekkonsciis. «Geknaboj!» mi kriis. «Sufiĉas!»</p>
 			<p>
@@ -535,10 +535,10 @@ include "gerdakapo.inc.php";
 			Sed ankaŭ kunmarŝis la dudek kvin karuletoj, kio tamen mallarĝigis
 			la eblecojn de plaĉa para interparolado.</p>
 			<p>
-			Kiam mi estis libera, kaj mia kunlaboranto<A HREF="#notoj">___</A> ilin gardis, ŝi
+			Kiam mi estis libera, kaj mia kunlaboranto<A HREF="#notoj2">[3]</A> ilin gardis, ŝi
 			laboris en la trinkejo. Se mi tien iris, plej ofte ankaŭ kelkaj el
 			miaj klasanoj venis. Kaj kiam ŝi interrompis la laboron, mi ne
-			estis libera, sed devis okupiĝi pri la dudek-kvino. Mia helpanto<A HREF="#notoj">___</A>
+			estis libera, sed devis okupiĝi pri la dudek-kvino. Mia helpanto<A HREF="#notoj2">[3]</A>
 			ĉeestis nur dumtage, je precizaj horoj.</p>
 			<p>
 			Tamen, iom post iom, mi sukcesis trovi solvojn al la problemoj, kaj
@@ -557,7 +557,7 @@ include "gerdakapo.inc.php";
 			silente, ridete kaj korbate larĝ-okulis al ni dudek-kvino da
 			geamiketoj.</p>
 		
-			<a id="notoj"></a>
+			<a id="notoj2"></a>
 			<p class="rimarko"><strong>NOTOJ</strong> : 
 			<ol>
 				<li><span class="eo">Al-lasi</span> : lasi alveni, lasi enveni, kaj do permesi, lasi okazi, akcepti.</li>

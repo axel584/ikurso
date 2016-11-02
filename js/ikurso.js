@@ -130,6 +130,12 @@ $("textarea").on('change keyup paste', function() {
  // 
 });
 
+// permet de recliquer sur le bouton sauvegarder si on change la valeur d'un champ
+$("input").on('change keyup paste', function () {
+  $("#registriEkzercaron_button").removeClass("disabled");
+});
+
+
 $('#eniri_identigilo,#eniri_pasvorto').keyup(function(e) {    
    if(e.keyCode == 13) { // KeyCode de la touche entrée
           $( "#connection_button" ).click();

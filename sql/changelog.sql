@@ -509,6 +509,7 @@ INSERT INTO `respondoj` (`id`, `dato`, `persono_id`, `lecionero_id`, `kodo`, `de
 CREATE TABLE `vortoj` ( `id` INT NOT NULL AUTO_INCREMENT , `eo` VARCHAR(128) NOT NULL , `fr` VARCHAR(128) NOT NULL ,`tipo` ENUM('adj','adv','conjonction','nom','nombre','phrase','pronom','préposition','verbe') NULL , `lecionero_id` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB  CHARSET=utf8 COLLATE utf8_general_ci;
 CREATE TABLE `personoj_vortoj` ( `id` INT NOT NULL AUTO_INCREMENT , `persono_id` INT NOT NULL , `vorto_id` INT NOT NULL , `nombrilo` INT NOT NULL , `venontaFojo` DATETIME NOT NULL ,PRIMARY KEY (`id`)) ENGINE = InnoDB  CHARSET=utf8 COLLATE utf8_general_ci;
 
+-- penser à charger les mots qui se trouvent dans le google doc
 
 -- passage en V11
 DROP TABLE `phpbb_auth_access`, `phpbb_banlist`, `phpbb_categories`, `phpbb_chatbox`, `phpbb_chatbox_backup`, `phpbb_chatbox_session`, `phpbb_config`, `phpbb_disallow`, `phpbb_forums`, `phpbb_forum_prune`, `phpbb_groups`, `phpbb_posts`, `phpbb_posts_text`, `phpbb_privmsgs`, `phpbb_privmsgs_text`, `phpbb_ranks`, `phpbb_search_results`, `phpbb_search_wordlist`, `phpbb_search_wordmatch`, `phpbb_sessions`, `phpbb_smilies`, `phpbb_themes`, `phpbb_themes_name`, `phpbb_topics`, `phpbb_topics_watch`, `phpbb_users`, `phpbb_user_group`, `phpbb_vote_desc`, `phpbb_vote_results`, `phpbb_vote_voters`, `phpbb_words`;

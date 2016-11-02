@@ -87,10 +87,10 @@ include "pagxkapo.inc.php";
 								<li class="row">
 									<p class="col s12">Les cours sont clairs et équilibrent parfaitement grammaire, vocabulaire et exercices. Très vite on se sent à l’aise en espéranto. De plus nos tuteurs, dévoués, corrigent au mieux nos exercices, en prenant soin de notre bonne compréhension. Je recommande&nbsp;!</p>
 									<div class="circle responsive-img col s4 m3 l2 offset-s4 offset-m5 offset-l5 center-align">
-										<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Nathael.jpg" class="circle responsive-img" alt="" />
+										<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Nathael.jpg" class="circle responsive-img" alt="Photo de Nathael" />
 									</div>
 									<br>
-									<span class="eta col s4 m2 offset-s4 offset-m5 center-align"><em>Nathaël</em></span>
+									<span class="eta col s4 m2 offset-s4 offset-m5 center-align"><em>Natha&euml;l</em></span>
 								</li>
 								<li class="row">
 									<p class="col s12">Ikurso est site exceptionnel. Sans doute parce que l’espéranto est également une langue exceptionnelle. Le cours <em>Gerda malaperis</em> est particulièrement bien structuré et complet.</p>
@@ -126,7 +126,7 @@ include "pagxkapo.inc.php";
 						<h5>lernu.net</h5>
 						<p>Autre site, traduit dans plus de 20 langues.<br>
 						Pour ceux qui veulent découvrir l’espéranto, l’apprendre ou le pratiquer.</p>
-						<p class="container"><img class="responsive-img" src="<?=$vojo?>bildoj/lernu.png"></p>
+						<p class="container"><img class="responsive-img" src="<?=$vojo?>bildoj/lernu.png" alt="logo du site lernu.net"></p>
 						<p><a href="http://www.lernu.net" class="btn-flat small"><i class="material-icons right">arrow_right</i>aller sur lernu.net</a></p>
 					</div>
 
@@ -134,7 +134,7 @@ include "pagxkapo.inc.php";
 						<h5>duolingo</h5>
 						<p>Cours ludique pour débutants.<br>
 						N’existe pour l’instant qu’en anglais. (Nous attendons avec impatience une version pour les francophones.)</p>
-						<p class="container"><img class="responsive-img" src="<?=$vojo?>bildoj/duolingo.jpg"></p>
+						<p class="container"><img class="responsive-img" src="<?=$vojo?>bildoj/duolingo.jpg" alt="logo du site duolingo.com"></p>
 						<p><a href="https://en.duolingo.com/course/eo/en/Learn-Esperanto-Online" class="btn-flat small"><i class="material-icons right">arrow_right</i>aller sur duolingo</a></p>
 					</div>
 				</div>
@@ -153,7 +153,7 @@ include "pagxkapo.inc.php";
 					<p>L’espéranto est une langue construite (le terme « artificiel » est plutôt impropre), particulièrement destinée à un usage international / interculturel, afin que ceux qui l’utilisent puissent dialoguer sur un pied d’égalité, dans la mesure où aucun n’utilise sa langue natale. Avec les langues nationales, un individu normal n’est pas capable de s’exprimer aussi bien dans une langue étrangère que celui dont c’est la langue maternelle, à moins d’être expert. Alors que grâce à sa construction simple, logique et régulière, chacun peut apprendre l’espéranto très rapidement.</p>
 				</div>
 				<div class="col s12 m2">
-					<img src="<?php echo $vojo;?>bildoj/unua-libro.jpg" class="responsive-img">
+					<img src="<?php echo $vojo;?>bildoj/unua-libro.jpg" class="responsive-img" alt="Premier livre en esperanto en 1887">
 				</div>
 			</div>
 
@@ -164,7 +164,7 @@ include "pagxkapo.inc.php";
 			</div>
 			<div class="row">
 				<div class="col s12 m4 offset-m1">
-					<img src="<?php echo $vojo;?>bildoj/vivanta-lingvo.jpg" class="responsive-img">
+					<img src="<?php echo $vojo;?>bildoj/vivanta-lingvo.jpg" class="responsive-img" alt="l'espéranto est une langue vivante">
 				</div>
 				<div class="col s12 m6">
 					<p>L’espéranto s’utilise comme n’importe quelle autre langue. Néanmoins, il est plus facile à apprendre qu’une langue nationale. Même ceux qui n’arrivent pas à se souvenir d’un mot dans une langue qu’ils ont étudiée plusieurs années à l’école ou à l’université n’auront besoin que de quelques mois d’étude intensive pour parler couramment l’espéranto. L’espéranto est aussi plus utile qu’une langue nationale si votre but en apprenant une langue est de connaître des gens un peu partout dans le monde, puisque presque tout le monde l’a appris pour cette même raison.</p>

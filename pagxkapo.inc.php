@@ -14,6 +14,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 <!DOCTYPE html>
   <html lang="fr">
     <head>
+    <title>Ikurso - Cours d'espéranto gratuit en ligne</title>
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,600,600italic,700italic,700' rel='stylesheet' type='text/css'>
@@ -24,8 +25,8 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 
 		<!--Player audio-->
 		<link rel="stylesheet" type="text/css" href="<?php echo $vojo;?>soundmanager2/css/mp3-player-button.css" />
-		<script src="<?php echo $vojo;?>soundmanager2/script/soundmanager2.js"></script>
-		<script type="text/javascript" src="<?php echo $vojo;?>soundmanager2/script/mp3-player-button.js"></script>
+		<script async src="<?php echo $vojo;?>soundmanager2/script/soundmanager2.js"></script>
+		<script async type="text/javascript" src="<?php echo $vojo;?>soundmanager2/script/mp3-player-button.js"></script>
 		<script>
 		soundManager.setup({
 		  // required: path to directory containing SM2 SWF files
@@ -69,7 +70,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 
     <body class="<?php echo $korpo;?>">	
 <!-- google Analytics -->
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    <script async src="http://www.google-analytics.com/urchin.js" type="text/javascript">
 	</script>
 	<script type="text/javascript">
 		_uacct = "UA-1302916-3";
@@ -170,7 +171,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			<div class="modal-content">
 				<h4 class="primaire-texte texte-moyen">Comment créer un compte</h4>
 				<div class="video-container">
-					<iframe width="853" height="480" src="https://www.youtube.com/embed/geK1LfWVt9Y" frameborder="0" allowfullscreen></iframe>
+					<iframe width="853" height="480" src="https://www.youtube.com/embed/geK1LfWVt9Y" allowfullscreen></iframe>
 				</div>
 			</div>
 			<div id="tuto-footer" class="modal-footer">
@@ -188,7 +189,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 						<input id="novigi_pasvorton_aktivigo" type="hidden" name="aktivigo" value="<?=$aktivigo?>"/>
 						<input id="novigi_pasvorton_retadreso" type="hidden" name="retadreso" value="<?=$retadreso?>"/>
 						<input id="novigi_pasvorton_pasvorto" type="password" class="validate">
-						<label for="pasvorto">Nouveau mot de passe</label>
+						<label for="novigi_pasvorton_pasvorto">Nouveau mot de passe</label>
 					</div>
 				</form>
 				</div>
@@ -252,19 +253,19 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 							<!-- <li><a href="#">L’espéranto</a></li> -->
 							<li class="divider"></li>
 							<li>COURS EN LIGNE</li>
-							<ul>
+							<li><ul>
 								<li><a href="<?php echo $vojo;?>fr/cge/intro.php">Cours en 10 leçons</a></li>
 								<li><a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a></li>
 								<li class="divider"></li>
 								<li><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">Téléchargements</a></li>
-							</ul>
+							</ul></li>
 							<li class="divider"></li>
 							<li>INFORMATIONS PRATIQUES</li>
-							<ul>
+							<li><ul>
 								<li><a href="<?php echo $vojo;?>fr/intro.php?temo=enskribo">Comment s'inscrire</a></li>
 								<li><a href="<?php echo $vojo;?>helpo.php">Foire aux questions</a></li>
 								<li><a href="<?php echo $vojo;?>helpo.php?temo=iloj">Paramétrer son clavier</a></li>
-							</ul>
+							</ul></li>
 						</ul>
 					</div>
 					<a href="#!" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>

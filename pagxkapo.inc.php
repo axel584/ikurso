@@ -87,6 +87,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<ul id="menu_aide" class="dropdown-content">
 			<li><a href="<?php echo $vojo;?>fr/intro.php?temo=enskribo" class="primaire-texte moyen">Comment s'inscrire</a></li>
 			<li><a href="<?php echo $vojo;?>helpo.php" class="primaire-texte moyen">Foire aux questions</a></li>
+			<li><a href="<?php echo $vojo;?>butiko.php" class="primaire-texte moyen">Boutique</a></li>
 		</ul>
 
 		<!-- fenêtre modale connexion -->
@@ -264,7 +265,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 							<li><ul>
 								<li><a href="<?php echo $vojo;?>fr/intro.php?temo=enskribo">Comment s'inscrire</a></li>
 								<li><a href="<?php echo $vojo;?>helpo.php">Foire aux questions</a></li>
-								<li><a href="<?php echo $vojo;?>helpo.php?temo=iloj">Paramétrer son clavier</a></li>
+								<li><a href="<?php echo $vojo;?>butiko.php" class="primaire-texte moyen">Boutique</a></li>
 							</ul></li>
 						</ul>
 					</div>

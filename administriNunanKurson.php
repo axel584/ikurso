@@ -172,7 +172,6 @@ if (($nunleciono==NULL) and ($kurso=='GR'||$kurso=='CG'||$kurso=='3N')){
 		else if ($kurso=="CG"){$nunleciono=substr($subjekto,3,2);}
 		else {$nunleciono=1;}
 		$query = "update nuna_kurso set nunleciono=$nunleciono,stato='K',lastdato=CURDATE() where studanto=$celpersono_id and (stato='N' or stato='K') and kurso='$kurso'";
-		echo $query;
 		$bdd->exec($query);
 	}
 }

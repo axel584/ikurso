@@ -84,7 +84,7 @@ $fonto .= "<span style=\"color:blue\">".$commentaire_pour_correcteur."</span></p
 $fonto.="</body></html>";
 $fonto.="</body></html>";
 
-$query = "insert into eraraj_lecionoj (persono_id,enirnomo,dato,subjekto,fonto) values ('".$persono_id."','".$persono["enirnomo"]."',now(),'".$sujetMail."','".addslashes($fonto)."')";
+$query = "insert into eraraj_lecionoj (persono_id,enirnomo,dato,subjekto,fonto,leciono,kurso) values ('".$persono_id."','".$persono["enirnomo"]."',now(),'".$sujetMail."','".addslashes($fonto)."','".$leciono."','".$kurso."')";
 $bdd->exec($query);
 
 // Renvoyer la page qui permet d'évaluer la leçon

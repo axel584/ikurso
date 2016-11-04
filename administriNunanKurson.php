@@ -153,7 +153,7 @@ if (($nunleciono==NULL) and ($kurso=='GR'||$kurso=='CG'||$kurso=='3N')){
 	if ($kurso=="3N") {
 		$pattern="3a nivela kurso leciono%";
 	}
-	$query = "select * from eraraj_lecionoj where persono_id=$celpersono_id and subjekto like '$pattern'";
+	$query = "select * from eraraj_lecionoj where persono_id=$celpersono_id and kurso = '$kurso'";
 	$result = $bdd->query($query) or die ( "SELECT : Invalid query :".$query);
 	while($row = $result->fetch()) {
 		$subjekto=$row["subjekto"];

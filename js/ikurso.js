@@ -425,7 +425,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		url : $cheminAbsolu+'ajax/petiKorektanton.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : "lecionero_id="+$("#petiKorektanton_button").data('lecionero_id')+"&leciono="+$("#petiKorektanton_button").data('leciono')+"&kurso="+$("#petiKorektanton_button").data('kurso'),
+       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#petiKorektanton_button").data('lecionero_id')+"&leciono="+$("#petiKorektanton_button").data('leciono')+"&kurso="+$("#petiKorektanton_button").data('kurso'),
        		success : function(reponse, statut){ 
        			if (reponse.mesagxo=="compteNonActif") {
        				alert("Votre compte n'a pas été activé, vous ne pouvez pas demander un correcteur. Vérifier dans vos e-mails et cliquez sur le lien d'activation");

@@ -20,7 +20,7 @@ include "pagxkapo.inc.php";
 					<p>Si vous n’habitez pas en France, vous pouvez également contacter la boutique (voir bon de commande) pour connaître les frais d’envoi vers votre pays.</p>
 				</div>
 				<div class="col s3 m2">
-					<a href="<?=$vojo?>bildoj/butiko/bondecom2016.pdf" title="Bon de commande boutique Espéranto-France 2016" type="application/pdf"><img src="http://esperanto-france.org/local/cache-vignettes/L200xH283/bondecom2016-5be82.jpg?1476828061" alt="Bon de commande boutique Espéranto-France 2016" class="responsive-img z-depth-1"></a>
+					<a href="<?=$vojo?>bildoj/butiko/bondecom2016-ikurso.pdf" title="Bon de commande boutique Espéranto-France 2016" type="application/pdf"><img src="http://esperanto-france.org/local/cache-vignettes/L200xH283/bondecom2016-5be82.jpg?1476828061" alt="Bon de commande boutique Espéranto-France 2016" class="responsive-img z-depth-1"></a>
 				</div>
 			</div>
 			

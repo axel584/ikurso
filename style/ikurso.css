@@ -28,11 +28,29 @@ h4 {font-size: 1.5rem; margin: 2rem 0 1.5rem 0; color: #554E47;font-weight: 300;
 a {color: #2196F3;}
 
 .card-panel h5 {margin-bottom: 1.5rem;}
+
 .card .card-content .card-title {
 	line-height: normal;
 	padding-bottom: 1em;
 }
-
+.card .card-title.activator {
+    font-size:inherit;
+}
+.butiko .card {
+    padding: 0.5em;
+}
+.butiko .card .card-content {
+    padding: 0.5em 0 1em 0;
+}
+.butiko .card .card-reveal {
+    padding: 0.5em 1em 1em 0.5em;
+}
+.butiko-eta .card .card-content {
+    padding:1em 0 0.5em 0;
+}
+.card-reveal p {
+	font-size: 85%;
+}
 /*---- surcharge formulaires -----*/
 
 .input-field label {color: #75706B;}

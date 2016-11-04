@@ -20,8 +20,8 @@ include "pagxkapo.inc.php";
 				</div>
 			
 				<!---- pour petits écrans seulement ----->
-				<div class="butiko-eta row hide-on-med-and-up">
-					<div class="col s12 card">
+				<div class="butiko-eta col s12 row hide-on-med-and-up">
+					<div class="card">
 						<div class="card-content row">
 							<span class="card-title col s12">La Eta Princo, de Antoine de Saint Exupéry</span>
 							<img src="<?=$vojo?>bildoj/butiko/eta-princo.jpg" class="col s5 m3 responsive-img" alt="" />
@@ -59,14 +59,14 @@ include "pagxkapo.inc.php";
 				</div>	
 
 				<!---- pour tablettes et desktop ----->
-				<div class="butiko hide-on-small-only row">
-					<div class="col m4 l3">
-						<div class="card">
+				<div class="butiko col s12 masonry-layout hide-on-small-only">
+					<div class="masonry-layout-panel">
+						<div class="masonry-layout-panel-content card">
 							<div class="card-image">
 								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/eta-princo.jpg" alt="" />
 							</div>
 							<div class="card-content">
-								<span class="card-title activator">La Eta Princo (Saint-Exupéry) <i class="material-icons right">keyboard_arrow_down</i></span>
+								<span class="card-title activator">La Eta Princo, de Antoine de Saint-Exupéry <i class="material-icons right">keyboard_arrow_down</i></span>
 							</div>
 							<div class="card-reveal">
 								<span class="card-title"><i class="material-icons right">keyboard_arrow_up</i></span>
@@ -75,24 +75,40 @@ include "pagxkapo.inc.php";
 						</div>
 					</div>
 						
-					<div class="col m4 l3">
-							<div class="card">
-								<div class="card-image">
-									<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/mil-unuaj-vortoj.jpg" alt="" />
-									
-								</div>
-								<div class="card-content">
-									<span class="card-title activator">Mil unuaj vortoj en Esperanto <i class="material-icons right">keyboard_arrow_down</i></span>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title"><i class="material-icons right">keyboard_arrow_up</i></span>
-									<p>Cet imagier est l'outil idéale pour enrichir votre vocabulaire à partir de grandes illustrations détaillées couvrant des univers variés (la ferme, la maison, le magasin, etc.). Accessible aux plus jeunes enfants comme aux adultes.</p>
-								</div>
+					<div class="masonry-layout-panel">
+						<div class="masonry-layout-panel-content card">
+							<div class="card-image">
+								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/poshamiko.jpg" alt="" />
+								
+							</div>
+							<div class="card-content">
+								<span class="card-title activator">Poŝamiko <i class="material-icons right">keyboard_arrow_down</i></span>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title"><i class="material-icons right">keyboard_arrow_up</i></span>
+								<p>«L'ami de poche» porte bien son nom. Ce petit livre résume les points les plus importants de l'espéranto, du vocabulaire classé par thème (les couleurs, les nombres etc.) et vous permettra de réviser votre espéranto à n'importe quel moment.</p>
 							</div>
 						</div>
+					</div>
+
+					<div class="masonry-layout-panel">
+						<div class="masonry-layout-panel-content card">
+							<div class="card-image">
+								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/templo-de-l-suno.jpg" alt="" />
+								
+							</div>
+							<div class="card-content">
+								<span class="card-title activator">La templo de l’&nbsp;suno, de Hergé <i class="material-icons right">keyboard_arrow_down</i></span>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title"><i class="material-icons right">keyboard_arrow_up</i></span>
+								<p>Cette bande dessinée vous fera voyager aux côtés du célèbre reporter belge. Cette traduction du temple du soleil est le quatrième album disponible en espéranto.</p>
+							</div>
+						</div>
+					</div>
 						
-					<div class="col m4 l3">
-						<div class="card">
+					<div class="masonry-layout-panel">
+						<div class="masonry-layout-panel-content card">
 							<div class="card-image">
 								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/dico-de-poche.jpg" alt="" />
 								
@@ -107,37 +123,22 @@ include "pagxkapo.inc.php";
 						</div>
 					</div>
 						
-					<div class="col m4 l3">
-						<div class="card">
+					<div class="masonry-layout-panel">
+						<div class="masonry-layout-panel-content card">
 							<div class="card-image">
-								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/templo-de-l-suno.jpg" alt="" />
+								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/mil-unuaj-vortoj.jpg" alt="" />
 								
 							</div>
 							<div class="card-content">
-								<span class="card-title activator">La templo de l’&nbsp;suno (Hergé) <i class="material-icons right">keyboard_arrow_down</i></span>
+								<span class="card-title activator">Mil unuaj vortoj en Esperanto <i class="material-icons right">keyboard_arrow_down</i></span>
 							</div>
 							<div class="card-reveal">
 								<span class="card-title"><i class="material-icons right">keyboard_arrow_up</i></span>
-								<p>Cette bande dessinée vous fera voyager aux côtés du célèbre reporter belge. Cette traduction du temple du soleil est le quatrième album disponible en espéranto.</p>
+								<p>Cet imagier est l'outil idéal pour enrichir votre vocabulaire à partir de grandes illustrations détaillées couvrant des univers variés (la ferme, la maison, le magasin, etc.). Accessible aux plus jeunes enfants comme aux adultes.</p>
 							</div>
 						</div>
 					</div>
 						
-					<div class="col m4 l3">
-							<div class="card">
-								<div class="card-image">
-									<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/poshamiko.jpg" alt="" />
-									
-								</div>
-								<div class="card-content">
-									<span class="card-title activator">Poŝamiko <i class="material-icons right">keyboard_arrow_down</i></span>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title"><i class="material-icons right">keyboard_arrow_up</i></span>
-									<p>«L'ami de poche» porte bien son nom. Ce petit livre résume les points les plus importants de l'espéranto, du vocabulaire classé par thème (les couleurs, les nombres etc.) et vous permettra de réviser votre espéranto à n'importe quel moment.</p>
-								</div>
-							</div>
-						</div>
 				</div>	
 			</div>
 

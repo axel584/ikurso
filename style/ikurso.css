@@ -15,6 +15,27 @@
 .contraste-B {background-color: #9ccc65;}
 .contraste-texte-B {color: #9ccc65;}
 
+/*---- présentation boutique -----*/
+.masonry-layout {
+	column-count: 4;
+	column-gap: 0;
+}
+@media only screen and (max-width: 992px) {
+	.masonry-layout {
+		column-count: 3;
+	}
+}
+
+.masonry-layout-panel {
+	break-inside: avoid;
+	padding: 5px;
+    display: inline-block;
+    width: 100%;
+}
+.masonry-layout-panel-content {
+	padding: 5px;
+}
+
 /*---- surcharge typographie -----*/
 @media only screen and (min-width: 1200px) {
   html {font-size: 17px;}
@@ -36,8 +57,10 @@ a {color: #2196F3;}
 .card .card-title.activator {
     font-size:inherit;
 }
+
 .butiko .card {
     padding: 0.5em;
+    margin: 0;
 }
 .butiko .card .card-content {
     padding: 0.5em 0 1em 0;

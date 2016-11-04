@@ -87,7 +87,6 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<ul id="menu_aide" class="dropdown-content">
 			<li><a href="<?php echo $vojo;?>fr/intro.php?temo=enskribo" class="primaire-texte moyen">Comment s'inscrire</a></li>
 			<li><a href="<?php echo $vojo;?>helpo.php" class="primaire-texte moyen">Foire aux questions</a></li>
-			<li><a href="<?php echo $vojo;?>butiko.php" class="primaire-texte moyen">Boutique</a></li>
 		</ul>
 
 		<!-- fenêtre modale connexion -->
@@ -253,7 +252,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 						<ul>
 							<!-- <li><a href="#">L’espéranto</a></li> -->
 							<li class="divider"></li>
-							<li>COURS EN LIGNE</li>
+							<li class="primaire-texte moyen">COURS EN LIGNE</li>
 							<li><ul>
 								<li><a href="<?php echo $vojo;?>fr/cge/intro.php">Cours en 10 leçons</a></li>
 								<li><a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a></li>
@@ -261,11 +260,12 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 								<li><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">Téléchargements</a></li>
 							</ul></li>
 							<li class="divider"></li>
-							<li>INFORMATIONS PRATIQUES</li>
+							<li class="primaire-texte moyen"><a id="menu_boutique" href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></li>
+							<li class="divider"></li>
+							<li class="primaire-texte moyen">INFORMATIONS PRATIQUES</li>
 							<li><ul>
 								<li><a href="<?php echo $vojo;?>fr/intro.php?temo=enskribo">Comment s'inscrire</a></li>
 								<li><a href="<?php echo $vojo;?>helpo.php">Foire aux questions</a></li>
-								<li><a href="<?php echo $vojo;?>butiko.php" class="primaire-texte moyen">Boutique</a></li>
 							</ul></li>
 						</ul>
 					</div>
@@ -290,6 +290,7 @@ if ($persono_id=="") {
 					<ul class="right hide-on-med-and-down">
 						<!--<li><a href="#">L’ESPÉRANTO</a></li>-->
 						<li><a class="dropdown-button" href="#!" data-activates="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li><a id="menu_boutique" href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></li>
 						<li><a class="dropdown-button" href="#!" data-activates="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>
 					</ul>
 				</div>

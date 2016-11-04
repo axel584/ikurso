@@ -16,23 +16,20 @@
 .contraste-texte-B {color: #9ccc65;}
 
 /*---- présentation boutique -----*/
-.masonry-layout {
+.masonry {
 	column-count: 4;
 	column-gap: 0;
 }
 @media only screen and (max-width: 992px) {
-	.masonry-layout {
+	.masonry {
 		column-count: 3;
 	}
 }
 
-.masonry-layout-panel {
-	break-inside: avoid;
-	padding: 5px;
+.masonry-item {
     display: inline-block;
+    margin: 0 0 1em;
     width: 100%;
-}
-.masonry-layout-panel-content {
 	padding: 5px;
 }
 
@@ -60,10 +57,10 @@ a {color: #2196F3;}
 
 .butiko .card {
     padding: 0.5em;
-    margin: 0;
+    margin: 0 0 0.5em 0;
 }
 .butiko .card .card-content {
-    padding: 0.5em 0 1em 0;
+    padding: 0.5em 0 0.5em 0;
 }
 .butiko .card .card-reveal {
     padding: 0.5em 1em 1em 0.5em;

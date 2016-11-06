@@ -64,13 +64,14 @@ include "dlekkapo.inc.php";
 			normalement avant le nom qu’ils qualifient.</p>
 			<p>Exemples :</p>
 			
-			<div class="vortlisto">
-				<p><span class="eo">a<u>mi</u>ko</span> : ami</p>
-				<p><span class="eo">a<u>mi</u>ka</span> : amical</p>
-				<p><span class="eo"><u>es</u>ti</span> : être</p>
-				<p><span class="eo"><u>no</u>va a<u>mi</u>ko</span> : un nouvel ami</p>
-				<p><span class="eo"><u>sa</u>na <u>kna</u>bo</span> : un garçon en bonne santé</p>
+			<div class="row">
+				<p class="col s6"><span class="eo">a<u>mi</u>ko</span> : ami</p>
+				<p class="col s6"><span class="eo">a<u>mi</u>ka</span> : amical(e)</p>
+				<p class="col s6"><span class="eo"><u>no</u>va a<u>mi</u>ko</span> : un nouvel ami</p>
+				<p class="col s6"><span class="eo"><u>es</u>ti</span> : être</p>
+				<p class="col s6"><span class="eo"><u>sa</u>na <u>kna</u>bo</span> : un garçon en bonne santé</p>
 			</div>
+			
 			<p class="rimarko"><strong>REMARQUE</strong> : Dans cet exemple, nous avons utilisé le soulignement pour indiquer que
 			l’avant-dernière syllabe porte l’accent tonique, c’est-à-dire qu’on la
 			prononce plus fort que les autres syllabes. En français, l’accent tonique
@@ -78,56 +79,70 @@ include "dlekkapo.inc.php";
 			<span class="eo">a<u>mi</u>ko</span>, il vous suffit de prononcer d’abord le mot français
 			<span class="eo">a<u>mi</u></span> puis de lui ajouter <span class="eo">ko</span>. Entraînez-vous avec les mots de
 			vocabulaire de la page suivante.</p>
+			
+
+			<fieldset class="vortoj">
+				<legend>VOCABULAIRE</legend>
+				<div>
+					<?php if ($persono) { ?>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<?php } ?>
+				</div>
+				<div class="vortlisto row">
+					<p class="col s12 m4"><span class="eo">amiko</span> : ami</p>
+					<p class="col s12 m4"><span class="eo">nova</span> : nouveau</p>
+					<p class="col s12 m4"><span class="eo">esti</span> : être</p>
+					<p class="col s12 m4"><span class="eo">amika</span> : amical(e)</p>
+					<p class="col s12 m8"><span class="eo">sana</span> : sain, en bonne santé</p>
+				</div>
+			</fieldset>
+			
 
 			<?php 
 			} // fin section 2
 			if ($section=="3") {
 			?>
-			<div class="vortlisto row">
-				<div class="col s12 m4">
-					<p><span class="eo">amiko</span> : ami</p>
-					<p><span class="eo">Aŭstralio</span> : Australie</p>
-					<p><span class="eo">biskvito</span> : biscuit</p>
-					<p><span class="eo">Brazilo</span> : Brésil</p>
-					<p><span class="eo">desegnisto</span> : dessinateur</p>
-					<p><span class="eo">filo</span> : fils</p>
-					<p><span class="eo">Francujo</span> : France</p>
-					<p><span class="eo">frato</span> : frère</p>
-					<p><span class="eo">instruisto</span> : instituteur</p>
-					<p><span class="eo">knabo</span> : garçon</p>
-					<p><span class="eo">kafo</span> : café</p>
-					<p><span class="eo">kuko</span> : gâteau</p>
-					<p><span class="eo">Vjetnamio</span> : Vietnam</p>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			<fieldset class="vortoj">
+				<legend>MOTS À RETENIR</legend>
+				<div class="vortlisto row">
+					<div class="col s12 m4">
+						<p><span class="eo">biskvito</span> : biscuit</p>
+						<p><span class="eo">filo</span> : fils</p>
+						<p><span class="eo">Francujo</span> : France</p>
+						<p><span class="eo">frato</span> : frère</p>
+						<p><span class="eo">instruisto</span> : instituteur</p>
+						<p><span class="eo">knabo</span> : garçon</p>
+						<p><span class="eo">kafo</span> : café</p>
+						<p><span class="eo">kuko</span> : gâteau</p>
+						<p><span class="eo">lakto</span> : lait</p>
+					</div>
+					<div class="col s12 m4">
+						<p><span class="eo">lando</span> : pays</p>
+						<p><span class="eo">patro</span> : père</p>
+						<p><span class="eo">pano</span> : pain</p>
+						<p><span class="eo">studento</span> : étudiant</p>
+						<p><span class="eo">sukero</span> : sucre</p>
+						<p><span class="eo">teo</span> : thé</p>
+						<p><span class="eo">urbo</span> : ville</p>
+						<p><span class="eo">viro</span> : homme (mâle)</p>
+						<p><span class="eo">kaj</span> : et</p>
+					</div>
+					<div class="col s12 m4">
+						<p><span class="eo">bela</span> : beau</p>
+						<p><span class="eo">bona</span> : bon</p>
+						<p><span class="eo">ĉiam</span> : toujours</p>
+						<p><span class="eo">en</span> : dans, en</p>
+						<p><span class="eo">facila</span> : facile</p>
+						<p><span class="eo">granda</span> : grand</p>
+						<p><span class="eo">kiu</span> : qui</p>
+						<p><span class="eo">seka</span> : sec</p>
+						<p><span class="eo">varma</span> : chaud</p>
+					</div>
 				</div>
-				<div class="col s12 m4">
-					<p><span class="eo">lakto</span> : lait</p>
-					<p><span class="eo">lando</span> : pays</p>
-					<p><span class="eo">patro</span> : père</p>
-					<p><span class="eo">Pollando</span> : Pologne</p>
-					<p><span class="eo">profesio</span> : métier, profession</p>
-					<p><span class="eo">psikologo</span> : psychologue</p>
-					<p><span class="eo">pano</span> : pain</p>
-					<p><span class="eo">studento</span> : étudiant</p>
-					<p><span class="eo">sukero</span> : sucre</p>
-					<p><span class="eo">teo</span> : thé</p>
-					<p><span class="eo">urbo</span> : ville</p>
-					<p><span class="eo">viro</span> : homme (mâle)</p>
-				</div>
-				<div class="col s12 m4">
-					<p><span class="eo">bela</span> : beau</p>
-					<p><span class="eo">bona</span> : bon</p>
-					<p><span class="eo">ĉiam</span> : toujours</p>
-					<p><span class="eo">en</span> : dans, en</p>
-					<p><span class="eo">facila</span> : facile</p>
-					<p><span class="eo">granda</span> : grand</p>
-					<p><span class="eo">kiu</span> : qui</p>
-					<p><span class="eo">nova</span> : nouveau</p>
-					<p><span class="eo">sana</span> : sain, en bonne santé</p>
-					<p><span class="eo">seka</span> : sec</p>
-					<p><span class="eo">varma</span> : chaud</p>
-					<p><span class="eo">kaj</span> : et</p>
-				</div>
-			</div>
+			</fieldset>
 
 			<?php 
 			} // fin section 3
@@ -211,11 +226,11 @@ include "dlekkapo.inc.php";
 			(du, de la, des) n’existent pas en espéranto.</p>
 
 			<div class="vortlisto row">
-				<div class="col s12 m6">
+				<div class="col s12 m4">
 					<p><span class="eo">biskvito</span> : un biscuit</p>
 					<p><span class="eo">biskvitoj</span> : des biscuits</p>
 				</div>
-				<div class="col s12 m6">
+				<div class="col s12 m4">
 					<p><span class="eo">pano</span> : du pain</p>
 					<p><span class="eo">sukero</span> : du sucre</p>
 				</div>
@@ -388,27 +403,29 @@ include "dlekkapo.inc.php";
 			if ($section=="7") {
 			?>			
 			<p class="parto">Voici quelques expressions pour entamer et finir une discussion. Ces expressions sont à apprendre par cœur dans un premier temps, vous verrez un peu plus tard dans les leçons pourquoi elles se construisent ainsi.</p>
-		<div class="vortlisto">
-			<div class="row">
-				<p class="col s6 m3 eo">Saluton !</p><p class="col s6 m3">Salut !</p>
-				<p class="col s6 m3 eo">Bonan tagon !</p><p class="col s6 m3">Bonjour !</p>
-				<p class="col s6 m3 eo">Bonan matenon !</p><p class="col s6 m3">Bonjour ! (le matin)</p>
-				<p class="col s6 m3 eo">Bonan vesperon !</p><p class="col s6 m3">Bonsoir !</p>
-				<p class="col s6 m3 eo">Bonan nokton !</p><p class="col s6 m3">Bonne nuit !</p>
+		<fieldset class="vortoj">
+			<div class="vortlisto">
+				<div class"row">
+					<p class="col s6 m3 eo">Saluton !</p><p class="col s6 m3">Salut !</p>
+					<p class="col s6 m3 eo">Bonan tagon !</p><p class="col s6 m3">Bonjour !</p>
+					<p class="col s6 m3 eo">Bonan matenon !</p><p class="col s6 m3">Bonjour ! (le matin)</p>
+					<p class="col s6 m3 eo">Bonan vesperon !</p><p class="col s6 m3">Bonsoir !</p>
+					<p class="col s6 m3 eo">Bonan nokton !</p><p class="col s6 m3">Bonne nuit !</p>
+				</div>
+				<div class="row">
+					<p class="col s6 m3 eo">Mi loĝas en...</p><p class="col s6 m3">J’habite à...</p>
+					<p class="col s6 m3 eo">Mi ŝatas...</p><p class="col s6 m3">J’aime... / J'apprécie...</p>
+				</div>
+				<div class="row">
+					<p class="col s6 m3 eo">Ĝis revido !</p><p class="col s6 m3">Au revoir !</p>
+					<p class="col s6 m3 eo">Adiaŭ !</p><p class="col s6 m3">Adieu !</p>
+				</div>
+				<div class="row">
+					<p class="col s6 m3 eo">Bonvolu...</p><p class="col s6 m9">Veuillez... / ... s’il vous plaît</p>
+					<p class="col s6 m3 eo">Bonvolu eniri.</p><p class="col s6 m9">Veuillez entrer. / Entrez, s’il vous plaît.</p>
+				</div>
 			</div>
-			<div class="row">
-				<p class="col s6 m3 eo">Mi loĝas en...</p><p class="col s6 m3">J’habite à...</p>
-				<p class="col s6 m3 eo">Mi ŝatas...</p><p class="col s6 m3">J’aime... / J'apprécie...</p>
-			</div>
-			<div class="row">
-				<p class="col s6 m3 eo">Ĝis revido !</p><p class="col s6 m3">Au revoir !</p>
-				<p class="col s6 m3 eo">Adiaŭ !</p><p class="col s6 m3">Adieu !</p>
-			</div>
-			<div class="row">
-				<p class="col s6 m3 eo">Bonvolu...</p><p class="col s6 m9">Veuillez... / ... s’il vous plaît</p>
-				<p class="col s6 m3 eo">Bonvolu eniri.</p><p class="col s6 m9">Veuillez entrer. / Entrez, s’il vous plaît.</p>
-			</div>
-		</div>
+		</fieldset>
 			<?php 
 			} // fin section 
 			if ($section=="8") {
@@ -416,6 +433,7 @@ include "dlekkapo.inc.php";
 			<p class="parto">En vous aidant des expressions que l’on vient de voir et d’un peu de bon sens, essayez d'attribuer à chacune des personnes de la vidéo son nom, son domicile et sa profession.</p>
 			<p>Ne vous attendez pas à comprendre <b>tout</b>, essayez juste de comprendre ce qui vous permettra de répondre au questionnaire. N’hésitez pas à regarder la vidéo plusieurs fois. Au besoin, prenez des notes sur du papier, l’exercice sera d’autant plus utile si vous essayez de répondre sérieusement aux questions. Si vous vous trompez, prenez un peu de temps pour vérifier dans la vidéo la bonne réponse avant d'essayer de donner une autre réponse.</p>
 			<p>
+			<p>Pour vous aider à mieux comprendre, vous trouverez à la fin de cette page une liste de quelques mots nouveaux.</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/pTQEn0-fuQc" frameborder="0" allowfullscreen></iframe>
 			</p>
 
@@ -488,6 +506,22 @@ QCM(
 );
 			?>
 
+			<p>Quelques mots nouveaux utilisés dans cet exercice :</p>
+			<div class="vortlisto row">
+				<div class="col s12 m4">
+					<p><span class="eo">Aŭstralio</span> : Australie</p>
+					<p><span class="eo">Brazilo</span> : Brésil</p>
+				</div>
+				<div class="col s12 m4">
+					<p><span class="eo">Vjetnamio</span> : Vietnam</p>
+					<p><span class="eo">Pollando</span> : Pologne</p>
+				</div>
+				<div class="col s12 m4">
+					<p><span class="eo">profesio</span> : métier, profession</p>
+					<p><span class="eo">desegnisto</span> : dessinateur</p>
+					<p><span class="eo">psikologo</span> : psychologue</p>
+				</div>
+			</div>
 
 			<?php 
 			} // fin section 

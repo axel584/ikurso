@@ -474,6 +474,9 @@ p.parto:before {
 .vortlisto i.material-icons:hover {
 	color: #6d4c41;
 }
+.vortlisto div.col + div.col {
+    margin-top: 1em;
+}
 
 a[type="audio/mp3"] i.material-icons {
 	vertical-align: text-bottom;
@@ -511,6 +514,39 @@ p.sekva {
 .ligoj i {font-size: inherit;}
 #leciono-fino {margin-top: 2rem;}
 
+/********** vocabulaire *******/
+fieldset.vortoj {
+	border:2px double #64B5F6;
+	padding:0 1em 1em 1em;
+	margin-top: 1em;
+}
+
+fieldset.vortoj + div {
+	margin-top: 1em;
+	border: none;
+}
+
+fieldset.vortoj legend {
+	padding-left: 0.5em;	
+	padding-right: 1em;
+	color: #64B5F6;
+}
+fieldset.vortoj legend:before {
+	font-family: 'Material Icons';
+	content: "spellcheck";
+	-webkit-font-feature-settings: 'liga';
+	color: #2196F3;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	vertical-align: middle;
+}
+fieldset.vortoj div.vortlisto {
+	border: none;
+	padding: 1em 0 0 0;
+}
+fieldset.vortoj div.row {
+	margin-bottom: 0;
+}
 /********** exercices *******/
 fieldset.ekzerco,
 fieldset.sono {
@@ -518,6 +554,7 @@ fieldset.sono {
 	padding:0 1em 1em 1em;
 	margin-top: 1em;
 }
+
 fieldset.ekzerco + fieldset.ekzerco,
 fieldset.ekzerco + div.vortlisto {
 	margin-top: 1em;
@@ -576,9 +613,6 @@ p.nbvortoj {
 p.qcmerr {color:red;}
 input[type="radio"] + label span.qcmerr {text-decoration: line-through;}
 
-legend {
-	font-size: 75%;
-}
 legend a {color: inherit; cursor: pointer;}
 
 #recapitulatif_qcm {

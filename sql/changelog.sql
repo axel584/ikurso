@@ -515,3 +515,10 @@ ALTER TABLE  `eraraj_lecionoj` ADD  `leciono` INT NULL , ADD  `kurso` VARCHAR( 2
 -- passage en V11
 DROP TABLE `phpbb_auth_access`, `phpbb_banlist`, `phpbb_categories`, `phpbb_chatbox`, `phpbb_chatbox_backup`, `phpbb_chatbox_session`, `phpbb_config`, `phpbb_disallow`, `phpbb_forums`, `phpbb_forum_prune`, `phpbb_groups`, `phpbb_posts`, `phpbb_posts_text`, `phpbb_privmsgs`, `phpbb_privmsgs_text`, `phpbb_ranks`, `phpbb_search_results`, `phpbb_search_wordlist`, `phpbb_search_wordmatch`, `phpbb_sessions`, `phpbb_smilies`, `phpbb_themes`, `phpbb_themes_name`, `phpbb_topics`, `phpbb_topics_watch`, `phpbb_users`, `phpbb_user_group`, `phpbb_vote_desc`, `phpbb_vote_results`, `phpbb_vote_voters`, `phpbb_words`;
 DROP TABLE `phpmv_archives`, `phpmv_a_category`, `phpmv_a_config`, `phpmv_a_file`, `phpmv_a_keyword`, `phpmv_a_newsletter`, `phpmv_a_page`, `phpmv_a_partner_name`, `phpmv_a_partner_url`, `phpmv_a_provider`, `phpmv_a_resolution`, `phpmv_a_search_engine`, `phpmv_a_site`, `phpmv_a_vars_name`, `phpmv_a_vars_value`, `phpmv_category`, `phpmv_groups`, `phpmv_ip_ignore`, `phpmv_link_vp`, `phpmv_link_vpv`, `phpmv_newsletter`, `phpmv_page`, `phpmv_page_md5url`, `phpmv_page_url`, `phpmv_query_log`, `phpmv_site`, `phpmv_site_partner`, `phpmv_site_partner_url`, `phpmv_site_url`, `phpmv_users`, `phpmv_users_link_groups`, `phpmv_vars`, `phpmv_version`, `phpmv_visit`;
+
+-- correction vocabulaire
+UPDATE `vortoj` SET `fr` = 'nouveau, nouvelle' WHERE `vortoj`.`id` = 2906;
+DELETE FROM `vortoj` WHERE `vortoj`.`id` = 2932;
+
+UPDATE `lecioneroj` SET `titolo` = 'Mes premières phrases' WHERE `lecioneroj`.`id` = 219;
+

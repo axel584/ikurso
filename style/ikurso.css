@@ -519,10 +519,10 @@ fieldset.vortoj {
 	border:2px double #64B5F6;
 	padding:0 1em 1em 1em;
 	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
-fieldset.vortoj + div {
-	margin-top: 1em;
+fieldset.vortoj div.vortlisto {
 	border: none;
 }
 

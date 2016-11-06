@@ -93,7 +93,21 @@ QCM_bildoj(
 			<p class="col s6"><span class="eo">la grandaj viroj</span> : les grands hommes</p>
 			<p class="col s6"><span class="eo">la grandaj virinoj</span> : les grandes femmes</p>
 		</div>
-	
+		
+		<fieldset class="vortoj">
+			<legend>VOCABULAIRE À RETENIR</legend>
+			<div>
+				<?php if ($persono) { ?>
+				<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+				<?php } ?>
+			</div>
+			<div class="vortlisto row">
+				<p class="col s12 m4"><span class="eo">virino</span> : femme</p>
+				<p class="col s12 m4"><span class="eo">amikino</span> : amie</p>
+				<p class="col s12 m4"><span class="eo">filino</span> : fille</p>
+			</div>
+		</fieldset>
+
 		<?php 
 		} // fin section 
 		if ($section=="3") {
@@ -173,6 +187,20 @@ QCM_bildoj(
 			<p class="col s6"><span class="eo">malnova</span> : ancien(ne), vieux, vieille</p>
 		</div>
 	
+		<fieldset class="vortoj">
+			<legend>VOCABULAIRE À RETENIR</legend>
+			<div>
+				<?php if ($persono) { ?>
+				<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+				<?php } ?>
+			</div>
+			<div class="vortlisto row">
+				<p class="col s12 m4"><span class="eo">malamiko</span> : ennemi</p>
+				<p class="col s12 m4"><span class="eo">malbela</span> : laid(e)</p>
+				<p class="col s12 m4"><span class="eo">malnova</span> : ancien(ne), vieux, vieill</p>
+			</div>
+		</fieldset>
+
 		<?php 
 		} // fin section
 		if ($section=="6") {
@@ -196,40 +224,45 @@ QCM_bildoj(
 		if ($section=="7") {
 		?>
 		
-		<p>Maintenant un peu de <b>vocabulaire</b> :</p>
+		<p class="parto">Voici maintenant un peu de vocabulaire.</p>
+		<?php if ($persono) { ?>
+		<p >Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+		<?php } ?>
 
-		<div class="vortlisto row">
-			<div class="col s12 m4">
-				<p><span class="eo">ami</span> : aimer</p>
-				<p><span class="eo">fari</span> : faire</p>
-				<p><span class="eo">forgesi</span> : oublier</p>
-				<p><span class="eo">havi</span> : avoir</p>
-				<p><span class="eo">kapti</span> : attraper</p>
-				<p><span class="eo">lavi</span> : laver</p>
-				<p><span class="eo">porti</span> : porter</p>
-				<p><span class="eo">peti</span> : demander</p>
+		<fieldset class="vortoj">
+			<div class="vortlisto row">
+				<div class="col s12 m4">
+					<p><span class="eo">ami</span> : aimer</p>
+					<p><span class="eo">fari</span> : faire</p>
+					<p><span class="eo">forgesi</span> : oublier</p>
+					<p><span class="eo">havi</span> : avoir</p>
+					<p><span class="eo">kapti</span> : attraper</p>
+					<p><span class="eo">lavi</span> : laver</p>
+					<p><span class="eo">porti</span> : porter</p>
+					<p><span class="eo">peti</span> : demander</p>
+				</div>
+				<div class="col s12 m4">
+					<p><span class="eo">renkonti</span> : rencontrer</p>
+					<p><span class="eo">skribi</span> : écrire</p>
+					<p><span class="eo">sukeri</span> : sucrer</p>
+					<p><span class="eo">trinki</span> : boire</p>
+					<p><span class="eo">vendi</span> : vendre</p>
+					<p><span class="eo">vidi</span> : voir</p>
+					<p><span class="eo">akvo</span> : eau</p>
+					<p><span class="eo">amo</span> : amour</p>
+				</div>
+				<div class="col s12 m4">
+					<p><span class="eo">birdo</span> : oiseau</p>
+					<p><span class="eo">butiko</span> : boutique</p>
+					<p><span class="eo">insekto</span> : insecte</p>
+					<p><span class="eo">limonado</span> : limonade</p>
+					<p><span class="eo">papero</span> : papier</p>
+					<p><span class="eo">plumo</span> : plume</p>
+					<p><span class="eo">taso</span> : tasse</p>
+					<p><span class="eo">pura</span> : propre</p>
+				</div>
 			</div>
-			<div class="col s12 m4">
-				<p><span class="eo">renkonti</span> : rencontrer</p>
-				<p><span class="eo">skribi</span> : écrire</p>
-				<p><span class="eo">sukeri</span> : sucrer</p>
-				<p><span class="eo">trinki</span> : boire</p>
-				<p><span class="eo">vendi</span> : vendre</p>
-				<p><span class="eo">vidi</span> : voir</p>
-				<p><span class="eo">akvo</span> : eau</p>
-				<p><span class="eo">amo</span> : amour</p>
-			</div>
-			<div class="col s12 m4">
-				<p><span class="eo">birdo</span> : oiseau</p>
-				<p><span class="eo">butiko</span> : boutique</p>
-				<p><span class="eo">insekto</span> : insecte</p>
-				<p><span class="eo">limonado</span> : limonade</p>
-				<p><span class="eo">papero</span> : papier</p>
-				<p><span class="eo">plumo</span> : plume</p>
-				<p><span class="eo">taso</span> : tasse</p>
-				<p><span class="eo">pura</span> : propre</p>
-			</div>
-		</div>
+		</fieldset>
 
 		<p class="rimarko"><strong>REMARQUE</strong> : 
 		N’oubliez pas que vous connaissez aussi les féminins et les contraires
@@ -325,13 +358,21 @@ QCM_bildoj(
 	if ($section=="11") {
 	?>
 	<p class="parto">Voici quelques expressions pour demander à quelqu’un comment il va. Apprenez-les par cœur dans un premier temps. Nous les reverrons par la suite.</p>
-		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">Kiel vi fartas ?</span></p><p class="col s6">Comment allez-vous ?</p>
-			<p class="col s5 offset-s1"><span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">Bien. Et vous ?</p>
-			<p class="col s5 offset-s1"><span class="eo">– Bonege.</span></p><p class="col s6">Parfaitement bien.</p>
-			<p class="col s5 offset-s1"><span class="eo">– Sufiĉe bone.</span></p><p class="col s6">Assez bien. (ça va)</p>
-			<p class="col s5 offset-s1"><span class="eo">– Ne tro bone.</span></p><p class="col s6">Pas trop bien.</p>
-		</div>
+		<?php if ($persono) { ?>
+		<p >Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+		<?php } ?>
+
+		<fieldset class="vortoj">
+			<legend>EXPRESSIONS À RETENIR</legend>
+			<div class="vortlisto row">
+				<p class="col s6"><span class="eo">Kiel vi fartas ?</span></p><p class="col s6">Comment allez-vous ?</p>
+				<p class="col s5 offset-s1"><span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">Bien. Et vous ?</p>
+				<p class="col s5 offset-s1"><span class="eo">– Bonege.</span></p><p class="col s6">Parfaitement bien.</p>
+				<p class="col s5 offset-s1"><span class="eo">– Sufiĉe bone.</span></p><p class="col s6">Assez bien. (ça va)</p>
+				<p class="col s5 offset-s1"><span class="eo">– Ne tro bone.</span></p><p class="col s6">Pas trop bien.</p>
+			</div>
+		</fieldset>
+		
 		<?php 
 		} // fin section
 		

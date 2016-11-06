@@ -54,6 +54,20 @@ include "dlekkapo.inc.php";
 			Page suivante, nous vous proposons, à titre d’exercice, deux autres exemples illustrant la façon dont
 			on peut modifier l’ordre des mots.</p>
 	
+		<fieldset class="vortoj">
+			<legend>VOCABULAIRE À RETENIR</legend>
+			<div>
+				<?php if ($persono) { ?>
+				<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+				<?php } ?>
+			</div>
+			<div class="vortlisto row">
+				<p class="col s12 m4"><span class="eo">knabino</span> : fille</p>
+				<p class="col s12 m4"><span class="eo">patrino</span> : mère</p>
+				<p class="col s12 m4"><span class="eo">fratino</span> : sœur</p>
+			</div>
+		</fieldset>
+
 		<?php 
 		} // fin section 
 		if ($section=="2") {
@@ -78,6 +92,12 @@ include "dlekkapo.inc.php";
 		if ($section=="3") {
 		?>
 		
+		<p class="parto">Voici maintenant un peu de vocabulaire.</p>
+		<?php if ($persono) { ?>
+		<p >Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+		<?php } ?>
+	
+		<fieldset class="vortoj">
 			<div class="vortlisto row">
 				<div class="col s12 m4">
 					<p><b>Noms</b></p>
@@ -114,13 +134,14 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">verda</span> : vert</p>
 				</div>
 			</div>
+		</fieldset>
 				
-			<div class="notoj">
-				<p><span class="eo">[1]</span> Rappelez-vous que le <em><span class="eo">j</span></em> est prononcé comme le <em>y</em> dans yoghourt.</p>
-				<p><span class="eo">[2]</span> <em><span class="eo">demandi</span></em> : poser une question.</p>
-				<p><span class="eo">[3]</span> <em><span class="eo">peti</span></em> : demander pour obtenir quelque chose.</p>
-				<p><span class="eo">[4]</span> <em><span class="eo">soifi</span></em> : bien prononcer le <em>o</em> et le <em>i</em> séparément (<span class="eo">so-<u>i</u>-fi</span>).</p>
-			</div>
+		<div class="notoj">
+			<p><span class="eo">[1]</span> Rappelez-vous que le <em><span class="eo">j</span></em> est prononcé comme le <em>y</em> dans yoghourt.</p>
+			<p><span class="eo">[2]</span> <em><span class="eo">demandi</span></em> : poser une question.</p>
+			<p><span class="eo">[3]</span> <em><span class="eo">peti</span></em> : demander pour obtenir quelque chose.</p>
+			<p><span class="eo">[4]</span> <em><span class="eo">soifi</span></em> : bien prononcer le <em>o</em> et le <em>i</em> séparément (<span class="eo">so-<u>i</u>-fi</span>).</p>
+		</div>
 
 		<?php 
 		} // fin section 1
@@ -191,6 +212,20 @@ include "dlekkapo.inc.php";
 			<p class="col s6">Nous le rencontrerons lors de la promenade.</p>
 		</div>
 		
+		<fieldset class="vortoj">
+			<legend>VOCABULAIRE À RETENIR</legend>
+			<div>
+				<?php if ($persono) { ?>
+				<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+				<?php } ?>
+			</div>
+			<div class="vortlisto row">
+				<p class="col s12 m4"><span class="eo">sano</span> : santé</p>
+				<p class="col s12 m4"><span class="eo">sane</span> : sainement</p>
+				<p class="col s12 m4"><span class="eo">sani</span> : être en bonne santé</p>
+			</div>
+		</fieldset>
+
 		<?php 
 		} // fin section 1
 		if ($section=="6") {
@@ -245,49 +280,52 @@ include "dlekkapo.inc.php";
 			</audio>
 		</p>
 		
-		<div class="vortlisto row">
-			<div class="col s6 m3">
-				<p>1 : <span class="eo">unu</span></p>
-				<p>2 : <span class="eo">du</span></p>
-				<p>3 : <span class="eo">tri</span></p>
-				<p>4 : <span class="eo">kvar</span></p>
-				<p>5 : <span class="eo">kvin</span></p>
-				<p>6 : <span class="eo">ses</span></p>
-				<p>7 : <span class="eo">sep</span></p>
-				<p>8 : <span class="eo">ok</span></p>
-				<p>9 : <span class="eo">naŭ</span></p>
-				<p>10 : <span class="eo">dek</span></p>
+		<fieldset class="vortoj">
+			<div class="vortlisto row">
+				<div class="col s6 m3">
+					<p>1 : <span class="eo">unu</span></p>
+					<p>2 : <span class="eo">du</span></p>
+					<p>3 : <span class="eo">tri</span></p>
+					<p>4 : <span class="eo">kvar</span></p>
+					<p>5 : <span class="eo">kvin</span></p>
+					<p>6 : <span class="eo">ses</span></p>
+					<p>7 : <span class="eo">sep</span></p>
+					<p>8 : <span class="eo">ok</span></p>
+					<p>9 : <span class="eo">naŭ</span></p>
+					<p>10 : <span class="eo">dek</span></p>
+				</div>
+				<div class="col s6 m3">
+					<p>11 : <span class="eo">dek unu</span></p>
+					<p>12 : <span class="eo">dek du</span></p>
+					<p>13 : <span class="eo">dek tri</span></p>
+					<p>14 : <span class="eo">dek kvar</span></p>
+					<p></p>
+					<p>20 : <span class="eo">dudek</span></p>
+					<p>21 : <span class="eo">dudek unu</span></p>
+					<p></p>
+					<p>30 : <span class="eo">tridek</span></p>
+				</div>
+				<div class="col s6 m3">
+					<p>31 : <span class="eo">tridek unu</span></p>
+					<p>32 : <span class="eo">tridek du</span></p>
+					<p></p>
+					<p>40 : <span class="eo">kvardek</span></p>
+					<p>50 : <span class="eo">kvindek</span></p>
+					<p>60 : <span class="eo">sesdek</span></p>
+					<p>70 : <span class="eo">sepdek</span></p>
+					<p>80 : <span class="eo">okdek</span></p>
+					<p>90 : <span class="eo">naŭdek</span></p>
+				</div>
+				<div class="col s6 m3">
+					<p>100 : <span class="eo">cent</span></p>
+					<p>200 : <span class="eo">ducent</span></p>
+					<p>300 : <span class="eo">tricent</span></p>
+					<p></p>
+					<p>1000 : <span class="eo">mil</span></p>
+				</div>
 			</div>
-			<div class="col s6 m3">
-				<p>11 : <span class="eo">dek unu</span></p>
-				<p>12 : <span class="eo">dek du</span></p>
-				<p>13 : <span class="eo">dek tri</span></p>
-				<p>14 : <span class="eo">dek kvar</span></p>
-				<p></p>
-				<p>20 : <span class="eo">dudek</span></p>
-				<p>21 : <span class="eo">dudek unu</span></p>
-				<p></p>
-				<p>30 : <span class="eo">tridek</span></p>
-			</div>
-			<div class="col s6 m3">
-				<p>31 : <span class="eo">tridek unu</span></p>
-				<p>32 : <span class="eo">tridek du</span></p>
-				<p></p>
-				<p>40 : <span class="eo">kvardek</span></p>
-				<p>50 : <span class="eo">kvindek</span></p>
-				<p>60 : <span class="eo">sesdek</span></p>
-				<p>70 : <span class="eo">sepdek</span></p>
-				<p>80 : <span class="eo">okdek</span></p>
-				<p>90 : <span class="eo">naŭdek</span></p>
-			</div>
-			<div class="col s6 m3">
-				<p>100 : <span class="eo">cent</span></p>
-				<p>200 : <span class="eo">ducent</span></p>
-				<p>300 : <span class="eo">tricent</span></p>
-				<p></p>
-				<p>1000 : <span class="eo">mil</span></p>
-			</div>
-		</div>
+		</fieldset>
+		
 		<div class="vortlisto row">
 			<div class="col s12">
 				<p>1998 : <span class="eo">mil naŭcent naŭdek ok</span></p>
@@ -308,26 +346,28 @@ include "dlekkapo.inc.php";
 		<em>-n</em>.
 		</p>
 
-		<div class="vortlisto row">
-			<div class="col s12 m4">
-				<p><span class="eo">unua</span> : premier</p>
-				<p><span class="eo">dua</span> : deuxième</p>
-				<p><span class="eo">tria</span> : troisième</p>
-				<p><span class="eo">kvara</span> : quatrième</p>
+		<fieldset class="vortoj">
+			<div class="vortlisto row">
+				<div class="col s12 m4">
+					<p><span class="eo">unua</span> : premier</p>
+					<p><span class="eo">dua</span> : deuxième</p>
+					<p><span class="eo">tria</span> : troisième</p>
+					<p><span class="eo">kvara</span> : quatrième</p>
+				</div>
+				<div class="col s12 m4">
+					<p><span class="eo">dudeka</span> : 20<sup>e</sup></p>
+					<p><span class="eo">sepdek-unua</span> : 71<sup>e</sup></p>
+					<p><span class="eo">centa</span> : 100<sup>e</sup></p>
+					<p><span class="eo">dek-kvara</span> : 14<sup>e</sup></p>
+				</div>
+				<div class="col s12 m4">
+					<p><span class="eo">unue</span> : premièrement</p>
+					<p><span class="eo">due</span> : deuxièmement</p>
+					<p><span class="eo">trie</span> : troisièmement</p>
+					<p><span class="eo">dek-kvare</span> : quatorzièmement</p>
+				</div>
 			</div>
-			<div class="col s12 m4">
-				<p><span class="eo">dudeka</span> : 20<sup>e</sup></p>
-				<p><span class="eo">sepdek-unua</span> : 71<sup>e</sup></p>
-				<p><span class="eo">centa</span> : 100<sup>e</sup></p>
-				<p><span class="eo">dek-kvara</span> : 14<sup>e</sup></p>
-			</div>
-			<div class="col s12 m4">
-				<p><span class="eo">unue</span> : premièrement</p>
-				<p><span class="eo">due</span> : deuxièmement</p>
-				<p><span class="eo">trie</span> : troisièmement</p>
-				<p><span class="eo">dek-kvare</span> : quatorzièmement</p>
-			</div>
-		</div>
+		</fieldset>
 
 		<p>Exemples :</p>
 		<div class="container">

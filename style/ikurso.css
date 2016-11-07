@@ -547,6 +547,9 @@ fieldset.vortoj div.vortlisto {
 fieldset.vortoj div.row {
 	margin-bottom: 0;
 }
+span.marque {
+	color: #9ccc65;
+}
 /********** exercices *******/
 fieldset.ekzerco,
 fieldset.sono {

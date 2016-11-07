@@ -7,7 +7,6 @@ include "dlekkapo.inc.php";
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
 				
-		?>
 		<section id="leciono-enhavo">
 		<?php 
 		getTitoloLecionero('CG',$leciono,$section);
@@ -308,75 +307,79 @@ include "dlekkapo.inc.php";
 		if ($section=="7") {
 		?>
 			<p>
-			Voici une liste de mots (avec traduction et accent tonique indiqué) qui 
-			représentent les différents sons de l’espéranto. étudiez-les et prononcez-les
-			soigneusement. Votre prononciation s’améliorera petit à petit.
+			Voici une liste de mots qui représentent les différents sons de l’espéranto. 
+			Lisez-les à voix haute en respectant faisant attention à l’accent tonique (indiqué par un soulignement). Votre prononciation s’améliorera petit à petit.
 			</p>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Les précédés de <span class="marque">•</span> seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
 			
-			<div class="vortlisto row">
-				<div class="col s12 m4">
-					<p><span class="eo">a<u>ĉe</u>ti</span> : acheter</p>
-					<p><span class="eo">al (1)</span> : vers, à</p>
-					<p><span class="eo">An<u>glu</u>jo</span> : Angleterre</p>
-					<p><span class="eo">a<u>non</u>co</span> : annonce</p>
-					<p><span class="eo"><u>an</u>taŭ</span> : avant</p>
-					<p><span class="eo">bi<u>ci</u>klo</span> : bicyclette</p>
-					<p><span class="eo">bild<u>kar</u>to</span> : carte postale</p>
-					<p><span class="eo"><u>bil</u>do</span> : image</p>
-					<p><span class="eo"><u>ĉam</u>bro</span> : pièce</p>
-					<p><span class="eo">Ĉi<u>ni</u>o</span> : Chine</p>
-					<p><span class="eo">ĉoko<u>la</u>do</span> : chocolat</p>
-					<p><span class="eo"><u>dan</u>co</span> : danse</p>
-					<p><span class="eo">de (2)</span> : de</p>
-					<p><span class="eo">de<u>zi</u>ri</span> : désirer</p>
-					<p><span class="eo"><u>do</u>mo</span> : maison</p>
-					<p><span class="eo"><u>ed</u>zo</span> : époux</p>
-					<p><span class="eo">ed<u>zi</u>no</span> : épouse</p>
-					<p><span class="eo">el (3)</span> : hors de</p>
-					<p><span class="eo">esperan<u>tis</u>to</span> : espérantiste</p>
+			<fieldset class="vortoj">
+				<div class="vortlisto row">
+					<div class="col s12 m4">
+						<p><span class="marque">•</span> <span class="eo">a<u>ĉe</u>ti</span> : acheter</p>
+						<p><span class="marque">•</span> </span><span class="eo">al (1)</span> : vers, à</p>
+						<p><span class="marque">•</span> <span class="eo">An<u>glu</u>jo</span> : Angleterre</p>
+						<p>&nbsp;&nbsp;<span class="eo">a<u>non</u>co</span> : annonce</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>an</u>taŭ</span> : avant</p>
+						<p><span class="marque">•</span> <span class="eo">bi<u>ci</u>klo</span> : bicyclette</p>
+						<p><span class="marque">•</span> <span class="eo">bild<u>kar</u>to</span> : carte postale</p>
+						<p><span class="marque">•</span> <span class="eo"><u>bil</u>do</span> : image</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ĉam</u>bro</span> : pièce</p>
+						<p><span class="marque">•</span> <span class="eo">Ĉi<u>ni</u>o</span> : Chine</p>
+						<p><span class="marque">•</span> <span class="eo">ĉoko<u>la</u>do</span> : chocolat</p>
+						<p><span class="marque">•</span> <span class="eo"><u>dan</u>co</span> : danse</p>
+						<p><span class="marque">•</span> <span class="eo">de (2)</span> : de</p>
+						<p><span class="marque">•</span> <span class="eo">de<u>zi</u>ri</span> : désirer</p>
+						<p><span class="marque">•</span> <span class="eo"><u>do</u>mo</span> : maison</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ed</u>zo</span> : époux</p>
+						<p><span class="marque">•</span> <span class="eo">ed<u>zi</u>no</span> : épouse</p>
+						<p><span class="marque">•</span> <span class="eo">el (3)</span> : hors de</p>
+						<p><span class="marque">•</span> <span class="eo">esperan<u>tis</u>to</span> : espérantiste</p>
+					</div>
+					<div class="col s12 m4">
+						<p>&nbsp;&nbsp;<span class="eo"><u>e</u>ĥo</span> : écho</p>
+						<p><span class="marque">•</span> <span class="eo">en</span> : dans</p>
+						<p><span class="marque">•</span> <span class="eo">Eŭ<u>ro</u>po</span> : Europe</p>
+						<p>&nbsp;&nbsp;<span class="eo">Eŭ<u>kli</u>do</span> : Euclide</p>
+						<p>&nbsp;&nbsp;<span class="eo">geogra<u>fi</u>o</span> : géographie</p>
+						<p><span class="marque">•</span> <span class="eo">gus<u>tu</u>mi</span> : goûter</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ĝo</u>jo</span> : joie</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>ĥo</u>ro</span> : chœur</p>
+						<p><span class="marque">•</span> <span class="eo">in<u>fa</u>no</span> : enfant</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>jaĥ</u>to</span> : yacht</p>
+						<p><span class="marque">•</span> <span class="eo">jam</span> : déjà</p>
+						<p><span class="marque">•</span> <span class="eo">ĵa<u>lu</u>za</span> : jaloux</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ĵaŭ</u>do</span> : jeudi</p>
+						<p><span class="marque">•</span> <span class="eo">ĵur<u>na</u>lo</span> : journal</p>
+						<p><span class="marque">•</span> <span class="eo">kaj (4)</span> : et</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ki</u>o</span> : quoi</p>
+						<p><span class="marque">•</span> <span class="eo">ko<u>lek</u>ti</span> : collectionner, rassembler</p>
+						<p><span class="marque">•</span> <span class="eo"><u>lan</u>do</span> : pays</p>
+					</div>
+					<div class="col s12 m4">
+						<p><span class="marque">•</span> <span class="eo">leci<u>o</u>no</span> : leçon</p>
+						<p><span class="marque">•</span> <span class="eo">ler<u>ne</u>jo</span> : école</p>
+						<p><span class="marque">•</span> <span class="eo"><u>li</u>bro</span> : livre</p>
+						<p><span class="marque">•</span> <span class="eo"><u>lo</u>ĝi</span> : habiter</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>ma</u>jo</span> : mai</p>
+						<p><span class="marque">•</span> <span class="eo"><u>man</u>ĝi</span> : manger</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>mej</u>lo</span> : mille (1,8 km)</p>
+						<p>&nbsp;&nbsp;<span class="eo">mo<u>nu</u>jo</span> : porte-monnaie</p>
+						<p><span class="marque">•</span> <span class="eo">neŭ<u>tra</u>la</span> : neutre</p>
+						<p><span class="marque">•</span> <span class="eo"><u>o</u>vo</span> : œuf</p>
+						<p><span class="marque">•</span> <span class="eo">plej</span> : plus (superlatif)</p>
+						<p><span class="marque">•</span> <span class="eo">poŝt<u>mar</u>ko</span> : timbre-poste</p>
+						<p>&nbsp;&nbsp;<span class="eo">sa<u>ge</u>to</span> : fléchette</p>
+						<p><span class="marque">•</span> <span class="eo">sand<u>vi</u>ĉo</span> : sandwich</p>
+						<p><span class="marque">•</span> <span class="eo"><u>spor</u>to</span> : sport</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ŝu</u>o</span> : chaussure</p>
+						<p>&nbsp;&nbsp;<span class="eo">tea<u>tra</u>ĵo</span> : pièce de théâtre</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ve</u>ni</span> : venir</p>
+						<p><span class="marque">•</span> <span class="eo">vo<u>ja</u>ĝi</span> : voyager</p>
+					</div>
 				</div>
-				<div class="col s12 m4">
-					<p><span class="eo"><u>e</u>ĥo</span> : écho</p>
-					<p><span class="eo">en</span> : dans</p>
-					<p><span class="eo">Eŭ<u>ro</u>po</span> : Europe</p>
-					<p><span class="eo">Eŭ<u>kli</u>do</span> : Euclide</p>
-					<p><span class="eo">geogra<u>fi</u>o</span> : géographie</p>
-					<p><span class="eo">gus<u>tu</u>mi</span> : goûter</p>
-					<p><span class="eo"><u>ĝo</u>jo</span> : joie</p>
-					<p><span class="eo"><u>ĥo</u>ro</span> : chœur</p>
-					<p><span class="eo">in<u>fa</u>no</span> : enfant</p>
-					<p><span class="eo"><u>jaĥ</u>to</span> : yacht</p>
-					<p><span class="eo">jam</span> : déjà</p>
-					<p><span class="eo">ĵa<u>lu</u>za</span> : jaloux</p>
-					<p><span class="eo"><u>ĵaŭ</u>do</span> : jeudi</p>
-					<p><span class="eo">ĵur<u>na</u>lo</span> : journal</p>
-					<p><span class="eo">kaj (4)</span> : et</p>
-					<p><span class="eo"><u>ki</u>o</span> : quoi</p>
-					<p><span class="eo">ko<u>lek</u>ti</span> : rassembler</p>
-					<p><span class="eo"><u>lan</u>do</span> : pays</p>
-					<p><span class="eo">vo<u>ja</u>ĝi</span> : voyager</p>
-				</div>
-				<div class="col s12 m4">
-					<p><span class="eo">leci<u>o</u>no</span> : leçon</p>
-					<p><span class="eo">ler<u>ne</u>jo</span> : école</p>
-					<p><span class="eo"><u>li</u>bro</span> : livre</p>
-					<p><span class="eo"><u>lo</u>ĝi</span> : habiter</p>
-					<p><span class="eo"><u>ma</u>jo</span> : mai</p>
-					<p><span class="eo"><u>man</u>ĝi</span> : manger</p>
-					<p><span class="eo"><u>mej</u>lo</span> : mille (1,8 km)</p>
-					<p><span class="eo">mo<u>nu</u>jo</span> : porte-monnaie</p>
-					<p><span class="eo">neŭ<u>tra</u>la</span> : neutre</p>
-					<p><span class="eo"><u>o</u>vo</span> : œuf</p>
-					<p><span class="eo">plej</span> : plus (superlatif)</p>
-					<p><span class="eo">poŝt<u>mar</u>ko</span> : timbre-poste</p>
-					<p><span class="eo">sa<u>ge</u>to</span> : fléchette</p>
-					<p><span class="eo">sand<u>vi</u>ĉo</span> : sandwich</p>
-					<p><span class="eo"><u>spor</u>to</span> : sport</p>
-					<p><span class="eo"><u>ŝu</u>o</span> : chaussure</p>
-					<p><span class="eo">tea<u>tra</u>ĵo</span> : pièce de théâtre</p>
-					<p><span class="eo"><u>ve</u>ni</span> : venir</p>
-				</div>
-			</div>
+			</fieldset>
 
 			<p class="rimarko"><strong>REMARQUE</strong> : 
 			Retenez bien ces quatre petits mots très fréquent&nbsp;:</p>
@@ -386,6 +389,7 @@ include "dlekkapo.inc.php";
 				<li><b>el</b> indique le mouvement hors d’un lieu (<span class="eo">li kuras el la lernejo</span> = il court hors de l’école, il sort en courant de l’école), l’origine (<span class="eo">teatraĵo el via lando</span>) ou la matière (<span class="eo">ovo el ĉokolado</span> = un œuf en chocolat). </li>
 				<li><b>kaj</b> = et </li>
 			</ol>
+			
 
 		<?php 
 		} // fin section
@@ -442,7 +446,7 @@ include "dlekkapo.inc.php";
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					9 => "Est-ce que ton père collectionne les timbres de mon pays ? (collectionner = KOLEKTI)",
+					9 => "Est-ce que ton père collectionne les timbres de mon pays ?",
 					10 => "Est-ce que son fils a oublié le thé et le lait ?",
 					11 => "A-t-il oublié de porter du pain à la sœur de Petro ?",
 					12 => "Est-ce que les enfants vont danser dans l’école ?",

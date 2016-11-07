@@ -729,9 +729,11 @@ include "adminkapo.inc.php";
 										<img src="bildoj/filesaveas.png"  align="middle"></a></td>
 									<td>
 									<?php
-										$plejTaugaKorektanto = troviPlejTauganKorektanton($celpersono["id"],$celpersono["kurso"]);
-										$korektanto = apartigiPersonon($plejTaugaKorektanto);
-										echo "Correcteur idéal : ".$korektanto["enirnomo"]."<br/>";
+										if ($celpersono["kurso"]!="") {
+											$plejTaugaKorektanto = troviPlejTauganKorektanton($celpersono["id"],$celpersono["kurso"]);
+											$korektanto = apartigiPersonon($plejTaugaKorektanto);
+											echo "Correcteur idéal : ".$korektanto["enirnomo"]."<br/>";
+										}
 									?>
 
 									<?php listi_Korektantoj_laux_kurso($celpersono["id"],$celpersono["kurso"]); ?></td>

@@ -18,7 +18,7 @@ include "gerdakapo.inc.php";
 			<h3>Mi parolas plej serioze</h3>
 			<div class="row dialogo">
 				<div class="col s12 m8">
-					<p><b>Eble ni forkuris tro rapide. Ĉu vere fantomoj ekzistas?"</b>
+					<p><b>Petro</b>: Eble ni forkuris tro rapide. Ĉu vere fantomoj ekzistas?"
 					<p><b>Ralf</b>:	Ĉu vi volas raporti pri la voĉo al viaj gepatroj? Se jes, vi
 					ne plu estas mia amiko. Se ili scios, ke ni ludis en la malpermesita
 					domaĉo, vi…</p>

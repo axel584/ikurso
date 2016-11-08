@@ -33,12 +33,12 @@ if (count($elementNaskigxdato)==3) {
 		<form name="inscription" action="sxangxipersoninformojn2.php" method="POST">
 			<div class="row">
 				<div class="input-field col s6 l4">
-					<input id="personnomo" name="personnomo" value="<?php echo $persono['personnomo'];?>" type="text" class="validate" required="" aria-required="true">
+					<input id="personnomo" name="personnomo" value="<?php echo $persono['personnomo'];?>" type="text">
 					<label for="personnomo">Prénom</label>
 				</div>
 
 				<div class="input-field col s6 l4">
-					<input id="familinomo" name="familinomo" value="<?php echo $persono['familinomo'];?>" type="text" class="validate" required="" aria-required="true">
+					<input id="familinomo" name="familinomo" value="<?php echo $persono['familinomo'];?>" type="text">
 					<label for="familinomo">Nom</label>
 				</div>
 			</div>

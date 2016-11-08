@@ -69,6 +69,16 @@ include "dlekkapo.inc.php";
 			<p class="col s6">– <b>Kiam</b> ŝi trinkas ĉokoladon?</p><p class="col s6">– <b>Matene.</b></p>
 		</div>
 		
+		<fieldset class="vortoj">
+			<legend>À RETENIR</legend>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ce mot sera automatiquement ajouté à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			<div class="vortlisto row">
+				<p class="col s12"><span class="eo">matene</span> : le matin, au matin</p>
+			</div>
+		</fieldset>
+
 		<?php 
 		} // fin section 2
 		if ($section=="3") {
@@ -103,6 +113,16 @@ include "dlekkapo.inc.php";
 			<p class="col s3">(héroique)</p>
 		</div>
 
+		<fieldset class="vortoj">
+			<legend>MOTS À RETENIR</legend>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			<div class="vortlisto row">
+				<p class="col s12 m6"><span class="eo">scienco</span> : science</p>
+				<p class="col s12 m6"><span class="eo">helpi</span> : aider</p>
+			</div>
+		</fieldset>
 		<?php 
 		} // fin section 3
 		if ($section=="4") {
@@ -189,20 +209,26 @@ include "dlekkapo.inc.php";
 			  tagmanĝo ni manĝis sandviĉojn, kiuj estis sub la seĝoj, sur kiuj
 			  ni sidis dum la vojaĝo.
 			</p>
-		<h3>Vocabulaire</h3>
-		<div class="vortlisto row">
-			<p class="col s12 m5"><span class="eo">junularo</span> : jeunesse</p>		
-			<p class="col s12 m7"><span class="eo">partopreni en</span> : participer à</p>
-			<p class="col s12 m5"><span class="eo">okazi</span> : avoir lieu</p>
-			<p class="col s12 m7"><span class="eo">Kebeko</span> : Québec (la ville)</p>
-			<p class="col s12 m5"><span class="eo">(aŭto)buseto</span> : minibus</p>
-			<p class="col s12 m7"><span class="eo">halti</span> : s’arrêter</p>
-			<p class="col s12 m5"><span class="eo">alveni al</span> : arriver à (ou dans)</p>
-			<p class="col s12 m7"><span class="eo">ankaŭ</span> : aussi</p>
-			<p class="col s12 m5"><span class="eo">viziti</span> : visiter</p>
-			<p class="col s12 m7"><span class="eo">tagmanĝo</span> : repas du midi (France : déjeuner, Canada : dîner)</p>
-			<p class="col s12 m6"><span class="eo">seĝo</span> : siège</p>
-		</div>
+
+		<fieldset class="vortoj">
+			<legend>MOTS À RETENIR</legend>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			<div class="vortlisto row">
+				<p class="col s12 m6"><span class="eo">junularo</span> : jeunesse</p>		
+				<p class="col s12 m6"><span class="eo">partopreni en</span> : participer à</p>
+				<p class="col s12 m6"><span class="eo">okazi</span> : avoir lieu</p>
+				<p class="col s12 m6"><span class="eo">Kebeko</span> : Québec (la ville)</p>
+				<p class="col s12 m6"><span class="eo">(aŭto)buseto</span> : minibus</p>
+				<p class="col s12 m6"><span class="eo">halti</span> : s’arrêter</p>
+				<p class="col s12 m6"><span class="eo">alveni al</span> : arriver à (ou dans)</p>
+				<p class="col s12 m6"><span class="eo">ankaŭ</span> : aussi</p>
+				<p class="col s12 m6"><span class="eo">viziti</span> : visiter</p>
+				<p class="col s12 m6"><span class="eo">seĝo</span> : siège</p>
+				<p class="col s12"><span class="eo">tagmanĝo</span> : repas du midi (France : déjeuner, Canada : dîner)</p>
+			</div>
+		</fieldset>
 
 		<p>
 		Si vous rencontrez un terme inconnu qui n’est pas expliqué dans les
@@ -241,7 +267,7 @@ include "dlekkapo.inc.php";
 		<p><b>Vizito en zoologia ĝardeno</b></p>
 		<p>
 		  Kun miaj fratoj mi veturis per aŭto al la zoo (<i>zoologia ĝardeno</i>). ĝi estas
-		  ekster la urbo Granby (Kebekio). Ni admiris tie multajn bestojn el
+		  ekster la urbo Granby (Kebekio*). Ni admiris tie multajn bestojn el
 		  ĉiuj kontinentoj. Al mia frato tre plaĉis la ursoj apud la enirejo.
 		  Inter la kaĝoj de la brunaj kaj blankaj ursoj estas la kaĝo de la
 		  nigra urso el okcidenta Kanado. La blanka urso el la Arkto estis ofte
@@ -249,28 +275,33 @@ include "dlekkapo.inc.php";
 		  bestoj zoo ne povas esti kompleta.
 		</p>
 
-		<p>Vocabulaire :</p>
-
-		<div class="vortlisto row">
-			<p class="col s12 m6"><span class="eo">veturi</span> : aller [1]</p>
-			<p class="col s12 m6"><span class="eo">urbo</span> : ville</p>
-			<p class="col s12 m6"><span class="eo">Kebekio</span> : état du Québec</p>
-			<p class="col s12 m6"><span class="eo">admiri</span> : admirer</p>
-			<p class="col s12 m6"><span class="eo">besto</span> : bête, animal</p>
-			<p class="col s12 m6"><span class="eo">multaj</span> : beaucoup de, de nombreux</p>
-			<p class="col s12 m6"><span class="eo">kontinento</span> : continent</p>
-			<p class="col s12 m6"><span class="eo">plaĉi al</span> : plaire à</p>
-			<p class="col s12 m6"><span class="eo">urso</span> : ours</p>
-			<p class="col s12 m6"><span class="eo">enirejo</span> : entrée</p>
-			<p class="col s12 m6"><span class="eo">kaĝo</span> : cage</p>
-			<p class="col s12 m6"><span class="eo">Arkto</span> : Arctique</p>
-			<p class="col s12 m6"><span class="eo">ofte</span> : souvent</p>
-			<p class="col s12 m6"><span class="eo">simio</span> : singe</p>
-			<p class="col s12 m6"><span class="eo">interesa</span> : intéressant</p>
-			<p class="col s12 m6"><span class="eo">kompleta</span> : complet</p>
-		</div>
+		<p>* <span class="eo">Kebekio</span> : état du Québec</p>
 		
-		<p>Note : [1] par un moyen de locomotion quelconque</p>
+		<fieldset class="vortoj">
+			<legend>MOTS À RETENIR</legend>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			<div class="vortlisto row">
+				<p class="col s12 m6"><span class="eo">veturi</span> : aller<sup>[1]</sup></p>
+				<p class="col s12 m6"><span class="eo">urbo</span> : ville</p>
+				
+				<p class="col s12 m6"><span class="eo">admiri</span> : admirer</p>
+				<p class="col s12 m6"><span class="eo">besto</span> : bête, animal</p>
+				<p class="col s12 m6"><span class="eo">multaj</span> : beaucoup de, de nombreux</p>
+				<p class="col s12 m6"><span class="eo">kontinento</span> : continent</p>
+				<p class="col s12 m6"><span class="eo">plaĉi al</span> : plaire à</p>
+				<p class="col s12 m6"><span class="eo">urso</span> : ours</p>
+				<p class="col s12 m6"><span class="eo">enirejo</span> : entrée</p>
+				<p class="col s12 m6"><span class="eo">kaĝo</span> : cage</p>
+				<p class="col s12 m6"><span class="eo">Arkto</span> : Arctique</p>
+				<p class="col s12 m6"><span class="eo">ofte</span> : souvent</p>
+				<p class="col s12 m6"><span class="eo">simio</span> : singe</p>
+				<p class="col s12 m6"><span class="eo">interesa</span> : intéressant</p>
+				<p class="col s12 m6"><span class="eo">kompleta</span> : complet</p>
+			</div>
+			<p><small>[1]</small> par un moyen de locomotion quelconque</p>
+		</fieldset>
 		
 		<?php 
 		} // fin section 9
@@ -299,6 +330,18 @@ include "dlekkapo.inc.php";
 			?>
 			</div>
 		</fieldset>
+		
+				<fieldset class="vortoj">
+			<legend>MOTS À RETENIR</legend>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			<div class="vortlisto row">
+				<p class="col s12 m6"><span class="eo">membro</span> : membre, adhérent</p>
+				<p class="col s12 m6"><span class="eo">klubo</span> : club</p>
+			</div>
+		</fieldset>
+
 		<?php 
 		} // fin section 10
 		if ($section=="11") {

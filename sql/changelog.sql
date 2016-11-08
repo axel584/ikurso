@@ -517,8 +517,9 @@ DROP TABLE `phpbb_auth_access`, `phpbb_banlist`, `phpbb_categories`, `phpbb_chat
 DROP TABLE `phpmv_archives`, `phpmv_a_category`, `phpmv_a_config`, `phpmv_a_file`, `phpmv_a_keyword`, `phpmv_a_newsletter`, `phpmv_a_page`, `phpmv_a_partner_name`, `phpmv_a_partner_url`, `phpmv_a_provider`, `phpmv_a_resolution`, `phpmv_a_search_engine`, `phpmv_a_site`, `phpmv_a_vars_name`, `phpmv_a_vars_value`, `phpmv_category`, `phpmv_groups`, `phpmv_ip_ignore`, `phpmv_link_vp`, `phpmv_link_vpv`, `phpmv_newsletter`, `phpmv_page`, `phpmv_page_md5url`, `phpmv_page_url`, `phpmv_query_log`, `phpmv_site`, `phpmv_site_partner`, `phpmv_site_partner_url`, `phpmv_site_url`, `phpmv_users`, `phpmv_users_link_groups`, `phpmv_vars`, `phpmv_version`, `phpmv_visit`;
 
 -- correction vocabulaire
-UPDATE `vortoj` SET `fr` = 'nouveau, nouvelle' WHERE `vortoj`.`id` = 2906;
-DELETE FROM `vortoj` WHERE `vortoj`.`id` = 2932;
+DELETE FROM `vortoj` WHERE `vortoj`.`id` = 30;
+DELETE FROM `personoj_vortoj` WHERE `personoj_vortoj`.`vorto_id` = 30;
+UPDATE `vortoj` SET `eo` = 'biciklo' WHERE `vortoj`.`fr` LIKE 'bicyclette'
 
 UPDATE `lecioneroj` SET `titolo` = 'Mes premières phrases' WHERE `lecioneroj`.`id` = 219;
 

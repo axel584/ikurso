@@ -519,7 +519,9 @@ DROP TABLE `phpmv_archives`, `phpmv_a_category`, `phpmv_a_config`, `phpmv_a_file
 -- correction vocabulaire
 DELETE FROM `vortoj` WHERE `vortoj`.`id` = 30;
 DELETE FROM `personoj_vortoj` WHERE `personoj_vortoj`.`vorto_id` = 30;
-UPDATE `vortoj` SET `eo` = 'biciklo' WHERE `vortoj`.`fr` LIKE 'bicyclette'
 
 UPDATE `lecioneroj` SET `titolo` = 'Mes premières phrases' WHERE `lecioneroj`.`id` = 219;
+
+-- correction vocabulaire
+UPDATE `vortoj` SET `fr` = 'collectionner, rassembler' WHERE `vortoj`.`eo` LIKE 'kolekti';
 

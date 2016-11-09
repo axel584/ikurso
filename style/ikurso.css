@@ -173,7 +173,7 @@ div.col > p:first-child {
 /* amélioration de l'affichage s12 */
 
 @media only screen and (max-width: 600px) {
-	.row p.col.s12 + p.col.s12 {
+	.row + p.col.s12 {
 		margin-top: 2em;
 	}
 }

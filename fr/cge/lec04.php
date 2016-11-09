@@ -311,7 +311,7 @@ include "dlekkapo.inc.php";
 			Lisez-les à voix haute en respectant faisant attention à l’accent tonique (indiqué par un soulignement). Votre prononciation s’améliorera petit à petit.
 			</p>
 			<?php if ($persono) { ?>
-			<p class="eo eta">Les mots précédés de <span class="marque">•</span> seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<p class="eo eta"><b>NOTE </b>: Les mots précédés de <span class="marque">•</span> seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			
 			<fieldset class="vortoj">

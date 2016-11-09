@@ -331,7 +331,7 @@ include "dlekkapo.inc.php";
 			</div>
 		</fieldset>
 		
-				<fieldset class="vortoj">
+		<fieldset class="vortoj">
 			<legend>MOTS À RETENIR</legend>
 			<?php if ($persono) { ?>
 			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
@@ -348,7 +348,7 @@ include "dlekkapo.inc.php";
 		?>
 		
 		<p class="parto">On emploie tout simplement le verbe <span class="eo">esti</span> et, en général, on met le sujet
-		après le verbe&nbsp:</p>
+		après le verbe&nbsp;</p>
 		
 		<div class="row">
 			<p class="col s6"><span class="eo">Estas pano en la butiko.</span></p><p class="col s6">Il y a du pain dans la boutique.</p>

@@ -122,6 +122,17 @@ form p.col {
     background-color: #2196F3;
 }
 
+/*----- surcharge modal konektigxi -----*/
+	
+#konektigxi .modal-content {
+    padding: 1rem;
+}
+#konektigxi .modal-footer {
+    padding: 1rem;
+}
+#footer-konektigxi1 .btn-flat {
+    padding: 0 1rem;
+}
 /*--------------------------------*/
 
 p {font-weight: 300;}

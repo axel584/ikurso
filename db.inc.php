@@ -515,7 +515,9 @@ function troviPlejTauganKorektantonLauxKriterioj($lando,$departemento,$kurso) {
             $procentajxo[$sxlosilo] = $occupation;
         }
     }
-    
+    if (!isset($procentajxo)) {
+        return null;
+    }
     asort($procentajxo);
     return $procentajxo;
 
@@ -540,9 +542,9 @@ function troviPlejTauganKorektanton($persono_id,$kurso) {
         $procentajxoj = troviPlejTauganKorektantonLauxKriterioj("FR",substr($persono["posxtkodo"],0,2),$kurso);
 
     }
-    if (empty($procentajxoj)) {
+    if (!isset($procentajxo) || empty($procentajxoj)) {
         // autre cas, on n'a rien trouvé ou bien l'élève n'a pas renseigné son département
-        $procentajxoj = troviPlejTauganKorektantonLauxKriterioj("FR",substr($persono["posxtkodo"],0,2),$kurso);    
+        $procentajxoj = troviPlejTauganKorektantonLauxKriterioj("","",$kurso);    
     }
     // on a notre variable $procentajxoj qui contient les correcteurs dans l'ordre ideal :
     return key($procentajxoj);

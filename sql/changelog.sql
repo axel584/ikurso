@@ -528,3 +528,8 @@ UPDATE `vortoj` SET `fr` = 'beau-fils, gendre' WHERE `vortoj`.`eo` LIKE 'bofilo'
 UPDATE `vortoj` SET `eo` = 'gesinoroj' WHERE `vortoj`.`eo` LIKE 'gesinorooj';
 
 UPDATE `personoj_vortoj` WHERE `personoj_vortoj`.`vorto_id` = 30;
+
+-- ajout d'une colonne pour simplifier la recherche de la dernière section vue
+UPDATE nuna_kurso SET lastdato = '1999-05-11' WHERE CAST(lastdato AS CHAR(20)) = '0000-00-00';
+ALTER TABLE nuna_kurso CHANGE `ekdato` `ekdato` DATE NULL,CHANGE `lastdato` `lastdato` DATE NULL;
+UPDATE nuna_kurso SET lastdato = NULL WHERE CAST(lastdato AS CHAR(20)) = '1999-05-11';

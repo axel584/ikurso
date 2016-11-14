@@ -23,7 +23,10 @@ else {
 			$respondo["mesagxo"] = "ok";
 			// on memorise l'id en session :
 			$_SESSION["persono_id"]=$row["id"];
-			// TODO : trouver l'url où l'on doit atterir
+			// on loggue tout ça :
+			protokolo($row["id"],"ENIRO","$identigilo eniris");
+			updateLastEniro($row["id"]);
+			// trouver l'url où l'on doit atterir
 			$respondo["url"]=getRedirectionParDroits($row["id"]);
 		}
 	}

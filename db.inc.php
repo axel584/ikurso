@@ -315,6 +315,27 @@ function getCoursElLernanto($lernanto_id) {
 	}
 }
 
+function redirigeSectionParUtilisateur($persono) {
+    global $bdd;
+    $demando = "SELECT ordo,retpagxo,lecioneroj.lasta,kurso,numero,lecionoj.lasta as lasta_leciono FROM `personoj_lecioneroj`  join lecioneroj on lecioneroj.id=personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE persono_id=7874 order by dato desc limit 0,1";
+    $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+    $row = $result->fetch();
+    if ($row==null) {
+        return null; // aucune section n'a encore été faite
+    }
+    if ($row["lasta"]=="0") { // on est au milieu d'une leçon, on affiche la section suivante
+        return getPrefixeCours($row["kurso"]).$row["retpagxo"]."?section=".(1+$row["ordo"]);
+    } else if ($row["lasta_leciono"]=="1") { // dernière leçon, c'est trop chiant à trouver, on renvoit null
+        return null;
+    } else {
+        // on va rechercher la section suivante qui est la première de la leçon suivante
+        $demando = "select retpagxo from lecionoj where numero=".(1+$row["numero"])." and kurso='".$row["kurso"]."'";
+        $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+        $row2 = $result->fetch();
+        return getPrefixeCours($row["kurso"]).$row2["retpagxo"]; // c'est la dernière section d'une leçon, du coup, on affiche la leçon suivante
+    }
+}
+
 // cette fonction prends un utilisateur et fait des redirection en fonction du statut de la personne
 function redirigeParDroits($persono) {
     global $bdd;
@@ -325,7 +346,12 @@ function redirigeParDroits($persono) {
         header("Location:miajlernantoj.php");
     }
     if ($persono['rajtoj']=='P') {
-        header("location:fr/cge/intro.php"); // pour les nouveaux élèves retourne sur la première page du cours ?
+        $redirection = redirigeSectionParUtilisateur($persono["id"]);
+        if ($redirection==null) {
+            header("location:fr/cge/intro.php"); // pour les nouveaux élèves retourne sur la première page du cours ?
+        } else {
+            header("location:".$redirection);
+        }
     }
     if ($persono['rajtoj']=='S') { // nouveaux élèves ou élève qui suivent déjà un cours
         $demando = "select stato,nunleciono,kurso,nunleciono from nuna_kurso where studanto=".$persono['id']." order by CASE stato WHEN 'N' THEN 1 WHEN 'K' THEN 2 WHEN 'H' THEN 3 WHEN 'F' THEN 4 ELSE 5 END";
@@ -350,7 +376,12 @@ function redirigeParDroits($persono) {
             header("location:".$prefixe_url.$row2['retpagxo']);
         }
         if ($row["stato"]=="K") { // cas des élèves en cours
-            header("location:".$prefixe_url.getUrlVenontaLeciono($row["kurso"],$row["nunleciono"]));
+            $redirection=redirigeSectionParUtilisateur($persono["id"]);
+            if ($redirection==null) { // soit on n'a aucune section de cochée, soit on est sur la dernière section d'une leçon
+                header("location:".$prefixe_url.getUrlVenontaLeciono($row["kurso"],$row["nunleciono"]));
+            } else {
+                header("location:".$redirection);
+            }
         }
     }
 }
@@ -366,7 +397,12 @@ function getRedirectionParDroits($persono_id) {
         return "miajlernantoj.php";
     }
     if ($persono['rajtoj']=='P') {
-        return "personinformoj.php"; // pour les nouveaux élèves va sur leur espace personnel (car les nouveaux élèves peuvent vouloir aller sur gerda)
+        $redirection = redirigeSectionParUtilisateur($persono["id"]);
+        if ($redirection==null) {
+            return "personinformoj.php"; // pour les nouveaux élèves va sur leur espace personnel (car les nouveaux élèves peuvent vouloir aller sur gerda)
+        } else {
+            return $redirection;
+        }
     }
     if ($persono['rajtoj']=='S') { // nouveaux élèves ou élève qui suivent déjà un cours
         $demando = "select stato,nunleciono,kurso,nunleciono from nuna_kurso where studanto=".$persono['id']." order by CASE stato WHEN 'N' THEN 1 WHEN 'K' THEN 2 WHEN 'H' THEN 3 WHEN 'F' THEN 4 ELSE 5 END";
@@ -391,7 +427,12 @@ function getRedirectionParDroits($persono_id) {
             return $prefixe_url.$row2['retpagxo'];
         }
         if ($row["stato"]=="K") { // cas des élèves en cours
-            return $prefixe_url.getUrlVenontaLeciono($row["kurso"],$row["nunleciono"]);
+            $redirection=redirigeSectionParUtilisateur($persono["id"]);
+            if ($redirection==null) { // soit on n'a aucune section de cochée, soit on est sur la dernière section d'une leçon
+                return $prefixe_url.getUrlVenontaLeciono($row["kurso"],$row["nunleciono"]);
+            } else {
+                return $redirection;
+            }
         }
         if ($row["stato"]=="F") { // cas des élèves qui ont fini : on les envoit vers leurs diplome et la page pour choisir un autre cours
             return "personinformoj.php";

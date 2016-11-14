@@ -87,10 +87,19 @@ $fonto.="</body></html>";
 $query = "insert into eraraj_lecionoj (persono_id,enirnomo,dato,subjekto,fonto,leciono,kurso) values ('".$persono_id."','".$persono["enirnomo"]."',now(),'".$sujetMail."','".addslashes($fonto)."','".$leciono."','".$kurso."')";
 $bdd->exec($query);
 
+
+// indiquer que la dernière section a été faite
+$query ="select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
+$result = $bdd->query($query);
+$combien = $result->fetch()["combien"];
+// on enregistre si il n'y avait rien en base
+if ($combien==0) {
+	$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id) values (now(),:persono_id,:lecionero_id)');
+	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id));
+}
+
 // Renvoyer la page qui permet d'évaluer la leçon
 // on trouve la leçon suivante et on récupère son url :
-
-
 $respondo["url"] = $prefixeKurso."konfirmo.php?kazo=2&lec=".$leciono;
 $respondo["mesagxo"] = "ok";
 echo json_encode($respondo);

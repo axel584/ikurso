@@ -118,7 +118,7 @@ include "dlekkapo.inc.php";
 		if ($section=="4") {
 		?>
 		
-			<p>Les syllabes accentuées sont soulignées et, comme d’habitude, le petit bouton à gauche vous indique la présence d’échantillons sonores
+			<p class="parto">Les syllabes accentuées sont soulignées et, comme d’habitude, le petit bouton à gauche vous indique la présence d’échantillons sonores
 			associés.
 			</p>
 			<div class="row">
@@ -306,8 +306,7 @@ include "dlekkapo.inc.php";
 		} // fin section
 		if ($section=="7") {
 		?>
-			<p>
-			Voici une liste de mots qui représentent les différents sons de l’espéranto. 
+			<p class="parto">Voici une liste de mots qui représentent les différents sons de l’espéranto. 
 			Lisez-les à voix haute en respectant faisant attention à l’accent tonique (indiqué par un soulignement). Votre prononciation s’améliorera petit à petit.
 			</p>
 			<?php if ($persono) { ?>
@@ -395,6 +394,92 @@ include "dlekkapo.inc.php";
 		} // fin section
 		if ($section=="8") {
 		?>
+			<p class="parto">Vous avez vu dans la leçon précédente quelques mots de vocabulaire de rapportant à la date&nbsp;: </p>
+			<div class="vortlisto row">
+				<p class="col s6 m4"><span class="eo">semajno</span> : semaine</p>
+				<p class="col s6 m4"><span class="eo">tago</span> : jour</p>
+				<p class="col s6 m4"><span class="eo">jaro</span> : année</p>
+			</div>
+			
+			<p>Vous avez également appris comment dire les nombres, et vous savez donc déjà dire par exemple en quelle année nous sommes.</p>
+			<p>Nous allons maintenant voir comment dire la date complète en espéranto. Cela vous permettra aussi de faire une petite révision des nombres&nbsp;!</p>
+				
+			<?php if ($persono) { ?>
+			<p class="eta">Les mots présentés ici seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			
+			<fieldset class="vortoj">
+				<div class="vortlisto row">
+					<p class="col s12"><span class="eo">dato</span> : date</p>
+					<p class="col s6 m4"><span class="eo">hodiaŭ</span> : aujourd’hui</p>
+					<p class="col s6 m4"><span class="eo">morgaŭ</span> : demain</p>
+					<p class="col s6 m4"><span class="eo">hieraŭ</span> : hier</p>
+				</div>
+				<br>
+				<p>Les jours de la semaine&nbsp;: <span class="eo">la tagoj de la semajno</span></p>
+				<div class="vortlisto row">
+					<div class="col s6">
+						<p><span class="eo">lundo</span> : lundi</p>
+						<p><span class="eo">mardo</span> : mardi</p>
+						<p><span class="eo">merkredo</span> : mercredi</p>
+						<p><span class="eo">jaŭdo</span> : jeudi</p>
+					</div>
+					<div class="col s6">
+						<p><span class="eo">vendredo</span> : vendredi</p>
+						<p><span class="eo">sabato</span> : samedi</p>
+						<p><span class="eo">dimanĉo</span> : dimanche</p>
+					</div>
+				</div>
+				<br>
+				<p>Les mois de l’année&nbsp;: <span class="eo">la monatoj de la jaro</span></p>
+				<div class="vortlisto row">
+					<div class="col s6">
+						<p><span class="eo">januaro</span> : janvier</p>
+						<p><span class="eo">februaro</span> : février</p>
+						<p><span class="eo">marto</span> : mars</p>
+						<p><span class="eo">aprilo</span> : avril</p>
+						<p><span class="eo">majo</span> : mai</p>
+						<p><span class="eo">junio</span> : juin</p>
+					</div>
+					<div class="col s6">
+						<p><span class="eo">julio</span> : juillet</p>
+						<p><span class="eo">aŭgusto</span> : août</p>
+						<p><span class="eo">septembro</span> : septembre</p>
+						<p><span class="eo">oktobro</span> : octobre</p>
+						<p><span class="eo">novembro</span> : novembre</p>
+						<p><span class="eo">decembro</span> : décembre</p>
+					</div>
+				</div>
+			</fieldset>
+			
+			<p class="parto">Exemples :</p>
+			<div class="vortlisto row">
+				<p class="col s12"><span class="eo">Hodiaŭ estas lundo la dua de aŭgusto.</span> : Aujourd’hui nous sommes le lundi 21 aoŭt.</p>
+				<p class="col s12"><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.</span> : Demain nous serons le mardi 22 août.</p>
+				<p class="col s12"><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.</span> : Hier c’était dimanche 23 août.</p>
+				<p class="col s12"><span class="eo">En januaro estas tri dek unu tagoj.</span> : En janvier il y a 31 jours.</p>
+				<p class="col s12"><span class="eo">La unua de Majo estas la Tago de la Laboro</span> : Le premier mai est la Fête du Travail (litt. "le Jour du Travail")</p>
+			</div>
+			
+			<p class="parto">Lorsqu’on indique une date précise, on emploie souvent la terminaison <b>n</b> de l’accusatif. Vous verrez par la suite que l’accusatif est employé pour certains compléments, et pas uniquement pour le complément direct.</p>
+							
+			<div class="vortlisto row">
+				<p><span class="eo">Ili venos la deka<b>n</b> de aprilo.</span> : Ils viendront le 10 mars.</p>
+				<p><span class="eo">La dua<b>n</b> de julio, mi edziĝos. </span> : Le 2 juillet, je me marierai.</p>
+				<p><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2017</span> : Paris, le 15 juillet 1017 (par exemple au début d’une lettre)</p>
+			</div>
+				
+			<p class="parto">On peut utiliser également la forme adverbiale pour les jours et les mois.</p>
+			<div class="vortlisto row">
+				<p><span class="eo">Dimanĉ<b>e</b> mi ne laboras.</span> : Je ne travaille pas le dimanche.</p>
+			</div>
+			
+		</section>
+		
+		<?php 
+		} // fin section
+		if ($section=="10") {
+		?>
 			<p class="parto">Les <b>noms propres</b> se terminent en principe par <b>-o</b> comme les noms
 			communs, mais il peuvent aussi parfois garder leur forme et leur
 			orthographe d’origine (par exemple <i>Shakespeare</i> ou <span class="eo">Ŝekspiro</span>).
@@ -436,7 +521,7 @@ include "dlekkapo.inc.php";
 	
 		<?php 
 		} // fin section
-		if ($section=="10") {
+		if ($section=="11") {
 		?>
 		
 			<fieldset class="ekzerco">
@@ -486,7 +571,7 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="11") {
+		if ($section=="12") {
 		?>
 
 		<p class="parto">
@@ -525,7 +610,7 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="12") {
+		if ($section=="13") {
 		?>
 			<p>
 			La prononciation ne devrait plus avoir le moindre secret pour vous

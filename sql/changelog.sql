@@ -533,3 +533,8 @@ UPDATE `personoj_vortoj` WHERE `personoj_vortoj`.`vorto_id` = 30;
 UPDATE nuna_kurso SET lastdato = '1999-05-11' WHERE CAST(lastdato AS CHAR(20)) = '0000-00-00';
 ALTER TABLE nuna_kurso CHANGE `ekdato` `ekdato` DATE NULL,CHANGE `lastdato` `lastdato` DATE NULL;
 UPDATE nuna_kurso SET lastdato = NULL WHERE CAST(lastdato AS CHAR(20)) = '1999-05-11';
+
+-- ajout d'une section sur la musique dans la leçon 4
+update lecioneroj set ordo=12 where id=42;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'La chanson espérantophone', 'TEKSTO', NULL, '11', '0', '0');
+

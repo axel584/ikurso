@@ -529,7 +529,9 @@ $('.memorilo_input').keypress(function(e){
         var $vorto_id=$(this).data('vorto_id');
         var $persono_id=$(this).data('persono_id');
         var $respondo=$(this).val();
-        kontroliVorton($vorto_id,$persono_id,$respondo);
+        if ($respondo!="") {
+          kontroliVorton($vorto_id,$persono_id,$respondo);
+        }
     }
 });
 

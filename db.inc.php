@@ -289,8 +289,8 @@ function getCoursElLernanto($lernanto_id) {
             $prochaine_lecon = $row['nunleciono']+1;
             $demando2 = "select titolo,retpagxo from lecionoj where numero='".$prochaine_lecon."' and kurso='".$row["kurso"]."'";
             $row2 = $bdd->query($demando2)->fetch();
-            if ($row2['retpagxo']!=null) { // dans le cas du logiciel, il n'y a pas de leçon à afficher
-                echo "<a class='btn-flat small blue-text' href='".$prefixe_url.$row2['retpagxo']."'><i class='material-icons right'>arrow_right</i>Accès à la leçon : ".$row2['titolo']."</a>";
+            if ($row['kurso']!='KE') { // dans le cas du logiciel, il n'y a pas de leçon à afficher
+                echo "<a class='btn-flat small blue-text' href='".getRedirectionParDroits($lernanto_id)."'><i class='material-icons right'>arrow_right</i>Accès à la prochaine leçon</a>";
             }
         }
         if ($row["stato"]=="F") {

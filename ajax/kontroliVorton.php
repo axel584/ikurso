@@ -25,7 +25,6 @@ function kontroliVorton($lernantaRespondo,$bonaRespondo) {
 	// attention, il ne faut pas utiliser != mais !==
 	if (strpos($bonaRespondo,"|")!==false) {
 		return kontroliVorton($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliVorton($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
-		return false;
 	} else {
 		$trans = array("." => "", "," => "", "'" => "","!" => "","?" => ""); // liste des caractères à supprimer pour la comparaison
 		$bonaRespondo = strtr($bonaRespondo, $trans);

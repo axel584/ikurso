@@ -539,7 +539,6 @@ update lecioneroj set ordo=12 where id=42;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'La chanson espérantophone', 'TEKSTO', NULL, '11', '0', '0');
 
 -- ajout d'une section pour la date dans la leçon 4
-UPDATE lecioneroj SET ordo=8 WHERE id=38; 
 UPDATE lecioneroj SET ordo=9 WHERE id=39; 
 UPDATE lecioneroj SET ordo=10 WHERE id=40; 
 UPDATE lecioneroj SET ordo=11 WHERE id=41; 

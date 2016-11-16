@@ -574,40 +574,74 @@ include "dlekkapo.inc.php";
 		if ($section=="12") {
 		?>
 
-		<p class="parto">
-			L’espéranto est chanté depuis sa naissance, puisque Louis Lazare Zamenhof avait déjà écrit les paroles d’un hymne, La Espero, toujours entonné lors des grandes rencontres espérantistes.
-		</p>
-		<p>
-			Tous les styles musicaux sont aujourd’hui représentés dans la culture espérantophone. Certaines chansons sont des adaptations des langues nationales, d’autres des productions originales en espéranto. La gamme s’étend du hiphop de la Pafklik’ au reggae de Jonny M, en passant par le rock-pop de Kore, et de l’électro d’Inicialoj dc au répertoire de Brassens par Jacques Yvart, en passant par la bossa nova de Flávio Fonseca… pour n’en citer que quelques-uns.
-		</p>
-		<p>
-			Certains artistes sont autoproduits, mais les associations nationales servent souvent de maisons de production. Les premiers labels apparus sont issus des éditeurs de livres LF-Koop en Suisse et Edistudio en Italie. Aujourd’hui, le label Vinilkosmo propose, près de Toulouse, l’un des principaux studios d’enregistrement des artistes espérantophones.
-		</p>
-		<p>
-		Parmi les chanteurs de l’Espérantie, présentons-en quelques-uns, de différents horizons :
-		<ul>
-		<li><i class="material-icons">star</i>JoMo, un chanteur français éclectique, connu pour ses adaptations, comme La Bamba (La Bambo), et ses productions originales dans différents styles (rock, folk, traditionnel).</li>
-		<li><i class="material-icons">star</i>Ĵomart kaj Nataŝa, un duo kazakh installé en Suède, aux chansons à texte originales.</li>
-		<li><i class="material-icons">star</i>Kajto, un groupe frison de musique populaire, aux paroles faciles à comprendre, qu’il est bon de reprendre en cœur ou en canon.</li>
-		<li><i class="material-icons">star</i>Amplifiki, Persone, Martin &amp; la Talpoj : trois groupes de rock-pop issus les uns des autres.</li>
-		<li><i class="material-icons">star</i>Gijom, un artiste de chanson, dont le répertoire, original et adapté du français, est en partie disponible gratuitement sur son site internet.</li>
-		<li>Enfin, deux chansons faciles, pour commencer la navigation sur YouTube : Jen des Argentins La Porkoj et Bluaj fragoj du groupe brésilien Merlin.</li>
-		</ul>
-		</p>
-		<p>Pour en savoir plus, rendez-vous sur la Toile :</p>
-		<ul>
-		<li><a href="https://fr.wikipedia.org/wiki/Musique_esp%C3%A9rantophone">https://fr.wikipedia.org/wiki/Musique_esp%C3%A9rantophone</a></li>
-		<li><a href="https://eo.wikipedia.org/wiki/Esperanto-muziko">https://eo.wikipedia.org/wiki/Esperanto-muziko</a></li>
-		<li><a href="https://eo.wikipedia.org/wiki/Esperanto-muzikalbumoj">https://eo.wikipedia.org/wiki/Esperanto-muzikalbumoj</a></li>
-		</ul>
+		<div class="row">
+			<div class="col s12 m6">
+				<p class="parto">L’espéranto est chanté depuis sa naissance, puisque Louis Lazare Zamenhof avait déjà écrit les paroles d’un hymne, <i>La Espero</i>, toujours entonné lors des grandes rencontres espérantistes.</p>
+			</div>
+			<div class="col s10 offset-s1 m6">
+				<div class="video-container">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/shNsmyrNN2g" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
 
-		<p>Et pour découvrir l’espéranto en musique :</p>
-		<ul>
-			<li>à la radio : <a href="http://muzaiko.info">muzaiko.info</a></li>
-			<li>en albums : <a href="http://vinilkosmo.com">vinilkosmo.com</a></li>
-			<li>dans notre boutique en ligne : <a href="ikurso.esperanto-jeunes.org/butiko.php">ikurso.esperanto-jeunes.org/butiko.php</a></li>
-		</ul>
+		<div class="row">
+			<div class="col s12">
+				<p class="parto">Tous les styles musicaux sont aujourd’hui représentés dans la culture espérantophone. Certaines chansons sont des adaptations des langues nationales, d’autres des productions originales en espéranto. La gamme s’étend du hiphop de la Pafklik’ au reggae de Jonny M, en passant par le rock-pop de Kore, et de l’électro d’Inicialoj dc au répertoire de Brassens par Jacques Yvart, en passant par la bossa nova de Flávio Fonseca… pour n’en citer que quelques-uns.</p>
+			</div>
+			
+			<div class="col s12 m9">
+				<p>Certains artistes sont autoproduits, mais les associations nationales servent souvent de maisons de production. Les premiers labels apparus sont issus des éditeurs de livres LF-Koop en Suisse et Edistudio en Italie. Aujourd’hui, le label <a href="http://www.vinilkosmo.com/">Vinilkosmo</a> propose, près de Toulouse, l’un des principaux studios d’enregistrement des artistes espérantophones.</p>
+			</div>
+			<div class="col s6 m3 offset-s4">
+				<a href="http://www.vinilkosmo.com/"><img src="<?php echo $vojo;?>fr/cge/bildoj/vinilkosmo.gif" class="responsive-img" alt="Vinilkosmo"></a>
+			</div>
 
+		</div>
+
+		<div class="row">
+			<div class="col s12">
+				<p class="parto">Parmi les chanteurs de l’Espérantie, présentons-en quelques-uns, de différents horizons&nbsp;:</p>
+				<ul>
+					<li><i class="material-icons tiny contraste-texte-A">star</i> <b>JoMo</b>, un chanteur français éclectique, connu pour ses adaptations, comme <em>La Bamba</em> (<em>La Bambo</em>), et ses productions originales dans différents styles (rock, folk, traditionnel).</li>
+					<li><i class="material-icons tiny contraste-texte-A">star</i> <b>Ĵomart kaj Nataŝa</b>, un duo kazakh installé en Suède, aux chansons à texte originales.</li>
+					<li><i class="material-icons tiny contraste-texte-A">star</i> <b>Kajto</b>, un groupe frison de musique populaire, aux paroles faciles à comprendre, qu’il est bon de reprendre en cœur ou en canon.</li>
+					<li><i class="material-icons tiny contraste-texte-A">star</i> <b>Amplifiki</b>, <b>Persone</b>, <b>Martin & la Talpoj</b> : trois groupes de rock-pop issus les uns des autres.</li>
+				</ul>
+			</div>
+			<div class="col s12 m7">
+				<p><i class="material-icons tiny contraste-texte-A">star</i> <b>Gijom</b>, un artiste de chanson, dont le répertoire, original et adapté du français, est en partie disponible gratuitement sur son site internet.</p>
+				<p><i class="material-icons tiny contraste-texte-A">star</i> Enfin, deux chansons faciles, pour commencer la navigation sur YouTube&nbsp;: <i>Jen</i> des Argentins <b>La Porkoj</b> et <i>Bluaj fragoj</i> du groupe brésilien <b>Merlin</b>.</p>
+			</div>
+			<div class="col s8 m5 offset-s2">
+				<video class="responsive-video" controls>
+					<source src="<?php echo $vojo;?>fr/cge/bildoj/jen.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s12">
+				<p class="parto">Pour en savoir plus, rendez-vous sur la Toile :</p>
+				<ul>
+					<li><a href="https://fr.wikipedia.org/wiki/Musique_esp%C3%A9rantophone">https://fr.wikipedia.org/wiki/Musique_espérantophone</a></li>
+					<li><a href="https://eo.wikipedia.org/wiki/Esperanto-muziko">https://eo.wikipedia.org/wiki/Esperanto-muziko</a></li>
+					<li><a href="https://eo.wikipedia.org/wiki/Esperanto-muzikalbumoj">https://eo.wikipedia.org/wiki/Esperanto-muzikalbumoj</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s12">
+				<p class="parto">Et pour découvrir l’espéranto en musique :</p>
+				<ul>
+					<li>à la radio : <a href="http://muzaiko.info">muzaiko.info</a></li>
+					<li>en albums : <a href="http://vinilkosmo.com">vinilkosmo.com</a></li>
+					<li>dans notre boutique en ligne : <a href="ikurso.esperanto-france.org/butiko.php">ikurso.esperanto-france.org/butiko.php</a></li>
+				</ul>
+			</div>
+		</div>
+		
 		<?php 
 		} // fin section
 		if ($section=="13") {

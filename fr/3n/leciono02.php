@@ -45,7 +45,8 @@ include "kapo.inc.php";
 			</div>
 		</div>
 
-
+		<p>La artikolon Estingi farjton verkis Roberto Pigro kaj ĝi estis eldonita en la revuo <a href="http://www.esperanto.be/fel/mon/" target="_NEW">Monato</a> en la maja numero 2015.
+		</p>
 			
 			<?php 
 			} // fin section

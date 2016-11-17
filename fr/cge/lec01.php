@@ -527,6 +527,52 @@ QCM(
 			} // fin section 
 			if ($section=="9") {
 			?>
+			<p class="parto">Dans l’exercice précédent, vous avez vu comment interroger sur l’identité d’une personne ou d’une chose. On utilise pour cela le mot interrogatif <b>kiu</b>&nbsp;:</p>
+			<div class="vortlisto row">
+				<p class="col s6"><span class="eo"><b>Kiu</b> loĝas en Brazilo?</span></p><p class="col s6"><b>Qui</b> habite au Brésil&nbsp;?</p>
+				<p class="col s6"><span class="eo">En <b>kiu</b> filmo estas Aleks?</span></p><p class="col s6">Dans <b>quel</b> film est Aleks&nbsp;?</p>
+			</div>
+			
+			<p>On traduit généralement <b>kiu</b> par <em>qui</em>, <em>quel(le)</em>, <em>lequel</em> ou <em>laquelle</em>. </p>
+				
+			<p>Voici quelques autres exemples :</p>
+			<div class="row">
+				<p class="col s12 m6"><span class="eo"><b>Kiu</b> estas la nova instruisto?<br>– Estas Marko. Estas mia patro.</span></p><p class="col s12 m6">Qui est le nouvel instituteur&nbsp;?<br>– C’est Marko. C'est mon père.</p>
+			</div>
+			<div class="row">
+				<p class="col s12 m6"><span class="eo">En <b>kiu</b> urbo loĝas Anna Maria?<br>– Ŝi loĝas en Vroclavo.</span></p><p class="col s12 m6">Dans <b>quelle</b> ville habite Anna Maria&nbsp;?<br>– Elle habite à Wrocław.</p>
+			</div>
+			<div class="row">
+				<p class="col s12 m6"><span class="eo">Parizo, Varsovio kaj Romo estas urboj. <b>Kiu</b> estas en Pollando?</span></p><p class="col s12 m6">Paris, Varsovie et Rome sont des villes. <b>Laquelle</b> est en Pologne&nbsp;?</p>
+			</div>
+			
+			<p class="parto"><b>Kiu</b> se met au pluriel (<b>kiuj</b>) si l’on interroge sur plusieurs personnes ou plusieurs choses. Par exemple&nbsp;:</p>
+			
+			<div class="row">
+				<p class="col s12 m6"><span class="eo">Jen kukoj. <b>Kiuj</b> estas bonaj?</span></p><p class="col s12 m6">Voici des biscuits. <b>Lesquels</b> sont bons&nbsp;?</p>
+			</div>
+			<div class="row">
+				<p class="col s12 m6"><span class="eo"><b>Kiuj</b> estas viaj instruistoj?<br>– Marko kaj Petro.</span></p><p class="col s12 m6"><b>Qui</b> sont tes professeurs&nbsp;?<br>– Marko et Petro.</p>
+			</div>
+
+			<p class="parto">Dans l’exercice précédent, vous avez également vu comment poser une question pour interroger sur le lieu&nbsp;:</p>
+			<div class="vortlisto row">
+				<p class="col s12 m6"><span class="eo"><b>Kie</b> loĝas la instruisto?</span></p><p class="col s12 m6"><b>Où</b> habite le professeur&nbsp;?</p>
+			</div>
+			
+			<p>Voici d’autres exemples de questions commençant par <b>kie</b>&nbsp;:</p>
+			<div class="row">
+				<p class="col s12 m6"><span class="eo"><b>Kie</b> studas Allan?</span></p><p class="col s12 m6"><b>Où</b> étudie Allan&nbsp;?</p>
+			</div>
+			<div class="row">
+				<p class="col s12 m6"><span class="eo"><b>Kie</b> estas la urbo Chaumont?</span></p><p class="col s12 m6"><b>Où</b> est la ville de Chaumont&nbsp;?</p>
+				<p class="col s12 m6"><span class="eo">– Ĝi estas en Francujo.</span></p><p class="col s12 m6">– Elle est en France.</p>
+			</div>
+			
+			<?php 
+			} // fin section 
+			if ($section=="10") {
+			?>
 			<p class="parto">À votre tour ! En vous aidant du vocabulaire déjà vu et de la vidéo de l'exercice précédent, essayez de vous présenter à votre correcteur en quelques mots. N'oubliez pas les formules de politesse pour dire bonjour et au revoir. Si vous ne savez pas comment dire en espéranto votre profession, ce sera l'occasion de demander à votre correcteur. Vous devriez être capable de rédiger 4 ou 5 phrases en espéranto.</p>
 			<p>Cet exercice ne vous permettra pas uniquement de vérifier que vous avez assimilé le nouveau vocabulaire, mais également de faire connaissance avec le correcteur qui vous sera attribué et qui corrigera vos exercices tout au long de ce cours.</p>
 			<p>Aucune utilisation commerciale ne sera faite des informations que vous transmettrez.

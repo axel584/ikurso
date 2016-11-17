@@ -546,3 +546,10 @@ UPDATE lecioneroj SET ordo=12 WHERE id=269;
 UPDATE lecioneroj SET ordo=13 WHERE id=42; 
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'La date', 'TEKSTO', NULL, '8', '0', '0');
 
+-- ajout d'une section pour les corrélatifs dans la leçon 1
+UPDATE lecioneroj SET ordo=11 WHERE id=7;
+UPDATE lecioneroj SET ordo=12 WHERE id=8;
+UPDATE lecioneroj SET ordo=10 WHERE id=254;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '59', 'Premières questions', 'TEKSTO', NULL, '9', '0', '0');
+
+

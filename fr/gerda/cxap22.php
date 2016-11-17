@@ -44,7 +44,7 @@ include "gerdakapo.inc.php";
 					Feliĉe, ke hodiaŭ oni povas iri preskaŭ ien ajn aviadile.  Aviadiloj
 					preskaŭ tute ne dancas. Sed eĉ aviadiloj nur duone plaĉas al mi.
 					Plej multe mi preferas, kiam mi veturas sur tero, sur bona firma tero.
-					Mi bezonas sub mi ion pli firman ol akvo kaj aero. Plej plaĉe estas
+					Mi bezonas sub mi ion pli firman ol akvo aŭ aero. Plej plaĉe estas
 					promeni piede sur bona tera vojo. Mi…"</p>
 					<p>Sed Linda interrompis lian paroladon, iom strangan en tiuj
 					kondiĉoj, en kiuj ili troviĝis:</p>

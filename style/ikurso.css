@@ -122,6 +122,17 @@ form p.col {
     background-color: #2196F3;
 }
 
+/*----- surcharge modal konektigxi -----*/
+	
+#konektigxi .modal-content {
+    padding: 1rem;
+}
+#konektigxi .modal-footer {
+    padding: 1rem;
+}
+#footer-konektigxi1 .btn-flat {
+    padding: 0 1rem;
+}
 /*--------------------------------*/
 
 p {font-weight: 300;}
@@ -173,7 +184,7 @@ div.col > p:first-child {
 /* amélioration de l'affichage s12 */
 
 @media only screen and (max-width: 600px) {
-	.row p.col.s12 + p.col.s12 {
+	.row + p.col.s12 {
 		margin-top: 2em;
 	}
 }
@@ -474,8 +485,10 @@ p.parto:before {
 .vortlisto i.material-icons:hover {
 	color: #6d4c41;
 }
-.vortlisto div.col + div.col {
-    margin-top: 1em;
+@media only screen and (max-width: 720px) {
+	.vortlisto div.col + div.col {
+	    margin-top: 1em;
+	}
 }
 
 a[type="audio/mp3"] i.material-icons {
@@ -546,6 +559,9 @@ fieldset.vortoj div.vortlisto {
 }
 fieldset.vortoj div.row {
 	margin-bottom: 0;
+}
+span.marque {
+	color: #9ccc65;
 }
 /********** exercices *******/
 fieldset.ekzerco,

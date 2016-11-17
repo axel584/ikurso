@@ -4,12 +4,10 @@
 				  	
 				  	<p>
 					Pour taper les caractères accentués propres à l’espéranto sur votre iPhone, iPod Touch ou iPad, nous vous conseillons
-					d’installer le programme <b>Ĝusta klavaro</b>, disponible gratuitement sur l’AppStore
+					d’installer l’application <a href="https://itunes.apple.com/us/app/esperanta-klavaro/id957192189?mt=8&ign-mpt=uo%3D4">Ĝusta klavaro</a>, disponible gratuitement sur l’AppStore. Cette application a besoin de iOS 8.1 (ou une version plus récente) pour fonctionner.</p>
 				  	</p>
 				  			  	
 
 				  	<h4>Clavier espéranto pour Android</h4>
 				  	
-				  	<p>Nous vous conseillons d’installer le programme <b>AnySoftKeyboard</b>. Vous pourrez alors installer d’autres claviers
-				  	que le clavier Azerty. Nous vous conseillons cependant de conserver celui-ci et de garder le doigt sur les touches 
-				  	c, g, h, j, s, u pour accéder aux accents.</p>
+				  	<p>L'application <a href="https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard&hl=fr">AnySoftKeyboard</a> disponible gratuitement sur Google Play, vous permettra de taper l'espéranto directement au clavier.</p>

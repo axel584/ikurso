@@ -42,14 +42,22 @@ include "dlekkapo.inc.php";
 			     Bim bam bom, bim bam bom.<br/>
 			</p>
 
-			
-			<div class="vortlisto row">
-				<p class="col s6 m4"><span class="eo">jen</span> : voici, voilà</p>
-				<p class="col s6 m4"><span class="eo">sonorilo</span> : cloche</p>
-				<p class="col s6 m4"><span class="eo">do</span> : donc</p>
-				<p class="col s6 m4"><span class="eo">tuj</span> : tout de suite</p>
-				<p class="col s6 m4"><span class="eo">vesto</span> : vêtement</p>
-			</div>
+			<fieldset class="vortoj">
+				<legend>VOCABULAIRE À RETENIR</legend>
+				<div>
+					<?php if ($persono) { ?>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<?php } ?>
+				</div>
+				<div class="vortlisto row">
+					<p class="col s6 m4"><span class="eo">jen</span> : voici, voilà</p>
+					<p class="col s6 m4"><span class="eo">sonorilo</span> : cloche</p>
+					<p class="col s6 m4"><span class="eo">do</span> : donc</p>
+					<p class="col s6 m4"><span class="eo">tuj</span> : tout de suite</p>
+					<p class="col s6 m4"><span class="eo">vesto</span> : vêtement</p>
+				</div>
+			</fieldset>
+
 			<p class="parto">
 			Une autre version de <i>Frère Jacques</i> est celle élaborée par un groupe
 			de musiciens et chanteurs espérantistes du Brésil&nbsp;:
@@ -74,14 +82,22 @@ include "dlekkapo.inc.php";
 			     Vidi vin, kisi vin !<br/>
 			</p>
 			
-			<div class="vortlisto row">
-				<p class="col s6 m4"><span class="eo">belsone</span> : d’un beau son</p>
-				<p class="col s6 m4"><span class="eo">farti</span> : se porter</p>
-				<p class="col s6 m4"><span class="eo">ĝojo</span> : joie</p>
-				<p class="col s6 m4"><span class="eo">ĝis revido</span> : au revoir</p>
-				<p class="col s6 m4"><span class="eo">fraŭlo</span> : homme célibataire</p>
-				<p class="col s6 m4"><span class="eo">fraŭlino</span> : demoiselle</p>
-			</div>
+			<fieldset class="vortoj">
+				<legend>VOCABULAIRE À RETENIR</legend>
+				<div>
+					<?php if ($persono) { ?>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<?php } ?>
+				</div>
+				<div class="vortlisto row">
+					<p class="col s6 m6"><span class="eo">belsone</span> : d’un beau son</p>
+					<p class="col s6 m6"><span class="eo">farti</span> : se porter</p>
+					<p class="col s6 m6"><span class="eo">ĝojo</span> : joie</p>
+					<p class="col s6 m6"><span class="eo">ĝis revido</span> : au revoir</p>
+					<p class="col s6 m6"><span class="eo">fraŭlo</span> : homme célibataire</p>
+					<p class="col s6 m6"><span class="eo">fraŭlino</span> : demoiselle</p>
+				</div>
+			</fieldset>
 
 		<?php 
 		} // fin section
@@ -112,6 +128,10 @@ include "dlekkapo.inc.php";
 			en <b>-aŭ</b> parmi les plus usités en espéranto.
 			</p>
 			
+			<?php if ($persono) { ?>
+			<p class="eo eta">Les adverbes présentés ci-dessous seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+			<?php } ?>
+
 			<div class="row">
 				<p class="col s12"><b>almenaŭ</b> : au moins</p>
 				<p class="col s11 offset-s1"><span class="eo">Donu al mi almenaŭ du minutojn.</span></p>
@@ -142,6 +162,10 @@ include "dlekkapo.inc.php";
 
 			<p class="parto">Voici cinq autres mots très fréquents terminés par <b>-aŭ</b>&nbsp;:</p>
 		
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+			<?php } ?>
+
 			<div class="row">
 				<p class="col s12"><b>ambaŭ</b> : tous les deux (adjectif ou pronom numéral)</p>
 				<p class="col s11 offset-s1"><span class="eo">Ili ambaŭ estas en la ĝardeno.</span></p>
@@ -218,6 +242,21 @@ include "dlekkapo.inc.php";
 				<p class="col s11 offset-s1"><i>Devinez vous-même...</i></p>
 			</div>
 
+			<fieldset class="vortoj">
+				<legend>VOCABULAIRE À RETENIR</legend>
+				<div>
+					<?php if ($persono) { ?>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<?php } ?>
+				</div>
+				<div class="vortlisto row">
+					<p class="col s12 m6"><span class="eo">muso</span> : souris</p>
+					<p class="col s12 m6"><span class="eo">tapiŝo</span> : tapis</p>
+					<p class="col s12 m6"><span class="eo">fali</span> : tomber</p>
+					<p class="col s12 m6"><span class="eo">festeni</span> : festoyer</p>
+				</div>
+			</fieldset>
+
 		<?php 
 		} // fin section
 		if ($section=="7") {
@@ -287,33 +326,44 @@ include "dlekkapo.inc.php";
 				?>
 				</div>
 			</fieldset>
+			
+			<p class="noto">NOTE : <span class="eo">Ŝerbruko</span> : Sherbrooke (ville du Québec)</p>
+			
 
-			<div class="vortlisto row">
-				<p class="col s6 m4"><span class="eo">gvidi</span> : guider, diriger</p>
-				<p class="col s6 m4"><span class="eo">Brazilo</span> : Brésil</p>
-				<p class="col s6 m4"><span class="eo">Brazilio</span> : Brasilia</p>
-				<p class="col s6 m4"><span class="eo">senti</span> : sentir, ressentir</p>
-				<p class="col s6 m4"><span class="eo">kresko</span> : croissance, accroissement</p>
-				<p class="col s6 m4"><span class="eo">samideano</span> : partisan (ici : espérantiste)</p>
-				<p class="col s6 m4"><span class="eo">Ŝerbruko</span> : Sherbrooke</p>
-				<p class="col s6 m4"><span class="eo">gastigi</span> : recevoir (des invités), offrir l’hospitalité</p>
-				<p class="col s6 m4"><span class="eo">kutima</span> : habituel</p>
-				<p class="col s6 m4"><span class="eo">Usono</span> : États-Unis</p>
-				<p class="col s6 m4"><span class="eo">plie</span> : de plus</p>
-				<p class="col s6 m4"><span class="eo">aranĝo</span> : manifestation</p>
-				<p class="col s6 m4"><span class="eo">asocio</span> : association</p>
-				<p class="col s6 m4"><span class="eo">najbaro</span> : voisin</p>
-				<p class="col s6 m4"><span class="eo">rubriko</span> : rubrique</p>
-				<p class="col s6 m4"><span class="eo">numero</span> : numéro (revue)</p>
-				<p class="col s6 m4"><span class="eo">bulteno</span> : bulletin</p>
-				<p class="col s6 m4"><span class="eo">organizi</span> : organiser</p>
-				<p class="col s6 m4"><span class="eo">vidpunkto</span> : point de vue</p>
-				<p class="col s6 m4"><span class="eo">Pasko</span> : Pâques</p>
-				<p class="col s6 m4"><span class="eo">tradicio</span> : tradition</p>
-				<p class="col s6 m4"><span class="eo">supozi</span> : supposer</p>
-				<p class="col s6 m4"><span class="eo">Flandro</span> : Flandres </p>
-				<p class="col s6 m4"><span class="eo">Nederlando</span> : Pays-Bas</p>
-			</div>
+			<fieldset class="vortoj">
+				<legend>VOCABULAIRE À RETENIR</legend>
+				<div>
+					<?php if ($persono) { ?>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<?php } ?>
+				</div>
+				<div class="vortlisto row">
+					<p class="col s12 m6"><span class="eo">gvidi</span> : guider, diriger</p>
+					<p class="col s12 m6"><span class="eo">Brazilo</span> : Brésil</p>
+					<p class="col s12 m6"><span class="eo">Brazilio</span> : Brasilia</p>
+					<p class="col s12 m6"><span class="eo">senti</span> : sentir, ressentir</p>
+					<p class="col s12 m6"><span class="eo">kresko</span> : croissance, accroissement</p>
+					<p class="col s12 m6"><span class="eo">samideano</span> : partisan (ici : espérantiste)</p>
+					<p class="col s12 m6"><span class="eo">gastigi</span> : recevoir (des invités), offrir l’hospitalité</p>
+					<p class="col s12 m6"><span class="eo">kutima</span> : habituel</p>
+					<p class="col s12 m6"><span class="eo">Usono</span> : États-Unis</p>
+					<p class="col s12 m6"><span class="eo">plie</span> : de plus</p>
+					<p class="col s12 m6"><span class="eo">aranĝo</span> : manifestation</p>
+					<p class="col s12 m6"><span class="eo">asocio</span> : association</p>
+					<p class="col s12 m6"><span class="eo">najbaro</span> : voisin</p>
+					<p class="col s12 m6"><span class="eo">rubriko</span> : rubrique</p>
+					<p class="col s12 m6"><span class="eo">numero</span> : numéro (d’une revue)</p>
+					<p class="col s12 m6"><span class="eo">bulteno</span> : bulletin</p>
+					<p class="col s12 m6"><span class="eo">organizi</span> : organiser</p>
+					<p class="col s12 m6"><span class="eo">vidpunkto</span> : point de vue</p>
+					<p class="col s12 m6"><span class="eo">Pasko</span> : Pâques</p>
+					<p class="col s12 m6"><span class="eo">tradicio</span> : tradition</p>
+					<p class="col s12 m6"><span class="eo">supozi</span> : supposer</p>
+					<p class="col s12 m6"><span class="eo">Flandro</span> : Flandres </p>
+					<p class="col s12 m6"><span class="eo">Nederlando</span> : Pays-Bas</p>
+				</div>
+			</fieldset>
+
 		<?php 
 		} // fin section
 		if ($section=="9") {

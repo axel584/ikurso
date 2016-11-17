@@ -13,7 +13,7 @@ $form_naskigxdato=$_POST["naskigxdato"];
 $form_stopInfo=isset($_POST["stopInfo"])?"J":"N";
 $teksto="";
 
-$nomDesMois = array("Janvier"=>1,"Février"=>2,"Mars"=>3,"Avril"=>4,"Mai"=>5,"Juin"=>6,"Juillet"=>7,"Août"=>8,"Septembre"=>9,"Octobre"=>10,"Novembre"=>11,"Décembre"=>12);
+$nomDesMois = array("Janvier"=>'01',"Février"=>'02',"Mars"=>'03',"Avril"=>'04',"Mai"=>'05',"Juin"=>'06',"Juillet"=>'07',"Août"=>'08',"Septembre"=>'09',"Octobre"=>'10',"Novembre"=>'11',"Décembre"=>'12');
 
 $elementsNaskigxdato = explode(" ",$form_naskigxdato);
 if (count($elementsNaskigxdato)==3) {
@@ -26,7 +26,8 @@ if (count($elementsNaskigxdato)==3) {
 	$form_naskigxdato_jaro="";
 }
 
-
+echo $persono['naskigxdato']."<br/>";
+echo $form_naskigxdato_jaro."-".$form_naskigxdato_monato."-".$form_naskigxdato_tago."<br/>";
 
 
 if ($persono_id=="") {header("Location:index.php?erarkodo=4");} else {

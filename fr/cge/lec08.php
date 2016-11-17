@@ -118,6 +118,25 @@ include "dlekkapo.inc.php";
 				<p class="col s12 eo">La ferm<b>it</b>a pordo</p>
 				<p class="col s11 offset-s1">= La porte fermée, c-à-d. qui a été fermée</p>
 			</div>
+
+			<fieldset class="vortoj">
+				<legend>VOCABULAIRE À RETENIR</legend>
+				<div>
+					<?php if ($persono) { ?>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<?php } ?>
+				</div>
+				<div class="vortlisto row">
+					<p class="col s12 m4"><span class="eo">voĉo</span> : voix</p>
+					<p class="col s12 m4"><span class="eo">pordo</span> : porte</p>
+					<p class="col s12 m4"><span class="eo">vermo</span> : ver</p>
+					<p class="col s12 m4"><span class="eo">letero</span> : lettre (courrier)</p>
+					<p class="col s12 m4"><span class="eo">honori</span> : honorer</p>
+					<p class="col s12 m4"><span class="eo">diablo</span> : diable</p>
+					<p class="col s12 m4"><span class="eo">adori</span> : adorer</p>
+				</div>
+			</fieldset>
+
 		<?php 
 		} // fin section 1
 		if ($section=="2") {
@@ -182,17 +201,25 @@ include "dlekkapo.inc.php";
 				</div>
 			</fieldset>
 
-			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">juĝisto</span> : juge</p>
-				<p class="col s12 m6"><span class="eo">aserti</span> : affirmer, prétendre</p>
-				<p class="col s12 m6"><span class="eo">akuzato</span> : l’accusé</p>
-				<p class="col s12 m6"><span class="eo">forkuri</span> : se sauver, c-à-d. courir au loin</p>
-				<p class="col s12 m6"><span class="eo">tramo</span> : tramway</p>
-				<p class="col s12 m6"><span class="eo">okulo</span> : œil</p>
-				<p class="col s12 m6"><span class="eo">stari</span> : être debout</p>
-				<p class="col s12 m6"><span class="eo">laca</span> : fatigué</p>
-				<p class="col s12 m6"><span class="eo">plaĉi</span> : plaire</p>
-			</div>
+			<fieldset class="vortoj">
+				<legend>VOCABULAIRE À RETENIR</legend>
+				<div>
+					<?php if ($persono) { ?>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<?php } ?>
+				</div>
+				<div class="vortlisto row">
+					<p class="col s12 m6"><span class="eo">juĝisto</span> : juge</p>
+					<p class="col s12 m6"><span class="eo">aserti</span> : affirmer, prétendre</p>
+					<p class="col s12 m6"><span class="eo">akuzato</span> : l’accusé</p>
+					<p class="col s12 m6"><span class="eo">forkuri</span> : se sauver, c-à-d. courir au loin</p>
+					<p class="col s12 m6"><span class="eo">tramo</span> : tramway</p>
+					<p class="col s12 m6"><span class="eo">okulo</span> : œil</p>
+					<p class="col s12 m6"><span class="eo">stari</span> : être debout</p>
+					<p class="col s12 m6"><span class="eo">laca</span> : fatigué</p>
+					<p class="col s12 m6"><span class="eo">plaĉi</span> : plaire</p>
+				</div>
+			</fieldset>
 			
 			<?php 
 			} // fin section 4

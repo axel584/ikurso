@@ -535,6 +535,8 @@ function getListoLecionoj($kurso,$leciono) {
 	}
 	elseif ($kurso=="GR") {
 		echo "<p>Gerda malaperis :</p>";
+	}elseif ($kurso=="3N") {
+		echo "<p>Tria nivela kurso :</p>";
 	}
 	echo "<ul id='lecionoj'>";
 	if ($leciono==0) {
@@ -592,7 +594,7 @@ function getListoLecionoj($kurso,$leciono) {
 	} else {
 		if ($kurso=='GR') {
 			echo "<li id='lexique' class='nova'><a href='vocabula.php'>vortlisto</a></li>";
-		} else {
+		} else if ($kurso=='CG') {
 			echo "<li id='lexique' class='nova'><a href='vocabula.php'>lexique</a></li>";
 		}
 	}

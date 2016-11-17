@@ -111,13 +111,11 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 				Si vous ne le trouvez pas, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
 				Dernière possibilité, il est possible que vous ayez fait une erreur en tapant votre adresse e-mail, vous pouvez <a href="<?php echo $vojo;?>reago.php">contacter un administrateur</a> qui vérifiera votre inscription.</p>
 				</div>
-				<p class="noto">Pour toute question relative à votre inscription, vous pouvez <a href="<?php echo $vojo;?>reago.php">contacter un administrateur</a></p> 
+				<p class="noto hide-on-small-only">Pour toute question relative à votre inscription, vous pouvez <a href="<?php echo $vojo;?>reago.php">contacter un administrateur</a></p> 
 			</div>
 			<div class="modal-footer">
 				<div id="footer-konektigxi1">
-					<p><a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a></p>
-					<p><a id="aperigi_novigi_pasvorton_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">Mot de passe oublié</a></p>
-					<p><a id="sendi_denove_aktivigilo_button" class=" modal-action hide waves-effect waves-light btn-flat primaire-texte">RENVOYER LE COURRIEL D'ACTIVATION</a></p>
+					<a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a><a id="aperigi_novigi_pasvorton_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">Mot de passe oublié</a><a id="sendi_denove_aktivigilo_button" class=" modal-action hide waves-effect waves-light btn-flat primaire-texte">RENVOYER LE COURRIEL D'ACTIVATION</a>
 				</div>
 				<div id="footer-konektigxi2" class="hide">
 					<a id="fermi_konektigxi_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>
@@ -260,7 +258,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 								<li><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">Téléchargements</a></li>
 							</ul></li>
 							<li class="divider"></li>
-							<li class="primaire-texte moyen"><a id="menu_boutique" href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></li>
+							<li class="primaire-texte moyen"><a href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></li>
 							<li class="divider"></li>
 							<li class="primaire-texte moyen">INFORMATIONS PRATIQUES</li>
 							<li><ul>
@@ -290,7 +288,7 @@ if ($persono_id=="") {
 					<ul class="right hide-on-med-and-down">
 						<!--<li><a href="#">L’ESPÉRANTO</a></li>-->
 						<li><a class="dropdown-button" href="#!" data-activates="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
-						<li><a id="menu_boutique" href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></li>
+						<li><a href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></li>
 						<li><a class="dropdown-button" href="#!" data-activates="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>
 					</ul>
 				</div>

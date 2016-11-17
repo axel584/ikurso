@@ -29,7 +29,7 @@
 			  		
 				  	<p>Voir aussi l'article de Wikipédia&nbsp;: <a href="http://fr.wikipedia.org/wiki/Alphabet_de_l%27esp%C3%A9ranto" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Alphabet de l’espéranto</a></p>
 				  				  	 
-					<p>Si vous connaissez déjà un peu l'espéranto, vous trouverez des informations utiles sur le site de Bertilo :  
+					<p>Si vous connaissez déjà un peu l'espéranto, vous trouverez des informations utiles sur le site de Bertilo&nbsp;:  
 					<a href="http://www.bertilow.com/komputo/index.html" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Esperanto en la komputilo</a>.</p>
 					
 
@@ -95,7 +95,7 @@
 								
 								<p>Pour plus d'informations sur l'installation et l'utilisation de ce clavier, voir sur le site de
 								Michael Langlois : 
-								<a href="http://michaellanglois.fr/it/french-keyboard-with-diacritics-11-windows_clavier-francais-diacrite-11-windows" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Clavier français diacrité 1.1 Windows</a>.</p>
+								<a href="https://michaellanglois.fr/fr/it/french-keyboard-with-diacritics-11-windows_clavier-francais-diacrite-11-windows" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Clavier français diacrité 1.1 Windows</a>.</p>
 							</div>
 						</li>
 						<li>
@@ -107,7 +107,7 @@
 									puis u pour obtenir un ŭ.</p>
 				  	
 									<p>Pour installer et utiliser ce clavier diacrité, voir sur le site de Michael Langlois :
-										<a href="http://michaellanglois.fr/it/french-keyboard-with-diacritics-11a-mac_clavier-francais-diacrite-11a-mac/lang/fr" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Clavier français diacrité 1.1a Mac</a>.</p>
+										<a href="https://michaellanglois.fr/fr/it/french-keyboard-with-diacritics-11a-mac_clavier-francais-diacrite-11a-mac" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Clavier français diacrité 1.1a Mac</a>.</p>
 							</div>
 						</li>
 						<li>
@@ -131,18 +131,6 @@
 								keycode 54 = ccircumflex Ccircumflex<br>
 								keycode 115 = Mode_switch 				
 							  	</p>
-							</div>
-						</li>
-						<li>
-							<div class="collapsible-header"><i class="material-icons primaire-texte texte-clair">keyboard_arrow_down</i>Ek!</div>
-							<div class="collapsible-body">
-								<p><strong>Ek!</strong> permet de taper les caractères accentués
-									en utilisant la combinaison de touches qui vous convient le mieux. On peut activer et désactiver
-									facilement le programme, ce qui peut être utile lorsqu'on alterne le français et l'espéranto.</p>
-								<p>Informations et téléchargement sur 
-									<a href="http://www.esperanto.mv.ru/Ek/index.html" class="btn-flat small blue-text">
-										<i class="material-icons right">arrow_right</i>www.esperanto.mv.ru/Ek</a>
-								</p>
 							</div>
 						</li>
 						<li>

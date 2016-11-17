@@ -517,8 +517,39 @@ DROP TABLE `phpbb_auth_access`, `phpbb_banlist`, `phpbb_categories`, `phpbb_chat
 DROP TABLE `phpmv_archives`, `phpmv_a_category`, `phpmv_a_config`, `phpmv_a_file`, `phpmv_a_keyword`, `phpmv_a_newsletter`, `phpmv_a_page`, `phpmv_a_partner_name`, `phpmv_a_partner_url`, `phpmv_a_provider`, `phpmv_a_resolution`, `phpmv_a_search_engine`, `phpmv_a_site`, `phpmv_a_vars_name`, `phpmv_a_vars_value`, `phpmv_category`, `phpmv_groups`, `phpmv_ip_ignore`, `phpmv_link_vp`, `phpmv_link_vpv`, `phpmv_newsletter`, `phpmv_page`, `phpmv_page_md5url`, `phpmv_page_url`, `phpmv_query_log`, `phpmv_site`, `phpmv_site_partner`, `phpmv_site_partner_url`, `phpmv_site_url`, `phpmv_users`, `phpmv_users_link_groups`, `phpmv_vars`, `phpmv_version`, `phpmv_visit`;
 
 -- correction vocabulaire
-UPDATE `vortoj` SET `fr` = 'nouveau, nouvelle' WHERE `vortoj`.`id` = 2906;
-DELETE FROM `vortoj` WHERE `vortoj`.`id` = 2932;
+DELETE FROM `vortoj` WHERE `vortoj`.`id` = 30;
+DELETE FROM `personoj_vortoj` WHERE `personoj_vortoj`.`vorto_id` = 30;
 
 UPDATE `lecioneroj` SET `titolo` = 'Mes premières phrases' WHERE `lecioneroj`.`id` = 219;
+
+-- correction vocabulaire
+UPDATE `vortoj` SET `fr` = 'collectionner, rassembler' WHERE `vortoj`.`eo` LIKE 'kolekti';
+UPDATE `vortoj` SET `fr` = 'beau-fils, gendre' WHERE `vortoj`.`eo` LIKE 'bofilo';
+UPDATE `vortoj` SET `eo` = 'gesinoroj' WHERE `vortoj`.`eo` LIKE 'gesinorooj';
+
+UPDATE `personoj_vortoj` WHERE `personoj_vortoj`.`vorto_id` = 30;
+
+-- ajout d'une colonne pour simplifier la recherche de la dernière section vue
+UPDATE nuna_kurso SET lastdato = '1999-05-11' WHERE CAST(lastdato AS CHAR(20)) = '0000-00-00';
+ALTER TABLE nuna_kurso CHANGE `ekdato` `ekdato` DATE NULL,CHANGE `lastdato` `lastdato` DATE NULL;
+UPDATE nuna_kurso SET lastdato = NULL WHERE CAST(lastdato AS CHAR(20)) = '1999-05-11';
+
+-- ajout d'une section sur la musique dans la leçon 4
+update lecioneroj set ordo=12 where id=42;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'La chanson espérantophone', 'TEKSTO', NULL, '11', '0', '0');
+
+-- ajout d'une section pour la date dans la leçon 4
+UPDATE lecioneroj SET ordo=9 WHERE id=39; 
+UPDATE lecioneroj SET ordo=10 WHERE id=40; 
+UPDATE lecioneroj SET ordo=11 WHERE id=41; 
+UPDATE lecioneroj SET ordo=12 WHERE id=269;
+UPDATE lecioneroj SET ordo=13 WHERE id=42; 
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'La date', 'TEKSTO', NULL, '8', '0', '0');
+
+-- ajout d'une section pour les corrélatifs dans la leçon 1
+UPDATE lecioneroj SET ordo=11 WHERE id=7;
+UPDATE lecioneroj SET ordo=12 WHERE id=8;
+UPDATE lecioneroj SET ordo=10 WHERE id=254;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '59', 'Premières questions', 'TEKSTO', NULL, '9', '0', '0');
+
 

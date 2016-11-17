@@ -25,7 +25,6 @@ function kontroliVorton($lernantaRespondo,$bonaRespondo) {
 	// attention, il ne faut pas utiliser != mais !==
 	if (strpos($bonaRespondo,"|")!==false) {
 		return kontroliVorton($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliVorton($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
-		return false;
 	} else {
 		$trans = array("." => "", "," => "", "'" => "","!" => "","?" => ""); // liste des caractères à supprimer pour la comparaison
 		$bonaRespondo = strtr($bonaRespondo, $trans);
@@ -46,7 +45,7 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 	exit();
 } else {
 	// on stocke dans le protokolo les erreurs pour pouvoir aider au besoin
-	protokolo($persono_id,"MEMORILO","Pour : ".$francaVorto." l'élève a traduit : ".$francaVorto." au lieu de ".$bonaRespondo);
+	protokolo($persono_id,"MEMORILO","Pour : ".$francaVorto." l'élève a traduit : ".$lernantaRespondo." au lieu de ".$bonaRespondo);
 	$respondo["mesagxo"] = "ko";
 	// si on a plusieurs possibilités, on n'explique que la première à l'élève :
 	if (strpos($bonaRespondo,"|")!==false) {

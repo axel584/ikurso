@@ -36,12 +36,21 @@ include "dlekkapo.inc.php";
 			<p class="col s5 offset-s1"><span class="eo">– Bonege.</span></p><p class="col s6">Parfaitement bien.</p>
 			<p class="col s5 offset-s1"><span class="eo">– Sufiĉe bone.</span></p><p class="col s6">Assez bien. (ça va)</p>
 			<p class="col s5 offset-s1"><span class="eo">– Ne tro bone.</span></p><p class="col s6">Pas trop bien.</p>
-			<p class="col s6"><span class="eo">Bonan apetiton !</span></p><p class="col s6">Bon appétit !</p>
-			<p class="col s6"><span class="eo">Je via sano !</span></p><p class="col s6">À votre santé !</p>
-			<p class="col s6"><span class="eo">Same al vi !</span></p><p class="col s6">Pareillement !</p>
-			<p class="col s6"><span class="eo">Dankon !</span></p><p class="col s6">Merci !</p>
-			<p class="col s6"><span class="eo">Ne dankinde !</span></p><p class="col s6">Pas de quoi !</p>
 		</div>
+
+		<fieldset class="vortoj">
+			<legend>EXPRESSIONS À RETENIR</legend>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Les expressions suivantes seront automatiquement ajoutées à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			<div class="vortlisto row">
+				<p class="col s6"><span class="eo">Bonan apetiton !</span></p><p class="col s6">Bon appétit !</p>
+				<p class="col s6"><span class="eo">Je via sano !</span></p><p class="col s6">À votre santé !</p>
+				<p class="col s6"><span class="eo">Same al vi !</span></p><p class="col s6">Pareillement !</p>
+				<p class="col s6"><span class="eo">Dankon !</span></p><p class="col s6">Merci !</p>
+				<p class="col s6"><span class="eo">Ne dankinde !</span></p><p class="col s6">Pas de quoi !</p>
+			</div>
+		</fieldset>
 
 		<p>
 		Si deux personnes arrivent à parler d’elles-mêmes pendant cinq
@@ -62,16 +71,29 @@ include "dlekkapo.inc.php";
 			ŝatas interŝanĝi ilin kun esperantistoj en aliaj landoj.</p>
 		</div>
 
-		<h3>Vocabulaire</h3>
+		<p class="noto">
+			<b>NOTE</b> : <span class="eo">antaŭ kvar semajnoj</span> = il y a 4 semaines (littéralement «&nbsp;avant 4 semaines&nbsp;»)</p>
+			
 
-		<div class="vortlisto row">
-			<p class="col s12 m6"><span class="eo">interŝanĝi</span> : échanger</p>
-			<p class="col s12 m6"><span class="eo">antaŭ</span> : avant (ici : «il y a…»)</p>
-			<p class="col s12 m6"><span class="eo">bildkarto</span> : carte postale (illustrée)</p>
-		</div>
+		<fieldset class="vortoj">
+			<legend>MOTS À RETENIR</legend>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Les mots suivants seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			<div class="vortlisto row">
+				<p class="col s12 m6"><span class="eo">nomo</span> : nom</p>
+				<p class="col s12 m6"><span class="eo">bildkarto</span> : carte postale (illustrée)</p>
+				<p class="col s12 m6"><span class="eo">lingvo</span> : langue (que l’on parle)</p>
+				<p class="col s12 m6"><span class="eo">komenci</span> : commencer (quelque chose)</p>
+				<p class="col s12 m6"><span class="eo">interŝanĝi</span> : échanger</p>
+				<p class="col s12 m6"><span class="eo">ŝati</span> : aimer, apprécier</p>
+				<p class="col s12 m6"><span class="eo">lerni</span> : apprendre</p>
+				<p class="col s12 m6"><span class="eo">kun</span> : avec</p>
+			</div>
+		</fieldset>
+
 		<p><span class="eo">loĝi, domo, edzo, infano, kolekti, poŝtmarko, lando</span>&nbsp;: se reporter au vocabulaire de la <a href="lec04.php">leçon précédente</a>
 		</p>
-		<p><span class="eo">nomo, komenci, lerni, facila, lingvo, kun, ŝati</span>&nbsp;: se reporter au <a href="vocabula.php">lexique général du cours</a>
 		</p>
 
 		<?php 
@@ -229,6 +251,17 @@ include "dlekkapo.inc.php";
 		
 		<p><a href="<?php echo $vojo;?>fr/son/pv5.mp3" class="sm2_button"></a> <span class="eo">En ĉiu malbono estas iom da bono.</span> : Dans tout mal il y a un peu de bien.</p>
 		
+
+		<fieldset class="vortoj">
+			<legend>À RETENIR</legend>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ce mot sera automatiquement ajouté à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			<div class="vortlisto row">
+				<p class="col s12"><span class="eo">malbono</span> : le mal, du mal</p>
+			</div>
+		</fieldset>
+		
 		<?php 
 		} // fin section 
 		if ($section=="6") {
@@ -288,6 +321,19 @@ include "dlekkapo.inc.php";
 				);
 				ekzerco(True, 1);
 			?>
+			</div>
+		</fieldset>
+
+		<fieldset class="vortoj">
+			<legend>MOTS À RETENIR</legend>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Les mots suivants seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			<div class="vortlisto row">
+				<p class="col s12 m6"><span class="eo">malseka</span> : mouillé</p>
+				<p class="col s12 m6"><span class="eo">krajono</span> : crayon</p>
+				<p class="col s12 m6"><span class="eo">vespere</span> : le soir, au soir</p>
+				<p class="col s12 m6"><span class="eo">bicikle</span> : en vélo</p>
 			</div>
 		</fieldset>
 

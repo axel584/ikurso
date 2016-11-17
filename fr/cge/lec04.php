@@ -7,7 +7,6 @@ include "dlekkapo.inc.php";
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
 				
-		?>
 		<section id="leciono-enhavo">
 		<?php 
 		getTitoloLecionero('CG',$leciono,$section);
@@ -119,7 +118,7 @@ include "dlekkapo.inc.php";
 		if ($section=="4") {
 		?>
 		
-			<p>Les syllabes accentuées sont soulignées et, comme d’habitude, le petit bouton à gauche vous indique la présence d’échantillons sonores
+			<p class="parto">Les syllabes accentuées sont soulignées et, comme d’habitude, le petit bouton à gauche vous indique la présence d’échantillons sonores
 			associés.
 			</p>
 			<div class="row">
@@ -307,76 +306,79 @@ include "dlekkapo.inc.php";
 		} // fin section
 		if ($section=="7") {
 		?>
-			<p>
-			Voici une liste de mots (avec traduction et accent tonique indiqué) qui 
-			représentent les différents sons de l’espéranto. étudiez-les et prononcez-les
-			soigneusement. Votre prononciation s’améliorera petit à petit.
+			<p class="parto">Voici une liste de mots qui représentent les différents sons de l’espéranto. 
+			Lisez-les à voix haute en respectant faisant attention à l’accent tonique (indiqué par un soulignement). Votre prononciation s’améliorera petit à petit.
 			</p>
+			<?php if ($persono) { ?>
+			<p class="eo eta"><b>NOTE </b>: Les mots précédés de <span class="marque">•</span> seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
 			
-			<div class="vortlisto row">
-				<div class="col s12 m4">
-					<p><span class="eo">a<u>ĉe</u>ti</span> : acheter</p>
-					<p><span class="eo">al (1)</span> : vers, à</p>
-					<p><span class="eo">An<u>glu</u>jo</span> : Angleterre</p>
-					<p><span class="eo">a<u>non</u>co</span> : annonce</p>
-					<p><span class="eo"><u>an</u>taŭ</span> : avant</p>
-					<p><span class="eo">bi<u>ci</u>klo</span> : bicyclette</p>
-					<p><span class="eo">bild<u>kar</u>to</span> : carte postale</p>
-					<p><span class="eo"><u>bil</u>do</span> : image</p>
-					<p><span class="eo"><u>ĉam</u>bro</span> : pièce</p>
-					<p><span class="eo">Ĉi<u>ni</u>o</span> : Chine</p>
-					<p><span class="eo">ĉoko<u>la</u>do</span> : chocolat</p>
-					<p><span class="eo"><u>dan</u>co</span> : danse</p>
-					<p><span class="eo">de (2)</span> : de</p>
-					<p><span class="eo">de<u>zi</u>ri</span> : désirer</p>
-					<p><span class="eo"><u>do</u>mo</span> : maison</p>
-					<p><span class="eo"><u>ed</u>zo</span> : époux</p>
-					<p><span class="eo">ed<u>zi</u>no</span> : épouse</p>
-					<p><span class="eo">el (3)</span> : hors de</p>
-					<p><span class="eo">esperan<u>tis</u>to</span> : espérantiste</p>
+			<fieldset class="vortoj">
+				<div class="vortlisto row">
+					<div class="col s12 m4">
+						<p><span class="marque">•</span> <span class="eo">a<u>ĉe</u>ti</span> : acheter</p>
+						<p><span class="marque">•</span> </span><span class="eo">al (1)</span> : vers, à</p>
+						<p><span class="marque">•</span> <span class="eo">An<u>glu</u>jo</span> : Angleterre</p>
+						<p>&nbsp;&nbsp;<span class="eo">a<u>non</u>co</span> : annonce</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>an</u>taŭ</span> : avant</p>
+						<p><span class="marque">•</span> <span class="eo">bi<u>ci</u>klo</span> : bicyclette</p>
+						<p><span class="marque">•</span> <span class="eo">bild<u>kar</u>to</span> : carte postale</p>
+						<p><span class="marque">•</span> <span class="eo"><u>bil</u>do</span> : image</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ĉam</u>bro</span> : pièce</p>
+						<p><span class="marque">•</span> <span class="eo">Ĉi<u>ni</u>o</span> : Chine</p>
+						<p><span class="marque">•</span> <span class="eo">ĉoko<u>la</u>do</span> : chocolat</p>
+						<p><span class="marque">•</span> <span class="eo"><u>dan</u>co</span> : danse</p>
+						<p><span class="marque">•</span> <span class="eo">de (2)</span> : de</p>
+						<p><span class="marque">•</span> <span class="eo">de<u>zi</u>ri</span> : désirer</p>
+						<p><span class="marque">•</span> <span class="eo"><u>do</u>mo</span> : maison</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ed</u>zo</span> : époux</p>
+						<p><span class="marque">•</span> <span class="eo">ed<u>zi</u>no</span> : épouse</p>
+						<p><span class="marque">•</span> <span class="eo">el (3)</span> : hors de</p>
+						<p><span class="marque">•</span> <span class="eo">esperan<u>tis</u>to</span> : espérantiste</p>
+					</div>
+					<div class="col s12 m4">
+						<p>&nbsp;&nbsp;<span class="eo"><u>e</u>ĥo</span> : écho</p>
+						<p><span class="marque">•</span> <span class="eo">en</span> : dans</p>
+						<p><span class="marque">•</span> <span class="eo">Eŭ<u>ro</u>po</span> : Europe</p>
+						<p>&nbsp;&nbsp;<span class="eo">Eŭ<u>kli</u>do</span> : Euclide</p>
+						<p>&nbsp;&nbsp;<span class="eo">geogra<u>fi</u>o</span> : géographie</p>
+						<p><span class="marque">•</span> <span class="eo">gus<u>tu</u>mi</span> : goûter</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ĝo</u>jo</span> : joie</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>ĥo</u>ro</span> : chœur</p>
+						<p><span class="marque">•</span> <span class="eo">in<u>fa</u>no</span> : enfant</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>jaĥ</u>to</span> : yacht</p>
+						<p><span class="marque">•</span> <span class="eo">jam</span> : déjà</p>
+						<p><span class="marque">•</span> <span class="eo">ĵa<u>lu</u>za</span> : jaloux</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ĵaŭ</u>do</span> : jeudi</p>
+						<p><span class="marque">•</span> <span class="eo">ĵur<u>na</u>lo</span> : journal</p>
+						<p><span class="marque">•</span> <span class="eo">kaj (4)</span> : et</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ki</u>o</span> : quoi</p>
+						<p><span class="marque">•</span> <span class="eo">ko<u>lek</u>ti</span> : collectionner, rassembler</p>
+						<p><span class="marque">•</span> <span class="eo"><u>lan</u>do</span> : pays</p>
+					</div>
+					<div class="col s12 m4">
+						<p><span class="marque">•</span> <span class="eo">leci<u>o</u>no</span> : leçon</p>
+						<p><span class="marque">•</span> <span class="eo">ler<u>ne</u>jo</span> : école</p>
+						<p><span class="marque">•</span> <span class="eo"><u>li</u>bro</span> : livre</p>
+						<p><span class="marque">•</span> <span class="eo"><u>lo</u>ĝi</span> : habiter</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>ma</u>jo</span> : mai</p>
+						<p><span class="marque">•</span> <span class="eo"><u>man</u>ĝi</span> : manger</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>mej</u>lo</span> : mille (1,8 km)</p>
+						<p>&nbsp;&nbsp;<span class="eo">mo<u>nu</u>jo</span> : porte-monnaie</p>
+						<p><span class="marque">•</span> <span class="eo">neŭ<u>tra</u>la</span> : neutre</p>
+						<p><span class="marque">•</span> <span class="eo"><u>o</u>vo</span> : œuf</p>
+						<p><span class="marque">•</span> <span class="eo">plej</span> : plus (superlatif)</p>
+						<p><span class="marque">•</span> <span class="eo">poŝt<u>mar</u>ko</span> : timbre-poste</p>
+						<p>&nbsp;&nbsp;<span class="eo">sa<u>ge</u>to</span> : fléchette</p>
+						<p><span class="marque">•</span> <span class="eo">sand<u>vi</u>ĉo</span> : sandwich</p>
+						<p><span class="marque">•</span> <span class="eo"><u>spor</u>to</span> : sport</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ŝu</u>o</span> : chaussure</p>
+						<p>&nbsp;&nbsp;<span class="eo">tea<u>tra</u>ĵo</span> : pièce de théâtre</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ve</u>ni</span> : venir</p>
+						<p><span class="marque">•</span> <span class="eo">vo<u>ja</u>ĝi</span> : voyager</p>
+					</div>
 				</div>
-				<div class="col s12 m4">
-					<p><span class="eo"><u>e</u>ĥo</span> : écho</p>
-					<p><span class="eo">en</span> : dans</p>
-					<p><span class="eo">Eŭ<u>ro</u>po</span> : Europe</p>
-					<p><span class="eo">Eŭ<u>kli</u>do</span> : Euclide</p>
-					<p><span class="eo">geogra<u>fi</u>o</span> : géographie</p>
-					<p><span class="eo">gus<u>tu</u>mi</span> : goûter</p>
-					<p><span class="eo"><u>ĝo</u>jo</span> : joie</p>
-					<p><span class="eo"><u>ĥo</u>ro</span> : chœur</p>
-					<p><span class="eo">in<u>fa</u>no</span> : enfant</p>
-					<p><span class="eo"><u>jaĥ</u>to</span> : yacht</p>
-					<p><span class="eo">jam</span> : déjà</p>
-					<p><span class="eo">ĵa<u>lu</u>za</span> : jaloux</p>
-					<p><span class="eo"><u>ĵaŭ</u>do</span> : jeudi</p>
-					<p><span class="eo">ĵur<u>na</u>lo</span> : journal</p>
-					<p><span class="eo">kaj (4)</span> : et</p>
-					<p><span class="eo"><u>ki</u>o</span> : quoi</p>
-					<p><span class="eo">ko<u>lek</u>ti</span> : rassembler</p>
-					<p><span class="eo"><u>lan</u>do</span> : pays</p>
-					<p><span class="eo">vo<u>ja</u>ĝi</span> : voyager</p>
-				</div>
-				<div class="col s12 m4">
-					<p><span class="eo">leci<u>o</u>no</span> : leçon</p>
-					<p><span class="eo">ler<u>ne</u>jo</span> : école</p>
-					<p><span class="eo"><u>li</u>bro</span> : livre</p>
-					<p><span class="eo"><u>lo</u>ĝi</span> : habiter</p>
-					<p><span class="eo"><u>ma</u>jo</span> : mai</p>
-					<p><span class="eo"><u>man</u>ĝi</span> : manger</p>
-					<p><span class="eo"><u>mej</u>lo</span> : mille (1,8 km)</p>
-					<p><span class="eo">mo<u>nu</u>jo</span> : porte-monnaie</p>
-					<p><span class="eo">neŭ<u>tra</u>la</span> : neutre</p>
-					<p><span class="eo"><u>o</u>vo</span> : œuf</p>
-					<p><span class="eo">plej</span> : plus (superlatif)</p>
-					<p><span class="eo">poŝt<u>mar</u>ko</span> : timbre-poste</p>
-					<p><span class="eo">sa<u>ge</u>to</span> : fléchette</p>
-					<p><span class="eo">sand<u>vi</u>ĉo</span> : sandwich</p>
-					<p><span class="eo"><u>spor</u>to</span> : sport</p>
-					<p><span class="eo"><u>ŝu</u>o</span> : chaussure</p>
-					<p><span class="eo">tea<u>tra</u>ĵo</span> : pièce de théâtre</p>
-					<p><span class="eo"><u>ve</u>ni</span> : venir</p>
-				</div>
-			</div>
+			</fieldset>
 
 			<p class="rimarko"><strong>REMARQUE</strong> : 
 			Retenez bien ces quatre petits mots très fréquent&nbsp;:</p>
@@ -386,10 +388,97 @@ include "dlekkapo.inc.php";
 				<li><b>el</b> indique le mouvement hors d’un lieu (<span class="eo">li kuras el la lernejo</span> = il court hors de l’école, il sort en courant de l’école), l’origine (<span class="eo">teatraĵo el via lando</span>) ou la matière (<span class="eo">ovo el ĉokolado</span> = un œuf en chocolat). </li>
 				<li><b>kaj</b> = et </li>
 			</ol>
+			
 
 		<?php 
 		} // fin section
 		if ($section=="8") {
+		?>
+			<p class="parto">Vous avez vu dans la leçon précédente quelques mots de vocabulaire de rapportant à la date&nbsp;: </p>
+			<div class="vortlisto row">
+				<p class="col s6 m4"><span class="eo">semajno</span> : semaine</p>
+				<p class="col s6 m4"><span class="eo">tago</span> : jour</p>
+				<p class="col s6 m4"><span class="eo">jaro</span> : année</p>
+			</div>
+			
+			<p>Vous avez également appris comment dire les nombres, et vous savez donc déjà dire par exemple en quelle année nous sommes.</p>
+			<p>Nous allons maintenant voir comment dire la date complète en espéranto. Cela vous permettra aussi de faire une petite révision des nombres&nbsp;!</p>
+				
+			<?php if ($persono) { ?>
+			<p class="eta">Les mots présentés ici seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			
+			<fieldset class="vortoj">
+				<div class="vortlisto row">
+					<p class="col s12"><span class="eo">dato</span> : date</p>
+					<p class="col s6 m4"><span class="eo">hodiaŭ</span> : aujourd’hui</p>
+					<p class="col s6 m4"><span class="eo">morgaŭ</span> : demain</p>
+					<p class="col s6 m4"><span class="eo">hieraŭ</span> : hier</p>
+				</div>
+				<br>
+				<p>Les jours de la semaine&nbsp;: <span class="eo">la tagoj de la semajno</span></p>
+				<div class="vortlisto row">
+					<div class="col s6">
+						<p><span class="eo">lundo</span> : lundi</p>
+						<p><span class="eo">mardo</span> : mardi</p>
+						<p><span class="eo">merkredo</span> : mercredi</p>
+						<p><span class="eo">jaŭdo</span> : jeudi</p>
+					</div>
+					<div class="col s6">
+						<p><span class="eo">vendredo</span> : vendredi</p>
+						<p><span class="eo">sabato</span> : samedi</p>
+						<p><span class="eo">dimanĉo</span> : dimanche</p>
+					</div>
+				</div>
+				<br>
+				<p>Les mois de l’année&nbsp;: <span class="eo">la monatoj de la jaro</span></p>
+				<div class="vortlisto row">
+					<div class="col s6">
+						<p><span class="eo">januaro</span> : janvier</p>
+						<p><span class="eo">februaro</span> : février</p>
+						<p><span class="eo">marto</span> : mars</p>
+						<p><span class="eo">aprilo</span> : avril</p>
+						<p><span class="eo">majo</span> : mai</p>
+						<p><span class="eo">junio</span> : juin</p>
+					</div>
+					<div class="col s6">
+						<p><span class="eo">julio</span> : juillet</p>
+						<p><span class="eo">aŭgusto</span> : août</p>
+						<p><span class="eo">septembro</span> : septembre</p>
+						<p><span class="eo">oktobro</span> : octobre</p>
+						<p><span class="eo">novembro</span> : novembre</p>
+						<p><span class="eo">decembro</span> : décembre</p>
+					</div>
+				</div>
+			</fieldset>
+			
+			<p class="parto">Exemples :</p>
+			<div class="vortlisto row">
+				<p class="col s12"><span class="eo">Hodiaŭ estas lundo la dua de aŭgusto.</span> : Aujourd’hui nous sommes le lundi 21 aoŭt.</p>
+				<p class="col s12"><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.</span> : Demain nous serons le mardi 22 août.</p>
+				<p class="col s12"><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.</span> : Hier c’était dimanche 23 août.</p>
+				<p class="col s12"><span class="eo">En januaro estas tri dek unu tagoj.</span> : En janvier il y a 31 jours.</p>
+				<p class="col s12"><span class="eo">La unua de Majo estas la Tago de la Laboro</span> : Le premier mai est la Fête du Travail (litt. "le Jour du Travail")</p>
+			</div>
+			
+			<p class="parto">Lorsqu’on indique une date précise, on emploie souvent la terminaison <b>n</b> de l’accusatif. Vous verrez par la suite que l’accusatif est employé pour certains compléments, et pas uniquement pour le complément direct.</p>
+							
+			<div class="vortlisto row">
+				<p><span class="eo">Ili venos la deka<b>n</b> de aprilo.</span> : Ils viendront le 10 mars.</p>
+				<p><span class="eo">La dua<b>n</b> de julio, mi edziĝos. </span> : Le 2 juillet, je me marierai.</p>
+				<p><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2017</span> : Paris, le 15 juillet 1017 (par exemple au début d’une lettre)</p>
+			</div>
+				
+			<p class="parto">On peut utiliser également la forme adverbiale pour les jours et les mois.</p>
+			<div class="vortlisto row">
+				<p><span class="eo">Dimanĉ<b>e</b> mi ne laboras.</span> : Je ne travaille pas le dimanche.</p>
+			</div>
+			
+		</section>
+		
+		<?php 
+		} // fin section
+		if ($section=="10") {
 		?>
 			<p class="parto">Les <b>noms propres</b> se terminent en principe par <b>-o</b> comme les noms
 			communs, mais il peuvent aussi parfois garder leur forme et leur
@@ -432,7 +521,7 @@ include "dlekkapo.inc.php";
 	
 		<?php 
 		} // fin section
-		if ($section=="10") {
+		if ($section=="11") {
 		?>
 		
 			<fieldset class="ekzerco">
@@ -442,7 +531,7 @@ include "dlekkapo.inc.php";
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					9 => "Est-ce que ton père collectionne les timbres de mon pays ? (collectionner = KOLEKTI)",
+					9 => "Est-ce que ton père collectionne les timbres de mon pays ?",
 					10 => "Est-ce que son fils a oublié le thé et le lait ?",
 					11 => "A-t-il oublié de porter du pain à la sœur de Petro ?",
 					12 => "Est-ce que les enfants vont danser dans l’école ?",
@@ -482,7 +571,80 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="11") {
+		if ($section=="12") {
+		?>
+
+		<div class="row">
+			<div class="col s12 m6">
+				<p class="parto">L’espéranto est chanté depuis sa naissance, puisque Louis Lazare Zamenhof avait déjà écrit les paroles d’un hymne, <i>La Espero</i>, toujours entonné lors des grandes rencontres espérantistes.</p>
+			</div>
+			<div class="col s10 offset-s1 m6">
+				<div class="video-container">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/shNsmyrNN2g" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s12">
+				<p class="parto">Tous les styles musicaux sont aujourd’hui représentés dans la culture espérantophone. Certaines chansons sont des adaptations des langues nationales, d’autres des productions originales en espéranto. La gamme s’étend du hiphop de la Pafklik’ au reggae de Jonny M, en passant par le rock-pop de Kore, et de l’électro d’Inicialoj dc au répertoire de Brassens par Jacques Yvart, en passant par la bossa nova de Flávio Fonseca… pour n’en citer que quelques-uns.</p>
+			</div>
+			
+			<div class="col s12 m9">
+				<p>Certains artistes sont autoproduits, mais les associations nationales servent souvent de maisons de production. Les premiers labels apparus sont issus des éditeurs de livres LF-Koop en Suisse et Edistudio en Italie. Aujourd’hui, le label <a href="http://www.vinilkosmo.com/">Vinilkosmo</a> propose, près de Toulouse, l’un des principaux studios d’enregistrement des artistes espérantophones.</p>
+			</div>
+			<div class="col s6 m3 offset-s4">
+				<a href="http://www.vinilkosmo.com/"><img src="<?php echo $vojo;?>fr/cge/bildoj/vinilkosmo.gif" class="responsive-img" alt="Vinilkosmo"></a>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col s12">
+				<p class="parto">Parmi les chanteurs de l’Espérantie, présentons-en quelques-uns, de différents horizons&nbsp;:</p>
+				<ul>
+					<li><i class="material-icons tiny contraste-texte-A">star</i> <b>JoMo</b>, un chanteur français éclectique, connu pour ses adaptations, comme <em>La Bamba</em> (<em>La Bambo</em>), et ses productions originales dans différents styles (rock, folk, traditionnel).</li>
+					<li><i class="material-icons tiny contraste-texte-A">star</i> <b>Ĵomart kaj Nataŝa</b>, un duo kazakh installé en Suède, aux chansons à texte originales.</li>
+					<li><i class="material-icons tiny contraste-texte-A">star</i> <b>Kajto</b>, un groupe frison de musique populaire, aux paroles faciles à comprendre, qu’il est bon de reprendre en cœur ou en canon.</li>
+					<li><i class="material-icons tiny contraste-texte-A">star</i> <b>Amplifiki</b>, <b>Persone</b>, <b>Martin & la Talpoj</b> : trois groupes de rock-pop issus les uns des autres.</li>
+				</ul>
+			</div>
+			<div class="col s12 m7">
+				<p><i class="material-icons tiny contraste-texte-A">star</i> <b>Gijom</b>, un artiste de chanson, dont le répertoire, original et adapté du français, est en partie disponible gratuitement sur son site internet.</p>
+				<p><i class="material-icons tiny contraste-texte-A">star</i> Enfin, deux chansons faciles, pour commencer la navigation sur YouTube&nbsp;: <i>Jen</i> des Argentins <b>La Porkoj</b> et <i>Bluaj fragoj</i> du groupe brésilien <b>Merlin</b>.</p>
+			</div>
+			<div class="col s8 m5 offset-s2">
+				<video class="responsive-video" controls>
+					<source src="<?php echo $vojo;?>fr/cge/bildoj/jen.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s12">
+				<p class="parto">Pour en savoir plus, rendez-vous sur la Toile :</p>
+				<ul>
+					<li><a href="https://fr.wikipedia.org/wiki/Musique_esp%C3%A9rantophone">https://fr.wikipedia.org/wiki/Musique_espérantophone</a></li>
+					<li><a href="https://eo.wikipedia.org/wiki/Esperanto-muziko">https://eo.wikipedia.org/wiki/Esperanto-muziko</a></li>
+					<li><a href="https://eo.wikipedia.org/wiki/Esperanto-muzikalbumoj">https://eo.wikipedia.org/wiki/Esperanto-muzikalbumoj</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s12">
+				<p class="parto">Et pour découvrir l’espéranto en musique :</p>
+				<ul>
+					<li>à la radio : <a href="http://muzaiko.info">muzaiko.info</a></li>
+					<li>en albums : <a href="http://vinilkosmo.com">vinilkosmo.com</a></li>
+					<li>dans notre boutique en ligne : <a href="ikurso.esperanto-france.org/butiko.php">ikurso.esperanto-france.org/butiko.php</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<?php 
+		} // fin section
+		if ($section=="13") {
 		?>
 			<p>
 			La prononciation ne devrait plus avoir le moindre secret pour vous

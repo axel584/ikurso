@@ -47,7 +47,7 @@ if (count($elementNaskigxdato)==3) {
 
 				<div class="col s6 m4">
 					<label for="naskigxdato" class="">Date de naissance</label>
-					<input id="naskigxdato" name="naskigxdato" type="date" value="<?php echo $naskigxdato;?>" class="datepicker"s>
+					<input id="naskigxdato" name="naskigxdato" type="date" value="<?php echo $naskigxdato;?>" class="datepicker" />
 				</div>
 				<div class="col s3">
 					<input type="radio" name="sekso" id="seksoM" value="M" <?php if ($persono['sekso']=="M"){echo "checked";}?>>

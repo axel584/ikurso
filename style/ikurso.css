@@ -133,6 +133,11 @@ form p.col {
 #footer-konektigxi1 .btn-flat {
     padding: 0 1rem;
 }
+
+/*----- surcharge onglets -----*/
+.stirpanelo.tabs  {
+    margin-top: 1rem;
+}
 /*--------------------------------*/
 
 p {font-weight: 300;}

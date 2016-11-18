@@ -538,3 +538,18 @@ UPDATE nuna_kurso SET lastdato = NULL WHERE CAST(lastdato AS CHAR(20)) = '1999-0
 update lecioneroj set ordo=12 where id=42;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'La chanson espérantophone', 'TEKSTO', NULL, '11', '0', '0');
 
+-- ajout d'une section pour la date dans la leçon 4
+UPDATE lecioneroj SET ordo=9 WHERE id=39; 
+UPDATE lecioneroj SET ordo=10 WHERE id=40; 
+UPDATE lecioneroj SET ordo=11 WHERE id=41; 
+UPDATE lecioneroj SET ordo=12 WHERE id=269;
+UPDATE lecioneroj SET ordo=13 WHERE id=42; 
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'La date', 'TEKSTO', NULL, '8', '0', '0');
+
+-- ajout d'une section pour les corrélatifs dans la leçon 1
+UPDATE lecioneroj SET ordo=11 WHERE id=7;
+UPDATE lecioneroj SET ordo=12 WHERE id=8;
+UPDATE lecioneroj SET ordo=10 WHERE id=254;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '59', 'Premières questions', 'TEKSTO', NULL, '9', '0', '0');
+
+

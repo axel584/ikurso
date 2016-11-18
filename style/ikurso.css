@@ -133,6 +133,11 @@ form p.col {
 #footer-konektigxi1 .btn-flat {
     padding: 0 1rem;
 }
+
+/*----- surcharge onglets -----*/
+.stirpanelo.tabs  {
+    margin-top: 1rem;
+}
 /*--------------------------------*/
 
 p {font-weight: 300;}
@@ -485,8 +490,10 @@ p.parto:before {
 .vortlisto i.material-icons:hover {
 	color: #6d4c41;
 }
-.vortlisto div.col + div.col {
-    margin-top: 1em;
+@media only screen and (max-width: 720px) {
+	.vortlisto div.col + div.col {
+	    margin-top: 1em;
+	}
 }
 
 a[type="audio/mp3"] i.material-icons {

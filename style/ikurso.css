@@ -138,6 +138,19 @@ form p.col {
 .stirpanelo.tabs  {
     margin-top: 1rem;
 }
+
+/*----- surcharge collections -----*/
+secondary-content {
+    color: #2196F3;
+}
+.collection .collection-item:hover {
+    background-color: #E3F2FD;
+    cursor: pointer;
+}
+.collection .collection-item.active {
+    background-color: #2196F3;
+    color: #FFF;
+}
 /*--------------------------------*/
 
 p {font-weight: 300;}

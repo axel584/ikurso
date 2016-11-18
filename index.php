@@ -135,7 +135,7 @@ include "pagxkapo.inc.php";
 					<div class="col s12 m3 offset-m1">
 						<h5>duolingo</h5>
 						<p>Cours ludique pour débutants.<br>
-						N’existe pour l’instant qu’en anglais. (Nous attendons avec impatience une version pour les francophones.)</p>
+						N’existe pour l’instant qu’en anglais et en espagnol. (Nous attendons avec impatience une version pour les francophones.)</p>
 						<p class="container"><img class="responsive-img" src="<?=$vojo?>bildoj/duolingo.jpg" alt="logo du site duolingo.com"></p>
 						<p><a href="https://en.duolingo.com/course/eo/en/Learn-Esperanto-Online" class="btn-flat small"><i class="material-icons right">arrow_right</i>aller sur duolingo</a></p>
 					</div>

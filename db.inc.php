@@ -572,6 +572,12 @@ function troviPlejTauganKorektanton($persono_id,$kurso) {
     $OccupationMeilleurCorrecteur = 100.0;
     if ($kurso=="GR" || $kurso=="3N") {
         // cas Gerda, on regarde si l'élève avait déjà un élève pour le 1er cours
+        $demando = "select korektanto from nuna_kurso where studanto='".$persono_id."'";
+        $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+        $korektanto_id = $result->fetch()["korektanto"];
+        if ($korektanto_id!="") {
+            return $korektanto_id;
+        }
     }
     // cas où on n'a pas trouvé de correcteur pour un cours précédent
     $persono = apartigiPersonon($persono_id);

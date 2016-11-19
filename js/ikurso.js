@@ -143,6 +143,40 @@ $('#eniri_identigilo,#eniri_pasvorto').keyup(function(e) {
 });
 
 
+function rechercherVorton($pattern,$kurso) {
+        $.ajax({
+          url : $cheminAbsolu+'ajax/rechercherVorton.php',
+          type : 'GET',
+          dataType : 'html',
+          data : "pattern="+$pattern+"&kurso="+$kurso,
+          success : function(reponse, statut){ 
+              $("#vortlisto").replaceWith(reponse);
+          },
+          error : function(request, error) {
+            console.log("request : "+request+" / error : "+error);
+            alert("Erreur de connexion, contactez les administrateurs");
+
+          }
+      });
+}
+
+$("#pattern").on('keyup', function () {
+  $pattern = $(this).val();
+  $kurso = $(this).data("kurso");
+  console.log($kurso);
+  if ($pattern.length>2) {
+    rechercherVorton($pattern,$kurso);
+  }
+});
+
+$("#button_rechercher").click(function() {
+  $pattern = $("#pattern").val();
+  $kurso = $("#pattern").data("kurso");
+  console.log($kurso);
+  rechercherVorton($pattern,$kurso);
+});
+
+
   	$( "#connection_button" ).click(function() {
   		$("#connection_button").addClass("disabled");
   		$.ajax({

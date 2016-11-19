@@ -552,4 +552,35 @@ UPDATE lecioneroj SET ordo=12 WHERE id=8;
 UPDATE lecioneroj SET ordo=10 WHERE id=254;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '59', 'Premières questions', 'TEKSTO', NULL, '9', '0', '0');
 
+-- ajout d'une section pour l'exercice sur la date dans la leçon 4
+UPDATE lecioneroj SET ordo=10 WHERE id=39; 
+UPDATE lecioneroj SET ordo=11 WHERE id=40; 
+UPDATE lecioneroj SET ordo=12 WHERE id=41; 
+UPDATE lecioneroj SET ordo=13 WHERE id=269;
+UPDATE lecioneroj SET ordo=14 WHERE id=42; 
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'Exercice 2 : la date', 'EKZERCARO', NULL, '9', '0', '0');
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 3 : pratique du vocabulaire' WHERE `id` = 40; 
+UPDATE `lecioneroj` SET `titolo` = 'Exercices 4 et 5' WHERE `id` = 41;
 
+-- décalage des exercices de la leçon 4 après insertion de l'exercice sur les dates
+UPDATE `respondoj` SET `kodo` = 'ekz04_28', `demando` = '28 Avez-vous vu la nouvelle pièce de théâtre ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_24';
+UPDATE `respondoj` SET `kodo` = 'ekz04_27', `demando` = '27 Avez-vous deux euros et trente centimes (euro = eŭro, centime = cendo) ?' WHERE `lecionero_id` = 41 AND `kodo` LIKE 'ekz04_23';
+UPDATE `respondoj` SET `kodo` = 'ekz04_26', `demando` = '26 Est-ce que sa femme est la mère de ton amie ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_22';
+UPDATE `respondoj` SET `kodo` = 'ekz04_25', `demando` = '25 Avez-vous goûté le gâteau ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_21';
+UPDATE `respondoj` SET `kodo` = 'ekz04_24', `demando` = '24 Est-ce que le lait est froid ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_20';
+UPDATE `respondoj` SET `kodo` = 'ekz04_23', `demando` = '23 Ta mère vient-elle d’Europe ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_19';
+UPDATE `respondoj` SET `kodo` = 'ekz04_22', `demando` = '22 Sont-ils de bons amis ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_18';
+UPDATE `respondoj` SET `kodo` = 'ekz04_21', `demando` = '21 Est-ce que le frère de la fille malade écrivait mal ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_17';
+UPDATE `respondoj` SET `kodo` = 'ekz04_20', `demando` = '20 Vendent-ils du thé et du café dans la nouvelle boutique ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_16';
+UPDATE `respondoj` SET `kodo` = 'ekz04_19', `demando` = '19 Est-ce que la nouvelle institutrice a oublié le livre dans une pièce de l’école ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_15';
+UPDATE `respondoj` SET `kodo` = 'ekz04_18', `demando` = '18 Est-ce que le père lavera les petites tasses dans la maison de Fatima ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_14';
+UPDATE `respondoj` SET `kodo` = 'ekz04_17', `demando` = '17 Est-ce qu’un garçon en bonne santé boit du lait ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_13';
+UPDATE `respondoj` SET `kodo` = 'ekz04_16', `demando` = '16 Est-ce que les enfants vont danser dans l’école ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_12';
+UPDATE `respondoj` SET `kodo` = 'ekz04_15', `demando` = '15 A-t-il oublié de porter du pain à la sœur de Petro ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_11';
+UPDATE `respondoj` SET `kodo` = 'ekz04_14', `demando` = '14 Est-ce que son fils a oublié le thé et le lait ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_10';
+UPDATE `respondoj` SET `kodo` = 'ekz04_13', `demando` = '13 Est-ce que ton père collectionne les timbres de mon pays ? (collectionner = KOLEKTI)' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_09';
+UPDATE `respondoj` SET `kodo` = 'ekz04_12', `demando` = '12 Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras aĉeti sandviĉon. Li manĝos ilin vespere.' WHERE `lecionero_id` = 40 AND `kodo` = 'ekz04_08';
+UPDATE `respondoj` SET `kodo` = 'ekz04_11', `demando` = '11 La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.' WHERE `lecionero_id` = 40 AND `kodo` = 'ekz04_07';
+UPDATE `respondoj` SET `kodo` = 'ekz04_10', `demando` = '10 Petro, la filo de Fatima, kolektas poŝtmarkojn kaj bildojn el ĵurnaloj. Maria, lia fratino, promenas bicikle.' WHERE `lecionero_id` = 40 AND `kodo` = 'ekz04_06';
+UPDATE `respondoj` SET `kodo` = 'ekz04_09', `demando` = '9 Fatima deziras aĉeti novajn ŝuojn al la infanoj.' WHERE `lecionero_id` = 40 AND `kodo` = 'ekz04_05';
+UPDATE `respondoj` SET `kodo` = 'ekz04_08', `demando` = '8 Simeono estas la edzo de Fatima. Li amas ŝin. Li, la edzino kaj la infanoj loĝas en Eŭropo, en granda domo.' WHERE `lecionero_id` = 40 AND `kodo` = 'ekz04_04';

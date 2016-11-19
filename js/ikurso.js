@@ -163,10 +163,7 @@ function rechercherVorton($pattern,$kurso) {
 $("#pattern").on('keyup', function () {
   $pattern = $(this).val();
   $kurso = $(this).data("kurso");
-  console.log($kurso);
-  if ($pattern.length>2) {
-    rechercherVorton($pattern,$kurso);
-  }
+  rechercherVorton($pattern,$kurso);
 });
 
 $("#button_rechercher").click(function() {

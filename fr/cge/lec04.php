@@ -454,11 +454,11 @@ include "dlekkapo.inc.php";
 			
 			<p class="parto">Exemples :</p>
 			<div class="vortlisto row">
-				<p class="col s12"><span class="eo">Hodiaŭ estas lundo la dua de aŭgusto.</span> : Aujourd’hui nous sommes le lundi 21 août.</p>
-				<p class="col s12"><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.</span> : Demain nous serons le mardi 22 août.</p>
-				<p class="col s12"><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.</span> : Hier c’était dimanche 23 août.</p>
+				<p class="col s12"><span class="eo">Hodiaŭ estas lundo la dua de aŭgusto.</span> : Aujourd’hui nous sommes le lundi 2 août.</p>
+				<p class="col s12"><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.</span> : Demain nous serons le mardi 3 août.</p>
+				<p class="col s12"><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.</span> : Hier c’était dimanche 1<sup>er</sup> août.</p>
 				<p class="col s12"><span class="eo">En januaro estas tri dek unu tagoj.</span> : En janvier il y a 31 jours.</p>
-				<p class="col s12"><span class="eo">La unua de Majo estas la Tago de la Laboro</span> : Le premier mai est la Fête du Travail (litt. "le Jour du Travail")</p>
+				<p class="col s12"><span class="eo">La unua de Majo estas la Tago de la Laboro</span> : Le premier mai est la Fête du Travail (littéralement "le Jour du Travail")</p>
 			</div>
 			
 			<p class="parto">Lorsqu’on indique une date précise, on emploie souvent la terminaison <b>n</b> de l’accusatif. Vous verrez par la suite que l’accusatif est employé pour certains compléments, et pas uniquement pour le complément direct.</p>
@@ -473,6 +473,8 @@ include "dlekkapo.inc.php";
 			<div class="vortlisto row">
 				<p><span class="eo">Dimanĉ<b>e</b> mi ne laboras.</span> : Je ne travaille pas le dimanche.</p>
 			</div>
+			
+			<div class="card-panel blue lighten-5">Cela fait beaucoup de nouvelles choses à mémoriser, mais ne vous tracassez pas trop. Prenez un peu de temps pour assimiler tout ça et n’hésitez pas à revenir relire cette page dans quelques jours. N’oubliez pas de pratiquer régulièrement, par exemple en indiquant la date du jour à votre correcteur quand vous lui enverrez vos prochains exercices.</div>
 			
 		</section>
 		

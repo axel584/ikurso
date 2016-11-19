@@ -584,3 +584,32 @@ UPDATE `respondoj` SET `kodo` = 'ekz04_11', `demando` = '11 La infanoj kuras al 
 UPDATE `respondoj` SET `kodo` = 'ekz04_10', `demando` = '10 Petro, la filo de Fatima, kolektas poŝtmarkojn kaj bildojn el ĵurnaloj. Maria, lia fratino, promenas bicikle.' WHERE `lecionero_id` = 40 AND `kodo` = 'ekz04_06';
 UPDATE `respondoj` SET `kodo` = 'ekz04_09', `demando` = '9 Fatima deziras aĉeti novajn ŝuojn al la infanoj.' WHERE `lecionero_id` = 40 AND `kodo` = 'ekz04_05';
 UPDATE `respondoj` SET `kodo` = 'ekz04_08', `demando` = '8 Simeono estas la edzo de Fatima. Li amas ŝin. Li, la edzino kaj la infanoj loĝas en Eŭropo, en granda domo.' WHERE `lecionero_id` = 40 AND `kodo` = 'ekz04_04';
+
+-- ajout en base du nouveau vocabulaire de la leçon 1
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('kie','où','pronom',3);
+
+-- ajout en base du nouveau vocabulaire de la leçon 4
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('kie','où','pronom',3);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('dato','date','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('hodiaŭ','aujourd''hui','adv',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('morgaŭ','demain','adv',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('hieraŭ','hier','adv',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('lundo','lundi','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('mardo','mardi','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('merkredo','mercredi','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('jaŭdo','jeudi','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('vendredo','vendredi','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('sabato','samedi','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('dimanĉo','dimanche','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('januaro','janvier','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('februaro','février','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('marto','mars','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('aprilo','avril','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('majo','mai','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('junio','juin','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('julio','juillet','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('aŭgusto','août','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('septembro','septembre','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('oktobro','octobre','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('novembro','novembre','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('decembro','décembre','nom',271);

@@ -588,8 +588,11 @@ UPDATE `respondoj` SET `kodo` = 'ekz04_08', `demando` = '8 Simeono estas la edzo
 -- ajout en base du nouveau vocabulaire de la leçon 1
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('kie','où','pronom',3);
 
+-- ajout en base du nouveau vocabulaire de la leçon 2
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('kiel','comment, comme','pronom',221);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('tiel','ainsi, comme ça','pronom',221);
+
 -- ajout en base du nouveau vocabulaire de la leçon 4
-insert into vortoj (eo,fr,tipo,lecionero_id) values ('kie','où','pronom',3);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('dato','date','nom',271);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('hodiaŭ','aujourd''hui','adv',271);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('morgaŭ','demain','adv',271);
@@ -613,3 +616,6 @@ insert into vortoj (eo,fr,tipo,lecionero_id) values ('septembro','septembre','no
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('oktobro','octobre','nom',271);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('novembro','novembre','nom',271);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('decembro','décembre','nom',271);
+
+
+

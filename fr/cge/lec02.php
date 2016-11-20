@@ -139,41 +139,40 @@ QCM_bildoj(
 			<p class="col s6">Nous sucrons les cafés chauds.</p>
 		</div>
 
-		<p class="rimarko"><strong>REMARQUE</strong> : 
-		Notez que la terminaison du pluriel vient avant celle de l’accusatif, qui
+		<p class="rimarko"><strong>REMARQUE</strong> : </p>
+		
+		<ul>
+			<li>Notez que la terminaison du pluriel vient avant celle de l’accusatif, qui
 		elle-même vient toujours en dernier. Prononcez <span class="eo">varmajn</span> comme
 		<span class="eo"><em><u>var</u>m-ail-ne</em></span> (e muet) et <span class="eo">kafojn</span> comme 
-		<span class="eo"><em><u>ka</u>f-oï-ne</em></span> (e muet).</p>
+		<span class="eo"><em><u>ka</u>f-oï-ne</em></span> (e muet).</li>
+		</ul>
 		
 		<?php 
 		} // fin section
 		if ($section=="4") {
 		?>
 		
-		<p class="parto">En général les compléments autres que les compléments d’objet direct
-		(par exemple, les compléments circonstanciels) sont introduits par des
-		prépositions et ne prennent pas la marque de l’accusatif <b>-n</b>.  Ceci
-		car la préposition qui les introduit nous permet de reconnaître leur
-		fonction de complément. Nous verrons ces prépositions plus tard, ainsi
-		que d’autres cas dans lesquels l’usage de l’accusatif peut être utile,
-		y compris après une préposition.</p>
+		<p>Dans les leçons suivantes, vous verrez d’autres compléments, tels que les compléments de temps, de lieu, de manière, etc. Ils sont généralement introduit par une préposition.</p>
+
 		<p>Avec le verbe <i>être</i> qui n’a jamais de complément d’objet direct, on
 		n’utilise pas l’accusatif, car le verbe <i>être</i> implique que le sujet et
 		l’attribut sont « équivalents ».</p>
-		<p>« Elle est belle. » équivaut à « Elle = belle. »</p>
+		<p><span class="eo">Ŝi estas bela.</span> équivaut à : <span class="eo">Ŝi = bela</span>.</p>
+		<p><span class="eo">Li estas instruisto.</span> équivaut à : <span class="eo">Li = instruisto</span>.</p>
 	
 		<?php 
 		} // fin section
 		if ($section=="5") {
 		?>
 		
-		<p class="parto">Le suffixe <b>-in</b> vous a déj&agrave; permis d’augmenter votre vocabulaire en
+		<p class="parto">Le suffixe <b>-in</b> vous a déjà permis d’augmenter votre vocabulaire en
 		doublant le nombre d’êtres vivants sexués que vous êtes capable de nommer.
-		Quand vous saurez dire <em>cheval</em>, <em>bélier</em>, <em>souris m&acirc;le</em>,
+		Quand vous saurez dire <em>cheval</em>, <em>bélier</em>, <em>souris mâle</em>,
 		<em>acteur</em>, etc. vous saurez également dire <em>jument</em>,
 		<em>brebis</em>, <em>souris femelle</em>, <em>actrice</em>, etc. </p>
 		
-		<p class="parto">Le préfixe <b>mal-</b> fera de même en vous permettant de conna&icirc;tre le
+		<p class="parto">Le préfixe <b>mal-</b> fera de même en vous permettant de connaître le
 		contraire des mots auxquels il s’accole. Quand vous aurez assimilé
 		<em>aimer</em>, <em>beau</em>, <em>gauche</em>, <em>vrai</em>, etc. vous saurez
 		dire aussi <em>détester</em>, <em>laid</em>, <em>droite</em>, <em>faux</em>, etc.</p>
@@ -365,14 +364,30 @@ QCM_bildoj(
 		<fieldset class="vortoj">
 			<legend>EXPRESSIONS À RETENIR</legend>
 			<div class="vortlisto row">
-				<p class="col s6"><span class="eo">Kiel vi fartas ?</span></p><p class="col s6">Comment allez-vous ?</p>
-				<p class="col s5 offset-s1"><span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">Bien. Et vous ?</p>
-				<p class="col s5 offset-s1"><span class="eo">– Bonege.</span></p><p class="col s6">Parfaitement bien.</p>
-				<p class="col s5 offset-s1"><span class="eo">– Sufiĉe bone.</span></p><p class="col s6">Assez bien. (ça va)</p>
-				<p class="col s5 offset-s1"><span class="eo">– Ne tro bone.</span></p><p class="col s6">Pas trop bien.</p>
+				<p class="col s6"><span class="eo">Kiel vi fartas ?</span></p><p class="col s6">Comment allez-vous&nbsp;?</p>
+				<p class="col s5 offset-s1"><span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">– Bien. Et vous&nbsp;?</p>
+				<p class="col s5 offset-s1"><span class="eo">– Bonege.</span></p><p class="col s6">– Parfaitement bien.</p>
+				<p class="col s5 offset-s1"><span class="eo">– Sufiĉe bone.</span></p><p class="col s6">– Assez bien. (ça va)</p>
+				<p class="col s5 offset-s1"><span class="eo">– Ne tro bone.</span></p><p class="col s6">– Pas trop bien.</p>
 			</div>
 		</fieldset>
 		
+		<p class="parto"><b>Kiel? Tiel!</b></p>
+		
+		<p>Comme dans l’exemple ci-dessus, <b>kiel</b> permet d’interroger sur la manière d’être ou la manière de faire quelque chose. Vous vous souvenez peut-être que dans la leçon précédente (<a href="lec01.php?section=10">section 1.10</a>), nous vous avions présenté cette phrase pour demander comment dire un certain mot en espéranto&nbsp;:<br><span class="eo">Kiel oni diras … en Esperanto?</span> : Comment dit-on … en espéranto&nbsp;?</p>
+		
+		<p>À une question commençant par <b>kiel</b> on peut répondre par exemple en utilisant <b>tiel</b>.
+
+		<p><b>Kiel</b> peut aussi être utilisé dans une comparaison.</p>
+		
+		<p>Exemples :</p>
+		<div class="vortlisto row">
+			<p class="col s6"><span class="eo">Kiel vi faras?</span></p><p class="col s6">Comment faites-vous&nbsp;?</p>
+			<p class="col s6"><span class="eo">– Tiel!</span></p><p class="col s6">– Comme ça&nbsp;!</p>
+			<p class="col s6"><span class="eo">Tiel estas.</span></p><p class="col s6">C’est ainsi.</p>
+			<p class="col s6"><span class="eo">Ŝi skribas kiel mia patrino.</span></p><p class="col s6">Elle écrit comme ma mère.</p>
+		</div>
+
 		<?php 
 		} // fin section
 		

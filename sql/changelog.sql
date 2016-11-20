@@ -617,5 +617,16 @@ insert into vortoj (eo,fr,tipo,lecionero_id) values ('oktobro','octobre','nom',2
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('novembro','novembre','nom',271);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('decembro','décembre','nom',271);
 
+-- ajout de deux sections dans la leçon 3
+UPDATE lecioneroj SET ordo = 14 WHERE id = 31;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '61', 'Qu''est-ce que c''est ?', 'TEKSTO', NULL, '12', '0', '0');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '61', 'Exercice 5', 'EKZERCARO', NULL, '13', '0', '0');
+
+-- ajout en base du nouveau vocabulaire pour la leçon 3
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('kio','quoi, que','pronom',274);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('tio','ce, cela, ça','pronom',274);
+
+
+
 
 

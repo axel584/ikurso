@@ -432,17 +432,17 @@ include "dlekkapo.inc.php";
 		?>
 		
 			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Traduisez en espéranto.</legend>
+				<legend><strong>EXERCICE</strong> : Traduisez en espéranto en écrivant les nombres en toutes lettres.</legend>
 				<?php atentigo();	?>
 				<input type="hidden" name="013_cxap03.4" value="4. Traduisez en espéranto.">
 				<div class="tasko">
 				<?php
 					$demandoj=array (
 					16 => "Soixante minutes font une heure. (utiliser le verbe <i>esti</i>)",
-					17 => "Seize heures font un jour; huit heures font une nuit.",
+					17 => "Seize heures font un jour ; huit heures font une nuit.",
 					18 => "Sept jours font une semaine.",
 					19 => "Le troisième garçon est mon second fils.",
-					20 => "J’ai neuf cent quatre-vingt dix-neuf biscuits."
+					20 => "J’ai 999 biscuits."
 					);
 					ekzerco(True, 1);
 				?>
@@ -452,6 +452,74 @@ include "dlekkapo.inc.php";
 		<?php 
 		} // fin section
 		if ($section=="12") {
+		?>
+		<p class="parto"><b>Kio</b> permet de demander ce qu’est quelque chose. On peut aussi l’utiliser pour interroger ce qu’est une personne, par exemple ce qu’elle fait dans la vie, quelle est sa position sociale, etc. Il se traduit souvent par <em>que, quoi</em>.</p>
+		</p>
+		<p>Le pronom <b>tio</b> permet de reprendre ce qui est désigné dans la question. Il se traduit souvent par <em>ce</em>, <em>c’</em> (comme dans <em>c’est</em>), <em>cela</em>, <em>ça</em>.</p>
+		
+		<p><b>REMARQUE</b> : Si vous souhaitez interroger sur l’identité de la personne, savoir uel est son nom, vous utilisez le pronom interrogatif <b>kiu</b> que vous avez déjà vu dans la leçon 1.</p>
+
+		<p>Exemples :</p>
+		<div class="row">
+			<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/img-02-01.jpg"></p>
+			<p class="col s7 m9"><span class="eo"><b>Kio</b> estas tio?<br>– <b>Tio</b> estas kafo.</span></p>
+		</div>
+		<div class="row">
+			<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/img-02-02.jpg"></p>
+			<p class="col s7 m9"><span class="eo">Kaj <b>tio</b>?<br>– <b>Tio</b> estas pano.</span></p>
+		</div>
+		<div class="row">
+			<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/allan.jpg"></p>
+			<div class="col s6 m9 row">
+				<p class="col s12 m6"><span class="eo"><b>Kio</b> estas la viro?<br>– Li estas studento.<br>– Li estas Brazilano.</span></p> 
+				<p class="col s12 m6"><span class="eo"><b>Kiu</b> estas la viro?<br>– Li estas Allan.</span></p> 
+			</div>
+		</div>
+		
+		<p class="parto">Lorsque <b>kio</b> est complément d’objet direct, il prend la terminaison <b>n</b> de l’accusatif.</p>
+		<p>Exemple :</p>
+		<div class="row">
+			<p class="col s6 m4"><span class="eo">Kio<b>n</b> vi vidas?</span></p><p class="col s6 m8">Que vois-tu&nbsp;?</p>
+			<p class="col s6 m4"><span class="eo">– Mi vidas birdo<b>n</b>.</span></p><p class="col s6 ">– Je vois un oiseau.</p>
+		</div>
+
+		<?php 
+		} // fin section
+		if ($section=="13") {
+		?>
+		<div class="row">
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/varsovio.jpg"><br>-1-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/prof.jpg"><br>-2-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/insekto.jpg"><br>-3-</span></p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/zamenhof.jpg"><br>-4-</p>
+		</div>
+		
+		<fieldset class="ekzerco">
+			<legend><strong>EXERCICE</strong> : Écrivez une question pour chaque image, puis donnez la réponse à cette question.</legend>
+			<input type="hidden" name="013_cxap01.2" value="Pour chacune des images ci-dessus, écrivez une question, puis donnez la réponse à cette question.">
+			<p>Utilisez le vocabulaire que vous avez vu dans les 3 premières leçons. Essayez d’utiliser au moins une fois chacun des mots interrogatifs suivants : <b>kio</b>, <b>kiu</b>, <b>kie</b>.</p>
+			<div class="tasko">
+			<?php 	
+				$demandoj=array (
+				21 => "image 1.",
+				22 => "image 2.",
+				23 => "image 3. (FOTI = photographier)",
+				24 => "image 4.",
+				);
+				ekzerco(True, 1);
+			?>
+			</div>
+		</fieldset>
+		
+		<p>Crédits photos :</p>
+		<p class="creditphoto">1. Carte de le Pologne. <a href="https://commons.wikimedia.org/wiki/File%3ARelief_Map_of_Poland.png">By derivative work Виктор_В [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons</a></p>
+		<p class="creditphoto">2. <a href="https://commons.wikimedia.org/wiki/File%3ATeaching.png">By uploaded by Xiaphias (USDA Forestry Service website) [Public domain], via Wikimedia Commons</a></p>
+		<p class="creditphoto">3. <em>E. Richard, 2016</em></p>
+		<p class="creditphoto">4. L. L. Zamenhof <a href="https://commons.wikimedia.org/wiki/File%3A1908-kl-t-zamenhof.jpg">[Public domain], via Wikimedia Commons</a></p> 
+		
+		<?php 
+		} // fin section
+		if ($section=="14") {
 		?>
 			<p>Résumons-nous.</p>
 			<p>Vous avez maintenant appris à former toutes sortes de

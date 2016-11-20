@@ -225,7 +225,7 @@ QCM_bildoj(
 		
 		<p class="parto">Voici maintenant un peu de vocabulaire.</p>
 		<?php if ($persono) { ?>
-		<p >Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+		<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 		<?php } ?>
 
 		<fieldset class="vortoj">
@@ -269,10 +269,15 @@ QCM_bildoj(
 		en vous reportant aux indications de prononciation de la première
 		leçon.</p>
 		
-		<p>Notez que tous les verbes se conjuguent exactement comme le verbe
+		<p class="parto">Notez que tous les verbes se conjuguent exactement comme le verbe
 		<span class="eo">esti</span> en changeant le <b>-i</b> final pour <b>-as</b> au présent,
 		<b>-is</b> au passé et <b>-os</b> au futur. Ces trois temps simples nous
 		suffiront pour le moment.</p>
+		
+		<p class="parto">Dans l’exemple suivant, vous remarquerez que certains petits mots employés en français ne se retrouvent pas en espéranto. Ils sont écrits ici entre crochets.</p>
+			<div class="vortlisto row">
+				<p class="col s12"><span class="eo">Mi forgesis trinki akvon.</span> : J’ai oublié [de] boire [de l’] eau.</p>
+			</div>
 				
 		<?php 
 		} // fin section
@@ -358,7 +363,7 @@ QCM_bildoj(
 	?>
 	<p class="parto">Voici quelques expressions pour demander à quelqu’un comment il va. Apprenez-les par cœur dans un premier temps. Nous les reverrons par la suite.</p>
 		<?php if ($persono) { ?>
-		<p >Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+		<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 		<?php } ?>
 
 		<fieldset class="vortoj">

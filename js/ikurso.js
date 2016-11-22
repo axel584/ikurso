@@ -1,10 +1,17 @@
   $(document).ready(function(){
 
+
+
     // méthode pour afficher la popup modale pour choisir un nouveau mot de passe si l'url contient novigiPasvorton
     $url = window.location.href;
     if ($url.indexOf("novigiPasvorton=")>-1) {
       $('#novigi_pasvorton').openModal();
     }
+
+
+    // méthode pour les selecteurs de date dans la partie administration
+    //$('#debut_protokolo').pickadate({format: 'yyyy-mm-dd',format_submit: 'yyyy-mm-dd'});
+    //$('#fin_protokolo').pickadate({format: 'yyyy-mm-dd',format_submit: 'yyyy-mm-dd'});
 
     $(document).ajaxStart(function() {
         $(document.body).css({'cursor' : 'progress'});
@@ -173,6 +180,31 @@ $("#button_rechercher").click(function() {
   rechercherVorton($pattern,$kurso);
 });
 
+$( "#serchi_protokolon_button").click(function() {
+  if ($( "#debut_protokolo" ).val()!="") {
+    var $debut = new Date($( "#debut_protokolo" ).val()).toISOString().substring(0, 10);
+  } else {
+    var $debut ="";
+  }
+  if ($( "#fin_protokolo" ).val()!="") {
+    var $fin = new Date($( "#fin_protokolo" ).val()).toISOString().substring(0, 10);
+} else {
+  var $fin="";
+}
+    console.log($debut);
+          $.ajax({
+          url : $cheminAbsolu+'ajax/sercxiProtokolon.php',
+          type : 'GET',
+          dataType : 'html',
+          data : 'debut='+$debut+"&fin="+$fin+"&persono="+$( "#persono_protokolo" ).val()+"&type="+$( "#type_protokolo" ).val(),
+          success : function(reponse, statut){ 
+                $("#resultat_recherche_protokolo").html(reponse);
+          },
+          error : function() {
+            alert("Erreur de connexion, contactez les administrateurs");
+          }
+      });
+});
 
   	$( "#connection_button" ).click(function() {
   		$("#connection_button").addClass("disabled");

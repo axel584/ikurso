@@ -54,27 +54,6 @@ function listi_eniro($nb) {
         echo "</tbody></table>";
 }
 
-function listi_protokolo($nb) {
-	global $bdd;
-        $demando = "select * from protokolo order by horo DESC";
-		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-        echo "<table class='voca'>\n<thead>\n<tr>\n<td>Kiam ?</td>\n<td>Kiu ?</td>\n<td>Kio ?</td>\n</tr>\n</thead>\n<tbody>";
-        $i=0;
-        while ($row=$result->fetch()) {
-         $i++;
-         echo "<tr>\n<td class='col1' nowrap>";
-         echo $row["horo"]."</td>\n<td nowrap>";
-         if ($row["persono_id"]!=0) {
-         echo "<a href='administri.php?celpersono_id=".$row["persono_id"]."'>".$row["persono_id"]."</a></td>\n<td>";
-        } else {
-        	echo "&nbsp;</td>\n<td width='260'>";
-        }
-         echo stripslashes($row['teksto'])."</td>\n</tr>\n";
-         if ($i>$nb) break;
-        }
-        echo "</tbody></table>";
-}
-
 function listi_malfruajLernantoj($nb) {
 	global $bdd;
 	$demando = "select nuna_kurso.ekdato as ekdato,nuna_kurso.id as id,nuna_kurso.studanto as studanto,nuna_kurso.korektanto as korektanto from nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and stato='N'";

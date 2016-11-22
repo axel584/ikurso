@@ -768,4 +768,43 @@ function vortlisto($persono_id,$kurso,$pattern) {
 	echo "</div></div></div>";
 }
 
+
+// administration
+
+function listi_protokolo($nb_max_ligne,$debut = "",$fin = "",$persono = "",$type = "") {
+	global $bdd;
+        $demando = "select * from protokolo where 1=1";
+        if ($debut!="") {
+        	$demando .= " and horo>'".$debut."'";
+        }
+        if ($fin!="") {
+        	$demando .= " and horo<='".$fin."'";
+        }
+        if ($persono!="") {
+        	$demando .= " and persono_id='".$persono."'";
+        }
+        if ($type!="") {
+        	$demando .= " and kategorio='".$type."'";
+        }
+        $demando .= " order by horo DESC";
+		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+        echo "<table class='striped'>\n<thead>\n<tr>\n<td>Date</td>\n<td>Personne</td>\n<td>Type</td><td>Message</td>\n</tr>\n</thead>\n<tbody>";
+        $i=0;
+        while ($row=$result->fetch()) {
+         $i++;
+         echo "<tr>\n<td class='col1' nowrap>";
+         echo $row["horo"]."</td>\n<td nowrap>";
+         if ($row["persono_id"]!=0) {
+         echo "<a href='administri.php?celpersono_id=".$row["persono_id"]."'>".$row["persono_id"]."</a></td>";
+        } else {
+        	echo "&nbsp;</td>";
+        }
+         echo "<td>".stripslashes($row['kategorio'])."</td>";
+         echo "<td>".stripslashes($row['teksto'])."</td>";
+         echo "</tr>";
+         if ($i>$nb_max_ligne) break;
+        }
+        echo "</tbody></table>";
+}
+
 ?>

@@ -388,11 +388,11 @@ include "dlekkapo.inc.php";
 				<div class="tasko">
 				<?php 	
 					$demandoj=array (
-					14 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
-					15 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
-					16 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
-					17 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
-					18 => "Formez une phrase ayant un sens en combinant les mots de la leçon"
+					14 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					15 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					16 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					17 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					18 => "Formez une phrase ayant un sens en combinant les mots de la leçon."
 					);
 					ekzerco(True, 1);
 				?>

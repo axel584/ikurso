@@ -137,7 +137,7 @@ include "dlekkapo.inc.php";
 						<p><span class="eo">en</span> : dans, en</p>
 						<p><span class="eo">facila</span> : facile</p>
 						<p><span class="eo">granda</span> : grand</p>
-						<p><span class="eo">kiu</span> : qui</p>
+						<p><span class="eo">kiu</span> : qui, quel</p>
 						<p><span class="eo">seka</span> : sec</p>
 						<p><span class="eo">varma</span> : chaud</p>
 					</div>

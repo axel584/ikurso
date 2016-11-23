@@ -636,7 +636,9 @@ fieldset.sono legend {
 	font-weight: 400;
 }
 .tasko hr {
-	border: 1px solid #2196F3;
+	border:1px dashed #64B5F6;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
 }
 [type="radio"]:checked+label:after {
     background-color: #2196F3;

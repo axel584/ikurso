@@ -482,14 +482,16 @@ include "dlekkapo.inc.php";
 			<p class="col s6 m4"><span class="eo">Kio<b>n</b> vi vidas?</span></p><p class="col s6 m8">Que vois-tu&nbsp;?</p>
 			<p class="col s6 m4"><span class="eo">– Mi vidas birdo<b>n</b>.</span></p><p class="col s6 ">– Je vois un oiseau.</p>
 		</div>
+		
+		<p class="parto"><b>REMARQUE </b> : Comme <b>kio</b> se réfère à quelque chose d’indéfini, il ne prend <b>jamais</b> la marque du pluriel.</p>
 
 		<?php 
 		} // fin section
 		if ($section=="13") {
 		?>
 		<div class="row">
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/varsovio.jpg"><br>-1-</p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/prof.jpg"><br>-2-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/prof.jpg"><br>-1-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/varsovio.jpg"><br>-2-</p>
 			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/insekto.jpg"><br>-3-</span></p>
 			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/zamenhof.jpg"><br>-4-</p>
 		</div>
@@ -497,14 +499,16 @@ include "dlekkapo.inc.php";
 		<fieldset class="ekzerco">
 			<legend><strong>EXERCICE</strong> : Écrivez une question pour chaque image, puis donnez la réponse à cette question.</legend>
 			<input type="hidden" name="013_cxap01.2" value="Pour chacune des images ci-dessus, écrivez une question, puis donnez la réponse à cette question.">
-			<p>Utilisez le vocabulaire que vous avez vu dans les 3 premières leçons. Essayez d’utiliser au moins une fois chacun des mots interrogatifs suivants : <b>kio</b>, <b>kiu</b>, <b>kie</b>.</p>
+			<p>Utilisez le vocabulaire que vous avez vu dans les 3 premières leçons, ainsi que les mots interrogatifs suivants : <b>kio</b>, <b>kiu</b>, <b>kie</b>.<br>Pensez à utiliser l’accusatif lorsque c’est nécessaire&nbsp;!</p>
+			<p class="eo"><strong>EXEMPLE : image 1.</strong><br>
+			Kio estas la viro? – La viro estas instruisto.</p>
 			<div class="tasko">
+			<hr>
 			<?php 	
 				$demandoj=array (
-				21 => "image 1.",
-				22 => "image 2.",
-				23 => "image 3. (FOTI = photographier)",
-				24 => "image 4.",
+				21 => "image 2.",
+				22 => "image 3. (FOTI = photographier)",
+				23 => "image 4.",
 				);
 				ekzerco(True, 1);
 			?>

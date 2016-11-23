@@ -264,6 +264,16 @@ ul.klarigo li:before {
     transform: rotate(180deg);
 }
 
+/*---- surcharge typographie pour table protokolo -----*/
+
+#resultat_recherche_protokolo td, th {
+    padding: 0.25em 0.25em;
+}
+@media only screen and (min-width: 1200px) {
+	#resultat_recherche_protokolo td, th {
+    	font-size: 80%;
+	}
+}
 /****************************************/
 /*           blocs principaux           */
 /****************************************/

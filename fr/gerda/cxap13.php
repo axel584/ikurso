@@ -106,6 +106,9 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
 			<div class="vortlisto row">
 				<div class="col s12 l6">
 					<p><span class="eo">absorbi</span> : absorber</p>
@@ -142,7 +145,7 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">persono</span> : personne</p>
 					<p><span class="eo">peza</span> : lourd, pesant</p>
 					<p><span class="eo">preciza</span> : précis(e)</p>
-					<p><span class="eo">proponi</span> : suggérer, proposer; offrir</p>
+					<p><span class="eo">proponi</span> : suggérer, proposer&nbsp;; offrir</p>
 					<p><span class="eo">rajti</span> : avoir le droit de</p>
 					<p class="sekva"><span class="eo">rajto</span> : (le) droit (de faire quelque chose)</p>
 					<p><span class="eo">rakonti</span> : raconter</p>
@@ -407,24 +410,8 @@ include "gerdakapo.inc.php";
 		
 	</article>
 	
-	<aside class="col s12 m10 l3 offset-m1 push-l1">
-								
-		<ul class="collapsible" data-collapsible="expandable">
+	<?php include "gerdaflanko.inc.php"; ?>
 
-			<?php 
-			// On affiche le sommaire de la lecon
-			getEnhavtabelo('GR',$leciono); 
-			?>
-		</ul>	
-		
-		<p>
-			Elŝutu ĉiujn rakontojn (entute: 25) en unu dosiero:
-			 <a href="<?php echo $vojo;?>fr/gerda/son/gerda-malaperis.zip">gerda-malaperis.zip</a>
-		</p>
-		<?php
-		pubFacebook();
-		?>
-	</aside>
 </div>
 
 <?php include "gerdapiedo.inc.php"; ?>

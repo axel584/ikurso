@@ -119,6 +119,9 @@ include "gerdakapo.inc.php";
 
 		<p class="parto">À partir de cette leçon nous ne vous indiquerons plus la prononciation 
 		figurée sauf exception.</p>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
 			<div class="vortlisto row">
 				<div class="col s12 l6">
 					<p><span class="eo">amdeklaro</span> = <span class="eo">am</span>- + <span class="eo">deklaro</span><br>= deklaro de amo = deklaro pri amo</p>
@@ -315,26 +318,8 @@ include "gerdakapo.inc.php";
 		
 	</article>
 	
-	<aside class="col s12 m10 l3 offset-m1 push-l1">
-								
-		<ul class="collapsible" data-collapsible="expandable">
+	<?php include "gerdaflanko.inc.php"; ?>
 
-			<?php 
-			// On affiche le sommaire de la lecon
-			getEnhavtabelo('GR',$leciono); 
-			?>
-		</ul>	
-		
-		<p>
-			Elŝutu ĉiujn rakontojn (entute: 25) en unu dosiero:
-			 <a href="<?php echo $vojo;?>fr/gerda/son/gerda-malaperis.zip">gerda-malaperis.zip</a>
-		</p>
-		
-		<?php
-		pubFacebook();
-		?>
-
-	</aside>
 </div>
 
 <?php include "gerdapiedo.inc.php"; ?>

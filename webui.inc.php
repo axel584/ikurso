@@ -716,7 +716,7 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 		echo "<div class='memorilo_demando row hide'>";
 		echo "<h3>Bravo, vous avez terminé votre session</h3>";
 		echo "<p>Des sessions de révisions courtes et fréquentes vous aideront à mieux mémoriser le vocabulaire.</p>";
-		echo "<p>Pour votre cerveaux, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
+		echo "<p>Pour votre cerveau, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
 		echo "</div>\n";
 		echo "</div>";
 	} else {
@@ -725,7 +725,7 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 		if ($combienDemain>0) {
 			echo "<p>Demain, vous aurez ".$combienDemain." mots a réviser.</p>";
 			echo "<p>Des sessions de révisions courtes et fréquentes vous aideront à mieux mémoriser le vocabulaire.</p>";
-			echo "<p>Pour votre cerveaux, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
+			echo "<p>Pour votre cerveau, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
 		}
 		echo " Vous pouvez également avancer dans le cours pour découvrir plus de mots.";
 	}

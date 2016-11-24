@@ -1,10 +1,17 @@
   $(document).ready(function(){
 
+
+
     // méthode pour afficher la popup modale pour choisir un nouveau mot de passe si l'url contient novigiPasvorton
     $url = window.location.href;
     if ($url.indexOf("novigiPasvorton=")>-1) {
       $('#novigi_pasvorton').openModal();
     }
+
+
+    // méthode pour les selecteurs de date dans la partie administration
+    //$('#debut_protokolo').pickadate({format: 'yyyy-mm-dd',format_submit: 'yyyy-mm-dd'});
+    //$('#fin_protokolo').pickadate({format: 'yyyy-mm-dd',format_submit: 'yyyy-mm-dd'});
 
     $(document).ajaxStart(function() {
         $(document.body).css({'cursor' : 'progress'});
@@ -36,7 +43,7 @@
     });
 
     $( ".qcm_nok" ).click(function() {
-      Materialize.toast('Mauvaise réponse, essaye encore !', 4000);
+      Materialize.toast('Mauvaise réponse, essayez encore !', 4000);
     });
 
   // exercice autocorrigé (qui ressemble du coup à un QCM)
@@ -48,7 +55,7 @@
 
       if ($respondoLernanto!=$respondoKomputilo) {
         // Mauvaise réponse :
-        Materialize.toast('Mauvaise réponse, essaye encore !', 4000);
+        Materialize.toast('Mauvaise réponse, essayez encore !', 4000);
       } else {
         // bonne réponse
       if (!$lasta) {
@@ -142,6 +149,62 @@ $('#eniri_identigilo,#eniri_pasvorto').keyup(function(e) {
  }
 });
 
+
+function rechercherVorton($pattern,$kurso) {
+        $.ajax({
+          url : $cheminAbsolu+'ajax/rechercherVorton.php',
+          type : 'GET',
+          dataType : 'html',
+          data : "pattern="+$pattern+"&kurso="+$kurso,
+          success : function(reponse, statut){ 
+              $("#vortlisto").replaceWith(reponse);
+          },
+          error : function(request, error) {
+            console.log("request : "+request+" / error : "+error);
+            alert("Erreur de connexion, contactez les administrateurs");
+
+          }
+      });
+}
+
+$("#pattern").on('keyup', function () {
+  $pattern = $(this).val();
+  $kurso = $(this).data("kurso");
+  rechercherVorton($pattern,$kurso);
+});
+
+$("#button_rechercher").click(function() {
+  $pattern = $("#pattern").val();
+  $kurso = $("#pattern").data("kurso");
+  console.log($kurso);
+  rechercherVorton($pattern,$kurso);
+});
+
+$( "#serchi_protokolon_button").click(function() {
+  if ($( "#debut_protokolo" ).val()!="") {
+    var $debut = new Date($( "#debut_protokolo" ).val()).toISOString().substring(0, 10);
+  } else {
+    var $debut ="";
+  }
+  if ($( "#fin_protokolo" ).val()!="") {
+    var $fin = new Date($( "#fin_protokolo" ).val()).toISOString().substring(0, 10);
+} else {
+  var $fin="";
+}
+    console.log($debut);
+          $.ajax({
+          url : $cheminAbsolu+'ajax/sercxiProtokolon.php',
+          type : 'GET',
+          dataType : 'html',
+          data : 'debut='+$debut+"&fin="+$fin+"&persono="+$( "#persono_protokolo" ).val()+"&type="+$( "#type_protokolo" ).val(),
+          success : function(reponse, statut){ 
+                $("#resultat_recherche_protokolo").html(reponse);
+          },
+          error : function() {
+            alert("Erreur de connexion, contactez les administrateurs");
+          }
+      });
+});
 
   	$( "#connection_button" ).click(function() {
   		$("#connection_button").addClass("disabled");

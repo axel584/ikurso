@@ -15,7 +15,7 @@ include "dlekkapo.inc.php";
 			if ($section=="1") {
 			?>
 			<p class="parto">
-			Maintenant, il ne nous reste que quelques terminaisons grammaticales &agrave;
+			Maintenant, il ne nous reste que quelques terminaisons grammaticales à
 			apprendre avant de pouvoir lire couramment en espéranto. Nous avons vu
 			que les verbes se terminent en <b>-as</b> (présent), <b>-is</b> (passé), 
 			<b>-os</b> (futur). Il y a aussi&nbsp;:
@@ -151,6 +151,8 @@ include "dlekkapo.inc.php";
 				<p class="col s6 m4"><span class="eo">diablo</span> : diable</p>
 				<p class="col s6 m4"><span class="eo">adori</span> : adorer</p>
 			</div>
+			
+			<p class="parto">Dans le premier proverbe, on souligne qu’on juge différemment une personne morte ou vivante, on la déshonore de son vivant, mais on la vénère quand elle est morte. Dans le deuxième proverbe, le diable personnifie les problèmes qui peuvent arriver et ceux-ci ne sont pas considérés comme graves s’ils ne sont pas chez soi.</p>
 			
 		<?php 
 		} // fin section 2

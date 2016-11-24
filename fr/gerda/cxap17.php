@@ -116,6 +116,9 @@ include "gerdakapo.inc.php";
 		if ($section=="3") {
 		?>
 
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
 			<div class="vortlisto row">
 				<div class="col s12 l6">
 					<p><span class="eo">aperi</span> : apparaître</p>
@@ -126,7 +129,7 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">edzo</span> : époux</p>
 					<p class="sekva"><span class="eo">edzino</span> : épouse</p>
 					<p><span class="eo">frato</span> : frère</p>
-					<p class="sekva"><span class="eo">fratino</span> : soeur</p>
+					<p class="sekva"><span class="eo">fratino</span> : sœur</p>
 					<p><span class="eo">gardi</span> : garder</p>
 					<p class="sekva"><span class="eo">sin gardi</span> : prendre garde, surveiller, être prudent</p>
 					<p class="sekva"><span class="eo">singarda</span> : prudent</p>
@@ -157,7 +160,7 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">solvi</span> : résoudre</p>
 					<p><span class="eo">suko</span> : jus</p>
 					<p><span class="eo">ŝteli</span> : voler, dérober</p>
-					<p class="sekva"><span class="eo">ŝtele</span> : par vol; à la dérobée, furtivement</p>
+					<p class="sekva"><span class="eo">ŝtele</span> : par vol&nbsp;; à la dérobée, furtivement</p>
 					<p><span class="eo">tipo</span> : type, modèle</p>
 					<p><span class="eo">tria</span> : troisième</p>
 					<p><span class="eo">uzi</span> : utiliser</p>
@@ -587,24 +590,8 @@ include "gerdakapo.inc.php";
 		
 	</article>
 	
-	<aside class="col s12 m10 l3 offset-m1 push-l1">
-								
-		<ul class="collapsible" data-collapsible="expandable">
+	<?php include "gerdaflanko.inc.php"; ?>
 
-			<?php 
-			// On affiche le sommaire de la lecon
-			getEnhavtabelo('GR',$leciono); 
-			?>
-		</ul>	
-		
-		<p>
-			Elŝutu ĉiujn rakontojn (entute: 25) en unu dosiero:
-			 <a href="<?php echo $vojo;?>fr/gerda/son/gerda-malaperis.zip">gerda-malaperis.zip</a>
-		</p>
-		<?php
-		pubFacebook();
-		?>
-	</aside>
 </div>
 
 <?php include "gerdapiedo.inc.php"; ?>

@@ -716,7 +716,7 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 		echo "<div class='memorilo_demando row hide'>";
 		echo "<h3>Bravo, vous avez terminé votre session</h3>";
 		echo "<p>Des sessions de révisions courtes et fréquentes vous aideront à mieux mémoriser le vocabulaire.</p>";
-		echo "<p>Pour votre cerveaux, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
+		echo "<p>Pour votre cerveau, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
 		echo "</div>\n";
 		echo "</div>";
 	} else {
@@ -725,7 +725,7 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 		if ($combienDemain>0) {
 			echo "<p>Demain, vous aurez ".$combienDemain." mots a réviser.</p>";
 			echo "<p>Des sessions de révisions courtes et fréquentes vous aideront à mieux mémoriser le vocabulaire.</p>";
-			echo "<p>Pour votre cerveaux, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
+			echo "<p>Pour votre cerveau, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
 		}
 		echo " Vous pouvez également avancer dans le cours pour découvrir plus de mots.";
 	}
@@ -746,12 +746,15 @@ function pubFacebook() {
 	echo '<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAssociation.Esperanto.France%2F&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden"></iframe>';
 }
 
-function vortlisto($persono_id,$kurso) {
+function vortlisto($persono_id,$kurso,$pattern) {
 	global $bdd;
-	$query = "SELECT eo,fr,vortoj.tipo,lecionoj.numero FROM vortoj join lecioneroj on vortoj.lecionero_id=lecioneroj.id join lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso='".$kurso."' order by eo";
-
+	$query = "SELECT eo,fr,vortoj.tipo,lecionoj.numero FROM vortoj join lecioneroj on vortoj.lecionero_id=lecioneroj.id join lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso='".$kurso."'";
+	if ($pattern!="") {
+		$query .= " and (eo like '".$pattern."%' or fr like '".$pattern."%') ";
+	}
+	$query .= " order by eo";
 	$res = $bdd->query($query);
-	echo "<div class='vortlisto'>";
+	echo "<div class='vortlisto' id='vortlisto'>";
 	echo "<div class='lexique'>";
 	$i=0;
 	echo "<div class='row'>";
@@ -763,6 +766,45 @@ function vortlisto($persono_id,$kurso) {
 		$i++;
 	}
 	echo "</div></div></div>";
+}
+
+
+// administration
+
+function listi_protokolo($nb_max_ligne,$debut = "",$fin = "",$persono = "",$type = "") {
+	global $bdd;
+        $demando = "select * from protokolo where 1=1";
+        if ($debut!="") {
+        	$demando .= " and horo>'".$debut."'";
+        }
+        if ($fin!="") {
+        	$demando .= " and horo<='".$fin."'";
+        }
+        if ($persono!="") {
+        	$demando .= " and persono_id='".$persono."'";
+        }
+        if ($type!="") {
+        	$demando .= " and kategorio='".$type."'";
+        }
+        $demando .= " order by horo DESC";
+		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+        echo "<table class='striped'>\n<thead>\n<tr>\n<td>Date</td>\n<td>Personne</td>\n<td>Type</td><td>Message</td>\n</tr>\n</thead>\n<tbody>";
+        $i=0;
+        while ($row=$result->fetch()) {
+         $i++;
+         echo "<tr>\n<td class='col1' nowrap>";
+         echo $row["horo"]."</td>\n<td nowrap>";
+         if ($row["persono_id"]!=0) {
+         echo "<a href='administri.php?celpersono_id=".$row["persono_id"]."'>".$row["persono_id"]."</a></td>";
+        } else {
+        	echo "&nbsp;</td>";
+        }
+         echo "<td>".stripslashes($row['kategorio'])."</td>";
+         echo "<td>".stripslashes($row['teksto'])."</td>";
+         echo "</tr>";
+         if ($i>$nb_max_ligne) break;
+        }
+        echo "</tbody></table>";
 }
 
 ?>

@@ -454,11 +454,11 @@ include "dlekkapo.inc.php";
 			
 			<p class="parto">Exemples :</p>
 			<div class="vortlisto row">
-				<p class="col s12"><span class="eo">Hodiaŭ estas lundo la dua de aŭgusto.</span> : Aujourd’hui nous sommes le lundi 21 aoŭt.</p>
-				<p class="col s12"><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.</span> : Demain nous serons le mardi 22 août.</p>
-				<p class="col s12"><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.</span> : Hier c’était dimanche 23 août.</p>
+				<p class="col s12"><span class="eo">Hodiaŭ estas lundo la dua de aŭgusto.</span> : Aujourd’hui nous sommes le lundi 2 août.</p>
+				<p class="col s12"><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.</span> : Demain nous serons le mardi 3 août.</p>
+				<p class="col s12"><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.</span> : Hier c’était dimanche 1<sup>er</sup> août.</p>
 				<p class="col s12"><span class="eo">En januaro estas tri dek unu tagoj.</span> : En janvier il y a 31 jours.</p>
-				<p class="col s12"><span class="eo">La unua de Majo estas la Tago de la Laboro</span> : Le premier mai est la Fête du Travail (litt. "le Jour du Travail")</p>
+				<p class="col s12"><span class="eo">La unua de Majo estas la Tago de la Laboro</span> : Le premier mai est la Fête du Travail (littéralement "le Jour du Travail")</p>
 			</div>
 			
 			<p class="parto">Lorsqu’on indique une date précise, on emploie souvent la terminaison <b>n</b> de l’accusatif. Vous verrez par la suite que l’accusatif est employé pour certains compléments, et pas uniquement pour le complément direct.</p>
@@ -466,7 +466,7 @@ include "dlekkapo.inc.php";
 			<div class="vortlisto row">
 				<p><span class="eo">Ili venos la deka<b>n</b> de aprilo.</span> : Ils viendront le 10 mars.</p>
 				<p><span class="eo">La dua<b>n</b> de julio, mi edziĝos. </span> : Le 2 juillet, je me marierai.</p>
-				<p><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2017</span> : Paris, le 15 juillet 1017 (par exemple au début d’une lettre)</p>
+				<p><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2017</span> : Paris, le 15 décembre 1017 (par exemple au début d’une lettre)</p>
 			</div>
 				
 			<p class="parto">On peut utiliser également la forme adverbiale pour les jours et les mois.</p>
@@ -474,8 +474,34 @@ include "dlekkapo.inc.php";
 				<p><span class="eo">Dimanĉ<b>e</b> mi ne laboras.</span> : Je ne travaille pas le dimanche.</p>
 			</div>
 			
+			<div class="card-panel blue lighten-5">Cela fait beaucoup de nouvelles choses à mémoriser, mais ne vous tracassez pas trop. Prenez un peu de temps pour assimiler tout ça et n’hésitez pas à revenir relire cette page dans quelques jours. N’oubliez pas de pratiquer régulièrement, par exemple en indiquant la date du jour à votre correcteur quand vous lui enverrez vos prochains exercices.</div>
+			
 		</section>
 		
+		<?php 
+		} // fin section
+		if ($section=="9") {
+		?>
+		
+			<fieldset class="ekzerco">
+				<legend><strong>EXERCICE</strong> : Répondez en espéranto en faisant des phrases complètes et en écrivant les nombres en toutes lettres.</legend>
+				<p>N’hésitez pas à chercher sur Internet les réponses que vous ne connaissez pas&nbsp;!</p>
+				<?php atentigo();	?>
+				<input type="hidden" name="013_cxap04.2" value="2. Répondez en espéranto en faisant des phrases complètes.">
+				<div class="tasko">
+				<?php
+					$demandoj=array (
+					4 => "Kiom da tagoj estas en unu jaro?",
+					5 => "Hodiaŭ estas jaŭdo la 30a de novembro. Kiu dato estos morgaŭ?",
+					6 => "Kiam estas la Nacia Tago en via lando? (NACIA = national-e)",
+					7 => "En kiu jaro aperis (APERI = paraître) la Unua Libro de Esperanto?"
+					);
+					ekzerco(True, 1);
+				?>
+				</div>
+			</fieldset>
+	
+
 		<?php 
 		} // fin section
 		if ($section=="10") {
@@ -485,7 +511,7 @@ include "dlekkapo.inc.php";
 			orthographe d’origine (par exemple <i>Shakespeare</i> ou <span class="eo">Ŝekspiro</span>).
 			Par ailleurs, les prénoms de femme en <b>-a</b> sont assez fréquents.</p>
 			<p>Lisez les phrases suivantes qui forment de petits récits. Les
-			comprenez-vous ?</p>
+			comprenez-vous ?</p>
 			<p>Vous noterez que <span class="eo">Simeono</span>, <span class="eo">Petro</span> et <span class="eo">Fatima</span> sont des noms propres de personnes. </p>
 			<div class="vortlisto">
 				<p>Simeono estas la edzo de Fatima. Li amas ŝin. Li, la edzino kaj la infanoj loĝas en Eŭropo, en granda domo.</p>
@@ -496,23 +522,24 @@ include "dlekkapo.inc.php";
 			</div>
 			<p>Dans l’exercice page suivante, vous allez maintenant traduire ses phrases en français.</p>
 
+	
 		<?php 
 		} // fin section
-		if ($section=="9") {
+		if ($section=="11") {
 		?>
 		
 			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Traduisez en frnaçais.</legend>
-				<input type="hidden" name="013_cxap04.2" value="2. Traduisez en français.">
+				<legend><strong>EXERCICE</strong> : Traduisez en français.</legend>
+				<input type="hidden" name="013_cxap04.3" value="3. Traduisez en français.">
 				
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					4 => "Simeono estas la edzo de Fatima. Li amas ŝin. Li, la edzino kaj la infanoj loĝas en Eŭropo, en granda domo.",
-					5 => "Fatima deziras aĉeti novajn ŝuojn al la infanoj.",
-					6 => "Petro, la filo de Fatima, kolektas poŝtmarkojn kaj bildojn el ĵurnaloj. Maria, lia fratino, promenas bicikle.",
-					7 => "La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.",
-					8 => "Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras aĉeti sandviĉon. Li manĝos ilin vespere."
+					8 => "Simeono estas la edzo de Fatima. Li amas ŝin. Li, la edzino kaj la infanoj loĝas en Eŭropo, en granda domo.",
+					9 => "Fatima deziras aĉeti novajn ŝuojn al la infanoj.",
+					10 => "Petro, la filo de Fatima, kolektas poŝtmarkojn kaj bildojn el ĵurnaloj. Maria, lia fratino, promenas bicikle.",
+					11 => "La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.",
+					12 => "Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras aĉeti sandviĉon. Li manĝos ilin vespere."
 					);
 					ekzerco(False, 2);
 				?>
@@ -521,27 +548,27 @@ include "dlekkapo.inc.php";
 	
 		<?php 
 		} // fin section
-		if ($section=="11") {
+		if ($section=="12") {
 		?>
 		
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Traduisez les questions en espéranto (sans y répondre)</legend>
-				<input type="hidden" name="013_cxap04.3" value="3. Traduisez les questions en espéranto (sans y répondre).">
+				<input type="hidden" name="013_cxap04.4" value="4. Traduisez les questions en espéranto (sans y répondre).">
 				<?php atentigo();	?>
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					9 => "Est-ce que ton père collectionne les timbres de mon pays ?",
-					10 => "Est-ce que son fils a oublié le thé et le lait ?",
-					11 => "A-t-il oublié de porter du pain à la sœur de Petro ?",
-					12 => "Est-ce que les enfants vont danser dans l’école ?",
-					13 => "Est-ce qu’un garçon en bonne santé boit du lait ?",
-					14 => "Est-ce que le père lavera les petites tasses dans la maison de Fatima ?",
-					15 => "Est-ce que la nouvelle institutrice a oublié le livre dans une pièce de l’école ?",
-					16 => "Vendent-ils du thé et du café dans la nouvelle boutique ?",
-					17 => "Est-ce que le frère de la fille malade écrivait mal ?",
-					18 => "Sont-ils de bons amis ?",
-					19 => "Ta mère vient-elle d’Europe ?",
+					13 => "Est-ce que ton père collectionne les timbres de mon pays ?",
+					14 => "Est-ce que son fils a oublié le thé et le lait ?",
+					15 => "A-t-il oublié de porter du pain à la sœur de Petro ?",
+					16 => "Est-ce que les enfants vont danser dans l’école ?",
+					17 => "Est-ce qu’un garçon en bonne santé boit du lait ?",
+					18 => "Est-ce que le père lavera les petites tasses dans la maison de Fatima ?",
+					19 => "Est-ce que la nouvelle institutrice a oublié le livre dans une pièce de l’école ?",
+					20 => "Vendent-ils du thé et du café dans la nouvelle boutique ?",
+					21 => "Est-ce que le frère de la fille malade écrivait mal ?",
+					22 => "Sont-ils de bons amis ?",
+					23 => "Ta mère vient-elle d’Europe ?",
 					);
 					ekzerco(True, 1);
 				?>
@@ -553,16 +580,16 @@ include "dlekkapo.inc.php";
 				<p>Répondez avec des phrases complètes (pas seulement par un oui ou un non). Vous pouvez utiliser <span class="eo">sed</span> (mais)
 				dans les réponses négatives :</p>
 				<p>Ex.:  <span class="eo">Ŝi ne manĝas ĉokoladon, sed panon.</span></p>
-				<input type="hidden" name="013_cxap04.4" value="4. Répondez maintenant en espéranto.">
+				<input type="hidden" name="013_cxap04.5" value="5. Répondez maintenant en espéranto.">
 				<?php atentigo();?>
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					20 => "Est-ce que le lait est froid ?",
-					21 => "Avez-vous goûté le gâteau ?",
-					22 => "Est-ce que sa femme est la mère de ton amie ?",
-					23 => "Avez-vous deux euros et trente centimes (euro = eŭro, centime = cendo) ?",
-					24 => "Avez-vous vu la nouvelle pièce de théâtre ?",
+					24 => "Est-ce que le lait est froid ?",
+					25 => "Avez-vous goûté le gâteau ?",
+					26 => "Est-ce que sa femme est la mère de ton amie ?",
+					27 => "Avez-vous deux euros et trente centimes (euro = eŭro, centime = cendo) ?",
+					28 => "Avez-vous vu la nouvelle pièce de théâtre ?",
 					);
 					ekzerco(True, 1);
 				?>
@@ -571,7 +598,7 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="12") {
+		if ($section=="13") {
 		?>
 
 		<div class="row">
@@ -644,7 +671,7 @@ include "dlekkapo.inc.php";
 		
 		<?php 
 		} // fin section
-		if ($section=="13") {
+		if ($section=="14") {
 		?>
 			<p>
 			La prononciation ne devrait plus avoir le moindre secret pour vous

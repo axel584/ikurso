@@ -11,11 +11,15 @@
 			de la leçon du <em>Cours en dix leçons</em>, le deuxième chiffre fait 
 			référence au numéro de la leçon du <em>Kurso de Esperanto</em>.
 			</p>
-			
-
+			<div class="row">
+				<div class="input-field col s6 l4 tooltipped" data-position="bottom" data-delay="50" data-tooltip="tapez les premières lettres du mot recherché, sans les accents">
+					<i class="material-icons prefix">search</i><input type="text" name="pattern" data-kurso="CG" id="pattern">
+					<label for="pattern">chercher dans le lexique</label>
+				</div>
+			</div>
 <?php
 
-	vortlisto($persono_id,"CG");
+	vortlisto($persono_id,"CG","");
 
 ?>
 

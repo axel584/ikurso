@@ -39,11 +39,11 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">s</span> : ss (santé, suisse)</p>
 					<p><span class="eo">ŝ</span> : ch (chaud)</p>
 					<p><span class="eo">u</span> : ou (tout)</p>
-					<p><span class="eo">ŭ</span> : w (wapiti), ou bref (oui, waouh !)</p>
+					<p><span class="eo">ŭ</span> : w (wapiti), ou bref (oui, waouh !)</p>
 				</div>
 			</div>
 					
-			<p>Les autres lettres de l'espéranto : <em>a, b, d, f,
+			<p>Les autres lettres de l'espéranto : <em>a, b, d, f,
 			i, k, l, m, n, p, t, v, z</em> se prononcent comme en français. 
 			Les lettres <em>q, w, x</em> et <em>y</em> n’existent pas en espéranto.</p>
 			<p>Chaque voyelle, <em>a, e, i, o, u</em>, forme
@@ -89,11 +89,11 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s12 m4"><span class="eo">amiko</span> : ami</p>
-					<p class="col s12 m4"><span class="eo">nova</span> : nouveau</p>
-					<p class="col s12 m4"><span class="eo">esti</span> : être</p>
-					<p class="col s12 m4"><span class="eo">amika</span> : amical(e)</p>
-					<p class="col s12 m8"><span class="eo">sana</span> : sain, en bonne santé</p>
+					<p class="col s12 m4"><span class="eo">amiko</span> : ami</p>
+					<p class="col s12 m4"><span class="eo">nova</span> : nouveau</p>
+					<p class="col s12 m4"><span class="eo">esti</span> : être</p>
+					<p class="col s12 m4"><span class="eo">amika</span> : amical(e)</p>
+					<p class="col s12 m8"><span class="eo">sana</span> : sain, en bonne santé</p>
 				</div>
 			</fieldset>
 			
@@ -109,37 +109,37 @@ include "dlekkapo.inc.php";
 				<legend>MOTS À RETENIR</legend>
 				<div class="vortlisto row">
 					<div class="col s12 m4">
-						<p><span class="eo">biskvito</span> : biscuit</p>
-						<p><span class="eo">filo</span> : fils</p>
-						<p><span class="eo">Francujo</span> : France</p>
-						<p><span class="eo">frato</span> : frère</p>
-						<p><span class="eo">instruisto</span> : instituteur</p>
-						<p><span class="eo">knabo</span> : garçon</p>
-						<p><span class="eo">kafo</span> : café</p>
-						<p><span class="eo">kuko</span> : gâteau</p>
-						<p><span class="eo">lakto</span> : lait</p>
+						<p><span class="eo">biskvito</span> : biscuit</p>
+						<p><span class="eo">filo</span> : fils</p>
+						<p><span class="eo">Francujo</span> : France</p>
+						<p><span class="eo">frato</span> : frère</p>
+						<p><span class="eo">instruisto</span> : instituteur</p>
+						<p><span class="eo">knabo</span> : garçon</p>
+						<p><span class="eo">kafo</span> : café</p>
+						<p><span class="eo">kuko</span> : gâteau</p>
+						<p><span class="eo">lakto</span> : lait</p>
 					</div>
 					<div class="col s12 m4">
-						<p><span class="eo">lando</span> : pays</p>
-						<p><span class="eo">patro</span> : père</p>
-						<p><span class="eo">pano</span> : pain</p>
-						<p><span class="eo">studento</span> : étudiant</p>
-						<p><span class="eo">sukero</span> : sucre</p>
-						<p><span class="eo">teo</span> : thé</p>
-						<p><span class="eo">urbo</span> : ville</p>
-						<p><span class="eo">viro</span> : homme (mâle)</p>
-						<p><span class="eo">kaj</span> : et</p>
+						<p><span class="eo">lando</span> : pays</p>
+						<p><span class="eo">patro</span> : père</p>
+						<p><span class="eo">pano</span> : pain</p>
+						<p><span class="eo">studento</span> : étudiant</p>
+						<p><span class="eo">sukero</span> : sucre</p>
+						<p><span class="eo">teo</span> : thé</p>
+						<p><span class="eo">urbo</span> : ville</p>
+						<p><span class="eo">viro</span> : homme (mâle)</p>
+						<p><span class="eo">kaj</span> : et</p>
 					</div>
 					<div class="col s12 m4">
-						<p><span class="eo">bela</span> : beau</p>
-						<p><span class="eo">bona</span> : bon</p>
-						<p><span class="eo">ĉiam</span> : toujours</p>
-						<p><span class="eo">en</span> : dans, en</p>
-						<p><span class="eo">facila</span> : facile</p>
-						<p><span class="eo">granda</span> : grand</p>
-						<p><span class="eo">kiu</span> : qui</p>
-						<p><span class="eo">seka</span> : sec</p>
-						<p><span class="eo">varma</span> : chaud</p>
+						<p><span class="eo">bela</span> : beau</p>
+						<p><span class="eo">bona</span> : bon</p>
+						<p><span class="eo">ĉiam</span> : toujours</p>
+						<p><span class="eo">en</span> : dans, en</p>
+						<p><span class="eo">facila</span> : facile</p>
+						<p><span class="eo">granda</span> : grand</p>
+						<p><span class="eo">kiu</span> : qui, quel</p>
+						<p><span class="eo">seka</span> : sec</p>
+						<p><span class="eo">varma</span> : chaud</p>
 					</div>
 				</div>
 			</fieldset>
@@ -152,17 +152,17 @@ include "dlekkapo.inc.php";
 			<p class="parto">Les <strong>pronoms personnels</strong> sont :</p>
 			<div class="vortlisto row">
 				<div class="col s12 m6">
-					<p><span class="eo">mi</span> : je</p>
-					<p><span class="eo">vi</span> : tu (ou <span class="eo">ci</span>, peu usité)</p>
-					<p><span class="eo">li</span> : il (personne)</p>
-					<p><span class="eo">ŝi</span> : elle (personne)</p>
-					<p><span class="eo">ĝi</span> : il ou elle (non-personne)</p>
+					<p><span class="eo">mi</span> : je</p>
+					<p><span class="eo">vi</span> : tu (ou <span class="eo">ci</span>, peu usité)</p>
+					<p><span class="eo">li</span> : il (personne)</p>
+					<p><span class="eo">ŝi</span> : elle (personne)</p>
+					<p><span class="eo">ĝi</span> : il ou elle (non-personne)</p>
 				</div>
 				<div class="col s12 m6">
-					<p><span class="eo">ni</span> : nous</p>
-					<p><span class="eo">vi</span> : vous</p>
-					<p><span class="eo">ili</span> : ils ou elles</p>
-					<p><span class="eo">oni</span> : on</p>
+					<p><span class="eo">ni</span> : nous</p>
+					<p><span class="eo">vi</span> : vous</p>
+					<p><span class="eo">ili</span> : ils ou elles</p>
+					<p><span class="eo">oni</span> : on</p>
 				</div>
 			</div>
 
@@ -186,14 +186,14 @@ include "dlekkapo.inc.php";
 
 			<div class="vortlisto row">
 				<div class="col s12 m6">
-					<p><span class="eo">mi estas</span> : je suis</p>
-					<p><span class="eo">li estas</span> : il est</p>
-					<p><span class="eo">ŝi estas</span> : elle est</p>
+					<p><span class="eo">mi estas</span> : je suis</p>
+					<p><span class="eo">li estas</span> : il est</p>
+					<p><span class="eo">ŝi estas</span> : elle est</p>
 				</div>
 				<div class="col s12 m6">
-					<p><span class="eo">ni estas</span> : nous sommes</p>
-					<p><span class="eo">vi estas</span> : tu es, vous êtes</p>
-					<p><span class="eo">ili estas</span> : ils ou elles sont</p>
+					<p><span class="eo">ni estas</span> : nous sommes</p>
+					<p><span class="eo">vi estas</span> : tu es, vous êtes</p>
+					<p><span class="eo">ili estas</span> : ils ou elles sont</p>
 				</div>
 			</div>
 
@@ -207,8 +207,8 @@ include "dlekkapo.inc.php";
 			
 			<div class="vortlisto row">
 				<div class="col s12 m6">
-					<p><span class="eo">mi estis</span> : j’étais, j'ai été, je fus</p>
-					<p><span class="eo">mi estos</span> : je serai</p>
+					<p><span class="eo">mi estis</span> : j’étais, j'ai été, je fus</p>
+					<p><span class="eo">mi estos</span> : je serai</p>
 				</div>
 			</div>
 				
@@ -388,11 +388,11 @@ include "dlekkapo.inc.php";
 				<div class="tasko">
 				<?php 	
 					$demandoj=array (
-					14 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
-					15 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
-					16 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
-					17 => "Formez une phrase ayant un sens en combinant les mots de la leçon",
-					18 => "Formez une phrase ayant un sens en combinant les mots de la leçon"
+					14 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					15 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					16 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					17 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					18 => "Formez une phrase ayant un sens en combinant les mots de la leçon."
 					);
 					ekzerco(True, 1);
 				?>
@@ -406,19 +406,19 @@ include "dlekkapo.inc.php";
 		<fieldset class="vortoj">
 			<div class="vortlisto">
 				<div class"row">
-					<p class="col s6 m3 eo">Saluton !</p><p class="col s6 m3">Salut !</p>
-					<p class="col s6 m3 eo">Bonan tagon !</p><p class="col s6 m3">Bonjour !</p>
-					<p class="col s6 m3 eo">Bonan matenon !</p><p class="col s6 m3">Bonjour ! (le matin)</p>
-					<p class="col s6 m3 eo">Bonan vesperon !</p><p class="col s6 m3">Bonsoir !</p>
-					<p class="col s6 m3 eo">Bonan nokton !</p><p class="col s6 m3">Bonne nuit !</p>
+					<p class="col s6 m3 eo">Saluton !</p><p class="col s6 m3">Salut !</p>
+					<p class="col s6 m3 eo">Bonan tagon !</p><p class="col s6 m3">Bonjour !</p>
+					<p class="col s6 m3 eo">Bonan matenon !</p><p class="col s6 m3">Bonjour ! (le matin)</p>
+					<p class="col s6 m3 eo">Bonan vesperon !</p><p class="col s6 m3">Bonsoir !</p>
+					<p class="col s6 m3 eo">Bonan nokton !</p><p class="col s6 m3">Bonne nuit !</p>
 				</div>
 				<div class="row">
 					<p class="col s6 m3 eo">Mi loĝas en...</p><p class="col s6 m3">J’habite à...</p>
 					<p class="col s6 m3 eo">Mi ŝatas...</p><p class="col s6 m3">J’aime... / J'apprécie...</p>
 				</div>
 				<div class="row">
-					<p class="col s6 m3 eo">Ĝis revido !</p><p class="col s6 m3">Au revoir !</p>
-					<p class="col s6 m3 eo">Adiaŭ !</p><p class="col s6 m3">Adieu !</p>
+					<p class="col s6 m3 eo">Ĝis revido !</p><p class="col s6 m3">Au revoir !</p>
+					<p class="col s6 m3 eo">Adiaŭ !</p><p class="col s6 m3">Adieu !</p>
 				</div>
 				<div class="row">
 					<p class="col s6 m3 eo">Bonvolu...</p><p class="col s6 m9">Veuillez... / ... s’il vous plaît</p>
@@ -509,17 +509,17 @@ QCM(
 			<p>Quelques mots nouveaux utilisés dans cet exercice :</p>
 			<div class="vortlisto row">
 				<div class="col s12 m4">
-					<p><span class="eo">Aŭstralio</span> : Australie</p>
-					<p><span class="eo">Brazilo</span> : Brésil</p>
+					<p><span class="eo">Aŭstralio</span> : Australie</p>
+					<p><span class="eo">Brazilo</span> : Brésil</p>
 				</div>
 				<div class="col s12 m4">
-					<p><span class="eo">Vjetnamio</span> : Vietnam</p>
-					<p><span class="eo">Pollando</span> : Pologne</p>
+					<p><span class="eo">Vjetnamio</span> : Vietnam</p>
+					<p><span class="eo">Pollando</span> : Pologne</p>
 				</div>
 				<div class="col s12 m4">
-					<p><span class="eo">profesio</span> : métier, profession</p>
-					<p><span class="eo">desegnisto</span> : dessinateur</p>
-					<p><span class="eo">psikologo</span> : psychologue</p>
+					<p><span class="eo">profesio</span> : métier, profession</p>
+					<p><span class="eo">desegnisto</span> : dessinateur</p>
+					<p><span class="eo">psikologo</span> : psychologue</p>
 				</div>
 			</div>
 
@@ -589,34 +589,34 @@ QCM(
 			<div class="vortlisto row">
 				<div class="col s12 m4">
 					<p><b>Profession</b></p>
-					<p><span class="eo">emerito</span> : retraité</p>
-					<p><span class="eo">funkciulo</span> : fonctionnaire</p>
-					<p><span class="eo">ĵurnalisto</span> : journaliste</p>
-					<p><span class="eo">laboristo</span> : ouvrier</p>
-					<p><span class="eo">komputilisto</span> : informaticien</p>
-					<p><span class="eo">oficisto</span> : employé</p>
-					<p><span class="eo">senlaborulo</span> : chômeur</p>
+					<p><span class="eo">emerito</span> : retraité</p>
+					<p><span class="eo">funkciulo</span> : fonctionnaire</p>
+					<p><span class="eo">ĵurnalisto</span> : journaliste</p>
+					<p><span class="eo">laboristo</span> : ouvrier</p>
+					<p><span class="eo">komputilisto</span> : informaticien</p>
+					<p><span class="eo">oficisto</span> : employé</p>
+					<p><span class="eo">senlaborulo</span> : chômeur</p>
 					
 				</div>
 				<div class="col s12 m4">
 					<p><b>Pays</b></p>
-					<p><span class="eo">Afriko</span> : Afrique</p>
-					<p><span class="eo">Belgio</span> : Belgique</p>
-					<p><span class="eo">Eŭropo</span> : Europe</p>
-					<p><span class="eo">Francujo</span> : France</p>
-					<p><span class="eo">Kanado</span> : Canada</p>
-					<p><span class="eo">Parizo</span> : Paris</p>
-					<p><span class="eo">Svislando</span> : Suisse</p>
+					<p><span class="eo">Afriko</span> : Afrique</p>
+					<p><span class="eo">Belgio</span> : Belgique</p>
+					<p><span class="eo">Eŭropo</span> : Europe</p>
+					<p><span class="eo">Francujo</span> : France</p>
+					<p><span class="eo">Kanado</span> : Canada</p>
+					<p><span class="eo">Parizo</span> : Paris</p>
+					<p><span class="eo">Svislando</span> : Suisse</p>
 				</div>
 				<div class="col s12 m4">
 					<p><b>Adjectifs</b></p>
-					<p><span class="eo">donacema</span> : généreux</p>
-					<p><span class="eo">feliĉa</span> : heureux</p>
-					<p><span class="eo">juna</span> : jeune</p>
-					<p><span class="eo">maljuna</span> : vieux</p>
-					<p><span class="eo">scivola</span> : curieux, qui aime apprendre</p>
-					<p><span class="eo">sportema</span> : sportif, qui aime le sport</p>
-					<p><span class="eo">vojaĝema</span> : voyageur, qui aime voyager</p>
+					<p><span class="eo">donacema</span> : généreux</p>
+					<p><span class="eo">feliĉa</span> : heureux</p>
+					<p><span class="eo">juna</span> : jeune</p>
+					<p><span class="eo">maljuna</span> : vieux</p>
+					<p><span class="eo">scivola</span> : curieux, qui aime apprendre</p>
+					<p><span class="eo">sportema</span> : sportif, qui aime le sport</p>
+					<p><span class="eo">vojaĝema</span> : voyageur, qui aime voyager</p>
 				</div>
 				<div class="col s12">
 					<p><b>Expression utile</b></p>
@@ -625,14 +625,14 @@ QCM(
 
 			<?php 
 			} // fin section 
-			if ($section=="10") {
+			if ($section=="11") {
 			?>
 
 			<p>
 			Dans l’exercice suivant, sélectionnez la réponse exacte en 
 			cliquant sur le bouton associé. Attention&nbsp;! L’exercice est très facile (il 
 			suffit d’avoir compris le cours), mais ne tentez pas de répondre au hasard, car il 
-			y a tout de même 67 108 864 réponses possibles…
+			y a tout de même 67 108 864 réponses possibles…
 			</p>
 			<?php 
 QCM(
@@ -711,7 +711,7 @@ QCM(
 			
 			<?php 
 			} // fin section
-			if ($section=="11") {
+			if ($section=="12") {
 			?>
 
 			<p>

@@ -27,7 +27,7 @@ function kontroliVorton($lernantaRespondo,$bonaRespondo) {
 		return kontroliVorton($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliVorton($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
 	} else {
 		$trans = array("." => "", "," => "", "'" => "","!" => "","?" => ""); // liste des caractères à supprimer pour la comparaison
-		$bonaRespondo = strtr($bonaRespondo, $trans);
+		$bonaRespondo = trim(strtr($bonaRespondo, $trans));
 		$lernantaRespondo = strtr($lernantaRespondo,$trans);
 		return strcasecmp($lernantaRespondo,$bonaRespondo)==0;	
 	}

@@ -4,19 +4,12 @@ include "../util.php";
 malfermidatumbazon();
 
 // Premier rappel au bout de 6 jours
-$query = "SELECT personoj.id,enirnomo,retadreso,personnomo,familinomo,nuna_kurso.kurso,nuna_kurso.nunleciono,lastdato,nuna_kurso.korektanto FROM nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='K' and lastdato=DATE_SUB(CURDATE(), INTERVAL 6 DAY) and stop_rappel='N' and nuna_kurso.kurso<>'KE'";
+$query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id where stop_rappel='N' group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 6 DAY)";
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
  	protokolo($row["id"],"ENVOIE RAPPEL","Envoie d'un message de rappel après 6 jours");
- 	// on filtre pour ne pas envoyer de messages aux élèves qui ont envoyé leur dernière leçon
- 	if (($row['kurso']=='CG') && ($row['nunleciono']=='10')) {
- 		continue;
- 	}
- 	if (($row['kurso']=='GR') && ($row['nunleciono']=='25')) {
- 		continue;
- 	}
  	$nomo = isset($row["personnomo"])?$row["personnomo"]:$row["enirnomo"];
-    echo $row["id"].":".$row["retadreso"]; 
+    echo $row["id"].":".$row["retadreso"].":".$urlracine.redirigeSectionParUtilisateur($row["id"]); 
 
     // chargement du fichier email
     $filename = "../mails/rappel.html";
@@ -26,14 +19,10 @@ $result = $bdd->query($query);
 	// personnalisation :
 	$contents=str_replace("##ID##",$row["id"],$contents);
 	$contents=str_replace("##NOM##",$nomo,$contents);
-	$contents=str_replace("##RETADRESO_CORRECTEUR##",getSimplaVorto('retadreso','personoj',"where id='".$row['korektanto']."'"),$contents);
 
-	if ($row["kurso"]=="KE") {
-		$contents=str_replace("##LIEN_COURS##","",$contents);
-	} else {
-		$prochaine_lecon = "<a href='".$urlracine.getPrefixeCours($row["kurso"]).getUrlVenontaLeciono($row["kurso"],$row["nunleciono"])."'>Continuer le cours</a>";
-		$contents=str_replace("##LIEN_COURS##",$prochaine_lecon,$contents);
-	}
+	$prochaine_lecon = "<a href='".$urlracine.redirigeSectionParUtilisateur($row["id"])."'>Continuer le cours</a>";
+	$contents=str_replace("##LIEN_COURS##",$prochaine_lecon,$contents);
+
 	// envoie de l'email
 	$mesagxkapo="MIME-Version: 1.0\n";
 	$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
@@ -43,18 +32,11 @@ $result = $bdd->query($query);
 	mail($row["retadreso"],"Cours d'espéranto",$contents,$mesagxkapo);
 }
 // Deuxième rappel au bout de 10 jours
-$query = "SELECT personoj.id,enirnomo,retadreso,personnomo,familinomo,nuna_kurso.kurso,nuna_kurso.nunleciono,lastdato,nuna_kurso.korektanto FROM nuna_kurso,personoj where nuna_kurso.studanto=personoj.id and nuna_kurso.stato='K' and lastdato=DATE_SUB(CURDATE(), INTERVAL 10 DAY) and stop_rappel='N' and nuna_kurso.kurso<>'KE'";
+$query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id where stop_rappel='N' group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 10 DAY)";
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
- 	 	protokolo($row["id"],"ENVOIE RAPPEL","Envoie d'un message de rappel après 10 jours");
- 	// on filtre pour ne pas envoyer de messages aux élèves qui ont envoyé leur dernière leçon
- 	if (($row['kurso']=='CG') && ($row['nunleciono']=='10')) {
- 		continue;
- 	}
- 	if (($row['kurso']=='GR') && ($row['nunleciono']=='25')) {
- 		continue;
- 	}
- 	 $nomo = isset($row["personnomo"])?$row["personnomo"]:$row["enirnomo"];
+ 	protokolo($row["id"],"ENVOIE RAPPEL","Envoie d'un message de rappel après 10 jours");
+	$nomo = isset($row["personnomo"])?$row["personnomo"]:$row["enirnomo"];
     echo $row["id"].":".$row["retadreso"]; 
 
     // chargement du fichier email

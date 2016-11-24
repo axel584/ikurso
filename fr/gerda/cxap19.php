@@ -247,24 +247,8 @@ include "gerdakapo.inc.php";
 		
 	</article>
 	
-	<aside class="col s12 m10 l3 offset-m1 push-l1">
-								
-		<ul class="collapsible" data-collapsible="expandable">
+	<?php include "gerdaflanko.inc.php"; ?>
 
-			<?php 
-			// On affiche le sommaire de la lecon
-			getEnhavtabelo('GR',$leciono); 
-			?>
-		</ul>	
-		
-		<p>
-			Elŝutu ĉiujn rakontojn (entute: 25) en unu dosiero:
-			 <a href="<?php echo $vojo;?>fr/gerda/son/gerda-malaperis.zip">gerda-malaperis.zip</a>
-		</p>
-		<?php
-		pubFacebook();
-		?>
-	</aside>
 </div>
 
 <?php include "gerdapiedo.inc.php"; ?>

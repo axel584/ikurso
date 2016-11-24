@@ -43,7 +43,7 @@
     });
 
     $( ".qcm_nok" ).click(function() {
-      Materialize.toast('Mauvaise réponse, essaye encore !', 4000);
+      Materialize.toast('Mauvaise réponse, essayez encore !', 4000);
     });
 
   // exercice autocorrigé (qui ressemble du coup à un QCM)
@@ -55,7 +55,7 @@
 
       if ($respondoLernanto!=$respondoKomputilo) {
         // Mauvaise réponse :
-        Materialize.toast('Mauvaise réponse, essaye encore !', 4000);
+        Materialize.toast('Mauvaise réponse, essayez encore !', 4000);
       } else {
         // bonne réponse
       if (!$lasta) {

@@ -25,9 +25,9 @@ include "gerdakapo.inc.php";
 					<p>"Rekaŝu vin, ili tuj alvenos," li diris.</p>
 					<p>"Kiel vi faris por antaŭi ilin?"</p>
 					<p>"Dank' al Gerda: ŝi telefone aranĝis, ke veturilo atendu min
-					ĉe la flughaveno, kaj ke ŝoforo min veturigu ĉi tien. Mono solvas
-					multajn problemojn, kaj ŝi estas riĉa, kiel vi scias; ŝi donis tre
-					precizajn indikojn por ebligi al la ŝoforo trovi la lokon, kaj jen mi estas.
+					ĉe la flughaveno, kaj ke ŝoforo min veturigu ĉi tien. Ŝi estas riĉa,
+					kaj mono solvas multajn problemojn; ŝi donis tre precizajn
+					indikojn por ebligi al la ŝoforo trovi la lokon, kaj jen mi estas.
 					Sed niaj trezorserĉantoj tuj alvenos. Ili flugis en la sama aviadilo,
 					kiel mi, kaj kiam la ŝoforo min trovis, mi vidis ilin iri al oficejo,
 					kie oni luas aŭtojn."</p>

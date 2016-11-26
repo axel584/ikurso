@@ -13,18 +13,34 @@ include "dlekkapo.inc.php";
 		
 			if ($section=="1") {
 			?>
-			<p class="parto">Jetons un coup d’œil sur les <b>questions et réponses</b> correspondant à une
-			affirmation donnée.
-			</p>
-			<div class="row">
+			<p class="parto">Vous avez déjà vu quelques façons de poser des questions&nbsp;:</p>
+			<div class="row vortlisto">
+				<p class="col s12"><span class="eo">Kiu loĝas en Brazilo?</span> : Qui habite au Brésil&nbsp;?</p>
+				<p class="col s12"><span class="eo">Kie estas la kato?</span> : Où est le chat&nbsp;?</p>
+				<p class="col s12"><span class="eo">Kiel vi fartas?</span> : Comment allez-vous&nbsp;? / Comment vas-tu&nbsp;?</p>
+			</div>
+				
+			<p class="parto">Jetons maintenant un coup d’œil sur les <b>questions et réponses</b> correspondant à une
+			affirmation donnée.</p>
+			<div class="row vortlisto">
 				<p class="col s2">Énoncé :</p>
 				<p class="col s10"><span class="eo">La pano estas bruna.</span> = Le pain est brun.</p>
 				<p class="col s2">Question :</p>
-				<p class="col s10"><span class="eo"><b>Ĉu</b> la pano estas bruna ?</span> = Est-ce que le pain est brun ? (le pain est-il brun ?)</p>
+				<p class="col s10"><span class="eo"><b>Ĉu</b> la pano estas bruna?</span> = Est-ce que le pain est brun ? (le pain est-il brun ?)</p>
 				<p class="col s2">Réponse :</p>
 				<p class="col s10"><span class="eo"><b>Jes</b>, la pano estas bruna.</span> = Oui, le pain est brun.</p>
 				<p class="col s10 offset-s2">_________   ou   ___________ </p>
 				<p class="col s10 offset-s2"><span class="eo"><b>Ne</b>, la pano ne estas bruna, sed (ĝi estas) blanka.</span> = Non, le pain n’est pas brun mais (il est) blanc.</p>
+			</div>
+			<div class="row vortlisto">
+				<p class="col s2">Énoncé :</p>
+				<p class="col s10"><span class="eo">Iu venis.</span> = Quelqu’un est venu.</p>
+				<p class="col s2">Question :</p>
+				<p class="col s10"><span class="eo"><b>Ĉu</b> iu venis?</span> = Est-ce que quelqu’un est venu&nbsp;?</p>
+				<p class="col s2">Réponse :</p>
+				<p class="col s10"><span class="eo"><b>Jes</b>, mia frato venis.</span> = Oui, mon frère est venu.</p>
+				<p class="col s10 offset-s2">_________   ou   ___________ </p>
+				<p class="col s10 offset-s2"><span class="eo"><b>Ne</b>, neniu venis.</span> = Non, personne n’est venu.</p>
 			</div>
 				
 			<p>
@@ -37,13 +53,13 @@ include "dlekkapo.inc.php";
 			<i>est-ce que ?</i>), on ne modifie pas l’ordre des mots.  On place donc
 			simplement le mot <span class="eo">ĉu</span> au début de la phrase.
 			</p>
-			<div class="row">
+			<div class="row vortlisto">
 				<p class="col s4">Question :</p>
 				<p class="col s8">Est-ce que les garçons vendront le gâteau ?</p>
 				<p class="col s4">Affirmation sous-jacente :</p>
 				<p class="col s8">Les garçons vendront le gâteau.<br><span class="eo">La knaboj vendos la kukon.</span></p>
 				<p class="col s4">Question en espéranto :</p>
-				<p class="col s8"><span class="eo">Ĉu la knaboj vendos la kukon ?</span></p>
+				<p class="col s8"><span class="eo">Ĉu la knaboj vendos la kukon?</span></p>
 			</div>
 			<p>
 			Fonctionnent de cette façon toutes les questions auxquelles on doit
@@ -335,9 +351,9 @@ include "dlekkapo.inc.php";
 						<p><span class="marque">•</span> <span class="eo">ed<u>zi</u>no</span> : épouse</p>
 						<p><span class="marque">•</span> <span class="eo">el (3)</span> : hors de</p>
 						<p><span class="marque">•</span> <span class="eo">esperan<u>tis</u>to</span> : espérantiste</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>e</u>ĥo</span> : écho</p>
 					</div>
 					<div class="col s12 m4">
-						<p>&nbsp;&nbsp;<span class="eo"><u>e</u>ĥo</span> : écho</p>
 						<p><span class="marque">•</span> <span class="eo">en</span> : dans</p>
 						<p><span class="marque">•</span> <span class="eo">Eŭ<u>ro</u>po</span> : Europe</p>
 						<p>&nbsp;&nbsp;<span class="eo">Eŭ<u>kli</u>do</span> : Euclide</p>
@@ -346,6 +362,7 @@ include "dlekkapo.inc.php";
 						<p><span class="marque">•</span> <span class="eo"><u>ĝo</u>jo</span> : joie</p>
 						<p>&nbsp;&nbsp;<span class="eo"><u>ĥo</u>ro</span> : chœur</p>
 						<p><span class="marque">•</span> <span class="eo">in<u>fa</u>no</span> : enfant</p>
+						<p><span class="marque">•</span> <span class="eo">iu</span> : quelqu’un</p>
 						<p>&nbsp;&nbsp;<span class="eo"><u>jaĥ</u>to</span> : yacht</p>
 						<p><span class="marque">•</span> <span class="eo">jam</span> : déjà</p>
 						<p><span class="marque">•</span> <span class="eo">ĵa<u>lu</u>za</span> : jaloux</p>
@@ -355,9 +372,9 @@ include "dlekkapo.inc.php";
 						<p><span class="marque">•</span> <span class="eo"><u>ki</u>o</span> : quoi</p>
 						<p><span class="marque">•</span> <span class="eo">ko<u>lek</u>ti</span> : collectionner, rassembler</p>
 						<p><span class="marque">•</span> <span class="eo"><u>lan</u>do</span> : pays</p>
-					</div>
-					<div class="col s12 m4">
 						<p><span class="marque">•</span> <span class="eo">leci<u>o</u>no</span> : leçon</p>
+-*					</div>
+					<div class="col s12 m4">
 						<p><span class="marque">•</span> <span class="eo">ler<u>ne</u>jo</span> : école</p>
 						<p><span class="marque">•</span> <span class="eo"><u>li</u>bro</span> : livre</p>
 						<p><span class="marque">•</span> <span class="eo"><u>lo</u>ĝi</span> : habiter</p>

@@ -535,32 +535,43 @@ ALTER TABLE nuna_kurso CHANGE `ekdato` `ekdato` DATE NULL,CHANGE `lastdato` `las
 UPDATE nuna_kurso SET lastdato = NULL WHERE CAST(lastdato AS CHAR(20)) = '1999-05-11';
 
 -- ajout d'une section sur la musique dans la leçon 4
-update lecioneroj set ordo=12 where id=42;
-INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'La chanson espérantophone', 'TEKSTO', NULL, '11', '0', '0');
+-- voir plus loin pour les modifs car on ajoute aussi une section pour un nouvel exercice
+-- update lecioneroj set ordo=12 where id=42;
 
 -- ajout d'une section pour la date dans la leçon 4
-UPDATE lecioneroj SET ordo=9 WHERE id=39; 
-UPDATE lecioneroj SET ordo=10 WHERE id=40; 
-UPDATE lecioneroj SET ordo=11 WHERE id=41; 
-UPDATE lecioneroj SET ordo=12 WHERE id=269;
-UPDATE lecioneroj SET ordo=13 WHERE id=42; 
-INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'La date', 'TEKSTO', NULL, '8', '0', '0');
+-- voir plus loin pour les modifs car on ajoute aussi une section pour un nouvel exercice
+-- UPDATE `lecioneroj` SET ordo=13 WHERE `leciono_id`=62 and `ordo`=12; 
+-- UPDATE `lecioneroj` SET ordo=12 WHERE `leciono_id`=62 and `ordo`=11; 
+-- UPDATE `lecioneroj` SET ordo=11 WHERE `leciono_id`=62 and `ordo`=10; 
+-- UPDATE `lecioneroj` SET ordo=10 WHERE `leciono_id`=62 and `ordo`=9; 
+-- UPDATE `lecioneroj` SET ordo=9 WHERE `leciono_id`=62 and `ordo`=8; 
+
 
 -- ajout d'une section pour les corrélatifs dans la leçon 1
-UPDATE lecioneroj SET ordo=11 WHERE id=7;
-UPDATE lecioneroj SET ordo=12 WHERE id=8;
-UPDATE lecioneroj SET ordo=10 WHERE id=254;
+-- les sections 9, 10 et 11 deviennent 11, 12 et 13
+-- insertion de nouvelles sections 9 et 10
+UPDATE `lecioneroj` SET ordo=13 WHERE `leciono_id`=59 and `ordo`=11;
+UPDATE `lecioneroj` SET ordo=12 WHERE `leciono_id`=59 and `ordo`=10;
+UPDATE `lecioneroj` SET ordo=11 WHERE `leciono_id`=59 and `ordo`=9;
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 1' WHERE `leciono_id`=59 and `titolo` = 'Exercices';
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '59', 'Premières questions', 'TEKSTO', NULL, '9', '0', '0');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '59', 'Exercices 2 et 3', 'EKZERCARO', NULL, '10', '0', '0');
 
--- ajout d'une section pour l'exercice sur la date dans la leçon 4
-UPDATE lecioneroj SET ordo=10 WHERE id=39; 
-UPDATE lecioneroj SET ordo=11 WHERE id=40; 
-UPDATE lecioneroj SET ordo=12 WHERE id=41; 
-UPDATE lecioneroj SET ordo=13 WHERE id=269;
-UPDATE lecioneroj SET ordo=14 WHERE id=42; 
+-- ajout d'une section pour la date et une section pour l'exercice sur la date dans la leçon 4
+-- la section 11 devient 14
+-- les sections 8, 9 et 10 deviennent 10, 11 et 12
+-- création nouvelles sections 8, 9 et 13
+-- le nouvel exercice est le 2, les anciens exercices 3 et 4 devient 4 et 5
+UPDATE `lecioneroj` SET ordo=14 WHERE `leciono_id`=62 and `ordo`=11;
+UPDATE `lecioneroj` SET ordo=12 WHERE `leciono_id`=62 and `ordo`=10;
+UPDATE `lecioneroj` SET ordo=11 WHERE `leciono_id`=62 and `ordo`=9;
+UPDATE `lecioneroj` SET ordo=10 WHERE `leciono_id`=62 and `ordo`=8;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'La date', 'TEKSTO', NULL, '8', '0', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'Exercice 2 : la date', 'EKZERCARO', NULL, '9', '0', '0');
-UPDATE `lecioneroj` SET `titolo` = 'Exercice 3 : pratique du vocabulaire' WHERE `id` = 40; 
-UPDATE `lecioneroj` SET `titolo` = 'Exercices 4 et 5' WHERE `id` = 41;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '62', 'La chanson espérantophone', 'TEKSTO', NULL, '13', '0', '0');
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 3 : pratique du vocabulaire' WHERE `leciono_id`=62 and `titolo` = 'Exercice 2 : pratique du vocabulaire';
+UPDATE `lecioneroj` SET `titolo` = 'Exercices 4 et 5' WHERE `leciono_id`=62 and `titolo` = 'Exercices 3 et 4';
+
 
 -- décalage des exercices de la leçon 4 après insertion de l'exercice sur les dates
 UPDATE `respondoj` SET `kodo` = 'ekz04_28', `demando` = '28 Avez-vous vu la nouvelle pièce de théâtre ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_24';
@@ -587,6 +598,7 @@ UPDATE `respondoj` SET `kodo` = 'ekz04_08', `demando` = '8 Simeono estas la edzo
 
 -- ajout en base du nouveau vocabulaire de la leçon 1
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('kie','où','pronom',3);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('jen','voici','adv',3);
 
 -- ajout en base du nouveau vocabulaire de la leçon 2
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('kiel','comment, comme','pronom',221);
@@ -616,17 +628,23 @@ insert into vortoj (eo,fr,tipo,lecionero_id) values ('septembro','septembre','no
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('oktobro','octobre','nom',271);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('novembro','novembre','nom',271);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('decembro','décembre','nom',271);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('iu','quelqu''un','pronom',38);
 
 -- ajout de deux sections dans la leçon 3
-UPDATE lecioneroj SET ordo = 14 WHERE id = 31;
+UPDATE `lecioneroj` SET ordo=14 WHERE `leciono_id`=61 and `ordo`=12;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '61', 'Qu''est-ce que c''est ?', 'TEKSTO', NULL, '12', '0', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '61', 'Exercice 5', 'EKZERCARO', NULL, '13', '0', '0');
 
 -- ajout en base du nouveau vocabulaire pour la leçon 3
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('kio','quoi, que','pronom',274);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('tio','ce, cela, ça','pronom',274);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('kiom da','combien de','pronom',27);
 
-
-
+-- ajout corrélatifs dans la leçon 2
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('neniam','jamais','adv',13);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('nenio','rien','pronom',13);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('nenie','nulle part','adv',13);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('neniu','personne','pronom',13);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('kato','chat','nom',14);
 
 

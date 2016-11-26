@@ -118,9 +118,9 @@ include "dlekkapo.inc.php";
 						<p><span class="eo">kafo</span> : café</p>
 						<p><span class="eo">kuko</span> : gâteau</p>
 						<p><span class="eo">lakto</span> : lait</p>
+						<p><span class="eo">lando</span> : pays</p>
 					</div>
 					<div class="col s12 m4">
-						<p><span class="eo">lando</span> : pays</p>
 						<p><span class="eo">patro</span> : père</p>
 						<p><span class="eo">pano</span> : pain</p>
 						<p><span class="eo">studento</span> : étudiant</p>
@@ -129,17 +129,18 @@ include "dlekkapo.inc.php";
 						<p><span class="eo">urbo</span> : ville</p>
 						<p><span class="eo">viro</span> : homme (mâle)</p>
 						<p><span class="eo">kaj</span> : et</p>
+						<p><span class="eo">jen</span> : voici</p>
+						<p><span class="eo">ĉiam</span> : toujours</p>
 					</div>
 					<div class="col s12 m4">
+						<p><span class="eo">en</span> : dans, en</p>
 						<p><span class="eo">bela</span> : beau</p>
 						<p><span class="eo">bona</span> : bon</p>
-						<p><span class="eo">ĉiam</span> : toujours</p>
-						<p><span class="eo">en</span> : dans, en</p>
 						<p><span class="eo">facila</span> : facile</p>
 						<p><span class="eo">granda</span> : grand</p>
-						<p><span class="eo">kiu</span> : qui, quel</p>
 						<p><span class="eo">seka</span> : sec</p>
 						<p><span class="eo">varma</span> : chaud</p>
+						<p><span class="eo">kiu</span> : qui, quel</p>
 					</div>
 				</div>
 			</fieldset>
@@ -365,39 +366,16 @@ include "dlekkapo.inc.php";
 						$demandoj=array (
 						1 => "Le thé est chaud.",
 						2 => "Ton biscuit est sec.",
-						3 => "Votre ami était beau",
+						3 => "Votre ami était beau.",
 						4 => "Les nouveaux instituteurs seront grands.",
 						5 => "Mon frère est leur instituteur.",
 						6 => "Vos fils seront ses amis (à lui).",
-						7 => "Les gâteaux étaient bons.",
-						8 => "Le pain sera sec.",
-						9 => "Un garçon en bonne santé est beau.",
-						10 => "Des garçons sains seront grands.",
-						11 => "Le pain est à toi (« le pain est tien »).",
-						12 => "Qui est le nouvel instituteur ?",
-						13 => "Quel biscuit est sec ?"
 						);
 						ekzerco(True, 1);
 						?>
 					</div>
 			</fieldset>
 
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Formez cinq phrases ayant un sens en combinant les mots de la leçon.</legend>
-				<input type="hidden" name="013_cxap01.2" value="Formez cinq phrases ayant un sens en combinant les mots de la leçon.">
-				<div class="tasko">
-				<?php 	
-					$demandoj=array (
-					14 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
-					15 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
-					16 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
-					17 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
-					18 => "Formez une phrase ayant un sens en combinant les mots de la leçon."
-					);
-					ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
 			<?php 
 			} // fin section 
 			if ($section=="7") {
@@ -570,8 +548,49 @@ QCM(
 			</div>
 			
 			<?php 
-			} // fin section 
+			} // fin section 9
 			if ($section=="10") {
+			?>
+
+			<fieldset class="ekzerco">
+				<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
+					<input type="hidden" name="013_cxap01.2" value="Traduisez en espéranto.">
+					<div class="tasko">
+					<?php
+						$demandoj=array (
+						7 => "Quels gâteaux étaient secs ?",
+						8 => "Où est le pain ?",
+						9 => "Un garçon en bonne santé est toujours beau.",
+						10 => "Elle habitera dans une grande ville.",
+						11 => "Le pain est à toi (« le pain est tien »).",
+						12 => "Qui est le nouvel instituteur ?",
+						13 => "Voici des biscuits. Lesquels sont bons ?"
+						);
+						ekzerco(True, 1);
+						?>
+					</div>
+			</fieldset>
+
+			<fieldset class="ekzerco">
+				<legend><strong>EXERCICE</strong> : Formez cinq phrases ayant un sens en combinant les mots de la leçon.</legend>
+				<input type="hidden" name="013_cxap01.3" value="Formez cinq phrases ayant un sens en combinant les mots de la leçon.">
+				<div class="tasko">
+				<?php 	
+					$demandoj=array (
+					14 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					15 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					16 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					17 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
+					18 => "Formez une phrase ayant un sens en combinant les mots de la leçon."
+					);
+					ekzerco(True, 1);
+				?>
+				</div>
+			</fieldset>
+
+			<?php 
+			} // fin section 
+			if ($section=="11") {
 			?>
 			<p class="parto">À votre tour ! En vous aidant du vocabulaire déjà vu et de la vidéo de l'exercice précédent, essayez de vous présenter à votre correcteur en quelques mots. N'oubliez pas les formules de politesse pour dire bonjour et au revoir. Si vous ne savez pas comment dire en espéranto votre profession, ce sera l'occasion de demander à votre correcteur. Vous devriez être capable de rédiger 4 ou 5 phrases en espéranto.</p>
 			<p>Cet exercice ne vous permettra pas uniquement de vérifier que vous avez assimilé le nouveau vocabulaire, mais également de faire connaissance avec le correcteur qui vous sera attribué et qui corrigera vos exercices tout au long de ce cours.</p>
@@ -625,7 +644,7 @@ QCM(
 
 			<?php 
 			} // fin section 
-			if ($section=="11") {
+			if ($section=="12") {
 			?>
 
 			<p>
@@ -711,7 +730,7 @@ QCM(
 			
 			<?php 
 			} // fin section
-			if ($section=="12") {
+			if ($section=="13") {
 			?>
 
 			<p>

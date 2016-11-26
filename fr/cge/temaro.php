@@ -40,18 +40,25 @@ include "dlekkapo.inc.php";
 					<ul>
 						<li><a href="lec01.php?section=4#articles">Articles</a></li>
 						<li><a href="lec05.php?section=2">Corrélatifs</a></li>
+						<li><a href="lec01.php?section=9"><b>kiu</b>, <b>kie</b></a></li>
+						<li><a href="lec02.php?section=11"><b>kiel</b></a></li>
+						<li><a href="lec03.php?section=12"><b>kio</b></a></li>
+						<li><a href="lec03.php?section=8"><b>kiom</b></a></li>
 						<li><a href="lec09.php?section=5"><b>ĉi</b></a></li>
 						<li><a href="lec09.php?section=5"><b>ajn</b></a></li>
+						<li><a href="lec02.php?section=6"><b>neniam</b>, <b>nenie</b>, <b>neniu</b>, <b>nenio</b></a></li>
+						<li><a href="lec02.php?section=1"><b>tiel</b></a></li>
 					</ul>
+				</div>
+				<div class="col s12 m4">
 					<h3>Verbes</h3>
 					<ul>
 						<li><a href="lec01.php?section=2">Terminaison de l’infinitif</a></li>
 						<li><a href="lec01.php?section=4#temps">Présent, passé, futur</a></li>
+						<li><a href="lec03.php?section=10">Verbes transitifs et intransitifs</a></li>
 						<li><a href="lec08.php?section=1">Conditionnel, impératif et subjonctif</a></li>
 						<li><a href="lec08.php?section=1#participes">Participes</a></li>
 					</ul>
-				</div>
-				<div class="col s12 m4">
 					<h3>Noms et adjectifs</h3>
 					<ul>
 						<li><a href="lec01.php?section=2">Terminaison des noms</a></li>
@@ -76,15 +83,6 @@ include "dlekkapo.inc.php";
 						<li><a href="lec07.php?section=1">Préfixes</a></li>
 						<li><a href="lec07.php?section=2">Suffixes</a></li>
 					</ul>
-					<h3>Proverbes</h3>
-					<ul>
-						<li><a href="lec03.php">Leçon 3</a></li>
-						<li><a href="lec05.php?section=4">Leçon 5</a></li>
-						<li><a href="lec06.php?section=5">Leçon 6</a></li>
-						<li><a href="lec07.php?section=4">Leçon 7</a></li>
-						<li><a href="lec08.php?section=2">Leçon 8</a></li>
-						<li><a href="lec09.php?section=6">Leçon 9</a></li>
-					</ul>
 				</div>
 					
 				<div class="col s12 m4">
@@ -103,8 +101,8 @@ include "dlekkapo.inc.php";
 					<ul>
 						<li><a href="lec02.php?section=2">Accusatif pour complément d’objet direct</a></li>
 						<li><a href="lec02.php?section=5">Forme négative</a></li>
+						<li><a href="lec02.php?section=11">Comment ça va ? (quelques phrases utiles)</a></li>
 						<li><a href="lec03.php?section=1">Ordre des mots</a></li>
-						<li><a href="lec03.php?section=10">Verbes intransitifs</a></li>
 						<li><a href="lec04.php?section=1">Est-ce que… ?, oui, non</a></li>
 						<li><a href="lec05.php?section=1">Conversation</a></li>
 						<li><a href="lec06.php?section=2">Corrélatifs interrogatifs</a></li>
@@ -113,7 +111,21 @@ include "dlekkapo.inc.php";
 						<li><a href="lec06.php?section=14">Accusatif en remplacement d’une préposition</a></li>
 						<li><a href="lec06.php?section=16">Accusatif derrière une préposition</a></li>
 						<li><a href="lec06.php?section=16">Accusatif avec adverbe de lieu</a></li>
+						<li><a href="lec04.php?section=8">La date</a></li>
 						<li><a href="lec07.php?section=5">Expression de l’heure</a></li>
+					</ul>
+					<h3>Proverbes</h3>
+					<ul>
+						<li><a href="lec03.php">Leçon 3</a></li>
+						<li><a href="lec05.php?section=4">Leçon 5</a></li>
+						<li><a href="lec06.php?section=5">Leçon 6</a></li>
+						<li><a href="lec07.php?section=4">Leçon 7</a></li>
+						<li><a href="lec08.php?section=2">Leçon 8</a></li>
+						<li><a href="lec09.php?section=6">Leçon 9</a></li>
+					</ul>
+					<h3>Culture</h3>
+					<ul>
+						<li><a href="lec04.php?section=13">La chanson espérantophone</a></li>
 					</ul>
 					
 				</div>

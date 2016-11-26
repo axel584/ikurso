@@ -111,10 +111,26 @@ include "dlekkapo.inc.php";
 		<p>
 		Tout corrélatif est la combinaison de deux éléments, comme présentés dans le schéma suivant. Par exemple, si nous associons par exemple l'élément <span class="eo">ki-</span>, qui permet de poser une question, avec l'élément <span class="eo">-am</span>, qui a la signification de «temps, moment», on obtient le corrélatif <span class="eo">kiam</span>, qui signifie <em>quand</em>.</p>
 
-		</p>
 		<img src="<?php echo $vojo;?>fr/cge/bildoj/correlatifs.svg" class="responsive-img">
 		
-		<p class="parto">Le tableau suivant donne quelques exemples de corrélatifs.</p>
+		<p>Vous retrouverez dans le schéma ci-dessus des corrélatifs que vous avez déjà rencontrés dans les leçons précédentes&nbsp;:</p>
+		<div class="row vortlisto">
+			<p class="col s4 m3"><span class="eo">kiu</span> : qui, quel</p>
+			<p class="col s4 m3"><span class="eo">neniu</span> : personne</p>
+			<p class="col s4 m6"><span class="eo">iu</span> : quelqu’un</p>
+			<p class="col s4 m3"><span class="eo">kio</span> : quoi</p>
+			<p class="col s8 m9"><span class="eo">nenio</span> : rien</p>
+			<p class="col s4 m3"><span class="eo">kie</span> : où</p>
+			<p class="col s8 m9"><span class="eo">nenie</span> : nulle part</p>
+			<p class="col s4 m3"><span class="eo">kiam</span> : quand</p>
+			<p class="col s4 m3"><span class="eo">neniam</span> : jamais</p>
+			<p class="col s4 m6"><span class="eo">ĉiam</span> : toujours</p>
+			<p class="col s6 m4"><span class="eo">kiel</span> : comment, comme</p>
+			<p class="col s6 m8"><span class="eo">tiel</span> : ainsi, comme ça</p>
+			<p class="col s12"><span class="eo">kiom</span> : combien</p>
+		</div>
+		
+		<p class="parto">Voici quelques autres exemples de corrélatifs&nbsp;</p>
 
 		<table class="bordered">
 			<tr>
@@ -122,22 +138,30 @@ include "dlekkapo.inc.php";
 				<td width="20%"><b>Composition</b></td>
 				<td width="65%"><b>Exemples</b></td>
 			</tr><tr>
-				<td><b>ĉiam</b></td>
-				<td><span class="eo">ĈI</span> + <span class="eo">AM</span></td>
-				<td><em>tout(e)</em> + <em>à ___ moment</em><br>à tout moment => toujours</td>
+				<td><b>ĉiu</b></td>
+				<td><span class="eo">ĈI</span> + <span class="eo">U</span></td>
+				<td><em>tout(e)</em> + <em>(adjectif)</em><br>«aucune chose» => chaque, chacun(e)</td>
 			</tr><tr>
 				<td><b>tie</b></td>
 				<td><span class="eo">TI</span> + <span class="eo">E</span></td>
-				<td><em>à ___ lieu</em> + <em>ce, cet(te)</em><br/>à ce lieu => ici, là</td>
+				<td><em>ce, cet(te)</em> + <em>lieu</em><br/>à ce lieu => ici, là</td>
 			</tr><tr>
-				<td><b>nenio</b></td>
-				<td><span class="eo">NENI</span> + <span class="eo">O</span></td>
-				<td><em>aucun(e)</em> + <em>pronom</em><br/>«aucune chose» => rien</td>
+				<td><b>tiam</b></td>
+				<td><span class="eo">TI</span> + <span class="eo">AM</span></td>
+				<td><em>ce, cet(te)</em> + <em>moment</em><br/>à ce moment</td>
+			</tr><tr>
+				<td><b>iam</b></td>
+				<td><span class="eo">I</span> + <span class="eo">AM</span></td>
+				<td><em>indéfini</em> + <em>moment</em><br/>à un moment, un jour</td>
+			</tr><tr>
+				<td><b>neniom</b></td>
+				<td><span class="eo">NENI</span> + <span class="eo">OM</span></td>
+				<td><em>aucun</em> + <em>quantité</em><br/>aucun</td>
 			</tr>
 			</tr><tr>
 				<td><b>kiu</b></td>
 				<td><span class="eo">KI</span> + <span class="eo">U</span></td>
-				<td><em>quel(le), lequel , laquelle</em> + <em>adjectif</em><br/>quel(le), lequel , laquelle, qui</td>
+				<td><em>quel(le), lequel , laquelle</em> + <em>(adjectif)</em><br/>quel(le), lequel , laquelle, qui</td>
 			</tr>
 		</table>
 

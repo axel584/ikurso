@@ -373,9 +373,9 @@ include "dlekkapo.inc.php";
 		<div class="row vortlisto">
 			<p class="col s6"><span class="eo">La unuaj knaboj venas.</span></p><p class="col s6">Les premiers garçons arrivent.</p>
 			<p class="col s6"><span class="eo"><b>Kiom da</b> plumoj vi petis?<br>–Mi petis ses plumojn.</span></p>
-			<p class="col s6">Combien de plumes as-tu demandé&nbsp;?<br>– J’ai demandé six plumes.</p>
-			<p class="col s6"><span class="eo"><b>Kiom da</b> sandviĉoj vi jam manĝis?<br>Mi jam manĝis tri.</span></p>
-			<p class="col s6">Combien de sandwichs avez-vous déjà mangés&nbsp;?<br>– J’ai en ai déjà mangé trois.</p>
+			<p class="col s6">Combien de plumes as-tu demandées&nbsp;?<br>– J’ai demandé six plumes.</p>
+			<p class="col s6"><span class="eo"><b>Kiom da</b> sandviĉoj vi jam manĝis?<br>Ni jam manĝis tri.</span></p>
+			<p class="col s6">Combien de sandwichs avez-vous déjà mangés&nbsp;?<br>– Nous en avons déjà mangé trois.</p>
 			<p class="col s6"><span class="eo"><b>Kiom da</b> infanoj estos?<br>– Estos dek du infanoj.</span></p>
 			<p class="col s6">Combien y aura-t-il d’enfants&nbsp;?<br>– Il y aura douze enfants.</p>
 		</div>

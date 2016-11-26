@@ -638,7 +638,11 @@ INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('kio','quoi, que','pronom',274);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('tio','ce, cela, ça','pronom',274);
 
-
-
+-- ajout corrélatifs dans la leçon 2
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('neniam','jamais','adv',13);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('nenio','rien','pronom',13);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('nenie','nulle part','adv',13);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('neniu','personne','pronom',13);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('kato','chat','nom',14);
 
 

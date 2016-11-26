@@ -208,16 +208,30 @@ QCM_bildoj(
 		<p class="parto">Pour mettre une phrase à la <b>forme négative</b> il suffit d’ajouter le mot
 		<b>ne</b> avant le verbe.</p>
 		
-		<div class="vortlisto row">
+		<div class="row">
 			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l02-3.mp3" class="sm2_button"></a>
 				<span class="eo">Mi <b>ne</b> sukeras la kafon.</span></p>
-			<p class="col s6">Je ne sucre pas le café.</p>
+			<p class="col s6">Je <b>ne</b> sucre <b>pas</b> le café.</p>
 		</div>
 
 		<p class="rimarko"><strong>REMARQUE</strong> : 
 		Prononcez bien <span class="eo">ne</span> entre <em>né</em> et <em>nè</em>.
 		</p>
-	
+		
+		<p class="parto">D'autres mots peuvent aussi être utilisés pour donner un sens négatif à la phrase.</p>
+		
+		<div class="vortlisto row">
+			<p class="col s6 m3"><span class="eo">neniam</span> : jamais</p>
+			<p class="col s6 m3"><span class="eo">neniu</span> : personne</p>
+			<p class="col s6 m3"><span class="eo">nenio</span> : rien</p>
+			<p class="col s6 m3"><span class="eo">nenie</span> : nulle part</p>
+			<hr>
+			<p class="col s12 m6"><span class="eo">Mi <b>neniam</b> sukeras mian kafon.</span></p><p class="col s11 m6 offset-s1">Je ne sucre jamais mon café.</p>
+			<p class="col s12 m6"><span class="eo">Kiu venis? – <b>Neniu</b> venis.</span></p><p class="col s11 m6 offset-s1">Qui est venu ? – Personne n’est venu.</p>
+			<p class="col s12 m6"><span class="eo">Kio estas en la taso? – Estas <b>nenio</b>.</span></p><p class="col s11 m6 offset-s1">Qu’y-a-t-il dans la tasse ? – Il n’y a rien.</p>
+			<p class="col s12 m6"><span class="eo">Kie estas la kato? Mi vidas ĝin <b>nenie</b>!</span></p><p class="col s11 m6 offset-s1">Où est le chat ? Je ne le vois nulle part&nbsp;!</p>
+		</div>
+
 		<?php 
 		} // fin section
 		if ($section=="7") {
@@ -239,9 +253,9 @@ QCM_bildoj(
 					<p><span class="eo">lavi</span> : laver</p>
 					<p><span class="eo">porti</span> : porter</p>
 					<p><span class="eo">peti</span> : demander</p>
+					<p><span class="eo">renkonti</span> : rencontrer</p>
 				</div>
 				<div class="col s12 m4">
-					<p><span class="eo">renkonti</span> : rencontrer</p>
 					<p><span class="eo">skribi</span> : écrire</p>
 					<p><span class="eo">sukeri</span> : sucrer</p>
 					<p><span class="eo">trinki</span> : boire</p>
@@ -249,6 +263,7 @@ QCM_bildoj(
 					<p><span class="eo">vidi</span> : voir</p>
 					<p><span class="eo">akvo</span> : eau</p>
 					<p><span class="eo">amo</span> : amour</p>
+					<p><span class="eo">kato</span> : chat</p>
 				</div>
 				<div class="col s12 m4">
 					<p><span class="eo">birdo</span> : oiseau</p>
@@ -293,10 +308,10 @@ QCM_bildoj(
 				1 => "Un garçon en bonne santé boit du lait chaud.",
 				2 => "La nouvelle boutique vend des gâteaux secs.",
 				3 => "Le grand instituteur a rencontré les nouveaux amis.",
-				4 => "Les bons amis feront un beau gâteau.",
+				4 => "Les bons amis feront toujours un beau gâteau.",
 				5 => "La petite fille a rencontré les s&oelig;urs laides.",
 				6 => "Le frère bien portant avait une petite s&oelig;ur malade.",
-				7 => "Le père lavera les petites tasses.",
+				7 => "Personne ne lavera les petites tasses.",
 				8 => "Le bel oiseau attrapa un petit insecte.",
 				9 => "La nouvelle boutique a vendu de la mauvaise limonade.",
 				10 => "De l’eau froide ne lave pas (&quot;ne lavas&quot;) un petit garçon."
@@ -322,10 +337,10 @@ QCM_bildoj(
 				$demandoj=array (
 				11 => "{La kuko} estas bela.",
 				12 => "{Mia amikino} estas bela.",
-				13 => "{La bela birdo} trinkas akvon.",
+				13 => "{La bela birdo} ĉiam trinkas akvon.",
 				14 => "{La butikoj} estas malpuraj.",
 				15 => "{La akvo} estas varma.",
-				16 => "{Mia frato} lavas la tasojn.",
+				16 => "{Mia frato} neniam lavas la tasojn.",
 				17 => "{La viro} havas novan amikon.",
 				18 => "{Miaj fratoj} kaptis malsanan birdon.",
 				19 => "{La virino} ne sukeris mian teon."

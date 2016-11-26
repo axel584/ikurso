@@ -123,47 +123,7 @@ function listi_malfruajKorektantoj($nb) {
 	echo "</tbody></table>"; 
 }
 
-function listi_plejBonajKorektantoj() {
-	global $bdd;
-	$demando = "select * from personoj where (rajtoj='K' or rajtoj='A')";
-	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-	echo "<table class='prezento'><thead><tr><td>Kiu ?</td>";
-	echo "<td width='50'>Ont abandonné</td><td width='50'>A fini</td><td width='50'>% réussite</td></tr></thead><tbody>";
-	while ($row=$result->fetch()) {
-		$nomo_korektantoj[$row["id"]]=$row["enirnomo"];
-		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='F'";
-		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
-		$row2=$result2->fetch();
-		$listo_f[$row["id"]]=$row2["sumo"];
 
-		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='H'";
-		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
-		$row2=$result2->fetch();
-		$listo_h[$row["id"]]=$row2["sumo"];
-        	if ($listo_h[$row["id"]]+$listo_f[$row["id"]]>0) { 
-        		$listo_boneco[$row["id"]]=round($listo_f[$row["id"]]*100/($listo_h[$row["id"]]+$listo_f[$row["id"]]));
-        	} else {
-        		$listo_boneco[$row["id"]]=0;
-        	}		
-	}
-	
-	arsort($listo_boneco,SORT_NUMERIC);
-	foreach ($listo_boneco as $id=>$valuo) {
-		// n'affiche que les correcteurs qui ont au moins un élève abandonné ou un élève fini
-		if (($listo_h[$id]!=0) || ($listo_f[$id]!=0)) {
-			echo "<tr><td class='col1'>";
-			echo "<a href=\"administri.php?celpersono_id=".$id."\">";
-			echo $nomo_korektantoj[$id];
-			echo "</a>";
-			echo "</td>";
-			echo "<td>".$listo_h[$id]."</td>";
-			echo "<td>".$listo_f[$id]."</td>";
-			echo "<td>".$valuo."%</td>";
-			echo "</tr>"; 
-		}
-	}
-	echo "</tbody></table>"; 
-}
 
 function listi_plejBonajKorektantojLauxMonato($mois,$annee) {
 	global $bdd;

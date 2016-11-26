@@ -72,6 +72,25 @@ include "pagxkapo.inc.php";
 		if ($section=="korektantoj") {
 	?>
 		<h1>Correcteurs</h1>
+
+		<?php 
+
+				listi_plejBonajKorektantoj(); 
+				
+				// par mois
+		        $demando = "select * from monatoj";
+				$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+				while ($row=$result->fetch()) {
+					$nomo_monatoj[$row["kodo"]]=$row["nomo"];
+				}
+				$mktime = mktime(date('H'), date('i'), date('s'), date('m')-1, date('d'), date('Y')); // 
+				$mois = date("m",$mktime);
+				$annee = date("Y",$mktime);
+				echo "<h2>R&eacute;sultats pour ".$nomo_monatoj[$mois].":</h2>";
+				listi_plejBonajKorektantojLauxMonato($mois,$annee); 
+
+		?>
+
 	<?php
 		}
 		if ($section=="lecionoj") {
@@ -90,9 +109,9 @@ include "pagxkapo.inc.php";
 			<div class="collapsible-body">
 				<ul id="enhavtabelo" class="collection">
 				<li class=""><div><a href="stirpanelo.php?section=protokolo" class="">Carnet de bord</a></div></li>
-				<li class=""><div><a href="stirpanelo.php?section=lernantoj" class="">Élèves</a></div></li>
+				<!--<li class=""><div><a href="stirpanelo.php?section=lernantoj" class="">Élèves</a></div></li>-->
 				<li class=""><div><a href="stirpanelo.php?section=korektantoj" class="">Correcteurs</a></div></li>
-				<li class=""><div><a href="stirpanelo.php?section=lecionoj" class="">Leçons</a></div></li>
+				<!--<li class=""><div><a href="stirpanelo.php?section=lecionoj" class="">Leçons</a></div></li>-->
 				</ul>
 			</div>		
 			</li>

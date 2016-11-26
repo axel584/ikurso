@@ -327,12 +327,10 @@ include "dlekkapo.inc.php";
 		</fieldset>
 		
 		<div class="vortlisto row">
-			<div class="col s12">
-				<p>1998 : <span class="eo">mil naŭcent naŭdek ok</span></p>
-				<p>749 : <span class="eo">sepcent kvardek naŭ</span></p>
-				<p>1515 : <span class="eo">mil kvincent dek kvin</span></p>
-				<p>2051 : <span class="eo">du mil kvindek unu</span></p>
-			</div>
+			<p class="col s6">1998 : <span class="eo">mil naŭcent naŭdek ok</span></p>
+			<p class="col s6">749 : <span class="eo">sepcent kvardek naŭ</span></p>
+			<p class="col s6">1515 : <span class="eo">mil kvincent dek kvin</span></p>
+			<p class="col s6">2051 : <span class="eo">du mil kvindek unu</span></p>
 		</div>
 
 		<p class="rimarko"><strong>REMARQUE</strong> : 
@@ -369,11 +367,21 @@ include "dlekkapo.inc.php";
 			</div>
 		</fieldset>
 
+		<p class="parto">Pour poser une question et demander <em>combien de…</em>, on utilise l’interrogatif <b>kiom da</b>.</p>
+
 		<p>Exemples :</p>
-		<div class="container">
-			<p><span class="eo">Mi petis ses plumojn.</span> : J’ai demandé six plumes.</p>
-			<p><span class="eo">La unuaj knaboj venas.</span> : Les premiers garçons arrivent.</p>
+		<div class="row vortlisto">
+			<p class="col s6"><span class="eo">La unuaj knaboj venas.</span></p><p class="col s6">Les premiers garçons arrivent.</p>
+			<p class="col s6"><span class="eo"><b>Kiom da</b> plumoj vi petis?<br>–Mi petis ses plumojn.</span></p>
+			<p class="col s6">Combien de plumes as-tu demandé&nbsp;?<br>– J’ai demandé six plumes.</p>
+			<p class="col s6"><span class="eo"><b>Kiom da</b> sandviĉoj vi jam manĝis?<br>Mi jam manĝis tri.</span></p>
+			<p class="col s6">Combien de sandwichs avez-vous déjà mangés&nbsp;?<br>– J’ai en ai déjà mangé trois.</p>
+			<p class="col s6"><span class="eo"><b>Kiom da</b> infanoj estos?<br>– Estos dek du infanoj.</span></p>
+			<p class="col s6">Combien y aura-t-il d’enfants&nbsp;?<br>– Il y aura douze enfants.</p>
 		</div>
+		
+		<p><b>REMARQUE</b> : N’employez <b>jamais</b> l’accusatif après <b>kiom da</b>.</p>
+		
 		<?php 
 		} // fin section
 		if ($section=="9") {
@@ -442,7 +450,7 @@ include "dlekkapo.inc.php";
 					17 => "Seize heures font un jour ; huit heures font une nuit.",
 					18 => "Sept jours font une semaine.",
 					19 => "Le troisième garçon est mon second fils.",
-					20 => "J’ai 999 biscuits."
+					20 => "Combien as-tu de biscuits ? J’en ai 999."
 					);
 					ekzerco(True, 1);
 				?>

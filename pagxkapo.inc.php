@@ -248,7 +248,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 					<!-- hamburger menu -->
 					<div class="side-nav" id="nav-mobile">
 						<ul>
-							<!-- <li><a href="#">L’espéranto</a></li> -->
+							<li class="primaire-texte moyen"><a href="<?php echo $vojo;?>kionova.php">QUOI DE NEUF ?</a></li>
 							<li class="divider"></li>
 							<li class="primaire-texte moyen">COURS EN LIGNE</li>
 							<li><ul>

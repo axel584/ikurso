@@ -647,4 +647,16 @@ insert into vortoj (eo,fr,tipo,lecionero_id) values ('nenie','nulle part','adv',
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('neniu','personne','pronom',13);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('kato','chat','nom',14);
 
+-- ajout correlatifs de la leçon 5
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('ĉiu','chaque, chacun','adj',44);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('tiu','ce, cet(te)','adj',44);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('kial','pourquoi','adj',44);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('tie','ici, là','adj',44);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('tiam','à ce moment là, alors','adj',44);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('iam','à un moment, un jour, une fois','adj',44);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('neniom','aucun','adj',44);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('kies','de qui, à qui, donc, duquel','adj',44);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('ties','de celui-là, à celui-là','adj',44);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('nenies','de personne','adj',44);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('ĉies','de chacun, de tout le monde','adj',44);
 

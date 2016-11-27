@@ -25,11 +25,11 @@ include "pagxkapo.inc.php";
 					<p>Certains corrélatifs sont maintenant abordés dans les 4 premières leçons (Cours en 10 leçons). Des exercices pour pratiquer ont été ajoutés dans les leçons 1 et 3.</p>
 					<p>Ajout d’une section sur la date dans la leçon 4, avec un exercice de mise en pratique, ainsi qu’une section sur la musique espérantophone (Cours en 10 leçons).</p>
 					<p>Mise en place de l’outil d’apprentissage du vocabulaire dans le cours <em>Gerda malaperis</em>.</p>
-					<p>Ajout d’un outil de recherche dans le lexique du Cours en 10 leçons (page <a href="<?php echo $vojo;?>fr/cge/vocabula.php"><?php echo $vojo;?>fr/cge/vocabula.php"</a>)</p>
+					<p>Ajout d’un outil de recherche dans le lexique du Cours en 10 leçons</p>
 					<p>Création de la page QUOI DE NEUF ?</p>
 					<p>Corrections diverses</p>
 				</li>
-				<li class="collection-header">version 11. Octobre 2016</li>
+				<li class="collection-header">version 10. Octobre 2016</li>
 				<li class="collection-item">
 					<p>Création d’un outil d’apprentissage du vocabulaire dans le Cours en 10 leçons.</p>
 					<p>Création d’une page BOUTIQUE</p>

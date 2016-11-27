@@ -172,7 +172,7 @@ include "gerdakapo.inc.php";
 			<p class="parto">
 			En la antaŭa ĉapitro vi lernis pri ĉiuj ses participoj en
 			Esperanto, sed ni uzis ilin nur kiel adjektivojn. Adjektivon oni povas
-			uzi aŭ apud substantivo (<span class="eo">Ŝi vidas blondan viron.</span>), aŭ kun iuj
+			uzi apud substantivo (<span class="eo">Ŝi vidas blondan viron.</span>), aŭ kun iuj
 			verboj, ekzemple <b>esti</b> (<span class="eo">La viro estas blonda</span>). Ankaŭ participajn
 			adjektivojn oni povas uzi en tiuj du manieroj:
 	

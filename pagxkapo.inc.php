@@ -286,7 +286,7 @@ if ($persono_id=="") {
 
 					</ul>
 					<ul class="right hide-on-med-and-down">
-						<!--<li><a href="#">L’ESPÉRANTO</a></li>-->
+						<li><a href="<?php echo $vojo;?>kionova.php">QUOI DE NEUF ?</a></li>
 						<li><a class="dropdown-button" href="#!" data-activates="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
 						<li><a href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></li>
 						<li><a class="dropdown-button" href="#!" data-activates="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>

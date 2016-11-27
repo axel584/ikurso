@@ -274,6 +274,25 @@ ul.klarigo li:before {
     	font-size: 80%;
 	}
 }
+
+/*---- surcharge pour page Quoi de neuf -----*/
+
+#kionova li.collection-item:hover {
+    background-color: inherit;
+    cursor: default;
+}
+#kionova li.collection-header {
+    font-weight: 400;
+}
+#kionova li.collection-item p::before {
+	font-family: 'Material Icons';
+	-webkit-font-feature-settings: 'liga';
+	content: "grade";
+	font-size:70%;
+	color:#2196F3;
+	padding-right: 0.5em;
+}
+
 /****************************************/
 /*           blocs principaux           */
 /****************************************/

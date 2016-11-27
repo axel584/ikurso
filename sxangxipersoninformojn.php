@@ -16,6 +16,19 @@ if (count($elementNaskigxdato)==3) {
 	$naskigxdato = "";
 }
 
+if ($persono["stop_rappel"]=="J") {
+	$checkedStopRappel = " checked ";
+} else {
+	$checkedStopRappel = "";
+}
+
+
+if ($persono["stop_info"]=="J") {
+	$checkedStopInfo = " checked ";
+} else {
+	$checkedStopInfo = "";
+}
+
 ?>
 </form> <!-- on ferme le formulaire principal -->
 <div class="row">
@@ -91,8 +104,10 @@ if (count($elementNaskigxdato)==3) {
 						<p class="noto">
 						Les informations vous concernant sont destinées à Espéranto-Jeunes et Espéranto-France. 
 						Nous pouvons être amenés à les transmettre à des tiers (association espérantophone régionale ou thématique, autres membres d’Espéranto-France ou Espéranto-Jeunes) ou utiliser ces coordonnées pour vous envoyer des informations concernant l’association par Internet.<br>
-						<input type="checkbox" id="stopInfo" name="stopInfo" />
+						<input type="checkbox" id="stopInfo" name="stopInfo" <?php echo $checkedStopInfo; ?>/>
 						<label for="stopInfo">Je ne souhaite pas que mes données personnelles soit transmises à tiers, ni utilisées pour m’envoyer des informations sur l’association.</label>
+						<input type="checkbox" id="stopRappel" name="stopRappel" <?php echo $checkedStopRappel; ?>/>
+						<label for="stopRappel">Je ne souhaite pas recevoir de message de rappel pour m'inviter à continuer le cours.</label>
 						</p>
 					</div>
 				</div>

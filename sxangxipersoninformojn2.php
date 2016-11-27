@@ -11,7 +11,10 @@ $form_urbo=$_POST["urbo"];
 $form_lando=$_POST["lando"];
 $form_naskigxdato=$_POST["naskigxdato"];
 $form_stopInfo=isset($_POST["stopInfo"])?"J":"N";
+$form_stopRappel=isset($_POST["stopRappel"])?"J":"N";
 $teksto="";
+
+
 
 $nomDesMois = array("Janvier"=>'01',"Février"=>'02',"Mars"=>'03',"Avril"=>'04',"Mai"=>'05',"Juin"=>'06',"Juillet"=>'07',"Août"=>'08',"Septembre"=>'09',"Octobre"=>'10',"Novembre"=>'11',"Décembre"=>'12');
 
@@ -25,10 +28,6 @@ if (count($elementsNaskigxdato)==3) {
 	$form_naskigxdato_monato="";
 	$form_naskigxdato_jaro="";
 }
-
-echo $persono['naskigxdato']."<br/>";
-echo $form_naskigxdato_jaro."-".$form_naskigxdato_monato."-".$form_naskigxdato_tago."<br/>";
-
 
 if ($persono_id=="") {header("Location:index.php?erarkodo=4");} else {
 	// on verifie les différences pour enregistrer dans le protokolo les changements
@@ -62,10 +61,13 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=4");} else {
 	if ($persono['stop_info']!=$form_stopInfo) {
 		$teksto.="stopInfo: malnova:".$persono['stop_info']." - nova : ".$form_stopInfo."\n";
 	}
+	if ($persono['stop_rappel']!=$form_stopRappel) {
+		$teksto.="stopRappel: malnova:".$persono['stop_rappel']." - nova : ".$form_stopRappel."\n";
+	}
 	if ($teksto!=""){
 		protokolo($persono_id,"UPDATE PERSO",$teksto);
 	}
-  modifiPersonon($persono_id,$form_sekso,$form_familinomo,$form_personnomo,$form_adreso1,$form_adreso2,$form_posxtkodo,$form_urbo,$form_lando,$form_naskigxdato_tago,$form_naskigxdato_monato,$form_naskigxdato_jaro,$form_stopInfo);
+  modifiPersonon($persono_id,$form_sekso,$form_familinomo,$form_personnomo,$form_adreso1,$form_adreso2,$form_posxtkodo,$form_urbo,$form_lando,$form_naskigxdato_tago,$form_naskigxdato_monato,$form_naskigxdato_jaro,$form_stopInfo,$form_stopRappel);
   header("Location:personinformoj.php?erarkodo=20"); // l'erarkodo à 20 permet d'afficher un toast pour confirmer l'enregistrement des données
   
 }

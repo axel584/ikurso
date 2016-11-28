@@ -660,3 +660,5 @@ insert into vortoj (eo,fr,tipo,lecionero_id) values ('ties','de celui-là, à ce
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('nenies','de personne','adj',44);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('ĉies','de chacun, de tout le monde','adj',44);
 
+# ajout du type pour le vocabulaire de Gerda :
+ALTER TABLE  `vortoj` CHANGE  `tipo`  `tipo` ENUM(  'adj',  'adv',  'conjonction',  'expression',  'interjection',  'nom',  'nombre',  'phrase',  'pronom',  'préfixe',  'préposition',  'verbe' ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;

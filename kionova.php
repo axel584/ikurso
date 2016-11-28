@@ -22,17 +22,18 @@ include "pagxkapo.inc.php";
 			<ul class="collection with-header">
 				<li class="collection-header">version 11. Novembre 2016</li>
 				<li class="collection-item">
-					<p>Certains corrélatifs sont maintenant abordés dans les 4 premières leçons (Cours en 10 leçons). Des exercices pour pratiquer ont été ajoutés dans les leçons 1 et 3.</p>
-					<p>Ajout d’une section sur la date dans la leçon 4, avec un exercice de mise en pratique, ainsi qu’une section sur la musique espérantophone (Cours en 10 leçons).</p>
-					<p>Mise en place de l’outil d’apprentissage du vocabulaire dans le cours <em>Gerda malaperis</em>.</p>
-					<p>Ajout d’un outil de recherche dans le lexique du Cours en 10 leçons</p>
-					<p>Création de la page QUOI DE NEUF ?</p>
+					<p>Certains corrélatifs sont maintenant abordés dans les 4 premières leçons (Cours en 10 leçons) : <em>kie</em> et <em>kie</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec01.php?section=9">section 1.9</a>, <em>kiel</em> et <em>tiel</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec02.php?section=11">section 2.11</a>, <em>kiom</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec03.php?section=8">section 3.8</a> et <em>kio</em> et <em>tio</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec03.php?section=12">section 3.12</a>.</p> 
+						<p>Des exercices pour pratiquer ont été ajoutés dans la <a href="<?php echo $vojo;?>fr/cge/lec01.php?section=10">leçon 1</a> et la <a href="<?php echo $vojo;?>fr/cge/lec03.php?section=13">leçon 3</a>.</p>
+					<p>Ajout d’une section sur <a href="<?php echo $vojo;?>fr/cge/lec04.php?section=9">la date</a> dans la leçon 4, avec un exercice de mise en pratique, ainsi qu’une section sur <a href="<?php echo $vojo;?>fr/cge/lec04.php?section=13">la musique espérantophone</a> (Cours en 10 leçons).</p>
+					<p>Mise en place de l’outil d’<a href="<?php echo $vojo;?>memoriVortojn.php">apprentissage du vocabulaire</a> dans le cours <em>Gerda malaperis</em>.</p>
+					<p>Ajout d’un outil de recherche dans le <a href="<?php echo $vojo;?>fr/cge/vocabula.php">lexique du Cours en 10 leçons</a>.</p>
+					<p>Création de la page <a href="<?php echo $vojo;?>kionova.php">QUOI DE NEUF ?</a></p>
 					<p>Corrections diverses</p>
 				</li>
 				<li class="collection-header">version 10. Octobre 2016</li>
 				<li class="collection-item">
-					<p>Création d’un outil d’apprentissage du vocabulaire dans le Cours en 10 leçons.</p>
-					<p>Création d’une page BOUTIQUE</p>
+					<p>Création d’un outil d’<a href="<?php echo $vojo;?>memoriVortojn.php">apprentissage du vocabulaire</a> dans le Cours en 10 leçons.</p>
+					<p>Création d’une page <a href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></p>
 					<p>Ajout d‘un lien vers la page Facebook d’Espéranto-France</p>
 					<p>Ajout de témoignages sur la page d‘accueil</p>
 					<p>Corrections diverses</p>
@@ -40,20 +41,19 @@ include "pagxkapo.inc.php";
 				<li class="collection-header">version 9. Octobre 2016</li>
 				<li class="collection-item">
 					<p>Enregistrement des réponses aux exercices pour faciliter l’étude d’une leçon en plusieurs fois</p>
-					<p>Amélioration de la page <em>Données personnelles</em> : ajout d‘un bouton pour aller directement à la page à étudier</p>
+					<p>Amélioration de la page <a href="<?php echo $vojo;?>personinformoj.php">Données personnelles</a>&nbsp;: ajout d‘un bouton pour aller directement à la page à étudier</p>
 					<p>Ajout d’une page à la fin de chaque chapitre de <em>Gerda malaperis</em> pour l’envoi des exercices</p>
-					<p>Amélioration de la page d’introduction du Cours en 10 leçons</p>
+					<p>Amélioration de la page d’<a href="<?php echo $vojo;?>fr/cge/intro.php">introduction du Cours en 10 leçons</a></p>
 					<p>Corrections diverses</p>
 				</li>
 				<li class="collection-header">version 8. Septembre 2016</li>
 				<li class="collection-item">
 					<p>Ajout d’un récapitulatif des exercices à la fin de chaque leçon (Cours en 10 leçons)</p>
 					<p>Permette aux utilisateurs non inscrit d’accéder aux cours</p>
-					<p>Amélioration de la présentation des corrélatifs dans la leçon 5 (Cours en 10 leçons)</p>
-					<p>Amélioration de l’affichage des QCM sur tablette</p>
+					<p>Amélioration de la présentation des corrélatifs dans la <a href="<?php echo $vojo;?>fr/cge/lec05.php?section=2">leçon 5</a> (Cours en 10 leçons)</p>
 					<p>Envoi de messages de rappels aux élèves non connectés depuis un mois</p>
-					<p>Ajout d’une section de vocabulaire avec des phrases clés de conversation courante (Cours en 10 leçons)</p>
-					<p>Nouvelle présentation pour les QCM (Cours en 10 leçons)</p>
+					<p>Ajout d’une section de vocabulaire avec des phrases clés de conversation courante dans la<a href="<?php echo $vojo;?>fr/cge/lec02.php?section=11"> leçon 2</a> (Cours en 10 leçons)</p>
+					<p>Nouvelle présentation pour les QCM (Cours en 10 leçons). Amélioration de l’affichage des QCM sur tablette</p>
 					<p>Corrections diverses</p>
 				</li>
 

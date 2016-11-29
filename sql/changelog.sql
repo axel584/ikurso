@@ -660,5 +660,15 @@ insert into vortoj (eo,fr,tipo,lecionero_id) values ('ties','de celui-là, à ce
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('nenies','de personne','adj',44);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('ĉies','de chacun, de tout le monde','adj',44);
 
-# ajout du type pour le vocabulaire de Gerda :
+-- ajout du type pour le vocabulaire de Gerda :
 ALTER TABLE  `vortoj` CHANGE  `tipo`  `tipo` ENUM(  'adj',  'adv',  'conjonction',  'expression',  'interjection',  'nom',  'nombre',  'phrase',  'pronom',  'préfixe',  'préposition',  'verbe' ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
+
+-- Passage en V12
+UPDATE personoj SET lasteniro = '1999-05-11' WHERE CAST(lasteniro AS CHAR(20)) = '0000-00-00';
+UPDATE personoj SET lasteniro = '1999-05-11' WHERE CAST(lasteniro AS CHAR(20)) = '0000-00-00 00:00:00';
+UPDATE personoj SET naskigxdato = null WHERE CAST(naskigxdato AS CHAR(20)) = '0000-00-00';
+ALTER TABLE `personoj` DROP `pasvorto`;
+
+-- amélioration de l'outil memorilo
+CREATE TABLE ikurso.personoj_vortoj_respondoj ( persono_id INT NOT NULL , vorto_id INT NOT NULL , dato TIMESTAMP NOT NULL , bona BOOLEAN NOT NULL , respondo VARCHAR(128) NOT NULL ) ENGINE = InnoDB;
+ALTER TABLE personoj_vortoj ADD lastfojo TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER venontaFojo;

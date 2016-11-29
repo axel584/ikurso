@@ -33,6 +33,12 @@ function kontroliVorton($lernantaRespondo,$bonaRespondo) {
 	}
 }
 
+function memoriRespondon($persono_id,$vorto_id,$bona,$respondo) {
+	global $bdd;
+	$query = "insert into personoj_vortoj_respondoj(persono_id,vorto_id,dato,bona,respondo) values('".$persono_id."','".$vorto_id."',NOW(),".$bona.",'".$respondo."');";
+	$bdd->exec($query);
+}
+
 if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se soucier de la case
 	// on a une bonne réponse, on incrémente le nombre de bonne réponse dans la table personoj_vortoj et on calcule la prochaine etape
 	$query="SELECT nombrilo FROM personoj_vortoj where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
@@ -40,6 +46,7 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 	$nombrilo = $result->fetch()["nombrilo"];
 	$query2 = "update personoj_vortoj set nombrilo=nombrilo+1, venontaFojo=DATE_ADD(NOW(),INTERVAL ".getInterval($nombrilo)." DAY) where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
 	$bdd->exec($query2);
+	memoriRespondon($persono_id,$vorto_id,"TRUE",$lernantaRespondo);
 	$respondo["mesagxo"] = "ok";
 	echo json_encode($respondo);
 	exit();
@@ -53,7 +60,9 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 	}
 	$respondo["eraroj"]="La bonne réponse était&nbsp;<b>".$bonaRespondo."</b>";
 	$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b>".$bonaRespondo."</b>";
+	memoriRespondon($persono_id,$vorto_id,"FALSE",$lernantaRespondo);
 	echo json_encode($respondo);
 	exit();
 }
 ?>
+

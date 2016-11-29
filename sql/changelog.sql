@@ -669,6 +669,6 @@ UPDATE personoj SET lasteniro = '1999-05-11' WHERE CAST(lasteniro AS CHAR(20)) =
 UPDATE personoj SET naskigxdato = null WHERE CAST(naskigxdato AS CHAR(20)) = '0000-00-00';
 ALTER TABLE `personoj` DROP `pasvorto`;
 
--- amélioration de l'outil memorilo
+-- amélioration de l'outil memorilo (à ajouter directement en prod)
 CREATE TABLE ikurso.personoj_vortoj_respondoj ( persono_id INT NOT NULL , vorto_id INT NOT NULL , dato TIMESTAMP NOT NULL , bona BOOLEAN NOT NULL , respondo VARCHAR(128) NOT NULL ) ENGINE = InnoDB;
 ALTER TABLE personoj_vortoj ADD lastfojo TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER venontaFojo;

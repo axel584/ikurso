@@ -29,7 +29,7 @@ function kontroliVorton($lernantaRespondo,$bonaRespondo) {
 		$trans = array("." => "", "," => "", "'" => "","!" => "","?" => ""); // liste des caractères à supprimer pour la comparaison
 		$bonaRespondo = trim(strtr($bonaRespondo, $trans));
 		$lernantaRespondo = strtr($lernantaRespondo,$trans);
-		return strcasecmp($lernantaRespondo,$bonaRespondo)==0;	
+		return mb_strtolower($lernantaRespondo, 'UTF-8')==mb_strtolower($bonaRespondo, 'UTF-8');	
 	}
 }
 

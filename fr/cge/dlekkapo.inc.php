@@ -37,10 +37,8 @@ function ekzerco($x2u, $nbLig, $cols6="N") {
 	// cols6 : Se "J", la demandoj estas aranĝitaj en du kolumnoj. Se ne, en nur unu kolumno.
 	//
 	if ($persono_id=="") {
-		echo "identifiant false".$numcxap;
 		$idenfication=False;
 	} else {
-		echo "identifiant true";
 		$idenfication =True;
 	}
 	if ($cols6!="J") {

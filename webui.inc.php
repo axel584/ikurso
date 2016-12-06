@@ -891,4 +891,16 @@ function listi_plejBonajKorektantojLauxMonato($mois,$annee) {
 	echo "</tbody></table>"; 
 }
 
+function listi_korektantoj() {
+	global $bdd;
+	$demando = "select distinct retadreso from personoj,korektebla_kurso where (personoj.rajtoj='K' or personoj.rajtoj='A') and personoj.id = korektebla_kurso.korektanto and korektebla_kurso.kiom_lernantoj>0";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+        echo "<textarea id='korektantoj' class='materialize-textarea'>";
+        echo $result->fetch()["retadreso"];
+        while ($row=$result->fetch()) {
+          echo ", ".$row["retadreso"];
+        }
+        echo "</textarea>";
+}
+
 ?>

@@ -1,7 +1,5 @@
   $(document).ready(function(){
 
-
-
     // méthode pour afficher la popup modale pour choisir un nouveau mot de passe si l'url contient novigiPasvorton
     $url = window.location.href;
     if ($url.indexOf("novigiPasvorton=")>-1) {
@@ -18,6 +16,7 @@
     }).ajaxStop(function() {
         $(document.body).css({'cursor' : 'default'});
     });
+
 
 
     // QCM

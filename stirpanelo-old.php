@@ -6,18 +6,6 @@ if ($rajto!='A'){header("Location:index.php?erarkodo=4");}
 $parto=isset($_GET["parto"])?$_GET["parto"]:"";
 if ($parto=="") {$parto=1;}
 
-function listi_korektantoj() {
-	global $bdd;
-	$demando = "select distinct retadreso from personoj,korektebla_kurso where (personoj.rajtoj='K' or personoj.rajtoj='A') and personoj.id = korektebla_kurso.korektanto and korektebla_kurso.kiom_lernantoj>0";
-	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-        echo "<textarea rows=10 cols=45>";
-        echo $result->fetch()["retadreso"];
-        while ($row=$result->fetch()) {
-          echo ", ".$row["retadreso"];
-        }
-        echo "</textarea>";
-}
-
 function listi_lernantoj() {
 	global $bdd;
 	$demando = "select personoj.retadreso from personoj,nuna_kurso where personoj.rajtoj='S' and nuna_kurso.stato='K' and nuna_kurso.studanto=personoj.id";
@@ -125,47 +113,7 @@ function listi_malfruajKorektantoj($nb) {
 
 
 
-function listi_plejBonajKorektantojLauxMonato($mois,$annee) {
-	global $bdd;
-	$demando = "select * from personoj where (rajtoj='K' or rajtoj='A')";
-	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-	echo "<table class='prezento'><thead><tr><td>Kiu ?</td>";
-	echo "<td width='50'>A abandonné</td><td width='50'>A fini</td><td width='50'>% réussite</td></tr></thead><tbody>";
-	while ($row=$result->fetch()) {
-		$nomo_korektantoj[$row["id"]]=$row["enirnomo"];
-		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='F' and findato like '".$annee."-".$mois."%'";
-		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
-		$row2=$result2->fetch();
-		$listo_f[$row["id"]]=$row2["sumo"];
 
-		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='H' and findato like '".$annee."-".$mois."%'";
-		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
-		$row2=$result2->fetch();
-		$listo_h[$row["id"]]=$row2["sumo"];
-        	if ($listo_h[$row["id"]]+$listo_f[$row["id"]]>0) { 
-        		$listo_boneco[$row["id"]]=round($listo_f[$row["id"]]*100/($listo_h[$row["id"]]+$listo_f[$row["id"]]));
-        	} else {
-        		$listo_boneco[$row["id"]]=0;
-        	}		
-	}
-	
-	arsort($listo_boneco,SORT_NUMERIC);
-	foreach ($listo_boneco as $id=>$valuo) {
-		// n'affiche que les correcteurs qui ont au moins un élève abandonné ou un élève fini
-		if (($listo_h[$id]!=0) || ($listo_f[$id]!=0)) {
-			echo "<tr><td class='col1'>";
-			echo "<a href=\"administri.php?celpersono_id=".$id."\">";
-			echo $nomo_korektantoj[$id];
-			echo "</a>";
-			echo "</td>";
-			echo "<td>".$listo_h[$id]."</td>";
-			echo "<td>".$listo_f[$id]."</td>";
-			echo "<td>".$valuo."%</td>";
-			echo "</tr>"; 
-		}
-	}
-	echo "</tbody></table>"; 
-}
 
 function listi_erarajMesagxoj() {
 	global $bdd;

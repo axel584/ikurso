@@ -88,6 +88,8 @@ include "pagxkapo.inc.php";
 				$annee = date("Y",$mktime);
 				echo "<h2>R&eacute;sultats pour ".$nomo_monatoj[$mois].":</h2>";
 				listi_plejBonajKorektantojLauxMonato($mois,$annee); 
+				echo "<h2>Liste des correcteurs :</h2>";
+				listi_korektantoj();
 
 		?>
 

@@ -615,7 +615,7 @@ include "adminkapo.inc.php";
 										<?php } else { 
 											$_SESSION["admin_id"]=$_SESSION["persono_id"];
 										?>
-											<a href="javascript:window.location.href='eniri.php?enirnomo=<?=$celpersono['enirnomo'];?>&pasvorto=<?=$celpersono['pasvorto'];?>';">
+											<a href="javascript:window.location.href='eniri-por-administranto.php?persono_id=<?=$celpersono['id'];?>';">
 											<img src="bildoj/kdmconfig.png" border="0"></a>
 										<?php } ?>
 									</td>

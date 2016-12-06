@@ -42,13 +42,13 @@ include "pagxkapo.inc.php";
 					<div class="col s12 m5 offset-m1">
 						<h5>Cours en 10 leçons</h5>
 						<p>Cours d’espéranto pour débutants. À suivre avec l’aide d'un correcteur ou en totale autonomie.</p>
-						<p><a href="<?=$vojo?>fr/cge/intro.php" class="btn waves-effect waves-light blue">voir le cours</a></p>
+						<p><a href="<?=$vojo?>fr/cge/lec01.php" class="btn waves-effect waves-light blue">voir le cours</a></p>
 					</div>
 						
 					<div class="col s12 m5 offset-m1">
 						<h5>Gerda malaperis</h5>
 						<p>Pour ceux qui connaissent déjà les bases de l’espéranto, par exemple après le cours en 10 leçons. </p>
-						<p><a href="<?=$vojo?>fr/gerda/index.php" class="btn waves-effect waves-light blue">voir le cours</a></p>
+						<p><a href="<?=$vojo?>fr/gerda/cxap01.php" class="btn waves-effect waves-light blue">voir le cours</a></p>
 					</div>
 						
 				</div>

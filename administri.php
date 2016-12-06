@@ -183,7 +183,7 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 
 }
 
-function listi_korektantoj() {
+function listi_K() {
 	global $bdd;
 	$demando = "select personoj.id,personoj.enirnomo from personoj where personoj.rajtoj='K' order by enirnomo";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
@@ -400,10 +400,6 @@ function listi_F() {
 	}
 }
 
-//tiu funkcio konstruas la liston de Personoj 'K'
-function listi_K() {
-	// deprecated => voir listi_korektantoj()
-}
 
 //tiu funkcio konstruas la liston de Personoj 'A'
 function listi_A() {
@@ -482,7 +478,7 @@ include "adminkapo.inc.php";
 						break;
 						case 'F' : listi_F();
 						break;
-						case 'K' : listi_korektantoj();
+						case 'K' : listi_K();
 						break;
 						case 'A' : listi_A();
 						break;

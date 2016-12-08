@@ -148,22 +148,106 @@ QCM_bildoj(
 		<span class="eo"><em><u>ka</u>f-oï-ne</em></span> (e muet).</li>
 		</ul>
 		
+		<p class="parto"><strong>ATTENTION</strong> : Avec le verbe <i>être</i> qui n’a jamais de complément d’objet direct, on
+		n’utilise pas l’accusatif, car le verbe <i>être</i> implique que le sujet et
+		l’attribut sont « équivalents ».</p>
+		<p><span class="eo">Ŝi estas bela.</span> équivaut à : <span class="eo">Ŝi = bela</span>.</p>
+		<p><span class="eo">Li estas instruisto.</span> équivaut à : <span class="eo">Li = instruisto</span>.</p>
+
+		
+		
 		<?php 
 		} // fin section
 		if ($section=="4") {
 		?>
 		
-		<p>Dans les leçons suivantes, vous verrez d’autres compléments, tels que les compléments de temps, de lieu, de manière, etc. Ils sont généralement introduit par une préposition.</p>
+		<p class="parto">Il existe d’autres compléments, tels que les compléments de temps, de lieu, de manière, etc. Ils sont généralement introduit par une préposition. Dans la première leçon, vous avez déjà vu la préposition <span class="eo">en</span>, qui sert à introduire un complément de lieu.</p>
+		<p>Exemples :</p>
+		<div class="vortlisto row">
+			<p class="col s6"><span class="eo">Aleks loĝas <b>en</b> Francujo.</span></p>
+			<p class="col s6">Alex habite en France.</p>
+			<p class="col s6">Estas sukero <b>en</b> via kafo.</p><p>Il y a du sucre dans ton café.</p>
+		</div>
+		
+		<p class="rimarko">Notez que <span class="eo">estas</span>, employé sans sujet en début de phrase, comme dans l’exemple précédent, se traduit généralement par <em>il y a</em>. Nous aurons l’occasion d’y revenir dans une autre leçon.</p>
+		<p class="parto">Voici quelques autres prépositions permettant d’introduire un complément de lieu&nbsp;:</p>
+		
+		<table class="retrait striped bordered">
+			<tr><td class="eo">antaŭ</td><td>- avant, devant</td></tr>
+			<tr><td class="eo">sub</td><td>- sous, en-dessous de</td></tr>
+			<tr><td class="eo">sur</td><td>- sur, au-dessus de (en touchant l’objet)</td></tr>
+			<tr><td class="eo">super</td><td>- au-dessus de, par-dessus</td></tr>
+		</table>
 
-		<p>Avec le verbe <i>être</i> qui n’a jamais de complément d’objet direct, on
-		n’utilise pas l’accusatif, car le verbe <i>être</i> implique que le sujet et
-		l’attribut sont « équivalents ».</p>
-		<p><span class="eo">Ŝi estas bela.</span> équivaut à : <span class="eo">Ŝi = bela</span>.</p>
-		<p><span class="eo">Li estas instruisto.</span> équivaut à : <span class="eo">Li = instruisto</span>.</p>
-	
+		<p>Exemples :</p>
+		<div class="vortlisto row">
+			<p class="col s6"><span class="eo">La pano estas <b>sur</b> la tablo.</span></p>
+			<p class="col s6">Le pain est sur la table.</p>
+			<p class="col s6"><span class="eo">La kato dormas <b>sub</b> la tablo.</span></p>
+			<p class="col s6">Le chat dort sous la table.</p>
+			<p class="col s6"><span class="eo">Mi vidas la sunon <b>super</b> la arboj.</span></p>
+			<p class="col s6">Je vois le soleil par-dessus les arbres.</p>
+			<p class="col s6"><span class="eo">Estas floroj <b>antaŭ</b> la domo.</span></p>
+			<p class="col s6">Il y a des fleurs devant la maison.</p>
+		</div>
+		
 		<?php 
-		} // fin section
+		} // fin section 4
 		if ($section=="5") {
+		?>
+		<div class="row">
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-maro.jpg"><br>-1-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/bicikloj-domo.jpg"><br>-2-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/promeni-pluvo.jpg"><br>-3-</span></p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/libroj-tablo.jpg"><br>-4-</p>
+		</div>
+		
+		<fieldset class="ekzerco">
+			<legend><strong>EXERCICE</strong> : En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
+			<input type="hidden" name="013_cxap02.1" value="En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
+			<p>Utilisez une fois chacune des prépositions suivantes&nbsp;: <b>antaŭ</b>, <b>sur</b>, <b>super</b>, <b>sub</b>.<br>
+			Le vocabulaire nouveau se trouve au bas de cette page.</p>
+			<div class="tasko">
+			<hr>
+			<?php 	
+				$demandoj=array (
+				1 => "La birdo flugas ... la akvo.",
+				2 => "La bicikloj estas ... la domo.",
+				3 => "Ili promenas ... la pluvo.",
+				4 => "La libroj estas ... la tablo.",
+				);
+				ekzerco(True, 1);
+			?>
+			</div>
+		</fieldset>
+		
+		<fieldset class="vortoj">
+			<legend>VOCABULAIRE À RETENIR</legend>
+			<div>
+				<?php if ($persono) { ?>
+				<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+				<?php } ?>
+			</div>
+			<div class="vortlisto row">
+				<p class="col s6"><span class="eo">akvo</span> : eau</p>
+				<p class="col s6"><span class="eo">arbo</span> : arbre</p>
+				<p class="col s6"><span class="eo">biciklo</span> : vélo</p>
+				<p class="col s6"><span class="eo">birdo</span> : oiseau</p>
+				<p class="col s6"><span class="eo">domo</span> : maison</p>
+				<p class="col s6"><span class="eo">floro</span> : fleur</p>
+				<p class="col s6"><span class="eo">libro</span> : livre</p>
+				<p class="col s6"><span class="eo">pluvo</span> : pluie</p>
+				<p class="col s6"><span class="eo">suno</span> : soleil</p>
+				<p class="col s6"><span class="eo">tablo</span> : table</p>
+				<p class="col s6"><span class="eo">vidi</span> : voir</p>
+				<p class="col s6"><span class="eo">promeni</span> : se promener</p>
+				<p class="col s12 m6"><span class="eo">flugi</span> : voler (oiseau, avion, etc.)</p>
+			</div>
+		</fieldset>
+
+		<?php 
+		} // fin section 5
+		if ($section=="6") {
 		?>
 		
 		<p class="parto">Le suffixe <b>-in</b> vous a déjà permis d’augmenter votre vocabulaire en
@@ -202,7 +286,7 @@ QCM_bildoj(
 
 		<?php 
 		} // fin section
-		if ($section=="6") {
+		if ($section=="7") {
 		?>
 		
 		<p class="parto">Pour mettre une phrase à la <b>forme négative</b> il suffit d’ajouter le mot
@@ -234,7 +318,7 @@ QCM_bildoj(
 
 		<?php 
 		} // fin section
-		if ($section=="7") {
+		if ($section=="8") {
 		?>
 		
 		<p class="parto">Voici maintenant un peu de vocabulaire.</p>
@@ -253,20 +337,18 @@ QCM_bildoj(
 					<p><span class="eo">lavi</span> : laver</p>
 					<p><span class="eo">porti</span> : porter</p>
 					<p><span class="eo">peti</span> : demander</p>
-					<p><span class="eo">renkonti</span> : rencontrer</p>
 				</div>
 				<div class="col s12 m4">
 					<p><span class="eo">skribi</span> : écrire</p>
 					<p><span class="eo">sukeri</span> : sucrer</p>
 					<p><span class="eo">trinki</span> : boire</p>
+					<p><span class="eo">renkonti</span> : rencontrer</p>
 					<p><span class="eo">vendi</span> : vendre</p>
-					<p><span class="eo">vidi</span> : voir</p>
-					<p><span class="eo">akvo</span> : eau</p>
 					<p><span class="eo">amo</span> : amour</p>
 					<p><span class="eo">kato</span> : chat</p>
 				</div>
 				<div class="col s12 m4">
-					<p><span class="eo">birdo</span> : oiseau</p>
+					
 					<p><span class="eo">butiko</span> : boutique</p>
 					<p><span class="eo">insekto</span> : insecte</p>
 					<p><span class="eo">limonado</span> : limonade</p>
@@ -296,12 +378,12 @@ QCM_bildoj(
 				
 		<?php 
 		} // fin section
-		if ($section=="8") {
+		if ($section=="9") {
 		?>
 				
 		<fieldset class="ekzerco">
 			<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
-			<input type="hidden" name="013_cxap02.1" value="1. Traduisez en espéranto.">
+			<input type="hidden" name="013_cxap02.2" value="1. Traduisez en espéranto.">
 			<div class="tasko">
 			<?php
 				$demandoj=array (
@@ -323,7 +405,7 @@ QCM_bildoj(
 		
 		<?php 
 		} // fin section
-		if ($section=="9") {
+		if ($section=="10") {
 		?>
 		
 		<fieldset class="ekzerco">
@@ -331,7 +413,7 @@ QCM_bildoj(
 			<p>Choisissez parmi les pronoms suivants : li, ŝi, ĝi ou ili</p>
 			<p>Ex.: {<i>La knabo</i>} vendas kukojn. → <b>Li</b> vendas kukojn. </p>
 			<?php atentigo();?>
-			<input type="hidden" name="013_cxap02.2" value="2. Remplacez la portion de phrase entre {} par le pronom personnel approprié : li, ŝi, ĝi ou ili">
+			<input type="hidden" name="013_cxap02.3" value="2. Remplacez la portion de phrase entre {} par le pronom personnel approprié : li, ŝi, ĝi ou ili">
 			<div class="tasko">
 			<?php
 				$demandoj=array (
@@ -352,12 +434,12 @@ QCM_bildoj(
 	
 		<?php 
 		} // fin section
-		if ($section=="10") {
+		if ($section=="11") {
 		?>
 		<fieldset class="ekzerco">
 			<legend><strong>EXERCICE</strong> : Formez des phrases ayant un sens en utilisant les mots donnés.</legend>
 			<p>Attention : vous pouvez être amené à conjuguer les verbes et à mettre des mots à l’accusatif.</p>
-			<input type="hidden" name="013_cxap02.3" value="3. Formez des phrases ayant un sens en utilisant les mots donnés.">
+			<input type="hidden" name="013_cxap02.4" value="3. Formez des phrases ayant un sens en utilisant les mots donnés.">
 			<div class="tasko">
 			<?php 
 				$demandoj=array (
@@ -374,7 +456,7 @@ QCM_bildoj(
 	<?php 
 		} // fin section
 		
-	if ($section=="11") {
+	if ($section=="12") {
 	?>
 	<p class="parto">Voici quelques expressions pour demander à quelqu’un comment il va. Apprenez-les par cœur dans un premier temps. Nous les reverrons par la suite.</p>
 		<?php if ($persono) { ?>
@@ -411,7 +493,7 @@ QCM_bildoj(
 		<?php 
 		} // fin section
 		
-	if ($section=="12") {
+	if ($section=="13") {
 	?>
 	<p>Voici un petit exercice de révision. Sélectionnez la réponse exacte en 
 	cliquant sur le bouton associé. Si vous ne savez pas quelle réponse donner à une question, n’hésitez pas à relire le cours&nbsp;: toutes les réponses s’y trouvent&nbsp;!</p>
@@ -480,7 +562,7 @@ QCM(
 	?>
 	<?php 
 	} // fin section 
-	if ($section=="13") {
+	if ($section=="14") {
 		?>			
 		<p>Résumons-nous.</p>
 		<p>Vous avez maintenant appris à former le féminin de tout nom

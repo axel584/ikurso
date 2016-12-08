@@ -672,3 +672,65 @@ ALTER TABLE `personoj` DROP `pasvorto`;
 -- amélioration de l'outil memorilo (à ajouter directement en prod)
 CREATE TABLE personoj_vortoj_respondoj ( persono_id INT NOT NULL , vorto_id INT NOT NULL , dato TIMESTAMP NOT NULL , bona BOOLEAN NOT NULL , respondo VARCHAR(128) NOT NULL ) ENGINE = InnoDB;
 ALTER TABLE personoj_vortoj ADD lastfojo TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER venontaFojo;
+
+-- V12 : ajout prépositions dans la leçon 2
+-- les sections 5 à 13 deviennent 6 à 14
+-- insertion d'une nouvelle section 5 (nouvel exercice)
+UPDATE `lecioneroj` SET ordo=14 WHERE `leciono_id`=60 and `ordo`=13;
+UPDATE `lecioneroj` SET ordo=13 WHERE `leciono_id`=60 and `ordo`=12;
+UPDATE `lecioneroj` SET ordo=12 WHERE `leciono_id`=60 and `ordo`=11;
+UPDATE `lecioneroj` SET ordo=11 WHERE `leciono_id`=60 and `ordo`=10;
+UPDATE `lecioneroj` SET ordo=10 WHERE `leciono_id`=60 and `ordo`=9;
+UPDATE `lecioneroj` SET ordo=9 WHERE `leciono_id`=60 and `ordo`=8;
+UPDATE `lecioneroj` SET ordo=8 WHERE `leciono_id`=60 and `ordo`=7;
+UPDATE `lecioneroj` SET ordo=7 WHERE `leciono_id`=60 and `ordo`=6;
+UPDATE `lecioneroj` SET ordo=6 WHERE `leciono_id`=60 and `ordo`=5;
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 4' WHERE `leciono_id`=60 and `titolo` = 'Exercice 3';
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 3' WHERE `leciono_id`=60 and `titolo` = 'Exercice 2';
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 2' WHERE `leciono_id`=60 and `titolo` = 'Exercice 1';
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '60', 'Exercice 1', 'EKZERCARO', NULL, '5', '0', '0');
+-- décalage des exercices de la leçon 2 après insertion de l'exercice sur les prépositions
+UPDATE `respondoj` SET `kodo` = 'ekz02_28', `demando` = '28 bela - esti - fratino - knabino - mia.' WHERE `lecionero_id` = 17 AND `kodo` = 'ekz02_24';
+UPDATE `respondoj` SET `kodo` = 'ekz02_27', `demando` = '27 forgesi - mi - papero - porti.' WHERE `lecionero_id` = 17 AND `kodo` = 'ekz02_23';	
+UPDATE `respondoj` SET `kodo` = 'ekz02_26', `demando` = '26 amiko - bona - limonado - vendi - via.' WHERE `lecionero_id` = 17 AND `kodo` = 'ekz02_22';
+UPDATE `respondoj` SET `kodo` = 'ekz02_25', `demando` = '25 akvo - bela - birdo - la - pura - trinki.' WHERE `lecionero_id` = 17 AND `kodo` = 'ekz02_21';
+UPDATE `respondoj` SET `kodo` = 'ekz02_24', `demando` = '24 amikino - la - malvarma - mia - sukeri - teo.' WHERE `lecionero_id` = 17 AND `kodo` = 'ekz02_20';
+UPDATE `respondoj` SET `kodo` = 'ekz02_23', `demando` = '23 {La virino} ne sukeris mian teon.' WHERE `lecionero_id` = 16 AND `kodo` = 'ekz02_19';
+UPDATE `respondoj` SET `kodo` = 'ekz02_22', `demando` = '22 {Miaj fratoj} kaptis malsanan birdon.' WHERE `lecionero_id` = 16 AND `kodo` = 'ekz02_18';
+UPDATE `respondoj` SET `kodo` = 'ekz02_21', `demando` = '21 {La viro} havas novan amikon.' WHERE `lecionero_id` = 16 AND `kodo` = 'ekz02_17';
+UPDATE `respondoj` SET `kodo` = 'ekz02_20', `demando` = '20 {Mia frato} neniam lavas la tasojn.' WHERE `lecionero_id` = 16 AND `kodo` = 'ekz02_16';
+UPDATE `respondoj` SET `kodo` = 'ekz02_19', `demando` = '19 {La akvo} estas varma.' WHERE `lecionero_id` = 16 AND `kodo` = 'ekz02_15';
+UPDATE `respondoj` SET `kodo` = 'ekz02_18', `demando` = '18 {La butikoj} estas malpuraj.' WHERE `lecionero_id` = 16 AND `kodo` = 'ekz02_14';
+UPDATE `respondoj` SET `kodo` = 'ekz02_17', `demando` = '17 {La bela birdo} ĉiam trinkas akvon.' WHERE `lecionero_id` = 16 AND `kodo` = 'ekz02_13';
+UPDATE `respondoj` SET `kodo` = 'ekz02_16', `demando` = '16 {Mia amikino} estas bela.' WHERE `lecionero_id` = 16 AND `kodo` = 'ekz02_12';
+UPDATE `respondoj` SET `kodo` = 'ekz02_15', `demando` = '15 {La kuko} estas bela.' WHERE `lecionero_id` = 16 AND `kodo` = 'ekz02_11';
+UPDATE `respondoj` SET `kodo` = 'ekz02_14', `demando` = '14 De l’eau froide ne lave pas (&quot;ne lavas&quot;) un petit garçon.' WHERE `lecionero_id` = 15 AND `kodo` = 'ekz02_10';
+UPDATE `respondoj` SET `kodo` = 'ekz02_13', `demando` = '13 La nouvelle boutique a vendu de la mauvaise limonade.' WHERE `lecionero_id` = 15 AND `kodo` = 'ekz02_09';
+UPDATE `respondoj` SET `kodo` = 'ekz02_12', `demando` = '12 Le bel oiseau attrapa un petit insecte.' WHERE `lecionero_id` = 15 AND `kodo` = 'ekz02_08';
+UPDATE `respondoj` SET `kodo` = 'ekz02_11', `demando` = '11 Personne ne lavera les petites tasses.' WHERE `lecionero_id` = 15 AND `kodo` = 'ekz02_07';
+UPDATE `respondoj` SET `kodo` = 'ekz02_10', `demando` = '10 Le frère bien portant avait une petite s&oelig;ur malade.' WHERE `lecionero_id` = 15 AND `kodo` = 'ekz02_06';
+UPDATE `respondoj` SET `kodo` = 'ekz02_09', `demando` = '9 La petite fille a rencontré les s&oelig;urs laides.' WHERE `lecionero_id` = 15 AND `kodo` = 'ekz02_05';
+UPDATE `respondoj` SET `kodo` = 'ekz02_08', `demando` = '8 Les bons amis feront toujours un beau gâteau.' WHERE `lecionero_id` = 15 AND `kodo` = 'ekz02_04';
+UPDATE `respondoj` SET `kodo` = 'ekz02_07', `demando` = '7 Le grand instituteur a rencontré les nouveaux amis.' WHERE `lecionero_id` = 15 AND `kodo` = 'ekz02_03';
+UPDATE `respondoj` SET `kodo` = 'ekz02_06', `demando` = '6 La nouvelle boutique vend des gâteaux secs.' WHERE `lecionero_id` = 15 AND `kodo` = 'ekz02_02';
+UPDATE `respondoj` SET `kodo` = 'ekz02_05', `demando` = '5 Un garçon en bonne santé boit du lait chaud.' WHERE `lecionero_id` = 15 AND `kodo` = 'ekz02_01';
+
+-- ajout vocabulaire dans leçon 2 + décalage du vocabulaire qui était appris dans une autre leçon
+UPDATE `vortoj` SET `lecionero_id` = '276' WHERE `eo` = 'antaŭ' AND `lecionero_id` = 85;
+UPDATE `vortoj` SET `lecionero_id` = '276' WHERE `eo` = 'kato' AND `lecionero_id` = 14;
+UPDATE `vortoj` SET `lecionero_id` = '276' WHERE `eo` = 'domo' AND `lecionero_id` = 38;
+UPDATE `vortoj` SET `lecionero_id` = '276' WHERE `eo` = 'akvo' AND `lecionero_id` = 14;
+UPDATE `vortoj` SET `lecionero_id` = '276' WHERE `eo` = 'libro' AND `lecionero_id` = 38;
+UPDATE `vortoj` SET `lecionero_id` = '276' WHERE `eo` = 'promeni' AND `lecionero_id` = 22;
+UPDATE `vortoj` SET `lecionero_id` = '276' WHERE `eo` = 'vidi' AND `lecionero_id` = 14;
+UPDATE `vortoj` SET `lecionero_id` = '276' WHERE `eo` = 'birdo' AND `lecionero_id` = 14;
+INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('sub','avant, devant','préposition',276);
+INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('sur','sur, au-dessus','préposition',276);
+INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('super','au-dessus de, par-dessus','préposition',276);
+INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('floro','fleur','nom',276);
+INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('suno','soleil','nom',276);
+INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('tablo','table','nom',276);
+INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('arbo','arbre','nom',276);
+INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('biciklo','vélo','nom',276);
+INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('flugi','voler (oiseau, avion, ...)','verbe',276);
+INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('pluvo','pluie','nom',276);

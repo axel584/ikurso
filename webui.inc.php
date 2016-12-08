@@ -903,4 +903,31 @@ function listi_korektantoj() {
         echo "</textarea>";
 }
 
+function listi_tableauHonneur($type,$persono_id) {
+	global $bdd;
+	if ($type=="semajno") {
+		$query = "select personoj.id,enirnomo,sum(nombrilo) as total from personoj_vortoj join personoj on personoj.id=personoj_vortoj.persono_id where nombrilo>1 and week(lastfojo,7)=week(now(),7) and year(lastfojo)=year(now()) group by enirnomo order by total desc";
+	}
+	if ($type=="monato") {
+		$query = "select personoj.id,enirnomo,sum(nombrilo) as total from personoj_vortoj join personoj on personoj.id=personoj_vortoj.persono_id where nombrilo>1 and month(lastfojo)=month(now()) and year(lastfojo)=year(now()) group by enirnomo order by total desc";
+	}
+	if ($type=="jaro") {
+		$query = "select personoj.id,enirnomo,sum(nombrilo) as total from personoj_vortoj join personoj on personoj.id=personoj_vortoj.persono_id where nombrilo>1 and year(lastfojo)=year(now()) group by enirnomo order by total desc";
+	}
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	echo "<table>";
+	$classement = 1;
+	while ($row=$result->fetch()) {
+		if ($row["id"]==$persono_id) {
+			$enirnomo = "<b>".$row["enirnomo"]."</b>";
+		} else {
+			$enirnomo = $row["enirnomo"];
+		}
+		echo "<tr><td>".$classement.". ".$enirnomo."</td><td>".$row["total"]."</td></tr>";
+		$classement++;
+	}
+	echo "</table>";
+
+}
+
 ?>

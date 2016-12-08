@@ -13,8 +13,28 @@ include "pagxkapo.inc.php";
 	<div class="row">
 		<article class="col s12 m9 l6 offset-m1 offset-l1">
 			<h1>Statistiques</h1>
-
 			<section id="enhavo">
+
+			<div class="col l6">
+				<h2>Tableau d'honneur</h2>
+				<ul class="tabs">
+        			<li class="tab col s3"><a href="#tableauHonneurSemaine">Par semaine</a></li>
+        			<li class="tab col s3"><a href="#tableauHonneurMois">Par mois</a></li>
+        			<li class="tab col s3"><a href="#tableauHonneurAn">Par an</a></li>
+      			</ul>
+
+      			<div id="tableauHonneurSemaine">
+      			<?php listi_tableauHonneur("semajno",$persono_id);?>
+      			</div>
+      			<div id="tableauHonneurMois">
+      			<?php listi_tableauHonneur("monato",$persono_id);?>
+      			</div>
+      			<div id="tableauHonneurAn">
+      			<?php listi_tableauHonneur("jaro",$persono_id);?>
+      			</div>
+			</div>
+
+
 			</section>
 		</article>
 		

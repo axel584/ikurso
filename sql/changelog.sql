@@ -734,3 +734,8 @@ INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('arbo','arbre','nom',276);
 INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('biciklo','vélo','nom',276);
 INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('flugi','voler (oiseau, avion, ...)','verbe',276);
 INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('pluvo','pluie','nom',276);
+
+-- ajout d'index pour l'outil memorilo :
+ALTER TABLE  `personoj_vortoj` ADD INDEX  `persono_index` (  `persono_id` );
+ALTER TABLE  `personoj_vortoj` ADD INDEX  `vorto_index` (  `vorto_id` );
+ALTER TABLE  `personoj_lecioneroj` ADD INDEX  `persono_index` (  `persono_id` );

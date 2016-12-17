@@ -9,11 +9,11 @@ include "pagxkapo.inc.php";
 ?>
 
 
-
+	
 	<div class="row">
 		<article class="col s12 m9 l6 offset-m1 offset-l1">
-			<h1>Statistiques</h1>
-			<section id="enhavo">
+			<h1>Statistiques - vocabulaire</h1>
+			<section id="enhavo_memorilo">
 
 			<div class="col l6">
 				<h2>Tableau d'honneur</h2>
@@ -33,10 +33,19 @@ include "pagxkapo.inc.php";
       			<?php listi_tableauHonneur("jaro",$persono_id);?>
       			</div>
 			</div>
+			<div class="col l6">
+				<h2>Mot par force</h2>
+				<div id="chart_div_mots_par_force"></div>
+			</div>
 
 
 			</section>
+			
+		
 		</article>
+
+		
+
 		
 		<aside class="col s12 m10 l4 offset-m1 offset-l1">
 
@@ -44,7 +53,7 @@ include "pagxkapo.inc.php";
 			<ul class="collapsible" data-collapsible="expandable">
 
 			<li>
-				<div class="collapsible-header"><a href="personinformoj.php">Outil de révision du vocabulaire</a></div>
+				<div class="collapsible-header"><a href="memoriVortojn.php">Outil de révision du vocabulaire</a></div>
 				<div class="collapsible-header"><a href="personinformoj.php">Données personnelles</a></div>
 			</li>
 		</ul>	
@@ -54,4 +63,42 @@ include "pagxkapo.inc.php";
 
 	</div>
 	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+        	<?php statMotsParForce($persono_id); ?>
+        ]);
+
+        // Set chart options
+ 		var options = {
+          title: 'Nombre de mots par force',
+          pieSliceText : 'value',
+          is3D: true,
+        };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div_mots_par_force'));
+
+
+
+        chart.draw(data,options);
+      }
+    </script>
+
 <?php include "pagxpiedo.inc.php";?>		

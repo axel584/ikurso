@@ -927,7 +927,31 @@ function listi_tableauHonneur($type,$persono_id) {
 		$classement++;
 	}
 	echo "</table>";
+}
 
+function statMotsParForce($persono_id) {
+	global $bdd;
+	$resultat = array();
+	$query = "SELECT nombrilo  ,count(*) as total FROM personoj_vortoj WHERE persono_id='".$persono_id."' group by nombrilo order by nombrilo";
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	while ($row=$result->fetch()) {
+		if ($row["nombrilo"]==1) {
+			$resultat['à apprendre']=$row["total"];
+		} else if ($row["nombrilo"]>1 && $row["nombrilo"]<5) {
+			$resultat['force '.($row["nombrilo"]-1)]=$row["total"];
+		} else {
+			if (isset($resultat['force max'])) {
+				$resultat['force max']+=$row["total"];
+			} else {
+				$resultat['force max']=$row["total"];
+			}
+		}
+	}
+	$chaine = "";
+	foreach($resultat as $key=>$value) {
+		$chaine .= "['".$key."',".$value."],";
+	}
+	echo rtrim($chaine,",");
 }
 
 ?>

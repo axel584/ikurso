@@ -44,7 +44,7 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 	$query="SELECT nombrilo FROM personoj_vortoj where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
 	$result = $bdd->query($query);
 	$nombrilo = $result->fetch()["nombrilo"];
-	$query2 = "update personoj_vortoj set nombrilo=nombrilo+1, venontaFojo=DATE_ADD(NOW(),INTERVAL ".getInterval($nombrilo)." DAY) where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
+	$query2 = "update personoj_vortoj set nombrilo=nombrilo+1, venontaFojo=DATE_ADD(NOW(),INTERVAL ".getInterval($nombrilo)." DAY),lastfojo=now() where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
 	$bdd->exec($query2);
 	memoriRespondon($persono_id,$vorto_id,"TRUE",$lernantaRespondo);
 	$respondo["mesagxo"] = "ok";

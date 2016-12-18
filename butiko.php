@@ -47,7 +47,7 @@ include "pagxkapo.inc.php";
 						<div class="card-content row">
 							<span class="card-title col s12">Grand dictionnaire français–espéranto</span>
 							<img src="<?=$vojo?>bildoj/butiko/gdfe.jpg" class="col s5 m3 responsive-img" alt="" />
-							<p class="col s7 m9">Le plus complet des dictionnaires français/espéranto avec 32&nbsp;000 entrées et 944&nbsp;pages (20 cm), avec son supplément de 40&nbsp;pages.<br><b>Offre spéciale&nbsp;: 10 € au lieu de 29€ si vous commandez avant le 15 décembre 2016</b><img class="responsive-img" src="<?=$vojo?>bildoj/butiko/gdfe-ene.jpg" alt="" /></p>
+							<p class="col s7 m9">Le plus complet des dictionnaires français/espéranto avec 32&nbsp;000 entrées et 944&nbsp;pages (20 cm), avec son supplément de 40&nbsp;pages.<br>15 €<img class="responsive-img" src="<?=$vojo?>bildoj/butiko/gdfe-ene.jpg" alt="" /></p>
 						</div>
 					</div>
 					<div class="col s12 card">
@@ -136,11 +136,11 @@ include "pagxkapo.inc.php";
 								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/gdfe.jpg" alt="" />
 							</div>
 							<div class="card-content">
-								<span class="card-title activator">Grand dictionnaire français–espéranto<br>10&nbsp;€<i class="material-icons right">keyboard_arrow_down</i></span>
+								<span class="card-title activator">Grand dictionnaire français–espéranto<br>15&nbsp;€<i class="material-icons right">keyboard_arrow_down</i></span>
 							</div>
 							<div class="card-reveal">
 								<span class="card-title"><i class="material-icons right">keyboard_arrow_up</i></span>
-								<p><img class="responsive-img" src="<?=$vojo?>bildoj/butiko/gdfe-ene.jpg" alt="" />Le plus complet des dictionnaires français/espéranto avec 32 000 entrées et 944 pages (20 cm), avec son supplément de 40 pages. Offre spéciale&nbsp; <b>à 10 € au lieu de 29€ jusqu'au 15 décembre 2016</b>.</p>
+								<p><img class="responsive-img" src="<?=$vojo?>bildoj/butiko/gdfe-ene.jpg" alt="" />Le plus complet des dictionnaires français/espéranto avec 32 000 entrées et 944 pages (20 cm), avec son supplément de 40 pages.</p>
 							</div>
 						</div>
 

@@ -509,7 +509,7 @@ include "dlekkapo.inc.php";
 				<?php
 					$demandoj=array (
 					4 => "Kiom da tagoj estas en unu jaro?",
-					5 => "Hodiaŭ estas jaŭdo la 30a de novembro. Kiu dato estos morgaŭ?",
+					5 => "Hodiaŭ estas ĵaŭdo la 30-a de novembro. Kiu dato estos morgaŭ?",
 					6 => "Kiam estas la Nacia Tago en via lando? (NACIA = national-e)",
 					7 => "En kiu jaro aperis (APERI = paraître) la Unua Libro de Esperanto?"
 					);

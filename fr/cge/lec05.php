@@ -140,7 +140,7 @@ include "dlekkapo.inc.php";
 			</tr><tr>
 				<td><b>ĉiu</b></td>
 				<td><span class="eo">ĈI</span> + <span class="eo">U</span></td>
-				<td><em>tout(e)</em> + <em>(adjectif)</em><br>«aucune chose» => chaque, chacun(e)</td>
+				<td><em>tout(e)</em> + <em>(adjectif)</em><br>«toute chose» => chaque, chacun(e)</td>
 			</tr><tr>
 				<td><b>tie</b></td>
 				<td><span class="eo">TI</span> + <span class="eo">E</span></td>

@@ -37,9 +37,23 @@ include "pagxkapo.inc.php";
 				<h2>Mot par force</h2>
 				<div id="chart_div_mots_par_force"></div>
 			</div>
-
-
 			</section>
+			<h1>Statistiques - leçons</h1>
+			<section id="enhavo_memorilo">
+			<div class="col l12">
+				<h2>Évolution</h2>
+				<div id="chart_div_evolution"></div>
+			</div>
+			<div class="col l6">
+			<!-- que mettre ici ? -->
+			<!-- On peut lister les sections qui n'ont pas été faite (mais pour lesquels il existe d'autres sections non faite après) -->
+			<!-- on peut aussi faire un calendrier des jours où des sections ont été faite -->
+			<!-- on peut aussi faire la liste des sections faites/non faites -->
+			<?php //statEvolution($persono_id); ?>
+			</div>
+			</div>
+			</section>
+
 			
 		
 		</article>
@@ -70,12 +84,13 @@ include "pagxkapo.inc.php";
       google.charts.load('current', {'packages':['corechart']});
 
       // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawMotParForceChart);
+      google.charts.setOnLoadCallback(drawEvolutionChart);
 
       // Callback that creates and populates a data table,
       // instantiates the pie chart, passes in the data and
       // draws it.
-      function drawChart() {
+      function drawMotParForceChart() {
 
         // Create the data table.
         var data = new google.visualization.DataTable();
@@ -94,11 +109,29 @@ include "pagxkapo.inc.php";
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div_mots_par_force'));
-
-
-
         chart.draw(data,options);
       }
+
+      function drawEvolutionChart() {
+
+     var data = google.visualization.arrayToDataTable([
+     	<?php statEvolution($persono_id); ?>
+        ]);
+
+        var options = {
+          title: 'Pages de cours terminées',
+          curveType: 'function',
+          interpolateNulls: true,
+          width:800,
+          height:400,
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div_evolution'));
+
+        chart.draw(data, options);
+      }
+
     </script>
 
 <?php include "pagxpiedo.inc.php";?>		

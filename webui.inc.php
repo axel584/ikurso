@@ -954,14 +954,8 @@ function statMotsParForce($persono_id) {
 	echo rtrim($chaine,",");
 }
 
-function statEvolutionDisplayLine($eleves,$persono_id,$leciono_id,$dato) {
-	echo ",['".$dato."',";
-	$indice = array_search($persono_id, $eleves);
-	echo str_repeat(",", $indice);
-	echo $leciono_id;
-	echo str_repeat(",", count($eleves)-$indice);
-	echo "]\n";
-}
+
+
 
 function statEvolution($persono_id) {
 	global $bdd;
@@ -996,40 +990,27 @@ function statEvolution($persono_id) {
 	while ($row=$result->fetch()) {
 		$nomEleve[$row["id"]]=$row["enirnomo"];
 	}
-	echo "['Date'";
+	//print_r($nomEleve);
+	echo "data.addColumn('string', 'Date');\n";
 	foreach ($nomEleve as $valeur) {
-		echo ",{label : '".$valeur."',type:'number'}";
+		echo "data.addColumn('number', '".$valeur."');\n";
 	}
-	echo "]";
 	$statistique = array();
 	$jours = array();
 	$query = "SELECT personoj_lecioneroj.persono_id,personoj_lecioneroj.lecionero_id,dato,DAYOFYEAR(dato) as dayofyear FROM personoj_lecioneroj join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE dato>DATE_SUB(CURDATE(), INTERVAL 10 DAY) and lecionoj.kurso='".$dernierCours."' and persono_id in (".join(',', $autresEleves).") order by dato";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$resultat="";
 	while ($row=$result->fetch()) {
-		// on stocke le libellé du jour sous une forme plus lisible que le "jour de l'année"
-		$jours[$row["dayofyear"]]=substr($row["dato"],0,strpos($row["dato"]," "));
-		if (!isset($statistique[$row["dayofyear"]])) {
-			$statistique[$row["dayofyear"]]=array();
-		}
-		$statistique[$row["dayofyear"]][$row["persono_id"]]=$lecioneroj[$row["lecionero_id"]];
+		$resultat .= "['".$row["dato"]."'";
+		$indice = array_search($row["persono_id"], $autresEleves);
+		$resultat .= str_repeat(",null", $indice);
+		$resultat .= ",".$lecioneroj[$row["lecionero_id"]];
+		$resultat .= str_repeat(",null", count($autresEleves)-$indice);
+		$resultat .= "],\n";
 	}
-	// on affiche les statistiques :
-	$i=0;
-	foreach($statistique as $jour=>$resultat) {
-		echo ",\n['".$jours[$jour]."'";
-		// on boucle sur les 5 élèves
-		foreach ($nomEleve as $lernanto_id=>$identifiant) {
-			// on vérifie si l'élève a fait une leçon ET SI la leçon appartient au cours en question (pour lequel on a le nom des sections)
-			if (isset($resultat[$lernanto_id]) && isset($lecioneroj[$resultat[$lernanto_id]])) {
-				echo ",".$lecioneroj[$resultat[$lernanto_id]];
-			} else {
-				// l'élève en question n'a pas fait de leçon ce jour
-				echo ",null";
-			}
-		}
-		echo "]";
-		$i++;
-	}
+	echo "data.addRows([";
+	echo rtrim($resultat,",\n");
+	echo "]);";
 }
 
 ?>

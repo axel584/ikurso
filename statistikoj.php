@@ -49,7 +49,7 @@ include "pagxkapo.inc.php";
 			<!-- On peut lister les sections qui n'ont pas été faite (mais pour lesquels il existe d'autres sections non faite après) -->
 			<!-- on peut aussi faire un calendrier des jours où des sections ont été faite -->
 			<!-- on peut aussi faire la liste des sections faites/non faites -->
-			<?php statEvolution($persono_id); ?>
+			<?php //statEvolution($persono_id); ?>
 			</div>
 			</div>
 			</section>
@@ -112,21 +112,23 @@ include "pagxkapo.inc.php";
         chart.draw(data,options);
       }
 
+
       function drawEvolutionChart() {
 
-		
-         var data = new google.visualization.DataTable();
-         <?php statEvolution($persono_id); ?>
+     var data = google.visualization.arrayToDataTable([
+     	<?php statEvolution($persono_id); ?>
+        ]);
 
         var options = {
           title: 'Pages de cours terminées',
           curveType: 'function',
-          width:800,
-          height:400,
+          interpolateNulls: true,
+          //width:1200,
+          //height:400,
           legend: { position: 'bottom' }
         };
 
-        var chart = new google.charts.Scatter(document.getElementById('chart_div_evolution'));
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div_evolution'));
 
         chart.draw(data, options);
       }

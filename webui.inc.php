@@ -923,7 +923,11 @@ function listi_tableauHonneur($type,$persono_id) {
 		} else {
 			$enirnomo = $row["enirnomo"];
 		}
-		echo "<tr><td>".$classement.". ".$enirnomo."</td><td>".$row["total"]."</td></tr>";
+		if ($classement<=10) {
+			echo "<tr><td>".$classement.". ".$enirnomo."</td><td>".$row["total"]."</td></tr>";
+		} else if ($row["id"]==$persono_id) {
+			echo "<tr><td>".$classement.". ".$enirnomo."</td><td>".$row["total"]."</td></tr>";
+		}
 		$classement++;
 	}
 	echo "</table>";
@@ -955,8 +959,6 @@ function statMotsParForce($persono_id) {
 }
 
 
-
-
 function statEvolution($persono_id) {
 	global $bdd;
 	// on regarde la dernière leçon faite
@@ -969,7 +971,7 @@ function statEvolution($persono_id) {
 	//echo $derniereSection."//".$dernierCours;
 	// on regarde les autres élèves qui ont fait cette leçon
 	$autresEleves = array();
-	$query = "SELECT persono_id,personoj_lecioneroj.lecionero_id,dato FROM personoj_lecioneroj join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE lecionoj.kurso='".$dernierCours."' and personoj_lecioneroj.lecionero_id=".$derniereSection." order by dato desc limit 5";
+	$query = "SELECT persono_id,personoj_lecioneroj.lecionero_id,dato FROM personoj_lecioneroj join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE lecionoj.kurso='".$dernierCours."' and personoj_lecioneroj.lecionero_id=".$derniereSection." order by dato desc limit 7";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	while ($row=$result->fetch()) {
 		$autresEleves[] = $row["persono_id"];
@@ -990,27 +992,40 @@ function statEvolution($persono_id) {
 	while ($row=$result->fetch()) {
 		$nomEleve[$row["id"]]=$row["enirnomo"];
 	}
-	//print_r($nomEleve);
-	echo "data.addColumn('string', 'Date');\n";
+	echo "['Date'";
 	foreach ($nomEleve as $valeur) {
-		echo "data.addColumn('number', '".$valeur."');\n";
+		echo ",{label : '".$valeur."',type:'number'}";
 	}
+	echo "]";
 	$statistique = array();
 	$jours = array();
-	$query = "SELECT personoj_lecioneroj.persono_id,personoj_lecioneroj.lecionero_id,dato,DAYOFYEAR(dato) as dayofyear FROM personoj_lecioneroj join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE dato>DATE_SUB(CURDATE(), INTERVAL 10 DAY) and lecionoj.kurso='".$dernierCours."' and persono_id in (".join(',', $autresEleves).") order by dato";
+	$query = "SELECT personoj_lecioneroj.persono_id,personoj_lecioneroj.lecionero_id,dato,DAYOFYEAR(dato) as dayofyear FROM personoj_lecioneroj join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE dato>DATE_SUB(CURDATE(), INTERVAL 12 DAY) and lecionoj.kurso='".$dernierCours."' and persono_id in (".join(',', $autresEleves).") order by dato";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
-	$resultat="";
 	while ($row=$result->fetch()) {
-		$resultat .= "['".$row["dato"]."'";
-		$indice = array_search($row["persono_id"], $autresEleves);
-		$resultat .= str_repeat(",null", $indice);
-		$resultat .= ",".$lecioneroj[$row["lecionero_id"]];
-		$resultat .= str_repeat(",null", count($autresEleves)-$indice);
-		$resultat .= "],\n";
+		// on stocke le libellé du jour sous une forme plus lisible que le "jour de l'année"
+		$jours[$row["dayofyear"]]=substr($row["dato"],strpos($row["dato"],"-")+1,5);
+		if (!isset($statistique[$row["dayofyear"]])) {
+			$statistique[$row["dayofyear"]]=array();
+		}
+		$statistique[$row["dayofyear"]][$row["persono_id"]]=$lecioneroj[$row["lecionero_id"]];
 	}
-	echo "data.addRows([";
-	echo rtrim($resultat,",\n");
-	echo "]);";
+	// on affiche les statistiques :
+	$i=0;
+	foreach($statistique as $jour=>$resultat) {
+		echo ",\n['".$jours[$jour]."'";
+		// on boucle sur les 5 élèves
+		foreach ($nomEleve as $lernanto_id=>$identifiant) {
+			// on vérifie si l'élève a fait une leçon ET SI la leçon appartient au cours en question (pour lequel on a le nom des sections)
+			if (isset($resultat[$lernanto_id]) && isset($lecioneroj[$resultat[$lernanto_id]])) {
+				echo ",".$lecioneroj[$resultat[$lernanto_id]];
+			} else {
+				// l'élève en question n'a pas fait de leçon ce jour
+				echo ",null";
+			}
+		}
+		echo "]";
+		$i++;
+	}
 }
 
 ?>

@@ -15,6 +15,17 @@ if ($kurso=="" || ($kurso!="CG" && $kurso!="GR" && $kurso!="KE")) {
 	// Cours inconnu 
 	header("Location:personinformoj.php?erarkodo=17");
 }
+switch ($kurso) {
+	case "CG" : $urlCours = $urlracine."fr/cge/lec01.php";
+	break;
+	case "GR" : $urlCours = $urlracine."fr/gerda/cxap01.php";
+	break;
+	case "3N" : $urlCours = $urlracine."fr/3n/leciono01.php";
+	break;
+	default :
+		$urlCours = $urlracine;
+
+}
 // ajoute dans le protocole que l'élève regarde son diplome
 protokolo($persono["id"],"DIPLOME",$persono["enirnomo"]." regarde son diplome ".$kurso);
 // vérifier en base que le cours est bien terminé, récupérer le nom-prénom du correcteur, la date de fin et le statut (si le statut!=F => exit)
@@ -23,9 +34,25 @@ if ($infos==null) {
 	// on n'a pas trouvé de cours finis pour cet élève (tentative de fraude ?)
 	header("Location:personinformoj.php?erarkodo=17");	
 }
+
+// si on a un nom de famille ou un prénom on l'utilise pour afficher sur le diplome, sinon on prend l'identifiant
+if ($persono["familinomo"]!="" || $persono["personnomo"]!="") {
+	$nom = $persono["personnomo"]." ".$persono["familinomo"];
+} else {
+	$nom = $persono["enirnomo"];
+}
+if ($clef!="") {
+	$url = $urlracine."diplomeImage.php?kurso=".$kurso."&clef=".$clef;
+} else {
+	$url = $urlracine."diplomeImage.php?kurso=".$kurso;
+}
+$description = "Espéranto-France atteste que ".$nom." a correctement suivi le Cours d'Espéranto";
 ?>
 <html>
 	<head>
+		<meta property="og:title" content="Diplome de <?=$nom?>" />
+		<meta property="og:image"              content="<?=$url?>" />
+		<meta property="og:description" content="<?=$description?>" />
 		<!--Import Google Icon Font-->
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,600,600italic,700italic,700' rel='stylesheet' type='text/css'>
@@ -38,13 +65,20 @@ if ($infos==null) {
 	</head>
     <body class="attestation">
 		<?php 
-		if ($clef!="") {
-			$urlClef = "&clef=".$clef;
-		} else {
-			$urlClef = "";
-		}
-		echo '<img src="diplomeImage.php?kurso='.$kurso.$urlClef.'" width="842" height="595"/>'; ?>
+
+		echo '<img src="'.$url.'" width="842" height="595"/>'; ?>
 		<div class="outils">
+		<a class="btn waves-effect waves-light blue modal-trigger" target="_NEW" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($url);?>">Partager sur FaceBook</a>
+
+
+			<?php
+			// on affiche le lien vers le cours que si on accede au diplôme à partir de son lien "public"
+			if ($clef!="") {
+			?>
+			<a class="btn waves-effect waves-light blue modal-trigger" href="<?=$urlCours?>">Découvrir le cours</a>
+			<?php
+			}	
+			?>
 			<a class="btn waves-effect waves-light blue modal-trigger imprimer" href="" onclick="window.print();">Imprimer l’attestation</a>
 			<a class="btn waves-effect waves-light blue modal-trigger fermer" href="" onclick="window.close();">Fermer</a>
 		</div>

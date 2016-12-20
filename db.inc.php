@@ -628,6 +628,13 @@ function getRegistritajnRespondojn($kurso,$leciono,$persono_id) {
 
 }
 
+function getPersonoIdFromAktivigo($aktivigo) {
+    global $bdd;
+    $query = "select id from personoj where aktivigo='".$aktivigo."'";
+    $result = $bdd->query($query);
+    return $result->fetch()["id"];
+}
+
 function jamKomencisKurson($persono_id) {
     global $bdd;
     $query = "select count(*) as combien from nuna_kurso where studanto=".$persono_id;

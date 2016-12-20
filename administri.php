@@ -709,6 +709,10 @@ include "adminkapo.inc.php";
 												$lstdt=explode("-", $lastdato);
 												echo " (".$lstdt[2].".".$lstdt[1].".".$lstdt[0].")";
 											}
+											if ($nuna_kurso['stato']=='F') {
+												echo "&nbsp;<a href='diplome.php?kurso=".$nuna_kurso['kurso']."&clef=".$celpersono["aktivigo"]."' target='_NEW'>Diplome</a>";
+											}
+
 										?>
 									</td>
 								<?php } ?>

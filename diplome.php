@@ -13,7 +13,7 @@ $persono = apartigiPersonon($persono_id);
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 if ($kurso=="" || ($kurso!="CG" && $kurso!="GR" && $kurso!="KE")) {
 	// Cours inconnu 
-	header("Location:personinformoj.php?erarkodo=16");
+	header("Location:personinformoj.php?erarkodo=17");
 }
 // ajoute dans le protocole que l'élève regarde son diplome
 protokolo($persono["id"],"DIPLOME",$persono["enirnomo"]." regarde son diplome ".$kurso);

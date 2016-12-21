@@ -41,11 +41,7 @@ if ($persono["familinomo"]!="" || $persono["personnomo"]!="") {
 } else {
 	$nom = $persono["enirnomo"];
 }
-if ($clef!="") {
-	$url = $urlracine."diplomeImage.php?kurso=".$kurso."&clef=".$clef;
-} else {
-	$url = $urlracine."diplomeImage.php?kurso=".$kurso;
-}
+$url = $urlracine."diplomeImage.php?kurso=".$kurso."&clef=".$persono["aktivigo"];
 $description = "Espéranto-France atteste que ".$nom." a correctement suivi le Cours d'Espéranto";
 ?>
 <html>

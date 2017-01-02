@@ -739,3 +739,47 @@ INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('pluvo','pluie','nom',276);
 ALTER TABLE  `personoj_vortoj` ADD INDEX  `persono_index` (  `persono_id` );
 ALTER TABLE  `personoj_vortoj` ADD INDEX  `vorto_index` (  `vorto_id` );
 ALTER TABLE  `personoj_lecioneroj` ADD INDEX  `persono_index` (  `persono_id` );
+
+-- décalage sections de la leçon 4
+-- mise à jour du vocabulaire correspondant
+DELETE FROM `lecioneroj` WHERE `leciono_id`=62 and `id` = 35;
+DELETE FROM `lecioneroj` WHERE `leciono_id`=62 and `id` = 36;
+UPDATE `lecioneroj` SET ordo=4 WHERE `leciono_id`=62 and `ordo`=6;
+UPDATE `lecioneroj` SET ordo=5 WHERE `leciono_id`=62 and `ordo`=7;
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 3 : la date' WHERE  `leciono_id`=62 and `id` =272;
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 4 : pratique du vocabulaire' WHERE `leciono_id`=62 and `id` =40;
+UPDATE `lecioneroj` SET `titolo` = 'Exercices 5 et 6' WHERE `leciono_id`=62 and `id` =41;
+INSERT into lecioneroj (leciono_id,titolo,tipo,enhavo,ordo,unua,lasta) values ('62', 'Encore des compléments', 'TEKSTO', NULL, '6', '0', '0');
+INSERT into lecioneroj (leciono_id,titolo,tipo,enhavo,ordo,unua,lasta) values ('62', 'Exercice 2', 'EKZERCARO', NULL, '7', '0', '0');
+
+INSERT into vortoj (eo,fr,tipo,lecionero_id) values ('ĝardeno','jardin','nom',38);
+
+-- décalage des exercices de la leçon 4 après insertion de l'exercice sur les prépositions
+UPDATE `respondoj` SET `kodo` = 'ekz04_32', `demando` = 'Avez-vous vu la nouvelle pièce de théâtre ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_28';
+UPDATE `respondoj` SET `kodo` = 'ekz04_31', `demando` = 'Avez-vous deux euros et trente centimes (euro = eŭro, centime = cendo) ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_27';
+UPDATE `respondoj` SET `kodo` = 'ekz04_30', `demando` = 'Est-ce que sa femme est la mère de ton amie ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_26';
+UPDATE `respondoj` SET `kodo` = 'ekz04_29', `demando` = 'Avez-vous goûté le gâteau ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_25';
+UPDATE `respondoj` SET `kodo` = 'ekz04_28', `demando` = 'Est-ce que le lait est froid ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_24';
+UPDATE `respondoj` SET `kodo` = 'ekz04_27', `demando` = 'Ta mère vient-elle d’Europe ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_23';
+UPDATE `respondoj` SET `kodo` = 'ekz04_26', `demando` = 'Sont-ils de bons amis ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_22';
+UPDATE `respondoj` SET `kodo` = 'ekz04_25', `demando` = 'Est-ce que le frère de la fille malade écrivait mal ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_21';
+UPDATE `respondoj` SET `kodo` = 'ekz04_24', `demando` = 'Vendent-ils du thé et du café dans la nouvelle boutique ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_20';
+UPDATE `respondoj` SET `kodo` = 'ekz04_23', `demando` = 'Est-ce que la nouvelle institutrice a oublié le livre dans une pièce de l’école ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_19';
+UPDATE `respondoj` SET `kodo` = 'ekz04_22', `demando` = 'Est-ce que le père lavera les petites tasses dans la maison de Fatima ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_18';
+UPDATE `respondoj` SET `kodo` = 'ekz04_21', `demando` = 'Est-ce qu’un garçon en bonne santé boit du lait ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_17';
+UPDATE `respondoj` SET `kodo` = 'ekz04_20', `demando` = 'Est-ce que les enfants vont danser dans l’école ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_16';
+UPDATE `respondoj` SET `kodo` = 'ekz04_19', `demando` = 'A-t-il oublié de porter du pain à la sœur de Petro ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_15';
+UPDATE `respondoj` SET `kodo` = 'ekz04_18', `demando` = 'Est-ce que son fils a oublié le thé et le lait ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_14';
+UPDATE `respondoj` SET `kodo` = 'ekz04_17', `demando` = 'Est-ce que ton père collectionne les timbres de mon pays ?' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_13';
+UPDATE `respondoj` SET `kodo` = 'ekz04_16', `demando` = 'Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras aĉeti sandviĉon. Li manĝos ilin vespere.' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_12';
+UPDATE `respondoj` SET `kodo` = 'ekz04_15', `demando` = 'La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_11';
+UPDATE `respondoj` SET `kodo` = 'ekz04_14', `demando` = 'Petro, la filo de Fatima, kolektas poŝtmarkojn kaj bildojn el ĵurnaloj. Maria, lia fratino, promenas bicikle.' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_10';
+UPDATE `respondoj` SET `kodo` = 'ekz04_13', `demando` = 'Fatima deziras aĉeti novajn ŝuojn al la infanoj.' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_09';
+UPDATE `respondoj` SET `kodo` = 'ekz04_12', `demando` = 'Simeono estas la edzo de Fatima. Li amas ŝin. Li, la edzino kaj la infanoj loĝas en Eŭropo, en granda domo.' WHERE `lecionero_id` = 41 AND `kodo` = 'ekz04_08';
+UPDATE `respondoj` SET `kodo` = 'ekz04_11', `demando` = 'En kiu jaro aperis (APERI = paraître) la Unua Libro de Esperanto?' WHERE `lecionero_id` = 272 AND `kodo` = 'ekz04_07';
+UPDATE `respondoj` SET `kodo` = 'ekz04_10', `demando` = 'Kiam estas la Nacia Tago en via lando? (NACIA = national-e)' WHERE `lecionero_id` = 272 AND `kodo` = 'ekz04_06';
+UPDATE `respondoj` SET `kodo` = 'ekz04_09', `demando` = 'Hodiaŭ estas ĵaŭdo la 30-a de novembro. Kiu dato estos morgaŭ?' WHERE `lecionero_id` = 272 AND `kodo` = 'ekz04_05';
+UPDATE `respondoj` SET `kodo` = 'ekz04_08', `demando` = 'Kiom da tagoj estas en unu jaro?' WHERE `lecionero_id` = 272 AND `kodo` = 'ekz04_04';
+
+
+

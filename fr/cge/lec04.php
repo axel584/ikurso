@@ -91,51 +91,9 @@ include "dlekkapo.inc.php";
 		} // fin section
 		if ($section=="3") {
 		?>
-		
-			<p class="parto">L’<b>alphabet</b> espéranto comporte 28 lettres :</p>
-			<div class="container row">
-					<p class="col s12 row" style="font-size: 1.5em"><span class="col s1">&nbsp;A&nbsp;</span><span class="col s1">&nbsp;B&nbsp;</span><span class="col s1">&nbsp;C&nbsp;</span><span class="col s1">&nbsp;Ĉ&nbsp;</span><span class="col s1">&nbsp;D&nbsp;</span><span class="col s1">&nbsp;E&nbsp;</span><span class="col s1">&nbsp;F</span></p>
-					<p class="col s12 row" style="font-size: 1.5em"><span class="col s1">&nbsp;G&nbsp;</span><span class="col s1">&nbsp;Ĝ&nbsp;</span><span class="col s1">&nbsp;H&nbsp;</span><span class="col s1">&nbsp;Ĥ&nbsp;</span><span class="col s1">&nbsp;I&nbsp;</span><span class="col s1">&nbsp;J&nbsp;</span><span class="col s1">&nbsp;Ĵ</span></p>
-					<p class="col s12 row" style="font-size: 1.5em"><span class="col s1">&nbsp;K&nbsp;</span><span class="col s1">&nbsp;L&nbsp;</span><span class="col s1">&nbsp;M&nbsp;</span><span class="col s1">&nbsp;N&nbsp;</span><span class="col s1">&nbsp;O&nbsp;</span><span class="col s1">&nbsp;P&nbsp;</span><span class="col s1">&nbsp;R</span></p>
-					<p class="col s12 row" style="font-size: 1.5em"><span class="col s1">&nbsp;S&nbsp;</span><span class="col s1">&nbsp;Ŝ&nbsp;</span><span class="col s1">&nbsp;T&nbsp;</span><span class="col s1">&nbsp;U&nbsp;</span><span class="col s1">&nbsp;Ŭ&nbsp;</span><span class="col s1">&nbsp;V&nbsp;</span><span class="col s1">&nbsp;Z</span></p>
-			</div>
+			<p class="parto">Dans la première leçon, vous avez vu que l’alphabet de l’espéranto comporte 28 lettres, et que la prononciation de l’espéranto est phonétique. </p>
 			
-			<p>
-			Les lettres <b>q</b>, <b>w</b>, <b>x</b> et <b>y</b> n’existent pas en
-			espéranto mais on y trouve six lettres qui n’existent pas en français&nbsp;:
-			<span class="eo">ĉ</span>, <span class="eo">ĝ</span>, <span class="eo">ĥ</span>, <span class="eo">ĵ</span>, <span class="eo">ŝ</span>, <span class="eo">ŭ</span> (à remarquer qu’elles ont toutes un accent circonflexe sauf le <span class="eo">ŭ</span> dont
-			l’accent est en fait un demi-cercle).</p>
-			<p>
-			Quand on a besoin d’épeler un mot en espéranto on ne dit pas <i>a</i>,
-			<i>bé</i>, <i>cé</i>,… <i>ache</i>,… <i>zèd</i> comme en français mais
-			<span class="eo">a</span>, <span class="eo">bo</span>, <span class="eo">co</span>, <span class="eo">do</span>, <span class="eo">e</span>, etc., c’est-à-dire que le nom des voyelles correspond à leur son et que le nom des consonnes se
-			forme en leur ajoutant la terminaison <span class="eo">-o</span>.</p>
-	
-			<p>Exemples :</p>
-			<div class="container">
-				<p><span class="eo">griza</span> : go, ro, i, zo, a</p>
-				<p><span class="eo">ruĝa</span> : ro, u, ĝo, a</p>
-			</div>
-	
-			<div class="card-panel blue lighten-5 center">
-				Souvenez-vous bien de la règle sans exception : <b>une lettre = un son</b>.
-			</div>
-	
-			<p class="rimarko"><strong>REMARQUE</strong> : 
-				Il n’y a que très peu de racines en espéranto qui aient une consonne
-				double. Un exemple est <span class="eo">Finno</span> (Finnois). Comme chaque lettre se
-				prononce, on dit <span class="eo"><u>fin</u>-no</span>. Certains mots composés peuvent avoir
-				une consonne double, par exemple <span class="eo">Pollando</span> (Pologne) de <span class="eo">Polo</span>,
-				<span class="eo">lando</span>, et on prononce <span class="eo">Pol-<u>lan</u>-do</span>.
-			</p>
-
-		<?php 
-		} // fin section
-		if ($section=="4") {
-		?>
-		
-			<p class="parto">Les syllabes accentuées sont soulignées et, comme d’habitude, le petit bouton à gauche vous indique la présence d’échantillons sonores
-			associés.
+			<p class="parto">Vous allez maintenant faire un exercice de prononciation. Lisez les mots suivants à voix haute en faisant attention à l’accent tonique (indiqué par un soulignement). Votre prononciation s’améliorera petit à petit.Les syllabes accentuées sont soulignées et, comme d’habitude, le petit bouton à gauche vous indique la présence d’échantillons sonores associés.
 			</p>
 			<div class="row">
 				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-01.mp3" class="sm2_button"></a></p>
@@ -177,10 +135,6 @@ include "dlekkapo.inc.php";
 			Les voyelles <i>o</i> et <i>e</i> peuvent être prononcées plus ou 
 			moins ouvertes du moment qu’il n’y a pas de confusion possible avec les voyelles proches.</p>
 
-		<?php 
-		} // fin section
-		if ($section=="5") {
-		?>
 			<p class="parto">Les consonnes se prononcent comme en français, sauf :</p>
 	
 			<div class="row">
@@ -256,7 +210,7 @@ include "dlekkapo.inc.php";
 		
 		<?php 
 		} // fin section
-		if ($section=="6") {
+		if ($section=="4") {
 		?>
 			<p class="parto">
 			Les combinaisons suivantes de voyelles (<b>a</b>, <b>e</b>, <b>o</b>,
@@ -320,10 +274,10 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="7") {
+		if ($section=="5") {
 		?>
 			<p class="parto">Voici une liste de mots qui représentent les différents sons de l’espéranto. 
-			Lisez-les à voix haute en respectant faisant attention à l’accent tonique (indiqué par un soulignement). Votre prononciation s’améliorera petit à petit.
+			Lisez-les à voix haute en faisant attention à l’accent tonique (indiqué par un soulignement). Votre prononciation s’améliorera petit à petit.
 			</p>
 			<?php if ($persono) { ?>
 			<p class="eo eta"><b>NOTE </b>: Les mots précédés de <span class="marque">•</span> seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
@@ -333,7 +287,6 @@ include "dlekkapo.inc.php";
 				<div class="vortlisto row">
 					<div class="col s12 m4">
 						<p><span class="marque">•</span> <span class="eo">a<u>ĉe</u>ti</span> : acheter</p>
-						<p><span class="marque">•</span> </span><span class="eo">al (1)</span> : vers, à</p>
 						<p><span class="marque">•</span> <span class="eo">An<u>glu</u>jo</span> : Angleterre</p>
 						<p>&nbsp;&nbsp;<span class="eo">a<u>non</u>co</span> : annonce</p>
 						<p>&nbsp;&nbsp;<span class="eo"><u>an</u>taŭ</span> : avant</p>
@@ -344,7 +297,6 @@ include "dlekkapo.inc.php";
 						<p><span class="marque">•</span> <span class="eo">Ĉi<u>ni</u>o</span> : Chine</p>
 						<p><span class="marque">•</span> <span class="eo">ĉoko<u>la</u>do</span> : chocolat</p>
 						<p><span class="marque">•</span> <span class="eo"><u>dan</u>co</span> : danse</p>
-						<p><span class="marque">•</span> <span class="eo">de (2)</span> : de</p>
 						<p><span class="marque">•</span> <span class="eo">de<u>zi</u>ri</span> : désirer</p>
 						<p><span class="marque">•</span> <span class="eo"><u>do</u>mo</span> : maison</p>
 						<p><span class="marque">•</span> <span class="eo"><u>ed</u>zo</span> : époux</p>
@@ -354,11 +306,11 @@ include "dlekkapo.inc.php";
 						<p>&nbsp;&nbsp;<span class="eo"><u>e</u>ĥo</span> : écho</p>
 					</div>
 					<div class="col s12 m4">
-						<p><span class="marque">•</span> <span class="eo">en</span> : dans</p>
 						<p><span class="marque">•</span> <span class="eo">Eŭ<u>ro</u>po</span> : Europe</p>
 						<p>&nbsp;&nbsp;<span class="eo">Eŭ<u>kli</u>do</span> : Euclide</p>
 						<p>&nbsp;&nbsp;<span class="eo">geogra<u>fi</u>o</span> : géographie</p>
 						<p><span class="marque">•</span> <span class="eo">gus<u>tu</u>mi</span> : goûter</p>
+						<p><span class="marque">•</span> <span class="eo">ĝar<u>de</u>no</span> : jardin</p>
 						<p><span class="marque">•</span> <span class="eo"><u>ĝo</u>jo</span> : joie</p>
 						<p>&nbsp;&nbsp;<span class="eo"><u>ĥo</u>ro</span> : chœur</p>
 						<p><span class="marque">•</span> <span class="eo">in<u>fa</u>no</span> : enfant</p>
@@ -372,15 +324,16 @@ include "dlekkapo.inc.php";
 						<p><span class="marque">•</span> <span class="eo"><u>ki</u>o</span> : quoi</p>
 						<p><span class="marque">•</span> <span class="eo">ko<u>lek</u>ti</span> : collectionner, rassembler</p>
 						<p><span class="marque">•</span> <span class="eo"><u>lan</u>do</span> : pays</p>
-						<p><span class="marque">•</span> <span class="eo">leci<u>o</u>no</span> : leçon</p>
--*					</div>
+					</div>
 					<div class="col s12 m4">
+						<p><span class="marque">•</span> <span class="eo">leci<u>o</u>no</span> : leçon</p>
 						<p><span class="marque">•</span> <span class="eo">ler<u>ne</u>jo</span> : école</p>
 						<p><span class="marque">•</span> <span class="eo"><u>li</u>bro</span> : livre</p>
 						<p><span class="marque">•</span> <span class="eo"><u>lo</u>ĝi</span> : habiter</p>
 						<p>&nbsp;&nbsp;<span class="eo"><u>ma</u>jo</span> : mai</p>
 						<p><span class="marque">•</span> <span class="eo"><u>man</u>ĝi</span> : manger</p>
 						<p>&nbsp;&nbsp;<span class="eo"><u>mej</u>lo</span> : mille (1,8 km)</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>mu</u>ro</span> : mur</p>
 						<p>&nbsp;&nbsp;<span class="eo">mo<u>nu</u>jo</span> : porte-monnaie</p>
 						<p><span class="marque">•</span> <span class="eo">neŭ<u>tra</u>la</span> : neutre</p>
 						<p><span class="marque">•</span> <span class="eo"><u>o</u>vo</span> : œuf</p>
@@ -395,18 +348,76 @@ include "dlekkapo.inc.php";
 						<p><span class="marque">•</span> <span class="eo">vo<u>ja</u>ĝi</span> : voyager</p>
 					</div>
 				</div>
-			</fieldset>
+			</fieldset>		
 
-			<p class="rimarko"><strong>REMARQUE</strong> : 
-			Retenez bien ces quatre petits mots très fréquent&nbsp;:</p>
-			<ol>
-				<li><b>al</b> indique le but d’un mouvement (<span class="eo">ŝi kuras al la lernejo</span>) ou le bénéficiaire de l’action (<span class="eo">li respondis al mi</span>).</li>
-				<li><b>de</b> indique la possession (la filo de mia frato) ou la provenance (<span class="eo">li venas de la lernejo</span>).</li>
-				<li><b>el</b> indique le mouvement hors d’un lieu (<span class="eo">li kuras el la lernejo</span> = il court hors de l’école, il sort en courant de l’école), l’origine (<span class="eo">teatraĵo el via lando</span>) ou la matière (<span class="eo">ovo el ĉokolado</span> = un œuf en chocolat). </li>
-				<li><b>kaj</b> = et </li>
-			</ol>
-			
+		<?php 
+		} // fin section
+		if ($section=="6") {
+		?>
+		
+		<p class="parto">Dans la leçon 2, vous avez vu quelques compléments introduits par des prépositions&nbsp;: <span class="eo">antaŭ</span> (avant, devant), <span class="eo">sub</span> (sous, en-dessous de), <span class="eo">sur</span> (sur, au-dessus de), <span class="eo">super</span> (au-dessus de, par-dessus).</p>
+		<p>Voici quelques autres prépositions&nbsp;:</p>
+		
+		<table class="retrait striped bordered">
+			<tr><td class="eo">apud</td><td> - près de, à côté (indique la proximité)</td></tr>
+			<tr><td class="eo">ĉe</td><td>- chez, auprès de, tout près de (indique la proximité immédiate)</td></tr>
+			<tr><td class="eo">al</td><td>- à, vers (indique le but d’un mouvement ou le bénéficiaire d’une action)</td></tr>
+			<tr><td class="eo">de</td><td>indique la possession ou la provenance.</td></tr>
+			<tr><td class="eo">el</td><td>indique le mouvement hors d’un lieu, l’origine ou la matière.</td></tr>
+		</table>
 
+		<p>Exemples :</p>
+		<div class="vortlisto row">
+			<p class="col s6"><span class="eo">La butiko estas <b>apud</b> la lernejo.</span></p>
+			<p class="col s6">La boutique est à côté de l’école.</p>
+			<p class="col s6"><span class="eo">La tablo estas <b>ĉe</b> la muro.</span></p>
+			<p class="col s6">La table est tout près du mur, contre le mur.</p>
+			<p class="col s6"><span class="eo">Estas biciklo <b>ĉe</b> la domo.</span></p>
+			<p class="col s6">Il y a un vélo contre la maison.</p>
+			<p class="col s6"><span class="eo">Mia frato iras <b>al</b> Anglujo.</span></p>
+			<p class="col s6">Mon frère va en Angleterre.</p>
+			<p class="col s6"><span class="eo">Ŝi respondis <b>al</b> mi.</span></p>
+			<p class="col s6">Elle m’a répondu.</p>
+			<p class="col s6"><span class="eo">Mia amiko venas <b>de</b> Pollando.</span></p>
+			<p class="col s6">Mon ami vient de Pologne.</p>
+			<p class="col s6"><span class="eo">La filo <b>de</b> mia frato manĝas ovon <b>el</b> ĉokolado</span>.</p>
+			<p class="col s6">Le fils de mon frère mange un œuf en chocolat.</p>
+			<p class="col s6"><span class="eo">Li kuras <b>el</b> la lernejo.</span></p>
+			<p class="col s6">Il court hors de l’école, il sort en courant de l’école.</p>
+		</div>
+		
+		<?php 
+		} // fin section
+		if ($section=="7") {
+		?>
+		<div class="row">
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/al-la-lernejo.jpg"><br>-1-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/apud-la-fenestro.jpg"><br>-3-</span></p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/cxokoladaj-insektoj.jpg"><br>-2-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/paperoj-cxe-la-muro.jpg"><br>-4-</p>
+		</div>
+		
+		<fieldset class="ekzerco">
+			<legend><strong>EXERCICE</strong> : En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
+			<input type="hidden" name="013_cxap04.2" value="2. En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
+			<p>En vous aidant des images, recopiez les phrases en complétant avec la préposition qui convient. Choisissez parmi les prépositions suivantes&nbsp;: <b>apud</b>, <b>ĉe</b>, <b>al</b>, <b>de</b>, <b>el</b>. (Chaque préposition ne peut être utilisée qu’une seule fois.)</p>
+			<div class="tasko">
+			<hr>
+			<?php 	
+				$demandoj=array (
+				4 => "La infanoj iras ... la lernejo.",
+				5 => "Mia skribotablo estas ... la fenestro.",
+				6 => "Mi acêtos insektojn ... ĉokolado.",
+				7 => "Estas paperoj ... la muro.",
+				);
+				ekzerco(True, 1);
+			?>
+			</div>
+		</fieldset>
+		
+		<p>Crédits photos :</p>
+		<p class="creditphoto">1. <em>Enfants en route pour l’école</em>. <a href="http://monde.ccdmd.qc.ca/ressource/?id=93435">Youri Thomas</a></p>
+		<p class="creditphoto">2, 3, 4. iKurso/ E. Richard</p>
 		<?php 
 		} // fin section
 		if ($section=="8") {
@@ -504,14 +515,14 @@ include "dlekkapo.inc.php";
 				<legend><strong>EXERCICE</strong> : Répondez en espéranto en faisant des phrases complètes et en écrivant les nombres en toutes lettres.</legend>
 				<p>N’hésitez pas à chercher sur Internet les réponses que vous ne connaissez pas&nbsp;!</p>
 				<?php atentigo();	?>
-				<input type="hidden" name="013_cxap04.2" value="2. Répondez en espéranto en faisant des phrases complètes.">
+				<input type="hidden" name="013_cxap04.3" value="3. Répondez en espéranto en faisant des phrases complètes.">
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					4 => "Kiom da tagoj estas en unu jaro?",
-					5 => "Hodiaŭ estas ĵaŭdo la 30-a de novembro. Kiu dato estos morgaŭ?",
-					6 => "Kiam estas la Nacia Tago en via lando? (NACIA = national-e)",
-					7 => "En kiu jaro aperis (APERI = paraître) la Unua Libro de Esperanto?"
+					8 => "Kiom da tagoj estas en unu jaro?",
+					9 => "Hodiaŭ estas ĵaŭdo la 30-a de novembro. Kiu dato estos morgaŭ?",
+					10 => "Kiam estas la Nacia Tago en via lando? (NACIA = national-e)",
+					11 => "En kiu jaro aperis (APERI = paraître) la Unua Libro de Esperanto?"
 					);
 					ekzerco(True, 1);
 				?>
@@ -547,16 +558,16 @@ include "dlekkapo.inc.php";
 		
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Traduisez en français.</legend>
-				<input type="hidden" name="013_cxap04.3" value="3. Traduisez en français.">
+				<input type="hidden" name="013_cxap04.4" value="4. Traduisez en français.">
 				
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					8 => "Simeono estas la edzo de Fatima. Li amas ŝin. Li, la edzino kaj la infanoj loĝas en Eŭropo, en granda domo.",
-					9 => "Fatima deziras aĉeti novajn ŝuojn al la infanoj.",
-					10 => "Petro, la filo de Fatima, kolektas poŝtmarkojn kaj bildojn el ĵurnaloj. Maria, lia fratino, promenas bicikle.",
-					11 => "La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.",
-					12 => "Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras aĉeti sandviĉon. Li manĝos ilin vespere."
+					12 => "Simeono estas la edzo de Fatima. Li amas ŝin. Li, la edzino kaj la infanoj loĝas en Eŭropo, en granda domo.",
+					13 => "Fatima deziras aĉeti novajn ŝuojn al la infanoj.",
+					14 => "Petro, la filo de Fatima, kolektas poŝtmarkojn kaj bildojn el ĵurnaloj. Maria, lia fratino, promenas bicikle.",
+					15 => "La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.",
+					16 => "Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras aĉeti sandviĉon. Li manĝos ilin vespere."
 					);
 					ekzerco(False, 2);
 				?>
@@ -570,22 +581,22 @@ include "dlekkapo.inc.php";
 		
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Traduisez les questions en espéranto (sans y répondre)</legend>
-				<input type="hidden" name="013_cxap04.4" value="4. Traduisez les questions en espéranto (sans y répondre).">
+				<input type="hidden" name="013_cxap04.5" value="5. Traduisez les questions en espéranto (sans y répondre).">
 				<?php atentigo();	?>
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					13 => "Est-ce que ton père collectionne les timbres de mon pays ?",
-					14 => "Est-ce que son fils a oublié le thé et le lait ?",
-					15 => "A-t-il oublié de porter du pain à la sœur de Petro ?",
-					16 => "Est-ce que les enfants vont danser dans l’école ?",
-					17 => "Est-ce qu’un garçon en bonne santé boit du lait ?",
-					18 => "Est-ce que le père lavera les petites tasses dans la maison de Fatima ?",
-					19 => "Est-ce que la nouvelle institutrice a oublié le livre dans une pièce de l’école ?",
-					20 => "Vendent-ils du thé et du café dans la nouvelle boutique ?",
-					21 => "Est-ce que le frère de la fille malade écrivait mal ?",
-					22 => "Sont-ils de bons amis ?",
-					23 => "Ta mère vient-elle d’Europe ?",
+					17 => "Est-ce que ton père collectionne les timbres de mon pays ?",
+					18 => "Est-ce que son fils a oublié le thé et le lait ?",
+					19 => "A-t-il oublié de porter du pain à la sœur de Petro ?",
+					20 => "Est-ce que les enfants vont danser dans l’école ?",
+					21 => "Est-ce qu’un garçon en bonne santé boit du lait ?",
+					22 => "Est-ce que le père lavera les petites tasses dans la maison de Fatima ?",
+					23 => "Est-ce que la nouvelle institutrice a oublié le livre dans une pièce de l’école ?",
+					24 => "Vendent-ils du thé et du café dans la nouvelle boutique ?",
+					25 => "Est-ce que le frère de la fille malade écrivait mal ?",
+					26 => "Sont-ils de bons amis ?",
+					27 => "Ta mère vient-elle d’Europe ?",
 					);
 					ekzerco(True, 1);
 				?>
@@ -597,16 +608,16 @@ include "dlekkapo.inc.php";
 				<p>Répondez avec des phrases complètes (pas seulement par un oui ou un non). Vous pouvez utiliser <span class="eo">sed</span> (mais)
 				dans les réponses négatives :</p>
 				<p>Ex.:  <span class="eo">Ŝi ne manĝas ĉokoladon, sed panon.</span></p>
-				<input type="hidden" name="013_cxap04.5" value="5. Répondez maintenant en espéranto.">
+				<input type="hidden" name="013_cxap04.6" value="6. Répondez maintenant en espéranto.">
 				<?php atentigo();?>
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					24 => "Est-ce que le lait est froid ?",
-					25 => "Avez-vous goûté le gâteau ?",
-					26 => "Est-ce que sa femme est la mère de ton amie ?",
-					27 => "Avez-vous deux euros et trente centimes (euro = eŭro, centime = cendo) ?",
-					28 => "Avez-vous vu la nouvelle pièce de théâtre ?",
+					28 => "Est-ce que le lait est froid ?",
+					29 => "Avez-vous goûté le gâteau ?",
+					30 => "Est-ce que sa femme est la mère de ton amie ?",
+					31 => "Avez-vous deux euros et trente centimes (euro = eŭro, centime = cendo) ?",
+					32 => "Avez-vous vu la nouvelle pièce de théâtre ?",
 					);
 					ekzerco(True, 1);
 				?>

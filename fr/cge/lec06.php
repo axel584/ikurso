@@ -177,7 +177,7 @@ include "dlekkapo.inc.php";
 		un verre <b>sur</b> la table… aller à l’école… mettre <b>dans</b> le sac, etc.</p>
 		<p>En voici un premier bloc suivi d’un autre plus loin.</p>
 		<table class="retrait striped bordered">
-			<tr><td class="eo">al</td><td>- à vers (indique le but d’un mouvement ou le bénéficiaire d’une action)</td></tr>
+			<tr><td class="eo">al</td><td>- à, vers (indique le but d’un mouvement ou le bénéficiaire d’une action)</td></tr>
 			<tr><td class="eo">ĉe</td><td>- chez, auprès de, tout près de</td></tr>
 			<tr><td class="eo">de</td><td>- de, à partir de, depuis (temps, lieu)</td></tr>
 			<tr><td class="eo">dum</td><td>- durant, pendant (est également conjonction et signifie «pendant que», «tandis que»)</td></tr>

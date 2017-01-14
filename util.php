@@ -36,7 +36,20 @@ function konvU($buff) {
 			"&#309;" => "\u0135",	"&#349;" => "\u015d",	"&#365;" => "\u016d"
 		);
 	foreach($utf8 as $key => $val) {
-	$buff=str_replace($key,$val,$buff);
+		$buff=str_replace($key,$val,$buff);
+	}
+	return($buff);
+}
+
+function konvX($buff) {
+	$utf8 = array(
+			"Ĉ" => "Cx",	"Ĝ" => "Gx",	"Ĥ" => "Hx",
+			"Ĵ" => "Jx",	"Ŝ" => "Sx",	"Ŭ" => "Ux",
+			"ĉ" => "cx",	"ĝ" => "gx",	"ĥ" => "hx",
+			"ĵ" => "jx",	"ŝ" => "sx",	"ŭ" => "ux"
+		);
+	foreach($utf8 as $key => $val) {
+		$buff=mb_ereg_replace($key,$val,$buff);
 	}
 	return($buff);
 }

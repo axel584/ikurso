@@ -154,7 +154,6 @@ include "dlekkapo.inc.php";
 		if ($section=="5") {
 		?>
 		
-		
 		<p>À distinguer :</p>
 		<div class="vortlisto row">
 			<p class="col s6"><span class="eo">nova</span> : nouveau</p><p class="col s6"><span class="eo">malnova</span> : ancien, périmé</p>
@@ -220,7 +219,7 @@ include "dlekkapo.inc.php";
 		<fieldset class="ekzerco">
 			<legend><strong>EXERCICE</strong> : En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
 			<input type="hidden" name="013_cxap06.1" value="En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
-			<p>Utilisez une fois chacune des prépositions suivantes&nbsp;: <b>por</b>, <b>ĉe</b>, <b>malantaŭ</b>, <b>el</b>, <b>ĝis</b>, <b>per</b>, <b>dum</b>, <b>inter</b>.<br>
+			<p>Utilisez seulement une fois chacune des prépositions suivantes&nbsp;: <b>por</b>, <b>ĉe</b>, <b>malantaŭ</b>, <b>el</b>, <b>ĝis</b>, <b>per</b>, <b>dum</b>, <b>inter</b>.<br>
 			Le vocabulaire nouveau se trouve au bas de cette page.</p>
 			<div class="tasko">
 			<hr>
@@ -353,6 +352,25 @@ include "dlekkapo.inc.php";
 		} // fin section 9
 		if ($section=="10") {
 		?>
+		<p class="parto">Dans cet exercice, vous devrez répondre à des questions sur les deux textes des pages précédentes. Voici de nouveau ces deux textes.</p>
+		<p><b>Vojaĝo al Montrealo por la Esperanto-kongreso</b></p>
+		<p>Mi estas membro de junulara esperantista klubo kaj mi partoprenis en
+			  la Esperanto-kongreso, kiu okazis en Montrealo. Dum preskaŭ tri horoj
+			  ni vojaĝis de Kebeko en nia aŭtobuseto kaj ne haltis, ĝis ni alvenis
+			  al Montrealo. Tie ni ankaŭ vizitis esperantistajn amikojn. Por la
+			  tagmanĝo ni manĝis sandviĉojn, kiuj estis sub la seĝoj, sur kiuj
+			  ni sidis dum la vojaĝo.</p>
+		<p><b>Vizito en zoologia ĝardeno</b></p>
+		<p>
+		  Kun miaj fratoj mi veturis per aŭto al la zoo (<i>zoologia ĝardeno</i>). ĝi estas
+		  ekster la urbo Granby (Kebekio*). Ni admiris tie multajn bestojn el
+		  ĉiuj kontinentoj. Al mia frato tre plaĉis la ursoj apud la enirejo.
+		  Inter la kaĝoj de la brunaj kaj blankaj ursoj estas la kaĝo de la
+		  nigra urso el okcidenta Kanado. La blanka urso el la Arkto estis ofte
+		  en la akvo. Por mi la grandaj simioj estis tre interesaj. Sen tiaj
+		  bestoj zoo ne povas esti kompleta.
+		</p>
+
 		<fieldset class="ekzerco">
 			<legend><strong>EXERCICE</strong></legend>
 			<p>Répondez en espéranto aux questions suivantes, selon les deux récits que vous avez lus précédemment.</p>

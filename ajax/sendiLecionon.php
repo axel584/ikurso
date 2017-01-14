@@ -90,15 +90,7 @@ if ($kurso=="3N") {
 	$subjekto = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 }
 
-$mesagxkapo="MIME-Version: 1.0\n";
-$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
-$mesagxkapo.="From: ikurso <cours-esperanto@esperanto-jeunes.org>\n";
-$mesagxkapo.="Reply-To: ".$studanto["enirnomo"]." <".$studanto["retadreso"].">\n";
-$mesagxkapo.="Return-Path: ".$studanto["enirnomo"]." <".$studanto["retadreso"].">\n";
-$mesagxkapo.="Cc: ".$studanto["enirnomo"]." <".$studanto["retadreso"].">\n";
-$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
-$mesagxkapo.=" \n";
-$resultat = mail($korektantaretadreso,$subjekto,stripslashes($fonto),$mesagxkapo);
+$resultat = mailViaSmtp($korektantaretadreso.",".$studanto["enirnomo"]." <".$studanto["retadreso"].">,$studanto["retadreso"],$subjekto,stripslashes($fonto));
 
 // gxisdatigi liajn datumojn en nuna_kurso
 $query = "update nuna_kurso set nunleciono=".$leciono.",stato='K',lastdato=CURDATE() where studanto=".$persono_id." and kurso='".$kurso."'";

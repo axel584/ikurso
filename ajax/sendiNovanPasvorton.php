@@ -44,7 +44,7 @@ $mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
 $mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 // envoyer le mail eleve pour l'inviter a attendre un correcteur.
 $objekto="Votre mot de passe sur les cours d'espéranto Ikurso";
-mail($retadreso,$objekto,$contents,$mesagxkapo);
+mailViaSmtp($retadreso,"ikurso@esperanto-france.org",$objekto,$contents);
 protokolo(0,"réinitialisation du mot de passe",$retadreso." a reçu une mail pour changer son mot de passe");
 
 $respondo["mesagxo"] = "ok";

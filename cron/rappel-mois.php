@@ -36,11 +36,6 @@ $result = $bdd->query($query);
 	echo $contents;
 	echo "<br/>-----------------------------------------------------------------<br/>";
 	// envoie de l'email
-	$mesagxkapo="MIME-Version: 1.0\n";
-	$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
-	$mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
-	$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
-	$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
-	mail($retadreso_correcteur,"Cours d'espéranto : des élèves en retard !",$contents,$mesagxkapo);
+	mailViaSmtp($retadreso_correcteur,"ikurso@esperanto-france.org","Cours d'espéranto : des élèves en retard !",$contents);
 }
 ?>

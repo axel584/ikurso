@@ -24,12 +24,7 @@ $result = $bdd->query($query);
 	$contents=str_replace("##LIEN_COURS##",$prochaine_lecon,$contents);
 
 	// envoie de l'email
-	$mesagxkapo="MIME-Version: 1.0\n";
-	$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
-	$mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
-	$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
-	$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
-	mail($row["retadreso"],"Cours d'espéranto",$contents,$mesagxkapo);
+	mailViaSmtp($row["retadreso"],"ikurso@esperanto-france.org","Cours d'espéranto",$contents);
 }
 // Deuxième rappel au bout de 10 jours
 $query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id where stop_rappel='N' group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 10 DAY)";
@@ -55,12 +50,7 @@ $result = $bdd->query($query);
 		$contents=str_replace("##LIEN_COURS##",$prochaine_lecon,$contents);
 	}
 		// envoie de l'email
-	$mesagxkapo="MIME-Version: 1.0\n";
-	$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
-	$mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
-	$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
-	$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
-	mail($row["retadreso"],"Cours d'espéranto",$contents,$mesagxkapo);
+	mailViaSmtp($row["retadreso"],"ikurso@esperanto-france.org","Cours d'espéranto",$contents);
  }
 // on selectionne tous les élèves qui n'ont pas envoyé de leçon depuis un an :
 $query = "SELECT korektanto,studanto,kurso FROM nuna_kurso WHERE lastdato<DATE_SUB(NOW(),INTERVAL 1 YEAR) and stato='K'";

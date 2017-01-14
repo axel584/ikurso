@@ -45,15 +45,10 @@ if (($retadreso=="") || ($enirnomo=="") || ($pasvorto=="")) {
 			$contents=str_replace("##MENUO##","",$contents);
 			$contents=str_replace("##STUDANTO_ID##",$enirnomo,$contents);
 			$contents=str_replace("##PASVORTO##",$pasvorto,$contents);		
-			$mesagxkapo="MIME-Version: 1.0\n";
-			$mesagxkapo.="Content-type: text/html; charset=utf-8\n";
-			$mesagxkapo.="From: Ikurso <ikurso@esperanto-france.org>\n";
-			$mesagxkapo.="Date: ".date("D, j M Y H:i:s")."\n";
-			$mesagxkapo.=" \n";
 			// creer l'eleve :
 			$persono_id = kreiPersonon($enirnomo,$pasvorto,$retadreso);
 			// envoyer le mail eleve pour l'inviter a attendre un correcteur.
-			if (!mail($retadreso,"Bienvenue sur I-kurso",$contents,$mesagxkapo)) {
+			if (!mailViaSmtp($retadreso,"ikurso@esperanto-france.org","Bienvenue sur I-kurso",$contents)) {
 				protokolo($persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$retadreso);
 			} 
 			$_SESSION["persono_id"]=$persono_id;

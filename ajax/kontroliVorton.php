@@ -14,6 +14,9 @@ function getInterval($nombrilo) {
 	}
 }
 
+
+
+
 $query="SELECT fr,eo FROM vortoj where id='".$vorto_id."'";
 $result = $bdd->query($query);
 $row = $result->fetch();
@@ -28,8 +31,8 @@ function kontroliVorton($lernantaRespondo,$bonaRespondo) {
 	} else {
 		$trans = array("." => "", "," => "", "'" => "","!" => "","?" => ""); // liste des caractères à supprimer pour la comparaison
 		$bonaRespondo = trim(strtr($bonaRespondo, $trans));
-		$lernantaRespondo = strtr($lernantaRespondo,$trans);
-		return mb_strtolower($lernantaRespondo, 'UTF-8')==mb_strtolower($bonaRespondo, 'UTF-8');	
+		$lernantaRespondo = trim(strtr($lernantaRespondo,$trans));
+		return strtolower(konvX($lernantaRespondo))==strtolower(konvX($bonaRespondo));	
 	}
 }
 

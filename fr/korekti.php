@@ -59,15 +59,10 @@ function PorInformistoj() {
 		if ($kurso=="KE"){$contents=str_replace("##KURSO##","I-kurso",$contents);}
 		if ($kurso=="GR"){$contents=str_replace("##KURSO##","Gerda malaperis",$contents);}			
 		$contents=str_replace("##KOMENTO##",stripslashes(nl2br($kialo)),$contents);
-		$mesagxkapo="MIME-Version: 1.0\n";
-		$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
-		$mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
-		$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
-		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		// envoyer le mail eleve pour l'inviter a attendre un correcteur.
 		if ($verdakrabo=="on"){$objekto="Un de plus chez le Crabe Vert";}
 		else {$objekto="Nouvel élève sur I-kurso";}
-		mail($informistoj,$objekto,$contents,$mesagxkapo);
+		mailViaSmtp($informistoj,"ikurso@esperanto-france.org",$objekto,$contents);
 		protokolo($persono_id,"VERDA KRABO","$retadreso : $verdakrabo");
 }
 
@@ -248,7 +243,7 @@ if ($jamaligxi=="jes") {
 		$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		// envoyer mail eleve pour l'inciter a attendre un correcteur
-		if (!mail($persono["retadreso"],"Bienvenue au cours Gerda malaperis",$contents,$mesagxkapo)) {
+		if (!mailViaSmtp($persono["retadreso"],"ikurso@esperanto-france.org","Bienvenue au cours Gerda malaperis",$contents)) {
 			protokolo($persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$persono["retadreso"]);
 		}
 		// mail aux informateurs si nouvel eleve Gerda
@@ -344,14 +339,8 @@ if ($jamaligxi=="jes") {
 			fclose($fd);
 			$contents=str_replace("##STUDANTO_ID##",$enirnomo,$contents);
 			$contents=str_replace("##PASVORTO##",$pasvorto,$contents);		
-			$mesagxkapo="MIME-Version: 1.0\n";
-			//$fonto=konvX($fonto);
-			$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
-			$mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
-			$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
-			$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 			// envoyer le mail eleve pour l'inviter a attendre un correcteur.
-			if (!mail($retadreso,"Bienvenue sur I-kurso",$contents,$mesagxkapo)) {
+			if (!mailViaSmtp($retadreso,"ikurso@esperanto-france.org","Bienvenue sur I-kurso",$contents)) {
 				protokolo($persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$retadreso);
 				$protokolo = new protokolo;
 				$protokolo->set_persono_id($nova_persono_id);
@@ -378,16 +367,16 @@ if ($kurso!="KE") {
 		$result2 = $bdd->query($query2);
 		$row2 = $result2->fetch();
 		$korektantaretadreso=$row2["retadreso"];
-		$mesagxkapo="MIME-Version: 1.0\n";
-		$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
-		$mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
-		$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
-		$mesagxkapo.="Reply-To: ".$persono['enirnomo']." <".$persono['retadreso'].">\n";
-		$mesagxkapo.="Cc: ".$persono['enirnomo']." <".$persono['retadreso'].">\n";
-		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
+		// $mesagxkapo="MIME-Version: 1.0\n";
+		// $mesagxkapo.="Content-type: text/html;charset=utf-8\n";
+		// $mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
+		// $mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
+		// $mesagxkapo.="Reply-To: ".$persono['enirnomo']." <".$persono['retadreso'].">\n";
+		// $mesagxkapo.="Cc: ".$persono['enirnomo']." <".$persono['retadreso'].">\n";
+		// $mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		($kurso=="GR")?($objekto="gerda ".substr($subjekto,0,6)):($objekto=substr($subjekto,0,5));
 		$objekto.=" de ".$persono['enirnomo'];
-		mail($korektantaretadreso,$objekto,stripslashes($fonto),$mesagxkapo);
+		mailViaSmtp($korektantaretadreso,$persono["retadreso"],$objekto,stripslashes($fonto));
 		$query = "update nuna_kurso set nunleciono=".$nunleciono.",stato='K',lastdato=CURDATE() where studanto=".$persono_id." and (stato='N' or stato='K') and kurso='$kurso'";
 		$result=$bdd->exec($query);
 		

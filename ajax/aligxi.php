@@ -1,4 +1,5 @@
 <?php
+
 include "../util.php";
 $retadreso=isset($_GET['retadreso'])?$_GET['retadreso']:"";
 $identigilo=isset($_GET['identigilo'])?$_GET['identigilo']:"";
@@ -60,19 +61,14 @@ $persono_id = kreiPersonon($identigilo,$pasvorto,$retadreso,$aktivigo);
 
 // on envoit le lien
 $lien = $urlracine."aktivigi.php?retadreso=".$retadreso."&aktivigo=".$aktivigo;
+// charge le fichier html
 $filename = "../mails/aktivigi.html";
 $fd = fopen($filename, "r");
 $contents = fread($fd, filesize ($filename));
 fclose($fd);
 $contents=str_replace("##LIEN_ACTIVATION##",$lien,$contents);
-$mesagxkapo="MIME-Version: 1.0\n";
-$mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
-$mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
-$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
-$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 // envoyer le mail eleve pour l'inviter a attendre un correcteur.
-$objekto="Activation de votre compte pour apprendre gratuitement l'espéranto";
-mail($retadreso,$objekto,$contents,$mesagxkapo);
+mailViaSmtp($retadreso,"ikurso@esperanto-france.org","Activation de votre compte pour apprendre gratuitement l'espéranto",$contents);
 protokolo($persono_id,"ACTIVATION COMPTE",$retadreso." a reçu une clef d'activation");
 
 $respondo["mesagxo"] = "ok";

@@ -4,6 +4,8 @@ ini_set('session.gc_maxlifetime', 86400);
 ini_set('session.cookie_lifetime', 86400);
 include_once("db.inc.php");
 include_once("webui.inc.php");
+include 'Mail.php';
+include('Mail/mime.php');
 //include_once("forum/includes/forum.lib.php");
 // on récupère l'adresse de la page appelée (et on retire les paramètres au besoin)
 // attention, c'est aussi appelé dans "pagxkapo.inc.php"
@@ -34,7 +36,20 @@ function konvU($buff) {
 			"&#309;" => "\u0135",	"&#349;" => "\u015d",	"&#365;" => "\u016d"
 		);
 	foreach($utf8 as $key => $val) {
-	$buff=str_replace($key,$val,$buff);
+		$buff=str_replace($key,$val,$buff);
+	}
+	return($buff);
+}
+
+function konvX($buff) {
+	$utf8 = array(
+			"Ĉ" => "Cx",	"Ĝ" => "Gx",	"Ĥ" => "Hx",
+			"Ĵ" => "Jx",	"Ŝ" => "Sx",	"Ŭ" => "Ux",
+			"ĉ" => "cx",	"ĝ" => "gx",	"ĥ" => "hx",
+			"ĵ" => "jx",	"ŝ" => "sx",	"ŭ" => "ux"
+		);
+	foreach($utf8 as $key => $val) {
+		$buff=mb_ereg_replace($key,$val,$buff);
 	}
 	return($buff);
 }
@@ -93,6 +108,36 @@ else {
 	$enirnomo=$persono["enirnomo"];
 }
 
+function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
+	global $hostSmtp,$portSmtp;
+	$headers = array (
+	  'Content-Type' => "text/html; charset=UTF-8",
+	  'html_charset'  => 'UTF-8',
+  	  'head_charset'  => 'UTF-8',
+	  'From' => $from,
+	  'To' => $retadreso,
+	  'Subject' => $objekto);
 
+
+		$smtpParams = array (
+	  'host' => $hostSmtp,
+	  'port' => $portSmtp,
+	  'auth' => false
+	);
+
+	 // Create an SMTP client.
+	$mail = Mail::factory('smtp', $smtpParams);
+
+	// Send the email.
+
+		$mime = new Mail_mime("\n");
+
+        // Setting the body of the email
+        $mime->setHTMLBody($contentsHtml);
+        $headers = $mime->headers($headers);
+
+	$result = $mail->send($retadreso, $headers, $mime->get());
+	return $result;
+}
 
 ?>

@@ -24,10 +24,6 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 		$fd = fopen($filename, "r");
 		$contents = fread($fd, filesize ($filename));
 		fclose($fd);
-		$mesagxkapo="MIME-Version: 1.0\n";
-		$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
-		$mesagxkapo.="From: Ikurso <ikurso@esperanto-jeunes.org>\n";
-		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		//prenu la liston de cxiuj informistoj
 		$demando="select retadreso from personoj where rajtoj='I'";
 		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
@@ -71,7 +67,7 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 	
 	// envoyer le mail aux informateurs
 	//$informistoj="emmanuelle@esperanto-jeunes.org";
-	mail($informistoj,"un esperantiste de plus !",$contents,$mesagxkapo);
+	mailViaSmtp($informistoj,"ikurso@esperanto-france.org","un esperantiste de plus !",$contents);
 
 
 	// et on envoit aussi un mail à l'élève
@@ -79,12 +75,8 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 	$fd = fopen($filename, "r");
 	$contents = fread($fd, filesize ($filename));
 	fclose($fd);
-	$mesagxkapo="MIME-Version: 1.0\n";
-	$mesagxkapo.="Content-type: text/html;charset=utf-8\n";
-	$mesagxkapo.="From: Ikurso <ikurso@esperanto-jeunes.org>\n";
-	$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 	$contents=str_replace("##ENIRNOMO##",$enirnomo,$contents);
-	mail($retadreso,"Félicitations !",$contents,$mesagxkapo);
+	mailViaSmtp($retadreso,"ikurso@esperanto-france.org","Félicitations !",$contents);
 
 
 }

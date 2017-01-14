@@ -8,60 +8,56 @@ $persono = apartigiPersonon($persono_id);
 include "pagxkapo.inc.php";
 ?>
 
-
-	
 	<div class="row">
-		<article class="col s12 m9 l6 offset-m1 offset-l1">
+		<article class="col s12 m10 l7 offset-m1 offset-l1">
 			<h1>Statistiques - vocabulaire</h1>
 			<section id="enhavo_memorilo">
 
-			<div class="col l6">
-				<h2>Tableau d'honneur</h2>
-				<ul class="tabs">
-        			<li class="tab col s3"><a href="#tableauHonneurSemaine">Par semaine</a></li>
-        			<li class="tab col s3"><a href="#tableauHonneurMois">Par mois</a></li>
-        			<li class="tab col s3"><a href="#tableauHonneurAn">Par an</a></li>
-      			</ul>
-
-      			<div id="tableauHonneurSemaine">
-      			<?php listi_tableauHonneur("semajno",$persono_id);?>
-      			</div>
-      			<div id="tableauHonneurMois">
-      			<?php listi_tableauHonneur("monato",$persono_id);?>
-      			</div>
-      			<div id="tableauHonneurAn">
-      			<?php listi_tableauHonneur("jaro",$persono_id);?>
-      			</div>
-			</div>
-			<div class="col l6">
-				<h2>Mot par force</h2>
-				<div id="chart_div_mots_par_force"></div>
-			</div>
+				<div class="row">
+					<div class="col l6">
+						<h2>Tableau d'honneur</h2>
+						<ul class="tabs">
+		        			<li class="tab col s3"><a href="#tableauHonneurSemaine">Par semaine</a></li>
+		        			<li class="tab col s3"><a href="#tableauHonneurMois">Par mois</a></li>
+		        			<li class="tab col s3"><a href="#tableauHonneurAn">Par an</a></li>
+		      			</ul>
+		
+		      			<div id="tableauHonneurSemaine">
+		      			<?php listi_tableauHonneur("semajno",$persono_id);?>
+		      			</div>
+		      			<div id="tableauHonneurMois">
+		      			<?php listi_tableauHonneur("monato",$persono_id);?>
+		      			</div>
+		      			<div id="tableauHonneurAn">
+		      			<?php listi_tableauHonneur("jaro",$persono_id);?>
+		      			</div>
+					</div>
+					<div class="col l6">
+						<h2>Mot par force</h2>
+						<div id="chart_div_mots_par_force"></div>
+					</div>
+				</div>
 			</section>
 			<h1>Statistiques - leçons</h1>
 			<section id="enhavo_memorilo">
-			<div class="col l12">
-				<h2>Évolution</h2>
-				<div id="chart_div_evolution"></div>
-			</div>
-			<div class="col l6">
-			<!-- que mettre ici ? -->
-			<!-- On peut lister les sections qui n'ont pas été faite (mais pour lesquels il existe d'autres sections non faite après) -->
-			<!-- on peut aussi faire un calendrier des jours où des sections ont été faite -->
-			<!-- on peut aussi faire la liste des sections faites/non faites -->
-			<?php //statEvolution($persono_id); ?>
-			</div>
-			</div>
+				<div class="row">
+					<div class="col l12">
+						<h2>Évolution</h2>
+						<div id="chart_div_evolution"></div>
+					</div>
+					<div class="col l6">
+					<!-- que mettre ici ? -->
+					<!-- On peut lister les sections qui n'ont pas été faite (mais pour lesquels il existe d'autres sections non faite après) -->
+					<!-- on peut aussi faire un calendrier des jours où des sections ont été faite -->
+					<!-- on peut aussi faire la liste des sections faites/non faites -->
+					<?php //statEvolution($persono_id); ?>
+					</div>
+				</div>
 			</section>
-
-			
-		
 		</article>
 
 		
-
-		
-		<aside class="col s12 m10 l4 offset-m1 offset-l1">
+		<aside class="col s12 m10 l3 offset-m1 push-l1">
 
 
 			<ul class="collapsible" data-collapsible="expandable">

@@ -2,7 +2,6 @@
 include "util.php";
 $pagxtitolo="Quoi de neuf ?";
 $korpo="hejmo";
-$gxisdatigDato="2016-01-21";
 malfermiDatumbazon();
 $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
@@ -20,6 +19,13 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
+				<li class="collection-header">version 12. Janvier 2017</li>
+				<li class="collection-item">
+					<p>Certaines prépositions sont abordées dans les premières leçons (Cours en 10 leçons) : <em>en</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1">section 1.7</a>, <em>antaŭ</em>, <em>sub</em>, <em>sur</em>, <em>super</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec02.php?section=4">section 2.4</a>, <em>apud</em>, <em>ĉe</em>, <em>al</em>, <em>de</em>, <em>el</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec04.php?section=6">section 4.6</a></p>
+					<p>Des exercices pour pratiquer les prépositions ont été ajoutés dans la <a href="<?php echo $vojo;?>fr/cge/lec02.php?section=5">leçon 2</a>, la <a href="<?php echo $vojo;?>fr/cge/lec04.php?section=7">leçon 4</a> et la <a href="<?php echo $vojo;?>fr/cge/lec06.php?section=7">leçon 6</a>.</p>
+					<p>Correction de coquilles dans les listes de vocabulaire et correction de bugs dans l’outil d’apprentissage du vocabulaire, notamment pour la prise en compte de la ponctuation et des lettres accentuées.</p>
+					<p>Correction de problèmes posés pour l’envoi des courriels vers certaines adresses (dont @orange, @wanadoo et @yahoo)</p>
+				</li>
 				<li class="collection-header">version 11. Novembre 2016</li>
 				<li class="collection-item">
 					<p>Certains corrélatifs sont maintenant abordés dans les 4 premières leçons (Cours en 10 leçons) : <em>kie</em> et <em>kie</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec01.php?section=9">section 1.9</a>, <em>kiel</em> et <em>tiel</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec02.php?section=11">section 2.11</a>, <em>kiom</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec03.php?section=8">section 3.8</a> et <em>kio</em> et <em>tio</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec03.php?section=12">section 3.12</a>.</p> 

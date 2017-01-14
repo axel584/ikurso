@@ -781,5 +781,40 @@ UPDATE `respondoj` SET `kodo` = 'ekz04_10', `demando` = 'Kiam estas la Nacia Tag
 UPDATE `respondoj` SET `kodo` = 'ekz04_09', `demando` = 'Hodiaŭ estas ĵaŭdo la 30-a de novembro. Kiu dato estos morgaŭ?' WHERE `lecionero_id` = 272 AND `kodo` = 'ekz04_05';
 UPDATE `respondoj` SET `kodo` = 'ekz04_08', `demando` = 'Kiom da tagoj estas en unu jaro?' WHERE `lecionero_id` = 272 AND `kodo` = 'ekz04_04';
 
+-- fusion des 2 pages de préposition et ajout exercice leçon 6
+-- décalage des numéros des autres exercices
 
+UPDATE `lecioneroj` SET `ordo` = '8' WHERE `id` = 56; 
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 1', `tipo` = 'EKZERCARO', `ordo` = '7' WHERE `id` = 57; 
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 2' WHERE `id` = 59; 
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 3' WHERE `id` = 61; 
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 4' WHERE `id` = 64; 
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 5' WHERE `id` = 66;
 
+-- décalage des exercices de la leçon 6 après insertion de l'exercice sur les prépositions
+UPDATE `respondoj` SET `kodo` = 'ekz06_36', `demando` = '36 Mi* veturis al la zoologia* ĝardeno* kun Petro*. Li* tre deziris veturi tie*. En la zoo* li admiris ursoj* kaj simioj*. Kiam la blanka urso vidis Petro*, ĝi kuris en la akvo*. Ni atendis kvin minutoj*  por vidi, kio* la urso* faros poste, sed ĝi* ne iris el la akvo* kaj en la akvo* ĝi nenio* faris. Ni revenis Montrealo* vespere*.' WHERE `lecionero_id` = 66 AND `kodo` = 'ekz06_27';
+UPDATE `respondoj` SET `kodo` = 'ekz06_35', `demando` = '35 D-ro (Doktoro) Zamenhof naskiĝis JE* la 15a de decembro 1859. (naskiĝi = naître)' WHERE `lecionero_id` = 64 AND `kodo` = 'ekz06_26';
+UPDATE `respondoj` SET `kodo` = 'ekz06_34', `demando` = '34 La strato estas larĝa JE* 50 metroj.' WHERE `lecionero_id` = 64 AND `kodo` = 'ekz06_25';
+UPDATE `respondoj` SET `kodo` = 'ekz06_33', `demando` = '33 Mi feriis DUM tri semajnoj.' WHERE `lecionero_id` = 64 AND `kodo` = 'ekz06_24';
+UPDATE `respondoj` SET `kodo` = 'ekz06_32', `demando` = '32 Faru vian aferon, Dio zorgos PRI la cetero. (proverbe : faru = fais [impératif])' WHERE `lecionero_id` = 64 AND `kodo` = 'ekz06_23';
+UPDATE `respondoj` SET `kodo` = 'ekz06_31', `demando` = '31 arkta - blankaj - En - estas - kontinento - la - ursoj.' WHERE `lecionero_id` = 61 AND `kodo` = 'ekz06_22';
+UPDATE `respondoj` SET `kodo` = 'ekz06_30', `demando` = '30 estis - Kio - la - por - tagmanĝo - ?' WHERE `lecionero_id` = 61 AND `kodo` = 'ekz06_21';
+UPDATE `respondoj` SET `kodo` = 'ekz06_29', `demando` = '29 apud - Ĉu - enirejo ? - estis - kaĝoj - la - multaj' WHERE `lecionero_id` = 61 AND `kodo` = 'ekz06_20';
+UPDATE `respondoj` SET `kodo` = 'ekz06_28', `demando` = '28 Kiajn amikojn vi vizitis en Montrealo ?' WHERE `lecionero_id` = 61 AND `kodo` = 'ekz06_19';
+UPDATE `respondoj` SET `kodo` = 'ekz06_27', `demando` = '27 Kie okazis la kongreso, en kiu vi partoprenis? Ĉu en Granby?' WHERE `lecionero_id` = 61 AND `kodo` = 'ekz06_18';
+UPDATE `respondoj` SET `kodo` = 'ekz06_26', `demando` = '26 En kia klubo vi estas membro?' WHERE `lecionero_id` = 59 AND `kodo` = 'ekz06_17';
+UPDATE `respondoj` SET `kodo` = 'ekz06_25', `demando` = '25 Per kio vi veturis al la Zoologia Ĝardeno?' WHERE `lecionero_id` = 59 AND `kodo` = 'ekz06_16';
+UPDATE `respondoj` SET `kodo` = 'ekz06_24', `demando` = '24 Kiajn ursojn vi vidis en la zoo?' WHERE `lecionero_id` = 59 AND `kodo` = 'ekz06_15';
+UPDATE `respondoj` SET `kodo` = 'ekz06_23', `demando` = '23 Kie estis la blanka urso?' WHERE `lecionero_id` = 59 AND `kodo` = 'ekz06_14';
+UPDATE `respondoj` SET `kodo` = 'ekz06_22', `demando` = '22 Kio plaĉis al via frato?' WHERE `lecionero_id` = 59 AND `kodo` = 'ekz06_13';
+UPDATE `respondoj` SET `kodo` = 'ekz06_21', `demando` = '21 Kion vi vizitis en Granby?' WHERE `lecionero_id` = 59 AND `kodo` = 'ekz06_12';
+UPDATE `respondoj` SET `kodo` = 'ekz06_20', `demando` = '20 Kion vi manĝis por la tagmanĝo?' WHERE `lecionero_id` = 59 AND `kodo` = 'ekz06_11';
+UPDATE `respondoj` SET `kodo` = 'ekz06_19', `demando` = '19 Kiajn amikojn vi vizitis en Montrealo?' WHERE `lecionero_id` = 59 AND `kodo` = 'ekz06_10';
+UPDATE `respondoj` SET `kodo` = 'ekz06_18', `demando` = '18 Kie okazis la kongreso, en kiu vi partoprenis? Ĉu en Granby?' WHERE `lecionero_id` = 59 AND `kodo` = 'ekz06_09';
+UPDATE `respondoj` SET `kodo` = 'ekz06_17', `demando` = '17 En kia klubo vi estas membro?' WHERE `lecionero_id` = 59 AND `kodo` = 'ekz06_08';
+
+-- mot nouveaux leçon 6
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('kastelo','château','nom',57);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('marŝi','marcher','verbe',57);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('ĉapelo','chapeau','nom',57);
+insert into vortoj (eo,fr,tipo,lecionero_id) values ('vojo','chemin, route','nom',57);

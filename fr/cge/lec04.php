@@ -391,10 +391,10 @@ include "dlekkapo.inc.php";
 		if ($section=="7") {
 		?>
 		<div class="row">
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/al-la-lernejo.jpg"><br>-1-</p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/apud-la-fenestro.jpg"><br>-3-</span></p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/cxokoladaj-insektoj.jpg"><br>-2-</p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/paperoj-cxe-la-muro.jpg"><br>-4-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/al-la-lernejo.jpg"><br>-4-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/apud-la-fenestro.jpg"><br>-5-</span></p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/cxokoladaj-insektoj.jpg"><br>-6-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/paperoj-cxe-la-muro.jpg"><br>-7-</p>
 		</div>
 		
 		<fieldset class="ekzerco">
@@ -406,7 +406,7 @@ include "dlekkapo.inc.php";
 			<?php 	
 				$demandoj=array (
 				4 => "La infanoj iras ... la lernejo.",
-				5 => "Mia skribotablo estas ... la fenestro.",
+				5 => "Mia skribotablo (= bureau) estas ... la fenestro.",
 				6 => "Mi acêtos insektojn ... ĉokolado.",
 				7 => "Estas paperoj ... la muro.",
 				);

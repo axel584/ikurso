@@ -173,9 +173,7 @@ include "dlekkapo.inc.php";
 		?>
 
 		<p class="parto">
-		Les <b>prépositions</b> servent à indiquer le rapport entre deux mots&nbsp;:
-		un verre <b>sur</b> la table… aller à l’école… mettre <b>dans</b> le sac, etc.</p>
-		<p>En voici un premier bloc suivi d’un autre plus loin.</p>
+		Dans les leçons précédentes, vous avez vu quelques prépositions. Voici maintenant une liste plus complète des prépositions les plus fréquemment employées en espéranto.</p>
 		<table class="retrait striped bordered">
 			<tr><td class="eo">al</td><td>- à, vers (indique le but d’un mouvement ou le bénéficiaire d’une action)</td></tr>
 			<tr><td class="eo">ĉe</td><td>- chez, auprès de, tout près de</td></tr>
@@ -187,6 +185,20 @@ include "dlekkapo.inc.php";
 			<tr><td class="eo">pro</td><td>- en raison de, à cause de («pour», «par», «de»,…)</td></tr>
 			<tr><td class="eo">sub</td><td>- sous, en-dessous de</td></tr>
 			<tr><td class="eo">sur</td><td>- sur, au-dessus de (en touchant l’objet)</td></tr>
+			<tr><td class="eo">anstataŭ</td><td>- au lieu de, à la place de</td></tr>
+			<tr><td class="eo">antaŭ</td><td>- avant, devant</td></tr>
+			<tr><td class="eo">apud</td><td>- près de, à côté de</td></tr>
+			<tr><td class="eo">da</td><td>- de (indique la quantité)</td></tr>
+			<tr><td class="eo">ekster</td><td>- hors de, en dehors de</td></tr>
+			<tr><td class="eo">el</td><td>- de (indique l’origine), hors de (mouvement)</td></tr>
+			<tr><td class="eo">inter</td><td>- parmi, entre</td></tr>
+			<tr><td class="eo">kun</td><td>- avec (indique l’accompagnement)</td></tr>
+			<tr><td class="eo">per</td><td>- par, au moyen de, avec (instrument)</td></tr>
+			<tr><td class="eo">post</td><td>- après</td></tr>
+			<tr><td class="eo">pri</td><td>- au sujet de, à propos de</td></tr>
+			<tr><td class="eo">sen</td><td>- sans</td></tr>
+			<tr><td class="eo">super</td><td>- au-dessus de</td></tr>
+			<tr><td class="eo">tra</td><td>- à travers, au travers de</td></tr>
 		</table>
 
 		<?php 
@@ -194,7 +206,64 @@ include "dlekkapo.inc.php";
 		if ($section=="7") {
 		?>
 
-		<p>Lisez le récit suivant en faisant attention à l’usage des prépositions&nbsp;:</p>
+		<div class="row">
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/mangxi-dum-vojagxo.jpg"><br>-9-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/hotelo-por-insektoj.jpg"><br>-10-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/sabla-kastelo.jpg"><br>-11-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/kato-en-shranko.jpg"><br>-12-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/sur-la-pinto.jpg"><br>-13-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/cxapelo-cxe-dorso.jpg"><br>-14-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/floroj-inter-rokoj.jpg"><br>-15-</span></p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/libroj-esperanto.jpg"><br>-16-</span></p>
+		</div>
+		
+		<fieldset class="ekzerco">
+			<legend><strong>EXERCICE</strong> : En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
+			<input type="hidden" name="013_cxap06.1" value="En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
+			<p>Utilisez une fois chacune des prépositions suivantes&nbsp;: <b>por</b>, <b>ĉe</b>, <b>malantaŭ</b>, <b>el</b>, <b>ĝis</b>, <b>per</b>, <b>dum</b>, <b>inter</b>.<br>
+			Le vocabulaire nouveau se trouve au bas de cette page.</p>
+			<div class="tasko">
+			<hr>
+			<?php 	
+				$demandoj=array (
+				9 => "... la vojaĝo, ni manĝis.",
+				10 => "En nia ĝardeno, estas hotelo ... insektoj.",
+				11=> "Ni kontruis kastelon ... sablo.",
+				12 => "La kato estas ... la pordo.",
+				13 => "Li grimpis ... la pinto (=le sommet).",
+				14 => "Ŝi portas ĉapelon ... la dorso.",
+				15 => "La floroj kreskas (kreski=pousser) ... la rokoj.",
+				16 => "Mi lernas Esperanton ... tiuj libroj.",
+				);
+				ekzerco(True, 1);
+			?>
+			</div>
+		</fieldset>
+
+		<p>Crédits photos :</p>
+		<p class="creditphoto">11. Diego Delso, <a href="http://delso.photo/">delso.photo</a>, License CC-BY-SA</p>
+		<p class="creditphoto">Autres photos : iKurso/ E. Richard</p>
+
+		<fieldset class="vortoj">
+			<legend>VOCABULAIRE À RETENIR</legend>
+			<div>
+				<?php if ($persono) { ?>
+				<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+				<?php } ?>
+			</div>
+			<div class="vortlisto row">
+				<p class="col s6"><span class="eo">kastelo</span> : château</p>
+				<p class="col s6"><span class="eo">ĉapelo</span> : chapeau</p>
+				<p class="col s6"><span class="eo">dorso</span> : dos</p>
+				<p class="col s6"><span class="eo">vojaĝo</span> : voyage</p>
+			</div>
+		</fieldset>
+		<?php 
+		} // fin section 7
+		if ($section=="8") {
+		?>
+
+		<p class="parto">Voici un premier récit. Lisez-le en faisant attention à l’usage des prépositions. Dans la section suivante, nous vous présenterons en second récit, puis vous aurez un exercice avec des questions sur ces deux récits.</p>
 		<p><b>Vojaĝo al Montrealo por la Esperanto-kongreso</b></p>
 		<p>
 			<audio controls="controls">Votre navigateur ne supporte pas la lecture du fichier audio.
@@ -236,29 +305,6 @@ include "dlekkapo.inc.php";
 		reportez-vous au <a href="vocabula.php">lexique général du cours</a>.
 		</p>
 		
-		<?php 
-		} // fin section 7
-		if ($section=="8") {
-		?>
-		
-		<p class="parto">Encore des <b>prépositions</b>&nbsp;:</p>
-		<table class="retrait striped bordered">
-			<tr><td class="eo">anstataŭ</td><td>- au lieu de, à la place de</td></tr>
-			<tr><td class="eo">antaŭ</td><td>- avant, devant</td></tr>
-			<tr><td class="eo">apud</td><td>- près de, à côté de</td></tr>
-			<tr><td class="eo">da</td><td>- de (indique la quantité)</td></tr>
-			<tr><td class="eo">ekster</td><td>- hors de, en dehors de</td></tr>
-			<tr><td class="eo">el</td><td>- de (indique l’origine), hors de (mouvement)</td></tr>
-			<tr><td class="eo">inter</td><td>- parmi, entre</td></tr>
-			<tr><td class="eo">kun</td><td>- avec (indique l’accompagnement)</td></tr>
-			<tr><td class="eo">per</td><td>- par, au moyen de, avec (instrument)</td></tr>
-			<tr><td class="eo">post</td><td>- après</td></tr>
-			<tr><td class="eo">pri</td><td>- au sujet de, à propos de</td></tr>
-			<tr><td class="eo">sen</td><td>- sans</td></tr>
-			<tr><td class="eo">super</td><td>- au-dessus de</td></tr>
-			<tr><td class="eo">tra</td><td>- à travers, au travers de</td></tr>
-		</table>
-
 		<?php 
 		} // fin section 8
 		if ($section=="9") {
@@ -315,16 +361,16 @@ include "dlekkapo.inc.php";
 			<div class="tasko">
 			<?php
 				$demandoj=array (
-				8 => "En kia klubo vi estas membro ?",
-				9 => "Kie okazis la kongreso, en kiu vi partoprenis ? Ĉu en Granby ?",
-				10 => "Kiajn amikojn vi vizitis en Montrealo ?",
-				11 => "Kion vi manĝis por la tagmanĝo ?",
-				12 => "Kion vi vizitis en Granby ?",
-				13 => "Kio plaĉis al via frato ?",
-				14 => "Kie estis la blanka urso ?",
-				15 => "Kiajn ursojn vi vidis en la zoo ?",
-				16 => "Per kio vi veturis al la Zoologia Ĝardeno ?",
-				17 => "Kiuj bestoj estis por vi tre interesaj ?"
+				17 => "En kia klubo vi estas membro?",
+				18 => "Kie okazis la kongreso, en kiu vi partoprenis? Ĉu en Granby?",
+				19 => "Kiajn amikojn vi vizitis en Montrealo?",
+				20 => "Kion vi manĝis por la tagmanĝo?",
+				21 => "Kion vi vizitis en Granby?",
+				22 => "Kio plaĉis al via frato?",
+				23 => "Kie estis la blanka urso?",
+				24 => "Kiajn ursojn vi vidis en la zoo?",
+				25 => "Per kio vi veturis al la Zoologia Ĝardeno?",
+				26 => "Kiuj bestoj estis por vi tre interesaj?"
 				);
 				ekzerco(True, 1);
 			?>
@@ -367,11 +413,11 @@ include "dlekkapo.inc.php";
 			<div class="tasko">
 			<?php
 				$demandoj=array (
-				18 => "bestoj - en - Estas - interesaj - multaj - tiu - zoo.",
-				19 => "antaŭ - ĉiu - Dum - estos - infanoj - kaĝo. - la - tagmanĝo",
-				20 => "apud - Ĉu - enirejo ? - estis - kaĝoj - la - multaj",
-				21 => "estis - Kio - la - por - tagmanĝo - ?",
-				22 => "arkta - blankaj - En - estas - kontinento - la - ursoj."
+				27 => "bestoj - en - Estas - interesaj - multaj - tiu - zoo.",
+				28 => "antaŭ - ĉiu - Dum - estos - infanoj - kaĝo. - la - tagmanĝo",
+				29 => "apud - Ĉu - enirejo ? - estis - kaĝoj - la - multaj",
+				30 => "estis - Kio - la - por - tagmanĝo - ?",
+				31 => "arkta - blankaj - En - estas - kontinento - la - ursoj."
 				);
 				ekzerco(True, 1);
 			?>
@@ -450,10 +496,10 @@ include "dlekkapo.inc.php";
 			<div class="tasko">
 			<?php
 				$demandoj=array (
-				23 => "Faru vian aferon, Dio zorgos PRI la cetero. (proverbe : faru = fais [impératif])",
-				24 => "Mi feriis DUM tri semajnoj.",
-				25 => "La strato estas larĝa JE* 50 metroj.",
-				26 => "D-ro (Doktoro) Zamenhof naskiĝis JE* la 15a de decembro 1859. (naskiĝi = naître)"
+				32 => "Faru vian aferon, Dio zorgos PRI la cetero. (proverbe : faru = fais [impératif])",
+				33 => "Mi feriis DUM tri semajnoj.",
+				34 => "La strato estas larĝa JE* 50 metroj.",
+				35 => "D-ro (Doktoro) Zamenhof naskiĝis JE* la 15a de decembro 1859. (naskiĝi = naître)"
 				);
 				ekzerco(True, 1);
 			?>
@@ -547,7 +593,7 @@ include "dlekkapo.inc.php";
 			<div class="tasko">
 			<?php
 				$demandoj=array (
-				27 => "Mi* veturis al la zoologia* ĝardeno* kun Petro*. Li* tre deziris veturi tie*. En la zoo* li admiris ursoj* kaj simioj*. Kiam la blanka urso vidis Petro*, ĝi kuris en la akvo*. Ni atendis kvin minutoj*  por vidi, kio* la urso* faros poste, sed ĝi* ne iris el la akvo* kaj en la akvo* ĝi nenio* faris. Ni revenis Montrealo* vespere*."
+				36 => "Mi* veturis al la zoologia* ĝardeno* kun Petro*. Li* tre deziris veturi tie*. En la zoo* li admiris ursoj* kaj simioj*. Kiam la blanka urso vidis Petro*, ĝi kuris en la akvo*. Ni atendis kvin minutoj*  por vidi, kio* la urso* faros poste, sed ĝi* ne iris el la akvo* kaj en la akvo* ĝi nenio* faris. Ni revenis Montrealo* vespere*."
 				);
 				ekzerco(True, 5);
 			?>
@@ -568,7 +614,7 @@ include "dlekkapo.inc.php";
 			n’est pas inutile de jeter un regard en arrière pour voir le chemin
 			parcouru. Depuis combien de temps avez-vous commencé l’étude de ce
 			cours&nbsp;? N’est-ce pas surprenant de voir tout ce que vous êtes déjà
-			capable de comprendre et de dire ? évidemment vous n’avez pas
+			capable de comprendre et de dire&nbsp;? Évidemment vous n’avez pas
 			nécessairement assimilé tout le vocabulaire que nous vous avons
 			présenté mais vous sentez bien qu’à chaque leçon vous faites un grand
 			pas en avant.

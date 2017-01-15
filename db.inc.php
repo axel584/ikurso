@@ -539,6 +539,7 @@ function troviPlejTauganKorektantonLauxKriterioj($lando,$departemento,$kurso) {
         }
 
     // calcul les pourcentages du remplissage des élèves : ex: correcteur 1 : 75% (6/8)
+    // TODO : si lernantebleco est vide, sortir (return null)
     foreach($lernanteblecoj as $sxlosilo => $valuo) { 
         if ($valuo==0) {
             continue;

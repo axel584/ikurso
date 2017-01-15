@@ -511,6 +511,7 @@ function vidiKorektantojn() {
 
 function troviPlejTauganKorektantonLauxKriterioj($lando,$departemento,$kurso) {
     global $bdd;
+    // liste les correcteurs potentiels (même pays et/ou même département) et regarde combien ils sont prêts à corriger d'élèves
         $demando =  "select personoj.id,sum(kiom_lernantoj) as kiom from personoj,korektebla_kurso where personoj.id=korektebla_kurso.korektanto and korektebla_kurso.kurso='".$kurso."'";
         if ($lando!="") {
             $demando .= " and lando='".$lando."'";
@@ -523,7 +524,6 @@ function troviPlejTauganKorektantonLauxKriterioj($lando,$departemento,$kurso) {
         while($row = $result->fetch()) {
             $lernanteblecoj[$row["id"]] = $row["kiom"];
         }
-    
         //repère la liste du nombre d'élèves que les correcteurs ont des (ex. : correcteur 1 : 6 élèves)
         $demando="select personoj.id,enirnomo,count(*) as kiom  from personoj,nuna_kurso where personoj.id=nuna_kurso.korektanto and (nuna_kurso.stato='K' or nuna_kurso.stato='N') and nuna_kurso.kurso='".$kurso."'";
                 if ($lando!="") {
@@ -540,6 +540,9 @@ function troviPlejTauganKorektantonLauxKriterioj($lando,$departemento,$kurso) {
 
     // calcul les pourcentages du remplissage des élèves : ex: correcteur 1 : 75% (6/8)
     foreach($lernanteblecoj as $sxlosilo => $valuo) { 
+        if ($valuo==0) {
+            continue;
+        }
         if ($sxlosilo==1119) {
             continue; // filtre les correcteurs indésirables
         }
@@ -588,9 +591,8 @@ function troviPlejTauganKorektanton($persono_id,$kurso) {
     } else if ($persono["lando"]=="FR" && $persono["posxtkodo"]!="") {
         // cas du pays france et du code postal renseigné : on recherche par département
         $procentajxoj = troviPlejTauganKorektantonLauxKriterioj("FR",substr($persono["posxtkodo"],0,2),$kurso);
-
     }
-    if (!isset($procentajxo) || empty($procentajxoj)) {
+    if (!isset($procentajxoj) || empty($procentajxoj)) {
         // autre cas, on n'a rien trouvé ou bien l'élève n'a pas renseigné son département
         $procentajxoj = troviPlejTauganKorektantonLauxKriterioj("","",$kurso);    
     }

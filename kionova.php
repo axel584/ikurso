@@ -3,14 +3,6 @@ include "util.php";
 $pagxtitolo="Quoi de neuf ?";
 $korpo="hejmo";
 malfermiDatumbazon();
-$persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
-$erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
-if ($persono_id) {
-	$persono = apartigiPersonon($persono_id);
-	protokolo($persono["id"],"ENIRO",$persono["enirnomo"]." eniris");
-	updateLastEniro($persono_id);
-	redirigeParDroits($persono);
-}
 include "pagxkapo.inc.php";
 ?>
 

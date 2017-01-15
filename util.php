@@ -114,7 +114,8 @@ function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
 	  'Content-Type' => "text/html; charset=UTF-8",
 	  'html_charset'  => 'UTF-8',
   	  'head_charset'  => 'UTF-8',
-	  'From' => $from,
+	  'From' => "ikurso@esperanto-france.org",
+	  'Reply-to' => $from,
 	  'To' => $retadreso,
 	  'Subject' => $objekto);
 

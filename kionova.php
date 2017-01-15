@@ -17,6 +17,7 @@ include "pagxkapo.inc.php";
 					<p>Des exercices pour pratiquer les prépositions ont été ajoutés dans la <a href="<?php echo $vojo;?>fr/cge/lec02.php?section=5">leçon 2</a>, la <a href="<?php echo $vojo;?>fr/cge/lec04.php?section=7">leçon 4</a> et la <a href="<?php echo $vojo;?>fr/cge/lec06.php?section=7">leçon 6</a>.</p>
 					<p>Correction de coquilles dans les listes de vocabulaire et correction de bugs dans l’outil d’apprentissage du vocabulaire, notamment pour la prise en compte de la ponctuation et des lettres accentuées.</p>
 					<p>Correction de problèmes posés pour l’envoi des courriels vers certaines adresses (dont @orange, @wanadoo et @yahoo)</p>
+					<p>Possibilité de publier son attestation de fin de cours sur Facebook.</p>
 				</li>
 				<li class="collection-header">version 11. Novembre 2016</li>
 				<li class="collection-item">

@@ -138,6 +138,11 @@ function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
         $headers = $mime->headers($headers);
 
 	$result = $mail->send($retadreso, $headers, $mime->get());
+
+	if (PEAR::isError($result)) {
+  		protokolo(0,"Erreur SMTP",$result->getMessage());
+	}
+
 	return $result;
 }
 

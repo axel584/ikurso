@@ -407,7 +407,7 @@ include "dlekkapo.inc.php";
 				$demandoj=array (
 				4 => "La infanoj iras ... la lernejo.",
 				5 => "Mia skribotablo (= bureau) estas ... la fenestro.",
-				6 => "Mi acêtos insektojn ... ĉokolado.",
+				6 => "Mi aĉetos insektojn ... ĉokolado.",
 				7 => "Estas paperoj ... la muro.",
 				);
 				ekzerco(True, 1);

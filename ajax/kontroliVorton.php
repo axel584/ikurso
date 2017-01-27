@@ -32,6 +32,8 @@ function kontroliVorton($lernantaRespondo,$bonaRespondo) {
 		$trans = array("." => "", "," => "", "'" => "","!" => "","?" => ""); // liste des caractères à supprimer pour la comparaison
 		$bonaRespondo = trim(strtr($bonaRespondo, $trans));
 		$lernantaRespondo = trim(strtr($lernantaRespondo,$trans));
+		//echo "bona respondo : ".strtolower(konvX($bonaRespondo))."<br/>";
+		//echo "lernanta respondo : ".strtolower(konvX($lernantaRespondo))."<br/>";
 		return strtolower(konvX($lernantaRespondo))==strtolower(konvX($bonaRespondo));	
 	}
 }

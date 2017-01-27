@@ -1,5 +1,6 @@
 <?php
 require("db.inc.php");
+include "util.php";
 malfermidatumbazon();
 $leciono=$_POST["leciono"];
 $nunleciono=$_POST["nunleciono"];

@@ -64,14 +64,15 @@ function listiStudantojn() {
 		echo $ekdt[2]."/".$ekdt[1]."/".$ekdt[0]."<br>\n";
 		echo "<em>derni&egrave;re le&ccedil;on envoy&eacute;e le : </em>\n";
 		if ($row["lastdato"]==0) {
-			echo "--/--/--<br>\n";
+			echo "--/--/--\n";
 		}
 		else{
 			//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["lastdato"],$lstdt);
 			$lstdt = explode("-",$row["lastdato"]);
-			echo $lstdt[2]."/".$lstdt[1]."/".$lstdt[0]."<br>\n";
+			echo $lstdt[2]."/".$lstdt[1]."/".$lstdt[0]."\n";
+			echo "&nbsp;(<a href='vidiLecionon.php?numleciono=".$row["nunleciono"]."&kurso=".$row["kurso"]."&studanto=".$row["studanto"]."'>voir</a>)";
 		}
-		
+		echo "<br/>";
 		// bouton pour indiquer qu'un élève a abandonné
 		echo "<form method='POST' action='miajlernantoj2.php'>"; 
 		echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";

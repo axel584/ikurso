@@ -65,6 +65,9 @@
 	if ($erarkodo==22) {
 		echo "Materialize.toast('Attention, relisez bien la leçon !', 4000);\n";
 	}
+	if ($erarkodo==23) {
+		echo "Materialize.toast('élève introuvable !', 4000);\n";
+	}
 	
 
 ?>

@@ -818,3 +818,10 @@ insert into vortoj (eo,fr,tipo,lecionero_id) values ('kastelo','château','nom',
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('marŝi','marcher','verbe',57);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('ĉapelo','chapeau','nom',57);
 insert into vortoj (eo,fr,tipo,lecionero_id) values ('vojo','chemin, route','nom',57);
+
+------------------
+-- Passage en V13
+------------------
+
+ALTER TABLE personoj_vortoj_respondoj CONVERT TO CHARACTER SET utf8;
+ALTER TABLE  `personoj_lecionoj` ADD  `komentario` TEXT NULL ;

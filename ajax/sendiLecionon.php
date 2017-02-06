@@ -29,12 +29,18 @@ if (!$row) {
 }
 
 
+// on récupère des infos de l'élève :
+$studanto = apartigiPersonon($persono_id);
+
 // envoyer la leçon au correcteur
 // on enregistre ses réponses dans la table 
 $fonto="<html><head><title>Cours d'Espéranto : leçon ".$leciono."</title>\n";
 $fonto.="<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"\n>";
 $fonto.="<style>body{font-family:\"Courier New\", Courier, sans-serif;font-size:small}</style>\n";
 $fonto.="</head><body>";
+
+// on ajoute dans le mail l'adresse email de l'élève :
+$fonto .= "<p>Sendu vian korekton al : ".$studanto["retadreso"]."<br>\n";
 
 $query = "select demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
 $result = $bdd->query($query);
@@ -68,12 +74,9 @@ $result = $bdd->query($query);
 $combien = $result->fetch()["combien"];
 // on enregistre si il n'y avait rien en base
 if ($combien==0) {
-	$requete = $bdd->prepare('insert into personoj_lecionoj(dato,persono_id,leciono_id) values (now(),:persono_id,:leciono_id)');
-	$requete->execute(array('persono_id'=>$persono_id,'leciono_id'=>$leciono_id));
+	$requete = $bdd->prepare('insert into personoj_lecionoj(dato,persono_id,leciono_id,komentario) values (now(),:persono_id,:leciono_id,:komentario)');
+	$requete->execute(array('persono_id'=>$persono_id,'leciono_id'=>$leciono_id,'komentario'=>$commentaire_pour_correcteur));
 }
-
-// on récupère des infos de l'élève :
-$studanto = apartigiPersonon($persono_id);
 
 // on récupère des infos sur le cours :
 // on récupère quelques infos sur le cours :

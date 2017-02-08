@@ -90,8 +90,24 @@ if (isset($_GET["aktivigo"])) {
 		</article>
 	
 		<aside class="col s12 m10 l4 offset-m1 offset-l1">
+
+
 		<!-- pour les élèves uniquement qui ont commencé un cours -->
 		<?php if (jamKomencisKurson($persono_id)) { ?>
+
+
+			<ul class="collapsible" data-collapsible="expandable">
+
+			<li>
+			<?php if ($persono['kurso']=="CG" || $persono['kurso']=="GR" ) { ?>
+				<div class="collapsible-header"><a href="memoriVortojn.php">Outil de révision du vocabulaire</a></div>
+			<?php } ?>
+				<div class="collapsible-header"><a href="statistikoj.php">Statistiques</a></div>
+			</li>
+			</ul>
+
+
+
 			<h2>Mes cours</h2>
 			
 			<p><span class="primaire-texte texte-moyen">Dernier cours choisi : </span><?php simplaVorto("nomo","kursoj"," where kodo='".$persono['kurso']."'"); ?></p>

@@ -359,10 +359,10 @@ function redirigeParDroits($persono) {
         $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         $row = $result->fetch();
         if ($row==null) {
-            return; 
+            header("location:personinformoj.php");
         }
         if ($row["kurso"]=="KE") {
-            return;
+            header("location:personinformoj.php");
         }
         if ($row['kurso']=="GR") {
             $prefixe_url ='fr/gerda/';
@@ -384,6 +384,10 @@ function redirigeParDroits($persono) {
                 header("location:".$redirection);
             }
         }
+        if ($row["stato"]=="F" || $row["stato"]=="H") { // cas des élèves qui ont fini ou abandonné
+            header("location:personinformoj.php");
+        }
+
     }
 }
 

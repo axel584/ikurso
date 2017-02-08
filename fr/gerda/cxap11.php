@@ -201,7 +201,7 @@ include "gerdakapo.inc.php";
 				<div class="tasko">
 					
 				<?php $demandoj=array(
-					8 => "Mi volis aspekti pli bele ol normale. Mi ___is min pli bela antaŭ la promenado.<br>Antaŭ la promenado, mi ___is pli bela. Penjo ridis pri mi, ĉar mi plibel___is min. Ni veturis en la urbon.<br>Vetur___is nin Penjo. Ŝi ___is mia amiko tuj post mia unua tago en la laborejo.<br>Antaŭ la forveturo ŝi trovis min en mia ĉambro, kie mi plibel___is.",
+					8 => "Mi volis aspekti pli bele ol normale. Mi ___is min pli bela antaŭ la promenado.<br>Antaŭ la promenado, mi ___is pli bela. Penjo ridis pri mi, ĉar mi plibel___is min. Ni veturis en la urbon.<br>Vetur___is nin Penjo. Ŝi ___is mia amikino tuj post mia unua tago en la laborejo.<br>Antaŭ la forveturo ŝi trovis min en mia ĉambro, kie mi plibel___is.",
 					9 => "La urbo trov___as tro malproksime de nia laborejo por iri piede.<br>Penjo ne havas aŭton, sed ŝi sukcesis hav___i al si la aŭton de Bob.",
 					10 => "Post longa promenado en la urbo ni volis eksidi en trinkejo.<br>Tuj post kiam ni sid___is ĉe tablo, iu ulo turnis sin. Li turn___is al ni kaj ekrigardis nin.<br>Ni eksentis nin malbonaj. Lia rigardado malbonsent___is nin. Ni devis agi.<br>Ni ne plu restis sidaj, ni restar___is, tiel dev___ante lin forturni sin.<br>Li komprenis, ke li ĝenis nin ade rigardante al ni.<br>Ni kompren___is al li, ke rigardado povas esti maldiskreta.",
 					11 => "Mi lernas multon en la urbo. Ĝi lern___as min pri la vivo.<br>Multhoma kunvivado lern___as kvazaŭ aŭtomate en la urbo."

@@ -959,7 +959,7 @@ function statMotsParForce($persono_id) {
 }
 
 
-function statEvolution($persono_id) {
+function statEvolution($persono_id,$nbjours,$nbeleves) {
 	global $bdd;
 	// on regarde la dernière leçon faite
 	//echo $persono_id."/";
@@ -971,7 +971,7 @@ function statEvolution($persono_id) {
 	//echo $derniereSection."//".$dernierCours;
 	// on regarde les autres élèves qui ont fait cette leçon
 	$autresEleves = array();
-	$query = "SELECT persono_id,personoj_lecioneroj.lecionero_id,dato FROM personoj_lecioneroj join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE lecionoj.kurso='".$dernierCours."' and personoj_lecioneroj.lecionero_id=".$derniereSection." order by dato desc limit 7";
+	$query = "SELECT persono_id,personoj_lecioneroj.lecionero_id,dato FROM personoj_lecioneroj join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE lecionoj.kurso='".$dernierCours."' and personoj_lecioneroj.lecionero_id=".$derniereSection." order by dato desc limit ".$nbeleves;
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	while ($row=$result->fetch()) {
 		$autresEleves[] = $row["persono_id"];
@@ -999,7 +999,7 @@ function statEvolution($persono_id) {
 	echo "]";
 	$statistique = array();
 	$jours = array();
-	$query = "SELECT personoj_lecioneroj.persono_id,personoj_lecioneroj.lecionero_id,dato,DAYOFYEAR(dato) as dayofyear FROM personoj_lecioneroj join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE dato>DATE_SUB(CURDATE(), INTERVAL 12 DAY) and lecionoj.kurso='".$dernierCours."' and persono_id in (".join(',', $autresEleves).") order by dato";
+	$query = "SELECT personoj_lecioneroj.persono_id,personoj_lecioneroj.lecionero_id,dato,DAYOFYEAR(dato) as dayofyear FROM personoj_lecioneroj join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE dato>DATE_SUB(CURDATE(), INTERVAL ".$nbjours." DAY) and lecionoj.kurso='".$dernierCours."' and persono_id in (".join(',', $autresEleves).") order by dato";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	while ($row=$result->fetch()) {
 		// on stocke le libellé du jour sous une forme plus lisible que le "jour de l'année"

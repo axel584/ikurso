@@ -5,6 +5,8 @@ $korpo="informoj";
 $persono_id=$_SESSION["persono_id"];
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
+$nbjours=isset($_GET['nbjours'])?$_GET['nbjours']:"12";
+$nbeleves=isset($_GET['nbeleves'])?$_GET['nbeleves']:"5";
 include "pagxkapo.inc.php";
 ?>
 
@@ -43,6 +45,8 @@ include "pagxkapo.inc.php";
 				<div class="row">
 					<div class="col l12">
 						<h2>Évolution</h2>
+						<!--Nombre de jours : <input type="text" name="nbjours" value="15"> / 
+						Nombre d'élèves : <input type="text" name="nbeleves" value="5">-->
 						<div id="chart_div_evolution"></div>
 					</div>
 					<div class="col l6">
@@ -112,7 +116,7 @@ include "pagxkapo.inc.php";
       function drawEvolutionChart() {
 
      var data = google.visualization.arrayToDataTable([
-     	<?php statEvolution($persono_id); ?>
+     	<?php statEvolution($persono_id,$nbjours,$nbeleves); ?>
         ]);
 
         var options = {

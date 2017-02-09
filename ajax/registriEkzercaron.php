@@ -15,11 +15,14 @@ $lernantajDemandoj = array();
 $lernantajRespondoj = array();
 $aucuneReponse = true;
 $uneReponseManquante = false;
+$nunaKomando = "";
+$komandoLauxKodo = array();
 foreach(array_keys($_GET) as $key) {
 
 	if (strncmp($key,"res_",4)==0) {
 		$kodo = substr($key,4);
 		$lernantajRespondoj[$kodo]=$_GET[$key];
+		$komandoLauxKodo[$kodo]=$nunaKomando;
 		// si on a une réponse manquante, on peut mettre la variable correspondante à "true"
 		if ($_GET[$key]=="") {
 			// reponse manquante
@@ -29,12 +32,19 @@ foreach(array_keys($_GET) as $key) {
 			$aucuneReponse = false;
 		}
 
-	}
-	if (strncmp($key,"dem_",4)==0) {
+	} else if (strncmp($key,"dem_",4)==0) {
 		$kodo = substr($key,4);
 		$lernantajDemandoj[$kodo]=$_GET[$key];
+	} else {
+		$nunaKomando = $_GET[$key];
 	}
 }
+
+// print_r($lernantajDemandoj);
+// echo "<br/>";
+// print_r($lernantajRespondoj);
+// echo "<br/>";
+// print_r($komandoLauxKodo);
 
 // on enregistre en base le résultat s'il aucune réponse ne s'y trouve, sinon on fait une mise à jour
 foreach(array_keys($lernantajDemandoj) as $kodo) {
@@ -44,11 +54,11 @@ foreach(array_keys($lernantajDemandoj) as $kodo) {
 		$result = $bdd->query("select count(*) as combien from respondoj where persono_id=".$persono_id." and kodo='".$kodo."' and lecionero_id=".$lecionero_id);
 		$nbReponseEnBase = $result->fetch()["combien"];
 		if ($nbReponseEnBase==0) {
-	    	$requete = $bdd->prepare('insert into respondoj(persono_id,dato,kodo,demando,respondo,lecionero_id) values (:persono_id,now(),:kodo,:demando,:respondo,:lecionero_id)');
-    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'demando'=>$lernantajDemandoj[$kodo],'respondo'=>$lernantajRespondoj[$kodo],'lecionero_id'=>$lecionero_id));
+	    	$requete = $bdd->prepare('insert into respondoj(persono_id,dato,kodo,demando,respondo,lecionero_id,komando) values (:persono_id,now(),:kodo,:demando,:respondo,:lecionero_id,:komando)');
+    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'demando'=>$lernantajDemandoj[$kodo],'respondo'=>$lernantajRespondoj[$kodo],'lecionero_id'=>$lecionero_id,'komando'=>$komandoLauxKodo[$kodo]));
     	} else {
-    		$requete = $bdd->prepare('update respondoj set respondo=:respondo where persono_id=:persono_id and kodo=:kodo and lecionero_id=:lecionero_id');
-    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'respondo'=>$lernantajRespondoj[$kodo],'lecionero_id'=>$lecionero_id));
+    		$requete = $bdd->prepare('update respondoj set respondo=:respondo,komando=:komando where persono_id=:persono_id and kodo=:kodo and lecionero_id=:lecionero_id');
+    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'respondo'=>$lernantajRespondoj[$kodo],'lecionero_id'=>$lecionero_id,'komando'=>$komandoLauxKodo[$kodo]));
     	}
 }
 

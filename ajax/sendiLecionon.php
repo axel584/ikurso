@@ -42,11 +42,17 @@ $fonto.="</head><body>";
 // on ajoute dans le mail l'adresse email de l'élève :
 $fonto .= "<p>Sendu vian korekton al : ".$studanto["retadreso"]."<br>\n";
 
-$query = "select demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
+$query = "select komando,demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
 $result = $bdd->query($query);
 $nbReponse = 0;
+$lastKomando = "";
 while ($row=$result->fetch()) {
 	$nbReponse = $nbReponse + 1;
+	// si on n'a jamais mis cette consigne, on l'affiche ici :
+	if ($row["komando"]!=$lastKomando) {
+		$lastKomando=$row["komando"];
+		$fonto .= "<h5>".$lastKomando."</h5>\n";
+	}
 	$fonto .= "<p>".$row["demando"]."<br>\n";
 	$fonto .= "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
 }

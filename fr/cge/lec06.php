@@ -217,22 +217,22 @@ include "dlekkapo.inc.php";
 		</div>
 		
 		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
+			<legend><strong>EXERCICE</strong> : Recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
 			<input type="hidden" name="013_cxap06.1" value="En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
-			<p>Utilisez seulement une fois chacune des prépositions suivantes&nbsp;: <b>por</b>, <b>ĉe</b>, <b>malantaŭ</b>, <b>el</b>, <b>ĝis</b>, <b>per</b>, <b>dum</b>, <b>inter</b>.<br>
+			<p>Chaque phrase de cet exercice correspond à une image. Recopiez chaque phrase en remplaçant [&nbsp;…&nbsp;] par la préposition qui convient. Vous devez utiliser seulement une fois chacune des prépositions suivantes&nbsp;: <b>por</b>, <b>ĉe</b>, <b>malantaŭ</b>, <b>el</b>, <b>ĝis</b>, <b>per</b>, <b>dum</b>, <b>inter</b>.<br>
 			Le vocabulaire nouveau se trouve au bas de cette page.</p>
 			<div class="tasko">
 			<hr>
 			<?php 	
 				$demandoj=array (
-				9 => "... la vojaĝo, ni manĝis.",
-				10 => "En nia ĝardeno, estas hotelo ... insektoj.",
-				11=> "Ni kontruis kastelon ... sablo.",
-				12 => "La kato estas ... la pordo.",
-				13 => "Li grimpis ... la pinto (=le sommet).",
-				14 => "Ŝi portas ĉapelon ... la dorso.",
-				15 => "La floroj kreskas (kreski=pousser) ... la rokoj.",
-				16 => "Mi lernas Esperanton ... tiuj libroj.",
+				9 => "[&nbsp;…&nbsp;] la vojaĝo, ni manĝis.",
+				10 => "En nia ĝardeno, estas hotelo [&nbsp;…&nbsp;] insektoj.",
+				11=> "Ni kontruis kastelon [&nbsp;…&nbsp;] sablo.",
+				12 => "La kato estas [&nbsp;…&nbsp;] la pordo.",
+				13 => "Li grimpis [&nbsp;…&nbsp;] la pinto (=le sommet).",
+				14 => "Ŝi portas ĉapelon [&nbsp;…&nbsp;] la dorso.",
+				15 => "La floroj kreskas (kreski=pousser) [&nbsp;…&nbsp;] la rokoj.",
+				16 => "Mi lernas Esperanton [&nbsp;…&nbsp;] tiuj libroj.",
 				);
 				ekzerco(True, 1);
 			?>

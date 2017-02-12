@@ -201,7 +201,7 @@ include "dlekkapo.inc.php";
 			  <i>r</i> français fortement grasseyé. Il est proche du <i>ach-laut</i>
 			  allemand et des sons qui lui correspondent dans beaucoup d’autres langues
 			  (<i>jota</i> espagnole, <i>x</i> russe, <i>h</i> finnois, <i>khi</i>
-			  grec, <i>kha</i> arabe, <i>khaf</i> hébreu...). Ce son n’existe pas en
+			  grec, <i>kha</i> arabe, <i>khaf</i> hébreu…). Ce son n’existe pas en
 			  français mais il s’entend souvent dans des exclamations ou dans des
 			  imitations de l’allemand <i>Ach !</i>, <i>Achtung !</i>, etc.</li>
 			<li> <span class="eo">r</span> est de préférence roulé comme en espagnol, italien, grec, etc.
@@ -399,17 +399,17 @@ include "dlekkapo.inc.php";
 		</div>
 		
 		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
+			<legend><strong>EXERCICE</strong> : Recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
 			<input type="hidden" name="013_cxap04.2" value="2. En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
-			<p>En vous aidant des images, recopiez les phrases en complétant avec la préposition qui convient. Choisissez parmi les prépositions suivantes&nbsp;: <b>apud</b>, <b>ĉe</b>, <b>al</b>, <b>de</b>, <b>el</b>. (Chaque préposition ne peut être utilisée qu’une seule fois.)</p>
+			<p>Chaque phrase de cet exercice correspond à une image. Recopiez chaque phrase en remplaçant [&nbsp;…&nbsp;] par la préposition qui convient. Vous devez utiliser seulement une fois chacune des prépositions suivantes&nbsp;: <b>apud</b>, <b>ĉe</b>, <b>al</b>, <b>de</b>, <b>el</b>.</p>
 			<div class="tasko">
 			<hr>
 			<?php 	
 				$demandoj=array (
-				4 => "La infanoj iras ... la lernejo.",
-				5 => "Mia skribotablo (= bureau) estas ... la fenestro.",
-				6 => "Mi aĉetos insektojn ... ĉokolado.",
-				7 => "Estas paperoj ... la muro.",
+				4 => "La infanoj iras [&nbsp;…&nbsp;] la lernejo.",
+				5 => "Mia skribotablo (= bureau) estas [&nbsp;…&nbsp;] la fenestro.",
+				6 => "Mi aĉetos insektojn [&nbsp;…&nbsp;] ĉokolado.",
+				7 => "Estas paperoj [&nbsp;…&nbsp;] la muro.",
 				);
 				ekzerco(True, 1);
 			?>

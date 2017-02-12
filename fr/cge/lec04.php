@@ -93,7 +93,8 @@ include "dlekkapo.inc.php";
 		?>
 			<p class="parto">Dans la première leçon, vous avez vu que l’alphabet de l’espéranto comporte 28 lettres, et que la prononciation de l’espéranto est phonétique. </p>
 			
-			<p class="parto">Vous allez maintenant faire un exercice de prononciation. Lisez les mots suivants à voix haute en faisant attention à l’accent tonique (indiqué par un soulignement). Votre prononciation s’améliorera petit à petit.Les syllabes accentuées sont soulignées et, comme d’habitude, le petit bouton à gauche vous indique la présence d’échantillons sonores associés.
+			<p class="parto">Vous allez maintenant faire un exercice de prononciation. Lisez les mots suivants à voix haute en faisant attention à l’accent tonique (indiqué par un soulignement). Votre prononciation s’améliorera petit à petit.</p>
+			<p>Les syllabes accentuées sont soulignées et, comme d’habitude, le petit bouton à gauche vous indique la présence d’échantillons sonores associés. Cet exercice est avant tout un exercice de prononciation, aussi il n’est pas nécessaire de chercher à retenir tous ces mots.
 			</p>
 			<div class="row">
 				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-01.mp3" class="sm2_button"></a></p>
@@ -277,7 +278,7 @@ include "dlekkapo.inc.php";
 		if ($section=="5") {
 		?>
 			<p class="parto">Voici une liste de mots qui représentent les différents sons de l’espéranto. 
-			Lisez-les à voix haute en faisant attention à l’accent tonique (indiqué par un soulignement). Votre prononciation s’améliorera petit à petit.
+			Lisez-les à voix haute en faisant attention à l’accent tonique (indiqué par un soulignement). Votre prononciation s’améliorera petit à petit. 
 			</p>
 			<?php if ($persono) { ?>
 			<p class="eo eta"><b>NOTE </b>: Les mots précédés de <span class="marque">•</span> seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>

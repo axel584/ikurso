@@ -482,12 +482,10 @@ include "dlekkapo.inc.php";
 		<p><span class="eo">noktomezo</span> = minuit (<i>milieu de la nuit</i>)</p>
 
 
-
 		<?php 
 		} // fin section
 		if ($section=="6") {
 		?>
-
 		<fieldset class="ekzerco">
 			<legend><strong>EXERCICE</strong> : Répondez aux questions suivantes.</legend>
 			<input type="hidden" name="013_cxap07.3" value="3. Répondez aux questions suivantes.">
@@ -504,10 +502,152 @@ include "dlekkapo.inc.php";
 			?>
 			</div>
 		</fieldset>
+		<?php 
+		} // fin section 6
+		if ($section=="7") {
+		?>
+
+		<p class="parto">Voici un tableau récapitulatif du vocabulaire que vous avez vu dans cette leçon.</p>
+		<?php if ($persono) { ?>
+		<p class="eo eta">Ces mots ont été automatiquement ajoutés à votre vocabulaire à réviser.</p>
+		<?php } ?>
+
+			<fieldset class="vortoj">
+				<div class="vortlisto row">
+					<div class="col s12 m6">
+						<p><span class="eo">filo</span> : fils<br>
+						   <span class="eo">bofilo</span> : beau-fils, gendre</p>
+						<p><span class="eo">fratino</span> : sœur<br>
+						   <span class="eo">bofratino</span> : belle-sœur</p>
+						<p><span class="eo">doni</span> : donner<br>
+						   <span class="eo">disdoni</span> : distribuer</p>
+						<p><span class="eo">semi</span> : semer<br>
+						   <span class="eo">dissemi</span> : disséminer</p>
+						<p><span class="eo">dormi</span> : dormir<br>
+						   <span class="eo">ekdormi</span> : s’endormir</p>
+						<p><span class="eo">pluvi</span> : pleuvoir<br>
+						   <span class="eo">ekpluvi</span> : commencer à pleuvoir</p>
+						<p><span class="eo">ek !</span> : allez !, en avant !, allons-y !, en route !</p>
+						<p><span class="eo">prezidanto</span> : président<br>
+						   <span class="eo">eksprezidanto</span> : ex-président</p>
+						<p><span class="eo">edziĝi</span> : se marier<br>
+						   <span class="eo">eksedziĝi</span> : divorcer</p>
+						<p><span class="eo">eksiĝi</span> : démissionner</p>
+						<p><span class="eo">komercisto</span> : commerçant</p>
+						<p><span class="eo">gepatroj</span> : parents</p>
+						<p><span class="eo">sinjoro</span> : monsieur<br>
+						   <span class="eo">gesinjoroj</span> : mesdames et messieurs</p>
+						<p><span class="eo">gea</span> : mixte</p>
+						<p><span class="eo">fermi</span> : fermer<br>
+						   <span class="eo">malfermi</span> : ouvrir</p>
+						<p><span class="eo">la malo</span> : le contraire</p>
+						<p><span class="eo">paroli</span> : parler<br>
+						   <span class="eo">parolado</span> : discours</p>
+						<p><span class="eo">rigardi</span> : regarder<br>
+						   <span class="eo">rigardadi</span> : contempler</p>
+						<p><span class="eo">kanti</span> : chanter<br>
+						   <span class="eo">kantado</span> : action de chanter</p>
+						<p><span class="eo">ade</span> : sans arrêt</p>
+						<p><span class="eo">sendi</span> : envoyer<br>
+						   <span class="eo">sendaĵo</span> : envoi (chose envoyée)</p>
+						<p><span class="eo">bovo</span> : bœuf<br>
+						   <span class="eo">bovaĵo</span> : viande de bœuf</p>
+						<p><span class="eo">reala</span> : réel<br>
+						   <span class="eo">realaĵo</span> : réalité, chose réelle</p>
+						<p><span class="eo">Kanado</span> : Canada<br>
+						   <span class="eo">kanadano</span> : Canadien</p>
+						<p><span class="eo">Kristo</span> : Christ<br>
+						   <span class="eo">kristano</span> : chrétien</p>
+						<p><span class="eo">vorto</span> : mot<br>
+						   <span class="eo">vortaro</span> : dictionnaire</p>
+						<p><span class="eo">ŝafo</span> : mouton<br>
+						   <span class="eo">ŝafaro</span> : troupeau de moutons</p>
+						<p><span class="eo">membraro</span> : les membres (d’une association)</p>
+						<p><span class="eo">ebla</span> : possible<br>
+						   <span class="eo">eble</span> : peut-être</p>
+						<p><span class="eo">vireco</span> : virilité</p>
+						<p><span class="eo">verdeco</span> : verdeur</p>
+						<p><span class="eo">infaneco</span> : enfance</p>
+						<p><span class="eo">vento</span> : vent<br>
+						   <span class="eo">ventego</span> : tempête</p>
+						<p><span class="eo">ridi</span> : rire<br>
+						   <span class="eo">ridegi</span> : se tordre (de rire)</p>
+						<p><span class="eo">ege</span> : extrêmement</p>
+						<p><span class="eo">tombo</span> : tombe<br>
+						   <span class="eo">tombejo</span> : cimetière</p>
+						<p><span class="eo">ejo</span> : local, salle</p>
+						<p><span class="eo">ŝpari</span> : économiser<br>
+						   <span class="eo">ŝparema</span> : économe</p>
+					</div>
+					<div class="col s12 m6">
+						<p><span class="eo">babili</span> : bavarder<br>
+						   <span class="eo">babilema</span> : bavard</p>
+						<p><span class="eo">emi</span> : avoir tendance à</p>
+						<p><span class="eo">legi</span> : lire<br>
+						   <span class="eo">legenda</span> : qu’il faut lire (à lire)</p>
+						<p><span class="eo">salo</span> : sel<br>
+						   <span class="eo">salero</span> : grain de sel</p>
+						<p><span class="eo">mono</span> : argent<br>
+						   <span class="eo">monero</span> :pièce de monnaie</p>
+						<p><span class="eo">estri</span> : diriger<br>
+						   <span class="eo">estro</span> : chef<br>
+						   <span class="eo">urbestro</span> : maire, bourgmestre</p>
+						<p><span class="eo">beleta</span> : joli</p>
+						<p><span class="eo">varmeta</span> : tiède</p>
+						<p><span class="eo">iomete</span> : un petit peu</p>
+						<p><span class="eo">katido</span> : chaton</p>
+						<p><span class="eo">reĝo</span> : roi<br>
+						   <span class="eo">reĝido</span> : prince</p>
+						<p><span class="eo">purigi</span> : nettoyer (rendre propre)</p>
+						<p><span class="eo">morti</span> : mourir<br>
+						   <span class="eo">mortigi</span> : tuer (faire mourir)</p>
+						<p><span class="eo">scii</span> : savoir<br>
+						   <span class="eo">sciigi</span> : faire savoir, informer</p>
+						<p><span class="eo">sidi</span> : être assis<br>
+						   <span class="eo">sidiĝi</span> : s’asseoir<br>
+						   <span class="eo">sidilo</span> : siège</p>
+						<p><span class="eo">ruĝiĝi</span> : rougir</p>
+						<p><span class="eo">iĝi</span> : devenir</p>
+						<p><span class="eo">ŝlosi</span> : fermer à clef<br>
+						   <span class="eo">ŝlosilo</span> : clef</p>
+						<p><span class="eo">razi</span> : raser<br>
+						   <span class="eo">razilo</span> : rasoir</p>
+						<p><span class="eo">ilo</span> : instrument</p>
+						<p><span class="eo">onklo</span> : oncle<br>
+						   <span class="eo">onklino</span> : tante</p>
+						<p><span class="eo">koko</span> : coq<br>
+						   <span class="eo">kokino</span> : poule</p>
+						<p><span class="eo">ina</span> : féminin</p>
+						<p><span class="eo">admiri</span> : admirer<br>
+						   <span class="eo">admirinda</span> : admirable</p>
+						<p><span class="eo">cigaredo</span> : cigarette</p>
+						<p><span class="eo">glavo</span> : épée</p>
+						<p><span class="eo">instrui</span> : instruisto</p>
+						<p><span class="eo">panjo</span> : maman</p>
+						<p><span class="eo">duobla</span> : double</p>
+						<p><span class="eo">multobligi</span> : multiplier, reproduire en plusieurs exemplaires</p>
+						<p><span class="eo">duonhoro</span> : demi-heure</p>
+						<p><span class="eo">unuopa</span> : individuel</p>
+						<p><span class="eo">ope</span> : en groupe, à plusieurs</p>
+						<p><span class="eo">supo</span> : soupe</p>
+						<p><span class="eo">ujo</span> : récipient</p>
+						<p><span class="eo">sankta</span> : saint<br>
+						   <span class="eo">sanktulo</span> : un saint</p>
+						<p><span class="eo">stulta</span> : stupide<br>
+						   <span class="eo">sultulo</span> : un sot</p>
+						<p><span class="eo">kunulino</span> : compagne</p>
+						<p><span class="eo">kolo</span> : cou<br>
+						   <span class="eo">kolumo</span> : col (de chemise)</p>
+						<p><span class="eo">plena</span> : plein<br>
+						   <span class="eo">plenumi</span> : accomplir</p>
+						<p><span class="eo">umilo</span> : gadget</p>
+					</div>
+				</div>
+			</fieldset>		
 
 		<?php 
 		} // fin section
-		if ($section=="7") {
+		if ($section=="8") {
 		?>
 
 			<p>

@@ -6,9 +6,9 @@ include "dlekkapo.inc.php";
 ?>
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l1">
-		
+
 		<section id="leciono-enhavo">
-			<?php 
+		<?php 
 			getTitoloLecionero('CG',1,$section);
 			
 			if ($section=="1") {
@@ -328,7 +328,7 @@ include "dlekkapo.inc.php";
 			} // fin section 4
 			if ($section=="5") {
 			?>
-			<p><em>Pour entendre ces phrases, cliquez sur bouton à gauche de la phrase.</em></p>
+			<p class="noprint"><em>Pour entendre ces phrases, cliquez sur bouton à gauche de la phrase.</em></p>
 			
 			<div class="vortlisto row">
 				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-1.mp3" class="sm2_button"></a></p>
@@ -370,7 +370,7 @@ include "dlekkapo.inc.php";
 			if ($section=="6") {
 			?>
 
-				<div class="row">
+				<div class="row noprint">
 					<div class="col s12">
 						<div class="card-panel blue lighten-5">
 						<!-- N'a pas encore de compte -->
@@ -421,7 +421,7 @@ include "dlekkapo.inc.php";
 			?>			
 			<p class="parto">Voici quelques expressions pour entamer et finir une discussion. Ces expressions sont à apprendre par cœur dans un premier temps, vous verrez un peu plus tard dans les leçons pourquoi elles se construisent ainsi.</p>
 		<fieldset class="vortoj">
-			<div class="vortlisto">
+			<div class="vortlisto nocol">
 				<div class"row">
 					<p class="col s6 m3 eo">Saluton !</p><p class="col s6 m3">Salut !</p>
 					<p class="col s6 m3 eo">Bonan tagon !</p><p class="col s6 m3">Bonjour !</p>

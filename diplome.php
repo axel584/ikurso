@@ -57,7 +57,7 @@ $description = "Espéranto-France atteste que ".$nom." a correctement suivi le C
 		<!--Import materialize.css-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 		<link type="text/css" rel="stylesheet" href="style/ikurso.css" media="screen"/>
-		<link type="text/css" rel="stylesheet" href="style/impression.css" media="print"/>
+		<link type="text/css" rel="stylesheet" href="style/diplome.css" media="print"/>
 	</head>
     <body class="attestation">
 		<?php 

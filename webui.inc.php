@@ -207,7 +207,19 @@ function getTitoloLecionero($kurso,$leciono,$lecionero) {
 	$query = "SELECT lecioneroj.titolo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero;
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$titolo = $result->fetch()['titolo'];
+	$tipo = $result->fetch()['tipo'];
+	
+	echo '<div class="impression right"><a href="javascript:window.print()" class="waves-effect waves-light btn-floating small blue"><i class="material-icons">print</i></a></div>';
+
 	echo '<h2 id="lec'.$leciono.'.'.$lecionero.'">'.$leciono.'.'.$lecionero.'. '.$titolo.'</h2>';
+}
+
+function getTipoLecionero($kurso,$leciono,$lecionero) {
+	global $bdd;
+	$query = "SELECT lecioneroj.titolo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero;
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$tipo = $result->fetch()['tipo'];
+	return($tipo);
 }
 
 function getEnhavtabelo($kurso,$leciono) {

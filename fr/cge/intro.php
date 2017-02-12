@@ -37,15 +37,15 @@ include "dlekkapo.inc.php"
 			
 			<p><b>ATTENTION</b> : Les cours sont GRATUITS, mais, nous mobilisons des correcteurs, qui mobilisent du temps&nbsp;! Aussi, l’inscription à ce cours en 10 leçons est un engagement de votre part. Aussi nous vous demandons de travailler régulièrement (une leçon par semaine au minimum) et de prévenir votre correcteur en cas de retard ou d’empêchement à poursuivre le cours. Car de son côté, votre correcteur s’est engagé à vous suivre et donc à mettre tout en œuvre pour le bon déroulement de ces 10 leçons. C'est un contrat tacite réciproque qui relève du respect mutuel&nbsp;!</p>
 			
-			<h2>Note au sujet de la typographie</h3>
+			<h2>Note au sujet de la typographie</h2>
 			
 			<p>Vous trouverez dans la <a href="<?php echo $vojo;?>helpo.php">page d’aide</a> des informations utiles sur la façon d’utiliser les lettres accentuées.</p>
 			
-			<p>Dans les exercices, il suffit de taper la lettre suivie d’un <strong>x</strong> par exemple&nbsp;: cx, sx, ux… pour obtenir automatiquement la lettre accentuée correspondante. 			
+			<p>Dans les exercices, il suffit de taper la lettre suivie d’un <strong>x</strong> par exemple&nbsp;: cx, sx, ux… pour obtenir automatiquement la lettre accentuée correspondante.</p> 			
 							
-			<h2>Consultation hors ligne</h3>
+			<h2>Consultation hors ligne</h2>
 					
-			<p>Vous pouvez télécharger une version du cours au format PDF pour consultation hors ligne&nbsp;:<br><a href="<?php echo $vojo;?>doc/DLEK.pdf">Cours en dix leçons</a> (PDF - 476Ko)</li></p>
+			<p>Vous pouvez télécharger une version du cours au format PDF pour consultation hors ligne&nbsp;:<br><a href="<?php echo $vojo;?>doc/DLEK.pdf">Cours en dix leçons</a> (PDF - 476Ko)</p>
 
 			<?php if ($persono_id=="") { ?>
 				<div class="row">

@@ -1,0 +1,7 @@
+@page {
+    size: landscape;
+}   
+
+body.attestation {text-align:center;}
+.attestation img {border:1px solid grey;}
+.outils {display:none;}

@@ -11,6 +11,14 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
+				<li class="collection-header">version 13. Février 2017</li>
+				<li class="collection-item">
+					<p>Possibilité d'imprimer les leçons.</p>
+					<p>Ajout d'<a href="<?php echo $vojo;?>statistikoj.php">outils statistiques</a>.</p>
+					<p>Ajout de l'énoncé des questions dans le message envoyé aux correcteurs.</p>
+					<p>Ajout d'une page pour les correcteurs afin de consulter les exercices de leurs élèves (pour répondre temporairement aux problèmes de mails qui n'arrivent pas à leur destinataire).</p>
+					<p>Corrections diverses, principalement dans le vocabulaire de l'outil de révision grâce aux remarques des élèves (merci Alain !)</p>
+				</li>
 				<li class="collection-header">version 12. Janvier 2017</li>
 				<li class="collection-item">
 					<p>Certaines prépositions sont abordées dans les premières leçons (Cours en 10 leçons) : <em>en</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1">section 1.7</a>, <em>antaŭ</em>, <em>sub</em>, <em>sur</em>, <em>super</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec02.php?section=4">section 2.4</a>, <em>apud</em>, <em>ĉe</em>, <em>al</em>, <em>de</em>, <em>el</em> dans la <a href="<?php echo $vojo;?>fr/cge/lec04.php?section=6">section 4.6</a></p>

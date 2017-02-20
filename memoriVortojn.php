@@ -65,6 +65,17 @@ include "pagxkapo.inc.php";
 		</article>
 	
 		<aside class="col s12 m10 l4 offset-m1 offset-l1">
+
+		<!-- Menu pour accéder aux statistiques et au données personnelles -->
+		<ul class="collapsible" data-collapsible="expandable">
+
+			<li>
+				<div class="collapsible-header"><a href="personinformoj.php">Données personnelles</a></div>
+				<div class="collapsible-header"><a href="statistikoj.php">Statistiques</a></div>
+			</li>
+		</ul>
+
+
 		<!-- pour les élèves uniquement qui ont commencé un cours -->
 		<?php if (jamKomencisKurson($persono_id)) { ?>
 			<h2>Mes cours</h2>

@@ -67,8 +67,9 @@ include "pagxkapo.inc.php";
 			<ul class="collapsible" data-collapsible="expandable">
 
 			<li>
-				<div class="collapsible-header"><a href="memoriVortojn.php">Outil de révision du vocabulaire</a></div>
+				
 				<div class="collapsible-header"><a href="personinformoj.php">Données personnelles</a></div>
+				<div class="collapsible-header"><a href="memoriVortojn.php">Outil de révision du vocabulaire</a></div>
 			</li>
 		</ul>	
 

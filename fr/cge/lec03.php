@@ -468,7 +468,7 @@ include "dlekkapo.inc.php";
 		</p>
 		<p>Le pronom <b>tio</b> permet de reprendre ce qui est désigné dans la question. Il se traduit souvent par <em>ce</em>, <em>c’</em> (comme dans <em>c’est</em>), <em>cela</em>, <em>ça</em>.</p>
 		
-		<p><b>REMARQUE</b> : Si vous souhaitez interroger sur l’identité de la personne, savoir uel est son nom, vous utilisez le pronom interrogatif <b>kiu</b> que vous avez déjà vu dans la leçon 1.</p>
+		<p><b>REMARQUE</b> : Si vous souhaitez interroger sur l’identité de la personne, savoir quel est son nom, vous utilisez le pronom interrogatif <b>kiu</b> que vous avez déjà vu dans la leçon 1.</p>
 
 		<p>Exemples :</p>
 		<div class="row">

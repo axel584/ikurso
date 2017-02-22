@@ -10,16 +10,24 @@ function stat_monatoj() {
 	} else {
 		$dernierJour = date("d",mktime(0,0,0,date("m")+1,0,date("Y")));
 	}
-	echo "<table class=\"stat\">\n<thead>\n<tr>\n";
-	echo "<td class='vide'>&nbsp;</td>\n";
-	echo "<td class='col1'>élèves";
 	?>
-	<!--a href="#" onClick="window.open('stat-monatoj.php?filtre=K','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=620,height=520');">
-	<img border="0" height="14" width="14" src="bildoj/grafiko.png">
-	</a-->
-	</td>
-	<td class='col1'>Ont abandonné</td>
-	<td class='col1'>Ont fini le cours</td>
+	<table class="stat">
+	<thead><tr>
+	<td class='vide'>&nbsp;</td>
+	<td class='col1' colspan='5'>Ont commencé ce mois</td>
+	<td class='col1' colspan='2'>Ont terminé ce mois</td>
+	</tr></thead>
+	<thead><tr>
+	<td class='vide'>&nbsp;</td>
+	<td class='col1'>total</td>
+	<td class='col1'>sont actuellement en cours</td>
+	<td class='col1'>ont abandonné</td>
+	<td class='col1'>ont fini</td>
+	<td class='col1'>nb jours pour finir</td>
+
+
+	<td class='col1'>Ont abandonné ce mois-ci</td>
+	<td class='col1'>Ont fini le cours ce mois-ci</td>
 	</tr>
 	</thead>
 	
@@ -34,12 +42,12 @@ function stat_monatoj() {
 	for ($annee=2002;$annee<=$anneeEnCours;$annee++) {
 		for ($mois=1;$mois<=12;$mois++) {
 			$ClefDate = ($mois<10)?$annee."0".$mois:$annee.$mois;
-			$stat[$ClefDate]=array("ekis"=>0,"finis"=>0,"haltis"=>0);
+			$stat[$ClefDate]=array("ekis"=>0,"finis"=>0,"haltis"=>0,"monat-haltis"=>0,"monat-finis"=>0,"nb-jours"=>0);
 		}
 	}
 
 	// laux monatoj
-	$demando = "select nuna_kurso.id as id, nuna_kurso.stato as stato, MONTH(nuna_kurso.ekdato) as ekmonato, YEAR(nuna_kurso.ekdato) as ekjaro, MONTH(nuna_kurso.findato) as finmonato,YEAR(nuna_kurso.findato) as finjaro from nuna_kurso, personoj where nuna_kurso.studanto=personoj.id order by ekjaro,ekmonato";
+	$demando = "select nuna_kurso.id as id, nuna_kurso.stato as stato, MONTH(nuna_kurso.ekdato) as ekmonato, YEAR(nuna_kurso.ekdato) as ekjaro, MONTH(nuna_kurso.findato) as finmonato,YEAR(nuna_kurso.findato) as finjaro,DATEDIFF(nuna_kurso.findato,nuna_kurso.ekdato) as nbjours from nuna_kurso, personoj where nuna_kurso.studanto=personoj.id order by ekjaro,ekmonato";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 
 	while($row = $result->fetch()) {
@@ -59,12 +67,13 @@ function stat_monatoj() {
 			}
 			if ($row["stato"]=="H") {
 				$stat[$findato]["haltis"]++;
-				//$stat[$ekdato]["monat-haltis"]++; // ceux qui ont arret?n ayant commenc?e mois ci
+				$stat[$ekdato]["monat-haltis"]++; // ceux qui ont arret?n ayant commenc?e mois ci
 				$sumhaltis++;
 			} elseif ($row["stato"]=="F") {
 				$stat[$findato]["finis"]++;
-				//$stat[$ekdato]["monat-finis"]++;  // ceux qui ont fini en ayant commenc?e mois ci.
+				$stat[$ekdato]["monat-finis"]++;  // ceux qui ont fini en ayant commenc?e mois ci.
 				$sumfinis++;
+				$stat[$ekdato]["nb-jours"]+=$row["nbjours"];
 			}
 		}
 	}
@@ -96,6 +105,31 @@ function stat_monatoj() {
 			echo "&nbsp;(".$estimation.")";
 		}			
 		echo "</td>\n";
+		// affiche ceux qui sont actuellement en cours (total inscrit du mois - haltis et finis)
+		$encours = $value["ekis"]-$value["monat-haltis"]-$value["monat-finis"];
+		echo "<td>&nbsp;".$encours;
+		echo "</td>";
+		// affiche ceux qui ont abandonné mais commencé ce mois ci (monat-haltis)
+		echo "<td>&nbsp;".$value["monat-haltis"];
+		echo "</td>";
+		// affiche ceux qui ont fini mais commencé ce mois ci (monat-finis)
+		//$pourcentageFinisCxiMonate="(".round(100*$value["monat-finis"]/$value["ekis"]).")";
+		if ($value["ekis"]==0||$value["monat-finis"]==0) {
+			$pourcentageFinisCxiMonate="";
+		} else {
+			$pourcentageFinisCxiMonate="(".round(100*$value["monat-finis"]/$value["ekis"])."%)";
+		}
+		echo "<td>&nbsp;".$value["monat-finis"]."&nbsp;".$pourcentageFinisCxiMonate;
+		echo "</td>";
+		// affiche le nombre jours moyens pour arriver à ce résultat :
+		if (($value["nb-jours"]==0)or($value["monat-finis"]==0)) {
+			$nbmoyen="&nbsp;";
+		} else {
+			$nbmoyen=round($value["nb-jours"]/$value["monat-finis"]);
+		}
+		
+		echo "<td>&nbsp;".$nbmoyen;
+		echo "</td>";
 		// affiche ceux qui ont abandonne                
 		echo "<td>&nbsp;".$value["haltis"];
 		if ($key==$moisactuel) {

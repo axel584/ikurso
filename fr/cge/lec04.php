@@ -423,7 +423,7 @@ include "dlekkapo.inc.php";
 		} // fin section
 		if ($section=="8") {
 		?>
-			<p class="parto">Vous avez vu dans la leçon précédente quelques mots de vocabulaire de rapportant à la date&nbsp;: </p>
+			<p class="parto">Vous avez vu dans la leçon précédente quelques mots de vocabulaire se rapportant à la date&nbsp;: </p>
 			<div class="vortlisto row">
 				<p class="col s6 m4"><span class="eo">semajno</span> : semaine</p>
 				<p class="col s6 m4"><span class="eo">tago</span> : jour</p>

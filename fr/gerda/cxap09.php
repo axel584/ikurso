@@ -275,7 +275,7 @@ include "gerdakapo.inc.php";
 			post iom forsvenas. Vidu: miaj haroj forfalas. Baldaŭ mi estos tute
 			senhara. Aŭ restos nur kelkaj haroj sur mia kapo. De tago al tago mi
 			pli kaj pli senhariĝas. Baldaŭ mi estos tute malsana, ĉar tiu
-			senhalta zorgado agas tre malbone al mia sano, tiel ke mia bela hararo</p>
+			senhalta zorgado agas tre malbone al mia sano, tiel ke mia bela hararo iom post iom malgrandiĝas, iom post iom forperdiĝas.</p>
 			
 			<p>«La kuracisto diris al mi: «Se vi volas, ke mi kuracu vin, kaj vi
 			resaniĝu, tiu zorgado devas halti. Sen tio, sen via kunlaboro, la

@@ -420,22 +420,22 @@ include "dlekkapo.inc.php";
 		<p>Il s'agit des verbes qui s'utilisent avec un complément d'objet :</p>
 
 			<div class="container">
-				<p><span class="eo">Mi vidas <b>mian patron</b>.</span> : je vois mon père.</p>
-				<p><span class="eo">Mia patro trinkas <b>kafon</b>.</span> : mon père boit du café.</p>
-				<p><span class="eo">Vi skribas <b>libron</b>.</span> : tu écris un livre.</p>
+				<p><span class="eo">Mi vidas <b>mian patron</b>.</span> : Je vois mon père.</p>
+				<p><span class="eo">Mia patro trinkas <b>kafon</b>.</span> : Mon père boit du café.</p>
+				<p><span class="eo">Vi skribas <b>libron</b>.</span> : Tu écris un livre.</p>
 			</div>
 
 		</p>
 		<p class="parto">
 		En revanche, on appelle <b>verbe intransitif</b> un verbe qui n’exprime pas une action
-		venant d’un sujet vers un complément d’objet; parfois un tel verbe décrit
+		venant d’un sujet vers un complément d’objet&nbsp;; parfois un tel verbe décrit
 		simplement l’état du sujet. Ex.: <em>vivi</em>, <em>promeni</em>, <em>kuri</em>,
 		<em>esti</em>, <em>sani</em>...
 		</p>
 		<p>
-		Quand un verbe intransitif est suivi d’un adjectif ou d’un nom ce dernier
+		Quand un verbe intransitif est suivi d’un adjectif ou d’un nom, ce dernier
 		n’est pas un complément d’objet direct mais un attribut qui décrit le
-		sujet. La terminaison <b>-n</b> de l’accusatif <b>n’est donc jamais
+		sujet ou une éphitète détachées (2<sup>e</sup> exemple ci-dessous). La terminaison <b>-n</b> de l’accusatif <b>n’est donc jamais
 		employée</b> dans ce cas.
 		</p>
 		<div class="container">
@@ -445,13 +445,13 @@ include "dlekkapo.inc.php";
 			<p><span class="eo">Ŝia frato estas bela knabo.</span> : Son frère est (un) beau garçon.</p>
 		</div>
 
-		<p>A noter que certains verbes intransitif n'ont pas de sujet du tout. Par exemple :</p>
+		<p>À noter que certains verbes intransitifs n’ont pas de sujet du tout. Par exemple :</p>
 			<div class="container">
 				<p><span class="eo">Pluvas.</span> : Il pleut.</p>
 				<p><span class="eo">Sunas.</span> : Il fait beau, il y a du soleil.</p>
 			</div>
 
-			<p>Leur équivalent en français utilise le sujet "il" qui ne se traduit pas en espéranto.</p>
+			<p>Leur équivalent en français utilise le sujet <b>il</b> qui ne se traduit pas en espéranto.</p>
 			
 
 		<?php 

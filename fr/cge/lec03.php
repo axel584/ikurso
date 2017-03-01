@@ -417,9 +417,17 @@ include "dlekkapo.inc.php";
 		?>
 		<p class="parto">Nous avons vu de nombreux exemples de <b>verbes transitifs</b> :
 		<span class="eo">vidi</span>, <span class="eo">trinki</span>, <span class="eo">skribi</span>...
+		<p>Il s'agit des verbes qui s'utilisent avec un complément d'objet :</p>
+
+			<div class="container">
+				<p><span class="eo">Mi vidas <b>mian patron</b>.</span> : je vois mon père.</p>
+				<p><span class="eo">Mia patro trinkas <b>kafon</b>.</span> : mon père boit du café.</p>
+				<p><span class="eo">Vi skribas <b>libron</b>.</span> : tu écris un livre.</p>
+			</div>
+
 		</p>
 		<p class="parto">
-		On appelle <b>verbe intransitif</b> un verbe qui n’exprime pas une action
+		En revanche, on appelle <b>verbe intransitif</b> un verbe qui n’exprime pas une action
 		venant d’un sujet vers un complément d’objet; parfois un tel verbe décrit
 		simplement l’état du sujet. Ex.: <em>vivi</em>, <em>promeni</em>, <em>kuri</em>,
 		<em>esti</em>, <em>sani</em>...
@@ -436,6 +444,15 @@ include "dlekkapo.inc.php";
 			<p><span class="eo">Li estas instruisto.</span> : Il est instituteur.</p>
 			<p><span class="eo">Ŝia frato estas bela knabo.</span> : Son frère est (un) beau garçon.</p>
 		</div>
+
+		<p>A noter que certains verbes intransitif n'ont pas de sujet du tout. Par exemple :</p>
+			<div class="container">
+				<p><span class="eo">Pluvas.</span> : Il pleut.</p>
+				<p><span class="eo">Sunas.</span> : Il fait beau, il y a du soleil.</p>
+			</div>
+
+			<p>Leur équivalent en français utilise le sujet "il" qui ne se traduit pas en espéranto.</p>
+			
 
 		<?php 
 		} // fin section

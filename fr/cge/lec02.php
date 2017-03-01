@@ -161,7 +161,7 @@ QCM_bildoj(
 		if ($section=="4") {
 		?>
 		
-		<p class="parto">Il existe d’autres compléments, tels que les compléments de temps, de lieu, de manière, etc. Ils sont généralement introduit par une préposition. Dans la première leçon, vous avez déjà vu la préposition <span class="eo">en</span>, qui sert à introduire un complément de lieu.</p>
+		<p class="parto">Il existe d’autres compléments, tels que les compléments de temps, de lieu, de manière, etc. Ils sont généralement introduits par une préposition. Dans la première leçon, vous avez déjà vu la préposition <span class="eo">en</span>, qui sert à introduire un complément de lieu.</p>
 		<p>Exemples :</p>
 		<div class="vortlisto row">
 			<p class="col s6"><span class="eo">Aleks loĝas <b>en</b> Francujo.</span></p>

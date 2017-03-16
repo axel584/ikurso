@@ -53,7 +53,7 @@ $result = $bdd->query($query);
 	mailViaSmtp($row["retadreso"],"ikurso@esperanto-france.org","Cours d'espéranto",$contents);
  }
 // on selectionne tous les élèves qui n'ont pas envoyé de leçon depuis un an :
-$query = "SELECT korektanto,studanto,kurso FROM nuna_kurso WHERE lastdato<DATE_SUB(NOW(),INTERVAL 1 YEAR) and stato='K'";
+$query = "SELECT korektanto,studanto,kurso FROM nuna_kurso WHERE lastdato<DATE_SUB(NOW(),INTERVAL 1 YEAR) and stato<>'H' and stato<>'F'";
 $result = $bdd->query($query);
 while($row = $result->fetch()) {
 	$korektanto = $row["korektanto"];
@@ -67,7 +67,7 @@ while($row = $result->fetch()) {
 		$query = "update korektebla_kurso set kiom_lernantoj='".$nouveau_nombre_eleves."' where korektanto='".$korektanto."' and kurso='".$kurso."'";
 		$bdd->exec($query);
 	}
-	$query = "update nuna_kurso set stato='H',findato=now() where studanto='".$studanto."' and kurso='".$kurso."' and stato='K'";
+	$query = "update nuna_kurso set stato='H',findato=now() where studanto='".$studanto."' and kurso='".$kurso."' and stato<>'H' and stato<>'F'";
 	$bdd->exec($query);
 	protokolo($studanto,"SUPPRESSON AUTOMATIQUE","suppression de l'élève et diminution du nb d'élèves pour ".$korektanto);
 

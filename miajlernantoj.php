@@ -175,7 +175,9 @@ function listiEksStudantojn() {
 		echo "<div class='lernanto gauche' style='border:solid #888;border-width:0 1px 1px 0;margin-right:10px;'>";
 		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["naskigxdato"],$nskdt);
 		$nskdt=explode("-",$row["naskigxdato"]);
-		echo $nskdt[2]."/".$nskdt[1]."/".$nskdt[0]."<br>";
+		if (count($nskdt)==3) { // cas où la date contient deux tirets
+			echo $nskdt[2]."/".$nskdt[1]."/".$nskdt[0]."<br>";
+		}
 		if ($row["adreso1"]!="") echo $row["adreso1"]."<br>";
 		if ($row["adreso2"]!="") echo $row["adreso2"]."<br>";
 		echo $row["posxtkodo"]." ".$row["urbo"]." ";

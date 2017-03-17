@@ -143,7 +143,8 @@ include "dlekkapo.inc.php";
 				4 => "ĉiel",
 				5 => "tie",
 				6 => "neniu",
-				7 => "nenies"
+				7 => "nenies",
+				8 => "iu"
 				);
 				ekzerco(False, 1);
 			?>

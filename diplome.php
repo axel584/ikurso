@@ -27,7 +27,11 @@ switch ($kurso) {
 
 }
 // ajoute dans le protocole que l'élève regarde son diplome
-protokolo($persono["id"],"DIPLOME",$persono["enirnomo"]." regarde son diplome ".$kurso);
+if ($clef!="") {
+	protokolo($persono["id"],"DIPLOME","Quelqu'un regarde le diplome ".$kurso." de ".$persono["enirnomo"]." depuis ".$_SERVER["HTTP_REFERER"]);
+} else {
+	protokolo($persono["id"],"DIPLOME",$persono["enirnomo"]." regarde son diplome ".$kurso);
+}
 // vérifier en base que le cours est bien terminé, récupérer le nom-prénom du correcteur, la date de fin et le statut (si le statut!=F => exit)
 $infos = getInfoPorDiplomoElLernanto($persono_id,$kurso);
 if ($infos==null) {
@@ -41,13 +45,14 @@ if ($persono["familinomo"]!="" || $persono["personnomo"]!="") {
 } else {
 	$nom = $persono["enirnomo"];
 }
-$url = $urlracine."diplomeImage.php?kurso=".$kurso."&clef=".$persono["aktivigo"];
+$urlImage = $urlracine."diplomeImage.php?kurso=".$kurso."&clef=".$persono["aktivigo"];
+$urlPage = $urlracine."diplome.php?kurso=".$kurso."&clef=".$persono["aktivigo"];
 $description = "Espéranto-France atteste que ".$nom." a correctement suivi le Cours d'Espéranto";
 ?>
 <html>
 	<head>
 		<meta property="og:title" content="Diplome de <?=$nom?>" />
-		<meta property="og:image"              content="<?=$url?>" />
+		<meta property="og:image"              content="<?=$urlImage?>" />
 		<meta property="og:description" content="<?=$description?>" />
 		<!--Import Google Icon Font-->
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -62,9 +67,9 @@ $description = "Espéranto-France atteste que ".$nom." a correctement suivi le C
     <body class="attestation">
 		<?php 
 
-		echo '<img src="'.$url.'" width="842" height="595"/>'; ?>
+		echo '<img src="'.$urlImage.'" width="842" height="595"/>'; ?>
 		<div class="outils">
-		<a class="btn waves-effect waves-light blue modal-trigger" target="_NEW" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($url);?>">Partager sur FaceBook</a>
+		<a class="btn waves-effect waves-light blue modal-trigger" target="_NEW" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($urlPage);?>">Partager sur FaceBook</a>
 
 
 			<?php

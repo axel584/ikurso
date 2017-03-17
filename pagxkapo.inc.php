@@ -116,7 +116,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			</div>
 			<div class="modal-footer">
 				<div id="footer-konektigxi1">
-					<a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a><a id="aperigi_novigi_pasvorton_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">Mot de passe oublié</a><a id="sendi_denove_aktivigilo_button" class=" modal-action hide waves-effect waves-light btn-flat primaire-texte">RENVOYER LE COURRIEL D'ACTIVATION</a>
+					<a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a><a id="aperigi_novigi_pasvorton_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">Identifiant ou mot de passe oublié</a><a id="sendi_denove_aktivigilo_button" class=" modal-action hide waves-effect waves-light btn-flat primaire-texte">RENVOYER LE COURRIEL D'ACTIVATION</a>
 				</div>
 				<div id="footer-konektigxi2" class="hide">
 					<a id="fermi_konektigxi_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>

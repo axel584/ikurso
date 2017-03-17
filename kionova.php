@@ -11,7 +11,7 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
-				<li class="collection-header">version 13. Février 2017</li>
+				<li class="collection-header">version 13. Mars 2017</li>
 				<li class="collection-item">
 					<p>Possibilité d'imprimer les leçons.</p>
 					<p>Ajout d'<a href="<?php echo $vojo;?>statistikoj.php">outils statistiques</a>.</p>

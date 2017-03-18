@@ -25,7 +25,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 
 		<!--Player audio-->
 		<link rel="stylesheet" type="text/css" href="<?php echo $vojo;?>soundmanager2/css/mp3-player-button.css" />
-		<script async src="<?php echo $vojo;?>soundmanager2/script/soundmanager2.js"></script>
+		<script src="<?php echo $vojo;?>soundmanager2/script/soundmanager2.js"></script>
 		<script async type="text/javascript" src="<?php echo $vojo;?>soundmanager2/script/mp3-player-button.js"></script>
 		<script>
 		soundManager.setup({
@@ -33,7 +33,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		  url: '<?php echo $vojo;?>soundmanager2/swf/'
 		});
 		</script>
-		<script type="text/javascript" src="xAlUtf8.js"></script>	
+		<script type="text/javascript" src="<?php echo $vojo;?>xAlUtf8.js"></script>	
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css"  media="screen"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/impression.css"  media="print"/>
 

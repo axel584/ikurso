@@ -70,7 +70,9 @@ function listiStudantojn() {
 			//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["lastdato"],$lstdt);
 			$lstdt = explode("-",$row["lastdato"]);
 			echo $lstdt[2]."/".$lstdt[1]."/".$lstdt[0]."\n";
-			echo "&nbsp;(<a href='vidiLecionon.php?numleciono=".$row["nunleciono"]."&kurso=".$row["kurso"]."&studanto=".$row["studanto"]."'>voir</a>)";
+			if ($row['kurso']!="KE") { // on n'affiche pas les réponses des élèves pour le logiciel :
+				echo "&nbsp;(<a href='vidiLecionon.php?numleciono=".$row["nunleciono"]."&kurso=".$row["kurso"]."&studanto=".$row["studanto"]."'>voir</a>)";
+			}
 		}
 		echo "<br/>";
 		// bouton pour indiquer qu'un élève a abandonné

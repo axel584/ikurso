@@ -387,16 +387,16 @@ QCM_bildoj(
 			<div class="tasko">
 			<?php
 				$demandoj=array (
-				1 => "Un garçon en bonne santé boit du lait chaud.",
-				2 => "La nouvelle boutique vend des gâteaux secs.",
-				3 => "Le grand instituteur a rencontré les nouveaux amis.",
-				4 => "Les bons amis feront toujours un beau gâteau.",
-				5 => "La petite fille a rencontré les s&oelig;urs laides.",
-				6 => "Le frère bien portant avait une petite s&oelig;ur malade.",
-				7 => "Personne ne lavera les petites tasses.",
-				8 => "Le bel oiseau attrapa un petit insecte.",
-				9 => "La nouvelle boutique a vendu de la mauvaise limonade.",
-				10 => "De l’eau froide ne lave pas (&quot;ne lavas&quot;) un petit garçon."
+				5 => "Un garçon en bonne santé boit du lait chaud.",
+				6 => "La nouvelle boutique vend des gâteaux secs.",
+				7 => "Le grand instituteur a rencontré les nouveaux amis.",
+				8 => "Les bons amis feront toujours un beau gâteau.",
+				9 => "La petite fille a rencontré les s&oelig;urs laides.",
+				10 => "Le frère bien portant avait une petite s&oelig;ur malade.",
+				11 => "Personne ne lavera les petites tasses.",
+				12 => "Le bel oiseau attrapa un petit insecte.",
+				13 => "La nouvelle boutique a vendu de la mauvaise limonade.",
+				14 => "De l’eau froide ne lave pas (&quot;ne lavas&quot;) un petit garçon."
 				);
 				ekzerco ("U", 1);
 			?>
@@ -417,15 +417,15 @@ QCM_bildoj(
 			<div class="tasko">
 			<?php
 				$demandoj=array (
-				11 => "{La kuko} estas bela.",
-				12 => "{Mia amikino} estas bela.",
-				13 => "{La bela birdo} ĉiam trinkas akvon.",
-				14 => "{La butikoj} estas malpuraj.",
-				15 => "{La akvo} estas varma.",
-				16 => "{Mia frato} neniam lavas la tasojn.",
-				17 => "{La viro} havas novan amikon.",
-				18 => "{Miaj fratoj} kaptis malsanan birdon.",
-				19 => "{La virino} ne sukeris mian teon."
+				15 => "{La kuko} estas bela.",
+				16 => "{Mia amikino} estas bela.",
+				17 => "{La bela birdo} ĉiam trinkas akvon.",
+				18 => "{La butikoj} estas malpuraj.",
+				19 => "{La akvo} estas varma.",
+				20 => "{Mia frato} neniam lavas la tasojn.",
+				21 => "{La viro} havas novan amikon.",
+				22 => "{Miaj fratoj} kaptis malsanan birdon.",
+				23 => "{La virino} ne sukeris mian teon."
 				);
 				ekzerco(True, 1);
 			?>
@@ -443,11 +443,11 @@ QCM_bildoj(
 			<div class="tasko">
 			<?php 
 				$demandoj=array (
-				20 => "amikino - la - malvarma - mia - sukeri - teo.",
-				21 => "akvo - bela - birdo - la - pura - trinki.",
-				22 => "amiko - bona - limonado - vendi - via.",
-				23 => "forgesi - mi - papero - porti.",
-				24 => "bela - esti - fratino - knabino - mia."
+				24 => "amikino - la - malvarma - mia - sukeri - teo.",
+				25 => "akvo - bela - birdo - la - pura - trinki.",
+				26 => "amiko - bona - limonado - vendi - via.",
+				27 => "forgesi - mi - papero - porti.",
+				28 => "bela - esti - fratino - knabino - mia."
 				);
 				ekzerco(True, 1);
 			?>

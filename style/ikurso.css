@@ -456,6 +456,11 @@ ul#enhavtabelo li.farita::before {
 	-webkit-font-feature-settings: 'liga';
 	color: #2196F3;
 }
+
+ul#enhavtabelo li.farita {
+	!text-decoration: line-through;
+}
+
 #enhavtabelo li a {
 	padding-left: 0.5em;
 	color: #75706B;
@@ -492,6 +497,7 @@ ul#progreso li {
 ul#progreso li.farita {
 	background-color: #039be5;
 	border-color: #039be5;
+	text-decoration:line-through;
 }
 ul#progreso li.nuna {
 	background-color:#FFF;

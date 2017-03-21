@@ -14,12 +14,14 @@ function stat_monatoj() {
 	<table class="stat">
 	<thead><tr>
 	<td class='vide'>&nbsp;</td>
-	<td class='col1' colspan='5'>Ont commencé ce mois</td>
+	<td class='col1' colspan='6'>Ont commencé ce mois</td>
 	<td class='col1' colspan='2'>Ont terminé ce mois</td>
 	</tr></thead>
 	<thead><tr>
 	<td class='vide'>&nbsp;</td>
-	<td class='col1'>total</td>
+	<td class='col1'>Inscrit</td>
+	<td class='col1'>ont validé leur inscriptionr</td>
+	<td class='col1'>ont reçu un correcteur</td>
 	<td class='col1'>sont actuellement en cours</td>
 	<td class='col1'>ont abandonné</td>
 	<td class='col1'>ont fini</td>
@@ -42,9 +44,35 @@ function stat_monatoj() {
 	for ($annee=2002;$annee<=$anneeEnCours;$annee++) {
 		for ($mois=1;$mois<=12;$mois++) {
 			$ClefDate = ($mois<10)?$annee."0".$mois:$annee.$mois;
-			$stat[$ClefDate]=array("ekis"=>0,"finis"=>0,"haltis"=>0,"monat-haltis"=>0,"monat-finis"=>0,"nb-jours"=>0);
+			$stat[$ClefDate]=array("aligxis"=>0,"aktivigita"=>0,"ekis"=>0,"finis"=>0,"haltis"=>0,"monat-haltis"=>0,"monat-finis"=>0,"nb-jours"=>0);
 		}
 	}
+
+
+	$demando =  "SELECT MONTH(ekdato) AS mois, YEAR(ekdato) AS annee,aktivigita, COUNT(*) as combien FROM personoj GROUP BY annee, mois,aktivigita order by annee desc, mois desc";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	//echo "</table>";
+	while($row = $result->fetch()) {	
+		if ($row["mois"]<10) {
+			$ekdato = $row["annee"]."0".$row["mois"];
+		} else {
+			$ekdato = $row["annee"].$row["mois"];
+		}
+		// ont activé leur inscription
+		if ($row["aktivigita"]==1) {
+			//echo "aktivigita : ".$row["combien"]."<br/>";
+			$stat[$ekdato]["aktivigita"]+=$row["combien"];
+		} else {
+			//echo "non aktivigita : ".$row["combien"]."<br/>";
+		}
+		// qu'ils aient ou non activé leur inscription :
+		$stat[$ekdato]["aligxis"]+=$row["combien"];
+		//echo $ekdato." : ".$row["combien"]."<br/>";
+	}
+
+	//print_r($stat);
+
+//exit(0);
 
 	// laux monatoj
 	$demando = "select nuna_kurso.id as id, nuna_kurso.stato as stato, MONTH(nuna_kurso.ekdato) as ekmonato, YEAR(nuna_kurso.ekdato) as ekjaro, MONTH(nuna_kurso.findato) as finmonato,YEAR(nuna_kurso.findato) as finjaro,DATEDIFF(nuna_kurso.findato,nuna_kurso.ekdato) as nbjours from nuna_kurso, personoj where nuna_kurso.studanto=personoj.id order by ekjaro,ekmonato";
@@ -96,7 +124,13 @@ function stat_monatoj() {
 
 		echo "<td class='col1'>".$nomo_monatoj[$mois]." ".$annee."</td>\n";
 					
-		// affiche ceux qui ont commence                
+		// affiche le nombre d'inscrit
+		echo "<td>".$value["aligxis"]."</td>";
+
+		// le nombre de personnes qui ont activé leur clef
+		echo "<td>".$value["aktivigita"]."</td>";
+
+		// affiche ceux qui ont reçu un correcteur
 		echo "<td>&nbsp;".$value["ekis"];
 		// echo " (F : ".$value["monat-finis"].")/(H : ".$value["monat-haltis"].")";
 		if ($key==$moisactuel) {
@@ -150,7 +184,13 @@ function stat_monatoj() {
 	//sumo
 	echo "<tfoot>\n<tr>\n";
 	echo "<td>Total</td>\n";
+	echo "<td>&nbsp;</td>\n";
+	echo "<td>&nbsp;</td>\n";
 	echo "<td>".$sumekis."</td>\n";
+	echo "<td>&nbsp;</td>\n";
+	echo "<td>&nbsp;</td>\n";
+	echo "<td>&nbsp;</td>\n";
+	echo "<td>&nbsp;</td>\n";
 	echo "<td>".$sumhaltis;
 	if ($sumekis>0) echo "&nbsp;&nbsp;&nbsp;(".round(100*$sumhaltis/$sumekis,2)."%)";
 	echo "</td>\n";

@@ -830,6 +830,6 @@ ALTER TABLE personoj_vortoj_respondoj ADD INDEX vorto_index ( vorto_id );
 ALTER TABLE `respondoj` ADD `komando` TEXT NOT NULL AFTER `kodo`;
 
 --- ajout section 7 (page vocabulaire) dans la leçon 7 juste avant l'épilogue
-UPDATE `lecioneroj` SET `ordo` = '8' WHERE `ordo` = 7;
+--UPDATE `lecioneroj` SET `ordo` = '8' WHERE `ordo` = 7;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '68', 'Vocabulaire', 'TEKSTO', NULL, '7', '0', '0');
 

@@ -99,7 +99,7 @@ if ($kurso=="3N") {
 	$subjekto = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 }
 
-$resultat = mailViaSmtp($korektantaretadreso.",".$studanto["enirnomo"]." <".$studanto["retadreso"].">",$studanto["retadreso"],$subjekto,stripslashes($fonto));
+$resultat = mailViaSmtp($korektantaretadreso.",\"".$studanto["enirnomo"]."\" <".$studanto["retadreso"].">",$studanto["retadreso"],$subjekto,stripslashes($fonto));
 
 // gxisdatigi liajn datumojn en nuna_kurso
 $query = "update nuna_kurso set nunleciono=".$leciono.",stato='K',lastdato=CURDATE() where studanto=".$persono_id." and kurso='".$kurso."'";

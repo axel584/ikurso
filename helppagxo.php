@@ -22,8 +22,7 @@ include "pagxkapo-old.inc.php";
 						Pour s’inscrire à un cours, l’élève doit remplir en formulaire en renseignant 
 						au moins l’identifiant et le mot de passe choisis ainsi que son adresse électronique.
 						Il reçoit alors un message l’invitant à attendre un correcteur.<br>
-						Dès son inscription, l’élève a accès au forum ainsi 
-						qu’à la page lui permettant de modifier ses données personnelles.<br>
+						Dès son inscription, l’élève a accès à la page lui permettant de modifier ses données personnelles.<br>
 						Lorsqu’un correcteur lui est affecté, l’élève reçoit 
 						un nouveau message lui indiquant les coordonnées de son correcteur.</p>
 		
@@ -32,7 +31,6 @@ include "pagxkapo-old.inc.php";
 						Il est téléchargeable depuis le site <a href="http://ikurso.net">http://ikurso.net</a>, 
 						qui présente également le service de correction et l’accès au formulaire
 						d'inscription. 
-						Ce formulaire d’inscription est également accessible depuis la page d'accueil de ce site. <br>
 						Lors de son inscription, l’élève reçoit un message l’invitant à 
 						attendre un correcteur.</p>
 						
@@ -96,6 +94,7 @@ include "pagxkapo-old.inc.php";
 						En principe, rien. Il doit vous envoyer tout seul ses leçons qu’il vous faudra corriger au fur 
 						et à mesure. Dans la pratique, il vaut mieux accueillir votre élève en lui 
 						envoyant un petit mot de bienvenue.<br>
+						Il est préférable d'écrire <b>en français</b> à vos élèves pour les premières leçons et éventuellement en incluant quelques mots/expressions en espéranto avec une traduction en français (comme "gratulon" ou "amike" avant de signer).<br/>
 						Une fois que vous avez corrigé, vous devez, aussi régulièrement que possible, 
 						mettre à jour les informations de vos élèves en vous connectant sur ce site.</p></blockquote>
 					
@@ -169,18 +168,12 @@ include "pagxkapo-old.inc.php";
 						<blockquote><p>	  	
 						<p><strong>Quand un élève a terminé le cours</strong> : indiquez-le en choisissant "A fini" 
 						dans ce menu déroulant. L’élève recevra alors une 
-						<a href="doc/diplome.pdf"> attestation de fin de cours</a> et un exemplaire des magazines 
-						des associations Espéranto-Jeunes et Espéranto-France. 
-						(ceci ne concerne que les élèves du DLEK et de ikurso seulement).</p>
+						<a href="doc/diplome.pdf"> attestation de fin de cours</a>. 
+						</p>
 						<p><strong>Quand un élève a abandonné</strong> : indiquez-le en choisissant 
 						"A abandonné dans ce menu déroulant.</p>
-						<p colass="grava">Lorsqu’un élève a terminé (ou abandonné) le cours, ils reçoit 
-						un questionnaire dans lequel il est invité à donner son avis sur le cours. 
-						Vous pouvez lire les réponses à ce questionnaire dans le forum "korektantoj" 
-						réservé aux correcteurs.
-						</p>
 						<p class="atentigo">Attention : lorsqu’un élève a terminé le cours, 
-						les administrateurs lui envoient une attestation ainsi que les magazines des associations. 
+						les administrateurs lui envoient une attestation. 
 						N’utilisez donc cette option que pour les élèves qui vous ont envoyé l’examen final.
 						</p></blockquote>				
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
@@ -245,8 +238,7 @@ include "pagxkapo-old.inc.php";
 						En effectuant une relance toutes les semaines (ou tous les 10 jours), vous pouvez essayer 2 ou 3 
 						relances avant d'abandonner l’élève.<br>
 						Vos élèves sont comme vos enfants, s’ils se perdent, c’est à vous d'aller 
-						les chercher...<br>
-						Vous trouverez quelques exemples de relance dans le forum réservé aux correcteurs. 
+						les chercher...
 						</p></blockquote>
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 										
@@ -289,10 +281,6 @@ include "pagxkapo-old.inc.php";
 							</p></blockquote>
 							<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 						
-						<h3>Qu’écrire à l'élève pour l’accueillir, le relancer... ?</h3>
-						<blockquote><p>
-						Vous trouverez différents exemples de lettres types dans le forum réservé aux correcteurs.
-						</p></blockquote>
 					<?php } ?>
 			
 					<?php if ($temo=="utilisation") { ?>

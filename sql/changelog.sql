@@ -833,3 +833,7 @@ ALTER TABLE `respondoj` ADD `komando` TEXT NOT NULL AFTER `kodo`;
 --UPDATE `lecioneroj` SET `ordo` = '8' WHERE `ordo` = 7;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '68', 'Vocabulaire', 'TEKSTO', NULL, '7', '0', '0');
 
+------------------
+-- Passage en V14
+------------------
+ALTER TABLE `respondoj` ADD `normaligita` TEXT ;

@@ -54,11 +54,11 @@ foreach(array_keys($lernantajDemandoj) as $kodo) {
 		$result = $bdd->query("select count(*) as combien from respondoj where persono_id=".$persono_id." and kodo='".$kodo."' and lecionero_id=".$lecionero_id);
 		$nbReponseEnBase = $result->fetch()["combien"];
 		if ($nbReponseEnBase==0) {
-	    	$requete = $bdd->prepare('insert into respondoj(persono_id,dato,kodo,demando,respondo,lecionero_id,komando) values (:persono_id,now(),:kodo,:demando,:respondo,:lecionero_id,:komando)');
-    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'demando'=>$lernantajDemandoj[$kodo],'respondo'=>$lernantajRespondoj[$kodo],'lecionero_id'=>$lecionero_id,'komando'=>$komandoLauxKodo[$kodo]));
+	    	$requete = $bdd->prepare('insert into respondoj(persono_id,dato,kodo,demando,respondo,normaligita,lecionero_id,komando) values (:persono_id,now(),:kodo,:demando,:respondo,:normaligita,:lecionero_id,:komando)');
+    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'demando'=>$lernantajDemandoj[$kodo],'respondo'=>$lernantajRespondoj[$kodo],'normaligita'=>normaligita($lernantajRespondoj[$kodo]),'lecionero_id'=>$lecionero_id,'komando'=>$komandoLauxKodo[$kodo]));
     	} else {
-    		$requete = $bdd->prepare('update respondoj set respondo=:respondo,komando=:komando where persono_id=:persono_id and kodo=:kodo and lecionero_id=:lecionero_id');
-    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'respondo'=>$lernantajRespondoj[$kodo],'lecionero_id'=>$lecionero_id,'komando'=>$komandoLauxKodo[$kodo]));
+    		$requete = $bdd->prepare('update respondoj set respondo=:respondo,komando=:komando,normaligita=:normaligita where persono_id=:persono_id and kodo=:kodo and lecionero_id=:lecionero_id');
+    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'respondo'=>$lernantajRespondoj[$kodo],'normaligita'=>normaligita($lernantajRespondoj[$kodo]),'lecionero_id'=>$lecionero_id,'komando'=>$komandoLauxKodo[$kodo]));
     	}
 }
 

@@ -54,6 +54,13 @@ function konvX($buff) {
 	return($buff);
 }
 
+function normaligita($respondo) {
+	$normaligita = strtolower(konvX($respondo));
+	$trans = array("." => "", "," => "", "'" => "","!" => "","?" => ""); // liste des caractères à supprimer pour la comparaison
+	$normaligita = trim(strtr($normaligita, $trans));
+	return $normaligita;
+}
+
 /*
  * conversion en utf8 (si page en utf8)
 */
@@ -107,6 +114,8 @@ else {
 	$rajto=$persono["rajtoj"];
 	$enirnomo=$persono["enirnomo"];
 }
+
+
 
 function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
 	global $hostSmtp,$portSmtp;

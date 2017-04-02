@@ -15,7 +15,7 @@ include "kapo.inc.php";
 			?>
 
 	
-			<p class="parto">Per minimume 100 vortoj, prezentu vin. Kiel vi nomiĝas ? Kion vi faras/is profesie ? Kie vi loĝas ? Kion vi faras dum via libertempo ? Ĉu vi havas infanojn ? Ĉu vi havas dorlotbestojn ? Kompreneble, vi ne estas devigata respondi al ĉiuj demandoj kaj vi povas aldoni informoj pri aliaj temoj por ke via korektanto pli bone konatu vin. Trankviliĝu : ni ne uzos tiun informojn por sendi reklamon !</p>
+			<p class="parto">Per minimume 100 vortoj, prezentu vin. Kiel vi nomiĝas ? Kion vi faras/is profesie ? Kie vi loĝas ? Kion vi faras dum via libertempo ? Ĉu vi havas infanojn ? Ĉu vi havas dorlotbestojn ? Kompreneble, vi ne estas devigata respondi al ĉiuj demandoj kaj vi povas aldoni informojn pri aliaj temoj por ke via korektanto pli bone konatu vin. Trankviliĝu : ni ne uzos tiun informojn por sendi reklamon !</p>
 
 
 			<?php

@@ -505,7 +505,6 @@ $("#novigi_pasvorton_sendi_button").click(function () {
     	});
 	});
 
-	// TODO : sendi Lecionon sendiLecionon_button
 	$("#sendiLecionon_button").click(function() {
 		$("#sendiLecionon_button").addClass("disabled");
 		$.ajax({
@@ -530,6 +529,30 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		}
     	});
 	});
+
+  $("#resendiLecionon_button").click(function() {
+    alert("coucou");
+    $("#resendiLecionon_button").addClass("disabled");
+    $.ajax({
+          url : $cheminAbsolu+'ajax/resendiLecionon.php',
+          type : 'GET',
+          dataType : 'json',
+          data : $("#chefa_form").serialize()+"&leciono="+$("#resendiLecionon_button").data('leciono')+"&kurso="+$("#resendiLecionon_button").data('kurso'),
+          success : function(reponse, statut){ 
+            if (reponse.mesagxo=="ok") {
+              // renvoyer sur la page vidiLecionon avec un toast
+              window.location = $urlracine+reponse.url;
+            } else {
+              alert("mauvais message de retour, contactez les administrateurs : "+reponse)
+              console.log(reponse);
+            }
+          },
+          error : function() {
+            alert("Erreur de connexion, contactez les administrateurs");
+          }
+      });
+  });
+  
 
 
 // fonction spécifique au troisième niveau :

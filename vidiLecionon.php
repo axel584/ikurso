@@ -24,16 +24,37 @@ $query = "select demando,respondo from respondoj join lecioneroj on lecioneroj.i
 $result = $bdd->query($query);
 $nbReponse = 0;
 while ($row=$result->fetch()) {
+
 	$nbReponse = $nbReponse + 1;
 	echo "<p>".$row["demando"]."<br>\n";
 	echo "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
 }
-// TODO : ajouter le commentaire de l'élève qui devra être stocké en base
+
+// on affiche le commentaire de l'élève qui est stocké en base
+$query = "SELECT komentario  FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id= ".$studanto_id." and numero=".$leciono;
+$result = $bdd->query($query);
+$row=$result->fetch();
+echo "<h3>Commentaire de l'élève</h3>";
+echo $row["komentario"];
+
+// on ajoute un bouton pour renvoyer la leçon
 
 
 ?>
 
+	<section id="leciono-fino">
+			<div id="marko" class="right-align">
 
+				
+
+				<a id="resendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="3N" data-leciono="2" data-position="top" data-delay="50" data-tooltip="Renvoyer cette leçon par mail">Renvoyer cette leçon par mail</a>
+				 <p>
+      			<input type="checkbox" id="expediteurIkurso" />
+      			<label for="expediteurIkurso">Avec ikurso@esperanto-france.org comme expéditeur</label>
+    			</p>
+			</div>
+
+		</section>
 	</article>
 
 		

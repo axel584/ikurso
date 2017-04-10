@@ -547,7 +547,7 @@ function kontroliVorton(vorto_id,persono_id,respondo) {
           url : $cheminAbsolu+'ajax/kontroliVorton.php',
           type : 'GET',
           dataType : 'json',
-          data : "vorto_id="+vorto_id+"&persono_id="+persono_id+"&respondo="+respondo,
+          data : "vorto_id="+vorto_id+"&persono_id="+persono_id+"&respondo="+encodeURIComponent(respondo),
           success : function(reponse, statut){ 
             if (reponse.mesagxo=="ok") {
                 Materialize.toast('Bravo !', 2000);

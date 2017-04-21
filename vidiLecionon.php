@@ -47,10 +47,10 @@ echo $row["komentario"];
 
 				
 
-				<a id="resendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="3N" data-leciono="2" data-position="top" data-delay="50" data-tooltip="Renvoyer cette leçon par mail">Renvoyer cette leçon par mail</a>
+				<a id="resendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Renvoyer cette leçon par mail">Renvoyer cette leçon par mail</a>
 				 <p>
-      			<input type="checkbox" id="expediteurIkurso" />
-      			<label for="expediteurIkurso">Avec ikurso@esperanto-france.org comme expéditeur</label>
+      			<input type="checkbox" id="expediteur_ikurso" name="expediteur_ikurso" />
+      			<label for="expediteur_ikurso">Avec ikurso@esperanto-france.org comme expéditeur</label>
     			</p>
 			</div>
 

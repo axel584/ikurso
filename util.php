@@ -115,7 +115,44 @@ else {
 	$enirnomo=$persono["enirnomo"];
 }
 
+function mailViaSES($retadreso,$objekto,$contentsHtml) {
+	global $hostSmtpSES,$portSmtpSES,$userSES,$passwordSES;
+	$headers = array (
+	  'Content-Type' => "text/html; charset=UTF-8",
+	  'html_charset'  => 'UTF-8',
+  	  'head_charset'  => 'UTF-8',
+	  'From' => "ikurso@esperanto-france.org",
+	  'To' => $retadreso,
+	  'Subject' => mb_encode_mimeheader($objekto,"UTF-8"));
 
+
+		$smtpParams = array (
+	  	'host' => $hostSmtpSES,
+	  	'port' => $portSmtpSES,
+	  	'auth' => true,
+	   	'username' => $userSES,
+    	'password' => $passwordSES
+	);
+
+	 // Create an SMTP client.
+	$mail = Mail::factory('smtp', $smtpParams);
+
+	// Send the email.
+
+		$mime = new Mail_mime("\n");
+
+        // Setting the body of the email
+        $mime->setHTMLBody($contentsHtml);
+        $headers = $mime->headers($headers);
+
+	$result = $mail->send($retadreso, $headers, $mime->get());
+
+	if (PEAR::isError($result)) {
+  		protokolo(0,"Erreur SMTP",$result->getMessage());
+	}
+
+	return $result;
+}
 
 function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
 	global $hostSmtp,$portSmtp;

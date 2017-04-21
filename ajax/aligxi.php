@@ -5,6 +5,9 @@ $retadreso=isset($_GET['retadreso'])?$_GET['retadreso']:"";
 $identigilo=isset($_GET['identigilo'])?$_GET['identigilo']:"";
 $pasvorto=isset($_GET['pasvorto'])?$_GET['pasvorto']:"";
 
+// on force l'adresse email en minuscule
+$retadreso=strtolower($retadreso);
+
 $respondo = array();
 
 if ($identigilo=="") {
@@ -68,7 +71,8 @@ $contents = fread($fd, filesize ($filename));
 fclose($fd);
 $contents=str_replace("##LIEN_ACTIVATION##",$lien,$contents);
 // envoyer le mail eleve pour l'inviter a attendre un correcteur.
-mailViaSmtp($retadreso,"ikurso@esperanto-france.org","Activation de votre compte pour apprendre gratuitement l'espéranto",$contents);
+//mailViaSmtp($retadreso,"ikurso@esperanto-france.org","Activation de votre compte pour apprendre gratuitement l'espéranto",$contents);
+mailViaSES($retadreso,"Activation de votre compte pour apprendre gratuitement l'espéranto",$contents);
 protokolo($persono_id,"ACTIVATION COMPTE",$retadreso." a reçu une clef d'activation");
 
 $respondo["mesagxo"] = "ok";

@@ -86,10 +86,9 @@ if ($kurso=="3N") {
 }
 
 // si le correcteur a coché la case, on envoit la leçon par Amazon SES
-if ($expediteurIkurso) {
+if ($expediteurIkurso=="true") {
 	mailViaSES($korektantaretadreso,$subjekto,stripslashes($fonto));
 } else {
-	echo "on envoie par SMTP classique";
 	mailViaSmtp($korektantaretadreso,$studanto["retadreso"],$subjekto,stripslashes($fonto));
 }
 

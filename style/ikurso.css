@@ -263,6 +263,9 @@ ul.klarigo li:before {
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+.collapsible-header.selected {
+	background-color: #E3F2FD;
+}
 
 /*---- surcharge typographie pour table protokolo -----*/
 

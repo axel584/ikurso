@@ -261,6 +261,17 @@ function getEnhavtabelo($kurso,$leciono) {
 								
 }
 
+function getLecionoEnhavo($kurso,$leciono) {
+	global $bdd;
+	$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
+
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	while ($row = $result->fetch()) {
+		echo '<li id="'.$leciono.'-'.$row['ordo'].' '.$tipoLecionero.'"><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a></li>';
+	}
+	echo '</li>';
+}
+
 function getFaritajLecioneroj($kurso,$leciono,$persono_id) {
 	global $bdd;
 	if ($persono_id=="") { // Pas connecté

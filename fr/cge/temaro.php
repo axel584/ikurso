@@ -7,17 +7,19 @@ $metodo=isset($_GET["metodo"])?$_GET["metodo"]:"U";
 include "dlekkapo.inc.php";
 ?>
 <div class="row">
-	<article class="col s11 offset-s1">
+	<article class="col s12 m10 l7 offset-m1 offset-l1">
 		
-		<section id="leciono-enhavo">
+		<section id="temaro">
 			<h2>Index thématique</h2>
 	
 			<div class="row">
-				<div class="col s12 m4">
+				<div class="col s12 m6">
 					<h3>Prépositions</h3>
 					<ul>
-						<li><a href="lec06.php?section=6">Premier bloc</a></li>
-						<li><a href="lec06.php?section=8">Deuxième bloc</a></li>
+						<li><a href="lec01.php?section=7">Préposition <b>en</b></a>
+						<li><a href="lec02.pho?section=4">Prépositions <b>antaŭ</b>, <b>sub</b>, <b>sur</b>, <b>super</b></a>
+						<li><a href="lec06.php?section=6">Révision du premier bloc</a></li>
+						<li><a href="lec06.php?section=8">Révision du deuxième bloc</a></li>
 						<li><a href="lec09.php?section=4">Prépositions en <b>-aŭ</b></a></li>
 					</ul>
 					
@@ -49,8 +51,6 @@ include "dlekkapo.inc.php";
 						<li><a href="lec02.php?section=6"><b>neniam</b>, <b>nenie</b>, <b>neniu</b>, <b>nenio</b></a></li>
 						<li><a href="lec02.php?section=1"><b>tiel</b></a></li>
 					</ul>
-				</div>
-				<div class="col s12 m4">
 					<h3>Verbes</h3>
 					<ul>
 						<li><a href="lec01.php?section=2">Terminaison de l’infinitif</a></li>
@@ -68,7 +68,8 @@ include "dlekkapo.inc.php";
 						<li><a href="lec05.php?section=2">Adjectifs corrélatifs en <b>-a</b>, <b>-u</b> et <b>-es</b></a></li>
 						<li><a href="lec08.php?section=5">Adjectif possessif réfléchi</a></li>
 					</ul>
-					
+				</div>
+				<div class="col s12 m6">
 					<h3>Adverbes</h3>
 					<ul>
 						<li><a href="lec03.php?section=5">Adverbes en <b>-e</b></a></li>
@@ -83,9 +84,6 @@ include "dlekkapo.inc.php";
 						<li><a href="lec07.php?section=1">Préfixes</a></li>
 						<li><a href="lec07.php?section=2">Suffixes</a></li>
 					</ul>
-				</div>
-					
-				<div class="col s12 m4">
 					<h3>Prononciation</h3>
 					<ul>
 						<li><a href="lec01.php">Généralités</a></li>
@@ -125,13 +123,42 @@ include "dlekkapo.inc.php";
 					</ul>
 					<h3>Culture</h3>
 					<ul>
-						<li><a href="lec04.php?section=13">La chanson espérantophone</a></li>
+						<li><a href="lec03.php?section=13">La chanson espérantophone</a></li>
 					</ul>
-					
 				</div>
 			</div>
 		</section>
+		
+		<section id="enhavo">
+			<h2>Table des matières</h2>
+			
+				<div class="row">
+				<?php 
+					for ($leciono=1; $leciono<11; $leciono++) {
+						echo "<div class='col s12'>";
+						echo "<h3>Leçon". $leciono."</h3><ul>";
+						getLecionoEnhavo('CG',$leciono);
+						echo "</ul>";
+						echo "</div>";
+					}
+				?>
+				</div>
+			</ul>
+		</section>
 	</article>
+
+	<aside class="col s12 m10 l3 offset-m1 push-l1">
+		<ul class="collapsible">
+				<div class="collapsible-header">Sommaire</div>
+				<div class="collapsible-body" style="display: block; padding-top: 17px; margin-top: 0px; padding-bottom: 17px; margin-bottom: 0px;">
+					<ul id="enhavtabelo" class="collection">
+						<li><a href="temaro.php?temaro">Index thématique</a></li>
+						<li><a href="temaro.php?enhavo">Table des matières</a></li>
+					</ul>
+				</div>
+		</ul>
+	</aside>
 	
 </div>
+
 <?php include "dlekpiedo.inc.php"; ?>

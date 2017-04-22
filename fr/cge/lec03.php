@@ -132,6 +132,8 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">nigra</span> : noir</p>
 					<p><span class="eo">ruĝa</span> : rouge</p>
 					<p><span class="eo">verda</span> : vert</p>
+					<p><b>Adverbe</b></p>
+					<p><span class="eo">nur</span> : seulement</p>
 				</div>
 			</div>
 		</fieldset>

@@ -470,6 +470,7 @@ include "dlekkapo.inc.php";
 			<p class="col s4 m2"><span class="eo">antaŭtagmeze</span></p><p class="col s8 m4">du matin (mot-à-mot&nbsp;: <i>de l’avant-midi</i>)</p>
 			<p class="col s4 m2"><span class="eo">posttagmeze</span></p><p class="col s8 m4">de l’après-midi</p>
 			<p class="col s4 m2"><span class="eo">vespere</span></p><p class="col s8 m4">du soir</p>
+			<p class="col s4 m2"><span class="eo">nun</span></p><p class="col s8 m4">maintenant</p>
 		</div>
 		
 		<p>Exemples :</p>

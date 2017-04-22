@@ -21,7 +21,7 @@ function listiStudantojn() {
 		echo "<div class='nomo'>";
 		echo "<div class='tagoj' style='background: url(bildoj/rond-";
 		($row['numtagoj1']==NULL)?($numtagoj=$row['numtagoj2']):($numtagoj=$row['numtagoj1']);
-		if ($numtagoj<15) {echo "vert";}
+		if ($numtagoj<10) {echo "vert";}
 		elseif ($numtagoj<31) {echo "orange";}
 		else {echo "rouge";}
 		echo ".gif) no-repeat;'>";

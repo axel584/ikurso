@@ -217,6 +217,7 @@ include "dlekkapo.inc.php";
 					<p class="col s12 m6"><span class="eo">forkuri</span> : se sauver, c-à-d. courir au loin</p>
 					<p class="col s12 m6"><span class="eo">tramo</span> : tramway</p>
 					<p class="col s12 m6"><span class="eo">okulo</span> : œil</p>
+					<p class="col s12 m6"><span class="eo">opinii</span> : penser, avoir une opinion</p>
 					<p class="col s12 m6"><span class="eo">stari</span> : être debout</p>
 					<p class="col s12 m6"><span class="eo">laca</span> : fatigué</p>
 					<p class="col s12 m6"><span class="eo">plaĉi</span> : plaire</p>

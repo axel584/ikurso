@@ -426,10 +426,19 @@ include "dlekkapo.inc.php";
 		«&nbsp;à quelle heure…&nbsp;?&nbsp;».
 		</p>
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo"><b>Kioma horo estas ?</b></span></p><p class="col s6">Quelle heure est-il ?</p>
-			<p class="col s6"><span class="eo">– Estas la dua.</span></p><p class="col s6">– Il est deux heures.</p>
-			<p class="col s6"><span class="eo">– Estas la dua kaj dek.</span></p><p class="col s6">– Il est deux heures dix.</p>
-			<p class="col s6"><span class="eo">– Estas dek antaŭ la dua.</span></p><p class="col s6">– Il est deux heures moins dix.</p>
+			<p class="col s12"><span class="eo"><b>Kioma horo estas ?</b></span>&nbsp;&nbsp;&nbsp;Quelle heure est-il ?</p>
+			<div class="col s12 row">
+				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/2h.png" class="responsive-img" alt="estas la dua"></p>
+				<p class="col s8 m9"><span class="eo"><br>– Estas la dua.</span><br>– Il est deux heures.</p>
+			</div>
+			<div class="col s12 row">
+				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/2h10.png" class="responsive-img" alt="estas la dua"></p>
+				<p class="col s8 m9"><span class="eo"><br>– Estas la dua kaj dek.</span><br>– Il est deux heures dix.</p>
+			</div>
+			<div class="col s12 row">
+				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/1h50.png" class="responsive-img" alt="estas la dua"></p>
+				<p class="col s8 m9"><span class="eo"><brr>– Estas dek antaŭ la dua.</span><br>– Il est deux heures moins dix.</p>
+			</div>
 		</div>
 		
 		<p class="rimarko"><strong>REMARQUE</strong> : 
@@ -440,9 +449,9 @@ include "dlekkapo.inc.php";
 		</p>
 		
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo"><b>Je kioma horo</b> ŝi venis?</span></p><p class="col s6">À quelle heure est-elle venue&nbsp;? </p>
-			<p class="col s6"><span class="eo">– Ŝi venis je la dua.</span></p><p class="col s6">– Elle est venue à deux heures.</p>
-			<p class="col s6"><span class="eo">– Ŝi venis je la dua kaj dek.</span></p><p class="col s6">etc.</p>
+			<p class="col s12 m6"><span class="eo"><b>Je kioma horo</b> ŝi venis?</span></p><p class="col s12 m6">À quelle heure est-elle venue&nbsp;? </p>
+			<p class="col s12 m6"><span class="eo">– Ŝi venis je la dua.</span></p><p class="col s12 m6">– Elle est venue à deux heures.</p>
+			<p class="col s12 m6"><span class="eo">– Ŝi venis je la dua kaj dek.</span></p><p class="col s12 m6">etc.</p>
 			<p class="col s12"><span class="eo">– Ŝi venis je dek antaŭ la dua.</span></p>
 		</div>
 		<p>
@@ -474,20 +483,27 @@ include "dlekkapo.inc.php";
 		</div>
 
 		<p>Enfin notez quelques cas particuliers :</p>
-		<p><span class="eo">la dua kaj kvarono</span> = <span class="eo">la dua kaj dek kvin</span></p>
-		<p><span class="eo">la dua kaj duono</span> = <span class="eo">la dua kaj tridek</span></p>
-		<p><span class="eo">je la kioma…?</span> = <span class="eo">je kioma horo…?</span></p>
-		<p><span class="eo">la kioma estas ?</span> = <span class="eo">kioma horo estas?</span></p>
-		<p><span class="eo">tagmezo</span> = midi (<i>milieu du jour</i>)</p>
-		<p><span class="eo">noktomezo</span> = minuit (<i>milieu de la nuit</i>)</p>
-
+		<div class="vortlisto row">
+			<div class="col s12 row">
+				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/2h15.png" class="responsive-img" alt="estas la dua"></p>
+				<p class="col s8 m9"><br><span class="eo">la dua kaj kvarono</span> = <span class="eo">la dua kaj dek kvin</span></p>
+			</div>
+			<div class="col s12 row">
+				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/2h30.png" class="responsive-img" alt="estas la dua"></p>
+				<p class="col s8 m9"><span class="eo"><br>la dua kaj duono</span> = <span class="eo">la dua kaj tridek</span></p>
+			</div>
+			<p class="s12"><span class="eo">je la kioma…?</span> = <span class="eo">je kioma horo…?</span></p>
+			<p class="s12"><span class="eo">la kioma estas ?</span> = <span class="eo">kioma horo estas?</span></p>
+			<p class="s12"><span class="eo">tagmezo</span> = midi (<i>milieu du jour</i>)</p>
+			<p class="s12"><span class="eo">noktomezo</span> = minuit (<i>milieu de la nuit</i>)</p>
+		</div>
 
 		<?php 
 		} // fin section
 		if ($section=="6") {
 		?>
 		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Répondez aux questions suivantes.</legend>
+			<legend><strong>EXERCICE 1</strong> : Répondez aux questions suivantes.</legend>
 			<input type="hidden" name="013_cxap07.3" value="3. Répondez aux questions suivantes.">
 			<?php atentigo(); ?>
 			<div class="tasko">
@@ -497,6 +513,39 @@ include "dlekkapo.inc.php";
 				20 => "Se nun estas la dek-unua, kioma horo estis antaŭ dek minutoj ?",
 				21 => "Mi revenis je la kvara kaj duono, kaj ŝi revenis dudek kvin minutojn antaŭ mi. Je la kioma ŝi revenis ?",
 				22 => "Fatima iras labori je la sepa matene kaj revenas post naŭ horoj. Je la kioma ŝi revenas ?"
+				);
+				ekzerco(True, 1);
+			?>
+			</div>
+		</fieldset>
+
+		<br>
+		<div class="row">
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/9h45.jpg"><br>-1-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/6h00.jpg"><br>-2-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/3h30.jpg"><br>-3-</span></p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/17h58.jpg"><br>-4-</p>
+		</div>
+
+		<fieldset class="ekzerco">
+			<legend><strong>EXERCICE</strong> : Kioma horo estas?</legend>
+			<input type="hidden" name="013_cxap07.4" value="4. Écrivez en espéranto quelle heure est indiquée sur chaque image.">
+			<p>Écrivez quelle heure est indiquée sur chacune des images ci-dessus. Veuillez répondre en espéranto, en écrivant les nombres en toutes lettres.</p>
+			<div class="row">
+				<p class="col s12"><span class="eo"><strong>EXEMPLE :.</strong></span></p>
+				<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/6h15.jpg"></p>
+				<p class="col s7 m9"><span class="eo">Estas la sesa kaj kvarono.</span>
+				<br>ou <span class="eo">Estas la sesa kaj dek kvin.</span></p>
+			</div>
+			<?php atentigo(); ?>
+			<div class="tasko">
+			<hr>
+			<?php 	
+				$demandoj=array (
+				23 => "image 1.",
+				24 => "image 2.",
+				25 => "image 3.",
+				26 => "image 4.",
 				);
 				ekzerco(True, 1);
 			?>

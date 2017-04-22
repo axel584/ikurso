@@ -837,3 +837,8 @@ INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`
 -- Passage en V14
 ------------------
 ALTER TABLE `respondoj` ADD `normaligita` TEXT ;
+
+-- ajout exercice 4 dans la leçon 7 du DLEK
+
+UPDATE `lecioneroj` SET `titolo` = 'Exercices 1 et 2' WHERE `leciono_id` = 68 AND `ordo` = 3;
+UPDATE `lecioneroj` SET `titolo` = 'Exercices 3 et 4' WHERE `leciono_id` = 68 AND `ordo` = 6;

@@ -152,8 +152,8 @@ include "dlekkapo.inc.php";
 				<div class="collapsible-header">Sommaire</div>
 				<div class="collapsible-body" style="display: block; padding-top: 17px; margin-top: 0px; padding-bottom: 17px; margin-bottom: 0px;">
 					<ul id="enhavtabelo" class="collection">
-						<li><a href="temaro.php?temaro">Index thématique</a></li>
-						<li><a href="temaro.php?enhavo">Table des matières</a></li>
+						<li><a href="temaro.php?#temaro">Index thématique</a></li>
+						<li><a href="temaro.php?#enhavo">Table des matières</a></li>
 					</ul>
 				</div>
 		</ul>

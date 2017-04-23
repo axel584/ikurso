@@ -270,6 +270,7 @@ function getLecionoEnhavo($kurso,$leciono) {
 		echo '<li id="'.$leciono.'-'.$row['ordo'].' '.$tipoLecionero.'"><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a></li>';
 	}
 	echo '</li>';
+								
 }
 
 function getFaritajLecioneroj($kurso,$leciono,$persono_id) {
@@ -602,12 +603,19 @@ function getListoLecionoj($kurso,$leciono) {
 	}
 	if ($kurso=='CG') {
 		if ($leciono==98) {
-			echo "<li id='konsiloj' class='nuna'><a href='temaro.php'>index</a></li>";
+			echo "<li id='temaro' class='nuna'><a href='temaro.php'>index</a></li>";
 		} else {
-			echo "<li id='konsiloj' class='nova'><a href='temaro.php'>index</a></li>";
+			echo "<li id='temaro' class='nova'><a href='temaro.php'>index</a></li>";
 		}
 	}
 	
+	if ($kurso=='GR') {
+		if ($leciono==98) {
+			echo "<li id='temaro' class='nuna'><a href='temaro.php'>indekso</a></li>";
+		} else {
+			echo "<li id='temaro' class='nova'><a href='temaro.php'>indekso</a></li>";
+		}
+	}
 	if ($leciono==99) {
 		if ($kurso=='GR') {
 			echo "<li id='lexique' class='nuna'><a href='vocabula.php'>vortlisto</a></li>";

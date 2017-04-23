@@ -56,32 +56,82 @@ include "dlekkapo.inc.php";
 			</p>
 	
 			<div class="row vortlisto">
-				<p class="col s8 offset-s4"><b>Participes de la voix active</b></p>
-				<p class="col s2">Présent :</p><p class="col s2"><b>-ant</b></p><p class="col s8"><span class="eo">Mi estas leganta.</span></p>
-				<p class="col s8 offset-s4">= Je suis lisant (en train de lire).</p>
-				<p class="col s2 offset-s2"><b>-int</b></p><p class="col s8"><span class="eo">Mi estas leginta.</span></p>
-				<p class="col s8 offset-s4">= Je suis ayant lu (j’ai lu, j’ai fini de lire).</p>
-				<p class="col s2 offset-s2"><b>-ont</b></p><p class="col s8"><span class="eo">Mi estas legonta.</span></p>
-				<p class="col s8 offset-s4">= Je suis devant lire (sur le point de lire).</p>
+				<p class="col s12"><b>Participes de la voix active</b></p>
+				<div class="col s12 row">
+					<p class="col s2">Présent :</p>
+					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/leganta.jpg" class="responsive-img" alt="Ŝi estas leganta."></p>
+					<p class="col s1">-<b>ant</b></p>
+					<p class="col s7"><span class="eo">Ŝi estas leg<b>ant</b>a.</span><br>= Elle est lisant (en train de lire).</p>
+				</div>
+				<div class="col s12 row">
+					<p class="col s2">Passé :</p>
+					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/leginta.jpg" class="responsive-img" alt="Ŝi estas leginta."></p>
+					<p class="col s1">-<b>int</b></p>
+					<p class="col s7"><span class="eo">Ŝi estas leg<b>int</b>a.</span>
+						<br>= Elle est ayant lu (elle a lu, elle a fini de lire).</p>
+				</div>
+				<div class="col s12 row">
+					<p class="col s2">Futur :</p>
+					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/legonta.jpg" class="responsive-img" alt="Ŝi estas legonta."></p>
+					<p class="col s1">-<b>ont</b></p>
+					<p class="col s7"><span class="eo">Ŝi estas leg<b>ont</b>a.</span><br>= Elle est devant lire (sur le point de lire).</p>
+				</div>
 			</div>
 			<div class="row vortlisto">
-				<p class="col s8 offset-s4"><b>Participes de la voix passive</b></p>
-				<p class="col s2">Présent :</p><p class="col s2"><b>-at</b></p><p class="col s8"><span class="eo">La libro estas legata.</span></p>
-				<p class="col s8 offset-s4">= Le livre est lu (en train d’être lu).</p>
-				<p class="col s2">Passé :</p><p class="col s2"><b>-it</b></p><p class="col s8"><span class="eo">La libro estas legita.</span></p>
-				<p class="col s8 offset-s4">= Le livre est lu (ayant été lu).</p>
-				<p class="col s2">Futur :</p><p class="col s2"><b>-ot</b></p><p class="col s8"><span class="eo">La libro estas legota.</span></p>
-				<p class="col s8 offset-s4">= Le livre est devant être lu (à lire).</p>
+				<p class="col s12"><b>Participes de la voix passive</b></p>
+				<div class="col s12 row">
+					<p class="col s2">Présent :</p>
+					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/legata.jpg" class="responsive-img" alt="La libro estas legata."></p>
+					<p class="col s1">-<b>at</b></p>
+					<p class="col s7"><span class="eo">La libro estas leg<b>at</b>a.</span><br>= Le livre est lu (en train d’être lu).</p>
+				</div>
+				<div class="col s12 row">
+					<p class="col s2">Passé :</p>
+					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/legita.jpg" class="responsive-img" alt="La libro estas legita."></p>
+					<p class="col s1">-<b>it</b></p>
+					<p class="col s7"><span class="eo">La libro estas leg<b>it</b>a.</span>
+						<br>= Le livre est lu (ayant été lu).</p>
+				</div>
+				<div class="col s12 row">
+					<p class="col s2">Futur :</p>
+					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/legota.jpg" class="responsive-img" alt="La libro estas legota."></p>
+					<p class="col s1">-<b>ot</b></p>
+					<p class="col s7"><span class="eo">La libro estas leg<b>ot</b>a.</span><br>= Le livre est devant être lu (à lire).</p>
+				</div>
 			</div>
-	
-			<p>En résumé :</p>
-			<p><span class="eo">leganta</span> = <span class="eo">kiu legas</span> = qui lit, lisant</p>
-			<p><span class="eo">leginta</span> = <span class="eo">kiu legis</span> = qui a lu, qui lisait, ayant lu</p>
-			<p><span class="eo">legonta</span> = <span class="eo">kiu legos</span> = qui lira</p>
-			<p></p>
-			<p><span class="eo">legata</span> = <span class="eo">kiun oni legas</span> = qu’on lit</p>
-			<p><span class="eo">legita</span> = <span class="eo">kiun oni legis</span> = qu’on a lu, lu</p>
-			<p><span class="eo">legota</span> = <span class="eo">kiun oni legos</span> = qu’on lira</p>
+			
+			<p class="parto">Ces participes peuvent prendre la terminaison du pluriel. Par exemple : </p>
+			<div class="row">
+				<p class="col s12"><span class="eo">Ili estas legantaj</span> : Ils sont en train de lire</p>
+				<p class="col s12"><span class="eo">Ili estas legintaj</span> : Ils ont lu</p>
+				<p class="col s12"><span class="eo">La libroj estas legataj</span> : Les livres sont lus</p>
+			</div>
+
+			<p class="parto">En résumé :</p>
+			<div class="row">
+				<p class="col s12 l6"><span class="eo">leg<b>ant</b>a</span> = <span class="eo">kiu legas</span> = qui lit, lisant</p>
+				<p class="col s12 l6"><span class="eo">leg<b>ant</b>aj</span> = <span class="eo">kiuj legas</span> = qui lisent, lisant</p>
+			</div>
+			<div class="row">
+				<p class="col s12 l6"><span class="eo">leg<b>int</b>a</span> = <span class="eo">kiu legis</span> = qui a lu, qui lisait, ayant lu</p>
+				<p class="col s12 l6"><span class="eo">leg<b>int</b>aj</span> = <span class="eo">kiuj legis</span> = qui ont lu, qui lisaient, ayant lu</p>
+			</div>
+			<div class="row">
+				<p class="col s12 l6"><span class="eo">leg<b>ont</b>a</span> = <span class="eo">kiu legos</span> = qui lira</p>
+				<p class="col s12 l6"><span class="eo">leg<b>ont</b>aj</span> = <span class="eo">kiuj legos</span> = qui liront</p>
+			</div>
+			<div class="row">
+				<p class="col s12 l6"><span class="eo">leg<b>at</b>a</span> = <span class="eo">kiun oni legas</span> = qu’on lit</p>
+				<p class="col s12 l6"><span class="eo">leg<b>at</b>aj</span> = <span class="eo">kiujn oni legas</span> = qu’on lit</p>
+			</div>
+			<div class="row">
+				<p class="col s12 l6"><span class="eo">leg<b>it</b>a</span> = <span class="eo">kiun oni legis</span> = qu’on a lu, lu</p>
+				<p class="col s12 l6"><span class="eo">leg<b>it</b>aj</span> = <span class="eo">kiujn oni legis</span> = qu’on a lus, lus</p>
+			</div>
+			<div class="row">
+				<p class="col s12 l6"><span class="eo">leg<b>ot</b>a</span> = <span class="eo">kiujn oni legos</span> = qu’on lira</p>
+				<p class="col s12 l6"><span class="eo">leg<b>ot</b>aj</span> = <span class="eo">kiujn oni legos</span> = qu’on lira</p>
+			</div>
 	
 			<p class="rimarko"><strong>REMARQUES</strong> : </p>
 			<ol>
@@ -103,20 +153,20 @@ include "dlekkapo.inc.php";
 			applications, nous vous invitons à saisir le sens des participes dans 
 			les exemples suivants&nbsp;:</p>
 			<div class="row vortlisto">
-				<p class="col s12 eo">La leg<b>ant</b>o havas bonan voĉon, sed la antaŭa leg<b>int</b>o havis pli bonan</p>
-				<p class="col s11 offset-s1">= Le lecteur a une bonne voix, mais le lecteur précédent (en) avait une meilleure</p>
-				<p class="col s12 eo">Mi opinias tamen, ke la leg<b>ont</b>o havos la plej bonan voĉon el ĉiuj</p>
-				<p class="col s11 offset-s1">= Je suis d’avis, toutefois, que le lecteur à venir aura la meilleure voix de tous</p>
-				<p class="col s12 eo">Leg<b>ant</b>e ni lernas</p>
-				<p class="col s11 offset-s1">= Nous apprenons en lisant</p>
-				<p class="col s12 eo">Manĝ<b>ont</b>e la pomon, li ekvidis la vermon</p>
-				<p class="col s11 offset-s1">= Sur le point de manger la pomme, il aperçut le ver</p>
-				<p class="col s12 eo">La konstru<b>at</b>a domo</p>
-				<p class="col s11 offset-s1">= La maison en train d’être construite</p>
-				<p class="col s12 eo">La skrib<b>ot</b>a letero</p>
-				<p class="col s11 offset-s1">= La lettre à écrire, c-à-d. devant être écrite</p>
-				<p class="col s12 eo">La ferm<b>it</b>a pordo</p>
-				<p class="col s11 offset-s1">= La porte fermée, c-à-d. qui a été fermée</p>
+				<p class="col s12 eo">La leg<b>ant</b>o havas bonan voĉon, sed la antaŭa leg<b>int</b>o havis pli bonan.</p>
+				<p class="col s11 offset-s1">= Le lecteur a une bonne voix, mais le lecteur précédent (en) avait une meilleure.</p>
+				<p class="col s12 eo">Mi opinias tamen, ke la leg<b>ont</b>o havos la plej bonan voĉon el ĉiuj.</p>
+				<p class="col s11 offset-s1">= Je suis d’avis, toutefois, que le lecteur à venir aura la meilleure voix de tous.</p>
+				<p class="col s12 eo">Leg<b>ant</b>e ni lernas.</p>
+				<p class="col s11 offset-s1">= Nous apprenons en lisant.</p>
+				<p class="col s12 eo">Manĝ<b>ont</b>e la pomon, li ekvidis la vermon.</p>
+				<p class="col s11 offset-s1">= Sur le point de manger la pomme, il aperçut le ver.</p>
+				<p class="col s12 eo">La konstru<b>at</b>a domo.</p>
+				<p class="col s11 offset-s1">= La maison en train d’être construite.</p>
+				<p class="col s12 eo">La skrib<b>ot</b>a letero.</p>
+				<p class="col s11 offset-s1">= La lettre à écrire, c-à-d. devant être écrite.</p>
+				<p class="col s12 eo">La ferm<b>it</b>a pordo.</p>
+				<p class="col s11 offset-s1">= La porte fermée, c-à-d. qui a été fermée.</p>
 			</div>
 
 			<fieldset class="vortoj">
@@ -159,20 +209,54 @@ include "dlekkapo.inc.php";
 		if ($section=="3") {
 		?>
 		<fieldset class="ekzerco">
+			<legend><strong>EXERCICE</strong> : Complétez les phrases selon le modèle.</legend>
+			<input type="hidden" name="013_cxap08.1" value="1. Complétez les phrases selon le modèle.">
+			<?php atentigo(); ?>
+				<div class="ekzemplo row">
+					<p><em>Exemples :</em></p>
+					<p>La virino, kiu legas, estas ______.<br>
+					→ La virino, kiu legas, estas leganta virino.</p>
+					<p>La libro, kiun la virino legas, estas ______.<br>
+					→ La libro, kiun la virino legas, estas legata libro.</p>
+				</div>
+			<div class="tasko">
+			<?php
+				$demandoj=array (
+				1 => "La infano, kiu ludas estas ______ .",
+				2 => "La junulo, kiu studis, estas ______ .",
+				3 => "La katoj, kiuj dormas, estas ______ .",
+				4 => "La birdoj, kiuj flugos, estas ______ .",
+				5 => "La junulino, kiu vojaĝas, estas ______ .",
+				6 => "La kuko, kiun la infano manĝas, estas ______ .",
+				7 => "La ĵurnaloj, kiujn la junulo legis, estas ______ .",
+				8 => "La frukto, kiun la birdo manĝas, estas ______ .",
+				9 => "La amiko, kiun mi renkontos, estas ______ .",
+				10 => "La pordo, kiun li fermis, estas ______ ."
+				);
+				ekzerco(True, 1);
+			?>
+			</div>
+		</fieldset>
+
+		<?php 
+		} // fin section 3
+		if ($section=="4") {
+		?>
+		<fieldset class="ekzerco">
 			<legend><strong>EXERCICE</strong> : Traduisez en espéranto en utilisant la terminaison verbale appropriée.</legend>
-			<input type="hidden" name="013_cxap08.1" value="1. Traduisez en espéranto en utilisant la terminaison verbale appropriée.">
+			<input type="hidden" name="013_cxap08.2" value="2. Traduisez en espéranto en utilisant la terminaison verbale appropriée.">
 			<?php atentigo(); ?>
 			<div class="tasko">
 			<?php
 				$demandoj=array (
-				1 => "Si elle venait à 8h nous pourrions manger à 8h30.",
-				2 => "Je désire qu’elle vienne à 8h mais je crois qu’elle ne viendra pas avant 9h.",
-				3 => "Va là-bas, assieds-toi et ouvre le sucrier !",
-				4 => "Cet imbécile veut me rencontrer à l’étable. Qu’il [y] aille en premier, et qu’il m’attende. Je viendrai quand je voudrai.",
-				5 => "Que faire ? (Qu’est-ce que je «dois-faire» ?)",
-				6 => "Il croyait que je ne viendrais pas avant 9h mais je suis venue à 8h moins 5.",
-				7 => "Sur le point de chanter, il se mit à rire. (préfixe ek-)",
-				8 => "Elle se mit à rougir en griffonnant le nom du garçon."
+				11 => "Si elle venait à 8h nous pourrions manger à 8h30.",
+				12 => "Je désire qu’elle vienne à 8h mais je crois qu’elle ne viendra pas avant 9h.",
+				13 => "Va là-bas, assieds-toi et ouvre le sucrier !",
+				14 => "Cet imbécile veut me rencontrer à l’étable. Qu’il [y] aille en premier, et qu’il m’attende. Je viendrai quand je voudrai.",
+				15 => "Que faire ? (Qu’est-ce que je «dois-faire» ?)",
+				16 => "Il croyait que je ne viendrais pas avant 9h mais je suis venue à 8h moins 5.",
+				17 => "Sur le point de chanter, il se mit à rire. (préfixe ek-)",
+				18 => "Elle se mit à rougir en griffonnant le nom du garçon."
 				);
 				ekzerco(True, 1);
 			?>
@@ -180,23 +264,23 @@ include "dlekkapo.inc.php";
 		</fieldset>
 	
 		<?php 
-		} // fin section 3
-		if ($section=="4") {
+		} // fin section 4
+		if ($section=="5") {
 		?>
 
 			<p>
 			Vous pouvez désormais lire des textes faciles. Traduisez le texte suivant en français. Le vocabulaire nouveau se trouve à la
 			fin de l’exercice.
 			</p>
-			<input type="hidden" name="013_cxap08.2" value="2. Veuillez donc traduire en français les anecdotes suivantes.">
+			<input type="hidden" name="013_cxap08.3" value="3. Veuillez traduire en français les anecdotes suivantes.">
 			
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Traduisez en français.</legend>
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					9 => "<br>Juĝisto:  Ĉu vi do asertas, ke vi iris en la domon opiniante, ke ĝi estas via domo ?<br>Akuzato: Jes, sinjoro juĝisto.<br>Juĝisto:  Sed kial vi forkuris, kiam la sinjorino envenis ?<br>Akuzato: Mi opiniis, ke ŝi estas mia edzino !",
-					10 => "<br>Patrino en tramo: Joĉjo, kial vi sidas kun fermitaj okuloj ? Ĉu vi estas laca ?<br>Joĉjo: Ne ! Ne plaĉas al mi vidi starantajn virinojn."
+					19 => "<br>Juĝisto:  Ĉu vi do asertas, ke vi iris en la domon opiniante, ke ĝi estas via domo ?<br>Akuzato: Jes, sinjoro juĝisto.<br>Juĝisto:  Sed kial vi forkuris, kiam la sinjorino envenis ?<br>Akuzato: Mi opiniis, ke ŝi estas mia edzino !",
+					20 => "<br>Patrino en tramo: Joĉjo, kial vi sidas kun fermitaj okuloj ? Ĉu vi estas laca ?<br>Joĉjo: Ne ! Ne plaĉas al mi vidi starantajn virinojn."
 				   );
 					ekzerco(False, 5);
 				?>
@@ -225,8 +309,8 @@ include "dlekkapo.inc.php";
 			</fieldset>
 			
 			<?php 
-			} // fin section 4
-			if ($section=="5") {
+			} // fin section 5
+			if ($section=="6") {
 			?>
 			
 			<p class="parto">
@@ -249,14 +333,14 @@ include "dlekkapo.inc.php";
 			</div>
 
 		<?php 
-		} // fin section 5
-		if ($section=="6") {
+		} // fin section 6
+		if ($section=="7") {
 		?>
 		
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Traduisez ces textes en français.</legend>
 				<p>Le vocabulaire nouveau se trouve à la fin de l’exercice.</p>
-				<input type="hidden" name="013_cxap08.3" value="3. Même exercice.">
+				<input type="hidden" name="013_cxap08.4" value="4. Même exercice.">
 				<div class="tasko">
 				<?php
 					$demandoj=array (
@@ -288,10 +372,9 @@ include "dlekkapo.inc.php";
 				<p class="col s6"><span class="eo">parenco</span> : parent (personne de la même famille)</p>
 			</div>
 		<?php 
-		} // fin section 6
-		if ($section=="7") {
+		} // fin section 7
+		if ($section=="8") {
 		?>
-
 			<p>
 			Lisez régulièrement le texte suivant à haute voix en ayant soin
 			d’appliquer l’accent tonique sur l’avant-dernière syllabe comme il se
@@ -319,8 +402,8 @@ include "dlekkapo.inc.php";
 			anglais <i>hand</i>, <i>hair</i>, <i>have</i>.</p>
 
 		<?php 
-		} // fin section 7
-		if ($section=="8") {
+		} // fin section 8
+		if ($section=="9") {
 		?>
 
 			<p>

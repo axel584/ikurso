@@ -842,3 +842,31 @@ ALTER TABLE `respondoj` ADD `normaligita` TEXT ;
 
 UPDATE `lecioneroj` SET `titolo` = 'Exercices 1 et 2' WHERE `leciono_id` = 68 AND `ordo` = 3;
 UPDATE `lecioneroj` SET `titolo` = 'Exercices 3 et 4' WHERE `leciono_id` = 68 AND `ordo` = 6;
+
+-- ajout exercice dans la leçon 8 du DLEK
+
+UPDATE `lecioneroj` SET `ordo` = '9' WHERE `leciono_id` = 69 AND `ordo` = 8; 
+UPDATE `lecioneroj` SET `ordo` = '8' WHERE `leciono_id` = 69 AND `ordo` = 7; 
+UPDATE `lecioneroj` SET `ordo` = '7', `titolo` = 'Exercice 4' WHERE `leciono_id` = 69 AND `ordo` = 6; 
+UPDATE `lecioneroj` SET `ordo` = '6' WHERE `leciono_id` = 69 AND `ordo` = 5; 
+UPDATE `lecioneroj` SET `ordo` = '5', `titolo` = 'Exercice 3' WHERE `leciono_id` = 69 AND `ordo` = 4; 
+UPDATE `lecioneroj` SET `ordo` = '4', `titolo` = 'Exercice 2' WHERE `leciono_id` = 69 AND `ordo` = 3; 
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '69', 'Exercice 1', 'EKZERCARO', NULL, '3', '0', '0');
+
+-- décalage des réponses des exercices 2, 3 et 4 (qui étaient auparavant 1, 2 et 3)
+
+UPDATE `respondoj` SET `kodo` = 'ekz08_11', `demando` = '11 Si elle venait à 8h nous pourrions manger à 8h30.' WHERE `lecionero_id` = 76 AND `kodo` = 'ekz08_01';
+UPDATE `respondoj` SET `kodo` = 'ekz08_12', `demando` = '12 Je désire qu’elle vienne à 8h mais je crois qu’elle ne viendra pas avant 9h.' WHERE `lecionero_id` = 76 AND `kodo` = 'ekz08_02';
+UPDATE `respondoj` SET `kodo` = 'ekz08_13', `demando` = '13 Va là-bas, assieds-toi et ouvre le sucrier !' WHERE `lecionero_id` = 76 AND `kodo` = 'ekz08_03';
+UPDATE `respondoj` SET `kodo` = 'ekz08_14', `demando` = '14 Cet imbécile veut me rencontrer à l’étable. Qu’il [y] aille en premier, et qu’il m’attende. Je viendrai quand je voudrai.' WHERE `lecionero_id` = 76 AND `kodo` = 'ekz08_04';
+UPDATE `respondoj` SET `kodo` = 'ekz08_15', `demando` = '15 Que faire ? (Qu’est-ce que je «dois-faire» ?)' WHERE `lecionero_id` = 76 AND `kodo` = 'ekz08_05';
+UPDATE `respondoj` SET `kodo` = 'ekz08_16', `demando` = '16 Il croyait que je ne viendrais pas avant 9h mais je suis venue à 8h moins 5.' WHERE `lecionero_id` = 76 AND `kodo` = 'ekz08_06';
+UPDATE `respondoj` SET `kodo` = 'ekz08_17', `demando` = '17 Sur le point de chanter, il se mit à rire. (préfixe ek-)' WHERE `lecionero_id` = 76 AND `kodo` = 'ekz08_07';
+UPDATE `respondoj` SET `kodo` = 'ekz08_18', `demando` = '18 Elle se mit à rougir en griffonnant le nom du garçon.' WHERE `lecionero_id` = 76 AND `kodo` = 'ekz08_08';
+UPDATE `respondoj` SET `kodo` = 'ekz08_19', `demando` = '19 <br>Juĝisto:  Ĉu vi do asertas, ke vi iris en la domon opiniante, ke ĝi estas via domo ?<br>Akuzato: Jes, sinjoro juĝisto.<br>Juĝisto:  Sed kial vi forkuris, kiam la sinjorino envenis ?<br>Akuzato: Mi opiniis, ke ŝi estas mia edzino !' WHERE `lecionero_id` = 77 AND `kodo` = 'ekz08_09';
+UPDATE `respondoj` SET `kodo` = 'ekz08_20', `demando` = '20 <br>Patrino en tramo: Joĉjo, kial vi sidas kun fermitaj okuloj ? Ĉu vi estas laca ?<br>Joĉjo: Ne ! Ne plaĉas al mi vidi starantajn virinojn.' WHERE `lecionero_id` = 77 AND `kodo` = 'ekz08_10';
+UPDATE `respondoj` SET `kodo` = 'ekz08_21', `demando` = '21 <br>- Incitas min, ke mia edzino daŭre parolas pri sia antaŭa edzo.<br>- Tio estas nenio ! La mia paroladas pri sia estonta edzo !' WHERE `lecionero_id` = 79 AND `kodo` = 'ekz08_11';
+UPDATE `respondoj` SET `kodo` = 'ekz08_22', `demando` = '22 <br>En kafejo:<br>- Kial vi rigardadas al la pordo ?<br>- Mi observadas, ĉu ne iu foriras kun mia surtuto. Kun la via jam antaŭ dek minutoj foriris iu.' WHERE `lecionero_id` = 79 AND `kodo` = 'ekz08_12';
+UPDATE `respondoj` SET `kodo` = 'ekz08_23', `demando` = '23 <br>La junaj geedzoj havis konflikton hejme, kaj poste dum la aŭto-veturado ili ambaŭ obstine silentis. Preterpasante aron da azenoj la edzo diris moke:<br>- Ĉu parencoj de vi ?<br>- Jes, boparencoj !' WHERE `lecionero_id` = 79 AND `kodo` = 'ekz08_13';
+
+

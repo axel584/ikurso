@@ -63,8 +63,20 @@ include "gerdakapo.inc.php";
 		?>
 
 			<section class="klarigo">
-				<p>Il n'y a pas de nouveau point de grammaire pour ce chapitre. 
-				Vous devriez pouvoir tout comprendre sans trop de difficultés.</p>
+				<h4>Participoj</h4>
+				<p><b>-int-</b>, <b>-it-</b>, <b>-ont-</b>, <b>-ot-</b> estas nomataj <b>PARTICIPOJ</b>, kaj tiuj
+				finaĵoj estas la <b>PARTICIPAJ FINAĴOJ</b>.</p>
+				
+				<p>La participoj kun <b>-nt-</b> estas la <b>SUBJEKTAJ PARTICIPOJ</b>; ili rilatas al
+					la subjekto de la participigita verbo. Oni nomas ilin ankaŭ <b>AKTIVAJ PARTICIPOJ</b>.</p>
+				<p>La participoj kun nur <b>-t-</b> estas la <b>OBJEKTAJ PARTICIPOJ</b>; ili rilatas
+					al la objekto de la participigita verbo. Oni nomas ilin ankaŭ <b>PASIVAJ PARTICIPOJ</b>.</p>
+
+				<p>La vortoj kun <b>-int-</b> kaj <b>-it-</b> rilatas al la estinteco (al tio, kio okazis aŭ estis antaŭe).</p>
+				
+				<p>Ekzistas ankaŭ finaĵoj <b>-ont-</b> kaj <sb>-ot-</b> por la estonteco (tio, kio	okazos aŭ estos poste).</p>
+				
+
 			</section>
 
 		<?php 
@@ -118,23 +130,13 @@ include "gerdakapo.inc.php";
 
 			<h3>Notoj</h3>
 			
-			<p>En ĉapitro 9 vi lernis pri la finaĵo <b>-it-</b>. (<span class="eo">La kapo de Bob estis <b>batita</b>.</span>)</p>
-			<p>En ĉapitro 11 vi lernis pri la finaĵo <b>-ant-</b>. (<span class="eo">Linda pensas, sin <b>demandante</b>, ĉu…</span>)</p>
-			<p>Poste, en ĉapitro 14, aperas la finaĵoj <span class="eo">-at-</span> 
+			<p>En <a href="cxap09.php?section=2">ĉapitro 9</a> vi lernis pri la finaĵo <b>-it-</b>. (<span class="eo">La kapo de Bob estis <b>batita</b>.</span>)</p>
+			<p>En <a href="cxap11.php?section=2">ĉapitro 11</a> vi lernis pri la finaĵo <b>-ant-</b>. (<span class="eo">Linda pensas, sin <b>demandante</b>, ĉu…</span>)</p>
+			<p>Poste, en <a href="cxap14.php?section=2">ĉapitro 14</a>, aperas la finaĵoj <span class="eo">-at-</span> 
 			kaj <b>-int-</b>. (<span class="eo">Ĉambro <b>nekonata</b>. Kvazaŭ ŝi estus <b>laborinta</b>.</span>)</p>
 			<p>La vortoj kun <b>-ant-</b> kaj <b>-at-</b> rilatas al la nuno, 
 			al la estanteco (al tio, kio okazas aŭ estas nun).</p>
-			<p>La vortoj kun <b>-int-</b> kaj <b>-it-</b> rilatas al la estinteco (al tio, kio okazis aŭ estis antaŭe).</p>
-			<p>Ekzistas ankaŭ finaĵoj <b>-ont-</b> kaj <sb>-ot-</b> por la estonteco (tio, kio	okazos aŭ estos poste).</p>
-			<p class="parto">Vortoj kun la finaĵoj <b>-ant-</b>, <b>-at-</b>, 
-			<b>-int-</b>, <b>-it-</b>, <b>-ont-</b>, 
-			<b>-ot-</b> estas nomataj <b>PARTICIPOJ</b>, kaj tiuj
-			finaĵoj estas la <b>PARTICIPAJ FINAĴOJ</b>.</p>
-			<p>La participoj kun <b>-nt-</b> estas la <b>SUBJEKTAJ PARTICIPOJ</b>; ili rilatas al
-			la subjekto de la participigita verbo. Oni nomas ilin ankaŭ <b>AKTIVAJ PARTICIPOJ</b>.</p>
-			<p>La participoj kun nur <b>-t-</b> estas la <b>OBJEKTAJ PARTICIPOJ</b>; ili rilatas
-			al la objekto de la participigita verbo. Oni nomas ilin ankaŭ <b>PASIVAJ
-			PARTICIPOJ</b>.</p>
+			
 			<div class="container">
 				<table class="bordered">
 					<tr>

@@ -30,6 +30,8 @@ include "gerdakapo.inc.php";
 						<li><a href="cxap13.php?section=2">-<b>ata</b> : participe présent passif</a></li>
 						<li><a href="cxap13.php?section=2">-<b>inta</b> : participe passé passif</a></li>
 						<li><a href="cxap13.php?section=2">Les participes en -<b>ata</b> et -<b>ita</b></a></li>
+						<li><a href="cxap23.php?section=2">Participoj</a></li>
+						<li><a href="cxap24.php?section=2">Participaj adjektivoj, participaj nomoj, participaj adverboj</a></li>
 					</ul>
 					
 					<h3>Préfixes et suffixes</h3>

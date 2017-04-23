@@ -91,8 +91,88 @@ include "gerdakapo.inc.php";
 		?>
 
 			<section class="klarigo">
-				<p>Il n'y a pas de nouveau point de grammaire pour ce chapitre. 
-				Vous devriez pouvoir tout comprendre sans trop de difficultés.</p>
+
+				<p class="parto">
+				En la antaŭa ĉapitro vi lernis pri ĉiuj ses participoj en
+				Esperanto, sed ni uzis ilin nur kiel adjektivojn. Adjektivon oni povas
+				uzi aŭ apud substantivo (<span class="eo">Ŝi vidas blondan viron.</span>), aŭ kun iuj
+				verboj, ekzemple <b>esti</b> (<span class="eo">La viro estas blonda</span>). Ankaŭ participajn
+				adjektivojn oni povas uzi en tiuj du manieroj:
+		
+		   		<p class="tab"><span class="eo">Mi vizitas la enŝlositan virinon.</span></p>
+				<p class="tab"><span class="eo">La virino estas enŝlosita.</span></p>
+				
+				<h3>Participaj adjektivoj</h3>
+	
+				<p>La participaj adjektivoj havas la saman signifon en ambaŭ situacioj.</p>
+				<p>Oni povas montri la subjekton de objekta (pasiva) participo per la
+				prepozicio <b>de</b>:</p>
+	
+		   		<p class="tab"><span class="eo">Mi vizitas la virinon enŝlositan de la blondulo.</span></p>
+		   		<p class="tab"><span class="eo">La virino estas enŝlosita de la blondulo.</span></p>
+	
+	
+		   		<p>Tiuj frazoj signifas preskaŭ same kiel:</p>
+			   	<p class="tab"><span class="eo">Mi vizitis la virinon, kiun la blondulo enŝlosis.</span></p>
+			   	<p class="tab"><span class="eo">La blondulo enŝlosis la virinon.</span></p>
+	 
+	 			<p>Tiuj lastaj frazoj estas tamen pli simplaj kaj pro tio pli bonaj.</p>
+				<p>Eblas uzi ankaŭ subjektan (aktivan) participon post la verbo <b>esti</b>:</p>
+	
+			   	<p class="tab"><span class="eo">La blondulo estas enŝlosinta la virinon.</span></p>
+	
+				<p>Tiaj "kunmetitaj verbotempoj" estas tamen tre maloftaj. Preskaŭ ĉiam
+				sufiĉas simple:
+				</p>
+	
+			   	<p class="tab"><span class="eo">La blondulo enŝlosis la virinon.</span></p>
+			   	
+			   	<h3>Participaj substantivoj</h3>
+	
+				<p>Participoj uziĝas ne nur adjektive, sed ankaŭ adverbe kaj
+				substantive. Ni konsideru unue ilian substantivan uzadon.
+				</p>
+				<p>Participaj substantivoj havas kompreneble la finaĵon <b>-o</b>:
+				malaperinto, krieganto, kaptoto. Oni devas memori, ke participa
+				substantivo ĉiam signifas personon, aŭ ulon. <span class="eo">Malaperinto</span> estas do
+				<span class="eo">malaperinta ulo</span>, <span class="eo">krieganto</span> estas 
+				<span class="eo">krieganta ulo</span>, kaj <span class="eo">kaptoto</span>
+				estas <span class="eo">kaptota ulo</span>. Se oni volas paroli pri aĵo, oni povas uzi
+				kroman finaĵon <b>-aĵ-</b>. </p>
+				<p><span class="eo">Donitaĵo</span> estas ekzemple aĵo donita, io donita.</p>
+
+			   	<h3>Participaj adverboj</h3>
+				<p>
+				Participaj adverboj havas la finaĵon <b>-e</b>: enirante, forironte,
+				vidinte. Pri participaj adverboj oni devas memori, ke ili ĉiam
+				rilatas al la subjekto de la frazo. Ekzemple, la frazo:
+				</p>
+	
+			   	<p class="tab"><span class="eo">Bob vidis Lindan enirante la restoracion.</span></p>
+	
+				<p>Devas signifi:</p>
+	
+			   	<p class="tab"><span class="eo">Bob vidis Lindan, dum li (Bob) eniris la restoracion.</span></p>
+	
+				<p>Jen aliaj ekzemploj:</p>
+	
+			   	<p class="tab"><span class="eo">Forironte Bob turnis sin al la pordo.</span> (Bob turnis sin al la pordo por foriri.)
+			   	<p class="tab"><span class="eo"> Vidinte Lindan Bob iris al ŝia tablo.</span>
+					(Post kiam li vidis Lindan, Bob iris al ŝia tablo.)</p>
+	
+				<p class="parto">Kompreneble oni povas uzi ankaŭ objektajn (pasivajn) participajn
+				adverbojn:
+				</p>
+	
+			   	<p class="tab"><span class="eo">Bob forlasis la restoracion ne vidite de Linda.</span></p>
+			   	<p class="tab"><span class="eo">Observate de la studentoj li ne kuraĝis foriri.</span></p>
+			   	<p class="tab"><span class="eo">Kaptote de la malamiko li decidis sin mortigi.</span></p>
+	
+				<p class="parto">
+				En skriba Esperanto oni ofte uzas tiajn frazojn kun participaj
+				adverboj, sed en parolata Esperanto ili ne estas tiom uzataj. Oni
+				preferas paroli per simplaj mallongaj frazoj.
+				</p>
 			</section>
 
 		<?php 
@@ -168,82 +248,6 @@ include "gerdakapo.inc.php";
 				</div>
 			</fieldset>
 	
-			<h3>Notoj</h3>
-			<p class="parto">
-			En la antaŭa ĉapitro vi lernis pri ĉiuj ses participoj en
-			Esperanto, sed ni uzis ilin nur kiel adjektivojn. Adjektivon oni povas
-			uzi aŭ apud substantivo (<span class="eo">Ŝi vidas blondan viron.</span>), aŭ kun iuj
-			verboj, ekzemple <b>esti</b> (<span class="eo">La viro estas blonda</span>). Ankaŭ participajn
-			adjektivojn oni povas uzi en tiuj du manieroj:
-	
-	   		<p class="tab"><span class="eo">Mi vizitas la enŝlositan virinon.</span></p>
-			<p class="tab"><span class="eo">La virino estas enŝlosita.</span></p>
-
-			<p class="parto">La participaj adjektivoj havas la saman signifon en ambaŭ situacioj.</p>
-			<p>Oni povas montri la subjekton de objekta (pasiva) participo per la
-			prepozicio <b>de</b>:</p>
-
-	   		<p class="tab"><span class="eo">Mi vizitas la virinon enŝlositan de la blondulo.</span></p>
-	   		<p class="tab"><span class="eo">La virino estas enŝlosita de la blondulo.</span></p>
-
-
-	   		<p>Tiuj frazoj signifas preskaŭ same kiel:</p>
-		   	<p class="tab"><span class="eo">Mi vizitis la virinon, kiun la blondulo enŝlosis.</span></p>
-		   	<p class="tab"><span class="eo">La blondulo enŝlosis la virinon.</span></p>
- 
- 			<p>Tiuj lastaj frazoj estas tamen pli simplaj kaj pro tio pli bonaj.</p>
-			<p>Eblas uzi ankaŭ subjektan (aktivan) participon post la verbo <b>esti</b>:</p>
-
-		   	<p class="tab"><span class="eo">La blondulo estas enŝlosinta la virinon.</span></p>
-
-			<p>Tiaj "kunmetitaj verbotempoj" estas tamen tre maloftaj. Preskaŭ ĉiam
-			sufiĉas simple:
-			</p>
-
-		   	<p class="tab"><span class="eo">La blondulo enŝlosis la virinon.</span></p>
-
-			<p class="parto">Participoj uziĝas ne nur adjektive, sed ankaŭ adverbe kaj
-			substantive. Ni konsideru unue ilian substantivan uzadon.
-			</p>
-			<p>Participaj substantivoj havas kompreneble la finaĵon <b>-o</b>:
-			malaperinto, krieganto, kaptoto. Oni devas memori, ke participa
-			substantivo ĉiam signifas personon, aŭ ulon. <span class="eo">Malaperinto</span> estas do
-			<span class="eo">malaperinta ulo</span>, <span class="eo">krieganto</span> estas 
-			<span class="eo">krieganta ulo</span>, kaj <span class="eo">kaptoto</span>
-			estas <span class="eo">kaptota ulo</span>. Se oni volas paroli pri aĵo, oni povas uzi
-			kroman finaĵon <b>-aĵ-</b>. </p>
-			<p><span class="eo">Donitaĵo</span> estas ekzemple aĵo donita, io donita.</p>
-			<p class="parto">
-			Participaj adverboj havas la finaĵon <b>-e</b>: enirante, forironte,
-			vidinte. Pri participaj adverboj oni devas memori, ke ili ĉiam
-			rilatas al la subjekto de la frazo. Ekzemple, la frazo:
-			</p>
-
-		   	<p class="tab"><span class="eo">Bob vidis Lindan enirante la restoracion.</span></p>
-
-			<p>Devas signifi:</p>
-
-		   	<p class="tab"><span class="eo">Bob vidis Lindan, dum li (Bob) eniris la restoracion.</span></p>
-
-			<p>Jen aliaj ekzemploj:</p>
-
-		   	<p class="tab"><span class="eo">Forironte Bob turnis sin al la pordo.</span> (Bob turnis sin al la pordo por foriri.)
-		   	<p class="tab"><span class="eo"> Vidinte Lindan Bob iris al ŝia tablo.</span>
-				(Post kiam li vidis Lindan, Bob iris al ŝia tablo.)</p>
-
-			<p class="parto">Kompreneble oni povas uzi ankaŭ objektajn (pasivajn) participajn
-			adverbojn:
-			</p>
-
-		   	<p class="tab"><span class="eo">Bob forlasis la restoracion ne vidite de Linda.</span></p>
-		   	<p class="tab"><span class="eo">Observate de la studentoj li ne kuraĝis foriri.</span></p>
-		   	<p class="tab"><span class="eo">Kaptote de la malamiko li decidis sin mortigi.</span></p>
-
-			<p class="parto">
-			En skriba Esperanto oni ofte uzas tiajn frazojn kun participaj
-			adverboj, sed en parolata Esperanto ili ne estas tiom uzataj. Oni
-			preferas paroli per simplaj mallongaj frazoj.
-			</p>
 	
 			<fieldset class="ekzerco">
 				<legend>Forigu la vortojn skribitajn grandlitere, uzante participon.</legend>

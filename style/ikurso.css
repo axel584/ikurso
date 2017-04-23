@@ -460,14 +460,15 @@ ul#enhavtabelo li.farita::before {
 	color: #2196F3;
 }
 
-ul#enhavtabelo li.farita {
-	!text-decoration: line-through;
-}
-
 #enhavtabelo li a {
 	padding-left: 0.5em;
 	color: #75706B;
 }
+ul#enhavtabelo li.farita a {
+	text-decoration: line-through;
+	text-decoration-color: #2196F6;
+}
+
 #enhavtabelo li a:hover {
 	color: #039be5;
 }

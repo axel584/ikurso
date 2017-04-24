@@ -11,6 +11,14 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
+				<li class="collection-header">version 14. Avril 2017</li>
+				<li class="collection-item">
+					<p>Correction dans les points de grammaire des chapitres 23 et 24 de Gerda malaperis.</p>
+					<p>Ajout d'illustration dans la leçon 7 pour apprendre l'heure.</p>
+					<p>Ajout d'un outil pour que les correcteurs puissent récupérer de nouveau une leçon qu'ils n'auraient pas reçu.</p>
+					<p>Utilisation d'un autre serveur de messagerie pour contrer les problèmes de non-réception des messages d'activation.</p>
+					<p>Corrections diverses de bugs et coquilles...</p>
+				</li>				
 				<li class="collection-header">version 13. Mars 2017</li>
 				<li class="collection-item">
 					<p>Possibilité d'imprimer les leçons.</p>

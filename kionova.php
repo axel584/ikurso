@@ -13,19 +13,21 @@ include "pagxkapo.inc.php";
 			<ul class="collection with-header">
 				<li class="collection-header">version 14. Avril 2017</li>
 				<li class="collection-item">
-					<p>Correction dans les points de grammaire des chapitres 23 et 24 de Gerda malaperis.</p>
-					<p>Ajout d'illustration dans la leçon 7 pour apprendre l'heure.</p>
-					<p>Ajout d'un outil pour que les correcteurs puissent récupérer de nouveau une leçon qu'ils n'auraient pas reçu.</p>
-					<p>Utilisation d'un autre serveur de messagerie pour contrer les problèmes de non-réception des messages d'activation.</p>
-					<p>Corrections diverses de bugs et coquilles...</p>
+					<p>Correction dans les points de grammaire des chapitres <a href="<?php echo $vojo;?>fr/gerda/cxap23.php?section=2">23</a> et <a href="<?php echo $vojo;?>fr/gerda/cxap24.php?section=2">24</a> de <em>Gerda malaperis</em>.</p>
+					<p>Ajout d’un <a href="<?php echo $vojo;?>fr/gerda/temaro.php">index grammatical</a> au cours <em>Gerda malaperis</em>.</p>
+					<p>Ajout d’illustrations et d’un exercice dans la <a href="<?php echo $vojo;?>fr/cge/lec07.php?section=5">leçon 7</a> pour apprendre l'heure.</p>
+					<p>Ajout d’illustrations et d’explications sur les participes dans la <a href="<?php echo $vojo;?>fr/cge/lec08.php?section=1">leçon 8</a>.</p>
+					<p>Ajout d'un outil pour que les correcteurs puissent recevoir de nouveau une leçon qu’ils n'auraient pas reçue.</p>
+					<p>Utilisation d’un autre serveur de messagerie pour contrer les problèmes de non-réception des messages d’activation.</p>
+					<p>Corrections diverses de bugs et coquilles…</p>
 				</li>				
 				<li class="collection-header">version 13. Mars 2017</li>
 				<li class="collection-item">
 					<p>Possibilité d'imprimer les leçons.</p>
-					<p>Ajout d'<a href="<?php echo $vojo;?>statistikoj.php">outils statistiques</a>.</p>
-					<p>Ajout de l'énoncé des questions dans le message envoyé aux correcteurs.</p>
+					<p>Ajout d’<a href="<?php echo $vojo;?>statistikoj.php">outils statistiques</a>.</p>
+					<p>Ajout de l’énoncé des questions dans le message envoyé aux correcteurs.</p>
 					<p>Ajout d'une page pour les correcteurs afin de consulter les exercices de leurs élèves (pour répondre temporairement aux problèmes de mails qui n'arrivent pas à leur destinataire).</p>
-					<p>Corrections diverses, principalement dans le vocabulaire de l'outil de révision grâce aux remarques des élèves (merci Alain !)</p>
+					<p>Corrections diverses, principalement dans le vocabulaire de l’outil de révision grâce aux remarques des élèves (merci Alain !)</p>
 				</li>
 				<li class="collection-header">version 12. Janvier 2017</li>
 				<li class="collection-item">

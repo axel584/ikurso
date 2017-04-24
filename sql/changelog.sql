@@ -869,4 +869,6 @@ UPDATE `respondoj` SET `kodo` = 'ekz08_21', `demando` = '21 <br>- Incitas min, k
 UPDATE `respondoj` SET `kodo` = 'ekz08_22', `demando` = '22 <br>En kafejo:<br>- Kial vi rigardadas al la pordo ?<br>- Mi observadas, ĉu ne iu foriras kun mia surtuto. Kun la via jam antaŭ dek minutoj foriris iu.' WHERE `lecionero_id` = 79 AND `kodo` = 'ekz08_12';
 UPDATE `respondoj` SET `kodo` = 'ekz08_23', `demando` = '23 <br>La junaj geedzoj havis konflikton hejme, kaj poste dum la aŭto-veturado ili ambaŭ obstine silentis. Preterpasante aron da azenoj la edzo diris moke:<br>- Ĉu parencoj de vi ?<br>- Jes, boparencoj !' WHERE `lecionero_id` = 79 AND `kodo` = 'ekz08_13';
 
+-- rectification suite à une coquille dans l'ex. 1 de la leçon 6.7
+UPDATE `respondoj` SET `demando` = '11 Ni konstruis kastelon ... sablo.' WHERE `lecionero_id` = 57 AND `kodo` = 'ekz06_11';
 

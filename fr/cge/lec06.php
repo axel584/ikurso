@@ -228,7 +228,7 @@ include "dlekkapo.inc.php";
 				$demandoj=array (
 				9 => "[&nbsp;…&nbsp;] la vojaĝo, ni manĝis.",
 				10 => "En nia ĝardeno, estas hotelo [&nbsp;…&nbsp;] insektoj.",
-				11=> "Ni kontruis kastelon [&nbsp;…&nbsp;] sablo.",
+				11 => "Ni konstruis kastelon [&nbsp;…&nbsp;] sablo.",
 				12 => "La kato estas [&nbsp;…&nbsp;] la pordo.",
 				13 => "Li grimpis [&nbsp;…&nbsp;] la pinto (=le sommet).",
 				14 => "Ŝi portas ĉapelon [&nbsp;…&nbsp;] la dorso.",

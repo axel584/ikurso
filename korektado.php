@@ -23,7 +23,6 @@ $titolo = $row["titolo"];
 
 //$query = "select kodo,demando,komando,count(*) as combien,max(dato) from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where numero=".$leciono." and kurso='".$kurso."' group by komando,kodo, demando order by kodo,max(dato) desc";
 $query = "select kodo,demando,count(*) as combien,max(dato) from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where numero=".$leciono." and kurso='".$kurso."' group by kodo, demando order by kodo,max(dato) desc";
-echo $query;
 $result = $bdd->query($query);
 $nbReponse = 0;
 $kodoj = array();
@@ -75,7 +74,18 @@ while ($row=$result->fetch()) {
 	echo "<div class='collapsible-header'><a href='korektado.php?kurso=CG&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></div>\n";
 }
 ?>
-				
+				<div class="collapsible-header active"><i class="material-icons">toc</i>Gerda Malaperis</div>
+
+<?php
+
+$query = "SELECT numero,kurso,titolo  FROM `lecionoj` WHERE kurso='GR' order by numero";
+$result = $bdd->query($query);
+while ($row=$result->fetch()) {
+	$nbReponse = $nbReponse + 1;
+	echo "<div class='collapsible-header'><a href='korektado.php?kurso=GR&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></div>\n";
+}
+?>	
+
 			</li>
 		</ul>	
 

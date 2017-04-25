@@ -872,3 +872,7 @@ UPDATE `respondoj` SET `kodo` = 'ekz08_23', `demando` = '23 <br>La junaj geedzoj
 -- rectification suite à une coquille dans l'ex. 1 de la leçon 6.7
 UPDATE `respondoj` SET `demando` = '11 Ni konstruis kastelon ... sablo.' WHERE `lecionero_id` = 57 AND `kodo` = 'ekz06_11';
 
+------------------
+-- Passage en V15
+------------------
+ALTER TABLE `respondoj` ADD `forigita` BOOL NOT NULL DEFAULT  '0' ;

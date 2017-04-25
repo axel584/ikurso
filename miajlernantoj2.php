@@ -68,7 +68,8 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 	
 	// envoyer le mail aux informateurs
 	//$informistoj="emmanuelle@esperanto-jeunes.org";
-	mailViaSmtp($informistoj,"ikurso@esperanto-france.org","un esperantiste de plus !",$contents);
+	//mailViaSmtp($informistoj,"ikurso@esperanto-france.org","un esperantiste de plus !",$contents);
+	mailViaSES($informistoj,"un esperantiste de plus !",$contents);
 
 
 	// et on envoit aussi un mail à l'élève
@@ -77,7 +78,8 @@ if ($rezultoj[1]=='F' and $row["stato"]!='F') {
 	$contents = fread($fd, filesize ($filename));
 	fclose($fd);
 	$contents=str_replace("##ENIRNOMO##",$enirnomo,$contents);
-	mailViaSmtp($retadreso,"ikurso@esperanto-france.org","Félicitations !",$contents);
+	//mailViaSmtp($retadreso,"ikurso@esperanto-france.org","Félicitations !",$contents);
+	mailViaSES($retadreso,"Félicitations !",$contents);
 
 
 }

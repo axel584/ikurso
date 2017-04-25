@@ -48,7 +48,7 @@ if (($retadreso=="") || ($enirnomo=="") || ($pasvorto=="")) {
 			// creer l'eleve :
 			$persono_id = kreiPersonon($enirnomo,$pasvorto,$retadreso);
 			// envoyer le mail eleve pour l'inviter a attendre un correcteur.
-			if (!mailViaSmtp($retadreso,"ikurso@esperanto-france.org","Bienvenue sur I-kurso",$contents)) {
+			if (!mailViaSES($retadreso,"Bienvenue sur I-kurso",$contents)) {
 				protokolo($persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$retadreso);
 			} 
 			$_SESSION["persono_id"]=$persono_id;

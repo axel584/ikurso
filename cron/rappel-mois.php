@@ -36,6 +36,6 @@ $result = $bdd->query($query);
 	echo $contents;
 	echo "<br/>-----------------------------------------------------------------<br/>";
 	// envoie de l'email
-	mailViaSmtp($retadreso_correcteur,"ikurso@esperanto-france.org","Cours d'espéranto : des élèves en retard !",$contents);
+	mailViaSES($retadreso_correcteur,"Cours d'espéranto : des élèves en retard !",$contents);
 }
 ?>

@@ -53,7 +53,8 @@ if ($row['korektanto']!="") {
 		$contents=str_replace("##KPERSONNOMO##",$korektantinformoj["personnomo"],$contents);
 		$contents=str_replace("##KRETADRESO##",$korektantinformoj["retadreso"],$contents);
 		$contents=str_replace("##SENIRNOMO##",$studantinformoj["enirnomo"],$contents);
-		mailViaSmtp($studantinformoj["retadreso"],"ikurso@esperanto-france.org","Votre correcteur I-kurso",$contents);
+		//mailViaSmtp($studantinformoj["retadreso"],"ikurso@esperanto-france.org","Votre correcteur I-kurso",$contents);
+		mailViaSES($studantinformoj["retadreso"],"Votre correcteur I-kurso",$contents);
 
 		// sendi mesagxon al la korektanto
 		$filename = "mails/redoniKor".$kurso."FR.html";
@@ -68,7 +69,7 @@ if ($row['korektanto']!="") {
 		$contents=str_replace("##SURBO##",$studantinformoj["urbo"],$contents);
 		$contents=str_replace("##SRETADRESO##",$studantinformoj["retadreso"],$contents);
 		$contents=str_replace("##SNASKIGXDATO##",$studantinformoj["naskigxdato"],$contents);
-		mailViaSmtp($korektantinformoj["retadreso"],"ikurso@esperanto-france.org","Nouvel élève sur I-kurso",$contents);
+		mailViaSES($korektantinformoj["retadreso"],"Nouvel élève sur I-kurso",$contents);
 
 	}
 } else {
@@ -99,7 +100,7 @@ if ($row['korektanto']!="") {
 		$contents=str_replace("##KRETADRESO##",$korektantinformoj["retadreso"],$contents);
 		$contents=str_replace("##SENIRNOMO##",$studantinformoj["enirnomo"],$contents);
 		debug ("envoyer le mail à l'éléve (désactivé pour le test)");
-		mailViaSmtp($studAdreso,"ikurso@esperanto-france.org","Votre correcteur I-kurso",$contents);
+		mailViaSES($studAdreso,"Votre correcteur I-kurso",$contents);
 		
 		// sendi mesagxon al la korektanto
 		$filename = "mails/doniKor".$kurso."FR.html";
@@ -115,7 +116,7 @@ if ($row['korektanto']!="") {
 		$contents=str_replace("##SNASKIGXDATO##",$studantinformoj["naskigxdato"],$contents);
 		$contents=str_replace("##KNOMO##",$korektantinformoj["enirnomo"],$contents);
 		$contents=str_replace("##KPASVORTO##",$korektantinformoj["pasvorto"],$contents);
-		mailViaSmtp($korAdreso,"ikurso@esperanto-france.org","Nouvel élève sur I-kurso",$contents);
+		mailViaSES($korAdreso,"Nouvel élève sur I-kurso",$contents);
 
 	}
 }

@@ -25,7 +25,8 @@ else {
 	$contents=str_replace("##LIEN_ACTIVATION##",$lien,$contents);
 	// envoyer le mail eleve pour l'inviter a attendre un correcteur.
 	$objekto="Nouvelle activation de votre compte pour apprendre gratuitement l'espéranto";
-	mailViaSmtp($retadreso,"ikurso@esperanto-france.org",$objekto,$contents);
+	//mailViaSmtp($retadreso,"ikurso@esperanto-france.org",$objekto,$contents);
+	mailViaSES($retadreso,$objekto,$contents);
 	protokolo($persono_id,"RENVOIE ACTIVATION COMPTE",$retadreso." a reçu une clef d'activation");
 
 	$respondo["mesagxo"] = "ok";

@@ -62,7 +62,8 @@ function PorInformistoj() {
 		// envoyer le mail eleve pour l'inviter a attendre un correcteur.
 		if ($verdakrabo=="on"){$objekto="Un de plus chez le Crabe Vert";}
 		else {$objekto="Nouvel élève sur I-kurso";}
-		mailViaSmtp($informistoj,"ikurso@esperanto-france.org",$objekto,$contents);
+		//mailViaSmtp($informistoj,"ikurso@esperanto-france.org",$objekto,$contents);
+		mailViaSES($informistoj,$objekto,$contents);
 		protokolo($persono_id,"VERDA KRABO","$retadreso : $verdakrabo");
 }
 
@@ -243,7 +244,7 @@ if ($jamaligxi=="jes") {
 		$mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		// envoyer mail eleve pour l'inciter a attendre un correcteur
-		if (!mailViaSmtp($persono["retadreso"],"ikurso@esperanto-france.org","Bienvenue au cours Gerda malaperis",$contents)) {
+		if (!mailViaSES($persono["retadreso"],"Bienvenue au cours Gerda malaperis",$contents)) {
 			protokolo($persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$persono["retadreso"]);
 		}
 		// mail aux informateurs si nouvel eleve Gerda
@@ -340,7 +341,7 @@ if ($jamaligxi=="jes") {
 			$contents=str_replace("##STUDANTO_ID##",$enirnomo,$contents);
 			$contents=str_replace("##PASVORTO##",$pasvorto,$contents);		
 			// envoyer le mail eleve pour l'inviter a attendre un correcteur.
-			if (!mailViaSmtp($retadreso,"ikurso@esperanto-france.org","Bienvenue sur I-kurso",$contents)) {
+			if (!mailViaSES($retadreso,"Bienvenue sur I-kurso",$contents)) {
 				protokolo($persono_id,"ERARO","mesagxo ne sendita por : ".$enirnomo." cxe : ".$retadreso);
 				$protokolo = new protokolo;
 				$protokolo->set_persono_id($nova_persono_id);

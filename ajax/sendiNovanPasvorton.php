@@ -44,7 +44,8 @@ $contents=str_replace("##ENIRNOMO##",$enirnomo,$contents);
 // $mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 // envoyer le mail eleve pour l'inviter a attendre un correcteur.
 $objekto="Votre mot de passe sur les cours d'espéranto Ikurso";
-$resultat = mailViaSmtp($retadreso,"ikurso@esperanto-france.org",$objekto,$contents);
+//$resultat = mailViaSmtp($retadreso,"ikurso@esperanto-france.org",$objekto,$contents);
+$resultat = mailViaSES($retadreso,$objekto,$contents);
 protokolo(0,"réinitialisation du mot de passe",$retadreso." a reçu une mail pour changer son mot de passe (".$resultat.")");
 
 $respondo["mesagxo"] = "ok";

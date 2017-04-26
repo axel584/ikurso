@@ -20,7 +20,7 @@ include "dlekkapo.inc.php";
 			Vous voilà rendu à la 10<sup>e</sup> et dernière leçon de votre cours. Elle
 			consistera en un petit examen qui nous permettra d’évaluer vos
 			connaissances de l’espéranto écrit. Votre tuteur le corrigera comme
-			d’habitude, et recevrez un <i>atestilo</i> (attestation de fin de cours).
+			d’habitude, et vous recevrez un <i>atestilo</i> (attestation de fin de cours).
 			</p>
 
 		<fieldset class="ekzerco">

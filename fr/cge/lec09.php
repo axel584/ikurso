@@ -140,7 +140,7 @@ include "dlekkapo.inc.php";
 				<p class="col s11 offset-s1"><span class="eo">Johano ankaŭ lavas sin.</span> (Non seulement il se peigne, mais il se lave également)</p>
 				<p class="col s11 offset-s1"><span class="eo">Johano lavas ankaŭ sin.</span> (Jean ne lave pas seulement d’autres personnes)</p>
 				<p class="col s12"><b>ankoraŭ</b> : encore</p>
-				<p class="col s11 offset-s1"><span class="eo">Mi ankoraŭ ne vidis ŝin. Ĉu li ankoraŭ estas tie?</span></p>
+				<p class="col s11 offset-s1"><span class="eo">Mi ankoraŭ ne vidis lin. Ĉu li ankoraŭ estas tie?</span> (Je ne l'ai pas encore vu. Est-ce qu'il est encore ici ?)</p>
 				<p class="col s12"><b>apenaŭ</b> : à peine</p>
 				<p class="col s11 offset-s1"><span class="eo">Li dormis apenaŭ kvin minutojn.</span></p>
 				<p class="col s12"><b>baldaŭ</b> : bientôt</p>

@@ -84,28 +84,33 @@ function listiStudantojn() {
 		echo "</form>";
 
 		// menu déroulant pour avancer manuellement dans les leçons
-		echo "<form method=\"POST\" action=\"miajlernantoj2.php\">"; 
-		echo "<select name=\"leciono\">\n";
-		echo "<option value=\"".$row["kursid"]."-N\" >Pas encore commencé</option>\n";
-		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."'";
-		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
-		while($row3 = $result3->fetch()) {
-			echo "<option value=\"".$row["kursid"]."-".$row3["numero"]."\" ";
-			if ($row["nunleciono"]==$row3["numero"]) {echo "selected";}
-				echo ">".$row3["titolo"]."</option>\n";
+		if ($row['kurso']=="KE") {
+			echo "<form method=\"POST\" action=\"miajlernantoj2.php\">"; 
+			echo "<select name=\"leciono\">\n";
+			echo "<option value=\"".$row["kursid"]."-N\" >Pas encore commencé</option>\n";
+			$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."'";
+			$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
+			while($row3 = $result3->fetch()) {
+				echo "<option value=\"".$row["kursid"]."-".$row3["numero"]."\" ";
+				if ($row["nunleciono"]==$row3["numero"]) {echo "selected";}
+					echo ">".$row3["titolo"]."</option>\n";
+			}
+			echo "</select>\n";
+			echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
+			echo "<input class=\"bouton\" type=\"submit\" value=\"Valider\"><br/>";
+			echo "</form>\n";
 		}
-		echo "</select>\n";
-		echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
-		echo "<input class=\"bouton\" type=\"submit\" value=\"Valider\"><br/>";
-		echo "</form>\n";
 
 		// bouton pour indiquer que l'élève a fini son cours
-		echo "<form method='POST' action='miajlernantoj2.php'>"; 
-		echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
-		echo "<input type=\"hidden\" name=\"leciono\" value=\"".$row["kursid"]."-F\">";
-		echo "<input  class='bouton' type='submit' value='A fini'>";
-		echo " <i>(l'élève recevra un message pour recevoir son diplôme)</i><br/>";
-		echo "</form>";
+		// on l'affiche uniquement pour la 10ème leçon du CG et KE et pour la 25ème leçon de Gerda
+		if (($row["nunleciono"]==10 && $row["kurso"]=='CG')||($row["nunleciono"]==25 && $row["kurso"]=='GR')||($row["nunleciono"]==10 && $row["kurso"]=='KE')) {
+			echo "<form method='POST' action='miajlernantoj2.php'>"; 
+			echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
+			echo "<input type=\"hidden\" name=\"leciono\" value=\"".$row["kursid"]."-F\">";
+			echo "<input  class='bouton' type='submit' value='A fini'>";
+			echo " <i>(l'élève recevra un message pour recevoir son diplôme)</i><br/>";
+			echo "</form>";
+		}	
 
 		// colonne 3: commentaires
 		echo "</div><div class='lernanto'>";

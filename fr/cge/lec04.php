@@ -693,7 +693,7 @@ include "dlekkapo.inc.php";
 				<ul>
 					<li>à la radio : <a href="http://muzaiko.info">muzaiko.info</a></li>
 					<li>en albums : <a href="http://vinilkosmo.com">vinilkosmo.com</a></li>
-					<li>dans notre boutique en ligne : <a href="ikurso.esperanto-france.org/butiko.php">ikurso.esperanto-france.org/butiko.php</a></li>
+					<li>dans notre boutique en ligne : <a href="<?=$urlracine?>butiko.php">ikurso.esperanto-france.org/butiko.php</a></li>
 				</ul>
 			</div>
 		</div>

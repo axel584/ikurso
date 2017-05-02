@@ -875,4 +875,5 @@ UPDATE `respondoj` SET `demando` = '11 Ni konstruis kastelon ... sablo.' WHERE `
 ------------------
 -- Passage en V15
 ------------------
-ALTER TABLE `respondoj` ADD `forigita` BOOL NOT NULL DEFAULT  '0' ;
+CREATE TABLE ekzercoj ( `id` INT NOT NULL AUTO_INCREMENT , `komando` TEXT NOT NULL , `lecionero_id` INT NOT NULL , `komando_detalo` TEXT NOT NULL , `ekzemplo` INT NOT NULL , `typo` ENUM('traduko') NOT NULL , `x2u` BOOLEAN NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE ekzerceroj ( `id` INT NOT NULL AUTO_INCREMENT , `kodo` VARCHAR(10) NOT NULL , `demando` TEXT NOT NULL , `bildo` VARCHAR(64) NOT NULL ,`forigita` BOOLEAN NOT NULL DEFAULT  '0',`korektebla` BOOLEAN NOT NULL DEFAULT  '0', PRIMARY KEY (`id`)) ENGINE = InnoDB;

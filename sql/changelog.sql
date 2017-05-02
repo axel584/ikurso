@@ -877,3 +877,11 @@ UPDATE `respondoj` SET `demando` = '11 Ni konstruis kastelon ... sablo.' WHERE `
 ------------------
 CREATE TABLE ekzercoj ( `id` INT NOT NULL AUTO_INCREMENT , `komando` TEXT NOT NULL , `lecionero_id` INT NOT NULL , `komando_detalo` TEXT NOT NULL , `ekzemplo` INT NOT NULL , `typo` ENUM('traduko') NOT NULL , `x2u` BOOLEAN NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 CREATE TABLE ekzerceroj ( `id` INT NOT NULL AUTO_INCREMENT ,`ekzerco_id` int(11) NOT NULL, `kodo` VARCHAR(10) NOT NULL , `numero` INT NOT NULL, `demando` TEXT NOT NULL ,`respondo` text NOT NULL, `bildo` VARCHAR(64) NOT NULL ,`forigita` BOOLEAN NOT NULL DEFAULT  '0',`korektebla` BOOLEAN NOT NULL DEFAULT  '0', PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+-- suppression des tables inutiles :
+DROP TABLE eraraj_mesagxoj;
+DROP TABLE demandaro;
+DROP TABLE ferioj;
+DROP TABLE import_arthur_email;
+DROP TABLE persono_demandaro;
+DROP TABLE vikio;

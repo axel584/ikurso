@@ -17,7 +17,7 @@ include "pagxkapo.inc.php";
 
 				<div class="row">
 					<div class="col l6">
-						<h2>Tableau d'honneur</h2>
+						<h2>Tableau d’honneur</h2>
 						<ul class="tabs">
 		        			<li class="tab col s3"><a href="#tableauHonneurSemaine">Par semaine</a></li>
 		        			<li class="tab col s3"><a href="#tableauHonneurMois">Par mois</a></li>
@@ -37,8 +37,8 @@ include "pagxkapo.inc.php";
 					<div class="col l6">
 						<h2>Mot par force</h2>
 						<div id="chart_div_mots_par_force"></div>
-						<p>La force correspond au nombre de fois où vous avez correctement trouvé le mot consécutivement. Si vous vous trompez sur un mot, ce nombre retourne à zéro et le mot retourne dans la catégorie "à apprendre".</p>
-						<p> Après 4 bonnes réponses successives, ce mot est rentrée dans votre mémoire à long terme.</p>
+						<p>La force correspond au nombre de fois où vous avez correctement trouvé le mot consécutivement. Si vous vous trompez sur un mot, ce nombre retourne à zéro et le mot retourne dans la catégorie «à apprendre».</p>
+						<p> Après 4 bonnes réponses successives, ce mot est rentré dans votre mémoire à long terme.</p>
 					</div>
 				</div>
 			</section>

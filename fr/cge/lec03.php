@@ -463,8 +463,8 @@ include "dlekkapo.inc.php";
 		
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Traduisez en espéranto en écrivant les nombres en toutes lettres.</legend>
-				<?php atentigo();	?>
 				<input type="hidden" name="013_cxap03.4" value="4. Traduisez en espéranto.">
+				<?php atentigo();	?>
 				<div class="tasko">
 				<?php
 					$demandoj=array (
@@ -532,6 +532,7 @@ include "dlekkapo.inc.php";
 			<p>Utilisez le vocabulaire que vous avez vu dans les 3 premières leçons, ainsi que les mots interrogatifs suivants : <b>kio</b>, <b>kiu</b>, <b>kie</b>.<br>Pensez à utiliser l’accusatif lorsque c’est nécessaire&nbsp;!</p>
 			<p class="eo"><strong>EXEMPLE : image 1.</strong><br>
 			Kio estas la viro? – La viro estas instruisto.</p>
+			<?php atentigo();	?>
 			<div class="tasko">
 			<hr>
 			<?php 	

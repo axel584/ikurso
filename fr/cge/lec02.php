@@ -207,6 +207,7 @@ QCM_bildoj(
 			<input type="hidden" name="013_cxap02.1" value="En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
 			<p>Utilisez une fois chacune des prépositions suivantes&nbsp;: <b>antaŭ</b>, <b>sur</b>, <b>super</b>, <b>sub</b>.<br>
 			Le vocabulaire nouveau se trouve au bas de cette page.</p>
+			<?php atentigo();	?>
 			<div class="tasko">
 			<hr>
 			<?php 	
@@ -384,6 +385,7 @@ QCM_bildoj(
 		<fieldset class="ekzerco">
 			<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
 			<input type="hidden" name="013_cxap02.2" value="1. Traduisez en espéranto.">
+			<?php atentigo();	?>
 			<div class="tasko">
 			<?php
 				$demandoj=array (

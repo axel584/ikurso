@@ -402,6 +402,7 @@ include "dlekkapo.inc.php";
 			<legend><strong>EXERCICE</strong> : Recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
 			<input type="hidden" name="013_cxap04.2" value="2. En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
 			<p>Chaque phrase de cet exercice correspond à une image. Recopiez chaque phrase en remplaçant [&nbsp;…&nbsp;] par la préposition qui convient. Vous devez utiliser seulement une fois chacune des prépositions suivantes&nbsp;: <b>apud</b>, <b>ĉe</b>, <b>al</b>, <b>de</b>, <b>el</b>.</p>
+			<?php atentigo();	?>
 			<div class="tasko">
 			<hr>
 			<?php 	

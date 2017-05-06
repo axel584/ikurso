@@ -146,40 +146,43 @@ include "dlekkapo.inc.php";
 			<?php } ?>
 			<fieldset class="vortoj">
 				<legend>MOTS À RETENIR</legend>
-				<div class="vortlisto row">
-					<div class="col s12 m4">
-						<p><span class="eo">biskvito</span> : biscuit</p>
-						<p><span class="eo">filo</span> : fils</p>
-						<p><span class="eo">Francujo</span> : France</p>
-						<p><span class="eo">frato</span> : frère</p>
-						<p><span class="eo">instruisto</span> : instituteur</p>
-						<p><span class="eo">knabo</span> : garçon</p>
-						<p><span class="eo">kafo</span> : café</p>
-						<p><span class="eo">kuko</span> : gâteau</p>
-						<p><span class="eo">lakto</span> : lait</p>
-						<p><span class="eo">lando</span> : pays</p>
+				<div class="vortlisto row bildetoj">
+					<div class="col s6 m4 l3">
+						<p><img class="responsive-img z-depth-1" src="<?=$vojo?>fr/cge/bildoj/biskvitoj.jpg"><br>
+						<span class="eo">biskvito</span><br>biscuit</span></p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/filo.jpg"><span class="eo">filo</span><br>fils</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/Francujo.jpg"><span class="eo">Francujo</span><br>France</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/instruisto.jpg"><span class="eo">instruisto</span><br>instituteur</p>
 					</div>
-					<div class="col s12 m4">
-						<p><span class="eo">patro</span> : père</p>
-						<p><span class="eo">pano</span> : pain</p>
-						<p><span class="eo">studento</span> : étudiant</p>
-						<p><span class="eo">sukero</span> : sucre</p>
-						<p><span class="eo">teo</span> : thé</p>
-						<p><span class="eo">urbo</span> : ville</p>
-						<p><span class="eo">viro</span> : homme (mâle)</p>
-						<p><span class="eo">kaj</span> : et</p>
-						<p><span class="eo">jen</span> : voici</p>
-						<p><span class="eo">ĉiam</span> : toujours</p>
+					<div class="col s6 m4 l3">
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/kuko.jpg"><span class="eo">kuko</span><br>gâteau</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/lakto.jpg"><span class="eo">lakto</span><br>lait</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/lando.jpg"><span class="eo">lando</span><br>pays</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/knabo.jpg"><span class="eo">knabo</span><br>garçon</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/patro.jpg"><span class="eo">patro</span><br>père</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/studento.jpg"><span class="eo">studento</span><br>étudiant</p>
 					</div>
-					<div class="col s12 m4">
-						<p><span class="eo">en</span> : dans, en</p>
-						<p><span class="eo">bela</span> : beau</p>
-						<p><span class="eo">bona</span> : bon</p>
-						<p><span class="eo">facila</span> : facile</p>
-						<p><span class="eo">granda</span> : grand</p>
-						<p><span class="eo">seka</span> : sec</p>
-						<p><span class="eo">varma</span> : chaud</p>
-						<p><span class="eo">kiu</span> : qui, quel</p>
+					<div class="col s6 m4 l3">
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/frato.jpg"><span class="eo">frato</span><br>frère</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/teo.jpg"><span class="eo">teo</span><br>thé</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/urbo.jpg"><span class="eo">urbo</span><br>ville</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/pano.jpg"><span class="eo">pano</span><br>pain</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-maro.jpg"><span class="eo">viro</span><br>homme (mâle)</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/kaj.jpg"><span class="eo">kaj</span><br>et</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/jen.jpg"><span class="eo">jen</span><br>voici</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/ĉiam.jpg"><span class="eo">ĉiam</span><br>toujours</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/en.jpg"><span class="eo">en</span><br>dans, en</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/bela.jpg"><span class="eo">bela</span><br>beau</p>
+					</div>
+					<div class="col s6 m4 l3">
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/bona.jpg"><span class="eo">bona</span><br>bon</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/sukero.jpg"><span class="eo">sukero</span><br>sucre</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/kafo.jpg"><span class="eo">kafo</span><br>café</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/facila.jpg"><span class="eo">facila</span><br>facile</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/granda.jpg"><span class="eo">granda</span><br>grand</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/seka.jpg"><span class="eo">seka</span><br>sec</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/varma.jpg"><span class="eo">varma</span><br>chaud</p>
+						<p><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/kiu.jpg"><span class="eo">kiu</span><br>qui, quel</p>
 					</div>
 				</div>
 			</fieldset>
@@ -400,6 +403,7 @@ include "dlekkapo.inc.php";
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
 					<input type="hidden" name="013_cxap01.1" value="Traduisez en espéranto.">
+					<?php atentigo();	?>
 					<div class="tasko">
 					<?php
 						$demandoj=array (
@@ -566,7 +570,7 @@ QCM(
 			<p class="parto"><b>Kiu</b> se met au pluriel (<b>kiuj</b>) si l’on interroge sur plusieurs personnes ou plusieurs choses. Par exemple&nbsp;:</p>
 			
 			<div class="row">
-				<p class="col s12 m6"><span class="eo">Jen kukoj. <b>Kiuj</b> estas bonaj?</span></p><p class="col s12 m6">Voici des biscuits. <b>Lesquels</b> sont bons&nbsp;?</p>
+				<p class="col s12 m6"><span class="eo">Jen kukoj. <b>Kiuj</b> estas bonaj?</span></p><p class="col s12 m6">Voici des gâteaux. <b>Lesquels</b> sont bons&nbsp;?</p>
 			</div>
 			<div class="row">
 				<p class="col s12 m6"><span class="eo"><b>Kiuj</b> estas viaj instruistoj?<br>– Marko kaj Petro.</span></p><p class="col s12 m6"><b>Qui</b> sont tes professeurs&nbsp;?<br>– Marko et Petro.</p>
@@ -594,6 +598,7 @@ QCM(
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
 					<input type="hidden" name="013_cxap01.2" value="Traduisez en espéranto.">
+					<?php atentigo();	?>
 					<div class="tasko">
 					<?php
 						$demandoj=array (
@@ -613,6 +618,7 @@ QCM(
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Formez cinq phrases ayant un sens en combinant les mots de la leçon.</legend>
 				<input type="hidden" name="013_cxap01.3" value="Formez cinq phrases ayant un sens en combinant les mots de la leçon.">
+				<?php atentigo();	?>
 				<div class="tasko">
 				<?php 	
 					$demandoj=array (
@@ -635,6 +641,7 @@ QCM(
 			<p>Cet exercice ne vous permettra pas uniquement de vérifier que vous avez assimilé le nouveau vocabulaire, mais également de faire connaissance avec le correcteur qui vous sera attribué et qui corrigera vos exercices tout au long de ce cours.</p>
 			<p>Aucune utilisation commerciale ne sera faite des informations que vous transmettrez.
 
+					<?php atentigo();	?>
 					<?php
 						$demandoj=array (
 						19 => "Je me présente :"

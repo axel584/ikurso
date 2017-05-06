@@ -222,6 +222,7 @@ include "dlekkapo.inc.php";
 			<input type="hidden" name="013_cxap06.1" value="En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
 			<p>Chaque phrase de cet exercice correspond à une image. Recopiez chaque phrase en remplaçant [&nbsp;…&nbsp;] par la préposition qui convient. Vous devez utiliser seulement une fois chacune des prépositions suivantes&nbsp;: <b>por</b>, <b>ĉe</b>, <b>malantaŭ</b>, <b>el</b>, <b>ĝis</b>, <b>per</b>, <b>dum</b>, <b>inter</b>.<br>
 			Le vocabulaire nouveau se trouve au bas de cette page.</p>
+			<?php atentigo();	?>
 			<div class="tasko">
 			<hr>
 			<?php 	

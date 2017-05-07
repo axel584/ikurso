@@ -544,26 +544,30 @@ function troviPlejTauganKorektantonLauxKriterioj($lando,$departemento,$kurso) {
 
     // calcul les pourcentages du remplissage des élèves : ex: correcteur 1 : 75% (6/8)
     // TODO : si lernantebleco est vide, sortir (return null)
-    foreach($lernanteblecoj as $sxlosilo => $valuo) { 
-        if ($valuo==0) {
-            continue;
-        }
-        if ($sxlosilo==1119) {
-            continue; // filtre les correcteurs indésirables
-        }
-        if (!isset($kiom_lernantoj[$sxlosilo])){
-            $kiom_lernantoj[$sxlosilo]=0;
-        }
-        if ($valuo==""){
-            $valuo=0;
-        }
-        if (($valuo!=0) || ($kiom_lernantoj[$sxlosilo]!=0)) {
-            $occupation=($valuo==0) ? 100 : floor(100*$kiom_lernantoj[$sxlosilo]/$valuo);
-            if ($occupation>=100) { // ne peut pas choisir un correcteur qui a plus de 100%
+    if (is_array($lernanteblecoj)) {
+        foreach($lernanteblecoj as $sxlosilo => $valuo) { 
+            if ($valuo==0) {
                 continue;
             }
-            $procentajxo[$sxlosilo] = $occupation;
+            if ($sxlosilo==1119) {
+                continue; // filtre les correcteurs indésirables
+            }
+            if (!isset($kiom_lernantoj[$sxlosilo])){
+                $kiom_lernantoj[$sxlosilo]=0;
+            }
+            if ($valuo==""){
+                $valuo=0;
+            }
+            if (($valuo!=0) || ($kiom_lernantoj[$sxlosilo]!=0)) {
+                $occupation=($valuo==0) ? 100 : floor(100*$kiom_lernantoj[$sxlosilo]/$valuo);
+                if ($occupation>=100) { // ne peut pas choisir un correcteur qui a plus de 100%
+                    continue;
+                }
+                $procentajxo[$sxlosilo] = $occupation;
+            }
         }
+    } else {
+        return null;
     }
     if (!isset($procentajxo)) {
         return null;

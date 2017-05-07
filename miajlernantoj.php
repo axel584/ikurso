@@ -9,6 +9,15 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
 if (($rajto!='A')&&($rajto!='K')) {header("Location:index.php?erarkodo=4");}
 
+function listi_lecionerojn($celpersono_id,$kurso) {
+	global $bdd;
+	$demando = "SELECT kurso,dato,lecionoj.id as leciono_id,lecionoj.titolo as leciono_titolo,lecioneroj.id as lecionero_id,lecioneroj.ordo as lecionero_ordo,lecioneroj.titolo as lecionero_titolo  FROM personoj_lecioneroj  join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id = lecioneroj.leciono_id WHERE persono_id = ".$celpersono_id." and lecionoj.kurso='".$kurso."' order by kurso,lecionoj.numero,lecioneroj.ordo";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while($row =  $result->fetch()) {
+		echo "[".$row["kurso"]."]&nbsp;".$row["leciono_titolo"]." - ".$row["lecionero_ordo"].":".$row["lecionero_titolo"]." (".$row["dato"].")<br/>";
+	}
+}
+
 // tiu funkcio konstruas la liston de cxiuj studantoj
 function listiStudantojn() {
 	global $persono_id,$bdd;
@@ -117,6 +126,14 @@ function listiStudantojn() {
 		echo "<em>commentaire de l’élève :</em><br>";
 		
 		echo stripslashes($row['kialo'])."<br>";
+		// historique des pages vues / cochées
+		//echo "<em>historique des leçons : </em><a href='#' onClick=\"document.getElementById('listi_lecionerojn_".$row["studanto"]."').setAttribute('display', '');\">[+]</a><br>";
+		echo "<em>historique des leçons : </em><br>";
+		//echo "<div id='listi_lecionerojn_".$row["studanto"]."' style='display: none;'>";
+		echo "<div id='listi_lecionerojn_".$row["studanto"]."'>";
+		listi_lecionerojn($row["studanto"],$row["kurso"]);
+		echo "</div>";
+
 		echo "<em>commentaires du correcteur : </em> <br>";
 		// notoj aldoneblaj per la korektanto
 		$demando4 = "select * from komentoj where komentoj.studanto='".$row["studanto"]."'";

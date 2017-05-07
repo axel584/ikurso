@@ -875,7 +875,7 @@ UPDATE `respondoj` SET `demando` = '11 Ni konstruis kastelon ... sablo.' WHERE `
 ------------------
 -- Passage en V15
 ------------------
-CREATE TABLE ekzercoj ( `id` INT NOT NULL AUTO_INCREMENT , `komando` TEXT NOT NULL , `lecionero_id` INT NOT NULL , `komando_detalo` TEXT NOT NULL , `ekzemplo` INT NOT NULL , `typo` ENUM('traduko') NOT NULL , `x2u` BOOLEAN NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE ekzercoj ( `id` INT NOT NULL AUTO_INCREMENT , `komando` TEXT NOT NULL , `lecionero_id` INT NOT NULL , `komando_detalo` TEXT NULL , `ekzemplo` TEXT NULL , `typo` ENUM('traduko','verkado') NOT NULL , `x2u` BOOLEAN NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 CREATE TABLE ekzerceroj ( `id` INT NOT NULL AUTO_INCREMENT ,`ekzerco_id` int(11) NOT NULL, `kodo` VARCHAR(10) NOT NULL , `numero` INT NOT NULL, `demando` TEXT NOT NULL ,`respondo` text NOT NULL, `bildo` VARCHAR(64) NOT NULL ,`forigita` BOOLEAN NOT NULL DEFAULT  '0',`korektebla` BOOLEAN NOT NULL DEFAULT  '0', PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 -- suppression des tables inutiles :
@@ -885,3 +885,39 @@ DROP TABLE ferioj;
 DROP TABLE import_arthur_email;
 DROP TABLE persono_demandaro;
 DROP TABLE vikio;
+
+ALTER TABLE `personoj_lecioneroj`  ADD `poentoj` INT  NULL DEFAULT '0'  AFTER `lecionero_id`;
+ALTER TABLE `respondoj` ADD `ekzercero_id` INT NULL AFTER `lecionero_id`;
+ALTER TABLE `respondoj` ADD `forigita` BOOL NOT NULL DEFAULT  '0' ;
+
+-- ajout des données pour la correction automatique
+
+insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (1,'Traduisez les phrases en espéranto.',6,'','','traduko',1);
+insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (2,'Traduisez les phrases en espéranto.',270,'','','traduko',1);
+insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (3,'Formez cinq phrases ayant un sens en combinant les mots de la leçon.',270,'','','verkado',1);
+insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (4,'A votre tour',254,'','','verkado',1);
+
+
+
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (1,1,'ekz01_01',1,'Le thé est chaud.','La teo estas varma.','la teo estas varma','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (2,1,'ekz01_02',2,'Ton biscuit est sec.','Via biskvito estas seka.','via biskvito estas seka','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (3,1,'ekz01_03',3,'Votre ami était beau.','Via amiko estis bela.','via amiko estis bela','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (4,1,'ekz01_04',4,'Les nouveaux instituteurs seront grands.','La novaj instruistoj estos grandaj.','la novaj instruistoj estos grandaj','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (5,1,'ekz01_05',5,'Mon frère est leur instituteur.','Mia frato estas ilia instruisto.','mia frato estas ilia instruisto','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (6,1,'ekz01_06',6,'Vos fils seront ses amis (à lui).','Viaj filoj estos liaj amikoj.','viaj filoj estos liaj amikoj','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (7,2,'ekz01_07',7,'Quels gâteaux étaient secs ?','Kiuj kukoj estis sekaj.','kiuj kukoj estis sekaj','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (8,2,'ekz01_08',8,'Où est le pain ?','Kie estas la pano?','kie estas la pano','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (9,2,'ekz01_09',9,'Un garçon en bonne santé est toujours beau.','Sana knabo estas ĉiam bela.','sana knabo estas ĉiam bela','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (10,2,'ekz01_10',10,'Elle habitera dans une grande ville.','Ŝi logxos en granda urbo.','sxi logxos en granda urbo','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (11,2,'ekz01_11',11,'Le pain est à toi (« le pain est tien »).','La pano estas via.','la pano estas via','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (12,2,'ekz01_12',12,'Qui est le nouvel instituteur ?','Kiu estas la nova instruisto?','kiu estas la nova instruisto','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (13,2,'ekz01_13',13,'Voici des biscuits. Lesquels sont bons ?','Jen biskvitoj. kiuj estas bona?','jen biskvitoj. kiuj estas bona?','',0,1);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (14,3,'ekz01_14',14,'Formez une phrase ayant un sens en combinant les mots de la leçon.','','','',0,0);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (15,3,'ekz01_15',15,'Formez une phrase ayant un sens en combinant les mots de la leçon.','','','',0,0);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (16,3,'ekz01_16',16,'Formez une phrase ayant un sens en combinant les mots de la leçon.','','','',0,0);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (17,3,'ekz01_17',17,'Formez une phrase ayant un sens en combinant les mots de la leçon.','','','',0,0);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (18,3,'ekz01_18',18,'Formez une phrase ayant un sens en combinant les mots de la leçon.','','','',0,0);
+insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (19,4,'ekz01_19',19,'Je me présente','','','',0,0);
+
+
+

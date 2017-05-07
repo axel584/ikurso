@@ -22,32 +22,20 @@ $titolo = $row["titolo"];
 <?php
 
 //$query = "select kodo,demando,komando,count(*) as combien,max(dato) from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where numero=".$leciono." and kurso='".$kurso."' group by komando,kodo, demando order by kodo,max(dato) desc";
-$query = "select kodo,demando,count(*) as combien,max(dato) from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where numero=".$leciono." and kurso='".$kurso."' group by kodo, demando order by kodo,max(dato) desc";
+$query = "select ekzercoj.id,komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where lecionoj.numero=".$leciono." and kurso='".$kurso."'";
 $result = $bdd->query($query);
 $nbReponse = 0;
 $kodoj = array();
 $komando="";
 while ($row=$result->fetch()) {
-	if (in_array($row["kodo"],$kodoj)) {
-		continue;
-	}
-	// if ($row["komando"]!=$komando) {
-	// 	$komando=$row["komando"];
-	// 	print "<h3>".$komando."</h3>";
-	// }
-	$kodoj[] = $row["kodo"];
-	$nbReponse = $nbReponse + 1;
-	echo "<p>".$row["demando"]."<br>\n";
+	print "<h3>".$row['komando']."</h3>";
+	//echo "<p>".$row["demando"]."<br>\n";
 	//echo "<span style=\"color:blue\">".$row["combien"]."</span></p>\n";
-	$query2 = "select normaligita,count(*) as combien from respondoj where kodo='".$row["kodo"]."' and demando='".$row["demando"]."' group by normaligita order by count(*) desc";
+	$query2 = "select numero,demando,respondo from ekzerceroj where ekzerco_id=".$row["id"]." order by numero";
 	$result2 = $bdd->query($query2);
 	while ($row2=$result2->fetch()) {
-		echo "<!--".$row["combien"]."::".$row2["combien"]."-->";
-		$taux = number_format(100*$row2["combien"]/$row["combien"],2);
-		if ($taux<10.0) {
-			break;
-		}
-		echo "<span style=\"color:blue\">".$row2["normaligita"]." (".$taux." %)</span></p><br/>";
+		echo "<p>".$row2["numero"].".&nbsp;".$row2["demando"]."<br>\n";
+		echo "<span style=\"color:blue\">".$row2["respondo"]."</span></p><br/>";
 	}
 }
 

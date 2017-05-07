@@ -316,7 +316,8 @@ function listi_P() {
 	$demando =  "select id,enirnomo,personnomo,familinomo from personoj where rajtoj='P' and aktivigita=1 and kurso<>''";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
-		echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]." (".$row["personnomo"]." ".$row["familinomo"].")</option>";
+		//echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]." (".$row["personnomo"]." ".$row["familinomo"].")</option>";
+		echo "<p><a href='administri.php?celpersono_id=".$row["id"]."'>".$row["enirnomo"]." (".$row["personnomo"]." ".$row["familinomo"].")</a></p>";
 	}
 }
 
@@ -444,18 +445,27 @@ function listi_kursojn_de_iu_studanto($studanto_id) {
  	return $result;
 }
 
+function listi_lecionerojn($celpersono_id) {
+	global $bdd;
+	$demando = "SELECT kurso,dato,lecionoj.id as leciono_id,lecionoj.titolo as leciono_titolo,lecioneroj.id as lecionero_id,lecioneroj.ordo as lecionero_ordo,lecioneroj.titolo as lecionero_titolo  FROM personoj_lecioneroj  join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id = lecioneroj.leciono_id WHERE persono_id = ".$celpersono_id." order by kurso,lecionoj.numero,lecioneroj.ordo";
+	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+	while($row =  $result->fetch()) {
+		echo "[".$row["kurso"]."]&nbsp;".$row["leciono_titolo"]." - ".$row["lecionero_ordo"].":".$row["lecionero_titolo"]." (".$row["dato"].")<br/>";
+	}
+}
+
 include "adminkapo.inc.php";
 ?>
 		<div id="adminejo">
 			<ul id="tabnav">
 				<li <?php if ($kategorio=="P"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=P">Attendent un correcteur</a></li>
-				<li <?php if ($kategorio=="S0"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=S0">Ont reçu un correcteur</a></li>
+				<!--li <?php if ($kategorio=="S0"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=S0">Ont reçu un correcteur</a></li>
 				<li <?php if ($kategorio=="S"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=S">Autres élèves</a></li>
 				<li <?php if ($kategorio=="H"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=H">Ont abandonné</a></li>
 				<li <?php if ($kategorio=="F"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=F">Ont fini le cours</a></li>
 				<li <?php if ($kategorio=="K"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=K">Correcteurs</a></li>
 				<li <?php if ($kategorio=="A"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=A">Administrateurs</a></li>
-				<li <?php if ($kategorio=="I"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=I">Informateurs</a></li>
+				<li <?php if ($kategorio=="I"){echo "class='aktiva'";}?>><a href="administri.php?kategorio=I">Informateurs</a></li-->
 			</ul>
 			<div id="kadro">
 				<?php if (isset($erarkodo) && $erarkodo=="9") echo "<div class='atentigo'><p class='eraro'>Cet élève a déjà un correcteur.</p></div>"; ?>
@@ -464,30 +474,11 @@ include "adminkapo.inc.php";
 			<div id="adminG">
 
 			<!-- page d'administration -->
-				<form name="administri" method="post" action="<?=$vojo?>administri.php?kategorio=<?=$kategorio?>">
-				<input type="hidden" name="kategorio" value="<?=$kategorio?>">
-			<?php if ($kategorio!='') echo "<select id=\"celpersono\" name=\"celpersono_id\" size=\"30\" onChange=\"document.administri.submit();\">";
-					switch ($kategorio) {
-						case 'P' : listi_P();
-						break;
-						case 'S0' :listi_S0();
-						break;
-						case 'S' : listi_S();
-						break;
-						case 'H' : listi_H();
-						break;
-						case 'F' : listi_F();
-						break;
-						case 'K' : listi_K();
-						break;
-						case 'A' : listi_A();
-						break;
-						case 'I' : listi_I();
-						break;
-					}
-					if ($kategorio!='') echo "</select>";
-			?>
-				</form>
+				<div class="encadre">
+				<b>élèves en attente :</b>
+				<?php listi_P(); ?>
+				</div>
+
 			</div>
 			<div id="adminD">
 				<form name="administri2" method="post" action="administri2.php">
@@ -527,8 +518,15 @@ include "adminkapo.inc.php";
 						<tr>
 							<td colspan="2" class="col1">Identifiant <i>(*)</i>: </td>
 							<td nowrap><input type="text" name="celenirnomo" value="<?php echo $celpersono["enirnomo"]; ?>"></td>
-							<td class="col1">Mot de passe <i>(*)</i>: </td>
-							<td nowrap><input type="text" name="pasvorto" value="<?php echo $celpersono["pasvorto"]; ?>"></td>
+							<td class="col1">Compte activé: </td>
+							<td nowrap>
+							<?php 
+							if ($celpersono["aktivigita"]==1) {
+								echo "Jes";
+							}  else {
+								echo "Ne";
+							}
+							?></td>
 						</tr>
 						<tr>
 							<td colspan="2" class="col1">Droits :</td>
@@ -749,6 +747,11 @@ include "adminkapo.inc.php";
 						</div>
 						<?php } // fin de la liste des cours suivis ?>
 						
+						<div class="encadre">
+						<p><b>Historique des sections vues :</b></p>
+						<?php listi_lecionerojn($celpersono_id); ?>
+						</div>
+
 						<div class="encadre">
 							<table class="perso">
 								<tr>

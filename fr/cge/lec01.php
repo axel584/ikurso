@@ -779,19 +779,18 @@ QCM(
 			if ($section=="13") {
 			?>
 
-			<p>
-			Espérons que nous ne vous avons pas effrayé pour ce premier contact avec
-			l’espéranto. Vous n’avez certainement pas tout assimilé mais cela
+			<p>Nous espérons que ce premier contact avec
+			l’espéranto vous a plu. Vous n’avez peut-être pas tout assimilé mais cela
 			viendra petit à petit. Vous pouvez déjà remarquer avec l’exercice
 			précédent que vous êtes capable d’exprimer en espéranto des phrases
 			simples dont vous maîtrisez parfaitement la grammaire. 
 			</p>
 			<p>
 			Un tel résultat ne pourrait pas être obtenu aussi rapidement s’il
-			s’agissait d’apprendre l’allemand ou l’anglais&nbsp;! Pensez que
+			s’agissait d’apprendre une autre langue&nbsp;! Pensez que
 			potentiellement vous savez déjà conjuguer le verbe <i>esti</i> au présent,
 			passé et futur de toutes les personnes, que vous connaissez les
-			adjectifs possessifs et le pluriel. Avec la vingtaine de mots du
+			adjectifs possessifs et le pluriel. Avec les mots du
 			vocabulaire vous pouvez déjà assembler un tas de phrases suivant les
 			modèles&nbsp;:</p>
 			<p class="eo container">
@@ -801,9 +800,9 @@ QCM(
 			<p>Donc à bientôt pour la prochaine leçon&nbsp;!</p>
 
 			<div class="card-panel blue lighten-5">
-				<p>
-				L’inscription n’est indispensable que si vous désirez faire appel à un correcteur. Les correcteurs sont bénévoles et s’occupent chacun d’un nombre limité d'élèves.</p>
-				<p>En demandant un correcteur, vous vous engagez à suivre le cours avec assiduité et informer votre correcteur en cas d’absence prolongée. Votre correcteur est là pour répondre à vos questions sur la langue espéranto, mais aussi sur l'utilisation que l’on peut faire de l’espéranto. N’hésitez pas à vous présenter et faire connaissance.</p>
+				<p>L’inscription n’est indispensable que si vous désirez faire appel à un correcteur. Cette inscription est gratuite.</p>
+				<p>Votre correcteur est là pour répondre à vos questions sur la langue espéranto, mais aussi sur l'utilisation que l’on peut faire de l’espéranto. N’hésitez pas à vous présenter et faire connaissance.</p>
+				<p>En demandant un correcteur, vous vous engagez à suivre le cours avec assiduité et informer votre correcteur en cas d’absence prolongée.</p>
 				<p>Bon apprentissage !</p>	
 			</div>
 		

@@ -27,7 +27,8 @@ else {
     	'urbo' => '',
     	'lando' => '',
     	'kialo' => '',
-    	'sistemo' => ''
+    	'sistemo' => '',
+    	'aktivigita' => '0'
     	);
 }
 if ($rajto!='A' && $rajto!='I'){header("Location:index.php?erarkodo=4");}
@@ -521,11 +522,12 @@ include "adminkapo.inc.php";
 							<td class="col1">Compte activé: </td>
 							<td nowrap>
 							<?php 
+
 							if ($celpersono["aktivigita"]==1) {
 								echo "Jes";
 							}  else {
-								echo "Ne";
-							}
+									echo "Ne";								
+							} 
 							?></td>
 						</tr>
 						<tr>
@@ -747,10 +749,14 @@ include "adminkapo.inc.php";
 						</div>
 						<?php } // fin de la liste des cours suivis ?>
 						
-						<div class="encadre">
-						<p><b>Historique des sections vues :</b></p>
-						<?php listi_lecionerojn($celpersono_id); ?>
-						</div>
+						<?php 
+						if ($celpersono_id!="") {
+						?>
+							<div class="encadre">
+							<p><b>Historique des sections vues :</b></p>
+							<?php listi_lecionerojn($celpersono_id); ?>
+							</div>
+						<?php } ?>
 
 						<div class="encadre">
 							<table class="perso">

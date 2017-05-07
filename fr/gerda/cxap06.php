@@ -46,23 +46,42 @@ include "gerdakapo.inc.php";
 		?>
 
 			<section class="klarigo">
-				<h4><i>terminaison du complément d'object direct (pour montrer un mouvement)</i></h4>
-				<p><span class="eo">la taso falis sur la tablo</span> : 
-				la tasse, qui était déjà sur la table tomba (tout en restant sur la table)</p>
-				<p><span class="eo">la taso falis sur la tablon</span> : la tasse tomba sur la table</p>
-				<p><span class="eo">li promenis en la ĝardeno</span> : il se promenait dans le jardin</p>
-				<p><span class="eo">li promenis en la ĝardenon</span> : il alla se promener dans le jardin</p>
+				<h4>Terminaison du complément d'object direct (pour montrer la destination d’une mouvement)</h4>
+				<p class="parto">Certaines prépositions de lieu peuvent indiquer le lieu où se passe l’action (le sujet réalise l’action dans ce lieu) ou le lieu vers lequel il y un mouvement (le sujet se déplace vers ce lieu ou déplace quelque chose vers ce lieu).</p>
+				<p>C’est le cas des prépositions <span class="eo">en</span>, <span class="eo">sur</span> et <span class="eo">sub</span>. 
+				
+				<p>Exemples :</p>
+				<div class="row">
+					<p class="col s12"><span class="eo">la taso falis <b>sur</b> la tabl<b>o</b></span> : la tasse est tombée sur la table</p>
+					<p class="col s11 offset-s1"><i>la tasse, qui était déjà sur la table tomba (tout en restant sur la table)</i></p>
+					<p class="col s12"><span class="eo">la taso falis <b>sur</b> la tabl<b>on</b></span> : la tasse est tombée sur la table</p>
+					<p class="col s11 offset-s1"><i>la tasse n’était pas sur la table avant de tomber</i></p>
+					<p class="col s12"><span class="eo">li promenis <b>en</b> la ĝarden<b>o</b></span> : il se promenait dans le jardin</p>
+					<p class="col s11 offset-s1"><i>il est resté dans le jardin pendant sa promenade</i></p>
+					<p class="col s12"><span class="eo">li promenis <b>en</b> la ĝarden<b>on</b></span> : il alla se promener dans le jardin</p>
+					<p class="col s11 offset-s1"><i>il n’était pas dans le jardin, il y est allé en se promenant</i></p>
+				</div>
+				
+				<p class="parto"><b>Note :</b> On n’utilise jamais l’accusatif après les prépositions <span class="eo">al</span>, <span class="eo">ĝis</span>,<span class="eo">el</span> et <span class="eo">de</span> car ces prépositions portent en elles-mêmes le sens du mouvement vers ou depuis un lieu.</p>
+					<p>Exemples : </p>
+					<p><span class="eo">mi iras <b>al</b> Pariz<b>o</b></span> : je vais à Paris</p>
+					<p><span class="eo">mi restas <b>ĝis</b> la fin<b>o</b></span> : je reste jusqu’à la fin</p>
+					<p><span class="eo">mi venas <b>el</b> la panvendej<b>o</b></span> : je viens de la boulangerie</p>
+					<p><span class="eo">mi spektas tiun filmon <b>de</b> la komenc<b>o</b></span> : je regarde ce film depuis le début</p>
 
+				<h4>Différences entre les différents modes (-as, -u, -us)</h4>
 				<p class="parto">Notez bien les différences de sens entre les différents modes (-as, -u, -us)
 				dans les phrases interrogatives ci-dessous&nbsp;:</p>
 
-				<p><span class="eo">ĉu li restas?</span> : est-ce qu'il reste&nbsp;?</p>
-				<p><span class="eo">ĉu li restu?</span> : est-ce qu'il doit rester ?&nbsp;; faut-il qu'il reste&nbsp;?</p>
-				<p><span class="eo">ĉu li restus?</span> : est-ce qu'il resterait (si…)&nbsp;?</p>
+				<div class="row">
+					<p class="col s12"><span class="eo">ĉu li rest<b>as</b>?</span>&nbsp;: est-ce qu'il reste&nbsp;?</p>
+					<p class="col s12"><span class="eo">ĉu li rest<b>u</b>?</span>&nbsp;: est-ce qu'il doit rester ?&nbsp;; faut-il qu'il reste&nbsp;?</p>
+					<p class="col s12"><span class="eo">ĉu li rest<b>us</b>?</span>&nbsp;: est-ce qu'il resterait (si…)&nbsp;?</p>
 
-				<p><span class="eo">kion mi diras</span> : que dis-je&nbsp;?</p>
-				<p><span class="eo">kion mi diru</span> : que dois-je dire&nbsp;?&nbsp;; que dire&nbsp;?</p>
-				<p><span class="eo">kion mi dirus</span> : que dirais-je (si…)&nbsp;?</p>
+					<p class="col s12"><span class="eo">kion mi dir<b>as</b></span>&nbsp;: que dis-je&nbsp;?</p>
+					<p class="col s12"><span class="eo">kion mi dir<b>u</b></span>&nbsp;: que dois-je dire&nbsp;?&nbsp;; que dire&nbsp;?</p>
+					<p class="col s12"><span class="eo">kion mi dir<b>us</b></span>&nbsp;: que dirais-je (si…)&nbsp;?</p>
+				</div>
 			</section>
 
 		<?php 

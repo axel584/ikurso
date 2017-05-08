@@ -339,14 +339,16 @@ include "dlekkapo.inc.php";
 			<p class="parto">Considérez maintenant la phrase suivante&nbsp;:</p>
 			
 			<div class="row">
-				<div class="col s7 m9 l8">
+				<div class="col s7 m8 l9">
 					<p><b>Mario joue avec son chien.</b></p>
 					<p>Dans cette phrase, <b>son</b> peut se rapporter à lui-même (c’est son propre chien) ou à quelqu’un d’autre (c'est par exemple le chien de son frère ou sa grand-mère).</p>
 					<p>En espéranto, on utilise dans ce cas des pronoms différents pour indiquer si <b>son</b> se rapporte à lui-même, ou à quelqu’un d’autre.</p>
 			<p>On différencie donc trois cas&nbsp;:</p>
 					
 				</div>
-				<div class="col s5 m3 l4"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/li-ludas-kun-hundo.jpg"></div>
+				<div class="col s5 m4 l3">
+					<img class="responsive-img" alt="Mario ludas kun hundo" src="<?=$vojo?>fr/cge/bildoj/li-ludas-kun-hundo.jpg"><br><span class="creditphoto">photo : <a href="https://stocksnap.io/author/41003">Marvin Meyer</a></span>
+				</div>
 			</div>
 			
 			<fieldset>
@@ -381,34 +383,71 @@ include "dlekkapo.inc.php";
 				<p class="col s12"><span class="eo">Sofia diris al <b>ŝi</b> … </span> = Sophie lui a dit …, (à une autre personne de sexe féminin)</span></p>
 			</div>
 			
-		<fieldset class="memoru">
-			<legend>À RETENIR</legend>
-			<div class="regulo row">
-			<p><b>Si</b> est le <b>pronom réfléchi</b> de la 3<sup>e</sup> personne, du singulier ou du
-			pluriel. <b>Sia</b> est l’adjectif possessif correspondant. <b>Si</b> et <b>sia</b> se rapportent toujours au sujet du verbe. 
-			</p>
-			</div>
-		</fieldset>
+			<fieldset class="memoru">
+				<legend>À RETENIR</legend>
+				<div class="regulo row">
+					<p><b>Si</b> est le <b>pronom réfléchi</b> de la 3<sup>e</sup> personne, du singulier ou du
+					pluriel. <b>Sia</b> est l’adjectif possessif correspondant.</p>
+					<p><b>Si</b> et <b>sia</b> se rapportent toujours au sujet du verbe. </p>
+				</div>
+			</fieldset>
 		
-		<p>Crédits photos :</p>
-		<p class="creditphoto">Marvin Meyer, <a href="https://stocksnap.io/author/41003">https://stocksnap.io/author/41003</a></p>
+			<p class="parto">Notez bien que comme <b>si</b> et <b>sia</b> se rapportent toujours au sujet, ils ne peuvent pas faire partie du sujet.</p>
+			<p>Exemples :<br>
+			<div class="row">
+				<p class="col s12"><span class="eo"><b>Mario kaj <u>lia</u> hundo</b> ludas en la parko.</span> : dans cette phrase, le sujet est <b>Mario kaj lia hundo</b> => pas de réfléchi dans ce cas.</p>
+				<p class="col s12"><span class="eo">Mario ludas en la parko <b>kun <u>sia</u> hundo</b>.</span> : dans cette phrase, le sujet est <b>Mario</b>, et ici <b>kun sia hundo</b> est complément => on emploie le réfléchi.</p>
+			</div>
 			
 
 		<?php 
 		} // fin section 6
 		if ($section=="7") {
 		?>
+		<fieldset class="ekzerco">
+			<legend><strong>EXERCICE</strong> : Complétez les phrases selon le modèle.</legend>
+			<input type="hidden" name="013_cxap08.4" value="1. Complétez les phrases selon le modèle.">
+			<?php atentigo(); ?>
+				<div class="ekzemplo row">
+					<p><em>Exemples :</em></p>
+					<p>Maria manĝis ___ kukon. (Elle a mangé le gâteau de son frère)<br>
+					→ Maria manĝis lian kukon.</p>
+					<p>Maria manĝis ___ kukon. (Elle a mangé son propre gâteau)<br>
+					→ Maria manĝis sian kukon.</p>
+				</div>
+			<div class="tasko">
+			<?php
+				$demandoj=array (
+				21 => "Maria legis ___ libron. (Elle a lu son propre livre)",
+				22 => "Maria legis ___ libron. (Elle a lu le livre de son père)",
+				23 => "Maria legis ___ libron. (Elle a lu le livre de sa sœur)",
+				24 => "Petro atendas ___ filon. (Il attend le fils de son ami)",
+				25 => "Petro atendas ___ filon. (Il attend le fils sa voisine)",
+				26 => "Petro atendas ___ filon. (Il attend son propre fils)",
+				27 => "Mia patro dormos en ___ lito. (Il dormira dans son propre lit)",
+				28 => "Anna skribis ___ nomon sur ___ libro per ___ skribilo. (Elle a écrit son propre nom sur le livre de son amie, avec le stylo de son frère)",
+				29 => "Sofia kaj ___ edzo promenas en la parko. (Sophie et son mari …)"
+				);
+				ekzerco(True, 1);
+			?>
+			</div>
+		</fieldset>
+		
+		<?php 
+		} // fin section 7
+		if ($section=="8") {
+		?>
 		
 			<fieldset class="ekzerco">
 				<legend><strong>EXERCICE</strong> : Traduisez ces textes en français.</legend>
 				<p>Le vocabulaire nouveau se trouve à la fin de l’exercice.</p>
-				<input type="hidden" name="013_cxap08.4" value="4. Même exercice.">
+				<input type="hidden" name="013_cxap08.5" value="5. Traduisez ces textes en français.">
 				<div class="tasko">
 				<?php
 					$demandoj=array (
-					21 => "<br>- Incitas min, ke mia edzino daŭre parolas pri sia antaŭa edzo.<br>- Tio estas nenio ! La mia paroladas pri sia estonta edzo !",
-					22 => "<br>En kafejo:<br>- Kial vi rigardadas al la pordo ?<br>- Mi observadas, ĉu ne iu foriras kun mia surtuto. Kun la via jam antaŭ dek minutoj foriris iu.",
-					23 => "<br>La junaj geedzoj havis konflikton hejme, kaj poste dum la aŭto-veturado ili ambaŭ obstine silentis. Preterpasante aron da azenoj la edzo diris moke:<br>- Ĉu parencoj de vi ?<br>- Jes, boparencoj !"
+					30 => "<br>- Incitas min, ke mia edzino daŭre parolas pri sia antaŭa edzo.<br>- Tio estas nenio ! La mia paroladas pri sia estonta edzo !",
+					31 => "<br>En kafejo:<br>- Kial vi rigardadas al la pordo ?<br>- Mi observadas, ĉu ne iu foriras kun mia surtuto. Kun la via jam antaŭ dek minutoj foriris iu.",
+					32 => "<br>La junaj geedzoj havis konflikton hejme, kaj poste dum la aŭto-veturado ili ambaŭ obstine silentis. Preterpasante aron da azenoj la edzo diris moke:<br>- Ĉu parencoj de vi ?<br>- Jes, boparencoj !"
 					);
 					ekzerco (False, 5);
 				?>
@@ -434,8 +473,8 @@ include "dlekkapo.inc.php";
 				<p class="col s6"><span class="eo">parenco</span> : parent (personne de la même famille)</p>
 			</div>
 		<?php 
-		} // fin section 7
-		if ($section=="8") {
+		} // fin section 8
+		if ($section=="9") {
 		?>
 			<p>
 			Lisez régulièrement le texte suivant à haute voix en ayant soin
@@ -464,8 +503,8 @@ include "dlekkapo.inc.php";
 			anglais <i>hand</i>, <i>hair</i>, <i>have</i>.</p>
 
 		<?php 
-		} // fin section 8
-		if ($section=="9") {
+		} // fin section 9
+		if ($section=="10") {
 		?>
 
 			<p>

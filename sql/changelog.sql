@@ -897,8 +897,6 @@ insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) v
 insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (3,'Formez cinq phrases ayant un sens en combinant les mots de la leçon.',270,'','','verkado',1);
 insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (4,'A votre tour',254,'','','verkado',1);
 
-
-
 insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (1,1,'ekz01_01',1,'Le thé est chaud.','La teo estas varma.','la teo estas varma','',0,1);
 insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (2,1,'ekz01_02',2,'Ton biscuit est sec.','Via biskvito estas seka.','via biskvito estas seka','',0,1);
 insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (3,1,'ekz01_03',3,'Votre ami était beau.','Via amiko estis bela.','via amiko estis bela','',0,1);
@@ -918,6 +916,20 @@ insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,b
 insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (17,3,'ekz01_17',17,'Formez une phrase ayant un sens en combinant les mots de la leçon.','','','',0,0);
 insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (18,3,'ekz01_18',18,'Formez une phrase ayant un sens en combinant les mots de la leçon.','','','',0,0);
 insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (19,4,'ekz01_19',19,'Je me présente','','','',0,0);
+
+-- ajout d'un exercice en section 8.8
+
+UPDATE `lecioneroj` SET `ordo` = '10' WHERE `leciono_id` = 69 AND `ordo` = 9; 
+UPDATE `lecioneroj` SET `ordo` = '9' WHERE `leciono_id` = 69 AND `ordo` = 8; 
+UPDATE `lecioneroj` SET `ordo` = '8', `titolo` = 'Exercice 5' WHERE `leciono_id` = 69 AND `ordo` = 7; 
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '69', 'Exercice 4', 'EKZERCARO', NULL, '7', '0', '0');
+
+--- décalage des réponses de l'exercice 4 qui devient l'exercice 5
+
+UPDATE `respondoj` SET `kodo` = 'ekz08_30', `demando` = '30 <br>- Incitas min, ke mia edzino daŭre parolas pri sia antaŭa edzo.<br>- Tio estas nenio ! La mia paroladas pri sia estonta edzo !' WHERE `lecionero_id` = 79 AND `kodo` = 'ekz08_21';
+UPDATE `respondoj` SET `kodo` = 'ekz08_31', `demando` = '31 <br>En kafejo:<br>- Kial vi rigardadas al la pordo ?<br>- Mi observadas, ĉu ne iu foriras kun mia surtuto. Kun la via jam antaŭ dek minutoj foriris iu.' WHERE `lecionero_id` = 79 AND `kodo` = 'ekz08_22';
+UPDATE `respondoj` SET `kodo` = 'ekz08_32', `demando` = '32 <br>La junaj geedzoj havis konflikton hejme, kaj poste dum la aŭto-veturado ili ambaŭ obstine silentis. Preterpasante aron da azenoj la edzo diris moke:<br>- Ĉu parencoj de vi ?<br>- Jes, boparencoj !' WHERE `lecionero_id` = 79 AND `kodo` = 'ekz08_23';
+
 
 
 

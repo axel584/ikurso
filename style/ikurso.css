@@ -532,6 +532,7 @@ p.parto:before {
 	vertical-align: middle;
 }
 
+/********** liste de vocabulaire *******/
 .vortlisto {
     border: 1px solid #ccc;
     padding: 1em;
@@ -546,6 +547,19 @@ p.parto:before {
 .vortlisto i.material-icons:hover {
 	color: #6d4c41;
 }
+.vortlisto.bildetoj img {
+	border: 1px solid #ccc;
+}
+.vortlisto.bildetoj {
+	text-align: center;
+	font-size: 0.8rem;
+	color: #75706B;
+}
+.vortlisto.bildetoj .eo {
+	font-size: 1.1rem;
+	color: #000;
+}
+
 @media only screen and (max-width: 720px) {
 	.vortlisto div.col + div.col {
 	    margin-top: 1em;
@@ -588,22 +602,20 @@ p.sekva {
 .ligoj i {font-size: inherit;}
 #leciono-fino {margin-top: 2rem;}
 
-/********** vocabulaire *******/
-fieldset.vortoj {
-	border:2px double #64B5F6;
+/********** vocabulaire / règle à retenir *******/
+fieldset.vortoj,
+fieldset.memoru {
+	border:2px double #2196F3;
 	padding:0 1em 1em 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
 
-fieldset.vortoj div.vortlisto {
-	border: none;
-}
-
-fieldset.vortoj legend {
+fieldset.vortoj legend,
+fieldset.memoru legend {
 	padding-left: 0.5em;	
 	padding-right: 1em;
-	color: #64B5F6;
+	color: #2196F3;
 }
 fieldset.vortoj legend:before {
 	font-family: 'Material Icons';
@@ -614,11 +626,14 @@ fieldset.vortoj legend:before {
 	padding-right: 0.5em;
 	vertical-align: middle;
 }
-fieldset.vortoj div.vortlisto {
+fieldset.vortoj div.vortlisto,
+fieldset.memoru div.regulo {
 	border: none;
-	padding: 1em 0 0 0;
+	padding: 0;
 }
-fieldset.vortoj div.row {
+fieldset.vortoj div.row,
+fieldset.memoru div.row {
+	margin-top: 0;
 	margin-bottom: 0;
 }
 span.marque {

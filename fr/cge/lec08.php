@@ -313,24 +313,83 @@ include "dlekkapo.inc.php";
 			if ($section=="6") {
 			?>
 			
-			<p class="parto">
-			<b>Si</b> est le <b>pronom réfléchi</b> de la 3<sup>e</sup> personne, du singulier ou du
-			pluriel, quand il se rapporte au sujet du verbe. <b>Sia</b> est l’adjectif
-			possessif réfléchi correspondant.
-			</p>
+			<p class="parto">Dans la <a href="lec01.php?section=4">première leçon</a>, vous avez vu les pronoms personnels. Pour mémoire, en voici de nouveau la liste.</p>
+			<div class="vortlisto row">
+				<div class="col s12 m6">
+					<p><span class="eo">mi</span> : je</p>
+					<p><span class="eo">vi</span> : tu (ou <span class="eo">ci</span>, peu usité)</p>
+					<p><span class="eo">li</span> : il (personne)</p>
+					<p><span class="eo">ŝi</span> : elle (personne)</p>
+					<p><span class="eo">ĝi</span> : il ou elle (non-personne)</p>
+				</div>
+				<div class="col s12 m6">
+					<p><span class="eo">ni</span> : nous</p>
+					<p><span class="eo">vi</span> : vous</p>
+					<p><span class="eo">ili</span> : ils ou elles</p>
+					<p><span class="eo">oni</span> : on</p>
+				</div>
+			</div>
+			 <p>Vous avez vu également comment on construit les adjectifs possessifs à partir des pronoms en ajoutant la terminaison -<b>a</b>&nbsp;:</p>
+			<div class="row">
+				<p class="col s12"><span class="eo">Li manĝas mi<b>an</b> kukon.</span> : Il mange mon gâteau.</p>
+				<p class="col s12"><span class="eo">Mi ŝatas ŝi<b>ajn</b> kukojn.</span> : J’aime ses gâteaux.</p>
+				<p class="col s12"><span class="eo">Ni ludas kun ili<b>aj</b> infanoj.</span> : Nous jouons avec leurs enfants.</p>
+			</div>
+
+			<p class="parto">Considérez maintenant la phrase suivante&nbsp;:</p>
 			
 			<div class="row">
-				<p class="col s6"><span class="eo">Johano lavis sin.</span></p><p class="col s6"><span class="eo">Johano lavis lin.</span></p>
-				<p class="col s6">= Jean s’est lavé</p><p class="col s6">= Jean l’a lavé, c-à-d. une autre personne, de sexe masculin</p>
+				<div class="col s7 m9 l8">
+					<p><b>Mario joue avec son chien.</b></p>
+					<p>Dans cette phrase, <b>son</b> peut se rapporter à lui-même (c’est son propre chien) ou à quelqu’un d’autre (c'est par exemple le chien de son frère ou sa grand-mère).</p>
+					<p>En espéranto, on utilise dans ce cas des pronoms différents pour indiquer si <b>son</b> se rapporte à lui-même, ou à quelqu’un d’autre.</p>
+			<p>On différencie donc trois cas&nbsp;:</p>
+					
+				</div>
+				<div class="col s5 m3 l4"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/li-ludas-kun-hundo.jpg"></div>
 			</div>
+			
+			<fieldset>
+				<div class="row">
+					<div class="col s12">
+						<p><span class="eo">Mario ludas kun <b>sia</b> hundo.</span><br>= Mario joue avec son propre chien.</p>
+						<p><span class="eo">Mario ludas kun <b>lia</b> hundo.</span><br> = Mario joue avec le chien d’une personne de sexe masculin.</p>
+						<p><span class="eo">Mario ludas kun <b>ŝia</b> hundo.</span><br>= Mario joue avec le chien d’une personne de sexe féminin.</p>
+					</div>
+				</div>
+			</fieldset>
+			
+			<p>Autre exemple&nbsp;:</p>
+
 			<div class="row">
-				<p class="col s6"><span class="eo">Sofia diris al si.</span></p><p class="col s6"><span class="eo">Sofia diris al ŝi.</span></p>
-				<p class="col s6">= Sophie s’est dit, à elle-même.</p><p class="col s6">= Sophie lui a dit, c-à-d. à une autre personne de sexe féminin.</p>
+				<p class="col s12"><span class="eo">Ŝi kisis sian edzon.</span> =&nbsp;Elle a embrassé son (propre) mari.</p>
+				<p class="col s12"><span class="eo">Ŝi kisis ŝian edzon.</span> =&nbsp;Elle a embrassé son mari (le mari d’une autre femme).</p>
 			</div>
+
+			<p class="parto">De la même façon, on différencie&nbsp;:</p>
 			<div class="row">
-				<p class="col s6"><span class="eo">Ŝi kisis sian edzon.</span></p><p class="col s6"><span class="eo">Ŝi kisis ŝian edzon.</span></p>
-				<p class="col s6">= Elle a embrassé son (propre) mari.</p><p class="col s6">= Elle a embrassé son mari, c-à-d. le mari d’une autre femme.</p>
+				<p class="col s12"><span class="eo">Johano lavis <b>sin</b>.</span> = Jean s’est lavé.</span></p>
+				<p class="col s12"><span class="eo">Johano lavis <b>lin</b>.</span> = Jean l’a lavé. (il a lavé une autre personne, de sexe masculin)</span></p>
+				<p class="col s12"><span class="eo">Johano lavis <b>ŝin</b>.</span> = Jean l’a lavée (il a lavé une autre personne, de sexe féminin)</span></p>
 			</div>
+			
+			<p>Autre exemple&nbsp;:</p>
+			
+			<div class="row">
+				<p class="col s12"><span class="eo">Sofia diris al <b>si</b> … </span> = Sophie s’est dit … (à elle-même)</span></p>
+				<p class="col s12"><span class="eo">Sofia diris al <b>li</b> … </span> = Sophie lui a dit …, (à une autre personne de sexe masculin)</span></p>
+				<p class="col s12"><span class="eo">Sofia diris al <b>ŝi</b> … </span> = Sophie lui a dit …, (à une autre personne de sexe féminin)</span></p>
+			</div>
+			
+		<fieldset class="memoru">
+			<legend>À RETENIR</legend>
+			<div class="regulo row">
+			<p><b>Si</b> est le <b>pronom réfléchi</b> de la 3<sup>e</sup> personne, du singulier ou du
+			pluriel. <b>Sia</b> est l’adjectif possessif correspondant. <b>Si</b> et <b>sia</b> se rapportent toujours au sujet du verbe. 
+			</p>
+			</div>
+		</fieldset>
+			
 
 		<?php 
 		} // fin section 6

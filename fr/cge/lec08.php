@@ -389,6 +389,9 @@ include "dlekkapo.inc.php";
 			</p>
 			</div>
 		</fieldset>
+		
+		<p>Crédits photos :</p>
+		<p class="creditphoto">Marvin Meyer, <a href="https://stocksnap.io/author/41003">https://stocksnap.io/author/41003</a></p>
 			
 
 		<?php 

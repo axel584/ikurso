@@ -334,7 +334,7 @@ include "dlekkapo.inc.php";
 		explication.
 		</p>
 		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Traduisez les phrases en français.</legend>
+			<legend><strong>EXERCICE</strong> : Traduisez les mots en français.</legend>
 
 			<input type="hidden" name="013_cxap07.1" value="1. Traduisez les mots en français.">
 			<div class="tasko">
@@ -504,7 +504,7 @@ include "dlekkapo.inc.php";
 		if ($section=="6") {
 		?>
 		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE 1</strong> : Répondez aux questions suivantes.</legend>
+			<legend><strong>EXERCICE 1</strong> : Répondez aux questions suivantes en espéranto.</legend>
 			<input type="hidden" name="013_cxap07.3" value="3. Répondez aux questions suivantes.">
 			<?php atentigo(); ?>
 			<div class="tasko">
@@ -533,7 +533,7 @@ include "dlekkapo.inc.php";
 			<input type="hidden" name="013_cxap07.4" value="4. Écrivez en espéranto quelle heure est indiquée sur chaque image.">
 			<p>Écrivez quelle heure est indiquée sur chacune des images ci-dessus. Veuillez répondre en espéranto, en écrivant les nombres en toutes lettres.</p>
 			<div class="row">
-				<p class="col s12"><span class="eo"><strong>EXEMPLE :.</strong></span></p>
+				<p class="col s12"><strong>EXEMPLE :</strong></p>
 				<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/6h15.jpg"></p>
 				<p class="col s7 m9"><span class="eo">Estas la sesa kaj kvarono.</span>
 				<br>ou <span class="eo">Estas la sesa kaj dek kvin.</span></p>

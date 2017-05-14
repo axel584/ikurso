@@ -735,6 +735,8 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 			echo "<p>Encore ".(1+$combien-$indice)." mot";
 			if ($combien-$indice > 0) echo "s";
 			echo " à réviser...</p>";
+			echo "<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>&nbsp;:&nbsp;";
+			echo "en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
 			echo "<div class='col s12'>";
 			echo "<div class='card-panel white'>";
 			echo "<h3>&nbsp;".$row["fr"]."&nbsp;<div class='chip'>".$row["tipo"]."</div></h3>";

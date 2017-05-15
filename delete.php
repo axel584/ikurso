@@ -26,6 +26,10 @@ if (($celpersono_id!="") && ($validperson==$celpersono["enirnomo"])) {
 	$bdd->exec($demando);
 	$demando = "delete from takso_leciono where persono_id='$celpersono_id'";
 	$bdd->exec($demando);
+	$demando = "delete from personoj_vortoj where persono_id='$celpersono_id'";
+	$bdd->exec($demando);
+	$demando = "delete from personoj_vortoj_respondoj where persono_id='$celpersono_id'";
+	$bdd->exec($demando);
 	header("Location:administri.php?validi=jes");
 }
 header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1

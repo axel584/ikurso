@@ -71,7 +71,10 @@ function listiStudantojn() {
 		echo "<em>inscription le : </em>\n";
 		$ekdt = explode("-",$row["ekdato"]);
 		echo $ekdt[2]."/".$ekdt[1]."/".$ekdt[0]."<br>\n";
-		echo "<em>derni&egrave;re le&ccedil;on envoy&eacute;e le : </em>\n";
+		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.numero='".$row['nunleciono']."'";
+		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
+		$row3 = $result3->fetch();
+		echo "<em>derni&egrave;re le&ccedil;on envoy&eacute;e : <b>".$row3['titolo']."</b>, le : </em>\n";
 		if ($row["lastdato"]==0) {
 			echo "--/--/--\n";
 		}
@@ -217,6 +220,7 @@ function listiEksStudantojn() {
 		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["ekdato"],$ekdt);
 		$ekdt=explode("-",$row["ekdato"]);
 		echo $ekdt[2]."/".$ekdt[1]."/".$ekdt[0]."<br>\n";
+		
 		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.numero='".$row['nunleciono']."'";
 		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
 		$row3 = $result3->fetch();

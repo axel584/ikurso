@@ -50,6 +50,8 @@ include "pagxkapo.inc.php";
 						<!--Nombre de jours : <input type="text" name="nbjours" value="15"> / 
 						Nombre d'élèves : <input type="text" name="nbeleves" value="5">-->
 						<div id="chart_div_evolution"></div>
+						<p>Chaque page du cours indiquée comme "terminée" rapporte un point.</p>
+						<p>Indiquez votre progression en cliquant sur le bouton bleu à la fin de chaque page pour voir votre progression.</p>
 					</div>
 					<div class="col l6">
 					<!-- que mettre ici ? -->

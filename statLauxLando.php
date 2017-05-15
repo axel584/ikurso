@@ -10,10 +10,15 @@ function stat_landoj() {
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 
 	while($row = $result->fetch()) {
-		if (isset($stat[$row["lando"]])) {
-			$stat[$row["lando"]]++;	
+		if ($row["lando"]==null || $row["lando"]=="XX" || $row["lando"]=="--") {
+			$code_pays = "XX";
 		} else {
-			$stat[$row["lando"]]=1;
+			$code_pays = $row["lando"];
+		}
+		if (isset($stat[$code_pays])) {
+			$stat[$code_pays]++;	
+		} else {
+			$stat[$code_pays]=1;
 		}
         
     }	
@@ -26,10 +31,12 @@ function stat_landoj() {
 	foreach($stat as $key => $value) {
 		// si on n'est pas capable de connaitre le nom du pays dont le code est passé, on laisse tomber !
 		if (!isset($nomo_landoj[$key])) {
-			continue;
+			$nomo = "Inconnu";
+		} else {
+			$nomo = $nomo_landoj[$key];
 		}
 		echo "<tr>\n";
-       	echo "<td  class='col1'>&nbsp;".$nomo_landoj[$key]."&nbsp;</td>\n<td align='right'>&nbsp;".$value."&nbsp;</td>\n";
+       	echo "<td  class='col1'>&nbsp;".$nomo."&nbsp;</td>\n<td align='right'>&nbsp;".$value."&nbsp;</td>\n";
         echo "</tr>\n";
 	}
         echo "</tbody>\n</table>\n";

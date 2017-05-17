@@ -1,7 +1,11 @@
 <?php
 include "../util.php";
 $identigilo=isset($_GET['identigilo'])?$_GET['identigilo']:"";
-$pasvorto=isset($_GET['pasvorto'])?$_GET['pasvorto']:"";
+$pasvorto=isset($_GET['pasvorto'])?stripslashes($_GET['pasvorto']):"";
+
+// echo $pasvorto;
+// echo "::";
+// echo md5($pasvorto);
 
 $respondo = array();
 

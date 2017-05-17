@@ -3,7 +3,11 @@
 include "../util.php";
 $retadreso=isset($_GET['retadreso'])?$_GET['retadreso']:"";
 $identigilo=isset($_GET['identigilo'])?$_GET['identigilo']:"";
-$pasvorto=isset($_GET['pasvorto'])?$_GET['pasvorto']:"";
+$pasvorto=isset($_GET['pasvorto'])?stripslashes($_GET['pasvorto']):"";
+
+//echo addslashes($pasvorto);
+//echo "::";
+//echo md5($pasvorto);
 
 // on force l'adresse email en minuscule
 $retadreso=strtolower($retadreso);

@@ -14,7 +14,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 	<script src="<?php echo $vojo;?>js/config.js"></script>
 	<script src="<?php echo $vojo;?>js/init.js"></script>
-	<script src="<?php echo $vojo;?>js/ikurso.js?d=<?php echo date('dm'); ?>"></script>
+	<script src="<?php echo $vojo;?>js/ikurso.js?d=<?php echo time(); ?>"></script>
 
 
 	<script type="text/javascript">

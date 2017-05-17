@@ -29,6 +29,7 @@
   	$( '.datepicker' ).pickadate({
 		selectMonths: true, // Creates a dropdown to control month
 		selectYears: 200, // Creates a dropdown of 100 years to control year
+		dateFormat: 'dd-mm-yyyy',
 	    formatSubmit: 'dd/mm/yyyy',
 	    monthsFull: [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ],
 	    monthsShort: [ 'Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec' ],

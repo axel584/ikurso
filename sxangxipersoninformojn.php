@@ -11,11 +11,10 @@ include "pagxkapo.inc.php";
 $nomMois = array("01"=>"Janvier","02"=>"Février","03"=>"Mars","04"=>"Avril","05"=>"Mai","06"=>"Juin","07"=>"Juillet","08"=>"Août","09"=>"Septembre","10"=>"Octobre","11"=>"Novembre","12"=>"Décembre");
 $elementNaskigxdato = explode("-",$persono["naskigxdato"]);
 if (count($elementNaskigxdato)==3) {
-	$naskigxdato = $elementNaskigxdato[2]." ".$nomMois[$elementNaskigxdato[1]].", ".$elementNaskigxdato[0];
+	$naskigxdato = $elementNaskigxdato[2]."-".$elementNaskigxdato[1]."-".$elementNaskigxdato[0];
 } else {
 	$naskigxdato = "";
 }
-
 if ($persono["stop_rappel"]=="J") {
 	$checkedStopRappel = " checked ";
 } else {
@@ -60,7 +59,7 @@ if ($persono["stop_info"]=="J") {
 
 				<div class="col s6 m4">
 					<label for="naskigxdato" class="">Date de naissance</label>
-					<input id="naskigxdato" name="naskigxdato" type="date" value="<?php echo $naskigxdato;?>" class="datepicker" />
+					<input id="naskigxdato" name="naskigxdato" type="date" data-value="<?=$naskigxdato?>" class="datepicker" />
 				</div>
 				<div class="col s3">
 					<input type="radio" name="sekso" id="seksoM" value="M" <?php if ($persono['sekso']=="M"){echo "checked";}?>>

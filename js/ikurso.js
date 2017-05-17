@@ -7,6 +7,7 @@
     }
 
 
+
     // méthode pour les selecteurs de date dans la partie administration
     //$('#debut_protokolo').pickadate({format: 'yyyy-mm-dd',format_submit: 'yyyy-mm-dd'});
     //$('#fin_protokolo').pickadate({format: 'yyyy-mm-dd',format_submit: 'yyyy-mm-dd'});

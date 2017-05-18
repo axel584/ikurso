@@ -11,6 +11,17 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
+				<li class="collection-header">version 15. Mai 2017</li>
+				<li class="collection-item">
+					<p>Ajout d'explication dans les exercices pour écrire les lettres accentuées à partir de la méthode 'x'.</p>
+					<p>Ajout d'explication sur le COD</p>
+					<p>Ajout de légende dans les statistiques des élèves.</p>
+					<p>Simplification de la page de gestion pour les correcteurs.</p>
+					<p>Correction d'un bug qui empêchait l'affichage de la date de naissance dans les données personnelles.</p>
+					<p>Ébauche d'un corrigé type pour les correcteurs (à continuer).</p>
+					<p>Amélioration de la rubrique <a href="helpo.php">Informations Pratiques</a></p>
+					<p>Corrections diverses de bugs et coquilles…</p>
+				</li>				
 				<li class="collection-header">version 14. Avril 2017</li>
 				<li class="collection-item">
 					<p>Correction dans les points de grammaire des chapitres <a href="<?php echo $vojo;?>fr/gerda/cxap23.php?section=2">23</a> et <a href="<?php echo $vojo;?>fr/gerda/cxap24.php?section=2">24</a> de <em>Gerda malaperis</em>.</p>
@@ -24,7 +35,7 @@ include "pagxkapo.inc.php";
 				<li class="collection-header">version 13. Mars 2017</li>
 				<li class="collection-item">
 					<p>Possibilité d'imprimer les leçons.</p>
-					<p>Ajout d’<a href="<?php echo $vojo;?>statistikoj.php">outils statistiques</a>.</p>
+					<p>Ajout d’outils statistiques.</p>
 					<p>Ajout de l’énoncé des questions dans le message envoyé aux correcteurs.</p>
 					<p>Ajout d'une page pour les correcteurs afin de consulter les exercices de leurs élèves (pour répondre temporairement aux problèmes de mails qui n'arrivent pas à leur destinataire).</p>
 					<p>Corrections diverses, principalement dans le vocabulaire de l’outil de révision grâce aux remarques des élèves (merci Alain !)</p>

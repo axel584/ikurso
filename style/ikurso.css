@@ -532,6 +532,25 @@ p.parto:before {
 	vertical-align: middle;
 }
 
+/********** indication de la durée *******/
+p.dauro {
+	color: #2196F3;
+	margin-bottom:1em;
+}
+p.dauro::before {
+	font-family: 'Material Icons';
+	content: "schedule";
+	font-size:120%;
+	color:#2196F3;
+	padding-right: 0.5em;
+	vertical-align:bottom;
+}
+#enhavtabelo .dauro {
+	font-style: italic;
+	color: #75706B;
+	font-size: 90%;
+}
+
 /********** liste de vocabulaire *******/
 .vortlisto {
     border: 1px solid #ccc;

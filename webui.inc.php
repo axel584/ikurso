@@ -204,14 +204,19 @@ return $res;
 
 function getTitoloLecionero($kurso,$leciono,$lecionero) {
 	global $bdd;
-	$query = "SELECT lecioneroj.titolo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero;
+	$query = "SELECT lecioneroj.titolo,lecioneroj.dauxro FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero;
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
-	$titolo = $result->fetch()['titolo'];
-	$tipo = $result->fetch()['tipo'];
+	$row = $result->fetch();
+	$titolo = $row['titolo'];
+	$dauxro = $row['dauxro'];
+
 	
 	echo '<div class="impression right"><a href="javascript:window.print()" class="waves-effect waves-light btn-floating small blue"><i class="material-icons">print</i></a></div>';
 
 	echo '<h2 id="lec'.$leciono.'.'.$lecionero.'">'.$leciono.'.'.$lecionero.'. '.$titolo.'</h2>';
+	if ($dauxro!=null) {
+		echo '<p class="dauro">Temps moyen estimé : '.$dauxro.' minutes</p>';
+	}
 }
 
 function getTipoLecionero($kurso,$leciono,$lecionero) {
@@ -225,9 +230,9 @@ function getTipoLecionero($kurso,$leciono,$lecionero) {
 function getEnhavtabelo($kurso,$leciono) {
 	global $bdd,$persono_id;
 	if ($persono_id=="") { // Pas connecté : on récupère le sommaire normal
-			$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
+			$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id,lecioneroj.dauxro FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
 	} else { // connecté, on récupère la liste des leçons effectuées
-		$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=".$persono_id." WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."'  order by ordo";
+		$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id,lecioneroj.dauxro  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=".$persono_id." WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."'  order by ordo";
 	}
 	echo '<li>';
 	echo '<div class="collapsible-header active"><i class="material-icons">toc</i>Sommaire de la leçon</div>';
@@ -253,7 +258,12 @@ function getEnhavtabelo($kurso,$leciono) {
 			$tipoLecionero = "";
 		}
 
-		echo '<li id="'.$leciono.'-'.$row['ordo'].'" class="'.$farita.' '.$tipoLecionero.'"><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a></li>';
+		if ($row["dauxro"]!=null) {
+			$dauxro = '<span class="dauro">('.$row["dauxro"].'&nbsp;min)</span>';
+		} else {
+			$dauxro = '';
+		}
+		echo '<li id="'.$leciono.'-'.$row['ordo'].'" class="gramm '.$farita.' '.$tipoLecionero.'"><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].' '.$dauxro.'</a></li>';
 	}
 	echo '</ul>';
 	echo '</div>';

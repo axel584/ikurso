@@ -238,14 +238,14 @@ ul.klarigo li:before {
 /*------------- collapsible ------------*/
 
 .collapsible-body{
-    padding: 1em;
+    padding: 0.5rem;
 }
 .collapsible-body p,
 .collapsible-body ul.listo {
-    padding: 0.5em 2em;
+    padding: 0.5rem 2rem;
 }
 .collapsible-body ul.listo li {
-    padding-left: 2em;
+    padding-left: 2rem;
     text-indent: inherit;
 }
 
@@ -409,13 +409,17 @@ ul#lecionoj li.farita a {
 
 /********** sommaire de la leçon *******/
 
-#enhavtabelo {
-	width:90%;
+ul#enhavtabelo {
 	margin:0;
+	list-style: none;
 }
-#enhavtabelo li {
+ul#enhavtabelo li {
 	line-height:2em;
 	font-weight: 300;
+	padding-left: 2rem;
+	text-indent: -1.5rem;
+	line-height: 130%;
+	margin-bottom: 0.5em;
 }
 @media only screen and (min-width: 993px) {
 	#enhavtabelo li {
@@ -425,43 +429,41 @@ ul#lecionoj li.farita a {
 }
 ul#enhavtabelo li::before {
 	font-family: 'Material Icons';
-	-webkit-font-feature-settings: 'liga';
 /*	content: "done";
 	color: transparent;
 */}
 ul#enhavtabelo li.gramm::before {
 	font-family: 'Material Icons';
-	-webkit-font-feature-settings: 'liga';
 	content: "description";
 	color: #999;
+	margin-right: 0.5rem;
 }
 ul#enhavtabelo li.vortaro::before {
 	font-family: 'Material Icons';
-	-webkit-font-feature-settings: 'liga';
 	content: "spellcheck";
 	color: #999;
+	margin-right: 0.5rem;
 }
 ul#enhavtabelo li.exo::before {
 	font-family: 'Material Icons';
-	-webkit-font-feature-settings: 'liga';
 	content: "mode_edit";
 	color: #999;
+	margin-right: 0.5rem;
 }
 ul#enhavtabelo li.qcm::before {
 	font-family: 'Material Icons';
-	-webkit-font-feature-settings: 'liga';
 	content: "mode_edit";
 	color: #999;
+	margin-right: 0.5rem;
 }
 ul#enhavtabelo li.farita::before {
 	font-family: 'Material Icons';
 	content: "done";
-	-webkit-font-feature-settings: 'liga';
 	color: #2196F3;
+	margin-right: 0.5rem;
 }
 
-#enhavtabelo li a {
-	padding-left: 0.5em;
+ul#enhavtabelo li a {
 	color: #75706B;
 }
 ul#enhavtabelo li.farita a {
@@ -469,10 +471,10 @@ ul#enhavtabelo li.farita a {
 	text-decoration-color: #2196F6;
 }
 
-#enhavtabelo li a:hover {
+ul#enhavtabelo li a:hover {
 	color: #039be5;
 }
-#enhavtabelo li a:active {
+ul#enhavtabelo li a:active {
 	color: #0277bd;
 }
 

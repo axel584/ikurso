@@ -23,6 +23,10 @@ $result = $bdd->query($query);
 	$prochaine_lecon = "<a href='".$urlracine.redirigeSectionParUtilisateur($row["id"])."'>Continuer le cours</a>";
 	$contents=str_replace("##LIEN_COURS##",$prochaine_lecon,$contents);
 
+	// ajout d'un commentaire pour les correcteurs
+	$query2 = "insert into komentoj (studanto, korektanto,dato,teksto) values ('".$row["id"]."','10',NOW(),'Envoi relance 6ème jour')";
+	$bdd->query($query2);
+
 	// envoie de l'email
 	//mailViaSmtp($row["retadreso"],"ikurso@esperanto-france.org","Cours d'espéranto",$contents);
 	mailViaSES($row["retadreso"],"Cours d'espéranto",$contents);
@@ -44,12 +48,13 @@ $result = $bdd->query($query);
 	$contents=str_replace("##ID##",$row["id"],$contents);
 	$contents=str_replace("##NOM##",$nomo,$contents);
 
-	if ($row["kurso"]=="KE") {
-		$contents=str_replace("##LIEN_COURS##","",$contents);
-	} else {
-		$prochaine_lecon = "<a href='".$urlracine.getPrefixeCours($row["kurso"]).getUrlVenontaLeciono($row["kurso"],$row["nunleciono"])."'>Continuer le cours</a>";
-		$contents=str_replace("##LIEN_COURS##",$prochaine_lecon,$contents);
-	}
+	$prochaine_lecon = "<a href='".$urlracine.redirigeSectionParUtilisateur($row["id"])."'>Continuer le cours</a>";
+	$contents=str_replace("##LIEN_COURS##",$prochaine_lecon,$contents);
+
+	// ajout d'un commentaire pour les correcteurs
+	$query2 = "insert into komentoj (studanto, korektanto,dato,teksto) values ('".$row["id"]."','10',NOW(),'Envoi relance 10ème jour')";
+	$bdd->query($query2);
+
 		// envoie de l'email
 	//mailViaSmtp($row["retadreso"],"ikurso@esperanto-france.org","Cours d'espéranto",$contents);
 	mailViaSES($row["retadreso"],"Cours d'espéranto",$contents);

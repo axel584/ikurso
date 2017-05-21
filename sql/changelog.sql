@@ -1040,3 +1040,6 @@ update lecioneroj set dauxro='32' where id=89;
 update lecioneroj set dauxro='5' where id=217;
 update lecioneroj set dauxro='45' where id=90;
 update lecioneroj set dauxro='5' where id=216;
+
+-- modifs suite à la réécriture de la leçon 2 sur le COD
+UPDATE lecioneroj SET titolo = 'Le complément d’objet direct', dauxro = '10' WHERE id=10

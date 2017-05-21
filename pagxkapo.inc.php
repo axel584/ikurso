@@ -34,7 +34,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		});
 		</script>
 		<script type="text/javascript" src="<?php echo $vojo;?>xAlUtf8.js"></script>	
-		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css"  media="screen"/>
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css"  media="all"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/impression.css"  media="print"/>
 
 		<!--Let browser know website is optimized for mobile-->

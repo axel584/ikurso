@@ -113,13 +113,16 @@ QCM_bildoj(
 		if ($section=="3") {
 		?>
 		
-		<p class="parto">Il existe une autre terminaison, bien pratique, qui nous permet de
-		reconnaître le complément d’objet direct dans une phrase. Il s’agit de
-		la terminaison <b>-n</b> que l’on ajoute à la fin des noms, pronoms
-		et des adjectifs pour former le complément d’objet direct. On
-		reconnaîtra donc le complément d’objet direct par sa terminaison <b>-n</b>
-		que l’on nomme également <b>accusatif</b>.</p>
+		<p class="parto">Vous avez sûrement déjà entendu parler du complément d’objet direct (ou C.O.D.). Par exemple, dans la phrase&nbsp;:<br>
+			&emsp;<b>Elle lit un livre.</b><br>
+			si vous posez la question <em>Elle lit <u>quoi</u> ?</em>, la réponse est <em>un livre</em>. Ici, <em>un livre</em> est le <b>complément d’objet direct</b>, c’est <b><u>l’objet sur lequel s’applique l’action</u></b>.</p>
+			<p>De la même façon, dans la phrase&nbsp;:<br>
+			&emsp;<b>Je conduis la voiture de mon père.</b><br>
+			<em>la voiture de mon père</em> est le complément d’objet direct. <em>Je conduis <u>quoi</u> ? La voiture de mon père</em>.
+		</p>
 		
+		<p class="parto">En espéranto, on ajoute la terminaison <b>n</b> à l’adjectif ou au nom pour indiquer le complément d’objet direct. Par exemple&nbsp;</p>
+			
 		<div class="vortlisto row">
 			<p class="col s6">
 				<a href="<?php echo $vojo;?>fr/son/l02-1.mp3" class="sm2_button"></a>
@@ -128,33 +131,112 @@ QCM_bildoj(
 		</div>
 		
 		<p class="rimarko"><strong>REMARQUE :</strong> 
-		Prononcez bien le n final sans nasaliser la voyelle précédente&nbsp;: 
-		<span class="eo">varman</span> rime avec le mot français <em>Anne</em>, 
-		et <span class="eo">kafon</span> avec <em>tonne</em>.</p>
+		Prononcez bien le <b>n</b> final&nbsp;:	<span class="eo">belan</span> rime avec <em>Anne</em> et et <span class="eo">libron</span> avec <em>tonne</em>.</p>
 		
-		<p>Au pluriel : </p>
+		<p>Au pluriel, la terminaison <b>n</b> se place après la terminaison <b>j</b> du pluriel : </p>
 		<div class="vortlisto row">
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l02-2.mp3" class="sm2_button"></a>
+			<p class="col s6">
+				<a href="<?php echo $vojo;?>fr/son/l02-2.mp3" class="sm2_button"></a>
 				<span class="eo">Ni sukeras la varmaj<b>n</b> kafoj<b>n</b>.</span></p>
 			<p class="col s6">Nous sucrons les cafés chauds.</p>
 		</div>
 
-		<p class="rimarko"><strong>REMARQUE</strong> : </p>
+		<p class="parto">En français, il n’y a pas de terminaison pour marquer le complément d’objet direct. C’est l’ordre des mots qui indique le complément d’objet direct, l’ordre normal de la phrase étant SUJET – VERBE – COMPLÉMENT.</p>
+		<p> En espéranto, l’ordre des mots est plus libre, et la terminaison <b>n</b> permet alors d’identifier le complément d’objet direct.</p>
 		
-		<ul>
-			<li>Notez que la terminaison du pluriel vient avant celle de l’accusatif, qui
-		elle-même vient toujours en dernier. Prononcez <span class="eo">varmajn</span> comme
-		<span class="eo"><em><u>var</u>m-ail-ne</em></span> (e muet) et <span class="eo">kafojn</span> comme 
-		<span class="eo"><em><u>ka</u>f-oï-ne</em></span> (e muet).</li>
-		</ul>
+		<p class="rimarko">C’est le même principe que dans des langues telles que l’allemand, le polonais, le russe ou le finlandais, pour d’en citer que quelques-unes.</p>
+		<p>On parle alors d’<b>accusatif</b>.</p>
 		
-		<p class="parto"><strong>ATTENTION</strong> : Avec le verbe <i>être</i> qui n’a jamais de complément d’objet direct, on
-		n’utilise pas l’accusatif, car le verbe <i>être</i> implique que le sujet et
-		l’attribut sont « équivalents ».</p>
-		<p><span class="eo">Ŝi estas bela.</span> équivaut à : <span class="eo">Ŝi = bela</span>.</p>
-		<p><span class="eo">Li estas instruisto.</span> équivaut à : <span class="eo">Li = instruisto</span>.</p>
+		<p class="parto">Voici un exemple montrant la souplesse qu’apporte l’utilisation de l’accusatif pour indiquer le complément d’objet direct&nbsp;:</p>
+		<div class="row">
+			<p class="col s12"><span class="eo">mi vidas li<b>n</b> = li<b>n</b> mi vidas</span>&nbsp;: je le vois</p>
+			<p class="col s11 offset-s1">je vois <em>quoi</em> ? <em>lui</em> = C.O.D. marqué ici par l’accusatif (-<b>n</b>)</p>
+		</div>
+		<div class="row">
+			<p class="col s12"><span class="eo">mi<b>n</b> li vidas = li vidas mi<b>n</b></span>&nbsp;: il me voit</p>
+			<p class="col s11 offset-s1">il voit <em>quoi (ou qui)</em> ? <em>me (=moi)</em> = C.O.D. marqué ici par l’accusatif (-<b>n</b>)</p>
+		</div>
+		
+		<p>Vous aurez sûrement remarqué dans ce dernier exemple que le pronom <em>je</em> prend une autre forme lorsqu’il est complément d’objet direct et devient <em>me</em>. Donc même en français, on trouve pour les pronoms des formes différentes selon qu’on les emploie comme sujet ou comme complément d’objet direct. En espéranto, cette forme est régulière&nbsp;: pour les pronoms, comme pour les noms, on ajoute simplement la terminaison <b>n</b> et donc <span class="eo">li</span> devient <span class="eo">li<b>n</b></span> et <span class="eo">mi</span> devient <span class="eo">mi<b>n</b></span>.</p>
+		
+		<p class="parto"><strong>ATTENTION</strong> : Le verbe <i>être</i> n’a jamais de complément d’objet direct, donc on
+		n’utilise pas l’accusatif. On dit donc par exemple&nbsp;:</p>
+		<div class="row">
+			<p class="col s12"><span class="eo">Mi estas vir<u>o</u>.</span></p>
+			<p class="col s12"><span class="eo">Li estas instruist<u>o</u>.</span></p>
+		</div>
+		
+		<p>En effet, le verbe être est un verbe d’état&nbsp;: il «relie», il «décrit» ce qui vient ensuite. Ce qui vient ensuite n’est pas le résultat d’une action comme <em>lire</em> ou <em>conduire</em>, il se contente de décrire ce qui <em>est</em>. Un verbe d’état n’a pas/ne peut pas avoir de complément d’objet direct.</p>
+		<p><span class="eo">Li estas instruisto.</span> équivaut à : <span class="eo">Li</span> = <span class="eo">instruisto</span>.</p>
+		
+		<p>Dans cette phrase, <span class="eo">li</span> est le <b>sujet</b> et <span class="eo">instruisto</span> est l’<b>attribut du sujet</b>.</p>
 
+		<p class="parto">Il existe un petit groupe  de verbes d’état, après lesquels on ne met donc pas l’accusatif&nbsp;: <span class="eo">esti</span> (être), <span class="eo">resti</span> (rester), <span class="eo">ŝajni</span> (paraître), <span class="eo">aspekti</span> (sembler).</p>
 		
+		<p>Exemples&nbsp;:</p>
+		<div class="row">
+			<p class="col s12 m6"><span class="eo">La vetero ŝajnas bela.</span>&nbsp;: Le temps semble beau.</p>
+			<p class="col s11 offset-s1 m6">→ verbe d’<b>état</b> : ŝajni</p>
+			<p class="col s12 m6"><span class="eo">Ŝi aspektas granda.</span>&nbsp;: Elle paraît grande.</p>
+			<p class="col s11 offset-s1 m6">→ verbe d’<b>état</b> : aspekti</p>
+		</div>
+
+		<p>Notez bien la différence entre&nbsp;:</p>
+		<div class="row">
+			<p class="col s12 m6"><span class="eo">Ili estas najbaroj.</span>&nbsp;: Ils sont voisins.</p>
+			<p class="col s11 offset-s1 m6">→ verbe d’<b>état</b> : esti</p>
+		</div>
+		<p>et :</p>
+		<div class="row">
+			<p class="col s12"><span class="eo">Li rigardas la najbaro<b>n</b>.</span>&nbsp;: Il regarde le voisin.</p>
+			<p class="col s11 offset-s1">→ verbe d’<b>action</b> : rigardi, donc ici <span class="eo">najbaro</span> est C.O.D. et on le met à l’accusatif.</p>
+		</div>
+		
+		<h2>C’est à vous !</h2>
+		<p class="parto">Pour chaque phrase, indiquez à quel endroit vous mettriez l’accusatif si vous deviez les traduire en espéranto&nbsp;:</p>
+			
+			<?php
+			QCM(
+				array(
+					array(
+						"question"=>"Il mange du poisson.",
+						"propositions"=>array("il", "du poisson", "il n’y a pas besoin d’accusatif"),
+						"indices"=>array("","",""),
+						"reponse"=>2
+					),
+					array(
+						"question"=>"Les enfants apprennent leurs leçons.",
+						"propositions"=>array("les enfants", "leurs leçons", "il n’y a pas besoin d’accusatif"),
+						"indices"=>array("","",""),
+						"reponse"=>2
+					),
+					array(
+						"question"=>"Mon frère est informaticien.",
+						"propositions"=>array("mon frère", "informaticien", "il n’y a pas besoin d’accusatif"),
+						"indices"=>array("","",""),
+						"reponse"=>3
+					),
+					array(
+						"question"=>"Mes parents mangent les restes d’hier soir.",
+						"propositions"=>array("mes parents", "les restes", "les restes d’hier soir", "il n’y a pas besoin d’accusatif"),
+						"indices"=>array("",",","",""),
+						"reponse"=>3
+					),
+					array(
+						"question"=>"Il promène le chien.",
+						"propositions"=>array("il", "le chien", "il n’y a pas besoin d’accusatif"),
+						"indices"=>array("","",""),
+						"reponse"=>2
+					),
+					array(
+						"question"=>"Il se promène le matin.",
+						"propositions"=>array("il", "le matin", "il n’y a pas besoin d’accusatif"),
+						"indices"=>array("","",""),
+						"reponse"=>3
+					),
+				)
+			);
+		?>
 		
 		<?php 
 		} // fin section

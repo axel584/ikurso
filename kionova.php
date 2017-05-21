@@ -13,12 +13,13 @@ include "pagxkapo.inc.php";
 			<ul class="collection with-header">
 				<li class="collection-header">version 15. Mai 2017</li>
 				<li class="collection-item">
-					<p>Ajout d'explication dans les exercices pour écrire les lettres accentuées à partir de la méthode 'x'.</p>
-					<p>Ajout d'explication sur le COD</p>
-					<p>Ajout de légende dans les statistiques des élèves.</p>
+					<p>Ajout d’explications dans les exercices pour écrire les lettres accentuées à partir de la méthode <em>x</em>.</p>
+					<p>Ajout d’explications sur le COD dans la <a href="<?php echo $vojo;?>fr/cge/lec02.php?section=3">leçon 2 du cours en 10 leçons</a>. (merci Patrice&nbsp;!)</p>
+					<p>Ajout des durées moyennes pour étudier chaque section du cours en 10 leçons.</p>
+					<p>Ajout de légendes dans les statistiques des élèves.</p>
 					<p>Simplification de la page de gestion pour les correcteurs.</p>
-					<p>Correction d'un bug qui empêchait l'affichage de la date de naissance dans les données personnelles.</p>
-					<p>Ébauche d'un corrigé type pour les correcteurs (à continuer).</p>
+					<p>Correction d’un bug qui empêchait l’affichage de la date de naissance dans les données personnelles.</p>
+					<p>Ébauche d’un corrigé type pour les correcteurs (à continuer).</p>
 					<p>Amélioration de la rubrique <a href="helpo.php">Informations Pratiques</a></p>
 					<p>Corrections diverses de bugs et coquilles…</p>
 				</li>				

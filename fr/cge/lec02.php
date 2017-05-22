@@ -121,7 +121,7 @@ QCM_bildoj(
 			<em>la voiture de mon père</em> est le complément d’objet direct. <em>Je conduis <u>quoi</u> ? La voiture de mon père</em>.
 		</p>
 		
-		<p class="parto">En espéranto, on ajoute la terminaison <b>n</b> à l’adjectif ou au nom pour indiquer le complément d’objet direct. Par exemple&nbsp;</p>
+		<p class="parto">En espéranto, on utilise la terminaison <b>n</b> pour indiquer le complément d’objet direct&nbsp;: on ajoute alors ce <b>n</b> à la fin des noms, des adjectifs et des pronoms. Par exemple&nbsp;:</p>
 			
 		<div class="vortlisto row">
 			<p class="col s6">

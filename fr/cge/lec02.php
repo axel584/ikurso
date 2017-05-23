@@ -193,7 +193,7 @@ QCM_bildoj(
 		</div>
 		
 		<h2>C’est à vous !</h2>
-		<p class="parto">Pour chaque phrase, indiquez à quel endroit vous mettriez l’accusatif si vous deviez les traduire en espéranto&nbsp;:</p>
+		<p class="parto">Pour chaque phrase, indiquez à quel endroit vous mettriez l’accusatif si vous deviez la traduire en espéranto&nbsp;:</p>
 			
 			<?php
 			QCM(

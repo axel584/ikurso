@@ -5,7 +5,7 @@ import sys
 import config
 from datetime import date, time, datetime
 
-sortie = codecs.open('statistique-par-statut.txt','w','utf8')
+sortie = codecs.open('statistique-apres.txt','w','utf8')
 
 connection = MySQLdb.connect (host = "127.0.0.1",user = config.user,passwd = config.passwd,db = config.db,charset = 'utf8',use_unicode=True)
 cursor = connection.cursor()
@@ -22,9 +22,9 @@ nombreDeJours={} # nombreDeJours[5]=45 veut dire qu'il y a 45 élèves qui ont e
 # 	for stato, in cursor2.fetchall():
 # 		persono[id]=stato
 
-cursor.execute("select horo, persono_id from protokolo where kategorio='TASKO SENDITA' and teksto like 'gerda%' order by horo")
+cursor.execute("select dato, persono_id from personoj_lecionoj where dato>'2016-06-01' and dato<'2017-06-01' order by dato")
 for horo,persono_id in cursor.fetchall():
-	# if (not persono.has_key(persono_id) or persono[persono_id]!='K') :
+	# if (not persono.has_key(persono_id) or persono[persono_id]!='F') : # on ne prends que les élèves qui ont terminé
 	# 	continue
 	if lastleciono.has_key(persono_id) :
 		print "on a deja une valeur pour ",persono_id

@@ -6,6 +6,81 @@ $persono_id=$_SESSION["persono_id"];
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
 include "pagxkapo.inc.php";
+
+function afficheUrl($url) {
+	echo "<a target='_NEW' href='".$url["url"]."'>".$url["url"]."</a><br/>";
+}
+
+function afficheEmail($email) {
+	echo "<a href='mailto:".$email["email"]."'>".$email["email"]."</a><br/>";
+}
+
+function afficheAdresse($adresse) {
+	echo $adresse["adresse"]."<br/>";
+	if ($adresse["complement"]!="") {
+		echo $adresse["complement"]."<br/>";
+	}
+	echo $adresse["codepostal"]." ".$adresse["ville"]."<br/>";
+
+}
+
+function afficheAssociationFrancaise($idArthur) {
+	$json_url = "https://esperanto-france.org/api/personne/".$idArthur;
+	$json = file_get_contents($json_url);
+	$data = json_decode($json, TRUE);
+	echo $data["nom"]."<br/>";
+	foreach ($data["adresse"] as $adresse){
+		afficheAdresse($adresse);
+	}
+	foreach ($data["internet"] as $url){
+		afficheUrl($url);
+	}	
+	foreach ($data["email"] as $email){
+		afficheEmail($email);
+	}	
+	// echo "<pre>";
+	// print_r($data);
+	// echo "</pre>";
+}
+
+function afficheInformationNationale($idArthur) {
+	echo "<div class='row'>";
+	echo "<h2>Association près de chez vous</h2>";
+	echo "Espéranto-France<br/>";
+	echo "4bis, rue de la Cerisaie<br/>";
+	echo "75004 Paris";
+	echo "</div>";
+
+}
+
+function afficheDepartement($numeroDepartement) {
+	$json_url = "https://esperanto-france.org/api/panorama/zone/".$numeroDepartement;
+	//echo $json_url;
+	$json = file_get_contents($json_url);
+	$data = json_decode($json, TRUE);
+	//echo "<pre>";
+	if (sizeof($data["associations"])==0) {
+		// on affiche les infos d'UFE
+		afficheInformationNationale();
+	} elseif (sizeof($data["associations"])==1) {
+		echo "<div class='row'>";
+		echo "<h2>Association près de chez vous</h2>";
+		$id = $data["associations"][0]["id"];
+		afficheAssociationFrancaise($id);
+		echo "</div>";
+	} elseif (sizeof($data["associations"])>1) {
+		echo "<div class='row'>";
+		echo "<h1>Associations près de chez vous</h1>";
+		foreach ($data["associations"] as $association){
+			afficheAssociationFrancaise($association["id"]);
+			echo "<hr/>";
+		}
+		echo "</div>";
+	}
+	//print_r($data["associations"]);
+	//echo "</pre>";	
+}
+
 ?>
 
 	<div class="row">
@@ -67,12 +142,32 @@ if (isset($_GET["aktivigo"])) {
 				</span>
 			</div>
 			
+<?php
+if ($persono['lando']!="" && $persono['lando']!="FR") {
+	// gérer ici les associations nationales != France
+}
+if ($persono['lando']=="FR" && $persono['posxtkodo']!="") {
+	// cas des départements français : on recherche dans arthur
+	$departement = substr($persono['posxtkodo'],0,2);
+	//echo $departement;
+	afficheDepartement($departement);
+
+}
+			//<div class="row">
+			//</div>
+
+?>			
+
+
 				<div class="row">
 				<div class="col s10">
 					<a class="btn waves-effect waves-light blue right" href="sxangxipersoninformojn.php">Modifier</a>
 				</div>
 			</div>
 			</section>
+
+
+
 		
 			<section id="rimarko" class="rimarko primaire-texte texte-moyen">
 			<div class="row">

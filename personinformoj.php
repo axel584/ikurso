@@ -141,6 +141,12 @@ if (isset($_GET["aktivigo"])) {
 					?>
 				</span>
 			</div>
+
+				<div class="row">
+				<div class="col s10">
+					<a class="btn waves-effect waves-light blue right" href="sxangxipersoninformojn.php">Modifier</a>
+				</div>
+			</div>			
 			
 <?php
 if ($persono['lando']!="" && $persono['lando']!="FR") {
@@ -159,11 +165,7 @@ if ($persono['lando']=="FR" && $persono['posxtkodo']!="") {
 ?>			
 
 
-				<div class="row">
-				<div class="col s10">
-					<a class="btn waves-effect waves-light blue right" href="sxangxipersoninformojn.php">Modifier</a>
-				</div>
-			</div>
+
 			</section>
 
 

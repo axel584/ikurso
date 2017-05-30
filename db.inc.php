@@ -26,9 +26,10 @@ function fermiDatumbazon() {
 // Elirvaluo : id de la persono (unika nombro por retrovi iun)
 function kreiPersonon($enirnomo,$pasvorto,$retadreso,$aktivigo) {
     global $bdd;
+    $md5 = md5($pasvorto);
      $query = "insert into personoj";
      $query .="(enirnomo,pasvorto_md5,retadreso,aktivigo,ekdato) ";
-     $query .="values ('$enirnomo',md5('$pasvorto'),'$retadreso','$aktivigo',now())";
+     $query .="values ('$enirnomo','$md5','$retadreso','$aktivigo',now())";
      $bdd->exec($query);
      return $bdd->lastInsertId();
 }

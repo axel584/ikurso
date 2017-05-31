@@ -128,7 +128,8 @@ function afixsi_naskigxdaton ($dato) {
 	echo "\">";
 }
 
-function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
+// la variable $korektanto_id permet de selectionner par défaut le correcteur idéal
+function listi_Korektantoj_laux_kurso($studanto_id,$kurso,$korektanto_id) {
 	global $bdd;
 	echo "<select name=\"korektanto_id\">";
 	$trovita_korektanto="ne";
@@ -163,12 +164,6 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso) {
 	}
 	
 	asort($procentajxo);
-	
-	//recherche si l'élève en cours a un correcteur et le rajoute à sa liste si besoin
-	$demando = "select korektanto from nuna_kurso where studanto='".$studanto_id."'";
-	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-	$korektanto_id = $result->fetch()["korektanto"];
-
 
 	// mi ordigas la tabulon kaj skribi gxin
 	/*ksort($tabulo);
@@ -675,7 +670,7 @@ include "adminkapo.inc.php";
 										<td>
 											<a href="javascript:document.administri2.action='administriNunanKurson.php';document.administri2.submit();">
 											<img src="bildoj/filesaveas.png"  align="middle"></a></td>
-										<td><?php listi_Korektantoj_laux_kurso($celpersono_id,$nuna_kurso['kurso']); ?></td>
+										<td><?php listi_Korektantoj_laux_kurso($celpersono_id,$nuna_kurso['kurso'],0); ?></td>
 									<?php } else { ?>
 										<td><img src="bildoj/1rightarrow.png" align="middle"></td>
 										<td><strong><a href="administri.php?celpersono_id=<?=$nuna_kurso['korektanto_id']?>">
@@ -736,7 +731,7 @@ include "adminkapo.inc.php";
 										}
 									?>
 
-									<?php listi_Korektantoj_laux_kurso($celpersono["id"],$celpersono["kurso"]); ?></td>
+									<?php listi_Korektantoj_laux_kurso($celpersono["id"],$celpersono["kurso"],$plejTaugaKorektanto); ?></td>
 									<td>
 									<?php $kurso = $celpersono["kurso"];
 										simplaVorto("nomo","kursoj"," where kodo='$kurso'"); ?>

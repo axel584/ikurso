@@ -454,7 +454,7 @@ include "dlekkapo.inc.php";
 						<p><span class="eo">lundo</span> : lundi</p>
 						<p><span class="eo">mardo</span> : mardi</p>
 						<p><span class="eo">merkredo</span> : mercredi</p>
-						<p><span class="eo">jaŭdo</span> : jeudi</p>
+						<p><span class="eo">ĵaŭdo</span> : jeudi</p>
 					</div>
 					<div class="col s6">
 						<p><span class="eo">vendredo</span> : vendredi</p>

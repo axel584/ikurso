@@ -144,7 +144,7 @@ QCM_bildoj(
 		<p class="parto">En français, il n’y a pas de terminaison pour marquer le complément d’objet direct. C’est l’ordre des mots qui indique le complément d’objet direct, l’ordre normal de la phrase étant SUJET – VERBE – COMPLÉMENT.</p>
 		<p> En espéranto, l’ordre des mots est plus libre, et la terminaison <b>n</b> permet alors d’identifier le complément d’objet direct.</p>
 		
-		<p class="rimarko">C’est le même principe que dans des langues telles que l’allemand, le polonais, le russe ou le finlandais, pour d’en citer que quelques-unes.</p>
+		<p class="rimarko">C’est le même principe que dans des langues telles que l’allemand, le polonais, le russe ou le latin, pour n’en citer que quelques-unes.</p>
 		<p>On parle alors d’<b>accusatif</b>.</p>
 		
 		<p class="parto">Voici un exemple montrant la souplesse qu’apporte l’utilisation de l’accusatif pour indiquer le complément d’objet direct&nbsp;:</p>

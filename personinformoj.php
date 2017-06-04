@@ -16,11 +16,11 @@ function afficheEmail($email) {
 }
 
 function afficheAdresse($adresse) {
-	echo $adresse["adresse"]."<br/>";
+	echo "<p>".$adresse["adresse"]."<br/>";
 	if ($adresse["complement"]!="") {
 		echo $adresse["complement"]."<br/>";
 	}
-	echo $adresse["codepostal"]." ".$adresse["ville"]."<br/>";
+	echo $adresse["codepostal"]." ".$adresse["ville"]."</p>";
 
 }
 
@@ -28,7 +28,7 @@ function afficheAssociationFrancaise($idArthur) {
 	$json_url = "https://esperanto-france.org/api/personne/".$idArthur;
 	$json = file_get_contents($json_url);
 	$data = json_decode($json, TRUE);
-	echo $data["nom"]."<br/>";
+	echo "<span class='title'>".$data["nom"]."</span>";
 	foreach ($data["adresse"] as $adresse){
 		afficheAdresse($adresse);
 	}
@@ -65,16 +65,20 @@ function afficheDepartement($numeroDepartement) {
 	} elseif (sizeof($data["associations"])==1) {
 		echo "<div class='row'>";
 		echo "<h2>Association près de chez vous</h2>";
+		echo "<ul class='collection local'>";
 		$id = $data["associations"][0]["id"];
 		afficheAssociationFrancaise($id);
 		echo "</div>";
 	} elseif (sizeof($data["associations"])>1) {
 		echo "<div class='row'>";
-		echo "<h1>Associations près de chez vous</h1>";
+		echo "<h2>Associations près de chez vous</h2>";
+		echo "<ul class='collection local'>";
 		foreach ($data["associations"] as $association){
+			echo "<li class='collection-item'>";
 			afficheAssociationFrancaise($association["id"]);
-			echo "<hr/>";
+			echo "</li>";
 		}
+		echo "</ul>";
 		echo "</div>";
 	}
 	//print_r($data["associations"]);

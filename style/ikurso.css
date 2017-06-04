@@ -151,9 +151,22 @@ secondary-content {
     background-color: #E3F2FD;
     cursor: pointer;
 }
-.collection .collection-item.active {
+.collection .collection-item:active {
     background-color: #2196F3;
     color: #FFF;
+}
+/*----- collections pour asso locales -----*/
+.collection.local .collection-item .title {
+	font-weight: 500;
+}
+.collection.local .collection-item:hover, 
+.collection.local .collection-item:active {
+    background-color: inherit;
+    cursor: default;
+    color: inherit;
+}
+.collection.local .collection-item a {
+    cursor: pointer;
 }
 /*--------------------------------*/
 

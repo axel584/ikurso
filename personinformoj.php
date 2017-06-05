@@ -16,11 +16,38 @@ function afficheEmail($email) {
 }
 
 function afficheAdresse($adresse) {
-	echo "<p>".$adresse["adresse"]."<br/>";
+	echo $adresse["adresse"]."<br/>";
 	if ($adresse["complement"]!="") {
 		echo $adresse["complement"]."<br/>";
 	}
-	echo $adresse["codepostal"]." ".$adresse["ville"]."</p>";
+	echo $adresse["codepostal"]." ".$adresse["ville"]."<br/>";
+
+}
+
+function afficheAssociationNationale($pays) {
+	if ($pays=="BE") {
+		echo "<div class='row'>";
+		echo "<h2>Association près de chez vous</h2>";
+		echo "<b>Association Brusseloise</b><br/>";
+		echo "<a href='http://www.esperantobruselo.org'>http://www.esperantobruselo.org</a><br/>";
+		echo "<b>Association wallone</b><br/>";
+		echo "<a href='www.esperanto-wallonie.be'>www.esperanto-wallonie.be</a><br/>";
+		
+		echo "</div>";
+	}
+	elseif ($pays=="CA") {
+		echo "<div class='row'>";
+		echo "<h2>Association près de chez vous</h2>";
+		echo "<b>Société québécoise d'espéranto</b><br/>";
+		echo "6595, rue Briand<br/>";
+		echo "Montréal, Québec, H4E 3L4<br/>";
+		echo "<a href='www.esperanto.qc.ca'>www.esperanto.qc.ca</a><br/>";
+		echo "<a href='mailto:informo@esperanto.qc.ca'>informo@esperanto.qc.ca</a><br/>";
+	} else {
+		afficheInformationNationale();
+	}
+	
+
 
 }
 
@@ -155,6 +182,7 @@ if (isset($_GET["aktivigo"])) {
 <?php
 if ($persono['lando']!="" && $persono['lando']!="FR") {
 	// gérer ici les associations nationales != France
+	afficheAssociationNationale($persono['lando']);
 }
 if ($persono['lando']=="FR" && $persono['posxtkodo']!="") {
 	// cas des départements français : on recherche dans arthur

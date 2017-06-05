@@ -71,7 +71,7 @@ $query = "SELECT numero,kurso,titolo  FROM `lecionoj` WHERE kurso='CG' order by 
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
 	$nbReponse = $nbReponse + 1;
-	echo "<div class='collapsible-header'><a href='korektado.php?kurso=CG&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></div>\n";
+	echo "<div class='collapsible-header'><a href='korektado-admin.php?kurso=CG&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></div>\n";
 }
 ?>
 				<div class="collapsible-header active"><i class="material-icons">toc</i>Gerda Malaperis</div>
@@ -82,7 +82,7 @@ $query = "SELECT numero,kurso,titolo  FROM `lecionoj` WHERE kurso='GR' order by 
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
 	$nbReponse = $nbReponse + 1;
-	echo "<div class='collapsible-header'><a href='korektado.php?kurso=GR&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></div>\n";
+	echo "<div class='collapsible-header'><a href='korektado-admin.php?kurso=GR&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></div>\n";
 }
 ?>	
 

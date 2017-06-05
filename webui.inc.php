@@ -371,6 +371,66 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 }
 
 
+
+function getEkzercon($id,$persono_id) {
+	global $bdd;
+		if ($persono_id=="") {
+		$idenfication=False;
+	} else {
+		$idenfication =True;
+	}
+	$queryEkzerco = "SELECT komando,komando_detalo,ekzemplo,typo,x2u,korektebla FROM `ekzercoj` where id=".$id;
+	$resultEkzerco = $bdd->query($queryEkzerco) or die(print_r($bdd->errorInfo()));
+	$rowEkzerco = $resultEkzerco->fetch();
+	echo "<fieldset class='ekzerco'>";
+	echo "<legend><strong>EXERCICE</strong> : ".$rowEkzerco["komando"]."</legend>";
+	if ($rowEkzerco["x2u"]==1) {
+		echo "<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>&nbsp;:&nbsp;";
+		echo "en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
+	}
+	if ($rowEkzerco["korektebla"]==1) {
+		echo "<p class='eo eta'>Plusieurs réponses sont possibles. Si vous indiquez l'une des bonnes réponses, elle sera automatiquement soulignée en vert.<br/>Si la réponse n'est pas soulignée, cela ne veut pas dire qu'elle soit incorrecte, mais simplement que le système n'a pas pu l'analyser. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>\n";
+		$styleKorektebla=" korektebla";
+	} else {
+		echo "<p class='eo eta'>Cette exercice ne peut pas être corrigé automatiquement. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>\n";
+		$styleKorektebla=" ";
+	}
+	echo "<div class='tasko'>";
+	echo "<div class='row'>";
+	$queryEkzercero = "SELECT id,numero,demando,kodo,korektebla,bildo FROM `ekzerceroj` where ekzerco_id=".$id." and forigita=0 order by numero";
+	$resultEkzercero = $bdd->query($queryEkzercero) or die(print_r($bdd->errorInfo()));
+	while ($rowEkzercero = $resultEkzercero->fetch()) {
+		$warningNonConnecte = ($idenfication==False)?" READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'":"";
+		if ($idenfication==False) {
+			$respondo = "";
+			$valid="";
+		} else {
+			// afficher ici le contenu de la base pour cet élève
+			$queryRespondo = "select id,respondo,gxusta from respondoj where ekzercero_id=".$rowEkzercero["id"]." and persono_id=".$persono_id;
+			$resultRespondo = $bdd->query($queryRespondo) or die(print_r($bdd->errorInfo()));
+			$rowRespondo = $resultRespondo->fetch();
+			$respondo= $rowRespondo["respondo"];
+			$valid=($rowRespondo["gxusta"]==1)?"valid":"";
+		}
+		echo "<p class='col s12 demando'>".$rowEkzercero["numero"].". ".$rowEkzercero["demando"]."</p>\n";
+		echo "<input type='hidden' name=\"id_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["id"]."\">";
+		echo "<input type='hidden' name=\"dem_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["numero"]." ".$rowEkzercero["demando"]."\">";
+		echo "<div class='input-field col s12'><input data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." name=\"res_".$rowEkzercero["kodo"]."\"".$warningNonConnecte;
+		if ($rowEkzerco["x2u"]==1) {
+			echo " onkeyup='xAlUtf8(this)'";
+		}
+		echo " value=\"";
+		echo $respondo;
+		
+		echo "\" class='validate ".$valid." ".$styleKorektebla."'";
+
+		echo "></div>";
+	}
+	echo "</div>";
+	echo "</div>";
+	echo "</fieldset>";
+}
+
 function QCM_bildoj($qcm) {
 	echo "<div class='qcm' id='carousel_qcm'>";
 	$indiceQuestion= 1;

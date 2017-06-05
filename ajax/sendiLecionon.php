@@ -42,7 +42,7 @@ $fonto.="</head><body>";
 // on ajoute dans le mail l'adresse email de l'élève :
 $fonto .= "<p>Sendu vian korekton al : ".$studanto["retadreso"]."<br>\n";
 
-$query = "select komando,demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
+$query = "select komando,demando,respondo,gxusta from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
 $result = $bdd->query($query);
 $nbReponse = 0;
 $lastKomando = "";
@@ -54,7 +54,11 @@ while ($row=$result->fetch()) {
 		$fonto .= "<h5>".$lastKomando."</h5>\n";
 	}
 	$fonto .= "<p>".$row["demando"]."<br>\n";
-	$fonto .= "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
+	if ($row["gxusta"]==1) {
+		$fonto .= "<span style=\"color:green\">".$row["respondo"]."</span></p>\n";
+	} else {
+		$fonto .= "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
+	}
 }
 $fonto .= "<p>Commentaire de l'élève :<br>\n";
 $fonto .= "<span style=\"color:blue\">".$commentaire_pour_correcteur."</span></p>\n";

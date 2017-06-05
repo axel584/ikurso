@@ -397,11 +397,15 @@ include "dlekkapo.inc.php";
 					</div>
 				</div>
 
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
-					<input type="hidden" name="013_cxap01.1" value="Traduisez en espéranto.">
-					<?php atentigo();	?>
-					<div class="tasko">
+
+			<?php 
+				getEkzercon(1,$persono_id);
+			?>
+			<!-- <fieldset class="ekzerco">
+			// 	<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
+			// 		<input type="hidden" name="013_cxap01.1" value="Traduisez en espéranto."-->
+					<?php // atentigo();	?>
+			 		<!--div class="tasko"-->
 					<?php
 						$demandoj=array (
 						1 => "Le thé est chaud.",
@@ -411,10 +415,10 @@ include "dlekkapo.inc.php";
 						5 => "Mon frère est leur instituteur.",
 						6 => "Vos fils seront ses amis (à lui).",
 						);
-						ekzerco(True, 1);
+						//ekzerco(True, 1);
 						?>
-					</div>
-			</fieldset>
+			 		<!--/div>
+			 </fieldset-->
 
 			<?php 
 			} // fin section 

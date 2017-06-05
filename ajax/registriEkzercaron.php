@@ -13,10 +13,12 @@ if ($persono_id=="") { // personne non connecté, on ressort
 
 $lernantajDemandoj = array();
 $lernantajRespondoj = array();
+$kodoj2id = array();
 $aucuneReponse = true;
 $uneReponseManquante = false;
 $nunaKomando = "";
 $komandoLauxKodo = array();
+//print_r($_GET);
 foreach(array_keys($_GET) as $key) {
 
 	if (strncmp($key,"res_",4)==0) {
@@ -35,10 +37,16 @@ foreach(array_keys($_GET) as $key) {
 	} else if (strncmp($key,"dem_",4)==0) {
 		$kodo = substr($key,4);
 		$lernantajDemandoj[$kodo]=$_GET[$key];
+	} else if (strncmp($key,"id_",3)==0) {
+		$kodo = substr($key,3);
+		$kodoj2id[$kodo]=$_GET[$key];
 	} else {
 		$nunaKomando = $_GET[$key];
 	}
 }
+
+print_r($kodoj2id);
+print_r($lernantajDemandoj);
 
 // print_r($lernantajDemandoj);
 // echo "<br/>";
@@ -55,7 +63,7 @@ foreach(array_keys($lernantajDemandoj) as $kodo) {
 		$nbReponseEnBase = $result->fetch()["combien"];
 		if ($nbReponseEnBase==0) {
 	    	$requete = $bdd->prepare('insert into respondoj(persono_id,dato,kodo,demando,respondo,normaligita,lecionero_id,komando) values (:persono_id,now(),:kodo,:demando,:respondo,:normaligita,:lecionero_id,:komando)');
-    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'demando'=>$lernantajDemandoj[$kodo],'respondo'=>$lernantajRespondoj[$kodo],'normaligita'=>normaligita($lernantajRespondoj[$kodo]),'lecionero_id'=>$lecionero_id,'komando'=>$komandoLauxKodo[$kodo]));
+    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'demando'=>$lernantajDemandoj[$kodo],'respondo'=>$lernantajRespondoj[$kodo],'normaligita'=>normaligita($lernantajRespondoj[$kodo]),'lecionero_id'=>$lecionero_id,'ekzercero_id'=>$kodoj2id[$kodo],'komando'=>$komandoLauxKodo[$kodo]));
     	} else {
     		$requete = $bdd->prepare('update respondoj set respondo=:respondo,komando=:komando,normaligita=:normaligita where persono_id=:persono_id and kodo=:kodo and lecionero_id=:lecionero_id');
     		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'respondo'=>$lernantajRespondoj[$kodo],'normaligita'=>normaligita($lernantajRespondoj[$kodo]),'lecionero_id'=>$lecionero_id,'komando'=>$komandoLauxKodo[$kodo]));

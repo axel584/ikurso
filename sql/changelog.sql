@@ -1057,6 +1057,11 @@ UPDATE lecioneroj SET titolo = 'Le complément d’objet direct', dauxro = '10' 
 
 CREATE TABLE `ikurso`.`eventoj` ( `id` INT NOT NULL , `persono_id` INT NOT NULL , `komenco` DATE NOT NULL , `fino` DATE  NULL , `tipo` ENUM('France','Europe','Ailleurs','Événements mondiaux') NOT NULL , `priskribo` INT NOT NULL , `lando` TEXT NOT NULL , `departemento` INT NULL, `url` TEXT NULL, `mail` TEXT NULL) ENGINE = InnoDB;
 
+ALTER TABLE `respondoj` ADD `gxusta` BOOLEAN NULL AFTER `forigita`;
+ALTER TABLE `respondoj` ADD `ekzercero_id` INT NULL AFTER `lecionero_id`;
+ALTER TABLE `ekzercoj` ADD `korektebla` BOOLEAN NOT NULL AFTER `x2u`;
+
+
 insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (1,'Traduisez les phrases en espéranto.',6,'','','traduko',1);
 insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (2,'Traduisez les phrases en espéranto.',270,'','','traduko',1);
 insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (3,'Formez cinq phrases ayant un sens en combinant les mots de la leçon.',270,'','','verkado',1);

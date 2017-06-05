@@ -149,6 +149,31 @@ $('#eniri_identigilo,#eniri_pasvorto').keyup(function(e) {
  }
 });
 
+// fonction pour les exercices dont la réponse est en base : on souligne en vert si on a la bonen réponse
+$(".korektebla").focusout( function () {
+  $ekzercero = $(this).data('ekzercero');
+  $studanto = $(this).data('studanto');
+  $formulaire = $(this);
+          $.ajax({
+          url : $cheminAbsolu+'ajax/memkorektado.php',
+          type : 'GET',
+          dataType : 'json',
+          data : "ekzercero="+$ekzercero+"&studanto="+$studanto+"&respondo="+$(this).val(),
+          success : function(reponse, statut){ 
+              if (reponse.mesagxo=="ok") {
+                $formulaire.addClass("valid");
+              } else {
+                $formulaire.removeClass("valid");
+              }
+          },
+          error : function(request, error) {
+            console.log("request : "+request+" / error : "+error);
+            alert("Erreur de connexion, contactez les administrateurs");
+
+          }
+      });
+});
+
 
 function rechercherVorton($pattern,$kurso) {
         $.ajax({
@@ -425,7 +450,8 @@ $("#novigi_pasvorton_sendi_button").click(function () {
                 Materialize.toast(reponse.mesagxo, 4000);
             }
        			if (reponse.mesagxo=="ok") {
-       				window.location = $urlracine+reponse.url;
+              console.log("ok");
+       				//window.location = $urlracine+reponse.url;
        			}
        		},
        		error : function() {

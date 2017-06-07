@@ -504,7 +504,7 @@ include "dlekkapo.inc.php";
 		if ($section=="6") {
 		?>
 		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE 1</strong> : Répondez aux questions suivantes en espéranto.</legend>
+			<legend><strong>EXERCICE</strong> : Répondez aux questions suivantes en espéranto.</legend>
 			<input type="hidden" name="013_cxap07.3" value="3. Répondez aux questions suivantes.">
 			<?php atentigo(); ?>
 			<div class="tasko">

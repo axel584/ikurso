@@ -1055,7 +1055,7 @@ UPDATE lecioneroj SET titolo = 'Le complément d’objet direct', dauxro = '10' 
 
 -- Passage en V16
 
-CREATE TABLE `ikurso`.`eventoj` ( `id` INT NOT NULL , `persono_id` INT NOT NULL , `komenco` DATE NOT NULL , `fino` DATE  NULL , `tipo` ENUM('France','Europe','Ailleurs','Événements mondiaux') NOT NULL , `priskribo` INT NOT NULL , `lando` TEXT NOT NULL , `departemento` INT NULL, `url` TEXT NULL, `mail` TEXT NULL) ENGINE = InnoDB;
+CREATE TABLE `eventoj` ( `id` INT NOT NULL , `persono_id` INT NOT NULL , `komenco` DATE NOT NULL , `fino` DATE  NULL , `tipo` ENUM('France','Europe','Ailleurs','Événements mondiaux') NOT NULL , `priskribo` INT NOT NULL , `lando` TEXT NOT NULL , `departemento` INT NULL, `url` TEXT NULL, `mail` TEXT NULL) ENGINE = InnoDB;
 
 ALTER TABLE `respondoj` ADD `gxusta` BOOLEAN NULL AFTER `forigita`;
 ALTER TABLE `respondoj` ADD `ekzercero_id` INT NULL AFTER `lecionero_id`;
@@ -1065,7 +1065,7 @@ ALTER TABLE `ekzercoj` ADD `korektebla` BOOLEAN NOT NULL AFTER `x2u`;
 insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (1,'Traduisez les phrases en espéranto.',6,'','','traduko',1);
 insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (2,'Traduisez les phrases en espéranto.',270,'','','traduko',1);
 insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (3,'Formez cinq phrases ayant un sens en combinant les mots de la leçon.',270,'','','verkado',1);
-insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (4,'A votre tour',254,'','','verkado',1);
+insert into ekzercoj(id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u) values (4,'À votre tour',254,'','','verkado',1);
 
 	
 
@@ -1088,3 +1088,11 @@ insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,b
 insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (17,3,'ekz01_17',17,'Formez une phrase ayant un sens en combinant les mots de la leçon.','','','',0,0);
 insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (18,3,'ekz01_18',18,'Formez une phrase ayant un sens en combinant les mots de la leçon.','','','',0,0);
 insert into ekzerceroj (id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla) values (19,4,'ekz01_19',19,'Je me présente','','','',0,0);
+
+-- Renommage des exercices de lec06
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 1' WHERE `id` = 53;
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 2' WHERE `id` = 57;
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 3' WHERE `id` = 59;
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 4' WHERE `id` = 61;
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 5' WHERE `id` = 64;
+UPDATE `lecioneroj` SET `titolo` = 'Exercice 6' WHERE `id` = 66;

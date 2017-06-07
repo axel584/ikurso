@@ -433,11 +433,11 @@ include "dlekkapo.inc.php";
 			<div class="tasko">
 			<?php
 				$demandoj=array (
-				27 => "bestoj - en - Estas - interesaj - multaj - tiu - zoo.",
-				28 => "antaŭ - ĉiu - Dum - estos - infanoj - kaĝo. - la - tagmanĝo",
-				29 => "apud - Ĉu - enirejo ? - estis - kaĝoj - la - multaj",
-				30 => "estis - Kio - la - por - tagmanĝo - ?",
-				31 => "arkta - blankaj - En - estas - kontinento - la - ursoj."
+				27 => "bestoj - en - estas - interesaj - multaj - tiu - zoo",
+				28 => "antaŭ - ĉiu - dum - estos - infanoj - kaĝo - la - tagmanĝo",
+				29 => "apud - ĉu - enirejo - ? - estis - kaĝoj - la - multaj",
+				30 => "estis - kio - la - por - tagmanĝo - ?",
+				31 => "arkta - blankaj - en - estas - kontinento - la - ursoj"
 				);
 				ekzerco(True, 1);
 			?>

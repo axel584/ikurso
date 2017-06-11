@@ -592,7 +592,7 @@ function troviPlejTauganKorektanton($persono_id,$kurso) {
         if ($korektanto_id!="") {
             // on regarde si le correcteur corrige des élèves pour ce cours. Même si le correcteur est déjà plein, on autorise un dépassement.
             // en revanche, si le correcteur veut 0 élève pour ce cours, c'est peut être qu'il n'a pas le niveau
-            $demando2 = "select kiom_lernantoj from korektebla_kurso where korektanto='".$korektanto_id."'";
+            $demando2 = "select kiom_lernantoj from korektebla_kurso where korektanto='".$korektanto_id."' and kurso='".$kurso."'";
             $result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
             if ($row = $result2->fetch()) {
                 if ($row["kiom_lernantoj"]>0) {

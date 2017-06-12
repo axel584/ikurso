@@ -20,7 +20,7 @@ function stat_monatoj() {
 	<thead><tr>
 	<td class='vide'>&nbsp;</td>
 	<td class='col1'>Inscrit</td>
-	<td class='col1'>ont validé leur inscriptionr</td>
+	<td class='col1'>ont validé leur inscription</td>
 	<td class='col1'>ont reçu un correcteur</td>
 	<td class='col1'>sont actuellement en cours</td>
 	<td class='col1'>ont abandonné</td>

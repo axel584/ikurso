@@ -72,8 +72,9 @@ include "dlekkapo.inc.php";
 		?>
 		
 			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Transformez les phrases suivantes en questions.</legend>
-				<input type="hidden" name="013_cxap04.1" value="1. Transformez les phrases suivantes en questions.">
+				<legend><strong>EXERCICE</strong> : Transformez les phrases suivantes en questions selon le modèle.</legend>
+				<p>Exemple : Mia frato manĝis la kukon. → Ĉu mia frato manĝis la kukon?</p>
+				<input type="hidden" name="013_cxap04.1" value="1. Transformez les phrases suivantes en questions selon le modèle.">
 				<?php atentigo();	?>
 				<div class="tasko">
 				<?php

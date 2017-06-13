@@ -1096,3 +1096,6 @@ UPDATE `lecioneroj` SET `titolo` = 'Exercice 3' WHERE `id` = 59;
 UPDATE `lecioneroj` SET `titolo` = 'Exercice 4' WHERE `id` = 61;
 UPDATE `lecioneroj` SET `titolo` = 'Exercice 5' WHERE `id` = 64;
 UPDATE `lecioneroj` SET `titolo` = 'Exercice 6' WHERE `id` = 66;
+
+-- Uniformiser les noms des pays #655
+UPDATE `vortoj` SET `eo` = 'Ĉinujo|Ĉinio' WHERE `eo` = 'Ĉinio';

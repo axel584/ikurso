@@ -248,7 +248,7 @@ QCM_bildoj(
 		<div class="vortlisto row">
 			<p class="col s6"><span class="eo">Aleks loĝas <b>en</b> Francujo.</span></p>
 			<p class="col s6">Alex habite en France.</p>
-			<p class="col s6">Estas sukero <b>en</b> via kafo.</p><p>Il y a du sucre dans ton café.</p>
+			<p class="col s6"><span class="eo">Estas sukero <b>en</b> via kafo.</span></p><p class="col s6">Il y a du sucre dans ton café.</p>
 		</div>
 		
 		<p class="rimarko">Notez que <span class="eo">estas</span>, employé sans sujet en début de phrase, comme dans l’exemple précédent, se traduit généralement par <em>il y a</em>. Nous aurons l’occasion d’y revenir dans une autre leçon.</p>

@@ -535,7 +535,7 @@ QCM(
 					<p><span class="eo">Brazilo</span> : Brésil</p>
 				</div>
 				<div class="col s12 m4">
-					<p><span class="eo">Vjetnamio</span> : Vietnam</p>
+					<p><span class="eo">Vjetnamujo</span> : Vietnam</p>
 					<p><span class="eo">Pollando</span> : Pologne</p>
 				</div>
 				<div class="col s12 m4">

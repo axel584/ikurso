@@ -1,4 +1,4 @@
-<?php
+	<?php
 include "util.php";
 $pagxtitolo="Données personnelles";
 $korpo="informoj";
@@ -34,8 +34,7 @@ function afficheAssociationNationale($pays) {
 		echo "<a href='www.esperanto-wallonie.be'>www.esperanto-wallonie.be</a><br/>";
 		
 		echo "</div>";
-	}
-	elseif ($pays=="CA") {
+	}elseif ($pays=="CA") {
 		echo "<div class='row'>";
 		echo "<h2>Association près de chez vous</h2>";
 		echo "<b>Société québécoise d'espéranto</b><br/>";
@@ -43,8 +42,32 @@ function afficheAssociationNationale($pays) {
 		echo "Montréal, Québec, H4E 3L4<br/>";
 		echo "<a href='www.esperanto.qc.ca'>www.esperanto.qc.ca</a><br/>";
 		echo "<a href='mailto:informo@esperanto.qc.ca'>informo@esperanto.qc.ca</a><br/>";
+	}elseif ($pays=="FR") {
+		echo "<div class='row'>";
+		echo "<h2>Association près de chez vous</h2>";
+		echo "<ul class='collection local'><li class='collection-item'>";
+		echo "Espéranto-France<br/>";
+		echo "4bis, rue de la Cerisaie<br/>";
+		echo "75004 Paris";
+		echo "</li></ul>";
+		echo "</div>";
 	} else {
-		afficheInformationNationale();
+		echo "<div class='row'>";
+		echo "<h2>Association près de chez vous</h2>";
+		echo "<ul class='collection local'>";
+		echo "<li class='collection-item'>";
+		echo "UEA : Universala Esperanto-Asocio<br/>";
+		echo "<a href='http://www.uea.org/'>http://www.uea.org/</a><br/>";
+		echo "</li>";
+		echo "<li class='collection-item'>";
+		echo "Espéranto-France<br/>";
+		echo "4bis, rue de la Cerisaie<br/>";
+		echo "75004 Paris";
+		echo "<a href='www.esperanto-france.org'>www.esperanto-france.org</a><br/>";
+		echo "</li>";
+		echo "</ul>";
+		echo "</div>";		
+
 	}
 	
 
@@ -70,12 +93,14 @@ function afficheAssociationFrancaise($idArthur) {
 	// echo "</pre>";
 }
 
-function afficheInformationNationale($idArthur) {
+function afficheInformationNationale() {
 	echo "<div class='row'>";
 	echo "<h2>Association près de chez vous</h2>";
+	echo "<ul class='collection local'><li class='collection-item'>";
 	echo "Espéranto-France<br/>";
 	echo "4bis, rue de la Cerisaie<br/>";
 	echo "75004 Paris";
+	echo "</li></ul>";
 	echo "</div>";
 
 }
@@ -88,7 +113,7 @@ function afficheDepartement($numeroDepartement) {
 	//echo "<pre>";
 	if (sizeof($data["associations"])==0) {
 		// on affiche les infos d'UFE
-		afficheInformationNationale();
+		afficheInformationNationale("FR");
 	} elseif (sizeof($data["associations"])==1) {
 		echo "<div class='row'>";
 		echo "<h2>Association près de chez vous</h2>";
@@ -172,6 +197,17 @@ if (isset($_GET["aktivigo"])) {
 					?>
 				</span>
 			</div>
+
+<?php
+
+if (($persono['lando']== null)||($persono['posxtkodo']== null && $persono['lando']=="FR")) {
+	echo "<div class='row'><div class='col s12'><div class='card red  lighten-4'><div class='card-content'>";
+	echo "Indiquez votre code postal et votre pays pour obtenir des informations sur l'espéranto près de chez vous.";
+	echo "</div></div></div></div>";
+}
+
+?>
+
 
 				<div class="row">
 				<div class="col s10">

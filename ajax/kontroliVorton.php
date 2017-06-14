@@ -64,7 +64,11 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 		$bonaRespondo = substr($bonaRespondo, 0,strpos($bonaRespondo, "|"));
 	}
 	$respondo["eraroj"]="La bonne réponse était&nbsp;<b>".$bonaRespondo."</b>";
-	$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b>".$bonaRespondo."</b>";
+	if ($lernantaRespondo=="") {
+		$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b>".$bonaRespondo."</b>";
+	} else {
+		$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b>".$bonaRespondo."</b> (et pas&nbsp;<strike>".$lernantaRespondo."</strike>)";
+	}
 	memoriRespondon($persono_id,$vorto_id,"FALSE",$lernantaRespondo);
 	echo json_encode($respondo);
 	exit();

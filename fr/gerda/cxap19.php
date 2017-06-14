@@ -65,7 +65,7 @@ include "gerdakapo.inc.php";
 					aŭdis, estas virino, kiun mi kaptis kaj gardas tie. Mi planas igi ŝin
 					mia servistino: ŝi faros ĉion, kion mi volos. Kaj se vi parolos pri
 					ŝi… Nu, mi ne volas paroli pri tio, kio okazos al vi, ĉar vi tro
-					timu…
+					timus…
 				</div>
 				<div class="col s12 m4">
 					<img src="bildoj/gerda19-2.gif" class="responsive-img">

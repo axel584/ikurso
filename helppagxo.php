@@ -277,6 +277,10 @@ include "pagxkapo-old.inc.php";
 								message envoyé à l'élève du Cours en dix leçons pour lui indiquer qu’il a reçu un correcteur</a></li>
 								<li><a href="doc/mails/doniStuGRFR.html" onClick="window.open('doc/mails/doniStuGRFR.html','ikurso','top=150,left=150,width=600,height=500');return false;">
 								message envoyé à l'élève de Gerda malaperis pour lui indiquer qu’il a reçu un correcteur</a></li>
+								<li><a href="mails/rappel.html" onClick="window.open('mails/rappel.html','ikurso','top=150,left=150,width=600,height=500');return false;">
+								message envoyé à l'élève après 6 jours sans travail</a></li>
+								<li><a href="mails/rappel2.html" onClick="window.open('mails/rappel2.html','ikurso','top=150,left=150,width=600,height=500');return false;">
+								message envoyé à l'élève après 10 jours sans travail</a></li>
 							</ul>
 							</p></blockquote>
 							<p align="right"><em><a href="#top">Revenir au début</a></em></p>

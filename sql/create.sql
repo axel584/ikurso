@@ -34,6 +34,19 @@ CREATE TABLE eraraj_lecionoj (
   `kurso` varchar(2) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+CREATE TABLE `eventoj` (
+  `id` int(11) NOT NULL,
+  `persono_id` int(11) NOT NULL,
+  `komenco` date NOT NULL,
+  `fino` date DEFAULT NULL,
+  `tipo` enum('France','Europe','Ailleurs','Événements mondiaux') NOT NULL,
+  `priskribo` text NOT NULL,
+  `lando` varchar(100) NOT NULL,
+  `departemento` int(11) DEFAULT NULL,
+  `url` text NOT NULL,
+  `mail` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 CREATE TABLE komentoj (
   `id` int(11) NOT NULL,
   `studanto` int(11) NOT NULL DEFAULT '0',

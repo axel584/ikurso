@@ -1055,7 +1055,18 @@ UPDATE lecioneroj SET titolo = 'Le complément d’objet direct', dauxro = '10' 
 
 -- Passage en V16
 
-CREATE TABLE `eventoj` ( `id` INT NOT NULL , `persono_id` INT NOT NULL , `komenco` DATE NOT NULL , `fino` DATE  NULL , `tipo` ENUM('France','Europe','Ailleurs','Événements mondiaux') NOT NULL , `priskribo` INT NOT NULL , `lando` TEXT NOT NULL , `departemento` INT NULL, `url` TEXT NULL, `mail` TEXT NULL) ENGINE = InnoDB;
+CREATE TABLE `eventoj` (
+  `id` int(11) NOT NULL,
+  `persono_id` int(11) NOT NULL,
+  `komenco` date NOT NULL,
+  `fino` date DEFAULT NULL,
+  `tipo` enum('France','Europe','Ailleurs','Événements mondiaux') NOT NULL,
+  `priskribo` text NOT NULL,
+  `lando` varchar(100) NOT NULL,
+  `departemento` int(11) DEFAULT NULL,
+  `url` text NOT NULL,
+  `mail` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ALTER TABLE `respondoj` ADD `gxusta` BOOLEAN NULL AFTER `forigita`;
 ALTER TABLE `respondoj` ADD `ekzercero_id` INT NULL AFTER `lecionero_id`;

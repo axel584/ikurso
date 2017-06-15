@@ -606,7 +606,7 @@ function kontroliVorton(vorto_id,persono_id,respondo) {
                       $('.memorilo_input:visible').focus(); // on met le focus sur le champ
                     }, 500);
             } else if (reponse.mesagxo=="ko") {
-                Materialize.toast(reponse.eraroj, 2000);
+                Materialize.toast(reponse.eraroj, 5000);
                  $encours = $('.memorilo_demando:visible');
                     setTimeout(function(){
                       $("#recapitulatif").removeClass("hide");
@@ -643,6 +643,61 @@ $('.memorilo_input').keypress(function(e){
           kontroliVorton($vorto_id,$persono_id,$respondo);
         }
     }
+});
+
+// eventoj
+
+$('input[type=radio][name=radioGeographique]').change(function() {
+  if ($('input[name=radioGeographique]:checked').val()=="France") {
+    $("#detail_geographique").html("<input id='departemento' type='text' class='validate'><label for='departemento'>Numéro de Département</label>");
+  }
+  if ($('input[name=radioGeographique]:checked').val()=="Europe") {
+    $("#detail_geographique").html("Europe");
+  }
+  if ($('input[name=radioGeographique]:checked').val()=="Ailleurs") {
+    $("#detail_geographique").html("Ailleurs");
+  }
+  if ($('input[name=radioGeographique]:checked').val()=="Mondiaux") {
+    $("#detail_geographique").html("Mondiaux");
+  }
+});
+
+$("#registri_eventon").click(function(){
+  console.log("registri");
+  if ($('input[name=radioGeographique]:checked').val()==undefined) {
+    alert("Merci de choisir un type d'événement parmi : France / Europe / Ailleurs / Mondiaux");
+  } else {
+    var $geographique;
+    var $type=$('input[name=radioGeographique]:checked').val();
+    if ($type=="France") {
+      $geographique = $("#departemento").val();
+      console.log("departement : "+$geographique);
+    }
+    var $priskribo = $("#priskribo").val();
+    var $komenco = $("#komenco").val();
+    var $fino = $("#fino").val();
+    var $url = $("#url").val();
+    var $mail = $("#mail").val();
+    var $ajaxParametres = "type="+$type+"&geographique="+$geographique+"&priskribo="+$priskribo+"&url="+$url+"&mail="+$mail+"&komenco="+$komenco+"&fino="+$fino;
+    console.log($ajaxParametres);
+      $.ajax({
+          url : $cheminAbsolu+'ajax/registriEventon.php',
+          type : 'GET',
+          dataType : 'json',
+          data : $ajaxParametres,
+          success : function(reponse, statut){ 
+            if (reponse.mesagxo=="ok") {
+                Materialize.toast('Merci beaucoup !', 2000);
+                // TODO : mettre à jour le tableau
+            } else if (reponse.mesagxo=="ko") {
+                Materialize.toast(reponse.eraroj, 2000);
+            }
+          },
+          error : function() {
+            alert("Erreur de connexion, contactez les administrateurs");
+          }
+      });
+  }
 });
 
 

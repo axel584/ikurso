@@ -305,7 +305,7 @@ if ($persono['lando']=="FR" && $persono['posxtkodo']!="") {
 			?>
 			<p>Si vous n'avez jamais suivi de cours d'espéranto, nous vous conseillons de commencer par le <b>Cours en 10 leçons</b>. Vous pourrez le suivre avec l’aide d'un correcteur ou en totale autonomie.<br>
 			<a href="<?php echo $vojo;?>fr/cge/lec01.php" class="btn waves-effect waves-light" >Cours en 10 leçons</a></p>
-			<p>Si vous quelques bases et que vous voulez approfondir, nous vous conseillons le cours <b>Gerda malaperis</b> :<br>
+			<p>Si vous avez quelques bases et que vous voulez approfondir, nous vous conseillons le cours <b>Gerda malaperis</b> :<br>
 			<a href="<?php echo $vojo;?>fr/gerda/cxap01.php" class="btn waves-effect waves-light" >cours Gerda Malaperis</a></p>
 			<?php } ?>
 		<?php } ?>

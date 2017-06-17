@@ -38,7 +38,7 @@ include "pagxkapo.inc.php";
 				Vous pouvez être aidé par un correcteur qui corrigera vos exercices et pourra répondre à vos questions. 
 				Les échanges avec le correcteur se font par courriel.</p> 		
 
-				<p>Pour suivre le cours, la première étape consiste à créer un compte sur la page d'accueil en cliquant sur le bouton bleu "Créer un compte". Après avoir rempli les différents champs demandés, vous recevrez un courriel de confirmation qui vous permettra de nous assurer que votre adresse est correcte.</p>
+				<p>Pour suivre le cours, la première étape consiste à créer un compte sur la page d'accueil en cliquant sur le bouton bleu CRÉER UN COMPTE. Après avoir rempli les différents champs demandés, vous recevrez un courriel de confirmation qui permettra de nous assurer que votre adresse est correcte.</p>
 
 
 				
@@ -54,9 +54,9 @@ include "pagxkapo.inc.php";
 			
 			<section id="faq" class="scrollspy">
 				<p>Le cours est constitué de différentes pages. Il peut s'agir d'explications grammaticales ou culturelles, de vocabulaire, d'exercices sous la forme de phrases à traduire ou à rédiger ou bien de QCM (Questionnaire à choix multiple).</p>
-				<p>En bas de chaque page, un bouton bleu "Terminé" vous permettra d'indiquer votre progression. Sur le sommaire, le titre des pages terminées sera barré.</p>
-				<p>Dans le cas des QCM, il est nécessaire de réussir correctement l'ensemble du QCM pour atteindre le bouton "Terminé".</p>
-				<p>Pour les exercices de traduction ou de rédaction, les réponses vous seront envoyés par messagerie directement à l'adresse que vous avez utilisé lors de l'inscription.</p>
+				<p>En bas de chaque page, un bouton bleu TERMINÉ vous permettra d'indiquer votre progression. Sur le sommaire, les titres des pages terminées seront barrées.</p>
+				<p>Dans le cas des QCM, il est nécessaire de réussir correctement l'ensemble du QCM pour atteindre le bouton TERMINÉ.</p>
+				<p>Pour les exercices de traduction ou de rédaction, les réponses vous seront envoyées par message électronique directement à l'adresse que vous avez utilisée lors de l'inscription.</p>
 
 			</section>
 			<?php 

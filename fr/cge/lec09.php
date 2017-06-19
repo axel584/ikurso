@@ -275,57 +275,9 @@ include "dlekkapo.inc.php";
 		if ($section=="8") {
 		?>
 	
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Traduisez les articles suivants puisés dans diverses revues.</legend>
-				<p>Le vocabulaire nouveau se trouve à la fin de l’exercice.</p>
-				<input type="hidden" name="013_cxap09.1" value="1. Traduisez les articles suivants puisés dans diverses revues.">
-				<div class="tasko">
-				<p>
-					<audio controls="controls">Votre navigateur ne supporte pas la lecture du fichier audio.
-						<source src="<?php echo $vojo;?>fr/son/l09-1.mp3" type="audio/mp3">
-					</audio>
-				</p>
-				<?php
-					$demandoj=array (
-					1 => "<br>19 geinstruistoj gvidas Esperanto-kursojn por 303 gelernantoj en la brazila urbo Salvadoro. Kiel en la resto de la lando, ankaŭ en Salvadoro oni sentas kreskon de la intereso pri la Internacia Lingvo post la 66a Universala Kongreso en Brazilio."
-					);
-					ekzerco(False, 8);
-				?>
-				<p>
-					<audio controls="controls">Votre navigateur ne supporte pas la lecture du fichier audio.
-						<source src="<?php echo $vojo;?>fr/son/l09-2.mp3" type="audio/mp3">
-					</audio>
-				</p>
-				<?php
-					$demandoj=array (
-					2 => "<br>Bela parketo en la centro de la sud-franca urbo Pau ĵus ricevis la nomon Zamenhof. La urb-estro de Pau, André Labarrère, fariĝis ministro en majo. Li dufoje subtenis leĝproponojn, kiuj celas meti Esperanton en egalan situacion kun aliaj lingvoj. Li estas honora membro de la loka Esperanto-societo, kaj pasint-jare li persone malfermis ekspozicion pri Esperanto, kiu restis unu monaton en la urba biblioteko."
-					);
-					ekzerco(False, 8);
-				?>
-				<p>
-					<audio controls="controls">Votre navigateur ne supporte pas la lecture du fichier audio.
-						<source src="<?php echo $vojo;?>fr/son/l09-3.mp3" type="audio/mp3">
-					</audio>
-				</p>
-				<?php
-					$demandoj=array (
-					3 => "<br>La 11an de oktobro 1980, grupo de samideanoj de Bostona Esperanto-Klubo veturis al Ŝerbruko (Kebekio) por esti gastigataj de ŝerbruka Esperanto-Societo (ŜES) dum speciala semajnfina aranĝo. Plie montrealanoj el la du kluboj kunvenis sabatvespere por partopreni komunan manĝon en restoracio kaj vesperon en la kutima renkontejo de ŝES ĉe la loka universitato. Naciecoj reprezentitaj: Francio, Japanio, Kanado, Usono."
-					);
-					ekzerco(False, 8);
-				?>
-				<p>
-					<audio controls="controls">Votre navigateur ne supporte pas la lecture du fichier audio.
-						<source src="<?php echo $vojo;?>fr/son/l09-4.mp3" type="audio/mp3">
-					</audio>
-				</p>
-				<?php
-					$demandoj=array (
-					4 => "Kio okazas ĉe la junularaj esperantistaj asocioj de la landoj najbaraj de ni? Por respondi al tiu demando, jen nova rubriko. Ĉi-numere ni donos novaĵojn pri NEJ (Nederlanda Esperantista Junularo) kaj FEJA (Flandra Esperanta Junulara Asocio). Tiuj du asocioj havas komunan bultenon. La plej interesa afero, kiun tiuj uloj organizas – almenaŭ el nia vidpunkto – estas la Paska Renkontiĝo. Ĝi nun iĝis tradicia kaj, kiel la nomo antaŭsupozigas, ĝi okazas dum la Paska semajnfino."
-				   );
-					ekzerco(False, 8);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(37,$persono_id);
+			?>
 			
 			<p class="noto">NOTE : <span class="eo">Ŝerbruko</span> : Sherbrooke (ville du Québec)</p>
 			

@@ -401,24 +401,6 @@ include "dlekkapo.inc.php";
 			<?php 
 				getEkzercon(1,$persono_id);
 			?>
-			<!-- <fieldset class="ekzerco">
-			// 	<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
-			// 		<input type="hidden" name="013_cxap01.1" value="Traduisez en espéranto."-->
-					<?php // atentigo();	?>
-			 		<!--div class="tasko"-->
-					<?php
-						$demandoj=array (
-						1 => "Le thé est chaud.",
-						2 => "Ton biscuit est sec.",
-						3 => "Votre ami était beau.",
-						4 => "Les nouveaux instituteurs seront grands.",
-						5 => "Mon frère est leur instituteur.",
-						6 => "Vos fils seront ses amis (à lui).",
-						);
-						//ekzerco(True, 1);
-						?>
-			 		<!--/div>
-			 </fieldset-->
 
 			<?php 
 			} // fin section 
@@ -596,43 +578,13 @@ QCM(
 			if ($section=="10") {
 			?>
 
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
-					<input type="hidden" name="013_cxap01.2" value="Traduisez en espéranto.">
-					<?php atentigo();	?>
-					<div class="tasko">
-					<?php
-						$demandoj=array (
-						7 => "Quels gâteaux étaient secs ?",
-						8 => "Où est le pain ?",
-						9 => "Un garçon en bonne santé est toujours beau.",
-						10 => "Elle habitera dans une grande ville.",
-						11 => "Le pain est à toi (« le pain est tien »).",
-						12 => "Qui est le nouvel instituteur ?",
-						13 => "Voici des biscuits. Lesquels sont bons ?"
-						);
-						ekzerco(True, 1);
-						?>
-					</div>
-			</fieldset>
+			<?php 
+				getEkzercon(2,$persono_id);
+			?>
 
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Formez cinq phrases ayant un sens en combinant les mots de la leçon.</legend>
-				<input type="hidden" name="013_cxap01.3" value="Formez cinq phrases ayant un sens en combinant les mots de la leçon.">
-				<?php atentigo();	?>
-				<div class="tasko">
-				<?php 	
-					$demandoj=array (
-					14 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
-					15 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
-					16 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
-					17 => "Formez une phrase ayant un sens en combinant les mots de la leçon.",
-					18 => "Formez une phrase ayant un sens en combinant les mots de la leçon."
-					);
-					ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(3,$persono_id);
+			?>
 
 			<?php 
 			} // fin section 
@@ -642,13 +594,9 @@ QCM(
 			<p>Cet exercice ne vous permettra pas uniquement de vérifier que vous avez assimilé le nouveau vocabulaire, mais également de faire connaissance avec le correcteur qui vous sera attribué et qui corrigera vos exercices tout au long de ce cours.</p>
 			<p>Aucune utilisation commerciale ne sera faite des informations que vous transmettrez.
 
-					<?php atentigo();	?>
-					<?php
-						$demandoj=array (
-						19 => "Je me présente :"
-						);
-						ekzerco(True, 5);
-						?>
+			<?php 
+				getEkzercon(4,$persono_id);
+			?>
 
 
 						<p class="parto">Voici un peu de vocabulaire qui peut vous aider. Vous n'avez pas besoin de retenir tous ces mots dès maintenant. Ils ne seront utiles que pour cet exercice.</p>

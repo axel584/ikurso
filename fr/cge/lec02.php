@@ -284,25 +284,9 @@ QCM_bildoj(
 			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/libroj-tablo.jpg"><br>-4-</p>
 		</div>
 		
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
-			<input type="hidden" name="013_cxap02.1" value="En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
-			<p>Utilisez une fois chacune des prépositions suivantes&nbsp;: <b>antaŭ</b>, <b>sur</b>, <b>super</b>, <b>sub</b>.<br>
-			Le vocabulaire nouveau se trouve au bas de cette page.</p>
-			<?php atentigo();	?>
-			<div class="tasko">
-			<hr>
-			<?php 	
-				$demandoj=array (
-				1 => "La birdo flugas ... la akvo.",
-				2 => "La bicikloj estas ... la domo.",
-				3 => "Ili promenas ... la pluvo.",
-				4 => "La libroj estas ... la tablo.",
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(5,$persono_id);
 			?>
-			</div>
-		</fieldset>
 		
 		<fieldset class="vortoj">
 			<legend>VOCABULAIRE À RETENIR</legend>
@@ -464,79 +448,26 @@ QCM_bildoj(
 		if ($section=="9") {
 		?>
 				
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
-			<input type="hidden" name="013_cxap02.2" value="1. Traduisez en espéranto.">
-			<?php atentigo();	?>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				5 => "Un garçon en bonne santé boit du lait chaud.",
-				6 => "La nouvelle boutique vend des gâteaux secs.",
-				7 => "Le grand instituteur a rencontré les nouveaux amis.",
-				8 => "Les bons amis feront toujours un beau gâteau.",
-				9 => "La petite fille a rencontré les s&oelig;urs laides.",
-				10 => "Le frère bien portant avait une petite s&oelig;ur malade.",
-				11 => "Personne ne lavera les petites tasses.",
-				12 => "Le bel oiseau attrapa un petit insecte.",
-				13 => "La nouvelle boutique a vendu de la mauvaise limonade.",
-				14 => "De l’eau froide ne lave pas (&quot;ne lavas&quot;) un petit garçon."
-				);
-				ekzerco ("U", 1);
+			<?php 
+				getEkzercon(6,$persono_id);
 			?>
-			</div>
-		</fieldset>
 		
 		<?php 
 		} // fin section
 		if ($section=="10") {
 		?>
 		
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Remplacez la portion de phrase entre { } par le pronom personnel approprié. </legend>
-			<p>Choisissez parmi les pronoms suivants : li, ŝi, ĝi ou ili</p>
-			<p>Ex.: {<i>La knabo</i>} vendas kukojn. → <b>Li</b> vendas kukojn. </p>
-			<?php atentigo();?>
-			<input type="hidden" name="013_cxap02.3" value="2. Remplacez la portion de phrase entre {} par le pronom personnel approprié : li, ŝi, ĝi ou ili">
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				15 => "{La kuko} estas bela.",
-				16 => "{Mia amikino} estas bela.",
-				17 => "{La bela birdo} ĉiam trinkas akvon.",
-				18 => "{La butikoj} estas malpuraj.",
-				19 => "{La akvo} estas varma.",
-				20 => "{Mia frato} neniam lavas la tasojn.",
-				21 => "{La viro} havas novan amikon.",
-				22 => "{Miaj fratoj} kaptis malsanan birdon.",
-				23 => "{La virino} ne sukeris mian teon."
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(7,$persono_id);
 			?>
-			</div>
-		</fieldset>
 	
 		<?php 
 		} // fin section
 		if ($section=="11") {
 		?>
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Formez des phrases ayant un sens en utilisant les mots donnés.</legend>
-			<p>Attention : vous pouvez être amené à conjuguer les verbes et à mettre des mots à l’accusatif.</p>
-			<input type="hidden" name="013_cxap02.4" value="3. Formez des phrases ayant un sens en utilisant les mots donnés.">
-			<div class="tasko">
 			<?php 
-				$demandoj=array (
-				24 => "amikino - la - malvarma - mia - sukeri - teo.",
-				25 => "akvo - bela - birdo - la - pura - trinki.",
-				26 => "amiko - bona - limonado - vendi - via.",
-				27 => "forgesi - mi - papero - porti.",
-				28 => "bela - esti - fratino - knabino - mia."
-				);
-				ekzerco(True, 1);
+				getEkzercon(8,$persono_id);
 			?>
-			</div>
-		</fieldset>
 	<?php 
 		} // fin section
 		

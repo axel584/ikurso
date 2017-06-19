@@ -131,25 +131,9 @@ include "dlekkapo.inc.php";
 		<p>Voici un petit exercice pour vous remettre en mémoire ce que vous avez appris à 
 		la leçon précédente.</p>
 		
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Donnez le sens des corrélatifs suivants.</legend>
-			<input type="hidden" name="013_cxap06.1" value="1. Donnez le sens des corrélatifs suivants.">
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				1 => "kio",
-				2 => "kia",
-				3 => "ĉial",
-				4 => "ĉiel",
-				5 => "tie",
-				6 => "neniu",
-				7 => "nenies",
-				8 => "iu"
-				);
-				ekzerco(False, 1);
+			<?php 
+				getEkzercon(22,$persono_id);
 			?>
-			</div>
-		</fieldset>
 		<?php 
 		} // fin section 3
 		if ($section=="5") {
@@ -217,29 +201,9 @@ include "dlekkapo.inc.php";
 			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/libroj-esperanto.jpg"><br>-16-</span></p>
 		</div>
 		
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
-			<input type="hidden" name="013_cxap06.1" value="En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
-			<p>Chaque phrase de cet exercice correspond à une image. Recopiez chaque phrase en remplaçant [&nbsp;…&nbsp;] par la préposition qui convient. Vous devez utiliser seulement une fois chacune des prépositions suivantes&nbsp;: <b>por</b>, <b>ĉe</b>, <b>malantaŭ</b>, <b>el</b>, <b>ĝis</b>, <b>per</b>, <b>dum</b>, <b>inter</b>.<br>
-			Le vocabulaire nouveau se trouve au bas de cette page.</p>
-			<?php atentigo();	?>
-			<div class="tasko">
-			<hr>
-			<?php 	
-				$demandoj=array (
-				9 => "[&nbsp;…&nbsp;] la vojaĝo, ni manĝis.",
-				10 => "En nia ĝardeno, estas hotelo [&nbsp;…&nbsp;] insektoj.",
-				11 => "Ni konstruis kastelon [&nbsp;…&nbsp;] sablo.",
-				12 => "La kato estas [&nbsp;…&nbsp;] la pordo.",
-				13 => "Li grimpis [&nbsp;…&nbsp;] la pinto (=le sommet).",
-				14 => "Ŝi portas ĉapelon [&nbsp;…&nbsp;] la dorso.",
-				15 => "La floroj kreskas (kreski=pousser) [&nbsp;…&nbsp;] la rokoj.",
-				16 => "Mi lernas Esperanton [&nbsp;…&nbsp;] tiuj libroj.",
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(23,$persono_id);
 			?>
-			</div>
-		</fieldset>
 
 		<p>Crédits photos :</p>
 		<p class="creditphoto">11. Diego Delso, <a href="http://delso.photo/">delso.photo</a>, License CC-BY-SA</p>
@@ -373,29 +337,9 @@ include "dlekkapo.inc.php";
 		  bestoj zoo ne povas esti kompleta.
 		</p>
 
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong></legend>
-			<p>Répondez en espéranto aux questions suivantes, selon les deux récits que vous avez lus précédemment.</p>
-			<input type="hidden" name="013_cxap06.2" value="2. Répondez en espéranto aux questions suivantes, selon les deux récits que vous avez lus précédemment.">
-			<?php atentigo(); ?>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				17 => "En kia klubo vi estas membro?",
-				18 => "Kie okazis la kongreso, en kiu vi partoprenis? Ĉu en Granby?",
-				19 => "Kiajn amikojn vi vizitis en Montrealo?",
-				20 => "Kion vi manĝis por la tagmanĝo?",
-				21 => "Kion vi vizitis en Granby?",
-				22 => "Kio plaĉis al via frato?",
-				23 => "Kie estis la blanka urso?",
-				24 => "Kiajn ursojn vi vidis en la zoo?",
-				25 => "Per kio vi veturis al la Zoologia Ĝardeno?",
-				26 => "Kiuj bestoj estis por vi tre interesaj?"
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(24,$persono_id);
 			?>
-			</div>
-		</fieldset>
 		
 		<fieldset class="vortoj">
 			<legend>MOTS À RETENIR</legend>
@@ -426,23 +370,9 @@ include "dlekkapo.inc.php";
 		if ($section=="12") {
 		?>
 
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Formez des phrases avec les mots suivants puis traduisez-les en français.</legend>
-			<input type="hidden" name="013_cxap06.3" value="3. Formez des phrases avec les mots suivants puis traduisez-les en français.">
-			<?php atentigo();	?>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				27 => "bestoj - en - estas - interesaj - multaj - tiu - zoo",
-				28 => "antaŭ - ĉiu - dum - estos - infanoj - kaĝo - la - tagmanĝo",
-				29 => "apud - ĉu - enirejo - ? - estis - kaĝoj - la - multaj",
-				30 => "estis - kio - la - por - tagmanĝo - ?",
-				31 => "arkta - blankaj - en - estas - kontinento - la - ursoj"
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(25,$persono_id);
 			?>
-			</div>
-		</fieldset>
 
 		<?php 
 		} // fin section 12
@@ -506,25 +436,9 @@ include "dlekkapo.inc.php";
 		} // fin section 14
 		if ($section=="15") {
 		?>
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : 
-			Remplacez la préposition des phrases suivantes par la forme <b>n</b> de
-		l’accusatif.</legend>
-			<p>Exemple :  Vi similas al via patro. → Vi similas vian patron.</p>
-			<input type="hidden" name="013_cxap06.4" value="4. Remplacez la préposition des phrases suivantes par la forme &quot;n&quot; de l’accusatif.">
-			<?php atentigo();	?>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				32 => "Faru vian aferon, Dio zorgos PRI la cetero. (proverbe : faru = fais [impératif])",
-				33 => "Mi feriis DUM tri semajnoj.",
-				34 => "La strato estas larĝa JE* 50 metroj.",
-				35 => "D-ro (Doktoro) Zamenhof naskiĝis JE* la 15a de decembro 1859. (naskiĝi = naître)"
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(26,$persono_id);
 			?>
-			</div>
-		</fieldset>
 		
 		<p>* <span class="eo">je</span> = à, à propos de, en rapport avec, etc.</p>
 		<p>
@@ -603,22 +517,9 @@ include "dlekkapo.inc.php";
 		<p>3. remplacement de <em>al</em> dans une combinaison de deux prépositions, </p>
 		<p>4. adverbe indiquant le mouvement vers un lieu.</p>
 
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong></legend>
-			<p>Recopiez le texte qui suit en remplaçant les <b>*</b> par la terminaison
-		de l’accusatif ou par rien du tout selon le cas.</p>
-			<p>Exemple : Ŝi* aĉetas ŝuoj* al la infanoj* → Ŝi aĉetas ŝuojn al la infanoj.</p>
-			<input type="hidden" name="013_cxap06.5" value="5. Recopiez le texte qui suit en remplaçant les étoiles "*" par la terminaison de l’accusatif ou par rien du tout selon le cas." />
-			<?php atentigo();?>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				36 => "Mi* veturis al la zoologia* ĝardeno* kun Petro*. Li* tre deziris veturi tie*. En la zoo* li admiris ursoj* kaj simioj*. Kiam la blanka urso vidis Petro*, ĝi kuris en la akvo*. Ni atendis kvin minutoj*  por vidi, kio* la urso* faros poste, sed ĝi* ne iris el la akvo* kaj en la akvo* ĝi nenio* faris. Ni revenis Montrealo* vespere*."
-				);
-				ekzerco(True, 5);
+			<?php 
+				getEkzercon(27,$persono_id);
 			?>
-			</div>
-		</fieldset>
 	
 		<?php 
 		} // fin section 17

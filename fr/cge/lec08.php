@@ -208,60 +208,17 @@ include "dlekkapo.inc.php";
 		} // fin section 2
 		if ($section=="3") {
 		?>
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Complétez les phrases selon le modèle.</legend>
-			<input type="hidden" name="013_cxap08.1" value="1. Complétez les phrases selon le modèle.">
-			<?php atentigo(); ?>
-				<div class="ekzemplo row">
-					<p><em>Exemples :</em></p>
-					<p>La virino, kiu legas, estas ______.<br>
-					→ La virino, kiu legas, estas leganta virino.</p>
-					<p>La libro, kiun la virino legas, estas ______.<br>
-					→ La libro, kiun la virino legas, estas legata libro.</p>
-				</div>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				1 => "La infano, kiu ludas estas ______ .",
-				2 => "La junulo, kiu studis, estas ______ .",
-				3 => "La katoj, kiuj dormas, estas ______ .",
-				4 => "La birdoj, kiuj flugos, estas ______ .",
-				5 => "La junulino, kiu vojaĝas, estas ______ .",
-				6 => "La kuko, kiun la infano manĝas, estas ______ .",
-				7 => "La ĵurnaloj, kiujn la junulo legis, estas ______ .",
-				8 => "La frukto, kiun la birdo manĝas, estas ______ .",
-				9 => "La amiko, kiun mi renkontos, estas ______ .",
-				10 => "La pordo, kiun li fermis, estas ______ ."
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(32,$persono_id);
 			?>
-			</div>
-		</fieldset>
 
 		<?php 
 		} // fin section 3
 		if ($section=="4") {
 		?>
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Traduisez en espéranto en utilisant la terminaison verbale appropriée.</legend>
-			<input type="hidden" name="013_cxap08.2" value="2. Traduisez en espéranto en utilisant la terminaison verbale appropriée.">
-			<?php atentigo(); ?>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				11 => "Si elle venait à 8h nous pourrions manger à 8h30.",
-				12 => "Je désire qu’elle vienne à 8h mais je crois qu’elle ne viendra pas avant 9h.",
-				13 => "Va là-bas, assieds-toi et ouvre le sucrier !",
-				14 => "Cet imbécile veut me rencontrer à l’étable. Qu’il [y] aille en premier, et qu’il m’attende. Je viendrai quand je voudrai.",
-				15 => "Que faire ? (Qu’est-ce que je «dois-faire» ?)",
-				16 => "Il croyait que je ne viendrais pas avant 9h mais je suis venue à 8h moins 5.",
-				17 => "Sur le point de chanter, il se mit à rire. (préfixe ek-)",
-				18 => "Elle se mit à rougir en griffonnant le nom du garçon."
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(33,$persono_id);
 			?>
-			</div>
-		</fieldset>
 	
 		<?php 
 		} // fin section 4
@@ -274,18 +231,9 @@ include "dlekkapo.inc.php";
 			</p>
 			<input type="hidden" name="013_cxap08.3" value="3. Veuillez traduire en français les anecdotes suivantes.">
 			
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Traduisez en français.</legend>
-				<div class="tasko">
-				<?php
-					$demandoj=array (
-					19 => "<br>Juĝisto:  Ĉu vi do asertas, ke vi iris en la domon opiniante, ke ĝi estas via domo ?<br>Akuzato: Jes, sinjoro juĝisto.<br>Juĝisto:  Sed kial vi forkuris, kiam la sinjorino envenis ?<br>Akuzato: Mi opiniis, ke ŝi estas mia edzino !",
-					20 => "<br>Patrino en tramo: Joĉjo, kial vi sidas kun fermitaj okuloj ? Ĉu vi estas laca ?<br>Joĉjo: Ne ! Ne plaĉas al mi vidi starantajn virinojn."
-				   );
-					ekzerco(False, 5);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(34,$persono_id);
+			?>
 
 			<fieldset class="vortoj">
 				<legend>VOCABULAIRE À RETENIR</legend>
@@ -404,55 +352,18 @@ include "dlekkapo.inc.php";
 		} // fin section 6
 		if ($section=="7") {
 		?>
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Complétez les phrases selon le modèle.</legend>
-			<input type="hidden" name="013_cxap08.4" value="1. Complétez les phrases selon le modèle.">
-			<?php atentigo(); ?>
-				<div class="ekzemplo row">
-					<p><em>Exemples :</em></p>
-					<p>Maria manĝis ___ kukon. (Elle a mangé le gâteau de son frère)<br>
-					→ Maria manĝis lian kukon.</p>
-					<p>Maria manĝis ___ kukon. (Elle a mangé son propre gâteau)<br>
-					→ Maria manĝis sian kukon.</p>
-				</div>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				21 => "Maria legis ___ libron. (Elle a lu son propre livre)",
-				22 => "Maria legis ___ libron. (Elle a lu le livre de son père)",
-				23 => "Maria legis ___ libron. (Elle a lu le livre de sa sœur)",
-				24 => "Petro atendas ___ filon. (Il attend le fils de son ami)",
-				25 => "Petro atendas ___ filon. (Il attend le fils sa voisine)",
-				26 => "Petro atendas ___ filon. (Il attend son propre fils)",
-				27 => "Mia patro dormos en ___ lito. (Il dormira dans son propre lit)",
-				28 => "Anna skribis ___ nomon sur ___ libro per ___ skribilo. (Elle a écrit son propre nom sur le livre de son amie, avec le stylo de son frère)",
-				29 => "Sofia kaj ___ edzo promenas en la parko. (Sophie et son mari …)"
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(35,$persono_id);
 			?>
-			</div>
-		</fieldset>
 		
 		<?php 
 		} // fin section 7
 		if ($section=="8") {
 		?>
 		
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Traduisez ces textes en français.</legend>
-				<p>Le vocabulaire nouveau se trouve à la fin de l’exercice.</p>
-				<input type="hidden" name="013_cxap08.5" value="5. Traduisez ces textes en français.">
-				<div class="tasko">
-				<?php
-					$demandoj=array (
-					30 => "<br>- Incitas min, ke mia edzino daŭre parolas pri sia antaŭa edzo.<br>- Tio estas nenio ! La mia paroladas pri sia estonta edzo !",
-					31 => "<br>En kafejo:<br>- Kial vi rigardadas al la pordo ?<br>- Mi observadas, ĉu ne iu foriras kun mia surtuto. Kun la via jam antaŭ dek minutoj foriris iu.",
-					32 => "<br>La junaj geedzoj havis konflikton hejme, kaj poste dum la aŭto-veturado ili ambaŭ obstine silentis. Preterpasante aron da azenoj la edzo diris moke:<br>- Ĉu parencoj de vi ?<br>- Jes, boparencoj !"
-					);
-					ekzerco (False, 5);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(36,$persono_id);
+			?>
 		
 			<div class="vortlisto row">
 				<p class="col s6"><span class="eo">inciti</span> : irriter</p>

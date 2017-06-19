@@ -71,22 +71,9 @@ include "dlekkapo.inc.php";
 		if ($section=="2") {
 		?>
 		
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Transformez les phrases suivantes en questions selon le modèle.</legend>
-				<p>Exemple : Mia frato manĝis la kukon. → Ĉu mia frato manĝis la kukon?</p>
-				<input type="hidden" name="013_cxap04.1" value="1. Transformez les phrases suivantes en questions selon le modèle.">
-				<?php atentigo();	?>
-				<div class="tasko">
-				<?php
-					$demandoj=array (
-					1 => "Lia patrino faras panon.",
-					2 => "Mia filo forgesis la teon.",
-					3 => "La tago estas griza."
-					);
-					ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(14,$persono_id);
+			?>
 
 		<?php 
 		} // fin section
@@ -399,26 +386,9 @@ include "dlekkapo.inc.php";
 			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/paperoj-cxe-la-muro.jpg"><br>-7-</p>
 		</div>
 		
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
-			<input type="hidden" name="013_cxap04.2" value="2. En vous aidant des images, recopiez chaque phrase en complétant avec la préposition qui convient.">
-			<p>Recopiez chaque phrase en remplaçant [&nbsp;…&nbsp;] par l’une des prépositions suivantes&nbsp;:<br>
-				<b>apud</b>, <b>ĉe</b>, <b>al</b>, <b>de</b>, <b>el</b>.<br>
-			</p>
-			<?php atentigo();	?>
-			<div class="tasko">
-			<hr>
-			<?php 	
-				$demandoj=array (
-				4 => "La infanoj iras [&nbsp;…&nbsp;] la lernejo.",
-				5 => "Mia skribotablo (= bureau) estas [&nbsp;…&nbsp;] la fenestro.",
-				6 => "Mi aĉetos insektojn [&nbsp;…&nbsp;] ĉokolado.",
-				7 => "Estas paperoj [&nbsp;…&nbsp;] la muro.",
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(15,$persono_id);
 			?>
-			</div>
-		</fieldset>
 		
 		<p>Crédits photos :</p>
 		<p class="creditphoto">1. <em>Enfants en route pour l’école</em>. <a href="http://monde.ccdmd.qc.ca/ressource/?id=93435">Youri Thomas</a></p>
@@ -516,23 +486,9 @@ include "dlekkapo.inc.php";
 		if ($section=="9") {
 		?>
 		
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Répondez en espéranto en faisant des phrases complètes et en écrivant les nombres en toutes lettres.</legend>
-				<p>N’hésitez pas à chercher sur Internet les réponses que vous ne connaissez pas&nbsp;!</p>
-				<?php atentigo();	?>
-				<input type="hidden" name="013_cxap04.3" value="3. Répondez en espéranto en faisant des phrases complètes.">
-				<div class="tasko">
-				<?php
-					$demandoj=array (
-					8 => "Kiom da tagoj estas en unu jaro?",
-					9 => "Hodiaŭ estas ĵaŭdo la 30-a de novembro. Kiu dato estos morgaŭ?",
-					10 => "Kiam estas la Nacia Tago en via lando? (NACIA = national-e)",
-					11 => "En kiu jaro aperis (APERI = paraître) la Unua Libro de Esperanto?"
-					);
-					ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(16,$persono_id);
+			?>
 	
 
 		<?php 
@@ -561,73 +517,22 @@ include "dlekkapo.inc.php";
 		if ($section=="11") {
 		?>
 		
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Traduisez en français.</legend>
-				<input type="hidden" name="013_cxap04.4" value="4. Traduisez en français.">
-				
-				<div class="tasko">
-				<?php
-					$demandoj=array (
-					12 => "Simeono estas la edzo de Fatima. Li amas ŝin. Li, la edzino kaj la infanoj loĝas en Eŭropo, en granda domo.",
-					13 => "Fatima deziras aĉeti novajn ŝuojn al la infanoj.",
-					14 => "Petro, la filo de Fatima, kolektas poŝtmarkojn kaj bildojn el ĵurnaloj. Maria, lia fratino, promenas bicikle.",
-					15 => "La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.",
-					16 => "Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras aĉeti sandviĉon. Li manĝos ilin vespere."
-					);
-					ekzerco(False, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(17,$persono_id);
+			?>
 	
 		<?php 
 		} // fin section
 		if ($section=="12") {
 		?>
 		
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Traduisez les questions en espéranto (sans y répondre)</legend>
-				<input type="hidden" name="013_cxap04.5" value="5. Traduisez les questions en espéranto (sans y répondre).">
-				<?php atentigo();	?>
-				<div class="tasko">
-				<?php
-					$demandoj=array (
-					17 => "Est-ce que ton père collectionne les timbres de mon pays ?",
-					18 => "Est-ce que son fils a oublié le thé et le lait ?",
-					19 => "A-t-il oublié de porter du pain à la sœur de Petro ?",
-					20 => "Est-ce que les enfants vont danser dans l’école ?",
-					21 => "Est-ce qu’un garçon en bonne santé boit du lait ?",
-					22 => "Est-ce que le père lavera les petites tasses dans la maison de Fatima ?",
-					23 => "Est-ce que la nouvelle institutrice a oublié le livre dans une pièce de l’école ?",
-					24 => "Vendent-ils du thé et du café dans la nouvelle boutique ?",
-					25 => "Est-ce que le frère de la fille malade écrivait mal ?",
-					26 => "Sont-ils de bons amis ?",
-					27 => "Ta mère vient-elle d’Europe ?",
-					);
-					ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(18,$persono_id);
+			?>
 	
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Répondez maintenant en espéranto.</legend>
-				<p>Répondez avec des phrases complètes (pas seulement par un oui ou un non). Vous pouvez utiliser <span class="eo">sed</span> (mais)
-				dans les réponses négatives :</p>
-				<p>Ex.:  <span class="eo">Ŝi ne manĝas ĉokoladon, sed panon.</span></p>
-				<input type="hidden" name="013_cxap04.6" value="6. Répondez maintenant en espéranto.">
-				<?php atentigo();?>
-				<div class="tasko">
-				<?php
-					$demandoj=array (
-					28 => "Est-ce que le lait est froid ?",
-					29 => "Avez-vous goûté le gâteau ?",
-					30 => "Est-ce que sa femme est la mère de ton amie ?",
-					31 => "Avez-vous deux euros et trente centimes (euro = eŭro, centime = cendo) ?",
-					32 => "Avez-vous vu la nouvelle pièce de théâtre ?",
-					);
-					ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(19,$persono_id);
+			?>
 
 		<?php 
 		} // fin section

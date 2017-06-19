@@ -333,49 +333,13 @@ include "dlekkapo.inc.php";
 		trouver l’équivalent français exact  donnez alors votre propre
 		explication.
 		</p>
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Traduisez les mots en français.</legend>
-
-			<input type="hidden" name="013_cxap07.1" value="1. Traduisez les mots en français.">
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				1 => "(&quot;edzo&quot; = époux) : edzino, edziĝi, eksedzo, geedzoj",
-				2 => "(&quot;viro&quot; = homme) : virino, vireto, viraĉo, vira",
-				3 => "(&quot;bovo&quot; = bœuf) : bovino, bovido, bovaro, bovejo",
-				4 => "(&quot;varma&quot; = chaud) : malvarma, varmeco, varmeta, malvarmiĝi",
-				5 => "(&quot;aro&quot; = groupe) : ŝiparo (ŝipo = bateau), abelaro (abelo = abeille), stelaro (stelo = étoile)"
-				);
-				ekzerco(False,1);
+			<?php 
+				getEkzercon(28,$persono_id);
 			?>
-			</div>
-		</fieldset>
 		<p>Vous trouverez aussi qu’il est amusant de créer ses propres mots espéranto à partir des radicaux&nbsp;:</p>
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Traduisez les mots en espéranto.</legend>
-			<input type="hidden" name="013_cxap07.2" value="2. Vous trouverez aussi qu’il est amusant de créer ses propres mots espéranto à partir des radicaux.">
-			<?php atentigo(); ?>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				6 => "Cuire à petit feu (&quot;boli&quot; = bouillir):", 
-				7 => "Homme méprisable (&quot;viro&quot;):",
-				8 => "Un imbécile (&quot;stulta&quot;):",
-				9 => "Un temps affreux (&quot;vetero&quot; = temps):", 
-				10 => "Une nouvelle (&quot;nova&quot; = nouveau):", 
-				11 => "Un flocon de neige (&quot;ne&#285;o&quot; = neige):", 
-				12 => "La solitude (&quot;sola&quot; = seul):", 
-				13 => "Une église (&quot;pre&#285;i&quot; = prier):", 
-				14 => "Polycopier (&quot;multa&quot; = beaucoup):", 
-				15 => "Un dentiste (&quot;dento&quot; = dent):", 
-				16 => "Une ex-présidente :", 
-				17 => "Un pauvre (&quot;ri&#265;a&quot; = riche):", 
-				18 => "Une salle de jeu (&quot;ludi&quot; = jouer):"
-				);
-				ekzerco ("U", 1);
+			<?php 
+				getEkzercon(29,$persono_id);
 			?>
-			</div>
-		</fieldset>
 
 		<?php 
 		} // fin section 3
@@ -503,22 +467,9 @@ include "dlekkapo.inc.php";
 		} // fin section
 		if ($section=="6") {
 		?>
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Répondez aux questions suivantes en espéranto.</legend>
-			<input type="hidden" name="013_cxap07.3" value="3. Répondez aux questions suivantes.">
-			<?php atentigo(); ?>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				19 => "Se nun estas la dua, kioma horo estos post dudek minutoj ? (<b>Se</b> signifie «si» condition)",  
-				20 => "Se nun estas la dek-unua, kioma horo estis antaŭ dek minutoj ?",
-				21 => "Mi revenis je la kvara kaj duono, kaj ŝi revenis dudek kvin minutojn antaŭ mi. Je la kioma ŝi revenis ?",
-				22 => "Fatima iras labori je la sepa matene kaj revenas post naŭ horoj. Je la kioma ŝi revenas ?"
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(30,$persono_id);
 			?>
-			</div>
-		</fieldset>
 
 		<br>
 		<div class="row">
@@ -528,30 +479,9 @@ include "dlekkapo.inc.php";
 			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/17h58.jpg"><br>-4-</p>
 		</div>
 
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Kioma horo estas?</legend>
-			<input type="hidden" name="013_cxap07.4" value="4. Écrivez en espéranto quelle heure est indiquée sur chaque image.">
-			<p>Écrivez quelle heure est indiquée sur chacune des images ci-dessus. Veuillez répondre en espéranto, en écrivant les nombres en toutes lettres.</p>
-			<div class="row">
-				<p class="col s12"><strong>EXEMPLE :</strong></p>
-				<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/6h15.jpg"></p>
-				<p class="col s7 m9"><span class="eo">Estas la sesa kaj kvarono.</span>
-				<br>ou <span class="eo">Estas la sesa kaj dek kvin.</span></p>
-			</div>
-			<?php atentigo(); ?>
-			<div class="tasko">
-			<hr>
-			<?php 	
-				$demandoj=array (
-				23 => "image 1.",
-				24 => "image 2.",
-				25 => "image 3.",
-				26 => "image 4.",
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(31,$persono_id);
 			?>
-			</div>
-		</fieldset>
 		<?php 
 		} // fin section 6
 		if ($section=="7") {

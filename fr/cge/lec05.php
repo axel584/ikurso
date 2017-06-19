@@ -291,62 +291,13 @@ include "dlekkapo.inc.php";
 		if ($section=="6") {
 		?>
 
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong></legend>
-			<p>Transformez chaque phrase en interrogation en remplaçant le texte
-		entre accolades par un corrélatif en <b>KI-</b>.</p>
-		<p>Exemples :<br>
-		Ŝi amas {min} → Kiun ŝi amas ?<br>
-		{Ŝi} amas min → Kiu amas min ?<br>
-		Li promenas kun {belaj} knabinoj → Kun kiaj knabinoj li promenas&nbsp;?</p>
-		
-		<input type="hidden" name="013_cxap05.1" value="1. Transformez chaque phrase en interrogation en remplaçant le texte entre accolades par un corrélatif en KI-.">
-		<?php atentigo(); ?>
-		<div class="tasko">
-		<?php
-			$demandoj=array (
-			1 => "{Simeono kaj Fatima} estas miaj amikoj.",
-			2 => "Simeono kaj Fatima estas {miaj amikoj}.",
-			3 => "Ili loĝas {en Eŭropo}.",
-			4 => "Simeono manĝos {la du ovojn} vespere.",
-			5 => "Simeono manĝos la du ovojn {vespere}.",
-			6 => "Esperanto estas {facila} lingvo.",
-			7 => "Maria promenas {bicikle}.",
-			8 => "Petro aĉetos {tiun} bildon.", 
-			9 => "Esperanto estas {tre} facila.",
-			10 => "Mi trinkas teon kun {Fatima}."
-			);
-			ekzerco(True, 1);
-		?>
-		</div>
-		</fieldset>
-
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Traduisez en espéranto</legend>
-			<input type="hidden" name="013_cxap05.2" value="2. Traduisez en espéranto.">
-			<?php atentigo(); ?>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-				11 => "Qu’est-ce que c’est ? (Quelle-chose est cette-chose ?)",
-				12 => "Où est ma tasse ?",
-				13 => "Quel livre est le mien ?",
-				14 => "Qui a mangé mon gâteau ?",
-				15 => "Quand mangerez-vous ?",
-				16 => "Tout est mouillé. (mouillé: contraire de SEKA)",
-				17 => "J’ai tout oublié.",
-				18 => "Mon crayon (krajono) est quelque part.",
-				19 => "À ce moment, il était en bonne santé.",
-				20 => "Combien êtes-vous ?",
-				21 => "Comment court-elle ?",
-				22 => "Qu’écrivez-vous ?  (Quelle chose écrivez-vous ?)",
-				23 => "Je ne suis l’épouse de personne.",
-				24 => "Qui sont-ils ?"
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(20,$persono_id);
 			?>
-			</div>
-		</fieldset>
+
+			<?php 
+				getEkzercon(21,$persono_id);
+			?>
 
 		<fieldset class="vortoj">
 			<legend>MOTS À RETENIR</legend>

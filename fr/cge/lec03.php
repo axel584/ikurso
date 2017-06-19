@@ -72,20 +72,9 @@ include "dlekkapo.inc.php";
 		} // fin section 
 		if ($section=="2") {
 		?>
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong></legend>
-				<p>Considérez les phrases suivantes et répondez en français aux questions :</p>
-				<input type="hidden" name="013_cxap03.1" value="1. Considérez la phrase suivante et répondez en français aux questions.">
-				<div class="tasko">
-				<?php
-					$demandoj=array (
-					1 => "Mian fraton lavis mia patrino.<br>* Qui a été lavé ?<br>* Qui a lavé ?",
-					2 => "Instruistojn viajn fratinoj niaj vidis.<br>* Qui a vu ?<br>* Qui a été vu ?"
-					);
-					ekzerco(False, 3);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(9,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 1
@@ -250,23 +239,9 @@ include "dlekkapo.inc.php";
 		if ($section=="7") {
 		?>
 		
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Traduisez en espéranto.</legend>
-			<input type="hidden" name="013_cxap03.2" value="2. Traduisez en espéranto.">
-			<?php atentigo();	?>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-					3 => "Mon frère se promènera le matin. (adv.: «matinalement»)",
-					4 => "Son ami a répondu chaleureusement. (adv.: dérivé de «chaud»)",
-					5 => "La plume marron écrit bien. (adv.: dérivé de «bon»)",
-					6 => "La belle fille court mal. (adv.: contraire de «bien»)",
-					7 => "Notre père fume le soir. (adv.: dérivé de «soir»)"
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(10,$persono_id);
 			?>
-			</div>
-		</fieldset>
 
 		<?php 
 		} // fin section
@@ -392,26 +367,9 @@ include "dlekkapo.inc.php";
 		if ($section=="9") {
 		?>
 
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Traduisez les phrases en espéranto.</legend>
-			<input type="hidden" name="013_cxap03.3" value="3. Traduisez en espéranto.">
-			<?php atentigo();	?>
-			<div class="tasko">
-			<?php
-				$demandoj=array (
-					8 => "Il l’aime. (la personne aimée est une femme)",
-					9 => "Il aime sa sœur. (il s’agit de la sœur de sa femme)",
-					10 => "Elle l’aime. (la personne aimée est un homme)",
-					11 => "Le premier homme aime la deuxième femme.",
-					12 => "La seconde femme déteste le premier homme.",
-					13 => "Les garçons ont demandé en premier trois gâteaux.",
-					14 => "Deuxièmement, ils ont demandé de la limonade.",
-					15 => "La boutique fait mal le pain brun."
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(11,$persono_id);
 			?>
-			</div>
-		</fieldset>
 
 		<?php 
 		} // fin section
@@ -461,23 +419,9 @@ include "dlekkapo.inc.php";
 		if ($section=="11") {
 		?>
 		
-			<fieldset class="ekzerco">
-				<legend><strong>EXERCICE</strong> : Traduisez en espéranto en écrivant les nombres en toutes lettres.</legend>
-				<input type="hidden" name="013_cxap03.4" value="4. Traduisez en espéranto.">
-				<?php atentigo();	?>
-				<div class="tasko">
-				<?php
-					$demandoj=array (
-					16 => "Soixante minutes font une heure. (utiliser le verbe <i>esti</i>)",
-					17 => "Seize heures font un jour ; huit heures font une nuit.",
-					18 => "Sept jours font une semaine.",
-					19 => "Le troisième garçon est mon second fils.",
-					20 => "Combien as-tu de biscuits ? J’en ai 999."
-					);
-					ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(12,$persono_id);
+			?>
 
 		<?php 
 		} // fin section
@@ -526,25 +470,9 @@ include "dlekkapo.inc.php";
 			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/zamenhof.jpg"><br>-4-</p>
 		</div>
 		
-		<fieldset class="ekzerco">
-			<legend><strong>EXERCICE</strong> : Écrivez une question pour chaque image, puis donnez la réponse à cette question.</legend>
-			<input type="hidden" name="013_cxap01.2" value="Pour chacune des images ci-dessus, écrivez une question, puis donnez la réponse à cette question.">
-			<p>Utilisez le vocabulaire que vous avez vu dans les 3 premières leçons, ainsi que les mots interrogatifs suivants : <b>kio</b>, <b>kiu</b>, <b>kie</b>.<br>Pensez à utiliser l’accusatif lorsque c’est nécessaire&nbsp;!</p>
-			<p class="eo"><strong>EXEMPLE : image 1.</strong><br>
-			Kio estas la viro? – La viro estas instruisto.</p>
-			<?php atentigo();	?>
-			<div class="tasko">
-			<hr>
-			<?php 	
-				$demandoj=array (
-				21 => "image 2.",
-				22 => "image 3. (FOTI = photographier)",
-				23 => "image 4.",
-				);
-				ekzerco(True, 1);
+			<?php 
+				getEkzercon(13,$persono_id);
 			?>
-			</div>
-		</fieldset>
 		
 		<p>Crédits photos :</p>
 		<p class="creditphoto">1. Carte de le Pologne. <a href="https://commons.wikimedia.org/wiki/File%3ARelief_Map_of_Poland.png">By derivative work Виктор_В [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons</a></p>

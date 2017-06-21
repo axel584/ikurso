@@ -2,8 +2,6 @@
 include "util.php";
 $pagxtitolo="Événements locaux";
 $persono_id=$_SESSION["persono_id"];
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
-$persono = apartigiPersonon($persono_id);
 $action = isset($_GET['action']) ? $_GET['action'] : "";
 include "pagxkapo.inc.php";
 
@@ -52,8 +50,26 @@ function mail2string($mail) {
 
 			<?php
 			if ($action=="add") {
-				echo "Début : ";
-				echo "Fin :";
+			      echo '<div class="row">';
+			        echo '<div class="col s12 m12">';
+			          echo '<div class="card deep-purple lighten-5">';
+			            echo '<div class="card-content">';
+			              echo '<div><span class="card-title">Nouvelle activité</span></div>';
+			              //echo '<div class="row"><input name="radioGeographique" type="radio" id="France" value="France"/><label for="France">France</label><input name="radioGeographique" type="radio" id="Europe"  value="Europe"/><label for="Europe">Europe</label><input name="radioGeographique" type="radio" id="Ailleurs"  value="Ailleurs"/><label for="Ailleurs">Ailleurs</label><input name="radioGeographique" type="radio" id="Mondiaux"  value="Mondiaux"/><label for="Mondiaux">Mondiaux</label></div>';
+			              echo '<div class="row"><input name="radioGeographique" type="radio" id="France" value="France" checked="checked"/><label for="France">France</label></div>';
+			              echo '<div class="row"><div class="input-field col s6"><span id="detail_geographique"><input id="departemento" type="text" class="validate"><label for="departemento">Numéro de Département</label></span></div></div>';
+			              echo '<div class="row"><div class="input-field col s6"><input id="komenco" type="text" class="validate" placeholder="DD/MM/AAAA"><label for="komenco">Début</label></div><div class="input-field col s6"><input id="fino" type="text" class="validate" placeholder="DD/MM/AAAA"><label for="fino">Fin</label></div>';
+			              echo '<div class="input-field col s12"><p id="helpilo-dato" class="helpilo">Ne pas indiquer de date de fin si l\'événement dure une seule journée.</p></div>';
+			              echo '</div>';
+			              echo '<div class="row"><div class="input-field col s12"><input id="priskribo" type="text" class="validate"><label for="priskribo">Description</label><p id="helpilo-priskribo" class="helpilo">Description en français, sur une seule phrase, terminée par la ville de l\'événement.</p></div></div>';
+			              echo '<div class="row"><div class="input-field col s12"><input id="url" type="text" class="validate"><label for="url">Adresse site internet</label></div></div>';
+			              echo '<div class="row"><div class="input-field col s12"><input id="mail" type="text" class="validate"><label for="mail">Adresse courriel de contact</label></div></div>';
+			            echo '<div class="card-action">';
+			              echo '<a href="#" id="registri_eventon">Enregistrer</a>';
+			            echo '</div>';
+			          echo '</div>';
+			        echo '</div>';
+			      echo '</div>';
 			}
 
 			?>
@@ -78,9 +94,12 @@ while ($row = $result->fetch()) {
 	}
 	echo "<tr><td>";
 	echo "<b>".dates2string($row["komenco"],$row["fino"]);
-	if ($row["lando"]!=null && $row["lando"]!="") {
+	if ($row["lando"]!=null && $row["lando"]!="" && $row["lando"]!="France") {
 		echo " - ".$row["lando"];
 	}
+	if ($row["departemento"]!=null && $row["departemento"]!="") {
+		echo " - (".$row["departemento"].")";
+	}	
 	echo ".</b> ";
 	echo $row["priskribo"];
 	echo "<br/>";

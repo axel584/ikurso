@@ -397,7 +397,7 @@ function getEkzercon($id,$persono_id) {
 	}
 	echo "<div class='tasko'>";
 	echo "<div class='row'>";
-	$queryEkzercero = "SELECT id,numero,demando,kodo,korektebla,bildo FROM `ekzerceroj` where ekzerco_id=".$id." and forigita=0 order by numero";
+	$queryEkzercero = "SELECT id,numero,demando,korektebla,bildo FROM `ekzerceroj` where ekzerco_id=".$id." and forigita=0 order by numero";
 	$resultEkzercero = $bdd->query($queryEkzercero) or die(print_r($bdd->errorInfo()));
 	while ($rowEkzercero = $resultEkzercero->fetch()) {
 		$warningNonConnecte = ($idenfication==False)?" READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'":"";
@@ -413,9 +413,10 @@ function getEkzercon($id,$persono_id) {
 			$valid=($rowRespondo["gxusta"]==1)?"valid":"";
 		}
 		echo "<p class='col s12 demando'>".$rowEkzercero["numero"].". ".$rowEkzercero["demando"]."</p>\n";
-		echo "<input type='hidden' name=\"id_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["id"]."\">";
-		echo "<input type='hidden' name=\"dem_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["numero"]." ".$rowEkzercero["demando"]."\">";
-		echo "<div class='input-field col s12'><input data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." name=\"res_".$rowEkzercero["kodo"]."\"".$warningNonConnecte;
+		//echo "<input type='hidden' name=\"id_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["id"]."\">";
+		//echo "<input type='hidden' name=\"dem_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["numero"]." ".$rowEkzercero["demando"]."\">";
+		echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"".$rowEkzercero["numero"]." ".$rowEkzercero["demando"]."\">";
+		echo "<div class='input-field col s12'><input data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
 		if ($rowEkzerco["x2u"]==1) {
 			echo " onkeyup='xAlUtf8(this)'";
 		}

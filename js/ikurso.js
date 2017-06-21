@@ -448,10 +448,20 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		success : function(reponse, statut){ 
             if (reponse.type=="pas fini") {
                 Materialize.toast(reponse.mesagxo, 4000);
+                console.log(reponse.gxustajRespondoj);
+                // on passe en vert les réponses justes
+                for (index = 0; index < reponse.gxustajRespondoj.length; ++index) {
+                    $('#'.reponse.gxustajRespondoj[index]).addClass("valid");
+                }
+                console.log(reponse.malgxustajRespondoj);
+                for (index = 0; index < reponse.malgxustajRespondoj.length; ++index) {
+                    $('#'.reponse.malgxustajRespondoj[index]).removeClass("valid");
+                }
             }
        			if (reponse.mesagxo=="ok") {
               console.log("ok");
-       				//window.location = $urlracine+reponse.url;
+       				console.log(reponse.gxustajRespondoj);
+              console.log(reponse.malgxustajRespondoj);
        			}
        		},
        		error : function() {

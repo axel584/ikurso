@@ -9,20 +9,6 @@ $result = $bdd->query($query);
 $row = $result->fetch();
 $bonaRespondo = $row["normaligita"];
 
-
-
-function kontroliRespondon($lernantaRespondo,$bonaRespondo) {
-	// attention, il ne faut pas utiliser != mais !==
-	if (strpos($bonaRespondo,"|")!==false) {
-		return kontroliVorton($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliVorton($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
-	} else {
-		$trans = array("." => "", "," => "", "'" => "","!" => "","?" => ""); // liste des caractères à supprimer pour la comparaison
-		$bonaRespondo = trim(strtr($bonaRespondo, $trans));
-		$lernantaRespondo = trim(strtr($lernantaRespondo,$trans));
-		return strtolower(konvX($lernantaRespondo))==strtolower(konvX($bonaRespondo));	
-	}
-}
-
 if (kontroliRespondon($lernantaRespondo,$bonaRespondo)) {
 	$respondo["mesagxo"] = "ok";
 	echo json_encode($respondo);

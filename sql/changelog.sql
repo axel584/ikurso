@@ -1053,7 +1053,21 @@ update lecioneroj set dauxro='5' where id=216;
 UPDATE lecioneroj SET titolo = 'Le complément d’objet direct', dauxro = '10' WHERE id=10
 
 
+-----------------------------------------
 -- Passage en V16
+
+----------------
+-- ATTENTION --
+-- Pensez à exécuter les scripts suivants :
+-- remplir_ekzercero_id.php en priorité et en premier
+-- remplir_gxusta.php
+-- remplir_normaligita.php ?
+-- remplir_poentoj.php ?
+
+-- s'assurer que le champ "gxusta" et le champ "ekzercero_id" est bien rempli dans la table respondoj
+
+-- Faire ensuite un :  ALTER TABLE `respondoj` DROP `lecionero_id`,DROP `kodo`,DROP `komando`,DROP `demando`;
+
 
 CREATE TABLE `eventoj` (
   `id` int(11) NOT NULL,

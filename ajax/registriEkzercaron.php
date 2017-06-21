@@ -19,6 +19,10 @@ $uneReponseManquante = false;
 $nunaKomando = "";
 $komandoLauxKodo = array();
 //print_r($_GET);
+
+$gxustajRespondoj = array();
+$malgxustajRespondoj = array();
+
 foreach(array_keys($_GET) as $key) {
 
 	if (strncmp($key,"res_",4)==0) {
@@ -45,30 +49,35 @@ foreach(array_keys($_GET) as $key) {
 	}
 }
 
-print_r($kodoj2id);
-print_r($lernantajDemandoj);
-
-// print_r($lernantajDemandoj);
-// echo "<br/>";
-// print_r($lernantajRespondoj);
-// echo "<br/>";
-// print_r($komandoLauxKodo);
-
 // on enregistre en base le résultat s'il aucune réponse ne s'y trouve, sinon on fait une mise à jour
-foreach(array_keys($lernantajDemandoj) as $kodo) {
-		if ($lernantajRespondoj[$kodo]=="") {
+foreach(array_keys($lernantajDemandoj) as $ekzercero_id) {
+		if ($lernantajRespondoj[$ekzercero_id]=="") {
 			continue; // on n'enregistre pas les réponses vides
 		}
-		$result = $bdd->query("select count(*) as combien from respondoj where persono_id=".$persono_id." and kodo='".$kodo."' and lecionero_id=".$lecionero_id);
+		// on récupère de la base la réponse attendu :
+		$result = $bdd->query("select normaligita from ekzerceroj where id=".$ekzercero_id);
+		$bonneReponse = $result->fetch()["normaligita"];
+		$gxusta = kontroliRespondon($lernantajRespondoj[$ekzercero_id],$bonneReponse)?1:0;
+		if ($gxustajRespondoj) {
+			array_push($gxustajRespondoj,"res_".$ekzercero_id);
+		} else {
+			array_push($malgxustajRespondoj,"res_".$ekzercero_id);
+		}
+		// on vérifie si l'élève a déjà en base une réponse
+		$result = $bdd->query("select count(*) as combien from respondoj where persono_id=".$persono_id." and ekzercero_id='".$ekzercero_id."'");
 		$nbReponseEnBase = $result->fetch()["combien"];
 		if ($nbReponseEnBase==0) {
-	    	$requete = $bdd->prepare('insert into respondoj(persono_id,dato,kodo,demando,respondo,normaligita,lecionero_id,komando) values (:persono_id,now(),:kodo,:demando,:respondo,:normaligita,:lecionero_id,:komando)');
-    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'demando'=>$lernantajDemandoj[$kodo],'respondo'=>$lernantajRespondoj[$kodo],'normaligita'=>normaligita($lernantajRespondoj[$kodo]),'lecionero_id'=>$lecionero_id,'ekzercero_id'=>$kodoj2id[$kodo],'komando'=>$komandoLauxKodo[$kodo]));
+	    	$requete = $bdd->prepare('insert into respondoj(persono_id,dato,ekzercero_id,respondo,normaligita,gxusta) values (:persono_id,now(),:ekzercero_id,:respondo,:normaligita,:gxusta)');
+    		$requete->execute(array('persono_id'=>$persono_id,'ekzercero_id'=>$ekzercero_id,'respondo'=>$lernantajRespondoj[$ekzercero_id],'normaligita'=>normaligita($lernantajRespondoj[$ekzercero_id]),'gxusta'=>$gxusta));
     	} else {
-    		$requete = $bdd->prepare('update respondoj set respondo=:respondo,komando=:komando,normaligita=:normaligita where persono_id=:persono_id and kodo=:kodo and lecionero_id=:lecionero_id');
-    		$requete->execute(array('persono_id'=>$persono_id,'kodo'=>$kodo,'respondo'=>$lernantajRespondoj[$kodo],'normaligita'=>normaligita($lernantajRespondoj[$kodo]),'lecionero_id'=>$lecionero_id,'komando'=>$komandoLauxKodo[$kodo]));
+    		$requete = $bdd->prepare('update respondoj set respondo=:respondo,normaligita=:normaligita,gxusta=:gxusta where persono_id=:persono_id and ekzercero_id=:ekzercero_id');
+    		$requete->execute(array('persono_id'=>$persono_id,'ekzercero_id'=>$ekzercero_id,'respondo'=>$lernantajRespondoj[$ekzercero_id],'normaligita'=>normaligita($lernantajRespondoj[$ekzercero_id]),'gxusta'=>$gxusta));
     	}
 }
+
+// on met dans le retour la liste des bonnes et des mauvaises réponses :
+$respondo["gxustajRespondoj"] = $gxustajRespondoj;
+$respondo["malgxustajRespondoj"] = $malgxustajRespondoj;
 
 // si on n'a aucune réponse, on renvoit un message
 

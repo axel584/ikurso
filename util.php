@@ -61,6 +61,15 @@ function normaligita($respondo) {
 	return $normaligita;
 }
 
+function kontroliRespondon($lernantaRespondo,$bonaRespondo) {
+	// attention, il ne faut pas utiliser != mais !==
+	if (strpos($bonaRespondo,"|")!==false) {
+		return kontroliRespondon($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliRespondon($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
+	} else {
+		return normaligita($lernantaRespondo)==normaligita($bonaRespondo);	
+	}
+}
+
 /*
  * conversion en utf8 (si page en utf8)
 */

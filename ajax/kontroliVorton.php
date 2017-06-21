@@ -24,6 +24,7 @@ $bonaRespondo = $row["eo"];
 $francaVorto = $row["fr"];
 
 
+// TODO a remplacer par la version kontroliRespondon dans la page utils.php
 function kontroliVorton($lernantaRespondo,$bonaRespondo) {
 	// attention, il ne faut pas utiliser != mais !==
 	if (strpos($bonaRespondo,"|")!==false) {

@@ -113,20 +113,9 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap23.0" value="Demandoj">
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Kiel Bob sukcesis antaŭi la bandon?",
-					2 => "Kiom da trezorserĉantoj envenis la kavernon?",
-					3 => "Kio mirigas la tri studentojn?",
-					4 => "Kie, laŭ la malnova dokumento, troviĝas la trezoro?"
-				);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(98,$persono_id);
+			?>
 
 			<h3>Notoj</h3>
 			
@@ -196,33 +185,9 @@ include "gerdakapo.inc.php";
 	
 			<p>Provu la sekvantan ekzercon, en kiu oni devas reskribi uzante participon!</p>
 
-			<fieldset class="ekzerco">
-				<legend>Transformu la frazojn uzante participon.</legend>
-				<input type="hidden" name="013_cxap23.1" value="Transformu la frazojn uzante participon.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>Mi serĉas monujon, kiun mi perdis. → Mi serĉas perditan monujon.</p>
-				</div>
-
-				<div class="tasko">
-				<?php $demandoj=array(
-					5 => "La strangulo parolas al si mem, ne atentante la studentojn, kiuj lin rigardas.",
-					6 => "La studento redonas la librojn, kiujn li jam legis.",
-					7 => "Kato, kiu manĝis, normale volas dormi.",
-					8 => "La policanoj ne rekonos la krimulon, kiun ili serĉas.",
-					9 => "Li zorge purigis la aŭton, kiun li volis vendi.",
-					10 => "En la universitato Marta estas virino, kiun ĉiu konas.",
-					11 => "Ŝi provis legi la numeron de la aŭto, dum ĝi veturas.",
-					12 => "Tiam ŝi ankoraŭ havis la monujon, kiun ŝi poste perdis.",
-					13 => "Li pensis pri la suferoj, kiujn li jam travivis.",
-					14 => "Mi plendos pri la seĝoj, kiuj malaperis.",
-					15 => "Mi devis atendi la buson, kiu venis poste.",
-					16 => "Ŝi longe adiaŭis la amikon, kiu devis foriri."
-					);
-					ekzerco(True,1);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(99,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

@@ -172,22 +172,9 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap17.0" value="Demandoj">
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Pri kio parolas la policano?",
-					2 => "Kion precize instruas Gerda?",
-					3 => "Kiu estas la alta blondulo?",
-					4 => "Kiu estas Marta?",
-					5 => "Kial oni ankoraŭ ne pridemandis la blondulon?",
-					6 => "Kiel la policano esperas retrovi Gerdan?",
-				);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(85,$persono_id);
+			?>
 
 			<h3>Notoj</h3>
 			<p>Jen ankoraŭ kelkaj vortoj, kiujn ni uzos por paroli pri la lingvo.</p>
@@ -235,57 +222,13 @@ include "gerdakapo.inc.php";
 			<p><b>pro</b> montras <b>kialon</b>: 
 			<span class="eo">Ŝi ŝatas lin pro liaj blondaj haroj.</span></p>
 
-			<fieldset class="ekzerco">
-				<legend>Enmetu unu el tiuj vortoj en ĉiun lokon.</legend>
-				<input type="hidden" name="013_cxap17.1" value="1. Enmetu unu el tiuj vortoj en ĉiun lokon.">
+			<?php 
+				getEkzercon(86,$persono_id);
+			?>
 
-				<div class="tasko">
-				<?php $demandoj=array(
-					7 => "Mi multe lernadis ___ lingvistiko ___ sukcesi en la universitato.",
-					8 => "___ la malfrua horo mi decidis veturi ___ aŭto, ___ esti pli rapida.",
-					9 => "___ kio temas? - Mi ne scias; mi ĵus alvenis.",
-					10 => "Mi dankas vin ___ via helpo.",
-					11 => "___ la bruo en mia angulo, estis ___ mi tre malfacile aŭdi.",
-					12 => "Mi scias certe ___ tio, ke mi vidis ĝin ___ miaj propraj okuloj.",
-					13 => "Ŝi venis ___ instrui kriptaĵo-sciencon, sed mi neniam aŭdis ___ tiu fako."
-					);
-					ekzerco(True, 1);
-					?>
-				</div>
-			</fieldset>
-
-			<fieldset class="ekzerco">
-				<legend>Anstataŭigu la vortojn inter "{}" per la ĝusta pronomo.</legend>
-				<input type="hidden" name="013_cxap17.2" value="2. Anstataŭigu la vortojn inter "{}" per la ĝusta pronomo.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>{Tom} scias, ke {Linda} rigardas al {Tom}.</p>
-					<p>→ Li scias, ke <b>ŝi</b> rigardas al <b>li</b>.</p>
-				</div>
-				<p class="primaire-texte texte-moyen">Forigu la vortojn kun "{}"!</p>
-	
-				<div class="tasko">
-				<?php $demandoj=array(
-					14 => "Marko pensas, ke {Marko} rompis {la} tason {de Marko}.",
-					15 => "Marko pensas, ke {Tom} rompis {la} tason {de Marko}.",
-					16 => "Tom pensas, ke {Tom} rompis {la} tason {de Marko}.",
-					17 => "Tom pensas, ke {Tom} rompis {la} tason {de Tom}.",
-					18 => "Tom pensas, ke {Marko} rompis {la} tason {de Tom}.",
-					19 => "De Petro {Linda} aŭdas malveran rakonton pri {Linda}.",
-					20 => "De Petro {Linda} aŭdas, ke Tom rakontis malveraĵon pri {Linda}.",
-					21 => "Ivano scias, kie {Petro} kaŝis {la} tason {de Petro}, sed {Ivano} ne scias, kie {Petro} kaŝis {la} tason {de Ivano}.",
-					22 => "{Linda} timas, ke la spiono sekvas {Lindan} tra la urbo.",
-					23 => "{Petro} timas, ke {Linda} amas {Lindan} pli ol {Petron}.",
-					24 => "{Linda} ĉiam pensas, ke {la} opinio {de Linda} estas prava.",
-					25 => "Marko diras, ke {Petro} perdis {la} tason {de Marko}.",
-					26 => "Sed Petro diras, ke {Marko} perdis {la} tason {de Marko}.",
-					27 => "Linda ne scias, ke {Marko} {Lindan} amas.",
-					28 => "Linda ne scias, ke {Marko} {Gerdan} amas."
-					);
-					ekzerco(True, 1);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(87,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

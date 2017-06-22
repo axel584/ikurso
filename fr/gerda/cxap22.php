@@ -135,79 +135,13 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap22.0" value="Demandoj">
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Kie troviĝas la loko indikita?",
-					2 => "Kial Tom tute ne ŝatus vojaĝi ŝipe?",
-					3 => "Kiel oni povas iri preskaŭ ĉien ajn?",
-					4 => "Kiom da homoj atendas la trezorserĉantojn?",
-					5 => "Kion rimarkas Linda observante la vojon?",
-				);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(96,$persono_id);
+			?>
 					
-			<fieldset class="ekzerco">
-				<legend>Trovu la vortojn.</legend>
-				<input type="hidden" name="013_cxap22.1" value="Trovu la vortojn.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>ekpreni kaj firme teni → ekpreni kaj firme teni : <b>kapti</b></p>
-				</div>		
-				<p class="primaire-texte texte-moyen">La vortoj estas:</p>
-				<p class="primaire-texte texte-moyen">aparato, aperi, bezoni, dokumento, edzo, elporti, filo, frato, gardi, hejmo, historio, horloĝo, ĵeti, kapti, konduki, kontroli, lasta, legi, letero, mono, motivo, obei, obstina, pasi, plaĉi, preni, preskaŭ, problemo, promesi, riĉa, sata, serĉi, skribi, solvi, suferi, ŝanĝi, ŝteli, teruro, tipo, uzi</p>
-		
-				<div class="tasko">
-				<?php $demandoj=array(
-					6 => "aliigi :",
-					7  => "aparato por montri la horojn :",
-					8  => "atenti, zorgi kontraŭ danĝero aŭ ebla malbono, teni :",
-					9 => "certigi, ke oni ion faros :",
-					10  => "detale esplori, ĉu io estas ĝusta aŭ ĝuste farita :",
-					11 => "domo aŭ loko, kie oni konstante vivas :",
-					12 => "ekpreni kaj firme teni :",
-					13 => "ekzemplo prezentanta iun specon :",
-					14 => "estanta post ĉiuj aliaj :",
-					15 => "firme restanta ĉe siaj opinio kaj volo :",
-					16 => "grava skribaĵo :",
-					17 => "irigi kun si :",
-					18 => "kapti por teni, porti aŭ uzi; havigi al si; akcepti, ricevi :",
-					19 => "kaŝe forpreni ion de alia homo :",
-					20 => "kontentigi, feliĉigi, ĝojigi :",
-					21 => "kun multe da havaĵo, da mono, da io ajn :",
-					22 => "kunaĵo de objektoj kaj iloj servanta por ion fari :",
-					23 => "ne bezonanta manĝaĵon :",
-					24 => "ne kontraŭstari, vivi kun io ĝisfine :",
-					25 => "ne tute, sed ne tute ne :",
-					26 => "pagilo konsistanta el pecoj kun difinitaj valoroj :",
-					27 => "preni kiel rimedon, agi per io por kontentigi bezonon :",
-					28 => "provadi por trovi :",
-					29 => "rapide forigi de si tra la aero :",
-					30 => "scienco pri pasintaj okazaĵoj; rakonto pri okazintaĵo :",
-					31 => "sekvi per okuloj kaj kompreni ion skribitan :",
-					32 => "sekvi tion, kion volas alia persono :",
-					33 => "senti doloron, travivi malfeliĉaĵon :",
-					34 => "sin vidigi, ekmontriĝi, iĝi videbla :",
-					35 => "skribaĵo sendita al alia homo :",
-					36 => "solvota demando, malfacilaĵo :",
-					37 => "suferi pro manko de iu necesa, necesigi ion :",
-					38 => "surpaperigi vortojn :",
-					39 => "timego :",
-					40 => "tio, kio igas iun agi aŭ opinii en iu maniero :",
-					41 => "trairi, preteriri; transirante malaperi, ne daŭri :",
-					42 => "trovi la respondon al demando, la rimedon kontraŭ malfacilaĵo :",
-					43 => "vira ido de samaj gepatroj :",
-					44 => "vira homido :",
-					45 => "viro ligita al virino por kunvivado kaj nasko de infanoj :"
-					);
-					ekzerco(True, 1);
-					?>
-					</div>
-			</fieldset>
+			<?php 
+				getEkzercon(97,$persono_id);
+			?>
 		
 		<?php 
 		} // fin section 4

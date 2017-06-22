@@ -174,23 +174,9 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap18.0" value="Demandoj">
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Kiu parolas komence de la ĉapitro, kaj pri kio?",
-					2 => "Kiel sentas sin Gerda?",
-					3 => "Kiom facile ŝi legis la dokumenton?",
-					4 => "Kial ŝi ne diras, kio estas skribita en la dokumento?",
-					5 => "Kion kunportas la aĉulo, kiam li revenas, kaj kial?",
-					6 => "Kia estas la voĉo de la filino de Gerda?",
-					7 => "Kion Gerda ricevas por manĝi?"
-				);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(88,$persono_id);
+			?>
 
 			<h3>Notoj</h3>
 		
@@ -208,54 +194,9 @@ include "gerdakapo.inc.php";
 
 			<h3>Ekzerco</h3>
 	
-			<fieldset class="ekzerco">
-				<legend><b>Trovu la vortojn.</b> </legend>
-				<input type="hidden" name="013_cxap18.1" value="Trovu la vortojn.">
-	
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>centro → centro : <u>mezo</u></p>
-				</div>
-		
-				<div class="tasko">
-					<p class="primaire-texte texte-moyen">La vortoj estas:</p>
-					<p  class="primaire-texte texte-moyen">amiko, aventuro, bani, bluo, danĝero, danki, ege, epoko, facila, fuŝi, homo, kial, kie, klaso, kompati, kredi, mezo, minuto, okulo, rondo, sana, sen, silenti, sveni, ŝati, tradicio, unua, urĝa, vorto, zorgi</p>
-					<?php $demandoj=array(
-					8 => "ama(n)to aŭ ŝata(n)to:",
-					9 => "ameti:",
-					10 => "centro:",
-					11 => "en kiu loko:",
-					12 => "enakvigi:",
-					13 => "esprimi feliĉon pro io ricevita:",
-					14 => "esti atenta, sin okupi:",
-					15 => "farebla sen granda laboro:",
-					16 => "fari tre malbone:",
-					17 => "grupo de amikoj (ekzemple):",
-					18 => "grupo de lernantoj:",
-					19 => "io kutime farata:",
-					20 => "kun bone funkcianta korpo:",
-					21 => "mallasta:",
-					22 => "ne kun:",
-					23 => "ne paroli, fari nenian bruon:",
-					24 => "neĉiutaga okazaĵaro:",
-					25 => "ofta okulkoloro de blonduloj:",
-					26 => "parto de parolo:",
-					27 => "perdi la konscion:",
-					28 => "pro kio:",
-					29 => "rigardi kiel veran:",
-					30 => "risko de malbono:",
-					31 => "senti la suferojn de alia homo:",
-					32 => "sesdek sekundoj:",
-					33 => "tempo en historio:",
-					34 => "tia, ke oni devas tuj fari ĝin:",
-					35 => "tre tre:",
-					36 => "vidilo en kapo: .",
-					37 => "viro aŭ virino:"
-					);
-					ekzerco(True, 1);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(89,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

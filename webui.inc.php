@@ -416,16 +416,26 @@ function getEkzercon($id,$persono_id) {
 		//echo "<input type='hidden' name=\"id_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["id"]."\">";
 		//echo "<input type='hidden' name=\"dem_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["numero"]." ".$rowEkzercero["demando"]."\">";
 		echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"".$rowEkzercero["numero"]." ".$rowEkzercero["demando"]."\">";
-		echo "<div class='input-field col s12'><input data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
-		if ($rowEkzerco["x2u"]==1) {
-			echo " onkeyup='xAlUtf8(this)'";
-		}
-		echo " value=\"";
-		echo $respondo;
-		
-		echo "\" class='validate ".$valid." ".$styleKorektebla."'";
 
-		echo "></div>";
+		if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")) { // cas des types d'exercices textarea
+			echo "<div class='input-field col s12'><textarea class='materialize-textarea' rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
+			if ($rowEkzerco["x2u"]==1) {
+				echo " onkeyup='xAlUtf8(this)'";
+			}
+			echo " class='validate ".$valid." ".$styleKorektebla."'>";
+			echo $respondo;
+			echo "</textarea></div>";
+		} else { // cas des types d'exercice sur des champs input
+			echo "<div class='input-field col s12'><input data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
+			if ($rowEkzerco["x2u"]==1) {
+				echo " onkeyup='xAlUtf8(this)'";
+			}
+			echo " value=\"";
+			echo $respondo;
+			
+			echo "\" class='validate ".$valid." ".$styleKorektebla."'";
+			echo "></div>";
+		}
 	}
 	echo "</div>";
 	echo "</div>";

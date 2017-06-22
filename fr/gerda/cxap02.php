@@ -214,54 +214,13 @@ include "gerdakapo.inc.php";
 		} // fin section 3
 		if ($section=="4") {
 		?>
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj.</b> </legend>
-				<input type="hidden" name="013_cxap02.0" value="Demandoj">
+			<?php 
+				getEkzercon(52,$persono_id);
+			?>
 
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Linda estas ___. (malserioza / nova studento / bela kaj pala / io stranga)",
-					2 => "Kio okazas? (Linda rigardas al la spegulo. / Malalta viro staras inter Tom kaj la pordo. / La blonda viro agas strange. / La nova studento proksimiĝas al Tom.)",
-					3 => "Ĉu estas io en lia mano? (jes / ne)",
-					4 => "Al kio montras la mistera ulo? (al la spegulo / al la pordo / al Linda / al Tom / al la angulo)",
-					5 => "Al kio rigardas la juna knabino, kiu estas kun li? (al la spegulo / al la pordo / al Linda / al Tom / al la angulo)",
-					6 => "Ĉu nun estas io en la taso? (jes / ne)"
-					);
-					ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
-
-			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
-				<input type="hidden" name="013_cxap02.1" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
-				
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>Turnu vin iomete, [ĉu / se] vi volas.</p>
-					<p>→ Turnu vin iomete, <b>se</b> vi volas.</p>
-					<p>Cet exercice attire votre attention sur la différence de sens entre
-					<b>ĉu</b> (interrogation) et <b>se</b> (condition)&nbsp;:</p>
-					<p><span class='eo'>mi ne vidas, ĉu estas io inter mi kaj vi</span> : 
-					je ne vois pas s'il y a quelque chose entre vous et moi. (Y a-t-il quelque chose ? Je ne vois pas.)</p>
-					<p><span class='eo'>mi ne vidas, se estas io inter mi kaj vi.</span> : 
-					s'il y a quelque chose entre moi et vous, alors je ne vois pas. (Cette chose m'empêche de voir.)</p>
-				</div>
-				<div class="tasko">
-					<?php $demandoj=array (
-						7 => "Mi ne vidas, [ĉu/se] la junulo parolas al la knabino, aŭ [ĉu/se] li nur rigardas al ŝi.",
-						8 => "Vi vidas lin tute bone, [ĉu /se] ne?",
-						9 => "[Ĉu/Se] li agas strange, li estas strangulo.",
-						10 => "Mi parolas al knabinoj, [ĉu/se] ili rigardas al mi.",
-						11 => "Mi ne scias, [ĉu/se] mi parolu al ŝi aŭ ne.",
-						12 => "[Ĉu/Se] ŝi parolas al mi, [ĉu/se] mi reparolu al ŝi?",
-						13 => "Li estas en universitato, [ĉu/se] li estas studento.",
-						14 => "Mi ne certas, [ĉu/se] li estas studento. Li estas tro maljuna."
-						);
-						ekzerco(True, 1);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(53,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

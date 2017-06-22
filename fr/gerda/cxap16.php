@@ -208,25 +208,9 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap16.0" value="Demandoj">
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Kion faris la junulo, post kiam li eliris el la vendejo?",
-					2 => "Kien li subite eniris?",
-					3 => "Kial Linda hezitis sekvi lin tien?",
-					4 => "Kiel aspektis la restoracio?",
-					5 => "Kion man&#285;is Linda?",
-					6 => "Kion faris la soldatoj?",
-					7 => "Kia estas Linda?",
-					8 => "Kio estas Linda?",
-					9 => "Kion rimarkas Linda post la telera milito?"
-					);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(83,$persono_id);
+			?>
 			
 			<h3>Notoj</h3>
 			<p class="parto">Nun vi devas lerni kelkajn novajn vortojn. La unua vorto verŝajne ne
@@ -262,28 +246,9 @@ include "gerdakapo.inc.php";
 			<p class="eo"><b>Kia</b> ĝi iĝis? - Ĝi iĝis ruĝ<b>a</b>.</p>
 			<p class="eo"><b>Kiel</b> ĝi iĝis ruĝa? - Subit<b>e</b>.</p>
 
-			<fieldset class="ekzerco">
-				<legend>Metu la ĝustan vorton.</legend>
-				<input type="hidden" name="013_cxap16.1" value="Metu la ĝustan vorton.">
-				<p class="primaire-texte texte-moyen">Ĉiu mankanta vorto estas unu el: kiel, kia, kian, kiaj, kiajn.</p>
-	
-				<div class="tasko">
-				<?php $demandoj=array (
-					10 => "Kun _____ sako li eliris? - Li eliris kun papera sako.",
-					11 => "_____ li forveturos? - Mi pensas, ke li forveturos aŭte.",
-					12 => "_____ numeron vi notis? - Mi notis lian aŭtan numeron.",
-					13 => "_____ vi sekvis lin? - Mi sekvis lin iom malproksime.",
-					14 => "_____ li estis vestita? - Li estis vestita per multkoloraj vestoj.",
-					15 => "_____ vi sentas vin hodiaŭ? - Mi sentas min tre bone, dankon.",
-					16 => "_____ estas via sano? - Multe pli bona ol hieraŭ.",
-					17 => "_____ virojn ŝatas Linda? - Ŝi ŝatas blondulojn.",
-					18 => "_____ vi ekkonis lin? - Ni estis en la sama lernejo.",
-					19 => "_____ restas Gerda? - Ŝi restas soifa."
-					);
-					ekzerco(True, 1);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(84,$persono_id);
+			?>
 	
 		<?php 
 		} // fin section 4

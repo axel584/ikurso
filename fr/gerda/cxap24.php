@@ -231,52 +231,14 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap24.0" value="Demandoj">
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Kiel aspektis la trezoro?",
-					2 => "Kion legis Ronga?",
-					3 => "Kiam Marta eksciis pri la trezoro de la lumoser&#265;antoj?",
-					4 => "Kie profesoro Kosadi faris historian esploron?",
-					5 => "Kion profesoro Kosadi eksciis pri la trezoro? Kion li ne povis kompreni?",
-					6 => "Kiel Marta eksciis pri la trezoro?"
-				);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(100,$persono_id);
+			?>
 	
 	
-			<fieldset class="ekzerco">
-				<legend>Forigu la vortojn skribitajn grandlitere, uzante participon.</legend>
-				<input type="hidden" name="013_cxap24.1" value="Forigu la vortojn skribitajn grandlitere, uzante participon.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>ĈAR la studentoj LIN OBSERVIS, li ne kuraĝis foriri.</p>
-					<p>→ Observate de la studentoj li ne kuraĝis foriri.</p>
-				</div>
-	
-				<div class="tasko">
-				<?php $demandoj=array(
-					7 => "La HOMOJ, KIUJ FORIROS, ne plu zorgos pri sia laboro.",
-					8 => "La INFANOJ, KIUJ LERNAS, ekstaras, kiam la instruisto envenas.",
-					9 => "POST KIAM LI longe PRIPENSIS la aferon, li decidis ekagi.",
-					10 => "Oni enŝlosis la HOMON, KIUN ONI KAPTIS, en la policejo.",
-					11 => "La HOMO, KIU MALAPERIS, estas instruisto pri malnovaj sekretaj lingvoj.",
-					12 => "DUM LI ATENDIS la buson, Tom ekhavis ideon.",
-					13 => "La HOMOJ, KIUJN LA AFERO INTERESAS, povas trovi pli da informoj en iu ajn biblioteko.",
-					14 => "La blondulo forveturis, DUM Tom kaj Linda OBSERVIS LIN.",
-					15 => "La HOMOJ, KIUJN ONI LIBERIGOS, ankoraŭ atendis la malfermon de la pordego.",
-					16 => "ĈAR la polico LIN KAPTOS, la spiono manĝis la dokumenton.",
-					17 => "POST KIAM ĉiu FORGESIS ĜIN, la libro atendis multajn jarcentojn en la biblioteko.",
-					18 => "TUJ ANTAŭ OL LI MALFERMIS la pordon, li subite konsciis pri stranga bruo venanta de ĝia alia flanko."
-					);
-					ekzerco(True,1);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(101,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

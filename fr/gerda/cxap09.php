@@ -205,52 +205,13 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap09.0" value="Demandoj">
-	
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Ĉu la flegistino venas tuj? (jes / ne)",
-					2 => "Ĉu oni ofte svenas en koridoro? (jes / ne)",
-					3 => "Kial Tom ekhaltas? (Li estas novulo. / Gerda ne plu estas tie. / Okupiĝi pri malsanuloj ne estas lia fako.)",
-					4 => "Kiu sidas ĉe la muro? (Tom / Bob / linda / Gerda / la flegistino)",
-					5 => "Ĉu Bob paroladas? (jes / ne)"
-					);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(69,$persono_id);
+			?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Kompletigu la frazon per la ĝusta demandovorto.</b> </legend>
-				<input type="hidden" name="013_cxap09.1" value="Kompletigu la frazon per la ĝusta demandovorto.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p> ______ vi iras? - Mi iras al la urbo. </p>
-					<p>→ <b>Kien</b> vi iras? - Mi iras al la urbo.</p>
-					<p>La demandovortoj jam lernitaj estas:
-						kio, kion, kiu, kiun, kiel, kiam, kial, kie, kien, ĉu.</p>
-				</div>
-						
-				<div class="tasko">
-				<?php $demandoj=array (
-					6. => "______ diris la kuracisto? - Li diris, ke mi estu senzorga, ke mia malsano ne estas tro serioza.",
-					7. => "______ vi resaniĝos? - Baldaŭ. Eble post kelkaj tagoj.",
-					8. => "______ vi iros unue post la resaniĝo? - Unue mi iros en bonan restoracion.",
-					9. => "______ vi iros sola? - Ne, amikoj iros kun mi.",
-					10. => "______ helpas vin dum la malsano? - Mia amiko Petro.",
-					11. => "______ estas via patrino? - En sia oficejo; ŝi devas multe labori tie.",
-					12. => "______ vi ne povas iri piede? - Ĉar miaj kruroj estas tute senfortaj.",
-					13. => "______ vi ekmalsanis? - Mi ekmalsanis tre subite.",
-					14. => "______ tio okazis? - En mia laborejo.",
-					15. => "______ ili metis en vian laborlokon? - Neniun, do la laboro restas nefarita kaj atendas min.",
-					16. => "______ ili metis neniun en vian lokon? - Ĉar laboristo por mia laboro estas malofte trovebla."
-					);
-					ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(70,$persono_id);
+			?>
 		
 		<?php 
 		} // fin section 4

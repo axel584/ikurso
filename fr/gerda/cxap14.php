@@ -212,73 +212,13 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap14.0" value="Demandoj">
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Ĉu Gerda sciis, kie ŝi estas?",
-					2 => "Kiel aspektis la ĉambro, en kiu Gerda kuŝas?",
-					3 => "Kial Gerda estis lacega?",
-					4 => "Ĉu ŝi ŝatis sian malliberecon?",
-					5 => "Kiel ŝi provis liberiĝi?",
-					6 => "Kio vekis ŝin?",
-					7 => "Pri kio la infanoj parolis?",
-					8 => "Kial la infanoj ne helpis ŝin?",
-					9 => "Kun kiu Gerda estis post la forkuro de la infanoj?"				
-					);
-				ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(79,$persono_id);
+			?>
 
-			<fieldset class="ekzerco">
-				<legend>Trovu la vortojn</legend>
-				<input type="hidden" name="013_cxap14.1" value="Trovu la vortojn.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>parto → parto : <u>peco</u></p>
-				</div>
-		
-				<div class="tasko">
-					<p class="primaire-texte texte-moyen">La vortoj estas:</p>
-					<p class="primaire-texte texte-moyen">absurda, aĵo, deziri, drogo, eta, evidenta, fakto, fora, ideo, imagi, instrui, kaŝi, kiam, komuniki, koni, konsenti, lerni, mesaĝo, nomo, paro, peco, plena, promeni, pulvoro, respondi, sekreto, subita, super, ŝajni, temo</p>
-					<?php $demandoj=array (
-					10 => "afero :",
-					11 => "akiri scion :",
-					12 => "aspekti :",
-					13 => "diri reage al demando :",
-					14 => "dormigilo :",
-					15 => "en kiu tempo :",
-					16 => "enhavanta ĉion enhaveblan :",
-					17 => "facile videbla, komprenebla :",
-					18 => "fari por si ideon pri io :",
-					19 => "havi ideon pri :",
-					20 => "havi similan opinion :",
-					21 => "io el tre malgrandaj partetoj :",
-					22 => "io, kio restu kaŝita, ne konata :",
-					23 => "iradi pro plezuro :",
-					24 => "komunikaĵo :",
-					25 => "kontraŭ la normala saĝo :",
-					26 => "lernigi :",
-					27 => "malgranda :",
-					28 => "malmontri :",
-					29 => "malproksima :",
-					30 => "parto :",
-					31 => "pensaĵo :",
-					32 => "pli alta ol :",
-					33 => "rapida, ne atendita :",
-					34 => "rilatanta duo :",
-					35 => "sciigi, konigi :",
-					36 => "tio, pri kio io estas :",
-					37 => "veraĵo :",
-					38 => "voli havi :",
-					39 => "vorto, per kiu persono estas konata :"
-					);
-					ekzerco(True, 1);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(80,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

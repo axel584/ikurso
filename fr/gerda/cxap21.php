@@ -154,82 +154,13 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap21.0" value="Demandoj">
-					<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Pri kio parolas Gerda kaj Bob?",
-					2 => "Kio okazas post iom da tempo?",
-					3 => "Kion promesas Gerda?",
-					4 => "Pri kio temas la papero?",
-					5 => "Kiuj estas la Lumoserĉantoj?",
-					6 => "Kial la ŝtatoj persekutis ilin?",
-					7 => "Kiam la aĉulo foriras?"
-				);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(94,$persono_id);
+			?>
 
-			<fieldset class="ekzerco">
-				<legend>Trovu la vortojn.</legend>
-				<input type="hidden" name="013_cxap21.1" value="Trovu la vortojn.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>kunligita aro → kunligita aro : <b>grupo</b></p>
-				</div>
-		
-				<p class="primaire-texte texte-moyen">La vortoj estas:</p>
-				<p class="primaire-texte texte-moyen">bruna, dekstra, dolĉa, flanko, fojo, flugi, frua, gratuli, grupo, hieraŭ, ĵus, kelnero, koloro, kuko, mateno, meblo, milito, muziko, nazo, noto, okazi, pano, papero, plafono, plano, plata, poŝto, raporti, reala, rompi, soldato, speco, sporto, strato, supo, ŝanco, tasko, telero, vendi, vesti</p>
-				
-				<div class="tasko">
-				<?php $demandoj=array(
-					8 => "administrejo por transportado de leteroj :",
-					9 => "agrable sentiganta, kiel sukero :",
-					10 => "ano de la militistaro :",
-					11 => "antaŭe pripensita kaj ordigita aranĝo de realigota agado :",
-					12 => "aro de aĵoj kun samaj ecoj :",
-					13 => "arto aranĝi sonojn en maniero plaĉa por aŭskultado :",
-					14 => "ĉe la flanko kontraŭa al tiu de la koro :",
-					15 => "ĉiu el la okazoj, kiam io okazas :",
-					16 => "dekstra aŭ maldekstra parto :",
-					17 => "ebleco de sukceso :",
-					18 => "elstara parto meze de vizaĝo :",
-					19 => "estiĝi, fariĝi en iu loko aŭ momento :",
-					20 => "farota laboro aŭ servo :",
-					21 => "fordoni ion interŝanĝe por mono, malaĉeti :",
-					22 => "frua parto de tago antaŭ tagmezo :",
-					23 => "granda movebla objekto por uzado en domo :",
-					24 => "ĝentile esprimi al iu sian kontentecon pro ties sukceso aŭ feliĉo :",
-					25 => "io plata, el kio oni manĝas :",
-					26 => "je la tago antaŭ la nuna tago :",
-					27 => "korpaj ludoj :",
-					28 => "kovri la korpon per io portebla :",
-					29 => "kunligita aro :",
-					30 => "malalta aŭ maldika :",
-					31 => "maldika aĵo, sur kiu oni skribas, kaj el kiu oni faras librojn :",
-					32 => "mallonga memoriga skribaĵo :",
-					33 => "mallonge antaŭe :",
-					34 => "manĝaĵo kun multe da akvo :",
-					35 => "okazanta pli antaŭe, proksime al la komencotempo :",
-					36 => "pansimila sed pli dolĉa bakaĵo :",
-					37 => "perforte dispecigi :",
-					38 => "reciproka mortigado inter malamikaj homgrupoj :",
-					39 => "restoracia servisto, kiu alportas la trinkaĵojn kaj manĝaĵojn :",
-					40 => "ruĝeco, blueco, bruneco, verdeco, nigreco, ktp :",
-					41 => "ruĝete terkolora :",
-					42 => "sciigi al alia persono, kion oni aŭdis, vidis kaj trovis :",
-					43 => "sin movi tra la aero :",
-					44 => "speco de simpla manĝaĵo :",
-					45 => "supra kovrilo de ĉambro :",
-					46 => "vere ekzistanta kaj kontrolebla :",
-					47 => "vojo inter domoj en urbo :"
-					);
-					ekzerco(True, 1);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(95,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

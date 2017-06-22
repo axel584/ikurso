@@ -167,96 +167,13 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap20.0" value="Demandoj">
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Kion aŭdas Gerda?",
-					2 => "Kiel ŝi scias, ke ne estas la kutima vizitanto?",
-					3 => "Kiujn prezentas la policano al Gerda?",
-					4 => "Pri kio estas la unua demando de Gerda?",
-					5 => "Kiel la kaptintoj celis igi Gerdan kunlabori?",
-					6 => "Por kio foriras Linda?",
-					7 => "Kial la policano petas, ke Bob restu kun Gerda?"			
-				);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(92,$persono_id);
+			?>
 
-			<fieldset class="ekzerco">
-				<legend>Trovu la vortojn.</legend>
-				<input type="hidden" name="013_cxap20.1" value="Trovu la vortojn.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>senti vivan plezuron → <b>ĝoji</b></p>
-				</div>
-
-				<p class="primaire-texte texte-moyen">La vortoj estas:</p>
-				<p class="primaire-texte texte-moyen">bedaŭri, brako, daŭri, esperi, feliĉa, fenestro, forgesi, ĝentila, ĝoji, horo, ie, iam, infano, interesi, kanti, komenci, koncerni, kovri, krii, kuri, kuraĝa, kutimi, laca, laŭta, libera, lito, ludi, marŝi, momento, monto, movi, nacio, nenie, patro, perfekta, persono, pezi, plendi, plori, preciza, proponi, pura, rajti, rakonti, ridi, rimarki, roko, simili, situacio, soni, stulta, ŝlosi, veki, voĉo, vojo</p>
-				<div class="tasko">
-				<?php $demandoj=array (
-					8 => "afabla en kutima kaj ĝusta maniero :",
-					9 => "aro de lokoj trairataj por iri de unu loko al alia :",
-					10 => "dolore senti perdon, esti malkontenta pro ia faro aŭ manko :",
-					11 => "ekkonscii pri :",
-					12 => "ekmaldormigi :",
-					13 => "emi ion fari pro ofta ripetado :",
-					14 => "en iu loko :",
-					15 => "en neniu loko :",
-					16 => "esprimi malkontentecon :",
-					17 => "esti aŭdebla :",
-					18 => "faradi pro plezuro :",
-					19 => "fari la unuan parton de io :",
-					20 => "fari muzikon pervoĉe :",
-					21 => "fari voĉbruon por montri subitan ĝojon :",
-					22 => "fermi per seruro :",
-					23 => "forte aŭdebla :",
-					24 => "grupo de homoj kun samaj tradicio kaj historio :",
-					25 => "havi permeson fari ion :",
-					26 => "havi samajn ecojn kiel :",
-					27 => "homido :",
-					28 => "homo konsiderata kiel konscia kun devoj kaj rajtoj :",
-					29 => "iri per egalaj paŝoj :",
-					30 => "je iu tempo :",
-					31 => "kapabla iri kaj fari laŭplaĉe :",
-					32 => "klara, certa, perfekte ĝusta :",
-					33 => "kredi, ke io dezirata realiĝos :",
-					34 => "meblo por kuŝado kaj dormado :",
-					35 => "meti ion sur :",
-					36 => "montri doloron per okulakvo kaj ĝemetoj :",
-					37 => "natura altegaĵo :",
-					38 => "ne kapabla bone pensi :",
-					39 => "ne miksita, sen nedezirata aldono :",
-					40 => "okupi la atenton de iu :",
-					41 => "parolsono de homo :",
-					42 => "parto de homa korpo, ĉe kies fino estas mano :",
-					43 => "parto de muro, kie povas enveni lumo kaj aero :",
-					44 => "perdi memoron pri :",
-					45 => "pervoĉe fari laŭtajn sonojn :",
-					46 => "pluestadi, ne esti finita :",
-					47 => "prezenti ideon pri io farinda :",
-					48 => "rapide iri piede :",
-					49 => "rilati, interesi, esti la temo de :",
-					50 => "sciigi okazintaĵojn per vortoj :",
-					51 => "senmanka :",
-					52 => "sentanta eluzitecon de siaj fortoj :",
-					53 => "senti vivan plezuron :",
-					54 => "sentigi emon fali (moviĝi malsupren) :",
-					55 => "sesdek minutoj :",
-					56 => "ŝtonego :",
-					57 => "trankvila kaj sentima antaŭ danĝero :",
-					58 => "translokigi :",
-					59 => "tre mallonga tempodaŭro :",
-					60 => "tuto da kondiĉoj kaj ĉirkaŭaĵo :",
-					61 => "tute kontenta, bonŝanca :",
-					62 => "vira naskiginto de ido :"
-					);
-					ekzerco(True, 1);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(93,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

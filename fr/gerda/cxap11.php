@@ -170,46 +170,13 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				
-				<legend><b>Demandoj</b> </legend>
-					<input type="hidden" name="013_cxap11.0" value="Demandoj">
-					<div class="tasko">
-					<?php $demandoj=array (
-						1 => "De kiu Linda petas helpon?",
-						2 => "Ĉu la juna blonda viro estas kontenta?",
-						3 => "Kien la blondulo volas veturi?",
-						4 => "Kion volas Linda de li?",
-						5 => "Ĉu la blondulo konsentas?",
-						6 => "Pri kio Linda parolas dum la veturo?",
-						7 => "Ĉu la blondulo estas parolema?"
-					);
-					ekzerco(True, 2);
-					?>
-					</div>
-			</fieldset>
+			<?php 
+				getEkzercon(73,$persono_id);
+			?>
 		
-			<fieldset class="ekzerco">
-				<legend>Plenigu per la ĝusta formo: <b>iĝ</b> aŭ <b>ig</b> kaj skribu la tutan frazon.</legend>
-				<input type="hidden" name="013_cxap11.1" value="Plenigu per la ĝusta formo: 'iĝ' aŭ 'ig' kaj skribu la tutan frazon..">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>Tio facil____as la laboron. La laboro facil____as.</p>
-					<p>→ Tio facil<b>ig</b>as la laboron. La laboro facil<b>iĝ</b>as.</p>
-				</div>
-					
-				<div class="tasko">
-					
-				<?php $demandoj=array(
-					8 => "Mi volis aspekti pli bele ol normale. Mi ___is min pli bela antaŭ la promenado.<br>Antaŭ la promenado, mi ___is pli bela. Penjo ridis pri mi, ĉar mi plibel___is min. Ni veturis en la urbon.<br>Vetur___is nin Penjo. Ŝi ___is mia amikino tuj post mia unua tago en la laborejo.<br>Antaŭ la forveturo ŝi trovis min en mia ĉambro, kie mi plibel___is.",
-					9 => "La urbo trov___as tro malproksime de nia laborejo por iri piede.<br>Penjo ne havas aŭton, sed ŝi sukcesis hav___i al si la aŭton de Bob.",
-					10 => "Post longa promenado en la urbo ni volis eksidi en trinkejo.<br>Tuj post kiam ni sid___is ĉe tablo, iu ulo turnis sin. Li turn___is al ni kaj ekrigardis nin.<br>Ni eksentis nin malbonaj. Lia rigardado malbonsent___is nin. Ni devis agi.<br>Ni ne plu restis sidaj, ni restar___is, tiel dev___ante lin forturni sin.<br>Li komprenis, ke li ĝenis nin ade rigardante al ni.<br>Ni kompren___is al li, ke rigardado povas esti maldiskreta.",
-					11 => "Mi lernas multon en la urbo. Ĝi lern___as min pri la vivo.<br>Multhoma kunvivado lern___as kvazaŭ aŭtomate en la urbo."
-				);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(74,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

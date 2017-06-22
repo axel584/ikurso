@@ -17,9 +17,9 @@ if ($persono_id) {
 	$persono = apartigiPersonon($persono_id);
 }
 // on récupère les réponses précédentes que l'on va mettre dans la variable memorkurso
-if (isset($leciono)&&isset($persono_id)) {
-	$memorkurso = getRegistritajnRespondojn('GR',$leciono,$persono_id);
-}
+// if (isset($leciono)&&isset($persono_id)) {
+// 	$memorkurso = getRegistritajnRespondojn('GR',$leciono,$persono_id);
+// }
 
 // tiu funkcio konstruas la liston de la tekstoj "lasu min..."
 function konstruiLasuMenuon() {

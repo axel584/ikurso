@@ -128,20 +128,9 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b></legend>
-				<input type="hidden" name="013_cxap06.0" value="Demandoj">
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Kion Tom, Bob kaj Linda aŭdis? (koridoron / strangan bruon / penson / la blondulon)",
-					2 => "Kiu eble falis en la koridoro? (Tom / Bob / Linda / Gerda / la blondulo / Ronga)",
-					3 => "Kiuj iras vidi? (Linda kaj Tom / Linda kaj Bob / Bob kaj Tom / ĉiuj tri)",
-					4 => "Kiu restas por observi? (Tom / Bob / Linda / la blondulo / Gerda)"
-					);
-				ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(60,$persono_id);
+			?>
 
 			<fieldset class="ekzerco">
 				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>

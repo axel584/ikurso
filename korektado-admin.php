@@ -44,7 +44,7 @@ while ($row=$result->fetch()) {
 	while ($row2=$result2->fetch()) {
 		echo "<!--".$row["combien"]."::".$row2["combien"]."-->";
 		$taux = number_format(100*$row2["combien"]/$row["combien"],2);
-		if ($taux<10.0) {
+		if ($taux<2.0) {
 			break;
 		}
 		echo "<span style=\"color:blue\">".$row2["normaligita"]." (".$taux." %)</span></p><br/>";

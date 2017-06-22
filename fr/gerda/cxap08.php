@@ -184,77 +184,21 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap08.0" value="Demandoj">
-	
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Ĉu Linda estas trankvila? (jes / ne)",
-					2 => "Ĉu Tom kaj Bob jam revenis? (jes / ne)",
-					3 => "Ĉu Linda scias, kio okazis al Gerda? (jes / ne)",
-					4 => "Kiu ekstaras kaj iras al la pordo? (Linda / Gerda / la juna viro, kiu metis ion en la kafon de Gerda / Bob / Tom)",
-					5 => "Kiu sekvas? (Linda / Gerda / la juna viro, kiu metis ion en la kafon de Gerda / Bob / Tom)"
-					);
-				ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(65,$persono_id);
+			?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
-				<input type="hidden" name="013_cxap08.1" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
-				<div class="tasko">
-					<?php $demandoj=array (
-						6 => "[Oni/Onin] sendis [mi/min] al [Berlino/Berlinon] por paroli kun la [spiono/spionon].",
-						7 => "En [Berlino/Berlinon] mi atendis kvar [tagoj/tagojn] sed ne vidis [li/lin].",
-						8 => "La [tuta/tutan] [tempo/tempon] ili observis la [virino/virinon] en [Londono/Londonon].",
-						9 => "Ili sekvis [ŝi/ŝin] al [Parizo/Parizon], sed en [tiu/tiun] [urbo/urbon] [ili/ilin] perdis [ŝi/ŝin].",
-						10 => "Kiam [oni/onin] aŭdis [tiu/tiun] [novaĵo/novaĵon] el [Parizo/Parizon], [oni/onin] decidis, ke [mi/min] ne plu restu en la [urbo/urbon].",
-					);
-					ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(66,$persono_id);
+			?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
-				<input type="hidden" name="013_cxap08.2" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>Vi parolu pri [vi/si].</p>
-					<p>→ Vi parolu pri <b>vi</b>.</p>
-				</div>
-	
-				<div class="tasko">
-					<?php $demandoj=array (
-						11 => "Mi konas [min/sin]. Mi do ne volas vidi [min/sin] en la spegulo. Tom estas pli bela ol mi, kaj mi ofte vidas lin rigardi [lin/sin] en la spegulo. Kiam li turnas [lin/sin] al mi, mi plene vidas [sian/lian] belan aspekton.",
-						12 => "Ĉu vi volas piediri reen al [via/sia] ĉambro? Vi promenos longe, sed ne timu, ke [viaj/siaj] kruroj tro laboros kaj perdos [ilian/sian] tutan forton."
-						);
-					ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(67,$persono_id);
+			?>
 				
-			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan pronomon, kompletigu ĝin kaj skribu la tutan frazon.</b> </legend>
-				<input type="hidden" name="013_cxap08.3" value="Elektu la ĝustan pronomon, kompletigu ĝin kaj skribu la tutan frazon.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>Mi konas [mi* / si*] vizaĝon. → Mi konas <b>mian</b> vizaĝon.</p>
-					<p>Atente rigardu la tutan ekzercon unue!</p>
-				</div>
-
-				<div class="tasko">
-					<?php $demandoj=array (
-					13 => "Ĉu vi havas informojn pri Linda? Ŝi kuŝis en [ŝi*/si*] ĉambro kaj ne sentis [ŝi*/si*] tre bone. Tom iris al [ŝi*/si*] kun [li*/si*] kuracisto, sed ŝi ne rigardis tiun kuraciston serioza. Ŝi preferis [ŝi*/si*] kuraciston; ŝi vere ne amas [li*/si*].",
-					14 => "Li do forsendis [li*/si*] kaj vokis [ŝi*/si*]. Strange, kiam ŝi vidis [li*/si*] kuraciston, ŝi sentis [ŝi*/si*] malbone, sed tuj kiam ŝi vidis [ŝi*/si*] kuraciston alveni, ŝi jam sentis [ŝi*/si*] pli bone.",
-					15 => "Oni [oni*/si*] demandas, ĉu ŝi ametas [li*/ŝi*/si*] kuraciston."
-					);			
-					ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(68,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

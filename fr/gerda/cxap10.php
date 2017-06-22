@@ -129,46 +129,13 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b> </legend>
-				<input type="hidden" name="013_cxap10.0" value="Demandoj">
+			<?php 
+				getEkzercon(71,$persono_id);
+			?>
 		
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Kiu ne emas fidi la flegistinon? (Tom / Bob / Linda / Gerda / la blondulo)",
-					2 => "Kie Tom kaj Bob retrovis sin reciproke? (en lernejo / en universitato / en la urbego, kie ili vivis tiutempe)",
-					3 => "Estas ___ flegistino(j) en la universitato. (unu / du / tri / kvar / kvin)",
-					4 => "Pri kiu zorgas Tom? (pri Bob / pri Gerda / pri Linda / pri la flegistino)",
-					5 => "Ĉu Tom ŝatas la novan aventuron? (jes / ne)",
-					6 => "Kiun amas Tom? (Gerdan / Lindan / Rongan / la flegistinon)"				
-				);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
-		
-			<fieldset class="ekzerco">
-				<legend><b>Kopiu la frazojn kaj anstataŭigu la stelon per la ĝusta vorto aŭ vortero.</b> </legend>
-				<input type="hidden" name="013_cxap10.1" value="Kopiu la frazojn kaj anstataŭigu la stelon per la ĝusta vorto aŭ vortero.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>Tom [*] Linda estas student[*]. → Tom kaj Linda estas studentoj.</p>
-				</div>
-				<div class="tasko">
-				<?php $demandoj=array (
-					7 => "Tom [*] Linda estas student[*]. En universitat[*] restoraci[*] ili observas blond[*] junul[*], kiu agas plej strange: dum li parolas [*] knabino, li kaŝ[*] metas io[*] en ŝi[*] kafotaso[*].",
-					8 => "Eble estis drogo, ĉar tuj post ki[*] ŝi ekstaras kaj forlasas la restoracio[*], [*] la koridoro[*] ŝi jam perdas la konscion. Intertemp[*], Bob sid[*]is ĉe Tom kaj Linda.",
-					9 => "Li povas rakont[*] al ili[*], ki[*] estas la knabino: ŝi estas Gerda, nova instruist[*] pri kriptaĵoscienco ([*]novaj sekretaj lingvoj). Ronga, la profesoro pri lingvistiko, volis, ke ŝi ven[*] al la universitato [*] instru[*] kaj labor[*] kun li.",
-					10 => "Kiam ili aŭdas ŝi[*] falbruon el la koridor[*], Bob kaj Tom rapidas por helpi ŝi[*]. Bob metas ŝin bone, tiel [*] ŝi kuŝu komforte, kaj Tom ir[*] vok[*] flegistinon.",
-					11 => "Tiu flegistino, dika, grasa kaj parolema, nur post long[*] diskut[*] kun Tom, konsciiĝas [*] tio, ke la afero urĝas. Se ŝi est[*] pli zorgema, ŝi [*] rapidus kaj eble ne okazus jeno:",
-					12 => "Kiam Tom fine [*]venas kun la flegistino, Gerda estas for, kaj Bob sidas ĉe la koridor[*] mur[*], bat[*]a surkape. Kion [*]tempe faras Linda? Ŝi pli kaj pli [*]trankvil[*]as, lasite sola [*] la universitata restoracio kun la blond[*] strang[*].",
-					13 => "Ŝi observ[*] lin, kaj kiam li eliras tra la pordo alurb[*], ŝi[*] sekvas li[*]. Linda estas junulino iom tim[*], certe belega. Tom am[*]as ŝin; li havas okulojn nur [*] ŝi.",
-					14 => "Li zorgas pri ŝi. Ĉu ŝi trov[*] en danĝero? Ki[*], fakte, ŝi iros? Kaj Gerda, kien ŝi[*] foriĝis? Ki[*] okaz[*] kun ŝi? La afero [*] pli kaj pli mistera!"
-				);
-				ekzerco(True, 2);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(72,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

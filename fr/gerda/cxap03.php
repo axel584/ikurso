@@ -178,39 +178,13 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b></legend>
-				<input type="hidden" name="013_cxap03.0" value="Demandoj">
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Kiuj aspektas kiel spionoj? (Linda kaj Tom / Linda kaj Bob / Bob kaj Tom / Gerda kaj la blondulo)",
-					2 => "Ĉu Bob salutas ilin tuj? (jes /ne)",
-					3 => "Ĉu Linda kaj Tom permesas, ke Bob sidu ĉe ilia tablo? (jes / ne)",
-					4 => "Kiu ne volas esti maldiskreta? (Bob / Tom / Linda / Gerda / la blondulo)",
-					5 => "Kio estas sur la vizaĝo de Linda? (bela deklaro / bona tago / mistera esprimo / io pli grava)"
-					);
-					ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(54,$persono_id);
+			?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Formu frazojn.</b></legend>
-				<input type="hidden" name="013_cxap03.1" value="Formu frazojn.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>{ -as aspekt- ĉu kiel la -o -o student- ul- ? } → Ĉu la ulo aspektas kiel studento?</p>
-				</div>
-				<div class="tasko">
-				<?php $demandoj=array (
-					6 => "{ -as -bon- mal- ne -o pardon- -ul- }",
-					7 => "{ -e -is mi post- re- -ven- }",
-					8 => "{ -a- al -as -in- -j -j jun- knab- -o -o- parol- vir- }"
-				);
-				ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(55,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

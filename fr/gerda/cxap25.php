@@ -126,46 +126,15 @@ include "gerdakapo.inc.php";
 			fojon, ktp. Certe vi fine trovos. Kaj se ne, nu, la vortoj kaj
 			esprimmanieroj de Esperanto pli bone metiĝos en vian kapeton…
 			</p>
-			<fieldset class="ekzerco">
-				<legend></legend>
-				<div class="tasko">
-				<?php $demandoj=array(
-					1 => "Ĉu vi konas la respondon ?"
-					);
-					ekzerco(True, 5);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(102,$persono_id);
+			?>
 	
 			<h3>Demandoj, sed ne ekzercoj</h3>
 	
-			<fieldset class="ekzerco">
-				<legend>Respondu libere.</legend>
-				<input type="hidden" name="013_cxap25.1" value="Respondu libere.">
-				<p class="primaire-texte texte-moyen">
-				Ĉar tiu ĉi estas la lasta ĉapitro de la GERDA-kurso, ne estas
-				demandoj pri la teksto, kaj ne estas ekzercoj. En ilia loko estas
-				demandoj pri la tuta kurso, pri via opinio pri la kurso. Mi esperas, ke
-				vi zorge respondos ilin, ĉar viaj respondoj helpos nin plibonigi la
-				kurson.
-				</p>
-				<p class="primaire-texte texte-moyen">Respondu per multegaj vortoj!</p>
-
-				<div class="tasko">
-				<?php $demandoj=array(
-					2 => "Kiom da Esperanto vi jam sciis, kiam vi komencis la GERDA-kurson? Kiel vi lernis Esperanton antaŭe?",
-					3 => "Ĉu la GERDA-kurso estis por vi utila? Ĉu vi sukcesis multe lerni per ĝi? Ĉu vi ĝuis ĝin?",
-					4 => "Ĉu vi pensas, ke la teksto uzita (la rakonto <i>Gerda malaperis!</i>) estis bone elektita? Ĉu ĝia lingvaĵo estas tro simpla? Ĉu la rakonto estas tro stulta, infaneca aŭ malinteresa?",
-					5 => "Ĉu la demandoj pri la teksto estis utilaj? Ĉu eble estus pli bone havi nur ekzercojn post ĉiu ĉapitro, sen demandoj? Ĉu la demandoj estu malpli simplaj, por ke oni povu respondi ilin per pli da vortoj?",
-					6 => "Ĉu la ekzercoj estis utilaj? Ĉu la vortaro-ekzercoj, en kiuj oni devas parigi vortojn kaj difinojn, estis utilaj? Kiuj estis la plej utilaj ekzercoj, kaj kiuj estis la malplej utilaj? Ĉu vi povas proponi aliajn specojn de ekzercoj?",
-					7 => "Ĉu la <i>vortlisto</i> estis sufiĉe bona? Ĉu ĝi enhavu pli da gramatikaj klarigoj, aŭ pli da ekzemploj? Ĉu ĝi estu havebla en aliaj lingvoj? Ĉu eble vi eĉ povus helpi traduki ĝin al alia lingvo?",
-					8 => "Ĉu vi uzis aŭ havas iujn aliajn lernilojn, ekzemple vortaron aŭ lernolibron pri Esperanto? Kiujn?",
-					9 => "Ĉu vi volas plulerni Esperanton? Kiel? Ĉu kurso simila al la GERDA-kurso, sed kun bonaj literaturaj tekstoj anstataŭ la GERDA-rakonto, estus utila por vi? Ĉu vi preferus simple trastudi iun libron en Esperanto? Ĉu vi volus trastudi libron diskutante ĝin kun iu? Ĉu vi volas lerni pli pri la historio kaj celoj de la Esperanto-Movado?",
-					);
-					ekzerco(True, 2);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(103,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

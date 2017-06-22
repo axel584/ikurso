@@ -172,44 +172,13 @@ include "gerdakapo.inc.php";
 		if ($section=="4") {
 		?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Demandoj</b></legend>
-				<input type="hidden" name="013_cxap05.0" value="Demandoj">
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Kio estis en la mano de la blondulo antaŭe? (sukerpeco / la taso de Gerda / io tre malgranda / la taso de Linda / nenio)",
-					2 => "Kio estis en lia mano poste? (sukerpeco / la taso de Gerda / io tre malgranda / la taso de Linda / nenio)",
-					3 => "Kio estas en la sukerujoj tie? (sukerpecoj / pulvora sukero / iu drogo / mistera substanco / sekreta lingvo)",
-					4 => "Ĉu estas normale promeni kun sukerpecoj en la poŝo? (jes / ne)",
-					5 => "Kiu ekiras for? (Linda / Gerda / Tom / Bob / la blondulo)"
-					);
-				ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(58,$persono_id);
+			?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
-				<input type="hidden" name="013_cxap05.1" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple: </em></p>
-					<p>[Kiam/Se] li estus studento, mi lin konus.</p>
-					<p>→ <b>Se</b> li estus studento, mi lin konus.</p>
-				</div>
-	
-				<div class="tasko">
-					<?php $demandoj=array (
-						6 => "Mi ne scias, [kiam/se] ŝi venos al ni.",
-						7 => "Mi tre multe laborus, [kiam/se] mi povus.",
-						8 => "[Kiam/Se] li estas studento, li estas en la universitato.",
-						9 => "[Kiam/Se] Tom estis juna, Gerda jam lernis kriptografion.",
-						10 => "Mi volas paroli ankaŭ pri vi, [kiam/se] vi permesas.",
-						11 => "Mi parolis kun ŝi, [kiam/se] ŝi sidis en la restoracio."
-					);
-					ekzerco(True, 1);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(59,$persono_id);
+			?>
 
 
 		<?php 

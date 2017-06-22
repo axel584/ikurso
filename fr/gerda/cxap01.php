@@ -286,66 +286,17 @@ include "gerdakapo.inc.php";
 			n'en a l'air au premier abord. 
 			</p>
 
-			<fieldset class="ekzerco">
-				<legend>Demandoj</legend>
-				<input type="hidden" name="013_cxap01.0" value="Demandoj">
+			<?php 
+				getEkzercon(49,$persono_id);
+			?>
 
-				<div class="tasko">
-				<?php $demandoj=array (
-					1 => "Kiu sidas en la angulo? (Tom / Linda / blonda viro / juna knabino / maljuna viro)",
-					2 => "Kiu iras al li? (Tom / Linda / blonda viro / juna knabino / maljuna viro)",
-					3 => "Al kio iras Tom kaj Linda? (al la angulo / al granda spegulo / al la nova studento / al la blonda viro)",
-					4 => "Kiu estas (eble) la plej bela virino en la mondo? (Tom / Linda / blonda viro / bela knabino / maljuna viro)",
-					5 => "Kiu estas (eble) la plej malserioza knabo en la universitato? (Tom / Linda / blonda viro / bela knabino / maljuna viro)"
-					);
-					ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(50,$persono_id);
+			?>
 
-			<fieldset class="ekzerco">
-				<legend>Demandoj: Formu frazojn.</legend>
-				<input type="hidden" name="013_cxap01.1" value="1. Formu frazojn.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>{ -a al -as grand- ir- mi -o spegul- } → Mi iras al granda spegulo.</p>
-					<p>{ -as -as est- kiu li mi ne sci- } → Mi ne scias, kiu li estas.</p>
-				</div>
-				<div class="tasko">
-				<?php $demandoj=array (
-					6 => "{ al rigard- mi -u }",
-					7 => "{ -a -as est- grand- li -o vir- }",
-					8 => "{ -a -as en est- li -o restoraci- student- }",
-					9 => "{ -a jen labor- nov- -o }",
-					10 => "{ -a -as nenio nun okaz- special- }",
-					11 => "{ -as bel- est- kio -o ? }",
-					12 => "{ al -as -in- ir- knab- li -o }",
-					13 => "{ -a -as est- mal- serioz- vi }"
-					);
-					ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
-
-			<fieldset class="ekzerco">
-				<legend><b>Modifu la frazojn.</b></legend>
-				
-				<input type="hidden" name="013_cxap01.2" value="2. Modifu la frazojn.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>Vi laboras malmulte → Laboru multe!</p>
-				</div>
-				<div class="tasko">
-				<?php $demandoj=array (
-					14 => "Vi laboras multe",
-					15 => "Vi rigardas al mi malsincere", 
-					16 => "Vi estas serioza",
-					17 => "Vi laboras malserioze"
-					);
-					ekzerco(True, 1);
-				?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(51,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

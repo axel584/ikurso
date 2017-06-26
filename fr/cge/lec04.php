@@ -509,7 +509,7 @@ include "dlekkapo.inc.php";
 				<p>La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.</p>
 				<p>Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras aĉeti sandviĉon. Li manĝos ilin vespere.</p>
 			</div>
-			<p>Dans l’exercice page suivante, vous allez maintenant traduire ses phrases en français.</p>
+			<p>Dans l’exercice page suivante, vous allez maintenant traduire ces phrases en français.</p>
 
 	
 		<?php 

@@ -277,7 +277,7 @@ include "dlekkapo.inc.php";
 		
 		<p><b>Vizito en zoologia ĝardeno</b></p>
 		<p>
-		  Kun miaj fratoj mi veturis per aŭto al la zoo (<i>zoologia ĝardeno</i>). ĝi estas
+		  Kun miaj fratoj mi veturis per aŭto al la zoo (<i>zoologia ĝardeno</i>). Ĝi estas
 		  ekster la urbo Granby (Kebekio*). Ni admiris tie multajn bestojn el
 		  ĉiuj kontinentoj. Al mia frato tre plaĉis la ursoj apud la enirejo.
 		  Inter la kaĝoj de la brunaj kaj blankaj ursoj estas la kaĝo de la

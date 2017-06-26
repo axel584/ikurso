@@ -166,7 +166,7 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">tago</span> : jour</p>
 					<p><span class="eo">tamen</span> : néanmoins, toutefois, quand même, cependant</p>
 					<p><span class="eo">tio</span> : cela, ça, cette chose-là, ce</p>
-					<p class="sekva"><span class="eo">tio estas simpla</span> : c'est simple</p>
+					<p class="sekva"><span class="eo">tio estas simpla</span> /  <span class="eo">estas simple</span>&nbsp;: c'est simple</p>
 					<p><span class="eo">tuj</span> : immédiatement, sur le champ</p>
 					<p><span class="eo">via</span> : votre</p>
 					<p><span class="eo">vizaĝo</span> : face, visage</p>

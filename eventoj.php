@@ -1,7 +1,7 @@
 <?php
 include "util.php";
 $pagxtitolo="Événements locaux";
-$persono_id=$_SESSION["persono_id"];
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $action = isset($_GET['action']) ? $_GET['action'] : "";
 include "pagxkapo.inc.php";
 
@@ -89,10 +89,10 @@ $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 $tipo_precedent="";
 while ($row = $result->fetch()) {
 	if ($row["tipo"]!=$tipo_precedent) {
-		echo "<table class='striped'><thead><tr><th>".$row["tipo"]."</th></tr></thead><tbody>";
+		echo "<table class='striped'><thead><tr><th>".$row["tipo"]."</th></tr></thead>\n<tbody>";
 		$tipo_precedent=$row["tipo"];
 	}
-	echo "<tr><td>";
+	echo "<tr id='row-".$row["id"]."'><td>";
 	echo "<b>".dates2string($row["komenco"],$row["fino"]);
 	if ($row["lando"]!=null && $row["lando"]!="" && $row["lando"]!="France") {
 		echo " - ".$row["lando"];
@@ -105,8 +105,8 @@ while ($row = $result->fetch()) {
 	echo "<br/>";
 	echo url2string($row["url"]).mail2string($row["mail"]);
 	echo "</td>";
-
-	echo "</tr>";
+	echo '<td><!--<i class="material-icons edit_evento" data-evento="'.$row["id"].'">mode_edit</i>&nbsp;--><i class="material-icons delete_evento" data-evento="'.$row["id"].'">delete</i></td>';
+	echo "</tr>\n";
 }
 echo "</tbody></table>";
 

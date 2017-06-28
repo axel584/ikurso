@@ -710,6 +710,34 @@ $("#registri_eventon").click(function(){
   }
 });
 
+$('.edit_evento').css( 'cursor', 'pointer' );
+$('.delete_evento').css( 'cursor', 'pointer' );
 
+$(".edit_evento").click(function(){
+  var $id=$(this).data("evento");
+  console.log("edit : "+$id);
+});
+
+
+$(".delete_evento").click(function(){
+  var $id=$(this).data("evento");
+  console.log("edit : "+$id);
+  $.ajax({
+          url : $cheminAbsolu+'ajax/deleteEventon.php',
+          type : 'GET',
+          dataType : 'json',
+          data : "id="+$id,
+          success : function(reponse, statut){ 
+            if (reponse.mesagxo=="ok") {
+                 $("#row-"+$id).hide(1000);
+            } else if (reponse.mesagxo=="ko") {
+                Materialize.toast(reponse.eraroj, 2000);
+            }
+          },
+          error : function() {
+            alert("Erreur de connexion, contactez les administrateurs");
+          }
+      });
+});
 
 });

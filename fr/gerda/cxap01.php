@@ -181,7 +181,7 @@ include "gerdakapo.inc.php";
 					<p class="sekva"><span class="eo">estas</span> <span class="eta">(<i>présent de <b>esti</b></i> [<i><b>ès</b>-tasse</i>])</span>&nbsp;:
 						(je) suis, (tu) es, (il, elle) est, (nous) sommes, (vous) êtes, (ils, elles) sont, c'est</p>
 					<p class="sekva tab"><span class="eo">vi estas bela</span> : tu es beau (belle)</p>
-					<p class="sekva tab"><span class="eo">estas fakto</span> : c'est un fait</p>
+					<p class="sekva tab"><span class="eo">estas fakto</span> / <span class="eo">tio estas fakto</span>&nbsp;: c'est un fait</p>
 					<p><span class="eo">fakte</span> : en fait <span class="eta">[<i><b>fak</b>-tè</i>]</span></p>
 					<p class="sekva"><span class="eo">fakto</span> : fait (n.) <span class="eta">[<i><b>fak</b>-to</i>]</span></p>
 					<p><span class="eo">granda</span> : grand(e), parfois : gros(se)  <span class="eta">[<i><b>granne</b>-da</i>]</span></p>

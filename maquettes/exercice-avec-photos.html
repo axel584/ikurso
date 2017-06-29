@@ -1,0 +1,412 @@
+
+ <!DOCTYPE html>
+  <html lang="fr">
+    <head>
+    <title>Ikurso - Cours d'espéranto gratuit en ligne</title>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,600,600italic,700italic,700' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+		
+		<!--Import materialize.css-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+		<!--Player audio-->
+		<link rel="stylesheet" type="text/css" href="../../soundmanager2/css/mp3-player-button.css" />
+		<script src="../../soundmanager2/script/soundmanager2.js"></script>
+		<script async type="text/javascript" src="../../soundmanager2/script/mp3-player-button.js"></script>
+		<script>
+		soundManager.setup({
+		  // required: path to directory containing SM2 SWF files
+		  url: '../../soundmanager2/swf/'
+		});
+		</script>
+		<script type="text/javascript" src="../../xAlUtf8.js"></script>	
+		<link type="text/css" rel="stylesheet" href="../style/ikurso.css"  media="all"/>
+		<link type="text/css" rel="stylesheet" href="../style/impression.css"  media="print"/>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+		<!-- Application-specific meta tags -->
+		<meta name="application-name" content="iKurso" /> 
+		<meta name="msapplication-TileColor" content="#554E47" /> 
+		<meta name="msapplication-TileImage" content="" />
+		<meta name="msapplication-square150x150logo" content="../bildoj/logo150.png" />
+		<meta name="msapplication-square310x310logo" content="../bildoj/largelogo.png" />
+		<meta name="msapplication-square70x70logo" content="../bildoj/tinylogo.png" />
+		<meta name="msapplication-wide310x150logo" content="../bildoj/widelogo.png" />
+		<!-- icone iOs -->
+		<link href="../bildoj/apple-touch-icon-60.png" rel="apple-touch-icon" />
+		<link href="../bildoj/apple-touch-icon-76.png" rel="apple-touch-icon" sizes="76x76" />
+		<link href="../bildoj/apple-touch-icon-120.png" rel="apple-touch-icon" sizes="120x120" />
+		<link href="../bildoj/apple-touch-icon-152.png" rel="apple-touch-icon" sizes="152x152" />
+		<link href="../bildoj/apple-touch-icon-180.png" rel="apple-touch-icon" sizes="180x180" />
+		<!-- chrome -->
+		<link href="../bildoj/icon-hires.png" rel="icon" sizes="192x192" />
+		<link href="../bildoj/icon-normal.png" rel="icon" sizes="128x128" />
+
+		<!-- infos pour facebook -->
+		<meta property="og:url" content="http://ikurso.esperanto-france.org" />
+		<meta property="og:title" content="iKurso" />
+		<meta property="og:description" content="Ici, vous pourrez découvrir ce qu’est la langue internationale Espéranto et l’apprendre en suivant nos cours, à votre rythme. Pour mieux vous aider, l’association Espéranto-France vous propose un service de correction gratuit." />
+		<meta property="og:site_name" content="iKurso" />
+		<meta property="og:image" content="http://ikurso.esperanto-france.org/bildoj/ikurso-home.jpg" />
+		<meta property="fb:app_id" content="150250432081223" />
+		<meta property="og:locale" content="fr_FR" />
+    </head>
+
+    <body class="dlek">	
+<!-- google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1302916-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	    
+		<!-- menus déroulants -->
+		<ul id="menu_cours" class="dropdown-content">
+			<li><a href="../fr/cge/intro.php" class="primaire-texte moyen">Cours en 10 leçons</a></li>
+			<li><a href="../../fr/gerda/index.php" class="primaire-texte moyen">Gerda malaperis</a></li>
+			<li class="divider"></li>
+			<li><a href="../../fr/elsxutoj.php" class="primaire-texte moyen">Téléchargements</a></li>
+		</ul>
+		<ul id="menu_aide" class="dropdown-content">
+			<li><a href="../../helpo.php?section=enskribo" class="primaire-texte moyen">Comment s'inscrire</a></li>
+			<li><a href="../../helpo.php?section=kurso" class="primaire-texte moyen">Comment suivre le cours</a></li>
+			<li><a href="../../helpo.php?section=kielskribi" class="primaire-texte moyen">Comment écrire en espéranto</a></li>
+			<li><a href="../../helpo.php?section=korektanto" class="primaire-texte moyen">Comment devenir correcteur</a></li>
+		</ul>
+
+		<!-- fenêtre modale connexion -->
+		<div id="konektigxi" class="modal">
+			<div class="modal-content">
+				<h4 class="primaire-texte texte-moyen">Connexion</h4>
+				<div id="konektigxi_parto1">
+				<form>
+				    <div class="input-field">
+				      <input id="eniri_identigilo" type="text" class="validate" required="" aria-required="true">
+				      <label for="eniri_identigilo">identifiant</label>
+				    </div>
+					<div class="input-field">
+						<input id="eniri_pasvorto" type="password" class="validate">
+						<label for="eniri_pasvorto">mot de passe</label>
+					</div>
+				</form>
+				</div>
+				<div id="konektigxi_parto2" class="hide">
+					<p class="chapo">Le message a bien été renvoyé!</p>
+					<p>Pour activer votre compte, veuillez cliquer sur le lien se trouvant dans le message électronique que nous venons de vous envoyer.<br>
+				Si vous ne le trouvez pas, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
+				Dernière possibilité, il est possible que vous ayez fait une erreur en tapant votre adresse e-mail, vous pouvez <a href="../../reago.php">contacter un administrateur</a> qui vérifiera votre inscription.</p>
+				</div>
+				<p class="noto hide-on-small-only">Pour toute question relative à votre inscription, vous pouvez <a href="../../reago.php">contacter un administrateur</a></p> 
+			</div>
+			<div class="modal-footer">
+				<div id="footer-konektigxi1">
+					<a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a><a id="aperigi_novigi_pasvorton_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">Identifiant ou mot de passe oublié</a><a id="sendi_denove_aktivigilo_button" class=" modal-action hide waves-effect waves-light btn-flat primaire-texte">RENVOYER LE COURRIEL D'ACTIVATION</a>
+				</div>
+				<div id="footer-konektigxi2" class="hide">
+					<a id="fermi_konektigxi_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- fenêtre modale inscription -->
+		<div id="aligxi" class="modal">
+			<div class="modal-content">
+				<h4 class="primaire-texte texte-moyen">Inscription</h4>
+				<div id="parto1">
+					<form>
+					    <div class="input-field">
+							<input id="aligxi_retadreso"  type="email" class="validate" required="" aria-required="true">
+							<label for="aligxi_retadreso" data-error="veuillez indiquer une adresse correcte" >Adresse courriel</label>
+				    	<p id="helpo-retadreso" class="helpilo hide-on-input-message">Nous enverrons un message à cette adresse pour valider votre inscription.</p>
+						</div>
+					    <div class="input-field">
+							<input id="aligxi_identigilo" type="text" class="validate" required="" aria-required="true">
+							<label for="aligxi_identigilo">Identifiant</label>
+							<p id="helpo-identigilo" class="helpilo">Vous l’utiliserez pour vous connecter au site.</p>
+					    </div>
+						<div class="input-field">
+							<input id="aligxi_pasvorto" type="password" class="validate">
+							<label for="aligxi_pasvorto">Mot de passe</label>
+						</div>
+					</form>
+				</div>
+				<div id="parto2" class="hide">
+					<p class="chapo">Vous y êtes presque !</p>
+					<p>Pour activer votre compte, veuillez cliquer sur le lien se trouvant dans le message électronique que nous venons de vous envoyer.<br>
+				Si vous ne le trouvez pas, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
+				Si vous n’avez rien reçu, vous pouvez <a href="../../reago.php">contacter un administrateur</a>.</p>
+
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div id="footer-creer-compte">
+					<a id="inscription_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">CRÉER UN COMPTE</a>
+				</div>
+				<div id="footer-renvoyer-activation" class="hide">
+					<a id="fermer_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>
+					<!--a id="inscription2_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">Renvoyer le courriel d’activation</a-->
+				</div>
+			</div>
+		</div>	
+
+		<!-- fenêtre modale tuto inscription -->
+		<div id="tuto-inscription" class="modal">
+			<div class="modal-content">
+				<h4 class="primaire-texte texte-moyen">Comment créer un compte</h4>
+				<div class="video-container">
+					<iframe width="853" height="480" src="https://www.youtube.com/embed/geK1LfWVt9Y" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div id="tuto-footer" class="modal-footer">
+				<a id="fermi_tuto_button" class="modal-action modal-close waves-effect waves-light-blue btn-flat primaire-texte">Fermer</a>
+			</div>
+		</div>
+
+		<!-- fenêtre modale réinitialisation mot de passe -->
+		<div id="novigi_pasvorton" class="modal">
+			<div class="modal-content">
+				<h4 class="primaire-texte">Réinitialiser son mot de passe, choisissez un nouveau mot de passe :</h4>
+				<div id="novigi_pasvorton_parto1">
+				<form>
+					<div class="input-field">
+						<input id="novigi_pasvorton_aktivigo" type="hidden" name="aktivigo" value=""/>
+						<input id="novigi_pasvorton_retadreso" type="hidden" name="retadreso" value=""/>
+						<input id="novigi_pasvorton_pasvorto" type="password" class="validate">
+						<label for="novigi_pasvorton_pasvorto">Nouveau mot de passe</label>
+					</div>
+				</form>
+				</div>
+				<div id="novigi_pasvorton_parto2" class="hide">
+				<p class="chapo">Mot de passe modifié !</p>
+					<p>Votre mot de passe a bien été réinitialisé.<br>
+					Nous vous conseillons de vous reconnecter avec votre nouveau mot de passe pour permettre à votre navigateur de le mémoriser pour vous.</p>
+				</div>
+			</div>
+			<div id="novigi_pasvorton_footer1" class="modal-footer">
+				<a id="novigi_pasvorton_sendi_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER SON MOT DE PASSE</a>
+			</div>
+			<div id="novigi_pasvorton_footer2" class="modal-footer hide">
+				<a id="novigi_pasvorton_fermi_button" class="modal-action modal-close waves-effect waves-light-blue btn-flat primaire-texte">Fermer</a>
+			</div>
+		</div>
+
+		<!-- fenêtre modale pour envoie de nouveau mot de passe -->
+		<div id="sendi_novan_pasvorton" class="modal">
+			<div class="modal-content">
+				<h4 class="primaire-texte">J'ai oublié mon mot de passe, je rentre mon adresse email pour avoir un nouveau mot de passe</h4>
+				<div id="sendi_novan_pasvorton_parto1">
+				<form>
+					<div class="input-field">
+						<input id="sendi_novan_pasvorton_retadreso" type="email" class="validate">
+						<label for="sendi_novan_pasvorton_retadreso">Adresse email</label>
+					</div>
+				</form>
+				</div>
+				<div id="sendi_novan_pasvorton_parto2" class="hide">
+				<p class="chapo">Un email a été envoyé !</p>
+					<p>Pour pouvoir vous connecter de nouveau, veuillez cliquer sur le lien se trouvant dans le message électronique que nous venons de vous envoyer.<br>
+					Ce lien vous permettra de choisir un nouveau mot de passe.<br>
+				Si vous ne le trouvez pas, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
+				Si vous n’avez rien reçu, vous pouvez <a href="../../reago.php">contacter un administrateur</a>.</p>
+				</div>
+			</div>
+			<div id="sendi_novan_pasvorton_footer1" class="modal-footer">
+				<a id="sendi_novan_pasvorton_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER SON MOT DE PASSE</a>
+			</div>
+			<div id="sendi_novan_pasvorton_footer2" class="modal-footer hide">
+				<a id="fermi_novan_pasvorton_button" class=" modal-action modal-close waves-effect waves-light-blue btn-flat primaire-texte">Fermer</a>
+			</div>
+		</div>			
+
+		<!-- fenêtre modale menu utilisateur -->
+		<ul id="uzantomenuo" class="dropdown-content">
+			<li class="uzanto"><b></b><br> <br><em></em></li>
+			<li class="divider"></li>
+			<li><a href="../../personinformoj.php" class="primaire-texte moyen">Mes données personnelles</a></li>
+			<li><a href="../../eliri.php" class="primaire-texte moyen">Déconnexion</a></li>
+		</ul>
+
+		<div class="navbar-fixed">	
+			<nav class="primaire">
+				<div class="nav-wrapper">
+					<a href="../../index.php" class="brand-logo" id="logo">iKurso</a>
+					<!-- hamburger menu -->
+					<div class="side-nav" id="nav-mobile">
+						<ul>
+							<li class="primaire-texte moyen"><a href="../../kionova.php">QUOI DE NEUF ?</a></li>
+							<li class="divider"></li>
+							<li class="primaire-texte moyen">COURS EN LIGNE</li>
+							<li><ul>
+								<li><a href="../fr/cge/intro.php">Cours en 10 leçons</a></li>
+								<li><a href="../../fr/gerda/index.php">Gerda malaperis</a></li>
+								<li class="divider"></li>
+								<li><a href="../../helpo.php?temo=elsxutoj">Téléchargements</a></li>
+							</ul></li>
+							<li class="divider"></li>
+							<li class="primaire-texte moyen"><a href="../../butiko.php">BOUTIQUE</a></li>
+							<li class="divider"></li>
+							<li class="primaire-texte moyen">INFORMATIONS PRATIQUES</li>
+							<li><ul>
+								<li><a href="../../fr/intro.php?temo=enskribo">Comment s'inscrire</a></li>
+								<li><a href="../../helpo.php">Foire aux questions</a></li>
+							</ul></li>
+						</ul>
+					</div>
+					<a href="#!" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
+					<ul class="right">
+
+						<!-- si utilisateur pas connecté -->
+						
+						<li><a href="#konektigxi" class="btn waves-effect waves-light primaire clair modal-trigger" data-activates="konektigxi">CONNEXION</a></li>
+
+					</ul>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="../../kionova.php">QUOI DE NEUF ?</a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li><a href="../../butiko.php">BOUTIQUE</a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	<main>
+	<form id="chefa_form"> <!-- on englobe chaque page d'un formulaire principal --><script type="text/javascript" src="../../xAlUtf8.js"></script>	
+<header id='superrigardo'><p>Cours d'espéranto en dix leçons :</p><ul id='lecionoj'><li id='intro' class='farita'><a href='intro.php'>introduction</a></li><li id='lec01' class='farita'><a href='lec01.php'>1</a></li><li id='lec02' class='farita'><a href='lec02.php'>2</a></li><li id='lec03' class='farita'><a href='lec03.php'>3</a></li><li id='lec04' class='farita'><a href='lec04.php'>4</a></li><li id='lec05' class='farita'><a href='lec05.php'>5</a></li><li id='lec06' class='nuna'><a href='lec06.php'>6</a></li><li id='lec07' class='nova'><a href='lec07.php'>7</a></li><li id='lec08' class='nova'><a href='lec08.php'>8</a></li><li id='lec09' class='nova'><a href='lec09.php'>9</a></li><li id='lec10' class='nova'><a href='lec10.php'>10</a></li><li id='temaro' class='nova'><a href='temaro.php'>index</a></li><li id='lexique' class='nova'><a href='vocabula.php'>lexique</a></li></ul></header>
+
+<div class="row">
+	<article class="col s12 m10 l7 offset-m1 offset-l1">
+				
+		<section id="leciono-enhavo">
+		<div class="impression right"><a href="javascript:window.print()" class="waves-effect waves-light btn-floating small blue"><i class="material-icons">print</i></a></div><h2 id="lec6.7">6.7. Exercice 2</h2><p class="dauro">Temps moyen estimé : 16 minutes</p>
+		
+			<fieldset class='ekzerco'>
+				<legend><strong>EXERCICE</strong> : Recopiez chaque phrase en complétant avec la préposition qui convient.</legend>
+				<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>
+					&nbsp;:&nbsp;en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>
+				<p class='eo eta'>Plusieurs réponses sont possibles. Si vous indiquez l'une des bonnes réponses, elle sera automatiquement soulignée en vert.<br/>Si la réponse n'est pas soulignée, cela ne veut pas dire qu'elle soit incorrecte, mais simplement que le système n'a pas pu l'analyser. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>
+				
+				<div class='tasko'>
+					<div class='row'>
+						<div class="col s4 center-align"><img class="responsive-img" src="../fr/cge/bildoj/mangxi-dum-vojagxo.jpg"></div>
+						<div class='col s8 row demando'>9. [ … ] la vojaĝo, ni manĝis.<br />
+							<div class='input-field s10 offset-s1'>
+								<input type='hidden' name="dem_135" value="9 [ … ] la vojaĝo, ni manĝis.">
+								<input data-studanto= data-ekzercero=135 id="res_135" name="res_135" READONLY onClick='window.alert("Identifiez-vous en haut à droite pour pouvoir remplir les exercices");' onkeyup='xAlUtf8(this)' value="" class='validate   korektebla'>
+							</div>
+						</div>
+					</div>
+					<div class='row'>
+						<div class="col s4 center-align"><img class="responsive-img" src="../fr/cge/bildoj/hotelo-por-insektoj.jpg"></div>
+						<div class='col s8 row demando'>10. En nia ĝardeno, estas hotelo [ … ] insektoj.<br />
+							<div class='input-field s10 offset-s1'>
+								<input type='hidden' name="dem_136" value="10 En nia ĝardeno, estas hotelo [ … ] insektoj.">
+								<input data-studanto= data-ekzercero=136 id="res_136" name="res_136" READONLY onClick='window.alert("Identifiez-vous en haut à droite pour pouvoir remplir les exercices");' onkeyup='xAlUtf8(this)' value="" class='validate   korektebla'>
+							</div>
+						</div>
+					</div>
+					<div class='row'>
+						<div class="col s4 center-align"><img class="responsive-img" src="../fr/cge/bildoj/sabla-kastelo.jpg"></div>
+						<div class='col s8 row demando'>11. Ni konstruis kastelon [ … ] sablo.<br />
+							<div class='input-field s10 offset-s1'>
+								<input type='hidden' name="dem_137" value="11 Ni konstruis kastelon [ … ] sablo.">
+								<input data-studanto= data-ekzercero=137 id="res_137" name="res_137" READONLY onClick='window.alert("Identifiez-vous en haut à droite pour pouvoir remplir les exercices");' onkeyup='xAlUtf8(this)' value="" class='validate   korektebla'>
+							</div>
+						</div>
+					</div>
+					<div class='row'>
+						<div class="col s4 center-align"><img class="responsive-img" src="../fr/cge/bildoj/kato-en-shranko.jpg"></div>
+						<div class='col s8 row demando'>12. La kato estas [ … ] la pordo.<br />
+							<div class='input-field s10 offset-s1'>
+								<input type='hidden' name="dem_138" value="12 La kato estas [ … ] la pordo.">
+								<input data-studanto= data-ekzercero=138 id="res_138" name="res_138" READONLY onClick='window.alert("Identifiez-vous en haut à droite pour pouvoir remplir les exercices");' onkeyup='xAlUtf8(this)' value="" class='validate   korektebla'>
+							</div>
+						</div>
+					</div>
+					<div class='row'>
+						<div class="col s4 center-align"><img class="responsive-img" src="../fr/cge/bildoj/sur-la-pinto.jpg"></div>
+						<div class='col s8 row demando'>13. Li grimpis [ … ] la pinto (=le sommet).<br />
+							<div class='input-field s10 offset-s1'>
+								<input type='hidden' name="dem_139" value="13 Li grimpis [ … ] la pinto (=le sommet).">
+								<input data-studanto= data-ekzercero=139 id="res_139" name="res_139" READONLY onClick='window.alert("Identifiez-vous en haut à droite pour pouvoir remplir les exercices");' onkeyup='xAlUtf8(this)' value="" class='validate   korektebla'>
+							</div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+		<p>Crédits photos :</p>
+		<p class="creditphoto">11. Diego Delso, <a href="http://delso.photo/">delso.photo</a>, License CC-BY-SA</p>
+		<p class="creditphoto">Autres photos : iKurso/ E. Richard</p>
+
+		<fieldset class="vortoj">
+			<legend>VOCABULAIRE À RETENIR</legend>
+			<div>
+								<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+							</div>
+			<div class="vortlisto row">
+				<p class="col s6"><span class="eo">kastelo</span> : château</p>
+				<p class="col s6"><span class="eo">ĉapelo</span> : chapeau</p>
+				<p class="col s6"><span class="eo">dorso</span> : dos</p>
+				<p class="col s6"><span class="eo">vojaĝo</span> : voyage</p>
+			</div>
+		</fieldset>
+			
+		</section>
+
+		<section id="leciono-fino">
+			<div id="marko" class="right-align">
+								<a id="farita" class="btn-floating btn-large light-blue darken-1 hide"><i class="material-icons">done_all</i></a>
+			</div>
+			<div class="ligoj">
+				<a href="lec06.php?section=6" class="btn-flat small blue-text"><i class="material-icons left">arrow_left</i>6.6 Les prépositions</a>				<a href="lec06.php?section=8" class="btn-flat small blue-text">6.8 Premier récit et vocabulaire<i class="material-icons right">arrow_right</i></a>			</div>
+		</section>
+
+	</article>
+			
+	<aside class="col s12 m10 l3 offset-m1 push-l1">
+								
+		
+		<ul class="collapsible" data-collapsible="expandable">
+
+			<li><div class="collapsible-header active"><i class="material-icons">toc</i>Sommaire de la leçon</div><div class="collapsible-body"><ul id="enhavtabelo" class="collection"><li id="6-1" class="gramm  gramm"><a href="lec06.php?section=1">6.1 Révision des terminaisons <span class="dauro">(6&nbsp;min)</span></a></li><li id="6-2" class="gramm  gramm"><a href="lec06.php?section=2">6.2 Comment poser des questions <span class="dauro">(4&nbsp;min)</span></a></li><li id="6-3" class="gramm  gramm"><a href="lec06.php?section=3">6.3 Rappel sur la prononciation <span class="dauro">(3&nbsp;min)</span></a></li><li id="6-4" class="gramm  exo"><a href="lec06.php?section=4">6.4 Exercice 1 <span class="dauro">(5&nbsp;min)</span></a></li><li id="6-5" class="gramm  gramm"><a href="lec06.php?section=5">6.5 Proverbe <span class="dauro">(3&nbsp;min)</span></a></li><li id="6-6" class="gramm  gramm"><a href="lec06.php?section=6">6.6 Les prépositions <span class="dauro">(8&nbsp;min)</span></a></li><li id="6-7" class="gramm  exo"><a href="lec06.php?section=7">6.7 Exercice 2 <span class="dauro">(16&nbsp;min)</span></a></li><li id="6-8" class="gramm  gramm"><a href="lec06.php?section=8">6.8 Premier récit et vocabulaire <span class="dauro">(7&nbsp;min)</span></a></li><li id="6-9" class="gramm  gramm"><a href="lec06.php?section=9">6.9 Second récit et vocabulaire <span class="dauro">(6&nbsp;min)</span></a></li><li id="6-10" class="gramm  exo"><a href="lec06.php?section=10">6.10 Exercice 3 <span class="dauro">(17&nbsp;min)</span></a></li><li id="6-11" class="gramm  gramm"><a href="lec06.php?section=11">6.11 Traduction de "il y a" <span class="dauro">(2&nbsp;min)</span></a></li><li id="6-12" class="gramm  exo"><a href="lec06.php?section=12">6.12 Exercice 4 <span class="dauro">(15&nbsp;min)</span></a></li><li id="6-13" class="gramm  gramm"><a href="lec06.php?section=13">6.13 Complément d’objet indirect <span class="dauro">(4&nbsp;min)</span></a></li><li id="6-14" class="gramm  gramm"><a href="lec06.php?section=14">6.14 L’accusatif peut remplacer certaines prépositions <span class="dauro">(4&nbsp;min)</span></a></li><li id="6-15" class="gramm  exo"><a href="lec06.php?section=15">6.15 Exercice 5 <span class="dauro">(11&nbsp;min)</span></a></li><li id="6-16" class="gramm  gramm"><a href="lec06.php?section=16">6.16 Adverbes de lieu indiquant le mouvement <span class="dauro">(6&nbsp;min)</span></a></li><li id="6-17" class="gramm  exo"><a href="lec06.php?section=17">6.17 Exercice 6 <span class="dauro">(9&nbsp;min)</span></a></li><li id="6-18" class="gramm  gramm"><a href="lec06.php?section=18">6.18 Épilogue et envoi des exercices <span class="dauro">(5&nbsp;min)</span></a></li></ul></div></li>
+		</ul>	
+				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAssociation.Esperanto.France%2F&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden"></iframe>		
+	</aside>
+</div>
+	</form>
+	</main>
+	<footer class="primaire fond">
+		<div class="submenuo">
+			<div class="ero primaire-texte"><a href="../../kiujniestas.php">QUI SOMMES-NOUS ?</a></div>
+			<div class="ero primaire-texte"><a href="../../reago.php">NOUS CONTACTER</a></div>
+		</div>
+		<div class="asocio primaire-texte texte-clair">
+			Espéranto-France – 4 bis, rue de la Cerisaie, 75004 Paris
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<script src="../../js/config.js"></script>
+	<script src="../../js/init.js"></script>
+	<script src="../../js/ikurso.js?d=1498776317"></script>
+
+
+	<script type="text/javascript">
+	</script>
+
+<script type="text/javascript" >	
+</script>
+
+</body>
+</html>  

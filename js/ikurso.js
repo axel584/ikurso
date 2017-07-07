@@ -447,21 +447,28 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#registriEkzercaron_button").data('lecionero_id')+"&leciono="+$("#registriEkzercaron_button").data('leciono')+"&kurso="+$("#registriEkzercaron_button").data('kurso'),
        		success : function(reponse, statut){ 
             if (reponse.type=="pas fini") {
-                Materialize.toast(reponse.mesagxo, 4000);
+                //Materialize.toast(reponse.mesagxo, 4000);
                 console.log(reponse.gxustajRespondoj);
                 // on passe en vert les réponses justes
                 for (index = 0; index < reponse.gxustajRespondoj.length; ++index) {
-                    $('#'.reponse.gxustajRespondoj[index]).addClass("valid");
+                    $('#'+reponse.gxustajRespondoj[index]).addClass("valid");
                 }
                 console.log(reponse.malgxustajRespondoj);
                 for (index = 0; index < reponse.malgxustajRespondoj.length; ++index) {
-                    $('#'.reponse.malgxustajRespondoj[index]).removeClass("valid");
+                    $('#'+reponse.malgxustajRespondoj[index]).removeClass("valid");
                 }
+                Materialize.toast(reponse.mesagxo, 4000);
             }
        			if (reponse.mesagxo=="ok") {
-              console.log("ok");
-       				console.log(reponse.gxustajRespondoj);
-              console.log(reponse.malgxustajRespondoj);
+                //on pourrait peut être factorisé avec les lignes précédentes ? Qu'on passe en vert que ce soit fini ou pas
+                for (index = 0; index < reponse.gxustajRespondoj.length; ++index) {
+                    $('#'+reponse.gxustajRespondoj[index]).addClass("valid");
+                }
+                console.log(reponse.malgxustajRespondoj);
+                for (index = 0; index < reponse.malgxustajRespondoj.length; ++index) {
+                    $('#'+reponse.malgxustajRespondoj[index]).removeClass("valid");
+                }
+              window.location = $urlracine+reponse.url;
        			}
        		},
        		error : function() {

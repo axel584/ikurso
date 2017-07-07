@@ -58,9 +58,13 @@ foreach(array_keys($lernantajDemandoj) as $ekzercero_id) {
 		$result = $bdd->query("select normaligita from ekzerceroj where id=".$ekzercero_id);
 		$bonneReponse = $result->fetch()["normaligita"];
 		$gxusta = kontroliRespondon($lernantajRespondoj[$ekzercero_id],$bonneReponse)?1:0;
-		if ($gxustajRespondoj) {
+		if ($gxusta) {
+			//echo "gxusta : ";
+			//print_r($gxustajRespondoj);
 			array_push($gxustajRespondoj,"res_".$ekzercero_id);
 		} else {
+			//echo "malgxusta : ";
+			//print_r($gxustajRespondoj);
 			array_push($malgxustajRespondoj,"res_".$ekzercero_id);
 		}
 		// on vérifie si l'élève a déjà en base une réponse

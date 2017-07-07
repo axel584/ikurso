@@ -1,25 +1,29 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE ekzerceroj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `ekzerco_id` int(11) NOT NULL,
   `kodo` varchar(10) NOT NULL,
   `numero` int(11) NOT NULL,
   `demando` text NOT NULL,
-  `respondo` text NOT NULL,
+  `respondo` text,
+  `normaligita` text,
   `bildo` varchar(64) NOT NULL,
   `forigita` tinyint(1) NOT NULL DEFAULT '0',
-  `korektebla` tinyint(1) NOT NULL DEFAULT '0'
+  `korektebla` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE ekzercoj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `komando` text NOT NULL,
   `lecionero_id` int(11) NOT NULL,
-  `komando_detalo` text NOT NULL,
-  `ekzemplo` int(11) NOT NULL,
-  `typo` enum('traduko') NOT NULL,
-  `x2u` tinyint(1) NOT NULL
+  `komando_detalo` text,
+  `ekzemplo` int(11),
+  `typo` enum('traduko-1','traduko-2','traduko-3','verkado-1','verkado-2','verkado-3','verkado-4','verkado-5','verkado-6','stelo-1','stelo-2','truoj-1','truoj-2','kompletigu','ordigu','elektu') NOT NULL,
+  `x2u` tinyint(1) NOT NULL,
+  `korektebla` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE eraraj_lecionoj (

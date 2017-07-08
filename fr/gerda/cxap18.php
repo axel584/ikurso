@@ -109,6 +109,15 @@ include "gerdakapo.inc.php";
 		
 				<p><span class="eo">li revenos post du tagoj</span> : il reviendra dans deux jours</p>
 				<p><span class="eo">mi estos kun vi post du minutoj</span> : je serai avec toi dans deux minutes, je suis à toi dans deux minutes</p>
+				
+				<h4>signifi</h4>
+				
+				<p>Ĉu vi scias, kion signifas <b>signifas</b>? Se ne, jen klarigo:</p>
+				<p><b>Signifi</b> estas <b>doni ideon</b>, <b>esti komprenata en certa maniero</b>.</p>
+				<p><b>Signifo</b> estas la ideo donata aŭ komunikata. Oni povas paroli pri la
+				signifo de vorto (<span class="eo">Perdi</span> signifas <span class="eo">ekmalhavi</span>, ekzemple) aŭ de io
+				alia (Ruĝa lumo povas signifi <span class="eo">Haltu!</span>).</p>
+	
 			</section>
 
 		<?php 
@@ -178,22 +187,9 @@ include "gerdakapo.inc.php";
 				getEkzercon(88,$persono_id);
 			?>
 
-			<h3>Notoj</h3>
-		
-			<p>Ĉu vi scias, kion signifas <b>signifas</b>? Se ne, jen klarigo:</p>
-			<p><b>SIGNIFI</b> estas <b>doni ideon</b>, 
-			<b>esti komprenata en certa maniero</b>.</p>
-			<p><b>SIGNIFO</b> estas la ideo donata aŭ komunikata. Oni povas paroli pri la
-			signifo de vorto (<span class="eo">Perdi</span> signifas <span class="eo">ekmalhavi</span>, ekzemple) aŭ de io
-			alia (Ruĝa lumo povas signifi <span class="eo">Haltu!</span>).</p>
-			<p>
-			Por la sekvanta ekzerco vi devos parigi la vortojn kaj la signifojn.
-			<b>Centro</b> kaj <b>mezo</b> estas bona paro, ĉar 
-			<b>centro</b> signifas <b>mezon</b> (ne precize, sed preskaŭ).
-			</p>
+			<p>Por la sekvanta ekzerco vi devos parigi la vortojn kaj la signifojn.</p>
+			<b>Centro</b> kaj <b>mezo</b> estas bona paro, ĉar <b>centro</b> signifas <b>mezon</b> (ne precize, sed preskaŭ).</p>
 
-			<h3>Ekzerco</h3>
-	
 			<?php 
 				getEkzercon(89,$persono_id);
 			?>

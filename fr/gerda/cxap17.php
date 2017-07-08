@@ -109,6 +109,53 @@ include "gerdakapo.inc.php";
 				<p><span class="eo">Jozefo edziĝis</span> : Joseph s'est marié (litt. «est devenu mari»)</p>
 				<p><span class="eo">Marta edziniĝis</span> : Martha s'est mariée (litt. «est devenue épouse»)</p>
 				<p><span class="eo">Jozefo kaj Marta geedziĝis</span> : Joseph et Martha se sont mariés (litt. «sont devenus mari et femme»)</p>
+				
+				<h4>Ankoraŭ kelkaj vortoj pri la lingvo</h4>
+				
+				<p>Jen ankoraŭ kelkaj vortoj, kiujn ni uzos por paroli pri la lingvo.</p>
+				
+				<p class="parto">Grupon de vortoj kun verbo en la centro oni nomas <b>frazo</b>. Jen ekzemplo: <span class="eo">Linda rigardas la blondulon.</span></p>
+				
+				<p class="parto">Frazo normale havas subjekton. La <b>subjekto</b> estas tio, kio faras la
+				agadon de la verbo. En tiu ĉi frazo <span class="eo">Linda</span> estas la subjekto.</p>
+				
+				<p class="parto">Frazo ofte havas objekton. La <b>objekto</b> estas tio, al kio la agado de la
+				verbo estas farata. En ĉi tiu frazo la objekto estas <span class="eo">la blondulon</span>.</p>
+				
+				<p class="parto">Oni montras la objekton aŭ per prepozicio (<span class="eo">Linda rigardas al la
+				blondulo</span>) aŭ per la finaĵo <b>-n</b>. Tiun finaĵon <b>-n</b> oni nomas
+				<b>akuzativo</b>. Kiel vi jam lernis, oni uzas akuzativon ne nur por montri la objekton en frazo, sed ankaŭ por aliaj aferoj.</p>
+				
+				<p class="parto">Jam en la oka ĉapitro vi lernis pri la pronomo <b>si</b>.</p>
+				<p>La pronomo <b>si</b> estas la <b>refleksiva pronomo</b> de Esperanto. Esprimoj uzantaj ĝin estas <b>refleksivoj</b>.</p>
+				<p>Kiel vi jam scias, <em>si</em> resendas al la subjekto.</p>
+				<p>Ekzemple: <span class="eo">Linda vidas sin.</span> signifas: <span class="eo">Linda vidas Lindan.</span></p>
+				
+				<p class="parto">Oni devas scii, ke <b>si</b> resendas al la plej proksima subjekto. Normale
+				tio estas la subjekto de la plej malgranda frazo (aŭ <em>subfrazo</em>), en kiu ĝi aperas. Do en la frazo: 
+				<span class="eo">Tom scias, ke Linda vidas sin.</span></p>
+				<p><span class="eo">si</span> resendas al <span class="eo">Linda</span> 
+				(la subjekto de <span class="eo">vidas</span>), ne al <span class="eo">Tom</span> (la
+				subjekto de <span class="eo">scias</span>).</p>
+				<p>Pro tio, <em>si</em> neniam povas esti mem la subjekto aŭ parto de la
+				subjekto de iu verbo. Ekzemple, jena frazo estus tute neebla, se oni
+				enmetus la vorton <em>sia</em>:</p>
+				<p><span class="eo">Linda pensas, ke ___ opinio estas prava.</span></p>
+				<p>En tiu frazo <span class="eo">sia</span> devus resendi al la subjekto de <span class="eo">estas</span>, kiu
+				estas… <span class="eo">sia opinio</span>. Neeble!
+				</p>
+				<p>En ĉi tiu ĉapitro estas pli malfacila ekzerco pri refleksivoj.</p>
+				
+				<h4>per, por, pri, pro</h4>
+				<p>Nun vi scias kvar vortojn, kiuj aspektas simile: 
+				<span class="eo">per</span>, <span class="eo">por</span>, <span class="eo">pri</span>, <span class="eo">pro</span>.</li>
+				<ul>
+					<li><b>per</b> montras <b>ilon</b>: <span class="eo">Mi venis per aŭto.</span></li>
+					<li><b>por</b> montras <b>celon</b>: <span class="eo">Mi aĉetis kafon por vi (por trinki).</span> (<span class="eo">celo</span> = tio, kion oni volas havi aŭ fari.)</li>
+					<li><b>pri</b> montras <b>temon</b>: <span class="eo">Mi parolis/lernis pri historio.</span></li>
+					<li><b>pro</b> montras <b>kialon</b>: <span class="eo">Ŝi ŝatas lin pro liaj blondaj haroj.</span></li>
+				</ul>
+
 			</section>
 
 		<?php 
@@ -175,52 +222,6 @@ include "gerdakapo.inc.php";
 			<?php 
 				getEkzercon(85,$persono_id);
 			?>
-
-			<h3>Notoj</h3>
-			<p>Jen ankoraŭ kelkaj vortoj, kiujn ni uzos por paroli pri la lingvo.</p>
-			<p class="parto">Grupon de vortoj kun verbo en la centro oni nomas FRAZO. Jen ekzemplo:</p>
-			<p><span class="eo"> Linda rigardas la blondulon.</span></p>
-			<p class="parto">Frazo normale havas subjekton. La <b>SUBJEKTO</b> estas tio, kio faras la
-			agadon de la verbo. En tiu ĉi frazo <span class="eo">Linda</span> estas la subjekto.</p>
-			<p class="parto">Frazo ofte havas objekton. La <b>OBJEKTO</b> estas tio, al kio la agado de la
-			verbo estas farata. En ĉi tiu frazo la objekto estas <span class="eo">la blondulon</span>.</p>
-			<p class="parto">Oni montras la objekton aŭ per prepozicio (<span class="eo">Linda rigardas al la
-			blondulo</span>) aŭ per la finaĵo <b>-n</b>. Tiun finaĵon <b>-n</b> oni nomas
-			<b>AKUZATIVO</b>. Kiel vi jam lernis, oni uzas akuzativon ne nur por montri la objekton en frazo, sed ankaŭ por aliaj aferoj.</p>
-			<p class="parto">Jam en la oka ĉapitro vi lernis pri la pronomo <b>si</b>.</p>
-			<p>La pronomo <b>si</b> estas la <b>REFLEKSIVA PRONOMO</b> de Esperanto. Esprimoj uzantaj ĝin estas <b>REFLEKSIVOJ</b>.</p>
-			<p>Kiel vi jam scias, <em>si</em> resendas al la subjekto.</p>
-			<p>Ekzemple:</p>
-			<p><span class="eo">Linda vidas sin.</span> signifas: <span class="eo">Linda vidas Lindan.</span></p>
-			<p class="parto">Oni devas scii, ke <b>si</b> resendas al la plej proksima subjekto. Normale
-			tio estas la subjekto de la plej malgranda frazo (aŭ <em>subfrazo</em>), en kiu ĝi aperas. Do en la frazo:</p>
-			<p><span class="eo">Tom scias, ke Linda vidas sin.</span></p>
-			<p><span class="eo">si</span> resendas al <span class="eo">Linda</span> 
-			(la subjekto de <span class="eo">vidas</span>), ne al <span class="eo">Tom</span> (la
-			subjekto de <span class="eo">scias</span>).</p>
-			<p>Pro tio, <em>si</em> neniam povas esti mem la subjekto aŭ parto de la
-			subjekto de iu verbo. Ekzemple, jena frazo estus tute neebla, se oni
-			enmetus la vorton <em>sia</em>:</p>
-			<p><span class="eo">Linda pensas, ke ___ opinio estas prava.</span></p>
-			<p>En tiu frazo <span class="eo">sia</span> devus resendi al la subjekto de <span class="eo">estas</span>, kiu
-			estas… <span class="eo">sia opinio</span>. Neeble!
-			</p>
-			<p>En ĉi tiu ĉapitro estas pli malfacila ekzerco pri refleksivoj.</p>
-
-			<h3>Ekzerco 1</h3>
-
-			<p>Nun vi scias kvar vortojn, kiuj aspektas simile: 
-			<span class="eo">per</span>, <span class="eo">por</span>, <span class="eo">pri</span>, 
-			<span class="eo">pro</span>.
-			</p>
-			<p><b>per</b> montras <b>ilon</b>: 
-			<span class="eo">Mi venis per aŭto.</span></p>
-			<p><b>por</b> montras <b>celon</b>: 
-			<span class="eo">Mi aĉetis kafon por vi (por trinki).</span> (<span class="eo">celo</span> = tio, kion oni volas havi aŭ fari.)</p>
-			<p><b>pri</b> montras <b>temon</b>: 
-			<span class="eo">Mi parolis/lernis pri historio.</span></p>
-			<p><b>pro</b> montras <b>kialon</b>: 
-			<span class="eo">Ŝi ŝatas lin pro liaj blondaj haroj.</span></p>
 
 			<?php 
 				getEkzercon(86,$persono_id);

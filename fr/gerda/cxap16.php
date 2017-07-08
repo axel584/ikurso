@@ -137,6 +137,41 @@ include "gerdakapo.inc.php";
 				<p><span class="eo">Kian libron vi legas? - Lernolibron.</span> : Quelle sorte de livre lis-tu ? - Un manuel.</p>
 		
 				<p>Notez que <span class="eo">okazo</span> s'utilise dans trois sens : (1) événement&nbsp;; (2) cas&nbsp;; (3) occasion, opportunité</p>
+				
+				<h4>Kelkaj vortoj pri la lingvo</h4>
+				
+				<p class="parto">Nun vi devas lerni kelkajn novajn vortojn. La unua vorto verŝajne ne
+				estas por vi nova; ĝi estas la vorto <span class="eo">ESPERANTO</span>. Se vi tion ne jam
+				sciis, nun mi informas vin: Esperanto estas la nomo de tiu ĉi lingvo, kiun vi nun lernas.</p>
+				<p>Ne ridu tro pri tiu klarigo! En kelkaj lingvoj Esperanto ja havas
+				alian nomon. Ekzemple, en la lingvo, kiun parolas pli da homoj ol iun
+				alian lingvon en la mondo, Esperanton oni nomas <em>shi4 jie4 yu3</em>. Ĉu
+				vi tion jam sciis? Mi gratulas! Aŭ ĉu eble tiu granda lingvo estas via lingvo?</p>
+				<p>
+				La aliaj vortoj, kiujn mi volas nun klarigi, estas vortoj, kiuj helpos nin paroli pri la lingvo.
+				
+				<p class="parto">Ekzistas en Esperanto kvar grandaj vortklasoj (vortospecoj):</p>
+				<p><b>Substantivoj (o-vortoj)</b>, kiuj montras aĵojn: tabl<b>o</b>, knabin<b>o</b>, spegul<b>o</b>, liber<b>o</b>, am<b>o</b>, …</p>
+				<p><b>Adjectivoj (a-vortoj)</b>, kiuj montras ecojn: bel<b>a</b>, jun<b>a</b>, grand<b>a</b>, student<b>a</b>, kaŝ<b>a</b>,… </p>
+				<p><b>Verboj</b> (kun finaĵoj <b>-i</b>, <b>-is</b>, <b>-as</b>, <b>-os</b>, <b>-u</b>, <b>-us</b>), kiuj montras agojn aŭ situaciojn: est<b>i</b>, sci<b></b>i, rigard<b>i</b>, proksimig<b>i</b>, amikiĝ<b>i</b>, …</p>
+				<p><b>Adverboj (e-vortoj)</b>, kiuj montras manierojn: tut<b>e</b>, komprenebl<b>e</b>, verŝajn<b>e</b>, fakt<b></b>e, kaŝ<b>e</b>, … </p>
+				<p class="parto">Aliaj vortklasoj, pri kiuj ni volos paroli, estas:</p>
+				<p><b>Prepozicioj</b>, kiuj montras rilatojn: de, al, kun, pri, da, …</p>
+				<p><b>Pronomoj</b>, kiuj resendas al substantivoj: mi, ni, vi, li, ŝi, ĝi, ili, si, oni.</p>
+				<p><b>Artikolo</b>, kiu montras konatecon: la.</p>
+				
+				<h4>Diferenco inter <b>kia</b> kaj <b>kiel</b></h4>
+				
+				<p>Nun ni povas klarigi, kiel <b>kia</b> kaj <b>kiel</b> estas malsamaj.</p>
+				
+				<p>Per <span class="eo">kia</span> oni demandas pri eco, do pri adjektivo (a-vorto).</p>
+				<p>Per <span class="eo">kiel</span> oni demandas pri maniero, do pri adverbo (e-vorto).</p>
+				<p class="eo"><b>Kia</b> estas via amiko? - Li estas bel<b>a</b>.</p>
+				<p class="eo"><b>Kiel</b> vi manĝas? - Mi manĝas malrapid<b>e</b>.</p>
+				<p class="eo">Ŝia vizaĝo subite iĝis ruĝ<b>a</b>.</p>
+				<p class="eo"><b>Kia</b> ĝi iĝis? - Ĝi iĝis ruĝ<b>a</b>.</p>
+				<p class="eo"><b>Kiel</b> ĝi iĝis ruĝa? - Subit<b>e</b>.</p>
+
 			</section>
 
 		<?php 
@@ -211,40 +246,6 @@ include "gerdakapo.inc.php";
 			<?php 
 				getEkzercon(83,$persono_id);
 			?>
-			
-			<h3>Notoj</h3>
-			<p class="parto">Nun vi devas lerni kelkajn novajn vortojn. La unua vorto verŝajne ne
-			estas por vi nova; ĝi estas la vorto <span class="eo">ESPERANTO</span>. Se vi tion ne jam
-			sciis, nun mi informas vin: Esperanto estas la nomo de tiu ĉi lingvo,
-			kiun vi nun lernas.</p>
-			<p>Ne ridu tro pri tiu klarigo! En kelkaj lingvoj Esperanto ja havas
-			alian nomon. Ekzemple, en la lingvo, kiun parolas pli da homoj ol iun
-			alian lingvon en la mondo, Esperanton oni nomas <em>shi4 jie4 yu3</em>. Ĉu
-			vi tion jam sciis? Mi gratulas! Aŭ ĉu eble tiu granda lingvo estas
-			via lingvo?</p>
-			<p>
-			La aliaj vortoj, kiujn mi volas nun klarigi, estas vortoj, kiuj helpos
-			nin paroli pri la lingvo.
-			<p class="parto">Ekzistas en Esperanto kvar grandaj vortklasoj (vortospecoj):</p>
-			<p><b>SUBSTANTIVOJ (o-vortoj)</b>, kiuj montras aĵojn: tablo, knabino, spegulo, libero, amo, …</p>
-			<p><b>ADJEKTIVOJ (a-vortoj)</b>, kiuj montras ecojn: bela, juna, granda, studenta, kaŝa,… </p>
-			<p><b>VERBOJ</b> (kun finaĵoj <b>-i</b>, <b>-is</b>, <b>-as</b>, <b>-os</b>, 
-			<b>-u</b>, <b>-us</b>), kiuj montras agojn aŭ situaciojn: esti, scii, rigardi, proksimigi, amikiĝi, …</p>
-			<p><b>ADVERBOJ (e-vortoj)</b>, kiuj montras manierojn: tute, kompreneble, verŝajne, fakte, kaŝe, … </p>
-			<p class="parto">Aliaj vortklasoj, pri kiuj ni volos paroli, estas:</p>
-			<p><b>PREPOZICIOJ</b>, kiuj montras rilatojn: de, al, kun, pri, da, …</p>
-			<p><b>PRONOMOJ</b>, kiuj resendas al substantivoj: mi, ni, vi, li, ŝi, ĝi, ili, si, oni.</p>
-			<p><b>ARTIKOLO</b>, kiu montras konatecon: la.</p>
-	
-			<h3>Ekzerco</h3>
-			<p>Nun mi povas klarigi, kiel <b>kia</b> kaj <b>kiel</b> estas malsamaj.</p>
-			<p>Per <span class="eo">kia</span> oni demandas pri eco, do pri adjektivo (a-vorto).</p>
-			<p>Per <span class="eo">kiel</span> oni demandas pri maniero, do pri adverbo (e-vorto).</p>
-			<p class="eo"><b>Kia</b> estas via amiko? - Li estas bel<b>a</b>.</p>
-			<p class="eo"><b>Kiel</b> vi manĝas? - Mi manĝas malrapid<b>e</b>.</p>
-			<p class="eo">Ŝia vizaĝo subite iĝis ruĝ<b>a</b>.</p>
-			<p class="eo"><b>Kia</b> ĝi iĝis? - Ĝi iĝis ruĝ<b>a</b>.</p>
-			<p class="eo"><b>Kiel</b> ĝi iĝis ruĝa? - Subit<b>e</b>.</p>
 
 			<?php 
 				getEkzercon(84,$persono_id);

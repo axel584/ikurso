@@ -71,6 +71,14 @@ a {color: #2196F3;}
 .card-reveal p {
 	font-size: 85%;
 }
+section.klarigo ul {
+	list-style-type: disc;
+	padding-left: 2em;
+	line-height: 180%;
+}
+section.klarigo ul li {
+	list-style-type: circle;
+}
 /*---- surcharge formulaires -----*/
 
 .input-field label {color: #75706B;}

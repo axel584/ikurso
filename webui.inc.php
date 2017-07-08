@@ -384,6 +384,9 @@ function getEkzercon($id,$persono_id) {
 	$rowEkzerco = $resultEkzerco->fetch();
 	echo "<fieldset class='ekzerco'>";
 	echo "<legend><strong>EXERCICE</strong> : ".$rowEkzerco["komando"]."</legend>";
+	if ($rowEkzerco["komando_detalo"]!="") {
+		echo "<p>".$rowEkzerco["komando_detalo"]."</p>";
+	}
 	if ($rowEkzerco["x2u"]==1) {
 		echo "<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>&nbsp;:&nbsp;";
 		echo "en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
@@ -415,7 +418,8 @@ function getEkzercon($id,$persono_id) {
 		echo "<p class='col s12 demando'>".$rowEkzercero["numero"].". ".$rowEkzercero["demando"]."</p>\n";
 		//echo "<input type='hidden' name=\"id_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["id"]."\">";
 		//echo "<input type='hidden' name=\"dem_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["numero"]." ".$rowEkzercero["demando"]."\">";
-		echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"".$rowEkzercero["numero"]." ".$rowEkzercero["demando"]."\">";
+		//echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"".$rowEkzercero["numero"]." ".$rowEkzercero["demando"]."\">";
+		echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"\">";
 
 		if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")) { // cas des types d'exercices textarea
 			echo "<div class='input-field col s12'><textarea class='materialize-textarea' rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
@@ -602,10 +606,15 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 			$indiceQuestion= 1;
 			
 			// on récupère les réponses en base
-			$query = "select demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
+			$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero";
 			$result = $bdd->query($query);
 			echo "<ul class='collection'>";
+			$lastKomando = "";
 			while ($row=$result->fetch()) {
+				if ($row["komando"]!=$lastKomando) {
+					$lastKomando=$row["komando"];
+					echo "<h6>".$lastKomando."</h6>\n";
+				}
 				echo "<li class='collection-item row'>";
 				echo "<b>".$row["demando"]."</b><br/>";
 				echo "&nbsp;&nbsp;&nbsp;".$row["respondo"]."<br/>";

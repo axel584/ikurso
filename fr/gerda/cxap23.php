@@ -76,7 +76,72 @@ include "gerdakapo.inc.php";
 				
 				<p>Ekzistas ankaŭ finaĵoj <b>-ont-</b> kaj <sb>-ot-</b> por la estonteco (tio, kio	okazos aŭ estos poste).</p>
 				
-
+				<p>En <a href="cxap09.php?section=2">ĉapitro 9</a> vi lernis pri la finaĵo <b>-it-</b>. (<span class="eo">La kapo de Bob estis <b>batita</b>.</span>)</p>
+				<p>En <a href="cxap11.php?section=2">ĉapitro 11</a> vi lernis pri la finaĵo <b>-ant-</b>. (<span class="eo">Linda pensas, sin <b>demandante</b>, ĉu…</span>)</p>
+				<p>Poste, en <a href="cxap14.php?section=2">ĉapitro 14</a>, aperas la finaĵoj <span class="eo">-at-</span> 
+				kaj <b>-int-</b>. (<span class="eo">Ĉambro <b>nekonata</b>. Kvazaŭ ŝi estus <b>laborinta</b>.</span>)</p>
+				<p>La vortoj kun <b>-ant-</b> kaj <b>-at-</b> rilatas al la nuno, 
+				al la estanteco (al tio, kio okazas aŭ estas nun).</p>
+				
+				<div class="container">
+					<table class="bordered">
+						<tr>
+							<td></td><td>SUBJEKTA</td><td>OBJEKTA</td>
+						</tr>
+						<tr>
+							<td>ANTAŬE</td><td>-int-</td><td>-it</td>
+						</tr>
+						<tr>
+							<td>NUN</td><td>-ant-</td><td>-at-</td>
+						</tr>
+						<tr>
+							<td>POSTE</td><td>-ont-</td><td>-ot-</td>
+						</tr>
+					</table>
+				</div>
+	
+				<p>Jen kelkaj ekzemploj:</p>
+				<p class="tab"><span class="eo">La polico serĉas malaperintan virinon [virinon, kiu malaperis].</span></p>
+				<p class="tab"><span class="eo">La virino estas enŝlosita en forlasita domo [domo, kiun oni forlasis].</span></p>
+				<p class="tab"><span class="eo">Linda rigardas la kriegantajn soldatojn [soldatojn, kiuj kriegas].</span></p>
+				<p class="tab"><span class="eo">Ŝi iomete timas pro la ĵetataj teleroj [teleroj, kiujn oni ĵetas].</span></p>
+				<p class="tab"><span class="eo">Ĉu vi streĉe atendas la venontan ĉapitron [ĉapitron, kiu venos]?</span></p>
+				<p class="tab"><span class="eo">Kion trovas la kaptotaj krimuloj [krimuloj, kiujn oni kaptos]?</span></p>
+	
+				<p class="parto">Se la ĉefa parolo estas nuna (supre estas <b>serĉas</b>, <b>estas</b>, <b>rigardas</b>,…), oni povas "traduki" la participojn jene:
+				</p>
+				<div class="row">
+					<p class="col s6 l3">x-inta</p><p class="col s6 l3">→ kiu x-is</p>
+					<p class="col s6 l3">x-ita</p><p class="col s6 l3">→ kiun oni x-is</p>
+					<p class="col s6 l3">x-anta</p><p class="col s6 l3">→ kiu x-as</p>
+					<p class="col s6 l3">x-ata</p><p class="col s6 l3">→ kiun oni x-as</p>
+					<p class="col s6 l3">x-onta</p><p class="col s6 l3">→ kiu x-os</p>
+					<p class="col s6 l3">x-ota</p><p class="col s6 l3">→ kiun oni x-os</p>
+				</div>
+				<p class="parto">Tamen, se la ĉefa parolo ne estas nuna, oni normale ne povas tiel
+				simple "traduki". Ekzemple:</p>
+				<p class="tab"><span class="eo">Hieraŭ matene Bob pensis pri la farota laboro.</span></p>
+				<p class="tab">Sed eble li faris la laboron hieraŭ vespere. Se hodiaŭ oni dirus,
+				ke hieraŭ matene Bob pensis pri la laboro, kiun oni faros, tio
+				signifus, ke eĉ hodiaŭ la laboro ankoraŭ ne estas farita. Pli ĝusta
+				"traduko" estas do: Hieraŭ matene Bob pensis pri la laboro, kiu estis
+				objekto de posta faro.</p>
+				<p class="tab"><span class="eo">Morgaŭ vespere Bob rigardos la faritan laboron.</span>
+				<p class="tab">Sed eble li faros la laboron morgaŭ vespere. Se hodiaŭ oni dirus,
+				ke morgaŭ vespere Bob rigardos la laboron, kiun oni faris, tio
+				signifus, ke jam hodiaŭ la laboro estas farita. Pli ĝusta "traduko"
+				estas do: Morgaŭ vespere Bob rigardos la laboron, kiu estos objekto de
+				antaŭa faro.</p>
+	
+				<p>Ĉu tiu klarigo estas komprenebla? Se ne, tio ne tro gravas, ĉar la
+				realo estas multe pli simpla ol mia klarigo. Kompreneble oni normale ne
+				tradukas participojn; oni komprenas ilin sentraduke. <span class="eo">Manĝonta</span>
+				signifas kvazaŭ <span class="eo">malsata</span>; <span class="eo">manĝanta</span> 
+				signifas kvazaŭ <span class="eo">ĉe-tabla</span>;
+				<span class="eo">manĝinta</span> signifas kvazaŭ <span class="eo">sata</span>.</p>
+		
+				<p>Provu la sekvantan ekzercon, en kiu oni devas reskribi uzante participon!</p>
+	
 			</section>
 
 		<?php 
@@ -117,73 +182,6 @@ include "gerdakapo.inc.php";
 				getEkzercon(98,$persono_id);
 			?>
 
-			<h3>Notoj</h3>
-			
-			<p>En <a href="cxap09.php?section=2">ĉapitro 9</a> vi lernis pri la finaĵo <b>-it-</b>. (<span class="eo">La kapo de Bob estis <b>batita</b>.</span>)</p>
-			<p>En <a href="cxap11.php?section=2">ĉapitro 11</a> vi lernis pri la finaĵo <b>-ant-</b>. (<span class="eo">Linda pensas, sin <b>demandante</b>, ĉu…</span>)</p>
-			<p>Poste, en <a href="cxap14.php?section=2">ĉapitro 14</a>, aperas la finaĵoj <span class="eo">-at-</span> 
-			kaj <b>-int-</b>. (<span class="eo">Ĉambro <b>nekonata</b>. Kvazaŭ ŝi estus <b>laborinta</b>.</span>)</p>
-			<p>La vortoj kun <b>-ant-</b> kaj <b>-at-</b> rilatas al la nuno, 
-			al la estanteco (al tio, kio okazas aŭ estas nun).</p>
-			
-			<div class="container">
-				<table class="bordered">
-					<tr>
-						<td></td><td>SUBJEKTA</td><td>OBJEKTA</td>
-					</tr>
-					<tr>
-						<td>ANTAŬE</td><td>-int-</td><td>-it</td>
-					</tr>
-					<tr>
-						<td>NUN</td><td>-ant-</td><td>-at-</td>
-					</tr>
-					<tr>
-						<td>POSTE</td><td>-ont-</td><td>-ot-</td>
-					</tr>
-				</table>
-			</div>
-
-			<p>Jen kelkaj ekzemploj:</p>
-			<p class="tab"><span class="eo">La polico serĉas malaperintan virinon [virinon, kiu malaperis].</span></p>
-			<p class="tab"><span class="eo">La virino estas enŝlosita en forlasita domo [domo, kiun oni forlasis].</span></p>
-			<p class="tab"><span class="eo">Linda rigardas la kriegantajn soldatojn [soldatojn, kiuj kriegas].</span></p>
-			<p class="tab"><span class="eo">Ŝi iomete timas pro la ĵetataj teleroj [teleroj, kiujn oni ĵetas].</span></p>
-			<p class="tab"><span class="eo">Ĉu vi streĉe atendas la venontan ĉapitron [ĉapitron, kiu venos]?</span></p>
-			<p class="tab"><span class="eo">Kion trovas la kaptotaj krimuloj [krimuloj, kiujn oni kaptos]?</span></p>
-
-			<p class="parto">Se la ĉefa parolo estas nuna (supre estas <b>serĉas</b>, <b>estas</b>, <b>rigardas</b>,…), oni povas "traduki" la participojn jene:
-			</p>
-			<div class="row">
-				<p class="col s6 l3">x-inta</p><p class="col s6 l3">→ kiu x-is</p>
-				<p class="col s6 l3">x-ita</p><p class="col s6 l3">→ kiun oni x-is</p>
-				<p class="col s6 l3">x-anta</p><p class="col s6 l3">→ kiu x-as</p>
-				<p class="col s6 l3">x-ata</p><p class="col s6 l3">→ kiun oni x-as</p>
-				<p class="col s6 l3">x-onta</p><p class="col s6 l3">→ kiu x-os</p>
-				<p class="col s6 l3">x-ota</p><p class="col s6 l3">→ kiun oni x-os</p>
-			</div>
-			<p class="parto">Tamen, se la ĉefa parolo ne estas nuna, oni normale ne povas tiel
-			simple "traduki". Ekzemple:</p>
-			<p class="tab"><span class="eo">Hieraŭ matene Bob pensis pri la farota laboro.</span></p>
-			<p class="tab">Sed eble li faris la laboron hieraŭ vespere. Se hodiaŭ oni dirus,
-			ke hieraŭ matene Bob pensis pri la laboro, kiun oni faros, tio
-			signifus, ke eĉ hodiaŭ la laboro ankoraŭ ne estas farita. Pli ĝusta
-			"traduko" estas do: Hieraŭ matene Bob pensis pri la laboro, kiu estis
-			objekto de posta faro.</p>
-			<p class="tab"><span class="eo">Morgaŭ vespere Bob rigardos la faritan laboron.</span>
-			<p class="tab">Sed eble li faros la laboron morgaŭ vespere. Se hodiaŭ oni dirus,
-			ke morgaŭ vespere Bob rigardos la laboron, kiun oni faris, tio
-			signifus, ke jam hodiaŭ la laboro estas farita. Pli ĝusta "traduko"
-			estas do: Morgaŭ vespere Bob rigardos la laboron, kiu estos objekto de
-			antaŭa faro.</p>
-
-			<p>Ĉu tiu klarigo estas komprenebla? Se ne, tio ne tro gravas, ĉar la
-			realo estas multe pli simpla ol mia klarigo. Kompreneble oni normale ne
-			tradukas participojn; oni komprenas ilin sentraduke. <span class="eo">Manĝonta</span>
-			signifas kvazaŭ <span class="eo">malsata</span>; <span class="eo">manĝanta</span> 
-			signifas kvazaŭ <span class="eo">ĉe-tabla</span>;
-			<span class="eo">manĝinta</span> signifas kvazaŭ <span class="eo">sata</span>.</p>
-	
-			<p>Provu la sekvantan ekzercon, en kiu oni devas reskribi uzante participon!</p>
 
 			<?php 
 				getEkzercon(99,$persono_id);

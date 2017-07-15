@@ -29,9 +29,9 @@ function afficheAssociationNationale($pays) {
 		echo "<div class='row'>";
 		echo "<h2>Association près de chez vous</h2>";
 		echo "<b>Association Brusseloise</b><br/>";
-		echo "<a href='http://www.esperantobruselo.org'>http://www.esperantobruselo.org</a><br/>";
+		echo "<a href='http://www.esperantobruselo.org'>esperantobruselo.org</a><br/>";
 		echo "<b>Association wallone</b><br/>";
-		echo "<a href='www.esperanto-wallonie.be'>www.esperanto-wallonie.be</a><br/>";
+		echo "<a href='http://www.esperanto-wallonie.be'>esperanto-wallonie.be</a><br/>";
 		
 		echo "</div>";
 	}elseif ($pays=="CA") {
@@ -40,7 +40,7 @@ function afficheAssociationNationale($pays) {
 		echo "<b>Société québécoise d'espéranto</b><br/>";
 		echo "6595, rue Briand<br/>";
 		echo "Montréal, Québec, H4E 3L4<br/>";
-		echo "<a href='www.esperanto.qc.ca'>www.esperanto.qc.ca</a><br/>";
+		echo "<a href='http://www.esperanto.qc.ca'>www.esperanto.qc.ca</a><br/>";
 		echo "<a href='mailto:informo@esperanto.qc.ca'>informo@esperanto.qc.ca</a><br/>";
 	}elseif ($pays=="FR") {
 		echo "<div class='row'>";
@@ -51,19 +51,28 @@ function afficheAssociationNationale($pays) {
 		echo "75004 Paris";
 		echo "</li></ul>";
 		echo "</div>";
+	} elseif ($pays=="CH") {
+		echo "<div class='row'>";
+		echo "<h2>Association près de chez vous</h2>";
+		echo "<ul class='collection local'><li class='collection-item'>";
+		echo "<span class='title'>Ecole de langues Esperanto</span><br/>";
+		echo "Chemin des Postiers 27,<br/> 2300 La Chaux-de-Fonds,<br/> Suisse<br/>";
+		echo "+41 32 926 74 07";
+		echo "</li></ul>";
+		echo "</div>";
 	} else {
 		echo "<div class='row'>";
 		echo "<h2>Association près de chez vous</h2>";
 		echo "<ul class='collection local'>";
 		echo "<li class='collection-item'>";
 		echo "UEA : Universala Esperanto-Asocio<br/>";
-		echo "<a href='http://www.uea.org/'>http://www.uea.org/</a><br/>";
+		echo "<a href='http://www.uea.org/'>uea.org/</a><br/>";
 		echo "</li>";
 		echo "<li class='collection-item'>";
 		echo "Espéranto-France<br/>";
 		echo "4bis, rue de la Cerisaie<br/>";
 		echo "75004 Paris";
-		echo "<a href='www.esperanto-france.org'>www.esperanto-france.org</a><br/>";
+		echo "<a href='http://www.esperanto-france.org'>esperanto-france.org</a><br/>";
 		echo "</li>";
 		echo "</ul>";
 		echo "</div>";		
@@ -78,7 +87,7 @@ function afficheAssociationFrancaise($idArthur) {
 	$json_url = "https://esperanto-france.org/api/personne/".$idArthur;
 	$json = file_get_contents($json_url);
 	$data = json_decode($json, TRUE);
-	echo "<span class='title'>".$data["nom"]."</span>";
+	echo "<span class='title'>".$data["nom"]."</span><br/>";
 	foreach ($data["adresse"] as $adresse){
 		afficheAdresse($adresse);
 	}

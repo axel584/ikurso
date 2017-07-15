@@ -1,20 +1,19 @@
 @page {
     size: A4 portrait;
     margin: 2cm;
-    font-size: 11pt;
 }   
 
 body {
 	background-color :#fff;
-	font-size :15pt;
+	font-size: 10pt;
 }
 p, h1, h2, h3, h4, h5, h6, blockquote, ul, ol {
-	margin: auto!important;
+	/* margin: auto!important; */
 }
 p, blockquote {
 	orphans: 3; /* pas de ligne seule en bas */
 	widows: 3; /* pas de ligne seule en haut */
-	margin-bottom: 1cm;
+	margin-bottom: 0.5cm;
 }
 blockquote, ul, ol {
   page-break-inside: avoid; /* pas de coupure dans ces élements */
@@ -23,9 +22,9 @@ h2 {
 	margin :0;
 	padding :0;
 	text-indent :0;
-	line-height :25pt;
-	font-size :25pt;
-	margin-bottom: 2cm;
+	line-height :22pt;
+	font-size :22pt;
+	margin-bottom: 0.5cm;
 }
 a {
 	text-decoration: underline!important;
@@ -34,6 +33,7 @@ a {
 a[href]:after {
   content: " (" attr(href) ")"; /* affichage des URL des liens */
 }
+a.player-audio {display: none;}
 div.navbar-fixed,
 aside,
 div.impression,
@@ -54,10 +54,9 @@ p.eo.eta,
 	margin-top: 0.5cm;
 	margin-bottom: 0.5cm;
 }
-
+div.vortlisto {padding: 0.25cm;}
 div.vortlisto.row {
 	width: 100%;
-	columns: 2;
 	margin-top: 0.5cm;
 	margin-bottom: 0.5cm;
 	border: 1px solid #ccc;
@@ -65,6 +64,9 @@ div.vortlisto.row {
 fieldset div.vortlisto.row {
 	border: none;
 }
-.col.s6 {
-	width: 100%;
+.row .col.s6 {
+    width: 25%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
 }

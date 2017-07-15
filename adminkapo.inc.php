@@ -47,6 +47,7 @@ echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
 					<h2>Correcteur</h2>
 					<p><a href="<?php echo $vojo."statLauxKategorio.php";?>">Statistiques</a></p>
 					<p><a href="<?php echo $vojo."helppagxo.php";?>">Guide du correcteur</a></p>
+					<p><a href="<?php echo $vojo."korektado.php";?>">Corrigé type</a></p>
 					<p><a href="<?php echo $vojo."miajlernantoj.php";?>">Mes &eacute;l&egrave;ves</a></p>
 				</td>
 			<?php } ?>

@@ -36,10 +36,6 @@ $subjekto=$pagxo[count($pagxo)-1];
 				</td>
 				<td>
 					<h2>Personnel</h2>
-					<!--p><a href="< ? p h p echo $vojo."forum/index.php?sid=".phpbb2mysql_sid;?>">
-					<?php //echo $lgv_forumo." ".@phpbb_nombre_nouveau_message($persono_id);?>
-					</a></p-->
-					<!--p><a href="javascript:void(0);" onClick="window.open('<?php echo $vojo;?>forum/chatbox_mod/chatbox.php','12_ChatBox','scrollbars=no,width=700,height=550')">Discussion en ligne</a></p-->
 					<p><a href="<?php echo $vojo."personinformoj.php";?>">Donn&eacute;es personnelles</a></p>
 				</td>
 			<?php if ($rajto=="K" || $rajto=="A"){ ?>
@@ -47,6 +43,7 @@ $subjekto=$pagxo[count($pagxo)-1];
 					<h2>Correcteur</h2>
 					<p><a href="<?php echo $vojo."statLauxKategorio.php";?>">Statistiques</a></p>
 					<p><a href="<?php echo $vojo."helppagxo.php";?>">Guide du correcteur</a></p>
+					<p><a href="<?php echo $vojo."korektado.php";?>">Corrigé type</a></p>
 					<p><a href="<?php echo $vojo."miajlernantoj.php";?>">Mes &eacute;l&egrave;ves</a></p>
 				</td>
 			<?php } ?>

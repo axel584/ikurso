@@ -267,7 +267,7 @@ include "dlekkapo.inc.php";
 		
 		<p><b>IST</b> : <i>profession, activité habituelle</i></p>
 		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> instrui</span> : enseigner&emsp;→&emsp;<span class="eo">instruisto</span> : instituteur</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> instrui</span> : enseigner&emsp;→&emsp;<span class="eo">instruisto</span> : enseignant</p>
 			<p class="col s12"><span class="eo">piano</span> : piano&emsp;→&emsp;<span class="eo"><span class="marque">•</span> pianisto</span> : pianiste</p>
 			<p class="col s12"><span class="eo">esperantisto</span> : espérantiste</p>
 		</div>
@@ -602,7 +602,8 @@ include "dlekkapo.inc.php";
 						   <span class="eo">admirinda</span> : admirable</p>
 						<p><span class="eo">cigaredo</span> : cigarette</p>
 						<p><span class="eo">glavo</span> : épée</p>
-						<p><span class="eo">instrui</span> : instruisto</p>
+						<p><span class="eo">instrui</span> : enseigner<br>
+							<span class="eo">instruisto</span> : enseignant</p>
 						<p><span class="eo">panjo</span> : maman</p>
 						<p><span class="eo">duobla</span> : double</p>
 						<p><span class="eo">multobligi</span> : multiplier, reproduire en plusieurs exemplaires</p>

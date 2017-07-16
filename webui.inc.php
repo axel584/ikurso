@@ -202,6 +202,32 @@ $res.="<h1>".$pagxtitolo."</h1>";
 return $res;
 }
 
+function displayWarningSiLecioneroManquante($persono_id,$kurso,$leciono,$lecionero) {
+	global $bdd;
+	if ($persono_id==null) {
+		return;
+	}
+	$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id,lecioneroj.dauxro  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=".$persono_id." WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and ordo<".$lecionero." order by ordo";
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$enTete = false; 
+	$nbLecioneroManquante = 0;
+	while ($row = $result->fetch()) {
+		if ($row["persono_id"]==null) {
+			if (!$enTete) {
+				echo '<div class="card red  lighten-4"><div class="card-content"><span class="card-title"><i class="material-icons">warning</i> Attention, vous n\'avez pas terminé certaines sections précédentes.</span>';
+				$enTete=true;
+			}
+			echo '<li><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$row["titolo"]."</a></li>";	
+			$nbLecioneroManquante++;
+		} 
+	}
+	// si on a affiché des sections qui n'ont pas été barré, on ferme le rectangle de warning
+	if ($nbLecioneroManquante>0) {
+		echo "Afin de mieux suivre votre progression, n'oubliez pas de cliquer sur le bouton bleu en bas de chaque page.";
+		echo '</div></div>';
+	}
+}
+
 function getTitoloLecionero($kurso,$leciono,$lecionero) {
 	global $bdd;
 	$query = "SELECT lecioneroj.titolo,lecioneroj.dauxro FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero;

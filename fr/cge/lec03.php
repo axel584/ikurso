@@ -10,7 +10,7 @@ include "dlekkapo.inc.php";
 		<section id="leciono-enhavo">
 		<?php 
 		getTitoloLecionero('CG',$leciono,$section);
-		
+		displayWarningSiLecioneroManquante($persono_id,'CG',3,$section);
 			if ($section=="1") {
 			?>
 			<p>Nous avons vu pas mal de choses dans la 2<sup>e</sup> leçon. Voici un tableau qui

@@ -10,6 +10,7 @@ include "dlekkapo.inc.php";
 		<section id="leciono-enhavo">
 		<?php 
 		getTitoloLecionero('CG',$leciono,$section);
+		displayWarningSiLecioneroManquante($persono_id,'CG',4,$section);
 		
 			if ($section=="1") {
 			?>

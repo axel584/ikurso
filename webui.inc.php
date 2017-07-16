@@ -223,7 +223,7 @@ function displayWarningSiLecioneroManquante($persono_id,$kurso,$leciono,$lecione
 	}
 	// si on a affiché des sections qui n'ont pas été barré, on ferme le rectangle de warning
 	if ($nbLecioneroManquante>0) {
-		echo "Afin de mieux suivre votre progression, n'oubliez pas de cliquer sur le bouton bleu en bas de chaque page.";
+		echo "Afin de mieux suivre votre progression, n'oubliez pas de cliquer sur le bouton TERMINÉ en bas de chaque page.";
 		echo '</div></div>';
 	}
 }

@@ -3,10 +3,27 @@ include "../db.inc.php";
 include "../util.php";
 malfermidatumbazon();
 
+function jamFinisKurson($studanto) {
+	global $bdd;
+	$query = "SELECT stato FROM `nuna_kurso` WHERE studanto='".$studanto."' order by lastdato desc";
+	$result = $bdd->query($query);
+	$row = $result->fetch();
+	if ($row) {
+		return $row["stato"]=="F" || $row["stato"]=="H";
+	} else {
+		return false;
+	}
+}
+
+
 // Premier rappel au bout de 6 jours
 $query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id where stop_rappel='N' group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 6 DAY)";
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
+ 	// on verifie si l'élève a pas déjà fini son cours :
+ 	if (jamFinisKurson($row["id"])) {
+ 		continue;
+ 	}
  	protokolo($row["id"],"ENVOIE RAPPEL","Envoie d'un message de rappel après 6 jours");
  	$nomo = isset($row["personnomo"])?$row["personnomo"]:$row["enirnomo"];
     echo $row["id"].":".$row["retadreso"].":".$urlracine.redirigeSectionParUtilisateur($row["id"]); 
@@ -35,6 +52,10 @@ $result = $bdd->query($query);
 $query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id where stop_rappel='N' group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 10 DAY)";
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
+ 	// on verifie si l'élève a pas déjà fini son cours :
+ 	if (jamFinisKurson($row["id"])) {
+ 		continue;
+ 	}
  	protokolo($row["id"],"ENVOIE RAPPEL","Envoie d'un message de rappel après 10 jours");
 	$nomo = isset($row["personnomo"])?$row["personnomo"]:$row["enirnomo"];
     echo $row["id"].":".$row["retadreso"]; 

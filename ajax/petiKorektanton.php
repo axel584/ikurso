@@ -25,7 +25,7 @@ if($aktivigita==0) {
 }
 
 // on vérifie si l'élève a fait un exercice
-$query = "select count(*) as combien from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."'";
+$query = "select count(*) as combien from respondoj join ekzerceroj on ekzerceroj.id = respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."'";
 $result = $bdd->query($query);
 $nbResponses = $result->fetch()["combien"];
 if ($nbResponses==0) {
@@ -73,11 +73,25 @@ $fonto.="<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"\
 $fonto.="<style>body{font-family:\"Courier New\", Courier, sans-serif;font-size:small}</style>\n";
 $fonto.="</head><body>";
 
-$query = "select demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
+// Attention, code commun avec sendiLecionon.php
+
+$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero";
 $result = $bdd->query($query);
+$nbReponse = 0;
+$lastKomando = "";
 while ($row=$result->fetch()) {
+	$nbReponse = $nbReponse + 1;
+	// si on n'a jamais mis cette consigne, on l'affiche ici :
+	if ($row["komando"]!=$lastKomando) {
+		$lastKomando=$row["komando"];
+		$fonto .= "<h5>".$lastKomando."</h5>\n";
+	}	
 	$fonto .= "<p>".$row["demando"]."<br>\n";
-	$fonto .= "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
+	if ($row["gxusta"]==1) {
+		$fonto .= "<span style=\"color:green\">".$row["respondo"]."</span></p>\n";
+	} else {
+		$fonto .= "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
+	}
 }
 $fonto .= "<p>Commentaire de l'élève :<br>\n";
 $fonto .= "<span style=\"color:blue\">".$commentaire_pour_correcteur."</span></p>\n";

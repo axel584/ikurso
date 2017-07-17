@@ -221,7 +221,7 @@ div.col > p:first-child {
 /* styles specifiques */
 .eo {color: #2196F3;}
 .noto strong {color: #2196F3;}
-.eta {font-size: 85%;}
+.eta, .numero {font-size: 85%;}
 .tab {padding-left: 1em;}
 
 /* amélioration de l'affichage s12 */

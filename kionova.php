@@ -11,6 +11,16 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
+				<li class="collection-header">version 16. Juillet 2017</li>
+				<li class="collection-item">
+					<p>Ajout de la correction automatique pour les élèves avec les réponses soulignés en vert si elles sont bonnes.</p>
+					<p>Ajout de la correction automatique pour les correcteurs avec les bonnes réponses en vert.</p>
+					<p>Affichage des associations locales dans la page "Mes données personnelles".</p>
+					<p>Correction dans la feuille de style pour imprimer les pages (meilleure gestion des images).</p>
+					<p>Sauvegarde automatique des réponses des élèves (afin que rien ne soit perdu s'il change de page).</p>
+					<p>Ajout d'un lien plus explicite pour le message d'activation du compte.</p>
+					<p>Corrections diverses de bugs et coquilles…</p>
+				</li>			
 				<li class="collection-header">version 15. Mai 2017</li>
 				<li class="collection-item">
 					<p>Ajout d’explications dans les exercices pour écrire les lettres accentuées à partir de la méthode <em>x</em>.</p>

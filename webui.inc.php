@@ -187,7 +187,7 @@ $res.="<p style='text-align:center' id='farbskatol'>\n";
 $res.="<a href='http://farbskatol.net'>Vid&eacute;os en esp&eacute;ranto</a></p></li></ul>\n";
 
 $res.="<p class=\"meze\">&nbsp;Ce site est g&eacute;r&eacute; par&nbsp;:";
-$res.="<a href=\"http://www.esperanto-jeunes.org\">";
+$res.="<a href=\"http://www.esperanto-france.org\">";
 $res.="<img alt=\"jefo-logeto\" src=\"".$vojo."../bildoj/logo_JEFO.gif\"></a><br>";
 $res.="avec le soutien de<br>";
 $res.="<a href='http://www.linguaforce.com/esperanto/traduction.htm' alt='linguaforce'>";

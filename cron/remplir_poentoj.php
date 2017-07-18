@@ -6,6 +6,7 @@ $result = $bdd->query($query);
 
 while($row=$result->fetch()) {
 	$query2 = "update personoj_lecioneroj set poentoj='".$row["combien"]."' where persono_id=".$row["persono_id"]." and lecionero_id=".$row["lecionero_id"];
+	echo $query2.";<br/>";
 	$bdd->query($query2);
 }
 

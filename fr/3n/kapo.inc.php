@@ -17,11 +17,6 @@ if ($persono_id) {
 	$persono = apartigiPersonon($persono_id);
 }
 
-// on récupère les réponses précédentes que l'on va mettre dans la variable memorkurso
-if (isset($leciono)&&isset($persono_id)) {
-	$memorkurso = getRegistritajnRespondojn('3N',$leciono,$persono_id);
-}
-
 /*
  * rappel pour les élèves non identifiés.
 */

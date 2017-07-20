@@ -2109,3 +2109,6 @@ UPDATE `lecioneroj` SET `titolo` = 'Exercice 6' WHERE `id` = 66;
 
 -- Uniformiser les noms des pays #655
 UPDATE `vortoj` SET `eo` = 'Ĉinujo|Ĉinio' WHERE `eo` = 'Ĉinio';
+
+-- Passage en V17
+ALTER TABLE  `lecioneroj` ADD  `android` BOOL NULL ;

@@ -130,7 +130,7 @@ include "dlekkapo.inc.php";
 				<p class="col s12 l6"><span class="eo">leg<b>it</b>aj</span> = <span class="eo">kiujn oni legis</span> = qu’on a lus, lus</p>
 			</div>
 			<div class="row">
-				<p class="col s12 l6"><span class="eo">leg<b>ot</b>a</span> = <span class="eo">kiujn oni legos</span> = qu’on lira</p>
+				<p class="col s12 l6"><span class="eo">leg<b>ot</b>a</span> = <span class="eo">kiun oni legos</span> = qu’on lira</p>
 				<p class="col s12 l6"><span class="eo">leg<b>ot</b>aj</span> = <span class="eo">kiujn oni legos</span> = qu’on lira</p>
 			</div>
 	

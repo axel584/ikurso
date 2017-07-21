@@ -20,7 +20,7 @@ include "pagxkapo.inc.php";
 <?php
 
 
-$query = "select demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$studanto_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
+$query = "select ekzerceroj.demando,respondoj.respondo from respondoj join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$studanto_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.kodo";
 $result = $bdd->query($query);
 $nbReponse = 0;
 while ($row=$result->fetch()) {

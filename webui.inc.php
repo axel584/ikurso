@@ -424,6 +424,13 @@ function getEkzercon($id,$persono_id) {
 		echo "<p class='eo eta'>Cette exercice ne peut pas être corrigé automatiquement. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>\n";
 		$styleKorektebla=" ";
 	}
+	if ($rowEkzerco["ekzemplo"]!="") {
+			echo "<div class='ekzemplo row'>";
+			echo "<p><em>Exemples :</em></p>";
+			echo $rowEkzerco["ekzemplo"];
+			echo "</div>";
+	}
+
 	echo "<div class='tasko'>";
 	echo "<div class='row'>";
 	$queryEkzercero = "SELECT id,numero,demando,korektebla,bildo FROM `ekzerceroj` where ekzerco_id=".$id." and forigita=0 order by numero";

@@ -132,28 +132,9 @@ include "gerdakapo.inc.php";
 				getEkzercon(60,$persono_id);
 			?>
 
-			<fieldset class="ekzerco">
-				<legend><b>Elektu la ĝustan vorton kaj skribu la tutan frazon.</b></legend>
-				<input type="hidden" name="013_cxap06.1" value="Elektu la ĝustan vorton kaj skribu la tutan frazon.">
-				<div class="ekzemplo">
-					<p><em>Ekzemple:</em></p>
-					<p>[Li/Lin] metas [ĝi/ĝin] en la [poŝo/poŝon].</p>
-		  			<p>→ <b>Li</b> metas <b>ĝin</b> en la <b>poŝon</b>.</p>
-				</div>
-
-				<div class="tasko">
-					<?php $demandoj=array (
-						5 => "La [blondulo/blondulon] metis [sukero/sukeron] en la [taso/tason] de [kafo/kafon].",
-						6 => "[Li/Lin] volis iri en la [restoracio/restoracion], al la [bela/belan] [knabino/knabinon], sed [li/lin] falas en la [koridoro/koridoron].",
-						7 => "Bob konsentas kun [Linda/Lindan].",
-						8 => "[Ili/Ilin] rigardas al la [studentoj/studentojn].",
-						9 => "[Iu/Iun] perdis [aĵo/aĵon] en la [restoracio/restoracion].",
-						10 => "Ili metas [ĝi/ĝin] sur la [tablo/tablon] kaj decidas promeni al la [universitato/universitaton]. [Ili/Ilin] ekiras.",
-					);
-					ekzerco(True, 2);
-					?>
-				</div>
-			</fieldset>
+			<?php 
+				getEkzercon(61,$persono_id);
+			?>
 
 		<?php 
 		} // fin section 4

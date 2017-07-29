@@ -168,7 +168,7 @@ $(".korektebla").focusout( function () {
           },
           error : function(request, error) {
             console.log("request : "+request+" / error : "+error);
-            alert("Erreur de connexion, contactez les administrateurs");
+            alert("Erreur interne, contactez les administrateurs");
 
           }
       });
@@ -186,7 +186,7 @@ function rechercherVorton($pattern,$kurso) {
           },
           error : function(request, error) {
             console.log("request : "+request+" / error : "+error);
-            alert("Erreur de connexion, contactez les administrateurs");
+            alert("Erreur interne, contactez les administrateurs");
 
           }
       });
@@ -226,7 +226,7 @@ $( "#serchi_protokolon_button").click(function() {
                 $("#resultat_recherche_protokolo").html(reponse);
           },
           error : function() {
-            alert("Erreur de connexion, contactez les administrateurs");
+            alert("Erreur interne, contactez les administrateurs");
           }
       });
 });
@@ -260,7 +260,7 @@ $( "#serchi_protokolon_button").click(function() {
            		}
        		},
        		error : function() {
-       			alert("Erreur de connexion, contactez les administrateurs");
+       			alert("Erreur interne, contactez les administrateurs");
        		}
     	});
 	});
@@ -300,7 +300,7 @@ $( "#serchi_protokolon_button").click(function() {
            		}
        		},
        		error : function() {
-       			alert("Erreur de connexion, contactez les administrateurs");
+       			alert("Erreur interne, contactez les administrateurs");
        		}
     	});
 	});
@@ -338,7 +338,7 @@ $( "#serchi_protokolon_button").click(function() {
               }
           },
           error : function() {
-            alert("Erreur de connexion, contactez les administrateurs");
+            alert("Erreur interne, contactez les administrateurs");
           }
       });
   });
@@ -372,7 +372,7 @@ $("#sendi_novan_pasvorton_button").click(function () {
               }
           },
           error : function() {
-            alert("Erreur de connexion, contactez les administrateurs");
+            alert("Erreur interne, contactez les administrateurs");
           }
       });
     });
@@ -397,7 +397,7 @@ $("#sendi_denove_aktivigilo_button").click(function () {
               }
           },
           error : function() {
-            alert("Erreur de connexion, contactez les administrateurs");
+            alert("Erreur interne, contactez les administrateurs");
           }
       });
     });
@@ -433,7 +433,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
               }
           },
           error : function() {
-            alert("Erreur de connexion, contactez les administrateurs");
+            alert("Erreur interne, contactez les administrateurs");
           }
       });
     });
@@ -472,7 +472,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        			}
        		},
        		error : function() {
-       			alert("Erreur de connexion, contactez les administrateurs");
+       			alert("Erreur interne, contactez les administrateurs");
        		}
     	});
 	});
@@ -494,7 +494,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        			}
        		},
        		error : function() {
-       			alert("Erreur de connexion, contactez les administrateurs");
+       			alert("Erreur interne, contactez les administrateurs");
        		}
     	});
 	});
@@ -519,7 +519,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        			}
        		},
        		error : function() {
-       			alert("Erreur de connexion, contactez les administrateurs");
+       			alert("Erreur interne, contactez les administrateurs");
        		}
     	});
 	});	
@@ -544,7 +544,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        			}
        		},
        		error : function() {
-       			alert("Erreur de connexion, contactez les administrateurs");
+       			alert("Erreur interne, contactez les administrateurs");
        		}
     	});
 	});
@@ -569,7 +569,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        			}
        		},
        		error : function() {
-       			alert("Erreur de connexion, contactez les administrateurs");
+       			alert("Erreur interne, contactez les administrateurs");
        		}
     	});
 	});
@@ -590,7 +590,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
             }
           },
           error : function() {
-            alert("Erreur de connexion, contactez les administrateurs");
+            alert("Erreur interne, contactez les administrateurs");
           }
       });
   });
@@ -635,7 +635,7 @@ function kontroliVorton(vorto_id,persono_id,respondo) {
             }
           },
           error : function() {
-            alert("Erreur de connexion, contactez les administrateurs");
+            alert("Erreur interne, contactez les administrateurs");
           }
       });
 }
@@ -711,7 +711,7 @@ $("#registri_eventon").click(function(){
             }
           },
           error : function() {
-            alert("Erreur de connexion, contactez les administrateurs");
+            alert("Erreur interne, contactez les administrateurs");
           }
       });
   }
@@ -742,7 +742,7 @@ $(".delete_evento").click(function(){
             }
           },
           error : function() {
-            alert("Erreur de connexion, contactez les administrateurs");
+            alert("Erreur interne, contactez les administrateurs");
           }
       });
 });

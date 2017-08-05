@@ -9,7 +9,7 @@ $expediteurIkurso = isset($_GET["expediteur_ikurso"])?$_GET["expediteur_ikurso"]
 // Attention, beaucoup de code en commun avec sendiLecionon.php
 
 // vérifier si l'élève a déjà un correcteur pour ce cours :
-$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where nuna_kurso.kurso='".$kurso."' and studanto=".$studanto_id;
+$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where nuna_kurso.kurso='".$kurso."' and studanto=".$persono_id;
 $result = $bdd->query($query);
 $row = $result->fetch();
 if (!$row) {
@@ -23,13 +23,13 @@ if (!$row) {
 }
 
 // on récupère des infos de l'élève :
-$studanto = apartigiPersonon($studanto_id);
+$studanto = apartigiPersonon($persono_id);
 
 // on récupère le commentaire qui se trouve en base :
 $query ="select id from lecionoj where kurso='".$kurso."' and numero='".$leciono."'";
 $result = $bdd->query($query);
 $leciono_id = $result->fetch()["id"];
-$query = "select komentario from personoj_lecionoj where persono_id='".$studanto_id."' and leciono_id='".$leciono_id."'";
+$query = "select komentario from personoj_lecionoj where persono_id='".$persono_id."' and leciono_id='".$leciono_id."'";
 $result = $bdd->query($query);
 $commentaire_pour_correcteur = $result->fetch()["komentario"];
 

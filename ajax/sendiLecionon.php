@@ -6,6 +6,8 @@ $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
 $commentaire_pour_correcteur=isset($_GET["commentaire_pour_correcteur"])?$_GET["commentaire_pour_correcteur"]:"";
 
+// Attention, beaucoup de code en commun avec resendiLecionon.php
+
 if ($persono_id=="") { // personne non connecté, on ressort
 	$respondo["type"]="session";
 	$respondo["mesagxo"]="Session expirée";
@@ -42,7 +44,7 @@ $fonto.="</head><body>";
 // on ajoute dans le mail l'adresse email de l'élève :
 $fonto .= "<p>Sendu vian korekton al : ".$studanto["retadreso"]."<br>\n";
 
-// Attention, code commun avec petiKorektanton.php
+// Attention, code commun avec petiKorektanton.php et resendiLecionon.php
 
 $query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero";
 $result = $bdd->query($query);

@@ -1,10 +1,12 @@
 <?php
 include "../util.php";
-$studanto_id=isset($_GET["studanto_id"])?$_GET["studanto_id"]:"";
+$persono_id=isset($_GET["studanto_id"])?$_GET["studanto_id"]:"";
 $lecionero_id=isset($_GET["lecionero_id"])?$_GET["lecionero_id"]:"";
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
 $expediteurIkurso = isset($_GET["expediteur_ikurso"])?$_GET["expediteur_ikurso"]:"";
+
+// Attention, beaucoup de code en commun avec sendiLecionon.php
 
 // vérifier si l'élève a déjà un correcteur pour ce cours :
 $query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where nuna_kurso.kurso='".$kurso."' and studanto=".$studanto_id;
@@ -41,7 +43,7 @@ $fonto.="</head><body>";
 // on ajoute dans le mail l'adresse email de l'élève :
 $fonto .= "<p>Sendu vian korekton al : ".$studanto["retadreso"]."<br>\n";
 
-$query = "select komando,demando,respondo from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$studanto_id." and numero=".$leciono." and kurso='".$kurso."' order by kodo";
+$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero";
 $result = $bdd->query($query);
 $nbReponse = 0;
 $lastKomando = "";
@@ -53,7 +55,11 @@ while ($row=$result->fetch()) {
 		$fonto .= "<h5>".$lastKomando."</h5>\n";
 	}
 	$fonto .= "<p>".$row["demando"]."<br>\n";
-	$fonto .= "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
+	if ($row["gxusta"]==1) {
+		$fonto .= "<span style=\"color:green\">".$row["respondo"]."</span></p>\n";
+	} else {
+		$fonto .= "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
+	}
 }
 $fonto .= "<p>Commentaire de l'élève :<br>\n";
 $fonto .= "<span style=\"color:blue\">".$commentaire_pour_correcteur."</span></p>\n";

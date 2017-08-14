@@ -69,7 +69,7 @@ include "gerdakapo.inc.php";
 					<p>Vekis ŝin infana voĉo; ĝi venis el iu alia ĉambro, en la
 					sama domo, tute certe; ĝi diris: "Neniam diru nek al via patro nek al
 					via patrino, ke ni venis en la forlasitan domon. Estas malpermesite
-					ludi ĉi tie. Se ili sciu…" Alia voĉeto respondis: "Mi neniam
+					ludi ĉi tie. Se ili scius…" Alia voĉeto respondis: "Mi neniam
 					diros. Nek al mia patro, nek al mia patrino. Ne havu zorgojn. Neniam
 					oni scios, ke ni venis ludi ĉi tie."</p>
 					<p>Gerda diris: "Infanoj, ĉu vi aŭdas min?" ŝia koro batis

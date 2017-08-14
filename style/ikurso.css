@@ -194,7 +194,8 @@ p.chapo {font-size: 150%;}
 .btn-flat.small i {
     margin: 0;
 }
-.hejmo h2 {
+.hejmo h2,
+.informoj h2 {
 	color: #828965;
 	font-weight: 300;
 }
@@ -742,6 +743,38 @@ p.nbvortoj {
     padding-top: 0;
     margin-top: -1em;
 }
+
+/*********  encadré Pour en savoir plus **********/
+
+fieldset.sciipli {
+	border:2px double #828965;
+	padding:0 1em 1em 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+fieldset.sciipli legend {
+	padding-left: 0.5em;	
+	padding-right: 1em;
+	color: #828965;
+}
+fieldset.sciipli legend:before {
+	font-family: 'Material Icons';
+	content: "loupe";
+	-webkit-font-feature-settings: 'liga';
+	color: #828965;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	vertical-align: middle;
+}
+fieldset.sciipli div.row {
+	border: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+	font-size: 0.9em;
+}
+
 /*********************************/
 /*               QCM             */
 /*********************************/
@@ -837,6 +870,11 @@ span.ikurso {
 
 /******* informoj ******/
 
+.informoj h3 {	
+	color: #828965;
+	font-weight: 300;
+	font-size: 1.7em;
+}
 .informoj #enhavo {margin-top: 3rem;}
 .informoj #rimarko {margin-top: 3rem;}
 .informoj form {margin-top: 3rem;}
@@ -912,6 +950,10 @@ span.ikurso {
 
 .creditphoto {
 	font-size: 0.7rem!important;
+	margin-top: 0;
+}
+.legende-photo {
+	font-size: 0.8rem!important;
 	margin-top: 0;
 }
 .creditphoto a {

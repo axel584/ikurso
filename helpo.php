@@ -63,7 +63,7 @@ include "pagxkapo.inc.php";
 				}
 				if ($section=="kielskribi") { 
 			?>
-			<h1>Comment écrire en espéranto ?</h1>
+			<h1>Comment écrire en espéranto&nbsp;?</h1>
 			<section id="akcentoj" class="scrollspy">
 
 				<?php include "helpo_accents.inc.php" ?>

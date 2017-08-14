@@ -59,45 +59,48 @@ include "dlekkapo.inc.php";
 			<div class="row vortlisto">
 				<p class="col s12"><b>Participes de la voix active</b></p>
 				<div class="col s12 row">
-					<p class="col s2">Présent :</p>
-					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/leganta.jpg" class="responsive-img" alt="Ŝi estas leganta."></p>
-					<p class="col s1"><b>-ant</b></p>
-					<p class="col s7"><span class="eo">Ŝi estas leg<b>ant</b>a.</span><br>= Elle est lisant (en train de lire).</p>
+					<p class="col s3 m2 l2">Présent :<br>
+					<b>-ant</b></p>
+					<p class="col s9 m7 l6"><span class="eo">Ŝi estas leg<b>ant</b>a.</span><br>= Elle est lisant (en train de lire).</p>
+					<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/leganta.jpg" class="responsive-img" alt="Ŝi estas leganta."></p>
 				</div>
 				<div class="col s12 row">
-					<p class="col s2">Passé :</p>
-					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/leginta.jpg" class="responsive-img" alt="Ŝi estas leginta."></p>
-					<p class="col s1"><b>-int</b></p>
-					<p class="col s7"><span class="eo">Ŝi estas leg<b>int</b>a.</span>
+					<p class="col s3 m2 l2">Passé :<br>
+						<b>-int</b></p>
+					<p class="col s9 m7 l6"><span class="eo">Ŝi estas leg<b>int</b>a.</span>
 						<br>= Elle est ayant lu (elle a lu, elle a fini de lire).</p>
+					<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/leginta.jpg" class="responsive-img" alt="Ŝi estas leginta."><br></p>
 				</div>
 				<div class="col s12 row">
-					<p class="col s2">Futur :</p>
-					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/legonta.jpg" class="responsive-img" alt="Ŝi estas legonta."></p>
-					<p class="col s1"><b>-ont</b></p>
-					<p class="col s7"><span class="eo">Ŝi estas leg<b>ont</b>a.</span><br>= Elle est devant lire (sur le point de lire).</p>
+					<p class="col s3 m2 l2">Futur :<br>
+						<b>-ont</b></p>
+					<p class="col s9 m7 l6"><span class="eo">Ŝi estas leg<b>ont</b>a.</span><br>= Elle est devant lire (sur le point de lire).<br>
+					<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/legonta.jpg" class="responsive-img" alt="Ŝi estas legonta.">
+					</p>
 				</div>
 			</div>
 			<div class="row vortlisto">
 				<p class="col s12"><b>Participes de la voix passive</b></p>
 				<div class="col s12 row">
-					<p class="col s2">Présent :</p>
-					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/legata.jpg" class="responsive-img" alt="La libro estas legata."></p>
-					<p class="col s1"><b>-at</b></p>
-					<p class="col s7"><span class="eo">La libro estas leg<b>at</b>a.</span><br>= Le livre est lu (en train d’être lu).</p>
+					<p class="col s3 m2 l2">Présent :<br>
+						<b>-at</b></p>
+					<p class="col s9 m7 l6"><span class="eo">La libro estas leg<b>at</b>a.</span><br>= Le livre est lu (en train d’être lu).</p>
+					<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/legata.jpg" class="responsive-img" alt="La libro estas legata.">
+					</p>
 				</div>
 				<div class="col s12 row">
-					<p class="col s2">Passé :</p>
-					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/legita.jpg" class="responsive-img" alt="La libro estas legita."></p>
-					<p class="col s1"><b>-it</b></p>
-					<p class="col s7"><span class="eo">La libro estas leg<b>it</b>a.</span>
+					<p class="col s3 m2 l2">Passé :<br>
+						<b>-it</b></p>
+					<p class="col s9 m7 l6"><span class="eo">La libro estas leg<b>it</b>a.</span>
 						<br>= Le livre est lu (ayant été lu).</p>
+						<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/legita.jpg" class="responsive-img" alt="La libro estas legita."></p>
 				</div>
 				<div class="col s12 row">
-					<p class="col s2">Futur :</p>
-					<p class="col s2"><img src="<?php echo $vojo;?>fr/cge/bildoj/legota.jpg" class="responsive-img" alt="La libro estas legota."></p>
-					<p class="col s1"><b>-ot</b></p>
-					<p class="col s7"><span class="eo">La libro estas leg<b>ot</b>a.</span><br>= Le livre est devant être lu (à lire).</p>
+					<p class="col s3 m2 l2">Futur :<br>
+						<b>-ot</b></p>
+					<p class="col s9 m7 l6"><span class="eo">La libro estas leg<b>ot</b>a.</span><br>= Le livre est devant être lu (à lire).</p>
+					<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/legota.jpg" class="responsive-img" alt="La libro estas legota.">
+					</p>
 				</div>
 			</div>
 			

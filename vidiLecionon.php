@@ -20,14 +20,18 @@ include "pagxkapo.inc.php";
 <?php
 
 
-$query = "select ekzerceroj.demando,respondoj.respondo from respondoj join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$studanto_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.kodo";
+$query = "select ekzerceroj.demando,respondoj.respondo,respondoj.gxusta from respondoj join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$studanto_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.kodo";
 $result = $bdd->query($query);
 $nbReponse = 0;
 while ($row=$result->fetch()) {
 
 	$nbReponse = $nbReponse + 1;
 	echo "<p>".$row["demando"]."<br>\n";
-	echo "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
+	if ($row["gxusta"]==1) {
+		echo "<span style=\"color:green\">".$row["respondo"]."</span></p>\n";	
+	} else {
+		echo "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
+	}
 }
 
 // on affiche le commentaire de l'élève qui est stocké en base

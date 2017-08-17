@@ -316,16 +316,6 @@ include "dlekkapo.inc.php";
 		<?php 
 		} // fin section 
 		if ($section=="7") {
-		?>
-		<p>
-		Toutes nos excuses pour cette leçon qui, nous le savons, est plutôt
-		indigeste. Nous avons préféré vous présenter la totalité du sujet
-		«corrélatifs» en une seule fois pour que vous saisissiez bien la
-		cohérence d’ensemble, mais nous savons qu’il vous faudra de la
-		pratique pour assimiler tout ça. On aura donc l’occasion d’y revenir
-		souvent.
-		</p>
-		<?php 
 			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin section 
 		?>	

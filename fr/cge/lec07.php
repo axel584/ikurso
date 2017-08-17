@@ -451,12 +451,16 @@ include "dlekkapo.inc.php";
 		<p>Enfin notez quelques cas particuliers :</p>
 		<div class="vortlisto row">
 			<div class="col s12 row">
-				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/2h15.png" class="responsive-img" alt="estas la dua"></p>
+				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/2h15.png" class="responsive-img" alt="estas la dua kaj kvarono"></p>
 				<p class="col s8 m9"><br><span class="eo">la dua kaj kvarono</span> = <span class="eo">la dua kaj dek kvin</span></p>
 			</div>
 			<div class="col s12 row">
-				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/2h30.png" class="responsive-img" alt="estas la dua"></p>
+				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/2h30.png" class="responsive-img" alt="estas la dua kaj duono"></p>
 				<p class="col s8 m9"><span class="eo"><br>la dua kaj duono</span> = <span class="eo">la dua kaj tridek</span></p>
+			</div>
+			<div class="col s12 row">
+				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/2h45.png" class="responsive-img" alt="estas kvarono antau la tria"></p>
+				<p class="col s8 m9"><span class="eo"><br>kvarono antaŭ la tria</span> = <span class="eo">la dua kaj kvardek kvin</span></p>
 			</div>
 			<p class="s12"><span class="eo">je la kioma…?</span> = <span class="eo">je kioma horo…?</span></p>
 			<p class="s12"><span class="eo">la kioma estas ?</span> = <span class="eo">kioma horo estas?</span></p>

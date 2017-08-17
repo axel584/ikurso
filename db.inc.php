@@ -432,7 +432,7 @@ function getRedirectionParDroits($persono_id) {
             $row2 = $bdd->query($demando2)->fetch();
             return $prefixe_url.$row2['retpagxo'];
         }
-        if ($row["stato"]=="K") { // cas des élèves en cours
+        if ($row["stato"]=="K" || $row["stato"]=="H") { // cas des élèves en cours (ou des élèves qui ont arrêté et qui souhaite reprendre)
             $redirection=redirigeSectionParUtilisateur($persono["id"]);
             if ($redirection==null) { // soit on n'a aucune section de cochée, soit on est sur la dernière section d'une leçon
                 return $prefixe_url.getUrlVenontaLeciono($row["kurso"],$row["nunleciono"]);

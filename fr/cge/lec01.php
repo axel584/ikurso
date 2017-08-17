@@ -151,28 +151,32 @@ include "dlekkapo.inc.php";
 					<div class="col s12 m4">
 						<p><span class="eo">biskvito</span> : biscuit</p>
 						<p><span class="eo">filo</span> : fils</p>
+						<p><span class="eo">filino</span> : fille</p>
 						<p><span class="eo">Francujo</span> : France</p>
 						<p><span class="eo">frato</span> : frère</p>
+						<p><span class="eo">fratino</span> : sœur</p>
 						<p><span class="eo">instruisto</span> : instituteur</p>
 						<p><span class="eo">knabo</span> : garçon</p>
 						<p><span class="eo">kafo</span> : café</p>
 						<p><span class="eo">kuko</span> : gâteau</p>
 						<p><span class="eo">lakto</span> : lait</p>
-						<p><span class="eo">lando</span> : pays</p>					
 					</div>
 					<div class="col s12 m4">
+						<p><span class="eo">lando</span> : pays</p>					
 						<p><span class="eo">patro</span> : père</p>
+						<p><span class="eo">patrino</span> : mère</p>
 						<p><span class="eo">pano</span> : pain</p>
 						<p><span class="eo">studento</span> : étudiant</p>
 						<p><span class="eo">sukero</span> : sucre</p>
 						<p><span class="eo">teo</span> : thé</p>
 						<p><span class="eo">urbo</span> : ville</p>
 						<p><span class="eo">viro</span> : homme (mâle)</p>
+						<p><span class="eo">virino</span> : femme</p>
 						<p><span class="eo">kaj</span> : et</p>
-						<p><span class="eo">jen</span> : voici</p>
-						<p><span class="eo">ĉiam</span> : toujours</p>					
 					</div>
 					<div class="col s12 m4">
+						<p><span class="eo">jen</span> : voici</p>
+						<p><span class="eo">ĉiam</span> : toujours</p>					
 						<p><span class="eo">en</span> : dans, en</p>
 						<p><span class="eo">bela</span> : beau</p>
 						<p><span class="eo">bona</span> : bon</p>

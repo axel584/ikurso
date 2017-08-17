@@ -1,6 +1,5 @@
 <?php
 include "util.php";
-malfermidatumbazon();
 $studanto_id=$_POST["studanto"];
 $nomo=$_POST["enirnomo"];
 $idnunaKurso=$_POST["idnunaKurso"];
@@ -45,11 +44,9 @@ if ($row["kurso"]!="") {
 			else if (substr($subjekto, 0, 3)=="lec"){$nunleciono=substr($subjekto,3,2);}
 			else {$nunleciono=1;}
 			$query3 = "update nuna_kurso set nunleciono=$nunleciono,stato='K',lastdato=CURDATE() where studanto=$studanto_id and (stato='N' or stato='K') and kurso='$kurso'";
-			mysql_select_db( "ikurso");
 			$result3 = mysql_query($query3) or die ( "UPDATE : Invalid query :".$query3);
 			// forigi la senditan lecionon el la tabelo nuna_kurso
 			$query4 = "delete from eraraj_lecionoj where id='".$row2['id']."'";
-			mysql_select_db( "ikurso");
 			$result4 = mysql_query($query4);
 		}
 	}

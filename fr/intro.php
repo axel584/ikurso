@@ -38,22 +38,19 @@ include "../pagxkapo.inc.php";
 
 			<section id="enskribo">
 				<h2>Comment s’inscrire aux cours</h2>
-				<p>Les cours d’espéranto que nous proposons sur ce site peuvent être suivis avec l’aide d’un tuteur qui corrige les exercices de l’élève et le suit tout au long de son apprentissage.
-				Si vous souhaitez bénéficier de ce service, vous devez au préalable vous inscrire en indiquant au minimum une adresse électronique valide car les échanges entre l’élève et le correcteur se font par courriel. 
-				En aucun cas, nous ne pourrons assurer de correction autrement que par ce moyen. 
-				Il est donc exclu de recourir à l’envoi de courrier postal pour le suivi de ce cours.</p>
-				
-				<p>Nous attirons votre attention sur le fait que la gratuité de ce cours ne veut pas dire qu’il ne coûte rien&nbsp;: le suivi des élèves demande du temps et de l’attention de la part des correcteurs. Aussi nous demandons aux élèves qui s’inscrivent de s’engager à suivre réellement régulièrement le cours et à prévenir leur correcteur en cas de retard ou d’empêchement à poursuivre le cours.</p>
-				
+
 				<p>Sur ce site, vous avez accès à deux cours différents&nbsp;:</p>
-				<ul>
+				<ul class="klarigo">
 					<li>le <a href="#dlek">cours en dix leçons</a>&nbsp;: cours pour débutants sous forme de pages web</li>
-					<li><a href="#gerda">Gerda malaperis</a>, cours de perfectionnement basé sur un petit roman en 25&nbsp;chapitres.</li>
+					<li><a href="#gerda">Gerda malaperis</a>, cours de perfectionnement basé sur un petit roman en 25&nbsp;chapitres. Il peut être suivi aisément après le cours en dix leçons.</li>
 				</ul>
-				<p>Ces cours s’utilisent en auto-apprentissage mais cela ne signifie pas que vous serez seul durant votre étude. 
-				Vous pouvez être aidé par un correcteur qui corrigera vos exercices et pourra répondre à vos questions. 
+
+				<p class="parto">Ces cours s’utilisent en auto-apprentissage mais cela ne signifie pas que vous serez seul durant votre étude. 
+				Vous pouvez être aidé par un correcteur qui vous suivra tout au long de votre apprentissage, qui corrigera vos exercices et pourra répondre à vos questions. 
 				Les échanges avec le correcteur se font par courriel.</p> 		
-						
+
+				<p>Si vous souhaitez bénéficier de ce service, vous devez au préalable vous inscrire en indiquant au minimum une adresse électronique valide car les échanges entre l’élève et le correcteur se font par courriel. En aucun cas, nous ne pourrons assurer de correction autrement que par ce moyen. Il est donc exclu de recourir à l’envoi de courrier postal pour le suivi de ce cours.</p>
+							
 				<h3 id="dlek">Cours en dix leçons (DLEK: Dek Leciona Kurso)</h3>
 				
 				<p>Ce est basé sur le <em>Cours Gratuit par Correspondance en 10 leçons</em> de l’ESK (Societé québécoise d’espéranto / Esperanto-Societo Kebekia) qui lui-même est tiré d’un cours par correspondance très populaire en Angleterre. 

@@ -755,8 +755,7 @@ QCM(
 
 			<div class="card-panel blue lighten-5">
 				<p>L’inscription n’est indispensable que si vous désirez faire appel à un correcteur. Cette inscription est gratuite.</p>
-				<p>Votre correcteur est là pour répondre à vos questions sur la langue espéranto, mais aussi sur l'utilisation que l’on peut faire de l’espéranto. N’hésitez pas à vous présenter et faire connaissance.</p>
-				<p>En demandant un correcteur, vous vous engagez à suivre le cours avec assiduité et informer votre correcteur en cas d’absence prolongée.</p>
+				<p>Votre correcteur est là pour répondre à vos questions sur la langue espéranto, mais aussi sur l'utilisation que l’on peut faire de l’espéranto. N’hésitez pas à vous présenter et faire connaissance. En cas d’absence, n’oubliez pas d’en avertir votre correcteur !</p>
 				<p>Bon apprentissage !</p>	
 			</div>
 		

@@ -77,6 +77,15 @@ include "gerdakapo.inc.php";
 				de chaque leçon le récit correspondant du recueil <a
 				href="lasu00.php"><i>Lasu min paroli plu!</i></a>, du même auteur.</p>
 
+				<h3>Quelques conseils pour bien suivre le cours :</h3>
+
+				<ul class="klarigo">
+					<li>Travaillez régulièrement. Nous conseillons de faire une leçon par semaine au minimum. Chaque leçon est composée de plusieurs sections, que vous pouvez étudier à votre rythme. Il est préférable d’étudier 15 minutes par jour que 2 heures une fois par semaine.</li>
+					<li>N’hésitez pas à prendre des notes, recopier les mots de vocabulaire et les utiliser dans de nouvelles phrases. Notez les points qui vous paraissent importants et les questions que vous souhaitez poser à votre correcteur en fin de leçon.</li>
+					<li>Apprenez le vocabulaire du cours régulièrement, l’idéal étant de pouvoir le réviser tous les jours. Un outil d’apprentissage du vocabulaire est intégré dans ce cours pour vous en faciliter l’apprentissage. Quelques minutes par jour suffiront pour bien l’assimiler.</li>
+					<li>Mettez en pratique la langue dès que vous le pouvez&nbsp;: vous pouvez par exemple écrire quelques phrases en espéranto en commentaire lors de l’envoi de vos exercices.</li>
+			</ul>
+
 				<a id="inscription" class="scrollspy"></a>
 				<h2>Comment s’inscrire ?</h2>
 		
@@ -84,36 +93,8 @@ include "gerdakapo.inc.php";
 				Vous trouverez le formulaire de demande de correcteur à la fin de la première
 				leçon. Remplissez-le soigneusement <i><b>après avoir effectué les
 				exercices de la leçon</b></i>. </p>
-
-				<div class="card-panel blue lighten-5">
-					<p class="rimarko"><strong>ATTENTION !</strong><br>
-					Le fait que ce cours soit gratuit pour vous ne signifie pas
-					qu’il ne coûte rien à personne. Il coûte beaucoup de leur temps libre
-					à nos tuteurs. Aussi, en contrepartie, nous attendons des élèves
-					un minimum de <b>motivation</b>, de <b>sérieux</b> et
-					d’<b>assiduité</b>. Tout élève qui sans accord préalable ne nous
-					envoie plus son travail pendant plus d’une semaine sera
-					automatiquement désinscrit.</p>
-				</div>
-				
-				<p>Nous vous demanderons donc de vous engager sur les points suivants&nbsp;:</p>
-
-				<ol>
-					<li><b>Motivation</b> : Vous entreprenez ce cours avec le
-					désir sincère d’apprendre les bases de l’espéranto, quelle que soit
-					votre motivation ultime (simple curiosité, attrait pour le mouvement
-					espérantiste, intérêt pour les langues, envie d’épater votre concierge
-					ou de dialoguer avec les extra-terrestres, etc.).</li>
-					<li><b>Sérieux</b> : Sauf impossibilité majeure vous avez la ferme
-					intention de terminer le cours. Vous disposez du temps et
-					des outils nécessaires (accès Internet…) pour ce faire.</li>
-					<li><b>Assiduité</b> : Vous enverrez au moins une leçon par semaine,
-					sauf accord préalable avec votre tuteur pour une période définie.</li>
-					<li><b>Rythme du tuteur</b> : Vous respecterez le rythme de correction
-					du tuteur et ne lui enverrez pas de nouvelle leçon avant d’avoir reçu
-					la correction des leçons précédentes.</li>
-				</ol>
-				
+		
+			
 				<a id="prononciation" class="scrollspy"></a>
 				<h2>Rappel sur la prononciation</h2>
 			

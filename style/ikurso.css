@@ -239,7 +239,7 @@ div.col > p:first-child {
 /*------------ liste à puces ------------*/
 ul.listo li { 
     padding-left: 1em; 
-    text-indent: -0.7em;
+    text-indent: -1em;
 }
 
 ul.listo li:before {
@@ -250,12 +250,18 @@ ul.listo li:before {
 ul.klarigo { 
     padding-left: 1em
 }
-
+ul.klarigo li {
+    text-indent: -1.3em;
+    margin-bottom: 0.5em;
+}
 ul.klarigo li:before {
     content: "•";
     color: #2196F3; 
     padding-right: 1em;`
     line-height: 160%;
+}
+ol li {
+	    margin-bottom: 0.5em;
 }
 /*------------- collapsible ------------*/
 
@@ -555,7 +561,10 @@ p.parto:before {
 	padding-right: 0.5em;
 	vertical-align: middle;
 }
-
+p.renvoi {
+	margin-left: 2em;
+	font-size: 0.85em;
+}
 /********** indication de la durée *******/
 p.dauro {
 	color: #2196F3;

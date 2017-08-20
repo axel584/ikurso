@@ -93,12 +93,39 @@
 						<li>
 							<div class="collapsible-header"><i class="material-icons primaire-texte texte-clair">keyboard_arrow_down</i>Configuration de clavier pour Linux</div>
 							<div class="collapsible-body">
-							  	<p>
-							  	Sur les versions récentes de Linux, il est possible de taper directement les caractères accentués
-							  	en tapant ^ puis la lettre concernée.
-							  	</p>
-							  	<p>L’association d’Espéranto de Nouvelle-Zélande explique sur son site (en anglais et en espéranto) comment paramétrer
-								  	le clavier pour pouvoir taper les caractères accentués de l’espéranto&nbsp;<br>
+							  	<p>Pour taper les lettres accentuées, vous avez le choix&nbsp;!<br>
+								Sur les versions récentes de Linux, il est possible de taper directement les caractères accentués
+							  	en tapant ^ puis la lettre concernée.<br>
+							  	Par exemple ^ puis C donne Ĉ.On peut taper ŭ et Ŭ facilement en utilisant une touche Compose 
+							  	(voir ci-dessous) : la combinaison Compose-u-u donne ŭ ; et Compose-u-U donne Ŭ.
+							  	On peut aussi choisir de combiner la touche AltGr avec cghjsuCGHJSU pour obtenir ĉĝĥĵŝŭĈĜĤĴŜŬ (voir ci-dessous).</p>
+							  	<p><b>Comment paramétrer la touche Compose ou la touche AltGr ?</b></p>
+							  	<p>Là encore, plusieurs possibilités au choix.</p>
+							  	<p><b>Sous Gnome</b> : installer puis lancer gnome-tweak-tool&nbsp;; puis, dans l'onglet Saisie, </p>
+							  	<ol>
+								  	<li>dans la section «Position de la touche Compose», on peut choisir une touche Compose.</li>
+								  	<li>dans la section « Ajout des lettres accentuées Espéranto », 
+								  	choisir «Vers la touche correspondante sur une disposition Qwerty» pour utiliser les combinaisons AltGr.</li>
+							  	</ol>
+							  	<p><b>En ligne de commande :</b></p>
+								<ol>
+									<li>setxkbmap -option esperanto:qwerty</li>
+									<li>setxkbmap -option compose:caps</li>
+								</ol>
+								<p><b>Dans /etc/X11/xorg.conf :</b></p>
+								<ol>
+									<li>Option "XkbOptions" "esperanto:qwerty"</li>
+									<li>Option "XkbOptions" "compose:caps"</li>
+								</ol>
+								<p><b>Dans /etc/default/keyboard :</b></p>
+								<p>XKBLAYOUT="fr"<br>
+									XKBOPTIONS=esperanto:qwerty,compose:caps</p>
+									
+								<p><b>Avec des paramètres de boot du noyau (Debian Live) :</b><br>
+									keyboard-layouts=fr keyboard-options=esperanto:qwerty,compose:caps</p>
+
+							  	<p class="parto">L’association d’Espéranto de Nouvelle-Zélande explique sur son site (en anglais et en espéranto) 
+								  	comment paramétrer le clavier pour pouvoir taper les caractères accentués de l’espéranto&nbsp;<br>
 								  	<a href="http://en.esperanto.org.nz/how-to-learn-esperanto/how-to-type-esperanto-characters/linux">http://en.esperanto.org.nz/how-to-learn-esperanto/how-to-type-esperanto-characters/linux</a> 
 							  	</p>
 							</div>

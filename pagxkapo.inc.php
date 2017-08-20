@@ -92,7 +92,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<ul id="menu_aide" class="dropdown-content">
 			<li><a href="<?php echo $vojo;?>helpo.php?section=enskribo" class="primaire-texte moyen">Comment s'inscrire</a></li>
 			<li><a href="<?php echo $vojo;?>helpo.php?section=kurso" class="primaire-texte moyen">Comment suivre le cours</a></li>
-			<li><a href="<?php echo $vojo;?>helpo.php?section=kajposte">Que faire après le cours ?</a></li>
+			<li><a href="<?php echo $vojo;?>helpo.php?section=kajposte" class="primaire-texte moyen">Que faire après le cours ?</a></li>
 			<li><a href="<?php echo $vojo;?>helpo.php?section=kielskribi" class="primaire-texte moyen">Comment écrire en espéranto</a></li>
 			<li><a href="<?php echo $vojo;?>helpo.php?section=korektanto" class="primaire-texte moyen">Comment devenir correcteur</a></li>
 		</ul>

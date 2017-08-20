@@ -28,7 +28,6 @@ include "pagxkapo.inc.php";
 			
 			<section id="faq" class="scrollspy">
 
-					
 				<p>Sur ce site, vous avez accès à deux cours différents&nbsp;:</p>
 				<ul class="klarigo">
 					<li>le <a href="fr/cge/lec01.php">cours en dix leçons</a>&nbsp;: cours pour débutants sous forme de pages web</li>
@@ -75,12 +74,11 @@ include "pagxkapo.inc.php";
 				<p class="parto"><a href="https://web.archive.org/web/20160314174609/http://bertilow.com/pmeg/">Plena Manlibro de Esperanto</a> est une <b>grammaire</b> complète de l’espéranto (en espéranto)</p>
 				
 				<p class="parto"><a href="https://babadum.com/">Babadum</a> vous permettra d’<b>apprendre 1500 mots</b> de manière ludique.</p>				
-				
 				<p class="parto">La <a href="http://www.eventoj.hu/steb/">Scienca kaj Teknika Esperanto-Biblioteko</a> donne accès à de nombreux <b>dictionnaires et lexiques</b> d'espéranto spécialisés dans différents domaines scientifiques et techniques.</p>
 
 				<h2>Lire en espéranto</h2>
 				
-				<p class="parto">Dès que vous aurez terminé le premier cours, vous pourrez commencer à <b>lire des livres en espéranto</b>. Nous en avons sélectionné quelques-uns dans notre page <a href="<?php echo $vojo;?>butiko.html">Boutique</a>.</p>
+				<p class="parto">Dès que vous aurez terminé le premier cours, vous pourrez commencer à <b>lire des livres en espéranto</b>. Nous en avons sélectionné quelques-uns dans notre page <a href="<?php echo $vojo;?>butiko.html">Boutique</a>. Voir aussi tous les livres présentés dans la lettre mensuelle Espéranto-Aktiv dans la rubrique <a href="http://esperanto-france.org/livre-du-mois">Lu, vu, entendu</a>.</p>
 				
 				<p class="parto">Participez à <a href="http://www.esperanto-sumoo.strefa.pl/">Sumoo</a>, le jeu où vous «lutterez» en lisant des livres en espéranto.</p>
 				
@@ -102,9 +100,9 @@ include "pagxkapo.inc.php";
 				<p><iframe width="560" height="315" src="https://www.youtube.com/embed/yVjtft16rNo?rel=0"
 frameborder="0" allowfullscreen></iframe></p>
 
-				<p class"=parto"><a href="http://bitarkivo.org/gazetoj/">BitArkivo</a> permet de lire en ligne plus de 2000&nbsp;magazines en espéranto du monde entier.</p>
+				<p class="parto"><a href="http://bitarkivo.org/gazetoj/">BitArkivo</a> permet de lire en ligne plus de 2000&nbsp;magazines en espéranto du monde entier.</p>
 				
-				<p class="parto">Vous pouvez également lire la revue <em>Le Monde de l’espéranto</em>, directement en ligne&nbsp;: <a href="https://esperanto-france.org/le-monde-de-l-esperanto">http://esperanto-france.org/le-monde-de-l-esperanto</a>.</p>
+				<p class="parto">Vous pouvez également lire directement en ligne la revue <a href="https://esperanto-france.org/le-monde-de-l-esperanto">Le Monde de l’espéranto</a>, éditée par Espéranto-France.</p>
 
 				<p class="parto">Sans oublier <a href="https://eo.wikipedia.org/wiki/Vikipedio:%C4%88efpa%C4%9Do">Vikipedio</a>, la version en espéranto de Wikipédia.</p>
 
@@ -116,9 +114,9 @@ frameborder="0" allowfullscreen></iframe></p>
 				
 				<h2>Communiquer, s’informer, échanger grâce aux réseaux sociaux</h2>
 				
-				<p class="parto">Vous pouvez <b>discuter</b> avec d’autres espérantophones, grâce à des applications comme <a href="https://amikumu.com/fr/">Amikumu</a>, ou encore <a href="https://telegramo.org/">Telegram</a>. Il existe sur Telegram différent groupes en espéranto, dont vous trouverez la liste sur <a href="https://www.telegramo.org/">telegramo.org</a>. Vous pourrez également discuter en français ou en espéranto dans le groupe <a href="https://t.me/joinchat/BnEs0z8UBiqWLftwyd_5wA">français – Esperanto</a>). </p>
+				<p class="parto">Vous pouvez <b>discuter</b> avec d’autres espérantophones, grâce à des applications comme <a href="https://amikumu.com/fr/">Amikumu</a>, ou encore <a href="https://telegramo.org/">Telegram</a>. Il existe sur Telegram différent groupes en espéranto, dont vous trouverez la liste sur <a href="https://www.telegramo.org/">telegramo.org</a>. Vous pourrez également discuter en français ou en espéranto dans le groupe <a href="https://t.me/joinchat/BnEs0z8UBiqWLftwyd_5wA">français – Esperanto</a>.</p>
 				
-				<p class="parto">Certaines applications permettant les échanges linguistiques diverses langues proposent aussi l’espéranto. C’est le cas par exemple de <a href="https://www.hellolingo.com/">Hellolingo</a>, de <a href="https://www.hellotalk.com/">HelloTalk</a>.<br>
+				<div class="float-right w15"><img class="responsive-img" src="<?=$vojo?>bildoj/hellotalk.gif" /></div><p class="parto">Certaines applications permettant les <b>échanges linguistiques</b> en diverses langues proposent aussi l’espéranto. C’est le cas par exemple de <a href="https://www.hellolingo.com/">Hellolingo</a>, de <a href="https://www.hellotalk.com/">HelloTalk</a>.<br>
 				L’espéranto fait aussi partie des langues praticables sur <a href="https://hinative.com/fr-FR">HiNative</a>, qui rassemble une communauté d’étudiants de langues diverses et permet de poser des questions à des locuteurs parlant couramment la langue que vous apprenez.</p> 
 				
 				<p class="parto">Vous pouvez également suivre les espérantophones actifs sur <a href="https://twitter.com/search?f=users&vertical=default&q=Esperanto&src=typd">Twitter</a>, suivre le <a href="https://www.facebook.com/groups/51339664932">groupe Facebook d’Esperanto-France</a>. Pensez aussi à utiliser le hashtag #Esperanto !</p>
@@ -129,9 +127,10 @@ frameborder="0" allowfullscreen></iframe></p>
 
 				<h2>Écouter de la musique ou simplement écouter parler en espéranto</h2>
 								
-				<p class="parto">Écoutez toute la <b>musique</b> du catalogue de Vinilkosmo, la plus grande maison d’édition de musique en espéranto, en vous abonnant au <a href="http://esperanto-france.org/esperanto-aktiv-78-decouverte">club Vinilkosmo</a>.<br>Sur le site <a href="http://list.ly/list/3MD-esperanto-music">Listly</a> vous pourrez voir des extraits de concerts en espéranto.</p>
+				<p class="parto">Écoutez toute la <b>musique</b> du catalogue de Vinilkosmo, la plus grande maison d’édition de musique en espéranto, en vous abonnant au <a href="http://esperanto-france.org/esperanto-aktiv-78-decouverte">club Vinilkosmo</a>.</p>
+				<p class="parto">Sur le site <a href="http://list.ly/list/3MD-esperanto-music">Listly</a> vous pourrez voir des extraits de concerts en espéranto.</p>
 				
-				<p class="parto">Écoutez la <b>radio</b> ou des <b>podcasts</b> en espéranto&nbsp;:
+				<div class="float-right w15"><a href="http://esperanto-france.org/le-monde-de-l-esperanto"><img class="responsive-img" src="http://esperanto-france.org/local/cache-vignettes/L156xH127/muzaiko-2-20c21-64589.png?1456668032" /></a></div><p class="parto">Écoutez la <b>radio</b> ou des <b>podcasts</b> en espéranto&nbsp;:</p>
 					<ul class="sublisto">
 						<li><a href="http://esperantaretradio.blogspot.de/">Esperanta Retradio</a> présente un court reportage quotidien avec retranscription&nbsp;;</li>
 						<li><a href="http://muzaiko.info/">Muzaiko</a> est une radio en ligne qui diffuse en continu (essentiellement des musiques et des rediffusions)&nbsp;;</li>
@@ -141,7 +140,7 @@ frameborder="0" allowfullscreen></iframe></p>
 						<li><a href="http://pola-retradio.org/" data-href="http://pola-retradio.org/">Pola Retradio</a> présente tous les jours une émission en espéranto, axée sur la culture et les nouvelles en Pologne&nbsp;;</li>
 						<li><a href="http://esperanto.cri.cn/">Chinese International Radio</a></li>
 					</ul>
-				</p>
+
 				<p class="parto">Citons aussi quelques émissions en français sur l’espéranto&nbsp;:</p>
 					<ul class="sublisto">
 						<li><a href="http://www.esperanto-midipyrenees.org/download/cat.php?val=43_emissions+radio" target="_blank">Esperanto-Magazino</a> est une émission radio hebdomadaire d’une heure présentée par Espéranto Midi-Pyrénnées.</li>	
@@ -152,7 +151,7 @@ frameborder="0" allowfullscreen></iframe></p>
 				
 				<h2>Jouer en espéranto</h2>
 
-				<p class="parto">Par exemple au <a href="http://skrablo.ikso.net/">Scrabble</a> ;</p>
+				<div class="float-right w15"><img class="responsive-img" src="<?=$vojo?>bildoj/samopiniuloj.png" /></div><p class="parto">Par exemple au <a href="http://skrablo.ikso.net/">Scrabble</a> ;</p>
 				<p class="parto">ou à <a href="https://samopiniuloj.esperanto-jeunes.org">Samopiniuloj</a>, un jeu qui vous permettra d’enrichir votre vocabulaire.</p>
 				
 				<h2>Regarder des vidéos en espéranto</h2>
@@ -163,7 +162,8 @@ frameborder="0" allowfullscreen></iframe></p>
 				
 				<h2>Pour en savoir plus…</h2>
 					
-				<div class="float-right w30"><a href="http://esperanto-france.org/le-monde-de-l-esperanto"><img class="responsive-img" src="http://esperanto-france.org/local/cache-vignettes/L142xH200/arton792-aa561.jpg?1502203504" /></a></div><p class="parto">Pour en savoir plus sur l’espéranto, nous vous recommandons la lecture des rubriques <em>Culture</em>, <em>Apprendre</em> et <em>Pratiquer</em> sur le <b><a href="https://esperanto-france.org/">site d’Espéranto France</a></b></a>.<br>Vous pouvez également lire la revue <em>Le Monde de l’espéranto</em>, directement en ligne&nbsp;: <a href="https://esperanto-france.org/le-monde-de-l-esperanto">http://esperanto-france.org/le-monde-de-l-esperanto</a>.</p>
+				<div class="float-right w30"><a href="http://esperanto-france.org/le-monde-de-l-esperanto"><img class="responsive-img" src="http://esperanto-france.org/local/cache-vignettes/L142xH200/arton792-aa561.jpg?1502203504" /></a></div><p class="parto">Pour en savoir plus sur l’espéranto, nous vous recommandons la lecture des rubriques <em>Culture</em>, <em>Apprendre</em> et <em>Pratiquer</em> sur le <a href="https://esperanto-france.org/">site d’Espéranto France</a></a>.<br>
+				Vous pouvez également lire la revue <em>Le Monde de l’espéranto</em>, directement en ligne&nbsp;: <a href="https://esperanto-france.org/le-monde-de-l-esperanto">http://esperanto-france.org/le-monde-de-l-esperanto</a>.</p>
 
 				<p class="parto">Pour recevoir tous les mois des idées sur la façon dont vous pourrez <b>pratiquer l’espéranto</b>, sur les événements près de chez vous ou à l’autre bout du monde, nous vous conseillons de <b>vous abonner</b> à la <a href="http://esperanto-france.org/lettre-d-informations-esperanto-aktiv">lettre d’informations Esperanto-Aktiv</a>.</p>
 				

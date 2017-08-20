@@ -38,7 +38,7 @@
   html {font-size: 17px;}
 }
 
-h1 {font-size: 3.5rem; margin: 2rem 0 1rem 0; color: #989490;}
+h1 {font-size: calc(1.5rem + 2.5vw); margin: 2rem 0 1rem 0; color: #989490;}
 h2 {font-size: 2.5rem; color: #989490;}
 h3 {font-size: 2rem; margin: 2rem 0 1.5rem 0; color: #554E47;}
 h4 {font-size: 1.5rem; margin: 2rem 0 1.5rem 0; color: #554E47;font-weight: 300;}
@@ -196,7 +196,7 @@ p.chapo {font-size: 150%;}
 }
 .hejmo h2,
 .informoj h2 {
-	color: #828965;
+	color: #989490;
 	font-weight: 300;
 }
 div.col > p:first-child {
@@ -241,24 +241,37 @@ ul.listo li {
     padding-left: 1em; 
     text-indent: -1em;
 }
-
+ul.sublisto {
+	margin-top: 0;
+	margin-left: 3em;
+	text-indent: -1em;
+}
+ul.sublisto li {
+}
 ul.listo li:before {
     content: "•  ";
     color: #989490; 
 }
+ul.sublisto li:before {
+    content: "• ";
+    color: #2196F3; 
+    padding-right: 0.5em;
+}
 
 ul.klarigo { 
-    padding-left: 1em
+    padding-left: 1.5em;
 }
 ul.klarigo li {
-    text-indent: -1.3em;
+    text-indent: -1em;
     margin-bottom: 0.5em;
 }
 ul.klarigo li:before {
-    content: "•";
-    color: #2196F3; 
-    padding-right: 1em;`
-    line-height: 160%;
+	font-family: 'Material Icons';
+	content: "texture";
+	-webkit-font-feature-settings: 'liga';
+	color: #2196F3;
+    padding-right: 1em;
+    font-size: 50%;
 }
 ol li {
 	    margin-bottom: 0.5em;
@@ -784,6 +797,14 @@ fieldset.sciipli div.row {
 	font-size: 0.9em;
 }
 
+/********** exercices *******/
+.float-right {
+	float: right;
+	margin-left: 2%;
+}
+.w10 {width: 10%;}
+.w15 {width: 15%;}
+.w30 {width: 30%;}
 /*********************************/
 /*               QCM             */
 /*********************************/

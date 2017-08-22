@@ -63,7 +63,7 @@ include "pagxkapo.inc.php";
 
 			<h1>Que faire après le cours&nbsp;?</h1>
 			<section id="kajposte" class="scrollspy">
-				<p>Vous avez terminé le cours en dix leçons ou le cours <em>Gerda malaperis</em> et vous vous demandez peut-être comment approfondir vos connaissance ou mettre en pratique ce que vous avez appris. Voici quelques suggestions qui vous permettront d’aller plus loin.</p> 
+				<p>Vous avez terminé le <em>Cours en dix leçons</em> ou le cours <em>Gerda malaperis</em> et vous vous demandez peut-être comment approfondir vos connaissances ou mettre en pratique ce que vous avez appris. Voici quelques suggestions qui vous permettront d’aller plus loin.</p> 
 				
 				<h2>Continuer d’apprendre</h2>
 				
@@ -74,7 +74,7 @@ include "pagxkapo.inc.php";
 				<p class="parto"><a href="https://web.archive.org/web/20160314174609/http://bertilow.com/pmeg/">Plena Manlibro de Esperanto</a> est une <b>grammaire</b> complète de l’espéranto (en espéranto)</p>
 				
 				<p class="parto"><a href="https://babadum.com/">Babadum</a> vous permettra d’<b>apprendre 1500 mots</b> de manière ludique.</p>				
-				<p class="parto">La <a href="http://www.eventoj.hu/steb/">Scienca kaj Teknika Esperanto-Biblioteko</a> donne accès à de nombreux <b>dictionnaires et lexiques</b> d'espéranto spécialisés dans différents domaines scientifiques et techniques.</p>
+				<p class="parto">La <a href="http://www.eventoj.hu/steb/">Scienca kaj Teknika Esperanto-Biblioteko</a> donne accès à de nombreux <b>dictionnaires et lexiques</b> d’espéranto spécialisés dans différents domaines scientifiques et techniques.</p>
 
 				<h2>Lire en espéranto</h2>
 				

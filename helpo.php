@@ -78,7 +78,7 @@ include "pagxkapo.inc.php";
 
 				<h2>Lire en espéranto</h2>
 				
-				<p class="parto">Dès que vous aurez terminé le premier cours, vous pourrez commencer à <b>lire des livres en espéranto</b>. Nous en avons sélectionné quelques-uns dans notre page <a href="<?php echo $vojo;?>butiko.html">Boutique</a>. Voir aussi tous les livres présentés dans la lettre mensuelle Espéranto-Aktiv dans la rubrique <a href="http://esperanto-france.org/livre-du-mois">Lu, vu, entendu</a>.</p>
+				<p class="parto">Dès que vous aurez terminé le premier cours, vous pourrez commencer à <b>lire des livres en espéranto</b>. Nous en avons sélectionné quelques-uns dans notre page <a href="<?php echo $vojo;?>butiko.php">Boutique</a>. Voir aussi tous les livres présentés dans la lettre mensuelle Espéranto-Aktiv dans la rubrique <a href="http://esperanto-france.org/lu-vu-entendu">Lu, vu, entendu</a>.</p>
 				
 				<p class="parto">Participez à <a href="http://www.esperanto-sumoo.strefa.pl/">Sumoo</a>, le jeu où vous «lutterez» en lisant des livres en espéranto.</p>
 				
@@ -102,7 +102,7 @@ frameborder="0" allowfullscreen></iframe></p>
 
 				<p class="parto"><a href="http://bitarkivo.org/gazetoj/">BitArkivo</a> permet de lire en ligne plus de 2000&nbsp;magazines en espéranto du monde entier.</p>
 				
-				<p class="parto">Vous pouvez également lire directement en ligne la revue <a href="https://esperanto-france.org/le-monde-de-l-esperanto">Le Monde de l’espéranto</a>, éditée par Espéranto-France.</p>
+				<div class="float-right w30"><a href="http://esperanto-france.org/le-monde-de-l-esperanto"><img class="responsive-img" src="http://esperanto-france.org/local/cache-vignettes/L142xH200/arton792-aa561.jpg?1502203504" /></a></div><p class="parto">Vous pouvez également lire directement en ligne la revue <a href="https://esperanto-france.org/le-monde-de-l-esperanto">Le Monde de l’espéranto</a>, éditée par Espéranto-France.</p>
 
 				<p class="parto">Sans oublier <a href="https://eo.wikipedia.org/wiki/Vikipedio:%C4%88efpa%C4%9Do">Vikipedio</a>, la version en espéranto de Wikipédia.</p>
 
@@ -121,7 +121,7 @@ frameborder="0" allowfullscreen></iframe></p>
 				
 				<p class="parto">Vous pouvez également suivre les espérantophones actifs sur <a href="https://twitter.com/search?f=users&vertical=default&q=Esperanto&src=typd">Twitter</a>, suivre le <a href="https://www.facebook.com/groups/51339664932">groupe Facebook d’Esperanto-France</a>. Pensez aussi à utiliser le hashtag #Esperanto !</p>
 				
-				<p class="parto">Il existe sur Facebook de nombreux groupes en espéranto : <a href="https://www.facebook.com/groups/esperanto.grupo/">Esperanto Grupo</a>, <a href="https://www.facebook.com/groups/konsultejo">Lingva konsultejo</a>, <a href="https://www.facebook.com/groups/51339664932/">Espéranto France</a>, <a href="https://www.facebook.com/groups/agadejo/">Agadejo</a>, etc.</p>
+				<p class="parto">Il existe sur Facebook de nombreux groupes en espéranto : <a href="https://www.facebook.com/groups/esperanto.grupo/">Esperanto Grupo</a>, <a href="https://www.facebook.com/groups/konsultejo">Lingva konsultejo</a>, <a href="https://www.facebook.com/groups/51339664932/">Espéranto-France</a>, <a href="https://www.facebook.com/groups/agadejo/">Agadejo</a>, etc.</p>
 				
 				<p class="parto"><a href="https://www.reddit.com/r/Esperanto/">Reddit en espéranto</a> vous donnera des liens vers de nombreux sites Internet en espéranto.</p>
 
@@ -152,7 +152,7 @@ frameborder="0" allowfullscreen></iframe></p>
 				<h2>Jouer en espéranto</h2>
 
 				<div class="float-right w15"><img class="responsive-img" src="<?=$vojo?>bildoj/samopiniuloj.png" /></div><p class="parto">Par exemple au <a href="http://skrablo.ikso.net/">Scrabble</a> ;</p>
-				<p class="parto">ou à <a href="https://samopiniuloj.esperanto-jeunes.org">Samopiniuloj</a>, un jeu qui vous permettra d’enrichir votre vocabulaire.</p>
+				<p class="parto">ou à <a href="http://esperanto-france.org/esperanto-aktiv-70-decouverte">Samopiniuloj</a>, un jeu qui vous permettra d’enrichir votre vocabulaire.</p>
 				
 				<h2>Regarder des vidéos en espéranto</h2>
 				
@@ -162,16 +162,18 @@ frameborder="0" allowfullscreen></iframe></p>
 				
 				<h2>Pour en savoir plus…</h2>
 					
-				<div class="float-right w30"><a href="http://esperanto-france.org/le-monde-de-l-esperanto"><img class="responsive-img" src="http://esperanto-france.org/local/cache-vignettes/L142xH200/arton792-aa561.jpg?1502203504" /></a></div><p class="parto">Pour en savoir plus sur l’espéranto, nous vous recommandons la lecture des rubriques <em>Culture</em>, <em>Apprendre</em> et <em>Pratiquer</em> sur le <a href="https://esperanto-france.org/">site d’Espéranto France</a></a>.<br>
-				Vous pouvez également lire la revue <em>Le Monde de l’espéranto</em>, directement en ligne&nbsp;: <a href="https://esperanto-france.org/le-monde-de-l-esperanto">http://esperanto-france.org/le-monde-de-l-esperanto</a>.</p>
+				<div class="float-right"><img class="responsive-img" src="https://esperanto-france.org/local/cache-vignettes/L200xH200/arton791-5356a.jpg?1501599220"></div><p class="parto">Pour en savoir plus sur l’espéranto, nous vous recommandons la lecture des rubriques <em>Culture</em>, <em>Apprendre</em> et <em>Pratiquer</em> sur le <a href="https://esperanto-france.org/">site d’Espéranto France</a>.</p>
 
 				<p class="parto">Pour recevoir tous les mois des idées sur la façon dont vous pourrez <b>pratiquer l’espéranto</b>, sur les événements près de chez vous ou à l’autre bout du monde, nous vous conseillons de <b>vous abonner</b> à la <a href="http://esperanto-france.org/lettre-d-informations-esperanto-aktiv">lettre d’informations Esperanto-Aktiv</a>.</p>
 				
-				<div class="float-right"><img class="responsive-img" src="https://esperanto-france.org/local/cache-vignettes/L200xH200/arton791-5356a.jpg?1501599220"></div>
-<p class="parto">Vous pouvez également commander des <a href="https://esperanto-france.org/calendriers">petits calendriers</a> pour <b>faire connaître l’espéranto autour de vous</b>.
+				<p class="parto">Vous pouvez également commander des <a href="https://esperanto-france.org/calendriers">petits calendriers</a> pour <b>faire connaître l’espéranto autour de vous</b>.
 				</p>
 
-				<p class="parto">Et si vous souhaitez <b>soutenir notre association</b>, nous vous proposons de rejoindre l’association en <a href="http://esperanto-france.org/adherer">adhérant Espéranto-France</a>. </p>
+				<div class="card-panel blue lighten-5">
+					<p><strong>Vous avez aimé ce cours proposé par Espéranto-France&nbsp;?</strong> Pour <strong>nous aider et soutenir notre association</strong>, 
+						nous vous proposons de rejoindre l’association en 
+						<a href="http://esperanto-france.org/adherer">adhérant Espéranto-France</a>. </p>
+				</div>
 				
 				<hr><p>Cette sélection est grandement inspirée de l’article <a href="https://medium.com/@Vanege/que-faire-en-esp%C3%A9ranto-o%C3%B9-utiliser-lesp%C3%A9ranto-sur-internet-b8ed5dba6986">Que faire en Espéranto&nbsp;?</a>, de @Vanege que vous pourrez retrouver sur <a href="https://medium.com/@Vanege">Medium</a>.<br><img src="<?=$vojo?>bildoj/vanege-eta.png" /></p>
 			</section>

@@ -15,6 +15,7 @@ include "pagxkapo.inc.php";
 				<li class="collection-item">
 					<p>Mise à jour des explications sur les <a href="<?php echo $vojo;?>helpo.php?section=kielskribi">claviers en espéranto</a></p>
 					<p>Amélioration de la mise en page dans la <a href="<?php echo $vojo;?>fr/cge/lec08.php?section=1">leçon 8</a></p>
+					<p>Création de l'adresse <a href="https://ikurso.fr">ikurso.fr</a> pour accéder directement au site</p>
 					<p>Corrections diverses de bugs et coquilles…</p>
 				</li>			
 				<li class="collection-header">version 16. Juillet 2017</li>

@@ -228,6 +228,15 @@ function displayWarningSiLecioneroManquante($persono_id,$kurso,$leciono,$lecione
 	}
 }
 
+function displayLecionoEnhavo($kurso,$leciono,$lecionero) {
+	global $bdd;
+	$query = "SELECT enhavo  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and ordo=".$lecionero;
+	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$row = $result->fetch();
+	echo $row["enhavo"];
+
+}
+
 function getTitoloLecionero($kurso,$leciono,$lecionero) {
 	global $bdd;
 	$query = "SELECT lecioneroj.titolo,lecioneroj.dauxro FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero;

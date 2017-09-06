@@ -11,8 +11,186 @@ include "dlekkapo.inc.php";
 		<?php 
 			getTitoloLecionero('CG',1,$section);
 			displayWarningSiLecioneroManquante($persono_id,'CG',1,$section);
-			displayLecionoEnhavo('CG',$leciono,$section);
 			
+			if ($section=="1") {
+			?>
+
+			<p>Avant que vous ne commenciez cette première leçon, nous vous invitons à lire le <a href="intro.php?temo=intro">
+			préambule</a>, qui vous donnera toutes les informations utiles sur la manière de suivre ce cours.</p>
+		
+			<p class="parto">En espéranto les mots s’écrivent phonétiquement, c’est-à-dire qu’ils
+			s’écrivent comme ils se prononcent (et <i>vice versa</i>).</p>
+
+			<div class="card-panel blue lighten-5 center">
+				Souvenez-vous bien de cette règle sans exception : <b>une lettre = un son</b>.
+			</div>
+
+			<p class="parto">L’<b>alphabet</b> espéranto comporte 28 lettres :</p>
+			<div class="container row">
+					<p class="col s12 row" style="font-size: 1.5em"><span class="col s1">&nbsp;A&nbsp;</span><span class="col s1">&nbsp;B&nbsp;</span><span class="col s1">&nbsp;C&nbsp;</span><span class="col s1">&nbsp;Ĉ&nbsp;</span><span class="col s1">&nbsp;D&nbsp;</span><span class="col s1">&nbsp;E&nbsp;</span><span class="col s1">&nbsp;F</span></p>
+					<p class="col s12 row" style="font-size: 1.5em"><span class="col s1">&nbsp;G&nbsp;</span><span class="col s1">&nbsp;Ĝ&nbsp;</span><span class="col s1">&nbsp;H&nbsp;</span><span class="col s1">&nbsp;Ĥ&nbsp;</span><span class="col s1">&nbsp;I&nbsp;</span><span class="col s1">&nbsp;J&nbsp;</span><span class="col s1">&nbsp;Ĵ</span></p>
+					<p class="col s12 row" style="font-size: 1.5em"><span class="col s1">&nbsp;K&nbsp;</span><span class="col s1">&nbsp;L&nbsp;</span><span class="col s1">&nbsp;M&nbsp;</span><span class="col s1">&nbsp;N&nbsp;</span><span class="col s1">&nbsp;O&nbsp;</span><span class="col s1">&nbsp;P&nbsp;</span><span class="col s1">&nbsp;R</span></p>
+					<p class="col s12 row" style="font-size: 1.5em"><span class="col s1">&nbsp;S&nbsp;</span><span class="col s1">&nbsp;Ŝ&nbsp;</span><span class="col s1">&nbsp;T&nbsp;</span><span class="col s1">&nbsp;U&nbsp;</span><span class="col s1">&nbsp;Ŭ&nbsp;</span><span class="col s1">&nbsp;V&nbsp;</span><span class="col s1">&nbsp;Z</span></p>
+			</div>
+			
+			<p>
+			Les lettres <b>q</b>, <b>w</b>, <b>x</b> et <b>y</b> n’existent pas en
+			espéranto mais on y trouve six lettres qui n’existent pas en français&nbsp;:
+			<span class="eo">ĉ</span>, <span class="eo">ĝ</span>, <span class="eo">ĥ</span>, <span class="eo">ĵ</span>, <span class="eo">ŝ</span>, <span class="eo">ŭ</span> (à remarquer qu’elles ont toutes un accent circonflexe sauf le <span class="eo">ŭ</span> dont
+			l’accent est en fait un demi-cercle).</p>
+
+			<p>Les lettres suivantes ont une prononciation différente de celle du
+			français :</p>
+			<div class="vortlisto row">
+				<div class="col s12 m6">
+					<p><span class="eo">c</span> : ts (tsar)</p>
+					<p><span class="eo">ĉ</span> : tch (Tchèque)</p>
+					<p><span class="eo">e</span> : entre é et è</p>
+					<p><span class="eo">g</span> : g (gant)</p>
+					<p><span class="eo">ĝ</span> : dj (Djibouti)</p>
+					<p><span class="eo">h</span> : h (have en anglais)</p>
+					<p><span class="eo">ĥ</span> : hr (Juan en espagnol)</p>
+					<p><span class="eo">j</span> : y (yogourt)</p>
+				</div>
+				<div class="col s12 m6">
+					<p><span class="eo">ĵ</span> : j (journal)</p>
+					<p><span class="eo">o</span> : o (bol)</p>
+					<p><span class="eo">r</span> : de préférence roulé (espagnol)</p>
+					<p><span class="eo">s</span> : ss (santé, suisse)</p>
+					<p><span class="eo">ŝ</span> : ch (chaud)</p>
+					<p><span class="eo">u</span> : ou (tout)</p>
+					<p><span class="eo">ŭ</span> : w (wapiti), ou bref (oui, waouh !)</p>
+				</div>
+			</div>
+
+			<p>Les autres lettres de l'espéranto : <em>a, b, d, f,
+			i, k, l, m, n, p, t, v, z</em> se prononcent comme en français. 
+			Les lettres <em>q, w, x</em> et <em>y</em> n’existent pas en espéranto.</p>
+			<p>Chaque voyelle, <em>a, e, i, o, u</em>, forme
+			avec les consonnes voisines une syllabe séparée. Par contre, <em>j</em> et
+			<em>ŭ</em>, qui sont parfois appelées <i>semi-voyelles</i>, sont des
+			consonnes normales en espéranto, et font donc partie de la syllabe définie
+			par une voyelle voisine. Vous trouverez des exemples plus tard dans les
+			leçons à venir et nous reviendrons plus en détail sur la prononciation dans
+			la quatrième leçon.</p>
+			
+						<p class="parto">Quand on a besoin d’épeler un mot en espéranto on ne dit pas <i>a</i>,
+			<i>bé</i>, <i>cé</i>,… <i>ache</i>,… <i>zèd</i> comme en français mais
+			<span class="eo">a</span>, <span class="eo">bo</span>, <span class="eo">co</span>, <span class="eo">do</span>, <span class="eo">e</span>, etc., c’est-à-dire que le nom des voyelles correspond à leur son et que le nom des consonnes se
+			forme en leur ajoutant la terminaison <span class="eo">-o</span>.</p>
+	
+			<p>Exemples :</p>
+			<div class="container">
+				<p><span class="eo">griza</span> : go, ro, i, zo, a</p>
+				<p><span class="eo">ruĝa</span> : ro, u, ĝo, a</p>
+			</div>
+	
+			<p class="rimarko"><strong>REMARQUE</strong> : 
+				Il n’y a que très peu de racines en espéranto qui aient une consonne
+				double. Un exemple est <span class="eo">Finno</span> (Finnois). Comme chaque lettre se
+				prononce, on dit <span class="eo"><u>fin</u>-no</span>. Certains mots composés peuvent avoir
+				une consonne double, par exemple <span class="eo">Pollando</span> (Pologne) de <span class="eo">Polo</span>,
+				<span class="eo">lando</span>, et on prononce <span class="eo">Pol-<u>lan</u>-do</span>.
+			</p>
+
+			<?php 
+			} // fin section 1
+			if ($section=="2") {
+			?>
+			<p class="parto">Les <b>noms communs</b> et les <b>noms propres</b> assimilés finissent
+			toujours par <b>-o</b>.</p>
+			<p class="parto">Les <b>verbes à l’infinitif</b> finissent toujours par <b>-i</b>.</p>
+			<p class="parto">Les <b>adjectifs</b> finissent toujours par <b>-a</b> et se placent
+			normalement avant le nom qu’ils qualifient.</p>
+			<p>Exemples :</p>
+			
+			<div class="row">
+				<p class="col s6"><span class="eo">a<u>mi</u>ko</span> : ami</p>
+				<p class="col s6"><span class="eo">a<u>mi</u>ka</span> : amical(e)</p>
+				<p class="col s6"><span class="eo"><u>no</u>va a<u>mi</u>ko</span> : un nouvel ami</p>
+				<p class="col s6"><span class="eo"><u>es</u>ti</span> : être</p>
+				<p class="col s6"><span class="eo"><u>sa</u>na <u>kna</u>bo</span> : un garçon en bonne santé</p>
+			</div>
+			
+			<p class="rimarko"><strong>REMARQUE</strong> : Dans cet exemple, nous avons utilisé le soulignement pour indiquer que
+			l’avant-dernière syllabe porte l’accent tonique, c’est-à-dire qu’on la
+			prononce plus fort que les autres syllabes. En français, l’accent tonique
+			est sur la dernière syllabe, aussi, pour prononcer correctement
+			<span class="eo">a<u>mi</u>ko</span>, il vous suffit de prononcer d’abord le mot français
+			<span class="eo">a<u>mi</u></span> puis de lui ajouter <span class="eo">ko</span>. Entraînez-vous avec les mots de
+			vocabulaire de la page suivante.</p>
+			
+
+			<fieldset class="vortoj">
+				<legend>VOCABULAIRE</legend>
+				<div>
+					<?php if ($persono) { ?>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<?php } ?>
+				</div>
+				<div class="vortlisto row">
+					<p class="col s12 m4"><span class="eo">amiko</span> : ami</p>
+					<p class="col s12 m4"><span class="eo">nova</span> : nouveau</p>
+					<p class="col s12 m4"><span class="eo">esti</span> : être</p>
+					<p class="col s12 m4"><span class="eo">amika</span> : amical(e)</p>
+					<p class="col s12 m8"><span class="eo">sana</span> : sain, en bonne santé</p>
+				</div>
+			</fieldset>
+			
+
+			<?php 
+			} // fin section 2
+			if ($section=="3") {
+			?>
+			<?php if ($persono) { ?>
+			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+			<?php } ?>
+			<fieldset class="vortoj">
+				<legend>MOTS À RETENIR</legend>
+				<div class="vortlisto row">
+					<div class="col s12 m4">
+						<p><span class="eo">biskvito</span> : biscuit</p>
+						<p><span class="eo">filo</span> : fils</p>
+						<p><span class="eo">filino</span> : fille</p>
+						<p><span class="eo">Francujo</span> : France</p>
+						<p><span class="eo">frato</span> : frère</p>
+						<p><span class="eo">fratino</span> : sœur</p>
+						<p><span class="eo">instruisto</span> : instituteur</p>
+						<p><span class="eo">knabo</span> : garçon</p>
+						<p><span class="eo">kafo</span> : café</p>
+						<p><span class="eo">kuko</span> : gâteau</p>
+						<p><span class="eo">lakto</span> : lait</p>
+					</div>
+					<div class="col s12 m4">
+						<p><span class="eo">lando</span> : pays</p>					
+						<p><span class="eo">patro</span> : père</p>
+						<p><span class="eo">patrino</span> : mère</p>
+						<p><span class="eo">pano</span> : pain</p>
+						<p><span class="eo">studento</span> : étudiant</p>
+						<p><span class="eo">sukero</span> : sucre</p>
+						<p><span class="eo">teo</span> : thé</p>
+						<p><span class="eo">urbo</span> : ville</p>
+						<p><span class="eo">viro</span> : homme (mâle)</p>
+						<p><span class="eo">virino</span> : femme</p>
+						<p><span class="eo">kaj</span> : et</p>
+					</div>
+					<div class="col s12 m4">
+						<p><span class="eo">jen</span> : voici</p>
+						<p><span class="eo">ĉiam</span> : toujours</p>					
+						<p><span class="eo">en</span> : dans, en</p>
+						<p><span class="eo">bela</span> : beau</p>
+						<p><span class="eo">bona</span> : bon</p>
+						<p><span class="eo">facila</span> : facile</p>
+						<p><span class="eo">granda</span> : grand</p>
+						<p><span class="eo">seka</span> : sec</p>
+						<p><span class="eo">varma</span> : chaud</p>
+						<p><span class="eo">kiu</span> : qui, quel</p>					
+					</div>
+				</div>
+			</fieldset>
+
+			<?php 
+			} // fin section 3
 			if ($section=="4") {
 			?>
 

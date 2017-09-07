@@ -263,14 +263,50 @@ include "dlekkapo.inc.php";
 		if ($section=="7") {
 		?>
 
-			<p>
-			Il existe une centaine de publications en espéranto. Celles-ci sont
-			éditées par des maisons indépendantes, par des associations
-			nationales ou internationales, et elles se font l’écho du mouvement
-			espérantiste dans le monde.
+			<p class="parto">Les premières revues en espéranto datent du XIX<sup>e</sup> siècle avec <i>La Esperantisto</i>. De nos jours, 
+			on en trouve provenant des quatre coins du monde, sur des sujets divers et variés, comme vous le verrez.
 			</p>
-			<p>Page suivante, nous vous invitons à lire un extrait d’article, que vous traduirez à titre exercice.</p>
+			<p class="parto">Aleks vous présente ici un petit tour du monde des magazines en espéranto&nbsp;:<br>
+					<span class="eta">(vous pouvez activer les sous-titres en français)</span>
+				</p>
+				<p><iframe width="560" height="315" src="https://www.youtube.com/embed/yVjtft16rNo?rel=0"
+frameborder="0" allowfullscreen></iframe></p>
 
+			<p class="parto">Les plus connues sont celles des associations internationales&nbsp;: <i>Esperanto</i>, éditée par l’association mondiale d’espérant
+				tout à fait convenable pour de nouveaux apprenants de la langue, et dont les sujets ne s’adressent pas qu’aux jeunes. 
+				Dans le même esprit&nbsp;: <i>Heroldo de Esperanto</i>, <i>La Ondo de Esperanto</i>.</p>
+			<p>Les médias ne sont pas en manquent, en Espérantie&nbsp;: nombreux sont les livres, albums de musique, applications pour téléphones, 
+				sites internet, qui se développent chaque année. Pour s’y retrouver, des revues dédiées, comme <i>Beletra Almanako</i> ou 
+				<i>Literatura Foiro</i>, publient des critiques et des interviews.</p>
+			<p class="parto">L’espéranto permet un accès à une culture mondiale avec un filtre moins important que les médias traditionnels. 
+				Cela permet ainsi à des revues comme <i>La Gazeto</i> de parler de l’histoire mondiale, à <i>Sennaciulo</i> de débattre des 
+				problèmes politiques actuels&nbsp;; <i>Etnismo</i> traite des questions éthniques, et la revue <i>Monato</i> possède des 
+				correspondants dans de très nombreux pays, qui rapportent des évènements marquants d’un point de vue local. 
+				Des revues évoquent également les religions&nbsp;: l’espéranto est à l’aise avec le bouddhisme, le catholicisme, 
+				l’islam, l’ōmoto, etc.</p>
+			<p class="parto">Une part non négligeable des revues sont les organes d’information des associations nationales d’espéranto, qui font le point, 
+				parfois avec des articles bilingues, sur les rencontres qui ont lieu entre espérantophones, les lieux intéressants à visiter 
+				dans le pays, ou même le continent&nbsp;: <i>Esperanto en Afriko</i> et <i>Esperanto en Azio</i> par exemple. 
+				Certains, comme la revue française <i>Espéranto-Info</i>, s’adressent directement à des personnes ne parlant par l’espéranto, 
+				pour leur présenter les divers aspects de l’Espérantie, et quelques mots croisés et phrases de base.</p>
+			<p>Pour finir, n’oublions pas que l’espéranto permet de traiter également de sujets techniques, et pour cela les associations 
+				spécialisées (en science, médecine, enseignement, etc.) éditent des revues pour mettre en valeur les dernières avancées. 
+				Par exemple&nbsp;: <i>Hungara Fervojista Mondo</i> (cheminots hongrois), <i>Medicina Internacia Revuo</i> ou encore <i>Scienca Revuo</i>. 
+				
+			<p class="parto">Page suivante, nous vous invitons à lire un extrait d’article, que vous traduirez à titre exercice.</p>
+			
+			<div class="card-panel blue lighten-5">
+				<p>Pour en savoir plus&nbsp;:</p>
+				<ul>
+					<li><a href="https://fr.wikipedia.org/wiki/Espérantie#Médias">https://fr.wikipedia.org/wiki/Espérantie#Médias</a></li>
+					<li><a href="https://fr.wikipedia.org/wiki/Liste_des_périodiques_en_espéranto">https://fr.wikipedia.org/wiki/Liste_des_périodiques_en_espéranto</a></li>
+					<li><a href="https://eo.wikipedia.org/wiki/Esperanto-gazeto">https://eo.wikipedia.org/wiki/Esperanto-gazeto</a></li>
+				</ul>
+				<p>Et pour découvrir quelques revues en espéranto&nbsp;:</p>
+				<p><a href="https://esperanto-france.org/le-monde-de-l-esperanto"><i>Le Monde de l’Espéranto</i></a>, la revue d’Espéranto-France, accessible en ligne&nbsp;;<br>
+					et d’autres revues dans notre <a href="https://ikurso.esperanto-france.org/butiko.php">boutique en ligne</a>.
+				</p>
+			</div>
 		<?php 
 		} // fin section
 		if ($section=="8") {

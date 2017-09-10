@@ -19,7 +19,8 @@ include "../pagxkapo.inc.php";
 				<em>Lasu min paroli plu</em> en version audio (mp3)</a></li>
 			</ul>
 			
-			<h2>Cours et exercices à imprimer</h2>			
+			<h2>Cours et exercices à imprimer</h2>	
+			<p class="eta"><b>Note</b> : Les documents téléchargeables ci-dessous correspondent à une version antérieure du cours. La progression et le contenu du cours (textes et exercices) sont donc un peu différents de la version en ligne.</p>	
 			<ul>	
 				<li><a href="<?php echo $vojo;?>doc/DLEK.pdf">Cours en dix leçons</a> (pdf - 476Ko)</li>
 				<li><a href="<?php echo $vojo;?>doc/DLEK-ekz.pdf">Cahier d'exercices du cours en dix leçons</a> (pdf - 223Ko)</li>

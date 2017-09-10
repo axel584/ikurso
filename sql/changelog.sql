@@ -2112,3 +2112,6 @@ UPDATE `vortoj` SET `eo` = 'Ĉinujo|Ĉinio' WHERE `eo` = 'Ĉinio';
 
 -- Passage en V17
 ALTER TABLE  `lecioneroj` ADD  `android` BOOL NULL ;
+
+-- Modif nom de la page sur les revues #
+UPDATE `lecioneroj` SET `titolo` = 'Les revues en espéranto', `dauxro` = '10' WHERE `leciono_id` = 70 AND `ordo` = 7;

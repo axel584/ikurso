@@ -88,8 +88,8 @@ $res.="<br><a href='".$vojo."helpo.php'><button>&nbsp;&nbsp;&nbsp;Aide&nbsp;&nbs
 $res.="</td></tr></table>";
 
 if (($rajto=="K"||$rajto=="A")) {
-	$res.="<h2><a href=\"http://ikurso.esperanto-france.org/sxangxiNBlernantoj.php\">".$lgv_miajlernantoj."</h2></a>";
-	$res.="<a href=\"http://ikurso.esperanto-france.org/sxangxiNBlernantoj.php\">";
+	$res.="<h2><a href=\"https://ikurso.esperanto-france.org/sxangxiNBlernantoj.php\">".$lgv_miajlernantoj."</h2></a>";
+	$res.="<a href=\"https://ikurso.esperanto-france.org/sxangxiNBlernantoj.php\">";
 	$res.="<table title=\"cliquez sur la table pour modifier votre nombre d'&eacute;l&egrave;ves\">";
 	$res.="<thead>\n<tr>\n<td>cours</td>\n";
 	$res.="<td>&eacute;l&egrave;ves<br>en cours</td>";
@@ -187,7 +187,7 @@ $res.="<p style='text-align:center' id='farbskatol'>\n";
 $res.="<a href='http://farbskatol.net'>Vid&eacute;os en esp&eacute;ranto</a></p></li></ul>\n";
 
 $res.="<p class=\"meze\">&nbsp;Ce site est g&eacute;r&eacute; par&nbsp;:";
-$res.="<a href=\"http://www.esperanto-france.org\">";
+$res.="<a href=\"https://esperanto-france.org\">";
 $res.="<img alt=\"jefo-logeto\" src=\"".$vojo."../bildoj/logo_JEFO.gif\"></a><br>";
 $res.="avec le soutien de<br>";
 $res.="<a href='http://www.linguaforce.com/esperanto/traduction.htm' alt='linguaforce'>";

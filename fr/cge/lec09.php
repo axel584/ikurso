@@ -263,7 +263,11 @@ include "dlekkapo.inc.php";
 		if ($section=="7") {
 		?>
 
-			<p class="parto">Les premières revues en espéranto datent du XIX<sup>e</sup> siècle avec <i>La Esperantisto</i>. De nos jours, 
+			<div class="float-right w30">
+				<a href="https://esperanto-france.org/le-monde-de-l-esperanto">
+					<img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/la-esperantisto.jpg"></a>
+			</div>
+			<p class="parto">Les premières revues en espéranto datent du XIX<sup>e</sup> siècle avec <a href="https://fr.wikipedia.org/wiki/La_Esperantisto"><em>La Esperantisto</em></a>. De nos jours, 
 			on en trouve provenant des quatre coins du monde, sur des sujets divers et variés, comme vous le verrez.
 			</p>
 			<p class="parto">Aleks vous présente ici un petit tour du monde des magazines en espéranto&nbsp;:<br>

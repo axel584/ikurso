@@ -11,10 +11,13 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
-				<li class="collection-header">version 17. Août 2017</li>
+				<li class="collection-header">version 17. Septembre 2017</li>
 				<li class="collection-item">
-					<p>Mise à jour des explications sur les <a href="<?php echo $vojo;?>helpo.php?section=kielskribi">claviers en espéranto</a></p>
-					<p>Amélioration de la mise en page dans la <a href="<?php echo $vojo;?>fr/cge/lec08.php?section=1">leçon 8</a></p>
+					<p>Mise à jour des explications sur les claviers en espéranto dans la page <a href="<?php echo $vojo;?>helpo.php?section=kielskribi">Comment écrire en espéranto ?</a>.</p>
+					<p>Création d’une page <a href="<?php echo $vojo;?>helpo.php?section=kajposte">Que faire après le cours&nbsp;?</a> pour présenter différentes façon de pratiquer l’espéranto.</p>
+					<p>Enrichissement des explications dans les pages <a href="<?php echo $vojo;?>helpo.php?section=enskribo">Comment s’inscrire&nbsp;?</a> et <a href="<?php echo $vojo;?>helpo.php?section=kurso">Comment suivre le cours&nbsp;?</a>.</p>
+					<p>Amélioration de la mise en page dans la <a href="<?php echo $vojo;?>fr/cge/lec08.php?section=1">leçon 8</a>.</p>
+					<p>Ajout d’une section sur les revues en espéranto dans la <a href="<?php echo $vojo;?>fr/cge/lec09.php?section=7">leçon 9</a> du Cours en dix leçons</p>
 					<p>Création de l'adresse <a href="https://ikurso.fr">ikurso.fr</a> pour accéder directement au site</p>
 					<p>Corrections diverses de bugs et coquilles…</p>
 				</li>			

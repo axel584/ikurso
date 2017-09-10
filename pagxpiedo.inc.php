@@ -33,7 +33,7 @@
 		echo "Materialize.toast('Votre adresse email est invalide.', 4000);\n";
 	}
 	if ($erarkodo==7) {
-		echo "Materialize.toast('Cet identifiant est déjà utilisée, merci d'en choisir un autre.', 4000);\n";
+		echo "Materialize.toast('Cet identifiant est déjà utilisé, merci d’en choisir un autre.', 4000);\n";
 	}
 	if ($erarkodo==8) {
 		echo "Materialize.toast('Votre session a expiré, veuillez vous identifier.', 4000);\n";
@@ -48,7 +48,7 @@
 		echo "Materialize.toast('Votre message est vide', 4000);\n";
 	}	
 	if ($erarkodo==17) {
-		echo "Materialize.toast('Cours incorrect pour le diplome', 4000);\n";
+		echo "Materialize.toast('Cours incorrect pour le diplôme', 4000);\n";
 	}		
 	if ($erarkodo==18) {
 		echo "Materialize.toast('Clef d’activation incorrecte.', 4000);\n";

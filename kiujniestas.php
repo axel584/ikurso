@@ -15,7 +15,7 @@ include "pagxkapo.inc.php";
 		<h1>Qui sommes-nous ?</h1>
 		<div class="row">
 			<div class="col s12 m9">
-			<p>Ce site de cours d’espéranto <em>iKurso</em> est hébergé par l’association <a href="http://esperanto-france.org">Espéranto-France</a>. Cette association de loi de 1901 a pour objectif de faire connaître et enseigner l’espéranto. </p>
+			<p>Ce site de cours d’espéranto <em>iKurso</em> est hébergé par l’association <a href="https://esperanto-france.org">Espéranto-France</a>. Cette association de loi de 1901 a pour objectif de faire connaître et enseigner l’espéranto. </p>
 			</div>
 			<div class="col s12 m3">
 				<img src="<?php echo $vojo;?>bildoj/logo-UFE.png" class="responsive-img">
@@ -23,8 +23,8 @@ include "pagxkapo.inc.php";
 		</div>
 		<div class="row">
 			<div class="col s12">
-				<p>L’association Espéranto-France édite des <a href="http://esperanto-france.org/methodes-et-dictionnaires">dictionnaires et des méthodes d’apprentissage de l’espéranto</a> ainsi que <a href="http://esperanto-france.org/boutique">différents livres</a> en espéranto comme <a href="http://esperanto-france.org/le-petit-prince-esperanto"><em>Le Petit Prince</em></a>.</p>
-				<p>L’association publie une revue trimestrielle, <a href="http://esperanto-france.org/le-monde-de-l-esperanto"><em>Le Monde de l’espéranto</em></a>.</p>
+				<p>L’association Espéranto-France édite des <a href="https://esperanto-france.org/methodes-et-dictionnaires">dictionnaires et des méthodes d’apprentissage de l’espéranto</a> ainsi que <a href="https://esperanto-france.org/boutique">différents livres</a> en espéranto comme <a href="https://esperanto-france.org/le-petit-prince-esperanto"><em>Le Petit Prince</em></a>.</p>
+				<p>L’association publie une revue trimestrielle, <a href="https://esperanto-france.org/le-monde-de-l-esperanto"><em>Le Monde de l’espéranto</em></a>.</p>
 			</div>
 		</div>
 		<div class="row">

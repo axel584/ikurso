@@ -17,11 +17,11 @@ include "pagxkapo.inc.php";
 						4bis, rue de la Cerisaie<br>
 						75004 Paris.
 					</p>
-					<p>Vous pouvez également commander en ligne en vous connectant sur <a href="//esperanto-france.org/perso" target="_NEW">le site d'Espéranto-France</a>. Il sera nécessaire de se créer un compte pour effectuer votre première commande.</p>
+					<p>Vous pouvez également commander en ligne en vous connectant sur <a href="https://esperanto-france.org/perso" target="_NEW">le site d'Espéranto-France</a>. Il sera nécessaire de se créer un compte pour effectuer votre première commande.</p>
 					<p>Si vous n’habitez pas en France, vous pouvez également contacter la boutique (voir bon de commande) pour connaître les frais d’envoi vers votre pays.</p>
 				</div>
 				<div class="col s3 m2">
-					<a href="<?=$vojo?>bildoj/butiko/bondecom2016-ikurso.pdf" title="Bon de commande boutique Espéranto-France 2016" type="application/pdf"><img src="esperanto-france.org/local/cache-vignettes/L200xH283/bondecom2016-5be82.jpg?1476828061" alt="Bon de commande boutique Espéranto-France 2016" class="responsive-img z-depth-1"></a>
+					<a href="<?=$vojo?>bildoj/butiko/bondecom2016-ikurso.pdf" title="Bon de commande boutique Espéranto-France 2016" type="application/pdf"><img src="https://esperanto-france.org/local/cache-vignettes/L200xH283/bondecom2016-5be82.jpg?1476828061" alt="Bon de commande boutique Espéranto-France 2016" class="responsive-img z-depth-1"></a>
 				</div>
 			</div>
 			

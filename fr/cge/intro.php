@@ -16,14 +16,14 @@ include "dlekkapo.inc.php"
 			<h2>Préambule</h2>
 			
 			<p class="parto">Voici un <b>cours en 10 leçons</b> pour vous initier à l’espéranto. Le défi est que, à la fin de ce parcours, vous puissiez faire des phrases simples, comprendre de courts textes ou conversations, voire de correspondre avec des étrangers espérantistes&nbsp;! Pas moins&nbsp;!</p>
-			<p>À l’origine, il s’agissait d’un cours par correspondance pour anglophones, adapté par la suite au français puis au courrier électronique par la société québécoise d’espéranto (ESK). La version mise en ligne en 2016 est une proposition revue, mais qui a gardé l’esprit de départ&nbsp;: simplicité et efficacité. Et ce en mettant à profit les connaissances pédagogiques nouvelles et les évolutions du web&nbsp;!</p>
+			<p class="parto">À l’origine, il s’agissait d’un cours par correspondance pour anglophones, adapté par la suite au français puis au courrier électronique par la société québécoise d’espéranto (ESK). La version mise en ligne en 2016 est une proposition revue, mais qui a gardé l’esprit de départ&nbsp;: simplicité et efficacité. Et ce en mettant à profit les connaissances pédagogiques nouvelles et les évolutions du web&nbsp;!</p>
 			<p class="parto">L’étape suivante sera alors de suivre le cours <a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a> qui vous permettra d’assimiler les connaissances acquises et vous ouvrira la porte à une utilisation active de la langue. Ou encore (et même en parallèle) ce sera de rencontrer les espérantistes de votre département, votre ville ou votre région… Rien de tel que l’échange humain tout de même pour avancer&nbsp;!</p>
 				
-			<p>Pour connaître les adresses des associations ou clubs proches de chez vous, rendez-vous sur le <a href="http://esperanto-france.org/">site d’Espéranto-France</a> puis sélectionnez votre département sous la carte dans la section <b>L’espéranto près de chez vous</b>.</p>
+			<p>Pour connaître les adresses des associations ou clubs proches de chez vous, rendez-vous sur le <a href="https://esperanto-france.org/">site d’Espéranto-France</a> puis sélectionnez votre département sous la carte dans la section <b>L’espéranto près de chez vous</b>.</p>
 
 			<h2>Comment suivre ce cours</h2>
 			
-			<p class="parto">Ce cours se compose de 10 leçons alternant du son, des textes, des images, des vidéos. Les leçons sont une alternance d’explications sur le fonctionnement de la langue, des apports de vocabulaire et de points grammaticaux. Une large place est donnée aux exercices de mise en pratique, aux QCM, aux tests afin que vous puissiez pas à pas évaluer vos progrès. Le cours peut être utilisé par des débutants en mode autodidacte, cependant nous vous conseillons de demander l’aide d’un tuteur qui corrigera vos exercices, sera disponible pour répondre à vos questions et vous suivra tout au long de votre apprentissage.</p>
+			<p class="parto">Ce cours se compose de <b>10 leçons</b> alternant du son, des textes, des images, des vidéos. Les leçons sont une alternance d’<b>explications</b> sur le fonctionnement de la langue, des apports de <b>vocabulaire</b> et de <b>points grammaticaux</b>. Une large place est donnée aux <b>exercices de mise en pratique</b>, aux <b>QCM</b>, aux <b>tests</b> afin que vous puissiez pas à pas évaluer vos progrès. Le cours peut être utilisé par des <b>débutants en mode autodidacte</b>, cependant nous vous conseillons de demander l’aide d’un tuteur qui corrigera vos exercices, sera disponible pour répondre à vos questions et vous suivra tout au long de votre apprentissage.</p>
 			
 			<p>Lorsque vous aurez créé votre compte, il vous suffira de commencer le cours et d’effectuer les exercices de la leçon 1. Un correcteur vous sera alors attribué en fonction des places disponibles.</p>
 			
@@ -36,26 +36,34 @@ include "dlekkapo.inc.php"
 				<li>Attendez d’avoir reçu la première correction pour poursuivre votre apprentissage&nbsp;: c’est important, car le correcteur vous donnera des informations et consignes qui pourront vous éviter bien des erreurs. Ceci ne doit pas vous empêcher de lire les cours suivants avant ce retour de correction et de déjà préparer les exercices.</li>
 			</ol>
 			
-			<h3>Quelques conseils pour atteindre vos objectifs :</h3>
+			<h3>Quelques conseils pour atteindre vos objectifs&nbsp;:</h3>
 			<ul class="klarigo">
-				<li>Travaillez régulièrement. Nous conseillons de faire une leçon par semaine au minimum. Chaque leçon est composée de plusieurs sections, que vous pouvez étudier à votre rythme. Il est préférable d’étudier 15 minutes par jour que 2 heures une fois par semaine.</li>
-				<li>N’hésitez pas à prendre des notes, recopier les mots de vocabulaire et les utiliser dans de nouvelles phrases. Notez les points qui vous paraissent importants et les questions que vous souhaitez poser à votre correcteur en fin de leçon.</li>
-				<li>Apprenez le vocabulaire du cours régulièrement, l’idéal étant de pouvoir le réviser tous les jours. Un outil d’apprentissage du vocabulaire est intégré dans ce cours pour vous en faciliter l’apprentissage. Quelques minutes par jour suffiront pour bien l’assimiler.</li>
-				<li>Mettez en pratique la langue dès que vous le pouvez&nbsp;: vous pouvez par exemple écrire quelques phrases en espéranto en commentaire lors de l’envoi de vos exercices. Essayez de parler en espéranto, même si c’est à votre reflet dans le miroir ou à votre chien*.</li>
+				<li><b>Travaillez régulièrement</b>. Nous conseillons de faire <b>une leçon par semaine au minimum</b>. Chaque leçon est composée de plusieurs sections, que vous pouvez étudier à votre rythme. Il est préférable d’étudier 15&nbsp;minutes par jour que 2&nbsp;heures une fois par semaine. Vous pouvez donc répartir l’étude d’une leçon sur plusieurs sessions, en fonction du temps dont vous disposez.</li>
+				<li><div class="float-right w25"><img class="responsive-img" src="<?=$vojo?>bildoj/notes.jpg" /></div>N’hésitez pas à <b>prendre des notes</b>, à recopier les mots de vocabulaire et les utiliser dans de nouvelles phrases. Notez les points qui vous paraissent importants et les questions que vous souhaitez poser à votre correcteur en fin de leçon.</li>
+				<li><b>Apprenez le vocabulaire</b> du cours régulièrement, l’idéal étant de pouvoir le réviser tous les jours. Un outil d’apprentissage du vocabulaire est intégré dans ce cours pour vous en faciliter l’apprentissage. Quelques minutes par jour suffiront pour bien l’assimiler.</li>
+				<li><div class="float-right w25"><img class="responsive-img" src="<?=$vojo?>bildoj/babili.png" /></div><b>Mettez en pratique</b> la langue dès que vous le pouvez&nbsp;: vous pouvez par exemple écrire quelques phrases en espéranto en commentaire lors de l’envoi de vos exercices. Essayez de parler en espéranto, même si c’est à votre reflet dans le miroir ou à votre chien*.</li>
 			</ul>
 			
-			<p class="renvoi">* si vous avez un canari ou un poisson rouge, ça marche aussi !
+			<p class="renvoi">* si vous avez un canari ou un poisson rouge, ça marche aussi&nbsp;!
+				
+			<div class="card-panel blue lighten-5">
+				<p>Vous trouverez de nombreuses idées sur la façon de <b>mettre en pratique l’espéranto</b> dans notre page INFORMATIONS PRATIQUES&nbsp;: <a href="<?php echo $vojo;?>helpo.php?section=kajposte">Que faire après le cours&nbsp;?</a>.</p>
+			</div>
 			
 			<h2>Note au sujet de la typographie</h2>
 			
-			<p>Vous trouverez dans la <a href="<?php echo $vojo;?>helpo.php">page d’aide</a> des informations utiles sur la façon d’utiliser les lettres accentuées.</p>
+			<p class="parto">L’alphabet de l’espéranto comporter quelques lettre accentuées qui n’existent pas en français&nbsp;: <span class="eo">ĉ</span>, <span class="eo">ĝ</span>, <span class="eo">ĥ</span>, <span class="eo">ĵ</span>, <span class="eo">ŝ</span>, <span class="eo">ŭ</span>.</p>
+			<div class="float-right w25"><img class="responsive-img" src="<?=$vojo?>bildoj/clavier.png" /></div><p>Dans les exercices de ce cours, il vous suffira de taper la lettre suivie d’un <b>x</b> par exemple&nbsp;: cx, sx, ux… pour obtenir automatiquement la lettre accentuée correspondante.</p> 			
 			
-			<p>Dans les exercices, il suffit de taper la lettre suivie d’un <strong>x</strong> par exemple&nbsp;: cx, sx, ux… pour obtenir automatiquement la lettre accentuée correspondante.</p> 			
+			<p>En dehors du cours, si vous souhaitez <b>écrire en espéranto</b> avec votre clavier, vous pourrez avez le choix entre différents outils qui vous permettront
+				de taper facilement les lettres accentuées de l’espéranto. Nous vous présentons ces différentes méthodes dans la page INFORMATIONS PRATIQUES&nbsp;: <a href="<?php echo $vojo;?>helpo.php?section=kielskribi">Comment écrire en espéranto&nbsp;?</a>.</p>
+			
 							
 			<h2>Consultation hors ligne</h2>
 					
 			<p>Vous pouvez télécharger une version du cours au format PDF pour consultation hors ligne&nbsp;:<br><a href="<?php echo $vojo;?>doc/DLEK.pdf">Cours en dix leçons</a> (PDF - 476Ko)</p>
-
+			<p class="eta"><b>Note</b> : Le document téléchargeable ci-dessus correspond à une version antérieure du cours. La progression et le contenu du cours (textes et exercices) sont donc un peu différents de la version en ligne.</p>
+			
 			<?php if ($persono_id=="") { ?>
 				<div class="row">
 					<div class="col s12">

@@ -28,55 +28,19 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *">
-                <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,600,600italic,700italic,700' rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
         <link rel="stylesheet" type="text/css" href="css/ikurso.css">
-
-
-        <title>Hello World</title>
+        <title>Ikurso - Cours d'espéranto gratuit</title>
     </head>
     <body>
-        <nav>
-            <div class="nav-wrapper primaire">
-                <span class="brand-logo" id="logo">iKurso</span>
-            </div>
-        </nav>
-
-        <div class="app">
-            <main>
-            <div class="row">
-                <article class="col s12 m10 l7 offset-m1 offset-l1">
-
-                    <section id="leciono-enhavo">
-                        <center>
-                            <h2>Bienvenue sur <span class="ikurso">iKurso</span></h2>
-                            <img src="img/robin-2012.jpg" alt="© Robin Guinin" class="responsive-img">
-                            <p class="creditphoto primaire-texte">dessin : Robin Guinin, <a href="https://www.facebook.com/robin.guinin/">www.facebook.com/robin.guinin/</a></p>
-                            
-                        </center>
-
-            <!--div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div-->
-                    </section>
-                </article>
-            </div>
-            </main>
-            <footer align="center" id="footer">
-            <p><a href="" class="btn waves-effect waves-light blue" id="komenci">Commencer</a></p>
-            </footer>
+        <div class="app" id="app">
         </div>
-
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-        <script src="js/materialize.min.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/ikurso.js"></script>
     </body>
 </html>

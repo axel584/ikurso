@@ -1,0 +1,1020 @@
+/*---- palette personnalisée ---*/
+.primaire {background-color: #554E47 !important;}
+.primaire.moyen {background-color: #75706B !important;}
+.primaire.clair {background-color: #989490 !important;}
+.primaire.pale {background-color: #cccac8 !important;}
+.primaire.fond {background-color: #DDDCDA !important;}
+.primaire-texte {color: #554E47 !important;}
+.primaire-texte.texte-moyen {color: #75706B !important;}
+.primaire-texte.texte-clair {color: #989490 !important;}
+.primaire-texte.texte-pale {color: #CBC9C7 !important;}
+.primaire-texte.texte-fond {background-color: #DDDCDA !important;}
+
+.contraste-A {background-color: #2196F3}
+.contraste-texte-A {color: #2196F3}
+.contraste-B {background-color: #9ccc65;}
+.contraste-texte-B {color: #9ccc65;}
+
+/*---- présentation boutique -----*/
+.masonry {
+	column-count: 4;
+	column-gap: 0;
+}
+@media only screen and (max-width: 992px) {
+	.masonry {
+		column-count: 3;
+	}
+}
+
+.masonry-item {
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+	padding: 5px;
+}
+
+/*---- surcharge typographie -----*/
+@media only screen and (min-width: 1200px) {
+  html {font-size: 17px;}
+}
+
+h1 {font-size: calc(1.5rem + 2.5vw); margin: 2rem 0 1rem 0; color: #989490;}
+h2 {font-size: 2.5rem; color: #989490;}
+h3 {font-size: 2rem; margin: 2rem 0 1.5rem 0; color: #554E47;}
+h4 {font-size: 1.5rem; margin: 2rem 0 1.5rem 0; color: #554E47;font-weight: 300;}
+
+a {color: #2196F3;}
+
+.card-panel h5 {margin-bottom: 1.5rem;}
+
+.card .card-content .card-title {
+	line-height: normal;
+	padding-bottom: 1em;
+}
+.card .card-title.activator {
+    font-size:inherit;
+}
+
+.butiko .card {
+    padding: 0.5em;
+    margin: 0 0 0.5em 0;
+}
+.butiko .card .card-content {
+    padding: 0.5em 0 0.5em 0;
+}
+.butiko .card .card-reveal {
+    padding: 0.5em 1em 1em 0.5em;
+}
+.butiko-eta .card .card-content {
+    padding:1em 0 0.5em 0;
+}
+.card-reveal p {
+	font-size: 85%;
+}
+section.klarigo ul {
+	list-style-type: disc;
+	padding-left: 2em;
+	line-height: 180%;
+}
+section.klarigo ul li {
+	list-style-type: circle;
+}
+/*---- surcharge formulaires -----*/
+
+.input-field label {color: #75706B;}
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #2196F3;
+    box-shadow: 0 1px 0 0 #2196F3;
+}     
+input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #2196F3;
+}
+
+.select-wrapper {
+	display: inline-block;
+	margin-right: 0.5em;
+}
+
+.input-field .prefix.active {
+    color: #2196F3;
+}
+/* surcharge entete */
+@media only screen and (max-width: 992px)
+{
+	nav .brand-logo {
+	    left: 20%;
+	    -webkit-transform: translateX(-20%);
+	    transform: translateX(-20%);
+	}
+}
+
+/* surcharge style par défaut des formulaires */
+form p {
+    text-align: inherit;
+}
+
+p.col,
+form p.col {
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+/* surcharge slider pour témoignages */
+
+.slider .slides {
+	background:none;
+	border:none;
+}
+
+.slides li p {
+	margin-bottom: 2em;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #2196F3;
+}
+
+/*----- surcharge modal konektigxi -----*/
+	
+#konektigxi .modal-content {
+    padding: 1rem;
+}
+#konektigxi .modal-footer {
+    padding: 1rem;
+}
+#footer-konektigxi1 .btn-flat {
+    padding: 0 1rem;
+}
+
+/*----- surcharge onglets -----*/
+.stirpanelo.tabs  {
+    margin-top: 1rem;
+}
+
+/*----- surcharge collections -----*/
+secondary-content {
+    color: #2196F3;
+}
+.collection .collection-item:hover {
+    background-color: #E3F2FD;
+    cursor: pointer;
+}
+.collection .collection-item:active {
+    background-color: #2196F3;
+    color: #FFF;
+}
+/*----- collections pour asso locales -----*/
+.collection.local .collection-item .title {
+	font-weight: 500;
+}
+.collection.local .collection-item:hover, 
+.collection.local .collection-item:active {
+    background-color: inherit;
+    cursor: default;
+    color: inherit;
+}
+.collection.local .collection-item a {
+    cursor: pointer;
+}
+/*--------------------------------*/
+
+p {font-weight: 300;}
+p.chapo {font-size: 150%;}
+
+.btn-flat.small {
+	color: #78909B;
+	text-decoration: underline;
+	text-transform: none;
+	padding: 0;
+}
+.btn-flat.small:hover,
+.btn-flat.small:active {
+	color: #0299e6;
+}
+.btn-flat.small i {
+    margin: 0;
+}
+.hejmo h2,
+.informoj h2 {
+	color: #989490;
+	font-weight: 300;
+}
+div.col > p:first-child {
+	margin-top:0;
+}
+
+/* remarques et notes */
+.noto {
+	margin-top:2em;
+	font-size: 85%;
+}
+
+@media only screen and (min-width: 600px) {
+	#toast-container {
+		top: auto !important;
+		right: auto !important;
+		bottom: 60%;
+		left:30%;  
+	}
+}
+.toast {background-color: #e65100;}
+
+/* styles specifiques */
+.eo {color: #2196F3;}
+.noto strong {color: #2196F3;}
+.eta, .numero {font-size: 85%;}
+.tab {padding-left: 1em;}
+
+/* amélioration de l'affichage s12 */
+
+@media only screen and (max-width: 600px) {
+	.row + p.col.s12 {
+		margin-top: 2em;
+	}
+}
+
+/*---------------  cards ---------------*/
+.card {padding: 1rem;}
+
+/*------------ liste à puces ------------*/
+ul.listo li { 
+    padding-left: 1em; 
+    text-indent: -1em;
+}
+ul.sublisto {
+	margin-top: 0;
+	margin-left: 3em;
+	text-indent: -1em;
+}
+ul.sublisto li {
+}
+ul.listo li:before {
+    content: "•  ";
+    color: #989490; 
+}
+ul.sublisto li:before {
+    content: "• ";
+    color: #2196F3; 
+    padding-right: 0.5em;
+}
+
+ul.klarigo { 
+    padding-left: 1.5em;
+}
+ul.klarigo li {
+    text-indent: -1em;
+    margin-bottom: 0.5em;
+}
+ul.klarigo li:before {
+	font-family: 'Material Icons';
+	content: "texture";
+	-webkit-font-feature-settings: 'liga';
+	color: #2196F3;
+    padding-right: 1em;
+    font-size: 50%;
+}
+ol li {
+	    margin-bottom: 0.5em;
+}
+/*------------- collapsible ------------*/
+
+.collapsible-body{
+    padding: 0.5rem;
+}
+.collapsible-body p,
+.collapsible-body ul.listo {
+    padding: 0.5rem 2rem;
+}
+.collapsible-body ul.listo li {
+    padding-left: 2rem;
+    text-indent: inherit;
+}
+
+.collapsible-header i.material-icons {
+    -webkit-transition: -webkit-transform .4s;
+    -moz-transition: -moz-transform .4s;
+    -o-transition: -o-transform .4s;
+    -ms-transition: -ms-transform .4s;
+    transition: transform .4s;
+}
+.collapsible-header.active i.material-icons {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.collapsible-header.selected {
+	background-color: #E3F2FD;
+}
+
+/*---- surcharge typographie pour table protokolo -----*/
+
+#resultat_recherche_protokolo td, th {
+    padding: 0.25em 0.25em;
+}
+@media only screen and (min-width: 1200px) {
+	#resultat_recherche_protokolo td, th {
+    	font-size: 80%;
+	}
+}
+
+/*---- surcharge pour page Quoi de neuf -----*/
+
+#kionova li.collection-item:hover {
+    background-color: inherit;
+    cursor: default;
+}
+#kionova li.collection-header {
+    font-weight: 400;
+}
+#kionova li.collection-item p::before {
+	font-family: 'Material Icons';
+	-webkit-font-feature-settings: 'liga';
+	content: "grade";
+	font-size:70%;
+	color:#2196F3;
+	padding-right: 0.5em;
+}
+
+/****************************************/
+/*           blocs principaux           */
+/****************************************/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+ }
+#logo {
+	width:15%;
+	text-align:center;
+	font-family: 'Nothing You Could Do', cursive;
+	letter-spacing: -0.08em;
+}
+main {
+	align-self:auto;
+	flex: 1 0 auto;
+}
+
+footer {
+	flex: 0 1 auto;
+	padding:0.5rem 1rem;
+	margin-top:2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+/*********************************/
+/*           contenu             */
+/*********************************/
+
+article {
+	padding-right: 5%;
+	font-weight: 300;
+}
+article p {
+	font-weight: 300;
+	line-height: 160%;
+}
+
+aside {
+	padding-right: 5%;
+	margin-top: 6rem;
+}
+
+/********** témoignages ************/
+span.eta {font-size: 85%;}
+
+/********** drop-down uzanto *******/
+.dropdown-content li.uzanto {
+    cursor: default;
+    line-height: auto;
+    font-weight: 300;
+    font-size: 90%;
+    padding: 1em;
+    }
+.dropdown-content li.uzanto:hover {
+    background-color: inherit;
+}
+/********** progression dans le cours *******/
+
+#superrigardo {
+	margin: 0 0 0 15%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: baseline;
+}
+
+ul#lecionoj {
+	padding:0; margin: 0 0 0 1rem;
+}
+ul#lecionoj li {
+	display: inline-block;
+	list-style: none;
+	background-color: #FFF;
+	border: solid 1px #dedede;
+	font-size: 12px;
+	font-weight: normal;
+  	margin-right:1px;
+  	padding:0.25em 0.5em;
+  	margin-bottom: 0.25rem;
+}
+ul#lecionoj li.farita {
+	background-color: #9ccc65;
+	border-color: #9ccc65;
+}
+ul#lecionoj li.nuna {
+	background-color:#FFF;
+	border:1px solid #9ccc65;
+}
+ul#lecionoj li a {
+	display: block;
+	color: #4a4a4a;	
+	text-decoration: none;
+}
+ul#lecionoj li:hover {
+	background-color: #c5e1a5;
+	cursor: pointer;
+}
+ul#lecionoj li.farita a {
+	color: #FFF;
+}
+
+@media only screen and (max-width: 720px) {
+	#superrigardo {flex-direction: column;}
+	#superrigardo p {margin: 0.5em 0;}
+	ul#lecionoj {margin: 0;}
+}
+
+/********** sommaire de la leçon *******/
+
+ul#enhavtabelo {
+	margin:0;
+	list-style: none;
+}
+ul#enhavtabelo li {
+	line-height:2em;
+	font-weight: 300;
+	padding-left: 2rem;
+	text-indent: -1.5rem;
+	line-height: 130%;
+	margin-bottom: 0.5em;
+}
+@media only screen and (min-width: 993px) {
+	#enhavtabelo li {
+		font-size:85%;
+		line-height:1.8em;
+	}
+}
+ul#enhavtabelo li::before {
+	font-family: 'Material Icons';
+/*	content: "done";
+	color: transparent;
+*/}
+ul#enhavtabelo li.gramm::before {
+	font-family: 'Material Icons';
+	content: "description";
+	color: #999;
+	margin-right: 0.5rem;
+}
+ul#enhavtabelo li.vortaro::before {
+	font-family: 'Material Icons';
+	content: "spellcheck";
+	color: #999;
+	margin-right: 0.5rem;
+}
+ul#enhavtabelo li.exo::before {
+	font-family: 'Material Icons';
+	content: "mode_edit";
+	color: #999;
+	margin-right: 0.5rem;
+}
+ul#enhavtabelo li.qcm::before {
+	font-family: 'Material Icons';
+	content: "mode_edit";
+	color: #999;
+	margin-right: 0.5rem;
+}
+ul#enhavtabelo li.farita::before {
+	font-family: 'Material Icons';
+	content: "done";
+	color: #2196F3;
+	margin-right: 0.5rem;
+}
+
+ul#enhavtabelo li a {
+	color: #75706B;
+}
+ul#enhavtabelo li.farita a {
+	text-decoration: line-through;
+	text-decoration-color: #2196F6;
+}
+
+ul#enhavtabelo li a:hover {
+	color: #039be5;
+}
+ul#enhavtabelo li a:active {
+	color: #0277bd;
+}
+
+/********** vocabulaire de la leçon *******/
+table.vortaro {
+	width:90%;
+	margin:5% auto;
+	font-size:80%;
+}
+
+/********** progression dans la leçon *******/
+
+ul#progreso {
+	padding:0; margin: 0;
+}
+ul#progreso li {
+	display: inline-block;
+	list-style: none;
+	width: 30px;
+	height: 5px;
+	background-color: #dedede;
+	border:1px solid #dedede;
+	margin-right:3px;
+}
+
+ul#progreso li.farita {
+	background-color: #039be5;
+	border-color: #039be5;
+	text-decoration:line-through;
+}
+ul#progreso li.nuna {
+	background-color:#FFF;
+	border:1px solid #0299e6;
+}
+
+/********** corps de la leçon *******/
+
+#leciono-enhavo a { 
+	text-decoration: underline;
+}
+#leciono-enhavo a.btn { 
+	text-decoration: none;
+}
+#leciono-enhavo a:hover {color: #0d47a1}
+#leciono-enhavo a:active {color: #673ab7;}
+
+p.parto {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+p.parto:before {
+	font-family: 'Material Icons';
+	content: "texture";
+	-webkit-font-feature-settings: 'liga';
+	color: #2196F3;
+	padding-right: 0.5em;
+	vertical-align: middle;
+}
+p.renvoi {
+	margin-left: 2em;
+	font-size: 0.85em;
+}
+/********** indication de la durée *******/
+p.dauro {
+	color: #2196F3;
+	margin-bottom:1em;
+}
+p.dauro::before {
+	font-family: 'Material Icons';
+	content: "schedule";
+	font-size:120%;
+	color:#2196F3;
+	padding-right: 0.5em;
+	vertical-align:bottom;
+}
+#enhavtabelo .dauro {
+	font-style: italic;
+	color: #75706B;
+	font-size: 90%;
+}
+
+/********** liste de vocabulaire *******/
+.vortlisto {
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+.vortlisto p {
+	margin-bottom: 0;
+}
+.vortlisto i.material-icons {
+	vertical-align: text-bottom;
+	color: #2196F3;
+}
+.vortlisto i.material-icons:hover {
+	color: #6d4c41;
+}
+.vortlisto.bildetoj img {
+	border: 1px solid #ccc;
+}
+.vortlisto.bildetoj {
+	text-align: center;
+	font-size: 0.8rem;
+	color: #75706B;
+}
+.vortlisto.bildetoj .eo {
+	font-size: 1.1rem;
+	color: #000;
+}
+
+@media only screen and (max-width: 720px) {
+	.vortlisto div.col + div.col {
+	    margin-top: 1em;
+	}
+}
+
+a[type="audio/mp3"] i.material-icons {
+	vertical-align: text-bottom;
+}
+
+.klarigo p {
+	margin-left: 1em;
+}
+.klarigo p.parto {
+	margin-left: 0;
+}
+p.sekva {
+	margin-top: 0;
+	padding-top: 0;
+}
+/********** fin de la leçon *******/
+.notoj {
+	font-size: 90%;
+}
+.noto a {
+	color: #989490;
+}
+.noto a:hover,
+.noto a:active {
+	color: #75706B;
+}
+
+.ligoj {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top:0.5em;
+}
+.ligoj i {font-size: inherit;}
+#leciono-fino {margin-top: 2rem;}
+
+/********** vocabulaire / règle à retenir *******/
+fieldset.vortoj,
+fieldset.memoru {
+	border:2px double #2196F3;
+	padding:0 1em 1em 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+fieldset.vortoj legend,
+fieldset.memoru legend {
+	padding-left: 0.5em;	
+	padding-right: 1em;
+	color: #2196F3;
+}
+fieldset.vortoj legend:before {
+	font-family: 'Material Icons';
+	content: "spellcheck";
+	-webkit-font-feature-settings: 'liga';
+	color: #2196F3;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	vertical-align: middle;
+}
+fieldset.vortoj div.vortlisto,
+fieldset.memoru div.regulo {
+	border: none;
+	padding: 0;
+}
+fieldset.vortoj div.row,
+fieldset.memoru div.row {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+span.marque {
+	color: #9ccc65;
+}
+/********** exercices *******/
+fieldset.ekzerco,
+fieldset.sono {
+	border:2px dotted #64B5F6;
+	padding:0 1em 1em 1em;
+	margin-top: 1em;
+}
+
+fieldset.ekzerco + fieldset.ekzerco,
+fieldset.ekzerco + div.vortlisto {
+	margin-top: 1em;
+}
+	
+fieldset.ekzerco legend:before {
+	font-family: 'Material Icons';
+	content: "edit";
+	-webkit-font-feature-settings: 'liga';
+	color: #2196F3;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	vertical-align: middle;
+}
+fieldset.sono legend {
+	padding-left: 0.5em;	
+}
+fieldset.ekzerco legend,
+fieldset.sono legend {
+	padding-right: 1em;
+}
+.ekzemplo .input-field,
+.tasko .input-field {
+	margin-top: 0;
+	line-height: 100%;
+	margin-bottom: 1em;
+	display: inline-block;
+	width: auto;
+}
+.tasko .input-field {
+	font-weight: 400;
+}
+.tasko hr {
+	border:1px dashed #64B5F6;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+}
+[type="radio"]:checked+label:after {
+    background-color: #2196F3;
+    border: 2px solid #2196F3;
+}
+.ekzemplo {
+	background-color: rgba(221, 220, 218, 0.5);
+	padding: 0 0.5em 0.5em 0.5em;
+	margin-bottom: 1em;
+	margin-top: 0.5em;
+}
+p.nbvortoj {
+    color: #F44336;
+    font-size: 80%;
+    padding-top: 0;
+    margin-top: -1em;
+}
+
+/*********  encadré Pour en savoir plus **********/
+
+fieldset.sciipli {
+	border:2px double #828965;
+	padding:0 1em 1em 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+fieldset.sciipli legend {
+	padding-left: 0.5em;	
+	padding-right: 1em;
+	color: #828965;
+}
+fieldset.sciipli legend:before {
+	font-family: 'Material Icons';
+	content: "loupe";
+	-webkit-font-feature-settings: 'liga';
+	color: #828965;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	vertical-align: middle;
+}
+fieldset.sciipli div.row {
+	border: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+	font-size: 0.9em;
+}
+
+/********** exercices *******/
+.float-right {
+	float: right;
+	margin-left: 2%;
+}
+.w10 {width: 10%;}
+.w15 {width: 15%;}
+.w30 {width: 30%;}
+/*********************************/
+/*               QCM             */
+/*********************************/
+
+p.qcmerr {color:red;}
+input[type="radio"] + label span.qcmerr {text-decoration: line-through;}
+
+legend a {color: inherit; cursor: pointer;}
+
+#recapitulatif_qcm {
+	-webkit-transition: width 1s linear, background-color 1s linear;
+	transition: width 1s linear, background-color 1s linear;
+}
+.qcm label {
+	color: rgba(0,0,0,0.87);
+	margin-bottom: 0.5em;
+}
+/********** évaluation (fin de leçon) *******/
+
+#leciono-enketo {
+	margin-top: 2rem;
+}
+.rating {
+	text-align:left;
+	width:15em;
+	margin-bottom: 2em;
+}
+.rating input[type="range"] {
+    position: relative;
+    margin-left: 1em;
+}
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+input[type=range]::-webkit-slider-thumb,
+input[type=range]::-moz-slider-thumb,
+input[type=range]::-ms-thumb {
+    background-color: #2196F3;
+}
+input[type=range]:focus {
+    outline: none;
+}
+.rating input[type="range"]:after,
+.rating input[type="range"]:before {
+    position: absolute;
+    display:inline-block;
+    top: 0.5em;
+    color: #616161;
+}
+.rating input[type="range"]:before {
+    left:0;
+    content: attr(min);
+}
+.rating input[type="range"]:after {
+    right: 0;
+    content: attr(max);
+}
+input[type=range]+.thumb {
+    background-color: #2196F3;
+}
+input[type=range]+.thumb.active .value {
+	margin-left: 0px;
+	margin-top: 3px;
+	font-size: 14px;
+}
+/**************************************/
+/*        contenu des pages           */
+/**************************************/
+
+/******* home *******/
+span.ikurso {
+	font-family: 'Nothing You Could Do', cursive;
+}
+.hejmo #enkonduko h2 {
+	margin-top: 10rem;
+}
+.hejmo #enkonduko p {
+	font-weight: 300;
+	font-size: 120%;
+}
+
+.hejmo #niaj_kursoj,
+.hejmo #aliaj_kursoj {
+	margin-bottom: 5rem;
+}
+.hejmo #niaj_kursoj h2,
+.hejmo #aliaj_kursoj h2 {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+/******* informoj ******/
+
+.informoj h3 {	
+	color: #989491;
+	font-weight: 300;
+	font-size: 1.7em;
+}
+.informoj #enhavo {margin-top: 3rem;}
+.informoj #rimarko {margin-top: 3rem;}
+.informoj form {margin-top: 3rem;}
+.informoj .label {text-align: right;}
+
+/******* formulaires *******/
+
+/*--- surcharge materialize ---*/
+.modal .input-field{
+	margin-top: 3rem;
+}
+
+.modal .modal-footer {
+    height: 4em;
+    padding:1em;
+}
+
+/*-----------------------------*/
+
+.input-field .helpilo {
+	color: #666;
+	font-family: 'Nothing You Could Do', cursive;
+	margin-top:-0.8rem;
+}
+
+/* Style pour cacher le "helpilo" quand y'a un message d'erreur html5 */
+.input-field input.invalid ~ .hide-on-input-message, .input-field input.valid ~ .hide-on-input-message {
+  display: none;
+}
+
+/******* Gerda : dialogue ******/
+
+.dialogo p {
+}
+/*********************************/
+/*        page Mes élèves        */
+/*********************************/
+
+.collapsible-header span.badge {
+	color: #FFF;
+	right: auto;
+	border-radius: 4px;
+	font-size: 0.8rem;
+}
+#eleves .footer .btn {
+	margin-left: 1em;
+}
+/*********************************/
+/*        pied de page           */
+/*********************************/
+.submenuo {
+	align-self: flex-end;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.submenuo .ero {
+	font-weight: 300;
+	font-size: 80%;
+	margin: 0 1em;
+}
+.submenuo .ero a {
+	color: inherit;
+}
+.asocio {
+	align-self: center;
+	font-size: 80%;
+}
+
+/*********************************/
+/*         typographie           */
+/*********************************/
+
+.creditphoto {
+	font-size: 0.7rem!important;
+	margin-top: 0;
+}
+.legende-photo {
+	font-size: 0.8rem!important;
+	margin-top: 0;
+}
+.creditphoto a {
+	color: inherit;
+}
+.creditphoto a:hover, .creditphoto a:active {
+	color: inherit;
+	text-decoration: underline;
+}
+
+/*****************************************
+ * attestation
+ *****************************************/
+
+body.attestation {margin:10px;text-align:center}
+.attestation img {border:1px solid grey;}
+.attestation .outils {margin-top:15px;}
+.attestation .outils a.imprimer {margin-right:50px;}
+
+
+@media only screen and (max-width: 992px) {
+	article, aside {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.submenuo {align-self: center;}
+	.hejmo #enkonduko h2 {
+		margin-top: 2rem;
+	}
+
+}
+
+
+

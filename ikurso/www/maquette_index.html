@@ -35,6 +35,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
         <link rel="stylesheet" type="text/css" href="css/ikurso.css">
@@ -43,13 +44,14 @@
         <title>Hello World</title>
     </head>
     <body>
-        <nav>
-            <div class="nav-wrapper primaire">
-                <span class="brand-logo" id="logo">iKurso</span>
-            </div>
-        </nav>
 
-        <div class="app">
+<nav>
+  <div class="nav-wrapper primaire">
+    <span class="brand-logo" id="logo">iKurso</span>
+  </div>
+</nav>
+
+        <div class="app" id="app">
             <main>
             <div class="row">
                 <article class="col s12 m10 l7 offset-m1 offset-l1">
@@ -61,22 +63,21 @@
                             <p class="creditphoto primaire-texte">dessin : Robin Guinin, <a href="https://www.facebook.com/robin.guinin/">www.facebook.com/robin.guinin/</a></p>
                             
                         </center>
+                        <p>Vous pourrez découvrir ce qu’est la <b>langue internationale Espéranto</b>, l’apprendre en suivant notre cours, à votre rythme.</p>
 
-            <!--div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div-->
                     </section>
                 </article>
             </div>
             </main>
-            <footer align="center" id="footer">
+            
+            <footer align="center">
             <p><a href="" class="btn waves-effect waves-light blue" id="komenci">Commencer</a></p>
             </footer>
-        </div>
 
+        </div>
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

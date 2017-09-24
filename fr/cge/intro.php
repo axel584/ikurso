@@ -52,10 +52,10 @@ include "dlekkapo.inc.php"
 			
 			<h2>Note au sujet de la typographie</h2>
 			
-			<p class="parto">L’alphabet de l’espéranto comporter quelques lettre accentuées qui n’existent pas en français&nbsp;: <span class="eo">ĉ</span>, <span class="eo">ĝ</span>, <span class="eo">ĥ</span>, <span class="eo">ĵ</span>, <span class="eo">ŝ</span>, <span class="eo">ŭ</span>.</p>
+			<p class="parto">L’alphabet de l’espéranto comporte quelques lettres accentuées qui n’existent pas en français&nbsp;: <span class="eo">ĉ</span>, <span class="eo">ĝ</span>, <span class="eo">ĥ</span>, <span class="eo">ĵ</span>, <span class="eo">ŝ</span>, <span class="eo">ŭ</span>.</p>
 			<div class="float-right w25"><img class="responsive-img" src="<?=$vojo?>bildoj/clavier.png" /></div><p>Dans les exercices de ce cours, il vous suffira de taper la lettre suivie d’un <b>x</b> par exemple&nbsp;: cx, sx, ux… pour obtenir automatiquement la lettre accentuée correspondante.</p> 			
 			
-			<p>En dehors du cours, si vous souhaitez <b>écrire en espéranto</b> avec votre clavier, vous pourrez avez le choix entre différents outils qui vous permettront
+			<p>En dehors du cours, si vous souhaitez <b>écrire en espéranto</b> avec votre clavier, vous avez le choix entre différents outils qui vous permettront
 				de taper facilement les lettres accentuées de l’espéranto. Nous vous présentons ces différentes méthodes dans la page INFORMATIONS PRATIQUES&nbsp;: <a href="<?php echo $vojo;?>helpo.php?section=kielskribi">Comment écrire en espéranto&nbsp;?</a>.</p>
 			
 							

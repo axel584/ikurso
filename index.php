@@ -95,7 +95,7 @@ include "pagxkapo.inc.php";
 									<span class="eta col s4 m2 offset-s4 offset-m5 center-align"><em>Natha&euml;l</em></span>
 								</li>
 								<li class="row">
-									<p class="col s12">Ikurso est site exceptionnel. Sans doute parce que l’espéranto est également une langue exceptionnelle. Le cours <em>Gerda malaperis</em> est particulièrement bien structuré et complet.</p>
+									<p class="col s12">Ikurso est un site exceptionnel. Sans doute parce que l’espéranto est également une langue exceptionnelle. Le cours <em>Gerda malaperis</em> est particulièrement bien structuré et complet.</p>
 									<div class="circle responsive-img col s4 m3 l2 offset-s4 offset-m5 offset-l5 center-align">
 										<img src="<?=$vojo?>fr/cge/bildoj/lernantoj/Marko.jpg" class="circle responsive-img" alt="" />
 									</div>

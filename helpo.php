@@ -88,7 +88,7 @@ include "pagxkapo.inc.php";
 				
 				<p class="parto">Si vous avez terminé le cours en dix leçons, nous vous recommandons de suivre le cours <a href="https://ikurso.esperanto-france.org/fr/gerda/index.php"><em>Gerda malaperis</em></a>. Ce cours est basé sur un roman de Claude Piron spécifiquement destiné à vous apprendre progressivement à maîtriser l’espéranto parlé à partir d’une histoire captivante.<p>
 					
-				<p class="parto">Pour améliorer votre <b>expression orale</b>, vous pouvez vous inscrire au cours <a href="http://edukado.net/ekparolu/prezento">Ekparolu!</a> qui vous permettra de converser par Skype avec un tuteur. Nous vous recommandons de suivre ce cours lorsque cours lorsque vous aurez terminé le cours <em>Gerda malaperis</em>.</p>  
+				<p class="parto">Pour améliorer votre <b>expression orale</b>, vous pouvez vous inscrire au cours <a href="http://edukado.net/ekparolu/prezento">Ekparolu!</a> qui vous permettra de converser par Skype avec un tuteur. Nous vous recommandons de suivre ce cours lorsque vous aurez terminé le cours <em>Gerda malaperis</em>.</p>  
 				
 				<p class="parto"><a href="https://web.archive.org/web/20160314174609/http://bertilow.com/pmeg/">Plena Manlibro de Esperanto</a> est une <b>grammaire</b> complète de l’espéranto (en espéranto)</p>
 				
@@ -124,7 +124,7 @@ frameborder="0" allowfullscreen></iframe></p>
 					<img class="responsive-img" src="https://esperanto-france.org/local/cache-vignettes/L142xH200/arton792-aa561.jpg?1502203504" /></a>
 			</div>
 			<p class="parto">Parmi les très nombreuses revues, les plus connues sont celles des associations internationales&nbsp;: 
-				<a href="http://www.uea.org/revuoj/esperanto"><i>Esperanto</i></a>, éditée par l’association mondiale d’espéranto, 
+				la revue <a href="http://www.uea.org/revuoj/esperanto"><i>Esperanto</i></a>, éditée par l’association mondiale d’espéranto, 
 				tout à fait abordable par les nouveaux apprenants de la langue.<br> 
 				Dans le même esprit, citons également <a href="https://heroldodeesperanto.com/"><i>Heroldo de Esperanto</i></a> et <a href="http://esperanto-ondo.ru/"><i>La Ondo de Esperanto</i></a>.</p>
 				<p>Certains magazines s’adressent tout particulièrement aux débutants en proposant des textes rédigés dans un style «&nbsp;facile&nbsp;», voire «&nbsp; très facile&nbsp;». C’est le cas de <a href="http://tejo.org/fr/revuo-kontakto/"><i>Kontakto</i></a>. </p>
@@ -171,7 +171,7 @@ frameborder="0" allowfullscreen></iframe></p>
 				
 				<h2>Communiquer, s’informer, échanger grâce aux réseaux sociaux</h2>
 				
-				<p class="parto">Vous pouvez <b>discuter</b> avec d’autres espérantophones, grâce à des applications comme <a href="https://amikumu.com/fr/">Amikumu</a>, ou encore <a href="https://telegramo.org/">Telegram</a>. Il existe sur Telegram différent groupes en espéranto, dont vous trouverez la liste sur <a href="https://www.telegramo.org/">telegramo.org</a>. Vous pourrez également discuter en français ou en espéranto dans le groupe <a href="https://t.me/joinchat/BnEs0z8UBiqWLftwyd_5wA">français – Esperanto</a>.</p>
+				<p class="parto">Vous pouvez <b>discuter</b> avec d’autres espérantophones, grâce à des applications comme <a href="https://amikumu.com/fr/">Amikumu</a>, ou encore <a href="https://telegramo.org/">Telegram</a>. Il existe sur Telegram différents groupes en espéranto, dont vous trouverez la liste sur <a href="https://www.telegramo.org/">telegramo.org</a>. Vous pourrez également discuter en français ou en espéranto dans le groupe <a href="https://t.me/joinchat/BnEs0z8UBiqWLftwyd_5wA">français – Esperanto</a>.</p>
 				
 				<div class="float-right w15"><img class="responsive-img" src="<?=$vojo?>bildoj/hellotalk.gif" /></div><p class="parto">Certaines applications permettant les <b>échanges linguistiques</b> en diverses langues proposent aussi l’espéranto. C’est le cas par exemple de <a href="https://www.hellolingo.com/">Hellolingo</a>, de <a href="https://www.hellotalk.com/">HelloTalk</a>.<br>
 				L’espéranto fait aussi partie des langues praticables sur <a href="https://hinative.com/fr-FR">HiNative</a>, qui rassemble une communauté d’étudiants de langues diverses et permet de poser des questions à des locuteurs parlant couramment la langue que vous apprenez.</p> 

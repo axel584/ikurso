@@ -346,6 +346,7 @@ include "dlekkapo.inc.php";
 
 		<div class="noto">
 			<p><b>REMARQUE</b> : On peut aussi utiliser les chiffres pour écrire les nombres ordinaux. On fait alors généralement suivre les chiffres de <b>-a</b>. Par exemple : <span class="eo">1-a</span>, <span class="eo">20-a</span>, <span class="eo">71-a</span>.</p>
+		</div>
 			
 		<p class="parto">Pour poser une question et demander <em>combien de…</em>, on utilise l’interrogatif <b>kiom da</b>.</p>
 

@@ -337,6 +337,31 @@ ol li {
 	padding-right: 0.5em;
 }
 
+/*--- surcharge menu hamburger ---*/
+.side-nav {
+	width: auto;
+	padding-left: 1rem;
+	color: #554E47;
+}
+.side-nav li {
+	line-height: 2.5rem;
+}
+.side-nav li a {
+	color: #554E47;
+}
+.side-nav li.entete {
+	font-weight: 700;
+	margin-top: 1rem;
+}
+.side-nav li.retrait {
+    padding: 0 1rem;
+}
+.side-nav li a {
+	color: #554E47;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0;
+}
 /****************************************/
 /*           blocs principaux           */
 /****************************************/

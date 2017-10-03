@@ -90,11 +90,11 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			<li><a href="<?php echo $vojo;?>fr/elsxutoj.php" class="primaire-texte moyen">Téléchargements</a></li>
 		</ul>
 		<ul id="menu_aide" class="dropdown-content">
-			<li><a href="<?php echo $vojo;?>helpo.php?section=enskribo" class="primaire-texte moyen">Comment s'inscrire</a></li>
-			<li><a href="<?php echo $vojo;?>helpo.php?section=kurso" class="primaire-texte moyen">Comment suivre le cours</a></li>
-			<li><a href="<?php echo $vojo;?>helpo.php?section=kajposte" class="primaire-texte moyen">Que faire après le cours ?</a></li>
-			<li><a href="<?php echo $vojo;?>helpo.php?section=kielskribi" class="primaire-texte moyen">Comment écrire en espéranto</a></li>
-			<li><a href="<?php echo $vojo;?>helpo.php?section=korektanto" class="primaire-texte moyen">Comment devenir correcteur</a></li>
+			<li><a href="<?php echo $vojo;?>helpo.php?section=enskribo" class="primaire-texte moyen">Comment s’inscrire&nbsp;?</a></li>
+			<li><a href="<?php echo $vojo;?>helpo.php?section=kurso" class="primaire-texte moyen">Comment suivre le cours&nbsp;?</a></li>
+			<li><a href="<?php echo $vojo;?>helpo.php?section=kajposte" class="primaire-texte moyen">Que faire après le cours&nbsp;?</a></li>
+			<li><a href="<?php echo $vojo;?>helpo.php?section=kielskribi" class="primaire-texte moyen">Comment écrire en espéranto&nbsp;?</a></li>
+			<li><a href="<?php echo $vojo;?>helpo.php?section=korektanto" class="primaire-texte moyen">Comment devenir correcteur&nbsp;?</a></li>
 		</ul>
 
 		<!-- fenêtre modale connexion -->
@@ -256,23 +256,22 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 					<!-- hamburger menu -->
 					<div class="side-nav" id="nav-mobile">
 						<ul>
-							<li class="primaire-texte moyen"><a href="<?php echo $vojo;?>kionova.php">QUOI DE NEUF ?</a></li>
+							<li class="entete">COURS EN LIGNE</li>
+							<li class="retrait"><a href="<?php echo $vojo;?>fr/cge/intro.php">Cours en 10 leçons</a></li>
+							<li class="retrait"><a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a></li>
 							<li class="divider"></li>
-							<li class="primaire-texte moyen">COURS EN LIGNE</li>
-							<li><ul>
-								<li><a href="<?php echo $vojo;?>fr/cge/intro.php">Cours en 10 leçons</a></li>
-								<li><a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a></li>
-								<li class="divider"></li>
-								<li><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">Téléchargements</a></li>
-							</ul></li>
+							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">Téléchargements</a></li>
 							<li class="divider"></li>
-							<li class="primaire-texte moyen"><a href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></li>
+							<li class="entete">INFORMATIONS PRATIQUES</li>
+							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=enskribo">Comment s’inscrire&nbsp;?</a></li>
+							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kurso">Comment suivre le cours&nbsp;?</a></li>
+							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kajposte">Que faire après le cours&nbsp;?</a></li>
+							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kielskribi">Comment écrire en espéranto&nbsp;?</a></li>
+							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=korektanto">Comment devenir correcteur&nbsp;?</a></li>
 							<li class="divider"></li>
-							<li class="primaire-texte moyen">INFORMATIONS PRATIQUES</li>
-							<li><ul>
-								<li><a href="<?php echo $vojo;?>fr/intro.php?temo=enskribo">Comment s'inscrire</a></li>
-								<li><a href="<?php echo $vojo;?>helpo.php">Foire aux questions</a></li>
-							</ul></li>
+							<li><a href="<?php echo $vojo;?>kionova.php">Quoi de neuf&nbsp;?</a></li>
+							<li class="divider"></li>
+							<li><a href="<?php echo $vojo;?>butiko.php">Boutique</a></li>
 						</ul>
 					</div>
 					<a href="#!" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>

@@ -23,10 +23,10 @@ include "dlekkapo.inc.php";
 			<p class="col s4">Sujet<br/>Adjectif Nom</p>
 			<p class="col s2">Adverbe</p>
 			<p class="col s2">Verbe</p>
-			<p class="col s4">Complément d’Objet Direct<br>Adjectif Nom</p>
+			<p class="col s4">Complément d’objet direct<br>Adjectif Nom</p>
 		</div>
 		<div class="row">
-			<p class="col s4">____-a   ____-o</p>
+			<p class="col s4">____-a   ____-o<br>____-aj   ____-oj</p>
 			<p class="col s2">____-e</p>
 			<p class="col s2">____-is<br>____-as<br>____-os</p>
 			<p class="col s4">____-an   ____-on<br>____-ajn  ____-ojn</p>

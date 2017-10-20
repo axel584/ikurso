@@ -167,11 +167,11 @@ include "gerdakapo.inc.php";
 		?>
 
 			<?php 
-				getEkzercon(76,$persono_id);
+				getEkzercon(77,$persono_id);
 			?>
 		
 			<?php 
-				getEkzercon(77,$persono_id);
+				getEkzercon(78,$persono_id);
 			?>
 
 

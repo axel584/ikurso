@@ -4,8 +4,6 @@ $vorto_id=isset($_GET["vorto_id"])?$_GET["vorto_id"]:"";
 $persono_id=isset($_GET["persono_id"])?$_GET["persono_id"]:"";
 $lernantaRespondo=isset($_GET["respondo"])?htmlspecialchars($_GET["respondo"],ENT_QUOTES):"";
 
-echo $lernantaRespondo;
-
 function getInterval($nombrilo) {
 	if ($nombrilo==1) {
 		return 1;

@@ -282,6 +282,48 @@ frameborder="0" allowfullscreen></iframe></p>
 
 			<?php 
 				}
+				if ($section=="kielhelpi") { 
+			?>
+
+			<h1>Comment nous aider ?</h1>
+			
+			<section id="kielhelpi" class="scrollspy">
+			
+				<p>Nos activités, ponctuelles ou permanentes, sont essentiellement assurées par des bénévoles, au siège comme partout en France. 
+					Les tâches sont variées et peuvent correspondre à des centres d’intérêt très différents. 
+					Vous aussi, vous pouvez participer&nbsp;! Il suffit de nous contacter sur la page <a href="reago.php">contact</a>.</p>
+					
+				<h2>Correction des cours internet</h2>
+				
+				<p class="parto">Les correcteurs des cours sont des bénévoles. Certains suivent 1, 2 ou 3 élèves, d’autres s’occupent de plusieurs dizaines d’élèves.
+					Quel que soit le temps que vous voulez y consacrer, vous pourrez aider. Un grand nombre de correcteurs ont commencé après 
+					avoir fini le cours <em>Gerda Malaperis</em>. Il est important d’avoir un bon relationnel, de la patience et de la curiosité.</p>
+				<p>Pour en savoir plus, vous pourrez consulter la page <a href="helpo.php?section=korektanto">Comment devenir correcteur ?</a></p>
+	
+				<h2>Développements informatiques</h2>
+	
+				<p class="parto">Les mots PHP, html, css, MySQL vous sont familiers&nbsp;? Nous recherchons toujours de l’aide pour améliorer les cours internet. 
+					Nous avons un grand nombre d’idées de fonctionnalités à mettre en place et malheureusement pas assez de temps pour tout faire.</p>
+	
+				<h2>Traduction</h2>
+				<p class="parto">Il existe beaucoup de projets qui consistent à traduire des documents du français à l’espéranto et nous recherchons des gens pour nous aider. Vous ne serez pas seul, mais il est indispensable d'avoir de bonnes bases et beaucoup de patience.</p>
+	
+				<h2>Esperanto-aktiv’</h2>
+			
+				<p class="parto">L’association Espéranto-France envoie tous les mois une lettre d’information mensuelle en français qui s’appelle Esperanto-Aktiv’. 
+				Pour cette lettre, nous avons besoin de 3 profils différents :</p>
+				<ul class="sublisto">
+					<li><em>Article «découverte»</em> : vous rédigerez un article tous les mois (ou une fois de temps en temps) sur un sujet donné. 
+					Ou bien les questions d’une interview. Nous avons besoin de gens curieux qui sont capables de rédiger facilement en français.</li>
+					<li><em>Calendrier</em> : vous rassemblez des informations trouvées à droite à gauche sur différents sites Internet. 
+					Un travail simple, mais répétitif pour lequel nous avons besoin de quelqu’un de rigoureux.</li>
+					<li><em>Le livre du mois</em> : vous rédigerez un article en français sur un livre en espéranto que vous aurez lu. 
+					Nous recherchons des passionnés de lecture (en espéranto).</li>
+				</ul>
+			</section>
+
+			<?php 
+				}
 			?>
 
 		</article>
@@ -298,6 +340,7 @@ frameborder="0" allowfullscreen></iframe></p>
 								<li><a href="helpo.php?section=kurso">Comment suivre le cours ?</a></li>
 								<li><a href="helpo.php?section=kajposte">Que faire après le cours ?</a></li>
 								<li><a href="helpo.php?section=kielskribi">Comment écrire en espéranto ?</a></li>
+								<li><a href="helpo.php?section=kielhelpi">Comment nous aider ?</a></li>
 								<li><a href="helpo.php?section=korektanto">Comment devenir correcteur ?</a></li>
 							</ul>
 						</div>

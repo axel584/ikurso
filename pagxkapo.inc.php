@@ -94,6 +94,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			<li><a href="<?php echo $vojo;?>helpo.php?section=kurso" class="primaire-texte moyen">Comment suivre le cours&nbsp;?</a></li>
 			<li><a href="<?php echo $vojo;?>helpo.php?section=kajposte" class="primaire-texte moyen">Que faire après le cours&nbsp;?</a></li>
 			<li><a href="<?php echo $vojo;?>helpo.php?section=kielskribi" class="primaire-texte moyen">Comment écrire en espéranto&nbsp;?</a></li>
+			<li><a href="<?php echo $vojo;?>helpo.php?section=kielhelpi" class="primaire-texte moyen">Comment nous aider&nbsp;?</a></li>
 			<li><a href="<?php echo $vojo;?>helpo.php?section=korektanto" class="primaire-texte moyen">Comment devenir correcteur&nbsp;?</a></li>
 		</ul>
 
@@ -267,6 +268,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kurso">Comment suivre le cours&nbsp;?</a></li>
 							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kajposte">Que faire après le cours&nbsp;?</a></li>
 							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kielskribi">Comment écrire en espéranto&nbsp;?</a></li>
+							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kielhelpi">Comment nous aider&nbsp;?</a></li>
 							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=korektanto">Comment devenir correcteur&nbsp;?</a></li>
 							<li class="divider"></li>
 							<li><a href="<?php echo $vojo;?>kionova.php">Quoi de neuf&nbsp;?</a></li>

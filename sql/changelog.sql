@@ -2115,3 +2115,9 @@ ALTER TABLE  `lecioneroj` ADD  `android` BOOL NULL ;
 
 -- Modif nom de la page sur les revues #
 UPDATE `lecioneroj` SET `titolo` = 'Les revues en espéranto', `dauxro` = '10' WHERE `leciono_id` = 70 AND `ordo` = 7;
+
+-- Passage en V18
+-- ajout des tables pour le QCM (pour mettre dans Android)
+CREATE TABLE `qcm` ( `id` INT NOT NULL AUTO_INCREMENT , `lecionero_id` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+CREATE TABLE `ikurso`.`qcm_demando` ( `id` INT NOT NULL AUTO_INCREMENT , `qcm_id` INT NOT NULL , `bildo` VARCHAR(250) NOT NULL , `url` VARCHAR(250) NOT NULL , `auxtoro` VARCHAR(100) NOT NULL , `respondo` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+CREATE TABLE `ikurso`.`qcm_propono` ( `id` INT NOT NULL , `qcm_demando_id` INT NOT NULL , `ordo` INT NOT NULL , `propono` VARCHAR(250) NOT NULL , `indikilo` VARCHAR(250) NOT NULL ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;

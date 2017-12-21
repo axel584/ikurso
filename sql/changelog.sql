@@ -2115,3 +2115,324 @@ ALTER TABLE  `lecioneroj` ADD  `android` BOOL NULL ;
 
 -- Modif nom de la page sur les revues #
 UPDATE `lecioneroj` SET `titolo` = 'Les revues en espéranto', `dauxro` = '10' WHERE `leciono_id` = 70 AND `ordo` = 7;
+
+-- Passage en V18
+-- ajout des tables pour le QCM (pour mettre dans Android)
+CREATE TABLE `qcm` ( `id` INT NOT NULL AUTO_INCREMENT , `lecionero_id` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+CREATE TABLE `qcm_demando` ( `id` INT NOT NULL AUTO_INCREMENT , `qcm_id` INT NOT NULL ,`ordo` INT NOT NULL, `bildo` VARCHAR(250) NULL , `url` VARCHAR(250) NULL , `auxtoro` VARCHAR(100) NULL, `demando` VARCHAR(250) NULL , `respondo` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+CREATE TABLE `qcm_propono` ( `id` INT NOT NULL AUTO_INCREMENT, `qcm_demando_id` INT NOT NULL , `ordo` INT NOT NULL , `propono` VARCHAR(250) NOT NULL , `indikilo` VARCHAR(250) NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+
+-- QCM section 1.8 "qui est est ?"
+INSERT INTO `qcm` (`id`, `lecionero_id`) VALUES (NULL, '253');
+SET @last_id_in_qcm = LAST_INSERT_ID();
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`,`ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 1, NULL, NULL, NULL, 'En kiu filmo estas Aleks ?', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'filmo 1', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'filmo 2', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'filmo 3', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'filmo 4', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 5, 'filmo 5', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 2 , NULL, NULL, NULL, 'En kiu filmo estas Joanne ?', 1);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'filmo 1', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'filmo 2', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'filmo 3', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'filmo 4', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 5, 'filmo 5', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 3 , NULL, NULL, NULL, 'En kiu filmo estas Tran Hoan ?', 4);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'filmo 1', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'filmo 2', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'filmo 3', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'filmo 4', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 5, 'filmo 5', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 4 , NULL, NULL, NULL, 'Kiu loĝas en Brazilo ?', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'Aleks', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'Allan', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'Anna Maria', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'Joanne', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 5, 'Tran Hoan', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 5 , NULL, NULL, NULL, 'Kiu loĝas en Pollando ?', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'Aleks', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'Allan', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'Anna Maria', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'Joanne', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 5, 'Tran Hoan', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 6 , NULL, NULL, NULL, 'Kiu loĝas en Vjetnamio ?', 5);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'Aleks', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'Allan', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'Anna Maria', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'Joanne', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 5, 'Tran Hoan', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 7 , NULL, NULL, NULL, 'Kiu estas desegnisto ?', 4);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'Aleks', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'Allan', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'Anna Maria', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'Joanne', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 5, 'Tran Hoan', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 8 , NULL, NULL, NULL, 'Kiu estas psikologo ?', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'Aleks', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'Allan', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'Anna Maria', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'Joanne', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 5, 'Tran Hoan', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 9 , NULL, NULL, NULL, 'Kiu estas studento ?', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'Aleks', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'Allan', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'Anna Maria', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'Joanne', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 5, 'Tran Hoan', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 10 , NULL, NULL, NULL, 'Kie loĝas la instruisto ?', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'Aŭstralio', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'Brazilo', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'Francio', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'Pollando', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 5, 'Vjetnamio', NULL);
+
+-- QCM 1.12 
+INSERT INTO `qcm` (`id`, `lecionero_id`) VALUES (NULL, '7');
+SET @last_id_in_qcm = LAST_INSERT_ID();
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 1 , NULL, NULL, NULL, 'Combien de syllabes y a-t-il dans ''viaj kukoj'' ?', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, '3', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, '4', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, '5', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, '6', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 2 , NULL, NULL, NULL, 'Quelle est la place de l’accent tonique ?', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'sur la dernière voyelle', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'sur l’avant-dernière syllabe', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'sur la dernière syllabe', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'sur la première voyelle', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 3 , NULL, NULL, NULL, 'Comment se prononce la lettre ''ĝ'' ?', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'comme le ''g'' de ''Alger''', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'comme le ''g'' de ''Lagos''', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'comme le ''dj'' de ''Djibouti''', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'aucun de ceux-ci', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 4 , NULL, NULL, NULL, 'Comment écrit-on en espéranto le son ''ch'' du mot français ''chat'' ?', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'ch', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'ŝ', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'ce son n’existe pas en espéranto', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'sch', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 5 , NULL, NULL, NULL, 'Comment écrit-on le son ''u'' qui apparaît dans ''tutu'' en français ?', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'u', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'y', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'il n''existe pas en espéranto', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, '&uuml;', NULL);
+
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 6 , NULL, NULL, NULL, 'Quel est le pronom de 3<sup>e</sup> personne féminin singulier ?', 4);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'mi', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'ili', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'ĝi', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'ŝi', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 7 , NULL, NULL, NULL, 'Quelle est la terminaison caractéristique de l’infinitif ?', 1);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, '-i', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, '-is', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, '-ar', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, '-j', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 8 , NULL, NULL, NULL, 'Quelle est la terminaison caractéristique de l’adjectif ?', 4);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, '-as', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, '-o', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, '-j', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, '-a', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 9 , NULL, NULL, NULL, 'Quelle est la terminaison caractéristique du passé ?', 4);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, '-i', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, '-j', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, '-as', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, '-is', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 10 , NULL, NULL, NULL, 'Quelle est la terminaison caractéristique du nom ?', 1);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, '-o', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, '-os', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'cela dépend du genre', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, '-a', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 11 , NULL, NULL, NULL, 'Comment dit-on ''du thé chaud'' ?', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'la varmo tea', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'varma teo', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'varmo teo', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'la varma teo', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 12 , NULL, NULL, NULL, 'Comment dit-on ''de bons garçons'' ?', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'bona knaboj', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'la bonaj knaboj', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'bonaj knaboj', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'bonoj knaboj', NULL);
+
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 13 , NULL, NULL, NULL, 'Comment dit-on ''mes fils'' ?', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'mia filioj', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'miaj filoj', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'miaj filioj', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'mia filoj', NULL);
+
+
+-- QCM 2.1 : avec images
+INSERT INTO `qcm` (`id`, `lecionero_id`) VALUES (NULL, '218');
+SET @last_id_in_qcm = LAST_INSERT_ID();
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 1 , 'img/img-02-01.jpg', 'http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot', 'Denis Chabot', NULL, 1);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'La kafo estas varma', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'La cafeo estas varma', 'attention, la lettre c se prononce ts');
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'La kafo estas ĉauda', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 2 , 'img/img-02-02.jpg', 'http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot', 'Denis Chabot', NULL, 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'La biskivtoj estas en pano', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'La panoj estas en korbo', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'La paneoj estas sekaj', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 3 , 'img/img-02-03.jpg', 'http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Katherine%20Lissitsa', 'Katherine Lissitsa', NULL, 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'La filo estas kun birdoj', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'Patro estas kun birdoj', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'La knabino estas kun birdoj', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 4 , 'img/img-02-04.jpg', 'http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot', 'Denis Chabot', NULL, 1);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'La knabo lernas', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'La patro estas instruisto', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'La knabo estas sana kaj bona filo', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 5 , 'img/img-02-05.jpg', 'http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Marcel+Labont%E9', 'Marcel Labonté', NULL, 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'Bela filo estas mia instruisto', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'Bela virino estas ilia instruistino', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'Instruisto estas mia', NULL);
+
+
+-- QCM 2.3 - accusatif et COD
+INSERT INTO `qcm` (`id`, `lecionero_id`) VALUES (NULL, '10');
+SET @last_id_in_qcm = LAST_INSERT_ID();
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 1 , NULL, NULL, NULL , 'Il mange du poisson.', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'il', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'du poisson', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'il n’y a pas besoin d’accusatif', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 2 , NULL, NULL, NULL , 'Les enfants apprennent leurs leçons.', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'les enfants', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'leurs leçons', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'il n’y a pas besoin d’accusatif', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 3 , NULL, NULL, NULL , 'Mon frère est informaticien.', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'mon frère', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'informaticien', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'il n’y a pas besoin d’accusatif', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 4 , NULL, NULL, NULL , 'Mes parents mangent les restes d’hier soir.', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'mes parents', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'les restes', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'les restes d’hier soir', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 4, 'il n’y a pas besoin d’accusatif', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 5 , NULL, NULL, NULL , 'Il promène le chien.', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'il', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'le chien', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'il n’y a pas besoin d’accusatif', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 6 , NULL, NULL, NULL , 'Il se promène le matin.', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'il', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'le matin', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'il n’y a pas besoin d’accusatif', NULL);
+
+
+-- QCM 2.13
+INSERT INTO `qcm` (`id`, `lecionero_id`) VALUES (NULL, '18');
+SET @last_id_in_qcm = LAST_INSERT_ID();
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 1 , NULL, NULL, NULL , 'Que signifient respectivement ''mala'', ''malbona'', ''malsana'' ?', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'mal, mauvais, malade', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'mauvais, mauvais, malade', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'contraire, mauvais, malade', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 2 , NULL, NULL, NULL , 'Que signifie ''malbelaj virinoj'' ?', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'des hommes laids', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'de belles femmes', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'des femmes laides', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 3 , NULL, NULL, NULL , 'Quel est le féminin pluriel de ''mia granda amiko'' ?', 1);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'miaj grandaj amikinoj', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'mia granda amikinoj', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'miaj grandinaj amikinoj', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 4 , NULL, NULL, NULL , 'Traduisez ''la boutique est vieille''', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'la butiko estas malbela', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'la butiko estas malnovan', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'la butiko estas malnova', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 5 , NULL, NULL, NULL , 'Traduisez ''je ne bois pas d’eau''',2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'mi maltrinkas akvon', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'mi ne trinkas akvon', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'mi trinkas ne akvon', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 6 , NULL, NULL, NULL , 'Traduisez ''j’ai oublié la limonade''', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'mi petis limonadon', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'mi havas forgesi la limonadon', 'Attention, le verbe ''havi'' n''est pas un auxiliaire !');
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'mi forgesis la limonadon', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 7 , NULL, NULL, NULL , 'Quel est le complément d’objet direct dans ''mon frère boira de l’eau lundi'' ?', 2);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'mon frère', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'de l’eau', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'lundi', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 8 , NULL, NULL, NULL , 'Quel est le complément d’objet direct dans ''que boira mon frère lundi'' ?', 1);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'que', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'mon frère', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'lundi', NULL);
+
+INSERT INTO `qcm_demando` (`id`, `qcm_id`, `ordo`, `bildo`, `url`, `auxtoro`, `demando`, `respondo`) VALUES (NULL, @last_id_in_qcm, 9 , NULL, NULL, NULL , 'Quelle est la fonction de ''médecin'' dans ''tu seras médecin'' ?', 3);
+SET @last_id_in_qcm_demando = LAST_INSERT_ID();
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 1, 'sujet', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'complément d’objet direct', NULL);
+INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'attribut du sujet', NULL);
+

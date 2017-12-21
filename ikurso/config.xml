@@ -13,7 +13,11 @@
     <allow-intent href="https://*/*" />
     <allow-intent href="mailto:*" />
     <platform name="android">
-        <allow-intent href="market:*" />
+       <allow-intent href="market:*" />
+       <icon src="res/android/ldpi.png" density="ldpi" />
+       <icon src="res/android/mdpi.png" density="mdpi" />
+       <icon src="res/android/hdpi.png" density="hdpi" />
+       <icon src="res/android/xhdpi.png" density="xhdpi" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />

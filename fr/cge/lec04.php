@@ -470,7 +470,7 @@ include "dlekkapo.inc.php";
 			<div class="vortlisto row">
 				<p><span class="eo">Ili venos la deka<b>n</b> de aprilo.</span> : Ils viendront le 10 avril.</p>
 				<p><span class="eo">La dua<b>n</b> de julio, mi edziĝos. </span> : Le 2 juillet, je me marierai.</p>
-				<p><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2017</span> : Paris, le 15 décembre 1017 (par exemple au début d’une lettre)</p>
+				<p><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2018</span> : Paris, le 15 décembre 2018 (par exemple au début d’une lettre)</p>
 			</div>
 				
 			<p class="parto">On peut utiliser également la forme adverbiale pour les jours et les mois.</p>

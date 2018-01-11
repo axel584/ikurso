@@ -491,7 +491,7 @@ QCM_bildoj(
 		
 		<p class="parto"><b>Kiel? Tiel!</b></p>
 		
-		<p>Comme dans l’exemple ci-dessus, <b>kiel</b> permet d’interroger sur la manière d’être ou la manière de faire quelque chose. Vous vous souvenez peut-être que dans la leçon précédente (<a href="lec01.php?section=10">section 1.10</a>), nous vous avions présenté cette phrase pour demander comment dire un certain mot en espéranto&nbsp;:<br><span class="eo">Kiel oni diras … en Esperanto?</span> : Comment dit-on … en espéranto&nbsp;?</p>
+		<p>Comme dans l’exemple ci-dessus, <b>kiel</b> permet d’interroger sur la manière d’être ou la manière de faire quelque chose. Vous vous souvenez peut-être que dans la leçon précédente (<a href="lec01.php?section=11">section 1.11</a>), nous vous avions présenté cette phrase pour demander comment dire un certain mot en espéranto&nbsp;:<br><span class="eo">Kiel oni diras … en Esperanto?</span> : Comment dit-on … en espéranto&nbsp;?</p>
 		
 		<p>À une question commençant par <b>kiel</b> on peut répondre par exemple en utilisant <b>tiel</b>.
 

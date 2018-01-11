@@ -3,6 +3,8 @@ include "../util.php";
 $vorto_id=isset($_GET["vorto_id"])?$_GET["vorto_id"]:"";
 $persono_id=isset($_GET["persono_id"])?$_GET["persono_id"]:"";
 $lernantaRespondo=isset($_GET["respondo"])?htmlspecialchars($_GET["respondo"],ENT_QUOTES):"";
+$lernantaRespondo = mb_ereg_replace('\xc2\xa0',' ',$lernantaRespondo); // pour retirer les espaces insécables (#774)
+
 
 function getInterval($nombrilo) {
 	if ($nombrilo==1) {
@@ -31,6 +33,7 @@ function kontroliVorton($lernantaRespondo,$bonaRespondo) {
 		return kontroliVorton($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliVorton($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
 	} else {
 		$trans = array("." => "", "," => "", "'" => "","!" => "","?" => ""); // liste des caractères à supprimer pour la comparaison
+
 		$bonaRespondo = trim(strtr($bonaRespondo, $trans));
 		$lernantaRespondo = trim(strtr($lernantaRespondo,$trans));
 		//echo "bona respondo : ".strtolower(konvX($bonaRespondo))."<br/>";

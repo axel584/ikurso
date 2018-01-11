@@ -260,8 +260,8 @@ include "gerdakapo.inc.php";
 			<ol>
 				<li><span class="eo">Ŝi vidis sian kuraciston</span> : kiu vidis ? — ŝi. La kuraciston de
 				kiu ? — de ŝi (de tiu, kiu vidis).<br>
-				<span class="eo">Eniri en ŝian cambron</span> : kiu eniris ? — ne ŝi, sed la kuracisto. 
-				En la cambron de kiu ? — ne de la kuracisto (ne de tiu, kiu eniris), sed
+				<span class="eo">Eniri en ŝian ĉambron</span> : kiu eniris ? — ne ŝi, sed la kuracisto. 
+				En la ĉambron de kiu ? — ne de la kuracisto (ne de tiu, kiu eniris), sed
 				de ŝi. Se vi dirus: «Ŝi vidis la kuraciston eniri en sian ĉambron»,
 				tio volus diri, ke ŝi vidis la kuraciston eniri en la ĉambron de la kuracisto.</li>
 			</ol>

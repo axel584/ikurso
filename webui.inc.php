@@ -430,7 +430,7 @@ function getEkzercon($id,$persono_id) {
 		echo "<p class='eo eta'>Plusieurs réponses sont possibles. Si vous indiquez l'une des bonnes réponses, elle sera automatiquement soulignée en vert.<br/>Si la réponse n'est pas soulignée, cela ne veut pas dire qu'elle soit incorrecte, mais simplement que le système n'a pas pu l'analyser. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>\n";
 		$styleKorektebla=" korektebla";
 	} else {
-		echo "<p class='eo eta'>Cette exercice ne peut pas être corrigé automatiquement. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>\n";
+		echo "<p class='eo eta'>Cet exercice ne peut pas être corrigé automatiquement. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>\n";
 		$styleKorektebla=" ";
 	}
 	if ($rowEkzerco["ekzemplo"]!="") {

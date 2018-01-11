@@ -633,7 +633,7 @@ QCM(
 					<p><span class="eo">feliĉa</span> : heureux</p>
 					<p><span class="eo">juna</span> : jeune</p>
 					<p><span class="eo">maljuna</span> : vieux</p>
-					<p><span class="eo">scivola</span> : curieux, qui aime apprendre</p>
+					<p><span class="eo">scivolema</span> : curieux, qui aime apprendre</p>
 					<p><span class="eo">sportema</span> : sportif, qui aime le sport</p>
 					<p><span class="eo">vojaĝema</span> : voyageur, qui aime voyager</p>
 				</div>

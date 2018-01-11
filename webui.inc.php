@@ -924,8 +924,12 @@ function vortlisto($persono_id,$kurso,$pattern) {
 	$i=0;
 	echo "<div class='row'>";
 	while ($row = $res->fetch()) {	
-		
-		echo "<p class='col s12 m6'><span class='eo'>".$row['eo']." ";
+		if (strpos($row['eo'],"|")!==false) {
+			$VortoEo = substr($row['eo'], 0,strpos($row['eo'], "|"));
+		} else {
+			$VortoEo = $row['eo'];
+		}
+		echo "<p class='col s12 m6'><span class='eo'>".$VortoEo." ";
 		echo "<span class='numero'> (".$row['numero'].")</span></span> : ".$row['fr']."</p>\n";
 		$i++;
 	}

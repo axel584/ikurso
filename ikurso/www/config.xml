@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="fr.esperanto-france.ikurso" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Ikurso</name>
+    <description>
+        Vous pourrez découvrir ce qu’est la langue internationale Espéranto, l’apprendre en suivant notre cours, à votre rythme.
+    </description>
+    <author email="axel.rousseau@esperanto-france.org" href="https://ikurso.esperanto-france.org">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="mailto:*" />
+    <platform name="android">
+       <allow-intent href="market:*" />
+       <icon src="res/android/ldpi.png" density="ldpi" />
+       <icon src="res/android/mdpi.png" density="mdpi" />
+       <icon src="res/android/hdpi.png" density="hdpi" />
+       <icon src="res/android/xhdpi.png" density="xhdpi" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <engine name="android" spec="^6.2.3" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
+</widget>

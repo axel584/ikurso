@@ -269,7 +269,7 @@ include "gerdakapo.inc.php";
 			<p>
 			Sed la ĝena afero, koncerne provojn endormiĝi, estas, ke ili ne
 			estas facilaj. Mi ne scias, ĉu mi estas normala, sed ĉe mi provado
-			endormiĝi neniam sukcesas. Kiam mi enlitigas, nokte, mi endormiĝas,
+			endormiĝi neniam sukcesas. Kiam mi enlitiĝas, nokte, mi endormiĝas,
 			sed neniam ĉar mi provis. Nur ĉar mi enlitiĝis kaj estis laca, kaj
 			pensis pri nenio plu. Mi devis fari nenion por dormi. Dormo venis mem.</p>
 			<p>

@@ -98,6 +98,9 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([reado
 .input-field .prefix.active {
     color: #2196F3;
 }
+.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
+    float: right;
+}
 /* surcharge entete */
 @media only screen and (max-width: 992px)
 {

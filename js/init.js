@@ -55,5 +55,6 @@
     });
     
 	$('.materialboxed').materialbox();
-
+	
+	$('.modal').modal();
 });

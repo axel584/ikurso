@@ -30,6 +30,7 @@
 	    monthsShort: [ 'Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec' ],
 	    weekdaysShort: [ 'Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam' ],
 	    weekdaysFull: [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
+	    weekdaysLetter: [ 'D', 'L', 'M', 'M', 'J', 'V', 'S' ],
 	    today: '',
 	    clear: 'effacer',
 	    close: 'Ok',
@@ -38,7 +39,7 @@
 
 	$('.dropdown-button').dropdown({
 		belowOrigin: true, // Displays dropdown below the button
-		constrain_width: false, // Does not change width of dropdown to that of the activator
+		constrainWidth: false, // Does not change width of dropdown to that of the activator
 		alignment: 'right'
 		}
 	);

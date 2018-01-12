@@ -10,8 +10,8 @@
 		</div>
 	</footer>
 
-	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
 	<script src="<?php echo $vojo;?>js/config.js"></script>
 	<script src="<?php echo $vojo;?>js/init.js"></script>
 	<script src="<?php echo $vojo;?>js/ikurso.js?d=<?php echo time(); ?>"></script>

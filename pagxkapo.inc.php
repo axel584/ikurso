@@ -21,7 +21,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
 		
 		<!--Import materialize.css-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
 		<!--Player audio-->
 		<link rel="stylesheet" type="text/css" href="<?php echo $vojo;?>soundmanager2/css/mp3-player-button.css" />
@@ -115,7 +115,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 				</form>
 				</div>
 				<div id="konektigxi_parto2" class="hide">
-					<p class="chapo">Le message a bien été renvoyé!</p>
+					<p class="chapo">Le message a bien été renvoyé !</p>
 					<p>Pour activer votre compte, veuillez cliquer sur le lien se trouvant dans le message électronique que nous venons de vous envoyer.<br>
 				Si vous ne le trouvez pas, vérifiez s’il n’est pas dans votre courrier indésirable.<br>
 				Dernière possibilité, il est possible que vous ayez fait une erreur en tapant votre adresse e-mail, vous pouvez <a href="<?php echo $vojo;?>reago.php">contacter un administrateur</a> qui vérifiera votre inscription.</p>

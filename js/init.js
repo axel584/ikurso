@@ -8,12 +8,9 @@
 
   $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
+    //$('.modal-trigger').leanModal();
 
     Materialize.updateTextFields();
-
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
 
 	$('.slider').slider({
 		full_width: true,
@@ -24,8 +21,6 @@
 
     $('.scrollspy').scrollSpy();
     
-    $('select').material_select();
-      
   	$( '.datepicker' ).pickadate({
 		selectMonths: true, // Creates a dropdown to control month
 		selectYears: 110, // Creates a dropdown of 100 years to control year
@@ -35,11 +30,11 @@
 	    monthsShort: [ 'Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec' ],
 	    weekdaysShort: [ 'Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam' ],
 	    weekdaysFull: [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
-	    today: 'aujourd’hui',
+	    today: '',
 	    clear: 'effacer',
 	    close: 'Ok',
 	    closeOnSelect: false // Close upon selecting a date
-	})
+	});
 
 	$('.dropdown-button').dropdown({
 		belowOrigin: true, // Displays dropdown below the button
@@ -58,6 +53,6 @@
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
     
-	   $('.materialboxed').materialbox();
+	$('.materialboxed').materialbox();
 
 });

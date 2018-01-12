@@ -333,7 +333,7 @@ include "dlekkapo.inc.php";
 			} // fin section 4
 			if ($section=="5") {
 			?>
-			<p class="noprint"><em>Pour entendre ces phrases, cliquez sur bouton à gauche de la phrase.</em></p>
+			<p class="noprint"><em>Pour entendre ces phrases, cliquez sur le bouton à gauche de la phrase.</em></p>
 			
 			<div class="vortlisto row">
 				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-1.mp3" class="sm2_button"></a></p>

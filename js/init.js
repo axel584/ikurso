@@ -37,7 +37,8 @@
 	    weekdaysFull: [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
 	    today: '',
 	    clear: 'effacer',
-	    close: 'fermer'
+	    close: 'fermer',
+	    closeOnSelect: false
 	})
 
 	$('.dropdown-button').dropdown({

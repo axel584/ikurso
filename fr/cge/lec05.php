@@ -316,6 +316,61 @@ include "dlekkapo.inc.php";
 		<?php 
 		} // fin section 
 		if ($section=="7") {
+		?>
+		<div class="row">
+			<div class="col s12">
+				<p class="parto">Vous qui apprenez l’espéranto, vous aurez certainement assez tôt envie de lire ou d’écrire pour mettre en pratique votre apprentissage.</p>
+				<p>Pour assouvir votre soif de lecture, vous allez avoir un certain choix, car la littérature en espéranto se compose d’œuvres au style varié et s’est constituée de nombreux ouvrages au fil des ans.</p>
+				<p>En effet, le <strong>premier roman original en espéranto</strong> apparut en 1907, sous la plume d’Henri Valienne et s’intitule <em>Kastelo de Prelongo</em>. Auparavant, les publications provenaient soit des traductions, soit de poésies.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s9">
+				<p>Citons d’abord quelques œuvres très connues à découvrir ou redécouvrir en espéranto : <em>Le Seigneur des anneaux</em>, <em>Don Quichotte</em>, <em>Le Petit Prince</em>, <em>Hamlet</em>… Vous apprécierez alors les traductions de qualités qui seront un moyen indéniable de progresser et d’approfondir votre vocabulaire.</p>
+				<p>Et puis il existe la littérature originale, loin d’être négligeable, car il se trouve dans le monde de l’espéranto quelques auteurs connus, reconnus et prolifiques&nbsp;: William Auld, Marjorie Boulton, Trevor Steel… Leurs livres sont devenus des classiques, voire des incontournables.</p>
+				<p class="parto">Un autre fait est à noter, certains livres sont parus en espéranto et ont ensuite été traduits vers des langues nationales, comme <em>Kroata milita noktlibro</em>, de Spomenka Ŝtimec (<em>Journal de nuit</em>) ou <em>Kumeŭaŭa, la filo de la ĝangalo</em> de Tibor Sekelj (<em>Kumewawa, le fils de la jungle</em>).</p>
+				<div class="row">
+					<div class="col s6">
+						<img src="<?php echo $vojo;?>fr/cge/bildoj/mastro-ringoj.png" class="responsive-img" alt="La Majstro de l' ringoj" />
+					</div>
+					<div class="col s4">
+						<img src="<?php echo $vojo;?>fr/cge/bildoj/eta-princo.jpg" class="responsive-img" alt="La Eta Princo" />
+					</div>
+				</div>
+			</div>
+			<div class="col s3">
+				<img src="<?php echo $vojo;?>fr/cge/bildoj/don-quichotte.jpg" class="responsive-img" alt="Don Quichotte" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s8 m9">
+				<p>La <strong>bande-dessinée</strong> (d’accord, pour certains, ce n’est pas de la « littérature ») mais nous ne pouvons pas ne pas l’évoquer&nbsp;: que diriez-vous de lire <em>Tintin au Tibet</em>, <em>Astérix et Cléopâtre</em>, ou le <em>Petit Spirou</em> en espéranto ?</p>
+				<p>L’espéranto, grâce à la littérature, prend tout son sens&nbsp;: les <strong>œuvres originales</strong> participent à l’enrichissement du patrimoine culturel et les <strong>œuvres traduites</strong> ouvrent des accès entre les cultures.</p>
+				<p class="parto">Êtes-vous prêt à partir à la découverte des <a href="http://katalogo.uea.org/katalogo.php?inf=8587">sagas islandaises</a>&nbsp;? À partager le <a href="http://katalogo.uea.org/katalogo.php?inf=8943">récit d’une famille hollandaise hanté par la colonisation</a>&nbsp;? À en apprendre plus sur <a href="http://katalogo.uea.org/katalogo.php?inf=7813">le père de la langue maltaise</a>&nbsp;? Ou souhaitez-vous vous plonger dans un <a href="http://katalogo.uea.org/index.php?inf=6111">recueil de nouvelles coréennes</a>&nbsp;? <p>
+				<p>Vous êtes chanceux de pouvoir lire ces livres, car ils ne sont pas édités en français&nbsp;!</p>
+			</div>
+			<div class="col s4 m3">
+				<img src="<?php echo $vojo;?>fr/cge/bildoj/La_templo_de_l_suno.jpg" class="responsive-img" alt="La Eta Princo" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="s12">
+				<p><strong>Quelques liens utiles pour prolonger votre découverte&nbsp;:</strong></p>
+				<ul>
+					<li><a href="https://fr.wikipedia.org/wiki/Littérature_espérantophone">article de wikipédia sur la littérature espérantophone</a></li>
+					<li><a href="https://esperanto-france.org/doc/UFE_Catalogue.pdf">catalogue de la librairie d'Espéranto-France</a></li>
+				</ul>
+				<p><strong>Livres électroniques</strong>&nbsp;:</p>
+				<ul>
+					<li><a href="http://esperanto-ondo.ru/Libroj/Libroj.php">esperanto-ondo.ru/Libroj/Libroj.php</a></li>
+					<li><a href="http://www.bitlibroj.com/originalaesperantoliteraturo/originalaprozoesperanto.html">www.bitlibroj.com/originalaesperantoliteraturo/originalaprozoesperanto.html</a></li>
+					<li><a href="http://www.librejo.com/index.html">www.librejo.com</a></li>
+				</ul>
+			</div>
+		</div>
+		<?php 
+		} // fin section 
+		if ($section=="8") {
 			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin section 
 		?>	

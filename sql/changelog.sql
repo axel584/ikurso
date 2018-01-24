@@ -2436,3 +2436,6 @@ INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`
 INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 2, 'complément d’objet direct', NULL);
 INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`) VALUES ('', @last_id_in_qcm_demando, 3, 'attribut du sujet', NULL);
 
+-- insertion d'une section sur la littérature à la fin de la leçon 5
+UPDATE `lecioneroj` SET ordo=8 WHERE `leciono_id`=63 and `ordo`=7;
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '63', 'Littérature et espéranto', 'TEKSTO', NULL, '7', '0', '0');

@@ -71,7 +71,6 @@ while ($row=$result->fetch()) {
 $query = "SELECT numero,kurso,titolo  FROM `lecionoj` WHERE kurso='CG' order by numero";
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
-	$nbReponse = $nbReponse + 1;
 	echo "<div class='collapsible-header'><a href='korektado-admin.php?kurso=CG&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></div>\n";
 }
 ?>
@@ -82,7 +81,6 @@ while ($row=$result->fetch()) {
 $query = "SELECT numero,kurso,titolo  FROM `lecionoj` WHERE kurso='GR' order by numero";
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
-	$nbReponse = $nbReponse + 1;
 	echo "<div class='collapsible-header'><a href='korektado-admin.php?kurso=GR&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></div>\n";
 }
 ?>	

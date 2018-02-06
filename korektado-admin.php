@@ -48,7 +48,12 @@ while ($row=$result->fetch()) {
 		if ($taux<1.0) {
 			break;
 		}
-		echo "<span style=\"color:blue\">".$row2["normaligita"]." (".$taux." %)</span></p><br/>";
+		$lernantaRespondo=$row2["normaligita"];
+		if (kontroliRespondon($lernantaRespondo,$bonaRespondo)) {
+			echo "<span style=\"color:green\">".$row2["normaligita"]." (".$taux." %)</span></p><br/>";
+		} else {
+			echo "<span style=\"color:blue\">".$row2["normaligita"]." (".$taux." %)</span></p><br/>";
+		}
 	}
 }
 

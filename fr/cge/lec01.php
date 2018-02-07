@@ -149,42 +149,42 @@ include "dlekkapo.inc.php";
 				<legend>MOTS À RETENIR</legend>
 				<div class="vortlisto row">
 					<div class="col s12 m4">
-						<p><span class="eo">biskvito</span> : biscuit</p>
-						<p><span class="eo">filo</span> : fils</p>
-						<p><span class="eo">filino</span> : fille</p>
-						<p><span class="eo">Francujo</span> : France</p>
-						<p><span class="eo">frato</span> : frère</p>
-						<p><span class="eo">fratino</span> : sœur</p>
-						<p><span class="eo">instruisto</span> : instituteur</p>
-						<p><span class="eo">knabo</span> : garçon</p>
-						<p><span class="eo">kafo</span> : café</p>
-						<p><span class="eo">kuko</span> : gâteau</p>
-						<p><span class="eo">lakto</span> : lait</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/biskvito.mp3" class="sm2_button"></a> <span class="eo">biskvito</span> : biscuit</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/filo.mp3" class="sm2_button"></a> <span class="eo">filo</span> : fils</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/filino.mp3" class="sm2_button"></a> <span class="eo">filino</span> : fille</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/francujo.mp3" class="sm2_button"></a> <span class="eo">Francujo</span> : France</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/frato.mp3" class="sm2_button"></a> <span class="eo">frato</span> : frère</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/fratino.mp3" class="sm2_button"></a> <span class="eo">fratino</span> : sœur</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/instruisto.mp3" class="sm2_button"></a> <span class="eo">instruisto</span> : instituteur</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/knabo.mp3" class="sm2_button"></a> <span class="eo">knabo</span> : garçon</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kafo.mp3" class="sm2_button"></a> <span class="eo">kafo</span> : café</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kuko.mp3" class="sm2_button"></a> <span class="eo">kuko</span> : gâteau</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/lakto.mp3" class="sm2_button"></a> <span class="eo">lakto</span> : lait</p>
 					</div>
 					<div class="col s12 m4">
-						<p><span class="eo">lando</span> : pays</p>					
-						<p><span class="eo">patro</span> : père</p>
-						<p><span class="eo">patrino</span> : mère</p>
-						<p><span class="eo">pano</span> : pain</p>
-						<p><span class="eo">studento</span> : étudiant</p>
-						<p><span class="eo">sukero</span> : sucre</p>
-						<p><span class="eo">teo</span> : thé</p>
-						<p><span class="eo">urbo</span> : ville</p>
-						<p><span class="eo">viro</span> : homme (mâle)</p>
-						<p><span class="eo">virino</span> : femme</p>
-						<p><span class="eo">kaj</span> : et</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/lando.mp3" class="sm2_button"></a> <span class="eo">lando</span> : pays</p>					
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/patro.mp3" class="sm2_button"></a> <span class="eo">patro</span> : père</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/patrino.mp3" class="sm2_button"></a> <span class="eo">patrino</span> : mère</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/pano.mp3" class="sm2_button"></a> <span class="eo">pano</span> : pain</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/studento.mp3" class="sm2_button"></a> <span class="eo">studento</span> : étudiant</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sukero.mp3" class="sm2_button"></a> <span class="eo">sukero</span> : sucre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/teo.mp3" class="sm2_button"></a> <span class="eo">teo</span> : thé</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/urbo.mp3" class="sm2_button"></a> <span class="eo">urbo</span> : ville</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/viro.mp3" class="sm2_button"></a> <span class="eo">viro</span> : homme (mâle)</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/virino.mp3" class="sm2_button"></a> <span class="eo">virino</span> : femme</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kaj.mp3" class="sm2_button"></a> <span class="eo">kaj</span> : et</p>
 					</div>
 					<div class="col s12 m4">
-						<p><span class="eo">jen</span> : voici</p>
-						<p><span class="eo">ĉiam</span> : toujours</p>					
-						<p><span class="eo">en</span> : dans, en</p>
-						<p><span class="eo">bela</span> : beau</p>
-						<p><span class="eo">bona</span> : bon</p>
-						<p><span class="eo">facila</span> : facile</p>
-						<p><span class="eo">granda</span> : grand</p>
-						<p><span class="eo">seka</span> : sec</p>
-						<p><span class="eo">varma</span> : chaud</p>
-						<p><span class="eo">kiu</span> : qui, quel</p>					
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jen.mp3" class="sm2_button"></a> <span class="eo">jen</span> : voici</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ĉiam.mp3" class="sm2_button"></a> <span class="eo">ĉiam</span> : toujours</p>					
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/en.mp3" class="sm2_button"></a> <span class="eo">en</span> : dans, en</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/bela.mp3" class="sm2_button"></a> <span class="eo">bela</span> : beau</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/bona.mp3" class="sm2_button"></a> <span class="eo">bona</span> : bon</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/facila.mp3" class="sm2_button"></a> <span class="eo">facila</span> : facile</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/granda.mp3" class="sm2_button"></a> <span class="eo">granda</span> : grand</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/seka.mp3" class="sm2_button"></a> <span class="eo">seka</span> : sec</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/varma.mp3" class="sm2_button"></a> <span class="eo">varma</span> : chaud</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kiu.mp3" class="sm2_button"></a> <span class="eo">kiu</span> : qui, quel</p>					
 					</div>
 				</div>
 			</fieldset>

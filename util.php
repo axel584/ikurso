@@ -56,8 +56,9 @@ function konvX($buff) {
 
 function normaligita($respondo) {
 	$normaligita = strtolower(konvX($respondo));
-	$trans = array("." => "", "," => "", "'" => "","!" => "","?" => "",":" => "",";" => ""); // liste des caractères à supprimer pour la comparaison
+	$trans = array("." => "", "," => "", "'" => "","!" => "","?" => "",":" => "",";" => "","-"=>""); // liste des caractères à supprimer pour la comparaison
 	$normaligita = trim(strtr($normaligita, $trans));
+	$normaligita = preg_replace("/\s+/", " ", $normaligita); // replace un nombre d'espace supérieur à 1 par un espace simple
 	return $normaligita;
 }
 

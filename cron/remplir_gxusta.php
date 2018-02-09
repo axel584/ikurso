@@ -6,9 +6,11 @@ $query = "select ekzerceroj.id,ekzerceroj.normaligita from ekzerceroj join ekzer
 $result = $bdd->query($query);
 
 while($row=$result->fetch()) {
-	$query2 = "update respondoj set gxusta=1 where ekzercero_id=".$row["id"]." and normaligita='".str_replace("'","''",$row["normaligita"])."'";
-	echo $query2.";<br/>";
-	$bdd->query($query2);
+	$responsesJustes = explode("|", $row["normaligita"]);
+	foreach($responsesJustes as $responseJuste) {
+		$query2 = "update respondoj set gxusta=1 where ekzercero_id=".$row["id"]." and normaligita='".str_replace("'","''",$responseJuste)."'";
+		$bdd->query($query2);	
+	}
 }
 
 

@@ -620,7 +620,7 @@ include "dlekkapo.inc.php";
 						<p><span class="eo">sankta</span> : saint<br>
 						   <span class="eo">sanktulo</span> : un saint</p>
 						<p><span class="eo">stulta</span> : stupide<br>
-						   <span class="eo">sultulo</span> : un sot</p>
+						   <span class="eo">stultulo</span> : un sot</p>
 						<p><span class="eo">kunulino</span> : compagne</p>
 						<p><span class="eo">kolo</span> : cou<br>
 						   <span class="eo">kolumo</span> : col (de chemise)</p>

@@ -417,13 +417,18 @@ include "dlekkapo.inc.php";
 				<div class"row">
 					<p class="col s6 m3 eo">Saluton !</p><p class="col s6 m3">Salut !</p>
 					<p class="col s6 m3 eo">Bonan tagon !</p><p class="col s6 m3">Bonjour !</p>
-					<p class="col s6 m3 eo">Bonan matenon !</p><p class="col s6 m3">Bonjour ! (le matin)</p>
-					<p class="col s6 m3 eo">Bonan vesperon !</p><p class="col s6 m3">Bonsoir !</p>
-					<p class="col s6 m3 eo">Bonan nokton !</p><p class="col s6 m3">Bonne nuit !</p>
 				</div>
 				<div class="row">
+					<p class="col s6 m3 eo">Bonan matenon !</p><p class="col s6 m3">Bonjour ! (le matin)</p>
+					<p class="col s6 m3 eo">Bonan vesperon !</p><p class="col s6 m3">Bonsoir !</p>
+				</div>
+				<div class="row">
+					<p class="col s6 m3 eo">Bonan nokton !</p><p class="col s6 m3">Bonne nuit !</p>
 					<p class="col s6 m3 eo">Mi loĝas en...</p><p class="col s6 m3">J’habite à...</p>
+				</div>
+				<div class="row">
 					<p class="col s6 m3 eo">Mi ŝatas...</p><p class="col s6 m3">J’aime... / J'apprécie...</p>
+					<p class="col s6 m3 eo">Dankon !</p><p class="col s6 m3">Merci !</p>
 				</div>
 				<div class="row">
 					<p class="col s6 m3 eo">Ĝis revido !</p><p class="col s6 m3">Au revoir !</p>

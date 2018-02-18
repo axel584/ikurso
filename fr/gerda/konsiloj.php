@@ -10,8 +10,7 @@ include "gerdakapo.inc.php";
 				<h2>Konsiloj por la kursfinintoj</h2>
 
 				<p>Estimataj Eks-kursanoj,<br>
-				Jen kelkaj konsiloj por vi, kiuj ĵus finis la kurson «Gerda
-				malaperis» de Claude Piron.</p>
+				Jen kelkaj konsiloj por vi, kiuj ĵus finis la kurson <i>Gerda malaperis</i> de Claude Piron.</p>
 				
 				
 				<a id="kiuj" class="scrollspy"></a>
@@ -101,49 +100,8 @@ include "gerdakapo.inc.php";
 				aparte interesaj estas:
 				</p>
 				
-				<ul>
-					<li><a href="http://www.radio.com.pl/polonia/eo/">
-					<span class="eo">Pola Radio</span></a> : ĉiutagaj duonhoraj elsendoj</li>
-					<li><a href="http://bertilow.com/pmeg/">
-					<span class="eo">Plena Manlibro de Esperanta Gramatiko</span></a> : tre detala kaj
-					skrupulema, eble ĝi iam fariĝos la gramatika referenco de E</li>
-					<li><a href="http://www.esperanto.mv.ru/KompLeks/Lat1/DEFAULT.html">
-					<span class="eo">Komputada leksikono</span></a> : la nuna refenco en la kampo</li>
-					<li><a href="http://donh.best.vwh.net/Esperanto/Literaturo/literaturo.html">
-					<span class="eo">Literaturo en Esperanto</span></a> : bonega katalogo de literaturaĵoj en 
-					la reto, ĝisdata kaj ege kompleta</li>
-					<li><a href="http://members.aol.com/enrike/ekspeto.htm">
-					<span class="eo">Interreta koresponda servo</span></a></li>				
-				</ul>
-				<ul>	   
-					<li><a href="www.helsinki.fi/~jslindst/proverbaro.html">Proverbaro esperanta</a> 
-					(<i>laŭteme ordigita</i>)</li>
-					<li><a href="groups.google.fr/groups?group=soc.culture.esperanto&hl=eo&oe=UTF-8">
-					Novaĵgrupo pri Esperanto</a>; bona ekzemplo de nia tria
-					konsilo : en ĝi troviĝas kaj la plej bona materialo (etkvante)
-					kaj la plej malbona.</li>
-				</ul>
-	
-				<p class="parto">
-				Internet estas tre nova medio. Antaŭ ĝia regno, ekde la komenco mem
-				de Esperanto, oni multon faris nur per libroj. Ankaŭ nun libroj
-				estas konsilindaj kaj certagrade nemalhaveblaj. Vi malfacile trovos
-				Esperantajn librojn en la kutimaj librovendejoj, sed ili abundas en la
-				E-movadaj medioj. Sube ni parolos pri libroservoj, per kiuj eblas
-				mendi kaj havigi al si la karajn librojn ! Atentu, ke «kara» ne
-				ĉiam sinonimas kun «multekosta», feliĉe !</p>
-				
-				<p class="parto">
-				Al la finintoj de <i>Gerda</i> ni aparte konsilas du lernolibrojn
-				por progresantoj:</p>
-				
-				<ul>
-					<li><b>Vojaĝo en Esperanto-lando</b> de Boris Kolker, Eldonejo
-					«Progreso», Rusio.</li>
-					
-					<li><b>Paŝoj al plena posedo</b> de William Auld, eldonita de
-					Hungara Esperanto-Asocio.</li>
-				</ul>
+				<p>Vi trovos en la paĝo <a href="<?=$vojo?>helpo.php?section=kajposte">Que faire après le cours ?</a> 
+				multajn ideojn por praktiki la lingvon kaj plu lerni.</p>
 	
 				<p class="parto">
 				Koncerne vortarojn ni konsilas, ke vi plej multe evitu ilin uzi.
@@ -153,7 +111,7 @@ include "gerdakapo.inc.php";
 				estas sufiĉe oficiala, kaj en kiuj okazoj ĝi uzeblas. Aparte
 				konsilindaj estas :</p>
 				
-				<ul>
+				<ul class="klarigo">
 					<li><i>Plena Ilustrita Vortaro</i> (PIV), eldonita de SAT. Tiu ĉi
 					vortaro estas <i>la</i> vera referenco. Bedaŭrinde ĝi apenaŭ estas
 					ilustrita kaj ĝi estas tre dika kaj sufiĉe kosta.</li>
@@ -168,7 +126,7 @@ include "gerdakapo.inc.php";
 				<a id="aliajkonsiloj" class="scrollspy"></a>
 				<h3>Ankaŭ konsilindaj por studemuloj:</h3>
 				
-				<ul>
+				<ul class="klarigo">
 					<li><i>Fundamento de Esperanto</i>. Ĝi estas la «netuŝebla» bazo
 					de la lingvo, ankoraŭ tre interesa de scienca kaj historia
 					vidpunkto. Ĝia ekzercaro povas utili kiel lernolibro kaj ĝia
@@ -188,7 +146,7 @@ include "gerdakapo.inc.php";
 				literaturaj verkoj vi plaĉe retrovos la verkojn de Claude Piron, el
 				kiuj aparte rekomendindaj estas :</p>
 				
-				<ul>
+				<ul class="klarigo">
 					<li><i>Vere aŭ fantazie</i>, kolektas mallongajn novelojn</li>
 					<li><i>Ili kaptis Elzan!</i> kaj <i>Dankon amikoj!</i> (iom laŭ la
 					sama stilo kiel <i>Gerda malaperis</i>)</li>

@@ -37,7 +37,7 @@ include "dlekkapo.inc.php";
 			changer le sens de la phrase. Cette relative liberté de l’ordre des mots
 			permet de mettre en valeur certains groupes de mots ou de clarifier le
 			sens. Toutefois, dans ce cours, nous nous contenterons le plus souvent de
-			l’ordre « normal » : sujet, verbe, compléments.
+			l’ordre que nous utilisons le plus souvent en français&nbsp;: sujet, verbe, compléments.
 			</p>
 			
 			<div class="row container">
@@ -260,6 +260,7 @@ include "dlekkapo.inc.php";
 		<fieldset class="vortoj">
 			<div class="vortlisto row">
 				<div class="col s6 m3">
+					<p>0 : <span class="eo">nul</span></p>
 					<p>1 : <span class="eo">unu</span></p>
 					<p>2 : <span class="eo">du</span></p>
 					<p>3 : <span class="eo">tri</span></p>
@@ -269,20 +270,22 @@ include "dlekkapo.inc.php";
 					<p>7 : <span class="eo">sep</span></p>
 					<p>8 : <span class="eo">ok</span></p>
 					<p>9 : <span class="eo">naŭ</span></p>
-					<p>10 : <span class="eo">dek</span></p>
 				</div>
 				<div class="col s6 m3">
+					<p>10 : <span class="eo">dek</span></p>
 					<p>11 : <span class="eo">dek unu</span></p>
 					<p>12 : <span class="eo">dek du</span></p>
 					<p>13 : <span class="eo">dek tri</span></p>
 					<p>14 : <span class="eo">dek kvar</span></p>
+					<p>15 : <span class="eo">dek kvin</span></p>
 					<p></p>
 					<p>20 : <span class="eo">dudek</span></p>
 					<p>21 : <span class="eo">dudek unu</span></p>
-					<p></p>
-					<p>30 : <span class="eo">tridek</span></p>
+					<p>21 : <span class="eo">dudek du</span></p>
+					<p>21 : <span class="eo">dudek tri</span></p>
 				</div>
 				<div class="col s6 m3">
+					<p>30 : <span class="eo">tridek</span></p>
 					<p>31 : <span class="eo">tridek unu</span></p>
 					<p>32 : <span class="eo">tridek du</span></p>
 					<p></p>
@@ -292,6 +295,7 @@ include "dlekkapo.inc.php";
 					<p>70 : <span class="eo">sepdek</span></p>
 					<p>80 : <span class="eo">okdek</span></p>
 					<p>90 : <span class="eo">naŭdek</span></p>
+					<p>99 : <span class="eo">naŭdek naŭ</span></p>
 				</div>
 				<div class="col s6 m3">
 					<p>100 : <span class="eo">cent</span></p>
@@ -299,26 +303,34 @@ include "dlekkapo.inc.php";
 					<p>300 : <span class="eo">tricent</span></p>
 					<p></p>
 					<p>1000 : <span class="eo">mil</span></p>
+					<p></p>
+					<p>2000 : <span class="eo">du mil</span></p>
+					<p>3000 : <span class="eo">tri mil</span></p>
 				</div>
 			</div>
 		</fieldset>
 		
 		<div class="vortlisto row">
-			<p class="col s6">1998 : <span class="eo">mil naŭcent naŭdek ok</span></p>
-			<p class="col s6">749 : <span class="eo">sepcent kvardek naŭ</span></p>
-			<p class="col s6">1515 : <span class="eo">mil kvincent dek kvin</span></p>
-			<p class="col s6">2051 : <span class="eo">du mil kvindek unu</span></p>
+			<p class="col s12 l6">749 : <span class="eo">sepcent kvardek naŭ</span></p>
+			<p class="col s12 l6">1&nbsp;998 : <span class="eo">mil naŭcent naŭdek ok</span></p>
+			<p class="col s12 l6">1&nbsp;515 : <span class="eo">mil kvincent dek kvin</span></p>
+			<p class="col s12 l6">2&nbsp;051 : <span class="eo">du mil kvindek unu</span></p>
+			<p class="col s12">52&nbsp;354 : <span class="eo">kvindek du mil tricent kvindek kvar</span></p>
+			<p class="col s12">76&nbsp;240 : <span class="eo">sepdek ses mil ducent kvardek</span></p>
 		</div>
 
-		<p class="rimarko"><strong>REMARQUE</strong> : 
-		Le <b>a</b> de <span class="eo">naŭ</span> se prononce comme «ow» anglais dans «cow», «how», «now»,
-		ou encore «au» en allemand, espagnol, italien...</p>
+		<p class="rimarko"><strong>REMARQUES</strong> : </p>
+		<ul class="klarigo">
+			<li>Le <b>a</b> de <span class="eo">naŭ</span> se prononce comme «ow» anglais dans «cow», «how», «now»,
+		ou encore «au» en allemand, espagnol, italien...</li>
+			<li>Le mot <span class="eo">dek</span> utilisé pour le chiffre des dizaines se colle au nombre qui le multiplie. Par exemple on écrit en un seul mot <span class="eo">dudek</span> (= 20, c’est-à-dire 2 fois 10) ou <span class="eo">sesdek</span> (= 60, c’est-à-dire 6 fois 10).</li>
+			<li>De la même manière, le mot <span class="eo">cent</span> utilisé pour le chiffre des centaines se colle au nombre qui le multiplie. Par exemple on écrit en un seul mot <span class="eo">tricent</span> (= 300, c’est-à-dire 3 fois 100).</li>
+		</ul>
 		
 		<a id="ordinaux" class="scrollspy"></a>
 		<p class="parto">Les <b>nombres ordinaux</b> se forment par adjonction de la terminaison
 		<em>-a</em> d’adjectif aux nombres cardinaux. Comme tous les adjectifs, ils
-		prennent la marque du pluriel <span class="eo">-j</span> et celle du complément d’objet
-		<em>-n</em>.
+		peuvent prendre la marque du pluriel <b>-j</b> et celle du complément <b>-n</b>.
 		</p>
 
 		<fieldset class="vortoj">
@@ -344,9 +356,12 @@ include "dlekkapo.inc.php";
 			</div>
 		</fieldset>
 
-		<div class="noto">
-			<p><b>REMARQUE</b> : On peut aussi utiliser les chiffres pour écrire les nombres ordinaux. On fait alors généralement suivre les chiffres de <b>-a</b>. Par exemple : <span class="eo">1-a</span>, <span class="eo">20-a</span>, <span class="eo">71-a</span>.</p>
-		</div>
+		<p class="rimarko"><strong>REMARQUES</strong> : </p>
+		<ul class="klarigo">
+			<li>Dans les nombres ordinaux, on sépare généralement les mots par des tirets.</li>
+</
+			<li>On peut aussi utiliser les chiffres pour écrire les nombres ordinaux. On fait alors généralement suivre les chiffres de <b>-a</b>. Par exemple : <span class="eo">1-a</span>, <span class="eo">20-a</span>, <span class="eo">71-a</span>.</li>
+		</ul>
 			
 		<p class="parto">Pour poser une question et demander <em>combien de…</em>, on utilise l’interrogatif <b>kiom da</b>.</p>
 
@@ -361,7 +376,7 @@ include "dlekkapo.inc.php";
 			<p class="col s6">Combien y aura-t-il d’enfants&nbsp;?<br>– Il y aura douze enfants.</p>
 		</div>
 		
-		<p><b>REMARQUE</b> : N’employez <b>jamais</b> l’accusatif après <b>kiom da</b>.</p>
+		<p class="rimarko"><strong>REMARQUE</strong> : N’employez <b>jamais</b> l’accusatif après <span class="eo">kiom da</span>.</p>
 		
 		<?php 
 		} // fin section

@@ -61,7 +61,7 @@ include "pagxkapo.inc.php";
 						<div class="card-content row">
 							<span class="card-title col s12">Metodo 11</span>
 							<img src="<?=$vojo?>bildoj/butiko/metodo11.jpg" class="col s5 m3 responsive-img" alt="" />
-							<p class="col s7 m9">Nouvelle édition de <i>Metodo 11</i>, le manuel qui a accompagné de nombreux espérantophones dans l’apprentissage de la langue.<br>5,50&nbsp;€</p>
+							<p class="col s7 m9">Nouvelle édition de <i>Metodo 11</i>, le manuel qui a accompagné de nombreux espérantophones dans l’apprentissage de la langue.<br>9&nbsp;€</p>
 						</div>
 					</div>
 					<div class="col s12 card">

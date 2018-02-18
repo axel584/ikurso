@@ -267,19 +267,6 @@ frameborder="0" allowfullscreen></iframe></p>
 		
 				<?php include "helpo_accents_mobile.inc.php" ?>
 			</section>
-
-			<?php 
-				}
-				if ($section=="korektanto") { 
-			?>
-
-			<h1>Comment devenir correcteur ?</h1>
-			<section id="korektanto" class="scrollspy">
-				<p>Si vous souhaitez nous aider en tant que correcteur, vous pouvez nous contacter à l’adresse <a href="mailto:ikurso@esperanto-france.org">ikurso@esperanto-france.org</a> ou via le <a href="reago.php">formulaire de contact</a>.</p>
-				<p>Il vous faudra dans un premier temps créer un compte comme le font les élèves, puis nous indiquer l’identifiant que vous avez choisi afin que nous puissions vous donner les droits de correcteur. En vous reconnectant sur votre compte, vous trouverez l’interface des correcteurs qui vous permettra de choisir le nombre d’élèves que vous souhaitez corriger et les gérer.</p>
-				<p>Il n’y a pas de contrainte d’engagement en tant que correcteur ; il est juste nécessaire, si vous souhaitez arrêter de corriger, de mettre votre nombre d’élèves à zéro et de prévenir les administrateurs qui trouveront d’autres correcteurs à vos élèves en cours.</p>
-			</section>
-
 			<?php 
 				}
 				if ($section=="kielhelpi") { 
@@ -296,9 +283,12 @@ frameborder="0" allowfullscreen></iframe></p>
 				<h2>Correction des cours internet</h2>
 				
 				<p class="parto">Les correcteurs des cours sont des bénévoles. Certains suivent 1, 2 ou 3 élèves, d’autres s’occupent de plusieurs dizaines d’élèves.
-					Quel que soit le temps que vous voulez y consacrer, vous pourrez aider. Un grand nombre de correcteurs ont commencé après 
-					avoir fini le cours <em>Gerda Malaperis</em>. Il est important d’avoir un bon relationnel, de la patience et de la curiosité.</p>
-				<p>Pour en savoir plus, vous pourrez consulter la page <a href="helpo.php?section=korektanto">Comment devenir correcteur ?</a></p>
+				Quel que soit le temps que vous voulez y consacrer, vous pourrez aider. Un grand nombre de correcteurs ont commencé après 
+				avoir fini le cours <em>Gerda Malaperis</em>. Il est important d’avoir un bon relationnel, de la patience et de la curiosité.</p>
+				<p>Si vous souhaitez nous aider en tant que correcteur, vous pouvez nous contacter à l’adresse <a href="mailto:ikurso@esperanto-france.org">ikurso@esperanto-france.org</a> ou via le <a href="reago.php">formulaire de contact</a>.</p>
+				<p>Il vous faudra dans un premier temps créer un compte<span class="eo">*</span> comme le font les élèves, puis nous indiquer l’identifiant que vous avez choisi afin que nous puissions vous donner les droits de correcteur. En vous reconnectant sur votre compte, vous trouverez l’interface des correcteurs qui vous permettra de choisir le nombre d’élèves que vous souhaitez corriger et les gérer.</p>
+				<p>Il n’y a pas de contrainte d’engagement en tant que correcteur ; il est juste nécessaire, si vous souhaitez arrêter de corriger, de mettre votre nombre d’élèves à zéro et de prévenir les administrateurs qui trouveront d’autres correcteurs à vos élèves en cours.</p>
+				<p><span class="eo">*</span> Si vous avez déjà un compte parce que vous avez été élève sur ce site, vous n’avez pas besoin d’en créer un nouveau.</p>
 	
 				<h2>Développements informatiques</h2>
 	
@@ -341,7 +331,6 @@ frameborder="0" allowfullscreen></iframe></p>
 								<li><a href="helpo.php?section=kajposte">Que faire après le cours ?</a></li>
 								<li><a href="helpo.php?section=kielskribi">Comment écrire en espéranto ?</a></li>
 								<li><a href="helpo.php?section=kielhelpi">Comment nous aider ?</a></li>
-								<li><a href="helpo.php?section=korektanto">Comment devenir correcteur ?</a></li>
 							</ul>
 						</div>
 					</li>

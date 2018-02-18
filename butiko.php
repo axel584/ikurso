@@ -59,6 +59,13 @@ include "pagxkapo.inc.php";
 					</div>
 					<div class="col s12 card">
 						<div class="card-content row">
+							<span class="card-title col s12">Metodo 11</span>
+							<img src="<?=$vojo?>bildoj/butiko/metodo11.jpg" class="col s5 m3 responsive-img" alt="" />
+							<p class="col s7 m9">Nouvelle édition de <i>Metodo 11</i>, le manuel qui a accompagné de nombreux espérantophones dans l’apprentissage de la langue.<br>5,50&nbsp;€</p>
+						</div>
+					</div>
+					<div class="col s12 card">
+						<div class="card-content row">
 							<span class="card-title col s12">Poŝamiko</span>
 							<img src="<?=$vojo?>bildoj/butiko/poshamiko.jpg" class="col s5 m3 responsive-img" alt="" />
 							<p class="col s7 m9">«L'ami de poche» porte bien son nom. Ce petit livre résume les points les plus importants de l'espéranto, du vocabulaire classé par thème (les couleurs, les nombres etc.) et vous permettra de réviser votre espéranto à n'importe quel moment.<br>5,50&nbsp;€</p>
@@ -160,6 +167,18 @@ include "pagxkapo.inc.php";
 					</div>
 						
 					<div class="col s3">
+						<div class="card">
+							<div class="card-image">
+								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/metodo11.jpg" alt="" />
+							</div>
+							<div class="card-content">
+								<span class="card-title activator">Metodo&nbsp;11<br>9&nbsp;€<i class="material-icons right">keyboard_arrow_down</i></span>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title"><i class="material-icons right">keyboard_arrow_up</i></span>
+								<p>Nouvelle édition de <i>Metodo 11</i>, le manuel qui a accompagné de nombreux espérantophones dans l’apprentissage de la langue. Plus d’info sur le site de <a href="https://metodo11.esperanto-france.org">Metodo 11</a></p>
+							</div>
+						</div>
 						<div class="card">
 							<div class="card-image">
 								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/poshamiko.jpg" alt="" />

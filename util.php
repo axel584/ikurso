@@ -63,12 +63,13 @@ function normaligita($respondo) {
 }
 
 function kontroliRespondon($lernantaRespondo,$bonaRespondo) {
+	return preg_match("/^".$bonaRespondo."$/",$lernantaRespondo);
 	// attention, il ne faut pas utiliser != mais !==
-	if (strpos($bonaRespondo,"|")!==false) {
-		return kontroliRespondon($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliRespondon($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
-	} else {
-		return normaligita($lernantaRespondo)==normaligita($bonaRespondo);	
-	}
+	// if (strpos($bonaRespondo,"|")!==false) {
+	// 	return kontroliRespondon($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliRespondon($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
+	// } else {
+	// 	return normaligita($lernantaRespondo)==normaligita($bonaRespondo);	
+	// }
 }
 
 /*

@@ -78,20 +78,20 @@ QCM_bildoj(
 		intercale le suffixe <b>-in</b> entre la terminaison et ce qui la précède.</p>
 		
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">viro</span> : homme (mâle)</p>
-			<p class="col s6"><span class="eo">vir<b>in</b>o</span> : femme</p>
-			<p class="col s6"><span class="eo">amiko</span> : ami</p>
-			<p class="col s6"><span class="eo">amik<b>in</b>o</span> : amie</p>
-			<p class="col s6"><span class="eo">filo</span> : fils</p>
-			<p class="col s6"><span class="eo">fil<b>in</b>o</span> : fille</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/viro.mp3" class="sm2_button"></a> <span class="eo">viro</span> : homme (mâle)</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/virino.mp3" class="sm2_button"></a> <span class="eo">vir<b>in</b>o</span> : femme</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/amiko.mp3" class="sm2_button"></a> <span class="eo">amiko</span> : ami</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/amikino.mp3" class="sm2_button"></a> <span class="eo">amik<b>in</b>o</span> : amie</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/filo.mp3" class="sm2_button"></a> <span class="eo">filo</span> : fils</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/filino.mp3" class="sm2_button"></a> <span class="eo">fil<b>in</b>o</span> : fille</p>
 		</div>
 		
 		<p>Lors de la première leçon nous avons vu qu’en espéranto les adjectifs
 		s’accordent en nombre avec les noms auxquels ils se rapportent. Par contre, ils ne s’accordent jamais en genre.
 		</p>
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">la grandaj viroj</span> : les grands hommes</p>
-			<p class="col s6"><span class="eo">la grandaj virinoj</span> : les grandes femmes</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/la-grandaj-viroj.mp3" class="sm2_button"></a> <span class="eo">la grandaj viroj</span> : les grands hommes</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/la-grandaj-virinoj.mp3" class="sm2_button"></a> <span class="eo">la grandaj virinoj</span> : les grandes femmes</p>
 		</div>
 		
 		<fieldset class="vortoj">
@@ -102,9 +102,9 @@ QCM_bildoj(
 				<?php } ?>
 			</div>
 			<div class="vortlisto row">
-				<p class="col s12 m4"><span class="eo">virino</span> : femme</p>
-				<p class="col s12 m4"><span class="eo">amikino</span> : amie</p>
-				<p class="col s12 m4"><span class="eo">filino</span> : fille</p>
+				<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/virino.mp3" class="sm2_button"></a> <span class="eo">virino</span> : femme</p>
+				<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/amikino.mp3" class="sm2_button"></a> <span class="eo">amikino</span> : amie</p>
+				<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/filino.mp3" class="sm2_button"></a> <span class="eo">filino</span> : fille</p>
 			</div>
 		</fieldset>
 
@@ -246,9 +246,9 @@ QCM_bildoj(
 		<p class="parto">Il existe d’autres compléments, tels que les compléments de temps, de lieu, de manière, etc. Ils sont généralement introduits par une préposition. Dans la première leçon, vous avez déjà vu la préposition <span class="eo">en</span>, qui sert à introduire un complément de lieu.</p>
 		<p>Exemples :</p>
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">Aleks loĝas <b>en</b> Francujo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/aleks-logxas.mp3" class="sm2_button"></a> <span class="eo">Aleks loĝas <b>en</b> Francujo.</span></p>
 			<p class="col s6">Alex habite en France.</p>
-			<p class="col s6"><span class="eo">Estas sukero <b>en</b> via kafo.</span></p><p class="col s6">Il y a du sucre dans ton café.</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/estas-sukero.mp3" class="sm2_button"></a> <span class="eo">Estas sukero <b>en</b> via kafo.</span></p><p class="col s6">Il y a du sucre dans ton café.</p>
 		</div>
 		
 		<p class="rimarko">Notez que <span class="eo">estas</span>, employé sans sujet en début de phrase, comme dans l’exemple précédent, se traduit généralement par <em>il y a</em>. Nous aurons l’occasion d’y revenir dans une autre leçon.</p>
@@ -263,13 +263,13 @@ QCM_bildoj(
 
 		<p>Exemples :</p>
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">La pano estas <b>sur</b> la tablo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/la-pano-estas-sur.mp3" class="sm2_button"></a> <span class="eo">La pano estas <b>sur</b> la tablo.</span></p>
 			<p class="col s6">Le pain est sur la table.</p>
-			<p class="col s6"><span class="eo">La kato dormas <b>sub</b> la tablo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/la-kato-dormas.mp3" class="sm2_button"></a> <span class="eo">La kato dormas <b>sub</b> la tablo.</span></p>
 			<p class="col s6">Le chat dort sous la table.</p>
-			<p class="col s6"><span class="eo">Mi vidas la sunon <b>super</b> la arboj.</span></p>
-			<p class="col s6">Je vois le soleil par-dessus les arbres.</p>
-			<p class="col s6"><span class="eo">Estas floroj <b>antaŭ</b> la domo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/ni-vidas-la-sunon.mp3" class="sm2_button"></a> <span class="eo">Ni vidas la sunon <b>super</b> la arboj.</span></p>
+			<p class="col s6">Nous voyons le soleil par-dessus les arbres.</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/estas-floroj.mp3" class="sm2_button"></a> <span class="eo">Estas floroj <b>antaŭ</b> la domo.</span></p>
 			<p class="col s6">Il y a des fleurs devant la maison.</p>
 		</div>
 		
@@ -329,12 +329,12 @@ QCM_bildoj(
 		dire aussi <em>détester</em>, <em>laid</em>, <em>droite</em>, <em>faux</em>, etc.</p>
 
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">amiko</span> : ami</p>
-			<p class="col s6"><span class="eo">malamiko</span> : ennemi</p>
-			<p class="col s6"><span class="eo">bela</span> : beau, belle</p>
-			<p class="col s6"><span class="eo">malbela</span> : laid(e)</p>
-			<p class="col s6"><span class="eo">nova</span> : nouveau, nouvelle</p>
-			<p class="col s6"><span class="eo">malnova</span> : ancien(ne), vieux, vieille</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/amiko.mp3" class="sm2_button"></a> <span class="eo">amiko</span> : ami</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/malamiko.mp3" class="sm2_button"></a> <span class="eo">malamiko</span> : ennemi</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/bela.mp3" class="sm2_button"></a> <span class="eo">bela</span> : beau, belle</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/malbela.mp3" class="sm2_button"></a> <span class="eo">malbela</span> : laid(e)</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/nova.mp3" class="sm2_button"></a> <span class="eo">nova</span> : nouveau, nouvelle</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/malnova.mp3" class="sm2_button"></a> <span class="eo">malnova</span> : ancien(ne), vieux, vieille</p>
 		</div>
 	
 		<fieldset class="vortoj">
@@ -345,9 +345,9 @@ QCM_bildoj(
 				<?php } ?>
 			</div>
 			<div class="vortlisto row">
-				<p class="col s12 m4"><span class="eo">malamiko</span> : ennemi</p>
-				<p class="col s12 m4"><span class="eo">malbela</span> : laid(e)</p>
-				<p class="col s12 m4"><span class="eo">malnova</span> : ancien(ne), vieux, vieill</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/malamiko.mp3" class="sm2_button"></a> <span class="eo">malamiko</span> : ennemi</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/malbela.mp3" class="sm2_button"></a> <span class="eo">malbela</span> : laid(e)</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/malnova.mp3" class="sm2_button"></a> <span class="eo">malnova</span> : ancien(ne), vieux, vieill</p>
 			</div>
 		</fieldset>
 
@@ -377,10 +377,10 @@ QCM_bildoj(
 			<p class="col s6 m3"><span class="eo">nenio</span> : rien</p>
 			<p class="col s6 m3"><span class="eo">nenie</span> : nulle part</p>
 			<hr>
-			<p class="col s12 m6"><span class="eo">Mi <b>neniam</b> sukeras mian kafon.</span></p><p class="col s11 m6 offset-s1">Je ne sucre jamais mon café.</p>
-			<p class="col s12 m6"><span class="eo">Kiu venis? – <b>Neniu</b> venis.</span></p><p class="col s11 m6 offset-s1">Qui est venu ? – Personne n’est venu.</p>
-			<p class="col s12 m6"><span class="eo">Kio estas en la taso? – Estas <b>nenio</b>.</span></p><p class="col s11 m6 offset-s1">Qu’y-a-t-il dans la tasse ? – Il n’y a rien.</p>
-			<p class="col s12 m6"><span class="eo">Kie estas la kato? Mi vidas ĝin <b>nenie</b>!</span></p><p class="col s11 m6 offset-s1">Où est le chat ? Je ne le vois nulle part&nbsp;!</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/mi-neniam-sukeras.mp3" class="sm2_button"></a> <span class="eo">Mi <b>neniam</b> sukeras mian kafon.</span></p><p class="col s11 m6 offset-s1">Je ne sucre jamais mon café.</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kiu-venis.mp3" class="sm2_button"></a> <span class="eo">Kiu venis? – <b>Neniu</b> venis.</span></p><p class="col s11 m6 offset-s1">Qui est venu ? – Personne n’est venu.</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kio-estas-en-la-taso.mp3" class="sm2_button"></a> <span class="eo">Kio estas en la taso? – Estas <b>nenio</b>.</span></p><p class="col s11 m6 offset-s1">Qu’y-a-t-il dans la tasse ? – Il n’y a rien.</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-estas-la-kato.mp3" class="sm2_button"></a> <span class="eo">Kie estas la kato? Mi vidas ĝin <b>nenie</b>!</span></p><p class="col s11 m6 offset-s1">Où est le chat ? Je ne le vois nulle part&nbsp;!</p>
 		</div>
 
 		<?php 
@@ -396,33 +396,33 @@ QCM_bildoj(
 		<fieldset class="vortoj">
 			<div class="vortlisto row">
 				<div class="col s12 m4">
-					<p><span class="eo">ami</span> : aimer</p>
-					<p><span class="eo">fari</span> : faire</p>
-					<p><span class="eo">forgesi</span> : oublier</p>
-					<p><span class="eo">havi</span> : avoir</p>
-					<p><span class="eo">kapti</span> : attraper</p>
-					<p><span class="eo">lavi</span> : laver</p>
-					<p><span class="eo">porti</span> : porter</p>
-					<p><span class="eo">peti</span> : demander</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/ami.mp3" class="sm2_button"></a> <span class="eo">ami</span> : aimer</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/fari.mp3" class="sm2_button"></a> <span class="eo">fari</span> : faire</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/forgesi.mp3" class="sm2_button"></a> <span class="eo">forgesi</span> : oublier</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/havi.mp3" class="sm2_button"></a> <span class="eo">havi</span> : avoir</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/kapti.mp3" class="sm2_button"></a> <span class="eo">kapti</span> : attraper</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/lavi.mp3" class="sm2_button"></a> <span class="eo">lavi</span> : laver</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/porti.mp3" class="sm2_button"></a> <span class="eo">porti</span> : porter</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/peti.mp3" class="sm2_button"></a> <span class="eo">peti</span> : demander</p>
 				</div>
 				<div class="col s12 m4">
-					<p><span class="eo">skribi</span> : écrire</p>
-					<p><span class="eo">sukeri</span> : sucrer</p>
-					<p><span class="eo">trinki</span> : boire</p>
-					<p><span class="eo">renkonti</span> : rencontrer</p>
-					<p><span class="eo">vendi</span> : vendre</p>
-					<p><span class="eo">amo</span> : amour</p>
-					<p><span class="eo">kato</span> : chat</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/skribi.mp3" class="sm2_button"></a> <span class="eo">skribi</span> : écrire</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/sukeri.mp3" class="sm2_button"></a> <span class="eo">sukeri</span> : sucrer</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/trinki.mp3" class="sm2_button"></a> <span class="eo">trinki</span> : boire</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/renkonti.mp3" class="sm2_button"></a> <span class="eo">renkonti</span> : rencontrer</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/vendi.mp3" class="sm2_button"></a> <span class="eo">vendi</span> : vendre</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/amo.mp3" class="sm2_button"></a> <span class="eo">amo</span> : amour</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/kato.mp3" class="sm2_button"></a> <span class="eo">kato</span> : chat</p>
 				</div>
 				<div class="col s12 m4">
 					
-					<p><span class="eo">butiko</span> : boutique</p>
-					<p><span class="eo">insekto</span> : insecte</p>
-					<p><span class="eo">limonado</span> : limonade</p>
-					<p><span class="eo">papero</span> : papier</p>
-					<p><span class="eo">plumo</span> : plume</p>
-					<p><span class="eo">taso</span> : tasse</p>
-					<p><span class="eo">pura</span> : propre</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/butiko.mp3" class="sm2_button"></a> <span class="eo">butiko</span> : boutique</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/insekto.mp3" class="sm2_button"></a> <span class="eo">insekto</span> : insecte</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/limonado.mp3" class="sm2_button"></a> <span class="eo">limonado</span> : limonade</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/papero.mp3" class="sm2_button"></a> <span class="eo">papero</span> : papier</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/plumo.mp3" class="sm2_button"></a> <span class="eo">plumo</span> : plume</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/taso.mp3" class="sm2_button"></a> <span class="eo">taso</span> : tasse</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/pura.mp3" class="sm2_button"></a> <span class="eo">pura</span> : propre</p>
 				</div>
 			</div>
 		</fieldset>
@@ -440,7 +440,7 @@ QCM_bildoj(
 		
 		<p class="parto">Dans l’exemple suivant, vous remarquerez que certains petits mots employés en français ne se retrouvent pas en espéranto. Ils sont écrits ici entre crochets.</p>
 			<div class="vortlisto row">
-				<p class="col s12"><span class="eo">Mi forgesis trinki akvon.</span> : J’ai oublié [de] boire [de l’] eau.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/mi-forgesis-trinki-akvon.mp3" class="sm2_button"></a> <span class="eo">Mi forgesis trinki akvon.</span> : J’ai oublié [de] boire [de l’] eau.</p>
 			</div>
 				
 		<?php 
@@ -481,11 +481,11 @@ QCM_bildoj(
 		<fieldset class="vortoj">
 			<legend>EXPRESSIONS À RETENIR</legend>
 			<div class="vortlisto row">
-				<p class="col s6"><span class="eo">Kiel vi fartas ?</span></p><p class="col s6">Comment allez-vous&nbsp;?</p>
-				<p class="col s5 offset-s1"><span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">– Bien. Et vous&nbsp;?</p>
-				<p class="col s5 offset-s1"><span class="eo">– Bonege.</span></p><p class="col s6">– Parfaitement bien.</p>
-				<p class="col s5 offset-s1"><span class="eo">– Sufiĉe bone.</span></p><p class="col s6">– Assez bien. (ça va)</p>
-				<p class="col s5 offset-s1"><span class="eo">– Ne tro bone.</span></p><p class="col s6">– Pas trop bien.</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/kiel-vi-fartas.mp3" class="sm2_button"></a> <span class="eo">Kiel vi fartas?</span></p><p class="col s6">Comment allez-vous&nbsp;?</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/bone-kaj-vi.mp3" class="sm2_button"></a> <span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">– Bien. Et vous&nbsp;?</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/bonege.mp3" class="sm2_button"></a> <span class="eo">– Bonege.</span></p><p class="col s6">– Parfaitement bien.</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/suficxe-bone.mp3" class="sm2_button"></a> <span class="eo">– Sufiĉe bone.</span></p><p class="col s6">– Assez bien. (ça va)</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/ne-trop-bone.mp3" class="sm2_button"></a> <span class="eo">– Ne tro bone.</span></p><p class="col s6">– Pas trop bien.</p>
 			</div>
 		</fieldset>
 		
@@ -499,10 +499,10 @@ QCM_bildoj(
 		
 		<p>Exemples :</p>
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">Kiel vi faras?</span></p><p class="col s6">Comment faites-vous&nbsp;?</p>
-			<p class="col s6"><span class="eo">– Tiel!</span></p><p class="col s6">– Comme ça&nbsp;!</p>
-			<p class="col s6"><span class="eo">Tiel estas.</span></p><p class="col s6">C’est ainsi.</p>
-			<p class="col s6"><span class="eo">Ŝi skribas kiel mia patrino.</span></p><p class="col s6">Elle écrit comme ma mère.</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/kiel-vi-faras.mp3" class="sm2_button"></a> <span class="eo">Kiel vi faras?</span></p><p class="col s6">Comment faites-vous&nbsp;?</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/tiel.mp3" class="sm2_button"></a> <span class="eo">– Tiel!</span></p><p class="col s6">– Comme ça&nbsp;!</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/tiel-estas.mp3" class="sm2_button"></a> <span class="eo">Tiel estas.</span></p><p class="col s6">C’est ainsi.</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/sxi-skribas.mp3" class="sm2_button"></a> <span class="eo">Ŝi skribas kiel mia patrino.</span></p><p class="col s6">Elle écrit comme ma mère.</p>
 		</div>
 
 		<?php 

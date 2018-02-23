@@ -543,44 +543,43 @@ QCM(
 			?>
 			<p class="parto">Dans l’exercice précédent, vous avez vu comment interroger sur l’identité d’une personne ou d’une chose. On utilise pour cela le mot interrogatif <b>kiu</b>&nbsp;:</p>
 			<div class="vortlisto row">
-				<p class="col s6"><span class="eo"><b>Kiu</b> loĝas en Brazilo?</span></p><p class="col s6"><b>Qui</b> habite au Brésil&nbsp;?</p>
-				<p class="col s6"><span class="eo">En <b>kiu</b> filmo estas Aleks?</span></p><p class="col s6">Dans <b>quel</b> film est Aleks&nbsp;?</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kiu-logxas-en-brazilo.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kiu</b> loĝas en Brazilo?</span></p><p class="col s11 m6 offset-s1"><b>Qui</b> habite au Brésil&nbsp;?</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/en-kiu-filmo.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo">En <b>kiu</b> filmo estas Aleks?</span></p><p class="col s11 m5 offset-s1">Dans <b>quel</b> film est Aleks&nbsp;?</p>
 			</div>
 			
 			<p>On traduit généralement <b>kiu</b> par <em>qui</em>, <em>quel(le)</em>, <em>lequel</em> ou <em>laquelle</em>. </p>
 				
 			<p>Voici quelques autres exemples :</p>
 			<div class="row">
-				<p class="col s12 m6"><span class="eo"><b>Kiu</b> estas la nova instruisto?<br>– Estas Marko. Estas mia patro.</span></p><p class="col s12 m6">Qui est le nouvel instituteur&nbsp;?<br>– C’est Marko. C'est mon père.</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kiu-estas-la-nova-instruisto.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kiu</b> estas la nova instruisto?<br>– Estas Marko. Estas mia patro.</span></p><p class="col s11 m6 offset-s1">Qui est le nouvel instituteur&nbsp;?<br>– C’est Marko. C'est mon père.</p>
 			</div>
 			<div class="row">
-				<p class="col s12 m6"><span class="eo">En <b>kiu</b> urbo loĝas Anna Maria?<br>– Ŝi loĝas en Vroclavo.</span></p><p class="col s12 m6">Dans <b>quelle</b> ville habite Anna Maria&nbsp;?<br>– Elle habite à Wrocław.</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/en-kiu-urbo-logxas-anna-maria.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo">En <b>kiu</b> urbo loĝas Anna Maria?<br>– Ŝi loĝas en Vroclavo.</span></p><p class="col s11 m6 offset-s1">Dans <b>quelle</b> ville habite Anna Maria&nbsp;?<br>– Elle habite à Wrocław.</p>
 			</div>
 			<div class="row">
-				<p class="col s12 m6"><span class="eo">Parizo, Varsovio kaj Romo estas urboj. <b>Kiu</b> estas en Pollando?</span></p><p class="col s12 m6">Paris, Varsovie et Rome sont des villes. <b>Laquelle</b> est en Pologne&nbsp;?</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/parizo-varsovio-kaj-romo.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo">Parizo, Varsovio kaj Romo estas urboj. <b>Kiu</b> estas en Pollando?</span></p><p class="col s11 m6 offset-s1">Paris, Varsovie et Rome sont des villes. <b>Laquelle</b> est en Pologne&nbsp;?</p>
 			</div>
 			
 			<p class="parto"><b>Kiu</b> se met au pluriel (<b>kiuj</b>) si l’on interroge sur plusieurs personnes ou plusieurs choses. Par exemple&nbsp;:</p>
 			
 			<div class="row">
-				<p class="col s12 m6"><span class="eo">Jen kukoj. <b>Kiuj</b> estas bonaj?</span></p><p class="col s12 m6">Voici des gâteaux. <b>Lesquels</b> sont bons&nbsp;?</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/jen-kukoj.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo">Jen kukoj. <b>Kiuj</b> estas bonaj?</span></p><p class="col s11 m6 offset-s1">Voici des gâteaux. <b>Lesquels</b> sont bons&nbsp;?</p>
 			</div>
 			<div class="row">
-				<p class="col s12 m6"><span class="eo"><b>Kiuj</b> estas viaj instruistoj?<br>– Marko kaj Petro.</span></p><p class="col s12 m6"><b>Qui</b> sont tes professeurs&nbsp;?<br>– Marko et Petro.</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kiuj-estas-viaj-instruistoj.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kiuj</b> estas viaj instruistoj?<br>– Marko kaj Petro.</span></p><p class="col s11 m6 offset-s1"><b>Qui</b> sont tes professeurs&nbsp;?<br>– Marko et Petro.</p>
 			</div>
 
 			<p class="parto">Dans l’exercice précédent, vous avez également vu comment poser une question pour interroger sur le lieu&nbsp;:</p>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo"><b>Kie</b> loĝas la instruisto?</span></p><p class="col s12 m6"><b>Où</b> habite le professeur&nbsp;?</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-logxas-la-instruisto.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kie</b> loĝas la instruisto?</span></p><p class="col s11 m6 offset-s1"><b>Où</b> habite le professeur&nbsp;?</p>
 			</div>
 			
 			<p>Voici d’autres exemples de questions commençant par <b>kie</b>&nbsp;:</p>
 			<div class="row">
-				<p class="col s12 m6"><span class="eo"><b>Kie</b> studas Allan?</span></p><p class="col s12 m6"><b>Où</b> étudie Allan&nbsp;?</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-studas-allan .mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kie</b> studas Allan?</span></p><p class="col s11 m6 offset-s1"><b>Où</b> étudie Allan&nbsp;?</p>
 			</div>
 			<div class="row">
-				<p class="col s12 m6"><span class="eo"><b>Kie</b> estas la urbo Chaumont?</span></p><p class="col s12 m6"><b>Où</b> est la ville de Chaumont&nbsp;?</p>
-				<p class="col s12 m6"><span class="eo">– Ĝi estas en Francujo.</span></p><p class="col s12 m6">– Elle est en France.</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-estas-chaumont.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kie</b> estas la urbo Chaumont?<br>– Ĝi estas en Francujo.</span></p><p class="col s11 m6 offset-s1"><b>Où</b> est la ville de Chaumont&nbsp;?<br>– Elle est en France.</p>
 			</div>
 			
 			<?php 
@@ -611,36 +610,33 @@ QCM(
 
 						<p class="parto">Voici un peu de vocabulaire qui peut vous aider. Vous n'avez pas besoin de retenir tous ces mots dès maintenant. Ils ne seront utiles que pour cet exercice.</p>
 			<div class="vortlisto row">
-				<div class="col s12 m4">
+				<div class="col s12 m6">
 					<p><b>Profession</b></p>
-					<p><span class="eo">emerito</span> : retraité</p>
-					<p><span class="eo">funkciulo</span> : fonctionnaire</p>
-					<p><span class="eo">ĵurnalisto</span> : journaliste</p>
-					<p><span class="eo">laboristo</span> : ouvrier</p>
-					<p><span class="eo">komputilisto</span> : informaticien</p>
-					<p><span class="eo">oficisto</span> : employé</p>
-					<p><span class="eo">senlaborulo</span> : chômeur</p>
-					
-				</div>
-				<div class="col s12 m4">
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/emerito.mp3" class="sm2_button"></a> <span class="eo">emerito</span> : retraité</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/funkciulo.mp3" class="sm2_button"></a> <span class="eo">funkciulo</span> : fonctionnaire</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/jxurnalisto.mp3" class="sm2_button"></a> <span class="eo">ĵurnalisto</span> : journaliste</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/laboristo.mp3" class="sm2_button"></a> <span class="eo">laboristo</span> : ouvrier</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/komputilisto.mp3" class="sm2_button"></a> <span class="eo">komputilisto</span> : informaticien</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/oficisto.mp3" class="sm2_button"></a> <span class="eo">oficisto</span> : employé</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/senlaborulo.mp3" class="sm2_button"></a> <span class="eo">senlaborulo</span> : chômeur</p>
 					<p><b>Pays</b></p>
-					<p><span class="eo">Afriko</span> : Afrique</p>
-					<p><span class="eo">Belgio</span> : Belgique</p>
-					<p><span class="eo">Eŭropo</span> : Europe</p>
-					<p><span class="eo">Francujo</span> : France</p>
-					<p><span class="eo">Kanado</span> : Canada</p>
-					<p><span class="eo">Parizo</span> : Paris</p>
-					<p><span class="eo">Svislando</span> : Suisse</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Afriko.mp3" class="sm2_button"></a> <span class="eo">Afriko</span> : Afrique</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Belgio.mp3" class="sm2_button"></a> <span class="eo">Belgio</span> : Belgique</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Euxropo.mp3" class="sm2_button"></a> <span class="eo">Eŭropo</span> : Europe</p>
 				</div>
-				<div class="col s12 m4">
+				<div class="col s12 m6">
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Francujo.mp3" class="sm2_button"></a> <span class="eo">Francujo</span> : France</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Kanado.mp3" class="sm2_button"></a> <span class="eo">Kanado</span> : Canada</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Parizo.mp3" class="sm2_button"></a> <span class="eo">Parizo</span> : Paris</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Svislando.mp3" class="sm2_button"></a> <span class="eo">Svislando</span> : Suisse</p>
 					<p><b>Adjectifs</b></p>
-					<p><span class="eo">donacema</span> : généreux</p>
-					<p><span class="eo">feliĉa</span> : heureux</p>
-					<p><span class="eo">juna</span> : jeune</p>
-					<p><span class="eo">maljuna</span> : vieux</p>
-					<p><span class="eo">scivolema</span> : curieux, qui aime apprendre</p>
-					<p><span class="eo">sportema</span> : sportif, qui aime le sport</p>
-					<p><span class="eo">vojaĝema</span> : voyageur, qui aime voyager</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/donacema.mp3" class="sm2_button"></a> <span class="eo">donacema</span> : généreux</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/felicxa.mp3" class="sm2_button"></a> <span class="eo">feliĉa</span> : heureux</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/juna.mp3" class="sm2_button"></a> <span class="eo">juna</span> : jeune</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/maljuna.mp3" class="sm2_button"></a> <span class="eo">maljuna</span> : vieux</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/scivolema.mp3" class="sm2_button"></a> <span class="eo">scivolema</span> : curieux, qui aime apprendre</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/sportema.mp3" class="sm2_button"></a> <span class="eo">sportema</span> : sportif, qui aime le sport</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/vojagxema.mp3" class="sm2_button"></a> <span class="eo">vojaĝema</span> : voyageur, qui aime voyager</p>
 				</div>
 				<div class="col s12">
 					<p><b>Expression utile</b></p>

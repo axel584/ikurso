@@ -234,6 +234,7 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">mi estas</span> : je suis</p>
 					<p><span class="eo">li estas</span> : il est</p>
 					<p><span class="eo">ŝi estas</span> : elle est</p>
+					<p><span class="eo">ĝi estas</span> : il/elle est</p>
 				</div>
 				<div class="col s12 m6">
 					<p><span class="eo">ni estas</span> : nous sommes</p>
@@ -300,6 +301,7 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">vi</span> : tu, vous</p>
 					<p><span class="eo">ŝi</span> : elle</p>
 					<p><span class="eo">li</span> : lui</p>
+					<p><span class="eo">ĝi</span> : lui, elle (non-personne)</p>
 					<p><span class="eo">ni</span> : nous</p>
 					<p><span class="eo">ili</span> : ils, elles</p>
 				</div>
@@ -308,6 +310,7 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">via</span> : ton, ta, votre</p>
 					<p><span class="eo">ŝia</span> : son, sa (à elle)</p>
 					<p><span class="eo">lia</span> : son, sa (à lui)</p>
+					<p><span class="eo">ĝia</span> : son, sa</p>
 					<p><span class="eo">nia</span> : notre</p>
 					<p><span class="eo">ilia</span> : leur</p>
 				</div>
@@ -316,6 +319,7 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">viaj</span> : tes, vos</p>
 					<p><span class="eo">ŝiaj</span> : ses (à elle)</p>
 					<p><span class="eo">liaj</span> : ses (à lui)</p>
+					<p><span class="eo">ĝiaj</span> : ses</p>
 					<p><span class="eo">niaj</span> : nos</p>
 					<p><span class="eo">iliaj</span> : leurs</p>
 				</div>

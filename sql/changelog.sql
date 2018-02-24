@@ -2439,3 +2439,6 @@ INSERT INTO `qcm_propono` (`id`, `qcm_demando_id`, `ordo`, `propono`, `indikilo`
 -- insertion d'une section sur la littérature à la fin de la leçon 5
 UPDATE `lecioneroj` SET ordo=8 WHERE `leciono_id`=63 and `ordo`=7;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`) VALUES (NULL, '63', 'Littérature et espéranto', 'TEKSTO', NULL, '7', '0', '0');
+
+-- modif phrase dans exercice 6.12
+UPDATE `ikurso`.`ekzerceroj` SET `demando` = 'arkto - blankaj - en - estas - la - ursoj.', `respondo` = 'En la arkto estas blankaj ursoj. Sur le continent arctique, il y a des ours blancs.', `normaligita` = 'en la arkto estas blankaj ursoj sur le continent arctique il y a des ours blancs' WHERE `ekzerceroj`.`id` = 157;

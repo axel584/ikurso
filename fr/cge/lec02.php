@@ -630,6 +630,7 @@ QCM(
 		</ul>	
 		
 		<?php
+		pubAndroid();
 		pubFacebook();
 		?>
 				

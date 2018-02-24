@@ -85,6 +85,7 @@ include "dlekkapo.inc.php";
 		</ul>	
 		
 		<?php
+		pubAndroid();
 		pubFacebook();
 		?>
 				

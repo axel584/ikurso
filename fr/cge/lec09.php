@@ -438,6 +438,7 @@ frameborder="0" allowfullscreen></iframe></p>
 		</ul>	
 		
 		<?php
+		pubAndroid();
 		pubFacebook();
 		?>
 				

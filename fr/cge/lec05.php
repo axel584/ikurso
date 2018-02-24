@@ -404,9 +404,10 @@ include "dlekkapo.inc.php";
 
 		</ul>	
 		
-				<?php
+		<?php
+		pubAndroid();
 		pubFacebook();
-		?>		
+		?>
 	</aside>
 </div>
 <?php include "dlekpiedo.inc.php"; ?>

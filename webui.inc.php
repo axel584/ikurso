@@ -910,6 +910,10 @@ function getLigiloAlMemorilo($persono_id) {
 function pubFacebook() {
 	echo '<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAssociation.Esperanto.France%2F&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden"></iframe>';
 }
+function pubAndroid() {
+	global $vojo;
+	echo '<div class="card reklamo"><p><strong>NOUVEAU !</strong><br>Vous pouvez dès maintenant tester iKurso sur Android.</p><p class="container"><a href="https://play.google.com/apps/testing/fr.esperanto_france.ikurso"><img  class="responsive-img" src="'.$vojo.'bildoj/google-play-badge.png"></a></p></div>';
+}
 
 function vortlisto($persono_id,$kurso,$pattern) {
 	global $bdd;

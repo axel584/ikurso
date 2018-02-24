@@ -239,6 +239,17 @@ div.col > p:first-child {
 /*---------------  cards ---------------*/
 .card {padding: 1rem;}
 
+.card.reklamo {
+	border: 1px solid #9ccc65;
+	padding: 0.25rem;
+	text-align: center;
+}
+.card.reklamo strong {
+	font-weight: 500;
+	color: #9ccc65;
+	font-size: 1.2rem;
+}
+
 /*------------ liste à puces ------------*/
 ul.listo li { 
     padding-left: 1em; 

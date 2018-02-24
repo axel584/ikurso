@@ -153,6 +153,10 @@ include "dlekkapo.inc.php";
 					</ul>
 				</div>
 		</ul>
+		<?php
+		pubAndroid();
+		pubFacebook();
+		?>
 	</aside>
 	
 </div>

@@ -370,22 +370,23 @@ include "dlekkapo.inc.php";
 			?>
 		
 			<div class="vortlisto row">
-				<p class="col s6"><span class="eo">inciti</span> : irriter</p>
-				<p class="col s6"><span class="eo">daŭre</span> : continuellement</p>
-				<p class="col s6"><span class="eo">estonta</span> : futur (participe futur de <em>esti</em>)</p>
-				<p class="col s6"><span class="eo">kafejo</span> : café (restaurant)</p>
-				<p class="col s6"><span class="eo">for-iri</span> : partir</p>
-				<p class="col s6"><span class="eo">surtuto</span> : pardessus</p>
-				<p class="col s6"><span class="eo">jam</span> : déjà</p>
-				<p class="col s6"><span class="eo">konflikto</span> : conflit</p>
-				<p class="col s6"><span class="eo">hejme</span> : à la maison</p>
-				<p class="col s6"><span class="eo">aŭto-veturado</span> : trajet en voiture</p>
-				<p class="col s6"><span class="eo">ambaŭ</span> : tous deux</p>
-				<p class="col s6"><span class="eo">moke</span> : par moquerie</p>
-				<p class="col s6"><span class="eo">obstine</span> : avec obstination</p>
-				<p class="col s6"><span class="eo">silenti</span> : garder le silence</p>
-				<p class="col s6"><span class="eo">preter-pasi</span> : dépasser, passer (devant)…</p>
-				<p class="col s6"><span class="eo">parenco</span> : parent (personne de la même famille)</p>
+				<p class="col s12 m6"><span class="eo">ambaŭ</span> : tous deux</p>
+				<p class="col s12 m6"><span class="eo">aŭto-veturado</span> : trajet en voiture</p>
+				<p class="col s12 m6"><span class="eo">azeno</span> : âne</p>
+				<p class="col s12 m6"><span class="eo">daŭre</span> : continuellement</p>
+				<p class="col s12 m6"><span class="eo">estonta</span> : futur (participe futur de <em>esti</em>)</p>
+				<p class="col s12 m6"><span class="eo">inciti</span> : irriter</p>
+				<p class="col s12 m6"><span class="eo">foriri (for-iri)</span> : partir</p>
+				<p class="col s12 m6"><span class="eo">hejme</span> : à la maison</p>
+				<p class="col s12 m6"><span class="eo">jam</span> : déjà</p>
+				<p class="col s12 m6"><span class="eo">kafejo</span> : café (restaurant)</p>
+				<p class="col s12 m6"><span class="eo">konflikto</span> : conflit</p>
+				<p class="col s12 m6"><span class="eo">surtuto</span> : pardessus</p>
+				<p class="col s12 m6"><span class="eo">moke</span> : par moquerie</p>
+				<p class="col s12 m6"><span class="eo">obstine</span> : avec obstination</p>
+				<p class="col s12 m6"><span class="eo">parenco</span> : parent (personne de la même famille)</p>
+				<p class="col s12 m6"><span class="eo">preter-pasi</span> : dépasser, passer (devant)…</p>
+				<p class="col s12 m6"><span class="eo">silenti</span> : garder le silence</p>
 			</div>
 		<?php 
 		} // fin section 8

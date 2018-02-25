@@ -253,27 +253,6 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			<nav class="primaire">
 				<div class="nav-wrapper">
 					<a href="<?php echo $vojo;?>index.php" class="brand-logo" id="logo">iKurso</a>
-					<!-- hamburger menu -->
-					<div class="side-nav" id="nav-mobile">
-						<ul>
-							<li class="entete">COURS EN LIGNE</li>
-							<li class="retrait"><a href="<?php echo $vojo;?>fr/cge/intro.php">Cours en 10 leçons</a></li>
-							<li class="retrait"><a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a></li>
-							<li class="divider"></li>
-							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">Téléchargements</a></li>
-							<li class="divider"></li>
-							<li class="entete">INFORMATIONS PRATIQUES</li>
-							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=enskribo">Comment s’inscrire&nbsp;?</a></li>
-							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kurso">Comment suivre le cours&nbsp;?</a></li>
-							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kajposte">Que faire après le cours&nbsp;?</a></li>
-							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kielskribi">Comment écrire en espéranto&nbsp;?</a></li>
-							<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kielhelpi">Comment nous aider&nbsp;?</a></li>
-							<li class="divider"></li>
-							<li><a href="<?php echo $vojo;?>kionova.php">Quoi de neuf&nbsp;?</a></li>
-							<li class="divider"></li>
-							<li><a href="<?php echo $vojo;?>butiko.php">Boutique</a></li>
-						</ul>
-					</div>
 					<a href="#!" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
 					<ul class="right">
 
@@ -301,5 +280,27 @@ if ($persono_id=="") {
 				</div>
 			</nav>
 		</div>
+		<!-- hamburger menu -->
+		<div class="side-nav" id="nav-mobile">
+			<ul>
+				<li class="entete">COURS EN LIGNE</li>
+				<li class="retrait"><a href="<?php echo $vojo;?>fr/cge/intro.php">Cours en 10 leçons</a></li>
+				<li class="retrait"><a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a></li>
+				<li class="divider"></li>
+				<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">Téléchargements</a></li>
+				<li class="divider"></li>
+				<li class="entete">INFORMATIONS PRATIQUES</li>
+				<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=enskribo">Comment s’inscrire&nbsp;?</a></li>
+				<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kurso">Comment suivre le cours&nbsp;?</a></li>
+				<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kajposte">Que faire après le cours&nbsp;?</a></li>
+				<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kielskribi">Comment écrire en espéranto&nbsp;?</a></li>
+				<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kielhelpi">Comment nous aider&nbsp;?</a></li>
+				<li class="divider"></li>
+				<li><a href="<?php echo $vojo;?>kionova.php">Quoi de neuf&nbsp;?</a></li>
+				<li class="divider"></li>
+				<li><a href="<?php echo $vojo;?>butiko.php">Boutique</a></li>
+			</ul>
+		</div>
+
 	<main>
 	<form id="chefa_form"> <!-- on englobe chaque page d'un formulaire principal -->

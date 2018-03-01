@@ -63,7 +63,7 @@ function normaligita($respondo) {
 }
 
 function kontroliRespondon($lernantaRespondo,$bonaRespondo) {
-	return preg_match("/^".$bonaRespondo."$/",$lernantaRespondo);
+	return preg_match("/^".normaligita($bonaRespondo)."$/",normaligita($lernantaRespondo));
 	// attention, il ne faut pas utiliser != mais !==
 	// if (strpos($bonaRespondo,"|")!==false) {
 	// 	return kontroliRespondon($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliRespondon($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));

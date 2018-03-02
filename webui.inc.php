@@ -458,17 +458,14 @@ function getEkzercon($id,$persono_id) {
 			$valid=($rowRespondo["gxusta"]==1)?"valid":"";
 		}
 		echo "<p class='col s12 demando'>".$rowEkzercero["numero"].". ".$rowEkzercero["demando"]."</p>\n";
-		//echo "<input type='hidden' name=\"id_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["id"]."\">";
-		//echo "<input type='hidden' name=\"dem_".$rowEkzercero["kodo"]."\" value=\"".$rowEkzercero["numero"]." ".$rowEkzercero["demando"]."\">";
-		//echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"".$rowEkzercero["numero"]." ".$rowEkzercero["demando"]."\">";
 		echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"\">";
 
 		if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")) { // cas des types d'exercices textarea
-			echo "<div class='input-field col s12'><textarea class='materialize-textarea' rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
+			echo "<div class='input-field col s12'><textarea rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
 			if ($rowEkzerco["x2u"]==1) {
 				echo " onkeyup='xAlUtf8(this)'";
 			}
-			echo " class='validate ".$valid." ".$styleKorektebla."'>";
+			echo " class='materialize-textarea validate ".$valid." ".$styleKorektebla."'>";
 			echo $respondo;
 			echo "</textarea></div>";
 		} else { // cas des types d'exercice sur des champs input

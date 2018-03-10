@@ -3,7 +3,7 @@
     // méthode pour afficher la popup modale pour choisir un nouveau mot de passe si l'url contient novigiPasvorton
     $url = window.location.href;
     if ($url.indexOf("novigiPasvorton=")>-1) {
-      $('#novigi_pasvorton').openModal();
+      $('#novigi_pasvorton').modal('open');
     }
 
 
@@ -345,8 +345,8 @@ $( "#serchi_protokolon_button").click(function() {
 
 
     $("#aperigi_novigi_pasvorton_button").click(function () {
-      $('#konektigxi').closeModal();
-      $('#sendi_novan_pasvorton').openModal();
+      $('#konektigxi').modal('close');
+      $('#sendi_novan_pasvorton').modal('open');
     });
 
 $("#sendi_novan_pasvorton_button").click(function () {

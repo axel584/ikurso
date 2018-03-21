@@ -18,7 +18,7 @@ De créer une base MySQL et un utilisateur et d'attribuer à l'utilisateur les d
 D'inserer en base le fichier qui se trouve dans sql/create.sql
 
 De créer à la racine un fichier config.php contenant les informations suivante :
-
+```
 <?php
 $base = "ikurso";
 $login = "identifiant";
@@ -32,7 +32,7 @@ $portSmtpSES = 587;
 $userSES = "USER_SES"; // pour l'envoi des mails via amazon
 $passwordSES = "mot de passe Amazon SES";
 ?>
-
+```
 et de se connecter à l'adresse http://localhost/ikurso
 
 En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com

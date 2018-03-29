@@ -134,7 +134,6 @@ $("textarea").on('change keyup paste', function() {
         $("#vortojPorVerki_"+$id).html("");      
     }
   }
- // 
 });
 
 // permet de recliquer sur le bouton sauvegarder si on change la valeur d'un champ

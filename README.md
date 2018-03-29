@@ -35,5 +35,22 @@ $passwordSES = "mot de passe Amazon SES";
 ```
 et de se connecter à l'adresse http://localhost/ikurso
 
+# Organisation du code 
+
+Voici une description des répertoires les plus importants : 
+
+- /ajax : contient les scripts qui sont appelés par des appels ajax
+- /bildoj : contient les images du sites
+- /cron : contient les scripts qui sont appelés toutes les nuits (principalement pour les rappels automatique).
+- /db : couche "DAO"
+- /fr : contiennt les cours. Les répertoires les plus importants sont les sous-répertoires /fr/cge et /fr/gerda. Ils ont été historiquement mis dans un sous répertoire /fr dans le but de faire une version par langue, mais ça n'a jamais pris.
+- /ikurso : contient la version "android" du site (pour Cordova)
+- /js : contient les scripts javascript (souvent utilisés avec les fichiers php du répertoire /ajax
+- /mails : il s'agit des "template" des messages qui sont envoyés automatiquement. On utilise des variables ##VARIABLE## qui sont ensuite remplacé par le code qui envoit les mails. A noter que certains mails se terminent par FR pour indiquer qu'ils sont envoyés à des francophones. Les autres langues ne sont plus utilisés.
+- /python : script python pour faire quelques analyses statistiques sur la base (nécessaire un fichier de configuration similaire au config.php mais en python)
+- /soundmanager2 : bibliothèque externe pour jouer des mp3
+- /sql : code sql pour alimenter la base (create.sql) et pour suivre les nouvelles versions (changelog.sql)
+
+
 En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
 

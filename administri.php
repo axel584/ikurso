@@ -90,7 +90,7 @@ function listi_kursojn ($kurso) {
 	} 
 	
 	// on ajoute un dernier choix fourre-tout �a liste
-	echo "<option value=\"-- cours --\"";
+	echo "<option value=\"\"";
 	if ($kurso==$aliavidigito) { echo "selected";}
 	echo " >".$aliavidigito."</option>";
 	echo "</select>";

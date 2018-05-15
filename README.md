@@ -51,6 +51,19 @@ Voici une description des répertoires les plus importants :
 - /soundmanager2 : bibliothèque externe pour jouer des mp3
 - /sql : code sql pour alimenter la base (create.sql) et pour suivre les nouvelles versions (changelog.sql)
 
+# Organisation de la base 
+
+Voici une descriptions des tables les plus importantes :
+
+- ekzerceroj : question d'un exercice
+- ekzercoj : exercice à rédiger. Un exercice contient plusieurs questions "ekzerceroj"
+- komentoj : commentaire qu'un correcteur peut laisser sur son élève
+- korektebla_kurso : nombre d'élèves qu'un correcteur accepte de prendre pour un cours donné
+- kursoj : liste des cours (actuellement 4)
+- landoj : liste des pays (n'est pas exhaustif afin d'éviter une liste trop longue car nous n'avons que des élèves francophones)
+- lecioneroj : section d'une leçon
+- lecionoj : leçon. Une leçon contient plusieurs sections "lecioneroj"
+- nuna_kurso : cours actuellement suivi par un élève avec la dernière leçon envoyée et le correcteur qui lui est attribué
 
 En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
 

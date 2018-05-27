@@ -13,9 +13,11 @@ include "pagxkapo.inc.php";
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l2">
 		<h1>Qui sommes-nous ?</h1>
+		
+		<h2 id="asocio" class="scrollspy">L’ association Espéranto-France</h2>
 		<div class="row">
 			<div class="col s12 m9">
-			<p>Ce site de cours d’espéranto <em>iKurso</em> est hébergé par l’association <a href="https://esperanto-france.org">Espéranto-France</a>. Cette association de loi de 1901 a pour objectif de faire connaître et enseigner l’espéranto. </p>
+				<p class="parto">Ce site de cours d’espéranto <em>iKurso</em> est hébergé par l’association <a href="https://esperanto-france.org">Espéranto-France</a>. Cette association de loi de 1901 a pour objectif de faire connaître et enseigner l’espéranto. </p>
 			</div>
 			<div class="col s12 m3">
 				<img src="<?php echo $vojo;?>bildoj/logo-UFE.png" class="responsive-img">
@@ -35,10 +37,11 @@ include "pagxkapo.inc.php";
 				<p>Il est possible d’adhérer à l’association afin de soutenir son action, mais l’adhésion à l’association n’a aucun caractère obligatoire pour pouvoir profiter du service de correction. Il est également possible de s’investir humainement dans l’association, par exemple en postulant au conseil d’administration de l’association qui vote les projets qui seront réalisés.</p>
 			</div>
 		</div>
-
+		
+		<h2 id="kursoj" class="scrollspy">Les cours en ligne</h2>
 		<div class="row">
 			<div class="col s12">
-				<p>Les cours en ligne sont corrigés par une équipe de bénévoles et sont donc totalement gratuits. Certains des bénévoles ont appris l’espéranto grâce aux cours en ligne, mais il n’y a aucune obligation pour les élèves de devenir bénévoles à la suite du cours. Il convient donc aux élèves de respecter le travail des correcteurs et de les tenir informés des éventuels retards à l’envoi des leçons.</p>
+				<p class="parto">Les cours en ligne sont corrigés par une équipe de bénévoles et sont donc totalement gratuits. Certains des bénévoles ont appris l’espéranto grâce aux cours en ligne, mais il n’y a aucune obligation pour les élèves de devenir bénévoles à la suite du cours. Il convient donc aux élèves de respecter le travail des correcteurs et de les tenir informés des éventuels retards à l’envoi des leçons.</p>
 			</div>
 		</div>
 
@@ -56,6 +59,33 @@ include "pagxkapo.inc.php";
 				<img src="<?php echo $vojo;?>bildoj/gerda-kovrilo.jpg" class="responsive-img">
 			</div>
 		</div>
+		
+		<h2 id="datumoj" class="scrollspy">Protection des données personnelles</h2>
+		<div class="row">
+			<div class="col s12">
+				<p class="parto">Pour s’inscrire et bénéficier du service de correction, l’utilisateur doit indiquer une adresse courriel valide, qui sera utilisée par le correcteur pour le suivi du cours et la correction des exercices. L’utilisateur peut indiquer également ses noms et prénoms, sa date de naissance et son adresse postale. Ces informations sont facultatives et peuvent à tout moment être modifiées par l’utilisateur.</p>
+				<p>Ces données peuvent être utilisées par l’association pour inviter les élèves à participer à des événements organisés par Espéranto-France ou par des associations d’espéranto, leur proposer de rejoindre l'association, ou acheter des produits de la boutique. Elles peuvent également être utilisées pour informer les élèves, via la lettre d'information <a href="https://esperanto-france.org/esperanto-aktiv">Esperanto Aktiv’</a>. Enfin, les données peuvent aussi être transmises à d'autres associations d'espéranto pour informer les élèves des activités de ces associations. En aucun cas, les données récoltées ne seront revendues à des tiers.</p>
+				<p>L’utilisateur dispose d'un droit de modification de ses informations personnelles via son <a href="<?php echo $vojo;?>personinformoj.php">espace personnel</a> et de suppression en utilisant le <a href="<?php echo $vojo;?>reago.php">formulaire de contact</a>, accessible depuis toutes les pages.</p>
+			</div>
+		</div>
 	</article>
+	<aside class="col s12 m10 l3 offset-m1">
+		<div class="pinned">
+			<ul class="collapsible">
+				<li class="active">
+					<div class="collapsible-header active">
+						<i class="material-icons">toc</i>Sommaire
+					</div>
+					<div class="collapsible-body">
+						<ul id="enhavtabelo" class="collection">
+							<li><a href="#asocio">L’ association Espéranto-France</a></li>
+							<li><a href="#kursoj">Les cours en ligne</a></li>
+							<li><a href="#datumoj">Protection des données personnelles</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</aside>
 </div>
 <?php include "pagxpiedo.inc.php";?>

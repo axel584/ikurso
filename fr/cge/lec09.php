@@ -362,7 +362,7 @@ frameborder="0" allowfullscreen></iframe></p>
 				<div class="vortlisto row">
 					<p class="col s12 m6"><span class="eo">gvidi</span> : guider, diriger</p>
 					<p class="col s12 m6"><span class="eo">Brazilo</span> : Brésil</p>
-					<p class="col s12 m6"><span class="eo">Brazilio</span> : Brasilia</p>
+					<p class="col s12 m6"><span class="eo">Braziljo</span> : Brasilia</p>
 					<p class="col s12 m6"><span class="eo">senti</span> : sentir, ressentir</p>
 					<p class="col s12 m6"><span class="eo">kresko</span> : croissance, accroissement</p>
 					<p class="col s12 m6"><span class="eo">samideano</span> : partisan (ici : espérantiste)</p>

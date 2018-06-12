@@ -3,7 +3,7 @@ include "../db.inc.php";
 include "../util.php";
 malfermidatumbazon();
 
-// Premier rappel au bout de 6 jours
+// Premier rappel le 5 du mois
 $query = "SELECT distinct personoj.id,enirnomo,retadreso,personnomo,familinomo,nuna_kurso.korektanto FROM nuna_kurso,personoj where nuna_kurso.korektanto=personoj.id and nuna_kurso.stato='K' and lastdato<DATE_SUB(CURDATE(), INTERVAL 30 DAY) order by korektanto";
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
@@ -15,9 +15,7 @@ $result = $bdd->query($query);
  	$eleves = "";
  	echo "<br/>-----------------------------------------------------------------<br/>";
  	while($row2 = $result2->fetch()) {
- 		echo "2";
- 		echo $row2["enirnomo"];
- 		$eleves .= $row2["enirnomo"]."<br/>";
+ 		$eleves .= $row2["enirnomo"]." (<a href='mailto:".$row2["retadreso"]."'>".$row2["retadreso"].")</a><br/>";
  	}
     echo $row["id"].":".$row["retadreso"].":"; 
     if ($eleves=="") {

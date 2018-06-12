@@ -70,7 +70,7 @@ include "gerdakapo.inc.php";
 		
 		<section class="klarigo">
 			<h4>-j : <i>pluriel</i></h4>
-			<p><span class="eo">viro</span> : (une) homme → <span class="eo">viroj</span> : (des) hommes</p>
+			<p><span class="eo">viro</span> : (un) homme → <span class="eo">viroj</span> : (des) hommes</p>
 			<p><span class="eo">virino</span> : (une) femme → <span class="eo">virinoj</span> : (des) femmes</p>
 			<p><span class="eo">juna viro</span> : (un) jeune homme → <span class="eo">junaj viroj</span> : (des) jeunes hommes</p>
 			<p><span class="eo">bela tago</span> : (une) belle journée → <span class="eo">belaj tagoj</span> : (de) belles journées</p>
@@ -101,7 +101,7 @@ include "gerdakapo.inc.php";
 			<p><span class="eo">ami</span> : aimer → <span class="eo">amebla</span> : aimable, qui peut être aimé</p>
 		
 			<h4>mal- : <i>utilisé pour obtenir le contraire, l'antonyme.</i></h4>
-			<p><span class="eo">ami</span> : aimer → <span class="eo">ne ami</span> : ne pas aimer, <span class='ekz'>malami</span> : haïr</p>
+			<p><span class="eo">ami</span> : aimer → <span class="eo">ne ami</span> : ne pas aimer / <span class="eo">malami</span> : haïr</p>
 			<p><span class="eo">forta</span> : fort → <span class="eo">ne forta/neforta</span> : pas fort / <span class="eo">malforta</span> : faible</p>
 		
 			<p><span class="eo">tio ne gravas</span> : ça n'a pas d'importance<br>

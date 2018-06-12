@@ -51,6 +51,30 @@ Voici une description des répertoires les plus importants :
 - /soundmanager2 : bibliothèque externe pour jouer des mp3
 - /sql : code sql pour alimenter la base (create.sql) et pour suivre les nouvelles versions (changelog.sql)
 
+# Organisation de la base 
+
+Voici une descriptions des tables les plus importantes :
+
+- ekzerceroj : question d'un exercice
+- ekzercoj : exercice à rédiger. Un exercice contient plusieurs questions "ekzerceroj"
+- komentoj : commentaire qu'un correcteur peut laisser sur son élève
+- korektebla_kurso : nombre d'élèves qu'un correcteur accepte de prendre pour un cours donné
+- kursoj : liste des cours (actuellement 4)
+- landoj : liste des pays (n'est pas exhaustif afin d'éviter une liste trop longue car nous n'avons que des élèves francophones)
+- lecioneroj : section d'une leçon
+- lecionoj : leçon. Une leçon contient plusieurs sections "lecioneroj"
+- nuna_kurso : cours actuellement suivi par un élève avec la dernière leçon envoyée et le correcteur qui lui est attribué
+- personoj : table des élèves/correcteurs/administrateurs
+- personoj_lecioneroj : table des jointures élèves/section
+- personoj_lecionoj : table des jointures élèves/leçons
+- personoj_vortoj : table des jointures élèves/mots (pour l'apprentissage des mots). Contient le nombre de fois où le mot a été correctement répondu et la date à laquelle le mot devra être ré-appris
+- personoj_vortoj_respondoj : table de l'historique des réponses donnés à l'apprentissage des mots.
+- protokolo : table "log"
+- qcm / qcm_demando / qcm_propono : tables pour faire des QCM, n'est utilisé que pour l'application android
+- rajtoj : liste des droits (élève/correcteur/administrateur)
+- respondoj : réponses des élèves pour un "ekzerceroj" donné.
+- takso_leciono : évaluation d'une leçon par l'élève (note et champ libre)
+- vortoj : liste des mots (pour outil de révision des mots)
 
 En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
 

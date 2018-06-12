@@ -281,8 +281,8 @@ include "dlekkapo.inc.php";
 					<p></p>
 					<p>20 : <span class="eo">dudek</span></p>
 					<p>21 : <span class="eo">dudek unu</span></p>
-					<p>21 : <span class="eo">dudek du</span></p>
-					<p>21 : <span class="eo">dudek tri</span></p>
+					<p>22 : <span class="eo">dudek du</span></p>
+					<p>23 : <span class="eo">dudek tri</span></p>
 				</div>
 				<div class="col s6 m3">
 					<p>30 : <span class="eo">tridek</span></p>

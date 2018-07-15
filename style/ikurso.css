@@ -179,6 +179,7 @@ secondary-content {
 .collection.local .collection-item a {
     cursor: pointer;
 }
+
 /*--------------------------------*/
 
 p {font-weight: 300;}
@@ -803,6 +804,17 @@ p.nbvortoj {
     font-size: 80%;
     padding-top: 0;
     margin-top: -1em;
+}
+.gxusta {
+	color: green;
+}
+.gxusta:before {
+	font-family: 'Material Icons';
+	content: "check";
+	-webkit-font-feature-settings: 'liga';
+	color: green;
+	padding-right: 0.5em;
+	vertical-align: bottom;
 }
 
 /*********  encadré Pour en savoir plus **********/

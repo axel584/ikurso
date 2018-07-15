@@ -668,8 +668,7 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 				echo "<li class='collection-item row'>";
 				echo "<b>".$row["demando"]."</b><br/>";
 				if ($row["gxusta"]==1) {
-					echo "&nbsp;&nbsp;<i class=\"material-icons\" style=\"color:green\">check</i>&nbsp;<span style=\"color:green\">".$row["respondo"]."</span><br/>";
-					//echo "&nbsp;&nbsp;&nbsp;<span class=\"valid\">".$row["respondo"]."</span><br/>";
+					echo "<span class=\"gxusta\">".$row["respondo"]."</span><br/>";
 				} else {
 					echo "&nbsp;&nbsp;&nbsp;".$row["respondo"]."<br/>";
 				}

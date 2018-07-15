@@ -455,13 +455,22 @@ function getEkzercon($id,$persono_id) {
 			$resultRespondo = $bdd->query($queryRespondo) or die(print_r($bdd->errorInfo()));
 			$rowRespondo = $resultRespondo->fetch();
 			$respondo= $rowRespondo["respondo"];
-			$valid=($rowRespondo["gxusta"]==1)?"valid":"";
+			if ($rowRespondo["gxusta"]==1) {
+				$valid="valid";
+				$iconprefix="<i class=\"material-icons prefix\" style=\"color:green\">check</i>";
+			} else {
+				$valid="";
+				$iconprefix="";
+			}
+			
 		}
 		echo "<p class='col s12 demando'>".$rowEkzercero["numero"].". ".$rowEkzercero["demando"]."</p>\n";
 		echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"\">";
 
 		if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")) { // cas des types d'exercices textarea
-			echo "<div class='input-field col s12'><textarea rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
+			echo "<div class='input-field col s12'>";
+			echo $iconprefix; // on affiche une marque verte si la réponse est bonne
+			echo "<textarea rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
 			if ($rowEkzerco["x2u"]==1) {
 				echo " onkeyup='xAlUtf8(this)'";
 			}
@@ -469,7 +478,9 @@ function getEkzercon($id,$persono_id) {
 			echo $respondo;
 			echo "</textarea></div>";
 		} else { // cas des types d'exercice sur des champs input
-			echo "<div class='input-field col s12'><input data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
+			echo "<div class='input-field col s12'>";
+			echo $iconprefix; // on affiche une marque verte si la réponse est bonne
+			echo "<input data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
 			if ($rowEkzerco["x2u"]==1) {
 				echo " onkeyup='xAlUtf8(this)'";
 			}
@@ -656,7 +667,12 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 				}
 				echo "<li class='collection-item row'>";
 				echo "<b>".$row["demando"]."</b><br/>";
-				echo "&nbsp;&nbsp;&nbsp;".$row["respondo"]."<br/>";
+				if ($row["gxusta"]==1) {
+					echo "&nbsp;&nbsp;<i class=\"material-icons\" style=\"color:green\">check</i>&nbsp;<span style=\"color:green\">".$row["respondo"]."</span><br/>";
+					//echo "&nbsp;&nbsp;&nbsp;<span class=\"valid\">".$row["respondo"]."</span><br/>";
+				} else {
+					echo "&nbsp;&nbsp;&nbsp;".$row["respondo"]."<br/>";
+				}
 				echo "</li>";
 			}
 			echo "</ul>";

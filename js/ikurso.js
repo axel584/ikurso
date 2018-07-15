@@ -161,8 +161,10 @@ $(".korektebla").focusout( function () {
           success : function(reponse, statut){ 
               if (reponse.mesagxo=="ok") {
                 $formulaire.addClass("valid");
+                $formulaire.before( "<i class=\"material-icons prefix\" style=\"color:green\">check</i>" );
               } else {
                 $formulaire.removeClass("valid");
+                $formulaire.prev('i').remove();
               }
           },
           error : function(request, error) {

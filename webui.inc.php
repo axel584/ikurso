@@ -467,7 +467,7 @@ function getEkzercon($id,$persono_id) {
 		echo "<p class='col s12 demando'>".$rowEkzercero["numero"].". ".$rowEkzercero["demando"]."</p>\n";
 		echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"\">";
 
-		if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")) { // cas des types d'exercices textarea
+		if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")||($rowEkzerco["typo"]=="stelo-2")) { // cas des types d'exercices textarea
 			echo "<div class='input-field col s12'>";
 			echo $iconprefix; // on affiche une marque verte si la réponse est bonne
 			echo "<textarea rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;

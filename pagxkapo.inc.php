@@ -52,11 +52,11 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<meta name="msapplication-square70x70logo" content="<?php echo $vojo;?>bildoj/tinylogo.png" />
 		<meta name="msapplication-wide310x150logo" content="<?php echo $vojo;?>bildoj/widelogo.png" />
 		<!-- icone iOs -->
-		<link href="<?php echo $vojo;?>bildoj/apple-touch-icon-60.png" rel="apple-touch-icon" />
-		<link href="<?php echo $vojo;?>bildoj/apple-touch-icon-76.png" rel="apple-touch-icon" sizes="76x76" />
-		<link href="<?php echo $vojo;?>bildoj/apple-touch-icon-120.png" rel="apple-touch-icon" sizes="120x120" />
-		<link href="<?php echo $vojo;?>bildoj/apple-touch-icon-152.png" rel="apple-touch-icon" sizes="152x152" />
-		<link href="<?php echo $vojo;?>bildoj/apple-touch-icon-180.png" rel="apple-touch-icon" sizes="180x180" />
+		<link href="<?php echo $vojo;?>bildoj/touch-icon-60.png" rel="apple-touch-icon" />
+		<link href="<?php echo $vojo;?>bildoj/touch-icon-76.png" rel="apple-touch-icon" sizes="76x76" />
+		<link href="<?php echo $vojo;?>bildoj/touch-icon-120.png" rel="apple-touch-icon" sizes="120x120" />
+		<link href="<?php echo $vojo;?>bildoj/touch-icon-152.png" rel="apple-touch-icon" sizes="152x152" />
+		<link href="<?php echo $vojo;?>bildoj/touch-icon-180.png" rel="apple-touch-icon" sizes="180x180" />
 		<!-- chrome -->
 		<link href="<?php echo $vojo;?>bildoj/icon-hires.png" rel="icon" sizes="192x192" />
 		<link href="<?php echo $vojo;?>bildoj/icon-normal.png" rel="icon" sizes="128x128" />

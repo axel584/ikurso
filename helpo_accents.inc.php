@@ -37,9 +37,9 @@
 					<fieldset class="sciipli">
 						<legend>POUR EN SAVOIR PLUS…</legend>
 						<div class="row">
-							<p class="col s12">Voir l'article de Wikipédia&nbsp;: <a href="http://fr.wikipedia.org/wiki/Alphabet_de_l%27esp%C3%A9ranto" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Alphabet de l’espéranto</a></p>
+							<p class="col s12">Voir l'article de Wikipédia&nbsp;: <a href="https://fr.wikipedia.org/wiki/Alphabet_de_l'esp%C3%A9ranto" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Alphabet de l’espéranto</a></p>
 							<p class="col s12">Si vous connaissez déjà un peu l'espéranto, vous trouverez des informations utiles sur le site de Bertilo&nbsp;:  
-									<a href="http://www.bertilow.com/komputo/index.html" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Esperanto en la komputilo</a>.</p>
+									<a href="http://bertilow.com/komputo/index.html" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Esperanto en la komputilo</a>.</p>
 						</div>
 					</fieldset>
 					
@@ -126,7 +126,7 @@
 
 							  	<p class="parto">L’association d’Espéranto de Nouvelle-Zélande explique sur son site (en anglais et en espéranto) 
 								  	comment paramétrer le clavier pour pouvoir taper les caractères accentués de l’espéranto&nbsp;<br>
-								  	<a href="http://en.esperanto.org.nz/how-to-learn-esperanto/how-to-type-esperanto-characters/linux">http://en.esperanto.org.nz/how-to-learn-esperanto/how-to-type-esperanto-characters/linux</a> 
+								  	<a href="http://www.esperanto.org.nz/learn-and-use-esperanto/how-to-type-esperanto-characters/linux/">http://en.esperanto.org.nz/how-to-learn-esperanto/how-to-type-esperanto-characters/linux</a> 
 							  	</p>
 							</div>
 						</li>
@@ -135,7 +135,7 @@
 							<div class="collapsible-body">
 								<p>Unired est un éditeur de texte qui prend en compte les différentes lettres accentuées.</p> 
 								<p>Informations et téléchargement sur 
-									<a href="http://www.framasoft.net/article.php3?id_article=2798" class="btn-flat small blue-text">
+									<a href="https://framalibre.org?id_article=2798" class="btn-flat small blue-text">
 										<i class="material-icons right">arrow_right</i>Unired</a>
 								</p>
 							</div>

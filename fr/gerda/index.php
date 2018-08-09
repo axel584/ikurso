@@ -487,9 +487,9 @@ include "gerdakapo.inc.php";
 			</ul>
 			<ul class="collapsible" data-collapsible="expandable">
 				<li>
-					<div class="collapsible-header active"><i class="material-icons">toc</i>Chapitres de <em>Gerda malaperis</em></div>
+					<div class="collapsible-header active"><i class="material-icons">toc</i>Chapitres de&nbsp;<em>Gerda malaperis</em></div>
 					<div class="collapsible-body">
-						<ul id="enhavtabelo" class="collection">
+						<ul id="kurso-enhavtabelo" class="collection">
 							<li><a href="cxap01.php">1. En universitata restoracio</a></li>
 							<li><a href="cxap02.php">2. Kio okazas?</a></li>
 							<li><a href="cxap03.php">3. Amdeklaro</a></li>

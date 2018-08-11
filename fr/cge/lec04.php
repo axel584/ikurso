@@ -557,10 +557,10 @@ include "dlekkapo.inc.php";
 			</div>
 			
 			<div class="col s12 m9">
-				<p>Certains artistes sont autoproduits, mais les associations nationales servent souvent de maisons de production. Les premiers labels apparus sont issus des éditeurs de livres LF-Koop en Suisse et Edistudio en Italie. Aujourd’hui, le label <a href="http://www.vinilkosmo.com/">Vinilkosmo</a> propose, près de Toulouse, l’un des principaux studios d’enregistrement des artistes espérantophones.</p>
+				<p>Certains artistes sont autoproduits, mais les associations nationales servent souvent de maisons de production. Les premiers labels apparus sont issus des éditeurs de livres LF-Koop en Suisse et Edistudio en Italie. Aujourd’hui, le label <a href="https://www.vinilkosmo-mp3.com/fr/">Vinilkosmo</a> propose, près de Toulouse, l’un des principaux studios d’enregistrement des artistes espérantophones.</p>
 			</div>
 			<div class="col s6 m3 offset-s4">
-				<a href="http://www.vinilkosmo.com/"><img src="<?php echo $vojo;?>fr/cge/bildoj/vinilkosmo.gif" class="responsive-img" alt="Vinilkosmo"></a>
+				<a href="https://www.vinilkosmo-mp3.com/fr/"><img src="<?php echo $vojo;?>fr/cge/bildoj/vinilkosmo.gif" class="responsive-img" alt="Vinilkosmo"></a>
 			</div>
 
 		</div>
@@ -601,9 +601,9 @@ include "dlekkapo.inc.php";
 			<div class="col s12">
 				<p class="parto">Et pour découvrir l’espéranto en musique :</p>
 				<ul>
-					<li>à la radio : <a href="http://muzaiko.info">muzaiko.info</a></li>
-					<li>en albums : <a href="http://vinilkosmo.com">vinilkosmo.com</a></li>
-					<li>dans notre boutique en ligne : <a href="<?=$urlracine?>butiko.php">ikurso.esperanto-france.org/butiko.php</a></li>
+					<li>à la radio : <a href="http://muzaiko.info/">muzaiko.info</a></li>
+					<li>en albums : <a href="https://www.vinilkosmo-mp3.com/fr/">vinilkosmo.com</a></li>
+					<li>dans notre boutique en ligne : <a href="<?=$urlracine?>butiko.php">https://ikurso.esperanto-france.org/butiko.php</a></li>
 				</ul>
 			</div>
 		</div>

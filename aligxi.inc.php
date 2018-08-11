@@ -157,7 +157,7 @@ if (isset($_SESSION['aligxilo'])) {
 					</p>
 					<p  class="rimarko">Vous disposez d’un droit d’accès, de modification, de rectification et de suppression des données 
 					qui vous concernent (art. 34 de la loi «Informatique et Libertés»). Il vous suffit pour cela 
-					d’aller sur la page <a href="http://ikurso.esperanto-france.org/dev/personinformoj.php">
+					d’aller sur la page <a href="https://ikurso.esperanto-france.org/personinformoj.php">
 					Données personnelles</a>.
 
 					</p>

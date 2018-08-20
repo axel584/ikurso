@@ -15,7 +15,8 @@ git clone git@github.com:axel584/ikurso.git
 
 De créer une base MySQL et un utilisateur et d'attribuer à l'utilisateur les droits qui vont bien à la base (phpMyAdmin permet de faire tout ceci assez simplement)
 
-D'inserer en base le fichier qui se trouve dans sql/create.sql
+D'inserer en base le fichier qui se trouve dans sql/create-database.sql
+Et insérer également les données qui permettent de faire fonctionner le site (les cours, le vocabulaire, la liste des leçons etc.) en exécutant le script sql/create-data.sql
 
 De créer à la racine un fichier config.php contenant les informations suivante :
 ```

@@ -264,27 +264,27 @@ include "dlekkapo.inc.php";
 		?>
 
 			<div class="float-right w30">
-				<a href="https://esperanto-france.org/le-monde-de-l-esperanto">
+				<a href="https://fr.wikipedia.org/wiki/La_Esperantisto">
 					<img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/la-esperantisto.jpg"></a>
 			</div>
 			<p class="parto">Les premières revues en espéranto datent du XIX<sup>e</sup> siècle avec <a href="https://fr.wikipedia.org/wiki/La_Esperantisto"><em>La Esperantisto</em></a>. De nos jours, 
 			on en trouve provenant des quatre coins du monde, sur des sujets divers et variés, comme vous le verrez.
 			</p>
-			<p class="parto">Aleks vous présente ici un petit tour du monde des magazines en espéranto&nbsp;:<br>
-					<span class="eta">(vous pouvez activer les sous-titres en français)</span>
-				</p>
-				<p><iframe width="560" height="315" src="https://www.youtube.com/embed/yVjtft16rNo?rel=0"
-frameborder="0" allowfullscreen></iframe></p>
 
 			<p class="parto">Les revues plus connues sont celles des associations internationales&nbsp;: 
-				<a href="http://www.uea.org/revuoj/esperanto"><i>Esperanto</i></a>, éditée par l’association mondiale d’espéranto, 
+				<a href="https://uea.org/revuoj/esperanto"><i>Esperanto</i></a>, éditée par l’association mondiale d’espéranto, 
 				tout à fait convenable pour de nouveaux apprenants de la langue, 
 				et dont les sujets ne s’adressent pas qu’aux jeunes.<br> 
 				Dans le même esprit, citons également <a href="https://heroldodeesperanto.com/"><i>Heroldo de Esperanto</i></a> et <a href="http://esperanto-ondo.ru/"><i>La Ondo de Esperanto</i></a>.</p>
-				<p>Certains magazines s’adressent tout particulièrement aux débutants en proposant des textes rédigés dans un style facile. C’est le cas de <a href="http://tejo.org/fr/revuo-kontakto/"><i>Kontakto</i></a> ou de <a href="http://www.ipernity.com/doc/stano.marcek/album/670161"><i>Juna Amiko</i></a>. Il est possible de télécharger les anciens numéro de <i>Juna amiko</i> sur <a href="http://www.eventoj.hu/juna-amiko/">http://www.eventoj.hu/juna-amiko/</a>.</p>
+				<p>Certains magazines s’adressent tout particulièrement aux débutants en proposant des textes rédigés dans un style facile. C’est le cas de <a href="https://www.tejo.org/fr/revuo-kontakto/"><i>Kontakto</i></a> ou de <a href="http://www.ipernity.com/doc/stano.marcek/album/670161"><i>Juna Amiko</i></a>. Il est possible de télécharger les anciens numéro de <i>Juna amiko</i> sur <a href="http://www.eventoj.hu/juna-amiko/">http://www.eventoj.hu/juna-amiko/</a>.</p>
+			<p class="parto">Aleks vous présente ici un petit tour du monde des magazines en espéranto&nbsp;:<br>
+					<span class="eta">(vous pouvez activer les sous-titres en français)</span>
+				</p>
+			<p><iframe width="560" height="315" src="https://www.youtube.com/embed/yVjtft16rNo?rel=0"
+frameborder="0" allowfullscreen></iframe></p>
 				<p>Vous pouvez également lire directement en ligne la revue <a href="https://esperanto-france.org/le-monde-de-l-esperanto">Le Monde de l’espéranto</a>, revue bilingue éditée par Espéranto-France.</p>
 			<div class="row">
-				<p class="col s3"><a href="http://www.uea.org/revuoj/esperanto"><img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/revuo-Esperanto.jpg"></a></p>
+				<p class="col s3"><a href="https://uea.org/revuoj/esperanto"><img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/revuo-Esperanto.jpg"></a></p>
 				<p class="col s3"><a href="http://kontakto.tejo.org/"><img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/revuo-Kontakto.jpg"></a></p>
 				<p class="col s3"><a href="http://esperanto-ondo.ru/"><img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/revuo-ondo-de-esperanto.jpg"></a></p>
 				<p class="col s3"><a href="http://www.beletraalmanako.com/"><img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/revuo-beletra-almanako.jpg"></a></p>
@@ -295,10 +295,9 @@ frameborder="0" allowfullscreen></iframe></p>
 						albums de musique, applications pour téléphones, sites internet, qui se développent chaque année. 
 						Pour s’y retrouver, des revues dédiées, comme <a href="http://www.beletraalmanako.com/"><i>Beletra Almanako</i></a> 
 						ou <i>Literatura Foiro</i>, publient des critiques et des interviews.</p>
-					<p>Sur le site <a href="http://bitarkivo.org/gazetoj/">BitArkivo</a>, vous pourrez de lire en ligne plus de 2000&nbsp;magazines en espéranto du monde entier.</p>
+					<p>Sur le site <a href="http://bitarkivo.org/doku.php">BitArkivo</a>, vous pourrez de lire en ligne des magazines en espéranto du monde entier.</p>
 					<p class="parto">L’espéranto permet un accès à une culture mondiale avec un filtre moins important que les médias traditionnels. 
-						Cela permet ainsi à des revues comme <a href="https://osiek.org/lagazeto/"><i>La Gazeto</i></a> de parler de l’histoire mondiale, 
-						à <a href="http://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.satesperanto.org%2F-Sennaciulo-.html"><i>Sennaciulo</i></a> de débattre des 
+						Cela permet ainsi à des revues comme <a href="https://osiek.org/lagazeto/"><i>La Gazeto</i></a> de parler de l’histoire mondiale, à <i>Sennaciulo</i> de débattre des 
 						problèmes politiques actuels&nbsp;; <i>Etnismo</i> traite des questions éthniques, 
 						et la revue <a href="http://www.monato.net/"><i>Monato</i></a> possède des correspondants dans de très nombreux pays, 
 						qui rapportent des évènements marquants d’un point de vue local. 
@@ -306,7 +305,7 @@ frameborder="0" allowfullscreen></iframe></p>
 						l’islam, l’ōmoto, etc.</p>
 					<p class="parto">Une part non négligeable des revues sont les organes d’information des associations nationales d’espéranto, qui font le point, 
 						parfois avec des articles bilingues, sur les rencontres qui ont lieu entre espérantophones, les lieux intéressants à visiter 
-						dans le pays, ou même le continent&nbsp;: <a href="www.esperanto-afriko.org/"><i>Esperanto en Afriko</i></a> et <a href="http://www.esperantoazia.tk/index.php?mid=bulteno"><i>Esperanto en Azio</i></a> par exemple. </p>
+						dans le pays, ou même le continent&nbsp;: <a href="https://www.esperanto-afriko.org/"><i>Esperanto en Afriko</i></a> et <a href="http://www.esperantoazia.tk/index.php?mid=bulteno"><i>Esperanto en Azio</i></a> par exemple. </p>
 					<p>Certaines, comme la revue française <a href="http://esperantoinfo.info/"><i>Espéranto-Info</i></a>, 
 					s’adressent directement à des personnes ne parlant pas l’espéranto, pour leur présenter les divers aspects de l’Espérantie
 					et quelques mots croisés et phrases de base.</p>
@@ -320,7 +319,7 @@ frameborder="0" allowfullscreen></iframe></p>
 			<p class="parto">Pour finir, n’oublions pas que l’espéranto permet de traiter également de sujets techniques, et pour cela les associations 
 				spécialisées (en science, médecine, enseignement, etc.) éditent des revues pour mettre en valeur les dernières avancées. 
 				Par exemple&nbsp;: <a href="https://eo.wikipedia.org/wiki/Hungara_Fervojista_Mondo"><i>Hungara Fervojista Mondo</i></a> (cheminots hongrois),
-				<a href="http://interrev.com/"><i>Medicina Internacia Revuo</i></a> ou encore 
+				<a href="http://interrev.com/mir/index.php/mir"><i>Medicina Internacia Revuo</i></a> ou encore 
 				<a href="https://scienca-revuo.info/"><i>Scienca Revuo</i></a> pour n’en citer que quelques-unes. 
 			</p>	
 			<p class="parto">Page suivante, nous vous invitons à lire un extrait d’article, que vous traduirez à titre exercice.</p>
@@ -335,8 +334,8 @@ frameborder="0" allowfullscreen></iframe></p>
 				</p>
 				<p>Pour en savoir plus&nbsp;:</p>
 				<ul>
-					<li><a href="https://fr.wikipedia.org/wiki/Espérantie#Médias">https://fr.wikipedia.org/wiki/Espérantie#Médias</a></li>
-					<li><a href="https://fr.wikipedia.org/wiki/Liste_des_périodiques_en_espéranto">https://fr.wikipedia.org/wiki/Liste_des_périodiques_en_espéranto</a></li>
+					<li><a href="https://fr.wikipedia.org/wiki/Esp%C3%A9rantie#M%C3%A9dias">https://fr.wikipedia.org/wiki/Espérantie#Médias</a></li>
+					<li><a href="https://fr.wikipedia.org/wiki/Liste_des_p%C3%A9riodiques_en_esp%C3%A9ranto">https://fr.wikipedia.org/wiki/Liste_des_périodiques_en_espéranto</a></li>
 					<li><a href="https://eo.wikipedia.org/wiki/Esperanto-gazeto">https://eo.wikipedia.org/wiki/Esperanto-gazeto</a></li>
 				</ul>
 			</div>

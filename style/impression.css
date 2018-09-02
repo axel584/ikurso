@@ -6,6 +6,7 @@
 body {
 	background-color :#fff;
 	font-size: 10pt;
+	font-weight: 300;
 }
 p, h1, h2, h3, h4, h5, h6, blockquote, ul, ol {
 	/* margin: auto!important; */
@@ -19,13 +20,16 @@ blockquote, ul, ol {
   page-break-inside: avoid; /* pas de coupure dans ces élements */
 }
 h2 {
+	font-family: 'Roboto Condensed', sans-serif!important;
+	color: #999;
 	margin :0;
 	padding :0;
 	text-indent :0;
 	line-height :22pt;
-	font-size :22pt;
+	font-size :24pt;
 	margin-bottom: 0.5cm;
 }
+
 a {
 	text-decoration: underline!important;
 }
@@ -33,7 +37,7 @@ a {
 a[href]:after {
   content: " (" attr(href) ")"; /* affichage des URL des liens */
 }
-a.player-audio {display: none;}
+a.player-audio,
 div.navbar-fixed,
 aside,
 div.impression,
@@ -42,17 +46,22 @@ header#superrigardo,
 footer,
 .noprint, 
 p.eo.eta,
-.sm2_button 
+.sm2_button,
+p.dauro,
+.card.red,
+a.sm2_button,
+.material-icons.prefix,
+.tasko input
 	{display: none;}
 
-
 .card-panel.blue {
-	background-color: none;
+	background-color: transparent!important;	
 	border:1pt solid #999;
 	box-shadow: none;
-	padding: 0.5cm;
+	padding: 0.25cm;
 	margin-top: 0.5cm;
 	margin-bottom: 0.5cm;
+	text-align: left;
 }
 div.vortlisto {padding: 0.25cm;}
 div.vortlisto.row {
@@ -69,6 +78,31 @@ fieldset div.vortlisto.row {
     margin-left: auto;
     left: auto;
     right: auto;
+}
+
+/***** typographie pour l'impression *****/
+
+.eo {
+	color: #2196F3;
+	font-family: 'Roboto Slab', serif;
+}
+p.rimarko strong {
+	color: #999;
+	font-family: 'Roboto Condensed', serif;
+	font-variant: small-caps;
+	font-size:1.2em;
+}
+p.parto {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+p.parto:before {
+	font-family: 'Material Icons';
+	content: "texture";
+	-webkit-font-feature-settings: 'liga';
+	color: #2196F3;
+	padding-right: 0.5em;
+	vertical-align: middle;
 }
 
 /***** utilisation des colonnes de l'écran medium *****/

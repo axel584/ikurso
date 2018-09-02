@@ -129,7 +129,7 @@ include "pagxkapo.inc.php";
 						<p>Autre site, traduit dans plus de 20 langues.<br>
 						Pour ceux qui veulent découvrir l’espéranto, l’apprendre ou le pratiquer.</p>
 						<p class="container"><img class="responsive-img" src="<?=$vojo?>bildoj/lernu.png" alt="logo du site lernu.net"></p>
-						<p><a href="http://www.lernu.net" class="btn-flat small"><i class="material-icons right">arrow_right</i>aller sur lernu.net</a></p>
+						<p><a href="https://lernu.net/fr" class="btn-flat small"><i class="material-icons right">arrow_right</i>aller sur lernu.net</a></p>
 					</div>
 
 					<div class="col s12 m3 offset-m1">

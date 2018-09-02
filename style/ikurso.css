@@ -180,6 +180,10 @@ secondary-content {
     cursor: pointer;
 }
 
+/*----- surcharge pour les exercices ------*/
+textarea {
+	line-height: 160%;
+}
 /*--------------------------------*/
 
 p {font-weight: 300;}

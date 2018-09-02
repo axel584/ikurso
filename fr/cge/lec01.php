@@ -176,7 +176,7 @@ include "dlekkapo.inc.php";
 					</div>
 					<div class="col s12 m4">
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jen.mp3" class="sm2_button"></a> <span class="eo">jen</span> : voici</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ĉiam.mp3" class="sm2_button"></a> <span class="eo">ĉiam</span> : toujours</p>					
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/cxiam.mp3" class="sm2_button"></a> <span class="eo">ĉiam</span> : toujours</p>					
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/en.mp3" class="sm2_button"></a> <span class="eo">en</span> : dans, en</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/bela.mp3" class="sm2_button"></a> <span class="eo">bela</span> : beau</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/bona.mp3" class="sm2_button"></a> <span class="eo">bona</span> : bon</p>
@@ -580,7 +580,7 @@ QCM(
 			
 			<p>Voici d’autres exemples de questions commençant par <b>kie</b>&nbsp;:</p>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-studas-allan .mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kie</b> studas Allan?</span></p><p class="col s11 m6 offset-s1"><b>Où</b> étudie Allan&nbsp;?</p>
+				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-studas-allan.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kie</b> studas Allan?</span></p><p class="col s11 m6 offset-s1"><b>Où</b> étudie Allan&nbsp;?</p>
 			</div>
 			<div class="row">
 				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-estas-chaumont.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kie</b> estas la urbo Chaumont?<br>– Ĝi estas en Francujo.</span></p><p class="col s11 m6 offset-s1"><b>Où</b> est la ville de Chaumont&nbsp;?<br>– Elle est en France.</p>
@@ -603,7 +603,7 @@ QCM(
 			} // fin section 
 			if ($section=="11") {
 			?>
-			<p class="parto">À votre tour ! En vous aidant du vocabulaire déjà vu et de la vidéo de l'exercice précédent, essayez de vous présenter à votre correcteur en quelques mots. N'oubliez pas les formules de politesse pour dire bonjour et au revoir. Si vous ne savez pas comment dire en espéranto votre profession, ce sera l'occasion de demander à votre correcteur. Vous devriez être capable de rédiger 4 ou 5 phrases en espéranto.</p>
+			<p class="parto">À votre tour ! En vous aidant du vocabulaire déjà vu et de la vidéo de l’exercice précédent, essayez de vous présenter à votre correcteur en quelques mots. N’oubliez pas les formules de politesse pour dire bonjour et au revoir. Si vous ne savez pas comment dire en espéranto votre profession, ce sera l’occasion de demander à votre correcteur. Vous devriez être capable de rédiger 4 ou 5 phrases en espéranto.</p>
 			<p>Cet exercice ne vous permettra pas uniquement de vérifier que vous avez assimilé le nouveau vocabulaire, mais également de faire connaissance avec le correcteur qui vous sera attribué et qui corrigera vos exercices tout au long de ce cours.</p>
 			<p>Aucune utilisation commerciale ne sera faite des informations que vous transmettrez.
 
@@ -612,7 +612,7 @@ QCM(
 			?>
 
 
-						<p class="parto">Voici un peu de vocabulaire qui peut vous aider. Vous n'avez pas besoin de retenir tous ces mots dès maintenant. Ils ne seront utiles que pour cet exercice.</p>
+						<p class="parto">Voici un peu de vocabulaire qui peut vous aider. Vous n’avez pas besoin de retenir tous ces mots dès maintenant. Ils ne seront utiles que pour cet exercice.</p>
 			<div class="vortlisto row">
 				<div class="col s12 m6">
 					<p><b>Profession</b></p>
@@ -624,15 +624,15 @@ QCM(
 					<p><a href="<?php echo $vojo;?>fr/son/vortoj/oficisto.mp3" class="sm2_button"></a> <span class="eo">oficisto</span> : employé</p>
 					<p><a href="<?php echo $vojo;?>fr/son/vortoj/senlaborulo.mp3" class="sm2_button"></a> <span class="eo">senlaborulo</span> : chômeur</p>
 					<p><b>Pays</b></p>
-					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Afriko.mp3" class="sm2_button"></a> <span class="eo">Afriko</span> : Afrique</p>
-					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Belgio.mp3" class="sm2_button"></a> <span class="eo">Belgio</span> : Belgique</p>
-					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Euxropo.mp3" class="sm2_button"></a> <span class="eo">Eŭropo</span> : Europe</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/afriko.mp3" class="sm2_button"></a> <span class="eo">Afriko</span> : Afrique</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/belgio.mp3" class="sm2_button"></a> <span class="eo">Belgio</span> : Belgique</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/euxropo.mp3" class="sm2_button"></a> <span class="eo">Eŭropo</span> : Europe</p>
 				</div>
 				<div class="col s12 m6">
-					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Francujo.mp3" class="sm2_button"></a> <span class="eo">Francujo</span> : France</p>
-					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Kanado.mp3" class="sm2_button"></a> <span class="eo">Kanado</span> : Canada</p>
-					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Parizo.mp3" class="sm2_button"></a> <span class="eo">Parizo</span> : Paris</p>
-					<p><a href="<?php echo $vojo;?>fr/son/vortoj/Svislando.mp3" class="sm2_button"></a> <span class="eo">Svislando</span> : Suisse</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/francujo.mp3" class="sm2_button"></a> <span class="eo">Francujo</span> : France</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/kanado.mp3" class="sm2_button"></a> <span class="eo">Kanado</span> : Canada</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/parizo.mp3" class="sm2_button"></a> <span class="eo">Parizo</span> : Paris</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/svislando.mp3" class="sm2_button"></a> <span class="eo">Svislando</span> : Suisse</p>
 					<p><b>Adjectifs</b></p>
 					<p><a href="<?php echo $vojo;?>fr/son/vortoj/donacema.mp3" class="sm2_button"></a> <span class="eo">donacema</span> : généreux</p>
 					<p><a href="<?php echo $vojo;?>fr/son/vortoj/felicxa.mp3" class="sm2_button"></a> <span class="eo">feliĉa</span> : heureux</p>

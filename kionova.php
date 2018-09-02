@@ -27,7 +27,7 @@ include "pagxkapo.inc.php";
 					<p>Enrichissement des explications dans les pages <a href="<?php echo $vojo;?>helpo.php?section=enskribo">Comment s’inscrire&nbsp;?</a> et <a href="<?php echo $vojo;?>helpo.php?section=kurso">Comment suivre le cours&nbsp;?</a>.</p>
 					<p>Amélioration de la mise en page dans la <a href="<?php echo $vojo;?>fr/cge/lec08.php?section=1">leçon 8</a>.</p>
 					<p>Ajout d’une section sur les revues en espéranto dans la <a href="<?php echo $vojo;?>fr/cge/lec09.php?section=7">leçon 9</a> du Cours en dix leçons</p>
-					<p>Création de l'adresse <a href="https://ikurso.fr">ikurso.fr</a> pour accéder directement au site.</p>
+					<p>Création de l'adresse <a href="https://ikurso.esperanto-france.org/">ikurso.fr</a> pour accéder directement au site.</p>
 					<p>Corrections diverses de bugs et coquilles…</p>
 				</li>			
 				<li class="collection-header">version 16. Juillet 2017</li>

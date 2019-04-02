@@ -18,6 +18,8 @@ De créer une base MySQL et un utilisateur et d'attribuer à l'utilisateur les d
 D'inserer en base le fichier qui se trouve dans sql/create-database.sql
 Et insérer également les données qui permettent de faire fonctionner le site (les cours, le vocabulaire, la liste des leçons etc.) en exécutant le script sql/create-data.sql
 
+Et insérer le script sql/create-data-test.sql pour insérer un compte (on peut aussi s'inspirer du contenu de ce fichier pour choisir l'identifiant/mot de passe/adresse email de l'administrateur et/ou des premières correcteurs
+
 De créer à la racine un fichier config.php contenant les informations suivante :
 ```
 <?php
@@ -34,6 +36,13 @@ $userSES = "USER_SES"; // pour l'envoi des mails via amazon
 $passwordSES = "mot de passe Amazon SES";
 ?>
 ```
+De créer dans le répertoire js un fichier config.js contenant les informations suivantes :
+
+```
+$urlracine = "http://localhost/ikurso/"; // ou bien "http://ikurso.esperanto-france.org" pour la prod
+$cheminAbsolu = "/ikurso/"; // peut aussi avoir comme valeur "/" si le site est accessible à la racine du domaine
+```
+
 et de se connecter à l'adresse http://localhost/ikurso
 
 # Organisation du code 
@@ -76,6 +85,8 @@ Voici une descriptions des tables les plus importantes :
 - respondoj : réponses des élèves pour un "ekzerceroj" donné.
 - takso_leciono : évaluation d'une leçon par l'élève (note et champ libre)
 - vortoj : liste des mots (pour outil de révision des mots)
+
+Les tables contenant les données propres à l'application (liste des leçons/exercices etc.) n'ont pas d'autoincrémente sur leur clef primaire, en revanche, les tables contenant les données générés à l'utilisation (compte utilisateur, table de jointures etc.) ont un champ id qui est indiqué en auto_increment.
 
 En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
 

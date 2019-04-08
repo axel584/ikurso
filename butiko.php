@@ -21,7 +21,7 @@ include "pagxkapo.inc.php";
 					<p>Si vous n’habitez pas en France, vous pouvez également contacter la boutique (voir bon de commande) pour connaître les frais d’envoi vers votre pays.</p>
 				</div>
 				<div class="col s3 m2">
-					<a href="<?=$vojo?>bildoj/butiko/bondecom2016-ikurso.pdf" title="Bon de commande boutique Espéranto-France 2016" type="application/pdf"><img src="https://esperanto-france.org/local/cache-vignettes/L200xH283/bondecom2016-5be82.jpg?1476828061" alt="Bon de commande boutique Espéranto-France 2016" class="responsive-img z-depth-1"></a>
+					<a href="<?=$vojo?>bildoj/butiko/bondecom2016-ikurso.pdf" title="Bon de commande boutique Espéranto-France 2018/2019" type="application/pdf"><img src="<?=$vojo?>bildoj/butiko/bondecomm-vignette.jpg" alt="Bon de commande boutique Espéranto-France 2018/2019" class="responsive-img z-depth-1"></a>
 				</div>
 			</div>
 			
@@ -111,6 +111,19 @@ include "pagxkapo.inc.php";
 					<div class="col s3">
 						<div class="card">
 							<div class="card-image">
+								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/eta-princo.jpg" alt="" />
+							</div>
+							<div class="card-content">
+								<span class="card-title activator">La Eta Princo (Antoine de Saint-Éxupéry)<br>12,00&nbsp;€<i class="material-icons right">keyboard_arrow_down</i></span>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title"><i class="material-icons right">keyboard_arrow_up</i></span>
+								<p><em>La Eta Princo</em> (<em>Le Petit Prince</em>) est un conte philosophique qui séduit pour les valeurs qu’il porte, qui se transmet et se partage de génération en génération depuis plus de 75 ans.</p>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-image">
 								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/templo-de-l-suno.jpg" alt="" />
 							</div>
 							<div class="card-content">
@@ -122,6 +135,9 @@ include "pagxkapo.inc.php";
 							</div>
 						</div>
 
+					</div>
+						
+					<div class="col s3">
 						<div class="card">
 							<div class="card-image">
 								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/mil-unuaj-vortoj.jpg" alt="" />
@@ -135,9 +151,6 @@ include "pagxkapo.inc.php";
 								<p>Cet imagier est l'outil idéal pour enrichir votre vocabulaire à partir de grandes illustrations détaillées couvrant des univers variés (la ferme, la maison, le magasin, etc.). Accessible aux plus jeunes enfants comme aux adultes.<img class="responsive-img" src="<?=$vojo?>bildoj/butiko/mil-unuaj-vortoj-ene.jpg" alt="" /></p>
 							</div>
 						</div>
-					</div>
-						
-					<div class="col s3">
 						<div class="card">
 							<div class="card-image">
 								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/gdfe.jpg" alt="" />

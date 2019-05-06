@@ -1,7 +1,7 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE ekzerceroj (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `ekzerco_id` int(11) NOT NULL,
   `kodo` varchar(10) NOT NULL,
   `numero` int(11) NOT NULL,
@@ -11,11 +11,11 @@ CREATE TABLE ekzerceroj (
   `bildo` varchar(64) NOT NULL,
   `forigita` tinyint(1) NOT NULL DEFAULT '0',
   `korektebla` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE ekzercoj (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `komando` text NOT NULL,
   `lecionero_id` int(11) NOT NULL,
   `komando_detalo` text,
@@ -23,8 +23,8 @@ CREATE TABLE ekzercoj (
   `typo` enum('traduko-1','traduko-2','traduko-3','verkado-1','verkado-2','verkado-3','verkado-4','verkado-5','verkado-6','stelo-1','stelo-2','truoj-1','truoj-2','kompletigu','ordigu','elektu') NOT NULL,
   `x2u` tinyint(1) NOT NULL,
   `korektebla` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE eraraj_lecionoj (
   `id` int(11) NOT NULL,
@@ -35,11 +35,12 @@ CREATE TABLE eraraj_lecionoj (
   `subjekto` varchar(128) DEFAULT NULL,
   `fonto` mediumtext,
   `leciono` int(11) DEFAULT NULL,
-  `kurso` varchar(2) DEFAULT NULL
+  `kurso` varchar(2) DEFAULT NULL,
+  PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE `eventoj` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `persono_id` int(11) NOT NULL,
   `komenco` date NOT NULL,
   `fino` date DEFAULT NULL,
@@ -48,39 +49,41 @@ CREATE TABLE `eventoj` (
   `lando` varchar(100) NOT NULL,
   `departemento` int(11) DEFAULT NULL,
   `url` text NOT NULL,
-  `mail` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `mail` text NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE komentoj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `studanto` int(11) NOT NULL DEFAULT '0',
   `korektanto` int(11) NOT NULL DEFAULT '0',
   `dato` date NOT NULL DEFAULT '0000-00-00',
-  `teksto` text CHARACTER SET utf8
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `teksto` text,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE korektebla_kurso (
   `korektanto` int(11) NOT NULL DEFAULT '0',
   `kurso` char(2) CHARACTER SET latin1 NOT NULL DEFAULT '',
   `kiom_lernantoj` int(11) NOT NULL DEFAULT '3'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE kursoj (
   `id` int(11) NOT NULL,
   `kodo` char(2) CHARACTER SET latin1 NOT NULL DEFAULT '',
-  `nomo` varchar(64) CHARACTER SET latin1 NOT NULL DEFAULT ''
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-
+  `nomo` varchar(64)NOT NULL DEFAULT '',
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE landoj (
   `id` int(11) NOT NULL,
   `kodo` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `nomo` varchar(64) CHARACTER SET utf8 NOT NULL DEFAULT ''
+  `nomo` varchar(64) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-CREATE TABLE lecioneroj (
+CREATE TABLE `lecioneroj` (
   `id` int(11) NOT NULL,
   `leciono_id` int(11) DEFAULT NULL,
   `titolo` text,
@@ -88,8 +91,11 @@ CREATE TABLE lecioneroj (
   `enhavo` text,
   `ordo` int(11) DEFAULT NULL,
   `unua` tinyint(1) NOT NULL DEFAULT '0',
-  `lasta` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `lasta` tinyint(1) NOT NULL DEFAULT '0',
+  `dauxro` int(11) DEFAULT NULL,
+  `android` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE lecionoj (
   `id` int(11) NOT NULL,
@@ -98,18 +104,20 @@ CREATE TABLE lecionoj (
   `retpagxo` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `kurso` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT '0',
   `unua` tinyint(1) NOT NULL DEFAULT '0',
-  `lasta` tinyint(1) NOT NULL DEFAULT '0'
+  `lasta` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE monatoj (
   `id` int(11) NOT NULL,
   `kodo` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `nomo` varchar(64) CHARACTER SET utf8 NOT NULL DEFAULT ''
+  `nomo` varchar(64) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 CREATE TABLE nuna_kurso (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `ekdato` date NOT NULL DEFAULT '0000-00-00',
   `findato` date DEFAULT NULL,
   `stato` enum('N','K','F','H') CHARACTER SET latin1 NOT NULL DEFAULT 'N',
@@ -118,11 +126,12 @@ CREATE TABLE nuna_kurso (
   `pasintakorektanto` int(11) DEFAULT NULL,
   `studanto` int(11) NOT NULL DEFAULT '0',
   `nunleciono` int(11) DEFAULT NULL,
-  `kurso` char(2) CHARACTER SET latin1 DEFAULT NULL
+  `kurso` char(2) CHARACTER SET latin1 DEFAULT NULL,
+  PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE personoj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `ekdato` date NOT NULL,
   `lasteniro` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `sekso` char(1) CHARACTER SET utf8 DEFAULT NULL,
@@ -148,134 +157,108 @@ CREATE TABLE personoj (
   `stop_rappel` enum('J','N') CHARACTER SET utf8 NOT NULL DEFAULT 'N',
   `aktivigo` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
   `aktivigita` tinyint(1) NOT NULL DEFAULT '0',
-  `pasvorto_md5` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL
+  `pasvorto_md5` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci PACK_KEYS=0;
 
 CREATE TABLE personoj_lecioneroj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `dato` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `persono_id` int(11) NOT NULL,
-  `lecionero_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `lecionero_id` int(11) NOT NULL,
+  `poentoj` int(11) DEFAULT '0',
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE personoj_lecionoj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `dato` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `persono_id` int(11) NOT NULL,
   `leciono_id` int(11) NOT NULL,
-  `komentario` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `komentario` text,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE personoj_vortoj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `persono_id` int(11) NOT NULL,
   `vorto_id` int(11) NOT NULL,
   `nombrilo` int(11) NOT NULL,
   `venontaFojo` datetime NOT NULL,
-  `lastfojo` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `lastfojo` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE personoj_vortoj_respondoj (
-  `persono_id` int(11) NOT NULL,
+  `persono_id` int(11) NOT NULL AUTO_INCREMENT,
   `vorto_id` int(11) NOT NULL,
   `dato` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `bona` tinyint(1) NOT NULL,
   `respondo` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE protokolo (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `persono_id` int(11) DEFAULT NULL,
   `horo` datetime DEFAULT NULL,
   `ip` varchar(32) CHARACTER SET latin1 DEFAULT NULL,
   `kategorio` varchar(32) CHARACTER SET latin1 DEFAULT NULL,
-  `teksto` text CHARACTER SET utf8
+  `teksto` text CHARACTER SET utf8,
+  PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE rajtoj (
   `id` int(11) NOT NULL,
   `kodo` char(3) CHARACTER SET latin1 NOT NULL DEFAULT '',
-  `nomo` varchar(64) CHARACTER SET latin1 NOT NULL DEFAULT ''
+  `nomo` varchar(64) CHARACTER SET latin1 NOT NULL DEFAULT '',
+  PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 CREATE TABLE respondoj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `dato` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `persono_id` int(11) NOT NULL,
   `lecionero_id` int(11) NOT NULL,
+  `ekzercero_id` int(11) DEFAULT NULL,
   `kodo` varchar(40) DEFAULT NULL,
   `komando` text NOT NULL,
   `demando` text,
   `respondo` text,
-  `normaligita` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `normaligita` text,
+  `forigita` tinyint(1) NOT NULL DEFAULT '0',
+  `gxusta` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE takso_leciono (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `dato` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `persono_id` int(11) NOT NULL,
   `leciono_id` int(11) NOT NULL,
   `intereso` int(11) NOT NULL,
   `malfacileco` int(11) NOT NULL,
-  `komento` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `komento` text NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE vortoj (
   `id` int(11) NOT NULL,
   `eo` varchar(128) NOT NULL,
   `fr` varchar(128) NOT NULL,
   `tipo` enum('adj','adv','conjonction','expression','interjection','nom','nombre','phrase','pronom','préfixe','préposition','verbe') DEFAULT NULL,
-  `lecionero_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `lecionero_id` int(11) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-
-ALTER TABLE ekzerceroj
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE ekzercoj
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE eraraj_lecionoj
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE komentoj
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE korektebla_kurso
-  ADD KEY `korektanto` (`korektanto`,`kurso`);
-
-ALTER TABLE kursoj
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE landoj
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE lecioneroj
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE lecionoj
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE monatoj
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE nuna_kurso
-  ADD PRIMARY KEY (`id`);
 
 ALTER TABLE personoj
-  ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `enirnomo` (`enirnomo`);
 
 ALTER TABLE personoj_lecioneroj
-  ADD PRIMARY KEY (`id`),
   ADD KEY `persono_index` (`persono_id`);
 
-ALTER TABLE personoj_lecionoj
-  ADD PRIMARY KEY (`id`);
-
 ALTER TABLE personoj_vortoj
-  ADD PRIMARY KEY (`id`),
   ADD KEY `persono_index` (`persono_id`),
   ADD KEY `vorto_index` (`vorto_id`);
 
@@ -283,19 +266,5 @@ ALTER TABLE personoj_vortoj_respondoj
   ADD KEY `vorto_index` (`vorto_id`);
 
 ALTER TABLE protokolo
-  ADD PRIMARY KEY (`id`),
   ADD KEY `ip` (`ip`),
   ADD KEY `kategorio` (`kategorio`);
-
-ALTER TABLE rajtoj
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE respondoj
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE takso_leciono
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE vortoj
-  ADD PRIMARY KEY (`id`);
-

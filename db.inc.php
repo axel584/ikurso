@@ -550,7 +550,7 @@ function troviPlejTauganKorektantonLauxKriterioj($lando,$departemento,$kurso) {
             if ($valuo==0) {
                 continue;
             }
-            if ($sxlosilo==1119) {
+            if ($sxlosilo==1119 or $sxlosilo==9643) {
                 continue; // filtre les correcteurs indésirables
             }
             if (!isset($kiom_lernantoj[$sxlosilo])){

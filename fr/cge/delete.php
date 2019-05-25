@@ -51,7 +51,7 @@ header("Pragma: no-cache"); // HTTP/1.0
 <tr>
 <form name="administri" method="post">
 <td colspan="2">
-Pour supprimer une personne, veuiller recopier son identifiant : <? echo $celpersono["enirnomo"]; ?><br>
+Pour supprimer une personne, veuiller recopier son identifiant&nbsp;: <? echo $celpersono["enirnomo"]; ?><br>
 </td>
 </tr>
 <tr>

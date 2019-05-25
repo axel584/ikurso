@@ -95,9 +95,9 @@ include "dlekkapo.inc.php";
 					<ul>
 						<li><a href="lec02.php?section=3">Accusatif pour complément d’objet direct</a></li>
 						<li><a href="lec02.php?section=7">Forme négative</a></li>
-						<li><a href="lec02.php?section=12">Comment ça va ? (quelques phrases utiles)</a></li>
+						<li><a href="lec02.php?section=12">Comment ça va&nbsp;? (quelques phrases utiles)</a></li>
 						<li><a href="lec03.php?section=1">Ordre des mots</a></li>
-						<li><a href="lec04.php?section=1">Est-ce que… ?, oui, non</a></li>
+						<li><a href="lec04.php?section=1">Est-ce que…&nbsp;?, oui, non</a></li>
 						<li><a href="lec05.php?section=1">Éléments pour converser</a></li>
 						<li><a href="lec06.php?section=2">Corrélatifs interrogatifs</a></li>
 						<li><a href="lec06.php?section=11">Traduction de <em>il y a</em></a></li>

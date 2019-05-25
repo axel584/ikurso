@@ -82,14 +82,14 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Les mots suivants seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">nomo</span> : nom</p>
-				<p class="col s12 m6"><span class="eo">bildkarto</span> : carte postale (illustrée)</p>
-				<p class="col s12 m6"><span class="eo">lingvo</span> : langue (que l’on parle)</p>
-				<p class="col s12 m6"><span class="eo">komenci</span> : commencer (quelque chose)</p>
-				<p class="col s12 m6"><span class="eo">interŝanĝi</span> : échanger</p>
-				<p class="col s12 m6"><span class="eo">ŝati</span> : aimer, apprécier</p>
-				<p class="col s12 m6"><span class="eo">lerni</span> : apprendre</p>
-				<p class="col s12 m6"><span class="eo">kun</span> : avec</p>
+				<p class="col s12 m6"><span class="eo">nomo<span>&nbsp;: nom</p>
+				<p class="col s12 m6"><span class="eo">bildkarto<span>&nbsp;: carte postale (illustrée)</p>
+				<p class="col s12 m6"><span class="eo">lingvo<span>&nbsp;: langue (que l’on parle)</p>
+				<p class="col s12 m6"><span class="eo">komenci<span>&nbsp;: commencer (quelque chose)</p>
+				<p class="col s12 m6"><span class="eo">interŝanĝi<span>&nbsp;: échanger</p>
+				<p class="col s12 m6"><span class="eo">ŝati<span>&nbsp;: aimer, apprécier</p>
+				<p class="col s12 m6"><span class="eo">lerni<span>&nbsp;: apprendre</p>
+				<p class="col s12 m6"><span class="eo">kun<span>&nbsp;: avec</p>
 			</div>
 		</fieldset>
 
@@ -116,19 +116,19 @@ include "dlekkapo.inc.php";
 		
 		<p>Vous retrouverez dans le schéma ci-dessus des corrélatifs que vous avez déjà rencontrés dans les leçons précédentes&nbsp;:</p>
 		<div class="row vortlisto">
-			<p class="col s4 m3"><span class="eo">kiu</span> : qui, quel</p>
-			<p class="col s4 m3"><span class="eo">neniu</span> : personne</p>
-			<p class="col s4 m6"><span class="eo">iu</span> : quelqu’un</p>
-			<p class="col s4 m3"><span class="eo">kio</span> : quoi</p>
-			<p class="col s8 m9"><span class="eo">nenio</span> : rien</p>
-			<p class="col s4 m3"><span class="eo">kie</span> : où</p>
-			<p class="col s8 m9"><span class="eo">nenie</span> : nulle part</p>
-			<p class="col s4 m3"><span class="eo">kiam</span> : quand</p>
-			<p class="col s4 m3"><span class="eo">neniam</span> : jamais</p>
-			<p class="col s4 m6"><span class="eo">ĉiam</span> : toujours</p>
-			<p class="col s6 m4"><span class="eo">kiel</span> : comment, comme</p>
-			<p class="col s6 m8"><span class="eo">tiel</span> : ainsi, comme ça</p>
-			<p class="col s12"><span class="eo">kiom</span> : combien</p>
+			<p class="col s4 m3"><span class="eo">kiu<span>&nbsp;: qui, quel</p>
+			<p class="col s4 m3"><span class="eo">neniu<span>&nbsp;: personne</p>
+			<p class="col s4 m6"><span class="eo">iu<span>&nbsp;: quelqu’un</p>
+			<p class="col s4 m3"><span class="eo">kio<span>&nbsp;: quoi</p>
+			<p class="col s8 m9"><span class="eo">nenio<span>&nbsp;: rien</p>
+			<p class="col s4 m3"><span class="eo">kie<span>&nbsp;: où</p>
+			<p class="col s8 m9"><span class="eo">nenie<span>&nbsp;: nulle part</p>
+			<p class="col s4 m3"><span class="eo">kiam<span>&nbsp;: quand</p>
+			<p class="col s4 m3"><span class="eo">neniam<span>&nbsp;: jamais</p>
+			<p class="col s4 m6"><span class="eo">ĉiam<span>&nbsp;: toujours</p>
+			<p class="col s6 m4"><span class="eo">kiel<span>&nbsp;: comment, comme</p>
+			<p class="col s6 m8"><span class="eo">tiel<span>&nbsp;: ainsi, comme ça</p>
+			<p class="col s12"><span class="eo">kiom<span>&nbsp;: combien</p>
 		</div>
 		
 		<p class="parto">Voici quelques autres exemples de corrélatifs&nbsp;</p>
@@ -262,11 +262,11 @@ include "dlekkapo.inc.php";
 		pluriel. Tous les autres sont invariables.
 		</p>
 		<div class="row">
-			<p class="col s12"><span class="eo">Kun kiaj fruktoj vi faris tiun bonan kukon ?</span> : Avec quelles sortes de fruits as-tu fait ce bon gâteau ?</p>
-			<p class="col s12"><span class="eo">Mi neniam manĝis tiajn kukojn.</span> : Je n’ai jamais mangé de tels gâteaux.</p>
-			<p class="col s12"><span class="eo">Kiujn vi renkontis ?</span> : Qui (plur.) as-tu rencontré ? Lesquels as-tu rencontrés ?</p>
-			<p class="col s12"><span class="eo">Mi vidis la kukon, kiun vi faris.</span> : J’ai vu le gâteau que tu as fait.</p>
-			<p class="col s12"><span class="eo">Kion vi volas ?</span> : Que veux-tu ?</p>
+			<p class="col s12"><span class="eo">Kun kiaj fruktoj vi faris tiun bonan kukon ?<span>&nbsp;: Avec quelles sortes de fruits as-tu fait ce bon gâteau ?</p>
+			<p class="col s12"><span class="eo">Mi neniam manĝis tiajn kukojn.<span>&nbsp;: Je n’ai jamais mangé de tels gâteaux.</p>
+			<p class="col s12"><span class="eo">Kiujn vi renkontis ?<span>&nbsp;: Qui (plur.) as-tu rencontré ? Lesquels as-tu rencontrés ?</p>
+			<p class="col s12"><span class="eo">Mi vidis la kukon, kiun vi faris.<span>&nbsp;: J’ai vu le gâteau que tu as fait.</p>
+			<p class="col s12"><span class="eo">Kion vi volas ?<span>&nbsp;: Que veux-tu ?</p>
 		</div>
 
 		<?php 
@@ -274,7 +274,7 @@ include "dlekkapo.inc.php";
 		if ($section=="5") {
 		?>
 		
-		<p><a href="<?php echo $vojo;?>fr/son/pv5.mp3" class="sm2_button"></a> <span class="eo">En ĉiu malbono estas iom da bono.</span> : Dans tout mal il y a un peu de bien.</p>
+		<p><a href="<?php echo $vojo;?>fr/son/pv5.mp3" class="sm2_button"></a> <span class="eo">En ĉiu malbono estas iom da bono.<span>&nbsp;: Dans tout mal il y a un peu de bien.</p>
 		
 
 		<fieldset class="vortoj">
@@ -283,7 +283,7 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Ce mot sera automatiquement ajouté à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12"><span class="eo">malbono</span> : le mal, du mal</p>
+				<p class="col s12"><span class="eo">malbono<span>&nbsp;: le mal, du mal</p>
 			</div>
 		</fieldset>
 		
@@ -306,10 +306,10 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Les mots suivants seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">malseka</span> : mouillé</p>
-				<p class="col s12 m6"><span class="eo">krajono</span> : crayon</p>
-				<p class="col s12 m6"><span class="eo">vespere</span> : le soir, au soir</p>
-				<p class="col s12 m6"><span class="eo">bicikle</span> : en vélo</p>
+				<p class="col s12 m6"><span class="eo">malseka<span>&nbsp;: mouillé</p>
+				<p class="col s12 m6"><span class="eo">krajono<span>&nbsp;: crayon</p>
+				<p class="col s12 m6"><span class="eo">vespere<span>&nbsp;: le soir, au soir</p>
+				<p class="col s12 m6"><span class="eo">bicikle<span>&nbsp;: en vélo</p>
 			</div>
 		</fieldset>
 

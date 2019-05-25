@@ -90,39 +90,39 @@ include "dlekkapo.inc.php";
 			<div class="vortlisto row">
 				<div class="col s12 m4">
 					<p><b>Noms</b></p>
-					<p><span class="eo">horo</span> : heure</p>
-					<p><span class="eo">jaro<sup>[1]</sup></span> : année</p>
-					<p><span class="eo">mateno</span> : matin</p>
-					<p><span class="eo">minuto</span> : minute</p>
-					<p><span class="eo">semajno</span> : semaine</p>
-					<p><span class="eo">nokto</span> : nuit</p>
-					<p><span class="eo">tago</span> : jour</p>
-					<p><span class="eo">vespero</span> : soir, soirée</p>
+					<p><span class="eo">horo<span>&nbsp;: heure</p>
+					<p><span class="eo">jaro<sup>[1]</sup><span>&nbsp;: année</p>
+					<p><span class="eo">mateno<span>&nbsp;: matin</p>
+					<p><span class="eo">minuto<span>&nbsp;: minute</p>
+					<p><span class="eo">semajno<span>&nbsp;: semaine</p>
+					<p><span class="eo">nokto<span>&nbsp;: nuit</p>
+					<p><span class="eo">tago<span>&nbsp;: jour</p>
+					<p><span class="eo">vespero<span>&nbsp;: soir, soirée</p>
 				</div>
 				<div class="col s12 m4">
 					<p><b>Verbes</b></p>
-					<p><span class="eo">atendi</span> : attendre</p>
-					<p><span class="eo">demandi <sup>[2]</sup></span> : demander</p>
-					<p><span class="eo">fumi</span> : fumer</p>
-					<p><span class="eo">kuri</span> : courir</p>
-					<p><span class="eo">peti <sup>[3]</sup></span> : demander</p>
-					<p><span class="eo">promeni</span> : se promener</p>
-					<p><span class="eo">respondi</span> : répondre</p>
-					<p><span class="eo">soifi <sup>[4]</sup></span> : avoir soif</p>
-					<p><span class="eo">vivi</span> : vivre</p>
+					<p><span class="eo">atendi<span>&nbsp;: attendre</p>
+					<p><span class="eo">demandi <sup>[2]</sup><span>&nbsp;: demander</p>
+					<p><span class="eo">fumi<span>&nbsp;: fumer</p>
+					<p><span class="eo">kuri<span>&nbsp;: courir</p>
+					<p><span class="eo">peti <sup>[3]</sup><span>&nbsp;: demander</p>
+					<p><span class="eo">promeni<span>&nbsp;: se promener</p>
+					<p><span class="eo">respondi<span>&nbsp;: répondre</p>
+					<p><span class="eo">soifi <sup>[4]</sup><span>&nbsp;: avoir soif</p>
+					<p><span class="eo">vivi<span>&nbsp;: vivre</p>
 				</div>
 				<div class="col s12 m4">
 					<p><b>Adjectifs</b></p>
-					<p><span class="eo">blanka</span> : blanc</p>
-					<p><span class="eo">blua</span> : bleu</p>
-					<p><span class="eo">bruna</span> : brun (marron)</p>
-					<p><span class="eo">flava</span> : jaune</p>
-					<p><span class="eo">griza</span> : gris</p>
-					<p><span class="eo">nigra</span> : noir</p>
-					<p><span class="eo">ruĝa</span> : rouge</p>
-					<p><span class="eo">verda</span> : vert</p>
+					<p><span class="eo">blanka<span>&nbsp;: blanc</p>
+					<p><span class="eo">blua<span>&nbsp;: bleu</p>
+					<p><span class="eo">bruna<span>&nbsp;: brun (marron)</p>
+					<p><span class="eo">flava<span>&nbsp;: jaune</p>
+					<p><span class="eo">griza<span>&nbsp;: gris</p>
+					<p><span class="eo">nigra<span>&nbsp;: noir</p>
+					<p><span class="eo">ruĝa<span>&nbsp;: rouge</p>
+					<p><span class="eo">verda<span>&nbsp;: vert</p>
 					<p><b>Adverbe</b></p>
-					<p><span class="eo">nur</span> : seulement</p>
+					<p><span class="eo">nur<span>&nbsp;: seulement</p>
 				</div>
 			</div>
 		</fieldset>
@@ -336,22 +336,22 @@ include "dlekkapo.inc.php";
 		<fieldset class="vortoj">
 			<div class="vortlisto row">
 				<div class="col s12 m4">
-					<p><span class="eo">unua</span> : premier</p>
-					<p><span class="eo">dua</span> : deuxième</p>
-					<p><span class="eo">tria</span> : troisième</p>
-					<p><span class="eo">kvara</span> : quatrième</p>
+					<p><span class="eo">unua<span>&nbsp;: premier</p>
+					<p><span class="eo">dua<span>&nbsp;: deuxième</p>
+					<p><span class="eo">tria<span>&nbsp;: troisième</p>
+					<p><span class="eo">kvara<span>&nbsp;: quatrième</p>
 				</div>
 				<div class="col s12 m4">
-					<p><span class="eo">dudeka</span> : 20<sup>e</sup></p>
-					<p><span class="eo">sepdek-unua</span> : 71<sup>e</sup></p>
-					<p><span class="eo">centa</span> : 100<sup>e</sup></p>
-					<p><span class="eo">dek-kvara</span> : 14<sup>e</sup></p>
+					<p><span class="eo">dudeka<span>&nbsp;: 20<sup>e</sup></p>
+					<p><span class="eo">sepdek-unua<span>&nbsp;: 71<sup>e</sup></p>
+					<p><span class="eo">centa<span>&nbsp;: 100<sup>e</sup></p>
+					<p><span class="eo">dek-kvara<span>&nbsp;: 14<sup>e</sup></p>
 				</div>
 				<div class="col s12 m4">
-					<p><span class="eo">unue</span> : premièrement</p>
-					<p><span class="eo">due</span> : deuxièmement</p>
-					<p><span class="eo">trie</span> : troisièmement</p>
-					<p><span class="eo">dek-kvare</span> : quatorzièmement</p>
+					<p><span class="eo">unue<span>&nbsp;: premièrement</p>
+					<p><span class="eo">due<span>&nbsp;: deuxièmement</p>
+					<p><span class="eo">trie<span>&nbsp;: troisièmement</p>
+					<p><span class="eo">dek-kvare<span>&nbsp;: quatorzièmement</p>
 				</div>
 			</div>
 		</fieldset>
@@ -396,9 +396,9 @@ include "dlekkapo.inc.php";
 		<p>Il s'agit des verbes qui s'utilisent avec un complément d'objet :</p>
 
 			<div class="container">
-				<p><span class="eo">Mi vidas <b>mian patron</b>.</span> : Je vois mon père.</p>
-				<p><span class="eo">Mia patro trinkas <b>kafon</b>.</span> : Mon père boit du café.</p>
-				<p><span class="eo">Vi skribas <b>libron</b>.</span> : Tu écris un livre.</p>
+				<p><span class="eo">Mi vidas <b>mian patron</b>.<span>&nbsp;: Je vois mon père.</p>
+				<p><span class="eo">Mia patro trinkas <b>kafon</b>.<span>&nbsp;: Mon père boit du café.</p>
+				<p><span class="eo">Vi skribas <b>libron</b>.<span>&nbsp;: Tu écris un livre.</p>
 			</div>
 
 		</p>
@@ -415,16 +415,16 @@ include "dlekkapo.inc.php";
 		employée</b> dans ce cas.
 		</p>
 		<div class="container">
-			<p><span class="eo">Li estas sana.</span> : Il est en bonne santé.</p>
-			<p><span class="eo">Li promenas soifa.</span> : Il se promène assoiffé.</p>
-			<p><span class="eo">Li estas instruisto.</span> : Il est instituteur.</p>
-			<p><span class="eo">Ŝia frato estas bela knabo.</span> : Son frère est (un) beau garçon.</p>
+			<p><span class="eo">Li estas sana.<span>&nbsp;: Il est en bonne santé.</p>
+			<p><span class="eo">Li promenas soifa.<span>&nbsp;: Il se promène assoiffé.</p>
+			<p><span class="eo">Li estas instruisto.<span>&nbsp;: Il est instituteur.</p>
+			<p><span class="eo">Ŝia frato estas bela knabo.<span>&nbsp;: Son frère est (un) beau garçon.</p>
 		</div>
 
 		<p>À noter que certains verbes intransitifs n’ont pas de sujet du tout. Par exemple :</p>
 			<div class="container">
-				<p><span class="eo">Pluvas.</span> : Il pleut.</p>
-				<p><span class="eo">Sunas.</span> : Il fait beau, il y a du soleil.</p>
+				<p><span class="eo">Pluvas.<span>&nbsp;: Il pleut.</p>
+				<p><span class="eo">Sunas.<span>&nbsp;: Il fait beau, il y a du soleil.</p>
 			</div>
 
 			<p>Leur équivalent en français utilise le sujet <b>il</b> qui ne se traduit pas en espéranto.</p>

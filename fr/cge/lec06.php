@@ -76,7 +76,7 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Ce mot sera automatiquement ajouté à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12"><span class="eo">matene</span> : le matin, au matin</p>
+				<p class="col s12"><span class="eo">matene<span>&nbsp;: le matin, au matin</p>
 			</div>
 		</fieldset>
 
@@ -120,8 +120,8 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">scienco</span> : science</p>
-				<p class="col s12 m6"><span class="eo">helpi</span> : aider</p>
+				<p class="col s12 m6"><span class="eo">scienco<span>&nbsp;: science</p>
+				<p class="col s12 m6"><span class="eo">helpi<span>&nbsp;: aider</p>
 			</div>
 		</fieldset>
 		<?php 
@@ -142,12 +142,12 @@ include "dlekkapo.inc.php";
 		
 		<p>À distinguer :</p>
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">nova</span> : nouveau</p><p class="col s6"><span class="eo">malnova</span> : ancien, périmé</p>
-			<p class="col s6"><span class="eo">juna</span> : jeune</p><p class="col s6"><span class="eo">maljuna</span> : vieux, âgé</p>
+			<p class="col s6"><span class="eo">nova<span>&nbsp;: nouveau</p><p class="col s6"><span class="eo">malnova<span>&nbsp;: ancien, périmé</p>
+			<p class="col s6"><span class="eo">juna<span>&nbsp;: jeune</p><p class="col s6"><span class="eo">maljuna<span>&nbsp;: vieux, âgé</p>
 		</div>
 		
-		<p><span class="eo">maljuna amiko</span> : un vieil ami (= un ami âgé)</p>
-		<p><span class="eo">malnova amiko</span> : un vieil ami (= un ami de longue date)</p>
+		<p><span class="eo">maljuna amiko<span>&nbsp;: un vieil ami (= un ami âgé)</p>
+		<p><span class="eo">malnova amiko<span>&nbsp;: un vieil ami (= un ami de longue date)</p>
 		
 		<p class="parto"><b>Proverbe</b></p>
 		<p><a href="<?php echo $vojo;?>fr/son/pv6.mp3" class="sm2_button"></a> Bona estas domo nova kaj amiko malnova.</p>
@@ -251,17 +251,17 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">junularo</span> : jeunesse</p>		
-				<p class="col s12 m6"><span class="eo">partopreni en</span> : participer à</p>
-				<p class="col s12 m6"><span class="eo">okazi</span> : avoir lieu</p>
-				<p class="col s12 m6"><span class="eo">Kebeko</span> : Québec (la ville)</p>
-				<p class="col s12 m6"><span class="eo">(aŭto)buseto</span> : minibus</p>
-				<p class="col s12 m6"><span class="eo">halti</span> : s’arrêter</p>
-				<p class="col s12 m6"><span class="eo">alveni al</span> : arriver à (ou dans)</p>
-				<p class="col s12 m6"><span class="eo">ankaŭ</span> : aussi</p>
-				<p class="col s12 m6"><span class="eo">viziti</span> : visiter</p>
-				<p class="col s12 m6"><span class="eo">seĝo</span> : siège</p>
-				<p class="col s12"><span class="eo">tagmanĝo</span> : repas du midi (France : déjeuner, Canada : dîner)</p>
+				<p class="col s12 m6"><span class="eo">junularo<span>&nbsp;: jeunesse</p>		
+				<p class="col s12 m6"><span class="eo">partopreni en<span>&nbsp;: participer à</p>
+				<p class="col s12 m6"><span class="eo">okazi<span>&nbsp;: avoir lieu</p>
+				<p class="col s12 m6"><span class="eo">Kebeko<span>&nbsp;: Québec (la ville)</p>
+				<p class="col s12 m6"><span class="eo">(aŭto)buseto<span>&nbsp;: minibus</p>
+				<p class="col s12 m6"><span class="eo">halti<span>&nbsp;: s’arrêter</p>
+				<p class="col s12 m6"><span class="eo">alveni al<span>&nbsp;: arriver à (ou dans)</p>
+				<p class="col s12 m6"><span class="eo">ankaŭ<span>&nbsp;: aussi</p>
+				<p class="col s12 m6"><span class="eo">viziti<span>&nbsp;: visiter</p>
+				<p class="col s12 m6"><span class="eo">seĝo<span>&nbsp;: siège</p>
+				<p class="col s12"><span class="eo">tagmanĝo<span>&nbsp;: repas du midi (France : déjeuner, Canada : dîner)</p>
 			</div>
 		</fieldset>
 
@@ -287,7 +287,7 @@ include "dlekkapo.inc.php";
 		  bestoj zoo ne povas esti kompleta.
 		</p>
 
-		<p>* <span class="eo">Kebekio</span> : état du Québec</p>
+		<p>* <span class="eo">Kebekio<span>&nbsp;: état du Québec</p>
 		
 		<fieldset class="vortoj">
 			<legend>MOTS À RETENIR</legend>
@@ -295,22 +295,22 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">veturi</span> : aller<sup>[1]</sup></p>
-				<p class="col s12 m6"><span class="eo">urbo</span> : ville</p>
+				<p class="col s12 m6"><span class="eo">veturi<span>&nbsp;: aller<sup>[1]</sup></p>
+				<p class="col s12 m6"><span class="eo">urbo<span>&nbsp;: ville</p>
 				
-				<p class="col s12 m6"><span class="eo">admiri</span> : admirer</p>
-				<p class="col s12 m6"><span class="eo">besto</span> : bête, animal</p>
-				<p class="col s12 m6"><span class="eo">multaj</span> : beaucoup de, de nombreux</p>
-				<p class="col s12 m6"><span class="eo">kontinento</span> : continent</p>
-				<p class="col s12 m6"><span class="eo">plaĉi al</span> : plaire à</p>
-				<p class="col s12 m6"><span class="eo">urso</span> : ours</p>
-				<p class="col s12 m6"><span class="eo">enirejo</span> : entrée</p>
-				<p class="col s12 m6"><span class="eo">kaĝo</span> : cage</p>
-				<p class="col s12 m6"><span class="eo">Arkto</span> : Arctique</p>
-				<p class="col s12 m6"><span class="eo">ofte</span> : souvent</p>
-				<p class="col s12 m6"><span class="eo">simio</span> : singe</p>
-				<p class="col s12 m6"><span class="eo">interesa</span> : intéressant</p>
-				<p class="col s12 m6"><span class="eo">kompleta</span> : complet</p>
+				<p class="col s12 m6"><span class="eo">admiri<span>&nbsp;: admirer</p>
+				<p class="col s12 m6"><span class="eo">besto<span>&nbsp;: bête, animal</p>
+				<p class="col s12 m6"><span class="eo">multaj<span>&nbsp;: beaucoup de, de nombreux</p>
+				<p class="col s12 m6"><span class="eo">kontinento<span>&nbsp;: continent</p>
+				<p class="col s12 m6"><span class="eo">plaĉi al<span>&nbsp;: plaire à</p>
+				<p class="col s12 m6"><span class="eo">urso<span>&nbsp;: ours</p>
+				<p class="col s12 m6"><span class="eo">enirejo<span>&nbsp;: entrée</p>
+				<p class="col s12 m6"><span class="eo">kaĝo<span>&nbsp;: cage</p>
+				<p class="col s12 m6"><span class="eo">Arkto<span>&nbsp;: Arctique</p>
+				<p class="col s12 m6"><span class="eo">ofte<span>&nbsp;: souvent</p>
+				<p class="col s12 m6"><span class="eo">simio<span>&nbsp;: singe</p>
+				<p class="col s12 m6"><span class="eo">interesa<span>&nbsp;: intéressant</p>
+				<p class="col s12 m6"><span class="eo">kompleta<span>&nbsp;: complet</p>
 			</div>
 			<p><small>[1]</small> par un moyen de locomotion quelconque</p>
 		</fieldset>
@@ -348,8 +348,8 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">membro</span> : membre, adhérent</p>
-				<p class="col s12 m6"><span class="eo">klubo</span> : club</p>
+				<p class="col s12 m6"><span class="eo">membro<span>&nbsp;: membre, adhérent</p>
+				<p class="col s12 m6"><span class="eo">klubo<span>&nbsp;: club</p>
 			</div>
 		</fieldset>
 
@@ -385,7 +385,7 @@ include "dlekkapo.inc.php";
 		
 		<p class="parto">Lorsqu’une phrase contient deux compléments d’objet, l’un des deux doit être un complément <i>indirect</i>. </p>
 		<p>Par exemple :</p>
-		<p><span class="eo">Mi aĉetas ŝuojn al la infanoj</span> : J’achète des chaussures aux enfants.</p>
+		<p><span class="eo">Mi aĉetas ŝuojn al la infanoj<span>&nbsp;: J’achète des chaussures aux enfants.</p>
 
 		<div class="row">
 			<p class="col s6">Le complément d’objet direct :</p><p class="col s4"><span class="eo">ŝuojn</span></p>

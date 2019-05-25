@@ -43,11 +43,11 @@ include "dlekkapo.inc.php";
 		if ($section=="2") {
 		?>
 		
-		<p>Bravo ! Vous avez terminé, il ne vous reste qu'à envoyer vos réponses à votre correcteur. Une fois que celui ci aura corrigé vos réponses, vous pourrez consulter votre attestation de réussite dans votre espace personnel.</p>
+		<p>Bravo&nbsp;! Vous avez terminé, il ne vous reste qu'à envoyer vos réponses à votre correcteur. Une fois que celui ci aura corrigé vos réponses, vous pourrez consulter votre attestation de réussite dans votre espace personnel.</p>
 		
 		<p>Afin de continuer votre apprentissage, vous pouvez suivre le cours <i>Gerda Malaperis</i>, basé sur une histoire policière, ce cours vous permettra d'enrichir votre vocabulaire et de consolider vos connaissances de la langue.</p>
 		
-		<p>Bonne continuation dans le monde de l'espéranto !</p>
+		<p>Bonne continuation dans le monde de l'espéranto&nbsp;!</p>
 		
 		<?php 
 			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);

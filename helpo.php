@@ -294,7 +294,7 @@ frameborder="0" allowfullscreen></iframe></p>
 	
 				<p class="parto">Les mots PHP, html, css, MySQL vous sont familiers&nbsp;? Nous recherchons toujours de l’aide pour améliorer les cours internet. 
 					Nous avons un grand nombre d’idées de fonctionnalités à mettre en place et malheureusement pas assez de temps pour tout faire.</p>
-					<p>Le code source du site se trouve sur <a href="https://github.com/axel584/ikurso">github.com/axel584/ikurso</a>. Et dans la rubrique issue, vous trouverez quelques idées d'amélioration. Pour nous aider, commencez par regarder les issues qui ont été labellisées <a href="https://github.com/axel584/ikurso/issues?q=is%3Aopen+is%3Aissue+label%3AFacile">facile</a>. 
+					<p>Le code source du site se trouve sur <a href="https://github.com/axel584/ikurso">github.com/axel584/ikurso</a>. Dans la rubrique «issues», nous avons listé des idées d’améliorations ou de corrections à mettre en place. Pour nous aider, vous pouvez commencer par regarder les «issues» qui ont été labellisées <a href="https://github.com/axel584/ikurso/issues?q=is%3Aopen+is%3Aissue+label%3AFacile">facile</a>. 
 	
 				<h2>Traduction</h2>
 				<p class="parto">Il existe beaucoup de projets qui consistent à traduire des documents du français à l’espéranto et nous recherchons des gens pour nous aider. Vous ne serez pas seul, mais il est indispensable d'avoir de bonnes bases et beaucoup de patience.</p>

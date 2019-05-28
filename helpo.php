@@ -279,7 +279,12 @@ frameborder="0" allowfullscreen></iframe></p>
 				<p>Nos activités, ponctuelles ou permanentes, sont essentiellement assurées par des bénévoles, au siège comme partout en France. 
 					Les tâches sont variées et peuvent correspondre à des centres d’intérêt très différents. 
 					Vous aussi, vous pouvez participer&nbsp;! Il suffit de nous contacter sur la page <a href="reago.php">contact</a>.</p>
-					
+				
+				<h2>Adhérer à l'association</h2>
+
+				<p class="parto">Si les cours sont gratuits, c'est avant tout cas nous avons des membres qui payent une cotisation et qui nous permettent de réaliser un grand nombre d'activités. En adhérant, vous soutenez une association qui fait connaître l'espéranto lors de différents salons, en diffusant des brochures d'information, qui aide à son enseignement (par ce cours, mais aussi en éditant des manuels d'apprentissage), et qui participe à sa diffusion grâce à l'organisation de congrès, en soutenant des projets culturels, en éditant des livres etc.</p>
+				<p>Si vous souhaitez rejoindre nos membres, vous pouvez adhérer en ligne à l'adresse <a href="https://esperanto-france.org/adherer">https://esperanto-france.org/adherer</a>.</p>
+
 				<h2>Correction des cours internet</h2>
 				
 				<p class="parto">Les correcteurs des cours sont des bénévoles. Certains suivent 1, 2 ou 3 élèves, d’autres s’occupent de plusieurs dizaines d’élèves.
@@ -311,6 +316,20 @@ frameborder="0" allowfullscreen></iframe></p>
 					<li><em>Le livre du mois</em> : vous rédigerez un article en français sur un livre en espéranto que vous aurez lu. 
 					Nous recherchons des passionnés de lecture (en espéranto).</li>
 				</ul>
+
+				<h2>Bénévole au siège pour faire des colis</h2>
+				<p class="parto">Le siège de l’association d’Espéranto-France, au 4 bis rue de la Cerisaie à Paris (métro Bastille), est un lieu où se retrouvent plusieurs bénévoles qui viennent 2 à 3 jours chaque semaine pour faire des colis, saisir les cotisations, répondre au courrier. Pas besoin d’être un expert en espéranto pour pouvoir donner un coup de main, et pourtant, sans les bénévoles du siège, l’association ne fonctionnerait pas.</p>
+
+				<h2>Stocker du matériel</h2>
+				<p class="parto">Le local de l’association est petit, or l’association édite des livres, des bandes dessinées, des dictionnaires, des manuels... qui prennent beaucoup de place dans nos locaux. Si vous disposez d’un peu de place (1 ou 2 mètres carrés pourraient suffire), cela nous ferait gagner de la place de stockage et nous permettrait de lancer de nouveaux projets d’édition.</p>
+
+				<h2>Correspondant local de relation avec la presse</h2>
+				<p class="parto">Si vous êtes impliqué dans une association locale, il y a fort à parier que vous organisez différents événements. Que ce soit l’assemblée générale, des cours d’espéranto, des conférences d’étrangers, etc. Et pour faire connaître ces événements, vous avez peut-être l’habitude de contacter les journaux locaux. Dans ce cas, vous pouvez devenir correspondant local de relation presse. Didier Loison - Didier Loison, notre vice-président, rassemble les articles parus dans la presse nationale ou locale et échange différents conseils pour améliorer les contacts avec les journalistes. Il arrive qu’un correspondant local d’Espéranto-France soit à l’origine d’un communiqué de presse qui peut être envoyé à l’échelle nationale. Pour devenir correspondant local, contactez Didier : <a mailto="didier.loison@free.fr">didier.loison@free.fr</a></p>
+
+				<h2>Membre du conseil d’administration</h2>
+				<p class="parto">Notre association se réunit physiquement tous les trois mois pour prendre les décisions nécessaires au fonctionnement et au développement de l’association. C’est à l’occasion de ces réunions du conseil d’administration que l’on choisit les projets qui seront mis en place et que l’on discute des initiatives à soutenir. Prendre part au conseil d’administration, c’est participer activement à l’association. Nos membres du CA sont répartis aux quatre coins de la France et permettent de garder un lien avec le terrain et d’être au courant des différents projets qui peuvent être proposés.</p>
+				<p>Si vous souhaitez vous porter candidat, vous pouvez contacter le bureau de l’association à l’adresse : <a href="estraro@esperanto-france.org">estraro@esperanto-france.org</a></p>
+
 			</section>
 
 			<?php 

@@ -280,9 +280,9 @@ frameborder="0" allowfullscreen></iframe></p>
 					Les tâches sont variées et peuvent correspondre à des centres d’intérêt très différents. 
 					Vous aussi, vous pouvez participer&nbsp;! Il suffit de nous contacter sur la page <a href="reago.php">contact</a>.</p>
 				
-				<h2>Adhérer à l'association</h2>
+				<h2>Adhérer à l’association</h2>
 
-				<p class="parto">Si les cours sont gratuits, c'est avant tout cas nous avons des membres qui payent une cotisation et qui nous permettent de réaliser un grand nombre d'activités. En adhérant, vous soutenez une association qui fait connaître l'espéranto lors de différents salons, en diffusant des brochures d'information, qui aide à son enseignement (par ce cours, mais aussi en éditant des manuels d'apprentissage), et qui participe à sa diffusion grâce à l'organisation de congrès, en soutenant des projets culturels, en éditant des livres etc.</p>
+				<p class="parto">Si les cours sont gratuits, c’est avant tout parce que nous avons des membres qui payent une cotisation et qui nous permettent de réaliser un grand nombre d’activités. En adhérant, vous soutenez une association qui fait connaître l’espéranto lors de différents salons, qui contribue à son enseignement (par ce cours, mais aussi en éditant des manuels d'apprentissage), qui publie et diffuse des brochures d’information et qui participe à sa diffusion en organisant des congrès, en soutenant des projets culturels, en éditant des livres, etc.</p>
 				<p>Si vous souhaitez rejoindre nos membres, vous pouvez adhérer en ligne à l'adresse <a href="https://esperanto-france.org/adherer">https://esperanto-france.org/adherer</a>.</p>
 
 				<h2>Correction des cours internet</h2>
@@ -291,20 +291,20 @@ frameborder="0" allowfullscreen></iframe></p>
 				Quel que soit le temps que vous voulez y consacrer, vous pourrez aider. Un grand nombre de correcteurs ont commencé après 
 				avoir fini le cours <em>Gerda Malaperis</em>. Il est important d’avoir un bon relationnel, de la patience et de la curiosité.</p>
 				<p>Si vous souhaitez nous aider en tant que correcteur, vous pouvez nous contacter à l’adresse <a href="mailto:ikurso@esperanto-france.org">ikurso@esperanto-france.org</a> ou via le <a href="reago.php">formulaire de contact</a>.</p>
-				<p>Il vous faudra dans un premier temps créer un compte<span class="eo">*</span> comme le font les élèves, puis nous indiquer l’identifiant que vous avez choisi afin que nous puissions vous donner les droits de correcteur. En vous reconnectant sur votre compte, vous trouverez l’interface des correcteurs qui vous permettra de choisir le nombre d’élèves que vous souhaitez corriger et les gérer.</p>
+				<p>Il vous faudra dans un premier temps créer un compte<span class="eo">*</span> comme le font les élèves, puis nous indiquer l’identifiant que vous avez choisi afin que nous puissions vous donner les droits de correcteur. En vous reconnectant sur votre compte, vous aurez automatiquement accès à l’interface des correcteurs, qui vous permettra de choisir le nombre d’élèves que vous souhaitez corriger et les gérer.</p>
 				<p>Il n’y a pas de contrainte d’engagement en tant que correcteur ; il est juste nécessaire, si vous souhaitez arrêter de corriger, de mettre votre nombre d’élèves à zéro et de prévenir les administrateurs qui trouveront d’autres correcteurs à vos élèves en cours.</p>
 				<p><span class="eo">*</span> Si vous avez déjà un compte parce que vous avez été élève sur ce site, vous n’avez pas besoin d’en créer un nouveau.</p>
 	
 				<h2>Développements informatiques</h2>
 	
-				<p class="parto">Les mots PHP, html, css, MySQL vous sont familiers&nbsp;? Nous recherchons toujours de l’aide pour améliorer les cours internet. 
+				<p class="parto">Les mots PHP, HTML, CSS, MySQL vous sont familiers&nbsp;? Nous recherchons toujours de l’aide pour améliorer les cours internet. 
 					Nous avons un grand nombre d’idées de fonctionnalités à mettre en place et malheureusement pas assez de temps pour tout faire.</p>
 					<p>Le code source du site se trouve sur <a href="https://github.com/axel584/ikurso">github.com/axel584/ikurso</a>. Dans la rubrique «issues», nous avons listé des idées d’améliorations ou de corrections à mettre en place. Pour nous aider, vous pouvez commencer par regarder les «issues» qui ont été labellisées <a href="https://github.com/axel584/ikurso/issues?q=is%3Aopen+is%3Aissue+label%3AFacile">facile</a>. 
 	
 				<h2>Traduction</h2>
 				<p class="parto">Il existe beaucoup de projets qui consistent à traduire des documents du français à l’espéranto et nous recherchons des gens pour nous aider. Vous ne serez pas seul, mais il est indispensable d'avoir de bonnes bases et beaucoup de patience.</p>
 	
-				<h2>Esperanto-aktiv’</h2>
+				<h2>Esperanto-Aktiv’</h2>
 			
 				<p class="parto">L’association Espéranto-France envoie tous les mois une lettre d’information mensuelle en français qui s’appelle Esperanto-Aktiv’. 
 				Pour cette lettre, nous avons besoin de 3 profils différents :</p>

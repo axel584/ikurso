@@ -12,7 +12,7 @@
 			référence au numéro de la leçon du <em>Kurso de Esperanto</em>.
 			</p>
 			<div class="row">
-				<div class="input-field col s6 l4 tooltipped" data-position="bottom" data-delay="50" data-tooltip="tapez les premières lettres du mot recherché, sans les accents">
+				<div class="input-field col s6 l4 tooltipped" data-position="top" data-delay="50" data-tooltip="tapez les premières lettres du mot recherché, sans les accents">
 					<i class="material-icons prefix">search</i><input type="text" name="pattern" data-kurso="CG" id="pattern">
 					<label for="pattern">chercher dans le lexique</label>
 				</div>

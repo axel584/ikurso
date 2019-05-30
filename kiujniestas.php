@@ -78,7 +78,7 @@ include "pagxkapo.inc.php";
 					</div>
 					<div class="collapsible-body">
 						<ul id="enhavtabelo" class="collection">
-							<li><a href="#asocio">L’ association Espéranto-France</a></li>
+							<li><a href="#asocio">L’association Espéranto-France</a></li>
 							<li><a href="#kursoj">Les cours en ligne</a></li>
 							<li><a href="#datumoj">Protection des données personnelles</a></li>
 						</ul>

@@ -10,9 +10,9 @@
 .primaire-texte.texte-pale {color: #CBC9C7 !important;}
 .primaire-texte.texte-fond {background-color: #DDDCDA !important;}
 
-.contraste-A {background-color: #2196F3}
+.contraste-A {background-color: #2295f3}
 .contraste-texte-A {color: #2196F3}
-.contraste-B {background-color: #9ccc65;}
+.contraste-B, .bravo {background-color: #9ccc65;}
 .contraste-texte-B {color: #9ccc65;}
 
 /*---- présentation boutique -----*/
@@ -45,17 +45,6 @@ h4 {font-size: 1.5rem; margin: 2rem 0 1.5rem 0; color: #554E47;font-weight: 300;
 
 a {color: #2196F3;}
 
-.card-panel h5 {margin-bottom: 1.5rem;}
-
-.card .card-content .card-title {
-	line-height: normal;
-	padding-bottom: 1em;
-}
-.card .card-title.activator {
-    font-size:inherit;
-    padding-bottom: 0.5em;
-    margin-bottom: 0.5em;
-}
 .butiko .card {
     padding: 0.5em;
     margin: 0 0 0.5em 0;
@@ -80,28 +69,8 @@ section.klarigo ul {
 section.klarigo ul li {
 	list-style-type: circle;
 }
-/*---- surcharge formulaires -----*/
 
-.input-field label {color: #75706B;}
-input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #2196F3;
-    box-shadow: 0 1px 0 0 #2196F3;
-}     
-input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
-    color: #2196F3;
-}
 
-.select-wrapper {
-	display: inline-block;
-	margin-right: 0.5em;
-}
-
-.input-field .prefix.active {
-    color: #2196F3;
-}
-.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
-    float: right;
-}
 /* surcharge entete */
 @media only screen and (max-width: 992px)
 {
@@ -110,32 +79,6 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([reado
 	    -webkit-transform: translateX(-20%);
 	    transform: translateX(-20%);
 	}
-}
-
-/* surcharge style par défaut des formulaires */
-form p {
-    text-align: inherit;
-}
-
-p.col,
-form p.col {
-	margin-top: 0.25em;
-	margin-bottom: 0.25em;
-}
-
-/* surcharge slider pour témoignages */
-
-.slider .slides {
-	background:none;
-	border:none;
-}
-
-.slides li p {
-	margin-bottom: 2em;
-}
-
-.slider .indicators .indicator-item.active {
-    background-color: #2196F3;
 }
 
 /*----- surcharge modal konektigxi -----*/
@@ -155,18 +98,6 @@ form p.col {
     margin-top: 1rem;
 }
 
-/*----- surcharge collections -----*/
-secondary-content {
-    color: #2196F3;
-}
-.collection .collection-item:hover {
-    background-color: #E3F2FD;
-    cursor: pointer;
-}
-.collection .collection-item:active {
-    background-color: #2196F3;
-    color: #FFF;
-}
 /*----- collections pour asso locales -----*/
 .collection.local .collection-item .title {
 	font-weight: 500;
@@ -181,28 +112,11 @@ secondary-content {
     cursor: pointer;
 }
 
-/*----- surcharge pour les exercices ------*/
-textarea {
-	line-height: 160%;
-}
 /*--------------------------------*/
 
 p {font-weight: 300;}
 p.chapo {font-size: 150%;}
 
-.btn-flat.small {
-	color: #78909B;
-	text-decoration: underline;
-	text-transform: none;
-	padding: 0;
-}
-.btn-flat.small:hover,
-.btn-flat.small:active {
-	color: #0299e6;
-}
-.btn-flat.small i {
-    margin: 0;
-}
 .hejmo h2,
 .informoj h2 {
 	color: #989490;
@@ -217,16 +131,6 @@ div.col > p:first-child {
 	margin-top:2em;
 	font-size: 85%;
 }
-
-@media only screen and (min-width: 600px) {
-	#toast-container {
-		top: auto !important;
-		right: auto !important;
-		bottom: 60%;
-		left:30%;  
-	}
-}
-.toast {background-color: #e65100;}
 
 /* styles specifiques */
 .eo {color: #2196F3;}
@@ -296,37 +200,6 @@ ul.klarigo li:before {
 ol li {
 	    margin-bottom: 0.5em;
 }
-/*------------- collapsible ------------*/
-
-.collapsible-body{
-    padding: 0.5rem;
-}
-.collapsible-body p,
-.collapsible-body ul.listo {
-    padding: 0.5rem 2rem;
-}
-.collapsible-body ul.listo li {
-    padding-left: 2rem;
-    text-indent: inherit;
-}
-
-.collapsible-header i.material-icons {
-    -webkit-transition: -webkit-transform .4s;
-    -moz-transition: -moz-transform .4s;
-    -o-transition: -o-transform .4s;
-    -ms-transition: -ms-transform .4s;
-    transition: transform .4s;
-}
-.collapsible-header.active i.material-icons {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-.collapsible-header.selected {
-	background-color: #E3F2FD;
-}
 
 /*---- surcharge typographie pour table protokolo -----*/
 
@@ -357,31 +230,6 @@ ol li {
 	padding-right: 0.5em;
 }
 
-/*--- surcharge menu hamburger ---*/
-.side-nav {
-	width: auto;
-	padding-left: 1rem;
-	color: #554E47;
-}
-.side-nav li {
-	line-height: 2.5rem;
-}
-.side-nav li a {
-	color: #554E47;
-}
-.side-nav li.entete {
-	font-weight: 700;
-	margin-top: 1rem;
-}
-.side-nav li.retrait {
-    padding: 0 1rem;
-}
-.side-nav li a {
-	color: #554E47;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    padding: 0;
-}
 /****************************************/
 /*           blocs principaux           */
 /****************************************/
@@ -438,7 +286,7 @@ span.eta {font-size: 85%;}
     font-weight: 300;
     font-size: 90%;
     padding: 1em;
-    }
+}
 .dropdown-content li.uzanto:hover {
     background-color: inherit;
 }
@@ -1078,5 +926,11 @@ body.attestation {margin:10px;text-align:center}
 
 }
 
+/*------    toast    ------*/
+span.bravo {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
 
 

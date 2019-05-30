@@ -269,8 +269,8 @@ function getEnhavtabelo($kurso,$leciono) {
 	} else { // connecté, on récupère la liste des leçons effectuées
 		$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id,lecioneroj.dauxro  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=".$persono_id." WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."'  order by ordo";
 	}
-	echo '<li>';
-	echo '<div class="collapsible-header active"><i class="material-icons">toc</i>Sommaire de la leçon</div>';
+	echo '<li class="active">';
+	echo '<div class="collapsible-header"><i class="material-icons">toc</i>Sommaire de la leçon</div>';
 	echo '<div class="collapsible-body">';
 	echo '<ul id="enhavtabelo" class="collection">';
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
@@ -524,7 +524,7 @@ function QCM_bildoj($qcm) {
 			} else {
 				$lasta = "";
 			}
-			echo "<input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><label for='00".$indiceQuestion."-0".$indiceProposition."'>".$proposition."</label><br>";
+			echo "<label for='00".$indiceQuestion."-0".$indiceProposition."'><input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><span>".$proposition."</span></label><br>";
 			$indiceProposition++;
 		}
 		echo "</div>\n";
@@ -702,9 +702,9 @@ function getListoLecionoj($kurso,$leciono) {
 		echo "<p>Cours d'espéranto en dix leçons :</p>";
 	}
 	elseif ($kurso=="GR") {
-		echo "<p>Gerda malaperis :</p>";
+		echo "<p>Gerda malaperis&nbsp;:</p>";
 	}elseif ($kurso=="3N") {
-		echo "<p>Tria nivela kurso :</p>";
+		echo "<p>Tria nivela kurso&nbsp;:</p>";
 	}
 	echo "<ul id='lecionoj'>";
 	if ($leciono==0) {
@@ -913,7 +913,7 @@ function getLigiloAlMemorilo($persono_id) {
 	if ($persono_id=="") {return;}
 	$combien = kiomVortojPorMemori($persono_id);
 	if ($combien>0) {
-		echo "<p><a href='".$vojo."memoriVortojn.php' class='waves-effect waves-light btn tooltipped light-blue darken-1 '>".$combien." mot";
+		echo "<p><a href='".$vojo."memoriVortojn.php' class='waves-effect waves-light btn light-blue darken-1 '>".$combien." mot";
 		if ($combien > 1) echo "s";
 		echo " à réviser...</a></p>";
 	}

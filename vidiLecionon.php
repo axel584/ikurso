@@ -49,8 +49,6 @@ echo $row["komentario"];
 	<section id="leciono-fino">
 			<div id="marko" class="right-align">
 
-				
-
 				<a id="resendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Renvoyer cette leçon par mail">Renvoyer cette leçon par mail</a>
 				 <p>
       			<input type="checkbox" id="expediteur_ikurso" name="expediteur_ikurso" />
@@ -67,8 +65,8 @@ echo $row["komentario"];
 
 			<ul class="collapsible" data-collapsible="expandable">
 
-			<li>
-				<div class="collapsible-header active"><i class="material-icons">toc</i>Leçons de l'élève</div>
+			<li class="active">
+				<div class="collapsible-header"><i class="material-icons">toc</i>Leçons de l'élève</div>
 
 <?php
 

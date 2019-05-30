@@ -61,8 +61,8 @@ include "gerdakapo.inc.php";
 				</li>
 			</ul>
 			<ul class="collapsible" data-collapsible="expandable">
-				<li>
-					<div class="collapsible-header active"><i class="material-icons">toc</i>Chapitres de <em>Lasu min paroli plu!</em></div>
+				<li class="active">
+					<div class="collapsible-header"><i class="material-icons">toc</i>Chapitres de <em>Lasu min paroli plu!</em></div>
 					<div class="collapsible-body">
 						<ul id="enhavtabelo" class="collection">
 							<li><a href="<?php echo $vojo;?>fr/gerda/cxap01.php?section=5">1. Izabela</a></li>

@@ -388,12 +388,12 @@ include "dlekkapo.inc.php";
 								<div class="col s12 m5">
 									<p><b>J'ai déjà un compte&nbsp;:</b></p>
 									<p>Je me connecte pour pouvoir compléter les exercices et demander l’aide d'un correcteur.</p>
-									<p><a href="#konektigxi" class="btn waves-effect waves-light waves-light blue modal-trigger" data-activates="konektigxi">CONNEXION</a></p>
+									<p><a href="#konektigxi" class="btn waves-effect waves-light waves-light blue modal-trigger" data-target="konektigxi">CONNEXION</a></p>
 								</div>
 								<div class="col s12 m7">
 									<p><b>Je n’ai pas encore de compte&nbsp;:</b></p>
 									<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression et demander l’aide d’un correcteur.<br>C’est gratuit&nbsp;!</p>
-								<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
+								<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-target="aligxi">créer un compte</a></p>
 								</div>
 							</div>
 							<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>

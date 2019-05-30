@@ -60,7 +60,7 @@ $description = "Espéranto-France atteste que ".$nom." a correctement suivi le C
 		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
 		
 		<!--Import materialize.css-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 		<link type="text/css" rel="stylesheet" href="style/ikurso.css" media="screen"/>
 		<link type="text/css" rel="stylesheet" href="style/diplome.css" media="print"/>
 	</head>

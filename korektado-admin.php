@@ -68,8 +68,8 @@ while ($row=$result->fetch()) {
 
 			<ul class="collapsible" data-collapsible="expandable">
 
-			<li>
-				<div class="collapsible-header active"><i class="material-icons">toc</i>DLEK</div>
+			<li class="active">
+				<div class="collapsible-header"><i class="material-icons">toc</i>DLEK</div>
 
 <?php
 
@@ -79,7 +79,7 @@ while ($row=$result->fetch()) {
 	echo "<div class='collapsible-header'><a href='korektado-admin.php?kurso=CG&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></div>\n";
 }
 ?>
-				<div class="collapsible-header active"><i class="material-icons">toc</i>Gerda Malaperis</div>
+				<div class="collapsible-header"><i class="material-icons">toc</i>Gerda Malaperis</div>
 
 <?php
 

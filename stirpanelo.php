@@ -107,15 +107,16 @@ include "pagxkapo.inc.php";
 
 	<aside class="col s12 m3">
 		<ul class="collapsible" data-collapsible="expandable">
-			<li><div class="collapsible-header active"><i class="material-icons">toc</i>Administration</div>
-			<div class="collapsible-body">
-				<ul id="enhavtabelo" class="collection">
-				<li class=""><div><a href="stirpanelo.php?section=protokolo" class="">Carnet de bord</a></div></li>
-				<!--<li class=""><div><a href="stirpanelo.php?section=lernantoj" class="">Élèves</a></div></li>-->
-				<li class=""><div><a href="stirpanelo.php?section=korektantoj" class="">Correcteurs</a></div></li>
-				<!--<li class=""><div><a href="stirpanelo.php?section=lecionoj" class="">Leçons</a></div></li>-->
-				</ul>
-			</div>		
+			<li class="active">
+				<div class="collapsible-header"><i class="material-icons">toc</i>Administration</div>
+				<div class="collapsible-body">
+					<ul id="enhavtabelo" class="collection">
+					<li class=""><div><a href="stirpanelo.php?section=protokolo" class="">Carnet de bord</a></div></li>
+					<!--<li class=""><div><a href="stirpanelo.php?section=lernantoj" class="">Élèves</a></div></li>-->
+					<li class=""><div><a href="stirpanelo.php?section=korektantoj" class="">Correcteurs</a></div></li>
+					<!--<li class=""><div><a href="stirpanelo.php?section=lecionoj" class="">Leçons</a></div></li>-->
+					</ul>
+				</div>		
 			</li>
 		</ul>	
 	</aside>

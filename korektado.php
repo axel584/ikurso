@@ -50,8 +50,8 @@ while ($row=$result->fetch()) {
 
 			<ul class="collapsible" data-collapsible="expandable">
 
-			<li>
-				<div class="collapsible-header active"><i class="material-icons">toc</i>DLEK</div>
+			<li class="active">
+				<div class="collapsible-header"><i class="material-icons">toc</i>DLEK</div>
 
 <?php
 

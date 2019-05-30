@@ -63,20 +63,16 @@ include "pagxkapo.inc.php";
 				</div>
 			</section>
 		</article>
-
 		
 		<aside class="col s12 m10 l3 offset-m1 push-l1">
-
 
 			<ul class="collapsible" data-collapsible="expandable">
 
 			<li>
-				
 				<div class="collapsible-header"><a href="personinformoj.php">Données personnelles</a></div>
 				<div class="collapsible-header"><a href="memoriVortojn.php">Outil de révision du vocabulaire</a></div>
 			</li>
 		</ul>	
-
 
 		</aside>
 

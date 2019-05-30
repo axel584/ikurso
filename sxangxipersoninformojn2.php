@@ -14,15 +14,13 @@ $form_stopInfo=isset($_POST["stopInfo"])?"J":"N";
 $form_stopRappel=isset($_POST["stopRappel"])?"J":"N";
 $teksto="";
 
-
-
 $nomDesMois = array("Janvier"=>'01',"Février"=>'02',"Mars"=>'03',"Avril"=>'04',"Mai"=>'05',"Juin"=>'06',"Juillet"=>'07',"Août"=>'08',"Septembre"=>'09',"Octobre"=>'10',"Novembre"=>'11',"Décembre"=>'12');
 
-$elementsNaskigxdato = explode(" ",$form_naskigxdato);
+$elementsNaskigxdato = explode("-",$form_naskigxdato);
 if (count($elementsNaskigxdato)==3) {
-	$form_naskigxdato_tago = $elementsNaskigxdato[0];
-	$form_naskigxdato_monato = $nomDesMois[trim($elementsNaskigxdato[1],',')];
-	$form_naskigxdato_jaro = $elementsNaskigxdato[2];
+	$form_naskigxdato_tago = $elementsNaskigxdato[2];
+	$form_naskigxdato_monato = $elementsNaskigxdato[1];
+	$form_naskigxdato_jaro = $elementsNaskigxdato[0];
 } else {
 	$form_naskigxdato_tago="";
 	$form_naskigxdato_monato="";
@@ -55,8 +53,8 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=4");} else {
 	if ($persono['lando']!=$form_lando) {
 		$teksto.="lando : malnova:".$persono['lando']." - nova : ".$form_lando."\n";
 	}
-	if ($persono['naskigxdato']!=$form_naskigxdato_jaro."-".$form_naskigxdato_monato."-".$form_naskigxdato_tago) {
-		$teksto.="naskigxdato : malnova:".$persono['naskigxdato']." - nova : ".$form_naskigxdato_jaro."-".$form_naskigxdato_monato."-".$form_naskigxdato_tago."\n";
+	if ($persono['naskigxdato']!=$form_naskigxdato) {
+		$teksto.="naskigxdato : malnova:".$persono['naskigxdato']." - nova : ".$form_naskigxdato."\n";
 	}
 	if ($persono['stop_info']!=$form_stopInfo) {
 		$teksto.="stopInfo: malnova:".$persono['stop_info']." - nova : ".$form_stopInfo."\n";

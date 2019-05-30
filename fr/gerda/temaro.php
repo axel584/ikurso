@@ -121,6 +121,7 @@ include "gerdakapo.inc.php";
 
 	<aside class="col s12 m10 l3 offset-m1 push-l1">
 		<ul class="collapsible">
+			<li class="active">
 				<div class="collapsible-header">Enhavo</div>
 				<div class="collapsible-body" style="display: block; padding-top: 17px; margin-top: 0px; padding-bottom: 17px; margin-bottom: 0px;">
 					<ul id="enhavtabelo" class="collection">
@@ -128,6 +129,7 @@ include "gerdakapo.inc.php";
 						<li><a href="temaro.php?#enhavo">Enhavtabelo</a></li>
 					</ul>
 				</div>
+			</li>
 		</ul>
 	</aside>
 </div>

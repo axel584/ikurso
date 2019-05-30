@@ -1,0 +1,214 @@
+.card-panel h5 {margin-bottom: 1.5rem;}
+
+.card .card-content .card-title {
+	line-height: normal;
+	padding-bottom: 1em;
+}
+.card .card-title.activator {
+    font-size:inherit;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/*---- surcharge formulaires -----*/
+
+.input-field label {color: #75706B;}
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #2196F3;
+    box-shadow: 0 1px 0 0 #2196F3;
+}     
+input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #2196F3;
+}
+input:not([type]):focus:not([readonly]),input[type=text]:not(.browser-default):focus:not([readonly]),input[type=password]:not(.browser-default):focus:not([readonly]),input[type=email]:not(.browser-default):focus:not([readonly]),input[type=url]:not(.browser-default):focus:not([readonly]),input[type=time]:not(.browser-default):focus:not([readonly]),input[type=date]:not(.browser-default):focus:not([readonly]),input[type=datetime]:not(.browser-default):focus:not([readonly]),input[type=datetime-local]:not(.browser-default):focus:not([readonly]),input[type=tel]:not(.browser-default):focus:not([readonly]),input[type=number]:not(.browser-default):focus:not([readonly]),input[type=search]:not(.browser-default):focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #2196F3;
+    -webkit-box-shadow: 0 1px 0 0 #2196F3;
+    box-shadow: 0 1px 0 0 #2196F3
+}
+
+input:not([type]):focus:not([readonly])+label,input[type=text]:not(.browser-default):focus:not([readonly])+label,input[type=password]:not(.browser-default):focus:not([readonly])+label,input[type=email]:not(.browser-default):focus:not([readonly])+label,input[type=url]:not(.browser-default):focus:not([readonly])+label,input[type=time]:not(.browser-default):focus:not([readonly])+label,input[type=date]:not(.browser-default):focus:not([readonly])+label,input[type=datetime]:not(.browser-default):focus:not([readonly])+label,input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,input[type=tel]:not(.browser-default):focus:not([readonly])+label,input[type=number]:not(.browser-default):focus:not([readonly])+label,input[type=search]:not(.browser-default):focus:not([readonly])+label,textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #2196F3
+}
+
+.select-wrapper {
+	display: inline-block;
+	margin-right: 0.5em;
+}
+
+.input-field .prefix.active {
+    color: #2196F3;
+}
+.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
+    float: right;
+}
+
+/* surcharge style par défaut des formulaires */
+form p {
+    text-align: inherit;
+}
+
+p.col,
+form p.col {
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+/* surcharge slider pour témoignages */
+
+.slider .slides {
+	background:none;
+	border:none;
+}
+
+.slides li p {
+	margin-bottom: 2em;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #2196F3;
+}
+
+/*----- surcharge collections -----*/
+.secondary-content {
+    color: #2196F3;
+}
+.collection .collection-item:hover {
+    background-color: #E3F2FD;
+    cursor: pointer;
+}
+.collection .collection-item:active {
+    background-color: #2196F3;
+    color: #FFF;
+}
+
+
+/*----- surcharge pour les exercices ------*/
+textarea {
+	line-height: 160%;
+}
+
+/*----- surcharge boutons ------*/
+
+.btn-flat.small {
+	color: #78909B;
+	text-decoration: underline;
+	text-transform: none;
+	padding: 0;
+}
+.btn-flat.small:hover,
+.btn-flat.small:active {
+	color: #0299e6;
+}
+.btn-flat.small i {
+    margin: 0;
+}
+
+/*----- surcharge toast ------*/
+
+@media only screen and (min-width: 600px) {
+	#toast-container {
+		top: auto !important;
+		right: auto !important;
+		bottom: 60%;
+		left:30%;  
+	}
+}
+.toast {background-color: #e65100;}
+
+/*------------- collapsible ------------*/
+
+.collapsible-body{
+    padding: 0.5rem;
+}
+.collapsible-body p,
+.collapsible-body ul.listo {
+    padding: 0.5rem 2rem;
+}
+.collapsible-body ul.listo li {
+    padding-left: 2rem;
+    text-indent: inherit;
+}
+
+.collapsible-header i.material-icons {
+    -webkit-transition: -webkit-transform .4s;
+    -moz-transition: -moz-transform .4s;
+    -o-transition: -o-transform .4s;
+    -ms-transition: -ms-transform .4s;
+    transition: transform .4s;
+}
+.collapsible-header.active i.material-icons {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.collapsible-header.selected {
+	background-color: #E3F2FD;
+}
+
+/*--- surcharge menu hamburger ---*/
+.side-nav {
+	width: auto;
+	padding-left: 1rem;
+	color: #554E47;
+}
+.side-nav li {
+	line-height: 2.5rem;
+}
+.side-nav li a {
+	color: #554E47;
+}
+.side-nav li.entete {
+	font-weight: 700;
+	margin-top: 1rem;
+}
+.side-nav li.retrait {
+    padding: 0 1rem;
+}
+.side-nav li a {
+	color: #554E47;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0;
+}
+
+/*--- surcharge datepicker ---*/
+.datepicker-date-display {
+    background-color: #554E47;
+}
+.datepicker-date-display .date-text {
+    font-size: 1.5rem;
+}
+.datepicker-table td.is-today {
+    color: #554E47;
+}
+
+.datepicker-table td.is-selected {
+    background-color: #554E47;
+}
+.datepicker-controls .select-year input {
+    width: 3em;
+}
+.datepicker-controls .select-month input {
+    width: 10em;
+}
+.datepicker-today,.datepicker-done {
+    color: #2295f3;
+}
+.datepicker-cancel,.datepicker-clear {
+    color: #554E47;
+}
+/*.dropdown-content li>a,
+.dropdown-content li>span {
+    color: #554E47;
+    display: block;
+    line-height: unset;
+    padding: 0.25em;
+}
+.dropdown-content li {
+    min-height: unset;
+    line-height: unset;
+    text-align: center;
+}
+*/

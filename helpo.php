@@ -341,7 +341,7 @@ frameborder="0" allowfullscreen></iframe></p>
 			<div class="pinned">
 				<ul class="collapsible">
 					<li class="active">
-						<div class="collapsible-header active">
+						<div class="collapsible-header">
 							<i class="material-icons">toc</i>Sommaire
 						</div>
 						<div class="collapsible-body">

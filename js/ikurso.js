@@ -24,7 +24,7 @@
     $( ".qcm_ok" ).click(function() {
       var $lasta = $(this).data("lasta");
       if (!$lasta) {
-        Materialize.toast('Bravo !', 4000);
+        M.toast({html: 'Bravo !', classes: 'bravo'});
         $encours = $('.qcm_demando:visible');
         
         setTimeout(function(){
@@ -32,7 +32,7 @@
           $encours.addClass("hide");
          }, 1000);
       } else {
-        Materialize.toast('Bravo, vous avez trouvé toutes les bonnes réponses !', 4000);
+        M.toast({html: 'Bravo, vous avez trouvé toutes les bonnes réponses !', classes: 'bravo'});
         setTimeout(function(){
 			$("#recapitulatif_qcm").removeClass("hide");
             $('.qcm_demando:visible').addClass("hide");
@@ -43,7 +43,7 @@
     });
 
     $( ".qcm_nok" ).click(function() {
-      Materialize.toast('Mauvaise réponse, essayez encore !', 4000);
+       M.toast({html: 'Mauvaise réponse, essayez encore !'});
     });
 
   // exercice autocorrigé (qui ressemble du coup à un QCM)
@@ -55,12 +55,13 @@
 
       if ($respondoLernanto!=$respondoKomputilo) {
         // Mauvaise réponse :
-        Materialize.toast('Mauvaise réponse, essayez encore !', 4000);
+        M.toast({html: 'Mauvaise réponse, essayez encore !'});
       } else {
         // bonne réponse
       if (!$lasta) {
-        // il reste d'autres questions, on passe à la suite
-        Materialize.toast('Bravo !', 4000);
+        // il reste d'autres questions, on passe à la suite;
+        M.toast({html: 'Bravo !', classes: 'bravo'});
+
         $encours = $('.qcm_demando:visible');
         
         setTimeout(function(){
@@ -69,7 +70,7 @@
          }, 1000);
       } else {
         // c'est la dernière question, on affiche le récapitulatif et le bouton "fini"
-        Materialize.toast('Bravo, vous avez trouvé toutes les bonnes réponses !', 4000);
+        M.toast({html: 'Bravo, vous avez trouvé toutes les bonnes réponses !', classes: 'bravo'});
         setTimeout(function(){
       $("#recapitulatif_qcm").removeClass("hide");
             $('.qcm_demando:visible').addClass("hide");
@@ -458,7 +459,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
                 for (index = 0; index < reponse.malgxustajRespondoj.length; ++index) {
                     $('#'+reponse.malgxustajRespondoj[index]).removeClass("valid");
                 }
-                Materialize.toast(reponse.mesagxo, 4000);
+                M.toast({html: reponse.mesagxo});
             }
        			if (reponse.mesagxo=="ok") {
                 //on pourrait peut être factorisé avec les lignes précédentes ? Qu'on passe en vert que ce soit fini ou pas
@@ -584,7 +585,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
           data : "leciono="+$("#resendiLecionon_button").data('leciono')+"&kurso="+$("#resendiLecionon_button").data('kurso')+"&studanto_id="+$("#resendiLecionon_button").data('studanto')+"&expediteur_ikurso="+$('#expediteur_ikurso').is(":checked"),
           success : function(reponse, statut){ 
             if (reponse.mesagxo=="ok") {
-              Materialize.toast('La leçon de votre élève a bien été renvoyée.', 4000);              
+				M.toast({html: 'La leçon de votre élève a bien été renvoyée.'});              
             } else {
               alert("mauvais message de retour, contactez les administrateurs : "+reponse)
               console.log(reponse);
@@ -616,7 +617,7 @@ function kontroliVorton(vorto_id,persono_id,respondo) {
           data : "vorto_id="+vorto_id+"&persono_id="+persono_id+"&respondo="+encodeURIComponent(respondo),
           success : function(reponse, statut){ 
             if (reponse.mesagxo=="ok") {
-                Materialize.toast('Bravo !', 2000);
+                M.toast({html: 'Bravo !', displayLength: 2000, classes: 'bravo'});
                  $encours = $('.memorilo_demando:visible');
                     setTimeout(function(){
                       $encours.next().removeClass("hide");
@@ -624,8 +625,8 @@ function kontroliVorton(vorto_id,persono_id,respondo) {
                       $('.memorilo_input:visible').focus(); // on met le focus sur le champ
                     }, 500);
             } else if (reponse.mesagxo=="ko") {
-                Materialize.toast(reponse.eraroj, 5000);
-                 $encours = $('.memorilo_demando:visible');
+                M.toast({html: reponse.eraroj, displayLength: 5000});
+                $encours = $('.memorilo_demando:visible');
                     setTimeout(function(){
                       $("#recapitulatif").removeClass("hide");
                       $("#malbonaj_respondoj").prepend("<li class='collection-item row'><span>"+reponse.recapitulatif+"</span></li>");
@@ -705,10 +706,10 @@ $("#registri_eventon").click(function(){
           data : $ajaxParametres,
           success : function(reponse, statut){ 
             if (reponse.mesagxo=="ok") {
-                Materialize.toast('Merci beaucoup !', 2000);
+                M.toast({html: 'Merci beaucoup !', displayLength: 2000});
                 // TODO : mettre à jour le tableau
             } else if (reponse.mesagxo=="ko") {
-                Materialize.toast(reponse.eraroj, 2000);
+                M.toast({html: reponse.eraroj, displayLength: 2000});
             }
           },
           error : function() {
@@ -739,7 +740,7 @@ $(".delete_evento").click(function(){
             if (reponse.mesagxo=="ok") {
                  $("#row-"+$id).hide(1000);
             } else if (reponse.mesagxo=="ko") {
-                Materialize.toast(reponse.eraroj, 2000);
+                M.toast({html: reponse.eraroj, displayLength: 2000});
             }
           },
           error : function() {

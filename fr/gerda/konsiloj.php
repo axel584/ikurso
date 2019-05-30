@@ -241,8 +241,8 @@ include "gerdakapo.inc.php";
 		</article>
 		<aside class="col s12 m10 l3 offset-m1 push-l1">
 			<ul class="collapsible" data-collapsible="expandable">
-				<li>
-					<div class="collapsible-header active"><i class="material-icons">toc</i>Sommaire</div>
+				<li class="active">
+					<div class="collapsible-header"><i class="material-icons">toc</i>Sommaire</div>
 					<div class="collapsible-body">
 						<ul id="enhavtabelo" class="collection">
 							<li><a href="#kiuj">Kiuj vi estas?</a></li>

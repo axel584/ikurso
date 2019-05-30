@@ -145,6 +145,7 @@ include "dlekkapo.inc.php";
 
 	<aside class="col s12 m10 l3 offset-m1 push-l1">
 		<ul class="collapsible">
+			<li class="active">
 				<div class="collapsible-header">Sommaire</div>
 				<div class="collapsible-body" style="display: block; padding-top: 17px; margin-top: 0px; padding-bottom: 17px; margin-bottom: 0px;">
 					<ul id="enhavtabelo" class="collection">
@@ -152,6 +153,7 @@ include "dlekkapo.inc.php";
 						<li><a href="temaro.php?#enhavo">Table des matières</a></li>
 					</ul>
 				</div>
+			</li>
 		</ul>
 		<?php
 		pubAndroid();

@@ -436,12 +436,12 @@ include "gerdakapo.inc.php";
 								<div class="row">
 									<div class="col s12 m5">
 										<p><b>J'ai déjà un compte :</b></p>
-										<p><a href="#konektigxi" class="btn waves-effect waves-light waves-light blue modal-trigger" data-activates="konektigxi">CONNEXION</a></p>
+										<p><a href="#konektigxi" class="btn waves-effect waves-light waves-light blue modal-trigger" data-target="konektigxi">CONNEXION</a></p>
 									</div>
 									<div class="col s12 m7">
 										<p><b>Je n’ai pas encore de compte :</b></p>
 										<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
-									<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-activates="aligxi">créer un compte</a></p>
+									<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-target="aligxi">créer un compte</a></p>
 									</div>
 								</div>
 								<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>
@@ -471,8 +471,8 @@ include "gerdakapo.inc.php";
 		
 		<aside class="col s12 m10 l3 offset-m1 push-l1">
 			<ul class="collapsible" data-collapsible="expandable">
-				<li>
-					<div class="collapsible-header active"><i class="material-icons">toc</i>Sommaire</div>
+				<li class="active">
+					<div class="collapsible-header"><i class="material-icons">toc</i>Sommaire</div>
 					<div class="collapsible-body">
 						<ul id="enhavtabelo" class="collection">
 							<li><a href="#presentation">Présentation</a></li>
@@ -486,8 +486,8 @@ include "gerdakapo.inc.php";
 				</li>
 			</ul>
 			<ul class="collapsible" data-collapsible="expandable">
-				<li>
-					<div class="collapsible-header active"><i class="material-icons">toc</i>Chapitres de&nbsp;<em>Gerda malaperis</em></div>
+				<li class="active">
+					<div class="collapsible-header"><i class="material-icons">toc</i>Chapitres de&nbsp;<em>Gerda malaperis</em></div>
 					<div class="collapsible-body">
 						<ul id="kurso-enhavtabelo" class="collection">
 							<li><a href="cxap01.php">1. En universitata restoracio</a></li>

@@ -1,60 +1,54 @@
-(function($){
-  $(function(){
+$(document).ready(function(){
 
-    $('.button-collapse').sideNav();
-
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-
-  $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    //$('.modal-trigger').leanModal();
-
-    Materialize.updateTextFields();
+    $('.sidenav').sidenav();
 
 	$('.slider').slider({
 		full_width: true,
 		height: 320,
 	});
 
-    $('select').material_select();
+    $('select').formSelect();
 
     $('.scrollspy').scrollSpy();
     
-  	$( '.datepicker' ).pickadate({
-		selectMonths: true, // Creates a dropdown to control month
-		selectYears: 110, // Creates a dropdown of 100 years to control year
-		dateFormat: 'dd-mm-yyyy',
-	    formatSubmit: 'dd/mm/yyyy',
-	    monthsFull: [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ],
-	    monthsShort: [ 'Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec' ],
-	    weekdaysShort: [ 'Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam' ],
-	    weekdaysFull: [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
-	    weekdaysLetter: [ 'D', 'L', 'M', 'M', 'J', 'V', 'S' ],
-	    today: '',
-	    clear: 'effacer',
-	    close: 'Ok',
-	    closeOnSelect: false // Close upon selecting a date
-	});
+  	/* $('.datepicker').datepicker({
+		yearRange: [1920, new Date().getFullYear()],
+		format: 'dd-mm-yyyy',
+	    autoClose: false, 
+	    showDaysInNextAndPreviousMonths: true,
+	    showMonthAfterYear: true,
+	    showClearBtn: true,
+	    i18n: {
+		    months: [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ],
+			monthsShort: [ 'Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec' ],
+			weekdays: [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
+			weekdaysShort: [ 'Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam' ],
+			weekdaysAbbrev: [ 'D', 'L', 'M', 'M', 'J', 'V', 'S' ],
+			cancel: 'annuler',	    
+			clear: 'effacer',
+		    close: 'Ok'
+		}
+	}); */
 
-	$('.dropdown-button').dropdown({
-		belowOrigin: true, // Displays dropdown below the button
+	$('.dropdown-trigger').dropdown({
+		coverTrigger: false, // Displays dropdown below the button
 		constrainWidth: false, // Does not change width of dropdown to that of the activator
 		alignment: 'right'
 		}
 	);
 
-	//$('.collapsible').pushpin({ top: $('.collapsible').offset()  });
     // QCM
-    $('.carousel').carousel({full_width: true});
+    $('.carousel').carousel({fullWidth: true});
     
-    $('ul.tabs').tabs();
+    $('.tabs').tabs();
 
     $('.collapsible').collapsible({
-      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
     
 	$('.materialboxed').materialbox();
 	
 	$('.modal').modal();
+	
+	$('.tooltipped').tooltip();
 });

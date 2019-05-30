@@ -54,7 +54,7 @@ include "pagxkapo.inc.php";
 		<!-- on ne gere pas le cas où ils sont déjà inscrit car s'ils sont déjà inscrit, ils ne suivent pas le cours par le logiciel et n'arrivent jamais sur cette page -->
 		<!--div class="row">
 			<div class="col s11 m5 l4 offset-s1 offset-m2 offset-l3">
-				<p>Déjà inscrit ? <a href="#konektigxi" class="btn-flat waves-effect waves-light blue-text modal-trigger" data-activates="konektigxi">CONNEXION</a></p>
+				<p>Déjà inscrit ? <a href="#konektigxi" class="btn-flat waves-effect waves-light blue-text modal-trigger" data-target="konektigxi">CONNEXION</a></p>
 			</div>
 		</div-->
 

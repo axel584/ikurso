@@ -23,7 +23,8 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
 		
 		<!--Import materialize.css-->
-		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/materialize.override.css"  media="all"/>
 
 		<!--Player audio-->
 		<link rel="stylesheet" type="text/css" href="<?php echo $vojo;?>soundmanager2/css/mp3-player-button.css" />
@@ -256,21 +257,21 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 
 		<div class="navbar-fixed">	
 			<nav class="primaire">
-				<div class="nav-wrapper">
+                <div class="nav-wrapper">
 					<a href="<?php echo $vojo;?>index.php" class="brand-logo" id="logo">iKurso</a>
-					<a href="#!" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
+					<a href="#!" data-target="nav-mobile" class="sidenav-trigger top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
 					<ul class="right">
 
 						<!-- si utilisateur pas connecté -->
 <?php 
 if ($persono_id=="") {
 ?>						
-						<li><a href="#konektigxi" class="btn waves-effect waves-light primaire clair modal-trigger" data-activates="konektigxi">CONNEXION</a></li>
+						<li><a href="#konektigxi" class="btn waves-effect waves-light primaire clair modal-trigger">CONNEXION</a></li>
 <?php 
 } else {						
 ?>
 						<!-- si utilisateur connecté -->
-						<li><a href="#!" class="btn-floating btn-large waves-effect waves-light primaire clair dropdown-button" data-activates="uzantomenuo"><i class="large material-icons">perm_identity</i></a></li>
+						<li><a href="#!" class="btn-floating btn-large waves-effect waves-light primaire clair dropdown-trigger" data-target="uzantomenuo"><i class="large material-icons">perm_identity</i></a></li>
 <?php						
 }
 ?>
@@ -278,15 +279,15 @@ if ($persono_id=="") {
 					</ul>
 					<ul class="right hide-on-med-and-down">
 						<li><a href="<?php echo $vojo;?>kionova.php">QUOI DE NEUF ?</a></li>
-						<li><a class="dropdown-button" href="#!" data-activates="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li><a class="dropdown-trigger" href="#!" data-target="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
 						<li><a href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></li>
-						<li><a class="dropdown-button" href="#!" data-activates="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li><a class="dropdown-trigger" href="#!" data-target="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>
 					</ul>
 				</div>
 			</nav>
 		</div>
 		<!-- hamburger menu -->
-		<div class="side-nav" id="nav-mobile">
+		<div class="sidenav" id="nav-mobile">
 			<ul>
 				<li class="entete">COURS EN LIGNE</li>
 				<li class="retrait"><a href="<?php echo $vojo;?>fr/cge/intro.php">Cours en 10 leçons</a></li>

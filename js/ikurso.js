@@ -607,7 +607,7 @@ $("#kontroliRespondon_button").click(function() {
   });
 
 
-// fonction spécifique pour le "memorilo"
+// fonction spécifique pour le "memorilo" (révision de vocabulaire)
 
 function kontroliVorton(vorto_id,persono_id,respondo) {
       $.ajax({
@@ -650,6 +650,7 @@ $(".memorilo_button").click(function() {
     var $persono_id=$(this).data('persono_id');
     var $input=$(this).data('input');
     var $respondo=$("#"+$input).val();
+    $(this).addClass("disabled");
     kontroliVorton($vorto_id,$persono_id,$respondo);
 });
 

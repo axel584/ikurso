@@ -572,7 +572,7 @@ function QCM($qcm) {
 			} else {
 				$lasta = "";
 			}
-			echo "<input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><label for='00".$indiceQuestion."-0".$indiceProposition."'>".$proposition."</label><br>";
+			echo "<label for='00".$indiceQuestion."-0".$indiceProposition."'><input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><span>".$proposition."</span></label><br>";
 			$indiceProposition++;
 		}
 		echo "</div>\n";

@@ -10,7 +10,6 @@ include "pagxkapo.inc.php";
 // on converti la chaîne date en truc joliment écrit :
 $nomMois = array("01"=>"Janvier","02"=>"Février","03"=>"Mars","04"=>"Avril","05"=>"Mai","06"=>"Juin","07"=>"Juillet","08"=>"Août","09"=>"Septembre","10"=>"Octobre","11"=>"Novembre","12"=>"Décembre");
 $elementNaskigxdato = explode("-",$persono["naskigxdato"]);
-echo "date de naissance : ".$persono["naskigxdato"]."<br>";
 if (count($elementNaskigxdato)==3) {
 	$naskigxdato = $elementNaskigxdato[0]."-".$elementNaskigxdato[1]."-".$elementNaskigxdato[2];
 } else {
@@ -63,10 +62,10 @@ if ($persono["stop_info"]=="J") {
 					<input id="naskigxdato" name="naskigxdato" type="date" value="<?=$naskigxdato?>" />
 				</div>
 				<div class="col s3">
-					<input type="radio" name="sekso" id="seksoM" value="M" <?php if ($persono['sekso']=="M"){echo "checked";}?>>
-					<label for="seksoM">H.</label>
-					<input type="radio" name="sekso" id="seksoI" value="I" <?php if ($persono['sekso']=="I"){echo "checked";}?>>
-					<label for="seksoI">F.</label>
+					<label for="seksoM"><input type="radio" name="sekso" id="seksoM" value="M" <?php if ($persono['sekso']=="M"){echo "checked";}?>>
+					<span>H.</span></label>
+					<label for="seksoI"><input type="radio" name="sekso" id="seksoI" value="I" <?php if ($persono['sekso']=="I"){echo "checked";}?>>
+					<span>F.</span></label>
 				</div>
 			</div>
 

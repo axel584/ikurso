@@ -27,9 +27,15 @@ input:not([type]):focus:not([readonly]),input[type=text]:not(.browser-default):f
 }
 
 input:not([type]):focus:not([readonly])+label,input[type=text]:not(.browser-default):focus:not([readonly])+label,input[type=password]:not(.browser-default):focus:not([readonly])+label,input[type=email]:not(.browser-default):focus:not([readonly])+label,input[type=url]:not(.browser-default):focus:not([readonly])+label,input[type=time]:not(.browser-default):focus:not([readonly])+label,input[type=date]:not(.browser-default):focus:not([readonly])+label,input[type=datetime]:not(.browser-default):focus:not([readonly])+label,input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,input[type=tel]:not(.browser-default):focus:not([readonly])+label,input[type=number]:not(.browser-default):focus:not([readonly])+label,input[type=search]:not(.browser-default):focus:not([readonly])+label,textarea.materialize-textarea:focus:not([readonly])+label {
-    color: #2196F3
+    color: #2196F3;
+}
+[type="radio"]:checked+span:after,[type="radio"].with-gap:checked+span:before,[type="radio"].with-gap:checked+span:after {
+    border: 2px solid #2196F3;
 }
 
+[type="radio"]:checked+span:after,[type="radio"].with-gap:checked+span:after {
+    background-color: #2196F3;
+}
 .select-wrapper {
 	display: inline-block;
 	margin-right: 0.5em;
@@ -199,16 +205,6 @@ textarea {
 .datepicker-cancel,.datepicker-clear {
     color: #554E47;
 }
-/*.dropdown-content li>a,
-.dropdown-content li>span {
-    color: #554E47;
-    display: block;
-    line-height: unset;
-    padding: 0.25em;
+.dropdown-content li>a,.dropdown-content li>span {
+    color: #2196F3;
 }
-.dropdown-content li {
-    min-height: unset;
-    line-height: unset;
-    text-align: center;
-}
-*/

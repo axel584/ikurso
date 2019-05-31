@@ -660,6 +660,7 @@ $('.memorilo_input').keypress(function(e){
         var $persono_id=$(this).data('persono_id');
         var $respondo=$(this).val();
         if ($respondo!="") {
+          $(this).next().addClass("disabled")
           kontroliVorton($vorto_id,$persono_id,$respondo);
         }
     }

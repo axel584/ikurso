@@ -98,6 +98,10 @@ $fonto .= "<span style=\"color:blue\">".$commentaire_pour_correcteur."</span></p
 $fonto.="</body></html>";
 $fonto.="</body></html>";
 
+
+
+// on sauvegarde en base la première leçon, mais ce n'est pas vraiment nécessaire
+// TODO : à supprimer les deux lignes suivantes
 $query = "insert into eraraj_lecionoj (persono_id,enirnomo,dato,subjekto,fonto,leciono,kurso) values ('".$persono_id."','".$persono["enirnomo"]."',now(),'".$sujetMail."','".addslashes($fonto)."','".$leciono."','".$kurso."')";
 $bdd->exec($query);
 
@@ -111,6 +115,51 @@ if ($combien==0) {
 	$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id) values (now(),:persono_id,:lecionero_id)');
 	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id));
 }
+
+// Trouve le correcteur idéal :
+$plejTaugaKorektanto = troviPlejTauganKorektanton($persono_id,$kurso);
+$korektanto = apartigiPersonon($plejTaugaKorektanto);
+
+// Envoyer le mail pour informer du correcteur à l'élève
+$query = "update personoj set rajtoj='S' where id=".$persono_id; // cxiukaze igas lin studanto.
+$result = $bdd->exec($query);
+		
+$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso) VALUES (NOW(),NOW(),".$plejTaugaKorektanto.",".$persono_id.",'".$kurso."')";
+$result = $bdd->exec($query);
+
+// sendi mesagxon al la nova studanto
+$filename = "../mails/doniStu".$kurso."FR.html";
+// si le fichier n'existe pas, mets le nom du fichier sans le cours
+if (!file_exists($filename)) { $filename = "mails/doniStuFR.html"; }
+
+$fd = fopen($filename, "r");
+$contents = fread($fd, filesize ($filename));
+fclose($fd);
+$studAdreso=$persono["retadreso"];
+$contents=str_replace("##KPERSONNOMO##",$korektanto["personnomo"],$contents);
+$contents=str_replace("##KRETADRESO##",$korektanto["retadreso"],$contents);
+$contents=str_replace("##SENIRNOMO##",$persono["enirnomo"],$contents);
+mailViaSES($studAdreso,"Votre correcteur I-kurso",$contents);
+		
+// sendi mesagxon al la korektanto
+$filename = "../mails/doniKor".$kurso."FR.html";
+// si le fichier n'existe pas, mets le nom du fichier sans le cours
+if (!file_exists($filename)) { $filename = "../mails/doniKorFR.html"; }
+$fd = fopen($filename, "r");
+$contents = fread($fd, filesize ($filename));
+fclose($fd);
+$korAdreso=$korektanto["retadreso"];
+$contents=str_replace("##SENIRNOMO##",$persono["enirnomo"],$contents);
+$contents=str_replace("##SID##",$persono["id"],$contents);
+$contents=str_replace("##SURBO##",$persono["urbo"]." (".$persono["lando"].")",$contents);
+$contents=str_replace("##SRETADRESO##",$persono["retadreso"],$contents);
+$contents=str_replace("##SNASKIGXDATO##",$persono["naskigxdato"],$contents);
+$contents=str_replace("##KNOMO##",$korektanto["enirnomo"],$contents);
+mailViaSES($korAdreso,"Nouvel élève sur I-kurso",$contents);
+
+// envoyer la leçon au correcteur
+mailViaSmtp($korAdreso.",".$persono["enirnomo"]." <".$persono["retadreso"].">",$persono["retadreso"],$sujetMail,stripslashes($fonto));
+
 
 // Renvoyer la page qui permet d'évaluer la leçon
 // on trouve la leçon suivante et on récupère son url :

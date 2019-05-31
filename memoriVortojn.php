@@ -50,17 +50,6 @@ include "pagxkapo.inc.php";
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col s12">
-				<div class="card red  lighten-4">
-	            <div class="card-content">
-	              <span class="card-title"><i class="material-icons">warning</i> Nouvelle fonctionnalité</span>
-	              <p>Cet outil est nouveau et nous avons besoin de vos retours pour l'améliorer. Contactez nous via le <a href='reago.php'>formulaire de contact</a> pour nous signaler vos remarques, suggestions ou remerciements.</p>
-	            </div>
-	          </div>
-			</div>
-			</div>
-
 		</section>
 		</article>
 	

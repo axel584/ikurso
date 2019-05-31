@@ -160,6 +160,8 @@ mailViaSES($korAdreso,"Nouvel élève sur I-kurso",$contents);
 // envoyer la leçon au correcteur
 mailViaSmtp($korAdreso.",".$persono["enirnomo"]." <".$persono["retadreso"].">",$persono["retadreso"],$sujetMail,stripslashes($fonto));
 
+// on loggue dans le protokolo au cas où
+protokolo($persono["id"],"ATTRIBUTION AUTOMATIQUE","l'élève a reçu ".$korektanto["enirnomo"]." comme correcteur");
 
 // Renvoyer la page qui permet d'évaluer la leçon
 // on trouve la leçon suivante et on récupère son url :

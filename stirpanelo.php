@@ -23,7 +23,7 @@ include "pagxkapo.inc.php";
 			<p class="col s6 m3"><span class="label">Type : </span><br/>
 			<select id="type_protokolo">
 				<option value="">Tout</option>
-				
+				<option value='ATTRIBUTION AUTOMATIQUE'>Attribution automatique</option>
 				<option value='TASKO SALVITA'>Tasko Salvita</option>
 				<option value='ENIRO'>Eniro</option>
 				<option value='ERARO'>Eraro</option>
@@ -41,7 +41,6 @@ include "pagxkapo.inc.php";
 				<option value='RENVOIE ACTIVATION COMPTE'>Renvoie Activation Compte</option>
 				<option value='MEMORILO'>Memorilo</option>
 				<option value='SUPPRESSON AUTOMATIQUE'>Supression Automatique</option>
-				<option value='VERDA KRABO'>Verda Krabo</option>
 			</select></p>
 			<p class="col s6 m3"><span class="label">Utilisateur : </span><input id="persono_protokolo" type='text' name='persono' value="" /></p>
 			<p class="col s12"><a id="serchi_protokolon_button" class="btn waves-effect waves-light blue right">Afficher</a></p>

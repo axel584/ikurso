@@ -110,7 +110,8 @@ function apartigiPersonon($id) {
 // parametro : enirnomo kaj pasvorto
 // elirvaluo : 0 se la persono ne ekzistas (la pasvorto maltrafas...)
 // > 0 : la unika numero de la persono
-function kontroliPersonon($enirnomo,$pasvorto) {
+// cette fonction est deprecated car on utilise le script ajax pour se connecter maintenant
+/*function kontroliPersonon($enirnomo,$pasvorto) {
 	global $bdd;
 	$pasvorto=strtoupper($pasvorto);
 	$enirnomo=strtoupper($enirnomo);
@@ -122,7 +123,7 @@ function kontroliPersonon($enirnomo,$pasvorto) {
 	} else {
 		return $row['id'];
 	}
-}
+}*/
 
 /**********************************************************************************
  *

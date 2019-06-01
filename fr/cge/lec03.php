@@ -43,8 +43,8 @@ include "dlekkapo.inc.php";
 			<div class="row container">
 				<div class="col s6">
 					<p><span class="eo">La knabino vidis <b>min</b></span>.</p>
-					<p><span class="eo"<b>Min</b> vidis la knabino</p>
-					<p><span class="eo"><b>Min</b> la knabino vidis.</p>
+					<p><span class="eo"><b>Min</b> vidis la knabino.</span></p>
+					<p><span class="eo"><b>Min</b> la knabino vidis.</span></p>
 					<p><span class="eo">…</span></p>
 				</div>
 				<div class="col s6">= La fille m’a vu.</div>
@@ -62,9 +62,9 @@ include "dlekkapo.inc.php";
 				<?php } ?>
 			</div>
 			<div class="vortlisto row">
-				<p class="col s12 m4"><span class="eo">knabino</span> : fille</p>
-				<p class="col s12 m4"><span class="eo">patrino</span> : mère</p>
-				<p class="col s12 m4"><span class="eo">fratino</span> : sœur</p>
+				<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/knabino.mp3" class="sm2_button"></a><span class="eo">knabino</span> : fille</p>
+				<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/patrino.mp3" class="sm2_button"></a><span class="eo">patrino</span> : mère</p>
+				<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/fratino.mp3" class="sm2_button"></a><span class="eo">fratino</span> : sœur</p>
 			</div>
 		</fieldset>
 
@@ -88,41 +88,43 @@ include "dlekkapo.inc.php";
 	
 		<fieldset class="vortoj">
 			<div class="vortlisto row">
-				<div class="col s12 m4">
+				<div class="col s12 m6">
 					<p><b>Noms</b></p>
-					<p><span class="eo">horo<span>&nbsp;: heure</p>
-					<p><span class="eo">jaro<sup>[1]</sup><span>&nbsp;: année</p>
-					<p><span class="eo">mateno<span>&nbsp;: matin</p>
-					<p><span class="eo">minuto<span>&nbsp;: minute</p>
-					<p><span class="eo">semajno<span>&nbsp;: semaine</p>
-					<p><span class="eo">nokto<span>&nbsp;: nuit</p>
-					<p><span class="eo">tago<span>&nbsp;: jour</p>
-					<p><span class="eo">vespero<span>&nbsp;: soir, soirée</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/horo.mp3" class="sm2_button"></a>horo</span>&nbsp;: heure</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/jaro.mp3" class="sm2_button"></a>jaro<sup>[1]</sup></span>&nbsp;: année</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/mateno.mp3" class="sm2_button"></a>mateno</span>&nbsp;: matin</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/minuto.mp3" class="sm2_button"></a>minuto</span>&nbsp;: minute</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/semajno.mp3" class="sm2_button"></a>semajno</span>&nbsp;: semaine</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/nokto.mp3" class="sm2_button"></a>nokto</span>&nbsp;: nuit</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/tago.mp3" class="sm2_button"></a>tago</span>&nbsp;: jour</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/vespero.mp3" class="sm2_button"></a>vespero</span>&nbsp;: soir, soirée</p>
 				</div>
-				<div class="col s12 m4">
+				<div class="col s12 m6">
 					<p><b>Verbes</b></p>
-					<p><span class="eo">atendi<span>&nbsp;: attendre</p>
-					<p><span class="eo">demandi <sup>[2]</sup><span>&nbsp;: demander</p>
-					<p><span class="eo">fumi<span>&nbsp;: fumer</p>
-					<p><span class="eo">kuri<span>&nbsp;: courir</p>
-					<p><span class="eo">peti <sup>[3]</sup><span>&nbsp;: demander</p>
-					<p><span class="eo">promeni<span>&nbsp;: se promener</p>
-					<p><span class="eo">respondi<span>&nbsp;: répondre</p>
-					<p><span class="eo">soifi <sup>[4]</sup><span>&nbsp;: avoir soif</p>
-					<p><span class="eo">vivi<span>&nbsp;: vivre</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/atendi.mp3" class="sm2_button"></a>atendi</span>&nbsp;: attendre</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/demandi.mp3" class="sm2_button"></a>demandi <sup>[2]</sup></span>&nbsp;: demander</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/fumi.mp3" class="sm2_button"></a>fumi</span>&nbsp;: fumer</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/kuri.mp3" class="sm2_button"></a>kuri</span>&nbsp;: courir</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/peti.mp3" class="sm2_button"></a>peti <sup>[3]</sup></span>&nbsp;: demander</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/promeni.mp3" class="sm2_button"></a>promeni</span>&nbsp;: se promener</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/respondi.mp3" class="sm2_button"></a>respondi</span>&nbsp;: répondre</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/soifi.mp3" class="sm2_button"></a>soifi <sup>[4]</sup></span>&nbsp;: avoir soif</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/vivi.mp3" class="sm2_button"></a>vivi</span>&nbsp;: vivre</p>
 				</div>
-				<div class="col s12 m4">
+				<div class="col s12 m6">
 					<p><b>Adjectifs</b></p>
-					<p><span class="eo">blanka<span>&nbsp;: blanc</p>
-					<p><span class="eo">blua<span>&nbsp;: bleu</p>
-					<p><span class="eo">bruna<span>&nbsp;: brun (marron)</p>
-					<p><span class="eo">flava<span>&nbsp;: jaune</p>
-					<p><span class="eo">griza<span>&nbsp;: gris</p>
-					<p><span class="eo">nigra<span>&nbsp;: noir</p>
-					<p><span class="eo">ruĝa<span>&nbsp;: rouge</p>
-					<p><span class="eo">verda<span>&nbsp;: vert</p>
-					<p><b>Adverbe</b></p>
-					<p><span class="eo">nur<span>&nbsp;: seulement</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/blanka.mp3" class="sm2_button"></a>blanka</span>&nbsp;: blanc</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/blua.mp3" class="sm2_button"></a>blua</span>&nbsp;: bleu</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/bruna.mp3" class="sm2_button"></a>bruna</span>&nbsp;: brun (marron)</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/flava.mp3" class="sm2_button"></a>flava</span>&nbsp;: jaune</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/griza.mp3" class="sm2_button"></a>griza</span>&nbsp;: gris</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/nigra.mp3" class="sm2_button"></a>nigra</span>&nbsp;: noir</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/rugxa.mp3" class="sm2_button"></a>ruĝa</span>&nbsp;: rouge</p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/verda.mp3" class="sm2_button"></a>verda</span>&nbsp;: vert</p>
+				</div>
+				<div class="col s12 m6">
+					<br><p><b>Adverbe</b></p>
+					<p><span class="eo"><a href="<?php echo $vojo;?>fr/son/vortoj/nur.mp3" class="sm2_button"></a>nur</span>&nbsp;: seulement</p>
 				</div>
 			</div>
 		</fieldset>
@@ -149,7 +151,7 @@ include "dlekkapo.inc.php";
 		
 		<p><i>Cliquez sur le bouton <a class="sm2_button disabled"></a>pour écouter la phrase&nbsp;: </a></i></p>
 		<p><a href="<?php echo $vojo;?>fr/son/pv3.mp3" class="sm2_button"></a> <span class="eo">Akvo kura – akvo pura</span><br>
-		De l’eau courante (<i>qui court</i>) [c’est] de l’eau pure (<i>propre</i>)</p>
+		&emsp;&emsp;De l’eau courante (<i>qui court</i>) [c’est] de l’eau pure (<i>propre</i>)</p>
 	
 		<?php 
 		} // fin section
@@ -193,14 +195,16 @@ include "dlekkapo.inc.php";
 
 		<div class="vortlisto row">
 			<p class="col s12">Exemples :
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l03-1-1.mp3" class="sm2_button"></a> <span class="eo">Insektoj vivas nokte</span></p>
-			<p class="col s6">Les insectes vivent la nuit.</p>
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l03-1-2.mp3" class="sm2_button"></a> <span class="eo"> Li malbone skribis</span></p>
-			<p class="col s6">Il a mal écrit.</p>
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l03-1-3.mp3" class="sm2_button"></a><span class="eo"> Ŝi respondis seke.</span></p>
-			<p class="col s6">Elle a répondu sèchement.</p>
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l03-1-4.mp3" class="sm2_button"></a> <span class="eo">Ni renkontos lin promene.</span></p>
-			<p class="col s6">Nous le rencontrerons lors de la promenade.</p>
+			<p class="col s12 m5"><a href="<?php echo $vojo;?>fr/son/vortoj/insektoj-vivas-nokte.mp3" class="sm2_button"></a> <span class="eo">Insektoj vivas <b>nokte</b>.</span></p>
+			<p class="col s12 m7">Les insectes vivent <b>la nuit</b>.</p>
+			<p class="col s12 m5"><a href="<?php echo $vojo;?>fr/son/vortoj/li-malbone-skribis.mp3" class="sm2_button"></a> <span class="eo"> Li <b>malbone</b> skribis.</span></p>
+			<p class="col s12 m7">Il a <b>mal</b> écrit.</p>
+			<p class="col s12 m5"><a href="<?php echo $vojo;?>fr/son/vortoj/sxi-seke-respondis.mp3" class="sm2_button"></a><span class="eo"> Ŝi <b>seke</b> respondis.</span></p>
+			<p class="col s12 m7">Elle a répondu <b>sèchement</b>.</p>
+			<p class="col s12 m5"><a href="<?php echo $vojo;?>fr/son/vortoj/ni-renkontos-lin-promene.mp3" class="sm2_button"></a> <span class="eo">Ni renkontos lin <b>promene</b>.</span></p>
+			<p class="col s12 m7">Nous le rencontrerons <b>lors de la promenade</b>.</p>
+			<p class="col s12 m5"><a href="<?php echo $vojo;?>fr/son/vortoj/ni-iros-bicikle.mp3" class="sm2_button"></a> <span class="eo">Ni iros <b>bicikle</b>.</span></p>
+			<p class="col s12 m7">Nous irons <b>en vélo</b>.</p>			
 		</div>
 		
 		<fieldset class="vortoj">
@@ -211,9 +215,9 @@ include "dlekkapo.inc.php";
 				<?php } ?>
 			</div>
 			<div class="vortlisto row">
-				<p class="col s12 m4"><span class="eo">sano</span> : santé</p>
-				<p class="col s12 m4"><span class="eo">sane</span> : sainement</p>
-				<p class="col s12 m4"><span class="eo">sani</span> : être en bonne santé</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/sano.mp3" class="sm2_button"></a><span class="eo">sano</span> : santé</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/sane.mp3" class="sm2_button"></a><span class="eo">sane</span> : sainement</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/sani.mp3" class="sm2_button"></a><span class="eo">sani</span> : être en bonne santé</p>
 			</div>
 		</fieldset>
 
@@ -253,7 +257,7 @@ include "dlekkapo.inc.php";
 		</p>
 		<p>
 			<audio controls="controls">Votre navigateur ne supporte pas la lecture du fichier audio.
-				<source src="<?php echo $vojo;?>fr/son/l03-2.mp3" type="audio/mp3">
+				<source src="<?php echo $vojo;?>fr/son/nombroj.mp3" type="audio/mp3">
 			</audio>
 		</p>
 		
@@ -336,22 +340,22 @@ include "dlekkapo.inc.php";
 		<fieldset class="vortoj">
 			<div class="vortlisto row">
 				<div class="col s12 m4">
-					<p><span class="eo">unua<span>&nbsp;: premier</p>
-					<p><span class="eo">dua<span>&nbsp;: deuxième</p>
-					<p><span class="eo">tria<span>&nbsp;: troisième</p>
-					<p><span class="eo">kvara<span>&nbsp;: quatrième</p>
+					<p><span class="eo">unua</span>&nbsp;: premier</p>
+					<p><span class="eo">dua</span>&nbsp;: deuxième</p>
+					<p><span class="eo">tria</span>&nbsp;: troisième</p>
+					<p><span class="eo">kvara</span>&nbsp;: quatrième</p>
 				</div>
 				<div class="col s12 m4">
-					<p><span class="eo">dudeka<span>&nbsp;: 20<sup>e</sup></p>
-					<p><span class="eo">sepdek-unua<span>&nbsp;: 71<sup>e</sup></p>
-					<p><span class="eo">centa<span>&nbsp;: 100<sup>e</sup></p>
-					<p><span class="eo">dek-kvara<span>&nbsp;: 14<sup>e</sup></p>
+					<p><span class="eo">dudeka</span>&nbsp;: 20<sup>e</sup></p>
+					<p><span class="eo">sepdek-unua</span>&nbsp;: 71<sup>e</sup></p>
+					<p><span class="eo">centa</span>&nbsp;: 100<sup>e</sup></p>
+					<p><span class="eo">dek-kvara</span>&nbsp;: 14<sup>e</sup></p>
 				</div>
 				<div class="col s12 m4">
-					<p><span class="eo">unue<span>&nbsp;: premièrement</p>
-					<p><span class="eo">due<span>&nbsp;: deuxièmement</p>
-					<p><span class="eo">trie<span>&nbsp;: troisièmement</p>
-					<p><span class="eo">dek-kvare<span>&nbsp;: quatorzièmement</p>
+					<p><span class="eo">unue</span>&nbsp;: premièrement</p>
+					<p><span class="eo">due</span>&nbsp;: deuxièmement</p>
+					<p><span class="eo">trie</span>&nbsp;: troisièmement</p>
+					<p><span class="eo">dek-kvare</span>&nbsp;: quatorzièmement</p>
 				</div>
 			</div>
 		</fieldset>
@@ -367,13 +371,13 @@ include "dlekkapo.inc.php";
 
 		<p>Exemples :</p>
 		<div class="row vortlisto">
-			<p class="col s6"><span class="eo">La unuaj knaboj venas.</span></p><p class="col s6">Les premiers garçons arrivent.</p>
-			<p class="col s6"><span class="eo"><b>Kiom da</b> plumoj vi petis?<br>–Mi petis ses plumojn.</span></p>
-			<p class="col s6">Combien de plumes as-tu demandées&nbsp;?<br>– J’ai demandé six plumes.</p>
+			<p class="col s6"><span class="eo">La <b>unuaj</b> knaboj venas.</span></p><p class="col s6">Les <b>premiers</b> garçons arrivent.</p>
+			<p class="col s6"><span class="eo"><b>Kiom da</b> plumoj vi petis?<br>– Mi petis ses plumojn.</span></p>
+			<p class="col s6"><b>Combien de</b> plumes as-tu demandées&nbsp;?<br>– J’ai demandé six plumes.</p>
 			<p class="col s6"><span class="eo"><b>Kiom da</b> sandviĉoj vi jam manĝis?<br>Ni jam manĝis tri.</span></p>
-			<p class="col s6">Combien de sandwichs avez-vous déjà mangés&nbsp;?<br>– Nous en avons déjà mangé trois.</p>
+			<p class="col s6"><b>Combien de</b> sandwichs avez-vous déjà mangés&nbsp;?<br>– Nous [en] avons déjà mangé trois.</p>
 			<p class="col s6"><span class="eo"><b>Kiom da</b> infanoj estos?<br>– Estos dek du infanoj.</span></p>
-			<p class="col s6">Combien y aura-t-il d’enfants&nbsp;?<br>– Il y aura douze enfants.</p>
+			<p class="col s6"><b>Combien</b> y aura-t-il <b>d’</b>enfants&nbsp;?<br>– Il y aura douze enfants.</p>
 		</div>
 		
 		<p class="rimarko"><strong>REMARQUE</strong> : N’employez <b>jamais</b> l’accusatif après <span class="eo">kiom da</span>.</p>
@@ -396,9 +400,9 @@ include "dlekkapo.inc.php";
 		<p>Il s'agit des verbes qui s'utilisent avec un complément d'objet :</p>
 
 			<div class="container">
-				<p><span class="eo">Mi vidas <b>mian patron</b>.<span>&nbsp;: Je vois mon père.</p>
-				<p><span class="eo">Mia patro trinkas <b>kafon</b>.<span>&nbsp;: Mon père boit du café.</p>
-				<p><span class="eo">Vi skribas <b>libron</b>.<span>&nbsp;: Tu écris un livre.</p>
+				<p><span class="eo">Mi vidas <b>mian patron</b>.</span>&nbsp;: Je vois mon père.</p>
+				<p><span class="eo">Mia patro trinkas <b>kafon</b>.</span>&nbsp;: Mon père boit du café.</p>
+				<p><span class="eo">Vi skribas <b>libron</b>.</span>&nbsp;: Tu écris un livre.</p>
 			</div>
 
 		</p>
@@ -415,16 +419,16 @@ include "dlekkapo.inc.php";
 		employée</b> dans ce cas.
 		</p>
 		<div class="container">
-			<p><span class="eo">Li estas sana.<span>&nbsp;: Il est en bonne santé.</p>
-			<p><span class="eo">Li promenas soifa.<span>&nbsp;: Il se promène assoiffé.</p>
-			<p><span class="eo">Li estas instruisto.<span>&nbsp;: Il est instituteur.</p>
-			<p><span class="eo">Ŝia frato estas bela knabo.<span>&nbsp;: Son frère est (un) beau garçon.</p>
+			<p><span class="eo">Li estas sana.</span>&nbsp;: Il est en bonne santé.</p>
+			<p><span class="eo">Li promenas soifa.</span>&nbsp;: Il se promène assoiffé.</p>
+			<p><span class="eo">Li estas instruisto.</span>&nbsp;: Il est instituteur.</p>
+			<p><span class="eo">Ŝia frato estas bela knabo.</span>&nbsp;: Son frère est (un) beau garçon.</p>
 		</div>
 
 		<p>À noter que certains verbes intransitifs n’ont pas de sujet du tout. Par exemple :</p>
 			<div class="container">
-				<p><span class="eo">Pluvas.<span>&nbsp;: Il pleut.</p>
-				<p><span class="eo">Sunas.<span>&nbsp;: Il fait beau, il y a du soleil.</p>
+				<p><span class="eo">Pluvas.</span>&nbsp;: Il pleut.</p>
+				<p><span class="eo">Sunas.</span>&nbsp;: Il fait beau, il y a du soleil.</p>
 			</div>
 
 			<p>Leur équivalent en français utilise le sujet <b>il</b> qui ne se traduit pas en espéranto.</p>

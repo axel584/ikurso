@@ -11,6 +11,16 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
+				<li class="collection-header">version 19. Juin 2019</li>
+				<li class="collection-item">
+					<p>Attribution automatique d’un correcteur.</p>
+					<p>Ajout de sons dans les trois premières leçons.</p>
+					<p>Mise à jour de la page «Que faire après le cours&nbsp;?»</p>
+					<p>Correction de la mise à jour des données personnelles (date de naissance).</p>
+					<p>Amélioration de l’interface.</p>
+					<p>Amélioration de la correction automatique.</p>
+					<p>Corrections diverses de bugs et coquilles…</p>
+				</li>
 				<li class="collection-header">version 18. Février 2018</li>
 				<li class="collection-item">
 					<p>Création d’une application Android pour iKurso. La version de test est disponible sur <a href="https://play.google.com/apps/testing/fr.esperanto_france.ikurso">Google Play</a>.</p>

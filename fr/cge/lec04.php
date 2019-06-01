@@ -16,9 +16,9 @@ include "dlekkapo.inc.php";
 			?>
 			<p class="parto">Vous avez déjà vu quelques façons de poser des questions&nbsp;:</p>
 			<div class="row vortlisto">
-				<p class="col s12"><span class="eo">Kiu loĝas en Brazilo?<span>&nbsp;: Qui habite au Brésil&nbsp;?</p>
-				<p class="col s12"><span class="eo">Kie estas la kato?<span>&nbsp;: Où est le chat&nbsp;?</p>
-				<p class="col s12"><span class="eo">Kiel vi fartas?<span>&nbsp;: Comment allez-vous&nbsp;? / Comment vas-tu&nbsp;?</p>
+				<p class="col s12"><span class="eo">Kiu loĝas en Brazilo?</span>&nbsp;: Qui habite au Brésil&nbsp;?</p>
+				<p class="col s12"><span class="eo">Kie estas la kato?</span>&nbsp;: Où est le chat&nbsp;?</p>
+				<p class="col s12"><span class="eo">Kiel vi fartas?</span>&nbsp;: Comment allez-vous&nbsp;? / Comment vas-tu&nbsp;?</p>
 			</div>
 				
 			<p class="parto">Jetons maintenant un coup d’œil sur les <b>questions et réponses</b> correspondant à une
@@ -276,66 +276,66 @@ include "dlekkapo.inc.php";
 			<fieldset class="vortoj">
 				<div class="vortlisto row">
 					<div class="col s12 m4">
-						<p><span class="marque">•</span> <span class="eo">a<u>ĉe</u>ti<span>&nbsp;: acheter</p>
-						<p><span class="marque">•</span> <span class="eo">An<u>glu</u>jo<span>&nbsp;: Angleterre</p>
-						<p>&nbsp;&nbsp;<span class="eo">a<u>non</u>co<span>&nbsp;: annonce</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>an</u>taŭ<span>&nbsp;: avant</p>
-						<p><span class="marque">•</span> <span class="eo">bi<u>ci</u>klo<span>&nbsp;: bicyclette</p>
-						<p><span class="marque">•</span> <span class="eo">bild<u>kar</u>to<span>&nbsp;: carte postale</p>
-						<p><span class="marque">•</span> <span class="eo"><u>bil</u>do<span>&nbsp;: image</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ĉam</u>bro<span>&nbsp;: pièce</p>
-						<p><span class="marque">•</span> <span class="eo">Ĉi<u>ni</u>o<span>&nbsp;: Chine</p>
-						<p><span class="marque">•</span> <span class="eo">ĉoko<u>la</u>do<span>&nbsp;: chocolat</p>
-						<p><span class="marque">•</span> <span class="eo"><u>dan</u>co<span>&nbsp;: danse</p>
-						<p><span class="marque">•</span> <span class="eo">de<u>zi</u>ri<span>&nbsp;: désirer</p>
-						<p><span class="marque">•</span> <span class="eo"><u>do</u>mo<span>&nbsp;: maison</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ed</u>zo<span>&nbsp;: époux</p>
-						<p><span class="marque">•</span> <span class="eo">ed<u>zi</u>no<span>&nbsp;: épouse</p>
-						<p><span class="marque">•</span> <span class="eo">el (3)<span>&nbsp;: hors de</p>
-						<p><span class="marque">•</span> <span class="eo">esperan<u>tis</u>to<span>&nbsp;: espérantiste</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>e</u>ĥo<span>&nbsp;: écho</p>
+						<p><span class="marque">•</span> <span class="eo">a<u>ĉe</u>ti</span>&nbsp;: acheter</p>
+						<p><span class="marque">•</span> <span class="eo">An<u>glu</u>jo</span>&nbsp;: Angleterre</p>
+						<p>&nbsp;&nbsp;<span class="eo">a<u>non</u>co</span>&nbsp;: annonce</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>an</u>taŭ</span>&nbsp;: avant</p>
+						<p><span class="marque">•</span> <span class="eo">bi<u>ci</u>klo</span>&nbsp;: bicyclette</p>
+						<p><span class="marque">•</span> <span class="eo">bild<u>kar</u>to</span>&nbsp;: carte postale</p>
+						<p><span class="marque">•</span> <span class="eo"><u>bil</u>do</span>&nbsp;: image</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ĉam</u>bro</span>&nbsp;: pièce</p>
+						<p><span class="marque">•</span> <span class="eo">Ĉi<u>ni</u>o</span>&nbsp;: Chine</p>
+						<p><span class="marque">•</span> <span class="eo">ĉoko<u>la</u>do</span>&nbsp;: chocolat</p>
+						<p><span class="marque">•</span> <span class="eo"><u>dan</u>co</span>&nbsp;: danse</p>
+						<p><span class="marque">•</span> <span class="eo">de<u>zi</u>ri</span>&nbsp;: désirer</p>
+						<p><span class="marque">•</span> <span class="eo"><u>do</u>mo</span>&nbsp;: maison</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ed</u>zo</span>&nbsp;: époux</p>
+						<p><span class="marque">•</span> <span class="eo">ed<u>zi</u>no</span>&nbsp;: épouse</p>
+						<p><span class="marque">•</span> <span class="eo">el (3)</span>&nbsp;: hors de</p>
+						<p><span class="marque">•</span> <span class="eo">esperan<u>tis</u>to</span>&nbsp;: espérantiste</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>e</u>ĥo</span>&nbsp;: écho</p>
 					</div>
 					<div class="col s12 m4">
-						<p><span class="marque">•</span> <span class="eo">Eŭ<u>ro</u>po<span>&nbsp;: Europe</p>
-						<p>&nbsp;&nbsp;<span class="eo">Eŭ<u>kli</u>do<span>&nbsp;: Euclide</p>
-						<p>&nbsp;&nbsp;<span class="eo">geogra<u>fi</u>o<span>&nbsp;: géographie</p>
-						<p><span class="marque">•</span> <span class="eo">gus<u>tu</u>mi<span>&nbsp;: goûter</p>
-						<p><span class="marque">•</span> <span class="eo">ĝar<u>de</u>no<span>&nbsp;: jardin</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ĝo</u>jo<span>&nbsp;: joie</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>ĥo</u>ro<span>&nbsp;: chœur</p>
-						<p><span class="marque">•</span> <span class="eo">in<u>fa</u>no<span>&nbsp;: enfant</p>
-						<p><span class="marque">•</span> <span class="eo">iu<span>&nbsp;: quelqu’un</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>jaĥ</u>to<span>&nbsp;: yacht</p>
-						<p><span class="marque">•</span> <span class="eo">jam<span>&nbsp;: déjà</p>
-						<p><span class="marque">•</span> <span class="eo">ĵa<u>lu</u>za<span>&nbsp;: jaloux</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ĵaŭ</u>do<span>&nbsp;: jeudi</p>
-						<p><span class="marque">•</span> <span class="eo">ĵur<u>na</u>lo<span>&nbsp;: journal</p>
-						<p><span class="marque">•</span> <span class="eo">kaj (4)<span>&nbsp;: et</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ki</u>o<span>&nbsp;: quoi</p>
-						<p><span class="marque">•</span> <span class="eo">ko<u>lek</u>ti<span>&nbsp;: collectionner, rassembler</p>
-						<p><span class="marque">•</span> <span class="eo"><u>lan</u>do<span>&nbsp;: pays</p>
+						<p><span class="marque">•</span> <span class="eo">Eŭ<u>ro</u>po</span>&nbsp;: Europe</p>
+						<p>&nbsp;&nbsp;<span class="eo">Eŭ<u>kli</u>do</span>&nbsp;: Euclide</p>
+						<p>&nbsp;&nbsp;<span class="eo">geogra<u>fi</u>o</span>&nbsp;: géographie</p>
+						<p><span class="marque">•</span> <span class="eo">gus<u>tu</u>mi</span>&nbsp;: goûter</p>
+						<p><span class="marque">•</span> <span class="eo">ĝar<u>de</u>no</span>&nbsp;: jardin</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ĝo</u>jo</span>&nbsp;: joie</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>ĥo</u>ro</span>&nbsp;: chœur</p>
+						<p><span class="marque">•</span> <span class="eo">in<u>fa</u>no</span>&nbsp;: enfant</p>
+						<p><span class="marque">•</span> <span class="eo">iu</span>&nbsp;: quelqu’un</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>jaĥ</u>to</span>&nbsp;: yacht</p>
+						<p><span class="marque">•</span> <span class="eo">jam</span>&nbsp;: déjà</p>
+						<p><span class="marque">•</span> <span class="eo">ĵa<u>lu</u>za</span>&nbsp;: jaloux</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ĵaŭ</u>do</span>&nbsp;: jeudi</p>
+						<p><span class="marque">•</span> <span class="eo">ĵur<u>na</u>lo</span>&nbsp;: journal</p>
+						<p><span class="marque">•</span> <span class="eo">kaj (4)</span>&nbsp;: et</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ki</u>o</span>&nbsp;: quoi</p>
+						<p><span class="marque">•</span> <span class="eo">ko<u>lek</u>ti</span>&nbsp;: collectionner, rassembler</p>
+						<p><span class="marque">•</span> <span class="eo"><u>lan</u>do</span>&nbsp;: pays</p>
 					</div>
 					<div class="col s12 m4">
-						<p><span class="marque">•</span> <span class="eo">leci<u>o</u>no<span>&nbsp;: leçon</p>
-						<p><span class="marque">•</span> <span class="eo">ler<u>ne</u>jo<span>&nbsp;: école</p>
-						<p><span class="marque">•</span> <span class="eo"><u>li</u>bro<span>&nbsp;: livre</p>
-						<p><span class="marque">•</span> <span class="eo"><u>lo</u>ĝi<span>&nbsp;: habiter</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>ma</u>jo<span>&nbsp;: mai</p>
-						<p><span class="marque">•</span> <span class="eo"><u>man</u>ĝi<span>&nbsp;: manger</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>mej</u>lo<span>&nbsp;: mille (1,8 km)</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>mu</u>ro<span>&nbsp;: mur</p>
-						<p>&nbsp;&nbsp;<span class="eo">mo<u>nu</u>jo<span>&nbsp;: porte-monnaie</p>
-						<p><span class="marque">•</span> <span class="eo">neŭ<u>tra</u>la<span>&nbsp;: neutre</p>
-						<p><span class="marque">•</span> <span class="eo"><u>o</u>vo<span>&nbsp;: œuf</p>
-						<p><span class="marque">•</span> <span class="eo">plej<span>&nbsp;: plus (superlatif)</p>
-						<p><span class="marque">•</span> <span class="eo">poŝt<u>mar</u>ko<span>&nbsp;: timbre-poste</p>
-						<p>&nbsp;&nbsp;<span class="eo">sa<u>ge</u>to<span>&nbsp;: fléchette</p>
-						<p><span class="marque">•</span> <span class="eo">sand<u>vi</u>ĉo<span>&nbsp;: sandwich</p>
-						<p><span class="marque">•</span> <span class="eo"><u>spor</u>to<span>&nbsp;: sport</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ŝu</u>o<span>&nbsp;: chaussure</p>
-						<p>&nbsp;&nbsp;<span class="eo">tea<u>tra</u>ĵo<span>&nbsp;: pièce de théâtre</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ve</u>ni<span>&nbsp;: venir</p>
-						<p><span class="marque">•</span> <span class="eo">vo<u>ja</u>ĝi<span>&nbsp;: voyager</p>
+						<p><span class="marque">•</span> <span class="eo">leci<u>o</u>no</span>&nbsp;: leçon</p>
+						<p><span class="marque">•</span> <span class="eo">ler<u>ne</u>jo</span>&nbsp;: école</p>
+						<p><span class="marque">•</span> <span class="eo"><u>li</u>bro</span>&nbsp;: livre</p>
+						<p><span class="marque">•</span> <span class="eo"><u>lo</u>ĝi</span>&nbsp;: habiter</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>ma</u>jo</span>&nbsp;: mai</p>
+						<p><span class="marque">•</span> <span class="eo"><u>man</u>ĝi</span>&nbsp;: manger</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>mej</u>lo</span>&nbsp;: mille (1,8 km)</p>
+						<p>&nbsp;&nbsp;<span class="eo"><u>mu</u>ro</span>&nbsp;: mur</p>
+						<p>&nbsp;&nbsp;<span class="eo">mo<u>nu</u>jo</span>&nbsp;: porte-monnaie</p>
+						<p><span class="marque">•</span> <span class="eo">neŭ<u>tra</u>la</span>&nbsp;: neutre</p>
+						<p><span class="marque">•</span> <span class="eo"><u>o</u>vo</span>&nbsp;: œuf</p>
+						<p><span class="marque">•</span> <span class="eo">plej</span>&nbsp;: plus (superlatif)</p>
+						<p><span class="marque">•</span> <span class="eo">poŝt<u>mar</u>ko</span>&nbsp;: timbre-poste</p>
+						<p>&nbsp;&nbsp;<span class="eo">sa<u>ge</u>to</span>&nbsp;: fléchette</p>
+						<p><span class="marque">•</span> <span class="eo">sand<u>vi</u>ĉo</span>&nbsp;: sandwich</p>
+						<p><span class="marque">•</span> <span class="eo"><u>spor</u>to</span>&nbsp;: sport</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ŝu</u>o</span>&nbsp;: chaussure</p>
+						<p>&nbsp;&nbsp;<span class="eo">tea<u>tra</u>ĵo</span>&nbsp;: pièce de théâtre</p>
+						<p><span class="marque">•</span> <span class="eo"><u>ve</u>ni</span>&nbsp;: venir</p>
+						<p><span class="marque">•</span> <span class="eo">vo<u>ja</u>ĝi</span>&nbsp;: voyager</p>
 					</div>
 				</div>
 			</fieldset>		
@@ -400,9 +400,9 @@ include "dlekkapo.inc.php";
 		?>
 			<p class="parto">Vous avez vu dans la leçon précédente quelques mots de vocabulaire se rapportant à la date&nbsp;: </p>
 			<div class="vortlisto row">
-				<p class="col s6 m4"><span class="eo">semajno<span>&nbsp;: semaine</p>
-				<p class="col s6 m4"><span class="eo">tago<span>&nbsp;: jour</p>
-				<p class="col s6 m4"><span class="eo">jaro<span>&nbsp;: année</p>
+				<p class="col s6 m4"><span class="eo">semajno</span>&nbsp;: semaine</p>
+				<p class="col s6 m4"><span class="eo">tago</span>&nbsp;: jour</p>
+				<p class="col s6 m4"><span class="eo">jaro</span>&nbsp;: année</p>
 			</div>
 			
 			<p>Vous avez également appris comment dire les nombres, et vous savez donc déjà dire par exemple en quelle année nous sommes.</p>
@@ -414,68 +414,68 @@ include "dlekkapo.inc.php";
 			
 			<fieldset class="vortoj">
 				<div class="vortlisto row">
-					<p class="col s12"><span class="eo">dato<span>&nbsp;: date</p>
-					<p class="col s6 m4"><span class="eo">hodiaŭ<span>&nbsp;: aujourd’hui</p>
-					<p class="col s6 m4"><span class="eo">morgaŭ<span>&nbsp;: demain</p>
-					<p class="col s6 m4"><span class="eo">hieraŭ<span>&nbsp;: hier</p>
+					<p class="col s12"><span class="eo">dato</span>&nbsp;: date</p>
+					<p class="col s6 m4"><span class="eo">hodiaŭ</span>&nbsp;: aujourd’hui</p>
+					<p class="col s6 m4"><span class="eo">morgaŭ</span>&nbsp;: demain</p>
+					<p class="col s6 m4"><span class="eo">hieraŭ</span>&nbsp;: hier</p>
 				</div>
 				<br>
 				<p>Les jours de la semaine&nbsp;: <span class="eo">la tagoj de la semajno</span></p>
 				<div class="vortlisto row">
 					<div class="col s6">
-						<p><span class="eo">lundo<span>&nbsp;: lundi</p>
-						<p><span class="eo">mardo<span>&nbsp;: mardi</p>
-						<p><span class="eo">merkredo<span>&nbsp;: mercredi</p>
-						<p><span class="eo">ĵaŭdo<span>&nbsp;: jeudi</p>
+						<p><span class="eo">lundo</span>&nbsp;: lundi</p>
+						<p><span class="eo">mardo</span>&nbsp;: mardi</p>
+						<p><span class="eo">merkredo</span>&nbsp;: mercredi</p>
+						<p><span class="eo">ĵaŭdo</span>&nbsp;: jeudi</p>
 					</div>
 					<div class="col s6">
-						<p><span class="eo">vendredo<span>&nbsp;: vendredi</p>
-						<p><span class="eo">sabato<span>&nbsp;: samedi</p>
-						<p><span class="eo">dimanĉo<span>&nbsp;: dimanche</p>
+						<p><span class="eo">vendredo</span>&nbsp;: vendredi</p>
+						<p><span class="eo">sabato</span>&nbsp;: samedi</p>
+						<p><span class="eo">dimanĉo</span>&nbsp;: dimanche</p>
 					</div>
 				</div>
 				<br>
 				<p>Les mois de l’année&nbsp;: <span class="eo">la monatoj de la jaro</span></p>
 				<div class="vortlisto row">
 					<div class="col s6">
-						<p><span class="eo">januaro<span>&nbsp;: janvier</p>
-						<p><span class="eo">februaro<span>&nbsp;: février</p>
-						<p><span class="eo">marto<span>&nbsp;: mars</p>
-						<p><span class="eo">aprilo<span>&nbsp;: avril</p>
-						<p><span class="eo">majo<span>&nbsp;: mai</p>
-						<p><span class="eo">junio<span>&nbsp;: juin</p>
+						<p><span class="eo">januaro</span>&nbsp;: janvier</p>
+						<p><span class="eo">februaro</span>&nbsp;: février</p>
+						<p><span class="eo">marto</span>&nbsp;: mars</p>
+						<p><span class="eo">aprilo</span>&nbsp;: avril</p>
+						<p><span class="eo">majo</span>&nbsp;: mai</p>
+						<p><span class="eo">junio</span>&nbsp;: juin</p>
 					</div>
 					<div class="col s6">
-						<p><span class="eo">julio<span>&nbsp;: juillet</p>
-						<p><span class="eo">aŭgusto<span>&nbsp;: août</p>
-						<p><span class="eo">septembro<span>&nbsp;: septembre</p>
-						<p><span class="eo">oktobro<span>&nbsp;: octobre</p>
-						<p><span class="eo">novembro<span>&nbsp;: novembre</p>
-						<p><span class="eo">decembro<span>&nbsp;: décembre</p>
+						<p><span class="eo">julio</span>&nbsp;: juillet</p>
+						<p><span class="eo">aŭgusto</span>&nbsp;: août</p>
+						<p><span class="eo">septembro</span>&nbsp;: septembre</p>
+						<p><span class="eo">oktobro</span>&nbsp;: octobre</p>
+						<p><span class="eo">novembro</span>&nbsp;: novembre</p>
+						<p><span class="eo">decembro</span>&nbsp;: décembre</p>
 					</div>
 				</div>
 			</fieldset>
 			
 			<p class="parto">Exemples :</p>
 			<div class="vortlisto row">
-				<p class="col s12"><span class="eo">Hodiaŭ estas lundo la dua de aŭgusto.<span>&nbsp;: Aujourd’hui nous sommes le lundi 2 août.</p>
-				<p class="col s12"><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.<span>&nbsp;: Demain nous serons le mardi 3 août.</p>
-				<p class="col s12"><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.<span>&nbsp;: Hier c’était dimanche 1<sup>er</sup> août.</p>
-				<p class="col s12"><span class="eo">En januaro estas tri dek unu tagoj.<span>&nbsp;: En janvier il y a 31 jours.</p>
-				<p class="col s12"><span class="eo">La unua de Majo estas la Tago de la Laboro<span>&nbsp;: Le premier mai est la Fête du Travail (littéralement "le Jour du Travail")</p>
+				<p class="col s12"><span class="eo">Hodiaŭ estas lundo la dua de aŭgusto.</span>&nbsp;: Aujourd’hui nous sommes le lundi 2 août.</p>
+				<p class="col s12"><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.</span>&nbsp;: Demain nous serons le mardi 3 août.</p>
+				<p class="col s12"><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.</span>&nbsp;: Hier c’était dimanche 1<sup>er</sup> août.</p>
+				<p class="col s12"><span class="eo">En januaro estas tri dek unu tagoj.</span>&nbsp;: En janvier il y a 31 jours.</p>
+				<p class="col s12"><span class="eo">La unua de Majo estas la Tago de la Laboro</span>&nbsp;: Le premier mai est la Fête du Travail (littéralement "le Jour du Travail")</p>
 			</div>
 			
 			<p class="parto">Lorsqu’on indique une date précise, on emploie souvent la terminaison <b>n</b> de l’accusatif. Vous verrez par la suite que l’accusatif est employé pour certains compléments, et pas uniquement pour le complément direct.</p>
 							
 			<div class="vortlisto row">
-				<p><span class="eo">Ili venos la deka<b>n</b> de aprilo.<span>&nbsp;: Ils viendront le 10 avril.</p>
-				<p><span class="eo">La dua<b>n</b> de julio, mi edziĝos. <span>&nbsp;: Le 2 juillet, je me marierai.</p>
-				<p><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2018<span>&nbsp;: Paris, le 15 décembre 2018 (par exemple au début d’une lettre)</p>
+				<p><span class="eo">Ili venos la deka<b>n</b> de aprilo.</span>&nbsp;: Ils viendront le 10 avril.</p>
+				<p><span class="eo">La dua<b>n</b> de julio, mi edziĝos. </span>&nbsp;: Le 2 juillet, je me marierai.</p>
+				<p><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2018</span>&nbsp;: Paris, le 15 décembre 2018 (par exemple au début d’une lettre)</p>
 			</div>
 				
 			<p class="parto">On peut utiliser également la forme adverbiale pour les jours et les mois.</p>
 			<div class="vortlisto row">
-				<p><span class="eo">Dimanĉ<b>e</b> mi ne laboras.<span>&nbsp;: Je ne travaille pas le dimanche.</p>
+				<p><span class="eo">Dimanĉ<b>e</b> mi ne laboras.</span>&nbsp;: Je ne travaille pas le dimanche.</p>
 			</div>
 			
 			<div class="card-panel blue lighten-5">Cela fait beaucoup de nouvelles choses à mémoriser, mais ne vous tracassez pas trop. Prenez un peu de temps pour assimiler tout ça et n’hésitez pas à revenir relire cette page dans quelques jours. N’oubliez pas de pratiquer régulièrement, par exemple en indiquant la date du jour à votre correcteur quand vous lui enverrez vos prochains exercices.</div>

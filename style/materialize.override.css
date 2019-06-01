@@ -1,3 +1,9 @@
+/*--- surcharge styles de base ---*/
+
+hr {overflow:auto;}
+b, strong {font-weight: 500;}
+
+/*--- surcharge cartes ---*/
 .card-panel h5 {margin-bottom: 1.5rem;}
 
 .card .card-content .card-title {

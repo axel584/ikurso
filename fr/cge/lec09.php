@@ -51,11 +51,11 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s6 m4"><span class="eo">jen<span>&nbsp;: voici, voilà</p>
-					<p class="col s6 m4"><span class="eo">sonorilo<span>&nbsp;: cloche</p>
-					<p class="col s6 m4"><span class="eo">do<span>&nbsp;: donc</p>
-					<p class="col s6 m4"><span class="eo">tuj<span>&nbsp;: tout de suite</p>
-					<p class="col s6 m4"><span class="eo">vesto<span>&nbsp;: vêtement</p>
+					<p class="col s6 m4"><span class="eo">jen</span>&nbsp;: voici, voilà</p>
+					<p class="col s6 m4"><span class="eo">sonorilo</span>&nbsp;: cloche</p>
+					<p class="col s6 m4"><span class="eo">do</span>&nbsp;: donc</p>
+					<p class="col s6 m4"><span class="eo">tuj</span>&nbsp;: tout de suite</p>
+					<p class="col s6 m4"><span class="eo">vesto</span>&nbsp;: vêtement</p>
 				</div>
 			</fieldset>
 
@@ -91,12 +91,12 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s6 m6"><span class="eo">belsone<span>&nbsp;: d’un beau son</p>
-					<p class="col s6 m6"><span class="eo">farti<span>&nbsp;: se porter</p>
-					<p class="col s6 m6"><span class="eo">ĝojo<span>&nbsp;: joie</p>
-					<p class="col s6 m6"><span class="eo">ĝis revido<span>&nbsp;: au revoir</p>
-					<p class="col s6 m6"><span class="eo">fraŭlo<span>&nbsp;: homme célibataire</p>
-					<p class="col s6 m6"><span class="eo">fraŭlino<span>&nbsp;: demoiselle</p>
+					<p class="col s6 m6"><span class="eo">belsone</span>&nbsp;: d’un beau son</p>
+					<p class="col s6 m6"><span class="eo">farti</span>&nbsp;: se porter</p>
+					<p class="col s6 m6"><span class="eo">ĝojo</span>&nbsp;: joie</p>
+					<p class="col s6 m6"><span class="eo">ĝis revido</span>&nbsp;: au revoir</p>
+					<p class="col s6 m6"><span class="eo">fraŭlo</span>&nbsp;: homme célibataire</p>
+					<p class="col s6 m6"><span class="eo">fraŭlino</span>&nbsp;: demoiselle</p>
 				</div>
 			</fieldset>
 
@@ -203,22 +203,22 @@ include "dlekkapo.inc.php";
 		
 			<div class="row">
 				<p class="col s12"><b>ĉi</b> : indique la proximité </p>
-				<p class="col s5 offset-s1"><span class="eo">ĉi-tio<span>&nbsp;: cette chose-ci</p>
-				<p class="col s6"><span class="eo">ĉi-tie<span>&nbsp;: ici</p>
-				<p class="col s5 offset-s1"><span class="eo">ĉio-ĉi<span>&nbsp;: tout ceci</p>
-				<p class="col s6"><span class="eo">ĉi-matene<span>&nbsp;: ce matin</p>
-				<p class="col s11 offset-s1"><span class="eo">ĉi-foje<span>&nbsp;: cette fois-ci</p>
-				<p class="col s11 offset-s1"><span class="eo">tiu knabo<span>&nbsp;: ce garçon(-là)</p>
-				<p class="col s11 offset-s1"><span class="eo">tiu ĉi knabo, ĉi tiu knabo<span>&nbsp;: ce garçon-ci</p>
+				<p class="col s5 offset-s1"><span class="eo">ĉi-tio</span>&nbsp;: cette chose-ci</p>
+				<p class="col s6"><span class="eo">ĉi-tie</span>&nbsp;: ici</p>
+				<p class="col s5 offset-s1"><span class="eo">ĉio-ĉi</span>&nbsp;: tout ceci</p>
+				<p class="col s6"><span class="eo">ĉi-matene</span>&nbsp;: ce matin</p>
+				<p class="col s11 offset-s1"><span class="eo">ĉi-foje</span>&nbsp;: cette fois-ci</p>
+				<p class="col s11 offset-s1"><span class="eo">tiu knabo</span>&nbsp;: ce garçon(-là)</p>
+				<p class="col s11 offset-s1"><span class="eo">tiu ĉi knabo, ĉi tiu knabo</span>&nbsp;: ce garçon-ci</p>
 				<p class="col s12"><b>ajn</b> : exprime l’indétermination généralisée</p>
-				<p class="col s5 offset-s1"><span class="eo">iu ajn<span>&nbsp;: n’importe qui</p>
-				<p class="col s6"><span class="eo">io ajn<span>&nbsp;: n’importe quoi</p>
-				<p class="col s5 offset-s1"><span class="eo">ie ajn<span>&nbsp;: n’importe où</p>
-				<p class="col s6"><span class="eo">iam ajn<span>&nbsp;: n’importe quand</p>
-				<p class="col s11 offset-s1"><span class="eo">iru ien!<span>&nbsp;: allez (allez-vous en) quelque part&nbsp;!</p>
-				<p class="col s11 offset-s1"><span class="eo">iru ien ajn!<span>&nbsp;: allez-vous en n’importe où&nbsp;!</p>
-				<p class="col s11 offset-s1"><span class="eo">iru, kien vi volas!<span>&nbsp;: allez où vous voulez&nbsp;!</p>
-				<p class="col s11 offset-s1"><span class="eo">iru, kien ajn vi volas!<span>&nbsp;: allez (n’importe où) où vous voulez !</p>
+				<p class="col s5 offset-s1"><span class="eo">iu ajn</span>&nbsp;: n’importe qui</p>
+				<p class="col s6"><span class="eo">io ajn</span>&nbsp;: n’importe quoi</p>
+				<p class="col s5 offset-s1"><span class="eo">ie ajn</span>&nbsp;: n’importe où</p>
+				<p class="col s6"><span class="eo">iam ajn</span>&nbsp;: n’importe quand</p>
+				<p class="col s11 offset-s1"><span class="eo">iru ien!</span>&nbsp;: allez (allez-vous en) quelque part&nbsp;!</p>
+				<p class="col s11 offset-s1"><span class="eo">iru ien ajn!</span>&nbsp;: allez-vous en n’importe où&nbsp;!</p>
+				<p class="col s11 offset-s1"><span class="eo">iru, kien vi volas!</span>&nbsp;: allez où vous voulez&nbsp;!</p>
+				<p class="col s11 offset-s1"><span class="eo">iru, kien ajn vi volas!</span>&nbsp;: allez (n’importe où) où vous voulez !</p>
 			</div>
 
 		<?php 
@@ -251,10 +251,10 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s12 m6"><span class="eo">muso<span>&nbsp;: souris</p>
-					<p class="col s12 m6"><span class="eo">tapiŝo<span>&nbsp;: tapis</p>
-					<p class="col s12 m6"><span class="eo">fali<span>&nbsp;: tomber</p>
-					<p class="col s12 m6"><span class="eo">festeni<span>&nbsp;: festoyer</p>
+					<p class="col s12 m6"><span class="eo">muso</span>&nbsp;: souris</p>
+					<p class="col s12 m6"><span class="eo">tapiŝo</span>&nbsp;: tapis</p>
+					<p class="col s12 m6"><span class="eo">fali</span>&nbsp;: tomber</p>
+					<p class="col s12 m6"><span class="eo">festeni</span>&nbsp;: festoyer</p>
 				</div>
 			</fieldset>
 
@@ -348,7 +348,7 @@ frameborder="0" allowfullscreen></iframe></p>
 				getEkzercon(37,$persono_id);
 			?>
 			
-			<p class="noto">NOTE : <span class="eo">Ŝerbruko<span>&nbsp;: Sherbrooke (ville du Québec)</p>
+			<p class="noto">NOTE : <span class="eo">Ŝerbruko</span>&nbsp;: Sherbrooke (ville du Québec)</p>
 			
 
 			<fieldset class="vortoj">
@@ -359,29 +359,29 @@ frameborder="0" allowfullscreen></iframe></p>
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s12 m6"><span class="eo">gvidi<span>&nbsp;: guider, diriger</p>
-					<p class="col s12 m6"><span class="eo">Brazilo<span>&nbsp;: Brésil</p>
-					<p class="col s12 m6"><span class="eo">Braziljo<span>&nbsp;: Brasilia</p>
-					<p class="col s12 m6"><span class="eo">senti<span>&nbsp;: sentir, ressentir</p>
-					<p class="col s12 m6"><span class="eo">kresko<span>&nbsp;: croissance, accroissement</p>
-					<p class="col s12 m6"><span class="eo">samideano<span>&nbsp;: partisan (ici : espérantiste)</p>
-					<p class="col s12 m6"><span class="eo">gastigi<span>&nbsp;: recevoir (des invités), offrir l’hospitalité</p>
-					<p class="col s12 m6"><span class="eo">kutima<span>&nbsp;: habituel</p>
-					<p class="col s12 m6"><span class="eo">Usono<span>&nbsp;: États-Unis</p>
-					<p class="col s12 m6"><span class="eo">plie<span>&nbsp;: de plus</p>
-					<p class="col s12 m6"><span class="eo">aranĝo<span>&nbsp;: manifestation</p>
-					<p class="col s12 m6"><span class="eo">asocio<span>&nbsp;: association</p>
-					<p class="col s12 m6"><span class="eo">najbaro<span>&nbsp;: voisin</p>
-					<p class="col s12 m6"><span class="eo">rubriko<span>&nbsp;: rubrique</p>
-					<p class="col s12 m6"><span class="eo">numero<span>&nbsp;: numéro (d’une revue)</p>
-					<p class="col s12 m6"><span class="eo">bulteno<span>&nbsp;: bulletin</p>
-					<p class="col s12 m6"><span class="eo">organizi<span>&nbsp;: organiser</p>
-					<p class="col s12 m6"><span class="eo">vidpunkto<span>&nbsp;: point de vue</p>
-					<p class="col s12 m6"><span class="eo">Pasko<span>&nbsp;: Pâques</p>
-					<p class="col s12 m6"><span class="eo">tradicio<span>&nbsp;: tradition</p>
-					<p class="col s12 m6"><span class="eo">supozi<span>&nbsp;: supposer</p>
-					<p class="col s12 m6"><span class="eo">Flandro<span>&nbsp;: Flandres </p>
-					<p class="col s12 m6"><span class="eo">Nederlando<span>&nbsp;: Pays-Bas</p>
+					<p class="col s12 m6"><span class="eo">gvidi</span>&nbsp;: guider, diriger</p>
+					<p class="col s12 m6"><span class="eo">Brazilo</span>&nbsp;: Brésil</p>
+					<p class="col s12 m6"><span class="eo">Braziljo</span>&nbsp;: Brasilia</p>
+					<p class="col s12 m6"><span class="eo">senti</span>&nbsp;: sentir, ressentir</p>
+					<p class="col s12 m6"><span class="eo">kresko</span>&nbsp;: croissance, accroissement</p>
+					<p class="col s12 m6"><span class="eo">samideano</span>&nbsp;: partisan (ici : espérantiste)</p>
+					<p class="col s12 m6"><span class="eo">gastigi</span>&nbsp;: recevoir (des invités), offrir l’hospitalité</p>
+					<p class="col s12 m6"><span class="eo">kutima</span>&nbsp;: habituel</p>
+					<p class="col s12 m6"><span class="eo">Usono</span>&nbsp;: États-Unis</p>
+					<p class="col s12 m6"><span class="eo">plie</span>&nbsp;: de plus</p>
+					<p class="col s12 m6"><span class="eo">aranĝo</span>&nbsp;: manifestation</p>
+					<p class="col s12 m6"><span class="eo">asocio</span>&nbsp;: association</p>
+					<p class="col s12 m6"><span class="eo">najbaro</span>&nbsp;: voisin</p>
+					<p class="col s12 m6"><span class="eo">rubriko</span>&nbsp;: rubrique</p>
+					<p class="col s12 m6"><span class="eo">numero</span>&nbsp;: numéro (d’une revue)</p>
+					<p class="col s12 m6"><span class="eo">bulteno</span>&nbsp;: bulletin</p>
+					<p class="col s12 m6"><span class="eo">organizi</span>&nbsp;: organiser</p>
+					<p class="col s12 m6"><span class="eo">vidpunkto</span>&nbsp;: point de vue</p>
+					<p class="col s12 m6"><span class="eo">Pasko</span>&nbsp;: Pâques</p>
+					<p class="col s12 m6"><span class="eo">tradicio</span>&nbsp;: tradition</p>
+					<p class="col s12 m6"><span class="eo">supozi</span>&nbsp;: supposer</p>
+					<p class="col s12 m6"><span class="eo">Flandro</span>&nbsp;: Flandres </p>
+					<p class="col s12 m6"><span class="eo">Nederlando</span>&nbsp;: Pays-Bas</p>
 				</div>
 			</fieldset>
 

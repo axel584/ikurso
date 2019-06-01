@@ -106,9 +106,9 @@ include "dlekkapo.inc.php";
 			
 			<p class="parto">Ces participes peuvent prendre la terminaison du pluriel. Par exemple : </p>
 			<div class="row">
-				<p class="col s12"><span class="eo">Ili estas legantaj<span>&nbsp;: Ils sont en train de lire</p>
-				<p class="col s12"><span class="eo">Ili estas legintaj<span>&nbsp;: Ils ont lu</p>
-				<p class="col s12"><span class="eo">La libroj estas legataj<span>&nbsp;: Les livres sont lus</p>
+				<p class="col s12"><span class="eo">Ili estas legantaj</span>&nbsp;: Ils sont en train de lire</p>
+				<p class="col s12"><span class="eo">Ili estas legintaj</span>&nbsp;: Ils ont lu</p>
+				<p class="col s12"><span class="eo">La libroj estas legataj</span>&nbsp;: Les livres sont lus</p>
 			</div>
 
 			<p class="parto">En résumé :</p>
@@ -201,9 +201,9 @@ include "dlekkapo.inc.php";
 			<a href="<?php echo $vojo;?>fr/son/pv8-2.mp3" class="sm2_button"></a> <span class="eo">Dancu diabloj, sed ne en mia arbaro.</span></p>
 
 			<div class="vortlisto row">
-				<p class="col s6 m4"><span class="eo">honori<span>&nbsp;: honorer</p>
-				<p class="col s6 m4"><span class="eo">diablo<span>&nbsp;: diable</p>
-				<p class="col s6 m4"><span class="eo">adori<span>&nbsp;: adorer</p>
+				<p class="col s6 m4"><span class="eo">honori</span>&nbsp;: honorer</p>
+				<p class="col s6 m4"><span class="eo">diablo</span>&nbsp;: diable</p>
+				<p class="col s6 m4"><span class="eo">adori</span>&nbsp;: adorer</p>
 			</div>
 			
 			<p class="parto">Dans le premier proverbe, on souligne qu’on juge différemment une personne morte ou vivante, on la déshonore de son vivant, mais on la vénère quand elle est morte. Dans le deuxième proverbe, le diable personnifie les problèmes qui peuvent arriver et ceux-ci ne sont pas considérés comme graves s’ils ne sont pas chez soi.</p>
@@ -247,16 +247,16 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s12 m6"><span class="eo">juĝisto<span>&nbsp;: juge</p>
-					<p class="col s12 m6"><span class="eo">aserti<span>&nbsp;: affirmer, prétendre</p>
-					<p class="col s12 m6"><span class="eo">akuzato<span>&nbsp;: l’accusé</p>
-					<p class="col s12 m6"><span class="eo">forkuri<span>&nbsp;: se sauver, c-à-d. courir au loin</p>
-					<p class="col s12 m6"><span class="eo">tramo<span>&nbsp;: tramway</p>
-					<p class="col s12 m6"><span class="eo">okulo<span>&nbsp;: œil</p>
-					<p class="col s12 m6"><span class="eo">opinii<span>&nbsp;: penser, avoir une opinion</p>
-					<p class="col s12 m6"><span class="eo">stari<span>&nbsp;: être debout</p>
-					<p class="col s12 m6"><span class="eo">laca<span>&nbsp;: fatigué</p>
-					<p class="col s12 m6"><span class="eo">plaĉi<span>&nbsp;: plaire</p>
+					<p class="col s12 m6"><span class="eo">juĝisto</span>&nbsp;: juge</p>
+					<p class="col s12 m6"><span class="eo">aserti</span>&nbsp;: affirmer, prétendre</p>
+					<p class="col s12 m6"><span class="eo">akuzato</span>&nbsp;: l’accusé</p>
+					<p class="col s12 m6"><span class="eo">forkuri</span>&nbsp;: se sauver, c-à-d. courir au loin</p>
+					<p class="col s12 m6"><span class="eo">tramo</span>&nbsp;: tramway</p>
+					<p class="col s12 m6"><span class="eo">okulo</span>&nbsp;: œil</p>
+					<p class="col s12 m6"><span class="eo">opinii</span>&nbsp;: penser, avoir une opinion</p>
+					<p class="col s12 m6"><span class="eo">stari</span>&nbsp;: être debout</p>
+					<p class="col s12 m6"><span class="eo">laca</span>&nbsp;: fatigué</p>
+					<p class="col s12 m6"><span class="eo">plaĉi</span>&nbsp;: plaire</p>
 				</div>
 			</fieldset>
 			
@@ -268,24 +268,24 @@ include "dlekkapo.inc.php";
 			<p class="parto">Dans la <a href="lec01.php?section=4">première leçon</a>, vous avez vu les pronoms personnels. Pour mémoire, en voici de nouveau la liste.</p>
 			<div class="vortlisto row">
 				<div class="col s12 m6">
-					<p><span class="eo">mi<span>&nbsp;: je</p>
-					<p><span class="eo">vi<span>&nbsp;: tu (ou <span class="eo">ci</span>, peu usité)</p>
-					<p><span class="eo">li<span>&nbsp;: il (personne)</p>
-					<p><span class="eo">ŝi<span>&nbsp;: elle (personne)</p>
-					<p><span class="eo">ĝi<span>&nbsp;: il ou elle (non-personne)</p>
+					<p><span class="eo">mi</span>&nbsp;: je</p>
+					<p><span class="eo">vi</span>&nbsp;: tu (ou <span class="eo">ci</span>, peu usité)</p>
+					<p><span class="eo">li</span>&nbsp;: il (personne)</p>
+					<p><span class="eo">ŝi</span>&nbsp;: elle (personne)</p>
+					<p><span class="eo">ĝi</span>&nbsp;: il ou elle (non-personne)</p>
 				</div>
 				<div class="col s12 m6">
-					<p><span class="eo">ni<span>&nbsp;: nous</p>
-					<p><span class="eo">vi<span>&nbsp;: vous</p>
-					<p><span class="eo">ili<span>&nbsp;: ils ou elles</p>
-					<p><span class="eo">oni<span>&nbsp;: on</p>
+					<p><span class="eo">ni</span>&nbsp;: nous</p>
+					<p><span class="eo">vi</span>&nbsp;: vous</p>
+					<p><span class="eo">ili</span>&nbsp;: ils ou elles</p>
+					<p><span class="eo">oni</span>&nbsp;: on</p>
 				</div>
 			</div>
 			 <p>Vous avez vu également comment on construit les adjectifs possessifs à partir des pronoms en ajoutant la terminaison -<b>a</b>&nbsp;:</p>
 			<div class="row">
-				<p class="col s12"><span class="eo">Li manĝas mi<b>an</b> kukon.<span>&nbsp;: Il mange mon gâteau.</p>
-				<p class="col s12"><span class="eo">Mi ŝatas ŝi<b>ajn</b> kukojn.<span>&nbsp;: J’aime ses gâteaux.</p>
-				<p class="col s12"><span class="eo">Ni ludas kun ili<b>aj</b> infanoj.<span>&nbsp;: Nous jouons avec leurs enfants.</p>
+				<p class="col s12"><span class="eo">Li manĝas mi<b>an</b> kukon.</span>&nbsp;: Il mange mon gâteau.</p>
+				<p class="col s12"><span class="eo">Mi ŝatas ŝi<b>ajn</b> kukojn.</span>&nbsp;: J’aime ses gâteaux.</p>
+				<p class="col s12"><span class="eo">Ni ludas kun ili<b>aj</b> infanoj.</span>&nbsp;: Nous jouons avec leurs enfants.</p>
 			</div>
 
 			<p class="parto">Considérez maintenant la phrase suivante&nbsp;:</p>
@@ -347,8 +347,8 @@ include "dlekkapo.inc.php";
 			<p class="parto">Notez bien que comme <b>si</b> et <b>sia</b> se rapportent toujours au sujet, ils ne peuvent pas faire partie du sujet.</p>
 			<p>Exemples :<br>
 			<div class="row">
-				<p class="col s12"><span class="eo"><b>Mario kaj <u>lia</u> hundo</b> ludas en la parko.<span>&nbsp;: dans cette phrase, le sujet est <b>Mario kaj lia hundo</b> => pas de réfléchi dans ce cas.</p>
-				<p class="col s12"><span class="eo">Mario ludas en la parko <b>kun <u>sia</u> hundo</b>.<span>&nbsp;: dans cette phrase, le sujet est <b>Mario</b>, et ici <b>kun sia hundo</b> est complément => on emploie le réfléchi.</p>
+				<p class="col s12"><span class="eo"><b>Mario kaj <u>lia</u> hundo</b> ludas en la parko.</span>&nbsp;: dans cette phrase, le sujet est <b>Mario kaj lia hundo</b> => pas de réfléchi dans ce cas.</p>
+				<p class="col s12"><span class="eo">Mario ludas en la parko <b>kun <u>sia</u> hundo</b>.</span>&nbsp;: dans cette phrase, le sujet est <b>Mario</b>, et ici <b>kun sia hundo</b> est complément => on emploie le réfléchi.</p>
 			</div>
 			
 
@@ -370,23 +370,23 @@ include "dlekkapo.inc.php";
 			?>
 		
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">ambaŭ<span>&nbsp;: tous deux</p>
-				<p class="col s12 m6"><span class="eo">aŭto-veturado<span>&nbsp;: trajet en voiture</p>
-				<p class="col s12 m6"><span class="eo">azeno<span>&nbsp;: âne</p>
-				<p class="col s12 m6"><span class="eo">daŭre<span>&nbsp;: continuellement</p>
-				<p class="col s12 m6"><span class="eo">estonta<span>&nbsp;: futur (participe futur de <em>esti</em>)</p>
-				<p class="col s12 m6"><span class="eo">inciti<span>&nbsp;: irriter</p>
-				<p class="col s12 m6"><span class="eo">foriri (for-iri)<span>&nbsp;: partir</p>
-				<p class="col s12 m6"><span class="eo">hejme<span>&nbsp;: à la maison</p>
-				<p class="col s12 m6"><span class="eo">jam<span>&nbsp;: déjà</p>
-				<p class="col s12 m6"><span class="eo">kafejo<span>&nbsp;: café (restaurant)</p>
-				<p class="col s12 m6"><span class="eo">konflikto<span>&nbsp;: conflit</p>
-				<p class="col s12 m6"><span class="eo">surtuto<span>&nbsp;: pardessus</p>
-				<p class="col s12 m6"><span class="eo">moke<span>&nbsp;: par moquerie</p>
-				<p class="col s12 m6"><span class="eo">obstine<span>&nbsp;: avec obstination</p>
-				<p class="col s12 m6"><span class="eo">parenco<span>&nbsp;: parent (personne de la même famille)</p>
-				<p class="col s12 m6"><span class="eo">preter-pasi<span>&nbsp;: dépasser, passer (devant)…</p>
-				<p class="col s12 m6"><span class="eo">silenti<span>&nbsp;: garder le silence</p>
+				<p class="col s12 m6"><span class="eo">ambaŭ</span>&nbsp;: tous deux</p>
+				<p class="col s12 m6"><span class="eo">aŭto-veturado</span>&nbsp;: trajet en voiture</p>
+				<p class="col s12 m6"><span class="eo">azeno</span>&nbsp;: âne</p>
+				<p class="col s12 m6"><span class="eo">daŭre</span>&nbsp;: continuellement</p>
+				<p class="col s12 m6"><span class="eo">estonta</span>&nbsp;: futur (participe futur de <em>esti</em>)</p>
+				<p class="col s12 m6"><span class="eo">inciti</span>&nbsp;: irriter</p>
+				<p class="col s12 m6"><span class="eo">foriri (for-iri)</span>&nbsp;: partir</p>
+				<p class="col s12 m6"><span class="eo">hejme</span>&nbsp;: à la maison</p>
+				<p class="col s12 m6"><span class="eo">jam</span>&nbsp;: déjà</p>
+				<p class="col s12 m6"><span class="eo">kafejo</span>&nbsp;: café (restaurant)</p>
+				<p class="col s12 m6"><span class="eo">konflikto</span>&nbsp;: conflit</p>
+				<p class="col s12 m6"><span class="eo">surtuto</span>&nbsp;: pardessus</p>
+				<p class="col s12 m6"><span class="eo">moke</span>&nbsp;: par moquerie</p>
+				<p class="col s12 m6"><span class="eo">obstine</span>&nbsp;: avec obstination</p>
+				<p class="col s12 m6"><span class="eo">parenco</span>&nbsp;: parent (personne de la même famille)</p>
+				<p class="col s12 m6"><span class="eo">preter-pasi</span>&nbsp;: dépasser, passer (devant)…</p>
+				<p class="col s12 m6"><span class="eo">silenti</span>&nbsp;: garder le silence</p>
 			</div>
 		<?php 
 		} // fin section 8

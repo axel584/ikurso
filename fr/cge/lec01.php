@@ -340,29 +340,29 @@ include "dlekkapo.inc.php";
 			<p class="noprint"><em>Pour entendre ces phrases, cliquez sur le bouton à gauche de la phrase.</em></p>
 			
 			<div class="vortlisto row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-1.mp3" class="sm2_button"></a></p>
-				<p class="col s11 m5"><span class="eo">Viaj filoj estas niaj amikoj.</span></p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/l01-1.mp3" class="sm2_button"></a>
+				<span class="eo">Viaj filoj estas niaj amikoj.</span></p>
 				<p class="col s11 offset-s1 m6">Vos fils sont nos amis.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-2.mp3" class="sm2_button"></a></p>
-				<p class="col s11 m5"><span class="eo">Iliaj kafoj estos varmaj.</span></p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/l01-2.mp3" class="sm2_button"></a>
+					<span class="eo">Iliaj kafoj estos varmaj.</span></p>
 				<p class="col s11 offset-s1 m6">Leurs cafés seront chauds.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-3.mp3" class="sm2_button"></a></p>
-				<p class="col s11 m5"><span class="eo">La knaboj estas grandaj.</span></p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/l01-3.mp3" class="sm2_button"></a>
+					<span class="eo">La knaboj estas grandaj.</span></p>
 				<p class="col s11 offset-s1 m6">Les garçons sont grands.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-4.mp3" class="sm2_button"></a></p>
-				<p class="col s11 m5"><span class="eo">Ŝia pano estis seka.</span></p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/l01-4.mp3" class="sm2_button"></a>
+					<span class="eo">Ŝia pano estis seka.</span></p>
 				<p class="col s11 offset-s1 m6">Son pain (à elle) était sec.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-5.mp3" class="sm2_button"></a></p>
-				<p class="col s11 m5"><span class="eo">Vi estas lia filo.</span></p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/l01-5.mp3" class="sm2_button"></a>
+					<span class="eo">Vi estas lia filo.</span></p>
 				<p class="col s11 offset-s1 m6">Tu es son fils (à lui).</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-6.mp3" class="sm2_button"></a></p>
-				<p class="col s11 m5"><span class="eo">La instruisto estas sana.</span></p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/l01-6.mp3" class="sm2_button"></a>
+					<span class="eo">La instruisto estas sana.</span></p>
 				<p class="col s11 offset-s1 m6">L'instituteur est en bonne santé.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-7.mp3" class="sm2_button"></a></p>
-				<p class="col s11 m5"><span class="eo">Via amiko estas bela.</span></p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/l01-7.mp3" class="sm2_button"></a>
+					<span class="eo">Via amiko estas bela.</span></p>
 				<p class="col s11 offset-s1 m6">Ton ami est beau.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/l01-8.mp3" class="sm2_button"></a></p>
-				<p class="col s11 m5"><span class="eo">La kuko estis lia.</span></p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/l01-8.mp3" class="sm2_button"></a>
+					<span class="eo">La kuko estis lia.</span></p>
 				<p class="col s11 offset-s1 m6">Le gâteau était à lui (était le sien)</p>
 			</div>
 	
@@ -418,29 +418,42 @@ include "dlekkapo.inc.php";
 			<p class="parto">Voici quelques expressions pour entamer et finir une discussion. Ces expressions sont à apprendre par cœur dans un premier temps, vous verrez un peu plus tard dans les leçons pourquoi elles se construisent ainsi.</p>
 		<fieldset class="vortoj">
 			<div class="vortlisto nocol">
-				<div class"row">
-					<p class="col s6 m3 eo">Saluton!</p><p class="col s6 m3">Salut&nbsp;!</p>
-					<p class="col s6 m3 eo">Bonan tagon!</p><p class="col s6 m3">Bonjour&nbsp;!</p>
+				<div class="row">
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/saluton.mp3" class="sm2_button"></a>
+						<span class="eo">Saluton!</span></p>
+						<p class="col s6 m3">Salut&nbsp;!, Bonjour&nbsp;!</p>
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/bonan-tagon.mp3" class="sm2_button"></a>
+						<span class="eo">Bonan tagon!</p><p class="col s6 m3">Bonjour&nbsp;!</p>
 				</div>
 				<div class="row">
-					<p class="col s6 m3 eo">Bonan matenon!</p><p class="col s6 m3">Bonjour&nbsp;! (le matin)</p>
-					<p class="col s6 m3 eo">Bonan vesperon!</p><p class="col s6 m3">Bonsoir&nbsp;!</p>
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/bonan-matenon.mp3" class="sm2_button"></a>
+						<span class="eo">Bonan matenon!</p><p class="col s6 m3">Bonjour&nbsp;! (le matin)</p>
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/bonan-vesperon.mp3" class="sm2_button"></a>
+						<span class="eo">Bonan vesperon!</p><p class="col s6 m3">Bonsoir&nbsp;!</p>
 				</div>
 				<div class="row">
-					<p class="col s6 m3 eo">Bonan nokton!</p><p class="col s6 m3">Bonne nuit&nbsp;!</p>
-					<p class="col s6 m3 eo">Mi loĝas en...</p><p class="col s6 m3">J’habite à...</p>
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/bonan-nokton.mp3" class="sm2_button"></a>
+						<span class="eo">Bonan nokton!</p><p class="col s6 m3">Bonne nuit&nbsp;!</p>
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/mi-logxas-en.mp3" class="sm2_button"></a>
+						<span class="eo">Mi loĝas en…</p><p class="col s6 m3">J’habite à…</p>
 				</div>
 				<div class="row">
-					<p class="col s6 m3 eo">Mi ŝatas...</p><p class="col s6 m3">J’aime... / J'apprécie...</p>
-					<p class="col s6 m3 eo">Dankon!</p><p class="col s6 m3">Merci&nbsp;!</p>
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/mi-sxatas.mp3" class="sm2_button"></a>
+						<span class="eo">Mi ŝatas…</p><p class="col s6 m3">J’aime… / J'apprécie…</p>
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/dankon.mp3" class="sm2_button"></a>
+						<span class="eo">Dankon!</p><p class="col s6 m3">Merci&nbsp;!</p>
 				</div>
 				<div class="row">
-					<p class="col s6 m3 eo">Ĝis revido!</p><p class="col s6 m3">Au revoir&nbsp;!</p>
-					<p class="col s6 m3 eo">Adiaŭ!</p><p class="col s6 m3">Adieu&nbsp;!</p>
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/gxis-revido.mp3" class="sm2_button"></a>
+						<span class="eo">Ĝis revido!</p><p class="col s6 m3">Au revoir&nbsp;!</p>
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/adiaux.mp3" class="sm2_button"></a>
+						<span class="eo">Adiaŭ!</p><p class="col s6 m3">Adieu&nbsp;!</p>
 				</div>
 				<div class="row">
-					<p class="col s6 m3 eo">Bonvolu...</p><p class="col s6 m9">Veuillez... / ... s’il vous plaît</p>
-					<p class="col s6 m3 eo">Bonvolu eniri.</p><p class="col s6 m9">Veuillez entrer. / Entrez, s’il vous plaît.</p>
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/bonvolu.mp3" class="sm2_button"></a>
+						<span class="eo">Bonvolu…</p><p class="col s6 m9">Veuillez… / … s’il vous plaît</p>
+					<p class="col s6 m3"><a href="<?php echo $vojo;?>fr/son/vortoj/bonvolu-eniri.mp3" class="sm2_button"></a>
+						<span class="eo">Bonvolu eniri.</p><p class="col s6 m9">Veuillez entrer. / Entrez, s’il vous plaît.</p>
 				</div>
 			</div>
 		</fieldset>
@@ -547,43 +560,45 @@ QCM(
 			?>
 			<p class="parto">Dans l’exercice précédent, vous avez vu comment interroger sur l’identité d’une personne ou d’une chose. On utilise pour cela le mot interrogatif <b>kiu</b>&nbsp;:</p>
 			<div class="vortlisto row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kiu-logxas-en-brazilo.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kiu</b> loĝas en Brazilo?</span></p><p class="col s11 m6 offset-s1"><b>Qui</b> habite au Brésil&nbsp;?</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/en-kiu-filmo.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo">En <b>kiu</b> filmo estas Aleks?</span></p><p class="col s11 m5 offset-s1">Dans <b>quel</b> film est Aleks&nbsp;?</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kiu-logxas-en-brazilo.mp3" class="sm2_button"></a>
+					<span class="eo"><b>Kiu</b> loĝas en Brazilo?</span></p><p class="col s11 m6 offset-s1"><b>Qui</b> habite au Brésil&nbsp;?</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/en-kiu-filmo.mp3" class="sm2_button"></a>
+				<span class="eo">En <b>kiu</b> filmo estas Aleks?</span></p><p class="col s11 m5 offset-s1">Dans <b>quel</b> film est Aleks&nbsp;?</p>
 			</div>
 			
 			<p>On traduit généralement <b>kiu</b> par <em>qui</em>, <em>quel(le)</em>, <em>lequel</em> ou <em>laquelle</em>. </p>
 				
 			<p>Voici quelques autres exemples :</p>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kiu-estas-la-nova-instruisto.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kiu</b> estas la nova instruisto?<br>– Estas Marko. Estas mia patro.</span></p><p class="col s11 m6 offset-s1">Qui est le nouvel instituteur&nbsp;?<br>– C’est Marko. C'est mon père.</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kiu-estas-la-nova-instruisto.mp3" class="sm2_button"></a><span class="eo"><b>Kiu</b> estas la nova instruisto?<br>&emsp;&emsp;– Estas Marko. Estas mia patro.</span></p><p class="col s11 m6 offset-s1">Qui est le nouvel instituteur&nbsp;?<br>– C’est Marko. C'est mon père.</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/en-kiu-urbo-logxas-anna-maria.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo">En <b>kiu</b> urbo loĝas Anna Maria?<br>– Ŝi loĝas en Vroclavo.</span></p><p class="col s11 m6 offset-s1">Dans <b>quelle</b> ville habite Anna Maria&nbsp;?<br>– Elle habite à Wrocław.</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/en-kiu-urbo-logxas-anna-maria.mp3" class="sm2_button"></a><span class="eo">En <b>kiu</b> urbo loĝas Anna Maria?<br>&emsp;&emsp;– Ŝi loĝas en Vroclavo.</span></p><p class="col s11 m6 offset-s1">Dans <b>quelle</b> ville habite Anna Maria&nbsp;?<br>– Elle habite à Wrocław.</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/parizo-varsovio-kaj-romo.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo">Parizo, Varsovio kaj Romo estas urboj. <b>Kiu</b> estas en Pollando?</span></p><p class="col s11 m6 offset-s1">Paris, Varsovie et Rome sont des villes. <b>Laquelle</b> est en Pologne&nbsp;?</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/parizo-varsovio-kaj-romo.mp3" class="sm2_button"></a><span class="eo">Parizo, Varsovio kaj Romo estas urboj. <b>Kiu</b> estas en Pollando?</span></p><p class="col s11 m6 offset-s1">Paris, Varsovie et Rome sont des villes. <b>Laquelle</b> est en Pologne&nbsp;?</p>
 			</div>
 			
 			<p class="parto"><b>Kiu</b> se met au pluriel (<b>kiuj</b>) si l’on interroge sur plusieurs personnes ou plusieurs choses. Par exemple&nbsp;:</p>
 			
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/jen-kukoj.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo">Jen kukoj. <b>Kiuj</b> estas bonaj?</span></p><p class="col s11 m6 offset-s1">Voici des gâteaux. <b>Lesquels</b> sont bons&nbsp;?</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/jen-kukoj.mp3" class="sm2_button"></a><span class="eo">Jen kukoj. <b>Kiuj</b> estas bonaj?</span></p><p class="col s11 m6 offset-s1">Voici des gâteaux. <b>Lesquels</b> sont bons&nbsp;?</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kiuj-estas-viaj-instruistoj.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kiuj</b> estas viaj instruistoj?<br>– Marko kaj Petro.</span></p><p class="col s11 m6 offset-s1"><b>Qui</b> sont tes professeurs&nbsp;?<br>– Marko et Petro.</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kiuj-estas-viaj-instruistoj.mp3" class="sm2_button"></a><span class="eo"><b>Kiuj</b> estas viaj instruistoj?<br>&emsp;&emsp;– Marko kaj Petro.</span></p><p class="col s11 m6 offset-s1"><b>Qui</b> sont tes professeurs&nbsp;?<br>– Marko et Petro.</p>
 			</div>
 
 			<p class="parto">Dans l’exercice précédent, vous avez également vu comment poser une question pour interroger sur le lieu&nbsp;:</p>
 			<div class="vortlisto row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-logxas-la-instruisto.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kie</b> loĝas la instruisto?</span></p><p class="col s11 m6 offset-s1"><b>Où</b> habite le professeur&nbsp;?</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-logxas-la-instruisto.mp3" class="sm2_button"></a><span class="eo"><b>Kie</b> loĝas la instruisto?</span></p><p class="col s11 m6 offset-s1"><b>Où</b> habite le professeur&nbsp;?</p>
 			</div>
 			
 			<p>Voici d’autres exemples de questions commençant par <b>kie</b>&nbsp;:</p>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-studas-allan.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kie</b> studas Allan?</span></p><p class="col s11 m6 offset-s1"><b>Où</b> étudie Allan&nbsp;?</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-studas-allan.mp3" class="sm2_button"></a><span class="eo"><b>Kie</b> studas Allan?</span></p><p class="col s11 m6 offset-s1"><b>Où</b> étudie Allan&nbsp;?</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-estas-chaumont.mp3" class="sm2_button"></a><p class="col s11 m5"><span class="eo"><b>Kie</b> estas la urbo Chaumont?<br>– Ĝi estas en Francujo.</span></p><p class="col s11 m6 offset-s1"><b>Où</b> est la ville de Chaumont&nbsp;?<br>– Elle est en France.</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-estas-chaumont.mp3" class="sm2_button"></a><span class="eo"><b>Kie</b> estas la urbo Chaumont?<br>&emsp;&emsp;– Ĝi estas en Francujo.</span></p><p class="col s11 m6 offset-s1"><b>Où</b> est la ville de Chaumont&nbsp;?<br>– Elle est en France.</p>
 			</div>
 			
 			<?php 
@@ -643,8 +658,8 @@ QCM(
 					<p><a href="<?php echo $vojo;?>fr/son/vortoj/vojagxema.mp3" class="sm2_button"></a> <span class="eo">vojaĝema<span>&nbsp;: voyageur, qui aime voyager</p>
 				</div>
 				<div class="col s12">
-					<p><b>Expression utile</b></p>
-					<p><span class="eo">Kiel oni diras ... en Esperanto?</span>&nbsp;: Comment dit-on ... en espéranto&nbsp;?</p>
+					<br><p><b>Expression utile</b></p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/kiel-oni-diras.mp3" class="sm2_button"></a><span class="eo">Kiel oni diras … en Esperanto?</span>&nbsp;: Comment dit-on … en espéranto&nbsp;?</p>
 			</div>
 
 			<?php 

@@ -152,7 +152,7 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/biskvito.mp3" class="sm2_button"></a> <span class="eo">biskvito</span>&nbsp;: biscuit</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/filo.mp3" class="sm2_button"></a> <span class="eo">filo</span>&nbsp;: fils</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/filino.mp3" class="sm2_button"></a> <span class="eo">filino</span>&nbsp;: fille</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/francujo.mp3" class="sm2_button"></a> <span class="eo">Francujo</span>&nbsp;: France</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/francujo-francio.mp3" class="sm2_button"></a> <span class="eo">Francujo/Francio<sup>[1]</sup></span>&nbsp;: France</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/frato.mp3" class="sm2_button"></a> <span class="eo">frato</span>&nbsp;: frère</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/fratino.mp3" class="sm2_button"></a> <span class="eo">fratino</span>&nbsp;: sœur</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/instruisto.mp3" class="sm2_button"></a> <span class="eo">instruisto</span>&nbsp;: instituteur</p>
@@ -188,6 +188,8 @@ include "dlekkapo.inc.php";
 					</div>
 				</div>
 			</fieldset>
+				<div class="notoj">
+				<p><span class="eo">[1]</span> Historiquement, les noms de pays étaient construits à partir du nom des habitants, auquel on ajoutait le suffixe -<b>ujo</b> qui désigne le contenant. Ainsi, à partir de <span class="eo">Franco</span> (Français), on construisait <span class="eo">Francujo</span> (France). Par la suite, certains espérantistes ont remarqué qu’un grand nombre de personnes originaires d’un pays n’habitent plus ce pays. Certains Français habitent ailleurs qu’en France, et la France accueille des personnes de tous les pays du monde. Pour cette raison, un nouveau suffixe a vu le jour&nbsp;: -<b>io</b>. Les deux formes cohabitent pour de nombreux pays&nbsp;: <span class="eo">rancujo/Francio</span>, <span class="eo">Belgujo/Belgio</span>…</p></div>
 
 			<?php 
 			} // fin section 3

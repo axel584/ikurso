@@ -190,7 +190,7 @@ CREATE TABLE personoj_vortoj (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE personoj_vortoj_respondoj (
-  `persono_id` int(11) NOT NULL AUTO_INCREMENT,
+  `persono_id` int(11) NOT NULL,
   `vorto_id` int(11) NOT NULL,
   `dato` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `bona` tinyint(1) NOT NULL,

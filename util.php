@@ -65,13 +65,14 @@ function normaligita($respondo) {
 }
 
 function kontroliRespondon($lernantaRespondo,$bonaRespondo) {
-	return preg_match("/^".normaligita($bonaRespondo)."$/",normaligita($lernantaRespondo));
+	// on n'utilise plus les expressions régulières car y'a des bugs et en plus, on aimerait trouver "de quelle réponse l'élève était le plus proche"
+	//return preg_match("/^".normaligita($bonaRespondo)."$/",normaligita($lernantaRespondo));
 	// attention, il ne faut pas utiliser != mais !==
-	// if (strpos($bonaRespondo,"|")!==false) {
-	// 	return kontroliRespondon($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliRespondon($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
-	// } else {
-	// 	return normaligita($lernantaRespondo)==normaligita($bonaRespondo);	
-	// }
+	if (strpos($bonaRespondo,"|")!==false) {
+		return kontroliRespondon($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliRespondon($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
+	} else {
+		return normaligita($lernantaRespondo)==normaligita($bonaRespondo);	
+	}
 }
 
 /*

@@ -91,27 +91,31 @@ include "dlekkapo.inc.php";
 		pour <em>tu</em>, <em>tsire</em> pour <em>tire</em>). Ainsi&nbsp;:
 		</p>
 		
-		<div class="vortlisto row">
-			<p class="col s3"><span class="eo">danco</span></p>
-			<p class="col s3"><span class="eo">leciono</span></p>
-			<p class="col s3"><span class="eo">biciklo</span></p>
-			<p class="col s3"><span class="eo">scienco</span></p>
-			<p class="col s3">(<u>dan</u>-tso)</p>
-			<p class="col s3">(lè-tsi-<u>o</u>-no)</p>
-			<p class="col s3">(bi-<u>tsi</u>-klo)</p>
-			<p class="col s3">(stsi-<u>èn</u>-tso)</p>
+		<div class="vortlisto">
+			<div class="row">
+				<p class="col s3"><a href="<?php echo $vojo;?>fr/son/vortoj/danco.mp3" class="sm2_button"></a><span class="eo">danco</span></p>
+				<p class="col s3"><a href="<?php echo $vojo;?>fr/son/vortoj/leciono.mp3" class="sm2_button"></a><span class="eo">leciono</span></p>
+				<p class="col s3"><a href="<?php echo $vojo;?>fr/son/vortoj/biciklo.mp3" class="sm2_button"></a><span class="eo">biciklo</span></p>
+				<p class="col s3"><a href="<?php echo $vojo;?>fr/son/vortoj/scienco.mp3" class="sm2_button"></a><span class="eo">scienco</span></p>
+				<p class="col s3">(<u>dan</u>-tso)</p>
+				<p class="col s3">(lè-tsi-<u>o</u>-no)</p>
+				<p class="col s3">(bi-<u>tsi</u>-klo)</p>
+				<p class="col s3">(stsi-<u>èn</u>-tso)</p>
+			</div>
 		</div>
 		<p class="parto">N’oubliez pas l’accent tonique&nbsp;: toujours sur l’avant-dernière syllabe.
 		Notez aussi que <b>h</b> est toujours prononcé&nbsp;:</p>
-		<div class="vortlisto row">
-			<p class="col s3"><span class="eo"><u>ha</u>vi</span></p>
-			<p class="col s3"><span class="eo"><u>hel</u>pi</span></p>
-			<p class="col s3"><span class="eo">lip<u>ha</u>roj</span></p>
-			<p class="col s3"><span class="eo">he<u>ro</u>a</span></p>
-			<p class="col s3">(avoir)</p>
-			<p class="col s3">(aider)</p>
-			<p class="col s3">(moustache)</p>
-			<p class="col s3">(héroique)</p>
+		<div class="vortlisto">
+			<div class="row">
+				<p class="col s3"><a href="<?php echo $vojo;?>fr/son/vortoj/havi.mp3" class="sm2_button"></a><span class="eo"><u>ha</u>vi</span></p>
+				<p class="col s3"><a href="<?php echo $vojo;?>fr/son/vortoj/helpi.mp3" class="sm2_button"></a><span class="eo"><u>hel</u>pi</span></p>
+				<p class="col s3"><a href="<?php echo $vojo;?>fr/son/vortoj/lipharoj.mp3" class="sm2_button"></a><span class="eo">lip<u>ha</u>roj</span></p>
+				<p class="col s3"><a href="<?php echo $vojo;?>fr/son/vortoj/heroa.mp3" class="sm2_button"></a><span class="eo">he<u>ro</u>a</span></p>
+				<p class="col s3">(avoir)</p>
+				<p class="col s3">(aider)</p>
+				<p class="col s3">(moustache)</p>
+				<p class="col s3">(héroique)</p>
+			</div>
 		</div>
 
 		<fieldset class="vortoj">
@@ -120,8 +124,8 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">scienco</span>&nbsp;: science</p>
-				<p class="col s12 m6"><span class="eo">helpi</span>&nbsp;: aider</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/scienco.mp3" class="sm2_button"></a><span class="eo">scienco</span>&nbsp;: science</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/helpi.mp3" class="sm2_button"></a><span class="eo">helpi</span>&nbsp;: aider</p>
 			</div>
 		</fieldset>
 		<?php 
@@ -150,7 +154,7 @@ include "dlekkapo.inc.php";
 		<p><span class="eo">malnova amiko</span>&nbsp;: un vieil ami (= un ami de longue date)</p>
 		
 		<p class="parto"><b>Proverbe</b></p>
-		<p><a href="<?php echo $vojo;?>fr/son/pv6.mp3" class="sm2_button"></a> Bona estas domo nova kaj amiko malnova.</p>
+		<p><a href="<?php echo $vojo;?>fr/son/frazoj/pv6.mp3" class="sm2_button"></a><span class="eo">Bona estas domo nova kaj amiko malnova.</span></p>
 		
 		<?php 
 		} // fin section 5
@@ -218,10 +222,10 @@ include "dlekkapo.inc.php";
 				<?php } ?>
 			</div>
 			<div class="vortlisto row">
-				<p class="col s6"><span class="eo">kastelo</span> : château</p>
-				<p class="col s6"><span class="eo">ĉapelo</span> : chapeau</p>
-				<p class="col s6"><span class="eo">dorso</span> : dos</p>
-				<p class="col s6"><span class="eo">vojaĝo</span> : voyage</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/kastelo.mp3" class="sm2_button"></a><span class="eo">kastelo</span> : château</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/cxapelo.mp3" class="sm2_button"></a><span class="eo">ĉapelo</span> : chapeau</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/dorso.mp3" class="sm2_button"></a><span class="eo">dorso</span> : dos</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/vojagxo.mp3" class="sm2_button"></a><span class="eo">vojaĝo</span> : voyage</p>
 			</div>
 		</fieldset>
 		<?php 
@@ -251,17 +255,17 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">junularo</span>&nbsp;: jeunesse</p>		
-				<p class="col s12 m6"><span class="eo">partopreni en</span>&nbsp;: participer à</p>
-				<p class="col s12 m6"><span class="eo">okazi</span>&nbsp;: avoir lieu</p>
-				<p class="col s12 m6"><span class="eo">Kebeko</span>&nbsp;: Québec (la ville)</p>
-				<p class="col s12 m6"><span class="eo">(aŭto)buseto</span>&nbsp;: minibus</p>
-				<p class="col s12 m6"><span class="eo">halti</span>&nbsp;: s’arrêter</p>
-				<p class="col s12 m6"><span class="eo">alveni al</span>&nbsp;: arriver à (ou dans)</p>
-				<p class="col s12 m6"><span class="eo">ankaŭ</span>&nbsp;: aussi</p>
-				<p class="col s12 m6"><span class="eo">viziti</span>&nbsp;: visiter</p>
-				<p class="col s12 m6"><span class="eo">seĝo</span>&nbsp;: siège</p>
-				<p class="col s12"><span class="eo">tagmanĝo</span>&nbsp;: repas du midi (France : déjeuner, Canada : dîner)</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/junularo.mp3" class="sm2_button"></a><span class="eo">junularo</span>&nbsp;: jeunesse</p>		
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/partopreni-en.mp3" class="sm2_button"></a><span class="eo">partopreni en</span>&nbsp;: participer à</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/okazi.mp3" class="sm2_button"></a><span class="eo">okazi</span>&nbsp;: avoir lieu</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/Kebeko.mp3" class="sm2_button"></a><span class="eo">Kebeko</span>&nbsp;: Québec (la ville)</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/auxtobuseto.mp3" class="sm2_button"></a><span class="eo">(aŭto)buseto</span>&nbsp;: minibus</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/halti.mp3" class="sm2_button"></a><span class="eo">halti</span>&nbsp;: s’arrêter</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/alveni-al.mp3" class="sm2_button"></a><span class="eo">alveni al</span>&nbsp;: arriver à (ou dans)</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/ankaux.mp3" class="sm2_button"></a><span class="eo">ankaŭ</span>&nbsp;: aussi</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/viziti.mp3" class="sm2_button"></a><span class="eo">viziti</span>&nbsp;: visiter</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/segxo.mp3" class="sm2_button"></a><span class="eo">seĝo</span>&nbsp;: siège</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/tagmangxo.mp3" class="sm2_button"></a><span class="eo">tagmanĝo</span>&nbsp;: repas du midi (France : déjeuner, Canada : dîner)</p>
 			</div>
 		</fieldset>
 
@@ -295,22 +299,22 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">veturi</span>&nbsp;: aller<sup>[1]</sup></p>
-				<p class="col s12 m6"><span class="eo">urbo</span>&nbsp;: ville</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/veturi.mp3" class="sm2_button"></a><span class="eo">veturi</span>&nbsp;: aller<sup>[1]</sup></p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/urbo.mp3" class="sm2_button"></a><span class="eo">urbo</span>&nbsp;: ville</p>
 				
-				<p class="col s12 m6"><span class="eo">admiri</span>&nbsp;: admirer</p>
-				<p class="col s12 m6"><span class="eo">besto</span>&nbsp;: bête, animal</p>
-				<p class="col s12 m6"><span class="eo">multaj</span>&nbsp;: beaucoup de, de nombreux</p>
-				<p class="col s12 m6"><span class="eo">kontinento</span>&nbsp;: continent</p>
-				<p class="col s12 m6"><span class="eo">plaĉi al</span>&nbsp;: plaire à</p>
-				<p class="col s12 m6"><span class="eo">urso</span>&nbsp;: ours</p>
-				<p class="col s12 m6"><span class="eo">enirejo</span>&nbsp;: entrée</p>
-				<p class="col s12 m6"><span class="eo">kaĝo</span>&nbsp;: cage</p>
-				<p class="col s12 m6"><span class="eo">Arkto</span>&nbsp;: Arctique</p>
-				<p class="col s12 m6"><span class="eo">ofte</span>&nbsp;: souvent</p>
-				<p class="col s12 m6"><span class="eo">simio</span>&nbsp;: singe</p>
-				<p class="col s12 m6"><span class="eo">interesa</span>&nbsp;: intéressant</p>
-				<p class="col s12 m6"><span class="eo">kompleta</span>&nbsp;: complet</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/admiri.mp3" class="sm2_button"></a><span class="eo">admiri</span>&nbsp;: admirer</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/besto.mp3" class="sm2_button"></a><span class="eo">besto</span>&nbsp;: bête, animal</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/multaj.mp3" class="sm2_button"></a><span class="eo">multaj</span>&nbsp;: beaucoup de, de nombreux</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kontinento.mp3" class="sm2_button"></a><span class="eo">kontinento</span>&nbsp;: continent</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/placxi-al.mp3" class="sm2_button"></a><span class="eo">plaĉi al</span>&nbsp;: plaire à</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/urso.mp3" class="sm2_button"></a><span class="eo">urso</span>&nbsp;: ours</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/enirejo.mp3" class="sm2_button"></a><span class="eo">enirejo</span>&nbsp;: entrée</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kagxo.mp3" class="sm2_button"></a><span class="eo">kaĝo</span>&nbsp;: cage</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/arkto.mp3" class="sm2_button"></a><span class="eo">Arkto</span>&nbsp;: Arctique</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/ofte.mp3" class="sm2_button"></a><span class="eo">ofte</span>&nbsp;: souvent</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/simio.mp3" class="sm2_button"></a><span class="eo">simio</span>&nbsp;: singe</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/interesa.mp3" class="sm2_button"></a><span class="eo">interesa</span>&nbsp;: intéressant</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kompleta.mp3" class="sm2_button"></a><span class="eo">kompleta</span>&nbsp;: complet</p>
 			</div>
 			<p><small>[1]</small> par un moyen de locomotion quelconque</p>
 		</fieldset>
@@ -348,8 +352,8 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">membro</span>&nbsp;: membre, adhérent</p>
-				<p class="col s12 m6"><span class="eo">klubo</span>&nbsp;: club</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/membro.mp3" class="sm2_button"></a><span class="eo">membro</span>&nbsp;: membre, adhérent</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/klubo.mp3" class="sm2_button"></a><span class="eo">klubo</span>&nbsp;: club</p>
 			</div>
 		</fieldset>
 
@@ -362,8 +366,8 @@ include "dlekkapo.inc.php";
 		après le verbe&nbsp;</p>
 		
 		<div class="row">
-			<p class="col s6"><span class="eo">Estas pano en la butiko.</span></p><p class="col s6">Il y a du pain dans la boutique.</p>
-			<p class="col s6"><span class="eo">Estas urso en la kaĝo.</span></p><p class="col s6">Un ours est dans la cage. Il y a un ours dans la cage.</p>
+			<p class="col s5"><span class="eo">Estas pano en la butiko.</span></p><p class="col s7">Il y a du pain dans la boutique.</p>
+			<p class="col s5"><span class="eo">Estas urso en la kaĝo.</span></p><p class="col s7">Un ours est dans la cage. Il y a un ours dans la cage.</p>
 		</div>
 		
 		<?php 

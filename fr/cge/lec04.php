@@ -16,9 +16,9 @@ include "dlekkapo.inc.php";
 			?>
 			<p class="parto">Vous avez déjà vu quelques façons de poser des questions&nbsp;:</p>
 			<div class="row vortlisto">
-				<p class="col s12"><span class="eo">Kiu loĝas en Brazilo?</span>&nbsp;: Qui habite au Brésil&nbsp;?</p>
-				<p class="col s12"><span class="eo">Kie estas la kato?</span>&nbsp;: Où est le chat&nbsp;?</p>
-				<p class="col s12"><span class="eo">Kiel vi fartas?</span>&nbsp;: Comment allez-vous&nbsp;? / Comment vas-tu&nbsp;?</p>
+				<p class="col s12"><span class="eo"><b>Kiu</b> loĝas en Brazilo?</span>&nbsp;: <b>Qui</b> habite au Brésil&nbsp;?</p>
+				<p class="col s12"><span class="eo"><b>Kie</b> estas la kato?</span>&nbsp;: <b>Où</b> est le chat&nbsp;?</p>
+				<p class="col s12"><span class="eo"><b>Kiel</b> vi fartas?</span>&nbsp;: <b>Comment</b> allez-vous&nbsp;? / <b>Comment</b> vas-tu&nbsp;?</p>
 			</div>
 				
 			<p class="parto">Jetons maintenant un coup d’œil sur les <b>questions et réponses</b> correspondant à une
@@ -37,11 +37,11 @@ include "dlekkapo.inc.php";
 				<p class="col s2">Énoncé :</p>
 				<p class="col s10"><span class="eo">Iu venis.</span> = Quelqu’un est venu.</p>
 				<p class="col s2">Question :</p>
-				<p class="col s10"><span class="eo"><b>Ĉu</b> iu venis?</span> = Est-ce que quelqu’un est venu&nbsp;?</p>
+				<p class="col s10"><span class="eo"><b>Ĉu</b> iu venis?</span> = <b>Est-ce que</b> quelqu’un est venu&nbsp;?</p>
 				<p class="col s2">Réponse :</p>
-				<p class="col s10"><span class="eo"><b>Jes</b>, mia frato venis.</span> = Oui, mon frère est venu.</p>
+				<p class="col s10"><span class="eo"><b>Jes</b>, mia frato venis.</span> = <b>Oui</b>, mon frère est venu.</p>
 				<p class="col s10 offset-s2">_________   ou   ___________ </p>
-				<p class="col s10 offset-s2"><span class="eo"><b>Ne</b>, neniu venis.</span> = Non, personne n’est venu.</p>
+				<p class="col s10 offset-s2"><span class="eo"><b>Ne</b>, neniu venis.</span> = <b>Non</b>, personne n’est venu.</p>
 			</div>
 				
 			<p>
@@ -86,36 +86,31 @@ include "dlekkapo.inc.php";
 			<p>Les syllabes accentuées sont soulignées et, comme d’habitude, le petit bouton à gauche vous indique la présence d’échantillons sonores associés. Cet exercice est avant tout un exercice de prononciation, aussi il n’est pas nécessaire de chercher à retenir tous ces mots.
 			</p>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-01.mp3" class="sm2_button"></a></p>
-				<p class="col s5"><b>a</b> (a comme dans <i>patte</i>)</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/s1-01.mp3" class="sm2_button"></a><b>a</b> (a comme dans <i>patte</i>)</p>
 				<p class="col s2 eo"><u>blan</u>ka</p>
 				<p class="col s2 eo"><u>sa</u>na</p>
 				<p class="col s2 eo"><u>gran</u>da</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-02.mp3" class="sm2_button"></a></p>
-				<p class="col s5"><b>e</b> (è comme dans <i>sec</i>)</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/s1-02.mp3" class="sm2_button"></a><b>e</b> (è comme dans <i>sec</i>)</p>
 				<p class="col s2 eo"><u>be</u>la</p>
 				<p class="col s2 eo"><u>ple</u>na</p>
 				<p class="col s2 eo"><u>ver</u>da</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-03.mp3" class="sm2_button"></a></p>
-				<p class="col s5"><b>i</b> (i comme dans <i>fini</i>)</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/s1-03.mp3" class="sm2_button"></a><b>i</b> (i comme dans <i>fini</i>)</p>
 				<p class="col s2 eo"><u>vi</u>vi</p>
 				<p class="col s2 eo"><u>a</u>mi</p>
 				<p class="col s2 eo"><u>trin</u>ki</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-04.mp3" class="sm2_button"></a></p>
-				<p class="col s5"><b>o</b> (o comme dans <i>botte</i>)</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/s1-04.mp3" class="sm2_button"></a><b>o</b> (o comme dans <i>botte</i>)</p>
 				<p class="col s2 eo"><u>o</u>vo</p>
 				<p class="col s2 eo"><u>do</u>mo</p>
 				<p class="col s2 eo"><u>ki</u>o</p>
 			</div>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/s1-05.mp3" class="sm2_button"></a></p>
-				<p class="col s5"><b>u</b> (ou comme dans <i>sou</i>)</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/s1-05.mp3" class="sm2_button"></a><b>u</b> (ou comme dans <i>sou</i>)</p>
 				<p class="col s2 eo"><u>u</u>nu</p>
 				<p class="col s2 eo"><u>plu</u>mo</p>
 				<p class="col s2 eo"><u>su</u>no</p>
@@ -179,8 +174,7 @@ include "dlekkapo.inc.php";
 			</div>
 			
 			<p class="rimarko"><strong>REMARQUE</strong> : 
-			Concernant <span class="eo">ŭ</span>, voir plus loin. On rencontre cette consonne dans les
-			«&nbsp;diphtongues&nbsp;».</p>
+			Concernant <span class="eo">ŭ</span>, voir la section suivante sur les diphtongues.</p>
 			
 			<p class="rimarko"><strong>NOTES</strong> : </p>
 			<ol>
@@ -275,67 +269,66 @@ include "dlekkapo.inc.php";
 			
 			<fieldset class="vortoj">
 				<div class="vortlisto row">
-					<div class="col s12 m4">
-						<p><span class="marque">•</span> <span class="eo">a<u>ĉe</u>ti</span>&nbsp;: acheter</p>
-						<p><span class="marque">•</span> <span class="eo">An<u>glu</u>jo</span>&nbsp;: Angleterre</p>
-						<p>&nbsp;&nbsp;<span class="eo">a<u>non</u>co</span>&nbsp;: annonce</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>an</u>taŭ</span>&nbsp;: avant</p>
-						<p><span class="marque">•</span> <span class="eo">bi<u>ci</u>klo</span>&nbsp;: bicyclette</p>
-						<p><span class="marque">•</span> <span class="eo">bild<u>kar</u>to</span>&nbsp;: carte postale</p>
-						<p><span class="marque">•</span> <span class="eo"><u>bil</u>do</span>&nbsp;: image</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ĉam</u>bro</span>&nbsp;: pièce</p>
-						<p><span class="marque">•</span> <span class="eo">Ĉi<u>ni</u>o</span>&nbsp;: Chine</p>
-						<p><span class="marque">•</span> <span class="eo">ĉoko<u>la</u>do</span>&nbsp;: chocolat</p>
-						<p><span class="marque">•</span> <span class="eo"><u>dan</u>co</span>&nbsp;: danse</p>
-						<p><span class="marque">•</span> <span class="eo">de<u>zi</u>ri</span>&nbsp;: désirer</p>
-						<p><span class="marque">•</span> <span class="eo"><u>do</u>mo</span>&nbsp;: maison</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ed</u>zo</span>&nbsp;: époux</p>
-						<p><span class="marque">•</span> <span class="eo">ed<u>zi</u>no</span>&nbsp;: épouse</p>
-						<p><span class="marque">•</span> <span class="eo">el (3)</span>&nbsp;: hors de</p>
-						<p><span class="marque">•</span> <span class="eo">esperan<u>tis</u>to</span>&nbsp;: espérantiste</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>e</u>ĥo</span>&nbsp;: écho</p>
+					<div class="col s12 m6">
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/acxeti.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">a<u>ĉe</u>ti</span>&nbsp;: acheter</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/anglujo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">An<u>glu</u>jo</span>&nbsp;: Angleterre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/anonco.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo">a<u>non</u>co</span>&nbsp;: annonce</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/antaux.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>an</u>taŭ</span>&nbsp;: avant</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/biciklo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">bi<u>ci</u>klo</span>&nbsp;: bicyclette</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/bildkarto.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">bild<u>kar</u>to</span>&nbsp;: carte postale</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/bildo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>bil</u>do</span>&nbsp;: image</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/cxambro.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ĉam</u>bro</span>&nbsp;: pièce</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/cxinio.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">Ĉi<u>ni</u>o</span>&nbsp;: Chine</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/cxokolado.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ĉoko<u>la</u>do</span>&nbsp;: chocolat</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/danco.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>dan</u>co</span>&nbsp;: danse</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/deziri.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">de<u>zi</u>ri</span>&nbsp;: désirer</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/domo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>do</u>mo</span>&nbsp;: maison</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/edzo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ed</u>zo</span>&nbsp;: époux</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/edzino.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ed<u>zi</u>no</span>&nbsp;: épouse</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/el.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">el (3)</span>&nbsp;: hors de</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/esperantisto.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">esperan<u>tis</u>to</span>&nbsp;: espérantiste</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ehxo.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>e</u>ĥo</span>&nbsp;: écho</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/euxropo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">Eŭ<u>ro</u>po</span>&nbsp;: Europe</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/euxklido.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo">Eŭ<u>kli</u>do</span>&nbsp;: Euclide</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/geografio.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo">geogra<u>fi</u>o</span>&nbsp;: géographie</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/gustumi.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">gus<u>tu</u>mi</span>&nbsp;: goûter</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/gxardeno.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ĝar<u>de</u>no</span>&nbsp;: jardin</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/gxojo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ĝo</u>jo</span>&nbsp;: joie</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/hxoro.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>ĥo</u>ro</span>&nbsp;: chœur</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/infano.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">in<u>fa</u>no</span>&nbsp;: enfant</p>
+
+<p><a href="<?php echo $vojo;?>fr/son/vortoj/iu.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">iu</span>&nbsp;: quelqu’un</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jahxto.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>jaĥ</u>to</span>&nbsp;: yacht</p>
 					</div>
-					<div class="col s12 m4">
-						<p><span class="marque">•</span> <span class="eo">Eŭ<u>ro</u>po</span>&nbsp;: Europe</p>
-						<p>&nbsp;&nbsp;<span class="eo">Eŭ<u>kli</u>do</span>&nbsp;: Euclide</p>
-						<p>&nbsp;&nbsp;<span class="eo">geogra<u>fi</u>o</span>&nbsp;: géographie</p>
-						<p><span class="marque">•</span> <span class="eo">gus<u>tu</u>mi</span>&nbsp;: goûter</p>
-						<p><span class="marque">•</span> <span class="eo">ĝar<u>de</u>no</span>&nbsp;: jardin</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ĝo</u>jo</span>&nbsp;: joie</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>ĥo</u>ro</span>&nbsp;: chœur</p>
-						<p><span class="marque">•</span> <span class="eo">in<u>fa</u>no</span>&nbsp;: enfant</p>
-						<p><span class="marque">•</span> <span class="eo">iu</span>&nbsp;: quelqu’un</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>jaĥ</u>to</span>&nbsp;: yacht</p>
-						<p><span class="marque">•</span> <span class="eo">jam</span>&nbsp;: déjà</p>
-						<p><span class="marque">•</span> <span class="eo">ĵa<u>lu</u>za</span>&nbsp;: jaloux</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ĵaŭ</u>do</span>&nbsp;: jeudi</p>
-						<p><span class="marque">•</span> <span class="eo">ĵur<u>na</u>lo</span>&nbsp;: journal</p>
-						<p><span class="marque">•</span> <span class="eo">kaj (4)</span>&nbsp;: et</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ki</u>o</span>&nbsp;: quoi</p>
-						<p><span class="marque">•</span> <span class="eo">ko<u>lek</u>ti</span>&nbsp;: collectionner, rassembler</p>
-						<p><span class="marque">•</span> <span class="eo"><u>lan</u>do</span>&nbsp;: pays</p>
-					</div>
-					<div class="col s12 m4">
-						<p><span class="marque">•</span> <span class="eo">leci<u>o</u>no</span>&nbsp;: leçon</p>
-						<p><span class="marque">•</span> <span class="eo">ler<u>ne</u>jo</span>&nbsp;: école</p>
-						<p><span class="marque">•</span> <span class="eo"><u>li</u>bro</span>&nbsp;: livre</p>
-						<p><span class="marque">•</span> <span class="eo"><u>lo</u>ĝi</span>&nbsp;: habiter</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>ma</u>jo</span>&nbsp;: mai</p>
-						<p><span class="marque">•</span> <span class="eo"><u>man</u>ĝi</span>&nbsp;: manger</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>mej</u>lo</span>&nbsp;: mille (1,8 km)</p>
-						<p>&nbsp;&nbsp;<span class="eo"><u>mu</u>ro</span>&nbsp;: mur</p>
-						<p>&nbsp;&nbsp;<span class="eo">mo<u>nu</u>jo</span>&nbsp;: porte-monnaie</p>
-						<p><span class="marque">•</span> <span class="eo">neŭ<u>tra</u>la</span>&nbsp;: neutre</p>
-						<p><span class="marque">•</span> <span class="eo"><u>o</u>vo</span>&nbsp;: œuf</p>
-						<p><span class="marque">•</span> <span class="eo">plej</span>&nbsp;: plus (superlatif)</p>
-						<p><span class="marque">•</span> <span class="eo">poŝt<u>mar</u>ko</span>&nbsp;: timbre-poste</p>
-						<p>&nbsp;&nbsp;<span class="eo">sa<u>ge</u>to</span>&nbsp;: fléchette</p>
-						<p><span class="marque">•</span> <span class="eo">sand<u>vi</u>ĉo</span>&nbsp;: sandwich</p>
-						<p><span class="marque">•</span> <span class="eo"><u>spor</u>to</span>&nbsp;: sport</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ŝu</u>o</span>&nbsp;: chaussure</p>
-						<p>&nbsp;&nbsp;<span class="eo">tea<u>tra</u>ĵo</span>&nbsp;: pièce de théâtre</p>
-						<p><span class="marque">•</span> <span class="eo"><u>ve</u>ni</span>&nbsp;: venir</p>
-						<p><span class="marque">•</span> <span class="eo">vo<u>ja</u>ĝi</span>&nbsp;: voyager</p>
+					<div class="col s12 m6">
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jam.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">jam</span>&nbsp;: déjà</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jxaluza.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ĵa<u>lu</u>za</span>&nbsp;: jaloux</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jxauxdo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ĵaŭ</u>do</span>&nbsp;: jeudi</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jxurnalo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ĵur<u>na</u>lo</span>&nbsp;: journal</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kaj.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">kaj (4)</span>&nbsp;: et</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kio.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ki</u>o</span>&nbsp;: quoi</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kolekti.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ko<u>lek</u>ti</span>&nbsp;: collectionner, rassembler</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/lando.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>lan</u>do</span>&nbsp;: pays</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/leciono.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">leci<u>o</u>no</span>&nbsp;: leçon</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/lernejo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ler<u>ne</u>jo</span>&nbsp;: école</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/libro.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>li</u>bro</span>&nbsp;: livre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/logxi.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>lo</u>ĝi</span>&nbsp;: habiter</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/majo.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>ma</u>jo</span>&nbsp;: mai</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/mangxi.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>man</u>ĝi</span>&nbsp;: manger</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/mejlo.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>mej</u>lo</span>&nbsp;: mille (1,8 km)</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/muro.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>mu</u>ro</span>&nbsp;: mur</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/monujo.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo">mo<u>nu</u>jo</span>&nbsp;: porte-monnaie</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/neuxtrala.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">neŭ<u>tra</u>la</span>&nbsp;: neutre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ovo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>o</u>vo</span>&nbsp;: œuf</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/plej.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">plej</span>&nbsp;: plus (superlatif)</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/posxtmarko.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">poŝt<u>mar</u>ko</span>&nbsp;: timbre-poste</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sageto.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo">sa<u>ge</u>to</span>&nbsp;: fléchette</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sandvicxo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">sand<u>vi</u>ĉo</span>&nbsp;: sandwich</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sporto.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>spor</u>to</span>&nbsp;: sport</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sxuo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ŝu</u>o</span>&nbsp;: chaussure</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/teatrajxo.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo">tea<u>tra</u>ĵo</span>&nbsp;: pièce de théâtre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/veni.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ve</u>ni</span>&nbsp;: venir</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/vojagxi.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">vo<u>ja</u>ĝi</span>&nbsp;: voyager</p>
 					</div>
 				</div>
 			</fieldset>		
@@ -358,21 +351,21 @@ include "dlekkapo.inc.php";
 
 		<p>Exemples :</p>
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">La butiko estas <b>apud</b> la lernejo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/prep-01.mp3" class="sm2_button"></a><span class="eo">La butiko estas <b>apud</b> la lernejo.</span></p>
 			<p class="col s6">La boutique est à côté de l’école.</p>
-			<p class="col s6"><span class="eo">La tablo estas <b>ĉe</b> la muro.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/prep-02.mp3" class="sm2_button"></a><span class="eo">La tablo estas <b>ĉe</b> la muro.</span></p>
 			<p class="col s6">La table est tout près du mur, contre le mur.</p>
-			<p class="col s6"><span class="eo">Estas biciklo <b>ĉe</b> la domo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/prep-03.mp3" class="sm2_button"></a><span class="eo">Estas biciklo <b>ĉe</b> la domo.</span></p>
 			<p class="col s6">Il y a un vélo contre la maison.</p>
-			<p class="col s6"><span class="eo">Mia frato iras <b>al</b> Anglujo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/prep-04.mp3" class="sm2_button"></a><span class="eo">Mia frato iras <b>al</b> Anglio.</span></p>
 			<p class="col s6">Mon frère va en Angleterre.</p>
-			<p class="col s6"><span class="eo">Ŝi respondis <b>al</b> mi.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/prep-05.mp3" class="sm2_button"></a><span class="eo">Ŝi respondis <b>al</b> mi.</span></p>
 			<p class="col s6">Elle m’a répondu.</p>
-			<p class="col s6"><span class="eo">Mia amiko venas <b>de</b> Pollando.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/prep-06.mp3" class="sm2_button"></a><span class="eo">Mia amiko venas <b>de</b> Pollando.</span></p>
 			<p class="col s6">Mon ami vient de Pologne.</p>
-			<p class="col s6"><span class="eo">La filo <b>de</b> mia frato manĝas ovon <b>el</b> ĉokolado</span>.</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/prep-07.mp3" class="sm2_button"></a><span class="eo">La filo <b>de</b> mia frato manĝas ovon <b>el</b> ĉokolado</span>.</p>
 			<p class="col s6">Le fils de mon frère mange un œuf en chocolat.</p>
-			<p class="col s6"><span class="eo">Li kuras <b>el</b> la lernejo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/prep-08.mp3" class="sm2_button"></a><span class="eo">Li kuras <b>el</b> la lernejo.</span></p>
 			<p class="col s6">Il court hors de l’école, il sort en courant de l’école.</p>
 		</div>
 		
@@ -400,9 +393,9 @@ include "dlekkapo.inc.php";
 		?>
 			<p class="parto">Vous avez vu dans la leçon précédente quelques mots de vocabulaire se rapportant à la date&nbsp;: </p>
 			<div class="vortlisto row">
-				<p class="col s6 m4"><span class="eo">semajno</span>&nbsp;: semaine</p>
-				<p class="col s6 m4"><span class="eo">tago</span>&nbsp;: jour</p>
-				<p class="col s6 m4"><span class="eo">jaro</span>&nbsp;: année</p>
+				<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/semajno.mp3" class="sm2_button"></a><span class="eo">semajno</span>&nbsp;: semaine</p>
+				<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/tago.mp3" class="sm2_button"></a><span class="eo">tago</span>&nbsp;: jour</p>
+				<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/jaro.mp3" class="sm2_button"></a><span class="eo">jaro</span>&nbsp;: année</p>
 			</div>
 			
 			<p>Vous avez également appris comment dire les nombres, et vous savez donc déjà dire par exemple en quelle année nous sommes.</p>
@@ -414,68 +407,68 @@ include "dlekkapo.inc.php";
 			
 			<fieldset class="vortoj">
 				<div class="vortlisto row">
-					<p class="col s12"><span class="eo">dato</span>&nbsp;: date</p>
-					<p class="col s6 m4"><span class="eo">hodiaŭ</span>&nbsp;: aujourd’hui</p>
-					<p class="col s6 m4"><span class="eo">morgaŭ</span>&nbsp;: demain</p>
-					<p class="col s6 m4"><span class="eo">hieraŭ</span>&nbsp;: hier</p>
+					<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/dato.mp3" class="sm2_button"></a><span class="eo">dato</span>&nbsp;: date</p>
+					<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/hodiaux.mp3" class="sm2_button"></a><span class="eo">hodiaŭ</span>&nbsp;: aujourd’hui</p>
+					<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/morgaux.mp3" class="sm2_button"></a><span class="eo">morgaŭ</span>&nbsp;: demain</p>
+					<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/hieraux.mp3" class="sm2_button"></a><span class="eo">hieraŭ</span>&nbsp;: hier</p>
 				</div>
 				<br>
-				<p>Les jours de la semaine&nbsp;: <span class="eo">la tagoj de la semajno</span></p>
+				<p>Les jours de la semaine&nbsp;: <a href="<?php echo $vojo;?>fr/son/vortoj/tagoj-de-la-semajno.mp3" class="sm2_button"></a><span class="eo">la tagoj de la semajno</span></p>
 				<div class="vortlisto row">
 					<div class="col s6">
-						<p><span class="eo">lundo</span>&nbsp;: lundi</p>
-						<p><span class="eo">mardo</span>&nbsp;: mardi</p>
-						<p><span class="eo">merkredo</span>&nbsp;: mercredi</p>
-						<p><span class="eo">ĵaŭdo</span>&nbsp;: jeudi</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/lundo.mp3" class="sm2_button"></a><span class="eo">lundo</span>&nbsp;: lundi</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/mardo.mp3" class="sm2_button"></a><span class="eo">mardo</span>&nbsp;: mardi</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/merkredo.mp3" class="sm2_button"></a><span class="eo">merkredo</span>&nbsp;: mercredi</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jxauxdo.mp3" class="sm2_button"></a><span class="eo">ĵaŭdo</span>&nbsp;: jeudi</p>
 					</div>
 					<div class="col s6">
-						<p><span class="eo">vendredo</span>&nbsp;: vendredi</p>
-						<p><span class="eo">sabato</span>&nbsp;: samedi</p>
-						<p><span class="eo">dimanĉo</span>&nbsp;: dimanche</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/vendredo.mp3" class="sm2_button"></a><span class="eo">vendredo</span>&nbsp;: vendredi</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sabato.mp3" class="sm2_button"></a><span class="eo">sabato</span>&nbsp;: samedi</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/dimancxo.mp3" class="sm2_button"></a><span class="eo">dimanĉo</span>&nbsp;: dimanche</p>
 					</div>
 				</div>
 				<br>
-				<p>Les mois de l’année&nbsp;: <span class="eo">la monatoj de la jaro</span></p>
+				<p>Les mois de l’année&nbsp;: <a href="<?php echo $vojo;?>fr/son/vortoj/monatoj-de-la-jaro.mp3" class="sm2_button"></a><span class="eo">la monatoj de la jaro</span></p>
 				<div class="vortlisto row">
 					<div class="col s6">
-						<p><span class="eo">januaro</span>&nbsp;: janvier</p>
-						<p><span class="eo">februaro</span>&nbsp;: février</p>
-						<p><span class="eo">marto</span>&nbsp;: mars</p>
-						<p><span class="eo">aprilo</span>&nbsp;: avril</p>
-						<p><span class="eo">majo</span>&nbsp;: mai</p>
-						<p><span class="eo">junio</span>&nbsp;: juin</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/januaro.mp3" class="sm2_button"></a><span class="eo">januaro</span>&nbsp;: janvier</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/februaro.mp3" class="sm2_button"></a><span class="eo">februaro</span>&nbsp;: février</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/marto.mp3" class="sm2_button"></a><span class="eo">marto</span>&nbsp;: mars</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/aprilo.mp3" class="sm2_button"></a><span class="eo">aprilo</span>&nbsp;: avril</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/majo.mp3" class="sm2_button"></a><span class="eo">majo</span>&nbsp;: mai</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/junio.mp3" class="sm2_button"></a><span class="eo">junio</span>&nbsp;: juin</p>
 					</div>
 					<div class="col s6">
-						<p><span class="eo">julio</span>&nbsp;: juillet</p>
-						<p><span class="eo">aŭgusto</span>&nbsp;: août</p>
-						<p><span class="eo">septembro</span>&nbsp;: septembre</p>
-						<p><span class="eo">oktobro</span>&nbsp;: octobre</p>
-						<p><span class="eo">novembro</span>&nbsp;: novembre</p>
-						<p><span class="eo">decembro</span>&nbsp;: décembre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/julio.mp3" class="sm2_button"></a><span class="eo">julio</span>&nbsp;: juillet</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/auxgusto.mp3" class="sm2_button"></a><span class="eo">aŭgusto</span>&nbsp;: août</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/septembro.mp3" class="sm2_button"></a><span class="eo">septembro</span>&nbsp;: septembre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/oktobro.mp3" class="sm2_button"></a><span class="eo">oktobro</span>&nbsp;: octobre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/novembro.mp3" class="sm2_button"></a><span class="eo">novembro</span>&nbsp;: novembre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/decembro.mp3" class="sm2_button"></a><span class="eo">decembro</span>&nbsp;: décembre</p>
 					</div>
 				</div>
 			</fieldset>
 			
 			<p class="parto">Exemples :</p>
 			<div class="vortlisto row">
-				<p class="col s12"><span class="eo">Hodiaŭ estas lundo la dua de aŭgusto.</span>&nbsp;: Aujourd’hui nous sommes le lundi 2 août.</p>
-				<p class="col s12"><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.</span>&nbsp;: Demain nous serons le mardi 3 août.</p>
-				<p class="col s12"><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.</span>&nbsp;: Hier c’était dimanche 1<sup>er</sup> août.</p>
-				<p class="col s12"><span class="eo">En januaro estas tri dek unu tagoj.</span>&nbsp;: En janvier il y a 31 jours.</p>
-				<p class="col s12"><span class="eo">La unua de Majo estas la Tago de la Laboro</span>&nbsp;: Le premier mai est la Fête du Travail (littéralement "le Jour du Travail")</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-01.mp3" class="sm2_button"></a><span class="eo">Hodiaŭ estas lundo la dua de aŭgusto.</span>&nbsp;: Aujourd’hui nous sommes le lundi 2 août.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-02.mp3" class="sm2_button"></a><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.</span>&nbsp;: Demain nous serons le mardi 3 août.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-03.mp3" class="sm2_button"></a><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.</span>&nbsp;: Hier c’était dimanche 1<sup>er</sup> août.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-04.mp3" class="sm2_button"></a><span class="eo">En januaro estas tri dek unu tagoj.</span>&nbsp;: En janvier il y a 31 jours.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-05.mp3" class="sm2_button"></a><span class="eo">La unua de Majo estas la Tago de la Laboro</span>&nbsp;: Le premier mai est la Fête du Travail (littéralement "le Jour du Travail")</p>
 			</div>
 			
 			<p class="parto">Lorsqu’on indique une date précise, on emploie souvent la terminaison <b>n</b> de l’accusatif. Vous verrez par la suite que l’accusatif est employé pour certains compléments, et pas uniquement pour le complément direct.</p>
 							
 			<div class="vortlisto row">
-				<p><span class="eo">Ili venos la deka<b>n</b> de aprilo.</span>&nbsp;: Ils viendront le 10 avril.</p>
-				<p><span class="eo">La dua<b>n</b> de julio, mi edziĝos. </span>&nbsp;: Le 2 juillet, je me marierai.</p>
-				<p><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2018</span>&nbsp;: Paris, le 15 décembre 2018 (par exemple au début d’une lettre)</p>
+				<p><a href="<?php echo $vojo;?>fr/son/frazoj/dato-06.mp3" class="sm2_button"></a><span class="eo">Ili venos la deka<b>n</b> de aprilo.</span>&nbsp;: Ils viendront le 10 avril.</p>
+				<p><a href="<?php echo $vojo;?>fr/son/frazoj/dato-07.mp3" class="sm2_button"></a><span class="eo">La dua<b>n</b> de julio, mi edziĝos. </span>&nbsp;: Le 2 juillet, je me marierai.</p>
+				<p><a href="<?php echo $vojo;?>fr/son/frazoj/dato-08.mp3" class="sm2_button"></a><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2018</span>&nbsp;: Paris, le 15 décembre 2018 (par exemple au début d’une lettre)</p>
 			</div>
 				
 			<p class="parto">On peut utiliser également la forme adverbiale pour les jours et les mois.</p>
 			<div class="vortlisto row">
-				<p><span class="eo">Dimanĉ<b>e</b> mi ne laboras.</span>&nbsp;: Je ne travaille pas le dimanche.</p>
+				<p><a href="<?php echo $vojo;?>fr/son/frazoj/dato-09.mp3" class="sm2_button"></a><span class="eo">Dimanĉ<b>e</b> mi ne laboras.</span>&nbsp;: Je ne travaille pas le dimanche.</p>
 			</div>
 			
 			<div class="card-panel blue lighten-5">Cela fait beaucoup de nouvelles choses à mémoriser, mais ne vous tracassez pas trop. Prenez un peu de temps pour assimiler tout ça et n’hésitez pas à revenir relire cette page dans quelques jours. N’oubliez pas de pratiquer régulièrement, par exemple en indiquant la date du jour à votre correcteur quand vous lui enverrez vos prochains exercices.</div>

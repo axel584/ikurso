@@ -124,7 +124,7 @@ $korektanto = apartigiPersonon($plejTaugaKorektanto);
 $query = "update personoj set rajtoj='S' where id=".$persono_id; // cxiukaze igas lin studanto.
 $result = $bdd->exec($query);
 		
-$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso) VALUES (NOW(),NOW(),".$plejTaugaKorektanto.",".$persono_id.",'".$kurso."')";
+$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso,nunleciono) VALUES (NOW(),NOW(),".$plejTaugaKorektanto.",".$persono_id.",'".$kurso."',1)";
 $result = $bdd->exec($query);
 
 // sendi mesagxon al la nova studanto

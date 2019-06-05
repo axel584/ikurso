@@ -498,6 +498,12 @@ p.dauro::before {
 .vortlisto p {
 	margin-bottom: 0;
 }
+.vortlisto h2 {
+	font-size: 1em;
+	font-weight: 500;
+	color: rgba(0,0,0,0.87);
+	margin: 1.5em 0 0.5em 0;
+}
 .vortlisto i.material-icons {
 	vertical-align: text-bottom;
 	color: #2196F3;

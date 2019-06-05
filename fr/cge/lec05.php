@@ -19,25 +19,27 @@ include "dlekkapo.inc.php";
 		<p class="parto">Un petit récapitulatif des expressions que nous avons déjà vues et quelques nouvelles expressions.</p>
 		<div class="vortlisto">
 			<div class="row">
-				<p class="col s6 m3 eo">Saluton !</p><p class="col s6 m3">Salut !</p>
-				<p class="col s6 m3 eo">Bonan tagon !</p><p class="col s6 m3">Bonjour !</p>
-				<p class="col s6 m3 eo">Bonan matenon !</p><p class="col s6 m3">Bonjour ! (le matin)</p>
-				<p class="col s6 m3 eo">Bonan vesperon !</p><p class="col s6 m3">Bonsoir !</p>
-				<p class="col s6 m3 eo">Bonan nokton !</p><p class="col s6 m3">Bonne nuit !</p>
+				<p class="col s6 m3 eo"><a href="<?php echo $vojo;?>fr/son/vortoj/saluton.mp3" class="sm2_button"></a>Saluton!</p><p class="col s6 m3">Salut&nbsp;!</p>
+				<p class="col s6 m3 eo"><a href="<?php echo $vojo;?>fr/son/vortoj/bonan-tagon.mp3" class="sm2_button"></a>Bonan tagon!</p><p class="col s6 m3">Bonjour&nbsp;!</p>
+				<p class="col s6 m3 eo"><a href="<?php echo $vojo;?>fr/son/vortoj/bonan-matenon.mp3" class="sm2_button"></a>Bonan matenon!</p><p class="col s6 m3">Bonjour&nbsp;! (le matin)</p>
+				<p class="col s6 m3 eo"><a href="<?php echo $vojo;?>fr/son/vortoj/bonan-vesperon.mp3" class="sm2_button"></a>Bonan vesperon!</p><p class="col s6 m3">Bonsoir&nbsp;!</p>
+				<p class="col s6 m3 eo"><a href="<?php echo $vojo;?>fr/son/vortoj/bonan-nokton.mp3" class="sm2_button"></a>Bonan nokton!</p><p class="col s6 m3">Bonne nuit&nbsp;!</p>
 			</div><div class="row">
-				<p class="col s6 m3 eo">Ĝis revido !</p><p class="col s6 m3">Au revoir !</p>
-				<p class="col s6 m3 eo">Adiaŭ !</p><p class="col s6 m3">Adieu !</p>
+				<p class="col s6 m3 eo"><a href="<?php echo $vojo;?>fr/son/vortoj/gxis-revido.mp3" class="sm2_button"></a>Ĝis revido!</p><p class="col s6 m3">Au revoir&nbsp;!</p>
+				<p class="col s6 m3 eo"><a href="<?php echo $vojo;?>fr/son/vortoj/adiaux.mp3" class="sm2_button"></a>Adiaŭ!</p><p class="col s6 m3">Adieu&nbsp;!</p>
 			</div>
 		</div>
 		<p></p>
 
-		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">Kiel vi fartas ?</span></p><p class="col s6">Comment allez-vous ?</p>
-			<p class="col s5 offset-s1"><span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">Bien. Et vous ?</p>
-			<p class="col s5 offset-s1"><span class="eo">– Bonege.</span></p><p class="col s6">Parfaitement bien.</p>
-			<p class="col s5 offset-s1"><span class="eo">– Sufiĉe bone.</span></p><p class="col s6">Assez bien. (ça va)</p>
-			<p class="col s5 offset-s1"><span class="eo">– Ne tro bone.</span></p><p class="col s6">Pas trop bien.</p>
-		</div>
+			<div class="vortlisto">
+				<div class="row">
+					<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/kiel-vi-fartas.mp3" class="sm2_button"></a> <span class="eo">Kiel vi fartas?</span></p><p class="col s6">Comment allez-vous&nbsp;?</p>
+					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/bone-kaj-vi.mp3" class="sm2_button"></a> <span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">– Bien. Et vous&nbsp;?</p>
+					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/bonege.mp3" class="sm2_button"></a> <span class="eo">– Bonege.</span></p><p class="col s6">– Parfaitement bien.</p>
+					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/suficxe-bone.mp3" class="sm2_button"></a> <span class="eo">– Sufiĉe bone.</span></p><p class="col s6">– Assez bien. (ça va)</p>
+					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/ne-trop-bone.mp3" class="sm2_button"></a> <span class="eo">– Ne tro bone.</span></p><p class="col s6">– Pas trop bien.</p>
+				</div>
+			</div>
 
 		<fieldset class="vortoj">
 			<legend>EXPRESSIONS À RETENIR</legend>
@@ -45,11 +47,11 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Les expressions suivantes seront automatiquement ajoutées à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s6"><span class="eo">Bonan apetiton !</span></p><p class="col s6">Bon appétit !</p>
-				<p class="col s6"><span class="eo">Je via sano !</span></p><p class="col s6">À votre santé !</p>
-				<p class="col s6"><span class="eo">Same al vi !</span></p><p class="col s6">Pareillement !</p>
-				<p class="col s6"><span class="eo">Dankon !</span></p><p class="col s6">Merci !</p>
-				<p class="col s6"><span class="eo">Ne dankinde !</span></p><p class="col s6">Pas de quoi !</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/bonan-apetiton.mp3" class="sm2_button"></a><span class="eo">Bonan apetiton!</span></p><p class="col s6">Bon appétit&nbsp;!</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/je-via-sano.mp3" class="sm2_button"></a><span class="eo">Je via sano!</span></p><p class="col s6">À votre santé&nbsp;!</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/same-al-vi.mp3" class="sm2_button"></a><span class="eo">Same al vi!</span></p><p class="col s6">Pareillement&nbsp;!</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/dankon.mp3" class="sm2_button"></a><span class="eo">Dankon!</span></p><p class="col s6">Merci&nbsp;!</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/ne-dankinde.mp3" class="sm2_button"></a><span class="eo">Ne dankinde!</span></p><p class="col s6">Pas de quoi&nbsp;!</p>
 			</div>
 		</fieldset>
 
@@ -82,14 +84,14 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Les mots suivants seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">nomo</span>&nbsp;: nom</p>
-				<p class="col s12 m6"><span class="eo">bildkarto</span>&nbsp;: carte postale (illustrée)</p>
-				<p class="col s12 m6"><span class="eo">lingvo</span>&nbsp;: langue (que l’on parle)</p>
-				<p class="col s12 m6"><span class="eo">komenci</span>&nbsp;: commencer (quelque chose)</p>
-				<p class="col s12 m6"><span class="eo">interŝanĝi</span>&nbsp;: échanger</p>
-				<p class="col s12 m6"><span class="eo">ŝati</span>&nbsp;: aimer, apprécier</p>
-				<p class="col s12 m6"><span class="eo">lerni</span>&nbsp;: apprendre</p>
-				<p class="col s12 m6"><span class="eo">kun</span>&nbsp;: avec</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/nomo.mp3" class="sm2_button"></a><span class="eo">nomo</span>&nbsp;: nom</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/bildkarto.mp3" class="sm2_button"></a><span class="eo">bildkarto</span>&nbsp;: carte postale (illustrée)</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/lingvo.mp3" class="sm2_button"></a><span class="eo">lingvo</span>&nbsp;: langue (que l’on parle)</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/komenci.mp3" class="sm2_button"></a><span class="eo">komenci</span>&nbsp;: commencer (quelque chose)</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/intersxangxi.mp3" class="sm2_button"></a><span class="eo">interŝanĝi</span>&nbsp;: échanger</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/sxati.mp3" class="sm2_button"></a><span class="eo">ŝati</span>&nbsp;: aimer, apprécier</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/lerni.mp3" class="sm2_button"></a><span class="eo">lerni</span>&nbsp;: apprendre</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kun.mp3" class="sm2_button"></a><span class="eo">kun</span>&nbsp;: avec</p>
 			</div>
 		</fieldset>
 
@@ -168,53 +170,53 @@ include "dlekkapo.inc.php";
 
 		<p class="parto">Les corrélatifs se terminant par <b>U</b> sont souvent des adjectifs accompagnant un nom&nbsp;:</p>
 		<div class="row">
-			<p class="col s6"><span class="eo">Kiun frukton vi volas?</span></p><p class="col s6">Quel fruit veux-tu&nbsp;?</p>
-			<p class="col s6"><span class="eo">Mi volas tiun frukton.</span></p><p class="col s6">Je veux ce fruit(-là).</p>
-			<p class="col s6"><span class="eo">Mi volas neniun frukton.</span></p><p class="col s6">Je ne veux aucun fruit.</p>
-			<p class="col s6"><span class="eo">Kiun amikon vi renkontis?</span></p><p class="col s6">Quel ami avez-vous rencontré&nbsp;?</p>
+			<p class="col s6"><span class="eo"><b>Kiun</b> frukton vi volas?</span></p><p class="col s6"><b>Quel</b> fruit veux-tu&nbsp;?</p>
+			<p class="col s6"><span class="eo">Mi volas <b>tiun</b> frukton.</span></p><p class="col s6">Je veux <b>ce</b> fruit.</p>
+			<p class="col s6"><span class="eo">Mi volas <b>neniun</b> frukton.</span></p><p class="col s6">Je ne veux <b>aucun</b> fruit.</p>
+			<p class="col s6"><span class="eo"><b>Kiun</b> amikon vi renkontis?</span></p><p class="col s6"><b>Quel</b> ami avez-vous rencontré&nbsp;?</p>
 		</div>
 
 		<p>Cependant, le nom peut parfois être sous-entendu si le contexte est clair&nbsp;:</p>
 		<div class="row">
-			<p class="col s6"><span class="eo">Jen fruktoj: kiun (frukton) vi volas?</span></p>
-			<p class="col s6">Voici des fruits : lequel veux-tu&nbsp;? </p>
-			<p class="col s6"><span class="eo">– Mi volas tiun (frukton).</span></p>
-			<p class="col s6">– Je veux celui-là.</p>
-			<p class="col s6"><span class="eo">– Mi volas neniun (frukton).</span></p>
-			<p class="col s6">– Je n’en veux aucun.</p>
-			<p class="col s6"><span class="eo">Jen la frukto, kiun (frukton) vi volis.</span></p>
-			<p class="col s6">Voici le fruit que tu voulais.</p>
+			<p class="col s6"><span class="eo">Jen fruktoj: <b>kiun</b> (frukton) vi volas?</span></p>
+			<p class="col s6">Voici des fruits&nbsp;: <b>lequel</b> veux-tu&nbsp;? </p>
+			<p class="col s6"><span class="eo">– Mi volas <b>tiun</b> (frukton).</span></p>
+			<p class="col s6">– Je veux <b>celui-là</b>.</p>
+			<p class="col s6"><span class="eo">– Mi volas <b>neniun</b> (frukton).</span></p>
+			<p class="col s6">– Je n[’en] veux <b>aucun</b>.</p>
+			<p class="col s6"><span class="eo">Jen la frukto, <b>kiun</b> vi volis.</span></p>
+			<p class="col s6">Voici le fruit <b>que</b> tu voulais.</p>
 		</div>
 		
 		<p>Employé seul, un corrélatif en <b>U</b> est très souvent un <b>pronom</b> qui désigne une personne&nbsp;:</p>
 		<div class="row">
-			<p class="col s6"><span class="eo">Kiu venis ?</span></p><p class="col s6">Qui est venu ?</p>
-			<p class="col s6"><span class="eo">– Iu.</span></p><p class="col s6">– Quelqu’un.</p>
-			<p class="col s6"><span class="eo">– Neniu.</span></p><p class="col s6">– Personne.</p>
-			<p class="col s6"><span class="eo">– Ĉiu.</span></p><p class="col s6">– Chacun.</p>
+			<p class="col s6"><span class="eo"><b>Kiu</b> venis ?</span></p><p class="col s6"><b>Qui</b> est venu&nbsp;?</p>
+			<p class="col s6"><span class="eo">– <b>Iu</b>.</span></p><p class="col s6">– <b>Quelqu’un</b>.</p>
+			<p class="col s6"><span class="eo">– <b>Neniu</b>.</span></p><p class="col s6">– <b>Personne</b>.</p>
+			<p class="col s6"><span class="eo">– <b>Ĉiuj</b>.</span></p><p class="col s6">– <b>Tous</b>.</p>
 		</div>
 		
 		<p class="parto">Les corrélatifs en <b>ES</b> sont souvent associés à un pronom en <b>U</b> et marquent alors la possession&nbsp;:</p>
 		<div class="row">
 			<p class="col s3"><span class="eo">kies (= de kiu)</span></p><p class="col s9">de qui, à qui, dont, duquel</p>
 			<p class="col s3"><span class="eo">ties (= de tiu)</span></p><p class="col s9">de celui-là, à celui-là</p>
-			<p class="col s3"><span class="eo">ies  (= de iu)</span></p><p class="col s9">de quelqu’un, à quelqu’un</p>
+			<p class="col s3"><span class="eo">ies (= de iu)</span></p><p class="col s9">de quelqu’un, à quelqu’un</p>
 			<p class="col s3"><span class="eo">ĉies (= de ĉiu)</span></p><p class="col s9">de chacun, de tout le monde, à tout le monde</p>
 			<p class="col s3"><span class="eo">nenies (= de neniu)</span></p><p class="col s9">de personne, à personne</p>
 		</div>
 		
 		<p>Exemples :</p>
 		<div class="row">
-			<p class="col s6"><span class="eo">Kies amiko vi estas ?</span></p><p class="col s6">De qui es-tu l’ami ?</p>
-			<p class="col s6"><span class="eo">Mi estas ĉies amiko.</span></p><p class="col s6">Je suis l’ami de tous (de chacun).</p>
-			<p class="col s6"><span class="eo">La viro, kies amikon mi vidis.</span></p><p class="col s6">L’homme dont j’ai vu l’ami</p>
-			<p class="col s6"><span class="eo">La viro, kun kies amiko ni trinkis.</span></p><p class="col s6">L’homme avec l’ami duquel nous avons bu</p>
+			<p class="col s6"><span class="eo"><b>Kies</b> amiko vi estas?</span></p><p class="col s6"><b>De qui</b> es-tu l’ami&nbsp;?</p>
+			<p class="col s6"><span class="eo">Mi estas <b>ĉies</b> amiko.</span></p><p class="col s6">Je suis l’ami <b>de tous</b> (de chacun).</p>
+			<p class="col s6"><span class="eo">La viro, <b>kies</b> amikon mi vidis.</span></p><p class="col s6">L’homme <b>dont</b> j’ai vu l’ami</p>
+			<p class="col s6"><span class="eo">La viro, <b>kun kies</b> amiko ni trinkis.</span></p><p class="col s6">L’homme <b>avec</b> l’ami <b>duquel</b> nous avons bu</p>
 		</div>
 		
 		<p class="parto">Les corrélatifs en <b>-OM</b> (quantité) sont souvent suivi par la préposition <span class="eo">da</span>&nbsp;:</p>
 		<div class="row">
-			<p class="col s6"><span class="eo">Kiom da kukoj vi deziras?</span></p><p class="col s6">Combien de gâteaux veux-tu ?</p>
-			<p class="col s6"><span class="eo">Mi jam manĝis tiom da ili!</span></p><p class="col s6">J’en ai déjà tellement mangé !</p>
+			<p class="col s6"><span class="eo"><b>Kiom da</b> biskvitoj vi deziras?</span></p><p class="col s6"><b>Combien de</b> biscuits veux-tu&nbsp;?</p>
+			<p class="col s6"><span class="eo">Mi jam manĝis <b>tiom da</b> ili!</span></p><p class="col s6">J’<b>en</b> ai déjà <b>tellement</b> mangé&nbsp;!</p>
 		</div>
 		<?php
 		} // fin section 
@@ -262,11 +264,11 @@ include "dlekkapo.inc.php";
 		pluriel. Tous les autres sont invariables.
 		</p>
 		<div class="row">
-			<p class="col s12"><span class="eo">Kun kiaj fruktoj vi faris tiun bonan kukon ?</span>&nbsp;: Avec quelles sortes de fruits as-tu fait ce bon gâteau ?</p>
-			<p class="col s12"><span class="eo">Mi neniam manĝis tiajn kukojn.</span>&nbsp;: Je n’ai jamais mangé de tels gâteaux.</p>
-			<p class="col s12"><span class="eo">Kiujn vi renkontis ?</span>&nbsp;: Qui (plur.) as-tu rencontré ? Lesquels as-tu rencontrés ?</p>
-			<p class="col s12"><span class="eo">Mi vidis la kukon, kiun vi faris.</span>&nbsp;: J’ai vu le gâteau que tu as fait.</p>
-			<p class="col s12"><span class="eo">Kion vi volas ?</span>&nbsp;: Que veux-tu ?</p>
+			<p class="col s12"><span class="eo">Kun <b>kiaj</b> fruktoj vi faris tiun bonan kukon ?</span>&nbsp;: Avec <b>quelles sortes de</b> fruits as-tu fait ce bon gâteau ?</p>
+			<p class="col s12"><span class="eo">Mi <b>neniam</b> manĝis tiajn kukojn.</span>&nbsp;: Je <b>n</b>’ai <b>jamais</b> mangé de tels gâteaux.</p>
+			<p class="col s12"><span class="eo"><b>Kiujn</b> vi renkontis ?</span>&nbsp;: <b>Qui</b> (plur.) as-tu rencontré&nbsp;? <b>Lesquels</b> as-tu rencontrés&nbsp;?</p>
+			<p class="col s12"><span class="eo">Mi vidis la kukon, <b>kiun</b> vi faris.</span>&nbsp;: J’ai vu le gâteau <b>que</b> tu as fait.</p>
+			<p class="col s12"><span class="eo"><b>Kion</b> vi volas?</span>&nbsp;: <b>Que</b> veux-tu&nbsp;?</p>
 		</div>
 
 		<?php 
@@ -274,7 +276,7 @@ include "dlekkapo.inc.php";
 		if ($section=="5") {
 		?>
 		
-		<p><a href="<?php echo $vojo;?>fr/son/pv5.mp3" class="sm2_button"></a> <span class="eo">En ĉiu malbono estas iom da bono.</span>&nbsp;: Dans tout mal il y a un peu de bien.</p>
+		<p><a href="<?php echo $vojo;?>fr/son/frazoj/pv5.mp3" class="sm2_button"></a> <span class="eo">En ĉiu malbono estas iom da bono.</span>&nbsp;: Dans tout mal il y a un peu de bien.</p>
 		
 
 		<fieldset class="vortoj">
@@ -283,7 +285,7 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Ce mot sera automatiquement ajouté à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12"><span class="eo">malbono</span>&nbsp;: le mal, du mal</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/malbono.mp3" class="sm2_button"></a><span class="eo">malbono</span>&nbsp;: le mal, du mal</p>
 			</div>
 		</fieldset>
 		
@@ -306,10 +308,10 @@ include "dlekkapo.inc.php";
 			<p class="eo eta">Les mots suivants seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 			<?php } ?>
 			<div class="vortlisto row">
-				<p class="col s12 m6"><span class="eo">malseka</span>&nbsp;: mouillé</p>
-				<p class="col s12 m6"><span class="eo">krajono</span>&nbsp;: crayon</p>
-				<p class="col s12 m6"><span class="eo">vespere</span>&nbsp;: le soir, au soir</p>
-				<p class="col s12 m6"><span class="eo">bicikle</span>&nbsp;: en vélo</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/malseka.mp3" class="sm2_button"></a><span class="eo">malseka</span>&nbsp;: mouillé</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/krajono.mp3" class="sm2_button"></a><span class="eo">krajono</span>&nbsp;: crayon</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/vespere.mp3" class="sm2_button"></a><span class="eo">vespere</span>&nbsp;: le soir, au soir</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/bicikle.mp3" class="sm2_button"></a><span class="eo">bicikle</span>&nbsp;: en vélo</p>
 			</div>
 		</fieldset>
 

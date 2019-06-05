@@ -125,7 +125,7 @@ QCM_bildoj(
 			
 		<div class="vortlisto row">
 			<p class="col s6">
-				<a href="<?php echo $vojo;?>fr/son/l02-1.mp3" class="sm2_button"></a>
+				<a href="<?php echo $vojo;?>fr/son/frazoj/l02-1.mp3" class="sm2_button"></a>
 				<span class="eo">Mi sukeras la varma<b>n</b> kafo<b>n</b>.</span></p>
 			<p class="col s6">Je sucre le café chaud.</p>
 		</div>
@@ -136,7 +136,7 @@ QCM_bildoj(
 		<p>Au pluriel, la terminaison <b>n</b> se place après la terminaison <b>j</b> du pluriel&nbsp;: </p>
 		<div class="vortlisto row">
 			<p class="col s6">
-				<a href="<?php echo $vojo;?>fr/son/l02-2.mp3" class="sm2_button"></a>
+				<a href="<?php echo $vojo;?>fr/son/frazoj/l02-2.mp3" class="sm2_button"></a>
 				<span class="eo">Ni sukeras la varmaj<b>n</b> kafoj<b>n</b>.</span></p>
 			<p class="col s6">Nous sucrons les cafés chauds.</p>
 		</div>
@@ -246,9 +246,9 @@ QCM_bildoj(
 		<p class="parto">Il existe d’autres compléments, tels que les compléments de temps, de lieu, de manière, etc. Ils sont généralement introduits par une préposition. Dans la première leçon, vous avez déjà vu la préposition <span class="eo">en</span>, qui sert à introduire un complément de lieu.</p>
 		<p>Exemples :</p>
 		<div class="vortlisto row">
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/aleks-logxas.mp3" class="sm2_button"></a> <span class="eo">Aleks loĝas <b>en</b> Francujo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/aleks-logxas.mp3" class="sm2_button"></a> <span class="eo">Aleks loĝas <b>en</b> Francujo.</span></p>
 			<p class="col s6">Alex habite en France.</p>
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/estas-sukero.mp3" class="sm2_button"></a> <span class="eo">Estas sukero <b>en</b> via kafo.</span></p><p class="col s6">Il y a du sucre dans ton café.</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/estas-sukero.mp3" class="sm2_button"></a> <span class="eo">Estas sukero <b>en</b> via kafo.</span></p><p class="col s6">Il y a du sucre dans ton café.</p>
 		</div>
 		
 		<p class="rimarko">Notez que <span class="eo">estas</span>, employé sans sujet en début de phrase, comme dans l’exemple précédent, se traduit généralement par <em>il y a</em>. Nous aurons l’occasion d’y revenir dans une autre leçon.</p>
@@ -263,13 +263,13 @@ QCM_bildoj(
 
 		<p>Exemples :</p>
 		<div class="vortlisto row">
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/la-pano-estas-sur.mp3" class="sm2_button"></a> <span class="eo">La pano estas <b>sur</b> la tablo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/la-pano-estas-sur.mp3" class="sm2_button"></a> <span class="eo">La pano estas <b>sur</b> la tablo.</span></p>
 			<p class="col s6">Le pain est sur la table.</p>
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/la-kato-dormas.mp3" class="sm2_button"></a> <span class="eo">La kato dormas <b>sub</b> la tablo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/la-kato-dormas.mp3" class="sm2_button"></a> <span class="eo">La kato dormas <b>sub</b> la tablo.</span></p>
 			<p class="col s6">Le chat dort sous la table.</p>
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/ni-vidas-la-sunon.mp3" class="sm2_button"></a> <span class="eo">Ni vidas la sunon <b>super</b> la arboj.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/ni-vidas-la-sunon.mp3" class="sm2_button"></a> <span class="eo">Ni vidas la sunon <b>super</b> la arboj.</span></p>
 			<p class="col s6">Nous voyons le soleil par-dessus les arbres.</p>
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/estas-floroj.mp3" class="sm2_button"></a> <span class="eo">Estas floroj <b>antaŭ</b> la domo.</span></p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/estas-floroj.mp3" class="sm2_button"></a> <span class="eo">Estas floroj <b>antaŭ</b> la domo.</span></p>
 			<p class="col s6">Il y a des fleurs devant la maison.</p>
 		</div>
 		
@@ -360,7 +360,7 @@ QCM_bildoj(
 		<b>ne</b> avant le verbe.</p>
 		
 		<div class="row">
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/l02-3.mp3" class="sm2_button"></a>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/l02-3.mp3" class="sm2_button"></a>
 				<span class="eo">Mi <b>ne</b> sukeras la kafon.</span></p>
 			<p class="col s6">Je <b>ne</b> sucre <b>pas</b> le café.</p>
 		</div>
@@ -377,10 +377,10 @@ QCM_bildoj(
 			<p class="col s6 m3"><span class="eo">nenio</span>&nbsp;: rien</p>
 			<p class="col s6 m3"><span class="eo">nenie</span>&nbsp;: nulle part</p>
 			<hr>
-			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/mi-neniam-sukeras.mp3" class="sm2_button"></a> <span class="eo">Mi <b>neniam</b> sukeras mian kafon.</span></p><p class="col s11 m6 offset-s1">Je <b>ne</b> sucre <b>jamais</b> mon café.</p>
-			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kiu-venis.mp3" class="sm2_button"></a> <span class="eo">Kiu venis? – <b>Neniu</b> venis.</span></p><p class="col s11 m6 offset-s1">Qui est venu ? – <b>Personne</b> n’est venu.</p>
-			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kio-estas-en-la-taso.mp3" class="sm2_button"></a> <span class="eo">Kio estas en la taso? – Estas <b>nenio</b>.</span></p><p class="col s11 m6 offset-s1">Qu’y-a-t-il dans la tasse ? – Il n’y a <b>rien</b>.</p>
-			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kie-estas-la-kato.mp3" class="sm2_button"></a> <span class="eo">Kie estas la kato? Mi vidas ĝin <b>nenie</b>!</span></p><p class="col s11 m6 offset-s1">Où est le chat ? Je ne le vois <b>nulle part</b>&nbsp;!</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/frazoj/mi-neniam-sukeras.mp3" class="sm2_button"></a> <span class="eo">Mi <b>neniam</b> sukeras mian kafon.</span></p><p class="col s11 m6 offset-s1">Je <b>ne</b> sucre <b>jamais</b> mon café.</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/frazoj/kiu-venis.mp3" class="sm2_button"></a> <span class="eo">Kiu venis? – <b>Neniu</b> venis.</span></p><p class="col s11 m6 offset-s1">Qui est venu ? – <b>Personne</b> n’est venu.</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/frazoj/kio-estas-en-la-taso.mp3" class="sm2_button"></a> <span class="eo">Kio estas en la taso? – Estas <b>nenio</b>.</span></p><p class="col s11 m6 offset-s1">Qu’y-a-t-il dans la tasse ? – Il n’y a <b>rien</b>.</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/frazoj/kie-estas-la-kato.mp3" class="sm2_button"></a> <span class="eo">Kie estas la kato? Mi vidas ĝin <b>nenie</b>!</span></p><p class="col s11 m6 offset-s1">Où est le chat ? Je ne le vois <b>nulle part</b>&nbsp;!</p>
 		</div>
 
 		<?php 
@@ -440,7 +440,7 @@ QCM_bildoj(
 		
 		<p class="parto">Dans l’exemple suivant, vous remarquerez que certains petits mots employés en français ne se retrouvent pas en espéranto. Ils sont écrits ici entre crochets.</p>
 			<div class="vortlisto row">
-				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/mi-forgesis-trinki-akvon.mp3" class="sm2_button"></a> <span class="eo">Mi forgesis trinki akvon.</span>&nbsp;: J’ai oublié [de] boire [de l’] eau.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/mi-forgesis-trinki-akvon.mp3" class="sm2_button"></a> <span class="eo">Mi forgesis trinki akvon.</span>&nbsp;: J’ai oublié [de] boire [de l’] eau.</p>
 			</div>
 				 
 		<?php 
@@ -481,11 +481,11 @@ QCM_bildoj(
 		<fieldset class="vortoj">
 			<legend>EXPRESSIONS À RETENIR</legend>
 			<div class="vortlisto row">
-				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/kiel-vi-fartas.mp3" class="sm2_button"></a> <span class="eo">Kiel vi fartas?</span></p><p class="col s6">Comment allez-vous&nbsp;?</p>
-				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/bone-kaj-vi.mp3" class="sm2_button"></a> <span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">– Bien. Et vous&nbsp;?</p>
-				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/bonege.mp3" class="sm2_button"></a> <span class="eo">– Bonege.</span></p><p class="col s6">– Parfaitement bien.</p>
-				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/suficxe-bone.mp3" class="sm2_button"></a> <span class="eo">– Sufiĉe bone.</span></p><p class="col s6">– Assez bien. (ça va)</p>
-				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/ne-trop-bone.mp3" class="sm2_button"></a> <span class="eo">– Ne tro bone.</span></p><p class="col s6">– Pas trop bien.</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/kiel-vi-fartas.mp3" class="sm2_button"></a> <span class="eo">Kiel vi fartas?</span></p><p class="col s6">Comment allez-vous&nbsp;?</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/bone-kaj-vi.mp3" class="sm2_button"></a> <span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">– Bien. Et vous&nbsp;?</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/bonege.mp3" class="sm2_button"></a> <span class="eo">– Bonege.</span></p><p class="col s6">– Parfaitement bien.</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/suficxe-bone.mp3" class="sm2_button"></a> <span class="eo">– Sufiĉe bone.</span></p><p class="col s6">– Assez bien. (ça va)</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/ne-trop-bone.mp3" class="sm2_button"></a> <span class="eo">– Ne tro bone.</span></p><p class="col s6">– Pas trop bien.</p>
 			</div>
 		</fieldset>
 		
@@ -499,10 +499,10 @@ QCM_bildoj(
 		
 		<p>Exemples :</p>
 		<div class="vortlisto row">
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/kiel-vi-faras.mp3" class="sm2_button"></a> <span class="eo">Kiel vi faras?</span></p><p class="col s6">Comment faites-vous&nbsp;?</p>
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/tiel.mp3" class="sm2_button"></a> <span class="eo">– Tiel!</span></p><p class="col s6">– Comme ça&nbsp;!</p>
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/tiel-estas.mp3" class="sm2_button"></a> <span class="eo">Tiel estas.</span></p><p class="col s6">C’est ainsi.</p>
-			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/sxi-skribas.mp3" class="sm2_button"></a> <span class="eo">Ŝi skribas kiel mia patrino.</span></p><p class="col s6">Elle écrit comme ma mère.</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/kiel-vi-faras.mp3" class="sm2_button"></a> <span class="eo">Kiel vi faras?</span></p><p class="col s6">Comment faites-vous&nbsp;?</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/tiel.mp3" class="sm2_button"></a> <span class="eo">– Tiel!</span></p><p class="col s6">– Comme ça&nbsp;!</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/tiel-estas.mp3" class="sm2_button"></a> <span class="eo">Tiel estas.</span></p><p class="col s6">C’est ainsi.</p>
+			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/sxi-skribas.mp3" class="sm2_button"></a> <span class="eo">Ŝi skribas kiel mia patrino.</span></p><p class="col s6">Elle écrit comme ma mère.</p>
 		</div>
 
 		<?php 

@@ -19,7 +19,7 @@ include "pagxkapo.inc.php";
 					<label for="aligxi_kurso_retadreso" data-error="veuillez indiquer une adresse correcte" data-success="">Adresse courriel</label>
 			    </div>
 			    <div id="helpo-retadreso" class="helpilo col s11 m5 l4 offset-s1">
-				    <p> class="helper-text"Nous enverrons un message à cette adresse pour valider votre inscription.</p>
+				    <p>Nous enverrons un message à cette adresse pour valider votre inscription.</p>
 			    </div>
 			</div>
 			<div class="row">

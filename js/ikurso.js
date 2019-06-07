@@ -127,7 +127,6 @@ $("textarea").on('change keyup paste', function() {
     var skribitajVortoj = $(this).val().trim().split(' ').length;
     if (skribitajVortoj<$vortoj) {
       console.log($vortoj-skribitajVortoj);
-      //$("label[for='"+$id+"']").attr('data-error',($vortoj-skribitajVortoj)+"\xa0vortojn\xa0por\xa0verki");
       $("#vortojPorVerki_"+$id).html(($vortoj-skribitajVortoj)+"\xa0vortojn\xa0por\xa0verki");
 
     } else {
@@ -243,18 +242,15 @@ $( "#serchi_protokolon_button").click(function() {
        		success : function(reponse, statut){ 
            		if (reponse.mesagxo!="ok") {
            			if (reponse.type=="identigilo") {
-           				$("label[for='eniri_identigilo']").attr('data-error',reponse.mesagxo);
-           				$("#eniri_identigilo").addClass("invalid");
+                  M.toast({html: reponse.mesagxo, displayLength: 5000});
            			}
                 // cas où la personne n'a pas activé son message
                 if (reponse.type=="ne_aktivigita") {
-                 $("label[for='eniri_identigilo']").attr('data-error',reponse.mesagxo);
-                  $("#eniri_identigilo").addClass("invalid"); 
+                  M.toast({html: reponse.mesagxo, displayLength: 5000});
                   $('#sendi_denove_aktivigilo_button').removeClass("hide");
                 }
            			if (reponse.type=="pasvorto") {
-           				$("label[for='eniri_pasvorto']").attr('data-error',reponse.mesagxo);
-           				$("#eniri_pasvorto").addClass("invalid");	
+           				M.toast({html: reponse.mesagxo, displayLength: 5000});
            			}
            			return false;
            		} else {
@@ -277,19 +273,13 @@ $( "#serchi_protokolon_button").click(function() {
        		success : function(reponse, statut){ 
            		if (reponse.mesagxo!="ok") {
            			if (reponse.type.startsWith("retadreso")) {
-           				$("label[for='aligxi_retadreso']").attr('data-error',reponse.mesagxo);
-           				$("#aligxi_retadreso").addClass("invalid");	
-           				$("#helpo-retadreso").hide();
+                  M.toast({html: reponse.mesagxo, displayLength: 5000});
            			}
            			if (reponse.type.startsWith("identigilo")) {
-
-           				$("label[for='aligxi_identigilo']").attr('data-error',reponse.mesagxo);
-           				$("#aligxi_identigilo").addClass("invalid");
-           				$("#helpo-identigilo").hide();
+                  M.toast({html: reponse.mesagxo, displayLength: 5000});
            			}
            			if (reponse.type=="pasvorto") {
-           				$("label[for='aligxi_pasvorto']").attr('data-error',reponse.mesagxo);
-           				$("#aligxi_pasvorto").addClass("invalid");	
+           				M.toast({html: reponse.mesagxo, displayLength: 5000});	
            			}
            			return false;
            		} else {
@@ -317,19 +307,15 @@ $( "#serchi_protokolon_button").click(function() {
           success : function(reponse, statut){ 
               if (reponse.mesagxo!="ok") {
                 if (reponse.type.startsWith("retadreso")) {
-                  $("label[for='aligxi_kurso_retadreso']").attr('data-error',reponse.mesagxo);
-                  $("#aligxi_kurso_retadreso").addClass("invalid"); 
+                  M.toast({html: reponse.mesagxo, displayLength: 5000});
                   $("#helpo-retadreso").hide();
                 }
                 if (reponse.type.startsWith("identigilo")) {
-
-                  $("label[for='aligxi_kurso_identigilo']").attr('data-error',reponse.mesagxo);
-                  $("#aligxi_kurso_identigilo").addClass("invalid");
+                  M.toast({html: reponse.mesagxo, displayLength: 5000});
                   $("#helpo-identigilo").hide();
                 }
                 if (reponse.type=="pasvorto") {
-                  $("label[for='aligxi_kurso_pasvorto']").attr('data-error',reponse.mesagxo);
-                  $("#aligxi_kurso_pasvorto").addClass("invalid");  
+                  M.toast({html: reponse.mesagxo, displayLength: 5000});
                 }
                 return false;
               } else {
@@ -360,9 +346,7 @@ $("#sendi_novan_pasvorton_button").click(function () {
           data : 'retadreso='+$("#sendi_novan_pasvorton_retadreso").val(),
           success : function(reponse, statut){ 
               if (reponse.mesagxo!="ok") {
-                 $("label[for='sendi_novan_pasvorton_retadreso']").attr('data-error',reponse.mesagxo);
-                 $("#sendi_novan_pasvorton_retadreso").addClass("invalid"); 
-                 //$("#helpo-retadreso").hide(); // pas besoin de placeholder ?
+                 M.toast({html: reponse.mesagxo, displayLength: 5000});
                 return false;
               } else {
                 // On affiche un message qui indique qu'il faut cliquer sur le mail
@@ -379,6 +363,16 @@ $("#sendi_novan_pasvorton_button").click(function () {
       });
     });
 
+// si on retape quelque chose dans le champ de connection ou d'inscription, on retire le style disabled
+$("#konektigxi_parto1 input").keypress(function() {
+  $("#connection_button").removeClass("disabled");
+});
+
+$("#parto1 input").keypress(function() {
+  console.log("modification du champ input");
+  $("#inscription_button").removeClass("disabled");
+});
+
 $("#sendi_denove_aktivigilo_button").click(function () {
       $('#sendi_denove_aktivigilo_button').addClass("disabled");
             $.ajax({
@@ -388,8 +382,7 @@ $("#sendi_denove_aktivigilo_button").click(function () {
           data : 'identigilo='+$( "#eniri_identigilo" ).val(),
           success : function(reponse, statut){ 
               if (reponse.mesagxo!="ok") {
-                 $("label[for='eniri_identigilo']").attr('data-error',reponse.mesagxo);
-                 $("#eniri_identigilo").addClass("invalid"); 
+                 M.toast({html: reponse.mesagxo, displayLength: 5000});
                 return false;
               } else {
                   $("#konektigxi_parto1").addClass("hide");
@@ -421,9 +414,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
           success : function(reponse, statut){ 
               // la clef d'activation est erronée
               if (reponse.mesagxo!="ok") {
-                 $("label[for='aligxi_retadreso']").attr('data-error',reponse.mesagxo);
-                 $("#aligxi_retadreso").addClass("invalid"); 
-                 $("#helpo-retadreso").hide();
+                M.toast({html: reponse.mesagxo, displayLength: 5000});
                 return false;
               } else {
                 // On affiche un message qui indique qu'il faut valider le mail

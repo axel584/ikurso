@@ -99,6 +99,10 @@ textarea {
 	line-height: 160%;
 }
 
+textarea.materialize-textarea {
+	border: 1px solid #CCC;
+	padding: 0.5em;
+}
 /*----- surcharge boutons ------*/
 
 .btn-flat.small {

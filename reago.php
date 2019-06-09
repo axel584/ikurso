@@ -42,7 +42,8 @@ include "pagxkapo.inc.php";
 					<div class="row">
 						<div class="input-field col s12">
 							<input id="sendinto" name="sendinto" type="email" class="validate" value="<?php if (isset($_SESSION['sendinto'])) {echo $_SESSION['sendinto'];} ?>" required="" aria-required="true">
-							<label for="sendinto" data-error="veuillez indiquer une adresse correcte" >Votre adresse courriel</label>
+							<label for="sendinto">Votre adresse courriel</label>
+							<span id="sendinto_helper" class="helper-text" data-error="veuillez indiquer une adresse correcte" data-success=""></span>
 						</div>
 	
 					    <div class="input-field col s12">

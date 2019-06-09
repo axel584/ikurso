@@ -16,7 +16,8 @@ include "pagxkapo.inc.php";
 			<div class="row">
 			    <div class="input-field col s11 m5 l4 offset-s1 offset-m2 offset-l3">
 					<input id="aligxi_kurso_retadreso" type="email" class="validate" />
-					<label for="aligxi_kurso_retadreso" data-error="veuillez indiquer une adresse correcte" data-success="">Adresse courriel</label>
+					<label for="aligxi_kurso_retadreso">Adresse courriel</label>
+					<span id="aligxi_kurso_retadreso_helper" class="helper-text">Helper text</span>
 			    </div>
 			    <div id="helpo-retadreso" class="helpilo col s11 m5 l4 offset-s1">
 				    <p>Nous enverrons un message à cette adresse pour valider votre inscription.</p>
@@ -26,6 +27,7 @@ include "pagxkapo.inc.php";
 			    <div class="input-field col s11 m5 l4 offset-s1 offset-m2 offset-l3">
 					<input id="aligxi_kurso_identigilo" type="text" class="validate" />
 					<label for="aligxi_kurso_identigilo">Identifiant</label>
+					<span id="aligxi_kurso_identigilo_helper" class="helper-text">Helper text</span>
 			    </div>
 			    <div id="helpo-identigilo" class="helpilo col s11 m5 l4 offset-s1">
 				    <p>Choisissez le nom qui vous plaît. Vous l’utiliserez pour vous connecter au site.</p>
@@ -35,6 +37,7 @@ include "pagxkapo.inc.php";
 			    <div class="input-field col s11 m5 l4 offset-s1 offset-m2 offset-l3">
 					<input id="aligxi_kurso_pasvorto" type="password" class="validate" />
 					<label for="aligxi_kurso_pasvorto">Mot de passe</label>
+					<span id="aligxi_kurso_pasvorto_helper" class="helper-text">Helper text</span>
 				</div>
 			</div>
 			<div class="row">

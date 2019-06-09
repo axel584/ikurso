@@ -36,12 +36,12 @@ include "kapo.inc.php";
 	        </div>
 		    
 			<h2>Évaluez-nous !</h2>
-			<p>Pour nous permettre d'améliorer notre cours, merci de prendre quelques secondes pour nous faire un retour sur la leçon que vous venez d'envoyer. Cette évaluation est destinée aux administrateurs du cours et ne sera pas lue par votre correcteur.</p>
+			<p>Pour nous permettre d’améliorer notre cours, merci de prendre quelques secondes pour nous faire un retour sur la leçon que vous venez d'envoyer. Cette évaluation est destinée aux administrateurs du cours et ne sera pas lue par votre correcteur.</p>
 			<form method="post" action="<?php echo $vojo;?>fr/taksoLeciono.php">
 				<input type='hidden' name="kurso" value='3N'/>
 				<input type='hidden' name="leciono" value='<?=$leciono?>'/>
 				<div class="tasko enketo">
-					<p>Notez l'intérêt que vous avez eu à effectuer la leçon : de 1 (très ennuyeux) à 5 (très amusant) </p>
+					<p>Notez l’intérêt que vous avez eu à effectuer la leçon&nbsp;: de 1 (très ennuyeux) à 5 (très amusant) </p>
 					<div class="row">
 						<div class="rating col s12 m6 l6">
 							<p class="range-field"><input id="range_intereso" name="intereso" type="range" value="3" min="1" max="5" step="1"></p>
@@ -50,7 +50,7 @@ include "kapo.inc.php";
 							<p id="libelle_intereso"></p>
 						</div>
 					</div>
-					<p>Notez la difficulté que vous avez eue à effectuer la leçon : de 1 (très facile) à 5 (très compliqué) </p>
+					<p>Notez la difficulté que vous avez eue à effectuer la leçon&nbsp;: de 1 (très facile) à 5 (très compliqué) </p>
 					<div class="row">
 						<div class="rating col s12 m6 l6">
 							<p class="range-field"><input id="range_malfacileco"  name="malfacileco" type="range" min="1" max="5" step="1"></p>
@@ -61,7 +61,7 @@ include "kapo.inc.php";
 					</div>
 					<div class="input-field col s12">
 						<textarea name="komento" class="materialize-textarea"></textarea>
-						<label for="komento">Laissez un commentaire (optionnel) sur la leçon :</label>
+						<label for="komento">Laissez un commentaire (optionnel) sur la leçon&nbsp;:</label>
 					</div>
 					<p><button class="btn waves-effect waves-light blue right" type="submit" name="action">Envoyer mon appréciation</button></p>
 				</div>

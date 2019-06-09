@@ -242,15 +242,18 @@ $( "#serchi_protokolon_button").click(function() {
        		success : function(reponse, statut){ 
            		if (reponse.mesagxo!="ok") {
            			if (reponse.type=="identigilo") {
-                  M.toast({html: reponse.mesagxo, displayLength: 5000});
+           				$("#eniri_identigilo_helper").attr('data-error',reponse.mesagxo);
+           				$("#eniri_identigilo").addClass("invalid");
            			}
                 // cas où la personne n'a pas activé son message
                 if (reponse.type=="ne_aktivigita") {
-                  M.toast({html: reponse.mesagxo, displayLength: 5000});
+                  $("#eniri_identigilo_helper").attr('data-error',reponse.mesagxo);
+                  $("#eniri_identigilo").addClass("invalid"); 
                   $('#sendi_denove_aktivigilo_button').removeClass("hide");
                 }
            			if (reponse.type=="pasvorto") {
-           				M.toast({html: reponse.mesagxo, displayLength: 5000});
+           				$("#eniri_pasvorto_helper").attr('data-error',reponse.mesagxo);
+           				$("#eniri_pasvorto").addClass("invalid");	
            			}
            			return false;
            		} else {
@@ -273,13 +276,19 @@ $( "#serchi_protokolon_button").click(function() {
        		success : function(reponse, statut){ 
            		if (reponse.mesagxo!="ok") {
            			if (reponse.type.startsWith("retadreso")) {
-                  M.toast({html: reponse.mesagxo, displayLength: 5000});
+           				$("#aligxi_retadreso_helper").attr('data-error',reponse.mesagxo);
+           				$("#aligxi_retadreso").addClass("invalid");	
+           				$("#helpo-retadreso").hide();
            			}
            			if (reponse.type.startsWith("identigilo")) {
-                  M.toast({html: reponse.mesagxo, displayLength: 5000});
+
+           				$("#aligxi_identigilo_helper").attr('data-error',reponse.mesagxo);
+           				$("#aligxi_identigilo").addClass("invalid");
+           				$("#helpo-identigilo").hide();
            			}
            			if (reponse.type=="pasvorto") {
-           				M.toast({html: reponse.mesagxo, displayLength: 5000});	
+           				$("#aligxi_pasvorto_helper").attr('data-error',reponse.mesagxo);
+           				$("#aligxi_pasvorto").addClass("invalid");	
            			}
            			return false;
            		} else {
@@ -307,15 +316,19 @@ $( "#serchi_protokolon_button").click(function() {
           success : function(reponse, statut){ 
               if (reponse.mesagxo!="ok") {
                 if (reponse.type.startsWith("retadreso")) {
-                  M.toast({html: reponse.mesagxo, displayLength: 5000});
+                  $("#aligxi_kurso_retadreso_helper").attr('data-error',reponse.mesagxo);
+                  $("#aligxi_kurso_retadreso").addClass("invalid"); 
                   $("#helpo-retadreso").hide();
                 }
                 if (reponse.type.startsWith("identigilo")) {
-                  M.toast({html: reponse.mesagxo, displayLength: 5000});
+
+                  $("#aligxi_kurso_identigilo_helper").attr('data-error',reponse.mesagxo);
+                  $("#aligxi_kurso_identigilo").addClass("invalid");
                   $("#helpo-identigilo").hide();
                 }
                 if (reponse.type=="pasvorto") {
-                  M.toast({html: reponse.mesagxo, displayLength: 5000});
+                  $("#aligxi_kurso_pasvorto_helper").attr('data-error',reponse.mesagxo);
+                  $("#aligxi_kurso_pasvorto").addClass("invalid");  
                 }
                 return false;
               } else {
@@ -346,7 +359,9 @@ $("#sendi_novan_pasvorton_button").click(function () {
           data : 'retadreso='+$("#sendi_novan_pasvorton_retadreso").val(),
           success : function(reponse, statut){ 
               if (reponse.mesagxo!="ok") {
-                 M.toast({html: reponse.mesagxo, displayLength: 5000});
+                 $("#sendi_novan_pasvorton_retadreso_helper").attr('data-error',reponse.mesagxo);
+                 $("#sendi_novan_pasvorton_retadreso").addClass("invalid"); 
+                 //$("#helpo-retadreso").hide(); // pas besoin de placeholder ?
                 return false;
               } else {
                 // On affiche un message qui indique qu'il faut cliquer sur le mail
@@ -369,8 +384,11 @@ $("#konektigxi_parto1 input").keypress(function() {
 });
 
 $("#parto1 input").keypress(function() {
-  console.log("modification du champ input");
   $("#inscription_button").removeClass("disabled");
+});
+
+$("#sendi_novan_pasvorton_parto1 input").keypress(function() {
+  $("#sendi_novan_pasvorton_button").removeClass("disabled");
 });
 
 $("#sendi_denove_aktivigilo_button").click(function () {
@@ -382,7 +400,8 @@ $("#sendi_denove_aktivigilo_button").click(function () {
           data : 'identigilo='+$( "#eniri_identigilo" ).val(),
           success : function(reponse, statut){ 
               if (reponse.mesagxo!="ok") {
-                 M.toast({html: reponse.mesagxo, displayLength: 5000});
+                 $("#eniri_identigilo_helper").attr('data-error',reponse.mesagxo);
+                 $("#eniri_identigilo").addClass("invalid"); 
                 return false;
               } else {
                   $("#konektigxi_parto1").addClass("hide");
@@ -414,7 +433,9 @@ $("#novigi_pasvorton_sendi_button").click(function () {
           success : function(reponse, statut){ 
               // la clef d'activation est erronée
               if (reponse.mesagxo!="ok") {
-                M.toast({html: reponse.mesagxo, displayLength: 5000});
+                 $("#aligxi_retadreso_helper").attr('data-error',reponse.mesagxo);
+                 $("#aligxi_retadreso").addClass("invalid"); 
+                 $("#helpo-retadreso").hide();
                 return false;
               } else {
                 // On affiche un message qui indique qu'il faut valider le mail

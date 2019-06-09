@@ -112,10 +112,12 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 				    <div class="input-field">
 				      <input id="eniri_identigilo" type="text" class="validate" required="" aria-required="true">
 				      <label for="eniri_identigilo">identifiant</label>
+				      <span id="eniri_identigilo_helper" class="helper-text"></span>
 				    </div>
 					<div class="input-field">
 						<input id="eniri_pasvorto" type="password" class="validate">
 						<label for="eniri_pasvorto">mot de passe</label>
+						<span id="eniri_pasvorto_helper" class="helper-text"></span>
 					</div>
 				</form>
 				</div>
@@ -129,7 +131,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			</div>
 			<div class="modal-footer">
 				<div id="footer-konektigxi1">
-					<a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a><a id="aperigi_novigi_pasvorton_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">Identifiant ou mot de passe oublié</a><a id="sendi_denove_aktivigilo_button" class=" modal-action hide waves-effect waves-light btn-flat primaire-texte">RENVOYER LE COURRIEL D'ACTIVATION</a>
+					<a id="connection_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">SE CONNECTER</a><a id="aperigi_novigi_pasvorton_button" class=" modal-action waves-effect waves-light btn-flat primaire-texte">Identifiant ou mot de passe oublié</a><a id="sendi_denove_aktivigilo_button" class=" modal-action hide waves-effect waves-light btn-flat primaire-texte">RENVOYER LE COURRIEL D’ACTIVATION</a>
 				</div>
 				<div id="footer-konektigxi2" class="hide">
 					<a id="fermi_konektigxi_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>
@@ -145,17 +147,20 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 					<form>
 					    <div class="input-field">
 							<input id="aligxi_retadreso"  type="email" class="validate" required="" aria-required="true">
-							<label for="aligxi_retadreso" data-error="veuillez indiquer une adresse correcte" >Adresse courriel</label>
+							<label for="aligxi_retadreso">Adresse courriel</label>
+							<span id="aligxi_retadreso_helper" class="helper-text"></span>
 				    	<p id="helpo-retadreso" class="helpilo hide-on-input-message">Nous enverrons un message à cette adresse pour valider votre inscription.</p>
 						</div>
 					    <div class="input-field">
 							<input id="aligxi_identigilo" type="text" class="validate" required="" aria-required="true">
 							<label for="aligxi_identigilo">Identifiant</label>
+							<span id="aligxi_identigilo_helper" class="helper-text"></span>
 							<p id="helpo-identigilo" class="helpilo">Vous l’utiliserez pour vous connecter au site.</p>
 					    </div>
 						<div class="input-field">
 							<input id="aligxi_pasvorto" type="password" class="validate">
 							<label for="aligxi_pasvorto">Mot de passe</label>
+							<span id="aligxi_pasvorto_helper" class="helper-text"></span>
 						</div>
 					</form>
 				</div>
@@ -194,7 +199,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<!-- fenêtre modale réinitialisation mot de passe -->
 		<div id="novigi_pasvorton" class="modal">
 			<div class="modal-content">
-				<h4 class="primaire-texte">Réinitialiser son mot de passe, choisissez un nouveau mot de passe :</h4>
+				<h4 class="primaire-texte">Réinitialiser le mot de passe, choisissez un nouveau mot de passe&nbsp;:</h4>
 				<div id="novigi_pasvorton_parto1">
 				<form>
 					<div class="input-field">
@@ -212,7 +217,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 				</div>
 			</div>
 			<div id="novigi_pasvorton_footer1" class="modal-footer">
-				<a id="novigi_pasvorton_sendi_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER SON MOT DE PASSE</a>
+				<a id="novigi_pasvorton_sendi_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER MON MOT DE PASSE</a>
 			</div>
 			<div id="novigi_pasvorton_footer2" class="modal-footer hide">
 				<a id="novigi_pasvorton_fermi_button" class="modal-action modal-close waves-effect waves-light-blue btn-flat primaire-texte">Fermer</a>
@@ -228,6 +233,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 					<div class="input-field">
 						<input id="sendi_novan_pasvorton_retadreso" type="email" class="validate">
 						<label for="sendi_novan_pasvorton_retadreso">Adresse email</label>
+						<span id="sendi_novan_pasvorton_retadreso_helper" class="helper-text"></span>
 					</div>
 				</form>
 				</div>
@@ -240,7 +246,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 				</div>
 			</div>
 			<div id="sendi_novan_pasvorton_footer1" class="modal-footer">
-				<a id="sendi_novan_pasvorton_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER SON MOT DE PASSE</a>
+				<a id="sendi_novan_pasvorton_button" class=" modal-action waves-effect waves-light-blue btn-flat primaire-texte">RÉINITIALISER MON MOT DE PASSE</a>
 			</div>
 			<div id="sendi_novan_pasvorton_footer2" class="modal-footer hide">
 				<a id="fermi_novan_pasvorton_button" class=" modal-action modal-close waves-effect waves-light-blue btn-flat primaire-texte">Fermer</a>

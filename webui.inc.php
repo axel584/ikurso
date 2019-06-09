@@ -678,8 +678,8 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 			// ajout d'un champ commentaire :
 			echo "<ul class='collection'>";
 				echo "<li class='collection-item row'>";
-				echo "Si vous souhaitez ajouter un message à l'intention de votre correcteur, vous pouvez écrire dans le cadre ci-dessous :";
-				echo "<textarea name='commentaire_pour_correcteur'></textarea>";
+				echo "Si vous souhaitez ajouter un message à l’intention de votre correcteur, vous pouvez écrire dans le cadre ci-dessous&nbsp;:";
+				echo "<textarea name='commentaire_pour_correcteur' class='materialize-textarea'></textarea>";
 				echo "</li>";
 			echo "</ul>";
 		} else {

@@ -13,7 +13,7 @@ if ($retadreso_en_base>1) {
 	exit();
 } elseif ($retadreso_en_base==0) {
 	$respondo["type"]="neniu_retadreso";
-	$respondo["mesagxo"]="Aucun compte n'a été trouvé avec cette adresse e-mail, essayez une autre adresse ou contactez les administrateurs pour retrouver votre compte à partir d'autres informations que vous nous avez fourni.";
+	$respondo["mesagxo"]="Aucun compte n’a été trouvé avec cette adresse e-mail, essayez une autre adresse ou contactez les administrateurs pour retrouver votre compte à partir d’autres informations que vous nous avez fournies.";
 	echo json_encode($respondo);
 	exit();
 }

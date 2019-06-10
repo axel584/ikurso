@@ -197,7 +197,9 @@ frameborder="0" allowfullscreen></iframe></p>
 						<li><a href="http://melburno.org.au/3ZZZradio/">3ZZZ</a> est une émission hebdomadaire d’une heure diffusée depuis Melbourne. Lecture d’articles de différentes revues en espéranto&nbsp;;</li>
 						<li><a href="http://pola-retradio.org/" data-href="http://pola-retradio.org/">Pola Retradio</a> présente tous les jours une émission en espéranto, axée sur la culture et les nouvelles en Pologne&nbsp;;</li>
 						<li><a href="http://esperanto.cri.cn/">Chinese International Radio</a></li>
-					</ul>
+						<li><a href="http://www.radio-vatikana-esperanto.org/">Radio Vatikana</a> diffuse des émissions en espéranto plusieurs fois par semaine&nbsp;;</li>
+						<li><a href="https://www.radio-frei.de/index.php?iid=2.2&ksubmit_show=eine&kredaktion_id=28">Radio Frei</a></li>
+						<li><a href="http://www.radiohc.cu/eo/audios">Radio Havano Kubo</a></li>					</ul>
 				<p class="parto">Vous pourrez écouter sur <a href="http://novajhoj.weebly.com/">STUDIO</a> une sélection d’<strong>émissions de radios en espéranto</strong>.</p>
 
 				<p class="parto">Citons aussi quelques <strong>émissions en français sur l’espéranto</strong>&nbsp;:</p>

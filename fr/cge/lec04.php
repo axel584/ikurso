@@ -369,6 +369,18 @@ include "dlekkapo.inc.php";
 			<p class="col s6">Il court hors de l’école, il sort en courant de l’école.</p>
 		</div>
 		
+		
+		<fieldset class="vortoj">
+			<legend>Retenez bien ces quatre petits mots très fréquents&nbsp;:</legend>
+			<ul class="klarigo">
+				<li><strong>al</strong> indique le but d’un mouvement (<span class="eo">ŝi kuras al la lernejo</span>) ou le bénéficiaire de l’action (<span class="eo">li respondis al mi</span>).</li>
+				<li><strong>de</strong> indique la possession (<span class="eo">la filo de mia frato</span>) ou la provenance (<span class="eo">li venas de la lernejo</span>).</li>
+				<li><strong>el</strong> indique le mouvement hors d’un lieu (<span class="eo">li kuras el la lernejo</span>&nbsp;: il court hors de l’école, il sort en courant de l’école), l’origine (<span class="eo">teatraĵo el via lando</span>) ou la matière (<span class="eo">ovo el ĉokolado</span>&nbsp;: un œuf en chocolat).</li>
+				<li><strong>kaj</strong> = et</li>
+			</ul>
+		</fieldset>
+
+
 		<?php 
 		} // fin section
 		if ($section=="7") {

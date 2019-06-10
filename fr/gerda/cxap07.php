@@ -20,12 +20,12 @@ include "gerdakapo.inc.php";
 			<div class="row dialogo">
 				<div class="col s12 m8">
 					<p><i>(En la koridoro)</i></p>
-					<p><b>Tom:</b> Jen ŝi estas. Ni pravis. ŝi apenaŭ havis la tempon alveni
-					ĝis la angulo, jam ŝi falis. Videble, ŝi estas nekonscia. ŝi perdis
+					<p><b>Tom:</b> Jen ŝi estas. Ni pravis. Ŝi apenaŭ havis la tempon alveni
+					ĝis la angulo, jam ŝi falis. Videble, ŝi estas nekonscia. Ŝi perdis
 					la konscion kaj falis.</p>
 					<p><b>Bob:</b> Ĉu ŝi ankoraŭ vivas?</p>
-					<p><b>Tom:</b> Jes. Ne timu. ŝi perdis la konscion, sed ŝi ne perdis la
-					vivon. La koro batas. Ĝi batas malforte, sed tamen batas. ŝi do
+					<p><b>Tom:</b> Jes. Ne timu. Ŝi perdis la konscion, sed ŝi ne perdis la
+					vivon. La koro batas. Ĝi batas malforte, sed tamen batas. Ŝi do
 					vivas. Eble ŝi apenaŭ vivas, sed ŝi vivas.</p>
 					<p><b>Bob:</b> Kion ni faru?</p>
 					<p><b>Tom:</b> Ŝajnas, ke ŝi dormas.</p>

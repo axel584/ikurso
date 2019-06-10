@@ -171,7 +171,7 @@ QCM_bildoj(
 		
 		<p>Dans cette phrase, <span class="eo">li</span> est le <b>sujet</b> et <span class="eo">instruisto</span> est l’<b>attribut du sujet</b>.</p>
 
-		<p class="parto">Il existe un petit groupe  de verbes d’état, après lesquels on ne met donc pas l’accusatif&nbsp;: <span class="eo">esti</span> (être), <span class="eo">resti</span> (rester), <span class="eo">ŝajni</span> (paraître), <span class="eo">aspekti</span> (sembler).</p>
+		<p class="parto">Il existe un petit groupe  de verbes d’état, après lesquels on ne met donc pas l’accusatif&nbsp;: <span class="eo">esti</span> (être), <span class="eo">resti</span> (rester), <span class="eo">ŝajni</span> (sembler), <span class="eo">aspekti</span> (paraître).</p>
 		
 		<p>Exemples&nbsp;:</p>
 		<div class="row">

@@ -320,7 +320,7 @@ function getCoursElLernanto($lernanto_id) {
 
 function redirigeSectionParUtilisateur($persono) {
     global $bdd;
-    $demando = "SELECT ordo,retpagxo,lecioneroj.lasta,kurso,numero,lecionoj.lasta as lasta_leciono FROM `personoj_lecioneroj`  join lecioneroj on lecioneroj.id=personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE persono_id=7874 order by dato desc limit 0,1";
+    $demando = "SELECT ordo,retpagxo,lecioneroj.lasta,kurso,numero,lecionoj.lasta as lasta_leciono FROM `personoj_lecioneroj`  join lecioneroj on lecioneroj.id=personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id WHERE persono_id=".$persono." order by dato desc limit 0,1";
     $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
     $row = $result->fetch();
     if ($row==null) {

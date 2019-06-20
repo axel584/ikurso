@@ -100,4 +100,45 @@ while($row = $result->fetch()) {
 	protokolo($studanto,"SUPPRESSON AUTOMATIQUE","suppression de l'élève et diminution du nb d'élèves pour ".$korektanto);
 
 }
+
+// Statistiques quotidiens pour les administrateurs
+$filename = "../mails/statAdmin.html";
+$fd = fopen($filename, "r");
+$contents = fread($fd, filesize ($filename));
+fclose($fd);
+// personnalisation (requetes) :
+$query="SELECT count(*) as kiom FROM personoj where ekdato= DATE_SUB(CONCAT(CURDATE(), ' 00:00:00'), INTERVAL 1 DAY)";
+$kiom = $bdd->query($query)->fetch()["kiom"];
+$contents=str_replace("##ALIGXIS##",$kiom,$contents);
+$query="SELECT count(*) as kiom FROM personoj where ekdato= DATE_SUB(CONCAT(CURDATE(), ' 00:00:00'), INTERVAL 1 DAY) and aktivigita is true";
+$kiom = $bdd->query($query)->fetch()["kiom"];
+$contents=str_replace("##AKTIVIGXIS##",$kiom,$contents);
+$novaj_lernantoj = "<ul>";
+$query="select k.enirnomo as korektanto,k.posxtkodo as korektanto_posxtkodo,s.enirnomo as studanto,s.posxtkodo as studanto_posxtkodo,nuna_kurso.kurso from nuna_kurso join personoj k on k.id=nuna_kurso.korektanto join personoj s on s.id=nuna_kurso.studanto where nuna_kurso.ekdato=DATE_SUB(CONCAT(CURDATE(), ' 00:00:00'), INTERVAL 1 DAY)";
+$result = $bdd->query($query);
+while($row = $result->fetch()) {
+	$novaj_lernantoj .= "<li>".$row["studanto"]."(".$row["studanto_posxtkodo"].") ricevis ".$row["korektanto"]."(".$row["korektanto_posxtkodo"].") kiel korektanto por la kurso : ".$row["kurso"]."</li>";	
+}
+$novaj_lernantoj .= "</ul>";
+$contents=str_replace("##NOVAJ_LERNANTOJ##",$novaj_lernantoj,$contents);
+$rimarkoj="<ul>";
+$query="SELECT enirnomo,retadreso,titolo,lecionoj.kurso,komento FROM `takso_leciono`  join personoj on personoj.id=takso_leciono.persono_id  join lecionoj on lecionoj.id=takso_leciono.leciono_id where date(dato)=DATE_SUB(CONCAT(CURDATE(), ' 00:00:00'), INTERVAL 1 DAY) and komento<>''";
+$result = $bdd->query($query);
+while($row = $result->fetch()) {
+	$rimarkoj.="<li><a href='mailto:".$row["retadreso"]."'>".$row["enirnomo"]."</a> pri ".$row["titolo"]."(".$row["kurso"].") diris : ".$row["komento"]."</li>";
+}
+$rimarkoj .= "</ul>";
+$contents=str_replace("##RIMARKOJ##",$rimarkoj,$contents);
+echo $contents;
+// liste des administrateurs :
+$demando="select retadreso from personoj where (rajtoj='A')";
+$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+$row=$result->fetch(); // on recupère le 1er admin
+$informistoj=$row["retadreso"];
+while ($row=$result->fetch()) { // on récupère les suivants
+   $informistoj=$informistoj.",".$row["retadreso"];
+}
+// envoie du mail :
+mailViaSES($informistoj,"Ikurso : Statistiques quotidiens",$contents);
+
 ?>

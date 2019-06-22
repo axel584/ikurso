@@ -43,12 +43,15 @@ function konvU($buff) {
 	return($buff);
 }
 
+// \xc2\xa0
+
 function konvX($buff) {
 	$utf8 = array(
 			"Ĉ" => "Cx",	"Ĝ" => "Gx",	"Ĥ" => "Hx",
 			"Ĵ" => "Jx",	"Ŝ" => "Sx",	"Ŭ" => "Ux",
 			"ĉ" => "cx",	"ĝ" => "gx",	"ĥ" => "hx",
-			"ĵ" => "jx",	"ŝ" => "sx",	"ŭ" => "ux"
+			"ĵ" => "jx",	"ŝ" => "sx",	"ŭ" => "ux",
+			"\xcc\x82" => "x" , "\xcc\x86" => "x"
 		);
 	foreach($utf8 as $key => $val) {
 		$buff=mb_ereg_replace($key,$val,$buff);
@@ -68,6 +71,7 @@ function kontroliRespondon($lernantaRespondo,$bonaRespondo) {
 	// on n'utilise plus les expressions régulières car y'a des bugs et en plus, on aimerait trouver "de quelle réponse l'élève était le plus proche"
 	//return preg_match("/^".normaligita($bonaRespondo)."$/",normaligita($lernantaRespondo));
 	// attention, il ne faut pas utiliser != mais !==
+	echo '[Memory:'.memory_get_usage().'@'.__FILE__.':'.__LINE__.']';
 	if (strpos($bonaRespondo,"|")!==false) {
 		return kontroliRespondon($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliRespondon($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
 	} else {

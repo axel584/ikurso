@@ -4,7 +4,7 @@ $vorto_id=isset($_GET["vorto_id"])?$_GET["vorto_id"]:"";
 $persono_id=isset($_GET["persono_id"])?$_GET["persono_id"]:"";
 if ($persono_id=="") {
 	$respondo["mesagxo"] = "ko";
-	$respondo["eraroj"]="Identifiant de l'élève absent. ça sent le piratage de bac à sable.";
+	$respondo["eraroj"]="Identifiant de l'élève absent. Ça sent le piratage de bac à sable.";
 	echo json_encode($respondo);
 	exit();
 }
@@ -58,7 +58,7 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 	$nombrilo = $result->fetch()["nombrilo"];
 	if (is_null($nombrilo)) {
 		$respondo["mesagxo"] = "ko";
-		$respondo["eraroj"]="Ce mot n'est pas dans votre liste des mots à réviser. Si vous voyez ce message d'erreur contacter les administrateurs. Si vous jouez avec les appels ajax, arrêtez ça, c'est déjà pénible de faire une application qui fonctionne correctement, c'est pas pour en plus gérer les cas de figure où des hackers de bac à sable s'amusent à faire les cons.";
+		$respondo["eraroj"]="Ce mot n'est pas dans votre liste des mots à réviser. Si vous voyez ce message d'erreur, contactez les administrateurs. Si vous jouez avec les appels ajax, arrêtez ça. C'est déjà pénible de faire une application qui fonctionne correctement, c'est pas pour en plus gérer les cas de figure où des hackers de bac à sable s'amusent à faire les cons.";
 		echo json_encode($respondo);
 		exit();
 	}

@@ -347,13 +347,13 @@ include "dlekkapo.inc.php";
 		if ($section=="4") {
 		?>
 		
-		<p><a href="<?php echo $vojo;?>fr/son/pv7-1.mp3" class="sm2_button"></a>
+		<p><a href="<?php echo $vojo;?>fr/son/frazoj/se-junulo-ne-lernis.mp3" class="sm2_button"></a>
 		Se junulo ne lernis, maljunulo ne scias.
 		</p>
-		<p><a href="<?php echo $vojo;?>fr/son/pv7-2.mp3" class="sm2_button"></a>
+		<p><a href="<?php echo $vojo;?>fr/son/frazoj/juneco-ne-scias.mp3" class="sm2_button"></a>
 		Juneco ne scias, maljuneco ne povas.
 		</p>
-		<p><a href="<?php echo $vojo;?>fr/son/pv7-3.mp3" class="sm2_button"></a>
+		<p><a href="<?php echo $vojo;?>fr/son/frazoj/estro-ne-malsatas.mp3" class="sm2_button"></a>
 		Estro ne malsatas.
 		</p>
 		
@@ -414,10 +414,18 @@ include "dlekkapo.inc.php";
 		</p>
 		
 		<div class="vortlisto row">
-			<p class="col s12 m6"><span class="eo"><b>Je kioma horo</b> ŝi venis?</span></p><p class="col s12 m6">À quelle heure est-elle venue&nbsp;? </p>
-			<p class="col s12 m6"><span class="eo">– Ŝi venis je la dua.</span></p><p class="col s12 m6">– Elle est venue à deux heures.</p>
-			<p class="col s12 m6"><span class="eo">– Ŝi venis je la dua kaj dek.</span></p><p class="col s12 m6">etc.</p>
-			<p class="col s12"><span class="eo">– Ŝi venis je dek antaŭ la dua.</span></p>
+			<p class="col s12 m6"><span class="eo">
+				<a href="<?php echo $vojo;?>fr/son/frazoj/je-kioma-horo-sxi-venis.mp3" class="sm2_button"></a>
+				<b>Je kioma horo</b> ŝi venis?</span></p><p class="col s12 m6">À quelle heure est-elle venue&nbsp;? </p>
+			<p class="col s12 m6">
+				<a href="<?php echo $vojo;?>fr/son/frazoj/sxi-venis-je-la-dua.mp3" class="sm2_button"></a>
+				<span class="eo">– Ŝi venis je la dua.</span></p><p class="col s12 m6">– Elle est venue à deux heures.</p>
+			<p class="col s12 m6">
+				<a href="<?php echo $vojo;?>fr/son/frazoj/sxi-venis-je-la-dua-kaj-dek.mp3" class="sm2_button"></a>
+				<span class="eo">– Ŝi venis je la dua kaj dek.</span></p><p class="col s12 m6">etc.</p>
+			<p class="col s12">
+				<a href="<?php echo $vojo;?>fr/son/frazoj/sxi-venis-je-dek-antau-la-dua.mp3" class="sm2_button"></a>
+				<span class="eo">– Ŝi venis je dek antaŭ la dua.</span></p>
 		</div>
 		<p>
 		Remarquez bien qu’on utilise la forme ordinale du numéral (la dua, la
@@ -430,12 +438,12 @@ include "dlekkapo.inc.php";
 		moment de la journée&nbsp;:
 		</p>
 		<div class="vortlisto row">
-			<p class="col s4 m2"><span class="eo">nokte</span></p><p class="col s8 m4">de la nuit</p>
-			<p class="col s4 m2"><span class="eo">matene</span></p><p class="col s8 m4">du matin</p>
-			<p class="col s4 m2"><span class="eo">antaŭtagmeze</span></p><p class="col s8 m4">du matin (mot-à-mot&nbsp;: <i>de l’avant-midi</i>)</p>
-			<p class="col s4 m2"><span class="eo">posttagmeze</span></p><p class="col s8 m4">de l’après-midi</p>
-			<p class="col s4 m2"><span class="eo">vespere</span></p><p class="col s8 m4">du soir</p>
-			<p class="col s4 m2"><span class="eo">nun</span></p><p class="col s8 m4">maintenant</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/nun.mp3" class="sm2_button"></a><span class="eo">nun</span>&nbsp;: maintenant</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/nokte.mp3" class="sm2_button"></a><span class="eo">nokte</span>&nbsp;: de la nuit</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/matene.mp3" class="sm2_button"></a><span class="eo">matene</span>&nbsp;: du matin</p>
+			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/vespere.mp3" class="sm2_button"></a><span class="eo">vespere</span>&nbsp;: du soir</p>
+			<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/antautagmeze.mp3" class="sm2_button"></a><span class="eo">antaŭtagmeze</span>&nbsp;: du matin (mot-à-mot&nbsp;: <i>de l’avant-midi</i>)</p>
+			<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/posttagmeze.mp3" class="sm2_button"></a><span class="eo">posttagmeze</span>&nbsp;: de l’après-midi</p>
 		</div>
 		
 		<p>Exemples :</p>

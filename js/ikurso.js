@@ -148,16 +148,22 @@ $('#eniri_identigilo,#eniri_pasvorto').keyup(function(e) {
  }
 });
 
-// fonction pour les exercices dont la réponse est en base : on souligne en vert si on a la bonen réponse
+// fonction pour les exercices dont la réponse est en base : on souligne en vert si on a la bonne réponse
 $(".korektebla").focusout( function () {
   $ekzercero = $(this).data('ekzercero');
   $studanto = $(this).data('studanto');
+  console.log("korektebla : "+$(this).val());
   $formulaire = $(this);
+  if ($formulaire.val()=="?") {
+    $respondo=""; // correction #895
+  } else {
+    $respondo = $formulaire.val();
+  }
           $.ajax({
           url : $cheminAbsolu+'ajax/memkorektado.php',
           type : 'GET',
           dataType : 'json',
-          data : "ekzercero="+$ekzercero+"&studanto="+$studanto+"&respondo="+$(this).val(),
+          data : "ekzercero="+$ekzercero+"&studanto="+$studanto+"&respondo="+$respondo,
           success : function(reponse, statut){ 
               if (reponse.mesagxo=="ok") {
                 $formulaire.addClass("valid");

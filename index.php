@@ -18,7 +18,7 @@ include "pagxkapo.inc.php";
 			<div class="row">
 				<div class="col s12 m5 l6">
 					<img src="<?=$vojo?>bildoj/robin-2012.jpg" alt="© Robin Guinin" class="responsive-img">
-					<p class="creditphoto primaire-texte">dessin : Robin Guinin, <a href="https://www.facebook.com/robin.guinin/">www.facebook.com/robin.guinin/</a></p>
+					<p class="creditphoto primaire-texte">dessin : Robin Guinin, <a href="https://www.facebook.com/LE.ROBINOSCOPE/">www.facebook.com/LE.ROBINOSCOPE/</a></p>
 				</div>
 				<div class="col s12 m7 l5">
 					<!--[if lt IE 9]>

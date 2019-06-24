@@ -391,18 +391,19 @@ include "dlekkapo.inc.php";
 		«&nbsp;à quelle heure…&nbsp;?&nbsp;».
 		</p>
 		<div class="vortlisto row">
-			<p class="col s12"><span class="eo"><b>Kioma horo estas ?</b></span>&nbsp;&nbsp;&nbsp;Quelle heure est-il ?</p>
+			<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/kioma-horo-estas.mp3" class="sm2_button"></a>
+				<span class="eo"><b>Kioma horo estas?</b></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quelle heure est-il ?</p>
 			<div class="col s12 row">
 				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/2h.png" class="responsive-img" alt="estas la dua"></p>
-				<p class="col s8 m9"><span class="eo"><br>– Estas la dua.</span><br>– Il est deux heures.</p>
+				<p class="col s8 m9"><br><a href="<?php echo $vojo;?>fr/son/frazoj/estas-la-dua.mp3" class="sm2_button"></a><span class="eo">– Estas la dua.</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Il est deux heures.</p>
 			</div>
 			<div class="col s12 row">
 				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/2h10.png" class="responsive-img" alt="estas la dua"></p>
-				<p class="col s8 m9"><span class="eo"><br>– Estas la dua kaj dek.</span><br>– Il est deux heures dix.</p>
+				<p class="col s8 m9"><br><a href="<?php echo $vojo;?>fr/son/frazoj/estas-la-dua-kaj-dek.mp3" class="sm2_button"></a><span class="eo">– Estas la dua kaj dek.</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Il est deux heures dix.</p>
 			</div>
 			<div class="col s12 row">
 				<p class="col s4 m3"><img src="<?php echo $vojo;?>fr/cge/bildoj/1h50.png" class="responsive-img" alt="estas la dua"></p>
-				<p class="col s8 m9"><span class="eo"><brr>– Estas dek antaŭ la dua.</span><br>– Il est deux heures moins dix.</p>
+				<p class="col s8 m9"><br><a href="<?php echo $vojo;?>fr/son/frazoj/estas-dek-antau-la-dua.mp3" class="sm2_button"></a><span class="eo">– Estas dek antaŭ la dua.</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Il est deux heures moins dix.</p>
 			</div>
 		</div>
 		
@@ -414,12 +415,12 @@ include "dlekkapo.inc.php";
 		</p>
 		
 		<div class="vortlisto row">
-			<p class="col s12 m6"><span class="eo">
+			<p class="col s12 m6">
 				<a href="<?php echo $vojo;?>fr/son/frazoj/je-kioma-horo-sxi-venis.mp3" class="sm2_button"></a>
-				<b>Je kioma horo</b> ŝi venis?</span></p><p class="col s12 m6">À quelle heure est-elle venue&nbsp;? </p>
+				<span class="eo"><b>Je kioma horo</b> ŝi venis?</span></p><p class="col s12 m6">&nbsp;&nbsp;&nbsp;À quelle heure est-elle venue&nbsp;? </p>
 			<p class="col s12 m6">
 				<a href="<?php echo $vojo;?>fr/son/frazoj/sxi-venis-je-la-dua.mp3" class="sm2_button"></a>
-				<span class="eo">– Ŝi venis je la dua.</span></p><p class="col s12 m6">– Elle est venue à deux heures.</p>
+				<span class="eo">– Ŝi venis je la dua.</span></p><p class="col s12 m6">&nbsp;&nbsp;&nbsp;– Elle est venue à deux heures.</p>
 			<p class="col s12 m6">
 				<a href="<?php echo $vojo;?>fr/son/frazoj/sxi-venis-je-la-dua-kaj-dek.mp3" class="sm2_button"></a>
 				<span class="eo">– Ŝi venis je la dua kaj dek.</span></p><p class="col s12 m6">etc.</p>
@@ -448,11 +449,11 @@ include "dlekkapo.inc.php";
 		
 		<p>Exemples :</p>
 		<div class="row">
-			<p class="col s12"><span class="eo">Ŝi dancis ĝis la dua nokte</span> (aŭ : <span class="eo">matene</span>).</p>
+			<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/sxi-dancis-gxis.mp3" class="sm2_button"></a><span class="eo">Ŝi dancis ĝis la dua nokte</span> (aŭ : <span class="eo">matene</span>).</p>
 			<p class="col s11 offset-s1">= Elle a dansé jusqu’à deux heures du matin.</p>
-			<p class="col s12"><span class="eo">Mi ofte tagmanĝas je la unua posttagmeze.</span></p>
+			<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/mi-ofte-mangxas.mp3" class="sm2_button"></a><span class="eo">Mi ofte tagmanĝas je la unua posttagmeze.</span></p>
 			<p class="col s11 offset-s1">= Je déjeune souvent à une heure de l’après-midi.</p>
-			<p class="col s12"><span class="eo">Mi iras labori je la sepa matene kaj revenas je la oka vespere.</span></p>
+			<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/mi-iras-labori.mp3" class="sm2_button"></a><span class="eo">Mi iras labori je la sepa matene kaj revenas je la oka vespere.</span></p>
 			<p class="col s11 offset-s1">= Je pars travailler à 7h du matin et je reviens à 8h du soir.</p>
 		</div>
 

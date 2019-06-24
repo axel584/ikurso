@@ -152,18 +152,13 @@ $('#eniri_identigilo,#eniri_pasvorto').keyup(function(e) {
 $(".korektebla").focusout( function () {
   $ekzercero = $(this).data('ekzercero');
   $studanto = $(this).data('studanto');
-  console.log("korektebla : "+$(this).val());
   $formulaire = $(this);
-  if ($formulaire.val()=="?") {
-    $respondo=""; // correction #895
-  } else {
-    $respondo = $formulaire.val();
-  }
+  $respondo=$formulaire.val();
           $.ajax({
           url : $cheminAbsolu+'ajax/memkorektado.php',
           type : 'GET',
           dataType : 'json',
-          data : "ekzercero="+$ekzercero+"&studanto="+$studanto+"&respondo="+$respondo,
+          data : "ekzercero="+$ekzercero+"&studanto="+$studanto+"&respondo="+encodeURIComponent($respondo),
           success : function(reponse, statut){ 
               if (reponse.mesagxo=="ok") {
                 $formulaire.addClass("valid");

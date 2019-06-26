@@ -3,6 +3,7 @@ include "../util.php";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $persono = apartigiPersonon($persono_id);
 $lecionero_id=isset($_GET["lecionero_id"])?$_GET["lecionero_id"]:"";
+$ekdato=isset($_GET['ekdato'])?$_GET['ekdato']:"";
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
 $commentaire_pour_correcteur=isset($_GET["commentaire_pour_correcteur"])?$_GET["commentaire_pour_correcteur"]:"";
@@ -44,8 +45,8 @@ $result = $bdd->query($query);
 $combien = $result->fetch()["combien"];
 // on enregistre si il n'y avait rien en base
 if ($combien==0) {
-	$requete = $bdd->prepare('insert into personoj_lecionoj(dato,persono_id,leciono_id) values (now(),:persono_id,:leciono_id)');
-	$requete->execute(array('persono_id'=>$persono_id,'leciono_id'=>$leciono_id));
+	$requete = $bdd->prepare('insert into personoj_lecionoj(dato,persono_id,leciono_id,ekdato) values (now(),:persono_id,:leciono_id,:ekdato)');
+	$requete->execute(array('persono_id'=>$persono_id,'leciono_id'=>$leciono_id,'ekdato'=>$ekdato));
 }
 
 // on récupère quelques infos sur le cours :

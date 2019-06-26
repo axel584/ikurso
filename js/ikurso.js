@@ -154,6 +154,7 @@ $(".korektebla").focusout( function () {
   $studanto = $(this).data('studanto');
   $formulaire = $(this);
   $respondo=$formulaire.val();
+  if ($respondo!="") {
           $.ajax({
           url : $cheminAbsolu+'ajax/memkorektado.php',
           type : 'GET',
@@ -174,6 +175,7 @@ $(".korektebla").focusout( function () {
 
           }
       });
+  }
 });
 
 
@@ -459,7 +461,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		url : $cheminAbsolu+'ajax/registriEkzercaron.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#registriEkzercaron_button").data('lecionero_id')+"&leciono="+$("#registriEkzercaron_button").data('leciono')+"&kurso="+$("#registriEkzercaron_button").data('kurso'),
+       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#registriEkzercaron_button").data('lecionero_id')+"&leciono="+$("#registriEkzercaron_button").data('leciono')+"&kurso="+$("#registriEkzercaron_button").data('kurso')+"&ekdato="+$("#registriEkzercaron_button").data('ekdato'),
        		success : function(reponse, statut){ 
             if (reponse.type=="pas fini") {
                 //Materialize.toast(reponse.mesagxo, 4000);
@@ -498,7 +500,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		url : $cheminAbsolu+'ajax/finiLecioneron.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : "lecionero_id="+$("#finiLecioneron_button").data('lecionero_id')+"&leciono="+$("#finiLecioneron_button").data('leciono')+"&kurso="+$("#finiLecioneron_button").data('kurso'),
+       		data : "lecionero_id="+$("#finiLecioneron_button").data('lecionero_id')+"&leciono="+$("#finiLecioneron_button").data('leciono')+"&kurso="+$("#finiLecioneron_button").data('kurso')+"&ekdato="+$("#finiLecioneron_button").data('ekdato'),
        		success : function(reponse, statut){ 
        			if (reponse.mesagxo=="aucune url suivante") {
        				alert("leçon suivante inconnu, contactez les administrateurs");
@@ -519,7 +521,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		url : $cheminAbsolu+'ajax/kontroliQCM.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#kontroliQCM_button").data('lecionero_id')+"&leciono="+$("#kontroliQCM_button").data('leciono')+"&kurso="+$("#kontroliQCM_button").data('kurso'),
+       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#kontroliQCM_button").data('lecionero_id')+"&leciono="+$("#kontroliQCM_button").data('leciono')+"&kurso="+$("#kontroliQCM_button").data('kurso')+"&ekdato="+$("#kontroliQCM_button").data('ekdato'),
        		success : function(reponse, statut){ 
        			if (reponse.mesagxo=="ko") {
        				// il y a des erreurs, on va les afficher
@@ -546,7 +548,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		url : $cheminAbsolu+'ajax/petiKorektanton.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#petiKorektanton_button").data('lecionero_id')+"&leciono="+$("#petiKorektanton_button").data('leciono')+"&kurso="+$("#petiKorektanton_button").data('kurso'),
+       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#petiKorektanton_button").data('lecionero_id')+"&leciono="+$("#petiKorektanton_button").data('leciono')+"&kurso="+$("#petiKorektanton_button").data('kurso')+"&ekdato="+$("#petiKorektanton_button").data('ekdato'),
        		success : function(reponse, statut){ 
        			if (reponse.mesagxo=="compteNonActif") {
        				alert("Votre compte n'a pas été activé, vous ne pouvez pas demander un correcteur. Vérifier dans vos e-mails et cliquez sur le lien d'activation");
@@ -570,7 +572,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		url : $cheminAbsolu+'ajax/sendiLecionon.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#sendiLecionon_button").data('lecionero_id')+"&leciono="+$("#sendiLecionon_button").data('leciono')+"&kurso="+$("#sendiLecionon_button").data('kurso'),
+       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#sendiLecionon_button").data('lecionero_id')+"&leciono="+$("#sendiLecionon_button").data('leciono')+"&kurso="+$("#sendiLecionon_button").data('kurso')+"&ekdato="+$("#sendiLecionon_button").data('ekdato'),
        		success : function(reponse, statut){ 
        			if (reponse.type=="korektanto") {
        				alert("Vous n'avez pas de correcteur d'attribué, veuillez contacter les administrateurs.");

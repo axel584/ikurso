@@ -2,6 +2,7 @@
 include "../util.php";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $lecionero_id=isset($_GET["lecionero_id"])?$_GET["lecionero_id"]:"";
+$ekdato=isset($_GET['ekdato'])?$_GET['ekdato']:"";
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
 if ($persono_id=="") { // personne non connecté, on ressort
@@ -106,8 +107,8 @@ if ($uneReponseManquante) {
 $result = $bdd->query("select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id);
 $nbReponseEnBase = $result->fetch()["combien"];
 if ($nbReponseEnBase==0) {
-	$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id) values (now(),:persono_id,:lecionero_id)');
-	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id));
+	$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id,ekdato) values (now(),:persono_id,:lecionero_id,:ekdato)');
+	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id,'ekdato'=>$ekdato));
 }
 
 // on trouve la leçon suivante et on récupère son url :

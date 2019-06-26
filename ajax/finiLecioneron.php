@@ -3,6 +3,7 @@ include "../util.php";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $leciono=isset($_GET['leciono'])?$_GET['leciono']:"";
 $lecionero_id=isset($_GET['lecionero_id'])?$_GET['lecionero_id']:"";
+$ekdato=isset($_GET['ekdato'])?$_GET['ekdato']:"";
 $kurso=isset($_GET['kurso'])?$_GET['kurso']:"";
 
 if ($persono_id=="") { // personne non connecté, on ressort
@@ -26,8 +27,8 @@ $result = $bdd->query($query);
 $combien = $result->fetch()["combien"];
 // on enregistre si il n'y avait rien en base
 if ($combien==0) {
-	$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id) values (now(),:persono_id,:lecionero_id)');
-	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id));
+	$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id,ekdato) values (now(),:persono_id,:lecionero_id,FROM_UNIXTIME(:ekdato))');
+	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id,'ekdato'=>$ekdato));
 }
 
 // on ajoute les mots étudiés dans cette section au vocabulaire à apprendre :

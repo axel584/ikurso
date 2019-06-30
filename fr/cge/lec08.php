@@ -181,13 +181,13 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s12 m4"><span class="eo">voĉo</span> : voix</p>
-					<p class="col s12 m4"><span class="eo">pordo</span> : porte</p>
-					<p class="col s12 m4"><span class="eo">vermo</span> : ver</p>
-					<p class="col s12 m4"><span class="eo">letero</span> : lettre (courrier)</p>
-					<p class="col s12 m4"><span class="eo">honori</span> : honorer</p>
-					<p class="col s12 m4"><span class="eo">diablo</span> : diable</p>
-					<p class="col s12 m4"><span class="eo">adori</span> : adorer</p>
+					<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/vocxo.mp3" class="sm2_button"></a><span class="eo">voĉo</span> : voix</p>
+					<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/pordo.mp3" class="sm2_button"></a><span class="eo">pordo</span> : porte</p>
+					<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/vermo.mp3" class="sm2_button"></a><span class="eo">vermo</span> : ver</p>
+					<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/letero.mp3" class="sm2_button"></a><span class="eo">letero</span> : lettre (courrier)</p>
+					<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/honori.mp3" class="sm2_button"></a><span class="eo">honori</span> : honorer</p>
+					<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/diablo.mp3" class="sm2_button"></a><span class="eo">diablo</span> : diable</p>
+					<p class="col s12 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/adori.mp3" class="sm2_button"></a><span class="eo">adori</span> : adorer</p>
 				</div>
 			</fieldset>
 
@@ -196,14 +196,14 @@ include "dlekkapo.inc.php";
 		if ($section=="2") {
 		?>
 
-			<p><a href="<?php echo $vojo;?>fr/son/pv8-1.mp3" class="sm2_button"></a> <span class="eo">Vivanton ni malhonoras, mortinton ni adoras.</span></p>
+			<p><a href="<?php echo $vojo;?>fr/son/frazoj/vivanton-ni-malhonoras.mp3" class="sm2_button"></a> <span class="eo">Vivanton ni malhonoras, mortinton ni adoras.</span></p>
 			<p>
-			<a href="<?php echo $vojo;?>fr/son/pv8-2.mp3" class="sm2_button"></a> <span class="eo">Dancu diabloj, sed ne en mia arbaro.</span></p>
+			<a href="<?php echo $vojo;?>fr/son/frazoj/dancu-diabloj.mp3" class="sm2_button"></a> <span class="eo">Dancu diabloj, sed ne en mia arbaro.</span></p>
 
 			<div class="vortlisto row">
-				<p class="col s6 m4"><span class="eo">honori</span>&nbsp;: honorer</p>
-				<p class="col s6 m4"><span class="eo">diablo</span>&nbsp;: diable</p>
-				<p class="col s6 m4"><span class="eo">adori</span>&nbsp;: adorer</p>
+				<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/honori.mp3" class="sm2_button"></a><span class="eo">honori</span>&nbsp;: honorer</p>
+				<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/diablo.mp3" class="sm2_button"></a><span class="eo">diablo</span>&nbsp;: diable</p>
+				<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/adori.mp3" class="sm2_button"></a><span class="eo">adori</span>&nbsp;: adorer</p>
 			</div>
 			
 			<p class="parto">Dans le premier proverbe, on souligne qu’on juge différemment une personne morte ou vivante, on la déshonore de son vivant, mais on la vénère quand elle est morte. Dans le deuxième proverbe, le diable personnifie les problèmes qui peuvent arriver et ceux-ci ne sont pas considérés comme graves s’ils ne sont pas chez soi.</p>
@@ -247,16 +247,16 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s12 m6"><span class="eo">juĝisto</span>&nbsp;: juge</p>
-					<p class="col s12 m6"><span class="eo">aserti</span>&nbsp;: affirmer, prétendre</p>
-					<p class="col s12 m6"><span class="eo">akuzato</span>&nbsp;: l’accusé</p>
-					<p class="col s12 m6"><span class="eo">forkuri</span>&nbsp;: se sauver, c-à-d. courir au loin</p>
-					<p class="col s12 m6"><span class="eo">tramo</span>&nbsp;: tramway</p>
-					<p class="col s12 m6"><span class="eo">okulo</span>&nbsp;: œil</p>
-					<p class="col s12 m6"><span class="eo">opinii</span>&nbsp;: penser, avoir une opinion</p>
-					<p class="col s12 m6"><span class="eo">stari</span>&nbsp;: être debout</p>
-					<p class="col s12 m6"><span class="eo">laca</span>&nbsp;: fatigué</p>
-					<p class="col s12 m6"><span class="eo">plaĉi</span>&nbsp;: plaire</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/jugxisto.mp3" class="sm2_button"></a><span class="eo">juĝisto</span>&nbsp;: juge</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/aserti.mp3" class="sm2_button"></a><span class="eo">aserti</span>&nbsp;: affirmer, prétendre</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/akuzato.mp3" class="sm2_button"></a><span class="eo">akuzato</span>&nbsp;: l’accusé</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/forkuri.mp3" class="sm2_button"></a><span class="eo">forkuri</span>&nbsp;: se sauver, c-à-d. courir au loin</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/tramo.mp3" class="sm2_button"></a><span class="eo">tramo</span>&nbsp;: tramway</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/okulo.mp3" class="sm2_button"></a><span class="eo">okulo</span>&nbsp;: œil</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/opinii.mp3" class="sm2_button"></a><span class="eo">opinii</span>&nbsp;: penser, avoir une opinion</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/stari.mp3" class="sm2_button"></a><span class="eo">stari</span>&nbsp;: être debout</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/laca.mp3" class="sm2_button"></a><span class="eo">laca</span>&nbsp;: fatigué</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/placxi.mp3" class="sm2_button"></a><span class="eo">plaĉi</span>&nbsp;: plaire</p>
 				</div>
 			</fieldset>
 			
@@ -283,9 +283,9 @@ include "dlekkapo.inc.php";
 			</div>
 			 <p>Vous avez vu également comment on construit les adjectifs possessifs à partir des pronoms en ajoutant la terminaison -<b>a</b>&nbsp;:</p>
 			<div class="row">
-				<p class="col s12"><span class="eo">Li manĝas mi<b>an</b> kukon.</span>&nbsp;: Il mange mon gâteau.</p>
-				<p class="col s12"><span class="eo">Mi ŝatas ŝi<b>ajn</b> kukojn.</span>&nbsp;: J’aime ses gâteaux.</p>
-				<p class="col s12"><span class="eo">Ni ludas kun ili<b>aj</b> infanoj.</span>&nbsp;: Nous jouons avec leurs enfants.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/li-mangxas-mian-kukon.mp3" class="sm2_button"></a><span class="eo">Li manĝas mi<b>an</b> kukon.</span>&nbsp;: Il mange mon gâteau.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/mi-sxatas-sxiajn-kukojn.mp3" class="sm2_button"></a><span class="eo">Mi ŝatas ŝi<b>ajn</b> kukojn.</span>&nbsp;: J’aime ses gâteaux.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/ni-ludas-kun-iliaj-infanoj.mp3" class="sm2_button"></a><span class="eo">Ni ludas kun ili<b>aj</b> infanoj.</span>&nbsp;: Nous jouons avec leurs enfants.</p>
 			</div>
 
 			<p class="parto">Considérez maintenant la phrase suivante&nbsp;:</p>
@@ -306,9 +306,9 @@ include "dlekkapo.inc.php";
 			<fieldset>
 				<div class="row">
 					<div class="col s12">
-						<p><span class="eo">Mario ludas kun <b>sia</b> hundo.</span><br>= Mario joue avec son propre chien.</p>
-						<p><span class="eo">Mario ludas kun <b>lia</b> hundo.</span><br> = Mario joue avec le chien d’une personne de sexe masculin.</p>
-						<p><span class="eo">Mario ludas kun <b>ŝia</b> hundo.</span><br>= Mario joue avec le chien d’une personne de sexe féminin.</p>
+						<p><a href="<?php echo $vojo;?>fr/son/frazoj/mario-ludas-kun-sia.mp3" class="sm2_button"></a><span class="eo">Mario ludas kun <b>sia</b> hundo.</span><br>= Mario joue avec son propre chien.</p>
+						<p><a href="<?php echo $vojo;?>fr/son/frazoj/mario-ludas-kun-lia.mp3" class="sm2_button"></a><span class="eo">Mario ludas kun <b>lia</b> hundo.</span><br> = Mario joue avec le chien d’une personne de sexe masculin.</p>
+						<p><a href="<?php echo $vojo;?>fr/son/frazoj/mario-ludas-kun-sxia.mp3" class="sm2_button"></a><span class="eo">Mario ludas kun <b>ŝia</b> hundo.</span><br>= Mario joue avec le chien d’une personne de sexe féminin.</p>
 					</div>
 				</div>
 			</fieldset>
@@ -316,15 +316,15 @@ include "dlekkapo.inc.php";
 			<p>Autre exemple&nbsp;:</p>
 
 			<div class="row">
-				<p class="col s12"><span class="eo">Ŝi kisis sian edzon.</span> =&nbsp;Elle a embrassé son (propre) mari.</p>
-				<p class="col s12"><span class="eo">Ŝi kisis ŝian edzon.</span> =&nbsp;Elle a embrassé son mari (le mari d’une autre femme).</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/sxi-kisis-sian.mp3" class="sm2_button"></a><span class="eo">Ŝi kisis sian edzon.</span> =&nbsp;Elle a embrassé son (propre) mari.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/sxi-kisis-sxian.mp3" class="sm2_button"></a><span class="eo">Ŝi kisis ŝian edzon.</span> =&nbsp;Elle a embrassé son mari (le mari d’une autre femme).</p>
 			</div>
 
 			<p class="parto">De la même façon, on différencie&nbsp;:</p>
 			<div class="row">
-				<p class="col s12"><span class="eo">Johano lavis <b>sin</b>.</span> = Jean s’est lavé.</span></p>
-				<p class="col s12"><span class="eo">Johano lavis <b>lin</b>.</span> = Jean l’a lavé. (il a lavé une autre personne, de sexe masculin)</span></p>
-				<p class="col s12"><span class="eo">Johano lavis <b>ŝin</b>.</span> = Jean l’a lavée (il a lavé une autre personne, de sexe féminin)</span></p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/johano-lavis-sin.mp3" class="sm2_button"></a><span class="eo">Johano lavis <b>sin</b>.</span> = Jean s’est lavé.</span></p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/johano-lavis-lin.mp3" class="sm2_button"></a><span class="eo">Johano lavis <b>lin</b>.</span> = Jean l’a lavé. (il a lavé une autre personne, de sexe masculin)</span></p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/johano-lavis-sxin.mp3" class="sm2_button"></a><span class="eo">Johano lavis <b>ŝin</b>.</span> = Jean l’a lavée (il a lavé une autre personne, de sexe féminin)</span></p>
 			</div>
 			
 			<p>Autre exemple&nbsp;:</p>
@@ -347,8 +347,8 @@ include "dlekkapo.inc.php";
 			<p class="parto">Notez bien que comme <b>si</b> et <b>sia</b> se rapportent toujours au sujet, ils ne peuvent pas faire partie du sujet.</p>
 			<p>Exemples :<br>
 			<div class="row">
-				<p class="col s12"><span class="eo"><b>Mario kaj <u>lia</u> hundo</b> ludas en la parko.</span>&nbsp;: dans cette phrase, le sujet est <b>Mario kaj lia hundo</b> => pas de réfléchi dans ce cas.</p>
-				<p class="col s12"><span class="eo">Mario ludas en la parko <b>kun <u>sia</u> hundo</b>.</span>&nbsp;: dans cette phrase, le sujet est <b>Mario</b>, et ici <b>kun sia hundo</b> est complément => on emploie le réfléchi.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/mario-kaj-lia-hundo.mp3" class="sm2_button"></a><span class="eo"><b>Mario kaj <u>lia</u> hundo</b> ludas en la parko.</span>&nbsp;: dans cette phrase, le sujet est <b>Mario kaj lia hundo</b> => pas de réfléchi dans ce cas.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/mario-ludas-en-la-parko.mp3" class="sm2_button"></a><span class="eo">Mario ludas en la parko <b>kun <u>sia</u> hundo</b>.</span>&nbsp;: dans cette phrase, le sujet est <b>Mario</b>, et ici <b>kun sia hundo</b> est complément => on emploie le réfléchi.</p>
 			</div>
 			
 

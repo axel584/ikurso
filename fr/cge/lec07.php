@@ -509,133 +509,133 @@ include "dlekkapo.inc.php";
 			<fieldset class="vortoj">
 				<div class="vortlisto row">
 					<div class="col s12 m6">
-						<p><span class="eo">filo</span>&nbsp;: fils<br>
-						   <span class="eo">bofilo</span>&nbsp;: beau-fils, gendre</p>
-						<p><span class="eo">fratino</span>&nbsp;: sœur<br>
-						   <span class="eo">bofratino</span>&nbsp;: belle-sœur</p>
-						<p><span class="eo">doni</span>&nbsp;: donner<br>
-						   <span class="eo">disdoni</span>&nbsp;: distribuer</p>
-						<p><span class="eo">semi</span>&nbsp;: semer<br>
-						   <span class="eo">dissemi</span>&nbsp;: disséminer</p>
-						<p><span class="eo">dormi</span>&nbsp;: dormir<br>
-						   <span class="eo">ekdormi</span>&nbsp;: s’endormir</p>
-						<p><span class="eo">pluvi</span>&nbsp;: pleuvoir<br>
-						   <span class="eo">ekpluvi</span>&nbsp;: commencer à pleuvoir</p>
-						<p><span class="eo">ek!</span>&nbsp;: allez&nbsp;!, en avant&nbsp;!, allons-y&nbsp;!, en route&nbsp;!</p>
-						<p><span class="eo">prezidanto</span>&nbsp;: président<br>
-						   <span class="eo">eksprezidanto</span>&nbsp;: ex-président</p>
-						<p><span class="eo">edziĝi</span>&nbsp;: se marier<br>
-						   <span class="eo">eksedziĝi</span>&nbsp;: divorcer</p>
-						<p><span class="eo">eksiĝi</span>&nbsp;: démissionner</p>
-						<p><span class="eo">komercisto</span>&nbsp;: commerçant</p>
-						<p><span class="eo">gepatroj</span>&nbsp;: parents</p>
-						<p><span class="eo">sinjoro</span>&nbsp;: monsieur<br>
-						   <span class="eo">gesinjoroj</span>&nbsp;: mesdames et messieurs</p>
-						<p><span class="eo">gea</span>&nbsp;: mixte</p>
-						<p><span class="eo">fermi</span>&nbsp;: fermer<br>
-						   <span class="eo">malfermi</span>&nbsp;: ouvrir</p>
-						<p><span class="eo">la malo</span>&nbsp;: le contraire</p>
-						<p><span class="eo">paroli</span>&nbsp;: parler<br>
-						   <span class="eo">parolado</span>&nbsp;: discours</p>
-						<p><span class="eo">rigardi</span>&nbsp;: regarder<br>
-						   <span class="eo">rigardadi</span>&nbsp;: contempler</p>
-						<p><span class="eo">kanti</span>&nbsp;: chanter<br>
-						   <span class="eo">kantado</span>&nbsp;: action de chanter</p>
-						<p><span class="eo">ade</span>&nbsp;: sans arrêt</p>
-						<p><span class="eo">sendi</span>&nbsp;: envoyer<br>
-						   <span class="eo">sendaĵo</span>&nbsp;: envoi (chose envoyée)</p>
-						<p><span class="eo">bovo</span>&nbsp;: bœuf<br>
-						   <span class="eo">bovaĵo</span>&nbsp;: viande de bœuf</p>
-						<p><span class="eo">reala</span>&nbsp;: réel<br>
-						   <span class="eo">realaĵo</span>&nbsp;: réalité, chose réelle</p>
-						<p><span class="eo">Kanado</span>&nbsp;: Canada<br>
-						   <span class="eo">kanadano</span>&nbsp;: Canadien</p>
-						<p><span class="eo">Kristo</span>&nbsp;: Christ<br>
-						   <span class="eo">kristano</span>&nbsp;: chrétien</p>
-						<p><span class="eo">vorto</span>&nbsp;: mot<br>
-						   <span class="eo">vortaro</span>&nbsp;: dictionnaire</p>
-						<p><span class="eo">ŝafo</span>&nbsp;: mouton<br>
-						   <span class="eo">ŝafaro</span>&nbsp;: troupeau de moutons</p>
-						<p><span class="eo">membraro</span>&nbsp;: les membres (d’une association)</p>
-						<p><span class="eo">ebla</span>&nbsp;: possible<br>
-						   <span class="eo">eble</span>&nbsp;: peut-être</p>
-						<p><span class="eo">vireco</span>&nbsp;: virilité</p>
-						<p><span class="eo">verdeco</span>&nbsp;: verdeur</p>
-						<p><span class="eo">infaneco</span>&nbsp;: enfance</p>
-						<p><span class="eo">vento</span>&nbsp;: vent<br>
-						   <span class="eo">ventego</span>&nbsp;: tempête</p>
-						<p><span class="eo">ridi</span>&nbsp;: rire<br>
-						   <span class="eo">ridegi</span>&nbsp;: se tordre (de rire)</p>
-						<p><span class="eo">ege</span>&nbsp;: extrêmement</p>
-						<p><span class="eo">tombo</span>&nbsp;: tombe<br>
-						   <span class="eo">tombejo</span>&nbsp;: cimetière</p>
-						<p><span class="eo">ejo</span>&nbsp;: local, salle</p>
-						<p><span class="eo">ŝpari</span>&nbsp;: économiser<br>
-						   <span class="eo">ŝparema</span>&nbsp;: économe</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/filo-2.mp3" class="sm2_button"></a><span class="eo">filo</span>&nbsp;: fils<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/bofilo.mp3" class="sm2_button"></a><span class="eo">bofilo</span>&nbsp;: beau-fils, gendre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/fratino.mp3" class="sm2_button"></a><span class="eo">fratino</span>&nbsp;: sœur<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/bofratino.mp3" class="sm2_button"></a><span class="eo">bofratino</span>&nbsp;: belle-sœur</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/doni.mp3" class="sm2_button"></a><span class="eo">doni</span>&nbsp;: donner<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/disdoni.mp3" class="sm2_button"></a><span class="eo">disdoni</span>&nbsp;: distribuer</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/semi.mp3" class="sm2_button"></a><span class="eo">semi</span>&nbsp;: semer<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/dissemi.mp3" class="sm2_button"></a><span class="eo">dissemi</span>&nbsp;: disséminer</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/dormi.mp3" class="sm2_button"></a><span class="eo">dormi</span>&nbsp;: dormir<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/ekdormi.mp3" class="sm2_button"></a><span class="eo">ekdormi</span>&nbsp;: s’endormir</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/pluvi.mp3" class="sm2_button"></a><span class="eo">pluvi</span>&nbsp;: pleuvoir<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/ekpluvi.mp3" class="sm2_button"></a><span class="eo">ekpluvi</span>&nbsp;: commencer à pleuvoir</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ek.mp3" class="sm2_button"></a><span class="eo">ek!</span>&nbsp;: allez&nbsp;!, en avant&nbsp;!, allons-y&nbsp;!, en route&nbsp;!</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/prezidanto.mp3" class="sm2_button"></a><span class="eo">prezidanto</span>&nbsp;: président<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/eksprezidanto.mp3" class="sm2_button"></a><span class="eo">eksprezidanto</span>&nbsp;: ex-président</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/edzigxi.mp3" class="sm2_button"></a><span class="eo">edziĝi</span>&nbsp;: se marier<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/eksedzigxi.mp3" class="sm2_button"></a><span class="eo">eksedziĝi</span>&nbsp;: divorcer</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/eksigxi.mp3" class="sm2_button"></a><span class="eo">eksiĝi</span>&nbsp;: démissionner</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/komercisto.mp3" class="sm2_button"></a><span class="eo">komercisto</span>&nbsp;: commerçant</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/gepatroj.mp3" class="sm2_button"></a><span class="eo">gepatroj</span>&nbsp;: parents</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sinjoro.mp3" class="sm2_button"></a><span class="eo">sinjoro</span>&nbsp;: monsieur<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/gesinjoroj.mp3" class="sm2_button"></a><span class="eo">gesinjoroj</span>&nbsp;: mesdames et messieurs</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/gea.mp3" class="sm2_button"></a><span class="eo">gea</span>&nbsp;: mixte</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/fermi.mp3" class="sm2_button"></a><span class="eo">fermi</span>&nbsp;: fermer<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/malfermi.mp3" class="sm2_button"></a><span class="eo">malfermi</span>&nbsp;: ouvrir</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/la-malo.mp3" class="sm2_button"></a><span class="eo">la malo</span>&nbsp;: le contraire</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/paroli.mp3" class="sm2_button"></a><span class="eo">paroli</span>&nbsp;: parler<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/parolado.mp3" class="sm2_button"></a><span class="eo">parolado</span>&nbsp;: discours</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/rigardi.mp3" class="sm2_button"></a><span class="eo">rigardi</span>&nbsp;: regarder<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/rigardadi.mp3" class="sm2_button"></a><span class="eo">rigardadi</span>&nbsp;: contempler</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kanti.mp3" class="sm2_button"></a><span class="eo">kanti</span>&nbsp;: chanter<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/kantado.mp3" class="sm2_button"></a><span class="eo">kantado</span>&nbsp;: action de chanter</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ade.mp3" class="sm2_button"></a><span class="eo">ade</span>&nbsp;: sans arrêt</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sendi.mp3" class="sm2_button"></a><span class="eo">sendi</span>&nbsp;: envoyer<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/sendajxo.mp3" class="sm2_button"></a><span class="eo">sendaĵo</span>&nbsp;: envoi (chose envoyée)</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/bovo.mp3" class="sm2_button"></a><span class="eo">bovo</span>&nbsp;: bœuf<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/bovajxo.mp3" class="sm2_button"></a><span class="eo">bovaĵo</span>&nbsp;: viande de bœuf</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/reala.mp3" class="sm2_button"></a><span class="eo">reala</span>&nbsp;: réel<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/realajxo.mp3" class="sm2_button"></a><span class="eo">realaĵo</span>&nbsp;: réalité, chose réelle</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kanado-2.mp3" class="sm2_button"></a><span class="eo">Kanado</span>&nbsp;: Canada<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/kanadano.mp3" class="sm2_button"></a><span class="eo">kanadano</span>&nbsp;: Canadien</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kristo.mp3" class="sm2_button"></a><span class="eo">Kristo</span>&nbsp;: Christ<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/kristano.mp3" class="sm2_button"></a><span class="eo">kristano</span>&nbsp;: chrétien</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/vorto.mp3" class="sm2_button"></a><span class="eo">vorto</span>&nbsp;: mot<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/vortaro.mp3" class="sm2_button"></a><span class="eo">vortaro</span>&nbsp;: dictionnaire</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sxafo.mp3" class="sm2_button"></a><span class="eo">ŝafo</span>&nbsp;: mouton<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/sxafaro.mp3" class="sm2_button"></a><span class="eo">ŝafaro</span>&nbsp;: troupeau de moutons</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/membraro.mp3" class="sm2_button"></a><span class="eo">membraro</span>&nbsp;: les membres (d’une association)</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ebla.mp3" class="sm2_button"></a><span class="eo">ebla</span>&nbsp;: possible<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/eble.mp3" class="sm2_button"></a><span class="eo">eble</span>&nbsp;: peut-être</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/vireco.mp3" class="sm2_button"></a><span class="eo">vireco</span>&nbsp;: virilité</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/verdeco.mp3" class="sm2_button"></a><span class="eo">verdeco</span>&nbsp;: verdeur</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/infaneco.mp3" class="sm2_button"></a><span class="eo">infaneco</span>&nbsp;: enfance</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/vento.mp3" class="sm2_button"></a><span class="eo">vento</span>&nbsp;: vent<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/ventego.mp3" class="sm2_button"></a><span class="eo">ventego</span>&nbsp;: tempête</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ridi.mp3" class="sm2_button"></a><span class="eo">ridi</span>&nbsp;: rire<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/ridegi.mp3" class="sm2_button"></a><span class="eo">ridegi</span>&nbsp;: se tordre (de rire)</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ege.mp3" class="sm2_button"></a><span class="eo">ege</span>&nbsp;: extrêmement</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/tombo.mp3" class="sm2_button"></a><span class="eo">tombo</span>&nbsp;: tombe<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/tombejo.mp3" class="sm2_button"></a><span class="eo">tombejo</span>&nbsp;: cimetière</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ejo.mp3" class="sm2_button"></a><span class="eo">ejo</span>&nbsp;: local, salle</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sxpari.mp3" class="sm2_button"></a><span class="eo">ŝpari</span>&nbsp;: économiser<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/sxparema.mp3" class="sm2_button"></a><span class="eo">ŝparema</span>&nbsp;: économe</p>
 					</div>
 					<div class="col s12 m6">
-						<p><span class="eo">babili</span>&nbsp;: bavarder<br>
-						   <span class="eo">babilema</span>&nbsp;: bavard</p>
-						<p><span class="eo">emi</span>&nbsp;: avoir tendance à</p>
-						<p><span class="eo">legi</span>&nbsp;: lire<br>
-						   <span class="eo">legenda</span>&nbsp;: qu’il faut lire (à lire)</p>
-						<p><span class="eo">salo</span>&nbsp;: sel<br>
-						   <span class="eo">salero</span>&nbsp;: grain de sel</p>
-						<p><span class="eo">mono</span>&nbsp;: argent<br>
-						   <span class="eo">monero</span>&nbsp;:pièce de monnaie</p>
-						<p><span class="eo">estri</span>&nbsp;: diriger<br>
-						   <span class="eo">estro</span>&nbsp;: chef<br>
-						   <span class="eo">urbestro</span>&nbsp;: maire, bourgmestre</p>
-						<p><span class="eo">beleta</span>&nbsp;: joli</p>
-						<p><span class="eo">varmeta</span>&nbsp;: tiède</p>
-						<p><span class="eo">iomete</span>&nbsp;: un petit peu</p>
-						<p><span class="eo">katido</span>&nbsp;: chaton</p>
-						<p><span class="eo">reĝo</span>&nbsp;: roi<br>
-						   <span class="eo">reĝido</span>&nbsp;: prince</p>
-						<p><span class="eo">purigi</span>&nbsp;: nettoyer (rendre propre)</p>
-						<p><span class="eo">morti</span>&nbsp;: mourir<br>
-						   <span class="eo">mortigi</span>&nbsp;: tuer (faire mourir)</p>
-						<p><span class="eo">scii</span>&nbsp;: savoir<br>
-						   <span class="eo">sciigi</span>&nbsp;: faire savoir, informer</p>
-						<p><span class="eo">sidi</span>&nbsp;: être assis<br>
-						   <span class="eo">sidiĝi</span>&nbsp;: s’asseoir<br>
-						   <span class="eo">sidilo</span>&nbsp;: siège</p>
-						<p><span class="eo">ruĝiĝi</span>&nbsp;: rougir</p>
-						<p><span class="eo">iĝi</span>&nbsp;: devenir</p>
-						<p><span class="eo">ŝlosi</span>&nbsp;: fermer à clef<br>
-						   <span class="eo">ŝlosilo</span>&nbsp;: clef</p>
-						<p><span class="eo">razi</span>&nbsp;: raser<br>
-						   <span class="eo">razilo</span>&nbsp;: rasoir</p>
-						<p><span class="eo">ilo</span>&nbsp;: instrument</p>
-						<p><span class="eo">onklo</span>&nbsp;: oncle<br>
-						   <span class="eo">onklino</span>&nbsp;: tante</p>
-						<p><span class="eo">koko</span>&nbsp;: coq<br>
-						   <span class="eo">kokino</span>&nbsp;: poule</p>
-						<p><span class="eo">ina</span>&nbsp;: féminin</p>
-						<p><span class="eo">admiri</span>&nbsp;: admirer<br>
-						   <span class="eo">admirinda</span>&nbsp;: admirable</p>
-						<p><span class="eo">cigaredo</span>&nbsp;: cigarette</p>
-						<p><span class="eo">glavo</span>&nbsp;: épée</p>
-						<p><span class="eo">instrui</span>&nbsp;: enseigner<br>
-							<span class="eo">instruisto</span>&nbsp;: enseignant</p>
-						<p><span class="eo">panjo</span>&nbsp;: maman</p>
-						<p><span class="eo">duobla</span>&nbsp;: double</p>
-						<p><span class="eo">multobligi</span>&nbsp;: multiplier, reproduire en plusieurs exemplaires</p>
-						<p><span class="eo">duonhoro</span>&nbsp;: demi-heure</p>
-						<p><span class="eo">unuopa</span>&nbsp;: individuel</p>
-						<p><span class="eo">ope</span>&nbsp;: en groupe, à plusieurs</p>
-						<p><span class="eo">supo</span>&nbsp;: soupe</p>
-						<p><span class="eo">ujo</span>&nbsp;: récipient</p>
-						<p><span class="eo">sankta</span>&nbsp;: saint<br>
-						   <span class="eo">sanktulo</span>&nbsp;: un saint</p>
-						<p><span class="eo">stulta</span>&nbsp;: stupide<br>
-						   <span class="eo">stultulo</span>&nbsp;: un sot</p>
-						<p><span class="eo">kunulino</span>&nbsp;: compagne</p>
-						<p><span class="eo">kolo</span>&nbsp;: cou<br>
-						   <span class="eo">kolumo</span>&nbsp;: col (de chemise)</p>
-						<p><span class="eo">plena</span>&nbsp;: plein<br>
-						   <span class="eo">plenumi</span>&nbsp;: accomplir</p>
-						<p><span class="eo">umilo</span>&nbsp;: gadget</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/babili.mp3" class="sm2_button"></a><span class="eo">babili</span>&nbsp;: bavarder<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/babilema.mp3" class="sm2_button"></a><span class="eo">babilema</span>&nbsp;: bavard</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/emi.mp3" class="sm2_button"></a><span class="eo">emi</span>&nbsp;: avoir tendance à</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/legi.mp3" class="sm2_button"></a><span class="eo">legi</span>&nbsp;: lire<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/legenda.mp3" class="sm2_button"></a><span class="eo">legenda</span>&nbsp;: qu’il faut lire (à lire)</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/salo.mp3" class="sm2_button"></a><span class="eo">salo</span>&nbsp;: sel<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/salero.mp3" class="sm2_button"></a><span class="eo">salero</span>&nbsp;: grain de sel</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/mono.mp3" class="sm2_button"></a><span class="eo">mono</span>&nbsp;: argent<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/monero.mp3" class="sm2_button"></a><span class="eo">monero</span>&nbsp;: pièce de monnaie</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/estri.mp3" class="sm2_button"></a><span class="eo">estri</span>&nbsp;: diriger<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/estro.mp3" class="sm2_button"></a><span class="eo">estro</span>&nbsp;: chef<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/urbestro.mp3" class="sm2_button"></a><span class="eo">urbestro</span>&nbsp;: maire, bourgmestre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/beleta.mp3" class="sm2_button"></a><span class="eo">beleta</span>&nbsp;: joli</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/varmeta.mp3" class="sm2_button"></a><span class="eo">varmeta</span>&nbsp;: tiède</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/iomete.mp3" class="sm2_button"></a><span class="eo">iomete</span>&nbsp;: un petit peu</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/katido.mp3" class="sm2_button"></a><span class="eo">katido</span>&nbsp;: chaton</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/regxo.mp3" class="sm2_button"></a><span class="eo">reĝo</span>&nbsp;: roi<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/regxido.mp3" class="sm2_button"></a><span class="eo">reĝido</span>&nbsp;: prince</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/purigi.mp3" class="sm2_button"></a><span class="eo">purigi</span>&nbsp;: nettoyer (rendre propre)</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/morti.mp3" class="sm2_button"></a><span class="eo">morti</span>&nbsp;: mourir<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/mortigi.mp3" class="sm2_button"></a><span class="eo">mortigi</span>&nbsp;: tuer (faire mourir)</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/scii.mp3" class="sm2_button"></a><span class="eo">scii</span>&nbsp;: savoir<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/sciigi.mp3" class="sm2_button"></a><span class="eo">sciigi</span>&nbsp;: faire savoir, informer</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sidi.mp3" class="sm2_button"></a><span class="eo">sidi</span>&nbsp;: être assis<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/sidigxi.mp3" class="sm2_button"></a><span class="eo">sidiĝi</span>&nbsp;: s’asseoir<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/sidilo.mp3" class="sm2_button"></a><span class="eo">sidilo</span>&nbsp;: siège</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/rugxigxi.mp3" class="sm2_button"></a><span class="eo">ruĝiĝi</span>&nbsp;: rougir</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/igxi.mp3" class="sm2_button"></a><span class="eo">iĝi</span>&nbsp;: devenir</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sxlosi.mp3" class="sm2_button"></a><span class="eo">ŝlosi</span>&nbsp;: fermer à clef<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/sxlosilo.mp3" class="sm2_button"></a><span class="eo">ŝlosilo</span>&nbsp;: clef</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/razi.mp3" class="sm2_button"></a><span class="eo">razi</span>&nbsp;: raser<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/razilo.mp3" class="sm2_button"></a><span class="eo">razilo</span>&nbsp;: rasoir</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ilo.mp3" class="sm2_button"></a><span class="eo">ilo</span>&nbsp;: instrument</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/onklo.mp3" class="sm2_button"></a><span class="eo">onklo</span>&nbsp;: oncle<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/onklino.mp3" class="sm2_button"></a><span class="eo">onklino</span>&nbsp;: tante</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/koko.mp3" class="sm2_button"></a><span class="eo">koko</span>&nbsp;: coq<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/kokino.mp3" class="sm2_button"></a><span class="eo">kokino</span>&nbsp;: poule</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ina.mp3" class="sm2_button"></a><span class="eo">ina</span>&nbsp;: féminin</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/admiri.mp3" class="sm2_button"></a><span class="eo">admiri</span>&nbsp;: admirer<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/admirinda.mp3" class="sm2_button"></a><span class="eo">admirinda</span>&nbsp;: admirable</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/cigaredo.mp3" class="sm2_button"></a><span class="eo">cigaredo</span>&nbsp;: cigarette</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/glavo.mp3" class="sm2_button"></a><span class="eo">glavo</span>&nbsp;: épée</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/instrui.mp3" class="sm2_button"></a><span class="eo">instrui</span>&nbsp;: enseigner<br>
+							<a href="<?php echo $vojo;?>fr/son/vortoj/instruisto.mp3" class="sm2_button"></a><span class="eo">instruisto</span>&nbsp;: enseignant</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/panjo.mp3" class="sm2_button"></a><span class="eo">panjo</span>&nbsp;: maman</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/duobla.mp3" class="sm2_button"></a><span class="eo">duobla</span>&nbsp;: double</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/multobligi.mp3" class="sm2_button"></a><span class="eo">multobligi</span>&nbsp;: multiplier, reproduire en plusieurs exemplaires</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/duonhoro.mp3" class="sm2_button"></a><span class="eo">duonhoro</span>&nbsp;: demi-heure</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/unuopa.mp3" class="sm2_button"></a><span class="eo">unuopa</span>&nbsp;: individuel</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ope.mp3" class="sm2_button"></a><span class="eo">ope</span>&nbsp;: en groupe, à plusieurs</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/supo.mp3" class="sm2_button"></a><span class="eo">supo</span>&nbsp;: soupe</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ujo.mp3" class="sm2_button"></a><span class="eo">ujo</span>&nbsp;: récipient</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sankta.mp3" class="sm2_button"></a><span class="eo">sankta</span>&nbsp;: saint<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/sanktulo.mp3" class="sm2_button"></a><span class="eo">sanktulo</span>&nbsp;: un saint</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/stulta.mp3" class="sm2_button"></a><span class="eo">stulta</span>&nbsp;: stupide<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/stultulo.mp3" class="sm2_button"></a><span class="eo">stultulo</span>&nbsp;: un sot</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kunulino.mp3" class="sm2_button"></a><span class="eo">kunulino</span>&nbsp;: compagne</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kolo.mp3" class="sm2_button"></a><span class="eo">kolo</span>&nbsp;: cou<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/kolumo.mp3" class="sm2_button"></a><span class="eo">kolumo</span>&nbsp;: col (de chemise)</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/plena.mp3" class="sm2_button"></a><span class="eo">plena</span>&nbsp;: plein<br>
+						   <a href="<?php echo $vojo;?>fr/son/vortoj/plenumi.mp3" class="sm2_button"></a><span class="eo">plenumi</span>&nbsp;: accomplir</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/umilo.mp3" class="sm2_button"></a><span class="eo">umilo</span>&nbsp;: gadget</p>
 					</div>
 				</div>
 			</fieldset>		

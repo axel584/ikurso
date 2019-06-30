@@ -51,11 +51,11 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s6 m4"><span class="eo">jen</span>&nbsp;: voici, voilà</p>
-					<p class="col s6 m4"><span class="eo">sonorilo</span>&nbsp;: cloche</p>
-					<p class="col s6 m4"><span class="eo">do</span>&nbsp;: donc</p>
-					<p class="col s6 m4"><span class="eo">tuj</span>&nbsp;: tout de suite</p>
-					<p class="col s6 m4"><span class="eo">vesto</span>&nbsp;: vêtement</p>
+					<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/jen-2.mp3" class="sm2_button"></a><span class="eo">jen</span>&nbsp;: voici, voilà</p>
+					<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/sonorilo.mp3" class="sm2_button"></a><span class="eo">sonorilo</span>&nbsp;: cloche</p>
+					<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/do.mp3" class="sm2_button"></a><span class="eo">do</span>&nbsp;: donc</p>
+					<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/tuj.mp3" class="sm2_button"></a><span class="eo">tuj</span>&nbsp;: tout de suite</p>
+					<p class="col s6 m4"><a href="<?php echo $vojo;?>fr/son/vortoj/vesto.mp3" class="sm2_button"></a><span class="eo">vesto</span>&nbsp;: vêtement</p>
 				</div>
 			</fieldset>
 
@@ -91,12 +91,12 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s6 m6"><span class="eo">belsone</span>&nbsp;: d’un beau son</p>
-					<p class="col s6 m6"><span class="eo">farti</span>&nbsp;: se porter</p>
-					<p class="col s6 m6"><span class="eo">ĝojo</span>&nbsp;: joie</p>
-					<p class="col s6 m6"><span class="eo">ĝis revido</span>&nbsp;: au revoir</p>
-					<p class="col s6 m6"><span class="eo">fraŭlo</span>&nbsp;: homme célibataire</p>
-					<p class="col s6 m6"><span class="eo">fraŭlino</span>&nbsp;: demoiselle</p>
+					<p class="col s6 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/belsone.mp3" class="sm2_button"></a><span class="eo">belsone</span>&nbsp;: d’un beau son</p>
+					<p class="col s6 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/farti.mp3" class="sm2_button"></a><span class="eo">farti</span>&nbsp;: se porter</p>
+					<p class="col s6 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/gxojo.mp3" class="sm2_button"></a><span class="eo">ĝojo</span>&nbsp;: joie</p>
+					<p class="col s6 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/gxis-revido.mp3" class="sm2_button"></a><span class="eo">ĝis revido</span>&nbsp;: au revoir</p>
+					<p class="col s6 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/frauxlo.mp3" class="sm2_button"></a><span class="eo">fraŭlo</span>&nbsp;: homme célibataire</p>
+					<p class="col s6 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/frauxlino.mp3" class="sm2_button"></a><span class="eo">fraŭlino</span>&nbsp;: demoiselle</p>
 				</div>
 			</fieldset>
 
@@ -110,7 +110,7 @@ include "dlekkapo.inc.php";
 			(famili’, fraŭlin’), ce qui se fait couramment en poésie avec la
 			terminaison des noms et le <b>a</b> de l’article <b>la</b>&nbsp;:
 			</p>
-			<p class="eo">Esperanto estas la espero de l’ mond’.</p>
+			<p><a href="<?php echo $vojo;?>fr/son/frazoj/esperanto-estas-la-espero.mp3" class="sm2_button"></a><span class="eo">Esperanto estas la espero de l’ mond’.</span></p>
 			
 			<p class="parto">L’élision ne change pas la place de l’accent tonique :</p>
 			<p><span class="eo">fraŭ-<u>li</u>-no</span> devient <span class="eo">fraŭ-<u>lin’</u></span></p>
@@ -134,25 +134,25 @@ include "dlekkapo.inc.php";
 			<?php } ?>
 
 			<div class="row">
-				<p class="col s12"><b>almenaŭ</b> : au moins</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/almenaux.mp3" class="sm2_button"></a><b>almenaŭ</b> : au moins</p>
 				<p class="col s11 offset-s1"><span class="eo">Donu al mi almenaŭ du minutojn.</span></p>
-				<p class="col s12"><b>ankaŭ</b> : aussi, également (précède le mot sur lequel on insiste)</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/ankaux.mp3" class="sm2_button"></a><b>ankaŭ</b> : aussi, également (précède le mot sur lequel on insiste)</p>
 				<p class="col s11 offset-s1"><span class="eo">Ankaŭ Johano lavas sin.</span> (Il n’y a pas que Marie qui se lave)</p>
 				<p class="col s11 offset-s1"><span class="eo">Johano ankaŭ lavas sin.</span> (Non seulement il se peigne, mais il se lave également)</p>
 				<p class="col s11 offset-s1"><span class="eo">Johano lavas ankaŭ sin.</span> (Jean ne lave pas seulement d’autres personnes)</p>
-				<p class="col s12"><b>ankoraŭ</b> : encore</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/ankoraux.mp3" class="sm2_button"></a><b>ankoraŭ</b> : encore</p>
 				<p class="col s11 offset-s1"><span class="eo">Mi ankoraŭ ne vidis lin. Ĉu li ankoraŭ estas tie?</span> (Je ne l'ai pas encore vu. Est-ce qu'il est encore ici&nbsp;?)</p>
-				<p class="col s12"><b>apenaŭ</b> : à peine</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/apenaux.mp3" class="sm2_button"></a><b>apenaŭ</b> : à peine</p>
 				<p class="col s11 offset-s1"><span class="eo">Li dormis apenaŭ kvin minutojn.</span></p>
-				<p class="col s12"><b>baldaŭ</b> : bientôt</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/baldaux.mp3" class="sm2_button"></a><b>baldaŭ</b> : bientôt</p>
 				<p class="col s11 offset-s1"><span class="eo">Venu baldaŭ, mi petas.</span></p>
-				<p class="col s12"><b>hieraŭ</b> : hier</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/hieraux.mp3" class="sm2_button"></a><b>hieraŭ</b> : hier</p>
 				<p class="col s11 offset-s1"><span class="eo">Mi renkontis lin hieraŭ (antaŭhieraŭ).</span></p>
-				<p class="col s12"><b>hodiaŭ</b> : aujourd’hui</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/hodiaux.mp3" class="sm2_button"></a><b>hodiaŭ</b> : aujourd’hui</p>
 				<p class="col s11 offset-s1"><span class="eo">Hodiaŭ estas bela tago.</span></p>
-				<p class="col s12"><b>morgaŭ</b> : demain</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/morgaux.mp3" class="sm2_button"></a><b>morgaŭ</b> : demain</p>
 				<p class="col s11 offset-s1"><span class="eo">Kial plenumi</span> (accomplir) <span class="eo">morgaŭ tion, kion oni povas fari hodiaŭ ?</span></p>
-				<p class="col s12"><b>preskaŭ</b> : presque</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/preskaux.mp3" class="sm2_button"></a><b>preskaŭ</b> : presque</p>
 				<p class="col s11 offset-s1"><span class="eo">Li preskaŭ falis.</span></p>
 			</div>
 
@@ -168,15 +168,15 @@ include "dlekkapo.inc.php";
 			<?php } ?>
 
 			<div class="row">
-				<p class="col s12"><b>ambaŭ</b> : tous les deux (adjectif ou pronom numéral)</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/ambaux.mp3" class="sm2_button"></a><b>ambaŭ</b> : tous les deux (adjectif ou pronom numéral)</p>
 				<p class="col s11 offset-s1"><span class="eo">Ili ambaŭ estas en la ĝardeno.</span></p>
-				<p class="col s12"><b>anstataŭ</b> : au lieu de (prép.)</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/anstataux.mp3" class="sm2_button"></a><b>anstataŭ</b> : au lieu de (prép.)</p>
 				<p class="col s11 offset-s1"><span class="eo">Ŝi dormis anstataŭ legi.</span></p>
-				<p class="col s12"><b>antaŭ</b> : avant, devant (prép.)</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/antaux.mp3" class="sm2_button"></a><b>antaŭ</b> : avant, devant (prép.)</p>
 				<p class="col s11 offset-s1"><span class="eo">Antaŭ ĉio oni devas peti informojn.<br>La monumento staras antaŭ la muzeo.</span></p>
-				<p class="col s12"><b>ĉirkaŭ</b> : autour de, environ (prép.)</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/cxirkaux.mp3" class="sm2_button"></a><b>ĉirkaŭ</b> : autour de, environ (prép.)</p>
 				<p class="col s11 offset-s1"><span class="eo">Ili vojaĝis ĉirkaŭ la terglobo.<br/>Venu ĉirkaŭ la dua (horo).</span></p>
-				<p class="col s12"><b>kontraŭ</b> : contre (prép.) </p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/kontraux.mp3" class="sm2_button"></a><b>kontraŭ</b> : contre (prép.) </p>
 				<p class="col s11 offset-s1"><span class="eo">Ni batalas kontraŭ la inflacio.<br/>Kontraŭ doloro helpas bonhumoro.</span></p>
 			</div>
 
@@ -188,10 +188,10 @@ include "dlekkapo.inc.php";
 			prononciation exacte est donc :</p>
 			
 			<div class="row">
-				<p class="col s2"><span class="eo">ĉirkaŭ</span></p><p class="col s10">(<u>tchir</u>-kaw)</p>
-				<p class="col s2"><span class="eo">morgaŭ</span></p><p class="col s10">(<u>mor</u>-gaw)</p>
-				<p class="col s2"><span class="eo">hieraŭ</span></p><p class="col s10">(hi-<u>è</u>-raw)</p>
-				<p class="col s2"><span class="eo">hodiaŭ</span></p><p class="col s10">(ho-<u>di</u>-aw)</p>
+				<p class="col s2"><a href="<?php echo $vojo;?>fr/son/vortoj/cxirkaux.mp3" class="sm2_button"></a><span class="eo">ĉirkaŭ</span></p><p class="col s10">(<u>tchir</u>-kaw)</p>
+				<p class="col s2"><a href="<?php echo $vojo;?>fr/son/vortoj/morgaux.mp3" class="sm2_button"></a><span class="eo">morgaŭ</span></p><p class="col s10">(<u>mor</u>-gaw)</p>
+				<p class="col s2"><a href="<?php echo $vojo;?>fr/son/vortoj/hieraux.mp3" class="sm2_button"></a><span class="eo">hieraŭ</span></p><p class="col s10">(hi-<u>è</u>-raw)</p>
+				<p class="col s2"><a href="<?php echo $vojo;?>fr/son/vortoj/hodiaux.mp3" class="sm2_button"></a><span class="eo">hodiaŭ</span></p><p class="col s10">(ho-<u>di</u>-aw)</p>
 			</div>
 
 		<?php 
@@ -203,22 +203,22 @@ include "dlekkapo.inc.php";
 		
 			<div class="row">
 				<p class="col s12"><b>ĉi</b> : indique la proximité </p>
-				<p class="col s5 offset-s1"><span class="eo">ĉi-tio</span>&nbsp;: cette chose-ci</p>
-				<p class="col s6"><span class="eo">ĉi-tie</span>&nbsp;: ici</p>
-				<p class="col s5 offset-s1"><span class="eo">ĉio-ĉi</span>&nbsp;: tout ceci</p>
-				<p class="col s6"><span class="eo">ĉi-matene</span>&nbsp;: ce matin</p>
-				<p class="col s11 offset-s1"><span class="eo">ĉi-foje</span>&nbsp;: cette fois-ci</p>
-				<p class="col s11 offset-s1"><span class="eo">tiu knabo</span>&nbsp;: ce garçon(-là)</p>
-				<p class="col s11 offset-s1"><span class="eo">tiu ĉi knabo, ĉi tiu knabo</span>&nbsp;: ce garçon-ci</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-tio.mp3" class="sm2_button"></a><span class="eo">ĉi-tio</span>&nbsp;: cette chose-ci</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-tie.mp3" class="sm2_button"></a><span class="eo">ĉi-tie</span>&nbsp;: ici</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/cxio-cxi.mp3" class="sm2_button"></a><span class="eo">ĉio-ĉi</span>&nbsp;: tout ceci</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-matene.mp3" class="sm2_button"></a><span class="eo">ĉi-matene</span>&nbsp;: ce matin</p>
+				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-foje.mp3" class="sm2_button"></a><span class="eo">ĉi-foje</span>&nbsp;: cette fois-ci</p>
+				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/tiu-knabo.mp3" class="sm2_button"></a><span class="eo">tiu knabo</span>&nbsp;: ce garçon(-là)</p>
+				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/tiu-cxi-cxi-tiu-knabo.mp3" class="sm2_button"></a><span class="eo">tiu ĉi knabo, ĉi tiu knabo</span>&nbsp;: ce garçon-ci</p>
 				<p class="col s12"><b>ajn</b> : exprime l’indétermination généralisée</p>
-				<p class="col s5 offset-s1"><span class="eo">iu ajn</span>&nbsp;: n’importe qui</p>
-				<p class="col s6"><span class="eo">io ajn</span>&nbsp;: n’importe quoi</p>
-				<p class="col s5 offset-s1"><span class="eo">ie ajn</span>&nbsp;: n’importe où</p>
-				<p class="col s6"><span class="eo">iam ajn</span>&nbsp;: n’importe quand</p>
-				<p class="col s11 offset-s1"><span class="eo">iru ien!</span>&nbsp;: allez (allez-vous en) quelque part&nbsp;!</p>
-				<p class="col s11 offset-s1"><span class="eo">iru ien ajn!</span>&nbsp;: allez-vous en n’importe où&nbsp;!</p>
-				<p class="col s11 offset-s1"><span class="eo">iru, kien vi volas!</span>&nbsp;: allez où vous voulez&nbsp;!</p>
-				<p class="col s11 offset-s1"><span class="eo">iru, kien ajn vi volas!</span>&nbsp;: allez (n’importe où) où vous voulez !</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/iu-ajn.mp3" class="sm2_button"></a><span class="eo">iu ajn</span>&nbsp;: n’importe qui</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/io-ajn.mp3" class="sm2_button"></a><span class="eo">io ajn</span>&nbsp;: n’importe quoi</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/ie-ajn.mp3" class="sm2_button"></a><span class="eo">ie ajn</span>&nbsp;: n’importe où</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/iam-ajn.mp3" class="sm2_button"></a><span class="eo">iam ajn</span>&nbsp;: n’importe quand</p>
+				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/iru-ien.mp3" class="sm2_button"></a><span class="eo">iru ien!</span>&nbsp;: allez (allez-vous en) quelque part&nbsp;!</p>
+				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/iru-ien-ajn.mp3" class="sm2_button"></a><span class="eo">iru ien ajn!</span>&nbsp;: allez-vous en n’importe où&nbsp;!</p>
+				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/iru-kien-vi-volas.mp3" class="sm2_button"></a><span class="eo">iru, kien vi volas!</span>&nbsp;: allez où vous voulez&nbsp;!</p>
+				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/iru-kien-ajn-vi-volas.mp3" class="sm2_button"></a><span class="eo">iru, kien ajn vi volas!</span>&nbsp;: allez (n’importe où) où vous voulez&nbsp;!</p>
 			</div>
 
 		<?php 
@@ -226,21 +226,16 @@ include "dlekkapo.inc.php";
 		if ($section=="6") {
 		?>
 			<div class="row">
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-1.mp3" class="sm2_button"></a></p>
-				<p class="col s11"><span class="eo">Kiam kato promenas, la musoj festenas.</span></p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/kiam-kato-promenas.mp3" class="sm2_button"></a><span class="eo">Kiam kato promenas, la musoj festenas.</span></p>
 				<p class="col s11 offset-s1">Quand le chat n’est pas là, les souris dansent. (<i>festoient</i>)</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-2.mp3" class="sm2_button"></a></p>
-				<p class="col s11"><span class="eo">Kion oni volas, tion oni povas.</span></p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/kion-oni-volas.mp3" class="sm2_button"></a><span class="eo">Kion oni volas, tion oni povas.</span></p>
 				<p class="col s11 offset-s1">Quand on veut, on peut. (<i>ce qu’on veut, on le peut</i>)</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-3.mp3" class="sm2_button"></a></p>
-				<p class="col s11"><span class="eo">Kia patro, tia filo.</span></p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/kia-patro-tia-filo.mp3" class="sm2_button"></a><span class="eo">Kia patro, tia filo.</span></p>
 				<p class="col s11 offset-s1">Tel père, tel fils.</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-4.mp3" class="sm2_button"></a></p>
-				<p class="col s11"><span class="eo">Amiko de amiko estas ankaŭ amiko.</span></p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/amiko-de-amiko.mp3" class="sm2_button"></a><span class="eo">Amiko de amiko estas ankaŭ amiko.</span></p>
 				<p class="col s11 offset-s1">L’ami de mon ami est mon ami. (<i>un ami d’ami est aussi un ami</i>)</p>
-				<p class="col s1"><a href="<?php echo $vojo;?>fr/son/pv9-5.mp3" class="sm2_button"></a></p>
-				<p class="col s11"><span class="eo">Se mi scius, kie mi falos, mi tien metus tapiŝon.</span> (= <i>tapis</i>)</p>
-				<p class="col s11 offset-s1"><i>Devinez vous-même...</i></p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/se-mi-scius.mp3" class="sm2_button"></a><span class="eo">Se mi scius, kie mi falos, mi tien metus tapiŝon.</span> (= <i>tapis</i>)</p>
+				<p class="col s11 offset-s1"><i>Devinez vous-même…</i></p>
 			</div>
 
 			<fieldset class="vortoj">
@@ -251,10 +246,10 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s12 m6"><span class="eo">muso</span>&nbsp;: souris</p>
-					<p class="col s12 m6"><span class="eo">tapiŝo</span>&nbsp;: tapis</p>
-					<p class="col s12 m6"><span class="eo">fali</span>&nbsp;: tomber</p>
-					<p class="col s12 m6"><span class="eo">festeni</span>&nbsp;: festoyer</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/muso.mp3" class="sm2_button"></a><span class="eo">muso</span>&nbsp;: souris</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/tapisxo.mp3" class="sm2_button"></a><span class="eo">tapiŝo</span>&nbsp;: tapis</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/fali.mp3" class="sm2_button"></a><span class="eo">fali</span>&nbsp;: tomber</p>
+					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/festeni.mp3" class="sm2_button"></a><span class="eo">festeni</span>&nbsp;: festoyer</p>
 				</div>
 			</fieldset>
 

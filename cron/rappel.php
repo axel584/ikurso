@@ -101,7 +101,7 @@ while($row = $result->fetch()) {
 
 }
 
-// Statistiques quotidiens pour les administrateurs
+// Statistiques quotidiennes pour les administrateurs
 $filename = "../mails/statAdmin.html";
 $fd = fopen($filename, "r");
 $contents = fread($fd, filesize ($filename));
@@ -139,6 +139,6 @@ while ($row=$result->fetch()) { // on récupère les suivants
    $informistoj=$informistoj.",".$row["retadreso"];
 }
 // envoie du mail :
-mailViaSES($informistoj,"Ikurso : Statistiques quotidiens",$contents);
+mailViaSES($informistoj,"Ikurso : Statistiques quotidiennes",$contents);
 
 ?>

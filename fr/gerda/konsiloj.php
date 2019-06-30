@@ -11,8 +11,7 @@ include "gerdakapo.inc.php";
 
 				<p>Estimataj Eks-kursanoj,<br>
 				Jen kelkaj konsiloj por vi, kiuj ĵus finis la kurson <i>Gerda malaperis</i> de Claude Piron.</p>
-				
-				
+	
 				<a id="kiuj" class="scrollspy"></a>
 				<h3>Kiuj vi estas?</h3>
 				<p>
@@ -56,13 +55,9 @@ include "gerdakapo.inc.php";
 				
 				<p class="parto"><b>Dua konsilo</b>: <b>denove studu !</b> Jes, restudu la lecionojn de
 				unua kurso, relegu la ĉapitrojn de <i>Gerda malaperis</i>, rerakontu al vi
-				la rakonton, relegu niajn korektojn… Cetere ni kelkfoje aldonas
-				novajn metodikajn helpilojn al la kurso : ekz-e
-				<a href="<?php echo $vojo;?>fr/cge/vocabula.php">franca-esperanta leksikono</a>, nova 
-				<a href="<?php echo $vojo;?>fr/cge/temaro.php">laŭtema indekso</a> de la kurso DLEK. Ni
-				preparas plenan «konkordancon» de <i>Gerda malaperis</i> kaj de
-				<i>Lasu min paroli plu!</i>. Ĉio ĉi estos al vi utila, firma bazo, precipe kiam vi
-				renkontos homojn, kiuj malbone uzas nian lingvon.</p>
+				la rakonton, relegu niajn korektojn… Vi nun povas legi facilajn rakontojn en Esperanto. 
+				Vi trovos kelkajn ideojn ĉi-tie en la paĝo <a href="<?php echo $vojo;?>/butiko.php">BOUTIQUE</a> kaj pliajn en la katalogo de la <a href="https://esperanto-france.org/boutique">butiko de Esperanto-France</a>, 
+				en la parto "Lectures faciles".
 				
 				<p class="parto">Kaj tio ĉi enkondukas nian <b>trian konsilon</b>: <b>estu singarda!</b> Esperanto
 				estas ja facila lingvo. Pro tio kelkaj homoj nur lernas la kernon de
@@ -72,13 +67,10 @@ include "gerdakapo.inc.php";
 				konsilojn de niaj korektantoj aŭ de «bonaj aŭtoroj».</p>
 				
 				<p class="parto"><b>Kvara konsilo</b>: <b>korespondu !</b> Korespondi kun sperta
-				E-parolanto estas bona rimedo por disvolvi viajn sciojn. La interreto
-				estas la ideala rimedo por korespondi mond-skale. Cetere ni donos
-				ĉi-sube adreson de interreta E-Koresponda Servo. Bedaŭrinde la
-				kompetentuloj ofte estas tro okupataj kaj ne povas oferi tempon por
-				korespondado kun komencanto. Tamen korespondi kun alilanda
-				komencanto povas esti interesa sperto, sed memoru nian trian
-				konsilon !</p>
+				Esperanto-parolanto estas bona rimedo por disvolvi viajn sciojn. Tamen korespondi kun alilanda
+				komencanto povas esti interesa sperto, sed memoru nian trian konsilon!</p>
+				<p>En la paĝo <a href="<?=$vojo?>helpo.php?section=kajposte">Que faire après le cours ?</a>, ni prezentas diversajn
+				programojn por rete korespondi en Esperanto.</p>
 				
 				<p class="parto"><b>Kvina kaj lasta konsilo</b>: <b>instruu!</b> Jes, de kiam vi havos iom pli da
 				sperto en la parola lingvo, vi iĝos tre bona korektanto por niaj
@@ -91,14 +83,6 @@ include "gerdakapo.inc.php";
 				<a id="rimedoj" class="scrollspy"></a>
 				<h3>Rimedoj por plu lerni</h3>
 				
-				<p>
-				Internet estas fonto da interesaj Esperantaĵoj. Sed la sama
-				problemo validas pri Esperanto, kiel pri ĉiuj aliaj temoj:
-				Internet neniel estas sekura fonto. Vi trovos en ĝi bonegajn kaj
-				malbonegajn aferojn (mi parolas pri la lingva vidpunkto). Relegu
-				nian paĝon pri konsilindaj Esperantaj ejoj en TTT. Por plu lerni
-				aparte interesaj estas:
-				</p>
 				
 				<p>Vi trovos en la paĝo <a href="<?=$vojo?>helpo.php?section=kajposte">Que faire après le cours ?</a> 
 				multajn ideojn por praktiki la lingvon kaj plu lerni.</p>

@@ -151,20 +151,23 @@ include "dlekkapo.inc.php";
 			</ol>
 			
 			<p class="parto">Les participes peuvent prendre la forme des adjectifs (terminaison en
-			<b>-a</b>), des adverbes (<b>-e</b>), ou des noms (<b>-o</b>). 
-			Leur utilisation permet beaucoup de précision, de souplesse et de concision. 
-			Bien que nous ne puissions pas vous indiquer ici toute la gamme des 
-			applications, nous vous invitons à saisir le sens des participes dans 
+			<b>-a</b>), des adverbes (<b>-e</b>), ou des noms (<b>-o</b>). Les participes utilisés comme noms peuvent aussi se mettre au féminin.</p>
+			<p class="parto">Leur utilisation permet beaucoup de précision, de souplesse et de concision. 
+			Bien que nous ne puissions pas vous indiquer ici toute la gamme des applications, nous vous invitons à saisir le sens des participes dans 
 			les exemples suivants&nbsp;:</p>
 			<div class="row vortlisto">
 				<p class="col s12 eo">La leg<b>ant</b>o havas bonan voĉon, sed la antaŭa leg<b>int</b>o havis pli bonan.</p>
 				<p class="col s11 offset-s1">= Le lecteur a une bonne voix, mais le lecteur précédent (en) avait une meilleure.</p>
+				<p class="col s12 eo">La leg<b>ant</b>ino havas bonan voĉon, sed la antaŭa leg<b>int</b>ino havis pli bonan.</p>
+				<p class="col s11 offset-s1">= La lectrice a une bonne voix, mais la lectrice précédente (en) avait une meilleure.</p>
 				<p class="col s12 eo">Mi opinias tamen, ke la leg<b>ont</b>o havos la plej bonan voĉon el ĉiuj.</p>
 				<p class="col s11 offset-s1">= Je suis d’avis, toutefois, que le lecteur à venir aura la meilleure voix de tous.</p>
+				<p class="col s12 eo">Mi opinias tamen, ke la leg<b>ont</b>ino havos la plej bonan voĉon el ĉiuj.</p>
+				<p class="col s11 offset-s1">= Je suis d’avis, toutefois, que la lectrice à venir aura la meilleure voix de toutes.</p>
 				<p class="col s12 eo">Leg<b>ant</b>e ni lernas.</p>
 				<p class="col s11 offset-s1">= Nous apprenons en lisant.</p>
-				<p class="col s12 eo">Manĝ<b>ont</b>e la pomon, li ekvidis la vermon.</p>
-				<p class="col s11 offset-s1">= Sur le point de manger la pomme, il aperçut le ver.</p>
+				<p class="col s12 eo">Manĝ<b>ont</b>e la pomon, li / ŝi ekvidis la vermon.</p>
+				<p class="col s11 offset-s1">= Sur le point de manger la pomme, il / elle aperçut le ver.</p>
 				<p class="col s12 eo">La konstru<b>at</b>a domo.</p>
 				<p class="col s11 offset-s1">= La maison en train d’être construite.</p>
 				<p class="col s12 eo">La skrib<b>ot</b>a letero.</p>

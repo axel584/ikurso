@@ -124,6 +124,18 @@ include "pagxkapo.inc.php";
 
 						<div class="card">
 							<div class="card-image">
+								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/vere-aux-fantazie.jpg" alt="" />
+							</div>
+							<div class="card-content">
+								<span class="card-title activator">Vere aŭ fantazie (Claude Piron)<br>16,50&nbsp;€<i class="material-icons right">keyboard_arrow_down</i></span>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title"><i class="material-icons right">keyboard_arrow_up</i></span>
+								<p>Recueil de récits écrits dans un espéranto facile.</p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-image">
 								<img class="activator responsive-img" src="<?=$vojo?>bildoj/butiko/templo-de-l-suno.jpg" alt="" />
 							</div>
 							<div class="card-content">

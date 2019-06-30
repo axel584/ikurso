@@ -271,7 +271,7 @@ include "dlekkapo.inc.php";
 				<div class="vortlisto row">
 					<div class="col s12 m6">
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/acxeti.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">a<u>ĉe</u>ti</span>&nbsp;: acheter</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/anglujo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">An<u>glu</u>jo</span>&nbsp;: Angleterre</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/anglujo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">An<u>glu</u>jo / An<u>gli</u>o</span>&nbsp;: Angleterre</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/anonco.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo">a<u>non</u>co</span>&nbsp;: annonce</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/antaux.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>an</u>taŭ</span>&nbsp;: avant</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/biciklo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">bi<u>ci</u>klo</span>&nbsp;: bicyclette</p>

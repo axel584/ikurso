@@ -92,8 +92,10 @@ include "pagxkapo.inc.php";
 				
 				<p class="parto"><a href="http://bertilow.com/pmeg/">Plena Manlibro de Esperanto</a> est une <strong>grammaire</strong> complète de l’espéranto (en espéranto)</p>
 				
-				<p class="parto"><a href="https://babadum.com/">Babadum</a> vous permettra d’<strong>apprendre 1500 mots</strong> de manière ludique.</p>				
+				<p class="parto"><a href="https://babadum.com/">Babadum</a> vous permettra d’<strong>apprendre 1500 mots</strong> de manière ludique.</p>	
+				<p class="parto"><a href="http://www.reta-vortaro.de/revo/">Reta Vortaro</a> et <a href="http://vortaro.net/">vortaro.net</a> sont des dictionnaires en ligne donnant les définitions des mots en espéranto ainsi que leurs traductions en de nombreuses langues.</p>	
 				<p class="parto">La <a href="http://www.eventoj.hu/steb/">Scienca kaj Teknika Esperanto-Biblioteko</a> donne accès à de nombreux <strong>dictionnaires et lexiques</strong> d’espéranto spécialisés dans différents domaines scientifiques et techniques.</p>
+				<p class="parto">L’<a href="http://franca-esperanto-instituto.net/">institut français d’espéranto</a> organise régulièrement des examens pour 4 niveaux différents. Depuis 2012, il est également possible de passer des examens d’espéranto pour les niveaux B1, B2 et C1. Plus d’information sur <a href="https://esperanto-france.org/examens-europeens-d-esperanto">esperanto-france.org/examens-europeens-d-esperanto</a>.</p>
 
 				<h2>Lire en espéranto</h2>
 				

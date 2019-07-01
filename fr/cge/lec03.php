@@ -481,11 +481,17 @@ include "dlekkapo.inc.php";
 		<p class="parto">Lorsque <b>kio</b> est complément d’objet direct, il prend la terminaison <b>n</b> de l’accusatif.</p>
 		<p>Exemple :</p>
 		<div class="row">
-			<p class="col s6 m4"><span class="eo">Kio<b>n</b> vi vidas?</span></p><p class="col s6 m8">Que vois-tu&nbsp;?</p>
-			<p class="col s6 m4"><span class="eo">– Mi vidas birdo<b>n</b>.</span></p><p class="col s6 ">– Je vois un oiseau.</p>
+			<p class="col s6 m4 offset-m1"><span class="eo">Kio<b>n</b> vi vidas?</span></p><p class="col s6 m7">Que vois-tu&nbsp;?</p>
+			<p class="col s6 m4 offset-m1"><span class="eo">– Mi vidas birdo<b>n</b>.</span></p><p class="col s6 m7">– Je vois un oiseau.</p>
 		</div>
 		
-		<p class="parto"><b>REMARQUE </b> : Comme <b>kio</b> se réfère à quelque chose d’indéfini, il ne prend <b>jamais</b> la marque du pluriel.</p>
+		<p class="parto">Comme <b>kio</b> se réfère à quelque chose d’indéfini, il ne prend <b>jamais</b> la marque du pluriel.
+		<br />De même, <b>kio</b> n’est jamais suivi par un nom en -o.</p>
+		<p>Exemples :</p>
+		<div class="row">
+			<p class="col s6 m4 offset-m1"><span class="eo">Ki<b>o</b> estas tio?</span></p><p class="col s6 m7">Qu’est ce que c’est&nbsp;?</p>
+			<p class="col s6 m4 offset-m1"><span class="eo">Ki<b>u</b> libr<b>o</b> estas via&nbsp;?</span></p><p class="col s6 m7">Quel livre est le tien&nbsp;?</p>
+		</div>
 
 		<?php 
 		} // fin section

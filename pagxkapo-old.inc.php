@@ -120,65 +120,10 @@ $subjekto=$pagxo[count($pagxo)-1];
 			<?php } ?>
 			<h2>Cours</h2>
 			<ul class="niv1">
-				<li><a href="<?php echo $vojo."fr/intro.php?temo=eo"; ?>">Pr&eacute;sentation</a></li>
-				<li class="ligo">
-				<a href="<?php echo $vojo; ?>fr/cge/intro.php?temo=intro">Cours en dix le&ccedil;ons</a>
-					<ul class="niv2">
-						<li><a href="<?php echo $vojo;?>fr/cge/intro.php?temo=intro">Introduction</a></li>
-						<?php
-							$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj 
-							where lecionoj.kurso='CG'";
-							$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-							while($row = $result->fetch()) {
-								echo "<li><a href=\"".$vojo."fr/cge/".$row['retpagxo']."\">".$row['titolo']."</a></li>";
-							}
-							?>
-					<li><a href="<?php echo $vojo;?>fr/cge/vocabula.php">Lexique</a></li>
-					</ul>
-				</li>
-				<li class="ligo">
-				<a href="<?php echo $vojo; ?>aligxi.php">Kurso de esperanto</a>
-					<ul class="niv2">
-						<li><a href="<?php echo $vojo;?>aligxi.php">Inscription</a></li>
-						<li><a href="<?php echo $vojo;?>fr/cge/vocabula.php">Lexique</a></li>
-					</ul>
-				</li>
-				<li class="ligo">
-				<a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a>
-					<ul class="niv2 gerda">
-					<li><a href="<?php echo $vojo;?>fr/gerda/index.php">Introduction</a></li>
-					<?php
-						$demando="select lecionoj.titolo, lecionoj.retpagxo from lecionoj 
-						where lecionoj.kurso='GR'";
-						$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-						while($row = $result->fetch()) {
-							echo "<li><a href=\"".$vojo."fr/gerda/".$row['retpagxo']."\">".$row['titolo']."</a></li>\n";
-						}
-					?>
-					</ul>
-				</li>
+				<li><a href="<?php echo $vojo; ?>fr/cge/intro.php?temo=intro">Cours en dix leçons</a></li>
+				<li><a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a></li>
 				<li><a href="<?php echo $vojo;?>fr/gerda/lasu00.php">Lasu min paroli plu!</a></li>					 
-				<li class="lasta"><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">T&eacute;l&eacute;chargements</a></li>					 
-			</ul>
-
-			<h2>L&rsquo;esp&eacute;ranto</h2>
-			<ul class="niv1">
-				<li class="lasta"><a href="<?php echo $vojo;?>ressources.php">En savoir plus...</a></li>					 
-			</ul>
-
-			<h2>Comment faire ?</h2>
-			<ul class="niv0">
-				<li><a href="<?php echo $vojo;?>/helpo.php">Aide et informations utiles</a></li>
-				<li><a href="<?php echo $vojo;?>/fr/intro.php?temo=enskribo">S&rsquo;inscrire &agrave; un cours</a></li>
-				<li><a href="#" onClick="window.open('<?php echo $vojo;?>pasvortoforgesita.php','','resizable=no,scrollbars=no,location=no,top=100,left=100,width=400,height=150');" >
-				Retrouver son mot de passe</a></li>
-				<li class="lasta">
-								
-					<a href="<?php echo $vojo;?>reago.php">
-					Nous contacter :					
-					<input type="image" src="<?php echo $vojo;?>bildoj/koverto.gif">
-					</a>
-				</li>
+				<li class="lasta"><a href="<?php echo $vojo;?>fr/elsxutoj.php">Téléchargements</a></li>					 
 			</ul>
 
 		</div> <!-- pagxmenuo -->

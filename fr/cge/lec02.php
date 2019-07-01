@@ -369,7 +369,7 @@ QCM_bildoj(
 		Prononcez bien <span class="eo">ne</span> entre <em>né</em> et <em>nè</em>.
 		</p>
 		
-		<p class="parto">D'autres mots peuvent aussi être utilisés pour donner un sens négatif à la phrase.</p>
+		<p class="parto">D'autres mots peuvent aussi être utilisés pour donner un sens négatif à la phrase. En voici quelques-uns&nbsp;:</p>
 		
 		<div class="vortlisto row">
 			<p class="col s6 m3"><span class="eo">neniam</span>&nbsp;: jamais</p>
@@ -382,6 +382,12 @@ QCM_bildoj(
 			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/frazoj/kio-estas-en-la-taso.mp3" class="sm2_button"></a> <span class="eo">Kio estas en la taso? – Estas <b>nenio</b>.</span></p><p class="col s11 m6 offset-s1">Qu’y-a-t-il dans la tasse ? – Il n’y a <b>rien</b>.</p>
 			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/frazoj/kie-estas-la-kato.mp3" class="sm2_button"></a> <span class="eo">Kie estas la kato? Mi vidas ĝin <b>nenie</b>!</span></p><p class="col s11 m6 offset-s1">Où est le chat ? Je ne le vois <b>nulle part</b>&nbsp;!</p>
 		</div>
+		
+		<p>Dans les exemples précédents, vous pouvez remarquer que les mots se répondant ont la même terminaison&nbsp;:<br/>
+			<span class="eo">ki<u>u</u></span> (qui) / <span class="eo">neni<u>u</u></span> (personne)<br/>
+			<span class="eo">ki<u>o</u></span> (quoi, que) / <span class="eo">neni<u>o</u></span> (rien)<br/>
+			<span class="eo">ki<u>e</u></span> (où) / <span class="eo">neni<u>e</u></span> (nulle part)
+		<p>
 
 		<?php 
 		} // fin section

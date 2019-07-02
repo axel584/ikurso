@@ -101,8 +101,8 @@ include "dlekkapo.inc.php";
 			toujours par <b>-o</b>.</p>
 			<p class="parto">Les <b>verbes à l’infinitif</b> finissent toujours par <b>-i</b>.</p>
 			<p class="parto">Les <b>adjectifs</b> finissent toujours par <b>-a</b> et se placent
-			normalement avant le nom qu’ils qualifient.</p>
-			<p>Exemples :</p>
+			généralement avant le nom qu’ils qualifient.</p>
+			<p>Exemples&nbsp;:</p>
 			
 			<div class="row">
 				<p class="col s6"><span class="eo">a<u>mi</u>ko</span>&nbsp;: ami</p>

@@ -189,8 +189,8 @@ include "dlekkapo.inc.php";
 		
 		<p class="parto">
 		En général l’adverbe précède le mot qu’il précise. Toutefois, quand
-		l’adverbe précise le verbe d’une phrase, il est fréquent qu’il prenne la
-		place usuelle des compléments, c’est-à-dire après le verbe.
+		l’adverbe est employé comme complément d’une phrase, il est fréquent qu’il prenne la
+		place usuelle des compléments, après le verbe.
 		</p>
 
 		<div class="vortlisto row">

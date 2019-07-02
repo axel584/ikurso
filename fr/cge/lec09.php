@@ -135,25 +135,25 @@ include "dlekkapo.inc.php";
 
 			<div class="row">
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/almenaux.mp3" class="sm2_button"></a><b>almenaŭ</b> : au moins</p>
-				<p class="col s11 offset-s1"><span class="eo">Donu al mi almenaŭ du minutojn.</span></p>
+				<p class="col s11 offset-s1"><span class="eo">Donu al mi <b>almenaŭ</b> du minutojn.</span></p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/ankaux.mp3" class="sm2_button"></a><b>ankaŭ</b> : aussi, également (précède le mot sur lequel on insiste)</p>
-				<p class="col s11 offset-s1"><span class="eo">Ankaŭ Johano lavas sin.</span> (Il n’y a pas que Marie qui se lave)</p>
-				<p class="col s11 offset-s1"><span class="eo">Johano ankaŭ lavas sin.</span> (Non seulement il se peigne, mais il se lave également)</p>
-				<p class="col s11 offset-s1"><span class="eo">Johano lavas ankaŭ sin.</span> (Jean ne lave pas seulement d’autres personnes)</p>
+				<p class="col s11 offset-s1"><span class="eo"><b>Ankaŭ</b> Johano lavas sin.</span> Jean aussi se lave. (Il n’y a pas que les autres qui se lavent&nbsp;: lui aussi se lave.)</p>
+				<p class="col s11 offset-s1"><span class="eo">Johano <b>ankaŭ</b> lavas sin.</span> Jean se lave aussi. (Il fait plusieurs choses, par exemple se peigne, se rase, etc. Et il se lave aussi.)</p>
+				<p class="col s11 offset-s1"><span class="eo">Johano lavas <b>ankaŭ</b> sin.</span> Jean se lave aussi. (Jean ne lave pas seulement d’autres personnes, mais il se lave lui-même aussi.)</p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/ankoraux.mp3" class="sm2_button"></a><b>ankoraŭ</b> : encore</p>
-				<p class="col s11 offset-s1"><span class="eo">Mi ankoraŭ ne vidis lin. Ĉu li ankoraŭ estas tie?</span> (Je ne l'ai pas encore vu. Est-ce qu'il est encore ici&nbsp;?)</p>
+				<p class="col s11 offset-s1"><span class="eo">Mi <b>ankoraŭ</b> ne vidis lin. Ĉu li ankoraŭ estas tie?</span> (Je ne l’ai pas encore vu. Est-ce qu’il est encore ici&nbsp;?)</p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/apenaux.mp3" class="sm2_button"></a><b>apenaŭ</b> : à peine</p>
-				<p class="col s11 offset-s1"><span class="eo">Li dormis apenaŭ kvin minutojn.</span></p>
+				<p class="col s11 offset-s1"><span class="eo">Li dormis <b>apenaŭ</b> kvin minutojn.</span></p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/baldaux.mp3" class="sm2_button"></a><b>baldaŭ</b> : bientôt</p>
-				<p class="col s11 offset-s1"><span class="eo">Venu baldaŭ, mi petas.</span></p>
-				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/hieraux.mp3" class="sm2_button"></a><b>hieraŭ</b> : hier</p>
-				<p class="col s11 offset-s1"><span class="eo">Mi renkontis lin hieraŭ (antaŭhieraŭ).</span></p>
+				<p class="col s11 offset-s1"><span class="eo">Venu <b>baldaŭ</b>, mi petas.</span></p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/hieraux.mp3" class="sm2_button"></a><b>hieraŭ</b> : hier (<b>antaŭhieraŭ</b>&nbsp;: avant-hier)</p>
+				<p class="col s11 offset-s1"><span class="eo">Mi renkontis lin <b>hieraŭ</b> (antaŭhieraŭ).</span></p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/hodiaux.mp3" class="sm2_button"></a><b>hodiaŭ</b> : aujourd’hui</p>
-				<p class="col s11 offset-s1"><span class="eo">Hodiaŭ estas bela tago.</span></p>
+				<p class="col s11 offset-s1"><span class="eo"><b>Hodiaŭ</b> estas bela tago.</span></p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/morgaux.mp3" class="sm2_button"></a><b>morgaŭ</b> : demain</p>
-				<p class="col s11 offset-s1"><span class="eo">Kial plenumi</span> (accomplir) <span class="eo">morgaŭ tion, kion oni povas fari hodiaŭ ?</span></p>
+				<p class="col s11 offset-s1"><span class="eo">Kial plenumi</span> (accomplir) <span class="eo"><b>morgaŭ</b> tion, kion oni povas fari hodiaŭ?</span></p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/preskaux.mp3" class="sm2_button"></a><b>preskaŭ</b> : presque</p>
-				<p class="col s11 offset-s1"><span class="eo">Li preskaŭ falis.</span></p>
+				<p class="col s11 offset-s1"><span class="eo">Li <b>preskaŭ</b> falis.</span></p>
 			</div>
 
 		<?php 
@@ -169,15 +169,15 @@ include "dlekkapo.inc.php";
 
 			<div class="row">
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/ambaux.mp3" class="sm2_button"></a><b>ambaŭ</b> : tous les deux (adjectif ou pronom numéral)</p>
-				<p class="col s11 offset-s1"><span class="eo">Ili ambaŭ estas en la ĝardeno.</span></p>
+				<p class="col s11 offset-s1"><span class="eo">Ili <b>ambaŭ</b> estas en la ĝardeno.</span></p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/anstataux.mp3" class="sm2_button"></a><b>anstataŭ</b> : au lieu de (prép.)</p>
-				<p class="col s11 offset-s1"><span class="eo">Ŝi dormis anstataŭ legi.</span></p>
+				<p class="col s11 offset-s1"><span class="eo">Ŝi dormis <b>anstataŭ</b> legi.</span></p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/antaux.mp3" class="sm2_button"></a><b>antaŭ</b> : avant, devant (prép.)</p>
-				<p class="col s11 offset-s1"><span class="eo">Antaŭ ĉio oni devas peti informojn.<br>La monumento staras antaŭ la muzeo.</span></p>
+				<p class="col s11 offset-s1"><span class="eo"><b>Antaŭ</b> ĉio oni devas peti informojn.<br>La monumento staras <b>antaŭ</b> la muzeo.</span></p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/cxirkaux.mp3" class="sm2_button"></a><b>ĉirkaŭ</b> : autour de, environ (prép.)</p>
-				<p class="col s11 offset-s1"><span class="eo">Ili vojaĝis ĉirkaŭ la terglobo.<br/>Venu ĉirkaŭ la dua (horo).</span></p>
+				<p class="col s11 offset-s1"><span class="eo">Ili vojaĝis <b>ĉirkaŭ</b> la terglobo.<br/>Venu <b>ĉirkaŭ</b> la dua (horo).</span></p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/vortoj/kontraux.mp3" class="sm2_button"></a><b>kontraŭ</b> : contre (prép.) </p>
-				<p class="col s11 offset-s1"><span class="eo">Ni batalas kontraŭ la inflacio.<br/>Kontraŭ doloro helpas bonhumoro.</span></p>
+				<p class="col s11 offset-s1"><span class="eo">Ni batalas <b>kontraŭ</b> la inflacio.<br/><b>Kontraŭ</b> doloro helpas bonhumoro.</span></p>
 			</div>
 
 			<p class="rimarko"><strong>REMARQUE</strong> : 

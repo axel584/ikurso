@@ -95,6 +95,7 @@ include "pagxkapo.inc.php";
 				<p class="parto"><a href="https://babadum.com/">Babadum</a> vous permettra d’<strong>apprendre 1500 mots</strong> de manière ludique.</p>	
 				<p class="parto"><a href="http://www.reta-vortaro.de/revo/">Reta Vortaro</a> et <a href="http://vortaro.net/">vortaro.net</a> sont des dictionnaires en ligne donnant les définitions des mots en espéranto ainsi que leurs traductions en de nombreuses langues.</p>	
 				<p class="parto">La <a href="http://www.eventoj.hu/steb/">Scienca kaj Teknika Esperanto-Biblioteko</a> donne accès à de nombreux <strong>dictionnaires et lexiques</strong> d’espéranto spécialisés dans différents domaines scientifiques et techniques.</p>
+				<p class="parto">En complément des dictionnaires, vous trouverez dans <a href="https://fr.forvo.com/">forvo.com</a> des milliers de mots et expressions enregistrés par divers locuteurs du monde entier. Quant au site <a hreg="https://tatoeba.org/fra/">tatoeba.org</a>,il donne accès à une impressionnante collection de phrases dans de nombreuses langues, souvent accompagnées d’une version audio. Vous pourrez ainsi découvrir de nouveaux mots en contexte.</p>
 				<p class="parto">L’<a href="http://franca-esperanto-instituto.net/">institut français d’espéranto</a> organise régulièrement des examens pour 4 niveaux différents. Depuis 2012, il est également possible de passer des examens d’espéranto pour les niveaux B1, B2 et C1. Plus d’information sur <a href="https://esperanto-france.org/examens-europeens-d-esperanto">esperanto-france.org/examens-europeens-d-esperanto</a>.</p>
 
 				<h2>Lire en espéranto</h2>
@@ -221,6 +222,7 @@ frameborder="0" allowfullscreen></iframe></p>
 				<div class="float-right w15"><img class="responsive-img" src="<?=$vojo?>bildoj/samopiniuloj.png" /></div>
 				<p class="parto">Par exemple au <a href="https://skrablo.ikso.net/">Scrabble</a>&nbsp;;</p>
 				<p class="parto">ou à <a href="https://esperanto-france.org/esperanto-aktiv-70-decouverte">Samopiniuloj</a>, un jeu qui vous permettra d’enrichir votre vocabulaire.</p>
+				<p class="parto">Pour tester et enrichir votre vocabulaire, nous vous conseillons aussi <a href="https://www.clozemaster.com/">clozemaster</a>, un jeu en ligne basé sur le principe des exercices à trous. Ce site exploite la base de données de Tatoeba que nous vous avons présentés plus haut.</p>
 				<p class="parto">Le jeu <a href="https://edukado.net/ensaluti?reen=ludoj/risko/montri">Risko</a>, proposé par <i>Edukado.net</i> vous permettra de tester vos connaissances sur l’espéranto, son histoire et sa culture, à raison de 3 nouvelles questions chaque jour.</p>
 				<div class="row">
 					<p class="col s3 offset-s5"><img class="responsive-img" src="<?=$vojo?>bildoj/ludo-risko.png" /></p>

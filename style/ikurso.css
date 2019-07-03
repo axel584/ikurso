@@ -419,6 +419,16 @@ table.vortaro {
 	font-size:80%;
 }
 
+/********** illustrations *******/
+
+table.framed {
+    border-collapse: separate;
+    border-spacing: 1em;
+}
+table.framed td {
+    border: 1px solid #ccc;
+}
+
 /********** progression dans la leçon *******/
 
 ul#progreso {

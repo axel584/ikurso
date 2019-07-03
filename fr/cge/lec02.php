@@ -255,10 +255,33 @@ QCM_bildoj(
 		<p class="parto">Voici quelques autres prépositions permettant d’introduire un complément de lieu&nbsp;:</p>
 		
 		<table class="retrait striped bordered">
-			<tr><td class="eo">antaŭ</td><td>- avant, devant</td></tr>
-			<tr><td class="eo">sub</td><td>- sous, en-dessous de</td></tr>
-			<tr><td class="eo">sur</td><td>- sur, au-dessus de (en touchant l’objet)</td></tr>
-			<tr><td class="eo">super</td><td>- au-dessus de, par-dessus</td></tr>
+			<tr><td class="eo">antaŭ</td><td>avant, devant</td></tr>
+			<tr><td class="eo">sub</td><td>sous, en-dessous de</td></tr>
+			<tr><td class="eo">sur</td><td>sur, au-dessus de (avec contact)</td></tr>
+			<tr><td class="eo">super</td><td>au-dessus de, par-dessus (sans contact)</td></tr>
+		</table>
+
+		<table class="framed centered">
+			<tr>
+				<td>
+					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-antaux-benko.jpg">
+					<span class="eo">La birdo estas <b>antaŭ</b> la benko.</span>
+				</td>
+				<td>
+					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-sub-benko.jpg">
+					<span class="eo">La birdo estas <b>sub</b> la benko.</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-sur-benko.jpg">
+					<span class="eo">La birdo estas <b>sur</b> la benko.</span>
+				</td>
+				<td>
+					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-super-benko.jpg">
+					<span class="eo">La birdo estas <b>super</b> la benko.</span>
+				</td>
+			</tr>
 		</table>
 
 		<p>Exemples :</p>

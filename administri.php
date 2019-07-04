@@ -547,7 +547,11 @@ include "adminkapo.inc.php";
 								&nbsp;<i>(en construction)</i>
 							</td>
 							<td class="col1">stop-mailing :</td>
-							<td><input type="checkbox" name="stopInfo" <?php if ($celpersono["stop_info"]=="J") {echo "checked";}?>>
+							<td>
+								<label>
+									<input type="checkbox" class="filled-in" name="stopInfo" <?php if ($celpersono["stop_info"]=="J") {echo "checked='checked'";}?>>
+									<span></span>
+								</label>
 							</td>
 						</tr>
 						<tr>

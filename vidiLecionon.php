@@ -19,19 +19,24 @@ include "pagxkapo.inc.php";
 
 <?php
 
-
-$query = "select ekzerceroj.demando,respondoj.respondo,respondoj.gxusta from respondoj join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$studanto_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.kodo";
+$query = "select ekzercoj.id,ekzercoj.komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id where kurso='".$kurso."' and numero='".$leciono."'";
 $result = $bdd->query($query);
-$nbReponse = 0;
 while ($row=$result->fetch()) {
-
-	$nbReponse = $nbReponse + 1;
-	echo "<p>".$row["demando"]."<br>\n";
-	if ($row["gxusta"]==1) {
-		echo "<span style=\"color:green\">".$row["respondo"]."</span></p>\n";	
-	} else {
-		echo "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
-	}
+	echo "<p class=\"parto\">";
+	echo "<strong>EXERCICE : </strong>".$row["komando"];
+	echo "</p>";
+	$ekzerco_id = $row["id"];
+	$query2 = "select ekzerceroj.numero,ekzerceroj.demando,respondoj.respondo,respondoj.gxusta from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo";
+	$result2 = $bdd->query($query2);
+	while ($row2=$result2->fetch()) {
+		echo "<p>".$row2["numero"].". ".$row2["demando"]."<br>\n";
+		if ($row2["gxusta"]==1) {
+			echo "<span style=\"color:green\">".$row2["respondo"]."</span></p>\n";	
+		} else {
+			echo "<span style=\"color:blue\">".$row2["respondo"]."</span></p>\n";
+		}
+}
+	
 }
 
 // on affiche le commentaire de l'élève qui est stocké en base
@@ -75,7 +80,6 @@ echo $row["komentario"];
 $query = "SELECT numero,kurso,titolo  FROM `personoj_lecionoj` join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id WHERE `persono_id` = ".$studanto_id." order by kurso,numero";
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
-	$nbReponse = $nbReponse + 1;
 	echo "<div class='collapsible-header'><a href='vidiLecionon.php?kurso=".$row["kurso"]."&numleciono=".$row["numero"]."&studanto=".$studanto_id."'>".$row["titolo"]."</a></div>\n";
 }
 ?>

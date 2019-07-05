@@ -27,7 +27,7 @@ CREATE TABLE ekzercoj (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE eraraj_lecionoj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `persono_id` int(11) DEFAULT NULL,
   `enirnomo` varchar(32) DEFAULT NULL,
   `dato` date DEFAULT NULL,

@@ -45,8 +45,8 @@ $result = $bdd->query($query);
 $combien = $result->fetch()["combien"];
 // on enregistre si il n'y avait rien en base
 if ($combien==0) {
-	$requete = $bdd->prepare('insert into personoj_lecionoj(dato,persono_id,leciono_id,ekdato) values (now(),:persono_id,:leciono_id,:ekdato)');
-	$requete->execute(array('persono_id'=>$persono_id,'leciono_id'=>$leciono_id,'ekdato'=>$ekdato));
+	$requete = $bdd->prepare('insert into personoj_lecionoj(dato,persono_id,leciono_id) values (now(),:persono_id,:leciono_id)');
+	$requete->execute(array('persono_id'=>$persono_id,'leciono_id'=>$leciono_id));
 }
 
 // on récupère quelques infos sur le cours :
@@ -113,8 +113,8 @@ $result = $bdd->query($query);
 $combien = $result->fetch()["combien"];
 // on enregistre si il n'y avait rien en base
 if ($combien==0) {
-	$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id) values (now(),:persono_id,:lecionero_id)');
-	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id));
+	$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id,ekdato) values (now(),:persono_id,:lecionero_id,FROM_UNIXTIME(:ekdato))');
+	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id,'ekdato'=>$ekdato));
 }
 
 // Trouve le correcteur idéal :

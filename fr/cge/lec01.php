@@ -40,7 +40,7 @@ include "dlekkapo.inc.php";
 			l’accent est en fait un demi-cercle).</p>
 
 			<p>Les lettres suivantes ont une prononciation différente de celle du
-			français :</p>
+			français&nbsp;:</p>
 			<div class="vortlisto row">
 				<div class="col s12 m6">
 					<p><span class="eo">c</span>&nbsp;: ts (tsar)</p>
@@ -63,12 +63,14 @@ include "dlekkapo.inc.php";
 				</div>
 			</div>
 
-			<p>Les autres lettres de l'espéranto : <em>a, b, d, f,
-			i, k, l, m, n, p, t, v, z</em> se prononcent comme en français. 
-			Les lettres <em>q, w, x</em> et <em>y</em> n’existent pas en espéranto.</p>
-			<p>Chaque voyelle, <em>a, e, i, o, u</em>, forme
-			avec les consonnes voisines une syllabe séparée. Par contre, <em>j</em> et
-			<em>ŭ</em>, qui sont parfois appelées <i>semi-voyelles</i>, sont des
+			<p>Les autres lettres de l’espéranto (<span class="eo">a</span>, <span class="eo">b</span>, <span class="eo">d</span>, 
+				<span class="eo">f</span>, <span class="eo">i</span>, <span class="eo">k</span>, <span class="eo">l</span>, 
+				<span class="eo">m</span>, <span class="eo">n</span>, <span class="eo">p</span>, <span class="eo">t</span>, 
+				<span class="eo">v</span>, <span class="eo">z</span>) se prononcent comme en français. 
+			<p>Chaque voyelle, <span class="eo">a</span>, <span class="eo">e</span>, <span class="eo">i</span>, 
+				<span class="eo">o</span>, <span class="eo">u</span>, forme
+			avec les consonnes voisines une syllabe séparée. Par contre, <span class="eo">j</span> et
+			<span class="eo">ŭ</span>, qui sont parfois appelées <i>semi-voyelles</i>, sont des
 			consonnes normales en espéranto, et font donc partie de la syllabe définie
 			par une voyelle voisine. Vous trouverez des exemples plus tard dans les
 			leçons à venir et nous reviendrons plus en détail sur la prononciation dans

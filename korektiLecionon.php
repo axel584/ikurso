@@ -17,7 +17,12 @@ include "pagxkapo.inc.php";
 		<article class="col s12 m9 l6 offset-m1 offset-l1">
 			<h1>Détails de la leçon de <?=$studanto["enirnomo"]?></h1>
 
+<h2>Introduction</h2>
+<textarea></textarea>
+
 <?php
+
+
 
 $query = "select ekzercoj.id,ekzercoj.komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id where kurso='".$kurso."' and numero='".$leciono."'";
 $result = $bdd->query($query);
@@ -34,6 +39,9 @@ while ($row=$result->fetch()) {
 			echo "<span style=\"color:green\">".$row2["respondo"]."</span></p>\n";	
 		} else {
 			echo "<span style=\"color:blue\">".$row2["respondo"]."</span></p>\n";
+			echo "<p><label><input type=\"checkbox\" class=\"filled-in\" id=\"expediteur_ikurso\" name=\"expediteur_ikurso\" />";
+      		echo "<span>bonne réponse</span></label></p>";
+			echo "<input type='checkbox'><input>";
 		}
 }
 	
@@ -50,22 +58,22 @@ echo $row["komentario"];
 
 
 ?>
+<h2>Conclusion</h2>
+<textarea></textarea>
 
 	<section id="leciono-fino">
 			<div id="marko" class="right-align">
-
-				<!--p>
-				<a id="korektiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" href="korektiLecionon.php?numleciono=<?=$leciono?>&kurso=<?=$kurso?>&studanto=<?=$studanto_id?>" data-kurso="<?=$kurso?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Corriger cette leçon en ligne">Corriger cette leçon en ligne</a>
-				</p-->
 				<p>
+				<a id="korektiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" href="korektiLecionon.php?leciono=<?=$leciono?>&kurso=<?=$kurso?>&studanto=<?=$studanto_id?>" data-kurso="<?=$kurso?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Corriger cette leçon en ligne">Corriger cette leçon en ligne</a>
+</p>
+<p>
+
 				<a id="resendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Renvoyer cette leçon par mail">Renvoyer cette leçon par mail</a>
-			</p>
-			<p>
-      			<label>
-      				<input type="checkbox" class="filled-in" id="expediteur_ikurso" name="expediteur_ikurso" />
-	  				<span>Avec ikurso@esperanto-france.org comme expéditeur</span>
-	  			</label>
+				 <p>
+      			<input type="checkbox" id="expediteur_ikurso" name="expediteur_ikurso" value="expediteur_ikurso" />
+      			<label for="expediteur_ikurso">Avec ikurso@esperanto-france.org comme expéditeur</label>
     			</p>
+    		</p>
 			</div>
 
 		</section>

@@ -11,6 +11,18 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
+				<li class="collection-header">version 20. Juillet 2019</li>
+				<li class="collection-item">
+					<p>Mise à jour des pages de conseils sur que faire après les cours.</p>
+					<p>Ajout de sons dans toutes les leçons du cours en 10 leçons.</p>
+					<p>Ajout d’explications dans le cours concernant les numéraux, les prépositions, kiu et kio.</p>
+					<p>Ajout d’exemples pour les participes.</p>
+					<p>Ajout de livres dans la boutique.</p>				
+					<p>Ajout de statistiques quotidiennes pour les administrateurs</p>
+					<p>Correction d’un bug sur les lettres accentuées dans l’outil de révision de vocabulaire.</p>
+					<p>Correction d’un bug sur la fonctionnalité qui permet à l’élève d’arriver sur la dernière page consultée.</p>
+					<p>Corrections diverses de bugs et coquilles…</p>
+				</li>
 				<li class="collection-header">version 19. Juin 2019</li>
 				<li class="collection-item">
 					<p>Attribution automatique d’un correcteur.</p>
@@ -37,7 +49,7 @@ include "pagxkapo.inc.php";
 					<p>Enrichissement des explications dans les pages <a href="<?php echo $vojo;?>helpo.php?section=enskribo">Comment s’inscrire&nbsp;?</a> et <a href="<?php echo $vojo;?>helpo.php?section=kurso">Comment suivre le cours&nbsp;?</a>.</p>
 					<p>Amélioration de la mise en page dans la <a href="<?php echo $vojo;?>fr/cge/lec08.php?section=1">leçon 8</a>.</p>
 					<p>Ajout d’une section sur les revues en espéranto dans la <a href="<?php echo $vojo;?>fr/cge/lec09.php?section=7">leçon 9</a> du Cours en dix leçons</p>
-					<p>Création de l'adresse <a href="https://ikurso.esperanto-france.org/">ikurso.fr</a> pour accéder directement au site.</p>
+					<p>Création de l’adresse <a href="https://ikurso.esperanto-france.org/">ikurso.fr</a> pour accéder directement au site.</p>
 					<p>Corrections diverses de bugs et coquilles…</p>
 				</li>			
 				<li class="collection-header">version 16. Juillet 2017</li>
@@ -66,18 +78,18 @@ include "pagxkapo.inc.php";
 				<li class="collection-item">
 					<p>Correction dans les points de grammaire des chapitres <a href="<?php echo $vojo;?>fr/gerda/cxap23.php?section=2">23</a> et <a href="<?php echo $vojo;?>fr/gerda/cxap24.php?section=2">24</a> de <em>Gerda malaperis</em>.</p>
 					<p>Ajout d’un <a href="<?php echo $vojo;?>fr/gerda/temaro.php">index grammatical</a> au cours <em>Gerda malaperis</em>.</p>
-					<p>Ajout d’illustrations et d’un exercice dans la <a href="<?php echo $vojo;?>fr/cge/lec07.php?section=5">leçon 7</a> pour apprendre l'heure.</p>
+					<p>Ajout d’illustrations et d’un exercice dans la <a href="<?php echo $vojo;?>fr/cge/lec07.php?section=5">leçon 7</a> pour apprendre l’heure.</p>
 					<p>Ajout d’illustrations et d’explications sur les participes dans la <a href="<?php echo $vojo;?>fr/cge/lec08.php?section=1">leçon 8</a>.</p>
-					<p>Ajout d'un outil pour que les correcteurs puissent recevoir de nouveau une leçon qu’ils n'auraient pas reçue.</p>
+					<p>Ajout d’un outil pour que les correcteurs puissent recevoir de nouveau une leçon qu’ils n’auraient pas reçue.</p>
 					<p>Utilisation d’un autre serveur de messagerie pour contrer les problèmes de non-réception des messages d’activation.</p>
 					<p>Corrections diverses de bugs et coquilles…</p>
 				</li>				
 				<li class="collection-header">version 13. Mars 2017</li>
 				<li class="collection-item">
-					<p>Possibilité d'imprimer les leçons.</p>
+					<p>Possibilité d’imprimer les leçons.</p>
 					<p>Ajout d’outils statistiques.</p>
 					<p>Ajout de l’énoncé des questions dans le message envoyé aux correcteurs.</p>
-					<p>Ajout d'une page pour les correcteurs afin de consulter les exercices de leurs élèves (pour répondre temporairement aux problèmes de mails qui n'arrivent pas à leur destinataire).</p>
+					<p>Ajout d’une page pour les correcteurs afin de consulter les exercices de leurs élèves (pour répondre temporairement aux problèmes de mails qui n’arrivent pas à leur destinataire).</p>
 					<p>Corrections diverses, principalement dans le vocabulaire de l’outil de révision grâce aux remarques des élèves (merci Alain !)</p>
 				</li>
 				<li class="collection-header">version 12. Janvier 2017</li>

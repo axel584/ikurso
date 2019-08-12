@@ -2,7 +2,7 @@
 include "../util.php";
 $ekzercero_id=isset($_GET["ekzercero"])?$_GET["ekzercero"]:"";
 $studanto=isset($_GET["studanto"])?$_GET["studanto"]:"";
-$lernantaRespondo=isset($_GET["respondo"])?$_GET["respondo"]:"";
+$lernantaRespondo=isset($_GET["respondo"])?htmlspecialchars($_GET["respondo"]):"";
 
 
 if ($lernantaRespondo=="") {

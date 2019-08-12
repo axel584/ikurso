@@ -1,7 +1,10 @@
 <?php 
 $titolo="12 (dek du)";
 $leciono = 12;
-$section=isset($_GET["section"])?$_GET["section"]:"1";
+$section=isset($_GET["section"])?htmlspecialchars($_GET["section"]):"1";
+if (!is_numeric($section)) {
+	if ($persono_id=="") {header("Location:../../index.php?erarkodo=24");}
+}
 include "gerdakapo.inc.php";
 ?>
 <div class="row">

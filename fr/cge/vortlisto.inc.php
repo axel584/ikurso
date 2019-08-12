@@ -22,33 +22,3 @@
 	vortlisto($persono_id,"CG","");
 
 ?>
-
-<!-- 			<div class="vortlisto">
-				<div class="lexique">
-					php
-					$filename = "vortlisto.txt";
-					$fd = fopen($filename, "r");
-					$i=0;
-					$res="";
-					while($ligne = fgets($fd)){ // on lit la ligne
-						$tab = explode('\\',$ligne);  // on sépare suivant les \ pour avoir les différents parametres (mot en espéranto/numéro de leçon CGE/numéro de leçon karlo/mot en français
-						if ($i%3==0){$res.= "<div class=\"row\">";}
-						$res.= "<p class=\"col s6 eo\">".$tab[0]." ";
-						if (($tab[1].$tab[2])!=""){
-							$res.= "<span class=\"numero\"> (";
-							if ($tab[1]) {$res.= $tab[1];} else {$res.= "-";}
-							$res.= "/";
-							if ($tab[2]) {$res.= $tab[2];} else {$res.= "-";}
-							$res.= ")</span>";
-						}
-						$res.= "</p><p class=\"col s6 \"> ".$tab[3]."</p>\n";
-						if ($i%3==2) {$res.= "</div>\n";}
-						$i++;
-					}
-					fclose($fd);
-					echo $res;
-					
-					?>
-				</div>
-			</div> -->
-

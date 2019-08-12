@@ -1,7 +1,6 @@
 <?php
 $titolo="2 (du)";
 $leciono = 2;
-$section=isset($_GET["section"])?$_GET["section"]:"1";
 include "dlekkapo.inc.php";
 ?>
 

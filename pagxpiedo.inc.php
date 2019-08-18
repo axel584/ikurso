@@ -66,7 +66,10 @@
 		echo "M.toast({html: 'Attention, relisez bien la leçon !'});\n";
 	}
 	if ($erarkodo==23) {
-		echo "M.toast({html: 'élève introuvable !});\n";
+		echo "M.toast({html: 'élève introuvable !'});\n";
+	}
+	if ($erarkodo==24) {
+		echo "M.toast({html: 'injection XSS détectée !'});\n";
 	}
 	
 

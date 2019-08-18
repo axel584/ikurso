@@ -373,7 +373,7 @@ QCM_bildoj(
 			<div class="vortlisto row">
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/malamiko.mp3" class="sm2_button"></a> <span class="eo">malamiko</span> : ennemi</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/malbela.mp3" class="sm2_button"></a> <span class="eo">malbela</span> : laid(e)</p>
-				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/malnova.mp3" class="sm2_button"></a> <span class="eo">malnova</span> : ancien(ne), vieux, vieill</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/malnova.mp3" class="sm2_button"></a> <span class="eo">malnova</span> : ancien(ne), vieux, vieille</p>
 			</div>
 		</fieldset>
 

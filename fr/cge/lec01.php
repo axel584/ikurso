@@ -306,8 +306,8 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">mi</span>&nbsp;: je</p>
 					<p><span class="eo">vi</span>&nbsp;: tu, vous</p>
 					<p><span class="eo">ŝi</span>&nbsp;: elle</p>
-					<p><span class="eo">li</span>&nbsp;: lui</p>
-					<p><span class="eo">ĝi</span>&nbsp;: lui, elle (non-personne)</p>
+					<p><span class="eo">li</span>&nbsp;: il</p>
+					<p><span class="eo">ĝi</span>&nbsp;: il, elle (non-personne)</p>
 					<p><span class="eo">ni</span>&nbsp;: nous</p>
 					<p><span class="eo">ili</span>&nbsp;: ils, elles</p>
 				</div>

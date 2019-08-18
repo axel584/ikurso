@@ -121,9 +121,9 @@ include "dlekkapo.inc.php";
 		
 		<p>Vous retrouverez dans le schéma ci-dessus des corrélatifs que vous avez déjà rencontrés dans les leçons précédentes&nbsp;:</p>
 		<div class="row vortlisto">
-			<p class="col s4 m3"><span class="eo">kiu</span>&nbsp;: qui, quel</p>
-			<p class="col s4 m3"><span class="eo">neniu</span>&nbsp;: personne</p>
-			<p class="col s4 m6"><span class="eo">iu</span>&nbsp;: quelqu’un</p>
+			<p class="col s4 m3"><span class="eo">kiu</span>&nbsp;: qui, quel, lequel</p>
+			<p class="col s4 m3"><span class="eo">neniu</span>&nbsp;: personne, aucun</p>
+			<p class="col s4 m6"><span class="eo">iu</span>&nbsp;: quelqu’un, un certain</p>
 			<p class="col s4 m3"><span class="eo">kio</span>&nbsp;: quoi</p>
 			<p class="col s8 m9"><span class="eo">nenio</span>&nbsp;: rien</p>
 			<p class="col s4 m3"><span class="eo">kie</span>&nbsp;: où</p>
@@ -131,8 +131,8 @@ include "dlekkapo.inc.php";
 			<p class="col s4 m3"><span class="eo">kiam</span>&nbsp;: quand</p>
 			<p class="col s4 m3"><span class="eo">neniam</span>&nbsp;: jamais</p>
 			<p class="col s4 m6"><span class="eo">ĉiam</span>&nbsp;: toujours</p>
-			<p class="col s6 m4"><span class="eo">kiel</span>&nbsp;: comment, comme</p>
-			<p class="col s6 m8"><span class="eo">tiel</span>&nbsp;: ainsi, comme ça</p>
+			<p class="col s6 m3"><span class="eo">kiel</span>&nbsp;: comment, comme</p>
+			<p class="col s6 m5"><span class="eo">tiel</span>&nbsp;: ainsi, comme ça</p>
 			<p class="col s12"><span class="eo">kiom</span>&nbsp;: combien</p>
 		</div>
 		

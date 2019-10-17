@@ -91,8 +91,8 @@ include "dlekkapo.inc.php";
 			</div>
 	
 			<p class="rimarko"><strong>REMARQUE</strong> : 
-				Il n’y a que très peu de racines en espéranto qui aient une consonne
-				double. Un exemple est <span class="eo">Finno</span> (Finnois). Comme chaque lettre se
+				Il n’y a que très peu de racines en espéranto qui ont une consonne
+				double. Un exemple est <span class="eo">Finno</span> (finnois). Comme chaque lettre se
 				prononce, on dit <span class="eo"><u>fin</u>-no</span>. Certains mots composés peuvent avoir
 				une consonne double, par exemple <span class="eo">Pollando</span> (Pologne) de <span class="eo">Polo</span>,
 				<span class="eo">lando</span>, et on prononce <span class="eo">Pol-<u>lan</u>-do</span>.
@@ -110,7 +110,7 @@ include "dlekkapo.inc.php";
 			<p>Exemples&nbsp;:</p>
 			
 			<div class="row">
-				<p class="col s6"><span class="eo">a<u>mi</u>ko</span>&nbsp;: ami</p>
+				<p class="col s6"><span class="eo">a<u>mi</u>ko</span>&nbsp;: un ami</p>
 				<p class="col s6"><span class="eo">a<u>mi</u>ka</span>&nbsp;: amical(e)</p>
 				<p class="col s6"><span class="eo"><u>no</u>va a<u>mi</u>ko</span>&nbsp;: un nouvel ami</p>
 				<p class="col s6"><span class="eo"><u>es</u>ti</span>&nbsp;: être</p>
@@ -288,8 +288,7 @@ include "dlekkapo.inc.php";
 				</div>
 			</div>
 
-			<p class="parto">Les <b>articles définis</b> (le, la, les) sont traduits par un seul mot
-			<b>la</b>.</p>
+			<p class="parto">Les <b>articles définis</b> (le, la, les, l’) sont traduits par un seul mot&nbsp;: <b>la</b>.</p>
 			<div class="vortlisto row">
 				<div class="col s12 m6">
 					<p><span class="eo">la biskvito</span>&nbsp;: le biscuit</p>
@@ -373,8 +372,8 @@ include "dlekkapo.inc.php";
 			</div>
 	
 			<p class="rimarko"><strong>REMARQUE</strong> :  
-			Dans ces exemples les terminaisons <b>-aj</b> et <b>-oj</b> se prononcent bien
-			entendu <span class="eo">aï</span> et <span class="eo">oï</span>,
+			Dans ces exemples les terminaisons <b>-aj</b> et <b>-oj</b> se prononcent
+			<span class="eo">aï</span> et <span class="eo">oï</span>,
 			comme dans <em>ail</em> et <em>Tolstoï</em> : <span class="eo"><u>vi</u>-aï
 			<u>fi</u>-loï</span>, <span class="eo"><u>ka</u>-foï</span>, 
 			<span class="eo">a-<u>mi</u>-koï</span>, etc.

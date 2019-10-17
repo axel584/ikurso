@@ -87,7 +87,7 @@ include "dlekkapo.inc.php"
 						<div class="card-panel blue lighten-5">
 							<h5 class="center">Je commence le cours tout de suite&nbsp;!</h5>
 							<div class="row">
-								<p><span class="noto">Je lis attentivement chaque page de la leçon, je fais les exercices et je pourrai m’inscrire au service de correction à la fin de la première leçon. Mes exercices seront automatiquement envoyé à mon correcteur quand les administrateurs du cours m'en auront attribué un.</span>
+								<p><span class="noto">Je lis attentivement chaque page de la leçon, je fais les exercices et je pourrai m’inscrire au service de correction à la fin de la première leçon. Mes exercices seront automatiquement envoyés à mon correcteur quand les administrateurs du cours m'en auront attribué un.</span>
 								<p><a href="<?php echo $vojo;?>fr/cge/lec01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Aller à la leçon 1</a></p>
 								</p>
 							</div>		

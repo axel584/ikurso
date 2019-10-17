@@ -318,8 +318,8 @@ include "gerdakapo.inc.php";
 
 				<p class="rimarko"><strong>REMARQUE</strong> : </p>
 				<ol>
-					<li>Il n’y a que très peu de racines en espéranto qui aient une consonne
-					double. Un exemple est <span class="eo">Finno</span> (Finnois). Comme chaque lettre se
+					<li>Il n’y a que très peu de racines en espéranto qui ont une consonne
+					double. Un exemple est <span class="eo">Finno</span> (finnois). Comme chaque lettre se
 					prononce, on dit <span class="eo"><u>fin</u>-no</span>. Certains mots composés peuvent avoir
 					une consonne double, par exemple <span class="eo">Pollando</span> (Pologne) de <span class="eo">Polo</span>,
 					<span class="eo">lando</span>, et on prononce <span class="eo">Pol-<u>lan</u>-do</span>.</li>

@@ -38,7 +38,7 @@ include "dlekkapo.inc.php";
 				<div class="row">
 					<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/kiel-vi-fartas.mp3" class="sm2_button"></a> <span class="eo">Kiel vi fartas?</span></p><p class="col s6">Comment allez-vous&nbsp;?</p>
 					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/bone-kaj-vi.mp3" class="sm2_button"></a> <span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">– Bien. Et vous&nbsp;?</p>
-					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/bonege.mp3" class="sm2_button"></a> <span class="eo">– Bonege.</span></p><p class="col s6">– Parfaitement bien.</p>
+					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/bonege.mp3" class="sm2_button"></a> <span class="eo">– Bonege.</span></p><p class="col s6">– Parfaitement bien.</p>
 					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/suficxe-bone.mp3" class="sm2_button"></a> <span class="eo">– Sufiĉe bone.</span></p><p class="col s6">– Assez bien. (ça va)</p>
 					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/ne-trop-bone.mp3" class="sm2_button"></a> <span class="eo">– Ne tro bone.</span></p><p class="col s6">– Pas trop bien.</p>
 				</div>

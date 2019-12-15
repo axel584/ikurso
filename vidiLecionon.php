@@ -40,7 +40,7 @@ while ($row=$result->fetch()) {
 }
 
 // on affiche le commentaire de l'élève qui est stocké en base
-$query = "SELECT komentario  FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id= ".$studanto_id." and numero=".$leciono;
+$query = "SELECT komentario  FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id= ".$studanto_id." and numero=".$leciono." and kurso='".$kurso."'";
 $result = $bdd->query($query);
 $row=$result->fetch();
 echo "<h3>Commentaire de l'élève</h3>";

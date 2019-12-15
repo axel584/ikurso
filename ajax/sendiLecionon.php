@@ -109,6 +109,16 @@ if ($kurso=="3N") {
 
 $resultat = mailViaSmtp($korektantaretadreso.",\"".$studanto["enirnomo"]."\" <".$studanto["retadreso"].">",$studanto["retadreso"],$subjekto,stripslashes($fonto));
 
+// sendi atentigon pro problemo pri sendado de retmesaghoj
+$filename = "../mails/novaleciono.html";
+$fd = fopen($filename, "r");
+$contents = fread($fd, filesize ($filename));
+fclose($fd);
+$url = $urlracine."vidiLecionon.php?numleciono=".$leciono."&kurso=".$kurso."&studanto=".$persono_id;
+$contents=str_replace("##URL##",$url,$contents);
+mailViaSES($korektantaretadreso,"Nouvel leçon de ".$persono["enirnomo"],$contents);
+
+
 // gxisdatigi liajn datumojn en nuna_kurso
 $query = "update nuna_kurso set nunleciono=".$leciono.",stato='K',lastdato=CURDATE() where studanto=".$persono_id." and kurso='".$kurso."'";
 $bdd->exec($query);

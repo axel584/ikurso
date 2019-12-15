@@ -116,7 +116,7 @@ $contents = fread($fd, filesize ($filename));
 fclose($fd);
 $url = $urlracine."vidiLecionon.php?numleciono=".$leciono."&kurso=".$kurso."&studanto=".$persono_id;
 $contents=str_replace("##URL##",$url,$contents);
-mailViaSES($korektantaretadreso,"Nouvel leçon de ".$persono["enirnomo"],$contents);
+mailViaSES($korektantaretadreso,"Nouvelle leçon de ".$persono["enirnomo"],$contents);
 
 
 // gxisdatigi liajn datumojn en nuna_kurso

@@ -470,7 +470,7 @@ function getEkzercon($id,$persono_id) {
 		if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")||($rowEkzerco["typo"]=="stelo-2")) { // cas des types d'exercices textarea
 			echo "<div class='input-field col s12'>";
 			echo $iconprefix; // on affiche une marque verte si la réponse est bonne
-			echo "<textarea rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
+			echo "<textarea spellcheck=\"false\" rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
 			if ($rowEkzerco["x2u"]==1) {
 				echo " onkeyup='xAlUtf8(this)'";
 			}
@@ -480,7 +480,7 @@ function getEkzercon($id,$persono_id) {
 		} else { // cas des types d'exercice sur des champs input
 			echo "<div class='input-field col s12'>";
 			echo $iconprefix; // on affiche une marque verte si la réponse est bonne
-			echo "<input Autocomplete=\"off\"  data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
+			echo "<input Autocomplete=\"off\" spellcheck=\"false\" data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
 			if ($rowEkzerco["x2u"]==1) {
 				echo " onkeyup='xAlUtf8(this)'";
 			}
@@ -679,7 +679,7 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 			echo "<ul class='collection'>";
 				echo "<li class='collection-item row'>";
 				echo "Si vous souhaitez ajouter un message à l’intention de votre correcteur, vous pouvez écrire dans le cadre ci-dessous&nbsp;:";
-				echo "<textarea name='commentaire_pour_correcteur' class='materialize-textarea'></textarea>";
+				echo "<textarea spellcheck=\"false\" name='commentaire_pour_correcteur' class='materialize-textarea'></textarea>";
 				echo "</li>";
 			echo "</ul>";
 		} else {

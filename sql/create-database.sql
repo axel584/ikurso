@@ -158,6 +158,7 @@ CREATE TABLE personoj (
   `aktivigo` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
   `aktivigita` tinyint(1) NOT NULL DEFAULT '0',
   `pasvorto_md5` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `saviezvous` int NOT NULL DEFAULT '0',
   PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci PACK_KEYS=0;
 

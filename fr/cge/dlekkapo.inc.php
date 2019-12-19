@@ -3,7 +3,6 @@ include_once "../../util.php";
 $kurso="CG";
 $korpo="dlek";
 $vojo="../../";
-include_once ("../../fr.inc.php");
 include_once ("../../db.inc.php");
 include_once ("../../webui.inc.php");
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";

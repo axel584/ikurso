@@ -141,4 +141,29 @@ while ($row=$result->fetch()) { // on récupère les suivants
 // envoie du mail :
 mailViaSES($informistoj,"Ikurso : Statistiques quotidiennes",$contents);
 
+
+// le saviez vous
+$query="select distinct personoj_lecioneroj.persono_id,enirnomo,retadreso,saviezvous from personoj_lecioneroj  join personoj on personoj.id=personoj_lecioneroj.persono_id WHERE date(dato)=DATE_SUB(CURDATE(), INTERVAL 1 DAY)";
+$result = $bdd->query($query);
+while($row = $result->fetch()) {
+	$numero = $row["saviezvous"];
+	$studanto = $row["retadreso"];
+	$persono_id = $row["persono_id"];
+	$numero=$numero+1;
+	$filename = "../mails/saviezvous".sprintf("%03d", $numero).".html";
+	$filenameTitre = "../mails/saviezvous".sprintf("%03d", $numero).".txt";
+	echo ":".$filename."&".$filenameTitre;;
+	if (file_exists($filename) && file_exists($filenameTitre)) { 
+		$fd = fopen($filename, "r");
+		$contents = fread($fd, filesize ($filename));
+		fclose($fd);
+		$fd = fopen($filenameTitre, "r");
+		$contentsTitre = fread($fd, filesize ($filenameTitre));
+		fclose($fd);
+		mailViaSES($studanto,"Le Saviez-vous : ".$contentsTitre,$contents);
+		$query2 = "update personoj set saviezvous=saviezvous+1 where id=".$persono_id;
+		$bdd->query($query2);
+	}
+}
+
 ?>

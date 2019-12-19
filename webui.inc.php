@@ -970,7 +970,8 @@ function listi_protokolo($nb_max_ligne,$debut = "",$fin = "",$persono = "",$type
         if ($type!="") {
         	$demando .= " and kategorio='".$type."'";
         }
-        $demando .= " order by horo DESC";
+        $demando .= " order by horo DESC ";
+		$demando .= " limit ".$nb_max_ligne;
 		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         echo "<table class='striped'>\n<thead>\n<tr>\n<td>Date</td>\n<td>Personne</td>\n<td>Type</td><td>Message</td>\n</tr>\n</thead>\n<tbody>";
         $i=0;

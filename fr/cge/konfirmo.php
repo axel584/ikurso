@@ -4,9 +4,11 @@ $leciono=$_GET["lec"];
 $kazo=$_GET["kazo"];
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $korpo="informo";
-// si la personne n'a pas de session, on la renvoie vers la page d'accueil pour éviter les spams sur le formulaire
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 include "dlekkapo.inc.php";
+if ($persono_id=="") {
+	// si la personne n'a pas de session, on la renvoie vers la page d'accueil pour éviter les spams sur le formulaire
+	header("Location:index.php?erarkodo=8");
+}
 ?>
 <!-- ATTENTION VERRUE DE PROGRAMMATION -->
 <!--Comme on "ouvre" le formulaire dans l'en-tête, on est obligé de le fermer ici -->
@@ -16,26 +18,18 @@ include "dlekkapo.inc.php";
 		<section id="leciono-enketo">
 			<div class="card-panel blue">
 				<?php 
-					if ($kazo==1){
+					if ($kazo==1){ // a déjà un correcteur
 				?>
 					<p class="white-text">Votre devoir a été envoyé par courriel à votre correcteur. Vous allez en recevoir une copie par message.</p>
 				<?php
 				}
-				elseif ($kazo==2) {
-				// le devoir n'a pas pu etre envoye pour des raisons techniques. Il est sauvegarde et sera envoye plus tard	
+				elseif ($kazo==2) { // n'a pas encore de correcteur
 				?>
 					<p class="white-text">Votre devoir a été enregistré et sera envoyé à votre correcteur dès que possible.<br>
 					Une copie du message vous sera alors adressée.</p>
-				<?
-				}
-				else {
-				?>
-					<p class="white-text">Nous avons enregistré vos exercices. Ils seront envoyés à votre correcteur, 
-						dès que nous vous en aurons attribué un. Vous recevrez alors ses coordonnées par message électronique.</p>
-					<p class="white-text">Votre correcteur recevra alors vos exercices par messagerie électronique et vous recevrez une copie de ce message.</p>
 				<?php
 				}
-				?>         
+				?>
 	        </div>
 		    
 			<h2>Évaluez-nous&nbsp;!</h2>

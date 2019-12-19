@@ -135,7 +135,8 @@ if ($combien==0) {
 
 
 // passer à la page d'évaluation de la leçon
-$respondo["url"] = $prefixeKurso."konfirmo.php?kazo=2&lec=".$leciono;
+// le kazo 1 correspond au cas où on a déjà un correcteur
+$respondo["url"] = $prefixeKurso."konfirmo.php?kazo=1&lec=".$leciono;
 $respondo["mesagxo"] = "ok";
 echo json_encode($respondo);
 ?>

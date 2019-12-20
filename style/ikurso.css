@@ -949,4 +949,10 @@ span.bravo {
 	height: 100%;
 }
 
+/*****************************************
+ * Outil de correction en ligne (trumbowyg)
+ *****************************************/
 
+.trumbowyg,.trumbowyg-textarea,.trumbowyg-editor {
+	min-height: 100px !important;
+}

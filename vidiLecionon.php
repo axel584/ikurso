@@ -54,9 +54,9 @@ echo $row["komentario"];
 	<section id="leciono-fino">
 			<div id="marko" class="right-align">
 
-				<!--p>
+				<p>
 				<a id="korektiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" href="korektiLecionon.php?numleciono=<?=$leciono?>&kurso=<?=$kurso?>&studanto=<?=$studanto_id?>" data-kurso="<?=$kurso?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Corriger cette leçon en ligne">Corriger cette leçon en ligne</a>
-				</p-->
+				</p>
 				<p>
 				<a id="resendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Renvoyer cette leçon par mail">Renvoyer cette leçon par mail</a>
 			</p>

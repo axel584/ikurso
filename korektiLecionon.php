@@ -11,6 +11,15 @@ $studanto_id=isset($_GET["studanto"])?$_GET["studanto"]:"";
 if ($studanto_id==""){header("Location:miajlernantoj.php?erarkodo=23");}
 $studanto = apartigiPersonon($studanto_id);
 include "pagxkapo.inc.php";
+
+// on recupere les informations sur la leçon (intro et conclusion)
+$query = "SELECT personoj_lecionoj.leciono_id,komentario,enkonduko,konkludo  FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id= ".$studanto_id." and numero=".$leciono;
+$result = $bdd->query($query);
+$row=$result->fetch();
+$komentario = $row["komentario"];
+$enkonduko = $row["enkonduko"];
+$konkludo = $row["konkludo"];
+$leciono_id = $row["leciono_id"];
 ?>
 
 	<div class="row">
@@ -18,7 +27,7 @@ include "pagxkapo.inc.php";
 			<h1>Détails de la leçon de <?=$studanto["enirnomo"]?></h1>
 
 <h2>Introduction</h2>
-<textarea></textarea>
+<textarea name="enkonduko" class="trumbowyg"><?=$enkonduko?></textarea>
 
 <?php
 
@@ -31,7 +40,7 @@ while ($row=$result->fetch()) {
 	echo "<strong>EXERCICE : </strong>".$row["komando"];
 	echo "</p>";
 	$ekzerco_id = $row["id"];
-	$query2 = "select ekzerceroj.numero,ekzerceroj.demando,respondoj.respondo,respondoj.gxusta from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo";
+	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,respondoj.respondo,respondoj.gxusta,respondoj.korekto from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo";
 	$result2 = $bdd->query($query2);
 	while ($row2=$result2->fetch()) {
 		echo "<p>".$row2["numero"].". ".$row2["demando"]."<br>\n";
@@ -39,39 +48,33 @@ while ($row=$result->fetch()) {
 			echo "<span style=\"color:green\">".$row2["respondo"]."</span></p>\n";	
 		} else {
 			echo "<span style=\"color:blue\">".$row2["respondo"]."</span></p>\n";
-			echo "<p><label><input type=\"checkbox\" class=\"filled-in\" id=\"expediteur_ikurso\" name=\"expediteur_ikurso\" />";
+			echo "<p><label><input type=\"checkbox\" class=\"filled-in\" name='bonaRespondo".$row2["respondo_id"]."' />";
       		echo "<span>bonne réponse</span></label></p>";
-			echo "<input type='checkbox'><input>";
+			echo "<textarea name='korekto".$row2["respondo_id"]."' class='trumbowyg'>".$row2["korekto"]."</textarea>";
 		}
+		echo "<hr/>";
 }
 	
 }
 
 // on affiche le commentaire de l'élève qui est stocké en base
-$query = "SELECT komentario  FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id= ".$studanto_id." and numero=".$leciono;
-$result = $bdd->query($query);
-$row=$result->fetch();
-echo "<h3>Commentaire de l'élève</h3>";
-echo $row["komentario"];
 
-// on ajoute un bouton pour renvoyer la leçon
+echo "<h3>Commentaire de l'élève</h3>";
+echo $komentario;
+
 
 
 ?>
 <h2>Conclusion</h2>
-<textarea></textarea>
+<textarea name="konkludo" class="trumbowyg"><?=$konkludo?></textarea>
 
 	<section id="leciono-fino">
 			<div id="marko" class="right-align">
 				<p>
-				<a id="korektiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1" href="korektiLecionon.php?leciono=<?=$leciono?>&kurso=<?=$kurso?>&studanto=<?=$studanto_id?>" data-kurso="<?=$kurso?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Corriger cette leçon en ligne">Corriger cette leçon en ligne</a>
-</p>
-<p>
-
-				<a id="resendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Renvoyer cette leçon par mail">Renvoyer cette leçon par mail</a>
+				<a id="registriKorektadon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono_id="<?=$leciono_id?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Renvoyer cette leçon par mail">Sauvegarder cette correction</a>
 				 <p>
-      			<input type="checkbox" id="expediteur_ikurso" name="expediteur_ikurso" value="expediteur_ikurso" />
-      			<label for="expediteur_ikurso">Avec ikurso@esperanto-france.org comme expéditeur</label>
+      			<input type="checkbox" id="pas_envoi_email" name="pas_envoi_email" value="pas_envoi_email" class="filled-in" />
+      			<label for="pas_envoi_email">Ne pas prévenir l'élève par mail</label>
     			</p>
     		</p>
 			</div>

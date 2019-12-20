@@ -12,6 +12,45 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+	<!-- include skelenote css/js-->
+    <link href="<?php echo $vojo;?>style/materialnote.css" rel="stylesheet" type="text/css">
+    <script src="<?php echo $vojo;?>js/materialnote.js"></script>
+	
+	<script src="https://cdn.tiny.cloud/1/7ypwq3abv301p0c62mhwkoyodjbnlnwx8b7k3gvjs4wid90u/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+	<script>tinymce.init({
+			selector:'.wysiwyg',
+			plugins: [ 'quickbars' ],
+			toolbar: false,
+			menubar: false});</script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/trumbowyg.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/ui/trumbowyg.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/langs/fr.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/plugins/colors/trumbowyg.colors.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/plugins/colors/ui/trumbowyg.colors.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/plugins/specialchars/trumbowyg.specialchars.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/plugins/specialchars/ui/trumbowyg.specialchars.min.css"/>
+	<script>$('.trumbowyg').trumbowyg({
+			btns: [['bold', 'italic','del'], ['link'],['foreColor'], ['specialChars'],['removeformat']],
+			autogrow: true,
+			lang: 'fr',
+			plugins: {
+				colors: {
+					colorList: [
+						'FF0000', '00FF00'
+					]
+				},
+				specialchars: {
+					symbolList: [
+						'0108','011C','0124','0134','015C','016C','0109','011D','0125','0135','015D','016D'
+					]
+				}
+			}
+	});
+	
+	
+	</script>
+	
 	<script src="<?php echo $vojo;?>js/config.js"></script>
 	<script src="<?php echo $vojo;?>js/init.js"></script>
 	<script src="<?php echo $vojo;?>js/ikurso.js?d=<?php echo time(); ?>"></script>

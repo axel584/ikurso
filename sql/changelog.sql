@@ -2455,7 +2455,12 @@ UPDATE `lecioneroj` SET `enhavo` = '##EKZERCO:36## <div class="vortlisto row"> <
 ALTER TABLE `personoj_lecioneroj` ADD `ekdato` TIMESTAMP NULL AFTER `id`;
 
 -- ajout explication pour les exercices de traduction
-UPDATE `ekzercoj` SET `komando` = 'À votre tour' WHERE `komando` = 'A votre tour";
-UPDATE `ekzercoj` SET `komando_detalo` = 'Cet exercice permet de vérifier si vous avez bien compris le texte en espéranto. Nous vous conseillons de rester fidèle au texte, mais cela ne signifie pas que vous devez le traduire mot à mot. Il est parfois nécessaire de s’éloigner un peu du texte original pour que la traduction soit agréable à lire. Une bonne traduction doit donner l’impression que le texte traduit a été rédigé dans la langue cible.' WHERE `komando` = "Traduisez en français.";
+UPDATE `ekzercoj` SET `komando` = 'À votre tour' WHERE `komando` = 'A votre tour';
+UPDATE `ekzercoj` SET `komando_detalo` = 'Cet exercice permet de vérifier si vous avez bien compris le texte en espéranto. Nous vous conseillons de rester fidèle au texte, mais cela ne signifie pas que vous devez le traduire mot à mot. Il est parfois nécessaire de s’éloigner un peu du texte original pour que la traduction soit agréable à lire. Une bonne traduction doit donner l’impression que le texte traduit a été rédigé dans la langue cible.' WHERE `komando` = 'Traduisez en français.';
 
+--------------------------------
+-- Passage en V21
+--------------------------------
 
+ALTER TABLE `personoj_lecionoj` ADD `enkonduko` TEXT NULL AFTER `komentario`, ADD `konkludo` TEXT NULL AFTER `enkonduko`;
+ALTER TABLE `respondoj` ADD `korekto` TEXT NULL AFTER `gxusta`;

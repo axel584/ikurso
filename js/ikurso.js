@@ -7,7 +7,6 @@
     }
 
 
-
     // méthode pour les selecteurs de date dans la partie administration
     //$('#debut_protokolo').pickadate({format: 'yyyy-mm-dd',format_submit: 'yyyy-mm-dd'});
     //$('#fin_protokolo').pickadate({format: 'yyyy-mm-dd',format_submit: 'yyyy-mm-dd'});
@@ -493,6 +492,23 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		}
     	});
 	});
+	
+	$("#registriKorektadon_button").click(function() {
+		$("#registriKorektadon_button").addClass("disabled");
+		$.ajax({
+       		url : $cheminAbsolu+'ajax/registriKorektadon.php',
+       		type : 'GET',
+       		dataType : 'json',
+       		data : $("#chefa_form").serialize()+"&leciono_id="+$("#registriKorektadon_button").data('leciono_id')+"&studanto_id="+$("#registriKorektadon_button").data('studanto')+"&leciono="+$("#registriKorektadon_button").data('leciono')+"&kurso="+$("#registriKorektadon_button").data('kurso'),
+       		success : function(reponse, statut){ 
+				alert("ok");
+       		},
+       		error : function() {
+       			alert("Erreur interne, contactez les administrateurs");
+       		}
+    	});
+	});
+	
 
 	$("#finiLecioneron_button").click(function() {
 		$("#finiLecioneron_button").addClass("disabled");

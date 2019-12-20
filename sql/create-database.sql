@@ -177,6 +177,8 @@ CREATE TABLE personoj_lecionoj (
   `persono_id` int(11) NOT NULL,
   `leciono_id` int(11) NOT NULL,
   `komentario` text,
+  `enkonduko` text,
+  `konkludo` text,
   PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

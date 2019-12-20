@@ -29,6 +29,11 @@ function checkEmail($email)
      return (TRUE);
 }
 
+function startsWith ($string, $startString) 
+{ 
+    $len = strlen($startString); 
+    return (substr($string, 0, $len) === $startString); 
+} 
 
 function konvU($buff) {
 	$utf8 = array(

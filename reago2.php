@@ -28,8 +28,8 @@ if (checkEmail($_POST['sendinto'])) {
 		$contents.= " :</p>\n";
 		$contents.="<p>".stripslashes(nl2br($_POST['komento']))."</p>";
 		$objekto="ikurso-reago : ".stripSlashes($_POST['temo']);
-		mail($informistoj,$objekto,$contents,$mesagxkapo);
-		
+		//mail($informistoj,$objekto,$contents,$mesagxkapo);
+		mailViaSES($informistoj,$objekto,$contents);
 		?>
 		<div class="row">
 		<article class="col s12 m10 l7 offset-m1 offset-l2">

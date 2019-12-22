@@ -877,6 +877,60 @@ span.ikurso {
 }
 #eleves .footer .btn {
 	margin-left: 1em;
+
+}
+/*************************************/
+/*        page korektiLecionon       */
+/*************************************/
+
+.korektiLecionon p.parto {
+	margin-left: 3em;
+}
+.korektiLecionon article p {
+	padding: 0.5em;
+	margin: 0 0 0 2.5em;
+}
+.korektiLecionon article p.demando {
+	padding-bottom: 0;
+}
+.korektiLecionon article p.respondo {
+	padding-top: 0;
+}
+.korektiLecionon article p.parto {
+	margin-left: 0;
+	margin-top: 2em;
+}
+.korektiLecionon article hr {
+	margin-left: 2.5em;
+}
+.korektiLecionon ul.collapsible {
+	border: none;
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+}
+.korektiLecionon ul.collapsible div.collapsible-header {
+	border: none;
+	padding: 0;
+}
+.korektiLecionon ul.collapsible div.collapsible-body {
+	border: none;
+	padding: 0;
+}
+.korektiLecionon article .trumbowyg-editor, 
+.korektiLecionon article .trumbowyg-textarea {
+	padding: 0.5em;
+	margin: 0 auto;
+}
+.korektiLecionon article .trumbowyg-box {
+	margin-left: 3em;
+	margin-top: 0;
+}
+.korektiLecionon article .trumbowyg-box p {
+	margin: 0.5em;
+}
+.korektiLecionon article .trumbowyg-box p + p {
+	margin-top: 0;
 }
 /*********************************/
 /*        pied de page           */

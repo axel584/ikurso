@@ -1,7 +1,7 @@
 <?php
 include "util.php";
 $pagxtitolo="Détails leçon";
-$korpo="informoj";
+$korpo="informoj korektiLecionon";
 $persono_id=$_SESSION["persono_id"];
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
@@ -22,13 +22,20 @@ $konkludo = $row["konkludo"];
 $leciono_id = $row["leciono_id"];
 ?>
 
-	<div class="row">
-		<article class="col s12 m9 l6 offset-m1 offset-l1">
-			<h1>Détails de la leçon de <?=$studanto["enirnomo"]?></h1>
-
-<h2>Introduction</h2>
-<textarea name="enkonduko" class="trumbowyg"><?=$enkonduko?></textarea>
-
+<div class="row">
+	<article class="col s12 m9 l6 offset-m1 offset-l1">
+		<h1>Détails de la leçon de <?=$studanto["enirnomo"]?></h1>
+		
+		<p class="parto"><strong>Introduction</strong></p>
+		
+		<ul class="collapsible expandable">
+			<li>
+		    	<div class="collapsible-header"><i class="material-icons blue-text text-darken-2">edit</i>Rédiger une introduction</div>
+				<div class="collapsible-body"><span>
+					<textarea name="enkonduko" class="trumbowyg"><?=$enkonduko?></textarea>
+				</span></div>
+			</li>
+		</ul>
 <?php
 
 
@@ -43,14 +50,19 @@ while ($row=$result->fetch()) {
 	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,respondoj.respondo,respondoj.gxusta,respondoj.korekto from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo";
 	$result2 = $bdd->query($query2);
 	while ($row2=$result2->fetch()) {
-		echo "<p>".$row2["numero"].". ".$row2["demando"]."<br>\n";
+		echo "<p class=\"demando\">".$row2["numero"].". ".$row2["demando"]."</p>\n";
 		if ($row2["gxusta"]==1) {
-			echo "<span style=\"color:green\">".$row2["respondo"]."</span></p>\n";	
+			echo "<p class=\"respondo\"><span style=\"color:green\">".$row2["respondo"]."</span></p>\n";	
 		} else {
-			echo "<span style=\"color:blue\">".$row2["respondo"]."</span></p>\n";
+			echo "<ul class=\"collapsible expandable\"><li>\n";
+			echo "<div class=\"collapsible-header\"><i class=\"material-icons blue-text text-darken-2\">edit</i>";
+			echo "<span style=\"color:blue\">".$row2["respondo"]."</span></div>\n";
+			echo "<div class=\"collapsible-body\"><span>";
 			echo "<p><label><input type=\"checkbox\" class=\"filled-in\" name='bonaRespondo".$row2["respondo_id"]."' />";
       		echo "<span>bonne réponse</span></label></p>";
-			echo "<textarea name='korekto".$row2["respondo_id"]."' class='trumbowyg'>".$row2["korekto"]."</textarea>";
+			echo "<textarea name='korekto".$row2["respondo_id"]."' class='trumbowyg'>".$row2["korekto"]."</textarea>\n";
+			echo "</span></div>\n";
+			echo "</li></ul>\n";
 		}
 		echo "<hr/>";
 }
@@ -59,23 +71,33 @@ while ($row=$result->fetch()) {
 
 // on affiche le commentaire de l'élève qui est stocké en base
 
-echo "<h3>Commentaire de l'élève</h3>";
+echo "<p class=\"parto\"><strong>Commentaire de l'élève</strong></p>";
 echo $komentario;
 
 
 
 ?>
-<h2>Conclusion</h2>
-<textarea name="konkludo" class="trumbowyg"><?=$konkludo?></textarea>
+<p class="parto"><strong>Conclusion</strong></p>
+
+<ul class="collapsible expandable">
+	<li>
+    	<div class="collapsible-header"><i class="material-icons blue-text text-darken-2">edit</i> Rédiger une conclusion</div>
+		<div class="collapsible-body"><span>
+			<textarea name="konkludo" class="trumbowyg"><?=$enkonduko?></textarea>
+		</span></div>
+	</li>
+</ul>
 
 	<section id="leciono-fino">
 			<div id="marko" class="right-align">
 				<p>
+				<label>
+					<input type="checkbox" id="pas_envoi_email" name="pas_envoi_email" value="pas_envoi_email" class="filled-in" />
+					<span>Ne pas prévenir l'élève par mail</span>
+				</label>
+				<br />
 				<a id="registriKorektadon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono_id="<?=$leciono_id?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Renvoyer cette leçon par mail">Sauvegarder cette correction</a>
-				 <p>
-      			<input type="checkbox" id="pas_envoi_email" name="pas_envoi_email" value="pas_envoi_email" class="filled-in" />
-      			<label for="pas_envoi_email">Ne pas prévenir l'élève par mail</label>
-    			</p>
+
     		</p>
 			</div>
 

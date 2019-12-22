@@ -73,8 +73,10 @@ echo $komentario;
 				<p>
 				<a id="registriKorektadon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono_id="<?=$leciono_id?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Renvoyer cette leçon par mail">Sauvegarder cette correction</a>
 				 <p>
+				 <label>
       			<input type="checkbox" id="pas_envoi_email" name="pas_envoi_email" value="pas_envoi_email" class="filled-in" />
-      			<label for="pas_envoi_email">Ne pas prévenir l'élève par mail</label>
+      			<span>ne pas prévenir l'élève par mail</span>
+				</label>
     			</p>
     		</p>
 			</div>

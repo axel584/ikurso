@@ -11,12 +11,21 @@ $studanto_id=isset($_GET["studanto"])?$_GET["studanto"]:"";
 if ($studanto_id==""){header("Location:miajlernantoj.php?erarkodo=23");}
 $studanto = apartigiPersonon($studanto_id);
 include "pagxkapo.inc.php";
+
+// on recupere les informations sur la leçon (intro et conclusion)
+$query = "SELECT personoj_lecionoj.leciono_id,komentario,enkonduko,konkludo  FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id= ".$studanto_id." and numero=".$leciono;
+$result = $bdd->query($query);
+$row=$result->fetch();
+$komentario = $row["komentario"];
+$enkonduko = $row["enkonduko"];
+$konkludo = $row["konkludo"];
+$leciono_id = $row["leciono_id"];
 ?>
 
 	<div class="row">
 		<article class="col s12 m9 l6 offset-m1 offset-l1">
 			<h1>Détails de la leçon de <?=$studanto["enirnomo"]?></h1>
-
+<?=$enkonduko?>
 <?php
 
 $query = "select ekzercoj.id,ekzercoj.komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id where kurso='".$kurso."' and numero='".$leciono."'";
@@ -45,6 +54,9 @@ $result = $bdd->query($query);
 $row=$result->fetch();
 echo "<h3>Commentaire de l'élève</h3>";
 echo $row["komentario"];
+
+
+echo $konkludo;
 
 // on ajoute un bouton pour renvoyer la leçon
 

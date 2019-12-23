@@ -29,7 +29,7 @@ header("Pragma: no-cache"); // HTTP/1.0
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" dir="<? echo $lgv_direkto; ?>">
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <?
 	pagxkapo();
 	menuo($persono["enirnomo"],$persono["rajtoj"]);

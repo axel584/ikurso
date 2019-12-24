@@ -5,6 +5,7 @@ $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
 $studanto_id=isset($_GET["studanto_id"])?$_GET["studanto_id"]:"";
 $leciono_id=isset($_GET["leciono_id"])?$_GET["leciono_id"]:"";
+$neSendiRetmesagxon=isset($_GET["pas_envoi_email"])?True:False;
 if ($persono_id=="") { // personne non connecté, on ressort
 	$respondo["type"]="session";
 	$respondo["mesagxo"]="Session expirée";
@@ -47,9 +48,22 @@ foreach(array_keys($korektado) as $respondo_id) {
 $requete = $bdd->prepare('update personoj_lecionoj set enkonduko=:enkonduko,konkludo=:konkludo where persono_id=:persono_id and leciono_id=:leciono_id');
 $requete->execute(array('enkonduko'=>$_GET['enkonduko'],'konkludo'=>$_GET['konkludo'],'persono_id'=>$studanto_id,'leciono_id'=>$leciono_id));
 
+// envoyer le mail pour prévenir l'élève
+if (!$neSendiRetmesagxon) {
+	// on récupère son adresse email : 
+	$result = $bdd->query("select retadreso from personoj where id=".$studanto_id);
+	$retadresoStudanto = $result->fetch()["retadreso"];
+	$filename = "../mails/novakorektado.html";
+
+	$fd = fopen($filename, "r");
+	$contents = fread($fd, filesize ($filename));
+	fclose($fd);
+	mailViaSES($retadresoStudanto,"Votre leçon a été corrigée",$contents);
+}
 // TODO : reconstruire l'url de retour à partir du nom de l'élève, sa leçon et son cours
 
 $respondo["mesagxo"] = "ok";
+$respondo["url"] = "vidiLecionon.php?kurso=".$kurso."&numleciono=".$leciono."&studanto=".$studanto_id;
 echo json_encode($respondo);
 
 ?>

@@ -501,7 +501,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		dataType : 'json',
        		data : $("#chefa_form").serialize()+"&leciono_id="+$("#registriKorektadon_button").data('leciono_id')+"&studanto_id="+$("#registriKorektadon_button").data('studanto')+"&leciono="+$("#registriKorektadon_button").data('leciono')+"&kurso="+$("#registriKorektadon_button").data('kurso'),
        		success : function(reponse, statut){ 
-				alert("ok");
+				window.location = $urlracine+reponse.url;
        		},
        		error : function() {
        			alert("Erreur interne, contactez les administrateurs");

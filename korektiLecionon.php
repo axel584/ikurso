@@ -92,7 +92,7 @@ echo $komentario;
 			<div id="marko" class="right-align">
 				<p>
 				<label>
-					<input type="checkbox" id="pas_envoi_email" name="pas_envoi_email" value="pas_envoi_email" class="filled-in" />
+					<input type="checkbox" id="pas_envoi_email" name="pas_envoi_email" class="filled-in" />
 					<span>Ne pas prévenir l'élève par mail</span>
 				</label>
 				<br />

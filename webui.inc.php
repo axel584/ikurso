@@ -929,7 +929,7 @@ function pubAndroid() {
 
 function vortlisto($persono_id,$kurso,$pattern) {
 	global $bdd;
-	$query = "SELECT eo,fr,vortoj.tipo,lecionoj.numero FROM vortoj join lecioneroj on vortoj.lecionero_id=lecioneroj.id join lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso='".$kurso."'";
+	$query = "SELECT eo,fr,vortoj.tipo,lecionoj.numero,lecioneroj.ordo FROM vortoj join lecioneroj on vortoj.lecionero_id=lecioneroj.id join lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso='".$kurso."'";
 	if ($pattern!="") {
 		$query .= " and (eo like '".$pattern."%' or fr like '".$pattern."%') ";
 	}
@@ -946,7 +946,7 @@ function vortlisto($persono_id,$kurso,$pattern) {
 			$VortoEo = $row['eo'];
 		}
 		echo "<p class='col s12 m6'><span class='eo'>".$VortoEo." ";
-		echo "<span class='numero'> (".$row['numero'].")</span></span> : ".$row['fr']."</p>\n";
+		echo "<span class='numero'> (".$row['numero'].".".$row['ordo'].")</span></span> : ".$row['fr']."</p>\n";
 		$i++;
 	}
 	echo "</div></div></div>";

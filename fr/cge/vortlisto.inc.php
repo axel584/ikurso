@@ -7,9 +7,7 @@
 			<p class="rimarko"><strong>NOTE</strong> : <br>
 			Les chiffres entre parenthèses renvoient à la leçon où le mot
 			est introduit ou expliqué (pas toujours celle où il apparaît la
-			première fois). Le premier chiffre fait référence au numéro 
-			de la leçon du <em>Cours en dix leçons</em>, le deuxième chiffre fait 
-			référence au numéro de la leçon du <em>Kurso de Esperanto</em>.
+			première fois).
 			</p>
 			<div class="row">
 				<div class="input-field col s6 l4 tooltipped" data-position="top" data-delay="50" data-tooltip="tapez les premières lettres du mot recherché, sans les accents">

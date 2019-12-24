@@ -71,8 +71,6 @@ $graph->SetMarginColor('white');
 $graph->SetScale( "textlin");
 $graph ->legend->Pos( 0.05,0.05,"left" ,"top");
 
-// titolo
-//$graph ->title->Set($lgv_lauxMonatoj);
 
 $graph->yaxis->HideZeroLabel();
 $graph->ygrid->Show(true,true);

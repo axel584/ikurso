@@ -90,16 +90,16 @@ function stat_lecionoj() {
 		echo "<table class=\"stat\">\n<thead>\n<tr>\n";
 
 		// titoloj 
-		echo "<td class='col1'>".$lgv_nomoLeciono."</td>\n";
-		echo "<td>".$lgv_lernante."</td>\n";
+		echo "<td class='col1'>Nom de la leçon</td>\n";
+		echo "<td>En cours</td>\n";
 		echo "<td>%</td>\n";
-		echo "<td>".$lgv_haltis."</td>\n";
+		echo "<td>Ont abandonné</td>\n";
 		echo "<td>%</td>\n";
 		echo "</tr>\n</thead>\n";	
 
 		// unua : ne ekis la kurson		
 		echo "<tbody>\n<tr>\n";
-		echo "<td class='col1'>&nbsp;".$lgv_neKomencis."</td>\n";
+		echo "<td class='col1'>&nbsp;N’ont pas encore commencé</td>\n";
 		echo "<td>&nbsp;".$value1["N"]."</td>\n";
 		echo "<td class='dekstre'>&nbsp;";
 		if ($value1["TK"]>0) {
@@ -141,7 +141,7 @@ function stat_lecionoj() {
 		
 		// antauxlasta : finis la kurson
 		echo "<tr>\n<td>";
-		echo "&nbsp;".$lgv_finis."</td>\n";
+		echo "&nbsp;Ont fini le cours</td>\n";
 		echo "<td colspan='3'>&nbsp;".$value1["F"]."</td>\n";
 		echo "<td>&nbsp;"; 
 		if ($value1["T"]>0) { echo round(100*($value1["F"]/$value1["T"]),2);}
@@ -150,14 +150,14 @@ function stat_lecionoj() {
 
 		// lasta : cxiuj
 		echo "<tfoot>\n<tr>\n<td>\n";
-		echo $lgv_sumo."</td>\n";
+		echo "Total</td>\n";
 		echo "<td colspan=\"4\">&nbsp;".$value1["T"]."</td>\n</tr>\n</tfoot>\n";
 		echo "</table>\n";
 	}
 }
 
 ?>
-			<h2><?php echo $lgv_laux.$lgv_lauxKurso." :";?></h2>
-			<p><?= $lgv_lauxLecionoNoto;?></p>
+			<h2>Répartition par cours :</h2>
+			<p>Le premier pourcentage est relatif aux personnes en cours d’apprentissage, le deuxième est relatif à l’ensemble des élèves.</p>
 			<?php stat_lecionoj(); ?>
 <?php include "pagxpiedo.inc.php" ?>

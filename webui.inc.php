@@ -10,10 +10,10 @@ function pagxkapo() {
 // S : Studanto (havas korektanton)
 // K : Korekanto (havas multajn studantojn kaj studanta maksimumo)
 // A : administrato (cxiaj rajtoj)
-function menuo($nomo,$rajto) {
+/*function menuo($nomo,$rajto) {
 global $persono_id,$persono,$lgv_persona,$lgv_korekanta,$lgv_administranta,$lgv_sxangipersoninformojn,$lgv_eliru,$lgv_alkursoj,$lgv_vortlisto,$lgv_zorgistudantojn,$lgv_zorgiuzantojn,$lgv_lernantalisto,$lgv_zorgiferiojn,$lgv_ferioj,$lgv_stirpanelo,$lgv_statistiko,$lgv_helppagxo,$lgv_forumo,$phpbb2mysql_sid;
 	echo vmenuo($nomo,$rajto,"");
-}
+}*/
 
 function kursoligo($nomo,$rajto){
 }
@@ -25,7 +25,7 @@ function kursoligo($nomo,$rajto){
 // S : Studanto (havas korektanton)
 // K : Korekanto (havas multajn studantojn kaj studanta maksimumo)
 // A : administrato (cxiaj rajtoj)
-function vmenuo($nomo,$rajto,$vojo,$pagxtitolo) {
+/*function vmenuo($nomo,$rajto,$vojo,$pagxtitolo) {
 	global $lgv_persona,$persono,$lgv_eliru,$lgv_korektanta,$lgv_administranta,$metodo,
 	$lgv_sxangipersoninformojn,$lgv_miajlernantoj,$lgv_eliru,$lgv_alkursoj,$lgv_vortlisto
 	,$lgv_zorgistudantojn,$lgv_zorgiuzantojn,$lgv_lernantalisto,$lgv_zorgiferiojn,$lgv_ferioj,
@@ -96,7 +96,7 @@ if (($rajto=="K"||$rajto=="A")) {
 	$res.="<td>nombre<br>maximum</td>";
 	$res.="</tr>\n</thead>\n<tbody>";
 
-/* tableau des eleves */
+// tableau des eleves 
 	$demando1="select nomo,kodo from kursoj";
 	$result1 = mysql_query($demando1) or die (  "SELECT : malbona demando :".$demando1);
 	while($row1 = mysql_fetch_array($result1)) {
@@ -123,7 +123,7 @@ if (($rajto=="K"||$rajto=="A")) {
 		$res.="\t</tr>\n";
 	}
 
-/* fin du tableau */
+// fin du tableau 
 
 	$res.="</tbody>\n</table>\n</a>";
 }	
@@ -200,7 +200,7 @@ $res.="<div class=\"stylenavbar\"></div>";
 $res.="<h1>".$pagxtitolo."</h1>";
 
 return $res;
-}
+}*/
 
 function displayWarningSiLecioneroManquante($persono_id,$kurso,$leciono,$lecionero) {
 	global $bdd;

@@ -2,7 +2,6 @@
 $url=$_SERVER['SCRIPT_URI'];
 $url=explode("/", $_SERVER['SCRIPT_NAME']);
 $pagxo=$url[count($url)-1];
-if ($_GET["lgv"]!="") {$lgv=$_GET["lgv"];}
 $tab = array("Kategorio","Monato","Lando","Kurso");
 $lib = array ("par cat&eacute;gorie","par mois","par pays","par cours");
 echo "<table border='0' cellpadding='0' cellspacing='2'>\n";

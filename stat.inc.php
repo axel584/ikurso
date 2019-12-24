@@ -4,7 +4,7 @@ $vojo="";
 include_once ("fr.inc.php");
 include_once ("db.inc.php");
 include_once ("webui.inc.php");
-$pagxtitolo=$lgv_statistiko;
+$pagxtitolo="Statistiques";
 $persono_id = isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Last-Modified: ".gmdate("D,d M Y H:i:s")." GMT");

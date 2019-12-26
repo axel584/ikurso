@@ -179,6 +179,7 @@ CREATE TABLE personoj_lecionoj (
   `komentario` text,
   `enkonduko` text,
   `konkludo` text,
+  `korektita` TINYINT(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

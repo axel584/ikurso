@@ -2464,3 +2464,4 @@ UPDATE `ekzercoj` SET `komando_detalo` = 'Cet exercice permet de vérifier si vo
 
 ALTER TABLE `personoj_lecionoj` ADD `enkonduko` TEXT NULL AFTER `komentario`, ADD `konkludo` TEXT NULL AFTER `enkonduko`;
 ALTER TABLE `respondoj` ADD `korekto` TEXT NULL AFTER `gxusta`;
+ALTER TABLE `personoj_lecionoj` ADD `korektita` TINYINT(1) NOT NULL DEFAULT '0' AFTER `konkludo`;

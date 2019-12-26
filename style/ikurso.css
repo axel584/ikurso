@@ -396,7 +396,12 @@ ul#enhavtabelo li.farita::before {
 	color: #2196F3;
 	margin-right: 0.5rem;
 }
-
+ul#enhavtabelo li.korektado::before {
+	font-family: 'Material Icons';
+	content: "grade";
+	color: #999;
+	margin-right: 0.5rem;
+}
 ul#enhavtabelo li a {
 	color: #75706B;
 }

@@ -45,7 +45,7 @@ foreach(array_keys($korektado) as $respondo_id) {
 }
 
 // sauvegarde de l'introduction/conclusion sur la leçon de l'élève
-$requete = $bdd->prepare('update personoj_lecionoj set enkonduko=:enkonduko,konkludo=:konkludo where persono_id=:persono_id and leciono_id=:leciono_id');
+$requete = $bdd->prepare('update personoj_lecionoj set enkonduko=:enkonduko,konkludo=:konkludo,korektita=1 where persono_id=:persono_id and leciono_id=:leciono_id');
 $requete->execute(array('enkonduko'=>$_GET['enkonduko'],'konkludo'=>$_GET['konkludo'],'persono_id'=>$studanto_id,'leciono_id'=>$leciono_id));
 
 // envoyer le mail pour prévenir l'élève

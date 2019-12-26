@@ -265,16 +265,20 @@ function getTipoLecionero($kurso,$leciono,$lecionero) {
 function getEnhavtabelo($kurso,$leciono) {
 	global $bdd,$persono_id;
 	if ($persono_id=="") { // Pas connecté : on récupère le sommaire normal
-			$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id,lecioneroj.dauxro FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
+			$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id,lecioneroj.dauxro,lecionoj.id as leciono_id FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
 	} else { // connecté, on récupère la liste des leçons effectuées
-		$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id,lecioneroj.dauxro  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=".$persono_id." WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."'  order by ordo";
+		$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id,lecioneroj.dauxro,lecionoj.id as leciono_id  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=".$persono_id." WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."'  order by ordo";
 	}
 	echo '<li class="active">';
 	echo '<div class="collapsible-header"><i class="material-icons">toc</i>Sommaire de la leçon</div>';
 	echo '<div class="collapsible-body">';
 	echo '<ul id="enhavtabelo" class="collection">';
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$max_ordo = 0;
+	$leciono_id = 0;
 	while ($row = $result->fetch()) {
+		$max_ordo = $row['ordo'];
+		$leciono_id = $row["leciono_id"];
 		// TODO : changer les classes farita/nuna/nova
 		if ($row["persono_id"]==null) { // l'élève n'a pas fait cette section
 			$farita="";
@@ -299,6 +303,14 @@ function getEnhavtabelo($kurso,$leciono) {
 			$dauxro = '';
 		}
 		echo '<li id="'.$leciono.'-'.$row['ordo'].'" class="gramm '.$farita.' '.$tipoLecionero.'"><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].' '.$dauxro.'</a></li>';
+	}
+	// on teste s'il existe une leçon corrigée
+	if ($persono_id) {
+		$max_ordo = $max_ordo +1;
+		$result = $bdd->query("select numero,kurso  from personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where korektita = 1 and persono_id='".$persono_id."' and leciono_id='".$leciono_id."'") or die(print_r($bdd->errorInfo()));
+		while ($row = $result->fetch()) {
+			echo "<li class='korektado'><a href='../../vidiLecionon.php?kurso=".$row['kurso']."&numleciono=".$row['numero']."'>".$row['numero'].".".$max_ordo." Correction de la leçon</a></li>";
+		}
 	}
 	echo '</ul>';
 	echo '</div>';
@@ -451,7 +463,7 @@ function getEkzercon($id,$persono_id) {
 			$valid="";
 		} else {
 			// afficher ici le contenu de la base pour cet élève
-			$queryRespondo = "select id,respondo,gxusta from respondoj where ekzercero_id=".$rowEkzercero["id"]." and persono_id=".$persono_id;
+			$queryRespondo = "select id,respondo,korekto,gxusta from respondoj where ekzercero_id=".$rowEkzercero["id"]." and persono_id=".$persono_id;
 			$resultRespondo = $bdd->query($queryRespondo) or die(print_r($bdd->errorInfo()));
 			$rowRespondo = $resultRespondo->fetch();
 			$respondo= $rowRespondo["respondo"];
@@ -476,7 +488,9 @@ function getEkzercon($id,$persono_id) {
 			}
 			echo " class='materialize-textarea validate ".$valid." ".$styleKorektebla."'>";
 			echo $respondo;
-			echo "</textarea></div>";
+			echo "</textarea>";
+			if ($rowRespondo['korekto']) {echo "<div class='card green lighten-4 card-content'>".$rowRespondo['korekto']."</div>";}
+			echo "</div>";
 		} else { // cas des types d'exercice sur des champs input
 			echo "<div class='input-field col s12'>";
 			echo $iconprefix; // on affiche une marque verte si la réponse est bonne
@@ -488,8 +502,11 @@ function getEkzercon($id,$persono_id) {
 			echo $respondo;
 			
 			echo "\" class='validate ".$valid." ".$styleKorektebla."'";
-			echo "></div>";
+			echo ">";
+			if ($rowRespondo['korekto']) {echo "<div class='card green lighten-4 card-content'>".$rowRespondo['korekto']."</div>";}
+			echo "</div>";
 		}
+		
 	}
 	echo "</div>";
 	echo "</div>";
@@ -656,7 +673,7 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 			$indiceQuestion= 1;
 			
 			// on récupère les réponses en base
-			$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero";
+			$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,respondoj.korekto,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero";
 			$result = $bdd->query($query);
 			echo "<ul class='collection'>";
 			$lastKomando = "";
@@ -673,6 +690,11 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 					echo "&nbsp;&nbsp;&nbsp;".$row["respondo"]."<br/>";
 				}
 				echo "</li>";
+				if ($row["korekto"]) {
+					echo "<li class='collection-item row green lighten-5'>";
+					echo $row["korekto"];
+					echo "</li>";
+				}
 			}
 			echo "</ul>";
 			// ajout d'un champ commentaire :

@@ -24,12 +24,25 @@ $komentario = $row["komentario"];
 $enkonduko = $row["enkonduko"];
 $konkludo = $row["konkludo"];
 $leciono_id = $row["leciono_id"];
+
+// chemin pour accéder aux leçons à partir des sommaires (en haut et celui à droite)
+	if ($kurso=='CG') {
+		$chemin = 'fr/cge/';
+	} else if ($kurso=='GR') {
+		$chemin = 'fr/gerda/';
+	} else if ($kurso=='3N') {
+		$chemin = 'fr/3n/';
+	}
+
+if ($rajto=='S') { getListoLecionoj($kurso,$leciono,$chemin); }
+
 ?>
 
 	<div class="row">
 		<article class="col s12 m9 l6 offset-m1 offset-l1">
-			<h1>Détails de la leçon de <?=$studanto["enirnomo"]?></h1>
-<?php
+<?php 
+if ($rajto=='S') { echo "<h1>Correction de la leçon</h1>"; }
+else { echo "<h1>Leçon de ".$studanto["enirnomo"]."</h1>"; }
 if ($enkonduko) {
 	echo "<div class='card green lighten-4 card-content'>";
 	echo $enkonduko;
@@ -103,8 +116,9 @@ if ($rajto=='A' || $rajto=='I'|| $rajto=='K'){
 
 		
 		<aside class="col s12 m10 l3 offset-m1 push-l1">
-
-
+<?php
+if ($rajto=='A' || $rajto=='I'|| $rajto=='K'){
+?>	
 			<ul class="collapsible" data-collapsible="expandable">
 
 			<li class="active">
@@ -121,8 +135,13 @@ while ($row=$result->fetch()) {
 				
 			</li>
 		</ul>	
-
-
+<?php 
+} else {
+	echo '<ul class="collapsible" data-collapsible="expandable">';
+	getEnhavtabelo($kurso,$leciono,$chemin); 
+	echo '</ul>';
+}
+?>
 		</aside>
 
 	</div>

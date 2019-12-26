@@ -262,7 +262,7 @@ function getTipoLecionero($kurso,$leciono,$lecionero) {
 	return($tipo);
 }
 
-function getEnhavtabelo($kurso,$leciono) {
+function getEnhavtabelo($kurso,$leciono,$chemin='') {
 	global $bdd,$persono_id;
 	if ($persono_id=="") { // Pas connecté : on récupère le sommaire normal
 			$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id,lecioneroj.dauxro,lecionoj.id as leciono_id FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
@@ -302,14 +302,18 @@ function getEnhavtabelo($kurso,$leciono) {
 		} else {
 			$dauxro = '';
 		}
-		echo '<li id="'.$leciono.'-'.$row['ordo'].'" class="gramm '.$farita.' '.$tipoLecionero.'"><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].' '.$dauxro.'</a></li>';
+		echo '<li id="'.$leciono.'-'.$row['ordo'].'" class="gramm '.$farita.' '.$tipoLecionero.'"><a href="'.$chemin.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].' '.$dauxro.'</a></li>';
 	}
 	// on teste s'il existe une leçon corrigée
 	if ($persono_id) {
 		$max_ordo = $max_ordo +1;
 		$result = $bdd->query("select numero,kurso  from personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where korektita = 1 and persono_id='".$persono_id."' and leciono_id='".$leciono_id."'") or die(print_r($bdd->errorInfo()));
 		while ($row = $result->fetch()) {
-			echo "<li class='korektado'><a href='../../vidiLecionon.php?kurso=".$row['kurso']."&numleciono=".$row['numero']."'>".$row['numero'].".".$max_ordo." Correction de la leçon</a></li>";
+			if ($chemin=='') { // si on a indiqué un chemin pour afficher le sommaire, c'est qu'on l'affiche depuis la page vidiLecionon
+				echo "<li class='korektado'><a href='../../vidiLecionon.php?kurso=".$row['kurso']."&numleciono=".$row['numero']."'>".$row['numero'].".".$max_ordo." Correction de la leçon</a></li>";
+			} else {
+				echo "<li class='korektado'><a href='vidiLecionon.php?kurso=".$row['kurso']."&numleciono=".$row['numero']."'>".$row['numero'].".".$max_ordo." Correction de la leçon</a></li>";
+			}
 		}
 	}
 	echo '</ul>';
@@ -717,7 +721,7 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 	echo "</div>\n";
 }
 
-function getListoLecionoj($kurso,$leciono) {
+function getListoLecionoj($kurso,$leciono,$chemin='') {
 	global $bdd;
 	echo "<header id='superrigardo'>";
 	if ($kurso=='CG') {		
@@ -731,16 +735,16 @@ function getListoLecionoj($kurso,$leciono) {
 	echo "<ul id='lecionoj'>";
 	if ($leciono==0) {
 		if ($kurso=='CG') {
-			echo "<li id='intro' class='nuna'><a href='intro.php'>introduction</a></li>";
+			echo "<li id='intro' class='nuna'><a href='".$chemin."intro.php'>introduction</a></li>";
 		} elseif ($kurso=="GR") {
-			echo "<li id='intro' class='nuna'><a href='index.php'>enkonduko</a></li>";
+			echo "<li id='intro' class='nuna'><a href='".$chemin."index.php'>enkonduko</a></li>";
 		}
 	}
 	else {
 		if ($kurso=='CG') {
-			echo "<li id='intro' class='farita'><a href='intro.php'>introduction</a></li>";
+			echo "<li id='intro' class='farita'><a href='".$chemin."intro.php'>introduction</a></li>";
 		} elseif ($kurso=="GR") {
-			echo "<li id='intro' class='farita'><a href='index.php'>enkonduko</a></li>";
+			echo "<li id='intro' class='farita'><a href='".$chemin."index.php'>enkonduko</a></li>";
 			}
 	}
 	$query = "select * from lecionoj where kurso='".$kurso."' order by numero";
@@ -762,37 +766,37 @@ function getListoLecionoj($kurso,$leciono) {
 	}
 	if ($kurso=='GR') {
 		if ($leciono==90) {
-			echo "<li id='konsiloj' class='nuna'><a href='konsiloj.php'>konsiloj</a></li>";
+			echo "<li id='konsiloj' class='nuna'><a href='".$chemin."konsiloj.php'>konsiloj</a></li>";
 		} else {
-			echo "<li id='konsiloj' class='nova'><a href='konsiloj.php'>konsiloj</a></li>";
+			echo "<li id='konsiloj' class='nova'><a href='".$chemin."konsiloj.php'>konsiloj</a></li>";
 		}
 	}
 	if ($kurso=='CG') {
 		if ($leciono==98) {
-			echo "<li id='temaro' class='nuna'><a href='temaro.php'>index</a></li>";
+			echo "<li id='temaro' class='nuna'><a href='".$chemin."temaro.php'>index</a></li>";
 		} else {
-			echo "<li id='temaro' class='nova'><a href='temaro.php'>index</a></li>";
+			echo "<li id='temaro' class='nova'><a href='".$chemin."temaro.php'>index</a></li>";
 		}
 	}
 	
 	if ($kurso=='GR') {
 		if ($leciono==98) {
-			echo "<li id='temaro' class='nuna'><a href='temaro.php'>indekso</a></li>";
+			echo "<li id='temaro' class='nuna'><a href='".$chemin."temaro.php'>indekso</a></li>";
 		} else {
-			echo "<li id='temaro' class='nova'><a href='temaro.php'>indekso</a></li>";
+			echo "<li id='temaro' class='nova'><a href='".$chemin."temaro.php'>indekso</a></li>";
 		}
 	}
 	if ($leciono==99) {
 		if ($kurso=='GR') {
-			echo "<li id='lexique' class='nuna'><a href='vocabula.php'>vortlisto</a></li>";
+			echo "<li id='lexique' class='nuna'><a href='".$chemin."vocabula.php'>vortlisto</a></li>";
 		} else {
-			echo "<li id='lexique' class='nuna'><a href='vocabula.php'>lexique</a></li>";
+			echo "<li id='lexique' class='nuna'><a href='".$chemin."vocabula.php'>lexique</a></li>";
 		}
 	} else {
 		if ($kurso=='GR') {
-			echo "<li id='lexique' class='nova'><a href='vocabula.php'>vortlisto</a></li>";
+			echo "<li id='lexique' class='nova'><a href='".$chemin."vocabula.php'>vortlisto</a></li>";
 		} else if ($kurso=='CG') {
-			echo "<li id='lexique' class='nova'><a href='vocabula.php'>lexique</a></li>";
+			echo "<li id='lexique' class='nova'><a href='".$chemin."vocabula.php'>lexique</a></li>";
 		}
 	}
 	echo "</ul>";

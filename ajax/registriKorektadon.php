@@ -54,9 +54,10 @@ if (!$neSendiRetmesagxon) {
 	$result = $bdd->query("select retadreso from personoj where id=".$studanto_id);
 	$retadresoStudanto = $result->fetch()["retadreso"];
 	$filename = "../mails/novakorektado.html";
-
 	$fd = fopen($filename, "r");
 	$contents = fread($fd, filesize ($filename));
+	$url = $urlracine."vidiLecionon.php?numleciono=".$leciono."&kurso=".$kurso;
+	$contents=str_replace("##URL##",$url,$contents);
 	fclose($fd);
 	mailViaSES($retadresoStudanto,"Votre leçon a été corrigée",$contents);
 }

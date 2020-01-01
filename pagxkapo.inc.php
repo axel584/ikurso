@@ -23,7 +23,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
 
 		<!--Import materialize.css-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" href="<?php echo $vojo;?>style/materialize.min.css">
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/materialize.override.css"  media="all"/>
 
 		<!--Player audio-->
@@ -258,6 +258,9 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			<li class="uzanto"><?php echo "<b>".$persono['enirnomo']."</b><br>".$persono['personnomo']." ".$persono['familinomo']."<br><em>".$persono['retadreso']."</em>";?></li>
 			<li class="divider"></li>
 			<li><a href="<?php echo $vojo;?>personinformoj.php" class="primaire-texte moyen">Mes données personnelles</a></li>
+			<?php if ($persono["rajtoj"]=="K" || $persono["rajtoj"]=="A" ) { ?>
+				<li><a href="<?php echo $vojo;?>miajlernantoj.php" class="primaire-texte moyen">Mes élèves</a></li>
+			<?php } ?>
 			<li><a href="<?php echo $vojo;?>eliri.php" class="primaire-texte moyen">Déconnexion</a></li>
 		</ul>
 

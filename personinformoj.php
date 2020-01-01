@@ -300,7 +300,7 @@ if ($persono['lando']=="FR" && $persono['posxtkodo']!="") {
 			<?php getCoursElLernanto($persono['id']);?>			
 			<!-- pour les administrateurs ou informateurs ou korekteur --> 
 		<?php } elseif (($persono["rajtoj"]=="I") or ($persono["rajtoj"]=="A")or ($persono["rajtoj"]=="K")) { ?>
-			<p><a href="<?php echo $vojo;?>miajlernantoj.php" class="btn waves-effect waves-light" >Gérer mes élèves</a></p>
+			<!--p><a href="<?php echo $vojo;?>miajlernantoj.php" class="btn waves-effect waves-light" >Gérer mes élèves</a></p-->
 		<!-- cas des élèves qui n'ont pas encore commencé le cours -->
 		<?php } else { 
 			// différencier le cas des élèves inscrits au ikurso des autres

@@ -461,11 +461,12 @@ function getEkzercon($id,$persono_id) {
 	$queryEkzercero = "SELECT id,numero,demando,korektebla,bildo FROM `ekzerceroj` where ekzerco_id=".$id." and forigita=0 order by numero";
 	$resultEkzercero = $bdd->query($queryEkzercero) or die(print_r($bdd->errorInfo()));
 	while ($rowEkzercero = $resultEkzercero->fetch()) {
+		$iconprefix="";
+		$respondo = "";
+		$valid="";
+		$rowRespondo=null;
 		$warningNonConnecte = ($idenfication==False)?" READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'":"";
-		if ($idenfication==False) {
-			$respondo = "";
-			$valid="";
-		} else {
+		if ($idenfication) {
 			// afficher ici le contenu de la base pour cet élève
 			$queryRespondo = "select id,respondo,korekto,gxusta from respondoj where ekzercero_id=".$rowEkzercero["id"]." and persono_id=".$persono_id;
 			$resultRespondo = $bdd->query($queryRespondo) or die(print_r($bdd->errorInfo()));
@@ -474,11 +475,7 @@ function getEkzercon($id,$persono_id) {
 			if ($rowRespondo["gxusta"]==1) {
 				$valid="valid";
 				$iconprefix="<i class=\"material-icons prefix\" style=\"color:green\">check</i>";
-			} else {
-				$valid="";
-				$iconprefix="";
-			}
-			
+			} 
 		}
 		echo "<p class='col s12 demando'>".$rowEkzercero["numero"].". ".$rowEkzercero["demando"]."</p>\n";
 		echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"\">";

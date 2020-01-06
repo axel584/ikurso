@@ -22,11 +22,17 @@ include "../pagxkapo.inc.php";
 			<h2>Cours et exercices à imprimer</h2>	
 			<p class="eta"><b>Note</b> : Les documents téléchargeables ci-dessous correspondent à une version antérieure du cours. La progression et le contenu du cours (textes et exercices) sont donc un peu différents de la version en ligne.</p>	
 			<ul>	
-				<li><a href="<?php echo $vojo;?>doc/DLEK.pdf">Cours en dix leçons</a> (pdf - 476Ko)</li>
-				<li><a href="<?php echo $vojo;?>doc/DLEK-ekz.pdf">Cahier d'exercices du cours en dix leçons</a> (pdf - 223Ko)</li>
-				<li><a href="<?php echo $vojo;?>doc/LexiqueDLEK-Ikurso.pdf">Lexique Kurso de Esperanto / Cours en dix leçons</a> (pdf - 55Ko)</li>
+				<li><a href="<?php echo $vojo;?>doc/DLEK.pdf">Cours en dix leçons</a> (pdf - 476 Ko)</li>
+				<li><a href="<?php echo $vojo;?>doc/DLEK-ekz.pdf">Cahier d'exercices du cours en dix leçons</a> (pdf - 223 Ko)</li>
+				<li><a href="<?php echo $vojo;?>doc/LexiqueDLEK-Ikurso.pdf">Lexique Kurso de Esperanto / Cours en dix leçons</a> (pdf - 55 Ko)</li>
 				<li><a href="<?php echo $vojo;?>doc/ikurso.pdf">Kurso de Esperanto : cours et exercices</a> (pdf - 935 Ko)</li>
 			</ul>
+			
+			<h2>Liste de vocabulaire</h2>
+			
+			<ul>
+				<li><a href="ikurso.apkg">Paquet pour le logiciel Anki</a> (apkg - 54 Ko)</li>
+			</ul> 
 			
 			<h2>Logiciels tiers</h2>
 			<ul>

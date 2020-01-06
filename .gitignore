@@ -1,3 +1,7 @@
 config.php
 js/config.js
 .htaccess
+python/EvaluationLecon.csv
+python/__pycache__/
+python/config.py
+python/nbJoursParEleve.csv

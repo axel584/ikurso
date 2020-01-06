@@ -405,7 +405,7 @@ include "dlekkapo.inc.php";
 			</p>
 			
 			<div class="vortlisto">
-				<p>
+				<p><a href="<?php echo $vojo;?>fr/son/frazoj/accent_tonique.m4a" class="sm2_button"></a>&nbsp;
 				La lingvo Esperanto estis kreita de Doktoro Zamenhof, por ke la homoj de
 				la diversaj nacioj povu interŝanĝi siajn ideojn sen malfacilaĵo.
 				Esperanto volas, ke sur la tuta mondo ĉiu povu esprimi tion, kion li aŭ

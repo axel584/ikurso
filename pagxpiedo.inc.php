@@ -10,26 +10,18 @@
 		</div>
 	</footer>
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+	<script type="text/javascript" src="<?php echo $vojo;?>js/jquery-3.2.1.min.js"></script>
+	<script src="<?php echo $vojo;?>js/materialize.js"></script>
 	<!-- include skelenote css/js-->
-    <link href="<?php echo $vojo;?>style/materialnote.css" rel="stylesheet" type="text/css">
-    <script src="<?php echo $vojo;?>js/materialnote.js"></script>
 	
-	<script src="https://cdn.tiny.cloud/1/7ypwq3abv301p0c62mhwkoyodjbnlnwx8b7k3gvjs4wid90u/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-	<script>tinymce.init({
-			selector:'.wysiwyg',
-			plugins: [ 'quickbars' ],
-			toolbar: false,
-			menubar: false});</script>
 	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/trumbowyg.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/ui/trumbowyg.min.css"/>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/langs/fr.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/plugins/colors/trumbowyg.colors.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/plugins/colors/ui/trumbowyg.colors.min.css"/>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/plugins/specialchars/trumbowyg.specialchars.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.20.0/plugins/specialchars/ui/trumbowyg.specialchars.min.css"/>
+	<script src="<?php echo $vojo;?>js/trumbowyg.min.js"></script>
+	<link rel="stylesheet" href="<?php echo $vojo;?>style/trumbowyg.min.css"/>
+	<script src="<?php echo $vojo;?>js/fr.min.js"></script>
+	<script src="<?php echo $vojo;?>js/trumbowyg.colors.min.js"></script>
+	<link rel="stylesheet" href="<?php echo $vojo;?>style/trumbowyg.colors.min.css"/>
+	<script src="<?php echo $vojo;?>js/trumbowyg.specialchars.min.js"></script>
+	<link rel="stylesheet" href="<?php echo $vojo;?>style/trumbowyg.specialchars.min.css"/>
 	<script>$('.trumbowyg').trumbowyg({
 			btns: [['bold', 'italic','del'], ['link'],['foreColor'], ['specialChars'],['removeformat']],
 			autogrow: true,

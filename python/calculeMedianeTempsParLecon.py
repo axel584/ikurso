@@ -33,7 +33,7 @@ def mediane(tableau) :
     if indice_median==0 :
         return
     tableau.sort()    
-    print(tableau)
+    #print(tableau)
     return tableau[indice_median-1]    
 
 cursorKurso.execute("SELECT id,kodo FROM kursoj")
@@ -41,10 +41,10 @@ for id_kurso,kodo_kurso in cursorKurso.fetchall() :
     print("kurso : "+kodo_kurso)
     cursorLeciono.execute("select id,numero,titolo from lecionoj where kurso='"+kodo_kurso+"' order by numero")
     for id_leciono,numero,titolo in cursorLeciono.fetchall() :
-        print ("leciono : "+str(numero))
+        #print ("leciono : "+str(numero))
         cursorLecionero.execute("SELECT id,titolo,dauxro FROM lecioneroj WHERE leciono_id="+str(id_leciono)+" order by ordo")
         for id_lecionero,titolo_lecionero,dauxro_lecionero in cursorLecionero.fetchall() :
-            print("id_lecionero : "+str(id_lecionero)+" / lecionero : "+titolo_lecionero.encode('utf-8').decode('ascii','ignore'))
+            #print("id_lecionero : "+str(id_lecionero)+" / lecionero : "+titolo_lecionero.encode('utf-8').decode('ascii','ignore'))
             cursorTempo.execute("SELECT dato-ekdato as dauxro FROM personoj_lecioneroj WHERE lecionero_id="+str(id_lecionero)+" and ekdato is not null")
             dauxroj = []
             for dauxro, in cursorTempo.fetchall():
@@ -55,8 +55,9 @@ for id_kurso,kodo_kurso in cursorKurso.fetchall() :
             if valeur_mediane==None :
                 continue
             nova_dauxro = arrondi(valeur_mediane)
-            print("ancien :"+str(dauxro_lecionero)+"/nouvelle : "+str(nova_dauxro))
-            resultat.write("-- "+titolo_lecionero+" ("+str(dauxro_lecionero)+")\n")
-            resultat.write("update lecioneroj set dauxro="+str(nova_dauxro)+" where id="+str(id_lecionero)+";\n")
+            if (nova_dauxro!=dauxro_lecionero and nova_dauxro!=0):
+                print("ancien :"+str(dauxro_lecionero)+"/nouvelle : "+str(nova_dauxro))
+                resultat.write("-- "+titolo_lecionero+" ("+str(dauxro_lecionero)+")\n")
+                resultat.write("update lecioneroj set dauxro="+str(nova_dauxro)+" where id="+str(id_lecionero)+";\n")
             
             

@@ -149,13 +149,19 @@ function mailViaSES($retadreso,$objekto,$contentsHtml) {
 	  'Subject' => mb_encode_mimeheader($objekto,"UTF-8"));
 
 
-		$smtpParams = array (
+	$smtpParams = array (
 	  	'host' => $hostSmtpSES,
 	  	'port' => $portSmtpSES,
 	  	'auth' => true,
 	   	'username' => $userSES,
     	'password' => $passwordSES
-	);
+	); 
+	
+	/*	$smtpParams = array (
+	  	'host' => $hostSmtpSES,
+	  	'port' => $portSmtpSES,
+	  	'auth' => false
+	);*/
 
 	 // Create an SMTP client.
 	$mail = Mail::factory('smtp', $smtpParams);

@@ -15,12 +15,10 @@ $familinomo=addslashes($_POST["familinomo"]);
 $personnomo=addslashes($_POST["personnomo"]);
 $adreso1=addslashes($_POST["adreso1"]);
 $adreso2=addslashes($_POST["adreso2"]);
-$pasvorto=$_POST["pasvorto"];
 $posxtkodo=$_POST["posxtkodo"];
 $urbo=$_POST["urbo"];
 $lando=isset($_POST["lando"])?$_POST["lando"]:"";
 $retadreso=$_POST["retadreso"];
-$sistemo=$_POST["sistemo"];
 $naskigxdato_jaro=$_POST["naskigxdato_jaro"];
 $naskigxdato_monato=$_POST["naskigxdato_monato"];
 $naskigxdato_tago=$_POST["naskigxdato_tago"];
@@ -71,12 +69,6 @@ if ($celpersono["adreso2"]!=$adreso2) {
    $result = $bdd->exec($query);
 }
 
-if ($celpersono["pasvorto"]!=$pasvorto) { 
-	// update en la normala datumbazo
-   $query = "update personoj set pasvorto='$pasvorto' where id=$celpersono_id";
-   $result = $bdd->exec($query);
-}
-
 if ($celpersono["posxtkodo"]!=$posxtkodo) { 
 	// update en la normala datumbazo
    $query = "update personoj set posxtkodo='$posxtkodo' where id=$celpersono_id";
@@ -89,8 +81,9 @@ if ($celpersono["urbo"]!=$urbo) {
    $result = $bdd->exec($query);
 }
 
-if ($celpersono["lando"]!=$lando) { 
+if ($celpersono["lando"]!=$lando && $lando!="-- pays --") { 
 	// update en la normala datumbazo
+	echo $lando;
    $query = "update personoj set lando='$lando' where id=$celpersono_id";
    $result = $bdd->exec($query);
 }

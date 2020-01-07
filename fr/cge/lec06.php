@@ -261,7 +261,7 @@ include "dlekkapo.inc.php";
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/junularo.mp3" class="sm2_button"></a><span class="eo">junularo</span>&nbsp;: jeunesse</p>		
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/partopreni-en.mp3" class="sm2_button"></a><span class="eo">partopreni en</span>&nbsp;: participer à</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/okazi.mp3" class="sm2_button"></a><span class="eo">okazi</span>&nbsp;: avoir lieu</p>
-				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/Kebeko.mp3" class="sm2_button"></a><span class="eo">Kebeko</span>&nbsp;: Québec (la ville)</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kebeko.mp3" class="sm2_button"></a><span class="eo">Kebeko</span>&nbsp;: Québec (la ville)</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/auxtobuseto.mp3" class="sm2_button"></a><span class="eo">(aŭto)buseto</span>&nbsp;: minibus</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/halti.mp3" class="sm2_button"></a><span class="eo">halti</span>&nbsp;: s’arrêter</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/alveni-al.mp3" class="sm2_button"></a><span class="eo">alveni al</span>&nbsp;: arriver à (ou dans)</p>

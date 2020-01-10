@@ -33,6 +33,7 @@ include "pagxkapo.inc.php";
 						<h3>Mots à revoir :</h3>
 						<ul class='collection' id='malbonaj_respondoj'>
 						</ul>	
+						<a class='waves-effect waves-light btn light-blue darken-1' href='memoriVortojn.php'>réviser ces mots</a>
 					</div>
 				</div>
 			</div>

@@ -69,8 +69,8 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 	echo json_encode($respondo);
 	exit();
 } else {
-	// on a une mauvaise réponse, on met à 1 le "nombrilo" pour ce mot :
-	$query = "update personoj_vortoj set nombrilo=1, venontaFojo=DATE_ADD(NOW(),INTERVAL 1 DAY),lastfojo=now() where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
+	// on a une mauvaise réponse, on met à 1 le "nombrilo" pour ce mot et on ne change pas la date de la prochaine révision pour qu'on le révise le plus tôt possible :
+	$query = "update personoj_vortoj set nombrilo=1, lastfojo=now() where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
 	$bdd->exec($query);
 	// on stocke dans le protokolo les erreurs pour pouvoir aider au besoin
 	//protokolo($persono_id,"MEMORILO","Pour : ".$francaVorto." l'élève a traduit : ".$lernantaRespondo." au lieu de ".$bonaRespondo);

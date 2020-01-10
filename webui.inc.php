@@ -878,7 +878,26 @@ function kiomVortojPorMemoriMorgau($persono_id) {
 }
 
 
-
+// fonction "unitaire" pour l'outil en dessous de révision de vocabulaire
+function kreiKartonPorMemoriVortojn($persono_id,$indice,$combien,$fr,$eo,$tipo,$vorto_id) {
+			if ($indice!=1) {
+				$style = "hide";
+			} else {
+				$style = "";
+			}
+			echo "<div class='memorilo_demando row ".$style."'>";
+			echo "<p>Encore ".(1+$combien-$indice)." mot";
+			if ($combien-$indice > 0) echo "s";
+			echo " à réviser...</p>";
+			echo "<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>&nbsp;:&nbsp;";
+			echo "en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
+			echo "<div class='col s12'>";
+			echo "<div class='card-panel white'>";
+			echo "<h3>&nbsp;".$fr."&nbsp;<div class='chip'>".$tipo."</div></h3>";
+			echo "<input type='text' onkeyup='xAlUtf8(this)' autocomplete='off' class='memorilo_input' name='memorilo".$indice."' value='' id='memorilo".$indice."' data-vorto_id='".$vorto_id."' data-persono_id='".$persono_id."'/>";
+			echo "<a class='memorilo_button waves-effect waves-light btn light-blue darken-1' data-vorto_id='".$vorto_id."' data-persono_id='".$persono_id."' data-input='memorilo".$indice."'>vérifier</a>";
+			echo "</div></div></div>\n";
+}
 
 // fonction pour afficher les cartes dans l'outil "memrise-like"
 function kreiKartojnPorMemoriVortojn($persono_id) {
@@ -893,27 +912,11 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 		echo "<div class='memorilo' id='carousel_qcm'>";
 		while ($row = $res->fetch()) {
 			//echo $row["id"].":".$row["eo"].":".$row["fr"].":".$row["tipo"]."<br/>";
-			if ($indice!=1) {
-				$style = "hide";
-			} else {
-				$style = "";
-			}
-			echo "<div class='memorilo_demando row ".$style."'>";
-			echo "<p>Encore ".(1+$combien-$indice)." mot";
-			if ($combien-$indice > 0) echo "s";
-			echo " à réviser...</p>";
-			echo "<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>&nbsp;:&nbsp;";
-			echo "en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
-			echo "<div class='col s12'>";
-			echo "<div class='card-panel white'>";
-			echo "<h3>&nbsp;".$row["fr"]."&nbsp;<div class='chip'>".$row["tipo"]."</div></h3>";
-			echo "<input type='text' onkeyup='xAlUtf8(this)' autocomplete='off' class='memorilo_input' name='memorilo".$indice."' value='' id='memorilo".$indice."' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."'/>";
-			echo "<a class='memorilo_button waves-effect waves-light btn light-blue darken-1' data-vorto_id='".$row["id"]."' data-persono_id='".$persono_id."' data-input='memorilo".$indice."'>vérifier</a>";
-			echo "</div></div></div>\n";
+			kreiKartonPorMemoriVortojn($persono_id,$indice,$combien,$row["fr"],$row["eo"],$row["tipo"],$row["id"]);
 			$indice++;
 		}
 		// message pour après la révision
-		echo "<div class='memorilo_demando row hide'>";
+		echo "<div class='memorilo_demando row hide' id='lasta_mesagho'>";
 		echo "<h3>Bravo, vous avez terminé votre session</h3>";
 		echo "<p>Des sessions de révisions courtes et fréquentes vous aideront à mieux mémoriser le vocabulaire.</p>";
 		echo "<p>Pour votre cerveau, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";

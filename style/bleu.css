@@ -111,11 +111,7 @@ a {
 	color:#668CB2;
 }
 
-p.note {
-	font-size:11px;
-	color:#369;
-	padding-left:100px;
-}
+
 /*****************************************
  * message d'erreur ou d'information
  *****************************************/
@@ -252,7 +248,7 @@ html>body #menuo table tr td {
 }
 
 /*********************************************************
- * menu latéral : liste des cours, tableau des élèves, ...
+ * menu latï¿½ral : liste des cours, tableau des ï¿½lï¿½ves, ...
  *********************************************************
 */
 #pagxmenuo {
@@ -597,20 +593,26 @@ div.sono {
 	color:black;
 	border: 1px solid #690;
 	border-top:none;
-	padding: 15px;
+	padding: 1.5rem;
 	background: #FFF;
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-family: Roboto, Verdana, Geneva, Arial, Helvetica, sans-serif; 
 }
 #kadro p {
-	margin-left:20px;
+	margin-left:2rem;
+	margin-right:1rem;
+}
+#kadro p.noto {
+	font-size:90%;
+	color:#666;
+	margin:1rem 2rem 1rem 5rem;
 }
 
 #kadro h3, h4, h5 {
-	margin-left:20px;
+	margin-left:2rem;
 }
 
 /*************************************************
- * table de présentation des données personnelles
+ * table de prÃ©sentation des donnÃ©es personnelles
  *************************************************
  */
 table.perso {
@@ -688,7 +690,7 @@ table.stat tfoot tr td {
 }
 
 /**********************************
- * liste des élèves
+ * liste des ï¿½lï¿½ves
  **********************************
  */
 div.lernantoj {
@@ -954,7 +956,7 @@ div#lernu {
 	position:relative bottom right;
 }
 /*********************************************
- * tableau de présentation avec bordures fines
+ * tableau de prï¿½sentation avec bordures fines
  *********************************************
  */
 
@@ -1038,7 +1040,7 @@ a.bouton {
 
 /*****************************************
  * evaluation dans le fichier konfirmo.php
- * systeme d'étoile
+ * systeme d'ï¿½toile
  *****************************************/
 div.enketo {
 	margin-top:20px;

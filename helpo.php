@@ -347,9 +347,7 @@ frameborder="0" allowfullscreen></iframe></p>
 			<div class="pinned">
 				<ul class="collapsible">
 					<li class="active">
-						<div class="collapsible-header">
-							<i class="material-icons">toc</i>Sommaire
-						</div>
+						<div class="collapsible-header">Sommaire</div>
 						<div class="collapsible-body">
 							<ul id="enhavtabelo" class="collection">
 								<li><a href="helpo.php?section=enskribo">Comment s’inscrire&nbsp;?</a></li>

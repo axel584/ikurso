@@ -17,42 +17,74 @@ include "pagxkapo-old.inc.php";
 				<div class="klarigo">
 				<?php if ($temo=="inscription") { ?>
 					<p style="text-align:right"><a href="doc/GuideDuCorrecteur.pdf">Téléchargez le guide du correcteur au format pdf</a></p> 
+					<h2>Présentation des cours</h2>
+					<p>Espéranto-France propose deux cours en ligne, avec pour chacun un service de correction gratuit. 
+						Ces cours sont accessibles depuis la page <a href="https://ikurso.esperanto-france.org">https://ikurso.esperanto-france.org</a>
+						(ou <a href="https://ikurso.esperanto-france.org">ikurso.fr</a>)</p>
+						<ul>
+							<li><strong>Cours en 10 leçons</strong>&nbsp;: cours en ligne pour débutants</li>
+							<li><strong>Gerda malaperis</strong>&nbsp;: cours en ligne pour ceux qui connaissent les bases de l’espéranto.</li>
+						</ul>
+						<p>Ces deux cours peuvent être suivis en ligne de façon autonome sans inscription, 
+						mais pour bénéficier de la correction des exercices, nous conseillons aux élèves de demander l’aide d’un correcteur.
+						<p>La présentation des cours en ligne a été conçue de manière à ce qu’ils puissent être utilisés sur téléphone, 
+							tablette ou ordinateur.</p>
+						<p class="noto">
+							Espéranto-France propose également un service de correction pour le <i>Kurso de Esperanto</i>, 
+							un cours pour débutants qui nécessite l’installation d’un logiciel. Cependant, ce logiciel n’a pas évolué depuis 
+							plusieurs années, contrairement au <i>Cours en 10 leçons</i> qui bénéficie d’évolutions régulières, 
+							tant du point de vue technique que du contenu pédagogique.</p>
+
+					<h3>Cours en dix leçons</h3>
+					<p>Ce cours en ligne se présente sous forme de pages alternant explications et exercices. 
+						Le découpage des leçons en pages permet à l’élève de suivre le cours à son rythme&nbsp;: selon son temps disponible, 
+						l’élève pourra ainsi étudier une leçon en une ou plusieurs séances.</p>
+					<p>À la fin de chaque leçon, une page récapitulative permet à l’élève d’envoyer ses exercices à son correcteur. 
+						Pour pouvoir bénéficier de ce service, il faut au préalable s’inscrire sur le site. </p>
+					<p>Un correcteur est attribué à l’élève à la fin de la première leçon.</p>
+					
+					<h3>Cours <em>Gerda malaperis</em></h3>
+					
+					<p>Ce cours se présente sous forme de pages présentant un chapitre du livre et des exercices. 
+						À chaque chapitre correspond une page présentant le vocabulaire et des remarques grammaticales. </p>
+						<p>Cette page est accessible depuis la page de cours par le lien <a>Vortlisto de la ĉapitro</a> se trouvant en bas de la page. 
+						On conseille également à l'élève de lire le chapitre correspondant de <i>Lasu min paroli plu</i>, 
+						accessible depuis le lien <a>Responda rakonto Lasu min paroli plu</a>) qui se trouve aussi au bas de chaque chapitre 
+						de <i>Gerda malaperis</i>.</p>
+						<p>Un correcteur est attribué à l’élève à la fin de la première leçon.</p>
+						<p class="noto"><strong>Remarque</strong>&nbsp;: Si le correcteur qui a suivi l’élève pour le cours de premier niveau 
+							corrige également le cours <i>Gerda malaperis</i> et s’il a une place de libre, il sera en priorité attribué à l’élève.</p> 
+
+
 					<h2>Inscription au cours</h2>
-					<blockquote><p>
-						Pour s’inscrire à un cours, l’élève doit remplir en formulaire en renseignant 
-						au moins l’identifiant et le mot de passe choisis ainsi que son adresse électronique.
-						Il reçoit alors un message l’invitant à attendre un correcteur.<br>
-						Dès son inscription, l’élève a accès à la page lui permettant de modifier ses données personnelles.<br>
-						Lorsqu’un correcteur lui est affecté, l’élève reçoit 
-						un nouveau message lui indiquant les coordonnées de son correcteur.</p>
+					<p>Pour s’inscrire à un cours, l’élève doit remplir en formulaire en renseignant au moins 
+						l’identifiant et le mot de passe choisis ainsi que son adresse électronique.</p>
+					<p>L’élève reçoit alors un message l’invitant à attendre un correcteur.</p>
+					<p>Dès son inscription, l’élève a accès à la page lui permettant de modifier ses données personnelles. 
+						Lorsqu’un correcteur lui est affecté, l’élève reçoit un nouveau message lui indiquant les coordonnées de son correcteur</p>
 		
-					  	<h3>Kurso de Esperanto (ikurso)</h3>
+					<h3>Kurso de Esperanto (ikurso)</h3>
 						<p>Ce cours est basé sur un logiciel gratuit fonctionnant sous Windows et Linux.
 						Il est téléchargeable depuis le site <a href="http://ikurso.net">http://ikurso.net</a>, 
-						qui présente également le service de correction et l’accès au formulaire
-						d'inscription. 
-						Lors de son inscription, l’élève reçoit un message l’invitant à 
-						attendre un correcteur.</p>
+						qui présente également le service de correction et l’accès au formulaire d’inscription. 
+						Lors de son inscription, l’élève reçoit un message l’invitant à attendre un correcteur.</p>
 						
-						<h3>Cours d’espéranto en dix leçons (DLEK : DekLeciona Esperanto-Kurso)</h3>
-						<p>L’élève qui souhaite bénéficier du service de correction s’inscrit en 
-						remplissant le formulaire qui se trouve à la fin de la 1<sup>ère</sup> leçon. 
-						Pour pouvoir s’inscrire l’élève doit donner toutes les réponses correctes 
-						au QCM qui se trouve dans cette leçon.<br>
-						<i>Remarque</i> : tant que l’élève n'a pas reçu de correcteur, les devoirs 
-						qu’il envoie sont stockés sur le serveur. Il peut donc faire plusieurs devoirs avant d’avoir 
-						reçu un correcteur (même si cela n’est pas conseillé).</p>
-						
-						<h3>Gerda malaperis</h3>
-						<p>L’élève qui a suivi l’un des deux premiers cours a déjà un identifiant 
-						et un mot de passe, qu’il doit réutiliser pour suivre ce cours. Si l’élève 
-						n’est pas encore venu sur le site, il peut s’inscrire en utilisant le formulaire qui se 
-						trouve à fin de la première leçon.<br>
-						<i>Remarque</i> : le correcteur pour le cours <i>Gerda malaperis</i> n’est pas forcément le
-						même correcteur que celui qui a suivi l’élève durant le ikurso ou le DLEK.
-						</p></blockquote>
+					<h2>Conseils d’apprentissage</h2>
+					
+					<p>Des conseils d’apprentissage sont données à l’élève en préambule du cours&nbsp;: 
+						<a href="https://ikurso.esperanto-france.org/fr/cge/intro.php">https://ikurso.esperanto-france.org/fr/cge/intro.php</a></p>
+						<p>☞ Vous aussi, n’hésitez pas à les rappeler à vos élèves au cours de leur apprentissage. <br />
+							À la fin du cours, nous donnons, dans la page <a href="https://ikurso.esperanto-france.org/helpo.php?section=kajposte">
+							Que faire après le cours</a>, de nombreuses idées pour mettre en pratique ce que l’élève aura appris. </p>
+							
+						<p>☞ N’hésitez pas à en parler durant le cours, au gré des corrections et des questions que vos élèves vous poseront sûrement. 
+							Cette page est mise à jour régulièrement. Si vous pensez qu’une ressource mérite d’y figurer, 
+							n’hésitez pas à envoyer vos suggestions aux administrateurs du cours, en utilisant le <a href="https://ikurso.esperanto-france.org/reago.php">formulaire de contact du site</a>
+							(vous pouvez cliquer sur le bouton <strong>NOUS CONTACTER</strong> affiché en bas de chaque page).</p>
+
+					<h3>Rythme d’apprentissage</h3>
 						<h3>Comment je sais que j’ai un nouvel élève ?</h3>
-						<blockquote><p>
+						<p>
 						Par courrier électronique, vous recevez un avis qu’un nouvel élève vous 
 						a été affecté. Dans ce courrier sont indiqués sa ville, son âge, 
 						son adresse électronique et le cours suivi.</p>
@@ -61,10 +93,10 @@ include "pagxkapo-old.inc.php";
 						<p>En même temps que l’inscription vous recevrez par courriel le premier devoir de votre élève 
 						(voire plusieurs devoirs si celui-ci en avait fait plusieurs avant qu'on lui affecte un correcteur). 
 						L’élève reçoit également une copie du message envoyé.
-						</p></blockquote>
+						</p>
 			
 						<h3>Comment avoir de nouveaux élèves ?</h3>
-						<blockquote><p>		
+						<p>		
 						Les élèves sont attribués en priorité aux correcteurs les "moins chargés". 
 						Il faut donc se "décharger", soit en indiquant "a abandonné" pour les élèves 
 						qui ne répondent pas aux relances, soit en augmentant le nombre maximum d’élèves 
@@ -73,14 +105,14 @@ include "pagxkapo-old.inc.php";
 						Si un correcteur accepte 10 élèves et en a déjà 6, sa charge est de 60%.<br> 
 						C’est donc le deuxième correcteur qui recevra le prochain élève qui s’inscrit 
 						même si, dans l’absolu, il a plus d’élèves que le premier. 
-						</p></blockquote>
+						</p>
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 	
 						<h3>Combien d'élèves vais-je avoir ?</h3>
-						<blockquote><p>
+						<p>
 						C’est vous qui indiquez combien d’élèves vous souhaitez avoir au maximum pour 
 						chaque cours. Pour cela, utilisez le tableau qui se trouve en haut de la page "Mes élèves". 						
-						</p></blockquote>
+						</p>
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 	
 					<?php } ?>
@@ -90,16 +122,16 @@ include "pagxkapo-old.inc.php";
 
 						<h2>Suivi des élèves</h2>
 						<h3>Que dois-je faire quand je reçois un nouvel élève ?</h3>
-						<blockquote><p>
+						<p>
 						En principe, rien. Il doit vous envoyer tout seul ses leçons qu’il vous faudra corriger au fur 
 						et à mesure. Dans la pratique, il vaut mieux accueillir votre élève en lui 
 						envoyant un petit mot de bienvenue.<br>
 						Il est préférable d'écrire <b>en français</b> à vos élèves pour les premières leçons et éventuellement en incluant quelques mots/expressions en espéranto avec une traduction en français (comme "gratulon" ou "amike" avant de signer).<br/>
 						Une fois que vous avez corrigé, vous devez, aussi régulièrement que possible, 
-						mettre à jour les informations de vos élèves en vous connectant sur ce site.</p></blockquote>
+						mettre à jour les informations de vos élèves en vous connectant sur ce site.</p>
 					
 						<h3>Comment avoir plus d'informations sur mes élèves ?</h3>
-						<blockquote><p>	  	
+						<p>	  	
 						En cliquant sur "Mes élèves", vous arrivez à l'écran suivant :</p>
 						<p><img src="bildoj/helpo2.gif" alt="Mes élèves" border="0" ></p>
 						<p>
@@ -142,30 +174,30 @@ include "pagxkapo-old.inc.php";
 						c’est très simple : il suffit de cliquer sur le bouton "Récupérer l'élève" 
 						qui se trouve dans la ligne du tableau se rapportant à cet élève :<br>
 						<img src="bildoj/helpo1.gif" alt="Reprendre un eleve" border="0" >
-						</p></blockquote>
+						</p>
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 		
 						<h3>Comment mettre à jour les informations concernant mes élèves ?</h3>
-						<blockquote><p>	  	
+						<p>	  	
 						<img src="bildoj/helpo6.jpg" alt="Mettre à jour les informations" border="0" align="right">
 						Sur la page présentée ci-dessus, il vous suffit d'ouvrir le menu déroulant de 
 						l’élève dont vous avez corrigé la leçon (en cliquant sur le triangle 
 						pointé vers le bas à droite du menu déroulant) et sélectionner la leçon 
 						que vous avez corrigée. Puis validez vos modifications en cliquant le bouton "Envoyer" 
 						se trouvant à côté du nom de la leçon que vous avez modifiée.
-						</p></blockquote>
+						</p>
 						
 						<h4>cas des élèves du DLEK et de Gerda :</h4>
-						<blockquote><p>Normalement, comme les élèves utilisent les pages du site pour envoyer leurs devoirs, 
+						<p>Normalement, comme les élèves utilisent les pages du site pour envoyer leurs devoirs, 
 						les données concernant le dernier cours sont automatiquement enregistrées lors du 
 						passage de l’élève. Vous n'aurez donc rien à mettre à jour dans ce cas.<br>
 						<i>Remarque</i> : vérifiez cependant que cela est bien le cas, car il se peut que certains 
 						élèves fassent leurs devoirs en recopiant le texte directement dans leur message.
-						</p></blockquote>				
+						</p>				
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 				
 						<h3>Que faire quand un élève a terminé ?</h3>
-						<blockquote><p>	  	
+						<p>	  	
 						<p><strong>Quand un élève a terminé le cours</strong> : indiquez-le en choisissant "A fini" 
 						dans ce menu déroulant. L’élève recevra alors une 
 						<a href="doc/diplome.pdf"> attestation de fin de cours</a>. 
@@ -175,11 +207,11 @@ include "pagxkapo-old.inc.php";
 						<p class="atentigo">Attention : lorsqu’un élève a terminé le cours, 
 						les administrateurs lui envoient une attestation. 
 						N’utilisez donc cette option que pour les élèves qui vous ont envoyé l’examen final.
-						</p></blockquote>				
+						</p>				
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 				
 						<h3>Que faire si l'élève  n'envoie pas sa première leçon ?</h3>
-						<blockquote><p>
+						<p>
 						<i>(ce qui suit ne concerne que les élèves inscrits au ikurso)</i><br>
 						Il est possible qu’il n'ait pas compris en quoi consiste le cours. Il peut par exemple :<br>
 						- n’avoir pas téléchargé le logiciel : demandez-lui et expliquez-lui 
@@ -191,11 +223,11 @@ include "pagxkapo-old.inc.php";
 						et qu'ensuite, il doit cocher la case "j'ai un correcteur" et indiquer votre nom et votre adresse 
 						électronique dans les champs spécifiques :<br>
 						<img src="bildoj/helpo4.gif" alt="configuration ikurso" border="0"><br>
-						</p></blockquote>
+						</p>
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 					
 						<h3>Mon élève m’a envoyé une leçon, mais le courrier électronique était vide</h3>
-						<blockquote><p>
+						<p>
 						<em>(ce qui suit concerne les élèves du Kurso de Esperanto)</em><br>
 						Une fois que le logiciel a été configuré et que la page d’exercices a été remplie, 
 						l’élève doit cliquer sur l’icône en forme d’enveloppe en bas à droite 
@@ -211,11 +243,11 @@ include "pagxkapo-old.inc.php";
 						Il lui suffit ensuite d’envoyer son courrier électronique comme d'habitude.<br>
 						Expliquez à votre élève la marche à suivre et essayez de voir 
 						ensemble la cause du problème.
-						</p></blockquote>
+						</p>
 						
 						<h3>Que faire si votre élève n'a pas envoyé sa leçon après 
 						plus d’une semaine ?</h3>
-						<blockquote><p>		
+						<p>		
 						Il est probable qu’à cause d’un programme télévisé particulièrement 
 						intéressant, d'une coupe de monde de football ou d’un examen à éviser, il n’ait pas 
 						eu beaucoup de temps à consacrer à l'espéranto. Plus le temps passe et plus il 
@@ -239,18 +271,18 @@ include "pagxkapo-old.inc.php";
 						relances avant d'abandonner l’élève.<br>
 						Vos élèves sont comme vos enfants, s’ils se perdent, c’est à vous d'aller 
 						les chercher...
-						</p></blockquote>
+						</p>
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 										
 						<h3>Que faire si un élève donne plus de signe de vie après plusieurs relances ?</h3>
-						<blockquote><p>		
+						<p>		
 						Quand nous disons que vos élèves sont comme vos enfants, c’était une image. 
 						En attendant après un élève qui ne répond pas, vous empêchez 
 						d’autres élèves d’avoir un correcteur. Il faudra donc penser à "sacrifier" 
 						l’élève muet en sélectionnant "a abandonné" tout en bas de la liste 
 						des leçons. Quand vous aurez fait cela, l’élève disparaîtra de votre 
 						liste, soyez donc extrêmement vigilant.
-						</p></blockquote>
+						</p>
 						<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 				
 					<?php } ?>
@@ -259,11 +291,11 @@ include "pagxkapo-old.inc.php";
 						<p style="text-align:right"><a href="doc/GuideDuCorrecteur.pdf">Téléchargez le guide du correcteur au format pdf</a></p> 
 
 							<h3>Quelles informations reçoivent les élèves lors de leur inscription ?</h3>
-							<blockquote><p>
+							<p>
 							Voici les différents messages qui sont envoyés aux élèves lorsqu’ils s’inscrivent. 
 							Dans ces pages tout ce qui est entre "##" est remplacé par les informations les concernant.
-							</p></blockquote>
-							<blockquote><p>
+							</p>
+							<p>
 							<ul>
 								<li><a href="doc/mails/aligxiKEFR.html" onClick="window.open('doc/mails/aligxiKEFR.html','ikurso','top=150,left=150,width=600,height=500');return false;">
 								message envoyé après une inscription pour le Kurso de Esperanto</a></li>
@@ -282,7 +314,7 @@ include "pagxkapo-old.inc.php";
 								<li><a href="mails/rappel2.html" onClick="window.open('mails/rappel2.html','ikurso','top=150,left=150,width=600,height=500');return false;">
 								message envoyé à l'élève après 10 jours sans travail</a></li>
 							</ul>
-							</p></blockquote>
+							</p>
 							<p align="right"><em><a href="#top">Revenir au début</a></em></p>
 						
 					<?php } ?>
@@ -293,17 +325,17 @@ include "pagxkapo-old.inc.php";
 						<p style="text-align:right"><a href="doc/GuideDuCorrecteur.pdf">Téléchargez le guide du correcteur au format pdf</a></p> 
 			
 						<h3>J’ai des problèmes pour envoyer les messages avec les accents.</h3>
-						<blockquote><p>		
+						<p>		
 						Vous trouverez des explications utiles sur 
 						<a href="https://ikurso.esperanto-france.org/helpo.php#courriel">cette page</a>.<br>
 						Pour l’envoi de vos messages, si vous n’avez pas la possibilité de taper vous-même 
 						les lettres accentuées, vous pourrez utiliser la méthode en -x ou en -h.</p>
-						</p></blockquote>
+						</p>
 					
 							
 						<h3>Comment se connecter rapidement au site ikurso sans avoir besoin de taper son mot de 
 						passe à chaque fois ?</h3>
-						<blockquote><p>		
+						<p>		
 						Une fois arrivé sur le site :
 						<i>si vous utilisez Internet Explorer</i><br>
 						-	dans le menu "favoris" cliquez sur "ajouter aux favoris"<br>
@@ -321,12 +353,12 @@ include "pagxkapo-old.inc.php";
 						<i>si vous utilisez Mozilla :</i><br>
 						-	utilisez la fonction "Classer cette page" du menu "marque-page", et dans la zone "adresse", 
 						modifiez l’URL comme précisé ci-dessus.
-						</p></blockquote>
+						</p>
 			
 						<h3>J’ai un problème qui n'est pas expliqué dans ce guide ?</h3>
-						<blockquote><p>				 
+						<p>				 
 						Dans ce cas, <a href="https://ikurso.esperanto-france.org/reago.php">n’hésitez pas à nous écrire !</a>
-						</p></blockquote>	
+						</p>	
 					<?php } ?>
 				</div>
 		</div>

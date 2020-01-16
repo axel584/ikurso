@@ -127,9 +127,10 @@ div.col > p:first-child {
 }
 
 /* remarques et notes */
-.noto {
-	margin-top:2em;
-	font-size: 85%;
+p.noto {
+	font-size:90%;
+	color:#666;
+	margin:1rem 2rem 1rem 4rem;
 }
 
 /* styles specifiques */
@@ -275,7 +276,6 @@ aside {
 	padding-right: 5%;
 	margin-top: 6rem;
 }
-
 /********** témoignages ************/
 span.eta {font-size: 85%;}
 
@@ -343,11 +343,13 @@ ul#lecionoj li.farita a {
 
 /********** sommaire de la leçon *******/
 
-ul#enhavtabelo {
+ul#enhavtabelo,
+ul.enhavtabelo {
 	margin:0;
 	list-style: none;
 }
-ul#enhavtabelo li {
+ul#enhavtabelo li,
+ul.enhavtabelo li {
 	line-height:2em;
 	font-weight: 300;
 	padding-left: 2rem;
@@ -356,7 +358,8 @@ ul#enhavtabelo li {
 	margin-bottom: 0.5em;
 }
 @media only screen and (min-width: 993px) {
-	#enhavtabelo li {
+	ul#enhavtabelo li,
+	ul.enhavtabelo {
 		font-size:85%;
 		line-height:1.8em;
 	}
@@ -402,7 +405,8 @@ ul#enhavtabelo li.korektado::before {
 	color: #999;
 	margin-right: 0.5rem;
 }
-ul#enhavtabelo li a {
+ul#enhavtabelo li a,
+ul.enhavtabelo li a {
 	color: #75706B;
 }
 ul#enhavtabelo li.farita a {
@@ -410,10 +414,12 @@ ul#enhavtabelo li.farita a {
 	text-decoration-color: #2196F6;
 }
 
-ul#enhavtabelo li a:hover {
+ul#enhavtabelo li a:hover,
+ul.enhavtabelo li a:hover {
 	color: #039be5;
 }
-ul#enhavtabelo li a:active {
+ul#enhavtabelo li a:active,
+ul.enhavtabelo li a:active {
 	color: #0277bd;
 }
 
@@ -882,7 +888,6 @@ span.ikurso {
 }
 #eleves .footer .btn {
 	margin-left: 1em;
-
 }
 /*************************************/
 /*        page korektiLecionon       */
@@ -939,6 +944,13 @@ span.ikurso {
 	padding: 0;
 }
 /*********************************/
+/*        page gvidilo           */
+/*********************************/
+
+.gvidilo aside {
+	margin-top: 2rem;
+}
+/*********************************/
 /*        pied de page           */
 /*********************************/
 .submenuo {
@@ -960,6 +972,22 @@ span.ikurso {
 	font-size: 80%;
 }
 
+/*********************************/
+/*        menu hamburger         */
+/*********************************/
+.sidenav ul {
+	margin-left: 0.5rem;
+}
+.sidenav li {
+	line-height: 1.7em;
+}
+.sidenav li.entete {
+	margin-top: 1em;
+}
+.sidenav li>a {
+    height: 1.7em;
+    line-height: 1.7em;
+}
 /*********************************/
 /*         typographie           */
 /*********************************/

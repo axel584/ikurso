@@ -96,7 +96,7 @@ echo $komentario;
 					<span>Ne pas prévenir l'élève par mail</span>
 				</label>
 				<br />
-				<a id="registriKorektadon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono_id="<?=$leciono_id?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Renvoyer cette leçon par mail">Sauvegarder cette correction</a>
+				<a id="registriKorektadon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono_id="<?=$leciono_id?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Sauvegarder cette correction">Sauvegarder cette correction</a>
     		</p>
 			</div>
 

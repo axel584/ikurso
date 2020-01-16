@@ -102,7 +102,13 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			<li><a href="<?php echo $vojo;?>helpo.php?section=kielhelpi" class="primaire-texte moyen">Comment nous aider&nbsp;?</a></li>
 			<li><a href="<?php echo $vojo;?>reago.php" class="primaire-texte moyen">Nous contacter</a></li>
 		</ul>
-
+		<ul id="menu_correcteur" class="dropdown-content">
+			<li><a href="<?php echo $vojo;?>miajlernantoj.php" class="primaire-texte moyen">Mes élèves</a></li>
+			<li><a href="<?php echo $vojo;?>korektado.php" class="primaire-texte moyen">Corrigé type</a></li>
+			<li><a href="<?php echo $vojo;?>statLauxKategorio.php" class="primaire-texte moyen">Statistiques</a></li>
+			<li><a href="<?php echo $vojo;?>gvidilo.php" class="primaire-texte moyen">Guide du correcteur</a></li>
+		</ul>
+		
 		<!-- fenêtre modale connexion -->
 		<div id="konektigxi" class="modal">
 			<div class="modal-content">
@@ -290,7 +296,10 @@ if ($persono_id=="") {
 						<li><a href="<?php echo $vojo;?>kionova.php">QUOI DE NEUF ?</a></li>
 						<li><a class="dropdown-trigger" href="#!" data-target="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
 						<li><a href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></li>
-						<li><a class="dropdown-trigger" href="#!" data-target="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>
+						<?php if ($persono["rajtoj"]=="K" || $persono["rajtoj"]=="A" ) { ?>
+						<li><a class="dropdown-trigger" href="#!" data-target="menu_correcteur">ESPACE CORRECTEUR<i class="material-icons right">arrow_drop_down</i></a></li>
+						<?php } ?>
+							<li><a class="dropdown-trigger" href="#!" data-target="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>
 					</ul>
 				</div>
 			</nav>
@@ -304,6 +313,14 @@ if ($persono_id=="") {
 				<li class="divider"></li>
 				<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">Téléchargements</a></li>
 				<li class="divider"></li>
+
+				<?php if ($persono["rajtoj"]=="K" || $persono["rajtoj"]=="A" ) { ?>
+					<li class="entete">ESPACE CORRECTEUR</li>
+					<li class="retrait"><a href="<?php echo $vojo;?>miajlernantoj.php">Mes élèves</a></li>
+					<li class="retrait"><a href="<?php echo $vojo;?>korektado.php">Corrigé type</a></li>
+					<li class="retrait"><a href="<?php echo $vojo;?>statLauxKategorio.php">Statistiques</a></li>
+					<li class="retrait"><a href="<?php echo $vojo;?>gvidilo.php" >Guide du correcteur</a></li>
+				<?php } ?>
 				<li class="entete">INFORMATIONS PRATIQUES</li>
 				<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=enskribo">Comment s’inscrire&nbsp;?</a></li>
 				<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?section=kurso">Comment suivre le cours&nbsp;?</a></li>

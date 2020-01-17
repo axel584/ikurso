@@ -11,6 +11,17 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
+				<li class="collection-header">version 21. Janvier 2020</li>
+				<li class="collection-item">
+					<p>Amélioration de l’outil de révision du vocabulaire : affichage de la liste des mots en erreur à la fin d’une révision</p>
+					<p>Envoi périodique de messages de type <i>Le saviez-vous ?</i> permettant aux élèves de découvrir différentes facettes du monde de l’espéranto.</p>
+					<p>Mise à disposition d’un paquet Anki pour le vocabulaire du cours en dix leçons, disponible depuis la page <a href="<?php echo $vojo;?>fr/elsxutoj.php">Téléchargements</p>
+					<p>Modification de l’<a href="<?php echo $vojo;?>fr/cge/lec06.php?section=12">exercice 4 de la leçon 6</a> (suppression de la traduction).</p>
+					<p>Ajout de la possibilité de corriger les exercices en ligne&nbsp;: les correcteurs peuvent désormais corriger directement sur le site et les élèves pourront alors consulter la correction sur le site.</p>
+					<p>Ajout d’un menu ESPACE CORRECTEUR pour les correcteurs</p>
+					<p>Mise à jour du guide pour les correcteurs.</p>
+					<p>Corrections diverses de bugs et coquilles…</p>
+				</li>
 				<li class="collection-header">version 20. Juillet 2019</li>
 				<li class="collection-item">
 					<p>Mise à jour des pages de conseils sur que faire après les cours.</p>

@@ -411,7 +411,14 @@ include "dlekkapo.inc.php";
 					</div>
 				</div>
 
-
+				<p class="parto">Ce premier exercice consiste à traduire quelques phrases simples en espéranto. 
+					Ce type d’exercice permet de contrôler si vous avez bien assimilé le vocabulaire et les points grammaticaux vus dans la leçon.
+					Lorsque vous traduisez une phrase, vous devez traduire le sens de cette phrase, et non pas les mots un par un&nbsp;:
+					une langue n’est pas le calque d’une autre langue.
+					Par exemple, vous avez vu que <span class="eo">sana</span> signifie «en bonne santé&nbsp;»&nbsp;: 
+					ici, un seul mot en espéranto permet de traduire une expression de 3 mots en français.
+				</p>
+				
 			<?php 
 				getEkzercon(1,$persono_id);
 			?>

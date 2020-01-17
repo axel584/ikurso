@@ -479,7 +479,11 @@ QCM_bildoj(
 		} // fin section
 		if ($section=="9") {
 		?>
-				
+			<p class="parto">Voici à nouveau un exercice de traduction. Comme vous l’avez vu dans la leçon précédente,
+				ce type d’exercice permet de contrôler si vous avez bien assimilé le vocabulaire et les points grammaticaux vus dans la leçon.
+				Avant de commencer à écrire votre réponse, réfléchissez bien au sens de la phrase et évitez de faire du mot à mot. 
+				Rappelez-vous&nbsp;: une langue n’est pas le calque d’une autre langue&nbsp;!</p>
+			</p>
 			<?php 
 				getEkzercon(6,$persono_id);
 			?>

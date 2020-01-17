@@ -121,18 +121,18 @@ include "dlekkapo.inc.php";
 		
 		<p>Vous retrouverez dans le schéma ci-dessus des corrélatifs que vous avez déjà rencontrés dans les leçons précédentes&nbsp;:</p>
 		<div class="row vortlisto">
-			<p class="col s4 m3"><span class="eo">kiu</span>&nbsp;: qui, quel, lequel</p>
-			<p class="col s4 m3"><span class="eo">neniu</span>&nbsp;: personne, aucun</p>
-			<p class="col s4 m6"><span class="eo">iu</span>&nbsp;: quelqu’un, un certain</p>
-			<p class="col s4 m3"><span class="eo">kio</span>&nbsp;: quoi</p>
-			<p class="col s8 m9"><span class="eo">nenio</span>&nbsp;: rien</p>
-			<p class="col s4 m3"><span class="eo">kie</span>&nbsp;: où</p>
-			<p class="col s8 m9"><span class="eo">nenie</span>&nbsp;: nulle part</p>
-			<p class="col s4 m3"><span class="eo">kiam</span>&nbsp;: quand</p>
-			<p class="col s4 m3"><span class="eo">neniam</span>&nbsp;: jamais</p>
-			<p class="col s4 m6"><span class="eo">ĉiam</span>&nbsp;: toujours</p>
-			<p class="col s6 m3"><span class="eo">kiel</span>&nbsp;: comment, comme</p>
-			<p class="col s6 m5"><span class="eo">tiel</span>&nbsp;: ainsi, comme ça</p>
+			<p class="col s4"><span class="eo">kiu</span>&nbsp;: qui, quel, lequel, laquelle (suivi d’un nom)</p>
+			<p class="col s4"><span class="eo">neniu</span>&nbsp;: personne, aucun (si suivi d’un nom)</p>
+			<p class="col s4"><span class="eo">iu</span>&nbsp;: quelqu’un, un certain</p>
+			<p class="col s4"><span class="eo">kio</span>&nbsp;: quoi</p>
+			<p class="col s8"><span class="eo">nenio</span>&nbsp;: rien</p>
+			<p class="col s4"><span class="eo">kie</span>&nbsp;: où</p>
+			<p class="col s8"><span class="eo">nenie</span>&nbsp;: nulle part</p>
+			<p class="col s4"><span class="eo">kiam</span>&nbsp;: quand</p>
+			<p class="col s4"><span class="eo">neniam</span>&nbsp;: jamais</p>
+			<p class="col s4"><span class="eo">ĉiam</span>&nbsp;: toujours</p>
+			<p class="col s4"><span class="eo">kiel</span>&nbsp;: comment, comme</p>
+			<p class="col s8"><span class="eo">tiel</span>&nbsp;: ainsi, comme ça</p>
 			<p class="col s12"><span class="eo">kiom</span>&nbsp;: combien</p>
 		</div>
 		
@@ -219,6 +219,8 @@ include "dlekkapo.inc.php";
 		<p class="parto">Les corrélatifs en <b>-OM</b> (quantité) sont souvent suivi par la préposition <span class="eo">da</span>&nbsp;:</p>
 		<div class="row">
 			<p class="col s6"><span class="eo"><b>Kiom da</b> biskvitoj vi deziras?</span></p><p class="col s6"><b>Combien de</b> biscuits veux-tu&nbsp;?</p>
+			<p class="col s6"><span class="eo">Mie deziras <b>neniom da</b> ili!</span></p><p class="col s6">Je n’en veux <b>aucun</b>.</p>
+			
 			<p class="col s6"><span class="eo">Mi jam manĝis <b>tiom da</b> ili!</span></p><p class="col s6">J’<b>en</b> ai déjà <b>tellement</b> mangé&nbsp;!</p>
 		</div>
 		<?php
@@ -234,7 +236,7 @@ include "dlekkapo.inc.php";
 		</p>
 		<div class="vortlisto row">
 			<p class="col s2"><span class="eo">tio</span></p><p class="col s10">cette chose, cela, ce</p>
-			<p class="col s2"><span class="eo">kio&nbsp;?</span></p><p class="col s10">quelle chose&nbsp;? quoi&nbsp;?</p>
+			<p class="col s2"><span class="eo">kio?</span></p><p class="col s10">quelle chose&nbsp;? quoi&nbsp;?</p>
 			<p class="col s2"><span class="eo">iam</span></p><p class="col s10">à un (certain) moment, un jour, (il était) une fois</p>
 			<p class="col s2"><span class="eo">nenie</span></p><p class="col s10">nulle part</p>
 			<p class="col s2"><span class="eo">kiel?</span></p><p class="col s10">comment&nbsp;? de quelle manière&nbsp;? (<em>réponses possibles</em>&nbsp;: bien, élégamment…)</p>

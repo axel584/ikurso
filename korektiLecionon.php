@@ -83,7 +83,7 @@ echo $komentario;
 	<li>
     	<div class="collapsible-header"><i class="material-icons blue-text text-darken-2">edit</i> Rédiger une conclusion</div>
 		<div class="collapsible-body"><span>
-			<textarea name="konkludo" class="trumbowyg"><?=$enkonduko?></textarea>
+			<textarea name="konkludo" class="trumbowyg"><?=$konkludo?></textarea>
 		</span></div>
 	</li>
 </ul>

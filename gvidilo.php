@@ -7,7 +7,7 @@ if ($section==""){$section="kursoj";}
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"CG";
 $leciono=isset($_GET["numleciono"])?$_GET["numleciono"]:"1";
 // si la personne qui regarde la page n'est ni correcteur, ni administrateur, on affiche la home
-if ($rajto!='A' && $rajto!='I'){header("Location:index.php?erarkodo=4");}
+if ($rajto!='A' && $rajto!='I' && $rajto!='K'){header("Location:index.php?erarkodo=4");}
 
 include "pagxkapo.inc.php";
 

@@ -368,6 +368,8 @@ $titolo = $row["titolo"];
 								<li><a href="#correction">Correction des exercices</a></li>
 							</ul>
 						</div>
+					</li>
+					<li>
 						<div class="collapsible-header">Nouveaux élèves</div>
 						<div class="collapsible-body">
 							<ul class="collection enhavtabelo">
@@ -378,6 +380,8 @@ $titolo = $row["titolo"];
 								<li><a href="#info">Comment avoir plus d’informations sur mes élèves&nbsp;?</a></li>
 							</ul>
 						</div>
+					</li>
+					<li>
 						<div class="collapsible-header">Correction des exercices</div>
 						<div class="collapsible-body">
 							<ul class="collection enhavtabelo">
@@ -388,6 +392,8 @@ $titolo = $row["titolo"];
 								<li><a href="#probleme">Que faire si je n’ai pas reçu les exercices envoyés&nbsp;?</a></li>
 							</ul>
 						</div>
+					</li>
+					<li>
 						<div class="collapsible-header">Suivi des élèves</div>
 						<div class="collapsible-body">
 							<ul class="collection enhavtabelo">

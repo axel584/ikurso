@@ -23,10 +23,7 @@ $titolo = $row["titolo"];
 
 			<p style="text-align:right"><a href="doc/GuideDuCorrecteur.pdf">Téléchargez le guide du correcteur au format pdf</a></p> 
 			
-			<?php 
-			if ($section=="kursoj") { ?>				
-
-			<h2>Présentation des cours</h2>
+			<h2 id="kursoj"  class="scrollspy">Présentation des cours</h2>
 			<p class="parto">Espéranto-France propose deux cours en ligne, avec pour chacun un service de correction gratuit. 
 				Ces cours sont accessibles depuis la page <a href="https://ikurso.esperanto-france.org">https://ikurso.esperanto-france.org</a>
 				(ou <a href="https://ikurso.esperanto-france.org">ikurso.fr</a>)</p>
@@ -77,7 +74,7 @@ $titolo = $row["titolo"];
 			qui présente également le service de correction et l’accès au formulaire d’inscription. 
 			Lors de son inscription, l’élève reçoit un message l’invitant à attendre un correcteur.</p>
 			
-			<h2 id="conseils">Conseils d’apprentissage</h2>
+			<h2 id="conseils" class="scrollspy">Conseils d’apprentissage</h2>
 			
 			<p class="parto">Des conseils d’apprentissage sont donnés à l’élève en préambule du cours&nbsp;: 
 			<a href="https://ikurso.esperanto-france.org/fr/cge/intro.php">https://ikurso.esperanto-france.org/fr/cge/intro.php</a></p>
@@ -99,7 +96,7 @@ $titolo = $row["titolo"];
 			des messages automatiques sont envoyés aux élèves pour leur rappeler ce conseil. 
 			L’envoi des messages automatiques peut être désactivé par l’élève.</p>
 		
-			<h2 id="correction">Correction des exercices</h2>
+			<h2 id="correction" class="scrollspy">Correction des exercices</h2>
 			
 			<p class="parto">
 				Sur le site, un <strong>système de correction automatique</strong> permet d’indiquer immédiatement à l’élève si une réponse est correcte. 
@@ -114,15 +111,10 @@ $titolo = $row["titolo"];
 				n’hésitez pas à le signaler aux administrateurs. </p>
 			<p>Si vous optez pour la <strong>correction en ligne</strong>, vous pourrez indiquer directement 
 				lors de la correction que la réponse donnée doit être considérée comme correcte (voir dans le chapitre suivant).</p>
-
-			<?php 
-				} 
-				if ($section=="lernantoj") { 
-			?>
 			
-			<h2 id="combien">Suivi des élèves</h2>
+			<h2>Suivi des élèves</h2>
 			
-			<h3>Combien d’élèves vais-je avoir&nbsp;?</h3>
+			<h3 id="combien" class="scrollspy">Combien d’élèves vais-je avoir&nbsp;?</h3>
 			<p class="parto">
 			Le nombre d’élèves que vous pourrez suivre dépend de votre temps disponible. 
 			Certains correcteurs suivent un ou deux élèves à la fois, d’autres suivent une vingtaine d’élèves en parallèle.</p>
@@ -133,7 +125,7 @@ $titolo = $row["titolo"];
 				Vous pourrez à tout moment modifier le nombre maximal d’élèves que vous souhaitez suivre.
 			</p>
 			
-			<h3 id="comment">Comment avoir de nouveaux élèves&nbsp;?</h3>
+			<h3 id="comment" class="scrollspy">Comment avoir de nouveaux élèves&nbsp;?</h3>
 			<p class="parto">		
 			Vous devez commencer par indiquer le nombre maximal d’élèves vous souhaitez suivre pour chaque cours.</p>
 			<ul class="sublisto">
@@ -156,7 +148,7 @@ $titolo = $row["titolo"];
 				(si vous habitez en France) ou dans votre pays.</p>
 			<p class="noto">Le cours de 3<sup>e</sup> niveau est encore en projet et n’est pas proposé aux élèves pour l’instant.</p>
 
-			<h3 id="nouveau">Comment sais-je que j’ai un nouvel élève&nbsp;?</h3>
+			<h3 id="nouveau" class="scrollspy">Comment sais-je que j’ai un nouvel élève&nbsp;?</h3>
 			<p class="parto">Par courrier électronique, vous recevez un avis qu’un nouvel élève vous a été affecté. 
 				Dans ce courrier sont indiqués son pseudo, son adresse électronique et le cours suivi, ainsi que 
 				sa ville et son âge si l’élève a renseigné ces informations dans les données personnelles.</p>
@@ -171,7 +163,7 @@ $titolo = $row["titolo"];
 				tout au long du cours. Lorsque votre élève aura fait ses premiers exercices, 
 				vous recevrez un message avec le devoir de votre élève.</p>
 				
-			<h3 id="quoifaire">Que dois-je faire quand je reçois un nouvel élève&nbsp;?</h3>
+			<h3 id="quoifaire" class="scrollspy">Que dois-je faire quand je reçois un nouvel élève&nbsp;?</h3>
 			
 			<p class="parto">Lorsqu’un nouvel élève vous est affecté, vous recevrez rapidement ses premiers exercices. </p>
 			<p>La correction du premier devoir de votre élève sera le premier contact avec cet élève. Ce sera pour vous 
@@ -181,7 +173,7 @@ $titolo = $row["titolo"];
 				lui parler par exemple comment vous avez appris l’espéranto, ce que cela vous apporte ou 
 				présenter un événement lié à l’espéranto.</p>
 					
-			<h3 id="info">Comment avoir plus d’informations sur mes élèves&nbsp;?</h3>
+			<h3 id="info" class="scrollspy">Comment avoir plus d’informations sur mes élèves&nbsp;?</h3>
 			
 			<p class="parto">Lorsque vous vous connectez sur le site, allez sur votre page <a href="https://ikurso.esperanto-france.org/personinformoj.php">Mes données personnelles</a>.</p>
 			<div class="row">
@@ -207,13 +199,9 @@ $titolo = $row["titolo"];
 				automatiquement un message de rappel envoyé par courrier électronique. Les élèves ont cependant la possibilité 
 				de désactiver ce rappel automatique.</p>
 					
-			<?php 
-				} 
-			if ($section=="korektado") { 
-			?>
 			<h2>Correction des exercices</h2>
 					
-			<h3 id="echange">Comment se passent les échanges avec les élèves&nbsp;?</h3>
+			<h3 id="echanges" class="scrollspy">Comment se passent les échanges avec les élèves&nbsp;?</h3>
 			
 			<p class="parto">Comme nous l’avons vu précédemment, vous serez averti par courriel lorsque vous aurez un nouvel élève.
 			Vous serez également averti par courriel lorsque votre élève enverra un nouveau devoir. Vous recevrez en réalité deux messages&nbsp;: </p>
@@ -223,7 +211,7 @@ $titolo = $row["titolo"];
 			</ul>
 			<p>Les échanges entre vous et votre élève peuvent se faire par courriel ou directement en ligne sur le site.</p> 
 
-			<h3 id="courriel">Comment corriger par courriel&nbsp;?</h3>
+			<h3 id="courriel" class="scrollspy">Comment corriger par courriel&nbsp;?</h3>
 			
 			<p class="parto">Les réponses aux exercices données par votre élève vous sont toutes transmises dans le courriel « lec … de … ».<br>
 				Les énoncés sont écrits en noir, et les réponses de votre élève sont en bleu. 
@@ -231,7 +219,7 @@ $titolo = $row["titolo"];
 			<p><strong>ATTENTION</strong> : L’émetteur du message électronique est ikurso@esperanto-france.org <br>
 				Lorsque vous répondez au message, veuillez renseigner comme destinataire l’adresse courriel de votre élève.</p>
 				
-			<h3 id="online">Comment corriger en ligne&nbsp;?</h3>
+			<h3 id="online" class="scrollspy">Comment corriger en ligne&nbsp;?</h3>
 			
 			<p class="parto">Pour corriger en ligne, il vous suffit de cliquer sur le lien donné dans le message « Nouvelle leçon de ... ».</p>
 			<p>Cette page affiche tous les exercices de la leçon et les réponses données par votre élève.</p>
@@ -265,7 +253,7 @@ $titolo = $row["titolo"];
 			<p class="parto">Si vous n’avez pas terminé votre correction et souhaitez la reprendre plus tard, 
 				cochez la case <strong>Ne pas prévenir l’élève par mail</strong> avant de cliquer sur le bouton <strong>SAUVEGARDER CETTE CORRECTION</strong>.</p>
 
-			<h3 id="eo-fr">Dois-je écrire en français ou en espéranto&nbsp;?</h3>
+			<h3 id="eo-fr" class="scrollspy">Dois-je écrire en français ou en espéranto&nbsp;?</h3>
 			
 			<p class="parto">Dès la première leçon, vous pouvez écrire quelques phrases simples en espéranto, 
 				en ajoutant soit la traduction en français des mots qui n’ont pas encore été vus dans le cours. </p>
@@ -275,7 +263,7 @@ $titolo = $row["titolo"];
 				car ce cours a pour but de faire pratiquer la langue. Cela n’est cependant pas une obligation absolue et vous pouvez tout à fait 
 				rédiger des explications en français. </p>
 				
-			<h3 id="probleme">Que faire si je n’ai pas reçu les exercices envoyés&nbsp;?</h3>
+			<h3 id="probleme" class="scrollspy">Que faire si je n’ai pas reçu les exercices envoyés&nbsp;?</h3>
 			
 			<p class="parto">Il arrive parfois que certains exercices envoyés par un élève n’arrivent pas à destination. 
 				Si vous constatez qu’un élève tarde à envoyer ses exercices, vérifiez tout d’abord que le message n’est pas dans le dossier des indésirables.
@@ -303,11 +291,7 @@ $titolo = $row["titolo"];
 			<p>Vous avez également la possibilité de corriger directement en ligne en cliquant sur le bouton <strong>CORRIGER CETTE LEÇON EN LIGNE</strong>, 
 				comme nous l’avons vu dans précédemment.</p>
 					
-			<?php 
-				} 
-			if ($section=="mastrumado") { 
-			?>
-			<h2 id="maj">Suivi des élèves</h2>
+			<h2 id="maj" class="scrollspy">Suivi des élèves</h2>
 
 			<h3>Comment mettre à jour les informations concernant mes élèves&nbsp;?</h3>
 			
@@ -325,7 +309,7 @@ $titolo = $row["titolo"];
 				(en cliquant sur le triangle pointé vers le bas à droite du menu déroulant) puis sélectionnez la leçon que vous avez corrigée.
 				Validez vos modifications en cliquant le bouton <strong>Envoyer</strong> se trouvant à côté du nom de la leçon que vous avez modifiée.</p>	
 
-			<h3 id="arret">Que faire si l’élève n’étudie plus&nbsp;?</h3>
+			<h3 id="arret" class="scrollspy">Que faire si l’élève n’étudie plus&nbsp;?</h3>
 			
 			<p class="parto">Il est probable qu’à cause du programme télévisé particulièrement intéressant, d’une coupe de monde de football 
 				ou d’un examen à réviser, votre élève n’ait pas eu beaucoup de temps à consacrer à l’espéranto. 
@@ -340,7 +324,7 @@ $titolo = $row["titolo"];
 			<p>Lorsque vous retournerez sur le site, vous pourrez donc voir que vous avez relancé l’élève, la date de cette relance et ainsi, 
 				à la deuxième relance, vous pouvez lui rappeler que vous n’avez pas eu de ses nouvelles «&nbsp;malgré&nbsp;» une relance précédente.</p>
 
-			<h3 id="abandon">Que faire si un élève ne répond pas aux relances&nbsp;?</h3>
+			<h3 id="abandon" class="scrollspy">Que faire si un élève ne répond pas aux relances&nbsp;?</h3>
 
 			<p class="parto">En attendant après un élève qui ne répond pas, vous empêchez d’autres élèves d’avoir un correcteur. 
 				Il faudra donc penser à libérer la place de l’élève muet. Pour cela, rendez-vous sur la fiche de l’élève, et cliquez sur le bouton 
@@ -363,21 +347,12 @@ $titolo = $row["titolo"];
 				d’élèves. Si vous ne pouvez pas suivre cet élève en plus, n’hésitez pas à <a href="reago.php">contacter les administrateurs</a> pour qu’un 
 				autre correcteur puisse prendre le relais.</p>
 
-			<?php 
-				} 
-			if ($section=="demandoj") { 
-			?>
-
-			<h3 id="questions">Si vous avez d’autres questions…</h3>
+			<h3 id="demandoj" class="scrollspy">Si vous avez d’autres questions…</h3>
 
 			<p class="parto">Si vous avez d’autres questions dont vous n’avez pas trouvé la réponse dans ces pages, 
 				n’hésitez pas à <a href="reago.php">contacter les administrateurs</a>. Cela permettra également d’enrichir ce guide.</p>
 			
 			<p class="parto">Merci pour votre collaboration&nbsp;!</p>
-				
-			<?php 
-				}
-			?>
 			
 		</article>
 
@@ -388,43 +363,43 @@ $titolo = $row["titolo"];
 						<div class="collapsible-header">Les cours</div>
 						<div class="collapsible-body">
 							<ul class="collection enhavtabelo">
-								<li><a href="gvidilo.php?section=kursoj">Présentation des cours</a></li>
-								<li><a href="gvidilo.php?section=kursoj#conseils">Conseils d’apprentissage</a></li>
-								<li><a href="gvidilo.php?section=kursoj#correction">Correction des exercices</a></li>
+								<li><a href="#kursoj">Présentation des cours</a></li>
+								<li><a href="#conseils">Conseils d’apprentissage</a></li>
+								<li><a href="#correction">Correction des exercices</a></li>
 							</ul>
 						</div>
 						<div class="collapsible-header">Nouveaux élèves</div>
 						<div class="collapsible-body">
 							<ul class="collection enhavtabelo">
-								<li><a href="gvidilo.php?section=lernantoj">Combien d’élèves vais-je avoir&nbsp;?</a></li>
-								<li><a href="gvidilo.php?section=lernantoj#comment">Comment avoir de nouveaux élèves&nbsp;?</a></li>
-								<li><a href="gvidilo.php?section=lernantoj#nouveau">Comment sais-je que j’ai un nouvel élève&nbsp;?</a></li>
-								<li><a href="gvidilo.php?section=lernantoj#quoifaire">Que faire quand je reçois un nouvel élève&nbsp;?</a></li>
-								<li><a href="gvidilo.php?section=lernantoj#info">Comment avoir plus d’informations sur mes élèves&nbsp;?</a></li>
+								<li><a href="#combien">Combien d’élèves vais-je avoir&nbsp;?</a></li>
+								<li><a href="#comment">Comment avoir de nouveaux élèves&nbsp;?</a></li>
+								<li><a href="#nouveau">Comment sais-je que j’ai un nouvel élève&nbsp;?</a></li>
+								<li><a href="#quoifaire">Que faire quand je reçois un nouvel élève&nbsp;?</a></li>
+								<li><a href="#info">Comment avoir plus d’informations sur mes élèves&nbsp;?</a></li>
 							</ul>
 						</div>
 						<div class="collapsible-header">Correction des exercices</div>
 						<div class="collapsible-body">
 							<ul class="collection enhavtabelo">
-								<li><a href="gvidilo.php?section=korektado">Comment se passent les échanges avec les élèves&nbsp;?</a></li>
-								<li><a href="gvidilo.php?section=korektado#courriel">Comment corriger par courriel&nbsp;?</a></li>
-								<li><a href="gvidilo.php?section=korektado#online">Comment corriger en ligne&nbsp;?</a></li>
-								<li><a href="gvidilo.php?section=korektado#eo-fr">Dois-je écrire en français ou en espéranto&nbsp;?</a></li>
-								<li><a href="gvidilo.php?section=korektado#probleme">Que faire si je n’ai pas reçu les exercices envoyés&nbsp;?</a></li>
+								<li><a href="#echanges">Comment se passent les échanges avec les élèves&nbsp;?</a></li>
+								<li><a href="#courriel">Comment corriger par courriel&nbsp;?</a></li>
+								<li><a href="#online">Comment corriger en ligne&nbsp;?</a></li>
+								<li><a href="#eo-fr">Dois-je écrire en français ou en espéranto&nbsp;?</a></li>
+								<li><a href="#probleme">Que faire si je n’ai pas reçu les exercices envoyés&nbsp;?</a></li>
 							</ul>
 						</div>
 						<div class="collapsible-header">Suivi des élèves</div>
 						<div class="collapsible-body">
 							<ul class="collection enhavtabelo">
-								<li><a href="gvidilo.php?section=mastrumado">Comment mettre à jour les informations concernant mes élèves&nbsp;?</a></li>
-								<li><a href="gvidilo.php?section=mastrumado#arret">Que faire si l’élève n’étudie plus&nbsp;?</a></li>
-								<li><a href="gvidilo.php?section=mastrumado#abandon">Que faire si un élève ne répond pas aux relances&nbsp;?</a></li>
+								<li><a href="#maj">Comment mettre à jour les informations concernant mes élèves&nbsp;?</a></li>
+								<li><a href="#arret">Que faire si l’élève n’étudie plus&nbsp;?</a></li>
+								<li><a href="#abandon">Que faire si un élève ne répond pas aux relances&nbsp;?</a></li>
 							</ul>
 						</div>
 						<div class="collapsible-header">Autres questions</div>
 						<div class="collapsible-body">
 							<ul class="collection enhavtabelo">
-								<li><a href="gvidilo.php?section=demandoj">Si vous avez d’autres questions…</a></li>
+								<li><a href="#demandoj">Si vous avez d’autres questions…</a></li>
 							</ul>
 						</div>
 					</li>

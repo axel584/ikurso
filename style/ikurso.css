@@ -950,6 +950,9 @@ span.ikurso {
 .gvidilo aside {
 	margin-top: 2rem;
 }
+.gvidilo .collapsible-header {
+	padding: 0.5rem;
+}
 /*********************************/
 /*        pied de page           */
 /*********************************/

@@ -88,5 +88,16 @@ Voici une descriptions des tables les plus importantes :
 
 Les tables contenant les données propres à l'application (liste des leçons/exercices etc.) n'ont pas d'autoincrémente sur leur clef primaire, en revanche, les tables contenant les données générés à l'utilisation (compte utilisateur, table de jointures etc.) ont un champ id qui est indiqué en auto_increment.
 
+# Checklist à vérifier avant une mise en prod
+
+- s'assurer que le fichier kionova.php est à jour
+- récupérer le code dans le répertoire ~/ikurso/ avec un git pull
+- mettre à jour le sql de la base à partir du changelog.sql
+- copier les fichiers depuis ~/ikurso vers /arthur/sites/ikurso (avec un cp -R)
+- déplacer les issues non faite vers le milestone suivant (ou vers le backlog)
+- faire des vérifications minimales (création d'un compte, remplissage d'une leçon) (à remplacer par le lancement des tests fonctionnels en prod ?)
+- générer une release dans github (code, release, draft new release)
+- Faire un mail aux correcteurs pour leur parler des nouveautés.
+
 En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
 

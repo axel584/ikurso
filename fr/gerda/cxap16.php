@@ -155,7 +155,7 @@ include "gerdakapo.inc.php";
 				
 				<p class="parto">Ekzistas en Esperanto kvar grandaj vortklasoj (vortospecoj):</p>
 				<p><b>Substantivoj (o-vortoj)</b>, kiuj montras aĵojn: tabl<b>o</b>, knabin<b>o</b>, spegul<b>o</b>, liber<b>o</b>, am<b>o</b>, …</p>
-				<p><b>Adjectivoj (a-vortoj)</b>, kiuj montras ecojn: bel<b>a</b>, jun<b>a</b>, grand<b>a</b>, student<b>a</b>, kaŝ<b>a</b>,… </p>
+				<p><b>Adjektivoj (a-vortoj)</b>, kiuj montras ecojn: bel<b>a</b>, jun<b>a</b>, grand<b>a</b>, student<b>a</b>, kaŝ<b>a</b>,… </p>
 				<p><b>Verboj</b> (kun finaĵoj <b>-i</b>, <b>-is</b>, <b>-as</b>, <b>-os</b>, <b>-u</b>, <b>-us</b>), kiuj montras agojn aŭ situaciojn: est<b>i</b>, sci<b></b>i, rigard<b>i</b>, proksimig<b>i</b>, amikiĝ<b>i</b>, …</p>
 				<p><b>Adverboj (e-vortoj)</b>, kiuj montras manierojn: tut<b>e</b>, komprenebl<b>e</b>, verŝajn<b>e</b>, fakt<b></b>e, kaŝ<b>e</b>, … </p>
 				<p class="parto">Aliaj vortklasoj, pri kiuj ni volos paroli, estas:</p>

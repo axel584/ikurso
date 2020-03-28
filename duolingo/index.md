@@ -5,10 +5,10 @@
 
 * [Famille 1](Famille1.md)
 
-* [Quotidien] (Quotidien.md)
+* [Quotidien](Quotidien.md)
 
-* [Accusatif] (Accusatif.md)
-* [Possessif] (Possessif.md)
+* [Accusatif](Accusatif.md)
+* [Possessif](Possessif.md)
 
 
 * [Animaux 1](Animaux.md)

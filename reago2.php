@@ -18,6 +18,7 @@ if (checkEmail($_POST['sendinto'])) {
 		while ($row=$result->fetch()) { // on récupère les suivants
 		   $informistoj=$informistoj.",".$row["retadreso"];
 		}
+		$informistoj.=",".$_POST['sendinto'];
 		//$informistoj="emmanuelle@esperanto-jeunes.org";
 		$contents="<html><head><title>ikurso-reago : ".stripSlashes($_POST['temo'])."</title>\n";
 		$contents.="<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"\n>";

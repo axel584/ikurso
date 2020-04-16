@@ -24,7 +24,13 @@ $leciono_id = $row["leciono_id"];
 
 <div class="row">
 	<article class="col s12 m9 l6 offset-m1 offset-l1">
-		<h1>Détails de la leçon de <?=$studanto["enirnomo"]?></h1>
+		<h2>Détails de la leçon de <?=$studanto["enirnomo"]?>
+<?php 
+	if ($studanto["personnomo"]!="") {
+		echo "&nbsp;(".$studanto["personnomo"]." ".$studanto["familinomo"].")";
+	}
+?>		
+		</h2>
 		
 		<p class="parto"><strong>Introduction</strong></p>
 		
@@ -47,7 +53,7 @@ while ($row=$result->fetch()) {
 	echo "<strong>EXERCICE : </strong>".$row["komando"];
 	echo "</p>";
 	$ekzerco_id = $row["id"];
-	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,respondoj.respondo,respondoj.gxusta,respondoj.korekto from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo";
+	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.respondo as bona_respondo,respondoj.respondo,respondoj.gxusta,respondoj.korekto from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo";
 	$result2 = $bdd->query($query2);
 	while ($row2=$result2->fetch()) {
 		echo "<p class=\"demando\">".$row2["numero"].". ".$row2["demando"]."</p>\n";
@@ -59,7 +65,8 @@ while ($row=$result->fetch()) {
 			echo "<span style=\"color:blue\">".$row2["respondo"]."</span></div>\n";
 			echo "<div class=\"collapsible-body\"><span>";
 			echo "<p><label><input type=\"checkbox\" class=\"filled-in\" name='bonaRespondo".$row2["respondo_id"]."' />";
-      		echo "<span>bonne réponse</span></label></p>";
+      		echo "<span>bonne réponse (cochez cette case si la phrase vous semble bonne pour enrichir le corrigé type)</span></label></p>";
+			echo "<p>(corrigé type : ".$row2["bona_respondo"].")</p>";
 			echo "<textarea name='korekto".$row2["respondo_id"]."' class='trumbowyg'>".$row2["korekto"]."</textarea>\n";
 			echo "</span></div>\n";
 			echo "</li></ul>\n";
@@ -96,7 +103,7 @@ echo $komentario;
 					<span>Ne pas prévenir l'élève par mail</span>
 				</label>
 				<br />
-				<a id="registriKorektadon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono_id="<?=$leciono_id?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Sauvegarder cette correction">Sauvegarder cette correction</a>
+				<a id="registriKorektadon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 " data-kurso="<?=$kurso?>" data-leciono_id="<?=$leciono_id?>" data-leciono="<?=$leciono?>" data-studanto="<?=$studanto_id?>" data-position="top" data-delay="50" data-tooltip="Sauvegarder cette correction">Envoyer cette correction à l'élève</a>
     		</p>
 			</div>
 

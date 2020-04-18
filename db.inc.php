@@ -6,11 +6,25 @@ include "config.php";
 // Elirvaluo : referenco pri la datumbazo
 function malfermiDatumbazon () {
     global $bdd,$base,$login,$motDePasse;
-     $bdd = new PDO('mysql:host=localhost;dbname='.$base.';charset=utf8', $login, $motDePasse);
-     $bdd->query('SET lc_time_names = \'fr_FR\''); // Pour avoir les dates en français
-     // A décommenter pour rendre les erreurs sql plus parlante
-     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
+	try {
+			$bdd = new PDO('mysql:host=localhost;dbname='.$base.';charset=utf8', $login, $motDePasse);
+			$bdd->query('SET lc_time_names = \'fr_FR\''); // Pour avoir les dates en français
+			// A décommenter pour rendre les erreurs sql plus parlante
+			// $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		}
+		catch (Throwable $t)
+		{
+			echo "Connection à la base de données impossible. Merci de contacter l'administrateur : axel.rousseau@esperanto-france.org";
+			exit(0);
+		}
+		catch (Exception $e)
+		{
+			// Executed only in PHP 5, will not be reached in PHP 7
+			echo "Connection à la base de données impossible. Merci de contacter l'administrateur : axel.rousseau@esperanto-france.org";
+			exit(0);
+		}
+		
+	}
 
 
 // tiu funkcio malfermas la datumbazan ligon (neniam uzita, la datumbazo estas malfermita je la fino de la PHP-pagxo)

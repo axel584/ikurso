@@ -13,7 +13,7 @@ $studanto = apartigiPersonon($studanto_id);
 include "pagxkapo.inc.php";
 
 // on recupere les informations sur la leçon (intro et conclusion)
-$query = "SELECT personoj_lecionoj.leciono_id,komentario,enkonduko,konkludo  FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id= ".$studanto_id." and numero=".$leciono;
+$query = "SELECT personoj_lecionoj.leciono_id,komentario,enkonduko,konkludo  FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id= ".$studanto_id." and numero=".$leciono." and kurso='".$kurso."'";
 $result = $bdd->query($query);
 $row=$result->fetch();
 $komentario = $row["komentario"];

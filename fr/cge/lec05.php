@@ -54,7 +54,7 @@ include "dlekkapo.inc.php";
 				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/je-via-sano.mp3" class="sm2_button"></a><span class="eo">Je via sano!</span></p><p class="col s6">À votre santé&nbsp;!</p>
 				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/same-al-vi.mp3" class="sm2_button"></a><span class="eo">Same al vi!</span></p><p class="col s6">Pareillement&nbsp;!</p>
 				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/dankon.mp3" class="sm2_button"></a><span class="eo">Dankon!</span></p><p class="col s6">Merci&nbsp;!</p>
-				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/ne-dankinde.mp3" class="sm2_button"></a><span class="eo">Ne dankinde!</span></p><p class="col s6">Pas de quoi&nbsp;!</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/ne-dankinde.mp3" class="sm2_button"></a><span class="eo">Ne dankinde!</span></p><p class="col s6">Pas de quoi&nbsp;!&nbsp;/&nbsp;de rien&nbsp;!</p>
 			</div>
 		</fieldset>
 

@@ -66,7 +66,8 @@ function konvX($buff) {
 
 function normaligita($respondo) {
 	$normaligita = strtolower(konvX($respondo));
-	$trans = array("." => "", "," => "", "'" => "","!" => "","?" => "",":" => "",";" => "","-"=>""); // liste des caractères à supprimer pour la comparaison
+	$trans = array("." => "", "," => "", "'" => "","!" => "","?" => "",":" => "",";" => "","-"=>"",json_decode('"\u2008"')=>' '); // liste des caractères à supprimer pour la comparaison
+	// l'utilisation de json_decode('"\u2008"') est pratique pour convertir des caractères esotérique depuis l'unicode (2008 est un espace de ponctuation...)
 	$normaligita = trim(strtr($normaligita, $trans));
 	$normaligita = preg_replace("/\s+/", " ", $normaligita); // replace un nombre d'espace supérieur à 1 par un espace simple
 	return $normaligita;
@@ -77,7 +78,19 @@ function kontroliRespondon($lernantaRespondo,$bonaRespondo) {
 	//return preg_match("/^".normaligita($bonaRespondo)."$/",normaligita($lernantaRespondo));
 	// attention, il ne faut pas utiliser != mais !==
 	//echo '[Memory:'.memory_get_usage().'@'.__FILE__.':'.__LINE__.']';
+	//echo "bonne reponse :<br/>|".normaligita($bonaRespondo)."|<br/>";
+	//for ( $pos=0; $pos < strlen(normaligita($bonaRespondo)); $pos ++ ) {
+	//	$byte = substr(normaligita($bonaRespondo), $pos);
+	//	echo 'Octet ' . $pos . ' de $str a comme valeur ' . ord($byte) . PHP_EOL;
+	//}
+	//echo "reponse de l'eleve :<br/>|".normaligita($lernantaRespondo)."|<br/>";
+	//	for ( $pos=0; $pos < strlen(normaligita($lernantaRespondo)); $pos ++ ) {
+	//	$byte = substr(normaligita($lernantaRespondo), $pos);
+	//	echo 'Octet ' . $pos . ' de $str a comme valeur ' . ord($byte) . PHP_EOL;
+	//}
+	//echo "comparaison :".strcasecmp($bonaRespondo,$lernantaRespondo)."<br/>";
 	if (strpos($bonaRespondo,"|")!==false) {
+		
 		return kontroliRespondon($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliRespondon($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
 	} else {
 		return normaligita($lernantaRespondo)==normaligita($bonaRespondo);	

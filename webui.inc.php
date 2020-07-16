@@ -759,7 +759,7 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 		if ($leciono<$row["numero"]) {
 			$classe = 'nova';
 		}
-		echo "<li id='lec".sprintf('%02d',$row["numero"])."' class='".$classe."'><a href='".$row["retpagxo"]."'>".$row["numero"]."</a></li>";
+		echo "<li id='lec".sprintf('%02d',$row["numero"])."' class='".$classe."'><a href='".$chemin.$row["retpagxo"]."'>".$row["numero"]."</a></li>";
 	}
 	if ($kurso=='GR') {
 		if ($leciono==90) {

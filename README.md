@@ -101,5 +101,87 @@ Les tables contenant les données propres à l'application (liste des leçons/ex
 - générer une release dans github (code, release, draft new release)
 - Faire un mail aux correcteurs pour leur parler des nouveautés.
 
+# Procédure d'installation 
+
+
+Base de données
+---------------
+
+Création d'un utilisateur *ikurso* et de la base de données *ikurso_database* :
+```sql
+CREATE USER 'ikurso'@'localhost' IDENTIFIED BY 'password';
+CREATE DATABASE ikurso_database;
+GRANT ALL ON ikurso_database.* TO 'ikurso'@'localhost';
+FLUSH PRIVILEGES;
+exit
+```
+
+Insertion dans la base de données:
+```sh
+mariadb -u ikurso -p ikurso_database < sql/create-database.sql
+mariadb -u ikurso -p ikurso_database < sql/create-data.sql
+mariadb -u ikurso -p ikurso_database < sql/create-data-test.sql
+```
+
+Apache : hôte virtuel ikurso.localhost
+--------------------------------------
+
+```sh
+ln -s /chemin/absolu/vers/ikurso /var/www/
+chown $USER:www-data /var/www/ikurso
+```
+
+```sh
+cat > /etc/apache2/sites-available/ikurso.conf <<EOF 
+<VirtualHost *:80>
+    ServerName ikurso.localhost
+    DocumentRoot "/var/www/ikurso"
+    <Directory "/var/www/ikurso">
+        Options +FollowSymLinks +Indexes
+        AllowOverride all
+        Require all granted
+    </Directory>
+    ErrorLog /var/log/apache2/error.ikurso.log
+    CustomLog /var/log/apache2/access.ikurso.log combined
+</VirtualHost>
+EOF
+```
+
+```sh
+a2ensite ikurso 
+systemctl reload apache2
+```
+
+Config
+------
+
+À la racine, créer :
+
+- config.php:
+```php
+<?php
+$base = "ikurso_database";
+$login = "ikurso";
+$motDePasse = "password";
+$urlracine = "http://ikurso.127.0.0.1";
+$cheminAbsolu = "/ikurso/";
+$hostSmtp = "smtp.free.fr";
+$portSmtp = 587;
+$hostSmtpSES = "email-smtp.eu-west-1.amazonaws.com";
+$portSmtpSES = 587;
+$userSES = "USER_SES";
+$passwordSES = "mot de passe Amazon SES";
+$milestone = 1;
+?>
+```
+
+- config.js:
+```
+$urlracine = "http://ikurso.localhost";
+$cheminAbsolu = "/ikurso/";
+```
+
+Installer php Pear / Mail : https://pear.php.net/package/Mail
+
 En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
 

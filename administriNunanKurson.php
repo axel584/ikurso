@@ -120,42 +120,6 @@ if ($row['korektanto']!="") {
 
 	}
 }
-// se la lernanto jam faris taskojn de Gerda aux DLEK
-// preni liajn taskojn el eraraj_lecionoj kaj sendi ilin al lia nova korektanto
-if (($nunleciono==NULL) and ($kurso=='GR'||$kurso=='CG'||$kurso=='3N')){
-	debug ("l'élève a déjà fait une leçon : il faut lui envoyer");
-	if ($kurso=="GR") {
-		$pattern="gerda%";
-	}
-	if ($kurso=="CG") {
-		$pattern="lec%";	
-	}
-	if ($kurso=="3N") {
-		$pattern="3a nivela kurso leciono%";
-	}
-	$query = "select * from eraraj_lecionoj where persono_id=$celpersono_id and kurso = '$kurso'";
-	$result = $bdd->query($query) or die ( "SELECT : Invalid query :".$query);
-	while($row = $result->fetch()) {
-		$subjekto=$row["subjekto"];
-		$fonto=$row["fonto"];
-		$korektantaretadreso=$korektantinformoj["retadreso"];
-		// ancien header
-		// $mesagxkapo="MIME-Version: 1.0\n";
-		// $mesagxkapo.="Content-type: text/html;charset=utf-8\n";
-		// $mesagxkapo.="From: ikurso <cours-esperanto@esperanto-jeunes.org>\n";
-		// $mesagxkapo.="Reply-To: ".$celpersono["enirnomo"]." <".$celpersono["retadreso"].">\n";
-		// $mesagxkapo.="Cc: ".$celpersono["enirnomo"]." <".$celpersono["retadreso"].">\n";
-		// $mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
-		mailViaSmtp($korektantaretadreso.",".$celpersono["enirnomo"]." <".$celpersono["retadreso"].">",$celpersono["retadreso"],$subjekto,stripslashes($fonto));
-		// gxisdatigi liajn datumojn en nuna_kurso
-		if ($kurso=="GR"){$nunleciono=substr($subjekto,10,2);}
-		else if ($kurso=="3N"){$nunleciono=substr($subjekto,8,2);}
-		else if ($kurso=="CG"){$nunleciono=substr($subjekto,3,2);}
-		else {$nunleciono=1;}
-		$query = "update nuna_kurso set nunleciono=$nunleciono,stato='K',lastdato=CURDATE() where studanto=$celpersono_id and (stato='N' or stato='K') and kurso='$kurso'";
-		$bdd->exec($query);
-	}
-}
 header("Location:administri.php?celpersono_id=$celpersono_id&validi=jes");
 
 ?>

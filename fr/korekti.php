@@ -368,13 +368,6 @@ if ($kurso!="KE") {
 		$result2 = $bdd->query($query2);
 		$row2 = $result2->fetch();
 		$korektantaretadreso=$row2["retadreso"];
-		// $mesagxkapo="MIME-Version: 1.0\n";
-		// $mesagxkapo.="Content-type: text/html;charset=utf-8\n";
-		// $mesagxkapo.="From: ikurso <ikurso@esperanto-france.org>\n";
-		// $mesagxkapo.="Return-Path: <ikurso@esperanto-france.org>\n";
-		// $mesagxkapo.="Reply-To: ".$persono['enirnomo']." <".$persono['retadreso'].">\n";
-		// $mesagxkapo.="Cc: ".$persono['enirnomo']." <".$persono['retadreso'].">\n";
-		// $mesagxkapo.="Date: ".date("D, j M Y H:i:s").chr(13);
 		($kurso=="GR")?($objekto="gerda ".substr($subjekto,0,6)):($objekto=substr($subjekto,0,5));
 		$objekto.=" de ".$persono['enirnomo'];
 		mailViaSmtp($korektantaretadreso,$persono["retadreso"],$objekto,stripslashes($fonto));
@@ -384,13 +377,12 @@ if ($kurso!="KE") {
 		$kazo=1; // A déjà un correcteur
 		protokolo($persono_id,"TASKO SENDITA","$objekto");
 	} else {
+		// TODO : voir par où passe un élève qui n'a pas de correcteur.... 
 		// l'eleve n'a pas encore de correcteur
 		// stocker la lecon dans eraraj_lecionoj
 		// et mettre a jour l'etat dans personoj pour mettre l'eleve en attente de correcteur	
 		$kazo=2; // n'a pas encore de correcteur
 		($kurso=="GR")?($objekto="gerda ".substr($subjekto,0,6)):($objekto=substr($subjekto,0,5));
-		$query = "insert into eraraj_lecionoj(persono_id,enirnomo,dato,subjekto,fonto) values (".$persono_id.",'".$persono["enirnomo"]."',now(),'".$objekto."','".addslashes($fonto)."')";
-		$result = $bdd->exec($query);
 		$query2 = "update personoj set rajtoj='P',kurso='$kurso' where id=".$persono_id;
 		$result = $bdd->exec($query2);
 		($kurso=="GR")?($objekto="gerda ".substr($subjekto,0,6)):($objekto=substr($subjekto,0,5));

@@ -99,14 +99,6 @@ $fonto .= "<span style=\"color:blue\">".$commentaire_pour_correcteur."</span></p
 $fonto.="</body></html>";
 $fonto.="</body></html>";
 
-
-
-// on sauvegarde en base la première leçon, mais ce n'est pas vraiment nécessaire
-// TODO : à supprimer les deux lignes suivantes
-$query = "insert into eraraj_lecionoj (persono_id,enirnomo,dato,subjekto,fonto,leciono,kurso) values ('".$persono_id."','".$persono["enirnomo"]."',now(),'".$sujetMail."','".addslashes($fonto)."','".$leciono."','".$kurso."')";
-$bdd->exec($query);
-
-
 // indiquer que la dernière section a été faite
 $query ="select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
 $result = $bdd->query($query);

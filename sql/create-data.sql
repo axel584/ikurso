@@ -2853,3 +2853,30 @@ INSERT INTO vortoj (id, eo, fr, tipo, lecionero_id) VALUES(1403, 'kastelo', 'ch�
 INSERT INTO vortoj (id, eo, fr, tipo, lecionero_id) VALUES(1404, 'marŝi|paŝi', 'marcher', 'verbe', 57);
 INSERT INTO vortoj (id, eo, fr, tipo, lecionero_id) VALUES(1405, 'ĉapelo', 'chapeau', 'nom', 57);
 INSERT INTO vortoj (id, eo, fr, tipo, lecionero_id) VALUES(1406, 'vojo', 'chemin, route', 'nom', 57);
+
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(1,1,'Les méthodes d''Espéranto-France');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(2,2,'Manuels, dictionnaires, grammaires');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(3,3,'Lectures faciles');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(4,4,'B.D., livres illustrés');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(5,5,'Quelques livres en français...');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(6,6,'Éducation');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(7,7,'Espérantologie, interlinguistique');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(8,8,'Le mouvement espéranto');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(9,9,'Romans, nouvelles, récits (traductions)');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(10,10,'Littérature originale en espéranto');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(11,11,'Poésie');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(12,12,'Théâtre');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(13,13,'Littérature française en espéranto');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(14,14,'Les inclassables');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(15,15,'Anthologies');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(16,16,'Sciences et techniques');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(17,17,'Philosophie');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(18,18,'Géographie-Voyages');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(19,19,'Histoire-Politique');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(20,20,'Religion');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(21,21,'Jeux et sport');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(22,22,'Disques, CD, cassettes, vidéos');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(23,23,'Informer et s''informer');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(24,24,'Petit matériel');
+INSERT INTO varkategorioj(id,ordo,kategorio) VALUES(25,25,'Vêtements');
+

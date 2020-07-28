@@ -207,7 +207,6 @@ def convertTable(table,clef,colonnes) :
 
 convertTable("personoj","id",['enirnomo','pasvorto','personnomo','familinomo','adreso1','adreso2','urbo','kialo'])
 convertTable("komentoj","id",['teksto'])
-convertTable("eraraj_lecionoj","id",['enirnomo','fonto']); 
 convertTable("komentoj","id",['teksto']); 
 convertTable("vikio","name",['text']);
 

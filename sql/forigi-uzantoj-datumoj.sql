@@ -1,5 +1,4 @@
 TRUNCATE personoj_lecioneroj;
-TRUNCATE eraraj_lecionoj;
 TRUNCATE komentoj;
 TRUNCATE korektebla_kurso;
 TRUNCATE nuna_kurso;

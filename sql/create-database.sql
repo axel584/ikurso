@@ -26,19 +26,6 @@ CREATE TABLE ekzercoj (
   PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-CREATE TABLE eraraj_lecionoj (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `persono_id` int(11) DEFAULT NULL,
-  `enirnomo` varchar(32) DEFAULT NULL,
-  `dato` date DEFAULT NULL,
-  `videbla` enum('J','N') DEFAULT 'J',
-  `subjekto` varchar(128) DEFAULT NULL,
-  `fonto` mediumtext,
-  `leciono` int(11) DEFAULT NULL,
-  `kurso` varchar(2) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
 CREATE TABLE `eventoj` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `persono_id` int(11) NOT NULL,
@@ -243,6 +230,29 @@ CREATE TABLE takso_leciono (
   `intereso` int(11) NOT NULL,
   `malfacileco` int(11) NOT NULL,
   `komento` text NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `varoj` (
+  `id` int(11) NOT NULL  AUTO_INCREMENT,
+  `arthur_id` int(11) NOT NULL,
+  `varkategorio_id` int(11) NOT NULL,
+  `auxtoro` text COLLATE utf8_unicode_ci NOT NULL,
+  `pezo` int(11) NOT NULL,
+  `prezo` decimal(10,2) NOT NULL,
+  `stoko` int(11) NOT NULL,
+  `vendstatistiko` int(11) NOT NULL,
+  `bildo` text COLLATE utf8_unicode_ci NOT NULL,
+  `priskribo` text COLLATE utf8_unicode_ci NOT NULL,
+  `titolo` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `varkategorioj` (
+  `id` int(11) NOT NULL  AUTO_INCREMENT,
+  `ordo` int(11) NOT NULL,
+  `kategorio` text NOT NULL,
   PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

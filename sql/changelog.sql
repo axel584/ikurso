@@ -4,7 +4,6 @@
 delete from personoj where lingvo!='fr';
 
 ALTER TABLE demandaro CONVERT TO CHARACTER SET utf8;
-ALTER TABLE eraraj_lecionoj CONVERT TO CHARACTER SET utf8;
 
 -- suppression des tables mw_
 DROP TABLE `mw_archive`, `mw_categorylinks`, `mw_groups`, `mw_hitcounter`, `mw_image`, `mw_imagelinks`, `mw_interwiki`, `mw_ipblocks`, `mw_logging`, `mw_math`, `mw_objectcache`, `mw_oldimage`, `mw_page`, `mw_pagelinks`, `mw_querycache`, `mw_recentchanges`, `mw_revision`, `mw_searchindex`, `mw_site_stats`, `mw_text`, `mw_user`, `mw_user_groups`, `mw_user_rights`, `mw_validate`, `mw_watchlist`;
@@ -509,7 +508,6 @@ INSERT INTO `respondoj` (`id`, `dato`, `persono_id`, `lecionero_id`, `kodo`, `de
 CREATE TABLE `vortoj` ( `id` INT NOT NULL AUTO_INCREMENT , `eo` VARCHAR(128) NOT NULL , `fr` VARCHAR(128) NOT NULL ,`tipo` ENUM('adj','adv','conjonction','nom','nombre','phrase','pronom','préposition','verbe') NULL , `lecionero_id` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB  CHARSET=utf8 COLLATE utf8_general_ci;
 CREATE TABLE `personoj_vortoj` ( `id` INT NOT NULL AUTO_INCREMENT , `persono_id` INT NOT NULL , `vorto_id` INT NOT NULL , `nombrilo` INT NOT NULL , `venontaFojo` DATETIME NOT NULL ,PRIMARY KEY (`id`)) ENGINE = InnoDB  CHARSET=utf8 COLLATE utf8_general_ci;
 
-ALTER TABLE  `eraraj_lecionoj` ADD  `leciono` INT NULL , ADD  `kurso` VARCHAR( 2 ) NULL ;
 -- penser à charger les mots qui se trouvent dans le google doc
 
 -- passage en V11

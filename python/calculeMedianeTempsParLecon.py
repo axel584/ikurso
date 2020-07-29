@@ -29,12 +29,13 @@ def arrondi(secondes) :
 def mediane(tableau) :
     if len(tableau)==0 :
         return
-    indice_median = round(len(tableau)/2)
+    indice_median = int(round(len(tableau)/2))
     if indice_median==0 :
         return
     tableau.sort()    
     #print(tableau)
-    return tableau[indice_median-1]    
+    #print(indice_median)
+    return tableau[indice_median-1]        
 
 cursorKurso.execute("SELECT id,kodo FROM kursoj")
 for id_kurso,kodo_kurso in cursorKurso.fetchall() :

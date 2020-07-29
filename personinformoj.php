@@ -85,21 +85,25 @@ function afficheAssociationNationale($pays) {
 
 function afficheAssociationFrancaise($idArthur) {
 	$json_url = "https://esperanto-france.org/api/personne/".$idArthur;
+	//echo $json_url;
 	$json = file_get_contents($json_url);
 	$data = json_decode($json, TRUE);
 	echo "<span class='title'>".$data["nom"]."</span><br/>";
-	foreach ($data["adresse"] as $adresse){
-		afficheAdresse($adresse);
+	if (isset($adresse)) {
+		foreach ($data["adresse"] as $adresse){
+			afficheAdresse($adresse);
+		}
 	}
-	foreach ($data["internet"] as $url){
-		afficheUrl($url);
-	}	
-	foreach ($data["email"] as $email){
-		afficheEmail($email);
-	}	
-	// echo "<pre>";
-	// print_r($data);
-	// echo "</pre>";
+	if (isset($internet)) {
+		foreach ($data["internet"] as $url){
+			afficheUrl($url);
+		}	
+	}
+	if (isset($email)) {
+		foreach ($data["email"] as $email){
+			afficheEmail($email);
+		}	
+	}
 }
 
 function afficheInformationNationale() {

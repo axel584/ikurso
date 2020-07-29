@@ -102,6 +102,9 @@
 	if ($erarkodo==24) {
 		echo "M.toast({html: 'injection XSS détectée !'});\n";
 	}
+	if ($erarkodo==25) {
+		echo "M.toast({html: 'MESSAGE SPAM détecté !'});\n";
+	}	
 	
 
 ?>

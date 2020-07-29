@@ -52,6 +52,10 @@ include "pagxkapo.inc.php";
 					    </div>
 	
 						<div class="input-field col s12">
+							<p style="display: none;">
+								<label for="nobot">Veuillez laisser ce champ vide&nbsp;:</label>
+								<input type="text" class="text" name="nobot" id="nobot" value="" size="10">
+							</p>
 							<textarea id="komento" name="komento" class="materialize-textarea"></textarea>
 							<label for="komento"><?php if (isset($_SESSION["komento"])) {echo $_SESSION["komento"];} else echo "Votre commentaire, question, remarque…"; ?></label>
 						</div>

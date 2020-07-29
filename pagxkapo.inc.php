@@ -1,5 +1,4 @@
  <?php
-$milestone = "21";
 //include_once $vojo."util.php";
 if (!isset($vojo)) { $vojo="";}
 // attention, cette variable est également calculé dans util.php

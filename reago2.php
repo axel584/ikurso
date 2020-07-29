@@ -1,13 +1,18 @@
 <?php
 include "util.php";
 $pagxtitolo="Envoi de message";
-include "pagxkapo.inc.php";
+
 
 
 $mesagxkapo="MIME-Version: 1.0\n";
 $mesagxkapo.="Content-type:text/html;charset=utf-8\n";			
 $mesagxkapo.="From: Ikurso <ikurso@esperanto-france.org>\n";
 if (checkEmail($_POST['sendinto'])) {
+	if ($_POST["nobot"]) {
+		// le champ "nobot" est rempli, c'est qu'un robot a rempli automatiquement tous les champs
+		protokolo(0,"SPAM",$_POST["komento"]);
+		header("Location:reago.php?erarkodo=25");
+	}
 	if ($_POST["komento"]) {
 		$mesagxkapo.="Cc: <".$_POST['sendinto'].">\n";
 		$mesagxkapo.="Date: ".date("D, j M Y H:i:s ").chr(13);
@@ -19,7 +24,7 @@ if (checkEmail($_POST['sendinto'])) {
 		   $informistoj=$informistoj.",".$row["retadreso"];
 		}
 		$informistoj.=",".$_POST['sendinto'];
-		//$informistoj="emmanuelle@esperanto-jeunes.org";
+		$informistoj="axel584@gmail.com";
 		$contents="<html><head><title>ikurso-reago : ".stripSlashes($_POST['temo'])."</title>\n";
 		$contents.="<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"\n>";
 		$contents.="<style>body{font-family:\"Courier New\", Courier, sans-serif;font-size:small}</style>\n";
@@ -31,6 +36,8 @@ if (checkEmail($_POST['sendinto'])) {
 		$objekto="ikurso-reago : ".stripSlashes($_POST['temo']);
 		//mail($informistoj,$objekto,$contents,$mesagxkapo);
 		mailViaSES($informistoj,$objekto,$contents);
+		// on affiche l'entete
+		include "pagxkapo.inc.php";
 		?>
 		<div class="row">
 		<article class="col s12 m10 l7 offset-m1 offset-l2">

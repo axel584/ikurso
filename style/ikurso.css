@@ -271,7 +271,9 @@ article p {
 	font-weight: 300;
 	line-height: 160%;
 }
-
+article.korektado p {
+	line-height: 120%;
+}
 aside {
 	padding-right: 5%;
 	margin-top: 6rem;

@@ -1,7 +1,7 @@
 <?php
 include "../util.php";
-$identigilo=isset($_GET['identigilo'])?$_GET['identigilo']:"";
-$pasvorto=isset($_GET['pasvorto'])?stripslashes($_GET['pasvorto']):"";
+$identigilo=isset($_POST['identigilo'])?$_POST['identigilo']:"";
+$pasvorto=isset($_POST['pasvorto'])?stripslashes($_POST['pasvorto']):"";
 
 // echo $pasvorto;
 // echo "::";

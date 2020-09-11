@@ -238,7 +238,7 @@ $( "#serchi_protokolon_button").click(function() {
   		$("#connection_button").addClass("disabled");
   		$.ajax({
        		url : $cheminAbsolu+'ajax/eniri.php',
-       		type : 'GET',
+       		type : 'POST',
        		dataType : 'json',
        		data : 'identigilo='+$( "#eniri_identigilo" ).val()+"&pasvorto="+$( "#eniri_pasvorto" ).val(),
        		success : function(reponse, statut){ 
@@ -270,9 +270,10 @@ $( "#serchi_protokolon_button").click(function() {
 
   	$( "#inscription_button" ).click(function() {
   		$("#inscription_button").addClass("disabled");
+		
   		$.ajax({
        		url : $cheminAbsolu+'ajax/aligxi.php',
-       		type : 'GET',
+       		type : 'POST',
        		dataType : 'json',
        		data : 'identigilo='+$( "#aligxi_identigilo" ).val()+"&pasvorto="+$( "#aligxi_pasvorto" ).val()+"&retadreso="+$("#aligxi_retadreso").val(),
        		success : function(reponse, statut){ 

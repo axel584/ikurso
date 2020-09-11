@@ -1,9 +1,9 @@
 <?php
 
 include "../util.php";
-$retadreso=isset($_GET['retadreso'])?$_GET['retadreso']:"";
-$identigilo=isset($_GET['identigilo'])?$_GET['identigilo']:"";
-$pasvorto=isset($_GET['pasvorto'])?stripslashes($_GET['pasvorto']):"";
+$retadreso=isset($_POST['retadreso'])?$_POST['retadreso']:"";
+$identigilo=isset($_POST['identigilo'])?$_POST['identigilo']:"";
+$pasvorto=isset($_POST['pasvorto'])?stripslashes($_POST['pasvorto']):"";
 
 //echo addslashes($pasvorto);
 //echo "::";

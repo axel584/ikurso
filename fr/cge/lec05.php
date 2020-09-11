@@ -219,7 +219,7 @@ include "dlekkapo.inc.php";
 		<p class="parto">Les corrélatifs en <b>-OM</b> (quantité) sont souvent suivi par la préposition <span class="eo">da</span>&nbsp;:</p>
 		<div class="row">
 			<p class="col s6"><span class="eo"><b>Kiom da</b> biskvitoj vi deziras?</span></p><p class="col s6"><b>Combien de</b> biscuits veux-tu&nbsp;?</p>
-			<p class="col s6"><span class="eo">Mie deziras <b>neniom da</b> ili!</span></p><p class="col s6">Je n’en veux <b>aucun</b>.</p>
+			<p class="col s6"><span class="eo">Mi deziras <b>neniom da</b> ili!</span></p><p class="col s6">Je n’en veux <b>aucun</b>.</p>
 			
 			<p class="col s6"><span class="eo">Mi jam manĝis <b>tiom da</b> ili!</span></p><p class="col s6">J’<b>en</b> ai déjà <b>tellement</b> mangé&nbsp;!</p>
 		</div>

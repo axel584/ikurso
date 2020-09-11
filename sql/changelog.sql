@@ -2463,3 +2463,11 @@ UPDATE `ekzercoj` SET `komando_detalo` = 'Cet exercice permet de vérifier si vo
 ALTER TABLE `personoj_lecionoj` ADD `enkonduko` TEXT NULL AFTER `komentario`, ADD `konkludo` TEXT NULL AFTER `enkonduko`;
 ALTER TABLE `respondoj` ADD `korekto` TEXT NULL AFTER `gxusta`;
 ALTER TABLE `personoj_lecionoj` ADD `korektita` TINYINT(1) NOT NULL DEFAULT '0' AFTER `konkludo`;
+
+--------------------------------
+-- Passage en V22
+--------------------------------
+--- modif exercice leçon 4
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (NULL, '17', 'ekz04_14', '14', 'Petro, la filo de Fatima, ŝatas gitari. Maria, lia juna fratino, preferas promeni bicikle.', 'Petro, le fils de Fatima, aime jouer de la guitare. Maria, sa soeur, préfère se promener à bicyclette.', 'petro le fils de fatima aime jouer de la guitare Maria sa soeur prefère se promener à bicyclette', '', '0', '0');
+UPDATE `ekzerceroj` SET `forigita` = '1' WHERE `ekzerceroj`.`id` = 84;
+

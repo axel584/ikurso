@@ -514,8 +514,7 @@ include "dlekkapo.inc.php";
 			<div class="vortlisto">
 				<p>Simeono estas la edzo de Fatima. Li amas ŝin. Li, la edzino kaj la infanoj loĝas en Eŭropo, en granda domo.</p>
 				<p>Fatima deziras aĉeti novajn ŝuojn al la infanoj.</p>
-				<p>Petro, la filo de Fatima, kolektas poŝtmarkojn. Maria, lia fratino, promenas bicikle.</p>
-				<p>La infanoj kuras al la lernejo, kaj en la lernejo ili skribos la novan lecionon.</p>
+				<p>Petro, la filo de Fatima, ŝatas gitari. Maria, lia juna fratino, preferas promeni bicikle.</p>
 				<p>Simeono atendas en la butiko. Li jam havas du ovojn, sed li deziras aĉeti sandviĉon. Li manĝos ilin vespere.</p>
 			</div>
 			<p>Dans l’exercice page suivante, vous allez maintenant traduire ces phrases en français.</p>

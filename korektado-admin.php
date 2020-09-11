@@ -16,8 +16,9 @@ $titolo = $row["titolo"];
 ?>
 
 	<div class="row">
-		<article class="col s12 m9 l6 offset-m1 offset-l1">
-			<h1><?=$titolo?></h1>
+		<article class="col s12 m9 l6 offset-m1 offset-l1 korektado">
+			<h1>Réponses des élèves</h1>
+			<h2><?=$titolo?></h2>
 
 <?php
 
@@ -32,7 +33,7 @@ while ($row=$result->fetch()) {
 	// 	print "<h3>".$komando."</h3>";
 	// }
 	$ekzerceroj_id= $row["id"];
-	echo "<p>".$row["numero"]." ".$row["demando"]."<br>\n";
+	echo "<p>".$row["numero"].". ".$row["demando"]."<br>\n";
 	// on va chercher la bonne réponse en base :
 	$query2="SELECT respondo,normaligita FROM ekzerceroj where id='".$ekzerceroj_id."'";
 	$result2 = $bdd->query($query2);
@@ -50,9 +51,9 @@ while ($row=$result->fetch()) {
 		}
 		$lernantaRespondo=$row2["normaligita"];
 		if (kontroliRespondon($lernantaRespondo,$bonaRespondo)) {
-			echo "<span style=\"color:green\">".$row2["normaligita"]." (".$taux." %)</span></p><br/>";
+			echo "<p><span style=\"color:green\">".$row2["normaligita"]." (".$taux." %)</span></p>";
 		} else {
-			echo "<span style=\"color:blue\">".$row2["normaligita"]." (".$taux." %)</span></p><br/>";
+			echo "<p><span style=\"color:blue\">".$row2["normaligita"]." (".$taux." %)</span></p>";
 		}
 	}
 }

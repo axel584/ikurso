@@ -48,32 +48,22 @@
 					<p>Il existe différents outils permettant de taper les lettres accentuées au clavier. Nous en listons ici
 					quelques-uns parmi les plus répandus et les plus commodes à installer et utiliser.</p>
 					
+					<h3>Claviers espéranto pour Windows</h3>
+					
 					<ul class="collapsible" data-collapsible="accordion">
 						<li>
 							<div class="collapsible-header"><i class="material-icons primaire-texte texte-clair">keyboard_arrow_down</i>Clavier étendu 1.7 pour Windows</div>
 							<div class="collapsible-body">
 								<p>Cet outil est proposé par Michael Langlois. Le <em>clavier étendu</em> permet de taper directement
 								au clavier non seulement les caractères accentués de l'espéranto, mais également toutes sortes de
-								caractères accentués.</p>
-								<p>Dernière mise à jour : version 1.7, le 23 juillet 2017</p>
+								caractères accentués. (Dernière mise à jour : version 1.7, le 23 juillet 2017)</p>
 								<p>Pour plus d'informations sur l'installation et l'utilisation de ce clavier, voir sur le site de
 								Michael Langlois : 
 								<a href="https://michaellanglois.fr/fr/it/clavier-etendu-francais-azerty-1-7-windows" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Clavier étendu 1.7 Windows (dernière mise à jour&nbsp;: 23 juillet 2017)</a>.</p>
 							</div>
 						</li>
 						<li>
-							<div class="collapsible-header"><i class="material-icons primaire-texte texte-clair">keyboard_arrow_down</i>Clavier étendu 1.7 pour Mac OSX (dernière mise à jour&nbsp;: 23 juillet 2017)</div>
-							<div class="collapsible-body">
-								<p>Nous vous conseillons d’installer le <em>clavier étendu</em> de Michael Langlois. 
-									Une fois installé, il est facile de basculer du clavier français au clavier espéranto. 
-									Avec le clavier espéranto, il suffit par exemple de taper ^ puis c pour obtenir un ĉ, ou ù 
-									puis u pour obtenir un ŭ.</p>
-								<p>Pour installer et utiliser ce clavier étendu, voir sur le site de Michael Langlois :
-									<a href="https://michaellanglois.fr/fr/it/clavier-etendu-francais-azerty-1-7-mac" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Clavier français étendu 1.7 pour Mac</a>.</p>
-							</div>
-						</li>
-						<li>
-							<div class="collapsible-header"><i class="material-icons primaire-texte texte-clair">keyboard_arrow_down</i>Tajpi&nbsp;: clavier Espéranto pour Windows</div>
+							<div class="collapsible-header"><i class="material-icons primaire-texte texte-clair">keyboard_arrow_down</i>Tajpi</div>
 							<div class="collapsible-body">
 								<p>Tajpi est un logiciel libre distribué sous la licence GNU 
 									<a href="http://www.gnu.org/copyleft/gpl.html">GPL</a> version 3. 
@@ -90,6 +80,52 @@
 								<p>Notes : les explications sont données sur le site en espéranto. Des explications en anglais sont également disponibles au format <i>chm</i>.</p>
 							</div>
 						</li>
+					</ul>
+					
+					<h3>Claviers espéranto pour Mac</h3>
+					<ul class="collapsible" data-collapsible="accordion">
+						<li>
+							<div class="collapsible-header"><i class="material-icons primaire-texte texte-clair">keyboard_arrow_down</i>Clavier français-espéranto pour Mac</div>
+							<div class="collapsible-body">
+								<p>Nous vous recommandons ce clavier mis au point par <a href="https://www.linguaforce.com/francais/">Linguaforce</a> : il permet de taper 
+								en espéranto et en français avec le même clavier. <br />
+								Une fois ce clavier installé, il vous suffit de taper l‘accent circonflexe avant c, g, h, j ou s 
+								pour obtenir ĉ, ĝ, ĥ, ĵ ou ŝ. Vous obtiendrez un ŭ en tapant ne même temps les touches <i>option</i> 
+								et circonflexe puis la touche u. </p>
+								<p>Pour installer ce clavier&nbsp;:<br />
+								<ul class="sublisto">
+									<li>Téléchargez
+									<a href="https://ikurso.esperanto-france.org/doc/ClavierFrancaisEsperantoMacOSX1.0.zip">ClavierFrancaisEsperantoMacOSX1.0.zip</a> puis décompressez-le. <br />
+									<strong>⇨</strong> Vous obtiendrez les fichiers <strong>FrenchEsperanto.keylayout</strong> et <strong>FrenchEsperanto.icns</strong>.</li>
+									<li class=>Dans le menu du Finder sélectionnez <strong>Aller</strong> > <strong>Aller au dossier</strong> puis dans la fenêtre de dialogue, tapez <strong>/Bibliothèque/Keyboard Layouts</strong> (ou <strong>/Library/Keyboard Layouts</strong>) puis cliquez sur <strong>Aller</strong>.<br />
+									<img src="<?=$vojo?>bildoj/klavaro-eo-2.jpg" /><br />
+									<strong>⇨</strong> Le dossier <strong>Keyboard Layouts</strong> est affiché.</li>
+									<li>Copiez les fichiers <strong>FrenchEsperanto.keylayout</strong> et <strong>FrenchEsperanto.icns</strong> dans ce dossier.</li>
+									<li>Ouvrez ensuite <strong>Préférences Système</strong> (dans Applications&nbsp;/ Utilitaires) et sélectionnez <strong>Clavier</strong>. Dans l’onglet <strong>Méthodes de saisie</strong>, cliquez sur le bouton <strong>+</strong> en bas à gauche.</li>
+									<li>Parcourez la liste déroulante à gauche, et sélectionnez <strong>Autres</strong>. 
+									Sélectionnez <strong>Français-Esperanto</strong> à droite puis cliquez sur le bouton <strong>Ajouter</strong>.<br />
+									<img src="<?=$vojo?>bildoj/klavaro-eo-3.jpg" /></li>
+									<li>Vous pourrez activer ou désactiver le clavier français-espéranto dans le menu <strong>Claviers</strong>.<br />
+									<img src="<?=$vojo?>bildoj/klavaro-eo-4.jpg" /></li>
+								</ul>
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="collapsible-header"><i class="material-icons primaire-texte texte-clair">keyboard_arrow_down</i>Clavier étendu 1.7 pour Mac OSX (dernière mise à jour&nbsp;: 23 juillet 2017)</div>
+							<div class="collapsible-body">
+								<p>Une fois ce clavier installé, il est facile de basculer du clavier français au clavier espéranto. 
+									Avec le clavier espéranto, il suffit par exemple de taper ^ puis c pour obtenir un ĉ, ou ù 
+									puis u pour obtenir un ŭ.</p>
+								<p>Pour installer et utiliser ce clavier étendu, voir sur le site de Michael Langlois :
+									<a href="https://michaellanglois.fr/fr/it/clavier-etendu-francais-azerty-1-7-mac" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Clavier français étendu 1.7 pour Mac</a>.</p>
+							</div>
+						</li>
+					</ul>
+					
+					<h3>Clavier espéranto pour Linux</h3>
+					<ul class="collapsible" data-collapsible="accordion">
+
 						<li>
 							<div class="collapsible-header"><i class="material-icons primaire-texte texte-clair">keyboard_arrow_down</i>Configuration de clavier pour Linux</div>
 							<div class="collapsible-body">
@@ -102,21 +138,21 @@
 							  	<p><b>Comment paramétrer la touche Compose ou la touche AltGr ?</b></p>
 							  	<p>Là encore, plusieurs possibilités au choix.</p>
 							  	<p><b>Sous Gnome</b> : installer puis lancer gnome-tweak-tool&nbsp;; puis, dans l'onglet Saisie, </p>
-							  	<ol>
+							  	<ul class="sublisto">
 								  	<li>dans la section «Position de la touche Compose», on peut choisir une touche Compose.</li>
 								  	<li>dans la section « Ajout des lettres accentuées Espéranto », 
 								  	choisir «Vers la touche correspondante sur une disposition Qwerty» pour utiliser les combinaisons AltGr.</li>
-							  	</ol>
+							  	</ul>
 							  	<p><b>En ligne de commande :</b></p>
-								<ol>
+								<ul class="sublisto">
 									<li>setxkbmap -option esperanto:qwerty</li>
 									<li>setxkbmap -option compose:caps</li>
-								</ol>
+								</ul>
 								<p><b>Dans /etc/X11/xorg.conf :</b></p>
-								<ol>
+								<ul class="sublisto">
 									<li>Option "XkbOptions" "esperanto:qwerty"</li>
 									<li>Option "XkbOptions" "compose:caps"</li>
-								</ol>
+								</ul>
 								<p><b>Dans /etc/default/keyboard :</b></p>
 								<p>XKBLAYOUT="fr"<br>
 									XKBOPTIONS=esperanto:qwerty,compose:caps</p>

@@ -90,12 +90,12 @@ include "pagxkapo.inc.php";
 					
 				<p class="parto">Pour améliorer votre <strong>expression orale</strong>, vous pouvez vous inscrire au cours <a href="https://edukado.net/ekparolu/prezento">Ekparolu!</a> qui vous permettra de converser par Skype avec un tuteur. Nous vous recommandons de suivre ce cours lorsque vous aurez terminé le cours <em>Gerda malaperis</em>.</p>  
 				
-				<p class="parto"><a href="http://bertilow.com/pmeg/">Plena Manlibro de Esperanto</a> est une <strong>grammaire</strong> complète de l’espéranto (en espéranto)</p>
+				<p class="parto"><a href="http://bertilow.com/pmeg/"><i>Plena Manlibro de Esperanto</i></a> est une <strong>grammaire</strong> complète de l’espéranto (en espéranto)</p>
 				
 				<p class="parto"><a href="https://babadum.com/">Babadum</a> vous permettra d’<strong>apprendre 1500 mots</strong> de manière ludique.</p>	
-				<p class="parto"><a href="http://www.reta-vortaro.de/revo/">Reta Vortaro</a> et <a href="http://vortaro.net/">vortaro.net</a> sont des dictionnaires en ligne donnant les définitions des mots en espéranto ainsi que leurs traductions en de nombreuses langues.</p>	
+				<p class="parto"><a href="http://vortaro.net/">Vortaro.net</a> est la version en ligne du <strong>PIV</strong>, le <i>Plena Ilustrita Vortaro</i>. Le <a href="http://www.reta-vortaro.de/revo/">Reta Vortaro</a> est également un dictionnaire en ligne donnant les définitions des mots en espéranto ainsi que leurs traductions en de nombreuses langues.</p>	
 				<p class="parto">La <a href="http://www.eventoj.hu/steb/">Scienca kaj Teknika Esperanto-Biblioteko</a> donne accès à de nombreux <strong>dictionnaires et lexiques</strong> d’espéranto spécialisés dans différents domaines scientifiques et techniques.</p>
-				<p class="parto">En complément des dictionnaires, vous trouverez dans <a href="https://fr.forvo.com/">forvo.com</a> des milliers de mots et expressions enregistrés par divers locuteurs du monde entier. Quant au site <a hreg="https://tatoeba.org/fra/">tatoeba.org</a>,il donne accès à une impressionnante collection de phrases dans de nombreuses langues, souvent accompagnées d’une version audio. Vous pourrez ainsi découvrir de nouveaux mots en contexte.</p>
+				<p class="parto">En complément des dictionnaires, vous trouverez dans <a href="https://fr.forvo.com/">forvo.com</a> des milliers de mots et expressions enregistrés par divers locuteurs du monde entier. Quant au site <a hreg="https://tatoeba.org/fra/">tatoeba.org</a>,il donne accès à une impressionnante collection de phrases dans de nombreuses langues, souvent accompagnées d’une version audio. Vous pourrez ainsi découvrir de nouveaux mots en contexte. S’appuyant sur différents corpus bilingues et dictionnaires en ligne, le site <a href="https://fr.glosbe.com/eo/fr">Glosbe.com</a> fournit des définitions et des traductions pour de nombreuses langues dont l’espéranto.</p>
 				<p class="parto">L’<a href="http://franca-esperanto-instituto.net/">institut français d’espéranto</a> organise régulièrement des examens pour 4 niveaux différents. Depuis 2012, il est également possible de passer des examens d’espéranto pour les niveaux B1, B2 et C1. Plus d’information sur <a href="https://esperanto-france.org/examens-europeens-d-esperanto">esperanto-france.org/examens-europeens-d-esperanto</a>.</p>
 
 				<h2>Lire en espéranto</h2>
@@ -129,9 +129,9 @@ frameborder="0" allowfullscreen></iframe></p>
 			<p class="parto">Parmi les très nombreuses <strong>revues</strong>, les plus connues sont celles des associations internationales&nbsp;: 
 				la revue <a href="https://uea.org/revuoj/esperanto"><i>Esperanto</i></a>, éditée par l’association mondiale d’espéranto, 
 				tout à fait abordable par les nouveaux apprenants de la langue.<br> 
-				Dans le même esprit, citons également <a href="https://heroldodeesperanto.com/"><i>Heroldo de Esperanto</i></a> et <a href="http://esperanto-ondo.ru/"><i>La Ondo de Esperanto</i></a>.</p>
+				Dans le même esprit, citons également <a href="http://esperanto-ondo.ru/"><i>La Ondo de Esperanto</i></a>.</p>
 				<p>Certains magazines s’adressent tout particulièrement aux débutants en proposant des textes rédigés dans un style «&nbsp;facile&nbsp;», voire «&nbsp; très facile&nbsp;». C’est le cas de <a href="http://tejo.org/fr/revuo-kontakto/"><i>Kontakto</i></a>. </p>
-				<p class="parto">Vous pouvez également lire directement en ligne la revue <a href="https://esperanto-france.org/le-monde-de-l-esperanto">Le Monde de l’espéranto</a>, éditée par Espéranto-France.</p>
+				<p class="parto">Vous pouvez également lire directement en ligne la revue <a href="https://esperanto-france.org/le-monde-de-l-esperanto"><i>Le Monde de l’espéranto</i></a>, éditée par Espéranto-France.</p>
 
 				<p class="parto">Sans oublier <a href="https://eo.wikipedia.org/wiki/Vikipedio:%C4%88efpa%C4%9Do">Vikipedio</a>, la version en espéranto de <strong>Wikipédia</strong>.</p>
 				<div class="card-panel blue lighten-5">
@@ -140,7 +140,7 @@ frameborder="0" allowfullscreen></iframe></p>
 
 				<h2>Voyager, rencontrer d’autres espérantophones</h2>
 				
-				<div class="float-right w30"><a href="https://esperanto-france.org/le-monde-de-l-esperanto"><img class="responsive-img" src="<?=$vojo?>bildoj/pasporta-servo-2017.jpg" /></a></div><p class="parto">Avec le <a href="https://www.pasportaservo.org/">Pasporta Servo</a>, <strong>voyagez</strong> dans le monde entier en étant hébergé chez des espérantophones, ou partez à la rencontre d’espérantophones du monde entier en les hébergeant chez vous.</p>
+				<div class="float-right w30"><a href="https://esperanto-france.org/le-monde-de-l-esperanto"><img class="responsive-img" src="<?=$vojo?>bildoj/pasporta-servo-2017.jpg" /></a></div><p class="parto">Avec le <a href="https://www.pasportaservo.org/"><i>Pasporta Servo</i></a>, <strong>voyagez</strong> dans le monde entier en étant hébergé chez des espérantophones, ou partez à la rencontre d’espérantophones du monde entier en les hébergeant chez vous.</p>
 				
 				<p class="parto">Les <strong>congrès et rencontres</strong> sont également des occasions pour rencontrer d’autres espérantophones. Ces rencontres peuvent alterner
 					conférences, groupes de travail, concerts, ateliers divers, tourisme, etc. Pour en savoir plus, voir la rubrique <a href="https://esperanto-france.org/congres">Congrès</a> sur le site d’Espéranto-France.</p>

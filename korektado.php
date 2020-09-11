@@ -17,7 +17,7 @@ $titolo = $row["titolo"];
 ?>
 
 	<div class="row">
-		<article class="col s12 m9 l6 offset-m1 offset-l1">
+		<article class="col s12 m9 l6 offset-m1 offset-l1 korektado">
 			<h1>Corrigé-type</h1>
 			<h2><?=$titolo?></h2>
 
@@ -38,7 +38,7 @@ while ($row=$result->fetch()) {
 	$result2 = $bdd->query($query2);
 	while ($row2=$result2->fetch()) {
 		echo "<p>".$row2["numero"].".&nbsp;".$row2["demando"]."<br>\n";
-		echo "<span style=\"color:blue\">".$row2["respondo"]."</span></p><br/>";
+		echo "<span style=\"color:blue\">".$row2["respondo"]."</span></p>";
 	}
 	print "</fieldset>";
 }

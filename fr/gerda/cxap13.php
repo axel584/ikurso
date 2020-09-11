@@ -324,7 +324,7 @@ include "gerdakapo.inc.php";
 			manon sur ŝian manon, proksimigis mian kapon al ŝia kapo. Niaj koroj
 			batis aŭdeble, aŭ apenaŭ malpli ol aŭdeble. Ni sentis kuniĝon. Ni
 			forlasis la kafejon, promenis en la urbo, ĉiam ride diskutante, ĉiam
-			kun ĝojplenaj vizaĝoj. Ni iris al mia cambro. Ni...</p>
+			kun ĝojplenaj vizaĝoj. Ni iris al mia ĉambro. Ni...</p>
 			<p>
 			Nu, nu, nu, nu. Ĉu vi scias, kio estas feliĉo? Vere, amiko, se vi
 			povus imagi...</p>

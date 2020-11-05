@@ -612,8 +612,29 @@ QCM(
 			<div class="row">
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/frazoj/kie-estas-chaumont.mp3" class="sm2_button"></a><span class="eo"><b>Kie</b> estas la urbo Chaumont?<br>&emsp;&emsp;– Ĝi estas en Francujo.</span></p><p class="col s11 m6 offset-s1"><b>Où</b> est la ville de Chaumont&nbsp;?<br>– Elle est en France.</p>
 			</div>
-			
-			<?php 
+
+			<h3>Vos premiers corrélatifs</h3>
+			<p>
+				Ces <span class="eo">kiu</span> et <span class="eo">kie</span> font partie d'un groupe spécifique en espéranto : les <strong>corrélatifs</strong>. Ils sont au nombre de quarante-cinq ; pas d'inquiétude, nous vous les présenterons au fur et à mesure des leçons. Vous découvrirez alors comment leur construction sans exception facilite leur apprentissage.
+			</p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Individualité -u</th>
+						<th>Lieu -e</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Interrogatif ki-</th>
+						<td><span class="eo">kiu</span><br />Qui ? Lequel ?</td>
+						<td><span class="eo">kie</span><br />Où ?</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<?php
 			} // fin section 9
 			if ($section=="10") {
 			?>

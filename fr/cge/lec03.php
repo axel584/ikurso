@@ -392,8 +392,55 @@ include "dlekkapo.inc.php";
 		</div>
 		
 		<p class="rimarko"><strong>REMARQUE</strong> : N’employez <b>jamais</b> l’accusatif après <span class="eo">kiom da</span>.</p>
-		
-		<?php 
+
+		<h3>Plus aucun corrélatif ne vous échappe !</h3>
+		<p>
+			Vous avez maintenant l'habitude : <span class="eo">kiom</span> est le corrélatif interrogatif de quantité. Complétons alors le tableau bien connu !
+		</p>
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th>Individualité -u</th>
+					<th>Chose -o</th>
+					<th>Lieu -e</th>
+					<th>Temps -am</th>
+					<th>Manière -el</th>
+					<th>Quantité -om</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Interrogatif ki-</th>
+					<td><span class="eo">kiu</span><br />Qui ? Lequel ?</td>
+					<td><span class="eo">kio</span><br />Que ? Quoi ?</td>
+					<td><span class="eo">kie</span><br />Où ?</td>
+					<td><span class="eo">kiam</span><br />Quand ?</td>
+					<td><span class="eo">kiel</span><br />Comment ?</td>
+					<td><span class="eo">kiom</span><br />Combien ?</td>
+				</tr>
+				<tr>
+					<th>Négatif neni-</th>
+					<td><span class="eo">neniu</span><br />Personne</td>
+					<td><span class="eo">nenio</span><br />Rien</td>
+					<td><span class="eo">nenie</span><br />Nulle part</td>
+					<td><span class="eo">neniam</span><br />Jamais</td>
+					<td><span class="eo">neniel</span><br />Impossible</td>
+					<td><span class="eo">neniom</span><br />Aucun</td>
+				</tr>
+				<tr>
+					<th>Démonstratif ti-</th>
+					<td><span class="eo">tiu</span><br />Celui-là</td>
+					<td><span class="eo">tio</span><br />Cela</td>
+					<td><span class="eo">tie</span><br />Là-bas</td>
+					<td><span class="eo">tiam</span><br />À ce moment</td>
+					<td><span class="eo">tiel</span><br />Ainsi</td>
+					<td><span class="eo">tiom</span><br />Autant de</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<?php
 		} // fin section
 		if ($section=="9") {
 		?>

@@ -414,10 +414,11 @@ QCM_bildoj(
 			<span class="eo">ki<u>o</u></span> (quoi, que) / <span class="eo">neni<u>o</u></span> (rien)<br/>
 			<span class="eo">ki<u>e</u></span> (où) / <span class="eo">neni<u>e</u></span> (nulle part)
 		</p>
+		<p>Vous pouvez aussi remarquer que les mots qui ont la même fonction ont le même préfixe : interrogatif <span class="eo">ki-</span> et négatif  <span class="eo">neni-</span>. Vous commencez à avoir l'habitude avec l'espéranto, ce n'est évidemment pas un hasard…</p>
 
-		<h3>Vous souvenez-vous des corrélatifs ?</h3>
+		<h3>Vos premiers corrélatifs</h3>
 		<p>
-			Au cours de la leçon 1, vous avez découvert vos premiers corrélatifs : <span class="eo">kiu</span> et <span class="eo">kie</span>. Il se trouve que <span class="eo">neniam</span>, <span class="eo">neniu</span>, <span class="eo">nonie</span> et <span class="eo">nonio</span> sont aussi des corrélatifs. Nous pouvons alors compléter le tableau que nous avions amorcé il y a quelques temps.
+			Ces <span class="eo">kiu</span>, <span class="eo">kie</span>, <span class="eo">neniam</span>, etc., font partie d'un groupe spécifique en espéranto : les <strong>corrélatifs</strong>, ou <span class="eo">tabel-vortoj</span> (de <span class="eo">tabelo</span> : tableau, et <span class="eo">vortoj</span> : mots) car on peut les ranger de manière logique dans un tableau. Ce tableau contient en tout 45 mots ; pas d'inquiétude, nous vous les présenterons au fur et à mesure des leçons. Vous découvrirez alors comment leur construction sans exception facilite leur apprentissage.
 		</p>
 		<table>
 			<thead>
@@ -447,7 +448,7 @@ QCM_bildoj(
 			</tbody>
 		</table>
 		<p>
-			Vous remarquerez que de par leur construction régulière, vous venez par la même occasion d'apprendre à poser deux nouveaux types de question grâce à <span class="eo">kio</span> et <span class="eo">kiam</span> !
+			Vous remarquerez que de par leur construction régulière, vous venez par la même occasion d'apprendre à poser un nouveau type de question grâce à <span class="eo">kiam</span> !
 		</p>
 
 		<?php

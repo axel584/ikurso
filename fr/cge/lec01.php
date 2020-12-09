@@ -612,8 +612,8 @@ QCM(
 			<div class="row">
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/frazoj/kie-estas-chaumont.mp3" class="sm2_button"></a><span class="eo"><b>Kie</b> estas la urbo Chaumont?<br>&emsp;&emsp;– Ĝi estas en Francujo.</span></p><p class="col s11 m6 offset-s1"><b>Où</b> est la ville de Chaumont&nbsp;?<br>– Elle est en France.</p>
 			</div>
-			
-			<?php 
+
+			<?php
 			} // fin section 9
 			if ($section=="10") {
 			?>

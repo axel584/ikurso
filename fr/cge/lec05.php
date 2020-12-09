@@ -223,6 +223,90 @@ include "dlekkapo.inc.php";
 			
 			<p class="col s6"><span class="eo">Mi jam manĝis <b>tiom da</b> ili!</span></p><p class="col s6">J’<b>en</b> ai déjà <b>tellement</b> mangé&nbsp;!</p>
 		</div>
+
+		<h3>Et notre tableau des corrélatifs alors ?</h3>
+		<p>
+			Nous pouvons compléter notre désormais familier tableau des corrélatifs. Pas d'inquiétude, nous allons poursuivre leur apprentissage progressivement, mais vous pouvez maintenant conserver cette page comme pense-bête !
+		</p>
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th>Individualité -u</th>
+					<th>Possession -es</th>
+					<th>Chose -o</th>
+					<th>Qualité -a</th>
+					<th>Lieu -e</th>
+					<th>Temps -am</th>
+					<th>Manière -el</th>
+					<th>Cause -al</th>
+					<th>Quantité -om</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Interrogatif ki-</th>
+					<td><span class="eo">kiu</span><br />Qui ? Lequel ?</td>
+					<td><span class="eo">kies</span><br />À qui ?</td>
+					<td><span class="eo">kio</span><br />Que ? Quoi ?</td>
+					<td><span class="eo">kia</span><br />Quel sorte de ?</td>
+					<td><span class="eo">kie</span><br />Où ?</td>
+					<td><span class="eo">kiam</span><br />Quand ?</td>
+					<td><span class="eo">kiel</span><br />Comment ?</td>
+					<td><span class="eo">kial</span><br />Pourquoi ?</td>
+					<td><span class="eo">kiom</span><br />Combien ?</td>
+				</tr>
+				<tr>
+					<th>Indéfini i-</th>
+					<td><span class="eo">iu</span><br />Quelqu'un</td>
+					<td><span class="eo">ies</span><br />À quelqu'un</td>
+					<td><span class="eo">io</span><br />Quelque chose</td>
+					<td><span class="eo">ia</span><br />Une sorte de</td>
+					<td><span class="eo">ie</span><br />Quelque part</td>
+					<td><span class="eo">iam</span><br />À un moment</td>
+					<td><span class="eo">iel</span><br />D'une certaine manière</td>
+					<td><span class="eo">ial</span><br />Pour une certaine raison</td>
+					<td><span class="eo">iom</span><br />Un peu</td>
+				</tr>
+				<tr>
+					<th>Négatif neni-</th>
+					<td><span class="eo">neniu</span><br />Personne</td>
+					<td><span class="eo">nenies</span><br />À personne</td>
+					<td><span class="eo">nenio</span><br />Rien</td>
+					<td><span class="eo">nenia</span><br />Aucune sorte de</td>
+					<td><span class="eo">nenie</span><br />Nulle part</td>
+					<td><span class="eo">neniam</span><br />Jamais</td>
+					<td><span class="eo">neniel</span><br />Impossible</td>
+					<td><span class="eo">nenial</span><br />Sans raison</td>
+					<td><span class="eo">neniom</span><br />Aucun</td>
+				</tr>
+				<tr>
+					<th>Démonstratif ti-</th>
+					<td><span class="eo">tiu</span><br />Celui-là</td>
+					<td><span class="eo">ties</span><br />À celui-là</td>
+					<td><span class="eo">tio</span><br />Cela</td>
+					<td><span class="eo">tia</span><br />Cette sorte de</td>
+					<td><span class="eo">tie</span><br />Là-bas</td>
+					<td><span class="eo">tiam</span><br />À ce moment</td>
+					<td><span class="eo">tiel</span><br />Ainsi</td>
+					<td><span class="eo">tial</span><br />Pour cette raison</td>
+					<td><span class="eo">tiom</span><br />Autant de</td>
+				</tr>
+				<tr>
+					<th>Collectif ĉi-</th>
+					<td><span class="eo">ĉiu</span><br />Chacun, Chaque</td>
+					<td><span class="eo">ĉies</span><br />À chacun</td>
+					<td><span class="eo">ĉio</span><br />Tout</td>
+					<td><span class="eo">ĉia</span><br />Toutes sortes de</td>
+					<td><span class="eo">ĉie</span><br />Partout</td>
+					<td><span class="eo">ĉiam</span><br />Toujours</td>
+					<td><span class="eo">ĉiel</span><br />De toute manière</td>
+					<td><span class="eo">ĉial</span><br />Pour toutes sortes de raisons</td>
+					<td><span class="eo">ĉiom</span><br />Le tout</td>
+				</tr>
+			</tbody>
+		</table>
+
 		<?php
 		} // fin section 
 

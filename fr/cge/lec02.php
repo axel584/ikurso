@@ -417,38 +417,39 @@ QCM_bildoj(
 		<p>Vous pouvez aussi remarquer que les mots qui ont la même fonction ont le même préfixe : interrogatif <span class="eo">ki-</span> et négatif  <span class="eo">neni-</span>. Vous commencez à avoir l'habitude avec l'espéranto, ce n'est évidemment pas un hasard…</p>
 
 		<h3>Vos premiers corrélatifs</h3>
-		<p>
-			Ces <span class="eo">kiu</span>, <span class="eo">kie</span>, <span class="eo">neniam</span>, etc., font partie d'un groupe spécifique en espéranto : les <strong>corrélatifs</strong>, ou <span class="eo">tabel-vortoj</span> (de <span class="eo">tabelo</span> : tableau, et <span class="eo">vortoj</span> : mots) car on peut les ranger de manière logique dans un tableau. Ce tableau contient en tout 45 mots ; pas d'inquiétude, nous vous les présenterons au fur et à mesure des leçons. Vous découvrirez alors comment leur construction sans exception facilite leur apprentissage.
+		<p>Ces petits mots,<span class="eo">kiu</span>, <span class="eo">kie</span>, <span class="eo">neniam</span>, etc. font partie d’un groupe spécifique en espéranto&nbsp;: les <strong>corrélatifs</strong>, ou <span class="eo">tabel-vortoj</span> (de <span class="eo">tabelo</span>&nbsp;: tableau, et <span class="eo">vortoj</span>&nbsp;: mots) car on peut les ranger de manière logique dans un tableau. Ce tableau contient en tout 45 mots&nbsp;; mais pas d'inquiétude, nous vous les présenterons au fur et à mesure des leçons. Vous découvrirez alors comment leur construction sans exception facilite leur apprentissage.
 		</p>
-		<table>
-			<thead>
-				<tr>
-					<th></th>
-					<th>Individualité -u</th>
-					<th>Chose -o</th>
-					<th>Lieu -e</th>
-					<th>Temps -am</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>Interrogatif ki-</th>
-					<td><span class="eo">kiu</span><br />Qui ? Lequel ?</td>
-					<td><span class="eo">kio</span><br />Que ? Quoi ?</td>
-					<td><span class="eo">kie</span><br />Où ?</td>
-					<td><span class="eo">kiam</span><br />Quand ?</td>
-				</tr>
-				<tr>
-					<th>Négatif neni-</th>
-					<td><span class="eo">neniu</span><br />Personne</td>
-					<td><span class="eo">nenio</span><br />Rien</td>
-					<td><span class="eo">nenie</span><br />Nulle part</td>
-					<td><span class="eo">neniam</span><br />Jamais</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="korelativoj">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Individualité<br /><span class="eo">-U</span></th>
+						<th>Chose<br /><span class="eo">-O</span></th>
+						<th>Lieu<br /><span class="eo">-E</span></th>
+						<th>Temps<br /><span class="eo">-AM</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<td><span class="eo">kiu</span><br />qui&nbsp;? lequel&nbsp;?</td>
+						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
+						<td><span class="eo">kie</span><br />où&nbsp;?</td>
+						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
+					</tr>
+					<tr>
+						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<td><span class="eo">neniu</span><br />personne</td>
+						<td><span class="eo">nenio</span><br />rien</td>
+						<td><span class="eo">nenie</span><br />nulle part</td>
+						<td><span class="eo">neniam</span><br />jamais</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		<p>
-			Vous remarquerez que de par leur construction régulière, vous venez par la même occasion d'apprendre à poser un nouveau type de question grâce à <span class="eo">kiam</span> !
+			Vous remarquerez que de par leur construction régulière, vous venez par la même occasion d’apprendre à poser un nouveau type de question grâce à <span class="eo">kiam</span>&nbsp;!
 		</p>
 
 		<?php
@@ -579,46 +580,49 @@ QCM_bildoj(
 
 		<h3>Vous reprendrez bien un peu de corrélatifs ?</h3>
 		<p>
-			Vous avez peut-être reconnus la forme particulière de <span class="eo">kiel</span>. C'est effectivement une nouvelle famille de corrélatif, pour les questions de manière. Il se trouve que <span class="eo">tiel</span> est également un corrélatif, qui vous introduit le type démonstratif.
+			Vous avez peut-être reconnu la forme particulière de <span class="eo">kiel</span>. C’est effectivement une nouvelle famille de corrélatif, pour les questions de manière. Il se trouve que <span class="eo">tiel</span> est également un corrélatif, qui vous introduit le type démonstratif.
 		</p>
-		<table>
-			<thead>
-				<tr>
-					<th></th>
-					<th>Individualité -u</th>
-					<th>Chose -o</th>
-					<th>Lieu -e</th>
-					<th>Temps -am</th>
-					<th>Manière -el</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>Interrogatif ki-</th>
-					<td><span class="eo">kiu</span><br />Qui ? Lequel ?</td>
-					<td><span class="eo">kio</span><br />Que ? Quoi ?</td>
-					<td><span class="eo">kie</span><br />Où ?</td>
-					<td><span class="eo">kiam</span><br />Quand ?</td>
-					<td><span class="eo">kiel</span><br />Comment ?</td>
-				</tr>
-				<tr>
-					<th>Négatif neni-</th>
-					<td><span class="eo">neniu</span><br />Personne</td>
-					<td><span class="eo">nenio</span><br />Rien</td>
-					<td><span class="eo">nenie</span><br />Nulle part</td>
-					<td><span class="eo">neniam</span><br />Jamais</td>
-					<td><span class="eo">neniel</span><br />Impossible</td>
-				</tr>
-				<tr>
-					<th>Démonstratif ti-</th>
-					<td><span class="eo">tiu</span><br />Celui-là</td>
-					<td><span class="eo">tio</span><br />Cela</td>
-					<td><span class="eo">tie</span><br />Là-bas</td>
-					<td><span class="eo">tiam</span><br />À ce moment</td>
-					<td><span class="eo">tiel</span><br />Ainsi</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="korelativoj">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Individualité<br /><span class="eo">-U</span></th>
+						<th>Chose<br /><span class="eo">-O</span></th>
+						<th>Lieu<br /><span class="eo">-E</span></th>
+						<th>Temps<br /><span class="eo">-AM</span></th>
+						<th>Manière<br /><span class="eo">-EL</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<td><span class="eo">kiu</span><br />qui&nbsp;? lequel&nbsp;?</td>
+						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
+						<td><span class="eo">kie</span><br />où&nbsp;?</td>
+						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
+						<td><span class="eo">kiel</span><br />comment&nbsp;?</td>
+					</tr>
+					<tr>
+						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<td><span class="eo">neniu</span><br />personne</td>
+						<td><span class="eo">nenio</span><br />rien</td>
+						<td><span class="eo">nenie</span><br />nulle part</td>
+						<td><span class="eo">neniam</span><br />jamais</td>
+						<td><span class="eo">neniel</span><br />impossible</td>
+					</tr>
+					<tr>
+						<th>Démonstratif<br /><span class="eo">TI-</span></th>
+						<td><span class="eo">tiu</span><br />celui-là,<br />celle-là</td>
+						<td><span class="eo">tio</span><br />cela</td>
+						<td><span class="eo">tie</span><br />là, là-bas</td>
+						<td><span class="eo">tiam</span><br />à ce moment</td>
+						<td><span class="eo">tiel</span><br />ainsi</td>
+	
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		<p>
 			Petit à petit, ce tableau se remplit et les conversations deviennent de plus en plus riches !
 		</p>

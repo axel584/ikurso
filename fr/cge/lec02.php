@@ -408,18 +408,55 @@ QCM_bildoj(
 			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/frazoj/kio-estas-en-la-taso.mp3" class="sm2_button"></a> <span class="eo">Kio estas en la taso? – Estas <b>nenio</b>.</span></p><p class="col s11 m6 offset-s1">Qu’y-a-t-il dans la tasse ? – Il n’y a <b>rien</b>.</p>
 			<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/frazoj/kie-estas-la-kato.mp3" class="sm2_button"></a> <span class="eo">Kie estas la kato? Mi vidas ĝin <b>nenie</b>!</span></p><p class="col s11 m6 offset-s1">Où est le chat ? Je ne le vois <b>nulle part</b>&nbsp;!</p>
 		</div>
-		
+
 		<p>Dans les exemples précédents, vous pouvez remarquer que les mots se répondant ont la même terminaison&nbsp;:<br/>
 			<span class="eo">ki<u>u</u></span> (qui) / <span class="eo">neni<u>u</u></span> (personne)<br/>
 			<span class="eo">ki<u>o</u></span> (quoi, que) / <span class="eo">neni<u>o</u></span> (rien)<br/>
 			<span class="eo">ki<u>e</u></span> (où) / <span class="eo">neni<u>e</u></span> (nulle part)
-		<p>
+		</p>
+		<p>Vous pouvez aussi remarquer que les mots qui ont la même fonction ont le même préfixe : interrogatif <span class="eo">ki-</span> et négatif  <span class="eo">neni-</span>. Vous commencez à avoir l'habitude avec l'espéranto, ce n'est évidemment pas un hasard…</p>
 
-		<?php 
+		<h3>Vos premiers corrélatifs</h3>
+		<p>Ces petits mots,<span class="eo">kiu</span>, <span class="eo">kie</span>, <span class="eo">neniam</span>, etc. font partie d’un groupe spécifique en espéranto&nbsp;: les <strong>corrélatifs</strong>, ou <span class="eo">tabel-vortoj</span> (de <span class="eo">tabelo</span>&nbsp;: tableau, et <span class="eo">vortoj</span>&nbsp;: mots) car on peut les ranger de manière logique dans un tableau. Ce tableau contient en tout 45 mots&nbsp;; mais pas d'inquiétude, nous vous les présenterons au fur et à mesure des leçons. Vous découvrirez alors comment leur construction sans exception facilite leur apprentissage.
+		</p>
+		<div class="korelativoj">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Individualité<br /><span class="eo">-U</span></th>
+						<th>Chose<br /><span class="eo">-O</span></th>
+						<th>Lieu<br /><span class="eo">-E</span></th>
+						<th>Temps<br /><span class="eo">-AM</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<td><span class="eo">kiu</span><br />qui&nbsp;? lequel&nbsp;?</td>
+						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
+						<td><span class="eo">kie</span><br />où&nbsp;?</td>
+						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
+					</tr>
+					<tr>
+						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<td><span class="eo">neniu</span><br />personne</td>
+						<td><span class="eo">nenio</span><br />rien</td>
+						<td><span class="eo">nenie</span><br />nulle part</td>
+						<td><span class="eo">neniam</span><br />jamais</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p>
+			Vous remarquerez que de par leur construction régulière, vous venez par la même occasion d’apprendre à poser un nouveau type de question grâce à <span class="eo">kiam</span>&nbsp;!
+		</p>
+
+		<?php
 		} // fin section
 		if ($section=="8") {
 		?>
-		
+
 		<p class="parto">Voici maintenant un peu de vocabulaire.</p>
 		<?php if ($persono) { ?>
 		<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
@@ -541,7 +578,56 @@ QCM_bildoj(
 			<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/sxi-skribas.mp3" class="sm2_button"></a> <span class="eo">Ŝi skribas kiel mia patrino.</span></p><p class="col s6">Elle écrit comme ma mère.</p>
 		</div>
 
-		<?php 
+		<h3>Vous reprendrez bien un peu de corrélatifs ?</h3>
+		<p>
+			Vous avez peut-être reconnu la forme particulière de <span class="eo">kiel</span>. C’est effectivement une nouvelle famille de corrélatif, pour les questions de manière. Il se trouve que <span class="eo">tiel</span> est également un corrélatif, qui vous introduit le type démonstratif.
+		</p>
+		<div class="korelativoj">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Individualité<br /><span class="eo">-U</span></th>
+						<th>Chose<br /><span class="eo">-O</span></th>
+						<th>Lieu<br /><span class="eo">-E</span></th>
+						<th>Temps<br /><span class="eo">-AM</span></th>
+						<th>Manière<br /><span class="eo">-EL</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<td><span class="eo">kiu</span><br />qui&nbsp;? lequel&nbsp;?</td>
+						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
+						<td><span class="eo">kie</span><br />où&nbsp;?</td>
+						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
+						<td><span class="eo">kiel</span><br />comment&nbsp;?</td>
+					</tr>
+					<tr>
+						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<td><span class="eo">neniu</span><br />personne</td>
+						<td><span class="eo">nenio</span><br />rien</td>
+						<td><span class="eo">nenie</span><br />nulle part</td>
+						<td><span class="eo">neniam</span><br />jamais</td>
+						<td><span class="eo">neniel</span><br />impossible</td>
+					</tr>
+					<tr>
+						<th>Démonstratif<br /><span class="eo">TI-</span></th>
+						<td><span class="eo">tiu</span><br />celui-là,<br />celle-là</td>
+						<td><span class="eo">tio</span><br />cela</td>
+						<td><span class="eo">tie</span><br />là, là-bas</td>
+						<td><span class="eo">tiam</span><br />à ce moment</td>
+						<td><span class="eo">tiel</span><br />ainsi</td>
+	
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p>
+			Petit à petit, ce tableau se remplit et les conversations deviennent de plus en plus riches !
+		</p>
+
+		<?php
 		} // fin section
 		
 	if ($section=="13") {

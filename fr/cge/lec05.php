@@ -223,6 +223,92 @@ include "dlekkapo.inc.php";
 			
 			<p class="col s6"><span class="eo">Mi jam manĝis <b>tiom da</b> ili!</span></p><p class="col s6">J’<b>en</b> ai déjà <b>tellement</b> mangé&nbsp;!</p>
 		</div>
+
+		<h3>Et notre tableau des corrélatifs, alors&nbsp;?</h3>
+		<p>
+			Nous pouvons compléter notre désormais familier tableau des corrélatifs. Pas d’inquiétude, nous allons poursuivre leur apprentissage progressivement, mais vous pouvez maintenant conserver cette page comme pense-bête&nbsp;!
+		</p>
+		<div class="korelativoj">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th> </th>
+						<th>Individualité<br /><span class="eo">-U</span></th>
+						<th>Possession<br /><span class="eo">-ES</span></th>
+						<th>Chose<br /><span class="eo">-O</span></th>
+						<th>Qualité<br /><span class="eo">-A</span></th>
+						<th>Lieu<br /><span class="eo">-E</span></th>
+						<th>Temps<br /><span class="eo">-AM</span></th>
+						<th>Manière<br /><span class="eo">-EL</span></th>
+						<th>Cause<br /><span class="eo">-AL</span></th>
+						<th>Quantité<br /><span class="eo">-OM</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<td><span class="eo">kiu</span><br />qui&nbsp;? lequel&nbsp;?</td>
+						<td><span class="eo">kies</span><br />à qui&nbsp;?</td>
+						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
+						<td><span class="eo">kia</span><br />quelle sorte de&nbsp;?</td>
+						<td><span class="eo">kie</span><br />où&nbsp;?</td>
+						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
+						<td><span class="eo">kiel</span><br />comment&nbsp;?</td>
+						<td><span class="eo">kial</span><br />pourquoi&nbsp;?</td>
+						<td><span class="eo">kiom</span><br />combien&nbsp;?</td>
+					</tr>
+					<tr>
+						<th>Indéfini<br /><span class="eo">I-</span></th>
+						<td><span class="eo">iu</span><br />quelqu’un</td>
+						<td><span class="eo">ies</span><br />de quelqu’un</td>
+						<td><span class="eo">io</span><br />quelque chose</td>
+						<td><span class="eo">ia</span><br />une sorte de</td>
+						<td><span class="eo">ie</span><br />quelque part</td>
+						<td><span class="eo">iam</span><br />à un moment</td>
+						<td><span class="eo">iel</span><br />d’une certaine manière</td>
+						<td><span class="eo">ial</span><br />pour une certaine raison</td>
+						<td><span class="eo">iom</span><br />un peu</td>
+					</tr>
+					<tr>
+						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<td><span class="eo">neniu</span><br />personne</td>
+						<td><span class="eo">nenies</span><br />de personne</td>
+						<td><span class="eo">nenio</span><br />rien</td>
+						<td><span class="eo">nenia</span><br />aucune sorte de</td>
+						<td><span class="eo">nenie</span><br />nulle part</td>
+						<td><span class="eo">neniam</span><br />jamais</td>
+						<td><span class="eo">neniel</span><br />impossible</td>
+						<td><span class="eo">nenial</span><br />sans raison</td>
+						<td><span class="eo">neniom</span><br />aucun</td>
+					</tr>
+					<tr>
+						<th>Démonstratif<br /><span class="eo">TI-</span></th>
+						<td><span class="eo">tiu</span><br />celui-là,<br />celle-là</td>
+						<td><span class="eo">ties</span><br />de celui-là</td>
+						<td><span class="eo">tio</span><br />cela</td>
+						<td><span class="eo">tia</span><br />cette sorte de</td>
+						<td><span class="eo">tie</span><br />là, là-bas</td>
+						<td><span class="eo">tiam</span><br />à ce moment</td>
+						<td><span class="eo">tiel</span><br />ainsi</td>
+						<td><span class="eo">tial</span><br />pour cette raison</td>
+						<td><span class="eo">tiom</span><br />autant&nbsp;de</td>
+					</tr>
+					<tr>
+						<th>Collectif<br /><span class="eo">ĈI-</span></th>
+						<td><span class="eo">ĉiu</span><br />chacun(e),<br />Chaque</td>
+						<td><span class="eo">ĉies</span><br />de chacun</td>
+						<td><span class="eo">ĉio</span><br />tout</td>
+						<td><span class="eo">ĉia</span><br />toutes sortes de</td>
+						<td><span class="eo">ĉie</span><br />partout</td>
+						<td><span class="eo">ĉiam</span><br />toujours</td>
+						<td><span class="eo">ĉiel</span><br />de toute manière</td>
+						<td><span class="eo">ĉial</span><br />pour toutes sortes de raisons</td>
+						<td><span class="eo">ĉiom</span><br />le tout</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
 		<?php
 		} // fin section 
 

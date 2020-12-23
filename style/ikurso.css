@@ -286,6 +286,50 @@ ol li {
 	}
 }
 
+/*---- surcharge typographie pour table highlight -----*/
+
+table.highlight>tbody>tr:hover{
+	background-color:#E3F2FD;
+}
+
+/*---- surcharge typographie pour table korelativoj -----*/
+
+.korelativoj {
+	overflow-y: scroll;
+	padding-bottom: 1em;
+	max-width: 100%;
+	z-index: 1;
+}
+.korelativoj table {
+	width: 100%;
+	margin: auto;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+.korelativoj table th,
+.korelativoj table td {
+	vertical-align: top;
+	padding: 0.25em 0.5em;
+	width: 9em;
+	min-width: 9em;
+	max-width: 9em;
+}
+.korelativoj table th {
+	background-color:#f6f9fb;
+	border: 1px solid #AAA;
+}
+.korelativoj table td {
+	font-size: 85%;
+	font-weight: 400;
+	border:1px dashed #AAA;
+}
+
+.korelativoj th:first-child {
+	position: -webkit-sticky;
+	position: sticky;
+	left: 0;
+	z-index: 2;
+}
 /*---- surcharge pour page Quoi de neuf -----*/
 
 #kionova li.collection-item:hover {

@@ -495,17 +495,21 @@ $("#novigi_pasvorton_sendi_button").click(function () {
 	});
 	
 	$("#registriKorektadon_button").click(function() {
+		console.log("on enregistre la correction");
 		$("#registriKorektadon_button").addClass("disabled");
 		$.ajax({
        		url : $cheminAbsolu+'ajax/registriKorektadon.php',
-       		type : 'GET',
+       		type : 'POST',
        		dataType : 'json',
        		data : $("#chefa_form").serialize()+"&leciono_id="+$("#registriKorektadon_button").data('leciono_id')+"&studanto_id="+$("#registriKorektadon_button").data('studanto')+"&leciono="+$("#registriKorektadon_button").data('leciono')+"&kurso="+$("#registriKorektadon_button").data('kurso'),
        		success : function(reponse, statut){ 
 				window.location = $urlracine+reponse.url;
        		},
-       		error : function() {
-       			alert("Erreur interne, contactez les administrateurs");
+       		error : function(jqXHR, textStatus, errorThrown) {
+				console.log(jqXHR.responseText);
+				console.log("erreur : textStatus : "+textStatus);
+				console.log("erreur : errorThrown : "+errorThrown);
+       			alert("Erreur interne, contactez les administrateurs : "+textStatus);
        		}
     	});
 	});

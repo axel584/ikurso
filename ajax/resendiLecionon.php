@@ -93,12 +93,16 @@ if ($kurso=="3N") {
 
 // si le correcteur a coché la case, on envoit la leçon par Amazon SES
 if ($expediteurIkurso=="true") {
-	mailViaSES($korektantaretadreso,$subjekto,stripslashes($fonto));
+	$resultMail = mailViaSES($korektantaretadreso,$subjekto,stripslashes($fonto));
 } else {
-	mailViaSmtp($korektantaretadreso,$studanto["retadreso"],$subjekto,stripslashes($fonto));
+	$resultMail = mailViaSmtp($korektantaretadreso,$studanto["retadreso"],$subjekto,stripslashes($fonto));
 }
 
 // passer à la page d'évaluation de la leçon
-$respondo["mesagxo"] = "ok";
-echo json_encode($respondo);
+if (!$resultMail) {
+	$respondo["mesagxo"] = $resultMail;
+}else {
+	$respondo["mesagxo"] = "ok";
+}
+	echo json_encode($respondo);
 ?>

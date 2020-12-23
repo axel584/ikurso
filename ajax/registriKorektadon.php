@@ -1,11 +1,11 @@
 <?php
 include "../util.php";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
-$kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
-$leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
-$studanto_id=isset($_GET["studanto_id"])?$_GET["studanto_id"]:"";
-$leciono_id=isset($_GET["leciono_id"])?$_GET["leciono_id"]:"";
-$neSendiRetmesagxon=isset($_GET["pas_envoi_email"])?True:False;
+$kurso=isset($_POST["kurso"])?$_POST["kurso"]:"";
+$leciono=isset($_POST["leciono"])?$_POST["leciono"]:"";
+$studanto_id=isset($_POST["studanto_id"])?$_POST["studanto_id"]:"";
+$leciono_id=isset($_POST["leciono_id"])?$_POST["leciono_id"]:"";
+$neSendiRetmesagxon=isset($_POST["pas_envoi_email"])?True:False;
 if ($persono_id=="") { // personne non connecté, on ressort
 	$respondo["type"]="session";
 	$respondo["mesagxo"]="Session expirée";
@@ -15,19 +15,19 @@ if ($persono_id=="") { // personne non connecté, on ressort
 
 $korektado = array();
 
-foreach(array_keys($_GET) as $key) {
+foreach(array_keys($_POST) as $key) {
 	if (startsWith($key,"bonaRespondo")) {
 		$respondo_id = substr($key, 12);
 		if (!array_key_exists($respondo_id,$korektado)) {
 			$korektado[$respondo_id] = array();
 		}
-		$korektado[$respondo_id]['bonaRespondo']=$_GET[$key]=="on"?true:false;
+		$korektado[$respondo_id]['bonaRespondo']=$_POST[$key]=="on"?true:false;
 	} else if (startsWith($key,"korekto")) {
 		$respondo_id = substr($key, 7);
 		if (!array_key_exists($respondo_id,$korektado)) {
 			$korektado[$respondo_id] = array();
 		}
-		$korektado[$respondo_id]['korekto']=$_GET[$key];
+		$korektado[$respondo_id]['korekto']=$_POST[$key];
 	}
 }
 
@@ -46,7 +46,7 @@ foreach(array_keys($korektado) as $respondo_id) {
 
 // sauvegarde de l'introduction/conclusion sur la leçon de l'élève
 $requete = $bdd->prepare('update personoj_lecionoj set enkonduko=:enkonduko,konkludo=:konkludo,korektita=1 where persono_id=:persono_id and leciono_id=:leciono_id');
-$requete->execute(array('enkonduko'=>$_GET['enkonduko'],'konkludo'=>$_GET['konkludo'],'persono_id'=>$studanto_id,'leciono_id'=>$leciono_id));
+$requete->execute(array('enkonduko'=>$_POST['enkonduko'],'konkludo'=>$_POST['konkludo'],'persono_id'=>$studanto_id,'leciono_id'=>$leciono_id));
 
 // envoyer le mail pour prévenir l'élève
 if (!$neSendiRetmesagxon) {

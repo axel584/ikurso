@@ -1,4 +1,7 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 ini_set('session.gc_maxlifetime', 86400);
 ini_set('session.cookie_lifetime', 86400);
 
@@ -6,8 +9,10 @@ session_start();
 
 include_once("db.inc.php");
 include_once("webui.inc.php");
-include 'Mail.php';
-include('Mail/mime.php');
+require('vendor/autoload.php');
+
+
+
 //include_once("forum/includes/forum.lib.php");
 // on récupère l'adresse de la page appelée (et on retire les paramètres au besoin)
 // attention, c'est aussi appelé dans "pagxkapo.inc.php"
@@ -153,51 +158,41 @@ else {
 
 function mailViaSES($retadreso,$objekto,$contentsHtml) {
 	global $hostSmtpSES,$portSmtpSES,$userSES,$passwordSES;
-	$headers = array (
-	  'Content-Type' => "text/html; charset=UTF-8",
-	  'html_charset'  => 'UTF-8',
-  	  'head_charset'  => 'UTF-8',
-	  'From' => "ikurso@esperanto-france.org",
-	  'To' => $retadreso,
-	  'Subject' => mb_encode_mimeheader($objekto,"UTF-8"));
-
-
-	$smtpParams = array (
-	  	'host' => $hostSmtpSES,
-	  	'port' => $portSmtpSES,
-	  	'auth' => true,
-	   	'username' => $userSES,
-    	'password' => $passwordSES
-	); 
+	$mail = new PHPMailer(true);
 	
-	/*	$smtpParams = array (
-	  	'host' => $hostSmtpSES,
-	  	'port' => $portSmtpSES,
-	  	'auth' => false
-	);*/
+	try {
+    // Specify the SMTP settings.
+    $mail->isSMTP();
+    $mail->setFrom("ikurso@esperanto-france.org", "Ikurso");
+    $mail->Username   = $userSES;
+    $mail->Password   = $passwordSES;
+    $mail->Host       = $hostSmtpSES;
+    $mail->Port       = $portSmtpSES;
+    $mail->SMTPAuth   = true;
+    $mail->SMTPSecure = 'tls';
+    //$mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
-	 // Create an SMTP client.
-	$mail = Mail::factory('smtp', $smtpParams);
+    // Specify the message recipients.
+    $mail->addAddress($retadreso);
+    // You can also add CC, BCC, and additional To recipients here.
 
-	// Send the email.
-
-		$mime = new Mail_mime("\n");
-
-        // Setting the body of the email
-        $mime->setHTMLBody($contentsHtml);
-        $headers = $mime->headers($headers);
-
-	$result = $mail->send($retadreso, $headers, $mime->get());
-
-	if (PEAR::isError($result)) {
-  		protokolo(0,"Erreur SMTP",$result->getMessage());
-	}
-
-	return $result;
+    // Specify the content of the message.
+    $mail->isHTML(true);
+    $mail->Subject    = mb_encode_mimeheader($objekto);
+    $mail->Body       = $contentsHtml;
+    //$mail->AltBody    = $bodyText;
+    $mail->Send();
+    return 1;
+} catch (phpmailerException $e) {
+    echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
+} catch (Exception $e) {
+    echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
+}
 }
 
 function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
 	global $hostSmtp,$portSmtp;
+	echo $hostSmtp;
 	$headers = array (
 	  'Content-Type' => "text/html; charset=UTF-8",
 	  'html_charset'  => 'UTF-8',
@@ -225,8 +220,7 @@ function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
         $mime->setHTMLBody($contentsHtml);
         $headers = $mime->headers($headers);
 
-	$result = $mail->send($retadreso, $headers, $mime->get());
-
+	$result = $mail->send($retadreso, $headers, $mime->get(array('text_charset' => 'utf-8')));
 	if (PEAR::isError($result)) {
   		protokolo(0,"Erreur SMTP",$result->getMessage());
 	}

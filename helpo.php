@@ -102,7 +102,8 @@ include "pagxkapo.inc.php";
 				
 				<p class="parto">Dès que vous aurez terminé le premier cours, vous pourrez commencer à <strong>lire des livres en espéranto</strong>. Nous en avons sélectionné quelques-uns dans notre page <a href="<?php echo $vojo;?>butiko.php">Boutique</a>. Voir aussi tous les livres présentés dans la lettre mensuelle Espéranto-Aktiv dans la rubrique <a href="https://esperanto-france.org/lu-vu-entendu">Lu, vu, entendu</a>.</p>
 				
-				<p class="parto">Participez à <a href="https://www.interia.pl/">Sumoo</a>, le jeu où vous «lutterez» en lisant des livres en espéranto.</p>
+				<p class="parto">Participez à <a href="http://www.esperanto-sumoo.pl/">Sumoo</a>, le jeu où vous «lutterez» en lisant des livres en espéranto.</p>
+				<p class="parto">Découvrez des <a href="https://uea.facila.org/">articles simples à lire</a> présenté par l'association mondiale UEA.</p>
 				<p class="parto">Visitez les <strong>bibliothèques en ligne</strong>, dans lesquelles vous trouverez un certain nombre de livres électroniques téléchargeables gratuitement&nbsp;</p>
 				<ul class="sublisto">
 					<li>La page <a href="https://esperanto.org.uk/eldonoj/piron/">Verkoj de Claude Piron</a> présente les livres de Claude Piron, dont certains sont accessibles pour les débutants (voir la rubrique <em>Facila lingvaĵo</em>)&nbsp;;</li>

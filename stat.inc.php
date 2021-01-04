@@ -1,7 +1,6 @@
 <?php
 include "util.php";
 $vojo="";
-include_once ("fr.inc.php");
 include_once ("db.inc.php");
 include_once ("webui.inc.php");
 $pagxtitolo="Statistiques";

@@ -11,7 +11,7 @@ function increment($valeur) {
 }
 
 function stat_lecionoj() {
-	global $lgv,$lgv_nomoLeciono,$lgv_haltis,$lgv_lernante,$lgv_sumo,$lgv_neKomencis,$lgv_finis,$bdd;
+	global $bdd;
 	// initialisation de la variable $stat et $nomo_kurso/$nomo_leciono
 	$demando = "select kodo,nomo from kursoj";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));

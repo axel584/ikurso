@@ -1,5 +1,4 @@
 <?
-include "lingvo.inc.php";
 include "db.inc.php";
 include "webui.inc.php";
 include "forum/includes/forum.lib.php";
@@ -35,7 +34,6 @@ header("Pragma: no-cache"); // HTTP/1.0
 	menuo($persono["enirnomo"],$persono["rajtoj"]);
 ?>
 <center>
-<? if ($erarkodo=="9") echo "<h2><i>$lgv_eraro9</i></h2>"; ?>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td nowrap>

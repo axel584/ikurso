@@ -6,7 +6,6 @@ $subjekto=$pagxo[count($pagxo)-1];
 if ($subjekto!="korekti.php") {
 	$vojo="../../";
 	include $vojo."util.php";
-	include_once ($vojo."fr.inc.php");
 	include_once ($vojo."db.inc.php");
 	include_once ($vojo."webui.inc.php");
 }

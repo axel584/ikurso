@@ -85,21 +85,31 @@ function afficheAssociationNationale($pays) {
 
 function afficheAssociationFrancaise($idArthur) {
 	$json_url = "https://esperanto-france.org/api/personne/".$idArthur;
-	//echo $json_url;
+	//echo $json_url."<br/>";
 	$json = file_get_contents($json_url);
+	//print($json);
 	$data = json_decode($json, TRUE);
-	echo "<span class='title'>".$data["nom"]."</span><br/>";
-	if (isset($adresse)) {
+	//echo "id :".$data["id"]."<br/>";
+	$nom = isset($data['nom']) ? $data['nom'] : "SANS NOM";
+	//echo "nom :".$nom."<br/>";
+	//var_dump($data);
+	//echo "<hr>";
+	//print_r($data);
+	//echo "<hr>";
+	echo "<span class='title'>".$nom."</span><br/>";
+	if (isset($data["adresse"])) {
 		foreach ($data["adresse"] as $adresse){
-			afficheAdresse($adresse);
+			if (isset($adresse['principal']) and $adresse['principal']) { // n'affiche que les adresses principales
+				afficheAdresse($adresse);
+			}
 		}
 	}
-	if (isset($internet)) {
+	if (isset($data["internet"])) {
 		foreach ($data["internet"] as $url){
 			afficheUrl($url);
 		}	
 	}
-	if (isset($email)) {
+	if (isset($data["email"])) {
 		foreach ($data["email"] as $email){
 			afficheEmail($email);
 		}	
@@ -166,9 +176,13 @@ if (isset($_GET["aktivigo"])) {
 ?>
 			<section id="enhavo">
 				<div class="row">
-				<span class="col s4 label">Nom :</span>
-				<span class="col s6"><?php echo $persono['familinomo'];?></span>
-			</div>
+					<span class="col s4 label">Identifiant :</span>
+					<span class="col s6"><?php echo $persono['enirnomo'];?></span>
+				</div>
+				<div class="row">
+					<span class="col s4 label">Nom :</span>
+					<span class="col s6"><?php echo $persono['familinomo'];?></span>
+				</div>
 				<div class="row">
 				<span class="col s4 label">Prénom :</span>
 				<span class="col s6"><?php echo $persono['personnomo'];?>

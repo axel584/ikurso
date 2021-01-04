@@ -14,11 +14,11 @@ if ($persono["rajtoj"]!='K' && $persono["rajtoj"]!='A') exit($lgv_eraro4);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" dir="<? echo $lgv_direkto; ?>">
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <form name="formnoto" metho="post" action="sxangxinoton2.php">
 <center>
 <input type="hidden" name="idnoto" value="<? echo $idnoto; ?>">
-<p><span class="normala"><? echo $lgv_aldoniNoton; ?></span></p>
+<p><span class="normala">Ajouter un commentaire sur votre élève :</span></p>
 <textarea name="noto"><? simplaVorto("noto","personoj","where id='".$idnoto."'"); ?></textarea><br>
 <input type="submit" value="<? echo $lgv_ek; ?>">
 </center>

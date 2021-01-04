@@ -957,7 +957,7 @@ function vortlisto($persono_id,$kurso,$pattern) {
 	global $bdd;
 	$query = "SELECT eo,fr,vortoj.tipo,lecionoj.numero,lecioneroj.ordo FROM vortoj join lecioneroj on vortoj.lecionero_id=lecioneroj.id join lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso='".$kurso."'";
 	if ($pattern!="") {
-		$query .= " and (eo like '".$pattern."%' or fr like '".$pattern."%') ";
+		$query .= " and (eo like '".addslashes($pattern)."%' or fr like '".addslashes($pattern)."%') ";
 	}
 	$query .= " order by eo";
 	$res = $bdd->query($query);

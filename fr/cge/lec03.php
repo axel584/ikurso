@@ -393,9 +393,9 @@ include "dlekkapo.inc.php";
 		
 		<p class="rimarko"><strong>REMARQUE</strong> : N’employez <b>jamais</b> l’accusatif après <span class="eo">kiom da</span>.</p>
 
-		<h3>Plus aucun corrélatif ne vous échappe&nbsp;!</h3>
+		<h3>De nouveaux corrélatifs</h3>
 		<p>
-			Vous avez maintenant l’habitude&nbsp;: <span class="eo">kiom</span> est le corrélatif interrogatif de quantité. Complétons alors le tableau bien connu&nbsp;:
+			Dans leçon précédente, nous vous avions présenté le début du tableau des corrélatifs, dans lequel nous avions rangé quelques corrélatifs commençant par KI- (interrogatifs) et en NENI- (négatifs). Nous pouvons le compléter avec <span class="eo">kiom</span>, le corrélatif interrogatif de quantité, et ainsi ajouter la colonne des corrélatifs terminés par <span class="eo"><b>-om</b></span>&nbsp;:
 		</p>
 		<div class="korelativoj">
 			<table class="highlight">
@@ -428,15 +428,6 @@ include "dlekkapo.inc.php";
 						<td><span class="eo">neniam</span><br />jamais</td>
 						<td><span class="eo">neniel</span><br />impossible</td>
 						<td><span class="eo">neniom</span><br />aucun</td>
-					</tr>
-					<tr>
-						<th>Démonstratif<br /><span class="eo">TI-</span></th>
-						<td><span class="eo">tiu</span><br />celui-là,<br />celle-là</td>
-						<td><span class="eo">tio</span><br />cela</td>
-						<td><span class="eo">tie</span><br />là, là-bas</td>
-						<td><span class="eo">tiam</span><br />à ce moment</td>
-						<td><span class="eo">tiel</span><br />ainsi</td>
-						<td><span class="eo">tiom</span><br />autant&nbsp;de</td>
 					</tr>
 				</tbody>
 			</table>
@@ -544,6 +535,53 @@ include "dlekkapo.inc.php";
 			<p class="col s6 m4 offset-m1"><span class="eo">Ki<b>u</b> libr<b>o</b> estas via&nbsp;?</span></p><p class="col s6 m7">Quel livre est le tien&nbsp;?</p>
 		</div>
 
+		<h3>Plus aucun corrélatif ne vous échappe&nbsp;!</h3>
+		<p>
+		Vous avez maintenant l’habitude de ce tableau&nbsp;: nous pouvons y ajouter la ligne des démonstratifs, les corrélatifs commençant par <span class="eo"><b>TI</b>-</span>, tel que <span class="eo">tio</span>, que vous venez de voir. Complétons alors ce tableau&nbsp;:
+		</p>
+		<div class="korelativoj">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th> </th>
+						<th>Individualité<br /><span class="eo">-U</span></th>
+						<th>Chose<br /><span class="eo">-O</span></th>
+						<th>Lieu<br /><span class="eo">-E</span></th>
+						<th>Temps<br /><span class="eo">-AM</span></th>
+						<th>Manière<br /><span class="eo">-EL</span></th>
+						<th>Quantité<br /><span class="eo">-OM</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<td><span class="eo">kiu</span><br />qui&nbsp;? lequel&nbsp;?</td>
+						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
+						<td><span class="eo">kie</span><br />où&nbsp;?</td>
+						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
+						<td><span class="eo">kiel</span><br />comment&nbsp;?</td>
+						<td><span class="eo">kiom</span><br />combien&nbsp;?</td>
+					</tr>
+					<tr>
+						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<td><span class="eo">neniu</span><br />personne</td>
+						<td><span class="eo">nenio</span><br />rien</td>
+						<td><span class="eo">nenie</span><br />nulle&nbsp;part</td>
+						<td><span class="eo">neniam</span><br />jamais</td>
+						<td><span class="eo">neniel</span><br />impossible</td>
+						<td><span class="eo">neniom</span><br />aucun</td>
+					</tr>
+					<tr>
+						<th>Démonstratif<br /><span class="eo">TI-</span></th>
+						<td><span class="eo">tiu</span><br />celui-là,<br />celle-là</td>
+						<td><span class="eo">tio</span><br />cela</td>
+						<td><span class="eo">tie</span><br />là, là-bas</td>
+						<td><span class="eo">tiam</span><br />à ce moment</td>
+						<td><span class="eo">tiel</span><br />ainsi</td>
+						<td><span class="eo">tiom</span><br />autant&nbsp;de</td>
+					</tr>
+				</tbody>
+			</table>
 		<?php 
 		} // fin section
 		if ($section=="13") {

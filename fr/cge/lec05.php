@@ -108,22 +108,24 @@ include "dlekkapo.inc.php";
 		?>
 		
 		<p class="parto">
-		Les corrélatifs forment un tableau très utile de petits mots reliés
+		Dans les leçons précédentes, vous avez pu découvrir une partie des <b>corrélatifs</b>. 
+		Les corrélatifs sont un ensemble de petits mots reliés
 		entre eux par le sens et par la forme. Ils constituent un bon exemple
 		des avantages que l’on trouve à construire des mots de façon
-		<b>systématique</b>. 
+		systématique. 
 		</p>
 
 		<p>
-		Tout corrélatif est la combinaison de deux éléments, comme présentés dans le schéma suivant. Par exemple, si nous associons par exemple l'élément <span class="eo">ki-</span>, qui permet de poser une question, avec l'élément <span class="eo">-am</span>, qui a la signification de «temps, moment», on obtient le corrélatif <span class="eo">kiam</span>, qui signifie <em>quand</em>.</p>
+		Tout corrélatif est la combinaison de deux éléments, présentés dans le schéma suivant&nbsp;: un corrélatif est formé d’un des éléments de la partie de gauche du schéma (<span class="eo"><b>ki</b></span>, <span class="eo"><b>ti</b></span>, <span class="eo"><b>i</b></span>, <span class="eo"><b>ĉi</b></span>, <span class="eo"><b>neni</b></span>) auquel on accole un des éléments de la partie de droite (<span class="eo"><b>o</b></span>, <span class="eo"><b>a</b></span>, <span class="eo"><b>u</b></span>, <span class="eo"><b>es</b></span>, <span class="eo"><b>om</b></span>, <span class="eo"><b>am</b></span>, <span class="eo"><b>el</b></span>, <span class="eo"><b>el</b></span>, <span class="eo"><b>e</b></span>).</p>
+		<p>Par exemple, si nous associons l’élément <span class="eo"><b>ki-</b></span>, qui permet de poser une question, avec l'élément <span class="eo"><b>-am</b></span>, qui a la signification de «temps, moment», on obtient le corrélatif <span class="eo">kiam</span>, qui signifie <em>quand</em>.</p>
 
 		<img src="<?php echo $vojo;?>fr/cge/bildoj/correlatifs.svg" class="responsive-img">
 		
-		<p>Vous retrouverez dans le schéma ci-dessus des corrélatifs que vous avez déjà rencontrés dans les leçons précédentes&nbsp;:</p>
+		<p>Voici quelques corrélatifs déjà rencontrés dans les leçons précédentes&nbsp;:</p>
 		<div class="row vortlisto">
-			<p class="col s4"><span class="eo">kiu</span>&nbsp;: qui, quel, lequel, laquelle (suivi d’un nom)</p>
-			<p class="col s4"><span class="eo">neniu</span>&nbsp;: personne, aucun (si suivi d’un nom)</p>
-			<p class="col s4"><span class="eo">iu</span>&nbsp;: quelqu’un, un certain</p>
+			<p class="col s12"><span class="eo">kiu</span>&nbsp;: qui, quel, lequel, laquelle (suivi d’un nom)</p>
+			<p class="col s12"><span class="eo">neniu</span>&nbsp;: personne, aucun (si suivi d’un nom)</p>
+			<p class="col s12"><span class="eo">iu</span>&nbsp;: quelqu’un, un certain</p>
 			<p class="col s4"><span class="eo">kio</span>&nbsp;: quoi</p>
 			<p class="col s8"><span class="eo">nenio</span>&nbsp;: rien</p>
 			<p class="col s4"><span class="eo">kie</span>&nbsp;: où</p>

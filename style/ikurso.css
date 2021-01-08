@@ -1,4 +1,4 @@
-/*---- palette personnalisÃƒÂ©e ---*/
+/*---- palette personnalisée ---*/
 .primaire {background-color: #554E47 !important;}
 .primaire.moyen {background-color: #75706B !important;}
 .primaire.clair {background-color: #989490 !important;}
@@ -15,7 +15,7 @@
 .contraste-B, .bravo {background-color: #9ccc65;}
 .contraste-texte-B {color: #9ccc65;}
 
-/*---- prÃƒÂ©sentation boutique -----*/
+/*---- présentation boutique -----*/
 .masonry {
 	column-count: 4;
 	column-gap: 0;
@@ -212,7 +212,7 @@ p.noto {
 .eta, .numero {font-size: 85%;}
 .tab {padding-left: 1em;}
 
-/* amÃƒÂ©lioration de l'affichage s12 */
+/* amélioration de l'affichage s12 */
 
 @media only screen and (max-width: 600px) {
 	.row + p.col.s12 {
@@ -234,26 +234,30 @@ p.noto {
 	font-size: 1.2rem;
 }
 
-/*------------ liste ÃƒÂ  puces ------------*/
+/*------------ liste à puces ------------*/
 ul.listo li { 
     padding-left: 1em; 
     text-indent: -1em;
 }
 ul.sublisto {
 	margin-top: 0;
-	margin-left: 3em;
-	text-indent: -1em;
+	margin-left: 3.7em;
+	text-indent: -1.7em;
 }
 ul.sublisto li {
 }
 ul.listo li:before {
-    content: "Ã¢â‚¬Â¢  ";
-    color: #989490; 
+	font-family: 'Material Icons';
+	content: "subdirectory_arrow_right";
+	-webkit-font-feature-settings: 'liga';
+    color: #2196F3; 
 }
 ul.sublisto li:before {
-    content: "Ã¢â‚¬Â¢ ";
+	font-family: 'Material Icons';
+	content: "subdirectory_arrow_right";
+	-webkit-font-feature-settings: 'liga';
     color: #2196F3; 
-    padding-right: 0.5em;
+    padding-right: 0.7em;
 }
 
 ul.klarigo { 
@@ -397,7 +401,7 @@ aside {
 	padding-right: 5%;
 	margin-top: 6rem;
 }
-/********** tÃƒÂ©moignages ************/
+/********** témoignages ************/
 span.eta {font-size: 85%;}
 
 /********** drop-down uzanto *******/
@@ -462,7 +466,7 @@ ul#lecionoj li.farita a {
 	ul#lecionoj {margin: 0;}
 }
 
-/********** sommaire de la leÃƒÂ§on *******/
+/********** sommaire de la leçon *******/
 
 ul#enhavtabelo,
 ul.enhavtabelo {
@@ -544,7 +548,7 @@ ul.enhavtabelo li a:active {
 	color: #0277bd;
 }
 
-/********** vocabulaire de la leÃƒÂ§on *******/
+/********** vocabulaire de la leçon *******/
 table.vortaro {
 	width:90%;
 	margin:5% auto;
@@ -561,7 +565,7 @@ table.framed td {
     border: 1px solid #ccc;
 }
 
-/********** progression dans la leÃƒÂ§on *******/
+/********** progression dans la leçon *******/
 
 ul#progreso {
 	padding:0; margin: 0;
@@ -586,7 +590,7 @@ ul#progreso li.nuna {
 	border:1px solid #0299e6;
 }
 
-/********** corps de la leÃƒÂ§on *******/
+/********** corps de la leçon *******/
 
 #leciono-enhavo a { 
 	text-decoration: underline;
@@ -613,7 +617,7 @@ p.renvoi {
 	margin-left: 2em;
 	font-size: 0.85em;
 }
-/********** indication de la durÃƒÂ©e *******/
+/********** indication de la durée *******/
 p.dauro {
 	color: #2196F3;
 	margin-bottom:1em;
@@ -686,7 +690,7 @@ p.sekva {
 	margin-top: 0;
 	padding-top: 0;
 }
-/********** fin de la leÃƒÂ§on *******/
+/********** fin de la leçon *******/
 .notoj {
 	font-size: 90%;
 }
@@ -708,7 +712,7 @@ p.sekva {
 .ligoj i {font-size: inherit;}
 #leciono-fino {margin-top: 2rem;}
 
-/********** vocabulaire / rÃƒÂ¨gle ÃƒÂ  retenir *******/
+/********** vocabulaire / règle à retenir *******/
 fieldset.vortoj,
 fieldset.memoru {
 	border:2px double #2196F3;
@@ -818,7 +822,7 @@ p.nbvortoj {
 	vertical-align: bottom;
 }
 
-/*********  encadrÃƒÂ© Pour en savoir plus **********/
+/*********  encadré Pour en savoir plus **********/
 
 fieldset.sciipli {
 	border:2px double #828965;
@@ -880,7 +884,7 @@ legend a {color: inherit; cursor: pointer;}
 	color: rgba(0,0,0,0.87);
 	margin-bottom: 0.5em;
 }
-/********** ÃƒÂ©valuation (fin de leÃƒÂ§on) *******/
+/********** évaluation (fin de leçon) *******/
 
 #leciono-enketo {
 	margin-top: 2rem;
@@ -998,7 +1002,7 @@ span.ikurso {
 .dialogo p {
 }
 /*********************************/
-/*        page Mes ÃƒÂ©lÃƒÂ¨ves        */
+/*        page Mes élèves        */
 /*********************************/
 
 .collapsible-header span.badge {

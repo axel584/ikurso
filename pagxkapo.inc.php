@@ -9,6 +9,7 @@ $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 $aktivigo = isset($_GET['aktivigo']) ? $_GET['aktivigo'] : "";
 $retadreso = isset($_GET['retadreso']) ? $_GET['retadreso'] : "";
 $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
+$milestone = "22";
 if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = array("enirnomo"=>"","familinomo"=>"","personnomo"=>"","retadreso"=>"","rajtoj"=>"");}
 ?>
 <!DOCTYPE html>

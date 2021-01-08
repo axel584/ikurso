@@ -107,7 +107,9 @@ if ($kurso=="3N") {
 	$subjekto = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 }
 
-$resultat = mailViaSmtp($korektantaretadreso.",\"".$studanto["enirnomo"]."\" <".$studanto["retadreso"].">",$studanto["retadreso"],$subjekto,stripslashes($fonto));
+// envoi au correcteur + copie à l'élève
+mailViaSmtp($korektantaretadreso,$studanto["retadreso"],$subjekto,stripslashes($fonto));
+mailViaSES($studanto["retadreso"],"Copie de ".$subjekto,stripslashes($fonto));
 
 // sendi atentigon pro problemo pri sendado de retmesaghoj
 $filename = "../mails/novaleciono.html";

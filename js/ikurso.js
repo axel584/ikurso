@@ -118,6 +118,9 @@ $('#range_malfacileco').on("change mousemove", function() {
 });
 
 $("textarea").on('change keyup paste', function() {
+	// permet de recliquer sur le bouton sauvegarder si on change la valeur d'un champ
+  $("#registriEkzercaron_button").removeClass("disabled");
+	
   var $id=$(this).attr('id');
   console.log($id);
   var $vortoj = $(this).data("vortoj");

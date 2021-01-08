@@ -13,10 +13,10 @@ include "pagxkapo.inc.php";
 			<ul class="collection with-header">
 				<li class="collection-header">version 22. Janvier 2021</li>
 				<li class="collection-item">
-					<p>Correction d'un problème sur l'outil de correction en ligne quand les leçons étaient trop longue.</p>
-					<p>Modification dans la façon de présenter les corrélatifs (utilisation d'un tableau).</p>
-					<p>Ajout d'enregistrement sonore pour corriger des problèmes de qualité.</p>
-					<p>Ajout d'outils anti-spam pour le formulaire de contact.</p>
+					<p>Correction d'un problème sur l’outil de correction en ligne quand les leçons étaient trop longues.</p>
+					<p>Modification dans la façon de présenter les corrélatifs (utilisation d’un tableau).</p>
+					<p>Ajout d’enregistrement sonore pour corriger des problèmes de qualité.</p>
+					<p>Ajout d’outils anti-spam pour le formulaire de contact.</p>
 					<p>Corrections diverses de bugs et coquilles…</p>
 				</li>
 				<li class="collection-header">version 21. Janvier 2020</li>

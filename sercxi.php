@@ -80,28 +80,13 @@ include "adminkapo.inc.php";
 ?>
 		<div id="adminejo">
 			<ul id="tabnav">
-				<li><a href="administri.php?kategorio=P">Attendent un correcteur</a></li>
-				<li><a href="administri.php?kategorio=SO">Ont reçu un correcteur</a></li>
-				<li><a href="administri.php?kategorio=S">Autres élèves</a></li>
-				<li><a href="administri.php?kategorio=H">Ont abandonné</a></li>
-				<li><a href="administri.php?kategorio=F">Ont fini le cours</a></li>
-				<li><a href="administri.php?kategorio=K">Correcteurs</a></li>
-				<li><a href="administri.php?kategorio=A">Administrateurs</a></li>
-				<li><a href="administri.php?kategorio=I">Informateurs</a></li>
+				<li class='aktiva'><a href="#">Résultat de recherche</a></li>
 			</ul>
 			<div id="kadro">
 				<?php if ($erarkodo=="9") echo "<div class='atentigo'><p class='eraro'>Cet élève a déjà un correcteur.</p></div>"; ?>
 				<?php if ($erarkodo=="11") echo "<div class='atentigo'><p class='eraro'>Choisissez un correcteur avant de sauvegarder</p></div>"; ?>
 			
-			<div id="adminG">
-
-			<!-- page d'administration -->
-				<form name="administri" method="post" action="<?=$vojo?>administri.php?kategorio=<?=$kategorio?>">
-				<input type="hidden" name="kategorio" value="<?=$kategorio?>">
-				</form>
-			</div>
 			<div id="adminD">
-			<h2>R&eacute;sultat de la recherche :</h2>
 				<div class="encadre">
 	    			<?php listiSercxadon($personnomo,$familinomo,$celenirnomo,$retadreso,$urbo,$posxtkodo); ?>
 				</div>

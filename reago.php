@@ -66,8 +66,6 @@ include "pagxkapo.inc.php";
 					<input class="btn waves-effect waves-light blue" type="submit" value="envoyer">
 					<input class="btn-flat waves-effect waves-light blue-text" type="reset" value="effacer">
 				</div>
-				
-				<input type="hidden" name="lastpagxo" value="<?php echo $_POST['lastpagxo'];?>"></p>
 				<input type="hidden" name="reagopagxo" value="<?php echo $q?>">
 			</form>
 		</section>

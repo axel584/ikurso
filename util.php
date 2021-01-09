@@ -157,12 +157,14 @@ else {
 }
 
 function mailViaSES($retadreso,$objekto,$contentsHtml) {
-	global $hostSmtpSES,$portSmtpSES,$userSES,$passwordSES;
+	global $hostSmtpSES,$portSmtpSES,$userSES,$passwordSES,$useSmtp;
 	$mail = new PHPMailer(true);
 	
 	try {
     // Specify the SMTP settings.
-    $mail->isSMTP();
+	if ($useSmtp) {
+		$mail->isSMTP();
+	}
     $mail->setFrom("ikurso@esperanto-france.org", "Ikurso");
     $mail->Username   = $userSES;
     $mail->Password   = $passwordSES;
@@ -173,7 +175,9 @@ function mailViaSES($retadreso,$objekto,$contentsHtml) {
     //$mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
     // Specify the message recipients.
-    $mail->addAddress($retadreso);
+	foreach(explode(",",$retadreso) as $destinataire) {
+		$mail->addAddress($destinataire);
+	}
     // You can also add CC, BCC, and additional To recipients here.
 
     // Specify the content of the message.
@@ -192,12 +196,14 @@ function mailViaSES($retadreso,$objekto,$contentsHtml) {
 
 function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
 	global $hostSmtp,$portSmtp;
-	global $hostSmtpSES,$portSmtpSES,$userSES,$passwordSES;
+	global $hostSmtpSES,$portSmtpSES,$userSES,$passwordSES,$useSmtp;
 	$mail = new PHPMailer(true);
 	
 	try {
     // Specify the SMTP settings.
-    $mail->isSMTP();
+    if ($useSmtp) {
+		$mail->isSMTP();
+	}
     $mail->setFrom($from);
     $mail->Host       = $hostSmtp;
     $mail->Port       = $portSmtp;
@@ -205,7 +211,9 @@ function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
     //$mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
     // Specify the message recipients.
-    $mail->addAddress($retadreso);
+	foreach(explode(",",$retadreso) as $destinataire) {
+		$mail->addAddress($destinataire);
+	}
     // You can also add CC, BCC, and additional To recipients here.
 
     // Specify the content of the message.

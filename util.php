@@ -159,7 +159,7 @@ else {
 function mailViaSES($retadreso,$objekto,$contentsHtml) {
 	global $hostSmtpSES,$portSmtpSES,$userSES,$passwordSES,$useSmtp;
 	$mail = new PHPMailer(true);
-	
+	$mail->CharSet = 'UTF-8';
 	try {
     // Specify the SMTP settings.
 	if ($useSmtp) {
@@ -172,7 +172,6 @@ function mailViaSES($retadreso,$objekto,$contentsHtml) {
     $mail->Port       = $portSmtpSES;
     $mail->SMTPAuth   = true;
     $mail->SMTPSecure = 'tls';
-    //$mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
     // Specify the message recipients.
 	foreach(explode(",",$retadreso) as $destinataire) {
@@ -182,9 +181,8 @@ function mailViaSES($retadreso,$objekto,$contentsHtml) {
 
     // Specify the content of the message.
     $mail->isHTML(true);
-    $mail->Subject    = mb_encode_mimeheader($objekto);
+    $mail->Subject    = $objekto;
     $mail->Body       = $contentsHtml;
-    //$mail->AltBody    = $bodyText;
     $mail->Send();
     return 1;
 } catch (phpmailerException $e) {
@@ -198,7 +196,7 @@ function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
 	global $hostSmtp,$portSmtp;
 	global $hostSmtpSES,$portSmtpSES,$userSES,$passwordSES,$useSmtp;
 	$mail = new PHPMailer(true);
-	
+	$mail->CharSet = 'UTF-8';
 	try {
     // Specify the SMTP settings.
     if ($useSmtp) {
@@ -208,7 +206,6 @@ function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
     $mail->Host       = $hostSmtp;
     $mail->Port       = $portSmtp;
     $mail->SMTPAuth   = false;
-    //$mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
     // Specify the message recipients.
 	foreach(explode(",",$retadreso) as $destinataire) {
@@ -218,9 +215,8 @@ function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
 
     // Specify the content of the message.
     $mail->isHTML(true);
-    $mail->Subject    = mb_encode_mimeheader($objekto);
+    $mail->Subject    = $objekto;
     $mail->Body       = $contentsHtml;
-    //$mail->AltBody    = $bodyText;
     $mail->Send();
     return 1;
 } catch (phpmailerException $e) {

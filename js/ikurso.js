@@ -625,6 +625,8 @@ $("#novigi_pasvorton_sendi_button").click(function () {
           success : function(reponse, statut){ 
             if (reponse.mesagxo=="ok") {
 				M.toast({html: 'La leçon de votre élève a bien été renvoyée.'});              
+			} else if (reponse.type=="NeniuRespondo") {	
+				M.toast({html: 'Cette leçon est vide, aucun exercice à renvoyer.'});              
             } else {
               alert("mauvais message de retour, contactez les administrateurs : "+reponse)
               console.log(reponse);

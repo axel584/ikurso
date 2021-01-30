@@ -296,7 +296,7 @@ if ($persono_id=="") {
 					<ul class="right hide-on-med-and-down">
 						<li><a href="<?php echo $vojo;?>kionova.php">QUOI DE NEUF ?</a></li>
 						<li><a class="dropdown-trigger" href="#!" data-target="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
-						<li><a href="<?php echo $vojo;?>butiko.php">BOUTIQUE</a></li>
+						<li><a class="tooltipped" href="https://butiko-esperanto-france.org/" data-position="bottom" data-tooltip="Boutique d'Espéranto-France" target="_NEW">BOUTIQUE</a></li>
 						<?php if ($persono["rajtoj"]=="K" || $persono["rajtoj"]=="A" ) { ?>
 						<li><a class="dropdown-trigger" href="#!" data-target="menu_correcteur">ESPACE CORRECTEUR<i class="material-icons right">arrow_drop_down</i></a></li>
 						<?php } ?>

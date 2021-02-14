@@ -469,7 +469,7 @@ include "dlekkapo.inc.php";
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-01.mp3" class="sm2_button"></a><span class="eo">Hodiaŭ estas lundo la dua de aŭgusto.</span>&nbsp;: Aujourd’hui nous sommes le lundi 2 août.</p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-02.mp3" class="sm2_button"></a><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.</span>&nbsp;: Demain nous serons le mardi 3 août.</p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-03.mp3" class="sm2_button"></a><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.</span>&nbsp;: Hier c’était dimanche 1<sup>er</sup> août.</p>
-				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-04.mp3" class="sm2_button"></a><span class="eo">En januaro estas tri dek unu tagoj.</span>&nbsp;: En janvier il y a 31 jours.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-04.mp3" class="sm2_button"></a><span class="eo">En januaro estas tridek unu tagoj.</span>&nbsp;: En janvier il y a 31 jours.</p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-05.mp3" class="sm2_button"></a><span class="eo">La unua de Majo estas la Tago de la Laboro</span>&nbsp;: Le premier mai est la Fête du Travail (littéralement "le Jour du Travail")</p>
 			</div>
 			

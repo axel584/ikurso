@@ -41,6 +41,7 @@ include "pagxkapo.inc.php";
 				<option value='RENVOIE ACTIVATION COMPTE'>Renvoie Activation Compte</option>
 				<option value='MEMORILO'>Memorilo</option>
 				<option value='SUPPRESSON AUTOMATIQUE'>Supression Automatique</option>
+				<option value='SPAM'>SPAM</option>
 				<option value='Erreur SMTP'>Erreur SMTP</option>
 			</select></p>
 			<p class="col s6 m3"><span class="label">Utilisateur : </span><input id="persono_protokolo" type='text' name='persono' value="" /></p>

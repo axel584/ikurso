@@ -58,7 +58,10 @@ function afficheAssociationNationale($pays) {
 		echo "<span class='title'>Ecole de langues Esperanto</span><br/>";
 		echo "Chemin des Postiers 27,<br/> 2300 La Chaux-de-Fonds,<br/> Suisse<br/>";
 		echo "+41 32 926 74 07";
-		echo "</li></ul>";
+		echo "</li>";
+		echo "<li class='collection-item'><span class='title'>Laŭzana Esperanto-Societo</span><br/>Ch. de la Vollombreuse 14<br/>CH 1004 Lausanne<br/>Tel : +41 76 411 14 55 / 21 647 29 28<br/><a href='mailto:sekretario@esperanto-lausanne.ch'>sekretario@esperanto-lausanne.ch</a></li>";
+		echo "<li class='collection-item'><span class='title'>Stelo</span><br/>CH 1200 Genève<br/><a href='http://lastelo.ch/' target='_NEW'>http://lastelo.ch/</a><br/><a href='mailto:info@lastelo.ch'>info@lastelo.ch</a></li>";
+		echo "</ul>";
 		echo "</div>";
 	} else {
 		echo "<div class='row'>";

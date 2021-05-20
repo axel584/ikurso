@@ -54,7 +54,7 @@ include "gerdakapo.inc.php";
 						<li><a href="cxap09.php?section=2">Différences de sens entre -<b>inda</b> et -<b>ebla</b></a></li>
 						<li><a href="cxap10.php?section=2">Les suffixes -<b>eg</b>- et -<b>em</b>-</a></li>
 						<li><a href="cxap11.php?section=2">Les suffixes -<b>ig</b>- et -<b>ilo</b></a></li>
-						<li><a href="cxap13.php?section=2">Les suffixes -<b>eco</b> et -<b>iĝ</b>-</a></li>
+						<li><a href="cxap14.php?section=2">Les suffixes -<b>eco</b> et -<b>iĝ</b>-</a></li>
 						<li><a href="cxap13.php?section=2">Les suffixes -<b>ega</b> et -<b>iga</b></a></li>
 						<li><a href="cxap15.php?section=2">Les suffixes -<b>aĉ</b>- et -<b>ido</b></a></li>
 						<li><a href="cxap17.php?section=2">Le suffixe -<b>ano</b></a></li>

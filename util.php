@@ -24,7 +24,7 @@ function checkEmail($email)
 	if ($email=="") {
 		return FALSE;
 	}
-     if (!preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $email)) {return FALSE;}
+     if (!preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{1,}\.[a-z]{2,5}$#", $email)) {return FALSE;}
      list($Username, $Domain) = explode("@",$email);
      if(getmxrr($Domain, $MXHost)) {return TRUE;}
      else {

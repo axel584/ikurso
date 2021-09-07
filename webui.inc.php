@@ -533,6 +533,8 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 		echo "<p>Gerda malaperis&nbsp;:</p>";
 	}elseif ($kurso=="3N") {
 		echo "<p>Tria nivela kurso&nbsp;:</p>";
+	}elseif ($kurso=="PP") {
+		echo "<p>Pa&#349;oj al plena posedo:</p>";
 	}
 	echo "<ul id='lecionoj'>";
 	if ($leciono==0) {
@@ -540,6 +542,8 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 			echo "<li id='intro' class='nuna'><a href='".$chemin."intro.php'>introduction</a></li>";
 		} elseif ($kurso=="GR") {
 			echo "<li id='intro' class='nuna'><a href='".$chemin."index.php'>enkonduko</a></li>";
+		}elseif ($kurso=="PP") {
+			echo "<li id='intro' class='nuna'><a href='".$chemin."antauxklarigo.php'>enkonduko</a></li>";
 		}
 	}
 	else {
@@ -547,7 +551,9 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 			echo "<li id='intro' class='farita'><a href='".$chemin."intro.php'>introduction</a></li>";
 		} elseif ($kurso=="GR") {
 			echo "<li id='intro' class='farita'><a href='".$chemin."index.php'>enkonduko</a></li>";
-			}
+		}elseif ($kurso=="PP") {
+			echo "<li id='intro' class='farita'><a href='".$chemin."antauxklarigo.php'>enkonduko</a></li>";
+		}
 	}
 	$query = "select * from lecionoj where kurso='".$kurso."' order by numero";
 	$res = $bdd->query($query);

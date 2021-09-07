@@ -441,6 +441,8 @@ function getRedirectionParDroits($persono_id) {
             $prefixe_url = 'fr/cge/';
         } elseif($row['kurso']=="3N") {
             $prefixe_url = 'fr/3n/';
+        } elseif($row['kurso']=="PP") {
+            $prefixe_url = 'eo/ppp/';
         }
         if ($row["stato"]=="N") { // cas des élèves pas encore commencé
             $demando2 = "select titolo,retpagxo from lecionoj where numero='1' and kurso='".$row["kurso"]."'";

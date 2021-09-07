@@ -2,7 +2,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE ekzerceroj (
   `id` int(11) NOT NULL,
-  `ekzerco_id` int(11) NOT NULL,
+  `ekzerco_id` int(11) NOT NULL AUTO_INCREMENT,
   `kodo` varchar(10) NOT NULL,
   `numero` int(11) NOT NULL,
   `demando` text NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE ekzerceroj (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE ekzercoj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `komando` text NOT NULL,
   `lecionero_id` int(11) NOT NULL,
   `komando_detalo` text,
@@ -71,7 +71,7 @@ CREATE TABLE landoj (
 
 
 CREATE TABLE `lecioneroj` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `leciono_id` int(11) DEFAULT NULL,
   `titolo` text,
   `tipo` enum('VORTARO','QCM','TEKSTO','EKZERCARO') DEFAULT NULL,
@@ -85,7 +85,7 @@ CREATE TABLE `lecioneroj` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE lecionoj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `numero` int(11) NOT NULL DEFAULT '0',
   `titolo` varchar(64) CHARACTER SET utf8 DEFAULT NULL,
   `retpagxo` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
@@ -96,7 +96,7 @@ CREATE TABLE lecionoj (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE monatoj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kodo` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT '',
   `nomo` varchar(64) CHARACTER SET utf8 NOT NULL DEFAULT '',
   PRIMARY KEY (id)

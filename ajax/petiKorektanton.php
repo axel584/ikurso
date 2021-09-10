@@ -154,8 +154,9 @@ $contents=str_replace("##SNASKIGXDATO##",$persono["naskigxdato"],$contents);
 $contents=str_replace("##KNOMO##",$korektanto["enirnomo"],$contents);
 mailViaSES($korAdreso,"Nouvel élève sur I-kurso",$contents);
 
-// envoyer la leçon au correcteur
-mailViaSmtp($korAdreso.",".$persono["enirnomo"]." <".$persono["retadreso"].">",$persono["retadreso"],$sujetMail,stripslashes($fonto));
+// envoyer la leçon au correcteur + copie à l'élève
+mailViaSmtp($korAdreso,$persono["retadreso"],$sujetMail,stripslashes($fonto));
+mailViaSES($persono["retadreso"],"Copie de ".$sujetMail,stripslashes($fonto));
 
 // on loggue dans le protokolo au cas où
 protokolo($persono["id"],"ATTRIBUTION AUTOMATIQUE","l'élève a reçu ".$korektanto["enirnomo"]." comme correcteur");

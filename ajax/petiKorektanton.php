@@ -62,6 +62,10 @@ if ($kurso=="3N") {
 	$prefixeKurso = "fr/3n/";
 	$sujetMail = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 } 
+if ($kurso=="PP") {
+	$prefixeKurso = "eo/ppp/";
+	$sujetMail = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
+} 
 
 
 // on met le champ "kurso" de l'élève a la bonne valeur et son champ "rajtoj" à P

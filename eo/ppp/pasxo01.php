@@ -119,15 +119,15 @@ include "pppkapo.inc.php";
 		?>
 
 			<?php 
+				getEkzercon(107,$persono_id);
+			?>
+
+			<?php 
 				getEkzercon(108,$persono_id);
 			?>
 
 			<?php 
 				getEkzercon(109,$persono_id);
-			?>
-
-			<?php 
-				getEkzercon(110,$persono_id);
 			?>
 			
 		<?php 

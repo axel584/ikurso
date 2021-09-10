@@ -28,10 +28,10 @@ include "pppkapo.inc.php";
 					<p><span class="eo">EFEKTIVA</span>: reala.</p>
 					<p><span class="eo">FABELO</span>: historio pri mirigaj okazaĵoj.</p>
 					<p><span class="eo">FERIO</span>: libertempo.</p>
-					<p><span class="eo">FIDI</span>: plenkredi pri iu all io.</p>
+					<p><span class="eo">FIDI</span>: plenkredi pri iu al io.</p>
 					<p><span class="eo">FROSTI</span>: esti tre malvarma.</p>
 					<p><span class="eo">FROTI</span>: preme movi ion sur io alia.</p>
-					<p><span class="eo">GLASO</span>: ujo, el kiu oni drinkas.</p>
+					<p><span class="eo">GLASO</span>: ujo, el kiu oni trinkas.</p>
 					<p><span class="eo">GLITI</span>: facile movigi sur grasa supraĵo.</p>
 					<p><span class="eo">HEJTI</span>: varmigi ĉambron aŭ loĝejon.</p>
 					<p><span class="eo">JAKO</span>: vestaĵo por la supra parto de la korpo.</p>
@@ -40,7 +40,7 @@ include "pppkapo.inc.php";
 					<p><span class="eo">KOSTO</span>: pago necesa por ricevi ion.</p>
 					<p><span class="eo">LITO</span>: aĵo, sur kiu oni dormas.</p>
 					<p><span class="eo">MARMORO</span>: bela blanka ŝtono.</p>
-					<p><span class="eo">MATERIALO</span>: Krudaĵo necesa por plenumi ion.</p>
+					<p><span class="eo">MATERIALO</span>: krudaĵo necesa por plenumi ion.</p>
 				</div>
 				<div class="col s12 m6">
 					<p><span class="eo">MEDITI</span>: pripensadi.</p>
@@ -61,7 +61,7 @@ include "pppkapo.inc.php";
 					<p><span class="eo">SUPOZI</span>: kredi ion vera.</p>
 					<p><span class="eo">ŜULTRO</span>: plej supra trunkoparto.</p>
 					<p><span class="eo">ŜVEBI</span>: resti senmove pendanta, kvazaŭ fluge.</p>
-					<p><span class="eo">TERURO: timego.</p>
+					<p><span class="eo">TERURO</span>: timego.</p>
 					<p><span class="eo">URĜI</span>: plirapidigi.</p>
 					<p><span class="eo">VOJAĜI</span>: iri aŭ veturi por atingi lokon ne proksiman.</p>
 				</div>

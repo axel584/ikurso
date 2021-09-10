@@ -47,7 +47,7 @@ include "pppkapo.inc.php"
 							<h5 class="center">Mi tuj deziras komenci!</h5>
 							<div class="row">
 								<p><span class="noto">Mi zorge legas ĉiujpaĝojn de la lecionoj, mi plenumas la ekzercojn kaj mi povos aliĝi je la fino de la unua paĝo. Miajn ekzercojn ricevos auxtomate mia korektanto.</span>
-								<p><a href="<?php echo $vojo;?>fr/ppp/pasxo01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Ek al la unua paŝo...</a></p>
+								<p><a href="<?php echo $vojo;?>eo/ppp/pasxo01.php?section=1" class="btn-flat small blue-text"><i class="material-icons right">arrow_right</i>Ek al la unua paŝo...</a></p>
 								</p>
 							</div>		
 						</div>

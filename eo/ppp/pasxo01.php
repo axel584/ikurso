@@ -28,7 +28,7 @@ include "pppkapo.inc.php";
 					<p><span class="eo">EFEKTIVA</span>: reala.</p>
 					<p><span class="eo">FABELO</span>: historio pri mirigaj okazaĵoj.</p>
 					<p><span class="eo">FERIO</span>: libertempo.</p>
-					<p><span class="eo">FIDI</span>: plenkredi pri iu al io.</p>
+					<p><span class="eo">FIDI</span>: plenkredi pri iu aŭ io.</p>
 					<p><span class="eo">FROSTI</span>: esti tre malvarma.</p>
 					<p><span class="eo">FROTI</span>: preme movi ion sur io alia.</p>
 					<p><span class="eo">GLASO</span>: ujo, el kiu oni trinkas.</p>
@@ -82,7 +82,7 @@ include "pppkapo.inc.php";
 				<p>La rano respondis:</p>
 				<p>"Jes, kara sinjoro Ripsrops, mi povas paroli, sed mi ne parolas rane, sed dane. Mi petas vin, sinjoro Ripsrops... Mi frostas. Metu min en vian poŝon. Ĉu mi rajtas kunveturi al Kopenhago? Por bonfaro vi ricevos bonon!"</p>
 				<p>Ripsrops tre miris, precipe, ke la rano frostas, kiam estas varme, sed rano estas rano, kaj ĉar la petita varmo ne kostos al li elspezojn, li metis la ranon en sian poŝon. (... Kion vi diras? Jes... Jes, li estis sobra kiel mi.)</p>
-				<p>lom post iom la rano iĝis hejmeca de Ripsrops. Ĝi petis eĉ manĝon kaj iom da akvo, kiujn Ripsrops, kiu konsideris la ranon cetere tre modesta, donis al sia kunvojaĝanto. Tiel ili alvenis vespere al la metropolo, eĉ al la loĝejo de Ripsrops, ĉar la rano petis ripozlokon. Ripsrops malfermis la pordon de sia loĝejo kaj tiam la rano denove ekparolis:</p>
+				<p>Iom post iom la rano iĝis hejmeca de Ripsrops. Ĝi petis eĉ manĝon kaj iom da akvo, kiujn Ripsrops, kiu konsideris la ranon cetere tre modesta, donis al sia kunvojaĝanto. Tiel ili alvenis vespere al la metropolo, eĉ al la loĝejo de Ripsrops, ĉar la rano petis ripozlokon. Ripsrops malfermis la pordon de sia loĝejo kaj tiam la rano denove ekparolis:</p>
 				<p>"Kara sinjoro Ripsrops, mi estas tiel dormema. Ĉu mi rajtus dormi en tiu lito?"</p>
 				<p>Ripsrops ekmeditis. Estis la unua fojo, ke iu fremdulo volis dormi en ilia familia lito, sed efektive sinjorino Ripsrops estis for kaj tiu ĉi mirinda rano estis tiel dormema. Li metis la ranon en la apudan liton kaj demetis sian jakon kaj komencis pretigi sin por la nokta trankvilo. Li volis jam mallumigi, kiam li alrigardis la apudan liton kaj tiam li rimarkis, ke el la stranga rano fariĝis belega reĝidino, kiu supozeble apenaŭ estis provizita per noktovestoj. Lia rigardo ekglitis sur la marmoraj ŝultroj de la reĝidino. Ripsrops tute teruriĝis. Li frotis la okulojn. La reĝidino alrigardis lin kaj diris:</p>
 				<p>"Ri i-ipsĉjo!"</p>

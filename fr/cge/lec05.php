@@ -404,7 +404,7 @@ include "dlekkapo.inc.php";
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/malseka.mp3" class="sm2_button"></a><span class="eo">malseka</span>&nbsp;: mouillé</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/krajono.mp3" class="sm2_button"></a><span class="eo">krajono</span>&nbsp;: crayon</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/vespere.mp3" class="sm2_button"></a><span class="eo">vespere</span>&nbsp;: le soir, au soir</p>
-				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/bicikle.mp3" class="sm2_button"></a><span class="eo">bicikle</span>&nbsp;: en vélo</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/bicikle.mp3" class="sm2_button"></a><span class="eo">bicikle</span>&nbsp;: à vélo</p>
 			</div>
 		</fieldset>
 

@@ -161,7 +161,7 @@ $(".korektebla").focusout( function () {
           url : $cheminAbsolu+'ajax/memkorektado.php',
           type : 'GET',
           dataType : 'json',
-          data : "ekzercero="+$ekzercero+"&studanto="+$studanto+"&respondo="+encodeURIComponent($respondo),
+          data : "ekzercero="+$ekzercero+"&studanto="+$studanto+"&respondo="+encodeURIComponent($respondo)+"&korekteblaEkzerco=true",
           success : function(reponse, statut){ 
               if (reponse.mesagxo=="ok") {
                 $formulaire.addClass("valid");
@@ -180,6 +180,29 @@ $(".korektebla").focusout( function () {
   }
 });
 
+// fonction pour les exercices dont la réponse N'est PAS en base : on se contente de sauvegarder la réponse 
+$(".nekorektebla").focusout( function () {
+  $ekzercero = $(this).data('ekzercero');
+  $studanto = $(this).data('studanto');
+  $formulaire = $(this);
+  $respondo=$formulaire.val();
+  if ($respondo!="") {
+          $.ajax({
+          url : $cheminAbsolu+'ajax/memkorektado.php',
+          type : 'GET',
+          dataType : 'json',
+          data : "ekzercero="+$ekzercero+"&studanto="+$studanto+"&respondo="+encodeURIComponent($respondo)+"&korekteblaEkzerco=false",
+          success : function(reponse, statut){ 
+              console.log("sauvegarde OK");
+          },
+          error : function(request, error) {
+            console.log("request : "+request+" / error : "+error);
+            alert("Erreur interne, contactez les administrateurs");
+
+          }
+      });
+  }
+});
 
 function rechercherVorton($pattern,$kurso) {
         $.ajax({

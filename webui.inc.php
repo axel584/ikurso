@@ -252,7 +252,7 @@ function getEkzercon($id,$persono_id) {
 		$styleKorektebla=" korektebla";
 	} else {
 		echo "<p class='eo eta'>Cet exercice ne peut pas être corrigé automatiquement. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>\n";
-		$styleKorektebla=" ";
+		$styleKorektebla=" nekorektebla";
 	}
 	if ($rowEkzerco["ekzemplo"]!="") {
 			echo "<div class='ekzemplo row'>";

@@ -3,6 +3,7 @@ include "../util.php";
 $ekzercero_id=isset($_GET["ekzercero"])?$_GET["ekzercero"]:"";
 $studanto=isset($_GET["studanto"])?$_GET["studanto"]:"";
 $lernantaRespondo=isset($_GET["respondo"])?htmlspecialchars($_GET["respondo"]):"";
+$korekteblaEkzerco=isset($_GET["korekteblaEkzerco"])?$_GET["korekteblaEkzerco"]=="true":false;
 
 
 if ($lernantaRespondo=="") {
@@ -10,20 +11,19 @@ if ($lernantaRespondo=="") {
 	exit;
 }
 
-$query="SELECT respondo,normaligita FROM ekzerceroj where id='".$ekzercero_id."'";
-$result = $bdd->query($query);
-$row = $result->fetch();
-$bonaRespondo = $row["normaligita"];
+if ($korekteblaEkzerco) {
+	$query="SELECT respondo,normaligita FROM ekzerceroj where id='".$ekzercero_id."'";
+	$result = $bdd->query($query);
+	$row = $result->fetch();
+	$bonaRespondo = $row["normaligita"];
 
-
-
-
-if (kontroliRespondon($lernantaRespondo,$bonaRespondo)) {
-	$respondo["mesagxo"] = "ok";
-	$gxusta=1;	 
-} else {
-	$respondo["mesagxo"] = "ko";
-	$gxusta=0;
+	if (kontroliRespondon($lernantaRespondo,$bonaRespondo)) {
+		$respondo["mesagxo"] = "ok";
+		$gxusta=1;	 
+	} else {
+		$respondo["mesagxo"] = "ko";
+		$gxusta=0;
+	}
 }
 
 

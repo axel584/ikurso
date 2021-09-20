@@ -266,6 +266,8 @@ function getPrefixeCours($kurso) {
        return 'fr/cge/';
     } elseif($kurso=="3N") {
        return 'fr/3n/';       
+    } elseif($kurso=="PP") {
+       return 'eo/ppp/';       
     } else {
         return null;
     }

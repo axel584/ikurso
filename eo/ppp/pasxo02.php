@@ -15,7 +15,7 @@ include "pppkapo.inc.php";
 		getTitoloLecionero('PP',$leciono,$section);
 		?>
 		<?php
-		if ($section=="1") {
+		if ($section=="2") {
 		?>
 			<div class="vortlisto row">
 				<div class="col s12 m6">
@@ -39,16 +39,16 @@ include "pppkapo.inc.php";
 					<p><span class="eo">ONKLO</span>: frato de la patro aŭ patrino.</p>
 					<p><span class="eo">PARDONI</span>: malsevere trakti iun.</p>
 					<p><span class="eo">PLEKTI</span>: regule interkunigi laŭ longe, ekzemple harojn.</p>
-					<p><span class="eo">PROBLEM</span>: malfacila demando.</p>
+					<p><span class="eo">PROBLEMO</span>: malfacila demando.</p>
 					<p><span class="eo">PSALMO</span>: speciala religia kanto.</p>
 					<p><span class="eo">RELIGIO</span>: kredo pri supernaturaj aferoj.</p>
-					<p><span class="eo">ROBO</span>: longs virina vesto.</p>
+					<p><span class="eo">ROBO</span>: longa virina vesto.</p>
 					<p><span class="eo">SERIOZA</span>: zorge atent(ind)a.</p>
 					<p><span class="eo">SPEGULO</span>: glata, brila aĵo, per kiu oni povas vidi sin.</p>
 					<p><span class="eo">ŜLOSI</span>: fermi, ekzemple pordon, per speciala ilo.</p>
 					<p><span class="eo">ŜPARI</span>: atente reteni, ekzemple monon.</p>
 					<p><span class="eo">TRUO</span>: malplenaĵo en io.</p>
-					<p><span class="eo">VIZITADI</span>: ĉeesti; regule aliradi.</p>
+					<p><span class="eo">VIZITI</span>: ĉeesti; regule aliradi.</p>
 					<p><span class="eo">ZONO</span>: io, kion oni metas ĉirkaŭ la korpomezon.</p>				
 </div>
 
@@ -56,14 +56,14 @@ include "pppkapo.inc.php";
 			
 		<?php 
 		} // fin section 1
-		if ($section=="2") {
+		if ($section=="1") {
 		?>
 
 							 <h3>LA PSALMARO</h3>
 
  
 
-<p>Kiam Anna-Klara en sia sepa jaro vizitadis la unuan klason, iun tagon ŝi petis de mi psalmlibro .</p>
+<p>Kiam Anna-Klara en sia sepa jaro vizitadis la unuan klason, iun tagon ŝi petis de mi psalmlibron.</p>
 <p>“Kial?” mi demandis.</p>
 <p>“Ĉar ankaŭ Gustavo havas.”</p>
 <p>“Povas esti,” mi respondis, “sed mi neniam aŭdis, ke tiel etaj knabinoj havus psalmaron.”</p>
@@ -74,13 +74,13 @@ include "pppkapo.inc.php";
 <p>“Ĝi estas ĝuste tia, kia tiu de Gustavo.”</p>
 <p>Mi eksidis kaj iomete meditadis pri la okazintaĵoj, kaj poste — la dioj pardonu min — mi iris al la pordo kaj enokulumis tra la ŝlosiltruo.</p>
 <p>Anna-Kiara staris meze de la ĉambro, antaŭ la granda spegulo. Kun la malfermita psalmaro ŝi kantis falsvoĉe. De tempo al tempo ŝi rigardis al la spegulo, ĉu ŝia zono bone kuŝas? Kelkfoje ŝi ordigis sian harplekton, kelkfoje glatigis ĉifon sur la robo, kiu ne estis bonorde sur ŝia ŝultro.</p>
-<p>Subite mi surprizis sin per pordmalfermo kaj eniris:</p>
+<p>Subite mi surprizis ŝin per pordmalfermo kaj eniris:</p>
 <p>“Kara Anna-Kiara,” mi diris, “psalmaro estas io multe pli serioza, ol vi imagas. Oni ne staru antaŭ spegulo por kanti el psalmaro. La psalmolibro ne estas por ludi per ĝi. Kiam vi estos pli aĝa, la instruist-onklino klarigos al vi, kio estas esence psalmaro.”</p>
 <p>Anna-Kiara sidis serioza kaj silenta. Ŝi rigardis sincere al mi kaj decidvoĉe diris:</p>
 <p>“Mi volas diri al vi nur unu aferon : Oni ne eniras ĉambron antaŭ ol frapi.”</p>
 <p>Mi ne kredas, ke Anna-Klara estas jam matura por religiaj problemoj.</p>
 
-                              <p><b>Hasse Z.</b> el la sveda: <i>A ndreo Gauder</i> (el "LiteraturaMondo" )</p>
+                              <p><b>Hasse Z.</b> el la sveda: <b>Andreo Gauder</b> el <i>LiteraturaMondo</i></p>
 
 <?php 
 		} // fin section 2

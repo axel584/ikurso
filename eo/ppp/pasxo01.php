@@ -15,7 +15,7 @@ include "pppkapo.inc.php";
 		getTitoloLecionero('PP',$leciono,$section);
 		?>
 		<?php
-		if ($section=="1") {
+		if ($section=="2") {
 		?>
 			<div class="vortlisto row">
 				<div class="col s12 m6">
@@ -32,7 +32,7 @@ include "pppkapo.inc.php";
 					<p><span class="eo">FROSTI</span>: esti tre malvarma.</p>
 					<p><span class="eo">FROTI</span>: preme movi ion sur io alia.</p>
 					<p><span class="eo">GLASO</span>: ujo, el kiu oni trinkas.</p>
-					<p><span class="eo">GLITI</span>: facile movigi sur grasa supraĵo.</p>
+					<p><span class="eo">GLITI</span>: facile moviĝi sur grasa supraĵo.</p>
 					<p><span class="eo">HEJTI</span>: varmigi ĉambron aŭ loĝejon.</p>
 					<p><span class="eo">JAKO</span>: vestaĵo por la supra parto de la korpo.</p>
 					<p><span class="eo">KONSIDERI</span>: zorge atenti ion.</p>
@@ -70,7 +70,7 @@ include "pppkapo.inc.php";
 			
 		<?php 
 		} // fin section 1
-		if ($section=="2") {
+		if ($section=="1") {
 		?>
 			<h3>TRE MODERNA FABELO</h3>
 						
@@ -94,7 +94,7 @@ include "pppkapo.inc.php";
 				<p>"Kredi? Tute ne. Kial mi kredu?"</p>
 				<p>"Nu ankaŭ sinjorino Ripsrops, kiu tiumomente realvenis neatendite el sia feriado en Polinezio kaj malfermis la pordon de la dormoĉambro, ne kredis ĝin. Eĉ ne unu vorton..."</p>
 
-                                                                                   <p><b>F Szilágyi</b> <i>(el 'Norda Prismo')</i></p>
+                                                                                   <p><b>F Szilágyi</b> el <i>Norda Prismo</i></p>
 			
 		<?php 
 		} // fin section 2

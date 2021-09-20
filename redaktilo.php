@@ -22,7 +22,7 @@ include "pagxkapo.inc.php";
 				$demandoKursoj = "select id,kodo,nomo from kursoj";
 				$resultKursoj = $bdd->query($demandoKursoj) or die(print_r($bdd->errorInfo()));
 				while ($rowKursoj=$resultKursoj->fetch()) {
-					echo "<h2>".$rowKursoj['nomo']."</h2><a href='redaktilo.php?kurso=".$rowKursoj['kodo']."' class='waves-effect waves-light btn'><i class='material-icons'>expand_more</i></a>";
+					echo "<p><span>".$rowKursoj['nomo']."</span><a href='redaktilo.php?kurso=".$rowKursoj['kodo']."' class='waves-effect waves-light btn'><i class='material-icons'>expand_more</i></a></p>";
 				}
 			} else {
 				$demandoKursoj = "select id,kodo,nomo from kursoj where kodo='".$kurso."'";
@@ -34,7 +34,7 @@ include "pagxkapo.inc.php";
 					$demandoLecionoj = "select id,numero,titolo,retpagxo,kurso,unua,lasta from lecionoj where kurso='".$kurso."'";
 					$resultLecionoj = $bdd->query($demandoLecionoj) or die(print_r($bdd->errorInfo()));
 					while ($rowLecionoj=$resultLecionoj->fetch()) {
-						echo "<h2>".$rowLecionoj['titolo']."</h2><a href='redaktilo.php?ago=REDAKTILECIONON&kurso=".$kurso."&leciono=".$rowLecionoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>edit</i></a>&nbsp;<a href='redaktilo.php?kurso=".$kurso."&leciono=".$rowLecionoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>expand_more</i></a>";		
+						echo "<p><span>".$rowLecionoj['titolo']."</span><a href='redaktilo.php?ago=REDAKTILECIONON&kurso=".$kurso."&leciono=".$rowLecionoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>edit</i></a>&nbsp;<a href='redaktilo.php?kurso=".$kurso."&leciono=".$rowLecionoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>expand_more</i></a></p>";		
 					}
 					echo "<br/><a href='redaktilo.php?kurso=".$rowKursoj['kodo']."' class='waves-effect waves-light btn'><i class='material-icons'>add</i></a>";
 

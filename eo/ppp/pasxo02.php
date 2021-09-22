@@ -70,13 +70,13 @@ include "pppkapo.inc.php";
 <p>“Sed ankaŭ Gustavo havas.”</p>
 <p>Kion fari, mi iris aĉeti psalmaron.</p>
 <p>Mi trovis multe da diversaj psalmlibroj, malgrandajn, belajn librojn kun mola bindo, orkadraj paĝoj kaj ankaŭ grandajn librojn kun belaj, simplaj literoj. Mi aĉetis, kiu estis la malplej kosta, por ke la infano bontempe lernu la ŝparemon, precipe en tiaj seriozaj aferoj.</p>
-<p>Mi skribis la nomon de Anna-Kiara en la libron kaj posttagmeze transdonis ĝin al ŝi. Ŝi ege ekĝojis, prenis la libron kaj diris:</p>
+<p>Mi skribis la nomon de Anna-Klara en la libron kaj posttagmeze transdonis ĝin al ŝi. Ŝi ege ekĝojis, prenis la libron kaj diris:</p>
 <p>“Ĝi estas ĝuste tia, kia tiu de Gustavo.”</p>
 <p>Mi eksidis kaj iomete meditadis pri la okazintaĵoj, kaj poste — la dioj pardonu min — mi iris al la pordo kaj enokulumis tra la ŝlosiltruo.</p>
-<p>Anna-Kiara staris meze de la ĉambro, antaŭ la granda spegulo. Kun la malfermita psalmaro ŝi kantis falsvoĉe. De tempo al tempo ŝi rigardis al la spegulo, ĉu ŝia zono bone kuŝas? Kelkfoje ŝi ordigis sian harplekton, kelkfoje glatigis ĉifon sur la robo, kiu ne estis bonorde sur ŝia ŝultro.</p>
+<p>Anna-Klara staris meze de la ĉambro, antaŭ la granda spegulo. Kun la malfermita psalmaro ŝi kantis falsvoĉe. De tempo al tempo ŝi rigardis al la spegulo, ĉu ŝia zono bone kuŝas? Kelkfoje ŝi ordigis sian harplekton, kelkfoje glatigis ĉifon sur la robo, kiu ne estis bonorde sur ŝia ŝultro.</p>
 <p>Subite mi surprizis ŝin per pordmalfermo kaj eniris:</p>
-<p>“Kara Anna-Kiara,” mi diris, “psalmaro estas io multe pli serioza, ol vi imagas. Oni ne staru antaŭ spegulo por kanti el psalmaro. La psalmolibro ne estas por ludi per ĝi. Kiam vi estos pli aĝa, la instruist-onklino klarigos al vi, kio estas esence psalmaro.”</p>
-<p>Anna-Kiara sidis serioza kaj silenta. Ŝi rigardis sincere al mi kaj decidvoĉe diris:</p>
+<p>“Kara Anna-Klara,” mi diris, “psalmaro estas io multe pli serioza, ol vi imagas. Oni ne staru antaŭ spegulo por kanti el psalmaro. La psalmolibro ne estas por ludi per ĝi. Kiam vi estos pli aĝa, la instruist-onklino klarigos al vi, kio estas esence psalmaro.”</p>
+<p>Anna-Klara sidis serioza kaj silenta. Ŝi rigardis sincere al mi kaj decidvoĉe diris:</p>
 <p>“Mi volas diri al vi nur unu aferon : Oni ne eniras ĉambron antaŭ ol frapi.”</p>
 <p>Mi ne kredas, ke Anna-Klara estas jam matura por religiaj problemoj.</p>
 

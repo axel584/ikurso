@@ -90,6 +90,10 @@ if ($kurso=="3N") {
 	$prefixeKurso = "fr/3n/";
 	$subjekto = "leciono ".sprintf('%02d', $leciono)." de ".$studanto["enirnomo"];
 }
+if ($kurso=="PP") {
+	$prefixeKurso = "eo/ppp/";
+	$subjekto = "leciono ".sprintf('%02d', $leciono)." de ".$studanto["enirnomo"];
+}
 
 // si le correcteur a coché la case, on envoit la leçon par Amazon SES
 if ($expediteurIkurso=="true") {

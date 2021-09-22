@@ -1,4 +1,6 @@
 <?php
+// ATTENTION CE FICHIER EST UTILISE POUR L'INTERFACE DES CORRECTEURS !!!!!!!!!!!!!!!!!!!!
+// ---------------------------------------------------------------------------------------
 //include_once $vojo."util.php";
 if (!isset($vojo)) { $vojo="";}
 // attention, cette variable est également calculé dans utilf.php
@@ -123,6 +125,7 @@ $subjekto=$pagxo[count($pagxo)-1];
 				<li><a href="<?php echo $vojo; ?>fr/cge/intro.php?temo=intro">Cours en dix leçons</a></li>
 				<li><a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a></li>
 				<li><a href="<?php echo $vojo;?>fr/gerda/lasu00.php">Lasu min paroli plu!</a></li>					 
+				<li><a href="<?php echo $vojo;?>eo/ppp/antauxklarigo.php">Paŝoj al Plena Posedo</a></li>					 
 				<li class="lasta"><a href="<?php echo $vojo;?>fr/elsxutoj.php">Téléchargements</a></li>					 
 			</ul>
 

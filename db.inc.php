@@ -605,7 +605,7 @@ function troviPlejTauganKorektanton($persono_id,$kurso) {
     global $bdd;
     $meilleurCorrecteur = 0;
     $OccupationMeilleurCorrecteur = 100.0;
-    if ($kurso=="GR" || $kurso=="3N") {
+    if ($kurso=="GR" || $kurso=="3N" || $kurso=="PP") {
         // cas Gerda, on regarde si l'élève avait déjà un élève pour le 1er cours
         $demando = "select korektanto from nuna_kurso where studanto='".$persono_id."'";
         $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));

@@ -22,6 +22,8 @@ switch ($kurso) {
 	break;
 	case "3N" : $urlCours = $urlracine."fr/3n/leciono01.php";
 	break;
+	case "PP" : $urlCours = $urlracine."eo/ppp/pasxo01.php";
+	break;
 	default :
 		$urlCours = $urlracine;
 

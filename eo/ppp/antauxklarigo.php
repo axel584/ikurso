@@ -58,6 +58,24 @@ include "pppkapo.inc.php"
 		</section>
 
 	</article>
+
+	<aside class="col s12 m10 l3 offset-m1 push-l1">
+			<ul class="collapsible" data-collapsible="expandable">
+				<li class="active">
+					<div class="collapsible-header"><i class="material-icons">toc</i>Enhavo</div>
+					<div class="collapsible-body">
+						<ul id="kurso-enhavtabelo" class="collection">
+							<li><a href="pasxo01.php">1. Tre moderna fabelo</a></li>
+							<li><a href="pasxo02.php">2. La psalmaro</a></li>
+							<li><a href="pasxo03.php">3. La ŝtormo</a></li>
+							<li><a href="pasxo04.php">4. Celstacio</a></li>
+							<li><a href="pasxo05.php">5. La unua Kongreso de Esperanto</a></li>
+							<li><a href="pasxo06.php">6. Mi fariĝos ordemulo</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</aside>	
 	
 </div>
 

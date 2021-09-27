@@ -417,7 +417,7 @@ article p {
 	font-weight: 400;
 	line-height: 160%;
 }
-body.pasxo article p {
+body.pasxo article .rakonto p {
 	font-family: Luciole;
 }
 article.korektado p {

@@ -18,53 +18,49 @@ include "pppkapo.inc.php";
 		if ($section=="1") {
 		?>
 
-<h3>CELSTACIO</h3>
-
+		<div class="rakonto">
+			<h3>CELSTACIO</h3>
  
-
-<p>La stacieto estis malgranda kaj sufokaera. Sur la muroj enuis landkonigaj afiŝoj. La horloĝo malfunkciis. Ĝin strekis kruce gluitaj gazetstrioj. Sur la rando de apertita fenestro dormetis kato de fervojisto. Malantaŭ la kasa giĉeto homo suferis pro varmego. Li rekonsciiĝis nur je la voĉo de pasaĝero.</p>
-<p>“Kien?”</p>
-<p>“Egale.”</p>
-<p>“Per la klaso?”</p>
-<p>“Egale.”</p>
-<p>“Do eble Gzdzin?” demandis la kasisto. Li rigardis ne la pasaĝeron, sed fiksitan per kapnajleto horaron pri trajnoj trakurantaj lian stacieton.
-<p>“Povas esti Gzdzin,”konsentis la kliento.</p>
-<p>“Principe PKP* devus koni la celstacion de siaj klientoj,”grumbletis la fervojisto kaj reiris al la tableto, sur kiu kuŝis biletkajeroj. La kasisto estis malalta sekiĝinta olduleto. Li havis vulpecan vizaĝon de miopulo.</p>
-<p>“Do Gzdzin?”</p>
-<p>“Gzdzin.”</p>
-<p>“Tie estas nun malsvarme. Vi iras, sinjoro, ekzemple per vojo Z. Arbaro, vojetoj, vi plezure laciĝas per tiu arbaro. Vi povas kuŝigi ĉe la vojo, kuŝi kaj pensi nenion.</p>
-<p>“Bone,”diris la pasaĝero, “mi ne volas pensi.”</p>
-<p>La kasisto komencis plenigi blanketon.</p>
-<p>“Kombinata. Estos kombinata. Al Konopiski ekspreso kaj poste normala.”</p>
-<p>“Ne,”oponis la pasaĝero. “Ne povas esti kupeŝanĝo. Mi pensados pri tiu damna kupesŝanĝo kaj mi ja diris, ke mi ne volas pensi. Pri nenio.”</p>
-<p>“Aha,”konsentis la kasisto.</p>
-<p>Li komencis skrapeti la kalvaĵon. Li studis la horaron, kvazaŭ li ne konus ĝin parkere.</p>
-<p>“Ĝis la tria dudek tri mi havas por vi, sinjoro, nenion sen kupeŝanĝo. Je la tria dudek tri iras laborista trajno al Wolow.</p>
-<p>“Donu al Wolow,”diris la pasaĝero.</p>
-<p>“Per la dua klaso?”</p>
-<p>“Povas esti dua.”</p>
-<p>“Mi donos al vi la unuan,”diris la kasisto, “en la dua povas esti plenplene. En Wolow estas hodiaŭ foiro.”</p>
-<p>“Foiro?” maltrankviliĝis la pasaĝero. “Mi ne volas vian Wolow. Mi ne volas homamason. Mi volas kvieton. Sen la homa ridado, sen kvereloj, sen voĉoj. Sen virinoj, sen amikoj, sen infanoj. Damno kun tia kiel vi. Kasisto, kaj ne kapablas vendi bileton al homo.”</p>
-<p>La fervojisto jesis kompreneme. Vere estis al li domaĝe, ke li ne scias helpi la pasaĝeron. Al liaj devoj apartenis ĝusta priservado de la PKP-aj klientoj. Li estis sperta kasisto. Dum sia vivo li certe vendis milionon da diversaj biletoj kaj la pasaĝerojn li havis diversajn. Li ankaŭ pri tiu ne miris. Estis nenio mirinda. Simple estis malbone al la ulo. Tiaj ne konas siajn celstaciojn. Ili fuĝas nenien.</p>
-<p>Li aliris la horaron kaj komencis serĉi. Li faris tion kiel gasto en restoracio. La trajna menuo de la malgranda stacieto estis aĉa. Ne estis tro por elekti: Jezowice, Kakolin, Barcz.</p>
-<p>“Mi havas,”li diris kun kontento. “Mi havas por vi Pustkow. La kvina haltejo post Gorow. Arbaro. Du kabanoj sume. De la staciestro kaj arbaristo. La arbaristo surda, maljuna. La virino gastama. Kaj lago. La lago ne kulturata, sovaĝa. Depost la tempo kiam oni donis ĝin al kooperativo ne estas fiŝsistoj. Akva dezerto, ne lago. Povas esti al Pustkow.”</p>
-<p>“Povas esti,”diris la pasagero. “Donu al tiu Pustkow.”</p>
-<p>“Per la dua?”demandis la kasisto. “Per la unua,”diris la pasaĝero.</p>
-<p>—Ne — meditis la fervojisto — ne valoras. Sep haltejoj, kaj la trajno malplena. Cetere la unua klaso entute ne estas en tiu vagonaro.</p>
-<p>“Donu la duan.”</p>
-<p>La kasisto surnazigis okulvitrojn kaj komencis plenigi la duaklasan bileton al Pustkow, kie estas lago, kvieto kaj la gastama virino de la duonsurda arbaristo, kaj kie oni pensas pri nenio. La pasaĝero apogis sin per la kubutoj je la kasa rando kaj rigardis kiel la fervojisto plenigas la bileton.</p>
-<p>Ĝuste tiam aliris lin knabino. Ŝi estis juna kaj tre bela.</p>
-<p>“Iru hejmen,”ŝi diris al la homo, kiu ne konis la celstacion de sia vojaĝo. “Panjo ploras.”</p>
-<p>La kasisto ĉesis plenigi la bileton. Li malfermis la tirkeston, prenis liniilon, almetis ĝin al la biletaj pintoj kaj kruce trastrekis ĝin per dikaj ruĝaj linioj.</p>
-
- 
-
-                                          <p><b>Czeslaw Ostankowicz</b>  el la pola:Jerzy Grum (el "Esperanto")</p>
-
-* PKP = mallongigo de Polskie Koleje Panstwowe (Polaj Ŝtataj Fervojoj).
+ 			<p>La stacieto estis malgranda kaj sufokaera. Sur la muroj enuis landkonigaj afiŝoj. La horloĝo malfunkciis. Ĝin strekis kruce gluitaj gazetstrioj. Sur la rando de apertita fenestro dormetis kato de fervojisto. Malantaŭ la kasa giĉeto homo suferis pro varmego. Li rekonsciiĝis nur je la voĉo de pasaĝero.</p>
+			<p>“Kien?”</p>
+			<p>“Egale.”</p>
+			<p>“Per la klaso?”</p>
+			<p>“Egale.”</p>
+			<p>“Do eble Gzdzin?” demandis la kasisto. Li rigardis ne la pasaĝeron, sed fiksitan per kapnajleto horaron pri trajnoj trakurantaj lian stacieton.</p>
+			<p>“Povas esti Gzdzin” konsentis la kliento.</p>
+			<p>“Principe PKP* devus koni la celstacion de siaj klientoj”, grumbletis la fervojisto kaj reiris al la tableto, sur kiu kuŝis biletkajeroj. La kasisto estis malalta sekiĝinta olduleto. Li havis vulpecan vizaĝon de miopulo.</p>
+			<p>“Do Gzdzin?”</p>
+			<p>“Gzdzin.”</p>
+			<p>“Tie estas nun malsvarme. Vi iras, sinjoro, ekzemple per vojo Z. Arbaro, vojetoj, vi plezure laciĝas per tiu arbaro. Vi povas kuŝigi ĉe la vojo, kuŝi kaj pensi nenion.</p>
+			<p>“Bone”, diris la pasaĝero, “mi ne volas pensi.”</p>
+			<p>La kasisto komencis plenigi blanketon.</p>
+			<p>“Kombinata. Estos kombinata. Al Konopiski ekspreso kaj poste normala.”</p>
+			<p>“Ne”, oponis la pasaĝero. “Ne povas esti kupeŝanĝo. Mi pensados pri tiu damna kupeŝanĝo kaj mi ja diris, ke mi ne volas pensi. Pri nenio.”</p>
+			<p>“Aha”, konsentis la kasisto.</p>
+			<p>Li komencis skrapeti la kalvaĵon. Li studis la horaron, kvazaŭ li ne konus ĝin parkere.</p>
+			<p>“Ĝis la tria dudek tri mi havas por vi, sinjoro, nenion sen kupeŝanĝo. Je la tria dudek tri iras laborista trajno al Wolow.”</p>
+			<p>“Donu al Wolow”, diris la pasaĝero.</p>
+			<p>“Per la dua klaso?”</p>
+			<p>“Povas esti dua.”</p>
+			<p>“Mi donos al vi la unuan,”diris la kasisto, “en la dua povas esti plenplene. En Wolow estas hodiaŭ foiro.”</p>
+			<p>“Foiro?” maltrankviliĝis la pasaĝero. “Mi ne volas vian Wolow. Mi ne volas homamason. Mi volas kvieton. Sen la homa ridado, sen kvereloj, sen voĉoj. Sen virinoj, sen amikoj, sen infanoj. Damno kun tia kiel vi. Kasisto, kaj ne kapablas vendi bileton al homo.”</p>
+			<p>La fervojisto jesis kompreneme. Vere estis al li domaĝe, ke li ne scias helpi la pasaĝeron. Al liaj devoj apartenis ĝusta priservado de la PKP-aj klientoj. Li estis sperta kasisto. Dum sia vivo li certe vendis milionon da diversaj biletoj kaj la pasaĝerojn li havis diversajn. Li ankaŭ pri tiu ne miris. Estis nenio mirinda. Simple estis malbone al la ulo. Tiaj ne konas siajn celstaciojn. Ili fuĝas nenien.</p>
+			<p>Li aliris la horaron kaj komencis serĉi. Li faris tion kiel gasto en restoracio. La trajna menuo de la malgranda stacieto estis aĉa. Ne estis tro por elekti: Jezowice, Kakolin, Barcz.</p>
+			<p>“Mi havas”, li diris kun kontento. “Mi havas por vi Pustkow. La kvina haltejo post Gorow. Arbaro. Du kabanoj sume. De la staciestro kaj arbaristo. La arbaristo surda, maljuna. La virino gastama. Kaj lago. La lago ne kulturata, sovaĝa. Depost la tempo kiam oni donis ĝin al kooperativo ne estas fiŝistoj. Akva dezerto, ne lago. Povas esti al Pustkow.”</p>
+			<p>“Povas esti”, diris la pasagero. “Donu al tiu Pustkow.”</p>
+			<p>“Per la dua?” demandis la kasisto. “Per la unua”, diris la pasaĝero.</p>
+			<p>“Ne”, meditis la fervojisto, “ne valoras. Sep haltejoj, kaj la trajno malplena. Cetere la unua klaso entute ne estas en tiu vagonaro.”</p>
+			<p>“Donu la duan.”</p>
+			<p>La kasisto surnazigis okulvitrojn kaj komencis plenigi la duaklasan bileton al Pustkow, kie estas lago, kvieto kaj la gastama virino de la duonsurda arbaristo, kaj kie oni pensas pri nenio. La pasaĝero apogis sin per la kubutoj je la kasa rando kaj rigardis kiel la fervojisto plenigas la bileton.</p>
+			<p>Ĝuste tiam aliris lin knabino. Ŝi estis juna kaj tre bela.</p>
+			<p>“Iru hejmen”, ŝi diris al la homo, kiu ne konis la celstacion de sia vojaĝo. “Panjo ploras.”</p>
+			<p>La kasisto ĉesis plenigi la bileton. Li malfermis la tirkeston, prenis liniilon, almetis ĝin al la biletaj pintoj kaj kruce trastrekis ĝin per dikaj ruĝaj linioj.</p>
+			
+			<p><b>Czeslaw Ostankowicz</b>  el la pola: <b>Jerzy Grum</b> (el <i>Esperanto</i>)</p>
+		</div>			
+			<p>* PKP = mallongigo de Polskie Koleje Panstwowe (Polaj Ŝtataj Fervojoj).</p>
 
 
-		
 
 		<?php 
 		} // fin section 1

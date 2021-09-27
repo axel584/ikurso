@@ -12,12 +12,14 @@ $leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
 $lecionero=isset($_GET["lecionero"])?$_GET["lecionero"]:"";
 $ekzerco=isset($_GET["ekzerco"])?$_GET["ekzerco"]:"";
 $ekzercero=isset($_GET["ekzercero"])?$_GET["ekzercero"]:"";
+$ago=isset($_GET["ago"])?$_GET["ago"]:"";
 if (isset($celpersono_id)) {$celpersono = apartigiPersonon($celpersono_id);}
 include "pagxkapo.inc.php";
 ?>
+</form>
 
 <div class="row">
-
+<form action="redaktilo.php" method="POST">
 	<article class="col s12 m9">
 		<div>
 			<?php
@@ -66,7 +68,7 @@ include "pagxkapo.inc.php";
 							$demandoEkzercoj = "select id,komando,lecionero_id,komando_detalo,ekzemplo,typo,x2u,korektebla from ekzercoj where lecionero_id='".$lecionero."'";
 							$resultEkzercoj = $bdd->query($demandoEkzercoj) or die(print_r($bdd->errorInfo()));
 							while ($rowEkzercoj=$resultEkzercoj->fetch()) {
-							echo "<p><span>".$rowEkzercoj['komando']."</span>&nbsp;<a href='redaktilo.php?ago=REDAKTIEKZERCO&kurso=".$kurso."&leciono=".$leciono."&lecionero=".$lecionero."&ekzerco=".$rowEkzercoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>edit</i></a>&nbsp;<a href='redaktilo.php?kurso=".$kurso."&leciono=".$leciono."&lecionero=".$lecionero."&ekzerco=".$rowEkzercoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>expand_more</i></a></p>";		
+							echo "<p><span>".$rowEkzercoj['komando']."</span>&nbsp;<a href='redaktilo.php?ago=REDAKTIEKZERCON&kurso=".$kurso."&leciono=".$leciono."&lecionero=".$lecionero."&ekzerco=".$rowEkzercoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>edit</i></a>&nbsp;<a href='redaktilo.php?kurso=".$kurso."&leciono=".$leciono."&lecionero=".$lecionero."&ekzerco=".$rowEkzercoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>expand_more</i></a></p>";		
 							}
 							echo "<a href='redaktilo.php?kurso=".$rowLecionoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>add</i></a>";
 
@@ -80,7 +82,7 @@ include "pagxkapo.inc.php";
 								$demandoEkzerceroj = "SELECT id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla	 FROM ekzerceroj where ekzerco_id='".$ekzerco."'";
 								$resultEkzerceroj = $bdd->query($demandoEkzerceroj) or die(print_r($bdd->errorInfo()));
 								while ($rowEkzerceroj=$resultEkzerceroj->fetch()) {
-									echo "<p><span>".$rowEkzerceroj['demando']."</span>&nbsp;<a href='redaktilo.php?ago=REDAKTIEKZERCO&kurso=".$kurso."&leciono=".$leciono."&lecionero=".$lecionero."&ekzerco=".$ekzerco."&ekzercero=".$rowEkzerceroj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>edit</i></a></p>";		
+									echo "<p><span>".$rowEkzerceroj['demando']."</span>&nbsp;<a href='redaktilo.php?ago=REDAKTIEKZERCERO&kurso=".$kurso."&leciono=".$leciono."&lecionero=".$lecionero."&ekzerco=".$ekzerco."&ekzercero=".$rowEkzerceroj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>edit</i></a></p>";		
 								} 
 								echo "<a href='redaktilo.php?kurso=".$kurso."&leciono=".$leciono."&lecionero=".$lecionero."&ekzerco=".$ekzerco."' class='waves-effect waves-light btn'><i class='material-icons'>add</i></a>";
 							} else {
@@ -92,11 +94,62 @@ include "pagxkapo.inc.php";
 					}
 				}
 			}
+			if ($ago=="REDAKTIEKZERCERON") {
+				$demandoEkzerceroj = "select id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla from ekzerceroj where id='".$ekzercero."'";
+				$resultEkzerceroj = $bdd->query($demandoEkzerceroj) or die(print_r($bdd->errorInfo()));
+				$rowEkzerceroj=$resultEkzerceroj->fetch();
+				// afficher le formulaire pour éditer une question
+				echo "<fieldset class='ekzerco'>";
+				echo "<input type='hidden' name='ago' value='REGISTRIEKZERCERON'/>";
+				echo "<input type='hidden' name='ekzercero' value='".$ekzercero."'/>";
+				// ID 
+				echo "<div class='row'><div  class='input-field col s6'><input name='id' value='".$rowEkzerceroj['id']."' id='id' type='text' class='validate'>";
+				echo "<label for='id'>id</label>";
+				echo "</div>";
+				// ekzerco_id 
+				echo "<div  class='input-field col s6'><input name='ekzercero_id' value='".$rowEkzerceroj['ekzerco_id']."' id='ekzerco_id' type='text' class='validate'>";
+				echo "<label for='ekzerco_id'>ekzerco_id</label>";
+				echo "</div></div>";
+				// kodo
+				echo "<div class='row'><div  class='input-field col s6'><input name='kodo' value='".$rowEkzerceroj['kodo']."' id='kodo' type='text' class='validate'>";
+				echo "<label for='kodo'>kodo</label>";
+				echo "</div>";
+				// numero
+				echo "<div  class='input-field col s6'><input name='numero' value='".$rowEkzerceroj['numero']."' id='numero' type='text' class='validate'>";
+				echo "<label for='numero'>numero</label>";
+				echo "</div></div>";
+				// demando
+				echo "<div class='row'><div  class='input-field col s12'><input name='demando' value='".$rowEkzerceroj['demando']."' id='demando' type='text' class='validate'>";
+				echo "<label for='demando'>demando</label>";
+				echo "</div></div>";
+				// respondo
+				echo "<div class='row'><div  class='input-field col s12'><input name='respondo' value='".$rowEkzerceroj['respondo']."' id='respondo' type='text' class='validate'>";
+				echo "<label for='respondo'>respondo</label>";
+				echo "</div></div>";
+				// normaligita
+				echo "<div class='row'><div  class='input-field col s12'><input name='normaligita' value='".$rowEkzerceroj['normaligita']."' id='normaligita' type='text' class='validate'>";
+				echo "<label for='normaligita'>normaligita</label>";
+				echo "</div></div>";
+				// bildo
+				echo "<div class='row'><div  class='input-field col s12'><input name='bildo' value='".$rowEkzerceroj['bildo']."' id='bildo' type='text' class='validate'>";
+				echo "<label for='bildo'>bildo</label>";
+				echo "</div></div>";
+				// forigita
+				echo "<div class='row'><div  class='input-field col s6'><input name='forigita' value='".$rowEkzerceroj['forigita']."' id='forigita' type='text' class='validate'>";
+				echo "<label for='forigita'>forigita</label>";
+				echo "</div>";
+				// korektebla
+				echo "<div  class='input-field col s6'><input name='koretebla' value='".$rowEkzerceroj['korektebla']."' id='korektebla' type='text' class='validate'>";
+				echo "<label for='korektebla'>korektebla</label>";
+				echo "</div></div>";
+				echo "<button class='btn waves-effect waves-light' type='submit'>Sauvegarder</button>";
+				echo "</fieldset>";
+			}
 			?>
 
 		</div>
 	</article>
-
+</form>
 <aside class="col s12 m3">
 		<ul class="collapsible" data-collapsible="expandable">
 			<li class="active">

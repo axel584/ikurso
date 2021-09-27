@@ -2474,36 +2474,11 @@ UPDATE `ekzerceroj` SET `forigita` = '1' WHERE `ekzerceroj`.`id` = 84;
 ---------------------------------
 --- Passage en V23
 ---------------------------------
+ALTER TABLE `ekzerceroj` CHANGE `kodo` `kodo` VARCHAR(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL;
 --- Pasxoj al plena posedo
 INSERT INTO `kursoj` (`id`, `kodo`, `nomo`) VALUES (NULL, 'PP', 'Pa&#349;oj al plena posedo');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '1', 'Pa&#349;o Unua', 'pasxo01.php', 'PP', '1', '0'); -- 133
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '4', 'Pa&#349;o Kvara', 'pasxo03.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '5', 'Pa&#349;o Kvina', 'pasxo03.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '6', 'Pa&#349;o Sesa', 'pasxo03.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '7', 'Pa&#349;o Sepa', 'pasxo03.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '8', 'Pa&#349;o Oka', 'pasxo03.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '9', 'Pa&#349;o Na&#365;a', 'pasxo03.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '10', 'Pa&#349;o Deka', 'pasxo03.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '11', 'Pa&#349;o Dek-unua', 'pasxo11.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '12', 'Pa&#349;o Dek-dua', 'pasxo12.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '13', 'Pa&#349;o Dek-tria', 'pasxo13.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '14', 'Pa&#349;o Dek-kvara', 'pasxo14.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '15', 'Pa&#349;o Dek-kvina', 'pasxo15.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '16', 'Pa&#349;o Dek-sesa', 'pasxo16.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '17', 'Pa&#349;o Dek-sepa', 'pasxo17.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '18', 'Pa&#349;o Dek-oka', 'pasxo18.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '19', 'Pa&#349;o Dek-na&#365;a', 'pasxo19.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '20', 'Pa&#349;o Dudeka', 'pasxo20.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '21', 'Pa&#349;o Dudek-unua', 'pasxo21.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '22', 'Pa&#349;o Dudek-dua', 'pasxo22.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '23', 'Pa&#349;o Dudek-tria', 'pasxo23.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '24', 'Pa&#349;o Dudek-kvara', 'pasxo24.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '25', 'Pa&#349;o Dudek-kvina', 'pasxo25.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '26', 'Pa&#349;o Dudek-sesa', 'pasxo26.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '27', 'Pa&#349;o Dudek-sepa', 'pasxo27.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '28', 'Pa&#349;o Dudek-oka', 'pasxo28.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '29', 'Pa&#349;o Dudek-na&#365;a', 'pasxo29.php', 'PP', '0', '0');
-INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '30', 'Pa&#349;o Trideka', 'pasxo30.php', 'PP', '0', '1');
+-- pasxo 1
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (NULL, '1', 'Pa&#349;o Unua', 'pasxo01.php', 'PP', '1', '0'); 
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (NULL, '133', 'Vortaro', 'VORTARO', NULL, '1', '1', '0', NULL, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (NULL, '133', 'Lega&#309;o', 'TEKSTO', NULL, '2', '0', '0', NULL, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (NULL, '133', 'Ekzercoj pri la teksto', 'EKZERCARO', NULL, '3', '0', '0', NULL, NULL);
@@ -2735,3 +2710,88 @@ INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `resp
 INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (124, 'Verku mallongan priskribon pri VENTEGA TAGO, aŭ pri TERURA TRAVIVAĴO.', 295, NULL, NULL, 'verkado-1', '1', '0');
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1086, 124, 'pp0371', '68', 'respondu detale', NULL, NULL, NULL, '0', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES(297, '135', 'Sendi la ekzercojn', 'TEKSTO', NULL, 5, 0, 1, 5, NULL);
+-- PASXO 4
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (136, '4', 'Pa&#349;o Kvara', 'pasxo04.php', 'PP', '0', '0');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (298, 136, 'Lega&#309;o', 'TEKSTO', NULL, '1', '1', '0', NULL, NULL);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (299, 136, 'Vortaro', 'VORTARO', NULL, '2', '0', '0', NULL, NULL);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (300, 136, 'Ekzercoj pri la teksto', 'EKZERCARO', NULL, '3', '0', '0', NULL, NULL);
+INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (125, 'Leginte la supran rakonton, respondu jenajn demandojn:', 300, NULL, NULL, 'verkado-1', '1', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1087, 125, 'pp0411', '1', 'Kia estis la stacieto?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1088, 125, 'pp0412', '2', 'Kio dormetis sur la fenestrorando?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1089, 125, 'pp0413', '3', 'Kia estis la kasisto?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1090, 125, 'pp0414', '4', 'Kial la pasaĝero ne volis iri al Gzdzin?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1091, 125, 'pp0415', '5', 'Kion deziris la pasaĝero, ke li ne volis iri al foiro?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1092, 125, 'pp0416', '6', 'Kiom da biletoj vendis la kasisto dum sia vivo?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1093, 125, 'pp0417', '7', 'Kial la kasisto ne miris pri tia pasaĝero?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1094, 125, 'pp0418', '8', 'Kiom da dometoj estis en Pustkow?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1095, 125, 'pp0419', '9', 'Kial la kasisto ne povis doni unuaklasan bileton al Pustkow?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1096, 125, 'pp041A', '10', 'Kial tiu pasaĝero entute emis vojaĝi?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (126, 'Jen estas kelkaj respondoj. Skribu la faritain demandojn:', 300, NULL, NULL, 'verkado-1', '1', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1097, 126, NULL, '11', 'Per la dua klaso.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1098, 126, NULL, '12', 'La horaron pri trajnoj.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1099, 126, NULL, '13', 'Vi povas kuŝi kaj pensi nenion.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1100, 126, NULL, '14', 'Ekspreso kaj poste normala.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1101, 126, NULL, '15', 'Li komencis skrapeti la kalvaĵon.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1102, 126, NULL, '16', 'En Wolow hodiaŭ.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1103, 126, NULL, '17', 'Ĉar line sciis helpi.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1104, 126, NULL, '18', 'Ĝusta priservado de la klientoj.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1105, 126, NULL, '19', 'Depost kiam oni dons gin al Kooperativo.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1106, 126, NULL, '20', 'Ĉar lia edzino ploris.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (301, 136, 'Gramatikaj Ekzercoj', 'EKZERCARO', NULL, '4', '0', '0', NULL, NULL);
+INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (126, 'Kie la senco tion postulas, enmetu LA en la subajn propoziciojn:', 301, NULL, NULL, 'verkado-1', '1', '0');
+
+
+
+-- pasxo 5
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (137, '5', 'Pa&#349;o Kvina', 'pasxo03.php', 'PP', '0', '0');
+-- pasxo 6
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (138, '6', 'Pa&#349;o Sesa', 'pasxo03.php', 'PP', '0', '0');
+-- pasxo 7
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (139, '7', 'Pa&#349;o Sepa', 'pasxo03.php', 'PP', '0', '0');
+-- pasxo 8
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (140, '8', 'Pa&#349;o Oka', 'pasxo03.php', 'PP', '0', '0');
+-- pasxo 9
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (141, '9', 'Pa&#349;o Na&#365;a', 'pasxo03.php', 'PP', '0', '0');
+-- pasxo 10
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (142, '10', 'Pa&#349;o Deka', 'pasxo03.php', 'PP', '0', '0');
+-- pasxo 11
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (143, '11', 'Pa&#349;o Dek-unua', 'pasxo11.php', 'PP', '0', '0');
+-- pasxo 12
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (144, '12', 'Pa&#349;o Dek-dua', 'pasxo12.php', 'PP', '0', '0');
+-- pasxo 13
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (145, '13', 'Pa&#349;o Dek-tria', 'pasxo13.php', 'PP', '0', '0');
+-- pasxo 14
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (146, '14', 'Pa&#349;o Dek-kvara', 'pasxo14.php', 'PP', '0', '0');
+-- pasxo 15
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (147, '15', 'Pa&#349;o Dek-kvina', 'pasxo15.php', 'PP', '0', '0');
+-- pasxo 16
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (148, '16', 'Pa&#349;o Dek-sesa', 'pasxo16.php', 'PP', '0', '0');
+-- pasxo 17
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (149, '17', 'Pa&#349;o Dek-sepa', 'pasxo17.php', 'PP', '0', '0');
+-- pasxo 18
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (150, '18', 'Pa&#349;o Dek-oka', 'pasxo18.php', 'PP', '0', '0');
+-- pasxo 19
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (151, '19', 'Pa&#349;o Dek-na&#365;a', 'pasxo19.php', 'PP', '0', '0');
+-- pasxo 20
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (152, '20', 'Pa&#349;o Dudeka', 'pasxo20.php', 'PP', '0', '0');
+-- pasxo 21
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (153, '21', 'Pa&#349;o Dudek-unua', 'pasxo21.php', 'PP', '0', '0');
+-- pasxo 22
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (154, '22', 'Pa&#349;o Dudek-dua', 'pasxo22.php', 'PP', '0', '0');
+-- pasxo 23
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (155, '23', 'Pa&#349;o Dudek-tria', 'pasxo23.php', 'PP', '0', '0');
+-- pasxo 24
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (156, '24', 'Pa&#349;o Dudek-kvara', 'pasxo24.php', 'PP', '0', '0');
+-- pasxo 25
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (157, '25', 'Pa&#349;o Dudek-kvina', 'pasxo25.php', 'PP', '0', '0');
+-- pasxo 26
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (158, '26', 'Pa&#349;o Dudek-sesa', 'pasxo26.php', 'PP', '0', '0');
+-- pasxo 27
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (159, '27', 'Pa&#349;o Dudek-sepa', 'pasxo27.php', 'PP', '0', '0');
+-- pasxo 28
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (160, '28', 'Pa&#349;o Dudek-oka', 'pasxo28.php', 'PP', '0', '0');
+-- pasxo 29
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (161, '29', 'Pa&#349;o Dudek-na&#365;a', 'pasxo29.php', 'PP', '0', '0');
+-- pasxo 30
+INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (162, '30', 'Pa&#349;o Trideka', 'pasxo30.php', 'PP', '0', '1');
+

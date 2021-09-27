@@ -1,7 +1,7 @@
 /*--- surcharge styles de base ---*/
 
 hr {overflow:auto;}
-b, strong {font-weight: 500;}
+b, strong {font-weight: 600;}
 
 /*--- surcharge cartes ---*/
 .card-panel h5 {margin-bottom: 1.5rem;}

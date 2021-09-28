@@ -28,7 +28,7 @@ include "pppkapo.inc.php";
 			<p>“Principe PKP* devus koni la celstacion de siaj klientoj”, grumbletis la fervojisto kaj reiris al la tableto, sur kiu kuŝis biletkajeroj. La kasisto estis malalta sekiĝinta olduleto. Li havis vulpecan vizaĝon de miopulo.</p>
 			<p>“Do Gzdzin?”</p>
 			<p>“Gzdzin.”</p>
-			<p>“Tie estas nun malsvarme. Vi iras, sinjoro, ekzemple per vojo Z. Arbaro, vojetoj, vi plezure laciĝas per tiu arbaro. Vi povas kuŝigi ĉe la vojo, kuŝi kaj pensi nenion.</p>
+			<p>“Tie estas nun malsvarme. Vi iras, sinjoro, ekzemple per vojo Z. Arbaro, vojetoj, vi plezure laciĝas per tiu arbaro. Vi povas kuŝiĝi ĉe la vojo, kuŝi kaj pensi nenion.</p>
 			<p>“Bone”, diris la pasaĝero, “mi ne volas pensi.”</p>
 			<p>La kasisto komencis plenigi blanketon.</p>
 			<p>“Kombinata. Estos kombinata. Al Konopiski ekspreso kaj poste normala.”</p>
@@ -39,12 +39,12 @@ include "pppkapo.inc.php";
 			<p>“Donu al Wolow”, diris la pasaĝero.</p>
 			<p>“Per la dua klaso?”</p>
 			<p>“Povas esti dua.”</p>
-			<p>“Mi donos al vi la unuan,”diris la kasisto, “en la dua povas esti plenplene. En Wolow estas hodiaŭ foiro.”</p>
+			<p>“Mi donos al vi la unuan, ”diris la kasisto, “en la dua povas esti plenplene. En Wolow estas hodiaŭ foiro.”</p>
 			<p>“Foiro?” maltrankviliĝis la pasaĝero. “Mi ne volas vian Wolow. Mi ne volas homamason. Mi volas kvieton. Sen la homa ridado, sen kvereloj, sen voĉoj. Sen virinoj, sen amikoj, sen infanoj. Damno kun tia kiel vi. Kasisto, kaj ne kapablas vendi bileton al homo.”</p>
 			<p>La fervojisto jesis kompreneme. Vere estis al li domaĝe, ke li ne scias helpi la pasaĝeron. Al liaj devoj apartenis ĝusta priservado de la PKP-aj klientoj. Li estis sperta kasisto. Dum sia vivo li certe vendis milionon da diversaj biletoj kaj la pasaĝerojn li havis diversajn. Li ankaŭ pri tiu ne miris. Estis nenio mirinda. Simple estis malbone al la ulo. Tiaj ne konas siajn celstaciojn. Ili fuĝas nenien.</p>
 			<p>Li aliris la horaron kaj komencis serĉi. Li faris tion kiel gasto en restoracio. La trajna menuo de la malgranda stacieto estis aĉa. Ne estis tro por elekti: Jezowice, Kakolin, Barcz.</p>
 			<p>“Mi havas”, li diris kun kontento. “Mi havas por vi Pustkow. La kvina haltejo post Gorow. Arbaro. Du kabanoj sume. De la staciestro kaj arbaristo. La arbaristo surda, maljuna. La virino gastama. Kaj lago. La lago ne kulturata, sovaĝa. Depost la tempo kiam oni donis ĝin al kooperativo ne estas fiŝistoj. Akva dezerto, ne lago. Povas esti al Pustkow.”</p>
-			<p>“Povas esti”, diris la pasagero. “Donu al tiu Pustkow.”</p>
+			<p>“Povas esti”, diris la pasaĝero. “Donu al tiu Pustkow.”</p>
 			<p>“Per la dua?” demandis la kasisto. “Per la unua”, diris la pasaĝero.</p>
 			<p>“Ne”, meditis la fervojisto, “ne valoras. Sep haltejoj, kaj la trajno malplena. Cetere la unua klaso entute ne estas en tiu vagonaro.”</p>
 			<p>“Donu la duan.”</p>
@@ -73,8 +73,8 @@ include "pppkapo.inc.php";
 				<p><span class="eo">BILETO</span>: rajtiga papereto.</p>
 				<p><span class="eo">DAMNI</span>: kondamni (ofte uzata kiel sakro).</p>
 				<p><span class="eo">DEZERTA</span>: senhoma.</p>
-				<p><span class="eo">DOMACO</span>: bedaŭrindaĵo.</p>
-				<p><span class="eo">EKSPRESA</span>: tre rapids.</p>
+				<p><span class="eo">DOMAĜO</span>: bedaŭrindaĵo.</p>
+				<p><span class="eo">EKSPRESA</span>: tre rapida.</p>
 				<p><span class="eo">ENUI</span>: malplezuri pro senintereso.</p>
 				<p><span class="eo">FERO</span>: malmola metalo.</p>
 				<p><span class="eo">FOIRO</span>: granda komerca kunveno.</p>

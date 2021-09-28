@@ -159,12 +159,16 @@ include "pppkapo.inc.php";
 				getEkzercon(127,$persono_id);
 				getEkzercon(128,$persono_id);
 				getEkzercon(129,$persono_id);
+			?>
+				<p>Escepto al la supra regulo estas la propraj nomoj, ĉar ili sufiĉe indikas sian unikecon. Tio validas ankaŭ rilate geografiajn nomojn, krom se tiujn akompanas komunsignifa adjektivo, ekzemple: Tra Egiptujo fluas Nilo; ili velis laŭ Mediteraneo; sed ili velis laŭ la Norda Maro.</p>
+			<?php	
 				getEkzercon(130,$persono_id);
+
+			}
+			if ($section=="5")	{
 				getEkzercon(131,$persono_id);
-			?>                  
-<?php 
-		} // envoie de la leçon
-		if ($section=="5") {
+			}
+			if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);
 		} // fin section 6
 		?>

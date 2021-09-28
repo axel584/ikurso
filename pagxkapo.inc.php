@@ -21,6 +21,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">		
 		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
 
 		<!--Import materialize.css-->
 		<link rel="stylesheet" href="<?php echo $vojo;?>style/materialize.min.css">

@@ -1,3 +1,26 @@
+@font-face {
+	font-family: "Luciole";
+	font-weight: 400;
+	src: url("../fonts/Luciole-Regular.ttf") format("ttf");
+}
+@font-face {
+	font-family: "Luciole";
+	font-weight: 400;
+	font-style: italic;
+	src: url("../fonts/Luciole-Regular-Italic.ttf") format("ttf");
+}
+@font-face {
+	font-family: "Luciole";
+	font-weight: 600;
+	src: url("../fonts/Luciole-Bold.ttf") format("ttf");
+}
+@font-face {
+	font-family: "Luciole";
+	font-weight: 600;
+	font-style: italic;
+	src: url("../fonts/Luciole-Bold-Italic.ttf") format("ttf");
+}
+
 /*---- palette personnalisée ---*/
 .primaire {background-color: #554E47 !important;}
 .primaire.moyen {background-color: #75706B !important;}
@@ -388,11 +411,14 @@ footer {
 
 article {
 	padding-right: 5%;
-	font-weight: 300;
+	font-weight: 400;
 }
 article p {
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 160%;
+}
+body.pasxo article .rakonto p {
+	font-family: Luciole;
 }
 article.korektado p {
 	line-height: 120%;

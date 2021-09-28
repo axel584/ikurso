@@ -1,8 +1,8 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE ekzerceroj (
-  `id` int(11) NOT NULL,
-  `ekzerco_id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ekzerco_id` int(11) NOT NULL,
   `kodo` varchar(10) NOT NULL,
   `numero` int(11) NOT NULL,
   `demando` text NOT NULL,

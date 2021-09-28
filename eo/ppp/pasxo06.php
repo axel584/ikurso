@@ -2,9 +2,6 @@
 $titolo="Paŝo 6 (ses)";
 $leciono = 6;
 $section=isset($_GET["section"])?htmlspecialchars($_GET["section"]):"1";
-if (!is_numeric($section)) {
-	if ($persono_id=="") {header("Location:../../index.php?erarkodo=24");}
-}
 include "pppkapo.inc.php";
 ?>
 <div class="row">

@@ -14,8 +14,13 @@ $memorkurso=isset($_SESSION["memorkurso"])?$_SESSION["memorkurso"]:array();
 malfermiDatumbazon();
 if ($persono_id) {
 	$persono = apartigiPersonon($persono_id);
+} else {
+	header("Location:../../index.php?erarkodo=8");
 }
-
+// vérifie les injections de XSS
+if (isset($section) && !is_numeric($section)) {
+	header("Location:../../index.php?erarkodo=24");
+}
 $pagxo=explode("/", $_SERVER['SCRIPT_NAME']);
 $subjekto=$pagxo[count($pagxo)-1];
 $query="select * from lecionoj where kurso='$kurso' and retpagxo='$subjekto'";

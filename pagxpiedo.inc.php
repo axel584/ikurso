@@ -67,7 +67,7 @@
 		echo "M.toast({html: 'Cet identifiant est déjà utilisé, merci d’en choisir un autre.'});\n";
 	}
 	if ($erarkodo==8) {
-		echo "M.toast({html: 'Votre session a expiré, veuillez vous identifier.'});\n";
+		echo "M.toast({html: 'Pour accéder à cette page, vous devez vous identifier.'});\n";
 	}
 	if ($erarkodo==14) {
 		echo "M.toast({html: 'Merci pour votre retour.'});\n";

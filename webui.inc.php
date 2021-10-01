@@ -228,7 +228,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 
 
 
-function getEkzercon($id,$persono_id) {
+function getEkzercon($id,$persono_id,$lingvo="fr") {
 	global $bdd;
 		if ($persono_id=="") {
 		$idenfication=False;
@@ -239,19 +239,38 @@ function getEkzercon($id,$persono_id) {
 	$resultEkzerco = $bdd->query($queryEkzerco) or die(print_r($bdd->errorInfo()));
 	$rowEkzerco = $resultEkzerco->fetch();
 	echo "<fieldset class='ekzerco'>";
-	echo "<legend><strong>EXERCICE</strong> : ".$rowEkzerco["komando"]."</legend>";
+	echo "<legend><strong>";
+	if ($lingvo=="fr") {
+		echo "EXERCICE";
+	} else if ($lingvo=="eo"){
+		echo "EKZERCO";
+	}
+	echo "</strong> : ".$rowEkzerco["komando"]."</legend>";
 	if ($rowEkzerco["komando_detalo"]!="") {
 		echo "<p>".$rowEkzerco["komando_detalo"]."</p>";
 	}
 	if ($rowEkzerco["x2u"]==1) {
-		echo "<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>&nbsp;:&nbsp;";
-		echo "en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
+		if ($lingvo=="fr") {
+			echo "<p class='eo eta'>Pour obtenir une lettre accentuée, il suffit de taper la lettre suivie d’un <b>x</b>&nbsp;:&nbsp;";
+			echo "en tapant <b>cx</b>, <b>sx</b>, <b>ux</b>... vous obtiendrez <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
+		} else if ($lingvo=="eo"){
+			echo "<p class='eo eta'>Por la ĉapelitaj literoj, sufiĉas tajpi la literon kaj <b>x</b>&nbsp;:&nbsp;";
+			echo "tajpante : <b>cx</b>, <b>sx</b>, <b>ux</b>... surekraniĝos : <b>ĉ</b>, <b>ŝ</b>, <b>ŭ</b>...</p>\n";
+		}
 	}
 	if ($rowEkzerco["korektebla"]==1) {
-		echo "<p class='eo eta'>Plusieurs réponses sont possibles. Si vous indiquez l'une des bonnes réponses, elle sera automatiquement soulignée en vert.<br/>Si la réponse n'est pas soulignée, cela ne veut pas dire qu'elle soit incorrecte, mais simplement que le système n'a pas pu l'analyser. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>\n";
+		if ($lingvo=="fr") {
+			echo "<p class='eo eta'>Plusieurs réponses sont possibles. Si vous indiquez l'une des bonnes réponses, elle sera automatiquement soulignée en vert.<br/>Si la réponse n'est pas soulignée, cela ne veut pas dire qu'elle soit incorrecte, mais simplement que le système n'a pas pu l'analyser. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>\n";
+		}else if ($lingvo=="eo"){
+			echo "<p class='eo eta'>Pluraj respondoj ĝustas. Se vi respondu unu el tiuj ĝustaj respondoj, ĝi aŭtomate verdiĝos.<br/>Se via respondo ne verdiĝus, tio ne signifas ke vi eraris sed nur ke la sistemo ne scias ĉu via respondo estas ĝusta aŭ ne. Tiam, via korektanto povos taksi vian respondon kaj klarigi al vi.</p>\n";
+		}
 		$styleKorektebla=" korektebla";
 	} else {
-		echo "<p class='eo eta'>Cet exercice ne peut pas être corrigé automatiquement. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>\n";
+		if ($lingvo=="fr") {
+			echo "<p class='eo eta'>Cet exercice ne peut pas être corrigé automatiquement. Votre correcteur vous donnera des explications sur les réponses que vous aurez données.</p>\n";
+		}else if ($lingvo=="eo"){
+			echo "<p class='eo eta'>Tiu ekzerco ne aŭtomate korekteblas. Via korektanto klarigos al vi ĉu viaj respondoj ĝustas aŭ ne.</p>\n";
+		}
 		$styleKorektebla=" nekorektebla";
 	}
 	if ($rowEkzerco["ekzemplo"]!="") {

@@ -85,8 +85,8 @@ include "pppkapo.inc.php";
 		?>
 
 			<?php 
-				getEkzercon(110,$persono_id);
-				getEkzercon(111,$persono_id);
+				getEkzercon(110,$persono_id,"eo");
+				getEkzercon(111,$persono_id,"eo");
 				
 			?>
 
@@ -96,12 +96,12 @@ include "pppkapo.inc.php";
 		?>
 
 			<?php 
-				getEkzercon(112,$persono_id);
-				getEkzercon(113,$persono_id);
-				getEkzercon(114,$persono_id);
-				getEkzercon(115,$persono_id);
-				getEkzercon(116,$persono_id);
-				getEkzercon(117,$persono_id);
+				getEkzercon(112,$persono_id,"eo");
+				getEkzercon(113,$persono_id,"eo");
+				getEkzercon(114,$persono_id,"eo");
+				getEkzercon(115,$persono_id,"eo");
+				getEkzercon(116,$persono_id,"eo");
+				getEkzercon(117,$persono_id,"eo");
 			?>                              
 <?php 
 		} // envoie de la leçon

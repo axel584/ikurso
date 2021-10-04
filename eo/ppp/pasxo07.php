@@ -38,7 +38,7 @@ include "pppkapo.inc.php";
 			<p>Kion? Vi demandas, de kie mi prenos la tridek lirojn…? Nu, kiam nia knabo estis ĵetita en malliberejon, tiam — memkompreneble — lia posteno liberiĝis kaj restis vakanta… Kiel anstataŭulo mi prizorgas lian oficon kaj ekde ĉi-monato mi ricevados krom-salajron… sume proksimume kvardek lirojn aldone al mia salajro…</p>
 			<p>Kelnero…! Ankoraŭ da brando…!”</p>
 
- 			<p><b>Sabahattin Ali</b> eel la turka: <b>Ferruh Canatay</b> (el <i>Esperantisto Slovaka</i>)</p>
+ 			<p><b>Sabahattin Ali</b> el la turka: <b>Ferruh Canatay</b> (el <i>Esperantisto Slovaka</i>)</p>
 		</div>
 
 		<?php 

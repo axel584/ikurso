@@ -74,7 +74,7 @@ include "pppkapo.inc.php";
 
  			<p>— Ŝi ne havas tempon, onklo Keceli, ĉar ŝi ĉiam edukas paĉjon.</p>
 
- 			<p><b>Kornel Toth</b> el la hungara: <b>Paulo Balkanyi</b> (el <i>Norda Prism</i>)</p>
+ 			<p><b>Kornel Toth</b> el la hungara: <b>Paulo Balkanyi</b> (el <i>Norda Prismo</i>)</p>
 		</div>
 
 		<?php 
@@ -85,12 +85,34 @@ include "pppkapo.inc.php";
 
 	<div class="vortlisto row">
 		<div class="col s12 m6">
-
+			<p><span class="eo">aŭtoritato</span>: ordonpovo.</p>
+			<p><span class="eo">barbaro</span>: necivilizita homo.</p>
+			<p><span class="eo">butero</span>: grasaĵo farita el lakto.</p>
+			<p><span class="eo">deklari</span>: publike sciigi.</p>
+			<p><span class="eo">diligenta</span>: konstante kaj zorge laborema.</p>
+			<p><span class="eo">disciplino</span>: ordemo kaj obeemo.</p>
+			<p><span class="eo">forko</span>: ilo kun dentoj uzata por levi ion.</p>
+			<p><span class="eo">friti</span>: kuiri mangagon en graso.</p>
+			<p><span class="eo">hazardo</span>: neantaŭvidebla okazo.</p>
+			<p><span class="eo">interpreti</span>: transklarigi.</p>
+			<p><span class="eo">inventi</span>: elpensi ion novan. </p>
+			<p><span class="eo">kafo</span>: speco de trinkaĵo. </p>
 		</div>
 		<div class="col s12 m6">
-
-	
+			<p><span class="eo">konduti</span>: agi laŭ certa maniero.</p>
+			<p><span class="eo">lerta</span>: tre kapabla facile fari ion.</p>
+			<p><span class="eo">mastro</span>: posedanto, ordonanto.</p>
+			<p><span class="eo">nervoza</span>: malpacienca.</p>
+			<p><span class="eo">nesto</span>: konstruaĵo de birdoj.</p>
+			<p><span class="eo">ofico</span>: okupo.</p>
+			<p><span class="eo">plumo</span>: tio, kio are kovras birdokorpojn (ankaŭ</span>: skribilo).</p>
+			<p><span class="eo">prelego</span>: instrua parolado.</p>
+			<p><span class="eo">riproĉi</span>: malmilde mallaŭdi iun.</p>
+			<p><span class="eo">salti</span>: rapide levi sin de la tero.</p>
+			<p><span class="eo">sukero</span>: dolcaĵo, generale blanka. </p>
+			<p><span class="eo">teroro</span>: terura kaj kruela regado.</p>
 		</div>
+	</div>
 
 <?php 
 		} // fin section 2

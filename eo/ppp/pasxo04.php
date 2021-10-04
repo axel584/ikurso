@@ -65,72 +65,70 @@ include "pppkapo.inc.php";
 		?>
 
 
-	<div class="vortlisto row">
-				<div class="col s12 m6">
-				<p><span class="eo">AFIŜO</span>: surmura presita sciigo.</p>
-				<p><span class="eo">APERTI</span>: malfermi.</p>
-				<p><span class="eo">APOGI</span>: subteni iun aŭ ion per io.</p>
-				<p><span class="eo">BILETO</span>: rajtiga papereto.</p>
-				<p><span class="eo">DAMNI</span>: kondamni (ofte uzata kiel sakro).</p>
-				<p><span class="eo">DEZERTA</span>: senhoma.</p>
-				<p><span class="eo">DOMAĜO</span>: bedaŭrindaĵo.</p>
-				<p><span class="eo">EKSPRESA</span>: tre rapida.</p>
-				<p><span class="eo">ENUI</span>: malplezuri pro senintereso.</p>
-				<p><span class="eo">FERO</span>: malmola metalo.</p>
-				<p><span class="eo">FOIRO</span>: granda komerca kunveno.</p>
-				<p><span class="eo">FUĜI</span>: forkuri por sin savi.</p>
-				<p><span class="eo">FUNKCII</span>: plenumi sian taskon.</p>
-				<p><span class="eo">GASTO</span>: amika vizitanto.</p>
-				<p><span class="eo">GIĈETO</span>: fenestreto en muro, kie oni aĉetas, ekzemple biletojn.</p>
-				<p><span class="eo">GLUO</span>: fluaĵo, per kiu oni fiksas ion al io alia.</p>
-				<p><span class="eo">GRUMBLI</span>: murmuri malkontente.</p>
-				<p><span class="eo">KABANO</span>: iom kruda dometo.</p>
-				<p><span class="eo">KAJERO</span>: maldika libreto.</p>
-				<p><span class="eo">KALVA</span>: senhara.</p>
-				<p><span class="eo">KASO</span>: monkesto.</p>
-				<p><span class="eo">KATO</span>: hejmbesto kun belaj korpharoj.</p>
-				<p><span class="eo">KOMBINI</span>: kunmeti.</p>
-				<p><span class="eo">KOOPERATIVO</span>: societo kunaganta.</p>
-				<p><span class="eo">KUBUTO</span>: mezpunkto de la brako.</p>
-				<p><span class="eo">KULTURI</span>: prilabori la teron.</p>
-				<p><span class="eo">KUPEO</span>: parto de la vagono.</p>
-				<p><span class="eo">LACA</span>: bezonanta ripozon.</p>
-				<p><span class="eo">LAGO</span>: etendaĵo da akvo, ĉiuflanke ĉirkaŭata de tero.</p>
-				
+		<div class="vortlisto row">
+			<div class="col s12 m6">
+				<p><span class="eo">afiŝo</span>: surmura presita sciigo.</p>
+				<p><span class="eo">aperti</span>: malfermi.</p>
+				<p><span class="eo">apogi</span>: subteni iun aŭ ion per io.</p>
+				<p><span class="eo">bileto</span>: rajtiga papereto.</p>
+				<p><span class="eo">damni</span>: kondamni (ofte uzata kiel sakro).</p>
+				<p><span class="eo">dezerta</span>: senhoma.</p>
+				<p><span class="eo">domaĝo</span>: bedaŭrindaĵo.</p>
+				<p><span class="eo">ekspresa</span>: tre rapida.</p>
+				<p><span class="eo">enui</span>: malplezuri pro senintereso.</p>
+				<p><span class="eo">fero</span>: malmola metalo.</p>
+				<p><span class="eo">foiro</span>: granda komerca kunveno.</p>
+				<p><span class="eo">fuĝi</span>: forkuri por sin savi.</p>
+				<p><span class="eo">funkcii</span>: plenumi sian taskon.</p>
+				<p><span class="eo">gasto</span>: amika vizitanto.</p>
+				<p><span class="eo">giĉeto</span>: fenestreto en muro, kie oni aĉetas, ekzemple biletojn.</p>
+				<p><span class="eo">gluo</span>: fluaĵo, per kiu oni fiksas ion al io alia.</p>
+				<p><span class="eo">grumbli</span>: murmuri malkontente.</p>
+				<p><span class="eo">kabano</span>: iom kruda dometo.</p>
+				<p><span class="eo">kajero</span>: maldika libreto.</p>
+				<p><span class="eo">kalva</span>: senhara.</p>
+				<p><span class="eo">kaso</span>: monkesto.</p>
+				<p><span class="eo">kato</span>: hejmbesto kun belaj korpharoj.</p>
+				<p><span class="eo">kombini</span>: kunmeti.</p>
+				<p><span class="eo">kooperativo</span>: societo kunaganta.</p>
+				<p><span class="eo">kubuto</span>: mezpunkto de la brako.</p>
+				<p><span class="eo">kulturi</span>: prilabori la teron.</p>
+				<p><span class="eo">kupeo</span>: parto de la vagono.</p>
+				<p><span class="eo">laca</span>: bezonanta ripozon.</p>
+				<p><span class="eo">lago</span>: etendaĵo da akvo, ĉiuflanke ĉirkaŭata de tero.</p>
 			</div>
 			<div class="col s12 m6">
-				<p><span class="eo">LINIO</span>: kontinua streko.</p>				
-				<p><span class="eo">MENUO</span>: listo de haveblaj manĝaĵoj.</p>
-				<p><span class="eo">MIOPA</span>: havanta neordinare mallongan vidpovon.</p>
-				<p><span class="eo">NAJLO</span>: larĝkapa metala pinto.</p>
-				<p><span class="eo">NAZO</span>: korpoparto, per kiu oni flaras.</p>
-				<p><span class="eo">OLDA</span>: maljuna, aŭ malnova.</p>
-				<p><span class="eo">OPONI</span>: kontraŭstari.</p>
-				<p><span class="eo">PARKERE</span>: per la memoro.</p>
-				<p><span class="eo">PASAĜERO</span>: veturanto.</p>
-				<p><span class="eo">PINTO</span>: pika ekstremo.</p>
-				<p><span class="eo">PLORI</span>: montri doloron per larmoj.</p>
-				<p><span class="eo">PRINCIPO</span>: fundamenta veraĵo.</p>
-				<p><span class="eo">RANDO</span>: ĉirkaŭa ekstremaĵo de io.</p>
-				<p><span class="eo">RESTORACIO</span>: loko, kie oni povas manĝi se oni pagas.</p>
-				<p><span class="eo">SEKA</span>: enhavanta neniom aŭ malmulte da akvo.</p>
-				<p><span class="eo">SKRAPI</span>: iom akre froti ion.</p>
-				<p><span class="eo">STACIO</span>: loko, kie haltas publikaj veturiloj.</p>
-				<p><span class="eo">STREKI</span>: desegni linion per unu movo de skribilo.</p>
-				<p><span class="eo">STRIO</span>: longa mallarĝa peco kun paralelaj randoj.</p>
-				<p><span class="eo">STUDI</span>: diligente esplori.</p>
-				<p><span class="eo">SUFERI</span>: senti doloron.</p>
-				<p><span class="eo">SUFOKI</span>: mortigi per senigo de aero.</p>
-				<p><span class="eo">SUMO</span>: ĉiuj partoj kune, kiel tuto.</p>
-				<p><span class="eo">SURDA</span>: nepovanta aŭdi.</p>
-				<p><span class="eo">SVARMI</span>: esti tre multnombra.</p>
-				<p><span class="eo">TRAJNO</span>: vagonaro kun lokomotivo.</p>
-				<p><span class="eo">VAGONO</span>: veturilo, kiun trenas lokomotivo.</p>
-				<p><span class="eo">VITRO</span>: malmola, travidebla, rompebla substanco.</p>
-				<p><span class="eo">VULPO</span>: flavruĝa hundosimila rabobesto.</p>
+				<p><span class="eo">linio</span>: kontinua streko.</p>				
+				<p><span class="eo">menuo</span>: listo de haveblaj manĝaĵoj.</p>
+				<p><span class="eo">miopa</span>: havanta neordinare mallongan vidpovon.</p>
+				<p><span class="eo">najlo</span>: larĝkapa metala pinto.</p>
+				<p><span class="eo">nazo</span>: korpoparto, per kiu oni flaras.</p>
+				<p><span class="eo">olda</span>: maljuna, aŭ malnova.</p>
+				<p><span class="eo">oponi</span>: kontraŭstari.</p>
+				<p><span class="eo">parkere</span>: per la memoro.</p>
+				<p><span class="eo">pasaĝero</span>: veturanto.</p>
+				<p><span class="eo">pinto</span>: pika ekstremo.</p>
+				<p><span class="eo">plori</span>: montri doloron per larmoj.</p>
+				<p><span class="eo">principo</span>: fundamenta veraĵo.</p>
+				<p><span class="eo">rando</span>: ĉirkaŭa ekstremaĵo de io.</p>
+				<p><span class="eo">restoracio</span>: loko, kie oni povas manĝi se oni pagas.</p>
+				<p><span class="eo">seka</span>: enhavanta neniom aŭ malmulte da akvo.</p>
+				<p><span class="eo">skrapi</span>: iom akre froti ion.</p>
+				<p><span class="eo">stacio</span>: loko, kie haltas publikaj veturiloj.</p>
+				<p><span class="eo">streki</span>: desegni linion per unu movo de skribilo.</p>
+				<p><span class="eo">strio</span>: longa mallarĝa peco kun paralelaj randoj.</p>
+				<p><span class="eo">studi</span>: diligente esplori.</p>
+				<p><span class="eo">suferi</span>: senti doloron.</p>
+				<p><span class="eo">sufoki</span>: mortigi per senigo de aero.</p>
+				<p><span class="eo">sumo</span>: ĉiuj partoj kune, kiel tuto.</p>
+				<p><span class="eo">surda</span>: nepovanta aŭdi.</p>
+				<p><span class="eo">svarmi</span>: esti tre multnombra.</p>
+				<p><span class="eo">trajno</span>: vagonaro kun lokomotivo.</p>
+				<p><span class="eo">vagono</span>: veturilo, kiun trenas lokomotivo.</p>
+				<p><span class="eo">vitro</span>: malmola, travidebla, rompebla substanco.</p>
+				<p><span class="eo">vulpo</span>: flavruĝa hundosimila rabobesto.</p>
+			</div>
 		</div>
-
-
 
 <?php 
 		} // fin section 2

@@ -129,13 +129,13 @@ include "pppkapo.inc.php";
 <?php 
 		} // fin section 2
 		if ($section=="3") {
-				getEkzercon(132,$persono_id);
-				getEkzercon(133,$persono_id);
+				getEkzercon(132,$persono_id,"eo");
+				getEkzercon(133,$persono_id,"eo");
 		} // fin section 3
 		if ($section=="4") {
-				getEkzercon(134,$persono_id);
-				getEkzercon(135,$persono_id);
-				getEkzercon(136,$persono_id);
+				getEkzercon(134,$persono_id,"eo");
+				getEkzercon(135,$persono_id,"eo");
+				getEkzercon(136,$persono_id,"eo");
 		?>
 		
 <p class="parto">Per la supraj ekzemploj evidentiĝas jena regulo: la tempo esprimata per la participa finaĵo (estinta, estanta, estonta tempo) estas tia en rilato al la tempo esprimata per la finaĵo de la ĉefa verbo de la propozicio. Tial povas okazi, ekzemple, ke -ONTO povas -IS: la ironto dormis — ĉar kvankam la dormado estas pasinta en rilato al la nuna momento, kaj eble ankaŭ jam la irado, en la momento de la dormado la irado ankoraŭ ne okazis.</p>
@@ -144,8 +144,8 @@ include "pppkapo.inc.php";
 
 		} // fin section 3
 		if ($section=="5") {				
-				getEkzercon(137,$persono_id);
-				getEkzercon(138,$persono_id);
+				getEkzercon(137,$persono_id,"eo");
+				getEkzercon(138,$persono_id,"eo");
 		} // envoie de la leçon
 		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);

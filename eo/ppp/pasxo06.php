@@ -78,7 +78,7 @@ include "pppkapo.inc.php";
 		</div>
 
 		<?php 
-		} // fin section 1
+		} 
 		if ($section=="2") {
 		?>
 
@@ -93,31 +93,36 @@ include "pppkapo.inc.php";
 		</div>
 
 <?php 
-		} // fin section 2
+		} 
 		if ($section=="3") {
-		?>
-
-			<?php 
-				getEkzercon(125,$persono_id);
-				getEkzercon(126,$persono_id);
-				
-			?>
-
-		<?php 
-		} // fin section 2
+				getEkzercon(139,$persono_id,"eo");
+		} 
 		if ($section=="4") {
-		?>
+?>
+<h2>ADJEKTIVOJ PARTICIPAJ</h2>
+<p class="parto">La ADJEKTIVOJ PARTICIPAJ priskribas ion aŭ iun en tempa rilato al la cetera kunteksto.</p>
+<p>Vok<b>ANTA</b> voĉo estas voĉo, kiu tiumomente vokas.</p>
+<p>Vok<b>ANTA</b> voĉo estas voĉo, kiu pli frue vokis.</p>
+<p>Vok<b>ONTA</b> voĉo estas voĉo, kiu iam pli malfrue vokos.</p>
+<p>Vok<b>ATA</b> knabo estas knabo, kiun oni tiumomente vokas.</p>
+<p>Vok<b>ITA</b> knabo estas knabo, kiun oni pli frue vokis.</p>
+<p>Vok<b>OTA</b> knabo estas knabo, kiun oni iam pli malfrue vokos.</p>
 
-			<?php 
-				getEkzercon(127,$persono_id);
-				getEkzercon(128,$persono_id);
-				getEkzercon(129,$persono_id);
-				getEkzercon(130,$persono_id);
-				getEkzercon(131,$persono_id);
-			?>                  
-<?php 
-		} // envoie de la leçon
+<p>La tempo esprimata per la participa adjektivo estas la tempo en rilato al la ĉefa verbo en la propozicio, ankaŭ kiam tiu lasta estas nur subkomprenata —— ekzemple en la poemtitolo MALFRUANTAJ SOLENONTOJ (= Jen estas priskribo pri malfruantaj solenontoj). En la momento, kiam la poeto rimarkis ilin, tiuj personoj estis malfruANTaj, ĉar tiumomente ili malfruis; ili estis solenONToj, ĉar ilia soleno tiumomente ankoraŭ ne okazis. Estante adjektivoj, la participaj adjektivoj nombre akordiĝas kun la substantivo aŭ pronomo, kiun ili priskribas. Mi rimarkis, ke la knaboj, kiuj tiumomente kuris, iom pli malfrue falos = Mi rimarkis, ke la kurantaj knaboj estas falontaj.</p>
+
+<?php
+				getEkzercon(140,$persono_id,"eo");	
+?>
+<h2> KIE-TIE, KIEL-TIEL, KIA-TIA, KIAM-TIAM, KIOM-TIOM.</h2>
+<?php
+				getEkzercon(141,$persono_id,"eo");
+				getEkzercon(142,$persono_id,"eo");
+		} 
 		if ($section=="5") {
+				getEkzercon(143,$persono_id,"eo");
+
+		} // envoie de la leçon
+		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);
 		} // fin section 6
 		?>

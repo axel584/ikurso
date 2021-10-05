@@ -16,39 +16,39 @@ include "pppkapo.inc.php";
 		?>
 			<div class="vortlisto row">
 				<div class="col s12 m6">
-					<p><span class="eo">BINDO</span>: eksteraĵo de libro.</p>
-					<p><span class="eo">ĈIFI</span>: malglatigi.</p>
-					<p><span class="eo">DIO</span>: supernatura reganta estaĵo.</p>
-					<p><span class="eo">DIVERSA</span>: malsameca.</p>
-					<p><span class="eo">ESENCO</span>: la ĉefa, plej necesa parto de io.</p>
-					<p><span class="eo">FALSA</span>: malvera.</p>
-					<p><span class="eo">FRAPI</span>: bateti.</p>
-					<p><span class="eo">GLATA</span>: priskribas ion, sur kiu mano facile glitas.</p>
-					<p><span class="eo">INSTRUI</span>: lernigi.</p>
-					<p><span class="eo">KADRO</span>: tio, per kiu oni ĉirkaŭigas, ekzemple fotografaĵon.</p>
-					<p><span class="eo">KLARA</span>: malkonfuza.</p>
-					<p><span class="eo">KLASO</span>: aro de lernantoj, kiuj lernas kune.</p>
-					<p><span class="eo">LITERO</span>: alfabeta signo.</p>
-					<p><span class="eo">LUDI</span>: fari ion por nura plezuro.</p>
-					<p><span class="eo">MATURA</span>: plenkreskinta, plenpova.</p>
+					<p><span class="eo">bindo</span>: eksteraĵo de libro.</p>
+					<p><span class="eo">ĉifi</span>: malglatigi.</p>
+					<p><span class="eo">dio</span>: supernatura reganta estaĵo.</p>
+					<p><span class="eo">diversa</span>: malsameca.</p>
+					<p><span class="eo">esenco</span>: la ĉefa, plej necesa parto de io.</p>
+					<p><span class="eo">falsa</span>: malvera.</p>
+					<p><span class="eo">frapi</span>: bateti.</p>
+					<p><span class="eo">glata</span>: priskribas ion, sur kiu mano facile glitas.</p>
+					<p><span class="eo">instrui</span>: lernigi.</p>
+					<p><span class="eo">kadro</span>: tio, per kiu oni ĉirkaŭigas, ekzemple fotografaĵon.</p>
+					<p><span class="eo">klara</span>: malkonfuza.</p>
+					<p><span class="eo">klaso</span>: aro de lernantoj, kiuj lernas kune.</p>
+					<p><span class="eo">litero</span>: alfabeta signo.</p>
+					<p><span class="eo">ludi</span>: fari ion por nura plezuro.</p>
+					<p><span class="eo">matura</span>: plenkreskinta, plenpova.</p>
 				</div>
 				<div class="col s12 m6">
-					<p><span class="eo">ONKLO</span>: frato de la patro aŭ patrino.</p>
-					<p><span class="eo">PARDONI</span>: malsevere trakti iun.</p>
-					<p><span class="eo">PLEKTI</span>: regule interkunigi laŭ longe, ekzemple harojn.</p>
-					<p><span class="eo">PROBLEMO</span>: malfacila demando.</p>
-					<p><span class="eo">PSALMO</span>: speciala religia kanto.</p>
-					<p><span class="eo">RELIGIO</span>: kredo pri supernaturaj aferoj.</p>
-					<p><span class="eo">ROBO</span>: longa virina vesto.</p>
-					<p><span class="eo">SERIOZA</span>: zorge atent(ind)a.</p>
-					<p><span class="eo">SPEGULO</span>: glata, brila aĵo, per kiu oni povas vidi sin.</p>
-					<p><span class="eo">ŜLOSI</span>: fermi, ekzemple pordon, per speciala ilo.</p>
-					<p><span class="eo">ŜPARI</span>: atente reteni, ekzemple monon.</p>
-					<p><span class="eo">TRUO</span>: malplenaĵo en io.</p>
-					<p><span class="eo">VIZITI</span>: ĉeesti; regule aliradi.</p>
-					<p><span class="eo">ZONO</span>: io, kion oni metas ĉirkaŭ la korpomezon.</p>				
-</div>
-
+					<p><span class="eo">onklo</span>: frato de la patro aŭ patrino.</p>
+					<p><span class="eo">pardoni</span>: malsevere trakti iun.</p>
+					<p><span class="eo">plekti</span>: regule interkunigi laŭ longe, ekzemple harojn.</p>
+					<p><span class="eo">problemo</span>: malfacila demando.</p>
+					<p><span class="eo">psalmo</span>: speciala religia kanto.</p>
+					<p><span class="eo">religio</span>: kredo pri supernaturaj aferoj.</p>
+					<p><span class="eo">robo</span>: longa virina vesto.</p>
+					<p><span class="eo">serioza</span>: zorge atent(ind)a.</p>
+					<p><span class="eo">spegulo</span>: glata, brila aĵo, per kiu oni povas vidi sin.</p>
+					<p><span class="eo">ŝlosi</span>: fermi, ekzemple pordon, per speciala ilo.</p>
+					<p><span class="eo">ŝpari</span>: atente reteni, ekzemple monon.</p>
+					<p><span class="eo">truo</span>: malplenaĵo en io.</p>
+					<p><span class="eo">viziti</span>: ĉeesti; regule aliradi.</p>
+					<p><span class="eo">zono</span>: io, kion oni metas ĉirkaŭ la korpomezon.</p>				
+				</div>
+			</div>
 				
 			
 		<?php 

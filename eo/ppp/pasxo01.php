@@ -16,54 +16,52 @@ include "pppkapo.inc.php";
 		?>
 			<div class="vortlisto row">
 				<div class="col s12 m6">
-
-					<p><span class="eo">AGO</span>: io, kion oni faras.</p>
-					<p><span class="eo">BENZINO</span>: hejtaĵo por irigi aŭtomobilon.</p>
-					<p><span class="eo">CERTA</span>: malhezitema.</p>
-					<p><span class="eo">DANA</span>: rilata al la lando Danujo.</p>
-					<p><span class="eo">DATO</span>: tago, en rilato al la tempo.</p>
-					<p><span class="eo">EFEKTIVA</span>: reala.</p>
-					<p><span class="eo">FABELO</span>: historio pri mirigaj okazaĵoj.</p>
-					<p><span class="eo">FERIO</span>: libertempo.</p>
-					<p><span class="eo">FIDI</span>: plenkredi pri iu aŭ io.</p>
-					<p><span class="eo">FROSTI</span>: esti tre malvarma.</p>
-					<p><span class="eo">FROTI</span>: preme movi ion sur io alia.</p>
-					<p><span class="eo">GLASO</span>: ujo, el kiu oni trinkas.</p>
-					<p><span class="eo">GLITI</span>: facile moviĝi sur grasa supraĵo.</p>
-					<p><span class="eo">HEJTI</span>: varmigi ĉambron aŭ loĝejon.</p>
-					<p><span class="eo">JAKO</span>: vestaĵo por la supra parto de la korpo.</p>
-					<p><span class="eo">KONSIDERI</span>: zorge atenti ion.</p>
-					<p><span class="eo">KAPTI</span>: ekteni.</p>
-					<p><span class="eo">KOSTO</span>: pago necesa por ricevi ion.</p>
-					<p><span class="eo">LITO</span>: aĵo, sur kiu oni dormas.</p>
-					<p><span class="eo">MARMORO</span>: bela blanka ŝtono.</p>
-					<p><span class="eo">MATERIALO</span>: krudaĵo necesa por plenumi ion.</p>
+					<p><span class="eo">ago</span>: io, kion oni faras.</p>
+					<p><span class="eo">benzino</span>: hejtaĵo por irigi aŭtomobilon.</p>
+					<p><span class="eo">certa</span>: malhezitema.</p>
+					<p><span class="eo">dana</span>: rilata al la lando danujo.</p>
+					<p><span class="eo">dato</span>: tago, en rilato al la tempo.</p>
+					<p><span class="eo">efektiva</span>: reala.</p>
+					<p><span class="eo">fabelo</span>: historio pri mirigaj okazaĵoj.</p>
+					<p><span class="eo">ferio</span>: libertempo.</p>
+					<p><span class="eo">fidi</span>: plenkredi pri iu aŭ io.</p>
+					<p><span class="eo">frosti</span>: esti tre malvarma.</p>
+					<p><span class="eo">froti</span>: preme movi ion sur io alia.</p>
+					<p><span class="eo">glaso</span>: ujo, el kiu oni trinkas.</p>
+					<p><span class="eo">gliti</span>: facile moviĝi sur grasa supraĵo.</p>
+					<p><span class="eo">hejti</span>: varmigi ĉambron aŭ loĝejon.</p>
+					<p><span class="eo">jako</span>: vestaĵo por la supra parto de la korpo.</p>
+					<p><span class="eo">konsideri</span>: zorge atenti ion.</p>
+					<p><span class="eo">kapti</span>: ekteni.</p>
+					<p><span class="eo">kosto</span>: pago necesa por ricevi ion.</p>
+					<p><span class="eo">lito</span>: aĵo, sur kiu oni dormas.</p>
+					<p><span class="eo">marmoro</span>: bela blanka ŝtono.</p>
+					<p><span class="eo">materialo</span>: krudaĵo necesa por plenumi ion.</p>
 				</div>
 				<div class="col s12 m6">
-					<p><span class="eo">MEDITI</span>: pripensadi.</p>
-					<p><span class="eo">METROPOLO</span>: granda urbego.</p>
-					<p><span class="eo">MODERNA</span>: nuntempa.</p>
-					<p><span class="eo">MODESTA</span>: malfiera.</p>
-					<p><span class="eo">NU</span>: vorto uzata por atentigi pri tio, kio sekvos.</p>
-					<p><span class="eo">ORDINARA</span>: kutima.</p>
-					<p><span class="eo">PAŬZO</span>: mallonga hezito.</p>
-					<p><span class="eo">PUTO</span>: subterejo, el kiu oni levprenas kutime akvon.</p>
-					<p><span class="eo">PROVIZI</span>: havigi necesaĵojn.</p>
-					<p><span class="eo">RAKONTI</span>: diri historion.</p>
-					<p><span class="eo">RANO</span>: vivantaĵeto, kiu loĝas sambone teron kaj akvon.</p>
-					<p><span class="eo">RIPOZI</span>: resti nenion faranta, eble dormanta.</p>
-					<p><span class="eo">RULI</span>: ĉirkaŭmove antaŭenigi ion.</p>
-					<p><span class="eo">SOBRA</span>: malebria.</p>
-					<p><span class="eo">SPECIALA</span>: intencata por unu celo.</p>
-					<p><span class="eo">SUPOZI</span>: kredi ion vera.</p>
-					<p><span class="eo">ŜULTRO</span>: plej supra trunkoparto.</p>
-					<p><span class="eo">ŜVEBI</span>: resti senmove pendanta, kvazaŭ fluge.</p>
-					<p><span class="eo">TERURO</span>: timego.</p>
-					<p><span class="eo">URĜI</span>: plirapidigi.</p>
-					<p><span class="eo">VOJAĜI</span>: iri aŭ veturi por atingi lokon ne proksiman.</p>
+					<p><span class="eo">mediti</span>: pripensadi.</p>
+					<p><span class="eo">metropolo</span>: granda urbego.</p>
+					<p><span class="eo">moderna</span>: nuntempa.</p>
+					<p><span class="eo">modesta</span>: malfiera.</p>
+					<p><span class="eo">nu</span>: vorto uzata por atentigi pri tio, kio sekvos.</p>
+					<p><span class="eo">ordinara</span>: kutima.</p>
+					<p><span class="eo">paŭzo</span>: mallonga hezito.</p>
+					<p><span class="eo">puto</span>: subterejo, el kiu oni levprenas kutime akvon.</p>
+					<p><span class="eo">provizi</span>: havigi necesaĵojn.</p>
+					<p><span class="eo">rakonti</span>: diri historion.</p>
+					<p><span class="eo">rano</span>: vivantaĵeto, kiu loĝas sambone teron kaj akvon.</p>
+					<p><span class="eo">ripozi</span>: resti nenion faranta, eble dormanta.</p>
+					<p><span class="eo">ruli</span>: ĉirkaŭmove antaŭenigi ion.</p>
+					<p><span class="eo">sobra</span>: malebria.</p>
+					<p><span class="eo">speciala</span>: intencata por unu celo.</p>
+					<p><span class="eo">supozi</span>: kredi ion vera.</p>
+					<p><span class="eo">ŝultro</span>: plej supra trunkoparto.</p>
+					<p><span class="eo">ŝvebi</span>: resti senmove pendanta, kvazaŭ fluge.</p>
+					<p><span class="eo">teruro</span>: timego.</p>
+					<p><span class="eo">urĝi</span>: plirapidigi.</p>
+					<p><span class="eo">vojaĝi</span>: iri aŭ veturi por atingi lokon ne proksiman.</p>
 				</div>
-
-				
+			</div>
 			
 		<?php 
 		} // fin section 1

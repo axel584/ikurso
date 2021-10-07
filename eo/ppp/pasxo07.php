@@ -122,25 +122,40 @@ include "pppkapo.inc.php";
 <?php 
 		} // fin section 2
 		if ($section=="3") {
-		?>
-
-			<?php 
-				getEkzercon(132,$persono_id,"eo");
-			?>
-
-		<?php 
+				getEkzercon(144,$persono_id,"eo");
 		} // fin section 2
 		if ($section=="4") {
-		?>
-
-			<?php 
-				getEkzercon(133,$persono_id,"eo");
-				getEkzercon(134,$persono_id,"eo");
-				getEkzercon(135,$persono_id,"eo");
-			?>                  
-<?php 
-		} // envoie de la leçon
-		if ($section=="5") {
+			?>
+			<h2>AKTIVAJ ADJEKTIVOJ PARTICIPAJ</h2>
+<p>En la momento, kiam mi vekiĝ<b>AS</b>, la sonorilo ĝuste sonAS = Kiam mi vekiĝ<b>AS</b>, la sonorilo est<b>AS</b> son<b>A</b>nta.</p>
+<p>En la momento, kiam mi vekiĝ<b>IS</b>, la sonorilo ĝuste sonIS = Kiam mi vekiĝ<b>IS</b>, la sonorilo est<b>IS</b> son<b>A</b>nta.</p>
+<p>En la momento, kiam mi vekiĝ<b>OS</b>, la sonorilo ĝuste sonOS = Kiam mi vekiĝ<b>OS</b>, la sonorilo est<b>OS</b> son<b>A</b>nta.</p>
+<p>En la momento, kiam mi vekiĝ<b>AS</b>, la sonorilo jam pli frue son<b>IS</b> = Kiam mi vekiĝ<b>AS</b>, la sonorilo est<b>AS</b> son<b>I</b>nta.</p>
+<p>En la momento, kiam mi vekiĝ<b>IS</b>, la sonorilo jam pli frue son<b>IS</b> = Kiam mi vekig<b>IS</b>, la sonorilo est<b>IS</b> son<b>I</b>nta.</p>
+<p>En la momento, kiam mi vekiĝ<b>OS</b>, la sonorilo jam pli frue son<b>IS</b> = Kiam mi vekiĝ<b>OS</b>, la sonorilo est<b>OS</b> son<b>I</b>nta.</p>
+<p>En la momento, kiam mi vekiĝ<b>AS</b>, la sonorilo ankoraŭ ne sonis (sed poste son<b>OS</b>) = Kiam mi vekiĝ<b>AS</b>, la sonorilo est<b>AS</b> son<b>O</b>nta.</p>
+<p>En la momento, kiam mi vekiĝ<b>IS</b>, la sonorilo ankoraŭ ne sonis (sed poste son<b>OS</b>) = Kiam mi vekiĝ<b>IS</b>, la sonorilo est<b>IS</b> son<b>O</b>nta.</p>
+<p>En la momento, ham mi vekiĝ<b>OS</b>, la sonorilo ankoraŭ ne sonis (sed poste son<b>OS</b>) = Kiam mi vekiĝ<b>OS</b>, la sonorilo est<b>OS</b> son<b>O</b>nta.</p>
+			<?php
+				getEkzercon(145,$persono_id,"eo");
+			?>
+			<h2>PASIVAJ ADJEKTIVOJ PARTICIPAJ</h2>
+<p>En la momento, kiam mi alven<b>AS</b>, oni ĝuste verŝ<b>AS</b> vinon = Kiam ml alven<b>AS, la vino est<b>AS</b> verŝ<b>A</b>ta.</p>
+<p>En la momento, kiam mi alven<b>IS</b>, oni ĝuste verŝ<b>IS</b> la vinon = Kiam mi alven<b>lS la vino est<b>IS</b> verŝ<b>A</b>ta.</p>
+<p>En la momento, kiam mi alven<b>OS</b>, oni ĝuste versŝ<b>OS</b> la vinon = Kiam mi alven<b>OS, la vino est<b>OS</b> verŝ<b>A</b>ta.</p>
+<p>En la momento, kiam mi alven<b>AS</b>, oni jam pli frue verŝ<b>IS</b> la vinon =  Kiam mi alven<b>AS</b>, la vino est<b>AS</b> verŝ<b>I</b>ta.</p>
+<p>En la momento, kiam mi alven<b>IS</b>, oni jam pli frue verŝ<b>IS</b> la vinon = Kiam mi alven<b>IS</b>, la vino est<b>IS</b> verŝ<b>I</b>ta.</p>
+<p>En la momento, kiam mi alven<b>OS</b>, oni jam pli frue verŝ<b>IS</b> la vinon = Kiam mi alven<b>OS</b> la vino est<b>OS</b> verŝ<b>I</b>ta.</p>
+<p>En la momento, kiam mi alven<b>AS</b>, oni ankoraŭ ne verŝis (sed poste verŝ<b>OS</b>) la vinon = Kiam mi alven<b>AS</b>, la vino est<b>AS</b> verŝ<b>O</b>ta.</p>
+<p>En la momento, kiam mi alven<b>IS</b>, oni ankoraŭ ne verŝis (sed poste verŝ<b>OS</b>) la vinon = Kiam mi alven<b>IS</b>, la vino est<b>IS</b> verŝ<b>O</b>ta.</p>
+<p>En la momento, kiam mi alven<b>OS</b>, oni ankoraŭ ne verŝis (sed poste verŝ<b>OS</b>) la vinon = Kiam mi alven<b>OS</b>, la vino est<b>OS</b> verŝ<b>O</b>ta.</p>
+			<?php
+				getEkzercon(146,$persono_id,"eo");
+		} 
+		if ($section=="5") {		
+			getEkzercon(147,$persono_id,"eo");
+		} 
+		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);
 		} // fin section 6
 		?>

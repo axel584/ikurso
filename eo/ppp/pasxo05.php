@@ -72,7 +72,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">harmonio</span>: agrablaj samtempaj sonoj; do</span>: agrabla kunestado.</p>
 			<p><span class="eo">ideala</span>: perfekteca.</p>
 			<p><span class="eo">inspiri</span>: estigi stimulan senton en ies spirito.</p>
-			<p><span class="eo">instigi</span>: kuraĝigi ion, ke li faru ion.</p>
+			<p><span class="eo">instigi</span>: kuraĝigi iun, ke li faru ion.</p>
 			<p><span class="eo">katalogo</span>: ordigita listo.</p>
 			<p><span class="eo">klasika</span>: tradicia.</p>
 			<p><span class="eo">kodo</span>: sistemo de senanimaj simboloj.</p>
@@ -82,7 +82,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">koncepto</span>: abstrakta kaj ĝenerala ideo.</p>
 			<p><span class="eo">kongreso</span>: kunveno por diskuti komunan temon.</p>
 			<p><span class="eo">kontakto</span>: interrilato.</p>
-			<p><span class="eo">korespondi</span>:interinterŝanĝi leterojn.</p>
+			<p><span class="eo">korespondi</span>: interinterŝanĝi leterojn.</p>
 			<p><span class="eo">krei</span>: fari, estigi.</p>
 			<p><span class="eo">kuraci</span>: resanigi malsanulojn.</p>
 		</div>
@@ -103,7 +103,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">pretendi</span>: aserti sian rajton pri io.</p>
 			<p><span class="eo">profiti</span>: ricevi utilon aŭ gajnon de io.</p>
 			<p><span class="eo">propagando</span>: disvastigado de informoj.</p>
-			<p><span class="eo">psikologio</span>: scienco pri is homa menso.</p>
+			<p><span class="eo">psikologio</span>: scienco pri la homa menso.</p>
 			<p><span class="eo">regno</span>: lando kiel politika tuto.</p>
 			<p><span class="eo">rimedo</span>: tio, kio servas por atingi celon.</p>
 			<p><span class="eo">ripeti</span>: denove diri aŭ fari ion.</p>

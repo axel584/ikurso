@@ -184,7 +184,7 @@ Iom li ekridetis.</p>
 		?>
 
 			<?php 
-				getEkzercon(132,$persono_id,"eo");
+				getEkzercon(148,$persono_id,"eo");
 			?>
 
 		<?php 

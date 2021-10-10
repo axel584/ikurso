@@ -92,7 +92,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">diligenta</span>: konstante kaj zorge laborema.</p>
 			<p><span class="eo">disciplino</span>: ordemo kaj obeemo.</p>
 			<p><span class="eo">forko</span>: ilo kun dentoj uzata por levi ion.</p>
-			<p><span class="eo">friti</span>: kuiri mangagon en graso.</p>
+			<p><span class="eo">friti</span>: kuiri manĝaĵon en graso.</p>
 			<p><span class="eo">hazardo</span>: neantaŭvidebla okazo.</p>
 			<p><span class="eo">interpreti</span>: transklarigi.</p>
 			<p><span class="eo">inventi</span>: elpensi ion novan. </p>
@@ -109,7 +109,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">prelego</span>: instrua parolado.</p>
 			<p><span class="eo">riproĉi</span>: malmilde mallaŭdi iun.</p>
 			<p><span class="eo">salti</span>: rapide levi sin de la tero.</p>
-			<p><span class="eo">sukero</span>: dolcaĵo, generale blanka. </p>
+			<p><span class="eo">sukero</span>: dolĉaĵo, ĝenerale blanka. </p>
 			<p><span class="eo">teroro</span>: terura kaj kruela regado.</p>
 		</div>
 	</div>
@@ -124,7 +124,7 @@ include "pppkapo.inc.php";
 <h2>ADJEKTIVOJ PARTICIPAJ</h2>
 <p class="parto">La ADJEKTIVOJ PARTICIPAJ priskribas ion aŭ iun en tempa rilato al la cetera kunteksto.</p>
 <p>Vok<b>ANTA</b> voĉo estas voĉo, kiu tiumomente vokas.</p>
-<p>Vok<b>ANTA</b> voĉo estas voĉo, kiu pli frue vokis.</p>
+<p>Vok<b>INTA</b> voĉo estas voĉo, kiu pli frue vokis.</p>
 <p>Vok<b>ONTA</b> voĉo estas voĉo, kiu iam pli malfrue vokos.</p>
 <p>Vok<b>ATA</b> knabo estas knabo, kiun oni tiumomente vokas.</p>
 <p>Vok<b>ITA</b> knabo estas knabo, kiun oni pli frue vokis.</p>

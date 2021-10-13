@@ -38,7 +38,7 @@ include "pppkapo.inc.php";
  			<p>La nigraj okuloj de Sita fikse rigardis min. Ili atendis. Ili atendis iun gravan malkovron.</p>
  			<p>“Ĉar ĉielarkoj povas esti, vi ja scias, tre diversspecaj…”</p>
  			<p>“La unua, kiu eniris mian kolekton, estis tre kutima ĉielarko. Mi vidis ĝin, kiam mi estis apenaŭ kvinjara. Mi subite ĉesigis la ludadon kun mia pli aĝa frato kaj aliaj vilaĝaj knaboj. Senspire mi gapis al la bunta miraklo. Ĝi ŝajnis tiel proksima!”</p>
- 			<p>“Mia frato, vidinte mian admiron, diris: ‘Tiu, kiu sukcesas pasi sub la ĉielarko, ĉiam en la vivo sukcesos plenumi sian deziron!' Li ŝajnis paroli serioze. Mi eĉ momenton ne dubis pri la vereco de lia aserto.”</p>
+ 			<p>“Mia frato, vidinte mian admiron, diris: ‘Tiu, kiu sukcesas pasi sub la ĉielarko, ĉiam en la vivo sukcesos plenumi sian deziron!’ Li ŝajnis paroli serioze. Mi eĉ momenton ne dubis pri la vereco de lia aserto.”</p>
  			<p>“Senvorte, kvazaŭ hipnotita, mi ekmarŝis en la direkto de la mirinda pordego. Mi rapidis tra la vilaĝa strato ne deprenante la rigardon de la ĉielo, kaj alveninte al la rando de la vilaĝo mi daŭrigis la marŝadon tra la vasta paŝtejo. Ŝajnis al mi, ke mi rapide alproksimiĝas al la arko de ĉiuj sukcesoj.”</p>
  			<p>“Kaj ĉu vi sukcesis? Ĉu vi pasis sub ĝi?” senpaciencis Sita.</p>
  			<p>“Ne. La suno malleviĝadis pli kaj pli, kaj la ĉielarko paliĝis ĝis fina malapero. Nur mi restis sola kun mia senlima admiro, gapanta al la ĉielo.</p>
@@ -56,7 +56,7 @@ include "pppkapo.inc.php";
 la violkoloro kaj la blua estas la supraj koloroj, kaj la ruĝa kaj indiga troviĝas malsupre. Kaj tiel ili troviĝis en la malsupra ĉielarko. Sed en la supra la ordo estis renversita, kvazaŭ ĝi nur respegulus la alian.”</p>
  			<p>Sita rigardis min konsternite. Sur ŝia vizaĝo estis videble ke ŝi estis konscia pri la graveco de la sekreto.</p>
  			<p>“Kaj poste…?”</p>
- 			<p>“Poste… Mi fotografis per kolora filmo la duoblan ĉielarkon, kaj se iu ne kredas, mi montras la foton. Aŭ mi diras ‘demandu Nina. Ŝi estis tie kaj ŝi povas konfirmi mian aserton'.”</p>
+ 			<p>“Poste… Mi fotografis per kolora filmo la duoblan ĉielarkon, kaj se iu ne kredas, mi montras la foton. Aŭ mi diras ‘demandu Nina. Ŝi estis tie kaj ŝi povas konfirmi mian aserton’.”</p>
  			<p>“Sed mi prezentos al vi alian ekzempleron de mia kolekto,” mi reprenis la rakonton, jam kuraĝigita per la granda intereso, kiun la brunhaŭta amikino montris por mia kolekto.</p>
  			<p>“Okazis tio en alta montaro. Kune kun kelkaj amikoj mi troviĝis en tendaro, en valeto inter neĝaj pintoj. Pro la alteco ni ĉiuj sentis iom da sufokiĝo, kiu ne permesis al ni dormi.”</p>
  			<p>“Post longa sendorma horo mi decidis eliri el la tendo. Ekstere mi trovis mian amikon Georgon, sidantan sur ŝtono. Fumante li observis la naturon.”</p>
@@ -95,8 +95,8 @@ transformita en muzeon. Ĉiuj salonoj estis malfermitaj. Nur unu ĉambreton, e
  			<p>“Vi estas vere bonkora, sinjoro. Sed tiu ĉi belega ĉielarko tiam mankos el via kolekto.”</p>
  			<p>Malpeze mi svingis la manon antaŭ mia vizago:</p>
  			<p>“Ho ne zorgu, amikino, mi ne bezonas ĝin. Mi jam havas similan en mia kolekto.”</p>
- 			<p>Dum duonhoro Sita fikse rigardadis tra la fenestro. Sur ŝia vizaĝo intensa koncentriĝo estis videbla. Jes, la proceso de la ekposedo de la unua ĉelarko ĉiam estas akompanata de psiĥaj konvulsioj. Eĉ de fizikaj doloroj kelkfoje. Subite la patro de Sita ektiris ŝin je la brako. Ni estis atingintaj la stacion kie ili devis forlasi la trajnon. Ni adiaŭis. Mia eta amikino brilis pro feliĉo. 
-Kaj ekde tiam mi ĉiam dum la vojaĝoj rigardadas tra la fenestro de la vagonaro. Mi tre dezirus denove vidi tian ĉielarkon, por meti ĝin en mian kolekton. Ĉar, vi ja povis supozi, ke tian ĉielarkon mi ne havis ankoraŭ en mia kolekto. Mi mensogis al Sita nur por ke ŝi akceptu la donacon sen konsciencriproĉo. </p>
+ 			<p>Dum duonhoro Sita fikse rigardadis tra la fenestro. Sur ŝia vizaĝo intensa koncentriĝo estis videbla. Jes, la proceso de la ekposedo de la unua ĉelarko ĉiam estas akompanata de psiĥaj konvulsioj. Eĉ de fizikaj doloroj kelkfoje. Subite la patro de Sita ektiris ŝin je la brako. Ni estis atingintaj la stacion kie ili devis forlasi la trajnon. Ni adiaŭis. Mia eta amikino brilis pro feliĉo. </p>
+ 			<p>Kaj ekde tiam mi ĉiam dum la vojaĝoj rigardadas tra la fenestro de la vagonaro. Mi tre dezirus denove vidi tian ĉielarkon, por meti ĝin en mian kolekton. Ĉar, vi ja povis supozi, ke tian ĉielarkon mi ne havis ankoraŭ en mia kolekto. Mi mensogis al Sita nur por ke ŝi akceptu la donacon sen konsciencriproĉo. </p>
 
  			<p><b>Tibor Sekelj</b> (el <i>Esperanto</i>)</p>
 		</div>

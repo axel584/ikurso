@@ -47,7 +47,7 @@ include "pppkapo.inc.php";
  			
  			<p>Nur se pikoj de formikoj<br />
  			vian aŭdon ĝenus,<br />
- 			la matenan audiencon<br />
+ 			la matenan aŭdiencon<br />
  			eble vi komprenus.</p>
  			
  			<p>Preĝoj svarmas kaj alarmas,<br />

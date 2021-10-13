@@ -420,6 +420,9 @@ article p {
 body.pasxo article .rakonto p {
 	font-family: Luciole;
 }
+body.pasxo article .rakonto p.poemo {
+	margin-left: 2em;
+}
 article.korektado p {
 	line-height: 120%;
 }

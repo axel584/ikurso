@@ -1,6 +1,6 @@
 <?php 
 $titolo="Paŝo 16 (deksesa)";
-$leciono = 14;
+$leciono = 16;
 $section=isset($_GET["section"])?htmlspecialchars($_GET["section"]):"1";
 include "pppkapo.inc.php";
 ?>

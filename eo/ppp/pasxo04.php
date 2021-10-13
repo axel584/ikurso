@@ -35,20 +35,20 @@ include "pppkapo.inc.php";
 			<p>“Ne”, oponis la pasaĝero. “Ne povas esti kupeŝanĝo. Mi pensados pri tiu damna kupeŝanĝo kaj mi ja diris, ke mi ne volas pensi. Pri nenio.”</p>
 			<p>“Aha”, konsentis la kasisto.</p>
 			<p>Li komencis skrapeti la kalvaĵon. Li studis la horaron, kvazaŭ li ne konus ĝin parkere.</p>
-			<p>“Ĝis la tria dudek tri mi havas por vi, sinjoro, nenion sen kupeŝanĝo. Je la tria dudek tri iras laborista trajno al Wolow.”</p>
-			<p>“Donu al Wolow”, diris la pasaĝero.</p>
+			<p>“Ĝis la tria dudek tri mi havas por vi, sinjoro, nenion sen kupeŝanĝo. Je la tria dudek tri iras laborista trajno al Wołów.”</p>
+			<p>“Donu al Wołów”, diris la pasaĝero.</p>
 			<p>“Per la dua klaso?”</p>
 			<p>“Povas esti dua.”</p>
-			<p>“Mi donos al vi la unuan, ”diris la kasisto, “en la dua povas esti plenplene. En Wolow estas hodiaŭ foiro.”</p>
-			<p>“Foiro?” maltrankviliĝis la pasaĝero. “Mi ne volas vian Wolow. Mi ne volas homamason. Mi volas kvieton. Sen la homa ridado, sen kvereloj, sen voĉoj. Sen virinoj, sen amikoj, sen infanoj. Damno kun tia kiel vi. Kasisto, kaj ne kapablas vendi bileton al homo.”</p>
+			<p>“Mi donos al vi la unuan, ”diris la kasisto, “en la dua povas esti plenplene. En Wołów estas hodiaŭ foiro.”</p>
+			<p>“Foiro?” maltrankviliĝis la pasaĝero. “Mi ne volas vian Wołów. Mi ne volas homamason. Mi volas kvieton. Sen la homa ridado, sen kvereloj, sen voĉoj. Sen virinoj, sen amikoj, sen infanoj. Damno kun tia kiel vi. Kasisto, kaj ne kapablas vendi bileton al homo.”</p>
 			<p>La fervojisto jesis kompreneme. Vere estis al li domaĝe, ke li ne scias helpi la pasaĝeron. Al liaj devoj apartenis ĝusta priservado de la PKP-aj klientoj. Li estis sperta kasisto. Dum sia vivo li certe vendis milionon da diversaj biletoj kaj la pasaĝerojn li havis diversajn. Li ankaŭ pri tiu ne miris. Estis nenio mirinda. Simple estis malbone al la ulo. Tiaj ne konas siajn celstaciojn. Ili fuĝas nenien.</p>
 			<p>Li aliris la horaron kaj komencis serĉi. Li faris tion kiel gasto en restoracio. La trajna menuo de la malgranda stacieto estis aĉa. Ne estis tro por elekti: Jezowice, Kakolin, Barcz.</p>
-			<p>“Mi havas”, li diris kun kontento. “Mi havas por vi Pustkow. La kvina haltejo post Gorow. Arbaro. Du kabanoj sume. De la staciestro kaj arbaristo. La arbaristo surda, maljuna. La virino gastama. Kaj lago. La lago ne kulturata, sovaĝa. Depost la tempo kiam oni donis ĝin al kooperativo ne estas fiŝistoj. Akva dezerto, ne lago. Povas esti al Pustkow.”</p>
-			<p>“Povas esti”, diris la pasaĝero. “Donu al tiu Pustkow.”</p>
+			<p>“Mi havas”, li diris kun kontento. “Mi havas por vi Pustków. La kvina haltejo post Górów. Arbaro. Du kabanoj sume. De la staciestro kaj arbaristo. La arbaristo surda, maljuna. La virino gastama. Kaj lago. La lago ne kulturata, sovaĝa. Depost la tempo kiam oni donis ĝin al kooperativo ne estas fiŝistoj. Akva dezerto, ne lago. Povas esti al Pustkow.”</p>
+			<p>“Povas esti”, diris la pasaĝero. “Donu al tiu Pustków.”</p>
 			<p>“Per la dua?” demandis la kasisto. “Per la unua”, diris la pasaĝero.</p>
 			<p>“Ne”, meditis la fervojisto, “ne valoras. Sep haltejoj, kaj la trajno malplena. Cetere la unua klaso entute ne estas en tiu vagonaro.”</p>
 			<p>“Donu la duan.”</p>
-			<p>La kasisto surnazigis okulvitrojn kaj komencis plenigi la duaklasan bileton al Pustkow, kie estas lago, kvieto kaj la gastama virino de la duonsurda arbaristo, kaj kie oni pensas pri nenio. La pasaĝero apogis sin per la kubutoj je la kasa rando kaj rigardis kiel la fervojisto plenigas la bileton.</p>
+			<p>La kasisto surnazigis okulvitrojn kaj komencis plenigi la duaklasan bileton al Pustków, kie estas lago, kvieto kaj la gastama virino de la duonsurda arbaristo, kaj kie oni pensas pri nenio. La pasaĝero apogis sin per la kubutoj je la kasa rando kaj rigardis kiel la fervojisto plenigas la bileton.</p>
 			<p>Ĝuste tiam aliris lin knabino. Ŝi estis juna kaj tre bela.</p>
 			<p>“Iru hejmen”, ŝi diris al la homo, kiu ne konis la celstacion de sia vojaĝo. “Panjo ploras.”</p>
 			<p>La kasisto ĉesis plenigi la bileton. Li malfermis la tirkeston, prenis liniilon, almetis ĝin al la biletaj pintoj kaj kruce trastrekis ĝin per dikaj ruĝaj linioj.</p>

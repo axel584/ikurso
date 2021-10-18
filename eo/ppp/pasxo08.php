@@ -188,18 +188,21 @@ Iom li ekridetis.</p>
 			?>
 
 		<?php 
-		} // fin section 2
+		} 
 		if ($section=="4") {
 		?>
-
+<h2>ADVERBOJ PARTICIPAJ</h2>
+<p class="parto">La adverboj participaj rilatas adverbe al la ĉefa verbo de la propozicio, kaj sekve la agado aŭ estado, kiun ili esprimas, estas agado de aŭ al la subjekto de la ĉefa verbo, aŭ estado de tiu subjekto. Ili ne povas havi rilaton kun aliaj substantivoj ol la subjekto en la propozicio.</p> 
+<p>Ekz-e: <b>Legante</b> la ĵurnalon, la inĝeniero trovis sian junaĝan poemon. La inĝeniero verkis poemojn <b>inspirite</b> de la amo. En ambaŭ ekzemploj temas pri la inĝeniero, kiu ja legis kaj estis inspirita. “Legante” sciigas, kiam la inĝeniero trovis; “inspirite” sciigas, kiel aŭ kial li verkis.</p>
 			<?php 
-				getEkzercon(133,$persono_id,"eo");
-				getEkzercon(134,$persono_id,"eo");
-				getEkzercon(135,$persono_id,"eo");
-			?>                  
-<?php 
+				getEkzercon(149,$persono_id,"eo");
+				getEkzercon(150,$persono_id,"eo");
+			} 
+			if ($section=="5") {	
+				getEkzercon(151,$persono_id,"eo");
+				getEkzercon(152,$persono_id,"eo");
 		} // envoie de la leçon
-		if ($section=="5") {
+		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);
 		} // fin section 6
 		?>

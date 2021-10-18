@@ -87,9 +87,15 @@ function afficheAssociationNationale($pays) {
 }
 
 function afficheAssociationFrancaise($idArthur) {
+	$arrContextOptions=array( // correction probleme SSL
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+	); 
 	$json_url = "https://esperanto-france.org/api/personne/".$idArthur;
 	//echo $json_url."<br/>";
-	$json = file_get_contents($json_url);
+	$json = file_get_contents($json_url, false, stream_context_create($arrContextOptions));
 	//print($json);
 	$data = json_decode($json, TRUE);
 	//echo "id :".$data["id"]."<br/>";

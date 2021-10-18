@@ -132,9 +132,15 @@ function afficheInformationNationale() {
 }
 
 function afficheDepartement($numeroDepartement) {
+	$arrContextOptions=array( // correction probleme SSL
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+	);  
 	$json_url = "https://esperanto-france.org/api/panorama/zone/".$numeroDepartement;
 	//echo $json_url;
-	$json = file_get_contents($json_url);
+	$json = file_get_contents($json_url, false, stream_context_create($arrContextOptions));
 	$data = json_decode($json, TRUE);
 	//echo "<pre>";
 	if (sizeof($data["associations"])==0) {

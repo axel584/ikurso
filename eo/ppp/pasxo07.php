@@ -131,7 +131,7 @@ include "pppkapo.inc.php";
 <p>En la momento, kiam mi vekiĝ<b>IS</b>, la sonorilo ĝuste sonIS = Kiam mi vekiĝ<b>IS</b>, la sonorilo est<b>IS</b> son<b>A</b>nta.</p>
 <p>En la momento, kiam mi vekiĝ<b>OS</b>, la sonorilo ĝuste sonOS = Kiam mi vekiĝ<b>OS</b>, la sonorilo est<b>OS</b> son<b>A</b>nta.</p>
 <p>En la momento, kiam mi vekiĝ<b>AS</b>, la sonorilo jam pli frue son<b>IS</b> = Kiam mi vekiĝ<b>AS</b>, la sonorilo est<b>AS</b> son<b>I</b>nta.</p>
-<p>En la momento, kiam mi vekiĝ<b>IS</b>, la sonorilo jam pli frue son<b>IS</b> = Kiam mi vekig<b>IS</b>, la sonorilo est<b>IS</b> son<b>I</b>nta.</p>
+<p>En la momento, kiam mi vekiĝ<b>IS</b>, la sonorilo jam pli frue son<b>IS</b> = Kiam mi vekiĝ<b>IS</b>, la sonorilo est<b>IS</b> son<b>I</b>nta.</p>
 <p>En la momento, kiam mi vekiĝ<b>OS</b>, la sonorilo jam pli frue son<b>IS</b> = Kiam mi vekiĝ<b>OS</b>, la sonorilo est<b>OS</b> son<b>I</b>nta.</p>
 <p>En la momento, kiam mi vekiĝ<b>AS</b>, la sonorilo ankoraŭ ne sonis (sed poste son<b>OS</b>) = Kiam mi vekiĝ<b>AS</b>, la sonorilo est<b>AS</b> son<b>O</b>nta.</p>
 <p>En la momento, kiam mi vekiĝ<b>IS</b>, la sonorilo ankoraŭ ne sonis (sed poste son<b>OS</b>) = Kiam mi vekiĝ<b>IS</b>, la sonorilo est<b>IS</b> son<b>O</b>nta.</p>
@@ -140,9 +140,9 @@ include "pppkapo.inc.php";
 				getEkzercon(145,$persono_id,"eo");
 			?>
 			<h2>PASIVAJ ADJEKTIVOJ PARTICIPAJ</h2>
-<p>En la momento, kiam mi alven<b>AS</b>, oni ĝuste verŝ<b>AS</b> vinon = Kiam ml alven<b>AS, la vino est<b>AS</b> verŝ<b>A</b>ta.</p>
-<p>En la momento, kiam mi alven<b>IS</b>, oni ĝuste verŝ<b>IS</b> la vinon = Kiam mi alven<b>lS la vino est<b>IS</b> verŝ<b>A</b>ta.</p>
-<p>En la momento, kiam mi alven<b>OS</b>, oni ĝuste versŝ<b>OS</b> la vinon = Kiam mi alven<b>OS, la vino est<b>OS</b> verŝ<b>A</b>ta.</p>
+<p>En la momento, kiam mi alven<b>AS</b>, oni ĝuste verŝ<b>AS</b> vinon = Kiam ml alven<b>AS</b>, la vino est<b>AS</b> verŝ<b>A</b>ta.</p>
+<p>En la momento, kiam mi alven<b>IS</b>, oni ĝuste verŝ<b>IS</b> la vinon = Kiam mi alven<b>lS</b> la vino est<b>IS</b> verŝ<b>A</b>ta.</p>
+<p>En la momento, kiam mi alven<b>OS</b>, oni ĝuste versŝ<b>OS</b> la vinon = Kiam mi alven<b>OS</b>, la vino est<b>OS</b> verŝ<b>A</b>ta.</p>
 <p>En la momento, kiam mi alven<b>AS</b>, oni jam pli frue verŝ<b>IS</b> la vinon =  Kiam mi alven<b>AS</b>, la vino est<b>AS</b> verŝ<b>I</b>ta.</p>
 <p>En la momento, kiam mi alven<b>IS</b>, oni jam pli frue verŝ<b>IS</b> la vinon = Kiam mi alven<b>IS</b>, la vino est<b>IS</b> verŝ<b>I</b>ta.</p>
 <p>En la momento, kiam mi alven<b>OS</b>, oni jam pli frue verŝ<b>IS</b> la vinon = Kiam mi alven<b>OS</b> la vino est<b>OS</b> verŝ<b>I</b>ta.</p>

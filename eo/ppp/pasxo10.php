@@ -214,26 +214,18 @@ transformita en muzeon. Ĉiuj salonoj estis malfermitaj. Nur unu ĉambreton, e
 <?php 
 		} // fin section 2
 		if ($section=="3") {
-		?>
-
-			<?php 
-				getEkzercon(141,$persono_id,"eo");
-			?>
-
-		<?php 
-		} // fin section 2
+			getEkzercon(158,$persono_id,"eo");
+		} 
 		if ($section=="4") {
-		?>
-
-			<?php 
-				getEkzercon(142,$persono_id,"eo");	
-				getEkzercon(143,$persono_id,"eo");	
-				getEkzercon(144,$persono_id,"eo");	
-				getEkzercon(145,$persono_id,"eo");	
-			?>                  
-<?php 
-		} // envoie de la leçon
+			getEkzercon(159,$persono_id,"eo");
+			getEkzercon(160,$persono_id,"eo");
+			getEkzercon(161,$persono_id,"eo");
+			getEkzercon(162,$persono_id,"eo");
+		} 
 		if ($section=="5") {
+			getEkzercon(163,$persono_id,"eo");
+		} // envoi de la leçon
+		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);
 		} // fin section 6
 		?>

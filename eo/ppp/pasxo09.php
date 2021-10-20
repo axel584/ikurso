@@ -130,7 +130,7 @@ include "pppkapo.inc.php";
 		if ($section=="5") {
 			getEkzercon(156,$persono_id,"eo");
 			getEkzercon(157,$persono_id,"eo");
-		} // envoie de la leçon
+		} // envoi de la leçon
 		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);
 		} // fin section 6

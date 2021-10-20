@@ -35,7 +35,7 @@ include "pppkapo.inc.php";
 			<p>Sed unu tagon venis la krizo. Dum lia foresto el la ĉambro la dommastrino havigis al si kroman ŝlosilon kaj malŝlosis lian ĉambropordon. Ŝi tre suspekteme ŝtelrigardis en lian ĉambron, atendante vidi mi-nescias-kion. Kio ajn estis ŝia atendo, ŝi certe ne estis preta ricevi tian ŝokon. Ŝi ŝovis la kapon en la ĉambron, kaj ŝiaj okuloj gluiĝis sur la besto. La leono subite antaŭenmoviĝis, kaj la dommastrino tujtuj fermtiris la pordon kaj reŝlosis ĝin. Ŝi staris frostigita dum momento kaj, post konsciiĝo, eligis kriĉon kiel lokomotiva fajfilo kaj forkuregis laŭ la koridoro ĝis duonvoje, kie ŝi falis en plena sveno. Alarmite, homoj kuris el la ĉambroj kaj komencis revivigi la dommastrinon. Ŝi rekonsciiĝis, malfermis la okulojn kaj ĉe la rememoro larĝigis la okulojn kaj komencis histerie kriegi:</p>
 			<p>“Leonoj, teruraj leonoj en la ĉambro! Ho Dio, savu min! Ho Dio, ili saltis al mi, grandaj, sovaĝaj leonoj! Tiu diablo, tiu vampiro kaj lia sorĉarto, tiu monstro el infero!”</p>
 			<p>“Sed kio estas, kio estas?” voĉoj demandis al ŝi.</p>
-			<p>“En tiu ĉambro, tie, leono atakis min. Ĝi estas leona monstro. Ne eniru, pro la sanktuloj ne eniru: ĝi estas terura monstro, ĝi preskaŭ disŝiris min per la ungegoj... pli ol unu futon longaj! Ĝi saltegis al mi, ĝi havas kornojn, – je Dio, ne malfermu la pordon – estas ĉiuspecaj monstroj tie!”</p>
+			<p>“En tiu ĉambro, tie, leono atakis min. Ĝi estas leona monstro. Ne eniru, pro la sanktuloj ne eniru: ĝi estas terura monstro, ĝi preskaŭ disŝiris min per la ungegoj… pli ol unu futon longaj! Ĝi saltegis al mi, ĝi havas kornojn, – je Dio, ne malfermu la pordon – estas ĉiuspecaj monstroj tie!”</p>
 			<p>“Trankviliĝu, ne tremu, ni helpos!” diris la voĉoj; sed la dommastrino nur kriadis el tuta gorĝo panikan galimation da kontraŭdiroj. Iu vokis policanojn.</p>
 			<p>“Nu”, diris unu el la policanoj, “regu vin kaj diru al ni, pri kio temas.”</p>
 			<p>“En tiu ĉambro, numero ok, estas teruraj bestformaj monstroj. Apenaŭ mi eskapis viva?”</p>
@@ -139,27 +139,19 @@ include "pppkapo.inc.php";
 <?php 
 		} // fin section 2
 		if ($section=="3") {
-		?>
-
-			<?php 
-				getEkzercon(187,$persono_id,"eo");
-			?>
-
-		<?php 
-		} // fin section 2
+			getEkzercon(204,$persono_id,"eo");
+				
+		} 
 		if ($section=="4") {
-		?>
-
-			<?php 
-				getEkzercon(188,$persono_id,"eo");	
-				getEkzercon(189,$persono_id,"eo");	
-				getEkzercon(190,$persono_id,"eo");	
-				getEkzercon(191,$persono_id,"eo");
-				getEkzercon(192,$persono_id,"eo");
-			?>                  
-<?php 
-		} // envoie de la leçon
+			getEkzercon(205,$persono_id,"eo");
+			getEkzercon(206,$persono_id,"eo");
+			getEkzercon(207,$persono_id,"eo");
+			getEkzercon(208,$persono_id,"eo");
+		} 
 		if ($section=="5") {
+			getEkzercon(209,$persono_id,"eo");
+		} // envoi de la leçon
+		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);
 		} // fin section 6
 		?>

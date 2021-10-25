@@ -61,7 +61,7 @@ Iom li ekridetis.</p>
  			<p>“Pasis preskaŭ du monatoj, ĝis respondo venis. Mi kredis, ke mia koro krevos, kiam mi rigardis la literojn konatajn sur la koverto. Eble horojn mi sidis apud la tablo, antaŭ mi la letero, ĝis mi ekhavis kuraĝon malfermi ĝin.”</p>
  			<p>“Jes, li estis. Ŝi, ŝi. Ŝi sendis la poemon, ŝi ne dons ĝin al aliulo, ankaŭ nun ŝi gardas ĝin kune kun la aliaj, kun niaj memoroj. Ŝi ne forgesis min, neniam ŝi forgesos, ŝi atendis min, eĉ nun ŝi atendas, ŝi amas min, ĉu mi volas iri al ŝi…”</p>
  			<p>Fine do! mi ĝemis profunde. Nu, stultaĵo, mi ja estus povinta imagi la finon, nature ‘happy end’, mi ja vidis la finalon, ĉi tiun feliĉan familion.</p>
- 			<p>“Vi povas desi, amiko. Vera romano! Do, tiel vi retrovis vian amatinon, vian edzinon. Vi ja estas feliĉulo, maljunulo…”</p>
+ 			<p>“Vi povas ĉesi, amiko. Vera romano! Do, tiel vi retrovis vian amatinon, vian edzinon. Vi ja estas feliĉulo, maljunulo…”</p>
  			<p>La inĝeniero nun alrigardis min unuafoje dum la rakontado. Forte li fumsuĉis la cigaredon kaj returnis siajn okulojn al la fajro jam cindriĝanta. Dume la krepusko kovris la ĉambron per malhelo. Lia vizaĝo apenaŭ estis videbla kaj min ekregis ia stranga, malcerta sento. Miaj vortoj gaje ekestintaj stumpe pendis en la densiĝinta mallumo. Mi ne kuraĝis daŭrigi, kvankam mia amiko ne faris eĉ moveton.</p>
  			<p>Ni sidis tiel, senvorte, dum longaj minutoj kaj mi jam sciis, ke okazos io neatendita.</p>
  			<p>“La letero… tiu letero… alvenis hieraŭ…”</p>

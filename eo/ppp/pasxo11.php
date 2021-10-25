@@ -159,16 +159,17 @@ Ree minutoj fariĝis horoj. Kiom longe ŝi jam solas portata per la ondoj? Nur
 <?php 
 		} // fin section 2
 		if ($section=="3") {
-			getEkzercon(164,$persono_id,"eo");
+			getEkzercon(162,$persono_id,"eo");
 				
 		} 
 		if ($section=="4") {
+			getEkzercon(163,$persono_id,"eo");
+			getEkzercon(164,$persono_id,"eo");
 			getEkzercon(165,$persono_id,"eo");
-			getEkzercon(166,$persono_id,"eo");
 		} 
 		if ($section=="5") {
+			getEkzercon(166,$persono_id,"eo");
 			getEkzercon(167,$persono_id,"eo");
-			getEkzercon(168,$persono_id,"eo");
 		} // envoi de la leçon
 		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);

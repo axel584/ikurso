@@ -1,24 +1,24 @@
 @font-face {
 	font-family: "Luciole";
 	font-weight: 400;
-	src: url("../fonts/Luciole-Regular.ttf") format("ttf");
+	src: url("../fonts/Luciole-Regular.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Luciole";
 	font-weight: 400;
 	font-style: italic;
-	src: url("../fonts/Luciole-Regular-Italic.ttf") format("ttf");
+	src: url("../fonts/Luciole-Regular-Italic.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Luciole";
 	font-weight: 600;
-	src: url("../fonts/Luciole-Bold.ttf") format("ttf");
+	src: url("../fonts/Luciole-Bold.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Luciole";
 	font-weight: 600;
 	font-style: italic;
-	src: url("../fonts/Luciole-Bold-Italic.ttf") format("ttf");
+	src: url("../fonts/Luciole-Bold-Italic.ttf") format("truetype");
 }
 
 /*---- palette personnalisée ---*/

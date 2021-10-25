@@ -56,7 +56,7 @@ Iom li ekridetis.</p>
  			<p>“Mi komprenis. Post longa kaj persista petado li promesis peri leteron al la ensendinto. Tuj mi skribis: la amaj sentoj ariĝintaj dum jaroj nun ŝvebis, plenigis la paĝojn: konfeso, peto, riproĉoj kaj denove konfeso…” </p>
  			<p>“… la letero ekiris. Dum la sekvantaj semajnoj mi estis kvazaŭ somnambulo. Mi atendis la respondon kaj samtempe mi tremis… Ĉu ne ĉio estis superflua? Mia vivo jam preskaŭ enordiĝis… eble, verŝajne ankaŭ la ŝia… kaj nun… se ĉio renversiĝos?… ĉu inde?…”</p>
  			<p>“… sed la letero jam ekiris…”</p>
- 			<p>Li ekhaltis momenton, kvazaŭ serĉante la rememorojn. Li fumsuĉis la cigaredon, kiu estis jam preskaŭ elbrulinta, elspiris la fumon kaj longe postrigardis ĝin. Mi atendis la daŭrigon nervostrede, preskaŭ mi ekkriis: “Do? Estis ŝi?” — sed mi bridis mian senton.</p>
+ 			<p>Li ekhaltis momenton, kvazaŭ serĉante la rememorojn. Li fumsuĉis la cigaredon, kiu estis jam preskaŭ elbrulinta, elspiris la fumon kaj longe postrigardis ĝin. Mi atendis la daŭrigon nervostreĉe, preskaŭ mi ekkriis: “Do? Estis ŝi?” — sed mi bridis mian senton.</p>
  			<p>Post iom da tempo li parolis plu.</p>
  			<p>“Pasis preskaŭ du monatoj, ĝis respondo venis. Mi kredis, ke mia koro krevos, kiam mi rigardis la literojn konatajn sur la koverto. Eble horojn mi sidis apud la tablo, antaŭ mi la letero, ĝis mi ekhavis kuraĝon malfermi ĝin.”</p>
  			<p>“Jes, li estis. Ŝi, ŝi. Ŝi sendis la poemon, ŝi ne dons ĝin al aliulo, ankaŭ nun ŝi gardas ĝin kune kun la aliaj, kun niaj memoroj. Ŝi ne forgesis min, neniam ŝi forgesos, ŝi atendis min, eĉ nun ŝi atendas, ŝi amas min, ĉu mi volas iri al ŝi…”</p>

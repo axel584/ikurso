@@ -33,7 +33,7 @@ include "pppkapo.inc.php";
 			<p>“Kiel ŝatanto de verdaj montoj kaj bluaj akvaroj, mi vagadis tra multe da ravaj pejzaĝoj. Sed, mi neniam havis la feliĉon tien ĉi alveni. Estus malrespekte peti vian klarigon, sed mi ankoraŭ ne scias, kie mi troviĝas.”</p>
 			<p>La reĝino ridetis:</p>
 			<p>“Kiel vi povus scii? Jen vi estas en la sesa el la tridek ses grotoj de la Monto Fi Laj. Naskiĝinte el la akvaro, nia monto flosas sur la maro, aperas kaj malaperas laŭ la ventoj kaj la pluvoj. Via bonkoreco kaj via nobleco estas ĉiekonataj. Tial vi estas invitata en nian landon, kiun ĝis nun vidis neniu ordinara mortulo.”
-			Ŝi sin turnis al siaj servantinoj. Tiuj ĉi komprenis la senparolan ordonon kaj fortiriĝis. Post momenta silento, eniris malreale bela fraŭlino. Tu Thuk tuj rekonis en ŝi tiun, kiu estis rompinta la florbranĉon. En sia kostumo el blanka vualo,ŝi aspektis milfoje pli gracie, ol dum la unua renkontiĝo.</p>
+			Ŝi sin turnis al siaj servantinoj. Tiuj ĉi komprenis la senparolan ordonon kaj fortiriĝis. Post momenta silento, eniris malreale bela fraŭlino. Tu Thuk tuj rekonis en ŝi tiun, kiu estis rompinta la florbranĉon. En sia kostumo el blanka vualo, ŝi aspektis milfoje pli gracie, ol dum la unua renkontiĝo.</p>
 			<p>“Mia filino nomiĝas Ĉiela Parfumo, — diris la reĝino al la beletristo. Dum ŝia vojaĝo sur la tera mondo sin trafis malfeliĉo. Vi jam malavaris al ŝi bonfaron, kiun mi ne forgesas. Tial, mi permesas al ŝi kunligi sian vivon kun la via por estingi tiun dankŝuldon.</p>
 			<p>”Tu Thuk, en sia granda emocio, ne sciis, kion respondi. Ĉio estis pretigita por la edziĝfesto, kiun ĉeestis ĉiuj feinoj de la tridek ses grotoj de la Monto Fi Laj. Ludis feina orkestro. Oni dancis, oni kantis, oni ebriiĝis pro la feina persikbrando.</p>
 			<p class="center">⁂</p>
@@ -94,7 +94,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">gitaro</span>: seskorda muzikilo.</p>
 			<p><span class="eo">gracia</span>: facilmova, belproporcia.</p>
 			<p><span class="eo">groto</span>: artefarita kaverno.</p>
-			<p><span class="eo">hirundo</span>: speco de migrantabirdo.</p>
+			<p><span class="eo">hirundo</span>: speco de migranta birdo.</p>
 			<p><span class="eo">honori</span>: trakti respekteme.</p>
 			<p><span class="eo">ĥoro</span>: kantistaro.</p>
 			<p><span class="eo">jado</span>: verdkolora mineralo.</p>

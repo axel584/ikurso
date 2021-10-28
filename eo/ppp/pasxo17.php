@@ -18,7 +18,7 @@ include "pppkapo.inc.php";
 		<div class="rakonto">
 			<h3>FENIKSO</h3>
  
-			<p>La okuloj de la astronomo ruĝis kaj doloris. Dum longa juvelita nokto li staris de la teleskopo aŭ skribis en notlibro, faris etajn krucojn sur grafikaĵoj, komparis diagramojn. Li estis laca.</p>
+			<p>La okuloj de la astronomo ruĝis kaj doloris. Dum longa juvelita nokto li staris ĉe la teleskopo aŭ skribis en notlibro, faris etajn krucojn sur grafikaĵoj, komparis diagramojn. Li estis laca.</p>
 			<p>“Mi bezonas bonan tagplenon da dormo”, li diris. “Sed, unue, legi miajn leterojn kaj la matenan ĵurnalon.”</p>
 			<p>Li iris al sia skribotablo.</p>
 			<p>Miloj kaj miloj da astroj; milionoj da kilometroj; lumjaroj; orbitoj kaj sistemoj; temperaturoj kiuj vaporigas feron kaj solidigas nitrogenon; aliaj gravitoj, lafaj montoj, amoniakaj maroj; glacirokoj kaj drivanta polvo; vasta matematiko de longaj nulovicoj; ekkompreneti tiun lumtremantan vualon el nigra veluro, gembrodita, tra kiu aerolitoj ofte trenas longajn lumfadenojn; la konoj kiuj ĉiam kreskigas nian respekton al la kosma mistero; tio estis la vivo de la astronomo. Lumo; lumjaroj; kaj mondoj kiuj pro la nulovicaj distancoj ŝajnas manoplenoj da brilega polvo ŝutitaj sur la vualon.</p>
@@ -75,11 +75,11 @@ include "pppkapo.inc.php";
 	<div class="vortlisto row">
 		<div class="col s12 m6">
 			<p><span class="eo">absoluta</span>: senkondiĉa, senescepta, senmanka.</p>
-			<p><span class="eo">aerolito</span>: ŝtono falinta surteron el la spaco.</p>
+			<p><span class="eo">aerolito</span>: ŝtono falinta sur teron el la spaco.</p>
 			<p><span class="eo">akuŝi</span>: elpuŝi el si idon.</p>
 			<p><span class="eo">ambasadoro</span>: oficiala reprezentanto de regno eksterlande.</p>
 			<p><span class="eo">ametisto</span>: violkolora gemo.</p>
-			<p><span class="eo">amoniako</span>: gaso, nh3.</p>
+			<p><span class="eo">amoniako</span>: gaso, NH3.</p>
 			<p><span class="eo">armeo</span>: granda militistaro.</p>
 			<p><span class="eo">arto</span>: homa kreado, plejofte reprezentanta iel belon.</p>
 			<p><span class="eo">astro</span>: ĉiela korpo.</p>
@@ -87,20 +87,20 @@ include "pppkapo.inc.php";
 			<p><span class="eo">aviadi</span>: aerveturi.</p>
 			<p><span class="eo">bebo</span>: infaneto, suĉinfano.</p>
 			<p><span class="eo">bolŝeviko</span>: adepto de komunismo.</p>
-			<p><span class="eo">brodi</span>: ornami teksajon per fadenaj desegnaĵoj.</p>
+			<p><span class="eo">brodi</span>: ornami teksaĵon per fadenaj desegnaĵoj.</p>
 			<p><span class="eo">buklo</span>: harvolvaĵo.</p>
-			<p><span class="eo">cenzuri</span>: oficiale kontroli presaĵojn k. a.</p>
+			<p><span class="eo">cenzuri</span>: oficiale kontroli presaĵojn k.a.</p>
 			<p><span class="eo">ĉelo</span>: malgranda konsistaĵero.</p>
 			<p><span class="eo">debato</span>: diskuto laŭ orda maniero.</p>
 			<p><span class="eo">diagramo</span>: klariga desegno.</p>
 			<p><span class="eo">diplomato</span>: politikisto, kiu rilatas kun alilandaj registaroj.</p>
 			<p><span class="eo">drako</span>: fabela besto havanta flugilojn kaj ungegojn.</p>
-			<p><span class="eo">dresi</span>: celkonforme eduki (plejofte bestojn).</p>
+			<p><span class="eo">dresi</span>: celkonforme eduki (plej ofte bestojn).</p>
 			<p><span class="eo">ebena</span>: samnivele plata.</p>
 			<p><span class="eo">efemera</span>: nedaŭra, rapide pasanta.</p>
 			<p><span class="eo">ekspozicio</span>: publika elmontriĝado.</p>
 			<p><span class="eo">epidemio</span>: disvastigita malsano.</p>
-			<p><span class="eo">epizodo</span>: unu flanks agado en rakonto aŭ historio.</p>
+			<p><span class="eo">epizodo</span>: unu flanka agado en rakonto aŭ historio.</p>
 			<p><span class="eo">estetiko</span>: beltaksado.</p>
 			<p><span class="eo">etaĝo</span>: samnivela parto de domo.</p>
 			<p><span class="eo">farti</span>: stati sane.</p>
@@ -114,14 +114,14 @@ include "pppkapo.inc.php";
 			<p><span class="eo">grafiko</span>: arto desegne reprezenti objektojn.</p>
 			<p><span class="eo">grundo</span>: kulturebla tero.</p>
 			<p><span class="eo">hajlo</span>: glaciiĝinta pluvo.</p>
-			<p><span class="eo">hidrogeno</span>: senkolora malpezagaso (h).</p>
+			<p><span class="eo">hidrogeno</span>: senkolora malpeza gaso (H).</p>
 			<p><span class="eo">hospitalo</span>: kuracejo.</p>
 			<p><span class="eo">jupo</span>: virina vesto por la malsupra korpoparto.</p>
 			<p><span class="eo">kanono</span>: pafilego.</p>
-			<p><span class="eo">kapitalo</span>: profitodona ricaĵo.</p>
+			<p><span class="eo">kapitalo</span>: profitodona riĉaĵo.</p>
 			<p><span class="eo">karikaturo</span>: troigita kvazaŭportreto.</p>
 			<p><span class="eo">kirli</span>: rondirigi fluaĵon.</p>
-			<p><span class="eo">kobalto</span>: metalo (co), kies kombinaĵoj blukoloras.</p>
+			<p><span class="eo">kobalto</span>: metalo (Co), kies kombinaĵoj blukoloras.</p>
 			<p><span class="eo">kolonio</span>: grupo da homoj loĝantaj konstante en lando fremda.</p>
 			<p><span class="eo">komenti</span>: klarigi la signifon de io.</p>
 			<p><span class="eo">kontrakti</span>: interŝanĝi skribitajn promesojn pri io komunue plenumota.</p>
@@ -144,9 +144,9 @@ include "pppkapo.inc.php";
 			<p><span class="eo">ministerio</span>: ministrejo.</p>
 			<p><span class="eo">modo</span>: aktuala kutimo rilate vestojn ks.</p>
 			<p><span class="eo">murdi</span>: krime mortigi.</p>
-			<p><span class="eo">nitrogeno</span>: senkolora gaso (n).</p>
+			<p><span class="eo">nitrogeno</span>: senkolora gaso (N).</p>
 			<p><span class="eo">nodo</span>: ŝnurkunligaĵo.</p>
-			<p><span class="eo">oksigeno</span>: senkolora gaso (o), necesa por spirado.</p>
+			<p><span class="eo">oksigeno</span>: senkolora gaso (O), necesa por spirado.</p>
 			<p><span class="eo">opresi</span>: tirane premegi.</p>
 			<p><span class="eo">orbito</span>: vojo de unu astro ĉirkaŭ alian.</p>
 			<p><span class="eo">ordeno</span>: honora signo.</p>
@@ -183,10 +183,10 @@ include "pppkapo.inc.php";
 			<p><span class="eo">temperaturo</span>: grado de varmo.</p>
 			<p><span class="eo">teritorio</span>: difinita lando sub iu aŭtoritato.</p>
 			<p><span class="eo">ungo</span>: malmola kreskaĵo sur fingropinto.</p>
-			<p><span class="eo">uranio</span>: kemia elemento (u).</p>
+			<p><span class="eo">uranio</span>: kemia elemento (U).</p>
 			<p><span class="eo">vakuo</span>: malplena spaco.</p>
 			<p><span class="eo">varbi</span>: instigi al aligo.</p>
-			<p><span class="eo">varii</span>: prezenti sinsekvajn diversajn ŝanĝigojn.</p>
+			<p><span class="eo">varii</span>: prezenti sinsekvajn diversajn ŝanĝiĝojn.</p>
 			<p><span class="eo">vermo</span>: malgranda senpieda besto.</p>
 			<p><span class="eo">volbo</span>: arkforma plafono.</p>
 			<p><span class="eo">vundi</span>: difekti korpon.</p>

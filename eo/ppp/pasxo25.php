@@ -51,7 +51,7 @@ include "pppkapo.inc.php";
 		<div class="col s12 m6">
 			<p><span class="eo">abio</span>: konifera arbo.</p>
 			<p><span class="eo">acero</span>: speco de arbo.</p>
-			<p><span class="eo">agrimonio</span>: speco do herbo.</p>
+			<p><span class="eo">agrimonio</span>: speco de herbo.</p>
 			<p><span class="eo">aktiva</span>: agema.</p>
 			<p><span class="eo">alismo (plantaga)</span>: speco de herbeca marĉoplanto.</p>
 			<p><span class="eo">asigni</span>: destini, disponigi.</p>
@@ -125,7 +125,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">tigo</span>: flortrunketo.</p>
 			<p><span class="eo">torfo</span>: spongeca substanco, per kiu oni povas hejti.</p>
 			<p><span class="eo">triki</span>: teksi per vergetoj.</p>
-			<p><span class="eo">tropiko</span>: paralelo je 23° + de la ekvatoro.</p>
+			<p><span class="eo">tropiko</span>: paralelo je 23° de la ekvatoro.</p>
 			<p><span class="eo">trupo</span>: soldataro.</p>
 			<p><span class="eo">tubo</span>: longa kava cilindro.</p>
 			<p><span class="eo">tujo</span>: konifera arbo.</p>

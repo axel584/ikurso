@@ -65,10 +65,10 @@ include "pppkapo.inc.php";
  			ke fabrikoj ĉesu ŝpini,<br />
  			devus di’ aranĝi!</p>
  			
- 			<p>‘Gardu grenon kaj ĝardenon!’<br />
+ 			<p>“Gardu grenon kaj ĝardenon!”<br />
  			oni al mi taskas;<br />
- 			nova krio: ‘Helpu dio!<br />
- 			La bovino naskas!’ </p>
+ 			nova krio: “Helpu dio!<br />
+ 			La bovino naskas!” </p>
  			
  			<p>La vetero estu varma<br />
  			kaj samtempe frosta,<br />
@@ -138,7 +138,7 @@ include "pppkapo.inc.php";
 		<div class="col s12 m6">
 			<p><span class="eo">alarmo</span>: signalvoko.</p>
 			<p><span class="eo">asekuri</span>: kontrakti kontraŭ eventuala perdo.</p>
-			<p><span class="eo">audienco</span>: oficiala akcepto.</p>
+			<p><span class="eo">aŭdienco</span>: oficiala akcepto.</p>
 			<p><span class="eo">bando</span>: araĉo.</p>
 			<p><span class="eo">bombo</span>: eksplodaĵo.</p>
 			<p><span class="eo">bovo</span>: kampara besto, kies ino donas lakton.</p>
@@ -166,7 +166,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">profesio</span>: okupo, per kiu oni vivtenas sin.</p>
 			<p><span class="eo">provianto</span>: provizoj de manĝaĵo.</p>
 			<p><span class="eo">pruno</span>: speco de frukto.</p>
-			<p><span class="eo">pulo</span>: parazita sudinsekto.</p>
+			<p><span class="eo">pulo</span>: parazita suĉinsekto.</p>
 			<p><span class="eo">sako</span>: ujo el maldelikata ŝtofo.</p>
 			<p><span class="eo">sekalo</span>: speco de greno.</p>
 			<p><span class="eo">semi</span>: disĵeti grajnojn sur la teron.</p>

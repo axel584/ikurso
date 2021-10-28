@@ -20,7 +20,7 @@ include "pppkapo.inc.php";
  
 			<p>Kiam mi estis en la dua lerneja klaso ni prezentis teatraĵon kaj en ĝi mi partoprenis en rolo de popo. Ĉe ĉiu mia apero la publiko krevis pro rido kaj aplaŭdis vigle, malgraŭ ke la teatraĵo estis tragika — iu reĝfilino estas ŝtelita de ciganoj, ŝi suferas kaj mortas kiel almozulino malproksime de sia hejmo. Mi supozas, ke pri la rido kulpis mia barbo, ĉar ĉiuj komprenis, ke la barbo estas farita el kapra vosto.</p>
 			<p>Ĉe ĉiu provo diri ion mia barbo turniĝis supren, fermadis mian buŝon, tiklis mian nazon kaj mi tuj ternis. Sed plej grandan sukceson mi atingis en la fino de la teatraĵo kiam la reĝfilino mortis. Mi devis levi miajn manojn kiel eble plej rapide kaj voki Dion preni ŝian animon, kaj mi faris tion tiel energie ke mia popa mantelo ŝiriĝis (mi estis ĝin surtretinta per miaj piedoj antaŭ ol levi la manojn) kaj la barbo malkroĉiĝis kaj mole falis sur la plankon. Mi kredas, ke eĉ Kin ne atingis tian sukceson — la salono apenaŭ ne detruiĝis pro aplaŭdado kaj rido.</p>
-			<p>De tiam mi ekvivis kun la penso, ke mi estas naskita artisto. Kun paso de la tempo mi pliaĝiĝis kaj farigis helpadministranto, sed tiu penso pri mia destino ne lasis min eĉ dum minuto.</p>
+			<p>De tiam mi ekvivis kun la penso, ke mi estas naskita artisto. Kun paso de la tempo mi pliaĝiĝis kaj fariĝis helpadministranto, sed tiu penso pri mia destino ne lasis min eĉ dum minuto.</p>
 			<p>Kaj jen, hazarde, antaŭ ne longe, oni sciiĝis, ke la urba konsilantaro aranĝas grandan vesperamuzon en la salonoj de la novkonstruita modela restoracio.</p>
 			<p>Ĉio estis en ordo, sed en la lasta momento, sabate tagmeze, oni eksciis, ke forestos la konferanseo; la antaŭvidita persono ebriiĝis vendrede kaj malaperis. Sabate li sendis el urbo Sliven luksan telegramon: “Mi estas bone, kiel vi fartas”. La situacio minacis fariĝi danĝera, se mi ne enmiksiĝus. Tuj mi iris al la ĉefa urba respondeculo, kiu prizorgas la amuzon, kaj deklaris al li, ke mi estas preta konferansei, des pli ke mi havas sperton en tiaj aferoj, ja mi ludis en la lernejo la rolon de popo kaj tiel plu. Dum momento al mi ŝajnis, ke mi vidas ĝojan brilon el la okuloj de la respondeculo, sed poste li svingis per mano kaj diris:</p>
 			<p>— Mi petas vin, kamarado Conev, klopodu, ke ĉio estu iom pli… ja vi komprenas, ni ne devas nin kompromiti kaj krome la nomo de nia urba konsilantaro… ĉu vi komprenas?…</p>
@@ -45,7 +45,7 @@ include "pppkapo.inc.php";
 			<p>Sed, “se”… Mi mem intencis forlasi tiun filistran urbon kaj translokiĝi en la ĉefurbon, por tie plene dediĉi min al la arto.</p>
 			<p>Kaj se la vizitantoj de la amuzvespero ne komprenis, ke mi estas la plej originala kaj kuraĝa konferanseo, ja vi karaj legantoj plene komprenis tion. Mi petas vin, kunhelpu, ke mi estu enoficigita kiel ŝtata konferanseo en Sofia. Skribu al la adreso: Vasil Conev, Sofia, Str. 6 septembro N 49.</p>
 
-			<p><b>Vasil Conev</b>  el la bulgara: <b>Metodi Panĉev</b> (el <i>Belarto</i>)</p>
+			<p><b>Vasil Conev</b>, el la bulgara: <b>Metodi Panĉev</b> (el <i>Belarto</i>)</p>
 		</div>
 
 		<?php 

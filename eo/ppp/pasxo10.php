@@ -69,18 +69,18 @@ la violkoloro kaj la blua estas la supraj koloroj, kaj la ruĝa kaj indiga trov
  			<p>“Rakontu ankoraŭ, sinjoro,” ŝi diris kun peta voĉo, kiam mi ekpaŭzis. Kaj mi daŭrigis.</p>
  			<p>“Sed en mia kolekto troviĝas ne nur maloftaĵoj, sed eĉ veraj altvaloraj ekzempleroj. Mi prezentos al vi la plej altvaloran el ĉiuj miaj ĉielarkoj. La plej multekostan, por tiel diri.”</p>
  			<p>“En iu malproksima lando mi vizitis foje la iaman imperiestran palacon, kiu nun estas 
-transformita en muzeon. Ĉiuj salonoj estis malfermitaj. Nur unu ĉambreton, en kiu la krono de la imperiestro estis gardata, oni malfermis nur je speciala peto de la vizitantoj. Post la necesaj formalaĵoj la gardisto malŝlosis la pordon, kaj mi eniris. Nun ni staris en malgranda ĉambro, malplena kaj sen omamaĵoj.‘Kio okazos?’ ni demandis nin. Sed la respondo jam venis.”</p>
+transformita en muzeon. Ĉiuj salonoj estis malfermitaj. Nur unu ĉambreton, en kiu la krono de la imperiestro estis gardata, oni malfermis nur je speciala peto de la vizitantoj. Post la necesaj formalaĵoj la gardisto malŝlosis la pordon, kaj mi eniris. Nun ni staris en malgranda ĉambro, malplena kaj sen ornamaĵoj.‘Kio okazos?’ ni demandis nin. Sed la respondo jam venis.”</p>
  			<p>“El la planko, meze de la ĉambro, ekleviĝis kvarangula kolono. Kiam ĝi leviĝis ĝis la alteco de niaj brustoj, subite la metalaj vandoj de la kofro sur la supro de la kolono malfermiĝis lasante libera vitran skatolon. Kaj en ĝi la kronon.”</p>
  			<p>“Jes, vere, tie estis antaŭ niaj okuloj la ora kronego de la imperiestro, plena de brilaj juveloj. La plej belaj rubenoj kaj safiroj viciĝis tie unu apud la alia. Kaj pluraj perloj je grandeco neniam vidita.”</p>
  			<p>“Kia bankedo por la okuloj!”</p>
  			<p>“Sed la plej valora juvelo troviĝis sur la frunto de la krono. Ĝi estis brilianto granda kiel juglando. Neniam mi sonĝis eĉ pri io simila. Jam mi ne memoras ĉu ĝia nomo estas Kohinor aŭ Orlov, aŭ io alia, sed mi estas certa, ke ĝi estas unu el la plej grandaj briliantoj ekzistantaj en la mondo.”</p>
- 			<p>“Subite okazis io neatendita. Tra trueto sur la kolora kurteno kiu kovris la fenestron, sunradio eniris, kaj tusis la kronon. Ĝi tuŝis precize la gigantan diamanton. Sammomente centoj da delikataj strioj de ĉielarkoj kovris la murojn kaj la plafonon de la ĉambreto. Subite ni jam ne troviĝis en senomama griza ĉambreto. Ni staris meze de luksa salono kun cento da ĉielarketoj kiuj multobligis la dimensiojn de la ejo, kaj kreis la ĝustan etoson por la observado de la imperiestra krono.”</p>
+ 			<p>“Subite okazis io neatendita. Tra trueto sur la kolora kurteno kiu kovris la fenestron, sunradio eniris, kaj tusis la kronon. Ĝi tuŝis precize la gigantan diamanton. Sammomente centoj da delikataj strioj de ĉielarkoj kovris la murojn kaj la plafonon de la ĉambreto. Subite ni jam ne troviĝis en senornama griza ĉambreto. Ni staris meze de luksa salono kun cento da ĉielarketoj kiuj multobligis la dimensiojn de la ejo, kaj kreis la ĝustan etoson por la observado de la imperiestra krono.”</p>
  			<p>“Jen, Sita, tiu ĉi estas la plej altvalora el ĉiuj miaj ĉielarkoj. Kaj mi devas al vi konfesi, ke por mi ĝi valoras pli ol se mi posedus la brilianton mem. Ĉar havante la juvelon, mi ĉiam timus ke iu ĝin forŝtelos de mi. Kaj krome, eble neniam mi sukcesus plu per ĝi krei tiel riĉan aron da ĉielarkoj.”</p>
  			<p>“Vere, sinjoro, mi kredas ke vi estas tre riĉa! Mi envias vin.”</p>
  			<p>“Ho, ne, ne diru tion,” mi rifuzis la flaton kun modesta rideto. “Eble iam ankaŭ vi povos fari vian propran kolekton, kaj fariĝi eĉ pli riĉa ol mi.”</p>
  			<p>“Sed ne kredu,” mi daŭrigis post ioma paŭzo, “ke ĉiuj ĉielarkoj el mia kolekto estas altvaloraj. Estas en ĝi ankaŭ kelkaj kiujn mi kolektis nur pro strangeco. Estas inter ili, ekzemple, unu komika ĉielarko.”</p>
  			<p>“Komika? Kiel povas esti ĉielarko komika? Rakontu, sinjoro.”</p>
- 			<p>“Jen kiel okazis. Mi dormis en la sama ĉambro kun miaj gepatroj . Estis somermeza frumateno. Tra fendo apud la kurteno penetris iom da sunradioj, kiuj inundis la ĉambron per milda orangkolora duonlumo. Mi estis kuŝanta surdorse. Subite mi rimarkis sur la plafono kolorajn striojn. Post ioma observado mi konstatis, ke temis pri vera ĉielarko, en kiun endesegniĝis vico da montetoj, barante tiel partojn de kelkaj koloroj.”</p>
+ 			<p>“Jen kiel okazis. Mi dormis en la sama ĉambro kun miaj gepatroj. Estis somermeza frumateno. Tra fendo apud la kurteno penetris iom da sunradioj, kiuj inundis la ĉambron per milda oranĝkolora duonlumo. Mi estis kuŝanta surdorse. Subite mi rimarkis sur la plafono kolorajn striojn. Post ioma observado mi konstatis, ke temis pri vera ĉielarko, en kiun endesegniĝis vico da montetoj, barante tiel partojn de kelkaj koloroj.”</p>
  			<p>“Mi fariĝis scivolema. Mi ĉirkaŭrigardis serĉante la fonton de la stranga ĉielarko, sed ne sukcesis malkovri ĝin. Mi klopodis fari logikajn deduktojn pri la direkto de la radioj. La serĉado de meblo kun dentumita rando restis senutila. Longe mi kuŝis sendorma, cerbumante.”</p>
  			<p>“En certa momento mia patrino vekiĝis. Kaj tio ĉion ŝanĝis.”</p>
  			<p>“Per sia unua movo ŝi elstreĉis la brakon al la nokta tableto, kaj el la glaso kun akvo ŝi elprenis sian falsan dentaron. Dum tiu operacio la ĉielarko malaperis de la plafono. Tuj poste ĝi reaperis vigle ondumanta, sed… sen la serio de montetoj. Jen estis la solvo de mia enigmo: komika ĉielarko kreita en glaso da akvo kaj borderita per falsdentaro!”</p>
@@ -91,9 +91,9 @@ transformita en muzeon. Ĉiuj salonoj estis malfermitaj. Nur unu ĉambreton, e
  			<p>“Kiel komenci? Jes, tio estas problemo,” mi diris penseme. “Tamen, mi havas ideon, Sita. Ekrigardu tra la fenestro.”</p>
  			<p>Ni klinis nin trans la fenestro, kaj mi indikis per la fingro al la ĉielarko, kiu fidele akompanadis ankoraŭ la vaportufon sub la loko motivo. Kiam Sita rimarkis ĝin, ŝi ekkriis pro ekscitiĝo.</p>
  			<p>“Ĉu ĝi plaĉas al vi, Sita?… Ĉu vi ne kredas, ke ĝi taŭgus por komenci vian kolekton per ĝi?” “Belega ĝi estas. Mi volus per ĝi komenci, sed kiel?”</p>
- 			<p>“Jen kiel. Ni ŝanĝu la sidlokojn, tiel ke nur vi povu vidi ĝin. Mi promesas ne plu elrigardi tra la fenestro, kaj ĉar la suno baldad subiros, vi estos la lasta kiu ĝin vidos. Ĝi restos nur via. La unua en via kolekto.”</p>
+ 			<p>“Jen kiel. Ni ŝanĝu la sidlokojn, tiel ke nur vi povu vidi ĝin. Mi promesas ne plu elrigardi tra la fenestro, kaj ĉar la suno baldaŭ subiros, vi estos la lasta kiu ĝin vidos. Ĝi restos nur via. La unua en via kolekto.”</p>
  			<p>“Vi estas vere bonkora, sinjoro. Sed tiu ĉi belega ĉielarko tiam mankos el via kolekto.”</p>
- 			<p>Malpeze mi svingis la manon antaŭ mia vizago:</p>
+ 			<p>Malpeze mi svingis la manon antaŭ mia vizaĝo:</p>
  			<p>“Ho ne zorgu, amikino, mi ne bezonas ĝin. Mi jam havas similan en mia kolekto.”</p>
  			<p>Dum duonhoro Sita fikse rigardadis tra la fenestro. Sur ŝia vizaĝo intensa koncentriĝo estis videbla. Jes, la proceso de la ekposedo de la unua ĉelarko ĉiam estas akompanata de psiĥaj konvulsioj. Eĉ de fizikaj doloroj kelkfoje. Subite la patro de Sita ektiris ŝin je la brako. Ni estis atingintaj la stacion kie ili devis forlasi la trajnon. Ni adiaŭis. Mia eta amikino brilis pro feliĉo. </p>
  			<p>Kaj ekde tiam mi ĉiam dum la vojaĝoj rigardadas tra la fenestro de la vagonaro. Mi tre dezirus denove vidi tian ĉielarkon, por meti ĝin en mian kolekton. Ĉar, vi ja povis supozi, ke tian ĉielarkon mi ne havis ankoraŭ en mia kolekto. Mi mensogis al Sita nur por ke ŝi akceptu la donacon sen konsciencriproĉo. </p>
@@ -121,11 +121,11 @@ transformita en muzeon. Ĉiuj salonoj estis malfermitaj. Nur unu ĉambreton, e
 			<p><span class="eo">bankedo</span>: komuna manĝo.</p>
 			<p><span class="eo">bari</span>: fermi vojon per io.</p>
 			<p><span class="eo">bildo</span>: videbla similaĵo de io. </p>
-			<p><span class="eo">borderi</span>: start ĉe la rando de io. </p>
+			<p><span class="eo">borderi</span>: stari ĉe la rando de io. </p>
 			<p><span class="eo">brilianto</span>: speco de diamanto. </p>
 			<p><span class="eo">bunta</span>: diverskolora. </p>
 			<p><span class="eo">ĉerpi</span>: elpreni, eltiri.</p>
-			<p><span class="eo">dedukti</span>: fart konkludon per logiko.</p>
+			<p><span class="eo">dedukti</span>: fari konkludon per logiko.</p>
 			<p><span class="eo">dimensio</span>: mezuro.</p>
 			<p><span class="eo">diveni</span>: supozi laŭ elpensado.</p>
 			<p><span class="eo">dorso</span>: malantaŭo de la korpo.</p>
@@ -194,7 +194,7 @@ transformita en muzeon. Ĉiuj salonoj estis malfermitaj. Nur unu ĉambreton, e
 			<p><span class="eo">rubeno</span>: ruĝa valorŝtono.</p>
 			<p><span class="eo">safiro</span>: blua valorŝtono.</p>
 			<p><span class="eo">serio</span>: laŭorda sinsekvo.</p>
-			<p><span class="eo">skatolo</span>: ujo el ligno ail simila materialo. </p>
+			<p><span class="eo">skatolo</span>: ujo el ligno aŭ simila materialo. </p>
 			<p><span class="eo">spektaklo</span>: interesa vidaĵo.</p>
 			<p><span class="eo">ŝpruci</span>: rapide elflui.</p>
 			<p><span class="eo">ŝteli</span>: preni ion, kio apartenas al alia.</p>

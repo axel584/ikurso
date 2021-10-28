@@ -190,10 +190,9 @@ include "pppkapo.inc.php";
 			getEkzercon(169,$persono_id,"eo");
 			getEkzercon(170,$persono_id,"eo");
 			getEkzercon(171,$persono_id,"eo");
-			getEkzercon(172,$persono_id,"eo");
 		} 
 		if ($section=="5") {
-			getEkzercon(173,$persono_id,"eo");
+			getEkzercon(172,$persono_id,"eo");
 		} // envoi de la leçon
 		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);

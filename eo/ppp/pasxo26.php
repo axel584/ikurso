@@ -100,7 +100,8 @@ include "pppkapo.inc.php";
 			<p><span class="eo">taĉmento</span>: aro da homoj senditaj por speciala celo.</p>
 			<p><span class="eo">tinti</span>: seke resoni.</p>
 			<p><span class="eo">tribunalo</span>: juĝistaro.</p>
-			<p><span class="eo">trotuaro</span>: apudvoja irejo por piedirantoj.</p>		</div>
+			<p><span class="eo">trotuaro</span>: apudvoja irejo por piedirantoj.</p>		
+		</div>
 	</div>
 
 <?php 

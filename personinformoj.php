@@ -353,6 +353,8 @@ if ($persono['lando']=="FR" && $persono['posxtkodo']!="") {
 					<a href="<?php echo $vojo;?>fr/cge/lec01.php" class="btn waves-effect waves-light" >Cours en 10 leçons</a></p>
 					<p>Si vous avez quelques bases et que vous voulez approfondir, nous vous conseillons le cours <b>Gerda malaperis</b> :<br>
 					<a href="<?php echo $vojo;?>fr/gerda/cxap01.php" class="btn waves-effect waves-light" >cours Gerda Malaperis</a></p>
+					<p>Kaj se vi jam sekvis kurson kaj deziras plulerni la lingvon, vi povas sekvi la kurson <b>Paŝoj al plena Posedo</b> :</b> :<br>
+					<a href="<?php echo $vojo;?>eo/ppp/pasxo01.php" class="btn waves-effect waves-light" >Paŝoj al plena posedo</a></p>
 				<?php } ?>
 			<?php } ?>
 		<?php } ?>

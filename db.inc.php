@@ -332,6 +332,13 @@ function getCoursElLernanto($lernanto_id) {
 			<p><a href="<?php echo $vojo;?>fr/gerda/index.php" class="btn waves-effect waves-light" >Commencer le cours Gerda Malaperis</a></p>
 		<?php
 	}
+    if (($lasta=="GR")&&($finita==True)){
+        ?>
+            <p>Se vi deziras plulerni la lingvon, vi povas sekvi la kurson <b>Paŝoj al plena Posedo</b>.<br/>
+                Ĝi baziĝas sur diversaj tekstoj, ĝi instruos multajn novajn vortojn kaj plibonigos vian komprenkapablon kaj verkkapablon.<br/>
+            <a href="<?php echo $vojo;?>eo/ppp/pasxo01.php" class="btn waves-effect waves-light" >Paŝoj al plena posedo</a></p>
+        <?php
+    }
 }
 
 function redirigeSectionParUtilisateur($persono) {

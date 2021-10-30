@@ -227,7 +227,7 @@ transformita en muzeon. Ĉiuj salonoj estis malfermitaj. Nur unu ĉambreton, e
 			?>
 
 			<h2>KE / ĈU</h2>
-			<p class="parto">Kiam oni raportas parolon, la verb tempo post KE aŭ ĈU en subpropozicio restas tiel sama, kiel la verb tempo en la origina parolo mem. Ekzemple:</p> 
+			<p class="parto">Kiam oni raportas parolon, la verbtempo post KE aŭ ĈU en subpropozicio restas tiel sama, kiel la verbtempo en la origina parolo mem. Ekzemple:</p> 
 			<p>a) “Mi kolekt<b>as</b> ĉielarkojn”, diris la sinjoro.<br/>La sinjoro diris, ke Li kolekt<b>as</b> ĉielarkojn.</p>
 			<p>b) “Cu la veteranoj ven<b>os</b> al la kunveno?” demandis la sekretario.<br/>La sekretario demandis, ĉu la veteranoj ven<b>os</b> al la kunveno.</p>
 			<p>c) “Prezent<b>u</b> vin tuj!” la inkvizitoro ordonas al la akuzito.<br/>La inkvizitoro ordonas al la akuzito, ke li prezent<b>u</b> sin tuj.</p>

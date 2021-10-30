@@ -22,7 +22,7 @@ include "pppkapo.inc.php";
 
  			<p>— Mi aŭskultis en la radio prelegon <i>Al gepatroj pri la edukado</i>.</p>
 
- 			<p>— Tre bone vi faris, – mi aŭtoritate kapjesis. — Mi ŝatas, kiam vi kulturiĝas. Sed nun bonvolu doni al mi vespermanĝon, ĉar mi jam apenaŭ vidas pro la malsato.</p>
+ 			<p>— Tre bone vi faris, mi aŭtoritate kapjesis. Mi ŝatas, kiam vi kulturiĝas. Sed nun bonvolu doni al mi vespermanĝon, ĉar mi jam apenaŭ vidas pro la malsato.</p>
 
  			<p>— Ankaŭ tion de vi lernas la infano, diris riproĉe mia edzino kaj anstataŭ doni al mi vespermanĝon, eksidis. – Kion li lernas de mi?</p>
 
@@ -30,7 +30,7 @@ include "pppkapo.inc.php";
 
  			<p>Ŝi eksaltis kaj promenante tien kaj reen, daŭrigis:</p>
 
- 			<p>— La infano kondutos, kiel li vidas de siaj gepatroj. Ĝuste tial mi petas vin, ke hejme vi estu pripensa kaj nenervoza, kiel tio decas al serioza patro. La infano...</p>
+ 			<p>— La infano kondutos, kiel li vidas de siaj gepatroj. Ĝuste tial mi petas vin, ke hejme vi estu pripensa kaj nenervoza, kiel tio decas al serioza patro. La infano…</p>
 
  			<p>— En ordo, mi interparolis sen nervozeco kaj pripensante, sed nun bonvolu doni al mi vespermanĝon.</p>
 
@@ -54,15 +54,16 @@ include "pppkapo.inc.php";
 
  			<p>Mi rigardis tien. Tie kuŝis la vestaĵoj de mia filo, ĵetitaj unu sur la alian.</p>
 
- 			<p>— Vidu, ankaŭ tion de vi lernis la infano. Metu la vestaĵojn orde. Mi metis miajn vestaĵojn laŭ ordo, ankaŭ tiujn de mia fileto kaj fine kuŝiĝis. Jam pasis la noktmezo.</p>
+ 			<p>— Vidu, ankaŭ tion de vi lernis la infano. Metu la vestaĵojn orde.</p>
+ 			<p>Mi metis miajn vestaĵojn laŭ ordo, ankaŭ tiujn de mia fileto kaj fine kuŝiĝis. Jam pasis la noktmezo.</p>
  			
  			<p>Matene je la sepa horo vekis min mia edzino:</p>
 
  			<p>— Leviĝu jam!</p>
 
- 			<p>— Sed estas ankoraŭ frue – mi kontraŭdiris – mi devas iri en mian oficejon nur je la duono post la oka. </p>
+ 			<p>— Sed estas ankoraŭ frue, mi kontraŭdiris, mi devas iri en mian oficejon nur je la duono post la oka.</p>
 
- 			<p>— De nun ĉiumatene vi ellitiĝos je la duono post la sesa – ŝi deklaris per voĉo ne permesanta kontraŭdiron. – Kiel lernu la infano diligentecon, kiam li vidas kuŝi sian patron, kiam li jam devas iri en la lernejon?</p>
+ 			<p>— De nun ĉiumatene vi ellitiĝos je la duono post la sesa, ŝi deklaris per voĉo ne permesanta kontraŭdiron. Kiel lernu la infano diligentecon, kiam li vidas kuŝi sian patron, kiam li jam devas iri en la lernejon?</p>
 
  			<p>Mi ellitiĝis kaj vestis min. Mia edzino diris al mi, ke mi faru mem mian matenmanĝon, ke mi povu estimi la hejman mastrumadon. Dum mi faris mian matenmanĝon, mi devis ofte enkuri al mia edzino – kiu ankoraŭ kuŝis en la lito – ĉar mi ne trovis la sukeron, la kafon, la buteron. Fine ŝi senpacience kriis:</p>
 
@@ -70,7 +71,7 @@ include "pppkapo.inc.php";
 
  			<p>Ĉio estus en la plej granda ordo, se hazarde mi ne estus aŭdinta tra la malfermita fenestro interparoladon, kio okazis sube en la ĝardeno inter mia fileto kaj onklo Keceli. Onklo Keceli estas la domzorganto.</p>
 
- 			<p>— Vi estas la teroristo de la tuta domo – diris malhele onklo Keceli. – Via patrino povus vin iom eduki!</p>
+ 			<p>— Vi estas la teroristo de la tuta domo, diris malhele onklo Keceli. Via patrino povus vin iom eduki!</p>
 
  			<p>— Ŝi ne havas tempon, onklo Keceli, ĉar ŝi ĉiam edukas paĉjon.</p>
 

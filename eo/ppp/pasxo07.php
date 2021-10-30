@@ -108,7 +108,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">rabi</span>: perforte forpreni ion, kio apartenas al alia.</p>
 			<p><span class="eo">sana</span>: normale funkcianta. </p>
 			<p><span class="eo">sango</span>: ruĝa fluaĵo en la korpo.</p>
-			<p><span class="eo">situacio</span>: tuto de 1a kondiĉoj kaj cirkonstancoj. </p>
+			<p><span class="eo">situacio</span>: tuto de la kondiĉoj kaj cirkonstancoj. </p>
 			<p><span class="eo">skui</span>: rapide movi tien kaj reen.</p>
 			<p><span class="eo">socio</span>: tuto da homoj kunvivantaj</p>
 			<p><span class="eo">stulta</span>: malsaĝa</p>

@@ -96,10 +96,11 @@ include "pppkapo.inc.php";
 <?php 
 		} // fin section 2
 		if ($section=="3") {
-			getEkzercon(185,$persono_id,"eo");
+			getEkzercon(184,$persono_id,"eo");
 				
 		} 
 		if ($section=="4") {
+			getEkzercon(185,$persono_id,"eo");
 			getEkzercon(186,$persono_id,"eo");
 			getEkzercon(187,$persono_id,"eo");
 			getEkzercon(188,$persono_id,"eo");

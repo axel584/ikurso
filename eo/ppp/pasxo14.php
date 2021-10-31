@@ -20,7 +20,7 @@ include "pppkapo.inc.php";
  
  			<p>– Ni restu en mallumo, li petis. Estas tiom ripozige aŭdi bruon de la ondoj inter la rifoj, kaj nenion vidi. </p>
  			<p>Mi estingis la lampon malantaŭ ni. La teraso fariĝis tute malhela. Dum momento, nenio estis videbla; sed baldaŭ ni perceptis konturojn de la sveltaj kolonetoj; sub necerta lumo falanta de miriadoj da steloj, la sablo, la rifoj, la maro nigris malsame. Niaj vizaĝoj fantomis pale unu al la alia. Kaj mi komprenis, ke mia amiko estis preta ellasi per konfidenco la tro streĉitajn nervojn. Cigaredo fosforeskis. Dum ĝia ekfajriĝo, mi rimarkis la kuntiritajn brovojn de mia amiko.</p>
- 			<p>– Nu, mi bezonas konsilon.</p>
+ 			<img style="float:right;max-width:800px;max-width:60%;margin: 0 0 0 1em" src="bildoj/avinjo.jpg"><p>– Nu, mi bezonas konsilon.</p>
  			<p>– Diru.</p>
  			<p>– Mi devas mortigi mian avinjon, kaj ne scias kiel.</p>
  			<p>Mi eksaltis:</p>
@@ -73,6 +73,8 @@ include "pppkapo.inc.php";
 
  			<p><b>Clelia Conterno Guglielminetti</b> (el <i>La Suda Stelo</i>)</p>
 		</div>
+		
+		<p class="creditphoto">Bildo: thodonal /Adobe Stock</p>
 
 		<?php 
 		} // fin section 1

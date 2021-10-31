@@ -94,8 +94,8 @@ include "pppkapo.inc.php";
 				
 				<p><b>F Szilágyi</b> el <i>Norda Prismo</i></p>
 			</div>
-			<p class="creditphoto">Bildoj : Ladybug - Freepik.com ; v.ivash - Freepik.com ; kues1 - Freepik.com</p>
-			
+			<p class="creditphoto">Bildoj:<br>@Ladybug /freepik<br>@v.ivash /freepik<br>@kues1 /freepik</p>
+
 		<?php 
 		} // fin section 2
 		if ($section=="3") {

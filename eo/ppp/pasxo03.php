@@ -151,7 +151,7 @@ include "pppkapo.inc.php";
 			</div>
 		</div>
 		
-		<p class="creditphoto">Bildoj : <br>Isabey Eugène, <i>Les Naufrageurs</i> (parto)<br>Stephen Davies /Adobe Stock</p>
+		<p class="creditphoto">Bildoj:<br>Isabey Eugène, <i>Les Naufrageurs</i> (parto)<br>Stephen Davies /Adobe Stock</p>
 
 
 <?php 

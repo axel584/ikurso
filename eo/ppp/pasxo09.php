@@ -37,6 +37,8 @@ include "pppkapo.inc.php";
 
  			<p><b>Stanislav Knižek</b> (el <i>Esperantisto Slovaka</i>)</p>
 		</div>
+		
+		<p class="creditphoto">Bildoj:<br>vitaly tiagunov /Adobe Stock<br>Fxquadro /Adobe Stock</p>
 
 		<?php 
 		} // fin section 1

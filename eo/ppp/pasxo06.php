@@ -77,8 +77,7 @@ include "pppkapo.inc.php";
 
  			<p><b>Kornel Toth</b> el la hungara: <b>Paulo Balkanyi</b> (el <i>Norda Prismo</i>)</p>
 		</div>
-		<p class="creditphoto">Bildoj : @nakaridore -freepik ; PixieMe -Adobe Stock</p>
-</p>
+		<p class="creditphoto">Bildoj:<br>@nakaridore /freepik<br>PixieMe /Adobe Stock</p>
 
 		<?php 
 		} 

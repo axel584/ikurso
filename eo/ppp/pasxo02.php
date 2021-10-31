@@ -79,7 +79,7 @@ include "pppkapo.inc.php";
 				
 				<p><b>Hasse Z.</b> el la sveda: <b>Andreo Gauder</b> (el <i>Literatura Mondo</i>)</p>
 			</div>
-			<p class="creditphoto">Bildo : bearfotos - Freepik.com</p>
+			<p class="creditphoto">Bildo: @bearfotos /freepik</p>
 
 <?php 
 		} // fin section 2

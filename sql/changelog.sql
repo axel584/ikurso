@@ -3377,7 +3377,7 @@ INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `resp
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1593, 188, NULL, '59', 'Ideon, kiu kondukas al novaj horizontoj?', NULL, NULL, NULL, '0', '0');
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1594, 188, NULL, '60', 'Prijuĝon, kiu prenis en konsideron ĉiujn flankojn de la problemo?', NULL, NULL, NULL, '0', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (368, 147, 'Verkado', 'EKZERCARO', NULL, 5, 0, 0, NULL, NULL);
-INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (189, '“Jurij Gagarin estis la Kristoforo Kolumbo de nia jarcento.”', 368, NULL,NULL, 'verkado-2', '1', '0');
+INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (189, '“Jurij Gagarin estis la Kristoforo Kolumbo de la dudeka jarcento.”', 368, NULL,NULL, 'verkado-2', '1', '0');
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1595, 189, NULL, '61', 'Diskutu.', NULL, NULL, NULL, '0', '0');
 INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (190, 'Kio, laŭ via opinio, estas la plej grava eltrovaĵo de la dudek-unua jarcento?', 368, NULL,NULL, 'verkado-2', '1', '0');
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1596, 190, NULL, '62', 'Pravigu vian elekton.', NULL, NULL, NULL, '0', '0');
@@ -3387,8 +3387,17 @@ INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (370, 148, 'Lega&#309;o', 'TEKSTO', NULL, '1', '1', '0', NULL, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (371, 148, 'Vortaro', 'VORTARO', NULL, '2', '0', '0', NULL, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (372, 148, 'Ekzercoj pri la teksto', 'EKZERCARO', NULL, '3', '0', '0', NULL, NULL);
-
-
+INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (191, 'Leginte la supran fabelon, respondu jenajn demandojn:', 372, NULL,NULL, 'verkado-1', '1', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1597, 191, NULL, '1', 'Kio speciale altiris pilgrimantojn al tiu pagodo?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1598, 191, NULL, '2', 'Kiu malfeliĉo trafis la ĉarman fraŭlinon, kaj kiel ŝi estis eltirita el la malfacila situacio?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1599, 191, NULL, '3', 'Kion faris Tu Thuk, rezigninte pri siaj mandarenaj respondecoj?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1600, 191, NULL, '4', 'Kio okazis, kiam Tu Thuk eniris la grandan groton?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1601, 191, NULL, '5', 'Kien li alvenis, kaj kiu renkontis lin tie?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1602, 191, NULL, '6', 'Priskribu la reginon, antaŭ kiun oni kondukis la junulon.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1603, 191, NULL, '7', 'Kion donis al Tu Thuk la reĝino, kaj kial?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1604, 191, NULL, '8', 'Kiom longe la junulo restis en la feinlando?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1605, 191, NULL, '9', 'Kial li deziris foriri?', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1606, 191, NULL, '10', 'Kial lia edzino estis tiel malĝojega, kaj kion ne sciis Tu Thuk?', NULL, NULL, NULL, '0', '0');
 
 
 

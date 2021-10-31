@@ -135,7 +135,7 @@ include "pppkapo.inc.php";
 <p>En la momento, kiam mi vekiĝ<b>OS</b>, la sonorilo jam pli frue son<b>IS</b> = Kiam mi vekiĝ<b>OS</b>, la sonorilo est<b>OS</b> son<b>I</b>nta.</p>
 <p>En la momento, kiam mi vekiĝ<b>AS</b>, la sonorilo ankoraŭ ne sonis (sed poste son<b>OS</b>) = Kiam mi vekiĝ<b>AS</b>, la sonorilo est<b>AS</b> son<b>O</b>nta.</p>
 <p>En la momento, kiam mi vekiĝ<b>IS</b>, la sonorilo ankoraŭ ne sonis (sed poste son<b>OS</b>) = Kiam mi vekiĝ<b>IS</b>, la sonorilo est<b>IS</b> son<b>O</b>nta.</p>
-<p>En la momento, ham mi vekiĝ<b>OS</b>, la sonorilo ankoraŭ ne sonis (sed poste son<b>OS</b>) = Kiam mi vekiĝ<b>OS</b>, la sonorilo est<b>OS</b> son<b>O</b>nta.</p>
+<p>En la momento, kiam mi vekiĝ<b>OS</b>, la sonorilo ankoraŭ ne sonis (sed poste son<b>OS</b>) = Kiam mi vekiĝ<b>OS</b>, la sonorilo est<b>OS</b> son<b>O</b>nta.</p>
 			<?php
 				getEkzercon(145,$persono_id,"eo");
 			?>

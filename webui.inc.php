@@ -784,7 +784,7 @@ function pubAndroid() {
 }
 function pubPPP() {
 	global $vojo;
-	echo '<div class="reklamo"><div class="row"><span class="col s7">Vi povas aĉeti la libron <i>Pa&#349;oj al plena posedo</i> en <a href="https://butiko-esperanto-france.org/">nia butiko</a></span><span class="col s5"><img class="responsive-img" src="'.$vojo.'bildoj/butiko/pasoj-al-plena-posedo-nova-eld.jpg" /></span></div>';
+	echo '<div class="reklamo"><div class="row"><span class="col s7">Vi povas aĉeti la libron <i>Pa&#349;oj al plena posedo</i> en <a href="https://butiko-esperanto-france.org/methodes-et-manuels/65-pasoj-al-plena-posedo-nova-eld.html">nia butiko</a></span><span class="col s5"><a href="https://butiko-esperanto-france.org/methodes-et-manuels/65-pasoj-al-plena-posedo-nova-eld.html"><img class="responsive-img" src="'.$vojo.'bildoj/butiko/pasoj-al-plena-posedo-nova-eld.jpg" /></</span></div>';
 }
 function vortlisto($persono_id,$kurso,$pattern) {
 	global $bdd;

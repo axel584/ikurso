@@ -621,6 +621,12 @@ ul#progreso li.nuna {
 
 /********** corps de la leçon *******/
 
+.pasxo #leciono-enhavo .rakonto {
+	border: 1px solid #ddd;
+	padding: 0 1em 0 1em;
+	margin-bottom: 0.5em;
+	border-radius: 2px;
+}
 #leciono-enhavo a { 
 	text-decoration: underline;
 }

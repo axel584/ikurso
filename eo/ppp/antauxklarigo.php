@@ -71,10 +71,18 @@ include "pppkapo.inc.php"
 							<li><a href="pasxo04.php">4. Celstacio</a></li>
 							<li><a href="pasxo05.php">5. La unua Kongreso de Esperanto</a></li>
 							<li><a href="pasxo06.php">6. Mi fariĝos ordemulo</a></li>
+							<li><a href="pasxo07.php">7. IDE-Kamarado</a></li>
+							<li><a href="pasxo08.php">8. Simpla Konfeso</a></li>						
+							<li><a href="pasxo09.php">9. Horloĝo – Malgranda  miraklo</a></li>						
+							<li><a href="pasxo10.php">10. Kolektanto de ĉielarkoj</a></li>						
 						</ul>
 					</div>
 				</li>
 			</ul>
+			<?php
+			pubPPP();
+			?>
+	</aside>
 		</aside>	
 	
 </div>

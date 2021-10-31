@@ -9,11 +9,7 @@
 			getEnhavtabelo('PP',$leciono); 
 			?>
 		</ul>	
-		<!--<p>
-			Elŝutu ĉiujn rakontojn (entute: 25) en unu dosiero:
-			 <a href="<echo $vojo;?>fr/gerda/son/gerda-malaperis.zip">gerda-malaperis.zip</a>
-		</p>-->
 		<?php
-		pubFacebook();
+		pubPPP();
 		?>
 	</aside>

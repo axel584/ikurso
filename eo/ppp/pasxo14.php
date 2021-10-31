@@ -18,7 +18,7 @@ include "pppkapo.inc.php";
 		<div class="rakonto">
 			<h3>AVINJO</h3>
  
- 			<p>– Ni restu en mallumo, li petis. – Estas tiom ripozige aŭdi bruon de la ondoj inter la rifoj, kaj nenion vidi. </p>
+ 			<p>– Ni restu en mallumo, li petis. Estas tiom ripozige aŭdi bruon de la ondoj inter la rifoj, kaj nenion vidi. </p>
  			<p>Mi estingis la lampon malantaŭ ni. La teraso fariĝis tute malhela. Dum momento, nenio estis videbla; sed baldaŭ ni perceptis konturojn de la sveltaj kolonetoj; sub necerta lumo falanta de miriadoj da steloj, la sablo, la rifoj, la maro nigris malsame. Niaj vizaĝoj fantomis pale unu al la alia. Kaj mi komprenis, ke mia amiko estis preta ellasi per konfidenco la tro streĉitajn nervojn. Cigaredo fosforeskis. Dum ĝia ekfajriĝo, mi rimarkis la kuntiritajn brovojn de mia amiko.</p>
  			<p>– Nu, mi bezonas konsilon.</p>
  			<p>– Diru.</p>
@@ -48,23 +48,23 @@ include "pppkapo.inc.php";
  			<p>Subite Elna ekparolis:</p>
  			<p>– Tamen, ŝi diris, oni devos manĝi. Jes, sed kiel…</p>
  			<p>Nu… Ni haltigu la veturilon en malluma strateto; poste, ni – ni du – serĉos restoracion kaj manĝos.</p>
- 			<p>Ni estis enirantaj mezgrandan urbon. Jen taŭga strato: malluma, silenta, soleco. Neniu ĝenos la grandan dormon de avinjo Dalia. Mi ŝlosis akurate ambaŭ pordojn de nia veturilo.</p>
+ 			<p>Ni estis enirantaj mezgrandan urbon. Jen taŭga strato: malluma, silenta, soleca. Neniu ĝenos la grandan dormon de avinjo Dalia. Mi ŝlosis akurate ambaŭ pordojn de nia veturilo.</p>
  			<p>Post kelkaj minutoj, la lumoj, la bruo, la miksitaj odoroj de restoracio malstreĉis niajn nervojn kaj iom distris niajn deprimitajn spiritojn. Bonega vespermanĝo kaj taŭgaj alkoholaĵoj plie helpis nin momente forgesi pri la dormantino en senluma veturilo.</p>
  			<p>Jam estis la deka vespere kiam ni pagis kaj eliris. Ni iom penis trovi la strateton; sed, kvankam ni streĉis niajn okulojn en la mallumo, neniel ni povis vidi nian aŭtomobilon. Kaj ni devis konvinkiĝi, ke oni ŝtelis ĝin. Kun avinjo ene.</p>
  			<p>Strange, dum mia lango pasis febre sur miaj sekaj lipoj mi ne pensis pri nia situacio, nek pri la perdo de mia veturilo, nek pri avinjo Dalia. Mi pensis pri la ŝtelistoj. Kian mienon ili havos, kiam ili malkovros la kadavron! Kaj mia dua penso estis: ni devas retrovi ĉiukaze la veturilon, sed ni ne povas turni nin al la policejo: ili pridemandus nin, volus scii kion enhavis la aŭtomobilo. Nia nura espero estis, ke la ŝtelistoj, kiel ofte okazas, forlasu la aŭton, eventuale sen kromrado, sen radio, sen valizoj, sen la diablo kiu forportu ilin… sed kun avinjo.</p>
  			<p>Ni luis taksion. Ni pasigis tri kvaronojn de la nokto laŭirante ĉiujn stratojn, vojojn, placojn kaj stratetojn de tiu damnita urbo. Mi povas certigi al vi, ke mi konas ĝin parkere. Mi detale vizitis ĝin. Tute detale.</p>
  			<p>Nenio.</p>
  			<p>Ni maldungis la taksion. Ni pagis fabelan lu-prezon kaj ne aldonis trinkmonon. La taksiisto foriris ne sciante ĉu ĝoji pro la longa dungado aŭ ĉu grumbli pro manko de trinkmono. Mi opinias, ke li faris ambaŭ.</p>
- 			<p>Jen ni en flavromana situacio. Ni sentis nin krimuloj. Nur, anstataŭ havi la problemon senigi nin de kadavro, ni devis solvi tiun rehavi nian kadavron. Sen kadavro, ni estas perditaj.</p>
+ 			<p>Jen ni en flavromana situacio. Ni sentis nin krimuloj. Nur, anstataŭ havi la problemon senigi nin de kadavro, ni devis solvi tiun rehavi nian kadavron. Sen kadavro, ni estis perditaj.</p>
  			<p>Grize mateniĝis. Pluveto ekfalis. Sed ni ne atentis ĝin. Ni estis marŝantaj sencele, senpense laŭ kampara vojeto ekster la urbo. Laceco, emocioj, timego malplenigis niajn kapojn. Elna donis al mi duonkuraĝige la brakon. Mi dankis per rideto senkolora.</p>
  			<p>Subite, en la duba lumo, jen vizio. Ĝi frapis nin kvazaŭ nerealeco. Nia veturilo fantomis, kotmakulita, antaŭ ni, ĉe kurbo de tiu vojeto. Mi legis kaj relegis la numeron sur la ŝildo. Nenia dubo, estis ĝi! Ni kuris, mi febre malfermis pordon ĉe kiu la ŝlosilo jam ne plu estis bezonata…</p>
  			<p>Avinjo ne estis tie. Valizoj, ŝaloj, radio, kromrado, ĉio netuŝita. Sed avinjo mankis.</p>
  			<p>Ni nin rigardis senespere. Kien la ŝtelistoj povis ĵeti ŝin? Ni serĉis en la proksimaj kampoj. Ni serĉis inter la arbetaroj. Nenio. Ni revenis al la aŭto, ĉiam serĉante, eĉ sub ĝi…</p>
-	 		<p>– Ĉu mi povas helpi, demandis propone preterpasanta kamparano – Ĉu vi perdis ion?</p>
- 			<p>– Jes. Kadavron!, senvole elbuŝigis Elna per raŭka voĉo.</p>
+	 		<p>– Ĉu mi povas helpi? demandis propone preterpasanta kamparano – Ĉu vi perdis ion?</p>
+ 			<p>– Jes. Kadavron! senvole elbuŝigis Elna per raŭka voĉo.</p>
  			<p>La kamparano haltis, gapis momenton, senmova, senesprima. Poste li ruĝiĝis:</p>
  			<p>– Ne, mi ne vidis ĝin..., li balbutis, kaj forkuris.</p>
- 			<p>Kion fari nun? Ni ne povis iri al policejo, diri ke oni ŝtelis kadavron. Ni ne povis diri, ke avinjo forkuris: duon-paralizita naŭdekjarulino ne forkuras tiel. Ni ne povis deklari, ke ŝi malaperis: kiam oni trovus la kadavron (mia Dio, kie? kiel?), oni konstatus, ke ĝi estis ĵetita jam post morto el la aŭtomobilo: tio estas elemente simpla; kaj ni… teruro!</p>
+ 			<p>Kion fari nun? Ni ne povis iri al la policejo, diri ke oni ŝtelis kadavron. Ni ne povis diri, ke avinjo forkuris: duonparalizita naŭdekjarulino ne forkuras tiel. Ni ne povis deklari, ke ŝi malaperis: kiam oni trovus la kadavron (mia Dio, kie? kiel?), oni konstatus, ke ĝi estis ĵetita jam post morto el la aŭtomobilo: tio estas elemente simpla; kaj ni… teruro!</p>
  			<p>Ni reengrimpis la aŭtomobilon. Mi silente startis. Ni veturis malrapide al nia urbo, al nia domo. En mia poŝo, sur pasporto, kuŝis avinjo vivanta; en mia veturilo tamen ne plu kuris avinjo mortinta.</p>
  			<p>Ni venigis hejmen niajn gekuzojn, kaj pristudis la situacion, kiun mi sincere klarigis al ili. Kaj, jen nova problemo. Avinjo Dalia, kiel vi scias, estis riĉa. Ŝi posedis multon; ŝi kompreneble testamentis, preskaŭ certe je favoro de ĉiuj ŝiaj nepoj. Sed la testamento kuŝas fermita en tirkesto de ŝia komodo; kiel malfermi ĝin? Kiel pruvi, kiel diri eĉ al geamikoj, ke ŝi mortis?</p>
  			<p>Ŝi laŭleĝe vivas kaj eniris nian landon vivanta. Intertempe, ni neniun vidas, al neniu parolas, vivas solaj, kiel pestmalsanuloj evitas ĉies kontakton. Nur vin mi enlasis ĉi-vespere, profitante el momenta foresto de Elna. Kaj mi enlasis vin por peti, por preĝi vin: helpu min ne freneziĝi, sugestu al mi rimedon, por mortigi mian avinjon…</p>

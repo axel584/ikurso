@@ -782,7 +782,10 @@ function pubAndroid() {
 	global $vojo;
 	echo '<div class="card reklamo"><p>Vous pouvez retrouver iKurso sur Android.</p><p class="container"><a href="https://play.google.com/apps/testing/fr.esperanto_france.ikurso"><img  class="responsive-img" src="'.$vojo.'bildoj/google-play-badge.png"></a></p></div>';
 }
-
+function pubPPP() {
+	global $vojo;
+	echo '<div class="reklamo"><div class="row"><span class="col s7">Vi povas aĉeti la libron <i>Pa&#349;oj al plena posedo</i> en <a href="https://butiko-esperanto-france.org/">nia butiko</a></span><span class="col s5"><img class="responsive-img" src="'.$vojo.'bildoj/butiko/pasoj-al-plena-posedo-nova-eld.jpg" /></span></div>';
+}
 function vortlisto($persono_id,$kurso,$pattern) {
 	global $bdd;
 	$query = "SELECT eo,fr,vortoj.tipo,lecionoj.numero,lecioneroj.ordo FROM vortoj join lecioneroj on vortoj.lecionero_id=lecioneroj.id join lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso='".$kurso."'";

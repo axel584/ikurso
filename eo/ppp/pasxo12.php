@@ -20,7 +20,7 @@ include "pppkapo.inc.php";
  
  			<p>(Parolas Peruno, dio de la antikvaj slavoj:)</p>
 
- 			<p>“Vi sensperte vivas certe,<br />
+ 			<p>Vi sensperte vivas certe,<br />
  			neestinte dio.<br />
  			False ŝajnas, ke mi gajnas<br />
  			en la profesio!</p>
@@ -100,7 +100,7 @@ include "pppkapo.inc.php";
  			Se porkulo sanon perdis,<br />
  			mi lin rekuracu!</p> 
  			
- 			<p>Ŝi min tedas, de mi pledas,<br />
+ 			<p>Ŝi min tedas, ĉe mi pledas,<br />
  			ke ŝin oni svatu;<br />
  			edzo preĝas, ke jam tondro<br />
  			la edzinon batu!</p> 
@@ -125,7 +125,7 @@ include "pppkapo.inc.php";
  			Briksen mem — kompare tion —<br />
  			estas preskaŭ ŝerco.</p> 
 
- 			<p><b>Karel Havliček Borovský</b> el la ĉeĥa: <b>Tomáš Pumpr</b> (el <i>La Bapto de Caro Vladimir</i>)</p>
+ 			<p><b>Karel Havlíček Borovský</b> el la ĉeĥa: <b>Tomáš Pumpr</b> (el <i>La Bapto de Caro Vladimiro</i>)</p>
 		</div>
 
 		<?php 

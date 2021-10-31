@@ -145,7 +145,7 @@ include "pppkapo.inc.php";
 			
 			<p>Ĉirkaŭ mi viroj kaj virinoj falis surgenuen kun manoj suprenlevitaj. Larmoj sin miksis kun la pluveroj sur la vizaĝoj de la virinoj, sed la viroj ne ploris. Ili staris kun nekovritaj kapoj kaj palaj senesprimaj vizaĝoj, tamen profunde en iliaj koroj bolegis malamo al ĉi tiu monstro, kiu prenas antaŭ iliaj okuloj ankoraŭ kvin viktimojn en la eterna lukto inter ĝi kaj la homaro.</p>
 			
-			<div style="background-image: url('bildoj/sxtormo2.jpg');background-position: 100% 100%;background-size:cover;background-repeat: no-repeat;padding-bottom:25em;margin: 0 -1em 0 -1em;padding-left: 1em;padding-right: 1em;">
+			<div style="background-image: url('bildoj/sxtormo2.jpg');background-position: 100% 100%;background-size:contain;background-repeat: no-repeat;padding-bottom:25em;margin: 0 -1em 0 -1em;padding-left: 1em;padding-right: 1em;">
 				<p>Ni trovis iliajn kadavrojn en la sekvanta mateno, kiam forpasis la ŝtormo kaj la maro estis denove trankvila, kaj ni enterigis la kvin en unu tombon sub la ombro de la malnova preĝejo ĉe la supro de la havena deklivo, kiu alrigardas al la maro, sur kiu ili vivis kaj en kiu ili mortis. Kune ili dormas tie, kaj super ilia eterna restadejo aŭdiĝas la sovaĝa muĝado de la Norda Maro kaj la malgaja kriado de la mevoj.</p>
 				<p><b>John S. Dinwoodie</b> (el <i>Esperanto en Skotlando</i>)</p>
 			</div>

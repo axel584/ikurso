@@ -18,9 +18,9 @@ include "pppkapo.inc.php";
 		<div class="rakonto">
 			<h3>KOLEKTANTO DE ĈIELARKOJ</h3>
  
- 			<p>La atmosfero en la triaklasa kupeo estis sufoka. Ŝvitodoro ŝvebis en la aero. Kun malŝato mi pensis pri la multaj horoj de vojaĝo, kiuj ankoraŭ staris antaŭ mi.</p>
+ 						<p>La atmosfero en la triaklasa kupeo estis sufoka. Ŝvitodoro ŝvebis en la aero. Kun malŝato mi pensis pri la multaj horoj de vojaĝo, kiuj ankoraŭ staris antaŭ mi.</p>
  			<p>Miaj kunvojaĝantoj vigle babilis pri temoj, kiuj eĉ ne por momento povis fiksi mian atenton.</p>
- 			<p>Vidalvide de mi, de la kontraŭa flanko de la fenestro, sidis dekjara nigrokula knabino. Sur ŝia vizaĝo ŝajnis al mi diveni la saman enuon, kiun mi mem sentis.</p>
+ 			<img style="float:right;max-width:800px;max-width:30%;margin: 0 0 0 1em" src="bildoj/knabino-trajno.jpg"><p>Vidalvide de mi, de la kontraŭa flanko de la fenestro, sidis dekjara nigrokula knabino. Sur ŝia vizaĝo ŝajnis al mi diveni la saman enuon, kiun mi mem sentis.</p>
  			<p>Mi decidis alparoli ŝin.</p>
  			<p>Responde al miaj demandoj Sita rakontis, ke ŝi lernas en la kvara klaso de elementa lernejo. Ŝi ŝatas la geografion kaj malŝatas la matematikon. Post kelkaj pluaj demandoj la konversacia materialo estis elĉerpita. Paŭzo ekestis.</p>
  			<p>Mi ekmemoris pri kelkaj leteroj kun diverslandaj poŝtmarkoj, kiujn mi havis en la poŝo, kaj pensis, ke per ili mi povus ĝojigi la knabinon.</p>
@@ -31,7 +31,7 @@ include "pppkapo.inc.php";
  			<p>La fronta atako de Sita frapis min neatendite.</p>
  			<p>Mi ja estis veterana kolektanto de ĉio imagebla. Por ne kompliki la aferon, mi volis diri ion simplan, kiel poŝtmarkojn aŭ bildkartojn. Tamen post momento tio ŝajnis al mi neinda banalaĵo. Dum tempero mi pretis konfesi al li la sekreton de mia vivo: mi kolektas aventurojn! Sed tio ŝajnis tro abstrakta. Ŝi certe ne kapablus kompreni min.</p>
  			<p>Dum kelkaj sekundoj mi rigardis tra la fenestro meditante. Ĉar ni sidis en la unua vagono de la trajno, mi klare povis vidi tra la fenestro la vaportufon elŝprucatan el sub la lokomotivo. La sunradio rompiĝadis tra la vaporo kaj formis duonrondan zonon de ĉielarko ĉirkaŭ ĝi.</p>
- 			<p>“Ĉielarko!” mi ekkriis kun admiro.</p>
+ 			<img style="float:left;max-width:400px;max-width: 40%;margin: 0 1em 1em 0;" src="bildoj/cxielarko1.jpg"><p>“Ĉielarko!” mi ekkriis kun admiro.</p>
  			<p>“Kion?… Ĉu ĉielarkojn vi kolektas?” demandis mia inkvizitoro kun la okuloj larĝe malfermitaj.</p>
  			<p>“Kion?… Jes, kompreneble, hm, ĉielarkojn. Ĉu io stranga pri tio?”</p>
  			<p>Sita ne sciis ĉu kredi al mi aŭ ne. Subokule ŝi ekzamenadis mian vizaĝon por malkovri sur ĝi ŝercan rideton. Sed ŝerca rideto tie malestis.</p>
@@ -51,7 +51,7 @@ include "pppkapo.inc.php";
  			<p>“Kaj ĉu vi havas multajn ĉielarkojn, sinjoro? Kiaj ili estas?”</p>
  			<p>“Hm, jes. Ne estas multaj en mia kolekto, ĉar… mi ja ne prenis ĉiun ajn ĉielarkon. La kutimajn mi lasas por aliaj, kaj prenas nur la eksterordinarajn. Ekzemple…”</p>
  			<p>Dum momento mi intense serĉadis en la arĥivo de mia memoro iun elstaran ekzempleron el mia kolekto. Fine jen ĝi estis.</p>
- 			<p>“Mi troviĝis en antikva marborda urbeto de mia lando. Post pluva mateno subite disiĝis la nuboj kaj, eĉ antaŭ ol mi ekvidis la sunon, ĉielarkoj aperis sur la ĉielo. Mi diris ‘ĉielarkoj’, ĉar ne estis unu, sed du. Unu super la alia. La pli malgranda estis klara, kun koloroj tre intensaj. Unu el ĝiaj flankoj ripozis sur la antikvaj tegmentoj de la domaro, dum la alia dronis en la maron. Ĝi aspektis kvazaŭ simbolo esprimanta la ligon inter la urbo kaj la maro. Kaj la ĉielarko pravis. Dum multaj jarcentoj la loĝantoj de la urbo estis navigistoj, fiŝkaptistoj, piratoj, markomercistoj kaj maristoj sur diuspecaj ŝipoj.”</p>
+ 			<img style="float:right;max-width:800px;max-width:60%;margin: 0 0 1em 1em;" src="bildoj/cxielarko2.jpg"><p>“Mi troviĝis en antikva marborda urbeto de mia lando. Post pluva mateno subite disiĝis la nuboj kaj, eĉ antaŭ ol mi ekvidis la sunon, ĉielarkoj aperis sur la ĉielo. Mi diris ‘ĉielarkoj’, ĉar ne estis unu, sed du. Unu super la alia. La pli malgranda estis klara, kun koloroj tre intensaj. Unu el ĝiaj flankoj ripozis sur la antikvaj tegmentoj de la domaro, dum la alia dronis en la maron. Ĝi aspektis kvazaŭ simbolo esprimanta la ligon inter la urbo kaj la maro. Kaj la ĉielarko pravis. Dum multaj jarcentoj la loĝantoj de la urbo estis navigistoj, fiŝkaptistoj, piratoj, markomercistoj kaj maristoj sur diuspecaj ŝipoj.”</p>
  			<p>“Super tiu ĉi bildo, kvazaŭ formante kadron al ĝi, etendiĝis la dua ĉielarko. Iomete pli pala ol la suba.”</p>
  			<p>“Kaj nun, Sita, se vi promesas ne rakonti ĝin al aliaj, mi diros al vi sekreton.”</p>
  			<p>“Mi promesas”, flustris la knabino.</p>
@@ -107,6 +107,8 @@ transformita en muzeon. Ĉiuj salonoj estis malfermitaj. Nur unu ĉambreton, e
 
  			<p><b>Tibor Sekelj</b> (el <i>Esperanto</i>)</p>
 		</div>
+		
+		<p class="creditphoto">Bildoj:<br>https://npgallery.nps.gov/ (publikhavaĵo)<br>Claudio Divizia /Adobe Stock<br>Nikki Zalewski /Adobe Stock</p>
 
 		<?php 
 		} // fin section 1

@@ -19,7 +19,7 @@ include "pppkapo.inc.php";
 			<h3>CELSTACIO</h3>
  
  			<p>La stacieto estis malgranda kaj sufokaera. Sur la muroj enuis landkonigaj afiŝoj. La horloĝo malfunkciis. Ĝin strekis kruce gluitaj gazetstrioj. Sur la rando de apertita fenestro dormetis kato de fervojisto. Malantaŭ la kasa giĉeto homo suferis pro varmego. Li rekonsciiĝis nur je la voĉo de pasaĝero.</p>
-			<p>– Kien?</p>
+			<img style="float:right;max-width:800px;max-width:50%;margin-left:1em;margin-bottom:1em" src="bildoj/gicxeto.jpg"><p>– Kien?</p>
 			<p>– Egale.</p>
 			<p>– Per la klaso?</p>
 			<p>– Egale.</p>
@@ -30,7 +30,7 @@ include "pppkapo.inc.php";
 			<p>– Gzdzin.</p>
 			<p>– Tie estas nun malsvarme. Vi iras, sinjoro, ekzemple per vojo Z. Arbaro, vojetoj, vi plezure laciĝas per tiu arbaro. Vi povas kuŝiĝi ĉe la vojo, kuŝi kaj pensi nenion.</p>
 			<p>– Bone, diris la pasaĝero, mi ne volas pensi.</p>
-			<p>La kasisto komencis plenigi blanketon.</p>
+			<img style="float:right;max-width:600px;max-width:30%;margin-left:1em;margin-bottom:1em" src="bildoj/trajnbiletoj.jpg"><p>La kasisto komencis plenigi blanketon.</p>
 			<p>– Kombinata. Estos kombinata. Al Konopiski ekspreso kaj poste normala.</p>
 			<p>– Ne, oponis la pasaĝero, ne povas esti kupeŝanĝo. Mi pensados pri tiu damna kupeŝanĝo kaj mi ja diris, ke mi ne volas pensi. Pri nenio.”</p>
 			<p>– Aha, konsentis la kasisto.</p>
@@ -57,9 +57,9 @@ include "pppkapo.inc.php";
 			<p><b>Czeslaw Ostankowicz</b>  el la pola: <b>Jerzy Grum</b> (el <i>Esperanto</i>)</p>
 		</div>			
 		<p><a id="note1" href="#appel1">[1]</a> PKP = mallongigo de Polskie Koleje Panstwowe (Polaj Ŝtataj Fervojoj).</p>
-
-
-
+		
+		<p class="creditphoto">Bildoj:<br><i>Portvakt vid station</i> https://digitaltmuseum.org/ (publikhavaĵo)<br>Horario kaj biletoj: publikhavaĵo /Wikimedia Commons</p>
+		</section>
 		<?php 
 		} // fin section 1
 		if ($section=="2") {

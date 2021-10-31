@@ -131,7 +131,7 @@ include "pppkapo.inc.php";
 			
 			<p>Mi venis al la deklivo super la haveno. La muroj de la haveno mem kaj la deklivo super ĝi estis kovritaj de grupoj de la vilaĝanoj. Tiuj, kiuj staris sur la deklivo, fikse rigardis tiudirekten, kie de tempo al tempo videblis eta nigra punkto, apenaŭ videbla inter la montecaj ondoj kiuj ĉirkaŭis ĝin. Tiuj, kiuj staris ĉe la haveno, nur atendis, atendadis en silento. Tiaj okazaĵoj kompreneble ne estas nekonataj en la marbordaj vilaĝoj, sed en ĉi tiu silento troviĝis io, kian mi neniam antaŭe sentis.</p>
 			
-			<img style="float:right;max-width:800px;max-width:40%;margin-left:1em:margin-bottom:1em" src="bildoj/sxtormo1.jpg"><p>“Kio estas?” mi demandis al viro, kiu staris apude kaj kun kiu mi iomete konatiĝis. Li ĵetis al mi unu ekrigardon, kaj tuj poste liaj okuloj reserĉis la etan nigran punkton. La severeco de lia vizaĝo ne ŝanĝiĝis, kaj per sentrema voĉo li diris, “Tio estas mia filo: oni ĵus ricevis radian mesaĝon de la insulo, sciigantan, ke la ceteraj ŝipetoj, kiuj rifuĝis en la tiean havenon, estas en bona ordo, sed ke la <i>Ora Brilo</i> foriris de la aliaj ŝipetoj por reveni hejmen, unu horon antaŭ ol venis la radia ventegaverto.”</p>
+			<img style="float:right;max-width:800px;max-width:40%;margin-left:1em;margin-bottom:1em" src="bildoj/sxtormo1.jpg"><p>“Kio estas?” mi demandis al viro, kiu staris apude kaj kun kiu mi iomete konatiĝis. Li ĵetis al mi unu ekrigardon, kaj tuj poste liaj okuloj reserĉis la etan nigran punkton. La severeco de lia vizaĝo ne ŝanĝiĝis, kaj per sentrema voĉo li diris, “Tio estas mia filo: oni ĵus ricevis radian mesaĝon de la insulo, sciigantan, ke la ceteraj ŝipetoj, kiuj rifuĝis en la tiean havenon, estas en bona ordo, sed ke la <i>Ora Brilo</i> foriris de la aliaj ŝipetoj por reveni hejmen, unu horon antaŭ ol venis la radia ventegaverto.”</p>
 			
 			<p>Tiam mi komprenis, kial mi sentis ion nekutiman en la silento de la homamaso. De kiam mi ekloĝis en la vilaĝo, neniam danĝero trafis iun el la ŝipetoj apartenantaj al ĝi, sed tio estis unu el “niaj ŝipetoj”, kaj ĝia estro estis populara junulo, kiu edziĝis antaŭ nur du semajnoj. Kune kun li en la ŝipeto, mi sciis, estis liaj du pli junaj fratoj kaj du kuzoj: ĝi estis, laŭ nia dirmaniero, “familia ŝipeto”.</p>
 			
@@ -145,12 +145,13 @@ include "pppkapo.inc.php";
 			
 			<p>Ĉirkaŭ mi viroj kaj virinoj falis surgenuen kun manoj suprenlevitaj. Larmoj sin miksis kun la pluveroj sur la vizaĝoj de la virinoj, sed la viroj ne ploris. Ili staris kun nekovritaj kapoj kaj palaj senesprimaj vizaĝoj, tamen profunde en iliaj koroj bolegis malamo al ĉi tiu monstro, kiu prenas antaŭ iliaj okuloj ankoraŭ kvin viktimojn en la eterna lukto inter ĝi kaj la homaro.</p>
 			
-			<div style="background-image: url('bildoj/sxtormo2.jpg');background-position: 100% 100%;background-size:cover;background-repeat: no-repeat;padding-bottom:20em;"><p>Ni trovis iliajn kadavrojn en la sekvanta mateno, kiam forpasis la ŝtormo kaj la maro estis denove trankvila, kaj ni enterigis la kvin en unu tombon sub la ombro de la malnova preĝejo ĉe la supro de la havena deklivo, kiu alrigardas al la maro, sur kiu ili vivis kaj en kiu ili mortis. Kune ili dormas tie, kaj super ilia eterna restadejo aŭdiĝas la sovaĝa muĝado de la Norda Maro kaj la malgaja kriado de la mevoj.</p></div>
-			
-			<p><b>John S. Dinwoodie</b> (el <i>Esperanto en Skotlando</i>)</p>
+			<div style="background-image: url('bildoj/sxtormo2.jpg');background-position: 100% 100%;background-size:contain;background-repeat: no-repeat;padding-bottom:25em;margin: 0 -1em 0 -1em;padding-left: 1em;padding-right: 1em;">
+				<p>Ni trovis iliajn kadavrojn en la sekvanta mateno, kiam forpasis la ŝtormo kaj la maro estis denove trankvila, kaj ni enterigis la kvin en unu tombon sub la ombro de la malnova preĝejo ĉe la supro de la havena deklivo, kiu alrigardas al la maro, sur kiu ili vivis kaj en kiu ili mortis. Kune ili dormas tie, kaj super ilia eterna restadejo aŭdiĝas la sovaĝa muĝado de la Norda Maro kaj la malgaja kriado de la mevoj.</p>
+				<p><b>John S. Dinwoodie</b> (el <i>Esperanto en Skotlando</i>)</p>
+			</div>
 		</div>
 		
-		<p class="creditphoto">Bildoj : <br>Isabey Eugène, <i>Les Naufrageurs</i> (parto)<br>Stephen Davies /Adobe Stock</p>
+		<p class="creditphoto">Bildoj:<br>Isabey Eugène, <i>Les Naufrageurs</i> (parto)<br>Stephen Davies /Adobe Stock</p>
 
 
 <?php 

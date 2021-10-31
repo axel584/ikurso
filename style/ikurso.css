@@ -426,6 +426,19 @@ body.pasxo article .rakonto p.poemo {
 article.korektado p {
 	line-height: 120%;
 }
+body.pasxo article .rakonto .card {
+	padding: 0.25em;
+	box-shadow: none;
+	border: 1px dashed #CCC;
+}
+body.pasxo article .rakonto .card-content {
+	padding: 0.25em;
+}
+body.pasxo article .rakonto .card-content p {
+	font-family: Roboto;
+	font-size: 0.85rem!important;
+	line-height: normal;
+}
 aside {
 	padding-right: 5%;
 	margin-top: 6rem;
@@ -621,6 +634,12 @@ ul#progreso li.nuna {
 
 /********** corps de la leçon *******/
 
+.pasxo #leciono-enhavo .rakonto {
+	border: 1px solid #ddd;
+	padding: 0 1em 0 1em;
+	margin-bottom: 0.5em;
+	border-radius: 2px;
+}
 #leciono-enhavo a { 
 	text-decoration: underline;
 }

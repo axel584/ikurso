@@ -25,7 +25,7 @@ include "pppkapo.inc.php";
 			<p>Li promenis en la malmulte frekventitaj lokoj, akompanate de knabo, kiu kunportis brandujon kaj gitaron. Li haltadis aŭ ĉe arbarrando, aŭ sur riverbordo, aŭ en bela groto, trinkante brandon, ludante muzikon, verkante poemojn…</p>
 			<p>Iun matenon, lia barko estis glitanta sur la glata spegulo de l’ Orienta Maro, kiam li ekvidis ĉe la horizonto kvinkoloran nubon ŝvebantan super monto, kiu ŝajnis tute vapora. Akcelante siajn remilojn, li sin direktis tien. Li ŝnurfiksis sian barkon malsupre de la roko kaj surgrimpis la deklivon.</p>
 			<p>Li longe ekstazis antaŭ granda groto, kies stalagmitoj kaj stalaktitoj movbrilis, kiel multe da kristalaj lampoj. Sed, apenaŭ li faris kelkajn paŝojn internen, jam la enirejo sin fermis kaj tuj lin ĉirkaŭis la plej kompleta mallumo. Timoplena, li tamen daŭrigis blindpalpe sian antaŭeniron. La grotovandoj estis muskokovritaj. La vojo estis longa kaj zigzaga. Fine, ekvidis malproksime malklaran lumeton, kiu kreskis kun lia espero.</p>
-			<p>Tu Thuk eliris en vastegan ĝardenon de florantaj persikarboj. La aero estis diafana kaj parfumita kaj milda suno verŝis sian lumon. Birdoj, kiujn li neniam estis vidinta ĥore prikantis lian alvenon. Du blujakaj servantinoj, kiuj ŝajne atendis lin delonge interflustris: “Jen li venas, la juna edziĝonto!”</p>
+			<img style="float:left;max-width:800px;max-width:50%;margin: 0 1em 0 0" src="bildoj/persikarboj.jpg"><p>Tu Thuk eliris en vastegan ĝardenon de florantaj persikarboj. La aero estis diafana kaj parfumita, kaj milda suno verŝis sian lumon. Birdoj, kiujn li neniam estis vidinta ĥore prikantis lian alvenon. Du blujakaj servantinoj, kiuj ŝajne atendis lin delonge interflustris: “Jen li venas, la juna edziĝonto!”</p>
 			<p>Al li fariĝis, kvazaŭ li estus revanta. Antaŭ liaj okuloj brilis la rubenaj tegmentoj kaj la jadaj muroj de lukse belaj palacoj. La du fraŭlinoj flugkuris en la ĉefan konstruaĵon por anonci lian alvenon. Post momento, ambaŭ reaperis, sin salute klinante antaŭ li: “Lia Nobela Moŝto estas petata eniri!”</p>
 			<p>Li sekvis ilin tra longaj koridoroj el gemo, oro kaj arĝento, antaŭ ol atingi ĉambregon tapetitan per brokato kaj superverŝitan per blueta lumo. Sur sia trono el blanka santalligno, lin estis atendanta majesta kaj bela reĝino tute blanke vestita. Montrante al li blankan santallignan brakseĝon, ŝi demandis:</p>
 			<p>“Juna beletristo, ĉu vi scias, kie vi estas? Ĉu vi memoras pri iu antaŭdestinita renkontiĝo?”</p>
@@ -34,24 +34,24 @@ include "pppkapo.inc.php";
 			<p>La reĝino ridetis:</p>
 			<p>“Kiel vi povus scii? Jen vi estas en la sesa el la tridek ses grotoj de la Monto Fi Laj. Naskiĝinte el la akvaro, nia monto flosas sur la maro, aperas kaj malaperas laŭ la ventoj kaj la pluvoj. Via bonkoreco kaj via nobleco estas ĉiekonataj. Tial vi estas invitata en nian landon, kiun ĝis nun vidis neniu ordinara mortulo.”
 			Ŝi sin turnis al siaj servantinoj. Tiuj ĉi komprenis la senparolan ordonon kaj fortiriĝis. Post momenta silento, eniris malreale bela fraŭlino. Tu Thuk tuj rekonis en ŝi tiun, kiu estis rompinta la florbranĉon. En sia kostumo el blanka vualo, ŝi aspektis milfoje pli gracie, ol dum la unua renkontiĝo.</p>
-			<p>“Mia filino nomiĝas Ĉiela Parfumo, — diris la reĝino al la beletristo. Dum ŝia vojaĝo sur la tera mondo sin trafis malfeliĉo. Vi jam malavaris al ŝi bonfaron, kiun mi ne forgesas. Tial, mi permesas al ŝi kunligi sian vivon kun la via por estingi tiun dankŝuldon.</p>
+			<img style="float:right;max-width:800px;max-width:50%;margin: 0 0 0 1em" src="bildoj/cxiela-parfumo.jpg"><p>“Mia filino nomiĝas Ĉiela Parfumo, — diris la reĝino al la beletristo. Dum ŝia vojaĝo sur la tera mondo sin trafis malfeliĉo. Vi jam malavaris al ŝi bonfaron, kiun mi ne forgesas. Tial, mi permesas al ŝi kunligi sian vivon kun la via por estingi tiun dankŝuldon.</p>
 			<p>”Tu Thuk, en sia granda emocio, ne sciis, kion respondi. Ĉio estis pretigita por la edziĝfesto, kiun ĉeestis ĉiuj feinoj de la tridek ses grotoj de la Monto Fi Laj. Ludis feina orkestro. Oni dancis, oni kantis, oni ebriiĝis pro la feina persikbrando.</p>
 			<p class="center">⁂</p>
 			<p>La tempo forpasis, kiel traflugo de la hirundoj. Jam la juna beletristo vivis unu jaron en feliĉo kaj revo. Iun matenon, blanka velo aperis sur malproksimaj ondoj kaj vekis en lia koro la sentojn pri lia tera naskiĝlando. Je la unua fojo, senlima malpleneco ekkaptis lin. Ŝajnis, ke al li mankis samtempe tro multe da aĵoj: lia patra pajlodometo sub bambutufo, la vastaj verdaj rizkampoj, kiuj lacigas la flugon de la cikonioj, la etaj bubalgardistoj ludantaj bambuflutojn sur la dorso de siaj bestoj, kiam vespere ili revenas sian vilaĝon. Tiun nokton, li ne povis fermi siajn okulojn kaj atente aŭskultis la bruon de l’ ondoj, kiuj venis por estingiĝi ĉe liaj piedoj.</p>
 			<p>Lia malĝojo kreskis tagon post tago kaj fariĝis nekonsolebla. Fine, li konfidis al sia feina edzino:</p>
 			<p>“Mia Ĉiela Parfumo, ni jam gustumis unu jaron la dolĉecon de la geedza vivo. Mi estas tute feliĉa, sed mia koro estas tute konsumita de hejmveo. Lasu min rehejmiĝi ian tempon por revidi miajn familianojn; poste mi senprokraste revenos apud vi kaj ni kune vivos en nia eterna amo.”</p>
 			<p>La feino restis tute enpensiga. Ĉe la insisto de sia edzo, ŝi turnis la kapon por kaŝi larmoguton kaj diris al li tra korŝira ekĝemo:</p>
-			<p>“Mi neniel kuraĝus kontraŭstari al viaj intencoj. Sed, la surtera mondo estas malvasta kaj la surtera vivo, mallonga. Mi timas, ke vi retrovus nek la ombron de l’ salikoj, nek la bonodoron de l’ floroj de la pasintjara ĝarden’.”</p>
-			<p>Ŝi konfesis siajn sentimentojn al sia patrino, kiu trankvile respondis:</p>
+			<p>“Mi neniel kuraĝus kontraŭstari al viaj intencoj. Sed, la surtera mondo estas malvasta kaj la surtera vivo, mallonga. Mi timas, ke vi retrovus nek la ombron de l’ salikoj, nek la bonodoron de l’ floroj de la pasintjara ĝardeno.”</p>
+			<img style="float:right;max-width:600px;max-width:30%;margin: 0 -1em 0 1em" src="bildoj/letero.png"><p>Ŝi konfesis siajn sentimentojn al sia patrino, kiu trankvile respondis:</p>
 			<p>“Mi tute ne pensis, ke la ‘polvomondo’ tiel pezas ankoraŭ sur lia koro.”</p>
 			<p>La disiĝo estis aflikta. Ĉiela Parfumo longe ploris. Ŝi pasigis al sia edzo leteron skribitan sur silka folio kaj petis lin malfermi ĝin, nur kiam li estos hejmen reveninta.</p>
 			<p>Tu Thuk forveturis sur ĉaro el blanka nubo. En palpebruma daŭro li estis jam surteriĝinta.</p>
 			<p>Li klopode rekonis sian naskiĝvilaĝon. Ĉio estis ŝanĝiĝinta, kaj la pejzaĝo kaj la domaro kaj la loĝantaro. Sole restis samaj la verda flanko de la montaro kaj la arĝenta rivereto, kiu serpentumis ĉe ĝia malsupro. Li sin parole turnis al respektinda blankbarba maljunulo. Aŭdante la nomon “Tu Thuk”, tiu ĉi kuntiris siajn brovojn, kvazaŭ serĉante ion en sia memoro:</p>
 			<p>“Kiam mi estis ankoraŭ eta knabo, — li diris, — mi aŭdis malklare pri mia praonklo, kiu havis la saman nomon, kiel vi. Li iam foriris en la montaron kaj ne plu revenis.</p>
 			<p>Tio okazis antaŭ proksimume unu jarcento…”</p>
-			<p>La beletristo sentis sin pli sola, ol iam. Li volis denove engrimpi la nuban ĉaron, sed ĝi estis aliiĝinta en fenikson, kaj la ĉiela birdo jam malaperis ĉe la horizonto.
-			Tu Thuk malfermis la leteron. Estis adiaŭa poemeto:</p>
-			<p class="poemo">Meze de l’ nuboj naskiĝis amo de fenikso<br />
+			<p>La beletristo sentis sin pli sola, ol iam. Li volis denove engrimpi la nuban ĉaron, sed ĝi estis aliiĝinta en fenikson, kaj la ĉiela birdo jam malaperis ĉe la horizonto.</p>
+			<p>Tu Thuk malfermis la leteron. Estis adiaŭa poemeto:</p>
+			<p class="poemo">Meze de l’ nuboj naskiĝis amo de feniksoj<br />
 			De l’ pasintjara unueco estas la fino<br />
 			Ne plu serĉu sur la maro la paŝosignojn de la feinoj.<br />
 			Pri estonta renkontiĝo estas nenia espero!</p>
@@ -59,6 +59,8 @@ include "pppkapo.inc.php";
 			
 			<p><b>Vu Kan</b> (el <i>Vjetnamio Antaŭenmarŝas</i>)</p>
 		</div>
+		
+		<p class="creditphoto">Bildoj:<br>xiaoliangge /Adobe Stock<br>@tawatchai07 /freepik<br>vera Kuttelvaserova /Adobe Stock</p>
 
 		<?php 
 		} // fin section 1
@@ -134,7 +136,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">trono</span>: seĝo de reĝo.</p>
 			<p><span class="eo">tuniko</span>: speco de ĝisgenua ĉemizo.</p>
 			<p><span class="eo">veo</span>: lamenta krio.</p>
-			<p><span class="eo">vjetnamio</span>: lando en sudorienta Azio.</p>
+			<p><span class="eo">Vjetnamio</span>: lando en sudorienta Azio.</p>
 		</div>
 	</div>
 

@@ -58,7 +58,7 @@ include "pppkapo.inc.php";
 		</div>			
 		<p><a id="note1" href="#appel1">[1]</a> PKP = mallongigo de Polskie Koleje Panstwowe (Polaj Ŝtataj Fervojoj).</p>
 		
-		<p class="creditphoto">Bildoj : <i>Portvakt vid station</i> https://digitaltmuseum.org/ (publikhavaĵo) ; Horario kaj biletoj: publikhavaĵo /Wikimedia Comons</p>
+		<p class="creditphoto">Bildoj : <i>Portvakt vid station</i> https://digitaltmuseum.org/ (publikhavaĵo) ; Horario kaj biletoj: publikhavaĵo /Wikimedia Commons</p>
 
 
 

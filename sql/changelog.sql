@@ -3398,20 +3398,25 @@ INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `resp
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1604, 191, NULL, '8', 'Kiom longe la junulo restis en la feinlando?', NULL, NULL, NULL, '0', '0');
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1605, 191, NULL, '9', 'Kial li deziris foriri?', NULL, NULL, NULL, '0', '0');
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1606, 191, NULL, '10', 'Kial lia edzino estis tiel malĝojega, kaj kion ne sciis Tu Thuk?', NULL, NULL, NULL, '0', '0');
-
-
-
-
-
-
-
-
-
-
-
-
-
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (373, 148, 'Gramatikaj Ekzercoj', 'EKZERCARO', NULL, '4', '0', '0', NULL, NULL);
+INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (192, 'Uzu korekte en propozicioj jenajn prepoziciajn frazojn:', 373, NULL,NULL, 'verkado-1', '1', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1607, 192, NULL, '11', 'RILATE AL', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1608, 192, NULL, '12', 'SPITE AL', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1609, 192, NULL, '13', 'VIDALVIDE AL', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1610, 192, NULL, '14', 'INKLUZIVE DE', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1611, 192, NULL, '15', 'INTERNE DE', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1612, 192, NULL, '16', 'KAŬZE DE', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1613, 192, NULL, '17', 'KOMENCE DE', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1614, 192, NULL, '18', 'NIVELE KUN', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1615, 192, NULL, '19', 'PARALELE KUN', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (1616, 192, NULL, '20', 'PROPORCIE KUN', NULL, NULL, NULL, '0', '0');
+
+
+
+
+
+
+
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (374, 148, 'Verkado', 'EKZERCARO', NULL, 5, 0, 0, NULL, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (375, 148, 'Sendi la ekzercojn', 'TEKSTO', NULL, 6, 0, 1, 5, NULL);
 -- pasxo 17

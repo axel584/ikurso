@@ -30,7 +30,7 @@ include "pppkapo.inc.php";
 
  			<p>Ŝi eksaltis kaj promenante tien kaj reen, daŭrigis:</p>
 
- 			<img style="float:right;max-width:600px;max-width:30%" src="bildoj/ordemulino.png"><p>— La infano kondutos, kiel li vidas de siaj gepatroj. Ĝuste tial mi petas vin, ke hejme vi estu pripensa kaj nenervoza, kiel tio decas al serioza patro. La infano…</p>
+ 			<img class="flot-d l-30 s-30" src="bildoj/ordemulino.png"><p>— La infano kondutos, kiel li vidas de siaj gepatroj. Ĝuste tial mi petas vin, ke hejme vi estu pripensa kaj nenervoza, kiel tio decas al serioza patro. La infano…</p>
 
  			<p>— En ordo, mi interparolis sen nervozeco kaj pripensante, sed nun bonvolu doni al mi vespermanĝon.</p>
 
@@ -44,7 +44,7 @@ include "pppkapo.inc.php";
 
  			<p>— Kial vi ne uzas ankaŭ tranĉilon? Kaj ne manĝu tiel avide. La infano ne lernas bonorde manĝi, se lia patro kondutas ĉe la tablo, kiel barbaro.</p>
 
- 			<img style="float:right;max-width:800px;max-width:60%;margin-right:-1em" src="bildoj/ordemulo2.png"><p>Mi pretigis min al kuŝiĝo. Mi metis mian veston sur la apogilon de seĝo. Mi volis kaŝi min sub la plumkovrilo, kiam denove alparolis min mia edzino:</p>
+ 			<img class="flot-g l-60 s-100" src="bildoj/ordemulo2.png"><p>Mi pretigis min al kuŝiĝo. Mi metis mian veston sur la apogilon de seĝo. Mi volis kaŝi min sub la plumkovrilo, kiam denove alparolis min mia edzino:</p>
 
  			<p>— Kiel vi formetis viajn vestaĵojn?</p>
 

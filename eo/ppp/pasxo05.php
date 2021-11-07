@@ -23,7 +23,7 @@ include "pppkapo.inc.php";
 
 	 		<p>Tial la grupo en Le Havre invitis kelkajn eksterlandajn esperantistojn al publikaj kunsidoj en somero 1903. La eksperimento bonege sukcesis kaj la facila parolebleco de la lingvo entuziasmigis la aŭskultintojn.</p>
 
-		 	<img style="float:right;max-width:400px;max-width:30%" src="bildoj/michaud-kaj-zamenhof.jpg"><p>El tiu ĉi provo devenis la Universalaj Kongresoj de Esperanto. La grupo en Le Havre donis ideon al la aliaj marbordaj grupoj francaj kaj anglaj organizi vere internacian feston en Esperanto. Ĝi okazis la 7-an kaj 8-an de aŭgusto 1904. La sukceso estis tiom granda kaj la entuziasmo tiel varme vekita, ke la ĉeestintoj proponis organizi veran kongreson en Aŭgusto 1905. Advokato Michaux el Boulogne-sur-Mer promesis aranĝi tion en sia urbo.</p>
+		 	<img class="flot-d l-50 s-50" src="bildoj/michaud-kaj-zamenhof.jpg"><p>El tiu ĉi provo devenis la Universalaj Kongresoj de Esperanto. La grupo en Le Havre donis ideon al la aliaj marbordaj grupoj francaj kaj anglaj organizi vere internacian feston en Esperanto. Ĝi okazis la 7-an kaj 8-an de aŭgusto 1904. La sukceso estis tiom granda kaj la entuziasmo tiel varme vekita, ke la ĉeestintoj proponis organizi veran kongreson en Aŭgusto 1905. Advokato Michaux el Boulogne-sur-Mer promesis aranĝi tion en sia urbo.</p>
 
 			<p>D-ro Zamenhof mem faris la vojaĝon kun sia edzino. Ankaŭ la plej konataj esperantaj verkistoj el Varsovio: Grabowski, Kabe, Leo Belmont. Dum unu semajno fervora kolegaro ĝuis la renkontiĝon kaj kompreniĝon. Multaj neniam parolis Esperanton antaŭe. Ĝia facileco kaj flueco mirigis ilin eĉ en propra buŝo.</p>
 
@@ -31,7 +31,7 @@ include "pppkapo.inc.php";
 
 			<p>Krom la parola sukceso, la Bulonja kongreso alportis al Esperanto ion pli: la inspiron idean kaj sentimentan. La unuan fojon oni vidis la fondinton. Liaj modesteco kaj genia spiriteco aperis al ĉiuj per rekta kontakto. Kiam la solena malfermo kunigis ĉiujn en teatra salonego la unuan vesperon, ĉies admiro kaj dankemo alflugis al tiu malalta viro, timema, iom ĝenata, kun rondaj okulvitroj kaj saĝa bonkoreco de patra kuracisto.</p>
 	
-		 	<p><img style="text-align:center:max-width:1600px;max-width:100%; margin:0" src="bildoj/unua-kongreso.jpg"></p>
+		 	<p><img style="text-align:center;max-width:1600px;max-width:100%; margin:0" src="bildoj/unua-kongreso.jpg"></p>
 
 			<p>Post entuziasmaj ovacioj eksonis tra l’ subita silento lia voĉo simpla kaj senpretenda: “Mi salutas vin, karaj samideanoj, fratoj kaj fratinoj el la granda tutmonda familio, kiuj kunvenis el landoj proksimaj kaj malproksimaj, el la plej diversaj regnoj de la mondo por frate premi al si reciproke la manojn, pro la nomo de granda ideo, kiu ĉiujn nin ligas… Modesta estas nia kunveno… sed tra la aero de nia salono flugas misteraj sonoj, sonoj tre mallaŭtaj, ne aŭdeblaj por la orelo, sed senteblaj por ĉiu animo sentema: ĝi estas la sonoj de io granda, kiu nun naskiĝas…”</p>
 

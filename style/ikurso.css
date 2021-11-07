@@ -426,6 +426,50 @@ body.pasxo article .rakonto p.poemo {
 article.korektado p {
 	line-height: 120%;
 }
+body.pasxo article .rakonto img.flot-d, 
+body.pasxo article .rakonto div.card.flot-d {
+	float: right;
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+body.pasxo article .rakonto img.flot-g,
+body.pasxo article .rakonto div.card.flot-g {
+	float: left;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+body.pasxo article .rakonto img.l-20,
+body.pasxo article .rakonto div.card.l-20  {
+	max-width: 20%;
+}
+body.pasxo article .rakonto img.l-25,
+body.pasxo article .rakonto div.card.l-25 {
+	max-width: 25%;
+}
+body.pasxo article .rakonto img.l-30,
+body.pasxo article .rakonto div.card.l-30  {
+	max-width: 30%;
+}
+body.pasxo article .rakonto img.l-40,
+body.pasxo article .rakonto div.card.l-40  {
+	max-width: 40%;
+}
+body.pasxo article .rakonto img.l-45,
+body.pasxo article .rakonto div.card.l-45  {
+	max-width: 45%;
+}
+body.pasxo article .rakonto img.l-50,
+body.pasxo article .rakonto div.card.l-50  {
+	max-width: 50%;
+}
+body.pasxo article .rakonto img.l-60,
+body.pasxo article .rakonto div.card.l-60  {
+	max-width: 60%;
+}
+body.pasxo article .rakonto img.l-70,
+body.pasxo article .rakonto div.card.l-70  {
+	max-width: 70%;
+}
 body.pasxo article .rakonto .card {
 	padding: 0.25em;
 	box-shadow: none;
@@ -439,6 +483,30 @@ body.pasxo article .rakonto .card-content p {
 	font-size: 0.85rem!important;
 	line-height: normal;
 }
+@media only screen and (max-width: 680px) {
+	body.pasxo article .rakonto img.s-25 {
+		max-width: 25%;
+	}
+	body.pasxo article .rakonto img.s-30 {
+		max-width: 30%;
+	}
+	body.pasxo article .rakonto img.s-40 {
+		max-width: 40%;
+	}
+	body.pasxo article .rakonto img.s-50 {
+		max-width: 50%;
+	}
+	body.pasxo article .rakonto img.s-70 {
+		max-width: 70%;
+	}
+	body.pasxo article .rakonto img.s-100,
+	body.pasxo article .rakonto div.card.s-100 {
+		max-width: 100%;
+		margin: auto;
+		float: none;
+	}
+}
+
 aside {
 	padding-right: 5%;
 	margin-top: 6rem;

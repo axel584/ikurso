@@ -74,21 +74,20 @@ include "pppkapo.inc.php";
 				<p>“Aŭdu nur”, — diris Sen. “Mia amiko, Ripsrops, veturis antaŭ nelonge per sia beleta ĉaro, vi scias, tiu Mercedes, inter Arĥangelsk kaj Kopenhago sur la ŝoseo. Sed li jam ne estis malproksime de Kopenhago, kiam ĉe benzinputo, post kiam li aĉetis hejtmaterialon kaj dum la agado de la benzinulo, li iom promenis. Subite li aŭdis voĉon sub si:</p>
 				<p>“Sinjoro Ripsrops, sinjoro, bonvolu atendi…”</p>
 				<p>Ripsrops rigardis malsupren kaj vidis ranon ruliĝantan al li. Li ne estas speciala ŝatanto de ranoj, sed io kaptis lin en la afero.</p>
-				<img style="float:right;max-width:600px;max-width:30%;margin: 0 -1em 1em 1em;" src="bildoj/rano.png"><p>“Ĉu mi komprenas rane? Kaj ĉu vi povas paroli? Ĉu vi konas min?”</p>
+				<img class="flot-d l-40 s-50" style="margin: 0 -1em 1em 1em;" src="bildoj/rano.png" />
+				<p>“Ĉu mi komprenas rane? Kaj ĉu vi povas paroli? Ĉu vi konas min?”</p>
 				<p>La rano respondis:</p>
 				<p>“Jes, kara sinjoro Ripsrops, mi povas paroli, sed mi ne parolas rane, sed dane. Mi petas vin, sinjoro Ripsrops… Mi frostas. Metu min en vian poŝon. Ĉu mi rajtas kunveturi al Kopenhago? Por bonfaro vi ricevos bonon!”</p>
 				<p>Ripsrops tre miris, precipe, ke la rano frostas, kiam estas varme, sed rano estas rano, kaj ĉar la petita varmo ne kostos al li elspezojn, li metis la ranon en sian poŝon. (… Kion vi diras? Jes… Jes, li estis sobra kiel mi.)</p>
 				<p>Iom post iom la rano iĝis hejmeca de Ripsrops. Ĝi petis eĉ manĝon kaj iom da akvo, kiujn Ripsrops, kiu konsideris la ranon cetere tre modesta, donis al sia kunvojaĝanto. Tiel ili alvenis vespere al la metropolo, eĉ al la loĝejo de Ripsrops, ĉar la rano petis ripozlokon. Ripsrops malfermis la pordon de sia loĝejo kaj tiam la rano denove ekparolis:</p>
 				<p>“Kara sinjoro Ripsrops, mi estas tiel dormema. Ĉu mi rajtus dormi en tiu lito?”</p>
 				<p>Ripsrops ekmeditis. Estis la unua fojo, ke iu fremdulo volis dormi en ilia familia lito, sed efektive sinjorino Ripsrops estis for kaj tiu ĉi mirinda rano estis tiel dormema. Li metis la ranon en la apudan liton kaj demetis sian jakon kaj komencis pretigi sin por la nokta trankvilo.</p>
-				<div style="background-image: url('bildoj/regxinido.png');background-position: 0 0;background-repeat: no-repeat;padding-left: 400px;margin: 0 0 0 -1em;">
-				<p>Li volis jam mallumigi, kiam li alrigardis la apudan liton kaj tiam li rimarkis, ke el la stranga rano fariĝis belega reĝidino, kiu supozeble apenaŭ estis provizita per noktovestoj. Lia rigardo ekglitis sur la marmoraj ŝultroj de la reĝidino. Ripsrops tute teruriĝis. Li frotis la okulojn. La reĝidino alrigardis lin kaj diris:</p>
-				<p>“Ri i-ipsĉjo!”</p></div>
+				<img class="flot-g l-50 s-100" style="margin: 0 0 0 -1em;" src="bildoj/regxinido.png" />
+				<p>Li volis jam mallumigi, kiam li alrigardis la apudan liton kaj tiam li rimarkis, ke el la stranga rano fariĝis belega reĝidino, kiu supozeble apenaŭ estis provizita per noktovestoj. Lia rigardo ekglitis sur la marmoraj ŝultroj de la reĝidino. Ripsrops tute teruriĝis. Li frotis la okulojn. La reĝidino alrigardis lin kaj diris: “Ri i-ipsĉjo!”</p>
 				<p>Sen Dubo, t.e. la rakontanto, nun faris longan paŭzon kaj sekvis iom malcerte la ŝvebon de la cigareda fumo.</p>
-				<img style="float:right;max-width:600px;max-width:25%;" src="bildoj/virino.png"><p>Mi urĝis:</p>
-				<p>“Nu, kiel estis poste?”</p>
-				<p>Sen alrigardis min kaj diris:</p>
-				<p>“Ĉu vi vere kredas tiun ĉi historion?”</p>
+				<img class="flot-d l-30 s-50"  src="bildoj/virino.png" style="margin: 0 0 0 -1em;">
+				<p>Mi urĝis: “Nu, kiel estis poste?”</p>
+				<p>Sen alrigardis min kaj diris: “Ĉu vi vere kredas tiun ĉi historion?”</p>
 				<p>“Kredi? Tute ne. Kial mi kredu?”</p>
 				<p>“Nu ankaŭ sinjorino Ripsrops, kiu tiumomente realvenis neatendite el sia feriado en Polinezio kaj malfermis la pordon de la dormoĉambro, ne kredis ĝin. Eĉ ne unu vorton…”</p>
 				

@@ -140,9 +140,9 @@ include "pppkapo.inc.php";
 				getEkzercon(145,$persono_id,"eo");
 			?>
 			<h2>PASIVAJ ADJEKTIVOJ PARTICIPAJ</h2>
-<p>En la momento, kiam mi alven<b>AS</b>, oni ĝuste verŝ<b>AS</b> vinon = Kiam ml alven<b>AS</b>, la vino est<b>AS</b> verŝ<b>A</b>ta.</p>
+<p>En la momento, kiam mi alven<b>AS</b>, oni ĝuste verŝ<b>AS</b> vinon = Kiam mi alven<b>AS</b>, la vino est<b>AS</b> verŝ<b>A</b>ta.</p>
 <p>En la momento, kiam mi alven<b>IS</b>, oni ĝuste verŝ<b>IS</b> la vinon = Kiam mi alven<b>lS</b> la vino est<b>IS</b> verŝ<b>A</b>ta.</p>
-<p>En la momento, kiam mi alven<b>OS</b>, oni ĝuste versŝ<b>OS</b> la vinon = Kiam mi alven<b>OS</b>, la vino est<b>OS</b> verŝ<b>A</b>ta.</p>
+<p>En la momento, kiam mi alven<b>OS</b>, oni ĝuste verŝ<b>OS</b> la vinon = Kiam mi alven<b>OS</b>, la vino est<b>OS</b> verŝ<b>A</b>ta.</p>
 <p>En la momento, kiam mi alven<b>AS</b>, oni jam pli frue verŝ<b>IS</b> la vinon =  Kiam mi alven<b>AS</b>, la vino est<b>AS</b> verŝ<b>I</b>ta.</p>
 <p>En la momento, kiam mi alven<b>IS</b>, oni jam pli frue verŝ<b>IS</b> la vinon = Kiam mi alven<b>IS</b>, la vino est<b>IS</b> verŝ<b>I</b>ta.</p>
 <p>En la momento, kiam mi alven<b>OS</b>, oni jam pli frue verŝ<b>IS</b> la vinon = Kiam mi alven<b>OS</b> la vino est<b>OS</b> verŝ<b>I</b>ta.</p>

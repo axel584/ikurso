@@ -94,6 +94,7 @@ include "pagxkapo.inc.php";
 					}
 				}
 			}
+			// AFFICHAGE DES FORMULAIRES
 			if ($ago=="REDAKTIEKZERCERON") {
 				$demandoEkzerceroj = "select id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla from ekzerceroj where id='".$ekzercero."'";
 				$resultEkzerceroj = $bdd->query($demandoEkzerceroj) or die(print_r($bdd->errorInfo()));
@@ -145,6 +146,7 @@ include "pagxkapo.inc.php";
 				echo "<button class='btn waves-effect waves-light' type='submit'>Sauvegarder</button>";
 				echo "</fieldset>";
 			}
+			// ACTION DE SAUVEGARDE
 			?>
 
 		</div>

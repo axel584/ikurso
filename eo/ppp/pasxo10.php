@@ -20,7 +20,7 @@ include "pppkapo.inc.php";
  
  						<p>La atmosfero en la triaklasa kupeo estis sufoka. Ŝvitodoro ŝvebis en la aero. Kun malŝato mi pensis pri la multaj horoj de vojaĝo, kiuj ankoraŭ staris antaŭ mi.</p>
  			<p>Miaj kunvojaĝantoj vigle babilis pri temoj, kiuj eĉ ne por momento povis fiksi mian atenton.</p>
- 			<img class="flot-d l-50 s-100" src="bildoj/knabino-trajno.jpg"><p>Vidalvide de mi, de la kontraŭa flanko de la fenestro, sidis dekjara nigrokula knabino. Sur ŝia vizaĝo ŝajnis al mi diveni la saman enuon, kiun mi mem sentis.</p>
+ 			<img class="flot-d l-50 s-100" src="bildoj/knabino-trajno.jpg"><p>Vidalvide de mi, ĉe la kontraŭa flanko de la fenestro, sidis dekjara nigrokula knabino. Sur ŝia vizaĝo ŝajnis al mi diveni la saman enuon, kiun mi mem sentis.</p>
  			<p>Mi decidis alparoli ŝin.</p>
  			<p>Responde al miaj demandoj Sita rakontis, ke ŝi lernas en la kvara klaso de elementa lernejo. Ŝi ŝatas la geografion kaj malŝatas la matematikon. Post kelkaj pluaj demandoj la konversacia materialo estis elĉerpita. Paŭzo ekestis.</p>
  			<p>Mi ekmemoris pri kelkaj leteroj kun diverslandaj poŝtmarkoj, kiujn mi havis en la poŝo, kaj pensis, ke per ili mi povus ĝojigi la knabinon.</p>
@@ -29,7 +29,7 @@ include "pppkapo.inc.php";
  			<p>Silento. Mi ekserĉis alian temon por vivteni la konversacion.</p>
  			<p>“Kaj ĉu vi kolektas ion, sinjoro? Kion vi kolektas?”</p>
  			<p>La fronta atako de Sita frapis min neatendite.</p>
- 			<p>Mi ja estis veterana kolektanto de ĉio imagebla. Por ne kompliki la aferon, mi volis diri ion simplan, kiel poŝtmarkojn aŭ bildkartojn. Tamen post momento tio ŝajnis al mi neinda banalaĵo. Dum tempero mi pretis konfesi al li la sekreton de mia vivo: mi kolektas aventurojn! Sed tio ŝajnis tro abstrakta. Ŝi certe ne kapablus kompreni min.</p>
+ 			<p>Mi ja estis veterana kolektanto de ĉio imagebla. Por ne kompliki la aferon, mi volis diri ion simplan, kiel poŝtmarkojn aŭ bildkartojn. Tamen post momento tio ŝajnis al mi neinda banalaĵo. Dum tempero mi pretis konfesi al ŝi la sekreton de mia vivo: mi kolektas aventurojn! Sed tio ŝajnis tro abstrakta. Ŝi certe ne kapablus kompreni min.</p>
  			<p>Dum kelkaj sekundoj mi rigardis tra la fenestro meditante. Ĉar ni sidis en la unua vagono de la trajno, mi klare povis vidi tra la fenestro la vaportufon elŝprucatan el sub la lokomotivo. La sunradio rompiĝadis tra la vaporo kaj formis duonrondan zonon de ĉielarko ĉirkaŭ ĝi.</p>
  			<img class="flot-g l-40 s-40" style="margin: 0 1em 1em 0;" src="bildoj/cxielarko1.jpg"><p>“Ĉielarko!” mi ekkriis kun admiro.</p>
  			<p>“Kion?… Ĉu ĉielarkojn vi kolektas?” demandis mia inkvizitoro kun la okuloj larĝe malfermitaj.</p>
@@ -47,15 +47,15 @@ include "pppkapo.inc.php";
  			<p>“Ne. La suno malleviĝadis pli kaj pli, kaj la ĉielarko paliĝis ĝis fina malapero. Nur mi restis sola kun mia senlima admiro, gapanta al la ĉielo.”</p>
  			<p>“La vidaĵo de tiu ĉielarko restis tiel profunde gravurita en mia menso, ke mi senhezite povas diri, ke ĝi restis mia propraĵo. Tiu estis mia unua sperto pri la posedo de ĉielarko. Posedo, cetere, kiun neniu povas de mi forpreni, okazu kio okazos.”</p>
  			<p>“Poste sekvis aliaj. Unu post la alia ili fariĝis miaj, kreante mian kolekton.”</p>
- 			<p>Sita sidis senmova aŭskultante min. Sia patro proponis al ŝi oranĝon, sed ŝi malakceptis. Ŝi estis tro okupita per la rakonto.</p>
+ 			<p>Sita sidis senmova aŭskultante min. Ŝia patro proponis al ŝi oranĝon, sed ŝi malakceptis. Ŝi estis tro okupita per la rakonto.</p>
  			<p>“Kaj ĉu vi havas multajn ĉielarkojn, sinjoro? Kiaj ili estas?”</p>
  			<p>“Hm, jes. Ne estas multaj en mia kolekto, ĉar… mi ja ne prenis ĉiun ajn ĉielarkon. La kutimajn mi lasas por aliaj, kaj prenas nur la eksterordinarajn. Ekzemple…”</p>
  			<p>Dum momento mi intense serĉadis en la arĥivo de mia memoro iun elstaran ekzempleron el mia kolekto. Fine jen ĝi estis.</p>
- 			<img class="flot-d l-60 s-100" src="bildoj/cxielarko2.jpg"><p>“Mi troviĝis en antikva marborda urbeto de mia lando. Post pluva mateno subite disiĝis la nuboj kaj, eĉ antaŭ ol mi ekvidis la sunon, ĉielarkoj aperis sur la ĉielo. Mi diris ‘ĉielarkoj’, ĉar ne estis unu, sed du. Unu super la alia. La pli malgranda estis klara, kun koloroj tre intensaj. Unu el ĝiaj flankoj ripozis sur la antikvaj tegmentoj de la domaro, dum la alia dronis en la maron. Ĝi aspektis kvazaŭ simbolo esprimanta la ligon inter la urbo kaj la maro. Kaj la ĉielarko pravis. Dum multaj jarcentoj la loĝantoj de la urbo estis navigistoj, fiŝkaptistoj, piratoj, markomercistoj kaj maristoj sur diuspecaj ŝipoj.”</p>
+ 			<img class="flot-d l-60 s-100" src="bildoj/cxielarko2.jpg"><p>“Mi troviĝis en antikva marborda urbeto de mia lando. Post pluva mateno subite disiĝis la nuboj kaj, eĉ antaŭ ol mi ekvidis la sunon, ĉielarkoj aperis sur la ĉielo. Mi diris ‘ĉielarkoj’, ĉar ne estis unu, sed du. Unu super la alia. La pli malgranda estis klara, kun koloroj tre intensaj. Unu el ĝiaj flankoj ripozis sur la antikvaj tegmentoj de la domaro, dum la alia dronis en la maron. Ĝi aspektis kvazaŭ simbolo esprimanta la ligon inter la urbo kaj la maro. Kaj la ĉielarko pravis. Dum multaj jarcentoj la loĝantoj de la urbo estis navigistoj, fiŝkaptistoj, piratoj, markomercistoj kaj maristoj sur ĉiuspecaj ŝipoj.”</p>
  			<p>“Super tiu ĉi bildo, kvazaŭ formante kadron al ĝi, etendiĝis la dua ĉielarko. Iomete pli pala ol la suba.”</p>
  			<p>“Kaj nun, Sita, se vi promesas ne rakonti ĝin al aliaj, mi diros al vi sekreton.”</p>
  			<p>“Mi promesas”, flustris la knabino.</p>
- 			<p>Mi ĉirkaŭrigardis por certigi ke neniu aŭskultas nin. Tiam mi alproksimiĝis al la knabino.</p>
+ 			<p>Mi ĉirkaŭrigardis por certiĝi ke neniu aŭskultas nin. Tiam mi alproksimiĝis al la knabino.</p>
  			<p>“Imagu”, mi diris, “la koloroj de la supra ĉielarko estis renversitaj. Ĉiu bona kolektisto scias, ke 
 la violkoloro kaj la blua estas la supraj koloroj, kaj la ruĝa kaj indiga troviĝas malsupre. Kaj tiel ili troviĝis en la malsupra ĉielarko. Sed en la supra la ordo estis renversita, kvazaŭ ĝi nur respegulus la alian.”</p>
  			<p>Sita rigardis min konsternite. Sur ŝia vizaĝo estis videble ke ŝi estis konscia pri la graveco de la sekreto.</p>
@@ -93,7 +93,7 @@ transformita en muzeon. Ĉiuj salonoj estis malfermitaj. Nur unu ĉambreton, e
  			<p>“Ĉu vere?”</p>
  			<p>“Ho jes, mi tiel ŝatus… Sed kiel komenci? Al vi estis facile komenci, vi ja havis fraton!”</p>
  			<p>“Kiel komenci? Jes, tio estas problemo”, mi diris penseme. “Tamen, mi havas ideon, Sita. Ekrigardu tra la fenestro.”</p>
- 			<p>Ni klinis nin trans la fenestro, kaj mi indikis per la fingro al la ĉielarko, kiu fidele akompanadis ankoraŭ la vaportufon sub la loko motivo. Kiam Sita rimarkis ĝin, ŝi ekkriis pro ekscitiĝo.</p>
+ 			<p>Ni klinis nin trans la fenestro, kaj mi indikis per la fingro al la ĉielarko, kiu fidele akompanadis ankoraŭ la vaportufon sub la lokomotivo. Kiam Sita rimarkis ĝin, ŝi ekkriis pro ekscitiĝo.</p>
  			<p>“Ĉu ĝi plaĉas al vi, Sita?… Ĉu vi ne kredas, ke ĝi taŭgus por komenci vian kolekton per ĝi?”</p>
  			<p>“Belega ĝi estas. Mi volus per ĝi komenci, sed kiel?”</p>
  			<p>“Jen kiel. Ni ŝanĝu la sidlokojn, tiel ke nur vi povu vidi ĝin. Mi promesas ne plu elrigardi tra la fenestro, kaj ĉar la suno baldaŭ subiros, vi estos la lasta kiu ĝin vidos. Ĝi restos nur via. La unua en via kolekto.”</p>

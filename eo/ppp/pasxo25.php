@@ -138,16 +138,16 @@ include "pppkapo.inc.php";
 <?php 
 		} // fin section 2
 		if ($section=="3") {
-			getEkzercon(248,$persono_id,"eo");
+			getEkzercon(249,$persono_id,"eo");
 				
 		} 
 		if ($section=="4") {
-			getEkzercon(249,$persono_id,"eo");
 			getEkzercon(250,$persono_id,"eo");
+			getEkzercon(251,$persono_id,"eo");
 		} 
 		if ($section=="5") {
-			getEkzercon(251,$persono_id,"eo");
 			getEkzercon(252,$persono_id,"eo");
+			getEkzercon(253,$persono_id,"eo");
 		} // envoi de la leçon
 		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);

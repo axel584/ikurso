@@ -164,6 +164,7 @@ include "pppkapo.inc.php";
 		if ($section=="5") {
 			getEkzercon(246,$persono_id,"eo");
 			getEkzercon(247,$persono_id,"eo");
+			getEkzercon(248,$persono_id,"eo");
 		} // envoi de la leçon
 		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);

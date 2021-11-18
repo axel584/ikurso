@@ -292,18 +292,18 @@ Dezsö malsereniĝis.</p>
 <?php 
 		} // fin section 2
 		if ($section=="3") {
-			getEkzercon(278,$persono_id,"eo");
+			getEkzercon(279,$persono_id,"eo");
 				
 		} 
 		if ($section=="4") {
-			getEkzercon(279,$persono_id,"eo");
 			getEkzercon(280,$persono_id,"eo");
 			getEkzercon(281,$persono_id,"eo");
 			getEkzercon(282,$persono_id,"eo");
+			getEkzercon(283,$persono_id,"eo");
 		} 
 		if ($section=="5") {
-			getEkzercon(283,$persono_id,"eo");
 			getEkzercon(284,$persono_id,"eo");
+			getEkzercon(285,$persono_id,"eo");
 		} // envoi de la leçon
 		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);

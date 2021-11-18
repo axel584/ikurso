@@ -119,17 +119,17 @@ Jen ĝi estas antaŭ mi, la povra soldata pipo, malpurigita per argilo kaj sango
 <?php 
 		} // fin section 2
 		if ($section=="3") {
-			getEkzercon(272,$persono_id,"eo");
+			getEkzercon(273,$persono_id,"eo");
 				
 		} 
 		if ($section=="4") {
-			getEkzercon(273,$persono_id,"eo");
 			getEkzercon(274,$persono_id,"eo");
 			getEkzercon(275,$persono_id,"eo");
 			getEkzercon(276,$persono_id,"eo");
+			getEkzercon(277,$persono_id,"eo");
 		} 
 		if ($section=="5") {
-			getEkzercon(277,$persono_id,"eo");
+			getEkzercon(278,$persono_id,"eo");
 		} // envoi de la leçon
 		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);

@@ -115,18 +115,18 @@ include "pppkapo.inc.php";
 <?php 
 		} // fin section 2
 		if ($section=="3") {
-			getEkzercon(260,$persono_id,"eo");
+			getEkzercon(261,$persono_id,"eo");
 				
 		} 
 		if ($section=="4") {
-			getEkzercon(261,$persono_id,"eo");
 			getEkzercon(262,$persono_id,"eo");
 			getEkzercon(263,$persono_id,"eo");
 			getEkzercon(264,$persono_id,"eo");
+			getEkzercon(265,$persono_id,"eo");
 		} 
 		if ($section=="5") {
-			getEkzercon(265,$persono_id,"eo");
 			getEkzercon(266,$persono_id,"eo");
+			getEkzercon(267,$persono_id,"eo");
 		} // envoi de la leçon
 		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('PP',$leciono,$persono_id);

@@ -17,6 +17,12 @@ if ($persono_id!="") {
 include "pagxkapo.inc.php";
 ?>
 </form>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+   function onSubmit(token) {
+     document.getElementById("reago").submit();
+   }
+ </script>
 <div class="row">
 	<article class="col s12 m10 l7 offset-m1 offset-l2">
 		<section id="leciono-kapo">
@@ -35,7 +41,7 @@ include "pagxkapo.inc.php";
 		</p>
 		<section class="card">
 
-			<form method="post" action="reago2.php">
+			<form method="post" action="reago2.php" id="reago">
 				<div class="card-title primaire-texte texte-moyen">Votre message</div>
 				<form method="post" action="reago2.php">
 				<div class="card-content">
@@ -52,10 +58,6 @@ include "pagxkapo.inc.php";
 					    </div>
 	
 						<div class="input-field col s12">
-							<p style="display: none;">
-								<label for="nobot">Veuillez laisser ce champ vide&nbsp;:</label>
-								<input type="text" class="text" name="nobot" id="nobot" value="" size="10">
-							</p>
 							<textarea id="komento" name="komento" class="materialize-textarea"></textarea>
 							<label for="komento"><?php if (isset($_SESSION["komento"])) {echo $_SESSION["komento"];} else echo "Votre commentaire, question, remarque…"; ?></label>
 						</div>
@@ -63,6 +65,7 @@ include "pagxkapo.inc.php";
 				</div>
 
 				<div class="card-action">
+					<div class = "g-recaptcha" data-sitekey = "6LdTAkwdAAAAAIjFw2MeC40BV5tneUf47FTrYlfI"></div>
 					<input class="btn waves-effect waves-light blue" type="submit" value="envoyer">
 					<input class="btn-flat waves-effect waves-light blue-text" type="reset" value="effacer">
 				</div>

@@ -2,23 +2,18 @@
 include "util.php";
 $korpo="reago";
 $pagxtitolo="Envoi de message";
+// recaptcha google : antispam
+$secret = '6LdTAkwdAAAAACg_m0KMK_mz9N2y1EJTiqiWy-j9';
+$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+$responseCaptcha = json_decode($verifyResponse);
 if (checkEmail($_POST['sendinto'])) {
-	if ($_POST["nobot"]) {
-		// le champ "nobot" est rempli, c'est qu'un robot a rempli automatiquement tous les champs
+	if(!$responseCaptcha->success) {
 		protokolo(0,"SPAM",$_POST["komento"]);
 		header("Location:reago.php?erarkodo=25");
 		exit();
 	}
+	
 	if ($_POST["komento"]) {
-		// test anti spam : ajouter des mots interdit au besoin
-		$listeMotsInterdits = array(" girl "," sex "," money "," virginity ","http://","https://");
-		foreach($listeMotsInterdits as $motInterdit) {
-			if (strstr($_POST["komento"], $motInterdit)) {
-				// spam detecté
-				header("Location:reago.php?erarkodo=25");
-				exit();
-			}
-		}		
 		$demando="select retadreso from personoj where (rajtoj='A')";
 		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 		$row=$result->fetch(); // on recupère le 1er admin

@@ -14,6 +14,15 @@ if (checkEmail($_POST['sendinto'])) {
 	}
 	
 	if ($_POST["komento"]) {
+		// test anti spam : ajouter des mots interdit au besoin
+		$listeMotsInterdits = array(" girl "," sex "," money "," virginity ","порно","http://","https://");
+		foreach($listeMotsInterdits as $motInterdit) {
+			if (strstr($_POST["komento"], $motInterdit)) {
+				// spam detecté
+				header("Location:reago.php?erarkodo=25");
+				exit();
+			}
+		}
 		$demando="select retadreso from personoj where (rajtoj='A')";
 		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 		$row=$result->fetch(); // on recupère le 1er admin

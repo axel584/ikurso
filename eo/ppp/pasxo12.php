@@ -20,109 +20,109 @@ include "pppkapo.inc.php";
  
  			<p>(Parolas Peruno, dio de la antikvaj slavoj:)</p>
 
- 			<p>Vi sensperte vivas certe,<br />
- 			neestinte dio.<br />
- 			False ŝajnas, ke mi gajnas<br />
+ 			<p>Vi sensperte vivas certe,<br/>
+ 			neestinte dio.<br/>
+ 			False ŝajnas, ke mi gajnas<br/>
  			en la profesio!</p>
 
- 			<p>Mi matene devas pene<br />
- 			rosi kampan valon,<br />
- 			hejti sunon, kaj la lunon<br />
+ 			<p>Mi matene devas pene<br/>
+ 			rosi kampan valon,<br/>
+ 			hejti sunon, kaj la lunon<br/>
  			fermi en la stalon.</p>
  			
- 			<p>Noktfantomojn kaj demonojn<br />
- 			en la sakon loki,<br />
- 			la stelflokojn kiel kokojn<<br />
+ 			<p>Noktfantomojn kaj demonojn<br/>
+ 			en la sakon loki,<br/>
+ 			la stelflokojn kiel kokojn<br/>
  			al nestejo voki.</p>
  			
- 			<p>Ĉies buŝo: birdo, muŝo,<br />
- 			pulo, elefanto,<br />
- 			frue jam ĝi volas manĝi<br />
+ 			<p>Ĉies buŝo: birdo, muŝo,<br/>
+ 			pulo, elefanto,<br/>
+ 			frue jam ĝi volas manĝi<br/>
  			el di-provianto.</p>
  			
- 			<p>La ekstaro de l’ homaro,<br />
- 			aĥ, ĝi kaŭzas servojn!<br />
- 			La lamento de l’ homgento<br />
+ 			<p>La ekstaro de l’ homaro,<br/>
+ 			aĥ, ĝi kaŭzas servojn!<br/>
+ 			La lamento de l’ homgento<br/>
  			ŝiras miajn nervojn!</p>
  			
- 			<p>Nur se pikoj de formikoj<br />
- 			vian aŭdon ĝenus,<br />
- 			la matenan aŭdiencon<br />
+ 			<p>Nur se pikoj de formikoj<br/>
+ 			vian aŭdon ĝenus,<br/>
+ 			la matenan aŭdiencon<br/>
  			eble vi komprenus.</p>
  			
- 			<p>Preĝoj svarmas kaj alarmas,<br />
- 			ĝis mi preskaŭ surdas:<br />
- 			tiu kantas, flustras, larmas,<br />
+ 			<p>Preĝoj svarmas kaj alarmas,<br/>
+ 			ĝis mi preskaŭ surdas:<br/>
+ 			tiu kantas, flustras, larmas,<br/>
  			tiu psalmojn gurdas.</p>
  			
- 			<p>Ĉu kalkuli la postulojn?<br />
- 			Estus vane peni!<br />
- 			Kapo krevus, se mi devus<br />
+ 			<p>Ĉu kalkuli la postulojn?<br/>
+ 			Estus vane peni!<br/>
+ 			Kapo krevus, se mi devus<br/>
  			ĝin nur memorteni:</p>
  			
- 			<p>Doni sanon kaj infanon,<br />
- 			panon por satmanĝi;<br />
- 			ke fabrikoj ĉesu ŝpini,<br />
+ 			<p>Doni sanon kaj infanon,<br/>
+ 			panon por satmanĝi;<br/>
+ 			ke fabrikoj ĉesu ŝpini,<br/>
  			devus di’ aranĝi!</p>
  			
- 			<p>“Gardu grenon kaj ĝardenon!”<br />
- 			oni al mi taskas;<br />
- 			nova krio: “Helpu dio!<br />
+ 			<p>“Gardu grenon kaj ĝardenon!”<br/>
+ 			oni al mi taskas;<br/>
+ 			nova krio: “Helpu dio!<br/>
  			La bovino naskas!” </p>
  			
- 			<p>La vetero estu varma<br />
- 			kaj samtempe frosta,<br />
- 			la sekalo estu kara<br />
+ 			<p>La vetero estu varma<br/>
+ 			kaj samtempe frosta,<br/>
+ 			la sekalo estu kara<br/>
  			kaj malmultekosta.</p>
  			
- 			<p>Pluvu! Iu semis linon,<br />
- 			di’ ĝin rosu bene!<br />
- 			Pluvi? Oj ne! Sed porfojne<br />
+ 			<p>Pluvu! Iu semis linon,<br/>
+ 			di’ ĝin rosu bene!<br/>
+ 			Pluvi? Oj ne! Sed porfojne<br/>
  			brilu sun’serene!</p>
  			
- 			<p>Ve, ke estis virinaĉoj<br />
- 			estigitaj per mi!<br />
- 			La ĉagrenan bandon ĝenan<br />
+ 			<p>Ve, ke estis virinaĉoj<br/>
+ 			estigitaj per mi!<br/>
+ 			La ĉagrenan bandon ĝenan<br/>
  			devos mi ekstermi!</p>
  			
- 			<p>Tondro ilin…! Jam eĉ dio<br />
- 			devas ja blasfemi!<br />
- 			Se ne laktas la kaprino,<br />
- 			ili plendas de mi.</p>
+ 			<p>Tondro ilin…! Jam eĉ dio<br/>
+ 			devas ja blasfemi!<br/>
+ 			Se ne laktas la kaprino,<br/>
+ 			ili plendas ĉe mi.</p>
  			
- 			<p>Ĉiu vivus ne per zorgoj,<br />
- 			sed per preĝovorto,<br />
- 			kvazaŭ oni havus dion<br />
+ 			<p>Ĉiu vivus ne per zorgoj,<br/>
+ 			sed per preĝovorto,<br/>
+ 			kvazaŭ oni havus dion<br/>
  			sole por komforto.</p>
  			
- 			<p>Akvon, sekon, kampan sterkon<br />
- 			dio disdonacu!<br />
- 			Se porkulo sanon perdis,<br />
+ 			<p>Akvon, sekon, kampan sterkon<br/>
+ 			dio disdonacu!<br/>
+ 			Se porkulo sanon perdis,<br/>
  			mi lin rekuracu!</p> 
  			
- 			<p>Ŝi min tedas, ĉe mi pledas,<br />
- 			ke ŝin oni svatu;<br />
- 			edzo preĝas, ke jam tondro<br />
+ 			<p>Ŝi min tedas, ĉe mi pledas,<br/>
+ 			ke ŝin oni svatu;<br/>
+ 			edzo preĝas, ke jam tondro<br/>
  			la edzinon batu!</p> 
  			
- 			<p>Kiu volas loton gajni,<br />
- 			subaĉetas dion;<br />
- 			kiu pagis asekuron,<br />
+ 			<p>Kiu volas loton gajni,<br/>
+ 			subaĉetas dion;<br/>
+ 			kiu pagis asekuron,<br/>
  			volas incendion!</p>
  			
- 			<p>Ho, se mi ne tro indulgus<br />
- 			vin, la hombandaĉon,<br />
- 			mi vin premus kiel prunojn,<br />
- 			farus el vi kaĉon!”<br />
+ 			<p>Ho, se mi ne tro indulgus<br/>
+ 			vin, la hombandaĉon,<br/>
+ 			mi vin premus kiel prunojn,<br/>
+ 			farus el vi kaĉon!”<br/>
  			
- 			<p>Li enspiris naztabakon,<br />
- 			temis bombobrue…<br />
- 			Tondro frapis, fulmo fajris,<br />
+ 			<p>Li enspiris naztabakon,<br/>
+ 			ternis bombobrue…<br/>
+ 			Tondro frapis, fulmo fajris,<br/>
  			pluvo ŝprucis flue.</p> 
  			
- 			<p>Kredu, frato! Ne amuzas<br />
- 			tiu di-ekzerco!<br />
- 			Briksen mem — kompare tion —<br />
+ 			<p>Kredu, frato! Ne amuzas<br/>
+ 			tiu di-ekzerco!<br/>
+ 			Briksen mem — kompare tion —<br/>
  			estas preskaŭ ŝerco.</p> 
 
  			<p><b>Karel Havlíček Borovský</b> el la ĉeĥa: <b>Tomáš Pumpr</b> (el <i>La Bapto de Caro Vladimiro</i>)</p>
@@ -158,6 +158,8 @@ include "pppkapo.inc.php";
 		</div>
 		<div class="col s12 m6">			
 			<p><span class="eo">komforto</span>: ĉio, kio agrabligas la vivon.</p>
+			<p><span class="eo">lakto</span>: blanka fluaĵo de bovino.</p>
+			<p><span class="eo">lamenti</span>: plendadi ĝemante.</p>
 			<p><span class="eo">muŝo</span>: fluginsekto.</p>
 			<p><span class="eo">pledi</span>: prezenti sian aferon antaŭ juĝisto.</p>
 			<p><span class="eo">loti</span>: decidi ion laŭ hazardo.</p>

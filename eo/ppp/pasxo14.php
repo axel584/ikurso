@@ -34,7 +34,7 @@ include "pppkapo.inc.php";
  			<p>– Ŝi? Avinjo Dalia? Ĉu vi parolas pri avinjo Dalia?</p>
  			<p>– Jes. Ĉu vi memoras ŝin?</p>
  			<p>Mi memoris la maljunulinon; preskaŭ naŭdekjara ŝi estis: sulka vizaĝo, hezitema voĉeto, ne plu vigla menso. La tutan tagon ŝi estis dormetanta kvazaŭ infano kiu pene trenas sin atendante baldaŭan definitivan endormiĝon. Avinjo Dalia, laca el sia longa vivo… Ĉu ŝi definitive endormiĝis?</p>
- 			<p>– Aŭskultu, kaj ne interrompu min. Alie, mi ne kuraĝos ion rakonti.</p>
+ 			<p>– Aŭskultu, kaj ne interrompu min. Alie, mi ne kuraĝos ĉion rakonti.</p>
  			<p>Mi silentis obeeme. La maro daŭre grumblis inter la rifoj.</p>
  			<p>– Nu, kiam mi planis tiun vojaĝon al Côte d’Azur, avinjo Dalia neatendite ekvigliĝis. Lastan fojon, ŝi diris, mi volas vojaĝi; prenu min kun vi en via aŭtomobilo; kia ĝeno mi estos por vi? Vi kalkulu havi unu plian valizon; kaj tiel plu. Elna pledis por la afero de avinjo ĉe mi: finfine, kompatinda avinjo, kiajn ĝojojn ŝi havis de la vivo? Tri militoj venis kaj pasis, kaj ĉiam ŝi restis en sia provinca urbeto; la mondo ŝanĝiĝis, ŝi ne konas ĝin; se ŝi tiom deziras tiun vojaĝon, nu lasu…</p>
  			<p>Mi fine cedis al mia edzino kaj al avinjo Dalia. Foriris ni tri. Pasportoj, kofroj, devizoj, ŝaloj kaj kaŭĉuka botelo por avinjo. Kaj triumfe avinjo Dalia marŝis sur la laŭstranda promenejo de Cannes. Eble ŝia maljuna koro tro pleniĝis je maro, je ĉielo, je luma ĝojo de sunsubiroj: eĉ de sia propra sunsubiro. Ĝi krevis.</p>
@@ -55,7 +55,7 @@ include "pppkapo.inc.php";
  			<p>Ni luis taksion. Ni pasigis tri kvaronojn de la nokto laŭirante ĉiujn stratojn, vojojn, placojn kaj stratetojn de tiu damnita urbo. Mi povas certigi al vi, ke mi konas ĝin parkere. Mi detale vizitis ĝin. Tute detale.</p>
  			<p>Nenio.</p>
  			<p>Ni maldungis la taksion. Ni pagis fabelan lu-prezon kaj ne aldonis trinkmonon. La taksiisto foriris ne sciante ĉu ĝoji pro la longa dungado aŭ ĉu grumbli pro manko de trinkmono. Mi opinias, ke li faris ambaŭ.</p>
- 			<p>Jen ni en flavromana situacio. Ni sentis nin krimuloj. Nur, anstataŭ havi la problemon senigi nin de kadavro, ni devis solvi tiun rehavi nian kadavron. Sen kadavro, ni estis perditaj.</p>
+ 			<p>Jen ni en flavromana situacio. Ni sentis nin krimuloj. Nur, anstataŭ havi la problemon senigi nin de kadavro, ni devis solvi tiun rehavi nian kadavron. Sen kadavro, ni estas perditaj.</p>
  			<p>Grize mateniĝis. Pluveto ekfalis. Sed ni ne atentis ĝin. Ni estis marŝantaj sencele, senpense laŭ kampara vojeto ekster la urbo. Laceco, emocioj, timego malplenigis niajn kapojn. Elna donis al mi duonkuraĝige la brakon. Mi dankis per rideto senkolora.</p>
  			<p>Subite, en la duba lumo, jen vizio. Ĝi frapis nin kvazaŭ nerealeco. Nia veturilo fantomis, kotmakulita, antaŭ ni, ĉe kurbo de tiu vojeto. Mi legis kaj relegis la numeron sur la ŝildo. Nenia dubo, estis ĝi! Ni kuris, mi febre malfermis pordon ĉe kiu la ŝlosilo jam ne plu estis bezonata…</p>
  			<p>Avinjo ne estis tie. Valizoj, ŝaloj, radio, kromrado, ĉio netuŝita. Sed avinjo mankis.</p>
@@ -64,7 +64,7 @@ include "pppkapo.inc.php";
  			<p>– Jes. Kadavron! senvole elbuŝigis Elna per raŭka voĉo.</p>
  			<p>La kamparano haltis, gapis momenton, senmova, senesprima. Poste li ruĝiĝis:</p>
  			<p>– Ne, mi ne vidis ĝin..., li balbutis, kaj forkuris.</p>
- 			<p>Kion fari nun? Ni ne povis iri al la policejo, diri ke oni ŝtelis kadavron. Ni ne povis diri, ke avinjo forkuris: duonparalizita naŭdekjarulino ne forkuras tiel. Ni ne povis deklari, ke ŝi malaperis: kiam oni trovus la kadavron (mia Dio, kie? kiel?), oni konstatus, ke ĝi estis ĵetita jam post morto el la aŭtomobilo: tio estas elemente simpla; kaj ni… teruro!</p>
+ 			<p>Kion fari nun? Ni ne povis iri al policejo, diri ke oni ŝtelis kadavron. Ni ne povis diri, ke avinjo forkuris: duonparalizita naŭdekjarulino ne forkuras tiel. Ni ne povis deklari, ke ŝi malaperis: kiam oni trovus la kadavron (mia Dio, kie? kiel?), oni konstatus, ke ĝi estis ĵetita jam post morto el la aŭtomobilo: tio estas elemente simpla; kaj ni… teruro!</p>
  			<p>Ni reengrimpis la aŭtomobilon. Mi silente startis. Ni veturis malrapide al nia urbo, al nia domo. En mia poŝo, sur pasporto, kuŝis avinjo vivanta; en mia veturilo tamen ne plu kuris avinjo mortinta.</p>
  			<p>Ni venigis hejmen niajn gekuzojn, kaj pristudis la situacion, kiun mi sincere klarigis al ili. Kaj, jen nova problemo. Avinjo Dalia, kiel vi scias, estis riĉa. Ŝi posedis multon; ŝi kompreneble testamentis, preskaŭ certe je favoro de ĉiuj ŝiaj nepoj. Sed la testamento kuŝas fermita en tirkesto de ŝia komodo; kiel malfermi ĝin? Kiel pruvi, kiel diri eĉ al geamikoj, ke ŝi mortis?</p>
  			<p>Ŝi laŭleĝe vivas kaj eniris nian landon vivanta. Intertempe, ni neniun vidas, al neniu parolas, vivas solaj, kiel pestmalsanuloj evitas ĉies kontakton. Nur vin mi enlasis ĉi-vespere, profitante el momenta foresto de Elna. Kaj mi enlasis vin por peti, por preĝi vin: helpu min ne freneziĝi, sugestu al mi rimedon, por mortigi mian avinjon…</p>

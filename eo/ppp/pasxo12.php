@@ -40,9 +40,9 @@ include "pppkapo.inc.php";
  			frue jam ĝi volas manĝi<br/>
  			el di-provianto.</p>
  			
- 			<p>La ekstaro de l’ homaro,<br/>
+ 			<p>La ekstaro de l’homaro,<br/>
  			aĥ, ĝi kaŭzas servojn!<br/>
- 			La lamento de l’ homgento<br/>
+ 			La lamento de l’homgento<br/>
  			ŝiras miajn nervojn!</p>
  			
  			<p>Nur se pikoj de formikoj<br/>
@@ -178,7 +178,8 @@ include "pppkapo.inc.php";
 			<p><span class="eo">svati</span>: sin proponi al iu kiel edz(in)on.</p>
 			<p><span class="eo">tabako</span>: sekigitaj folioj, kiujn oni fumas.</p>
 			<p><span class="eo">tasko</span>: difinita laboro.</p>
-			<p><span class="eo">terni</span>: brue kaj subite elspiri tra la nazo. (briksen = ekzilloko de la aŭtoro.) </p>
+			<p><span class="eo">terni</span>: brue kaj subite elspiri tra la nazo.</p>
+			<p>(<span class="eo">briksen</span>: ekzilloko de la aŭtoro.) </p>
 		</div>
 	</div>
 

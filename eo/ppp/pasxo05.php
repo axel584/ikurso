@@ -101,7 +101,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">ovacio</span>: entuziasmegaj aplaŭdoj.</p>
 			<p><span class="eo">pastro</span>: religia funkciulo.</p>
 			<p><span class="eo">patrioto</span>: homo, kiu arde amas sian patrolandon.</p>
-			<p><span class="eo">pentekosto</span>: kristana festo, al kiu ligiĝas la ideo peri miraklan interkornpreniĝon de diverslingvuloj.</p>
+			<p><span class="eo">pentekosto</span>: kristana festo, al kiu ligiĝas la ideo peri miraklan interkompreniĝon de diverslingvuloj.</p>
 			<p><span class="eo">poezio</span>: arto verki versaĵojn.</p>
 			<p><span class="eo">pretendi</span>: aserti sian rajton pri io.</p>
 			<p><span class="eo">profiti</span>: ricevi utilon aŭ gajnon de io.</p>

@@ -4239,3 +4239,35 @@ INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekze
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (2235, 285, NULL, '39', 'skribu detale.', NULL, NULL, NULL, '0', '0');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (459, 162, 'Sendi la ekzercojn', 'TEKSTO', NULL, 6, 0, 1, 5, NULL);
 
+----------------------------------------
+-- EXAMEN A1 : Fin du cours CGE 
+----------------------------------------
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (460, '71', 'Présentation', 'TEKSTO', NULL, '1', '1', '0', 10, NULL);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (461, '71', 'Klarigoj', 'TEKSTO', NULL, '2', '0', '0', 5, NULL);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (462, '71', 'Parola komprenado', 'EKZERCARO', NULL, '3', '0', '0', 20, NULL);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (463, '71', 'Skriba komprenado', 'EKZERCARO', NULL, '4', '0', '0', 30, NULL);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (464, '71', 'Skriba produktado', 'EKZERCARO', NULL, '5', '0', '0', 30, NULL);
+update lecioneroj set ordo=6 where id=216;
+delete from lecioneroj where id=90;
+delete from ekzercoj where id=38;
+delete from ekzercoj where id=39;
+delete from ekzercoj where id=40;
+delete from ekzercoj where id=41;
+delete from ekzercoj where id=42;
+delete from ekzercoj where id=43;
+delete from ekzercoj where id=44;
+delete from ekzercoj where id=45;
+delete from ekzercoj where id=46;
+delete from ekzercoj where id=47;
+delete from ekzercoj where id=48;	
+delete from ekzerceroj where ekzerco_id=38;
+delete from ekzerceroj where ekzerco_id=39;
+delete from ekzerceroj where ekzerco_id=40;
+delete from ekzerceroj where ekzerco_id=41;
+delete from ekzerceroj where ekzerco_id=42;
+delete from ekzerceroj where ekzerco_id=43;
+delete from ekzerceroj where ekzerco_id=44;
+delete from ekzerceroj where ekzerco_id=45;
+delete from ekzerceroj where ekzerco_id=46;
+delete from ekzerceroj where ekzerco_id=47;
+delete from ekzerceroj where ekzerco_id=48;		

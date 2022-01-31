@@ -448,6 +448,12 @@ include "dlekkapo.inc.php";
 				getEkzercon(26,$persono_id);
 			?>
 		
+		<div class="vortlisto row">
+			<p class="col s12"><span class="eo">la cetero</span>&nbsp;: le reste</p>
+			<p class="col s12"><span class="eo">ferii</span>&nbsp;: passer ses vacances</p>
+			<p class="col s12"><span class="eo">zorgi (pri)</span>&nbsp;: prendre soin (de), s’occuper (de)</p>
+		</div>
+
 		<p>* <span class="eo">je</span> = à, à propos de, en rapport avec, etc.</p>
 		<p>
 		Il s’agit d’une préposition «joker» dont le sens est indéterminé, ce qui

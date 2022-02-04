@@ -282,7 +282,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 
 	echo "<div class='tasko'>";
 	echo "<div class='row'>";
-	$queryEkzercero = "SELECT id,numero,demando,korektebla,bildo FROM `ekzerceroj` where ekzerco_id=".$id." and forigita=0 order by numero";
+	$queryEkzercero = "SELECT id,numero,demando,korektebla,bildo,poentoj FROM `ekzerceroj` where ekzerco_id=".$id." and forigita=0 order by numero";
 	$resultEkzercero = $bdd->query($queryEkzercero) or die(print_r($bdd->errorInfo()));
 	while ($rowEkzercero = $resultEkzercero->fetch()) {
 		$iconprefix="";
@@ -301,7 +301,15 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 				$iconprefix="<i class=\"material-icons prefix\" style=\"color:green\">check</i>";
 			} 
 		}
-		echo "<p class='col s12 demando'>".$rowEkzercero["numero"].". ".$rowEkzercero["demando"]."</p>\n";
+		echo "<p class='col s12 demando'>".$rowEkzercero["numero"].". ".$rowEkzercero["demando"];
+		if ($rowEkzercero["poentoj"]) {
+			if ($rowEkzercero["poentoj"]==1) { // singulier
+				echo "<span class='badge'>1 poento</span>";
+			} else { // pluriel
+				echo "<span class='badge'>".$rowEkzercero["poentoj"]." poentoj</span>";
+			}
+		}
+		echo "</p>\n";
 		echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"\">";
 
 		if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")||($rowEkzerco["typo"]=="stelo-2")) { // cas des types d'exercices textarea

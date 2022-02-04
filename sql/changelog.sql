@@ -4270,4 +4270,13 @@ delete from ekzerceroj where ekzerco_id=44;
 delete from ekzerceroj where ekzerco_id=45;
 delete from ekzerceroj where ekzerco_id=46;
 delete from ekzerceroj where ekzerco_id=47;
-delete from ekzerceroj where ekzerco_id=48;		
+delete from ekzerceroj where ekzerco_id=48;
+INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (286, 'Respondu la demandojn.', 462, NULL,NULL, 'verkado-1', '1', '0');	
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES (2236, 286, NULL, '1', 'Diskutu.', NULL, NULL, NULL, '0', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES(2236, 286, NULL, 1, 'Kiom da jaroj havas Maria ? (Dek jarojn / Tridek jarojn / Dudek jarojn)', NULL, NULL, NULL, 0, 0, 1);
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES(2237, 286, NULL, 2, 'Kie laboras Maria ? (En restoracio / En vendejo / En lernejo)', NULL, NULL, NULL, 0, 0, 1);
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES(2238, 286, NULL, 3, 'Kion vendas Maria ? (Bildkartojn / Kukojn / Fruktojn)', NULL, NULL, NULL, 0, 0, 1);
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES(2239, 286, NULL, 4, 'Kie estas la vendejo ?', NULL, NULL, NULL, 0, 0, 2);
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES(2240, 286, NULL, 5, 'Kia estas la vendejo ?', NULL, NULL, NULL, 0, 0, 2);
+
+

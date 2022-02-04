@@ -29,9 +29,10 @@ include "dlekkapo.inc.php";
 			<ul class="klarigo">
 				<li>Une partie de compréhension orale (<i>Parola komprenado</i>) d’une durée de 20 minutes. Notée sur 25 points.</li>
 				<li>Une partie de compréhension écrite (<i>Skriba komprenado</i>) d’une durée de 30 minutes. Notée sur 25 points.</li>
+				<li>Une partie production écrite (<i>Skriba produktado</i>) d'une durée de 30 minutes. Noté sur 25 points.</li>
 			</ul>
 			<p>Il convient donc d’avoir environ <b>une heure trente</b> de temps disponible devant vous pour pouvoir lire les explications et effectuer cet examen. Nous vous déconseillons de le faire en plusieurs fois (même si cela est techniquement possible), car cela fausserait le résultat.</p>
-			<p>L’usage du dictionnaire est interdit (que ce soit en ligne ou papier). Rechercher des informations dans le reste du cours est également interdit. Bien sûr, nous ne pouvons pas techniquement vous empêcher de le farre, mais la fiabilité de la note que vous obtiendrez dépendra de votre respect des consignes. De la même façon, les enregistrements audio sont conçus pour être écoutés une seule fois. Vous entendrez le texte une première fois. Cela sera suivi d’une pause de 30&nbsp;secondes puis vous entendrez le texte une deuxième fois (sans que vous ayez besoin de relancer la lecture). En respectant les consignes, vous vous assurerez d’une meilleure estimation de votre niveau.
+			<p>L’usage du dictionnaire est interdit (que ce soit en ligne ou papier). Rechercher des informations dans le reste du cours est également interdit. Bien sûr, nous ne pouvons pas techniquement vous empêcher de le faire, mais la fiabilité de la note que vous obtiendrez dépendra de votre respect des consignes. De la même façon, les enregistrements audio sont conçus pour être écoutés une seule fois. Vous entendrez le texte une première fois. Cela sera suivi d’une pause de 30&nbsp;secondes puis vous entendrez le texte une deuxième fois (sans que vous ayez besoin de relancer la lecture). En respectant les consignes, vous vous assurerez d’une meilleure estimation de votre niveau.
 			</p>
 			<p>Il est possible que vous ne connaissiez pas la réponse à certaines questions, que vous ne connaissiez pas certains mots ou que vous ne compreniez pas certains mots dans les enregistrements. Cela est tout à fait normal et il ne faut pas hésiter à passer certaines questions pour y revenir plus tard. Pour réussir l’examen, vous devez obtenir 50&nbsp;% des points sur l’ensemble des parties et au moins 5&nbsp;points dans chacune des parties.<br/>Pour la partie de compréhension orale, nous vous conseillons de lire une première fois les questions avant de lancer l’enregistrement audio.<br/>Vous pouvez bien sûr vous munir d’une feuille de papier brouillon pour prendre des notes pendant l’enregistrement.
 			</p>
@@ -60,6 +61,20 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 20&nbsp;minutoj  </p>
 		<?php 
 		} 
 		if ($section=="3") {
+		?>
+		<h3>Unua ekzerco</h3>
+		<p class="parto">Vi aŭdos dufoje dokumenton. Vi havos paŭzon de tridek sekundoj inter la du aŭskultoj kaj alian de tridek sekundoj por kontroli viajn respondojn. Unue legu la demandojn.</p>
+					<fieldset class="sono">
+				<legend>Aŭskultu tiun rakonton:</legend>
+				<p>
+					<audio id="audioPlayer" controls="controls" type="audio/mpeg">
+						<source type="audio/mp3" src="<?=$vojo?>fr/cge/sonoj/A1-Final-1.mp3"/>
+					</audio>
+				</p>
+			</fieldset>
+
+		<?php	
+			getEkzercon(286,$persono_id);
 		?>
 		<?php 
 		} 

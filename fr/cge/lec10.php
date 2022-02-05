@@ -76,7 +76,44 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 20&nbsp;minutoj  </p>
 		<?php	
 			getEkzercon(286,$persono_id);
 		?>
+		<h3>Dua ekzerco</h3>
+		<p class="parto">Vi aŭdos dufoje dokumenton. Vi havos paŭzon de tridek sekundoj inter la du aŭskultoj kaj alian de tridek sekundoj por kontroli viajn respondojn. Unue legu la demandojn.</p>
+				<fieldset class="sono">
+				<legend>Aŭskultu tiun rakonton:</legend>
+				<p>
+					<audio id="audioPlayer" controls="controls" type="audio/mpeg">
+						<source type="audio/mp3" src="<?=$vojo?>fr/cge/sonoj/A1-Final-2.mp3"/>
+					</audio>
+				</p>
+			</fieldset>		
 		<?php 
+			getEkzercon(287,$persono_id);
+		?>
+		<h3>Tria ekzerco</h3>
+		<p class="parto">Vi aŭdos dufoje dokumenton. Vi havos paŭzon de tridek sekundoj inter la du aŭskultoj kaj alian de tridek sekundoj por kontroli viajn respondojn. Unue legu la demandojn.</p>
+				<fieldset class="sono">
+				<legend>Aŭskultu tiun rakonton:</legend>
+				<p>
+					<audio id="audioPlayer" controls="controls" type="audio/mpeg">
+						<source type="audio/mp3" src="<?=$vojo?>fr/cge/sonoj/A1-Final-3.mp3"/>
+					</audio>
+				</p>
+			</fieldset>		
+		<?php 
+			getEkzercon(288,$persono_id);			
+		?>
+		<h3>Kvara ekzerco</h3>
+		<p class="parto">Vi aŭdos dufoje dokumenton. Vi havos paŭzon de tridek sekundoj inter la du aŭskultoj kaj alian de tridek sekundoj por kontroli viajn respondojn. Unue legu la demandojn.</p>
+				<fieldset class="sono">
+				<legend>Aŭskultu tiun rakonton:</legend>
+				<p>
+					<audio id="audioPlayer" controls="controls" type="audio/mpeg">
+						<source type="audio/mp3" src="<?=$vojo?>fr/cge/sonoj/A1-Final-4.mp3"/>
+					</audio>
+				</p>
+			</fieldset>		
+		<?php 
+			getEkzercon(289,$persono_id);			
 		} 
 		if ($section=="4") {
 		?>		

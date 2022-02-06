@@ -116,8 +116,27 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 20&nbsp;minutoj  </p>
 			getEkzercon(289,$persono_id);			
 		} 
 		if ($section=="4") {
-		?>		
+		?>	
+		<p>Maksimumo de akireblaj poentoj en tiu parto: 25 poentoj</p>
+		<h3>Unua ekzerco</h3>
+		<img src="bildoj/posxtkarto.jpg"/>
 		<?php 
+			getEkzercon(290,$persono_id);
+		?>
+		<h3>Dua ekzerco</h3>
+		<img src="bildoj/annonce-chat-noir.jpg"/>	
+		<?php 
+			getEkzercon(291,$persono_id);
+		?>
+		<h3>Tria ekzerco</h3>
+		<img src="bildoj/mesagxo.jpg"/>	
+		<?php 
+			getEkzercon(292,$persono_id);
+		?>
+		<h3>Kvara ekzerco</h3>
+		<img src="bildoj/logx-anoncoj.jpg"/>	
+		<?php 
+			getEkzercon(293,$persono_id);
 		} 
 		if ($section=="5") {
 		?>		

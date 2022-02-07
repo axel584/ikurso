@@ -4242,6 +4242,7 @@ INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`
 ----------------------------------------
 -- EXAMEN A1 : Fin du cours CGE 
 ----------------------------------------
+ALTER TABLE  `ekzerceroj` ADD  `poentoj` int(11) AFTER  `korektebla` ;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (460, '71', 'Présentation', 'TEKSTO', NULL, '1', '1', '0', 10, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (461, '71', 'Klarigoj', 'TEKSTO', NULL, '2', '0', '0', 5, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (462, '71', 'Parola komprenado', 'EKZERCARO', NULL, '3', '0', '0', 20, NULL);
@@ -4317,3 +4318,29 @@ INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `resp
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES (2271, 293, NULL, 36, 'Kun kiu vi loĝas?', NULL, NULL, NULL, '0', '0',2);
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES (2272, 293, NULL, 37, 'Kie vi trovis la anoncojn? (en la interreto / en vendejo / en ĵurnalo)', NULL, NULL, NULL, '0', '0',1);
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES (2273, 293, NULL, 38, 'Kiun anoncon vi povas elekti? (la unuan /  la duan / la trian / la kvaran)', NULL, NULL, NULL, '0', '0',1);
+-- Skriba produktado
+ALTER TABLE  `ekzerceroj` ADD  `respondmodelo` TEXT AFTER  `demando` ;
+INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (294, 'Kompletigu la dialogon.', 464, NULL,NULL, 'verkado-2', '1', '0');	
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondmodelo`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES (2274, 294, NULL, 39, 'Dialogo per telefono inter 15 kaj 25 vortoj.', 'Virino : Saluton, mia amiko!
+Viro : 
+Virino : Kiel vi fartas?
+Viro : 
+Virino : Ankaŭ mi, dankon! Ĉu vi volas promeni kun mi en la arbaro? Ĉu vi havas tempon?
+Viro : 
+Virino : Bonege! Je kioma horo vi volas promeni?
+Viro : 
+Virino : Bone, mi kunportos botelojn da akvo! Ĉu vi povas kunporti kukojn?
+Viro : 
+Virino : Bone, ĝis baldaŭ!
+Viro :', NULL, NULL,NULL, '0', '0',10);
+INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (295, 'Vi skribas leteron al Kanada amiko, vi invitas lin al Francujo por vojaĝo dum du semajnoj. Vi parolas al li pri via lando kaj pri la aktivecoj, kiujn vi povos fari.', 464, NULL,NULL, 'verkado-2', '1', '0');	
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondmodelo`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES (2275, 295, NULL, 40, 'Dialogo per telefono inter 15 kaj 25 vortoj.', 'Parizo, la dudekan de januaro 2020
+	Kara amiko,
+
+
+
+
+
+
+	Mi salutas vin.', NULL, NULL,NULL, '0', '0',15);
+

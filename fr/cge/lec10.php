@@ -155,7 +155,16 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 20&nbsp;minutoj  </p>
 			getEkzercon(293,$persono_id);
 		} 
 		if ($section=="5") {
-		?>		
+		?>
+		<p>Maksimumo de akireblaj poentoj en tiu parto: 25 poentoj</p>
+		<h3>Unua ekzerco</h3>	
+		<?php 
+			getEkzercon(294,$persono_id);
+		?>
+		<h3>Dua ekzerco</h3>
+		<?php 
+			getEkzercon(295,$persono_id);
+		?>	
 		<?php 
 		} // fin section
 		if ($section=="6") {

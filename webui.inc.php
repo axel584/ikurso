@@ -282,11 +282,11 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 
 	echo "<div class='tasko'>";
 	echo "<div class='row'>";
-	$queryEkzercero = "SELECT id,numero,demando,korektebla,bildo,poentoj FROM `ekzerceroj` where ekzerco_id=".$id." and forigita=0 order by numero";
+	$queryEkzercero = "SELECT id,numero,demando,respondmodelo,korektebla,bildo,poentoj FROM `ekzerceroj` where ekzerco_id=".$id." and forigita=0 order by numero";
 	$resultEkzercero = $bdd->query($queryEkzercero) or die(print_r($bdd->errorInfo()));
 	while ($rowEkzercero = $resultEkzercero->fetch()) {
 		$iconprefix="";
-		$respondo = "";
+		$respondo = $rowEkzercero["respondmodelo"];
 		$valid="";
 		$rowRespondo=null;
 		$warningNonConnecte = ($idenfication==False)?" READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'":"";
@@ -295,7 +295,9 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 			$queryRespondo = "select id,respondo,korekto,gxusta from respondoj where ekzercero_id=".$rowEkzercero["id"]." and persono_id=".$persono_id;
 			$resultRespondo = $bdd->query($queryRespondo) or die(print_r($bdd->errorInfo()));
 			$rowRespondo = $resultRespondo->fetch();
-			$respondo= $rowRespondo["respondo"];
+			if ($rowRespondo["respondo"]!=null) {
+				$respondo= $rowRespondo["respondo"];
+			}
 			if ($rowRespondo["gxusta"]==1) {
 				$valid="valid";
 				$iconprefix="<i class=\"material-icons prefix\" style=\"color:green\">check</i>";

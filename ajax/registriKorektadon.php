@@ -15,6 +15,7 @@ if ($persono_id=="") { // personne non connecté, on ressort
 
 $korektado = array();
 
+
 foreach(array_keys($_POST) as $key) {
 	if (startsWith($key,"bonaRespondo")) {
 		$respondo_id = substr($key, 12);
@@ -28,6 +29,12 @@ foreach(array_keys($_POST) as $key) {
 			$korektado[$respondo_id] = array();
 		}
 		$korektado[$respondo_id]['korekto']=$_POST[$key];
+	} else if (startsWith($key,"noto")) {
+		$respondo_id = substr($key, 4);
+		if (!array_key_exists($respondo_id,$korektado)) {
+			$korektado[$respondo_id] = array();
+		}
+		$korektado[$respondo_id]['noto']=$_POST[$key];
 	}
 }
 
@@ -39,9 +46,11 @@ foreach(array_keys($korektado) as $respondo_id) {
 		$bonaRespondo = false;
 	}
 	if (!$bonaRespondo) { $bonaRespondo = 0;}
+
 	$korekto = $korektado[$respondo_id]['korekto'];
-	$requete = $bdd->prepare('update respondoj set gxusta=:bonaRespondo,korekto=:korekto where id=:respondo_id');
-	$requete->execute(array('bonaRespondo'=>$bonaRespondo,'korekto'=>$korekto,'respondo_id'=>$respondo_id));
+	$poentoj = $korektado[$respondo_id]['noto'];
+	$requete = $bdd->prepare('update respondoj set gxusta=:bonaRespondo,korekto=:korekto,poentoj=:poentoj where id=:respondo_id');
+	$requete->execute(array('bonaRespondo'=>$bonaRespondo,'korekto'=>$korekto,'poentoj'=>$poentoj,'respondo_id'=>$respondo_id));
 }
 
 // sauvegarde de l'introduction/conclusion sur la leçon de l'élève

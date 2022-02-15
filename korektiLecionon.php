@@ -53,7 +53,7 @@ while ($row=$result->fetch()) {
 	echo "<strong>EXERCICE : </strong>".$row["komando"];
 	echo "</p>";
 	$ekzerco_id = $row["id"];
-	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.respondo as bona_respondo,ekzerceroj.normaligita as normaligita_bona_respondo,respondoj.respondo,respondoj.normaligita as normaligita_lernanta_respondo,respondoj.gxusta,respondoj.korekto,ekzerceroj.poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.numero";
+	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.respondo as bona_respondo,ekzerceroj.normaligita as normaligita_bona_respondo,respondoj.respondo,respondoj.normaligita as normaligita_lernanta_respondo,respondoj.gxusta,respondoj.korekto,ekzerceroj.poentoj,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.numero";
 	$result2 = $bdd->query($query2);
 	while ($row2=$result2->fetch()) {
 		$gxusta = $row2["gxusta"]==1;
@@ -68,19 +68,42 @@ while ($row=$result->fetch()) {
 			// sauvegarder en base le nombre de points choisi par le correcteur
 			// remplir le champ "normaligita" pour les réponses types
 		}
-		echo "<p class=\"demando\">".$row2["numero"].". ".$row2["demando"]."</p>\n";
+		echo "<p class=\"demando\">".$row2["numero"].". ".$row2["demando"]; // on termine la balise <p> dans la partie gxusta et dans le else
 		if ($gxusta) {
-			echo "<p class=\"respondo\"><span style=\"color:green\">".$row2["respondo"]."</span></p>\n";	
+			
+			if ($row2["poentoj"]) {
+				echo "<span class='badge'>".$row2["poentoj"]."/".$row2["poentoj"]."</span></p>";
+				echo "<input type='hidden' name='noto".$row2["respondo_id"]."' value='".$row2["poentoj"]."'/>";
+			}
+			echo "<p class=\"respondo\"><span style=\"color:green\">".$row2["respondo"]."</span>";
+			echo "</p>\n";	
 		} else {
+			if ($row2["poentoj"]) {
+				echo "<span class='badge'>";
+				if ($row2["lernanta_poentoj"]) {
+					echo $row2["lernanta_poentoj"];
+				}
+				echo "/".$row2["poentoj"]."</span></p>";
+			}
 			echo "<ul class=\"collapsible expandable\"><li>\n";
 			echo "<div class=\"collapsible-header\"><i class=\"material-icons blue-text text-darken-2\">edit</i>";
-			echo "<span style=\"color:blue\">".$row2["respondo"]."</span></div>\n";
+			echo "<span style=\"color:blue\">".nl2br($row2["respondo"])."</span>";
+			
+			echo "</div>\n";
 			echo "<div class=\"collapsible-body\"><span>";
     		if ($row2["poentoj"]) {
     			// cet question doit être corrigé avec une notation
-    			echo "<p><select><option value='' disabled selected>Notu la respondon</option>";
+    			if ($row2["lernanta_poentoj"]) {
+					echo "<p><select name='noto".$row2["respondo_id"]."'><option value='' disabled>Notu la respondon</option>";
+    			} else {
+    				echo "<p><select name='noto".$row2["respondo_id"]."'><option value='' disabled selected>Notu la respondon</option>";
+    			}
     			for ($i=0;$i<=intval($row2["poentoj"]);$i++) {
-    				echo "<option value='".$i."'>".$i."</option>";
+    				echo "<option value='".$i."' ";
+    				if ($row2["lernanta_poentoj"] && $row2["lernanta_poentoj"]==$i) {
+    					echo "selected";
+    				}
+    				echo ">".$i."</option>";
     			}
     			echo "</select></p>";
     		}

@@ -49,14 +49,14 @@ if ($enkonduko) {
 	echo "</div>";
 }
 
-$query = "select ekzercoj.id,ekzercoj.komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id where kurso='".$kurso."' and numero='".$leciono."'";
+$query = "select ekzercoj.id,ekzercoj.komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id where kurso='".$kurso."' and numero='".$leciono."' order by lecioneroj.ordo,ekzercoj.id";
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
 	echo "<p class=\"parto\">";
 	echo "<strong>EXERCICE : </strong>".$row["komando"];
 	echo "</p>";
 	$ekzerco_id = $row["id"];
-	$query2 = "select ekzerceroj.numero,ekzerceroj.demando,respondoj.respondo,respondoj.gxusta,respondoj.korekto from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo";
+	$query2 = "select ekzerceroj.numero,ekzerceroj.demando,respondoj.respondo,respondoj.gxusta,respondoj.korekto from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo,ekzerceroj.numero";
 	$result2 = $bdd->query($query2);
 	while ($row2=$result2->fetch()) {
 		echo "<p>".$row2["numero"].". ".$row2["demando"]."<br>\n";

@@ -46,24 +46,44 @@ $leciono_id = $row["leciono_id"];
 
 
 
-$query = "select ekzercoj.id,ekzercoj.komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id where kurso='".$kurso."' and numero='".$leciono."'";
+$query = "select ekzercoj.id,ekzercoj.komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id where kurso='".$kurso."' and numero='".$leciono."' order by lecioneroj.ordo,ekzercoj.id";
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
 	echo "<p class=\"parto\">";
 	echo "<strong>EXERCICE : </strong>".$row["komando"];
 	echo "</p>";
 	$ekzerco_id = $row["id"];
-	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.respondo as bona_respondo,respondoj.respondo,respondoj.gxusta,respondoj.korekto from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo";
+	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.respondo as bona_respondo,ekzerceroj.normaligita as normaligita_bona_respondo,respondoj.respondo,respondoj.normaligita as normaligita_lernanta_respondo,respondoj.gxusta,respondoj.korekto,ekzerceroj.poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.numero";
 	$result2 = $bdd->query($query2);
 	while ($row2=$result2->fetch()) {
+		$gxusta = $row2["gxusta"]==1;
+		if (!$gxusta) {
+			$lernantaRespondo = $row2["normaligita_lernanta_respondo"];
+			$bonaRespondo = $row2["normaligita_bona_respondo"];
+			$gxusta = kontroliRespondon($lernantaRespondo,$bonaRespondo);
+			// TODO : vérifier les points en base et les afficher
+			// Afficher les points sur les mauvaises réponses ou réponses non corrigées (indiquer : /X points)
+			// Afficher les points sur les bonnes réponses (indiquer : X/X points)
+			// Quand on coche la case verte, mettre automatiquement le bon nombre de points
+			// sauvegarder en base le nombre de points choisi par le correcteur
+			// remplir le champ "normaligita" pour les réponses types
+		}
 		echo "<p class=\"demando\">".$row2["numero"].". ".$row2["demando"]."</p>\n";
-		if ($row2["gxusta"]==1) {
+		if ($gxusta) {
 			echo "<p class=\"respondo\"><span style=\"color:green\">".$row2["respondo"]."</span></p>\n";	
 		} else {
 			echo "<ul class=\"collapsible expandable\"><li>\n";
 			echo "<div class=\"collapsible-header\"><i class=\"material-icons blue-text text-darken-2\">edit</i>";
 			echo "<span style=\"color:blue\">".$row2["respondo"]."</span></div>\n";
 			echo "<div class=\"collapsible-body\"><span>";
+    		if ($row2["poentoj"]) {
+    			// cet question doit être corrigé avec une notation
+    			echo "<p><select><option value='' disabled selected>Notu la respondon</option>";
+    			for ($i=0;$i<=intval($row2["poentoj"]);$i++) {
+    				echo "<option value='".$i."'>".$i."</option>";
+    			}
+    			echo "</select></p>";
+    		}
 			echo "<p><label><input type=\"checkbox\" class=\"filled-in\" name='bonaRespondo".$row2["respondo_id"]."' />";
       		echo "<span>bonne réponse (cochez cette case si la phrase vous semble bonne pour enrichir le corrigé type)</span></label></p>";
 			echo "<p>(corrigé type : ".$row2["bona_respondo"].")</p>";

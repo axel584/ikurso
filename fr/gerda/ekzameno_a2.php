@@ -83,25 +83,25 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 40&nbsp;minutoj  </p>
 		<p>Maksimumo de akireblaj poentoj en tiu parto: 25 poentoj</p>
 		<h3>Unua ekzerco</h3>
 		<div class="row">
-			<p class="col s12 center-align">
-				<img class="responsive-img" src="bildoj/icone-place-assise.jpg"/>
-				<img class="responsive-img" src="bildoj/icone-interdit-manger.jpg"/>
-				<img class="responsive-img" src="bildoj/icone-animaux-interdits.jpg"/>
-				<img class="responsive-img" src="bildoj/icone-telephone-ok.jpg"/>
-				<img class="responsive-img" src="bildoj/icone-musique-interdite.jpg"/>
-				<img class="responsive-img" src="bildoj/icone-interdit-parler.jpg"/>
-			</p>
+			<p class="col s4 m2 center-align"><img class="responsive-img" src="bildoj/icone-place-assise.jpg"/><br>-A-</p>
+			<p class="col s4 m2 center-align"><img class="responsive-img" src="bildoj/icone-interdit-manger.jpg"/><br>-B-</p>
+			<p class="col s4 m2 center-align"><img class="responsive-img" src="bildoj/icone-animaux-interdits.jpg"/><br>-C-</p>
+			<p class="col s4 m2 center-align"><img class="responsive-img" src="bildoj/icone-telephone-ok.jpg"/><br>-D-</p>
+			<p class="col s4 m2 center-align"><img class="responsive-img" src="bildoj/icone-musique-interdite.jpg"/><br>-E-</p>
+			<p class="col s4 m2 center-align"><img class="responsive-img" src="bildoj/icone-interdit-parler.jpg"/><br>-F-</p>
 		</div>
 		<?php 
 			getEkzercon(299,$persono_id);
 		?>
 		<h3>Dua ekzerco</h3>
 		<div class="row">
-			<p class="col s12 center-align">
-				<img class="responsive-img" src="bildoj/knabino-1.jpg"/>
-				<img class="responsive-img" src="bildoj/knabino-2.jpg"/>
-				<img class="responsive-img" src="bildoj/knabino-3.jpg"/>
-			</p>
+			<p>Vi ricevas ĉi tion per via komputilo de via franca amikino.</p>
+			<p class="col s12 center-align"><img class="responsive-img" src="bildoj/msg-sarah.jpg"/></p>
+		</div>
+		<div class="row">
+				<p class="col s8 m4 center-align"><img class="responsive-img" src="bildoj/knabino-1.jpg"/><br>-A-</p>
+				<p class="col s8 m4 center-align"><img class="responsive-img" src="bildoj/knabino-2.jpg"/><br>-B-</p>
+				<p class="col s8 m4 center-align"><img class="responsive-img" src="bildoj/knabino-3.jpg"/><br>-C-</p>
 		</div>
 		<?php 
 			getEkzercon(300,$persono_id);

@@ -77,7 +77,7 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 40&nbsp;minutoj  </p>
 			</fieldset>		
 		<?php 
 			getEkzercon(298,$persono_id);		
-
+		}
 		if ($section=="3") {
 		?>	
 		<p>Maksimumo de akireblaj poentoj en tiu parto: 25 poentoj</p>
@@ -87,9 +87,9 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 40&nbsp;minutoj  </p>
 				<img class="responsive-img" src="bildoj/icone-place-assise.jpg"/>
 				<img class="responsive-img" src="bildoj/icone-interdit-manger.jpg"/>
 				<img class="responsive-img" src="bildoj/icone-animaux-interdits.jpg"/>
-				<img class="responsive-img" src="bildoj/icone-place-assise.jpg"/>
-				<img class="responsive-img" src="bildoj/icone-place-assise.jpg"/>
-				<img class="responsive-img" src="bildoj/icone-place-assise.jpg"/>
+				<img class="responsive-img" src="bildoj/icone-telephone-ok.jpg"/>
+				<img class="responsive-img" src="bildoj/icone-musique-interdite.jpg"/>
+				<img class="responsive-img" src="bildoj/icone-interdit-parler.jpg"/>
 			</p>
 		</div>
 		<?php 
@@ -98,7 +98,9 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 40&nbsp;minutoj  </p>
 		<h3>Dua ekzerco</h3>
 		<div class="row">
 			<p class="col s12 center-align">
-				<img class="responsive-img" src="bildoj/annonce-chat-noir.jpg"/>
+				<img class="responsive-img" src="bildoj/knabino-1.jpg"/>
+				<img class="responsive-img" src="bildoj/knabino-2.jpg"/>
+				<img class="responsive-img" src="bildoj/knabino-3.jpg"/>
 			</p>
 		</div>
 		<?php 
@@ -107,7 +109,7 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 40&nbsp;minutoj  </p>
 		<h3>Tria ekzerco</h3>
 		<div class="row">
 			<p class="col s12 center-align">
-				<img class="responsive-img" src="bildoj/mesagxo.jpg"/>
+				<img class="responsive-img" src="bildoj/sms.jpg"/>
 			</p>
 		</div>
 		<?php 

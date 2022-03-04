@@ -56,15 +56,22 @@ while ($row=$result->fetch()) {
 	echo "<strong>EXERCICE : </strong>".$row["komando"];
 	echo "</p>";
 	$ekzerco_id = $row["id"];
-	$query2 = "select ekzerceroj.numero,ekzerceroj.demando,respondoj.respondo,respondoj.gxusta,respondoj.korekto from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo,ekzerceroj.numero";
+	$query2 = "select ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.poentoj,respondoj.respondo,respondoj.gxusta,respondoj.korekto,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo,ekzerceroj.numero";
 	$result2 = $bdd->query($query2);
 	while ($row2=$result2->fetch()) {
-		echo "<p>".$row2["numero"].". ".$row2["demando"]."<br>\n";
+		echo "<p>".$row2["numero"].". ".$row2["demando"];
+		// on affiche les points s'il y en a
+		if ($row2["poentoj"]) {
+				echo "<span class='badge'>";
+				echo $row2["lernanta_poentoj"];
+				echo "/".$row2["poentoj"]."</span>";
+			}
+		echo "<br/>\n";
 		if ($row2["gxusta"]==1) {
-			echo "<span style=\"color:green\">".$row2["respondo"]."</span></p>\n";
+			echo "<span style=\"color:green\">".nl2br($row2["respondo"])."</span></p>\n";
 			if ($row2['korekto']) { echo "<div class='card green lighten-4 card-content'>".$row2['korekto']."</div>";}			
 		} else {
-			echo "<span style=\"color:blue\">".$row2["respondo"]."</span></p>\n";
+			echo "<span style=\"color:blue\">".nl2br($row2["respondo"])."</span></p>\n";
 			if ($row2['korekto']) { echo "<div class='card green lighten-4 card-content'>".$row2['korekto']."</div>";}
 		}
 }

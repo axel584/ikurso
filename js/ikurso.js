@@ -521,7 +521,6 @@ $("#novigi_pasvorton_sendi_button").click(function () {
 	});
 	
 	$("#registriKorektadon_button").click(function() {
-		console.log("on enregistre la correction");
 		$("#registriKorektadon_button").addClass("disabled");
 		$.ajax({
        		url : $cheminAbsolu+'ajax/registriKorektadon.php',
@@ -539,6 +538,19 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		}
     	});
 	});
+
+  // on voudrait que quand on coche la case verte, ca mette le maximum de points
+  $('input[name^="bonaRespondo"]').change(function() {
+    $name = $(this).attr('name');
+    $id = $name.substring(12);
+    console.log($id);
+    if( $(this).is(':checked')){
+      MaxOpt=$('#noto'+$id+' option').length-1;
+      console.log(MaxOpt);
+      $('#noto'+$id).prop('selectedIndex', MaxOpt );
+    }
+  });
+
 	
 
 	$("#finiLecioneron_button").click(function() {

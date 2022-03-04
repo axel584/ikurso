@@ -19,7 +19,7 @@ include "gerdakapo.inc.php";
 				les bases de la langue – notamment la prononciation – comme, par
 				exemple, ceux qui ont suivi au moins le <a href="<?php echo $vojo;?>fr/cge/index.php">
 				Cours d’espéranto en dix leçons</a>
-				ou le <a href="http://ikurso.net">Kurso de Esperanto</a>.</p>
+				ou le <a href="http://www.kurso.com.br/index.php?fr">Kurso de Esperanto</a>.</p>
 				
 				<p class="parto"><i>Gerda malaperis</i> est un roman de Claude
 				Piron spécifiquement destiné à vous apprendre progressivement à

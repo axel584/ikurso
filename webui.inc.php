@@ -599,7 +599,12 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 		if ($leciono<$row["numero"]) {
 			$classe = 'nova';
 		}
-		echo "<li id='lec".sprintf('%02d',$row["numero"])."' class='".$classe."'><a href='".$chemin.$row["retpagxo"]."'>".$row["numero"]."</a></li>";
+		$numero = $row["numero"];
+		// examen A2 sur Gerda
+		if ($kurso=='GR' and $numero=='26') {
+			$numero='Ekzameno A2';
+		}
+		echo "<li id='lec".sprintf('%02d',$row["numero"])."' class='".$classe."'><a href='".$chemin.$row["retpagxo"]."'>".$numero."</a></li>";
 	}
 	if ($kurso=='GR') {
 		if ($leciono==90) {

@@ -61,19 +61,17 @@ while ($row=$result->fetch()) {
 			$lernantaRespondo = $row2["normaligita_lernanta_respondo"];
 			$bonaRespondo = $row2["normaligita_bona_respondo"];
 			$gxusta = kontroliRespondon($lernantaRespondo,$bonaRespondo);
-			// TODO : vérifier les points en base et les afficher
-			// Afficher les points sur les mauvaises réponses ou réponses non corrigées (indiquer : /X points)
-			// Afficher les points sur les bonnes réponses (indiquer : X/X points)
+			// TODO : 
 			// Quand on coche la case verte, mettre automatiquement le bon nombre de points
-			// sauvegarder en base le nombre de points choisi par le correcteur
-			// remplir le champ "normaligita" pour les réponses types
 		}
 		echo "<p class=\"demando\">".$row2["numero"].". ".$row2["demando"]; // on termine la balise <p> dans la partie gxusta et dans le else
 		if ($gxusta) {
 			
 			if ($row2["poentoj"]) {
 				echo "<span class='badge'>".$row2["poentoj"]."/".$row2["poentoj"]."</span></p>";
+				// pour les bonnes réponses, on stocke dans des champs cachés les points et la case verte cochée
 				echo "<input type='hidden' name='noto".$row2["respondo_id"]."' value='".$row2["poentoj"]."'/>";
+				echo "<input type='hidden' name='bonaRespondo".$row2["respondo_id"]."' value='on'/>";
 			}
 			echo "<p class=\"respondo\"><span style=\"color:green\">".$row2["respondo"]."</span>";
 			echo "</p>\n";	
@@ -94,9 +92,9 @@ while ($row=$result->fetch()) {
     		if ($row2["poentoj"]) {
     			// cet question doit être corrigé avec une notation
     			if ($row2["lernanta_poentoj"]) {
-					echo "<p><select name='noto".$row2["respondo_id"]."'><option value='' disabled>Notu la respondon</option>";
+					echo "<p><select id='noto".$row2["respondo_id"]."' name='noto".$row2["respondo_id"]."'><option value='' disabled>Notu la respondon</option>";
     			} else {
-    				echo "<p><select name='noto".$row2["respondo_id"]."'><option value='' disabled selected>Notu la respondon</option>";
+    				echo "<p><select id='noto".$row2["respondo_id"]."' name='noto".$row2["respondo_id"]."'><option value='' disabled selected>Notu la respondon</option>";
     			}
     			for ($i=0;$i<=intval($row2["poentoj"]);$i++) {
     				echo "<option value='".$i."' ";

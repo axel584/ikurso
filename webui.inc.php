@@ -312,6 +312,10 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 			}
 		}
 		echo "</p>\n";
+		// si on a une image :
+		if ($rowEkzercero["bildo"]) {
+			echo "<p class='col s12 center-align'><img class='responsive-img' src='".$rowEkzercero["bildo"]."'></p>";
+		}
 		echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"\">";
 
 		if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")||($rowEkzerco["typo"]=="stelo-2")) { // cas des types d'exercices textarea

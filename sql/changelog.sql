@@ -4245,7 +4245,7 @@ INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`
 ALTER TABLE  `ekzerceroj` ADD  `poentoj` int(11) AFTER  `korektebla` ;
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (460, '71', 'Présentation', 'TEKSTO', NULL, '1', '1', '0', 2, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (461, '71', 'Klarigoj', 'TEKSTO', NULL, '2', '0', '0', 5, NULL);
-INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (462, '71', 'Parola komprenado', 'EKZERCARO', NULL, '3', '0', '0', 20, NULL);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (462, '71', 'Aŭda komprenado', 'EKZERCARO', NULL, '3', '0', '0', 20, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (463, '71', 'Skriba komprenado', 'EKZERCARO', NULL, '4', '0', '0', 30, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (464, '71', 'Skriba produktado', 'EKZERCARO', NULL, '5', '0', '0', 30, NULL);
 update lecioneroj set ordo=6 where id=216;
@@ -4350,7 +4350,7 @@ ALTER TABLE  `respondoj` ADD  `poentoj` int(11) AFTER  `korekto` ;
 update lecionoj set lasta=0 where id=93;
 INSERT INTO `lecionoj` (`id`, `numero`, `titolo`, `retpagxo`, `kurso`, `unua`, `lasta`) VALUES (94, '26', 'Ekzameno A2', 'ekzameno_a2.php', 'GR', '0', '1');
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (465, 94, 'Klarigoj', 'TEKSTO', NULL, '1', '1', '0', 5, NULL);
-INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (466, 94, 'Parola komprenado', 'EKZERCARO', NULL, '2', '0', '0', 25, NULL);
+INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (466, 94, 'Aŭda komprenado', 'EKZERCARO', NULL, '2', '0', '0', 25, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (467, 94, 'Skriba komprenado', 'EKZERCARO', NULL, '3', '0', '0', 30, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (468, 94, 'Skriba produktado', 'EKZERCARO', NULL, '4', '0', '0', 45, NULL);
 INSERT INTO `lecioneroj` (`id`, `leciono_id`, `titolo`, `tipo`, `enhavo`, `ordo`, `unua`, `lasta`, `dauxro`, `android`) VALUES (469, 94, 'Envoi des exercices', 'TEKSTO', NULL, '6', '0', '1',5,NULL);

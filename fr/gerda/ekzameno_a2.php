@@ -19,7 +19,7 @@ include "gerdakapo.inc.php";
 
 <table><thead><tr><th>Naturo de la ekzamen-partoj</th><th>Daŭro</th><th>Noto</th></tr></thead>
 	<tbody>
-		<tr><td><b>Parola komprenado</b>:<br/>Respondo al komprenado-demandaroj pri tri aŭ kvar mallongaj dokumentoj registritaj kiuj temas pri ĉiutagaj situacioj. (du aŭskultoj)<br/>Maksimuma daŭro de la aŭskultotaj dokumentoj: 5 minutoj</td>
+		<tr><td><b>Aŭda komprenado</b>:<br/>Respondo al komprenado-demandaroj pri tri aŭ kvar mallongaj dokumentoj registritaj kiuj temas pri ĉiutagaj situacioj. (du aŭskultoj)<br/>Maksimuma daŭro de la aŭskultotaj dokumentoj: 5 minutoj</td>
 		<td>Proksimume 25&nbsp;minutoj </td><td>/25</td></tr>
 <tr><td><b>Skriba komprenado</b>:<br/>Respondo al komprenado-demandaroj pri tri aŭ kvar mallongaj dokumentoj skribitaj kiuj temas pri ĉiutagaj situacioj.</td>
 		<td>30&nbsp;minutoj </td><td>/25</td></tr>

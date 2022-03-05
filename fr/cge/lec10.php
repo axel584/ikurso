@@ -27,7 +27,7 @@ include "dlekkapo.inc.php";
 			</p>
 			<p>Ce test est entièrement en espéranto. Il comprend une introduction expliquant le déroulement du test et les notes à obtenir, et trois parties&nbsp;: </p>
 			<ul class="klarigo">
-				<li>Une partie de compréhension orale (<i>Parola komprenado</i>) d’une durée de 20 minutes. Notée sur 25 points.</li>
+				<li>Une partie de compréhension orale (<i>Aŭda komprenado</i>) d’une durée de 20 minutes. Notée sur 25 points.</li>
 				<li>Une partie de compréhension écrite (<i>Skriba komprenado</i>) d’une durée de 30 minutes. Notée sur 25 points.</li>
 				<li>Une partie production écrite (<i>Skriba produktado</i>) d'une durée de 30 minutes. Notée sur 25 points.</li>
 			</ul>
@@ -44,7 +44,7 @@ include "dlekkapo.inc.php";
 
 <table><thead><tr><th>Naturo de la ekzamen-partoj</th><th>Daŭro</th><th>Noto</th></tr></thead>
 	<tbody>
-		<tr><td><b>Parola komprenado</b>:<br/>Respondo al demandaro pri tri aŭ kvar tre mallongaj dokumentoj registritaj, kiuj temas pri ĉiutagaj situacioj. (du aŭskultoj)<br/>Maksimuma daŭro de la aŭskultotaj dokumentoj: 3 minutoj</td>
+		<tr><td><b>Aŭda komprenado</b>:<br/>Respondo al demandaro pri tri aŭ kvar tre mallongaj dokumentoj registritaj, kiuj temas pri ĉiutagaj situacioj. (du aŭskultoj)<br/>Maksimuma daŭro de la aŭskultotaj dokumentoj: 3 minutoj</td>
 		<td>Proksimume 20&nbsp;minutoj </td><td>/25</td></tr>
 <tr><td><b>Skriba komprenado</b>:<br/>Respondo al demandaro pri tri aŭ kvar skribaj dokumentoj kiuj temas pri ĉiutagaj situacioj.</td>
 		<td>30&nbsp;minutoj </td><td>/25</td></tr>

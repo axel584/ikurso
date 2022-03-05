@@ -98,11 +98,6 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 40&nbsp;minutoj  </p>
 			<p>Vi ricevas ĉi tion per via komputilo de via franca amikino.</p>
 			<p class="col s12 center-align"><img class="responsive-img" src="bildoj/msg-sarah.jpg"/></p>
 		</div>
-		<div class="row">
-				<p class="col s8 m4 center-align"><img class="responsive-img" src="bildoj/knabino-1.jpg"/><br>-A-</p>
-				<p class="col s8 m4 center-align"><img class="responsive-img" src="bildoj/knabino-2.jpg"/><br>-B-</p>
-				<p class="col s8 m4 center-align"><img class="responsive-img" src="bildoj/knabino-3.jpg"/><br>-C-</p>
-		</div>
 		<?php 
 			getEkzercon(300,$persono_id);
 		?>

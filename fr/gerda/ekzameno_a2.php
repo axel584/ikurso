@@ -109,10 +109,20 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 40&nbsp;minutoj  </p>
 		</div>
 		<?php 
 			getEkzercon(301,$persono_id);
-		?>
-		
-
+		}
+		if ($section=="4") {
+		?>	
+		<p>Maksimumo de akireblaj poentoj en tiu parto: 25 poentoj</p>
+		<h3>Unua ekzerco</h3>
 		<?php 
+			getEkzercon(302,$persono_id);
+		?>
+		<h3>Dua ekzerco</h3>
+		<div class="row">
+			<p class="col s12 center-align"><img class="responsive-img" src="bildoj/letero-Filipo.jpg"/></p>
+		</div>
+		<?php 
+			getEkzercon(303,$persono_id);
 		} // fin section 5
 		if ($section=="6") {
 			recapitulatif_lecon_avant_envoi('GR',$leciono,$persono_id);

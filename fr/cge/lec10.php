@@ -55,7 +55,7 @@ include "dlekkapo.inc.php";
 </table>
 
 <p>Sukcesa sojlo por akiri diplomon: 37,5/75<br/>
-Minimuma noto bezonata por ĉiu testo: 5/25<br/>
+Minimuma noto bezonata por ĉiu ekzamen-parto: 5/25<br/>
 Daŭro de la tuta testo: 1&nbsp;horo kaj 20&nbsp;minutoj  </p>
 
 		<?php 

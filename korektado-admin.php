@@ -21,17 +21,10 @@ $titolo = $row["titolo"];
 			<h2><?=$titolo?></h2>
 
 <?php
-
-//$query = "select kodo,demando,komando,count(*) as combien,max(dato) from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where numero=".$leciono." and kurso='".$kurso."' group by komando,kodo, demando order by kodo,max(dato) desc";
-//$query = "select kodo,demando,count(*) as combien,max(dato) from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where numero=".$leciono." and kurso='".$kurso."' group by kodo, demando order by kodo,max(dato) desc";
-$query = "select ekzerceroj.id,ekzerceroj.numero,demando from ekzerceroj join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where lecionoj.numero=".$leciono." and kurso='".$kurso."'"; 
+$query = "select ekzerceroj.id,ekzerceroj.numero,demando from ekzerceroj join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero"; 
 $result = $bdd->query($query);
 $komando="";
 while ($row=$result->fetch()) {
-	// if ($row["komando"]!=$komando) {
-	// 	$komando=$row["komando"];
-	// 	print "<h3>".$komando."</h3>";
-	// }
 	$ekzerceroj_id= $row["id"];
 	echo "<p>".$row["numero"].". ".$row["demando"]."<br>\n";
 	// on va chercher la bonne réponse en base :
@@ -64,33 +57,41 @@ while ($row=$result->fetch()) {
 	</article>
 
 		
-		<aside class="col s12 m10 l3 offset-m1 push-l1">
-
+	<aside class="col s12 m10 l3 offset-m1 push-l1">
 
 			<ul class="collapsible" data-collapsible="expandable">
 
 			<li class="active">
-				<div class="collapsible-header"><i class="material-icons">toc</i>DLEK</div>
+				<div class="collapsible-header">DLEK</div>
+				<div class='collapsible-header'>
+					<ul class="collection">
 
 <?php
 
 $query = "SELECT numero,kurso,titolo  FROM `lecionoj` WHERE kurso='CG' order by numero";
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
-	echo "<div class='collapsible-header'><a href='korektado-admin.php?kurso=CG&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></div>\n";
+	$nbReponse = $nbReponse + 1;
+	echo "<li><a href='korektado.php?kurso=CG&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></li>\n";
 }
 ?>
-				<div class="collapsible-header"><i class="material-icons">toc</i>Gerda Malaperis</div>
+					</ul>
+				</div>
+				<div class="collapsible-header active">Gerda Malaperis</div>
+				<div class='collapsible-header'>
+					<ul class="collection">
 
 <?php
 
 $query = "SELECT numero,kurso,titolo  FROM `lecionoj` WHERE kurso='GR' order by numero";
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
-	echo "<div class='collapsible-header'><a href='korektado-admin.php?kurso=GR&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></div>\n";
+	$nbReponse = $nbReponse + 1;
+	echo "<li><a href='korektado.php?kurso=GR&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></li>\n";
 }
 ?>	
-
+					</ul>
+				</div>
 			</li>
 		</ul>	
 

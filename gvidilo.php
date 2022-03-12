@@ -111,7 +111,8 @@ $titolo = $row["titolo"];
 				n’hésitez pas à le signaler aux administrateurs. </p>
 			<p>Si vous optez pour la <strong>correction en ligne</strong>, vous pourrez indiquer directement 
 				lors de la correction que la réponse donnée doit être considérée comme correcte (voir dans le chapitre suivant).</p>
-			
+						
+				
 			<h2>Suivi des élèves</h2>
 			
 			<h3 id="combien" class="scrollspy">Combien d’élèves vais-je avoir&nbsp;?</h3>
@@ -206,14 +207,14 @@ $titolo = $row["titolo"];
 			<p class="parto">Comme nous l’avons vu précédemment, vous serez averti par courriel lorsque vous aurez un nouvel élève.
 			Vous serez également averti par courriel lorsque votre élève enverra un nouveau devoir. Vous recevrez en réalité deux messages&nbsp;: </p>
 			<ul class="sublisto">
-				<li>un message dont le sujet indique le numéro de la leçon et le pseudo de votre élève&nbsp;: « lec… de … »</li>
-				<li>un message dont le sujet est « Nouvelle leçon de … ».</li>
+				<li>un message dont le sujet indique le numéro de la leçon et le pseudo de votre élève&nbsp;: «&nbsp;lec&nbsp;… de&nbsp;…&nbsp;»</li>
+				<li>un message dont le sujet est «&nbsp;Nouvelle leçon de&nbsp;…&nbsp;».</li>
 			</ul>
 			<p>Les échanges entre vous et votre élève peuvent se faire par courriel ou directement en ligne sur le site.</p> 
 
 			<h3 id="courriel" class="scrollspy">Comment corriger par courriel&nbsp;?</h3>
 			
-			<p class="parto">Les réponses aux exercices données par votre élève vous sont toutes transmises dans le courriel « lec … de … ».<br>
+			<p class="parto">Les réponses aux exercices données par votre élève vous sont toutes transmises dans le courriel «&nbsp;lec&nbsp;… de&nbsp;…&nbsp;».<br>
 				Les énoncés sont écrits en noir, et les réponses de votre élève sont en bleu. 
 				Pour les exercices bénéficiant d’une correction automatique, les bonnes réponses sont en vert.</p>
 			<p><strong>ATTENTION</strong> : L’émetteur du message électronique est ikurso@esperanto-france.org <br>
@@ -221,7 +222,7 @@ $titolo = $row["titolo"];
 				
 			<h3 id="online" class="scrollspy">Comment corriger en ligne&nbsp;?</h3>
 			
-			<p class="parto">Pour corriger en ligne, il vous suffit de cliquer sur le lien donné dans le message « Nouvelle leçon de ... ».</p>
+			<p class="parto">Pour corriger en ligne, il vous suffit de cliquer sur le lien donné dans le message «&nbsp;Nouvelle leçon de&nbsp;…&nbsp;».</p>
 			<p>Cette page affiche tous les exercices de la leçon et les réponses données par votre élève.</p>
 			<ul class="sublisto">
 				<li>Pour corriger, cliquez sur le bouton <strong>CORRIGER CETTE LEÇON EN LIGNE</strong> qui se trouve en bas de la page.</li>
@@ -288,9 +289,52 @@ $titolo = $row["titolo"];
 				<em>Avec ikurso@esperanto-france.org</em>. En effet, par défaut les messages envoyés par le site ont comme expéditeur 
 				l’adresse courriel de votre élève, mais cela est considéré comme du spam par certains systèmes de messagerie. 
 				En utilisant l’adresse ikurso@esperanto-france.org comme expéditeur, cela permet d’éviter ce problème.</p>
-			<p>Vous avez également la possibilité de corriger directement en ligne en cliquant sur le bouton <strong>CORRIGER CETTE LEÇON EN LIGNE</strong>, 
-				comme nous l’avons vu dans précédemment.</p>
+			<p>Vous avez également la possibilité de corriger directement en ligne en cliquant sur le bouton <strong>CORRIGER CETTE LEÇON EN LIGNE</strong>, comme nous l’avons vu dans précédemment.</p>
 					
+			<h2 class="scrollspy">Les tests de fin de cours</h2>
+
+			<h3 id="exam" class="scrollspy">Présentation des tests</h3>
+			
+			<p class="parto">
+				À la fin du du cours en dix leçons, l’élève est invité à tester son niveau en passant un test de niveau A1. <br />À la fin du cours <em>Gerda malaperis</em> est proposé un test de niveau A2.</p>
+				<p>Ces tests sont conçus sur le modèle des examens de niveau A1 et A2, selon le CECRL (<a href="https://www.service-public.fr/particuliers/vosdroits/F34739">cadre européen de référence pour les langues</a>) qui permet d'évaluer son niveau de maîtruse d’une langue étrangère. Pour plus d’information, voir par exemple <a href="https://fr.wikipedia.org/wiki/Cadre_europ%C3%A9en_commun_de_r%C3%A9f%C3%A9rence_pour_les_langues">l’article de Wikipédia sur le CECRL</a>.</p>		
+				
+			<p>Les explications sur le contenu de chacun de ces tests sont données pour les élèves, en français et en espéranto, sur la page <a href="https://ikurso.esperanto-france.org/fr/cge/intro.php">https://ikurso.esperanto-france.org/fr/cge/intro.php</a> pour le test de niveau A1 et sur la page <a href="https://ikurso.esperanto-france.org/fr/gerda/ekzameno_a2.php">https://ikurso.esperanto-france.org/fr/gerda/ekzameno_a2.php</a> pour le test de niveau A2.</p>
+						
+			<h3 id="correxam" class="scrollspy">Comment corriger les tests&nbsp;?</h3>
+			
+			<p class="parto">
+			Les tests permettent d’évaluer plusieurs compétences&nbsp;: compréhension orale, compréhension écrite et production écrite. 
+			</p>
+			<h4>Compréhension orale et compréhension écrite</h4>
+			<p class="parto">Dans les deux premières parties du test, les questions posées permettent de vérifier si l’élève a bien compris l’enregistrement audio ou les documents écrits. Certaines questions de ces tests sont des QCM (questions à choix multiples). L’élève doit choisir une réponse parmi les réponses proposées. Lors d’un examen sur papier, il faut cocher la bonne réponse, mais sur ce site, l'élève doit recopier la bonne réponse.</p>
+			<p>Lorsque vous corrigerez, vous devrez garder à l’esprit que ce qui est testé dans ces exercices est la compréhension. Il ne faudra donc pas pénaliser l’élève en cas de faute dans les réponses et noter la réponse comme juste si elle correspond à l’un des choix proposés.</p>
+			<p>Par exemple, pour la question <b>Kion proponas Maria? (iri al restoracio / bicikli / aĉeti panon)</b>, si l’élève répond <em>bicikle</em> ou <em>si biciklas</em> ou <em>biciklo</em>, la réponse doit être notée comme correcte.</p>
+			<p>Dans l’outil de correction en ligne, vous verrez en vert les réponses déjà connues et considérées comme justes, mais l'élève ne les voit pas (contrairement aux autres exercices pour lesquels l’élève peut voir l’auto-correction).</p> 
+
+			<p class="parto">
+			Certaines questions ne proposent pas de choix de réponse. Ces questions, plus difficiles, sont notées sur 2 points. Ce que l’on demande avant tout à l’élève est de comprendre la question et de retrouver la réponse dans l’enregistrement audio ou le document écrit. Comme pour les QCM, il convient de noter la compréhension et non pas l’expression écrite. Il ne faudra donc pas pénaliser l’élève en cas de faute dans la réponse. Que l’élève réponde par un mot ou par une phrase complète n’a pas d’importance, dans la mesure où l’information demandée a bien été restituée.
+			</p>
+			
+			<h4>Production écrite</h4>
+			
+			<p class="parto">
+				Cette partie se compose de deux exercices, notés entre 10 et 15 points selon les exercices. Pour chaque exercice, il convient de noter différents aspects de la production de l’élève&nbsp;:</p>
+			<ul class="klarigo">
+				<li>respect de la consigne&nbsp;;</li>
+				<li>correction sociolinguistique&nbsp;;</li>
+				<li>capacité à informer et/ou décrire&nbsp;;</li>
+				<li>lexique, orthographe&nbsp;;</li>
+				<li>grammaire&nbsp;;</li>
+				<li>cohérence et cohésion.</li>
+			</ul>
+			
+			<h3>Si vous avez un doute, une question, une suggestion…</h3>
+			
+			<p class="parto">N’hésitez pas à <a href="https://ikurso.esperanto-france.org/reago.php">nous contacter</a>. </p>
+			
+			<p>Les tests A1 et A2 sont nouveaux dans ce cours. Toute question ou suggestion pourra nous aider à les améliorer et à vous donner plus de conseils utiles pour les corriger.</p>
+			
 			<h2 id="maj" class="scrollspy">Suivi des élèves</h2>
 
 			<h3>Comment mettre à jour les informations concernant mes élèves&nbsp;?</h3>
@@ -382,7 +426,7 @@ $titolo = $row["titolo"];
 						</div>
 					</li>
 					<li>
-						<div class="collapsible-header">Correction des exercices</div>
+						<div class="collapsible-header">Correction des exercices et des tests</div>
 						<div class="collapsible-body">
 							<ul class="collection enhavtabelo">
 								<li><a href="#echanges">Comment se passent les échanges avec les élèves&nbsp;?</a></li>
@@ -390,6 +434,15 @@ $titolo = $row["titolo"];
 								<li><a href="#online">Comment corriger en ligne&nbsp;?</a></li>
 								<li><a href="#eo-fr">Dois-je écrire en français ou en espéranto&nbsp;?</a></li>
 								<li><a href="#probleme">Que faire si je n’ai pas reçu les exercices envoyés&nbsp;?</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="collapsible-header">Correction des tests de fin de cours</div>
+						<div class="collapsible-body">
+							<ul class="collection enhavtabelo">
+								<li><a href="#exam">Présentation des tests</a></li>
+								<li><a href="#correxam">Comment corriger les tests&nbsp;?</a></li>
 							</ul>
 						</div>
 					</li>

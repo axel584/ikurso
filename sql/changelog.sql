@@ -4396,3 +4396,58 @@ INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekze
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES(2308, 302, NULL, 33, 'Redaktu de 60 ĝis 80 vortoj', NULL, NULL, NULL, 0, 0, 13);
 INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (303, 'Vi ricevis ĉi tiun leteron. Vi respondas al Filipo: vi dankas lin, sed vi ne povas akcepti lian inviton. Vi diras kial, kaj vi proponas al li ion alian. ', 468, NULL,NULL, 'verkado-2', '1', '0');	
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES(2309, 303, NULL, 34, 'Redaktu de 60 ĝis 80 vortoj', NULL, NULL, NULL, 0, 0, 12);
+
+---- modif qcm examen
+UPDATE `ekzerceroj` SET `demando` = 'Kiom da jaroj havas Maria? <qcm>dek jarojn / tridek jarojn / dudek jarojn</qcm>' WHERE `ekzerceroj`.`id` = 2236;
+UPDATE `ekzerceroj` SET `demando` = 'Kie laboras Maria? <qcm>en restoracio / en vendejo / en lernejo</qcm>' WHERE `ekzerceroj`.`id` = 2237;
+UPDATE `ekzerceroj` SET `demando` = 'Kion vendas Maria? <qcm>bildkartojn / kukojn / fruktojn</qcm>' WHERE `ekzerceroj`.`id` = 2238;
+UPDATE `ekzerceroj` SET `demando` = 'Kion proponas Maria? <qcm>iri al restoracio / bicikli / aĉeti panon</qcm>' WHERE `ekzerceroj`.`id` = 2241;
+UPDATE `ekzerceroj` SET `demando` = 'Kien ili iros? <qcm>en ĝardenon / en vendejon / en arbaron</qcm>' WHERE `ekzerceroj`.`id` = 2242;
+UPDATE `ekzerceroj` SET `demando` = 'Kiam ili promenos? <qcm>lundon / dimanĉon / ĵaŭdon</qcm>' WHERE `ekzerceroj`.`id` = 2244;
+UPDATE `ekzerceroj` SET `demando` = 'Kion ili kolektos? <qcm>fruktojn / florojn / ovojn</qcm>' WHERE `ekzerceroj`.`id` = 2245;
+UPDATE `ekzerceroj` SET `demando` = 'Kiu petas la horon? <qcm>infano / sinjorino / sinjoro</qcm>' WHERE `ekzerceroj`.`id` = 2246;
+UPDATE `ekzerceroj` SET `demando` = 'Kiam venos la tramo? <qcm>post tridek minutoj / post dek minutoj / post unu horo</qcm>' WHERE `ekzerceroj`.`id` = 2248;
+UPDATE `ekzerceroj` SET `demando` = 'Kiom da jaroj havas Julia? <qcm>dek jarojn / tridek jarojn / sesdek jarojn</qcm>' WHERE `ekzerceroj`.`id` = 2250;
+UPDATE `ekzerceroj` SET `demando` = 'Pri kiu tago ni parolas en la rakonto? <qcm>dimanĉo / lundo / sabato</qcm>' WHERE `ekzerceroj`.`id` = 2252;
+UPDATE `ekzerceroj` SET `demando` = 'Kion Julia faras hodiaŭ? <qcm>ŝi biciklas / ŝi vizitas loĝejon / ŝi manĝas</qcm>' WHERE `ekzerceroj`.`id` = 2253;
+UPDATE `ekzerceroj` SET `demando` = 'Kie ŝi laboras? <qcm>en ĝardeno / en vendejo / en restoracio</qcm>' WHERE `ekzerceroj`.`id` = 2254;
+UPDATE `ekzerceroj` SET `demando` = 'Kio estas la dokumento? <qcm>letero / poŝtkarto / mesaĝo</qcm>' WHERE `ekzerceroj`.`id` = 2255;
+UPDATE `ekzerceroj` SET `demando` = 'Kien Julia iris hieraŭ? <qcm>en vendejon / en restoracion / ĉe sian amikon</qcm>' WHERE `ekzerceroj`.`id` = 2257;
+UPDATE `ekzerceroj` SET `demando` = 'Kiun Julia renkontos morgaŭ? <qcm>sian patron / sian bofratinon / junan viron</qcm>' WHERE `ekzerceroj`.`id` = 2258;
+UPDATE `ekzerceroj` SET `demando` = 'Kiu skribis la anoncon? <qcm>Sinjorino Bonin / Sinjoro Dupont / Sinjoro Durand</qcm>' WHERE `ekzerceroj`.`id` = 2260;
+UPDATE `ekzerceroj` SET `demando` = 'Kiaj estas ĝiaj okuloj? <qcm>verdaj / bluaj / brunaj</qcm>' WHERE `ekzerceroj`.`id` = 2262;
+UPDATE `ekzerceroj` SET `demando` = 'Kiam ĝi foriris? <qcm>mardon / ĵaŭdon / sabaton</qcm>' WHERE `ekzerceroj`.`id` = 2263;
+UPDATE `ekzerceroj` SET `demando` = 'Kiu skribis tiun mesaĝon? <qcm>sinjoro Barraud / sinjoro Chapon / sinjoro Giraud</qcm>' WHERE `ekzerceroj`.`id` = 2265;
+UPDATE `ekzerceroj` SET `demando` = 'Pri kiu li parolas? <qcm>knabino / knabo / besto</qcm>' WHERE `ekzerceroj`.`id` = 2266;
+UPDATE `ekzerceroj` SET `demando` = 'Kion li proponas? <qcm>rendevuon / promenadon / tagmanĝon</qcm>' WHERE `ekzerceroj`.`id` = 2268;
+UPDATE `ekzerceroj` SET `demando` = 'Kiel ni povas kontakti lin? <qcm>per letero / per telefono / per mesaĝo</qcm>' WHERE `ekzerceroj`.`id` = 2269;
+UPDATE `ekzerceroj` SET `demando` = 'Kion vi volas aĉeti? <qcm>apartamenton / vendejon / domon</qcm>' WHERE `ekzerceroj`.`id` = 2270;
+UPDATE `ekzerceroj` SET `demando` = 'Kie vi trovis la anoncojn? <qcm>en la interreto / en vendejo / en ĵurnalo</qcm>' WHERE `ekzerceroj`.`id` = 2272;
+UPDATE `ekzerceroj` SET `demando` = 'Kiun anoncon vi povas elekti? <qcm>la unuan / la duan / la trian / la kvaran</qcm>' WHERE `ekzerceroj`.`id` = 2273;
+UPDATE `ekzerceroj` SET `demando` = 'Kion Sarah faros sabaton? <qcm>ŝi iros al la muzeo / ŝi iros al la Eiffel-Turo / ŝi iros al la restoracio</qcm>' WHERE `ekzerceroj`.`id` = 2298;
+UPDATE `ekzerceroj` SET `demando` = 'Kio estas ĉi tiu dokumento? <qcm>letero / poŝtkarto / retmesaĝo</qcm>' WHERE `ekzerceroj`.`id` = 2299;
+UPDATE `ekzerceroj` SET `demando` = 'Kiam foriros Stefania ? <qcm>mardon / oni ne scias / lundon</qcm>' WHERE `ekzerceroj`.`id` = 2300;
+UPDATE `ekzerceroj` SET `demando` = 'La dokumento estas letero. <qcm>vera / malvera / oni ne scias</qcm>', `respondo` = 'malvera' WHERE `ekzerceroj`.`id` = 2303;
+UPDATE `ekzerceroj` SET `demando` = 'Johano estas la frato de Marto. <qcm>vera / malvera / oni ne scias</qcm>', `respondo` = 'oni ne scias' WHERE `ekzerceroj`.`id` = 2304;
+UPDATE `ekzerceroj` SET `demando` = 'La vetero estis bela. <qcm>vera / malvera / oni ne scias</qcm>', `respondo` = 'vera' WHERE `ekzerceroj`.`id` = 2305;
+UPDATE `ekzerceroj` SET `demando` = 'Marto legis libron. <qcm>vera / malvera / oni ne scias</qcm>', `respondo` = 'malvera' WHERE `ekzerceroj`.`id` = 2306;
+UPDATE `ekzerceroj` SET `demando` = 'Johano rigardis birdojn. <qcm>vera / malvera / oni ne scias</qcm>', `respondo` = 'malvera' WHERE `ekzerceroj`.`id` = 2307;
+
+UPDATE `ekzerceroj` SET `demando` = 'Kiujn celas ĉi tiu mesaĝo? <qcm>filozofojn / spektontojn / artistojn</qcm>' WHERE `ekzerceroj`.`id` = 2276; 
+UPDATE `ekzerceroj` SET `demando` = 'Kiu estas la nomo de la teatraĵo? <qcm>La mesaĝo / La motivo / La mistero</qcm>' WHERE `ekzerceroj`.`id` = 2277; 
+UPDATE `ekzerceroj` SET `demando` = 'La bileto kostas kvar eŭrojn. <qcm>vera / malvera / oni ne scias</qcm>' WHERE `ekzerceroj`.`id` = 2278; 
+UPDATE `ekzerceroj` SET `demando` = 'Kie estas la teatro? <qcm>ĉe la numero cent unu de la strato de la ŝtono / ĉe la numero cent de la strato de la ŝtono / ĉe la numero ducent de la strato de la ŝtono</qcm>' WHERE `ekzerceroj`.`id` = 2279; 
+UPDATE `ekzerceroj` SET `demando` = 'Kiam okazos la teatra prezentado? <qcm>lundon / sabaton / mardon</qcm>' WHERE `ekzerceroj`.`id` = 2280; 
+UPDATE `ekzerceroj` SET `demando` = 'Sinjoro Delaponto alvokas la kuracistinon. <qcm>vera / malvera / oni ne scias</qcm>' WHERE `ekzerceroj`.`id` = 2281; 
+UPDATE `ekzerceroj` SET `demando` = 'Kie sinjoro Delapunto havas rendevuon? <qcm>en la restoracio / en la hospitalo / en la lernejo</qcm>' WHERE `ekzerceroj`.`id` = 2282; 
+UPDATE `ekzerceroj` SET `demando` = 'Pri kio la flegistino zorgos? <qcm>lia kapo kaj lia kruro / lia kruro kaj liaj brakoj / lia nazo kaj liaj brakoj</qcm>' WHERE `ekzerceroj`.`id` = 2283; 
+UPDATE `ekzerceroj` SET `demando` = 'Kiam sinjoro Delaponto havas rendevuon? <qcm>la dek-unuan de marto / la dek-kvinan de marto / la dudek-kvinan de marto</qcm>' WHERE `ekzerceroj`.`id` = 2284; 
+UPDATE `ekzerceroj` SET `demando` = 'Je kioma horo sinjoro Delaponto havas rendevuon? <qcm>je la dek unua / je la dek dua / je la dek kvara</qcm>' WHERE `ekzerceroj`.`id` = 2285; 
+UPDATE `ekzerceroj` SET `demando` = 'Tio estas angla kurso. <qcm>vera / malvera / oni ne scias</qcm>' WHERE `ekzerceroj`.`id` = 2286; 
+UPDATE `ekzerceroj` SET `demando` = 'Li aŭ ŝi devas sendi sian nomon. <qcm>vera / malvera / oni ne scias</qcm>' WHERE `ekzerceroj`.`id` = 2287; 
+UPDATE `ekzerceroj` SET `demando` = 'La kurso okazas en la lernejo. <qcm>vera / malvera / oni ne scias</qcm>', `bildo` = '' WHERE `ekzerceroj`.`id` = 2288;
+UPDATE `ekzerceroj` SET `demando` = 'La rendevuo okazos ĵaŭdon la trian de marto. <qcm>vera / malvera / oni ne scias</qcm>' WHERE `ekzerceroj`.`id` = 2289;
+UPDATE `ekzerceroj` SET `demando` = 'Li aŭ ŝi devas alporti sian libron. <qcm>vera / malvera / oni ne scias</qcm>' WHERE `ekzerceroj`.`id` = 2290;
+UPDATE `ekzerceroj` SET `demando` = 'Li aŭ ŝi havas rendevuon kun sia amiko. <qcm>vera / malvera / oni ne scias</qcm>' WHERE `ekzerceroj`.`id` = 2291;
+
+

@@ -324,9 +324,10 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 		echo "</p>\n";
 		// QCM
 		if (count($liste_choix)>0) {
+			echo "<p class='qcm'>";
 			foreach ($liste_choix as $choix){
 				// TODO : ajouter une marge
-				echo "<p>";
+				
 				echo "<label>";
 	        	echo "<input data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." name='res_".$rowEkzercero["id"]."' type='radio' value='".$choix."' ";
 	        	if ($choix==$respondo) {
@@ -335,8 +336,8 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 	        	echo "/>";
 	        	echo "<span>".$choix."</span>";
 	      		echo "</label>";
-				echo "</p>";
 			}
+			echo "</p>";
 		} else { // Cas qui n'est pas un QCM 		
 			// si on a une image :
 			if ($rowEkzercero["bildo"]) {
@@ -406,7 +407,7 @@ function QCM_bildoj($qcm) {
 			} else {
 				$lasta = "";
 			}
-			echo "<label for='00".$indiceQuestion."-0".$indiceProposition."'><input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><span>".$proposition."</span></label><br>";
+			echo "<label for='00".$indiceQuestion."-0".$indiceProposition."'><input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><span>".$proposition."</span></label>";
 			$indiceProposition++;
 		}
 		echo "</div>\n";
@@ -454,7 +455,7 @@ function QCM($qcm) {
 			} else {
 				$lasta = "";
 			}
-			echo "<label for='00".$indiceQuestion."-0".$indiceProposition."'><input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><span>".$proposition."</span></label><br>";
+			echo "<label for='00".$indiceQuestion."-0".$indiceProposition."'><input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><span>".$proposition."</span></label>";
 			$indiceProposition++;
 		}
 		echo "</div>\n";
@@ -517,7 +518,6 @@ function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
 						if (in_array($numero,$eraroj) && (isset($memorkurso["900_".$numero])) && ($memorkurso["900_".$numero]==strval($i))) {
 							echo "</span>";
 						}
-						echo "<br/>";
 						$i++;
 					}
 					echo "</p>\n";

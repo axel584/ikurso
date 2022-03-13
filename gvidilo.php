@@ -307,13 +307,11 @@ $titolo = $row["titolo"];
 			Les tests permettent d’évaluer plusieurs compétences&nbsp;: compréhension orale, compréhension écrite et production écrite. 
 			</p>
 			<h4>Compréhension orale et compréhension écrite</h4>
-			<p class="parto">Dans les deux premières parties du test, les questions posées permettent de vérifier si l’élève a bien compris l’enregistrement audio ou les documents écrits. Certaines questions de ces tests sont des QCM (questions à choix multiples). L’élève doit choisir une réponse parmi les réponses proposées. Lors d’un examen sur papier, il faut cocher la bonne réponse, mais sur ce site, l'élève doit recopier la bonne réponse.</p>
-			<p>Lorsque vous corrigerez, vous devrez garder à l’esprit que ce qui est testé dans ces exercices est la compréhension. Il ne faudra donc pas pénaliser l’élève en cas de faute dans les réponses et noter la réponse comme juste si elle correspond à l’un des choix proposés.</p>
-			<p>Par exemple, pour la question <b>Kion proponas Maria? (iri al restoracio / bicikli / aĉeti panon)</b>, si l’élève répond <em>bicikle</em> ou <em>si biciklas</em> ou <em>biciklo</em>, la réponse doit être notée comme correcte.</p>
+			<p class="parto">Dans les deux premières parties du test, les questions posées permettent de vérifier si l’élève a bien compris l’enregistrement audio ou les documents écrits. Certaines questions de ces tests sont des QCM (questions à choix multiples). L’élève doit choisir une réponse parmi les réponses proposées.</p>
 			<p>Dans l’outil de correction en ligne, vous verrez en vert les réponses déjà connues et considérées comme justes, mais l'élève ne les voit pas (contrairement aux autres exercices pour lesquels l’élève peut voir l’auto-correction).</p> 
 
 			<p class="parto">
-			Certaines questions ne proposent pas de choix de réponse. Ces questions, plus difficiles, sont notées sur 2 points. Ce que l’on demande avant tout à l’élève est de comprendre la question et de retrouver la réponse dans l’enregistrement audio ou le document écrit. Comme pour les QCM, il convient de noter la compréhension et non pas l’expression écrite. Il ne faudra donc pas pénaliser l’élève en cas de faute dans la réponse. Que l’élève réponde par un mot ou par une phrase complète n’a pas d’importance, dans la mesure où l’information demandée a bien été restituée.
+			Certaines questions ne proposent pas de choix de réponse. Ces questions, plus difficiles, sont notées sur 2 points. Ce que l’on demande avant tout à l’élève est de comprendre la question et de retrouver la réponse dans l’enregistrement audio ou le document écrit. Il convient de noter ici la compréhension et non pas l’expression écrite. Il ne faudra donc pas pénaliser l’élève en cas de faute dans la réponse. Que l’élève réponde par un mot ou par une phrase complète n’a pas d’importance, dans la mesure où l’information demandée a bien été restituée.
 			</p>
 			
 			<h4>Production écrite</h4>

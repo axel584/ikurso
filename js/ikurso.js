@@ -152,6 +152,7 @@ $('#eniri_identigilo,#eniri_pasvorto').keyup(function(e) {
 
 // fonction pour les exercices dont la réponse est en base : on souligne en vert si on a la bonne réponse
 $(".korektebla").focusout( function () {
+  console.log("korektebla : ligne 155");
   $ekzercero = $(this).data('ekzercero');
   $studanto = $(this).data('studanto');
   $formulaire = $(this);
@@ -182,10 +183,35 @@ $(".korektebla").focusout( function () {
 
 // fonction pour les exercices dont la réponse N'est PAS en base : on se contente de sauvegarder la réponse 
 $(".nekorektebla").focusout( function () {
+  console.log("nekorektebla : ligne 185");
   $ekzercero = $(this).data('ekzercero');
   $studanto = $(this).data('studanto');
   $formulaire = $(this);
   $respondo=$formulaire.val();
+  if ($respondo!="") {
+          $.ajax({
+          url : $cheminAbsolu+'ajax/memkorektado.php',
+          type : 'GET',
+          dataType : 'json',
+          data : "ekzercero="+$ekzercero+"&studanto="+$studanto+"&respondo="+encodeURIComponent($respondo)+"&korekteblaEkzerco=false",
+          success : function(reponse, statut){ 
+              console.log("sauvegarde OK");
+          },
+          error : function(request, error) {
+            console.log("request : "+request+" / error : "+error);
+            alert("Erreur interne, contactez les administrateurs");
+
+          }
+      });
+  }
+});
+
+$("input[type='radio']").click( function () {
+  console.log("radio : ligne 210");
+  $ekzercero = $(this).data('ekzercero');
+  $studanto = $(this).data('studanto');
+  $respondo=$(this).val();
+  console.log("response : "+$respondo);
   if ($respondo!="") {
           $.ajax({
           url : $cheminAbsolu+'ajax/memkorektado.php',

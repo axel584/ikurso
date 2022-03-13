@@ -303,7 +303,17 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 				$iconprefix="<i class=\"material-icons prefix\" style=\"color:green\">check</i>";
 			} 
 		}
-		echo "<p class='col s12 demando'>".$rowEkzercero["numero"].". ".$rowEkzercero["demando"];
+		// Cas des QCM
+		$demando = $rowEkzercero["demando"];
+		$liste_choix = array();
+		if (strrpos($demando,"<qcm>")) {
+			$debut = strrpos($demando,"<qcm>");	
+			$fin = strrpos($demando,"</qcm>");
+			$chaine_choix = substr($demando, $debut,$fin-$debut);
+			$liste_choix = explode("/",$chaine_choix);
+			$demando = substr($demando,0,$debut); // retire ce qu'il y a à droite des balises <qcm>
+		}
+		echo "<p class='col s12 demando'>".$rowEkzercero["numero"].". ".$demando;
 		if ($rowEkzercero["poentoj"]) {
 			if ($rowEkzercero["poentoj"]==1) { // singulier
 				echo "<span class='badge'>1 poento</span>";
@@ -312,40 +322,56 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 			}
 		}
 		echo "</p>\n";
-		// si on a une image :
-		if ($rowEkzercero["bildo"]) {
-			echo "<p class='col s12 center-align'><img class='responsive-img' src='".$rowEkzercero["bildo"]."'></p>";
-		}
-		echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"\">";
+		// QCM
+		if (count($liste_choix)>0) {
+			foreach ($liste_choix as $choix){
+				// TODO : ajouter une marge
+				echo "<p>";
+				echo "<label>";
+	        	echo "<input data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." name='res_".$rowEkzercero["id"]."' type='radio' value='".$choix."' ";
+	        	if ($choix==$respondo) {
+	        		echo "checked";
+	        	}
+	        	echo "/>";
+	        	echo "<span>".$choix."</span>";
+	      		echo "</label>";
+				echo "</p>";
+			}
+		} else { // Cas qui n'est pas un QCM 		
+			// si on a une image :
+			if ($rowEkzercero["bildo"]) {
+				echo "<p class='col s12 center-align'><img class='responsive-img' src='".$rowEkzercero["bildo"]."'></p>";
+			}
+			echo "<input type='hidden' name=\"dem_".$rowEkzercero["id"]."\" value=\"\">";
 
-		if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")||($rowEkzerco["typo"]=="stelo-2")) { // cas des types d'exercices textarea
-			echo "<div class='input-field col s12'>";
-			echo $iconprefix; // on affiche une marque verte si la réponse est bonne
-			echo "<textarea spellcheck=\"false\" rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
-			if ($rowEkzerco["x2u"]==1) {
-				echo " onkeyup='xAlUtf8(this)'";
+			if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")||($rowEkzerco["typo"]=="stelo-2")) { // cas des types d'exercices textarea
+				echo "<div class='input-field col s12'>";
+				echo $iconprefix; // on affiche une marque verte si la réponse est bonne
+				echo "<textarea spellcheck=\"false\" rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
+				if ($rowEkzerco["x2u"]==1) {
+					echo " onkeyup='xAlUtf8(this)'";
+				}
+				echo " class='materialize-textarea validate ".$valid." ".$styleKorektebla."'>";
+				echo $respondo;
+				echo "</textarea>";
+				if ($rowRespondo['korekto']) {echo "<div class='card green lighten-4 card-content'>".$rowRespondo['korekto']."</div>";}
+				echo "</div>";
+			} else { // cas des types d'exercice sur des champs input
+				echo "<div class='input-field col s12'>";
+				echo $iconprefix; // on affiche une marque verte si la réponse est bonne
+				echo "<input Autocomplete=\"off\" spellcheck=\"false\" data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
+				if ($rowEkzerco["x2u"]==1) {
+					echo " onkeyup='xAlUtf8(this)'";
+				}
+				echo " value=\"";
+				echo $respondo;
+				
+				echo "\" class='validate ".$valid." ".$styleKorektebla."'";
+				echo ">";
+				if ($rowRespondo['korekto']) {echo "<div class='card green lighten-4 card-content'>".$rowRespondo['korekto']."</div>";}
+				echo "</div>";
 			}
-			echo " class='materialize-textarea validate ".$valid." ".$styleKorektebla."'>";
-			echo $respondo;
-			echo "</textarea>";
-			if ($rowRespondo['korekto']) {echo "<div class='card green lighten-4 card-content'>".$rowRespondo['korekto']."</div>";}
-			echo "</div>";
-		} else { // cas des types d'exercice sur des champs input
-			echo "<div class='input-field col s12'>";
-			echo $iconprefix; // on affiche une marque verte si la réponse est bonne
-			echo "<input Autocomplete=\"off\" spellcheck=\"false\" data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
-			if ($rowEkzerco["x2u"]==1) {
-				echo " onkeyup='xAlUtf8(this)'";
-			}
-			echo " value=\"";
-			echo $respondo;
-			
-			echo "\" class='validate ".$valid." ".$styleKorektebla."'";
-			echo ">";
-			if ($rowRespondo['korekto']) {echo "<div class='card green lighten-4 card-content'>".$rowRespondo['korekto']."</div>";}
-			echo "</div>";
 		}
-		
 	}
 	echo "</div>";
 	echo "</div>";

@@ -4449,5 +4449,8 @@ UPDATE `ekzerceroj` SET `demando` = 'La kurso okazas en la lernejo. <qcm>vera / 
 UPDATE `ekzerceroj` SET `demando` = 'La rendevuo okazos ĵaŭdon la trian de marto. <qcm>vera / malvera / oni ne scias</qcm>' WHERE `ekzerceroj`.`id` = 2289;
 UPDATE `ekzerceroj` SET `demando` = 'Li aŭ ŝi devas alporti sian libron. <qcm>vera / malvera / oni ne scias</qcm>' WHERE `ekzerceroj`.`id` = 2290;
 UPDATE `ekzerceroj` SET `demando` = 'Li aŭ ŝi havas rendevuon kun sia amiko. <qcm>vera / malvera / oni ne scias</qcm>' WHERE `ekzerceroj`.`id` = 2291;
+UPDATE `ekzerceroj` SET `demando` = 'Kio estas la dokumentoj? <qcm>anoncoj / retmesaĝo / artikolo</qcm>' WHERE `ekzerceroj`.`id` = 2310；
+UPDATE `ekzerceroj` SET `demando` = 'Kie vi trovis ilin? <qcm>en la interreto / en vendejo / en ĵurnalo</qcm>' WHERE `ekzerceroj`.`id` = 2311
+
 
 

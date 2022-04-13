@@ -209,7 +209,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 			$query = "select count(*) as combien from nuna_kurso where kurso='".$kurso."' and studanto=".$persono_id;
 			$result = $bdd->query($query);
 			$dejaFait = $result->fetch()["combien"];
-			if($tipo=="QCM") { // on vérifie le QCM
+			if($tipo=="QCM") { // on vérifie le QCM 
 				echo '<a id="finiLecioneron_button" class="hide waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
 			} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
 				echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
@@ -324,7 +324,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 		echo "</p>\n";
 		// QCM
 		if (count($liste_choix)>0) {
-			echo "<p class='qcm'>";
+			echo "<p class='qcm_ekzameno'>";
 			foreach ($liste_choix as $choix){
 				// TODO : ajouter une marge
 				

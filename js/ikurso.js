@@ -206,7 +206,7 @@ $(".nekorektebla").focusout( function () {
   }
 });
 
-$("input[type='radio']").click( function () {
+$(".qcm_ekzameno input[type='radio']").click( function () {
   console.log("radio : ligne 210");
   $ekzercero = $(this).data('ekzercero');
   $studanto = $(this).data('studanto');

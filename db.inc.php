@@ -644,7 +644,11 @@ function troviPlejTauganKorektanton($persono_id,$kurso) {
         $procentajxoj = troviPlejTauganKorektantonLauxKriterioj("","",$kurso);    
     }
     // on a notre variable $procentajxoj qui contient les correcteurs dans l'ordre ideal :
-    return key($procentajxoj);
+    if ($procentajxoj) {
+        return key($procentajxoj);
+    } else {
+        return null;
+    }
 }
 
 function protokolo($persono_id,$kategorio,$teksto) {

@@ -80,7 +80,9 @@ function listi_landojn ($lando) {
 function listi_kursojn ($kurso) {
 	global $aliavidigito;
 	echo "<select name=\"kurso\">";
-	echo "<option value=\"\">&nbsp;</option>";
+	if ($kurso=="" || $kurso=="--") {
+		echo "<option value=\"\">Aucun cours choisi</option>";
+	}
 	$listo = konstruiListon("kursoj","kodo","nomo"," order by nomo");	     
 	foreach ($listo as $listero) {
 		echo "<option value='".$listero['valuo']."'";
@@ -90,9 +92,9 @@ function listi_kursojn ($kurso) {
 	} 
 	
 	// on ajoute un dernier choix fourre-tout �a liste
-	echo "<option value=\"\"";
-	if ($kurso==$aliavidigito) { echo "selected";}
-	echo " >".$aliavidigito."</option>";
+	//echo "<option value=\"\"";
+	//if ($kurso==$aliavidigito) { echo "selected";}
+	//echo " >".$aliavidigito."</option>";
 	echo "</select>";
 }
 
@@ -135,7 +137,7 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso,$korektanto_id) {
 	$trovita_korektanto="ne";
 	// repère la dliste du nombre d'élèves qu'un correcteur accepte de corriger. (ex. : correcteur 1 : 8 élèves)
 	$demando =  "select personoj.id,personoj.enirnomo,sum(kiom_lernantoj) as kiom from personoj,korektebla_kurso where personoj.id=korektebla_kurso.korektanto and korektebla_kurso.kurso='".$kurso."' group by enirnomo";
-	echo "sql : ".$demando."<br>\n";
+	//echo "sql : ".$demando."<br>\n";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row = $result->fetch()) {
 		$lernanteblecoj[$row["id"]] = $row["kiom"];	
@@ -151,32 +153,35 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso,$korektanto_id) {
 	}
 	
 	// calcul les pourcentages du remplissage des élèves : ex: correcteur 1 : 75% (6/8)
-	foreach($lernanteblecoj as $sxlosilo => $valuo) { 
-		if (!isset($kiom_lernantoj[$sxlosilo])){
-			$kiom_lernantoj[$sxlosilo]=0;
+	if ($lernanteblecoj) {
+		foreach($lernanteblecoj as $sxlosilo => $valuo) { 
+			if (!isset($kiom_lernantoj[$sxlosilo])){
+				$kiom_lernantoj[$sxlosilo]=0;
+			}
+			if ($valuo==""){
+				$valuo=0;
+			}
+			if (($valuo!=0) || ($kiom_lernantoj[$sxlosilo]!=0)) {
+				$procentajxo[$sxlosilo]=($valuo==0) ? 100 : floor(100*$kiom_lernantoj[$sxlosilo]/$valuo);
+			}
 		}
-		if ($valuo==""){
-			$valuo=0;
-		}
-		if (($valuo!=0) || ($kiom_lernantoj[$sxlosilo]!=0)) {
-			$procentajxo[$sxlosilo]=($valuo==0) ? 100 : floor(100*$kiom_lernantoj[$sxlosilo]/$valuo);
-		}
+		
+		asort($procentajxo);
 	}
-	
-	asort($procentajxo);
 
 	// mi ordigas la tabulon kaj skribi gxin
 	/*ksort($tabulo);
 	reset($tabulo);*/
-	if ($trovita_korektanto=="ne") { echo "<option value=\"\">=>Pas de correcteur</option>";}
-	foreach($procentajxo as $key => $value) { 
-		echo "<option value='".$key."'";
-		// si le correcteur de l'élève est celui que l'on traite, le mettre en "selected"
-		if ($korektanto_id==$key) { echo "selected";}
-		echo  ">".$nomoj[$key]."(".$kiom_lernantoj[$key]."/".$lernanteblecoj[$key].") ".$procentajxo[$key]."% </option>\n";
+	if ($procentajxo) {
+		if ($trovita_korektanto=="ne") { echo "<option value=\"\">=>Pas de correcteur</option>";}
+		foreach($procentajxo as $key => $value) { 
+			echo "<option value='".$key."'";
+			// si le correcteur de l'élève est celui que l'on traite, le mettre en "selected"
+			if ($korektanto_id==$key) { echo "selected";}
+			echo  ">".$nomoj[$key]."(".$kiom_lernantoj[$key]."/".$lernanteblecoj[$key].") ".$procentajxo[$key]."% </option>\n";
+		}
 	}
 	echo "</select>";
-
 }
 
 function listi_K() {
@@ -674,7 +679,7 @@ include "adminkapo.inc.php";
 										<td>
 											<a href="javascript:document.administri2.action='administriNunanKurson.php';document.administri2.submit();">
 											<img src="bildoj/filesaveas.png"  align="middle"></a></td>
-										<td><?php listi_Korektantoj_laux_kurso($celpersono_id,$nuna_kurso['kurso'],0); ?></td>
+										<td>A<?php listi_Korektantoj_laux_kurso($celpersono_id,$nuna_kurso['kurso'],0); ?></td>
 									<?php } else { ?>
 										<td><img src="bildoj/1rightarrow.png" align="middle"></td>
 										<td><strong><a href="administri.php?celpersono_id=<?=$nuna_kurso['korektanto_id']?>">
@@ -728,7 +733,7 @@ include "adminkapo.inc.php";
 										<img src="bildoj/filesaveas.png"  align="middle"></a></td>
 									<td>
 									<?php
-										if ($celpersono["kurso"]!="") {
+										if ($celpersono["kurso"]!="" && $celpersono["kurso"]!="--") {
 											$plejTaugaKorektanto = troviPlejTauganKorektanton($celpersono["id"],$celpersono["kurso"]);
 											$korektanto = apartigiPersonon($plejTaugaKorektanto);
 											echo "Correcteur idéal : ".$korektanto["enirnomo"]."<br/>";

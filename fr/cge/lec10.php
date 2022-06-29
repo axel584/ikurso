@@ -121,7 +121,7 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 20&nbsp;minutoj  </p>
 		<h3>Unua ekzerco</h3>
 		<div class="row">
 			<p class="col s12 center-align">
-				<img class="responsive-img" src="bildoj/posxtkarto.jpg"/>
+				<img class="responsive-img" src="bildoj/posxtkarto.jpg" alt="Carte postale : Saluton Maria, Kiel vi fartas ? Mi estas en Ĉinio kun Petro, la vetero estas bela tie. Hieraŭ ni iris en restoracion. Morgaŭ, mi vidos mian bofratinon Xin. Mi reiros al Francio post unu semajno. Mi esperas, ke ĉio estas bona por vi. Ĝis baldaŭ, Julia"/>
 			</p>
 		</div>
 		<?php 
@@ -130,7 +130,7 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 20&nbsp;minutoj  </p>
 		<h3>Dua ekzerco</h3>
 		<div class="row">
 			<p class="col s12 center-align">
-				<img class="responsive-img" src="bildoj/annonce-chat-noir.jpg"/>
+				<img class="responsive-img" src="bildoj/annonce-chat-noir.jpg" alt="Mi estas sinjoro Dupon, mi serĉas mian katidon, Filu. Ĝi estas malgranda kaj nigra. Ĝi havas bluajn okulojn kaj ĝi havas blankan piedon. Ĝi foriris mardon sed ne revenis... Bonvolu, se vi vidos ĝin, kontakti min telefone je 0605203480. Dankon."/>
 			</p>
 		</div>
 		<?php 
@@ -139,7 +139,7 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 20&nbsp;minutoj  </p>
 		<h3>Tria ekzerco</h3>
 		<div class="row">
 			<p class="col s12 center-align">
-				<img class="responsive-img" src="bildoj/mesagxo.jpg"/>
+				<img class="responsive-img" src="bildoj/mesagxo.jpg" alt="Gesinjoroj, Via filino Lea ne multe parolas dum la lecionoj, mi ŝatus renkonti vin por vidi kun vi, ĉu ŝi deziras helpon. Mi proponas al vi rendevuon ĵaŭdon la kvaran de decembro, je la dek oka horo. Mi petas, kontaktu min telefone al 0630950644. Dankon, Sinjoro Giraud"/>
 			</p>
 		</div>
 		<?php 
@@ -148,7 +148,7 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 20&nbsp;minutoj  </p>
 		<h3>Kvara ekzerco</h3>
 		<div class="row">
 			<p class="col s12 center-align">
-				<img class="responsive-img" src="bildoj/logx-anoncoj.jpg"/>
+				<img class="responsive-img" src="bildoj/logx-anoncoj.jpg" alt="1a anonco : Granda domo, kvin ĉambroj kaj granda ĝardeno. En arbaro. Prezo : 250 000 eŭroj. 2a anonco : Malgranda domo, du ĉambroj, malgranda ĝardeno en la urbo. Prezo : 120 000 eŭroj. 3a anonco : Apartamento, tri ĉambroj, urbocentro. Trankvila loko. Prezo : 140 eŭroj. 4a anonco : Domo, unu ĉambro, antaŭ la urbodomo. Malgranda ĝardeno. Prezo : 80 000 eŭroj./>
 			</p>
 		</div>			
 		<?php 

@@ -505,15 +505,15 @@ include "dlekkapo.inc.php";
 
 		<p>Exemples :</p>
 		<div class="row">
-			<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/img-02-01.jpg"></p>
+			<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/img-02-01.jpg" alt="une tasse de café chaud"></p>
 			<p class="col s7 m9"><span class="eo"><b>Kio</b> estas tio?<br>– <b>Tio</b> estas kafo.</span></p>
 		</div>
 		<div class="row">
-			<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/img-02-02.jpg"></p>
+			<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/img-02-02.jpg" alt="un panier rempli de baguettes de pain"></p>
 			<p class="col s7 m9"><span class="eo">Kaj <b>tio</b>?<br>– <b>Tio</b> estas pano.</span></p>
 		</div>
 		<div class="row">
-			<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/allan.jpg"></p>
+			<p class="col s5 m3"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/allan.jpg" alt="Allan, étudiant brésilien."></p>
 			<div class="col s6 m9 row">
 				<p class="col s12 m6"><span class="eo"><b>Kio</b> estas la viro?<br>– Li estas studento.<br>– Li estas Brazilano.</span></p> 
 				<p class="col s12 m6"><span class="eo"><b>Kiu</b> estas la viro?<br>– Li estas Allan.</span></p> 
@@ -587,10 +587,10 @@ include "dlekkapo.inc.php";
 		if ($section=="13") {
 		?>
 		<div class="row">
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/prof.jpg"><br>-1-</p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/varsovio.jpg"><br>-2-</p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/insekto.jpg"><br>-3-</span></p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/zamenhof.jpg"><br>-4-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/prof.jpg" alt="Un professeur devant un tableau présente la leçon."><br>-1-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/varsovio.jpg" alt="Une carte de la Pologne avec la ville de Varsovie"><br>-2-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/insekto.jpg" alt="Une personne prend une photo d'un insecte"><br>-3-</span></p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/zamenhof.jpg" alt="Une photo en noir et blanc du créateur de l'espéranto : Louis Lazare Zamenhof"><br>-4-</p>
 		</div>
 		
 			<?php 

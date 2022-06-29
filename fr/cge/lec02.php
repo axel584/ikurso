@@ -267,21 +267,21 @@ QCM_bildoj(
 		<table class="framed centered">
 			<tr>
 				<td>
-					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-antaux-benko.jpg">
+					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-antaux-benko.jpg" alt="L'oiseau est devant le banc">
 					<span class="eo">La birdo estas <b>antaŭ</b> la benko.</span>
 				</td>
 				<td>
-					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-sub-benko.jpg">
+					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-sub-benko.jpg" alt="L'oiseau est sous le banc">
 					<span class="eo">La birdo estas <b>sub</b> la benko.</span>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-sur-benko.jpg">
+					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-sur-benko.jpg" alt="L'oiseau est sur le banc">
 					<span class="eo">La birdo estas <b>sur</b> la benko.</span>
 				</td>
 				<td>
-					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-super-benko.jpg">
+					<img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-super-benko.jpg" alt="L'oiseau est au dessus du banc">
 					<span class="eo">La birdo estas <b>super</b> la benko.</span>
 				</td>
 			</tr>
@@ -304,10 +304,10 @@ QCM_bildoj(
 		if ($section=="5") {
 		?>
 		<div class="row">
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-maro.jpg"><br>-1-</p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/bicikloj-domo.jpg"><br>-2-</p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/promeni-pluvo.jpg"><br>-3-</span></p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/libroj-tablo.jpg"><br>-4-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/birdo-maro.jpg" alt="Une mouette vole au dessus de la mer"><br>-1-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/bicikloj-domo.jpg" alt="Des vélos sont posés contre le mur de la maison"><br>-2-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/promeni-pluvo.jpg" alt="Trois personnes se promènent avec un parapluie"><br>-3-</span></p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/libroj-tablo.jpg" alt="Une table avec des piles de livres posées dessus."><br>-4-</p>
 		</div>
 		
 			<?php 

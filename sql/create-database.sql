@@ -6,11 +6,13 @@ CREATE TABLE ekzerceroj (
   `kodo` varchar(10) NOT NULL,
   `numero` int(11) NOT NULL,
   `demando` text NOT NULL,
+  `respondmodelo` TEXT,
   `respondo` text,
   `normaligita` text,
   `bildo` varchar(64) NOT NULL,
   `forigita` tinyint(1) NOT NULL DEFAULT '0',
   `korektebla` tinyint(1) NOT NULL DEFAULT '0',
+  `poentoj` INT(11),
   PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -151,6 +153,7 @@ CREATE TABLE personoj (
 
 CREATE TABLE personoj_lecioneroj (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ekdato` TIMESTAMP NULL,
   `dato` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `persono_id` int(11) NOT NULL,
   `lecionero_id` int(11) NOT NULL,
@@ -219,6 +222,7 @@ CREATE TABLE respondoj (
   `normaligita` text,
   `forigita` tinyint(1) NOT NULL DEFAULT '0',
   `gxusta` tinyint(1) DEFAULT NULL,
+  `korekto` TEXT NULL,
   PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

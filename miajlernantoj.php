@@ -14,7 +14,10 @@ function listi_lecionerojn($celpersono_id,$kurso) {
 	$demando = "SELECT kurso,dato,lecionoj.id as leciono_id,lecionoj.titolo as leciono_titolo,lecioneroj.id as lecionero_id,lecioneroj.ordo as lecionero_ordo,lecioneroj.titolo as lecionero_titolo  FROM personoj_lecioneroj  join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id = lecioneroj.leciono_id WHERE persono_id = ".$celpersono_id." and lecionoj.kurso='".$kurso."' order by kurso,lecionoj.numero,lecioneroj.ordo";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	while($row =  $result->fetch()) {
-		echo "[".$row["kurso"]."]&nbsp;".$row["leciono_titolo"]." - ".$row["lecionero_ordo"].":".$row["lecionero_titolo"]." (".$row["dato"].")<br/>";
+		list($dato,$horo) = explode(" ",$row["dato"], 2);
+		$pecoj = explode("-",$dato);
+		$dato = $pecoj[2]."/".$pecoj[1]."/".$pecoj[0];
+		echo "[".$row["kurso"]."]&nbsp;".$row["leciono_titolo"]." - ".$row["lecionero_ordo"].":".$row["lecionero_titolo"]." (".$dato." ".$horo.")<br/>";
 	}
 }
 

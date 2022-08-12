@@ -84,8 +84,8 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 		$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b>".$bonaRespondo."</b>";
 	} else {
 		$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b>".$bonaRespondo."</b> (et pas&nbsp;<strike>".$lernantaRespondo."</strike>)";
+		memoriRespondon($persono_id,$vorto_id,"FALSE",$lernantaRespondo);
 	}
-	memoriRespondon($persono_id,$vorto_id,"FALSE",$lernantaRespondo);
 	echo json_encode($respondo);
 	exit();
 }

@@ -22,27 +22,27 @@ function listiSercxadon($personnomo,$familinomo,$celenirnomo,$retadreso,$urbo,$p
     global $persono_id,$idnoto,$bdd;
 	$wheresql="1=1";
 	if ($personnomo!="") {
-		$wheresql=$wheresql." and personnomo like '%".$personnomo."%'";
+		$wheresql=$wheresql." and personnomo like '%".trim($personnomo)."%'";
 	}
 	if ($familinomo!="") {
-		$wheresql=$wheresql." and familinomo like '%".$familinomo."%'";
+		$wheresql=$wheresql." and familinomo like '%".trim($familinomo)."%'";
 	}
 	if ($celenirnomo!="") {
-		$wheresql=$wheresql." and enirnomo like '%".$celenirnomo."%'";
+		$wheresql=$wheresql." and enirnomo like '%".trim($celenirnomo)."%'";
 	}
 	if ($retadreso!="") {
-		$wheresql=$wheresql." and retadreso like '%".$retadreso."%'";
+		$wheresql=$wheresql." and retadreso like '%".trim($retadreso)."%'";
 	}
 	if ($urbo!="") {
-		$wheresql=$wheresql." and urbo like '%".$urbo."%'";
+		$wheresql=$wheresql." and urbo like '%".trim($urbo)."%'";
 	}
 	if ($posxtkodo!="") {
-		$wheresql=$wheresql." and posxtkodo like '".$posxtkodo."%'";
+		$wheresql=$wheresql." and posxtkodo like '".trim($posxtkodo)."%'";
 	}
 	echo "<table>";
 	$query="select * from personoj where ".$wheresql;
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
-	
+
 	$nbResultat=0;
 	while($row = $result->fetch()) {
 		$nbResultat++;
@@ -59,7 +59,7 @@ function listiSercxadon($personnomo,$familinomo,$celenirnomo,$retadreso,$urbo,$p
         if ($row["adreso2"]!="") {echo $row["adreso2"]."<br>";}
         echo $row["lando"]."-".$row["posxtkodo"]." ".$row["urbo"]."<br>";
         echo "</td>";
-     
+
         echo "</tr>";
         echo "<tr";
         if ($nbResultat%2==1) { echo " bgcolor=\"#d0d8df\"";}
@@ -85,7 +85,7 @@ include "adminkapo.inc.php";
 			<div id="kadro">
 				<?php if ($erarkodo=="9") echo "<div class='atentigo'><p class='eraro'>Cet élève a déjà un correcteur.</p></div>"; ?>
 				<?php if ($erarkodo=="11") echo "<div class='atentigo'><p class='eraro'>Choisissez un correcteur avant de sauvegarder</p></div>"; ?>
-			
+
 			<div id="adminD">
 				<div class="encadre">
 	    			<?php listiSercxadon($personnomo,$familinomo,$celenirnomo,$retadreso,$urbo,$posxtkodo); ?>

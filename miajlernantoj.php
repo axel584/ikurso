@@ -118,7 +118,7 @@ function listiStudantojn() {
 
 		// bouton pour indiquer que l'élève a fini son cours
 		// on l'affiche uniquement pour la 10ème leçon du CG et KE et pour la 25ème leçon de Gerda
-		if (($row["nunleciono"]==10 && $row["kurso"]=='CG')||($row["nunleciono"]==25 && $row["kurso"]=='GR')||($row["nunleciono"]==18 && $row["kurso"]=='KE')) {
+		if (($row["nunleciono"]==10 && $row["kurso"]=='CG')||($row["nunleciono"]==26 && $row["kurso"]=='GR')||($row["nunleciono"]==18 && $row["kurso"]=='KE')||($row["nunleciono"]==30 && $row["kurso"]=='PP')) {
 			echo "<form method='POST' action='miajlernantoj2.php'>"; 
 			echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
 			echo "<input type=\"hidden\" name=\"leciono\" value=\"".$row["kursid"]."-F\">";

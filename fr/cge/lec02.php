@@ -134,7 +134,7 @@ QCM_bildoj(
 		</div>
 		
 		<p class="rimarko"><strong>REMARQUE :</strong> 
-		Prononcez bien le <b>n</b> final&nbsp;:	<span class="eo">belan</span> rime avec <em>Anne</em> et et <span class="eo">libron</span> avec <em>tonne</em>.</p>
+		Prononcez bien le <b>n</b> final&nbsp;:	<span class="eo">belan</span> rime avec <em>Anne</em> et <span class="eo">libron</span> avec <em>tonne</em>.</p>
 		
 		<p>Au pluriel, la terminaison <b>n</b> se place après la terminaison <b>j</b> du pluriel&nbsp;: </p>
 		<div class="vortlisto row">

@@ -5,3 +5,5 @@ python/EvaluationLecon.csv
 python/__pycache__/
 python/config.py
 python/nbJoursParEleve.csv
+launch.json
+settings.json

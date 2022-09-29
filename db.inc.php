@@ -2,7 +2,7 @@
 include "config.php";
 
 
-// tiu funkcio kunligas la datumbazon. 
+// tiu funkcio kunligas la datumbazon.
 // Elirvaluo : referenco pri la datumbazo
 function malfermiDatumbazon () {
     global $bdd,$base,$login,$motDePasse;
@@ -23,7 +23,7 @@ function malfermiDatumbazon () {
 			echo "Connection à la base de données impossible. Merci de contacter l'administrateur : axel.rousseau@esperanto-france.org";
 			exit(0);
 		}
-		
+
 	}
 
 
@@ -33,7 +33,7 @@ function fermiDatumbazon() {
 }
 
 // tiu funkcio kreas novan personon, gxi nur bezonas devigajn parametrojn
-// parametroj : 
+// parametroj :
 // $enirnomo - kasxnomo uzita por eniri en la ttt-ejo
 // $pasvorto - vorto uzita por eniri en la ttt-ejo kun la enirnomo
 // $retadreso - uzita por sendi mesagxon kun la nomo de la korektanto (por la studantoj) aux de la studanto (por la Korektantoj)
@@ -81,7 +81,7 @@ function updatePasvorton($retadreso,$pasvorto) {
 function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$ndtago,$ndmonato,$ndjaro,$stopInfo,$stopRappel) {
     global $bdd;
     if (($ndjaro=="")||($ndmonato=="")||($ndtago=="")) {
-        $naskigxdato=NULL;    
+        $naskigxdato=NULL;
     } else {
         $naskigxdato=$ndjaro.'-'.$ndmonato.'-'.$ndtago;
     }
@@ -174,7 +174,7 @@ function listoDepartemento($idDepartemento, $rajtoj) {
  * fonction konstruiMenuon() : affiche une liste de choix pour les menus déroulants
  * DEPRECATED : à remplacer par la fonction konstruiListon() ci-après
  *
- ********************************************************************************** 
+ **********************************************************************************
 */
 // tiu funkcio konstruas HTML-menuon "select"
 // nomo = nomo en la HTML formularo
@@ -186,14 +186,14 @@ function listoDepartemento($idDepartemento, $rajtoj) {
 // kie = kondicio por elekti la bonajn vicojn (povas malpleni)
 function konstruiMenuon($nomo,$tabelo,$valuo,$vidigito,$elektita,$kie,$unuavaluo) {
     global $bdd;
-     $demando =  "select $valuo,$vidigito from $tabelo $kie"; 
+     $demando =  "select $valuo,$vidigito from $tabelo $kie";
     $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
      echo "<select name=\"$nomo\">";
-     echo "<option value=''>".$unuavaluo."</option>";  
+     echo "<option value=''>".$unuavaluo."</option>";
      while($row = $result->fetch()) {
          echo "<option value=\"".$row["$valuo"]."\" ";
          if ($row["$valuo"]==$elektita) { echo "selected";}
-         echo " >".$row["$vidigito"]."</option>";  
+         echo " >".$row["$vidigito"]."</option>";
      }
      if (isset($aliavaluo) && isset($aliavidigito)) {
           echo "<option value=\"$aliavaluo\" ";
@@ -206,7 +206,7 @@ function konstruiMenuon($nomo,$tabelo,$valuo,$vidigito,$elektita,$kie,$unuavaluo
  *
  * fonction konstruiListon() : construit une liste de choix pour les menus déroulants
  *
- ********************************************************************************** 
+ **********************************************************************************
  * EN
  * $tabelo : table de la base où se trouvent les choix
  * $valuo : nom du champ à extraire de la table
@@ -217,9 +217,9 @@ function konstruiMenuon($nomo,$tabelo,$valuo,$vidigito,$elektita,$kie,$unuavaluo
  */
 function konstruiListon($tabelo,$valuo,$vidigito,$kie) {
     global $bdd;
-	 $demando =  "select $valuo,$vidigito from $tabelo $kie"; 
+	 $demando =  "select $valuo,$vidigito from $tabelo $kie";
 	 $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-	 
+
 	 $i=0;
 	 while($row = $result->fetch()) {
 	 	$menuo[$i]["valuo"] = al_utf8($row["$valuo"]);
@@ -231,10 +231,10 @@ function konstruiListon($tabelo,$valuo,$vidigito,$kie) {
 
 function getSimplaVorto($valuo,$tabelo,$kie) {
     global $bdd;
-     $demando =  "select $valuo from $tabelo $kie"; 
+     $demando =  "select $valuo from $tabelo $kie";
      $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
      while($row = $result->fetch()) {
-         return $row["$valuo"];  
+         return $row["$valuo"];
      }
 }
 
@@ -244,7 +244,7 @@ function simplaVorto($valuo,$tabelo,$kie) {
 
 function getKorektantonElLernanto($lernanto_id,$lernanto_kurso) {
     global $bdd;
-     $demando =  "SELECT personnomo,familinomo,retadreso  FROM nuna_kurso join personoj on personoj.id = nuna_kurso.korektanto WHERE studanto = ".$lernanto_id." AND nuna_kurso.kurso = '".$lernanto_kurso."'"; 
+     $demando =  "SELECT personnomo,familinomo,retadreso  FROM nuna_kurso join personoj on personoj.id = nuna_kurso.korektanto WHERE studanto = ".$lernanto_id." AND nuna_kurso.kurso = '".$lernanto_kurso."'";
      $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
      $row = $result->fetch();
      return $row;
@@ -256,7 +256,7 @@ function getUrlVenontaLeciono($kurso,$nunleciono) {
     $demando2 = "select titolo,retpagxo from lecionoj where numero='".$prochaine_lecon."' and kurso='".$kurso."'";
     $row2 = $bdd->query($demando2)->fetch();
     return $row2["retpagxo"];
-}   
+}
 
 
 function getPrefixeCours($kurso) {
@@ -265,9 +265,9 @@ function getPrefixeCours($kurso) {
     } elseif($kurso=="CG") {
        return 'fr/cge/';
     } elseif($kurso=="3N") {
-       return 'fr/3n/';       
+       return 'fr/3n/';
     } elseif($kurso=="PP") {
-       return 'eo/ppp/';       
+       return 'eo/ppp/';
     } else {
         return null;
     }
@@ -292,16 +292,18 @@ function getCoursElLernanto($lernanto_id) {
         if ($row['nunleciono']==null) {
             echo "<p>pas encore commencé</p>";
         } else {
-            echo "<p><span class='primaire-texte texte-moyen'>Dernière leçon suivie</span> : ";
-            simplaVorto('titolo','lecionoj',"where numero='".$row["nunleciono"]."' and kurso='".$row["kurso"]."'");
-            echo "</p>";
+            $demando2 = "select titolo,retpagxo from lecionoj where numero='".$row["nunleciono"]."' and kurso='".$row["kurso"]."'";
+            $row2 = $bdd->query($demando2)->fetch();
+            if ($row2) {
+                echo "<p><a class='btn-flat blue-text' href='".$prefixe_url.$row2['retpagxo']."'><i class='material-icons right'>arrow_right</i>Dernière leçon suivie : " . $row2['titolo'] . "</a></p>";
+            }
         }
         if ($row["stato"]=="N") { // cas des élèves pas encore commencé
             // TODO : ici on affiche la première leçon à suivre
             $demando2 = "select titolo,retpagxo from lecionoj where numero='1' and kurso='".$row["kurso"]."'";
             $row2 = $bdd->query($demando2)->fetch();
             if (isset($row2['retpagxo'])) { // dans le cas du logiciel, il n'y a pas de leçon à afficher
-                echo "<p><a href='".$prefixe_url.$row2['retpagxo']."'>Accès à la leçon : ".$row2['titolo']."</a></p>";
+                echo "<p><a class='btn-flat blue-text' href='".$prefixe_url.$row2['retpagxo']."'>Accès à la leçon : ".$row2['titolo']."</a></p>";
             }
         }
         if ($row["stato"]=="K") { // cas des élèves en cours
@@ -309,12 +311,12 @@ function getCoursElLernanto($lernanto_id) {
             $demando2 = "select titolo,retpagxo from lecionoj where numero='".$prochaine_lecon."' and kurso='".$row["kurso"]."'";
             $row2 = $bdd->query($demando2)->fetch();
             if ($row['kurso']!='KE') { // dans le cas du logiciel, il n'y a pas de leçon à afficher
-                echo "<a class='btn-flat small blue-text' href='".getRedirectionParDroits($lernanto_id)."'><i class='material-icons right'>arrow_right</i>Accès à la prochaine leçon</a>";
+                echo "<a class='btn-flat blue-text' href='".getRedirectionParDroits($lernanto_id)."'><i class='material-icons right'>arrow_right</i>Accès à la prochaine leçon</a>";
             }
         }
         if ($row["stato"]=="F") {
             // ici on affiche le lien vers le diplome
-            ?>            
+            ?>
               <a class="bouton" href="diplome.php?kurso=<?php echo $row['kurso'] ?>" onclick="window.open(this.href, 'attestation', 'height=660, width=862, left='+(screen.availWidth-862)/2+', top='+(screen.availHeight-660)/2)+', toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'; return false;">Attestation de réussite</a>
            <?php
 		   echo "</li>";
@@ -366,7 +368,7 @@ function redirigeSectionParUtilisateur($persono) {
 function redirigeParDroits($persono) {
     global $bdd;
     if ($persono['rajtoj']=='A') { // administrateur
-        header("Location:administri.php"); 
+        header("Location:administri.php");
     }
     if ($persono['rajtoj']=='K') { // correcteurs
         header("Location:miajlernantoj.php");
@@ -423,7 +425,7 @@ function getRedirectionParDroits($persono_id) {
     global $bdd;
     $persono = apartigiPersonon($persono_id);
     if ($persono['rajtoj']=='A') { // administrateur
-        return "administri.php"; 
+        return "administri.php";
     }
     if ($persono['rajtoj']=='K') { // correcteurs
         return "miajlernantoj.php";
@@ -441,7 +443,7 @@ function getRedirectionParDroits($persono_id) {
         $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         $row = $result->fetch();
         if ($row==null) {
-            return "personinformoj.php"; 
+            return "personinformoj.php";
         }
         if ($row["kurso"]=="KE") {
             return "personinformoj.php"; // les élèves du logiciel vont uniquement sur leur page personnelle
@@ -486,23 +488,23 @@ function konstruiKorektantliston() {
     global $bdd;
      echo "<select name=\"korektanto\" class=\"input_text_box\">";
      $query = "select personoj.id,personoj.enirnomo from personoj left join nuna_kurso on personoj.id=nuna_kurso.korektanto where personoj.rajtoj='A' or personoj.rajtoj='K' and nuna_kurso.korektanto IS NULL";
-     mysql_select_db( "ikurso"); 
-     $result = mysql_query($query) or die (  "INSERT : Invalid query :".$query); 
+     mysql_select_db( "ikurso");
+     $result = mysql_query($query) or die (  "INSERT : Invalid query :".$query);
      while($row = mysql_fetch_array($result)) {
-         echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]." : 0 %</option>";  
+         echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]." : 0 %</option>";
      }
 
      $query ="select personoj.id, personoj.enirnomo,personoj.maksimumo,count(nuna_kurso.korektanto) as studantoj from personoj,nuna_kurso where personoj.id = nuna_kurso.korektanto group by nuna_kurso.korektanto";
-     $result = mysql_query($query) or die (  "INSERT : Invalid query :".$query); 
+     $result = mysql_query($query) or die (  "INSERT : Invalid query :".$query);
      while($row = mysql_fetch_array($result)) {
          if ($row["maksimumo"]=="0") {
               $remplissage="maksimumo";
          } else {
               $remplissage=(($row["studantoj"]/$row["maksimumo"])*100)." %";
          }
-         echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]." : ".$remplissage."</option>";  
+         echo "<option value=\"".$row["id"]."\">".$row["enirnomo"]." : ".$remplissage."</option>";
      }
-  
+
      echo "</select>";
 }
 
@@ -516,27 +518,27 @@ function igiKorektanton($persono_id) {
 //fonction qui prends un id d'un correcteur et d'une personne pour les associer dans "nuna_kurso" et mettre la personne à studanto (S)
 function doniKorektanton($korektanto,$studanto) {
      $query = "update personoj set rajtoj='S' where id=$studanto";
-     mysql_select_db( "ikurso"); 
-     $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query); 
+     mysql_select_db( "ikurso");
+     $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
      $query = "INSERT INTO nuna_kurso (ekdato,korektanto,studanto) VALUES (CURDATE(),'$korektanto','$studanto')";
      $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
 }
 
 function vidiKorektantojn() {
      $query = "select * from personoj where rajtoj='A' or rajtoj='K'";
-     mysql_select_db( "ikurso"); 
-     $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query); 
+     mysql_select_db( "ikurso");
+     $result = mysql_query($query) or die ( "INSERT : Invalid query :".$query);
      while($row = mysql_fetch_array($result)) {
          echo "<div align=\"left\" class=\"text_box\">";
-         echo "<b>".$row["enirnomo"]."</b>:";  
-         echo $row["familinomo"]." ".$row["personnomo"]." - ".$row["retadreso"]."<br>";  
-         echo $row["adreso1"]." ".$row["adreso2"]." ; ".$row["lando"]."-".$row["posxtkodo"]." ".$row["urbo"]."<br>";  
+         echo "<b>".$row["enirnomo"]."</b>:";
+         echo $row["familinomo"]." ".$row["personnomo"]." - ".$row["retadreso"]."<br>";
+         echo $row["adreso1"]." ".$row["adreso2"]." ; ".$row["lando"]."-".$row["posxtkodo"]." ".$row["urbo"]."<br>";
          echo "né-e le :";
          if ($row["naskigxdato"]=="0000-00-00") { echo "inconnu";} else { echo $row["naskigxdato"];}
          echo " - Nb maximal d'élèves : ";
          if ($row["maksimumo"]=="0" || $row["maksimumo"]=="") { echo "non renseigné";} else { echo $row["maksimumo"];}
          echo "<br><i>".$row["kialo"]."</i><br>";
-         echo "<p>";  
+         echo "<p>";
      }
 
 }
@@ -568,13 +570,13 @@ function troviPlejTauganKorektantonLauxKriterioj($lando,$departemento,$kurso) {
         $demando .= " group by personoj.id";
         $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         while($row = $result->fetch()) {
-            $kiom_lernantoj[$row["id"]] = $row["kiom"]; 
+            $kiom_lernantoj[$row["id"]] = $row["kiom"];
         }
 
     // calcul les pourcentages du remplissage des élèves : ex: correcteur 1 : 75% (6/8)
     // TODO : si lernantebleco est vide, sortir (return null)
     if (is_array($lernanteblecoj)) {
-        foreach($lernanteblecoj as $sxlosilo => $valuo) { 
+        foreach($lernanteblecoj as $sxlosilo => $valuo) {
             if ($valuo==0) {
                 continue;
             }
@@ -624,16 +626,16 @@ function troviPlejTauganKorektanton($persono_id,$kurso) {
             $result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
             if ($row = $result2->fetch()) {
                 if ($row["kiom_lernantoj"]>0) {
-                    return $korektanto_id;        
+                    return $korektanto_id;
                 }
             }
-            
+
         }
     }
     // cas où on n'a pas trouvé de correcteur pour un cours précédent
     $persono = apartigiPersonon($persono_id);
     if ($persono["lando"]!="FR" && $persono["lando"]!="") {
-        // cas du pays renseigné mais différent de france, on recherche un correcteur dans ce pays 
+        // cas du pays renseigné mais différent de france, on recherche un correcteur dans ce pays
         $procentajxoj = troviPlejTauganKorektantonLauxKriterioj($persono["lando"],"",$kurso);
     } else if ($persono["lando"]=="FR" && $persono["posxtkodo"]!="") {
         // cas du pays france et du code postal renseigné : on recherche par département
@@ -641,7 +643,7 @@ function troviPlejTauganKorektanton($persono_id,$kurso) {
     }
     if (!isset($procentajxoj) || empty($procentajxoj)) {
         // autre cas, on n'a rien trouvé ou bien l'élève n'a pas renseigné son département
-        $procentajxoj = troviPlejTauganKorektantonLauxKriterioj("","",$kurso);    
+        $procentajxoj = troviPlejTauganKorektantonLauxKriterioj("","",$kurso);
     }
     // on a notre variable $procentajxoj qui contient les correcteurs dans l'ordre ideal :
     if ($procentajxoj) {
@@ -705,7 +707,7 @@ function aldoniNovajnVortojnEnMemorilo($persono_id) {
         $requete = $bdd->prepare("INSERT INTO `personoj_vortoj` (`id`, `persono_id`, `vorto_id`, `nombrilo`, `venontaFojo`) VALUES (NULL, :persono_id, :vorto_id, '1', NOW())");
         $requete->execute(array(':persono_id'=>$persono_id,':vorto_id'=>$row["id"]));
     }
-    // ; 
+    // ;
 }
 
 // fonction spécifique au cours de troisième niveau :

@@ -21,6 +21,13 @@ if ($identigilo=="") {
 	exit();
 }
 
+if (strpos($identigilo, "@") !== false) {
+	$respondo["type"]="identigilo";
+	$respondo["mesagxo"]="Merci de choisir un identifiant qui ne soit pas un e-mail car il serait visible par les autres élèves";
+	echo json_encode($respondo);
+	exit();
+}
+
 
 if ($pasvorto=="") {
 	$respondo["type"]="pasvorto";
@@ -48,7 +55,7 @@ if ($retadreso_en_base>0) {
 	exit();
 }
 
-// on vérifie si l'identifiant est déjà utilisé 
+// on vérifie si l'identifiant est déjà utilisé
 $query = "select count(*) as combien from personoj where enirnomo='".$identigilo."'";
 $result = $bdd->query($query);
 $enirnomo_en_base = $result->fetch()["combien"];

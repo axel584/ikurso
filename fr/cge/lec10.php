@@ -148,7 +148,7 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 20&nbsp;minutoj  </p>
 		<h3>Kvara ekzerco</h3>
 		<div class="row">
 			<p class="col s12 center-align">
-				<img class="responsive-img" src="bildoj/logx-anoncoj.jpg" alt="1a anonco : Granda domo, kvin ĉambroj kaj granda ĝardeno. En arbaro. Prezo : 250 000 eŭroj. 2a anonco : Malgranda domo, du ĉambroj, malgranda ĝardeno en la urbo. Prezo : 120 000 eŭroj. 3a anonco : Apartamento, tri ĉambroj, urbocentro. Trankvila loko. Prezo : 140 eŭroj. 4a anonco : Domo, unu ĉambro, antaŭ la urbodomo. Malgranda ĝardeno. Prezo : 80 000 eŭroj./>
+				<img class="responsive-img" src="bildoj/logx-anoncoj.jpg" alt="1a anonco : Granda domo, kvin ĉambroj kaj granda ĝardeno. En arbaro. Prezo : 250 000 eŭroj. 2a anonco : Malgranda domo, du ĉambroj, malgranda ĝardeno en la urbo. Prezo : 120 000 eŭroj. 3a anonco : Apartamento, tri ĉambroj, urbocentro. Trankvila loko. Prezo : 140 eŭroj. 4a anonco : Domo, unu ĉambro, antaŭ la urbodomo. Malgranda ĝardeno. Prezo : 80 000 eŭroj."/>
 			</p>
 		</div>			
 		<?php 

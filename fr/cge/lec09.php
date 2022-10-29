@@ -206,13 +206,13 @@ include "dlekkapo.inc.php";
 		
 			<div class="row">
 				<p class="col s12"><b>ĉi</b> : indique la proximité </p>
-				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-tio.mp3" class="sm2_button"></a><span class="eo">ĉi-tio</span>&nbsp;: cette chose-ci</p>
-				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-tie.mp3" class="sm2_button"></a><span class="eo">ĉi-tie</span>&nbsp;: ici</p>
-				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/cxio-cxi.mp3" class="sm2_button"></a><span class="eo">ĉio-ĉi</span>&nbsp;: tout ceci</p>
-				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-matene.mp3" class="sm2_button"></a><span class="eo">ĉi-matene</span>&nbsp;: ce matin</p>
-				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-foje.mp3" class="sm2_button"></a><span class="eo">ĉi-foje</span>&nbsp;: cette fois-ci</p>
+				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-tio.mp3" class="sm2_button"></a><span class="eo">ĉi tio</span> ou <span class="eo">tio ĉi</span>&nbsp;: cette chose-ci</p>
+				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-tie.mp3" class="sm2_button"></a><span class="eo">ĉi tie</span> ou <span class="eo">tie ĉi</span>&nbsp;: ici</p>
+				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/cxio-cxi.mp3" class="sm2_button"></a><span class="eo">ĉi ĉio</span> ou <span class="eo">ĉio ĉi</span>&nbsp;: tout ceci</p>
 				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/tiu-knabo.mp3" class="sm2_button"></a><span class="eo">tiu knabo</span>&nbsp;: ce garçon(-là)</p>
 				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/tiu-cxi-cxi-tiu-knabo.mp3" class="sm2_button"></a><span class="eo">tiu ĉi knabo, ĉi tiu knabo</span>&nbsp;: ce garçon-ci</p>
+				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-matene.mp3" class="sm2_button"></a><span class="eo">ĉi-matene</span>&nbsp;: ce matin</p>
+				<p class="col s11 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/cxi-foje.mp3" class="sm2_button"></a><span class="eo">ĉi-foje</span>&nbsp;: cette fois-ci</p>
 				<p class="col s12"><b>ajn</b> : exprime l’indétermination généralisée</p>
 				<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/iu-ajn.mp3" class="sm2_button"></a><span class="eo">iu ajn</span>&nbsp;: n’importe qui</p>
 				<p class="col s6"><a href="<?php echo $vojo;?>fr/son/vortoj/io-ajn.mp3" class="sm2_button"></a><span class="eo">io ajn</span>&nbsp;: n’importe quoi</p>

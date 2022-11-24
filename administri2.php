@@ -83,7 +83,6 @@ if ($celpersono["urbo"]!=$urbo) {
 
 if ($celpersono["lando"]!=$lando && $lando!="-- pays --") { 
 	// update en la normala datumbazo
-	echo $lando;
    $query = "update personoj set lando='$lando' where id=$celpersono_id";
    $result = $bdd->exec($query);
 }

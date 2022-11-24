@@ -74,7 +74,28 @@ include "pppkapo.inc.php"
 							<li><a href="pasxo07.php">7. IDE-Kamarado</a></li>
 							<li><a href="pasxo08.php">8. Simpla Konfeso</a></li>						
 							<li><a href="pasxo09.php">9. Horloĝo – Malgranda  miraklo</a></li>						
-							<li><a href="pasxo10.php">10. Kolektanto de ĉielarkoj</a></li>						
+							<li><a href="pasxo10.php">10. Kolektanto de ĉielarkoj</a></li>	
+							<li><a href="pasxo11.php">11. Sur dalmata fiŝistinsulo</a></li>
+							<li><a href="pasxo12.php">12. Dia Mastrumado</a></li>
+							<li><a href="pasxo13.php">13. Zamenhof kaj la movado</a></li>
+							<li><a href="pasxo14.php">14. Avinjo</a></li>
+							<li><a href="pasxo15.php">15. La universo – eksplodanta?</a></li>
+							<li><a href="pasxo16.php">16. Unu jaron en la feinlando</a></li>
+							<li><a href="pasxo17.php">17. Fenikso</a></li>
+							<li><a href="pasxo18.php">18. Plej bone ridas kiu laste ridas</a></li>
+							<li><a href="pasxo19.php">19. Kajto</a></li>
+							<li><a href="pasxo20.php">20. La verko de Maria Skłodowska-Curie</a></li>
+							<li><a href="pasxo21.php">21. Konferanseo</a></li>
+							<li><a href="pasxo22.php">22. Vortoj de Zamenhof</a></li>
+							<li><a href="pasxo23.php">23. Salomono kaj la oaza nimfo</a></li>
+							<li><a href="pasxo24.php">24. La aĝoj de la homo (1)</a></li>
+							<li><a href="pasxo25.php">25. Flugantaj semoj</a></li>
+							<li><a href="pasxo26.php">26. Kiel ni mortigadis leporon por la antaŭkristnaska vesperamanĝo</a></li>
+							<li><a href="pasxo27.php">27. Robert Burns kiel mondpoeto</a></li>
+							<li><a href="pasxo28.php">28. La amo de otelo kaj desdemona</a></li>
+							<li><a href="pasxo29.php">29. La kvara pipo</a></li>
+							<li><a href="pasxo30.php">30. Geedziĝo en hodiaŭa maniero</a></li>
+							
 						</ul>
 					</div>
 				</li>

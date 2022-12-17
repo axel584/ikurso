@@ -293,7 +293,7 @@ frameborder="0" allowfullscreen></iframe></p>
 						albums de musique, applications pour téléphones, sites internet, qui se développent chaque année. 
 						Pour s’y retrouver, des revues dédiées, comme <a href="http://www.beletraalmanako.com/"><i>Beletra Almanako</i></a> 
 						ou <i>Literatura Foiro</i>, publient des critiques et des interviews.</p>
-					<p>Sur le site <a href="http://bitarkivo.org/doku.php">BitArkivo</a>, vous pourrez de lire en ligne des magazines en espéranto du monde entier.</p>
+					<p>Sur le site <a href="http://bitarkivo.org/doku.php">BitArkivo</a>, vous pourrez lire en ligne des magazines en espéranto du monde entier.</p>
 					<p class="parto">L’espéranto permet un accès à une culture mondiale avec un filtre moins important que les médias traditionnels. 
 						Cela permet ainsi à des revues comme <a href="https://osiek.org/lagazeto/"><i>La Gazeto</i></a> de parler de l’histoire mondiale, 
 						à <i>Sennaciulo</i> de débattre des problèmes politiques actuels&nbsp;; <i>Etnismo</i> traite des questions éthniques, 

@@ -288,7 +288,7 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/domo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>do</u>mo</span>&nbsp;: maison</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/edzo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ed</u>zo</span>&nbsp;: époux</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/edzino.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ed<u>zi</u>no</span>&nbsp;: épouse</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/el.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">el (3)</span>&nbsp;: hors de</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/el.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">el</span>&nbsp;: hors de</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/esperantisto.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">esperan<u>tis</u>to</span>&nbsp;: espérantiste</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ehxo.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>e</u>ĥo</span>&nbsp;: écho</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/euxropo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">Eŭ<u>ro</u>po</span>&nbsp;: Europe</p>
@@ -308,7 +308,7 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jxaluza.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ĵa<u>lu</u>za</span>&nbsp;: jaloux</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jxauxdo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ĵaŭ</u>do</span>&nbsp;: jeudi</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jxurnalo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ĵur<u>na</u>lo</span>&nbsp;: journal</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kaj.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">kaj (4)</span>&nbsp;: et</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kaj.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">kaj</span>&nbsp;: et</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kio.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ki</u>o</span>&nbsp;: quoi</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kolekti.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ko<u>lek</u>ti</span>&nbsp;: collectionner, rassembler</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/lando.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>lan</u>do</span>&nbsp;: pays</p>

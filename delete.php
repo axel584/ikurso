@@ -36,20 +36,15 @@ header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 header("Pragma: no-cache"); // HTTP/1.0
 include "pagxkapo.inc.php";
 ?>
-<?php if ($erarkodo=="9") echo "<div class='atentigo'><p class='eraro'>Cet élève a déjà un correcteur.</p></div>"; ?>
-
-		<div id="enhavo">
-			<ul id="tabnav">
-			</ul>
-			<div id="kadro">
-
+	<div class="row">
+		<article class="col s12 m10 l7 offset-m1 offset-l2">
+			<h1>Confirmez la suppression</h1>
 				<p>Pour supprimer <b><?php echo $celpersono["enirnomo"]; ?></b>, veuiller recopier son identifiant : 
 				<form method="post" action="delete.php">
 					<input type="text" name="validperson"> 
 					<input type="hidden" name="celpersono_id" value="<?php echo $celpersono_id?>"> 
 					<input type="submit" value="Confirmer">
-					<div align="left"><input type="reset" value="Annuler"></div>
 				</form>
-   		</div>
-   	</div>
+   		</article>
+	</div>	
 <?php include "pagxpiedo.inc.php";?>                    

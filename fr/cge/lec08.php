@@ -304,7 +304,7 @@ include "dlekkapo.inc.php";
 			<p>On différencie donc trois cas&nbsp;:</p>
 					
 				</div>
-				<div class="col s5 m4 l3">
+				<div class="col s5 m4 l3 noprint">
 					<img class="responsive-img" alt="Mario ludas kun hundo" src="<?=$vojo?>fr/cge/bildoj/li-ludas-kun-hundo.jpg"><br><span class="creditphoto">photo : <a href="https://stocksnap.io/author/41003">Marvin Meyer</a></span>
 				</div>
 			</div>

@@ -473,82 +473,88 @@ include "dlekkapo.inc.php";
 			} // fin section 
 			if ($section=="8") {
 			?>
-			<p class="parto">En vous aidant des expressions que l’on vient de voir et d’un peu de bon sens, essayez d'attribuer à chacune des personnes de la vidéo son nom, son domicile et sa profession.</p>
-			<p>Ne vous attendez pas à comprendre <b>tout</b>, essayez juste de comprendre ce qui vous permettra de répondre au questionnaire. N’hésitez pas à regarder la vidéo plusieurs fois. Au besoin, prenez des notes sur du papier, l’exercice sera d’autant plus utile si vous essayez de répondre sérieusement aux questions. Si vous vous trompez, prenez un peu de temps pour vérifier dans la vidéo la bonne réponse avant d'essayer de donner une autre réponse.</p>
-			<p>
-			<p>Pour vous aider à mieux comprendre, vous trouverez à la fin de cette page une liste de quelques mots nouveaux.</p>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/pTQEn0-fuQc" frameborder="0" allowfullscreen></iframe>
-			</p>
+			<div class="neprintu">
+				<p class="parto">En vous aidant des expressions que l’on vient de voir et d’un peu de bon sens, essayez d'attribuer à chacune des personnes de la vidéo son nom, son domicile et sa profession.</p>
+				<p>Ne vous attendez pas à comprendre <b>tout</b>, essayez juste de comprendre ce qui vous permettra de répondre au questionnaire. N’hésitez pas à regarder la vidéo plusieurs fois. Au besoin, prenez des notes sur du papier, l’exercice sera d’autant plus utile si vous essayez de répondre sérieusement aux questions. Si vous vous trompez, prenez un peu de temps pour vérifier dans la vidéo la bonne réponse avant d'essayer de donner une autre réponse.</p>
+				<p>
+				<p>Pour vous aider à mieux comprendre, vous trouverez à la fin de cette page une liste de quelques mots nouveaux.</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/pTQEn0-fuQc" frameborder="0" allowfullscreen></iframe>
+				</p>
 
 
-			<?php 
-QCM(
-	array(
+				<?php 
+	QCM(
 		array(
-			"question"=>"En kiu filmo estas Aleks?",
-			"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
-			"indices"=>array("","",""),
-			"reponse"=>2
-		),
-		array(
-			"question"=>"En kiu filmo estas Joanne?",
-			"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
-			"indices"=>array("","",""),
-			"reponse"=>1
-		),
-		array(
-			"question"=>"En kiu filmo estas Tran Hoan?",
-			"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
-			"indices"=>array("","",""),
-			"reponse"=>4
-		),
-		array(
-			"question"=>"Kiu loĝas en Brazilo?",
-			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
-			"indices"=>array("","",""),
-			"reponse"=>2
-		),
-		array(
-			"question"=>"Kiu loĝas en Pollando?",
-			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
-			"indices"=>array("","",""),
-			"reponse"=>3
-		),
-		array(
-			"question"=>"Kiu loĝas en Vjetnamio?",
-			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
-			"indices"=>array("","",""),
-			"reponse"=>5
-		),
-		
-		array(
-			"question"=>"Kiu estas desegnisto?",
-			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
-			"indices"=>array("","",""),
-			"reponse"=>4
-		),		
-		array(
-			"question"=>"Kiu estas psikologo?",
-			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
-			"indices"=>array("","",""),
-			"reponse"=>3
-		),
-		array(
-			"question"=>"Kiu estas studento?",
-			"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
-			"indices"=>array("","",""),
-			"reponse"=>2
-		),
-		array(
-			"question"=>"Kie loĝas la instruisto?",
-			"propositions"=>array("Aŭstralio","Brazilo","Francio","Pollando","Vjetnamio"),
-			"indices"=>array("","",""),
-			"reponse"=>3
+			array(
+				"question"=>"En kiu filmo estas Aleks?",
+				"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
+				"indices"=>array("","",""),
+				"reponse"=>2
+			),
+			array(
+				"question"=>"En kiu filmo estas Joanne?",
+				"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
+				"indices"=>array("","",""),
+				"reponse"=>1
+			),
+			array(
+				"question"=>"En kiu filmo estas Tran Hoan?",
+				"propositions"=>array("filmo 1","filmo 2","filmo 3","filmo 4","filmo 5"),
+				"indices"=>array("","",""),
+				"reponse"=>4
+			),
+			array(
+				"question"=>"Kiu loĝas en Brazilo?",
+				"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+				"indices"=>array("","",""),
+				"reponse"=>2
+			),
+			array(
+				"question"=>"Kiu loĝas en Pollando?",
+				"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+				"indices"=>array("","",""),
+				"reponse"=>3
+			),
+			array(
+				"question"=>"Kiu loĝas en Vjetnamio?",
+				"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+				"indices"=>array("","",""),
+				"reponse"=>5
+			),
+			
+			array(
+				"question"=>"Kiu estas desegnisto?",
+				"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+				"indices"=>array("","",""),
+				"reponse"=>4
+			),		
+			array(
+				"question"=>"Kiu estas psikologo?",
+				"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+				"indices"=>array("","",""),
+				"reponse"=>3
+			),
+			array(
+				"question"=>"Kiu estas studento?",
+				"propositions"=>array("Aleks","Allan","Anna Maria","Joanne","Tran Hoan"),
+				"indices"=>array("","",""),
+				"reponse"=>2
+			),
+			array(
+				"question"=>"Kie loĝas la instruisto?",
+				"propositions"=>array("Aŭstralio","Brazilo","Francio","Pollando","Vjetnamio"),
+				"indices"=>array("","",""),
+				"reponse"=>3
+			)
 		)
-	)
-);
-			?>
-
+	);
+				?>
+			</div>
+			<div class="nurprinto">
+				<p class="parto">Cet exercice est basé sur la compréhension d’une vidéo. Si vous souhaitez faire cet exercice, 
+					veuillez vous reporter au site internet, à la page https://ikurso.fr/fr/cge/lec01.php?section=8
+				</p>
+			</div>
 			<p>Quelques mots nouveaux utilisés dans cet exercice&nbsp;:</p>
 			<div class="vortlisto row">
 				<div class="col s12 m4">
@@ -678,88 +684,91 @@ QCM(
 			} // fin section 
 			if ($section=="12") {
 			?>
-
-			<p>
-			Dans l’exercice suivant, sélectionnez la réponse exacte en 
-			cliquant sur le bouton associé. Attention&nbsp;! L’exercice est très facile (il 
-			suffit d’avoir compris le cours), mais ne tentez pas de répondre au hasard, car il 
-			y a tout de même 67 108 864 réponses possibles…
-			</p>
-			<?php 
-QCM(
-	array(
+			<div class="neprintu">
+				<p>
+				Dans l’exercice suivant, sélectionnez la réponse exacte en 
+				cliquant sur le bouton associé. Attention&nbsp;! L’exercice est très facile (il 
+				suffit d’avoir compris le cours), mais ne tentez pas de répondre au hasard, car il 
+				y a tout de même 67 108 864 réponses possibles…
+				</p>
+				<?php 
+	QCM(
 		array(
-			"question"=>"Combien de syllabes y a-t-il dans 'viaj kukoj'&nbsp;?",
-			"propositions"=>array("3","4","5","6"),
-			"indices"=>array("","",""),
-			"reponse"=>2
-		),
-		array(
-			"question"=>"Quelle est la place de l’accent tonique&nbsp;?",
-			"propositions"=>array("sur la dernière voyelle","sur l’avant-dernière syllabe","sur la dernière syllabe","sur la première voyelle"),
-			"indices"=>array("","",""),
-			"reponse"=>2
-		),
-		array(
-			"question"=>"Comment se prononce la lettre 'ĝ'&nbsp;?",
-			"propositions"=>array("comme le 'g' de 'Alger'","comme le 'g' de 'Lagos'","comme le 'dj' de 'Djibouti'","aucun de ceux-ci"),
-			"indices"=>array("","",""),
-			"reponse"=>3
-		),
-		array(
-			"question"=>"Comment écrit-on en espéranto le son 'ch' du mot français 'chat'&nbsp;?",
-			"propositions"=>array("ch","ŝ","ce son n’existe pas en espéranto","sch"),
-			"reponse"=>2
-		),		
-		array(
-			"question"=>"Comment écrit-on le son 'u' qui apparaît dans 'tutu' en français&nbsp;?",
-			"propositions"=>array("u","y","il n'existe pas en espéranto","&uuml;"),
-			"reponse"=>3
-		),
-		array(
-			"question"=>"Quel est le pronom de 3<sup>e</sup> personne féminin singulier&nbsp;?",
-			"propositions"=>array("mi","ili","ĝi","ŝi"),
-			"reponse"=>4
-		),
-		array(
-			"question"=>"Quelle est la terminaison caractéristique de l'infinitif&nbsp;?",
-			"propositions"=>array("-i","-is","-ar","-j"),
-			"reponse"=>1
-		),
-		array(
-			"question"=>"Quelle est la terminaison caractéristique de l’adjectif&nbsp;?",
-			"propositions"=>array("-as","-o","-j","-a"),
-			"reponse"=>4
-		),
-		array(
-			"question"=>"Quelle est la terminaison caractéristique du passé&nbsp;?",
-			"propositions"=>array("-i","-j","-a","-is"),
-			"reponse"=>4
-		),
-		array(
-			"question"=>"Quelle est la terminaison caractéristique du nom&nbsp;?",
-			"propositions"=>array("-o","-os","cela dépend du genre","-a"),
-			"reponse"=>1
-		),
-		array(
-			"question"=>"Comment dit-on 'du thé chaud'&nbsp;?",
-			"propositions"=>array("la varmo tea","varma teo","varmo teo","la varma teo"),
-			"reponse"=>2
-		),
-		array(
-			"question"=>"Comment dit-on 'de bons garçons'&nbsp;?",
-			"propositions"=>array("bona knaboj","la bonaj knaboj","bonaj knaboj","bonoj knaboj"),
-			"reponse"=>3
-		),
-		array(
-			"question"=>"Comment dit-on 'mes fils'&nbsp;?",
-			"propositions"=>array("mia filioj","miaj filoj","miaj filioj","mia filoj"),
-			"reponse"=>2
-		)	
-	)
-);
-			?>
-			
+			array(
+				"question"=>"Combien de syllabes y a-t-il dans 'viaj kukoj'&nbsp;?",
+				"propositions"=>array("3","4","5","6"),
+				"indices"=>array("","",""),
+				"reponse"=>2
+			),
+			array(
+				"question"=>"Quelle est la place de l’accent tonique&nbsp;?",
+				"propositions"=>array("sur la dernière voyelle","sur l’avant-dernière syllabe","sur la dernière syllabe","sur la première voyelle"),
+				"indices"=>array("","",""),
+				"reponse"=>2
+			),
+			array(
+				"question"=>"Comment se prononce la lettre 'ĝ'&nbsp;?",
+				"propositions"=>array("comme le 'g' de 'Alger'","comme le 'g' de 'Lagos'","comme le 'dj' de 'Djibouti'","aucun de ceux-ci"),
+				"indices"=>array("","",""),
+				"reponse"=>3
+			),
+			array(
+				"question"=>"Comment écrit-on en espéranto le son 'ch' du mot français 'chat'&nbsp;?",
+				"propositions"=>array("ch","ŝ","ce son n’existe pas en espéranto","sch"),
+				"reponse"=>2
+			),		
+			array(
+				"question"=>"Comment écrit-on le son 'u' qui apparaît dans 'tutu' en français&nbsp;?",
+				"propositions"=>array("u","y","il n'existe pas en espéranto","&uuml;"),
+				"reponse"=>3
+			),
+			array(
+				"question"=>"Quel est le pronom de 3<sup>e</sup> personne féminin singulier&nbsp;?",
+				"propositions"=>array("mi","ili","ĝi","ŝi"),
+				"reponse"=>4
+			),
+			array(
+				"question"=>"Quelle est la terminaison caractéristique de l'infinitif&nbsp;?",
+				"propositions"=>array("-i","-is","-ar","-j"),
+				"reponse"=>1
+			),
+			array(
+				"question"=>"Quelle est la terminaison caractéristique de l’adjectif&nbsp;?",
+				"propositions"=>array("-as","-o","-j","-a"),
+				"reponse"=>4
+			),
+			array(
+				"question"=>"Quelle est la terminaison caractéristique du passé&nbsp;?",
+				"propositions"=>array("-i","-j","-a","-is"),
+				"reponse"=>4
+			),
+			array(
+				"question"=>"Quelle est la terminaison caractéristique du nom&nbsp;?",
+				"propositions"=>array("-o","-os","cela dépend du genre","-a"),
+				"reponse"=>1
+			),
+			array(
+				"question"=>"Comment dit-on 'du thé chaud'&nbsp;?",
+				"propositions"=>array("la varmo tea","varma teo","varmo teo","la varma teo"),
+				"reponse"=>2
+			),
+			array(
+				"question"=>"Comment dit-on 'de bons garçons'&nbsp;?",
+				"propositions"=>array("bona knaboj","la bonaj knaboj","bonaj knaboj","bonoj knaboj"),
+				"reponse"=>3
+			),
+			array(
+				"question"=>"Comment dit-on 'mes fils'&nbsp;?",
+				"propositions"=>array("mia filioj","miaj filoj","miaj filioj","mia filoj"),
+				"reponse"=>2
+			)	
+		)
+	);
+				?>
+			</div>
+			<div class="nurprinto">
+				<p>Cette section contient un QCM à faire en ligne sur la page https://ikurso.fr/fr/cge/lec01.php?section=12</p>
+			</div>
 			<?php 
 			} // fin section
 			if ($section=="13") {

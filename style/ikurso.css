@@ -68,95 +68,6 @@ h4 {font-size: 1.5rem; margin: 2rem 0 1.5rem 0; color: #554E47;font-weight: 300;
 
 a {color: #2196F3;}
 
-body.butiko .card {
-    padding: 0.5em;
-    margin: 0 0.5em 0.5em 0;
-}
-body.butiko .col {
-	padding: 0;
-}
-body.butiko article .plejbonaj {
-	border:1px dashed #989490;
-	padding: 1rem 1rem 1rem 2rem;
-	margin-top: 1rem;
-}
-body.butiko article .plejbonaj h2 {
-	font-size: 2rem; 
-	color: #989490;
-	margin-top: -1.25em;
-	margin-bottom: 0;
-	margin-bottom: 1rem;
-}
-body.butiko article .plejbonaj h2 span {
-	background-color: #FFF;
-	margin-left: 0.5em;
-	padding-left: 0.25em;
-	padding-right: 0.25em;
-	display: inline-block;
-}
-body.butiko .input-field.col label {
-	padding-left: 0;
-}
-body.butiko article .card {
-    font-size: 13px;
-}
-body.butiko article .card .card-image {
-    padding: 0.5em;
-}
-body.butiko article .card .card-content {
-    padding: 0.5em;
-}
-
-body.butiko article .card-reveal {
-    padding: 0.5em;
-}
-body.butiko article .card-reveal p {
-	font-size: 1em;
-    color: #000;
-    font-weight: 400;
-    padding: 0;
-}
-body.butiko .butiko-eta .card .card-content {
-    padding:1em 0 0.5em 0;
-}
-
-body.butiko aside {
-	border:2px dotted #64B5F6;
-}
-body.butiko aside > h3 {
-	margin-top: -0.85em;
-	margin-bottom: 0;
-}
-body.butiko aside > h3 span {
-	color: #64B5F6;
-	background-color: #FFF;
-	margin-left: 0.5em;
-	padding-left: 0.25em;
-	padding-right: 0.25em;
-	display: inline-block;
-}
-body.butiko aside .card {
-    font-size: 12px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: none;
-    margin: 0;
-}
-body.butiko aside .card:not(:last-child) {
-    border-bottom: 1px dashed #989490;
-}
-body.butiko aside .card-content {
-	padding: 0;
-	margin: 0.5rem;
-}
-
-body.butiko aside .card .card-content .card-title {
-	font-size: 16px;
-	padding-bottom: 0;
-}
-body.butiko aside .card .card-content p {
-	padding-left: 0.5em;
-}
 section.klarigo ul {
 	list-style-type: disc;
 	padding-left: 2em;
@@ -166,7 +77,6 @@ section.klarigo ul li {
 	list-style-type: circle;
 }
 
-.butiko-nova 
 /* surcharge entete */
 @media only screen and (max-width: 992px)
 {
@@ -1294,4 +1204,17 @@ span.bravo {
 
 .trumbowyg,.trumbowyg-textarea,.trumbowyg-editor {
 	min-height: 100px !important;
+}
+
+/*---- selections à imprimer / ne pas imprimer -----*/
+
+@media print {
+  .noprint {
+      display:none;
+  }
+}
+@media screen {
+   .onlyprint {
+       display: none;
+   }
 }

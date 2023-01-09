@@ -16,7 +16,7 @@ include "dlekkapo.inc.php";
 		displayWarningSiLecioneroManquante($persono_id,'CG',3,$section);
 			if ($section=="1") {
 			?>
-			<p>Nous avons vu pas mal de choses dans la 2<sup>e</sup> leçon. Voici un tableau qui
+			<p class="parto">Nous avons vu pas mal de choses dans la 2<sup>e</sup> leçon. Voici un tableau qui
 				résume une structure de phrase très courante&nbsp;:</p>
 				<div class="container">
 					<table class="bordered">
@@ -34,7 +34,7 @@ include "dlekkapo.inc.php";
 						<tr><td>Niaj fratinoj</td><td>vidis</td><td>viajn instruistojn.</td></tr>
 					</table>
 				</div>
-			<p>
+			<p class="parto">
 			Comme les fonctions de sujet, verbe et complément d’objet sont marquées
 			sans ambiguïté par la terminaison, on peut fort bien les intervertir sans
 			changer le sens de la phrase. Cette relative liberté de l’ordre des mots
@@ -54,7 +54,7 @@ include "dlekkapo.inc.php";
 			</div>
 
 			<p>
-			Page suivante, nous vous proposons, à titre d’exercice, deux autres exemples illustrant la façon dont
+			Dans la section suivante, nous vous proposons, à titre d’exercice, deux autres exemples illustrant la façon dont
 			on peut modifier l’ordre des mots.</p>
 	
 		<fieldset class="vortoj">

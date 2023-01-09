@@ -261,7 +261,7 @@ include "dlekkapo.inc.php";
 		if ($section=="7") {
 		?>
 
-			<div class="float-right w30">
+			<div class="float-right w30 noprint">
 				<a href="https://fr.wikipedia.org/wiki/La_Esperantisto">
 					<img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/la-esperantisto.jpg"></a>
 			</div>
@@ -278,10 +278,11 @@ include "dlekkapo.inc.php";
 			<p class="parto">Aleks vous présente ici un petit tour du monde des magazines en espéranto&nbsp;:<br>
 					<span class="eta">(vous pouvez activer les sous-titres en français)</span>
 				</p>
-			<p><iframe width="560" height="315" src="https://www.youtube.com/embed/yVjtft16rNo?rel=0"
+			<p class="noprint"><iframe width="560" height="315" src="https://www.youtube.com/embed/yVjtft16rNo?rel=0"
 frameborder="0" allowfullscreen></iframe></p>
+			<p class="onlyprint">Dans cette vidéo, Aleks présente des revues en espéranto du monde entier&nbsp;<br /><a href="https://www.youtube.com/watch?v=yVjtft16rNo">https://www.youtube.com/watch?v=yVjtft16rNo</a></p>
 				<p>Vous pouvez également lire directement en ligne la revue <a href="https://esperanto-france.org/le-monde-de-l-esperanto">Le Monde de l’espéranto</a>, revue bilingue éditée par Espéranto-France.</p>
-			<div class="row">
+			<div class="row noprint">
 				<p class="col s3"><a href="https://uea.org/revuoj/esperanto"><img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/revuo-Esperanto.jpg"></a></p>
 				<p class="col s3"><a href="http://kontakto.tejo.org/"><img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/revuo-Kontakto.jpg"></a></p>
 				<p class="col s3"><a href="http://esperanto-ondo.ru/"><img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/revuo-ondo-de-esperanto.jpg"></a></p>
@@ -307,7 +308,7 @@ frameborder="0" allowfullscreen></iframe></p>
 					<p>Certaines, comme la revue française <i>Espéranto-Info</i>, s’adressent directement à des personnes ne parlant pas l’espéranto, 
 						pour leur présenter les divers aspects de l’Espérantie et quelques mots croisés et phrases de base.</p>
 				</div>
-				<div class="col s3">
+				<div class="col s3 noprint">
 					
 					<a href="http://www.monato.net/"><img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/revuo-monato.jpg"></a>
 					<a href="http://esperantoinfo.info/"><img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/revuo-esperanto-info.jpg"></a>
@@ -322,17 +323,17 @@ frameborder="0" allowfullscreen></iframe></p>
 			<p class="parto">Page suivante, nous vous invitons à lire un extrait d’article, que vous traduirez à titre exercice.</p>
 			
 			<div class="card-panel blue lighten-5">
-				<div class="float-right w30">
+				<div class="float-right w30 noprint">
 					<a href="https://esperanto-france.org/le-monde-de-l-esperanto">
 						<img class="responsive-img" src="<?php echo $vojo;?>fr/cge/bildoj/revuo-LME.jpg"></a>
 				</div>
 				<p>Et pour découvrir quelques revues en espéranto, nous vous recommandons&nbsp;:</p>
-				<p><a href="https://esperanto-france.org/le-monde-de-l-esperanto"><i>Le Monde de l’Espéranto</i></a>, la revue d’Espéranto-France, accessible en ligne&nbsp;; et d’autres revues dans notre <a href="https://ikurso.esperanto-france.org/butiko.php">boutique en ligne</a>.
+				<p><a href="https://esperanto-france.org/le-monde-de-l-esperanto"><i>Le Monde de l’Espéranto</i></a>, la revue d’Espéranto-France, accessible en ligne&nbsp;; et d’autres revues dans notre <a href="https://butiko-esperanto-france.org">boutique en ligne</a>.
 				</p>
 				<p>Pour en savoir plus&nbsp;:</p>
 				<ul>
-					<li><a href="https://fr.wikipedia.org/wiki/Esp%C3%A9rantie#M%C3%A9dias">https://fr.wikipedia.org/wiki/Espérantie#Médias</a></li>
-					<li><a href="https://fr.wikipedia.org/wiki/Liste_des_p%C3%A9riodiques_en_esp%C3%A9ranto">https://fr.wikipedia.org/wiki/Liste_des_périodiques_en_espéranto</a></li>
+					<li><a href="https://fr.wikipedia.org/wiki/Espérantie#Médias">https://fr.wikipedia.org/wiki/Espérantie#Médias</a></li>
+					<li><a href="https://fr.wikipedia.org/wiki/Liste_des_périodiques_en_espéranto">https://fr.wikipedia.org/wiki/Liste_des_périodiques_en_espéranto</a></li>
 					<li><a href="https://eo.wikipedia.org/wiki/Esperanto-gazeto">https://eo.wikipedia.org/wiki/Esperanto-gazeto</a></li>
 				</ul>
 			</div>

@@ -25,7 +25,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 
 		<!--Import materialize.css-->
 		<link rel="stylesheet" href="<?php echo $vojo;?>style/materialize.min.css">
-		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/materialize.override.css?v=<?php echo $milestone; ?>-2"  media="all"/>
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/materialize.override.css?v=<?php echo $milestone; ?>"  media="all"/>
 
 		<!--Player audio-->
 		<link rel="stylesheet" type="text/css" href="<?php echo $vojo;?>soundmanager2/css/mp3-player-button.css" />
@@ -39,7 +39,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		</script>
 		<script type="text/javascript" src="<?php echo $vojo;?>xAlUtf8.js"></script>	
 		<!--<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>"  media="all"/> -->
-		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>-2"  media="all"/>
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>"  media="all"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/impression.css?v=<?php echo $milestone; ?>"  media="print"/>
 
 		<!--Let browser know website is optimized for mobile-->

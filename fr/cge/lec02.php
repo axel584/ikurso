@@ -20,56 +20,61 @@ include "dlekkapo.inc.php";
 		?>
 
 		<p class="parto">Pour introduire cette leçon, nous vous proposons un petit test. Il vous permettra de réviser ce que vous avez vu dans la leçon 1 et de découvrir un peu de vocabulaire de la leçon 2.</p>
-		<p>Retrouvez le texte qui convient à l'image (attention, quelques mots sont à deviner… et seront expliqués dans la leçon 2. Soyez attentif et imaginatif&nbsp;!</p>
+		<div class="onlyprint">
+			<p>Cet exercice est un QCM à faire en ligne sur la page https://ikurso.fr/fr/cge/lec02.php</p>
+		</div>
+		<div class="noprint">
+			<p>Retrouvez le texte qui convient à l'image (attention, quelques mots sont à deviner… et seront expliqués dans la leçon 2. Soyez attentif et imaginatif&nbsp;!</p>
 
-<?php 
-QCM_bildoj(
-	array(
-		array(
-			"bildo"=>"bildoj/img-02-01.jpg",
-			"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot",
-			"auteur"=>"Denis Chabot",
-			"propositions"=>array("La kafo estas varma","La cafeo estas varma","La kafo estas ĉauda"),
-			"indices"=>array("","attention, la lettre c se prononce ts",""),
-			"reponse"=>1
-		),
-		array(
-			"bildo"=>"bildoj/img-02-02.jpg",
-			"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot",
-			"auteur"=>"Denis Chabot",
-			"propositions"=>array("La biskivtoj estas en pano","La panoj estas en korbo","La paneoj estas sekaj"),
-			"indices"=>array("","",""),
-			"reponse"=>2
-		),
-		array(
-			"bildo"=>"bildoj/img-02-03.jpg",
-			"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Katherine%20Lissitsa",
-			"auteur"=>"Katherine Lissitsa",
-			"propositions"=>array(" La filo estas kun birdoj","Patro estas kun birdoj","La knabino estas kun birdoj"),
-			"indices"=>array("","",""),
-			"reponse"=>3
-		),
-		array(
-			"bildo"=>"bildoj/img-02-04.jpg",
-			"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot",
-			"auteur"=>"Denis Chabot",
-			"propositions"=>array("La knabo lernas","La patro estas instruisto","La knabo estas sana kaj bona filo"),
-			"indices"=>array("","",""),
-			"reponse"=>1
-		),
-		array(
-			"bildo"=>"bildoj/img-02-05.jpg",
-			"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Marcel+Labont%E9",
-			"auteur"=>"Marcel Labonté",
-			"propositions"=>array("Bela filo estas mia instruisto","Bela virino estas ilia instruistino","Instruisto estas mia"),
-			"indices"=>array("","",""),
-			"reponse"=>2
-		)
-
-	)
-);
-?>
-
+		<?php 
+		QCM_bildoj(
+			array(
+				array(
+					"bildo"=>"bildoj/img-02-01.jpg",
+					"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot",
+					"auteur"=>"Denis Chabot",
+					"propositions"=>array("La kafo estas varma","La cafeo estas varma","La kafo estas ĉauda"),
+					"indices"=>array("","attention, la lettre c se prononce ts",""),
+					"reponse"=>1
+				),
+				array(
+					"bildo"=>"bildoj/img-02-02.jpg",
+					"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot",
+					"auteur"=>"Denis Chabot",
+					"propositions"=>array("La biskivtoj estas en pano","La panoj estas en korbo","La paneoj estas sekaj"),
+					"indices"=>array("","",""),
+					"reponse"=>2
+				),
+				array(
+					"bildo"=>"bildoj/img-02-03.jpg",
+					"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Katherine%20Lissitsa",
+					"auteur"=>"Katherine Lissitsa",
+					"propositions"=>array(" La filo estas kun birdoj","Patro estas kun birdoj","La knabino estas kun birdoj"),
+					"indices"=>array("","",""),
+					"reponse"=>3
+				),
+				array(
+					"bildo"=>"bildoj/img-02-04.jpg",
+					"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Denis%20Chabot",
+					"auteur"=>"Denis Chabot",
+					"propositions"=>array("La knabo lernas","La patro estas instruisto","La knabo estas sana kaj bona filo"),
+					"indices"=>array("","",""),
+					"reponse"=>1
+				),
+				array(
+					"bildo"=>"bildoj/img-02-05.jpg",
+					"url"=>"http://monde.ccdmd.qc.ca/recherche/?demande=collection&str=Marcel+Labont%E9",
+					"auteur"=>"Marcel Labonté",
+					"propositions"=>array("Bela filo estas mia instruisto","Bela virino estas ilia instruistino","Instruisto estas mia"),
+					"indices"=>array("","",""),
+					"reponse"=>2
+				)
+		
+			)
+		);
+		?>
+		</div>
+		
 		<?php 
 		}
 		if ($section=="2") {
@@ -99,7 +104,7 @@ QCM_bildoj(
 		
 		<fieldset class="vortoj">
 			<legend>VOCABULAIRE À RETENIR</legend>
-			<div>
+			<div class="noprint">
 				<?php if ($persono) { ?>
 				<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
 				<?php } ?>
@@ -195,8 +200,9 @@ QCM_bildoj(
 			<p class="col s11 offset-s1">→ verbe d’<b>action</b>&nbsp;: rigardi, donc ici <span class="eo">najbaro</span> est C.O.D. et on le met à l’accusatif.</p>
 		</div>
 		
-		<h2>C’est à vous&nbsp;!</h2>
-		<p class="parto">Pour chaque phrase, indiquez à quel endroit vous mettriez l’accusatif si vous deviez la traduire en espéranto&nbsp;:</p>
+		<div class="noprint">
+			<h2>C’est à vous&nbsp;!</h2>
+			<p class="parto">Pour chaque phrase, indiquez à quel endroit vous mettriez l’accusatif si vous deviez la traduire en espéranto&nbsp;:</p>
 			
 			<?php
 			QCM(
@@ -240,6 +246,7 @@ QCM_bildoj(
 				)
 			);
 		?>
+		</div>
 		
 		<?php 
 		} // fin section
@@ -632,71 +639,77 @@ QCM_bildoj(
 		
 	if ($section=="13") {
 	?>
-	<p>Voici un petit exercice de révision. Sélectionnez la réponse exacte en 
-	cliquant sur le bouton associé. Si vous ne savez pas quelle réponse donner à une question, n’hésitez pas à relire le cours&nbsp;: toutes les réponses s’y trouvent&nbsp;!</p>
-
-
-
-	<?php
-QCM(
-	array(
+	<div class="onlyprint">
+		<p>Cette section contient un QCM à faire en ligne sur la page</p>
+		<p>https://ikurso.fr/fr/cge/lec02.php?section=13</p>
+	</div>
+	<div class="noprint">
+		<p>Voici un petit exercice de révision. Sélectionnez la réponse exacte en 
+		cliquant sur le bouton associé. Si vous ne savez pas quelle réponse donner à une question, n’hésitez pas à relire le cours&nbsp;: toutes les réponses s’y trouvent&nbsp;!</p>
+	
+	
+	
+		<?php
+	QCM(
 		array(
-			"question"=>"Que signifient respectivement 'mala', 'malbona', 'malsana'&nbsp;?",
-			"propositions"=>array("mal, mauvais, malade", "mauvais, mauvais, malade", "contraire, mauvais, malade"),
-			"indices"=>array("","",""),
-			"reponse"=>3
-		),
-		array(
-			"question"=>"Que signifie 'malbelaj virinoj'&nbsp;?",
-			"propositions"=>array("des hommes laids", "de belles femmes", "des femmes laides"),
-			"indices"=>array("","",""),
-			"reponse"=>3
-		),
-		array(
-			"question"=>"Quel est le féminin pluriel de 'mia granda amiko'&nbsp;?",
-			"propositions"=>array("miaj grandaj amikinoj", "mia granda amikinoj", "miaj grandinaj amikinoj"),
-			"indices"=>array("","",""),
-			"reponse"=>1
-		),
-		array(
-			"question"=>"Traduisez 'la boutique est vieille'",
-			"propositions"=>array("la butiko estas malbela", "la butiko estas malnovan","la butiko estas malnova"),
-			"indices"=>array("","",""),
-			"reponse"=>3
-		),
-		array(
-			"question"=>"Traduisez 'je ne bois pas d’eau':",
-			"propositions"=>array("mi maltrinkas akvon", "mi ne trinkas akvon", "mi trinkas ne akvon"),
-			"indices"=>array("","",""),
-			"reponse"=>2
-		),
-		array(
-			"question"=>"Traduisez 'j’ai oublié la limonade' :",
-			"propositions"=>array("mi petis limonadon", "mi havas forgesi la limonadon", "mi forgesis la limonadon"),
-			"indices"=>array("","",""),
-			"reponse"=>3
-		),
-		array(
-			"question"=>"Quel est le complément d’objet direct dans 'mon frère boira de l’eau lundi'&nbsp;?",
-			"propositions"=>array("mon frère", "de l’eau", "lundi"),
-			"indices"=>array("","",""),
-			"reponse"=>2
-		),
-		array(
-			"question"=>"Quel est le complément d’objet direct dans 'que boira mon frère lundi'&nbsp;?",
-			"propositions"=>array("que", "mon frère", "lundi"),
-			"indices"=>array("","",""),
-			"reponse"=>1
-		),
-		array(
-			"question"=>"Quelle est la fonction de 'médecin' dans 'tu seras médecin'&nbsp;?",
-			"propositions"=>array("sujet", "complément d’objet direct", "attribut du sujet"),
-			"indices"=>array("","",""),
-			"reponse"=>3
+			array(
+				"question"=>"Que signifient respectivement 'mala', 'malbona', 'malsana'&nbsp;?",
+				"propositions"=>array("mal, mauvais, malade", "mauvais, mauvais, malade", "contraire, mauvais, malade"),
+				"indices"=>array("","",""),
+				"reponse"=>3
+			),
+			array(
+				"question"=>"Que signifie 'malbelaj virinoj'&nbsp;?",
+				"propositions"=>array("des hommes laids", "de belles femmes", "des femmes laides"),
+				"indices"=>array("","",""),
+				"reponse"=>3
+			),
+			array(
+				"question"=>"Quel est le féminin pluriel de 'mia granda amiko'&nbsp;?",
+				"propositions"=>array("miaj grandaj amikinoj", "mia granda amikinoj", "miaj grandinaj amikinoj"),
+				"indices"=>array("","",""),
+				"reponse"=>1
+			),
+			array(
+				"question"=>"Traduisez 'la boutique est vieille'",
+				"propositions"=>array("la butiko estas malbela", "la butiko estas malnovan","la butiko estas malnova"),
+				"indices"=>array("","",""),
+				"reponse"=>3
+			),
+			array(
+				"question"=>"Traduisez 'je ne bois pas d’eau':",
+				"propositions"=>array("mi maltrinkas akvon", "mi ne trinkas akvon", "mi trinkas ne akvon"),
+				"indices"=>array("","",""),
+				"reponse"=>2
+			),
+			array(
+				"question"=>"Traduisez 'j’ai oublié la limonade' :",
+				"propositions"=>array("mi petis limonadon", "mi havas forgesi la limonadon", "mi forgesis la limonadon"),
+				"indices"=>array("","",""),
+				"reponse"=>3
+			),
+			array(
+				"question"=>"Quel est le complément d’objet direct dans 'mon frère boira de l’eau lundi'&nbsp;?",
+				"propositions"=>array("mon frère", "de l’eau", "lundi"),
+				"indices"=>array("","",""),
+				"reponse"=>2
+			),
+			array(
+				"question"=>"Quel est le complément d’objet direct dans 'que boira mon frère lundi'&nbsp;?",
+				"propositions"=>array("que", "mon frère", "lundi"),
+				"indices"=>array("","",""),
+				"reponse"=>1
+			),
+			array(
+				"question"=>"Quelle est la fonction de 'médecin' dans 'tu seras médecin'&nbsp;?",
+				"propositions"=>array("sujet", "complément d’objet direct", "attribut du sujet"),
+				"indices"=>array("","",""),
+				"reponse"=>3
+			)
 		)
-	)
-);
-	?>
+	);
+		?>
+	</div>
 	<?php 
 	} // fin section 
 	if ($section=="14") {

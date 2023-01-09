@@ -14,10 +14,10 @@ p, h1, h2, h3, h4, h5, h6, blockquote, ul, ol {
 p, blockquote {
 	orphans: 3; /* pas de ligne seule en bas */
 	widows: 3; /* pas de ligne seule en haut */
-	margin-bottom: 0.5cm;
+	margin-bottom: 0.15cm;
 }
 blockquote, ul, ol {
-  page-break-inside: avoid; /* pas de coupure dans ces élements */
+  page-break-inside: avoid; /* pas de coupure dans ces ï¿½lements */
 }
 h2 {
 	font-family: 'Roboto Condensed', sans-serif!important;
@@ -44,15 +44,16 @@ div.impression,
 header#superrigardo,
 #leciono-fino,
 footer,
-.noprint, 
 p.eo.eta,
 .sm2_button,
 p.dauro,
+#toast-container,
 .card.red,
 a.sm2_button,
-.material-icons.prefix,
-.tasko input
-	{display: none;}
+.material-icons.prefix {display: none;}
+.tasko input {border-bottom: dashed;border-color:#AAA;border-width:1pt;height:2em;}
+
+img.responsive-img {max-width: 5cm;}
 
 .card-panel.blue {
 	background-color: transparent!important;	
@@ -63,28 +64,41 @@ a.sm2_button,
 	margin-bottom: 0.5cm;
 	text-align: left;
 }
-div.vortlisto {padding: 0.25cm;}
-div.vortlisto.row {
-	width: 100%;
-	margin-top: 0.5cm;
-	margin-bottom: 0.5cm;
-	border: 1px solid #ccc;
+.col .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.vortlisto {
+	border-color: #CCC;
+	border-width: 0 0 0 3pt;
+	border-style: double;
+	padding: 0 0 0 0.25em;
+	margin-bottom: 1em;
+}
+.vortlisto.row {
+	margin-top: 0.25cm;
+	margin-bottom: 0.25cm;
 }
 fieldset div.vortlisto.row {
 	border: none;
 }
-.row .col.s6 {
-    width: 25%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
+.row .col {
+    width: 100%!important;
+    margin-left: 0;
+}		
+.row .col.s6.center-align {
+    width: 4cm!important;
+    height: 4cm;
+    float: left;
 }
+.row .col.s6.center-align img.responsive-img {max-width: 100%;}
+.row .col.offset-s3 {margin-left: 0}
 
 /***** typographie pour l'impression *****/
 
 .eo {
 	color: #2196F3;
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Georgia', serif;
 }
 p.rimarko strong {
 	color: #999;
@@ -92,197 +106,34 @@ p.rimarko strong {
 	font-variant: small-caps;
 	font-size:1.2em;
 }
+article p {
+    line-height: 140%;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+}
 p.parto {
 	margin-top: 1em;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.25em;
 }
-p.parto:before {
-	font-family: 'Material Icons';
-	content: "texture";
-	-webkit-font-feature-settings: 'liga';
-	color: #2196F3;
-	padding-right: 0.5em;
-	vertical-align: middle;
+.korelativoj table {
+	width: fit-content;
+	margin-left: 0;
 }
-
-/***** utilisation des colonnes de l'écran medium *****/
-  .row .col.m1 {
-    width: 8.3333333333%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.m2 {
-    width: 16.6666666667%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.m3 {
-    width: 25%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.m4 {
-    width: 33.3333333333%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.m5 {
-    width: 41.6666666667%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.m6 {
-    width: 50%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.m7 {
-    width: 58.3333333333%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.m8 {
-    width: 66.6666666667%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.m9 {
-    width: 75%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.m10 {
-    width: 83.3333333333%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.m11 {
-    width: 91.6666666667%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.m12 {
-    width: 100%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .row .col.offset-m1 {
-    margin-left: 8.3333333333%;
-  }
-  .row .col.pull-m1 {
-    right: 8.3333333333%;
-  }
-  .row .col.push-m1 {
-    left: 8.3333333333%;
-  }
-  .row .col.offset-m2 {
-    margin-left: 16.6666666667%;
-  }
-  .row .col.pull-m2 {
-    right: 16.6666666667%;
-  }
-  .row .col.push-m2 {
-    left: 16.6666666667%;
-  }
-  .row .col.offset-m3 {
-    margin-left: 25%;
-  }
-  .row .col.pull-m3 {
-    right: 25%;
-  }
-  .row .col.push-m3 {
-    left: 25%;
-  }
-  .row .col.offset-m4 {
-    margin-left: 33.3333333333%;
-  }
-  .row .col.pull-m4 {
-    right: 33.3333333333%;
-  }
-  .row .col.push-m4 {
-    left: 33.3333333333%;
-  }
-  .row .col.offset-m5 {
-    margin-left: 41.6666666667%;
-  }
-  .row .col.pull-m5 {
-    right: 41.6666666667%;
-  }
-  .row .col.push-m5 {
-    left: 41.6666666667%;
-  }
-  .row .col.offset-m6 {
-    margin-left: 50%;
-  }
-  .row .col.pull-m6 {
-    right: 50%;
-  }
-  .row .col.push-m6 {
-    left: 50%;
-  }
-  .row .col.offset-m7 {
-    margin-left: 58.3333333333%;
-  }
-  .row .col.pull-m7 {
-    right: 58.3333333333%;
-  }
-  .row .col.push-m7 {
-    left: 58.3333333333%;
-  }
-  .row .col.offset-m8 {
-    margin-left: 66.6666666667%;
-  }
-  .row .col.pull-m8 {
-    right: 66.6666666667%;
-  }
-  .row .col.push-m8 {
-    left: 66.6666666667%;
-  }
-  .row .col.offset-m9 {
-    margin-left: 75%;
-  }
-  .row .col.pull-m9 {
-    right: 75%;
-  }
-  .row .col.push-m9 {
-    left: 75%;
-  }
-  .row .col.offset-m10 {
-    margin-left: 83.3333333333%;
-  }
-  .row .col.pull-m10 {
-    right: 83.3333333333%;
-  }
-  .row .col.push-m10 {
-    left: 83.3333333333%;
-  }
-  .row .col.offset-m11 {
-    margin-left: 91.6666666667%;
-  }
-  .row .col.pull-m11 {
-    right: 91.6666666667%;
-  }
-  .row .col.push-m11 {
-    left: 91.6666666667%;
-  }
-  .row .col.offset-m12 {
-    margin-left: 100%;
-  }
-  .row .col.pull-m12 {
-    right: 100%;
-  }
-  .row .col.push-m12 {
-    left: 100%;
-  }
+.korelativoj table th, .korelativoj table td {
+    padding: 0.1em 0.2em;
+	font-size: 9pt;
+    width: 2.5cm;
+    min-width: 2.5cm;
+    max-width: 2.5cm;
+}
+.korelativoj th:first-child {
+	position: unset;
+	width: 3cm;
+}
+.creditphoto {
+    font-size: 7pt!important;
+}
+/***** utilisation des colonnes de l'Ã©cran medium *****/
+.container {
+	margin: 0 auto;
+}

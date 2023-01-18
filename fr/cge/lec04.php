@@ -476,14 +476,14 @@ include "dlekkapo.inc.php";
 			<p class="parto">Lorsqu’on indique une date précise, on emploie souvent la terminaison <b>n</b> de l’accusatif. Vous verrez par la suite que l’accusatif est employé pour certains compléments, et pas uniquement pour le complément direct.</p>
 							
 			<div class="vortlisto row">
-				<p><a href="<?php echo $vojo;?>fr/son/frazoj/dato-06.mp3" class="sm2_button"></a><span class="eo">Ili venos la deka<b>n</b> de aprilo.</span>&nbsp;: Ils viendront le 10 avril.</p>
-				<p><a href="<?php echo $vojo;?>fr/son/frazoj/dato-07.mp3" class="sm2_button"></a><span class="eo">La dua<b>n</b> de julio, mi edziĝos. </span>&nbsp;: Le 2 juillet, je me marierai.</p>
-				<p><a href="<?php echo $vojo;?>fr/son/frazoj/dato-08.mp3" class="sm2_button"></a><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2018</span>&nbsp;: Paris, le 15 décembre 2018 (par exemple au début d’une lettre)</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-06.mp3" class="sm2_button"></a><span class="eo">Ili venos la deka<b>n</b> de aprilo.</span>&nbsp;: Ils viendront le 10 avril.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-07.mp3" class="sm2_button"></a><span class="eo">La dua<b>n</b> de julio, mi edziĝos. </span>&nbsp;: Le 2 juillet, je me marierai.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-08.mp3" class="sm2_button"></a><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2018</span>&nbsp;: Paris, le 15 décembre 2018 (par exemple au début d’une lettre)</p>
 			</div>
 				
 			<p class="parto">On peut utiliser également la forme adverbiale pour les jours et les mois.</p>
 			<div class="vortlisto row">
-				<p><a href="<?php echo $vojo;?>fr/son/frazoj/dato-09.mp3" class="sm2_button"></a><span class="eo">Dimanĉ<b>e</b> mi ne laboras.</span>&nbsp;: Je ne travaille pas le dimanche.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-09.mp3" class="sm2_button"></a><span class="eo">Dimanĉ<b>e</b> mi ne laboras.</span>&nbsp;: Je ne travaille pas le dimanche.</p>
 			</div>
 			
 			<div class="card-panel blue lighten-5">Cela fait beaucoup de nouvelles choses à mémoriser, mais ne vous tracassez pas trop. Prenez un peu de temps pour assimiler tout ça et n’hésitez pas à revenir relire cette page dans quelques jours. N’oubliez pas de pratiquer régulièrement, par exemple en indiquant la date du jour à votre correcteur quand vous lui enverrez vos prochains exercices.</div>
@@ -551,10 +551,13 @@ include "dlekkapo.inc.php";
 			<div class="col s12 m6">
 				<p class="parto">L’espéranto est chanté depuis sa naissance, puisque Louis Lazare Zamenhof avait déjà écrit les paroles d’un hymne, <i>La Espero</i>, toujours entonné lors des grandes rencontres espérantistes.</p>
 			</div>
-			<div class="col s10 offset-s1 m6">
+			<div class="col s10 offset-s1 m6 noprint">
 				<div class="video-container">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/shNsmyrNN2g" frameborder="0" allowfullscreen></iframe>
 				</div>
+			</div>
+			<div class="col s12 onlyprint">
+				Vous pouvez écouter <i>La Espero</i> sur https://youtu.be/shNsmyrNN2g
 			</div>
 		</div>
 
@@ -566,7 +569,7 @@ include "dlekkapo.inc.php";
 			<div class="col s12 m9">
 				<p>Certains artistes sont autoproduits, mais les associations nationales servent souvent de maisons de production. Les premiers labels apparus sont issus des éditeurs de livres LF-Koop en Suisse et Edistudio en Italie. Aujourd’hui, le label <a href="https://www.vinilkosmo-mp3.com/fr/">Vinilkosmo</a> propose, près de Toulouse, l’un des principaux studios d’enregistrement des artistes espérantophones.</p>
 			</div>
-			<div class="col s6 m3 offset-s4">
+			<div class="col s6 m3 offset-s4 noprint">
 				<a href="https://www.vinilkosmo-mp3.com/fr/"><img src="<?php echo $vojo;?>fr/cge/bildoj/vinilkosmo.gif" class="responsive-img" alt="Vinilkosmo"></a>
 			</div>
 
@@ -586,16 +589,19 @@ include "dlekkapo.inc.php";
 				<p><i class="material-icons tiny contraste-texte-A">star</i> <b>Gijom</b>, un artiste de chanson, dont le répertoire, original et adapté du français, est en partie disponible gratuitement sur son site internet.</p>
 				<p><i class="material-icons tiny contraste-texte-A">star</i> Enfin, deux chansons faciles, pour commencer la navigation sur YouTube&nbsp;: <i>Jen</i> des Argentins <b>La Porkoj</b> et <i>Bluaj fragoj</i> du groupe brésilien <b>Merlin</b>.</p>
 			</div>
-			<div class="col s8 m5 offset-s2">
+			<div class="col s8 m5 offset-s2 noprint">
 				<video class="responsive-video" controls>
 					<source src="<?php echo $vojo;?>fr/cge/bildoj/jen.mp4" type="video/mp4">
 				</video>
 			</div>
+			<div class="col s12 onlyprint">
+				Vous pourrez écouter cette chanson en allant sur la page<br />https://ikurso.fr/fr/cge/lec04.php?section=13
+			</div>		
 		</div>
 
 		<div class="row">
 			<div class="col s12">
-				<p class="parto">Pour en savoir plus, rendez-vous sur la Toile :</p>
+				<p class="parto">Pour en savoir plus, rendez-vous sur la Toile&nbsp;:</p>
 				<ul>
 					<li><a href="https://fr.wikipedia.org/wiki/Musique_esp%C3%A9rantophone">https://fr.wikipedia.org/wiki/Musique_espérantophone</a></li>
 					<li><a href="https://eo.wikipedia.org/wiki/Esperanto-muziko">https://eo.wikipedia.org/wiki/Esperanto-muziko</a></li>
@@ -608,9 +614,9 @@ include "dlekkapo.inc.php";
 			<div class="col s12">
 				<p class="parto">Et pour découvrir l’espéranto en musique :</p>
 				<ul>
-					<li>à la radio : <a href="http://muzaiko.info/">muzaiko.info</a></li>
-					<li>en albums : <a href="https://www.vinilkosmo-mp3.com/fr/">vinilkosmo.com</a></li>
-					<li>dans notre boutique en ligne : <a href="<?=$urlracine?>butiko.php">https://ikurso.esperanto-france.org/butiko.php</a></li>
+					<li>à la radio&nbsp;: <a href="http://muzaiko.info/">muzaiko.info</a></li>
+					<li>en albums&nbsp;: <a href="https://www.vinilkosmo-mp3.com/fr/">vinilkosmo.com</a></li>
+					<li>dans notre boutique en ligne&nbsp;: <a href="https://butiko-esperanto-france.org/">https://butiko-esperanto-france.org/</a></li>
 				</ul>
 			</div>
 		</div>

@@ -4451,6 +4451,7 @@ UPDATE `ekzerceroj` SET `demando` = 'Li aŭ ŝi devas alporti sian libron. <qcm>
 UPDATE `ekzerceroj` SET `demando` = 'Li aŭ ŝi havas rendevuon kun sia amiko. <qcm>vera / malvera / oni ne scias</qcm>' WHERE `ekzerceroj`.`id` = 2291;
 UPDATE `ekzerceroj` SET `demando` = 'Kio estas la dokumentoj? <qcm>anoncoj / retmesaĝo / artikolo</qcm>' WHERE `ekzerceroj`.`id` = 2310；
 UPDATE `ekzerceroj` SET `demando` = 'Kie vi trovis ilin? <qcm>en la interreto / en vendejo / en ĵurnalo</qcm>' WHERE `ekzerceroj`.`id` = 2311
-
+--- correction consigne exercice 4 de l'examen A1
+UPDATE `ekzercoj` SET `komando` = 'Vi volas aĉeti domon, vi havas 130&nbsp;000 eŭrojn. Vi loĝas kun infano kaj birdo. Vi trovas anoncojn en ĵurnalo.' WHERE `ekzercoj`.`id` = 293;
 
 

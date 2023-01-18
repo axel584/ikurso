@@ -56,20 +56,20 @@ include "gerdakapo.inc.php";
 				<p class="parto"><b>Dua konsilo</b>: <b>denove studu !</b> Jes, restudu la lecionojn de
 				unua kurso, relegu la ĉapitrojn de <i>Gerda malaperis</i>, rerakontu al vi
 				la rakonton, relegu niajn korektojn… Vi nun povas legi facilajn rakontojn en Esperanto. 
-				Vi trovos kelkajn ideojn ĉi-tie en la paĝo <a href="<?php echo $vojo;?>/butiko.php">BOUTIQUE</a> kaj pliajn en la katalogo de la <a href="https://esperanto-france.org/boutique">butiko de Esperanto-France</a>, 
-				en la parto "Lectures faciles".
+				Vi trovos kelkajn ideojn ĉi-tie en la <a href="https://butiko-esperanto-france.org/">butiko de Esperanto-France</a>, 
+				en la parto “Lectures faciles”.
 				
 				<p class="parto">Kaj tio ĉi enkondukas nian <b>trian konsilon</b>: <b>estu singarda!</b> Esperanto
 				estas ja facila lingvo. Pro tio kelkaj homoj nur lernas la kernon de
 				la lingvo kaj ili tuj imagas, ke ili jam ĉion konas. Kelkaj eĉ ne
 				hezitas pedante disvastigi siajn teoriojn pri lingvo, kiun ili
 				neniam serioze studis. Ne sekvu ilin blinde kaj ne hezitu peti
-				konsilojn de niaj korektantoj aŭ de «bonaj aŭtoroj».</p>
+				konsilojn de niaj korektantoj aŭ de “bonaj aŭtoroj”.</p>
 				
-				<p class="parto"><b>Kvara konsilo</b>: <b>korespondu !</b> Korespondi kun sperta
+				<p class="parto"><b>Kvara konsilo</b>: <b>korespondu!</b> Korespondi kun sperta
 				Esperanto-parolanto estas bona rimedo por disvolvi viajn sciojn. Tamen korespondi kun alilanda
 				komencanto povas esti interesa sperto, sed memoru nian trian konsilon!</p>
-				<p>En la paĝo <a href="<?=$vojo?>helpo.php?section=kajposte">Que faire après le cours ?</a>, ni prezentas diversajn
+				<p>En la paĝo <a href="<?=$vojo?>helpo.php?section=kajposte">Que faire après le cours&nbsp;?</a>, ni prezentas diversajn
 				programojn por rete korespondi en Esperanto.</p>
 				
 				<p class="parto"><b>Kvina kaj lasta konsilo</b>: <b>instruu!</b> Jes, de kiam vi havos iom pli da
@@ -84,7 +84,7 @@ include "gerdakapo.inc.php";
 				<h3>Rimedoj por plu lerni</h3>
 				
 				
-				<p>Vi trovos en la paĝo <a href="<?=$vojo?>helpo.php?section=kajposte">Que faire après le cours ?</a> 
+				<p>Vi trovos en la paĝo <a href="<?=$vojo?>helpo.php?section=kajposte">Que faire après le cours&nbsp;?</a> 
 				multajn ideojn por praktiki la lingvon kaj plu lerni.</p>
 	
 				<p class="parto">
@@ -93,7 +93,7 @@ include "gerdakapo.inc.php";
 				la vortaroj unulingvaj, t.e. la vortaroj nur en Esperanto. Ili
 				montros al vi, ĉu vorto, kiun vi volas uzi, vere ekzistas, ĉu ĝi
 				estas sufiĉe oficiala, kaj en kiuj okazoj ĝi uzeblas. Aparte
-				konsilindaj estas :</p>
+				konsilindaj estas:</p>
 				
 				<ul class="klarigo">
 					<li><i>Plena Ilustrita Vortaro</i> (PIV), eldonita de SAT. Tiu ĉi
@@ -111,14 +111,14 @@ include "gerdakapo.inc.php";
 				<h3>Ankaŭ konsilindaj por studemuloj:</h3>
 				
 				<ul class="klarigo">
-					<li><i>Fundamento de Esperanto</i>. Ĝi estas la «netuŝebla» bazo
+					<li><i>Fundamento de Esperanto</i>. Ĝi estas la “netuŝebla” bazo
 					de la lingvo, ankoraŭ tre interesa de scienca kaj historia
 					vidpunkto. Ĝia ekzercaro povas utili kiel lernolibro kaj ĝia
-					«universala vortaro» kvinlingva restas grava referenco malgraŭ la
+					“universala vortaro” kvinlingva restas grava referenco malgraŭ la
 					multnombraj eraroj, korektitaj en apartaj aldonaĵoj. Tiu ĉi
 					libro estas aĉetinda, sed vi povas jam rigardi partojn el ĝi en
 					Internet danke al la aŭtoro de 
-					<a href="http://bertilow.com/pmeg/">PMEG</a> : </li>
+					<a href="http://bertilow.com/pmeg/">PMEG</a>: </li>
 					<ul>
 						<li>Fundamenta gramatiko</li>
 						<li>Ekzercaro</li>
@@ -126,9 +126,9 @@ include "gerdakapo.inc.php";
 				</ul>
 	
 				<p class="parto">Finfine necesas mencii, ke ekzistas miloj da literaturaj verkoj
-				ĉiaspecaj kaj por ĉiuj gustoj. En la meza kategorio de «instru-celaj»
+				ĉiaspecaj kaj por ĉiuj gustoj. En la meza kategorio de “instru-celaj”
 				literaturaj verkoj vi plaĉe retrovos la verkojn de Claude Piron, el
-				kiuj aparte rekomendindaj estas :</p>
+				kiuj aparte rekomendindaj estas:</p>
 				
 				<ul class="klarigo">
 					<li><i>Vere aŭ fantazie</i>, kolektas mallongajn novelojn</li>
@@ -165,9 +165,9 @@ include "gerdakapo.inc.php";
 				Orienta Eŭropo reekvilibrigas la aĝan piramidon.</p>
 				
 				<p class="parto">
-				La noblaj oficialaj celoj de la Movado estas sufiĉe konataj :
+				La noblaj oficialaj celoj de la Movado estas sufiĉe konataj:
 				disvastigi la lingvon, promocii interhoman pacon kaj amon, ktp. Al
-				tio aldoniĝas la pli egoismaj celoj de ĉiu aparta membro : vojaĝi
+				tio aldoniĝas la pli egoismaj celoj de ĉiu aparta membro: vojaĝi
 				eskterlanden, konatiĝi kun aliaj kulturoj, trovi vivkunul(in)on
 				(eventuale nur dumkongresan), agrable pasigi la tempon, trovi publikon
 				por siaj artaj talentoj, ag-kampon por sia pov-soifo, ktp. Nepre
@@ -177,9 +177,9 @@ include "gerdakapo.inc.php";
 				Kiel eniri la Movadon? Sufiĉas kapabli paroli Esperanton kaj aliĝi
 				al iu ajn Esperanto-asocio. Eble timigos vin la granda nombro de
 				asocioj, kiuj atendas vin… Ne timu, estas tre simple. Ekzistas nur
-				unu grandskala internacia asocio : 
+				unu grandskala internacia asocio: 
 				<a href="http://www.uea.org">UEA (Universala Esperanto-Asocio)</a>.
-				Aliĝi al ĝi estas preskaŭ nepra por «vera» Esperantisto : via
+				Aliĝi al ĝi estas preskaŭ nepra por “vera” Esperantisto: via
 				pago rajtigos vin ricevi la interesan pri-movadan
 				monatan revuon <i>Esperanto</i>, ricevi la junularan monatan gazeton
 				<i>Kontakto</i> kaj ricevi
@@ -198,7 +198,7 @@ include "gerdakapo.inc.php";
 				junulara sekcio.</p>
 				
 				<p class="parto">
-				Se tio ne sufiĉas, vi povas aliĝi ankaŭ al <i>«fakaj» asocioj</i>
+				Se tio ne sufiĉas, vi povas aliĝi ankaŭ al <i>“fakaj” asocioj</i>
 				pli-malpli seriozaj, kiuj vere abundas: blinduloj, fervojistoj,
 				sennaciistoj, poŝtistoj, naturistoj, radio-amatoroj, kaj dekoj da
 				aliaj… Plejofte la kotizoj estas vere simbolaj.</p>
@@ -206,7 +206,7 @@ include "gerdakapo.inc.php";
 				<p>
 				Multaj asocioj ankaŭ organizas kursojn, seminariojn, ekzamenojn,
 				libroservon, korespondan servon, ĉiaspecajn aranĝojn kaj eĉ
-				kongresojn. Ĉiujare UEA organizas tutmondan kongreson (oni diras :
+				kongresojn. Ĉiujare UEA organizas tutmondan kongreson (oni diras:
 				<i>universalan kongreson</i>, aŭ UK-on), kiu daŭras unu semajnon
 				en julio-aŭgusto. Aparte konsilindaj estas la
 				internaciaj junularaj kongresoj (IJK), kiuj okazas samepoke, sed ne

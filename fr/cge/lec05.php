@@ -230,7 +230,7 @@ include "dlekkapo.inc.php";
 		<p>
 			Nous pouvons compléter notre désormais familier tableau des corrélatifs. Pas d’inquiétude, nous allons poursuivre leur apprentissage progressivement, mais vous pouvez maintenant conserver cette page comme pense-bête&nbsp;!
 		</p>
-		<div class="korelativoj">
+		<div class="korelativoj noprint">
 			<table class="highlight">
 				<thead>
 					<tr>
@@ -302,6 +302,112 @@ include "dlekkapo.inc.php";
 						<td><span class="eo">ĉio</span><br />tout</td>
 						<td><span class="eo">ĉia</span><br />toutes sortes de</td>
 						<td><span class="eo">ĉie</span><br />partout</td>
+						<td><span class="eo">ĉiam</span><br />toujours</td>
+						<td><span class="eo">ĉiel</span><br />de toute manière</td>
+						<td><span class="eo">ĉial</span><br />pour toutes sortes de raisons</td>
+						<td><span class="eo">ĉiom</span><br />le tout</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="korelativoj onlyprint">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th> </th>
+						<th>Individualité<br /><span class="eo">-U</span></th>
+						<th>Possession<br /><span class="eo">-ES</span></th>
+						<th>Chose<br /><span class="eo">-O</span></th>
+						<th>Qualité<br /><span class="eo">-A</span></th>
+						<th>Lieu<br /><span class="eo">-E</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<td><span class="eo">kiu</span><br />qui&nbsp;? lequel&nbsp;?</td>
+						<td><span class="eo">kies</span><br />à qui&nbsp;?</td>
+						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
+						<td><span class="eo">kia</span><br />quelle sorte de&nbsp;?</td>
+						<td><span class="eo">kie</span><br />où&nbsp;?</td>
+					</tr>
+					<tr>
+						<th>Indéfini<br /><span class="eo">I-</span></th>
+						<td><span class="eo">iu</span><br />quelqu’un</td>
+						<td><span class="eo">ies</span><br />de quelqu’un</td>
+						<td><span class="eo">io</span><br />quelque chose</td>
+						<td><span class="eo">ia</span><br />une sorte de</td>
+						<td><span class="eo">ie</span><br />quelque part</td>
+					</tr>
+					<tr>
+						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<td><span class="eo">neniu</span><br />personne</td>
+						<td><span class="eo">nenies</span><br />de personne</td>
+						<td><span class="eo">nenio</span><br />rien</td>
+						<td><span class="eo">nenia</span><br />aucune sorte de</td>
+						<td><span class="eo">nenie</span><br />nulle part</td>
+					</tr>
+					<tr>
+						<th>Démonstratif<br /><span class="eo">TI-</span></th>
+						<td><span class="eo">tiu</span><br />celui-là,<br />celle-là</td>
+						<td><span class="eo">ties</span><br />de celui-là</td>
+						<td><span class="eo">tio</span><br />cela</td>
+						<td><span class="eo">tia</span><br />cette sorte de</td>
+						<td><span class="eo">tie</span><br />là, là-bas</td>
+					</tr>
+					<tr>
+						<th>Collectif<br /><span class="eo">ĈI-</span></th>
+						<td><span class="eo">ĉiu</span><br />chacun(e),<br />Chaque</td>
+						<td><span class="eo">ĉies</span><br />de chacun</td>
+						<td><span class="eo">ĉio</span><br />tout</td>
+						<td><span class="eo">ĉia</span><br />toutes sortes de</td>
+						<td><span class="eo">ĉie</span><br />partout</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="korelativoj onlyprint">
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th> </th>
+						<th>Temps<br /><span class="eo">-AM</span></th>
+						<th>Manière<br /><span class="eo">-EL</span></th>
+						<th>Cause<br /><span class="eo">-AL</span></th>
+						<th>Quantité<br /><span class="eo">-OM</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
+						<td><span class="eo">kiel</span><br />comment&nbsp;?</td>
+						<td><span class="eo">kial</span><br />pourquoi&nbsp;?</td>
+						<td><span class="eo">kiom</span><br />combien&nbsp;?</td>
+					</tr>
+					<tr>
+						<th>Indéfini<br /><span class="eo">I-</span></th>
+						<td><span class="eo">iam</span><br />à un moment</td>
+						<td><span class="eo">iel</span><br />d’une certaine manière</td>
+						<td><span class="eo">ial</span><br />pour une certaine raison</td>
+						<td><span class="eo">iom</span><br />un peu</td>
+					</tr>
+					<tr>
+						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<td><span class="eo">neniam</span><br />jamais</td>
+						<td><span class="eo">neniel</span><br />impossible</td>
+						<td><span class="eo">nenial</span><br />sans raison</td>
+						<td><span class="eo">neniom</span><br />aucun</td>
+					</tr>
+					<tr>
+						<th>Démonstratif<br /><span class="eo">TI-</span></th>
+						<td><span class="eo">tiam</span><br />à ce moment</td>
+						<td><span class="eo">tiel</span><br />ainsi</td>
+						<td><span class="eo">tial</span><br />pour cette raison</td>
+						<td><span class="eo">tiom</span><br />autant&nbsp;de</td>
+					</tr>
+					<tr>
+						<th>Collectif<br /><span class="eo">ĈI-</span></th>
 						<td><span class="eo">ĉiam</span><br />toujours</td>
 						<td><span class="eo">ĉiel</span><br />de toute manière</td>
 						<td><span class="eo">ĉial</span><br />pour toutes sortes de raisons</td>
@@ -421,10 +527,10 @@ include "dlekkapo.inc.php";
 		</div>
 		<div class="row">
 			<div class="col s9">
-				<p>Citons d’abord quelques œuvres très connues à découvrir ou redécouvrir en espéranto : <em>Le Seigneur des anneaux</em>, <em>Don Quichotte</em>, <em>Le Petit Prince</em>, <em>Hamlet</em>… Vous apprécierez alors les traductions de qualités qui seront un moyen indéniable de progresser et d’approfondir votre vocabulaire.</p>
+				<p>Citons d’abord quelques œuvres très connues à découvrir ou redécouvrir en espéranto&nbsp;: <em>Le Seigneur des anneaux</em>, <em>Don Quichotte</em>, <em>Le Petit Prince</em>, <em>Hamlet</em>… Vous apprécierez alors les traductions de qualités qui seront un moyen indéniable de progresser et d’approfondir votre vocabulaire.</p>
 				<p>Et puis il existe la littérature originale, loin d’être négligeable, car il se trouve dans le monde de l’espéranto quelques auteurs connus, reconnus et prolifiques&nbsp;: William Auld, Marjorie Boulton, Trevor Steel… Leurs livres sont devenus des classiques, voire des incontournables.</p>
 				<p class="parto">Un autre fait est à noter, certains livres sont parus en espéranto et ont ensuite été traduits vers des langues nationales, comme <em>Kroata milita noktlibro</em>, de Spomenka Ŝtimec (<em>Journal de nuit</em>) ou <em>Kumeŭaŭa, la filo de la ĝangalo</em> de Tibor Sekelj (<em>Kumewawa, le fils de la jungle</em>).</p>
-				<div class="row">
+				<div class="row noprint">
 					<div class="col s6">
 						<img src="<?php echo $vojo;?>fr/cge/bildoj/mastro-ringoj.png" class="responsive-img" alt="La Majstro de l' ringoj" />
 					</div>
@@ -433,18 +539,18 @@ include "dlekkapo.inc.php";
 					</div>
 				</div>
 			</div>
-			<div class="col s3">
+			<div class="col s3 noprint">
 				<img src="<?php echo $vojo;?>fr/cge/bildoj/don-quichotte.jpg" class="responsive-img" alt="Don Quichotte" />
 			</div>
 		</div>
 		<div class="row">
 			<div class="col s8 m9">
-				<p>La <strong>bande-dessinée</strong> (d’accord, pour certains, ce n’est pas de la « littérature ») mais nous ne pouvons pas ne pas l’évoquer&nbsp;: que diriez-vous de lire <em>Tintin au Tibet</em>, <em>Astérix et Cléopâtre</em>, ou le <em>Petit Spirou</em> en espéranto ?</p>
+				<p>La <strong>bande-dessinée</strong> (d’accord, pour certains, ce n’est pas de la «&nbsp;littérature&nbsp;») mais nous ne pouvons pas ne pas l’évoquer&nbsp;: que diriez-vous de lire <em>Tintin au Tibet</em>, <em>Astérix et Cléopâtre</em> ou <em>Petit Spirou</em> en espéranto&nbsp;?</p>
 				<p>L’espéranto, grâce à la littérature, prend tout son sens&nbsp;: les <strong>œuvres originales</strong> participent à l’enrichissement du patrimoine culturel et les <strong>œuvres traduites</strong> ouvrent des accès entre les cultures.</p>
-				<p class="parto">Êtes-vous prêt à partir à la découverte des <a href="http://katalogo.uea.org/katalogo.php?inf=8587">sagas islandaises</a>&nbsp;? À partager le <a href="http://katalogo.uea.org/katalogo.php?inf=8943">récit d’une famille hollandaise hanté par la colonisation</a>&nbsp;? À en apprendre plus sur <a href="http://katalogo.uea.org/katalogo.php?inf=7813">le père de la langue maltaise</a>&nbsp;? Ou souhaitez-vous vous plonger dans un <a href="http://katalogo.uea.org/index.php?inf=6111">recueil de nouvelles coréennes</a>&nbsp;? <p>
+				<p class="parto">Êtes-vous prêt à partir à la découverte des <a href="http://katalogo.uea.org/katalogo.php?inf=8587">sagas islandaises</a>&nbsp;? À partager le <a href="http://katalogo.uea.org/katalogo.php?inf=8943">récit d’une famille hollandaise hanté par la colonisation</a>&nbsp;? À en apprendre plus sur <a href="http://katalogo.uea.org/katalogo.php?inf=7813">le père de la langue maltaise</a>&nbsp;? Ou souhaitez-vous vous plonger dans un <a href="http://katalogo.uea.org/index.php?inf=6111">recueil de nouvelles coréennes</a>&nbsp;?<p>
 				<p>Vous êtes chanceux de pouvoir lire ces livres, car ils ne sont pas édités en français&nbsp;!</p>
 			</div>
-			<div class="col s4 m3">
+			<div class="col s4 m3 noprint">
 				<img src="<?php echo $vojo;?>fr/cge/bildoj/La_templo_de_l_suno.jpg" class="responsive-img" alt="La Eta Princo" />
 			</div>
 		</div>
@@ -452,8 +558,8 @@ include "dlekkapo.inc.php";
 			<div class="s12">
 				<p><strong>Quelques liens utiles pour prolonger votre découverte&nbsp;:</strong></p>
 				<ul>
-					<li><a href="https://fr.wikipedia.org/wiki/Littérature_espérantophone">article de wikipédia sur la littérature espérantophone</a></li>
-					<li><a href="https://esperanto-france.org/doc/UFE_Catalogue.pdf">catalogue de la librairie d'Espéranto-France</a></li>
+					<li><a href="https://fr.wikipedia.org/wiki/Littérature_espérantophone">l’article de wikipédia sur la littérature espérantophone</a></li>
+					<li><a href="https://butiko-esperanto-france.org">la librairie d’Espéranto-France</a></li>
 				</ul>
 				<p><strong>Livres électroniques</strong>&nbsp;:</p>
 				<ul>

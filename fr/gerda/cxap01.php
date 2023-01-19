@@ -212,7 +212,7 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">mal-</span> : <i>voir ci-après</i></p>
 					<p><span class="eo">mi</span> : je, me, moi <span class="eta">[<i>mi</i>]</span></p>
 					<p><span class="eo">mondo</span> : monde <span class="eta">[<i><b>monne</b>-do</i>]</span></p>
-					<p><span class="eo">multaj</span> : plusieurs  <span class="eta">[<i><b>moul</b>-taï</i>]</span></p>
+					<p><span class="eo">multaj</span> : beaucoup de, de nombreux  <span class="eta">[<i><b>moul</b>-taï</i>]</span></p>
 					<p class="sekva"><span class="eo">multe</span> : beaucoup  <span class="eta">[<i><b>moul</b>-tè</i>]
 					<p class="sekva tab"><span class="eo">vi laboras tro multe</span> : tu travailles trop, (mot-à-mot «trop beaucoup»)</p>
 				</div>

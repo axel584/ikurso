@@ -5,7 +5,6 @@ $studanto=isset($_GET["studanto"])?$_GET["studanto"]:"";
 $lernantaRespondo=isset($_GET["respondo"])?htmlspecialchars($_GET["respondo"]):"";
 $korekteblaEkzerco=isset($_GET["korekteblaEkzerco"])?$_GET["korekteblaEkzerco"]=="true":false;
 
-
 if ($lernantaRespondo=="") {
 	echo json_encode(null);
 	exit;

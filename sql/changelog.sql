@@ -4453,5 +4453,7 @@ UPDATE `ekzerceroj` SET `demando` = 'Kio estas la dokumentoj? <qcm>anoncoj / ret
 UPDATE `ekzerceroj` SET `demando` = 'Kie vi trovis ilin? <qcm>en la interreto / en vendejo / en ĵurnalo</qcm>' WHERE `ekzerceroj`.`id` = 2311
 --- correction consigne exercice 4 de l'examen A1
 UPDATE `ekzercoj` SET `komando` = 'Vi volas aĉeti domon, vi havas 130&nbsp;000 eŭrojn. Vi loĝas kun infano kaj birdo. Vi trovas anoncojn en ĵurnalo.' WHERE `ekzercoj`.`id` = 293;
-
+--- correction coquille examen A2 (#1010)
+UPDATE `ekzerceroj` SET `respondo` = 'en la hospitalo', `normaligita` = 'en la hospitalo' WHERE `ekzerceroj`.`id` = 2282;
+UPDATE `ekzerceroj` SET `respondo` = 'F', `normaligita` = 'f' WHERE `ekzerceroj`.`id` = 2296;
 

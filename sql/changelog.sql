@@ -4456,4 +4456,11 @@ UPDATE `ekzercoj` SET `komando` = 'Vi volas aĉeti domon, vi havas 130&nbsp;000 
 --- correction coquille examen A2 (#1010)
 UPDATE `ekzerceroj` SET `respondo` = 'en la hospitalo', `normaligita` = 'en la hospitalo' WHERE `ekzerceroj`.`id` = 2282;
 UPDATE `ekzerceroj` SET `respondo` = 'F', `normaligita` = 'f' WHERE `ekzerceroj`.`id` = 2296;
-
+--- correction erreur dans le corrigé DLEK (#1011)
+UPDATE `ekzerceroj` SET `respondo` = 'Multaj bestoj estas interesaj en tiu zoo.', `normaligita` = 'multaj bestoj estas interesaj en tiu zoo|multaj interesaj bestoj estas en tiu zoo|estas multaj interesaj bestoj en tiu zoo' WHERE `ekzerceroj`.`id` = 153;
+UPDATE `ekzerceroj` SET `respondo` = 'Dum ĉiu tagmanĝo infanoj estos antaŭ la kaĝo. ', `normaligita` = 'dum la tagmangxo infanoj estos antaux cxiu kagxo|dum la tagmangxo estos infanoj antaux cxiu kagxo|dum cxiu tagmangxo infanoj estos antaux la kagxo|dum cxiu tagmangxo estos infanoj antaux la kagxo' WHERE `ekzerceroj`.`id` = 154;
+UPDATE `ekzerceroj` SET `respondo` = 'Ĉu multaj kaĝoj estis apud la enirejo?', `normaligita` = 'cxu multaj kagxoj estis apud la enirejo|cxu estis multaj kagxoj apud la enirejo' WHERE `ekzerceroj`.`id` = 155;
+UPDATE `ekzerceroj` SET `respondo` = 'Kio estis por la tagmanĝo?', `normaligita` = 'kio estis por la tagmangxo' WHERE `ekzerceroj`.`id` = 156;
+UPDATE `ekzerceroj` SET `respondo` = 'En arkto estas blankaj ursoj.', `normaligita` = 'en arkto estas blankaj ursoj' WHERE `ekzerceroj`.`id` = 157;
+--- correction coquille examen A2 (#1012)
+UPDATE `ekzerceroj` SET `respondo` = 'Sarah iros al Germanio.', `normaligita` = 'sarah iros al germanio|sarah iros al germanio en aprilo|sxi iros al germanio|sxi iros al germanio en aprilo|sarah iros en germanion|sarah iros en germanion en aprilo|sxi iros en germanion|sxi iros en germanion en aprilo' WHERE `ekzerceroj`.`id` = 2301;

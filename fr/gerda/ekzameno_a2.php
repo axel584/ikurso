@@ -109,6 +109,31 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 40&nbsp;minutoj  </p>
 		</div>
 		<?php 
 			getEkzercon(301,$persono_id);
+		?>
+		<h3>Kvara ekzerco</h3>
+			<p>Viaj najbaroj invitas vin vespermanĝi. Vi iras al dolĉaĵvendejo, por aĉeti la deserton, kiun vi alportos. 
+			Legu la enhavon de tiuj kukoj kaj skribu la numeron de la kuko, kiu taŭgas al ĉiu homo en la familio.</p>
+			<p>La patro havas ovalergion. La patrino ŝategas ĉokoladon. La filino ŝatas fruktojn sed ne lakton. La filo ŝatas sukerkukojn. La avo ŝategas kafajn desertojn. La avino amas laktokukojn sen vanilo.</p>
+		<div class="row">
+			<p class="col s3"><img class="responsive-img" src="bildoj/tavolkuko.jpg"/></p>
+			<p class="col s3">1<br>tavolkuko<br>(ovoj • sukero • faruno • butero)</p>
+			<p class="col s3"><img class="responsive-img" src="bildoj/fragotorteto.jpg"/></p>
+			<p class="col s3">2<br>fragotorteto<br>(ovoj • faruno • butero • fragoj)</p>
+		</div>
+		<div class="row">
+			<p class="col s3"><img class="responsive-img" src="bildoj/shaumajho.jpg"/></p>
+			<p class="col s3">3<br>ĉokolada ŝaŭmaĵo<br>(ovoj • butero • ĉokolado)</p>
+			<p class="col s3"><img class="responsive-img" src="bildoj/kremkuketo.jpg"/></p>
+			<p class="col s3">4<br>kafa kremkuketo<br>(ovoj • faruno • butero • kafo)</p>
+		</div>
+		<div class="row">
+			<p class="col s3"><img class="responsive-img" src="bildoj/laktorizo.jpg"/></p>
+			<p class="col s3">5<br>laktorizo<br>(rizo • lakto • sukero • vanilo)</p>
+			<p class="col s3"><img class="responsive-img" src="bildoj/cherizflano.jpg"/></p>
+			<p class="col s3">6<br>ĉerizflano<br>(ovoj • faruno • lakto • ĉerizoj)</p>
+		</div>
+		<?php 
+			getEkzercon(304,$persono_id);
 		}
 		if ($section=="4") {
 		?>	

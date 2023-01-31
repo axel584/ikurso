@@ -4464,3 +4464,13 @@ UPDATE `ekzerceroj` SET `respondo` = 'Kio estis por la tagmanĝo?', `normaligita
 UPDATE `ekzerceroj` SET `respondo` = 'En arkto estas blankaj ursoj.', `normaligita` = 'en arkto estas blankaj ursoj' WHERE `ekzerceroj`.`id` = 157;
 --- correction coquille examen A2 (#1012)
 UPDATE `ekzerceroj` SET `respondo` = 'Sarah iros al Germanio.', `normaligita` = 'sarah iros al germanio|sarah iros al germanio en aprilo|sxi iros al germanio|sxi iros al germanio en aprilo|sarah iros en germanion|sarah iros en germanion en aprilo|sxi iros en germanion|sxi iros en germanion en aprilo' WHERE `ekzerceroj`.`id` = 2301;
+--- ajout exercice manquant dans examen A2
+INSERT INTO `ekzercoj` (`id`, `komando`, `lecionero_id`, `komando_detalo`, `ekzemplo`, `typo`, `x2u`, `korektebla`) VALUES (304, 'Skribu la numeron de la kuko, kiun elektos ĉiu familiano.', 467, NULL, NULL, 'traduko-1', '1', '0');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondmodelo`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES ('2310', '304', NULL, '33', 'Kiun kukon la patro manĝos?', '', '5', '5', NULL, '0', '0', '1');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondmodelo`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES ('2311', '304', NULL, '34', 'Kiun kukon la patrino manĝos?', '', '3', '3', NULL, '0', '0', '1');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondmodelo`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES ('2312', '304', NULL, '35', 'Kiun kukon la filino manĝos?', '', '2', '2', NULL, '0', '0', '1');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondmodelo`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES ('2313', '304', NULL, '36', 'Kiun kukon la filo manĝos?', '', '1', '1', NULL, '0', '0', '1');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondmodelo`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES ('2314', '304', NULL, '37', 'Kiun kukon la avo manĝos?', '', '4', '4', NULL, '0', '0', '1');
+INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondmodelo`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES ('2315', '304', NULL, '38', 'Kiun kukon la avino manĝos?', '', '6', '6', NULL, '0', '0', '1');
+UPDATE `ekzerceroj` SET `numero` = '39', `demando` = 'Redaktu de 60 ĝis 80 vortoj.' WHERE `ekzerceroj`.`id` = 2308;
+UPDATE `ekzerceroj` SET `numero` = '40', `demando` = 'Redaktu de 60 ĝis 80 vortoj.' WHERE `ekzerceroj`.`id` = 2309;

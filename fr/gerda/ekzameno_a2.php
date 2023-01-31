@@ -23,7 +23,7 @@ include "gerdakapo.inc.php";
 		<td>Proksimume 25&nbsp;minutoj </td><td>/25</td></tr>
 <tr><td><b>Skriba komprenado</b>:<br/>Respondo al komprenado-demandaroj pri tri aŭ kvar mallongaj dokumentoj skribitaj kiuj temas pri ĉiutagaj situacioj.</td>
 		<td>30&nbsp;minutoj </td><td>/25</td></tr>
-	<tr><td><b>Skriba produktado</b> :<br/>Redaktado de du skribaj produktadoj (amika letero aŭ mesaĝo) <br/>- Priskribu eventon aŭ personajn spertojn<br/>- Skribu por inviti, danki, pardonpeti, demandi, informi, gratuli…
+	<tr><td><b>Skriba produktado</b>:<br/>Redaktado de du skribaj produktadoj (amika letero aŭ mesaĝo) <br/>- Priskribu eventon aŭ personajn spertojn<br/>- Skribu por inviti, danki, pardonpeti, demandi, informi, gratuli…
 </td>
 		<td>45 minutoj </td><td>/25</td></tr>
 	<tr><td><b>Sumo</b>:</td><td>1&nbsp;horo kaj 30&nbsp;minutoj </td><td>/75</td></tr>		

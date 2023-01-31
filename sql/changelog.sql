@@ -4474,3 +4474,5 @@ INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `resp
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondmodelo`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`, `poentoj`) VALUES ('2315', '304', NULL, '38', 'Kiun kukon la avino manĝos?', '', '6', '6', NULL, '0', '0', '1');
 UPDATE `ekzerceroj` SET `numero` = '39', `demando` = 'Redaktu de 60 ĝis 80 vortoj.' WHERE `ekzerceroj`.`id` = 2308;
 UPDATE `ekzerceroj` SET `numero` = '40', `demando` = 'Redaktu de 60 ĝis 80 vortoj.' WHERE `ekzerceroj`.`id` = 2309;
+UPDATE `ekzerceroj` SET `poentoj` = '2' WHERE `ekzerceroj`.`id` = 2297;
+

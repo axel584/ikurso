@@ -11,6 +11,15 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
+				<li class="collection-header">version 23. Février 2023</li>
+				<li class="collection-item">
+					<p>Remplacement du test de fin du <i>Cours en dix leçons</i> par un examen de niveau A1.</p>
+					<p>Ajout d’un examen de niveau A2 à la fin du cours <i>Gerda malaperis</i>.</p>
+					<p>Amélioration de l’impression des pages de cours.</p>
+					<p>Ajout d’un cours de 3<sup>e</sup> niveau, basé sur <i>Paŝoj al plena posedo</i>.</p>
+					<p>Correction de l’accès aux leçons depuis la page des données personnelles.</p>
+					<p>Corrections diverses de bugs et coquilles…</p>
+				</li>
 				<li class="collection-header">version 22. Janvier 2021</li>
 				<li class="collection-item">
 					<p>Correction d'un problème sur l’outil de correction en ligne quand les leçons étaient trop longues.</p>

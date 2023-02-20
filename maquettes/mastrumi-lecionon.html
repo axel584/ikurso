@@ -1,0 +1,223 @@
+
+ <!DOCTYPE html>
+  <html lang="fr">
+    <head>
+    <title>Ikurso - Cours d'espéranto gratuit en ligne</title>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,600,600italic,700italic,700' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+		
+		<!--Import materialize.css-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+		<script type="text/javascript" src="../../xAlUtf8.js"></script>	
+		<link type="text/css" rel="stylesheet" href="../style/ikurso.css"  media="screen"/>
+		<link type="text/css" rel="stylesheet" href="/../style/impression.css"  media="print"/>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+		<!-- Application-specific meta tags -->
+		<meta name="application-name" content="iKurso" /> 
+		<meta name="msapplication-TileColor" content="#554E47" /> 
+		<meta name="msapplication-TileImage" content="" />
+		<meta name="msapplication-square150x150logo" content="../../bildoj/logo150.png" />
+		<meta name="msapplication-square310x310logo" content="../../bildoj/largelogo.png" />
+		<meta name="msapplication-square70x70logo" content="../../bildoj/tinylogo.png" />
+		<meta name="msapplication-wide310x150logo" content="../../bildoj/widelogo.png" />
+		<!-- icone iOs -->
+		<link href="../../bildoj/apple-touch-icon-60.png" rel="apple-touch-icon" />
+		<link href="../../bildoj/apple-touch-icon-76.png" rel="apple-touch-icon" sizes="76x76" />
+		<link href="../../bildoj/apple-touch-icon-120.png" rel="apple-touch-icon" sizes="120x120" />
+		<link href="../../bildoj/apple-touch-icon-152.png" rel="apple-touch-icon" sizes="152x152" />
+		<link href="../../bildoj/apple-touch-icon-180.png" rel="apple-touch-icon" sizes="180x180" />
+		<!-- chrome -->
+		<link href="../../bildoj/icon-hires.png" rel="icon" sizes="192x192" />
+		<link href="../../bildoj/icon-normal.png" rel="icon" sizes="128x128" />
+    </head>
+
+    <body class="dlek">	
+		<!-- menus déroulants -->
+		<ul id="menu_cours" class="dropdown-content">
+			<li><a href="../../fr/cge/intro.php" class="primaire-texte moyen">Cours en 10 leçons</a></li>
+			<li><a href="../../fr/gerda/index.php" class="primaire-texte moyen">Gerda malaperis</a></li>
+			<li class="divider"></li>
+			<li><a href="../../fr/elsxutoj.php" class="primaire-texte moyen">Téléchargements</a></li>
+		</ul>
+		<ul id="menu_aide" class="dropdown-content">
+			<li><a href="../../helpo.php?section=enskribo" class="primaire-texte moyen">Comment s'inscrire</a></li>
+			<li><a href="../../helpo.php?section=kurso" class="primaire-texte moyen">Comment suivre le cours</a></li>
+			<li><a href="../../helpo.php?section=kielskribi" class="primaire-texte moyen">Comment écrire en espéranto</a></li>
+			<li><a href="../../helpo.php?section=korektanto" class="primaire-texte moyen">Comment devenir correcteur</a></li>
+		</ul>
+
+		<div class="navbar-fixed">	
+			<nav class="primaire">
+				<div class="nav-wrapper">
+					<a href="../../index.php" class="brand-logo" id="logo">iKurso</a>
+					<!-- hamburger menu -->
+					<div class="side-nav" id="nav-mobile">
+						<ul>
+							<li class="primaire-texte moyen"><a href="../../kionova.php">QUOI DE NEUF ?</a></li>
+							<li class="divider"></li>
+							<li class="primaire-texte moyen">COURS EN LIGNE</li>
+							<li><ul>
+								<li><a href="../../fr/cge/intro.php">Cours en 10 leçons</a></li>
+								<li><a href="../../fr/gerda/index.php">Gerda malaperis</a></li>
+								<li class="divider"></li>
+								<li><a href="../../helpo.php?temo=elsxutoj">Téléchargements</a></li>
+							</ul></li>
+							<li class="divider"></li>
+							<li class="primaire-texte moyen"><a href="../../butiko.php">BOUTIQUE</a></li>
+							<li class="divider"></li>
+							<li class="primaire-texte moyen">INFORMATIONS PRATIQUES</li>
+							<li><ul>
+								<li><a href="../../fr/intro.php?temo=enskribo">Comment s'inscrire</a></li>
+								<li><a href="../../helpo.php">Foire aux questions</a></li>
+							</ul></li>
+						</ul>
+					</div>
+					<a href="#!" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
+					<ul class="right">
+
+						<!-- si utilisateur pas connecté -->
+						<!-- si utilisateur connecté -->
+						<li><a href="#!" class="btn-floating btn-large waves-effect waves-light primaire clair dropdown-button" data-activates="uzantomenuo"><i class="large material-icons">perm_identity</i></a></li>
+
+					</ul>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="../../kionova.php">QUOI DE NEUF ?</a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li><a href="../../butiko.php">BOUTIQUE</a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	<main>
+	<form id="chefa_form"> <!-- on englobe chaque page d'un formulaire principal --><script type="text/javascript" src="../../xAlUtf8.js"></script>	
+<div class="row">
+	<article class="col s10 offset-s1">
+		<h2>Édition de la leçon 1. Première leçon (DLEK : Cours en 10 leçons)</h2>
+
+		<p>Modifier le nom de la leçon :</p>
+		<form class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<input placeholder="nomo" id="leciono_nomo" type="text" class="validate">
+					<label for="leciono_nomo">Première leçon (DLEK : Cours en 10 leçons)</label>
+				</div>
+				<div class="col s12">
+					<a class="waves-effect waves-light btn blue">Enregistrer la modification</a>
+				</div>
+					
+			</div>	
+				
+		</form>
+		<h2>Liste des exercices</h2>
+		<table class="striped">
+			<thead>
+				<tr>
+					<th> </th>
+					<th>id</th>
+					<th>titolo</th>
+					<th>tipo</th>
+					<th>enhavo</th>
+					<th>ordo</th>
+					<th>unua</th>
+					<th>lasta</th>
+					<th>daŭro</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a class="btn btn-flat small"><i class="material-icons">reorder</i></a></td>
+					<td>1</td>
+					<td>Indications sur la prononciation</td>
+					<td>TEKSTO</td>
+					<td><a class="btn btn-flat small"><i class="material-icons">remove_red_eye</i></a></td>
+					<td>1</td>
+					<td>oui</td>
+					<td>-</td>
+					<td>5</td>
+					<td><a class="waves-effect waves-light btn-floating small blue"><i class="material-icons">edit</i></a></td>
+				</tr>
+				<tr>
+					<td><a class="btn btn-flat small"><i class="material-icons">reorder</i></a></td>
+					<td>2</td>
+					<td>Les terminaisons usuelles</td>
+					<td>TEKSTO</td>
+					<td><a class="btn btn-flat small"><i class="material-icons">remove_red_eye</i></a></td>
+					<td>2</td>
+					<td>-</td>
+					<td>-</td>
+					<td>5</td>
+					<td><a class="waves-effect waves-light btn-floating small blue"><i class="material-icons">edit</i></a></td>
+				</tr>
+				<tr>
+					<td><a class="btn btn-flat small"><i class="material-icons">reorder</i></a></td>
+					<td>3</td>
+					<td>Vocabulaire</td>
+					<td>VORTARO</td>
+					<td><a class="btn btn-flat small"><i class="material-icons">remove_red_eye</i></a></td>
+					<td>3</td>
+					<td>-</td>
+					<td>-</td>
+					<td>6</td>
+					<td><a class="waves-effect waves-light btn-floating small blue"><i class="material-icons">edit</i></a></td>
+				</tr>
+				<tr>
+					<td><a class="btn btn-flat small"><i class="material-icons">reorder</i></a></td>
+					<td>4</td>
+					<td>Un peu de grammaire...</td>
+					<td>TEKSTO</td>
+					<td><a class="btn btn-flat small"><i class="material-icons">remove_red_eye</i></a></td>
+					<td>4</td>
+					<td>-</td>
+					<td>-</td>
+					<td>10</td>
+					<td><a class="waves-effect waves-light btn-floating small blue"><i class="material-icons">edit</i></a></td>
+				</tr>
+				<tr>
+					<td><a class="btn btn-flat small"><i class="material-icons">reorder</i></a></td>
+					<td>5</td>
+					<td>Exemple de phrases</td>
+					<td>TEKSTO</td>
+					<td><a class="btn btn-flat small"><i class="material-icons">remove_red_eye</i></a></td>
+					<td>5</td>
+					<td>-</td>
+					<td>-</td>
+					<td>5</td>
+					<td><a class="waves-effect waves-light btn-floating small blue"><i class="material-icons">edit</i></a></td>
+				</tr>
+				<tr>
+					<td><a class="btn btn-flat small"><i class="material-icons">add_circle_outline</i></a></td>
+					<td colspan="9"></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+
+	</article>
+</div>
+	</form>
+	</main>
+	<footer class="primaire fond">
+		<div class="submenuo">
+			<div class="ero primaire-texte"><a href="../../kiujniestas.php">QUI SOMMES-NOUS ?</a></div>
+			<div class="ero primaire-texte"><a href="../../reago.php">NOUS CONTACTER</a></div>
+		</div>
+		<div class="asocio primaire-texte texte-clair">
+			Espéranto-France – 4 bis, rue de la Cerisaie, 75004 Paris
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<script src="../../js/config.js"></script>
+	<script src="../../js/init.js"></script>
+	<script src="../../js/ikurso.js?d=1495136081"></script>
+</body>
+</html>  

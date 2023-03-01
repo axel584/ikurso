@@ -85,7 +85,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">koncepto</span>: abstrakta kaj ĝenerala ideo.</p>
 			<p><span class="eo">kongreso</span>: kunveno por diskuti komunan temon.</p>
 			<p><span class="eo">kontakto</span>: interrilato.</p>
-			<p><span class="eo">korespondi</span>: interinterŝanĝi leterojn.</p>
+			<p><span class="eo">korespondi</span>: interŝanĝi leterojn.</p>
 			<p><span class="eo">krei</span>: fari, estigi.</p>
 			<p><span class="eo">kuraci</span>: resanigi malsanulojn.</p>
 		</div>

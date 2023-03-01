@@ -292,7 +292,7 @@ $( "#serchi_protokolon_button").click(function() {
        		url : $cheminAbsolu+'ajax/eniri.php',
        		type : 'POST',
        		dataType : 'json',
-       		data : 'identigilo='+$( "#eniri_identigilo" ).val()+"&pasvorto="+$( "#eniri_pasvorto" ).val(),
+       		data : 'identigilo='+$( "#eniri_identigilo" ).val()+"&pasvorto="+encodeURIComponent($( "#eniri_pasvorto" ).val()),
        		success : function(reponse, statut){ 
            		if (reponse.mesagxo!="ok") {
            			if (reponse.type=="identigilo") {
@@ -327,7 +327,7 @@ $( "#serchi_protokolon_button").click(function() {
        		url : $cheminAbsolu+'ajax/aligxi.php',
        		type : 'POST',
        		dataType : 'json',
-       		data : 'identigilo='+$( "#aligxi_identigilo" ).val()+"&pasvorto="+$( "#aligxi_pasvorto" ).val()+"&retadreso="+$("#aligxi_retadreso").val(),
+       		data : 'identigilo='+$( "#aligxi_identigilo" ).val()+"&pasvorto="+encodeURIComponent($( "#aligxi_pasvorto" ).val())+"&retadreso="+$("#aligxi_retadreso").val(),
        		success : function(reponse, statut){ 
            		if (reponse.mesagxo!="ok") {
            			if (reponse.type.startsWith("retadreso")) {
@@ -367,7 +367,7 @@ $( "#serchi_protokolon_button").click(function() {
           url : $cheminAbsolu+'ajax/aligxi_kurso.php',
           type : 'GET',
           dataType : 'json',
-          data : 'identigilo='+$( "#aligxi_kurso_identigilo" ).val()+"&pasvorto="+$( "#aligxi_kurso_pasvorto" ).val()+"&retadreso="+$("#aligxi_kurso_retadreso").val(),
+          data : 'identigilo='+$( "#aligxi_kurso_identigilo" ).val()+"&pasvorto="+encodeURIComponent($( "#aligxi_kurso_pasvorto" ).val())+"&retadreso="+$("#aligxi_kurso_retadreso").val(),
           success : function(reponse, statut){ 
               if (reponse.mesagxo!="ok") {
                 if (reponse.type.startsWith("retadreso")) {

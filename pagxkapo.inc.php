@@ -215,6 +215,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 						<input id="novigi_pasvorton_retadreso" type="hidden" name="retadreso" value="<?=$retadreso?>"/>
 						<input id="novigi_pasvorton_pasvorto" type="password" class="validate">
 						<label for="novigi_pasvorton_pasvorto">Nouveau mot de passe</label>
+						<span id="novigi_pasvorton_helper" class="helper-text"></span>
 					</div>
 				</form>
 				</div>

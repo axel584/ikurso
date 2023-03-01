@@ -181,7 +181,8 @@ $urlracine = "http://ikurso.localhost";
 $cheminAbsolu = "/ikurso/";
 ```
 
-Installer php Pear / Mail : https://pear.php.net/package/Mail
+Installer php composer : https://getcomposer.org/download/
+Installer phpMailer : composer update
 
 En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
 

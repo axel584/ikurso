@@ -484,13 +484,12 @@ $("#novigi_pasvorton_sendi_button").click(function () {
           url : $cheminAbsolu+'ajax/novigiPasvorton.php',
           type : 'GET',
           dataType : 'json',
-          data : 'pasvorto='+$("#novigi_pasvorton_pasvorto").val()+"&aktivigo="+$( "#novigi_pasvorton_aktivigo" ).val()+"&retadreso="+$( "#novigi_pasvorton_retadreso" ).val(),
+          data : 'pasvorto='+encodeURIComponent($("#novigi_pasvorton_pasvorto").val())+"&aktivigo="+$( "#novigi_pasvorton_aktivigo" ).val()+"&retadreso="+$( "#novigi_pasvorton_retadreso" ).val(),
           success : function(reponse, statut){ 
               // la clef d'activation est erronée
               if (reponse.mesagxo!="ok") {
-                 $("#aligxi_retadreso_helper").attr('data-error',reponse.mesagxo);
-                 $("#aligxi_retadreso").addClass("invalid"); 
-                 $("#helpo-retadreso").hide();
+                 $("#novigi_pasvorton_helper").attr('data-error',reponse.mesagxo);
+                 $("#novigi_pasvorton_pasvorto").addClass("invalid"); 
                 return false;
               } else {
                 // On affiche un message qui indique qu'il faut valider le mail

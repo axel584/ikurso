@@ -307,7 +307,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 		$demando = $rowEkzercero["demando"];
 		$liste_choix = array();
 		if (strrpos($demando,"<qcm>")) {
-			$debut = strrpos($demando,"<qcm>");	
+			$debut = strrpos($demando,"<qcm>")+5;//on ajoute 5 qui correspond a la longueur de '<qcm>'
 			$fin = strrpos($demando,"</qcm>");
 			$chaine_choix = substr($demando, $debut,$fin-$debut);
 			$liste_choix = explode("/",$chaine_choix);
@@ -334,7 +334,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 	        		echo "checked";
 	        	}
 	        	echo "/>";
-	        	echo "<span>".$choix."</span>";
+	        	echo "<span>&nbsp;".$choix."</span>";
 	      		echo "</label>";
 			}
 			echo "</p>";

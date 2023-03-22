@@ -1,4 +1,7 @@
 function xAlUtf8(x) {
+  console.log("xAlUtf8");
+  positionCurseur = x.selectionStart;
+
 	t=x.value;
     t = t.replace(/c[xX]/g, "\u0109");
     t = t.replace(/g[xX]/g, "\u011d");
@@ -28,5 +31,9 @@ function xAlUtf8(x) {
 
     if (t != x.value) {
       x.value = t;
+      // si on a modifie le texte, c'est qu'on a transformé 2 caractères en 1, 
+      // on va donc remettre le curseur un caractère à gauche
+      x.setSelectionRange(positionCurseur-1, positionCurseur-1);
     }
+    
 }

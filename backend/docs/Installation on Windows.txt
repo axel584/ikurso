@@ -1,0 +1,40 @@
+# https://www.python.org/downloads/
+# Install python
+
+# Install VSCode
+# https://code.visualstudio.com/
+# Add VSCode extensions
+# Pylance, Git Graph, Git History, isort, Open, Python, Sort lines
+
+# Add ikurso folder to Workpace
+
+# Add Python environment
+# https://code.visualstudio.com/docs/python/environments
+Command Palette
+Python: Create Environment
+Select Venv etc.
+# Start new terminal to verify prompt is prefixed with (.venv)
+
+# Install packages
+pip install wheel
+pip install black
+pip install "fastapi[all]"
+pip install PyMySQL
+pip install python-dotenv
+pip install sqlalchemy
+
+# Create .env from .env-copy and update accordingly
+
+# Run Uvicorn ASGI web server
+cd C:\Data\vscode\ikurso\backend
+uvicorn main:app --reload
+
+# API URL
+# http://127.0.0.1:8000
+# Add a redirection or the like from .../api/v1/kursoj to http://127.0.0.1:8000
+
+# Interactive API documentation provided by Swagger UI for testing
+# http://127.0.0.1:8000/docs
+
+# Alternative automatic documentation provided by ReDoc for details
+# http://127.0.0.1:8000/redoc

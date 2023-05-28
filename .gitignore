@@ -7,3 +7,4 @@ python/config.py
 python/nbJoursParEleve.csv
 launch.json
 settings.json
+vendor/

@@ -825,7 +825,7 @@ function pubFacebook() {
 }
 function pubAndroid() {
 	global $vojo;
-	echo '<div class="card reklamo"><p>Vous pouvez retrouver iKurso sur Android.</p><p class="container"><a href="https://play.google.com/apps/testing/fr.esperanto_france.ikurso"><img  class="responsive-img" src="'.$vojo.'bildoj/google-play-badge.png"></a></p></div>';
+	//echo '<div class="card reklamo"><p>Vous pouvez retrouver iKurso sur Android.</p><p class="container"><a href="https://play.google.com/apps/testing/fr.esperanto_france.ikurso"><img  class="responsive-img" src="'.$vojo.'bildoj/google-play-badge.png"></a></p></div>';
 }
 function pubPPP() {
 	global $vojo;

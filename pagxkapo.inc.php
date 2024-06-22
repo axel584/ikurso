@@ -14,7 +14,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 <!DOCTYPE html>
   <html lang="fr">
     <head>
-    <title>Ikurso - Cours d'espéranto gratuit en ligne</title>
+    <title>Ikurso - Cours d’espéranto gratuit en ligne</title>
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		</script>
 		<script type="text/javascript" src="<?php echo $vojo;?>xAlUtf8.js"></script>	
 		<!--<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>"  media="all"/> -->
-		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>"  media="all"/>
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>.4"  media="all"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/impression.css?v=<?php echo $milestone; ?>"  media="print"/>
 
 		<!--Let browser know website is optimized for mobile-->
@@ -215,7 +215,6 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 						<input id="novigi_pasvorton_retadreso" type="hidden" name="retadreso" value="<?=$retadreso?>"/>
 						<input id="novigi_pasvorton_pasvorto" type="password" class="validate">
 						<label for="novigi_pasvorton_pasvorto">Nouveau mot de passe</label>
-						<span id="novigi_pasvorton_helper" class="helper-text"></span>
 					</div>
 				</form>
 				</div>

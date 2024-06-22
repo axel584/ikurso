@@ -2,8 +2,11 @@ config.php
 js/config.js
 .htaccess
 python/EvaluationLecon.csv
-python/__pycache__/
+__pycache__/
 python/config.py
 python/nbJoursParEleve.csv
 launch.json
 settings.json
+vendor/
+.env
+

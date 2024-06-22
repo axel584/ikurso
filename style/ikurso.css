@@ -327,6 +327,7 @@ article p {
 	font-weight: 400;
 	line-height: 160%;
 }
+
 body.pasxo article .rakonto p {
 	font-family: Luciole;
 }
@@ -1062,6 +1063,7 @@ span.ikurso {
 .korektiLecionon article p {
 	padding: 0.5em;
 	margin: 0 0 0 2.5em;
+	
 }
 .korektiLecionon article p.demando {
 	padding-bottom: 0;
@@ -1100,13 +1102,28 @@ span.ikurso {
 	margin-top: 0;
 }
 .korektiLecionon article .trumbowyg-box p {
-	margin: 0.5em;
+	margin: 0.5em !important;
 	padding: 0;
+	line-height: 160% !important;
+	color: #000!important;
+	background-color: transparent !important;
 }
+.korektiLecionon article .trumbowyg-box p font {
+	font-family: unset!important;	
+	font-size: unset!important;
+}
+
 .korektiLecionon article .trumbowyg-box p + p {
-	margin-top: 0;
+	margin-top: 0!important;
+	margin-bottom: 0!important;
 	padding: 0;
 }
+.card.green p font {
+	font-family: unset!important;	
+	font-size: unset!important;
+	line-height: 160% !important;
+}
+
 /*********************************/
 /*        page gvidilo           */
 /*********************************/

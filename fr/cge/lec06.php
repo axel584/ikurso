@@ -58,8 +58,8 @@ include "dlekkapo.inc.php";
 		attendue est alors <span class="eo">jes</span> ou <span class="eo">ne</span>&nbsp;:
 		</p>
 		<div class="vortlisto row">
-			<p class="col s6">La knabino manĝis.</p><p class="col s6">– <b>ĉu</b> la knabino manĝis ?</p>
-			<p class="col s6">La knabino ne manĝis.</p><p class="col s6">– <b>ĉu</b> la knabino ne manĝis ?</p>
+			<p class="col s6">La knabino manĝis.</p><p class="col s6">– <b>Ĉu</b> la knabino manĝis?</p>
+			<p class="col s6">La knabino ne manĝis.</p><p class="col s6">– <b>Ĉu</b> la knabino ne manĝis?</p>
 		</div>
 		
 		<p class="parto">Les mots interrogatifs en <b>ki-</b> permettent de poser des questions sur
@@ -392,7 +392,7 @@ include "dlekkapo.inc.php";
 		
 		<p class="parto">Lorsqu’une phrase contient deux compléments d’objet, l’un des deux doit être un complément <i>indirect</i>. </p>
 		<p>Par exemple :</p>
-		<p><span class="eo">Mi aĉetas ŝuojn al la infanoj</span>&nbsp;: J’achète des chaussures aux enfants.</p>
+		<p><span class="eo">Mi aĉetas ŝuojn al la infanoj.</span>&nbsp;: J’achète des chaussures aux enfants.</p>
 
 		<div class="row">
 			<p class="col s6">Le complément d’objet direct :</p><p class="col s4"><span class="eo">ŝuojn</span></p>
@@ -412,8 +412,8 @@ include "dlekkapo.inc.php";
 		</p>
 		<p>Exemples :</p>
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">Mi veturas al Montrealo</span><br><i>ou</i>
-			<br><span class="eo">Mi veturas Montrealon</span></p>
+			<p class="col s6"><span class="eo">Mi veturas al Montrealo.</span><br><i>ou</i>
+			<br><span class="eo">Mi veturas Montrealon.</span></p>
 			<p class="col s6">Je vais à Montréal.</p>
 		</div>
 		<div class="vortlisto row">
@@ -429,8 +429,8 @@ include "dlekkapo.inc.php";
 		</p>
 		
 		<div class="vortlisto row">
-			<p class="col s6"><span class="eo">Ŝi multe helpis al mi</span><br><i>ou</i>
-			<br><span class="eo">Ŝi multe helpis min</span></p>
+			<p class="col s6"><span class="eo">Ŝi multe helpis al mi.</span><br><i>ou</i>
+			<br><span class="eo">Ŝi multe helpis min.</span></p>
 			<p class="col s6">Elle m’a beaucoup aidé.</p>
 		</div>
 		<div class="vortlisto row">
@@ -463,7 +463,7 @@ include "dlekkapo.inc.php";
 		<p>Exemples : </p>
 		<div class="vortlisto row">
 			<p class="col s12 m6"><span class="eo">Li kredas je Dio</span> = Il croit en Dieu.</p>
-			<p class="col s12 m6"><span class="eo">Je via sano&nbsp;!</span> = à votre santé&nbsp;!</p>
+			<p class="col s12 m6"><span class="eo">Je via sano&nbsp;!</span> = À votre santé&nbsp;!</p>
 		</div>
 		
 		<p class="parto">On peut parfois utiliser <b>deux prépositions</b> à la suite l’une de l’autre

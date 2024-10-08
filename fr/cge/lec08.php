@@ -49,8 +49,8 @@ include "dlekkapo.inc.php";
 			<p><b>1.</b> Le conditionnel s’applique aux deux propositions de la phrase et pas seulement à la dernière.</p>
 			<p><b>2.</b> Le conditionnel ne s’utilise pas pour montrer le futur dans le passé.</p>
 			<div class="row">
-				<p class="col s11 offset-s1">Je crois qu’il viendra : <span class="eo">Mi kredas, ke li venos.</span></p>
-				<p class="col s11 offset-s1">Je croyais qu’il viendrait :  <span class="eo">Mi kredis, ke li ven<b>os</b>.</span></p>
+				<p class="col s11 offset-s1">Je crois qu’il viendra. : <span class="eo">Mi kredas, ke li venos.</span></p>
+				<p class="col s11 offset-s1">Je croyais qu’il viendrait. :  <span class="eo">Mi kredis, ke li ven<b>os</b>.</span></p>
 			</div>
 	
 			<a id="participes" class="scrollspy"></a>
@@ -109,9 +109,9 @@ include "dlekkapo.inc.php";
 			
 			<p class="parto">Ces participes peuvent prendre la terminaison du pluriel. Par exemple : </p>
 			<div class="row">
-				<p class="col s12"><span class="eo">Ili estas legantaj</span>&nbsp;: Ils sont en train de lire</p>
-				<p class="col s12"><span class="eo">Ili estas legintaj</span>&nbsp;: Ils ont lu</p>
-				<p class="col s12"><span class="eo">La libroj estas legataj</span>&nbsp;: Les livres sont lus</p>
+				<p class="col s12"><span class="eo">Ili estas legantaj.</span>&nbsp;: Ils sont en train de lire.</p>
+				<p class="col s12"><span class="eo">Ili estas legintaj.</span>&nbsp;: Ils ont lu.</p>
+				<p class="col s12"><span class="eo">La libroj estas legataj.</span>&nbsp;: Les livres sont lus.</p>
 			</div>
 
 			<p class="parto">En résumé :</p>
@@ -337,8 +337,8 @@ include "dlekkapo.inc.php";
 			
 			<div class="row">
 				<p class="col s12"><span class="eo">Sofia diris al <b>si</b> … </span> = Sophie s’est dit … (à elle-même)</span></p>
-				<p class="col s12"><span class="eo">Sofia diris al <b>li</b> … </span> = Sophie lui a dit …, (à une autre personne de sexe masculin)</span></p>
-				<p class="col s12"><span class="eo">Sofia diris al <b>ŝi</b> … </span> = Sophie lui a dit …, (à une autre personne de sexe féminin)</span></p>
+				<p class="col s12"><span class="eo">Sofia diris al <b>li</b> … </span> = Sophie lui a dit … (à une autre personne de sexe masculin)</span></p>
+				<p class="col s12"><span class="eo">Sofia diris al <b>ŝi</b> … </span> = Sophie lui a dit … (à une autre personne de sexe féminin)</span></p>
 			</div>
 			
 			<fieldset class="memoru">

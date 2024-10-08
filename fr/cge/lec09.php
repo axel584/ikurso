@@ -68,22 +68,22 @@ include "dlekkapo.inc.php";
 			</p>
 			
 			<p>
-			     Bonan tagon ! Bonan tagon !<br/>
-			     Mi deziras al vi !<br/>
-			     Havu bonan tagon ! Havu bonan tagon,<br/>
-			     Vi kaj la famili’ !<br/>
+			     Bonan tagon! Bonan tagon!<br/>
+			     Mi deziras al vi!<br/>
+			     Havu bonan tagon! Havu bonan tagon,<br/>
+			     Vi kaj la famili’!<br/>
 			</p>
 			<p>
 			     Nun sidiĝu ! Nun sidiĝu,<br/>
-			     Mia kara fraŭlin’ !<br/>
-			     Diru nun belsone : ĉu vi fartas bone ?<br/>
-			     Belulin’, kisu min !<br/>
+			     Mia kara fraŭlin’!<br/>
+			     Diru nun belsone: ĉu vi fartas bone?<br/>
+			     Belulin’, kisu min!<br/>
 			</p>
 			<p>
-			     Ĝis revido ! Ĝis revido,<br/>
-			     Mia kara fraŭlin’ !<br/>
-			     Ĝis alia fojo ! Estos granda ĝojo<br/>
-			     Vidi vin, kisi vin !<br/>
+			     Ĝis revido! Ĝis revido,<br/>
+			     Mia kara fraŭlin’!<br/>
+			     Ĝis alia fojo! Estos granda ĝojo<br/>
+			     Vidi vin, kisi vin!<br/>
 			</p>
 			
 			<fieldset class="vortoj">

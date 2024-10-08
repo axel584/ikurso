@@ -37,7 +37,7 @@ include "dlekkapo.inc.php";
 			<div class="vortlisto">
 				<div class="row">
 					<p class="col s6"><a href="<?php echo $vojo;?>fr/son/frazoj/kiel-vi-fartas.mp3" class="sm2_button"></a> <span class="eo">Kiel vi fartas?</span></p><p class="col s6">Comment allez-vous&nbsp;?</p>
-					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/bone-kaj-vi.mp3" class="sm2_button"></a> <span class="eo">– Bone. Kaj vi ?</span></p><p class="col s6">– Bien. Et vous&nbsp;?</p>
+					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/bone-kaj-vi.mp3" class="sm2_button"></a> <span class="eo">– Bone. Kaj vi?</span></p><p class="col s6">– Bien. Et vous&nbsp;?</p>
 					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/vortoj/bonege.mp3" class="sm2_button"></a> <span class="eo">– Bonege.</span></p><p class="col s6">– Parfaitement bien.</p>
 					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/suficxe-bone.mp3" class="sm2_button"></a> <span class="eo">– Sufiĉe bone.</span></p><p class="col s6">– Assez bien. (ça va)</p>
 					<p class="col s5 offset-s1"><a href="<?php echo $vojo;?>fr/son/frazoj/ne-trop-bone.mp3" class="sm2_button"></a> <span class="eo">– Ne tro bone.</span></p><p class="col s6">– Pas trop bien.</p>
@@ -195,7 +195,7 @@ include "dlekkapo.inc.php";
 		
 		<p>Employé seul, un corrélatif en <b>U</b> est très souvent un <b>pronom</b> qui désigne une personne&nbsp;:</p>
 		<div class="row">
-			<p class="col s6"><span class="eo"><b>Kiu</b> venis ?</span></p><p class="col s6"><b>Qui</b> est venu&nbsp;?</p>
+			<p class="col s6"><span class="eo"><b>Kiu</b> venis?</span></p><p class="col s6"><b>Qui</b> est venu&nbsp;?</p>
 			<p class="col s6"><span class="eo">– <b>Iu</b>.</span></p><p class="col s6">– <b>Quelqu’un</b>.</p>
 			<p class="col s6"><span class="eo">– <b>Neniu</b>.</span></p><p class="col s6">– <b>Personne</b>.</p>
 			<p class="col s6"><span class="eo">– <b>Ĉiuj</b>.</span></p><p class="col s6">– <b>Tous</b>.</p>
@@ -210,18 +210,18 @@ include "dlekkapo.inc.php";
 			<p class="col s3"><span class="eo">nenies (= de neniu)</span></p><p class="col s9">de personne, à personne</p>
 		</div>
 		
-		<p>Exemples :</p>
+		<p>Exemples&nbsp;:</p>
 		<div class="row">
 			<p class="col s6"><span class="eo"><b>Kies</b> amiko vi estas?</span></p><p class="col s6"><b>De qui</b> es-tu l’ami&nbsp;?</p>
 			<p class="col s6"><span class="eo">Mi estas <b>ĉies</b> amiko.</span></p><p class="col s6">Je suis l’ami <b>de tous</b> (de chacun).</p>
-			<p class="col s6"><span class="eo">La viro, <b>kies</b> amikon mi vidis.</span></p><p class="col s6">L’homme <b>dont</b> j’ai vu l’ami</p>
-			<p class="col s6"><span class="eo">La viro, <b>kun kies</b> amiko ni trinkis.</span></p><p class="col s6">L’homme <b>avec</b> l’ami <b>duquel</b> nous avons bu</p>
+			<p class="col s6"><span class="eo">La viro, <b>kies</b> amikon mi vidis.</span></p><p class="col s6">L’homme <b>dont</b> j’ai vu l’ami.</p>
+			<p class="col s6"><span class="eo">La viro, <b>kun kies</b> amiko ni trinkis.</span></p><p class="col s6">L’homme <b>avec</b> l’ami <b>duquel</b> nous avons bu.</p>
 		</div>
 		
 		<p class="parto">Les corrélatifs en <b>-OM</b> (quantité) sont souvent suivi par la préposition <span class="eo">da</span>&nbsp;:</p>
 		<div class="row">
 			<p class="col s6"><span class="eo"><b>Kiom da</b> biskvitoj vi deziras?</span></p><p class="col s6"><b>Combien de</b> biscuits veux-tu&nbsp;?</p>
-			<p class="col s6"><span class="eo">Mi deziras <b>neniom da</b> ili!</span></p><p class="col s6">Je n’en veux <b>aucun</b>.</p>
+			<p class="col s6"><span class="eo">Mi deziras <b>neniom da</b> ili.</span></p><p class="col s6">Je n’en veux <b>aucun</b>.</p>
 			
 			<p class="col s6"><span class="eo">Mi jam manĝis <b>tiom da</b> ili!</span></p><p class="col s6">J’<b>en</b> ai déjà <b>tellement</b> mangé&nbsp;!</p>
 		</div>
@@ -463,9 +463,9 @@ include "dlekkapo.inc.php";
 		pluriel. Tous les autres sont invariables.
 		</p>
 		<div class="row">
-			<p class="col s12"><span class="eo">Kun <b>kiaj</b> fruktoj vi faris tiun bonan kukon ?</span>&nbsp;: Avec <b>quelles sortes de</b> fruits as-tu fait ce bon gâteau ?</p>
+			<p class="col s12"><span class="eo">Kun <b>kiaj</b> fruktoj vi faris tiun bonan kukon?</span>&nbsp;: Avec <b>quelles sortes de</b> fruits as-tu fait ce bon gâteau ?</p>
 			<p class="col s12"><span class="eo">Mi <b>neniam</b> manĝis tiajn kukojn.</span>&nbsp;: Je <b>n</b>’ai <b>jamais</b> mangé de tels gâteaux.</p>
-			<p class="col s12"><span class="eo"><b>Kiujn</b> vi renkontis ?</span>&nbsp;: <b>Qui</b> (plur.) as-tu rencontré&nbsp;? <b>Lesquels</b> as-tu rencontrés&nbsp;?</p>
+			<p class="col s12"><span class="eo"><b>Kiujn</b> vi renkontis?</span>&nbsp;: <b>Qui</b> (plur.) as-tu rencontré&nbsp;? <b>Lesquels</b> as-tu rencontrés&nbsp;?</p>
 			<p class="col s12"><span class="eo">Mi vidis la kukon, <b>kiun</b> vi faris.</span>&nbsp;: J’ai vu le gâteau <b>que</b> tu as fait.</p>
 			<p class="col s12"><span class="eo"><b>Kion</b> vi volas?</span>&nbsp;: <b>Que</b> veux-tu&nbsp;?</p>
 		</div>

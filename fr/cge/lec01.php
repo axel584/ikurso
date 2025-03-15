@@ -558,7 +558,7 @@ include "dlekkapo.inc.php";
 			<p>Quelques mots nouveaux utilisés dans cet exercice&nbsp;:</p>
 			<div class="vortlisto row">
 				<div class="col s12 m4">
-					<p><span class="eo">Aŭstralio</span>&nbsp;: Australie</p>
+					<p><span class="eo">Aŭstralio</span>&nbsp;: Australie.</p>
 					<p><span class="eo">Brazilo</span>&nbsp;: Brésil</p>
 				</div>
 				<div class="col s12 m4">

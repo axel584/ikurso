@@ -1,0 +1,45 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: ./php
+    container_name: ikurso_php56
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.1
+    container_name: ikurso_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ikurso
+      MYSQL_USER: ikurso_user
+      MYSQL_PASSWORD: ikurso_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: ikurso_phpmyadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: ikurso_user
+      PMA_PASSWORD: ikurso_pass
+    depends_on:
+      - db
+
+volumes:
+  db_data:

@@ -1,3 +1,4 @@
+/*!40101 SET NAMES utf8mb4 */;
 -- ekzerceroj
 
 INSERT INTO `ekzerceroj` (`id`, `ekzerco_id`, `kodo`, `numero`, `demando`, `respondo`, `normaligita`, `bildo`, `forigita`, `korektebla`) VALUES(1, 1, 'ekz01_01', 1, 'Le thé est chaud.', 'La teo estas varma.', 'la teo estas varma', '', 0, 0);

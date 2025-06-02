@@ -1,3 +1,4 @@
+/*!40101 SET NAMES utf8mb4 */;
 -- on vide les tables avant :
 TRUNCATE personoj_lecioneroj;
 TRUNCATE komentoj;

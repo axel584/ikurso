@@ -1,3 +1,4 @@
+/*!40101 SET NAMES utf8mb4 */;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE ekzerceroj (

@@ -160,11 +160,11 @@ Config
 - config.php:
 ```php
 <?php
-$base = "ikurso_database";
-$login = "ikurso";
-$motDePasse = "password";
-$urlracine = "http://ikurso.127.0.0.1";
-$cheminAbsolu = "/ikurso/";
+$urlDb = "db";
+$base = "ikurso";
+$login = "ikurso_user";
+$motDePasse = "ikurso_pass";
+$urlracine = "http://localhost:8080";
 $hostSmtp = "smtp.free.fr";
 $portSmtp = 587;
 $hostSmtpSES = "email-smtp.eu-west-1.amazonaws.com";
@@ -185,4 +185,19 @@ Installer php composer : https://getcomposer.org/download/
 Installer phpMailer : composer update
 
 En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
+
+
+----
+
+Lancer avec Docker compose : 
+```docker compose up --build```
+Cela lance postgres, pgadmin et l'application ikurso.
+PG Admin est accessible : http://localhost:8081/
+Et l'application est accessible ici : http://localhost:8080/
+
+et pour relancer l'appli (et réinitialiser avec les données de base):
+```
+docker compose stop -v
+docker compose up --build
+```
 

@@ -5,9 +5,9 @@ include "config.php";
 // tiu funkcio kunligas la datumbazon.
 // Elirvaluo : referenco pri la datumbazo
 function malfermiDatumbazon () {
-    global $bdd,$base,$login,$motDePasse;
+    global $urlDb,$bdd,$base,$login,$motDePasse;
 	try {
-			$bdd = new PDO('mysql:host=localhost;dbname='.$base.';charset=utf8', $login, $motDePasse);
+			$bdd = new PDO('mysql:host='.$urlDb.';dbname='.$base.';charset=utf8', $login, $motDePasse);
 			$bdd->query('SET lc_time_names = \'fr_FR\''); // Pour avoir les dates en français
 			// A décommenter pour rendre les erreurs sql plus parlante
 			// $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

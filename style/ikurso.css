@@ -288,6 +288,14 @@ table.highlight>tbody>tr:hover{
 /****************************************/
 /*           blocs principaux           */
 /****************************************/
+html {
+	color-scheme: light dark;
+	background-color: canvas;
+	color: canvastext;
+}
+.card-panel {
+	color: black;
+}
 body {
     display: flex;
     min-height: 100vh;

@@ -101,7 +101,7 @@ Les tables contenant les données propres à l'application (liste des leçons/ex
 - générer une release dans github (code, release, draft new release)
 - Faire un mail aux correcteurs pour leur parler des nouveautés.
 
-# Procédure d'installation 
+# Procédure d'installation (ancienne version)
 
 
 Base de données
@@ -186,7 +186,45 @@ Installer phpMailer : composer update
 
 En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
 
+# Procédure d'installation simplifiée
 
+Récupérer le code
+------
+```
+git clone git@github.com:axel584/ikurso.git
+```
+
+Config
+------
+
+À la racine, créer :
+
+- config.php:
+```php
+<?php
+$urlDb = "db";
+$base = "ikurso";
+$login = "ikurso_user";
+$motDePasse = "ikurso_pass";
+$urlracine = "http://localhost:8080";
+$hostSmtp = "smtp.free.fr";
+$portSmtp = 587;
+$hostSmtpSES = "email-smtp.eu-west-1.amazonaws.com";
+$portSmtpSES = 587;
+$userSES = "USER_SES";
+$passwordSES = "mot de passe Amazon SES";
+$milestone = 1;
+?>
+```
+
+dans le répertoire /js/ créer : 
+- /js/config.js:
+```
+$urlracine = "http://localhost:8080/";
+$cheminAbsolu = "/";
+```
+
+Lancement
 ----
 
 Lancer avec Docker compose : 
@@ -200,4 +238,32 @@ et pour relancer l'appli (et réinitialiser avec les données de base):
 docker compose stop -v
 docker compose up --build
 ```
+
+Pour arrêter l'application : 
+```docker compose stop```
+
+Comptes de tests
+-----
+Vous pouvez maintenant vous connecter sur : http://localhost:8080/
+
+Vous aurez 3 comptes pour tester l'application : 
+* administranto/test : un compte d'administration
+* korektanto1/test : un compte de correcteur
+* lernanto1/test : un compte d'élève
+
+Ni legu
+------
+Installation 
+------
+npm install -g serve
+
+
+Build
+------
+cd react-src/nilegu
+npm run build
+serve -s build
+cp -R build/* ../../nilegu
+
+il faut ajouter "homepage": "/nilegu", dans le package.json
 

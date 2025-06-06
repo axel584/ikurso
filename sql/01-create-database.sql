@@ -236,30 +236,19 @@ CREATE TABLE takso_leciono (
   `malfacileco` int(11) NOT NULL,
   `komento` text NOT NULL,
   PRIMARY KEY (id)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE = InnoDB;
 
-CREATE TABLE `varoj` (
-  `id` int(11) NOT NULL  AUTO_INCREMENT,
-  `arthur_id` int(11) NOT NULL,
-  `varkategorio_id` int(11) NOT NULL,
-  `auxtoro` text COLLATE utf8_unicode_ci NOT NULL,
-  `pezo` int(11) NOT NULL,
-  `prezo` decimal(10,2) NOT NULL,
-  `stoko` int(11) NOT NULL,
-  `vendstatistiko` int(11) NOT NULL,
-  `bildo` text COLLATE utf8_unicode_ci NOT NULL,
-  `priskribo` text COLLATE utf8_unicode_ci NOT NULL,
-  `titolo` text COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (id)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE `varkategorioj` (
-  `id` int(11) NOT NULL  AUTO_INCREMENT,
-  `ordo` int(11) NOT NULL,
-  `kategorio` text NOT NULL,
-  PRIMARY KEY (id)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE tekstoj (
+  `id` VARCHAR(64) NOT NULL , 
+  `titolo` VARCHAR(1024) NOT NULL , 
+  `auxtoro` VARCHAR(128) NOT NULL , 
+  `fonto` VARCHAR(1024) NULL , 
+  `nivelo` INT NULL , 
+  `vortoj` INT NULL , 
+  `kolekto` VARCHAR(64) NULL , 
+  `etikedoj` VARCHAR(1024) NULL, 
+  `enhavo` TEXT NULL
+) ENGINE = InnoDB;
 
 CREATE TABLE vortoj (
   `id` int(11) NOT NULL,

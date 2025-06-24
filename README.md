@@ -235,7 +235,7 @@ Et l'application est accessible ici : http://localhost:8080/
 
 et pour relancer l'appli (et réinitialiser avec les données de base):
 ```
-docker compose stop -v
+docker compose down -v
 docker compose up --build
 ```
 

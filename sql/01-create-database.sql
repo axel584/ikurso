@@ -250,8 +250,11 @@ CREATE TABLE tekstoj (
   `enhavo` TEXT NULL
 ) ENGINE = InnoDB;
 
+ALTER TABLE `tekstoj`
+  ADD PRIMARY KEY (`id`);
+
 CREATE TABLE vortoj (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT, 
   `eo` varchar(128) NOT NULL,
   `fr` varchar(128) NOT NULL,
   `tipo` enum('adj','adv','conjonction','expression','interjection','nom','nombre','phrase','pronom','préfixe','préposition','verbe') DEFAULT NULL,

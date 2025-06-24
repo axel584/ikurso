@@ -1446,6 +1446,11 @@ INSERT INTO rajtoj (id, kodo, nomo) VALUES(3, 'K', '3. Correcteur');
 INSERT INTO rajtoj (id, kodo, nomo) VALUES(4, 'A', '4. Administrateur');
 INSERT INTO rajtoj (id, kodo, nomo) VALUES(5, 'I', '5. Informateur');
 
+
+-- tekstoj
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `nivelo`, `vortoj`, `kolekto`, `etikedoj`) VALUES ('lasumin01', 'Izabela', 'Claude Piron', 'https://ikurso.esperanto-france.org/fr/gerda/cxap01.php?section=5', 27, 212, NULL, 'fikcio');
+
+
 -- vortoj
 
 

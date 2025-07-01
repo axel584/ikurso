@@ -1,3 +1,4 @@
+# coding: utf-8
 import os
 import MySQLdb
 import config
@@ -5,7 +6,7 @@ import glob
 
 def upload():
     tekstoj = {}
-    conn = MySQLdb.connect(host=config.host,user=config.user,passwd=config.passwd,db=config.db,use_unicode=True)
+    conn = MySQLdb.connect(host=config.host,user=config.user,passwd=config.passwd,db=config.db,use_unicode=True,charset='utf8mb4')
     # charge tous les mots déjà connu
     cursor = conn.cursor()
     cursor.execute("SELECT id,enhavo FROM tekstoj")

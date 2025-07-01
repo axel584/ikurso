@@ -1,17 +1,18 @@
+# coding: utf-8
 import os
 import MySQLdb
 import config
 
 def upload():
     dictionnaire = {}
-    conn = MySQLdb.connect(host=config.host,user=config.user,passwd=config.passwd,db=config.db,use_unicode=True)
+    conn = MySQLdb.connect(host=config.host,user=config.user,passwd=config.passwd,db=config.db,use_unicode=True,charset='utf8mb4',charset='utf8mb4')
     # charge tous les mots déjà connu
     cursor = conn.cursor()
     cursor.execute("SELECT eo,fr FROM vortoj")
     for (eo,fr) in cursor.fetchall():
         dictionnaire[eo]=fr
 
-    with open("nilegu/vortaro.csv",encoding='UTF-8') as f:
+    with open("nilegu/vortaro.csv",encoding='utf-8') as f:
         for line in f.readlines():
             eo,fr = line.strip().split('\t')
             eo = eo.strip(',').replace('\'','\'\'')

@@ -167,6 +167,12 @@ class TekstojAPI {
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             
             if ($result) {
+                if (isset($result['enhavo']) && !empty($result['enhavo'])) {
+                    $decoded = json_decode($result['enhavo'], true);
+                    if ($decoded !== null) {
+                        $result['enhavo'] = $decoded;
+                    }
+                }
                 $this->sendResponse($result);
             } else {
                 $this->sendError(404, "Teksto non trouvé");

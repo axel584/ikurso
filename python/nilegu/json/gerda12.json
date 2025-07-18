@@ -9,17 +9,17 @@
   {
     "teksto": "Bob duone malfermas la okulojn, ilin refermas, ilin malfermetas denove, ilin refermas, \u011demas, kaj finfine malfermas ilin tute lar\u011de.",
     "vortaro": {
-      "\u011demas": "g\u00e9mir, geindre",
-      "duone": "(\u00e0) demi",
-      "denove": "\u00e0 nouveau",
-      "kaj": "et",
-      "lar\u011de": "\u00e0 travers, en large",
-      "ilin": "ils, elles, eux",
-      "finfine": "finalement, en fin de compte",
-      "tute": "enti\u00e8rement, totalement",
       "malfermas": "ouvrir",
-      "okulojn": "\u0153il",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "ilin": "ils, elles, eux",
+      "\u011demas": "g\u00e9mir, geindre",
+      "kaj": "et",
+      "duone": "(\u00e0) demi",
+      "lar\u011de": "\u00e0 travers, en large",
+      "finfine": "finalement, en fin de compte",
+      "denove": "\u00e0 nouveau",
+      "tute": "enti\u00e8rement, totalement",
+      "okulojn": "\u0153il"
     }
   },
   {
@@ -29,14 +29,14 @@
   {
     "teksto": "\"Donu al mi ion por trinki,\" li diras.",
     "vortaro": {
-      "trinki": "boire",
       "mi": "je",
-      "ion": "quelque chose",
-      "li": "il, lui, le",
-      "por": "pour, dans le but de",
-      "al": "\u00e0, vers",
       "diras": "dire",
-      "donu": "donner"
+      "por": "pour, dans le but de",
+      "li": "il, lui, le",
+      "ion": "quelque chose",
+      "al": "\u00e0, vers",
+      "donu": "donner",
+      "trinki": "boire"
     }
   },
   {
@@ -46,11 +46,11 @@
   {
     "teksto": "\"Trinki? Kion vi deziras trinki?\" demandas Tom.",
     "vortaro": {
-      "trinki": "boire",
-      "deziras": "d\u00e9sirer",
+      "demandas": "interroger, demander",
       "vi": "tu, vous",
+      "trinki": "boire",
       "kion": "quoi, que",
-      "demandas": "interroger, demander"
+      "deziras": "d\u00e9sirer"
     }
   },
   {
@@ -61,13 +61,13 @@
     "teksto": "\"Ion ajn. Brandon. Donu al mi glason da brando.\"",
     "vortaro": {
       "mi": "je",
-      "ion": "quelque chose",
       "brandon": "eau-de-vie, alcool",
-      "ajn": "n'importe qu-\u2026",
       "al": "\u00e0, vers",
-      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
-      "brando": "eau-de-vie, alcool",
+      "ion": "quelque chose",
       "donu": "donner",
+      "ajn": "n'importe qu-\u2026",
+      "brando": "eau-de-vie, alcool",
+      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
       "glason": "verre"
     }
   },
@@ -78,14 +78,14 @@
   {
     "teksto": "\"Kiel vi sentas vin?\" diras fra\u016dlino Marta, la flegistino.",
     "vortaro": {
-      "vin": "tu, vous",
-      "fra\u016dlino": "Mademoiselle",
       "diras": "dire",
-      "vi": "tu, vous",
-      "sentas": "ressentir, sentir, \u00e9prouver",
       "flegistino": "infirmi\u00e8re",
       "la": "le, la, les",
-      "kiel": "comment, comme"
+      "kiel": "comment, comme",
+      "vi": "tu, vous",
+      "sentas": "ressentir, sentir, \u00e9prouver",
+      "fra\u016dlino": "Mademoiselle",
+      "vin": "tu, vous"
     }
   },
   {
@@ -95,19 +95,19 @@
   {
     "teksto": "\"La kapo doloras,\" Bob respondas \u011deme. \"Mi petas vin, bonvolu doni al mi ion por trinki.\"",
     "vortaro": {
-      "doloras": "faire mal, \u00eatre douloureux",
-      "doni": "donner",
-      "vin": "tu, vous",
       "mi": "je",
-      "trinki": "boire",
-      "ion": "quelque chose",
-      "kapo": "t\u00eate",
       "por": "pour, dans le but de",
-      "al": "\u00e0, vers",
-      "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
-      "bonvolu": "bien vouloir",
+      "la": "le, la, les",
       "respondas": "r\u00e9pondre",
-      "la": "le, la, les"
+      "al": "\u00e0, vers",
+      "kapo": "t\u00eate",
+      "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
+      "doni": "donner",
+      "ion": "quelque chose",
+      "trinki": "boire",
+      "doloras": "faire mal, \u00eatre douloureux",
+      "vin": "tu, vous",
+      "bonvolu": "bien vouloir"
     }
   },
   {
@@ -118,17 +118,17 @@
     "teksto": "\"\u0108u vi bonvolas iri,\" Tom petas la flegistinon, \"kaj alporti al li glason da brando?\"",
     "vortaro": {
       "flegistinon": "infirmi\u00e8re",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "li": "il, lui, le",
-      "iri": "aller",
-      "al": "\u00e0, vers",
-      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
-      "vi": "tu, vous",
-      "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
-      "bonvolas": "bien vouloir",
-      "brando": "eau-de-vie, alcool",
-      "kaj": "et",
       "la": "le, la, les",
+      "li": "il, lui, le",
+      "kaj": "et",
+      "al": "\u00e0, vers",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "iri": "aller",
+      "vi": "tu, vous",
+      "bonvolas": "bien vouloir",
+      "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
+      "brando": "eau-de-vie, alcool",
+      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
       "glason": "verre"
     }
   },
@@ -143,13 +143,13 @@
   {
     "teksto": "La flegistino iom hezitas, sed fine kapjesas.",
     "vortaro": {
-      "iom": "un peu",
-      "sed": "mais",
-      "hezitas": "h\u00e9siter",
-      "fine": "au final, finalement, enfin",
-      "kapjesas": "oui de la t\u00eate, r\u00e9ponse affirmative, dire oui, r\u00e9pondre par oui, opiner du chef",
       "flegistino": "infirmi\u00e8re",
-      "la": "le, la, les"
+      "kapjesas": "oui de la t\u00eate, r\u00e9ponse affirmative, dire oui, r\u00e9pondre par oui, opiner du chef",
+      "la": "le, la, les",
+      "iom": "un peu",
+      "fine": "au final, finalement, enfin",
+      "hezitas": "h\u00e9siter",
+      "sed": "mais"
     }
   },
   {
@@ -159,33 +159,33 @@
   {
     "teksto": "\"\u0108u mi anka\u016d voku la policon?\" \u015di diras. \"Li ja ricevis baton, baton sufi\u0109e fortan, por ke li i\u011du senkonscia. La\u016d mia opinio, tio pravigas, ke oni venigu la policon. \u0108u vi ne konsentas?\"",
     "vortaro": {
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "pravigas": "donner raison \u00e0, justifier",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
       "por": "pour, dans le but de",
       "mia": "je",
-      "policon": "police",
-      "ricevis": "recevoir",
-      "\u015di": "elle",
-      "mi": "je",
-      "konsentas": "consentir, \u00eatre en accord",
-      "sufi\u0109e": "assez",
-      "opinio": "opinion, avis",
-      "voku": "appeler",
       "la": "le, la, les",
-      "li": "il, lui, le",
-      "tio": "ce, cela, \u00e7a",
-      "diras": "dire",
-      "la\u016d": "selon, suivant ; le long de",
-      "baton": "battement, coup",
+      "pravigas": "donner raison \u00e0, justifier",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "ricevis": "recevoir",
       "ne": "non, ne... pas",
-      "anka\u016d": "aussi",
-      "i\u011du": "devenir",
+      "diras": "dire",
+      "sufi\u0109e": "assez",
+      "tio": "ce, cela, \u00e7a",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
       "fortan": "fort(e)",
+      "baton": "battement, coup",
+      "voku": "appeler",
+      "mi": "je",
+      "\u015di": "elle",
+      "i\u011du": "devenir",
+      "la\u016d": "selon, suivant ; le long de",
+      "konsentas": "consentir, \u00eatre en accord",
       "ja": "certes, effectivement, il est vrai que, en fait, bien",
+      "anka\u016d": "aussi",
+      "li": "il, lui, le",
       "vi": "tu, vous",
       "oni": "on",
-      "senkonscia": "inconscient"
+      "senkonscia": "inconscient",
+      "policon": "police",
+      "opinio": "opinion, avis"
     }
   },
   {
@@ -195,32 +195,32 @@
   {
     "teksto": "\"Anka\u016d akvon,\" diras Bob, anta\u016d ol Tom trovas la tempon respondi al Marta. \"Mi tre soifas. Mi trinkos brandon plezure, sed unue mi trinku akvon. Bonvolu alporti al mi tre grandan glason da akvo kaj iom grandan glason da brando.\"",
     "vortaro": {
+      "akvon": "eau",
+      "tre": "tr\u00e8s",
+      "la": "le, la, les",
+      "trinkos": "boire",
+      "bonvolu": "bien vouloir",
+      "tempon": "temps",
+      "diras": "dire",
+      "brandon": "eau-de-vie, alcool",
+      "grandan": "grand(e)",
+      "mi": "je",
+      "unue": "premi\u00e8rement, d'abord",
+      "akvo": "eau",
+      "trovas": "trouver",
+      "kaj": "et",
+      "al": "\u00e0, vers",
+      "brando": "eau-de-vie, alcool",
+      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
+      "sed": "mais",
+      "glason": "verre",
+      "ol": "que (dans une comparaison)",
       "iom": "un peu",
       "trinku": "boire",
-      "akvon": "eau",
-      "ol": "que (dans une comparaison)",
-      "unue": "premi\u00e8rement, d'abord",
-      "sed": "mais",
-      "respondi": "r\u00e9pondre",
-      "mi": "je",
-      "anta\u016d": "avant, en avant de, devant",
-      "al": "\u00e0, vers",
-      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
-      "soifas": "avoir soif",
-      "kaj": "et",
-      "tempon": "temps",
-      "la": "le, la, les",
-      "grandan": "grand(e)",
-      "trinkos": "boire",
-      "brandon": "eau-de-vie, alcool",
-      "brando": "eau-de-vie, alcool",
-      "diras": "dire",
-      "bonvolu": "bien vouloir",
       "anka\u016d": "aussi",
-      "tre": "tr\u00e8s",
-      "glason": "verre",
-      "trovas": "trouver",
-      "akvo": "eau"
+      "soifas": "avoir soif",
+      "anta\u016d": "avant, en avant de, devant",
+      "respondi": "r\u00e9pondre"
     }
   },
   {
@@ -230,14 +230,14 @@
   {
     "teksto": "\"Jes. Estus sa\u011de voki la policon,\" Tom respondas al la flegistino.",
     "vortaro": {
-      "flegistino": "infirmi\u00e8re",
       "voki": "appeler",
+      "flegistino": "infirmi\u00e8re",
+      "la": "le, la, les",
+      "respondas": "r\u00e9pondre",
       "al": "\u00e0, vers",
       "policon": "police",
-      "respondas": "r\u00e9pondre",
       "estus": "\u00eatre",
-      "jes": "oui, d'accord",
-      "la": "le, la, les"
+      "jes": "oui, d'accord"
     }
   },
   {
@@ -247,38 +247,38 @@
   {
     "teksto": "\"Se vi ne alportos al mi ion por trinki, mi iros mem,\" diras Bob. \"Mi tre soifas. Vi ne povas imagi, kiom soifa mi min sentas. Mi tuj iros trinki akvon. Kaj poste mi iros a\u0109eti brandon. \u0108u oni povas ricevi brandon en la memserva restoracio?\"",
     "vortaro": {
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "por": "pour, dans le but de",
-      "kiom": "combien, quelle quantit\u00e9",
-      "sentas": "ressentir, sentir, \u00e9prouver",
-      "akvon": "eau",
-      "mi": "je",
-      "min": "je",
-      "ion": "quelque chose",
       "poste": "ensuite, puis",
-      "en": "dans",
-      "se": "si (indique une condition)",
-      "al": "\u00e0, vers",
-      "soifas": "avoir soif",
-      "kaj": "et",
-      "la": "le, la, les",
-      "restoracio": "restaurant",
-      "imagi": "imaginer",
-      "brandon": "eau-de-vie, alcool",
-      "diras": "dire",
-      "ne": "non, ne... pas",
+      "akvon": "eau",
+      "por": "pour, dans le but de",
       "tre": "tr\u00e8s",
-      "trinki": "boire",
-      "ricevi": "recevoir",
-      "povas": "pouvoir, \u00eatre capable de",
-      "a\u0109eti": "acheter",
+      "la": "le, la, les",
+      "min": "je",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "imagi": "imaginer",
+      "ne": "non, ne... pas",
+      "diras": "dire",
       "iros": "aller",
-      "vi": "tu, vous",
-      "memserva": "libre-service, en libre-service",
+      "brandon": "eau-de-vie, alcool",
+      "tuj": "imm\u00e9diatement, sur le champ",
       "soifa": "assoiff\u00e9",
-      "oni": "on",
+      "mi": "je",
+      "kaj": "et",
       "mem": "soi-m\u00eame",
-      "tuj": "imm\u00e9diatement, sur le champ"
+      "al": "\u00e0, vers",
+      "ion": "quelque chose",
+      "en": "dans",
+      "kiom": "combien, quelle quantit\u00e9",
+      "memserva": "libre-service, en libre-service",
+      "sentas": "ressentir, sentir, \u00e9prouver",
+      "a\u0109eti": "acheter",
+      "se": "si (indique une condition)",
+      "soifas": "avoir soif",
+      "restoracio": "restaurant",
+      "vi": "tu, vous",
+      "trinki": "boire",
+      "povas": "pouvoir, \u00eatre capable de",
+      "oni": "on",
+      "ricevi": "recevoir"
     }
   },
   {
@@ -288,26 +288,26 @@
   {
     "teksto": "\"Ne, tute ne,\" Marta respondas, \"sed mi havas brandon en mia \u0109ambro. Mi alportos \u011din al vi. A\u016d venu mem, se vi povas. \u0108u vi povas stari\u011di?\"",
     "vortaro": {
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "mia": "je",
+      "\u0109ambro": "chambre, pi\u00e8ce dans une maison ou un b\u00e2timent",
       "a\u016d": "ou",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "ne": "non, ne... pas",
+      "venu": "venir",
+      "brandon": "eau-de-vie, alcool",
       "havas": "avoir",
-      "respondas": "r\u00e9pondre",
-      "sed": "mais",
       "mi": "je",
       "en": "dans",
-      "se": "si (indique une condition)",
-      "stari\u011di": "se dresser",
+      "mem": "soi-m\u00eame",
+      "respondas": "r\u00e9pondre",
       "al": "\u00e0, vers",
-      "\u0109ambro": "chambre, pi\u00e8ce dans une maison ou un b\u00e2timent",
-      "brandon": "eau-de-vie, alcool",
-      "venu": "venir",
-      "ne": "non, ne... pas",
+      "sed": "mais",
+      "se": "si (indique une condition)",
+      "vi": "tu, vous",
       "\u011din": "il, elle",
       "povas": "pouvoir, \u00eatre capable de",
-      "vi": "tu, vous",
       "tute": "enti\u00e8rement, totalement",
-      "mem": "soi-m\u00eame"
+      "stari\u011di": "se dresser"
     }
   },
   {
@@ -317,18 +317,18 @@
   {
     "teksto": "\"Mi povas,\" diras Bob, tre malrapide stari\u011dante kun la helpo de Tom kaj de la flegistino, \"kvankam dolore.\"",
     "vortaro": {
-      "de": "de",
       "mi": "je",
-      "helpo": "aide, coop\u00e9ration, concours",
-      "povas": "pouvoir, \u00eatre capable de",
-      "kvankam": "bien que, quoique",
       "diras": "dire",
+      "tre": "tr\u00e8s",
       "stari\u011dante": "se dresser",
-      "kaj": "et",
-      "flegistino": "infirmi\u00e8re",
       "kun": "avec",
       "la": "le, la, les",
-      "tre": "tr\u00e8s"
+      "flegistino": "infirmi\u00e8re",
+      "kaj": "et",
+      "povas": "pouvoir, \u00eatre capable de",
+      "helpo": "aide, coop\u00e9ration, concours",
+      "de": "de",
+      "kvankam": "bien que, quoique"
     }
   },
   {
@@ -339,10 +339,10 @@
     "teksto": "Ili iras al \u015dia \u0109ambro.",
     "vortaro": {
       "iras": "aller",
-      "ili": "ils, elles, eux",
-      "\u015dia": "elle",
+      "\u0109ambro": "chambre, pi\u00e8ce dans une maison ou un b\u00e2timent",
       "al": "\u00e0, vers",
-      "\u0109ambro": "chambre, pi\u00e8ce dans une maison ou un b\u00e2timent"
+      "\u015dia": "elle",
+      "ili": "ils, elles, eux"
     }
   },
   {
@@ -352,30 +352,30 @@
   {
     "teksto": "\"Trinku tiom da akvo, kiom vi deziras, \" \u015di diras. \"Kaj poste mi donos brandon al vi. Eksidu sur tiun se\u011don, \u011di estas tre komforta, vi vidos.\"",
     "vortaro": {
-      "trinku": "boire",
-      "eksidu": "s'asseoir",
-      "akvo": "eau",
-      "kiom": "combien, quelle quantit\u00e9",
-      "donos": "donner",
-      "tiom": "tant (de), autant",
-      "\u015di": "elle",
-      "komforta": "confortable",
-      "mi": "je",
       "poste": "ensuite, puis",
-      "vidos": "voir",
       "estas": "\u00eatre",
-      "deziras": "d\u00e9sirer",
-      "al": "\u00e0, vers",
-      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
-      "kaj": "et",
-      "brandon": "eau-de-vie, alcool",
-      "tiun": "ce, cet(te)",
-      "diras": "dire",
       "tre": "tr\u00e8s",
+      "tiom": "tant (de), autant",
+      "\u011di": "il, elle",
       "sur": "sur",
-      "vi": "tu, vous",
+      "eksidu": "s'asseoir",
+      "vidos": "voir",
+      "diras": "dire",
+      "brandon": "eau-de-vie, alcool",
       "se\u011don": "chaise",
-      "\u011di": "il, elle"
+      "deziras": "d\u00e9sirer",
+      "mi": "je",
+      "akvo": "eau",
+      "donos": "donner",
+      "kaj": "et",
+      "al": "\u00e0, vers",
+      "kiom": "combien, quelle quantit\u00e9",
+      "\u015di": "elle",
+      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
+      "tiun": "ce, cet(te)",
+      "trinku": "boire",
+      "vi": "tu, vous",
+      "komforta": "confortable"
     }
   },
   {
@@ -385,26 +385,26 @@
   {
     "teksto": "Bob sidi\u011das sur la se\u011don, iom \u011demas, kaj ricevas grandan glason da akvo kun videble grandega plezuro. \"Doloras al mi la kapo,\" li diras.",
     "vortaro": {
-      "iom": "un peu",
-      "kapo": "t\u00eate",
+      "la": "le, la, les",
+      "sur": "sur",
+      "diras": "dire",
+      "grandan": "grand(e)",
       "doloras": "faire mal, \u00eatre douloureux",
+      "se\u011don": "chaise",
       "mi": "je",
+      "kun": "avec",
+      "akvo": "eau",
+      "kaj": "et",
       "plezuro": "plaisir",
       "al": "\u00e0, vers",
-      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
-      "kaj": "et",
-      "kun": "avec",
-      "la": "le, la, les",
-      "grandan": "grand(e)",
-      "li": "il, lui, le",
-      "diras": "dire",
-      "glason": "verre",
-      "se\u011don": "chaise",
-      "sur": "sur",
-      "\u011demas": "g\u00e9mir, geindre",
-      "akvo": "eau",
+      "kapo": "t\u00eate",
       "ricevas": "recevoir",
-      "sidi\u011das": "s'asseoir"
+      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
+      "sidi\u011das": "s'asseoir",
+      "glason": "verre",
+      "iom": "un peu",
+      "\u011demas": "g\u00e9mir, geindre",
+      "li": "il, lui, le"
     }
   },
   {
@@ -414,18 +414,18 @@
   {
     "teksto": "\"Diru,\" petas Tom, \"kio okazis. \u0108u finfine vi klarigos al ni? Ni estas ege scivolaj.\"",
     "vortaro": {
+      "okazis": "arriver, se passer, avoir lieu",
+      "estas": "\u00eatre",
+      "kio": "quoi, que",
+      "al": "\u00e0, vers",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "diru": "dire",
-      "estas": "\u00eatre",
-      "ni": "nous",
-      "al": "\u00e0, vers",
-      "ege": "extr\u00eamement",
-      "finfine": "finalement, en fin de compte",
       "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
+      "finfine": "finalement, en fin de compte",
       "vi": "tu, vous",
-      "kio": "quoi, que",
-      "klarigos": "clarifier, \u00e9claircir, \u00e9clairer, expliquer",
-      "okazis": "arriver, se passer, avoir lieu"
+      "ni": "nous",
+      "ege": "extr\u00eamement",
+      "klarigos": "clarifier, \u00e9claircir, \u00e9clairer, expliquer"
     }
   },
   {
@@ -435,23 +435,23 @@
   {
     "teksto": "Bob pripensas iomete, trinkas iom da akvo, metas la manon al la kapo kun dolora esprimo surviza\u011de, kaj fine respondas:",
     "vortaro": {
-      "iom": "un peu",
-      "kapo": "t\u00eate",
-      "trinkas": "boire",
-      "manon": "main",
-      "respondas": "r\u00e9pondre",
-      "al": "\u00e0, vers",
-      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
-      "kaj": "et",
-      "kun": "avec",
       "la": "le, la, les",
-      "fine": "au final, finalement, enfin",
-      "pripensas": "r\u00e9fl\u00e9chir \u00e0, consid\u00e9rer, envisager",
       "dolora": "douloureux",
-      "iomete": "un petit peu",
       "metas": "mettre, poser, placer",
+      "esprimo": "expression",
+      "kun": "avec",
       "akvo": "eau",
-      "esprimo": "expression"
+      "pripensas": "r\u00e9fl\u00e9chir \u00e0, consid\u00e9rer, envisager",
+      "kaj": "et",
+      "al": "\u00e0, vers",
+      "respondas": "r\u00e9pondre",
+      "iomete": "un petit peu",
+      "kapo": "t\u00eate",
+      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
+      "manon": "main",
+      "iom": "un peu",
+      "fine": "au final, finalement, enfin",
+      "trinkas": "boire"
     }
   },
   {
@@ -461,28 +461,28 @@
   {
     "teksto": "\"Mi ne povus klarigi. Nenio estas klara. Mi estis tie apud Gerda. Mi a\u016ddis nenion, mi a\u016ddis neniun bruon. Kaj subite \u0109io eksplodis en mia kapo kaj mi mortis.\"",
     "vortaro": {
-      "\u0109io": "tout, toute chose",
-      "kapo": "t\u00eate",
+      "estas": "\u00eatre",
+      "a\u016ddis": "entendre",
       "mia": "je",
+      "nenion": "rien",
+      "\u0109io": "tout, toute chose",
+      "ne": "non, ne... pas",
+      "subite": "soudainement",
+      "apud": "pr\u00e8s de, \u00e0 c\u00f4t\u00e9 de",
+      "povus": "pouvoir, \u00eatre capable de",
+      "bruon": "bruit",
+      "neniun": "personne",
       "mi": "je",
+      "mortis": "mourir",
+      "kaj": "et",
+      "en": "dans",
+      "kapo": "t\u00eate",
+      "klara": "clair(e), simple",
+      "estis": "\u00eatre",
       "tie": "ici, l\u00e0",
       "klarigi": "clarifier, \u00e9claircir, \u00e9clairer, expliquer",
-      "nenion": "rien",
-      "en": "dans",
-      "estas": "\u00eatre",
-      "nenio": "rien",
-      "povus": "pouvoir, \u00eatre capable de",
-      "apud": "pr\u00e8s de, \u00e0 c\u00f4t\u00e9 de",
-      "kaj": "et",
-      "bruon": "bruit",
-      "a\u016ddis": "entendre",
-      "mortis": "mourir",
-      "subite": "soudainement",
       "eksplodis": "exploser",
-      "klara": "clair(e), simple",
-      "ne": "non, ne... pas",
-      "neniun": "personne",
-      "estis": "\u00eatre"
+      "nenio": "rien"
     }
   }
 ]

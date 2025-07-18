@@ -2,111 +2,111 @@
   {
     "teksto": "LA A\u011cOJ DE LA HOMO (1)",
     "vortaro": {
-      "homo": "\u00eatre humain, homme",
       "a\u011doj": "\u00e2ge",
       "de": "de",
+      "homo": "\u00eatre humain, homme",
       "la": "le, la, les"
     }
   },
   {
     "teksto": "Je la unua jaro, li similas re\u011don ku\u015dantan en portlito, \u0109iuj lin \u0109irka\u016dbrakas kaj kisas;",
     "vortaro": {
-      "je": "pr\u00e9position ind\u00e9finie",
-      "lin": "il, lui, le",
-      "\u0109irka\u016dbrakas": "accolade, embrassement, enlacement, \u00e9treinte, embrasser, enlacer, \u00e9treindre",
-      "li": "il, lui, le",
-      "ku\u015dantan": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
-      "similas": "ressembler",
-      "en": "dans",
-      "unua": "premier, premi\u00e8re",
-      "\u0109iuj": "chaque, chacun",
-      "jaro": "ann\u00e9e",
       "re\u011don": "roi",
+      "la": "le, la, les",
+      "je": "pr\u00e9position ind\u00e9finie",
+      "li": "il, lui, le",
+      "unua": "premier, premi\u00e8re",
+      "en": "dans",
       "kaj": "et",
+      "similas": "ressembler",
+      "lin": "il, lui, le",
       "kisas": "embrasser",
-      "la": "le, la, les"
+      "ku\u015dantan": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
+      "\u0109iuj": "chaque, chacun",
+      "\u0109irka\u016dbrakas": "accolade, embrassement, enlacement, \u00e9treinte, embrasser, enlacer, \u00e9treindre",
+      "jaro": "ann\u00e9e"
     }
   },
   {
     "teksto": "je la dua jaro, li similas porkon, kiu baraktas en malpura\u0135oj;",
     "vortaro": {
-      "je": "pr\u00e9position ind\u00e9finie",
       "porkon": "porc, cochon",
-      "li": "il, lui, le",
-      "dua": "second, deuxi\u00e8me",
-      "similas": "ressembler",
-      "en": "dans",
+      "la": "le, la, les",
       "kiu": "qui",
+      "je": "pr\u00e9position ind\u00e9finie",
+      "li": "il, lui, le",
       "baraktas": "se d\u00e9battre, se d\u00e9mener",
-      "jaro": "ann\u00e9e",
-      "la": "le, la, les"
+      "en": "dans",
+      "similas": "ressembler",
+      "dua": "second, deuxi\u00e8me",
+      "jaro": "ann\u00e9e"
     }
   },
   {
     "teksto": "je la deka jaro, li saltadas kiel kapreolo;",
     "vortaro": {
+      "la": "le, la, les",
+      "kapreolo": "chevreuil, chevrette",
       "je": "pr\u00e9position ind\u00e9finie",
       "li": "il, lui, le",
-      "kiel": "comment, comme",
-      "kapreolo": "chevreuil, chevrette",
-      "jaro": "ann\u00e9e",
       "deka": "dixi\u00e8me",
-      "la": "le, la, les"
+      "kiel": "comment, comme",
+      "jaro": "ann\u00e9e"
     }
   },
   {
     "teksto": "je la dudeka jaro, li blekas kiel \u0109evalo, vostumas kiel pavo, kaj postulas inon;",
     "vortaro": {
+      "la": "le, la, les",
       "je": "pr\u00e9position ind\u00e9finie",
-      "blekas": "b\u00ealer, hennir, hurler, coasser, glousser, crier, brailler",
-      "\u0109evalo": "cheval",
       "li": "il, lui, le",
-      "postulas": "exiger, r\u00e9clamer",
-      "inon": "femme, femelle",
-      "kiel": "comment, comme",
-      "pavo": "paon",
-      "jaro": "ann\u00e9e",
       "kaj": "et",
+      "kiel": "comment, comme",
       "dudeka": "vingti\u00e8me, 20e",
-      "la": "le, la, les"
+      "\u0109evalo": "cheval",
+      "postulas": "exiger, r\u00e9clamer",
+      "pavo": "paon",
+      "inon": "femme, femelle",
+      "jaro": "ann\u00e9e",
+      "blekas": "b\u00ealer, hennir, hurler, coasser, glousser, crier, brailler"
     }
   },
   {
     "teksto": "kiam li akiras edzinon, li similas azenon;",
     "vortaro": {
-      "edzinon": "\u00e9pouse",
-      "akiras": "acqu\u00e9rir, obtenir, se procurer",
-      "li": "il, lui, le",
+      "kiam": "quand",
       "azenon": "\u00e2ne",
+      "li": "il, lui, le",
+      "akiras": "acqu\u00e9rir, obtenir, se procurer",
       "similas": "ressembler",
-      "kiam": "quand"
+      "edzinon": "\u00e9pouse"
     }
   },
   {
     "teksto": "kiam li akiris idojn, li fari\u011das a\u016ddaca kiel hundo, por havigi al ili panon kaj vivtenon;",
     "vortaro": {
-      "akiris": "acqu\u00e9rir, obtenir, se procurer",
-      "ili": "ils, elles, eux",
-      "panon": "pain",
       "idojn": "petit, descendant, disciple, h\u00e9ritier, rejeton",
-      "li": "il, lui, le",
-      "a\u016ddaca": "audacieux",
-      "por": "pour, dans le but de",
-      "al": "\u00e0, vers",
       "kiam": "quand",
-      "fari\u011das": "devenir, se transformer",
+      "por": "pour, dans le but de",
+      "li": "il, lui, le",
       "kaj": "et",
+      "kiel": "comment, comme",
       "hundo": "chien",
+      "al": "\u00e0, vers",
+      "akiris": "acqu\u00e9rir, obtenir, se procurer",
       "havigi": "fournir, faire obtenir, procurer, pourvoir, conf\u00e9rer",
-      "kiel": "comment, comme"
+      "panon": "pain",
+      "a\u016ddaca": "audacieux",
+      "ili": "ils, elles, eux",
+      "fari\u011das": "devenir, se transformer"
     }
   },
   {
     "teksto": "fine, maljuni\u011dinte, li similas simion\u2026",
     "vortaro": {
-      "li": "il, lui, le",
       "maljuni\u011dinte": "vieillir",
       "fine": "au final, finalement, enfin",
+      "li": "il, lui, le",
       "similas": "ressembler",
       "simion": "singe"
     }
@@ -118,12 +118,12 @@
   {
     "teksto": "Rabeno \u015cimeon Ben Eleazar el la aramea: A. Nurak (el La Nica Literatura Revuo)",
     "vortaro": {
-      "revuo": "revue",
-      "el": "hors de, de",
+      "la": "le, la, les",
       "rabeno": "rabbin, rabbi",
-      "a": "la, argon, Amp\u00e8re, A4, are, a",
       "aramea": "aram\u00e9en",
-      "la": "le, la, les"
+      "revuo": "revue",
+      "a": "la, argon, Amp\u00e8re, A4, are, a",
+      "el": "hors de, de"
     }
   },
   {
@@ -133,25 +133,25 @@
   {
     "teksto": "LA A\u011cOJ DE LA HOMO (2)",
     "vortaro": {
-      "homo": "\u00eatre humain, homme",
       "a\u011doj": "\u00e2ge",
       "de": "de",
+      "homo": "\u00eatre humain, homme",
       "la": "le, la, les"
     }
   },
   {
     "teksto": "En supra \u0109ambro, lulo\u2026 lulo\u2026",
     "vortaro": {
+      "supra": "sup\u00e9rieur",
       "\u0109ambro": "chambre, pi\u00e8ce dans une maison ou un b\u00e2timent",
-      "en": "dans",
-      "supra": "sup\u00e9rieur"
+      "en": "dans"
     }
   },
   {
     "teksto": "An\u011dele dormas la etulo:",
     "vortaro": {
-      "etulo": "petit",
       "dormas": "dormir",
+      "etulo": "petit",
       "la": "le, la, les"
     }
   },
@@ -168,23 +168,23 @@
   {
     "teksto": "Sed balda\u016d li el dorm\u2019 sin \u015diras",
     "vortaro": {
-      "sed": "mais",
-      "balda\u016d": "bient\u00f4t",
       "li": "il, lui, le",
-      "el": "hors de, de",
+      "\u015diras": "d\u00e9chirer, arracher",
+      "sed": "mais",
       "sin": "se, s', soi",
-      "\u015diras": "d\u00e9chirer, arracher"
+      "el": "hors de, de",
+      "balda\u016d": "bient\u00f4t"
     }
   },
   {
     "teksto": "Kaj pri la bela mondo miras:",
     "vortaro": {
-      "bela": "beau, belle",
-      "miras": "s'\u00e9tonner",
+      "la": "le, la, les",
       "pri": "\u00e0 propos de",
-      "mondo": "monde",
       "kaj": "et",
-      "la": "le, la, les"
+      "miras": "s'\u00e9tonner",
+      "mondo": "monde",
+      "bela": "beau, belle"
     }
   },
   {
@@ -200,20 +200,20 @@
   {
     "teksto": "Jam ne plu side li tamburas,",
     "vortaro": {
-      "jam": "d\u00e9j\u00e0",
       "li": "il, lui, le",
+      "jam": "d\u00e9j\u00e0",
+      "tamburas": "tambouriner, battre du tambour",
       "plu": "plus, plus longtemps, plus loin",
-      "ne": "non, ne... pas",
-      "tamburas": "tambouriner, battre du tambour"
+      "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "Sed tra la dom\u2019 esplore kuras:",
     "vortaro": {
-      "sed": "mais",
       "kuras": "courir",
-      "tra": "\u00e0 travers",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "sed": "mais",
+      "tra": "\u00e0 travers"
     }
   },
   {
@@ -229,20 +229,20 @@
   {
     "teksto": "Kun vundoj li (kaj sen rubandoj)",
     "vortaro": {
-      "li": "il, lui, le",
       "vundoj": "blessure, plaie",
       "rubandoj": "d\u00e9fil\u00e9, ruban",
-      "sen": "sans",
+      "kun": "avec",
+      "li": "il, lui, le",
       "kaj": "et",
-      "kun": "avec"
+      "sen": "sans"
     }
   },
   {
     "teksto": "Revenas el stratbubaj bandoj:",
     "vortaro": {
-      "revenas": "revenir",
+      "bandoj": "bande, gang",
       "el": "hors de, de",
-      "bandoj": "bande, gang"
+      "revenas": "revenir"
     }
   },
   {
@@ -258,21 +258,21 @@
   {
     "teksto": "Kaj balda\u016d sekvas li kun \u011dojo",
     "vortaro": {
-      "balda\u016d": "bient\u00f4t",
+      "kun": "avec",
       "li": "il, lui, le",
+      "kaj": "et",
       "sekvas": "suivre",
       "\u011dojo": "joie",
-      "kaj": "et",
-      "kun": "avec"
+      "balda\u016d": "bient\u00f4t"
     }
   },
   {
     "teksto": "Knabinon \u0109ien sur la vojo:",
     "vortaro": {
+      "la": "le, la, les",
       "vojo": "chemin, route",
       "sur": "sur",
-      "knabinon": "fille, jeune fille",
-      "la": "le, la, les"
+      "knabinon": "fille, jeune fille"
     }
   },
   {
@@ -289,8 +289,8 @@
     "teksto": "Al \u015di li donas sian nomon:",
     "vortaro": {
       "donas": "donner",
-      "li": "il, lui, le",
       "nomon": "nom",
+      "li": "il, lui, le",
       "al": "\u00e0, vers",
       "\u015di": "elle",
       "sian": "son, sa, ses"
@@ -299,11 +299,11 @@
   {
     "teksto": "Por fondi kune novan domon:",
     "vortaro": {
-      "domon": "maison",
-      "novan": "neuf, neuve",
-      "por": "pour, dans le but de",
       "kune": "ensemble",
-      "fondi": "fonder, asseoir, \u00e9tablir, \u00e9difier, instaurer"
+      "por": "pour, dans le but de",
+      "domon": "maison",
+      "fondi": "fonder, asseoir, \u00e9tablir, \u00e9difier, instaurer",
+      "novan": "neuf, neuve"
     }
   },
   {
@@ -319,20 +319,20 @@
   {
     "teksto": "Li tiam estas tre utila",
     "vortaro": {
+      "estas": "\u00eatre",
+      "tre": "tr\u00e8s",
       "tiam": "\u00e0 ce moment l\u00e0, alors",
       "li": "il, lui, le",
-      "utila": "utile, nuisible",
-      "estas": "\u00eatre",
-      "tre": "tr\u00e8s"
+      "utila": "utile, nuisible"
     }
   },
   {
     "teksto": "Fortika viro, kvankam vila:",
     "vortaro": {
+      "vila": "velu, villeux",
       "kvankam": "bien que, quoique",
-      "fortika": "robuste, r\u00e9sistant, fortifi\u00e9, fort",
       "viro": "homme, m\u00e2le",
-      "vila": "velu, villeux"
+      "fortika": "robuste, r\u00e9sistant, fortifi\u00e9, fort"
     }
   },
   {
@@ -348,18 +348,18 @@
   {
     "teksto": "Kaj post rapida tempopaso",
     "vortaro": {
-      "kaj": "et",
       "post": "apr\u00e8s",
+      "kaj": "et",
       "rapida": "rapide, vif, vive"
     }
   },
   {
     "teksto": "Postrestas nur senviva maso:",
     "vortaro": {
-      "nur": "seulement",
       "postrestas": "restant, reliquat, r\u00e9sidu, glanure, \u00eatre en reste, retarder, rester en arri\u00e8re",
-      "senviva": "inanim\u00e9",
-      "maso": "masse"
+      "maso": "masse",
+      "nur": "seulement",
+      "senviva": "inanim\u00e9"
     }
   },
   {
@@ -381,40 +381,40 @@
   {
     "teksto": "Ni ne apliku al Virino",
     "vortaro": {
-      "virino": "femme",
-      "ni": "nous",
       "al": "\u00e0, vers",
       "apliku": "appliquer (sur quelque chose ou \u00e0 quelque chose)",
+      "ni": "nous",
+      "virino": "femme",
       "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "\u0108i tiun viv- kaj rimo-sa\u011don,",
     "vortaro": {
-      "tiun": "ce, cet(te)",
       "\u0109i": "(indique la proximit\u00e9)",
-      "kaj": "et"
+      "kaj": "et",
+      "tiun": "ce, cet(te)"
     }
   },
   {
     "teksto": "\u0108ar de l\u2019 komenco \u011dis la fino",
     "vortaro": {
-      "de": "de",
+      "komenco": "commencement, d\u00e9but, d\u00e9part, entr\u00e9e, origine, ouverture",
+      "la": "le, la, les",
       "fino": "habiter au diable vauvert, le meilleur est pour la fin, extr\u00e9mit\u00e9, fin, ach\u00e8vement, arr\u00eat",
       "\u011dis": "jusqu'\u00e0",
-      "\u0109ar": "parce que",
-      "la": "le, la, les",
-      "komenco": "commencement, d\u00e9but, d\u00e9part, entr\u00e9e, origine, ouverture"
+      "de": "de",
+      "\u0109ar": "parce que"
     }
   },
   {
     "teksto": "\u015ci \u0109iam havas saman a\u011don:",
     "vortaro": {
-      "a\u011don": "\u00e2ge",
       "saman": "le m\u00eame, la m\u00eame, identique, pareil(le)",
-      "\u0109iam": "toujours",
+      "a\u011don": "\u00e2ge",
       "havas": "avoir",
-      "\u015di": "elle"
+      "\u015di": "elle",
+      "\u0109iam": "toujours"
     }
   },
   {
@@ -430,10 +430,10 @@
   {
     "teksto": "Raymond Schwartz (el La Stranga Butiko)",
     "vortaro": {
-      "stranga": "bizarre",
-      "el": "hors de, de",
       "butiko": "boutique",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "stranga": "bizarre",
+      "el": "hors de, de"
     }
   },
   {
@@ -443,9 +443,9 @@
   {
     "teksto": "LA A\u011cOJ DE LA HOMO (3)",
     "vortaro": {
-      "homo": "\u00eatre humain, homme",
       "a\u011doj": "\u00e2ge",
       "de": "de",
+      "homo": "\u00eatre humain, homme",
       "la": "le, la, les"
     }
   },
@@ -453,56 +453,56 @@
     "teksto": "Kaj unu homo ludas multajn rolojn",
     "vortaro": {
       "homo": "\u00eatre humain, homme",
-      "multajn": "plusieurs",
-      "ludas": "jouer",
       "kaj": "et",
-      "rolojn": "r\u00f4le"
+      "ludas": "jouer",
+      "rolojn": "r\u00f4le",
+      "multajn": "plusieurs"
     }
   },
   {
     "teksto": "En sia viv\u2019, kun a\u011doj sep por aktoj.",
     "vortaro": {
-      "sia": "se, s', soi",
-      "aktoj": "acte",
-      "sep": "sept",
-      "en": "dans",
       "por": "pour, dans le but de",
+      "kun": "avec",
+      "sia": "se, s', soi",
+      "en": "dans",
       "a\u011doj": "\u00e2ge",
-      "kun": "avec"
+      "sep": "sept",
+      "aktoj": "acte"
     }
   },
   {
     "teksto": "Unue la infano, ploradante",
     "vortaro": {
       "infano": "enfant",
-      "la": "le, la, les",
-      "unue": "premi\u00e8rement, d'abord"
+      "unue": "premi\u00e8rement, d'abord",
+      "la": "le, la, les"
     }
   },
   {
     "teksto": "\u0108e l\u2019 brakoj de la vartistino.",
     "vortaro": {
-      "de": "de",
-      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
-      "vartistino": "nounou, nourrice",
       "brakoj": "bras",
-      "la": "le, la, les"
+      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
+      "la": "le, la, les",
+      "vartistino": "nounou, nourrice",
+      "de": "de"
     }
   },
   {
     "teksto": "Tiam La juna lernejknabo, plendetante,",
     "vortaro": {
-      "juna": "jeune",
       "tiam": "\u00e0 ce moment l\u00e0, alors",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "juna": "jeune"
     }
   },
   {
     "teksto": "Havante librosakon, kun viza\u011do",
     "vortaro": {
       "viza\u011do": "face, visage",
-      "havante": "avoir",
-      "kun": "avec"
+      "kun": "avec",
+      "havante": "avoir"
     }
   },
   {
@@ -514,47 +514,47 @@
   {
     "teksto": "Limako nevolonte al lernejo.",
     "vortaro": {
-      "al": "\u00e0, vers",
       "lernejo": "\u00e9cole",
-      "limako": "limace"
+      "limako": "limace",
+      "al": "\u00e0, vers"
     }
   },
   {
     "teksto": "Kaj tiam la amanto, sopirante",
     "vortaro": {
       "tiam": "\u00e0 ce moment l\u00e0, alors",
-      "sopirante": "regretter, languir apr\u00e8s, soupirer",
-      "amanto": "aimer",
+      "la": "le, la, les",
       "kaj": "et",
-      "la": "le, la, les"
+      "amanto": "aimer",
+      "sopirante": "regretter, languir apr\u00e8s, soupirer"
     }
   },
   {
     "teksto": "Kiel fornego, kun balad\u2019 malgaja",
     "vortaro": {
-      "fornego": "haut-fourneau",
-      "malgaja": "triste, attrist\u00e9, morose, pein\u00e9",
       "kun": "avec",
-      "kiel": "comment, comme"
+      "kiel": "comment, comme",
+      "malgaja": "triste, attrist\u00e9, morose, pein\u00e9",
+      "fornego": "haut-fourneau"
     }
   },
   {
     "teksto": "Al brovo de la amatino. Tiam",
     "vortaro": {
-      "de": "de",
-      "brovo": "sourcil",
       "tiam": "\u00e0 ce moment l\u00e0, alors",
+      "la": "le, la, les",
       "al": "\u00e0, vers",
-      "la": "le, la, les"
+      "brovo": "sourcil",
+      "de": "de"
     }
   },
   {
     "teksto": "Soldato, plena je mirigaj \u0135uroj,",
     "vortaro": {
+      "\u0135uroj": "serment, parole, voeligu",
       "je": "pr\u00e9position ind\u00e9finie",
       "plena": "plein(e)",
-      "soldato": "soldat",
-      "\u0135uroj": "serment, parole, voeligu"
+      "soldato": "soldat"
     }
   },
   {
@@ -569,10 +569,10 @@
   {
     "teksto": "\u0134aluza pri honoro, malpacema,",
     "vortaro": {
-      "malpacema": "querelleur, vindicatif",
+      "pri": "\u00e0 propos de",
       "\u0135aluza": "jaloux",
       "honoro": "d\u00e9shonneur, honneur",
-      "pri": "\u00e0 propos de"
+      "malpacema": "querelleur, vindicatif"
     }
   },
   {
@@ -586,77 +586,77 @@
   {
     "teksto": "E\u0109 de la fa\u016dko de la pafilego.",
     "vortaro": {
-      "de": "de",
-      "pafilego": "canon",
-      "fa\u016dko": "gueule, goulot, ouverture",
+      "la": "le, la, les",
       "e\u0109": "m\u00eame, et en plus",
-      "la": "le, la, les"
+      "fa\u016dko": "gueule, goulot, ouverture",
+      "pafilego": "canon",
+      "de": "de"
     }
   },
   {
     "teksto": "Kaj tiam, la ju\u011disto, dikakorpa",
     "vortaro": {
       "tiam": "\u00e0 ce moment l\u00e0, alors",
+      "la": "le, la, les",
       "kaj": "et",
-      "ju\u011disto": "juge",
-      "la": "le, la, les"
+      "ju\u011disto": "juge"
     }
   },
   {
     "teksto": "Pro multe da donacoj de kaponoj,",
     "vortaro": {
-      "de": "de",
       "donacoj": "cadeau, don, pr\u00e9sent",
       "pro": "\u00e0 cause de, pour",
-      "kaponoj": "chapon, castrat",
       "da": "de (apr\u00e8s une expression de quantit\u00e9)",
+      "kaponoj": "chapon, castrat",
+      "de": "de",
       "multe": "beaucoup"
     }
   },
   {
     "teksto": "Severokula, kun tondita barbo",
     "vortaro": {
-      "tondita": "couper, d\u00e9couper, tondre",
       "barbo": "barbe",
+      "tondita": "couper, d\u00e9couper, tondre",
       "kun": "avec"
     }
   },
   {
     "teksto": "La\u016d profesio lia, kaj dirante",
     "vortaro": {
-      "lia": "il, lui, le",
       "dirante": "dire",
-      "la\u016d": "selon, suivant ; le long de",
+      "lia": "il, lui, le",
+      "profesio": "profession",
       "kaj": "et",
-      "profesio": "profession"
+      "la\u016d": "selon, suivant ; le long de"
     }
   },
   {
     "teksto": "Sentencojn sa\u011doplenajn, kaj ekzemplojn",
     "vortaro": {
       "kaj": "et",
-      "ekzemplojn": "exemple",
-      "sentencojn": "sentence"
+      "sentencojn": "sentence",
+      "ekzemplojn": "exemple"
     }
   },
   {
     "teksto": "Modernajn. Tiel li la rolon ludas.",
     "vortaro": {
-      "rolon": "r\u00f4le",
+      "la": "le, la, les",
       "li": "il, lui, le",
-      "ludas": "jouer",
       "modernajn": "moderne",
+      "ludas": "jouer",
       "tiel": "ainsi, comme \u00e7a",
-      "la": "le, la, les"
+      "rolon": "r\u00f4le"
     }
   },
   {
     "teksto": "La sesa a\u011do transmovi\u011das tiam",
     "vortaro": {
-      "tiam": "\u00e0 ce moment l\u00e0, alors",
       "sesa": "sixi\u00e8me",
-      "a\u011do": "\u00e2ge",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "tiam": "\u00e0 ce moment l\u00e0, alors",
+      "a\u011do": "\u00e2ge"
     }
   },
   {
@@ -670,47 +670,47 @@
   {
     "teksto": "Portanta okulvitrojn, kun saketo",
     "vortaro": {
-      "portanta": "porter",
-      "kun": "avec"
+      "kun": "avec",
+      "portanta": "porter"
     }
   },
   {
     "teksto": "\u0108e l\u2019 flanko; liaj \u015dtrumpoj, konservitaj",
     "vortaro": {
-      "flanko": "c\u00f4t\u00e9",
-      "\u015dtrumpoj": "bas",
       "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
       "konservitaj": "conserver, sauver, garder, pr\u00e9server",
-      "liaj": "son, sa"
+      "\u015dtrumpoj": "bas",
+      "liaj": "son, sa",
+      "flanko": "c\u00f4t\u00e9"
     }
   },
   {
     "teksto": "Ankora\u016d de juneco, jam tro lar\u011daj",
     "vortaro": {
-      "jam": "d\u00e9j\u00e0",
-      "ankora\u016d": "encore",
-      "de": "de",
+      "lar\u011daj": "large",
       "juneco": "jeunesse",
+      "ankora\u016d": "encore",
       "tro": "trop",
-      "lar\u011daj": "large"
+      "jam": "d\u00e9j\u00e0",
+      "de": "de"
     }
   },
   {
     "teksto": "Por la malgrasaj kruroj. Lia vo\u0109o",
     "vortaro": {
+      "lia": "il, lui, le",
+      "por": "pour, dans le but de",
+      "la": "le, la, les",
       "malgrasaj": "maigre, pauvre",
       "kruroj": "jambe",
-      "lia": "il, lui, le",
-      "vo\u0109o": "voix",
-      "por": "pour, dans le but de",
-      "la": "le, la, les"
+      "vo\u0109o": "voix"
     }
   },
   {
     "teksto": "Ne plu vireca baso, san\u011di\u011dinte",
     "vortaro": {
-      "plu": "plus, plus longtemps, plus loin",
       "baso": "basse",
+      "plu": "plus, plus longtemps, plus loin",
       "ne": "non, ne... pas"
     }
   },
@@ -725,19 +725,19 @@
     "teksto": "Kaj fajfas en la son\u2019. La lasta sceno",
     "vortaro": {
       "lasta": "dernier",
+      "la": "le, la, les",
       "en": "dans",
-      "fajfas": "siffler",
-      "sceno": "sc\u00e8ne",
       "kaj": "et",
-      "la": "le, la, les"
+      "sceno": "sc\u00e8ne",
+      "fajfas": "siffler"
     }
   },
   {
     "teksto": "De l\u2019 stranga okazplena historio \u2014",
     "vortaro": {
+      "stranga": "bizarre",
       "historio": "histoire",
-      "de": "de",
-      "stranga": "bizarre"
+      "de": "de"
     }
   },
   {
@@ -750,10 +750,10 @@
     "teksto": "Sen dentoj, sen okuloj, gusto, \u0109io.",
     "vortaro": {
       "gusto": "go\u00fbt",
-      "\u0109io": "tout, toute chose",
-      "okuloj": "\u0153il",
+      "sen": "sans",
       "dentoj": "dent, crochet, encoche",
-      "sen": "sans"
+      "okuloj": "\u0153il",
+      "\u0109io": "tout, toute chose"
     }
   },
   {
@@ -763,13 +763,13 @@
   {
     "teksto": "William Shakespeare, el la angla: Ivy Kellerman (el Kiel Pla\u0109as al Vi)",
     "vortaro": {
-      "angla": "anglais",
       "pla\u0109as": "plaire, \u00eatre appr\u00e9ci\u00e9",
+      "la": "le, la, les",
       "kiel": "comment, comme",
-      "el": "hors de, de",
+      "angla": "anglais",
       "al": "\u00e0, vers",
       "vi": "tu, vous",
-      "la": "le, la, les"
+      "el": "hors de, de"
     }
   }
 ]

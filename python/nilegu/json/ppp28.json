@@ -2,30 +2,30 @@
   {
     "teksto": "LA AMO DE OTELO KAJ DESDEMONA",
     "vortaro": {
-      "de": "de",
+      "la": "le, la, les",
       "amo": "amour",
       "kaj": "et",
-      "la": "le, la, les"
+      "de": "de"
     }
   },
   {
     "teksto": "Sen la scio de la patro, Desdemona edzini\u011dis al la nigrulo Otelo. Eksciante pri tio, la patro, Brabancio, akuzas Otelon anta\u016d la Do\u011do. Jago estas la kornedo de Otelo.",
     "vortaro": {
-      "do\u011do": "doge",
       "edzini\u011dis": "\u00e9pouser, se marier",
-      "eksciante": "apprendre, s'apercevoir",
-      "sen": "sans",
-      "anta\u016d": "avant, en avant de, devant",
       "estas": "\u00eatre",
-      "al": "\u00e0, vers",
       "la": "le, la, les",
-      "patro": "p\u00e8re",
-      "scio": "\u00e0 mon insu, \u00e0 ce que je sais, connaissance, savoir",
+      "pri": "\u00e0 propos de",
+      "sen": "sans",
       "tio": "ce, cela, \u00e7a",
       "nigrulo": "noir, n\u00e8gre",
-      "de": "de",
-      "pri": "\u00e0 propos de",
-      "akuzas": "accuser"
+      "patro": "p\u00e8re",
+      "al": "\u00e0, vers",
+      "akuzas": "accuser",
+      "scio": "\u00e0 mon insu, \u00e0 ce que je sais, connaissance, savoir",
+      "eksciante": "apprendre, s'apercevoir",
+      "do\u011do": "doge",
+      "anta\u016d": "avant, en avant de, devant",
+      "de": "de"
     }
   },
   {
@@ -53,50 +53,50 @@
   {
     "teksto": "Kornedo, gvidu: vi la lokon scias.",
     "vortaro": {
-      "vi": "tu, vous",
-      "scias": "savoir",
-      "lokon": "endroit, lieu",
       "la": "le, la, les",
-      "gvidu": "guider, diriger"
+      "lokon": "endroit, lieu",
+      "vi": "tu, vous",
+      "gvidu": "guider, diriger",
+      "scias": "savoir"
     }
   },
   {
     "teksto": "Foriras JAGO kaj servistoj",
     "vortaro": {
+      "servistoj": "serviteur, domestique",
       "kaj": "et",
-      "foriras": "partir, renvoyer, cong\u00e9dier, faire partir, jeter dehors",
-      "servistoj": "serviteur, domestique"
+      "foriras": "partir, renvoyer, cong\u00e9dier, faire partir, jeter dehors"
     }
   },
   {
     "teksto": "Kaj dume, kiel pure mi konfesas",
     "vortaro": {
       "mi": "je",
-      "dume": "pour l'instant, cependant, entre temps, pendant ce temps, en revanche, pourtant, toutefois",
-      "konfesas": "inavouable, avouer, accorder, admettre, confesser, se confesser, convenir, d\u00e9clarer, professer, reconna\u00eetre",
       "kaj": "et",
-      "kiel": "comment, comme"
+      "konfesas": "inavouable, avouer, accorder, admettre, confesser, se confesser, convenir, d\u00e9clarer, professer, reconna\u00eetre",
+      "kiel": "comment, comme",
+      "dume": "pour l'instant, cependant, entre temps, pendant ce temps, en revanche, pourtant, toutefois"
     }
   },
   {
     "teksto": "al Dio la malvirtojn de la sango,",
     "vortaro": {
-      "de": "de",
-      "sango": "sang",
       "dio": "dieu",
-      "al": "\u00e0, vers",
+      "la": "le, la, les",
+      "sango": "sang",
       "malvirtojn": "l'oisivet\u00e9 est la m\u00e8re de tous les vices, vice",
-      "la": "le, la, les"
+      "al": "\u00e0, vers",
+      "de": "de"
     }
   },
   {
     "teksto": "do tiel vere al oreloj viaj",
     "vortaro": {
+      "do": "donc",
       "vere": "vraiment",
-      "viaj": "ton, votre",
       "al": "\u00e0, vers",
       "oreloj": "entrer par une oreille et sortir par l'autre, tendre l'oreille, ventre affam\u00e9 n'a pas d'oreille, oreille",
-      "do": "donc",
+      "viaj": "ton, votre",
       "tiel": "ainsi, comme \u00e7a"
     }
   },
@@ -104,26 +104,26 @@
     "teksto": "prezentos mi solene, kiel mi",
     "vortaro": {
       "mi": "je",
-      "prezentos": "pr\u00e9senter, introduire",
-      "kiel": "comment, comme"
+      "kiel": "comment, comme",
+      "prezentos": "pr\u00e9senter, introduire"
     }
   },
   {
     "teksto": "prosperis ame \u0109e la sinjorino,",
     "vortaro": {
-      "prosperis": "prosp\u00e9rer, r\u00e9ussir",
       "sinjorino": "dame, madame",
+      "la": "le, la, les",
       "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
-      "la": "le, la, les"
+      "prosperis": "prosp\u00e9rer, r\u00e9ussir"
     }
   },
   {
     "teksto": "kaj \u015di \u0109e mi.",
     "vortaro": {
-      "kaj": "et",
-      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
       "mi": "je",
-      "\u015di": "elle"
+      "\u015di": "elle",
+      "kaj": "et",
+      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de"
     }
   },
   {
@@ -156,87 +156,87 @@
     "vortaro": {
       "patro": "p\u00e8re",
       "min": "je",
-      "\u015dia": "elle",
-      "amis": "aimer"
+      "amis": "aimer",
+      "\u015dia": "elle"
     }
   },
   {
     "teksto": "demandis min pri mia historio",
     "vortaro": {
-      "historio": "histoire",
-      "min": "je",
-      "demandis": "interroger, demander",
+      "mia": "je",
       "pri": "\u00e0 propos de",
-      "mia": "je"
+      "min": "je",
+      "historio": "histoire",
+      "demandis": "interroger, demander"
     }
   },
   {
     "teksto": "la\u016djare: la bataloj, la sie\u011doj",
     "vortaro": {
-      "sie\u011doj": "si\u00e8ge",
       "bataloj": "bataille, combat",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "sie\u011doj": "si\u00e8ge"
     }
   },
   {
     "teksto": "kaj sorto\u015dan\u011doj, kiujn mi trapasis.",
     "vortaro": {
       "mi": "je",
-      "kiujn": "qui",
       "kaj": "et",
-      "trapasis": "traverser"
+      "trapasis": "traverser",
+      "kiujn": "qui"
     }
   },
   {
     "teksto": "Mi \u011din raportis, jam de l\u2019 infana\u011do",
     "vortaro": {
-      "jam": "d\u00e9j\u00e0",
-      "de": "de",
       "mi": "je",
+      "raportis": "rapporter, annoncer",
+      "jam": "d\u00e9j\u00e0",
       "\u011din": "il, elle",
       "infana\u011do": "enfance",
-      "raportis": "rapporter, annoncer"
+      "de": "de"
     }
   },
   {
     "teksto": "\u011dis la momento, kiam li \u011din petis.",
     "vortaro": {
+      "kiam": "quand",
+      "momento": "moment",
+      "la": "le, la, les",
       "petis": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
       "li": "il, lui, le",
       "\u011din": "il, elle",
-      "momento": "moment",
-      "\u011dis": "jusqu'\u00e0",
-      "kiam": "quand",
-      "la": "le, la, les"
+      "\u011dis": "jusqu'\u00e0"
     }
   },
   {
     "teksto": "Jen temis pri fatalaj akcidentoj,",
     "vortaro": {
-      "jen": "voici",
       "akcidentoj": "accident",
       "temis": "concerner, toucher, s'agir de, \u00eatre question de",
       "pri": "\u00e0 propos de",
-      "fatalaj": "fatal, fatidique, funeste"
+      "fatalaj": "fatal, fatidique, funeste",
+      "jen": "voici"
     }
   },
   {
     "teksto": "pri aventuroj sur la ter\u2019 kaj maro,",
     "vortaro": {
-      "aventuroj": "aventure",
-      "sur": "sur",
+      "la": "le, la, les",
+      "maro": "mer",
       "pri": "\u00e0 propos de",
       "kaj": "et",
-      "maro": "mer",
-      "la": "le, la, les"
+      "aventuroj": "aventure",
+      "sur": "sur"
     }
   },
   {
     "teksto": "savi\u011do el la tuj-mortiga bre\u0109o;",
     "vortaro": {
       "bre\u0109o": "br\u00e8che",
-      "la": "le, la, les",
-      "el": "hors de, de"
+      "el": "hors de, de",
+      "la": "le, la, les"
     }
   },
   {
@@ -244,135 +244,135 @@
     "vortaro": {
       "kaptis": "capturer",
       "min": "je",
-      "malamikoj": "ennemi",
       "kiel": "comment, comme",
-      "krudaj": "\u00e0 vif, brut, cru, \u00e9cru, grossier, rudimentaire, rustique"
+      "krudaj": "\u00e0 vif, brut, cru, \u00e9cru, grossier, rudimentaire, rustique",
+      "malamikoj": "ennemi"
     }
   },
   {
     "teksto": "kaj vendis en sklavecon; kiel oni",
     "vortaro": {
       "en": "dans",
-      "vendis": "vendre",
+      "kaj": "et",
+      "kiel": "comment, comme",
       "sklavecon": "esclavage",
       "oni": "on",
-      "kaj": "et",
-      "kiel": "comment, comme"
+      "vendis": "vendre"
     }
   },
   {
     "teksto": "absolvis min, kaj jen mi pluvoja\u011dis:",
     "vortaro": {
-      "min": "je",
       "mi": "je",
-      "jen": "voici",
+      "min": "je",
       "kaj": "et",
-      "absolvis": "absoudre"
+      "absolvis": "absoudre",
+      "jen": "voici"
     }
   },
   {
     "teksto": "tra kavernegoj kaj dezertaj vastoj,",
     "vortaro": {
+      "kaj": "et",
       "dezertaj": "d\u00e9sert, d\u00e9sertique",
-      "tra": "\u00e0 travers",
-      "kaj": "et"
+      "tra": "\u00e0 travers"
     }
   },
   {
     "teksto": "abismoj, krudaj rokoj kaj montegoj",
     "vortaro": {
-      "rokoj": "roc, rocher",
-      "abismoj": "ab\u00eeme, abysse, gouffre, pr\u00e9cipice, tr\u00e9fonds",
       "kaj": "et",
-      "krudaj": "\u00e0 vif, brut, cru, \u00e9cru, grossier, rudimentaire, rustique"
+      "abismoj": "ab\u00eeme, abysse, gouffre, pr\u00e9cipice, tr\u00e9fonds",
+      "krudaj": "\u00e0 vif, brut, cru, \u00e9cru, grossier, rudimentaire, rustique",
+      "rokoj": "roc, rocher"
     }
   },
   {
     "teksto": "tu\u015dantaj la \u0109ielon \u2014 jen pri kio",
     "vortaro": {
-      "jen": "voici",
-      "pri": "\u00e0 propos de",
-      "\u0109ielon": "ciel, cieux",
+      "la": "le, la, les",
       "kio": "quoi, que",
+      "pri": "\u00e0 propos de",
       "tu\u015dantaj": "toucher",
-      "la": "le, la, les"
+      "\u0109ielon": "ciel, cieux",
+      "jen": "voici"
     }
   },
   {
     "teksto": "li petis min rakonti. Kaj ankora\u016d",
     "vortaro": {
-      "ankora\u016d": "encore",
-      "min": "je",
+      "rakonti": "raconter",
       "petis": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
       "li": "il, lui, le",
       "kaj": "et",
-      "rakonti": "raconter"
+      "min": "je",
+      "ankora\u016d": "encore"
     }
   },
   {
     "teksto": "pri l\u2019 kanibaloj, la antropofagoj",
     "vortaro": {
+      "la": "le, la, les",
       "pri": "\u00e0 propos de",
-      "kanibaloj": "cannibale",
-      "la": "le, la, les"
+      "kanibaloj": "cannibale"
     }
   },
   {
     "teksto": "man\u011dantaj unu alian, kaj la homoj",
     "vortaro": {
       "man\u011dantaj": "manger",
-      "alian": "autre",
+      "la": "le, la, les",
       "kaj": "et",
       "homoj": "\u00eatre humain, homme",
-      "la": "le, la, les"
+      "alian": "autre"
     }
   },
   {
     "teksto": "kun kapo sub la \u015dultroj. Tion a\u016ddi",
     "vortaro": {
-      "tion": "ce, cela, \u00e7a",
-      "kapo": "t\u00eate",
-      "sub": "sous, en-dessous de",
-      "a\u016ddi": "entendre",
-      "\u015dultroj": "\u00e9paule",
       "kun": "avec",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "tion": "ce, cela, \u00e7a",
+      "sub": "sous, en-dessous de",
+      "kapo": "t\u00eate",
+      "\u015dultroj": "\u00e9paule",
+      "a\u016ddi": "entendre"
     }
   },
   {
     "teksto": "tre emis Desdemona, sed konstante",
     "vortaro": {
-      "sed": "mais",
+      "tre": "tr\u00e8s",
       "konstante": "constamment",
-      "emis": "incliner \u00e0",
-      "tre": "tr\u00e8s"
+      "sed": "mais",
+      "emis": "incliner \u00e0"
     }
   },
   {
     "teksto": "la taskoj de la domo \u015din fortiris.",
     "vortaro": {
-      "domo": "maison",
+      "la": "le, la, les",
       "de": "de",
-      "taskoj": "t\u00e2che, besogne, devoir (scolaire)",
       "\u015din": "elle",
-      "la": "le, la, les"
+      "taskoj": "t\u00e2che, besogne, devoir (scolaire)",
+      "domo": "maison"
     }
   },
   {
     "teksto": "Rapide plenuminte ilin, tuj",
     "vortaro": {
-      "ilin": "ils, elles, eux",
       "tuj": "imm\u00e9diatement, sur le champ",
+      "ilin": "ils, elles, eux",
       "plenuminte": "accomplir"
     }
   },
   {
     "teksto": "\u015di jam revenis kaj avid-orele",
     "vortaro": {
-      "jam": "d\u00e9j\u00e0",
-      "kaj": "et",
+      "revenis": "revenir",
       "\u015di": "elle",
-      "revenis": "revenir"
+      "kaj": "et",
+      "jam": "d\u00e9j\u00e0"
     }
   },
   {
@@ -381,81 +381,81 @@
       "mi": "je",
       "sorbis": "absorber",
       "mian": "mon, ma",
+      "\u015di": "elle",
       "temon": "sujet, th\u00e8me",
-      "rimarkis": "remarquer, noter",
-      "\u015di": "elle"
+      "rimarkis": "remarquer, noter"
     }
   },
   {
     "teksto": "kaj balda\u016d mi en horo a\u016dspicia",
     "vortaro": {
+      "horo": "heure",
       "mi": "je",
-      "balda\u016d": "bient\u00f4t",
-      "a\u016dspicia": "auspicieux, faste, favorable",
       "en": "dans",
       "kaj": "et",
-      "horo": "heure"
+      "a\u016dspicia": "auspicieux, faste, favorable",
+      "balda\u016d": "bient\u00f4t"
     }
   },
   {
     "teksto": "parolis tiel trafe, ke \u011di tiris",
     "vortaro": {
-      "tiris": "tirer",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
       "parolis": "parler",
-      "tiel": "ainsi, comme \u00e7a",
-      "\u011di": "il, elle"
+      "tiris": "tirer",
+      "\u011di": "il, elle",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "tiel": "ainsi, comme \u00e7a"
     }
   },
   {
     "teksto": "de \u015di fervoran peton, ke mi volu",
     "vortaro": {
-      "de": "de",
       "mi": "je",
       "volu": "vouloir",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
       "peton": "demande",
-      "fervoran": "ardent, fervent, passionn\u00e9",
-      "\u015di": "elle"
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "\u015di": "elle",
+      "de": "de",
+      "fervoran": "ardent, fervent, passionn\u00e9"
     }
   },
   {
     "teksto": "rakonti mian tutan pilgrimadon,",
     "vortaro": {
-      "mian": "mon, ma",
       "tutan": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
-      "rakonti": "raconter"
+      "rakonti": "raconter",
+      "mian": "mon, ma"
     }
   },
   {
     "teksto": "kiun fragmente \u015di ja iom a\u016ddis,",
     "vortaro": {
+      "ja": "certes, effectivement, il est vrai que, en fait, bien",
+      "a\u016ddis": "entendre",
       "iom": "un peu",
       "kiun": "qui",
-      "ja": "certes, effectivement, il est vrai que, en fait, bien",
-      "\u015di": "elle",
-      "a\u016ddis": "entendre"
+      "\u015di": "elle"
     }
   },
   {
     "teksto": "sed ne en plena sekvo. Mi konsentis;",
     "vortaro": {
+      "mi": "je",
+      "plena": "plein(e)",
+      "en": "dans",
       "sed": "mais",
       "konsentis": "consentir, \u00eatre en accord",
-      "mi": "je",
-      "sekvo": "riche de cons\u00e9quences, cons\u00e9quence, r\u00e9percussion, suite",
-      "en": "dans",
-      "plena": "plein(e)",
-      "ne": "non, ne... pas"
+      "ne": "non, ne... pas",
+      "sekvo": "riche de cons\u00e9quences, cons\u00e9quence, r\u00e9percussion, suite"
     }
   },
   {
     "teksto": "kaj ofte \u015diajn larmojn mi ellogis,",
     "vortaro": {
-      "larmojn": "larme",
       "mi": "je",
-      "ofte": "souvent, fr\u00e9quemment",
+      "larmojn": "larme",
       "kaj": "et",
+      "ofte": "souvent, fr\u00e9quemment",
       "\u015diajn": "sa, son"
     }
   },
@@ -463,32 +463,32 @@
     "teksto": "se mi parolis pri dolora bato",
     "vortaro": {
       "mi": "je",
-      "dolora": "douloureux",
+      "parolis": "parler",
       "se": "si (indique une condition)",
-      "pri": "\u00e0 propos de",
       "bato": "battement, coup",
-      "parolis": "parler"
+      "pri": "\u00e0 propos de",
+      "dolora": "douloureux"
     }
   },
   {
     "teksto": "trafinta min juna\u011de. Je la fino",
     "vortaro": {
-      "je": "pr\u00e9position ind\u00e9finie",
-      "min": "je",
+      "la": "le, la, les",
       "trafinta": "atteindre, rencontrer, toucher",
-      "fino": "habiter au diable vauvert, le meilleur est pour la fin, extr\u00e9mit\u00e9, fin, ach\u00e8vement, arr\u00eat",
-      "la": "le, la, les"
+      "min": "je",
+      "je": "pr\u00e9position ind\u00e9finie",
+      "fino": "habiter au diable vauvert, le meilleur est pour la fin, extr\u00e9mit\u00e9, fin, ach\u00e8vement, arr\u00eat"
     }
   },
   {
     "teksto": "\u015di pagis min per mondo da suspiroj.",
     "vortaro": {
-      "min": "je",
       "pagis": "payer",
+      "min": "je",
+      "\u015di": "elle",
       "da": "de (apr\u00e8s une expression de quantit\u00e9)",
       "mondo": "monde",
-      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)",
-      "\u015di": "elle"
+      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)"
     }
   },
   {
@@ -496,108 +496,108 @@
     "vortaro": {
       "diris": "dire",
       "stranga": "bizarre",
+      "kiel": "comment, comme",
       "tio": "ce, cela, \u00e7a",
-      "estis": "\u00eatre",
       "\u015di": "elle",
-      "kiel": "comment, comme"
+      "estis": "\u00eatre"
     }
   },
   {
     "teksto": "tre stranga; kaj kortu\u015da, plej kortu\u015da.",
     "vortaro": {
+      "tre": "tr\u00e8s",
+      "plej": "le plus, la plus",
       "stranga": "bizarre",
       "kortu\u015da": "\u00e9mouvant, touchant",
-      "tre": "tr\u00e8s",
-      "kaj": "et",
-      "plej": "le plus, la plus"
+      "kaj": "et"
     }
   },
   {
     "teksto": "\u015ci e\u0109 beda\u016dris, ke \u015di tion a\u016ddis,",
     "vortaro": {
+      "a\u016ddis": "entendre",
       "tion": "ce, cela, \u00e7a",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "beda\u016dris": "regretter",
-      "\u015di": "elle",
       "e\u0109": "m\u00eame, et en plus",
-      "a\u016ddis": "entendre"
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "\u015di": "elle",
+      "beda\u016dris": "regretter"
     }
   },
   {
     "teksto": "kaj tamen revis: ho, se nur \u015di",
     "vortaro": {
-      "nur": "seulement",
-      "revis": "r\u00eaver de",
-      "se": "si (indique une condition)",
-      "ho": "Henry, hydrog\u00e8ne, H, heure",
       "tamen": "n\u00e9anmoins, toutefois, quand m\u00eame, cependant",
+      "se": "si (indique une condition)",
       "kaj": "et",
-      "\u015di": "elle"
+      "nur": "seulement",
+      "\u015di": "elle",
+      "ho": "Henry, hydrog\u00e8ne, H, heure",
+      "revis": "r\u00eaver de"
     }
   },
   {
     "teksto": "mem estus povinta i\u011di tia viro!",
     "vortaro": {
+      "mem": "soi-m\u00eame",
       "povinta": "pouvoir, \u00eatre capable de",
       "viro": "homme, m\u00e2le",
-      "i\u011di": "devenir",
       "tia": "tel(le), telle sorte de",
-      "mem": "soi-m\u00eame",
+      "i\u011di": "devenir",
       "estus": "\u00eatre"
     }
   },
   {
     "teksto": "\u015ci dankis min, kaj diris, se mi havas",
     "vortaro": {
-      "min": "je",
       "mi": "je",
       "diris": "dire",
       "se": "si (indique une condition)",
-      "dankis": "remercier",
+      "min": "je",
       "kaj": "et",
       "havas": "avoir",
+      "dankis": "remercier",
       "\u015di": "elle"
     }
   },
   {
     "teksto": "amikon, kiu amas \u015din, mi nur",
     "vortaro": {
-      "nur": "seulement",
       "mi": "je",
+      "amikon": "ami",
       "kiu": "qui",
-      "amas": "aimer",
+      "nur": "seulement",
       "\u015din": "elle",
-      "amikon": "ami"
+      "amas": "aimer"
     }
   },
   {
     "teksto": "instruu lin rakonti mian temon,",
     "vortaro": {
-      "lin": "il, lui, le",
       "mian": "mon, ma",
-      "temon": "sujet, th\u00e8me",
+      "rakonti": "raconter",
+      "lin": "il, lui, le",
       "instruu": "enseigner",
-      "rakonti": "raconter"
+      "temon": "sujet, th\u00e8me"
     }
   },
   {
     "teksto": "kaj tio svatus \u015din. \u0108e tiu varmo",
     "vortaro": {
-      "varmo": "chaleur",
       "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
+      "kaj": "et",
       "tio": "ce, cela, \u00e7a",
-      "svatus": "*s\u2019entremettre, *rechercher en mariage, demander en mariage",
-      "tiu": "ce, cet(te)",
+      "varmo": "chaleur",
       "\u015din": "elle",
-      "kaj": "et"
+      "svatus": "*s\u2019entremettre, *rechercher en mariage, demander en mariage",
+      "tiu": "ce, cet(te)"
     }
   },
   {
     "teksto": "mi ekparolis. Vere, \u015di min amis",
     "vortaro": {
-      "min": "je",
       "mi": "je",
       "vere": "vraiment",
+      "min": "je",
       "amis": "aimer",
       "\u015di": "elle"
     }
@@ -606,30 +606,30 @@
     "teksto": "pro la dan\u011deroj, kiujn mi travivis:",
     "vortaro": {
       "mi": "je",
-      "pro": "\u00e0 cause de, pour",
-      "kiujn": "qui",
+      "la": "le, la, les",
       "travivis": "faire l'exp\u00e9rience de, vivre",
+      "pro": "\u00e0 cause de, pour",
       "dan\u011deroj": "danger",
-      "la": "le, la, les"
+      "kiujn": "qui"
     }
   },
   {
     "teksto": "mi amis \u015din, \u0109ar \u015di kompatis ilin.",
     "vortaro": {
       "mi": "je",
-      "kompatis": "avoir piti\u00e9, compatir",
       "ilin": "ils, elles, eux",
       "amis": "aimer",
+      "kompatis": "avoir piti\u00e9, compatir",
+      "\u015di": "elle",
       "\u015din": "elle",
-      "\u0109ar": "parce que",
-      "\u015di": "elle"
+      "\u0109ar": "parce que"
     }
   },
   {
     "teksto": "Nur tia estis mia sor\u0109influo.",
     "vortaro": {
-      "nur": "seulement",
       "mia": "je",
+      "nur": "seulement",
       "tia": "tel(le), telle sorte de",
       "estis": "\u00eatre"
     }
@@ -637,11 +637,11 @@
   {
     "teksto": "La sinjorino venas: \u015di atestu.",
     "vortaro": {
-      "atestu": "attester, certifier, t\u00e9moigner",
       "sinjorino": "dame, madame",
+      "la": "le, la, les",
       "venas": "venir",
-      "\u015di": "elle",
-      "la": "le, la, les"
+      "atestu": "attester, certifier, t\u00e9moigner",
+      "\u015di": "elle"
     }
   },
   {
@@ -651,9 +651,9 @@
   {
     "teksto": "Venas DESDEMONA, JAGO kaj servistoj",
     "vortaro": {
+      "servistoj": "serviteur, domestique",
       "venas": "venir",
-      "kaj": "et",
-      "servistoj": "serviteur, domestique"
+      "kaj": "et"
     }
   },
   {
@@ -669,19 +669,19 @@
   {
     "teksto": "Tia rakonto, vere, gajnus e\u0109",
     "vortaro": {
-      "rakonto": "conte, r\u00e9cit",
+      "e\u0109": "m\u00eame, et en plus",
       "vere": "vraiment",
-      "gajnus": "gagner, conqu\u00e9rir, l'emporter",
       "tia": "tel(le), telle sorte de",
-      "e\u0109": "m\u00eame, et en plus"
+      "gajnus": "gagner, conqu\u00e9rir, l'emporter",
+      "rakonto": "conte, r\u00e9cit"
     }
   },
   {
     "teksto": "mian filinon! Bona Brabancio,",
     "vortaro": {
-      "filinon": "fille",
       "mian": "mon, ma",
-      "bona": "bon,  bonne"
+      "bona": "bon,  bonne",
+      "filinon": "fille"
     }
   },
   {
@@ -694,18 +694,18 @@
   {
     "teksto": "Prefere ja rompitan glavon uzi,",
     "vortaro": {
-      "rompitan": "rompre, briser, casser",
+      "ja": "certes, effectivement, il est vrai que, en fait, bien",
       "uzi": "utiliser",
-      "glavon": "\u00e9p\u00e9e",
-      "ja": "certes, effectivement, il est vrai que, en fait, bien"
+      "rompitan": "rompre, briser, casser",
+      "glavon": "\u00e9p\u00e9e"
     }
   },
   {
     "teksto": "ol siajn nudajn manojn.",
     "vortaro": {
       "manojn": "main",
-      "nudajn": "nu",
       "siajn": "son, sa, ses",
+      "nudajn": "nu",
       "ol": "que (dans une comparaison)"
     }
   },
@@ -720,66 +720,66 @@
   {
     "teksto": "Mi petegas,",
     "vortaro": {
-      "mi": "je",
-      "petegas": "supplier"
+      "petegas": "supplier",
+      "mi": "je"
     }
   },
   {
     "teksto": "a\u016dskultu anka\u016d \u015din. Se \u015di konfesos,",
     "vortaro": {
       "a\u016dskultu": "\u00e9couter",
-      "konfesos": "inavouable, avouer, accorder, admettre, confesser, se confesser, convenir, d\u00e9clarer, professer, reconna\u00eetre",
       "se": "si (indique une condition)",
-      "\u015din": "elle",
+      "anka\u016d": "aussi",
+      "konfesos": "inavouable, avouer, accorder, admettre, confesser, se confesser, convenir, d\u00e9clarer, professer, reconna\u00eetre",
       "\u015di": "elle",
-      "anka\u016d": "aussi"
+      "\u015din": "elle"
     }
   },
   {
     "teksto": "ke \u015di la amindumon partoprenis,",
     "vortaro": {
+      "la": "le, la, les",
       "amindumon": "drague, flirt",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "\u015di": "elle",
-      "la": "le, la, les"
+      "\u015di": "elle"
     }
   },
   {
     "teksto": "pereu mi, se mia miskulpigo",
     "vortaro": {
       "mi": "je",
+      "mia": "je",
       "pereu": "se perdre, p\u00e9rir, succomber",
-      "se": "si (indique une condition)",
-      "mia": "je"
+      "se": "si (indique une condition)"
     }
   },
   {
     "teksto": "trafus la viron! \u2014 Venu, bona mia.",
     "vortaro": {
+      "mia": "je",
+      "la": "le, la, les",
       "viron": "homme, m\u00e2le",
       "bona": "bon,  bonne",
       "trafus": "atteindre, rencontrer, toucher",
-      "mia": "je",
-      "venu": "venir",
-      "la": "le, la, les"
+      "venu": "venir"
     }
   },
   {
     "teksto": "En jena nobla societo, kie",
     "vortaro": {
-      "societo": "association, soci\u00e9t\u00e9",
-      "nobla": "\u00e9lev\u00e9, noble, ignoble, vil",
-      "en": "dans",
+      "jena": "celui-ci, celui-l\u00e0, ci-apr\u00e8s, le suivant",
       "kie": "o\u00f9",
-      "jena": "celui-ci, celui-l\u00e0, ci-apr\u00e8s, le suivant"
+      "en": "dans",
+      "nobla": "\u00e9lev\u00e9, noble, ignoble, vil",
+      "societo": "association, soci\u00e9t\u00e9"
     }
   },
   {
     "teksto": "plej \u015duldas vi obeon?",
     "vortaro": {
-      "vi": "tu, vous",
       "\u015duldas": "devoir",
-      "plej": "le plus, la plus"
+      "plej": "le plus, la plus",
+      "vi": "tu, vous"
     }
   },
   {
@@ -800,107 +800,107 @@
   {
     "teksto": "\u0109i tie mia devo disdui\u011das.",
     "vortaro": {
+      "mia": "je",
       "devo": "devoir",
-      "tie": "ici, l\u00e0",
       "\u0109i": "(indique la proximit\u00e9)",
-      "mia": "je"
+      "tie": "ici, l\u00e0"
     }
   },
   {
     "teksto": "Al vi mi estas \u015dulda pro la vivo",
     "vortaro": {
       "mi": "je",
-      "pro": "\u00e0 cause de, pour",
-      "vivo": "vie",
       "estas": "\u00eatre",
+      "la": "le, la, les",
       "al": "\u00e0, vers",
+      "pro": "\u00e0 cause de, pour",
       "vi": "tu, vous",
-      "la": "le, la, les"
+      "vivo": "vie"
     }
   },
   {
     "teksto": "kaj edukado: vivo kaj eduko",
     "vortaro": {
-      "kaj": "et",
+      "edukado": "\u00e9ducation",
       "vivo": "vie",
-      "eduko": "\u00e9ducation",
-      "edukado": "\u00e9ducation"
+      "kaj": "et",
+      "eduko": "\u00e9ducation"
     }
   },
   {
     "teksto": "instruas min respekti vin; vi estas",
     "vortaro": {
       "respekti": "respecter",
-      "min": "je",
-      "vin": "tu, vous",
       "estas": "\u00eatre",
       "instruas": "enseigner",
-      "vi": "tu, vous"
+      "min": "je",
+      "vi": "tu, vous",
+      "vin": "tu, vous"
     }
   },
   {
     "teksto": "mastro de mia devo \u2014 mi, \u011dis nun,",
     "vortaro": {
-      "de": "de",
-      "devo": "devoir",
       "mi": "je",
-      "nun": "maintenant",
-      "\u011dis": "jusqu'\u00e0",
       "mia": "je",
-      "mastro": "ma\u00eetre"
+      "mastro": "ma\u00eetre",
+      "\u011dis": "jusqu'\u00e0",
+      "de": "de",
+      "nun": "maintenant",
+      "devo": "devoir"
     }
   },
   {
     "teksto": "estas filino via. Sed jen mia edzo;",
     "vortaro": {
+      "estas": "\u00eatre",
+      "mia": "je",
+      "filino": "fille",
       "sed": "mais",
       "via": "tu, vous",
       "jen": "voici",
-      "edzo": "\u00e9poux, mari",
-      "estas": "\u00eatre",
-      "filino": "fille",
-      "mia": "je"
+      "edzo": "\u00e9poux, mari"
     }
   },
   {
     "teksto": "kaj tian devon, kian manifestis",
     "vortaro": {
-      "kian": "quel, quelle sorte de",
       "devon": "devoir",
+      "tian": "\u00e0 ce moment l\u00e0, alors",
       "kaj": "et",
-      "tian": "\u00e0 ce moment l\u00e0, alors"
+      "kian": "quel, quelle sorte de"
     }
   },
   {
     "teksto": "mia patrino, preferinte vin",
     "vortaro": {
+      "preferinte": "pr\u00e9f\u00e9rer",
       "patrino": "m\u00e8re",
-      "vin": "tu, vous",
       "mia": "je",
-      "preferinte": "pr\u00e9f\u00e9rer"
+      "vin": "tu, vous"
     }
   },
   {
     "teksto": "al sia patro \u2014 tion, mi pretendas,",
     "vortaro": {
-      "sia": "se, s', soi",
-      "patro": "p\u00e8re",
       "mi": "je",
+      "patro": "p\u00e8re",
       "tion": "ce, cela, \u00e7a",
-      "al": "\u00e0, vers",
-      "pretendas": "pr\u00e9tendre"
+      "sia": "se, s', soi",
+      "pretendas": "pr\u00e9tendre",
+      "al": "\u00e0, vers"
     }
   },
   {
     "teksto": "mi rajtu montri nun al mia edzo,",
     "vortaro": {
-      "nun": "maintenant",
       "mi": "je",
-      "edzo": "\u00e9poux, mari",
-      "montri": "montrer, d\u00e9signer",
-      "al": "\u00e0, vers",
+      "mia": "je",
       "rajtu": "avoir le droit de",
-      "mia": "je"
+      "al": "\u00e0, vers",
+      "montri": "montrer, d\u00e9signer",
+      "nun": "maintenant",
+      "edzo": "\u00e9poux, mari"
     }
   },
   {
@@ -921,10 +921,10 @@
   {
     "teksto": "Dio gardu vin! Mi finis.",
     "vortaro": {
-      "vin": "tu, vous",
       "mi": "je",
-      "dio": "dieu",
       "gardu": "garder",
+      "dio": "dieu",
+      "vin": "tu, vous",
       "finis": "finir"
     }
   },
@@ -932,20 +932,20 @@
     "teksto": "Mi petas, mo\u015dto, al la \u015dtataferoj!",
     "vortaro": {
       "mi": "je",
-      "mo\u015dto": "Majest\u00e9, Excellence, Altesse",
+      "la": "le, la, les",
       "al": "\u00e0, vers",
       "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
-      "la": "le, la, les"
+      "mo\u015dto": "Majest\u00e9, Excellence, Altesse"
     }
   },
   {
     "teksto": "Preferus mi adopti, ol generi",
     "vortaro": {
       "mi": "je",
+      "generi": "engendrer, g\u00e9n\u00e9rer, sous-tendre",
       "preferus": "pr\u00e9f\u00e9rer",
       "adopti": "adopter, choisir, \u00e9lire, se rallier, se ranger, prendre",
-      "ol": "que (dans une comparaison)",
-      "generi": "engendrer, g\u00e9n\u00e9rer, sous-tendre"
+      "ol": "que (dans une comparaison)"
     }
   },
   {
@@ -969,37 +969,37 @@
   {
     "teksto": "Mi donas al vi nun, el tuta koro",
     "vortaro": {
-      "donas": "donner",
-      "nun": "maintenant",
       "mi": "je",
-      "el": "hors de, de",
+      "donas": "donner",
+      "koro": "c\u0153ur",
+      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
       "al": "\u00e0, vers",
       "vi": "tu, vous",
-      "koro": "c\u0153ur",
-      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)"
+      "nun": "maintenant",
+      "el": "hors de, de"
     }
   },
   {
     "teksto": "(\u0109ar vi jam havas \u011din), kion alie",
     "vortaro": {
-      "jam": "d\u00e9j\u00e0",
+      "havas": "avoir",
       "alie": "autrement, sinon",
+      "jam": "d\u00e9j\u00e0",
       "\u011din": "il, elle",
       "vi": "tu, vous",
-      "\u0109ar": "parce que",
-      "havas": "avoir",
-      "kion": "quoi, que"
+      "kion": "quoi, que",
+      "\u0109ar": "parce que"
     }
   },
   {
     "teksto": "per tuta koro kontra\u016d vi mi gardus.",
     "vortaro": {
       "mi": "je",
-      "gardus": "garder",
-      "kontra\u016d": "contre",
-      "vi": "tu, vous",
       "koro": "c\u0153ur",
       "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
+      "gardus": "garder",
+      "vi": "tu, vous",
+      "kontra\u016d": "contre",
       "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)"
     }
   },
@@ -1008,42 +1008,42 @@
     "vortaro": {
       "mi": "je",
       "pro": "\u00e0 cause de, pour",
+      "vi": "tu, vous",
       "trezoro": "tr\u00e9sor",
-      "\u011dojas": "se r\u00e9jouir",
-      "vi": "tu, vous"
+      "\u011dojas": "se r\u00e9jouir"
     }
   },
   {
     "teksto": "ke mi infanon plian ne posedas,",
     "vortaro": {
       "mi": "je",
+      "posedas": "poss\u00e9der",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
       "plian": "additionnel, de plus, suppl\u00e9mentaire",
       "infanon": "enfant",
-      "posedas": "poss\u00e9der",
       "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "\u0109ar via fu\u011do farus min tirana",
     "vortaro": {
-      "via": "tu, vous",
-      "min": "je",
       "tirana": "tyrannique",
+      "min": "je",
       "fu\u011do": "fuite",
       "farus": "faire",
-      "\u0109ar": "parce que"
+      "\u0109ar": "parce que",
+      "via": "tu, vous"
     }
   },
   {
     "teksto": "por \u011din kateni. Mi jam finis, mo\u015dto.",
     "vortaro": {
-      "jam": "d\u00e9j\u00e0",
       "mi": "je",
-      "mo\u015dto": "Majest\u00e9, Excellence, Altesse",
+      "por": "pour, dans le but de",
+      "jam": "d\u00e9j\u00e0",
       "\u011din": "il, elle",
       "kateni": "encha\u00eener, entraver",
-      "por": "pour, dans le but de",
+      "mo\u015dto": "Majest\u00e9, Excellence, Altesse",
       "finis": "finir"
     }
   },
@@ -1060,10 +1060,10 @@
   {
     "teksto": "Permesu ke, per sa\u011do de sentencoj,",
     "vortaro": {
-      "permesu": "permettre",
-      "de": "de",
       "sa\u011do": "sagesse",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "de": "de",
+      "permesu": "permettre",
       "sentencoj": "sentence",
       "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)"
     }
@@ -1072,12 +1072,12 @@
     "teksto": "mi helpu, ke vi prenu en favoron",
     "vortaro": {
       "mi": "je",
-      "favoron": "d\u00e9faveur, disgr\u00e2ce, bienfait, bienveillance, faveur",
-      "prenu": "prendre",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
       "en": "dans",
       "vi": "tu, vous",
-      "helpu": "aider"
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "favoron": "d\u00e9faveur, disgr\u00e2ce, bienfait, bienveillance, faveur",
+      "helpu": "aider",
+      "prenu": "prendre"
     }
   },
   {
@@ -1091,12 +1091,12 @@
   {
     "teksto": "Se jam ne eblas la aferon \u015dan\u011di,",
     "vortaro": {
-      "jam": "d\u00e9j\u00e0",
-      "aferon": "affaire, sujet, chose",
+      "la": "le, la, les",
       "se": "si (indique une condition)",
+      "aferon": "affaire, sujet, chose",
       "\u015dan\u011di": "changer (quelque chose)",
-      "ne": "non, ne... pas",
-      "la": "le, la, les"
+      "jam": "d\u00e9j\u00e0",
+      "ne": "non, ne... pas"
     }
   },
   {
@@ -1116,47 +1116,47 @@
   {
     "teksto": "altiras nur mizeron senprofite.",
     "vortaro": {
-      "nur": "seulement",
+      "mizeron": "paup\u00e9risme, mis\u00e8re",
       "altiras": "attirer",
-      "mizeron": "paup\u00e9risme, mis\u00e8re"
+      "nur": "seulement"
     }
   },
   {
     "teksto": "Kontra\u016d la nepra bato de l\u2018 Fortuno,",
     "vortaro": {
+      "la": "le, la, les",
+      "fortuno": "fortune, chance",
+      "bato": "battement, coup",
       "de": "de",
       "nepra": "in\u00e9vitable, imp\u00e9ratif, n\u00e9cessaire, obligatoire",
-      "bato": "battement, coup",
-      "fortuno": "fortune, chance",
-      "kontra\u016d": "contre",
-      "la": "le, la, les"
+      "kontra\u016d": "contre"
     }
   },
   {
     "teksto": "la pacienc\u2019 nin armas per imuno.",
     "vortaro": {
-      "armas": "armer",
-      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)",
       "la": "le, la, les",
-      "nin": "nous"
+      "armas": "armer",
+      "nin": "nous",
+      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)"
     }
   },
   {
     "teksto": "Kiu la perdon ridas, \u011din elstrekas:",
     "vortaro": {
-      "ridas": "rire",
-      "\u011din": "il, elle",
+      "la": "le, la, les",
       "kiu": "qui",
-      "la": "le, la, les"
+      "ridas": "rire",
+      "\u011din": "il, elle"
     }
   },
   {
     "teksto": "kiu \u011din ploras, da\u016dre \u011din revekas.",
     "vortaro": {
-      "ploras": "pleurer",
-      "\u011din": "il, elle",
       "kiu": "qui",
-      "da\u016dre": "continuellement, durablement"
+      "da\u016dre": "continuellement, durablement",
+      "ploras": "pleurer",
+      "\u011din": "il, elle"
     }
   },
   {
@@ -1170,20 +1170,20 @@
   {
     "teksto": "Do sekve, se la turkoj Cipron prenos,",
     "vortaro": {
-      "prenos": "prendre",
+      "do": "donc",
       "sekve": "par cons\u00e9quent, donc",
+      "la": "le, la, les",
       "se": "si (indique une condition)",
       "turkoj": "Turc",
-      "do": "donc",
-      "la": "le, la, les"
+      "prenos": "prendre"
     }
   },
   {
     "teksto": "ni \u011din ne perdos, se ni ridmienos!",
     "vortaro": {
-      "perdos": "perdre",
-      "\u011din": "il, elle",
       "se": "si (indique une condition)",
+      "\u011din": "il, elle",
+      "perdos": "perdre",
       "ni": "nous",
       "ne": "non, ne... pas"
     }
@@ -1191,99 +1191,99 @@
   {
     "teksto": "Tre bele la sentenco ja sonoras",
     "vortaro": {
-      "sonoras": "r\u00e9sonner, sonner, tinter",
       "ja": "certes, effectivement, il est vrai que, en fait, bien",
-      "sentenco": "sentence",
+      "tre": "tr\u00e8s",
       "la": "le, la, les",
-      "tre": "tr\u00e8s"
+      "sonoras": "r\u00e9sonner, sonner, tinter",
+      "sentenco": "sentence"
     }
   },
   {
     "teksto": "por tiu, kies koron \u011di ne boras.",
     "vortaro": {
-      "koron": "c\u0153ur",
       "por": "pour, dans le but de",
+      "koron": "c\u0153ur",
       "boras": "forer, percer",
-      "tiu": "ce, cet(te)",
-      "ne": "non, ne... pas",
+      "\u011di": "il, elle",
       "kies": "de qui, \u00e0 qui, dont, duquel",
-      "\u011di": "il, elle"
+      "tiu": "ce, cet(te)",
+      "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "Sed ve, se la aflikto devas \u0109erpi",
     "vortaro": {
-      "sed": "mais",
-      "\u0109erpi": "puiser",
-      "se": "si (indique une condition)",
+      "la": "le, la, les",
       "ve": "malheur, a\u00efe, h\u00e9las",
+      "se": "si (indique une condition)",
       "devas": "devoir",
+      "\u0109erpi": "puiser",
       "aflikto": "affliction, accablement, chagrin, peine, tristesse",
-      "la": "le, la, les"
+      "sed": "mais"
     }
   },
   {
     "teksto": "de l\u2019 povra pacienco por sin helpi!",
     "vortaro": {
-      "de": "de",
-      "pacienco": "patience",
-      "helpi": "aider",
+      "povra": "pauvre",
       "por": "pour, dans le but de",
+      "helpi": "aider",
       "sin": "se, s', soi",
-      "povra": "pauvre"
+      "de": "de",
+      "pacienco": "patience"
     }
   },
   {
     "teksto": "Tiaj sentencoj, el suker\u2019 kaj galo,",
     "vortaro": {
-      "galo": "bile, fiel",
-      "el": "hors de, de",
-      "tiaj": "tel(le), telle sorte de",
       "kaj": "et",
-      "sentencoj": "sentence"
+      "galo": "bile, fiel",
+      "tiaj": "tel(le), telle sorte de",
+      "sentencoj": "sentence",
+      "el": "hors de, de"
     }
   },
   {
     "teksto": "valoras por la senco kaj la malo.",
     "vortaro": {
-      "valoras": "valoir, avoir une (certaine) valeur",
-      "senco": "sens",
       "por": "pour, dans le but de",
-      "kaj": "et",
+      "malo": "contraire",
       "la": "le, la, les",
-      "malo": "contraire"
+      "senco": "sens",
+      "kaj": "et",
+      "valoras": "valoir, avoir une (certaine) valeur"
     }
   },
   {
     "teksto": "Ha, kial vorti? \u2014 La vundita koro",
     "vortaro": {
-      "vundita": "blesser",
-      "vorti": "causer",
-      "ha": "ah, ha",
-      "kial": "pourquoi",
       "koro": "c\u0153ur",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "vorti": "causer",
+      "vundita": "blesser",
+      "ha": "ah, ha",
+      "kial": "pourquoi"
     }
   },
   {
     "teksto": "per vortoj ne sani\u011dos de l\u2019 doloro.",
     "vortaro": {
-      "de": "de",
-      "vortoj": "mot",
-      "ne": "non, ne... pas",
       "doloro": "douleur",
+      "vortoj": "mot",
+      "de": "de",
+      "ne": "non, ne... pas",
       "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)"
     }
   },
   {
     "teksto": "Mi humile petas vin, transiru al la",
     "vortaro": {
-      "vin": "tu, vous",
       "mi": "je",
+      "la": "le, la, les",
       "transiru": "passer, franchir, d\u00e9passer, changer de main",
       "al": "\u00e0, vers",
       "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
-      "la": "le, la, les"
+      "vin": "tu, vous"
     }
   },
   {
@@ -1301,13 +1301,13 @@
   {
     "teksto": "William Shakespeare, el la angla: Reto Rossetti (el: Otelo, la Ma\u016dro de Venecio)",
     "vortaro": {
-      "angla": "anglais",
+      "la": "le, la, les",
       "de": "de",
-      "reto": "filet, r\u00e9seau, R\u00e9ticule",
       "venecio": "Venise",
+      "angla": "anglais",
       "ma\u016dro": "Maure",
-      "el": "hors de, de",
-      "la": "le, la, les"
+      "reto": "filet, r\u00e9seau, R\u00e9ticule",
+      "el": "hors de, de"
     }
   }
 ]

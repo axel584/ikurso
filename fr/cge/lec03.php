@@ -395,7 +395,7 @@ include "dlekkapo.inc.php";
 
 		<h3>De nouveaux corrélatifs</h3>
 		<p>
-			Dans leçon précédente, nous vous avions présenté le début du tableau des corrélatifs, dans lequel nous avions rangé quelques corrélatifs commençant par KI- (interrogatifs) et en NENI- (négatifs). Nous pouvons le compléter avec <span class="eo">kiom</span>, le corrélatif interrogatif de quantité, et ainsi ajouter la colonne des corrélatifs terminés par <span class="eo"><b>-om</b></span>&nbsp;:
+			Dans la leçon précédente, nous vous avions présenté le début du tableau des corrélatifs, dans lequel nous avions rangé quelques corrélatifs commençant par KI- (interrogatifs) et NENI- (négatifs). Nous pouvons le compléter avec <span class="eo">kiom</span>, le corrélatif interrogatif de quantité, et ainsi ajouter la colonne des corrélatifs terminés par <span class="eo"><b>-om</b></span>&nbsp;:
 		</p>
 		<div class="korelativoj">
 			<table class="highlight">

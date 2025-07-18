@@ -181,10 +181,10 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
-			//include "lasusono.inc.php";
+			include "lasusono.inc.php";
 		?>
 
-			<h3>Revenis amo, feli&#265;u ni!</h3>
+			<h3>Revenis amo, feliĉu ni!</h3>
 			
 			<p>Mi devas rakonti al vi. Mi estas tiel feliĉa! Mi retrovis ŝin! Mi
 			revidis ŝin! Kiun? Karletan, kompreneble. Evidente mi parolas pri

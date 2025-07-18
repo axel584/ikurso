@@ -1448,7 +1448,68 @@ INSERT INTO rajtoj (id, kodo, nomo) VALUES(5, 'I', '5. Informateur');
 
 
 -- tekstoj
-INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `nivelo`, `vortoj`, `kolekto`, `etikedoj`) VALUES ('lasumin01', 'Izabela', 'Claude Piron', 'https://ikurso.esperanto-france.org/fr/gerda/cxap01.php?section=5', 27, 212, NULL, 'fikcio');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `sono`, `nivelo`, `vortoj`, `kolekto`, `etikedoj`) VALUES ('lasumin01', 'Izabela', 'Claude Piron', 'https://ikurso.esperanto-france.org/fr/gerda/cxap01.php?section=5','https://ikurso.esperanto-france.org/audio/lasumin01.mp3', 27, 212, NULL, 'fikcio');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin02','Stranga strangulo','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin03','Amdeklaro','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin04','Lingvistiko','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin05','Ĉu vere vi ne volas labori?','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin06','La ulo, kiu ne plu pensas','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin07','Oni venis el alia mondo','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin08','Iru kiel vi volas','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin09','Zorgi pri zorgado','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin10','La fortegulo','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin11','Malkontentas la mekanikisto','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin12','Jen vi ree trinkas!','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin13','Revenis amo, feliĉu ni!','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin14a','Silentu, enaj voĉoj!','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin14b','Timiga diro','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin15a','Mistero en papervendejo','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin15b','Du raportoj pri vendado','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin16a','La vesperfuŝulo','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin16b','Ĉu malĝojon memori aŭ imagi feliĉon?','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin17a','Edzokaptaj inoj','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin17b','Instruista amo','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin18a','La letersoifa patrino','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin18b','Mi atendas gravan leteron','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin19','Dormu trankvile!','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin20a','La fakulo-instruisto venis de malproksime','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin20b','Troa scivolo kondukas morten','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin21a','Ho bela naskiĝurbo!','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin21b','Adiaŭ lando amata!','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin22a','Ek al fora insulo!','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin22b','Skribas malliberulo','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin23a','Sekreta servo','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin23b','Ameriko, jen mi venas!','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin24a','Literaturo amindas, sed tamen...','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin24b','La ĝojoj de petveturado','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin25','La tri plendoj de s-ro Kursano','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+update tekstoj set nivelo=300, vortoj=211 where id='lasumin01';
+update tekstoj set nivelo=699, vortoj=387 where id='lasumin02';
+update tekstoj set nivelo=659, vortoj=624 where id='lasumin03';
+update tekstoj set nivelo=898, vortoj=310 where id='lasumin04';
+update tekstoj set nivelo=1092, vortoj=800 where id='lasumin05';
+update tekstoj set nivelo=991, vortoj=823 where id='lasumin06';
+update tekstoj set nivelo=970, vortoj=779 where id='lasumin07';
+update tekstoj set nivelo=770, vortoj=435 where id='lasumin08';
+update tekstoj set nivelo=1064, vortoj=614 where id='lasumin09';
+update tekstoj set nivelo=1617, vortoj=407 where id='lasumin10';
+update tekstoj set nivelo=1031, vortoj=634 where id='lasumin11';
+update tekstoj set nivelo=1902, vortoj=1297 where id='lasumin12';
+update tekstoj set nivelo=1601, vortoj=1199 where id='lasumin13';
+update tekstoj set nivelo=1813, vortoj=1119 where id='lasumin14a';
+update tekstoj set nivelo=1492, vortoj=1136 where id='lasumin14b';
+update tekstoj set nivelo=1381, vortoj=991 where id='lasumin15a';
+update tekstoj set nivelo=1228, vortoj=705 where id='lasumin15b';
+update tekstoj set nivelo=1745, vortoj=1118 where id='lasumin16a';
+update tekstoj set nivelo=1568, vortoj=849 where id='lasumin16b';
+update tekstoj set nivelo=1326, vortoj=872 where id='lasumin17a';
+update tekstoj set nivelo=1514, vortoj=1094 where id='lasumin17b';
+update tekstoj set nivelo=1475, vortoj=1006 where id='lasumin18a';
+update tekstoj set nivelo=1436, vortoj=1081 where id='lasumin18b';
+update tekstoj set nivelo=1100, vortoj=282 where id='lasumin19';
+update tekstoj set nivelo=1193, vortoj=769 where id='lasumin20a';
+update tekstoj set nivelo=1490, vortoj=1272 where id='lasumin20b';
+
 
 
 -- vortoj

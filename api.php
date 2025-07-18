@@ -71,7 +71,7 @@ class TekstojAPI {
     
     // GET /tekstoj - Récupérer tous les tekstoj avec filtres optionnels (sans enhavo)
     private function getTekstoj() {
-        $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj FROM tekstoj WHERE 1=1";
+        $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono FROM tekstoj WHERE 1=1";
         $params = array();
         
         // Filtres optionnels

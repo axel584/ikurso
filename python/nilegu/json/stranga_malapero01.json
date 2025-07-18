@@ -1,0 +1,772 @@
+[
+  {
+    "teksto": "\u2013 Emma! Venu kaj vidu!",
+    "vortaro": {
+      "kaj": "et",
+      "vidu": "voir",
+      "venu": "venir"
+    }
+  },
+  {
+    "teksto": "\u2013 Kio okazas?",
+    "vortaro": {
+      "okazas": "arriver, se passer, avoir lieu",
+      "kio": "quoi, que"
+    }
+  },
+  {
+    "teksto": "\u2013 \u0108u vi vidis la dormo\u0109ambron de la infanoj? A\u0109a vida\u0135o!",
+    "vortaro": {
+      "de": "de",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vida\u0135o": "spectacle, vue",
+      "vidis": "voir",
+      "dormo\u0109ambron": "chambre \u00e0 coucher",
+      "vi": "tu, vous",
+      "infanoj": "enfant",
+      "a\u0109a": "m\u00e9prisable, pi\u00e8tre, vil",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "\u2013 Fu, mi scias, mi scias...",
+    "vortaro": {
+      "fu": "ouf !",
+      "mi": "je",
+      "scias": "savoir"
+    }
+  },
+  {
+    "teksto": "\u2013 Vi scias, vi scias... \u0108u vi vidis la malordon? Tio ne eblas!",
+    "vortaro": {
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vidis": "voir",
+      "tio": "ce, cela, \u00e7a",
+      "vi": "tu, vous",
+      "scias": "savoir",
+      "ne": "non, ne... pas",
+      "malordon": "d\u00e9sordre",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "Reveninte el la mezlernejo, ili ordigu siajn a\u0135ojn! Tuj. Vi ne",
+    "vortaro": {
+      "ili": "ils, elles, eux",
+      "ordigu": "ordonner, classer, ranger",
+      "reveninte": "revenir",
+      "siajn": "son, sa, ses",
+      "mezlernejo": "\u00e9cole secondaire",
+      "el": "hors de, de",
+      "a\u0135ojn": "chose, objet (synonyme de afero, mais plus concret)",
+      "vi": "tu, vous",
+      "ne": "non, ne... pas",
+      "tuj": "imm\u00e9diatement, sur le champ",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "estas sufi\u0109e severa kun ili...",
+    "vortaro": {
+      "ili": "ils, elles, eux",
+      "estas": "\u00eatre",
+      "sufi\u0109e": "assez",
+      "severa": "s\u00e9v\u00e8re",
+      "kun": "avec"
+    }
+  },
+  {
+    "teksto": "\u2013 Sed, kion vi diras? Mi ne povas \u0109ion fari, mi jam plenumas",
+    "vortaro": {
+      "sed": "mais",
+      "\u0109ion": "tout, toute chose",
+      "jam": "d\u00e9j\u00e0",
+      "mi": "je",
+      "povas": "pouvoir, \u00eatre capable de",
+      "fari": "faire",
+      "plenumas": "accomplir",
+      "diras": "dire",
+      "vi": "tu, vous",
+      "ne": "non, ne... pas",
+      "kion": "quoi, que"
+    }
+  },
+  {
+    "teksto": "la profesiajn kaj la domajn taskojn.",
+    "vortaro": {
+      "profesiajn": "professionnel",
+      "taskojn": "t\u00e2che, besogne, devoir (scolaire)",
+      "kaj": "et",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "La familio Savelli lo\u011das en la centro de la urbeto Kalvi1",
+    "vortaro": {
+      "de": "de",
+      "familio": "famille",
+      "urbeto": "bourg, petite ville",
+      "lo\u011das": "habiter",
+      "en": "dans",
+      "centro": "centre",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": ", en Korsiko.",
+    "vortaro": {
+      "korsiko": "Corse, Corse-du-Sud, Haute-Corse",
+      "en": "dans"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Emma kaj \u0134ako estas la gepatroj de Karla kaj Enzo, dek-kvar-jaraj \u011demeloj.",
+    "vortaro": {
+      "de": "de",
+      "\u0135ako": "jack, connecteur jack, fiche jack, prise jack, redingote, justaucorps",
+      "\u011demeloj": "jumeau, besson",
+      "estas": "\u00eatre",
+      "gepatroj": "parent",
+      "kaj": "et",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\u0134ako estas fi\u015dkaptisto, sed hodia\u016d li ne laboras.",
+    "vortaro": {
+      "sed": "mais",
+      "\u0135ako": "jack, connecteur jack, fiche jack, prise jack, redingote, justaucorps",
+      "li": "il, lui, le",
+      "laboras": "travailler",
+      "fi\u015dkaptisto": "p\u00eacheur",
+      "estas": "\u00eatre",
+      "hodia\u016d": "aujourd'hui",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "Tereta\u011de, jen granda kuirejo kaj unuaeta\u011de estas la salono",
+    "vortaro": {
+      "jen": "voici",
+      "kuirejo": "cuisine",
+      "estas": "\u00eatre",
+      "kaj": "et",
+      "salono": "salon",
+      "granda": "grand(e)",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "kaj la dormo\u0109ambro por gastoj. La gepatra kaj la infana",
+    "vortaro": {
+      "por": "pour, dans le but de",
+      "infana": "enfantin, infantile",
+      "kaj": "et",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "dormo\u0109ambroj trovi\u011das en la dua eta\u011do.",
+    "vortaro": {
+      "dua": "second, deuxi\u00e8me",
+      "dormo\u0109ambroj": "chambre \u00e0 coucher",
+      "en": "dans",
+      "eta\u011do": "\u00e9tage",
+      "la": "le, la, les",
+      "trovi\u011das": "se trouver"
+    }
+  },
+  {
+    "teksto": "Ekde la salono kaj la dormo\u0109ambroj, videblas la maro kaj la",
+    "vortaro": {
+      "videblas": "\u00eatre visible",
+      "la": "le, la, les",
+      "maro": "mer",
+      "kaj": "et",
+      "salono": "salon",
+      "ekde": "\u00e0 partir de, depuis, d\u00e8s, aussit\u00f4t, sit\u00f4t, \u00e0 partir du moment, depuis le d\u00e9but de",
+      "dormo\u0109ambroj": "chambre \u00e0 coucher"
+    }
+  },
+  {
+    "teksto": "montoj. Belege!",
+    "vortaro": {
+      "montoj": "montagne"
+    }
+  },
+  {
+    "teksto": "Estas la dek-sesa horo. En la mezlernejo, la sonorilo tintas.",
+    "vortaro": {
+      "tintas": "sonner, tinter",
+      "mezlernejo": "\u00e9cole secondaire",
+      "en": "dans",
+      "estas": "\u00eatre",
+      "sonorilo": "cloche",
+      "horo": "heure",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "La lernantoj kuras al la elirejo. Estas junio, kaj la lerneja jaro",
+    "vortaro": {
+      "kuras": "courir",
+      "lernantoj": "\u00e9l\u00e8ve",
+      "junio": "juin",
+      "estas": "\u00eatre",
+      "elirejo": "sortie, issue",
+      "al": "\u00e0, vers",
+      "jaro": "ann\u00e9e",
+      "kaj": "et",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "fini\u011das. La venontan semajnon komenci\u011dos la ferioj, sed, anta\u016de, indas prepari la ja jarfinan feston kaj la teatra\u0135on.",
+    "vortaro": {
+      "sed": "mais",
+      "komenci\u011dos": "commencer, s'amorcer, se commencer, d\u00e9buter, se d\u00e9clencher, d\u00e9marrer, s'engager, s'initialiser, s'ouvrir, partir",
+      "prepari": "pr\u00e9parer",
+      "feston": "f\u00eate",
+      "anta\u016de": "avant, auparavant ",
+      "ja": "certes, effectivement, il est vrai que, en fait, bien",
+      "ferioj": "cong\u00e9, jour f\u00e9ri\u00e9, jour de vacance",
+      "fini\u011das": "tout a une fin, finir, s'achever, s'arr\u00eater, cesser, se terminer",
+      "kaj": "et",
+      "semajnon": "semaine",
+      "teatra\u0135on": "pi\u00e8ce de th\u00e9\u00e2tre",
+      "la": "le, la, les",
+      "venontan": "venir"
+    }
+  },
+  {
+    "teksto": "La \u011demeloj teatrumas kaj ludos teatra\u0135on de Moliero, La",
+    "vortaro": {
+      "de": "de",
+      "ludos": "jouer",
+      "\u011demeloj": "jumeau, besson",
+      "kaj": "et",
+      "teatra\u0135on": "pi\u00e8ce de th\u00e9\u00e2tre",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "Avarulo. Ili preparis kaj provludis la teatra\u0135on kun la instruisto",
+    "vortaro": {
+      "ili": "ils, elles, eux",
+      "avarulo": "avare",
+      "kun": "avec",
+      "instruisto": "instituteur",
+      "kaj": "et",
+      "preparis": "pr\u00e9parer",
+      "teatra\u0135on": "pi\u00e8ce de th\u00e9\u00e2tre",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "pri literaturo.",
+    "vortaro": {
+      "literaturo": "litt\u00e9rature",
+      "pri": "\u00e0 propos de"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Hodia\u016d, la aktoroj devas provludi kostume vestitaj. Jam vide-",
+    "vortaro": {
+      "aktoroj": "acteur",
+      "vestitaj": "v\u00eatir, habiller, rev\u00eatir",
+      "jam": "d\u00e9j\u00e0",
+      "devas": "devoir",
+      "hodia\u016d": "aujourd'hui",
+      "provludi": "r\u00e9p\u00e9tition, r\u00e9p\u00e9ter",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "blas la dekoracio.",
+    "vortaro": {
+      "dekoracio": "d\u00e9cor de th\u00e9\u00e2tre, d\u00e9coration, d\u00e9cor, parure, ornement, insigne",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "La teatran dekoracion kaj la kostumojn faris Kla\u016ddino, la",
+    "vortaro": {
+      "faris": "faire",
+      "dekoracion": "d\u00e9cor de th\u00e9\u00e2tre, d\u00e9coration, d\u00e9cor, parure, ornement, insigne",
+      "teatran": "th\u00e9\u00e2tral, th\u00e9\u00e2trale",
+      "kostumojn": "costume, mise",
+      "kaj": "et",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "onklino de la \u011demeloj,kaj la instruisto pri arto.",
+    "vortaro": {
+      "de": "de",
+      "arto": "art",
+      "\u011demeloj": "jumeau, besson",
+      "pri": "\u00e0 propos de",
+      "instruisto": "instituteur",
+      "onklino": "tante",
+      "kaj": "et",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "La lernantoj alvenas en la spektaklejon. Kla\u016ddino jam",
+    "vortaro": {
+      "jam": "d\u00e9j\u00e0",
+      "lernantoj": "\u00e9l\u00e8ve",
+      "en": "dans",
+      "alvenas": "arriver",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "\u0109eestas.",
+    "vortaro": {
+      "\u0109eestas": "assistance, assister, \u00eatre pr\u00e9sent"
+    }
+  },
+  {
+    "teksto": "\u2013 Ek! \u015di diras, surmetu viajn kostumojn! Mi volas vidi \u0109u la",
+    "vortaro": {
+      "mi": "je",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "viajn": "ton, votre",
+      "vidi": "voir",
+      "diras": "dire",
+      "surmetu": "enfiler, mettre sur, passer",
+      "kostumojn": "costume, mise",
+      "volas": "vouloir",
+      "\u015di": "elle",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "roboj, la jakoj kaj la pantalonoj ta\u016dgas.",
+    "vortaro": {
+      "roboj": "robe",
+      "ta\u016dgas": "aller, convenir",
+      "pantalonoj": "pantalon",
+      "jakoj": "veste, veston",
+      "kaj": "et",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "La geknaboj vesti\u011das. \u0108io estas perfekta.",
+    "vortaro": {
+      "\u0109io": "tout, toute chose",
+      "estas": "\u00eatre",
+      "perfekta": "parfait(e)",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "\u2013 Kla\u016ddino, estas vere bonege. Mi belaspektas, \u0109u ne? diras",
+    "vortaro": {
+      "mi": "je",
+      "vere": "vraiment",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "estas": "\u00eatre",
+      "bonege": "tr\u00e8s bien",
+      "diras": "dire",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "Dumeo, unu el la aktoroj.",
+    "vortaro": {
+      "aktoroj": "acteur",
+      "el": "hors de, de",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "La instruisto pri literaturo alvenas. Kiam li vidas la kostu-",
+    "vortaro": {
+      "li": "il, lui, le",
+      "alvenas": "arriver",
+      "literaturo": "litt\u00e9rature",
+      "vidas": "voir",
+      "pri": "\u00e0 propos de",
+      "instruisto": "instituteur",
+      "kiam": "quand",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "mojn, li gratulas Kla\u016ddinon. Poste li diras al la geknaboj:",
+    "vortaro": {
+      "li": "il, lui, le",
+      "poste": "ensuite, puis",
+      "gratulas": "f\u00e9liciter",
+      "al": "\u00e0, vers",
+      "diras": "dire",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\u201cSupreniru sur la scenejon!\u201d",
+    "vortaro": {
+      "scenejon": "plateau, sc\u00e8ne",
+      "sur": "sur",
+      "la": "le, la, les",
+      "supreniru": "monter, gravir, s'\u00e9lever"
+    }
+  },
+  {
+    "teksto": "Hodia\u016d, ili provludas la sepan scenon de la kvara akto. Enzo ludas la",
+    "vortaro": {
+      "de": "de",
+      "ili": "ils, elles, eux",
+      "ludas": "jouer",
+      "akto": "acte",
+      "kvara": "quatri\u00e8me",
+      "hodia\u016d": "aujourd'hui",
+      "scenon": "sc\u00e8ne",
+      "sepan": "septi\u00e8me",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "\u0109efan rolon: Harpagonon, la avarulon.",
+    "vortaro": {
+      "rolon": "r\u00f4le",
+      "\u0109efan": "principal(e), chef",
+      "avarulon": "avare",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "\u2013 Ek, Enzo! diras la instruisto.",
+    "vortaro": {
+      "instruisto": "instituteur",
+      "diras": "dire",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "Enzo kuras sur la scenejon kaj krias:",
+    "vortaro": {
+      "scenejon": "plateau, sc\u00e8ne",
+      "kuras": "courir",
+      "sur": "sur",
+      "krias": "crier, appeler",
+      "kaj": "et",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "\u2013 \u015ctelo1",
+    "vortaro": {}
+  },
+  {
+    "teksto": "! \u015ctelo! Oni mortigas!",
+    "vortaro": {
+      "\u015dtelo": "vol",
+      "oni": "on",
+      "mortigas": "tuer"
+    }
+  },
+  {
+    "teksto": "\u2013 Enzo... la instruisto diras, parolu malpli rapide kaj pa\u015du, ne kuru!",
+    "vortaro": {
+      "pa\u015du": "marcher",
+      "kuru": "courir",
+      "malpli": "moins",
+      "instruisto": "instituteur",
+      "diras": "dire",
+      "ne": "non, ne... pas",
+      "kaj": "et",
+      "parolu": "parler",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "Enzo rekomencas.",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\u2013 Jes, perfekte. Estas bone! Kaj nun, ni vidu la unuan scenon de la",
+    "vortaro": {
+      "nun": "maintenant",
+      "de": "de",
+      "vidu": "voir",
+      "estas": "\u00eatre",
+      "ni": "nous",
+      "unuan": "premier, premi\u00e8re",
+      "bone": "bien",
+      "kaj": "et",
+      "scenon": "sc\u00e8ne",
+      "jes": "oui, d'accord",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "unua akto.",
+    "vortaro": {
+      "akto": "acte",
+      "unua": "premier, premi\u00e8re"
+    }
+  },
+  {
+    "teksto": "Tiu sceno okazas inter Valero, interpretata de Dumeo, kaj Elizo, kiun",
+    "vortaro": {
+      "de": "de",
+      "kiun": "qui",
+      "okazas": "arriver, se passer, avoir lieu",
+      "sceno": "sc\u00e8ne",
+      "inter": "entre, parmi",
+      "tiu": "ce, cet(te)",
+      "interpretata": "1interpr\u00e9ter",
+      "kaj": "et"
+    }
+  },
+  {
+    "teksto": "ludas Stela.",
+    "vortaro": {
+      "ludas": "jouer"
+    }
+  },
+  {
+    "teksto": "\u2013 Bone, diras la instruisto je la fino de la provludo. Vi multe progresis.",
+    "vortaro": {
+      "je": "pr\u00e9position ind\u00e9finie",
+      "de": "de",
+      "instruisto": "instituteur",
+      "diras": "dire",
+      "vi": "tu, vous",
+      "bone": "bien",
+      "multe": "beaucoup",
+      "fino": "habiter au diable vauvert, le meilleur est pour la fin, extr\u00e9mit\u00e9, fin, ach\u00e8vement, arr\u00eat",
+      "progresis": "progresser",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "Tio estas bonega. Ni rendevuu venontan vendredon je tagmezo por",
+    "vortaro": {
+      "je": "pr\u00e9position ind\u00e9finie",
+      "vendredon": "vendredi",
+      "estas": "\u00eatre",
+      "ni": "nous",
+      "tio": "ce, cela, \u00e7a",
+      "por": "pour, dans le but de",
+      "venontan": "venir"
+    }
+  },
+  {
+    "teksto": "la \u011denerala provludo.",
+    "vortaro": {
+      "la": "le, la, les",
+      "\u011denerala": "g\u00e9n\u00e9ral(e)"
+    }
+  },
+  {
+    "teksto": "Karla kaj Enzo hejmeniras kaj sidi\u011das sur la teraso por man\u011deti.",
+    "vortaro": {
+      "sur": "sur",
+      "por": "pour, dans le but de",
+      "man\u011deti": "grignoter",
+      "kaj": "et",
+      "teraso": "terrasse",
+      "sidi\u011das": "s'asseoir",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "\u2013 Ne plu estas lernejaj taskoj, bonege! diras Enzo...",
+    "vortaro": {
+      "taskoj": "t\u00e2che, besogne, devoir (scolaire)",
+      "plu": "plus, plus longtemps, plus loin",
+      "estas": "\u00eatre",
+      "bonege": "tr\u00e8s bien",
+      "diras": "dire",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "Karla volas respondi, sed mankas tempo. \u015cia patro alvenas kaj diras,",
+    "vortaro": {
+      "sed": "mais",
+      "respondi": "r\u00e9pondre",
+      "tempo": "temps",
+      "patro": "p\u00e8re",
+      "alvenas": "arriver",
+      "\u015dia": "elle",
+      "diras": "dire",
+      "mankas": "manquer de",
+      "kaj": "et",
+      "volas": "vouloir"
+    }
+  },
+  {
+    "teksto": "ekscitite:",
+    "vortaro": {
+      "ekscitite": "exciter"
+    }
+  },
+  {
+    "teksto": "\u2013 Vi ne havas lernejajn taskojn, Enzo, bonege, do vi ordigu vian",
+    "vortaro": {
+      "ordigu": "ordonner, classer, ranger",
+      "vi": "tu, vous",
+      "taskojn": "t\u00e2che, besogne, devoir (scolaire)",
+      "bonege": "tr\u00e8s bien",
+      "do": "donc",
+      "ne": "non, ne... pas",
+      "havas": "avoir",
+      "vian": "ton, votre"
+    }
+  },
+  {
+    "teksto": "dormo\u0109ambron kaj anka\u016d vi, Karla. Tuj!",
+    "vortaro": {
+      "tuj": "imm\u00e9diatement, sur le champ",
+      "dormo\u0109ambron": "chambre \u00e0 coucher",
+      "vi": "tu, vous",
+      "kaj": "et",
+      "anka\u016d": "aussi"
+    }
+  },
+  {
+    "teksto": "La \u011demeloj rigardas unu la alian kun miro.",
+    "vortaro": {
+      "alian": "autre",
+      "\u011demeloj": "jumeau, besson",
+      "rigardas": "regarder",
+      "miro": "\u00e9merveillement, surprise",
+      "kun": "avec",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "\u2013 Sed, Pa\u0109jo, mi ordigis \u011din \u0109i-matene, ekdiras Enzo...",
+    "vortaro": {
+      "sed": "mais",
+      "mi": "je",
+      "\u011din": "il, elle",
+      "ordigis": "ordonner, classer, ranger",
+      "pa\u0109jo": "papa"
+    }
+  },
+  {
+    "teksto": "\u2013 Sufi\u0109as! diras la patro. Supreniru tuj!",
+    "vortaro": {
+      "patro": "p\u00e8re",
+      "supreniru": "monter, gravir, s'\u00e9lever",
+      "sufi\u0109as": "suffire",
+      "diras": "dire",
+      "tuj": "imm\u00e9diatement, sur le champ",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "La \u011demeloj stari\u011das kaj supreniras.",
+    "vortaro": {
+      "\u011demeloj": "jumeau, besson",
+      "kaj": "et",
+      "supreniras": "monter, gravir, s'\u00e9lever",
+      "stari\u011das": "se dresser",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "Ne eblas! Granda \u0125aoso2",
+    "vortaro": {
+      "ne": "non, ne... pas",
+      "granda": "grand(e)"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": ". \u0108i-matene, ili pretigis la litojn, ordigis la",
+    "vortaro": {
+      "ili": "ils, elles, eux",
+      "litojn": "lit",
+      "pretigis": "pr\u00e9parer",
+      "ordigis": "ordonner, classer, ranger",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "vesta\u0135ojn... Ili ne komprenas, kio okazis. Sed ili nenion diras, \u0109ar \u0134ako",
+    "vortaro": {
+      "sed": "mais",
+      "ili": "ils, elles, eux",
+      "\u0135ako": "jack, connecteur jack, fiche jack, prise jack, redingote, justaucorps",
+      "nenion": "rien",
+      "komprenas": "comprendre",
+      "diras": "dire",
+      "kio": "quoi, que",
+      "ne": "non, ne... pas",
+      "\u0109ar": "parce que",
+      "okazis": "arriver, se passer, avoir lieu",
+      "vesta\u0135ojn": "pi\u00e8ce de v\u00eatement"
+    }
+  },
+  {
+    "teksto": "koleregas.",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\u2013 Restas al vi dek kvin minutoj por \u0109ion ordigi, \u0109u komprenite?",
+    "vortaro": {
+      "ordigi": "ordonner, classer, ranger",
+      "\u0109ion": "tout, toute chose",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "minutoj": "minute (temps)",
+      "restas": "rester",
+      "dek": "dix",
+      "por": "pour, dans le but de",
+      "al": "\u00e0, vers",
+      "vi": "tu, vous",
+      "komprenite": "comprendre",
+      "kvin": "cinq"
+    }
+  },
+  {
+    "teksto": "Ne eblas interparoli kun \u0134ako, kiam li estas en tia stato!",
+    "vortaro": {
+      "\u0135ako": "jack, connecteur jack, fiche jack, prise jack, redingote, justaucorps",
+      "interparoli": "converser, discuter, s'entretenir",
+      "li": "il, lui, le",
+      "stato": "\u00e9tat, condition, mani\u00e8re d'\u00eatre, position",
+      "en": "dans",
+      "estas": "\u00eatre",
+      "kiam": "quand",
+      "tia": "tel(le), telle sorte de",
+      "ne": "non, ne... pas",
+      "kun": "avec"
+    }
+  }
+]

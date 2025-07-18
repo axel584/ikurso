@@ -1,0 +1,512 @@
+[
+  {
+    "teksto": "- Kiam vi forveturos?",
+    "vortaro": {
+      "forveturos": "partir",
+      "kiam": "quand",
+      "vi": "tu, vous"
+    }
+  },
+  {
+    "teksto": "- Venontan semajnon.",
+    "vortaro": {
+      "semajnon": "semaine",
+      "venontan": "venir"
+    }
+  },
+  {
+    "teksto": "- Aviadile, \u0109u ne?",
+    "vortaro": {
+      "ne": "non, ne... pas",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+    }
+  },
+  {
+    "teksto": "- Jes, aviadile. Neniu plu voja\u011das al Usono \u015dipe en nia epoko. Flugi estas tiel pli rapide!",
+    "vortaro": {
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "epoko": "\u00e9poque, \u00e2ge",
+      "plu": "plus, plus longtemps, plus loin",
+      "en": "dans",
+      "estas": "\u00eatre",
+      "voja\u011das": "voyager",
+      "al": "\u00e0, vers",
+      "usono": "\u00c9tats-Unis",
+      "flugi": "se r\u00e9pandre, voler, s'\u00e9loigner, s'envoler, dispara\u00eetre, se poser sur",
+      "nia": "nous",
+      "neniu": "personne",
+      "jes": "oui, d'accord",
+      "tiel": "ainsi, comme \u00e7a"
+    }
+  },
+  {
+    "teksto": "- \u0108u vi devas prepari ankora\u016d multon?",
+    "vortaro": {
+      "ankora\u016d": "encore",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "prepari": "pr\u00e9parer",
+      "devas": "devoir",
+      "vi": "tu, vous",
+      "multon": "un grand nombre"
+    }
+  },
+  {
+    "teksto": "- Ne, \u0109io jam estas preparita. Mi havas \u0109iujn dokumentojn. Mi devas ankora\u016d solvi la demandon pri mono, tio restas mia sola problemo nun.",
+    "vortaro": {
+      "restas": "rester",
+      "\u0109io": "tout, toute chose",
+      "\u0109iujn": "chaque, chacun",
+      "solvi": "r\u00e9soudre",
+      "mia": "je",
+      "dokumentojn": "document",
+      "havas": "avoir",
+      "mi": "je",
+      "estas": "\u00eatre",
+      "mono": "argent",
+      "la": "le, la, les",
+      "tio": "ce, cela, \u00e7a",
+      "devas": "devoir",
+      "sola": "seul(e)",
+      "ne": "non, ne... pas",
+      "jam": "d\u00e9j\u00e0",
+      "ankora\u016d": "encore",
+      "nun": "maintenant",
+      "problemo": "probl\u00e8me",
+      "pri": "\u00e0 propos de",
+      "demandon": "question",
+      "preparita": "pr\u00e9parer"
+    }
+  },
+  {
+    "teksto": "- Kial estas problemo?",
+    "vortaro": {
+      "problemo": "probl\u00e8me",
+      "estas": "\u00eatre",
+      "kial": "pourquoi"
+    }
+  },
+  {
+    "teksto": "- Mi agis stulte. Mi ne okupi\u011dis pri tiu afero sufi\u0109e frue kaj nun la dolaro alti\u011das de tago al tago.",
+    "vortaro": {
+      "nun": "maintenant",
+      "mi": "je",
+      "alti\u011das": "s'\u00e9lever",
+      "de": "de",
+      "tago": "jour",
+      "okupi\u011dis": "s'occuper de",
+      "dolaro": "dollar",
+      "pri": "\u00e0 propos de",
+      "agis": "agir",
+      "sufi\u0109e": "assez",
+      "kaj": "et",
+      "al": "\u00e0, vers",
+      "tiu": "ce, cet(te)",
+      "afero": "affaire, sujet, chose",
+      "ne": "non, ne... pas",
+      "frue": "t\u00f4t, de bonne heure",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "- Vi do devus rapidi a\u0109eti viajn dolarojn.",
+    "vortaro": {
+      "rapidi": "se d\u00e9p\u00eacher, se h\u00e2ter, se presser",
+      "viajn": "ton, votre",
+      "devus": "devoir",
+      "a\u0109eti": "acheter",
+      "vi": "tu, vous",
+      "dolarojn": "dollar",
+      "do": "donc"
+    }
+  },
+  {
+    "teksto": "- Jes, sed mi a\u016ddis, ke nun la dolaro estas tro forta, kaj ke la usonaj a\u016dtoritatoj volas \u011din malaltigi.",
+    "vortaro": {
+      "sed": "mais",
+      "nun": "maintenant",
+      "mi": "je",
+      "tro": "trop",
+      "forta": "fort(e)",
+      "\u011din": "il, elle",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "dolaro": "dollar",
+      "estas": "\u00eatre",
+      "a\u016dtoritatoj": "autorit\u00e9",
+      "malaltigi": "abaisser",
+      "kaj": "et",
+      "volas": "vouloir",
+      "jes": "oui, d'accord",
+      "la": "le, la, les",
+      "a\u016ddis": "entendre"
+    }
+  },
+  {
+    "teksto": "- Kial? Ili estis malkontentaj, kiam la dolaro estis malforta, kvaza\u016d tio volus diri, ke la valoro de la tuta lando, de la tuta popolo, malalti\u011dis. \u0108u vere nun ili estas mal\u011dojaj pri tio, ke la dolaro fari\u011dis plivalora?",
+    "vortaro": {
+      "valoro": "valeur",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "volus": "vouloir",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "kiam": "quand",
+      "kial": "pourquoi",
+      "malalti\u011dis": "s'abaisser",
+      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
+      "popolo": "peuple",
+      "ili": "ils, elles, eux",
+      "estas": "\u00eatre",
+      "mal\u011dojaj": "triste",
+      "la": "le, la, les",
+      "malforta": "faible",
+      "kvaza\u016d": "quasi-, comme si",
+      "tio": "ce, cela, \u00e7a",
+      "fari\u011dis": "devenir, se transformer",
+      "malkontentaj": "insatisfait, m\u00e9content",
+      "de": "de",
+      "vere": "vraiment",
+      "nun": "maintenant",
+      "diri": "dire",
+      "dolaro": "dollar",
+      "pri": "\u00e0 propos de",
+      "lando": "pays",
+      "estis": "\u00eatre"
+    }
+  },
+  {
+    "teksto": "- Jes, \u0109ar ili ne povas vendi tiel facile siajn produktojn eksterlande.",
+    "vortaro": {
+      "ili": "ils, elles, eux",
+      "siajn": "son, sa, ses",
+      "povas": "pouvoir, \u00eatre capable de",
+      "facile": "facilement",
+      "vendi": "vendre",
+      "produktojn": "produit, produit int\u00e9rieur brut, PIB, produit national brut, PNB",
+      "ne": "non, ne... pas",
+      "\u0109ar": "parce que",
+      "jes": "oui, d'accord",
+      "tiel": "ainsi, comme \u00e7a"
+    }
+  },
+  {
+    "teksto": "- Prave. La valoro de la produktoj, kiuj venas de Usono, nun i\u011dis pli alta por homoj, kiuj ne perlaboras dolarojn.",
+    "vortaro": {
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "de": "de",
+      "nun": "maintenant",
+      "valoro": "valeur",
+      "i\u011dis": "devenir",
+      "venas": "venir",
+      "prave": "c'est juste, avec justesse",
+      "alta": "haut(e)",
+      "por": "pour, dans le but de",
+      "usono": "\u00c9tats-Unis",
+      "homoj": "\u00eatre humain, homme",
+      "dolarojn": "dollar",
+      "produktoj": "produit, produit int\u00e9rieur brut, PIB, produit national brut, PNB",
+      "ne": "non, ne... pas",
+      "kiuj": "qui",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "- \u011custe. \u0108io usona nun fari\u011dis pli multekosta por eksterlandanoj, kaj pro tio Usono vendas malpli, kaj sekve suferas. Estis jam sufi\u0109e grava senlaboreco tie. Nun, se ili vendos malpli al aliaj landoj, eble la senlaboruloj i\u011dos e\u0109 pli multaj, kaj tion ili timas.",
+    "vortaro": {
+      "\u0109io": "tout, toute chose",
+      "tion": "ce, cela, \u00e7a",
+      "sekve": "par cons\u00e9quent, donc",
+      "por": "pour, dans le but de",
+      "senlaboreco": "oisivet\u00e9, ch\u00f4mage",
+      "usono": "\u00c9tats-Unis",
+      "vendos": "vendre",
+      "e\u0109": "m\u00eame, et en plus",
+      "ili": "ils, elles, eux",
+      "\u011duste": "juste, justement, bien, convenablement, correctement, exactement, pr\u00e9cis\u00e9ment",
+      "tie": "ici, l\u00e0",
+      "multekosta": "cher, ch\u00e8re",
+      "malpli": "moins",
+      "se": "si (indique une condition)",
+      "landoj": "pays",
+      "sufi\u0109e": "assez",
+      "al": "\u00e0, vers",
+      "multaj": "beaucoup de, peu de",
+      "kaj": "et",
+      "la": "le, la, les",
+      "grava": "important(e)",
+      "pro": "\u00e0 cause de, pour",
+      "timas": "craindre, avoir peur",
+      "fari\u011dis": "devenir, se transformer",
+      "tio": "ce, cela, \u00e7a",
+      "suferas": "souffrir",
+      "aliaj": "autre",
+      "vendas": "vendre",
+      "eble": "peut-\u00eatre, possiblement",
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "jam": "d\u00e9j\u00e0",
+      "nun": "maintenant",
+      "i\u011dos": "devenir",
+      "usona": "am\u00e9ricain",
+      "senlaboruloj": "ch\u00f4meur",
+      "eksterlandanoj": "\u00e9tranger",
+      "estis": "\u00eatre"
+    }
+  },
+  {
+    "teksto": "- Sincere, mi dubas pri tio. Vendi eksterlande ne tiom gravas al tiel granda lando. La landanaro jam a\u0109etas preska\u016d \u0109ion, kion oni produktas tie. La eksteraj vendoj prezentas per si nur malgrandan parton de la tuto.",
+    "vortaro": {
+      "eksteraj": "apparent, ext\u00e9rieur, externe, superficiel",
+      "tuto": "tout",
+      "parton": "partie",
+      "tiom": "tant (de), autant",
+      "kion": "quoi, que",
+      "mi": "je",
+      "produktas": "produire",
+      "prezentas": "pr\u00e9senter, introduire",
+      "tie": "ici, l\u00e0",
+      "a\u0109etas": "acheter",
+      "al": "\u00e0, vers",
+      "tiel": "ainsi, comme \u00e7a",
+      "granda": "grand(e)",
+      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)",
+      "la": "le, la, les",
+      "\u0109ion": "tout, toute chose",
+      "nur": "seulement",
+      "dubas": "douter, avoir des doutes",
+      "tio": "ce, cela, \u00e7a",
+      "malgrandan": "petit",
+      "vendi": "vendre",
+      "ne": "non, ne... pas",
+      "jam": "d\u00e9j\u00e0",
+      "si": "se, s', soi",
+      "de": "de",
+      "pri": "\u00e0 propos de",
+      "lando": "pays",
+      "oni": "on",
+      "gravas": "avoir de l'importance",
+      "vendoj": "vente",
+      "preska\u016d": "presque"
+    }
+  },
+  {
+    "teksto": "- \u0108u tiel estas? Se jes, mi devus ne konsideri tiun eblan malalti\u011don de la dolaro.",
+    "vortaro": {
+      "de": "de",
+      "mi": "je",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "ne": "non, ne... pas",
+      "devus": "devoir",
+      "se": "si (indique une condition)",
+      "estas": "\u00eatre",
+      "dolaro": "dollar",
+      "tiun": "ce, cet(te)",
+      "tiel": "ainsi, comme \u00e7a",
+      "eblan": "possible",
+      "konsideri": "consid\u00e9rer",
+      "jes": "oui, d'accord",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "- Mi ne volas interveni en vian decidon. Estas iu risko en amba\u016d eblecoj. \u0108u vi jam estis en Usono anta\u016de?",
+    "vortaro": {
+      "jam": "d\u00e9j\u00e0",
+      "mi": "je",
+      "interveni": "intervenir",
+      "iu": "quelqu'un",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "en": "dans",
+      "estas": "\u00eatre",
+      "decidon": "d\u00e9cision",
+      "anta\u016de": "avant, auparavant ",
+      "vi": "tu, vous",
+      "usono": "\u00c9tats-Unis",
+      "ne": "non, ne... pas",
+      "volas": "vouloir",
+      "risko": "risque",
+      "estis": "\u00eatre",
+      "vian": "ton, votre",
+      "amba\u016d": "tous deux, tous les deux, l'un et l'autre"
+    }
+  },
+  {
+    "teksto": "- Ne. \u0108u vi?",
+    "vortaro": {
+      "ne": "non, ne... pas",
+      "vi": "tu, vous",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+    }
+  },
+  {
+    "teksto": "- Jes, mi estis tie. Fakte, mi laboris tie, kiam mi estis juna, kaj mi tien reveturis anta\u016d du jaroj. \u0108iuj tie plendis pri la situacio, kaj mi facile kredas, ke por malri\u0109ulo, ekzemple por homo senlabora, la vivo devas esti tre zorgiga tie. Sed tamen, dum mi travoja\u011dis la landon, mia konstanta sento estis, ke tio estas unu el la plej ri\u0109aj landoj en la mondo.",
+    "vortaro": {
+      "situacio": "situation",
+      "fakte": "en fait",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "el": "hors de, de",
+      "por": "pour, dans le but de",
+      "kiam": "quand",
+      "kredas": "croire",
+      "mia": "je",
+      "tamen": "n\u00e9anmoins, toutefois, quand m\u00eame, cependant",
+      "ekzemple": "par exemple",
+      "malri\u0109ulo": "pauvre",
+      "homo": "\u00eatre humain, homme",
+      "sed": "mais",
+      "mi": "je",
+      "tie": "ici, l\u00e0",
+      "sento": "sentiment",
+      "anta\u016d": "avant, en avant de, devant",
+      "facile": "facilement",
+      "landoj": "pays",
+      "estas": "\u00eatre",
+      "dum": "durant, pendant, pendant que",
+      "\u0109iuj": "chaque, chacun",
+      "du": "deux",
+      "en": "dans",
+      "mondo": "monde",
+      "kaj": "et",
+      "la": "le, la, les",
+      "konstanta": "constant",
+      "juna": "jeune",
+      "jaroj": "ann\u00e9e",
+      "ri\u0109aj": "riche",
+      "laboris": "travailler",
+      "tio": "ce, cela, \u00e7a",
+      "plendis": "se plaindre",
+      "devas": "devoir",
+      "landon": "pays",
+      "jes": "oui, d'accord",
+      "senlabora": "ch\u00f4meur, sans emploi",
+      "tre": "tr\u00e8s",
+      "plej": "le plus, la plus",
+      "vivo": "vie",
+      "pri": "\u00e0 propos de",
+      "tien": "ici, l\u00e0",
+      "esti": "\u00eatre",
+      "reveturis": "revenir",
+      "estis": "\u00eatre"
+    }
+  },
+  {
+    "teksto": "- \u0108u vere?",
+    "vortaro": {
+      "vere": "vraiment",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+    }
+  },
+  {
+    "teksto": "- Jes. Ekzemple, vi ne povus imagi, kiom oni donas al vi por man\u011di en restoracioj. Tiom pli ol en E\u016dropo, por simila kosto.",
+    "vortaro": {
+      "donas": "donner",
+      "simila": "similaire",
+      "e\u016dropo": "Europe",
+      "por": "pour, dans le but de",
+      "kiom": "combien, quelle quantit\u00e9",
+      "restoracioj": "restaurant",
+      "tiom": "tant (de), autant",
+      "ekzemple": "par exemple",
+      "ol": "que (dans une comparaison)",
+      "en": "dans",
+      "povus": "pouvoir, \u00eatre capable de",
+      "al": "\u00e0, vers",
+      "man\u011di": "manger",
+      "imagi": "imaginer",
+      "ne": "non, ne... pas",
+      "jes": "oui, d'accord",
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "kosto": "co\u00fbt",
+      "vi": "tu, vous",
+      "oni": "on"
+    }
+  },
+  {
+    "teksto": "- Sed \u0109u la man\u011da\u0135oj estas same pla\u0109aj, kiel \u0109e ni?",
+    "vortaro": {
+      "sed": "mais",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
+      "man\u011da\u0135oj": "nourriture, met",
+      "kiel": "comment, comme",
+      "estas": "\u00eatre",
+      "ni": "nous",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "- Ne. Estas pli bone \u0109e ni tiurilate. \u0108efe, en nia lando, la man\u011doj estas pli malsamaj. Vi povas facile ricevi \u0109iutage ion malsaman en restoracioj. Sed eble mi ne rajtas tiel paroli pri Usono. Mia kono de tiu grandega lando estas tiel supra\u0135a!",
+    "vortaro": {
+      "\u0109efe": "surtout, au premier chef",
+      "usono": "\u00c9tats-Unis",
+      "mia": "je",
+      "bone": "bien",
+      "nia": "nous",
+      "restoracioj": "restaurant",
+      "malsaman": "diff\u00e9rent",
+      "sed": "mais",
+      "mi": "je",
+      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
+      "ion": "quelque chose",
+      "en": "dans",
+      "facile": "facilement",
+      "estas": "\u00eatre",
+      "malsamaj": "diff\u00e9rent",
+      "tiu": "ce, cet(te)",
+      "rajtas": "avoir le droit de",
+      "tiel": "ainsi, comme \u00e7a",
+      "supra\u0135a": "superficiel",
+      "la": "le, la, les",
+      "ni": "nous",
+      "man\u011doj": "repas",
+      "eble": "peut-\u00eatre, possiblement",
+      "paroli": "parler",
+      "ne": "non, ne... pas",
+      "ricevi": "recevoir",
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "de": "de",
+      "povas": "pouvoir, \u00eatre capable de",
+      "pri": "\u00e0 propos de",
+      "lando": "pays",
+      "vi": "tu, vous"
+    }
+  },
+  {
+    "teksto": "- Tamen, tio, kion vi diras, estas tre interesa. Mi anta\u016d\u011dojas viziti tiun landon, pri kiu oni a\u016ddas tiom da malsamaj opinioj.",
+    "vortaro": {
+      "interesa": "int\u00e9ressant(e)",
+      "tamen": "n\u00e9anmoins, toutefois, quand m\u00eame, cependant",
+      "a\u016ddas": "entendre",
+      "tiom": "tant (de), autant",
+      "kion": "quoi, que",
+      "mi": "je",
+      "kiu": "qui",
+      "estas": "\u00eatre",
+      "malsamaj": "diff\u00e9rent",
+      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
+      "viziti": "visiter",
+      "tio": "ce, cela, \u00e7a",
+      "tiun": "ce, cet(te)",
+      "opinioj": "opinion, avis",
+      "diras": "dire",
+      "landon": "pays",
+      "tre": "tr\u00e8s",
+      "pri": "\u00e0 propos de",
+      "vi": "tu, vous",
+      "oni": "on"
+    }
+  },
+  {
+    "teksto": "- Nu, mi esperas, ke vi solvos vian dolarproblemon kontentige. \u011cis revido, kaj bonan voja\u011don!",
+    "vortaro": {
+      "mi": "je",
+      "revido": "au revoir",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "esperas": "esp\u00e9rer",
+      "kaj": "et",
+      "\u011dis": "jusqu'\u00e0",
+      "vi": "tu, vous",
+      "solvos": "r\u00e9soudre",
+      "nu": "allons, bien, eh bien\u2026 ",
+      "voja\u011don": "voyage",
+      "bonan": "bon,  bonne",
+      "vian": "ton, votre"
+    }
+  }
+]

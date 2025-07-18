@@ -243,6 +243,7 @@ CREATE TABLE tekstoj (
   `titolo` VARCHAR(1024) NOT NULL , 
   `auxtoro` VARCHAR(128) NOT NULL , 
   `fonto` VARCHAR(1024) NULL , 
+  `sono` VARCHAR(1024) NULL,
   `nivelo` INT NULL , 
   `vortoj` INT NULL , 
   `kolekto` VARCHAR(64) NULL , 

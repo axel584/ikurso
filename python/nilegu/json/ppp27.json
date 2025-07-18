@@ -1,0 +1,663 @@
+[
+  {
+    "teksto": "\u0108iujare pli ol 100 000 vizitantoj venas al la Burns-Muzeo en Alloway, apud Ayr en sudokcidenta Skotlando, apud la malgranda farmdomo, kie Robert Burns naski\u011dis dum la \u015dtorma nokto de la 25-a de januaro, 1759. \u0108iujare novaj tradukoj de la poemoj de Burns aperas en multaj lingvoj. Mi \u0135us ricevis belan volumon de polaj versversioj de D-ro Stanis\u0142aw Kry\u0144ski kaj aliaj. En Moskvo mi ricevis kun plezuro de Samuel Jakovlevi\u0109 Mar\u015dak ekzempleron de liaj bonegaj rusaj tradukoj; li informis min, ke nur malfacile li akiris ekzmpleron por mi, kvankam oni presigis 200 000 ekzemplerojn de \u0109iu eldono; tiel entuziasme la rusoj a\u0109etas kaj legas Burns. \u0108inaj, hindustanaj, afrikansaj, hungaraj, e\u0109 anglaj tradukoj estas da\u016dre entreprenitaj; kio estas tiom pli surpriza, \u0109ar la plej bonaj el la poemoj estas verkitaj en la skota lingvo, kiun jam dum generacioj la eduka sistemo malmulte kultivis, kaj kiu nun malforti\u011das kaj estas diluata per alsimili\u011do al la angla a\u016d usona por sia \u0109iutaga uzado inter la nuntempaj lo\u011dantoj de Skotlando, e\u0109 en kamparaj paro\u0125oj, kie \u011di plej vigle vivadas.",
+    "vortaro": {
+      "kiun": "qui",
+      "\u011di": "il, elle",
+      "nun": "maintenant",
+      "multaj": "beaucoup de, peu de",
+      "malmulte": "peu",
+      "angla": "anglais",
+      "usona": "am\u00e9ricain",
+      "naski\u011dis": "na\u00eetre",
+      "en": "dans",
+      "kaj": "et",
+      "tiel": "ainsi, comme \u00e7a",
+      "surpriza": "surprenant",
+      "el": "hors de, de",
+      "ol": "que (dans une comparaison)",
+      "rusoj": "Russe",
+      "bonaj": "bon,  bonne",
+      "novaj": "neuf, neuve",
+      "\u015dtorma": "temp\u00eatueux",
+      "verkitaj": "composer, \u00e9crire",
+      "\u0109iutaga": "quotidien",
+      "la": "le, la, les",
+      "e\u0109": "m\u00eame, et en plus",
+      "venas": "venir",
+      "a\u016d": "ou",
+      "ricevis": "recevoir",
+      "eldono": "\u00e9dition",
+      "aliaj": "autre",
+      "apud": "pr\u00e8s de, \u00e0 c\u00f4t\u00e9 de",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "skota": "\u00e9cossais",
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "poemoj": "po\u00e8me",
+      "rusaj": "russe",
+      "jam": "d\u00e9j\u00e0",
+      "lo\u011dantoj": "habitant, occupant",
+      "li": "il, lui, le",
+      "\u0109ar": "parce que",
+      "kvankam": "bien que, quoique",
+      "uzado": "utilisation",
+      "vizitantoj": "visiter",
+      "\u0135us": "\u00e0 l'instant, justement",
+      "por": "pour, dans le but de",
+      "sia": "se, s', soi",
+      "tiom": "tant (de), autant",
+      "da\u016dre": "continuellement, durablement",
+      "tradukoj": "traduction",
+      "akiris": "acqu\u00e9rir, obtenir, se procurer",
+      "ekzempleron": "exemplaire",
+      "januaro": "janvier",
+      "plej": "le plus, la plus",
+      "\u0109inaj": "chinois, chinoise",
+      "a\u0109etas": "acheter",
+      "malgranda": "petit",
+      "aperas": "appara\u00eetre",
+      "entreprenitaj": "entreprendre",
+      "kiu": "qui",
+      "plezuro": "plaisir",
+      "vigle": "vigoureusement, vivement",
+      "al": "\u00e0, vers",
+      "moskvo": "Moscou",
+      "inter": "entre, parmi",
+      "polaj": "polonais",
+      "liaj": "son, sa",
+      "lingvo": "langue",
+      "de": "de",
+      "estas": "\u00eatre",
+      "belan": "beau, belle",
+      "hungaraj": "hongrois, hongroise",
+      "min": "je",
+      "dum": "durant, pendant, pendant que",
+      "generacioj": "g\u00e9n\u00e9ration",
+      "nokto": "nuit",
+      "\u0109iu": "chaque, chacun",
+      "ekzemplerojn": "exemplaire",
+      "kie": "o\u00f9",
+      "anglaj": "anglais",
+      "lingvoj": "langue",
+      "sistemo": "syst\u00e8me d'\u00e9quations, syst\u00e8me",
+      "mi": "je",
+      "informis": "informer",
+      "volumon": "volume, tome",
+      "kun": "avec",
+      "paro\u0125oj": "paroisse",
+      "legas": "lire",
+      "kio": "quoi, que",
+      "kultivis": "cultiver",
+      "nur": "seulement",
+      "oni": "on",
+      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Evidente la enhavo pli ol la lingvo a\u016d la stilo rekomendis la poezion de Burns al milionoj en multaj landoj dum preska\u016d du jarcentoj post lia unua eldono en 1786. Post malpli ol unu jaro jam aperis usona eldono; la presisto konstatis, ke li trovos pretan merkaton por la malka\u015daj radikalaj demokratiaj dira\u0135oj de la skota poeto. La unua poemo mem, La Du Hundoj, en la malnova tradicio de la bestfablo, konsistas el konversacio inter la Newfoundland-dorlothundo (Caesar) de terposedanto, kaj la \u015dafhundo de plugisto (Luath), pri socio kaj politiko. Burns vivis dum ekonomia revolucio, kiam la agentoj de la terposedantoj ofte senkompate forpelis familiojn de la bienoj por faciligi agrikulturajn plibonigojn. La \u015dafhundo de la plugisto komentas:",
+    "vortaro": {
+      "enhavo": "contenu, teneur",
+      "komentas": "commenter",
+      "jarcentoj": "si\u00e8cle",
+      "tradicio": "tradition",
+      "rekomendis": "recommander",
+      "post": "apr\u00e8s",
+      "stilo": "style",
+      "bienoj": "fonds, bien foncier",
+      "multaj": "beaucoup de, peu de",
+      "unua": "premier, premi\u00e8re",
+      "merkaton": "d\u00e9bouch\u00e9 commercial, march\u00e9",
+      "usona": "am\u00e9ricain",
+      "hundoj": "chien",
+      "en": "dans",
+      "mem": "soi-m\u00eame",
+      "kaj": "et",
+      "konversacio": "conversation",
+      "el": "hors de, de",
+      "ol": "que (dans une comparaison)",
+      "forpelis": "chasser, effaroucher",
+      "poeto": "po\u00e8te",
+      "presisto": "imprimeur",
+      "pretan": "pr\u00eat",
+      "la": "le, la, les",
+      "a\u016d": "ou",
+      "eldono": "\u00e9dition",
+      "jaro": "ann\u00e9e",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "skota": "\u00e9cossais",
+      "landoj": "pays",
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "milionoj": "million",
+      "jam": "d\u00e9j\u00e0",
+      "du": "deux",
+      "agentoj": "agent",
+      "li": "il, lui, le",
+      "por": "pour, dans le but de",
+      "pri": "\u00e0 propos de",
+      "malpli": "moins",
+      "trovos": "trouver",
+      "vivis": "vivre",
+      "poemo": "po\u00e8me",
+      "demokratiaj": "d\u00e9mocratique",
+      "\u015dafhundo": "chien de berger",
+      "ekonomia": "\u00e9conomique",
+      "konstatis": "constater (que)",
+      "al": "\u00e0, vers",
+      "evidente": "\u00e9videmment, \u00e0 l'\u00e9vidence",
+      "konsistas": "consister (en), se composer (de)",
+      "familiojn": "famille",
+      "lia": "il, lui, le",
+      "kiam": "quand",
+      "inter": "entre, parmi",
+      "lingvo": "langue",
+      "de": "de",
+      "ofte": "souvent, fr\u00e9quemment",
+      "dum": "durant, pendant, pendant que",
+      "preska\u016d": "presque",
+      "faciligi": "all\u00e9ger, att\u00e9nuer, faciliter, simplifier, soulager",
+      "politiko": "politique",
+      "poezion": "po\u00e9sie",
+      "socio": "soci\u00e9t\u00e9",
+      "revolucio": "r\u00e9volution",
+      "aperis": "appara\u00eetre"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tre multaj homoj plej honestaj,",
+    "vortaro": {
+      "tre": "tr\u00e8s",
+      "plej": "le plus, la plus",
+      "multaj": "beaucoup de, peu de",
+      "homoj": "\u00eatre humain, homme",
+      "honestaj": "honn\u00eate"
+    }
+  },
+  {
+    "teksto": "Virtemaj, decaj kaj modestaj,",
+    "vortaro": {
+      "decaj": "appropri\u00e9, convenable, d\u00e9cent",
+      "kaj": "et",
+      "modestaj": "modeste"
+    }
+  },
+  {
+    "teksto": "Estas krudmane forpelitaj",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "forpelitaj": "chasser, effaroucher"
+    }
+  },
+  {
+    "teksto": "De orgojluloj mon-avidaj\u2026",
+    "vortaro": {
+      "de": "de"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Samtempe Burns \u0109iam rigardis la individuan homon, kaj ne kondamnis individuojn simple pro ilia klasa aparteno. La sama hundo poste komentas pri la terposedantoj:",
+    "vortaro": {
+      "poste": "ensuite, puis",
+      "kondamnis": "condamner \u00e0 mort, condamner \u00e0 la peine capitale, condamner, accabler, convaincre, d\u00e9clarer coupable, punir, censurer, d\u00e9fendre, ",
+      "la": "le, la, les",
+      "homon": "\u00eatre humain, homme",
+      "komentas": "commenter",
+      "pri": "\u00e0 propos de",
+      "individuan": "individuel",
+      "individuojn": "individu",
+      "\u0109iam": "toujours",
+      "sama": "le m\u00eame, la m\u00eame, identique, pareil(le)",
+      "ne": "non, ne... pas",
+      "hundo": "chien",
+      "pro": "\u00e0 cause de, pour",
+      "kaj": "et",
+      "rigardis": "regarder",
+      "ilia": "ils, elles, eux"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "El tiu brava trup\u2019 fervora",
+    "vortaro": {
+      "brava": "brave, courageux",
+      "fervora": "ardent, fervent, passionn\u00e9",
+      "tiu": "ce, cet(te)",
+      "el": "hors de, de"
+    }
+  },
+  {
+    "teksto": "Neniu estas malickora.",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "neniu": "personne"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Burns havis potencan intelekton, kaj kapablis partopreni la intelektajn diskutojn de la edinburga socio, en epoko kiam la Edinburga Universitato trovi\u011dis inter la du-tri kulturaj centroj de la mondo. Sed lia koro, la fonto de emocio, emis venki lian kapon, kaj li mem skribis: \u201cLa koro, la mentoro de bono kaj malbon\u2019.\u201d",
+    "vortaro": {
+      "la": "le, la, les",
+      "lian": "son, sa",
+      "mentoro": "mentor",
+      "kapon": "t\u00eate",
+      "bono": "bien, le mieux est l'ennemi du bien, bonne action",
+      "trovi\u011dis": "se trouver",
+      "emis": "incliner \u00e0",
+      "intelektajn": "intellectuel",
+      "venki": "d\u00e9faire, vaincre",
+      "koro": "c\u0153ur",
+      "emocio": "\u00e9motion",
+      "kaj": "et",
+      "en": "dans",
+      "kapablis": "\u00eatre capable de, \u00eatre apte \u00e0",
+      "centroj": "centre",
+      "mem": "soi-m\u00eame",
+      "fonto": "source, puits, cause, origine",
+      "kulturaj": "cultiv\u00e9, culturel",
+      "skribis": "\u00e9crire",
+      "sed": "mais",
+      "epoko": "\u00e9poque, \u00e2ge",
+      "intelekton": "intellect, intelligence",
+      "kiam": "quand",
+      "lia": "il, lui, le",
+      "inter": "entre, parmi",
+      "havis": "avoir",
+      "li": "il, lui, le",
+      "socio": "soci\u00e9t\u00e9",
+      "diskutojn": "discussion",
+      "universitato": "universit\u00e9",
+      "mondo": "monde",
+      "potencan": "puissant",
+      "de": "de"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\u011custe pro la impulsoj de sia koro Burns enreti\u011dis en amaferojn, kiuj inspiris multajn el liaj plej belaj kantoj, kaj kondukis al okazaj malagrabla\u0135oj kun la eklezia a\u016dtoritato. Jean Armour, la bonkora edzino de la Poeto, traktis trankvilanime la deviojn de sia pasia edzo, simple komentante, \u201cNia Ro\u0109jo estus devinta havi du edzinojn,\u201d e\u0109 kiam li alportis en la hejmon, por ke \u015di lin vartu, la bastardan infanon, kiun naskis al li servistino en la loka trinkejo en Dumfries. Malamante hipokritecon, Burns verkis satirojn kiel La Pre\u011do de Pia Vil\u0109jo pri hipokritaj personecoj en la eklezia ortodoksio.",
+    "vortaro": {
+      "por": "pour, dans le but de",
+      "la": "le, la, les",
+      "sia": "se, s', soi",
+      "kiuj": "qui",
+      "e\u0109": "m\u00eame, et en plus",
+      "kiun": "qui",
+      "pri": "\u00e0 propos de",
+      "traktis": "traiter",
+      "malamante": "d\u00e9tester",
+      "hipokritecon": "hypocrisie",
+      "edzinojn": "\u00e9pouse",
+      "malagrabla\u0135oj": "chose d\u00e9sagr\u00e9able, d\u00e9plaisir, d\u00e9sagr\u00e9ment, inconv\u00e9nient",
+      "infanon": "enfant",
+      "bonkora": "qui a bon c\u0153ur, charitable",
+      "personecoj": "personnalit\u00e9",
+      "deviojn": "d\u00e9viation",
+      "plej": "le plus, la plus",
+      "a\u016dtoritato": "autorit\u00e9",
+      "kantoj": "chanson, chant",
+      "kiel": "comment, comme",
+      "pro": "\u00e0 cause de, pour",
+      "pia": "d\u00e9vot, pieux",
+      "lin": "il, lui, le",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "hejmon": "maison, domicile (chez soi)",
+      "nia": "nous",
+      "pasia": "passionn\u00e9",
+      "komentante": "commenter",
+      "amaferojn": "aventure, liaison",
+      "koro": "c\u0153ur",
+      "kun": "avec",
+      "servistino": "servante",
+      "verkis": "composer, \u00e9crire",
+      "hipokritaj": "hypocrite",
+      "en": "dans",
+      "kaj": "et",
+      "al": "\u00e0, vers",
+      "\u011duste": "juste, justement, bien, convenablement, correctement, exactement, pr\u00e9cis\u00e9ment",
+      "du": "deux",
+      "kondukis": "avec sa langue on va partout, \u00e0 quelque chose malheur est toujours bon, on hasarde de perdre en voulant trop gagner, le menteur ",
+      "\u015di": "elle",
+      "edzino": "\u00e9pouse",
+      "multajn": "plusieurs",
+      "el": "hors de, de",
+      "edzo": "\u00e9poux, mari",
+      "naskis": "mettre au monde, enfanter",
+      "kiam": "quand",
+      "poeto": "po\u00e8te",
+      "havi": "avoir",
+      "vartu": "prendre soin",
+      "pre\u011do": "pri\u00e8re",
+      "li": "il, lui, le",
+      "loka": "local",
+      "liaj": "son, sa",
+      "belaj": "beau, belle",
+      "satirojn": "satire",
+      "de": "de",
+      "estus": "\u00eatre",
+      "devinta": "devoir"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Kiel kritikanto de politikaj moroj, Burns ne timis paroli kontra\u016d la senkoraj intrigoj de la kortegoj kaj aristokrataro luktantaj por privilegioj. Li demandis:",
+    "vortaro": {
+      "luktantaj": "lutter",
+      "por": "pour, dans le but de",
+      "la": "le, la, les",
+      "politikaj": "politique",
+      "kontra\u016d": "contre",
+      "ne": "non, ne... pas",
+      "intrigoj": "intrigue, cabale, complot, manoeliguvre, magouille",
+      "kiel": "comment, comme",
+      "kritikanto": "la critique est facile, l'art est difficile, critiquer",
+      "moroj": "autres temps autres moeligurs, moeligurs, style de vie, usages",
+      "timis": "craindre, avoir peur",
+      "kaj": "et",
+      "paroli": "parler",
+      "senkoraj": "cruel, insensible",
+      "li": "il, lui, le",
+      "de": "de",
+      "demandis": "interroger, demander"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Kial pli bonstatas unu,",
+    "vortaro": {
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "kial": "pourquoi"
+    }
+  },
+  {
+    "teksto": "Se l\u2019 homoj fratas?",
+    "vortaro": {
+      "homoj": "\u00eatre humain, homme",
+      "se": "si (indique une condition)"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Kaj li advokatis la fundamentan valoron de la ordinaraj homoj:",
+    "vortaro": {
+      "ordinaraj": "commun, ordinaire",
+      "la": "le, la, les",
+      "li": "il, lui, le",
+      "kaj": "et",
+      "homoj": "\u00eatre humain, homme",
+      "valoron": "valeur",
+      "fundamentan": "pierre angulaire, de fondation, fondamental",
+      "de": "de"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "La rang\u2019 - la homon stampas nur,",
+    "vortaro": {
+      "homon": "\u00eatre humain, homme",
+      "la": "le, la, les",
+      "nur": "seulement"
+    }
+  },
+  {
+    "teksto": "Sed estas hom\u2019 la oro!*",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "la": "le, la, les",
+      "oro": "or",
+      "sed": "mais"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Burns aprobis la batalon de la amerikaj koloniistoj por sendependeco dum la 1770-aj jaroj, kaj anka\u016d la Francan Revolucion dum \u011dia plej frua fazo de aspiro al Libereco, Egaleco kaj Frateco, \u0109ar li anta\u016dvidis epokon kiam \u201chomo sur la tuta mond\u2019 por homo estos frato\u201d*. Sed la teroran kaj tiranan evoluon de la Revolucio li kontra\u016dis.",
+    "vortaro": {
+      "revolucio": "r\u00e9volution",
+      "por": "pour, dans le but de",
+      "la": "le, la, les",
+      "estos": "\u00eatre",
+      "kontra\u016dis": "s'opposer \u00e0",
+      "aspiro": "aspiration",
+      "sur": "sur",
+      "dum": "durant, pendant, pendant que",
+      "revolucion": "r\u00e9volution",
+      "frua": "de bon matin, anticip\u00e9, h\u00e2tif, pr\u00e9coce",
+      "jaroj": "ann\u00e9e",
+      "homo": "\u00eatre humain, homme",
+      "plej": "le plus, la plus",
+      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
+      "anta\u016dvidis": "pr\u00e9vision, pr\u00e9voir",
+      "tiranan": "tyrannique",
+      "francan": "fran\u00e7ais",
+      "frateco": "fraternit\u00e9",
+      "evoluon": "\u00e9volution",
+      "batalon": "bataille, combat",
+      "kaj": "et",
+      "al": "\u00e0, vers",
+      "fazo": "phase, \u00e9tape, stade",
+      "libereco": "libert\u00e9",
+      "sed": "mais",
+      "aprobis": "approuver, agr\u00e9er",
+      "egaleco": "\u00e9galit\u00e9",
+      "kiam": "quand",
+      "anka\u016d": "aussi",
+      "li": "il, lui, le",
+      "frato": "fr\u00e8re",
+      "epokon": "\u00e9poque, \u00e2ge",
+      "de": "de",
+      "\u0109ar": "parce que",
+      "\u011dia": "il, elle"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "La arda koro de Burns estis plenplena de simpatio anka\u016d por la bestoj, kiel ekzemple montras lia poemo al la muso, kies neston li renversis per la plugilo, a\u016d la novjara saluto al lia maljuna \u0109evalino Manjo. Li verkis senteme pri la fundamenta aferoj de la familio, kiel ekzemple en La Sabatvespero de la Kamparano.",
+    "vortaro": {
+      "por": "pour, dans le but de",
+      "la": "le, la, les",
+      "pri": "\u00e0 propos de",
+      "a\u016d": "ou",
+      "muso": "souris",
+      "saluto": "bonjour!, salut!, salutation, salut",
+      "poemo": "po\u00e8me",
+      "simpatio": "sympathie",
+      "kiel": "comment, comme",
+      "familio": "famille",
+      "plugilo": "charrue",
+      "koro": "c\u0153ur",
+      "verkis": "composer, \u00e9crire",
+      "ekzemple": "par exemple",
+      "neston": "nid",
+      "en": "dans",
+      "al": "\u00e0, vers",
+      "kies": "de qui, \u00e0 qui, dont, duquel",
+      "aferoj": "affaire, sujet, chose",
+      "kamparano": "campagnard, paysan",
+      "bestoj": "b\u00eate, animal",
+      "estis": "\u00eatre",
+      "lia": "il, lui, le",
+      "plenplena": "compl\u00e8tement plein, rempli",
+      "anka\u016d": "aussi",
+      "li": "il, lui, le",
+      "fundamenta": "pierre angulaire, de fondation, fondamental",
+      "\u0109evalino": "jument",
+      "arda": "ardent, chaud, chauff\u00e9 \u00e0 blanc, incandescent, passionn\u00e9, torride",
+      "montras": "montrer, d\u00e9signer",
+      "de": "de",
+      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Kreo al beboj kaj edzino",
+    "vortaro": {
+      "beboj": "b\u00e9b\u00e9",
+      "kaj": "et",
+      "al": "\u00e0, vers",
+      "kreo": "cr\u00e9ation",
+      "edzino": "\u00e9pouse"
+    }
+  },
+  {
+    "teksto": "De \u011doj\u2019 endoma",
+    "vortaro": {
+      "de": "de"
+    }
+  },
+  {
+    "teksto": "Estas la celo kaj kulmino",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "la": "le, la, les",
+      "kulmino": "culmination, sommet, cime",
+      "kaj": "et",
+      "celo": "but, objectif"
+    }
+  },
+  {
+    "teksto": "De l\u2019 vivo homa.",
+    "vortaro": {
+      "de": "de",
+      "vivo": "vie",
+      "homa": "inhumain, humain"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Li estis krome poeto de amikeco kaj sociemo, kaj opiniis, ke la mondo estas kreita fundamente por la vivo homa:",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "poeto": "po\u00e8te",
+      "por": "pour, dans le but de",
+      "la": "le, la, les",
+      "opiniis": "\u00eatre d'avis, penser, croire",
+      "sociemo": "sociabilit\u00e9",
+      "li": "il, lui, le",
+      "kaj": "et",
+      "kreita": "l'occasion fait le larron, cr\u00e9er",
+      "homa": "inhumain, humain",
+      "krome": "de plus, en outre",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "amikeco": "amiti\u00e9",
+      "vivo": "vie",
+      "mondo": "monde",
+      "de": "de",
+      "estis": "\u00eatre"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\u0108ar tekstis jene testamento,",
+    "vortaro": {
+      "tekstis": "voici ce que dit la phrase",
+      "\u0109ar": "parce que",
+      "jene": "de la mani\u00e8re suivante",
+      "testamento": "testament"
+    }
+  },
+  {
+    "teksto": "Kiam ekestis homa gento:",
+    "vortaro": {
+      "gento": "gens, lign\u00e9e, peuplade",
+      "kiam": "quand",
+      "homa": "inhumain, humain",
+      "ekestis": "survenir"
+    }
+  },
+  {
+    "teksto": "Honesta hom\u2019 kun arda sento",
+    "vortaro": {
+      "kun": "avec",
+      "honesta": "honn\u00eate",
+      "arda": "ardent, chaud, chauff\u00e9 \u00e0 blanc, incandescent, passionn\u00e9, torride",
+      "sento": "sentiment"
+    }
+  },
+  {
+    "teksto": "Por samsortano",
+    "vortaro": {
+      "por": "pour, dans le but de"
+    }
+  },
+  {
+    "teksto": "Estas la sofa plenumanto",
+    "vortaro": {
+      "plenumanto": "accomplir",
+      "estas": "\u00eatre",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "De l\u2019 naturplano.",
+    "vortaro": {
+      "de": "de"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Kun tia sento \u0109iujare, \u0109irka\u016d la 25-a de januaro, kunsidoj sur kvin kontinentoj festas la Senmortan Memoron pri Robert Burns.",
+    "vortaro": {
+      "\u0109irka\u016d": "autour de, environ",
+      "kun": "avec",
+      "la": "le, la, les",
+      "kvin": "cinq",
+      "pri": "\u00e0 propos de",
+      "festas": "f\u00eater",
+      "sur": "sur",
+      "memoron": "souvenir, m\u00e9moire",
+      "tia": "tel(le), telle sorte de",
+      "kontinentoj": "continent",
+      "de": "de",
+      "januaro": "janvier",
+      "sento": "sentiment"
+    }
+  }
+]

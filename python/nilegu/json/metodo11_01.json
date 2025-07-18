@@ -1,0 +1,138 @@
+[
+  {
+    "teksto": "Marko: Saluton! Mi nomi\u011das Marko. Mi estas lernanto kaj sportisto. Nun",
+    "vortaro": {
+      "lernanto": "apprendre",
+      "mi": "je",
+      "estas": "\u00eatre",
+      "kaj": "et",
+      "sportisto": "sportif",
+      "marko": "marque (tous les sens)",
+      "nomi\u011das": "s'appeler, se nommer",
+      "nun": "maintenant",
+      "saluton": "bonjour!, salut!, salutation, salut"
+    }
+  },
+  {
+    "teksto": "mi sidas sur se\u011do kaj lernas. Anta\u016d mi staras skribotablo. Sur la",
+    "vortaro": {
+      "mi": "je",
+      "lernas": "apprendre",
+      "la": "le, la, les",
+      "kaj": "et",
+      "sur": "sur",
+      "staras": "se tenir debout, \u00eatre debout",
+      "anta\u016d": "avant, en avant de, devant",
+      "se\u011do": "chaise",
+      "sidas": "\u00eatre assis(e)"
+    }
+  },
+  {
+    "teksto": "skribotablo estas komputilo. En \u011di estas elektronikaj libroj. Ili estas",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "libroj": "livre",
+      "en": "dans",
+      "\u011di": "il, elle",
+      "ili": "ils, elles, eux",
+      "komputilo": "ordinateur, calculateur, calculatrice"
+    }
+  },
+  {
+    "teksto": "interesaj. Sur la ekrano estas fotoj de sportistoj kaj foto de knabino.",
+    "vortaro": {
+      "sportistoj": "sportif",
+      "estas": "\u00eatre",
+      "fotoj": "photo",
+      "la": "le, la, les",
+      "kaj": "et",
+      "knabino": "fille, jeune fille",
+      "sur": "sur",
+      "foto": "photo",
+      "interesaj": "int\u00e9ressant(e)",
+      "de": "de",
+      "ekrano": "\u00e9cran"
+    }
+  },
+  {
+    "teksto": "\u0108u vi ne demandas, kiu \u015di estas? \u015ci nomi\u011das Ana kaj estas amikino.",
+    "vortaro": {
+      "demandas": "interroger, demander",
+      "estas": "\u00eatre",
+      "kiu": "qui",
+      "kaj": "et",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
+      "amikino": "amie",
+      "\u015di": "elle",
+      "nomi\u011das": "s'appeler, se nommer",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "Patro: Bonan tagon! Mi estas sinjoro Rapid, la patro. Li estas la filo.",
+    "vortaro": {
+      "mi": "je",
+      "estas": "\u00eatre",
+      "patro": "p\u00e8re",
+      "bonan": "bon,  bonne",
+      "sinjoro": "monsieur",
+      "la": "le, la, les",
+      "filo": "fils",
+      "li": "il, lui, le",
+      "tagon": "jour"
+    }
+  },
+  {
+    "teksto": "Vi demandas, kio mi estas: mi estas laboristo en fabriko.",
+    "vortaro": {
+      "demandas": "interroger, demander",
+      "estas": "\u00eatre",
+      "mi": "je",
+      "kio": "quoi, que",
+      "en": "dans",
+      "vi": "tu, vous",
+      "fabriko": "fabrique, usine",
+      "laboristo": "classe ouvri\u00e8re, ouvrier, travailleur"
+    }
+  },
+  {
+    "teksto": "Patrino: Mi ne laboras en fabriko. Mi estas la patrino kaj mi instruas. Mi",
+    "vortaro": {
+      "laboras": "travailler",
+      "mi": "je",
+      "estas": "\u00eatre",
+      "la": "le, la, les",
+      "instruas": "enseigner",
+      "en": "dans",
+      "kaj": "et",
+      "fabriko": "fabrique, usine",
+      "patrino": "m\u00e8re",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "laboras anka\u016d en la domo. \u0108u vi scias, ke estas multe da laboro en",
+    "vortaro": {
+      "laboras": "travailler",
+      "estas": "\u00eatre",
+      "la": "le, la, les",
+      "anka\u016d": "aussi",
+      "en": "dans",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "laboro": "travail",
+      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
+      "domo": "maison",
+      "scias": "savoir",
+      "multe": "beaucoup"
+    }
+  },
+  {
+    "teksto": "domo?",
+    "vortaro": {
+      "domo": "maison"
+    }
+  }
+]

@@ -1,0 +1,257 @@
+[
+  {
+    "teksto": "En la koridoro",
+    "vortaro": {
+      "koridoro": "couloir, corridor",
+      "en": "dans",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "(En la koridoro)",
+    "vortaro": {
+      "koridoro": "couloir, corridor",
+      "en": "dans",
+      "la": "le, la, les"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Jen \u015di estas. Ni pravis. \u015ci apena\u016d havis la tempon alveni \u011dis la angulo, jam \u015di falis. Videble, \u015di estas nekonscia. \u015ci perdis la konscion kaj falis.",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "la": "le, la, les",
+      "apena\u016d": "\u00e0 peine",
+      "ni": "nous",
+      "tempon": "temps",
+      "falis": "tomber",
+      "\u011dis": "jusqu'\u00e0",
+      "pravis": "avoir raison, \u00eatre correct",
+      "alveni": "arriver",
+      "kaj": "et",
+      "jam": "d\u00e9j\u00e0",
+      "angulo": "coin, angle",
+      "\u015di": "elle",
+      "konscion": "conscience",
+      "havis": "avoir",
+      "perdis": "perdre",
+      "jen": "voici"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: \u0108u \u015di ankora\u016d vivas?",
+    "vortaro": {
+      "ankora\u016d": "encore",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "\u015di": "elle",
+      "vivas": "vivre"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Jes. Ne timu. \u015ci perdis la konscion, sed \u015di ne perdis la vivon. La koro batas. \u011ci batas malforte, sed tamen batas. \u015ci do vivas. Eble \u015di apena\u016d vivas, sed \u015di vivas.",
+    "vortaro": {
+      "la": "le, la, les",
+      "apena\u016d": "\u00e0 peine",
+      "\u011di": "il, elle",
+      "vivas": "vivre",
+      "batas": "battre, frapper",
+      "ne": "non, ne... pas",
+      "jes": "oui, d'accord",
+      "timu": "craindre, avoir peur",
+      "vivon": "vie",
+      "do": "donc",
+      "koro": "c\u0153ur",
+      "\u015di": "elle",
+      "sed": "mais",
+      "konscion": "conscience",
+      "eble": "peut-\u00eatre, possiblement",
+      "tamen": "n\u00e9anmoins, toutefois, quand m\u00eame, cependant",
+      "perdis": "perdre"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Kion ni faru?",
+    "vortaro": {
+      "kion": "quoi, que",
+      "ni": "nous",
+      "faru": "faire"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: \u015cajnas, ke \u015di dormas.",
+    "vortaro": {
+      "dormas": "dormir",
+      "\u015dajnas": "sembler, avoir l'air",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "\u015di": "elle"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Ni devas informi la a\u016dtoritatojn. Tuj. Mi iros. Ili eble decidos voki doktoron, kuraciston, kaj almena\u016d tuj sendos flegistinon. Certe estas flegistino en \u0109i tiu universitato, \u0109u ne?",
+    "vortaro": {
+      "flegistinon": "infirmi\u00e8re",
+      "estas": "\u00eatre",
+      "la": "le, la, les",
+      "certe": "certainement",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "ni": "nous",
+      "decidos": "d\u00e9cider",
+      "almena\u016d": "au moins, du moins",
+      "ne": "non, ne... pas",
+      "voki": "appeler",
+      "iros": "aller",
+      "tuj": "imm\u00e9diatement, sur le champ",
+      "a\u016dtoritatojn": "autorit\u00e9",
+      "doktoron": "docteur",
+      "\u0109i": "(indique la proximit\u00e9)",
+      "informi": "informer",
+      "mi": "je",
+      "devas": "devoir",
+      "kaj": "et",
+      "sendos": "envoyer, exp\u00e9dier",
+      "en": "dans",
+      "tiu": "ce, cet(te)",
+      "eble": "peut-\u00eatre, possiblement",
+      "flegistino": "infirmi\u00e8re",
+      "kuraciston": "m\u00e9decin",
+      "universitato": "universit\u00e9",
+      "ili": "ils, elles, eux"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Ver\u015dajne, sed mi ne scias certe. Mi estas \u0109i tie apena\u016d unu semajnon.",
+    "vortaro": {
+      "mi": "je",
+      "estas": "\u00eatre",
+      "ver\u015dajne": "probablement",
+      "certe": "certainement",
+      "apena\u016d": "\u00e0 peine",
+      "semajnon": "semaine",
+      "\u0109i": "(indique la proximit\u00e9)",
+      "sed": "mais",
+      "scias": "savoir",
+      "tie": "ici, l\u00e0",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Nu, mi tuj iros informi ilin. Restu \u0109i tie kun \u015di. Sed ni unue metu \u015din pli bone, ke \u015di ku\u015du komforte, kun la piedoj pli altaj ol la kapo.",
+    "vortaro": {
+      "metu": "mettre, poser, placer",
+      "la": "le, la, les",
+      "ilin": "ils, elles, eux",
+      "ni": "nous",
+      "\u015din": "elle",
+      "nu": "allons, bien, eh bien\u2026 ",
+      "iros": "aller",
+      "tuj": "imm\u00e9diatement, sur le champ",
+      "restu": "rester",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "\u0109i": "(indique la proximit\u00e9)",
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "informi": "informer",
+      "mi": "je",
+      "unue": "premi\u00e8rement, d'abord",
+      "bone": "bien",
+      "kun": "avec",
+      "komforte": "\u00eates-vous \u00e0 votre aise?, confortablement, \u00e0 son aise",
+      "kapo": "t\u00eate",
+      "\u015di": "elle",
+      "sed": "mais",
+      "tie": "ici, l\u00e0",
+      "ol": "que (dans une comparaison)",
+      "ku\u015du": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
+      "piedoj": "pied",
+      "altaj": "haut(e)"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: \u0108u vere? \u0108u vere vi volas, ke \u015di ku\u015du kun la piedoj pli altaj ol la kapo? Tio ne estas komforta.",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "la": "le, la, les",
+      "volas": "vouloir",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "ne": "non, ne... pas",
+      "tio": "ce, cela, \u00e7a",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "kun": "avec",
+      "vere": "vraiment",
+      "kapo": "t\u00eate",
+      "\u015di": "elle",
+      "ol": "que (dans une comparaison)",
+      "ku\u015du": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
+      "vi": "tu, vous",
+      "komforta": "confortable",
+      "piedoj": "pied",
+      "altaj": "haut(e)"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Tamen, kiam iu perdis la konscion, tio estas la \u011dusta pozicio, se mi bone memoras, kion oni instruis al mi.",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "pozicio": "position",
+      "la": "le, la, les",
+      "tio": "ce, cela, \u00e7a",
+      "bone": "bien",
+      "mi": "je",
+      "memoras": "se souvenir, se rappeler",
+      "al": "\u00e0, vers",
+      "konscion": "conscience",
+      "tamen": "n\u00e9anmoins, toutefois, quand m\u00eame, cependant",
+      "kiam": "quand",
+      "se": "si (indique une condition)",
+      "instruis": "enseigner",
+      "perdis": "perdre",
+      "iu": "quelqu'un",
+      "kion": "quoi, que",
+      "oni": "on",
+      "\u011dusta": "justesse, juste, bon, convenable, correct, exact, propre"
+    }
+  }
+]

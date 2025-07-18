@@ -1,0 +1,477 @@
+[
+  {
+    "teksto": "Linda havas ideon",
+    "vortaro": {
+      "ideon": "id\u00e9e",
+      "havas": "avoir",
+      "linda": "jolie"
+    }
+  },
+  {
+    "teksto": "Linda ekhavis ideon. \u015ci aliris la junan blondan viron, dum li proksimi\u011dis al sia a\u016dto, kaj alparolis lin:",
+    "vortaro": {
+      "junan": "jeune",
+      "aliris": "acc\u00e8s, aborder, s'approcher, accoster",
+      "ideon": "id\u00e9e",
+      "linda": "jolie",
+      "la": "le, la, les",
+      "sia": "se, s', soi",
+      "li": "il, lui, le",
+      "kaj": "et",
+      "al": "\u00e0, vers",
+      "viron": "homme, m\u00e2le",
+      "lin": "il, lui, le",
+      "\u015di": "elle",
+      "alparolis": "adresser la parole \u00e0",
+      "dum": "durant, pendant, pendant que",
+      "a\u016dto": "voiture, automobile",
+      "proksimi\u011dis": "s'approcher",
+      "blondan": "blond(e)"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Sinjoro, \u0109u vi bonvolus helpi al mi?\"",
+    "vortaro": {
+      "mi": "je",
+      "sinjoro": "monsieur",
+      "al": "\u00e0, vers",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
+      "bonvolus": "bien vouloir",
+      "helpi": "aider"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Li turnis sin al \u015di kun viza\u011do \u015dajne ne tre kontenta, kaj \u015din rigardis dum longa senvorta minuto.",
+    "vortaro": {
+      "turnis": "tourner",
+      "tre": "tr\u00e8s",
+      "kun": "avec",
+      "minuto": "minute (temps)",
+      "li": "il, lui, le",
+      "kaj": "et",
+      "rigardis": "regarder",
+      "al": "\u00e0, vers",
+      "viza\u011do": "face, visage",
+      "longa": "long(ue)",
+      "\u015di": "elle",
+      "\u015din": "elle",
+      "dum": "durant, pendant, pendant que",
+      "\u015dajne": "apparemment",
+      "sin": "se, s', soi",
+      "kontenta": "content(e), satisfait(e)",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Kiel mi povus vin helpi?\" li fine demandis, kaj li tuj aldonis: \"Bonvolu pardoni min, se mi respondas nee, sed al mi tempo vere mankas. Mi devas ur\u011de veturi al la urbo.\"",
+    "vortaro": {
+      "la": "le, la, les",
+      "min": "je",
+      "veturi": "aller (en utilisant un v\u00e9hicule)",
+      "bonvolu": "bien vouloir",
+      "tuj": "imm\u00e9diatement, sur le champ",
+      "povus": "pouvoir, \u00eatre capable de",
+      "kiel": "comment, comme",
+      "aldonis": "ajouter",
+      "mi": "je",
+      "urbo": "ville",
+      "devas": "devoir",
+      "vere": "vraiment",
+      "kaj": "et",
+      "respondas": "r\u00e9pondre",
+      "al": "\u00e0, vers",
+      "mankas": "manquer de",
+      "sed": "mais",
+      "tempo": "temps",
+      "se": "si (indique une condition)",
+      "pardoni": "pardonner",
+      "li": "il, lui, le",
+      "fine": "au final, finalement, enfin",
+      "vin": "tu, vous",
+      "demandis": "interroger, demander",
+      "helpi": "aider"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"\u011custe tiel vi povas min helpi. Mia a\u016dto paneas. Io estas fu\u015dita en \u011di. Mi ne sukcesas \u011din irigi\u2026\"",
+    "vortaro": {
+      "paneas": "\u00eatre en panne",
+      "estas": "\u00eatre",
+      "mia": "je",
+      "min": "je",
+      "\u011di": "il, elle",
+      "ne": "non, ne... pas",
+      "irigi": "faire aller, faire marcher, faire fonctionner, conduire",
+      "a\u016dto": "voiture, automobile",
+      "sukcesas": "r\u00e9ussir, avoir du succ\u00e8s",
+      "mi": "je",
+      "en": "dans",
+      "\u011duste": "juste, justement, bien, convenablement, correctement, exactement, pr\u00e9cis\u00e9ment",
+      "tiel": "ainsi, comme \u00e7a",
+      "vi": "tu, vous",
+      "povas": "pouvoir, \u00eatre capable de",
+      "\u011din": "il, elle",
+      "io": "quelque chose",
+      "fu\u015dita": "faire rater, g\u00e2cher, bousiller",
+      "helpi": "aider"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Pardonu min, sed mi ne sukcesus rebonigi la aferon, e\u0109 kun plej granda bonvolo. Pri mekaniko mi scias nenion. Mi \u0109iam miras vidi, ke veturiloj entute funkcias. Kiam mi vidas motoron, \u0109iam mirigas min, ke tia \u015dajne senorda aran\u011do de pecoj kaj objektoj igas a\u016dton iri. Mi\u2026\"",
+    "vortaro": {
+      "funkcias": "fonctionner, marcher",
+      "la": "le, la, les",
+      "e\u0109": "m\u00eame, et en plus",
+      "igas": "faire, rendre",
+      "pri": "\u00e0 propos de",
+      "min": "je",
+      "mekaniko": "m\u00e9canique, m\u00e9canisme",
+      "rebonigi": "r\u00e9parer, remettre en \u00e9tat",
+      "\u0109iam": "toujours",
+      "ne": "non, ne... pas",
+      "pecoj": "morceau, bout, pinc\u00e9e",
+      "granda": "grand(e)",
+      "plej": "le plus, la plus",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "pardonu": "pardonner",
+      "tia": "tel(le), telle sorte de",
+      "vidi": "voir",
+      "veturiloj": "moyen de transport, v\u00e9hicule, traineau",
+      "a\u016dton": "voiture, automobile",
+      "mi": "je",
+      "kun": "avec",
+      "kaj": "et",
+      "miras": "s'\u00e9tonner",
+      "mirigas": "\u00e9merveiller",
+      "iri": "aller",
+      "aran\u011do": "combinaison, arrangement",
+      "vidas": "voir",
+      "sed": "mais",
+      "de": "de",
+      "scias": "savoir",
+      "kiam": "quand",
+      "aferon": "affaire, sujet, chose",
+      "objektoj": "objet, chose",
+      "motoron": "moteur",
+      "nenion": "rien",
+      "\u015dajne": "apparemment",
+      "entute": "en tout, au total",
+      "sukcesus": "r\u00e9ussir, avoir du succ\u00e8s"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Mi ne petas vin ripari mian veturilon, vi min miskomprenis. Mi demandas nur, \u0109u vi bonvolus akcepti min en via a\u016dto \u011dis la urbo.\"",
+    "vortaro": {
+      "la": "le, la, les",
+      "akcepti": "accepter",
+      "min": "je",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "ne": "non, ne... pas",
+      "ripari": "r\u00e9parer",
+      "\u011dis": "jusqu'\u00e0",
+      "a\u016dto": "voiture, automobile",
+      "via": "tu, vous",
+      "mi": "je",
+      "urbo": "ville",
+      "en": "dans",
+      "demandas": "interroger, demander",
+      "mian": "mon, ma",
+      "nur": "seulement",
+      "vi": "tu, vous",
+      "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
+      "bonvolus": "bien vouloir",
+      "vin": "tu, vous",
+      "veturilon": "moyen de transport, v\u00e9hicule, traineau"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "La ideo de Linda estis jena: sekvi lin estus dan\u011dere, sed se li veturos a\u016dte, mi petos lin akcepti, ke mi veturu kun li, kaj dum la veturado mi igos lin paroli. Mi diskrete faros \u015dajne banalajn demandojn, kaj paroligos lin. Tiel mi scios kiel eble plej multe pri li.",
+    "vortaro": {
+      "la": "le, la, les",
+      "akcepti": "accepter",
+      "pri": "\u00e0 propos de",
+      "petos": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
+      "dum": "durant, pendant, pendant que",
+      "banalajn": "banal(e)",
+      "multe": "beaucoup",
+      "plej": "le plus, la plus",
+      "jena": "celui-ci, celui-l\u00e0, ci-apr\u00e8s, le suivant",
+      "kiel": "comment, comme",
+      "lin": "il, lui, le",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "diskrete": "discr\u00e8tement, avec discr\u00e9tion",
+      "mi": "je",
+      "kun": "avec",
+      "linda": "jolie",
+      "faros": "faire",
+      "kaj": "et",
+      "igos": "faire, rendre",
+      "veturos": "aller (en utilisant un v\u00e9hicule)",
+      "tiel": "ainsi, comme \u00e7a",
+      "veturu": "aller (en utilisant un v\u00e9hicule)",
+      "sed": "mais",
+      "sekvi": "suivre",
+      "estis": "\u00eatre",
+      "paroli": "parler",
+      "demandojn": "question",
+      "eble": "peut-\u00eatre, possiblement",
+      "se": "si (indique une condition)",
+      "ideo": "id\u00e9e",
+      "li": "il, lui, le",
+      "scios": "savoir",
+      "\u015dajne": "apparemment",
+      "de": "de",
+      "estus": "\u00eatre"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Nu, bone,\" li fine konsentas. \"Konsentite, venu.\" Kaj li malfermas la pordon de la a\u016dto por \u015di.",
+    "vortaro": {
+      "bone": "bien",
+      "por": "pour, dans le but de",
+      "malfermas": "ouvrir",
+      "la": "le, la, les",
+      "li": "il, lui, le",
+      "fine": "au final, finalement, enfin",
+      "konsentite": "consentir, \u00eatre en accord",
+      "kaj": "et",
+      "a\u016dto": "voiture, automobile",
+      "\u015di": "elle",
+      "pordon": "porte",
+      "de": "de",
+      "nu": "allons, bien, eh bien\u2026 ",
+      "konsentas": "consentir, \u00eatre en accord",
+      "venu": "venir"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Dankon, vi vere estas tre afabla. Tio ege helpas min. Mi plej sincere dankas.\"",
+    "vortaro": {
+      "afabla": "affable, gentil(le)",
+      "mi": "je",
+      "estas": "\u00eatre",
+      "tre": "tr\u00e8s",
+      "plej": "le plus, la plus",
+      "vere": "vraiment",
+      "min": "je",
+      "tio": "ce, cela, \u00e7a",
+      "helpas": "aider",
+      "vi": "tu, vous",
+      "dankon": "merci, remerciement",
+      "ege": "extr\u00eamement",
+      "dankas": "remercier"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Ne dankinde,\" li respondas, iom seke. Kaj li ekirigas la motoron.",
+    "vortaro": {
+      "la": "le, la, les",
+      "iom": "un peu",
+      "li": "il, lui, le",
+      "kaj": "et",
+      "respondas": "r\u00e9pondre",
+      "motoron": "moteur",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Mi ne \u015datas la ideon, ke mi devos venigi ripariston, mekanikiston,\" \u015di diras. \"Mi tute ne \u015datas a\u016dtojn, fakte. Mi havas veturilon, \u0109ar estas tre oportune, sed mi ne \u015datas a\u016dtojn.\"",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "tre": "tr\u00e8s",
+      "la": "le, la, les",
+      "fakte": "en fait",
+      "ne": "non, ne... pas",
+      "diras": "dire",
+      "havas": "avoir",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "mi": "je",
+      "oportune": "ais\u00e9ment, opportun\u00e9ment",
+      "\u015datas": "appr\u00e9cier, aimer",
+      "a\u016dtojn": "voiture, automobile",
+      "\u015di": "elle",
+      "sed": "mais",
+      "ideon": "id\u00e9e",
+      "tute": "enti\u00e8rement, totalement",
+      "devos": "devoir",
+      "\u0109ar": "parce que",
+      "veturilon": "moyen de transport, v\u00e9hicule, traineau"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "La alta junulo nur silentas.",
+    "vortaro": {
+      "la": "le, la, les",
+      "nur": "seulement",
+      "junulo": "jeune",
+      "silentas": "\u00eatre silencieux",
+      "alta": "haut(e)"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Ne estas facile igi lin diri ion,\" pensas Linda, iom zorge, sin demandante, \u0109u estis sa\u011de enmiksi sin en tiun aventuron. \u015di forte deziras lin paroligi, sed samtempe timas malkontentigi lin. Neniam estas facile trovi plene kontentigan manieron agi.",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "manieron": "mani\u00e8re",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "trovi": "trouver",
+      "aventuron": "aventure",
+      "ne": "non, ne... pas",
+      "pensas": "penser",
+      "agi": "agir",
+      "forte": "fortement, tr\u00e8s",
+      "neniam": "jamais",
+      "facile": "facilement",
+      "lin": "il, lui, le",
+      "sin": "se, s', soi",
+      "deziras": "d\u00e9sirer",
+      "plene": "pleinement, compl\u00e8tement, enti\u00e8rement",
+      "linda": "jolie",
+      "en": "dans",
+      "ion": "quelque chose",
+      "\u015di": "elle",
+      "malkontentigi": "d\u00e9plaire",
+      "sed": "mais",
+      "estis": "\u00eatre",
+      "tiun": "ce, cet(te)",
+      "iom": "un peu",
+      "demandante": "interroger, demander",
+      "igi": "faire, rendre",
+      "timas": "craindre, avoir peur",
+      "diri": "dire",
+      "enmiksi": "m\u00ealer"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"\u0108u \u011denas vin, se mi parolas?\" \u015di demandas, \"vi eble estas silentema.\"",
+    "vortaro": {
+      "eble": "peut-\u00eatre, possiblement",
+      "mi": "je",
+      "demandas": "interroger, demander",
+      "estas": "\u00eatre",
+      "\u011denas": "g\u00eaner, inconforter",
+      "se": "si (indique une condition)",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
+      "parolas": "parler",
+      "\u015di": "elle",
+      "vin": "tu, vous",
+      "silentema": "discret, taciturne"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Mi havas zorgojn,\" li respondas.",
+    "vortaro": {
+      "mi": "je",
+      "li": "il, lui, le",
+      "havas": "avoir",
+      "respondas": "r\u00e9pondre",
+      "zorgojn": "souci, inqui\u00e9tude ; attention, sollicitude"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Mi ne volas \u011deni vin. Estas jam tiel bonkore, ke vi min veturigas. Mi vere sentas grandegan dankemon al vi.\"",
+    "vortaro": {
+      "mi": "je",
+      "\u011deni": "g\u00eaner, inconforter",
+      "estas": "\u00eatre",
+      "vere": "vraiment",
+      "min": "je",
+      "volas": "vouloir",
+      "al": "\u00e0, vers",
+      "jam": "d\u00e9j\u00e0",
+      "vi": "tu, vous",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "dankemon": "gratitude, reconnaissance",
+      "tiel": "ainsi, comme \u00e7a",
+      "sentas": "ressentir, sentir, \u00e9prouver",
+      "vin": "tu, vous",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "\"Ne dankinde,\" li ripetas, kaj silentas plu, pripensema.",
+    "vortaro": {
+      "ripetas": "r\u00e9p\u00e9ter",
+      "li": "il, lui, le",
+      "kaj": "et",
+      "pripensema": "pensif",
+      "silentas": "\u00eatre silencieux",
+      "plu": "plus, plus longtemps, plus loin",
+      "ne": "non, ne... pas"
+    }
+  }
+]

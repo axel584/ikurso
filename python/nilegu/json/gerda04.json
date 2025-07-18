@@ -1,0 +1,583 @@
+[
+  {
+    "teksto": "Kio estas tiu Gerda?",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "tiu": "ce, cet(te)",
+      "kio": "quoi, que"
+    }
+  },
+  {
+    "teksto": "Bob: Diru al mi sincere, pri kio vi parolis.",
+    "vortaro": {
+      "mi": "je",
+      "parolis": "parler",
+      "kio": "quoi, que",
+      "pri": "\u00e0 propos de",
+      "al": "\u00e0, vers",
+      "diru": "dire",
+      "vi": "tu, vous"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Ni parolis pri tiu ulo.",
+    "vortaro": {
+      "parolis": "parler",
+      "ulo": "type, individu",
+      "pri": "\u00e0 propos de",
+      "ni": "nous",
+      "tiu": "ce, cet(te)"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Kiu ulo?",
+    "vortaro": {
+      "kiu": "qui",
+      "ulo": "type, individu"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Tiu viro \u0109e la angulo. Tiu juna viro.",
+    "vortaro": {
+      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
+      "la": "le, la, les",
+      "angulo": "coin, angle",
+      "viro": "homme, m\u00e2le",
+      "tiu": "ce, cet(te)",
+      "juna": "jeune"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Pri kiu vi parolas? \u0108u pri tiu blondulo, kiu sidas kun Gerda?",
+    "vortaro": {
+      "kun": "avec",
+      "pri": "\u00e0 propos de",
+      "kiu": "qui",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
+      "parolas": "parler",
+      "blondulo": "blond",
+      "tiu": "ce, cet(te)",
+      "sidas": "\u00eatre assis(e)"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Linda: Gerda! Vi do scias, ke \u015dia nomo estas Gerda! Vi do konas \u015din!",
+    "vortaro": {
+      "do": "donc",
+      "estas": "\u00eatre",
+      "linda": "jolie",
+      "vi": "tu, vous",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "nomo": "nom",
+      "\u015din": "elle",
+      "konas": "conna\u00eetre",
+      "scias": "savoir",
+      "\u015dia": "elle"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Nu, mi ne vere konas \u015din. Mi scias, kiu \u015di estas. Tio estas alia afero.",
+    "vortaro": {
+      "mi": "je",
+      "estas": "\u00eatre",
+      "afero": "affaire, sujet, chose",
+      "vere": "vraiment",
+      "kiu": "qui",
+      "tio": "ce, cela, \u00e7a",
+      "\u015di": "elle",
+      "\u015din": "elle",
+      "alia": "autre",
+      "konas": "conna\u00eetre",
+      "scias": "savoir",
+      "nu": "allons, bien, eh bien\u2026 ",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Linda: Kiu do \u015di estas?",
+    "vortaro": {
+      "do": "donc",
+      "estas": "\u00eatre",
+      "linda": "jolie",
+      "kiu": "qui",
+      "\u015di": "elle"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Sed vi ne respondis al mi. Vi ne respondis al mia demando. \u0108u vere pri tiu blonda junulo vi parolis?",
+    "vortaro": {
+      "mi": "je",
+      "parolis": "parler",
+      "mia": "je",
+      "pri": "\u00e0 propos de",
+      "vere": "vraiment",
+      "al": "\u00e0, vers",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
+      "demando": "question",
+      "junulo": "jeune",
+      "respondis": "r\u00e9pondre",
+      "sed": "mais",
+      "blonda": "blond(e)",
+      "tiu": "ce, cet(te)",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Jes. Pri li.",
+    "vortaro": {
+      "pri": "\u00e0 propos de",
+      "li": "il, lui, le",
+      "jes": "oui, d'accord"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Mi ne konas lin. Mi neniam vidis lin anta\u016de.",
+    "vortaro": {
+      "mi": "je",
+      "neniam": "jamais",
+      "lin": "il, lui, le",
+      "vidis": "voir",
+      "anta\u016de": "avant, auparavant ",
+      "konas": "conna\u00eetre",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Linda: Sed, diru al mi, kiu estas tiu Gerda?",
+    "vortaro": {
+      "mi": "je",
+      "estas": "\u00eatre",
+      "linda": "jolie",
+      "kiu": "qui",
+      "al": "\u00e0, vers",
+      "diru": "dire",
+      "sed": "mais",
+      "tiu": "ce, cet(te)"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: \u015ci venis por instrui. Temas pri io mistera, fakte. Kripta\u0135oscienco.",
+    "vortaro": {
+      "instrui": "enseigner",
+      "por": "pour, dans le but de",
+      "pri": "\u00e0 propos de",
+      "fakte": "en fait",
+      "temas": "concerner, toucher, s'agir de, \u00eatre question de",
+      "mistera": "myst\u00e9rieux, myst\u00e9rieuse",
+      "\u015di": "elle",
+      "io": "quelque chose",
+      "venis": "venir"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Linda: Kio? Kiel vi diris? Krip-ta-\u0135o-sci-en-co, \u0109u? Kio estas tio?",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "diris": "dire",
+      "kio": "quoi, que",
+      "linda": "jolie",
+      "kiel": "comment, comme",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
+      "tio": "ce, cela, \u00e7a"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: \u0108u vere vi ne scias, kio estas kripta\u0135oscienco? Oni diras anka\u016d \"kriptografio\".",
+    "vortaro": {
+      "kriptografio": "cryptographie",
+      "diras": "dire",
+      "estas": "\u00eatre",
+      "kio": "quoi, que",
+      "vere": "vraiment",
+      "anka\u016d": "aussi",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
+      "oni": "on",
+      "scias": "savoir",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Linda: Ne. Mi ne scias. Mi tute ne scias. \u0109u vi scias, Tom?",
+    "vortaro": {
+      "mi": "je",
+      "linda": "jolie",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
+      "tute": "enti\u00e8rement, totalement",
+      "scias": "savoir",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: \u0108u tio ne estas la arto kompreni, pri kio temas sekreta mesa\u011do?",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "la": "le, la, les",
+      "kio": "quoi, que",
+      "pri": "\u00e0 propos de",
+      "arto": "art",
+      "temas": "concerner, toucher, s'agir de, \u00eatre question de",
+      "sekreta": "secret, secr\u00e8te",
+      "tio": "ce, cela, \u00e7a",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "mesa\u011do": "message",
+      "kompreni": "comprendre",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Prave. Jen \u015dia fako. Fakte, \u015dia fako estas la malnovaj sekretaj lingvoj.",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "sekretaj": "secret, secr\u00e8te",
+      "la": "le, la, les",
+      "prave": "c'est juste, avec justesse",
+      "fako": "sp\u00e9cialit\u00e9, discipline, d\u00e9partement (sens propre : compartiment, case)",
+      "fakte": "en fait",
+      "lingvoj": "langue",
+      "\u015dia": "elle",
+      "jen": "voici"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Mi ne komprenas. Kiu, en universitato, volas lerni pri la malnovaj sekretaj lingvoj?",
+    "vortaro": {
+      "mi": "je",
+      "sekretaj": "secret, secr\u00e8te",
+      "la": "le, la, les",
+      "pri": "\u00e0 propos de",
+      "kiu": "qui",
+      "en": "dans",
+      "volas": "vouloir",
+      "universitato": "universit\u00e9",
+      "komprenas": "comprendre",
+      "lingvoj": "langue",
+      "lerni": "apprendre",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Anka\u016d mi ne tute komprenas. Estis ideo de Ronga, la profesoro pri lingvistiko. Li konsideras, ke sekretaj lingvoj estas aspekto de la arto komuniki, kaj ke ili do rilatas al lingvistiko.",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "la": "le, la, les",
+      "pri": "\u00e0 propos de",
+      "aspekto": "aspect, apparence, ressemblance",
+      "ne": "non, ne... pas",
+      "sekretaj": "secret, secr\u00e8te",
+      "konsideras": "consid\u00e9rer",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "komprenas": "comprendre",
+      "lingvoj": "langue",
+      "mi": "je",
+      "do": "donc",
+      "kaj": "et",
+      "al": "\u00e0, vers",
+      "lingvistiko": "linguistique",
+      "estis": "\u00eatre",
+      "rilatas": "avoir un rapport, une relation avec",
+      "ideo": "id\u00e9e",
+      "anka\u016d": "aussi",
+      "li": "il, lui, le",
+      "arto": "art",
+      "profesoro": "professeur",
+      "komuniki": "communiquer",
+      "tute": "enti\u00e8rement, totalement",
+      "de": "de",
+      "ili": "ils, elles, eux"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Linda: Eble jes. Eble li pravas. Kaj tamen tiu ideo estas iom stranga, \u0109u vi ne konsentas?",
+    "vortaro": {
+      "eble": "peut-\u00eatre, possiblement",
+      "tamen": "n\u00e9anmoins, toutefois, quand m\u00eame, cependant",
+      "estas": "\u00eatre",
+      "linda": "jolie",
+      "iom": "un peu",
+      "ideo": "id\u00e9e",
+      "stranga": "bizarre",
+      "li": "il, lui, le",
+      "kaj": "et",
+      "jes": "oui, d'accord",
+      "konsentas": "consentir, \u00eatre en accord",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
+      "tiu": "ce, cet(te)",
+      "ne": "non, ne... pas",
+      "pravas": "avoir raison, \u00eatre correct"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Jes. \u011ci aspektis strange anka\u016d al mi, kiam oni parolis pri \u011di.",
+    "vortaro": {
+      "aspektis": "ressembler (\u00e0)",
+      "mi": "je",
+      "kiam": "quand",
+      "parolis": "parler",
+      "strange": "bizarrement",
+      "anka\u016d": "aussi",
+      "pri": "\u00e0 propos de",
+      "al": "\u00e0, vers",
+      "\u011di": "il, elle",
+      "oni": "on",
+      "jes": "oui, d'accord"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Linda: Eble Ronga, la lingvistika profesoro, nur deziris, ke bela virino kunlaboru kun li. \u0109u ne estas bona ideo kunlabori kun bela knabino, kiam tio estas ebla?",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "la": "le, la, les",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "lingvistika": "linguistique",
+      "virino": "femme",
+      "ne": "non, ne... pas",
+      "deziris": "d\u00e9sirer",
+      "tio": "ce, cela, \u00e7a",
+      "knabino": "fille, jeune fille",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "kunlaboru": "collaborer",
+      "kun": "avec",
+      "linda": "jolie",
+      "ebla": "possible",
+      "bona": "bon,  bonne",
+      "kunlabori": "collaborer",
+      "bela": "beau, belle",
+      "eble": "peut-\u00eatre, possiblement",
+      "kiam": "quand",
+      "ideo": "id\u00e9e",
+      "li": "il, lui, le",
+      "profesoro": "professeur",
+      "nur": "seulement"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Mi jam diris al vi, ke \u015di ne estas bela. Nur vi estas bela.",
+    "vortaro": {
+      "mi": "je",
+      "estas": "\u00eatre",
+      "diris": "dire",
+      "al": "\u00e0, vers",
+      "nur": "seulement",
+      "jam": "d\u00e9j\u00e0",
+      "vi": "tu, vous",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "\u015di": "elle",
+      "bela": "beau, belle",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Mi ne konsentas. Estas fakto, ke Linda estas tre bela, ke \u015di estas la plej bela knabino en la mondo. Sed anka\u016d Gerda estas bela, iom malpli bela, sed tamen bela; \u0109u vi konsentas?",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "tre": "tr\u00e8s",
+      "la": "le, la, les",
+      "fakto": "fait",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "malpli": "moins",
+      "ne": "non, ne... pas",
+      "plej": "le plus, la plus",
+      "knabino": "fille, jeune fille",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "mi": "je",
+      "linda": "jolie",
+      "en": "dans",
+      "\u015di": "elle",
+      "sed": "mais",
+      "bela": "beau, belle",
+      "konsentas": "consentir, \u00eatre en accord",
+      "tamen": "n\u00e9anmoins, toutefois, quand m\u00eame, cependant",
+      "iom": "un peu",
+      "anka\u016d": "aussi",
+      "vi": "tu, vous",
+      "mondo": "monde"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Tute ne. Por vi, eble. Sed por mi ne. Por mi, nur Linda ekzistas kiel bela virino.",
+    "vortaro": {
+      "eble": "peut-\u00eatre, possiblement",
+      "mi": "je",
+      "por": "pour, dans le but de",
+      "linda": "jolie",
+      "kiel": "comment, comme",
+      "nur": "seulement",
+      "vi": "tu, vous",
+      "ekzistas": "exister",
+      "tute": "enti\u00e8rement, totalement",
+      "sed": "mais",
+      "virino": "femme",
+      "bela": "beau, belle",
+      "ne": "non, ne... pas"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: \u0108u vi volas diri, ke por vi Linda estas la sola bela virino en la tuta mondo?",
+    "vortaro": {
+      "estas": "\u00eatre",
+      "por": "pour, dans le but de",
+      "la": "le, la, les",
+      "linda": "jolie",
+      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
+      "volas": "vouloir",
+      "en": "dans",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
+      "diri": "dire",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "mondo": "monde",
+      "virino": "femme",
+      "sola": "seul(e)",
+      "bela": "beau, belle"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Tom: Jes, por mi, Linda estas la sola bela virino en la tuta mondo.",
+    "vortaro": {
+      "mi": "je",
+      "estas": "\u00eatre",
+      "por": "pour, dans le but de",
+      "la": "le, la, les",
+      "linda": "jolie",
+      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
+      "en": "dans",
+      "mondo": "monde",
+      "virino": "femme",
+      "sola": "seul(e)",
+      "bela": "beau, belle",
+      "jes": "oui, d'accord"
+    }
+  },
+  {
+    "teksto": "",
+    "vortaro": {}
+  },
+  {
+    "teksto": "Bob: Diable! Vi ver\u015dajne amas \u015din.",
+    "vortaro": {
+      "ver\u015dajne": "probablement",
+      "vi": "tu, vous",
+      "amas": "aimer",
+      "\u015din": "elle",
+      "diable": "diaboliquement, diablement, diable !, diantre !, fichtre !"
+    }
+  }
+]

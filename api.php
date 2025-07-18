@@ -71,7 +71,7 @@ class TekstojAPI {
     
     // GET /tekstoj - Récupérer tous les tekstoj avec filtres optionnels (sans enhavo)
     private function getTekstoj() {
-        $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj FROM tekstoj WHERE 1=1";
+        $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono FROM tekstoj WHERE 1=1";
         $params = array();
         
         // Filtres optionnels
@@ -85,14 +85,42 @@ class TekstojAPI {
             $params[] = $_GET['kolekto'];
         }
         
-        if (isset($_GET['nivelo'])) {
-            $sql .= " AND nivelo = ?";
-            $params[] = intval($_GET['nivelo']);
+        // Filtre par niveau minimum
+        if (isset($_GET['nivelo_min'])) {
+            $sql .= " AND nivelo >= ?";
+            $params[] = intval($_GET['nivelo_min']);
+        }
+        
+        // Filtre par niveau maximum
+        if (isset($_GET['nivelo_max'])) {
+            $sql .= " AND nivelo <= ?";
+            $params[] = intval($_GET['nivelo_max']);
+        }
+        
+        // Filtre par nombre de mots minimum
+        if (isset($_GET['vortoj_min'])) {
+            $sql .= " AND vortoj >= ?";
+            $params[] = intval($_GET['vortoj_min']);
+        }
+        
+        // Filtre par nombre de mots maximum
+        if (isset($_GET['vortoj_max'])) {
+            $sql .= " AND vortoj <= ?";
+            $params[] = intval($_GET['vortoj_max']);
         }
         
         if (isset($_GET['etikedoj'])) {
             $sql .= " AND etikedoj LIKE ?";
             $params[] = '%' . $_GET['etikedoj'] . '%';
+        }
+        
+        // Recherche générale dans titolo, auxtoro et enhavo
+        if (isset($_GET['q'])) {
+            $sql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR enhavo LIKE ?)";
+            $searchTerm = '%' . $_GET['q'] . '%';
+            $params[] = $searchTerm;
+            $params[] = $searchTerm;
+            $params[] = $searchTerm;
         }
         
         // Recherche dans le titre
@@ -126,11 +154,23 @@ class TekstojAPI {
             if (isset($_GET['kolekto'])) {
                 $countSql .= " AND kolekto = ?";
             }
-            if (isset($_GET['nivelo'])) {
-                $countSql .= " AND nivelo = ?";
+            if (isset($_GET['nivelo_min'])) {
+                $countSql .= " AND nivelo >= ?";
+            }
+            if (isset($_GET['nivelo_max'])) {
+                $countSql .= " AND nivelo <= ?";
+            }
+            if (isset($_GET['vortoj_min'])) {
+                $countSql .= " AND vortoj >= ?";
+            }
+            if (isset($_GET['vortoj_max'])) {
+                $countSql .= " AND vortoj <= ?";
             }
             if (isset($_GET['etikedoj'])) {
                 $countSql .= " AND etikedoj LIKE ?";
+            }
+            if (isset($_GET['q'])) {
+                $countSql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR enhavo LIKE ?)";
             }
             if (isset($_GET['titolo'])) {
                 $countSql .= " AND titolo LIKE ?";

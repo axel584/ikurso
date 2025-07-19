@@ -1483,6 +1483,36 @@ INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('
 INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin24a','Literaturo amindas, sed tamen...','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
 INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin24b','La ĝojoj de petveturado','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
 INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('lasumin25','La tri plendoj de s-ro Kursano','Claude Piron','https://butiko-esperanto-france.org/lectures-faciles/1049-lasu-min-paroli-plu.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp01','Tre moderna fabelo','F Szilágyi','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp02','La psalmaro','Andreo Gauder (trad. Hasse Z)','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp03','La ŝtormo','John S. Dinwoodie','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp04','Celstacio','Czeslaw Ostankowicz','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp05','La unua kongreso de Esperanto','Edmond Privat','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp06','Mi fariĝos ordemulo','Kornel Toth','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp07','Ide-kamarado','Sabahattin Ali (trad. Ferruh Canatay)','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp08','Simpla Konfeso','László Böti','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp09','Horloĝo - malgranda miraklo','Stanislav Knižek','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp10','Kolektanto de ĉielarkoj','Tibor Sekelj','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp11','Sur dalmata fiŝistinsulo','Srdj Arandjelovic','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp12','Dia mastrumado','Karel Havlíček Borovský','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp13','Zamenhof kaj la movado','Gian Carlo Fighiera','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp14','Avinjo','Clelia Conterno Guglielminetti','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp15','La universo - eksplodanta?','Toni Breider','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp16','Unu jaron en la feinlando','Vu Kan','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp17','Fenikso','Marjorie Boulton ','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp18','Plej bone ridas kiu laste ridas','Cezaro Rossetti','https://butiko-esperanto-france.org/litterature-originale-en-esperanto/303-kredu-min-sinjorino-ekz-.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp19','Kajto','Lu Sin','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp20','La verko de Maria Skłodowska-Curie','Maciej Ilowiecki','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp21','Konferanseo','Vasil Conev','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp22','Vortoj de Zamenhof','L. L. Zamenhof','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp23','Salomono kaj la oaza nimfo','Jean Ribillard','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp24','La aĝoj de la homo','William Shakespeare','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp25','Flugantaj semoj','Paul Neergaard','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp26','Kiel ni mortigadis leporon por la antaŭkristnaska vesperamanĝo','Vladimír Vaňa','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp27','Robert Burns kiel mondpoeto','Douglas Young','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp28','La amo de Otelo kaj Desdemona','William Shakespeare','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp29','La kvara pipo','Ilja Erenburg','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp30','Geedziĝo en hodiaŭa manieroo','Emil Kolozsvári Grandpierre','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
 update tekstoj set nivelo=300, vortoj=211 where id='lasumin01';
 update tekstoj set nivelo=699, vortoj=387 where id='lasumin02';
 update tekstoj set nivelo=659, vortoj=624 where id='lasumin03';
@@ -1509,7 +1539,15 @@ update tekstoj set nivelo=1436, vortoj=1081 where id='lasumin18b';
 update tekstoj set nivelo=1100, vortoj=282 where id='lasumin19';
 update tekstoj set nivelo=1193, vortoj=769 where id='lasumin20a';
 update tekstoj set nivelo=1490, vortoj=1272 where id='lasumin20b';
-
+update tekstoj set nivelo=1074, vortoj=643 where id='lasumin21a';
+update tekstoj set nivelo=1556, vortoj=842 where id='lasumin21b';
+update tekstoj set nivelo=1640, vortoj=1309 where id='lasumin22a';
+update tekstoj set nivelo=1147, vortoj=623 where id='lasumin22b';
+update tekstoj set nivelo=1387, vortoj=1033 where id='lasumin23a';
+update tekstoj set nivelo=913, vortoj=467 where id='lasumin23b';
+update tekstoj set nivelo=1387, vortoj=688 where id='lasumin24a';
+update tekstoj set nivelo=1030, vortoj=890 where id='lasumin24b';
+update tekstoj set nivelo=1470, vortoj=662 where id='lasumin25';
 
 
 -- vortoj

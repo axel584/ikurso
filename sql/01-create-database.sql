@@ -240,6 +240,7 @@ CREATE TABLE takso_leciono (
 
 CREATE TABLE tekstoj (
   `id` VARCHAR(64) NOT NULL , 
+  `ekdato` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `titolo` VARCHAR(1024) NOT NULL , 
   `auxtoro` VARCHAR(128) NOT NULL , 
   `fonto` VARCHAR(1024) NULL , 
@@ -248,7 +249,8 @@ CREATE TABLE tekstoj (
   `vortoj` INT NULL , 
   `kolekto` VARCHAR(64) NULL , 
   `etikedoj` VARCHAR(1024) NULL, 
-  `enhavo` TEXT NULL
+  `enhavo` TEXT NULL,
+  `aktiva` TINYINT NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 ALTER TABLE `tekstoj`

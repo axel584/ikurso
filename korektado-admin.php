@@ -92,6 +92,23 @@ while ($row=$result->fetch()) {
 ?>	
 					</ul>
 				</div>
+				<div class="collapsible-header active">Paŝoj al Plena Posedo</div>
+				<div class='collapsible-header'>
+					<ul class="collection">
+
+<?php
+
+$query = "SELECT numero,kurso,titolo  FROM `lecionoj` WHERE kurso='PP' order by numero";
+$result = $bdd->query($query);
+while ($row=$result->fetch()) {
+	$nbReponse = $nbReponse + 1;
+	echo "<li><a href='korektado.php?kurso=PP&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></li>\n";
+}
+?>	
+					</ul>
+				</div>
+
+
 			</li>
 		</ul>	
 

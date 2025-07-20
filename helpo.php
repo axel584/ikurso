@@ -145,6 +145,8 @@ frameborder="0" allowfullscreen></iframe></p>
 				
 				<p class="parto">Les <strong>congrès et rencontres</strong> sont également des occasions pour rencontrer d’autres espérantophones. Ces rencontres peuvent alterner
 					conférences, groupes de travail, concerts, ateliers divers, tourisme, etc. Pour en savoir plus, voir la rubrique <a href="https://esperanto-france.org/congres">Congrès</a> sur le site d’Espéranto-France.</p>
+				<p>Vous pouvez trouver la liste des rencontres et congrès sur le site <a href="https://eventaservo.org/">https://eventaservo.org/</a></p>
+
 
 				<p class="parto"><strong>Cafés</strong>, <strong>maison des associations</strong>, <strong>stands</strong> sont des lieux de rencontre où l’on peut parler espéranto&nbsp;:</p>
 				<ul class="sublisto">

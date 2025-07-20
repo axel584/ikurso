@@ -114,11 +114,10 @@ class TekstojAPI {
             $params[] = '%' . $_GET['etikedoj'] . '%';
         }
         
-        // Recherche générale dans titolo, auxtoro et enhavo
+        // Recherche générale dans titolo et auxtoro
         if (isset($_GET['q'])) {
-            $sql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR enhavo LIKE ?)";
+            $sql .= " AND (titolo LIKE ? OR auxtoro LIKE ?)";
             $searchTerm = '%' . $_GET['q'] . '%';
-            $params[] = $searchTerm;
             $params[] = $searchTerm;
             $params[] = $searchTerm;
         }
@@ -170,7 +169,7 @@ class TekstojAPI {
                 $countSql .= " AND etikedoj LIKE ?";
             }
             if (isset($_GET['q'])) {
-                $countSql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR enhavo LIKE ?)";
+                $countSql .= " AND (titolo LIKE ? OR auxtoro LIKE ?)";
             }
             if (isset($_GET['titolo'])) {
                 $countSql .= " AND titolo LIKE ?";

@@ -4476,3 +4476,22 @@ UPDATE `ekzerceroj` SET `numero` = '39', `demando` = 'Redaktu de 60 ĝis 80 vort
 UPDATE `ekzerceroj` SET `numero` = '40', `demando` = 'Redaktu de 60 ĝis 80 vortoj.' WHERE `ekzerceroj`.`id` = 2309;
 UPDATE `ekzerceroj` SET `poentoj` = '2' WHERE `ekzerceroj`.`id` = 2297;
 
+--- correction de coquilles dans ppp
+UPDATE `ekzerceroj` SET `respondo` = 'La raketaparato, kiun oni tamen ne multe fidis, staris preta.', `normaligita` = 'la raketaparato kiun oni tamen ne multe fidis staris preta' WHERE `ekzerceroj`.`ekzerco_id` = 122 and `ekzerceroj`.`kodo` = 'pp0358' and `ekzerceroj`.`numero` = 56;
+UPDATE `ekzerceroj` SET `respondo` = 'Ĵaŭdon la ŝipo ekvojaĝos norden.', `normaligita` = 'jxauxdon la sxipo ekvojaĝos norden' WHERE `ekzerceroj`.`ekzerco_id` = 120 and `ekzerceroj`.`kodo` = 'pp0339' and `ekzerceroj`.`numero` = 37;
+UPDATE `ekzerceroj` SET `demando` = 'Kiu, laŭ Zamenhof, devis kontroli la evoluon de la lingvo?' WHERE `ekzerceroj`.`ekzerco_id` = 173 and `ekzerceroj`.`numero` = 9;
+UPDATE `ekzerceroj` SET `demando` = 'Nomu, kaj klarigu, la tri internajn elitecojn.' WHERE `ekzerceroj`.`ekzerco_id` = 173 and `ekzerceroj`.`numero` = 13;
+UPDATE `ekzerceroj` SET `demando` = 'La kadavrojn, kiujn ..., oni enterigis en unu tombon.' WHERE `ekzerceroj`.`ekzerco_id` = 123 and `ekzerceroj`.`kodo` = 'pp036A' and `ekzerceroj`.`numero` = 68;
+
+--- correction de coquilles dans DLEK
+UPDATE `ekzerceroj` SET `respondo` = 'Ĉu via patro kolektas la poŝtmarkojn de mia lando?' WHERE ekzerceroj`.`ekzerco_id` = 	
+18 and `ekzerceroj`.`kodo` = 'ekz04_17' and `ekzerceroj`.`numero` = 17;
+
+--- correction de coquilles dans l'examen A1
+UPDATE `ekzerceroj` SET `respondo` = 'knabino', `normaligita` = 'knabino' WHERE ekzerceroj`.`ekzerco_id` = 		
+292 and `ekzerceroj`.`numero` = 31;
+
+
+
+
+

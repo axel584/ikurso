@@ -15,7 +15,8 @@ include "pppkapo.inc.php";
 		if ($section=="1") {
 		?>
 
-		<div class="rakonto">
+		<div class="rakonto" style="background-image: url('bildoj/urbeto.jpg');background-position: 100% 00%;background-size:contain;background-repeat: no-repeat;background-size: 50%;">
+			
 			<h3>SIMPLA KONFESO</h3>
  
  			<p>Ĉu vi konas N, tiun ĉi urbeton en la orienta landparto? Se ne, vi perdis nenion. Ĉi urbetoj terure similas unu la alian kaj certe vi jam vidis tiaspecan vilaĝegon, kun unusola pavimita ĉefstrato, koto aŭ polvo sur la aliaj ĝisgenue, laŭ la sezono; tri preĝejoj sur la urbocentra placo kaj trifoje tri drinkejoj; kino, aro da grizaj, seninteresaj homoj, enuo… enuo… </p>
@@ -23,6 +24,7 @@ include "pppkapo.inc.php";
  			<p>Tuj vi aŭdos, kial.</p>
  			<p>Li estis inĝeniero, la nomo ne gravas. Ni amikiĝis rapide kaj sen ia ajn signifa okazo. Cetere mi amikiĝas tre malfacile. Mi havas nur du-tri amikojn; ĉiuj miaspecaj, neplibonigeblaj maljunaj fraŭloj, kiuj opinias la geedziĝon eltrovo de la diablo kaj ofte ili fanfaronas, per kiaj ruzaĵoj ili evitis la reton de la ina gento. La ideala kunvivo de la inĝenier-familio tamen kortuŝis eĉ min kaj foje-foje mi pripensadis, ĉu mi ne faris stultaĵon, kiam mi — antaŭ 30 jaroj — tiu knabino — eh, negrave! Egale jam… kaj mi promesis rakonti pri la inĝeniero, ne pri mi.</p>
  			<p>La inĝeniero gvidis la konstruon de la kanalo kaj — ĉar ankaŭ la prizorgadon kaj inspekton de la kanalo oni konfidis al li — ekloĝis en la urbo. Laŭ sia ekstero li estis ĉiutaga, griza hometo, mezastatura, 35-40-jara, kun okulvitroj, kaj hararo jam iom maldensa, sed ne griziĝinta. Li havis superkritike grandan kaj ampleksan scion, ne nur en sia fako, sed ankaŭ krome li estis surprize erudicia, tamen modesta kaj ĝentila; mallonge tia, kiun oni nomis iam “ĝisplanda sinjoro”. Mi nomas lin simple: homo. </p>
+			
  			<p>Ni ambaŭ ege malŝatis la t.n. “sociajn formalaĵojn”. Ni renkontiĝis ie, paroladis kaj — ĉar ankaŭ mi vidis ion el la mondo — bonege komprenis unu la alian. Ofte mi vizitis ilin preskaŭ ĉiutage kaj tie mi ekkonis “hejmon” en citiloj, pri kiu kantas la poetoj. La inĝeniero, lia edzino, preskaŭ dek jarojn pli juna blonda virineto, kaj la du filinoj formis kompletan unuon. La domon plenigis la paco, harmonio, trankvilo kaj kompreno. Estis vere resaniĝo por mi ŝanĝi mian solecon por unu-vespera restado de ili kaj vidi la feliĉon regantan en tiu familio.</p>
  			<p>Mi povas diri: mi estis ilia amiko. Intima amiko mi tamen ne estis. Neniam ni intime interparolis, krom unu fojon, ankaŭ tiam nevole kaj ĝuste tion mi intencas rakonti.</p>
  			<p>Estis komenco de printempo, la lastaj tagoj de aprilo, bela, varmeta vetero. Eble pro tio ni estis iom pli komunikemaj?</p>
@@ -44,12 +46,14 @@ include "pppkapo.inc.php";
  			<p>“Mi estis inĝeniero estonta! Do mallonge: mi enamiĝis al ŝi kaj mi ne estis la sola; la duono de la klaso estis miaj samsortanoj. Kaj ŝi elektis min, kvankam jam en tiu tempo mi ne estis belulo.”</p>
  			<p>“Multfoje ni kunestis… ni promenadis kune, paroladis kaj… jes, ni ankaŭ kisadis. Mi estis feliĉa kaj fiera, ne nur, ĉar ŝi amas min, sed — laŭ vere vira maniero — ĉefe ĉar ŝi min amas kaj ne iun, kiu estas pli bela, pli saĝa ol mi, kiun ŝi ankaŭ estus povinta elekti.”</p>
  			<p>“La afero daŭris du jarojn, escepte nature la libertempojn, kiam ni forlasis la urbon kaj ni ambaŭ – almenaŭ mi certe — nombris la tagojn ĝis la nova studsezono.”</p>
+ 			<img class="flot-g l-50 s-100" style="margin: 0 0 0 -1em;" src="bildoj/skribi-poemon.jpg" />
  			<p>“Kiel min konfuzis ĉi tiu sento! Juĝu vi mem, vi konas min kaj ankaŭ tiam mi estis la sama: mi verkis poemojn! Aĉajn poemojn. Sed ili plaĉis al ŝi kaj krom ŝi neniu sciis pri ili. Niaj kolegoj, ankaŭ inĝenieroj, trovis iom ridinda jam ankaŭ mian amon en la mondo de la logaritmoj kaj kompakt-moduloj. Mi verkis, notis, laŭtlegis la poemojn, donis ilin al ŝi, ĉar ŝi petis kaj mi ne bezonis ilin. Ŝi promesis, ke ŝi montros ilin al neniu.”</p>
  			<p>“Ili koncernas nur nin, samkiel niaj kisoj”, ŝi diris. </p>
  			<p>“Tiel ni vivis dum niaj universitataj jaroj. Poste mi finis la studadon, mi forlasis la urbon kaj vetkuregis por la ĉiutaga pano. Honte, sed vere: ni devas antaŭe manĝi kaj nur poste ni povas ami.”</p>
  			<p>“Ni priparolis nenion, interkonsentis pri nenio plua. Eĉ unu vorto ne estis pri geedziĝo, miaopinie tio estis natura, alie ne povas okazi, se unu amas la alian. Mi devas trovi postenon kaj ni devas atendi, ke ankaŭ ŝi finu la studadon. Ŝian adreson — en la universitata urbo — mi konis kaj foje mi skribis al ŝi. Tiutempe mi vagadis en Francujo, do ŝi ne povis respondi.”</p>
  			<p>“Oni diras, la amo malpliiĝas proporcie al la distanco kaj tempopaso. Eble, sed mi estas esceptulo. Eĉ unu komon mia sento ne aliiĝis, mi amis ŝin same, kiel antaŭe, kiel iam ajn, nur mi kutimiĝis al tiu ĉi amo. Ĝi apartenis al mia vivo, iĝis parto de mia mio, same kiel — se estas permesate uzi tian komparon — la ĉiutaga lego de la ĵurnalo. Ĝi iĝis kontinua sento, jam ne sentata. Se oni havus dentdoloron ekde sia naskiĝo, neniu kredus, ke dento povas ne dolori, aŭ la mankon de la doloro oni rigardus malsano. Strange, ĉu ne?”</p>
  			<p>Li gestis kvazaŭ forigante muŝon.</p>
+ 			<img class="flot-d l-40 s-50" style="margin: 0 -1em 1em 1em;" src="bildoj/simpla-konfeso.jpg" />
  			<p>“Denove mi filozofadas. Kion mi rakontis? Jes! Pasis la jaroj. Mi laboris, pensadis pri ŝi kaj mi sentis certege, ke ankaŭ ŝi faras la samon.”</p>
  			<p>“Poste alvenis la konjunkturo, vi scias, la ‘ora epoko’. Mi akiris sufiĉe bonan kaj ĉefe konstantan postenon en la hejmolando. Mia unua sento estis: ŝi. Nur nun mi konstatis, kiel malmulton mi scias pri ŝi! La vizaĝon — jes, tion mi povus desegni precize, se mi scius desegni, sed ŝian adreson, nu, la adreson de ŝiaj gepatroj mi ne sciis. Nur la nomon de la urbeto — en la orienta landparto. Mi skribis leteron adresitan sen strato kaj numero: nek respondo venis, nek la letero revenis. Mi havis nek tempon por esplori, nek monon por esplorigi kaj mi jam rezignis. Mi ja estas tia: tre facile mi rezignas anstataŭ batali.”</p>
  			<p>“Kaj unu tagon en la ĵurnalo mi legis pri konkurso por printempaj amversaĵoj. La plej sukcesaj aperis en la ĵurnalo kaj mi — vi scias — kiel pasia leganto, legis ankaŭ tiujn. La tria aŭ kvara, je mia plej granda surprizo, estis unu el miaj faraĵoj! Eraro neebla, nenia dubo: mi ja konas la proprajn poemojn. Kaj ĝi, la ‘Simpla Konfeso’, estis mia plej kara ido.”</p>
@@ -64,12 +68,17 @@ include "pppkapo.inc.php";
  			<p>“Jes, ŝi estis. Ŝi, ŝi. Ŝi sendis la poemon, ŝi ne donis ĝin al aliulo, ankaŭ nun ŝi gardas ĝin kune kun la aliaj, kun niaj memoroj. Ŝi ne forgesis min, neniam ŝi forgesos, ŝi atendis min, eĉ nun ŝi atendas, ŝi amas min, ĉu mi volas iri al ŝi…”</p>
  			<p>Fine do! mi ĝemis profunde. Nu, stultaĵo, mi ja estus povinta imagi la finon, nature “happy end”, mi ja vidis la finalon, ĉi tiun feliĉan familion.</p>
  			<p>“Vi povas ĉesi, amiko. Vera romano! Do, tiel vi retrovis vian amatinon, vian edzinon. Vi ja estas feliĉulo, maljunulo…”</p>
- 			<p>La inĝeniero nun alrigardis min unuafoje dum la rakontado. Forte li fumsuĉis la cigaredon kaj returnis siajn okulojn al la fajro jam cindriĝanta. Dume la krepusko kovris la ĉambron per malhelo. Lia vizaĝo apenaŭ estis videbla kaj min ekregis ia stranga, malcerta sento. Miaj vortoj gaje ekestintaj stumpe pendis en la densiĝinta mallumo. Mi ne kuraĝis daŭrigi, kvankam mia amiko ne faris eĉ moveton.</p>
+ 			
+	 			<p>La inĝeniero nun alrigardis min unuafoje dum la rakontado. Forte li fumsuĉis la cigaredon kaj returnis siajn okulojn al la fajro jam cindriĝanta. Dume la krepusko kovris la ĉambron per malhelo. Lia vizaĝo apenaŭ estis videbla kaj min ekregis ia stranga, malcerta sento. Miaj vortoj gaje ekestintaj stumpe pendis en la densiĝinta mallumo. Mi ne kuraĝis daŭrigi, kvankam mia amiko ne faris eĉ moveton.</p>
+ 			<div style="background-image: url('bildoj/letero-alvenis.jpg');background-position: 100% 100%;background-size:contain;background-repeat: no-repeat;padding-bottom:5em;margin: 0 -1em 0 -1em;padding-left: 1em;padding-right: 25em;">
+	 			
  			<p>Ni sidis tiel, senvorte, dum longaj minutoj kaj mi jam sciis, ke okazos io neatendita.</p>
+ 			
  			<p>La inĝeniero fine moviĝis, la cigaredrestaĵon ĵetis en la fajron kaj ekparolis per strange raŭka voĉo:</p>
  			<p>“La letero… tiu letero… alvenis hieraŭ…”</p>
 
  			<p><b>László Böti</b> (el <i>Norda Prismo</i>)</p>
+ 			</div>
 		</div>
 
 		<?php 

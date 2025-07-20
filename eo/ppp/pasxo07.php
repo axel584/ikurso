@@ -18,11 +18,13 @@ include "pppkapo.inc.php";
 		<div class="rakonto">
 			<h3>IDE-KAMARADO</h3>
  
+ 			<img class="flot-d l-40 s-50" style="margin: 0 -1em 1em 1em;" src="bildoj/amikoj-trinkas.png" />
  			<p>“Venu, ni iom trinku tie!</p>
 	 		<p>Kara sinjoro mia, oni ne batos vin hejme pro duonhora malfruiĝo. Mi ne estas edziĝinta, sed mi komprenas tiajn aferojn. Tie ĉi oni povas ricevi bonegajn trinkaĵojn… kaj malmultekoste. Ni konas nin reciproke jam longe… trinku almenaŭ unufoje brandon kun mi…</p>
 	 		<p>He, kelnero… alportu ion…!</p>
 	 		<p>Sidiĝu, mia karega! Kvankam nia amikeco estas nova, jam mi tre ekŝatis vin. Mi estas tia homo, kiu kutimas ŝati siajn kamaradojn. Precipe mi admiras tiujn, kiuj povas esti ide-kamaradoj. Ĉu ne, mia frato, ni estas kvindek intelektuloj en la lando — kia fariĝus nia situacio, se ni ne defendos nin, konante unu la alian? Oni diras: “Nun profitemo regas la mondon, ne ekzistas mal-egoisma amikeco…” — sed mi ne kredas tion. Mi ne povas pensi, kiel la ordinara popolo. Nek nia eduko, nek nia karaktero, nek niaj ideoj permesas tion. La viajn mi ne konas, sed mi kredas je spirita ligo, kiu estas super la objekto, je la sento, kiu proksimigas la homojn unuj al aliaj.­ Pripensu, ĉu la vivo havus ian sencon, se ne ekzistus eĉ la bezono “ami unu la alian, proksimiĝi unu al la alia”? Nur ili estas tio, kio nin plialtigas super la publikon. Sed ankaŭ inter ni, intelektuloj, mankas tiaj kelkaj difinitaj ideaj ligoj; ĉiuj estas en sia klimato kaj serĉas sian memprofiton… Tial mi ĉirkaŭegas la bonan amikon, se mi trovas iun.</p>
 	 		<p>Nia urbeto estas malgranda. La homo dronas, ĉiu inteligentulo havas multajn opiniojn pri la homoj, pri la vivo, — li havas sian filozofion. Ni ĉiuj bezonas amikon, kiu komprenos tiujn temojn, kiu aŭdigos siajn kontraŭajn opiniojn. Mi ja diris, mankas… mankas… En nia oficejo ni estas proksimume dek personoj. Ĉiuj estas inteligentaj, havas edukon, saĝaj personoj, sed mi ne povas esti intima amiko eĉ kun unu el ili.</p>
+	 		<img class="flot-g l-50 s-100" style="margin: 0 1em 0 0;" src="bildoj/malliberejo.jpg" />
 	 		<p>Tute mala estis mia amikeco kun tiu junulo, sindonema… frata… Tiu nia knabo estis en granda oficejo. Unufoje lin trafis malbonŝanco… Jen, tia afero… Vi, kiel advokato, verŝajne estus akceptinta lian defendon… Vere, li estis tre homeca knabo, havis koron kiel el diamanto. Mi nur konis lin kiel sinceran kamaradon… Kion vi farus? Jen, tiaj estas la homoj… Unu mensogaĵo, kaj jen — ek en la malliberejon!… Kvankam li ne estis tute senkulpa, ne estrinte bone sian langon kaj babilinte tro multe… Multfoje mi diris al li: Filo mia, nia epoko ne estas tia, ke vi… ĉu vi pensas, ke vi plibonigos la mondon? Ricevadu vian malgrandan salajron, sidu en angulo!… ĉu ne, mia sinjoro? Ankaŭ ni ja havas niajn ideojn… Jes, tiu ĉi mondo ne estas en ordo, sed venos ĉies vico… Rigardu, ĉu mi malfermas la buŝon? Irante sur la tero oni ne devas lasi postsignojn… Sed la stulta knabo ne obeis. Li ĉiam iris laŭ sia kutimo, kvazaŭ li, tute sola, kapablus ŝanĝi la pozicion de la akso de la terglobo…</p>
 			<p>Kelnero, filo mia… alportu al ni pluan glaseton da brando!</p>
 			<p>Li ĉiam legadis, konjektante, ke tio, kion li legas, estas vera; li plenigadis sian cerbon per tio, kio estis skribita en la libroj. Sed… oni devas rigardi la vivon… la vivon… en la libroj estas nenio. Kiu scias, eble ankaŭ ni tiel legadas hejme… sed la vivo estas tute alia afero… Oni atentu la ĉirkaŭaĵon kaj la tempon… Kiam la ĝusta tempo estos veninta, tiam mi aliĝos al la afero eĉ pli sinofereme ol li; se mi ne verŝos mian sangon ĝis la lasta guto por la ideo, kiu estas en mia cerbo, mi estu fihomo. Sed mi ja diris, ke estas ankoraŭ sufiĉe da tempo por tio.</p>
@@ -34,12 +36,16 @@ include "pppkapo.inc.php";
 			<p>Sed… ĉu vi scias kion? Eble tio estas bona leciono por li. Eble eĉ ne estos malbone por li, se li restos tie dum ia tempo… Li bezonis tian punon, ĉu ne? Hm? Kion vi diras? De tempo al tempo li estis tre malkvietiĝanta. Pro Dio, sur la vojo, kiun li iris, li povus esti farinta eĉ ion, pro kio oni punas per morto… Finfine, li restos tie dum unu-du jaroj… ankaŭ tion li bezonas… bezonas por sia estonta vivo… por la trankvileco de sia vivo… por nia idealo: ĉu vi komprenis? - bezonas por nia idealo. Mia karega frato, se vi ŝatas lin kiel mi, ne defendu lin… Se vi volas fari bonon al li, lasu lin, ke li suferu iom…</p>
 			<p>Kion diris Mussolini? Li diris, ke por esti utila homo, oni devas pasigi iom da tempo en malliberejo; ĉu ne? Estas laŭdenda homo, tiu Mussolini, sendube… Dum la mizerega situacio de la socio estas por intelektulo necesege restadi en malliberejo. Ne estas alia medikamento por iĝi matura, por kompreni la vivon. Eble nia homo ankaŭ kredas tion, levos iom la kapon el libroj, vidos la ĉirkaŭaĵon kaj pentos pro sia blinda atakemo.</p>
 			<p>Mi ja diris, ke se vi ŝatas lin, ne tro klopodu savi lin. Ne esploru ĉion tiel ĝisfunde. Mi aŭdis, ke vi estis tre verva en la juĝejo; mi kaj ĝojis kaj — pro la knabo ­— ĉagreniĝis. Mi invitis vin ĉi tien por priparoli la aferon. Li mem ja estas nervoza kaj incitos la juĝistojn per siaj bagatelaj diraĵoj kaj tute fuŝos la aferon… kaj iĝos kondamnita. Ha-ha… unu-du jaretojn li restos tie…</p>
-			<p>Kial vi skuas la kapon? Se vi ricevos alpagon al via advokata honorario, ĉu vi diros, ke okazis io maljusta? Tio ja ne estos malbona por li, sed bona… Se vi volas, ne akceptu tiun monon. Faru sindoneman agon por kamarado kaj ne akceptu. Sed… kiom da liroj li estis dononta al vi? Dudek kvin lirojn, ĉu ne? Mi donos al vi tridek lirojn, sed vi nur kondamnigu lin… Vi vidas, ke mi ŝparas nenian oferon por kaŭzi bonon al li. Sed ĉu nur tion? Mi ja akre sentos la mankon de tia bona amiko kaj ide-kamarado…
+			<p styl>Kial vi skuas la kapon? Se vi ricevos alpagon al via advokata honorario, ĉu vi diros, ke okazis io maljusta? Tio ja ne estos malbona por li, sed bona… Se vi volas, ne akceptu tiun monon. Faru sindoneman agon por kamarado kaj ne akceptu. Sed… kiom da liroj li estis dononta al vi? Dudek kvin lirojn, ĉu ne? Mi donos al vi tridek lirojn, sed vi nur kondamnigu lin… Vi vidas, ke mi ŝparas nenian oferon por kaŭzi bonon al li. Sed ĉu nur tion? Mi ja akre sentos la mankon de tia bona amiko kaj ide-kamarado…</p>
+			<div style="background-image: url('bildoj/kelnero.jpg');background-position: 100% 100%;background-size:contain;background-repeat: no-repeat;padding-bottom:5em;margin: 0 -1em 0 -1em;padding-left: 1em;padding-right: 25em;">
+			
 			<p>Kion? Vi demandas, de kie mi prenos la tridek lirojn…? Nu, kiam nia knabo estis ĵetita en malliberejon, tiam — memkompreneble — lia posteno liberiĝis kaj restis vakanta… Kiel anstataŭulo mi prizorgas lian oficon kaj ekde ĉi-monato mi ricevados krom-salajron… sume proksimume kvardek lirojn aldone al mia salajro…</p>
 			<p>Kelnero…! Ankoraŭ da brando…!”</p>
 
  			<p><b>Sabahattin Ali</b> el la turka: <b>Ferruh Canatay</b> (el <i>Esperantisto Slovaka</i>)</p>
+			</div>
 		</div>
+		<p class="creditphoto">Bildoj:<br>maeching /Adobe Stock<br>reewungjunerr /Adobe Stock<br>panomporn /Adobe Stock</p>
 
 		<?php 
 		} // fin section 1
@@ -114,7 +120,7 @@ include "pppkapo.inc.php";
 			<p><span class="eo">stulta</span>: malsaĝa</p>
 			<p><span class="eo">utila</span>: uzinda.</p>
 			<p><span class="eo">vaki</span>: esti neokupata.</p>
-			<p><span class="eo">versi</span>: fluigi fluaĵon el ujo.</p>
+			<p><span class="eo">verŝi</span>: fluigi fluaĵon el ujo.</p>
 			<p><span class="eo">vervo</span>: spirita fervoro. </p>
 		</div>
 	</div>

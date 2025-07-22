@@ -128,6 +128,11 @@ class TekstojAPI {
             $params[] = '%' . $_GET['titolo'] . '%';
         }
         
+        // Filtre pour les textes avec son
+        if (isset($_GET['has_sono']) && $_GET['has_sono'] === 'true') {
+            $sql .= " AND sono IS NOT NULL AND sono != ''";
+        }
+        
         // Pagination
         $limit = isset($_GET['limit']) ? intval($_GET['limit']) : 10;
         $offset = isset($_GET['offset']) ? intval($_GET['offset']) : 0;
@@ -173,6 +178,9 @@ class TekstojAPI {
             }
             if (isset($_GET['titolo'])) {
                 $countSql .= " AND titolo LIKE ?";
+            }
+            if (isset($_GET['has_sono']) && $_GET['has_sono'] === 'true') {
+                $countSql .= " AND sono IS NOT NULL AND sono != ''";
             }
             
             $countStmt = $this->conn->prepare($countSql);

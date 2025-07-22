@@ -1,146 +1,109 @@
 [
   {
-    "teksto": "La idiotoj",
+    "teksto": "(S-ro 1 sidas sur se\u011do \u0109e tablo. Li legas dosierojn. Aliflanke estas malplena se\u011do. S-ro 2 aperas timete.)",
     "vortaro": {
-      "la": "le, la, les",
-      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin"
-    }
-  },
-  {
-    "teksto": "",
-    "vortaro": {}
-  },
-  {
-    "teksto": "(S-ro 1 sidas sur se\u011do \u0109e tablo. Li legas",
-    "vortaro": {
-      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
-      "legas": "lire",
-      "tablo": "table",
       "li": "il, lui, le",
-      "sur": "sur",
+      "aperas": "appara\u00eetre",
+      "tablo": "table",
       "se\u011do": "chaise",
-      "sidas": "\u00eatre assis(e)"
-    }
-  },
-  {
-    "teksto": "dosierojn. Aliflanke estas malplena se\u011do. S-ro 2",
-    "vortaro": {
-      "dosierojn": "dossier, fichier, casier",
-      "aliflanke": "d'autre part, d'un autre c\u00f4t\u00e9",
-      "estas": "\u00eatre",
       "malplena": "vide",
-      "se\u011do": "chaise"
-    }
-  },
-  {
-    "teksto": "aperas timete.)",
-    "vortaro": {
-      "aperas": "appara\u00eetre"
+      "aliflanke": "d'autre part, d'un autre c\u00f4t\u00e9",
+      "dosierojn": "dossier, fichier, casier",
+      "estas": "\u00eatre",
+      "timete": "avec appr\u00e9hension",
+      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
+      "sidas": "\u00eatre assis(e)",
+      "legas": "lire",
+      "sur": "sur"
     }
   },
   {
     "teksto": "Sinjoro 1: Envenu, envenu.... Ne timu.",
     "vortaro": {
       "envenu": "entrer",
-      "sinjoro": "monsieur",
       "timu": "craindre, avoir peur",
+      "sinjoro": "monsieur",
       "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "Sinjoro 2 (timete): Bonan tagon....",
     "vortaro": {
+      "timete": "avec appr\u00e9hension",
       "tagon": "jour",
-      "sinjoro": "monsieur",
-      "bonan": "bon,  bonne"
-    }
-  },
-  {
-    "teksto": "Sinjoro 1 (ridete): Bonan tagon....Venu.... Venu",
-    "vortaro": {
-      "sinjoro": "monsieur",
       "bonan": "bon,  bonne",
+      "sinjoro": "monsieur"
+    }
+  },
+  {
+    "teksto": "Sinjoro 1 (ridete): Bonan tagon....Venu.... Venu sidi\u011di.",
+    "vortaro": {
+      "sidi\u011di": "s'asseoir",
+      "venu": "venir",
       "tagon": "jour",
-      "venu": "venir"
-    }
-  },
-  {
-    "teksto": "sidi\u011di.",
-    "vortaro": {
-      "sidi\u011di": "s'asseoir"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2 (tre malrapide transpa\u015das la scenejon,",
-    "vortaro": {
-      "scenejon": "plateau, sc\u00e8ne",
+      "bonan": "bon,  bonne",
       "sinjoro": "monsieur",
-      "tre": "tr\u00e8s",
-      "la": "le, la, les"
+      "ridete": "avec un sourire"
     }
   },
   {
-    "teksto": "tre maltrankvila): \u0108u sur la se\u011don?",
+    "teksto": "Sinjoro 2 (tre malrapide transpa\u015das la scenejon, tre maltrankvila): \u0108u sur la se\u011don?",
     "vortaro": {
-      "maltrankvila": "\u00e9nerv\u00e9, inquiet, perturb\u00e9",
-      "tre": "tr\u00e8s",
-      "la": "le, la, les",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "sur": "sur",
-      "se\u011don": "chaise"
+      "transpa\u015das": "franchir",
+      "se\u011don": "chaise",
+      "scenejon": "plateau, sc\u00e8ne",
+      "malrapide": "lentement",
+      "tre": "tr\u00e8s",
+      "sinjoro": "monsieur",
+      "maltrankvila": "\u00e9nerv\u00e9, inquiet, perturb\u00e9",
+      "la": "le, la, les",
+      "sur": "sur"
     }
   },
   {
     "teksto": "Sinjoro 1: Jes.... Ne timu.... \u0108io okazos glate.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "timu": "craindre, avoir peur",
-      "okazos": "arriver, se passer, avoir lieu",
+      "jes": "oui, d'accord",
+      "glate": "bien",
       "\u0109io": "tout, toute chose",
       "ne": "non, ne... pas",
-      "jes": "oui, d'accord"
+      "timu": "craindre, avoir peur",
+      "sinjoro": "monsieur",
+      "okazos": "arriver, se passer, avoir lieu"
     }
   },
   {
-    "teksto": "Sinjoro 2 (alvenas apud la se\u011don): \u0108u mi ne",
+    "teksto": "Sinjoro 2 (alvenas apud la se\u011don): \u0108u mi ne povas staradi?",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
-      "apud": "pr\u00e8s de, \u00e0 c\u00f4t\u00e9 de",
-      "la": "le, la, les",
-      "alvenas": "arriver",
+      "se\u011don": "chaise",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "ne": "non, ne... pas",
-      "se\u011don": "chaise"
-    }
-  },
-  {
-    "teksto": "povas staradi?",
-    "vortaro": {
-      "povas": "pouvoir, \u00eatre capable de"
-    }
-  },
-  {
-    "teksto": "Sinjoro 1: Jes ja... se vi volas.... Sed vi estos pli",
-    "vortaro": {
-      "ja": "certes, effectivement, il est vrai que, en fait, bien",
+      "povas": "pouvoir, \u00eatre capable de",
+      "alvenas": "arriver",
+      "staradi": "rester debout",
       "sinjoro": "monsieur",
-      "estos": "\u00eatre",
-      "se": "si (indique une condition)",
-      "volas": "vouloir",
-      "vi": "tu, vous",
-      "sed": "mais",
-      "pli": "plus (en plus grande quantit\u00e9)",
-      "jes": "oui, d'accord"
+      "ne": "non, ne... pas",
+      "apud": "pr\u00e8s de, \u00e0 c\u00f4t\u00e9 de",
+      "la": "le, la, les"
     }
   },
   {
-    "teksto": "komforta sidante, \u0109u ne?",
+    "teksto": "Sinjoro 1: Jes ja... se vi volas.... Sed vi estos pli komforta sidante, \u0109u ne?",
     "vortaro": {
+      "se": "si (indique une condition)",
+      "jes": "oui, d'accord",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "sed": "mais",
+      "estos": "\u00eatre",
+      "ja": "certes, effectivement, il est vrai que, en fait, bien",
+      "vi": "tu, vous",
       "sidante": "\u00eatre assis(e)",
+      "pli": "plus (en plus grande quantit\u00e9)",
       "ne": "non, ne... pas",
       "komforta": "confortable",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "sinjoro": "monsieur",
+      "volas": "vouloir"
     }
   },
   {
@@ -148,471 +111,369 @@
     "vortaro": {
       "mi": "je",
       "sinjoro": "monsieur",
-      "scias": "savoir",
-      "ne": "non, ne... pas"
+      "ne": "non, ne... pas",
+      "scias": "savoir"
     }
   },
   {
-    "teksto": "Sinjoro 1: Fidu min.... Estas pli komforte.... Pli",
+    "teksto": "Sinjoro 1: Fidu min.... Estas pli komforte.... Pli ripozige.",
     "vortaro": {
-      "komforte": "\u00eates-vous \u00e0 votre aise?, confortablement, \u00e0 son aise",
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
+      "ripozige": "en faisant reposer",
       "min": "je",
-      "fidu": "faire confiance",
-      "pli": "plus (en plus grande quantit\u00e9)"
-    }
-  },
-  {
-    "teksto": "ripozige.",
-    "vortaro": {}
-  },
-  {
-    "teksto": "(S-ro 2 tre hezitemas, \u015dajne malfidas. Li",
-    "vortaro": {
-      "tre": "tr\u00e8s",
-      "li": "il, lui, le",
-      "malfidas": "avoir de la d\u00e9fiance, douter, se d\u00e9fier, se garder, se m\u00e9fier",
-      "\u015dajne": "apparemment"
-    }
-  },
-  {
-    "teksto": "kontrolas ke la se\u011do estas stabila pu\u015dante \u011din",
-    "vortaro": {
       "estas": "\u00eatre",
-      "la": "le, la, les",
-      "\u011din": "il, elle",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "pu\u015dante": "pousser",
-      "kontrolas": "v\u00e9rifier, contr\u00f4ler",
-      "se\u011do": "chaise",
-      "stabila": "stable"
-    }
-  },
-  {
-    "teksto": "iomete, kaj li fine sidi\u011das.)",
-    "vortaro": {
-      "li": "il, lui, le",
-      "kaj": "et",
-      "fine": "au final, finalement, enfin",
-      "iomete": "un petit peu",
-      "sidi\u011das": "s'asseoir"
-    }
-  },
-  {
-    "teksto": "Vi estas pli komforta nun ... \u0109u ne?",
-    "vortaro": {
-      "estas": "\u00eatre",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "vi": "tu, vous",
-      "komforta": "confortable",
       "pli": "plus (en plus grande quantit\u00e9)",
+      "fidu": "faire confiance",
+      "komforte": "\u00eates-vous \u00e0 votre aise?, confortablement, \u00e0 son aise",
+      "sinjoro": "monsieur"
+    }
+  },
+  {
+    "teksto": "(S-ro 2 tre hezitemas, \u015dajne malfidas. Li kontrolas ke la se\u011do estas stabila pu\u015dante \u011din iomete, kaj li fine sidi\u011das.) Vi estas pli komforta nun ... \u0109u ne?",
+    "vortaro": {
+      "malfidas": "avoir de la d\u00e9fiance, douter, se d\u00e9fier, se garder, se m\u00e9fier",
+      "\u011din": "il, elle",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "vi": "tu, vous",
+      "tre": "tr\u00e8s",
+      "pu\u015dante": "pousser",
+      "fine": "au final, finalement, enfin",
+      "komforta": "confortable",
+      "kaj": "et",
+      "iomete": "un petit peu",
+      "stabila": "stable",
+      "sidi\u011das": "s'asseoir",
       "nun": "maintenant",
+      "la": "le, la, les",
+      "li": "il, lui, le",
+      "se\u011do": "chaise",
+      "kontrolas": "v\u00e9rifier, contr\u00f4ler",
+      "\u015dajne": "apparemment",
+      "estas": "\u00eatre",
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "hezitemas": "d'un air h\u00e9sitant",
       "ne": "non, ne... pas"
     }
   },
   {
-    "teksto": "Sinjoro 2: Jes, en ordo. Sed la testo ankora\u016d ne",
+    "teksto": "Sinjoro 2: Jes, en ordo. Sed la testo ankora\u016d ne komenci\u011dis, \u0109u?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "la": "le, la, les",
+      "jes": "oui, d'accord",
       "en": "dans",
-      "ankora\u016d": "encore",
-      "ordo": "ordre",
       "sed": "mais",
       "testo": "test",
-      "ne": "non, ne... pas",
-      "jes": "oui, d'accord"
-    }
-  },
-  {
-    "teksto": "komenci\u011dis, \u0109u?",
-    "vortaro": {
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "komenci\u011dis": "commencer, s'amorcer, se commencer, d\u00e9buter, se d\u00e9clencher, d\u00e9marrer, s'engager, s'initialiser, s'ouvrir, partir"
+      "komenci\u011dis": "commencer, s'amorcer, se commencer, d\u00e9buter, se d\u00e9clencher, d\u00e9marrer, s'engager, s'initialiser, s'ouvrir, partir",
+      "ankora\u016d": "encore",
+      "la": "le, la, les",
+      "ne": "non, ne... pas",
+      "ordo": "ordre",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 1: Ne, ne.... Trankvili\u011du.... Cetere, ne",
-    "vortaro": {
-      "sinjoro": "monsieur",
-      "trankvili\u011du": "se calmer, se tranquilliser",
-      "cetere": "d'ailleurs, du reste",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "temas pri testo.... Mi nur starigos al vi kelkajn",
+    "teksto": "Sinjoro 1: Ne, ne.... Trankvili\u011du.... Cetere, ne temas pri testo.... Mi nur starigos al vi kelkajn demandojn.",
     "vortaro": {
       "mi": "je",
+      "testo": "test",
       "pri": "\u00e0 propos de",
-      "kelkajn": "quelques, peu de",
-      "temas": "concerner, toucher, s'agir de, \u00eatre question de",
-      "al": "\u00e0, vers",
       "nur": "seulement",
-      "starigos": "mettre debout, monter",
+      "kelkajn": "quelques, peu de",
       "vi": "tu, vous",
-      "testo": "test"
-    }
-  },
-  {
-    "teksto": "demandojn.",
-    "vortaro": {
+      "cetere": "d'ailleurs, du reste",
+      "sinjoro": "monsieur",
+      "ne": "non, ne... pas",
+      "trankvili\u011du": "se calmer, se tranquilliser",
+      "al": "\u00e0, vers",
+      "starigos": "mettre debout, monter",
+      "temas": "concerner, toucher, s'agir de, \u00eatre question de",
       "demandojn": "question"
     }
   },
   {
     "teksto": "Sinjoro 2 (maltrankvile): \u0108u insidajn demandojn?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "insidajn": "insidieux, pi\u00e9g\u00e9, sournois, traitre, trompeur",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "maltrankvile": "inquiet (de mani\u00e8re inqui\u00e8te)",
+      "sinjoro": "monsieur",
       "demandojn": "question"
     }
   },
   {
-    "teksto": "Sinjoro 1 (tre afable): Tute ne.... Demandojn",
+    "teksto": "Sinjoro 1 (tre afable): Tute ne.... Demandojn pri vi... via vivo.... Demandojn por pli bone koni vin.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "tre": "tr\u00e8s",
+      "vin": "tu, vous",
       "tute": "enti\u00e8rement, totalement",
-      "demandojn": "question",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "pri vi... via vivo.... Demandojn por pli bone koni",
-    "vortaro": {
-      "bone": "bien",
-      "por": "pour, dans le but de",
       "pri": "\u00e0 propos de",
-      "vi": "tu, vous",
-      "koni": "conna\u00eetre",
       "vivo": "vie",
-      "demandojn": "question",
+      "por": "pour, dans le but de",
+      "koni": "conna\u00eetre",
+      "afable": "aimablement",
+      "vi": "tu, vous",
+      "tre": "tr\u00e8s",
+      "sinjoro": "monsieur",
       "pli": "plus (en plus grande quantit\u00e9)",
-      "via": "tu, vous"
+      "via": "tu, vous",
+      "bone": "bien",
+      "ne": "non, ne... pas",
+      "demandojn": "question"
     }
   },
   {
-    "teksto": "vin.",
-    "vortaro": {
-      "vin": "tu, vous"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: Sed mia edzino parolis al mi pri",
+    "teksto": "Sinjoro 2: Sed mia edzino parolis al mi pri testo.",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
-      "parolis": "parler",
+      "sed": "mais",
       "mia": "je",
       "pri": "\u00e0 propos de",
+      "testo": "test",
       "al": "\u00e0, vers",
       "edzino": "\u00e9pouse",
-      "sed": "mais"
+      "parolis": "parler",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "testo.",
+    "teksto": "Sinjoro 1: \u0108u vere?... Iomete troa.... Ne, ne.... Ni diru ke temas pri interparolado.",
     "vortaro": {
-      "testo": "test"
-    }
-  },
-  {
-    "teksto": "Sinjoro 1: \u0108u vere?... Iomete troa.... Ne, ne....",
-    "vortaro": {
-      "sinjoro": "monsieur",
-      "troa": "en trop",
       "vere": "vraiment",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "iomete": "un petit peu",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "Ni diru ke temas pri interparolado.",
-    "vortaro": {
-      "pri": "\u00e0 propos de",
-      "temas": "concerner, toucher, s'agir de, \u00eatre question de",
-      "diru": "dire",
+      "interparolado": "discussion",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "ni": "nous"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: Sed, se mi bone respondos, \u0109u mi",
-    "vortaro": {
-      "bone": "bien",
-      "mi": "je",
-      "sinjoro": "monsieur",
-      "se": "si (indique une condition)",
-      "respondos": "r\u00e9pondre",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "sed": "mais"
-    }
-  },
-  {
-    "teksto": "povos reiri hejmen?",
-    "vortaro": {
-      "hejmen": "\u00e0 la maison (en y allant)",
-      "reiri": "revenir, retourner, aller de nouveau",
-      "povos": "pouvoir, \u00eatre capable de"
-    }
-  },
-  {
-    "teksto": "Sinjoro 1: Kompreneble.... Ni amba\u016d nur iom",
-    "vortaro": {
-      "sinjoro": "monsieur",
-      "kompreneble": "naturellement, bien entendu",
-      "iom": "un peu",
-      "nur": "seulement",
+      "pri": "\u00e0 propos de",
+      "diru": "dire",
+      "temas": "concerner, toucher, s'agir de, \u00eatre question de",
       "ni": "nous",
-      "amba\u016d": "tous deux, tous les deux, l'un et l'autre"
+      "ne": "non, ne... pas",
+      "iomete": "un petit peu",
+      "sinjoro": "monsieur",
+      "troa": "en trop"
     }
   },
   {
-    "teksto": "interparolos, kaj poste ni kune vidos kio estos la",
+    "teksto": "Sinjoro 2: Sed, se mi bone respondos, \u0109u mi povos reiri hejmen?",
     "vortaro": {
-      "poste": "ensuite, puis",
+      "se": "si (indique une condition)",
+      "mi": "je",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "sed": "mais",
+      "hejmen": "\u00e0 la maison (en y allant)",
+      "respondos": "r\u00e9pondre",
+      "povos": "pouvoir, \u00eatre capable de",
+      "bone": "bien",
+      "sinjoro": "monsieur",
+      "reiri": "revenir, retourner, aller de nouveau"
+    }
+  },
+  {
+    "teksto": "Sinjoro 1: Kompreneble.... Ni amba\u016d nur iom interparolos, kaj poste ni kune vidos kio estos la plej bona solvo por vi. Konsentite?",
+    "vortaro": {
+      "nur": "seulement",
+      "vi": "tu, vous",
+      "kaj": "et",
+      "iom": "un peu",
+      "kio": "quoi, que",
+      "interparolos": "converser, discuter, s'entretenir",
       "kune": "ensemble",
       "estos": "\u00eatre",
-      "kio": "quoi, que",
-      "la": "le, la, les",
-      "interparolos": "converser, discuter, s'entretenir",
-      "kaj": "et",
-      "ni": "nous",
-      "vidos": "voir"
-    }
-  },
-  {
-    "teksto": "plej bona solvo por vi. Konsentite?",
-    "vortaro": {
       "plej": "le plus, la plus",
-      "por": "pour, dans le but de",
-      "konsentite": "consentir, \u00eatre en accord",
-      "vi": "tu, vous",
-      "solvo": "solution, aboutissement, d\u00e9nouement, issue, rem\u00e8de, dissolution, r\u00e9solution",
-      "bona": "bon,  bonne"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: Konsentite. Kaj.... Pardonu min,",
-    "vortaro": {
       "sinjoro": "monsieur",
-      "min": "je",
-      "kaj": "et",
+      "la": "le, la, les",
+      "por": "pour, dans le but de",
+      "amba\u016d": "tous deux, tous les deux, l'un et l'autre",
+      "vidos": "voir",
+      "kompreneble": "naturellement, bien entendu",
+      "poste": "ensuite, puis",
+      "bona": "bon,  bonne",
       "konsentite": "consentir, \u00eatre en accord",
-      "pardonu": "pardonner"
+      "ni": "nous",
+      "solvo": "solution, aboutissement, d\u00e9nouement, issue, rem\u00e8de, dissolution, r\u00e9solution"
     }
   },
   {
-    "teksto": "sed.... \u0108i tie.... nu, mi volas diri, en via instituto...",
+    "teksto": "Sinjoro 2: Konsentite. Kaj.... Pardonu min, sed.... \u0108i tie.... nu, mi volas diri, en via instituto... finfine.... \u0108i tie estas nur idiotoj, \u0109u ne?",
     "vortaro": {
-      "mi": "je",
-      "volas": "vouloir",
-      "en": "dans",
-      "via": "tu, vous",
-      "instituto": "institut",
-      "diri": "dire",
-      "\u0109i": "(indique la proximit\u00e9)",
       "sed": "mais",
-      "nu": "allons, bien, eh bien\u2026 ",
-      "tie": "ici, l\u00e0"
-    }
-  },
-  {
-    "teksto": "finfine.... \u0108i tie estas nur idiotoj, \u0109u ne?",
-    "vortaro": {
-      "estas": "\u00eatre",
       "nur": "seulement",
-      "finfine": "finalement, en fin de compte",
+      "nu": "allons, bien, eh bien\u2026 ",
+      "via": "tu, vous",
+      "volas": "vouloir",
+      "mi": "je",
+      "min": "je",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "ne": "non, ne... pas",
+      "diri": "dire",
+      "kaj": "et",
+      "en": "dans",
+      "instituto": "institut",
+      "finfine": "finalement, en fin de compte",
       "\u0109i": "(indique la proximit\u00e9)",
+      "sinjoro": "monsieur",
+      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
+      "pardonu": "pardonner",
+      "konsentite": "consentir, \u00eatre en accord",
       "tie": "ici, l\u00e0",
-      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin"
+      "estas": "\u00eatre",
+      "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "Sinjoro 1: Jes.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "jes": "oui, d'accord"
+      "jes": "oui, d'accord",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Ha.... Bone.... Kaj... kie ili estas?",
     "vortaro": {
-      "bone": "bien",
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
       "kie": "o\u00f9",
-      "kaj": "et",
       "ha": "ah, ha",
-      "ili": "ils, elles, eux"
+      "estas": "\u00eatre",
+      "ili": "ils, elles, eux",
+      "bone": "bien",
+      "kaj": "et",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Ili estas \u0109i tie.... Tuj apude.",
     "vortaro": {
-      "sinjoro": "monsieur",
       "estas": "\u00eatre",
+      "tie": "ici, l\u00e0",
       "tuj": "imm\u00e9diatement, sur le champ",
       "\u0109i": "(indique la proximit\u00e9)",
+      "apude": "\u00e0 c\u00f4t\u00e9",
       "ili": "ils, elles, eux",
-      "tie": "ici, l\u00e0"
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2: Sed.... Be.... \u0108u mi povus vidi ilin?",
+    "teksto": "Sinjoro 2: Sed.... Be.... \u0108u mi povus vidi ilin? Anta\u016d ol komenci la teston?... Nu, mi celas diri, la interparoladon.",
     "vortaro": {
-      "mi": "je",
-      "sinjoro": "monsieur",
-      "ilin": "ils, elles, eux",
       "povus": "pouvoir, \u00eatre capable de",
+      "mi": "je",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "sed": "mais",
-      "vidi": "voir",
-      "be": "bah, ben..., b\u00ea"
-    }
-  },
-  {
-    "teksto": "Anta\u016d ol komenci la teston?... Nu, mi celas diri,",
-    "vortaro": {
-      "mi": "je",
-      "teston": "test",
-      "la": "le, la, les",
-      "celas": "avoir pour objectif, viser",
-      "ol": "que (dans une comparaison)",
-      "diri": "dire",
-      "anta\u016d": "avant, en avant de, devant",
+      "ilin": "ils, elles, eux",
+      "be": "bah, ben..., b\u00ea",
+      "komenci": "commencer",
       "nu": "allons, bien, eh bien\u2026 ",
-      "komenci": "commencer"
-    }
-  },
-  {
-    "teksto": "la interparoladon.",
-    "vortaro": {
-      "la": "le, la, les"
+      "interparoladon": "discussion",
+      "celas": "avoir pour objectif, viser",
+      "diri": "dire",
+      "la": "le, la, les",
+      "vidi": "voir",
+      "ol": "que (dans une comparaison)",
+      "teston": "test",
+      "anta\u016d": "avant, en avant de, devant",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: \u0108u vi volas vidi ilin?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "ilin": "ils, elles, eux",
-      "volas": "vouloir",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "ilin": "ils, elles, eux",
       "vi": "tu, vous",
-      "vidi": "voir"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: Nu, jes... Tiel mi havos impreson. Mi",
-    "vortaro": {
-      "mi": "je",
+      "vidi": "voir",
       "sinjoro": "monsieur",
-      "tiel": "ainsi, comme \u00e7a",
-      "havos": "avoir",
-      "nu": "allons, bien, eh bien\u2026 ",
-      "impreson": "impression, sensation",
-      "jes": "oui, d'accord"
+      "volas": "vouloir"
     }
   },
   {
-    "teksto": "pli bone ekkomprenos.",
+    "teksto": "Sinjoro 2: Nu, jes... Tiel mi havos impreson. Mi pli bone ekkomprenos.",
     "vortaro": {
-      "bone": "bien",
+      "havos": "avoir",
+      "mi": "je",
+      "jes": "oui, d'accord",
+      "impreson": "impression, sensation",
       "ekkomprenos": "commencer \u00e0 comprendre, entrevoir, s'apercevoir, se rendre compte",
-      "pli": "plus (en plus grande quantit\u00e9)"
+      "nu": "allons, bien, eh bien\u2026 ",
+      "tiel": "ainsi, comme \u00e7a",
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "bone": "bien",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Konsentite!",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "konsentite": "consentir, \u00eatre en accord"
+      "konsentite": "consentir, \u00eatre en accord",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "(S-ro 1 stari\u011das por premi \u015daltilon, la",
+    "teksto": "(S-ro 1 stari\u011das por premi \u015daltilon, la teatra salono estas komplete lumigita.)",
     "vortaro": {
-      "por": "pour, dans le but de",
-      "la": "le, la, les",
-      "\u015daltilon": "interrupteur",
-      "premi": "serrer la main de qn, serr\u00e9s comme des sardines, oppresseur, opprim\u00e9, accabler, appuyer, oppresser, opprimer, pousser, presser, ",
-      "stari\u011das": "se dresser"
-    }
-  },
-  {
-    "teksto": "teatra salono estas komplete lumigita.)",
-    "vortaro": {
-      "estas": "\u00eatre",
-      "salono": "salon",
+      "stari\u011das": "se dresser",
+      "teatra": "th\u00e9\u00e2tral, th\u00e9\u00e2trale",
       "lumigita": "\u00e9clairer, \u00e9claircir",
-      "teatra": "th\u00e9\u00e2tral, th\u00e9\u00e2trale"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2 (malkovras la publikon en la salono):",
-    "vortaro": {
-      "sinjoro": "monsieur",
-      "la": "le, la, les",
+      "premi": "serrer la main de qn, serr\u00e9s comme des sardines, oppresseur, opprim\u00e9, accabler, appuyer, oppresser, opprimer, pousser, presser, ",
+      "por": "pour, dans le but de",
+      "komplete": "compl\u00e8tement",
       "salono": "salon",
-      "en": "dans",
-      "malkovras": "d\u00e9couvrir (tous les sens)",
-      "publikon": "public"
+      "\u015daltilon": "interrupteur",
+      "estas": "\u00eatre",
+      "la": "le, la, les"
     }
   },
   {
-    "teksto": "Ho jen!... (Mirfrapita) Ho jen!... Ili multegas",
+    "teksto": "Sinjoro 2 (malkovras la publikon en la salono): Ho jen!... (Mirfrapita) Ho jen!... Ili multegas",
     "vortaro": {
+      "mirfrapita": "frapp\u00e9e d'\u00e9merveillement",
+      "jen": "voici",
+      "en": "dans",
+      "salono": "salon",
       "ho": "Henry, hydrog\u00e8ne, H, heure",
+      "multegas": "multiplie grandement",
+      "malkovras": "d\u00e9couvrir (tous les sens)",
+      "sinjoro": "monsieur",
       "ili": "ils, elles, eux",
-      "jen": "voici"
+      "la": "le, la, les",
+      "publikon": "public"
     }
   },
   {
     "teksto": "Sinjoro 1: He jes....",
     "vortaro": {
-      "sinjoro": "monsieur",
+      "he": "h\u00e9",
       "jes": "oui, d'accord",
-      "he": "h\u00e9"
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Kaj \u0109u ili \u0109iuj estas...?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
-      "kaj": "et",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "\u0109iuj": "chaque, chacun",
-      "ili": "ils, elles, eux"
+      "estas": "\u00eatre",
+      "ili": "ils, elles, eux",
+      "kaj": "et",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: idiotoj?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin"
+      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Jes, \u0109u?",
     "vortaro": {
-      "sinjoro": "monsieur",
+      "jes": "oui, d'accord",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "jes": "oui, d'accord"
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Jes ja....",
     "vortaro": {
-      "ja": "certes, effectivement, il est vrai que, en fait, bien",
+      "jes": "oui, d'accord",
       "sinjoro": "monsieur",
-      "jes": "oui, d'accord"
+      "ja": "certes, effectivement, il est vrai que, en fait, bien"
     }
   },
   {
@@ -622,227 +483,198 @@
     }
   },
   {
-    "teksto": "Sinjoro 2 (rigardas ilin): Mi neniam vidis tiom",
+    "teksto": "Sinjoro 2 (rigardas ilin): Mi neniam vidis tiom samtempe. Ho jen!... Estas impone....",
     "vortaro": {
-      "mi": "je",
-      "sinjoro": "monsieur",
-      "rigardas": "regarder",
-      "ilin": "ils, elles, eux",
-      "tiom": "tant (de), autant",
       "neniam": "jamais",
-      "vidis": "voir"
-    }
-  },
-  {
-    "teksto": "samtempe. Ho jen!... Estas impone....",
-    "vortaro": {
-      "estas": "\u00eatre",
+      "mi": "je",
+      "samtempe": "en m\u00eame temps",
+      "jen": "voici",
+      "ilin": "ils, elles, eux",
+      "impone": "en imposant",
+      "rigardas": "regarder",
       "ho": "Henry, hydrog\u00e8ne, H, heure",
-      "jen": "voici"
+      "estas": "\u00eatre",
+      "vidis": "voir",
+      "tiom": "tant (de), autant",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: \u0108u ne?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "ne": "non, ne... pas",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: Kaj \u0109u \u0109iuj tiuj estis denuncitaj kiel",
-    "vortaro": {
-      "sinjoro": "monsieur",
-      "kaj": "et",
-      "denuncitaj": "d\u00e9noncer",
-      "kiel": "comment, comme",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "tiuj": "ce, cet(te)",
-      "\u0109iuj": "chaque, chacun",
-      "estis": "\u00eatre"
-    }
-  },
-  {
-    "teksto": "mi?",
-    "vortaro": {
-      "mi": "je"
-    }
-  },
-  {
-    "teksto": "Sinjoro 1: Plejparte ili venis pro denunci\u011do,",
-    "vortaro": {
       "sinjoro": "monsieur",
-      "pro": "\u00e0 cause de, pour",
-      "venis": "venir",
-      "ili": "ils, elles, eux"
+      "ne": "non, ne... pas"
     }
   },
   {
-    "teksto": "jes.... Sed kelkaj venis memvole.",
+    "teksto": "Sinjoro 2: Kaj \u0109u \u0109iuj tiuj estis denuncitaj kiel mi?",
     "vortaro": {
-      "kelkaj": "quelque, un certain",
-      "venis": "venir",
+      "mi": "je",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "denuncitaj": "d\u00e9noncer",
+      "estis": "\u00eatre",
+      "\u0109iuj": "chaque, chacun",
+      "tiuj": "ce, cet(te)",
+      "kiel": "comment, comme",
+      "kaj": "et",
+      "sinjoro": "monsieur"
+    }
+  },
+  {
+    "teksto": "Sinjoro 1: Plejparte ili venis pro denunci\u011do, jes.... Sed kelkaj venis memvole.",
+    "vortaro": {
+      "pro": "\u00e0 cause de, pour",
+      "jes": "oui, d'accord",
       "sed": "mais",
-      "jes": "oui, d'accord"
+      "kelkaj": "quelque, un certain",
+      "plejparte": "la plupart",
+      "memvole": "volontiers",
+      "ili": "ils, elles, eux",
+      "venis": "venir",
+      "sinjoro": "monsieur",
+      "denunci\u011do": "d\u00e9nonciation"
     }
   },
   {
     "teksto": "Sinjoro 2: Mirige....",
     "vortaro": {
-      "sinjoro": "monsieur"
+      "sinjoro": "monsieur",
+      "mirige": "avec \u00e9tonnement"
     }
   },
   {
     "teksto": "Sinjoro 1: Ili \u015dajnas afablaj, \u0109u ne?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "\u015dajnas": "sembler, avoir l'air",
       "afablaj": "affable, gentil(le)",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "\u015dajnas": "sembler, avoir l'air",
+      "ne": "non, ne... pas",
       "ili": "ils, elles, eux",
-      "ne": "non, ne... pas"
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2: Nu... Mi ne tre bone konstatas.... \u0108i",
+    "teksto": "Sinjoro 2: Nu... Mi ne tre bone konstatas.... \u0108i tiel, estas....",
     "vortaro": {
-      "bone": "bien",
       "mi": "je",
-      "sinjoro": "monsieur",
-      "tre": "tr\u00e8s",
-      "konstatas": "constater (que)",
-      "\u0109i": "(indique la proximit\u00e9)",
       "nu": "allons, bien, eh bien\u2026 ",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "tiel, estas....",
-    "vortaro": {
+      "tiel": "ainsi, comme \u00e7a",
       "estas": "\u00eatre",
-      "tiel": "ainsi, comme \u00e7a"
+      "tre": "tr\u00e8s",
+      "ne": "non, ne... pas",
+      "\u0109i": "(indique la proximit\u00e9)",
+      "konstatas": "constater (que)",
+      "bone": "bien",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: \u0108u vi volas alproksimi\u011di?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "volas": "vouloir",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "vi": "tu, vous"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: Ho ne... (Li rigardas ilin de sia se\u011do.)",
-    "vortaro": {
+      "vi": "tu, vous",
+      "alproksimi\u011di": "s'approcher",
       "sinjoro": "monsieur",
-      "rigardas": "regarder",
-      "ilin": "ils, elles, eux",
-      "sia": "se, s', soi",
-      "de": "de",
-      "li": "il, lui, le",
-      "se\u011do": "chaise",
-      "ho": "Henry, hydrog\u00e8ne, H, heure",
-      "ne": "non, ne... pas"
+      "volas": "vouloir"
     }
   },
   {
-    "teksto": "Ne.... Mi ne kura\u011dus...",
+    "teksto": "Sinjoro 2: Ho ne... (Li rigardas ilin de sia se\u011do.) Ne.... Mi ne kura\u011dus...",
     "vortaro": {
       "mi": "je",
+      "li": "il, lui, le",
+      "de": "de",
+      "ilin": "ils, elles, eux",
+      "se\u011do": "chaise",
+      "rigardas": "regarder",
+      "ho": "Henry, hydrog\u00e8ne, H, heure",
+      "kura\u011dus": "avoir le courage de, oser",
       "ne": "non, ne... pas",
-      "kura\u011dus": "avoir le courage de, oser"
+      "sia": "se, s', soi",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 1: Ne alarmi\u011du.... Ek al! Vi vidos, ili",
+    "teksto": "Sinjoro 1: Ne alarmi\u011du.... Ek al! Vi vidos, ili estas tre afablaj.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "al": "\u00e0, vers",
-      "vi": "tu, vous",
-      "ne": "non, ne... pas",
+      "afablaj": "affable, gentil(le)",
+      "alarmi\u011du": "s'alarmez",
       "vidos": "voir",
-      "ili": "ils, elles, eux"
-    }
-  },
-  {
-    "teksto": "estas tre afablaj.",
-    "vortaro": {
+      "vi": "tu, vous",
       "estas": "\u00eatre",
+      "al": "\u00e0, vers",
+      "ne": "non, ne... pas",
       "tre": "tr\u00e8s",
-      "afablaj": "affable, gentil(le)"
+      "ili": "ils, elles, eux",
+      "ek": "commencer",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Ne, ne, tio embarasas min.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "embarasas": "embarrasser, emp\u00eatrer, encombrer, g\u00eaner",
       "min": "je",
-      "tio": "ce, cela, \u00e7a",
-      "ne": "non, ne... pas"
+      "embarasas": "embarrasser, emp\u00eatrer, encombrer, g\u00eaner",
+      "ne": "non, ne... pas",
+      "sinjoro": "monsieur",
+      "tio": "ce, cela, \u00e7a"
     }
   },
   {
-    "teksto": "Sinjoro 1: Ek.... Venu kun mi. Ni iros kune....",
+    "teksto": "Sinjoro 1: Ek.... Venu kun mi. Ni iros kune.... Tio bonege okazos.",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
       "iros": "aller",
-      "kun": "avec",
       "kune": "ensemble",
+      "bonege": "tr\u00e8s bien",
       "ni": "nous",
-      "venu": "venir"
-    }
-  },
-  {
-    "teksto": "Tio bonege okazos.",
-    "vortaro": {
+      "venu": "venir",
+      "ek": "commencer",
+      "kun": "avec",
+      "sinjoro": "monsieur",
       "okazos": "arriver, se passer, avoir lieu",
-      "tio": "ce, cela, \u00e7a",
-      "bonege": "tr\u00e8s bien"
+      "tio": "ce, cela, \u00e7a"
     }
   },
   {
     "teksto": "Sinjoro 2: \u0108u vi certas?",
     "vortaro": {
-      "sinjoro": "monsieur",
+      "vi": "tu, vous",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "vi": "tu, vous"
+      "sinjoro": "monsieur",
+      "certas": "assurer"
     }
   },
   {
     "teksto": "Sinjoro 1: Jes, ja. Ek... Levi\u011du.",
     "vortaro": {
+      "jes": "oui, d'accord",
       "ja": "certes, effectivement, il est vrai que, en fait, bien",
-      "sinjoro": "monsieur",
       "levi\u011du": "levant, s'\u00e9lever, se lever",
-      "jes": "oui, d'accord"
+      "ek": "commencer",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "(S-ro 2 levi\u011das, s-ro 1 etendas al li sian",
+    "teksto": "(S-ro 2 levi\u011das, s-ro 1 etendas al li sian brakon.)",
     "vortaro": {
-      "etendas": "tendre la main, battre, marteler, \u00e9tendre, \u00e9tirer, r\u00e9pandre, tendre",
+      "brakon": "bras",
+      "levi\u011das": "levant, s'\u00e9lever, se lever",
       "li": "il, lui, le",
       "al": "\u00e0, vers",
       "sian": "son, sa, ses",
-      "levi\u011das": "levant, s'\u00e9lever, se lever"
-    }
-  },
-  {
-    "teksto": "brakon.)",
-    "vortaro": {
-      "brakon": "bras"
+      "etendas": "tendre la main, battre, marteler, \u00e9tendre, \u00e9tirer, r\u00e9pandre, tendre"
     }
   },
   {
     "teksto": "Sinjoro 2: Ni iru malrapide.... \u0108u en ordo?",
     "vortaro": {
-      "sinjoro": "monsieur",
       "iru": "aller",
-      "en": "dans",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "en": "dans",
+      "malrapide": "lentement",
+      "sinjoro": "monsieur",
       "ordo": "ordre",
       "ni": "nous"
     }
@@ -851,351 +683,278 @@
     "teksto": "Sinjoro 1: en ordo....",
     "vortaro": {
       "ordo": "ordre",
-      "sinjoro": "monsieur",
-      "en": "dans"
+      "en": "dans",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "(Ili pa\u015das malrapide flank-al-flanke",
+    "teksto": "(Ili pa\u015das malrapide flank-al-flanke \u011dis la scenej-rando. Pa\u016dzo. Ili rigardas la spektantojn.)",
     "vortaro": {
-      "ili": "ils, elles, eux",
-      "pa\u015das": "marcher"
-    }
-  },
-  {
-    "teksto": "\u011dis la scenej-rando. Pa\u016dzo. Ili rigardas la",
-    "vortaro": {
-      "pa\u016dzo": "*pause",
-      "rigardas": "regarder",
-      "la": "le, la, les",
       "\u011dis": "jusqu'\u00e0",
-      "ili": "ils, elles, eux"
-    }
-  },
-  {
-    "teksto": "spektantojn.)",
-    "vortaro": {
-      "spektantojn": "assister \u00e0"
+      "pa\u016dzo": "*pause",
+      "spektantojn": "assister \u00e0",
+      "malrapide": "lentement",
+      "rigardas": "regarder",
+      "pa\u015das": "marcher",
+      "ili": "ils, elles, eux",
+      "la": "le, la, les"
     }
   },
   {
     "teksto": "Vi rajtas saluti ilin.",
     "vortaro": {
       "saluti": "saluer",
-      "rajtas": "avoir le droit de",
+      "vi": "tu, vous",
       "ilin": "ils, elles, eux",
-      "vi": "tu, vous"
+      "rajtas": "avoir le droit de"
     }
   },
   {
     "teksto": "Sinjoro 2: \u0108u?...",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "(Li salutas spektanton en la unua vico):",
     "vortaro": {
-      "la": "le, la, les",
-      "spektanton": "assister \u00e0",
       "li": "il, lui, le",
+      "vico": "suite, rang, rang\u00e9e, file, s\u00e9rie, succession, tour",
       "en": "dans",
+      "spektanton": "assister \u00e0",
       "unua": "premier, premi\u00e8re",
       "salutas": "saluer",
-      "vico": "suite, rang, rang\u00e9e, file, s\u00e9rie, succession, tour"
+      "la": "le, la, les"
     }
   },
   {
     "teksto": "Bonan tagon!... \u0108u bone?...",
     "vortaro": {
-      "bone": "bien",
       "tagon": "jour",
+      "bone": "bien",
       "bonan": "bon,  bonne",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
     }
   },
   {
-    "teksto": "(Li ridetas al ili, pli komforta, kaj",
+    "teksto": "(Li ridetas al ili, pli komforta, kaj alparolas diversajn spektantojn):",
     "vortaro": {
       "li": "il, lui, le",
-      "kaj": "et",
-      "al": "\u00e0, vers",
-      "komforta": "confortable",
-      "pli": "plus (en plus grande quantit\u00e9)",
-      "ridetas": "sourire",
-      "ili": "ils, elles, eux"
-    }
-  },
-  {
-    "teksto": "alparolas diversajn spektantojn): Bonan",
-    "vortaro": {
-      "diversajn": "vari\u00e9(e), divers(e)",
-      "bonan": "bon,  bonne",
+      "spektantojn": "assister \u00e0",
       "alparolas": "adresser la parole \u00e0",
-      "spektantojn": "assister \u00e0"
+      "ridetas": "sourire",
+      "diversajn": "vari\u00e9(e), divers(e)",
+      "al": "\u00e0, vers",
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "ili": "ils, elles, eux",
+      "komforta": "confortable",
+      "kaj": "et"
     }
   },
   {
-    "teksto": "tagon.... Bonan tagon.... \u0108u bone, sinjorino?...",
+    "teksto": "Bonan tagon.... Bonan tagon.... \u0108u bone, sinjorino?... Tre agrable....",
     "vortaro": {
-      "bone": "bien",
-      "sinjorino": "dame, madame",
-      "bonan": "bon,  bonne",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "tagon": "jour"
+      "agrable": "agr\u00e9ablement",
+      "bonan": "bon,  bonne",
+      "tre": "tr\u00e8s",
+      "sinjorino": "dame, madame",
+      "tagon": "jour",
+      "bone": "bien"
     }
   },
   {
-    "teksto": "Tre agrable [a\u016d: Mi estas ravita]....",
+    "teksto": "(Li alparolas s-ron 1): Vere, ili \u015dajnas tre afablaj.",
     "vortaro": {
-      "mi": "je",
-      "tre": "tr\u00e8s",
-      "estas": "\u00eatre",
-      "a\u016d": "ou",
-      "ravita": "ravir, enchanter"
-    }
-  },
-  {
-    "teksto": "(Li alparolas s-ron 1): Vere, ili \u015dajnas tre",
-    "vortaro": {
-      "tre": "tr\u00e8s",
       "vere": "vraiment",
       "li": "il, lui, le",
+      "afablaj": "affable, gentil(le)",
       "\u015dajnas": "sembler, avoir l'air",
       "alparolas": "adresser la parole \u00e0",
+      "tre": "tr\u00e8s",
       "ili": "ils, elles, eux"
-    }
-  },
-  {
-    "teksto": "afablaj.",
-    "vortaro": {
-      "afablaj": "affable, gentil(le)"
     }
   },
   {
     "teksto": "Sinjoro 1: Vi povas ilin alparoli.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "ilin": "ils, elles, eux",
       "alparoli": "adresser la parole \u00e0",
+      "ilin": "ils, elles, eux",
       "povas": "pouvoir, \u00eatre capable de",
-      "vi": "tu, vous"
+      "vi": "tu, vous",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2 (al la publiko): Vi aspektas tre afablaj....",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "aspektas": "ressembler (\u00e0)",
-      "tre": "tr\u00e8s",
-      "la": "le, la, les",
-      "publiko": "public",
-      "al": "\u00e0, vers",
       "afablaj": "affable, gentil(le)",
-      "vi": "tu, vous"
+      "aspektas": "ressembler (\u00e0)",
+      "vi": "tu, vous",
+      "tre": "tr\u00e8s",
+      "al": "\u00e0, vers",
+      "sinjoro": "monsieur",
+      "la": "le, la, les",
+      "publiko": "public"
     }
   },
   {
     "teksto": "Vi estas tre simpatiaj....",
     "vortaro": {
       "simpatiaj": "sympathique",
-      "estas": "\u00eatre",
+      "vi": "tu, vous",
       "tre": "tr\u00e8s",
-      "vi": "tu, vous"
+      "estas": "\u00eatre"
     }
   },
   {
     "teksto": "(Al s-ro 1): Ili \u015dajnas feli\u0109aj.",
     "vortaro": {
-      "ili": "ils, elles, eux",
       "feli\u0109aj": "heureux, heureuse",
+      "\u015dajnas": "sembler, avoir l'air",
       "al": "\u00e0, vers",
-      "\u015dajnas": "sembler, avoir l'air"
+      "ili": "ils, elles, eux"
     }
   },
   {
     "teksto": "Sinjoro 1: Ili estas feli\u0109aj.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "ili": "ils, elles, eux",
       "feli\u0109aj": "heureux, heureuse",
-      "estas": "\u00eatre"
+      "estas": "\u00eatre",
+      "sinjoro": "monsieur",
+      "ili": "ils, elles, eux"
     }
   },
   {
-    "teksto": "Sinjoro 2: Estas feli\u0109aj idiotoj, \u0109u? \u0108u tiel oni",
+    "teksto": "Sinjoro 2: Estas feli\u0109aj idiotoj, \u0109u? \u0108u tiel oni diras?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
-      "feli\u0109aj": "heureux, heureuse",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
       "tiel": "ainsi, comme \u00e7a",
       "oni": "on",
-      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin"
-    }
-  },
-  {
-    "teksto": "diras?",
-    "vortaro": {
-      "diras": "dire"
+      "feli\u0109aj": "heureux, heureuse",
+      "estas": "\u00eatre",
+      "diras": "dire",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Jes... tiel.",
     "vortaro": {
-      "sinjoro": "monsieur",
+      "jes": "oui, d'accord",
       "tiel": "ainsi, comme \u00e7a",
-      "jes": "oui, d'accord"
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2: Kaj \u0109u ili ne enuas?... \u0108i tiel?...",
+    "teksto": "Sinjoro 2: Kaj \u0109u ili ne enuas?... \u0108i tiel?... Sidante en mallumo?",
     "vortaro": {
-      "enuas": "s'emb\u00eater, s'ennuyer",
-      "sinjoro": "monsieur",
-      "kaj": "et",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "en": "dans",
       "tiel": "ainsi, comme \u00e7a",
+      "sidante": "\u00eatre assis(e)",
+      "ne": "non, ne... pas",
       "\u0109i": "(indique la proximit\u00e9)",
       "ili": "ils, elles, eux",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "Sidante en mallumo?",
-    "vortaro": {
+      "enuas": "s'emb\u00eater, s'ennuyer",
       "mallumo": "noir, obscurit\u00e9",
-      "sidante": "\u00eatre assis(e)",
-      "en": "dans"
+      "kaj": "et",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 1: Ne, mi opinias ke ne.... Demandu",
+    "teksto": "Sinjoro 1: Ne, mi opinias ke ne.... Demandu ilin!",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
-      "demandu": "interroger, demander",
-      "opinias": "\u00eatre d'avis, penser, croire",
+      "ilin": "ils, elles, eux",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "ilin!",
-    "vortaro": {
-      "ilin": "ils, elles, eux"
+      "opinias": "\u00eatre d'avis, penser, croire",
+      "demandu": "interroger, demander",
+      "ne": "non, ne... pas",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Kiun?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "kiun": "qui"
+      "kiun": "qui",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: La idiotojn.",
     "vortaro": {
-      "sinjoro": "monsieur",
       "idiotojn": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Jes, sed kiun precize?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "kiun": "qui",
+      "jes": "oui, d'accord",
       "sed": "mais",
-      "jes": "oui, d'accord"
+      "kiun": "qui",
+      "precize": "pr\u00e9cis\u00e9ment",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Tiun kiun vi volas.",
     "vortaro": {
-      "sinjoro": "monsieur",
+      "vi": "tu, vous",
       "tiun": "ce, cet(te)",
       "kiun": "qui",
-      "volas": "vouloir",
-      "vi": "tu, vous"
+      "sinjoro": "monsieur",
+      "volas": "vouloir"
     }
   },
   {
-    "teksto": "Sinjoro 2: (aparte alparolas iun en la publiko)",
+    "teksto": "Sinjoro 2: (aparte alparolas iun en la publiko) Pardonu min, sinjoro, sed... vi ne tro enuas \u0109i tiel, \u0109u... sidante en mallumo?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "la": "le, la, les",
+      "sed": "mais",
+      "enuas": "s'emb\u00eater, s'ennuyer",
+      "min": "je",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "alparolas": "adresser la parole \u00e0",
+      "vi": "tu, vous",
+      "mallumo": "noir, obscurit\u00e9",
       "publiko": "public",
       "en": "dans",
-      "alparolas": "adresser la parole \u00e0",
-      "iun": "quelqu'un"
-    }
-  },
-  {
-    "teksto": "Pardonu min, sinjoro, sed... vi ne tro enuas \u0109i",
-    "vortaro": {
-      "enuas": "s'emb\u00eater, s'ennuyer",
-      "sinjoro": "monsieur",
-      "min": "je",
-      "vi": "tu, vous",
-      "pardonu": "pardonner",
       "\u0109i": "(indique la proximit\u00e9)",
-      "sed": "mais",
+      "aparte": "en apart\u00e9",
+      "la": "le, la, les",
+      "sinjoro": "monsieur",
+      "pardonu": "pardonner",
+      "tiel": "ainsi, comme \u00e7a",
+      "iun": "quelqu'un",
+      "sidante": "\u00eatre assis(e)",
       "tro": "trop",
       "ne": "non, ne... pas"
     }
   },
   {
-    "teksto": "tiel, \u0109u... sidante en mallumo?",
+    "teksto": "(S-ro 2 devos adapti\u011di al la respondo de la spektanto, se entute respondos. Ni imagu ke la spektanto ridas, a\u016d almena\u016d, ni esperu, ridetas.)",
     "vortaro": {
-      "en": "dans",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "sidante": "\u00eatre assis(e)",
-      "tiel": "ainsi, comme \u00e7a",
-      "mallumo": "noir, obscurit\u00e9"
-    }
-  },
-  {
-    "teksto": "(S-ro 2 devos adapti\u011di al la respondo",
-    "vortaro": {
-      "la": "le, la, les",
-      "adapti\u011di": "s'adapter",
-      "al": "\u00e0, vers",
       "respondo": "r\u00e9ponse",
-      "devos": "devoir"
-    }
-  },
-  {
-    "teksto": "de la spektanto, se entute respondos. Ni imagu",
-    "vortaro": {
-      "la": "le, la, les",
       "se": "si (indique une condition)",
-      "respondos": "r\u00e9pondre",
       "de": "de",
-      "ni": "nous",
-      "spektanto": "assister \u00e0",
-      "imagu": "imaginer",
-      "entute": "en tout, au total"
-    }
-  },
-  {
-    "teksto": "ke la spektanto ridas, a\u016d almena\u016d, ni esperu,",
-    "vortaro": {
-      "la": "le, la, les",
-      "a\u016d": "ou",
-      "ridas": "rire",
+      "adapti\u011di": "s'adapter",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "ni": "nous",
-      "esperu": "esp\u00e9rer",
       "spektanto": "assister \u00e0",
-      "almena\u016d": "au moins, du moins"
-    }
-  },
-  {
-    "teksto": "ridetas.)",
-    "vortaro": {
-      "ridetas": "sourire"
+      "almena\u016d": "au moins, du moins",
+      "entute": "en tout, au total",
+      "imagu": "imaginer",
+      "devos": "devoir",
+      "ni": "nous",
+      "a\u016d": "ou",
+      "al": "\u00e0, vers",
+      "ridetas": "sourire",
+      "esperu": "esp\u00e9rer",
+      "ridas": "rire",
+      "respondos": "r\u00e9pondre",
+      "la": "le, la, les"
     }
   },
   {
@@ -1207,28 +966,22 @@
     }
   },
   {
-    "teksto": "Sinjoro 1: Vi vidas, do.... Bone, venu kun mi, ni",
+    "teksto": "Sinjoro 1: Vi vidas, do.... Bone, venu kun mi, ni residi\u011dos kaj mi faros al vi kelkajn demandojn.",
     "vortaro": {
-      "bone": "bien",
-      "do": "donc",
-      "sinjoro": "monsieur",
       "mi": "je",
-      "kun": "avec",
-      "vi": "tu, vous",
-      "ni": "nous",
       "vidas": "voir",
-      "venu": "venir"
-    }
-  },
-  {
-    "teksto": "residi\u011dos kaj mi faros al vi kelkajn demandojn.",
-    "vortaro": {
-      "mi": "je",
-      "kelkajn": "quelques, peu de",
+      "residi\u011dos": "aller se rasseoir",
+      "do": "donc",
       "faros": "faire",
-      "kaj": "et",
-      "al": "\u00e0, vers",
+      "kun": "avec",
+      "ni": "nous",
       "vi": "tu, vous",
+      "venu": "venir",
+      "al": "\u00e0, vers",
+      "kelkajn": "quelques, peu de",
+      "bone": "bien",
+      "kaj": "et",
+      "sinjoro": "monsieur",
       "demandojn": "question"
     }
   },
@@ -1236,598 +989,459 @@
     "teksto": "Sinjoro 2: \u0108u mi povas adia\u016di ilin?",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
-      "ilin": "ils, elles, eux",
-      "adia\u016di": "adieux, dire adieu, faire ses adieux, prendre cong\u00e9, quitter, renoncer, se s\u00e9parer, tourner le dos, fermer la session, se d\u00e9logu",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "povas": "pouvoir, \u00eatre capable de"
+      "ilin": "ils, elles, eux",
+      "povas": "pouvoir, \u00eatre capable de",
+      "sinjoro": "monsieur",
+      "adia\u016di": "adieux, dire adieu, faire ses adieux, prendre cong\u00e9, quitter, renoncer, se s\u00e9parer, tourner le dos, fermer la session, se d\u00e9logu"
     }
   },
   {
     "teksto": "Sinjoro 1: Kompreneble.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "kompreneble": "naturellement, bien entendu"
+      "kompreneble": "naturellement, bien entendu",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2 (al la publiko): \u011cis revido.... Mi estas",
+    "teksto": "Sinjoro 2 (al la publiko): \u011cis revido.... Mi estas tre feli\u0109a ekkoni vin....",
     "vortaro": {
+      "\u011dis": "jusqu'\u00e0",
       "mi": "je",
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
-      "la": "le, la, les",
-      "publiko": "public",
-      "al": "\u00e0, vers",
-      "revido": "au revoir",
-      "\u011dis": "jusqu'\u00e0"
-    }
-  },
-  {
-    "teksto": "tre feli\u0109a [a\u016d: ravita] ekkoni vin....",
-    "vortaro": {
-      "tre": "tr\u00e8s",
-      "a\u016d": "ou",
-      "ravita": "ravir, enchanter",
-      "ekkoni": "reconnaitre",
       "vin": "tu, vous",
-      "feli\u0109a": "heureux, heureuse"
+      "feli\u0109a": "heureux, heureuse",
+      "revido": "au revoir",
+      "ekkoni": "reconnaitre",
+      "estas": "\u00eatre",
+      "tre": "tr\u00e8s",
+      "al": "\u00e0, vers",
+      "sinjoro": "monsieur",
+      "la": "le, la, les",
+      "publiko": "public"
     }
   },
   {
     "teksto": "(Li mansignas al ili) \u011cis.",
     "vortaro": {
-      "li": "il, lui, le",
-      "al": "\u00e0, vers",
       "\u011dis": "jusqu'\u00e0",
+      "li": "il, lui, le",
+      "mansignas": "signe de la main",
+      "al": "\u00e0, vers",
       "ili": "ils, elles, eux"
     }
   },
   {
-    "teksto": "(Li reiras al sia se\u011do kun s-ro 1, kiu",
+    "teksto": "(Li reiras al sia se\u011do kun s-ro 1, kiu samtempe mal\u015daltas la salonan lumon.) Ili estas \u0109armaj.",
     "vortaro": {
-      "kun": "avec",
-      "sia": "se, s', soi",
-      "reiras": "revenir, retourner, aller de nouveau",
+      "samtempe": "en m\u00eame temps",
       "kiu": "qui",
       "li": "il, lui, le",
-      "al": "\u00e0, vers",
-      "se\u011do": "chaise"
-    }
-  },
-  {
-    "teksto": "samtempe mal\u015daltas la salonan lumon.) Ili estas",
-    "vortaro": {
+      "se\u011do": "chaise",
+      "mal\u015daltas": "\u00e9teindre",
+      "reiras": "revenir, retourner, aller de nouveau",
+      "salonan": "de salon",
       "estas": "\u00eatre",
-      "lumon": "lumi\u00e8re (la ou une)",
+      "al": "\u00e0, vers",
+      "sia": "se, s', soi",
+      "ili": "ils, elles, eux",
+      "kun": "avec",
+      "\u0109armaj": "charmant, mignon",
       "la": "le, la, les",
-      "ili": "ils, elles, eux"
-    }
-  },
-  {
-    "teksto": "\u0109armaj.",
-    "vortaro": {
-      "\u0109armaj": "charmant, mignon"
+      "lumon": "lumi\u00e8re (la ou une)"
     }
   },
   {
     "teksto": "Sinjoro 1: Vi vidas....",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "vidas": "voir",
-      "vi": "tu, vous"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: Kaj \u0109u vi certas ke ili \u0109iuj estas",
-    "vortaro": {
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
-      "kaj": "et",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "vi": "tu, vous",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "\u0109iuj": "chaque, chacun",
-      "ili": "ils, elles, eux"
+      "vidas": "voir",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "idiotoj?",
+    "teksto": "Sinjoro 2: Kaj \u0109u vi certas ke ili \u0109iuj estas idiotoj?",
     "vortaro": {
-      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin"
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
+      "\u0109iuj": "chaque, chacun",
+      "vi": "tu, vous",
+      "estas": "\u00eatre",
+      "ili": "ils, elles, eux",
+      "kaj": "et",
+      "sinjoro": "monsieur",
+      "certas": "assurer"
     }
   },
   {
     "teksto": "Sinjoro 1: Jes ja.",
     "vortaro": {
-      "ja": "certes, effectivement, il est vrai que, en fait, bien",
+      "jes": "oui, d'accord",
       "sinjoro": "monsieur",
-      "jes": "oui, d'accord"
+      "ja": "certes, effectivement, il est vrai que, en fait, bien"
     }
   },
   {
-    "teksto": "Sinjoro 2: Kaj... pardonu min, sed... kiu sendis",
+    "teksto": "Sinjoro 2: Kaj... pardonu min, sed... kiu sendis ilin \u0109i tien?",
     "vortaro": {
-      "sinjoro": "monsieur",
       "kiu": "qui",
       "min": "je",
-      "kaj": "et",
-      "sendis": "envoyer, exp\u00e9dier",
-      "pardonu": "pardonner",
-      "sed": "mais"
-    }
-  },
-  {
-    "teksto": "ilin \u0109i tien?",
-    "vortaro": {
-      "\u0109i": "(indique la proximit\u00e9)",
+      "sed": "mais",
       "ilin": "ils, elles, eux",
-      "tien": "ici, l\u00e0"
+      "pardonu": "pardonner",
+      "tien": "ici, l\u00e0",
+      "\u0109i": "(indique la proximit\u00e9)",
+      "sendis": "envoyer, exp\u00e9dier",
+      "kaj": "et",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 1: Same kiel por vi.... Ilia familio... iliaj",
+    "teksto": "Sinjoro 1: Same kiel por vi.... Ilia familio... iliaj parencoj.... Do, ilia kunvivantaro.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "por": "pour, dans le but de",
-      "iliaj": "leur",
-      "kiel": "comment, comme",
-      "vi": "tu, vous",
       "familio": "famille",
-      "ilia": "ils, elles, eux"
-    }
-  },
-  {
-    "teksto": "parencoj.... Do, ilia kunvivantaro.",
-    "vortaro": {
+      "por": "pour, dans le but de",
       "do": "donc",
+      "ilia": "ils, elles, eux",
+      "vi": "tu, vous",
+      "iliaj": "leur",
+      "same": "de m\u00eame",
       "parencoj": "parent",
-      "ilia": "ils, elles, eux"
+      "kiel": "comment, comme",
+      "sinjoro": "monsieur",
+      "kunvivantaro": "co-vivants"
     }
   },
   {
-    "teksto": "Sinjoro 2: Mi, ekzemple... kiu sendis min \u0109i",
+    "teksto": "Sinjoro 2: Mi, ekzemple... kiu sendis min \u0109i tien?",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
-      "ekzemple": "par exemple",
       "kiu": "qui",
       "min": "je",
+      "ekzemple": "par exemple",
+      "tien": "ici, l\u00e0",
+      "\u0109i": "(indique la proximit\u00e9)",
       "sendis": "envoyer, exp\u00e9dier",
-      "\u0109i": "(indique la proximit\u00e9)"
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "tien?",
-    "vortaro": {
-      "tien": "ici, l\u00e0"
-    }
-  },
-  {
-    "teksto": "Sinjoro 1 (konsultante slipon): Vin? Via edzino",
-    "vortaro": {
-      "sinjoro": "monsieur",
-      "slipon": "fiche",
-      "konsultante": "consulter",
-      "edzino": "\u00e9pouse",
-      "vin": "tu, vous",
-      "via": "tu, vous"
-    }
-  },
-  {
-    "teksto": "kaj via estro, mi kredas.",
+    "teksto": "Sinjoro 1 (konsultante slipon): Vin? Via edzino kaj via estro, mi kredas.",
     "vortaro": {
       "mi": "je",
-      "kaj": "et",
+      "vin": "tu, vous",
+      "estro": "chef",
+      "edzino": "\u00e9pouse",
       "kredas": "croire",
       "via": "tu, vous",
-      "estro": "chef"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: Jes, jes, tiel \u015dajnis al mi.... Cetere, ili",
-    "vortaro": {
-      "mi": "je",
+      "konsultante": "consulter",
+      "kaj": "et",
       "sinjoro": "monsieur",
-      "al": "\u00e0, vers",
-      "\u015dajnis": "sembler, avoir l'air",
-      "tiel": "ainsi, comme \u00e7a",
-      "ili": "ils, elles, eux",
-      "cetere": "d'ailleurs, du reste",
-      "jes": "oui, d'accord"
+      "slipon": "fiche"
     }
   },
   {
-    "teksto": "ofte diris ke mi estas idioto.",
+    "teksto": "Sinjoro 2: Jes, jes, tiel \u015dajnis al mi.... Cetere, ili ofte diris ke mi estas idioto.",
     "vortaro": {
-      "mi": "je",
-      "estas": "\u00eatre",
-      "idioto": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
       "diris": "dire",
+      "mi": "je",
+      "jes": "oui, d'accord",
+      "idioto": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "ofte": "souvent, fr\u00e9quemment"
+      "tiel": "ainsi, comme \u00e7a",
+      "estas": "\u00eatre",
+      "al": "\u00e0, vers",
+      "cetere": "d'ailleurs, du reste",
+      "ili": "ils, elles, eux",
+      "ofte": "souvent, fr\u00e9quemment",
+      "sinjoro": "monsieur",
+      "\u015dajnis": "sembler, avoir l'air"
     }
   },
   {
     "teksto": "Sinjoro 1: Vi vidas, do. Ili anta\u016davertis vin.",
     "vortaro": {
-      "do": "donc",
-      "sinjoro": "monsieur",
-      "vi": "tu, vous",
-      "vidas": "voir",
       "vin": "tu, vous",
-      "ili": "ils, elles, eux"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: Ili e\u0109 plurfoje nomis min.... pardonu,",
-    "vortaro": {
-      "sinjoro": "monsieur",
-      "e\u0109": "m\u00eame, et en plus",
-      "min": "je",
-      "pardonu": "pardonner",
+      "vidas": "voir",
+      "do": "donc",
+      "vi": "tu, vous",
+      "anta\u016davertis": "avertit \u00e0 l'avance",
       "ili": "ils, elles, eux",
-      "nomis": "nommer"
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "sed... pi\u0109kapulo!",
+    "teksto": "Sinjoro 2: Ili e\u0109 plurfoje nomis min.... pardonu, sed... pi\u0109kapulo!",
     "vortaro": {
-      "sed": "mais"
+      "min": "je",
+      "sed": "mais",
+      "e\u0109": "m\u00eame, et en plus",
+      "pardonu": "pardonner",
+      "pi\u0109kapulo": "t\u00eate de con",
+      "nomis": "nommer",
+      "ili": "ils, elles, eux",
+      "plurfoje": "plusieurs fois",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: \u0108u vere? Ne tre afable.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "tre": "tr\u00e8s",
       "vere": "vraiment",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "ne": "non, ne... pas"
+      "afable": "aimablement",
+      "tre": "tr\u00e8s",
+      "ne": "non, ne... pas",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2: Ne, vere ne estas afable. Kaj anka\u016d",
+    "teksto": "Sinjoro 2: Ne, vere ne estas afable. Kaj anka\u016d okazis ke mi a\u016ddis interalia\u0135ojn kiel povrulon.... nu.... Estis anka\u016d \u201cmenskriplulo\u201d, kiel anka\u016d, nu, embarasas min diri tion al vi, sed, mia estro iam diris, \u201cAkselo,\u201d \u2013 mi nomi\u011das Akselo \u2013, \u201cAkselo, vi estas pugtruo\u201d.... Jen kiel statas.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
       "vere": "vraiment",
-      "kaj": "et",
-      "anka\u016d": "aussi",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "okazis ke mi a\u016ddis interalia\u0135ojn kiel povrulon....",
-    "vortaro": {
-      "okazis": "arriver, se passer, avoir lieu",
-      "a\u016ddis": "entendre",
-      "mi": "je",
-      "kiel": "comment, comme",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)"
-    }
-  },
-  {
-    "teksto": "nu.... Estis anka\u016d \u201cmenskriplulo\u201d, kiel anka\u016d, nu,",
-    "vortaro": {
-      "anka\u016d": "aussi",
-      "kiel": "comment, comme",
-      "estis": "\u00eatre",
-      "nu": "allons, bien, eh bien\u2026 "
-    }
-  },
-  {
-    "teksto": "embarasas min diri tion al vi, sed, mia estro iam",
-    "vortaro": {
+      "sed": "mais",
       "mia": "je",
-      "tion": "ce, cela, \u00e7a",
-      "embarasas": "embarrasser, emp\u00eatrer, encombrer, g\u00eaner",
-      "min": "je",
-      "al": "\u00e0, vers",
+      "nu": "allons, bien, eh bien\u2026 ",
+      "estis": "\u00eatre",
+      "afable": "aimablement",
+      "interalia\u0135ojn": "entre autres choses",
       "iam": "\u00e0 un moment, un jour, une fois",
+      "kiel": "comment, comme",
+      "mi": "je",
+      "statas": "\u00eatre en situation",
+      "min": "je",
+      "a\u016ddis": "entendre",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "menskriplulo": "d\u00e9bile",
+      "estro": "chef",
       "diri": "dire",
       "vi": "tu, vous",
-      "sed": "mais",
-      "estro": "chef"
-    }
-  },
-  {
-    "teksto": "diris, \u201cAkselo,\u201d \u2013 mi nomi\u011das Akselo \u2013, \u201cAkselo,",
-    "vortaro": {
-      "mi": "je",
+      "kaj": "et",
       "akselo": "aisselle",
-      "nomi\u011das": "s'appeler, se nommer",
-      "diris": "dire"
-    }
-  },
-  {
-    "teksto": "vi estas pugtruo\u201d.... Jen kiel statas.",
-    "vortaro": {
-      "estas": "\u00eatre",
-      "kiel": "comment, comme",
-      "vi": "tu, vous",
       "pugtruo": "trou du cul",
-      "statas": "\u00eatre en situation",
-      "jen": "voici"
+      "povrulon": "pauvre",
+      "jen": "voici",
+      "embarasas": "embarrasser, emp\u00eatrer, encombrer, g\u00eaner",
+      "anka\u016d": "aussi",
+      "sinjoro": "monsieur",
+      "diris": "dire",
+      "okazis": "arriver, se passer, avoir lieu",
+      "estas": "\u00eatre",
+      "al": "\u00e0, vers",
+      "nomi\u011das": "s'appeler, se nommer",
+      "tion": "ce, cela, \u00e7a",
+      "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "Sinjoro 1: Ne bonas, tio....",
     "vortaro": {
+      "bonas": "faire du bien",
       "sinjoro": "monsieur",
-      "tio": "ce, cela, \u00e7a",
-      "ne": "non, ne... pas"
+      "ne": "non, ne... pas",
+      "tio": "ce, cela, \u00e7a"
     }
   },
   {
     "teksto": "Sinjoro 2: Ja ne bonas. Mi estis tre \u0109agrenita.",
     "vortaro": {
-      "ja": "certes, effectivement, il est vrai que, en fait, bien",
-      "sinjoro": "monsieur",
       "mi": "je",
-      "tre": "tr\u00e8s",
-      "\u0109agrenita": "chagriner, contrarier, f\u00e2cher, accabler, affliger, affecter, atteindre, attrister, d\u00e9soler, navrer, peiner, toucher",
       "estis": "\u00eatre",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "Sinjoro 1: Mi komprenas.... Estas dolorega",
-    "vortaro": {
-      "mi": "je",
-      "estas": "\u00eatre",
+      "bonas": "faire du bien",
+      "ja": "certes, effectivement, il est vrai que, en fait, bien",
+      "tre": "tr\u00e8s",
+      "ne": "non, ne... pas",
       "sinjoro": "monsieur",
-      "komprenas": "comprendre"
+      "\u0109agrenita": "chagriner, contrarier, f\u00e2cher, accabler, affliger, affecter, atteindre, attrister, d\u00e9soler, navrer, peiner, toucher"
     }
   },
   {
-    "teksto": "situacio por vi.... Kaj mi opinias, ke... anka\u016d ili",
+    "teksto": "Sinjoro 1: Mi komprenas.... Estas dolorega situacio por vi.... Kaj mi opinias, ke... anka\u016d ili estas malfeli\u0109aj kiam ili diras \u0109ion \u0109i al vi.",
     "vortaro": {
+      "malfeli\u0109aj": "malheureux",
+      "ili": "ils, elles, eux",
       "mi": "je",
-      "por": "pour, dans le but de",
-      "anka\u016d": "aussi",
-      "kaj": "et",
-      "vi": "tu, vous",
-      "opinias": "\u00eatre d'avis, penser, croire",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
       "situacio": "situation",
-      "ili": "ils, elles, eux"
-    }
-  },
-  {
-    "teksto": "estas malfeli\u0109aj kiam ili diras \u0109ion \u0109i al vi.",
-    "vortaro": {
-      "diras": "dire",
-      "estas": "\u00eatre",
-      "kiam": "quand",
-      "\u0109ion": "tout, toute chose",
-      "al": "\u00e0, vers",
       "vi": "tu, vous",
+      "diras": "dire",
+      "kiam": "quand",
+      "kaj": "et",
+      "dolorega": "tr\u00e8s douloureux",
+      "\u0109ion": "tout, toute chose",
       "\u0109i": "(indique la proximit\u00e9)",
-      "ili": "ils, elles, eux"
+      "komprenas": "comprendre",
+      "anka\u016d": "aussi",
+      "sinjoro": "monsieur",
+      "por": "pour, dans le but de",
+      "opinias": "\u00eatre d'avis, penser, croire",
+      "estas": "\u00eatre",
+      "al": "\u00e0, vers"
     }
   },
   {
-    "teksto": "Sinjoro 2: Finfine tamen! Mi ne scias.... Estas",
+    "teksto": "Sinjoro 2: Finfine tamen! Mi ne scias.... Estas limoj ne transpasendaj.",
     "vortaro": {
       "mi": "je",
-      "tamen": "n\u00e9anmoins, toutefois, quand m\u00eame, cependant",
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
-      "finfine": "finalement, en fin de compte",
-      "scias": "savoir",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "limoj ne transpasendaj.",
-    "vortaro": {
       "limoj": "limite",
+      "scias": "savoir",
+      "finfine": "finalement, en fin de compte",
+      "tamen": "n\u00e9anmoins, toutefois, quand m\u00eame, cependant",
+      "estas": "\u00eatre",
+      "sinjoro": "monsieur",
+      "transpasendaj": "dont on doit passer \u00e0 travers",
       "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "Sinjoro 1: Vi pravas.",
     "vortaro": {
-      "sinjoro": "monsieur",
+      "vi": "tu, vous",
       "pravas": "avoir raison, \u00eatre correct",
-      "vi": "tu, vous"
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2: \u0108ar... nu... mi mi ne kontra\u016das!... Sed",
+    "teksto": "Sinjoro 2: \u0108ar... nu... mi mi ne kontra\u016das!... Sed ja ili diras, nu, mia edzino kaj mia estro, ili diras ke mi estas idioto. Do bone, en ordo, ili rajtas! Sed anka\u016d mi! Mi povas diri tion pri ili! Diri ke ili estas idiotoj.",
     "vortaro": {
-      "mi": "je",
-      "sinjoro": "monsieur",
       "sed": "mais",
-      "kontra\u016das": "s'opposer \u00e0",
-      "\u0109ar": "parce que",
-      "nu": "allons, bien, eh bien\u2026 ",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "ja ili diras, nu, mia edzino kaj mia estro, ili diras",
-    "vortaro": {
-      "diras": "dire",
-      "ja": "certes, effectivement, il est vrai que, en fait, bien",
-      "nu": "allons, bien, eh bien\u2026 ",
       "mia": "je",
-      "kaj": "et",
-      "edzino": "\u00e9pouse",
-      "ili": "ils, elles, eux",
-      "estro": "chef"
-    }
-  },
-  {
-    "teksto": "ke mi estas idioto. Do bone, en ordo, ili rajtas!",
-    "vortaro": {
-      "bone": "bien",
-      "mi": "je",
-      "estas": "\u00eatre",
-      "idioto": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
-      "do": "donc",
-      "en": "dans",
-      "ordo": "ordre",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "rajtas": "avoir le droit de",
-      "ili": "ils, elles, eux"
-    }
-  },
-  {
-    "teksto": "Sed anka\u016d mi! Mi povas diri tion pri ili! Diri ke",
-    "vortaro": {
-      "mi": "je",
-      "tion": "ce, cela, \u00e7a",
       "pri": "\u00e0 propos de",
-      "anka\u016d": "aussi",
-      "diri": "dire",
-      "povas": "pouvoir, \u00eatre capable de",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "sed": "mais",
-      "ili": "ils, elles, eux"
-    }
-  },
-  {
-    "teksto": "ili estas idiotoj.",
-    "vortaro": {
-      "estas": "\u00eatre",
+      "nu": "allons, bien, eh bien\u2026 ",
+      "ja": "certes, effectivement, il est vrai que, en fait, bien",
       "ili": "ils, elles, eux",
-      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin"
+      "ordo": "ordre",
+      "kontra\u016das": "s'opposer \u00e0",
+      "mi": "je",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "estro": "chef",
+      "diri": "dire",
+      "rajtas": "avoir le droit de",
+      "diras": "dire",
+      "kaj": "et",
+      "en": "dans",
+      "povas": "pouvoir, \u00eatre capable de",
+      "\u0109ar": "parce que",
+      "do": "donc",
+      "edzino": "\u00e9pouse",
+      "anka\u016d": "aussi",
+      "sinjoro": "monsieur",
+      "idioto": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
+      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
+      "estas": "\u00eatre",
+      "tion": "ce, cela, \u00e7a",
+      "bone": "bien",
+      "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "Sinjoro 1: Efektive.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "efektive": "effectivement, en effet, r\u00e9ellement, vraiment"
+      "efektive": "effectivement, en effet, r\u00e9ellement, vraiment",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2 (ripetante): Efektive! Efektive!... Tre",
+    "teksto": "Sinjoro 2 (ripetante): Efektive! Efektive!... Tre afabla \u0109io \u0109i, sed \u0109i tie trovi\u011das mi!",
     "vortaro": {
-      "ripetante": "r\u00e9p\u00e9ter",
-      "sinjoro": "monsieur",
-      "tre": "tr\u00e8s",
-      "efektive": "effectivement, en effet, r\u00e9ellement, vraiment"
-    }
-  },
-  {
-    "teksto": "afabla \u0109io \u0109i, sed \u0109i tie trovi\u011das mi!",
-    "vortaro": {
-      "afabla": "affable, gentil(le)",
       "mi": "je",
+      "afabla": "affable, gentil(le)",
       "trovi\u011das": "se trouver",
-      "\u0109i": "(indique la proximit\u00e9)",
       "sed": "mais",
+      "efektive": "effectivement, en effet, r\u00e9ellement, vraiment",
       "\u0109io": "tout, toute chose",
-      "tie": "ici, l\u00e0"
+      "ripetante": "r\u00e9p\u00e9ter",
+      "tre": "tr\u00e8s",
+      "tie": "ici, l\u00e0",
+      "\u0109i": "(indique la proximit\u00e9)",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 1 (da\u016dre trankvila): Sed vi neniam nomis",
+    "teksto": "Sinjoro 1 (da\u016dre trankvila): Sed vi neniam nomis ilin idiotoj!",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "da\u016dre": "continuellement, durablement",
       "neniam": "jamais",
-      "vi": "tu, vous",
       "sed": "mais",
+      "ilin": "ils, elles, eux",
+      "da\u016dre": "continuellement, durablement",
       "trankvila": "tranquille, calme",
-      "nomis": "nommer"
-    }
-  },
-  {
-    "teksto": "ilin idiotoj!",
-    "vortaro": {
       "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
-      "ilin": "ils, elles, eux"
+      "vi": "tu, vous",
+      "nomis": "nommer",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2 (pripensas): Nu.... Ne.",
     "vortaro": {
+      "nu": "allons, bien, eh bien\u2026 ",
       "pripensas": "r\u00e9fl\u00e9chir \u00e0, consid\u00e9rer, envisager",
       "sinjoro": "monsieur",
-      "nu": "allons, bien, eh bien\u2026 ",
       "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "Sinjoro 1: Do, vi vidas.",
     "vortaro": {
+      "vi": "tu, vous",
       "do": "donc",
       "sinjoro": "monsieur",
-      "vidas": "voir",
-      "vi": "tu, vous"
+      "vidas": "voir"
     }
   },
   {
-    "teksto": "Sinjoro 2: Sed mi mem ne \u015datas insulti",
+    "teksto": "Sinjoro 2: Sed mi mem ne \u015datas insulti homojn.",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
-      "mem": "soi-m\u00eame",
-      "\u015datas": "appr\u00e9cier, aimer",
+      "homojn": "\u00eatre humain, homme",
       "sed": "mais",
+      "mem": "soi-m\u00eame",
       "insulti": "injurier, insulter, invectiver, outrager",
+      "sinjoro": "monsieur",
+      "\u015datas": "appr\u00e9cier, aimer",
       "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "homojn.",
-    "vortaro": {
-      "homojn": "\u00eatre humain, homme"
     }
   },
   {
     "teksto": "Sinjoro 1: Bonegas tio.",
     "vortaro": {
+      "bonegas": "fait beaucoup de bien",
       "sinjoro": "monsieur",
       "tio": "ce, cela, \u00e7a"
     }
   },
   {
-    "teksto": "Sinjoro 2: Konsentite!... Sed \u0109ar mi estas \u011dentila,",
+    "teksto": "Sinjoro 2: Konsentite!... Sed \u0109ar mi estas \u011dentila, mi trovas min \u0109i tie, \u0109u ne? Tute ne normale.",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
       "\u011dentila": "poli(e), courtois",
-      "konsentite": "consentir, \u00eatre en accord",
-      "sed": "mais",
-      "\u0109ar": "parce que"
-    }
-  },
-  {
-    "teksto": "mi trovas min \u0109i tie, \u0109u ne? Tute ne normale.",
-    "vortaro": {
-      "mi": "je",
       "min": "je",
-      "trovas": "trouver",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "sed": "mais",
+      "trovas": "trouver",
       "tute": "enti\u00e8rement, totalement",
-      "\u0109i": "(indique la proximit\u00e9)",
+      "\u0109ar": "parce que",
+      "normale": "normalement",
+      "konsentite": "consentir, \u00eatre en accord",
+      "estas": "\u00eatre",
       "tie": "ici, l\u00e0",
-      "ne": "non, ne... pas"
+      "\u0109i": "(indique la proximit\u00e9)",
+      "ne": "non, ne... pas",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 1: Mi komprenas.... Beda\u016drinde, anka\u016d",
+    "teksto": "Sinjoro 1: Mi komprenas.... Beda\u016drinde, anka\u016d aliuloj plendis pri vi.",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
+      "pri": "\u00e0 propos de",
+      "aliuloj": "quelqu'un d'autre",
+      "vi": "tu, vous",
+      "plendis": "se plaindre",
+      "komprenas": "comprendre",
       "anka\u016d": "aussi",
       "beda\u016drinde": "malheureusement",
-      "komprenas": "comprendre"
-    }
-  },
-  {
-    "teksto": "aliuloj plendis pri vi.",
-    "vortaro": {
-      "pri": "\u00e0 propos de",
-      "plendis": "se plaindre",
-      "aliuloj": "quelqu'un d'autre",
-      "vi": "tu, vous"
+      "sinjoro": "monsieur"
     }
   },
   {
@@ -1839,39 +1453,29 @@
     }
   },
   {
-    "teksto": "Sinjoro 1 (rigardas la slipojn, embarasita): Viaj",
+    "teksto": "Sinjoro 1 (rigardas la slipojn, embarasita): Viaj gefiloj....",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "rigardas": "regarder",
-      "la": "le, la, les",
-      "viaj": "ton, votre",
-      "slipojn": "fiche",
-      "embarasita": "embarrasser, emp\u00eatrer, encombrer, g\u00eaner"
-    }
-  },
-  {
-    "teksto": "gefiloj....",
-    "vortaro": {
-      "gefiloj": "enfant"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: \u0108u miaj gefiloj? \u0108u miaj gefiloj",
-    "vortaro": {
-      "miaj": "mon, ma",
-      "sinjoro": "monsieur",
       "gefiloj": "enfant",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "rigardas": "regarder",
+      "embarasita": "embarrasser, emp\u00eatrer, encombrer, g\u00eaner",
+      "slipojn": "fiche",
+      "viaj": "ton, votre",
+      "sinjoro": "monsieur",
+      "la": "le, la, les"
     }
   },
   {
-    "teksto": "opinias ke mi estas idioto?",
+    "teksto": "Sinjoro 2: \u0108u miaj gefiloj? \u0108u miaj gefiloj opinias ke mi estas idioto?",
     "vortaro": {
       "mi": "je",
-      "estas": "\u00eatre",
+      "miaj": "mon, ma",
       "idioto": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "gefiloj": "enfant",
       "opinias": "\u00eatre d'avis, penser, croire",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)"
+      "estas": "\u00eatre",
+      "sinjoro": "monsieur"
     }
   },
   {
@@ -1884,222 +1488,183 @@
   {
     "teksto": "Sinjoro 2: Ili estas apena\u016d dekjaraj!",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
       "apena\u016d": "\u00e0 peine",
-      "ili": "ils, elles, eux"
+      "estas": "\u00eatre",
+      "ili": "ils, elles, eux",
+      "dekjaraj": "dix ans d'\u00e2ge",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 1: Kaj anka\u016d... same sur mia slipo estas",
+    "teksto": "Sinjoro 1: Kaj anka\u016d... same sur mia slipo estas unu el viaj amikoj, iu Bernardo....",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
-      "mia": "je",
       "anka\u016d": "aussi",
-      "kaj": "et",
+      "mia": "je",
+      "unu": "les uns",
+      "amikoj": "ami",
       "slipo": "fiche",
+      "iu": "quelqu'un",
+      "estas": "\u00eatre",
+      "viaj": "ton, votre",
+      "same": "de m\u00eame",
+      "bernardo": "Bernard",
+      "el": "hors de, de",
+      "kaj": "et",
+      "sinjoro": "monsieur",
       "sur": "sur"
     }
   },
   {
-    "teksto": "unu el viaj amikoj, iu Bernardo....",
+    "teksto": "Sinjoro 2: \u0108u Bernardo?... Ne.... Bernardo \u015comje?",
     "vortaro": {
-      "amikoj": "ami",
-      "viaj": "ton, votre",
-      "iu": "quelqu'un",
-      "el": "hors de, de"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: \u0108u Bernardo?... Ne.... Bernardo",
-    "vortaro": {
-      "sinjoro": "monsieur",
+      "\u015domje": "Chaumier",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "ne": "non, ne... pas",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "bernardo": "Bernard",
+      "sinjoro": "monsieur"
     }
-  },
-  {
-    "teksto": "\u015comje?",
-    "vortaro": {}
   },
   {
     "teksto": "Sinjoro 1: Jes.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "jes": "oui, d'accord"
+      "jes": "oui, d'accord",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2: Ne kredeble.... (Tre afliktita)",
+    "teksto": "Sinjoro 2: Ne kredeble.... (Tre afliktita) Bernardo.... Ne eblas.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "tre": "tr\u00e8s",
-      "kredeble": "plausiblement, vraisemblablement, sans doute",
       "afliktita": "affliger, accabler, affecter, atteindre, attrister, chagriner, d\u00e9soler, navrer, peiner, toucher",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "Bernardo.... Ne eblas.",
-    "vortaro": {
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "Sinjoro 1: Kaj estas anka\u016d tuta listo... najbaroj,",
-    "vortaro": {
+      "tre": "tr\u00e8s",
+      "ne": "non, ne... pas",
+      "bernardo": "Bernard",
+      "eblas": "\u00eatre possible",
       "sinjoro": "monsieur",
-      "estas": "\u00eatre",
-      "anka\u016d": "aussi",
-      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
-      "kaj": "et",
-      "najbaroj": "voisin",
-      "listo": "liste"
+      "kredeble": "plausiblement, vraisemblablement, sans doute"
     }
   },
   {
-    "teksto": "komercistoj.... Finfine, jen....",
+    "teksto": "Sinjoro 1: Kaj estas anka\u016d tuta listo... najbaroj, komercistoj.... Finfine, jen....",
     "vortaro": {
-      "jen": "voici",
       "komercistoj": "commer\u00e7ant",
-      "finfine": "finalement, en fin de compte"
+      "jen": "voici",
+      "najbaroj": "voisin",
+      "finfine": "finalement, en fin de compte",
+      "listo": "liste",
+      "estas": "\u00eatre",
+      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
+      "anka\u016d": "aussi",
+      "kaj": "et",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2: A\u016dskultu , doktoro.... Mi povas nomi",
+    "teksto": "Sinjoro 2: A\u016dskultu , doktoro.... Mi povas nomi vin doktoro, \u0109u?",
     "vortaro": {
+      "doktoro": "docteur",
       "mi": "je",
-      "sinjoro": "monsieur",
+      "vin": "tu, vous",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "a\u016dskultu": "\u00e9couter",
       "povas": "pouvoir, \u00eatre capable de",
       "nomi": "nommer",
-      "doktoro": "docteur"
-    }
-  },
-  {
-    "teksto": "vin doktoro, \u0109u?",
-    "vortaro": {
-      "vin": "tu, vous",
-      "doktoro": "docteur",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Mi estas doktoro.",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
-      "doktoro": "docteur",
-      "estas": "\u00eatre"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: Doktoro, mi opinias ke estas",
-    "vortaro": {
-      "mi": "je",
-      "sinjoro": "monsieur",
       "estas": "\u00eatre",
-      "opinias": "\u00eatre d'avis, penser, croire",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "doktoro": "docteur"
+      "doktoro": "docteur",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "komploto.",
+    "teksto": "Sinjoro 2: Doktoro, mi opinias ke estas komploto.",
     "vortaro": {
-      "komploto": "complot, cabale, conspiration, intrigue, machination, manigances, men\u00e9es"
+      "doktoro": "docteur",
+      "mi": "je",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "opinias": "\u00eatre d'avis, penser, croire",
+      "estas": "\u00eatre",
+      "komploto": "complot, cabale, conspiration, intrigue, machination, manigances, men\u00e9es",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: \u0108u komploto?",
     "vortaro": {
-      "komploto": "complot, cabale, conspiration, intrigue, machination, manigances, men\u00e9es",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "sinjoro": "monsieur",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "komploto": "complot, cabale, conspiration, intrigue, machination, manigances, men\u00e9es"
     }
   },
   {
     "teksto": "Sinjoro 2: Jes ja, komploto.",
     "vortaro": {
-      "komploto": "complot, cabale, conspiration, intrigue, machination, manigances, men\u00e9es",
-      "ja": "certes, effectivement, il est vrai que, en fait, bien",
+      "jes": "oui, d'accord",
       "sinjoro": "monsieur",
-      "jes": "oui, d'accord"
+      "komploto": "complot, cabale, conspiration, intrigue, machination, manigances, men\u00e9es",
+      "ja": "certes, effectivement, il est vrai que, en fait, bien"
     }
   },
   {
-    "teksto": "Sinjoro 1: Eble.... Plej bone estas kontroli \u0109ion",
+    "teksto": "Sinjoro 1: Eble.... Plej bone estas kontroli \u0109ion \u0109i, \u0109u ne?",
     "vortaro": {
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "eble": "peut-\u00eatre, possiblement",
-      "bone": "bien",
-      "sinjoro": "monsieur",
+      "kontroli": "v\u00e9rifier, contr\u00f4ler",
+      "\u0109ion": "tout, toute chose",
       "plej": "le plus, la plus",
       "estas": "\u00eatre",
-      "kontroli": "v\u00e9rifier, contr\u00f4ler",
-      "\u0109ion": "tout, toute chose"
-    }
-  },
-  {
-    "teksto": "\u0109i, \u0109u ne?",
-    "vortaro": {
       "\u0109i": "(indique la proximit\u00e9)",
       "ne": "non, ne... pas",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "bone": "bien",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Jes.... Sed kiel?",
     "vortaro": {
-      "sed": "mais",
-      "sinjoro": "monsieur",
+      "jes": "oui, d'accord",
       "kiel": "comment, comme",
-      "jes": "oui, d'accord"
-    }
-  },
-  {
-    "teksto": "Sinjoro 1: Unue, mi a\u016dskultumos vin, kaj poste",
-    "vortaro": {
-      "unue": "premi\u00e8rement, d'abord",
       "sinjoro": "monsieur",
-      "mi": "je",
-      "poste": "ensuite, puis",
-      "kaj": "et",
-      "vin": "tu, vous"
+      "sed": "mais"
     }
   },
   {
-    "teksto": "mi starigos al vi kelkajn demandojn.",
+    "teksto": "Sinjoro 1: Unue, mi a\u016dskultumos vin, kaj poste mi starigos al vi kelkajn demandojn.",
     "vortaro": {
       "mi": "je",
+      "vin": "tu, vous",
+      "unue": "premi\u00e8rement, d'abord",
       "kelkajn": "quelques, peu de",
+      "poste": "ensuite, puis",
+      "a\u016dskultumos": "fera une \u00e9coute",
       "al": "\u00e0, vers",
       "vi": "tu, vous",
       "starigos": "mettre debout, monter",
+      "kaj": "et",
+      "sinjoro": "monsieur",
       "demandojn": "question"
     }
   },
   {
-    "teksto": "Sinjoro 2: Kaj poste vi scios \u0109u mi estas jes a\u016d",
+    "teksto": "Sinjoro 2: Kaj poste vi scios \u0109u mi estas jes a\u016d ne idioto, \u0109u?",
     "vortaro": {
-      "poste": "ensuite, puis",
-      "sinjoro": "monsieur",
       "mi": "je",
-      "estas": "\u00eatre",
-      "kaj": "et",
-      "a\u016d": "ou",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "scios": "savoir",
-      "vi": "tu, vous",
-      "jes": "oui, d'accord"
-    }
-  },
-  {
-    "teksto": "ne idioto, \u0109u?",
-    "vortaro": {
-      "idioto": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
+      "jes": "oui, d'accord",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "ne": "non, ne... pas"
+      "idioto": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
+      "vi": "tu, vous",
+      "poste": "ensuite, puis",
+      "estas": "\u00eatre",
+      "a\u016d": "ou",
+      "ne": "non, ne... pas",
+      "kaj": "et",
+      "sinjoro": "monsieur"
     }
   },
   {
@@ -2112,33 +1677,35 @@
   {
     "teksto": "Sinjoro 2: \u0108u vi certas, doktoro?",
     "vortaro": {
-      "sinjoro": "monsieur",
+      "doktoro": "docteur",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "vi": "tu, vous",
-      "doktoro": "docteur"
+      "sinjoro": "monsieur",
+      "certas": "assurer"
     }
   },
   {
     "teksto": "Sinjoro 1: Absolute.",
     "vortaro": {
-      "sinjoro": "monsieur"
+      "sinjoro": "monsieur",
+      "absolute": "absolument"
     }
   },
   {
     "teksto": "Sinjoro 2: Kio estas via fako?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
       "kio": "quoi, que",
       "fako": "sp\u00e9cialit\u00e9, discipline, d\u00e9partement (sens propre : compartiment, case)",
-      "via": "tu, vous"
+      "estas": "\u00eatre",
+      "via": "tu, vous",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Idiotoj.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin"
+      "idiotoj": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
+      "sinjoro": "monsieur"
     }
   },
   {
@@ -2148,493 +1715,379 @@
     }
   },
   {
-    "teksto": "(Pa\u016dzo.) Kiel okazas?... \u0108u mi",
+    "teksto": "(Pa\u016dzo.) Kiel okazas?... \u0108u mi senvesti\u011du?",
     "vortaro": {
-      "pa\u016dzo": "*pause",
       "mi": "je",
+      "pa\u016dzo": "*pause",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "okazas": "arriver, se passer, avoir lieu",
       "kiel": "comment, comme",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
-    }
-  },
-  {
-    "teksto": "senvesti\u011du?",
-    "vortaro": {
       "senvesti\u011du": "se d\u00e9shabiller"
     }
   },
   {
-    "teksto": "Sinjoro 1: Ne, ne... vi sidadu, kaj rigardu rekte",
+    "teksto": "Sinjoro 1: Ne, ne... vi sidadu, kaj rigardu rekte anta\u016den.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "kaj": "et",
-      "vi": "tu, vous",
+      "rekte": "avec droiture, droitement",
       "rigardu": "regarder",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "anta\u016den.",
-    "vortaro": {
-      "anta\u016den": "en avant"
-    }
-  },
-  {
-    "teksto": "(Li palpas la viza\u011don de s-ro 2, kaj poste",
-    "vortaro": {
-      "poste": "ensuite, puis",
-      "palpas": "palper",
-      "la": "le, la, les",
-      "li": "il, lui, le",
+      "anta\u016den": "en avant",
+      "vi": "tu, vous",
+      "ne": "non, ne... pas",
+      "sidadu": "faire une session",
       "kaj": "et",
-      "viza\u011don": "face, visage",
-      "de": "de"
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "la dorson. Li tu\u015das sian orelon kontra\u016d lia dorso.)",
+    "teksto": "(Li palpas la viza\u011don de s-ro 2, kaj poste la dorson. Li tu\u015das sian orelon kontra\u016d lia dorso.)",
     "vortaro": {
       "lia": "il, lui, le",
-      "la": "le, la, les",
-      "dorson": "face, dos",
       "li": "il, lui, le",
-      "dorso": "face, dos",
+      "de": "de",
+      "kontra\u016d": "contre",
+      "dorson": "face, dos",
       "tu\u015das": "toucher",
+      "dorso": "face, dos",
+      "poste": "ensuite, puis",
       "orelon": "entrer par une oreille et sortir par l'autre, tendre l'oreille, ventre affam\u00e9 n'a pas d'oreille, oreille",
-      "sian": "son, sa, ses",
-      "kontra\u016d": "contre"
-    }
-  },
-  {
-    "teksto": "Elspiru... enspiru... elspiru... enspiru.... Bonege....",
-    "vortaro": {
-      "bonege": "tr\u00e8s bien"
-    }
-  },
-  {
-    "teksto": "Levu viajn brakojn!... Bonege.... Mallevu la",
-    "vortaro": {
-      "bonege": "tr\u00e8s bien",
+      "viza\u011don": "face, visage",
+      "kaj": "et",
+      "palpas": "palper",
       "la": "le, la, les",
-      "mallevu": "abaisser, baisser",
-      "levu": "lever, soulever, \u00e9lever, mettre debout, relever",
-      "viajn": "ton, votre",
-      "brakojn": "bras"
+      "sian": "son, sa, ses"
     }
   },
   {
-    "teksto": "brakojn.... Levu viajn brakojn!... Kiel eble plej",
+    "teksto": "Elspiru... enspiru... elspiru... enspiru.... Bonege.... Levu viajn brakojn!... Bonege.... Mallevu la brakojn.... Levu viajn brakojn!... Kiel eble plej alten.... Ne, ne, sidante.... Jen, bone.... Mallevu, la brakojn.... Stari\u011du!... Pa\u015du.... Bonege.... Pa\u015du \u011dojmiene... Bonege.... Pa\u015du mal\u011dojmiene.... Bone.... Pa\u015du normale.... Jen.... Pa\u015du anasopiede.... Bonege. Pa\u015du kolombopiede.... Jes.... Tre bone.... Pa\u015du anasopiede kontentaspekte.... Bone.... Pa\u015du kolombopiede.... Jes.... Tre bone.... Pa\u015du kolombopiede malafablamiene.... Perfekte.... Vi povas sidi\u011di.",
     "vortaro": {
-      "eble": "peut-\u00eatre, possiblement",
-      "plej": "le plus, la plus",
-      "kiel": "comment, comme",
-      "levu": "lever, soulever, \u00e9lever, mettre debout, relever",
-      "viajn": "ton, votre",
-      "brakojn": "bras"
-    }
-  },
-  {
-    "teksto": "alten.... Ne, ne, sidante.... Jen, bone.... Mallevu,",
-    "vortaro": {
-      "bone": "bien",
-      "sidante": "\u00eatre assis(e)",
-      "mallevu": "abaisser, baisser",
-      "jen": "voici",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "la brakojn.... Stari\u011du!... Pa\u015du.... Bonege.... Pa\u015du",
-    "vortaro": {
-      "pa\u015du": "marcher",
-      "la": "le, la, les",
+      "kontentaspekte": "avec un aspect content",
+      "brakojn": "bras",
+      "mal\u011dojmiene": "avec une mine triste",
       "bonege": "tr\u00e8s bien",
-      "stari\u011du": "se dresser",
-      "brakojn": "bras"
-    }
-  },
-  {
-    "teksto": "\u011dojmiene... Bonege.... Pa\u015du mal\u011dojmiene....",
-    "vortaro": {
-      "pa\u015du": "marcher",
-      "bonege": "tr\u00e8s bien"
-    }
-  },
-  {
-    "teksto": "Bone.... Pa\u015du normale.... Jen.... Pa\u015du anasopiede....",
-    "vortaro": {
-      "bone": "bien",
-      "pa\u015du": "marcher",
-      "jen": "voici"
-    }
-  },
-  {
-    "teksto": "Bonege. Pa\u015du kolombopiede.... Jes.... Tre bone....",
-    "vortaro": {
-      "bone": "bien",
-      "pa\u015du": "marcher",
-      "tre": "tr\u00e8s",
-      "bonege": "tr\u00e8s bien",
-      "jes": "oui, d'accord"
-    }
-  },
-  {
-    "teksto": "Pa\u015du anasopiede kontentaspekte.... Bone....",
-    "vortaro": {
-      "bone": "bien",
-      "pa\u015du": "marcher"
-    }
-  },
-  {
-    "teksto": "Pa\u015du kolombopiede.... Jes.... Tre bone.... Pa\u015du",
-    "vortaro": {
-      "bone": "bien",
-      "pa\u015du": "marcher",
-      "tre": "tr\u00e8s",
-      "jes": "oui, d'accord"
-    }
-  },
-  {
-    "teksto": "kolombopiede malafablamiene.... Perfekte.... Vi",
-    "vortaro": {
-      "vi": "tu, vous"
-    }
-  },
-  {
-    "teksto": "povas sidi\u011di.",
-    "vortaro": {
+      "kolombopiede": "avec une patte de colombe",
       "sidi\u011di": "s'asseoir",
-      "povas": "pouvoir, \u00eatre capable de"
+      "kiel": "comment, comme",
+      "\u011dojmiene": "avec une mine joyeuse",
+      "viajn": "ton, votre",
+      "tre": "tr\u00e8s",
+      "alten": "allant en hauteur",
+      "vi": "tu, vous",
+      "perfekte": "parfait",
+      "jen": "voici",
+      "elspiru": "expirer",
+      "normale": "normalement",
+      "povas": "pouvoir, \u00eatre capable de",
+      "mallevu": "abaisser, baisser",
+      "enspiru": "inspirer",
+      "plej": "le plus, la plus",
+      "levu": "lever, soulever, \u00e9lever, mettre debout, relever",
+      "la": "le, la, les",
+      "anasopiede": "avec une patte de canard",
+      "malafablamiene": "avec une mine m\u00e9chante",
+      "jes": "oui, d'accord",
+      "eble": "peut-\u00eatre, possiblement",
+      "pa\u015du": "marcher",
+      "stari\u011du": "se dresser",
+      "sidante": "\u00eatre assis(e)",
+      "bone": "bien",
+      "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "Sinjoro 2: Kaj do?",
     "vortaro": {
-      "do": "donc",
+      "kaj": "et",
       "sinjoro": "monsieur",
-      "kaj": "et"
+      "do": "donc"
     }
   },
   {
-    "teksto": "Sinjoro 1: Perfekte. Mi nun starigos al vi kelkajn",
+    "teksto": "Sinjoro 1: Perfekte. Mi nun starigos al vi kelkajn demandojn.",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
       "kelkajn": "quelques, peu de",
-      "al": "\u00e0, vers",
-      "starigos": "mettre debout, monter",
       "vi": "tu, vous",
-      "nun": "maintenant"
-    }
-  },
-  {
-    "teksto": "demandojn.",
-    "vortaro": {
+      "al": "\u00e0, vers",
+      "perfekte": "parfait",
+      "nun": "maintenant",
+      "sinjoro": "monsieur",
+      "starigos": "mettre debout, monter",
       "demandojn": "question"
     }
   },
   {
     "teksto": "Sinjoro 2 (maltrankvila): En ordo",
     "vortaro": {
-      "maltrankvila": "\u00e9nerv\u00e9, inquiet, perturb\u00e9",
       "ordo": "ordre",
-      "sinjoro": "monsieur",
-      "en": "dans"
+      "maltrankvila": "\u00e9nerv\u00e9, inquiet, perturb\u00e9",
+      "en": "dans",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Mi petas ke vi respondu sincere.",
     "vortaro": {
+      "sincere": "sinc\u00e8rement",
       "mi": "je",
-      "sinjoro": "monsieur",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "respondu": "r\u00e9pondre",
       "vi": "tu, vous",
       "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "respondu": "r\u00e9pondre"
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2: En ordo.... Nu.... Mi diru la veron,",
+    "teksto": "Sinjoro 2: En ordo.... Nu.... Mi diru la veron, \u0109u?",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
-      "la": "le, la, les",
       "en": "dans",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "nu": "allons, bien, eh bien\u2026 ",
       "diru": "dire",
+      "la": "le, la, les",
       "ordo": "ordre",
-      "nu": "allons, bien, eh bien\u2026 "
+      "veron": "v\u00e9rit\u00e9",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "\u0109u?",
+    "teksto": "Sinjoro 1: Vi \u0109ion komprenis. Kiun tagon vi butikumas?",
     "vortaro": {
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
-    }
-  },
-  {
-    "teksto": "Sinjoro 1: Vi \u0109ion komprenis. Kiun tagon vi",
-    "vortaro": {
-      "sinjoro": "monsieur",
-      "kiun": "qui",
-      "vi": "tu, vous",
-      "tagon": "jour",
       "komprenis": "comprendre",
-      "\u0109ion": "tout, toute chose"
-    }
-  },
-  {
-    "teksto": "butikumas?",
-    "vortaro": {
-      "butikumas": "faire les magasins, faire les courses"
+      "\u0109ion": "tout, toute chose",
+      "vi": "tu, vous",
+      "kiun": "qui",
+      "tagon": "jour",
+      "butikumas": "faire les magasins, faire les courses",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Nu.... Sabate....",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "nu": "allons, bien, eh bien\u2026 "
+      "nu": "allons, bien, eh bien\u2026 ",
+      "sabate": "le samedi",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "(Iom longa pa\u016dzo.) Nu... semajne mi",
+    "teksto": "(Iom longa pa\u016dzo.) Nu... semajne mi laboras, kaj diman\u0109e \u0109io estas fermita. Al mi restas nur sabato....",
     "vortaro": {
+      "mi": "je",
       "pa\u016dzo": "*pause",
-      "mi": "je",
       "iom": "un peu",
-      "longa": "long(ue)",
-      "nu": "allons, bien, eh bien\u2026 "
-    }
-  },
-  {
-    "teksto": "laboras, kaj diman\u0109e \u0109io estas fermita. Al mi",
-    "vortaro": {
-      "laboras": "travailler",
-      "mi": "je",
-      "estas": "\u00eatre",
-      "kaj": "et",
-      "al": "\u00e0, vers",
-      "fermita": "fermer",
-      "\u0109io": "tout, toute chose"
-    }
-  },
-  {
-    "teksto": "restas nur sabato....",
-    "vortaro": {
-      "sabato": "samedi",
       "nur": "seulement",
-      "restas": "rester"
+      "nu": "allons, bien, eh bien\u2026 ",
+      "\u0109io": "tout, toute chose",
+      "fermita": "fermer",
+      "longa": "long(ue)",
+      "laboras": "travailler",
+      "semajne": "en semaine",
+      "estas": "\u00eatre",
+      "al": "\u00e0, vers",
+      "restas": "rester",
+      "kaj": "et",
+      "sabato": "samedi",
+      "diman\u0109e": "le dimanche"
     }
   },
   {
     "teksto": "Sinjoro 1 (skribas notojn): Vi butikumas sabate?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "notojn": "note",
+      "skribas": "\u00e9crire",
+      "sabate": "le samedi",
       "vi": "tu, vous",
       "butikumas": "faire les magasins, faire les courses",
-      "skribas": "\u00e9crire"
+      "sinjoro": "monsieur",
+      "notojn": "note"
     }
   },
   {
     "teksto": "Sinjoro 2: \u0108u ne ta\u016dgas?",
     "vortaro": {
       "ta\u016dgas": "aller, convenir",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "sinjoro": "monsieur",
-      "ne": "non, ne... pas",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "ne": "non, ne... pas"
     }
   },
   {
-    "teksto": "Sinjoro 1: Jes ja, tute bone. Matene, en via",
+    "teksto": "Sinjoro 1: Jes ja, tute bone. Matene, en via ban\u0109ambro, \u0109u kelkfoje vi kantetas?",
     "vortaro": {
-      "bone": "bien",
-      "ja": "certes, effectivement, il est vrai que, en fait, bien",
-      "sinjoro": "monsieur",
+      "kantetas": "fredonne",
+      "jes": "oui, d'accord",
       "matene": "le matin, au matin",
       "en": "dans",
       "tute": "enti\u00e8rement, totalement",
-      "via": "tu, vous",
-      "jes": "oui, d'accord"
-    }
-  },
-  {
-    "teksto": "ban\u0109ambro, \u0109u kelkfoje vi kantetas?",
-    "vortaro": {
-      "ban\u0109ambro": "salle de bain",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "vi": "tu, vous"
+      "ban\u0109ambro": "salle de bain",
+      "kelkfoje": "parfois",
+      "ja": "certes, effectivement, il est vrai que, en fait, bien",
+      "vi": "tu, vous",
+      "via": "tu, vous",
+      "bone": "bien",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2: Jes, jes, mi \u015datas kanti sub mia",
+    "teksto": "Sinjoro 2: Jes, jes, mi \u015datas kanti sub mia du\u015do.",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
+      "jes": "oui, d'accord",
+      "du\u015do": "douche",
+      "kanti": "chanter",
       "mia": "je",
       "sub": "sous, en-dessous de",
       "\u015datas": "appr\u00e9cier, aimer",
-      "kanti": "chanter",
-      "jes": "oui, d'accord"
-    }
-  },
-  {
-    "teksto": "du\u015do.",
-    "vortaro": {
-      "du\u015do": "douche"
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Kion vi kantas?",
     "vortaro": {
-      "kion": "quoi, que",
-      "sinjoro": "monsieur",
       "kantas": "chanter",
-      "vi": "tu, vous"
+      "kion": "quoi, que",
+      "vi": "tu, vous",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Nu... kantojn... varieteajn kantojn.",
     "vortaro": {
-      "sinjoro": "monsieur",
       "nu": "allons, bien, eh bien\u2026 ",
-      "kantojn": "chanson, chant"
+      "sinjoro": "monsieur",
+      "kantojn": "chanson, chant",
+      "varieteajn": "des vari\u00e9t\u00e9s"
     }
   },
   {
     "teksto": "Sinjoro 1: \u0108u de JOMO?",
     "vortaro": {
+      "jomo": "Jomo (muzikisto)",
       "de": "de",
-      "sinjoro": "monsieur",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2 (maltrankvila): Jes, tio okazas al mi.",
     "vortaro": {
-      "maltrankvila": "\u00e9nerv\u00e9, inquiet, perturb\u00e9",
       "mi": "je",
-      "sinjoro": "monsieur",
+      "jes": "oui, d'accord",
       "okazas": "arriver, se passer, avoir lieu",
-      "tio": "ce, cela, \u00e7a",
+      "sinjoro": "monsieur",
       "al": "\u00e0, vers",
-      "jes": "oui, d'accord"
+      "maltrankvila": "\u00e9nerv\u00e9, inquiet, perturb\u00e9",
+      "tio": "ce, cela, \u00e7a"
     }
   },
   {
-    "teksto": "Sinjoro 1: Tre bone.... \u0108u vi estas",
+    "teksto": "Sinjoro 1: Tre bone.... \u0108u vi estas hejmlaboretulo?",
     "vortaro": {
-      "bone": "bien",
-      "sinjoro": "monsieur",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "vi": "tu, vous",
       "tre": "tr\u00e8s",
       "estas": "\u00eatre",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "vi": "tu, vous"
+      "hejmlaboretulo": "petit travailleur \u00e0 domicile",
+      "bone": "bien",
+      "sinjoro": "monsieur"
     }
-  },
-  {
-    "teksto": "hejmlaboretulo?",
-    "vortaro": {}
   },
   {
     "teksto": "Sinjoro 2: Nu, jes.... Sufi\u0109e, jes.",
     "vortaro": {
-      "sinjoro": "monsieur",
       "nu": "allons, bien, eh bien\u2026 ",
       "sufi\u0109e": "assez",
-      "jes": "oui, d'accord"
+      "jes": "oui, d'accord",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: \u0108u vi jam estis en tendumejo?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "en": "dans",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "jam": "d\u00e9j\u00e0",
+      "en": "dans",
+      "estis": "\u00eatre",
       "vi": "tu, vous",
-      "estis": "\u00eatre"
+      "jam": "d\u00e9j\u00e0",
+      "sinjoro": "monsieur",
+      "tendumejo": "camping"
     }
   },
   {
     "teksto": "Sinjoro 2: Unufoje, jes.",
     "vortaro": {
-      "sinjoro": "monsieur",
+      "jes": "oui, d'accord",
       "unufoje": "une fois",
-      "jes": "oui, d'accord"
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 1: \u0108u vi jam legis bildstriojn pli ol",
+    "teksto": "Sinjoro 1: \u0108u vi jam legis bildstriojn pli ol dekokjara\u011da?",
     "vortaro": {
+      "dekokjara\u011da": "\u00e2g\u00e9 de dix huit ans",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "bildstriojn": "bande dessin\u00e9e, BD",
-      "sinjoro": "monsieur",
       "legis": "lire",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "jam": "d\u00e9j\u00e0",
       "vi": "tu, vous",
+      "jam": "d\u00e9j\u00e0",
       "pli": "plus (en plus grande quantit\u00e9)",
-      "ol": "que (dans une comparaison)"
+      "ol": "que (dans une comparaison)",
+      "sinjoro": "monsieur"
     }
-  },
-  {
-    "teksto": "dekokjara\u011da?",
-    "vortaro": {}
   },
   {
     "teksto": "Sinjoro 2: Jes.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "jes": "oui, d'accord"
+      "jes": "oui, d'accord",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 1: \u0108u vi jam rigardis a\u016dtomobilan",
+    "teksto": "Sinjoro 1: \u0108u vi jam rigardis a\u016dtomobilan konkurson televide?",
     "vortaro": {
-      "sinjoro": "monsieur",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "jam": "d\u00e9j\u00e0",
+      "rigardis": "regarder",
       "vi": "tu, vous",
-      "rigardis": "regarder"
-    }
-  },
-  {
-    "teksto": "konkurson televide?",
-    "vortaro": {
-      "konkurson": "concours"
+      "jam": "d\u00e9j\u00e0",
+      "konkurson": "concours",
+      "a\u016dtomobilan": "d'automobile",
+      "sinjoro": "monsieur",
+      "televide": "t\u00e9l\u00e9visuellement"
     }
   },
   {
     "teksto": "Sinjoro 2: Jes.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "jes": "oui, d'accord"
+      "jes": "oui, d'accord",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Tutan?",
     "vortaro": {
-      "tutan": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
-      "sinjoro": "monsieur"
+      "sinjoro": "monsieur",
+      "tutan": "entier, enti\u00e8re, tout(e) le(la)/un(e)"
     }
   },
   {
     "teksto": "Sinjoro 2: Nu... jes.",
     "vortaro": {
-      "sinjoro": "monsieur",
       "nu": "allons, bien, eh bien\u2026 ",
-      "jes": "oui, d'accord"
+      "jes": "oui, d'accord",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: \u0108u vi jam pensis pri sinmortigo?",
     "vortaro": {
-      "sinjoro": "monsieur",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "pri": "\u00e0 propos de",
+      "vi": "tu, vous",
+      "jam": "d\u00e9j\u00e0",
       "pensis": "penser",
       "sinmortigo": "suicide",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "jam": "d\u00e9j\u00e0",
-      "vi": "tu, vous"
+      "sinjoro": "monsieur"
     }
   },
   {
@@ -2645,294 +2098,238 @@
     }
   },
   {
-    "teksto": "Sinjoro 1: Tre bone, dankon. Fini\u011dis la",
+    "teksto": "Sinjoro 1: Tre bone, dankon. Fini\u011dis la ekzameno.",
     "vortaro": {
-      "bone": "bien",
-      "sinjoro": "monsieur",
-      "tre": "tr\u00e8s",
-      "la": "le, la, les",
+      "ekzameno": "examen",
       "fini\u011dis": "tout a une fin, finir, s'achever, s'arr\u00eater, cesser, se terminer",
+      "tre": "tr\u00e8s",
+      "sinjoro": "monsieur",
+      "la": "le, la, les",
+      "bone": "bien",
       "dankon": "merci, remerciement"
-    }
-  },
-  {
-    "teksto": "ekzameno.",
-    "vortaro": {
-      "ekzameno": "examen"
     }
   },
   {
     "teksto": "Sinjoro 2: Kaj do?",
     "vortaro": {
-      "do": "donc",
+      "kaj": "et",
       "sinjoro": "monsieur",
-      "kaj": "et"
+      "do": "donc"
     }
   },
   {
     "teksto": "Sinjoro 1: Do kio?",
     "vortaro": {
+      "kio": "quoi, que",
       "do": "donc",
-      "sinjoro": "monsieur",
-      "kio": "quoi, que"
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Kio estas via diagnozo?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
       "kio": "quoi, que",
       "diagnozo": "diagnostic",
-      "via": "tu, vous"
+      "estas": "\u00eatre",
+      "via": "tu, vous",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 1:A\u016dskultu, necesas... necesus atendi",
+    "teksto": "Sinjoro 1:A\u016dskultu, necesas... necesus atendi rezulton de la analizoj.",
     "vortaro": {
       "atendi": "attendre",
-      "sinjoro": "monsieur",
-      "necesus": "falloir, \u00eatre n\u00e9cessaire",
-      "necesas": "falloir, \u00eatre n\u00e9cessaire"
-    }
-  },
-  {
-    "teksto": "rezulton de la analizoj.",
-    "vortaro": {
       "de": "de",
-      "analizoj": "analyse",
+      "necesas": "falloir, \u00eatre n\u00e9cessaire",
+      "necesus": "falloir, \u00eatre n\u00e9cessaire",
+      "la": "le, la, les",
       "rezulton": "r\u00e9sultat",
-      "la": "le, la, les"
+      "analizoj": "analyse",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "",
-    "vortaro": {}
-  },
-  {
-    "teksto": "Sinjoro 2: Jes... sed... nur tiele... la\u016d-",
+    "teksto": "Sinjoro 2: Jes... sed... nur tiele... la\u016dimprese....",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "tiele": "de telle mani\u00e8re",
-      "nur": "seulement",
+      "jes": "oui, d'accord",
       "sed": "mais",
-      "jes": "oui, d'accord"
+      "nur": "seulement",
+      "tiele": "de telle mani\u00e8re",
+      "sinjoro": "monsieur"
     }
-  },
-  {
-    "teksto": "imprese....",
-    "vortaro": {}
-  },
-  {
-    "teksto": "",
-    "vortaro": {}
   },
   {
     "teksto": "Sinjoro 1: \u0108u la\u016d-imprese?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "(Li rigardas siajn slipojn.) Okulmezure...",
+    "teksto": "(Li rigardas siajn slipojn.) Okulmezure... tiele... vi estas komplete idiota....",
     "vortaro": {
-      "rigardas": "regarder",
+      "idiota": "idiot",
       "li": "il, lui, le",
       "okulmezure": "\u00e0 vue d'oeligil",
+      "komplete": "compl\u00e8tement",
+      "rigardas": "regarder",
       "slipojn": "fiche",
-      "siajn": "son, sa, ses"
-    }
-  },
-  {
-    "teksto": "tiele... vi estas komplete idiota....",
-    "vortaro": {
+      "vi": "tu, vous",
       "estas": "\u00eatre",
       "tiele": "de telle mani\u00e8re",
-      "vi": "tu, vous"
+      "siajn": "son, sa, ses"
     }
   },
   {
     "teksto": "Sinjoro 2: \u0108u?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: \u015cajnas al mi, jes.",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
+      "jes": "oui, d'accord",
       "\u015dajnas": "sembler, avoir l'air",
       "al": "\u00e0, vers",
-      "jes": "oui, d'accord"
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2: Ho ve!... Tion \u011duste mi iom timis....",
+    "teksto": "Sinjoro 2: Ho ve!... Tion \u011duste mi iom timis.... Mi povas tion diri al vi nun... sed... dum mi respondis, mi ekrimarkis tion... iomete.",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
-      "tion": "ce, cela, \u00e7a",
-      "ve": "malheur, a\u00efe, h\u00e9las",
-      "iom": "un peu",
-      "timis": "craindre, avoir peur",
-      "\u011duste": "juste, justement, bien, convenablement, correctement, exactement, pr\u00e9cis\u00e9ment",
-      "ho": "Henry, hydrog\u00e8ne, H, heure"
-    }
-  },
-  {
-    "teksto": "Mi povas tion diri al vi nun... sed... dum mi",
-    "vortaro": {
-      "mi": "je",
-      "tion": "ce, cela, \u00e7a",
-      "al": "\u00e0, vers",
-      "diri": "dire",
-      "povas": "pouvoir, \u00eatre capable de",
-      "vi": "tu, vous",
       "dum": "durant, pendant, pendant que",
+      "iom": "un peu",
+      "\u011duste": "juste, justement, bien, convenablement, correctement, exactement, pr\u00e9cis\u00e9ment",
       "sed": "mais",
-      "nun": "maintenant"
-    }
-  },
-  {
-    "teksto": "respondis, mi ekrimarkis tion... iomete.",
-    "vortaro": {
-      "mi": "je",
-      "tion": "ce, cela, \u00e7a",
-      "iomete": "un petit peu",
-      "respondis": "r\u00e9pondre"
-    }
-  },
-  {
-    "teksto": "Sinjoro 1: Ha, tio jam bonas. Estas signo pri",
-    "vortaro": {
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
-      "pri": "\u00e0 propos de",
-      "tio": "ce, cela, \u00e7a",
-      "jam": "d\u00e9j\u00e0",
-      "ha": "ah, ha",
-      "signo": "signe"
-    }
-  },
-  {
-    "teksto": "inteligenteco.",
-    "vortaro": {
-      "inteligenteco": "intelligence, intellect"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: \u0108u jes? Kaj... nu... \u0109u vi ne povas meti",
-    "vortaro": {
-      "sinjoro": "monsieur",
-      "meti": "mettre, poser, placer",
-      "kaj": "et",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "respondis": "r\u00e9pondre",
+      "timis": "craindre, avoir peur",
+      "povas": "pouvoir, \u00eatre capable de",
+      "diri": "dire",
+      "ho": "Henry, hydrog\u00e8ne, H, heure",
       "vi": "tu, vous",
+      "al": "\u00e0, vers",
+      "tion": "ce, cela, \u00e7a",
+      "nun": "maintenant",
+      "ekrimarkis": "remarqua soudainement",
+      "iomete": "un petit peu",
+      "sinjoro": "monsieur",
+      "ve": "malheur, a\u00efe, h\u00e9las"
+    }
+  },
+  {
+    "teksto": "Sinjoro 1: Ha, tio jam bonas. Estas signo pri inteligenteco.",
+    "vortaro": {
+      "inteligenteco": "intelligence, intellect",
+      "signo": "signe",
+      "pri": "\u00e0 propos de",
+      "bonas": "faire du bien",
+      "ha": "ah, ha",
+      "jam": "d\u00e9j\u00e0",
+      "estas": "\u00eatre",
+      "sinjoro": "monsieur",
+      "tio": "ce, cela, \u00e7a"
+    }
+  },
+  {
+    "teksto": "Sinjoro 2: \u0108u jes? Kaj... nu... \u0109u vi ne povas meti tion en la dosieron?",
+    "vortaro": {
+      "jes": "oui, d'accord",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "en": "dans",
       "povas": "pouvoir, \u00eatre capable de",
       "nu": "allons, bien, eh bien\u2026 ",
+      "meti": "mettre, poser, placer",
+      "vi": "tu, vous",
+      "la": "le, la, les",
       "ne": "non, ne... pas",
-      "jes": "oui, d'accord"
-    }
-  },
-  {
-    "teksto": "tion en la dosieron?",
-    "vortaro": {
-      "dosieron": "dossier, fichier, casier",
-      "en": "dans",
       "tion": "ce, cela, \u00e7a",
-      "la": "le, la, les"
+      "dosieron": "dossier, fichier, casier",
+      "kaj": "et",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: La ekzameno estas finita nun.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
-      "la": "le, la, les",
       "finita": "finir",
       "ekzameno": "examen",
-      "nun": "maintenant"
-    }
-  },
-  {
-    "teksto": "Sinjoro 2: Ha! (elrevigita). Beda\u016drinde.",
-    "vortaro": {
-      "ha": "ah, ha",
+      "estas": "\u00eatre",
       "sinjoro": "monsieur",
-      "beda\u016drinde": "malheureusement"
+      "nun": "maintenant",
+      "la": "le, la, les"
     }
   },
   {
-    "teksto": "Doktoro?",
+    "teksto": "Sinjoro 2: Ha! (elrevigita). Beda\u016drinde. Doktoro?",
     "vortaro": {
-      "doktoro": "docteur"
+      "doktoro": "docteur",
+      "elrevigita": "d\u00e9sabus\u00e9",
+      "ha": "ah, ha",
+      "beda\u016drinde": "malheureusement",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Jes?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "jes": "oui, d'accord"
+      "jes": "oui, d'accord",
+      "sinjoro": "monsieur"
     }
   },
   {
-    "teksto": "Sinjoro 2: La\u016d vi?... \u0108u tiele mi estas?... \u0108u",
+    "teksto": "Sinjoro 2: La\u016d vi?... \u0108u tiele mi estas?... \u0108u idioto?",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
+      "idioto": "idiot, abruti, imb\u00e9cile, cr\u00e9tin",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "la\u016d": "selon, suivant ; le long de",
+      "vi": "tu, vous",
       "estas": "\u00eatre",
       "tiele": "de telle mani\u00e8re",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "vi": "tu, vous",
-      "la\u016d": "selon, suivant ; le long de"
-    }
-  },
-  {
-    "teksto": "idioto?",
-    "vortaro": {
-      "idioto": "idiot, abruti, imb\u00e9cile, cr\u00e9tin"
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Mi opinias, jes.",
     "vortaro": {
-      "opinias": "\u00eatre d'avis, penser, croire",
       "mi": "je",
-      "sinjoro": "monsieur",
-      "jes": "oui, d'accord"
+      "jes": "oui, d'accord",
+      "opinias": "\u00eatre d'avis, penser, croire",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Vi tuj gardos min \u0109i tie, \u0109u ne?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "tuj": "imm\u00e9diatement, sur le champ",
       "min": "je",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "vi": "tu, vous",
-      "\u0109i": "(indique la proximit\u00e9)",
-      "gardos": "garder",
       "tie": "ici, l\u00e0",
-      "ne": "non, ne... pas"
+      "tuj": "imm\u00e9diatement, sur le champ",
+      "\u0109i": "(indique la proximit\u00e9)",
+      "ne": "non, ne... pas",
+      "sinjoro": "monsieur",
+      "gardos": "garder"
     }
   },
   {
     "teksto": "Sinjoro 1: Jes, mi kredas ke tio plej ta\u016dgas. (Li for-ordigas sian dosieron.)",
     "vortaro": {
       "mi": "je",
-      "sinjoro": "monsieur",
-      "plej": "le plus, la plus",
+      "jes": "oui, d'accord",
       "li": "il, lui, le",
-      "tio": "ce, cela, \u00e7a",
-      "ta\u016dgas": "aller, convenir",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "plej": "le plus, la plus",
+      "ta\u016dgas": "aller, convenir",
       "kredas": "croire",
-      "sian": "son, sa, ses",
       "dosieron": "dossier, fichier, casier",
-      "jes": "oui, d'accord"
+      "sinjoro": "monsieur",
+      "sian": "son, sa, ses",
+      "tio": "ce, cela, \u00e7a"
     }
   },
   {
@@ -2945,50 +2342,54 @@
   {
     "teksto": "Sinjoro 1: Jes?",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "jes": "oui, d'accord"
+      "jes": "oui, d'accord",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: \u0108u estas kuraceble?",
     "vortaro": {
-      "sinjoro": "monsieur",
+      "estas": "\u00eatre",
+      "kuraceble": "curablement",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "estas": "\u00eatre"
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: \u0108u idioteco?",
     "vortaro": {
       "idioteco": "idiotie",
-      "sinjoro": "monsieur",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)"
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 2: Jes....",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "jes": "oui, d'accord"
+      "jes": "oui, d'accord",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "Sinjoro 1: Longege da\u016dras, sed... jes, \u011di estas kuracebla.",
     "vortaro": {
-      "sinjoro": "monsieur",
-      "estas": "\u00eatre",
-      "\u011di": "il, elle",
-      "da\u016dras": "durer",
+      "jes": "oui, d'accord",
       "sed": "mais",
-      "jes": "oui, d'accord"
+      "kuracebla": "curable",
+      "longege": "tr\u00e8s longuement",
+      "estas": "\u00eatre",
+      "da\u016dras": "durer",
+      "\u011di": "il, elle",
+      "sinjoro": "monsieur"
     }
   },
   {
     "teksto": "(S-ro 1 foriras. S-ro 2 restas sola sceneje.)",
     "vortaro": {
+      "restas": "rester",
+      "sceneje": "en sc\u00e8ne",
       "sola": "seul(e)",
-      "foriras": "partir, renvoyer, cong\u00e9dier, faire partir, jeter dehors",
-      "restas": "rester"
+      "foriras": "partir, renvoyer, cong\u00e9dier, faire partir, jeter dehors"
     }
   }
 ]

@@ -2,26 +2,28 @@
   {
     "teksto": "Iu mistera substanco",
     "vortaro": {
+      "substanco": "substance",
       "mistera": "myst\u00e9rieux, myst\u00e9rieuse",
-      "iu": "quelqu'un",
-      "substanco": "substance"
+      "iu": "quelqu'un"
     }
   },
   {
     "teksto": "Bob: Nu, vi ankora\u016d ne diris al mi, kio okazis, dum vi spione rigardis tiun paron.",
     "vortaro": {
-      "mi": "je",
-      "okazis": "arriver, se passer, avoir lieu",
-      "tiun": "ce, cet(te)",
       "diris": "dire",
-      "kio": "quoi, que",
-      "ankora\u016d": "encore",
-      "al": "\u00e0, vers",
-      "vi": "tu, vous",
+      "mi": "je",
       "dum": "durant, pendant, pendant que",
       "paron": "couple, paire",
+      "bob": "bob",
+      "kio": "quoi, que",
       "rigardis": "regarder",
       "nu": "allons, bien, eh bien\u2026 ",
+      "spione": "comme une espionne",
+      "okazis": "arriver, se passer, avoir lieu",
+      "vi": "tu, vous",
+      "ankora\u016d": "encore",
+      "al": "\u00e0, vers",
+      "tiun": "ce, cet(te)",
       "ne": "non, ne... pas"
     }
   },
@@ -32,10 +34,10 @@
   {
     "teksto": "Linda: Okazis io vere stranga.",
     "vortaro": {
-      "okazis": "arriver, se passer, avoir lieu",
+      "vere": "vraiment",
       "linda": "jolie",
       "stranga": "bizarre",
-      "vere": "vraiment",
+      "okazis": "arriver, se passer, avoir lieu",
       "io": "quelque chose"
     }
   },
@@ -46,17 +48,18 @@
   {
     "teksto": "Tom: Vere stranga, fakte. En la mano de tiu junulo estis io.",
     "vortaro": {
-      "la": "le, la, les",
-      "fakte": "en fait",
-      "stranga": "bizarre",
       "vere": "vraiment",
-      "en": "dans",
-      "mano": "main",
-      "junulo": "jeune",
-      "estis": "\u00eatre",
-      "io": "quelque chose",
       "de": "de",
-      "tiu": "ce, cet(te)"
+      "stranga": "bizarre",
+      "en": "dans",
+      "junulo": "jeune",
+      "tom": "tom",
+      "fakte": "en fait",
+      "estis": "\u00eatre",
+      "tiu": "ce, cet(te)",
+      "io": "quelque chose",
+      "mano": "main",
+      "la": "le, la, les"
     }
   },
   {
@@ -66,7 +69,8 @@
   {
     "teksto": "Bob: Kio?",
     "vortaro": {
-      "kio": "quoi, que"
+      "kio": "quoi, que",
+      "bob": "bob"
     }
   },
   {
@@ -76,16 +80,17 @@
   {
     "teksto": "Linda: Ni ne povis vidi. Io tre eta. Malgranda afero. Afereto.",
     "vortaro": {
-      "afero": "affaire, sujet, chose",
-      "tre": "tr\u00e8s",
       "linda": "jolie",
-      "eta": "petit",
-      "povis": "pouvoir, \u00eatre capable de",
-      "ni": "nous",
+      "afereto": "un petit truc",
+      "afero": "affaire, sujet, chose",
+      "vidi": "voir",
+      "tre": "tr\u00e8s",
+      "ne": "non, ne... pas",
       "io": "quelque chose",
       "malgranda": "petit",
-      "vidi": "voir",
-      "ne": "non, ne... pas"
+      "povis": "pouvoir, \u00eatre capable de",
+      "eta": "petit",
+      "ni": "nous"
     }
   },
   {
@@ -96,15 +101,17 @@
     "teksto": "Tom: Kaj dum \u015di ne rigardis, lia mano alproksimi\u011dis al \u015dia taso.",
     "vortaro": {
       "lia": "il, lui, le",
-      "kaj": "et",
-      "al": "\u00e0, vers",
-      "mano": "main",
-      "\u015di": "elle",
       "dum": "durant, pendant, pendant que",
       "rigardis": "regarder",
+      "tom": "tom",
+      "taso": "tasse",
+      "alproksimi\u011dis": "s'approcher",
+      "al": "\u00e0, vers",
       "\u015dia": "elle",
+      "mano": "main",
+      "kaj": "et",
       "ne": "non, ne... pas",
-      "taso": "tasse"
+      "\u015di": "elle"
     }
   },
   {
@@ -114,12 +121,14 @@
   {
     "teksto": "Linda: Kaj kiam \u015di ekrigardis lin, lia mano ekhaltis.",
     "vortaro": {
-      "kiam": "quand",
       "lia": "il, lui, le",
+      "ekhaltis": "s'est arr\u00eat\u00e9e net",
       "linda": "jolie",
-      "kaj": "et",
-      "mano": "main",
       "lin": "il, lui, le",
+      "ekrigardis": "regarder d'un coup",
+      "mano": "main",
+      "kiam": "quand",
+      "kaj": "et",
       "\u015di": "elle"
     }
   },
@@ -131,15 +140,17 @@
     "teksto": "Tom: Tiam li montris ion al \u015di. Evidente, li deziris forturni \u015dian atenton.",
     "vortaro": {
       "tiam": "\u00e0 ce moment l\u00e0, alors",
-      "\u015dian": "sa, son",
       "li": "il, lui, le",
-      "deziris": "d\u00e9sirer",
+      "forturni": "d\u00e9tourner",
+      "tom": "tom",
       "ion": "quelque chose",
+      "\u015dian": "sa, son",
+      "atenton": "attention",
       "al": "\u00e0, vers",
-      "montris": "montrer, d\u00e9signer",
+      "deziris": "d\u00e9sirer",
       "evidente": "\u00e9videmment, \u00e0 l'\u00e9vidence",
-      "\u015di": "elle",
-      "atenton": "attention"
+      "montris": "montrer, d\u00e9signer",
+      "\u015di": "elle"
     }
   },
   {
@@ -149,32 +160,33 @@
   {
     "teksto": "Linda: Kaj li sukcesis. Li plene sukcesis. \u015ci rigardis al la pordo. Kaj dum \u015di rigardis for, lia mano subite estis super \u015dia taso, dum unu sekundo, ne pli, kaj tute nature revenis. Malplena.",
     "vortaro": {
-      "super": "au-dessus de, par-dessus",
-      "la": "le, la, les",
-      "nature": "naturellement",
-      "revenis": "revenir",
-      "dum": "durant, pendant, pendant que",
-      "\u015dia": "elle",
-      "ne": "non, ne... pas",
-      "subite": "soudainement",
-      "taso": "tasse",
-      "for": "loin, au loin",
-      "sekundo": "seconde (de temps)",
-      "pli": "plus (en plus grande quantit\u00e9)",
-      "plene": "pleinement, compl\u00e8tement, enti\u00e8rement",
-      "sukcesis": "r\u00e9ussir, avoir du succ\u00e8s",
-      "linda": "jolie",
-      "kaj": "et",
-      "al": "\u00e0, vers",
-      "mano": "main",
-      "\u015di": "elle",
-      "malplena": "vide",
-      "rigardis": "regarder",
+      "tute": "enti\u00e8rement, totalement",
       "estis": "\u00eatre",
+      "plene": "pleinement, compl\u00e8tement, enti\u00e8rement",
+      "for": "loin, au loin",
+      "mano": "main",
+      "subite": "soudainement",
       "lia": "il, lui, le",
-      "li": "il, lui, le",
+      "dum": "durant, pendant, pendant que",
+      "super": "au-dessus de, par-dessus",
+      "sukcesis": "r\u00e9ussir, avoir du succ\u00e8s",
+      "taso": "tasse",
+      "kaj": "et",
+      "linda": "jolie",
+      "rigardis": "regarder",
+      "unu": "les uns",
       "pordo": "porte",
-      "tute": "enti\u00e8rement, totalement"
+      "la": "le, la, les",
+      "li": "il, lui, le",
+      "malplena": "vide",
+      "sekundo": "seconde (de temps)",
+      "nature": "naturellement",
+      "al": "\u00e0, vers",
+      "\u015dia": "elle",
+      "pli": "plus (en plus grande quantit\u00e9)",
+      "revenis": "revenir",
+      "ne": "non, ne... pas",
+      "\u015di": "elle"
     }
   },
   {
@@ -184,11 +196,12 @@
   {
     "teksto": "Bob: \u0108u \u011di estis plena anta\u016de?",
     "vortaro": {
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
+      "bob": "bob",
+      "estis": "\u00eatre",
       "plena": "plein(e)",
       "\u011di": "il, elle",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "anta\u016de": "avant, auparavant ",
-      "estis": "\u00eatre"
+      "anta\u016de": "avant, auparavant "
     }
   },
   {
@@ -198,25 +211,27 @@
   {
     "teksto": "Tom: Ne plena. Kompreneble, \u011di ne estis plena. Sed estis io en \u011di, kaj post kiam \u011di estis dum sekundo super la taso de Gerda, estis plu nenio en \u011di.",
     "vortaro": {
-      "super": "au-dessus de, par-dessus",
-      "la": "le, la, les",
-      "plena": "plein(e)",
-      "\u011di": "il, elle",
-      "dum": "durant, pendant, pendant que",
-      "post": "apr\u00e8s",
-      "ne": "non, ne... pas",
-      "taso": "tasse",
-      "sekundo": "seconde (de temps)",
-      "en": "dans",
-      "kaj": "et",
+      "de": "de",
       "sed": "mais",
       "estis": "\u00eatre",
-      "kiam": "quand",
-      "kompreneble": "naturellement, bien entendu",
-      "io": "quelque chose",
-      "nenio": "rien",
       "plu": "plus, plus longtemps, plus loin",
-      "de": "de"
+      "plena": "plein(e)",
+      "io": "quelque chose",
+      "\u011di": "il, elle",
+      "dum": "durant, pendant, pendant que",
+      "super": "au-dessus de, par-dessus",
+      "tom": "tom",
+      "kiam": "quand",
+      "kaj": "et",
+      "taso": "tasse",
+      "nenio": "rien",
+      "en": "dans",
+      "la": "le, la, les",
+      "post": "apr\u00e8s",
+      "gerda": "gerda",
+      "sekundo": "seconde (de temps)",
+      "kompreneble": "naturellement, bien entendu",
+      "ne": "non, ne... pas"
     }
   },
   {
@@ -226,12 +241,12 @@
   {
     "teksto": "Linda: Certe estas iu mistera substanco.",
     "vortaro": {
-      "estas": "\u00eatre",
       "linda": "jolie",
       "certe": "certainement",
-      "mistera": "myst\u00e9rieux, myst\u00e9rieuse",
+      "substanco": "substance",
       "iu": "quelqu'un",
-      "substanco": "substance"
+      "mistera": "myst\u00e9rieux, myst\u00e9rieuse",
+      "estas": "\u00eatre"
     }
   },
   {
@@ -241,6 +256,7 @@
   {
     "teksto": "Tom: Iu drogo.",
     "vortaro": {
+      "tom": "tom",
       "drogo": "drogue",
       "iu": "quelqu'un"
     }
@@ -252,16 +268,18 @@
   {
     "teksto": "Bob: Kiel vi povas scii, ke ne estis tute simple peco da sukero?",
     "vortaro": {
-      "scii": "savoir",
-      "peco": "morceau, bout, pinc\u00e9e",
-      "kiel": "comment, comme",
-      "sukero": "sucre",
-      "povas": "pouvoir, \u00eatre capable de",
-      "vi": "tu, vous",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "bob": "bob",
       "tute": "enti\u00e8rement, totalement",
-      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "povas": "pouvoir, \u00eatre capable de",
       "estis": "\u00eatre",
+      "peco": "morceau, bout, pinc\u00e9e",
+      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
+      "vi": "tu, vous",
+      "scii": "savoir",
+      "simple": "tout simplement",
+      "sukero": "sucre",
+      "kiel": "comment, comme",
       "ne": "non, ne... pas"
     }
   },
@@ -272,16 +290,16 @@
   {
     "teksto": "Linda: Li ne agus tiel ka\u015de, se estus nur sukero.",
     "vortaro": {
-      "agus": "agir",
-      "linda": "jolie",
       "se": "si (indique une condition)",
       "li": "il, lui, le",
-      "sukero": "sucre",
-      "estus": "\u00eatre",
+      "linda": "jolie",
       "nur": "seulement",
+      "agus": "agir",
       "tiel": "ainsi, comme \u00e7a",
-      "ne": "non, ne... pas",
-      "ka\u015de": "en cachette"
+      "estus": "\u00eatre",
+      "ka\u015de": "en cachette",
+      "sukero": "sucre",
+      "ne": "non, ne... pas"
     }
   },
   {
@@ -291,14 +309,17 @@
   {
     "teksto": "Tom: Cetere, \u0109i tie ne estas peca sukero. Estas nur pulvora sukero, en sukerujoj.",
     "vortaro": {
-      "estas": "\u00eatre",
-      "sukerujoj": "sucrier",
       "en": "dans",
-      "sukero": "sucre",
       "nur": "seulement",
+      "pulvora": "en poudre",
+      "tom": "tom",
+      "peca": "en morceaux",
+      "sukerujoj": "sucrier",
+      "estas": "\u00eatre",
+      "tie": "ici, l\u00e0",
       "cetere": "d'ailleurs, du reste",
       "\u0109i": "(indique la proximit\u00e9)",
-      "tie": "ici, l\u00e0",
+      "sukero": "sucre",
       "ne": "non, ne... pas"
     }
   },
@@ -313,13 +334,15 @@
   {
     "teksto": "Bob: Eble li havis sukerpecon en la po\u015do kaj\u2026",
     "vortaro": {
-      "eble": "peut-\u00eatre, possiblement",
-      "la": "le, la, les",
-      "havis": "avoir",
       "li": "il, lui, le",
+      "bob": "bob",
       "en": "dans",
+      "eble": "peut-\u00eatre, possiblement",
+      "po\u015do": "poche",
+      "havis": "avoir",
       "kaj": "et",
-      "po\u015do": "poche"
+      "la": "le, la, les",
+      "sukerpecon": "un morceau de sucre"
     }
   },
   {
@@ -329,14 +352,16 @@
   {
     "teksto": "Tom: \u0108u vi ofte promenas kun sukerpecoj en via po\u015do?",
     "vortaro": {
-      "kun": "avec",
+      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
       "promenas": "se promener",
       "en": "dans",
-      "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "vi": "tu, vous",
+      "tom": "tom",
+      "sukerpecoj": "des morceaux de sucre",
       "po\u015do": "poche",
+      "vi": "tu, vous",
       "via": "tu, vous",
-      "ofte": "souvent, fr\u00e9quemment"
+      "ofte": "souvent, fr\u00e9quemment",
+      "kun": "avec"
     }
   },
   {
@@ -346,13 +371,14 @@
   {
     "teksto": "Bob: Vi pravas. Tiu ideo estas absurda. Tamen\u2026",
     "vortaro": {
-      "absurda": "absurde",
-      "estas": "\u00eatre",
-      "tamen": "n\u00e9anmoins, toutefois, quand m\u00eame, cependant",
       "ideo": "id\u00e9e",
-      "vi": "tu, vous",
+      "bob": "bob",
+      "pravas": "avoir raison, \u00eatre correct",
       "tiu": "ce, cet(te)",
-      "pravas": "avoir raison, \u00eatre correct"
+      "tamen": "n\u00e9anmoins, toutefois, quand m\u00eame, cependant",
+      "vi": "tu, vous",
+      "estas": "\u00eatre",
+      "absurda": "absurde"
     }
   },
   {
@@ -362,14 +388,14 @@
   {
     "teksto": "Linda: Rigardu! Jen \u015di ekstaras, kaj ekiras for.",
     "vortaro": {
-      "for": "loin, au loin",
+      "jen": "voici",
       "linda": "jolie",
-      "ekiras": "partir",
-      "kaj": "et",
-      "\u015di": "elle",
       "rigardu": "regarder",
+      "ekiras": "partir",
+      "for": "loin, au loin",
+      "kaj": "et",
       "ekstaras": "se mettre debout",
-      "jen": "voici"
+      "\u015di": "elle"
     }
   },
   {
@@ -380,19 +406,21 @@
     "teksto": "Bob: \u015ci \u015dajnas tute normala. Ver\u015dajne vi imagis ion draman, dum temas pri tute simpla, tute natura okaza\u0135o.",
     "vortaro": {
       "imagis": "imaginer",
-      "natura": "naturel(le)",
-      "simpla": "simple",
+      "dum": "durant, pendant, pendant que",
       "ver\u015dajne": "probablement",
-      "normala": "normal(e)",
+      "bob": "bob",
+      "tute": "enti\u00e8rement, totalement",
       "pri": "\u00e0 propos de",
-      "temas": "concerner, toucher, s'agir de, \u00eatre question de",
+      "natura": "naturel(le)",
       "\u015dajnas": "sembler, avoir l'air",
       "ion": "quelque chose",
+      "draman": "de dramatique",
+      "okaza\u0135o": "\u00e9v\u00e9nement, \u00e9v\u00e8nement",
       "vi": "tu, vous",
-      "\u015di": "elle",
-      "tute": "enti\u00e8rement, totalement",
-      "dum": "durant, pendant, pendant que",
-      "okaza\u0135o": "\u00e9v\u00e9nement, \u00e9v\u00e8nement"
+      "simpla": "simple",
+      "normala": "normal(e)",
+      "temas": "concerner, toucher, s'agir de, \u00eatre question de",
+      "\u015di": "elle"
     }
   }
 ]

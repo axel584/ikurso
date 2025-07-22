@@ -1,416 +1,229 @@
 [
   {
-    "teksto": "Kontakto",
+    "teksto": "Iam oni malkovris mesa\u011dojn el la kosmo. La\u016d la sciencistoj, kiuj ilin studis, la mesa\u011doj estis kreitaj de altnivela inteligento kaj anoncis la balda\u016dan alvenon de aro de eksterteranoj. La monda registaro preparis respondon, plene ta\u016dgan al la graveco de la evento. \u011cia mesa\u011do proponis",
     "vortaro": {
-      "kontakto": "contact"
-    }
-  },
-  {
-    "teksto": "",
-    "vortaro": {}
-  },
-  {
-    "teksto": "Iam oni malkovris mesa\u011dojn el la kosmo.",
-    "vortaro": {
-      "kosmo": "cosmos, univers",
-      "la": "le, la, les",
-      "malkovris": "d\u00e9couvrir (tous les sens)",
-      "iam": "\u00e0 un moment, un jour, une fois",
-      "oni": "on",
-      "mesa\u011dojn": "message",
-      "el": "hors de, de"
-    }
-  },
-  {
-    "teksto": "La\u016d la sciencistoj, kiuj ilin studis, la mesa\u011doj estis kreitaj de",
-    "vortaro": {
-      "la": "le, la, les",
-      "ilin": "ils, elles, eux",
-      "kreitaj": "l'occasion fait le larron, cr\u00e9er",
-      "kiuj": "qui",
-      "sciencistoj": "scientifique",
       "de": "de",
-      "estis": "\u00eatre",
-      "mesa\u011doj": "message",
-      "la\u016d": "selon, suivant ; le long de",
-      "studis": "\u00e9tudier"
-    }
-  },
-  {
-    "teksto": "altnivela inteligento kaj anoncis la balda\u016dan alvenon de aro",
-    "vortaro": {
-      "aro": "ensemble, groupe, jeu, are",
-      "anoncis": "annoncer",
-      "la": "le, la, les",
-      "de": "de",
-      "kaj": "et",
-      "alvenon": "arriv\u00e9e",
-      "balda\u016dan": "prochain, proche",
-      "altnivela": "de haut niveau, de qualit\u00e9",
-      "inteligento": "intelligence, intellect"
-    }
-  },
-  {
-    "teksto": "de eksterteranoj. La monda registaro preparis respondon,",
-    "vortaro": {
-      "preparis": "pr\u00e9parer",
-      "la": "le, la, les",
-      "monda": "mondial",
-      "respondon": "r\u00e9ponse",
-      "de": "de",
-      "registaro": "gouvernement, cabinet"
-    }
-  },
-  {
-    "teksto": "plene ta\u016dgan al la graveco de la evento. \u011cia mesa\u011do proponis",
-    "vortaro": {
-      "graveco": "gravit\u00e9, importance",
-      "la": "le, la, les",
-      "mesa\u011do": "message",
-      "al": "\u00e0, vers",
       "evento": "\u00e9v\u00e9nement",
-      "ta\u016dgan": "convenable, adapt\u00e9",
-      "de": "de",
+      "kosmo": "cosmos, univers",
+      "estis": "\u00eatre",
+      "kreitaj": "l'occasion fait le larron, cr\u00e9er",
+      "plene": "pleinement, compl\u00e8tement, enti\u00e8rement",
+      "iam": "\u00e0 un moment, un jour, une fois",
       "proponis": "sugg\u00e9rer, proposer ; offrir",
+      "ta\u016dgan": "convenable, adapt\u00e9",
+      "ilin": "ils, elles, eux",
+      "preparis": "pr\u00e9parer",
+      "oni": "on",
+      "aro": "ensemble, groupe, jeu, are",
+      "registaro": "gouvernement, cabinet",
+      "el": "hors de, de",
+      "kaj": "et",
+      "monda": "mondial",
       "\u011dia": "il, elle",
-      "plene": "pleinement, compl\u00e8tement, enti\u00e8rement"
+      "mesa\u011doj": "message",
+      "malkovris": "d\u00e9couvrir (tous les sens)",
+      "sciencistoj": "scientifique",
+      "respondon": "r\u00e9ponse",
+      "kiuj": "qui",
+      "alvenon": "arriv\u00e9e",
+      "anoncis": "annoncer",
+      "mesa\u011do": "message",
+      "la": "le, la, les",
+      "balda\u016dan": "prochain, proche",
+      "inteligento": "intelligence, intellect",
+      "graveco": "gravit\u00e9, importance",
+      "la\u016d": "selon, suivant ; le long de",
+      "al": "\u00e0, vers",
+      "mesa\u011dojn": "message",
+      "studis": "\u00e9tudier",
+      "altnivela": "de haut niveau, de qualit\u00e9"
     }
   },
   {
-    "teksto": "kunlaboron pacan kaj reciproke fruktodonan; samtempe \u011di",
+    "teksto": "kunlaboron pacan kaj reciproke fruktodonan; samtempe \u011di subtile subkomprenis ke la Tero pretas rebati kaze de atako. Neniu respondo alvenis.",
     "vortaro": {
-      "pacan": "pacifique, paisible",
-      "kaj": "et",
+      "respondo": "r\u00e9ponse",
+      "de": "de",
       "kunlaboron": "collaboration",
       "\u011di": "il, elle",
-      "fruktodonan": "f\u00e9cond, fertile",
-      "reciproke": "r\u00e9ciproquement, mutuellement"
-    }
-  },
-  {
-    "teksto": "subtile subkomprenis ke la Tero pretas rebati kaze de atako.",
-    "vortaro": {
-      "la": "le, la, les",
       "atako": "attaque",
+      "samtempe": "en m\u00eame temps",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "tero": "terre, sol",
+      "pacan": "pacifique, paisible",
+      "kaj": "et",
+      "reciproke": "r\u00e9ciproquement, mutuellement",
       "rebati": "contre-attaquer, r\u00e9pliquer, riposter",
-      "de": "de",
-      "tero": "terre, sol"
-    }
-  },
-  {
-    "teksto": "Neniu respondo alvenis.",
-    "vortaro": {
-      "alvenis": "arriver",
+      "la": "le, la, les",
       "neniu": "personne",
-      "respondo": "r\u00e9ponse"
+      "alvenis": "arriver",
+      "fruktodonan": "f\u00e9cond, fertile"
     }
   },
   {
-    "teksto": "La astronomoj febre observadis la \u0109ielon. La generaloj",
+    "teksto": "La astronomoj febre observadis la \u0109ielon. La generaloj kontroligis la kosmajn armilojn, \u0109iuokaze. La respondeculo pri etiketo pedante organizis la oficialan akcepton de la eksterterana regno, fare de reprezentantoj de la registaro, de la parlamento kaj de la konsilio de neregistaraj organiza\u0135oj.",
     "vortaro": {
-      "la": "le, la, les",
-      "astronomoj": "astronome",
-      "\u0109ielon": "ciel, cieux",
-      "generaloj": "g\u00e9n\u00e9ral de brigade, g\u00e9n\u00e9ral de division, g\u00e9n\u00e9ral de corps d'arm\u00e9e, g\u00e9n\u00e9ral d'arm\u00e9e, g\u00e9n\u00e9ral"
-    }
-  },
-  {
-    "teksto": "kontroligis la kosmajn armilojn, \u0109iuokaze. La respondeculo",
-    "vortaro": {
-      "la": "le, la, les",
-      "kosmajn": "cosmique",
-      "armilojn": "arme",
-      "\u0109iuokaze": "en tout cas, \u00e0 chaque fois"
-    }
-  },
-  {
-    "teksto": "",
-    "vortaro": {}
-  },
-  {
-    "teksto": "pri etiketo pedante organizis la oficialan akcepton de la eks-",
-    "vortaro": {
-      "la": "le, la, les",
+      "de": "de",
+      "konsilio": "Conseil",
       "pri": "\u00e0 propos de",
-      "de": "de",
+      "organiza\u0135oj": "organisation",
       "etiketo": "\u00e9tiquette, c\u00e9r\u00e9monial, protocole",
-      "organizis": "organiser",
       "oficialan": "officiel",
-      "akcepton": "accueil, acceptation"
-    }
-  },
-  {
-    "teksto": "terterana regno, fare de reprezentantoj de la registaro, de",
-    "vortaro": {
-      "la": "le, la, les",
-      "regno": "\u00e9tat, r\u00e8gne, royaume de Hongrie, Rome antique",
-      "de": "de",
+      "organizis": "organiser",
+      "kosmajn": "cosmique",
       "registaro": "gouvernement, cabinet",
+      "kaj": "et",
+      "\u0109iuokaze": "en tout cas, \u00e0 chaque fois",
+      "regno": "\u00e9tat, r\u00e8gne, royaume de Hongrie, Rome antique",
+      "armilojn": "arme",
+      "astronomoj": "astronome",
+      "respondeculo": "un responsable",
+      "la": "le, la, les",
+      "akcepton": "accueil, acceptation",
+      "generaloj": "g\u00e9n\u00e9ral de brigade, g\u00e9n\u00e9ral de division, g\u00e9n\u00e9ral de corps d'arm\u00e9e, g\u00e9n\u00e9ral d'arm\u00e9e, g\u00e9n\u00e9ral",
+      "parlamento": "parlement",
+      "\u0109ielon": "ciel, cieux",
       "reprezentantoj": "repr\u00e9senter"
     }
   },
   {
-    "teksto": "",
-    "vortaro": {}
-  },
-  {
-    "teksto": "la parlamento kaj de la konsilio de neregistaraj organiza\u0135oj.",
+    "teksto": "Kiam aperis la eksterterana kosmo\u015dipo, \u0109iuj amasinformiloj en la tuta planedo sin dedi\u0109is al la evento. Tage kaj nokte, sen\u0109ese, bildoj kaj filmoj montris la kosmo\u015dipon, kiu pligrandi\u011dis perdante altitudon.",
     "vortaro": {
-      "parlamento": "parlement",
-      "la": "le, la, les",
-      "konsilio": "Conseil",
-      "organiza\u0135oj": "organisation",
-      "kaj": "et",
-      "de": "de"
-    }
-  },
-  {
-    "teksto": "Kiam aperis la eksterterana kosmo\u015dipo, \u0109iuj amasinformiloj",
-    "vortaro": {
+      "evento": "\u00e9v\u00e9nement",
+      "sin": "se, s', soi",
+      "pligrandi\u011dis": "s'agrandir",
+      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
+      "altitudon": "altitude",
+      "sen\u0109ese": "sans cesse",
+      "dedi\u0109is": "d\u00e9dicacer, d\u00e9dier, consacrer, vouer, faire don, faire hommage",
       "kiam": "quand",
+      "kaj": "et",
+      "planedo": "plan\u00e8te",
+      "bildoj": "image",
+      "perdante": "perdre",
+      "en": "dans",
+      "tage": "de jour",
+      "kosmo\u015dipon": "vaisseau spatial",
+      "aperis": "appara\u00eetre",
+      "nokte": "de nuit, nuitamment",
       "la": "le, la, les",
       "kosmo\u015dipo": "vaisseau spatial",
-      "amasinformiloj": "mass m\u00e9dia",
-      "\u0109iuj": "chaque, chacun",
-      "aperis": "appara\u00eetre"
-    }
-  },
-  {
-    "teksto": "en la tuta planedo sin dedi\u0109is al la evento. Tage kaj nokte,",
-    "vortaro": {
-      "la": "le, la, les",
-      "planedo": "plan\u00e8te",
-      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
-      "dedi\u0109is": "d\u00e9dicacer, d\u00e9dier, consacrer, vouer, faire don, faire hommage",
-      "en": "dans",
-      "kaj": "et",
-      "al": "\u00e0, vers",
-      "evento": "\u00e9v\u00e9nement",
-      "nokte": "de nuit, nuitamment",
-      "tage": "de jour",
-      "sin": "se, s', soi"
-    }
-  },
-  {
-    "teksto": "sen\u0109ese, bildoj kaj filmoj montris la kosmo\u015dipon, kiu pligrandi\u011dis",
-    "vortaro": {
-      "la": "le, la, les",
       "kiu": "qui",
-      "kaj": "et",
-      "montris": "montrer, d\u00e9signer",
-      "kosmo\u015dipon": "vaisseau spatial",
+      "\u0109iuj": "chaque, chacun",
       "filmoj": "film, feuille, pellicule",
-      "bildoj": "image"
+      "al": "\u00e0, vers",
+      "amasinformiloj": "mass m\u00e9dia",
+      "montris": "montrer, d\u00e9signer"
     }
   },
   {
-    "teksto": "perdante altitudon.",
+    "teksto": "Kiam oni kalkulis ke la trajektorio direktos \u011din enen de la Pacifika Oceano, centoj da \u015dipoj kuncelis tiudirekten. Sur la strando de la plej proksima insuleto, stari\u011dis delegitaro kun ceremoniaj kol\u0109enoj el floroj kaj militista fanfaro, por solene bonvenigi la kosmajn voja\u011dantojn.",
     "vortaro": {
-      "altitudon": "altitude",
-      "perdante": "perdre"
-    }
-  },
-  {
-    "teksto": "Kiam oni kalkulis ke la trajektorio direktos \u011din enen de",
-    "vortaro": {
+      "de": "de",
+      "kalkulis": "les bons comptes font les bons amis, compter de t\u00eate, calculer mentalement, calculer, compter, consid\u00e9rer, prendre",
+      "voja\u011dantojn": "voyager",
+      "\u011din": "il, elle",
       "direktos": "d\u00e9vier, diriger, tourner",
+      "delegitaro": "d\u00e9l\u00e9gation",
+      "kun": "avec",
+      "sur": "sur",
+      "centoj": "cent, centaine",
+      "\u015dipoj": "bateau",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "insuleto": "ilot",
+      "oni": "on",
+      "fanfaro": "fanfare",
+      "kosmajn": "cosmique",
+      "el": "hors de, de",
       "kiam": "quand",
+      "kaj": "et",
+      "tiudirekten": "vers cette direction",
+      "ceremoniaj": "c\u00e9r\u00e9moniel",
+      "plej": "le plus, la plus",
+      "oceano": "oc\u00e9an, Oc\u00e9an Indien",
+      "strando": "plage",
       "la": "le, la, les",
       "trajektorio": "trajectoire",
-      "\u011din": "il, elle",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "oni": "on",
-      "de": "de",
-      "kalkulis": "les bons comptes font les bons amis, compter de t\u00eate, calculer mentalement, calculer, compter, consid\u00e9rer, prendre"
-    }
-  },
-  {
-    "teksto": "la Pacifika Oceano, centoj da \u015dipoj kuncelis tiudirekten. Sur",
-    "vortaro": {
-      "la": "le, la, les",
-      "sur": "sur",
-      "\u015dipoj": "bateau",
-      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
-      "oceano": "oc\u00e9an, Oc\u00e9an Indien",
-      "centoj": "cent, centaine"
-    }
-  },
-  {
-    "teksto": "",
-    "vortaro": {}
-  },
-  {
-    "teksto": "la strando de la plej proksima insuleto, stari\u011dis delegitaro",
-    "vortaro": {
-      "plej": "le plus, la plus",
-      "la": "le, la, les",
-      "insuleto": "ilot",
-      "stari\u011dis": "se dresser",
-      "proksima": "proche",
-      "strando": "plage",
-      "de": "de",
-      "delegitaro": "d\u00e9l\u00e9gation"
-    }
-  },
-  {
-    "teksto": "kun ceremoniaj kol\u0109enoj el floroj kaj militista fanfaro, por",
-    "vortaro": {
-      "ceremoniaj": "c\u00e9r\u00e9moniel",
       "por": "pour, dans le but de",
-      "kun": "avec",
-      "floroj": "fleur",
-      "fanfaro": "fanfare",
-      "kaj": "et",
-      "el": "hors de, de"
-    }
-  },
-  {
-    "teksto": "solene bonvenigi la kosmajn voja\u011dantojn.",
-    "vortaro": {
-      "la": "le, la, les",
-      "kosmajn": "cosmique",
       "bonvenigi": "accueillir",
-      "voja\u011dantojn": "voyager"
+      "floroj": "fleur",
+      "da": "de (apr\u00e8s une expression de quantit\u00e9)",
+      "stari\u011dis": "se dresser",
+      "proksima": "proche"
     }
   },
   {
-    "teksto": "La kosmo\u015dipo ne ekflosis sur la akvosupra\u0135o.",
+    "teksto": "La kosmo\u015dipo ne ekflosis sur la akvosupra\u0135o. \u011ci eniris la akvon kaj dronis en la profundon.",
     "vortaro": {
-      "la": "le, la, les",
-      "kosmo\u015dipo": "vaisseau spatial",
-      "sur": "sur",
-      "ne": "non, ne... pas"
-    }
-  },
-  {
-    "teksto": "\u011ci eniris la akvon kaj dronis en la profundon.",
-    "vortaro": {
-      "akvon": "eau",
+      "en": "dans",
       "dronis": "couler, faire naufrage, se noyer, sombrer",
-      "la": "le, la, les",
-      "kaj": "et",
-      "en": "dans",
-      "\u011di": "il, elle",
       "profundon": "profondeur, fond",
-      "eniris": "entr\u00e9e, entrer, faire entrer, introduire"
-    }
-  },
-  {
-    "teksto": "",
-    "vortaro": {}
-  },
-  {
-    "teksto": "En la \u015dipoj kaj helikopteroj amasi\u011dintaj, la televidaj kame-",
-    "vortaro": {
+      "akvon": "eau",
       "la": "le, la, les",
+      "ne": "non, ne... pas",
+      "eniris": "entr\u00e9e, entrer, faire entrer, introduire",
+      "\u011di": "il, elle",
       "kaj": "et",
-      "en": "dans",
-      "\u015dipoj": "bateau",
-      "helikopteroj": "h\u00e9licopt\u00e8re",
-      "amasi\u011dintaj": "s'amasser, s'entasser"
+      "kosmo\u015dipo": "vaisseau spatial",
+      "sur": "sur"
     }
   },
   {
-    "teksto": "raoj dissendis al la tuta mondo bildojn de la samcentraj cirklaj",
+    "teksto": "En la \u015dipoj kaj helikopteroj amasi\u011dintaj, la televidaj kameraoj dissendis al la tuta mondo bildojn de la samcentraj cirklaj ondoj disfluantaj de la trafpunkto. Sur la strando, la delegitoj konsterne demetis la florajn kol\u0109enojn kaj la fanfaro ekludis muzikon pri mortintoj.",
     "vortaro": {
-      "cirklaj": "circulaire, de cercle",
-      "la": "le, la, les",
-      "bildojn": "image",
-      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
-      "samcentraj": "concentrique",
-      "al": "\u00e0, vers",
-      "mondo": "monde",
-      "de": "de"
-    }
-  },
-  {
-    "teksto": "",
-    "vortaro": {}
-  },
-  {
-    "teksto": "ondoj disfluantaj de la trafpunkto. Sur la strando, la dele-",
-    "vortaro": {
-      "ondoj": "onde, vague",
-      "la": "le, la, les",
-      "sur": "sur",
-      "strando": "plage",
-      "de": "de"
-    }
-  },
-  {
-    "teksto": "gitoj konsterne demetis la florajn kol\u0109enojn kaj la fanfaro",
-    "vortaro": {
-      "la": "le, la, les",
-      "fanfaro": "fanfare",
-      "kaj": "et",
-      "demetis": "enlever, \u00f4ter"
-    }
-  },
-  {
-    "teksto": "",
-    "vortaro": {}
-  },
-  {
-    "teksto": "ekludis muzikon pri mortintoj.",
-    "vortaro": {
+      "de": "de",
+      "televidaj": "t\u00e9l\u00e9visuel",
       "pri": "\u00e0 propos de",
       "mortintoj": "mourir",
-      "muzikon": "musique"
-    }
-  },
-  {
-    "teksto": "Kiam la kosmo\u015dipo atingis la marfundon, luko malfermi\u011dis. La",
-    "vortaro": {
-      "kiam": "quand",
-      "la": "le, la, les",
-      "luko": "soupirail, oculus, oeligil de boeliguf, sabord",
-      "kosmo\u015dipo": "vaisseau spatial",
-      "atingis": "atteindre",
-      "malfermi\u011dis": "s'ouvrir"
-    }
-  },
-  {
-    "teksto": "oceana akvo miksi\u011dis kun la eksterterana akvo, per kio plenis",
-    "vortaro": {
-      "kun": "avec",
-      "akvo": "eau",
-      "la": "le, la, les",
-      "kio": "quoi, que",
-      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)"
-    }
-  },
-  {
-    "teksto": "la kosmo\u015dipo. La eksterteranaj esta\u0135oj eliris el la kosmo\u015dipo",
-    "vortaro": {
-      "la": "le, la, les",
-      "kosmo\u015dipo": "vaisseau spatial",
-      "esta\u0135oj": "\u00eatre",
-      "el": "hors de, de"
-    }
-  },
-  {
-    "teksto": "kaj na\u011dis direkte al la polpoj, kun kiuj ili delonge komunikis",
-    "vortaro": {
-      "kun": "avec",
-      "la": "le, la, les",
-      "kiuj": "qui",
+      "helikopteroj": "h\u00e9licopt\u00e8re",
+      "muzikon": "musique",
+      "amasi\u011dintaj": "s'amasser, s'entasser",
+      "sur": "sur",
+      "\u015dipoj": "bateau",
+      "ondoj": "onde, vague",
+      "mondo": "monde",
+      "fanfaro": "fanfare",
+      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
+      "delegitoj": "d\u00e9l\u00e9gu\u00e9, repr\u00e9sentant",
       "kaj": "et",
-      "al": "\u00e0, vers",
-      "polpoj": "pieuvre, poulpe",
-      "komunikis": "communiquer",
-      "ili": "ils, elles, eux",
-      "na\u011dis": "nager"
+      "samcentraj": "concentrique",
+      "en": "dans",
+      "demetis": "enlever, \u00f4ter",
+      "kameraoj": "cam\u00e9ra",
+      "cirklaj": "circulaire, de cercle",
+      "strando": "plage",
+      "la": "le, la, les",
+      "bildojn": "image",
+      "al": "\u00e0, vers"
     }
   },
   {
-    "teksto": "kaj kiuj estis invitintaj ilin.",
+    "teksto": "Kiam la kosmo\u015dipo atingis la marfundon, luko malfermi\u011dis. La oceana akvo miksi\u011dis kun la eksterterana akvo, per kio plenis la kosmo\u015dipo. La eksterteranaj esta\u0135oj eliris el la kosmo\u015dipo kaj na\u011dis direkte al la polpoj, kun kiuj ili delonge komunikis kaj kiuj estis invitintaj ilin.",
     "vortaro": {
-      "ilin": "ils, elles, eux",
-      "kiuj": "qui",
-      "kaj": "et",
+      "delonge": "depuis longtemps",
       "estis": "\u00eatre",
-      "invitintaj": "inviter"
+      "atingis": "atteindre",
+      "esta\u0135oj": "\u00eatre",
+      "eliris": "sortir",
+      "ili": "ils, elles, eux",
+      "kun": "avec",
+      "ilin": "ils, elles, eux",
+      "komunikis": "communiquer",
+      "el": "hors de, de",
+      "kiam": "quand",
+      "kaj": "et",
+      "invitintaj": "inviter",
+      "polpoj": "pieuvre, poulpe",
+      "kio": "quoi, que",
+      "luko": "soupirail, oculus, oeligil de boeliguf, sabord",
+      "kiuj": "qui",
+      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)",
+      "la": "le, la, les",
+      "kosmo\u015dipo": "vaisseau spatial",
+      "malfermi\u011dis": "s'ouvrir",
+      "na\u011dis": "nager",
+      "al": "\u00e0, vers",
+      "akvo": "eau"
     }
   }
 ]

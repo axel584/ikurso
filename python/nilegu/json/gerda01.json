@@ -2,17 +2,17 @@
   {
     "teksto": "En universitata restoracio",
     "vortaro": {
+      "universitata": "universitaire",
       "en": "dans",
-      "restoracio": "restaurant",
-      "universitata": "universitaire"
+      "restoracio": "restaurant"
     }
   },
   {
     "teksto": "(En universitata restoracio)",
     "vortaro": {
+      "universitata": "universitaire",
       "en": "dans",
-      "restoracio": "restaurant",
-      "universitata": "universitaire"
+      "restoracio": "restaurant"
     }
   },
   {
@@ -22,6 +22,7 @@
   {
     "teksto": "Tom: Saluton, Linda.",
     "vortaro": {
+      "tom": "tom",
       "linda": "jolie",
       "saluton": "bonjour!, salut!, salutation, salut"
     }
@@ -33,6 +34,7 @@
   {
     "teksto": "Linda: Saluton, Tom.",
     "vortaro": {
+      "tom": "tom",
       "linda": "jolie",
       "saluton": "bonjour!, salut!, salutation, salut"
     }
@@ -44,12 +46,13 @@
   {
     "teksto": "Tom: Diru al mi: kiu estas tiu?",
     "vortaro": {
-      "mi": "je",
-      "estas": "\u00eatre",
       "kiu": "qui",
-      "al": "\u00e0, vers",
+      "mi": "je",
+      "tom": "tom",
       "diru": "dire",
-      "tiu": "ce, cet(te)"
+      "tiu": "ce, cet(te)",
+      "estas": "\u00eatre",
+      "al": "\u00e0, vers"
     }
   },
   {
@@ -70,11 +73,12 @@
   {
     "teksto": "Tom: Tiu alta, blonda, juna viro\u2026",
     "vortaro": {
-      "tiu": "ce, cet(te)",
+      "juna": "jeune",
+      "tom": "tom",
       "viro": "homme, m\u00e2le",
-      "blonda": "blond(e)",
       "alta": "haut(e)",
-      "juna": "jeune"
+      "tiu": "ce, cet(te)",
+      "blonda": "blond(e)"
     }
   },
   {
@@ -99,12 +103,13 @@
   {
     "teksto": "Tom: Tiu, kiu sidas en la angulo.",
     "vortaro": {
-      "la": "le, la, les",
       "kiu": "qui",
       "en": "dans",
-      "angulo": "coin, angle",
+      "tom": "tom",
       "tiu": "ce, cet(te)",
-      "sidas": "\u00eatre assis(e)"
+      "sidas": "\u00eatre assis(e)",
+      "angulo": "coin, angle",
+      "la": "le, la, les"
     }
   },
   {
@@ -114,9 +119,9 @@
   {
     "teksto": "Linda: Ho, tiu!",
     "vortaro": {
-      "ho": "Henry, hydrog\u00e8ne, H, heure",
+      "linda": "jolie",
       "tiu": "ce, cet(te)",
-      "linda": "jolie"
+      "ho": "Henry, hydrog\u00e8ne, H, heure"
     }
   },
   {
@@ -126,8 +131,9 @@
   {
     "teksto": "Tom: Jes, tiu.",
     "vortaro": {
-      "tiu": "ce, cet(te)",
-      "jes": "oui, d'accord"
+      "tom": "tom",
+      "jes": "oui, d'accord",
+      "tiu": "ce, cet(te)"
     }
   },
   {
@@ -138,14 +144,14 @@
     "teksto": "Linda: Mi ne scias. Mi ne scias, kiu li estas. Nova studento,ver\u015dajne.",
     "vortaro": {
       "mi": "je",
-      "estas": "\u00eatre",
-      "ver\u015dajne": "probablement",
-      "nova": "neuf, neuve",
-      "linda": "jolie",
       "kiu": "qui",
+      "linda": "jolie",
       "li": "il, lui, le",
-      "studento": "\u00e9tudiant",
+      "ver\u015dajne": "probablement",
       "scias": "savoir",
+      "studento": "\u00e9tudiant",
+      "estas": "\u00eatre",
+      "nova": "neuf, neuve",
       "ne": "non, ne... pas"
     }
   },
@@ -156,10 +162,11 @@
   {
     "teksto": "Tom: Li estas tute sola.",
     "vortaro": {
-      "estas": "\u00eatre",
       "li": "il, lui, le",
       "tute": "enti\u00e8rement, totalement",
-      "sola": "seul(e)"
+      "sola": "seul(e)",
+      "tom": "tom",
+      "estas": "\u00eatre"
     }
   },
   {
@@ -169,13 +176,13 @@
   {
     "teksto": "Linda: Ne. Rigardu. Bela knabino iras al li.",
     "vortaro": {
-      "iras": "aller",
-      "linda": "jolie",
       "li": "il, lui, le",
+      "linda": "jolie",
+      "rigardu": "regarder",
       "al": "\u00e0, vers",
       "knabino": "fille, jeune fille",
-      "rigardu": "regarder",
       "bela": "beau, belle",
+      "iras": "aller",
       "ne": "non, ne... pas"
     }
   },
@@ -186,15 +193,16 @@
   {
     "teksto": "Tom: Ne bela. Juna, eble, sed ne bela. Nur vi estas bela, Linda.",
     "vortaro": {
-      "eble": "peut-\u00eatre, possiblement",
-      "estas": "\u00eatre",
+      "juna": "jeune",
       "linda": "jolie",
-      "nur": "seulement",
-      "vi": "tu, vous",
-      "ne": "non, ne... pas",
       "sed": "mais",
+      "nur": "seulement",
+      "tom": "tom",
+      "eble": "peut-\u00eatre, possiblement",
+      "vi": "tu, vous",
+      "estas": "\u00eatre",
       "bela": "beau, belle",
-      "juna": "jeune"
+      "ne": "non, ne... pas"
     }
   },
   {
@@ -208,17 +216,18 @@
   {
     "teksto": "Linda: Tom, kara! Kio okazas al vi? Eble vi laboras tro multe, kaj\u2026",
     "vortaro": {
-      "eble": "peut-\u00eatre, possiblement",
-      "laboras": "travailler",
-      "okazas": "arriver, se passer, avoir lieu",
-      "kio": "quoi, que",
       "linda": "jolie",
-      "kaj": "et",
-      "al": "\u00e0, vers",
-      "vi": "tu, vous",
-      "tro": "trop",
+      "kio": "quoi, que",
+      "tom": "tom",
+      "eble": "peut-\u00eatre, possiblement",
       "kara": "cher, ch\u00e8re",
-      "multe": "beaucoup"
+      "multe": "beaucoup",
+      "okazas": "arriver, se passer, avoir lieu",
+      "vi": "tu, vous",
+      "laboras": "travailler",
+      "al": "\u00e0, vers",
+      "tro": "trop",
+      "kaj": "et"
     }
   },
   {
@@ -228,29 +237,30 @@
   {
     "teksto": "Tom: Nenio speciala okazas al mi. Kaj mi ne laboras tro multe. Fakte, mi laboras malmulte nun. La vera demando estas: kio okazas al vi, Linda? Nur vi estas vere bela.",
     "vortaro": {
-      "estas": "\u00eatre",
-      "la": "le, la, les",
-      "fakte": "en fait",
-      "vera": "vrai(e)",
-      "nun": "maintenant",
-      "multe": "beaucoup",
-      "ne": "non, ne... pas",
-      "laboras": "travailler",
-      "malmulte": "peu",
-      "tro": "trop",
-      "mi": "je",
-      "okazas": "arriver, se passer, avoir lieu",
-      "linda": "jolie",
       "vere": "vraiment",
-      "kaj": "et",
-      "al": "\u00e0, vers",
-      "demando": "question",
-      "speciala": "sp\u00e9cial(e)",
-      "bela": "beau, belle",
-      "kio": "quoi, que",
       "nur": "seulement",
+      "fakte": "en fait",
+      "speciala": "sp\u00e9cial(e)",
+      "laboras": "travailler",
+      "vera": "vrai(e)",
+      "mi": "je",
+      "tom": "tom",
       "vi": "tu, vous",
-      "nenio": "rien"
+      "demando": "question",
+      "kaj": "et",
+      "nenio": "rien",
+      "linda": "jolie",
+      "kio": "quoi, que",
+      "multe": "beaucoup",
+      "okazas": "arriver, se passer, avoir lieu",
+      "bela": "beau, belle",
+      "nun": "maintenant",
+      "la": "le, la, les",
+      "malmulte": "peu",
+      "estas": "\u00eatre",
+      "al": "\u00e0, vers",
+      "tro": "trop",
+      "ne": "non, ne... pas"
     }
   },
   {
@@ -272,15 +282,16 @@
     "teksto": "Tom: Estas fakto. Nur vi estas bela, Linda. Mi estas sincera. Venu kun mi!",
     "vortaro": {
       "mi": "je",
-      "estas": "\u00eatre",
-      "kun": "avec",
-      "fakto": "fait",
       "linda": "jolie",
-      "sincera": "sinc\u00e8re",
       "nur": "seulement",
+      "tom": "tom",
+      "fakto": "fait",
       "vi": "tu, vous",
+      "estas": "\u00eatre",
+      "sincera": "sinc\u00e8re",
+      "venu": "venir",
       "bela": "beau, belle",
-      "venu": "venir"
+      "kun": "avec"
     }
   },
   {
@@ -294,8 +305,8 @@
   {
     "teksto": "Linda: Sed\u2026",
     "vortaro": {
-      "sed": "mais",
-      "linda": "jolie"
+      "linda": "jolie",
+      "sed": "mais"
     }
   },
   {
@@ -305,21 +316,22 @@
   {
     "teksto": "Tom: Venu. Al la granda spegulo. Rigardu. Jen estas Linda, la plej bela virino en la mondo, la plej bela virino en la tuta mondo.",
     "vortaro": {
+      "jen": "voici",
+      "linda": "jolie",
+      "en": "dans",
+      "rigardu": "regarder",
+      "tom": "tom",
+      "virino": "femme",
+      "mondo": "monde",
+      "spegulo": "miroir",
+      "venu": "venir",
+      "al": "\u00e0, vers",
       "granda": "grand(e)",
       "estas": "\u00eatre",
       "plej": "le plus, la plus",
-      "la": "le, la, les",
-      "linda": "jolie",
-      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
-      "en": "dans",
-      "al": "\u00e0, vers",
-      "spegulo": "miroir",
-      "rigardu": "regarder",
-      "mondo": "monde",
-      "virino": "femme",
-      "jen": "voici",
       "bela": "beau, belle",
-      "venu": "venir"
+      "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
+      "la": "le, la, les"
     }
   },
   {
@@ -329,17 +341,18 @@
   {
     "teksto": "Linda: Kaj jen estas Tom, la plej malserioza knabo en la tuta universitato.",
     "vortaro": {
+      "jen": "voici",
+      "linda": "jolie",
+      "en": "dans",
+      "tom": "tom",
+      "knabo": "gar\u00e7on, jeune homme",
       "estas": "\u00eatre",
       "plej": "le plus, la plus",
-      "la": "le, la, les",
-      "linda": "jolie",
       "tuta": "entier, enti\u00e8re, tout(e) le(la)/un(e)",
-      "kaj": "et",
-      "en": "dans",
-      "knabo": "gar\u00e7on, jeune homme",
       "universitato": "universit\u00e9",
       "malserioza": "frivole, l\u00e9ger, superficiel",
-      "jen": "voici"
+      "kaj": "et",
+      "la": "le, la, les"
     }
   }
 ]

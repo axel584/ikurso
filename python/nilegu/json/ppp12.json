@@ -9,12 +9,12 @@
   {
     "teksto": "(Parolas Peruno, dio de la antikvaj slavoj:)",
     "vortaro": {
-      "slavoj": "Slave",
-      "dio": "dieu",
-      "la": "le, la, les",
-      "parolas": "parler",
+      "de": "de",
       "antikvaj": "antique",
-      "de": "de"
+      "dio": "dieu",
+      "slavoj": "Slave",
+      "parolas": "parler",
+      "la": "le, la, les"
     }
   },
   {
@@ -24,9 +24,9 @@
   {
     "teksto": "Vi sensperte vivas certe,",
     "vortaro": {
-      "certe": "certainement",
+      "vi": "tu, vous",
       "vivas": "vivre",
-      "vi": "tu, vous"
+      "certe": "certainement"
     }
   },
   {
@@ -59,9 +59,9 @@
   {
     "teksto": "Mi matene devas pene",
     "vortaro": {
-      "devas": "devoir",
       "mi": "je",
-      "matene": "le matin, au matin"
+      "matene": "le matin, au matin",
+      "devas": "devoir"
     }
   },
   {
@@ -73,20 +73,20 @@
   {
     "teksto": "hejti sunon, kaj la lunon",
     "vortaro": {
-      "hejti": "chauffe, chauffer",
-      "la": "le, la, les",
-      "kaj": "et",
       "lunon": "lune",
-      "sunon": "soleil"
+      "sunon": "soleil",
+      "hejti": "chauffe, chauffer",
+      "kaj": "et",
+      "la": "le, la, les"
     }
   },
   {
     "teksto": "fermi en la stalon.",
     "vortaro": {
-      "fermi": "fermer",
-      "en": "dans",
+      "stalon": "\u00e9curie, bouverie, bercail, porcherie, \u00e9table",
       "la": "le, la, les",
-      "stalon": "\u00e9curie, bouverie, bercail, porcherie, \u00e9table"
+      "en": "dans",
+      "fermi": "fermer"
     }
   },
   {
@@ -96,25 +96,25 @@
   {
     "teksto": "Noktfantomojn kaj demonojn",
     "vortaro": {
-      "kaj": "et",
-      "demonojn": "d\u00e9mon, esprit malin, furie"
+      "demonojn": "d\u00e9mon, esprit malin, furie",
+      "kaj": "et"
     }
   },
   {
     "teksto": "en la sakon loki,",
     "vortaro": {
-      "sakon": "sac",
       "en": "dans",
       "la": "le, la, les",
-      "loki": "mettre, disposer, placer"
+      "loki": "mettre, disposer, placer",
+      "sakon": "sac"
     }
   },
   {
     "teksto": "la stelflokojn kiel kokojn",
     "vortaro": {
-      "kokojn": "coq",
       "kiel": "comment, comme",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "kokojn": "coq"
     }
   },
   {
@@ -131,25 +131,25 @@
   {
     "teksto": "C\u0302ies bus\u0302o: birdo, mus\u0302o,",
     "vortaro": {
-      "birdo": "oiseau",
+      "o": "oxyg\u00e8ne, O",
       "ies": "de quelqu'un",
-      "o": "oxyg\u00e8ne, O"
+      "birdo": "oiseau"
     }
   },
   {
     "teksto": "pulo, elefanto,",
     "vortaro": {
-      "pulo": "puce, pul",
-      "elefanto": "\u00e9l\u00e9phant"
+      "elefanto": "\u00e9l\u00e9phant",
+      "pulo": "puce, pul"
     }
   },
   {
     "teksto": "frue jam g\u0302i volas mang\u0302i",
     "vortaro": {
+      "jam": "d\u00e9j\u00e0",
       "i": "1, iode, I",
       "frue": "t\u00f4t, de bonne heure",
-      "volas": "vouloir",
-      "jam": "d\u00e9j\u00e0"
+      "volas": "vouloir"
     }
   },
   {
@@ -165,33 +165,33 @@
   {
     "teksto": "La ekstaro de l\u2019homaro,",
     "vortaro": {
+      "de": "de",
       "homaro": "genre humain, humanit\u00e9",
-      "la": "le, la, les",
-      "de": "de"
+      "la": "le, la, les"
     }
   },
   {
     "teksto": "a\u0125, g\u0302i kau\u0306zas servojn!",
     "vortaro": {
       "a\u0125": "ah, oh l\u00e0 l\u00e0",
-      "i": "1, iode, I",
-      "servojn": "service"
+      "servojn": "service",
+      "i": "1, iode, I"
     }
   },
   {
     "teksto": "La lamento de l\u2019homgento",
     "vortaro": {
-      "la": "le, la, les",
-      "de": "de"
+      "de": "de",
+      "la": "le, la, les"
     }
   },
   {
     "teksto": "s\u0302iras miajn nervojn!",
     "vortaro": {
-      "s": "elle",
-      "iras": "aller",
       "nervojn": "nerf",
-      "miajn": "mon, ma"
+      "iras": "aller",
+      "miajn": "mon, ma",
+      "s": "elle"
     }
   },
   {
@@ -201,18 +201,18 @@
   {
     "teksto": "Nur se pikoj de formikoj",
     "vortaro": {
-      "pikoj": "piqure, pique, taquinerie",
       "se": "si (indique une condition)",
-      "formikoj": "fourmi",
+      "de": "de",
       "nur": "seulement",
-      "de": "de"
+      "pikoj": "piqure, pique, taquinerie",
+      "formikoj": "fourmi"
     }
   },
   {
     "teksto": "vian au\u0306don g\u0302enus,",
     "vortaro": {
-      "vian": "ton, votre",
-      "au": "ou"
+      "au": "ou",
+      "vian": "ton, votre"
     }
   },
   {
@@ -237,10 +237,10 @@
   {
     "teksto": "Preg\u0302oj svarmas kaj alarmas,",
     "vortaro": {
-      "alarmas": "alarmer, alerter",
       "oj": "ah, houla",
-      "kaj": "et",
-      "svarmas": "grouiller"
+      "svarmas": "grouiller",
+      "alarmas": "alarmer, alerter",
+      "kaj": "et"
     }
   },
   {
@@ -253,17 +253,17 @@
   {
     "teksto": "tiu kantas, flustras, larmas,",
     "vortaro": {
-      "larmas": "pleurer",
       "flustras": "chuchoter, murmurer",
-      "tiu": "ce, cet(te)",
-      "kantas": "chanter"
+      "larmas": "pleurer",
+      "kantas": "chanter",
+      "tiu": "ce, cet(te)"
     }
   },
   {
     "teksto": "tiu psalmojn gurdas.",
     "vortaro": {
-      "tiu": "ce, cet(te)",
-      "psalmojn": "psaume"
+      "psalmojn": "psaume",
+      "tiu": "ce, cet(te)"
     }
   },
   {
@@ -273,28 +273,28 @@
   {
     "teksto": "C\u0302u kalkuli la postulojn?",
     "vortaro": {
+      "u": "U, uranium, ouest, -u",
       "kalkuli": "les bons comptes font les bons amis, compter de t\u00eate, calculer mentalement, calculer, compter, consid\u00e9rer, prendre",
       "la": "le, la, les",
-      "u": "U, uranium, ouest, -u",
       "postulojn": "demande, exigence"
     }
   },
   {
     "teksto": "Estus vane peni!",
     "vortaro": {
+      "peni": "s'efforcer de, peiner",
       "vane": "en vain",
-      "estus": "\u00eatre",
-      "peni": "s'efforcer de, peiner"
+      "estus": "\u00eatre"
     }
   },
   {
     "teksto": "Kapo krevus, se mi devus",
     "vortaro": {
-      "mi": "je",
       "se": "si (indique une condition)",
-      "kapo": "t\u00eate",
+      "mi": "je",
       "krevus": "crever, \u00e9clater, se crevasser, se fendre, gercer",
-      "devus": "devoir"
+      "devus": "devoir",
+      "kapo": "t\u00eate"
     }
   },
   {
@@ -310,18 +310,18 @@
   {
     "teksto": "Doni sanon kaj infanon,",
     "vortaro": {
+      "kaj": "et",
       "infanon": "enfant",
-      "sanon": "sant\u00e9",
       "doni": "donner",
-      "kaj": "et"
+      "sanon": "sant\u00e9"
     }
   },
   {
     "teksto": "panon por satmang\u0302i;",
     "vortaro": {
+      "i": "1, iode, I",
       "panon": "pain",
-      "por": "pour, dans le but de",
-      "i": "1, iode, I"
+      "por": "pour, dans le but de"
     }
   },
   {
@@ -347,34 +347,34 @@
     "teksto": "\u201cGardu grenon kaj g\u0302ardenon!\u201d",
     "vortaro": {
       "gardu": "garder",
-      "kaj": "et",
-      "grenon": "c\u00e9r\u00e9ale, grain"
+      "grenon": "c\u00e9r\u00e9ale, grain",
+      "kaj": "et"
     }
   },
   {
     "teksto": "oni al mi taskas;",
     "vortaro": {
       "mi": "je",
+      "taskas": "charger",
       "al": "\u00e0, vers",
-      "oni": "on",
-      "taskas": "charger"
+      "oni": "on"
     }
   },
   {
     "teksto": "nova krio: \u201cHelpu dio!",
     "vortaro": {
       "dio": "dieu",
-      "helpu": "aider",
       "nova": "neuf, neuve",
-      "krio": "Cri, Cree"
+      "krio": "Cri, Cree",
+      "helpu": "aider"
     }
   },
   {
     "teksto": "La bovino naskas!\u201d",
     "vortaro": {
-      "la": "le, la, les",
+      "naskas": "mettre au monde, enfanter",
       "bovino": "vache",
-      "naskas": "mettre au monde, enfanter"
+      "la": "le, la, les"
     }
   },
   {
@@ -393,6 +393,7 @@
   {
     "teksto": "kaj samtempe frosta,",
     "vortaro": {
+      "samtempe": "en m\u00eame temps",
       "kaj": "et",
       "frosta": "glac\u00e9, glacial"
     }
@@ -400,17 +401,17 @@
   {
     "teksto": "la sekalo estu kara",
     "vortaro": {
-      "sekalo": "seigle",
       "kara": "cher, ch\u00e8re",
       "la": "le, la, les",
+      "sekalo": "seigle",
       "estu": "\u00eatre"
     }
   },
   {
     "teksto": "kaj malmultekosta.",
     "vortaro": {
-      "kaj": "et",
-      "malmultekosta": "abordable, bon march\u00e9"
+      "malmultekosta": "abordable, bon march\u00e9",
+      "kaj": "et"
     }
   },
   {
@@ -420,10 +421,10 @@
   {
     "teksto": "Pluvu! Iu semis linon,",
     "vortaro": {
-      "semis": "semer",
-      "iu": "quelqu'un",
+      "linon": "lin",
       "pluvu": "pleuvoir",
-      "linon": "lin"
+      "semis": "semer",
+      "iu": "quelqu'un"
     }
   },
   {
@@ -433,9 +434,9 @@
   {
     "teksto": "Pluvi? Oj ne! Sed porfojne",
     "vortaro": {
-      "pluvi": "pleuvoir",
-      "oj": "ah, houla",
       "sed": "mais",
+      "oj": "ah, houla",
+      "pluvi": "pleuvoir",
       "ne": "non, ne... pas"
     }
   },
@@ -452,10 +453,10 @@
   {
     "teksto": "Ve, ke estis virinac\u0302oj",
     "vortaro": {
-      "ve": "malheur, a\u00efe, h\u00e9las",
-      "oj": "ah, houla",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "estis": "\u00eatre"
+      "oj": "ah, houla",
+      "estis": "\u00eatre",
+      "ve": "malheur, a\u00efe, h\u00e9las"
     }
   },
   {
@@ -469,17 +470,17 @@
   {
     "teksto": "La c\u0302agrenan bandon g\u0302enan",
     "vortaro": {
-      "la": "le, la, les",
       "enan": "dedans, int\u00e9rieur, interne",
-      "bandon": "bande, gang"
+      "bandon": "bande, gang",
+      "la": "le, la, les"
     }
   },
   {
     "teksto": "devos mi ekstermi!",
     "vortaro": {
+      "ekstermi": "an\u00e9antir, exterminer",
       "devos": "devoir",
-      "mi": "je",
-      "ekstermi": "an\u00e9antir, exterminer"
+      "mi": "je"
     }
   },
   {
@@ -489,36 +490,36 @@
   {
     "teksto": "Tondro ilin\u2026! Jam ec\u0302 dio",
     "vortaro": {
-      "dio": "dieu",
       "ilin": "ils, elles, eux",
-      "tondro": "tonnerre",
-      "jam": "d\u00e9j\u00e0"
+      "dio": "dieu",
+      "jam": "d\u00e9j\u00e0",
+      "tondro": "tonnerre"
     }
   },
   {
     "teksto": "devas ja blasfemi!",
     "vortaro": {
       "devas": "devoir",
-      "ja": "certes, effectivement, il est vrai que, en fait, bien",
-      "blasfemi": "blasph\u00e9mer, jurer, sacrer, injurier"
+      "blasfemi": "blasph\u00e9mer, jurer, sacrer, injurier",
+      "ja": "certes, effectivement, il est vrai que, en fait, bien"
     }
   },
   {
     "teksto": "Se ne laktas la kaprino,",
     "vortaro": {
-      "la": "le, la, les",
       "se": "si (indique une condition)",
       "kaprino": "ch\u00e8vre",
-      "ne": "non, ne... pas"
+      "ne": "non, ne... pas",
+      "la": "le, la, les"
     }
   },
   {
     "teksto": "ili plendas \u0109e mi.",
     "vortaro": {
       "mi": "je",
-      "ili": "ils, elles, eux",
       "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
-      "plendas": "se plaindre"
+      "plendas": "se plaindre",
+      "ili": "ils, elles, eux"
     }
   },
   {
@@ -531,32 +532,32 @@
       "vivus": "vivre",
       "zorgoj": "souci, inqui\u00e9tude ; attention, sollicitude",
       "iu": "quelqu'un",
-      "ne": "non, ne... pas",
-      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)"
+      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)",
+      "ne": "non, ne... pas"
     }
   },
   {
     "teksto": "sed per preg\u0302ovorto,",
     "vortaro": {
-      "sed": "mais",
-      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)"
+      "per": "par, \u00e0 l'aide de (instrument, moyen de transport...)",
+      "sed": "mais"
     }
   },
   {
     "teksto": "kvazau\u0306 oni havus dion",
     "vortaro": {
-      "dion": "dieu",
-      "kvazau": "quasi-, comme si",
       "havus": "avoir",
-      "oni": "on"
+      "dion": "dieu",
+      "oni": "on",
+      "kvazau": "quasi-, comme si"
     }
   },
   {
     "teksto": "sole por komforto.",
     "vortaro": {
-      "por": "pour, dans le but de",
       "sole": "seulement, isol\u00e9ment, tout seul",
-      "komforto": "confort, aise, bien-\u00eatre"
+      "komforto": "confort, aise, bien-\u00eatre",
+      "por": "pour, dans le but de"
     }
   },
   {
@@ -566,8 +567,8 @@
   {
     "teksto": "Akvon, sekon, kampan sterkon",
     "vortaro": {
-      "akvon": "eau",
-      "sterkon": "engrais, fumier"
+      "sterkon": "engrais, fumier",
+      "akvon": "eau"
     }
   },
   {
@@ -579,16 +580,16 @@
   {
     "teksto": "Se porkulo sanon perdis,",
     "vortaro": {
-      "sanon": "sant\u00e9",
+      "se": "si (indique une condition)",
       "perdis": "perdre",
-      "se": "si (indique une condition)"
+      "sanon": "sant\u00e9"
     }
   },
   {
     "teksto": "mi lin rekuracu!",
     "vortaro": {
-      "lin": "il, lui, le",
-      "mi": "je"
+      "mi": "je",
+      "lin": "il, lui, le"
     }
   },
   {
@@ -599,38 +600,39 @@
     "teksto": "S\u0302i min tedas, \u0109e mi pledas,",
     "vortaro": {
       "mi": "je",
-      "i": "1, iode, I",
-      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
       "min": "je",
-      "tedas": "ennuyer, lasser",
       "s": "elle",
-      "pledas": "plaider"
+      "i": "1, iode, I",
+      "pledas": "plaider",
+      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
+      "tedas": "ennuyer, lasser"
     }
   },
   {
     "teksto": "ke s\u0302in oni svatu;",
     "vortaro": {
-      "s": "elle",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "svatu": "*s\u2019entremettre, *rechercher en mariage, demander en mariage",
       "oni": "on",
-      "svatu": "*s\u2019entremettre, *rechercher en mariage, demander en mariage"
+      "s": "elle"
     }
   },
   {
     "teksto": "edzo preg\u0302as, ke jam tondro",
     "vortaro": {
-      "tondro": "tonnerre",
-      "jam": "d\u00e9j\u00e0",
+      "edzo": "\u00e9poux, mari",
       "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "edzo": "\u00e9poux, mari"
+      "as": "conjugaison au pr\u00e9sent",
+      "jam": "d\u00e9j\u00e0",
+      "tondro": "tonnerre"
     }
   },
   {
     "teksto": "la edzinon batu!",
     "vortaro": {
       "edzinon": "\u00e9pouse",
-      "batu": "battre, frapper",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "batu": "battre, frapper"
     }
   },
   {
@@ -641,8 +643,8 @@
     "teksto": "Kiu volas loton gajni,",
     "vortaro": {
       "kiu": "qui",
-      "volas": "vouloir",
-      "gajni": "gagner, conqu\u00e9rir, l'emporter"
+      "gajni": "gagner, conqu\u00e9rir, l'emporter",
+      "volas": "vouloir"
     }
   },
   {
@@ -675,9 +677,9 @@
     "vortaro": {
       "mi": "je",
       "se": "si (indique une condition)",
-      "indulgus": "\u00e9pargner, m\u00e9nager, se montrer cl\u00e9ment, se montrer compr\u00e9hensif, se montrer indulgent, avoir de l'indulgence",
-      "tro": "trop",
       "ho": "Henry, hydrog\u00e8ne, H, heure",
+      "tro": "trop",
+      "indulgus": "\u00e9pargner, m\u00e9nager, se montrer cl\u00e9ment, se montrer compr\u00e9hensif, se montrer indulgent, avoir de l'indulgence",
       "ne": "non, ne... pas"
     }
   },
@@ -692,10 +694,10 @@
     "teksto": "mi vin premus kiel prunojn,",
     "vortaro": {
       "mi": "je",
-      "kiel": "comment, comme",
       "vin": "tu, vous",
+      "premus": "serrer la main de qn, serr\u00e9s comme des sardines, oppresseur, opprim\u00e9, accabler, appuyer, oppresser, opprimer, pousser, presser, ",
       "prunojn": "prune",
-      "premus": "serrer la main de qn, serr\u00e9s comme des sardines, oppresseur, opprim\u00e9, accabler, appuyer, oppresser, opprimer, pousser, presser, "
+      "kiel": "comment, comme"
     }
   },
   {
@@ -725,10 +727,10 @@
   {
     "teksto": "Tondro frapis, fulmo fajris,",
     "vortaro": {
-      "frapis": "lancer, frappant, saisissant, frapper, atteindre, cogner, heurter, percuter, saisir, taper",
-      "tondro": "tonnerre",
       "fulmo": "foudre, \u00e9clair",
-      "fajris": "flamber"
+      "tondro": "tonnerre",
+      "fajris": "flamber",
+      "frapis": "lancer, frappant, saisissant, frapper, atteindre, cogner, heurter, percuter, saisir, taper"
     }
   },
   {
@@ -745,8 +747,8 @@
   {
     "teksto": "Kredu, frato! Ne amuzas",
     "vortaro": {
-      "amuzas": "amuser, divertir",
       "kredu": "croire",
+      "amuzas": "amuser, divertir",
       "frato": "fr\u00e8re",
       "ne": "non, ne... pas"
     }
@@ -760,17 +762,17 @@
   {
     "teksto": "Briksen mem \u2014 kompare tion \u2014",
     "vortaro": {
-      "mem": "soi-m\u00eame",
-      "tion": "ce, cela, \u00e7a"
+      "tion": "ce, cela, \u00e7a",
+      "mem": "soi-m\u00eame"
     }
   },
   {
     "teksto": "estas preskau\u0306 s\u0302erco.",
     "vortaro": {
-      "preskau": "presque",
-      "s": "elle",
       "estas": "\u00eatre",
-      "erco": "minerai"
+      "erco": "minerai",
+      "preskau": "presque",
+      "s": "elle"
     }
   },
   {
@@ -780,12 +782,12 @@
   {
     "teksto": "Karel Havl\u00ed\u010dek Borovsk\u00fd el la \u0109e\u0125a: Tom\u00e1\u0161 Pumpr (el La Bapto de Caro Vladimiro)",
     "vortaro": {
-      "la": "le, la, les",
       "\u0109e\u0125a": "tch\u00e8que",
-      "caro": "tsar",
-      "bapto": "bapt\u00eame",
       "de": "de",
-      "el": "hors de, de"
+      "bapto": "bapt\u00eame",
+      "el": "hors de, de",
+      "la": "le, la, les",
+      "caro": "tsar"
     }
   }
 ]

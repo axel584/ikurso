@@ -2,23 +2,26 @@
   {
     "teksto": "Gerda malaperis",
     "vortaro": {
-      "malaperis": "dispara\u00eetre"
+      "malaperis": "dispara\u00eetre",
+      "gerda": "gerda"
     }
   },
   {
     "teksto": "\"\u015ci ku\u015das meze de la koridoro! Venu, venu tuj. Certe la afero ur\u011das,\" diras Tom.",
     "vortaro": {
-      "diras": "dire",
-      "afero": "affaire, sujet, chose",
-      "la": "le, la, les",
-      "ku\u015das": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
-      "tuj": "imm\u00e9diatement, sur le champ",
-      "certe": "certainement",
-      "koridoro": "couloir, corridor",
-      "\u015di": "elle",
       "de": "de",
+      "certe": "certainement",
       "ur\u011das": "urger",
-      "venu": "venir"
+      "meze": "au milieu",
+      "tom": "tom",
+      "afero": "affaire, sujet, chose",
+      "venu": "venir",
+      "tuj": "imm\u00e9diatement, sur le champ",
+      "koridoro": "couloir, corridor",
+      "diras": "dire",
+      "ku\u015das": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
+      "la": "le, la, les",
+      "\u015di": "elle"
     }
   },
   {
@@ -28,44 +31,45 @@
   {
     "teksto": "Li rigardas la flegistinon: \u015di estas dika, grasa virino kun bluaj okuloj, ru\u011daj haroj, kaj tre ronda viza\u011do. Jam kelkajn minutojn li provas diri, kio okazis, sed \u015dajnas, ke tiu flegistino ne rapide komprenas. La vorto \"ur\u011da\" \u015dajnas ne ekzisti en \u015dia vortaro.",
     "vortaro": {
-      "flegistinon": "infirmi\u00e8re",
-      "estas": "\u00eatre",
-      "rigardas": "regarder",
-      "tre": "tr\u00e8s",
-      "la": "le, la, les",
-      "kelkajn": "quelques, peu de",
-      "ru\u011daj": "rouge",
-      "vorto": "mot",
-      "okuloj": "\u0153il",
-      "virino": "femme",
-      "\u015dia": "elle",
-      "dika": "\u00e9pais(se)",
-      "ne": "non, ne... pas",
-      "vortaro": "dictionnaire",
-      "ekzisti": "exister",
-      "viza\u011do": "face, visage",
-      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
-      "komprenas": "comprendre",
-      "minutojn": "minute (temps)",
-      "kun": "avec",
-      "kaj": "et",
-      "\u015dajnas": "sembler, avoir l'air",
-      "en": "dans",
-      "jam": "d\u00e9j\u00e0",
-      "grasa": "gras, riche",
-      "\u015di": "elle",
-      "ur\u011da": "urgent(e)",
       "sed": "mais",
-      "haroj": "cheveu",
-      "tiu": "ce, cet(te)",
+      "grasa": "gras, riche",
       "provas": "essayer",
-      "okazis": "arriver, se passer, avoir lieu",
-      "flegistino": "infirmi\u00e8re",
-      "ronda": "rond(e), circulaire",
+      "jam": "d\u00e9j\u00e0",
+      "vorto": "mot",
+      "kun": "avec",
+      "flegistinon": "infirmi\u00e8re",
+      "ru\u011daj": "rouge",
+      "okuloj": "\u0153il",
+      "ke": "que (exemple: je sais que\u2026, il dit que\u2026)",
+      "ur\u011da": "urgent(e)",
+      "rigardas": "regarder",
+      "diri": "dire",
+      "tiu": "ce, cet(te)",
+      "tre": "tr\u00e8s",
+      "kaj": "et",
       "kio": "quoi, que",
-      "bluaj": "bleu(e)",
+      "en": "dans",
+      "virino": "femme",
+      "\u015di": "elle",
+      "rapide": "vite",
+      "ronda": "rond(e), circulaire",
+      "kelkajn": "quelques, peu de",
+      "komprenas": "comprendre",
+      "vortaro": "dictionnaire",
+      "la": "le, la, les",
       "li": "il, lui, le",
-      "diri": "dire"
+      "\u015dajnas": "sembler, avoir l'air",
+      "flegistino": "infirmi\u00e8re",
+      "okazis": "arriver, se passer, avoir lieu",
+      "viza\u011do": "face, visage",
+      "dika": "\u00e9pais(se)",
+      "estas": "\u00eatre",
+      "\u015dia": "elle",
+      "haroj": "cheveu",
+      "ekzisti": "exister",
+      "minutojn": "minute (temps)",
+      "ne": "non, ne... pas",
+      "bluaj": "bleu(e)"
     }
   },
   {
@@ -75,14 +79,15 @@
   {
     "teksto": "\"Ku\u015das, \u0109u? Meze de la koridoro, \u0109u vere?\" \u015di diras.",
     "vortaro": {
-      "diras": "dire",
-      "la": "le, la, les",
-      "ku\u015das": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
       "vere": "vraiment",
-      "koridoro": "couloir, corridor",
+      "de": "de",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "\u015di": "elle",
-      "de": "de"
+      "meze": "au milieu",
+      "koridoro": "couloir, corridor",
+      "diras": "dire",
+      "ku\u015das": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
+      "la": "le, la, les",
+      "\u015di": "elle"
     }
   },
   {
@@ -92,11 +97,12 @@
   {
     "teksto": "Videble, la flegistino apena\u016d povas kredi.",
     "vortaro": {
-      "flegistino": "infirmi\u00e8re",
-      "la": "le, la, les",
       "apena\u016d": "\u00e0 peine",
       "povas": "pouvoir, \u00eatre capable de",
-      "kredi": "croire"
+      "flegistino": "infirmi\u00e8re",
+      "videble": "visiblement",
+      "kredi": "croire",
+      "la": "le, la, les"
     }
   },
   {
@@ -106,14 +112,15 @@
   {
     "teksto": "\"Kial, diable, \u015di ku\u015dus meze de la koridoro?\" \u015di demandas.",
     "vortaro": {
-      "demandas": "interroger, demander",
-      "la": "le, la, les",
-      "koridoro": "couloir, corridor",
-      "ku\u015dus": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
-      "\u015di": "elle",
       "de": "de",
+      "meze": "au milieu",
+      "demandas": "interroger, demander",
       "diable": "diaboliquement, diablement, diable !, diantre !, fichtre !",
-      "kial": "pourquoi"
+      "ku\u015dus": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
+      "koridoro": "couloir, corridor",
+      "kial": "pourquoi",
+      "la": "le, la, les",
+      "\u015di": "elle"
     }
   },
   {
@@ -123,34 +130,36 @@
   {
     "teksto": "\"Mi petas, venu ur\u011de. Mi ne scias, kial \u015di ku\u015das tie. Mi nur diras, kion mi vidis. Ni trovis \u015din tie. Eble \u015di estis malsana. Mi ne scias. \u015ci svenis, \u015di perdis la konscion. Nun certe oni devas ur\u011de okupi\u011di pri \u015di.\"",
     "vortaro": {
-      "la": "le, la, les",
-      "certe": "certainement",
-      "pri": "\u00e0 propos de",
-      "ni": "nous",
-      "\u015din": "elle",
-      "nun": "maintenant",
-      "ne": "non, ne... pas",
-      "venu": "venir",
-      "diras": "dire",
       "trovis": "trouver",
-      "ku\u015das": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
-      "okupi\u011di": "s'occuper de",
-      "mi": "je",
-      "devas": "devoir",
-      "\u015di": "elle",
-      "vidis": "voir",
-      "scias": "savoir",
-      "estis": "\u00eatre",
-      "tie": "ici, l\u00e0",
-      "konscion": "conscience",
-      "eble": "peut-\u00eatre, possiblement",
-      "svenis": "s'\u00e9vanouir",
       "nur": "seulement",
-      "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
-      "kion": "quoi, que",
+      "pri": "\u00e0 propos de",
+      "estis": "\u00eatre",
+      "devas": "devoir",
+      "\u015din": "elle",
+      "venu": "venir",
+      "ku\u015das": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
+      "mi": "je",
+      "certe": "certainement",
       "perdis": "perdre",
+      "konscion": "conscience",
       "oni": "on",
-      "kial": "pourquoi"
+      "ur\u011de": "en urgence",
+      "diras": "dire",
+      "okupi\u011di": "s'occuper de",
+      "kion": "quoi, que",
+      "nun": "maintenant",
+      "kial": "pourquoi",
+      "la": "le, la, les",
+      "scias": "savoir",
+      "eble": "peut-\u00eatre, possiblement",
+      "malsana": "malade",
+      "tie": "ici, l\u00e0",
+      "vidis": "voir",
+      "ne": "non, ne... pas",
+      "svenis": "s'\u00e9vanouir",
+      "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
+      "ni": "nous",
+      "\u015di": "elle"
     }
   },
   {
@@ -172,21 +181,22 @@
     "teksto": "\"Nu, mi ne estas fakulo. Vi jes. Okupi\u011di pri malsanaj homoj estas via fako, \u0109u ne? Venu tuj. Ur\u011das!\"",
     "vortaro": {
       "mi": "je",
-      "estas": "\u00eatre",
+      "jes": "oui, d'accord",
       "ur\u011das": "urger",
-      "fakulo": "sp\u00e9cialiste",
-      "tuj": "imm\u00e9diatement, sur le champ",
-      "pri": "\u00e0 propos de",
-      "fako": "sp\u00e9cialit\u00e9, discipline, d\u00e9partement (sens propre : compartiment, case)",
-      "homoj": "\u00eatre humain, homme",
-      "via": "tu, vous",
+      "malsanaj": "malade",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "vi": "tu, vous",
-      "okupi\u011di": "s'occuper de",
+      "pri": "\u00e0 propos de",
       "nu": "allons, bien, eh bien\u2026 ",
+      "fakulo": "sp\u00e9cialiste",
+      "homoj": "\u00eatre humain, homme",
+      "estas": "\u00eatre",
+      "vi": "tu, vous",
+      "fako": "sp\u00e9cialit\u00e9, discipline, d\u00e9partement (sens propre : compartiment, case)",
       "venu": "venir",
-      "ne": "non, ne... pas",
-      "jes": "oui, d'accord"
+      "tuj": "imm\u00e9diatement, sur le champ",
+      "okupi\u011di": "s'occuper de",
+      "via": "tu, vous",
+      "ne": "non, ne... pas"
     }
   },
   {
@@ -196,20 +206,20 @@
   {
     "teksto": "\"Nu, nu, nu, nu. Kial, diable, \u015di svenis en la koridoro? Stranga ideo! Oni neniam svenas tie.\"",
     "vortaro": {
-      "la": "le, la, les",
-      "stranga": "bizarre",
-      "ideo": "id\u00e9e",
-      "koridoro": "couloir, corridor",
-      "svenis": "s'\u00e9vanouir",
-      "en": "dans",
       "neniam": "jamais",
+      "ideo": "id\u00e9e",
+      "en": "dans",
+      "stranga": "bizarre",
       "svenas": "s'\u00e9vanouir",
-      "\u015di": "elle",
-      "oni": "on",
       "nu": "allons, bien, eh bien\u2026 ",
-      "tie": "ici, l\u00e0",
       "diable": "diaboliquement, diablement, diable !, diantre !, fichtre !",
-      "kial": "pourquoi"
+      "oni": "on",
+      "tie": "ici, l\u00e0",
+      "svenis": "s'\u00e9vanouir",
+      "koridoro": "couloir, corridor",
+      "kial": "pourquoi",
+      "la": "le, la, les",
+      "\u015di": "elle"
     }
   },
   {
@@ -219,29 +229,30 @@
   {
     "teksto": "\"\u0108u vere? Kie do oni svenas en \u0109i tiu universitato? Pardonu min, sed mi ne konas la tradiciojn. Mi estas novulo. Apena\u016d unu semajnon mi estas \u0109i tie.\"",
     "vortaro": {
-      "estas": "\u00eatre",
-      "la": "le, la, les",
+      "vere": "vraiment",
+      "sed": "mais",
+      "tradiciojn": "tradition",
+      "mi": "je",
       "min": "je",
-      "apena\u016d": "\u00e0 peine",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "konas": "conna\u00eetre",
-      "ne": "non, ne... pas",
+      "svenas": "s'\u00e9vanouir",
+      "apena\u016d": "\u00e0 peine",
+      "oni": "on",
+      "tiu": "ce, cet(te)",
+      "en": "dans",
+      "semajnon": "semaine",
+      "unu": "les uns",
+      "do": "donc",
       "novulo": "d\u00e9butant, nouveau",
+      "\u0109i": "(indique la proximit\u00e9)",
+      "la": "le, la, les",
       "kie": "o\u00f9",
       "pardonu": "pardonner",
-      "\u0109i": "(indique la proximit\u00e9)",
-      "tradiciojn": "tradition",
-      "do": "donc",
-      "mi": "je",
-      "vere": "vraiment",
-      "en": "dans",
-      "svenas": "s'\u00e9vanouir",
-      "sed": "mais",
-      "tiu": "ce, cet(te)",
+      "estas": "\u00eatre",
       "tie": "ici, l\u00e0",
-      "semajnon": "semaine",
-      "oni": "on",
-      "universitato": "universit\u00e9"
+      "universitato": "universit\u00e9",
+      "konas": "conna\u00eetre",
+      "ne": "non, ne... pas"
     }
   },
   {
@@ -251,36 +262,39 @@
   {
     "teksto": "\"Juna viro, en \u0109i tiu universitato, oni svenas en la klas\u0109ambroj, oni svenas en la restoracio, oni svenas en la dorm-\u0109ambroj, oni svenas en la ban\u0109ambroj, eble e\u0109 oni povus sveni en iu administra oficejo. Sed pri sveno koridora mi neniam a\u016ddis. Stranga epoko! Stranga generacio! Oni faras ion ajn niaepoke.\"",
     "vortaro": {
-      "administra": "administratif, administrative",
-      "a\u016ddis": "entendre",
-      "la": "le, la, les",
-      "e\u0109": "m\u00eame, et en plus",
-      "generacio": "g\u00e9n\u00e9ration",
-      "pri": "\u00e0 propos de",
-      "ajn": "n'importe qu-\u2026",
-      "ban\u0109ambroj": "salle de bain",
-      "povus": "pouvoir, \u00eatre capable de",
-      "sveno": "\u00e9vanouissement, syncope",
-      "neniam": "jamais",
-      "viro": "homme, m\u00e2le",
-      "\u0109i": "(indique la proximit\u00e9)",
-      "faras": "faire",
       "juna": "jeune",
-      "mi": "je",
-      "stranga": "bizarre",
-      "en": "dans",
-      "ion": "quelque chose",
-      "svenas": "s'\u00e9vanouir",
-      "oficejo": "bureau, office",
+      "povus": "pouvoir, \u00eatre capable de",
+      "niaepoke": "\u00e0 notre \u00e9poque",
       "sed": "mais",
+      "pri": "\u00e0 propos de",
+      "generacio": "g\u00e9n\u00e9ration",
+      "administra": "administratif, administrative",
+      "sveno": "\u00e9vanouissement, syncope",
+      "koridora": "du couloir",
+      "mi": "je",
+      "svenas": "s'\u00e9vanouir",
+      "a\u016ddis": "entendre",
+      "ion": "quelque chose",
       "tiu": "ce, cet(te)",
-      "epoko": "\u00e9poque, \u00e2ge",
-      "eble": "peut-\u00eatre, possiblement",
-      "restoracio": "restaurant",
-      "iu": "quelqu'un",
-      "universitato": "universit\u00e9",
       "oni": "on",
-      "sveni": "s'\u00e9vanouir"
+      "iu": "quelqu'un",
+      "klas\u0109ambroj": "les salles de classe",
+      "neniam": "jamais",
+      "en": "dans",
+      "stranga": "bizarre",
+      "e\u0109": "m\u00eame, et en plus",
+      "ban\u0109ambroj": "salle de bain",
+      "sveni": "s'\u00e9vanouir",
+      "faras": "faire",
+      "oficejo": "bureau, office",
+      "\u0109i": "(indique la proximit\u00e9)",
+      "ajn": "n'importe qu-\u2026",
+      "la": "le, la, les",
+      "restoracio": "restaurant",
+      "viro": "homme, m\u00e2le",
+      "eble": "peut-\u00eatre, possiblement",
+      "universitato": "universit\u00e9",
+      "epoko": "\u00e9poque, \u00e2ge"
     }
   },
   {
@@ -290,20 +304,21 @@
   {
     "teksto": "\"Vi parolas, parolas, paroladas, kaj dume tiu kompatinda knabino ku\u015das en koridoro, kaj neniu zorgas pri \u015di!\"",
     "vortaro": {
-      "ku\u015das": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
-      "pri": "\u00e0 propos de",
-      "kompatinda": "digne de piti\u00e9, \u00e0 plaindre",
-      "kaj": "et",
       "en": "dans",
-      "koridoro": "couloir, corridor",
-      "knabino": "fille, jeune fille",
-      "vi": "tu, vous",
       "neniu": "personne",
-      "parolas": "parler",
-      "zorgas": "se faire du souci ; s'occuper de, prendre soin de",
+      "pri": "\u00e0 propos de",
       "\u015di": "elle",
+      "dume": "pour l'instant, cependant, entre temps, pendant ce temps, en revanche, pourtant, toutefois",
       "tiu": "ce, cet(te)",
-      "dume": "pour l'instant, cependant, entre temps, pendant ce temps, en revanche, pourtant, toutefois"
+      "vi": "tu, vous",
+      "zorgas": "se faire du souci ; s'occuper de, prendre soin de",
+      "knabino": "fille, jeune fille",
+      "kompatinda": "digne de piti\u00e9, \u00e0 plaindre",
+      "koridoro": "couloir, corridor",
+      "parolas": "parler",
+      "ku\u015das": "\u00eatre couch\u00e9, \u00eatre \u00e9tendu, reposer (g\u00e9sir)",
+      "kaj": "et",
+      "paroladas": "parler continuellement"
     }
   },
   {
@@ -313,20 +328,21 @@
   {
     "teksto": "\"Nu, nu, ne maltrankvili\u011du, juna viro, ne havu zorgojn. Ni tuj rapidos tien, kaj mi tuj prizorgos \u015din.\"",
     "vortaro": {
+      "juna": "jeune",
       "mi": "je",
-      "tuj": "imm\u00e9diatement, sur le champ",
-      "kaj": "et",
-      "prizorgos": "entretenir, soigner",
-      "rapidos": "se d\u00e9p\u00eacher, se h\u00e2ter, se presser",
-      "ne": "non, ne... pas",
+      "nu": "allons, bien, eh bien\u2026 ",
       "viro": "homme, m\u00e2le",
+      "ni": "nous",
+      "\u015din": "elle",
       "havu": "avoir",
       "zorgojn": "souci, inqui\u00e9tude ; attention, sollicitude",
-      "ni": "nous",
+      "tuj": "imm\u00e9diatement, sur le champ",
+      "rapidos": "se d\u00e9p\u00eacher, se h\u00e2ter, se presser",
       "tien": "ici, l\u00e0",
-      "\u015din": "elle",
-      "nu": "allons, bien, eh bien\u2026 ",
-      "juna": "jeune"
+      "prizorgos": "entretenir, soigner",
+      "kaj": "et",
+      "maltrankvili\u011du": "s'inqui\u00e9ter",
+      "ne": "non, ne... pas"
     }
   },
   {
@@ -336,18 +352,20 @@
   {
     "teksto": "Kaj ili kune rapidas al la loko, kie Tom lasis sian amikon kun Gerda.",
     "vortaro": {
-      "kune": "ensemble",
       "amikon": "ami",
-      "kun": "avec",
-      "la": "le, la, les",
-      "lasis": "laisser",
       "kie": "o\u00f9",
-      "kaj": "et",
-      "al": "\u00e0, vers",
-      "loko": "endroit, lieu",
+      "gerda": "gerda",
+      "tom": "tom",
+      "kune": "ensemble",
       "rapidas": "se d\u00e9p\u00eacher, se h\u00e2ter, se presser",
+      "lasis": "laisser",
+      "al": "\u00e0, vers",
+      "ili": "ils, elles, eux",
+      "kun": "avec",
+      "kaj": "et",
+      "la": "le, la, les",
       "sian": "son, sa, ses",
-      "ili": "ils, elles, eux"
+      "loko": "endroit, lieu"
     }
   },
   {
@@ -357,10 +375,11 @@
   {
     "teksto": "Sed jen subite Tom haltas.",
     "vortaro": {
-      "subite": "soudainement",
-      "sed": "mais",
       "jen": "voici",
-      "haltas": "s'arr\u00eater"
+      "sed": "mais",
+      "tom": "tom",
+      "haltas": "s'arr\u00eater",
+      "subite": "soudainement"
     }
   },
   {
@@ -374,13 +393,14 @@
   {
     "teksto": "\"Kio okazas? Kial vi ekhaltis?\" demandas la flegistino.",
     "vortaro": {
+      "ekhaltis": "s'est arr\u00eat\u00e9e net",
+      "kio": "quoi, que",
       "demandas": "interroger, demander",
       "flegistino": "infirmi\u00e8re",
       "okazas": "arriver, se passer, avoir lieu",
-      "kio": "quoi, que",
-      "la": "le, la, les",
       "vi": "tu, vous",
-      "kial": "pourquoi"
+      "kial": "pourquoi",
+      "la": "le, la, les"
     }
   },
   {
@@ -390,15 +410,15 @@
   {
     "teksto": "\"\u015ci estis \u0109i tie, kaj ne plu estas, sed\u2026\"",
     "vortaro": {
-      "estas": "\u00eatre",
-      "plu": "plus, plus longtemps, plus loin",
       "sed": "mais",
-      "kaj": "et",
-      "\u015di": "elle",
-      "\u0109i": "(indique la proximit\u00e9)",
       "estis": "\u00eatre",
+      "plu": "plus, plus longtemps, plus loin",
+      "estas": "\u00eatre",
       "tie": "ici, l\u00e0",
-      "ne": "non, ne... pas"
+      "\u0109i": "(indique la proximit\u00e9)",
+      "kaj": "et",
+      "ne": "non, ne... pas",
+      "\u015di": "elle"
     }
   },
   {
@@ -409,19 +429,19 @@
     "teksto": "\"Sed estas iu alia, kaj li estas senkonscia, \u015dajnas al mi. \u0108u vi konas lin?\"",
     "vortaro": {
       "mi": "je",
-      "estas": "\u00eatre",
       "li": "il, lui, le",
-      "kaj": "et",
-      "senkonscia": "inconscient",
-      "\u015dajnas": "sembler, avoir l'air",
-      "al": "\u00e0, vers",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "vi": "tu, vous",
-      "lin": "il, lui, le",
-      "iu": "quelqu'un",
-      "alia": "autre",
       "sed": "mais",
-      "konas": "conna\u00eetre"
+      "lin": "il, lui, le",
+      "\u015dajnas": "sembler, avoir l'air",
+      "senkonscia": "inconscient",
+      "iu": "quelqu'un",
+      "estas": "\u00eatre",
+      "vi": "tu, vous",
+      "al": "\u00e0, vers",
+      "alia": "autre",
+      "konas": "conna\u00eetre",
+      "kaj": "et"
     }
   },
   {
@@ -431,14 +451,15 @@
   {
     "teksto": "\"Jes, estas mia amiko Bob. Kio okazis al li?\"",
     "vortaro": {
+      "jes": "oui, d'accord",
+      "li": "il, lui, le",
+      "bob": "bob",
+      "kio": "quoi, que",
+      "mia": "je",
+      "amiko": "ami",
       "okazis": "arriver, se passer, avoir lieu",
       "estas": "\u00eatre",
-      "mia": "je",
-      "kio": "quoi, que",
-      "li": "il, lui, le",
-      "al": "\u00e0, vers",
-      "amiko": "ami",
-      "jes": "oui, d'accord"
+      "al": "\u00e0, vers"
     }
   },
   {
@@ -448,17 +469,20 @@
   {
     "teksto": "La flegistino iras al Bob, kiu falsidas \u0109e la koridora muro. \u015ci tu\u015das lian kapon.",
     "vortaro": {
-      "iras": "aller",
-      "flegistino": "infirmi\u00e8re",
-      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
-      "la": "le, la, les",
-      "lian": "son, sa",
       "kiu": "qui",
-      "al": "\u00e0, vers",
+      "falsidas": "tombe assis",
+      "bob": "bob",
       "tu\u015das": "toucher",
-      "muro": "mur",
+      "flegistino": "infirmi\u00e8re",
       "\u015di": "elle",
-      "kapon": "t\u00eate"
+      "lian": "son, sa",
+      "al": "\u00e0, vers",
+      "\u0109e": "\u00e0 (comme dans \u00ab\u00e0 la table\u00bb), \u00e0 c\u00f4t\u00e9, pr\u00e8s de",
+      "kapon": "t\u00eate",
+      "muro": "mur",
+      "iras": "aller",
+      "la": "le, la, les",
+      "koridora": "du couloir"
     }
   },
   {
@@ -468,13 +492,13 @@
   {
     "teksto": "\"Batita! Oni batis la kapon al li!\"",
     "vortaro": {
-      "batis": "battre, frapper",
       "batita": "battre, frapper",
-      "la": "le, la, les",
       "li": "il, lui, le",
+      "oni": "on",
       "al": "\u00e0, vers",
       "kapon": "t\u00eate",
-      "oni": "on"
+      "la": "le, la, les",
+      "batis": "battre, frapper"
     }
   },
   {
@@ -485,16 +509,17 @@
     "teksto": "\"Diable! Bob, Bob! Respondu! \u0108u vi a\u016ddas min? Diru, mi petas! Kio okazis?",
     "vortaro": {
       "mi": "je",
-      "okazis": "arriver, se passer, avoir lieu",
-      "kio": "quoi, que",
       "min": "je",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "vi": "tu, vous",
-      "diru": "dire",
-      "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)",
-      "a\u016ddas": "entendre",
+      "bob": "bob",
+      "kio": "quoi, que",
       "respondu": "r\u00e9pondre",
-      "diable": "diaboliquement, diablement, diable !, diantre !, fichtre !"
+      "diru": "dire",
+      "okazis": "arriver, se passer, avoir lieu",
+      "diable": "diaboliquement, diablement, diable !, diantre !, fichtre !",
+      "vi": "tu, vous",
+      "a\u016ddas": "entendre",
+      "petas": "demander (de faire quelque chose) ; prier (de faire quelque chose)"
     }
   },
   {
@@ -504,12 +529,14 @@
   {
     "teksto": "Sed Bob ne respondas, kaj Tom i\u011das pli kaj pli maltrankvila.",
     "vortaro": {
-      "maltrankvila": "\u00e9nerv\u00e9, inquiet, perturb\u00e9",
       "i\u011das": "devenir",
-      "kaj": "et",
-      "respondas": "r\u00e9pondre",
+      "bob": "bob",
       "sed": "mais",
+      "tom": "tom",
+      "maltrankvila": "\u00e9nerv\u00e9, inquiet, perturb\u00e9",
       "pli": "plus (en plus grande quantit\u00e9)",
+      "respondas": "r\u00e9pondre",
+      "kaj": "et",
       "ne": "non, ne... pas"
     }
   }

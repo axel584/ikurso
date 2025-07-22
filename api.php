@@ -71,7 +71,7 @@ class TekstojAPI {
     
     // GET /tekstoj - Récupérer tous les tekstoj avec filtres optionnels (sans enhavo)
     private function getTekstoj() {
-        $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono FROM tekstoj WHERE 1=1";
+        $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono FROM tekstoj WHERE aktiva = 1";
         $params = array();
         
         // Filtres optionnels
@@ -149,7 +149,7 @@ class TekstojAPI {
             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
             // Compter le total pour la pagination
-            $countSql = "SELECT COUNT(*) as total FROM tekstoj WHERE 1=1";
+            $countSql = "SELECT COUNT(*) as total FROM tekstoj WHERE aktiva = 1";
             $countParams = $params; // Utiliser les mêmes paramètres de filtre
             
             if (isset($_GET['auxtoro'])) {

@@ -313,7 +313,7 @@ include "gerdakapo.inc.php";
 				</div>
 			</div>
 		<?php
-			//include "lasusono.inc.php";
+			include "lasusono.inc.php";
 		?>
 
 			<h3>Izabela</h3>

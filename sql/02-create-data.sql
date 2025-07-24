@@ -1513,6 +1513,11 @@ INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('
 INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp28','La amo de Otelo kaj Desdemona','William Shakespeare','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
 INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp29','La kvara pipo','Ilja Erenburg','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
 INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('ppp30','Geedziĝo en hodiaŭa manieroo','Emil Kolozsvári Grandpierre','https://butiko-esperanto-france.org/methodes-et-manuels/1451-pasoj-al-plena-posedo.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('subbluajplanedoj01','Kontakto','Laure Patas d''Illiers','https://butiko-esperanto-france.org/litterature-originale-en-esperanto/1021-sur-bluaj-planedoj.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('subbluajplanedoj18','Vanila kremaĵo','Laure Patas d''Illiers','https://butiko-esperanto-france.org/litterature-originale-en-esperanto/1021-sur-bluaj-planedoj.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('subbluajplanedoj21','La serpento kaj la rano','Laure Patas d''Illiers','https://butiko-esperanto-france.org/litterature-originale-en-esperanto/1021-sur-bluaj-planedoj.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('idiotoj','La idiotoj','Sébastien Thiérry','https://butiko-esperanto-france.org/theatre/406-sen-lifto.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('stranga_malapero01','Stranga malapero - chapitre 1','','https://butiko-esperanto-france.org/lectures-faciles/896-stranga-malapero.html','');
 update tekstoj set nivelo=300, vortoj=211 where id='lasumin01';
 update tekstoj set nivelo=699, vortoj=387 where id='lasumin02';
 update tekstoj set nivelo=659, vortoj=624 where id='lasumin03';
@@ -1548,6 +1553,11 @@ update tekstoj set nivelo=913, vortoj=467 where id='lasumin23b';
 update tekstoj set nivelo=1387, vortoj=688 where id='lasumin24a';
 update tekstoj set nivelo=1030, vortoj=890 where id='lasumin24b';
 update tekstoj set nivelo=1470, vortoj=662 where id='lasumin25';
+update tekstoj set nivelo=1676, vortoj=1564 where id='idiotoj';
+update tekstoj set nivelo=1544, vortoj=516 where id='stranga_malapero01';
+update tekstoj set nivelo=2054, vortoj=280 where id='subbluajplanedoj01';
+update tekstoj set nivelo=2342, vortoj=2877 where id='subbluajplanedoj21';
+
 
 
 -- vortoj

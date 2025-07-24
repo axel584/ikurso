@@ -2,23 +2,23 @@
   {
     "teksto": "Gerda falas en la koridoro",
     "vortaro": {
-      "falas": "tomber",
       "en": "dans",
-      "gerda": "gerda",
       "koridoro": "couloir, corridor",
-      "la": "le, la, les"
+      "la": "le, la, les",
+      "gerda": "gerda",
+      "falas": "tomber"
     }
   },
   {
     "teksto": "Tom: \u0108u vi a\u016ddis? Kio estis tio?",
     "vortaro": {
-      "kio": "quoi, que",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "a\u016ddis": "entendre",
-      "tom": "tom",
-      "estis": "\u00eatre",
       "vi": "tu, vous",
-      "tio": "ce, cela, \u00e7a"
+      "estis": "\u00eatre",
+      "tio": "ce, cela, \u00e7a",
+      "kio": "quoi, que",
+      "a\u016ddis": "entendre",
+      "tom": "tom"
     }
   },
   {
@@ -28,11 +28,11 @@
   {
     "teksto": "Bob: Jes, mi a\u016ddis. Mi a\u016ddis ion.",
     "vortaro": {
-      "mi": "je",
-      "jes": "oui, d'accord",
-      "bob": "bob",
+      "ion": "quelque chose",
       "a\u016ddis": "entendre",
-      "ion": "quelque chose"
+      "mi": "je",
+      "bob": "bob",
+      "jes": "oui, d'accord"
     }
   },
   {
@@ -42,17 +42,17 @@
   {
     "teksto": "Linda: Anka\u016d mi a\u016ddis strangan bruon, kvaza\u016d iu falus en la koridoro.",
     "vortaro": {
-      "strangan": "bizarre",
-      "mi": "je",
       "linda": "jolie",
-      "en": "dans",
-      "a\u016ddis": "entendre",
-      "kvaza\u016d": "quasi-, comme si",
-      "iu": "quelqu'un",
-      "la": "le, la, les",
-      "koridoro": "couloir, corridor",
       "anka\u016d": "aussi",
+      "en": "dans",
+      "iu": "quelqu'un",
+      "kvaza\u016d": "quasi-, comme si",
+      "koridoro": "couloir, corridor",
+      "a\u016ddis": "entendre",
+      "mi": "je",
       "bruon": "bruit",
+      "la": "le, la, les",
+      "strangan": "bizarre",
       "falus": "tomber"
     }
   },
@@ -63,10 +63,10 @@
   {
     "teksto": "Bob: Kvaza\u016d \u015di falus.",
     "vortaro": {
-      "\u015di": "elle",
       "bob": "bob",
-      "falus": "tomber",
-      "kvaza\u016d": "quasi-, comme si"
+      "\u015di": "elle",
+      "kvaza\u016d": "quasi-, comme si",
+      "falus": "tomber"
     }
   },
   {
@@ -76,22 +76,22 @@
   {
     "teksto": "Tom: Mi havis la saman penson kiel vi. Anka\u016d mi pensis tion. Anka\u016d mi pensis: jen Gerda falas en la koridoro.",
     "vortaro": {
-      "falas": "tomber",
-      "mi": "je",
-      "jen": "voici",
-      "en": "dans",
-      "gerda": "gerda",
-      "tom": "tom",
-      "saman": "le m\u00eame, la m\u00eame, identique, pareil(le)",
       "penson": "pens\u00e9e",
+      "jen": "voici",
       "vi": "tu, vous",
-      "havis": "avoir",
-      "pensis": "penser",
-      "tion": "ce, cela, \u00e7a",
       "anka\u016d": "aussi",
-      "koridoro": "couloir, corridor",
+      "gerda": "gerda",
+      "en": "dans",
+      "havis": "avoir",
       "kiel": "comment, comme",
-      "la": "le, la, les"
+      "tion": "ce, cela, \u00e7a",
+      "koridoro": "couloir, corridor",
+      "saman": "le m\u00eame, la m\u00eame, identique, pareil(le)",
+      "mi": "je",
+      "tom": "tom",
+      "la": "le, la, les",
+      "pensis": "penser",
+      "falas": "tomber"
     }
   },
   {
@@ -101,11 +101,11 @@
   {
     "teksto": "Linda: \u0108u ni iru vidi?",
     "vortaro": {
-      "iru": "aller",
-      "linda": "jolie",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "vidi": "voir",
-      "ni": "nous"
+      "linda": "jolie",
+      "ni": "nous",
+      "iru": "aller",
+      "vidi": "voir"
     }
   },
   {
@@ -115,11 +115,11 @@
   {
     "teksto": "Tom: Kompreneble. Ni iru tuj.",
     "vortaro": {
-      "iru": "aller",
-      "tom": "tom",
-      "kompreneble": "naturellement, bien entendu",
       "tuj": "imm\u00e9diatement, sur le champ",
-      "ni": "nous"
+      "tom": "tom",
+      "ni": "nous",
+      "iru": "aller",
+      "kompreneble": "naturellement, bien entendu"
     }
   },
   {
@@ -129,30 +129,30 @@
   {
     "teksto": "Bob: Mi iru kun Tom, sed vi restu \u0109i tie, Linda. Observu tiun junulon, kun kiu Gerda parolis, kaj kiu eble metis drogon en \u015dian kafon.",
     "vortaro": {
-      "sed": "mais",
-      "\u015dian": "sa, son",
-      "kun": "avec",
-      "mi": "je",
-      "iru": "aller",
-      "tom": "tom",
-      "restu": "rester",
-      "drogon": "drogue",
-      "vi": "tu, vous",
-      "metis": "mettre, poser, placer",
-      "kaj": "et",
-      "linda": "jolie",
-      "bob": "bob",
-      "en": "dans",
-      "junulon": "jeune",
-      "kafon": "caf\u00e9",
-      "\u0109i": "(indique la proximit\u00e9)",
-      "kiu": "qui",
-      "gerda": "gerda",
-      "eble": "peut-\u00eatre, possiblement",
       "observu": "observe",
-      "tiun": "ce, cet(te)",
+      "\u015dian": "sa, son",
+      "metis": "mettre, poser, placer",
       "tie": "ici, l\u00e0",
-      "parolis": "parler"
+      "en": "dans",
+      "iru": "aller",
+      "eble": "peut-\u00eatre, possiblement",
+      "sed": "mais",
+      "restu": "rester",
+      "linda": "jolie",
+      "tiun": "ce, cet(te)",
+      "kun": "avec",
+      "\u0109i": "(indique la proximit\u00e9)",
+      "tom": "tom",
+      "parolis": "parler",
+      "kafon": "caf\u00e9",
+      "vi": "tu, vous",
+      "kiu": "qui",
+      "mi": "je",
+      "drogon": "drogue",
+      "bob": "bob",
+      "gerda": "gerda",
+      "junulon": "jeune",
+      "kaj": "et"
     }
   },
   {
@@ -162,18 +162,18 @@
   {
     "teksto": "Linda: \u0108u vi amba\u016d foriras kaj mi restu tute sola? Mi iom timas.",
     "vortaro": {
-      "mi": "je",
-      "linda": "jolie",
       "\u0109u": "est-ce que\u2026, si (indique l'interrogation)",
-      "tute": "enti\u00e8rement, totalement",
+      "foriras": "partir, renvoyer, cong\u00e9dier, faire partir, jeter dehors",
+      "linda": "jolie",
+      "vi": "tu, vous",
       "sola": "seul(e)",
-      "iom": "un peu",
-      "restu": "rester",
       "timas": "craindre, avoir peur",
       "amba\u016d": "tous deux, tous les deux, l'un et l'autre",
-      "foriras": "partir, renvoyer, cong\u00e9dier, faire partir, jeter dehors",
-      "vi": "tu, vous",
-      "kaj": "et"
+      "tute": "enti\u00e8rement, totalement",
+      "mi": "je",
+      "iom": "un peu",
+      "kaj": "et",
+      "restu": "rester"
     }
   },
   {
@@ -183,27 +183,27 @@
   {
     "teksto": "Bob: Ni ne havas la tempon diskuti. Ni devas iri vidi tuj. Restu trankvile \u0109i tie. Vi nenion riskas. Venu, Tom, ni ne perdu tempon.",
     "vortaro": {
-      "devas": "devoir",
-      "venu": "venir",
-      "vidi": "voir",
-      "tempon": "temps",
-      "trankvile": "tranquillement",
-      "riskas": "risquer",
-      "restu": "rester",
-      "tom": "tom",
-      "diskuti": "discuter",
-      "vi": "tu, vous",
-      "bob": "bob",
-      "tuj": "imm\u00e9diatement, sur le champ",
-      "\u0109i": "(indique la proximit\u00e9)",
-      "perdu": "perdre",
-      "iri": "aller",
-      "la": "le, la, les",
-      "havas": "avoir",
-      "tie": "ici, l\u00e0",
-      "ne": "non, ne... pas",
       "nenion": "rien",
-      "ni": "nous"
+      "ne": "non, ne... pas",
+      "tie": "ici, l\u00e0",
+      "tuj": "imm\u00e9diatement, sur le champ",
+      "tempon": "temps",
+      "perdu": "perdre",
+      "trankvile": "tranquillement",
+      "venu": "venir",
+      "ni": "nous",
+      "riskas": "risquer",
+      "iri": "aller",
+      "havas": "avoir",
+      "restu": "rester",
+      "\u0109i": "(indique la proximit\u00e9)",
+      "tom": "tom",
+      "la": "le, la, les",
+      "vidi": "voir",
+      "vi": "tu, vous",
+      "devas": "devoir",
+      "diskuti": "discuter",
+      "bob": "bob"
     }
   },
   {

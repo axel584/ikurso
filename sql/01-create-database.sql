@@ -249,7 +249,7 @@ CREATE TABLE tekstoj (
   `vortoj` INT NULL , 
   `kolekto` VARCHAR(64) NULL , 
   `etikedoj` VARCHAR(1024) NULL, 
-  `enhavo` TEXT NULL,
+  `enhavo` MEDIUMTEXT NULL,
   `aktiva` TINYINT NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 

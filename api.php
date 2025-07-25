@@ -134,7 +134,7 @@ class TekstojAPI {
         }
         
         // Tri (ORDER BY)
-        $allowedSortFields = array('id', 'titolo', 'nivelo', 'vortoj');
+        $allowedSortFields = array('id', 'titolo', 'nivelo', 'vortoj', 'ekdato');
         $sortField = isset($_GET['sort']) && in_array($_GET['sort'], $allowedSortFields) ? $_GET['sort'] : 'id';
         $sortOrder = isset($_GET['order']) && strtoupper($_GET['order']) === 'DESC' ? 'DESC' : 'ASC';
         

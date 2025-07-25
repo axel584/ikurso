@@ -133,6 +133,13 @@ class TekstojAPI {
             $sql .= " AND sono IS NOT NULL AND sono != ''";
         }
         
+        // Tri (ORDER BY)
+        $allowedSortFields = array('id', 'titolo', 'nivelo', 'vortoj');
+        $sortField = isset($_GET['sort']) && in_array($_GET['sort'], $allowedSortFields) ? $_GET['sort'] : 'id';
+        $sortOrder = isset($_GET['order']) && strtoupper($_GET['order']) === 'DESC' ? 'DESC' : 'ASC';
+        
+        $sql .= " ORDER BY " . $sortField . " " . $sortOrder;
+        
         // Pagination
         $limit = isset($_GET['limit']) ? intval($_GET['limit']) : 10;
         $offset = isset($_GET['offset']) ? intval($_GET['offset']) : 0;

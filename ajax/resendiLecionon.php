@@ -9,8 +9,10 @@ $expediteurIkurso = isset($_GET["expediteur_ikurso"])?$_GET["expediteur_ikurso"]
 // Attention, beaucoup de code en commun avec sendiLecionon.php
 
 // vérifier si l'élève a déjà un correcteur pour ce cours :
-$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where nuna_kurso.kurso='".$kurso."' and studanto=".$persono_id;
-$result = $bdd->query($query);
+$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where nuna_kurso.kurso=? and studanto=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$kurso, $persono_id]);
+$result = $stmt;
 $row = $result->fetch();
 if (!$row) {
 	$respondo["type"]="korektanto";
@@ -26,11 +28,15 @@ if (!$row) {
 $studanto = apartigiPersonon($persono_id);
 
 // on récupère le commentaire qui se trouve en base :
-$query ="select id from lecionoj where kurso='".$kurso."' and numero='".$leciono."'";
-$result = $bdd->query($query);
+$query ="select id from lecionoj where kurso=? and numero=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$kurso, $leciono]);
+$result = $stmt;
 $leciono_id = $result->fetch()["id"];
-$query = "select komentario from personoj_lecionoj where persono_id='".$persono_id."' and leciono_id='".$leciono_id."'";
-$result = $bdd->query($query);
+$query = "select komentario from personoj_lecionoj where persono_id=? and leciono_id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id, $leciono_id]);
+$result = $stmt;
 $commentaire_pour_correcteur = $result->fetch()["komentario"];
 
 // envoyer la leçon au correcteur
@@ -43,8 +49,10 @@ $fonto.="</head><body>";
 // on ajoute dans le mail l'adresse email de l'élève :
 $fonto .= "<p>Sendu vian korekton al : ".$studanto["retadreso"]."<br>\n";
 
-$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero";
-$result = $bdd->query($query);
+$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=? and lecionoj.numero=? and kurso=? order by ekzerceroj.numero";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id, $leciono, $kurso]);
+$result = $stmt;
 $nbReponse = 0;
 $lastKomando = "";
 while ($row=$result->fetch()) {

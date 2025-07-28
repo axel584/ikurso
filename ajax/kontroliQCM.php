@@ -38,8 +38,10 @@ if ($kurso=="KE") {
 
 if ($bonaj==$QCM[$leciono][0]) {
 	// on a eu les bonnes réponses, on va à la section suivante
-	$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.id>".$lecionero_id." order by ordo ASC";
-	$result = $bdd->query($query);
+	$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? and lecioneroj.id>? order by ordo ASC";
+	$stmt = $bdd->prepare($query);
+	$stmt->execute([$leciono, $kurso, $lecionero_id]);
+	$result = $stmt;
 	$row = $result->fetch();
 	if ($row!=false) {
 		$respondo["url"] = $prefixeKurso.$row['retpagxo'].'?section='.$row['ordo']."&erarkodo=21";

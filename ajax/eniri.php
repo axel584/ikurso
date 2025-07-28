@@ -9,8 +9,10 @@ $pasvorto=isset($_POST['pasvorto'])?stripslashes($_POST['pasvorto']):"";
 
 $respondo = array();
 
-$query = "select id,aktivigita,pasvorto_md5 from personoj where enirnomo='".$identigilo."'";
-$result = $bdd->query($query);
+$query = "select id,aktivigita,pasvorto_md5 from personoj where enirnomo=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$identigilo]);
+$result = $stmt;
 if (!$row = $result->fetch()) { // aucune ligne retournée
 	$respondo["mesagxo"]="Identifiant introuvable, cliquez sur le bouton CRÉER UN COMPTE";
 	$respondo["type"]="identigilo";

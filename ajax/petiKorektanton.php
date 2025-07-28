@@ -16,8 +16,10 @@ if ($persono_id=="") { // personne non connecté, on ressort
 }
 
 // si le compte n'est pas activé, on le renvoit
-$query = "select aktivigita from personoj where id=".$persono_id;
-$result = $bdd->query($query);
+$query = "select aktivigita from personoj where id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id]);
+$result = $stmt;
 $aktivigita = $result->fetch()["aktivigita"];
 if($aktivigita==0) {
 	$respondo["mesagxo"] = "compteNonActif";
@@ -26,8 +28,10 @@ if($aktivigita==0) {
 }
 
 // on vérifie si l'élève a fait un exercice
-$query = "select count(*) as combien from respondoj join ekzerceroj on ekzerceroj.id = respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."'";
-$result = $bdd->query($query);
+$query = "select count(*) as combien from respondoj join ekzerceroj on ekzerceroj.id = respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=? and lecionoj.numero=? and kurso=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id, $leciono, $kurso]);
+$result = $stmt;
 $nbResponses = $result->fetch()["combien"];
 if ($nbResponses==0) {
 	$respondo["mesagxo"] = "aucunExercice";
@@ -37,11 +41,15 @@ if ($nbResponses==0) {
 
 // on mémorise la leçon 
 // on récupère l'id de la leçon à partir du $lecionero_id
-$query ="select leciono_id from lecioneroj where id=".$lecionero_id;
-$result = $bdd->query($query);
+$query ="select leciono_id from lecioneroj where id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$lecionero_id]);
+$result = $stmt;
 $leciono_id = $result->fetch()["leciono_id"];
-$query ="select count(*) as combien from personoj_lecionoj where persono_id=".$persono_id." and leciono_id=".$leciono_id;
-$result = $bdd->query($query);
+$query ="select count(*) as combien from personoj_lecionoj where persono_id=? and leciono_id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id, $leciono_id]);
+$result = $stmt;
 $combien = $result->fetch()["combien"];
 // on enregistre si il n'y avait rien en base
 if ($combien==0) {
@@ -69,8 +77,9 @@ if ($kurso=="PP") {
 
 
 // on met le champ "kurso" de l'élève a la bonne valeur et son champ "rajtoj" à P
-$query = "update personoj set kurso='".$kurso."',rajtoj='P' where id=".$persono_id;
-$bdd->exec($query);
+$query = "update personoj set kurso=?,rajtoj='P' where id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$kurso, $persono_id]);
 
 // on enregistre ses réponses dans la table 
 $fonto="<html><head><title>Cours d'Espéranto : leçon ".$leciono."</title>\n";
@@ -80,8 +89,10 @@ $fonto.="</head><body>";
 
 // Attention, code commun avec sendiLecionon.php
 
-$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero";
-$result = $bdd->query($query);
+$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=? and lecionoj.numero=? and kurso=? order by ekzerceroj.numero";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id, $leciono, $kurso]);
+$result = $stmt;
 $nbReponse = 0;
 $lastKomando = "";
 while ($row=$result->fetch()) {
@@ -104,8 +115,10 @@ $fonto.="</body></html>";
 $fonto.="</body></html>";
 
 // indiquer que la dernière section a été faite
-$query ="select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
-$result = $bdd->query($query);
+$query ="select count(*) as combien from personoj_lecioneroj where persono_id=? and lecionero_id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id, $lecionero_id]);
+$result = $stmt;
 $combien = $result->fetch()["combien"];
 // on enregistre si il n'y avait rien en base
 if ($combien==0) {
@@ -118,11 +131,13 @@ $plejTaugaKorektanto = troviPlejTauganKorektanton($persono_id,$kurso);
 $korektanto = apartigiPersonon($plejTaugaKorektanto);
 
 // Envoyer le mail pour informer du correcteur à l'élève
-$query = "update personoj set rajtoj='S' where id=".$persono_id; // cxiukaze igas lin studanto.
-$result = $bdd->exec($query);
+$query = "update personoj set rajtoj='S' where id=?"; // cxiukaze igas lin studanto.
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id]);
 		
-$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso,nunleciono) VALUES (NOW(),NOW(),".$plejTaugaKorektanto.",".$persono_id.",'".$kurso."',1)";
-$result = $bdd->exec($query);
+$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso,nunleciono) VALUES (NOW(),NOW(),?,?,?,1)";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$plejTaugaKorektanto, $persono_id, $kurso]);
 
 // sendi mesagxon al la nova studanto
 $filename = "../mails/doniStu".$kurso."FR.html";

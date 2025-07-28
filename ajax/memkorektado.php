@@ -11,8 +11,10 @@ if ($lernantaRespondo=="") {
 }
 
 if ($korekteblaEkzerco) {
-	$query="SELECT respondo,normaligita FROM ekzerceroj where id='".$ekzercero_id."'";
-	$result = $bdd->query($query);
+	$query="SELECT respondo,normaligita FROM ekzerceroj where id=?";
+	$stmt = $bdd->prepare($query);
+	$stmt->execute([$ekzercero_id]);
+	$result = $stmt;
 	$row = $result->fetch();
 	$bonaRespondo = $row["normaligita"];
 
@@ -28,7 +30,10 @@ if ($korekteblaEkzerco) {
 
 // on mémorise en base :
 // on vérifie si l'élève a déjà en base une réponse
-$result = $bdd->query("select count(*) as combien from respondoj where persono_id=".$studanto." and ekzercero_id='".$ekzercero_id."'");
+$query = "select count(*) as combien from respondoj where persono_id=? and ekzercero_id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$studanto, $ekzercero_id]);
+$result = $stmt;
 $nbReponseEnBase = $result->fetch()["combien"];
 if ($nbReponseEnBase==0) {
    	$requete = $bdd->prepare('insert into respondoj(persono_id,dato,ekzercero_id,respondo,normaligita,gxusta) values (:persono_id,now(),:ekzercero_id,:respondo,:normaligita,:gxusta)');

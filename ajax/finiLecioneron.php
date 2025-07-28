@@ -22,8 +22,10 @@ if ($lecionero_id=="") { // id de la section introuvable
 
 // on mémorise la section
 // on vérifie si il y a déjà un enregistrement en base :
-$query ="select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
-$result = $bdd->query($query);
+$query ="select count(*) as combien from personoj_lecioneroj where persono_id=? and lecionero_id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id, $lecionero_id]);
+$result = $stmt;
 $combien = $result->fetch()["combien"];
 // on enregistre si il n'y avait rien en base
 if ($combien==0) {
@@ -50,13 +52,17 @@ if ($kurso=="PP") {
 } 
 
 // On recherche la section suivante à cette section, donc on va rechercher la valeur du "ordo" pour la section en cours :
-$query = "select ordo from lecioneroj where id=".$lecionero_id;
-$result = $bdd->query($query);
+$query = "select ordo from lecioneroj where id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$lecionero_id]);
+$result = $stmt;
 $row = $result->fetch();
 $ordo = $row["ordo"];
 // on va ensuite prendre la section qui est dans la même leçon et dont le numéro "ordo" est strictement supérieur 
-$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo>".$ordo." order by ordo ASC";
-$result = $bdd->query($query);
+$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? and lecioneroj.ordo>? order by ordo ASC";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$leciono, $kurso, $ordo]);
+$result = $stmt;
 $row = $result->fetch();
 if ($row!=false) {
 	$respondo["url"] = $prefixeKurso.$row['retpagxo'].'?section='.$row['ordo'];

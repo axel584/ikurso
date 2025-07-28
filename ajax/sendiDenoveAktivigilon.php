@@ -3,8 +3,10 @@ include "../util.php";
 $identigilo=isset($_GET['identigilo'])?$_GET['identigilo']:"";
 
 // On vérifie si l'utilisateur n'a pas "changé" son identifiant après avoir cliqué sur le lien
-$query = "select id,aktivigita,pasvorto_md5,aktivigo,retadreso from personoj where enirnomo='".$identigilo."'";
-$result = $bdd->query($query);
+$query = "select id,aktivigita,pasvorto_md5,aktivigo,retadreso from personoj where enirnomo=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$identigilo]);
+$result = $stmt;
 if (!$row = $result->fetch()) { // aucune ligne retournée
 	$respondo["mesagxo"]="Arrêtez de faire l'andouille, ça va pas nous aider !";
 	$respondo["type"]="identigilo";

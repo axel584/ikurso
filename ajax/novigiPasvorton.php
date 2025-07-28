@@ -5,8 +5,10 @@ $aktivigo=isset($_GET["aktivigo"])?$_GET["aktivigo"]:"";
 $pasvorto=isset($_GET["pasvorto"])?$_GET["pasvorto"]:"";
 
 // on verifie si on a bien un et un seul compte avec cet adresse et cette clef d'activation
-$query = "select count(*) as combien from personoj where retadreso='".$retadreso."' and aktivigo='".$aktivigo."'";
-$result = $bdd->query($query);
+$query = "select count(*) as combien from personoj where retadreso=? and aktivigo=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$retadreso, $aktivigo]);
+$result = $stmt;
 $retadreso_en_base = $result->fetch()["combien"];
 if ($retadreso_en_base!=1) {
 	$respondo["type"]="netrovebla_konto";

@@ -3,8 +3,10 @@ include "../util.php";
 $retadreso=isset($_GET["retadreso"])?$_GET["retadreso"]:"";
 
 // interdire le cas où il y a plusieurs adresses emails
-$query = "select count(*) as combien from personoj where retadreso='".$retadreso."'";
-$result = $bdd->query($query);
+$query = "select count(*) as combien from personoj where retadreso=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$retadreso]);
+$result = $stmt;
 $retadreso_en_base = $result->fetch()["combien"];
 if ($retadreso_en_base>1) {
 	$respondo["type"]="pluraj_retadresoj";
@@ -19,8 +21,10 @@ if ($retadreso_en_base>1) {
 }
 
 // on récupère la valeur de "aktivigo" qui avait été envoyé pour l'activation de l'adresse email
-$query = "select aktivigo,enirnomo from personoj where retadreso='".$retadreso."'";
-$result = $bdd->query($query);
+$query = "select aktivigo,enirnomo from personoj where retadreso=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$retadreso]);
+$result = $stmt;
 $row = $result->fetch();
 $aktivigo = $row["aktivigo"];
 $enirnomo = $row["enirnomo"];

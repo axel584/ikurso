@@ -24,8 +24,10 @@ function getInterval($nombrilo) {
 	}
 }
 
-$query="SELECT fr,eo FROM vortoj where id='".$vorto_id."'";
-$result = $bdd->query($query);
+$query="SELECT fr,eo FROM vortoj where id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$vorto_id]);
+$result = $stmt;
 $row = $result->fetch();
 $bonaRespondo = $row["eo"];
 $francaVorto = $row["fr"];
@@ -47,14 +49,17 @@ function kontroliVorton($lernantaRespondo,$bonaRespondo) {
 
 function memoriRespondon($persono_id,$vorto_id,$bona,$respondo) {
 	global $bdd;
-	$query = "insert into personoj_vortoj_respondoj(persono_id,vorto_id,dato,bona,respondo) values('".$persono_id."','".$vorto_id."',NOW(),".$bona.",'".$respondo."');";
-	$bdd->exec($query);
+	$query = "insert into personoj_vortoj_respondoj(persono_id,vorto_id,dato,bona,respondo) values(?,?,NOW(),?,?)";
+	$stmt = $bdd->prepare($query);
+	$stmt->execute([$persono_id, $vorto_id, $bona, $respondo]);
 }
 
 if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se soucier de la case
 	// on a une bonne réponse, on incrémente le nombre de bonne réponse dans la table personoj_vortoj et on calcule la prochaine etape
-	$query="SELECT nombrilo FROM personoj_vortoj where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
-	$result = $bdd->query($query);
+	$query="SELECT nombrilo FROM personoj_vortoj where vorto_id=? and persono_id=?";
+	$stmt = $bdd->prepare($query);
+	$stmt->execute([$vorto_id, $persono_id]);
+	$result = $stmt;
 	$nombrilo = $result->fetch()["nombrilo"];
 	if (is_null($nombrilo)) {
 		$respondo["mesagxo"] = "ko";
@@ -62,16 +67,18 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 		echo json_encode($respondo);
 		exit();
 	}
-	$query2 = "update personoj_vortoj set nombrilo=nombrilo+1, venontaFojo=DATE_ADD(NOW(),INTERVAL ".getInterval($nombrilo)." DAY),lastfojo=now() where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
-	$bdd->exec($query2);
+	$query2 = "update personoj_vortoj set nombrilo=nombrilo+1, venontaFojo=DATE_ADD(NOW(),INTERVAL ? DAY),lastfojo=now() where vorto_id=? and persono_id=?";
+	$stmt2 = $bdd->prepare($query2);
+	$stmt2->execute([getInterval($nombrilo), $vorto_id, $persono_id]);
 	memoriRespondon($persono_id,$vorto_id,"TRUE",$lernantaRespondo);
 	$respondo["mesagxo"] = "ok";
 	echo json_encode($respondo);
 	exit();
 } else {
 	// on a une mauvaise réponse, on met à 1 le "nombrilo" pour ce mot et on ne change pas la date de la prochaine révision pour qu'on le révise le plus tôt possible :
-	$query = "update personoj_vortoj set nombrilo=1, lastfojo=now() where vorto_id='".$vorto_id."' and persono_id='".$persono_id."'";
-	$bdd->exec($query);
+	$query = "update personoj_vortoj set nombrilo=1, lastfojo=now() where vorto_id=? and persono_id=?";
+	$stmt = $bdd->prepare($query);
+	$stmt->execute([$vorto_id, $persono_id]);
 	// on stocke dans le protokolo les erreurs pour pouvoir aider au besoin
 	//protokolo($persono_id,"MEMORILO","Pour : ".$francaVorto." l'élève a traduit : ".$lernantaRespondo." au lieu de ".$bonaRespondo);
 	$respondo["mesagxo"] = "ko";

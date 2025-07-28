@@ -45,8 +45,10 @@ if (!checkEmail($retadreso)) {
 }
 
 // on vérifie si l'adresse est déjà utilisée
-$query = "select count(*) as combien from personoj where retadreso='".$retadreso."'";
-$result = $bdd->query($query);
+$query = "select count(*) as combien from personoj where retadreso=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$retadreso]);
+$result = $stmt;
 $retadreso_en_base = $result->fetch()["combien"];
 if ($retadreso_en_base>0) {
 	$respondo["type"]="retadreso_jam_ekzistas";
@@ -56,8 +58,10 @@ if ($retadreso_en_base>0) {
 }
 
 // on vérifie si l'identifiant est déjà utilisé
-$query = "select count(*) as combien from personoj where enirnomo='".$identigilo."'";
-$result = $bdd->query($query);
+$query = "select count(*) as combien from personoj where enirnomo=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$identigilo]);
+$result = $stmt;
 $enirnomo_en_base = $result->fetch()["combien"];
 if ($enirnomo_en_base>0) {
 	$respondo["type"]="identigilo";

@@ -17,8 +17,10 @@ if ($persono_id=="") { // personne non connecté, on ressort
 
 
 // vérifier si l'élève a déjà un correcteur pour ce cours :
-$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where nuna_kurso.kurso='".$kurso."' and studanto=".$persono_id;
-$result = $bdd->query($query);
+$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where nuna_kurso.kurso=? and studanto=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$kurso, $persono_id]);
+$result = $stmt;
 $row = $result->fetch();
 if (!$row) {
 	$respondo["type"]="korektanto";
@@ -46,8 +48,10 @@ $fonto .= "<p>Sendu vian korekton al : ".$studanto["retadreso"]."<br>\n";
 
 // Attention, code commun avec petiKorektanton.php et resendiLecionon.php
 
-$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero";
-$result = $bdd->query($query);
+$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=? and lecionoj.numero=? and kurso=? order by ekzerceroj.numero";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id, $leciono, $kurso]);
+$result = $stmt;
 $nbReponse = 0;
 $lastKomando = "";
 while ($row=$result->fetch()) {
@@ -80,11 +84,15 @@ if ($nbReponse==0) {
 
 // on mémorise la leçon 
 // on récupère l'id de la leçon à partir du $lecionero_id
-$query ="select leciono_id from lecioneroj where id=".$lecionero_id;
-$result = $bdd->query($query);
+$query ="select leciono_id from lecioneroj where id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$lecionero_id]);
+$result = $stmt;
 $leciono_id = $result->fetch()["leciono_id"];
-$query ="select count(*) as combien from personoj_lecionoj where persono_id=".$persono_id." and leciono_id=".$leciono_id;
-$result = $bdd->query($query);
+$query ="select count(*) as combien from personoj_lecionoj where persono_id=? and leciono_id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id, $leciono_id]);
+$result = $stmt;
 $combien = $result->fetch()["combien"];
 // on enregistre si il n'y avait rien en base
 if ($combien==0) {
@@ -126,12 +134,15 @@ mailViaSES($korektantaretadreso,"Nouvelle leçon de ".$persono["enirnomo"],$cont
 
 
 // gxisdatigi liajn datumojn en nuna_kurso
-$query = "update nuna_kurso set nunleciono=".$leciono.",stato='K',lastdato=CURDATE() where studanto=".$persono_id." and kurso='".$kurso."'";
-$bdd->exec($query);
+$query = "update nuna_kurso set nunleciono=?,stato='K',lastdato=CURDATE() where studanto=? and kurso=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$leciono, $persono_id, $kurso]);
 
 // indiquer que la dernière section a été faite
-$query ="select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
-$result = $bdd->query($query);
+$query ="select count(*) as combien from personoj_lecioneroj where persono_id=? and lecionero_id=?";
+$stmt = $bdd->prepare($query);
+$stmt->execute([$persono_id, $lecionero_id]);
+$result = $stmt;
 $combien = $result->fetch()["combien"];
 // on enregistre si il n'y avait rien en base
 if ($combien==0) {

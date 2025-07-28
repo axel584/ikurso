@@ -31,36 +31,41 @@ include "pagxkapo.inc.php";
 					echo "<p><span>".$rowKursoj['nomo']."</span>&nbsp;<a href='redaktilo.php?kurso=".$rowKursoj['kodo']."' class='waves-effect waves-light btn'><i class='material-icons'>expand_more</i></a></p>";
 				}
 			} else {
-				$demandoKursoj = "select id,kodo,nomo from kursoj where kodo='".$kurso."'";
-				$resultKursoj = $bdd->query($demandoKursoj) or die(print_r($bdd->errorInfo()));
+				$stmtKursoj = $bdd->prepare("select id,kodo,nomo from kursoj where kodo=?");
+				$stmtKursoj->execute([$kurso]);
+				$resultKursoj = $stmtKursoj;
 				$rowKursoj=$resultKursoj->fetch();
 				echo "<h3>Cours : ".$rowKursoj['nomo']."</h3>";
 				// listes des leçons
 				if ($leciono=="") {
-					$demandoLecionoj = "select id,numero,titolo,retpagxo,kurso,unua,lasta from lecionoj where kurso='".$kurso."'";
-					$resultLecionoj = $bdd->query($demandoLecionoj) or die(print_r($bdd->errorInfo()));
+					$stmtLecionoj = $bdd->prepare("select id,numero,titolo,retpagxo,kurso,unua,lasta from lecionoj where kurso=?");
+					$stmtLecionoj->execute([$kurso]);
+					$resultLecionoj = $stmtLecionoj;
 					while ($rowLecionoj=$resultLecionoj->fetch()) {
 						echo "<p><span>".$rowLecionoj['titolo']."</span>&nbsp;<a href='redaktilo.php?ago=REDAKTILECIONON&kurso=".$kurso."&leciono=".$rowLecionoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>edit</i></a>&nbsp;<a href='redaktilo.php?kurso=".$kurso."&leciono=".$rowLecionoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>expand_more</i></a></p>";		
 					}
 					echo "<br/><a href='redaktilo.php?kurso=".$rowKursoj['kodo']."' class='waves-effect waves-light btn'><i class='material-icons'>add</i></a>";
 
 				} else {
-					$demandoLecionoj = "select id,numero,titolo,retpagxo,kurso,unua,lasta from lecionoj where id='".$leciono."'";
-					$resultLecionoj = $bdd->query($demandoLecionoj) or die(print_r($bdd->errorInfo()));
+					$stmtLecionoj = $bdd->prepare("select id,numero,titolo,retpagxo,kurso,unua,lasta from lecionoj where id=?");
+					$stmtLecionoj->execute([$leciono]);
+					$resultLecionoj = $stmtLecionoj;
 					$rowLecionoj=$resultLecionoj->fetch();
 					echo "<p><h4>Leçon : ".$rowLecionoj['titolo']."</h4></p>";
 					// listes des sections
 					if ($lecionero=="") {
-						$demandoLecioneroj = "select id,leciono_id,titolo,tipo,enhavo,ordo,unua,lasta,dauxro,android from lecioneroj where leciono_id='".$leciono."'";
-						$resultLecioneroj = $bdd->query($demandoLecioneroj) or die(print_r($bdd->errorInfo()));
+						$stmtLecioneroj = $bdd->prepare("select id,leciono_id,titolo,tipo,enhavo,ordo,unua,lasta,dauxro,android from lecioneroj where leciono_id=?");
+						$stmtLecioneroj->execute([$leciono]);
+						$resultLecioneroj = $stmtLecioneroj;
 						while ($rowLecioneroj=$resultLecioneroj->fetch()) {
 							echo "<p><span>".$rowLecioneroj['titolo']."</span>&nbsp;<a href='redaktilo.php?ago=REDAKTILECIONERON&kurso=".$kurso."&leciono=".$leciono."&lecionero=".$rowLecioneroj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>edit</i></a>&nbsp;<a href='redaktilo.php?kurso=".$kurso."&leciono=".$leciono."&lecionero=".$rowLecioneroj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>expand_more</i></a>";		
 						}
 						echo "<br/><a href='redaktilo.php?kurso=".$rowLecionoj['id']."' class='waves-effect waves-light btn'><i class='material-icons'>add</i></a>";
 					} else {
 						// mettre le titre de la section
-						$demandoLecioneroj = "select id,leciono_id,titolo,tipo,enhavo,ordo,unua,lasta,dauxro,android from lecioneroj where id='".$lecionero."'";
-						$resultLecioneroj = $bdd->query($demandoLecioneroj) or die(print_r($bdd->errorInfo()));
+						$stmtLecioneroj = $bdd->prepare("select id,leciono_id,titolo,tipo,enhavo,ordo,unua,lasta,dauxro,android from lecioneroj where id=?");
+						$stmtLecioneroj->execute([$lecionero]);
+						$resultLecioneroj = $stmtLecioneroj;
 						$rowLecioneroj=$resultLecioneroj->fetch();
 						echo "<p><h5>Section : ".$rowLecioneroj['titolo']."</h5></p>";
 						// listes des sections
@@ -96,8 +101,9 @@ include "pagxkapo.inc.php";
 			}
 			// AFFICHAGE DES FORMULAIRES
 			if ($ago=="REDAKTIEKZERCERON") {
-				$demandoEkzerceroj = "select id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla from ekzerceroj where id='".$ekzercero."'";
-				$resultEkzerceroj = $bdd->query($demandoEkzerceroj) or die(print_r($bdd->errorInfo()));
+				$stmtEkzerceroj = $bdd->prepare("select id,ekzerco_id,kodo,numero,demando,respondo,normaligita,bildo,forigita,korektebla from ekzerceroj where id=?");
+				$stmtEkzerceroj->execute([$ekzercero]);
+				$resultEkzerceroj = $stmtEkzerceroj;
 				$rowEkzerceroj=$resultEkzerceroj->fetch();
 				// afficher le formulaire pour éditer une question
 				echo "<fieldset class='ekzerco'>";

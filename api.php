@@ -149,7 +149,7 @@ class TekstojAPI {
         $offset = max(0, $offset); // Minimum 0
         
         $sql .= " LIMIT " . $limit . " OFFSET " . $offset;
-        
+
         try {
             $stmt = $this->conn->prepare($sql);
             $stmt->execute($params);

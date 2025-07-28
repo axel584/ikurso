@@ -9,8 +9,9 @@ if ($rajto!='A' && $rajto!='I' && $rajto!='K'){header("Location:index.php?erarko
 
 include "pagxkapo.inc.php";
 
-$query = "select titolo from lecionoj where  numero=".$leciono." and kurso='".$kurso."'";
-$result = $bdd->query($query);
+$stmt = $bdd->prepare("select titolo from lecionoj where numero=? and kurso=?");
+$stmt->execute([$leciono, $kurso]);
+$result = $stmt;
 $row=$result->fetch();
 $titolo = $row["titolo"];
 
@@ -24,8 +25,9 @@ $titolo = $row["titolo"];
 <?php
 
 //$query = "select kodo,demando,komando,count(*) as combien,max(dato) from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where numero=".$leciono." and kurso='".$kurso."' group by komando,kodo, demando order by kodo,max(dato) desc";
-$query = "select ekzercoj.id,komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where lecionoj.numero=".$leciono." and kurso='".$kurso."'";
-$result = $bdd->query($query);
+$stmt = $bdd->prepare("select ekzercoj.id,komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where lecionoj.numero=? and kurso=?");
+$stmt->execute([$leciono, $kurso]);
+$result = $stmt;
 $nbReponse = 0;
 $kodoj = array();
 $komando="";
@@ -34,8 +36,9 @@ while ($row=$result->fetch()) {
 	print "<legend>".$row['komando']."</legend>";
 	//echo "<p>".$row["demando"]."<br>\n";
 	//echo "<span style=\"color:blue\">".$row["combien"]."</span></p>\n";
-	$query2 = "select numero,demando,respondo from ekzerceroj where ekzerco_id=".$row["id"]." order by numero";
-	$result2 = $bdd->query($query2);
+	$stmt2 = $bdd->prepare("select numero,demando,respondo from ekzerceroj where ekzerco_id=? order by numero");
+	$stmt2->execute([$row["id"]]);
+	$result2 = $stmt2;
 	while ($row2=$result2->fetch()) {
 		echo "<p>".$row2["numero"].".&nbsp;".$row2["demando"]."<br>\n";
 		echo "<span style=\"color:blue\">".$row2["respondo"]."</span></p>";

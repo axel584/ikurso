@@ -23,8 +23,9 @@ if (($retadreso=="") || ($enirnomo=="") || ($pasvorto=="")) {
 	//header("Location:aligxi.php?erarkodo=6");
 	exit(0);
 } else {
-	$query ="select * from personoj where enirnomo='$enirnomo'";
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$stmt = $bdd->prepare("select * from personoj where enirnomo=?");
+	$stmt->execute([$enirnomo]);
+	$result = $stmt;
 	$row=$result->fetch();
 	if ($row) { // cas où on a un résultat
 		if ($retadreso==$row["retadreso"]) { // une inscription existe deja avec le meme identifiant et le meme email

@@ -129,8 +129,9 @@ function apartigiPersonon($id) {
 	global $bdd;
 	$pasvorto=strtoupper($pasvorto);
 	$enirnomo=strtoupper($enirnomo);
-	$query = "select * from personoj where upper(enirnomo)='$enirnomo' and upper(pasvorto)='$pasvorto'";
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$stmt = $bdd->prepare("select * from personoj where upper(enirnomo)=? and upper(pasvorto)=?");
+	$stmt->execute([$enirnomo, $pasvorto]);
+	$result = $stmt;
 	$row = $result->fetch();
 	if (!$row) {
 		return "0";

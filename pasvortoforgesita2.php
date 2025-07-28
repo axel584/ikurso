@@ -3,8 +3,9 @@
 $retadreso=$_POST['retadreso'];
 include "util.php";
 malfermidatumbazon();
-$query = "select enirnomo,pasvorto,id from personoj where retadreso='$retadreso'";
-$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+$stmt = $bdd->prepare("select enirnomo,pasvorto,id from personoj where retadreso=?");
+$stmt->execute([$retadreso]);
+$result = $stmt;
 if (!$row = $result->fetch()) { // aucune ligne retournée
 	header("Location:pasvortoforgesita.php?erarkodo=10");
 }

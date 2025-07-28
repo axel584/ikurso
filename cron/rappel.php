@@ -5,8 +5,9 @@ malfermidatumbazon();
 
 function jamFinisKurson($studanto) {
 	global $bdd;
-	$query = "SELECT stato FROM `nuna_kurso` WHERE studanto='".$studanto."' order by lastdato desc";
-	$result = $bdd->query($query);
+	$stmt = $bdd->prepare("SELECT stato FROM `nuna_kurso` WHERE studanto=? order by lastdato desc");
+	$stmt->execute([$studanto]);
+	$result = $stmt;
 	$row = $result->fetch();
 	if ($row) {
 		return $row["stato"]=="F" || $row["stato"]=="H";
@@ -41,7 +42,8 @@ $result = $bdd->query($query);
 	$contents=str_replace("##LIEN_COURS##",$prochaine_lecon,$contents);
 
 	// ajout d'un commentaire pour les correcteurs
-	$query2 = "insert into komentoj (studanto, korektanto,dato,teksto) values ('".$row["id"]."','10',NOW(),'Envoi relance 6ème jour')";
+	$stmt2 = $bdd->prepare("insert into komentoj (studanto, korektanto,dato,teksto) values (?,10,NOW(),'Envoi relance 6ème jour')");
+	$stmt2->execute([$row["id"]]);
 	$bdd->query($query2);
 
 	// envoie de l'email
@@ -73,7 +75,8 @@ $result = $bdd->query($query);
 	$contents=str_replace("##LIEN_COURS##",$prochaine_lecon,$contents);
 
 	// ajout d'un commentaire pour les correcteurs
-	$query2 = "insert into komentoj (studanto, korektanto,dato,teksto) values ('".$row["id"]."','10',NOW(),'Envoi relance 10ème jour')";
+	$stmt2 = $bdd->prepare("insert into komentoj (studanto, korektanto,dato,teksto) values (?,10,NOW(),'Envoi relance 10ème jour')");
+	$stmt2->execute([$row["id"]]);
 	$bdd->query($query2);
 
 		// envoie de l'email
@@ -88,14 +91,18 @@ while($row = $result->fetch()) {
 	$studanto = $row["studanto"];
 	$kurso = $row["kurso"];
 	// on diminue de 1 le nombre d'élèves du correcteur pour ce cours 
-	$query = "select kiom_lernantoj from korektebla_kurso where korektanto='".$korektanto."' and kurso='".$kurso."'";
+	$stmt = $bdd->prepare("select kiom_lernantoj from korektebla_kurso where korektanto=? and kurso=?");
+	$stmt->execute([$korektanto, $kurso]);
+	$query = $stmt;
 	$kiom = $bdd->query($query)->fetch()["kiom_lernantoj"];
 	if ($kiom>0) { // on diminue uniquement si le nombre d'élèves voulu est supérieur à 0
 		$nouveau_nombre_eleves = $kiom - 1;
-		$query = "update korektebla_kurso set kiom_lernantoj='".$nouveau_nombre_eleves."' where korektanto='".$korektanto."' and kurso='".$kurso."'";
+		$stmt = $bdd->prepare("update korektebla_kurso set kiom_lernantoj=? where korektanto=? and kurso=?");
+		$stmt->execute([$nouveau_nombre_eleves, $korektanto, $kurso]);
 		$bdd->exec($query);
 	}
-	$query = "update nuna_kurso set stato='H',findato=now() where studanto='".$studanto."' and kurso='".$kurso."' and stato<>'H' and stato<>'F'";
+	$stmt = $bdd->prepare("update nuna_kurso set stato='H',findato=now() where studanto=? and kurso=? and stato<>'H' and stato<>'F'");
+	$stmt->execute([$studanto, $kurso]);
 	$bdd->exec($query);
 	protokolo($studanto,"SUPPRESSON AUTOMATIQUE","suppression de l'élève et diminution du nb d'élèves pour ".$korektanto);
 

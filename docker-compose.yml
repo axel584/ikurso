@@ -9,6 +9,8 @@ services:
       - ./:/var/www/html
     ports:
       - "8080:80"
+    environment:
+      - APP_ENV=development
     depends_on:
       - db
 
@@ -26,6 +28,12 @@ services:
     volumes:
       - db_data:/var/lib/mysql
       - ./sql:/docker-entrypoint-initdb.d
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"  # Port SMTP
+      - "8025:8025"  # Interface web
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin

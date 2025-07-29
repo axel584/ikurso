@@ -146,39 +146,50 @@ else {
 }
 
 function mailViaSES($retadreso,$objekto,$contentsHtml) {
-	global $hostSmtpSES,$portSmtpSES,$userSES,$passwordSES,$useSmtp;
-	$mail = new PHPMailer(true);
-	$mail->CharSet = 'UTF-8';
-	try {
-    // Specify the SMTP settings.
-	if ($useSmtp) {
-		$mail->isSMTP();
-	}
-    $mail->setFrom("ikurso@esperanto-france.org", "Ikurso");
-    $mail->Username   = $userSES;
-    $mail->Password   = $passwordSES;
-    $mail->Host       = $hostSmtpSES;
-    $mail->Port       = $portSmtpSES;
-    $mail->SMTPAuth   = true;
-    $mail->SMTPSecure = 'tls';
+    global $hostSmtpSES,$portSmtpSES,$userSES,$passwordSES;
+    $mail = new PHPMailer(true);
+    $mail->CharSet = 'UTF-8';
+    
+    try {
+        // Toujours utiliser SMTP
+        $mail->isSMTP();
+        $mail->Host       = $hostSmtpSES;
+        $mail->Port       = $portSmtpSES;
 
-    // Specify the message recipients.
-	foreach(explode(",",$retadreso) as $destinataire) {
-		$mail->addAddress($destinataire);
-	}
-    // You can also add CC, BCC, and additional To recipients here.
 
-    // Specify the content of the message.
-    $mail->isHTML(true);
-    $mail->Subject    = $objekto;
-    $mail->Body       = $contentsHtml;
-    $mail->Send();
-    return 1;
-} catch (phpmailerException $e) {
-    echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
-} catch (Exception $e) {
-    echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
-}
+		// Détection automatique de l'environnement
+		$isMailHog = (strpos($hostSmtpSES, 'localhost') !== false || 
+						strpos($hostSmtpSES, 'mailhog') !== false ||
+						$portSmtpSES == 1025);
+		
+		if ($isMailHog) {
+			// Configuration MailHog
+			$mail->SMTPAuth = false;
+			$mail->SMTPSecure = false;
+		} else {	
+			$mail->SMTPAuth   = true;
+			$mail->Username   = $userSES;
+			$mail->Password   = $passwordSES;
+			$mail->SMTPSecure = 'tls';
+		}	
+        
+        $mail->setFrom("ikurso@esperanto-france.org", "Ikurso");
+        
+        foreach(explode(",",$retadreso) as $destinataire) {
+            $mail->addAddress(trim($destinataire));
+        }
+        
+        $mail->isHTML(true);
+        $mail->Subject = $objekto;
+        $mail->Body = $contentsHtml;
+        
+        $mail->send();
+        return 1;
+        
+    } catch (Exception $e) {
+        echo "Erreur d'envoi: {$mail->ErrorInfo}", PHP_EOL;
+        return 0;
+    }
 }
 
 function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {

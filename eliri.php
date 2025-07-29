@@ -9,6 +9,7 @@ else {
 	session_start();
 	session_unset();
 	session_destroy();
+	setcookie("access_token","", time()-3600,"/"); // supprime
 	header( "Location:index.php");
 }
 ?>

@@ -1518,6 +1518,10 @@ INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('
 INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('subbluajplanedoj21','La serpento kaj la rano','Laure Patas d''Illiers','https://butiko-esperanto-france.org/litterature-originale-en-esperanto/1021-sur-bluaj-planedoj.html','');
 INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('idiotoj','La idiotoj','Sébastien Thiérry','https://butiko-esperanto-france.org/theatre/406-sen-lifto.html','');
 INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('stranga_malapero01','Stranga malapero - chapitre 1','','https://butiko-esperanto-france.org/lectures-faciles/896-stranga-malapero.html','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('uea_facila_483','La plej alta konstruaĵo en la mondo','Craig Williams','https://uea.facila.org/artikoloj/lega%C4%B5oj/la-plej-alta-konstrua%C4%B5o-en-la-mondo-r483/','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('uea_facila_477','En Novzelando monto iĝas persono','Laurent Ramette','https://uea.facila.org/artikoloj/lega%C4%B5oj/en-novzelando-monto-i%C4%9Das-persono-r477/','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('uea_facila_471','Kiel plej efike lerni Esperanton','Lulu Testudo','https://uea.facila.org/artikoloj/opinioj/kiel-plej-efike-lerni-esperanton-r471/','');
+INSERT INTO `tekstoj` (`id`, `titolo`, `auxtoro`, `fonto`, `etikedoj`) VALUES ('uea_facila_465','Renato Corsetti: energia, lerta kaj kuraĝa','Humphrey Tonkin','https://uea.facila.org/artikoloj/homoj/renato-corsetti-energia-lerta-kaj-kura%C4%9Da-r465/','');
 update tekstoj set nivelo=300, vortoj=211 where id='lasumin01';
 update tekstoj set nivelo=699, vortoj=387 where id='lasumin02';
 update tekstoj set nivelo=659, vortoj=624 where id='lasumin03';

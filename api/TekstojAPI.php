@@ -135,10 +135,11 @@ class TekstojAPI {
             $params[] = '%' . $_GET['etikedoj'] . '%';
         }
         
-        // Recherche générale dans titolo et auxtoro
+        // Recherche générale dans titolo, auxtoro et etikedoj
         if (isset($_GET['q'])) {
-            $sql .= " AND (titolo LIKE ? OR auxtoro LIKE ?)";
+            $sql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR etikedoj LIKE ?)";
             $searchTerm = '%' . $_GET['q'] . '%';
+            $params[] = $searchTerm;
             $params[] = $searchTerm;
             $params[] = $searchTerm;
         }
@@ -160,7 +161,6 @@ class TekstojAPI {
         $sortOrder = isset($_GET['order']) && strtoupper($_GET['order']) === 'DESC' ? 'DESC' : 'ASC';
         
         $sql .= " ORDER BY " . $sortField . " " . $sortOrder;
-        
         // Pagination
         $limit = isset($_GET['limit']) ? intval($_GET['limit']) : 10;
         $offset = isset($_GET['offset']) ? intval($_GET['offset']) : 0;
@@ -213,7 +213,7 @@ class TekstojAPI {
                 $countSql .= " AND etikedoj LIKE ?";
             }
             if (isset($_GET['q'])) {
-                $countSql .= " AND (titolo LIKE ? OR auxtoro LIKE ?)";
+                $countSql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR etikedoj LIKE ?)";
             }
             if (isset($_GET['titolo'])) {
                 $countSql .= " AND titolo LIKE ?";
@@ -279,16 +279,32 @@ class TekstojAPI {
         exit();
     }
     
+    private function getAuthorizationHeader() {
+        $headers = null;
+        
+        if (isset($_SERVER['Authorization'])) {
+            $headers = trim($_SERVER["Authorization"]);
+        } else if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+            $headers = trim($_SERVER["HTTP_AUTHORIZATION"]);
+        } else if (function_exists('apache_request_headers')) {
+            $requestHeaders = apache_request_headers();
+            if (isset($requestHeaders['Authorization'])) {
+                $headers = trim($requestHeaders['Authorization']);
+            }
+        }
+        
+        return $headers;
+    }
+
     private function validateBearerToken() {
         global $INTERNAL_ACCESS_TOKEN;
         
-        $headers = getallheaders();
-        if (!isset($headers['Authorization'])) {
+        $header = $this->getAuthorizationHeader();
+        if (!isset($header)) {
             return false;
         }
         
-        $authHeader = $headers['Authorization'];
-        if (!preg_match('/Bearer\s+(\S+)/', $authHeader, $matches)) {
+        if (!preg_match('/Bearer\s+(\S+)/', $header, $matches)) {
             return false;
         }
         

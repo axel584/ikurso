@@ -149,7 +149,6 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
-			//include "lasusono.inc.php";
 		?>
 
 			<div class="row">
@@ -163,6 +162,10 @@ include "gerdakapo.inc.php";
 			</div>
 
 			<a id="unua" class="scrollspy"></a>
+			<?php 	
+				$lasuminparto = "a";
+				include "lasusono.inc.php";
+			?>
 			<h3>Ek al fora insulo!</h3>
 		
 			<p>Mi saltas pro ĝojo, mi dancas pro ĝojo, mi eksplodas per rido pro
@@ -311,6 +314,10 @@ include "gerdakapo.inc.php";
 			manĝon.</p>
 			
 			<a id="dua" class="scrollspy"></a>
+			<?php 	
+				$lasuminparto = "b";
+				include "lasusono.inc.php";
+			?>
 			<h3>Skribas malliberulo</h3>
 		
 			<p>Kara Amikino,</p>

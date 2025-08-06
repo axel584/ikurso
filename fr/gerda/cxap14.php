@@ -241,6 +241,10 @@ include "gerdakapo.inc.php";
 			</div>
 
 			<a id="unua" class="scrollspy"></a>
+			<?php 	
+				$lasuminparto = "a";
+				include "lasusono.inc.php";
+			?>
 			<h3>Silentu, enaj voĉoj!</h3>
 			
 			<p>Mi kuŝis en la lito, en mia kara, bone varma lito. La suno jam estis
@@ -374,6 +378,10 @@ include "gerdakapo.inc.php";
 			</ol>
 
 			<a id="dua" class="scrollspy"></a>
+			<?php 	
+				$lasuminparto = "b";
+				include "lasusono.inc.php";
+			?>
 			<h3>Timiga diro</h3>
 			
 			<p>Estis priplorinda travivaĵo. Vi scias, ke mi decidis diri al miaj

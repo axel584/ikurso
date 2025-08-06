@@ -181,7 +181,6 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
-			//include "lasusono.inc.php";
 		?>
 
 			<div class="row">
@@ -193,9 +192,12 @@ include "gerdakapo.inc.php";
 					</div>
 				</div>
 			</div>
-
 			<a id="unua" class="scrollspy"></a>
 			<h3>La fakulo-instruisto venis de malproksime</h3>
+			<?php 	
+				$lasuminparto = "a";
+				include "lasusono.inc.php";
+			?>
 			
 			<p>Komence, rigardu atente la aparaton. Ion similan vi neniam vidis, ĉu? 
 			Uzu do la tutan tempon necesan por bone rigardi ĝin.</p>
@@ -295,6 +297,10 @@ include "gerdakapo.inc.php";
 			<a id="dua" class="scrollspy"></a>
 			<h3>Troa scivolo kondukas morten</h3>
 	
+			<?php 	
+				$lasuminparto = "b";
+				include "lasusono.inc.php";
+			?>
 			<p>Aŭskultu, mi tamen ŝatus scii, kion vi celas finfine. Kio estas via
 			celo ? Vi staris trans la pordo, kaj vi aŭskultis, ĉu ne ? Vi
 			subaŭskultis<a href='#notoj2'>[1]</a>, kiel oni diras. Mi ne dubas, ke interesas vin scii,

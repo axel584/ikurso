@@ -200,7 +200,6 @@ include "gerdakapo.inc.php";
 		<?php 
 		} // fin section 4
 		if ($section=="5") {
-			//include "lasusono.inc.php";
 		?>
 
 			<div class="row">
@@ -214,6 +213,10 @@ include "gerdakapo.inc.php";
 			</div>
 			
 			<a id="unua" class="scrollspy"></a>
+			<?php 	
+				$lasuminparto = "a";
+				include "lasusono.inc.php";
+			?>
 			<h3>La letersoifa patrino</h3>
 			
 			<p>Ĉiam estas ege malfacile komenci leteron. Tuj kiam mi havas plumon
@@ -335,6 +338,10 @@ include "gerdakapo.inc.php";
 			bona filo. Neniam rompis plumon pro troskribo mi.</p>
 		
 			<a id="dua" class="scrollspy"></a>
+			<?php 	
+				$lasuminparto = "b";
+				include "lasusono.inc.php";
+			?>
 			<h3>Mi atendas gravan leteron</h3>
 				
 			<p>Kioma horo estas? Preskaŭ la dua kaj kvin minutoj. Aŭ, se vi

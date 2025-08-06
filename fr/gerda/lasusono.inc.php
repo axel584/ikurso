@@ -1,6 +1,6 @@
 <?php
 $cxapitro=substr(basename($_SERVER['REQUEST_URI']),4,2);
-$sono=$vojo."audio/lasumin".$cxapitro.".mp3";
+$sono=$vojo."audio/lasumin".$cxapitro.$lasuminparto.".mp3";
 ?>
 			<fieldset class="sono">
 				<legend>Aŭskultu tiun rakonton:</legend>

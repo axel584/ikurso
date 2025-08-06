@@ -173,6 +173,10 @@ include "gerdakapo.inc.php";
 			</div>
 
 			<a id="unua" class="scrollspy"></a>
+			<?php 	
+				$lasuminparto = "a";
+				include "lasusono.inc.php";
+			?>
 			<h3>Mistero en papervendejo</h3>
 			
 			<p>Kiam mi vidis Ivon hieraŭ, li ne nur alportis tre bonajn ĉokoladajn
@@ -286,6 +290,10 @@ include "gerdakapo.inc.php";
 			kun mi, ĉu ne, Johana ?</p>
 			
 			<a id="dua" class="scrollspy"></a>
+			<?php 	
+				$lasuminparto = "b";
+				include "lasusono.inc.php";
+			?>
 			<h3>Du raportoj pri vendado</h3>
 		
 			<p>Sinjoroj, mi bedaŭrinde devas diri, ke la raporto pri la vendado de

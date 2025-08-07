@@ -78,7 +78,7 @@ class TekstojAPI {
     
     // GET /tekstoj - Récupérer tous les tekstoj avec filtres optionnels (sans enhavo)
     private function getTekstoj() {
-        $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono FROM tekstoj";
+        $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono, leganto FROM tekstoj";
         $params = array();
         
         // Filtre par statut actif/inactif
@@ -135,10 +135,11 @@ class TekstojAPI {
             $params[] = '%' . $_GET['etikedoj'] . '%';
         }
         
-        // Recherche générale dans titolo, auxtoro et etikedoj
+        // Recherche générale dans titolo, auxtoro, etikedoj et leganto
         if (isset($_GET['q'])) {
-            $sql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR etikedoj LIKE ?)";
+            $sql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR etikedoj LIKE ? OR leganto LIKE ?)";
             $searchTerm = '%' . $_GET['q'] . '%';
+            $params[] = $searchTerm;
             $params[] = $searchTerm;
             $params[] = $searchTerm;
             $params[] = $searchTerm;
@@ -213,7 +214,7 @@ class TekstojAPI {
                 $countSql .= " AND etikedoj LIKE ?";
             }
             if (isset($_GET['q'])) {
-                $countSql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR etikedoj LIKE ?)";
+                $countSql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR etikedoj LIKE ? OR leganto LIKE ?)";
             }
             if (isset($_GET['titolo'])) {
                 $countSql .= " AND titolo LIKE ?";
@@ -412,7 +413,7 @@ class TekstojAPI {
             $updateFields = array();
             $params = array();
             
-            $allowedFields = ['titolo', 'auxtoro', 'fonto', 'nivelo', 'vortoj', 'kolekto', 'etikedoj', 'sono', 'enhavo', 'aktiva'];
+            $allowedFields = ['titolo', 'auxtoro', 'fonto', 'nivelo', 'vortoj', 'kolekto', 'etikedoj', 'sono', 'enhavo', 'aktiva', 'leganto'];
             
             foreach ($allowedFields as $field) {
                 if (isset($data[$field])) {

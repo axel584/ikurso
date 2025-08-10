@@ -1,0 +1,791 @@
+openapi: 3.0.3
+info:
+  title: Ikurso API
+  description: |
+    API pour la plateforme d'apprentissage Esperanto Ikurso
+    
+    **🔗 Usage des URLs:**
+    
+    Les endpoints de cette API sont accessibles via le paramètre `path` du fichier `api.php`:
+    
+    - Authentication: `GET /api.php?path=auth/login` (au lieu de `/auth/login`)
+    - Tekstoj: `GET /api.php?path=tekstoj` (au lieu de `/tekstoj`)
+    - Tekstoj avec ID: `GET /api.php?path=tekstoj/abc123` (au lieu de `/tekstoj/abc123`)
+    
+    **📝 Exemple de requête cURL:**
+    ```bash
+    curl -X POST http://localhost:8080/api.php?path=auth/register \
+      -H "Content-Type: application/json" \
+      -d '{"enirnomo":"user","pasvorto":"pass","retadreso":"user@example.com"}'
+    ```
+  version: 1.0.0
+  contact:
+    email: axel.rousseau@esperanto-france.org
+  license:
+    name: MIT
+
+servers:
+  - url: http://localhost:8080
+    description: Serveur de développement
+  - url: https://ikurso.esperanto-france.org
+    description: Serveur de production
+
+paths:
+  # Authentication API
+  /api.php:
+    get:
+      parameters:
+        - name: path
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [auth/login, auth/logout, auth/register, auth/me, tekstoj, tekstoj/{id}]
+      responses:
+        '404':
+          description: Endpoint non trouvé
+          
+  # Authentication endpoints
+  /auth/login:
+    post:
+      summary: Authentification utilisateur
+      description: Connecte un utilisateur avec identifiant et mot de passe
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - identigilo
+                - pasvorto
+              properties:
+                identigilo:
+                  type: string
+                  description: Nom d'utilisateur
+                  example: "lernanto1"
+                pasvorto:
+                  type: string
+                  description: Mot de passe
+                  example: "test"
+      responses:
+        '200':
+          description: Authentification réussie
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Authentification réussie"
+                  user:
+                    $ref: '#/components/schemas/User'
+                  access_token:
+                    type: string
+                    description: Token JWT d'authentification
+                  redirect_url:
+                    type: string
+                    description: URL de redirection basée sur les droits utilisateur
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /auth/register:
+    post:
+      summary: Inscription utilisateur
+      description: Créer un nouveau compte utilisateur
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - enirnomo
+                - pasvorto
+                - retadreso
+              properties:
+                enirnomo:
+                  type: string
+                  description: Nom d'utilisateur (identifiant)
+                  example: "nouvelutilisateur"
+                pasvorto:
+                  type: string
+                  description: Mot de passe
+                  example: "motdepasse123"
+                retadreso:
+                  type: string
+                  format: email
+                  description: Adresse email
+                  example: "user@example.com"
+      responses:
+        '201':
+          description: Compte créé avec succès
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Compte créé avec succès. Un email d'activation a été envoyé à votre adresse."
+                  user_id:
+                    type: integer
+                    description: ID de l'utilisateur créé
+                    example: 123
+        '400':
+          description: Erreur de validation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Un compte existe déjà avec cet identifiant"
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /auth/logout:
+    post:
+      summary: Déconnexion utilisateur
+      description: Déconnecte l'utilisateur et invalide la session
+      tags:
+        - Authentication
+      responses:
+        '200':
+          description: Déconnexion réussie
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Déconnexion réussie"
+
+  /auth/me:
+    get:
+      summary: Informations utilisateur actuel
+      description: Récupère les informations de l'utilisateur connecté
+      tags:
+        - Authentication
+      responses:
+        '200':
+          description: Informations utilisateur
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    $ref: '#/components/schemas/User'
+                  cours_info:
+                    $ref: '#/components/schemas/CourseInfo'
+                  redirect_url:
+                    type: string
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+  # Tekstoj API endpoints
+  /tekstoj:
+    get:
+      summary: Liste tous les tekstoj
+      description: Récupère une liste paginée de textes avec filtres optionnels
+      tags:
+        - Tekstoj
+      parameters:
+        - name: aktiva
+          in: query
+          description: Filtre par statut actif (1, 0, ou 'all' pour tous)
+          schema:
+            type: string
+            enum: ["1", "0", "all"]
+            default: "1"
+        - name: auxtoro
+          in: query
+          description: Recherche partielle dans le nom de l'auteur
+          schema:
+            type: string
+        - name: titolo
+          in: query
+          description: Recherche partielle dans le titre
+          schema:
+            type: string
+        - name: kolekto
+          in: query
+          description: Filtre par collection
+          schema:
+            type: string
+        - name: nivelo_min
+          in: query
+          description: Niveau minimum
+          schema:
+            type: integer
+            minimum: 1
+        - name: nivelo_max
+          in: query
+          description: Niveau maximum
+          schema:
+            type: integer
+        - name: vortoj_min
+          in: query
+          description: Nombre minimum de mots
+          schema:
+            type: integer
+            minimum: 0
+        - name: vortoj_max
+          in: query
+          description: Nombre maximum de mots
+          schema:
+            type: integer
+        - name: etikedoj
+          in: query
+          description: Recherche dans les étiquettes
+          schema:
+            type: string
+        - name: q
+          in: query
+          description: Recherche générale (titre, auteur, étiquettes, lecteur)
+          schema:
+            type: string
+        - name: has_sono
+          in: query
+          description: Filtre les textes avec fichier audio
+          schema:
+            type: boolean
+        - name: sort
+          in: query
+          description: Champ de tri
+          schema:
+            type: string
+            enum: [id, titolo, nivelo, vortoj, ekdato]
+            default: id
+        - name: order
+          in: query
+          description: Ordre de tri
+          schema:
+            type: string
+            enum: [ASC, DESC]
+            default: ASC
+        - name: limit
+          in: query
+          description: Nombre d'éléments par page
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+        - name: offset
+          in: query
+          description: Décalage pour la pagination
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+      responses:
+        '200':
+          description: Liste des tekstoj
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TekstoSummary'
+                  pagination:
+                    $ref: '#/components/schemas/Pagination'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+    post:
+      summary: Créer un nouveau teksto
+      description: Créer un nouveau texte (authentification requise)
+      tags:
+        - Tekstoj
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TekstoInput'
+      responses:
+        '201':
+          description: Teksto créé avec succès
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID du teksto créé
+                  message:
+                    type: string
+                    example: "Teksto créé avec succès"
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '409':
+          description: Conflit - ID déjà existant
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Un teksto avec cet ID existe déjà"
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /tekstoj/{id}:
+    get:
+      summary: Récupère un teksto spécifique
+      description: Récupère tous les détails d'un texte incluant son contenu
+      tags:
+        - Tekstoj
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID du teksto
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Détails du teksto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TekstoFull'
+        '404':
+          description: Teksto non trouvé
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Teksto non trouvé"
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+    put:
+      summary: Mise à jour complète d'un teksto
+      description: Remplace entièrement un teksto existant (authentification requise)
+      tags:
+        - Tekstoj
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID du teksto à modifier
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - titolo
+                - auxtoro
+              properties:
+                titolo:
+                  type: string
+                  description: Titre du texte
+                auxtoro:
+                  type: string
+                  description: Auteur du texte
+                fonto:
+                  type: string
+                  description: Source du texte
+                nivelo:
+                  type: integer
+                  description: Niveau de difficulté
+                vortoj:
+                  type: integer
+                  description: Nombre de mots
+                kolekto:
+                  type: string
+                  description: Collection
+                etikedoj:
+                  type: string
+                  description: Étiquettes (séparées par des virgules)
+                sono:
+                  type: string
+                  description: Nom du fichier audio
+                enhavo:
+                  type: object
+                  description: Contenu du texte (structure JSON)
+                aktiva:
+                  type: integer
+                  enum: [0, 1]
+                  description: Statut actif (0=inactif, 1=actif)
+                leganto:
+                  type: string
+                  description: Lecteur du texte audio
+      responses:
+        '200':
+          description: Teksto mis à jour avec succès
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  message:
+                    type: string
+                    example: "Teksto mis à jour avec succès"
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          description: Teksto non trouvé
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+    patch:
+      summary: Mise à jour partielle d'un teksto
+      description: Met à jour seulement les champs fournis d'un teksto existant (authentification requise)
+      tags:
+        - Tekstoj
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID du teksto à modifier
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                titolo:
+                  type: string
+                  description: Titre du texte
+                auxtoro:
+                  type: string
+                  description: Auteur du texte
+                fonto:
+                  type: string
+                  description: Source du texte
+                nivelo:
+                  type: integer
+                  description: Niveau de difficulté
+                vortoj:
+                  type: integer
+                  description: Nombre de mots
+                kolekto:
+                  type: string
+                  description: Collection
+                etikedoj:
+                  type: string
+                  description: Étiquettes (séparées par des virgules)
+                sono:
+                  type: string
+                  description: Nom du fichier audio
+                enhavo:
+                  type: object
+                  description: Contenu du texte (structure JSON)
+                aktiva:
+                  type: integer
+                  enum: [0, 1]
+                  description: Statut actif (0=inactif, 1=actif)
+                leganto:
+                  type: string
+                  description: Lecteur du texte audio
+      responses:
+        '200':
+          description: Teksto mis à jour avec succès
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  message:
+                    type: string
+                    example: "Teksto mis à jour avec succès"
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          description: Teksto non trouvé
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Token d'authentification interne pour certaines opérations
+
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ID unique de l'utilisateur
+        enirnomo:
+          type: string
+          description: Nom d'utilisateur
+        rajtoj:
+          type: string
+          enum: [A, K, P, S]
+          description: "Droits utilisateur: A=Administrateur, K=Correcteur, P=Pré-élève, S=Élève"
+        retadreso:
+          type: string
+          format: email
+          description: Adresse email
+        personnomo:
+          type: string
+          description: Prénom
+        familinomo:
+          type: string
+          description: Nom de famille
+        aktivigita:
+          type: boolean
+          description: Compte activé ou non
+        ekdato:
+          type: string
+          format: date-time
+          description: Date de création du compte
+        lasteniro:
+          type: string
+          format: date-time
+          description: Dernière connexion
+
+    CourseInfo:
+      type: object
+      nullable: true
+      properties:
+        kurso:
+          type: string
+          enum: [CG, GR, KE]
+          description: "Code du cours: CG=Cours de grammaire, GR=Gerda malaperis, KE=Cours par échanges"
+        stato:
+          type: string
+          enum: [N, K, H, F]
+          description: "État: N=Nouveau, K=En cours, H=En attente, F=Fini"
+        nunleciono:
+          type: integer
+          description: Numéro de la leçon actuelle
+
+    TekstoSummary:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Identifiant unique du texte
+        titolo:
+          type: string
+          description: Titre du texte
+        auxtoro:
+          type: string
+          description: Auteur du texte
+        fonto:
+          type: string
+          nullable: true
+          description: Source du texte
+        nivelo:
+          type: integer
+          nullable: true
+          description: Niveau de difficulté
+        vortoj:
+          type: integer
+          nullable: true
+          description: Nombre de mots
+        kolekto:
+          type: string
+          nullable: true
+          description: Collection
+        etikedoj:
+          type: string
+          nullable: true
+          description: Étiquettes (séparées par des virgules)
+        sono:
+          type: string
+          nullable: true
+          description: Nom du fichier audio
+        leganto:
+          type: string
+          nullable: true
+          description: Lecteur du texte audio
+
+    TekstoFull:
+      allOf:
+        - $ref: '#/components/schemas/TekstoSummary'
+        - type: object
+          properties:
+            enhavo:
+              type: object
+              nullable: true
+              description: Contenu du texte (structure JSON décodée)
+            aktiva:
+              type: integer
+              enum: [0, 1]
+              description: Statut actif (0=inactif, 1=actif)
+            ekdato:
+              type: string
+              format: date-time
+              description: Date de création
+
+    TekstoInput:
+      type: object
+      required:
+        - id
+        - titolo
+        - auxtoro
+      properties:
+        id:
+          type: string
+          description: Identifiant unique du texte
+        titolo:
+          type: string
+          description: Titre du texte
+        auxtoro:
+          type: string
+          description: Auteur du texte
+        fonto:
+          type: string
+          nullable: true
+          description: Source du texte
+        nivelo:
+          type: integer
+          nullable: true
+          description: Niveau de difficulté
+        vortoj:
+          type: integer
+          nullable: true
+          description: Nombre de mots
+        kolekto:
+          type: string
+          nullable: true
+          description: Collection
+        etikedoj:
+          type: string
+          nullable: true
+          description: Étiquettes (séparées par des virgules)
+        sono:
+          type: string
+          nullable: true
+          description: Nom du fichier audio
+        enhavo:
+          type: object
+          nullable: true
+          description: Contenu du texte (structure JSON)
+        aktiva:
+          type: integer
+          enum: [0, 1]
+          default: 0
+          description: Statut actif (0=inactif, 1=actif)
+
+    Pagination:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: Nombre total d'éléments
+        limit:
+          type: integer
+          description: Nombre d'éléments par page
+        offset:
+          type: integer
+          description: Décalage de pagination
+        count:
+          type: integer
+          description: Nombre d'éléments dans la page actuelle
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Message d'erreur
+
+  responses:
+    BadRequest:
+      description: Requête incorrecte
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            error: "Paramètres manquants ou invalides"
+
+    Unauthorized:
+      description: Non authentifié
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            error: "Token d'authentification requis ou invalide"
+
+    Forbidden:
+      description: Accès interdit
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            error: "Ce compte n'est pas validé, merci de cliquer sur le lien reçu par email"
+
+    NotFound:
+      description: Ressource non trouvée
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            error: "Ressource non trouvée"
+
+    InternalError:
+      description: Erreur interne du serveur
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            error: "Erreur interne du serveur"
+
+tags:
+  - name: Authentication
+    description: Authentification et gestion des utilisateurs
+  - name: Tekstoj
+    description: Gestion des textes en Esperanto

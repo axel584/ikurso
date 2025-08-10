@@ -1,6 +1,11 @@
 <?php
 include "../util.php";
 include "../config.php";
+
+// Fonction base64url_encode manquante
+function base64url_encode($data) {
+    return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
+}
 $identigilo=isset($_POST['identigilo'])?$_POST['identigilo']:"";
 $pasvorto=isset($_POST['pasvorto'])?stripslashes($_POST['pasvorto']):"";
 
@@ -74,12 +79,7 @@ $jwt = $jwtBody . "." . $encodedSignature;
 // On stocke le jeton JWT en session
 //$_SESSION["access_token"]=$jwt;
 $respondo["access_token"]=$jwt;
-setcookie("access_token", $jwt, [
-	'expires'=>time()+(86400*365),// valable un an
-	'path' => '/',
-    'domain' => '.esperanto-france.org', // Note le point au début
-    'secure' => true
-]); 
+setcookie("access_token", $jwt, time()+(86400*365), '/', $cookieDomain, true); 
 
 echo json_encode($respondo);
 ?>

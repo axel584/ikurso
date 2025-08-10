@@ -1,0 +1,16 @@
+# Fichiers temporaires et logs
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Backups
+*.bak
+*.backup
+*~
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo

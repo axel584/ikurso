@@ -19,10 +19,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-// Inclusion de la classe TekstojAPI
+// Inclusion des classes API
 require_once 'api/TekstojAPI.php';
+require_once 'api/AuthentificationAPI.php';
 
-// Initialisation et traitement de la requête
-$api = new TekstojAPI();
-$api->handleRequest();
+// Déterminer quelle API utiliser basé sur le path
+$path = isset($_GET['path']) ? $_GET['path'] : '';
+$segments = array_filter(explode('/', $path));
+
+if (!empty($segments)) {
+    if ($segments[0] === 'auth') {
+        // API d'authentification
+        $api = new AuthentificationAPI();
+        $api->handleRequest();
+    } elseif ($segments[0] === 'tekstoj') {
+        // API tekstoj (existante)
+        $api = new TekstojAPI();
+        $api->handleRequest();
+    } else {
+        // Endpoint non trouvé
+        http_response_code(404);
+        echo json_encode(array("error" => "Endpoint non trouvé"), JSON_UNESCAPED_UNICODE);
+    }
+} else {
+    // Aucun endpoint spécifié
+    http_response_code(404);
+    echo json_encode(array("error" => "Endpoint requis"), JSON_UNESCAPED_UNICODE);
+}
 ?>

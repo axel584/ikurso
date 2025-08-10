@@ -23,6 +23,8 @@ services:
       MYSQL_DATABASE: ikurso
       MYSQL_USER: ikurso_user
       MYSQL_PASSWORD: ikurso_pass
+      UPLOAD_LIMIT: 50M
+      POST_MAX_SIZE: 50M
     ports:
       - "3306:3306"
     volumes:
@@ -46,6 +48,7 @@ services:
       PMA_PORT: 3306
       PMA_USER: ikurso_user
       PMA_PASSWORD: ikurso_pass
+      UPLOAD_LIMIT: 50M
     depends_on:
       - db
 

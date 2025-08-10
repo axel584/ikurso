@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikurso API Documentation</title>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@5.9.0/swagger-ui.css" />
+    <style>
+        html {
+            box-sizing: border-box;
+            overflow: -moz-scrollbars-vertical;
+            overflow-y: scroll;
+        }
+        
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        
+        body {
+            margin:0;
+            background: #fafafa;
+        }
+        
+        .swagger-ui .topbar {
+            background-color: #2C5235;
+        }
+        
+        .swagger-ui .topbar .download-url-wrapper .select-label {
+            color: white;
+        }
+        
+        .custom-header {
+            background: linear-gradient(135deg, #2C5235 0%, #4A7C59 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .custom-header h1 {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 300;
+            font-size: 2.5em;
+        }
+        
+        .custom-header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .api-info {
+            max-width: 1200px;
+            margin: 0 auto 30px auto;
+            padding: 0 20px;
+        }
+        
+        .api-endpoints {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .endpoint-section h3 {
+            color: #2C5235;
+            border-bottom: 2px solid #2C5235;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        .endpoint-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .endpoint-list li {
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-left: 4px solid #2C5235;
+            border-radius: 4px;
+        }
+        
+        .method {
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 3px;
+            color: white;
+            font-size: 0.85em;
+        }
+        
+        .method.get { background: #61affe; }
+        .method.post { background: #49cc90; }
+        .method.put { background: #fca130; }
+        .method.patch { background: #50e3c2; }
+        .method.delete { background: #f93e3e; }
+        
+        #swagger-ui {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .version-info {
+            background: #e8f4fd;
+            border: 1px solid #bee5eb;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-header">
+        <h1>🌟 Ikurso API</h1>
+        <p>Documentation de l'API pour la plateforme d'apprentissage Esperanto</p>
+    </div>
+
+    <div class="api-info">
+        <div class="version-info">
+            <strong>📚 À propos de cette API</strong><br>
+            Cette API permet d'interagir avec la plateforme Ikurso, incluant l'authentification des utilisateurs 
+            et la gestion des textes (tekstoj) en Esperanto. L'API utilise des formats JSON et suit les conventions REST.
+        </div>
+
+        <div class="api-endpoints">
+            <h3>🔐 Authentication</h3>
+            <ul class="endpoint-list">
+                <li><span class="method post">POST</span> <code>/api.php?path=auth/login</code> - Connexion utilisateur</li>
+                <li><span class="method post">POST</span> <code>/api.php?path=auth/register</code> - Inscription utilisateur</li>
+                <li><span class="method post">POST</span> <code>/api.php?path=auth/logout</code> - Déconnexion</li>
+                <li><span class="method get">GET</span> <code>/api.php?path=auth/me</code> - Informations utilisateur actuel</li>
+            </ul>
+
+            <h3>📖 Tekstoj (Textes)</h3>
+            <ul class="endpoint-list">
+                <li><span class="method get">GET</span> <code>/api.php?path=tekstoj</code> - Liste des textes avec filtres</li>
+                <li><span class="method get">GET</span> <code>/api.php?path=tekstoj/{id}</code> - Détails d'un texte</li>
+                <li><span class="method post">POST</span> <code>/api.php?path=tekstoj</code> - Créer un texte (auth requise)</li>
+                <li><span class="method put">PUT</span> <code>/api.php?path=tekstoj/{id}</code> - Modification complète (auth requise)</li>
+                <li><span class="method patch">PATCH</span> <code>/api.php?path=tekstoj/{id}</code> - Modification partielle (auth requise)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="swagger-ui"></div>
+
+    <script src="https://unpkg.com/swagger-ui-dist@5.9.0/swagger-ui-bundle.js"></script>
+    <script src="https://unpkg.com/swagger-ui-dist@5.9.0/swagger-ui-standalone-preset.js"></script>
+    <script src="./swagger-config.js"></script>
+    <script>
+        window.onload = function() {
+            // Détecter le protocole et l'host actuels
+            const currentProtocol = window.location.protocol;
+            const currentHost = window.location.host;
+            const baseUrl = `${currentProtocol}//${currentHost}`;
+            
+            // Configuration Swagger UI
+            const ui = SwaggerUIBundle({
+                url: './openapi.yml',
+                dom_id: '#swagger-ui',
+                deepLinking: true,
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset
+                ],
+                plugins: [
+                    SwaggerUIBundle.plugins.DownloadUrl
+                ],
+                layout: "StandaloneLayout",
+                // Personnalisation des serveurs selon l'environnement
+                onComplete: function() {
+                    console.log('Swagger UI initialisé');
+                    // Vous pouvez ajouter des personnalisations supplémentaires ici
+                },
+                // Utiliser la configuration personnalisée
+                requestInterceptor: window.SwaggerUIConfig.requestInterceptor,
+                responseInterceptor: window.SwaggerUIConfig.responseInterceptor
+            });
+
+            // Personnaliser le titre de la page
+            document.title = 'Ikurso API - Documentation';
+            
+            window.ui = ui;
+        }
+    </script>
+</body>
+</html>

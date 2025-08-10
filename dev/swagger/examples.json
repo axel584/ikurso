@@ -1,0 +1,97 @@
+{
+  "authentication": {
+    "register": {
+      "url": "/api.php?path=auth/register",
+      "method": "POST",
+      "body": {
+        "enirnomo": "nouvelusertest",
+        "pasvorto": "motdepasse123", 
+        "retadreso": "test@example.com"
+      }
+    },
+    "login": {
+      "url": "/api.php?path=auth/login",
+      "method": "POST", 
+      "body": {
+        "identigilo": "lernanto1",
+        "pasvorto": "test"
+      }
+    },
+    "logout": {
+      "url": "/api.php?path=auth/logout",
+      "method": "POST",
+      "body": {}
+    },
+    "me": {
+      "url": "/api.php?path=auth/me",
+      "method": "GET"
+    }
+  },
+  "tekstoj": {
+    "list": {
+      "url": "/api.php?path=tekstoj",
+      "method": "GET",
+      "params": {
+        "limit": 5,
+        "offset": 0,
+        "aktiva": "1"
+      }
+    },
+    "search": {
+      "url": "/api.php?path=tekstoj?q=Zamenhof&limit=3",
+      "method": "GET"
+    },
+    "filters": {
+      "url": "/api.php?path=tekstoj?nivelo_min=100&nivelo_max=500&has_sono=true",
+      "method": "GET"
+    },
+    "detail": {
+      "url": "/api.php?path=tekstoj/lasumin01",
+      "method": "GET"
+    },
+    "create": {
+      "url": "/api.php?path=tekstoj",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer YOUR_TOKEN_HERE"
+      },
+      "body": {
+        "id": "test123",
+        "titolo": "Testo de novo teksto",
+        "auxtoro": "Aŭtoro Testo",
+        "fonto": "https://example.com",
+        "nivelo": 100,
+        "vortoj": 50,
+        "etikedoj": "testo,nova",
+        "aktiva": 0
+      }
+    }
+  },
+  "test_accounts": {
+    "student": {
+      "identigilo": "lernanto1",
+      "pasvorto": "test",
+      "rajtoj": "S",
+      "description": "Compte élève test"
+    },
+    "corrector": {
+      "identigilo": "korektanto1", 
+      "pasvorto": "test",
+      "rajtoj": "K",
+      "description": "Compte correcteur test"
+    },
+    "admin": {
+      "identigilo": "administranto",
+      "pasvorto": "test", 
+      "rajtoj": "A",
+      "description": "Compte administrateur test"
+    }
+  },
+  "curl_examples": {
+    "register_user": "curl -X POST http://localhost:8080/api.php?path=auth/register -H 'Content-Type: application/json' -d '{\"enirnomo\":\"testuser\",\"pasvorto\":\"test123\",\"retadreso\":\"test@example.com\"}'",
+    "login_user": "curl -X POST http://localhost:8080/api.php?path=auth/login -H 'Content-Type: application/json' -d '{\"identigilo\":\"lernanto1\",\"pasvorto\":\"test\"}'",
+    "get_tekstoj": "curl 'http://localhost:8080/api.php?path=tekstoj?limit=5'",
+    "search_tekstoj": "curl 'http://localhost:8080/api.php?path=tekstoj?q=Claude&limit=3'",
+    "get_teksto_detail": "curl 'http://localhost:8080/api.php?path=tekstoj/lasumin01'"
+  }
+}

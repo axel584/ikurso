@@ -134,7 +134,7 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s12 m4"><span class="eo">amiko</span>&nbsp;: ami</p>
+					<p class="col s12 m4"><span class="eo">amiko</span>&nbsp;: un ami</p>
 					<p class="col s12 m4"><span class="eo">nova</span>&nbsp;: nouveau</p>
 					<p class="col s12 m4"><span class="eo">esti</span>&nbsp;: être</p>
 					<p class="col s12 m4"><span class="eo">amika</span>&nbsp;: amical(e)</p>
@@ -204,7 +204,7 @@ include "dlekkapo.inc.php";
 			<div class="vortlisto row">
 				<div class="col s12 m6">
 					<p><span class="eo">mi</span>&nbsp;: je</p>
-					<p><span class="eo">vi</span>&nbsp;: tu (ou <span class="eo">ci</span>, peu usité)</p>
+					<p><span class="eo">vi</span>&nbsp;: tu</p>
 					<p><span class="eo">li</span>&nbsp;: il (personne)</p>
 					<p><span class="eo">ŝi</span>&nbsp;: elle (personne)</p>
 					<p><span class="eo">ĝi</span>&nbsp;: il ou elle (non-personne)</p>
@@ -216,19 +216,13 @@ include "dlekkapo.inc.php";
 					<p><span class="eo">oni</span>&nbsp;: on</p>
 				</div>
 			</div>
+			<p>Écouter comment prononcer les pronoms&nbsp;: <a href="<?php echo $vojo;?>fr/son/vortoj/pronomoj.mp3" class="sm2_button"></a></p>
 
-			<p class="rimarko"><strong>REMARQUE</strong> : 
-			Prononcez-vous <span class="eo">ŝi</span> et <span class="eo">ĝi</span>
-			comme il faut&nbsp;? Regardez bien la table en début de leçon.</p>
-				
-			<p>On emploie <span class="eo">li</span> pour les personnes de sexe masculin et 
-			<span class="eo">ŝi</span> pour
-			celles de sexe féminin. On peut, à la rigueur, étendre cet usage aux
-			animaux familiers mais, à part ces derniers, on utilise <span class="eo">ĝi</span> pour
-			désigner les objets, les pays, les animaux, les concepts abstraits… bref
-			tout ce qui n’est pas une personne. Au pluriel, <span class="eo">ili</span> s’applique aux
-			personnes des deux sexes et aux non-personnes pareillement.
-			</p>
+			<p class="rimarko"><strong>REMARQUES</strong> : </p>
+			<p>• On emploie <span class="eo">li</span> pour les personnes de sexe masculin et <span class="eo">ŝi</span> pour
+			celles de sexe féminin. On utilise <span class="eo">ĝi</span> pour les choses, 
+			les animaux ou les bébés. </p>
+			<p>• Au pluriel, <span class="eo">ili</span> s’applique aux personnes des deux sexes et aux non-personnes pareillement. Pour les animaux familiers, on peut aussi utiliser <span class="eo">li</span> ou <span class="eo">ŝi</span></p>
 				
 			<a id="temps"class="scrollspy"></a>
 			
@@ -278,11 +272,11 @@ include "dlekkapo.inc.php";
 			(du, de la, des) n’existent pas en espéranto.</p>
 
 			<div class="vortlisto row">
-				<div class="col s12 m4">
+				<div class="col s12 m6">
 					<p><span class="eo">biskvito</span>&nbsp;: un biscuit</p>
 					<p><span class="eo">biskvitoj</span>&nbsp;: des biscuits</p>
 				</div>
-				<div class="col s12 m4">
+				<div class="col s12 m6">
 					<p><span class="eo">pano</span>&nbsp;: du pain</p>
 					<p><span class="eo">sukero</span>&nbsp;: du sucre</p>
 				</div>
@@ -293,6 +287,10 @@ include "dlekkapo.inc.php";
 				<div class="col s12 m6">
 					<p><span class="eo">la biskvito</span>&nbsp;: le biscuit</p>
 					<p><span class="eo">la bonaj biskvitoj</span>&nbsp;: les bons biscuits</p>
+				</div>
+								<div class="col s12 m4">
+					<p><span class="eo">la amiko</span>&nbsp;: l’ami</p>
+					<p><span class="eo">la amikoj</span>&nbsp;: les amis</p>
 				</div>
 			</div>
 					
@@ -542,7 +540,7 @@ include "dlekkapo.inc.php";
 			),
 			array(
 				"question"=>"Kie loĝas la instruisto?",
-				"propositions"=>array("Aŭstralio","Brazilo","Francio","Pollando","Vjetnamio"),
+				"propositions"=>array("en Aŭstralio","en Brazilo","en Francujo","en Pollando","en Vjetnamio"),
 				"indices"=>array("","",""),
 				"reponse"=>3
 			)
@@ -695,7 +693,7 @@ include "dlekkapo.inc.php";
 	QCM(
 		array(
 			array(
-				"question"=>"Combien de syllabes y a-t-il dans 'viaj kukoj'&nbsp;?",
+				"question"=>"Combien de syllabes y a-t-il dans «viaj kukoj»&nbsp;?",
 				"propositions"=>array("3","4","5","6"),
 				"indices"=>array("","",""),
 				"reponse"=>2
@@ -707,18 +705,18 @@ include "dlekkapo.inc.php";
 				"reponse"=>2
 			),
 			array(
-				"question"=>"Comment se prononce la lettre 'ĝ'&nbsp;?",
-				"propositions"=>array("comme le 'g' de 'Alger'","comme le 'g' de 'Lagos'","comme le 'dj' de 'Djibouti'","aucun de ceux-ci"),
+				"question"=>"Comment se prononce la lettre «ĝ»&nbsp;?",
+				"propositions"=>array("comme le «g» de 'Alger'","comme le «g» de 'Lagos'","comme le «dj» de 'Djibouti'","aucun de ceux-ci"),
 				"indices"=>array("","",""),
 				"reponse"=>3
 			),
 			array(
-				"question"=>"Comment écrit-on en espéranto le son 'ch' du mot français 'chat'&nbsp;?",
+				"question"=>"Comment écrit-on en espéranto le son «ch» du mot français «chat»&nbsp;?",
 				"propositions"=>array("ch","ŝ","ce son n’existe pas en espéranto","sch"),
 				"reponse"=>2
 			),		
 			array(
-				"question"=>"Comment écrit-on le son 'u' qui apparaît dans 'tutu' en français&nbsp;?",
+				"question"=>"Comment écrit-on le son «u» qui apparaît dans «tutu» en français&nbsp;?",
 				"propositions"=>array("u","y","il n'existe pas en espéranto","&uuml;"),
 				"reponse"=>3
 			),
@@ -748,17 +746,17 @@ include "dlekkapo.inc.php";
 				"reponse"=>1
 			),
 			array(
-				"question"=>"Comment dit-on 'du thé chaud'&nbsp;?",
+				"question"=>"Comment dit-on «du thé chaud»&nbsp;?",
 				"propositions"=>array("la varmo tea","varma teo","varmo teo","la varma teo"),
 				"reponse"=>2
 			),
 			array(
-				"question"=>"Comment dit-on 'de bons garçons'&nbsp;?",
+				"question"=>"Comment dit-on «de bons garçons»&nbsp;?",
 				"propositions"=>array("bona knaboj","la bonaj knaboj","bonaj knaboj","bonoj knaboj"),
 				"reponse"=>3
 			),
 			array(
-				"question"=>"Comment dit-on 'mes fils'&nbsp;?",
+				"question"=>"Comment dit-on «mes fils»&nbsp;?",
 				"propositions"=>array("mia filioj","miaj filoj","miaj filioj","mia filoj"),
 				"reponse"=>2
 			)	

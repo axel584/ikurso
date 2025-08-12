@@ -4491,7 +4491,6 @@ UPDATE `ekzerceroj` SET `respondo` = 'Ĉu via patro kolektas la poŝtmarkojn de 
 UPDATE `ekzerceroj` SET `respondo` = 'knabino', `normaligita` = 'knabino' WHERE ekzerceroj`.`ekzerco_id` = 		
 292 and `ekzerceroj`.`numero` = 31;
 
-
-
-
-
+--- correction de coquilles dans les exercices de ppp
+UPDATE `ekzerceroj` SET `demando` = 'Pro la ventego ondoj ĵetiĝis kontraŭ la bordon.', `respondo` = 'Pro la ventego ondoj ĵetiĝis kontraŭ la bordon.', `normaligita` = 'pro la ventego ondoj jxetigxis kontraŭ la bordon' WHERE `ekzerceroj`.`ekzerco_id` = 120 and `ekzerceroj`.`kodo` = 'pp0332';
+UPDATE `ekzerceroj` SET `demando` = 'Nomu, kaj klarigu, la tri internajn elitecojn.' WHERE `ekzerceroj`.`ekzerco_id` = 173 and `ekzerceroj`.`numero` = 13;

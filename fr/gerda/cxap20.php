@@ -186,7 +186,7 @@ include "gerdakapo.inc.php";
 			<div class="row">
 				<div class="col s12">
 					<div class="card-panel blue lighten-5">
-						En tiu ĉapitro, estas du malsamaj rakontoj de <i>Lasu min paroli plu !</i>.<br>
+						En tiu ĉapitro, estas du malsamaj rakontoj de <i>Lasu min paroli plu!</i>.<br>
 						<a href="#unua">La fakulo-instruisto venis de malproksime</a><br>
 						<a href="#dua">Troa scivolo kondukas morten</a>
 					</div>
@@ -207,7 +207,7 @@ include "gerdakapo.inc.php";
 			<p>
 			Do, bone, mi prenis ĝin. Mi tenas ĝin forte, ĉar la aparato estas
 			peza. Nun, mi forprenas la fermoplaton. Ĉu vi ne scias, kio
-			fermoplato estas ? Nu, nomu ĝin «kovrilo», se vi preferas. Se mi bone
+			fermoplato estas? Nu, nomu ĝin «kovrilo», se vi preferas. Se mi bone
 			komprenis, en via lingvo oni uzas ambaŭ vortojn. Ne gravas la vorto;
 			gravas, ke vi malfermu la aparaton, kaj por tio necesas komence
 			forpreni la kovrilon — aŭ fermoplaton — kiu kovras ĝin. Jen.</p>
@@ -219,10 +219,10 @@ include "gerdakapo.inc.php";
 			Refoje mi petas vin rigardi. Estas pluraj aferoj, kiuj elstaras. Krome
 			estas ĉi tiuj montriloj, iom similaj al horloĝaj montriloj. Ili tre
 			gravas, ĉar ili sciigos al vi, ĉu la streĉo estas sufiĉa aŭ ne.
-			Bone. Ĉu vi rigardis sufiĉe ? Atentu mian manon nun.</p>
+			Bone. Ĉu vi rigardis sufiĉe? Atentu mian manon nun.</p>
 			<p>
 			Nun per la dekstra mano mi faras ĉi tiun movon. Rigardu bone, kion mi
-			faras. Ĉu vi vidis ? Rigardu atente la rondan aĵeton, kiu elstaras
+			faras. Ĉu vi vidis? Rigardu atente la rondan aĵeton, kiu elstaras
 			ĉi tie, sur la dekstra flanko. Mi parolas pri ĉi tiu ruĝa ronda
 			afereto.</p>
 			<p>
@@ -230,7 +230,7 @@ include "gerdakapo.inc.php";
 			direkto kiel horloĝmontriloj. Vi sentos, ke io streĉiĝas en la
 			aparato. Se vi streĉis sufiĉe, la plej malalta montrilo moviĝas.
 			Ĝi devas halti sub numero 10. Bone. Ne uzu tro da forto, vi ne
-			deziras, ke io ene rompiĝu, ĉu ? Turnu tute trankvile, kaj ĉio bone
+			deziras, ke io ene rompiĝu, ĉu? Turnu tute trankvile, kaj ĉio bone
 			funkcios.</p>
 			<p>
 			Pardonu, se mi ne klarigas pli bone, sed oni sendis min al ĉi tiu
@@ -239,13 +239,13 @@ include "gerdakapo.inc.php";
 			alia flanko de la mondo. Mi do ne konas la nomojn de tiuj pecoj kaj
 			aĵoj.</p>
 			<p>
-			Nu, ĉi tie estas io, kio iom similas malgrandan teleron, ĉu ne ? Mi
+			Nu, ĉi tie estas io, kio iom similas malgrandan teleron, ĉu ne? Mi
 			celas<A HREF="#notoj">[1]</A> ĉi tiun rondan platon. Mi forprenas ĝin. Kutime, vi ne
 			bezonus ĝin forpreni. Mi forprenas ĝin nur, por ke vi rigardu, kiel
 			ĝi estas metita.</p>
 			<p>
 			Venu apud min. Tenu ĝin. Pasigu ĝin de unu al alia. Ĉu vi rimarkas,
-			kiel peza ĝi estas ? Oni ne imagus, ĉu ?, ke tia telereto estas tiel
+			kiel peza ĝi estas? Oni ne imagus, ĉu?, ke tia telereto estas tiel
 			peza. Nu, ĝia pezo devenas de tio, ke ĝi estas farita el speciala
 			substanco, tute nekutima.</p>
 			<p>
@@ -268,13 +268,13 @@ include "gerdakapo.inc.php";
 			devas moviĝi kaj alveni ĝis la loko tie, por ke la pulvoro eniru la
 			aparaton.</p>
 			<p>
-			Jen, ĉu vi vidis ? Ĉu unu el vi volas veni ĉi tien kaj refari tute
-			trankvile antaŭ siaj kunuloj la movojn, kiujn mi faris ? Ili ne estas
+			Jen, ĉu vi vidis? Ĉu unu el vi volas veni ĉi tien kaj refari tute
+			trankvile antaŭ siaj kunuloj la movojn, kiujn mi faris? Ili ne estas
 			malfacilaj. Sed estas bone antaŭeniri nur malrapide. Se vi bone
 			lernis la unuajn movojn, vi neniam misfaros ilin. Ni do haltos iomete
-			por refari ilin. Kiu venos ?</p>
+			por refari ilin. Kiu venos?</p>
 			<p>
-			Nu, nu, unu kuraĝulon, mi petas ! Ne estu timemaj. Se vi volas lerni
+			Nu, nu, unu kuraĝulon, mi petas! Ne estu timemaj. Se vi volas lerni
 			iun fakon, vi devas agi. Labori. Dankon, Ibrahim. Vi estas kuraĝa.
 			Faru nur la kelkajn movojn, kiujn mi faris. Kaj diru laŭte, kion vi
 			faras.</p>
@@ -302,7 +302,7 @@ include "gerdakapo.inc.php";
 				include "lasusono.inc.php";
 			?>
 			<p>Aŭskultu, mi tamen ŝatus scii, kion vi celas finfine. Kio estas via
-			celo ? Vi staris trans la pordo, kaj vi aŭskultis, ĉu ne ? Vi
+			celo? Vi staris trans la pordo, kaj vi aŭskultis, ĉu ne? Vi
 			subaŭskultis<a href='#notoj2'>[1]</a>, kiel oni diras. Mi ne dubas, ke interesas vin scii,
 			kiu estas kun mi, kaj pri kio ni parolas. Sed en ĉi tiu laboro, en
 			kiu vi kun-agas kun mi, via sinteno estas neallasebla. Iom da digno,
@@ -312,13 +312,13 @@ include "gerdakapo.inc.php";
 			volis kredi. Kiam vi ĝojsaltis vidante min reveni, mi kredis je vi.
 			Kiam vi kisis min kvazaŭ amoplene, mi kredis je vi. Kaj ĉu vi
 			memoras tiun fojon, kiam vi ploris kaj ploris, ĉar mi ĵus tenis min
-			iom malafable ? Mi estis laca kaj ĵus agis malĝentile. Pro laceco
+			iom malafable? Mi estis laca kaj ĵus agis malĝentile. Pro laceco
 			oni kelkfoje agas, kiel oni devus ne agi. Aŭ pro troa zorgado. Nu, mi
 			agis malbone kaj mia sinteno ne estis pravigebla. Kaj vi ploris. Jes,
 			tiun tagon, kiam vi ploris, mi kredis je vi.</p>
 			<p>
 			Sed nun, jam la trian fojon mi trovas vin subaŭskultanta ĉe la pordo
-			de mia oficejo. Mi bezonas koni vian celon. Kion do vi celas ? Vi tion
+			de mia oficejo. Mi bezonas koni vian celon. Kion do vi celas? Vi tion
 			neniam faris antaŭe. Ne temas do pri simpla persona scivolemo. Se vi
 			estus nature scivolema, mi estus rimarkinta tion jam delonge. Ne.
 			Ĉiam mi ŝatis vian diskretan sintenon. Kiuj ajn la kondiĉoj, en
@@ -331,18 +331,17 @@ include "gerdakapo.inc.php";
 			Vi scias, ke ni havas malamikojn, kiuj serĉas ĉiaspecajn informojn
 			pri niaj esploroj, kaj kiuj sufiĉe riĉas por havigi multe da mono al
 			tiu, kiu transdonus al ili interesajn sciojn pri ni. Ĉu al ili vi
-			transiris ? Ĉu vi forlasis nin, kvankam vi skribe promesis kaj mem
-			subskribis vian promeson ? Kvankam vi — laŭ via diro — amas min ?</p>
+			transiris? Ĉu vi forlasis nin, kvankam vi skribe promesis kaj mem
+			subskribis vian promeson? Kvankam vi — laŭ via diro — amas min?</p>
 			<p>
 			Via onklo Johano foje alvenis senbrue por viziti nin kaj diris al mi,
-			ke li vidis vin rigardi tra la seruro de mia oficejo. Kia sinteno !
+			ke li vidis vin rigardi tra la seruro de mia oficejo. Kia sinteno!
 			Alian fojon, kiam mia fratino, pasante tra nia urbo, ankaŭ venis nin
 			viziti, vi eksaltis en la koridoro, kiam ŝi subite ekaperis apud vi.
 			Ŝi ne vidis, kion vi faras, sed ŝi raportis al mi la aferon, ĉar
 			ŝi tre miris pri via reago al ŝia alveno. Ŝi tre precize rimarkis
 			vian salteton. Vi eksaltetis, kiel oni faras, kiam io tute neatendita
-			— kaj malplaĉa, aŭ danĝera — subite prezentiĝas. Mirige, ĉu ne
-			?</p>
+			— kaj malplaĉa, aŭ danĝera — subite prezentiĝas. Mirige, ĉu ne?</p>
 			<p>
 			En mia raporto al niaj ĉefoj, mi prezentis la tutan situacion. Mi
 			montris, kiel danĝera ĝi estas por ni. Mi proponis diversajn
@@ -375,20 +374,20 @@ include "gerdakapo.inc.php";
 			Jes, mi apenaŭ povas min deteni de plorado, ĉar mi ankoraŭ amas
 			ŝin. Mi ankoraŭ amas vin, Klara, sed eble ne por longe. Via
 			malveremo tuŝas min tro suferige. Ĝi alsaltas min, kaj mi sentas, ke
-			danĝera furiozeco min pli kaj pli kaptas. Ne. Ne moviĝu ! Restu ĉi
+			danĝera furiozeco min pli kaj pli kaptas. Ne. Ne moviĝu! Restu ĉi
 			tie. Apud mi.</p>
 			<p>
-			Vi ĉiam deziris apud-esti, ĉu ne ? Via sola celo, kiam vi ekvidis
+			Vi ĉiam deziris apud-esti, ĉu ne? Via sola celo, kiam vi ekvidis
 			min unuafoje, estis tutvive proksimi al mi. Tiel vi vin esprimis.
-			Tutvive !</p>
+			Tutvive!</p>
 			<p>
-			Ĉu vi sciis jam dekomence, ke iun tagon vi vendos miajn sekretojn ?
-			Aŭ ĉu ili sukcesis kapti vin en siajn dubajn agadojn nur poste ? Ĉu
-			vi estis sincera komence, kaj transiris al ili ? Aŭ ĉu neniam okazis
+			Ĉu vi sciis jam dekomence, ke iun tagon vi vendos miajn sekretojn?
+			Aŭ ĉu ili sukcesis kapti vin en siajn dubajn agadojn nur poste? Ĉu
+			vi estis sincera komence, kaj transiris al ili? Aŭ ĉu neniam okazis
 			transiro, ĉar jam de la unua tago vi konis vian celon: enŝteliĝi ĉi
 			tien kiel oficistino, labori perfekte, iom post iom havigi al vi la
 			plenan fidon de la ĉefo, laŭcele agi por ke li enamiĝu, ŝajnigi
-			amon al li, kaj uzi tiun belegan situacion por transdonadi informojn ?
+			amon al li, kaj uzi tiun belegan situacion por transdonadi informojn?
 			Kiel serpento vi envenis nian esplorcentron, kiel serpento deziranta
 			mortigi, sed atenta, ke oni ne vidu ĝin...</p>
 			<p>
@@ -397,26 +396,26 @@ include "gerdakapo.inc.php";
 			klare al miaj okuloj. En mian koron vi eniĝis kiel ŝtelisto en
 			domon, por kapti...</p>
 			<p>
-			Kaj mi lasis vin agi ! Mi enlasis vin en mian hejmon, en mian
-			oficejon, en miajn brakojn, en mian koron ! Kaj vi ŝajnigis vin
-			feliĉa ! Vi perfekte ludis vian rolaĉon, ho jes ! Vi ne agis amatore.
+			Kaj mi lasis vin agi! Mi enlasis vin en mian hejmon, en mian
+			oficejon, en miajn brakojn, en mian koron! Kaj vi ŝajnigis vin
+			feliĉa! Vi perfekte ludis vian rolaĉon, ho jes! Vi ne agis amatore.
 			Vi ne reale feliĉis — oni ne povas serioze feliĉi, kiam oni vivas
 			en malvero — sed vi ŝajnigis feliĉon, vi ludis la rolon de
 			feliĉulino plensukcese, por ke en la kaptilon mi falu.</p>
 			<p>
-			Nun stariĝas la demando: kio okazu al vi ? Vi scias tro multe, ĉu ne
-			? Estus danĝere lasi vin vivi. Kaj ĉiaokaze, vi tiom suferigis min,
-			ke vi ne plu indas vivi. Haha ! Vi timas, ĉu ne ? Vi timegas,
+			Nun stariĝas la demando: kio okazu al vi? Vi scias tro multe, ĉu ne?
+			Estus danĝere lasi vin vivi. Kaj ĉiaokaze, vi tiom suferigis min,
+			ke vi ne plu indas vivi. Haha! Vi timas, ĉu ne? Vi timegas,
 			videble. Nu, vi ricevas nur la naturajn sekvojn de viaj decidoj. Ĉu
-			vi ne antaŭvidis mian sintenon ? Ĉu vi ne opiniis, ke mi tamen pli
-			fortas ol vi ? Ĉu vi pensis, ke ĉar mi amas vin, mi ellasos vin
-			plezure, eĉ se mi malkovros vian rolaĉon ? Vi ludis, kaj perdis la
+			vi ne antaŭvidis mian sintenon? Ĉu vi ne opiniis, ke mi tamen pli
+			fortas ol vi? Ĉu vi pensis, ke ĉar mi amas vin, mi ellasos vin
+			plezure, eĉ se mi malkovros vian rolaĉon? Vi ludis, kaj perdis la
 			ludon. Bedaŭru, se helpas vin bedaŭri. Vi certe bedaŭros malpli ol
 			mi. Vi bedaŭros nur, ke vi ne plene realigis vian celon. Mi bedaŭros
 			amon perditan, fuŝitan de malverema ulino.</p>
 			<p>
-			Kaj ĉu vi scias, kio aldonas kroman suferon ? Ke vi agis tiel
-			infanece. Subaŭskulti ĉe pordo ! Ĉu viaj ĉefoj ne instruis al vi
+			Kaj ĉu vi scias, kio aldonas kroman suferon? Ke vi agis tiel
+			infanece. Subaŭskulti ĉe pordo! Ĉu viaj ĉefoj ne instruis al vi
 			pli nuntagajn manierojn ricevi informojn ? Oni nuntempe faras tiel
 			perfektajn aparatojn, tute tute malgrandajn, por senfine subaŭskulti,
 			multe pli bone ol tra pordoj. Tro memfida vi estis. Vi ne imagis, ke
@@ -424,17 +423,17 @@ include "gerdakapo.inc.php";
 			via bela kara vivo alvenas al sia fino. Kaj ne kredu — eĉ se mi
 			ridaĉas — ke tio ĝojigas min. Mi ne ŝatas ridaĉi. Mi ŝatus havi
 			koron plenan je amo, kaj larĝan rideton survizaĝe. Sed vi devigas
-			min. Vi komprenas la ludon, ĉu ne ? Vi sufiĉe longe ludis ĝin.</p>
+			min. Vi komprenas la ludon, ĉu ne? Vi sufiĉe longe ludis ĝin.</p>
 			<p>
 			Nu, bone, sufiĉas. Nun mi tuj komunikos la novaĵon al miaj
 			kunlaborantoj. Vi ne mortos tuj. Ni unue devos eligi el vi ĉiujn
-			viajn sciojn. Estas milito, ĉu ne ?, suba milito, milito, kiu okazas
+			viajn sciojn. Estas milito, ĉu ne?, suba milito, milito, kiu okazas
 			sub la videblaĵoj, sed tamen milito, terura milito.</p>
 			<p>
-			Kial, diable, vi eniris tiun militon ? Ĉu vi ne povis simple honeste
-			labori, kiel ĉiu alia ? Ĉu la destino tiel malamas min, ke ĝi
+			Kial, diable, vi eniris tiun militon? Ĉu vi ne povis simple honeste
+			labori, kiel ĉiu alia? Ĉu la destino tiel malamas min, ke ĝi
 			alportis en mian vivon kiel malamikon la solan virinon, kiun mi
-			sincere amis ? Sufiĉe ! Ne ploru ! Agi mi devas. Mi agu tuj.</p>
+			sincere amis? Sufiĉe! Ne ploru! Agi mi devas. Mi agu tuj.</p>
 			<p>
 			Kaj vi... Provu kunstreĉi ĉiujn viajn fortojn, por almenaŭ morti
 			digne.</p>

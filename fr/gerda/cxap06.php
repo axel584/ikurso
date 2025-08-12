@@ -147,7 +147,7 @@ include "gerdakapo.inc.php";
 
 			<h3>La ulo, kiu ne plu pensas</h3>
 			<p>Pri kio mi pensas, li demandis. Ĉu vi aŭdis lin? Kiel strangaj tiuj
-			uloj estas ! Kvazaŭ mi scius, pri kio mi pensas. Ĉu mi vere pensis
+			uloj estas! Kvazaŭ mi scius, pri kio mi pensas. Ĉu mi vere pensis
 			ion? Ĉu oni devas pensi dum la tuta tempo? Tio ne ŝajnas al mi
 			prava.</p>
 			
@@ -164,7 +164,7 @@ include "gerdakapo.inc.php";
 			
 			<p>Mi scias. Antaŭ iom da tempo, ankaŭ mi instruis en universitato. Sed
 			mi ne volis forperdi mian forton en absurdan agon, kiel pensi. Estas
-			tro riske. Imagu ! Se mi perdus miajn ideojn ! Mi verŝajne havas
+			tro riske. Imagu! Se mi perdus miajn ideojn! Mi verŝajne havas
 			ideojn. Mi ne scias tute certe — mi neniam rigardas ilin — sed plej
 			verŝajne ideojn mi havas.</p>
 			
@@ -185,13 +185,13 @@ include "gerdakapo.inc.php";
 			<p>«Ĉu esti, ĉu ne esti, jen la demando», diris alia grandulo. Nu, por
 			mi, tio ne estas demando. Mi estas, kaj tio estas bela fakto por mi.
 			Eble mi estas stranga, sed mi amas mian ekziston. La fakto, ke mi
-			ekzistas, estas por mi — eble ne por vi ! — bela fakto. Antaŭ la
+			ekzistas, estas por mi — eble ne por vi! — bela fakto. Antaŭ la
 			demando «ĉu esti, ĉu ne esti», mi tute ne timas. Mi respondas simple
 			«esti», kaj restas tute trankvila.</p>
 			
 			<p>«Mi aŭdas, do mi ekzistas», mi diris. Jes, mi aŭdas. Mi aŭdas tre
 			bone. Mi havas tre bonan aŭdpovon. Fakte, mi aŭdis vin diri ion ne
-			tre belan pri mi. Haha ! Vi pensis, ke mi ne aŭdas, ĉu ne? Sed mi
+			tre belan pri mi. Haha! Vi pensis, ke mi ne aŭdas, ĉu ne? Sed mi
 			aŭdas plej bone. Vi povas diri ion tre malforte, kvazaŭ vi tute
 			perdus la forton paroli. Tamen mi aŭdas vin. Mia aŭdo estas tre
 			bona. Tro bona, eble. Ofte okazas, ke mi aŭdas aferojn, kiujn mi
@@ -231,15 +231,15 @@ include "gerdakapo.inc.php";
 			grandan bruon dum-fale, ne gravas al mi. Se ili ne falas sur la
 			tablon, kaj bruon tute ne faras, kaj restas trankvile en via poŝo,
 			same ne gravas al mi. Nur unu peton mi havas: permesu al mi ne pensi.
-			Kaj post tiu deklaro, permesu, ke mi salutu vin. Bonan tagon ! Ne
-			pensu tro ! Kaj la forto restu kun vi !</p>
+			Kaj post tiu deklaro, permesu, ke mi salutu vin. Bonan tagon! Ne
+			pensu tro! Kaj la forto restu kun vi!</p>
 			
 			<a id="notoj"></a>
 			<p class="rimarko"><strong>NOTOJ</strong> : 
 			<ol>
 				<li><span class="eo">Kartezio</span> = Descartes.</li>
 				<li>En Esperanto, oni diras: estas —e —i, —i estas —e, estas —e,
-				ke ... Same kiel oni diras: <i>natura ago</i>, sed <i>nature agi</i>,
+				ke … Same kiel oni diras: <i>natura ago</i>, sed <i>nature agi</i>,
 				same oni diras <i>la ago estas natura</i>, sed <i>agi estas
 				nature</i></li>
 			</ol>

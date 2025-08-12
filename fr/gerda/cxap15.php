@@ -212,17 +212,17 @@ include "gerdakapo.inc.php";
 			multaj rilate al la laboro, kiu devas esti farata.</p>
 			<p>
 			La demando, kiun mi starigas al mi, estas: kial diable oni sendis tiel
-			gravan planon per la poŝto ? Tiuj, kiuj sendis ĝin, certe sciis, ke
+			gravan planon per la poŝto? Tiuj, kiuj sendis ĝin, certe sciis, ke
 			spionoj interesiĝos pri ĝi. La spionoj povus havi kunlaboranton en
 			la poŝtejo, en la paperejo aŭ aliloke. Tiuj, kiuj sendis la planon,
 			agis plej malserioze. La afero estas tiom pli nekomprenebla, ĉar oni
 			sciis, ke tiu plano interesas same la dekstrulojn kiel la
 			maldekstrulojn. Tiu papero havis — oni diras al ni — internacian
-			gravecon. Kaj oni sendas ĝin poŝte al papermagazeno ! Konsentite, en
+			gravecon. Kaj oni sendas ĝin poŝte al papermagazeno! Konsentite, en
 			la papervendejo, nekonate, kaŝe troviĝas unu el la ĉefaj
-			kunlaborantoj de la Sekreta Servo, sed tamen !</p>
+			kunlaborantoj de la Sekreta Servo, sed tamen!</p>
 			<p>
-			Stranga maniero agi, ĉu ne ?</p>
+			Stranga maniero agi, ĉu ne?</p>
 			<p>
 			Nu, kiel mi diris al vi, Ivo tute malkonsentas kun la policaj ideoj
 			ĉi-rilate. Tiutage, li iris aĉeti panon en la panejo, kiu staras tuj
@@ -235,7 +235,7 @@ include "gerdakapo.inc.php";
 			tiom parolas. Kiam ĝi eltrovis, ke la suspektato iris aĉeti panon
 			tuj antaŭe, ĝi ege kontentis, kvazaŭ tiu malkovro donus respondon
 			al la multaj demandoj, kiujn oni povas starigi al si en tiu stranga
-			afero. Kial tiom da bruo pri tio ? La suspektato neniam neis, ke li
+			afero. Kial tiom da bruo pri tio? La suspektato neniam neis, ke li
 			iris de la panejo al la papermagazeno.</p>
 			<p>
 			Ivo estis en tiu panvendejo kaj diskutis kun la vendistino. Li
@@ -243,15 +243,15 @@ include "gerdakapo.inc.php";
 			longigis sian restadon apud ŝi. Tiu kompatinda homo, kiu poste
 			aĉetis la papersakojn, do estis en la panejo, sed lia ĉeesto tie ne
 			sufiĉas por povi diri, ke li faris ion malbonan poste en la apuda
-			magazeno, ĉu ? Kiu povas diri, ke unu el la vendistoj ne havis pecon
-			da pano en la paperejo ?</p>
+			magazeno, ĉu? Kiu povas diri, ke unu el la vendistoj ne havis pecon
+			da pano en la paperejo?</p>
 			<p>
 			Ivo bone rigardis la personon, kiun la polico poste eksuspektis. Iu,
 			kiu volas fari ion suspektindan, ne agas tiamaniere, li diris.</p>
 			<p>
-			Kion ? Ĉu vi ne sciis, ke Ivo ametas la junan panvendistinon ? Nu, tio
+			Kion? Ĉu vi ne sciis, ke Ivo ametas la junan panvendistinon? Nu, tio
 			estas fakto. Ili iris kune trinki teon en «La dolĉa vivo». Ĉu vi
-			konas ? Estas tiu tetrinkejo, kie ili havas kvardek kvar specojn de
+			konas? Estas tiu tetrinkejo, kie ili havas kvardek kvar specojn de
 			teo. Ĝi troviĝas dekstre de la Ĉefa Poŝtoficejo. Li sidis tie kun
 			sia panvendistino, kiam la suspektato envenis la tetrinkejon, portante
 			la papersakojn, kiujn li aĉetis antaŭ kelkaj minutoj. Estis la horo,
@@ -265,7 +265,7 @@ include "gerdakapo.inc.php";
 			<p>
 			Fakte, la plej stranga afero, en lia raporto al mi, estas, ke, en kiu
 			ajn magazeno aŭ trinkejo li troviĝas, tuj post li envenas la
-			suspektata persono. Kvazaŭ tiu sekvus lin. Mirige, ĉu ne ? Tamen,
+			suspektata persono. Kvazaŭ tiu sekvus lin. Mirige, ĉu ne? Tamen,
 			Ivo ne estas aventurulo, kiu enmiksus sin en spionajn agadojn. Mi
 			demandos lin, kion li opinias pri tiu fakto, ke la papersakulo tiom
 			sekvis lin. Mi ne rimarkis la aferon, kiam li raportis al mi tiujn
@@ -285,9 +285,9 @@ include "gerdakapo.inc.php";
 			estas.</p>
 			<p>
 			Kiel diable Ivo faras por trovi tiajn nekutimajn, sed bonegajn,
-			aferojn ? Vere, li estas karulo, eĉ se liaj okuloj rigardas
+			aferojn? Vere, li estas karulo, eĉ se liaj okuloj rigardas
 			malsamflanken, kaj se lia nazo estas ridinde mallonga. Vi samopinias
-			kun mi, ĉu ne, Johana ?</p>
+			kun mi, ĉu ne, Johana?</p>
 			
 			<a id="dua" class="scrollspy"></a>
 			<?php 	
@@ -348,14 +348,14 @@ include "gerdakapo.inc.php";
 			<p>Vi povas fidi min, sinjoroj, ĉar mi konsideris tiun raporton tre
 			atente, kaj tre zorgiga ĝi estas. Vi certe konatiĝis kun la
 			informoj, kiujn enhavas la raporto pri panvendado, kaj vi verŝajne
-			samopinias kiel mi, ĉu ne ? Tiu raporto estas ege interesa, sed tute
+			samopinias kiel mi, ĉu ne? Tiu raporto estas ege interesa, sed tute
 			ne trankviliga. Kiu ajn portas en sia koro la interesojn de la nacio
 			sentos la saman zorgemon. Jen estas serioza situacio, pri kiu estas
 			urĝe okupiĝi.</p>
 		
 			<p>La panistoj plendas, ke ili ne ricevas sufiĉe da mono por la vendata
 			pano, almenaŭ kiom koncernas la plej ofte vendatan specon, sed kion
-			ni povus fari sen endanĝerigi la tutan nacian vivon ?</p>
+			ni povus fari sen endanĝerigi la tutan nacian vivon?</p>
 		
 			<p>Ni ne trovis manieron kunordigi la malsamajn emojn de la koncernatoj,
 			kaj ni troviĝas en sakstrato<A HREF="#notoj">[1]</A>, en sen-elira situacio. La etaj

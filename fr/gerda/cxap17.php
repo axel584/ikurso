@@ -322,7 +322,7 @@ include "gerdakapo.inc.php";
 			ĵus batigis lian koron, nun iom post iom malaperas, lasante la lokon
 			al iu malŝato... ne, ne vere malŝato, kiel diri? Mi serĉas la
 			ĝustan vorton, sed ne trovas ĝin, kiel ofte okazas al mi... do, ne
-			estis malŝato, sed iu sento proksima al ĝi, iom simila... ha : jen
+			estis malŝato, sed iu sento proksima al ĝi, iom simila... ha: jen
 			mi trovis la vorton: neŝato. Neplaĉo. Li ne malamis ŝin,
 			kompreneble, ankaŭ ne malŝatis ŝin, sed, tute simple, ŝi ne plu
 			plaĉis al li. La sentoj, kiujn ŝi antaŭe estigis en li, simple
@@ -339,8 +339,8 @@ include "gerdakapo.inc.php";
 			tutan historion. Kio ebligus al mi diri tion? Vi pravas. Se sincere
 			paroli, mi ne rajtas tion diri pri ŝi. Mi preskaŭ ne konas ŝin. Pro
 			kio do mi esprimis al vi tiujn malŝatajn ideojn, kiujn mi havis pri
-			Aneta? Kial mi lasis mian imagon kapti min, koncerne ŝiajn motivojn
-			? Mi ne estas honesta. Sed pro kio do? Ĉu pro deziro haltigi la
+			Aneta? Kial mi lasis mian imagon kapti min, koncerne ŝiajn motivojn?
+			Mi ne estas honesta. Sed pro kio do? Ĉu pro deziro haltigi la
 			geedziĝon? Ĉu tion mi deziras? Ĉu mi finfine rigardu la veron
 			vizaĝ-al-vizaĝe? Kaj kiu estas tiu vero, se ne ke iĝi la edzino
 			de Rikardo deziras plej forte mi?</p>

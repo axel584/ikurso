@@ -263,7 +263,7 @@ include "gerdakapo.inc.php";
 			<h3>Literaturo amindas, sed tamen...</h3>
 		
 			<p>La terura afero, koncerne Eduardon, estas, ke nur literaturo interesas
-			lin. Ĉu vi tion konstatis ? Nur pri literaturo li okupiĝas
+			lin. Ĉu vi tion konstatis? Nur pri literaturo li okupiĝas
 			ĝisfunde. Mi konstatis tion ankoraŭ hieraŭ, kaj mi ne dubas, ke mi
 			rekonstatos ĝin morgaŭ.</p>
 			

@@ -31,18 +31,18 @@ include "gerdakapo.inc.php";
 					<p>Tom kaj Bob estas for jam longe. Ili ne revenas. Ĉu do vere
 					okazis io al Gerda? Sed kio okazis? Ĉu io grava?</p>
 					<p>Linda observas la junulon kaj pensas:</p>
-					<p>"Kion mi faros, se li ekstaros kaj foriros?</p>
-					<p>"Ĉu mi sekvos lin? Ĉu mi sekvu lin?</p>
-					<p>"Kion mi faru, se li iros eksteren? Ĉu mi sekvu lin eksteren?
+					<p>“Kion mi faros, se li ekstaros kaj foriros?</p>
+					<p>“Ĉu mi sekvos lin? Ĉu mi sekvu lin?</p>
+					<p>“Kion mi faru, se li iros eksteren? Ĉu mi sekvu lin eksteren?
 					Ĉu mi sekvu lin ekstere? Mi ne scias, kion mi faru. Mi ne scias, kion
 					mi faros. Mi ne scias, ĉu mi sekvos lin aŭ ne.</p>
-					<p>"Kaj se li foriros en aŭto? Ĉu ankaŭ mi sekvu lin aŭte?</p>
-					<p>"Jam estas vespero. Baldaŭ venos nokto. Jes. Baldaŭ
+					<p>“Kaj se li foriros en aŭto? Ĉu ankaŭ mi sekvu lin aŭte?</p>
+					<p>“Jam estas vespero. Baldaŭ venos nokto. Jes. Baldaŭ
 					noktiĝos. Ĉu mi sekvu lin nokte?</p>
-					<p>"Kaj eĉ se li ne iros eksteren de la universitato, eĉ se li
+					<p>”Kaj eĉ se li ne iros eksteren de la universitato, eĉ se li
 					restos ĉi tie, ĉu mi sekvu lin?</p>
 					<p>
-					"Se li eliros tra tiu ĉi pordo, li iros en la koridoron al iu
+					“Se li eliros tra tiu ĉi pordo, li iros en la koridoron al iu
 					ĉambro. Ĉu mi sekvu lin en la koridoron? Ĉu mi sekvu lin en la
 					koridoro? Ĉu mi sekvu lin en la ĉambron, en kiun li eniros? Ne.
 					Neeble. Mi atendos en la koridoro. Sed se nenio okazos? Se li restos
@@ -54,16 +54,16 @@ include "gerdakapo.inc.php";
 			</div>
 			<div class="row dialogo">
 				<div class="col s12 m8">
-					<p>"Kaj se li eliros tra tiu pordo, li iros eksteren, verŝajne al
+					<p>“Kaj se li eliros tra tiu pordo, li iros eksteren, verŝajne al
 					la urbo. Ĉu mi sekvu lin al la urbo? Ĉu mi sekvu lin en la urbon?
 					Ĉu mi sekvu lin en la urbo?</p>
-					<p>"Se li iros piede, eble li vidos min, verŝajne li vidos min.
+					<p>“Se li iros piede, eble li vidos min, verŝajne li vidos min.
 					Li suspektos, ke mi lin sekvas. Li turnos sin al mi. Mi ektimos. Mi
 					paliĝos. Aŭ mia vizaĝo iĝos ruĝa kiel tomato. Jes, mi konas min. Mi
 					paliĝos kaj tuj poste ruĝiĝos. Ĉiaokaze, mi maltrankviliĝos. Jam
 					nun mi maltrankviliĝas.</p>
-					<p>"Se li iros per buso, li eĉ pli certe vidos, ke mi sekvas lin,
-					ĉar ni devos kune atendi ĉe la haltejo."</p>
+					<p>“Se li iros per buso, li eĉ pli certe vidos, ke mi sekvas lin,
+					ĉar ni devos kune atendi ĉe la haltejo.”</p>
 					<p>Linda ne sukcesas decidi, kion ŝi faru.</p>
 					<p>Ŝi timas. Ŝia koro batas rapide. Ŝi volus, ke Tom kaj Bob
 					estu kun ŝi, ke ili helpu ŝin, ke ili helpu ŝin decidi. Ŝi estas
@@ -173,8 +173,8 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">si</span> : se, soi, lui, elle, eux (pronom réfléchi 3<sup>e</sup> personne)</p>
 					<p><span class="eo">suspekti</span> : suspecter</p>
 					<p><span class="eo">tien</span> : vers là, vers là-bas</p>
-					<p class="sekva">iru tien !</span> : allez là-bas !</p>
-					<p class="sekva">venu ĉi tien !</span> : venez ici !</p>
+					<p class="sekva">iru tien!</span> : allez là-bas !</p>
+					<p class="sekva">venu ĉi tien!</span> : venez ici !</p>
 					<p><span class="eo">tomato</span> : tomate</p>
 					<p><span class="eo">tra</span> : à travers</p>
 					<p><span class="eo">urbo</span> : ville</p>
@@ -214,11 +214,11 @@ include "gerdakapo.inc.php";
 			servas sin mem. Ne estas ulo, kiu venas al via tablo kun via tomato
 			aŭ kafo. Vi devas servi vin mem.</p>
 			
-			<p>Ĉu vi ne volas iri al memserva restoracio ? Vi preferas, ke oni servu
+			<p>Ĉu vi ne volas iri al memserva restoracio? Vi preferas, ke oni servu
 			vin. Nu, bone. Kiel vi volas. Ĉiaokaze, mi ne iros kun vi. Vi devos
 			iri sola. Mi devas resti ĉi tie. Mi laboros en mia ĉambro.</p>
 			
-			<p>Kion ? Ĉu vi timas perdiĝi ? Ne timu. Miaopinie, vi ne riskas
+			<p>Kion? Ĉu vi timas perdiĝi? Ne timu. Miaopinie, vi ne riskas
 			perdiĝi. Estas tre simple iri tien. Nur sekvu tion, kion Tom diris al
 			vi. Tiel vi ne perdiĝos.</p>
 			
@@ -227,17 +227,17 @@ include "gerdakapo.inc.php";
 			eble estas pli bone ol piediri, almenaŭ rilate al la piedoj, sed la
 			buson vi devas atendi. Okazas, ke oni atendas longe. Aŭto estas pli
 			rapida ol buso, kaj vi povas foriri per ĝi, kiam vi volas, sed ĉu vi
-			havas aŭton ?</p>
+			havas aŭton?</p>
 			
-			<p>Vi baldaŭ havos aŭton, ĉu ? Nu, bone, sed «baldaŭ» ne estas «nun».
+			<p>Vi baldaŭ havos aŭton, ĉu? Nu, bone, sed «baldaŭ» ne estas «nun».
 			Se vi deziras iri al la urbo nun, tre gravas, ĉu vi havas aŭton nun.
 			Ke vi havos ĝin baldaŭ, tio estas grava iurilate, mi konsentas, sed
-			tio ne helpas vin nun, eĉ iomete, por iri al la urbo, ĉu ? Por aŭti
+			tio ne helpas vin nun, eĉ iomete, por iri al la urbo, ĉu? Por aŭti
 			ĝis la urbo, oni devas havi aŭton.</p>
 			
 			<p>Sed fakte vi povas iri tien promene. Piediri estas bone por la koro.
 			Kaj ankaŭ por la kapo, cetere. Kiam venas nokto, la urbo iĝas tiel
-			bela ! Kiam oni subite ekvidas la tutan urbon de malproksime, kaj
+			bela! Kiam oni subite ekvidas la tutan urbon de malproksime, kaj
 			noktiĝas, oni ekhavas senton pri io mistera, io ekstermonda, eĉ
 			supermonda.</p>
 			
@@ -246,7 +246,7 @@ include "gerdakapo.inc.php";
 			viaj kruroj tro laboros kaj perdos sian tutan forton.</p>
 			
 			<p>Sed mi deziris diskuti kun vi ankaŭ pri io tute alia. Ĉu vi havas
-			informojn pri Ana ? Ŝi kuŝis en sia ĉambro kaj ne sentis sin tre
+			informojn pri Ana? Ŝi kuŝis en sia ĉambro kaj ne sentis sin tre
 			bone. Tom iris al ŝi kun sia kuracisto, sed ŝi ne rigardas tiun
 			kuraciston serioza, ŝi preferas sian kuraciston, ŝi vere ne amas
 			lian. Li do forsendis sian kuraciston kaj vokis ŝian. Strange, kiam
@@ -254,17 +254,17 @@ include "gerdakapo.inc.php";
 			vidis sian kuraciston eniri en ŝian ĉambron
 			<a href='#notoj'>[1]</a>, ŝi jam sentis sin pli bone.</p>
 			
-			<p>Oni sin demandas, pri kio vere temas, ĉu ne ? Ho, ĉu vi jam foriras
-			? Do, bonan vesperon, kaj ankaŭ bonan nokton ! Ĝis revido ! Ni
-			revidos nin baldaŭ, verŝajne. Do, ĝis !</p>
+			<p>Oni sin demandas, pri kio vere temas, ĉu ne? Ho, ĉu vi jam foriras?
+			Do, bonan vesperon, kaj ankaŭ bonan nokton! Ĝis revido! Ni
+			revidos nin baldaŭ, verŝajne. Do, ĝis!</p>
 			
 			<a id="notoj"></a>
 			<p class="rimarko"><strong>NOTOJ</strong> : 
 			<ol>
-				<li><span class="eo">Ŝi vidis sian kuraciston</span> : kiu vidis ? — ŝi. La kuraciston de
-				kiu ? — de ŝi (de tiu, kiu vidis).<br>
-				<span class="eo">Eniri en ŝian ĉambron</span> : kiu eniris ? — ne ŝi, sed la kuracisto. 
-				En la ĉambron de kiu ? — ne de la kuracisto (ne de tiu, kiu eniris), sed
+				<li><span class="eo">Ŝi vidis sian kuraciston</span> : kiu vidis? — ŝi. La kuraciston de
+				kiu? — de ŝi (de tiu, kiu vidis).<br>
+				<span class="eo">Eniri en ŝian ĉambron</span> : kiu eniris? — ne ŝi, sed la kuracisto. 
+				En la ĉambron de kiu? — ne de la kuracisto (ne de tiu, kiu eniris), sed
 				de ŝi. Se vi dirus: «Ŝi vidis la kuraciston eniri en sian ĉambron»,
 				tio volus diri, ke ŝi vidis la kuraciston eniri en la ĉambron de la kuracisto.</li>
 			</ol>

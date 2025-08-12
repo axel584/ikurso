@@ -69,7 +69,7 @@ include "gerdakapo.inc.php";
 					<p>La flegistino iras al Bob, kiu falsidas ĉe la koridora muro.
 					Ŝi tuŝas lian kapon.</p>
 					<p>"Batita! Oni batis la kapon al li!"</p>
-					<p>"Diable! Bob, Bob! Respondu! Ĉu vi aŭdas min? Diru, mi petas! Kio okazis?</p>
+					<p>"Diable! Bob, Bob! Respondu! Ĉu vi aŭdas min? Diru, mi petas! Kio okazis?”</p>
 					<p>Sed Bob ne respondas, kaj Tom iĝas pli kaj pli maltrankvila.</p>
 				</div>
 				<div class="col s12 m4">

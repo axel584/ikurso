@@ -252,7 +252,7 @@ include "gerdakapo.inc.php";
 			fenestro enlasis malvarmetan aeron. Mi pensis: nun estas tempo
 			ellitiĝi. Sed mi sentis min tiel bone en la lito! «Ĉu vere», mi
 			diris al mi, «Ĉu vere mi devas ellitiĝi tuj?» Ena voĉo respondis,
-			tute mallaŭte: «Ne. Ĝoju pri la ŝatinda kuŝa pozicio, pri la
+			tute mallaŭte: "«Ne. Ĝoju pri la ŝatinda kuŝa pozicio, pri la
 			feliĉiga enlita situacio, restu iom pli longe. Nenio ja urĝas».</p>
 			<p>
 			Mi tre kontentis pri tiu senvoĉa voĉo, kiu tiel amike parolis al mi,
@@ -325,8 +325,8 @@ include "gerdakapo.inc.php";
 			similajn vortojn stultajn, kaj, krome, malĝojigajn?» ĝi rimarkigis
 			al mi. «Silentigu ĝin. Tiu voĉo ne estas aŭdinda. Ĝi malŝatas
 			liberecon, ĝi do malŝatas vian patron, kiu tiom ŝatis liberecon.
-			Ĉu oni ne instruis al vi, ke oni devas ami siajn patron kaj patrinon
-			? Ami ilin, memori pri ili? Pensu pri la tempo, kiam vi estis tute
+			Ĉu oni ne instruis al vi, ke oni devas ami siajn patron kaj patrinon?
+			Ami ilin, memori pri ili? Pensu pri la tempo, kiam vi estis tute
 			malgranda, eta-eta infaneto, kaj kuŝis en la brakoj de via patrino.
 			Ĉu ŝi vekis vin, se vi dormis? Tute ne. Ŝi agis precize por ke vi
 			ne vekiĝu, sed dormu plu trankvile. Ĉu vi memoras, kiel feliĉe
@@ -437,7 +437,7 @@ include "gerdakapo.inc.php";
 			sed nur malfeliĉo, ŝi el sia ĉambro eliris, kaj tuj poste el la
 			domo.</p>
 			<p>
-			Mi sentis min laca, ege laca. Kaj mi faris nur duonon de la devo ! Mi
+			Mi sentis min laca, ege laca. Kaj mi faris nur duonon de la devo! Mi
 			serĉis Alanon, la knabon. Mi pli antaŭtimis ĉi tiun intervidon,
 			ĉar Alano estas pli juna kaj pli sentema. Ankaŭ pli malkaŝema, pli
 			ema sin esprimi.</p>
@@ -470,7 +470,7 @@ include "gerdakapo.inc.php";
 			<p>
 			Kaj li ekridis.</p>
 			<p>
-			Mi atendis ion ajn, sed ne tion. Li ne akceptis min serioze ! Por li,
+			Mi atendis ion ajn, sed ne tion. Li ne akceptis min serioze! Por li,
 			patro estas tiel klara, evidenta, neforigebla duono de amata paro, ke
 			tiu duono ne povus serioze foriri, lasante la alian duonon sola. Por
 			li, evidente, paro estas tuto, paro estas unuo, ne du aĵoj, kiujn

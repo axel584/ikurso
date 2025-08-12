@@ -168,8 +168,8 @@ include "gerdakapo.inc.php";
 			pagis. Tial mi petas vin skribi mian plendon, mian unuan: provo ŝteli
 			monon de mi.</p>
 			
-			<p>Dua plendo: oni min persekutis. Kiel oni persekutis min, vi volas scii
-			? Ĉefe la instruanto min persekutis, sed fojfoje ankaŭ la
+			<p>Dua plendo: oni min persekutis. Kiel oni persekutis min, vi volas scii?
+			Ĉefe la instruanto min persekutis, sed fojfoje ankaŭ la
 			kunlernantoj. Imagu tion: esti persekutata de siaj samklasanoj!
 			Nekredeble, ĉu? Tamen tio okazis. Mi diras la veron. Mi estas homo
 			sincera, kaj tial ne elportas malhonestaĵojn, kaj malhonestaĵojn mi
@@ -187,8 +187,8 @@ include "gerdakapo.inc.php";
 			IĜI, aŭ DE kaj ne DA. Estis organizita milito kontraŭ mia sento pri
 			memdigno, kontraŭ mia memvaloro. Oni konstante provadis malaltigi min
 			kaj estigi en mi sentojn de malplivaloro. Ĉu ni ne vivas en libera
-			lando, kie, laŭtradicie, la digneco de homa persono estas respektata
-			? Mi kuraĝe rifuzis lasi ilin subigi min, sed ili insistis. Plurfoje
+			lando, kie, laŭtradicie, la digneco de homa persono estas respektata?
+			Mi kuraĝe rifuzis lasi ilin subigi min, sed ili insistis. Plurfoje
 			mi konstatis, ke ili trovas plezuron en la fakto diri al mi, ke mi
 			fuŝlernis. Estas faka vorto, kiu difinas tiun sintenon, sed mi
 			momente forgesis ĝin. Mia memoro ne fartas tre bone post tiu laciga

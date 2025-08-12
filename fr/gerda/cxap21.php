@@ -268,7 +268,7 @@ include "gerdakapo.inc.php";
 			<a id="dua" class="scrollspy"></a>
 			<h3>Adiaŭ lando amata!</h3>
 		
-			<p>Adiaŭ, lando de mia naskiĝo ! Mi forveturas. Mi ne plu manĝos viajn
+			<p>Adiaŭ, lando de mia naskiĝo! Mi forveturas. Mi ne plu manĝos viajn
 			sensimilajn kolbasojn. Ne plu okazos, ke mi forgesos la zorgojn,
 			perdante iom post iom la konscion pro via tro forta brando, kaj pro
 			viaj troaj trinkotradicioj.</p>
@@ -357,8 +357,8 @@ include "gerdakapo.inc.php";
 			dignecon en tiaj kondiĉoj? Ĉu vi ne komprenis, kiom digneco valoras
 			por homo, kiom ĝi necesas, kiom ni bezonas ĝin?</p>
 			
-			<p>Adiaŭ, naskiĝlanda polico, scivolema, kontrolema, komfort-ama polico
-			! Mi forflugas por ĉiam. Multo mankos al mi. Mankos la koloroj, la
+			<p>Adiaŭ, naskiĝlanda polico, scivolema, kontrolema, komfort-ama polico!
+			Mi forflugas por ĉiam. Multo mankos al mi. Mankos la koloroj, la
 			muziko, la kantoj. Mankos mialingvaj libroj, kiujn mi ne povos tie
 			fore ricevi. Mankos la vizaĝoj, la voĉoj, la ridoj.</p>
 			

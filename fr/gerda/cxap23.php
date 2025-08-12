@@ -209,7 +209,7 @@ include "gerdakapo.inc.php";
 			<a id="unua" class="scrollspy"></a>
 			<h3>Sekreta servo</h3>
 			
-			<p>Kial diable mi entiriĝis<a href="#notoj">[1]</a> en tiun aferon ? Mi ne estis sufiĉe
+			<p>Kial diable mi entiriĝis<a href="#notoj">[1]</a> en tiun aferon? Mi ne estis sufiĉe
 			singarda. Oni neniam gardas sin sufiĉe kontraŭ tiuj danĝeraj
 			decidoj. Fakte, mi eĉ ne rimarkis, ke mi ion decidas. Tiuepoke, mi
 			estis simpla soldato. Ĉar miaj gepatroj multege vojaĝis kaj
@@ -298,17 +298,17 @@ include "gerdakapo.inc.php";
 			
 			<p>Sed poste... Ne. Mi ne povas rakonti. Mi bezonas protekton, pli bonan
 			protekton kontraŭ ili. Ili estas tiel danĝeraj. Aŭ ĉu tion mi
-			imagas ? Ne. Ili estas grandpovaj. Ili estas kvazaŭ ŝtato en la
+			imagas? Ne. Ili estas grandpovaj. Ili estas kvazaŭ ŝtato en la
 			ŝtato. La malnova timo plu kuŝas malsupre en mia koro. Kaj tamen mi
 			devus rakonti. Se ne por via plezuro, almenaŭ por la sano de mia kapo
 			kaj de mia korpo, laca plu porti ĉion ĉi neniam parolante pri ĝi.
-			Ĉu gardi sekretojn tutvive estas eble al ne-superhomo ? Ĉiam gardi
+			Ĉu gardi sekretojn tutvive estas eble al ne-superhomo? Ĉiam gardi
 			multe da gravegaj sekretoj estas konstanta streĉo, kaj tiu streĉo
 			estas malpli kaj malpli elportebla. Eĉ kiam la sekretoj estas
 			ridindaj.</p>
 			
 			<p>Kaj mult-aspekte, la vivo en la Centro estis ridiga. Aŭ ridinda. Tiuj
-			homoj prenis sin tiel serioze ! La ideo partopreni en kaŝa, subtera,
+			homoj prenis sin tiel serioze! La ideo partopreni en kaŝa, subtera,
 			subsupraĵa milito tutmonda naskis en ili senton pri graveco, kiu
 			fojfoje perdigis al ili la kapon.</p>
 			
@@ -319,11 +319,11 @@ include "gerdakapo.inc.php";
 			<p>Foje... Se vi scius... Vi ridegos, kiam vi ekscios. Foje, unu el tiuj
 			spion-ĉefoj — li nomiĝis Alb...</p>
 			
-			<p>Ho ! Kio okazas al mi ? Tra la fenestro, iu ekĵetis... mi svenas, mi
+			<p>Ho! Kio okazas al mi? Tra la fenestro, iu ekĵetis... mi svenas, mi
 			svenas... Kapo turniĝas. Rigardu: en la koron ĝi eniĝis, ĝi
 			teniĝas tute firme... tiu afereto... Mortiga substanco... Kial vi
-			malfermis la fenestron ? Kial vi igis min stari apud ĝi ? Ĉu vi... ?
-			Haaaaa !</p>
+			malfermis la fenestron? Kial vi igis min stari apud ĝi? Ĉu vi...?
+			Haaaaa!</p>
 		
 			<a id="notoj"></a>
 			<p class="rimarko"><strong>NOTOJ</strong> : 

@@ -199,9 +199,9 @@ include "gerdakapo.inc.php";
 			
 			<p>Vi tute ne atentas vian laboron. Ŝajnas, ke nur Izabela gravas por
 			vi. Mi konsentas, ke ŝi estas tre bela junulino. Sed tamen vi agas
-			malprave. Se subite iu dezirus sukeron, ĉe kiu li ekhavus ĝin ?</p>
+			malprave. Se subite iu dezirus sukeron, ĉe kiu li ekhavus ĝin?</p>
 			
-			<p>Nur imagu ! Se Profesoro Zuzu venus kaj vidus, ke la sukerujoj estas
+			<p>Nur imagu! Se Profesoro Zuzu venus kaj vidus, ke la sukerujoj estas
 			malplenaj... Mi ne povas imagi — pli bone: mi preferas ne imagi —
 			kio okazus, se li tion vidus. Vi scias, ke havi multe da sukero tre
 			gravas por li. Vere mi ne komprenas vin.</p>
@@ -239,34 +239,34 @@ include "gerdakapo.inc.php";
 			
 			<p>Se mi revidus vin reiri promeni kun Izabela dum la labortago kaj ne
 			atenti vian laboron, mi turnus min<a href='#notoj'>[2]</A> al Profesoro Zuzu kaj dirus la
-			aferon al li. Ne gravas al vi, ĉu vere ? Ĉu vere tion vi respondis ?
-			Diable ! Bela respondo ! Nu, bone ! Se vi preferas agi neserioze, se
+			aferon al li. Ne gravas al vi, ĉu vere? Ĉu vere tion vi respondis?
+			Diable! Bela respondo! Nu, bone! Se vi preferas agi neserioze, se
 			vi preferas ne labori, la dramo okazu. Al mi tute ne gravas. Mi diras
 			tion por vi, ne por mi.</p>
 			
 			<p>Ĉu vi imagas, ke povus gravi por mi, ke vi ne laboras normale, ke vi
-			malkonsentas labori ? Tute ne gravas. Mi estas bona kun vi kaj
+			malkonsentas labori? Tute ne gravas. Mi estas bona kun vi kaj
 			komunikas al vi miajn ideojn. Sed se vi ne volas konsideri ilin
 			serioze, tio estas via afero.</p>
 			
-			<p>Ĉu laboro pri sukerujoj estas tro malalta por vi ? Ĉu vi imagas, ke
-			vi estas en la universitato kiel studento ? Kiel profesoro, eble ? Ne,
+			<p>Ĉu laboro pri sukerujoj estas tro malalta por vi? Ĉu vi imagas, ke
+			vi estas en la universitato kiel studento? Kiel profesoro, eble? Ne,
 			ne, kara mia. Vi estas simpla laborulo. Estas tro multe da ideoj en
 			via imago, kaj tro malmulte da laborforto en viaj manoj. Ne.
 			Laborforton vi havas. Mi volis diri: tro malmulte da laborvolo.</p>
 			
 			<p>Tro ofte mi vidas vin promeni kun la manoj en la poŝoj. Ĉu vi estus
-			tiel malforta, ke vi ne plu povus labori nun ? Vi eble ne estas tre
-			granda, sed vi ne ŝajnas malforta. Ĉu vi jam laboris tro multe ?
-			Diable ! Mi ne povas kompreni vin.</p>
+			tiel malforta, ke vi ne plu povus labori nun? Vi eble ne estas tre
+			granda, sed vi ne ŝajnas malforta. Ĉu vi jam laboris tro multe?
+			Diable! Mi ne povas kompreni vin.</p>
 			
 			<p>Kiam mi estis juna, mi ne konis knabojn, kiuj laboris tiel malmulte,
 			kiel vi. Knaboj, kiuj ne laboris, ĉe ni ne ekzistis. Mi ne diras, ke
 			vi estas malbona knabo. Mi konsideras nur, ke vi agas absurde. Mi
-			konsentas, ke Izabela kaj vi estas bela paro. Sed... Eble vi
+			konsentas, ke Izabela kaj vi estas bela paro. Sed… Eble vi
 			konsideras, ke mi parolas tro multe pri aferoj, kiuj ne rilatas al mi.
 			Pardonu, sed tamen permesu, ke mi komuniku al vi miajn ideojn. Rilatoj
-			estas pli bonaj, se tiuj, kiuj laboras kune, estas sinceraj, ĉu ne ?
+			estas pli bonaj, se tiuj, kiuj laboras kune, estas sinceraj, ĉu ne?
 			Kaj vidi junan viron kiel vi, plenan de forto, promeni tuttage kun
 			knabino, dum li povus multe labori, kaj dum la sukerujoj estas
 			malplenaj, nu, tio estas tro.</p>
@@ -274,7 +274,7 @@ include "gerdakapo.inc.php";
 			<p class="rimarko"><strong>NOTES</strong> : 
 		
 			<ol>
-				<li><span class="eo">Hehe</span>: pli malpli kiel ho ! (Se vi ne komprenas «hehe», tute ne
+				<li><span class="eo">Hehe</span>: pli malpli kiel ho! (Se vi ne komprenas «hehe», tute ne
 		    	gravas).</li>
 				<li><span class="eo">Mi turnus min al</span>: mi irus paroli al.</li>
 			</ol>

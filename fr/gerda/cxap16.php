@@ -319,8 +319,7 @@ include "gerdakapo.inc.php";
 			ĉi-foje, kiam li apenaŭ ekmanĝetis iom da supo, jam li komencis
 			brue esprimi sian malkontenton. «Mi ne nomas tion ĉi supo», li diris
 			tiel laŭte, ke la tuta restoracio aŭdis lin, kvankam nia grupo sidis
-			en alia manĝoĉambro, ne en la restoracio mem. Ĝena situacio, ĉu ne
-			?</p>
+			en alia manĝoĉambro, ne en la restoracio mem. Ĝena situacio, ĉu ne?</p>
 			<p>
 			Estas muzikistoj en la restoracio, kaj, kompreneble, eĉ en nia
 			speciala manĝoĉambro ni aŭdis ilin, ĉar tamen ne estis dika ŝtona
@@ -418,7 +417,7 @@ include "gerdakapo.inc.php";
 			la tuta atmosfero de la vivo fariĝas plej aĉa. Krome, oni apenaŭ
 			trovas ion por manĝi. Oni manĝaĉas ion ajn. Mi aŭdis pri homoj,
 			kiuj manĝis kataĵon, manke de io pli bona. Nur por vivi, ĉu vi
-			komprenas ?, nur por pluvivi.</p>
+			komprenas?, nur por pluvivi.</p>
 			
 			<p>Rigardi malplenan teleron, kaj aŭdi la infanojn plore peti
 			nehaveblajn manĝaĵojn, enkorpigi al si supon, kiu estas pli akvo ol
@@ -427,10 +426,10 @@ include "gerdakapo.inc.php";
 			miaj infanoj neniam travivos ion similan.</p>
 			
 			<p>Eĉ la malĝojaj okuloj de nia hundo igis nin plej malfeliĉaj, ĉar
-			kion ni povis fari ? Se la homoj ne havis sufiĉe por manĝi, kiel ni
-			povus plenigi la teleron de nia kara, amata, sed kompatinda hundo ?</p>
+			kion ni povis fari? Se la homoj ne havis sufiĉe por manĝi, kiel ni
+			povus plenigi la teleron de nia kara, amata, sed kompatinda hundo?</p>
 			
-			<p>Kia malaminda vivo ! Mi neniam komprenos — kiaj ajn la interesoj de
+			<p>Kia malaminda vivo! Mi neniam komprenos — kiaj ajn la interesoj de
 			la nacio — ke homoj povas decidi ek-estigi militon. Kiom ajn alte ili
 			staras en la direktado de la nacio. kiom ajn klare ili povas vidi la
 			internaciajn rilatojn, aŭ la tutmondan situacion, tamen...</p>
@@ -441,7 +440,7 @@ include "gerdakapo.inc.php";
 			estus sufiĉe maltima, eĉ se mi havus la devon direktadi de plej alte
 			la aferojn de miaj samnaciuloj.</p>
 			
-			<p>Decidi, ke oni ekmilitos, kia decidaĉo ! Sendi la junulojn al morto
+			<p>Decidi, ke oni ekmilitos, kia decidaĉo! Sendi la junulojn al morto
 			jam estas aĉa decido, sed sendi ilin al mortigo — sendi ilin mortigi
 			aliajn junulojn, kaj ankaŭ homojn nejunajn — ŝajnas al mi eĉ pli
 			neakcepteble. Scii, ke oni estigos doloron en miloj kaj miloj da
@@ -450,7 +449,7 @@ include "gerdakapo.inc.php";
 			trankvilon, sen kiu oni ne povas ekdormi. Vere, mi ne povus.</p>
 			
 			<p>Sed, se vi permesas, ni parolu pri io alia. Estas multaj ĝojigaj
-			aspektoj en la vivo. Kial ne paroli pri io ridiga, aŭ feliĉveka ?
+			aspektoj en la vivo. Kial ne paroli pri io ridiga, aŭ feliĉveka?
 			Milito estas tiel brunaĉa, senkolora temo. Aŭ eble vi preferus diri:
 			koloraĉa.</p>
 			
@@ -462,7 +461,7 @@ include "gerdakapo.inc.php";
 			
 			<p>Jes, ni parolu pri io alia. Ni lasu nian imagon ekflugi alten en la
 			aero, estigi mondon de beleco kaj rido, de amo kaj feliĉo. Ĉu
-			gravas, se tiu mondo ne ekzistas ? Ne; ĉu ? Gravas, ke ni estigu en
+			gravas, se tiu mondo ne ekzistas? Ne; ĉu? Gravas, ke ni estigu en
 			ni iun atmosferon, por ĝojigi nin kaj forgesigi al ni la
 			malamindaĵojn de l' milito.</p>
 			
@@ -470,18 +469,18 @@ include "gerdakapo.inc.php";
 			imagon funkcii mem, lasi penson venigi penson, imagaĵon sekvi
 			imagaĵon, nur por la plezuro forgesi la mondon, en kiu ni vivas, kaj
 			ĝiajn dolorajn aspektojn. Ĉu vi trovas, ke tio estas forkuri for de
-			la realeco ? Laŭ vi ne estas tre bone, fidi al sia imago kaj prikanti
-			enpense belecojn nerealajn, ĉu ? Vi malpravas, laŭ mia sento.
+			la realeco? Laŭ vi ne estas tre bone, fidi al sia imago kaj prikanti
+			enpense belecojn nerealajn, ĉu? Vi malpravas, laŭ mia sento.
 			Elpensi aliajn mondojn, en kiuj la vivo estus pli feliĉa kaj la homoj
 			pli bonkoraj unuj al la aliaj, tio ne estas la samo, kiel intermiksi
 			en sia pensado tiujn imagitajn mondojn kun la vivo ĉi-ekzista. Eble,
 			se oni farus tion multfoje, tio estus malsaĝa. Sed kelkfoje, kiam
-			venas okazo, kial ne ?</p>
+			venas okazo, kial ne?</p>
 			
 			<p>Kaj eĉ se tio estas forkuri el la realeco, forflugi en imagitan
 			mondon, ĉar la reala ŝajnas al ni tro aĉa, kial tion ne fari
-			fojfoje ? Se tion farante ni retrovas forton kaj kuraĝon, por aliri
-			sentime la verajn demandojn de la realo, kial sin forturni de ĝi ?</p>
+			fojfoje? Se tion farante ni retrovas forton kaj kuraĝon, por aliri
+			sentime la verajn demandojn de la realo, kial sin forturni de ĝi?</p>
 			
 			<p>Evidente, la situacio estus tute malsama, se temus pri kutimo tiel
 			forta, ke oni ne plu povus pensi realece. Sed se ni ne perdas nian
@@ -489,7 +488,7 @@ include "gerdakapo.inc.php";
 			fordoni al tiu ludo.</p>
 			
 			<p>Homoj ne sufiĉe ludas, niaepoke, laŭ mia maniero rigardi la vivon.
-			Por mi, ludo estas tre grava, ĉu ne por vi ? Ludo alportas ĝojon kaj
+			Por mi, ludo estas tre grava, ĉu ne por vi? Ludo alportas ĝojon kaj
 			ridon, dum ĉiama seriozeco estigas ian mankon de vivo en la homo.</p>
 			
 			<p>Mi ne volas diri, ke oni aliru siajn taskojn kaj devojn malserioze, ne
@@ -499,10 +498,10 @@ include "gerdakapo.inc.php";
 			
 			<p>Nur tion mi diras, ke aliri la realon iom lude, ride, aŭ almenaŭ
 			ridete, estas pli feliĉige por ni mem kaj por la aliaj ol ĉiam
-			komenci taskon kun plendo kaj ĝememo. Ĉu vi konsentas ?</p>
+			komenci taskon kun plendo kaj ĝememo. Ĉu vi konsentas?</p>
 			
-			<p>Ne ? Kiel strange ! Sed, se vi vere malkonsentas, kial do vi ridetas ?
-			Vi eĉ ridas ! Tamen la demando estas serioza. Kaj se vi malkonsentas,
+			<p>Ne? Kiel strange! Sed, se vi vere malkonsentas, kial do vi ridetas?
+			Vi eĉ ridas! Tamen la demando estas serioza. Kaj se vi malkonsentas,
 			via opinio povas nur esti, ke seriozajn demandojn oni priparolu
 			senride.</p>
 

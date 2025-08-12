@@ -195,13 +195,13 @@ include "gerdakapo.inc.php";
 			komprenos. Ili diros, ke temas pri io tre stranga kaj nekomprenebla,
 			sed ili ne opinios, ke mi diras la veron. Aŭ ĉu eble tamen...?</p>
 			
-			<p>Ili eble vokos fakulojn, specialistojn. Mia koro batos ! Mi jam povas
+			<p>Ili eble vokos fakulojn, specialistojn. Mia koro batos! Mi jam povas
 			imagi tion: kiel rapide mia koro batos, kiam mi staros antaŭ ili kaj
-			devos diri, kio okazis, kiel kaj de kiu (diable !) mi ekhavis tiun
+			devos diri, kio okazis, kiel kaj de kiu (diable!) mi ekhavis tiun
 			neimageblan aĵon.</p>
 			
-			<p>Kion oni povas fari por superi la timon ? Kion faras la aliaj, kiam
-			granda forta timo envenas en ilian koron ? Mi scias pri tiuj
+			<p>Kion oni povas fari por superi la timon? Kion faras la aliaj, kiam
+			granda forta timo envenas en ilian koron? Mi scias pri tiuj
 			aŭtoritatoj<a href='#notoj'>[2]</a>. Ili deziros tutforte, ke mi malpravu. Ili multe
 			preferus, ke mi malpravu. Ofte la aŭtoritatoj tute ne deziras aŭdi
 			la veron. Ili konsentas kompreni ĝin, nur se la vero estas normala.
@@ -212,9 +212,9 @@ include "gerdakapo.inc.php";
 			petis... eee<a href='#notoj'>[3]</a>... «tiujn» veni. Ne mi deziris aŭdi iliajn timofarajn
 			parolojn. Ĉu vi opinias, ke mi amas dramojn ? Tute ne.</p>
 			
-			<p>Kaj tamen, kion fari ? Mi faros mian devon. Mi iros. Kaj mi devos iri
+			<p>Kaj tamen, kion fari? Mi faros mian devon. Mi iros. Kaj mi devos iri
 			sola. La afero, kompreneble, estas plej sekreta. Se almenaŭ mi povus
-			paroli pri ĝi kun iu ! Sed sekreto estas sekreto. Kaj kun... tiuj...
+			paroli pri ĝi kun iu! Sed sekreto estas sekreto. Kaj kun… tiuj…
 			tiuj uloj... eee... tiuj estaĵoj, la risko estus tro granda.</p>
 			
 			<p>La simpla fakto pensi, ke mi staros tie, antaŭ la aŭtoritatoj, jam
@@ -239,19 +239,19 @@ include "gerdakapo.inc.php";
 			tion, kion mi devas diri, estas ilia afero. Ili iru al la diablo, se
 			ili preferas.</p>
 			
-			<p>Mi venis por fari mian devon. Tio estas la ĝusta faro, ĉu ne ? Kio
-			estas pli ĝusta ol tio ? Kio estus pli prava ol informi la superulojn
-			? Ankaŭ mi preferus sidi kun la kapo en imago kaj la piedoj sur la
-			tablo, se vi vidas, kion mi volas diri, sed ne gravas mia prefero, ĉu
-			? Gravas multe pli, ke iu informu la aŭtoritatojn pri tiu grava,
-			stranga, drama afero. Kion fari, se tiu «iu» nur povas esti mi ?
+			<p>Mi venis por fari mian devon. Tio estas la ĝusta faro, ĉu ne? Kio
+			estas pli ĝusta ol tio? Kio estus pli prava ol informi la superulojn?
+			Ankaŭ mi preferus sidi kun la kapo en imago kaj la piedoj sur la
+			tablo, se vi vidas, kion mi volas diri, sed ne gravas mia prefero, ĉu?
+			Gravas multe pli, ke iu informu la aŭtoritatojn pri tiu grava,
+			stranga, drama afero. Kion fari, se tiu «iu» nur povas esti mi?
 			Sincere, mi preferus, ke iu alia iru.</p>
 			
 			<p>Unu eble konsentos iomete aŭdi min, sed ne la aliaj, ne la plimulto.
 			Nu, estas ilia afero. Ne, mi diras malveron al mi. Ne estas nur ilia
 			afero. Estas ankaŭ mia afero. Estas mia devo. Kiam mi ekpensas pri
-			tio, kio okazos al la tuta mondo, se oni faros nenion, kiel mi ektimas
-			! Mi preferus resti trankvile ĉi tie ol devi informi ilin.</p>
+			tio, kio okazos al la tuta mondo, se oni faros nenion, kiel mi ektimas! 
+                        Mi preferus resti trankvile ĉi tie ol devi informi ilin.</p>
 			
 			<p>La vero ofte ŝajnas pli absurda ol imagaĵoj. Estas vere, ke la
 			aŭtoritatoj estos en malkomforta pozicio. Sed ne mi decidis, ke ili
@@ -259,11 +259,11 @@ include "gerdakapo.inc.php";
 			deziris.</p>
 			
 			<p>Jes, karaj granduloj, vi deziris iĝi superaj aŭtoritatoj. Vi deziris
-			la Povon, la povon super ni simpluloj. Nun, vi havas ĝin. Agu do ! Vi
+			la Povon, la povon super ni simpluloj. Nun, vi havas ĝin. Agu do! Vi
 			devos komuniki la informon al la tuta mondo, tiel ke la tuta mondo
-			sciu, sed tamen ne tro timu. Ĉu tio estas ebla ? Mi timas, ke ne. Mi
-			timas, ke oni ne povas fari, ke la mondo ne timu. Sed kion fari ? Ĉu
-			fari nenion, ĝis la dramo okazos ? Ne. Neeble. Vi certe faros vian
+			sciu, sed tamen ne tro timu. Ĉu tio estas ebla? Mi timas, ke ne. Mi
+			timas, ke oni ne povas fari, ke la mondo ne timu. Sed kion fari? Ĉu
+			fari nenion, ĝis la dramo okazos? Ne. Neeble. Vi certe faros vian
 			devon. Mi estas kore kun vi.</p>
 		
 			<a id="notoj"></a>
@@ -272,8 +272,8 @@ include "gerdakapo.inc.php";
 				<li><span class="eo">Aĵo</span> : afero.</li>
 				<li><span class="eo">Mi scias pri tiuj aŭtoritatoj</span> : mi scias, kiel agas tiuj aŭtoritatoj; 
 				mi scias, kiel ili reagas al okazaĵoj; mi konas tiujn aŭtoritatojn.</li>
-				<li>La viro, kiu parolas, ne scias, kiel esprimi la penson; li do diras 'eee'; 
-				en aliaj lingvoj oni diras 'hm', 'aaa', 'er', 'euh', 'nu', 'oh' ...</li>
+				<li>La viro, kiu parolas, ne scias, kiel esprimi la penson; li do diras “eee”; 
+				en aliaj lingvoj oni diras “hm”, “aaa”, “er”, “euh”, “nu”, “oh” …</li>
 				<li>Alimondaj (= alia-mond-aj)</li>
 			</ol>
 

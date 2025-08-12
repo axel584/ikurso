@@ -126,8 +126,7 @@ include "gerdakapo.inc.php";
 				<p><span class="eo">estus bona afero, se vi povus veni</span> : ce serait une bonne chose si tu pouvais venir</p>
 		
 				<h4>ja</h4>
-				<p><b>ja</b> introduit souvent une explication à ce qui a été affirmé précédemment, mais cette particule sert aussi à mettre en avant un 
-				point particulier&nbsp;:</p>
+				<p><b>ja</b> introduit souvent une explication à ce qui a été affirmé précédemment, mais cette particule sert aussi à mettre en avant un point particulier&nbsp;:</p>
 		
 				<p><span class="eo">mi ne povas ĝin porti, ĝi ja estas tro granda</span> : je ne peux pas le porter, c'est trop gros</p>
 		
@@ -135,7 +134,7 @@ include "gerdakapo.inc.php";
 		
 				<p><span class="eo">vi ja scias …</span> : tu sais sûrement … ; assurément, tu sais …</p>
 		
-				<p><span class="eo">ĉu li ne venos? - jes ja!</span> : viendra-t-il?  - oh oui, assurément</p>
+				<p><span class="eo">ĉu li ne venos? - jes ja!</span> : viendra-t-il ?  - oh oui, assurément</p>
 			</section>
 
 		<?php 

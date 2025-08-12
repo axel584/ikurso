@@ -34,7 +34,7 @@ include "gerdakapo.inc.php";
 					tiel bela knabino, kiel vi. Pardonu, se mi ne montras min pli
 					amikiĝema. Sed miajn zorgojn mi ne povas klarigi."</p>
 					<p>"Ĉu vi estas certa? Oni ofte imagas, ke afero estas neebla,
-					ĉar oni ne scias, kiel komenci, sed…s"</p>
+					ĉar oni ne scias, kiel komenci, sed..."</p>
 					<p>"Ne. Kiom koncernas min, ne estas tiel. Mi ne povas rakonti pri
 					miaj zorgoj, ĉar ili koncernas personojn, pri kiuj mi ne rajtas
 					paroli. Oni devas esti diskreta, ĉu ne? Ĉu vi ŝatus, ke viaj amikoj
@@ -56,7 +56,7 @@ include "gerdakapo.inc.php";
 					min danka. Mi volus redoni al vi similan servon. Mi opiniis, ke se mi
 					helpas vin vortigi vian malĝojon, tio eble senpezigos vin, kaj mi
 					estos kontenta agi helpe.  Eble estas stulte, sed mi ĉiam deziras
-					feliĉigi la homojn."</p>
+					feliĉigi la homojn.”</p>
 				</div>
 				<div class="col s12 m4">
 					<img src="bildoj/gerda13-1.gif" class="responsive-img">
@@ -68,7 +68,7 @@ include "gerdakapo.inc.php";
 					<p>"Vere, vi estas tre bonkora. Mi ege bedaŭras, ke mi ne povas
 					jesi al via propono. Sed, kiel mi jam diris, miaj zorgoj koncernas
 					aferojn, pri kiuj mi ne rajtas rakonti. Nu, jen ni alvenas. Kie vi
-					deziras, ke mi lasu vin?"</p>
+					deziras, ke mi lasu vin?”</p>
 					<p>"Kien precize vi iras? Kie vi haltos? Kie vi lasos la aŭton?
 					Vi povus lasi min tie. Estos plej facile por vi."</p>
 					<p>"Ĉiam scivola, ĉu ne? Vi ŝatus scii, kien mi iras," li diras
@@ -203,12 +203,12 @@ include "gerdakapo.inc.php";
 				ĉar ŝajnis al mi, ke estas pli saĝe lasi mian koron trankviliĝi
 				antaŭ ol ekrilati kun ŝi.</p>
 			<p>
-			Ĉu vi memoras tiun tagon, tiun dolorigan tagon, kiam ŝi forlasis min
-			? Antaŭ longe tio okazis. Ŝi malkontentis pri mi, pri io, kion mi
+			Ĉu vi memoras tiun tagon, tiun dolorigan tagon, kiam ŝi forlasis min?
+			Antaŭ longe tio okazis. Ŝi malkontentis pri mi, pri io, kion mi
 			fuŝe faris. Kaj, malsaĝe, mi malkonsentis pardonpeti pri mia fuŝo.
 			Kiel malsaĝa mi estis! Ŝi pravis, kaj mi ne. Se tiuepoke mi sincere
 			dirus: «Jes, mi mispaŝis. Bonvolu pardoni min. Mi estas fuŝulo. Mi
-			riparos la aferon.», ŝi certe plu restus kun mi, ĉar ŝi trovis min
+			riparos la aferon.”, ŝi certe plu restus kun mi, ĉar ŝi trovis min
 			plej aminda. Sed mi malsaĝe volis, ke ŝi konsideru min prava.</p>
 			<p>
 			Ŝi tiam opiniis, ke vivo kun mi ne estos ebla, se mi devas senmanke
@@ -236,8 +236,8 @@ include "gerdakapo.inc.php";
 			vortojn por esprimi, kion mi sentis. Mi ne povis porti tiun pezon. Mia
 			koro estis peza. Pli kaj pli peza.</p>
 			<p>
-			Tamen, mia vivo... ne, vivo ne estas ĝusta vorto, tiel vivi ne estas
-			vivi, mi diru: mia ekzistado... tamen, do, mia ekzistado estis
+			Tamen, mia vivo… ne, vivo ne estas ĝusta vorto, tiel vivi ne estas
+			vivi, mi diru: mia ekzistado… tamen, do, mia ekzistado estis
 			seninteresa. Mi provis forgesi ŝin, sed ne povis. Amikoj proponis al
 			mi promenojn, veturadojn, agadojn, teatrovidon, diskutojn,
 			kuntrinkadon. Ili estis tre afablaj. Sed nenio interesis min.</p>
@@ -257,9 +257,9 @@ include "gerdakapo.inc.php";
 			la urbon, kaj Karleta sekvis lin for. Ŝi trovis alian laboron, ie,
 			kaj mi plu restis same sola.</p>
 			<p>
-			Komence mi pensis: «Ŝi ne rajtas fari tion al mi. Ŝi ne havas tiun
+			Komence mi pensis: “Ŝi ne rajtas fari tion al mi. Ŝi ne havas tiun
 			rajton. Ŝi devas vivi kun akceptinda viro, saĝa, bonkora, juna.
-			Unuvorte, kun viro kiel mi. Ne kun fuŝulo kiel Jozefo».</p>
+			Unuvorte, kun viro kiel mi. Ne kun fuŝulo kiel Jozefo.”</p>
 			<p>
 			Sed poste mia pensmaniero aliiĝis. Kion similaj pensoj ja povus
 			alporti al mi? Nenion helpan, nur bedaŭron. Fakte, mi ne pensis
@@ -288,15 +288,15 @@ include "gerdakapo.inc.php";
 			rideton mi neniam vidis. Neniam en mia vivo mi sentis min tiel
 			kortuŝita. Tiu rideto estis mesaĝisto pri baldaŭaj feliĉoj.</p>
 			<p>
-			«Kara Petro!» ŝi diris. «Kiel mi ĝojas vin revidi! Se vi scius,
+			“Kara Petro!” ŝi diris. “Kiel mi ĝojas vin revidi! Se vi scius,
 			kiel feliĉa mi estas! Oni diris al mi, ke vi forlasis la urbon, kaj
-			jen mi retrovas vin. Ĉu vi ankoraŭ min malamas?»</p>
+			jen mi retrovas vin. Ĉu vi ankoraŭ min malamas?”</p>
 			<p>
 			Imagu tion! Ŝi opiniis, ke mi malamas ŝin. Eble mi iomete ŝin
-			malamis, kiam ŝi forlasis min, sed tamen... Mi repensis pri miaj
+			malamis, kiam ŝi forlasis min, sed tamen… Mi repensis pri miaj
 			mortig-ideoj; ili koncernis min, kaj poste Jozefon, sed ŝin neniam.</p>
 			<p>
-			«Mi neniam malamis vin», mi respondis, «nur Jozefon».</p>
+			“Mi neniam malamis vin”, mi respondis, “nur Jozefon.”</p>
 			<p>
 			Kaj tiam ŝi rakontis pri Jozefo. Liaj proponoj tute ne estis
 			seriozaj. Tuj kiam li alvenis en tiun alian urbon, li faris similajn
@@ -324,10 +324,10 @@ include "gerdakapo.inc.php";
 			manon sur ŝian manon, proksimigis mian kapon al ŝia kapo. Niaj koroj
 			batis aŭdeble, aŭ apenaŭ malpli ol aŭdeble. Ni sentis kuniĝon. Ni
 			forlasis la kafejon, promenis en la urbo, ĉiam ride diskutante, ĉiam
-			kun ĝojplenaj vizaĝoj. Ni iris al mia ĉambro. Ni...</p>
+			kun ĝojplenaj vizaĝoj. Ni iris al mia ĉambro. Ni…</p>
 			<p>
 			Nu, nu, nu, nu. Ĉu vi scias, kio estas feliĉo? Vere, amiko, se vi
-			povus imagi...</p>
+			povus imagi…</p>
 
 			<a id="notoj"></a>
 			<p class="rimarko"><strong>NOTOJ</strong> : 

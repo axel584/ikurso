@@ -325,13 +325,13 @@ include "gerdakapo.inc.php";
 			<p>«La mondo ne estas bela» diras Izabela al la
 			spegulo. «Mi ne estas bela, mi ne estas granda, mi estas
 			juna, tro juna. Nenio okazas al mi. En la tuta mondo ne
-			estas knabo, kiu venas al mi kaj diras al mi «saluton» kaj
+			estas knabo, kiu venas al mi kaj diras al mi “saluton” kaj
 			sidas kun mi. En la tuta mondo ne estas juna viro, kiu venas
-			al mi kaj rigardas al mi kaj diras : «Kara Izabela, vi estas
+			al mi kaj rigardas al mi kaj diras: “Kara Izabela, vi estas
 			juna kaj bela, sed vi laboras tro multe. Ne laboru nun. Venu
 			kun mi. Ne demandu, kiu mi estas, kio mi estas. Mi estas nur
-			juna viro, kiu rigardas al vi kaj diras : «Vi estas tute
-			sola. Venu kun mi. Kun mi la mondo estas bela kaj granda.»
+			juna viro, kiu rigardas al vi kaj diras : Vi estas tute
+			sola. Venu kun mi. Kun mi la mondo estas bela kaj granda.”
 			Sed ne venas tiu knabo, kaj en la tuta mondo nenio okazas.
 			Nenio okazas al mi, nenio nova okazas, nenio speciala
 			okazas. Nur laboro, laboro, laboro… Estas tro.»</p>

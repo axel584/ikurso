@@ -117,11 +117,11 @@ include "gerdakapo.inc.php";
 			<h3>Dormu trankvile!</h3>
 			
 			<p>Bonan matenon, kara amiko, ĉiam absorbata en la lernado de la lingvo
-			tutmonda !</p>
+			tutmonda!</p>
 			<p>
-			Vi demandas, kion ni faros ĉi-foje, ĉu ne ? Ĉu vi vere deziras fari
-			ion ? Kial do ? Ĉu ne plaĉas al vi resti farante nenion dum kelka
-			tempo ?</p>
+			Vi demandas, kion ni faros ĉi-foje, ĉu ne? Ĉu vi vere deziras fari
+			ion? Kial do? Ĉu ne plaĉas al vi resti farante nenion dum kelka
+			tempo?</p>
 			<p>
 			Nu, se vi volas labori, laboru. Se vi volas enkapigi al vi vortojn,
 			enkapigu. Se vi volas relegi jam legitajn rakontojn, relegu. Mi ne
@@ -131,14 +131,14 @@ include "gerdakapo.inc.php";
 			estos labortago por mi. Mi deklaras ĝin libertago.</p>
 			<p>
 			Ĉu vere vi sentas vin tre malfeliĉa, se unu tago pasas kaj vi ne
-			ricevis vian kutiman legaĵon en la nova lingvo ? Kia stranga reago !</p>
+			ricevis vian kutiman legaĵon en la nova lingvo? Kia stranga reago!</p>
 			<p>
 			Bonvolu do pardoni min, se ĉi tiu legaĵo estas tro mallonga por via
 			leg- kaj lernsoifo<a href='#notoj'>[1]</a>. Mi kredas vin trovema, kaj fidas je via trovemo.
 			Se vi volas labori, vi trovos laboron por fari. Kiu serĉas, tiu
 			trovas. Serĉu do. Sed ne serĉu ĉe mi, ĉar mi ne deziras skribi
 			nun. Mi deziras dormi, havigi al mi duan bonan matenmanĝon (mi jam
-			manĝis unu, sed mi ŝategas matenmanĝojn !), iri promeni kun mia
+			manĝis unu, sed mi ŝategas matenmanĝojn!), iri promeni kun mia
 			hundo tra la kamparo, ludi iom da muziko, fari ion ajn, kio plaĉos al
 			mi, sed ne elpensi por vi malsaĝajn rakontojn, kiujn vi legos kvazaŭ
 			soife pro nekomprenebla lernemo, kiu, ŝajne, allasas al vi eĉ ne unu
@@ -152,7 +152,7 @@ include "gerdakapo.inc.php";
 			<p>
 			Mi dankas pro via komprenemo, kaj salutas vin plej sincere.</p>
 			<p>
-			Ĝis la revido !</p>
+			Ĝis la revido!</p>
 			
 			<a id="notoj"></a>
 			<p class="rimarko"><strong>NOTOJ</strong> : 

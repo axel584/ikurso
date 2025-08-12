@@ -367,7 +367,7 @@ include "dlekkapo.inc.php";
 		<ul class="klarigo">
 			<li>Dans les nombres ordinaux, on sépare généralement les mots par des tirets.</li>
 </
-			<li>On peut aussi utiliser les chiffres pour écrire les nombres ordinaux. On fait alors généralement suivre les chiffres de <b>-a</b>. Par exemple : <span class="eo">1-a</span>, <span class="eo">20-a</span>, <span class="eo">71-a</span>.</li>
+			<li>On peut aussi utiliser les chiffres pour écrire les nombres ordinaux. On fait alors généralement suivre les chiffres de <b>-a</b>. Par exemple&nbsp;: <span class="eo">1-a</span>, <span class="eo">20-a</span>, <span class="eo">71-a</span>.</li>
 		</ul>
 			
 		<p class="parto">Pour poser une question et demander <em>combien de…</em>, on utilise l’interrogatif <b>kiom da</b>.</p>
@@ -501,7 +501,7 @@ include "dlekkapo.inc.php";
 		</p>
 		<p>Le pronom <b>tio</b> permet de reprendre ce qui est désigné dans la question. Il se traduit souvent par <em>ce</em>, <em>c’</em> (comme dans <em>c’est</em>), <em>cela</em>, <em>ça</em>.</p>
 		
-		<p><b>REMARQUE</b> : Si vous souhaitez interroger l’identité de la personne, savoir quel est son nom, vous utilisez le pronom interrogatif <b>kiu</b> que vous avez déjà vu dans la leçon 1.</p>
+		<p><b>REMARQUE</b> : Si vous souhaitez interroger l’identité de la personne, savoir quel est son nom, vous utilisez le pronom interrogatif <b>kiu</b> que vous avez déjà vu dans la leçon&nbsp;1.</p>
 
 		<p>Exemples :</p>
 		<div class="row">
@@ -587,8 +587,8 @@ include "dlekkapo.inc.php";
 		if ($section=="13") {
 		?>
 		<div class="row">
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/prof.jpg" alt="Un professeur devant un tableau présente la leçon."><br>-1-</p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/varsovio.jpg" alt="Une carte de la Pologne avec la ville de Varsovie"><br>-2-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/varsovio.jpg" alt="Une carte de la Pologne avec la ville de Varsovie"><br>-1-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/prof.jpg" alt="Un professeur devant un tableau présente la leçon."><br>-2-</p>
 			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/insekto.jpg" alt="Une personne prend une photo d'un insecte"><br>-3-</span></p>
 			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/zamenhof.jpg" alt="Une photo en noir et blanc du créateur de l'espéranto : Louis Lazare Zamenhof"><br>-4-</p>
 		</div>

@@ -34,7 +34,7 @@ include "gerdakapo.inc.php";
 					<p><b>Tom:</b> Vi pravas. Io stranga okazas. Dum ŝi ne rigardas al li – ŝi
 					nun rigardas al la granda spegulo – lia mano iom post iom, tre tre
 					malrapide, proksimiĝas al ŝia taso…</p>
-					<p><b>Linda:</b> Estas io en lia mano.</p>
+					<p><b>Linda:</b> Estas io en lia mano…</p>
 					<p><b>Tom:</b> Mi ne vidas. Li estas tro malproksima. Diable! Tiu alta forta
 					knabo nun staras inter ili kaj mi. Mi ne plu vidas.</p>
 				</div>
@@ -44,7 +44,7 @@ include "gerdakapo.inc.php";
 			</div>
 			<div class="row dialogo">
 				<div class="col s12 m8">
-					<p><b>Linda:</b> Sed mi vidas. Mi vidas bone. Mi vidas tre bone. Mi vidas tute bone. Ej!</p>
+                                    <p><b>Linda:</b> Sed <i>mi</i> vidas. Mi vidas bone. Mi vidas tre bone. Mi vidas tute bone. Ej!</p>
 					<p><b>Tom:</b> Kio okazas?</p>
 					<p><b>Linda:</b> Ŝi rigardas al li nun, kaj lia mano haltas.</p>
 					<p><b>Tom:</b> Kaj kio plu? Diru al mi!</p>
@@ -138,32 +138,31 @@ include "gerdakapo.inc.php";
 					<p class="sekva"><span class="eo">certe</span> : certainement</p>
 					<p><span class="eo">ĉu</span> : est-ce que…, si (indique l'interrogation) <span class="eta">[<i><b>tchou</b></i>]</span></p>
 					<p class="sekva tab"><span class="eo">li venas</span> : il vient</p>
-					<p class="sekva tab">→ <span class="eo">ĉu li venas?</span> : vient-il ?</p>
+					<p class="sekva tab">→ <span class="eo">ĉu li venas?</span> : vient-il&nbsp;?</p>
 					<p class="sekva tab"><span class="eo">vi scias</span> : tu sais</p>
-					<p class="sekva tab">→ <span class="eo">ĉu vi scias</span> : est-ce que tu sais ?</p>
-					<p class="sekva tab"><span class="eo">ĉu li venas</span> : vient-il ?</p>
+					<p class="sekva tab">→ <span class="eo">ĉu vi scias</span> : est-ce que tu sais&nbsp;?</p>
 					<p class="sekva tab"><span class="eo">ĉu li sidas?</span> : est-il assis ?</p>
 					<p class="sekva tab">→ <span class="eo">mi ne scias, ĉu li sidas</span> : je ne sais pas s'il est assis</p>
-					<p><span class="eo">diable !</span> : diable !, diantre ! <span class="eta">[<i>di-<b>a</b>-blè (trois syllabes !)</i>]</span></p>
+					<p><span class="eo">diable!</span> : diable !, diantre ! <span class="eta">[<i>di-<b>a</b>-blè (trois syllabes&nbsp;!)</i>]</span></p>
 					<p class="sekva"><span class="eo">diablo</span> : diable</p>
 					<p><span class="eo">direkto</span> : direction</p>
 					<p><span class="eo">diskreta</span> : discret, discrète</p>
 					<p class="sekva"><span class="eo">diskrete</span> : discrètement, avec discrétion</p>
 					<p><span class="eo">dum</span> : durant, pendant, pendant que</p>
-					<p><span class="eo">ej !</span> : hé là !</p>
+					<p><span class="eo">ej!</span> : hé là !</p>
 					<p><span class="eo">forta</span> : fort(e)</p>
 					<p><span class="eo">halti</span> : s'arrêter <span class="eta">[<i>(h expiré)</i>]</span></p>
-					<p><span class="eo">iĝ</span> : 	devenir <span class="eta">[iĝas: <i><b>i</b>-djasse</i>]</span></p>
+					<p><span class="eo">iĝi</span> : devenir <span class="eta">[iĝas: <i><b>i</b>-djasse</i>]</span></p>
 					<p><span class="eo">ili</span> : ils</p>
 					<p><span class="eo">inter</span> : entre, parmi</p>
-					<p><span class="eo">io</span> : quelque chose <span class="eta">[<i>(deux syllabes !)</i>]</span></p>
+					<p><span class="eo">io</span> : quelque chose <span class="eta">[<i>(deux syllabes&nbsp;!)</i>]</span></p>
 					<p class="sekva"><span class="eo">io mistera</span> : quelque chose de mystérieux</p>
-					<p><span class="eo">iom</span> : un peu <span class="eta">[<i>(deux syllabes !)</i>]</span></p>
+					<p><span class="eo">iom</span> : un peu <span class="eta">[<i>(deux syllabes&nbsp;!)</i>]</span></p>
 					<p class="sekva"><span class="eo">iom post iom</span> : petit à petit, peu à peu</p>
 					<p><span class="eo">iomete</span> : un petit peu</p>
 					<p><span class="eo">junulo</span> : = jun- + -ulo</p>
 					<p><span class="eo">ke</span> : que (exemple: je sais que…, il dit que…)</p>
-					<p><span class="eo">kvazaŭ</span> : 	quasi-, comme si <span class="eta">[<i><b>kva</b>-zaou (ou bref)</i>]</span></p>
+					<p><span class="eo">kvazaŭ</span> : quasi-, comme si <span class="eta">[<i><b>kva</b>-zaou (ou bref)</i>]</span></p>
 					<p><span class="eo">lia</span> : son, sa (à lui)</p>
 					<p><span class="eo">mano</span> : main</p>
 					<p><span class="eo">mistera</span> : mystérieux, mystérieuse</p>
@@ -178,9 +177,9 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">ne plu</span> : plus maintenant, ne… plus</p>
 					<p><span class="eo">pala</span> : pâle</p>
 					<p><span class="eo">paroli</span> : parler</p>
-					<p><span class="eo">peti</span> : demander (de faire quelque chose) ; prier (de faire quelque chose)</p>
+					<p><span class="eo">peti</span> : demander (de faire quelque chose)&nbsp;; prier (de faire quelque chose)</p>
 					<p class="sekva"><span class="eta">ne pas confondre avec <span class="eo">demandi</span> (poser une question). 
-						On utilise <span class="eo">mi petas</span> pour dire «s'il vous/te plaît»</span></p>
+					On utilise <span class="eo">mi petas</span> pour dire «s'il vous / te plaît»</span></p>
 					<p><span class="eo">plu</span> : plus, plus longtemps, plus loin</p>
 					<p><span class="eo">pordo</span> : porte</p>
 					<p><span class="eo">post</span> : après</p>
@@ -199,9 +198,9 @@ include "gerdakapo.inc.php";
 					<p><span class="eo">stranga</span> : bizarre <span class="eta">[<i><b>stranne</b>-ga</i>]</span></p>
 					<p><span class="eo">strange</span> : bizarrement</p>
 					<p class="sekva tab"><span class="eo">li rigardas al mi strange</span> : il me regarde bizarrement</p>
-					<p class="sekva tab"><span class="eo">(estas) strange!</span> : (c'est) bizarre !</p>
+					<p class="sekva tab"><span class="eo">(estas) strange!</span> : (c'est) bizarre&nbsp;!</p>
 					<p class="sekva tab"><span class="eo">strangulo</span> = <span class="eo">strang</span>– + –<span class="eo">ulo</span></p>
-					<p><span class="eo">ŝi</span> : 	elle <span class="eta">[<i><b>chi</b></i>]</span></p>
+					<p><span class="eo">ŝi</span> : elle <span class="eta">[<i><b>chi</b></i>]</span></p>
 					<p class="sekva"><span class="eo">ŝia</span> : son, sa (à elle) <span class="eta">[<i><b>chi</b>-a</i>]</span></p>
 					<p><span class="eo">taso</span> : tasse</p>
 					<p><span class="eo">tre</span> : très</p>
@@ -233,7 +232,7 @@ include "gerdakapo.inc.php";
 			<div class="row">
 				<div class="col s12">
 					<div class="card-panel blue lighten-5">
-						Grâce à ce que vous avez appris dans cette leçon, vous devriez sans problème pouvoir comprendre le texte suivant. L'histoire n'est pas liée à celle de <i>Gerda malaperis</i>, mais elle vous permettra de découvrir d'autres constructions de mots.
+						Grâce à ce que vous avez appris dans cette leçon, vous devriez sans problème pouvoir comprendre le texte suivant. L'histoire n'est pas liée à celle de <i>Gerda malaperis!</i>, mais elle vous permettra de découvrir d'autres constructions de mots.
 					</div>
 				</div>
 			</div>
@@ -262,12 +261,12 @@ include "gerdakapo.inc.php";
 			<p>Nun li malrapide proksimiĝas al la spegulo, parolas al
 			la spegulo, dum juna virino sidas tute proksime. Sed li
 			ne parolas al ŝi, li parolas al la spegulo! Strange,
-			ĉu ne ? Vere stranga ulo !</p>
+			ĉu ne? Vere stranga ulo!</p>
 			<p>Nun, jen li malrapide revenas al alia angulo. Io estas
 			tute ne-natura en lia rigardo.</p>
 			<p>Ĉu vi scias, kiu estas tiu viro? Li estas forta kaj
 			alta, sed pala, tro pala, multe tro pala. Li estas
-			ne-nature pala. Vera strangulo !</p>
+			ne-nature pala. Vera strangulo!</p>
 			<p>Ĉu mi demandu al li, kiu li estas? Diable! Mi ne plu
 			vidas lin. Knabo kaj knabino staras inter li kaj mi.
 			Ĉu vi vidas lin nun? Mi ne. Mi ne plu vidas lin. Ho
@@ -283,7 +282,7 @@ include "gerdakapo.inc.php";
 			staras proksime al ŝi, sed ne parolas al ŝi. Li
 			parolas nur al la taso. Li agas vere strange, vere tre
 			strange, vere tro strange. Nun mi ne plu vidas lin.</p>
-			<p>Ho jes ! Se mi turnas min iomete, mi revidas lin.
+			<p>Ho jes! Se mi turnas min iomete, mi revidas lin.
 			Stranga ulo. Mi vere demandas al mi, kiu li estas. Li
 			certe ne estas nova studento. Li estas tro maljuna.</p>
 

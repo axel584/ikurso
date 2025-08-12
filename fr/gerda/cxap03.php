@@ -246,11 +246,11 @@ include "gerdakapo.inc.php";
 			
 			<p>Mi parolas serioze. Ĉu mi estis malprava? Ĉu vi ne pardonas min?
 			Tamen, Izabela, mi nur amas. Ĉu vi ne volas, ke mi amu vin? Ĉu vi
-			ne povas min ami? Ĉu vi ne volas min ami? Ĉu vi ne volas min ?</p>
+			ne povas min ami? Ĉu vi ne volas min ami? Ĉu vi ne volas min?</p>
 			
 			<p>Permesu tamen, ke mi vin rigardu. Mi parolas plej serioze. Vi ne
 			komprenas, ke mi amas vin, ĉu? Ĉu eble vi ne scias, ke vi estas
-			bela, tre bela, tre tre bela, fakte ?</p>
+			bela, tre bela, tre tre bela, fakte?</p>
 			
 			<p>Se vi ne volas, ke mi amu vin tute, se vi preferas, ke mi ne amu vin,
 			eble vi tamen permesas, ke mi amu vin iomete. Nur iomete, Izabela, mi

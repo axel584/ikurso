@@ -505,7 +505,7 @@ include "dlekkapo.inc.php";
 		if ($section=="10") {
 		?>
 			<p class="parto">Les <b>noms propres</b> se terminent en principe par <b>-o</b> comme les noms
-			communs, mais il peuvent aussi parfois garder leur forme et leur
+			communs, mais ils peuvent aussi parfois garder leur forme et leur
 			orthographe d’origine (par exemple <i>Shakespeare</i> ou <span class="eo">Ŝekspiro</span>).
 			Par ailleurs, les prénoms de femme en <b>-a</b> sont assez fréquents.</p>
 			<p>Lisez les phrases suivantes qui forment de petits récits. Les
@@ -549,7 +549,7 @@ include "dlekkapo.inc.php";
 
 		<div class="row">
 			<div class="col s12 m6">
-				<p class="parto">L’espéranto est chanté depuis sa naissance, puisque Louis Lazare Zamenhof avait déjà écrit les paroles d’un hymne, <i>La Espero</i>, toujours entonné lors des grandes rencontres espérantistes.</p>
+				<p class="parto">L’espéranto est chanté depuis sa naissance, puisque Louis Lazare Zamenhof avait déjà écrit les paroles d’un hymne, <i>La Espero</i>, souvent entonné lors des grandes rencontres espérantistes.</p>
 			</div>
 			<div class="col s10 offset-s1 m6 noprint">
 				<div class="video-container">

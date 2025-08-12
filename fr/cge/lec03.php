@@ -148,7 +148,7 @@ include "dlekkapo.inc.php";
 		Expression d’une certaine «sagesse populaire» – ce qui n’est pas synonyme
 		de vérité absolue –, les proverbes sont surtout de minuscules poèmes avec
 		leurs rimes, leurs rythmes et l’originalité de leur syntaxe. Nous en
-		introduisons quelques uns à chaque leçon pour vous familiariser avec leurs
+		introduisons quelques-uns à chaque leçon pour vous familiariser avec leurs
 		sonorités.
 		</p>
 		

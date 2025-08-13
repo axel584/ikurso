@@ -36,8 +36,8 @@ class LegotajxojAPI {
         }
         
         // Vérifier l'authentification
-        session_start();
-        $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : null;
+        require_once __DIR__ . '/JWTAuth.php';
+        $persono_id = JWTAuth::getPersonoIdFromJWT();
         
         if (!$persono_id) {
             $this->sendError(401, "Authentification requise");

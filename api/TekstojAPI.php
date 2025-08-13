@@ -79,8 +79,8 @@ class TekstojAPI {
     // GET /tekstoj - Récupérer tous les tekstoj avec filtres optionnels (sans enhavo)
     private function getTekstoj() {
         // Vérifier si l'utilisateur est connecté
-        session_start();
-        $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : null;
+        require_once __DIR__ . '/JWTAuth.php';
+        $persono_id = JWTAuth::getPersonoIdFromJWT();
         
         if ($persono_id) {
             // Utilisateur connecté : ajouter les informations de legotajxoj et legitajxoj

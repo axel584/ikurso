@@ -86,8 +86,6 @@ class AuthentificationAPI {
             }
             
             // Authentification réussie
-            session_start();
-            $_SESSION["persono_id"] = $row["id"];
             
             // Génération du JWT
             $jwt = $this->generateJWT($row);
@@ -342,9 +340,9 @@ class AuthentificationAPI {
     }
     
     private function logout() {
-        session_start();
+        require_once __DIR__ . '/JWTAuth.php';
         
-        $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : null;
+        $persono_id = JWTAuth::getPersonoIdFromJWT();
         $enirnomo = null;
         
         // Récupérer le nom d'utilisateur pour le log si possible
@@ -360,19 +358,6 @@ class AuthentificationAPI {
                 // Ignorer l'erreur pour le log
             }
         }
-        
-        // Détruire la session
-        $_SESSION = array();
-        
-        if (ini_get("session.use_cookies")) {
-            $params = session_get_cookie_params();
-            setcookie(session_name(), '', time() - 42000,
-                $params["path"], $params["domain"],
-                $params["secure"], $params["httponly"]
-            );
-        }
-        
-        session_destroy();
         
         // Supprimer le cookie access_token
         global $cookieDomain;
@@ -391,9 +376,9 @@ class AuthentificationAPI {
     }
     
     private function me() {
-        session_start();
+        require_once __DIR__ . '/JWTAuth.php';
         
-        $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : null;
+        $persono_id = JWTAuth::getPersonoIdFromJWT();
         
         if (!$persono_id) {
             $this->sendError(401, "Non authentifié");

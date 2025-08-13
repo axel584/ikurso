@@ -108,7 +108,7 @@ class AuthentificationAPI {
                     "enirnomo" => $row["enirnomo"],
                     "rajtoj" => $row["rajtoj"],
                     "retadreso" => $row["retadreso"],
-                    "persononomo" => $row["persononomo"],
+                    "personnomo" => $row["personnomo"],
                     "familinomo" => $row["familinomo"]
                 ),
                 "access_token" => $jwt,

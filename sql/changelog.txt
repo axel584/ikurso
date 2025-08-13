@@ -4500,3 +4500,6 @@ UPDATE `vortoj` SET `fr` = 'aucune quantité, rien' WHERE `vortoj`.`id` = 1387;
 UPDATE `vortoj` SET `fr` = 'propre (contraire de sale) ; pur(e)' WHERE `vortoj`.`id` = 1002;
 UPDATE `vortoj` SET `fr` = 'propre (contraire de sale) ; pur(e)' WHERE `vortoj`.`id` = 72;
 UPDATE `ekzerceroj` SET `demando` = 'un imbécile (\"stulta\" :' WHERE `ekzerceroj`.`ekzerco_id` = 29 and `ekzerceroj`.`kodo` = 'ekz07_08' and `ekzerceroj`.`numero` = 8; 
+UPDATE `ekzerceroj` SET `demando` = 'Kiu estas la Nacia Tago en via lando? (\"nacia\" = national-e)' WHERE `ekzerceroj`.`id` = 80
+UPDATE `ekzerceroj` SET `respondo` = 'Vache, veau, troupeau de bovins, étable.', `normaligita` = 'vache veau troupeau de vaches|bétail|troupeau de boeufs|troupeau de bovins|troupeau de vaches étable' WHERE `ekzerceroj`.`id` = 165
+UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|ekslandestrino' WHERE `ekzerceroj`.`id` = 178

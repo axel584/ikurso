@@ -164,7 +164,7 @@ include "dlekkapo.inc.php";
 			</tr><tr>
 				<td><b>neniom</b></td>
 				<td><span class="eo">NENI</span> + <span class="eo">OM</span></td>
-				<td><em>aucun</em> + <em>quantité</em><br/>aucun</td>
+				<td><em>aucun</em> + <em>quantité</em><br/>aucune quantité, rien</td>
 			</tr>
 			</tr><tr>
 				<td><b>kiu</b></td>
@@ -281,7 +281,7 @@ include "dlekkapo.inc.php";
 						<td><span class="eo">neniam</span><br />jamais</td>
 						<td><span class="eo">neniel</span><br />impossible</td>
 						<td><span class="eo">nenial</span><br />sans raison</td>
-						<td><span class="eo">neniom</span><br />aucun</td>
+						<td><span class="eo">neniom</span><br />aucune quantité, rien</td>
 					</tr>
 					<tr>
 						<th>Démonstratif<br /><span class="eo">TI-</span></th>
@@ -397,7 +397,7 @@ include "dlekkapo.inc.php";
 						<td><span class="eo">neniam</span><br />jamais</td>
 						<td><span class="eo">neniel</span><br />impossible</td>
 						<td><span class="eo">nenial</span><br />sans raison</td>
-						<td><span class="eo">neniom</span><br />aucun</td>
+						<td><span class="eo">neniom</span><br />aucune quantité, rien</td>
 					</tr>
 					<tr>
 						<th>Démonstratif<br /><span class="eo">TI-</span></th>

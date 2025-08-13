@@ -252,7 +252,7 @@ include "gerdakapo.inc.php";
 			<div class="row">
 				<div class="col s12">
 					<div class="card-panel blue lighten-5">
-						En tiu ĉapitro, estas du malsamaj rakontoj de <i>Lasu min paroli plu !</i>.<br>
+						En tiu ĉapitro, estas du malsamaj rakontoj de <i>Lasu min paroli plu!</i>.<br>
 						<a href="#unua">Literaturo amindas, sed tamen...</a><br>
 						<a href="#dua">La ĝojoj de petveturado</a>
 					</div>

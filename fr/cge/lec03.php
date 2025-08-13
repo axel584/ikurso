@@ -427,7 +427,7 @@ include "dlekkapo.inc.php";
 						<td><span class="eo">nenie</span><br />nulle&nbsp;part</td>
 						<td><span class="eo">neniam</span><br />jamais</td>
 						<td><span class="eo">neniel</span><br />impossible</td>
-						<td><span class="eo">neniom</span><br />aucun</td>
+						<td><span class="eo">neniom</span><br />rien, aucune quantité</td>
 					</tr>
 				</tbody>
 			</table>
@@ -465,7 +465,7 @@ include "dlekkapo.inc.php";
 		<p>
 		Quand un verbe intransitif est suivi d’un adjectif ou d’un nom, ce dernier
 		n’est pas un complément d’objet direct mais un attribut qui décrit le
-		sujet ou une éphitète détachées (2<sup>e</sup> exemple ci-dessous). La terminaison <b>-n</b> de l’accusatif <b>n’est donc jamais
+		sujet ou une éphitète détachée (2<sup>e</sup> exemple ci-dessous). La terminaison <b>-n</b> de l’accusatif <b>n’est donc jamais
 		employée</b> dans ce cas.
 		</p>
 		<div class="container">
@@ -569,7 +569,7 @@ include "dlekkapo.inc.php";
 						<td><span class="eo">nenie</span><br />nulle&nbsp;part</td>
 						<td><span class="eo">neniam</span><br />jamais</td>
 						<td><span class="eo">neniel</span><br />impossible</td>
-						<td><span class="eo">neniom</span><br />aucun</td>
+						<td><span class="eo">neniom</span><br />rien, aucune quantité</td>
 					</tr>
 					<tr>
 						<th>Démonstratif<br /><span class="eo">TI-</span></th>

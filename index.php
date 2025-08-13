@@ -118,26 +118,18 @@ include "pagxkapo.inc.php";
 			
 			<div class="container">
 				<div class="row">
-					<div class="col s12 m3 offset-m1">
+					<div class="col s12 m4 offset-m2">
 						<h5>Kurso de Esperanto</h5>
 						<p>Logiciel multimédia pour Windows, Linux et Mac OSX</p>
 						<p>En 12 leçons vous apprendrez les bases de l’espéranto.<br><a href="http://www.kurso.com.br/" class="btn-flat small"><i class="material-icons right">arrow_right</i>télécharger le logiciel</a></p>
 					</div>
 				
-					<div class="col s12 m3 offset-m1">
+					<div class="col s12 m4 offset-m1">
 						<h5>lernu.net</h5>
 						<p>Autre site, traduit dans plus de 20 langues.<br>
 						Pour ceux qui veulent découvrir l’espéranto, l’apprendre ou le pratiquer.</p>
 						<p class="container"><img class="responsive-img" src="<?=$vojo?>bildoj/lernu.png" alt="logo du site lernu.net"></p>
 						<p><a href="https://lernu.net/fr" class="btn-flat small"><i class="material-icons right">arrow_right</i>aller sur lernu.net</a></p>
-					</div>
-
-					<div class="col s12 m3 offset-m1">
-						<h5>duolingo</h5>
-						<p>Cours ludique pour débutants.<br>
-						Nouveau&nbsp;! Le cours est désormais disponible pour les francophones.</p>
-						<p class="container"><img class="responsive-img" src="<?=$vojo?>bildoj/duolingo-fr.jpg" alt="logo du site duolingo.com"></p>
-						<p><a href="https://www.duolingo.com/enroll/eo/fr" class="btn-flat small"><i class="material-icons right">arrow_right</i>aller sur duolingo</a></p>
 					</div>
 				</div>
 			</div>

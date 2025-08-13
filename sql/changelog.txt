@@ -4499,3 +4499,4 @@ UPDATE `ekzerceroj` SET `demando` = 'Le frère en bonne santé avait une petite 
 UPDATE `vortoj` SET `fr` = 'aucune quantité, rien' WHERE `vortoj`.`id` = 1387;
 UPDATE `vortoj` SET `fr` = 'propre (contraire de sale) ; pur(e)' WHERE `vortoj`.`id` = 1002;
 UPDATE `vortoj` SET `fr` = 'propre (contraire de sale) ; pur(e)' WHERE `vortoj`.`id` = 72;
+UPDATE `ekzerceroj` SET `demando` = 'un imbécile (\"stulta\" :' WHERE `ekzerceroj`.`ekzerco_id` = 29 and `ekzerceroj`.`kodo` = 'ekz07_08' and `ekzerceroj`.`numero` = 8; 

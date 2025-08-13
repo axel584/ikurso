@@ -1,7 +1,7 @@
 <?php $url=$_SERVER['SCRIPT_URI']; ?>
 <html><head>
 <title>
-<?php echo "Gerda malaperis ".$&#265;ap; ?>
+<?php echo "Gerda malaperis ".ĉap; ?>
 </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--

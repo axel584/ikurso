@@ -1,5 +1,5 @@
 <?php 
-$&#265;ap="01"; 
+$ĉap="01"; 
 $titolo="1 (unu)";
 include "gerdakapo.inc.php";
 ?>

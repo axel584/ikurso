@@ -98,6 +98,42 @@ CREATE TABLE lecionoj (
   PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+
+CREATE TABLE legitajxoj (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    
+    -- Clés étrangères vers les tables principales
+    persono_id INT(11) NOT NULL,
+    teksto_id VARCHAR(64) NOT NULL,
+    
+    -- Horodatage de la session de lecture
+    komenc_timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fin_timestamp DATETIME NULL,
+    
+    -- Temps passé à la lecture (en secondes)
+    legad_tempo INT NULL COMMENT 'Temps de lecture en secondes',
+    
+    -- Évaluation et commentaires
+    noto TINYINT NULL COMMENT 'Note de 1 à 5',
+    komentaro TEXT NULL COMMENT 'Commentaires libres de l\'utilisateur',
+    
+    -- Métadonnées
+    kreita_je DATETIME DEFAULT CURRENT_TIMESTAMP,
+    modifita_je DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    -- Contraintes (temporairement désactivées pour diagnostic)
+    -- FOREIGN KEY (persono_id) REFERENCES personoj(id) ON DELETE CASCADE,
+    -- FOREIGN KEY (teksto_id) REFERENCES tekstoj(id) ON DELETE CASCADE,
+    
+    -- Index pour optimiser les requêtes
+    INDEX idx_persono_teksto (persono_id, teksto_id),
+    INDEX idx_komenc_timestamp (komenc_timestamp),
+    INDEX idx_noto (noto),
+    
+    -- Contrainte d'unicité si on veut éviter les doublons
+    UNIQUE KEY unique_persono_teksto_session (persono_id, teksto_id, komenc_timestamp)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 CREATE TABLE monatoj (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `kodo` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT '',

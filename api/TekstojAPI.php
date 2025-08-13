@@ -78,8 +78,33 @@ class TekstojAPI {
     
     // GET /tekstoj - Récupérer tous les tekstoj avec filtres optionnels (sans enhavo)
     private function getTekstoj() {
-        $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono, leganto FROM tekstoj";
-        $params = array();
+        // Vérifier si l'utilisateur est connecté
+        session_start();
+        $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : null;
+        
+        if ($persono_id) {
+            // Utilisateur connecté : ajouter les informations de legotajxoj et legitajxoj
+            $sql = "SELECT t.id, t.titolo, t.auxtoro, t.fonto, t.nivelo, t.vortoj, t.kolekto, t.etikedoj, t.sono, t.leganto, 
+                           lo.kreita_je as legotajxoj_kreita_je,
+                           li.komenc_timestamp as legitajxoj_komenc_timestamp,
+                           li.fin_timestamp as legitajxoj_fin_timestamp,
+                           li.legad_tempo as legitajxoj_legad_tempo,
+                           li.noto as legitajxoj_noto,
+                           li.komentaro as legitajxoj_komentaro,
+                           li.kreita_je as legitajxoj_kreita_je,
+                           li.modifita_je as legitajxoj_modifita_je
+                    FROM tekstoj t 
+                    LEFT JOIN legotajxoj lo ON t.id = lo.teksto_id AND lo.persono_id = ?
+                    LEFT JOIN legitajxoj li ON t.id = li.teksto_id AND li.persono_id = ?";
+            $params = array($persono_id, $persono_id);
+        } else {
+            // Utilisateur non connecté : requête normale
+            $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono, leganto FROM tekstoj";
+            $params = array();
+        }
+        
+        // Préfixe pour les colonnes selon le cas
+        $tablePrefix = $persono_id ? "t." : "";
         
         // Filtre par statut actif/inactif
         if (isset($_GET['aktiva'])) {
@@ -87,57 +112,57 @@ class TekstojAPI {
                 // Pas de filtre sur aktiva, montrer tous les textes
                 $sql .= " WHERE 1=1";
             } else {
-                $sql .= " WHERE aktiva = ?";
+                $sql .= " WHERE {$tablePrefix}aktiva = ?";
                 $params[] = intval($_GET['aktiva']);
             }
         } else {
             // Par défaut, ne montrer que les tekstoj actifs
-            $sql .= " WHERE aktiva = 1";
+            $sql .= " WHERE {$tablePrefix}aktiva = 1";
         }
         
         // Filtres optionnels
         if (isset($_GET['auxtoro'])) {
-            $sql .= " AND auxtoro LIKE ?";
+            $sql .= " AND {$tablePrefix}auxtoro LIKE ?";
             $params[] = '%' . $_GET['auxtoro'] . '%';
         }
         
         if (isset($_GET['kolekto'])) {
-            $sql .= " AND kolekto = ?";
+            $sql .= " AND {$tablePrefix}kolekto = ?";
             $params[] = $_GET['kolekto'];
         }
         
         // Filtre par niveau minimum
         if (isset($_GET['nivelo_min'])) {
-            $sql .= " AND nivelo >= ?";
+            $sql .= " AND {$tablePrefix}nivelo >= ?";
             $params[] = intval($_GET['nivelo_min']);
         }
         
         // Filtre par niveau maximum
         if (isset($_GET['nivelo_max'])) {
-            $sql .= " AND nivelo <= ?";
+            $sql .= " AND {$tablePrefix}nivelo <= ?";
             $params[] = intval($_GET['nivelo_max']);
         }
         
         // Filtre par nombre de mots minimum
         if (isset($_GET['vortoj_min'])) {
-            $sql .= " AND vortoj >= ?";
+            $sql .= " AND {$tablePrefix}vortoj >= ?";
             $params[] = intval($_GET['vortoj_min']);
         }
         
         // Filtre par nombre de mots maximum
         if (isset($_GET['vortoj_max'])) {
-            $sql .= " AND vortoj <= ?";
+            $sql .= " AND {$tablePrefix}vortoj <= ?";
             $params[] = intval($_GET['vortoj_max']);
         }
         
         if (isset($_GET['etikedoj'])) {
-            $sql .= " AND etikedoj LIKE ?";
+            $sql .= " AND {$tablePrefix}etikedoj LIKE ?";
             $params[] = '%' . $_GET['etikedoj'] . '%';
         }
         
         // Recherche générale dans titolo, auxtoro, etikedoj et leganto
         if (isset($_GET['q'])) {
-            $sql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR etikedoj LIKE ? OR leganto LIKE ?)";
+            $sql .= " AND ({$tablePrefix}titolo LIKE ? OR {$tablePrefix}auxtoro LIKE ? OR {$tablePrefix}etikedoj LIKE ? OR {$tablePrefix}leganto LIKE ?)";
             $searchTerm = '%' . $_GET['q'] . '%';
             $params[] = $searchTerm;
             $params[] = $searchTerm;
@@ -147,13 +172,13 @@ class TekstojAPI {
         
         // Recherche dans le titre
         if (isset($_GET['titolo'])) {
-            $sql .= " AND titolo LIKE ?";
+            $sql .= " AND {$tablePrefix}titolo LIKE ?";
             $params[] = '%' . $_GET['titolo'] . '%';
         }
         
         // Filtre pour les textes avec son
         if (isset($_GET['has_sono']) && $_GET['has_sono'] === 'true') {
-            $sql .= " AND sono IS NOT NULL AND sono != ''";
+            $sql .= " AND {$tablePrefix}sono IS NOT NULL AND {$tablePrefix}sono != ''";
         }
         
         // Tri (ORDER BY)
@@ -161,7 +186,7 @@ class TekstojAPI {
         $sortField = isset($_GET['sort']) && in_array($_GET['sort'], $allowedSortFields) ? $_GET['sort'] : 'id';
         $sortOrder = isset($_GET['order']) && strtoupper($_GET['order']) === 'DESC' ? 'DESC' : 'ASC';
         
-        $sql .= " ORDER BY " . $sortField . " " . $sortOrder;
+        $sql .= " ORDER BY " . $tablePrefix . $sortField . " " . $sortOrder;
         // Pagination
         $limit = isset($_GET['limit']) ? intval($_GET['limit']) : 10;
         $offset = isset($_GET['offset']) ? intval($_GET['offset']) : 0;
@@ -178,7 +203,13 @@ class TekstojAPI {
             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
             // Compter le total pour la pagination
-            $countSql = "SELECT COUNT(*) as total FROM tekstoj";
+            if ($persono_id) {
+                $countSql = "SELECT COUNT(*) as total FROM tekstoj t 
+                            LEFT JOIN legotajxoj lo ON t.id = lo.teksto_id AND lo.persono_id = ?
+                            LEFT JOIN legitajxoj li ON t.id = li.teksto_id AND li.persono_id = ?";
+            } else {
+                $countSql = "SELECT COUNT(*) as total FROM tekstoj";
+            }
             $countParams = $params; // Utiliser les mêmes paramètres de filtre
             
             // Même logique de filtre aktiva pour le comptage
@@ -186,46 +217,56 @@ class TekstojAPI {
                 if ($_GET['aktiva'] === 'all') {
                     $countSql .= " WHERE 1=1";
                 } else {
-                    $countSql .= " WHERE aktiva = ?";
+                    $countSql .= " WHERE {$tablePrefix}aktiva = ?";
                 }
             } else {
-                $countSql .= " WHERE aktiva = 1";
+                $countSql .= " WHERE {$tablePrefix}aktiva = 1";
             }
             
             if (isset($_GET['auxtoro'])) {
-                $countSql .= " AND auxtoro LIKE ?";
+                $countSql .= " AND {$tablePrefix}auxtoro LIKE ?";
             }
             if (isset($_GET['kolekto'])) {
-                $countSql .= " AND kolekto = ?";
+                $countSql .= " AND {$tablePrefix}kolekto = ?";
             }
             if (isset($_GET['nivelo_min'])) {
-                $countSql .= " AND nivelo >= ?";
+                $countSql .= " AND {$tablePrefix}nivelo >= ?";
             }
             if (isset($_GET['nivelo_max'])) {
-                $countSql .= " AND nivelo <= ?";
+                $countSql .= " AND {$tablePrefix}nivelo <= ?";
             }
             if (isset($_GET['vortoj_min'])) {
-                $countSql .= " AND vortoj >= ?";
+                $countSql .= " AND {$tablePrefix}vortoj >= ?";
             }
             if (isset($_GET['vortoj_max'])) {
-                $countSql .= " AND vortoj <= ?";
+                $countSql .= " AND {$tablePrefix}vortoj <= ?";
             }
             if (isset($_GET['etikedoj'])) {
-                $countSql .= " AND etikedoj LIKE ?";
+                $countSql .= " AND {$tablePrefix}etikedoj LIKE ?";
             }
             if (isset($_GET['q'])) {
-                $countSql .= " AND (titolo LIKE ? OR auxtoro LIKE ? OR etikedoj LIKE ? OR leganto LIKE ?)";
+                $countSql .= " AND ({$tablePrefix}titolo LIKE ? OR {$tablePrefix}auxtoro LIKE ? OR {$tablePrefix}etikedoj LIKE ? OR {$tablePrefix}leganto LIKE ?)";
             }
             if (isset($_GET['titolo'])) {
-                $countSql .= " AND titolo LIKE ?";
+                $countSql .= " AND {$tablePrefix}titolo LIKE ?";
             }
             if (isset($_GET['has_sono']) && $_GET['has_sono'] === 'true') {
-                $countSql .= " AND sono IS NOT NULL AND sono != ''";
+                $countSql .= " AND {$tablePrefix}sono IS NOT NULL AND {$tablePrefix}sono != ''";
             }
             
             $countStmt = $this->conn->prepare($countSql);
             $countStmt->execute($countParams);
             $total = $countStmt->fetch(PDO::FETCH_ASSOC)['total'];
+            
+            // Filtrer les valeurs null pour les utilisateurs connectés
+            if ($persono_id) {
+                foreach ($results as &$result) {
+                    // Supprimer les clés avec valeur null
+                    $result = array_filter($result, function($value) {
+                        return $value !== null;
+                    });
+                }
+            }
             
             $this->sendResponse(array(
                 'data' => $results,

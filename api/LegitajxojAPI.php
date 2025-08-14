@@ -58,8 +58,8 @@ class LegitajxojAPI {
             // POST /api/legitajxoj
             $this->startReadingSession($persono_id);
         } elseif ($method === 'PATCH' && $id && !$action) {
-            // PATCH /api/legitajxoj/{id}
-            $this->updateReadingSession($id, $persono_id);
+            // PATCH /api/legitajxoj/{teksto_id}
+            $this->updateReadingSessionByTekstoId($id, $persono_id);
         } else {
             $this->sendError(404, "Endpoint non trouvé");
         }
@@ -188,7 +188,7 @@ class LegitajxojAPI {
         }
     }
     
-    private function updateReadingSession($id, $persono_id) {
+    private function updateReadingSessionByTekstoId($teksto_id, $persono_id) {
         // Récupération des données JSON
         $input = json_decode(file_get_contents('php://input'), true);
         
@@ -197,22 +197,24 @@ class LegitajxojAPI {
             return;
         }
         
-        // Validation de l'ID
-        if (!is_numeric($id)) {
-            $this->sendError(400, "ID de session invalide");
+        // Validation du teksto_id
+        if (empty($teksto_id)) {
+            $this->sendError(400, "teksto_id invalide");
             return;
         }
         
         try {
-            // Vérifier que la session existe et appartient à l'utilisateur connecté
-            $stmt = $this->conn->prepare("SELECT persono_id, teksto_id FROM legitajxoj WHERE id = ? AND persono_id = ?");
-            $stmt->execute([$id, $persono_id]);
+            // Vérifier qu'une session existe avec ce teksto_id pour l'utilisateur connecté
+            $stmt = $this->conn->prepare("SELECT id, persono_id, teksto_id FROM legitajxoj WHERE teksto_id = ? AND persono_id = ?");
+            $stmt->execute([$teksto_id, $persono_id]);
             $session = $stmt->fetch(PDO::FETCH_ASSOC);
             
             if (!$session) {
-                $this->sendError(404, "Session de lecture non trouvée ou non autorisée");
+                $this->sendError(404, "Session de lecture non trouvée pour ce texte ou non autorisée");
                 return;
             }
+            
+            $session_id = $session['id'];
             
             // Construire la requête de mise à jour dynamiquement
             $updateFields = array();
@@ -255,8 +257,8 @@ class LegitajxojAPI {
                 return;
             }
             
-            // Ajouter l'ID (modifita_je se met à jour automatiquement)
-            $updateValues[] = $id;
+            // Ajouter l'ID de la session (modifita_je se met à jour automatiquement)
+            $updateValues[] = $session_id;
             
             // Exécuter la mise à jour
             $sql = "UPDATE legitajxoj SET " . implode(", ", $updateFields) . " WHERE id = ?";
@@ -264,16 +266,17 @@ class LegitajxojAPI {
             $stmt->execute($updateValues);
             
             // Logger l'action
-            $this->protokolo($session['persono_id'], "LEGADO AKTUALIGO", "Aktualigis legadsesion: " . $id);
+            $this->protokolo($session['persono_id'], "LEGADO AKTUALIGO", "Aktualigis legadsesion por teksto: " . $teksto_id);
             
             // Récupérer les données mises à jour
             $stmt = $this->conn->prepare("SELECT * FROM legitajxoj WHERE id = ?");
-            $stmt->execute([$id]);
+            $stmt->execute([$session_id]);
             $updatedSession = $stmt->fetch(PDO::FETCH_ASSOC);
             
             // Réponse de succès
             $respondo = array(
-                "legitajxo_id" => $id,
+                "legitajxo_id" => $session_id,
+                "teksto_id" => $teksto_id,
                 "updated_data" => array(
                     "legad_tempo" => $updatedSession['legad_tempo'],
                     "noto" => $updatedSession['noto'],

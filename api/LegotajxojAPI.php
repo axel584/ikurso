@@ -24,8 +24,17 @@ class LegotajxojAPI {
     }
     
     public function handleRequest() {
+        // Ajouter les en-têtes CORS
+        $this->setCORSHeaders();
+        
         $method = $_SERVER['REQUEST_METHOD'];
         $path = isset($_GET['path']) ? $_GET['path'] : '';
+        
+        // Gérer la requête OPTIONS (preflight CORS)
+        if ($method === 'OPTIONS') {
+            http_response_code(200);
+            exit;
+        }
         
         // Parsing du path
         $segments = array_filter(explode('/', $path));
@@ -51,8 +60,9 @@ class LegotajxojAPI {
             // POST /api/legotajxoj
             $this->addLegotajxo($persono_id);
         } elseif ($method === 'DELETE') {
-            // DELETE /api/legotajxoj
-            $this->deleteLegotajxo($persono_id);
+            // DELETE /api/legotajxoj/{teksto_id}
+            $teksto_id = isset($segments[1]) ? $segments[1] : null;
+            $this->deleteLegotajxo($persono_id, $teksto_id);
         } else {
             $this->sendError(405, "Méthode non autorisée");
         }
@@ -167,21 +177,14 @@ class LegotajxojAPI {
         }
     }
     
-    private function deleteLegotajxo($persono_id) {
-        // Récupération des données JSON
-        $input = json_decode(file_get_contents('php://input'), true);
-        
-        if (!isset($input['teksto_id'])) {
-            $this->sendError(400, "Paramètre 'teksto_id' requis");
-            return;
-        }
-        
-        $teksto_id = trim($input['teksto_id']);
-        
+    private function deleteLegotajxo($persono_id, $teksto_id) {
+        // Vérifier que le teksto_id est fourni dans l'URL
         if (empty($teksto_id)) {
-            $this->sendError(400, "Le teksto_id ne peut pas être vide");
+            $this->sendError(400, "Paramètre 'teksto_id' requis dans l'URL");
             return;
         }
+        
+        $teksto_id = trim($teksto_id);
         
         try {
             // Vérifier si le legotajxo existe
@@ -225,6 +228,13 @@ class LegotajxojAPI {
                 $this->sendError(500, "Erreur interne du serveur");
             }
         }
+    }
+    
+    private function setCORSHeaders() {
+        header("Access-Control-Allow-Origin: *");
+        header("Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS");
+        header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+        header("Access-Control-Max-Age: 86400");
     }
     
     private function protokolo($persono_id, $ago, $priskribo) {

@@ -134,6 +134,24 @@ CREATE TABLE legitajxoj (
     UNIQUE KEY unique_persono_teksto_session (persono_id, teksto_id, komenc_timestamp)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+CREATE TABLE legotajxoj (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    
+    -- Clés étrangères vers les tables principales
+    persono_id INT(11) NOT NULL,
+    teksto_id VARCHAR(64) NOT NULL,
+    
+    -- Métadonnées
+    kreita_je DATETIME DEFAULT CURRENT_TIMESTAMP,
+    modifita_je DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    -- Index pour optimiser les requêtes
+    INDEX idx_persono_teksto (persono_id, teksto_id),
+    
+    -- Contrainte d'unicité si on veut éviter les doublons
+    UNIQUE KEY unique_persono_teksto_legotajxo (persono_id, teksto_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 CREATE TABLE monatoj (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `kodo` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT '',

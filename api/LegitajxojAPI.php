@@ -91,13 +91,14 @@ class LegitajxojAPI {
         try {
             
             // Vérifier si la session existe déjà (idempotence)
-            $stmt = $this->conn->prepare("SELECT id FROM legitajxoj WHERE persono_id = ? AND teksto_id = ? AND komenc_timestamp = ?");
-            $stmt->execute([$persono_id, $teksto_id, $this->formatForDatabase($komenc_timestamp)]);
+            $stmt = $this->conn->prepare("SELECT id,komenc_timestamp FROM legitajxoj WHERE persono_id = ? AND teksto_id = ?");
+            $stmt->execute([$persono_id, $teksto_id]);
             $existing_session = $stmt->fetch(PDO::FETCH_ASSOC);
             
             if ($existing_session) {
                 // La session existe déjà, renvoyer les données existantes
                 $session_id = $existing_session['id'];
+                $komenc_timestamp = $existing_session['komenc_timestamp'];
             } else {
                 // Créer la nouvelle session de lecture
                 $stmt = $this->conn->prepare("INSERT INTO legitajxoj (persono_id, teksto_id, komenc_timestamp) VALUES (?, ?, ?)");

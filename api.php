@@ -25,6 +25,7 @@ require_once 'api/AuthentificationAPI.php';
 require_once 'api/LegitajxojAPI.php';
 require_once 'api/LegotajxojAPI.php';
 require_once 'api/KontaktoAPI.php';
+require_once 'api/PersonojAPI.php';
 
 // Déterminer quelle API utiliser basé sur le path
 $path = isset($_GET['path']) ? $_GET['path'] : '';
@@ -50,6 +51,10 @@ if (!empty($segments)) {
     } elseif ($segments[0] === 'kontakto') {
         // API formulaire de contact
         $api = new KontaktoAPI();
+        $api->handleRequest();
+    } elseif ($segments[0] === 'personoj') {
+        // API gestion des comptes utilisateurs
+        $api = new PersonojAPI();
         $api->handleRequest();
     } else {
         // Endpoint non trouvé

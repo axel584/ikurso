@@ -16,7 +16,7 @@ include "pppkapo.inc.php";
 		?>
 
 		<div class="rakonto">
-			<h3>GEEDZIĜO EN HODIAŬA MANIEROO</h3>
+			<h3>GEEDZIĜO EN HODIAŬA MANIERO</h3>
 			
 			<p>Ili interkonatiĝis en la montaro Mátra. La knabino, Anikó, apenaŭ eliris iam el la Somerumejo: taglonge ŝi ŝtopis al si la sciencon en la kapon en la fino de la ĝardeno, sub la pirujo, kie neniun ŝi ĝenis. Ŝi lernis juron en la vespera universitato, preparis sin por ekzameno. Kun Dezsö, la milda kaj timema scienca esploristo, ŝi interkonatiĝis jam en la unua tago. Ili tagmanĝadis ĉe la sama tablo, kaj kiomfoje Anikó havis tempon, ili veturis kune inter la montojn en la Trabanto de Dezsö, aŭ promenadis post la tagmanĝo sur la ombraj vojoj.</p>
 			<p>La asignita somerum-tempo de Dezsö pasis pli frue. Anikó restis ankoraŭ por kelkaj tagoj; ŝi estis poste devonta meti ekzamenon. Ili interkonsentis, ke tiam kaj tiam, tie kaj tie ili renkontiĝos, du semajnojn post tiu tago, en Budapeŝto.</p>

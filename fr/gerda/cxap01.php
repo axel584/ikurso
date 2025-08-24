@@ -308,7 +308,8 @@ include "gerdakapo.inc.php";
 			<div class="row">
 				<div class="col s12">
 					<div class="card-panel blue lighten-5">
-						Grâce à ce que vous avez appris dans cette leçon, vous devriez sans problème pouvoir comprendre le texte suivant. L'histoire n'est pas liée à celle de <i>Gerda malaperis</i>, mais elle vous permettra de découvrir d'autres constructions de mots.
+						Grâce à ce que vous avez appris dans cette leçon, vous devriez sans problème pouvoir comprendre le texte suivant. L'histoire n'est pas liée à celle de <i>Gerda malaperis</i>, mais elle vous permettra de découvrir d'autres constructions de mots.<br/>
+						Vous pouvez retrouver ce texte sur la plateforme de lecture <a target="_new" href="https://nilegu.esperanto-france.org/teksto/lasumin01">Ni legu</a>. Un dictionnaire intégré vous aidera en cas d'hésitation sur un mot.
 					</div>
 				</div>
 			</div>

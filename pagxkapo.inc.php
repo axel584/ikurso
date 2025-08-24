@@ -298,10 +298,11 @@ if ($persono_id=="") {
 						<li><a href="<?php echo $vojo;?>kionova.php">QUOI DE NEUF ?</a></li>
 						<li><a class="dropdown-trigger" href="#!" data-target="menu_cours">COURS EN LIGNE<i class="material-icons right">arrow_drop_down</i></a></li>
 						<li><a class="tooltipped" href="https://butiko-esperanto-france.org/" data-position="bottom" data-tooltip="Boutique d'Espéranto-France" target="_NEW">BOUTIQUE</a></li>
+						<li><a class="tooltipped" href="https://nilegu.esperanto-france.org/" data-position="bottom" data-tooltip="Collection de textes à lire" target="_NEW">NI LEGU</a></li>
 						<?php if ($persono["rajtoj"]=="K" || $persono["rajtoj"]=="A" ) { ?>
 						<li><a class="dropdown-trigger" href="#!" data-target="menu_correcteur">ESPACE CORRECTEUR<i class="material-icons right">arrow_drop_down</i></a></li>
 						<?php } ?>
-							<li><a class="dropdown-trigger" href="#!" data-target="menu_aide">INFORMATIONS PRATIQUES<i class="material-icons right">arrow_drop_down</i></a></li>
+							<li><a class="dropdown-trigger" href="#!" data-target="menu_aide">+ D'INFOS<i class="material-icons right">arrow_drop_down</i></a></li>
 					</ul>
 				</div>
 			</nav>

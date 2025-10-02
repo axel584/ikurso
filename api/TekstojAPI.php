@@ -84,7 +84,7 @@ class TekstojAPI {
         
         if ($persono_id) {
             // Utilisateur connecté : ajouter les informations de legotajxoj et legitajxoj
-            $sql = "SELECT t.id, t.titolo, t.auxtoro, t.fonto, t.nivelo, t.vortoj, t.kolekto, t.etikedoj, t.sono, t.leganto, 
+            $sql = "SELECT t.id, t.titolo, t.auxtoro, t.fonto, t.nivelo, t.vortoj, t.kolekto, t.etikedoj, t.sono, t.leganto, t.arthur_id,
                            lo.kreita_je as legotajxoj_kreita_je,
                            li.komenc_timestamp as legitajxoj_komenc_timestamp,
                            li.fin_timestamp as legitajxoj_fin_timestamp,
@@ -93,13 +93,13 @@ class TekstojAPI {
                            li.komentaro as legitajxoj_komentaro,
                            li.kreita_je as legitajxoj_kreita_je,
                            li.modifita_je as legitajxoj_modifita_je
-                    FROM tekstoj t 
+                    FROM tekstoj t
                     LEFT JOIN legotajxoj lo ON t.id = lo.teksto_id AND lo.persono_id = ?
                     LEFT JOIN legitajxoj li ON t.id = li.teksto_id AND li.persono_id = ?";
             $params = array($persono_id, $persono_id);
         } else {
             // Utilisateur non connecté : requête normale
-            $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono, leganto FROM tekstoj";
+            $sql = "SELECT id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono, leganto, arthur_id FROM tekstoj";
             $params = array();
         }
         
@@ -386,14 +386,15 @@ class TekstojAPI {
             $sono = isset($data['sono']) ? $data['sono'] : null;
             $enhavo = isset($data['enhavo']) ? (is_array($data['enhavo']) ? json_encode($data['enhavo'], JSON_UNESCAPED_UNICODE) : $data['enhavo']) : null;
             $aktiva = isset($data['aktiva']) ? intval($data['aktiva']) : 0;
-            
-            $sql = "INSERT INTO tekstoj (id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono, enhavo, aktiva, ekdato) 
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
-            
+            $arthur_id = isset($data['arthur_id']) ? intval($data['arthur_id']) : null;
+
+            $sql = "INSERT INTO tekstoj (id, titolo, auxtoro, fonto, nivelo, vortoj, kolekto, etikedoj, sono, enhavo, aktiva, arthur_id, ekdato)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
+
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([
-                $id, $titolo, $auxtoro, $fonto, $nivelo, $vortoj, 
-                $kolekto, $etikedoj, $sono, $enhavo, $aktiva
+                $id, $titolo, $auxtoro, $fonto, $nivelo, $vortoj,
+                $kolekto, $etikedoj, $sono, $enhavo, $aktiva, $arthur_id
             ]);
             
             $this->sendResponse([
@@ -453,15 +454,15 @@ class TekstojAPI {
             // Construction dynamique de la requête SQL
             $updateFields = array();
             $params = array();
-            
-            $allowedFields = ['titolo', 'auxtoro', 'fonto', 'nivelo', 'vortoj', 'kolekto', 'etikedoj', 'sono', 'enhavo', 'aktiva', 'leganto'];
-            
+
+            $allowedFields = ['titolo', 'auxtoro', 'fonto', 'nivelo', 'vortoj', 'kolekto', 'etikedoj', 'sono', 'enhavo', 'aktiva', 'leganto', 'arthur_id'];
+
             foreach ($allowedFields as $field) {
                 if (isset($data[$field])) {
                     if ($field === 'enhavo' && is_array($data[$field])) {
                         $updateFields[] = "$field = ?";
                         $params[] = json_encode($data[$field], JSON_UNESCAPED_UNICODE);
-                    } elseif (in_array($field, ['nivelo', 'vortoj', 'aktiva'])) {
+                    } elseif (in_array($field, ['nivelo', 'vortoj', 'aktiva', 'arthur_id'])) {
                         $updateFields[] = "$field = ?";
                         $params[] = intval($data[$field]);
                     } else {

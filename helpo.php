@@ -37,7 +37,7 @@ include "pagxkapo.inc.php";
 				Vous pouvez être aidé par un correcteur qui corrigera vos exercices et pourra répondre à vos questions. 
 				Les échanges avec le correcteur se font par courriel.</p> 		
 
-				<p class="parto">Pour suivre le cours, la première étape consiste à <strong>créer un compte</strong> sur la page d’accueil en cliquant sur le bouton bleu CRÉER UN COMPTE. Après avoir rempli les différents champs demandés, vous recevrez un courriel de confirmation qui nous permettra de nous assurer que votre adresse est correcte. Vous devrez cliquer sur le lien donné dans ce courriel afin de finaliser votre inscription.</p>
+				<p class="parto">Pour suivre le cours, la première étape consiste à <strong>créer un compte</strong> sur la page d’accueil en cliquant sur le bouton bleu S'INSCRIRE GRATUITEMENT. Après avoir rempli les différents champs demandés, vous recevrez un courriel de confirmation qui nous permettra de nous assurer que votre adresse est correcte. Vous devrez cliquer sur le lien donné dans ce courriel afin de finaliser votre inscription.</p>
 				<p>Vous pourrez alors commencer le cours que vous souhaitez suivre. À la fin de la première leçon, vous serez invité à envoyer les réponses aux exercices et à demander un correcteur.</p>
 				
 				<div class="video-container">

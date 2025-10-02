@@ -28,8 +28,9 @@ include "pagxkapo.inc.php";
 					<h2>Bienvenue sur <span class="ikurso">iKurso</span></h2>
 					<p>Ici, vous pourrez découvrir ce qu’est la <b>langue internationale Espéranto</b>.<br> 
 						Vous pourrez également l’apprendre en suivant nos cours, à votre rythme.<br>
+						<p class="center"><a href="<?=$vojo?>fr/cge/lec01.php" class="btn waves-effect waves-light blue">Commencer le cours débutant</a></p>
 						Pour mieux vous aider, l’association Espéranto-France vous propose un <b>service de correction gratuit</b>. Pour en bénéficier, il suffit de vous inscrire.</p>
-						<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-target="aligxi">créer un compte</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-target="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
+						<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-target="aligxi">s'inscrire gratuitement</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-target="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
 						<p class="center"><a href="#prezento" class="btn-flat small">L’espéranto, qu’est-ce que c’est ?<i class="material-icons right">arrow_drop_down</i></a></p>
 				</div>
 			</div>

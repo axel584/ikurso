@@ -297,6 +297,7 @@ CREATE TABLE tekstoj (
   `ekdato` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `titolo` VARCHAR(1024) NOT NULL , 
   `auxtoro` VARCHAR(128) NOT NULL , 
+  `arthur_id` INT NULL,
   `fonto` VARCHAR(1024) NULL , 
   `sono` VARCHAR(1024) NULL,
   `leganto` VARCHAR(1024) NULL,

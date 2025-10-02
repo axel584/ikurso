@@ -182,7 +182,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 			</div>
 			<div class="modal-footer">
 				<div id="footer-creer-compte">
-					<a id="inscription_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">CRÉER UN COMPTE</a>
+					<a id="inscription_button" class="modal-action waves-effect waves-light btn-flat primaire-texte">S'INSCRIRE GRATUITEMENT</a>
 				</div>
 				<div id="footer-renvoyer-activation" class="hide">
 					<a id="fermer_button" class="modal-action modal-close waves-effect waves-light btn primaire">Fermer</a>

@@ -18,7 +18,7 @@ $respondo = array();
 $query = "select id,aktivigita,pasvorto_md5,enirnomo,rajtoj from personoj where enirnomo='".$identigilo."'";
 $result = $bdd->query($query);
 if (!$row = $result->fetch()) { // aucune ligne retournée
-	$respondo["mesagxo"]="Identifiant introuvable, cliquez sur le bouton CRÉER UN COMPTE";
+	$respondo["mesagxo"]="Identifiant introuvable, cliquez sur le bouton S'INSCRIRE GRATUITEMENT";
 	$respondo["type"]="identigilo";
 }
 else {

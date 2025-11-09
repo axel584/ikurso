@@ -11,7 +11,7 @@ if ($clef!="") {
 if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
-if ($kurso=="" || ($kurso!="CG" && $kurso!="GR" && $kurso!="KE")) {
+if ($kurso=="" || ($kurso!="CG" && $kurso!="GR" && $kurso!="KE" && $kurso!="PP")) {
 	// Cours inconnu 
 	header("Location:personinformoj.php?erarkodo=17");
 }

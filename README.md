@@ -8,43 +8,93 @@ Le cours initial est dans domaine public et les modifications qui y ont été ap
 
 Nous avons besoin d'aide pour un certain nombre d'améliorations que nous avons en tête (voir la liste des issues pour le détail). Nous avons taggué comme "facile" celles qui sont plus abordables à des débutants dans le projet.
 
-Pour installer en local une version du site utilisable, il vous suffit d'installer un serveur apache+php+mysql (Wamp fonctionne bien sous Windows).
-Puis télécharger le cours, il vous suffit de le cloner avec la commande : 
+1. INSTALLER EN LOCAL UNE VERSION DU SITE UTILISABLE, il vous suffit d'installer un serveur apache+php+mysql (Wamp fonctionne bien sous Windows).
+
+2. TÉLÉCHARGER LE COURS. Pour cela vous suffit de le cloner avec la commande : 
 
 git clone git@github.com:axel584/ikurso.git
 
-De créer une base MySQL et un utilisateur et d'attribuer à l'utilisateur les droits qui vont bien à la base (phpMyAdmin permet de faire tout ceci assez simplement)
-
-D'insérer en base le fichier qui se trouve dans sql/create-database.sql
-Et insérer également les données qui permettent de faire fonctionner le site (les cours, le vocabulaire, la liste des leçons etc.) en exécutant le script sql/create-data.sql
-
-Et insérer le script sql/create-data-test.sql pour insérer un compte (on peut aussi s'inspirer du contenu de ce fichier pour choisir l'identifiant/mot de passe/adresse email de l'administrateur et/ou des premières correcteurs
-
-De créer à la racine un fichier config.php contenant les informations suivante :
-```
+3. À LA RACINE CRÉER LE FICHIER config.php contenant les informations suivante :
+```php
 <?php
+$urlDb = "db";
 $base = "ikurso";
-$login = "identifiant";
-$motDePasse = "monmotdepasse";
-$urlracine = "http://127.0.0.1/ikurso/"; // ça peut être l'adresse ip publique si on veut que le site soit accessible de l'extérieur
-$cheminAbsolu = "/ikurso/";
+$login = "ikurso_user";
+$motDePasse = "ikurso_pass";
+$urlracine = "http://localhost:8080";
 $hostSmtp = "smtp.free.fr";
 $portSmtp = 587;
 $hostSmtpSES = "email-smtp.eu-west-1.amazonaws.com";
 $portSmtpSES = 587;
-$userSES = "USER_SES"; // pour l'envoi des mails via amazon
+$userSES = "USER_SES";
 $passwordSES = "mot de passe Amazon SES";
 $milestone = 1;
 ?>
 ```
-De créer dans le répertoire js un fichier config.js contenant les informations suivantes :
+4. DANS LE RÉPERTOIRE js CRÉER LE FICHIER config.js contenant les informations suivantes :
 
 ```
-$urlracine = "http://localhost/ikurso/"; // ou bien "http://ikurso.esperanto-france.org" pour la prod
-$cheminAbsolu = "/ikurso/"; // peut aussi avoir comme valeur "/" si le site est accessible à la racine du domaine
+$urlracine = "http://localhost:8080/";
+$cheminAbsolu = "/";
 ```
 
-et de se connecter à l'adresse http://localhost/ikurso
+5. Lancer l'application (voir ci-dessous LANCEMENT DE L'APPLICATION), puis lancer PG Admin en allant sur: http://localhost:8081/
+
+6. CRÉER UNE BASE MySQL et un utilisateur, et attribuer à l'utilisateur les droits qui vont bien à la base (phpMyAdmin permet de faire tout ceci assez simplement). 
+
+7. CRÉER LE CONTENU DE LA BASE. Pour cela :
+* insérer le script sql/01-create-database.sql (crée les tables)
+* insérer le script sql/02-create-data.sql (crée les données pour les cours, le vocabulaire, les leçons, etc.)
+* insérer le script sql/03-create-data-test.sql (crée les comptes utilisateur de test). 
+  On peut aussi s'inspirer du contenu de ce fichier pour choisir l'identifiant/mot de passe/adresse email de l'administrateur et/ou des premiers correcteurs.
+
+
+LANCEMENT DE L'APPLICATION
+------
+
+Lancer avec Docker compose : 
+```docker compose up --build```
+Cela lance postgres, pgadmin et l'application ikurso.
+
+PG Admin est accessible sur: http://localhost:8081/
+L'application est accessible sur : http://localhost:8080/
+
+Pour relancer l'appli (et réinitialiser avec les données de base):
+```
+docker compose down -v
+docker compose up --build
+```
+
+Pour arrêter l'application : 
+```docker compose stop```
+
+COMPTES DE TEST
+------
+
+Vous aurez 3 comptes pour tester l'application : 
+* administranto/test : un compte d'administration
+* korektanto1/test : un compte de correcteur
+* lernanto1/test : un compte d'élève
+
+NI LEGU
+-----
+Installation 
+------
+npm install -g serve
+
+
+Build
+------
+cd react-src/nilegu
+npm run build
+serve -s build
+cp -R build/* ../../nilegu
+
+il faut ajouter "homepage": "/nilegu", dans le package.json
+
+
+En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
+
 
 # Organisation du code 
 
@@ -101,8 +151,6 @@ Les tables contenant les données propres à l'application (liste des leçons/ex
 - générer une release dans github (code, release, draft new release)
 - Faire un mail aux correcteurs pour leur parler des nouveautés.
 
-# Procédure d'installation (ancienne version)
-
 
 Base de données
 ---------------
@@ -118,9 +166,9 @@ exit
 
 Insertion dans la base de données:
 ```sh
-mariadb -u ikurso -p ikurso_database < sql/create-database.sql
-mariadb -u ikurso -p ikurso_database < sql/create-data.sql
-mariadb -u ikurso -p ikurso_database < sql/create-data-test.sql
+mariadb -u ikurso -p ikurso_database < sql/01-create-database.sql
+mariadb -u ikurso -p ikurso_database < sql/02-create-data.sql
+mariadb -u ikurso -p ikurso_database < sql/03-create-data-test.sql
 ```
 
 Apache : hôte virtuel ikurso.localhost
@@ -151,119 +199,3 @@ EOF
 a2ensite ikurso 
 systemctl reload apache2
 ```
-
-Config
-------
-
-À la racine, créer :
-
-- config.php:
-```php
-<?php
-$urlDb = "db";
-$base = "ikurso";
-$login = "ikurso_user";
-$motDePasse = "ikurso_pass";
-$urlracine = "http://localhost:8080";
-$hostSmtp = "smtp.free.fr";
-$portSmtp = 587;
-$hostSmtpSES = "email-smtp.eu-west-1.amazonaws.com";
-$portSmtpSES = 587;
-$userSES = "USER_SES";
-$passwordSES = "mot de passe Amazon SES";
-$milestone = 1;
-?>
-```
-
-- config.js:
-```
-$urlracine = "http://ikurso.localhost";
-$cheminAbsolu = "/ikurso/";
-```
-
-Installer php composer : https://getcomposer.org/download/
-Installer phpMailer : composer update
-
-En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
-
-# Procédure d'installation simplifiée
-
-Récupérer le code
-------
-```
-git clone git@github.com:axel584/ikurso.git
-```
-
-Config
-------
-
-À la racine, créer :
-
-- config.php:
-```php
-<?php
-$urlDb = "db";
-$base = "ikurso";
-$login = "ikurso_user";
-$motDePasse = "ikurso_pass";
-$urlracine = "http://localhost:8080";
-$hostSmtp = "smtp.free.fr";
-$portSmtp = 587;
-$hostSmtpSES = "email-smtp.eu-west-1.amazonaws.com";
-$portSmtpSES = 587;
-$userSES = "USER_SES";
-$passwordSES = "mot de passe Amazon SES";
-$milestone = 1;
-?>
-```
-
-dans le répertoire /js/ créer : 
-- /js/config.js:
-```
-$urlracine = "http://localhost:8080/";
-$cheminAbsolu = "/";
-```
-
-Lancement
-----
-
-Lancer avec Docker compose : 
-```docker compose up --build```
-Cela lance postgres, pgadmin et l'application ikurso.
-PG Admin est accessible : http://localhost:8081/
-Et l'application est accessible ici : http://localhost:8080/
-
-et pour relancer l'appli (et réinitialiser avec les données de base):
-```
-docker compose down -v
-docker compose up --build
-```
-
-Pour arrêter l'application : 
-```docker compose stop```
-
-Comptes de tests
------
-Vous pouvez maintenant vous connecter sur : http://localhost:8080/
-
-Vous aurez 3 comptes pour tester l'application : 
-* administranto/test : un compte d'administration
-* korektanto1/test : un compte de correcteur
-* lernanto1/test : un compte d'élève
-
-Ni legu
-------
-Installation 
-------
-npm install -g serve
-
-
-Build
-------
-cd react-src/nilegu
-npm run build
-serve -s build
-cp -R build/* ../../nilegu
-
-il faut ajouter "homepage": "/nilegu", dans le package.json
-

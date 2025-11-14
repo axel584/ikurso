@@ -290,7 +290,7 @@ CREATE TABLE takso_leciono (
   `malfacileco` int(11) NOT NULL,
   `komento` text NOT NULL,
   PRIMARY KEY (id)
-) ENGINE = InnoDB CHARSET=utf8_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE tekstoj (
   `id` VARCHAR(64) NOT NULL , 
@@ -307,7 +307,7 @@ CREATE TABLE tekstoj (
   `etikedoj` VARCHAR(1024) NULL, 
   `enhavo` MEDIUMTEXT NULL,
   `aktiva` TINYINT NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 ALTER TABLE `tekstoj`
   ADD PRIMARY KEY (`id`);
@@ -319,7 +319,7 @@ CREATE TABLE vortoj (
   `tipo` enum('adj','adv','conjonction','expression','interjection','nom','nombre','phrase','pronom','préfixe','préposition','verbe') DEFAULT NULL,
   `lecionero_id` int(11) NOT NULL,
   PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
 ALTER TABLE personoj

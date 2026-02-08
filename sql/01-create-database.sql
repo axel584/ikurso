@@ -305,6 +305,7 @@ CREATE TABLE tekstoj (
   `vortoj` INT NULL , 
   `kolekto` VARCHAR(64) NULL , 
   `etikedoj` VARCHAR(1024) NULL, 
+  `teksto` MEDIUMTEXT NULL,
   `enhavo` MEDIUMTEXT NULL,
   `aktiva` TINYINT NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

@@ -26,6 +26,11 @@ require_once 'api/LegitajxojAPI.php';
 require_once 'api/LegotajxojAPI.php';
 require_once 'api/KontaktoAPI.php';
 require_once 'api/PersonojAPI.php';
+require_once 'api/KursojAPI.php';
+require_once 'api/LecionojAPI.php';
+require_once 'api/LecionerojAPI.php';
+require_once 'api/EkzercojAPI.php';
+require_once 'api/EkzerceroiAPI.php';
 
 // Déterminer quelle API utiliser basé sur le path
 $path = isset($_GET['path']) ? $_GET['path'] : '';
@@ -55,6 +60,26 @@ if (!empty($segments)) {
     } elseif ($segments[0] === 'personoj') {
         // API gestion des comptes utilisateurs
         $api = new PersonojAPI();
+        $api->handleRequest();
+    } elseif ($segments[0] === 'kursoj') {
+        // API gestion des cours
+        $api = new KursojAPI();
+        $api->handleRequest();
+    } elseif ($segments[0] === 'lecionoj') {
+        // API gestion des leçons
+        $api = new LecionojAPI();
+        $api->handleRequest();
+    } elseif ($segments[0] === 'lecioneroj') {
+        // API gestion des sections de leçons
+        $api = new LecionerojAPI();
+        $api->handleRequest();
+    } elseif ($segments[0] === 'ekzercoj') {
+        // API gestion des exercices
+        $api = new EkzercojAPI();
+        $api->handleRequest();
+    } elseif ($segments[0] === 'ekzerceroj') {
+        // API gestion des sous-exercices
+        $api = new EkzerceroiAPI();
         $api->handleRequest();
     } else {
         // Endpoint non trouvé

@@ -72,7 +72,7 @@ $query = "SELECT numero,kurso,titolo  FROM `lecionoj` WHERE kurso='CG' order by 
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
 	$nbReponse = $nbReponse + 1;
-	echo "<li><a href='korektado.php?kurso=CG&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></li>\n";
+	echo "<li><a href='korektado-admin.php?kurso=CG&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></li>\n";
 }
 ?>
 					</ul>
@@ -87,7 +87,7 @@ $query = "SELECT numero,kurso,titolo  FROM `lecionoj` WHERE kurso='GR' order by 
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
 	$nbReponse = $nbReponse + 1;
-	echo "<li><a href='korektado.php?kurso=GR&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></li>\n";
+	echo "<li><a href='korektado-admin.php?kurso=GR&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></li>\n";
 }
 ?>	
 					</ul>
@@ -102,7 +102,7 @@ $query = "SELECT numero,kurso,titolo  FROM `lecionoj` WHERE kurso='PP' order by 
 $result = $bdd->query($query);
 while ($row=$result->fetch()) {
 	$nbReponse = $nbReponse + 1;
-	echo "<li><a href='korektado.php?kurso=PP&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></li>\n";
+	echo "<li><a href='korektado-admin.php?kurso=PP&numleciono=".$row["numero"]."'>".$row["titolo"]."</a></li>\n";
 }
 ?>	
 					</ul>

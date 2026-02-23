@@ -42,10 +42,13 @@ class EkzerceroiAPI {
 
         $resource = $segments[0]; // 'ekzerceroj'
         $id = isset($segments[1]) ? $segments[1] : null;
+        $action = isset($segments[2]) ? $segments[2] : null;
 
         switch ($method) {
             case 'GET':
-                if ($id) {
+                if ($id && $action === 'stats') {
+                    $this->getEkzerceroStats($id);
+                } elseif ($id) {
                     $this->getEkzercero($id);
                 } else {
                     $this->getEkzerceroj();
@@ -487,6 +490,68 @@ class EkzerceroiAPI {
             ];
 
             $this->sendResponse(200, $response);
+
+        } catch(PDOException $e) {
+            if (DEBUG_MODE) {
+                $this->sendError(500, "Erreur base de données: " . $e->getMessage());
+            } else {
+                $this->sendError(500, "Erreur interne du serveur");
+            }
+        }
+    }
+
+    private function getEkzerceroStats($id) {
+        if (!$this->requireAdminAuth()) {
+            return;
+        }
+
+        $id = (int)$id;
+        if ($id <= 0) {
+            $this->sendError(400, "ID sous-exercice invalide");
+            return;
+        }
+
+        $limite = isset($_GET['limite']) ? (int)$_GET['limite'] : 5;
+        if ($limite <= 0 || $limite > 100) {
+            $limite = 5;
+        }
+
+        try {
+            // Requête 1 : nombre total de réponses pour cette question
+            $stmt = $this->conn->prepare(
+                "SELECT COUNT(*) as total FROM respondoj WHERE ekzercero_id = ? AND forigita = 0"
+            );
+            $stmt->execute([$id]);
+            $total = (int)$stmt->fetch(PDO::FETCH_ASSOC)['total'];
+
+            // Requête 2 : réponses les plus fréquentes via GROUP BY
+            $stmt = $this->conn->prepare(
+                "SELECT respondo, COUNT(*) as nombre
+                 FROM respondoj
+                 WHERE ekzercero_id = ? AND forigita = 0
+                 GROUP BY respondo
+                 ORDER BY nombre DESC
+                 LIMIT ?"
+            );
+            $stmt->execute([$id, $limite]);
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $data = [];
+            foreach ($rows as $row) {
+                $nombre = (int)$row['nombre'];
+                $data[] = [
+                    'respondo'  => $row['respondo'],
+                    'nombre'    => $nombre,
+                    'procento'  => $total > 0 ? round($nombre / $total * 100, 1) : 0,
+                ];
+            }
+
+            $this->sendResponse(200, [
+                'ekzercero_id' => $id,
+                'total'        => $total,
+                'limite'       => $limite,
+                'data'         => $data,
+            ]);
 
         } catch(PDOException $e) {
             if (DEBUG_MODE) {

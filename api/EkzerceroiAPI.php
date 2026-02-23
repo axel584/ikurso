@@ -525,15 +525,16 @@ class EkzerceroiAPI {
             $total = (int)$stmt->fetch(PDO::FETCH_ASSOC)['total'];
 
             // Requête 2 : réponses les plus fréquentes via GROUP BY
+            // $limite est un int validé, on l'interpole directement (LIMIT n'accepte pas les paramètres liés)
             $stmt = $this->conn->prepare(
                 "SELECT respondo, COUNT(*) as nombre
                  FROM respondoj
                  WHERE ekzercero_id = ? AND forigita = 0
                  GROUP BY respondo
                  ORDER BY nombre DESC
-                 LIMIT ?"
+                 LIMIT $limite"
             );
-            $stmt->execute([$id, $limite]);
+            $stmt->execute([$id]);
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             $data = [];

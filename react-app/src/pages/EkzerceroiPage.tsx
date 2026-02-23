@@ -96,7 +96,9 @@ export default function EkzerceroiPage() {
     const newItems = [...items]
     const [moved] = newItems.splice(dragIndex, 1)
     newItems.splice(dropIndex, 0, moved)
-    const updated = newItems.map((item, i) => ({ ...item, numero: i + 1 }))
+    // Réutilise les valeurs de numero existantes (triées) redistribuées dans le nouvel ordre
+    const sortedNumeros = [...items].sort((a, b) => a.numero - b.numero).map(item => item.numero)
+    const updated = newItems.map((item, i) => ({ ...item, numero: sortedNumeros[i] }))
     setItems(updated)
     const updates = updated
       .filter(item => items.find(o => o.id === item.id)?.numero !== item.numero)

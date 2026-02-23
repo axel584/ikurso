@@ -78,10 +78,15 @@ export default function EkzerceroiPage() {
       {(creating || editing) && (
         <Paper variant="outlined" sx={{ p: 3, mb: 3 }}>
           <Typography variant="subtitle1" fontWeight="bold" mb={2}>
-            {editing ? 'Modifier la question' : 'Nouvelle question'}
+            {editing ? `Ekzerceroj #${editing.id} — ekzerco #${eid}` : 'Nouvelle question'}
           </Typography>
           <Box component="form" onSubmit={submitForm}>
             <Stack direction="row" spacing={2} flexWrap="wrap" mb={2}>
+              {editing && (
+                <TextField label="ID" size="small" sx={{ width: 80 }}
+                  value={editing.id} InputProps={{ readOnly: true }}
+                  inputProps={{ style: { fontFamily: 'monospace', color: 'grey' } }} />
+              )}
               <TextField label="Kodo (max 10)" size="small" sx={{ width: 140 }}
                 inputProps={{ maxLength: 10, style: { fontFamily: 'monospace' } }}
                 value={form.kodo} onChange={e => setForm(f => ({ ...f, kodo: e.target.value }))} required />

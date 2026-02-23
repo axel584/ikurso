@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
 import {
@@ -9,6 +9,7 @@ import {
 import AddIcon from '@mui/icons-material/Add'
 import { decodeHtml } from '../utils/html'
 import EditIcon from '@mui/icons-material/Edit'
+import DragIndicatorIcon from '@mui/icons-material/DragIndicator'
 import { ekzerceroiApi, type Ekzercero } from '../api/ekzerceroj'
 import DeleteButton from '../components/DeleteButton'
 
@@ -25,6 +26,9 @@ export default function EkzerceroiPage() {
   const [creating, setCreating] = useState(false)
   const [form, setForm] = useState<FormData>(emptyForm(ekzercoId))
   const [error, setError] = useState<string | null>(null)
+  const [items, setItems] = useState<Ekzercero[]>([])
+  const [dragIndex, setDragIndex] = useState<number | null>(null)
+  const [overIndex, setOverIndex] = useState<number | null>(null)
 
   const { data, isLoading } = useQuery({
     queryKey: ['ekzerceroj', ekzercoId],
@@ -63,6 +67,46 @@ export default function EkzerceroiPage() {
   }
 
   const isPending = createMut.isPending || updateMut.isPending
+
+  // Synchronise la liste locale avec les données serveur
+  useEffect(() => {
+    if (data?.data) setItems(data.data)
+  }, [data?.data])
+
+  const reorderMut = useMutation({
+    mutationFn: async (updates: { id: number; numero: number }[]) => {
+      await Promise.all(updates.map(({ id, numero }) => ekzerceroiApi.update(id, { numero })))
+    },
+    onSuccess: () => { invalidate(); setError(null) },
+    onError: (e: Error) => setError(e.message),
+  })
+
+  function handleDragStart(index: number) {
+    setDragIndex(index)
+  }
+  function handleDragOver(e: React.DragEvent, index: number) {
+    e.preventDefault()
+    setOverIndex(index)
+  }
+  function handleDrop(e: React.DragEvent, dropIndex: number) {
+    e.preventDefault()
+    if (dragIndex === null || dragIndex === dropIndex) {
+      setDragIndex(null); setOverIndex(null); return
+    }
+    const newItems = [...items]
+    const [moved] = newItems.splice(dragIndex, 1)
+    newItems.splice(dropIndex, 0, moved)
+    const updated = newItems.map((item, i) => ({ ...item, numero: i + 1 }))
+    setItems(updated)
+    const updates = updated
+      .filter(item => items.find(o => o.id === item.id)?.numero !== item.numero)
+      .map(({ id, numero }) => ({ id, numero }))
+    if (updates.length > 0) reorderMut.mutate(updates)
+    setDragIndex(null); setOverIndex(null)
+  }
+  function handleDragEnd() {
+    setDragIndex(null); setOverIndex(null)
+  }
 
   return (
     <Box>
@@ -130,6 +174,7 @@ export default function EkzerceroiPage() {
         <Table size="small">
           <TableHead>
             <TableRow sx={{ bgcolor: 'grey.50' }}>
+              <TableCell sx={{ width: 32, px: 1 }} />
               <TableCell><strong>N°</strong></TableCell>
               <TableCell><strong>Kodo</strong></TableCell>
               <TableCell><strong>Demando</strong></TableCell>
@@ -140,11 +185,27 @@ export default function EkzerceroiPage() {
           </TableHead>
           <TableBody>
             {isLoading ? (
-              <TableRow><TableCell colSpan={6} align="center">Chargement…</TableCell></TableRow>
-            ) : data?.data.length === 0 ? (
-              <TableRow><TableCell colSpan={6} align="center" sx={{ color: 'text.secondary' }}>Aucune question</TableCell></TableRow>
-            ) : data?.data.map(e => (
-              <TableRow key={e.id} hover>
+              <TableRow><TableCell colSpan={7} align="center">Chargement…</TableCell></TableRow>
+            ) : items.length === 0 ? (
+              <TableRow><TableCell colSpan={7} align="center" sx={{ color: 'text.secondary' }}>Aucune question</TableCell></TableRow>
+            ) : items.map((e, idx) => (
+              <TableRow
+                key={e.id}
+                hover
+                draggable
+                onDragStart={() => handleDragStart(idx)}
+                onDragOver={ev => handleDragOver(ev, idx)}
+                onDrop={ev => handleDrop(ev, idx)}
+                onDragEnd={handleDragEnd}
+                sx={{
+                  opacity: dragIndex === idx ? 0.4 : 1,
+                  bgcolor: overIndex === idx && dragIndex !== idx ? 'action.hover' : undefined,
+                  cursor: dragIndex !== null ? 'grabbing' : undefined,
+                }}
+              >
+                <TableCell sx={{ width: 32, px: 1, color: 'text.disabled', cursor: 'grab' }}>
+                  <DragIndicatorIcon fontSize="small" />
+                </TableCell>
                 <TableCell sx={{ fontFamily: 'monospace' }}>{e.numero}</TableCell>
                 <TableCell sx={{ fontFamily: 'monospace', fontSize: '0.75rem' }}>{e.kodo}</TableCell>
                 <TableCell sx={{ maxWidth: 280, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{decodeHtml(e.demando)}</TableCell>

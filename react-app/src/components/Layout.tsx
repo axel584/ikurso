@@ -1,10 +1,7 @@
 import type { ReactNode } from 'react'
-import {
-  AppBar, Toolbar, Typography, Breadcrumbs, Container, Box,
-  Link as MuiLink,
-} from '@mui/material'
+import { Typography, Breadcrumbs, Container, Box, Link as MuiLink } from '@mui/material'
 import { Link, useLocation } from 'react-router-dom'
-import { useAuth } from '../hooks/useAuth'
+import Header from './Header'
 
 function useBreadcrumbs() {
   const location = useLocation()
@@ -36,29 +33,11 @@ function useBreadcrumbs() {
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
-  const { user } = useAuth()
   const crumbs = useBreadcrumbs()
 
   return (
     <Box minHeight="100vh" bgcolor="grey.50">
-      <AppBar position="static" elevation={1}>
-        <Toolbar>
-          <Typography
-            variant="h6"
-            component={Link}
-            to="/"
-            sx={{ flexGrow: 1, color: 'inherit', textDecoration: 'none' }}
-          >
-            Redaktilo — Ikurso
-          </Typography>
-          <Typography variant="body2" sx={{ mr: 2 }}>
-            {user?.enirnomo}
-          </Typography>
-          <MuiLink href="/index.php" color="inherit" underline="hover" variant="body2">
-            ← Retour au site
-          </MuiLink>
-        </Toolbar>
-      </AppBar>
+      <Header />
 
       <Box sx={{ bgcolor: 'grey.100', borderBottom: 1, borderColor: 'divider', px: 3, py: 1 }}>
         <Breadcrumbs>

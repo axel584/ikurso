@@ -59,6 +59,7 @@ echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n";
 					<h2>Administrateur</h2>
 					<p><a href="<?php echo $vojo."stirpanelo.php";?>">Panneau de contr&ocirc;le</a></p>
 					<p><a href="<?php echo $vojo."administri.php";?>">G&eacute;rer les utilisateurs</a></p>
+					<p><a href="<?php echo $vojo."redaktilo/";?>">Redaktilo</a></p>
 				</td>
 			<?php } ?>
 			</tr>

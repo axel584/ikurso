@@ -47,6 +47,14 @@ const NAV: NavItem[] = [
   },
 ]
 
+const NAV_BTN_SX = {
+  fontFamily: "'Roboto Condensed', sans-serif",
+  textTransform: 'uppercase',
+  fontWeight: 400,
+  letterSpacing: '0.03em',
+  fontSize: '0.85rem',
+} as const
+
 function DropdownMenu({ item }: { item: NavItem & { children: NavChild[] } }) {
   const [anchor, setAnchor] = useState<null | HTMLElement>(null)
   return (
@@ -56,7 +64,7 @@ function DropdownMenu({ item }: { item: NavItem & { children: NavChild[] } }) {
         size="small"
         endIcon={<ArrowDropDownIcon />}
         onClick={e => setAnchor(e.currentTarget)}
-        sx={{ textTransform: 'none', fontWeight: 500 }}
+        sx={NAV_BTN_SX}
       >
         {item.label}
       </Button>
@@ -128,7 +136,9 @@ export default function Header() {
           iKurso
         </Typography>
 
-        <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, flexWrap: 'wrap', gap: 0.5 }}>
+        <Box sx={{ flexGrow: 1 }} />
+
+        <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 0.5 }}>
           {NAV.map(item =>
             item.children ? (
               <DropdownMenu key={item.label} item={item as NavItem & { children: NavChild[] }} />
@@ -139,7 +149,7 @@ export default function Header() {
                 size="small"
                 component="a"
                 href={item.href}
-                sx={{ textTransform: 'none', fontWeight: 500 }}
+                sx={NAV_BTN_SX}
               >
                 {item.label}
               </Button>

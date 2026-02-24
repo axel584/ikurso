@@ -3,7 +3,6 @@ import { api } from './client'
 export interface Ekzercero {
   id: number
   ekzerco_id: number
-  kodo: string
   numero: number
   demando: string
   respondmodelo: string | null

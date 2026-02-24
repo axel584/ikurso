@@ -84,12 +84,11 @@ class EkzerceroiAPI {
     private function getEkzerceroj() {
         // Paramètres de filtrage
         $ekzerco_id = isset($_GET['ekzerco_id']) ? (int)$_GET['ekzerco_id'] : null;
-        $kodo = isset($_GET['kodo']) ? trim($_GET['kodo']) : null;
         $forigita = isset($_GET['forigita']) ? $_GET['forigita'] : null;
 
         try {
             // Construction de la requête
-            $sql = "SELECT id, ekzerco_id, kodo, numero, demando, respondmodelo, respondo, normaligita, bildo, forigita, korektebla, poentoj FROM ekzerceroj";
+            $sql = "SELECT id, ekzerco_id, numero, demando, respondmodelo, respondo, normaligita, bildo, forigita, korektebla, poentoj FROM ekzerceroj";
             $params = [];
             $where_conditions = [];
 
@@ -97,12 +96,6 @@ class EkzerceroiAPI {
             if ($ekzerco_id !== null) {
                 $where_conditions[] = "ekzerco_id = ?";
                 $params[] = $ekzerco_id;
-            }
-
-            // Filtre par code
-            if ($kodo !== null) {
-                $where_conditions[] = "kodo = ?";
-                $params[] = $kodo;
             }
 
             // Filtre par forigita (supprimé logiquement)
@@ -160,7 +153,7 @@ class EkzerceroiAPI {
 
         try {
             // Requête pour récupérer le sous-exercice
-            $sql = "SELECT id, ekzerco_id, kodo, numero, demando, respondmodelo, respondo, normaligita, bildo, forigita, korektebla, poentoj FROM ekzerceroj WHERE id = ?";
+            $sql = "SELECT id, ekzerco_id, numero, demando, respondmodelo, respondo, normaligita, bildo, forigita, korektebla, poentoj FROM ekzerceroj WHERE id = ?";
 
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$id]);
@@ -207,7 +200,6 @@ class EkzerceroiAPI {
         }
 
         $ekzerco_id = isset($input['ekzerco_id']) ? (int)$input['ekzerco_id'] : null;
-        $kodo = isset($input['kodo']) ? trim($input['kodo']) : "";
         $numero = isset($input['numero']) ? (int)$input['numero'] : null;
         $demando = isset($input['demando']) ? trim($input['demando']) : "";
         $respondmodelo = isset($input['respondmodelo']) ? trim($input['respondmodelo']) : null;
@@ -221,16 +213,6 @@ class EkzerceroiAPI {
         // Validation des champs obligatoires
         if ($ekzerco_id === null) {
             $this->sendError(400, "L'ID de l'exercice parent est requis");
-            return;
-        }
-
-        if ($kodo == "") {
-            $this->sendError(400, "Le code du sous-exercice est requis");
-            return;
-        }
-
-        if (strlen($kodo) > 10) {
-            $this->sendError(400, "Le code ne peut pas dépasser 10 caractères");
             return;
         }
 
@@ -257,11 +239,10 @@ class EkzerceroiAPI {
             }
 
             // Création du sous-exercice
-            $query = "INSERT INTO ekzerceroj (ekzerco_id, kodo, numero, demando, respondmodelo, respondo, normaligita, bildo, forigita, korektebla, poentoj) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $query = "INSERT INTO ekzerceroj (ekzerco_id, numero, demando, respondmodelo, respondo, normaligita, bildo, forigita, korektebla, poentoj) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $this->conn->prepare($query);
             $stmt->execute([
                 $ekzerco_id,
-                $kodo,
                 $numero,
                 $demando,
                 $respondmodelo,
@@ -281,7 +262,6 @@ class EkzerceroiAPI {
                 'data' => [
                     'id' => (int)$ekzercero_id,
                     'ekzerco_id' => $ekzerco_id,
-                    'kodo' => $kodo,
                     'numero' => $numero,
                     'demando' => $demando,
                     'respondmodelo' => $respondmodelo,
@@ -337,7 +317,7 @@ class EkzerceroiAPI {
             }
 
             // Champs modifiables
-            $allowed_fields = ['ekzerco_id', 'kodo', 'numero', 'demando', 'respondmodelo', 'respondo', 'normaligita', 'bildo', 'forigita', 'korektebla', 'poentoj'];
+            $allowed_fields = ['ekzerco_id', 'numero', 'demando', 'respondmodelo', 'respondo', 'normaligita', 'bildo', 'forigita', 'korektebla', 'poentoj'];
 
             $update_fields = [];
             $update_values = [];
@@ -359,18 +339,6 @@ class EkzerceroiAPI {
                     $stmt->execute([$value]);
                     if ($stmt->fetch()["combien"] == 0) {
                         $this->sendError(404, "L'exercice parent spécifié n'existe pas");
-                        return;
-                    }
-                }
-
-                if ($field === 'kodo') {
-                    $value = trim($value);
-                    if (empty($value)) {
-                        $this->sendError(400, "Le code ne peut pas être vide");
-                        return;
-                    }
-                    if (strlen($value) > 10) {
-                        $this->sendError(400, "Le code ne peut pas dépasser 10 caractères");
                         return;
                     }
                 }
@@ -408,7 +376,7 @@ class EkzerceroiAPI {
             $stmt->execute($update_values);
 
             // Récupérer les données mises à jour
-            $stmt = $this->conn->prepare("SELECT id, ekzerco_id, kodo, numero, demando, respondmodelo, respondo, normaligita, bildo, forigita, korektebla, poentoj FROM ekzerceroj WHERE id = ?");
+            $stmt = $this->conn->prepare("SELECT id, ekzerco_id, numero, demando, respondmodelo, respondo, normaligita, bildo, forigita, korektebla, poentoj FROM ekzerceroj WHERE id = ?");
             $stmt->execute([$id]);
             $updated_ekzercero = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -451,7 +419,7 @@ class EkzerceroiAPI {
 
         try {
             // Vérifier que le sous-exercice existe
-            $stmt = $this->conn->prepare("SELECT id, kodo, demando FROM ekzerceroj WHERE id = ?");
+            $stmt = $this->conn->prepare("SELECT id, demando FROM ekzerceroj WHERE id = ?");
             $stmt->execute([$id]);
             $ekzercero_to_delete = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -484,7 +452,6 @@ class EkzerceroiAPI {
                 'message' => 'Sous-exercice supprimé avec succès',
                 'data' => [
                     'id' => (int)$id,
-                    'kodo' => $ekzercero_to_delete['kodo'],
                     'demando' => $ekzercero_to_delete['demando']
                 ]
             ];

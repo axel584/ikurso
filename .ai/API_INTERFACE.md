@@ -1375,3 +1375,174 @@ Si `DEBUG_MODE = true` (config.php), les erreurs 500 incluent le message PDO com
 - **Emails** : Envoi via AWS SES si `$awskey`/`$awssecret` configurés, sinon fallback sur `mail()` PHP ou simple log.
 - **ID tekstoj** : VARCHAR libre (ex: `"gerda01"`, `"ppp03"`), non auto-increment.
 - **Suppression tekstoj** : Pas de DELETE exposé — les textes sont archivés via `aktiva=0`.
+- **JSON** : Tous les endpoints encodent avec `JSON_UNESCAPED_UNICODE` (support des caractères espéranto : ĉ, ĝ, ĥ, ĵ, ŝ, ŭ).
+- **LIMIT PDO** : Ne pas binder `LIMIT` via `?` — MariaDB refuse les valeurs quotées. Interpoler directement un entier validé.
+
+---
+
+## Modèles de données
+
+### Persono (Utilisateur)
+
+```json
+{
+  "id": 123,
+  "enirnomo": "username",
+  "rajtoj": "S",
+  "rajtoj_label": "Étudiant",
+  "retadreso": "user@example.com",
+  "personnomo": "John",
+  "familinomo": "Doe",
+  "aktivigita": true,
+  "ekdato": "2024-01-15",
+  "lasteniro": "2024-08-13 15:30:00",
+  "sekso": "M",
+  "adreso1": "123 Rue de la Paix",
+  "posxtkodo": "75001",
+  "urbo": "Paris",
+  "lando": "FR",
+  "latitudo": 48.8566,
+  "longitudo": 2.3522,
+  "naskigxdato": "1990-05-20",
+  "kialo": "Apprendre l'espéranto",
+  "noto": "Notes internes",
+  "maksimumo": 0,
+  "kurso": "CG",
+  "videbla": true,
+  "stop_info": false,
+  "stop_rappel": false,
+  "aktivigo": "a1b2c3d4e5f6..."
+}
+```
+
+### Teksto (Texte)
+
+```json
+{
+  "id": "gerda01",
+  "titolo": "Gerda malaperis! - Ĉapitro 1",
+  "auxtoro": "Claude Piron",
+  "fonto": "Gerda malaperis!",
+  "nivelo": 1,
+  "vortoj": 450,
+  "kolekto": "gerda",
+  "etikedoj": "komencanto,mistero",
+  "sono": "audio/gerda01.mp3",
+  "leganto": "Anna Johnson",
+  "arthur_id": 123,
+  "aktiva": 1,
+  "ekdato": "2020-01-15 10:00:00",
+  "enhavo": [
+    {"type": "paragraph", "content": "..."}
+  ]
+}
+```
+
+### Legitajxo (Session de lecture)
+
+```json
+{
+  "id": 456,
+  "persono_id": 123,
+  "teksto_id": "gerda01",
+  "komenc_timestamp": "2024-08-13 15:30:00",
+  "fin_timestamp": "2024-08-13 16:00:00",
+  "legad_tempo": 1800,
+  "noto": 4,
+  "komentaro": "Très intéressant",
+  "kreita_je": "2024-08-13 15:30:00",
+  "modifita_je": "2024-08-13 16:00:00"
+}
+```
+
+### Legotajxo (Marque-page)
+
+```json
+{
+  "id": 789,
+  "persono_id": 123,
+  "teksto_id": "gerda01",
+  "kreita_je": "2024-08-01 10:00:00",
+  "modifita_je": "2024-08-01 10:00:00"
+}
+```
+
+---
+
+## Conventions de développement
+
+### Naming
+
+- **Classes** : PascalCase avec suffixe `API` (`PersonojAPI`, `EkzerceroiAPI`)
+- **Méthodes privées** : camelCase (`sendResponse`, `validateJWT`)
+- **Champs espéranto** : Conserver les noms originaux (`enirnomo`, `pasvorto`, `teksto_id`)
+
+### Structure type d'une classe API
+
+```php
+class ResourceAPI {
+    private $conn; // Connexion PDO
+
+    public function __construct() { /* init DB */ }
+
+    public function handleRequest() {
+        // Routage : HTTP method + path segments
+    }
+
+    private function getResource() { }
+    private function createResource() { }
+    private function updateResource() { }
+    private function deleteResource() { }
+
+    private function sendResponse($data, $status = 200) { }
+    private function sendError($statusCode, $message) { }
+}
+```
+
+### Validation standard
+
+1. Vérifier la présence des champs requis
+2. Valider le format (email, dates, nombres)
+3. Vérifier l'unicité si applicable
+4. Nettoyer les données (`trim`, `strtolower` pour emails)
+5. Encoder/décoder JSON si nécessaire
+
+### Variables globales requises (config.php)
+
+- `$urlDb`, `$base`, `$login`, `$motDePasse` : Connexion DB + secret JWT
+- `$urlracine`, `$cookieDomain` : URLs
+- `$awskey`, `$awssecret` : Credentials AWS SES (optionnel en dev)
+- `$INTERNAL_ACCESS_TOKEN` : Token pour TekstojAPI
+- `DEBUG_MODE` : `true`/`false` (inclut les détails PDO dans les erreurs 500)
+
+### Exemples curl
+
+```bash
+# Login
+curl -X POST http://localhost:8080/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"identigilo":"lernanto1","pasvorto":"test"}'
+
+# Vérifier l'utilisateur connecté
+curl http://localhost:8080/api/auth/me \
+  -H "Authorization: Bearer eyJhbGc..."
+
+# Lister les ekzerceroj d'un exercice
+curl "http://localhost:8080/api/ekzerceroj?ekzerco_id=22"
+
+# Stats d'un ekzerceroj
+curl "http://localhost:8080/api/ekzerceroj/42/stats?limite=5"
+```
+
+---
+
+## TODO / Améliorations futures
+
+- [ ] Migrer de MD5 vers bcrypt/argon2 pour les mots de passe
+- [ ] Ajouter rate limiting pour prévenir les abus
+- [ ] Implémenter refresh tokens (JWT avec expiration courte)
+- [ ] Ajouter versioning API (v1, v2)
+- [ ] Documenter avec OpenAPI/Swagger
+- [ ] Ajouter tests automatisés (PHPUnit)
+- [ ] Implémenter pagination cursor-based pour grandes collections
+- [ ] Généraliser les headers CORS (actuellement limité à `LegotajxojAPI`)

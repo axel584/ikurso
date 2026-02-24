@@ -56,7 +56,7 @@ while ($row=$result->fetch()) {
 	echo "<strong>EXERCICE : </strong>".$row["komando"];
 	echo "</p>";
 	$ekzerco_id = $row["id"];
-	$query2 = "select ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.poentoj,respondoj.respondo,respondoj.gxusta,respondoj.korekto,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.kodo,ekzerceroj.numero";
+	$query2 = "select ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.poentoj,respondoj.respondo,respondoj.gxusta,respondoj.korekto,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.numero";
 	$result2 = $bdd->query($query2);
 	while ($row2=$result2->fetch()) {
 		echo "<p>".$row2["numero"].". ".$row2["demando"];

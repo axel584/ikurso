@@ -15,7 +15,7 @@ import DeleteButton from '../components/DeleteButton'
 
 type FormData = Omit<Ekzercero, 'id'>
 function emptyForm(ekzerco_id: number): FormData {
-  return { ekzerco_id, kodo: '', numero: 1, demando: '', respondmodelo: null, respondo: null, normaligita: null, bildo: '', forigita: false, korektebla: false, poentoj: null }
+  return { ekzerco_id, numero: 1, demando: '', respondmodelo: null, respondo: null, normaligita: null, bildo: '', forigita: false, korektebla: false, poentoj: null }
 }
 
 export default function EkzerceroiPage() {
@@ -56,7 +56,7 @@ export default function EkzerceroiPage() {
   function startCreate() { setEditing(null); setForm(emptyForm(ekzercoId)); setError(null); setCreating(true) }
   function startEdit(e: Ekzercero) {
     setCreating(false)
-    setForm({ ekzerco_id: e.ekzerco_id, kodo: e.kodo, numero: e.numero, demando: e.demando, respondmodelo: e.respondmodelo, respondo: e.respondo, normaligita: e.normaligita, bildo: e.bildo, forigita: e.forigita, korektebla: e.korektebla, poentoj: e.poentoj })
+    setForm({ ekzerco_id: e.ekzerco_id, numero: e.numero, demando: e.demando, respondmodelo: e.respondmodelo, respondo: e.respondo, normaligita: e.normaligita, bildo: e.bildo, forigita: e.forigita, korektebla: e.korektebla, poentoj: e.poentoj })
     setError(null); setEditing(e)
   }
   function cancelForm() { setCreating(false); setEditing(null); setForm(emptyForm(ekzercoId)); setError(null) }
@@ -98,11 +98,13 @@ export default function EkzerceroiPage() {
     newItems.splice(dropIndex, 0, moved)
     // Réutilise les valeurs de numero existantes (triées) redistribuées dans le nouvel ordre
     const sortedNumeros = [...items].sort((a, b) => a.numero - b.numero).map(item => item.numero)
+    console.log('[drag] numéros observés (triés):', sortedNumeros)
     const updated = newItems.map((item, i) => ({ ...item, numero: sortedNumeros[i] }))
-    setItems(updated)
     const updates = updated
       .filter(item => items.find(o => o.id === item.id)?.numero !== item.numero)
       .map(({ id, numero }) => ({ id, numero }))
+    console.log('[drag] mises à jour envoyées:', updates)
+    setItems(updated)
     if (updates.length > 0) reorderMut.mutate(updates)
     setDragIndex(null); setOverIndex(null)
   }
@@ -133,9 +135,6 @@ export default function EkzerceroiPage() {
                   value={editing.id} InputProps={{ readOnly: true }}
                   inputProps={{ style: { fontFamily: 'monospace', color: 'grey' } }} />
               )}
-              <TextField label="Kodo (max 10)" size="small" sx={{ width: 140 }}
-                inputProps={{ maxLength: 10, style: { fontFamily: 'monospace' } }}
-                value={form.kodo} onChange={e => setForm(f => ({ ...f, kodo: e.target.value }))} required />
               <TextField label="Numero" type="number" size="small" sx={{ width: 100 }}
                 value={form.numero} onChange={e => setForm(f => ({ ...f, numero: +e.target.value }))} required />
               <TextField label="Poentoj" type="number" size="small" sx={{ width: 100 }}
@@ -178,41 +177,43 @@ export default function EkzerceroiPage() {
             <TableRow sx={{ bgcolor: 'grey.50' }}>
               <TableCell sx={{ width: 32, px: 1 }} />
               <TableCell><strong>N°</strong></TableCell>
-              <TableCell><strong>Kodo</strong></TableCell>
               <TableCell><strong>Demando</strong></TableCell>
-              <TableCell><strong>Respondmodelo</strong></TableCell>
-              <TableCell><strong>Pt.</strong></TableCell>
+              <TableCell><strong>Respondo</strong></TableCell>
               <TableCell align="right" />
             </TableRow>
           </TableHead>
           <TableBody>
             {isLoading ? (
-              <TableRow><TableCell colSpan={7} align="center">Chargement…</TableCell></TableRow>
+              <TableRow><TableCell colSpan={5} align="center">Chargement…</TableCell></TableRow>
             ) : items.length === 0 ? (
-              <TableRow><TableCell colSpan={7} align="center" sx={{ color: 'text.secondary' }}>Aucune question</TableCell></TableRow>
+              <TableRow><TableCell colSpan={5} align="center" sx={{ color: 'text.secondary' }}>Aucune question</TableCell></TableRow>
             ) : items.map((e, idx) => (
               <TableRow
                 key={e.id}
-                hover
+                hover={dragIndex === null}
                 draggable
                 onDragStart={() => handleDragStart(idx)}
                 onDragOver={ev => handleDragOver(ev, idx)}
                 onDrop={ev => handleDrop(ev, idx)}
                 onDragEnd={handleDragEnd}
                 sx={{
-                  opacity: dragIndex === idx ? 0.4 : 1,
-                  bgcolor: overIndex === idx && dragIndex !== idx ? 'action.hover' : undefined,
+                  opacity: dragIndex === idx ? 0.3 : 1,
                   cursor: dragIndex !== null ? 'grabbing' : undefined,
+                  ...(overIndex === idx && dragIndex !== null && dragIndex !== idx && {
+                    '& > td': {
+                      borderTop: '2px solid',
+                      borderTopColor: 'primary.main',
+                    },
+                    bgcolor: 'primary.50',
+                  }),
                 }}
               >
                 <TableCell sx={{ width: 32, px: 1, color: 'text.disabled', cursor: 'grab' }}>
                   <DragIndicatorIcon fontSize="small" />
                 </TableCell>
                 <TableCell sx={{ fontFamily: 'monospace' }}>{e.numero}</TableCell>
-                <TableCell sx={{ fontFamily: 'monospace', fontSize: '0.75rem' }}>{e.kodo}</TableCell>
                 <TableCell sx={{ maxWidth: 280, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{decodeHtml(e.demando)}</TableCell>
-                <TableCell sx={{ maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', color: 'text.secondary' }}>{decodeHtml(e.respondmodelo)}</TableCell>
-                <TableCell sx={{ color: 'text.secondary' }}>{e.poentoj}</TableCell>
+                <TableCell sx={{ maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', color: 'text.secondary' }}>{decodeHtml(e.respondo)}</TableCell>
                 <TableCell align="right">
                   <Stack direction="row" spacing={1} justifyContent="flex-end">
                     <Button size="small" variant="outlined" startIcon={<EditIcon />} onClick={() => startEdit(e)}>Modifier</Button>

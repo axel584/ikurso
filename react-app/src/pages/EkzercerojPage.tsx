@@ -4,21 +4,66 @@ import { useParams } from 'react-router-dom'
 import {
   Box, Typography, Button, Alert, Paper, Stack,
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
-  TextField, FormControlLabel, Checkbox,
+  TextField, FormControlLabel, Checkbox, LinearProgress, IconButton,
 } from '@mui/material'
 import AddIcon from '@mui/icons-material/Add'
+import DeleteIcon from '@mui/icons-material/Delete'
 import { decodeHtml } from '../utils/html'
 import EditIcon from '@mui/icons-material/Edit'
 import DragIndicatorIcon from '@mui/icons-material/DragIndicator'
-import { ekzerceroiApi, type Ekzercero } from '../api/ekzerceroj'
+import { ekzerceroiApi, type Ekzercero, type EkzerceroStats } from '../api/ekzerceroj'
 import DeleteButton from '../components/DeleteButton'
+
+function NormaligitaEditor({ value, onChange }: { value: string | null; onChange: (v: string | null) => void }) {
+  const items = value ? value.split('|') : []
+  const [input, setInput] = useState('')
+
+  function remove(i: number) {
+    const next = items.filter((_, idx) => idx !== i)
+    onChange(next.length ? next.join('|') : null)
+  }
+
+  function add(val: string) {
+    const trimmed = val.trim()
+    if (!trimmed || items.includes(trimmed)) return
+    onChange([...items, trimmed].join('|'))
+    setInput('')
+  }
+
+  return (
+    <Box>
+      <Stack spacing={0.25} mb={0.5}>
+        {items.map((item, i) => (
+          <Stack key={i} direction="row" alignItems="center" spacing={0.5}>
+            <IconButton size="small" onClick={() => remove(i)} sx={{ color: 'error.main', p: '2px' }}>
+              <DeleteIcon sx={{ fontSize: 16 }} />
+            </IconButton>
+            <Typography sx={{ fontFamily: 'monospace', fontSize: 13 }}>{item}</Typography>
+          </Stack>
+        ))}
+      </Stack>
+      <Stack direction="row" spacing={0.5} alignItems="center">
+        <TextField
+          size="small" placeholder="Ajouter une variante…" value={input}
+          onChange={e => setInput(e.target.value)}
+          onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); add(input) } }}
+          inputProps={{ style: { fontFamily: 'monospace', fontSize: 13 } }}
+          sx={{ flex: 1 }}
+        />
+        <IconButton size="small" onClick={() => add(input)} disabled={!input.trim()}>
+          <AddIcon fontSize="small" />
+        </IconButton>
+      </Stack>
+    </Box>
+  )
+}
 
 type FormData = Omit<Ekzercero, 'id'>
 function emptyForm(ekzerco_id: number): FormData {
   return { ekzerco_id, numero: 1, demando: '', respondmodelo: null, respondo: null, normaligita: null, bildo: '', forigita: false, korektebla: false, poentoj: null }
 }
 
-export default function EkzerceroiPage() {
+export default function EkzercerojPage() {
   const { eid } = useParams<{ eid: string }>()
   const ekzercoId = parseInt(eid ?? '0', 10)
   const qc = useQueryClient()
@@ -34,6 +79,12 @@ export default function EkzerceroiPage() {
     queryKey: ['ekzerceroj', ekzercoId],
     queryFn: () => ekzerceroiApi.list(ekzercoId),
     enabled: !!ekzercoId,
+  })
+
+  const { data: statsData } = useQuery<EkzerceroStats>({
+    queryKey: ['ekzerceroj-stats', editing?.id],
+    queryFn: () => ekzerceroiApi.stats(editing!.id),
+    enabled: !!editing,
   })
 
   const invalidate = () => qc.invalidateQueries({ queryKey: ['ekzerceroj', ekzercoId] })
@@ -52,6 +103,16 @@ export default function EkzerceroiPage() {
     onSuccess: () => invalidate(),
     onError: (e: Error) => setError(e.message),
   })
+
+  function addToNormaligita(val: string) {
+    const trimmed = val.trim()
+    if (!trimmed) return
+    setForm(f => {
+      const items = f.normaligita ? f.normaligita.split('|') : []
+      if (items.includes(trimmed)) return f
+      return { ...f, normaligita: [...items, trimmed].join('|') }
+    })
+  }
 
   function startCreate() { setEditing(null); setForm(emptyForm(ekzercoId)); setError(null); setCreating(true) }
   function startEdit(e: Ekzercero) {
@@ -141,20 +202,32 @@ export default function EkzerceroiPage() {
               <TextField label="Bildo" size="small" sx={{ minWidth: 200 }}
                 value={form.bildo} onChange={e => setForm(f => ({ ...f, bildo: e.target.value }))} />
             </Stack>
-            <TextField label="Demando" multiline rows={2} size="small" fullWidth sx={{ mb: 2 }}
+            <TextField label="Demando" multiline rows={2} size="small" fullWidth sx={{ mb: 1 }}
               value={form.demando} onChange={e => setForm(f => ({ ...f, demando: e.target.value }))} required />
-            <Stack direction="row" spacing={2} mb={2}>
-              <TextField label="Respondmodelo" size="small" sx={{ flex: 1 }}
-                value={form.respondmodelo ?? ''}
-                onChange={e => setForm(f => ({ ...f, respondmodelo: e.target.value || null }))} />
-              <TextField label="Normaligita" size="small" sx={{ flex: 1 }}
-                inputProps={{ style: { fontFamily: 'monospace' } }}
-                value={form.normaligita ?? ''}
-                onChange={e => setForm(f => ({ ...f, normaligita: e.target.value || null }))} />
+            <TextField label="Respondmodelo" size="small" sx={{ mb: 2, width: 320 }}
+              helperText="Précision ou exemple affiché avec la question (facultatif)"
+              value={form.respondmodelo ?? ''}
+              onChange={e => setForm(f => ({ ...f, respondmodelo: e.target.value || null }))} />
+
+            {/* Correction automatique */}
+            <Typography variant="caption" color="text.secondary" display="block" mb={0.5}>
+              Correction automatique
+            </Typography>
+            <Stack direction="row" spacing={2} mb={2} alignItems="flex-start">
+              <TextField label="Respondo" size="small" sx={{ flex: 1 }}
+                helperText="Réponse idéale"
+                value={form.respondo ?? ''}
+                onChange={e => setForm(f => ({ ...f, respondo: e.target.value || null }))} />
+              <Box sx={{ flex: 2 }}>
+                <Typography variant="caption" color="text.secondary" display="block" mb={0.5}>
+                  Normaligita — réponses autorisées (minuscules, sans accents)
+                </Typography>
+                <NormaligitaEditor
+                  value={form.normaligita}
+                  onChange={v => setForm(f => ({ ...f, normaligita: v }))}
+                />
+              </Box>
             </Stack>
-            <TextField label="Respondo (variantes)" multiline rows={2} size="small" fullWidth sx={{ mb: 2 }}
-              value={form.respondo ?? ''}
-              onChange={e => setForm(f => ({ ...f, respondo: e.target.value || null }))} />
             <Stack direction="row" spacing={1} mb={2}>
               <FormControlLabel control={<Checkbox size="small" checked={form.forigita} onChange={e => setForm(f => ({ ...f, forigita: e.target.checked }))} />} label="forigita" />
               <FormControlLabel control={<Checkbox size="small" checked={form.korektebla} onChange={e => setForm(f => ({ ...f, korektebla: e.target.checked }))} />} label="korektebla" />
@@ -166,6 +239,39 @@ export default function EkzerceroiPage() {
               <Button variant="outlined" color="inherit" size="small" onClick={cancelForm}>Annuler</Button>
             </Stack>
           </Box>
+        </Paper>
+      )}
+
+      {editing && statsData && (
+        <Paper variant="outlined" sx={{ p: 2, mb: 3 }}>
+          <Typography variant="caption" color="text.secondary" display="block" mb={1}>
+            Réponses les plus fréquentes — {statsData.total} réponse{statsData.total > 1 ? 's' : ''} au total
+          </Typography>
+          <Stack spacing={0.5}>
+            {statsData.data.length === 0 ? (
+              <Typography variant="body2" color="text.secondary">Aucune réponse enregistrée</Typography>
+            ) : statsData.data.map((row, i) => (
+              <Stack key={i} direction="row" spacing={1} alignItems="center">
+                <IconButton
+                  size="small" title="Ajouter à normaligita"
+                  disabled={!row.respondo}
+                  onClick={() => row.respondo && addToNormaligita(row.respondo)}
+                  sx={{ p: '2px', color: 'success.main' }}
+                >
+                  <AddIcon sx={{ fontSize: 16 }} />
+                </IconButton>
+                <Typography variant="body2" sx={{ fontFamily: 'monospace', minWidth: 200, flexShrink: 0 }}>
+                  {row.respondo ?? <em style={{ color: '#999' }}>(vide)</em>}
+                </Typography>
+                <Box sx={{ flex: 1 }}>
+                  <LinearProgress variant="determinate" value={row.procento} sx={{ height: 8, borderRadius: 1 }} />
+                </Box>
+                <Typography variant="body2" color="text.secondary" sx={{ minWidth: 70, textAlign: 'right' }}>
+                  {row.nombre} ({row.procento.toFixed(0)} %)
+                </Typography>
+              </Stack>
+            ))}
+          </Stack>
         </Paper>
       )}
 

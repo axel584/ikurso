@@ -19,6 +19,19 @@ interface EkzerceroiResponse {
   count: number
 }
 
+export interface EkzerceroStatLine {
+  respondo: string | null
+  nombre: number
+  procento: number
+}
+
+export interface EkzerceroStats {
+  ekzercero_id: number
+  total: number
+  limite: number
+  data: EkzerceroStatLine[]
+}
+
 export const ekzerceroiApi = {
   list: (ekzerco_id?: number) =>
     api.get<EkzerceroiResponse>(
@@ -30,4 +43,5 @@ export const ekzerceroiApi = {
   update: (id: number, data: Partial<Omit<Ekzercero, 'id'>>) =>
     api.patch<{ data: Ekzercero }>(`ekzerceroj/${id}`, data),
   delete: (id: number) => api.delete<{ message: string }>(`ekzerceroj/${id}`),
+  stats: (id: number) => api.get<EkzerceroStats>(`ekzerceroj/${id}/stats`),
 }

@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import {
-  AppBar, Toolbar, Typography, Link as MuiLink,
-  Button, Menu, MenuItem, Divider, Box,
+  AppBar, Toolbar, Typography,
+  Button, Menu, MenuItem, Divider, Box, IconButton,
 } from '@mui/material'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
-import { Link } from 'react-router-dom'
+import PersonIcon from '@mui/icons-material/Person'
 import { useAuth } from '../hooks/useAuth'
 
 type NavChild = { label: string; href: string; dividerBefore?: boolean }
@@ -78,19 +78,54 @@ function DropdownMenu({ item }: { item: NavItem & { children: NavChild[] } }) {
   )
 }
 
-export default function Header() {
+function UserMenu() {
   const { user } = useAuth()
+  const [anchor, setAnchor] = useState<null | HTMLElement>(null)
 
+  return (
+    <>
+      <IconButton
+        color="inherit"
+        onClick={e => setAnchor(e.currentTarget)}
+        sx={{ bgcolor: 'primary.light', '&:hover': { bgcolor: 'primary.dark' } }}
+      >
+        <PersonIcon />
+      </IconButton>
+      <Menu
+        anchorEl={anchor}
+        open={!!anchor}
+        onClose={() => setAnchor(null)}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      >
+        <MenuItem disableRipple sx={{ flexDirection: 'column', alignItems: 'flex-start', cursor: 'default', '&:hover': { bgcolor: 'transparent' }, fontSize: 14, lineHeight: 1.6 }}>
+          <strong>{user?.enirnomo}</strong>
+          <span>{user?.personnomo} {user?.familinomo}</span>
+          <em style={{ color: '#666' }}>{user?.retadreso}</em>
+        </MenuItem>
+        <Divider />
+        <MenuItem component="a" href="/personinformoj.php" onClick={() => setAnchor(null)} sx={{ fontSize: 14 }}>
+          Mes données personnelles
+        </MenuItem>
+        <MenuItem component="a" href="/eliri.php" onClick={() => setAnchor(null)} sx={{ fontSize: 14 }}>
+          Déconnexion
+        </MenuItem>
+      </Menu>
+    </>
+  )
+}
+
+export default function Header() {
   return (
     <AppBar position="static" elevation={1}>
       <Toolbar sx={{ gap: 1 }}>
         <Typography
-          variant="h6"
-          component={Link}
-          to="/"
-          sx={{ color: 'inherit', textDecoration: 'none', mr: 2, whiteSpace: 'nowrap' }}
+          component="a"
+          href="/index.php"
+          id="logo"
+          sx={{ color: 'inherit', textDecoration: 'none', mr: 2, whiteSpace: 'nowrap', fontFamily: "'Nothing You Could Do', cursive", letterSpacing: '-0.08em', fontSize: '1.8rem' }}
         >
-          Redaktilo — Ikurso
+          iKurso
         </Typography>
 
         <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, flexWrap: 'wrap', gap: 0.5 }}>
@@ -112,12 +147,7 @@ export default function Header() {
           )}
         </Box>
 
-        <Typography variant="body2" sx={{ mr: 1, whiteSpace: 'nowrap' }}>
-          {user?.enirnomo}
-        </Typography>
-        <MuiLink href="/index.php" color="inherit" underline="hover" variant="body2" sx={{ whiteSpace: 'nowrap' }}>
-          ← Retour au site
-        </MuiLink>
+        <UserMenu />
       </Toolbar>
     </AppBar>
   )

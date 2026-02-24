@@ -7,7 +7,7 @@ import App from './App'
 
 const theme = createTheme({
   palette: {
-    primary: { main: '#1976d2' },
+    primary: { main: '#554E47', light: '#989490', dark: '#3d3830', contrastText: '#fff' },
   },
 })
 

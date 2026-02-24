@@ -5,7 +5,7 @@ import KursojPage from './pages/KursojPage'
 import LecionojPage from './pages/LecionojPage'
 import LecionerojPage from './pages/LecionerojPage'
 import EkzercojPage from './pages/EkzercojPage'
-import EkzerceroiPage from './pages/EkzerceroiPage'
+import EkzercerojPage from './pages/EkzercerojPage'
 
 export default function App() {
   return (
@@ -24,7 +24,7 @@ export default function App() {
           />
           <Route
             path="/kursoj/:kodo/lecionoj/:id/lecioneroj/:lid/ekzercoj/:eid/ekzerceroj"
-            element={<EkzerceroiPage />}
+            element={<EkzercerojPage />}
           />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

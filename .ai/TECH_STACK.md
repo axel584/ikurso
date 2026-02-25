@@ -332,10 +332,12 @@ Les fichiers buildés dans `/frontend/dist/` sont inclus dans les pages PHP via 
 ### Phase 1 — PHP 7.0.33 (priorité : corriger les bloquants)
 
 ```
-[ ] Modifier Dockerfile : php:5.6-apache → php:7.0-apache
-[ ] Corriger tous les mysql_* dans /db/*.inc.php → PDO
-[ ] Corriger les constructeurs PHP 4 style
-[ ] Corriger ereg() → preg_match()
+[x] Modifier Dockerfile : php:5.6-apache → php:7.0-apache
+[x] Compatibilité mysql_* : shim MySQLi via mysql_compat.php + classe Db (db/Db.inc.php)
+[x] Corriger les constructeurs PHP 4 style (nuna_kurso, personoj)
+[x] Corriger ereg()/eregi() → stubs dans mysql_compat.php + preg_match() dans makefont.php
+[x] Corriger set_magic_quotes_runtime() dans pdf/fpdf.php et makefont.php
+[x] Corriger $HTTP_SERVER_VARS dans pdf/fpdf.php
 [ ] Tester toutes les pages existantes
 [ ] Migrer MD5 → password_hash() + password_verify()
 [ ] Ajouter exp + HttpOnly sur JWT

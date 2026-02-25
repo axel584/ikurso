@@ -1,5 +1,5 @@
 <?php
-//include_once("Db.inc.php");
+include_once 'Db.inc.php';
 include_once("kursoj.inc.php");
 include_once("personoj.inc.php");
 include_once("lecionoj.inc.php");
@@ -15,7 +15,7 @@ include_once("lecionoj.inc.php");
     var $nunleciono;
     var $kurso;
 
-	function nuna_kurso() {
+	function __construct() {
 		$this->korektanto=new personoj;
 		$this->studanto=new personoj;
 		$this->kurso=new kursoj;
@@ -164,7 +164,7 @@ include_once("lecionoj.inc.php");
 		//chargement des objets
 	  	$this->studanto->load_by_id($row[7]);
 		$this->korektanto->load_by_id($row[5]);
-		//charge le cours en fonction de la langue de l'élève
+		//charge le cours en fonction de la langue de l'ï¿½lï¿½ve
 		$this->kurso->load_by_kodo($row[9],$obj->studanto->lingvo->get_kodo());
 		$this->nunleciono->load_by_numero($row[8],$obj->studanto->lingvo->get_kodo());
 
@@ -193,7 +193,7 @@ include_once("lecionoj.inc.php");
 		//chargement des objets
 	  	$obj->studanto->load_by_id($row[7]);
 		$obj->korektanto->load_by_id($row[5]);
-		//charge le cours en fonction de la langue de l'élève
+		//charge le cours en fonction de la langue de l'ï¿½lï¿½ve
 		$obj->kurso->load_by_kodo($row[9],$obj->studanto->lingvo->get_kodo());
 		$obj->nunleciono->load_by_numero($row[8],$row[9],$obj->studanto->lingvo->get_kodo(),$obj->studanto->lingvo->get_kodo());
 
@@ -224,7 +224,7 @@ include_once("lecionoj.inc.php");
 		//chargement des objets
 	  	$obj->studanto->load_by_id($row[7]);
 		$obj->korektanto->load_by_id($row[5]);
-		//charge le cours en fonction de la langue de l'élève
+		//charge le cours en fonction de la langue de l'ï¿½lï¿½ve
 		$obj->kurso->load_by_kodo($row[9],$obj->studanto->lingvo->get_kodo());
 		$obj->nunleciono->load_by_numero($row[8],$obj->studanto->lingvo->get_kodo());
 
@@ -252,7 +252,7 @@ include_once("lecionoj.inc.php");
 			//chargement des objets
 			$this->studanto->load_by_id($objs[0]->studanto->get_id());
 			$this->korektanto->load_by_id($objs[0]->korektanto->get_id());
-			//charge le cours en fonction de la langue de l'élève
+			//charge le cours en fonction de la langue de l'ï¿½lï¿½ve
 			$this->kurso->load_by_kodo($objs[0]->kurso->get_kodo,$objs[0]->studanto->lingvo->get_kodo());
 			$this->nunleciono->load_by_numero($objs[0]->nunleciono->get_numero(),$objs[0]->kurso->get_kodo(),$objs[0]->studanto->lingvo->get_kodo());
 	}
@@ -283,7 +283,7 @@ include_once("lecionoj.inc.php");
 		$testeleve = new personoj;
 		$testeleve->load_by_id($row[7]);
 		$obj->korektanto->load_by_id($row[5]);
-		//charge le cours en fonction de la langue de l'élève
+		//charge le cours en fonction de la langue de l'ï¿½lï¿½ve
 		$obj->kurso->load_by_kodo($row[9],$obj->studanto->lingvo->get_kodo());
 		$obj->nunleciono->load_by_numero($row[8],$row[9],$obj->studanto->lingvo->get_kodo());
 

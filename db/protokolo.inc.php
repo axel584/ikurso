@@ -1,5 +1,5 @@
 <?php
-//include_once("Db.inc.php");
+include_once 'Db.inc.php';
   class protokolo extends Db {
     var $id;
     var $persono_id;

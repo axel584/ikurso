@@ -906,8 +906,8 @@ function Image($file,$x,$y,$w=0,$h=0,$type='',$link='')
 			$type=substr($file,$pos+1);
 		}
 		$type=strtolower($type);
-		$mqr=get_magic_quotes_runtime();
-		set_magic_quotes_runtime(0);
+		$mqr = function_exists('get_magic_quotes_runtime') ? get_magic_quotes_runtime() : false;
+		if ($mqr) set_magic_quotes_runtime(0);
 		if($type=='jpg' or $type=='jpeg')
 			$info=$this->_parsejpg($file);
 		elseif($type=='png')
@@ -920,7 +920,7 @@ function Image($file,$x,$y,$w=0,$h=0,$type='',$link='')
 				$this->Error('Unsupported image type: '.$type);
 			$info=$this->$mtd($file);
 		}
-		set_magic_quotes_runtime($mqr);
+		if ($mqr) set_magic_quotes_runtime($mqr);
 		$info['i']=count($this->images)+1;
 		$this->images[$file]=$info;
 	}
@@ -993,7 +993,7 @@ function SetXY($x,$y)
 function Output($name='',$dest='')
 {
 	//Output PDF to some destination
-	global $HTTP_SERVER_VARS;
+	$HTTP_SERVER_VARS = $_SERVER;
 
 	//Finish document if necessary
 	if($this->state<3)
@@ -1159,8 +1159,8 @@ function _putfonts()
 		$this->_out('<</Type /Encoding /BaseEncoding /WinAnsiEncoding /Differences ['.$diff.']>>');
 		$this->_out('endobj');
 	}
-	$mqr=get_magic_quotes_runtime();
-	set_magic_quotes_runtime(0);
+	$mqr = function_exists('get_magic_quotes_runtime') ? get_magic_quotes_runtime() : false;
+	if ($mqr) set_magic_quotes_runtime(0);
 	foreach($this->FontFiles as $file=>$info)
 	{
 		//Font file embedding
@@ -1183,7 +1183,7 @@ function _putfonts()
 		fclose($f);
 		$this->_out('endobj');
 	}
-	set_magic_quotes_runtime($mqr);
+	if ($mqr) set_magic_quotes_runtime($mqr);
 	foreach($this->fonts as $k=>$font)
 	{
 		//Font objects
@@ -1608,7 +1608,7 @@ function _out($s)
 }
 
 //Handle special IE contype request
-if(isset($HTTP_SERVER_VARS['HTTP_USER_AGENT']) and $HTTP_SERVER_VARS['HTTP_USER_AGENT']=='contype')
+if(isset($_SERVER['HTTP_USER_AGENT']) and $_SERVER['HTTP_USER_AGENT']=='contype')
 {
 	Header('Content-Type: application/pdf');
 	exit;

@@ -1,4 +1,5 @@
 <?php
+include_once 'Db.inc.php';
   class eraraj_lecionoj extends Db {
     var $id;
     var $persono_id;

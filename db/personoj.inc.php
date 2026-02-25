@@ -1,5 +1,5 @@
 <?php
-//include_once("Db.inc.php");
+include_once 'Db.inc.php';
 include_once("lingvoj.inc.php");
 include_once("landoj.inc.php");
 include_once("rajtoj.inc.php");
@@ -28,7 +28,7 @@ include_once("rajtoj.inc.php");
     var $sistemo;
     var $stopInfo;
     
-    function personoj() {
+    function __construct() {
     	$this->lingvo=new lingvoj;
     	$this->lando=new landoj;
     	$this->rajtoj=new rajtoj;

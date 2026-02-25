@@ -1,4 +1,5 @@
 <?php
+include_once 'Db.inc.php';
   class korektebla_kurso extends Db {
     var $id;
     var $korektanto;

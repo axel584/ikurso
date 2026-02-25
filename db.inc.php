@@ -1,5 +1,6 @@
 <?php
 include "config.php";
+include_once __DIR__ . "/mysql_compat.php";
 
 
 // tiu funkcio kunligas la datumbazon.
@@ -24,12 +25,24 @@ function malfermiDatumbazon () {
 			exit(0);
 		}
 
+		// Connexion pour les fonctions mysql_* legacy (classes /db/*.inc.php)
+		// Sur PHP 7.0+ : mysql_connect() est fourni par mysql_compat.php et utilise MySQLi
+		// Sur PHP 5.6  : mysql_connect() est natif et crée la connexion mysql par défaut
+		if (!isset($GLOBALS['_mysql_compat_link'])) {
+			$conn = mysql_connect($urlDb, $login, $motDePasse);
+			if ($conn) {
+				mysql_select_db($base, $conn);
+			}
+		}
+
 	}
 
 
 // tiu funkcio malfermas la datumbazan ligon (neniam uzita, la datumbazo estas malfermita je la fino de la PHP-pagxo)
 function fermiDatumbazon() {
-   mysql_close();
+   if (function_exists('mysql_close')) {
+       mysql_close();
+   }
 }
 
 // tiu funkcio kreas novan personon, gxi nur bezonas devigajn parametrojn

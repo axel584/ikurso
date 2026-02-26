@@ -29,12 +29,12 @@ INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALU
 INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 4,0);
 INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 5,0);
 INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 6,0);
+INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 219,0);
+INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 253,0);
+INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 269,0);
+INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 270,0);
+INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 254,0);
 INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 7,0);
-INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 8,0);
-INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 9,0);
-INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 10,0);
-INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 11,0);
-INSERT INTO `personoj_lecioneroj` (`persono_id`, `lecionero_id`, `poentoj`) VALUES (@id_lernanto_1, 12,0);
 
 INSERT INTO `respondoj` (`persono_id`, `ekzercero_id`,`respondo`,`normaligita`,`gxusta`) VALUES (@id_lernanto_1, 1 ,'La teo estas varma.','normaligita',1);
 INSERT INTO `respondoj` (`persono_id`, `ekzercero_id`,`respondo`,`normaligita`,`gxusta`) VALUES (@id_lernanto_1, 2 ,'Via biskvito estas seka.','via biskvito estas seka',1);

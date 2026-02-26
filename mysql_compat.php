@@ -23,14 +23,14 @@ if (!function_exists('mysql_connect')) {
         if ($link instanceof mysqli) {
             return $link;
         }
-        return $GLOBALS['_mysql_compat_link'] ?? null;
+        return isset($GLOBALS['_mysql_compat_link']) ? $GLOBALS['_mysql_compat_link'] : null;
     }
 
     function mysql_connect($host = null, $user = null, $pass = null, $new_link = false) {
         global $urlDb, $login, $motDePasse;
-        $host = $host ?? $urlDb ?? 'localhost';
-        $user = $user ?? $login ?? 'root';
-        $pass = $pass ?? $motDePasse ?? '';
+        $host = isset($host) ? $host : (isset($urlDb) ? $urlDb : 'localhost');
+        $user = isset($user) ? $user : (isset($login) ? $login : 'root');
+        $pass = isset($pass) ? $pass : (isset($motDePasse) ? $motDePasse : '');
 
         $conn = new mysqli($host, $user, $pass);
         if ($conn->connect_errno) {
@@ -117,7 +117,7 @@ if (!function_exists('mysql_connect')) {
         if ($link) {
             return $link->error;
         }
-        return $GLOBALS['_mysql_error'] ?? '';
+        return isset($GLOBALS['_mysql_error']) ? $GLOBALS['_mysql_error'] : '';
     }
 
     function mysql_errno($link = null) {
@@ -125,7 +125,7 @@ if (!function_exists('mysql_connect')) {
         if ($link) {
             return $link->errno;
         }
-        return $GLOBALS['_mysql_errno'] ?? 0;
+        return isset($GLOBALS['_mysql_errno']) ? $GLOBALS['_mysql_errno'] : 0;
     }
 
     function mysql_real_escape_string($str, $link = null) {

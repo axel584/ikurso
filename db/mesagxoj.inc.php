@@ -46,35 +46,38 @@ include_once 'Db.inc.php';
 
     function insert() {
       $sql = sprintf("insert into mesagxoj (de,al,teksto) values ('%s','%s','%s')",addslashes($this->get_de()),addslashes($this->get_al()),addslashes($this->get_teksto()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function update() {
       $sql = sprintf("update mesagxoj set de = '%s',al = '%s',teksto = '%s' where id = '%s'",addslashes($this->get_de()),addslashes($this->get_al()),addslashes($this->get_teksto()),$this->get_id());
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function delete() {
       $sql = sprintf("delete from mesagxoj where id = '%s'",
                      addslashes($this->get_id()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(TRUE!=$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
       return 1;
@@ -82,30 +85,32 @@ include_once 'Db.inc.php';
 
     function load_by_id($id) {
       $sql = sprintf("select id,de,al,teksto from mesagxoj where id = '%s'",$id);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $row = mysql_fetch_array($qid);
+      $row = $qid->fetch_array();
       $this->set_id($row[0]);
       $this->set_de(stripslashes($row[1]));
       $this->set_al(stripslashes($row[2]));
       $this->set_teksto(stripslashes($row[3]));
-      mysql_free_result($qid);
+      $qid->free();
       return 1;
     }
 
     function get_all_objects() {
       $recs;
-      $qid = mysql_query('select id,de,al,teksto from mesagxoj',$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query('select id,de,al,teksto from mesagxoj');
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return $recs;
       }
-      while($row = mysql_fetch_array($qid)) {
+      while($row = $qid->fetch_array()) {
         $obj = new mesagxoj;
         $obj->set_id($row[0]);
         $obj->set_de($row[1]);
@@ -113,7 +118,7 @@ include_once 'Db.inc.php';
         $obj->set_teksto($row[3]);
         $recs[] = $obj;
       }
-      mysql_free_result($qid);
+      $qid->free();
       return $recs;
     }
 

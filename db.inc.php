@@ -25,13 +25,12 @@ function malfermiDatumbazon () {
 			exit(0);
 		}
 
-		// Connexion pour les fonctions mysql_* legacy (classes /db/*.inc.php)
-		// Sur PHP 7.0+ : mysql_connect() est fourni par mysql_compat.php et utilise MySQLi
-		// Sur PHP 5.6  : mysql_connect() est natif et crée la connexion mysql par défaut
+		// Connexion MySQLi pour les classes DAO /db/*.inc.php (PHP 5.6 et 7.0+)
 		if (!isset($GLOBALS['_mysql_compat_link'])) {
-			$conn = mysql_connect($urlDb, $login, $motDePasse);
-			if ($conn) {
-				mysql_select_db($base, $conn);
+			$conn = new mysqli($urlDb, $login, $motDePasse, $base);
+			if (!$conn->connect_errno) {
+				$conn->set_charset('utf8');
+				$GLOBALS['_mysql_compat_link'] = $conn;
 			}
 		}
 

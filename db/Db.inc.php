@@ -23,7 +23,7 @@ class Db {
         }
         // Connexion MySQLi globale établie par malfermiDatumbazon() (PHP 7.0+)
         // Sur PHP 5.6, cette clé n'existe pas → retourne null (connexion mysql par défaut)
-        return $GLOBALS['_mysql_compat_link'] ?? null;
+        return isset($GLOBALS['_mysql_compat_link']) ? $GLOBALS['_mysql_compat_link'] : null;
     }
 
     function set_dbh($dbh) {

@@ -239,35 +239,38 @@ include_once("rajtoj.inc.php");
 
     function insert() {
       $sql = sprintf("insert into personoj (ekdato,sekso,familinomo,personnomo,enirnomo,pasvorto,adreso1,adreso2,posxtkodo,urbo,lando,retadreso,naskigxdato,lingvo,rajtoj,kialo,noto,maksimumo,kurso,videbla,sistemo,stop_info) values ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",addslashes($this->get_ekdato()),addslashes($this->get_sekso()),addslashes($this->get_familinomo()),addslashes($this->get_personnomo()),addslashes($this->get_enirnomo()),addslashes($this->get_pasvorto()),addslashes($this->get_adreso1()),addslashes($this->get_adreso2()),addslashes($this->get_posxtkodo()),addslashes($this->get_urbo()),addslashes($this->lando->get_kodo()),addslashes($this->get_retadreso()),addslashes($this->get_naskigxdato()),addslashes($this->lingvo->get_kodo()),addslashes($this->rajtoj->get_kodo()),addslashes($this->get_kialo()),addslashes($this->get_noto()),addslashes($this->get_maksimumo()),addslashes($this->get_kurso()),addslashes($this->get_videbla()),addslashes($this->get_sistemo()),addslashes($this->get_stopInfo()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function update() {
       $sql = sprintf("update personoj set ekdato = '%s',sekso = '%s',familinomo = '%s',personnomo = '%s',enirnomo = '%s',pasvorto = '%s',adreso1 = '%s',adreso2 = '%s',posxtkodo = '%s',urbo = '%s',lando = '%s',retadreso = '%s',naskigxdato = '%s',lingvo = '%s',rajtoj = '%s',kialo = '%s',noto = '%s',maksimumo = '%s',kurso = '%s',videbla = '%s', sistemo = '%s', stop_info = '%s' where id = '%s'",addslashes($this->get_ekdato()),addslashes($this->get_sekso()),addslashes($this->get_familinomo()),addslashes($this->get_personnomo()),addslashes($this->get_enirnomo()),addslashes($this->get_pasvorto()),addslashes($this->get_adreso1()),addslashes($this->get_adreso2()),addslashes($this->get_posxtkodo()),addslashes($this->get_urbo()),addslashes($this->lando->get_kodo()),addslashes($this->get_retadreso()),addslashes($this->get_naskigxdato()),addslashes($this->lingvo->get_kodo()),addslashes($this->rajtoj->get_kodo()),addslashes($this->get_kialo()),addslashes($this->get_noto()),addslashes($this->get_maksimumo()),addslashes($this->get_kurso()),addslashes($this->get_videbla()),addslashes($this->get_sistemo()),addslashes($this->get_stopInfo()),$this->get_id());
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function delete() {
       $sql = sprintf("delete from personoj where id = '%s'",
                      addslashes($this->get_id()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(TRUE!=$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
       return 1;
@@ -275,13 +278,14 @@ include_once("rajtoj.inc.php");
 
     function load_by_id($id) {
       $sql = sprintf("select id,ekdato,sekso,familinomo,personnomo,enirnomo,pasvorto,adreso1,adreso2,posxtkodo,urbo,lando,retadreso,naskigxdato,lingvo,rajtoj,kialo,noto,maksimumo,kurso,videbla,sistemo,stop_info from personoj where id = '%s'",$id);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $row = mysql_fetch_array($qid);
+      $row = $qid->fetch_array();
       $this->set_id($row[0]);
       $this->set_ekdato(stripslashes($row[1]));
       $this->set_sekso(stripslashes($row[2]));
@@ -307,20 +311,21 @@ include_once("rajtoj.inc.php");
 		$this->lando->load_by_kodo($row[11],$this->lingvo->get_kodo());
 		$this->rajtoj->load_by_kodo($row[15],$this->lingvo->get_kodo());
 
-      mysql_free_result($qid);
+      $qid->free();
       return 1;
     }
 
     function load_by_rajto($rajto,$lingvo) {
       $recs;
       $sql = sprintf("select id,ekdato,sekso,familinomo,personnomo,enirnomo,pasvorto,adreso1,adreso2,posxtkodo,urbo,lando,retadreso,naskigxdato,lingvo,rajtoj,kialo,noto,maksimumo,kurso,videbla,sistemo,stop_info from personoj where rajtoj='%s' and lingvo='%s'",$rajto,$lingvo);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return $recs;
       }
-      while($row = mysql_fetch_array($qid)) {
+      while($row = $qid->fetch_array()) {
         $obj = new personoj;
         $obj->set_id($row[0]);
         $obj->set_ekdato($row[1]);
@@ -350,7 +355,7 @@ include_once("rajtoj.inc.php");
         $obj->rajtoj->load_by_kodo($row[15],$obj->lingvo->get_kodo());
         $recs[] = $obj;
       }
-      mysql_free_result($qid);
+      $qid->free();
       return $recs;
     }
 
@@ -359,13 +364,14 @@ function find($parametre) {
         if ($parametre !="") {
 		    	$sql = $sql . " where " . $parametre;
         }
-        $qid = mysql_query($sql,$this->get_dbh());
-        if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+        $dbh = $this->get_dbh();
+        $qid = $dbh->query($sql);
+        if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return $recs;
       }
- 	while($row = mysql_fetch_array($qid)) {
+ 	while($row = $qid->fetch_array()) {
 
 	   $obj = new personoj;
         $obj->set_id($row[0]);
@@ -396,19 +402,20 @@ function find($parametre) {
         $obj->rajtoj->load_by_kodo($row[15],$obj->lingvo->get_kodo());
        $recs[] = $obj;
       }
-      mysql_free_result($qid);
+      $qid->free();
       return $recs;
     }
 
     function get_all_objects() {
       $recs;
-      $qid = mysql_query('select id,ekdato,sekso,familinomo,personnomo,enirnomo,pasvorto,adreso1,adreso2,posxtkodo,urbo,lando,retadreso,naskigxdato,lingvo,rajtoj,kialo,noto,maksimumo,kurso,videbla,sistemo,stop_info from personoj',$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query('select id,ekdato,sekso,familinomo,personnomo,enirnomo,pasvorto,adreso1,adreso2,posxtkodo,urbo,lando,retadreso,naskigxdato,lingvo,rajtoj,kialo,noto,maksimumo,kurso,videbla,sistemo,stop_info from personoj');
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return $recs;
       }
-      while($row = mysql_fetch_array($qid)) {
+      while($row = $qid->fetch_array()) {
         $obj = new personoj;
         $obj->set_id($row[0]);
         $obj->set_ekdato($row[1]);
@@ -438,7 +445,7 @@ function find($parametre) {
         $obj->rajtoj->load_by_kodo($row[15],$obj->lingvo->get_kodo());
         $recs[] = $obj;
       }
-      mysql_free_result($qid);
+      $qid->free();
       return $recs;
     }
 

@@ -111,35 +111,38 @@ include_once("lecionoj.inc.php");
 
     function insert() {
       $sql = sprintf("insert into nuna_kurso (ekdato,findato,stato,lastdato,korektanto,pasintakorektanto,studanto,nunleciono,kurso) values ('%s','%s','%s','%s','%s','%s','%s','%s','%s')",addslashes($this->get_ekdato()),addslashes($this->get_findato()),addslashes($this->get_stato()),addslashes($this->get_lastdato()),addslashes($this->korektanto->get_id()),addslashes($this->get_pasintakorektanto()),addslashes($this->studanto->get_id()),addslashes($this->nunleciono->get_id()),addslashes($this->kurso->get_kodo()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function update() {
       $sql = sprintf("update nuna_kurso set ekdato = '%s',findato = '%s',stato = '%s',lastdato = '%s',korektanto = '%s',pasintakorektanto = '%s',studanto = '%s',nunleciono = '%s',kurso = '%s' where id = '%s'",addslashes($this->get_ekdato()),addslashes($this->get_findato()),addslashes($this->get_stato()),addslashes($this->get_lastdato()),addslashes($this->korektanto->get_id()),addslashes($this->get_pasintakorektanto()),addslashes($this->studanto->get_id()),addslashes($this->nunleciono->get_id()),addslashes($this->kurso->get_kodo()),$this->get_id());
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function delete() {
       $sql = sprintf("delete from nuna_kurso where id = '%s'",
                      addslashes($this->get_id()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(TRUE!=$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
       return 1;
@@ -147,13 +150,14 @@ include_once("lecionoj.inc.php");
 
     function load_by_id($id) {
       $sql = sprintf("select id,ekdato,findato,stato,lastdato,korektanto,pasintakorektanto,studanto,nunleciono,kurso from nuna_kurso where id = '%s'",$id);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $row = mysql_fetch_array($qid);
+      $row = $qid->fetch_array();
       $this->set_id($row[0]);
       $this->set_ekdato(stripslashes($row[1]));
       $this->set_findato(stripslashes($row[2]));
@@ -168,20 +172,21 @@ include_once("lecionoj.inc.php");
 		$this->kurso->load_by_kodo($row[9],$obj->studanto->lingvo->get_kodo());
 		$this->nunleciono->load_by_numero($row[8],$obj->studanto->lingvo->get_kodo());
 
-      mysql_free_result($qid);
+      $qid->free();
       return 1;
     }
 
     function load_by_kurso($kurso,$lingvo) {
       $recs;
       $sql = sprintf("select nuna_kurso.id,nuna_kurso.ekdato,nuna_kurso.findato,nuna_kurso.stato,nuna_kurso.lastdato,nuna_kurso.korektanto,nuna_kurso.pasintakorektanto,nuna_kurso.studanto,nuna_kurso.nunleciono,nuna_kurso.kurso from nuna_kurso,personoj where nuna_kurso.kurso='%s' and nuna_kurso.studanto=personoj.id and personoj.lingvo='%s'",$kurso,$lingvo);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return $recs;
       }
-      while($row = mysql_fetch_array($qid)) {
+      while($row = $qid->fetch_array()) {
         $obj = new nuna_kurso;
         $obj->set_id($row[0]);
         $obj->set_ekdato($row[1]);
@@ -199,20 +204,21 @@ include_once("lecionoj.inc.php");
 
         $recs[] = $obj;
       }
-      mysql_free_result($qid);
+      $qid->free();
       return $recs;
     }
 
       function load_by_korektanto_kaj_kurso($korektanto,$kurso) {
       $recs;
       $sql = sprintf("select nuna_kurso.id,nuna_kurso.ekdato,nuna_kurso.findato,nuna_kurso.stato,nuna_kurso.lastdato,nuna_kurso.korektanto,nuna_kurso.pasintakorektanto,nuna_kurso.studanto,nuna_kurso.nunleciono,kurso from nuna_kurso where korektanto='%s' and kurso='%s'",$korektanto,$kurso);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return $recs;
       }
-      while($row = mysql_fetch_array($qid)) {
+      while($row = $qid->fetch_array()) {
         $obj = new nuna_kurso;
         $obj->set_id($row[0]);
         $obj->set_ekdato($row[1]);
@@ -230,7 +236,7 @@ include_once("lecionoj.inc.php");
 
         $recs[] = $obj;
       }
-      mysql_free_result($qid);
+      $qid->free();
       return $recs;
     }
 
@@ -263,13 +269,14 @@ include_once("lecionoj.inc.php");
         foreach($parametre as $cle => $valeur) {
     	$sql = $sql . " and ".$cle."='".$valeur."'";
         }
-        $qid = mysql_query($sql,$this->get_dbh());
-        if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+        $dbh = $this->get_dbh();
+        $qid = $dbh->query($sql);
+        if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return $recs;
       }
-      while($row = mysql_fetch_array($qid)) {
+      while($row = $qid->fetch_array()) {
         $obj = new nuna_kurso;
         $obj->set_id($row[0]);
         $obj->set_ekdato($row[1]);
@@ -289,20 +296,21 @@ include_once("lecionoj.inc.php");
 
         $recs[] = $obj;
       }
-      mysql_free_result($qid);
+      $qid->free();
       return $recs;
     }
 
      function load_by_studanto_kaj_kurso($studanto,$kurso) {
 	 $this->find_one(array("studanto"=>$studanto,"kurso"=>$kurso));
 /*      $sql = sprintf("select nuna_kurso.id,nuna_kurso.ekdato,nuna_kurso.findato,nuna_kurso.stato,nuna_kurso.lastdato,nuna_kurso.korektanto,nuna_kurso.pasintakorektanto,nuna_kurso.studanto,nuna_kurso.nunleciono,kurso from nuna_kurso where studanto='%s' and kurso='%s'",$studanto,$kurso);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $row = mysql_fetch_array($qid);
+      $row = $qid->fetch_array();
       $this->set_id($row[0]);
       $this->set_ekdato(stripslashes($row[1]));
       $this->set_findato(stripslashes($row[2]));
@@ -313,20 +321,21 @@ include_once("lecionoj.inc.php");
       $this->set_studanto(stripslashes($row[7]));
       $this->set_nunleciono(stripslashes($row[8]));
       $this->set_kurso(stripslashes($row[9]));
-      mysql_free_result($qid);*/
+      $qid->free();*/
       return 1;
     }
 
 
     function get_all_objects() {
       $recs;
-      $qid = mysql_query('select id,ekdato,findato,stato,lastdato,korektanto,pasintakorektanto,studanto,nunleciono,kurso from nuna_kurso',$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query('select id,ekdato,findato,stato,lastdato,korektanto,pasintakorektanto,studanto,nunleciono,kurso from nuna_kurso');
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return $recs;
       }
-      while($row = mysql_fetch_array($qid)) {
+      while($row = $qid->fetch_array()) {
         $obj = new nuna_kurso;
         $obj->set_id($row[0]);
         $obj->set_ekdato($row[1]);
@@ -340,7 +349,7 @@ include_once("lecionoj.inc.php");
         $obj->set_kurso($row[9]);
         $recs[] = $obj;
       }
-      mysql_free_result($qid);
+      $qid->free();
       return $recs;
     }
 

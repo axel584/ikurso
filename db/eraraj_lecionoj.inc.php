@@ -73,35 +73,38 @@ include_once 'Db.inc.php';
 
     function insert() {
       $sql = sprintf("insert into eraraj_lecionoj (persono_id,enirnomo,dato,videbla,subjekto,fonto) values ('%s','%s','%s','%s','%s','%s')",addslashes($this->get_persono_id()),addslashes($this->get_enirnomo()),addslashes($this->get_dato()),addslashes($this->get_videbla()),addslashes($this->get_subjekto()),addslashes($this->get_fonto()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function update() {
       $sql = sprintf("update eraraj_lecionoj set persono_id = '%s',enirnomo = '%s',dato = '%s',videbla = '%s',subjekto = '%s',fonto = '%s' where id = '%s'",addslashes($this->get_persono_id()),addslashes($this->get_enirnomo()),addslashes($this->get_dato()),addslashes($this->get_videbla()),addslashes($this->get_subjekto()),addslashes($this->get_fonto()),$this->get_id());
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function delete() {
       $sql = sprintf("delete from eraraj_lecionoj where id = '%s'",
                      addslashes($this->get_id()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(TRUE!=$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
       return 1;
@@ -109,13 +112,14 @@ include_once 'Db.inc.php';
 
     function load_by_id($id) {
       $sql = sprintf("select id,persono_id,enirnomo,dato,videbla,subjekto,fonto from eraraj_lecionoj where id = '%s'",$id);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $row = mysql_fetch_array($qid);
+      $row = $qid->fetch_array();
       $this->set_id($row[0]);
       $this->set_persono_id(stripslashes($row[1]));
       $this->set_enirnomo(stripslashes($row[2]));
@@ -123,19 +127,20 @@ include_once 'Db.inc.php';
       $this->set_videbla(stripslashes($row[4]));
       $this->set_subjekto(stripslashes($row[5]));
       $this->set_fonto(stripslashes($row[6]));
-      mysql_free_result($qid);
+      $qid->free();
       return 1;
     }
 
     function get_all_objects() {
       $recs;
-      $qid = mysql_query('select id,persono_id,enirnomo,dato,videbla,subjekto,fonto from eraraj_lecionoj',$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query('select id,persono_id,enirnomo,dato,videbla,subjekto,fonto from eraraj_lecionoj');
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return $recs;
       }
-      while($row = mysql_fetch_array($qid)) {
+      while($row = $qid->fetch_array()) {
         $obj = new eraraj_lecionoj;
         $obj->set_id($row[0]);
         $obj->set_persono_id($row[1]);
@@ -146,7 +151,7 @@ include_once 'Db.inc.php';
         $obj->set_fonto($row[6]);
         $recs[] = $obj;
       }
-      mysql_free_result($qid);
+      $qid->free();
       return $recs;
     }
 

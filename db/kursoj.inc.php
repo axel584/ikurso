@@ -46,35 +46,38 @@ include_once 'Db.inc.php';
 
     function insert() {
       $sql = sprintf("insert into kursoj (kodo,lingvo,nomo) values ('%s','%s','%s')",addslashes($this->get_kodo()),addslashes($this->get_lingvo()),addslashes($this->get_nomo()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function update() {
       $sql = sprintf("update kursoj set kodo = '%s',lingvo = '%s',nomo = '%s' where id = '%s'",addslashes($this->get_kodo()),addslashes($this->get_lingvo()),addslashes($this->get_nomo()),$this->get_id());
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function delete() {
       $sql = sprintf("delete from kursoj where id = '%s'",
                      addslashes($this->get_id()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(TRUE!=$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
       return 1;
@@ -82,48 +85,51 @@ include_once 'Db.inc.php';
 
     function load_by_id($id) {
       $sql = sprintf("select id,kodo,lingvo,nomo from kursoj where id = '%s'",$id);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $row = mysql_fetch_array($qid);
+      $row = $qid->fetch_array();
       $this->set_id($row[0]);
       $this->set_kodo(stripslashes($row[1]));
       $this->set_lingvo(stripslashes($row[2]));
       $this->set_nomo(stripslashes($row[3]));
-      mysql_free_result($qid);
+      $qid->free();
       return 1;
     }
     
     function load_by_kodo($kodo,$lingvo) {
       $sql = sprintf("select id,kodo,lingvo,nomo from kursoj where kodo = '%s' and lingvo = '%s'",$kodo,$lingvo);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $row = mysql_fetch_array($qid);
+      $row = $qid->fetch_array();
       $this->set_id($row[0]);
       $this->set_kodo(stripslashes($row[1]));
       $this->set_lingvo(stripslashes($row[2]));
       $this->set_nomo(stripslashes($row[3]));
-      mysql_free_result($qid);
+      $qid->free();
       return 1;
     }    
 
     function get_all_objects($lingvo) {
       $recs;
       $sql = sprintf("select id,kodo,lingvo,nomo from kursoj where lingvo = '%s'",$lingvo);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return $recs;
       }
-      while($row = mysql_fetch_array($qid)) {
+      while($row = $qid->fetch_array()) {
         $obj = new kursoj;
         $obj->set_id($row[0]);
         $obj->set_kodo($row[1]);
@@ -131,7 +137,7 @@ include_once 'Db.inc.php';
         $obj->set_nomo($row[3]);
         $recs[] = $obj;
       }
-      mysql_free_result($qid);
+      $qid->free();
       return $recs;
     }
 

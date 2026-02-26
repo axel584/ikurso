@@ -73,35 +73,38 @@ include_once 'Db.inc.php';
 
     function insert() {
       $sql = sprintf("insert into protokolo (persono_id,horo,ip,kategorio,teksto,lingvo) values ('%s',now(),'%s','%s','%s','%s')",addslashes($this->get_persono_id()),$_SERVER['REMOTE_ADDR'],addslashes($this->get_kategorio()),addslashes($this->get_teksto()),addslashes($this->get_lingvo()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function update() {
       $sql = sprintf("update protokolo set persono_id = '%s',horo = now(),ip = '%s',kategorio = '%s',teksto = '%s',lingvo = '%s' where id = '%s'",addslashes($this->get_persono_id()),$_SERVER['REMOTE_ADDR'],addslashes($this->get_kategorio()),addslashes($this->get_teksto()),addslashes($this->get_lingvo()),$this->get_id());
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $this->set_id(mysql_insert_id());
+      $this->set_id($dbh->insert_id);
       return 1;
     }
 
     function delete() {
       $sql = sprintf("delete from protokolo where id = '%s'",
                      addslashes($this->get_id()));
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(TRUE!=$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
       return 1;
@@ -109,13 +112,14 @@ include_once 'Db.inc.php';
 
     function load_by_id($id) {
       $sql = sprintf("select id,persono_id,horo,ip,kategorio,teksto,lingvo from protokolo where id = '%s'",$id);
-      $qid = mysql_query($sql,$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query($sql);
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return 0;
       }
-      $row = mysql_fetch_array($qid);
+      $row = $qid->fetch_array();
       $this->set_id($row[0]);
       $this->set_persono_id(stripslashes($row[1]));
       $this->set_horo(stripslashes($row[2]));
@@ -123,19 +127,20 @@ include_once 'Db.inc.php';
       $this->set_kategorio(stripslashes($row[4]));
       $this->set_teksto(stripslashes($row[5]));
       $this->set_lingvo(stripslashes($row[6]));
-      mysql_free_result($qid);
+      $qid->free();
       return 1;
     }
 
     function get_all_objects() {
       $recs;
-      $qid = mysql_query('select id,persono_id,horo,ip,kategorio,teksto,lingvo from protokolo',$this->get_dbh());
-      if(0==$qid) {
-        $this->set_errno(mysql_errno());
-        $this->set_errstr(mysql_error());
+      $dbh = $this->get_dbh();
+      $qid = $dbh->query('select id,persono_id,horo,ip,kategorio,teksto,lingvo from protokolo');
+      if(!$qid) {
+        $this->set_errno($dbh->errno);
+        $this->set_errstr($dbh->error);
         return $recs;
       }
-      while($row = mysql_fetch_array($qid)) {
+      while($row = $qid->fetch_array()) {
         $obj = new protokolo;
         $obj->set_id($row[0]);
         $obj->set_persono_id($row[1]);
@@ -146,7 +151,7 @@ include_once 'Db.inc.php';
         $obj->set_lingvo($row[6]);
         $recs[] = $obj;
       }
-      mysql_free_result($qid);
+      $qid->free();
       return $recs;
     }
 

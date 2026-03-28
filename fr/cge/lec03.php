@@ -587,8 +587,8 @@ include "dlekkapo.inc.php";
 		if ($section=="13") {
 		?>
 		<div class="row">
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/varsovio.jpg" alt="Une carte de la Pologne avec la ville de Varsovie"><br>-1-</p>
-			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/prof.jpg" alt="Un professeur devant un tableau présente la leçon."><br>-2-</p>
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/prof.jpg" alt="Un professeur devant un tableau présente la leçon."><br>-1-</p>	
+			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/varsovio.jpg" alt="Une carte de la Pologne avec la ville de Varsovie"><br>-2-</p>
 			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/insekto.jpg" alt="Une personne prend une photo d'un insecte"><br>-3-</span></p>
 			<p class="col s6 m3 center-align"><img class="responsive-img" src="<?=$vojo?>fr/cge/bildoj/zamenhof.jpg" alt="Une photo en noir et blanc du créateur de l'espéranto : Louis Lazare Zamenhof"><br>-4-</p>
 		</div>

@@ -93,17 +93,14 @@ while($row = $result->fetch()) {
 	// on diminue de 1 le nombre d'élèves du correcteur pour ce cours 
 	$stmt = $bdd->prepare("select kiom_lernantoj from korektebla_kurso where korektanto=? and kurso=?");
 	$stmt->execute([$korektanto, $kurso]);
-	$query = $stmt;
-	$kiom = $bdd->query($query)->fetch()["kiom_lernantoj"];
+	$kiom = $stmt->fetch()["kiom_lernantoj"];
 	if ($kiom>0) { // on diminue uniquement si le nombre d'élèves voulu est supérieur à 0
 		$nouveau_nombre_eleves = $kiom - 1;
 		$stmt = $bdd->prepare("update korektebla_kurso set kiom_lernantoj=? where korektanto=? and kurso=?");
 		$stmt->execute([$nouveau_nombre_eleves, $korektanto, $kurso]);
-		$bdd->exec($query);
 	}
 	$stmt = $bdd->prepare("update nuna_kurso set stato='H',findato=now() where studanto=? and kurso=? and stato<>'H' and stato<>'F'");
 	$stmt->execute([$studanto, $kurso]);
-	$bdd->exec($query);
 	protokolo($studanto,"SUPPRESSON AUTOMATIQUE","suppression de l'élève et diminution du nb d'élèves pour ".$korektanto);
 
 }

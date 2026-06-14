@@ -175,9 +175,15 @@ function mailViaSES($retadreso,$objekto,$contentsHtml) {
         
         $mail->setFrom("ikurso@esperanto-france.org", "Ikurso");
         
-        foreach(explode(",",$retadreso) as $destinataire) {
-            $mail->addAddress(trim($destinataire));
-        }
+		foreach(explode(",",$retadreso) as $destinataire) {
+			$dest = trim($destinataire);
+			if ($dest=="") continue;
+			if (!checkEmail($dest)) {
+				error_log("mailViaSES: adresse destinataire invalide ignorée: $dest");
+				continue;
+			}
+			$mail->addAddress($dest);
+		}
         
         $mail->isHTML(true);
         $mail->Subject = $objekto;
@@ -207,9 +213,15 @@ function mailViaSmtp($retadreso,$from,$objekto,$contentsHtml) {
     $mail->Port       = $portSmtp;
     $mail->SMTPAuth   = false;
 
-    // Specify the message recipients.
+	// Specify the message recipients.
 	foreach(explode(",",$retadreso) as $destinataire) {
-		$mail->addAddress($destinataire);
+		$dest = trim($destinataire);
+		if ($dest=="") continue;
+		if (!checkEmail($dest)) {
+			error_log("mailViaSmtp: adresse destinataire invalide ignorée: $dest");
+			continue;
+		}
+		$mail->addAddress($dest);
 	}
     // You can also add CC, BCC, and additional To recipients here.
 

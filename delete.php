@@ -3,7 +3,9 @@ include "util.php";
 //malfermidatumbazon();
 $pagxtitolo="Suppression d'une personne";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
+$persono = apartigiPersonon($persono_id);
+if ($persono["rajtoj"]!='A') {header("Location:index.php?erarkodo=4"); exit;}
 $celpersono_id=isset($_POST["celpersono_id"])?$_POST["celpersono_id"]:"";
 $celpersono_id=isset($_GET["celpersono_id"])?$_GET["celpersono_id"]:$celpersono_id;
 $validperson=isset($_GET["validperson"])?$_GET["validperson"]:"";

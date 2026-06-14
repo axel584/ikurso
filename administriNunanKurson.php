@@ -6,11 +6,11 @@ include "util.php";
 $kurso=$_REQUEST["kurso"];
 $pagxtitolo="Donn&eacute;es personnelles";
 $persono_id=$_SESSION["persono_id"];
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 $celpersono_id=$_REQUEST["celpersono_id"];
 if ($celpersono_id!="") { $celpersono = apartigiPersonon($celpersono_id);}
-if ($persono["rajtoj"]!='A'){header("Location:index.php?erarkodo=4");}
+if ($persono["rajtoj"]!='A'){header("Location:index.php?erarkodo=4"); exit;}
 $parto=isset($_GET["parto"])?$_GET["parto"]:"";
 if ($parto=="") {$parto=1;}
 $korektanto_id=$_POST["korektanto_id"];

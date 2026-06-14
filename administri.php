@@ -3,7 +3,7 @@ include "util.php";
 $pagxtitolo="G&eacute;rer les utilisateurs";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $celpersono_id=isset($_REQUEST["celpersono_id"])?$_REQUEST["celpersono_id"]:"";
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 if ($celpersono_id!="") {$celpersono = apartigiPersonon($celpersono_id);}
 else {
@@ -31,7 +31,7 @@ else {
     	'aktivigita' => '0'
     	);
 }
-if ($rajto!='A' && $rajto!='I'){header("Location:index.php?erarkodo=4");}
+if ($rajto!='A' && $rajto!='I'){header("Location:index.php?erarkodo=4"); exit;}
 $kategorio=isset($_GET["kategorio"])?$_GET["kategorio"]:"P";
 
 /***********************************************

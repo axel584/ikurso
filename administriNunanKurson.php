@@ -81,7 +81,7 @@ if ($row['korektanto']!="") {
 		$query = "update personoj set rajtoj='S' where id=$celpersono_id"; // cxiukaze igas lin studanto.
 		$result = $bdd->exec($query);
 		
-		$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso) VALUES (NOW(),NOW(),".$korektanto_id.",".$celpersono_id.",'".$kurso."')";
+		$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso,nunleciono) VALUES (NOW(),NOW(),".$korektanto_id.",".$celpersono_id.",'".$kurso."',1)";
 		$result = $bdd->exec($query);
 
 		// trovi informojn pri studanto kaj korektanto

@@ -3,27 +3,37 @@ include "util.php";
 $pagxtitolo="Détails leçon";
 $korpo="informoj";
 $persono_id=$_SESSION["persono_id"];
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["numleciono"])?$_GET["numleciono"]:"";
 $studanto_id=isset($_GET["studanto"])?$_GET["studanto"]:"";
+// si le numéro de leçon n'a pas été transmis dans l'URL, on n'affiche pas d'erreur :
+// on se contente d'afficher le menu permettant de choisir une leçon
+$aucuneLeciono = ($leciono==="");
 // si la personne qui regarde la page n'est ni correcteur, ni administrateur, on affiche les infos sur ses leçons
 if ($rajto!='A' && $rajto!='I'&& $rajto!='K'){
 	$studanto_id=$persono_id;
 }
-if ($studanto_id==""){header("Location:miajlernantoj.php?erarkodo=23");}
+if ($studanto_id==""){header("Location:miajlernantoj.php?erarkodo=23"); exit;}
 $studanto = apartigiPersonon($studanto_id);
 include "pagxkapo.inc.php";
 
 // on recupere les informations sur la leçon (intro et conclusion)
-$query = "SELECT personoj_lecionoj.leciono_id,komentario,enkonduko,konkludo  FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id= ".$studanto_id." and numero=".$leciono." and kurso='".$kurso."'";
-$result = $bdd->query($query);
-$row=$result->fetch();
-$komentario = $row["komentario"];
-$enkonduko = $row["enkonduko"];
-$konkludo = $row["konkludo"];
-$leciono_id = $row["leciono_id"];
+$komentario = $enkonduko = $konkludo = $leciono_id = null;
+if (!$aucuneLeciono) {
+	$query = "SELECT personoj_lecionoj.leciono_id,komentario,enkonduko,konkludo FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id=:studanto_id and numero=:leciono and kurso=:kurso";
+	$requete = $bdd->prepare($query);
+	$requete->execute(array('studanto_id'=>$studanto_id,'leciono'=>$leciono,'kurso'=>$kurso));
+	$row = $requete->fetch();
+	// pas de ligne si l'étudiant n'a pas encore envoyé cette leçon
+	if ($row) {
+		$komentario = $row["komentario"];
+		$enkonduko = $row["enkonduko"];
+		$konkludo = $row["konkludo"];
+		$leciono_id = $row["leciono_id"];
+	}
+}
 
 // chemin pour accéder aux leçons à partir des sommaires (en haut et celui à droite)
 	if ($kurso=='CG') {
@@ -40,7 +50,11 @@ if ($rajto=='S') { getListoLecionoj($kurso,$leciono,$chemin); }
 
 	<div class="row">
 		<article class="col s12 m9 l6 offset-m1 offset-l1">
-<?php 
+<?php
+if ($aucuneLeciono) {
+	echo "<h1>Leçon de ".$studanto["enirnomo"]."</h1>";
+	echo "<p>Choisissez une leçon dans le menu ci-contre.</p>";
+} else {
 if ($rajto=='S') { echo "<h1>Correction de la leçon</h1>"; }
 else { echo "<h1>Leçon de ".$studanto["enirnomo"]."</h1>"; }
 if ($enkonduko) {
@@ -79,11 +93,8 @@ while ($row=$result->fetch()) {
 }
 
 // on affiche le commentaire de l'élève qui est stocké en base
-$query = "SELECT komentario  FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id= ".$studanto_id." and numero=".$leciono." and kurso='".$kurso."'";
-$result = $bdd->query($query);
-$row=$result->fetch();
 echo "<h3>Commentaire de l'élève</h3>";
-echo $row["komentario"];
+echo $komentario;
 
 
 if ($konkludo) {
@@ -117,8 +128,9 @@ if ($rajto=='A' || $rajto=='I'|| $rajto=='K'){
 		</section>
 <?php
 }
-?>		
-		
+}
+?>
+
 	</article>
 
 		

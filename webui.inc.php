@@ -69,6 +69,9 @@ function getTipoLecionero($kurso,$leciono,$lecionero) {
 
 function getEnhavtabelo($kurso,$leciono,$chemin='') {
 	global $bdd,$persono_id;
+	if ($leciono==="") { // pas de leçon sélectionnée : rien à afficher
+		return;
+	}
 	if ($persono_id=="") { // Pas connecté : on récupère le sommaire normal
 			$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id,lecioneroj.dauxro,lecionoj.id as leciono_id FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
 	} else { // connecté, on récupère la liste des leçons effectuées

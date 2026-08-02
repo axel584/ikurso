@@ -3,23 +3,33 @@ include "util.php";
 $pagxtitolo="Détails leçon";
 $korpo="informoj korektiLecionon";
 $persono_id=$_SESSION["persono_id"];
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["numleciono"])?$_GET["numleciono"]:"";
 $studanto_id=isset($_GET["studanto"])?$_GET["studanto"]:"";
-if ($studanto_id==""){header("Location:miajlernantoj.php?erarkodo=23");}
+// si le numéro de leçon n'a pas été transmis dans l'URL, on n'affiche pas d'erreur :
+// on se contente d'afficher le menu permettant de choisir une leçon
+$aucuneLeciono = ($leciono==="");
+if ($studanto_id==""){header("Location:miajlernantoj.php?erarkodo=23"); exit;}
 $studanto = apartigiPersonon($studanto_id);
 include "pagxkapo.inc.php";
 
 // on recupere les informations sur la leçon (intro et conclusion)
-$query = "SELECT personoj_lecionoj.leciono_id,komentario,enkonduko,konkludo  FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id= ".$studanto_id." and numero=".$leciono." and kurso='".$kurso."'";
-$result = $bdd->query($query);
-$row=$result->fetch();
-$komentario = $row["komentario"];
-$enkonduko = $row["enkonduko"];
-$konkludo = $row["konkludo"];
-$leciono_id = $row["leciono_id"];
+$komentario = $enkonduko = $konkludo = $leciono_id = null;
+if (!$aucuneLeciono) {
+	$query = "SELECT personoj_lecionoj.leciono_id,komentario,enkonduko,konkludo FROM personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where persono_id=:studanto_id and numero=:leciono and kurso=:kurso";
+	$requete = $bdd->prepare($query);
+	$requete->execute(array('studanto_id'=>$studanto_id,'leciono'=>$leciono,'kurso'=>$kurso));
+	$row = $requete->fetch();
+	// pas de ligne si l'étudiant n'a pas encore envoyé cette leçon
+	if ($row) {
+		$komentario = $row["komentario"];
+		$enkonduko = $row["enkonduko"];
+		$konkludo = $row["konkludo"];
+		$leciono_id = $row["leciono_id"];
+	}
+}
 ?>
 
 <div class="row">
@@ -29,11 +39,13 @@ $leciono_id = $row["leciono_id"];
 	if ($studanto["personnomo"]!="") {
 		echo "&nbsp;(".$studanto["personnomo"]." ".$studanto["familinomo"].")";
 	}
-?>		
+?>
 		</h2>
-		
+<?php if ($aucuneLeciono) { ?>
+		<p>Choisissez une leçon dans le menu ci-contre.</p>
+<?php } else { ?>
 		<p class="parto"><strong>Introduction</strong></p>
-		
+
 		<ul class="collapsible expandable">
 			<li>
 		    	<div class="collapsible-header"><i class="material-icons blue-text text-darken-2">edit</i>Rédiger une introduction</div>
@@ -149,6 +161,7 @@ echo $komentario;
 			</div>
 
 		</section>
+<?php } ?>
 	</article>
 
 		

@@ -86,7 +86,7 @@ function listiStudantojn() {
 			$lstdt = explode("-",$row["lastdato"]);
 			echo $lstdt[2]."/".$lstdt[1]."/".$lstdt[0]."\n";
 			if ($row['kurso']!="KE") { // on n'affiche pas les réponses des élèves pour le logiciel :
-				echo "&nbsp;(<a href='vidiLecionon.php?numleciono=".$row["nunleciono"]."&kurso=".$row["kurso"]."&studanto=".$row["studanto"]."'>voir</a>)";
+				echo "&nbsp;(<a href='vidiLecionon.php?numleciono=".($row["nunleciono"]!==null ? $row["nunleciono"] : 1)."&kurso=".$row["kurso"]."&studanto=".$row["studanto"]."'>voir</a>)";
 			}
 		}
 		echo "<br/>";

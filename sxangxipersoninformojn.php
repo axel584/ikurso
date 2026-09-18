@@ -28,6 +28,10 @@ if ($persono["stop_info"]=="J") {
 	$checkedStopInfo = "";
 }
 
+require_once "api/SympaAPI.php";
+$sympa = new SympaAPI();
+$checkedAboneEsperantoAktiv = $sympa->isMember($persono['retadreso']) ? " checked " : "";
+
 ?>
 </form> <!-- on ferme le formulaire principal -->
 <div class="row">
@@ -110,6 +114,10 @@ if ($persono["stop_info"]=="J") {
 						<label>
 							<input type="checkbox" class="filled-in" id="stopRappel" name="stopRappel" <?php echo $checkedStopRappel; ?>/>
 							<span>Je ne souhaite pas recevoir de message de rappel pour m'inviter à continuer le cours.</span>
+						</label>
+						<label>
+							<input type="checkbox" class="filled-in" id="aboneEsperantoAktiv" name="aboneEsperantoAktiv" <?php echo $checkedAboneEsperantoAktiv; ?>/>
+							<span>Je souhaite recevoir la lettre d'information mensuelle « Espéranto-Aktiv » (<a href="https://esperanto-france.org/esperanto-aktiv" target="_blank">voir les anciens numéros</a>). Gratuit, résiliable à tout moment.</span>
 						</label>
 						</p>
 					</div>

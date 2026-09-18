@@ -240,6 +240,17 @@ if (isset($_GET["aktivigo"])) {
 				</span>
 			</div>
 
+			<div class="row">
+			<span class="col s4 label">Lettre Espéranto-Aktiv :</span>
+			<span class="col s6">
+				<?php
+				require_once "api/SympaAPI.php";
+				$sympa = new SympaAPI();
+				echo $sympa->isMember($persono['retadreso']) ? "Vous êtes abonné(e)" : "Vous n'êtes pas abonné(e)";
+				?>
+			</span>
+		</div>
+
 <?php
 
 if (($persono['lando']== null)||($persono['posxtkodo']== null && $persono['lando']=="FR")) {

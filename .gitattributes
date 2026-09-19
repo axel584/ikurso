@@ -1,0 +1,22 @@
+# Fins de ligne : toujours LF dans le dépôt et dans la copie de travail (Linux et macOS)
+* text=auto eol=lf
+
+# Fichiers binaires : jamais convertis
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.mp3 binary
+*.ogg binary
+*.wav binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.zip binary
+*.gz binary
+*.jar binary
+*.keystore binary
+*.rtf -text

@@ -1,7 +1,6 @@
 <?php
 include "util.php";
 include_once ("db.inc.php");
-//include_once ("forum/includes/forum.lib.php");
 
 malfermidatumbazon();
 $enirnomo=$aligxilo["enirnomo"]=isset($_POST["enirnomo"])?$_POST["enirnomo"]:"";
@@ -99,8 +98,6 @@ if (($retadreso=="") || ($enirnomo=="") || ($pasvorto=="")) {
 			
 			protokolo($persono_id,"VERDA KRABO","$retadreso : $verdakrabo");
 			modifiPersonon($persono_id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$posxtkodo,$urbo,$lando,$naskigxdato_tago,$naskigxdato_monato,$naskigxdato_jaro,$kialo,$kurso,$stopInfo);
-			//on ne créer pas d'utilisateur phpbb pour le moment
-			//phpbb_create_user($nova_persono_id,$enirnomo,$pasvorto,$retadreso,$lingvo,$urbo);
 			$_SESSION["persono_id"]=$persono_id;
 			header("Location:atendiKorektanton.php"); exit;
 	}

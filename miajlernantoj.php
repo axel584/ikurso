@@ -253,7 +253,7 @@ function listiEksStudantojn() {
 			$row5 = $result5->fetch();
 			if ($row4["korektanto"]==$persono_id){
 				echo "<a href='forigiNoton.php?noto_id=".$row4['id']."&stud_id=".$row['studanto']."&stud_nomo=".$row['enirnomo']."&pagxo=miajlernantoj.php'>";
-				echo "<img src=\"forum/templates/subSilver/images/icon_delete.gif\" alt=\"Supprimer ce commentaire\" title=\"Supprimer ce commentaire\" border=\"0\" align=\"middle\"></a>";
+				echo "<img src=\"bildoj/icon_delete.gif\" alt=\"Supprimer ce commentaire\" title=\"Supprimer ce commentaire\" border=\"0\" align=\"middle\"></a>";
 			}
 			echo " <em>de ".$row5['enirnomo']." le ".$row4['dato']."</em> :\n";
 			echo " ".$row4['teksto']."\n";

@@ -154,7 +154,7 @@ include "pagxkapo.inc.php";
 				<p>
 					Vous trouverez ici les réponses aux questions les plus fréquentes. Si vous avez des questions sur
 					la manière d'utiliser ce site, lisez attentivement cette page. Si vous ne trouvez pas ici la réponse
-					à vos questions, vous pourrez	consulter le forum (réservé aux utilisateurs inscrits) ou poser 
+					à vos questions, vous pourrez	poser 
 					votre question aux administrateurs du cours.</p></blockquote>
 					
 				  	<h3 id="accents">Utilisation des lettres accentuées</h3>

@@ -13,7 +13,6 @@ require('vendor/autoload.php');
 
 
 
-//include_once("forum/includes/forum.lib.php");
 // on récupère l'adresse de la page appelée (et on retire les paramètres au besoin)
 // attention, c'est aussi appelé dans "pagxkapo.inc.php"
 $url=isset($_SERVER['REQUEST_URI'])?strtok($_SERVER['REQUEST_URI'],'?'):"";

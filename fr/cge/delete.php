@@ -1,7 +1,6 @@
 <?
 include "db.inc.php";
 include "webui.inc.php";
-include "forum/includes/forum.lib.php";
 malfermiDatumbazon();
 // ER 05.10.2015 : correction pour passage en PHP 5.4
 //session_register("persono_id");

@@ -67,7 +67,7 @@ Pour épeler un mot, les voyelles se prononce par le son qu’elle font, et les 
 
 ### Le clavier espéranto
 
-Pour taper facilement en espéranto en utilisant les lettres accentuées, vous pouvez installer une nouvelle configuration de clavier. Vous trouverez dans le forum les instructions vous permettant d’installer un clavier espéranto sur votre ordinateur, votre tablette ou votre téléphone :
+Pour taper facilement en espéranto en utilisant les lettres accentuées, vous pouvez installer une nouvelle configuration de clavier. Vous trouverez dans l’aide du site les instructions vous permettant d’installer un clavier espéranto sur votre ordinateur, votre tablette ou votre téléphone :
 [Comment écrire en espéranto.](https://ikurso.esperanto-france.org/helpo.php?section=kielskribi)
 
 

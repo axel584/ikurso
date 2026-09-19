@@ -779,7 +779,7 @@ include "adminkapo.inc.php";
 									$row6 = $result6->fetch();
 									$pagxo="administri.php?celpersono_id=".$celpersono["id"];
 									echo "<a href='forigiNoton.php?noto_id=".$row5['id']."&stud_id=".$celpersono['id']."&stud_nomo=".$celpersono['enirnomo']."&pagxo=".$pagxo."'>";
-									echo "<img src=\"forum/templates/subSilver/images/icon_delete.gif\" alt=\"Supprimer ce commentaire\" title=\"Supprimer ce commentaire\" align=\"middle\"></a>";
+									echo "<img src=\"bildoj/icon_delete.gif\" alt=\"Supprimer ce commentaire\" title=\"Supprimer ce commentaire\" align=\"middle\"></a>";
 									echo " <span class='klarigo'>de ".$row6['enirnomo']." le ".$row5['dato']."</span> :\n";
 									echo " ".$row5["teksto"]."\n";
 									echo "<br>\n";

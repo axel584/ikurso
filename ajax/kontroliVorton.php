@@ -1,7 +1,7 @@
 <?php
 include "../util.php";
 $vorto_id=isset($_GET["vorto_id"])?$_GET["vorto_id"]:"";
-$persono_id=isset($_GET["persono_id"])?$_GET["persono_id"]:"";
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 if ($persono_id=="") {
 	$respondo["mesagxo"] = "ko";
 	$respondo["eraroj"]="Identifiant de l'élève absent. Ça sent le piratage de bac à sable.";

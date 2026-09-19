@@ -4,12 +4,13 @@ $pagxtitolo="Détails leçon";
 $korpo="informoj";
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"CG";
 $leciono=isset($_GET["numleciono"])?$_GET["numleciono"]:"1";
+if ($rajto!='A' && $rajto!='I' && $rajto!='K'){header("Location:index.php?erarkodo=4"); exit;}
 include "pagxkapo.inc.php";
 
 
 
-$query = "select titolo from lecionoj where  numero=".$leciono." and kurso='".$kurso."'";
-$result = $bdd->query($query);
+$result = $bdd->prepare("select titolo from lecionoj where numero=? and kurso=?");
+$result->execute(array($leciono,$kurso));
 $row=$result->fetch();
 $titolo = $row["titolo"];
 
@@ -21,22 +22,23 @@ $titolo = $row["titolo"];
 			<h2><?=$titolo?></h2>
 
 <?php
-$query = "select ekzerceroj.id,ekzerceroj.numero,demando from ekzerceroj join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero"; 
-$result = $bdd->query($query);
+$query = "select ekzerceroj.id,ekzerceroj.numero,demando from ekzerceroj join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where lecionoj.numero=? and kurso=? order by ekzerceroj.numero"; 
+$result = $bdd->prepare($query);
+$result->execute(array($leciono,$kurso));
 $komando="";
 while ($row=$result->fetch()) {
 	$ekzerceroj_id= $row["id"];
 	echo "<p>".$row["numero"].". ".$row["demando"]."<br>\n";
 	// on va chercher la bonne réponse en base :
-	$query2="SELECT respondo,normaligita FROM ekzerceroj where id='".$ekzerceroj_id."'";
-	$result2 = $bdd->query($query2);
+	$result2 = $bdd->prepare("SELECT respondo,normaligita FROM ekzerceroj where id=?");
+	$result2->execute(array($ekzerceroj_id));
 	$row2 = $result2->fetch();
 	$bonaRespondo = $row2["normaligita"];
-	$query2 = "select count(*) as combien from respondoj where ekzercero_id='".$ekzerceroj_id."'";
-	$result2 = $bdd->query($query2);
+	$result2 = $bdd->prepare("select count(*) as combien from respondoj where ekzercero_id=?");
+	$result2->execute(array($ekzerceroj_id));
 	$nbTotalReponse = $result2->fetch()["combien"];
-	$query2 = "select normaligita,count(*) as combien from respondoj where ekzercero_id='".$ekzerceroj_id."' group by normaligita order by count(*) desc";
-	$result2 = $bdd->query($query2);
+	$result2 = $bdd->prepare("select normaligita,count(*) as combien from respondoj where ekzercero_id=? group by normaligita order by count(*) desc");
+	$result2->execute(array($ekzerceroj_id));
 	while ($row2=$result2->fetch()) {
 		$taux = number_format(100*$row2["combien"]/$nbTotalReponse,2);
 		if ($taux<1.0) {

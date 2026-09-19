@@ -11,8 +11,8 @@ if ($rajto!='A' && $rajto!='I' && $rajto!='K'){header("Location:index.php?erarko
 
 include "pagxkapo.inc.php";
 
-$query = "select titolo from lecionoj where  numero=".$leciono." and kurso='".$kurso."'";
-$result = $bdd->query($query);
+$result = $bdd->prepare("select titolo from lecionoj where numero=? and kurso=?");
+$result->execute(array($leciono,$kurso));
 $row=$result->fetch();
 $titolo = $row["titolo"];
 

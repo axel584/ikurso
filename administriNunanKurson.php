@@ -3,17 +3,19 @@ function debug($s) {
 	//{echo $s;}
 }
 include "util.php";
-$kurso=$_REQUEST["kurso"];
+$kurso=isset($_REQUEST["kurso"])?$_REQUEST["kurso"]:"";
+// $kurso sert aussi à construire des noms de fichiers de mails : code alphanumérique uniquement
+if (!preg_match('/^[A-Za-z0-9]{1,10}$/',$kurso)) {header("Location:index.php?erarkodo=4"); exit;}
 $pagxtitolo="Donn&eacute;es personnelles";
 $persono_id=$_SESSION["persono_id"];
 if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
-$celpersono_id=$_REQUEST["celpersono_id"];
+$celpersono_id=isset($_REQUEST["celpersono_id"])?(int)$_REQUEST["celpersono_id"]:0;
 if ($celpersono_id!="") { $celpersono = apartigiPersonon($celpersono_id);}
 if ($persono["rajtoj"]!='A'){header("Location:index.php?erarkodo=4"); exit;}
 $parto=isset($_GET["parto"])?$_GET["parto"]:"";
 if ($parto=="") {$parto=1;}
-$korektanto_id=$_POST["korektanto_id"];
+$korektanto_id=isset($_POST["korektanto_id"])?$_POST["korektanto_id"]:"";
 
 // doni korektanton
 debug ("korektanto_id=".$korektanto_id."<br>");
@@ -22,13 +24,14 @@ if ($korektanto_id=="") {
 	header("Location:administri.php?celpersono_id=$celpersono_id&erarkodo=11");
 	exit;
 }
+$korektanto_id=(int)$korektanto_id;
 
 // cxu la studanto havas jam komencitan kurson ?
 // ER: prise en compte de la derniere lecon envoyee
 debug ("chercher s'il a déjà un cours commencé<br>");
 $nunleciono=NULL;
-$query = "select * from nuna_kurso where studanto=$celpersono_id and kurso='$kurso' and (stato='K' or stato='N')";
-$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+$result = $bdd->prepare("select * from nuna_kurso where studanto=? and kurso=? and (stato='K' or stato='N')");
+$result->execute(array($celpersono_id,$kurso));
 $row=$result->fetch();
 if ($row['korektanto']!="") {
 	$nunleciono=$row["nunleciono"];
@@ -37,8 +40,8 @@ if ($row['korektanto']!="") {
 		//echo "cas 1 : changement de correcteur<br>";
 		// la malnova korektanto malsamas la novan elektitan korektanton.
 		// jam havas korektanton : sxangxi la korektanton
-		$query = "update nuna_kurso set korektanto=$korektanto_id where studanto=$celpersono_id";
-		$result = $bdd->exec($query);
+		$result = $bdd->prepare("update nuna_kurso set korektanto=? where studanto=?");
+		$result->execute(array($korektanto_id,$celpersono_id));
 		
 		// trovi informojn pri studanto kaj korektanto
 		$studantinformoj = apartigiPersonon($celpersono_id);
@@ -78,11 +81,11 @@ if ($row['korektanto']!="") {
 	if ($korektanto_id!="") { 
 		// li volas korektanton
 		// update nuna_kurso
-		$query = "update personoj set rajtoj='S' where id=$celpersono_id"; // cxiukaze igas lin studanto.
-		$result = $bdd->exec($query);
+		$result = $bdd->prepare("update personoj set rajtoj='S' where id=?"); // cxiukaze igas lin studanto.
+		$result->execute(array($celpersono_id));
 		
-		$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso,nunleciono) VALUES (NOW(),NOW(),".$korektanto_id.",".$celpersono_id.",'".$kurso."',1)";
-		$result = $bdd->exec($query);
+		$result = $bdd->prepare("INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso,nunleciono) VALUES (NOW(),NOW(),?,?,?,1)");
+		$result->execute(array($korektanto_id,$celpersono_id,$kurso));
 
 		// trovi informojn pri studanto kaj korektanto
 		$studantinformoj = apartigiPersonon($celpersono_id);	

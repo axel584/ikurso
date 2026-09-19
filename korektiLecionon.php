@@ -5,6 +5,7 @@ $korpo="informoj korektiLecionon";
 $persono_id=$_SESSION["persono_id"];
 if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
+if (!$persono || ($persono["rajtoj"]!='A' && $persono["rajtoj"]!='K')) {header("Location:index.php?erarkodo=4"); exit;}
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["numleciono"])?$_GET["numleciono"]:"";
 $studanto_id=isset($_GET["studanto"])?$_GET["studanto"]:"";
@@ -12,6 +13,7 @@ $studanto_id=isset($_GET["studanto"])?$_GET["studanto"]:"";
 // on se contente d'afficher le menu permettant de choisir une leçon
 $aucuneLeciono = ($leciono==="");
 if ($studanto_id==""){header("Location:miajlernantoj.php?erarkodo=23"); exit;}
+$studanto_id=(int)$studanto_id;
 $studanto = apartigiPersonon($studanto_id);
 include "pagxkapo.inc.php";
 
@@ -58,15 +60,17 @@ if (!$aucuneLeciono) {
 
 
 
-$query = "select ekzercoj.id,ekzercoj.komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id where kurso='".$kurso."' and numero='".$leciono."' order by lecioneroj.ordo,ekzercoj.id";
-$result = $bdd->query($query);
+$query = "select ekzercoj.id,ekzercoj.komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id where kurso=? and numero=? order by lecioneroj.ordo,ekzercoj.id";
+$result = $bdd->prepare($query);
+$result->execute(array($kurso,$leciono));
 while ($row=$result->fetch()) {
 	echo "<p class=\"parto\">";
 	echo "<strong>EXERCICE : </strong>".$row["komando"];
 	echo "</p>";
 	$ekzerco_id = $row["id"];
-	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.respondo as bona_respondo,ekzerceroj.normaligita as normaligita_bona_respondo,respondoj.respondo,respondoj.normaligita as normaligita_lernanta_respondo,respondoj.gxusta,respondoj.korekto,ekzerceroj.poentoj,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=".$studanto_id." and ekzerceroj.ekzerco_id='".$ekzerco_id."' order by ekzerceroj.numero";
-	$result2 = $bdd->query($query2);
+	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.respondo as bona_respondo,ekzerceroj.normaligita as normaligita_bona_respondo,respondoj.respondo,respondoj.normaligita as normaligita_lernanta_respondo,respondoj.gxusta,respondoj.korekto,ekzerceroj.poentoj,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=? and ekzerceroj.ekzerco_id=? order by ekzerceroj.numero";
+	$result2 = $bdd->prepare($query2);
+	$result2->execute(array($studanto_id,$ekzerco_id));
 	while ($row2=$result2->fetch()) {
 		$gxusta = $row2["gxusta"]==1;
 		if (!$gxusta) {
@@ -175,8 +179,9 @@ echo $komentario;
 
 <?php
 
-$query = "SELECT numero,kurso,titolo  FROM `personoj_lecionoj` join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id WHERE `persono_id` = ".$studanto_id." order by kurso,numero";
-$result = $bdd->query($query);
+$query = "SELECT numero,kurso,titolo  FROM `personoj_lecionoj` join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id WHERE `persono_id` = ? order by kurso,numero";
+$result = $bdd->prepare($query);
+$result->execute(array($studanto_id));
 while ($row=$result->fetch()) {
 	echo "<div class='collapsible-header'><a href='vidiLecionon.php?kurso=".$row["kurso"]."&numleciono=".$row["numero"]."&studanto=".$studanto_id."'>".$row["titolo"]."</a></div>\n";
 }

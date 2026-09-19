@@ -12,6 +12,14 @@ if ($persono_id=="") { // personne non connecté, on ressort
 	echo json_encode($respondo);
 	exit();
 }
+$korektanto = apartigiPersonon($persono_id);
+if (!$korektanto || ($korektanto["rajtoj"]!='A' && $korektanto["rajtoj"]!='K')) { // seuls les correcteurs et admins peuvent corriger
+	$respondo["type"]="droits";
+	$respondo["mesagxo"]="Droits insuffisants";
+	$respondo["url"]="index.php?erarkodo=4";
+	echo json_encode($respondo);
+	exit();
+}
 
 $korektado = array();
 
@@ -60,7 +68,8 @@ $requete->execute(array('enkonduko'=>$_POST['enkonduko'],'konkludo'=>$_POST['kon
 // envoyer le mail pour prévenir l'élève
 if (!$neSendiRetmesagxon) {
 	// on récupère son adresse email : 
-	$result = $bdd->query("select retadreso from personoj where id=".$studanto_id);
+	$result = $bdd->prepare("select retadreso from personoj where id=?");
+	$result->execute(array($studanto_id));
 	$retadresoStudanto = $result->fetch()["retadreso"];
 	$filename = "../mails/novakorektado.html";
 	$fd = fopen($filename, "r");

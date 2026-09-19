@@ -52,36 +52,29 @@ function fermiDatumbazon() {
 // Elirvaluo : id de la persono (unika nombro por retrovi iun)
 function kreiPersonon($enirnomo,$pasvorto,$retadreso,$aktivigo) {
     global $bdd;
-    $md5 = md5($pasvorto);
-     $query = "insert into personoj";
-     $query .="(enirnomo,pasvorto_md5,retadreso,aktivigo,ekdato) ";
-     $query .="values ('$enirnomo','$md5','$retadreso','$aktivigo',now())";
-     $bdd->exec($query);
-     return $bdd->lastInsertId();
+    $stmt = $bdd->prepare("insert into personoj (enirnomo,pasvorto_md5,retadreso,aktivigo,ekdato) values (?,?,?,?,now())");
+    $stmt->execute(array($enirnomo,md5($pasvorto),$retadreso,$aktivigo));
+    return $bdd->lastInsertId();
 }
 
 // variante de la version au dessus uniquement pour le cours
 function kreiPersononKurso($enirnomo,$pasvorto,$retadreso,$aktivigo) {
         global $bdd;
-     $query = "insert into personoj";
-     $query .="(enirnomo,pasvorto_md5,retadreso,aktivigo,ekdato,kurso) ";
-     $query .="values ('$enirnomo',md5('$pasvorto'),'$retadreso','$aktivigo',now(),'KE')";
-     $bdd->exec($query);
+     $stmt = $bdd->prepare("insert into personoj (enirnomo,pasvorto_md5,retadreso,aktivigo,ekdato,kurso) values (?,?,?,?,now(),'KE')");
+     $stmt->execute(array($enirnomo,md5($pasvorto),$retadreso,$aktivigo));
      return $bdd->lastInsertId();
 }
 
 function updateAktivigo($retadreso,$aktivigo) {
     global $bdd;
-     $query = "update personoj ";
-     $query .="set aktivigo='$aktivigo' where retadreso='$retadreso'";
-     $bdd->exec($query);
+     $stmt = $bdd->prepare("update personoj set aktivigo=? where retadreso=?");
+     $stmt->execute(array($aktivigo,$retadreso));
 }
 
 function updatePasvorton($retadreso,$pasvorto) {
     global $bdd;
-     $query = "update personoj ";
-     $query .="set pasvorto_md5=md5('$pasvorto') where retadreso='$retadreso'";
-     $bdd->exec($query);
+     $stmt = $bdd->prepare("update personoj set pasvorto_md5=? where retadreso=?");
+     $stmt->execute(array(md5($pasvorto),$retadreso));
 }
 
 // tiu funcio aldonas (aux sxangxas) informojn pri iu
@@ -126,9 +119,9 @@ function modifiPersonon ($id,$sekso,$familinomo,$personnomo,$adreso1,$adreso2,$p
 // elirvaluo : $persono : objekto
 function apartigiPersonon($id) {
 	global $bdd;
-	$query = "select * from personoj where id=".$id;
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
-	$persono = $result->fetch();
+	$stmt = $bdd->prepare("select * from personoj where id=?");
+	$stmt->execute(array((int)$id));
+	$persono = $stmt->fetch();
 	return $persono;
 }
 
@@ -266,8 +259,9 @@ function getKorektantonElLernanto($lernanto_id,$lernanto_kurso) {
 function getUrlVenontaLeciono($kurso,$nunleciono) {
     global $bdd;
     $prochaine_lecon = $nunleciono+1;
-    $demando2 = "select titolo,retpagxo from lecionoj where numero='".$prochaine_lecon."' and kurso='".$kurso."'";
-    $row2 = $bdd->query($demando2)->fetch();
+    $stmt2 = $bdd->prepare("select titolo,retpagxo from lecionoj where numero=? and kurso=?");
+    $stmt2->execute(array($prochaine_lecon,$kurso));
+    $row2 = $stmt2->fetch();
     return $row2["retpagxo"];
 }
 

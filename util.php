@@ -18,6 +18,11 @@ require('vendor/autoload.php');
 // attention, c'est aussi appelé dans "pagxkapo.inc.php"
 $url=isset($_SERVER['REQUEST_URI'])?strtok($_SERVER['REQUEST_URI'],'?'):"";
 
+// renvoie $pagxo si c'est une page locale simple (ex: "administri.php?celpersono_id=5"), sinon $defaut
+function pagxoLokalaSekura($pagxo,$defaut) {
+	return preg_match('/^[A-Za-z0-9_\-]+\.php(\?[A-Za-z0-9_=&%.\-]*)?$/',(string)$pagxo) ? $pagxo : $defaut;
+}
+
 // tiu funkcio kontrolas, cxu adreso validas kaj ekzistas
 function checkEmail($email)
 {

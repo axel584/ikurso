@@ -12,9 +12,10 @@ function displayWarningSiLecioneroManquante($persono_id,$kurso,$leciono,$lecione
 	if ($persono_id==null) {
 		return;
 	}
-	$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id,lecioneroj.dauxro  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=".$persono_id." WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and ordo<".$lecionero." order by ordo";
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
-	$enTete = false; 
+	$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id,lecioneroj.dauxro  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=? WHERE lecionoj.numero=? and lecionoj.kurso=? and ordo<? order by ordo";
+	$result = $bdd->prepare($query);
+	$result->execute(array($persono_id,$leciono,$kurso,$lecionero));
+	$enTete = false;
 	$nbLecioneroManquante = 0;
 	while ($row = $result->fetch()) {
 		if ($row["persono_id"]==null) {
@@ -35,8 +36,8 @@ function displayWarningSiLecioneroManquante($persono_id,$kurso,$leciono,$lecione
 
 function displayLecionoEnhavo($kurso,$leciono,$lecionero) {
 	global $bdd;
-	$query = "SELECT enhavo  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and ordo=".$lecionero;
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$result = $bdd->prepare("SELECT enhavo  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.numero=? and lecionoj.kurso=? and ordo=?");
+	$result->execute(array($leciono,$kurso,$lecionero));
 	$row = $result->fetch();
 	echo $row["enhavo"];
 
@@ -44,8 +45,8 @@ function displayLecionoEnhavo($kurso,$leciono,$lecionero) {
 
 function getTitoloLecionero($kurso,$leciono,$lecionero) {
 	global $bdd;
-	$query = "SELECT lecioneroj.titolo,lecioneroj.dauxro FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero;
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$result = $bdd->prepare("SELECT lecioneroj.titolo,lecioneroj.dauxro FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? and lecioneroj.ordo=?");
+	$result->execute(array($leciono,$kurso,$lecionero));
 	$row = $result->fetch();
 	$titolo = $row['titolo'];
 	$dauxro = $row['dauxro'];
@@ -61,8 +62,8 @@ function getTitoloLecionero($kurso,$leciono,$lecionero) {
 
 function getTipoLecionero($kurso,$leciono,$lecionero) {
 	global $bdd;
-	$query = "SELECT lecioneroj.titolo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero;
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$result = $bdd->prepare("SELECT lecioneroj.titolo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? and lecioneroj.ordo=?");
+	$result->execute(array($leciono,$kurso,$lecionero));
 	$tipo = $result->fetch()['tipo'];
 	return($tipo);
 }
@@ -73,15 +74,18 @@ function getEnhavtabelo($kurso,$leciono,$chemin='') {
 		return;
 	}
 	if ($persono_id=="") { // Pas connecté : on récupère le sommaire normal
-			$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id,lecioneroj.dauxro,lecionoj.id as leciono_id FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
+			$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id,lecioneroj.dauxro,lecionoj.id as leciono_id FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? order by ordo";
+			$params = array($leciono,$kurso);
 	} else { // connecté, on récupère la liste des leçons effectuées
-		$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id,lecioneroj.dauxro,lecionoj.id as leciono_id  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=".$persono_id." WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."'  order by ordo";
+		$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id,lecioneroj.dauxro,lecionoj.id as leciono_id  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=? WHERE lecionoj.numero=? and lecionoj.kurso=?  order by ordo";
+		$params = array($persono_id,$leciono,$kurso);
 	}
 	echo '<li class="active">';
 	echo '<div class="collapsible-header"><i class="material-icons">toc</i>Sommaire de la leçon</div>';
 	echo '<div class="collapsible-body">';
 	echo '<ul id="enhavtabelo" class="collection">';
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$result = $bdd->prepare($query);
+	$result->execute($params);
 	$max_ordo = 0;
 	$leciono_id = 0;
 	while ($row = $result->fetch()) {
@@ -115,7 +119,8 @@ function getEnhavtabelo($kurso,$leciono,$chemin='') {
 	// on teste s'il existe une leçon corrigée
 	if ($persono_id) {
 		$max_ordo = $max_ordo +1;
-		$result = $bdd->query("select numero,kurso  from personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where korektita = 1 and persono_id='".$persono_id."' and leciono_id='".$leciono_id."'") or die(print_r($bdd->errorInfo()));
+		$result = $bdd->prepare("select numero,kurso  from personoj_lecionoj join lecionoj on lecionoj.id=personoj_lecionoj.leciono_id where korektita = 1 and persono_id=? and leciono_id=?");
+		$result->execute(array($persono_id,$leciono_id));
 		while ($row = $result->fetch()) {
 			if ($chemin=='') { // si on a indiqué un chemin pour afficher le sommaire, c'est qu'on l'affiche depuis la page vidiLecionon
 				echo "<li class='korektado'><a href='../../vidiLecionon.php?kurso=".$row['kurso']."&numleciono=".$row['numero']."'>".$row['numero'].".".$max_ordo." Correction de la leçon</a></li>";
@@ -132,9 +137,8 @@ function getEnhavtabelo($kurso,$leciono,$chemin='') {
 
 function getLecionoEnhavo($kurso,$leciono) {
 	global $bdd;
-	$query = "SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
-
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$result = $bdd->prepare("SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? order by ordo");
+	$result->execute(array($leciono,$kurso));
 	while ($row = $result->fetch()) {
 		echo '<li id="'.$leciono.'-'.$row['ordo'].' '.$tipoLecionero.'"><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a></li>';
 	}
@@ -147,8 +151,9 @@ function getFaritajLecioneroj($kurso,$leciono,$persono_id) {
 	if ($persono_id=="") { // Pas connecté
 		return;
 	}
-	$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecionoj.retpagxo,personoj_lecioneroj.persono_id  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id WHERE lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' order by ordo";
-	$result = $bdd->query($query);
+	$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecionoj.retpagxo,personoj_lecioneroj.persono_id  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id WHERE lecionoj.numero=? and lecionoj.kurso=? order by ordo";
+	$result = $bdd->prepare($query);
+	$result->execute(array($leciono,$kurso));
 	echo '<ul id="progreso">';
 	while ($row = $result->fetch()) {
 		if ($row["persono_id"]==null) { // l'élève n'a pas fait cette section
@@ -163,8 +168,8 @@ function getFaritajLecioneroj($kurso,$leciono,$persono_id) {
 
 function getLecioneroAntauxa($kurso,$leciono,$lecionero) {
 	global $bdd;
-	$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo<".$lecionero." order by ordo DESC";
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$result = $bdd->prepare("SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? and lecioneroj.ordo<? order by ordo DESC");
+	$result->execute(array($leciono,$kurso,$lecionero));
 	$row = $result->fetch();
 	if ($row!=false) {
 		echo '<a href="'.$row['retpagxo'].'?section='.$row['ordo'].'" class="btn-flat small blue-text"><i class="material-icons left">arrow_left</i>'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a>';
@@ -176,8 +181,8 @@ function getLecioneroAntauxa($kurso,$leciono,$lecionero) {
 
 function getLecioneroVenonta($kurso,$leciono,$lecionero) {
 	global $bdd;
-	$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo>".$lecionero." order by ordo ASC";
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$result = $bdd->prepare("SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? and lecioneroj.ordo>? order by ordo ASC");
+	$result->execute(array($leciono,$kurso,$lecionero));
 	$row = $result->fetch();
 	if ($row!=false) {
 		echo '<a href="'.$row['retpagxo'].'?section='.$row['ordo'].'" class="btn-flat small blue-text">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'<i class="material-icons right">arrow_right</i></a>';
@@ -186,9 +191,8 @@ function getLecioneroVenonta($kurso,$leciono,$lecionero) {
 
 function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	global $bdd;
-	$query="SELECT lecioneroj.id,lecioneroj.titolo,ordo,lecionoj.retpagxo,lecioneroj.tipo,lecioneroj.lasta FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=".$leciono." and lecionoj.kurso='".$kurso."' and lecioneroj.ordo=".$lecionero." order by ordo ASC";
-	//echo $query;
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$result = $bdd->prepare("SELECT lecioneroj.id,lecioneroj.titolo,ordo,lecionoj.retpagxo,lecioneroj.tipo,lecioneroj.lasta FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? and lecioneroj.ordo=? order by ordo ASC");
+	$result->execute(array($leciono,$kurso,$lecionero));
 	$row = $result->fetch();
 	$tipo = $row["tipo"];
 	$lasta = $row["lasta"];
@@ -200,8 +204,8 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 
 		if (($persono['rajtoj']=="S")||($persono['rajtoj']=="P")) {
 			// on vérifie si l'élève a déjà fait cette leçon pour n'afficher le bouton que si il n'a pas déjà cliqué sur le bouton :
-			$query = "select count(*) as combien from personoj_lecioneroj where persono_id=".$persono_id." and lecionero_id=".$lecionero_id;
-			$result = $bdd->query($query);
+			$result = $bdd->prepare("select count(*) as combien from personoj_lecioneroj where persono_id=? and lecionero_id=?");
+			$result->execute(array($persono_id,$lecionero_id));
 			$leconEnCours = $result->fetch()["combien"];
 			if ($leconEnCours>0) {
 				$classeDejaFait="disabled";
@@ -209,8 +213,8 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 				$classeDejaFait="";
 			}
 			// on vérifie si l'élève a déjà un correcteur :
-			$query = "select count(*) as combien from nuna_kurso where kurso='".$kurso."' and studanto=".$persono_id;
-			$result = $bdd->query($query);
+			$result = $bdd->prepare("select count(*) as combien from nuna_kurso where kurso=? and studanto=?");
+			$result->execute(array($kurso,$persono_id));
 			$dejaFait = $result->fetch()["combien"];
 			if($tipo=="QCM") { // on vérifie le QCM 
 				echo '<a id="finiLecioneron_button" class="hide waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
@@ -238,8 +242,8 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 	} else {
 		$idenfication =True;
 	}
-	$queryEkzerco = "SELECT komando,komando_detalo,ekzemplo,typo,x2u,korektebla FROM `ekzercoj` where id=".$id;
-	$resultEkzerco = $bdd->query($queryEkzerco) or die(print_r($bdd->errorInfo()));
+	$resultEkzerco = $bdd->prepare("SELECT komando,komando_detalo,ekzemplo,typo,x2u,korektebla FROM `ekzercoj` where id=?");
+	$resultEkzerco->execute(array($id));
 	$rowEkzerco = $resultEkzerco->fetch();
 	echo "<fieldset class='ekzerco'>";
 	echo "<legend><strong>";
@@ -285,8 +289,8 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 
 	echo "<div class='tasko'>";
 	echo "<div class='row'>";
-	$queryEkzercero = "SELECT id,numero,demando,respondmodelo,korektebla,bildo,poentoj FROM `ekzerceroj` where ekzerco_id=".$id." and forigita=0 order by numero";
-	$resultEkzercero = $bdd->query($queryEkzercero) or die(print_r($bdd->errorInfo()));
+	$resultEkzercero = $bdd->prepare("SELECT id,numero,demando,respondmodelo,korektebla,bildo,poentoj FROM `ekzerceroj` where ekzerco_id=? and forigita=0 order by numero");
+	$resultEkzercero->execute(array($id));
 	while ($rowEkzercero = $resultEkzercero->fetch()) {
 		$iconprefix="";
 		$respondo = $rowEkzercero["respondmodelo"];
@@ -295,8 +299,8 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 		$warningNonConnecte = ($idenfication==False)?" READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'":"";
 		if ($idenfication) {
 			// afficher ici le contenu de la base pour cet élève
-			$queryRespondo = "select id,respondo,korekto,gxusta from respondoj where ekzercero_id=".$rowEkzercero["id"]." and persono_id=".$persono_id;
-			$resultRespondo = $bdd->query($queryRespondo) or die(print_r($bdd->errorInfo()));
+			$resultRespondo = $bdd->prepare("select id,respondo,korekto,gxusta from respondoj where ekzercero_id=? and persono_id=?");
+			$resultRespondo->execute(array($rowEkzercero["id"],$persono_id));
 			$rowRespondo = $resultRespondo->fetch();
 			if ($rowRespondo["respondo"]!=null) {
 				$respondo= $rowRespondo["respondo"];
@@ -541,8 +545,9 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 			$indiceQuestion= 1;
 			
 			// on récupère les réponses en base
-			$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,respondoj.korekto,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=".$persono_id." and lecionoj.numero=".$leciono." and kurso='".$kurso."' order by ekzerceroj.numero";
-			$result = $bdd->query($query);
+			$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,respondoj.korekto,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=? and lecionoj.numero=? and kurso=? order by ekzerceroj.numero";
+			$result = $bdd->prepare($query);
+			$result->execute(array($persono_id,$leciono,$kurso));
 			echo "<ul class='collection'>";
 			$lastKomando = "";
 			while ($row=$result->fetch()) {
@@ -617,8 +622,8 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 			echo "<li id='intro' class='farita'><a href='".$chemin."antauxklarigo.php'>enkonduko</a></li>";
 		}
 	}
-	$query = "select * from lecionoj where kurso='".$kurso."' order by numero";
-	$res = $bdd->query($query);
+	$res = $bdd->prepare("select * from lecionoj where kurso=? order by numero");
+	$res->execute(array($kurso));
 	while ($row = $res->fetch()) {
 		// leçon en cours :
 		if ($leciono==$row["numero"]) {
@@ -723,9 +728,9 @@ function ekzercoMemkorektita($convert,$strukturo) {
 
 function menuDeroulantChoixProposition($kodo,$lecionero_id,$persono_id) {
 	global $bdd;
-	$query = "SELECT persono_id,enirnomo FROM `respondoj` join personoj on personoj.id=respondoj.persono_id WHERE kodo='".$kodo."' and lecionero_id=".$lecionero_id." and persono_id<>'".$persono_id."' order by dato";
 	echo "<br/>";
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$result = $bdd->prepare("SELECT persono_id,enirnomo FROM `respondoj` join personoj on personoj.id=respondoj.persono_id WHERE kodo=? and lecionero_id=? and persono_id<>? order by dato");
+	$result->execute(array($kodo,$lecionero_id,$persono_id));
 	$i=1;
 	echo "<select name='ElektitaRespondo'>";
 	echo "<option>Elektu nomon de lernanto :";
@@ -741,7 +746,7 @@ function kiomVortojPorMemori($persono_id) {
 	global $bdd;
 	if ($persono_id=="") {return;}
 	// on compte pour savoir si on a 10 cartes ou moins
-	$query= "SELECT count(*) as combien FROM `personoj_vortoj` WHERE persono_id=".$persono_id." and venontaFojo<=NOW()";
+	$query= "SELECT count(*) as combien FROM `personoj_vortoj` WHERE persono_id=".(int)$persono_id." and venontaFojo<=NOW()";
 	$combien = $bdd->query($query)->fetch()["combien"];
 	return $combien;
 }
@@ -749,7 +754,7 @@ function kiomVortojPorMemori($persono_id) {
 function kiomVortojPorMemoriMorgau($persono_id) {
 	global $bdd;
 	// on compte pour savoir si on a 10 cartes ou moins
-	$query= "SELECT count(*) as combien FROM `personoj_vortoj` WHERE persono_id=".$persono_id." and venontaFojo<=ADDDATE(NOW(),1)";
+	$query= "SELECT count(*) as combien FROM `personoj_vortoj` WHERE persono_id=".(int)$persono_id." and venontaFojo<=ADDDATE(NOW(),1)";
 	//echo $query;
 	$combien = $bdd->query($query)->fetch()["combien"];
 	return $combien;
@@ -784,7 +789,7 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 	$combien = kiomVortojPorMemori($persono_id);
 	if ($combien>0)
 	{
-		$query= "SELECT vortoj.id,eo,fr,tipo FROM `personoj_vortoj` join vortoj on personoj_vortoj.vorto_id=vortoj.id WHERE persono_id=".$persono_id." and venontaFojo<=NOW() order by RAND()";
+		$query= "SELECT vortoj.id,eo,fr,tipo FROM `personoj_vortoj` join vortoj on personoj_vortoj.vorto_id=vortoj.id WHERE persono_id=".(int)$persono_id." and venontaFojo<=NOW() order by RAND()";
 		$res = $bdd->query($query);
 		$indice = 1;		
 		echo "<div class='memorilo' id='carousel_qcm'>";
@@ -836,12 +841,16 @@ function pubPPP() {
 }
 function vortlisto($persono_id,$kurso,$pattern) {
 	global $bdd;
-	$query = "SELECT eo,fr,vortoj.tipo,lecionoj.numero,lecioneroj.ordo FROM vortoj join lecioneroj on vortoj.lecionero_id=lecioneroj.id join lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso='".$kurso."'";
+	$query = "SELECT eo,fr,vortoj.tipo,lecionoj.numero,lecioneroj.ordo FROM vortoj join lecioneroj on vortoj.lecionero_id=lecioneroj.id join lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso=?";
+	$params = array($kurso);
 	if ($pattern!="") {
-		$query .= " and (eo like '".addslashes($pattern)."%' or fr like '".addslashes($pattern)."%') ";
+		$query .= " and (eo like ? or fr like ?) ";
+		$params[] = $pattern."%";
+		$params[] = $pattern."%";
 	}
 	$query .= " order by eo";
-	$res = $bdd->query($query);
+	$res = $bdd->prepare($query);
+	$res->execute($params);
 	echo "<div class='vortlisto' id='vortlisto'>";
 	echo "<div class='lexique'>";
 	$i=0;
@@ -865,21 +874,27 @@ function vortlisto($persono_id,$kurso,$pattern) {
 function listi_protokolo($nb_max_ligne,$debut = "",$fin = "",$persono = "",$type = "") {
 	global $bdd;
         $demando = "select * from protokolo where 1=1";
+        $params = array();
         if ($debut!="") {
-        	$demando .= " and horo>'".$debut."'";
+        	$demando .= " and horo>?";
+        	$params[] = $debut;
         }
         if ($fin!="") {
-        	$demando .= " and horo<='".$fin."'";
+        	$demando .= " and horo<=?";
+        	$params[] = $fin;
         }
         if ($persono!="") {
-        	$demando .= " and persono_id='".$persono."'";
+        	$demando .= " and persono_id=?";
+        	$params[] = $persono;
         }
         if ($type!="") {
-        	$demando .= " and kategorio='".$type."'";
+        	$demando .= " and kategorio=?";
+        	$params[] = $type;
         }
         $demando .= " order by horo DESC ";
-		$demando .= " limit ".$nb_max_ligne;
-		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
+		$demando .= " limit ".(int)$nb_max_ligne;
+		$result = $bdd->prepare($demando);
+		$result->execute($params);
         echo "<table class='striped'>\n<thead>\n<tr>\n<td>Date</td>\n<td>Personne</td>\n<td>Type</td><td>Message</td>\n</tr>\n</thead>\n<tbody>";
         $i=0;
         while ($row=$result->fetch()) {
@@ -907,12 +922,12 @@ function listi_plejBonajKorektantoj() {
 	echo "<th>Ont abandonné</th><th>A fini</th><th>% réussite</th></tr></thead><tbody>";
 	while ($row=$result->fetch()) {
 		$nomo_korektantoj[$row["id"]]=$row["enirnomo"];
-		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='F'";
+		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".(int)$row["id"]." and stato='F'";
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		$row2=$result2->fetch();
 		$listo_f[$row["id"]]=$row2["sumo"];
 
-		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='H'";
+		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".(int)$row["id"]." and stato='H'";
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		$row2=$result2->fetch();
 		$listo_h[$row["id"]]=$row2["sumo"];
@@ -943,18 +958,20 @@ function listi_plejBonajKorektantoj() {
 
 function listi_plejBonajKorektantojLauxMonato($mois,$annee) {
 	global $bdd;
+	$mois = preg_replace('/[^0-9]/','',$mois);
+	$annee = preg_replace('/[^0-9]/','',$annee);
 	$demando = "select * from personoj where (rajtoj='K' or rajtoj='A')";
 	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
 	echo "<table class='striped'><thead><tr><th>Kiu ?</th>";
 	echo "<th>A abandonné</th><th>A fini</th><th>% réussite</th></tr></thead><tbody>";
 	while ($row=$result->fetch()) {
 		$nomo_korektantoj[$row["id"]]=$row["enirnomo"];
-		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='F' and findato like '".$annee."-".$mois."%'";
+		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".(int)$row["id"]." and stato='F' and findato like '".$annee."-".$mois."%'";
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		$row2=$result2->fetch();
 		$listo_f[$row["id"]]=$row2["sumo"];
 
-		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".$row["id"]." and stato='H' and findato like '".$annee."-".$mois."%'";
+		$demando2 = "select count(*) as sumo from nuna_kurso where korektanto=".(int)$row["id"]." and stato='H' and findato like '".$annee."-".$mois."%'";
 		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
 		$row2=$result2->fetch();
 		$listo_h[$row["id"]]=$row2["sumo"];
@@ -1028,7 +1045,7 @@ function listi_tableauHonneur($type,$persono_id) {
 function statMotsParForce($persono_id) {
 	global $bdd;
 	$resultat = array();
-	$query = "SELECT nombrilo  ,count(*) as total FROM personoj_vortoj WHERE persono_id='".$persono_id."' group by nombrilo order by nombrilo";
+	$query = "SELECT nombrilo  ,count(*) as total FROM personoj_vortoj WHERE persono_id='".(int)$persono_id."' group by nombrilo order by nombrilo";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	while ($row=$result->fetch()) {
 		if ($row["nombrilo"]==1) {
@@ -1053,8 +1070,11 @@ function statMotsParForce($persono_id) {
 
 function statEvolution($persono_id,$nbjours,$nbeleves) {
 	global $bdd;
+	$persono_id = (int)$persono_id;
+	$nbjours = (int)$nbjours;
+	$nbeleves = (int)$nbeleves;
 	// on regarde la dernière leçon faite
-	$query = "SELECT personoj_lecioneroj.lecionero_id,lecionoj.kurso FROM personoj_lecioneroj join lecioneroj on lecioneroj.id=personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id  WHERE personoj_lecioneroj.persono_id=".$persono_id." order by dato desc limit 1";
+	$query = "SELECT personoj_lecioneroj.lecionero_id,lecionoj.kurso FROM personoj_lecioneroj join lecioneroj on lecioneroj.id=personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id  WHERE personoj_lecioneroj.persono_id=".(int)$persono_id." order by dato desc limit 1";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$row = $result->fetch();
 	$derniereSection = $row["lecionero_id"];

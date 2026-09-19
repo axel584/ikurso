@@ -15,9 +15,9 @@ $pasvorto=isset($_POST['pasvorto'])?stripslashes($_POST['pasvorto']):"";
 
 $respondo = array();
 
-$query = "select id,aktivigita,pasvorto_md5,enirnomo,rajtoj from personoj where enirnomo='".$identigilo."'";
-$result = $bdd->query($query);
-if (!$row = $result->fetch()) { // aucune ligne retournée
+$stmt = $bdd->prepare("select id,aktivigita,pasvorto_md5,enirnomo,rajtoj from personoj where enirnomo=?");
+$stmt->execute(array($identigilo));
+if (!$row = $stmt->fetch()) { // aucune ligne retournée
 	$respondo["mesagxo"]="Identifiant introuvable, cliquez sur le bouton S'INSCRIRE GRATUITEMENT";
 	$respondo["type"]="identigilo";
 }
@@ -43,7 +43,8 @@ else {
 
 }
 
-// jwt 
+// jwt : uniquement si l'authentification a réussi
+if ($respondo["mesagxo"]=="ok") {
 // Header de token JWT
 $header = array(
     "alg" => "HS256",
@@ -79,7 +80,8 @@ $jwt = $jwtBody . "." . $encodedSignature;
 // On stocke le jeton JWT en session
 //$_SESSION["access_token"]=$jwt;
 $respondo["access_token"]=$jwt;
-setcookie("access_token", $jwt, time()+(86400*365), '/', $cookieDomain, true); 
+setcookie("access_token", $jwt, time()+(86400*365), '/', $cookieDomain, true);
+}
 
 echo json_encode($respondo);
 ?>

@@ -1,3 +1,3 @@
 <?php 
-	header("Location:intro.php");
+	header("Location:intro.php"); exit;
 ?>

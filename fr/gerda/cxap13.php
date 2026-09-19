@@ -3,7 +3,7 @@ $titolo="13 (dek tri)";
 $leciono = 13;
 $section=isset($_GET["section"])?htmlspecialchars($_GET["section"]):"1";
 if (!is_numeric($section)) {
-	if ($persono_id=="") {header("Location:../../index.php?erarkodo=24");}
+	if ($persono_id=="") {header("Location:../../index.php?erarkodo=24"); exit;}
 }
 include "gerdakapo.inc.php";
 ?>

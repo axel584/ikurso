@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require("db.inc.php");
 $teksto=$_POST['teksto'];
 $stud_id=$_POST['stud_id'];
@@ -9,6 +9,6 @@ if ($teksto!=""){
 	mysql_select_db( "ikurso");
 	$result = mysql_query($demando) or die (  "INSERT : Invalid query :".$demando);
 }
-header("Location:miajlernantoj.php");
+header("Location:miajlernantoj.php"); exit;
 ?>
                     

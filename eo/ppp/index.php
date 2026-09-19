@@ -1,3 +1,3 @@
 <?php 
-	header("Location:antauxklarigo.php");
+	header("Location:antauxklarigo.php"); exit;
 ?>

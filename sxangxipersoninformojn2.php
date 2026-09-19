@@ -28,7 +28,7 @@ if (count($elementsNaskigxdato)==3) {
 	$form_naskigxdato_jaro="";
 }
 
-if ($persono_id=="") {header("Location:index.php?erarkodo=4");} else {
+if ($persono_id=="") {header("Location:index.php?erarkodo=4"); exit;} else {
 	// on verifie les différences pour enregistrer dans le protokolo les changements
 	if ($persono['sekso']!=$form_sekso) {
 		$teksto.="sekso: malnova:".$persono['sekso']." - nova : ".$form_sekso."\n";
@@ -77,7 +77,7 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=4");} else {
     $sympa->unsubscribe($persono_retadreso);
   }
 
-  header("Location:personinformoj.php?erarkodo=20"); // l'erarkodo à 20 permet d'afficher un toast pour confirmer l'enregistrement des données
+  header("Location:personinformoj.php?erarkodo=20"); exit; // l'erarkodo à 20 permet d'afficher un toast pour confirmer l'enregistrement des données
   
 }
 ?>          

@@ -1,9 +1,9 @@
 <?php
 include "util.php";
 $pagxtitolo="Modifier le nombre d’élèves";
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
-if (($rajto!='A')&&($rajto!='K')) {header("Location:index.php?erarkodo=4");}
+if (($rajto!='A')&&($rajto!='K')) {header("Location:index.php?erarkodo=4"); exit;}
 $farite=isset($_GET["farite"])?$_GET["farite"]:"";
 
 function NbStudantojn() {

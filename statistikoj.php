@@ -1,9 +1,9 @@
- <?php
+<?php
 include "util.php";
 $pagxtitolo="Données personnelles";
 $korpo="informoj";
 $persono_id=$_SESSION["persono_id"];
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 $nbjours=isset($_GET['nbjours'])?$_GET['nbjours']:"12";
 $nbeleves=isset($_GET['nbeleves'])?$_GET['nbeleves']:"5";

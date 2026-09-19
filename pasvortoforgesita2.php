@@ -7,7 +7,7 @@ $stmt = $bdd->prepare("select enirnomo,pasvorto,id from personoj where retadreso
 $stmt->execute([$retadreso]);
 $result = $stmt;
 if (!$row = $result->fetch()) { // aucune ligne retournée
-	header("Location:pasvortoforgesita.php?erarkodo=10");
+	header("Location:pasvortoforgesita.php?erarkodo=10"); exit;
 }
 else {
 	// sendi mesagxon kun la forgesita pasvorto

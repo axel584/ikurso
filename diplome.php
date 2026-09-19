@@ -8,12 +8,12 @@ if ($clef!="") {
 	$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 }
 
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 if ($kurso=="" || ($kurso!="CG" && $kurso!="GR" && $kurso!="KE" && $kurso!="PP")) {
 	// Cours inconnu 
-	header("Location:personinformoj.php?erarkodo=17");
+	header("Location:personinformoj.php?erarkodo=17"); exit;
 }
 switch ($kurso) {
 	case "CG" : $urlCours = $urlracine."fr/cge/lec01.php";
@@ -38,7 +38,7 @@ if ($clef!="") {
 $infos = getInfoPorDiplomoElLernanto($persono_id,$kurso);
 if ($infos==null) {
 	// on n'a pas trouvé de cours finis pour cet élève (tentative de fraude ?)
-	header("Location:personinformoj.php?erarkodo=17");	
+	header("Location:personinformoj.php?erarkodo=17"); exit;	
 }
 
 // si on a un nom de famille ou un prénom on l'utilise pour afficher sur le diplome, sinon on prend l'identifiant

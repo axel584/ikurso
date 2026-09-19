@@ -123,6 +123,6 @@ if ($row['korektanto']!="") {
 
 	}
 }
-header("Location:administri.php?celpersono_id=$celpersono_id&validi=jes");
+header("Location:administri.php?celpersono_id=$celpersono_id&validi=jes"); exit;
 
 ?>

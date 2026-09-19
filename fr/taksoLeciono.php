@@ -25,5 +25,5 @@ $stmt->execute();
 protokolo($persono_id,"EVALUATION LECON","Evaluation de la leçon :".$leciono." (".$intereso."/".$malfacileco.") : ".$komento);
 // 3 : on récupère la prochaine leçon avec idéalement une pop-up de remerciement
 $prefixe_url = getPrefixeCours($kurso);
-header("location:../".$prefixe_url.getUrlVenontaLeciono($kurso,$leciono)."?erarkodo=14"); // le erarkodo à 14 c'est pour afficher un message de remerciement
+header("location:../".$prefixe_url.getUrlVenontaLeciono($kurso,$leciono)."?erarkodo=14"); exit; // le erarkodo à 14 c'est pour afficher un message de remerciement
 ?>

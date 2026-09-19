@@ -9,5 +9,5 @@ foreach ($_POST as $kurso => $kiom){
 	$teksto.=$kurso."=".$kiom." ";
 }
 protokolo($persono_id,"UPDATE PERSO",$teksto);
-header("Location:sxangxiNBlernantoj.php?farite=jes");
+header("Location:sxangxiNBlernantoj.php?farite=jes"); exit;
 ?>                    

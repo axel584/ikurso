@@ -32,7 +32,7 @@ if (($celpersono_id!="") && ($validperson==$celpersono["enirnomo"])) {
 	$stmt->execute([$celpersono_id]);
 	$stmt = $bdd->prepare("delete from personoj_vortoj_respondoj where persono_id=?");
 	$stmt->execute([$celpersono_id]);
-	header("Location:administri.php?validi=jes");
+	header("Location:administri.php?validi=jes"); exit;
 }
 header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 header("Pragma: no-cache"); // HTTP/1.0

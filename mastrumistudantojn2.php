@@ -76,6 +76,6 @@ $query="select stato,nunleciono from nuna_kurso where id=".$rezultoj[1];
                 $result = mysql_query($query) or die ( "UPDATE : Invalid query :".$query);
         }
 }
-header("Location:mastrumistudantojn.php?validi=jes");
+header("Location:mastrumistudantojn.php?validi=jes"); exit;
 ?>
                     

@@ -30,10 +30,10 @@ if (($retadreso=="") || ($enirnomo=="") || ($pasvorto=="")) {
 	if ($row) { // cas où on a un résultat
 		if ($retadreso==$row["retadreso"]) { // une inscription existe deja avec le meme identifiant et le meme email
 			// alors on se connecte avec l'identifiant et le mot de passe envoye
-			header("Location:eniri.php?enirnomo=".$enirnomo."&pasvorto=".$pasvorto);
+			header("Location:eniri.php?enirnomo=".$enirnomo."&pasvorto=".$pasvorto); exit;
 		} else {
 			// session_register("aligxilo");
-			header("Location:aligxi.php?erarkodo=7");
+			header("Location:aligxi.php?erarkodo=7"); exit;
 		}
 	} else { // cas où on n'a pas cet identifiant/mot de passe en base
 		$filename = "mails/aligxi".$kurso."FR.html";
@@ -102,7 +102,7 @@ if (($retadreso=="") || ($enirnomo=="") || ($pasvorto=="")) {
 			//on ne créer pas d'utilisateur phpbb pour le moment
 			//phpbb_create_user($nova_persono_id,$enirnomo,$pasvorto,$retadreso,$lingvo,$urbo);
 			$_SESSION["persono_id"]=$persono_id;
-			header("Location:atendiKorektanton.php");
+			header("Location:atendiKorektanton.php"); exit;
 	}
 }
 ?>               

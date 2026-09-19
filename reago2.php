@@ -77,13 +77,13 @@ if (checkEmail($_POST['sendinto'])) {
 		//session_register("reago"); // fonction inutile ?
 		$_SESSION["sendinto"]=$_POST['sendinto'];
 		$_SESSION["temo"]=$_POST['temo'];
-		header("Location:reago.php?erarkodo=16");
+		header("Location:reago.php?erarkodo=16"); exit;
 	}	
 } else {
 	//session_register("reago"); // fonction inutile ?
 	$_SESSION["sendinto"]="";
 	$_SESSION["komento"]=$_POST['komento'];
 	$_SESSION["temo"]=$_POST['temo'];
-	header("Location:reago.php?erarkodo=15");
+	header("Location:reago.php?erarkodo=15"); exit;
 }
 ?>

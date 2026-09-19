@@ -7,7 +7,7 @@ $korpo="informo";
 include "dlekkapo.inc.php";
 if ($persono_id=="") {
 	// si la personne n'a pas de session, on la renvoie vers la page d'accueil pour éviter les spams sur le formulaire
-	header("Location:index.php?erarkodo=8");
+	header("Location:index.php?erarkodo=8"); exit;
 }
 ?>
 <!-- ATTENTION VERRUE DE PROGRAMMATION -->

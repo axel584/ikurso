@@ -2,9 +2,9 @@
 include "util.php";
 $pagxtitolo="Résultat de la recherche";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
-if ($rajto!='A') {header("Location:index.php?erarkodo=4");}
+if ($rajto!='A') {header("Location:index.php?erarkodo=4"); exit;}
 $personnomo=isset($_POST["personnomo"])?$_POST["personnomo"]:"";
 $familinomo=isset($_POST["familinomo"])?$_POST["familinomo"]:"";
 $celenirnomo=isset($_POST["celenirnomo"])?$_POST["celenirnomo"]:"";

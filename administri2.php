@@ -135,5 +135,5 @@ if ($celpersono["kurso"]!=$kurso) {
    $stmt->execute([$kurso, $celpersono_id]);
 }
 
-header("Location:administri.php?celpersono_id=$celpersono_id&validi=jes");
+header("Location:administri.php?celpersono_id=$celpersono_id&validi=jes"); exit;
 ?>                        

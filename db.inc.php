@@ -374,18 +374,19 @@ function redirigeSectionParUtilisateur($persono) {
 // cette fonction prends un utilisateur et fait des redirection en fonction du statut de la personne
 function redirigeParDroits($persono) {
     global $bdd;
+    $cible = null;
     if ($persono['rajtoj']=='A') { // administrateur
-        header("Location:administri.php");
+        $cible = ("Location:administri.php");
     }
     if ($persono['rajtoj']=='K') { // correcteurs
-        header("Location:miajlernantoj.php");
+        $cible = ("Location:miajlernantoj.php");
     }
     if ($persono['rajtoj']=='P') {
         $redirection = redirigeSectionParUtilisateur($persono["id"]);
         if ($redirection==null) {
-            header("location:fr/cge/intro.php"); // pour les nouveaux élèves retourne sur la première page du cours ?
+            $cible = ("location:fr/cge/intro.php"); // pour les nouveaux élèves retourne sur la première page du cours ?
         } else {
-            header("location:".$redirection);
+            $cible = ("location:".$redirection);
         }
     }
     if ($persono['rajtoj']=='S') { // nouveaux élèves ou élève qui suivent déjà un cours
@@ -393,10 +394,10 @@ function redirigeParDroits($persono) {
         $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
         $row = $result->fetch();
         if ($row==null) {
-            header("location:personinformoj.php");
+            $cible = ("location:personinformoj.php");
         }
         if ($row["kurso"]=="KE") {
-            header("location:personinformoj.php");
+            $cible = ("location:personinformoj.php");
         }
         if ($row['kurso']=="GR") {
             $prefixe_url ='fr/gerda/';
@@ -410,21 +411,22 @@ function redirigeParDroits($persono) {
         if ($row["stato"]=="N") { // cas des élèves pas encore commencé
             $demando2 = "select titolo,retpagxo from lecionoj where numero='1' and kurso='".$row["kurso"]."'";
             $row2 = $bdd->query($demando2)->fetch();
-            header("location:".$prefixe_url.$row2['retpagxo']);
+            $cible = ("location:".$prefixe_url.$row2['retpagxo']);
         }
         if ($row["stato"]=="K") { // cas des élèves en cours
             $redirection=redirigeSectionParUtilisateur($persono["id"]);
             if ($redirection==null) { // soit on n'a aucune section de cochée, soit on est sur la dernière section d'une leçon
-                header("location:".$prefixe_url.getUrlVenontaLeciono($row["kurso"],$row["nunleciono"]));
+                $cible = ("location:".$prefixe_url.getUrlVenontaLeciono($row["kurso"],$row["nunleciono"]));
             } else {
-                header("location:".$redirection);
+                $cible = ("location:".$redirection);
             }
         }
         if ($row["stato"]=="F" || $row["stato"]=="H") { // cas des élèves qui ont fini ou abandonné
-            header("location:personinformoj.php");
+            $cible = ("location:personinformoj.php");
         }
 
     }
+    if ($cible !== null) { header($cible); exit; }
 }
 
 // cette fonction améliore la version précédente

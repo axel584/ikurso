@@ -5,7 +5,7 @@ $kazo=$_GET["kazo"];
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $korpo="informo";
 // si la personne n'a pas de session, on la renvoie vers la page d'accueil pour éviter les spams sur le formulaire
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 include "pppkapo.inc.php";
 ?>
 <!-- ATTENTION VERRUE DE PROGRAMMATION -->

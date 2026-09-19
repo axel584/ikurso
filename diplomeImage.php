@@ -8,7 +8,7 @@ if ($clef!="") {
 	$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 }
 
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 if ($kurso=="" || ($kurso!="CG" && $kurso!="GR" && $kurso!="KE")) {

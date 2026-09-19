@@ -7,7 +7,7 @@ malfermiDatumbazon();
 //session_register("persono_id");
 $_SESSION['persono_id']=$persono_id;
 $persono = apartigiPersonon($persono_id);
-if ($persono["rajtoj"]!='A'){header("Location:index.php?erarkodo=4");}
+if ($persono["rajtoj"]!='A'){header("Location:index.php?erarkodo=4"); exit;}
 $celpersono = apartigiPersonon($celpersono_id);
 if ($validperson==$celpersono["enirnomo"]) {
 	mysql_select_db( "ikurso");
@@ -17,7 +17,7 @@ if ($validperson==$celpersono["enirnomo"]) {
 	$result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
 	$demando = "delete from nuna_kurso where studanto='$celpersono_id'";
 	$result = mysql_query($demando) or die ("SELECT : malbona demando :".$demando);
-	header("Location:administri.php");
+	header("Location:administri.php"); exit;
 }
 header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 header("Pragma: no-cache"); // HTTP/1.0

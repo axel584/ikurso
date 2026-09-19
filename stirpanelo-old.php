@@ -1,8 +1,8 @@
 <?php
 include "util.php";
 $pagxtitolo="Panneau de contr&ocirc;le";
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
-if ($rajto!='A'){header("Location:index.php?erarkodo=4");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
+if ($rajto!='A'){header("Location:index.php?erarkodo=4"); exit;}
 $parto=isset($_GET["parto"])?$_GET["parto"]:"";
 if ($parto=="") {$parto=1;}
 

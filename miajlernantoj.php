@@ -5,9 +5,9 @@ $gxisdatigDato="2007-06-16";
 $eksaj=isset($_GET["eksaj"])?$_GET["eksaj"]:"no";
 $farite=isset($_GET["farite"])?$_GET["farite"]:"";
 $persono_id = $_SESSION["persono_id"];
-if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
+if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
-if (($rajto!='A')&&($rajto!='K')) {header("Location:index.php?erarkodo=4");}
+if (($rajto!='A')&&($rajto!='K')) {header("Location:index.php?erarkodo=4"); exit;}
 
 function listi_lecionerojn($celpersono_id,$kurso) {
 	global $bdd;

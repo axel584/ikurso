@@ -88,5 +88,5 @@ if ($rezultoj[1]=='H' and $row["stato"]!='H') {
 	$query = "update nuna_kurso set stato='H',findato=CURDATE(),lastdato=CURDATE() where id=".$rezultoj[0]." and (stato='N' or stato='K')";
 	$result = $bdd->exec($query);
 }
-header("Location:miajlernantoj.php");
+header("Location:miajlernantoj.php"); exit;
 ?>                    

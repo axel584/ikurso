@@ -8,7 +8,7 @@ malfermiDatumbazon();
 $_SESSION['persono_id']=$persono_id;
 //if ($persono_id=="") {header("Location:index.php?erarkodo=8");}
 $persono = apartigiPersonon($persono_id);
-if (($persono["rajtoj"]!='A')&&($persono["rajtoj"]!='K')) {header("Location:index.php?erarkodo=4");}
+if (($persono["rajtoj"]!='A')&&($persono["rajtoj"]!='K')) {header("Location:index.php?erarkodo=4"); exit;}
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Last-Modified: ".gmdate("D,d M Y H:i:s")." GMT");
 header("Cache-Control: no-store,no-cache, must-revalidate"); // HTTP/1.1

@@ -1,4 +1,4 @@
-ARG PHP_VERSION=5.6
+ARG PHP_VERSION=7.4
 FROM php:${PHP_VERSION}-apache
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql

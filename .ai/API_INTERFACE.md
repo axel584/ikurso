@@ -84,6 +84,18 @@ Navigateur d'un autre sous-domaine (nilegu) : `fetch(..., { credentials: 'includ
 
 CSRF : les requêtes POST/PUT/PATCH/DELETE dont l'en-tête `Origin` n'est pas dans `Cors::allowedOrigins()` reçoivent 403. Sans `Origin` (script, curl), elles sont refusées si un cookie d'authentification est envoyé et que le `Referer` n'est pas autorisé.
 
+### Connexion unique avec un autre site (nilegu)
+
+Pour connecter un utilisateur de nilegu avec son compte ikurso sans que nilegu manipule le mot de passe :
+
+1. nilegu redirige le navigateur vers `https://ikurso.esperanto-france.org/index.php?retour=<url encodée>` (par exemple `retour=` + `encodeURIComponent(window.location.href)`).
+2. `index.php` valide `retour` avec `ReturnUrl::validate()` (`api/ReturnUrl.php`) : URL absolue dont l'origine est dans `Cors::allowedOrigins()`, sans identifiants ni caractères de contrôle. Sinon elle est ignorée.
+3. Déjà connecté : redirection immédiate vers `retour`, sans écrire dans le journal. Sinon `retour` est gardée en session 15 minutes et la fenêtre de connexion s'ouvre.
+4. Après la connexion (`ajax/eniri.php`), l'URL de retour est renvoyée dans `url` (une seule fois) et le JavaScript y redirige.
+5. nilegu appelle ensuite l'API avec `credentials: 'include'` (`GET /auth/me`) : le cookie de session propre à ikurso est envoyé (sous-domaines du même site).
+
+La déconnexion (`POST /auth/logout`) ferme la session partagée : l'utilisateur est déconnecté d'ikurso et de nilegu.
+
 ### JWT (la plupart des endpoints)
 
 Token JWT signé HS256. Secret : variable `$JWT_SECRET` de `config.php` (repli temporaire sur `$motDePasse` avec un message dans le journal d'erreurs si elle est absente).

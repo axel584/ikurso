@@ -35,6 +35,12 @@ else {
 			updateLastEniro($row["id"]);
 			// trouver l'url où l'on doit atterir
 			$respondo["url"]=getRedirectionParDroits($row["id"]);
+			// connexion unique : retour vers le site qui a demandé la connexion (nilegu)
+			require_once __DIR__ . '/../api/ReturnUrl.php';
+			$retour = ReturnUrl::consume();
+			if ($retour !== null) {
+				$respondo["url"]=$retour;
+			}
 		}
 	}
 

@@ -6,6 +6,16 @@ $gxisdatigDato="2016-01-21";
 malfermiDatumbazon();
 $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
+// connexion unique : un autre site (nilegu) renvoie ici avec ?retour=<url>, valable seulement vers une origine autorisée
+require_once __DIR__ . '/api/ReturnUrl.php';
+$retour = ReturnUrl::validate(isset($_GET['retour']) ? $_GET['retour'] : null);
+if ($retour !== null) {
+	if ($persono_id) { // déjà connecté : retour immédiat
+		header("Location: ".$retour);
+		exit;
+	}
+	ReturnUrl::remember($retour); // sera utilisée après la connexion (ajax/eniri.php)
+}
 if ($persono_id) {
 	$persono = apartigiPersonon($persono_id);
 	protokolo($persono["id"],"ENIRO",$persono["enirnomo"]." eniris");

@@ -6,6 +6,11 @@
       $('#novigi_pasvorton').modal('open');
     }
 
+    // connexion unique : arrivée depuis un autre site (nilegu), on ouvre la fenêtre de connexion
+    if ($url.indexOf("retour=")>-1 && $('#konektigxi').length) {
+      $('#konektigxi').modal('open');
+    }
+
 
     // méthode pour les selecteurs de date dans la partie administration
     //$('#debut_protokolo').pickadate({format: 'yyyy-mm-dd',format_submit: 'yyyy-mm-dd'});
@@ -311,7 +316,8 @@ $( "#serchi_protokolon_button").click(function() {
            			}
            			return false;
            		} else {
-           			window.location = $urlracine+reponse.url;
+           			// url absolue = retour vers un autre site autorisé (nilegu), vérifiée côté serveur
+           			window.location = /^https?:\/\//.test(reponse.url) ? reponse.url : $urlracine+reponse.url;
            		}
        		},
        		error : function() {

@@ -168,7 +168,7 @@ Docker Compose :
 | Passer MD5 → `password_hash()` + `password_verify()` | 🔴 Sécurité |
 | ~~Ajouter `exp` dans le payload JWT~~ (fait) | ✅ |
 | ~~Activer `HttpOnly` + `Secure` sur le cookie JWT~~ (fait) | ✅ |
-| Session en cookie + connexion unique ikurso/nilegu (phases 1 à 4) | 🟠 Sécurité |
+| Session en cookie + connexion unique ikurso/nilegu (phases 1 et 2 faites côté ikurso ; phase 3 : nilegu ; phase 4 : nettoyage) | 🟠 Sécurité |
 | Centraliser la gestion d'erreurs dans `api.php` | 🟡 Qualité |
 | Migrer `composer.json` : ajouter `phpunit/phpunit` | 🟡 Tests |
 

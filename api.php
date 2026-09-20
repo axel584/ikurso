@@ -4,14 +4,13 @@
 // Inclusion du fichier de configuration
 require_once 'config.php';
 
-// Mode debug (à désactiver en production)
-define('DEBUG_MODE', true);
+// Mode debug : uniquement en développement (APP_ENV=development dans docker-compose.yml)
+define('DEBUG_MODE', getenv('APP_ENV') === 'development');
 
-// Headers CORS et JSON (lecture seule)
+// Headers CORS (origines autorisées seulement, voir api/Cors.php) et JSON
+require_once 'api/Cors.php';
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST, PUT, PATCH, OPTIONS, DELETE');
-header('Access-Control-Allow-Headers: Content-Type, Authorization');
+Cors::apply();
 
 // Gestion des requêtes OPTIONS (preflight)
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {

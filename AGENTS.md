@@ -7,7 +7,7 @@ Elles complètent `CLAUDE.md` (architecture, commandes) et `.ai/` (API, schéma,
 
 - **Version cible : PHP 7.4.** Le nouveau code peut utiliser ses fonctionnalités (types scalaires et de retour, propriétés typées, `??`, `??=`, fonctions fléchées, `declare(strict_types=1)` pour les nouveaux fichiers) mais rien qui exige PHP 8 (pas de `match`, d'arguments nommés, de propriétés promues, de `?->` ni de `str_contains`).
 - Le code existant n'est pas encore tout compatible 7.4 : ne pas casser ce qui fonctionne, et corriger les incompatibilités (ex. `each()`, accolades pour les index de chaîne, `get_magic_quotes_*`, syntaxes dépréciées) quand on touche le fichier concerné.
-- `php/Dockerfile` utilise `PHP_VERSION=5.6` par défaut : construire avec `PHP_VERSION=7.4` (`docker compose build --build-arg PHP_VERSION=7.4`) pour tester, et faire de 7.4 la valeur par défaut dès que la migration le permet.
+- `php/Dockerfile` utilise PHP 7.4 par défaut (`ARG PHP_VERSION=7.4`) : tester avec cette version.
 - Ne jamais introduire de fonctions `mysql_*`. `mysql_compat.php` n'existe que pour le code legacy, à faire disparaître.
 - **Fins de ligne : toujours LF** (`\n`), jamais CRLF, sur Linux comme sur macOS. Tout fichier créé ou entièrement réécrit est en LF. Configurer l'éditeur en conséquence et ne jamais mettre `core.autocrlf=true`.
 - Tout le dépôt a été normalisé en LF (commit `530bc9c9`, ignoré par `git blame` via `.git-blame-ignore-revs`). `.gitattributes` (`* text=auto eol=lf`) et `.editorconfig` (`end_of_line = lf`) maintiennent cette règle : ne pas les contourner. Seule exception : `doc/GERDA-kurso.rtf`, laissé tel quel.
@@ -34,8 +34,10 @@ Elles complètent `CLAUDE.md` (architecture, commandes) et `.ai/` (API, schéma,
 
 ## 4. Authentification JWT et mots de passe
 
-- Un JWT n'est émis **qu'après** une authentification réussie (voir `ajax/eniri.php`).
-- Le secret de signature ne doit pas être le mot de passe de la base. Les nouveaux jetons doivent avoir une expiration (`exp`).
+- Un JWT n'est émis **qu'après** une authentification réussie, et **uniquement par `JWTAuth::generate()`** (`api/JWTAuth.php`), qui pose `iat` et `exp`. Le cookie se pose et se supprime avec `JWTAuth::setCookie()` / `clearCookie()` (HttpOnly, Secure, SameSite=Lax) : ne jamais appeler `setcookie("access_token", …)` directement.
+- Le secret de signature est `$JWT_SECRET` (`config.php`), jamais le mot de passe de la base.
+- Ne jamais mettre l'email, les noms ni d'autres données personnelles dans un jeton, et ne pas le stocker dans `localStorage`.
+- CORS : ne jamais réintroduire `Access-Control-Allow-Origin: *` ; utiliser `Cors::apply()` (`api/Cors.php`).
 - Ne jamais stocker ni journaliser un mot de passe en clair. Pour tout nouveau code, utiliser `password_hash()` / `password_verify()` (le MD5 actuel est une dette à migrer, pas un modèle).
 - Comparer les secrets avec `hash_equals()`, pas avec `==` ou `!=`.
 

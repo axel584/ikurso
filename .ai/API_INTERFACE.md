@@ -74,24 +74,28 @@ Deux mécanismes coexistent selon l'endpoint :
 
 ### JWT (la plupart des endpoints)
 
-Token JWT signé HS256. Secret : variable `$motDePasse` de `config.php`.
+Token JWT signé HS256. Secret : variable `$JWT_SECRET` de `config.php` (repli temporaire sur `$motDePasse` avec un message dans le journal d'erreurs si elle est absente).
+Émis uniquement par `JWTAuth::generate()` (login `ajax/eniri.php` et `POST /auth/login`), valable 30 jours (`JWTAuth::TTL`).
 Transmis via :
-- Cookie : `access_token`
+- Cookie : `access_token` (`HttpOnly`, `Secure`, `SameSite=Lax`, domaine `$cookieDomain`)
 - Header : `Authorization: Bearer {token}`
 
 Payload JWT :
 ```json
 {
-  "enirnomo": "username",
-  "retadreso": "email@example.com",
   "persono_id": 123,
+  "enirnomo": "username",
   "rajto": "S",
-  "persononomo": "Prénom",
-  "familinomo": "Nom"
+  "iat": 1790000000,
+  "exp": 1792592000
 }
 ```
 
-> Attention : le JWT ne contient pas de champ d'expiration (`exp`). Il est valide 1 an via le cookie.
+> Un jeton sans `exp`, expiré, à l'algorithme différent de HS256 ou à la signature invalide est refusé (401). Les droits (`rajtoj`) et l'activation du compte sont relus en base à chaque appel : le champ `rajto` du jeton n'est qu'indicatif.
+
+### CORS
+
+Seules les origines listées dans `Cors::allowedOrigins()` (`api/Cors.php`) reçoivent `Access-Control-Allow-Origin` : `https://ikurso.esperanto-france.org` et `https://nilegu.esperanto-france.org` (+ `http://localhost:8080` et `:3000` si `APP_ENV=development`). Surchargeable avec `$corsOrigins` (tableau) dans `config.php`.
 
 ### Bearer token interne (TekstojAPI uniquement)
 
@@ -1319,12 +1323,12 @@ Envoie un message de contact à tous les administrateurs (+ copie à l'expédite
 
 ## Authentification détaillée
 
-### Génération du JWT (`AuthentificationAPI.php`)
+### Génération du JWT (`JWTAuth::generate()` dans `JWTAuth.php`)
 
 ```
 header = base64url({ "alg": "HS256", "typ": "JWT" })
-payload = base64url({ "enirnomo", "retadreso", "persono_id", "rajto", "persononomo", "familinomo" })
-signature = HMAC-SHA256(header + "." + payload, $motDePasse)
+payload = base64url({ "persono_id", "enirnomo", "rajto", "iat", "exp" })
+signature = HMAC-SHA256(header + "." + payload, $JWT_SECRET)
 JWT = header + "." + payload + "." + base64url(signature)
 ```
 
@@ -1509,11 +1513,13 @@ class ResourceAPI {
 
 ### Variables globales requises (config.php)
 
-- `$urlDb`, `$base`, `$login`, `$motDePasse` : Connexion DB + secret JWT
+- `$urlDb`, `$base`, `$login`, `$motDePasse` : Connexion DB
+- `$JWT_SECRET` : secret de signature des JWT (distinct de `$motDePasse`)
 - `$urlracine`, `$cookieDomain` : URLs
+- `$corsOrigins` : (optionnel) tableau des origines CORS autorisées
 - `$awskey`, `$awssecret` : Credentials AWS SES (optionnel en dev)
 - `$INTERNAL_ACCESS_TOKEN` : Token pour TekstojAPI
-- `DEBUG_MODE` : `true`/`false` (inclut les détails PDO dans les erreurs 500)
+- `DEBUG_MODE` : défini dans `api.php` (`true` seulement si `APP_ENV=development`) ; inclut les détails PDO dans les erreurs 500
 
 ### Exemples curl
 

@@ -36,6 +36,7 @@ Requires Apache + PHP + MySQL/MariaDB stack. See README.md sections "Procédure 
 $base = "ikurso";
 $login = "ikurso_user";
 $motDePasse = "ikurso_pass";
+$JWT_SECRET = "chaîne-aléatoire-de-64-caractères"; // secret de signature des JWT, différent de $motDePasse
 $urlracine = "http://localhost:8080/";
 $cheminAbsolu = "/";
 // ... other config variables

@@ -1,6 +1,8 @@
 <?php
 // AuthentificationAPI.php - Classe pour gérer l'API d'authentification
 
+require_once __DIR__ . '/JWTAuth.php';
+
 class AuthentificationAPI {
     private $conn;
     
@@ -87,12 +89,9 @@ class AuthentificationAPI {
             
             // Authentification réussie
             
-            // Génération du JWT
-            $jwt = $this->generateJWT($row);
-            
-            // Définition du cookie
-            global $cookieDomain;
-            setcookie("access_token", $jwt, time()+(86400*365), '/', $cookieDomain, true);
+            // Génération du JWT et dépôt du cookie (HttpOnly, SameSite=Lax)
+            $jwt = JWTAuth::generate($row);
+            JWTAuth::setCookie($jwt);
             
             // Log de connexion
             $this->protokolo($row["id"], "ENIRO", $identigilo . " eniris via API");
@@ -232,44 +231,6 @@ class AuthentificationAPI {
         }
     }
     
-    private function generateJWT($user) {
-        global $motDePasse;
-        
-        // Header de token JWT
-        $header = array(
-            "alg" => "HS256",
-            "typ" => "JWT"
-        );
-        
-        // Payload ou corps du token
-        $payload = array(
-            "enirnomo" => $user["enirnomo"],
-            "retadreso" => $user["retadreso"],
-            "persono_id" => $user["id"],
-            "rajto" => $user["rajtoj"],
-            "persononomo" => $user["persononomo"],
-            "familinomo" => $user["familinomo"]
-        );
-        
-        // Encodage du header et payload
-        $encodedHeader = $this->base64url_encode(json_encode($header));
-        $encodedPayload = $this->base64url_encode(json_encode($payload));
-        
-        // Corps du jeton
-        $jwtBody = $encodedHeader . "." . $encodedPayload;
-        
-        // Signature
-        $signature = hash_hmac('sha256', $jwtBody, $motDePasse, true);
-        $encodedSignature = $this->base64url_encode($signature);
-        
-        // JWT final
-        return $jwtBody . "." . $encodedSignature;
-    }
-    
-    private function base64url_encode($data) {
-        return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
-    }
-    
     private function protokolo($persono_id, $ago, $priskribo) {
         try {
             $stmt = $this->conn->prepare("INSERT INTO protokolo (persono_id, ago, priskribo, dato) VALUES (?, ?, ?, NOW())");
@@ -360,8 +321,7 @@ class AuthentificationAPI {
         }
         
         // Supprimer le cookie access_token
-        global $cookieDomain;
-        setcookie("access_token", "", time() - 3600, '/', $cookieDomain, true);
+        JWTAuth::clearCookie();
         
         // Logger la déconnexion si on a l'ID utilisateur
         if ($persono_id && $enirnomo) {

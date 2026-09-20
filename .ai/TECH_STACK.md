@@ -27,7 +27,7 @@ Ce document décrit la stack technique actuelle de l'application, la cible inter
 | Gestion des dépendances | Composer (`phpmailer/phpmailer ^6.2`) |
 | Sessions | `$_SESSION` PHP natif |
 | Authentification (web) | Sessions PHP |
-| Authentification (API) | JWT custom (HS256, secret = `$motDePasse`) |
+| Authentification (API) | JWT custom (HS256, secret = `$JWT_SECRET`, `exp` 30 jours, cookie HttpOnly/SameSite=Lax) |
 | Hachage mot de passe | **MD5** (legacy, non sécurisé) |
 | Template engine | **PHP pur** (pas de Twig/Smarty) |
 | Architecture | Mélange procédural (`db.inc.php`, `util.php`) et OOP partiel (`/api/`, `/db/`) |
@@ -120,9 +120,8 @@ Docker Compose :
 |----------|---------|--------------|
 | Mots de passe hashés en MD5 | 🔴 Critique | `personoj.pasvorto_md5`, `db.inc.php`, API |
 | Requêtes SQL concaténées (legacy) | 🔴 Critique | `/db/*.inc.php`, certaines fonctions `db.inc.php` |
-| JWT sans expiration (`exp`) | 🟠 Élevé | `api/AuthentificationAPI.php` |
-| Cookie JWT sans `HttpOnly` déclaré | 🟠 Élevé | `api/AuthentificationAPI.php` |
-| `DEBUG_MODE = true` hardcodé | 🟡 Moyen | `api.php` |
+| ~~JWT sans expiration~~, ~~cookie sans HttpOnly~~, ~~DEBUG_MODE=true~~, ~~CORS `*`~~ | ✅ Corrigé (phase 0 du plan session en cookie) | `api/JWTAuth.php`, `api/Cors.php`, `api.php` |
+| JWT valable 30 jours, stocké en `localStorage` par nilegu | 🟠 Élevé | à remplacer par une session en cookie (phases 1 à 4) |
 
 ### Dette technique
 
@@ -167,8 +166,9 @@ Docker Compose :
 | Action | Priorité |
 |--------|----------|
 | Passer MD5 → `password_hash()` + `password_verify()` | 🔴 Sécurité |
-| Ajouter `exp` dans le payload JWT | 🟠 Sécurité |
-| Activer `HttpOnly` + `Secure` sur le cookie JWT | 🟠 Sécurité |
+| ~~Ajouter `exp` dans le payload JWT~~ (fait) | ✅ |
+| ~~Activer `HttpOnly` + `Secure` sur le cookie JWT~~ (fait) | ✅ |
+| Session en cookie + connexion unique ikurso/nilegu (phases 1 à 4) | 🟠 Sécurité |
 | Centraliser la gestion d'erreurs dans `api.php` | 🟡 Qualité |
 | Migrer `composer.json` : ajouter `phpunit/phpunit` | 🟡 Tests |
 
@@ -340,7 +340,7 @@ Les fichiers buildés dans `/frontend/dist/` sont inclus dans les pages PHP via 
 [x] Corriger $HTTP_SERVER_VARS dans pdf/fpdf.php
 [ ] Tester toutes les pages existantes
 [ ] Migrer MD5 → password_hash() + password_verify()
-[ ] Ajouter exp + HttpOnly sur JWT
+[x] Ajouter exp + HttpOnly sur JWT
 ```
 
 ### Phase 2 — Introduction de React (nouveaux composants)

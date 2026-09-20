@@ -231,9 +231,8 @@ class LegotajxojAPI {
     }
     
     private function setCORSHeaders() {
-        header("Access-Control-Allow-Origin: *");
-        header("Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS");
-        header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+        require_once __DIR__ . '/Cors.php';
+        Cors::apply('GET, POST, DELETE, OPTIONS', 'Content-Type, Authorization, X-Requested-With');
         header("Access-Control-Max-Age: 86400");
     }
     

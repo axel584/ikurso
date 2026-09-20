@@ -2,10 +2,6 @@
 include "../util.php";
 include "../config.php";
 
-// Fonction base64url_encode manquante
-function base64url_encode($data) {
-    return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
-}
 $identigilo=isset($_POST['identigilo'])?$_POST['identigilo']:"";
 $pasvorto=isset($_POST['pasvorto'])?stripslashes($_POST['pasvorto']):"";
 
@@ -45,42 +41,10 @@ else {
 
 // jwt : uniquement si l'authentification a réussi
 if ($respondo["mesagxo"]=="ok") {
-// Header de token JWT
-$header = array(
-    "alg" => "HS256",
-    "typ" => "JWT"
-);
-
-// Payload ou corps du token
-$payload = array(
-    "enirnomo" => $row["enirnomo"],
-    "retadreso" => $row["retadreso"],
-    "persono_id" => $row["id"],
-	"rajto" => $row["rajtoj"],
-	"personnomo" => $row["persononomo"],
-	"familinomo" => $row["familinomo"]
-);
-
-// Encodez le header et le payload en JSON et en Base64URL
-$encodedHeader = base64url_encode(json_encode($header));
-$encodedPayload = base64url_encode(json_encode($payload));
-
-// Concaténez la chaîne encodée Base64URL de l'en-tête, un point (.), et la chaîne encodée Base64URL des informations pour créer la partie corps du jeton.
-$jwtBody = $encodedHeader . "." . $encodedPayload;
-
-// Calcul de la signature en hachant la chaîne corps avec la clé secrète (idem que la base de données) et l'algorithme de hachage approprié.
-$signature = hash_hmac('sha256', $jwtBody, $motDePasse, true);
-
-// Encodez la signature en Base64URL
-$encodedSignature = base64url_encode($signature);
-
-// Concaténez la chaîne corps du jeton, un point (.), et la signature encodée Base64URL pour créer le jeton JWT final.
-$jwt = $jwtBody . "." . $encodedSignature;
-
-// On stocke le jeton JWT en session
-//$_SESSION["access_token"]=$jwt;
-$respondo["access_token"]=$jwt;
-setcookie("access_token", $jwt, time()+(86400*365), '/', $cookieDomain, true);
+	require_once __DIR__ . '/../api/JWTAuth.php';
+	$jwt = JWTAuth::generate($row);
+	$respondo["access_token"]=$jwt;
+	JWTAuth::setCookie($jwt);
 }
 
 echo json_encode($respondo);

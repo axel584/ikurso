@@ -351,7 +351,7 @@ class TekstojAPI {
         }
         
         $token = $matches[1];
-        return $token === $INTERNAL_ACCESS_TOKEN;
+        return !empty($INTERNAL_ACCESS_TOKEN) && hash_equals((string)$INTERNAL_ACCESS_TOKEN, (string)$token);
     }
     
     // POST /tekstoj - Créer un nouveau teksto

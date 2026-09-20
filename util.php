@@ -2,9 +2,8 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-ini_set('session.gc_maxlifetime', 86400);
-ini_set('session.cookie_lifetime', 86400);
-
+require_once __DIR__ . '/api/SessionAuth.php';
+SessionAuth::configure();
 session_start();    
 
 include_once("db.inc.php");

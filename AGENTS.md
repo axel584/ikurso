@@ -29,6 +29,8 @@ Elles complètent `CLAUDE.md` (architecture, commandes) et `.ai/` (API, schéma,
 - Après chaque `header("Location: ...")` de refus : **`exit;`** immédiat. Sans `exit`, le reste du script s'exécute.
 - L'identité vient de **`$_SESSION`** (ou du JWT vérifié), jamais d'un paramètre GET/POST (`persono_id`, `studanto_id`…). Si un correcteur agit sur un élève, vérifier que cet élève lui est bien rattaché (`nuna_kurso`).
 - Ne pas se fier à un contrôle côté JavaScript ou à un champ caché.
+- **Session** : ne jamais appeler `session_start()` ni `ini_set('session.*')` directement. Les pages passent par `util.php` et l'API par `SessionAuth` (`api/SessionAuth.php`), qui fixent les paramètres du cookie. À la connexion, régénérer l'identifiant de session (`SessionAuth::login()` ou `session_regenerate_id(true)`). Dans l'API, identifier l'appelant avec `JWTAuth::validateJWT()` (Bearer, puis session, puis cookie JWT).
+- **CSRF** : tout nouvel endpoint de l'API qui modifie des données passe par `api.php`, donc par `Cors::rejectForbiddenOrigin()`. Ne pas contourner ce contrôle.
 - Redirections : ne jamais rediriger vers une URL fournie par l'utilisateur. Utiliser `pagxoLokalaSekura()` (`util.php`) ou une liste blanche.
 - Les actions qui modifient l'état (suppression, ajout, changement de rôle) ne se font pas en GET.
 

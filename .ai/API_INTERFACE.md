@@ -70,7 +70,19 @@ Description complète de l'API REST générée depuis le code source (`/api/`).
 
 ## Authentification
 
-Deux mécanismes coexistent selon l'endpoint :
+Session PHP (navigateurs) et JWT (clients qui n'ont pas migré) sont acceptés partout, dans l'ordre décrit ci-dessous :
+
+### Ordre d'identification de l'appelant (`JWTAuth::validateJWT()`)
+
+1. Jeton `Authorization: Bearer` explicite (clients qui n'ont pas migré, par exemple l'ancien nilegu).
+2. **Session PHP** : cookie `PHPSESSID`, le même que celui des pages historiques (`$_SESSION["persono_id"]`). C'est la voie à privilégier pour les navigateurs.
+3. Cookie `access_token` (JWT).
+
+Session : `SessionAuth` (`api/SessionAuth.php`) fixe les paramètres du cookie pour les pages (`util.php`) et l'API : cookie propre à l'hôte (sans `Domain`), `HttpOnly`, `SameSite=Lax`, `Secure` en HTTPS, 24 h, `use_strict_mode`. `POST /auth/login` et `ajax/eniri.php` créent la session (nouvel identifiant si un cookie de session existait déjà : anti fixation) ; `POST /auth/logout` et `eliri.php` la détruisent.
+
+Navigateur d'un autre sous-domaine (nilegu) : `fetch(..., { credentials: 'include' })` ; le CORS renvoie l'origine exacte avec `Access-Control-Allow-Credentials: true`.
+
+CSRF : les requêtes POST/PUT/PATCH/DELETE dont l'en-tête `Origin` n'est pas dans `Cors::allowedOrigins()` reçoivent 403. Sans `Origin` (script, curl), elles sont refusées si un cookie d'authentification est envoyé et que le `Referer` n'est pas autorisé.
 
 ### JWT (la plupart des endpoints)
 

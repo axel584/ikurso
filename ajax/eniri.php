@@ -27,7 +27,8 @@ else {
 			$respondo["type"]="pasvorto";
 		} else {
 			$respondo["mesagxo"] = "ok";
-			// on memorise l'id en session :
+			// on memorise l'id en session (nouvel identifiant de session : anti fixation) :
+			session_regenerate_id(true);
 			$_SESSION["persono_id"]=$row["id"];
 			// on loggue tout ça :
 			protokolo($row["id"],"ENIRO","$identigilo eniris");

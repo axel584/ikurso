@@ -26,7 +26,7 @@ Ce document décrit la stack technique actuelle de l'application, la cible inter
 | Couche d'accès DB | PDO (nouvelles pages) + `mysql_*` deprecated (classes legacy dans `/db/`) |
 | Gestion des dépendances | Composer (`phpmailer/phpmailer ^6.2`) |
 | Sessions | `$_SESSION` PHP natif |
-| Authentification (web) | Sessions PHP |
+| Authentification (web et API) | Sessions PHP (`SessionAuth`, cookie HttpOnly/SameSite=Lax) ; l'API accepte aussi un JWT |
 | Authentification (API) | JWT custom (HS256, secret = `$JWT_SECRET`, `exp` 30 jours, cookie HttpOnly/SameSite=Lax) |
 | Hachage mot de passe | **MD5** (legacy, non sécurisé) |
 | Template engine | **PHP pur** (pas de Twig/Smarty) |

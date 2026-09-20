@@ -6,9 +6,8 @@ if ($admin_id!=""){
 	header( "Location:administri.php"); exit;
 }
 else {
-	session_start();
-	session_unset();
-	session_destroy();
+	require_once __DIR__ . '/api/SessionAuth.php';
+	SessionAuth::logout();
 	require_once __DIR__ . '/config.php';
 	require_once __DIR__ . '/api/JWTAuth.php';
 	JWTAuth::clearCookie(); // supprime le cookie avec les mêmes domaine et chemin que ceux utilisés à sa création

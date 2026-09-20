@@ -1,5 +1,7 @@
 <?php
-// JWTAuth.php - Utilitaire pour l'authentification JWT (HS256)
+// JWTAuth.php - Authentification de l'API : jeton JWT (HS256) ou session PHP
+
+require_once __DIR__ . '/SessionAuth.php';
 
 class JWTAuth {
 
@@ -64,10 +66,18 @@ class JWTAuth {
         }
     }
 
+    // Sans argument : identifie l'appelant. Ordre : jeton Bearer explicite, puis session PHP,
+    // puis cookie access_token. Renvoie un tableau contenant au moins persono_id, ou false.
     public static function validateJWT($jwt = null) {
-        // Si aucun JWT fourni, essayer de le récupérer depuis les cookies ou headers
         if (!$jwt) {
-            $jwt = self::getJWTFromRequest();
+            $jwt = self::getBearerToken();
+        }
+        if (!$jwt) {
+            $sessionPersonoId = SessionAuth::currentPersonoId();
+            if ($sessionPersonoId !== null) {
+                return array('persono_id' => $sessionPersonoId, 'source' => 'session');
+            }
+            $jwt = isset($_COOKIE[self::COOKIE_NAME]) ? $_COOKIE[self::COOKIE_NAME] : null;
         }
 
         if (!$jwt) {
@@ -114,13 +124,7 @@ class JWTAuth {
         return $payload ? $payload['persono_id'] : null;
     }
 
-    private static function getJWTFromRequest() {
-        // 1. Essayer depuis les cookies
-        if (isset($_COOKIE[self::COOKIE_NAME])) {
-            return $_COOKIE[self::COOKIE_NAME];
-        }
-
-        // 2. Essayer depuis l'header Authorization Bearer
+    private static function getBearerToken() {
         $authHeader = self::getAuthorizationHeader();
         if ($authHeader && preg_match('/Bearer\s+(\S+)/', $authHeader, $matches)) {
             return $matches[1];

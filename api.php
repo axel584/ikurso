@@ -18,6 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
+// Protection CSRF : requêtes qui modifient des données, origine autorisée seulement
+Cors::rejectForbiddenOrigin();
+
 // Inclusion des classes API
 require_once 'api/TekstojAPI.php';
 require_once 'api/AuthentificationAPI.php';

@@ -89,7 +89,8 @@ class AuthentificationAPI {
             
             // Authentification réussie
             
-            // Génération du JWT et dépôt du cookie (HttpOnly, SameSite=Lax)
+            // Session PHP (partagée avec les pages historiques) et JWT (clients qui n'ont pas encore migré)
+            SessionAuth::login($row["id"]);
             $jwt = JWTAuth::generate($row);
             JWTAuth::setCookie($jwt);
             
@@ -320,7 +321,8 @@ class AuthentificationAPI {
             }
         }
         
-        // Supprimer le cookie access_token
+        // Détruire la session et supprimer le cookie access_token
+        SessionAuth::logout();
         JWTAuth::clearCookie();
         
         // Logger la déconnexion si on a l'ID utilisateur

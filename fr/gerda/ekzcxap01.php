@@ -1,4 +1,4 @@
-<? include "gerdakapo.inc.php"; ?>
+<?php include "gerdakapo.inc.php"; ?>
 <table class="klarigo">
 	<tr>
 		<td>
@@ -20,7 +20,7 @@
 			<h2>Demandoj (1)</h2>
 <p>
 <textarea NAME="012 &#265;ap01.1" ROWS=15 COLS=70>
-<? if (isset($memorkurso["012_&#265;ap01_1"])){
+<?php if (isset($memorkurso["012_&#265;ap01_1"])){
 		echo stripslashes($memorkurso["012_&#265;ap01_1"]);
 	}else{
 ?>
@@ -45,7 +45,7 @@ Kiu estas (eble) la plej malserioza knabo en la universitato?
 
 
 ----- Fino de la ekzerco --------------------------------
-<? } ?>
+<?php } ?>
 </textarea>
 <h2>Ekzercoj (1)</h2>
 			<p>
@@ -61,7 +61,7 @@ Kiu estas (eble) la plej malserioza knabo en la universitato?
 			</p>
 			<p>
 <textarea NAME="012 &#265;ap01.2" ROWS=15 COLS=70>
-<? if (isset($memorkurso["012_&#265;ap01_2"])){
+<?php if (isset($memorkurso["012_&#265;ap01_2"])){
 		echo stripslashes($memorkurso["012_&#265;ap01_2"]);
 	}else{
 ?>
@@ -86,7 +86,7 @@ Kiu estas (eble) la plej malserioza knabo en la universitato?
 
 
 ----- Fino de la ekzerco --------------------------------
-<? } ?>
+<?php } ?>
 </textarea>
 <p>
 Ekzerco: Modifu la frazojn.
@@ -96,7 +96,7 @@ Vi laboras malmulte ---> Laboru multe !
 </p>
 <p>
 <textarea NAME="012 &#265;ap01.3" ROWS=15 COLS=70>
-<? if (isset($memorkurso["012_&#265;ap01_3"])){
+<?php if (isset($memorkurso["012_&#265;ap01_3"])){
 		echo stripslashes($memorkurso["012_&#265;ap01_3"]);
 	}else{
 ?>
@@ -113,7 +113,7 @@ Vi laboras malserioze --->
 
 
 ----- Fino de la ekzerco --------------------------------
-<? } ?>
+<?php } ?>
 </textarea>
 </table>
 			<div class="kurso">
@@ -155,7 +155,7 @@ Vi laboras malserioze --->
 				Je souhaite re&ccedil;evoir l'aide d'un correcteur pour suivre ce cours, 
 				je m'engage &agrave; envoyer au moins une le&ccedil;on par semaine ou de 
 				pr&eacute;venir mon correcteur de tout retard &eacute;ventuel.</p>
-			<? include "../../ali&#285;i.inc.php"; ?>
+			<?php include "../../ali&#285;i.inc.php"; ?>
 			</form>
 <center>
 <table border="0" width="800" class="fajna">
@@ -169,7 +169,7 @@ Vi laboras malserioze --->
 		</td>
 		<td class="normala" align="center">
 			<form name="mesaxgo" action="../jefo/reago.php" method="POST">
-			<input type="hidden" name="lastpa&#285;o" value="<? echo $url ?>">
+			<input type="hidden" name="lastpa&#285;o" value="<?php echo $url ?>">
 			<div class="artifiko">Kontaktu nin:&nbsp;
 			<input type="image" src="http://ikurso.esperanto-france.org/bildoj/messagerie.gif" align="center" border="0" onClick="this.form.submit();">
 			</div>

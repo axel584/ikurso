@@ -1,4 +1,4 @@
-<?
+<?php
 if ($cookieFunkcias!="1") {
         header("Location:index.php?lingvo=$formlingvo&erarkodo=8"); exit;
 } else {

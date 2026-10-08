@@ -1,4 +1,4 @@
-<? 
+<?php 
 class persono
 {
 var $id;

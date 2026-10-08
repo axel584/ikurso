@@ -52,8 +52,8 @@ function listiFeriojn() {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" <? if ($validi=="jes") { echo "onLoad=\"window.alert('Vos données ont été enregistrées');\""; } ?>>
-<?
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" <?php if ($validi=="jes") { echo "onLoad=\"window.alert('Vos données ont été enregistrées');\""; } ?>>
+<?php
 	pagxkapo();
 	menuo($persono["enirnomo"],$persono["rajtoj"]);
 ?>
@@ -71,7 +71,7 @@ function listiFeriojn() {
     <td nowrap>
   <table border="0">
     <form name="aldoniferion" action="aldoniferion2.php" method="POST">
-  <? listiFeriojn(); 
+  <?php listiFeriojn(); 
       echo "<tr>";
         echo "<td class=\"normala\" >à partir du</td>";
         // ekdato

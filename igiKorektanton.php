@@ -1,4 +1,4 @@
-<?
+<?php
 require("db.inc.php");
 malfermidatumbazon();
 $query = "update personoj set rajtoj='K',maksimumo=3 where id=$studanto";

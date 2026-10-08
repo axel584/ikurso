@@ -1,4 +1,4 @@
-<?
+<?php
 require("db.inc.php");
 malfermidatumbazon();
 mysql_select_db("ikurso");

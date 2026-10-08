@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 $subjekto="ressources.php";
 $temo=$_GET["temo"];
@@ -9,15 +9,15 @@ $gxisdatigDato="2006-11-02";
 ?>
 		<div id="enhavo">
 			<ul id="tabnav">
-				<li <?if ($temo=="intro") {echo " class='aktiva'";}?>><a href="ressources.php?temo=intro">En savoir plus...</a></li>
-				<li <?if ($temo=="lerni") {echo " class='aktiva'";}?>><a href="ressources.php?temo=lerni">apprendre</a></li>
-				<li <?if ($temo=="legi") {echo " class='aktiva'";}?>><a href="ressources.php?temo=legi">lire, s&rsquo;informer</a></li>
-				<li <?if ($temo=="auxskulti") {echo " class='aktiva'";}?>><a href="ressources.php?temo=auxskulti">&eacute;couter, regarder</a></li>
-				<li <?if ($temo=="kores") {echo " class='aktiva'";}?>><a href="ressources.php?temo=kores">correspondre</a></li>
+				<li <?php if ($temo=="intro") {echo " class='aktiva'";}?>><a href="ressources.php?temo=intro">En savoir plus...</a></li>
+				<li <?php if ($temo=="lerni") {echo " class='aktiva'";}?>><a href="ressources.php?temo=lerni">apprendre</a></li>
+				<li <?php if ($temo=="legi") {echo " class='aktiva'";}?>><a href="ressources.php?temo=legi">lire, s&rsquo;informer</a></li>
+				<li <?php if ($temo=="auxskulti") {echo " class='aktiva'";}?>><a href="ressources.php?temo=auxskulti">&eacute;couter, regarder</a></li>
+				<li <?php if ($temo=="kores") {echo " class='aktiva'";}?>><a href="ressources.php?temo=kores">correspondre</a></li>
 			</ul>
 			<div id="kadro">
 				<div class="rakonto">
-				<? if ($temo=="intro") { ?>
+				<?php if ($temo=="intro") { ?>
 					<p>Pour compléter votre étude de l’espéranto, nous vous proposons une sélection de sites dans lesquels vous trouverez diverses ressources :
 						dictionnaires, grammaires, lectures, musique, vidéos...
 					</p>
@@ -39,7 +39,7 @@ $gxisdatigDato="2006-11-02";
 						<li>Le catalogue du <a href="http://katalogo.uea.org/">libroservo de UEA</a></li>
 					</ul>
 
-				<? } elseif ($temo=="lerni") { ?>
+				<?php } elseif ($temo=="lerni") { ?>
 					<h3>Dictionnaires</h3>
 					<ul>
 						<li><a href="http://purl.org/net/voko/revo/">Reta vortaro</a> : 
@@ -68,7 +68,7 @@ $gxisdatigDato="2006-11-02";
 					<li><a href="http://www.edukado.net">edukado.net</a> : importante collection d&rsquo;exercices tous niveaux</li> 
 				</ul>
 
-				<? } elseif ($temo=="legi") { ?>
+				<?php } elseif ($temo=="legi") { ?>
 				
 				<h3>Biblioth&egrave;ques en ligne</h3>
 				<ul>
@@ -103,7 +103,7 @@ $gxisdatigDato="2006-11-02";
 				<p>Vous trouverez sur <a href="http://startu.net/">startu.net</a> une grand nombre
 				d&rsquo;autres liens vers des sites en esp&eacute;ranto</li>
 				
-				<? } elseif ($temo=="auxskulti") { ?>
+				<?php } elseif ($temo=="auxskulti") { ?>
 				
 				<h3>Musique, radio, podcasts</h3>
 				<ul>
@@ -121,7 +121,7 @@ $gxisdatigDato="2006-11-02";
 					<li><a href="http://internacia.tv">Internacia televido</a> : cha&icirc;ne de t&eacute;l&eacute;vision en esp&eacute;ranto</li>-->
 				</ul>
 
-				<? } elseif ($temo=="kores") { ?>
+				<?php } elseif ($temo=="kores") { ?>
 				
 				<h3>Pour trouver des amis gr&acirc;ce &agrave; l&rsquo;esp&eacute;ranto</h3>
 				<ul>
@@ -141,7 +141,7 @@ $gxisdatigDato="2006-11-02";
 					<li><a href="http://www.tejo.org/ps/ps_lingv/ps_fr.htm">Pasporta Servo</a> : r&eacute;seau convivial d&rsquo;&eacute;hergement chez l&rsquo;habitant</li>
 				</ul>
 		</div>
-		<? } ?>
+		<?php } ?>
 		</div>
 	</div>
-<? include "pagxpiedo.inc.php"; ?>
+<?php include "pagxpiedo.inc.php"; ?>

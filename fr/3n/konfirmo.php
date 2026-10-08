@@ -23,7 +23,7 @@ include "kapo.inc.php";
 				?>
 					<p class="white-text">Votre devoir a été enregistré et sera envoyé à votre correcteur dès que possible.<br>
 					Une copie du message vous sera alors adressée.</p>
-				<?
+				<?php
 				}
 				else {
 				?>

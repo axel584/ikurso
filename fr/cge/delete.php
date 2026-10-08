@@ -1,4 +1,4 @@
-<?
+<?php
 include "db.inc.php";
 include "webui.inc.php";
 malfermiDatumbazon();
@@ -28,7 +28,7 @@ header("Pragma: no-cache"); // HTTP/1.0
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<?
+<?php
 	pagxkapo();
 	menuo($persono["enirnomo"],$persono["rajtoj"]);
 ?>
@@ -48,20 +48,20 @@ header("Pragma: no-cache"); // HTTP/1.0
 <tr>
 <form name="administri" method="post">
 <td colspan="2">
-Pour supprimer une personne, veuiller recopier son identifiant&nbsp;: <? echo $celpersono["enirnomo"]; ?><br>
+Pour supprimer une personne, veuiller recopier son identifiant&nbsp;: <?php echo $celpersono["enirnomo"]; ?><br>
 </td>
 </tr>
 <tr>
 <td>
 <form method="post">
 <input type="text" name="validperson"> 
-<input type="hidden" name="celpersono_id" value="<? echo $celpersono_id?>"> 
+<input type="hidden" name="celpersono_id" value="<?php echo $celpersono_id?>"> 
 <input type="submit" value="Confirmer">
 </form>
 </td>
 <td>
 <form method="post" action="administri.php">
-<input type="hidden" name="celpersono_id" value="<? echo $celpersono_id?>"> 
+<input type="hidden" name="celpersono_id" value="<?php echo $celpersono_id?>"> 
 <div align="right"><input type="submit" value="Annuler"></div>
 </form>
 

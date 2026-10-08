@@ -36,14 +36,14 @@ function listiGerda(){
 			Cours en dix le&ccedil;ons<br>
 			<select name="leciono">
 				<option value="index.php" onClick="window.opener.location.href='fr/cge/index.php';window.close();">Introduction</option>
-				<? listiDLEK(); ?> 
+				<?php listiDLEK(); ?> 
 			</select>
 		</td>
 		<td width="50%" class="normala">
 			Gerda malaperis<br>
 			<select name="cxapitro">
 				<option value="index.php" onClick="window.opener.location.href='fr/gerda/index.php';window.close();">Introduction</option>
-				<? listiGerda(); ?> 
+				<?php listiGerda(); ?> 
 				<option value="lasu" onClick="window.opener.location.href='fr/lasu/index.php';window.close();"><i>Lasu min paroli plu!</i></option>
 			</select>
 		</td>

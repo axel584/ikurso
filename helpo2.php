@@ -1,4 +1,4 @@
-<?
+<?php
 include "util.php";
 malfermidatumbazon();
 $pagxtitolo="Aide et informations utiles";
@@ -23,13 +23,13 @@ include "pagxkapo.inc.php";
 ?>
 		<div id="enhavo">
 			<ul id="tabnav">
-				<li <?if ($temo=="nova"){echo "class='aktiva'";}?>><a href="helpo.php?temo=nova">Bienvenue</a></li>
-				<li <?if ($temo=="faq"){echo "class='aktiva'";}?>><a href="helpo.php?temo=faq">Aide</a></li>
-				<li <?if ($temo=="liens"){echo "class='aktiva'";}?>><a href="helpo.php?temo=liens">Liens</a></li>
+				<li <?php if ($temo=="nova"){echo "class='aktiva'";}?>><a href="helpo.php?temo=nova">Bienvenue</a></li>
+				<li <?php if ($temo=="faq"){echo "class='aktiva'";}?>><a href="helpo.php?temo=faq">Aide</a></li>
+				<li <?php if ($temo=="liens"){echo "class='aktiva'";}?>><a href="helpo.php?temo=liens">Liens</a></li>
 			</ul>
 			<div id="kadro">
 				<div class="klarigo">
-				<? if ($temo=="nova") { 
+				<?php if ($temo=="nova") { 
 						if (($persono["rajtoj"]=="K")||($persono["rajtoj"]=="A")) {	
 						// information specifique pour les correcteurs se connectant la première fois					
 				?>
@@ -135,7 +135,7 @@ include "pagxkapo.inc.php";
 					mise en page des message grâce à l'ajout d'images ou de mise en forme des caractères.
 					</p>
 					<p align="right"><em><a href="#top">Revenir au début</a></em></p>
-				<? } else {
+				<?php } else {
 					// information specifique pour les autres utilisateurs se connectant la première fois
 				?>
 					<h2>Bienvenue dans le nouveau site I-kurso ! (élève)</h2>
@@ -146,10 +146,10 @@ include "pagxkapo.inc.php";
 					site ont accès à ces nouvelles pages. &Agrave; partir de 1<sup>er</sup> octobre, les élèves auront
 					également accès au nouveau site.</p>
 
-			<? } 
+			<?php } 
 			}?>
 			
-			<? if ($temo=="faq") { ?>
+			<?php if ($temo=="faq") { ?>
 				<h2>Aide et informations utiles</h2>
 				<p>
 					Vous trouverez ici les réponses aux questions les plus fréquentes. Si vous avez des questions sur
@@ -183,17 +183,17 @@ include "pagxkapo.inc.php";
 				  	<p>
 				  	Il existe plusieurs méthodes...
 				  	</p>
-			<? } ?>
+			<?php } ?>
 				
-			<? if ($temo=="liens") { ?>
+			<?php if ($temo=="liens") { ?>
 				<h2>Liens utiles</h2>
 
 				<blockquote><p>
 				... à compléter ...
 				</p></blockquote>
 
-			<? } ?>
+			<?php } ?>
 			</div>
 		</div>
 	</div>
-<? include "pagxpiedo.inc.php"; ?>
+<?php include "pagxpiedo.inc.php"; ?>

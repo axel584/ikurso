@@ -20,4 +20,4 @@ $gxisdatigDato="2006-11-02";
 		</div>
 		</div>
 	</div>
-<? include "pagxpiedo.inc.php"; ?>
+<?php include "pagxpiedo.inc.php"; ?>

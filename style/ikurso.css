@@ -1250,3 +1250,89 @@ span.bravo {
        display: none;
    }
 }
+
+/*********************************/
+/*          mode sombre          */
+/*********************************/
+/* Activé automatiquement quand le système ou le navigateur est en thème sombre
+   (voir color-scheme sur html). Les surfaces blanches de Materialize deviennent
+   sombres ; les encadrés colorés clairs (lighten-x) gardent leur fond et passent
+   en texte foncé. */
+
+@media (prefers-color-scheme: dark) {
+	/* typographie */
+	h3, h4 {color: #c9c4bf;}
+	p.noto, .input-field .helpilo {color: #a8a39e;}
+	.primaire-texte {color: #cfcac5 !important;}
+	.primaire-texte.texte-moyen {color: #b5b0ab !important;}
+	.primaire.pale {background-color: #3a3632 !important;}
+	.primaire.fond,
+	.primaire-texte.texte-fond {background-color: #2a2826 !important;}
+	.vortlisto h2 {color: inherit;}
+	.vortlisto.bildetoj .eo {color: inherit;}
+	.vortlisto.bildetoj {color: #b5b0ab;}
+	.noto a:hover, .noto a:active {color: #cfcac5;}
+
+	/* surfaces Materialize */
+	.card,
+	.card-panel,
+	.collection,
+	.collection .collection-item,
+	.collection.with-header .collection-header,
+	.collapsible-header,
+	.collapsible-body,
+	.modal,
+	.modal .modal-footer,
+	.dropdown-content,
+	.sidenav,
+	.side-nav,
+	.tabs,
+	.datepicker-calendar-container,
+	.datepicker-table td {
+		background-color: #1e1e1e;
+		color: #e6e6e6;
+		border-color: #3a3a3a;
+	}
+	.collection.with-header .collection-header {background-color: #2a2a2a;}
+	.collection .collection-item:hover,
+	.dropdown-content li:hover,
+	.dropdown-content li.active,
+	.collapsible-header.selected,
+	table.highlight>tbody>tr:hover {
+		background-color: #1f3347;
+	}
+	.collection .collection-item:active {background-color: #2196F3;}
+	.side-nav li a,
+	.sidenav li>a,
+	.datepicker-cancel,
+	.datepicker-clear {color: #cfcac5;}
+	table.striped>tbody>tr:nth-child(odd) {background-color: rgba(255,255,255,0.06);}
+	select {background-color: #1e1e1e; border-color: #3a3a3a;}
+	.input-field label {color: #a8a39e;}
+
+	/* encadrés colorés clairs : on garde le fond, le texte passe en foncé */
+	.lighten-1, .lighten-2, .lighten-3, .lighten-4, .lighten-5, .white {
+		color: rgba(0,0,0,0.87);
+		color-scheme: light;
+	}
+	.lighten-1 h3, .lighten-2 h3, .lighten-3 h3, .lighten-4 h3, .lighten-5 h3,
+	.lighten-1 h4, .lighten-2 h4, .lighten-3 h4, .lighten-4 h4, .lighten-5 h4 {
+		color: #554E47;
+	}
+
+	/* leçons */
+	.qcm label {color: inherit;}
+	ul#enhavtabelo li a,
+	ul.enhavtabelo li a {color: #c9c4bf;}
+	#enhavtabelo .dauro {color: #a8a39e;}
+	ul#progreso li {background-color: #3a3a3a; border-color: #3a3a3a;}
+	ul#progreso li.nuna {background-color: #1e1e1e;}
+	.ekzemplo {background-color: #2a2826; color: inherit;}
+	.korelativoj table th {background-color: #2a2a2a;}
+	.gxusta, .gxusta:before {color: #81c784;}
+	fieldset.sciipli legend,
+	fieldset.sciipli legend:before {color: #b5bc8f;}
+
+	/* éditeur de correction : fond clair, le texte y est forcé en noir */
+	.trumbowyg-editor {background-color: #fafafa; color: #000;}
+}

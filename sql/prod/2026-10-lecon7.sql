@@ -1,5 +1,6 @@
 -- Mise en prod de la refonte de la leçon 7 du cours élémentaire (CG), issues #689 et #353.
--- Regroupe sql/04-lecon7-affixes-frequents.sql, sql/05-lecon7-exercices.sql et sql/07-lecon7-mots-en-bleu.sql.
+-- Regroupe sql/04-lecon7-affixes-frequents.sql, sql/05-lecon7-exercices.sql, sql/07-lecon7-mots-en-bleu.sql
+-- et sql/08-lecon7-safino.sql.
 --
 -- À jouer au moment où l'on déploie fr/cge/lec07.php, fr/cge/temaro.php et kionova.php :
 -- les numéros de section de la base doivent correspondre à ceux de lec07.php.
@@ -417,6 +418,21 @@ UPDATE ekzerceroj SET demando = 'un vendeur (<span class="eo">vendi</span> = ven
 UPDATE ekzerceroj SET demando = 'un pauvre (<span class="eo">riĉa</span> = riche)&nbsp;:' WHERE ekzerco_id = 29 AND kodo = 'ekz07_17';
 UPDATE ekzerceroj SET demando = 'une salle de jeu (<span class="eo">ludi</span> = jouer)&nbsp;:' WHERE ekzerco_id = 29 AND kodo = 'ekz07_18';
 
+-- ========== Partie D : exemple ŝafo → ŝafino au lieu de koko → kokino (ex-08) ==========
+-- Vocabulaire à réviser : koko et kokino ne sont plus rattachés à la page (gardés pour les élèves
+-- qui les révisent déjà) ; ŝafino est ajouté (ŝafo y est déjà, avec ŝafaro).
+UPDATE vortoj SET lecionero_id = 0 WHERE lecionero_id = 69 AND eo IN ('koko', 'kokino');
+INSERT INTO vortoj (eo, fr, tipo, lecionero_id)
+  SELECT 'ŝafino', 'brebis', 'nom', 69 FROM DUAL
+  WHERE NOT EXISTS (SELECT 1 FROM vortoj WHERE eo = 'ŝafino' AND lecionero_id = 69);
+
+-- Copie du texte de la page 7.2 utilisée par le redaktilo.
+UPDATE lecioneroj SET enhavo = REPLACE(enhavo,
+  '<span class="eo"><span class="marque">•</span> koko</span>&nbsp;: coq&emsp;→&emsp;<span class="eo"><span class="marque">•</span> kokino</span>&nbsp;: poule</p>',
+  '<span class="eo"><span class="marque">•</span> ŝafo</span>&nbsp;: mouton&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ŝafino</span>&nbsp;: brebis</p>')
+WHERE id = 69;
+
 -- Résumé attendu : 10 sections, 19 questions actives dans l'exercice 28, 13 dans l'exercice 29, toutes en bleu.
 SELECT ordo, titolo FROM lecioneroj WHERE leciono_id = 68 ORDER BY ordo;
 SELECT ekzerco_id, sum(forigita = 0) AS actives, sum(forigita = 1) AS masquees, sum(forigita = 0 AND demando LIKE '%class="eo"%') AS actives_en_bleu FROM ekzerceroj WHERE ekzerco_id IN (28, 29) GROUP BY ekzerco_id;
+SELECT eo, lecionero_id FROM vortoj WHERE eo IN ('koko', 'kokino', 'ŝafino') AND lecionero_id IN (0, 69) ORDER BY eo;

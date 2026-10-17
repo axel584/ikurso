@@ -171,7 +171,7 @@ include "dlekkapo.inc.php";
 		<p><b>IN</b> : <i>sexe féminin</i></p>
 		<div class="row">
 			<p class="col s12"><span class="eo"><span class="marque">•</span> onklo</span>&nbsp;: oncle&emsp;→&emsp;<span class="eo"><span class="marque">•</span> onklino</span>&nbsp;: tante</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> koko</span>&nbsp;: coq&emsp;→&emsp;<span class="eo"><span class="marque">•</span> kokino</span>&nbsp;: poule</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> ŝafo</span>&nbsp;: mouton&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ŝafino</span>&nbsp;: brebis</p>
 			<p class="col s12"><span class="eo"><span class="marque">•</span> ina</span>&nbsp;: féminin</p>
 		</div>
 
@@ -663,8 +663,7 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ilo.mp3" class="sm2_button"></a><span class="eo">ilo</span>&nbsp;: instrument</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/onklo.mp3" class="sm2_button"></a><span class="eo">onklo</span>&nbsp;: oncle<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/onklino.mp3" class="sm2_button"></a><span class="eo">onklino</span>&nbsp;: tante</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/koko.mp3" class="sm2_button"></a><span class="eo">koko</span>&nbsp;: coq<br>
-						   <a href="<?php echo $vojo;?>fr/son/vortoj/kokino.mp3" class="sm2_button"></a><span class="eo">kokino</span>&nbsp;: poule</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sxafino.mp3" class="sm2_button"></a><span class="eo">ŝafino</span>&nbsp;: brebis</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ina.mp3" class="sm2_button"></a><span class="eo">ina</span>&nbsp;: féminin</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/admiri.mp3" class="sm2_button"></a><span class="eo">admiri</span>&nbsp;: admirer<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/admirinda.mp3" class="sm2_button"></a><span class="eo">admirinda</span>&nbsp;: admirable</p>

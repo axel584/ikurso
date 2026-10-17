@@ -278,6 +278,7 @@ CREATE TABLE respondoj (
   `forigita` tinyint(1) NOT NULL DEFAULT '0',
   `gxusta` tinyint(1) DEFAULT NULL,
   `korekto` TEXT NULL,
+  `poentoj` int(11) DEFAULT NULL,
   PRIMARY KEY (id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

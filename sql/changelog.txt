@@ -4508,3 +4508,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- vocabulaire plus moderne, leçons 4 et 5 (#865) : voir sql/06-vocabulaire-moderne.sql
 --- leçon 7 : mots espéranto en bleu dans les questions des exercices 1 et 2 : voir sql/07-lecon7-mots-en-bleu.sql
 --- leçon 7 : exemple ŝafo → ŝafino au lieu de koko → kokino : voir sql/08-lecon7-safino.sql
+--- cours élémentaire : mots espéranto en bleu dans les questions 2.9 n° 14 et 4.9 n° 10 : voir sql/09-cours-elementaire-mots-en-bleu.sql

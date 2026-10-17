@@ -6,11 +6,11 @@ import {
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
   TextField, FormControlLabel, Checkbox, LinearProgress, IconButton,
 } from '@mui/material'
-import AddIcon from '@mui/icons-material/Add'
-import DeleteIcon from '@mui/icons-material/Delete'
+import { Add as AddIcon } from '@mui/icons-material'
+import { Delete as DeleteIcon } from '@mui/icons-material'
 import { decodeHtml } from '../utils/html'
-import EditIcon from '@mui/icons-material/Edit'
-import DragIndicatorIcon from '@mui/icons-material/DragIndicator'
+import { Edit as EditIcon } from '@mui/icons-material'
+import { DragIndicator as DragIndicatorIcon } from '@mui/icons-material'
 import { ekzerceroiApi, type Ekzercero, type EkzerceroStats } from '../api/ekzerceroj'
 import DeleteButton from '../components/DeleteButton'
 

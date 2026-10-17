@@ -7,10 +7,10 @@ import {
   TextField, Select, MenuItem, FormControl, InputLabel,
   FormControlLabel, Checkbox,
 } from '@mui/material'
-import AddIcon from '@mui/icons-material/Add'
+import { Add as AddIcon } from '@mui/icons-material'
 import { decodeHtml } from '../utils/html'
-import EditIcon from '@mui/icons-material/Edit'
-import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import { Edit as EditIcon } from '@mui/icons-material'
+import { ChevronRight as ChevronRightIcon } from '@mui/icons-material'
 import { lecionerojApi, type Lecionero, type LecioneroTipo } from '../api/lecioneroj'
 import DeleteButton from '../components/DeleteButton'
 

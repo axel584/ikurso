@@ -3,8 +3,8 @@ import {
   AppBar, Toolbar, Typography,
   Button, Menu, MenuItem, Divider, Box, IconButton,
 } from '@mui/material'
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
-import PersonIcon from '@mui/icons-material/Person'
+import { ArrowDropDown as ArrowDropDownIcon } from '@mui/icons-material'
+import { Person as PersonIcon } from '@mui/icons-material'
 import { useAuth } from '../hooks/useAuth'
 
 type NavChild = { label: string; href: string; dividerBefore?: boolean }

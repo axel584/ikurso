@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button, Stack } from '@mui/material'
-import DeleteIcon from '@mui/icons-material/Delete'
+import { Delete as DeleteIcon } from '@mui/icons-material'
 
 interface Props {
   onConfirm: () => void

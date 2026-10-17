@@ -6,9 +6,9 @@ import {
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
   TextField, Stack,
 } from '@mui/material'
-import AddIcon from '@mui/icons-material/Add'
-import EditIcon from '@mui/icons-material/Edit'
-import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import { Add as AddIcon } from '@mui/icons-material'
+import { Edit as EditIcon } from '@mui/icons-material'
+import { ChevronRight as ChevronRightIcon } from '@mui/icons-material'
 import { kursojApi, type Kurso } from '../api/kursoj'
 import DeleteButton from '../components/DeleteButton'
 

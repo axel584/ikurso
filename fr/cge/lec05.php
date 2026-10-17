@@ -73,8 +73,8 @@ include "dlekkapo.inc.php";
 			Mia nomo estas Roberto Bruno. Mi loĝas en Kanado. Mi komencis
 			lerni Esperanton antaŭ kvar semajnoj. Ĝi estas tre facila lingvo.
 			Mi loĝas en domo kun mia edzino kaj niaj infanoj. Ni havas unu
-			filon kaj du filinojn. Mi kolektas poŝtmarkojn kaj bildkartojn kaj
-			ŝatas interŝanĝi ilin kun esperantistoj en aliaj landoj.</p>
+			filon kaj du filinojn. Mi ŝatas foti. En la interreto mi interŝanĝas
+			miajn fotojn kun esperantistoj en aliaj landoj.</p>
 		</div>
 
 		<p class="noto">
@@ -88,7 +88,8 @@ include "dlekkapo.inc.php";
 			<?php } ?>
 			<div class="vortlisto row">
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/nomo.mp3" class="sm2_button"></a><span class="eo">nomo</span>&nbsp;: nom</p>
-				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/bildkarto.mp3" class="sm2_button"></a><span class="eo">bildkarto</span>&nbsp;: carte postale (illustrée)</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/foti.mp3" class="sm2_button"></a><span class="eo">foti</span>&nbsp;: photographier</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/foto.mp3" class="sm2_button"></a><span class="eo">foto</span>&nbsp;: photo</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/lingvo.mp3" class="sm2_button"></a><span class="eo">lingvo</span>&nbsp;: langue (que l’on parle)</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/komenci.mp3" class="sm2_button"></a><span class="eo">komenci</span>&nbsp;: commencer (quelque chose)</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/intersxangxi.mp3" class="sm2_button"></a><span class="eo">interŝanĝi</span>&nbsp;: échanger</p>
@@ -98,7 +99,7 @@ include "dlekkapo.inc.php";
 			</div>
 		</fieldset>
 
-		<p><span class="eo">loĝi, domo, edzo, infano, kolekti, poŝtmarko, lando</span>&nbsp;: se reporter au vocabulaire de la <a href="lec04.php">leçon précédente</a>
+		<p><span class="eo">loĝi, domo, edzo, infano, interreto, lando</span>&nbsp;: se reporter au vocabulaire de la <a href="lec04.php">leçon précédente</a>
 		</p>
 		</p>
 

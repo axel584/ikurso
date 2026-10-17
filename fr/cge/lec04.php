@@ -278,7 +278,6 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/anonco.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo">a<u>non</u>co</span>&nbsp;: annonce</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/antaux.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>an</u>taŭ</span>&nbsp;: avant</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/biciklo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">bi<u>ci</u>klo</span>&nbsp;: bicyclette</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/bildkarto.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">bild<u>kar</u>to</span>&nbsp;: carte postale</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/bildo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>bil</u>do</span>&nbsp;: image</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/cxambro.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ĉam</u>bro</span>&nbsp;: pièce</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/cxinio.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">Ĉi<u>ni</u>o</span>&nbsp;: Chine</p>
@@ -299,6 +298,7 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/gxojo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ĝo</u>jo</span>&nbsp;: joie</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/hxoro.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>ĥo</u>ro</span>&nbsp;: chœur</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/infano.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">in<u>fa</u>no</span>&nbsp;: enfant</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/interreto.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">inter<u>re</u>to</span>&nbsp;: internet</p>
 
 <p><a href="<?php echo $vojo;?>fr/son/vortoj/iu.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">iu</span>&nbsp;: quelqu’un</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jahxto.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>jaĥ</u>to</span>&nbsp;: yacht</p>
@@ -324,7 +324,7 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/neuxtrala.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">neŭ<u>tra</u>la</span>&nbsp;: neutre</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ovo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>o</u>vo</span>&nbsp;: œuf</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/plej.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">plej</span>&nbsp;: plus (superlatif)</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/posxtmarko.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">poŝt<u>mar</u>ko</span>&nbsp;: timbre-poste</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/retmesagxo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">retme<u>sa</u>ĝo</span>&nbsp;: courriel, e-mail</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sageto.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo">sa<u>ge</u>to</span>&nbsp;: fléchette</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sandvicxo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">sand<u>vi</u>ĉo</span>&nbsp;: sandwich</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sporto.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>spor</u>to</span>&nbsp;: sport</p>

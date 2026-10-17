@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Typography, Breadcrumbs, Container, Box, Link as MuiLink } from '@mui/material'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router'
 import Header from './Header'
 
 function useBreadcrumbs() {

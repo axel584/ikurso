@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router'
 import AuthGuard from './components/AuthGuard'
 import Layout from './components/Layout'
 import KursojPage from './pages/KursojPage'

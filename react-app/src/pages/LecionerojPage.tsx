@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router'
 import {
   Box, Typography, Button, Alert, Paper, Chip, Stack,
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow,

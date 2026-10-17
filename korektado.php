@@ -25,7 +25,7 @@ $titolo = $row["titolo"];
 <?php
 
 //$query = "select kodo,demando,komando,count(*) as combien,max(dato) from respondoj join lecioneroj on lecioneroj.id=respondoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where numero=".$leciono." and kurso='".$kurso."' group by komando,kodo, demando order by kodo,max(dato) desc";
-$stmt = $bdd->prepare("select ekzercoj.id,komando from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where lecionoj.numero=? and kurso=?");
+$stmt = $bdd->prepare("select ekzercoj.id,komando,komando_detalo,ekzemplo from ekzercoj join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where lecionoj.numero=? and kurso=? order by lecioneroj.ordo,ekzercoj.id");
 $stmt->execute([$leciono, $kurso]);
 $result = $stmt;
 $nbReponse = 0;
@@ -34,9 +34,19 @@ $komando="";
 while ($row=$result->fetch()) {
 	print "<fieldset class='ekzerco'>";
 	print "<legend>".$row['komando']."</legend>";
+	// mêmes compléments de consigne que sur la page d'exercice (getEkzercon) : liste de mots à utiliser, exemples
+	if ($row["komando_detalo"]!="") {
+		echo "<p>".$row["komando_detalo"]."</p>\n";
+	}
+	if ($row["ekzemplo"]!="") {
+		echo "<div class='ekzemplo row'>";
+		echo "<p><em>Exemples :</em></p>";
+		echo $row["ekzemplo"];
+		echo "</div>\n";
+	}
 	//echo "<p>".$row["demando"]."<br>\n";
 	//echo "<span style=\"color:blue\">".$row["combien"]."</span></p>\n";
-	$stmt2 = $bdd->prepare("select numero,demando,respondo from ekzerceroj where ekzerco_id=? order by numero");
+	$stmt2 = $bdd->prepare("select numero,demando,respondo from ekzerceroj where ekzerco_id=? and forigita=0 order by numero");
 	$stmt2->execute([$row["id"]]);
 	$result2 = $stmt2;
 	while ($row2=$result2->fetch()) {

@@ -4506,3 +4506,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- leçon 7 : affixes les plus fréquents sur 3 pages (#689) : voir sql/04-lecon7-affixes-frequents.sql
 --- leçon 7 : exercices 1 et 2 sur deux pages, une question par mot : voir sql/05-lecon7-exercices.sql
 --- vocabulaire plus moderne, leçons 4 et 5 (#865) : voir sql/06-vocabulaire-moderne.sql
+--- leçon 7 : mots espéranto en bleu dans les questions des exercices 1 et 2 : voir sql/07-lecon7-mots-en-bleu.sql

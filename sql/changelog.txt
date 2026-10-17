@@ -4504,3 +4504,4 @@ UPDATE `ekzerceroj` SET `demando` = 'Kiu estas la Nacia Tago en via lando? (\"na
 UPDATE `ekzerceroj` SET `respondo` = 'Vache, veau, troupeau de bovins, étable.', `normaligita` = 'vache veau troupeau de vaches|bétail|troupeau de boeufs|troupeau de bovins|troupeau de vaches étable' WHERE `ekzerceroj`.`id` = 165
 UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|ekslandestrino' WHERE `ekzerceroj`.`id` = 178
 --- leçon 7 : affixes les plus fréquents sur 3 pages (#689) : voir sql/04-lecon7-affixes-frequents.sql
+--- leçon 7 : exercices 1 et 2 sur deux pages, une question par mot : voir sql/05-lecon7-exercices.sql

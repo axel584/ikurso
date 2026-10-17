@@ -106,7 +106,7 @@ include "pagxkapo.inc.php";
 				<li class="collection-item">
 					<p>Correction dans les points de grammaire des chapitres <a href="<?php echo $vojo;?>fr/gerda/cxap23.php?section=2">23</a> et <a href="<?php echo $vojo;?>fr/gerda/cxap24.php?section=2">24</a> de <em>Gerda malaperis</em>.</p>
 					<p>Ajout d’un <a href="<?php echo $vojo;?>fr/gerda/temaro.php">index grammatical</a> au cours <em>Gerda malaperis</em>.</p>
-					<p>Ajout d’illustrations et d’un exercice dans la <a href="<?php echo $vojo;?>fr/cge/lec07.php?section=6">leçon 7</a> pour apprendre l’heure.</p>
+					<p>Ajout d’illustrations et d’un exercice dans la <a href="<?php echo $vojo;?>fr/cge/lec07.php?section=7">leçon 7</a> pour apprendre l’heure.</p>
 					<p>Ajout d’illustrations et d’explications sur les participes dans la <a href="<?php echo $vojo;?>fr/cge/lec08.php?section=1">leçon 8</a>.</p>
 					<p>Ajout d’un outil pour que les correcteurs puissent recevoir de nouveau une leçon qu’ils n’auraient pas reçue.</p>
 					<p>Utilisation d’un autre serveur de messagerie pour contrer les problèmes de non-réception des messages d’activation.</p>

@@ -401,20 +401,26 @@ include "dlekkapo.inc.php";
 		l’épreuve vos connaissances. Essayez de traduire en français les mots
 		suivants construits à partir des affixes que nous venons de voir.
 		Parfois vous comprendrez le sens en espéranto sans toutefois pouvoir
-		trouver l’équivalent français exact  donnez alors votre propre
+		trouver l’équivalent français exact&nbsp;: donnez alors votre propre
 		explication.
 		</p>
 			<?php 
 				getEkzercon(28,$persono_id);
 			?>
+
+		<?php 
+		} // fin section 4
+		if ($section=="5") {
+		?>
+
 		<p>Vous trouverez aussi qu’il est amusant de créer ses propres mots espéranto à partir des radicaux&nbsp;:</p>
 			<?php 
 				getEkzercon(29,$persono_id);
 			?>
 
 		<?php 
-		} // fin section 4
-		if ($section=="5") {
+		} // fin section 5
+		if ($section=="6") {
 		?>
 		
 		<p><a href="<?php echo $vojo;?>fr/son/frazoj/se-junulo-ne-lernis.mp3" class="sm2_button"></a>
@@ -452,8 +458,8 @@ include "dlekkapo.inc.php";
 		</p>
 		
 		<?php 
-		} // fin section 5
-		if ($section=="6") {
+		} // fin section 6
+		if ($section=="7") {
 		?>
 		
 		<p class="parto">
@@ -549,7 +555,7 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="7") {
+		if ($section=="8") {
 		?>
 			<?php 
 				getEkzercon(30,$persono_id);
@@ -567,8 +573,8 @@ include "dlekkapo.inc.php";
 				getEkzercon(31,$persono_id);
 			?>
 		<?php 
-		} // fin section 7
-		if ($section=="8") {
+		} // fin section 8
+		if ($section=="9") {
 		?>
 
 		<p class="parto">Voici un tableau récapitulatif du vocabulaire que vous avez vu dans cette leçon.</p>
@@ -681,7 +687,7 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="9") {
+		if ($section=="10") {
 		?>
 
 			<p>

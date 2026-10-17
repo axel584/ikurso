@@ -19,60 +19,23 @@ include "dlekkapo.inc.php";
 		
 		if ($section=="1") {
 		?>
-		
+
 		<p>
 		Dans la deuxième leçon nous avons dit qu’il était facile d’élargir
 		le vocabulaire de l’espéranto à l’aide d’affixes (préfixes et
-		suffixes). Voici maintenant la liste des affixes les plus importants,
-		avec des exemples qui illustrent leur application. Il n’est pas
-		nécessaire de les apprendre tous en une seule fois. Contentez-vous de
-		constater avec quelle facilité l’on construit de nouveaux mots tout en
-		réduisant la masse du vocabulaire à apprendre par cœur.
+		suffixes). Voici maintenant les affixes les plus courants, répartis
+		sur trois pages, avec des exemples qui illustrent leur application.
+		Contentez-vous de constater avec quelle facilité l’on construit de
+		nouveaux mots tout en réduisant la masse du vocabulaire à apprendre
+		par cœur. Un petit questionnaire à la fin de chaque page vous
+		permettra de vérifier que vous avez compris.
 		</p>
 
 		<?php if ($persono) { ?>
 		<p class="eo eta"><b>NOTE </b>: Les mots précédés de <span class="marque">•</span> seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
 		<?php } ?>
 
-		<p><b>BO</b> : <i>parenté par alliance</i></p>
-		<div class="row">
-			<p class="col s12"><span class="marque">•</span> <span class="eo">filo</span>&nbsp;: fils&emsp;→&emsp;<span class="marque">•</span> <span class="eo">bofilo</span>&nbsp;: beau-fils, gendre</p>
-			<p class="col s12"><span class="marque">•</span> <span class="eo">fratino</span>&nbsp;: sœur&emsp;→&emsp;<span class="marque">•</span> <span class="eo">bofratino</span>&nbsp;: belle-sœur</p>
-		</div>
-
-		<p><b>DIS</b> : <i>dispersion</i></p>
-		<div class="row">
-			<p class="col s12"><span class="marque">•</span>  <span class="eo">doni</span>&nbsp;: donner&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">disdoni</span>&nbsp;: distribuer</p>
-			<p class="col s12"><span class="marque">•</span>  <span class="eo">semi</span>&nbsp;: semer&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">dissemi</span>&nbsp;: disséminer</p>
-		</div>
-
-		<p><b>EK</b> : <i>soudaineté d’une action commençante</i></p>
-		<div class="row">
-			<p class="col s12"><span class="marque">•</span>  <span class="eo">dormi</span>&nbsp;: dormir&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">ekdormi</span>&nbsp;: s’endormir</p>
-			<p class="col s12"><span class="marque">•</span>  <span class="eo">pluvi</span>&nbsp;: pleuvoir&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">ekpluvi</span>&nbsp;: commencer à pleuvoir</p>
-			<p class="col s12"><span class="marque">•</span>  <span class="eo">ek !</span>&nbsp;: allez !, en avant !, allons-y !, en route !</p>
-		</div>
-
-		<p><b>EKS</b> : <i>cessation d’une fonction ou d’un état social</i></p>
-		<div class="row">
-			<p class="col s12"><span class="marque">•</span>  <span class="eo">prezidanto</span>&nbsp;: président&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">eksprezidanto</span>&nbsp;: ex-président</p>
-			<p class="col s12"><span class="marque">•</span>  <span class="eo">edziĝi</span>&nbsp;: se marier&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">eksedziĝi</span>&nbsp;: divorcer (en parlant d’un homme)</p>
-			<p class="col s12"><span class="marque">•</span>  <span class="eo">eksiĝi</span>&nbsp;: démissionner</p>
-		</div>
-		
-		<p><b>FI</b> : <i>mépris</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">virino</span>&nbsp;: femme&emsp;→&emsp;<span class="eo">fivirino</span>&nbsp;: femme de mauvaise vie</p>
-			<p class="col s12"><span class="marque">•</span> <span class="eo">komercisto</span>&nbsp;: commerçant&emsp;→&emsp;<span class="eo">fikomercisto</span>&nbsp;: mercanti</p>
-			<p class="col s12"> <span class="eo">fi!</span>&nbsp;: pouah !</p>
-		</div>
-		
-		<p><b>GE</b> : <i>réunion des deux sexes</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">patro</span>&nbsp;: père&emsp;→&emsp;<span class="marque">•</span> <span class="eo">gepatroj</span>&nbsp;: parents</p>
-			<p class="col s12"><span class="marque">•</span> <span class="eo">sinjoro</span>&nbsp;: monsieur&emsp;→&emsp;<span class="marque">•</span> <span class="eo">gesinjoroj</span>&nbsp;: mesdames et messieurs</p>
-			<p class="col s12"><span class="marque">•</span> <span class="eo">gea</span>&nbsp;: mixte</p>
-		</div>
+		<p class="parto">Les préfixes</p>
 
 		<p><b>MAL</b> : <i>contraire, inverse</i></p>
 		<div class="row">
@@ -81,43 +44,51 @@ include "dlekkapo.inc.php";
 			<p class="col s12"><span class="marque">•</span> <span class="eo">la malo</span>&nbsp;: le contraire</p>
 		</div>
 
-		<p><b>MIS</b> : <i>action ratée, exécutée «&nbsp;de travers&nbsp;»</i></p>
-		<div class="row">
-			<p class="col s12"><span class="marque">•</span> <span class="eo">kompreni</span>&nbsp;: comprendre&emsp;→&emsp;<span class="marque">•</span> <span class="eo">miskompreni</span>&nbsp;: comprendre de travers</p>
-			<p class="col s12"><span class="marque">•</span> <span class="eo">paŝo</span>&nbsp;: pas&emsp;→&emsp;<span class="eo">mispaŝo</span>&nbsp;: faux pas</p>
-		</div>
-
-		<p><b>PRA</b> : <i>éloignement dans les degrés de parenté et dans le temps</i></p>
-		<div class="row">
-			<p class="col s12"><span class="marque">•</span> <span class="eo">nepo</span>&nbsp;: petit-fils&emsp;→&emsp;<span class="marque">•</span> <span class="eo">pranepo</span>&nbsp;: arrière-petit-fils</p>
-			<p class="col s12"><span class="marque">•</span> <span class="eo">avo</span>&nbsp;: grand-père&emsp;→&emsp;<span class="marque">•</span> <span class="eo">praavo</span>&nbsp;: arrière-grand-père</p>
-			<p class="col s12"><span class="marque">•</span> <span class="eo">arbaro</span>&nbsp;: forêt&emsp;→&emsp;<span class="eo">praarbaro</span>&nbsp;: forêt vierge</p>
-		</div>
-
 		<p><b>RE</b> : <i>répétition, retour en arrière</i></p>
 		<div class="row">
 			<p class="col s12"><span class="eo">fari</span>&nbsp;: faire&emsp;→&emsp; <span class="marque">•</span> <span class="eo">refari</span>&nbsp;: refaire</p>
 			<p class="col s12"><span class="eo">veni</span>&nbsp;: venir&emsp;→&emsp; <span class="marque">•</span> <span class="eo">reveni</span>&nbsp;: revenir</p>
 			<p class="col s12"><span class="marque">•</span> <span class="eo">ree</span>&nbsp;: de nouveau</p>
-			<p class="col s12"><span class="eo">ĝis revido !</span>&nbsp;: au revoir !</p>
+			<p class="col s12"><span class="eo">ĝis revido !</span>&nbsp;: au revoir !</p>
 		</div>
 
-		<?php 
-		} // fin section 1
-		if ($section=="2") {
-		?>
-
-		<?php if ($persono) { ?>
-		<p class="eo eta"><b>NOTE </b>: Les mots précédés de <span class="marque">•</span> seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
-		<?php } ?>
-
-		<p><b>AĈ</b> : <i>péjoratif</i></p>
+		<p><b>EK</b> : <i>soudaineté d’une action commençante</i></p>
 		<div class="row">
-			<p class="col s12"><span class="eo">domo</span>&nbsp;: maison&emsp;→&emsp;<span class="eo">domaĉo</span>&nbsp;: masure</p>
-			<p class="col s12"><span class="eo">skribi</span>&nbsp;: écrire&emsp;→&emsp;<span class="eo">skribaĉi</span>&nbsp;: griffonner</p>
-			<p class="col s12"><span class="eo">aĉa</span>&nbsp;: moche, mauvais</p>
+			<p class="col s12"><span class="marque">•</span>  <span class="eo">dormi</span>&nbsp;: dormir&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">ekdormi</span>&nbsp;: s’endormir</p>
+			<p class="col s12"><span class="marque">•</span>  <span class="eo">pluvi</span>&nbsp;: pleuvoir&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">ekpluvi</span>&nbsp;: commencer à pleuvoir</p>
+			<p class="col s12"><span class="marque">•</span>  <span class="eo">ek !</span>&nbsp;: allez !, en avant !, allons-y !, en route !</p>
 		</div>
-		
+
+		<p><b>DIS</b> : <i>dispersion</i></p>
+		<div class="row">
+			<p class="col s12"><span class="marque">•</span>  <span class="eo">doni</span>&nbsp;: donner&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">disdoni</span>&nbsp;: distribuer</p>
+			<p class="col s12"><span class="marque">•</span>  <span class="eo">semi</span>&nbsp;: semer&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">dissemi</span>&nbsp;: disséminer</p>
+		</div>
+
+		<p><b>GE</b> : <i>réunion des deux sexes</i></p>
+		<div class="row">
+			<p class="col s12"><span class="eo">patro</span>&nbsp;: père&emsp;→&emsp;<span class="marque">•</span> <span class="eo">gepatroj</span>&nbsp;: parents</p>
+			<p class="col s12"><span class="marque">•</span> <span class="eo">sinjoro</span>&nbsp;: monsieur&emsp;→&emsp;<span class="marque">•</span> <span class="eo">gesinjoroj</span>&nbsp;: mesdames et messieurs</p>
+			<p class="col s12"><span class="marque">•</span> <span class="eo">gea</span>&nbsp;: mixte</p>
+		</div>
+
+		<p class="parto">Trois suffixes pour parler d’une action</p>
+
+		<p><b>IG</b> : <i>faire (devant un infinitif), rendre tel ou tel</i></p>
+		<div class="row">
+			<p class="col s12"><span class="eo">pura</span>&nbsp;: propre&emsp;→&emsp;<span class="eo"><span class="marque">•</span> purigi</span>&nbsp;: nettoyer (rendre propre)</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> morti</span>&nbsp;: mourir&emsp;→&emsp;<span class="eo"><span class="marque">•</span> mortigi</span>&nbsp;: tuer (faire mourir)</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> scii</span>&nbsp;: savoir&emsp;→&emsp;<span class="eo"><span class="marque">•</span> sciigi</span>&nbsp;: faire savoir, informer</p>
+			<p class="col s12"><span class="eo">igi</span>&nbsp;: rendre (tel), faire (faire)</p>
+		</div>
+
+		<p><b>IĜ</b> : <i>devenir tel ou tel</i></p>
+		<div class="row">
+			<p class="col s12"><span class="eo"><span class="marque">•</span> sidi</span>&nbsp;: être assis&emsp;→&emsp;<span class="eo"><span class="marque">•</span> sidiĝi</span>&nbsp;: s’asseoir</p>
+			<p class="col s12"><span class="eo">ruĝa</span>&nbsp;: rouge&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ruĝiĝi</span>&nbsp;: rougir</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> iĝi</span>&nbsp;: devenir</p>
+		</div>
+
 		<p><b>AD</b> : <i>action qui dure ou se réitère</i></p>
 		<div class="row">
 			<p class="col s12"><span class="eo"><span class="marque">•</span> paroli</span>&nbsp;: parler&emsp;→&emsp;<span class="eo"><span class="marque">•</span> parolado</span>&nbsp;: discours</p>
@@ -126,58 +97,109 @@ include "dlekkapo.inc.php";
 			<p class="col s12"><span class="eo"><span class="marque">•</span> ade</span>&nbsp;: sans arrêt</p>
 		</div>
 
-		<p><b>Aĵ</b> : <i>chose concrète caractérisée par l’idée exprimée dans le radical</i></p>
+		<p class="parto">Vérifiez que vous avez compris&nbsp;:</p>
+		<?php
+		QCM(
+			array(
+				array(
+					"question"=>"Que signifie <span class='eo'>malbona</span>&nbsp;?",
+					"propositions"=>array("très bon","mauvais","meilleur","bon de nouveau"),
+					"reponse"=>2
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>relegi</span> (<span class='eo'>legi</span>&nbsp;= lire)&nbsp;?",
+					"propositions"=>array("commencer à lire","lire mal","relire","lire sans arrêt"),
+					"reponse"=>3
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>ekkrii</span> (<span class='eo'>krii</span>&nbsp;= crier)&nbsp;?",
+					"propositions"=>array("s’écrier, pousser soudain un cri","crier de nouveau","crier sans arrêt","faire crier"),
+					"reponse"=>1
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>gefratoj</span> (<span class='eo'>frato</span>&nbsp;= frère)&nbsp;?",
+					"propositions"=>array("les frères","les sœurs","frères et sœurs","les amis"),
+					"reponse"=>3
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>disĵeti</span> (<span class='eo'>ĵeti</span>&nbsp;= jeter, lancer)&nbsp;?",
+					"propositions"=>array("jeter de nouveau","éparpiller, jeter de tous côtés","ne pas jeter","commencer à jeter"),
+					"reponse"=>2
+				),
+				array(
+					"question"=>"Comment dit-on «&nbsp;agrandir, rendre plus grand&nbsp;» (<span class='eo'>granda</span>&nbsp;= grand)&nbsp;?",
+					"propositions"=>array("<span class='eo'>grandiĝi</span>","<span class='eo'>grandado</span>","<span class='eo'>malgrandigi</span>","<span class='eo'>grandigi</span>"),
+					"reponse"=>4
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>La pordo malfermiĝas.</span>&nbsp;?",
+					"propositions"=>array("La porte s’ouvre.","On ferme la porte.","La porte ouvre quelqu’un.","La porte reste fermée."),
+					"reponse"=>1
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>dancado</span> (<span class='eo'>danci</span>&nbsp;= danser)&nbsp;?",
+					"propositions"=>array("danser de nouveau","commencer à danser","la danse, le fait de danser","faire danser"),
+					"reponse"=>3
+				)
+			)
+		);
+		?>
+
+		<?php
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
+		<p>
+		Continuons avec les suffixes. Ceux de cette page servent à désigner
+		des personnes, des objets et des lieux.
+		</p>
+
+		<?php if ($persono) { ?>
+		<p class="eo eta"><b>NOTE </b>: Les mots précédés de <span class="marque">•</span> seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+		<?php } ?>
+
+		<p class="parto">Les personnes</p>
+
+		<p><b>IST</b> : <i>profession, activité habituelle</i></p>
 		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> sendi</span>&nbsp;: envoyer&emsp;→&emsp;<span class="eo"><span class="marque">•</span> sendaĵo</span>&nbsp;: envoi (chose envoyée)</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> bovo</span>&nbsp;: bœuf&emsp;→&emsp;<span class="eo"><span class="marque">•</span> bovaĵo</span>&nbsp;: viande de bœuf</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> reala</span>&nbsp;: réel&emsp;→&emsp;<span class="eo"><span class="marque">•</span> realaĵo</span>&nbsp;: réalité, chose réelle</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> instrui</span>&nbsp;: enseigner&emsp;→&emsp;<span class="eo">instruisto</span>&nbsp;: enseignant</p>
+			<p class="col s12"><span class="eo">piano</span>&nbsp;: piano&emsp;→&emsp;<span class="eo"><span class="marque">•</span> pianisto</span>&nbsp;: pianiste</p>
+			<p class="col s12"><span class="eo">esperantisto</span>&nbsp;: espérantiste</p>
 		</div>
-		
-		<p><br><b>AN</b> : <i>membre d’une collectivité, adhérent</i></p>
+
+		<p><b>IN</b> : <i>sexe féminin</i></p>
+		<div class="row">
+			<p class="col s12"><span class="eo"><span class="marque">•</span> onklo</span>&nbsp;: oncle&emsp;→&emsp;<span class="eo"><span class="marque">•</span> onklino</span>&nbsp;: tante</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> koko</span>&nbsp;: coq&emsp;→&emsp;<span class="eo"><span class="marque">•</span> kokino</span>&nbsp;: poule</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> ina</span>&nbsp;: féminin</p>
+		</div>
+
+		<p><b>UL</b> : <i>individu caractérisé par…</i></p>
+		<div class="row">
+			<p class="col s12"><span class="eo"><span class="marque">•</span> sankta</span>&nbsp;: saint&emsp;→&emsp;<span class="eo"><span class="marque">•</span> sanktulo</span>&nbsp;: un saint</p>
+			<p class="col s12"><span class="eo">kontraŭ</span>&nbsp;: contre&emsp;→&emsp;<span class="eo">kontraŭulo</span>&nbsp;: un adversaire, un opposant</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> stulta</span>&nbsp;: stupide&emsp;→&emsp;<span class="eo"><span class="marque">•</span> stultulo</span>&nbsp;: un sot</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> kunulino</span>&nbsp;: compagne</p>
+		</div>
+
+		<p><b>AN</b> : <i>membre d’une collectivité, adhérent</i></p>
 		<div class="row">
 			<p class="col s12"><span class="eo"><span class="marque">•</span> Kanado</span>&nbsp;: Canada&emsp;→&emsp;<span class="eo"><span class="marque">•</span> kanadano</span>&nbsp;: Canadien</p>
 			<p class="col s12"><span class="eo"><span class="marque">•</span> Kristo</span>&nbsp;: Christ&emsp;→&emsp;<span class="eo"><span class="marque">•</span> kristano</span>&nbsp;: chrétien</p>
 			<p class="col s12"><span class="eo">rotariano</span>&nbsp;: rotarien (membre du Rotary)</p>
 		</div>
-		
-		<p><b>AR</b> : <i>collection de, ensemble de</i></p>
+
+		<p class="parto">Les objets et les lieux</p>
+
+		<p><b>IL</b> : <i>outil, instrument</i></p>
 		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> vorto</span>&nbsp;: mot&emsp;→&emsp;<span class="eo"><span class="marque">•</span> vortaro</span>&nbsp;: dictionnaire</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> ŝafo</span>&nbsp;: mouton&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ŝafaro</span>&nbsp;: troupeau de moutons</p>
-			<p class="col s12"><span class="eo">arbo</span>&nbsp;: arbre&emsp;→&emsp;<span class="eo">arbaro</span>&nbsp;: forêt</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> membraro</span>&nbsp;: les membres (d’une association)</p>
-		</div>
-		
-		<p><b>ĈJ</b> : <i>diminutif affectueux masculin (appliqué à la première ou aux deux premières syllabes du mot)</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">patro</span>&nbsp;: père&emsp;→&emsp;<span class="eo">paĉjo</span>&nbsp;: papa</p>
-			<p class="col s12"><span class="eo">Petro</span>&nbsp;: Pierre&emsp;→&emsp;<span class="eo">Peĉjo</span>&nbsp;: Pierrot</p>
-			<p class="col s12"><span class="eo">Jozefo</span>&nbsp;: Joseph&emsp;→&emsp;<span class="eo">Joĉjo</span>&nbsp;: Jo, Jos</p>
-			<p class="col s12"><span class="eo">Tinĉjo</span>&nbsp;: Tintin</p>
-		</div>
-		
-		<p><b>EBL</b> : <i>la possibilité passive («qui peut être…»)</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">vidi</span>&nbsp;: voir&emsp;→&emsp;<span class="eo"><span class="marque">•</span> videbla</span>&nbsp;: visible</p>
-			<p class="col s12"><span class="eo">kredi</span>&nbsp;: croire&emsp;→&emsp;<span class="eo"><span class="marque">•</span> nekredebla</span>&nbsp;: incroyable</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> ebla</span>&nbsp;: possible</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> eble</span>&nbsp;: peut-être</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> ŝlosi</span>&nbsp;: fermer à clef&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ŝlosilo</span>&nbsp;: clef</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> razi</span>&nbsp;: raser&emsp;→&emsp;<span class="eo"><span class="marque">•</span> razilo</span>&nbsp;: rasoir</p>
+			<p class="col s12"><span class="eo">sidi</span>&nbsp;: être assis&emsp;→&emsp;<span class="eo">sidilo</span>&nbsp;: siège</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> ilo</span>&nbsp;: instrument</p>
 		</div>
 
-		<p><b>EC</b> : <i>l’état, la qualité abstraite correspondant à l’idée exprimée dans la racine</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">viro</span>&nbsp;: homme&emsp;→&emsp;<span class="eo"><span class="marque">•</span> vireco</span>&nbsp;: virilité</p>
-			<p class="col s12"><span class="eo">verda</span>&nbsp;: vert&emsp;→&emsp;<span class="eo"><span class="marque">•</span> verdeco</span>&nbsp;: verdeur</p>
-			<p class="col s12"><span class="eo">infano</span>&nbsp;: enfant&emsp;→&emsp;<span class="eo"><span class="marque">•</span> infaneco</span>&nbsp;: enfance</p>
-		</div>
-		
-		<p><b>EG</b> : <i>augmentatif</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> vento</span>&nbsp;: vent&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ventego</span>&nbsp;: tempête</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> ridi</span>&nbsp;: rire&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ridegi</span>&nbsp;: se tordre (de rire)</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> ege</span>&nbsp;: extrêmement</p>
-		</div>
-		
 		<p><b>EJ</b> : <i>lieu caractéristique de l’action ou de l’objet concerné</i></p>
 		<div class="row">
 			<p class="col s12"><span class="eo">lerni</span>&nbsp;: apprendre&emsp;→&emsp;<span class="eo">lernejo</span>&nbsp;: école</p>
@@ -185,148 +207,193 @@ include "dlekkapo.inc.php";
 			<p class="col s12"><span class="eo"><span class="marque">•</span> tombo</span>&nbsp;: tombe&emsp;→&emsp;<span class="eo"><span class="marque">•</span> tombejo</span>&nbsp;: cimetière</p>
 			<p class="col s12"><span class="eo"><span class="marque">•</span> ejo</span>&nbsp;: local, salle</p>
 		</div>
-		
-		<p><b>EM</b> : <i>le penchant, la tendance</i></p>
+
+		<p><b>AĴ</b> : <i>chose concrète caractérisée par l’idée exprimée dans le radical</i></p>
 		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> ŝpari</span>&nbsp;: économiser&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ŝparema</span>&nbsp;: économe</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> babili</span>&nbsp;: bavarder&emsp;→&emsp;<span class="eo"><span class="marque">•</span> babilema</span>&nbsp;: bavard</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> emi</span>&nbsp;: avoir tendance à</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> sendi</span>&nbsp;: envoyer&emsp;→&emsp;<span class="eo"><span class="marque">•</span> sendaĵo</span>&nbsp;: envoi (chose envoyée)</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> bovo</span>&nbsp;: bœuf&emsp;→&emsp;<span class="eo"><span class="marque">•</span> bovaĵo</span>&nbsp;: viande de bœuf</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> reala</span>&nbsp;: réel&emsp;→&emsp;<span class="eo"><span class="marque">•</span> realaĵo</span>&nbsp;: réalité, chose réelle</p>
 		</div>
-		
-		<p><b>END</b> : <i>obligation passive («qui doit être…»)</i></p>
+
+		<p><b>AR</b> : <i>collection de, ensemble de</i></p>
 		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> legi</span>&nbsp;: lire&emsp;→&emsp;<span class="eo"><span class="marque">•</span> legenda</span>&nbsp;: qu’il faut lire (à lire)</p>
-			<p class="col s12"><span class="eo">fari</span>&nbsp;: faire&emsp;→&emsp;<span class="eo"><span class="marque">•</span> farenda</span>&nbsp;: qu’il faut faire (à faire)</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> vorto</span>&nbsp;: mot&emsp;→&emsp;<span class="eo"><span class="marque">•</span> vortaro</span>&nbsp;: dictionnaire</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> ŝafo</span>&nbsp;: mouton&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ŝafaro</span>&nbsp;: troupeau de moutons</p>
+			<p class="col s12"><span class="eo">arbo</span>&nbsp;: arbre&emsp;→&emsp;<span class="eo"><span class="marque">•</span> arbaro</span>&nbsp;: forêt</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> membraro</span>&nbsp;: les membres (d’une association)</p>
 		</div>
-		
-		<p><b>ER</b> : <i>unité constitutive de la collection</i></p>
+
+		<p class="parto">Vérifiez que vous avez compris&nbsp;:</p>
+		<?php
+		QCM(
+			array(
+				array(
+					"question"=>"Que signifie <span class='eo'>kuiristo</span> (<span class='eo'>kuiri</span>&nbsp;= cuisiner)&nbsp;?",
+					"propositions"=>array("la cuisine (la pièce)","un cuisinier","un ustensile de cuisine","un plat cuisiné"),
+					"reponse"=>2
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>amikino</span>&nbsp;?",
+					"propositions"=>array("une amie","l’amitié","un groupe d’amis","un ennemi"),
+					"reponse"=>1
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>riĉulo</span> (<span class='eo'>riĉa</span>&nbsp;= riche)&nbsp;?",
+					"propositions"=>array("la richesse","s’enrichir","un homme riche","très riche"),
+					"reponse"=>3
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>parizano</span> (<span class='eo'>Parizo</span>&nbsp;= Paris)&nbsp;?",
+					"propositions"=>array("une rue de Paris","un Parisien","la région parisienne","un guide de Paris"),
+					"reponse"=>2
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>tranĉilo</span> (<span class='eo'>tranĉi</span>&nbsp;= couper)&nbsp;?",
+					"propositions"=>array("une boucherie","un morceau coupé","un boucher","un couteau"),
+					"reponse"=>4
+				),
+				array(
+					"question"=>"Comment dit-on «&nbsp;une boulangerie&nbsp;» (<span class='eo'>baki</span>&nbsp;= cuire au four)&nbsp;?",
+					"propositions"=>array("<span class='eo'>bakisto</span>","<span class='eo'>bakejo</span>","<span class='eo'>bakilo</span>","<span class='eo'>bakaĵo</span>"),
+					"reponse"=>2
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>trinkaĵo</span> (<span class='eo'>trinki</span>&nbsp;= boire)&nbsp;?",
+					"propositions"=>array("un buveur","un bar","une boisson","un verre"),
+					"reponse"=>3
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>homaro</span> (<span class='eo'>homo</span>&nbsp;= être humain)&nbsp;?",
+					"propositions"=>array("l’humanité","un homme","un petit homme","l’humour"),
+					"reponse"=>1
+				)
+			)
+		);
+		?>
+
+		<?php
+		} // fin section 2
+		if ($section=="3") {
+		?>
+
+		<p>
+		Voici les derniers suffixes de cette leçon. Ils expriment une
+		qualité, une taille, une tendance ou une possibilité.
+		</p>
+
+		<?php if ($persono) { ?>
+		<p class="eo eta"><b>NOTE </b>: Les mots précédés de <span class="marque">•</span> seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section.</p>
+		<?php } ?>
+
+		<p class="parto">Les qualités et la taille</p>
+
+		<p><b>EC</b> : <i>l’état, la qualité abstraite correspondant à l’idée exprimée dans la racine</i></p>
 		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> salo</span>&nbsp;: sel&emsp;→&emsp;<span class="eo"><span class="marque">•</span> salero</span>&nbsp;: grain de sel</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> mono</span>&nbsp;: argent&emsp;→&emsp;<span class="eo"><span class="marque">•</span> monero</span>&nbsp;: pièce de monnaie</p>
-			<p class="col s12"><span class="eo">ero</span>&nbsp;: détail, morceau, élément, item</p>
+			<p class="col s12"><span class="eo">viro</span>&nbsp;: homme&emsp;→&emsp;<span class="eo"><span class="marque">•</span> vireco</span>&nbsp;: virilité</p>
+			<p class="col s12"><span class="eo">verda</span>&nbsp;: vert&emsp;→&emsp;<span class="eo"><span class="marque">•</span> verdeco</span>&nbsp;: verdeur</p>
+			<p class="col s12"><span class="eo">infano</span>&nbsp;: enfant&emsp;→&emsp;<span class="eo"><span class="marque">•</span> infaneco</span>&nbsp;: enfance</p>
 		</div>
-		
-		<p><b>ESTR</b> : <i>celui qui commande effectivement au lieu indiqué par la racine</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">urbo</span>&nbsp;: ville&emsp;→&emsp;<span class="eo"><span class="marque">•</span> urbestro</span>&nbsp;: maire, bourgmestre</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> estri</span>&nbsp;: diriger&emsp;→&emsp;<span class="eo"><span class="marque">•</span> estro</span>&nbsp;: chef</p>
-		</div>
-		
+
 		<p><b>ET</b> : <i>diminutif</i></p>
 		<div class="row">
 			<p class="col s12"><span class="eo">bela</span>&nbsp;: beau&emsp;→&emsp;<span class="eo"><span class="marque">•</span> beleta</span>&nbsp;: joli</p>
 			<p class="col s12"><span class="eo">varma</span>&nbsp;: chaud&emsp;→&emsp;<span class="eo"><span class="marque">•</span> varmeta</span>&nbsp;: tiède</p>
 			<p class="col s12"><span class="eo">eta</span>&nbsp;: petit&emsp;→&emsp;<span class="eo"><span class="marque">•</span> iomete</span>&nbsp;: un petit peu</p>
 		</div>
-		
-		<p><b>ID</b> : <i>descendant, rejeton</i></p>
+
+		<p><b>EG</b> : <i>augmentatif</i></p>
 		<div class="row">
-			<p class="col s12"><span class="eo">kato</span>&nbsp;: chat&emsp;→&emsp;<span class="eo"><span class="marque">•</span> katido</span>&nbsp;: chaton</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> reĝo</span>&nbsp;: roi&emsp;→&emsp;<span class="eo"><span class="marque">•</span> reĝido</span>&nbsp;: prince</p>
-			<p class="col s12"><span class="eo">ido</span>&nbsp;: descendant, petit (d’un animal)</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> vento</span>&nbsp;: vent&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ventego</span>&nbsp;: tempête</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> ridi</span>&nbsp;: rire&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ridegi</span>&nbsp;: se tordre (de rire)</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> ege</span>&nbsp;: extrêmement</p>
 		</div>
-		
-		<p><b>IG</b> : <i>faire (devant un infinitif), rendre tel ou tel</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">pura</span>&nbsp;: propre&emsp;→&emsp;<span class="eo"><span class="marque">•</span> purigi</span>&nbsp;: nettoyer (rendre propre)</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> morti</span>&nbsp;: mourir&emsp;→&emsp;<span class="eo"><span class="marque">•</span> mortigi</span>&nbsp;: tuer (faire mourir)</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> scii</span>&nbsp;: savoir&emsp;→&emsp;<span class="eo"><span class="marque">•</span> sciigi</span>&nbsp;: faire savoir, informer</p>
-			<p class="col s12"><span class="eo">igi</span>&nbsp;: rendre (tel), faire (faire)</p>
-		</div>
-		
-		<p><b>IĜ</b> : <i>devenir tel ou tel</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> sidi</span>&nbsp;: être assis&emsp;→&emsp;<span class="eo"><span class="marque">•</span> sidiĝi</span>&nbsp;: s’asseoir</p>
-			<p class="col s12"><span class="eo">ruĝa</span>&nbsp;: rouge&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ruĝiĝi</span>&nbsp;: rougir</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> iĝi</span>&nbsp;: devenir</p>
-		</div>
-		
-		<p><b>IL</b> : <i>outil, instrument</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> ŝlosi</span>&nbsp;: fermer à clef&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ŝlosilo</span>&nbsp;: clef</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> razi</span>&nbsp;: raser&emsp;→&emsp;<span class="eo"><span class="marque">•</span> razilo</span>&nbsp;: rasoir</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> sidi</span>&nbsp;: être assis&emsp;→&emsp;<span class="eo"><span class="marque">•</span> sidilo</span>&nbsp;: siège</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> ilo</span>&nbsp;: instrument</p>
-		</div>
-		
-		<p><b>IN</b> : <i>sexe féminin</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> onklo</span>&nbsp;: oncle&emsp;→&emsp;<span class="eo"><span class="marque">•</span> onklino</span>&nbsp;: tante</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> koko</span>&nbsp;: coq&emsp;→&emsp;<span class="eo"><span class="marque">•</span> kokino</span>&nbsp;: poule</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> ina</span>&nbsp;: féminin</p>
-		</div>
-		
-		<p><b>IND</b> : <i>qui mérite d’être..., digne de...</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> admiri</span>&nbsp;: admirer&emsp;→&emsp;<span class="eo"><span class="marque">•</span> admirinda</span>&nbsp;: admirable</p>
-			<p class="col s12"><span class="eo">laŭdi</span>&nbsp;: louer&emsp;→&emsp;<span class="eo">laŭdinda</span>&nbsp;: louable</p>
-		</div>
-		
-		<p><b>ING</b> : <i>ce dans quoi on insère ou introduit quelque chose</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">plumo</span>&nbsp;: plume&emsp;→&emsp;<span class="eo">plumingo</span>&nbsp;: porte-plume</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> cigaredo</span>&nbsp;: cigarette&emsp;→&emsp;<span class="eo">cigaredingo</span>&nbsp;: fume-cigarette</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> glavo</span>&nbsp;: épée&emsp;→&emsp;<span class="eo">glavingo</span>&nbsp;: fourreau</p>
-		</div>
-		
-		<p><b>IST</b> : <i>profession, activité habituelle</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> instrui</span>&nbsp;: enseigner&emsp;→&emsp;<span class="eo">instruisto</span>&nbsp;: enseignant</p>
-			<p class="col s12"><span class="eo">piano</span>&nbsp;: piano&emsp;→&emsp;<span class="eo"><span class="marque">•</span> pianisto</span>&nbsp;: pianiste</p>
-			<p class="col s12"><span class="eo">esperantisto</span>&nbsp;: espérantiste</p>
-		</div>
-		
-		<p><b>NJ</b> : <i>diminutif affectueux féminin (appliqué à la première ou aux deux premières syllabes du mot)</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">patrino</span>&nbsp;: mère&emsp;→&emsp;<span class="eo"><span class="marque">•</span> panjo</span>&nbsp;: maman</p>
-			<p class="col s12"><span class="eo">Maria</span>&nbsp;: Marie&emsp;→&emsp;<span class="eo">Manjo</span>&nbsp;: Mariette</p>
-		</div>
-		
-		<p><b>OBL</b> : <i>forme les multiplicatifs</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">du</span>&nbsp;: deux&emsp;→&emsp;<span class="eo"><span class="marque">•</span> duobla</span>&nbsp;: double</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> multobligi</span>&nbsp;: multiplier, reproduire en plusieurs exemplaires</p>
-		</div>
-		
-		<p><b>ON</b> : <i>forme les nombres fractionnaires</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">kvar</span>&nbsp;: quatre&emsp;→&emsp;<span class="eo"><span class="marque">•</span> kvarono</span>&nbsp;: un quart</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> duonhoro</span>&nbsp;: demi-heure</p>
-		</div>	
-		<p><b>OP</b> : <i>forme les collectifs</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">tri</span>&nbsp;: trois&emsp;→&emsp;<span class="eo"><span class="marque">•</span> triope</span>&nbsp;: à trois</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> unuopa</span>&nbsp;: individuel</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> ope</span>&nbsp;: en groupe, à plusieurs</p>
-		</div>
-		
-		<p><b>UJ</b> : <i>contenant, récipient pour contenir…</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo">salo</span>&nbsp;: sel&emsp;→&emsp;<span class="eo">salujo</span>&nbsp;: salière</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> supo</span>&nbsp;: soupe&emsp;→&emsp;<span class="eo">supujo</span>&nbsp;: soupière</p>
-			<p class="col s12"><span class="eo">mono</span>&nbsp;: argent&emsp;→&emsp;<span class="eo"><span class="marque">•</span> monujo</span>&nbsp;: portemonnaie</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> ujo</span>&nbsp;: récipient</p>
-		</div>
-		
-		<p><b>UL</b> : <i>individu caractérisé par…</i></p>
-		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> sankta</span>&nbsp;: saint&emsp;→&emsp;<span class="eo"><span class="marque">•</span> sanktulo</span>&nbsp;: un saint</p>
-			<p class="col s12"><span class="eo">kontraŭ</span>&nbsp;: contre&emsp;→&emsp;<span class="eo">kontraŭulo</span>&nbsp;: un adversaire, un opposant</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> stulta</span>&nbsp;: stupide&emsp;→&emsp;<span class="eo"><span class="marque">•</span> stultulo</span>&nbsp;: un sot</p>
-			<p class="col s12"><span class="eo"><span class="marque">•</span> kunulino</span>&nbsp;: compagne</p>
-			<p class="col s12"><span class="eo">aĉulo</span>&nbsp;: salopard</p>
-		</div>
-		
-		<p><b>UM</b> : <i>indéterminé</i></p>
+
+		<p><b>UM</b> : <i>suffixe au sens indéterminé&nbsp;: chaque mot formé avec <b>-um-</b> s’apprend à part</i></p>
 		<div class="row">
 			<p class="col s12"><span class="eo"><span class="marque">•</span> kolo</span>&nbsp;: cou&emsp;→&emsp;<span class="eo"><span class="marque">•</span> kolumo</span>&nbsp;: col (de chemise)</p>
 			<p class="col s12"><span class="eo"><span class="marque">•</span> plena</span>&nbsp;: plein&emsp;→&emsp;<span class="eo"><span class="marque">•</span> plenumi</span>&nbsp;: accomplir</p>
 			<p class="col s12"><span class="eo"><span class="marque">•</span> umilo</span>&nbsp;: gadget</p>
 		</div>
 
-		<?php 
-		} // fin section 2
-		if ($section=="3") {
+		<p class="parto">La tendance et la possibilité</p>
+
+		<p><b>EM</b> : <i>le penchant, la tendance</i></p>
+		<div class="row">
+			<p class="col s12"><span class="eo"><span class="marque">•</span> ŝpari</span>&nbsp;: économiser&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ŝparema</span>&nbsp;: économe</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> babili</span>&nbsp;: bavarder&emsp;→&emsp;<span class="eo"><span class="marque">•</span> babilema</span>&nbsp;: bavard</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> emi</span>&nbsp;: avoir tendance à</p>
+		</div>
+
+		<p><b>EBL</b> : <i>la possibilité passive («&nbsp;qui peut être…&nbsp;»)</i></p>
+		<div class="row">
+			<p class="col s12"><span class="eo">vidi</span>&nbsp;: voir&emsp;→&emsp;<span class="eo"><span class="marque">•</span> videbla</span>&nbsp;: visible</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> kredi</span>&nbsp;: croire&emsp;→&emsp;<span class="eo"><span class="marque">•</span> nekredebla</span>&nbsp;: incroyable</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> ebla</span>&nbsp;: possible</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> eble</span>&nbsp;: peut-être</p>
+		</div>
+
+		<p><b>IND</b> : <i>qui mérite d’être…, digne de…</i></p>
+		<div class="row">
+			<p class="col s12"><span class="eo">admiri</span>&nbsp;: admirer&emsp;→&emsp;<span class="eo"><span class="marque">•</span> admirinda</span>&nbsp;: admirable</p>
+			<p class="col s12"><span class="eo">laŭdi</span>&nbsp;: louer&emsp;→&emsp;<span class="eo">laŭdinda</span>&nbsp;: louable</p>
+		</div>
+
+		<div class="card-panel blue lighten-5">
+			<p><b>Et les autres affixes&nbsp;?</b></p>
+			<p>L’espéranto possède encore d’autres préfixes et suffixes, moins
+			fréquents. Inutile de les apprendre maintenant&nbsp;: vous en
+			découvrirez plusieurs dans le cours <i>Gerda malaperis</i>, et les
+			autres au fil de vos lectures. Lorsque vous rencontrerez un mot
+			inconnu, essayez de le découper en radical et affixes&nbsp;: vous
+			serez souvent surpris de le comprendre sans dictionnaire.</p>
+		</div>
+
+		<p class="parto">Vérifiez que vous avez compris&nbsp;:</p>
+		<?php
+		QCM(
+			array(
+				array(
+					"question"=>"Que signifie <span class='eo'>boneco</span>&nbsp;?",
+					"propositions"=>array("très bon","la bonté","plutôt bon","mauvais"),
+					"reponse"=>2
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>dometo</span> (<span class='eo'>domo</span>&nbsp;= maison)&nbsp;?",
+					"propositions"=>array("une maisonnette","une grande maison","un quartier","un maçon"),
+					"reponse"=>1
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>varmega</span> (<span class='eo'>varma</span>&nbsp;= chaud)&nbsp;?",
+					"propositions"=>array("tiède","la chaleur","brûlant, très chaud","réchauffer"),
+					"reponse"=>3
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>laborema</span> (<span class='eo'>labori</span>&nbsp;= travailler)&nbsp;?",
+					"propositions"=>array("un atelier","qui peut être travaillé","un travailleur salarié","qui aime travailler, travailleur"),
+					"reponse"=>4
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>manĝebla</span> (<span class='eo'>manĝi</span>&nbsp;= manger)&nbsp;?",
+					"propositions"=>array("comestible, qui peut être mangé","gourmand","un repas","qui mérite d’être mangé"),
+					"reponse"=>1
+				),
+				array(
+					"question"=>"Que signifie <span class='eo'>vidinda</span> (<span class='eo'>vidi</span>&nbsp;= voir)&nbsp;?",
+					"propositions"=>array("visible","qui vaut la peine d’être vu","qui aime regarder","la vue"),
+					"reponse"=>2
+				),
+				array(
+					"question"=>"Le suffixe <span class='eo'>-um-</span>…",
+					"propositions"=>array("indique toujours un outil","indique toujours un lieu","n’a pas de sens précis&nbsp;: chaque mot s’apprend à part","indique toujours une personne"),
+					"reponse"=>3
+				)
+			)
+		);
+		?>
+
+		<?php
+		} // fin section 3
+		if ($section=="4") {
 		?>
 		
 		<p>
@@ -346,8 +413,8 @@ include "dlekkapo.inc.php";
 			?>
 
 		<?php 
-		} // fin section 3
-		if ($section=="4") {
+		} // fin section 4
+		if ($section=="5") {
 		?>
 		
 		<p><a href="<?php echo $vojo;?>fr/son/frazoj/se-junulo-ne-lernis.mp3" class="sm2_button"></a>
@@ -385,8 +452,8 @@ include "dlekkapo.inc.php";
 		</p>
 		
 		<?php 
-		} // fin section 4
-		if ($section=="5") {
+		} // fin section 5
+		if ($section=="6") {
 		?>
 		
 		<p class="parto">
@@ -482,7 +549,7 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="6") {
+		if ($section=="7") {
 		?>
 			<?php 
 				getEkzercon(30,$persono_id);
@@ -500,8 +567,8 @@ include "dlekkapo.inc.php";
 				getEkzercon(31,$persono_id);
 			?>
 		<?php 
-		} // fin section 6
-		if ($section=="7") {
+		} // fin section 7
+		if ($section=="8") {
 		?>
 
 		<p class="parto">Voici un tableau récapitulatif du vocabulaire que vous avez vu dans cette leçon.</p>
@@ -512,10 +579,6 @@ include "dlekkapo.inc.php";
 			<fieldset class="vortoj">
 				<div class="vortlisto row">
 					<div class="col s12 m6">
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/filo-2.mp3" class="sm2_button"></a><span class="eo">filo</span>&nbsp;: fils<br>
-						   <a href="<?php echo $vojo;?>fr/son/vortoj/bofilo.mp3" class="sm2_button"></a><span class="eo">bofilo</span>&nbsp;: beau-fils, gendre</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/fratino.mp3" class="sm2_button"></a><span class="eo">fratino</span>&nbsp;: sœur<br>
-						   <a href="<?php echo $vojo;?>fr/son/vortoj/bofratino.mp3" class="sm2_button"></a><span class="eo">bofratino</span>&nbsp;: belle-sœur</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/doni.mp3" class="sm2_button"></a><span class="eo">doni</span>&nbsp;: donner<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/disdoni.mp3" class="sm2_button"></a><span class="eo">disdoni</span>&nbsp;: distribuer</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/semi.mp3" class="sm2_button"></a><span class="eo">semi</span>&nbsp;: semer<br>
@@ -525,12 +588,6 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/pluvi.mp3" class="sm2_button"></a><span class="eo">pluvi</span>&nbsp;: pleuvoir<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/ekpluvi.mp3" class="sm2_button"></a><span class="eo">ekpluvi</span>&nbsp;: commencer à pleuvoir</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ek.mp3" class="sm2_button"></a><span class="eo">ek!</span>&nbsp;: allez&nbsp;!, en avant&nbsp;!, allons-y&nbsp;!, en route&nbsp;!</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/prezidanto.mp3" class="sm2_button"></a><span class="eo">prezidanto</span>&nbsp;: président<br>
-						   <a href="<?php echo $vojo;?>fr/son/vortoj/eksprezidanto.mp3" class="sm2_button"></a><span class="eo">eksprezidanto</span>&nbsp;: ex-président</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/edzigxi.mp3" class="sm2_button"></a><span class="eo">edziĝi</span>&nbsp;: se marier<br>
-						   <a href="<?php echo $vojo;?>fr/son/vortoj/eksedzigxi.mp3" class="sm2_button"></a><span class="eo">eksedziĝi</span>&nbsp;: divorcer</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/eksigxi.mp3" class="sm2_button"></a><span class="eo">eksiĝi</span>&nbsp;: démissionner</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/komercisto.mp3" class="sm2_button"></a><span class="eo">komercisto</span>&nbsp;: commerçant</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/gepatroj.mp3" class="sm2_button"></a><span class="eo">gepatroj</span>&nbsp;: parents</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sinjoro.mp3" class="sm2_button"></a><span class="eo">sinjoro</span>&nbsp;: monsieur<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/gesinjoroj.mp3" class="sm2_button"></a><span class="eo">gesinjoroj</span>&nbsp;: mesdames et messieurs</p>
@@ -580,21 +637,9 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/babili.mp3" class="sm2_button"></a><span class="eo">babili</span>&nbsp;: bavarder<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/babilema.mp3" class="sm2_button"></a><span class="eo">babilema</span>&nbsp;: bavard</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/emi.mp3" class="sm2_button"></a><span class="eo">emi</span>&nbsp;: avoir tendance à</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/legi.mp3" class="sm2_button"></a><span class="eo">legi</span>&nbsp;: lire<br>
-						   <a href="<?php echo $vojo;?>fr/son/vortoj/legenda.mp3" class="sm2_button"></a><span class="eo">legenda</span>&nbsp;: qu’il faut lire (à lire)</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/salo.mp3" class="sm2_button"></a><span class="eo">salo</span>&nbsp;: sel<br>
-						   <a href="<?php echo $vojo;?>fr/son/vortoj/salero.mp3" class="sm2_button"></a><span class="eo">salero</span>&nbsp;: grain de sel</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/mono.mp3" class="sm2_button"></a><span class="eo">mono</span>&nbsp;: argent<br>
-						   <a href="<?php echo $vojo;?>fr/son/vortoj/monero.mp3" class="sm2_button"></a><span class="eo">monero</span>&nbsp;: pièce de monnaie</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/estri.mp3" class="sm2_button"></a><span class="eo">estri</span>&nbsp;: diriger<br>
-						   <a href="<?php echo $vojo;?>fr/son/vortoj/estro.mp3" class="sm2_button"></a><span class="eo">estro</span>&nbsp;: chef<br>
-						   <a href="<?php echo $vojo;?>fr/son/vortoj/urbestro.mp3" class="sm2_button"></a><span class="eo">urbestro</span>&nbsp;: maire, bourgmestre</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/beleta.mp3" class="sm2_button"></a><span class="eo">beleta</span>&nbsp;: joli</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/varmeta.mp3" class="sm2_button"></a><span class="eo">varmeta</span>&nbsp;: tiède</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/iomete.mp3" class="sm2_button"></a><span class="eo">iomete</span>&nbsp;: un petit peu</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/katido.mp3" class="sm2_button"></a><span class="eo">katido</span>&nbsp;: chaton</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/regxo.mp3" class="sm2_button"></a><span class="eo">reĝo</span>&nbsp;: roi<br>
-						   <a href="<?php echo $vojo;?>fr/son/vortoj/regxido.mp3" class="sm2_button"></a><span class="eo">reĝido</span>&nbsp;: prince</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/purigi.mp3" class="sm2_button"></a><span class="eo">purigi</span>&nbsp;: nettoyer (rendre propre)</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/morti.mp3" class="sm2_button"></a><span class="eo">morti</span>&nbsp;: mourir<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/mortigi.mp3" class="sm2_button"></a><span class="eo">mortigi</span>&nbsp;: tuer (faire mourir)</p>
@@ -617,18 +662,9 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ina.mp3" class="sm2_button"></a><span class="eo">ina</span>&nbsp;: féminin</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/admiri.mp3" class="sm2_button"></a><span class="eo">admiri</span>&nbsp;: admirer<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/admirinda.mp3" class="sm2_button"></a><span class="eo">admirinda</span>&nbsp;: admirable</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/cigaredo.mp3" class="sm2_button"></a><span class="eo">cigaredo</span>&nbsp;: cigarette</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/glavo.mp3" class="sm2_button"></a><span class="eo">glavo</span>&nbsp;: épée</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/instrui.mp3" class="sm2_button"></a><span class="eo">instrui</span>&nbsp;: enseigner<br>
 							<a href="<?php echo $vojo;?>fr/son/vortoj/instruisto.mp3" class="sm2_button"></a><span class="eo">instruisto</span>&nbsp;: enseignant</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/panjo.mp3" class="sm2_button"></a><span class="eo">panjo</span>&nbsp;: maman</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/duobla.mp3" class="sm2_button"></a><span class="eo">duobla</span>&nbsp;: double</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/multobligi.mp3" class="sm2_button"></a><span class="eo">multobligi</span>&nbsp;: multiplier, reproduire en plusieurs exemplaires</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/duonhoro.mp3" class="sm2_button"></a><span class="eo">duonhoro</span>&nbsp;: demi-heure</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/unuopa.mp3" class="sm2_button"></a><span class="eo">unuopa</span>&nbsp;: individuel</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ope.mp3" class="sm2_button"></a><span class="eo">ope</span>&nbsp;: en groupe, à plusieurs</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/supo.mp3" class="sm2_button"></a><span class="eo">supo</span>&nbsp;: soupe</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/ujo.mp3" class="sm2_button"></a><span class="eo">ujo</span>&nbsp;: récipient</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sankta.mp3" class="sm2_button"></a><span class="eo">sankta</span>&nbsp;: saint<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/sanktulo.mp3" class="sm2_button"></a><span class="eo">sanktulo</span>&nbsp;: un saint</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/stulta.mp3" class="sm2_button"></a><span class="eo">stulta</span>&nbsp;: stupide<br>
@@ -645,7 +681,7 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="8") {
+		if ($section=="9") {
 		?>
 
 			<p>

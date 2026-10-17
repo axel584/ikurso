@@ -77,8 +77,9 @@ include "dlekkapo.inc.php";
 					<ul>
 						<li><a href="lec02.php?section=2">Féminin</a></li>
 						<li><a href="lec02.php?section=6">Préfixe <b>mal-</b></a></li>
-						<li><a href="lec07.php?section=1">Préfixes</a></li>
-						<li><a href="lec07.php?section=2">Suffixes</a></li>
+						<li><a href="lec07.php?section=1">Préfixes et suffixes d’action</a></li>
+						<li><a href="lec07.php?section=2">Suffixes : personnes, objets et lieux</a></li>
+						<li><a href="lec07.php?section=3">Suffixes : qualités, taille et possibilité</a></li>
 					</ul>
 					<h3>Prononciation</h3>
 					<ul>
@@ -106,14 +107,14 @@ include "dlekkapo.inc.php";
 						<li><a href="lec06.php?section=16">Accusatif derrière une préposition</a></li>
 						<li><a href="lec06.php?section=16">Accusatif avec adverbe de lieu</a></li>
 						<li><a href="lec04.php?section=8">La date</a></li>
-						<li><a href="lec07.php?section=5">Expression de l’heure</a></li>
+						<li><a href="lec07.php?section=6">Expression de l’heure</a></li>
 					</ul>
 					<h3>Proverbes</h3>
 					<ul>
 						<li><a href="lec03.php">Leçon 3</a></li>
 						<li><a href="lec05.php?section=4">Leçon 5</a></li>
 						<li><a href="lec06.php?section=5">Leçon 6</a></li>
-						<li><a href="lec07.php?section=4">Leçon 7</a></li>
+						<li><a href="lec07.php?section=5">Leçon 7</a></li>
 						<li><a href="lec08.php?section=2">Leçon 8</a></li>
 						<li><a href="lec09.php?section=6">Leçon 9</a></li>
 					</ul>

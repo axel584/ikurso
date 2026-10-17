@@ -1,4 +1,5 @@
 <?php
+include_once "../../util.php"; // ouvre la session avant de lire $_SESSION
 $numcxap=$_GET["lec"];
 $leciono=$_GET["lec"];
 $kazo=$_GET["kazo"];
@@ -44,15 +45,7 @@ include "gerdakapo.inc.php";
 				<input type='hidden' name="kurso" value='GR'/>
 				<input type='hidden' name="leciono" value='<?=$leciono?>'/>
 				<div class="tasko enketo">
-					<p>Notez l'intérêt que vous avez eu à effectuer la leçon : de 1 (très ennuyeux) à 5 (très amusant) </p>
-					<div class="rating">
-						<p><input name="intereso" type="range" value="3" min="1" max="5" step="1"></p>
-					</div>
-	
-					<p>Notez la difficulté que vous avez eue à effectuer la leçon : de 1 (très facile) à 5 (très compliqué) </p>
-					<div class="rating">
-						<p><input name="malfacileco" type="range" min="1" max="5" step="1"></p>
-					</div>
+					<?php taksoDemandoj(); ?>
 					<div class="input-field col s12">
 						<textarea name="komento" class="materialize-textarea"></textarea>
 						<label for="komento">Laissez un commentaire (optionnel) sur la leçon :</label>

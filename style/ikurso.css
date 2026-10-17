@@ -937,6 +937,26 @@ legend a {color: inherit; cursor: pointer;}
 #leciono-enketo {
 	margin-top: 2rem;
 }
+.takso-demando {
+	border: none;
+	padding: 0;
+	margin: 0 0 1.5rem;
+}
+.takso-demando legend {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+.takso-demando p {
+	margin: 0.3rem 0;
+}
+.takso-demando label {
+	color: inherit;
+	font-size: 1rem;
+}
+.takso-emoji {
+	display: inline-block;
+	width: 1.6em;
+}
 .rating {
 	text-align:left;
 	width:15em;

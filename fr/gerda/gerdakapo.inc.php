@@ -5,7 +5,7 @@ $pagxo=explode("/", $_SERVER["SCRIPT_NAME"]);
 $subjekto=$pagxo[count($pagxo)-1];
 if ($subjekto!="korekti.php") {
 	$vojo="../../";
-	include $vojo."util.php";
+	include_once $vojo."util.php";
 	include_once ($vojo."db.inc.php");
 	include_once ($vojo."webui.inc.php");
 }

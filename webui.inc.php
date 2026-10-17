@@ -487,6 +487,42 @@ function QCM($qcm) {
 	echo "</div>\n";
 }
 
+// questions d'appréciation de la leçon (page konfirmo.php des cours en français) :
+// une liste de boutons radio par critère, la valeur envoyée va de 1 à 5
+function taksoDemandoj() {
+	$demandoj = array(
+		"intereso" => array(
+			"demando" => "Quel est votre ressenti sur l’intérêt de cette leçon&nbsp;?",
+			"respondoj" => array(
+				1 => array("😴", "Trop barbant"),
+				2 => array("😐", "Plutôt ennuyeux"),
+				3 => array("🙂", "Moyen"),
+				4 => array("😃", "Assez intéressant"),
+				5 => array("🤩", "Génial&nbsp;! J’ai adoré&nbsp;!"),
+			),
+		),
+		"malfacileco" => array(
+			"demando" => "Comment avez-vous trouvé la difficulté de cette leçon&nbsp;?",
+			"respondoj" => array(
+				1 => array("🔵", "Les doigts dans le nez&nbsp;!"),
+				2 => array("🟢", "Assez facile"),
+				3 => array("🟡", "Quelques difficultés, mais dans l’ensemble je m’en suis sorti(e)"),
+				4 => array("🟠", "Assez difficile"),
+				5 => array("🔴", "Trop compliqué. Je m’en suis arraché les cheveux&nbsp;!"),
+			),
+		),
+	);
+	foreach ($demandoj as $nomo => $demando) {
+		echo "<fieldset class='takso-demando'>";
+		echo "<legend>".$demando["demando"]."</legend>";
+		foreach ($demando["respondoj"] as $valoro => $respondo) {
+			echo "<p><label><input class='with-gap' name='".$nomo."' type='radio' value='".$valoro."' required/>";
+			echo "<span><span class='takso-emoji' aria-hidden='true'>".$respondo[0]."</span> ".$respondo[1]."</span></label></p>";
+		}
+		echo "</fieldset>\n";
+	}
+}
+
 function questionQCM($numero,$question,$propositions,$eraroj,$memorkurso) {
 					echo "<p id=\"demando_".$numero."\">";
 					//echo "<input type=\"hidden\" name=\"900 dmd ".$numero."\" value=\"".$question."\">\n";

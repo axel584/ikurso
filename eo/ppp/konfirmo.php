@@ -1,4 +1,5 @@
 <?php
+include_once "../../util.php"; // ouvre la session avant de lire $_SESSION
 $numcxap=$_GET["lec"];
 $leciono=$_GET["lec"];
 $kazo=$_GET["kazo"];

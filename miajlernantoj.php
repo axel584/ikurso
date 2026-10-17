@@ -289,7 +289,7 @@ include "pagxkapo-old.inc.php";
 			<?php } ?>
 			<div class="encadre">
 				<p>Pour plus d'informations sur la fa&ccedil;on de g&eacute;rer vos &eacute;l&egrave;ves, 
-				lisez le <a href="helppagxo.php">Guide du correcteur</a>.</p>
+				lisez le <a href="gvidilo.php">Guide du correcteur</a>.</p>
 			</div>
 
     		<?php if ($eksaj=="jes"){

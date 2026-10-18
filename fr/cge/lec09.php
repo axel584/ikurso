@@ -164,6 +164,31 @@ include "dlekkapo.inc.php";
 		if ($section=="4") {
 		?>
 
+			<?php 
+				getEkzercon(320,$persono_id);
+			?>
+
+			<fieldset class="vortoj">
+				<legend>VOCABULAIRE À RETENIR</legend>
+				<div>
+					<?php if ($persono) { ?>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<?php } ?>
+				</div>
+				<div class="vortlisto row">
+					<p class="col s12 m6"><span class="eo">gvidi</span>&nbsp;: guider, diriger</p>
+					<p class="col s12 m6"><span class="eo">Brazilo</span>&nbsp;: Brésil</p>
+					<p class="col s12 m6"><span class="eo">Braziljo</span>&nbsp;: Brasilia</p>
+					<p class="col s12 m6"><span class="eo">senti</span>&nbsp;: sentir, ressentir</p>
+					<p class="col s12 m6"><span class="eo">kresko</span>&nbsp;: croissance, accroissement</p>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section
+		if ($section=="5") {
+		?>
+
 			<p class="parto">Voici cinq autres mots très fréquents terminés par <b>-aŭ</b>&nbsp;:</p>
 		
 			<?php if ($persono) { ?>
@@ -199,7 +224,16 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="5") {
+		if ($section=="6") {
+		?>
+
+			<?php 
+				getEkzercon(321,$persono_id);
+			?>
+
+		<?php 
+		} // fin section
+		if ($section=="7") {
 		?>
 
 			<p class="parto">Parmi les mots invariables fréquemment employés, on trouve aussi&nbsp;:</p>
@@ -226,7 +260,35 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="6") {
+		if ($section=="8") {
+		?>
+
+			<?php 
+				getEkzercon(322,$persono_id);
+			?>
+
+			<p class="noto">NOTE : <span class="eo">Ŝerbruko</span>&nbsp;: Sherbrooke (ville du Québec)</p>
+
+			<fieldset class="vortoj">
+				<legend>VOCABULAIRE À RETENIR</legend>
+				<div>
+					<?php if ($persono) { ?>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<?php } ?>
+				</div>
+				<div class="vortlisto row">
+					<p class="col s12 m6"><span class="eo">samideano</span>&nbsp;: partisan (ici : espérantiste)</p>
+					<p class="col s12 m6"><span class="eo">gastigi</span>&nbsp;: recevoir (des invités), offrir l’hospitalité</p>
+					<p class="col s12 m6"><span class="eo">kutima</span>&nbsp;: habituel</p>
+					<p class="col s12 m6"><span class="eo">Usono</span>&nbsp;: États-Unis</p>
+					<p class="col s12 m6"><span class="eo">plie</span>&nbsp;: de plus</p>
+					<p class="col s12 m6"><span class="eo">aranĝo</span>&nbsp;: manifestation</p>
+				</div>
+			</fieldset>
+
+		<?php 
+		} // fin section
+		if ($section=="9") {
 		?>
 			<div class="row">
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/kiam-kato-promenas.mp3" class="sm2_button"></a><span class="eo">Kiam kato promenas, la musoj festenas.</span></p>
@@ -258,7 +320,7 @@ include "dlekkapo.inc.php";
 
 		<?php 
 		} // fin section
-		if ($section=="7") {
+		if ($section=="10") {
 		?>
 
 			<div class="float-right w30 noprint">
@@ -339,15 +401,12 @@ frameborder="0" allowfullscreen></iframe></p>
 			</div>
 		<?php 
 		} // fin section
-		if ($section=="8") {
+		if ($section=="11") {
 		?>
 	
 			<?php 
 				getEkzercon(37,$persono_id);
 			?>
-			
-			<p class="noto">NOTE : <span class="eo">Ŝerbruko</span>&nbsp;: Sherbrooke (ville du Québec)</p>
-			
 
 			<fieldset class="vortoj">
 				<legend>VOCABULAIRE À RETENIR</legend>
@@ -357,17 +416,6 @@ frameborder="0" allowfullscreen></iframe></p>
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s12 m6"><span class="eo">gvidi</span>&nbsp;: guider, diriger</p>
-					<p class="col s12 m6"><span class="eo">Brazilo</span>&nbsp;: Brésil</p>
-					<p class="col s12 m6"><span class="eo">Braziljo</span>&nbsp;: Brasilia</p>
-					<p class="col s12 m6"><span class="eo">senti</span>&nbsp;: sentir, ressentir</p>
-					<p class="col s12 m6"><span class="eo">kresko</span>&nbsp;: croissance, accroissement</p>
-					<p class="col s12 m6"><span class="eo">samideano</span>&nbsp;: partisan (ici : espérantiste)</p>
-					<p class="col s12 m6"><span class="eo">gastigi</span>&nbsp;: recevoir (des invités), offrir l’hospitalité</p>
-					<p class="col s12 m6"><span class="eo">kutima</span>&nbsp;: habituel</p>
-					<p class="col s12 m6"><span class="eo">Usono</span>&nbsp;: États-Unis</p>
-					<p class="col s12 m6"><span class="eo">plie</span>&nbsp;: de plus</p>
-					<p class="col s12 m6"><span class="eo">aranĝo</span>&nbsp;: manifestation</p>
 					<p class="col s12 m6"><span class="eo">asocio</span>&nbsp;: association</p>
 					<p class="col s12 m6"><span class="eo">najbaro</span>&nbsp;: voisin</p>
 					<p class="col s12 m6"><span class="eo">rubriko</span>&nbsp;: rubrique</p>
@@ -385,7 +433,7 @@ frameborder="0" allowfullscreen></iframe></p>
 
 		<?php 
 		} // fin section
-		if ($section=="9") {
+		if ($section=="12") {
 		?>
 			<p>
 			Vous venez de franchir la dernière étape de votre apprentissage. La dixième et dernière leçon consiste en un examen qui va vous permettre d'évaluer l'ensemble de vos connaissances. Les questions sont faciles, il n'y a pas de piège. Vous connaissez déjà toutes les réponses, cet examen a pour seul objectif de vous en convaincre.

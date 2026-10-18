@@ -136,7 +136,7 @@ frameborder="0" allowfullscreen></iframe></p>
 
 				<p class="parto">Sans oublier <a href="https://eo.wikipedia.org/wiki/Vikipedio:%C4%88efpa%C4%9Do">Vikipedio</a>, la version en espéranto de <strong>Wikipédia</strong>.</p>
 				<div class="card-panel blue lighten-5">
-					<p><strong>Voir aussi&nbsp;:</strong> <a href="<?php echo $vojo;?>fr/cge/lec09.php?section=7">Les revues en espéranto</a> (leçon 9 du <em>Cours en 10 leçons</em>).</p>
+					<p><strong>Voir aussi&nbsp;:</strong> <a href="<?php echo $vojo;?>fr/cge/lec09.php?section=10">Les revues en espéranto</a> (leçon 9 du <em>Cours en 10 leçons</em>).</p>
 				</div>
 
 				<h2>Voyager, rencontrer d’autres espérantophones</h2>

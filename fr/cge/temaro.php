@@ -31,7 +31,7 @@ include "dlekkapo.inc.php";
 					<ul>
 						<li><a href="lec01.php?section=4">Pronoms personnels</a></li>
 						<li><a href="lec05.php?section=2">Pronoms corrélatifs en <b>-a</b>, <b>-u</b> et <b>-o</b></a></li>
-						<li><a href="lec08.php?section=6">Pronom réfléchi</a></li>
+						<li><a href="lec08.php?section=7">Pronom réfléchi</a></li>
 					</ul>
 					
 					<h3>Petits mots</h3>
@@ -53,7 +53,7 @@ include "dlekkapo.inc.php";
 						<li><a href="lec01.php?section=4#temps">Présent, passé, futur</a></li>
 						<li><a href="lec03.php?section=10">Verbes transitifs et intransitifs</a></li>
 						<li><a href="lec08.php?section=1">Conditionnel, impératif et subjonctif</a></li>
-						<li><a href="lec08.php?section=1#participes">Participes</a></li>
+						<li><a href="lec08.php?section=2">Participes</a></li>
 					</ul>
 					<h3>Noms et adjectifs</h3>
 					<ul>
@@ -62,7 +62,7 @@ include "dlekkapo.inc.php";
 						<li><a href="lec01.php?section=4">Pluriel</a></li>
 						<li><a href="lec01.php?section=4">Adjectifs possessifs</a></li>
 						<li><a href="lec05.php?section=2">Adjectifs corrélatifs en <b>-a</b>, <b>-u</b> et <b>-es</b></a></li>
-						<li><a href="lec08.php?section=6">Adjectif possessif réfléchi</a></li>
+						<li><a href="lec08.php?section=7">Adjectif possessif réfléchi</a></li>
 					</ul>
 				</div>
 				<div class="col s12 m6">
@@ -88,7 +88,7 @@ include "dlekkapo.inc.php";
 						<li><a href="lec04.php?section=3">Alphabet</a></li>
 						<li><a href="lec04.php?section=4">Diphtongues</a></li>
 						<li><a href="lec06.php?section=3">Rappel sur la prononciation de <b>c</b> <b>h</b>, <b>r</b></a></li>
-						<li><a href="lec08.php?section=9">Rappel sur l’accent tonique</a></li>
+						<li><a href="lec08.php?section=10">Rappel sur l’accent tonique</a></li>
 						<li><a href="lec09.php?section=2">Élision</a></li>
 						<li><a href="lec09.php?section=4">Rappel sur <b>-aŭ</b></a></li>
 					</ul>
@@ -115,7 +115,7 @@ include "dlekkapo.inc.php";
 						<li><a href="lec05.php?section=4">Leçon 5</a></li>
 						<li><a href="lec06.php?section=5">Leçon 6</a></li>
 						<li><a href="lec07.php?section=6">Leçon 7</a></li>
-						<li><a href="lec08.php?section=2">Leçon 8</a></li>
+						<li><a href="lec08.php?section=3">Leçon 8</a></li>
 						<li><a href="lec09.php?section=6">Leçon 9</a></li>
 					</ul>
 					<h3>Culture</h3>

@@ -53,6 +53,11 @@ include "dlekkapo.inc.php";
 				<p class="col s11 offset-s1">Je croyais qu’il viendrait. :  <span class="eo">Mi kredis, ke li ven<b>os</b>.</span></p>
 			</div>
 	
+		<?php 
+		} // fin section 1
+		if ($section=="2") {
+		?>
+
 			<a id="participes" class="scrollspy"></a>
 
 			<p class="parto">Enfin, il reste les <b>participes</b> (mots qui s’emploient comme verbes,
@@ -60,7 +65,7 @@ include "dlekkapo.inc.php";
 			</p>
 	
 			<div class="row vortlisto">
-				<p class="col s12"><b>Participes de la voix active</b></p>
+				<p class="col s12"><b>Participes actifs</b></p>
 				<div class="col s12 row">
 					<p class="col s3 m2 l2">Présent :<br>
 					<b>-ant</b></p>
@@ -83,7 +88,7 @@ include "dlekkapo.inc.php";
 				</div>
 			</div>
 			<div class="row vortlisto">
-				<p class="col s12"><b>Participes de la voix passive</b></p>
+				<p class="col s12"><b>Participes passifs</b></p>
 				<div class="col s12 row">
 					<p class="col s3 m2 l2">Présent :<br>
 						<b>-at</b></p>
@@ -198,8 +203,8 @@ include "dlekkapo.inc.php";
 			</fieldset>
 
 		<?php 
-		} // fin section 1
-		if ($section=="2") {
+		} // fin section 2
+		if ($section=="3") {
 		?>
 
 			<p><a href="<?php echo $vojo;?>fr/son/frazoj/vivanton-ni-malhonoras.mp3" class="sm2_button"></a> <span class="eo">Vivanton ni malhonoras, mortinton ni adoras.</span></p>
@@ -215,24 +220,24 @@ include "dlekkapo.inc.php";
 			<p class="parto">Dans le premier proverbe, on souligne qu’on juge différemment une personne morte ou vivante, on la déshonore de son vivant, mais on la vénère quand elle est morte. Dans le deuxième proverbe, le diable personnifie les problèmes qui peuvent arriver et ceux-ci ne sont pas considérés comme graves s’ils ne sont pas chez soi.</p>
 			
 		<?php 
-		} // fin section 2
-		if ($section=="3") {
+		} // fin section 3
+		if ($section=="4") {
 		?>
 			<?php 
 				getEkzercon(32,$persono_id);
 			?>
 
 		<?php 
-		} // fin section 3
-		if ($section=="4") {
+		} // fin section 4
+		if ($section=="5") {
 		?>
 			<?php 
 				getEkzercon(33,$persono_id);
 			?>
 	
 		<?php 
-		} // fin section 4
-		if ($section=="5") {
+		} // fin section 5
+		if ($section=="6") {
 		?>
 
 			<p>
@@ -267,8 +272,8 @@ include "dlekkapo.inc.php";
 			</fieldset>
 			
 			<?php 
-			} // fin section 5
-			if ($section=="6") {
+			} // fin section 6
+			if ($section=="7") {
 			?>
 			
 			<p class="parto">Dans la <a href="lec01.php?section=4">première leçon</a>, vous avez vu les pronoms personnels. Pour mémoire, en voici de nouveau la liste.</p>
@@ -359,16 +364,16 @@ include "dlekkapo.inc.php";
 			
 
 		<?php 
-		} // fin section 6
-		if ($section=="7") {
+		} // fin section 7
+		if ($section=="8") {
 		?>
 			<?php 
 				getEkzercon(35,$persono_id);
 			?>
 		
 		<?php 
-		} // fin section 7
-		if ($section=="8") {
+		} // fin section 8
+		if ($section=="9") {
 		?>
 		
 			<?php 
@@ -395,8 +400,8 @@ include "dlekkapo.inc.php";
 				<p class="col s12 m6"><span class="eo">silenti</span>&nbsp;: garder le silence</p>
 			</div>
 		<?php 
-		} // fin section 8
-		if ($section=="9") {
+		} // fin section 9
+		if ($section=="10") {
 		?>
 			<p>
 			Lisez régulièrement le texte suivant à haute voix en ayant soin
@@ -425,8 +430,8 @@ include "dlekkapo.inc.php";
 			anglais <i>hand</i>, <i>hair</i>, <i>have</i>.</p>
 
 		<?php 
-		} // fin section 9
-		if ($section=="10") {
+		} // fin section 10
+		if ($section=="11") {
 		?>
 
 			<p>

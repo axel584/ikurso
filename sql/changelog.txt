@@ -4514,3 +4514,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- leçon 6 : ĉe refusé en question 12 et malantaŭ en question 14 (#965) : voir sql/11-lecon6-prepositions.sql
 --- leçon 5.6 : question 2 « miaj amikoj » remplacée par « komputilisto » (#961) : voir sql/12-lecon5-question-kio.sql
 --- cours élémentaire : espaces en trop et point manquant dans 4 corrigés types et copies des pages (#1042) : voir sql/13-typographie-dlek.sql
+--- leçon 8 : page 8.1 coupée en « Conditionnel et impératif » et « Les participes » (participes actifs / passifs) : voir sql/14-lecon8-participes.sql

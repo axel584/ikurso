@@ -108,6 +108,9 @@
 	if ($erarkodo==26) {
 		echo "M.toast({html: 'Votre compte a été supprimé.'});\n";
 	}
+	if ($erarkodo==27) {
+		echo "M.toast({html: 'Votre progression a été effacée, vous pouvez recommencer le cours.'});\n";
+	}
 	
 
 ?>

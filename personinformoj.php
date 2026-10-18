@@ -303,6 +303,7 @@ if ($persono['lando']=="FR" && $persono['posxtkodo']!="") {
 					qui vous concernent (art. 34 de la loi «Informatique et Libertés») sur la page suivante.
 					</p>
 					<p class="noto"><a href="eksportiDatumojn.php">Exporter mes données</a> (fichier JSON contenant vos informations personnelles et vos réponses aux exercices).</p>
+					<p class="noto"><a href="rekomenciKurson.php">Recommencer un cours depuis le début</a> (efface définitivement vos réponses et votre progression).</p>
 					<p class="noto"><a href="forigiKonton.php">Supprimer mon compte</a></p>
 				</div>
 			</div>

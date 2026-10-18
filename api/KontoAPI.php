@@ -1,8 +1,9 @@
 <?php
-// KontoAPI.php - Suppression de son compte par l'élève lui-même (issue #1029)
+// KontoAPI.php - Suppression de son compte (issue #1029) ou de sa progression dans un cours (issue #1027)
+// par l'élève lui-même.
 //
-// Supprime exactement les tables exportées par EksportoAPI : un élève qui a gardé son export
-// peut ainsi être remis en base à l'identique.
+// La suppression du compte efface exactement les tables exportées par EksportoAPI : un élève qui a
+// gardé son export peut ainsi être remis en base à l'identique.
 
 require_once __DIR__ . "/EksportoAPI.php";
 
@@ -31,6 +32,41 @@ class KontoAPI {
         foreach (array_reverse(EksportoAPI::TABELOJ) as $tabelo => list($kolumno)) {
             $demando = $this->bdd->prepare("DELETE FROM `$tabelo` WHERE `$kolumno` = ?");
             $demando->execute(array($persono_id));
+        }
+    }
+
+    // Progression d'un élève, par table : jointure qui rattache chaque ligne (alias t) à une leçon (alias l).
+    const PROGRESO = array(
+        "respondoj" => "LEFT JOIN ekzerceroj e ON e.id = t.ekzercero_id
+                        LEFT JOIN ekzercoj z ON z.id = e.ekzerco_id
+                        JOIN lecioneroj le ON le.id = COALESCE(z.lecionero_id, t.lecionero_id)
+                        JOIN lecionoj l ON l.id = le.leciono_id",
+        "personoj_lecioneroj" => "JOIN lecioneroj le ON le.id = t.lecionero_id JOIN lecionoj l ON l.id = le.leciono_id",
+        "personoj_lecionoj" => "JOIN lecionoj l ON l.id = t.leciono_id",
+        "takso_leciono" => "JOIN lecionoj l ON l.id = t.leciono_id",
+        "personoj_vortoj" => "JOIN vortoj v ON v.id = t.vorto_id JOIN lecioneroj le ON le.id = v.lecionero_id JOIN lecionoj l ON l.id = le.leciono_id",
+        "personoj_vortoj_respondoj" => "JOIN vortoj v ON v.id = t.vorto_id JOIN lecioneroj le ON le.id = v.lecionero_id JOIN lecionoj l ON l.id = le.leciono_id",
+    );
+
+    // Cours dans lesquels l'élève a une progression : [kodo => nomo]
+    public function kursojKunProgreso(int $persono_id): array {
+        $partoj = array();
+        $parametroj = array();
+        foreach (self::PROGRESO as $tabelo => $kunigo) {
+            $partoj[] = "SELECT l.kurso FROM `$tabelo` t $kunigo WHERE t.persono_id = ?";
+            $parametroj[] = $persono_id;
+        }
+        $demando = $this->bdd->prepare(
+            "SELECT k.kodo, k.nomo FROM kursoj k WHERE k.kodo IN (" . implode(" UNION ", $partoj) . ") ORDER BY k.id");
+        $demando->execute($parametroj);
+        return $demando->fetchAll(PDO::FETCH_KEY_PAIR);
+    }
+
+    // L'inscription au cours (nuna_kurso) et le correcteur sont conservés : seul le travail de l'élève est effacé.
+    public function forigiProgreson(int $persono_id, string $kurso): void {
+        foreach (self::PROGRESO as $tabelo => $kunigo) {
+            $demando = $this->bdd->prepare("DELETE t FROM `$tabelo` t $kunigo WHERE t.persono_id = ? AND l.kurso = ?");
+            $demando->execute(array($persono_id, $kurso));
         }
     }
 }

@@ -4513,3 +4513,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- réponses de 2017 rattachées à leur question (texte ou code), avant suppression de kodo (#688) : voir sql/prod/2026-10-respondoj-ekzercero_id.sql
 --- leçon 6 : ĉe refusé en question 12 et malantaŭ en question 14 (#965) : voir sql/11-lecon6-prepositions.sql
 --- leçon 5.6 : question 2 « miaj amikoj » remplacée par « komputilisto » (#961) : voir sql/12-lecon5-question-kio.sql
+--- cours élémentaire : espaces en trop et point manquant dans 4 corrigés types et copies des pages (#1042) : voir sql/13-typographie-dlek.sql

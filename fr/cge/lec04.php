@@ -470,14 +470,14 @@ include "dlekkapo.inc.php";
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-02.mp3" class="sm2_button"></a><span class="eo">Morgaŭ estos mardo la tria de aŭgusto.</span>&nbsp;: Demain nous serons le mardi 3 août.</p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-03.mp3" class="sm2_button"></a><span class="eo">Hieraŭ estis dimanĉo la unua de aŭgusto.</span>&nbsp;: Hier c’était dimanche 1<sup>er</sup> août.</p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-04.mp3" class="sm2_button"></a><span class="eo">En januaro estas tridek unu tagoj.</span>&nbsp;: En janvier il y a 31 jours.</p>
-				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-05.mp3" class="sm2_button"></a><span class="eo">La unua de Majo estas la Tago de la Laboro</span>&nbsp;: Le premier mai est la Fête du Travail (littéralement "le Jour du Travail")</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-05.mp3" class="sm2_button"></a><span class="eo">La unua de Majo estas la Tago de la Laboro.</span>&nbsp;: Le premier mai est la Fête du Travail (littéralement "le Jour du Travail").</p>
 			</div>
 			
 			<p class="parto">Lorsqu’on indique une date précise, on emploie souvent la terminaison <b>n</b> de l’accusatif. Vous verrez par la suite que l’accusatif est employé pour certains compléments, et pas uniquement pour le complément direct.</p>
 							
 			<div class="vortlisto row">
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-06.mp3" class="sm2_button"></a><span class="eo">Ili venos la deka<b>n</b> de aprilo.</span>&nbsp;: Ils viendront le 10 avril.</p>
-				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-07.mp3" class="sm2_button"></a><span class="eo">La dua<b>n</b> de julio, mi edziĝos. </span>&nbsp;: Le 2 juillet, je me marierai.</p>
+				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-07.mp3" class="sm2_button"></a><span class="eo">La dua<b>n</b> de julio, mi edziĝos.</span>&nbsp;: Le 2 juillet, je me marierai.</p>
 				<p class="col s12"><a href="<?php echo $vojo;?>fr/son/frazoj/dato-08.mp3" class="sm2_button"></a><span class="eo">Parizo, la 15-a<b>n</b> de decembro 2018</span>&nbsp;: Paris, le 15 décembre 2018 (par exemple au début d’une lettre)</p>
 			</div>
 				

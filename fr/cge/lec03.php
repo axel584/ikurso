@@ -532,7 +532,7 @@ include "dlekkapo.inc.php";
 		<p>Exemples :</p>
 		<div class="row">
 			<p class="col s6 m4 offset-m1"><span class="eo">Ki<b>o</b> estas tio?</span></p><p class="col s6 m7">Qu’est ce que c’est&nbsp;?</p>
-			<p class="col s6 m4 offset-m1"><span class="eo">Ki<b>u</b> libr<b>o</b> estas via&nbsp;?</span></p><p class="col s6 m7">Quel livre est le tien&nbsp;?</p>
+			<p class="col s6 m4 offset-m1"><span class="eo">Ki<b>u</b> libr<b>o</b> estas via?</span></p><p class="col s6 m7">Quel livre est le tien&nbsp;?</p>
 		</div>
 
 		<h3>Plus aucun corrélatif ne vous échappe&nbsp;!</h3>

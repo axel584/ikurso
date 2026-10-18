@@ -462,8 +462,8 @@ include "dlekkapo.inc.php";
 
 		<p>Exemples : </p>
 		<div class="vortlisto row">
-			<p class="col s12 m6"><span class="eo">Li kredas je Dio</span> = Il croit en Dieu.</p>
-			<p class="col s12 m6"><span class="eo">Je via sano&nbsp;!</span> = À votre santé&nbsp;!</p>
+			<p class="col s12 m6"><span class="eo">Li kredas je Dio.</span> = Il croit en Dieu.</p>
+			<p class="col s12 m6"><span class="eo">Je via sano!</span> = À votre santé&nbsp;!</p>
 		</div>
 		
 		<p class="parto">On peut parfois utiliser <b>deux prépositions</b> à la suite l’une de l’autre
@@ -498,7 +498,7 @@ include "dlekkapo.inc.php";
 		?>
 		<p class="parto">
 		La question correspondant à ce complément de lieu avec mouvement sera
-		naturellement <span class="eo">kien&nbsp;?</span>, c’est-à-dire <span class="eo">kie&nbsp;?</span> avec la terminaison
+		naturellement <span class="eo">kien?</span>, c’est-à-dire <span class="eo">kie?</span> avec la terminaison
 		d’accusatif. Tous les adverbes de lieu ont cette possibilité de montrer le but d’un mouvement en prenant la terminaison d’accusatif.
 		</p>
 		<p>Exemple :</p>

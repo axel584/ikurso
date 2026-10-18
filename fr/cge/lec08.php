@@ -336,9 +336,9 @@ include "dlekkapo.inc.php";
 			<p>Autre exemple&nbsp;:</p>
 			
 			<div class="row">
-				<p class="col s12"><span class="eo">Sofia diris al <b>si</b> … </span> = Sophie s’est dit … (à elle-même)</span></p>
-				<p class="col s12"><span class="eo">Sofia diris al <b>li</b> … </span> = Sophie lui a dit … (à une autre personne de sexe masculin)</span></p>
-				<p class="col s12"><span class="eo">Sofia diris al <b>ŝi</b> … </span> = Sophie lui a dit … (à une autre personne de sexe féminin)</span></p>
+				<p class="col s12"><span class="eo">Sofia diris al <b>si</b> …</span> = Sophie s’est dit … (à elle-même)</p>
+				<p class="col s12"><span class="eo">Sofia diris al <b>li</b> …</span> = Sophie lui a dit … (à une autre personne de sexe masculin)</p>
+				<p class="col s12"><span class="eo">Sofia diris al <b>ŝi</b> …</span> = Sophie lui a dit … (à une autre personne de sexe féminin)</p>
 			</div>
 			
 			<fieldset class="memoru">

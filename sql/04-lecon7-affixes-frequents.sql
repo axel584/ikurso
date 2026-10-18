@@ -35,14 +35,14 @@ UPDATE lecioneroj SET titolo = 'Préfixes et suffixes d’action', dauxro = 12, 
 			<p class="col s12"><span class="eo">fari</span>&nbsp;: faire&emsp;→&emsp; <span class="marque">•</span> <span class="eo">refari</span>&nbsp;: refaire</p>
 			<p class="col s12"><span class="eo">veni</span>&nbsp;: venir&emsp;→&emsp; <span class="marque">•</span> <span class="eo">reveni</span>&nbsp;: revenir</p>
 			<p class="col s12"><span class="marque">•</span> <span class="eo">ree</span>&nbsp;: de nouveau</p>
-			<p class="col s12"><span class="eo">ĝis revido !</span>&nbsp;: au revoir !</p>
+			<p class="col s12"><span class="eo">ĝis revido!</span>&nbsp;: au revoir !</p>
 		</div>
 
 		<p><b>EK</b> : <i>soudaineté d’une action commençante</i></p>
 		<div class="row">
 			<p class="col s12"><span class="marque">•</span>  <span class="eo">dormi</span>&nbsp;: dormir&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">ekdormi</span>&nbsp;: s’endormir</p>
 			<p class="col s12"><span class="marque">•</span>  <span class="eo">pluvi</span>&nbsp;: pleuvoir&emsp;→&emsp;<span class="marque">•</span>  <span class="eo">ekpluvi</span>&nbsp;: commencer à pleuvoir</p>
-			<p class="col s12"><span class="marque">•</span>  <span class="eo">ek !</span>&nbsp;: allez !, en avant !, allons-y !, en route !</p>
+			<p class="col s12"><span class="marque">•</span>  <span class="eo">ek!</span>&nbsp;: allez !, en avant !, allons-y !, en route !</p>
 		</div>
 
 		<p><b>DIS</b> : <i>dispersion</i></p>

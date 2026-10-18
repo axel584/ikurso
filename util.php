@@ -76,6 +76,8 @@ function normaligita($respondo) {
 	$normaligita = strtolower(konvX($respondo));
 	$trans = array("." => "", "," => "", "'" => "","!" => "","?" => "",":" => "",";" => "","-"=>"",json_decode('"\u2008"')=>' '); // liste des caractères à supprimer pour la comparaison
 	// l'utilisation de json_decode('"\u2008"') est pratique pour convertir des caractères esotérique depuis l'unicode (2008 est un espace de ponctuation...)
+	// variantes typographiques (tirets de dialogue, apostrophe courbe, guillemets, espaces insécables des claviers Mac)
+	$trans += array("–" => "", "—" => "", "’" => "", "…" => "", "«" => "", "»" => "", "“" => "", "”" => "", "\u{00A0}" => " ", "\u{202F}" => " ");
 	$normaligita = trim(strtr($normaligita, $trans));
 	$normaligita = preg_replace("/\s+/", " ", $normaligita); // replace un nombre d'espace supérieur à 1 par un espace simple
 	return $normaligita;

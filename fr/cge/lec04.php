@@ -299,8 +299,7 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/hxoro.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>ĥo</u>ro</span>&nbsp;: chœur</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/infano.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">in<u>fa</u>no</span>&nbsp;: enfant</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/interreto.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">inter<u>re</u>to</span>&nbsp;: internet</p>
-
-<p><a href="<?php echo $vojo;?>fr/son/vortoj/iu.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">iu</span>&nbsp;: quelqu’un</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/iu.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">iu</span>&nbsp;: quelqu’un</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/jahxto.mp3" class="sm2_button"></a>&nbsp;&nbsp;<span class="eo"><u>jaĥ</u>to</span>&nbsp;: yacht</p>
 					</div>
 					<div class="col s12 m6">
@@ -311,6 +310,7 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kaj.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">kaj</span>&nbsp;: et</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kio.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>ki</u>o</span>&nbsp;: quoi</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kolekti.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ko<u>lek</u>ti</span>&nbsp;: collectionner, rassembler</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/komputilo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">kompu<u>ti</u>lo</span>&nbsp;: ordinateur</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/lando.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo"><u>lan</u>do</span>&nbsp;: pays</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/leciono.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">leci<u>o</u>no</span>&nbsp;: leçon</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/lernejo.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ler<u>ne</u>jo</span>&nbsp;: école</p>

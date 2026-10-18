@@ -1,5 +1,6 @@
--- Mise en prod du vocabulaire plus moderne des leçons 4 et 5 du cours élémentaire (CG), issue #865.
--- Reprend sql/06-vocabulaire-moderne.sql.
+-- Mise en prod du vocabulaire plus moderne des leçons 4 et 5 du cours élémentaire (CG), issues #865 et #1073.
+-- Reprend sql/06-vocabulaire-moderne.sql et la partie leçon 4.5 de sql/10-komputilo.sql
+-- (la partie leçon 7.2 est dans 2026-10-lecon7.sql).
 --
 -- À jouer au moment où l'on déploie fr/cge/lec04.php et fr/cge/lec05.php.
 --
@@ -27,6 +28,7 @@ INSERT INTO vortoj (eo, fr, tipo, lecionero_id)
   SELECT * FROM (
     SELECT 'interreto' AS eo, 'internet' AS fr, 'nom' AS tipo, 38 AS lecionero_id
     UNION ALL SELECT 'retmesaĝo|retletero', 'courriel, e-mail', 'nom', 38
+    UNION ALL SELECT 'komputilo', 'ordinateur', 'nom', 38
     UNION ALL SELECT 'foti', 'photographier', 'verbe', 43
     UNION ALL SELECT 'foto', 'photo', 'nom', 43
   ) AS novaj
@@ -52,8 +54,8 @@ UPDATE lecioneroj SET enhavo =
     'kolekti, poŝtmarko, lando', 'interreto, lando')
 WHERE id = 43 AND enhavo LIKE '%bildkarto%';
 
--- Résumé attendu : les anciens mots en section 0, les 4 nouveaux en sections 38 et 43,
+-- Résumé attendu : les anciens mots en section 0, les 5 nouveaux en sections 38 et 43,
 -- ekz04_17 masquée et ekz04_33 active, et le texte de Robert sans « bildkarto ».
-SELECT eo, lecionero_id FROM vortoj WHERE eo IN ('bildkarto|poŝtkarto', 'poŝtmarko', 'interreto', 'retmesaĝo|retletero', 'foti', 'foto') ORDER BY lecionero_id, eo;
+SELECT eo, lecionero_id FROM vortoj WHERE eo IN ('bildkarto|poŝtkarto', 'poŝtmarko', 'interreto', 'retmesaĝo|retletero', 'komputilo', 'foti', 'foto') ORDER BY lecionero_id, eo;
 SELECT kodo, forigita, demando FROM ekzerceroj WHERE ekzerco_id = 18 AND numero = 17;
 SELECT (enhavo LIKE '%bildkarto%') AS texte_5_1_ancien FROM lecioneroj WHERE id = 43;

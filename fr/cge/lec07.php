@@ -197,6 +197,7 @@ include "dlekkapo.inc.php";
 			<p class="col s12"><span class="eo"><span class="marque">•</span> ŝlosi</span>&nbsp;: fermer à clef&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ŝlosilo</span>&nbsp;: clef</p>
 			<p class="col s12"><span class="eo"><span class="marque">•</span> razi</span>&nbsp;: raser&emsp;→&emsp;<span class="eo"><span class="marque">•</span> razilo</span>&nbsp;: rasoir</p>
 			<p class="col s12"><span class="eo">sidi</span>&nbsp;: être assis&emsp;→&emsp;<span class="eo">sidilo</span>&nbsp;: siège</p>
+			<p class="col s12"><span class="eo">komputi</span>&nbsp;: calculer&emsp;→&emsp;<span class="eo">komputilo</span>&nbsp;: ordinateur (vu en leçon 4)</p>
 			<p class="col s12"><span class="eo"><span class="marque">•</span> ilo</span>&nbsp;: instrument</p>
 		</div>
 

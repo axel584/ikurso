@@ -1,6 +1,6 @@
 -- Mise en prod de la refonte de la leçon 7 du cours élémentaire (CG), issues #689 et #353.
 -- Regroupe sql/04-lecon7-affixes-frequents.sql, sql/05-lecon7-exercices.sql, sql/07-lecon7-mots-en-bleu.sql
--- et sql/08-lecon7-safino.sql.
+-- et sql/08-lecon7-safino.sql, ainsi que la partie leçon 7.2 de sql/10-komputilo.sql (issue #1073).
 --
 -- À jouer au moment où l'on déploie fr/cge/lec07.php, fr/cge/temaro.php et kionova.php :
 -- les numéros de section de la base doivent correspondre à ceux de lec07.php.
@@ -432,7 +432,16 @@ UPDATE lecioneroj SET enhavo = REPLACE(enhavo,
   '<span class="eo"><span class="marque">•</span> ŝafo</span>&nbsp;: mouton&emsp;→&emsp;<span class="eo"><span class="marque">•</span> ŝafino</span>&nbsp;: brebis</p>')
 WHERE id = 69;
 
+-- ========== Partie E : komputilo comme exemple du suffixe -IL (ex-10, leçon 7.2) ==========
+-- Le mot lui-même est ajouté au vocabulaire de la leçon 4.5 par 2026-10-vocabulaire-moderne.sql.
+-- Copie du texte de la page 7.2 utilisée par le redaktilo.
+UPDATE lecioneroj SET enhavo = REPLACE(enhavo,
+    '<span class="eo">sidilo</span>&nbsp;: siège</p>',
+    '<span class="eo">sidilo</span>&nbsp;: siège</p>\n\t\t\t<p class="col s12"><span class="eo">komputi</span>&nbsp;: calculer&emsp;→&emsp;<span class="eo">komputilo</span>&nbsp;: ordinateur (vu en leçon 4)</p>')
+WHERE id = 69 AND enhavo NOT LIKE '%komputilo%';
+
 -- Résumé attendu : 10 sections, 19 questions actives dans l'exercice 28, 13 dans l'exercice 29, toutes en bleu.
 SELECT ordo, titolo FROM lecioneroj WHERE leciono_id = 68 ORDER BY ordo;
 SELECT ekzerco_id, sum(forigita = 0) AS actives, sum(forigita = 1) AS masquees, sum(forigita = 0 AND demando LIKE '%class="eo"%') AS actives_en_bleu FROM ekzerceroj WHERE ekzerco_id IN (28, 29) GROUP BY ekzerco_id;
 SELECT eo, lecionero_id FROM vortoj WHERE eo IN ('koko', 'kokino', 'ŝafino') AND lecionero_id IN (0, 69) ORDER BY eo;
+SELECT (enhavo LIKE '%komputilo%') AS komputilo_en_7_2 FROM lecioneroj WHERE id = 69;

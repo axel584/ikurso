@@ -4512,3 +4512,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- cours élémentaire : mot komputilo en leçons 4.5 et 7.2 (#1073) : voir sql/10-komputilo.sql
 --- réponses de 2017 rattachées à leur question (texte ou code), avant suppression de kodo (#688) : voir sql/prod/2026-10-respondoj-ekzercero_id.sql
 --- leçon 6 : ĉe refusé en question 12 et malantaŭ en question 14 (#965) : voir sql/11-lecon6-prepositions.sql
+--- leçon 5.6 : question 2 « miaj amikoj » remplacée par « komputilisto » (#961) : voir sql/12-lecon5-question-kio.sql

@@ -302,6 +302,7 @@ if ($persono['lando']=="FR" && $persono['posxtkodo']!="") {
 					<p  class="noto">Vous disposez d’un droit d’accès, de modification, de rectification et de suppression des données 
 					qui vous concernent (art. 34 de la loi «Informatique et Libertés») sur la page suivante.
 					</p>
+					<p class="noto"><a href="eksportiDatumojn.php">Exporter mes données</a> (fichier JSON contenant vos informations personnelles et vos réponses aux exercices).</p>
 				</div>
 			</div>
 		</section>

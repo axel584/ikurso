@@ -4511,3 +4511,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- cours élémentaire : mots espéranto en bleu dans les questions 2.9 n° 14 et 4.9 n° 10 : voir sql/09-cours-elementaire-mots-en-bleu.sql
 --- cours élémentaire : mot komputilo en leçons 4.5 et 7.2 (#1073) : voir sql/10-komputilo.sql
 --- réponses de 2017 rattachées à leur question (texte ou code), avant suppression de kodo (#688) : voir sql/prod/2026-10-respondoj-ekzercero_id.sql
+--- leçon 6 : ĉe refusé en question 12 et malantaŭ en question 14 (#965) : voir sql/11-lecon6-prepositions.sql

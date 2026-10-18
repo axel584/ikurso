@@ -240,7 +240,7 @@ include "dlekkapo.inc.php";
 				),
 				array(
 					"question"=>"Que signifie <span class='eo'>riĉulo</span> (<span class='eo'>riĉa</span>&nbsp;= riche)&nbsp;?",
-					"propositions"=>array("la richesse","s’enrichir","un homme riche","très riche"),
+					"propositions"=>array("la richesse","s’enrichir","une personne riche","très riche"),
 					"reponse"=>3
 				),
 				array(

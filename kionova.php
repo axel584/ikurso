@@ -11,6 +11,20 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
+				<li class="collection-header">version 24. Octobre 2026</li>
+				<li class="collection-item">
+					<p>Refonte de la <a href="<?php echo $vojo;?>fr/cge/lec07.php?section=1">leçon 7</a> du <i>Cours en dix leçons</i>&nbsp;: seuls les affixes les plus fréquents, présentés sur trois pages, et des exercices plus courts.</p>
+					<p>Vocabulaire plus actuel dans les leçons 4 et 5 (internet, courriel, photo, ordinateur).</p>
+					<p>Amélioration de la correction automatique et remplacement de questions ambiguës.</p>
+					<p>Ajout d’un lien vers <a href="https://nilegu.esperanto-france.org/">Ni legu</a>, une collection de textes à lire avec un dictionnaire intégré.</p>
+					<p>Attestation de fin de cours pour <i>Paŝoj al plena posedo</i>.</p>
+					<p>Abonnement possible à la lettre <i>Espéranto-Aktiv</i> depuis la page des données personnelles.</p>
+					<p>Ajout d’un mode sombre.</p>
+					<p>Évaluation de fin de leçon plus simple, avec des boutons à la place des curseurs.</p>
+					<p>Pour les correcteurs&nbsp;: le corrigé type affiche maintenant les consignes détaillées et les exemples.</p>
+					<p>Renforcement de la sécurité du site.</p>
+					<p>Corrections diverses de bugs et coquilles…</p>
+				</li>
 				<li class="collection-header">version 23. Février 2023</li>
 				<li class="collection-item">
 					<p>Remplacement du test de fin du <i>Cours en dix leçons</i> par un examen de niveau A1.</p>

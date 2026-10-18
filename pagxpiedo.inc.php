@@ -105,6 +105,9 @@
 	if ($erarkodo==25) {
 		echo "M.toast({html: 'MESSAGE SPAM détecté !'});\n";
 	}	
+	if ($erarkodo==26) {
+		echo "M.toast({html: 'Votre compte a été supprimé.'});\n";
+	}
 	
 
 ?>

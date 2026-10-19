@@ -615,7 +615,7 @@ include "dlekkapo.inc.php";
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/bovajxo.mp3" class="sm2_button"></a><span class="eo">bovaĵo</span>&nbsp;: viande de bœuf</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/reala.mp3" class="sm2_button"></a><span class="eo">reala</span>&nbsp;: réel<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/realajxo.mp3" class="sm2_button"></a><span class="eo">realaĵo</span>&nbsp;: réalité, chose réelle</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kanado-2.mp3" class="sm2_button"></a><span class="eo">Kanado</span>&nbsp;: Canada<br>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kanado.mp3" class="sm2_button"></a><span class="eo">Kanado</span>&nbsp;: Canada<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/kanadano.mp3" class="sm2_button"></a><span class="eo">kanadano</span>&nbsp;: Canadien</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/kristo.mp3" class="sm2_button"></a><span class="eo">Kristo</span>&nbsp;: Christ<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/kristano.mp3" class="sm2_button"></a><span class="eo">kristano</span>&nbsp;: chrétien</p>

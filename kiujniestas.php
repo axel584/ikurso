@@ -47,7 +47,7 @@ include "pagxkapo.inc.php";
 
 		<div class="row">
 			<div class="col s12">
-				<p>Le <em>Cours en 10 leçons</em> est un cours d’espéranto du domaine public. Les photos accompagnant le cours viennent de banques d’images à diffusion pédagogique.</p>
+				<p>Le <em>Cours en 10 leçons</em> est un cours d’espéranto du domaine public. Les photos accompagnant le cours viennent de banques d’images à diffusion pédagogique. Les prononciations des mots <span class="eo">interreto</span>, <span class="eo">retmesaĝo</span>, <span class="eo">komputilo</span>, <span class="eo">foti</span>, <span class="eo">foto</span> et <span class="eo">ŝafino</span> ont été enregistrées par Lepticed7 pour le projet <a href="https://lingualibre.org/">Lingua Libre</a> et sont diffusées sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>.</p>
 			</div>
 		</div>
 

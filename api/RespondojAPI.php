@@ -24,7 +24,7 @@ class RespondojAPI {
              JOIN lecioneroj ON lecioneroj.id = ekzercoj.lecionero_id
              JOIN lecionoj ON lecioneroj.leciono_id = lecionoj.id
              WHERE respondoj.persono_id = ? AND lecionoj.numero = ? AND lecionoj.kurso = ?
-             ORDER BY ekzerceroj.numero");
+             ORDER BY lecioneroj.ordo, ekzerceroj.numero");
         $demando->execute(array($persono_id, $leciono, $kurso));
         $html = "";
         $kiom = 0;

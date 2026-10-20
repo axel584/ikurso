@@ -4517,3 +4517,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- leçon 8 : page 8.1 coupée en « Conditionnel et impératif » et « Les participes » (participes actifs / passifs) : voir sql/14-lecon8-participes.sql
 --- leçon 9 : exercice 9.8 découpé en quatre exercices d'un article (9.4, 9.6, 9.8 et 9.11) : voir sql/15-lecon9-exercices.sql
 --- révision du vocabulaire : synonymes corrects acceptés et traductions ambiguës précisées (9 mots) : voir sql/16-vocabulaire-revision.sql
+--- révision du vocabulaire : 7 mots rares ou expressions longues retirés pour les nouveaux élèves : voir sql/17-vocabulaire-retraits.sql

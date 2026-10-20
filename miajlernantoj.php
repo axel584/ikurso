@@ -1,305 +1,204 @@
 <?php
 include "util.php";
-$pagxtitolo="Mes &eacute;l&egrave;ves";
-$gxisdatigDato="2007-06-16";
-$eksaj=isset($_GET["eksaj"])?$_GET["eksaj"]:"no";
+require_once "api/LernantojAPI.php";
+$pagxtitolo="Mes élèves";
+$korpo="miajlernantoj";
+$eksaj=isset($_GET["eksaj"]) && $_GET["eksaj"]=="jes";
 $farite=isset($_GET["farite"])?$_GET["farite"]:"";
-$persono_id = $_SESSION["persono_id"];
-if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
+$persono_id=isset($_SESSION["persono_id"])?(int)$_SESSION["persono_id"]:0;
+if ($persono_id==0) {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
-if (($rajto!='A')&&($rajto!='K')) {header("Location:index.php?erarkodo=4"); exit;}
+if (!$persono || ($persono["rajtoj"]!='A' && $persono["rajtoj"]!='K')) {header("Location:index.php?erarkodo=4"); exit;}
 
-function listi_lecionerojn($celpersono_id,$kurso) {
-	global $bdd;
-	$demando = "SELECT kurso,dato,lecionoj.id as leciono_id,lecionoj.titolo as leciono_titolo,lecioneroj.id as lecionero_id,lecioneroj.ordo as lecionero_ordo,lecioneroj.titolo as lecionero_titolo  FROM personoj_lecioneroj  join lecioneroj on lecioneroj.id = personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id = lecioneroj.leciono_id WHERE persono_id = ".$celpersono_id." and lecionoj.kurso='".$kurso."' order by kurso,lecionoj.numero,lecioneroj.ordo";
-	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-	while($row =  $result->fetch()) {
-		list($dato,$horo) = explode(" ",$row["dato"], 2);
-		$pecoj = explode("-",$dato);
-		$dato = $pecoj[2]."/".$pecoj[1]."/".$pecoj[0];
-		echo "[".$row["kurso"]."]&nbsp;".$row["leciono_titolo"]." - ".$row["lecionero_ordo"].":".$row["lecionero_titolo"]." (".$dato." ".$horo.")<br/>";
-	}
+$lernantojAPI = new LernantojAPI($bdd);
+// dernière leçon de chaque cours : le bouton « A fini » n'apparaît qu'à ce moment-là
+const LASTAJ_LECIONOJ = array("CG" => 10, "GR" => 26, "KE" => 18, "PP" => 30);
+
+function h($teksto): string {
+	// certaines données anciennes sont déjà échappées ou contiennent des antislashs
+	return htmlspecialchars(stripslashes((string)$teksto), ENT_QUOTES, "UTF-8", false);
 }
 
-// tiu funkcio konstruas la liston de cxiuj studantoj
-function listiStudantojn() {
-	global $persono_id,$bdd;
-	$i=0;
-	// studantoj kiu NE jam komencis lerni (stato de nuna_kurso valoras 'N' kiel NE komencita)
-	$demando = "select nuna_kurso.id as kursid,nuna_kurso.studanto as studanto,nuna_kurso.lastdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.lastdato)) as numtagoj1,nuna_kurso.ekdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.ekdato)) as numtagoj2, personoj.id as personid,personoj.enirnomo,personoj.personnomo,personoj.familinomo,personoj.naskigxdato as naskigxdato,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.noto as noto,nuna_kurso.nunleciono,nuna_kurso.kurso as kurso from personoj,nuna_kurso where nuna_kurso.studanto=personoj.id and nuna_kurso.korektanto=$persono_id and (nuna_kurso.stato='K' or nuna_kurso.stato='N') order by nuna_kurso.lastdato desc";
-	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-	while($row = $result->fetch()) {		
-		echo "<div class='lernantoj'>";
-		echo "<div class='nomo'>";
-		echo "<div class='tagoj' style='background: url(bildoj/rond-";
-		($row['numtagoj1']==NULL)?($numtagoj=$row['numtagoj2']):($numtagoj=$row['numtagoj1']);
-		if ($numtagoj<10) {echo "vert";}
-		elseif ($numtagoj<31) {echo "orange";}
-		else {echo "rouge";}
-		echo ".gif) no-repeat;'>";
-		echo "<p style='padding:0; margin:0;padding-top:9px;'>".$numtagoj;
-		echo "</div>";
-		
-		echo "<div style=\"height:35px; margin-left:40px;\"><img align='middle' src=\"bildoj/";
-		if ($row["kurso"]=="KE") {echo "ikurso-ikono.gif\"";}
-		if ($row["kurso"]=="CG") {echo "cge-ikono.gif\"";}
-		if ($row["kurso"]=="GR") {echo "gerda-ikono.gif\"";}
-		echo "\">";
-		$personid=$row["personid"];
-		echo "\n<b>".$row["enirnomo"]."</b> (".$row['personnomo']." ".$row['familinomo'].") - ";
-		echo "<a href=\"mailto:".$row['retadreso']."\">".$row["retadreso"]."</a>\n";
-		echo "</div></div>";
-		
-		// colonne 1: coordonnees
-		echo "<div class='lernanto gauche' style='border:solid #888;border-width:0 1px 1px 0;margin-right:10px;'>";
-		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["naskigxdato"],$nskdt);
-		$nskdt=explode("-",$row["naskigxdato"]);
-		if (count($nskdt)==3) { // cas où la date contient deux tirets
-			echo $nskdt[2]."/".$nskdt[1]."/".$nskdt[0]."<br>";
+function datoFr($dato): string {
+	$partoj = explode("-", substr((string)$dato, 0, 10));
+	if (count($partoj)!=3 || (int)$partoj[0]==0) {
+		return "";
+	}
+	return $partoj[2]."/".$partoj[1]."/".$partoj[0];
+}
+
+function tagojKoloro(int $tagoj): string {
+	if ($tagoj<10) return "green";
+	if ($tagoj<31) return "orange";
+	return "red";
+}
+
+function montriKomentojn(array $lernanto, array $komentoj, int $persono_id) {
+	echo "<p class='etikedo'>Commentaires des correcteurs</p>";
+	if (!$komentoj) {
+		echo "<p class='malplena'>Aucun commentaire.</p>";
+	}
+	echo "<ul class='komentoj'>";
+	foreach ($komentoj as $komento) {
+		echo "<li>";
+		if ((int)$komento["korektanto"]==$persono_id) {
+			echo "<a href='forigiNoton.php?noto_id=".(int)$komento["id"]."&amp;pagxo=miajlernantoj.php' class='tooltipped' data-tooltip='Supprimer ce commentaire'><i class='material-icons tiny'>delete</i></a> ";
 		}
+		echo "<em>".h($komento["korektanto_nomo"])." le ".datoFr($komento["dato"])."</em> : ".h($komento["teksto"])."</li>";
+	}
+	echo "</ul>";
+	echo "<form method='post' action='aldoniNoton.php' class='aldoni-noton'>";
+	echo "<input type='hidden' name='stud_id' value='".(int)$lernanto["studanto"]."'>";
+	echo "<input type='hidden' name='pagxo' value='miajlernantoj.php".($lernanto["stato"]=="F" || $lernanto["stato"]=="H" ? "?eksaj=jes" : "")."'>";
+	echo "<div class='input-field'><input type='text' name='teksto' id='teksto".(int)$lernanto["kursid"]."' required>";
+	echo "<label for='teksto".(int)$lernanto["kursid"]."'>Ajouter un commentaire</label>";
+	echo "<span class='helper-text'>Visible uniquement par les correcteurs. Ne pas l’utiliser pour contacter les administrateurs.</span></div>";
+	echo "<button type='submit' class='btn-flat waves-effect'><i class='material-icons left'>add_comment</i>Ajouter</button>";
+	echo "</form>";
+}
 
-		if ($row["adreso1"]!="") echo $row["adreso1"]."<br>";
-		if ($row["adreso2"]!="") echo $row["adreso2"]."<br>";
-		echo $row["posxtkodo"]." ".$row["urbo"]."<br>";
-		echo $row["lando"]."-";
-		echo "</div><div class='lernanto' style='padding-left:10px;'>";
-
-		// cours suivi
-		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."'"; 
-		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
-		$row2 = $result2->fetch();
-
-		// infos sur le cours suivi
-		echo "<em>cours suivi&nbsp;:</em><b>".$row2["kursnomo"]."</b><br>";	
-		echo "<em>inscription le : </em>\n";
-		$ekdt = explode("-",$row["ekdato"]);
-		echo $ekdt[2]."/".$ekdt[1]."/".$ekdt[0]."<br>\n";
-		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.numero='".$row['nunleciono']."'";
-		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
-		$row3 = $result3->fetch();
-		echo "<em>derni&egrave;re le&ccedil;on envoy&eacute;e : <b>".$row3['titolo']."</b>, le : </em>\n";
-		if ($row["lastdato"]==0) {
-			echo "--/--/--\n";
+function montriHistorion(array $lecioneroj) {
+	echo "<ul class='collapsible historio'><li>";
+	echo "<div class='collapsible-header'><i class='material-icons'>history</i>Historique des leçons&nbsp;: ".count($lecioneroj)." page(s) terminée(s)</div>";
+	echo "<div class='collapsible-body'>";
+	if (!$lecioneroj) {
+		echo "<p class='malplena'>Aucune page terminée.</p>";
+	} else {
+		echo "<table class='striped'><thead><tr><th>Page</th><th>Terminée le</th></tr></thead><tbody>";
+		foreach ($lecioneroj as $lecionero) {
+			echo "<tr><td>".(int)$lecionero["numero"].".".(int)$lecionero["ordo"]." ".h(strip_tags($lecionero["lecionero_titolo"]))."</td>";
+			echo "<td>".datoFr($lecionero["dato"])." ".substr($lecionero["dato"], 11, 5)."</td></tr>";
 		}
-		else{
-			//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["lastdato"],$lstdt);
-			$lstdt = explode("-",$row["lastdato"]);
-			echo $lstdt[2]."/".$lstdt[1]."/".$lstdt[0]."\n";
-			if ($row['kurso']!="KE") { // on n'affiche pas les réponses des élèves pour le logiciel :
-				echo "&nbsp;(<a href='vidiLecionon.php?numleciono=".($row["nunleciono"]!==null ? $row["nunleciono"] : 1)."&kurso=".$row["kurso"]."&studanto=".$row["studanto"]."'>voir</a>)";
-			}
-		}
-		echo "<br/>";
-		// bouton pour indiquer qu'un élève a abandonné
-		echo "<form method='POST' action='miajlernantoj2.php'>"; 
-		echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
-		echo "<input type=\"hidden\" name=\"leciono\" value=\"".$row["kursid"]."-H\">";
-		echo "<input  class='bouton' type='submit' value='A abandonné'>";
-		echo " <i>(Vous liberez ainsi une place pour un nouvel élève)</i><br/>";
-		echo "</form>";
+		echo "</tbody></table>";
+	}
+	echo "</div></li></ul>";
+}
 
-		// menu déroulant pour avancer manuellement dans les leçons
-		if ($row['kurso']=="KE") {
-			echo "<form method=\"POST\" action=\"miajlernantoj2.php\">"; 
-			echo "<select name=\"leciono\">\n";
-			echo "<option value=\"".$row["kursid"]."-N\" >Pas encore commencé</option>\n";
-			$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."'";
-			$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
-			while($row3 = $result3->fetch()) {
-				echo "<option value=\"".$row["kursid"]."-".$row3["numero"]."\" ";
-				if ($row["nunleciono"]==$row3["numero"]) {echo "selected";}
-					echo ">".$row3["titolo"]."</option>\n";
-			}
-			echo "</select>\n";
-			echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
-			echo "<input class=\"bouton\" type=\"submit\" value=\"Valider\"><br/>";
-			echo "</form>\n";
-		}
+function montriLernanton(array $lernanto, LernantojAPI $lernantojAPI, int $persono_id) {
+	$eksa = ($lernanto["stato"]=="F" || $lernanto["stato"]=="H");
+	$lastdato = datoFr($lernanto["lastdato"]);
+	echo "<div class='card lernanto'><div class='card-content'>";
 
-		// bouton pour indiquer que l'élève a fini son cours
-		// on l'affiche uniquement pour la 10ème leçon du CG et KE et pour la 25ème leçon de Gerda
-		if (($row["nunleciono"]==10 && $row["kurso"]=='CG')||($row["nunleciono"]==26 && $row["kurso"]=='GR')||($row["nunleciono"]==18 && $row["kurso"]=='KE')||($row["nunleciono"]==30 && $row["kurso"]=='PP')) {
-			echo "<form method='POST' action='miajlernantoj2.php'>"; 
-			echo "<input type=\"hidden\" name=\"nunleciono\" value=\"".$row["nunleciono"]."\">";
-			echo "<input type=\"hidden\" name=\"leciono\" value=\"".$row["kursid"]."-F\">";
-			echo "<input  class='bouton' type='submit' value='A fini'>";
-			echo " <i>(l'élève recevra un message pour recevoir son diplôme)</i><br/>";
+	// en-tête : jours sans envoi, nom, cours
+	echo "<div class='kapo'>";
+	if (!$eksa) {
+		$tagoj = (int)$lernanto["tagoj"];
+		echo "<span class='tagoj ".tagojKoloro($tagoj)." tooltipped' data-tooltip='Jours depuis le dernier envoi (ou l’inscription)'>".$tagoj."</span>";
+	}
+	echo "<div class='nomo'><span class='card-title'>".h($lernanto["enirnomo"])."</span> ";
+	echo "<span class='plena-nomo'>".h(trim($lernanto["personnomo"]." ".$lernanto["familinomo"]))."</span><br>";
+	echo "<a href='mailto:".h($lernanto["retadreso"])."'>".h($lernanto["retadreso"])."</a></div>";
+	echo "<span class='kurso chip'>".h($lernanto["kursnomo"])."</span>";
+	echo "</div>";
+
+	// dernière leçon et accès à la correction
+	echo "<div class='leciono'>";
+	if ($eksa) {
+		echo "<p>".($lernanto["stato"]=="F" ? "A fini le cours le " : "A abandonné le ").($lastdato ?: "--/--/--");
+		echo " — dernière leçon&nbsp;: <b>".h($lernanto["leciono_titolo"])."</b></p>";
+	} elseif ($lastdato=="") {
+		echo "<p>Aucune leçon envoyée pour l’instant.</p>";
+	} else {
+		echo "<p>Dernière leçon envoyée&nbsp;: <b>".h($lernanto["leciono_titolo"])."</b>, le ".$lastdato."</p>";
+		if ($lernanto["kurso"]!="KE") { // les leçons du logiciel ne sont pas envoyées en ligne
+			$numero = $lernanto["nunleciono"]!==null ? (int)$lernanto["nunleciono"] : 1;
+			echo "<a class='btn-large waves-effect waves-light contraste-A' href='vidiLecionon.php?numleciono=".$numero."&amp;kurso=".urlencode($lernanto["kurso"])."&amp;studanto=".(int)$lernanto["studanto"]."'>";
+			echo "<i class='material-icons left'>rate_review</i>Corriger la leçon ".$numero."</a>";
+		}
+	}
+	echo "</div>";
+
+	echo "<div class='row'>";
+	// coordonnées
+	echo "<div class='col s12 m4 informoj'>";
+	$linioj = array("Inscription le ".datoFr($lernanto["ekdato"]));
+	if (datoFr($lernanto["naskigxdato"])!="") $linioj[] = "Né(e) le ".datoFr($lernanto["naskigxdato"]);
+	foreach (array($lernanto["adreso1"], $lernanto["adreso2"], trim($lernanto["posxtkodo"]." ".$lernanto["urbo"]), $lernanto["lando"]) as $linio) {
+		if (trim((string)$linio)!="") $linioj[] = h($linio);
+	}
+	echo "<p class='etikedo'>Coordonnées</p><p>".implode("<br>", $linioj)."</p>";
+	echo "</div>";
+	// commentaires
+	echo "<div class='col s12 m8'>";
+	echo "<p class='etikedo'>Commentaire de l’élève</p>";
+	echo "<p>".($lernanto["kialo"]!="" ? nl2br(h($lernanto["kialo"])) : "<span class='malplena'>Aucun commentaire.</span>")."</p>";
+	montriKomentojn($lernanto, $lernantojAPI->komentoj((int)$lernanto["studanto"]), $persono_id);
+	echo "</div>";
+	echo "</div>";
+
+	if (!$eksa) {
+		montriHistorion($lernantojAPI->lecioneroj((int)$lernanto["studanto"], (string)$lernanto["kurso"]));
+	}
+	echo "</div>";
+
+	// actions sur le suivi de l'élève
+	echo "<div class='card-action'>";
+	if ($eksa) {
+		if ($lernanto["stato"]=="H") {
+			echo "<form method='POST' action='repreniLernanton.php'>";
+			echo "<input type='hidden' name='studanto' value='".(int)$lernanto["studanto"]."'>";
+			echo "<input type='hidden' name='enirnomo' value='".h($lernanto["enirnomo"])."'>";
+			echo "<input type='hidden' name='idnunaKurso' value='".(int)$lernanto["kursid"]."'>";
+			echo "<button type='submit' class='btn waves-effect waves-light primaire'>Récupérer l’élève</button>";
 			echo "</form>";
-		}	
-
-		// colonne 3: commentaires
-		echo "</div><div class='lernanto'>";
-		echo "<em>commentaire de l’élève :</em><br>";
-		
-		echo stripslashes($row['kialo'])."<br>";
-		// historique des pages vues / cochées
-		//echo "<em>historique des leçons : </em><a href='#' onClick=\"document.getElementById('listi_lecionerojn_".$row["studanto"]."').setAttribute('display', '');\">[+]</a><br>";
-		echo "<em>historique des leçons : </em><br>";
-		//echo "<div id='listi_lecionerojn_".$row["studanto"]."' style='display: none;'>";
-		echo "<div id='listi_lecionerojn_".$row["studanto"]."'>";
-		listi_lecionerojn($row["studanto"],$row["kurso"]);
-		echo "</div>";
-
-		echo "<em>commentaires du correcteur : </em> <br>";
-		// notoj aldoneblaj per la korektanto
-		$demando4 = "select * from komentoj where komentoj.studanto='".$row["studanto"]."'";
-		$result4 = $bdd->query($demando4) or die(print_r($bdd->errorInfo()));
-		echo "</em>";
-		while ($row4 = $result4->fetch()){
-			$demando5 = "select enirnomo from personoj where personoj.id='".$row4['korektanto']."'";
-			$result5 = $bdd->query($demando5) or die(print_r($bdd->errorInfo()));
-			$row5 = $result5->fetch();
-			if ($row4["korektanto"]==$persono_id){
-				echo "<a href='forigiNoton.php?noto_id=".$row4['id']."&stud_id=".$row['studanto']."&stud_nomo=".$row['enirnomo']."&pagxo=miajlernantoj.php'>";
-				echo "<img src=\"bildoj/icon_delete.gif\" alt=\"Supprimer ce commentaire\" title=\"Supprimer ce commentaire\" border=\"0\" align=\"middle\"></a>";
-			}
-			echo " <em>de ".$row5['enirnomo']." le ".$row4['dato']."</em> :\n";
-			echo " ".stripslashes($row4["teksto"])."\n";
-			echo "<br>\n";
 		}
-		echo "<div class='encadre' style='clear:both; margin:10px 0 0 0;padding:5px;'>";
-		echo "<form name='aldoniNoton".$i."' method='post' action='aldoniNoton.php'>\n";
-		echo "<input type='hidden' name='stud_id' value='".$row["studanto"]."'>\n";
-		echo "<input type='hidden' name='pagxo' value='miajlernantoj.php'>";
-		echo "<em>Ce commentaire ne sera visible que de vous. Ne pas utiliser ceci pour contacter les administrateurs.</em><br/>";
-		echo "<input type='text' name='teksto' size='80' value='** vous pouvez ajouter un commentaire ici **' onFocus='this.value=\"\"'>";
-		echo "&nbsp;&nbsp;<input class='bouton' type='image' src='bildoj/icon_valider2.gif' align='middle' onClick='this.form.submit();'>";
-		echo "</form>";
-		echo "</span>";
-		echo "</div></div></div>";
-		$i++;
-	}
-	if ($i==0) { 
-			echo "<p>Aucun élève</p>";
-	}
-}
-
-// tiu funkcio konstruas la liston de cxiuj eks-studantoj (haltintaj kaj finintaj)
-function listiEksStudantojn() {
-	global $persono_id,$bdd;
-	$i=0;
-	// studantoj kiu NE jam komencis lerni (stato de nuna_kurso valoras 'N' kiel NE komencita)
-	$demando = "select nuna_kurso.id as kursid,nuna_kurso.stato as stato,nuna_kurso.studanto as studanto,nuna_kurso.lastdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.lastdato)) as numtagoj1,nuna_kurso.ekdato,(TO_DAYS(NOW()) - TO_DAYS(nuna_kurso.ekdato)) as numtagoj2, personoj.enirnomo,personoj.personnomo,personoj.familinomo,personoj.naskigxdato as naskigxdato,personoj.retadreso as retadreso,personoj.adreso1 as adreso1,personoj.adreso2 as adreso2,personoj.lando as lando,personoj.posxtkodo as posxtkodo,personoj.urbo as urbo,personoj.kialo as kialo,personoj.noto as noto,nuna_kurso.nunleciono,nuna_kurso.kurso as kurso from personoj,nuna_kurso where nuna_kurso.studanto=personoj.id and nuna_kurso.korektanto=$persono_id and (nuna_kurso.stato='H' or nuna_kurso.stato='F') order by nuna_kurso.lastdato desc";
-	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-	while($row = $result->fetch()) {		
-		echo "<div class='lernantoj'>";
-		echo "<form name='repreni".$row["studanto"]."' method='POST' action='repreniLernanton.php'>";
-		echo "<div class='nomo'>";
-		echo "<div style=\"height:35px;\"><img align='middle' src=\"bildoj/";
-		if ($row["kurso"]=="KE") {echo "ikurso-ikono.gif\"";}
-		if ($row["kurso"]=="CG") {echo "cge-ikono.gif\"";}
-		if ($row["kurso"]=="GR") {echo "gerda-ikono.gif\"";}
-		echo "\">";
-		echo "\n<b>".$row["enirnomo"]."</b> (".$row['personnomo']." ".$row['familinomo'].") - ";
-		echo "<a href=\"mailto:".$row['retadreso']."\">".$row["retadreso"]."</a>\n";
-		if ($row["stato"]=='H') {
-			echo "<input type='hidden' name='studanto' value='".$row["studanto"]."'>";
-			echo "<input type='hidden' name='enirnomo' value='".$row["enirnomo"]."'>";
-			echo "<input type='hidden' name='idnunaKurso' value='".$row["kursid"]."'>";
-			echo "<input class='bouton' type='submit' value=\"Récupérer l’élève\">";
-		}	
-		echo "</div></div>";
+	} else {
+		if ($lernanto["kurso"]=="KE") {
+			echo "<form method='POST' action='miajlernantoj2.php' class='ke'>";
+			echo "<input type='hidden' name='nunleciono' value='".(int)$lernanto["nunleciono"]."'>";
+			echo "<div class='input-field inline'><select name='leciono'>";
+			echo "<option value='".(int)$lernanto["kursid"]."-N'>Pas encore commencé</option>";
+			foreach ($lernantojAPI->lecionoj("KE") as $leciono) {
+				echo "<option value='".(int)$lernanto["kursid"]."-".(int)$leciono["numero"]."'".((int)$lernanto["nunleciono"]==(int)$leciono["numero"] ? " selected" : "").">".h($leciono["titolo"])."</option>";
+			}
+			echo "</select></div> <button type='submit' class='btn-flat waves-effect'>Valider</button>";
 			echo "</form>";
-
-		// colonne 1: coordonnees 
-		echo "<div class='lernanto gauche' style='border:solid #888;border-width:0 1px 1px 0;margin-right:10px;'>";
-		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["naskigxdato"],$nskdt);
-		$nskdt=explode("-",$row["naskigxdato"]);
-		if (count($nskdt)==3) { // cas où la date contient deux tirets
-			echo $nskdt[2]."/".$nskdt[1]."/".$nskdt[0]."<br>";
 		}
-		if ($row["adreso1"]!="") echo $row["adreso1"]."<br>";
-		if ($row["adreso2"]!="") echo $row["adreso2"]."<br>";
-		echo $row["posxtkodo"]." ".$row["urbo"]." ";
-		echo $row["lando"];
-		echo "</div><div class='lernanto' style='padding-left:10px;'>";
-
-		// cours suivi
-		$demando2="select kursoj.nomo as kursnomo from kursoj where kursoj.kodo='".$row['kurso']."'"; 
-		$result2 = $bdd->query($demando2) or die(print_r($bdd->errorInfo()));
-		$row2 = $result2->fetch();
-		echo "<em>cours suivi&nbsp;:</em><b>".$row2["kursnomo"]."</b><br>";	
-		echo "<em>inscription le : </em>\n";
-		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["ekdato"],$ekdt);
-		$ekdt=explode("-",$row["ekdato"]);
-		echo $ekdt[2]."/".$ekdt[1]."/".$ekdt[0]."<br>\n";
-		
-		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.numero='".$row['nunleciono']."'";
-		$result3 = $bdd->query($demando3) or die(print_r($bdd->errorInfo()));
-		$row3 = $result3->fetch();
-		echo "<em>derni&egrave;re le&ccedil;on : </em>".$row3['titolo']."<br>";
-		if ($row["stato"]=='F'){echo "<em>fin du cours le : </em>\n";}
-		else {echo "<em>abandon le : </em>\n";}
-		if ($row["lastdato"]==0) {
-			echo "--/--/--<br>\n";
+		if (isset(LASTAJ_LECIONOJ[$lernanto["kurso"]]) && (int)$lernanto["nunleciono"]==LASTAJ_LECIONOJ[$lernanto["kurso"]]) {
+			echo "<form method='POST' action='miajlernantoj2.php'>";
+			echo "<input type='hidden' name='nunleciono' value='".(int)$lernanto["nunleciono"]."'>";
+			echo "<input type='hidden' name='leciono' value='".(int)$lernanto["kursid"]."-F'>";
+			echo "<button type='submit' class='btn waves-effect waves-light contraste-B tooltipped' data-tooltip='L’élève recevra un message pour obtenir son diplôme'>A fini</button>";
+			echo "</form>";
 		}
-		else{
-			//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["lastdato"],$lstdt);
-			$lstdt = explode("-",$row["lastdato"]);
-			echo $lstdt[2]."/".$lstdt[1]."/".$lstdt[0]."<br>\n";
-		}
-
-		// colonne 3: commentaires
-		echo "</div><div class='lernanto'>";
-		echo "<em>commentaire de l'&eacute;l&egrave;ve :</em><br>";
-		echo stripslashes($row['kialo'])."<br>";
-		echo "<em>commentaires du correcteur :</em><br>";
-		// notoj aldoneblaj per la korektanto
-		$demando4 = "select * from komentoj where komentoj.studanto='".$row["studanto"]."'";
-		$result4 = $bdd->query($demando4) or die(print_r($bdd->errorInfo()));
-		while ($row4 = $result4->fetch()){
-			$demando5 = "select enirnomo from personoj where personoj.id='".$row4['korektanto']."'";
-			$result5 = $bdd->query($demando5) or die(print_r($bdd->errorInfo()));
-			$row5 = $result5->fetch();
-			if ($row4["korektanto"]==$persono_id){
-				echo "<a href='forigiNoton.php?noto_id=".$row4['id']."&stud_id=".$row['studanto']."&stud_nomo=".$row['enirnomo']."&pagxo=miajlernantoj.php'>";
-				echo "<img src=\"bildoj/icon_delete.gif\" alt=\"Supprimer ce commentaire\" title=\"Supprimer ce commentaire\" border=\"0\" align=\"middle\"></a>";
-			}
-			echo " <em>de ".$row5['enirnomo']." le ".$row4['dato']."</em> :\n";
-			echo " ".$row4['teksto']."\n";
-			echo "</span>\n";
-			echo "<br>\n";
-		}
-		echo "<div class='encadre' style='clear:both; margin:10px 0 0 0;padding:5px;'>";
-		echo "<form name='aldoniNoton".$i."' method='post' action='aldoniNoton.php'>\n";
-		echo "<input type='hidden' name='stud_id' value='".$row["studanto"]."'>\n";
-		echo "<input type='hidden' name='pagxo' value='miajlernantoj.php'>";
-		echo "<input type='text' name='teksto' size='50' value='** vous pouvez ajouter un commentaire ici **' onFocus='this.value=\"\"'>";
-		echo "&nbsp;&nbsp;<input type='image' class='bouton' src='bildoj/icon_valider2.gif' align='middle' onClick='this.form.submit();'>";
+		echo "<form method='POST' action='miajlernantoj2.php'>";
+		echo "<input type='hidden' name='nunleciono' value='".(int)$lernanto["nunleciono"]."'>";
+		echo "<input type='hidden' name='leciono' value='".(int)$lernanto["kursid"]."-H'>";
+		echo "<button type='submit' class='btn-flat waves-effect tooltipped' data-tooltip='Vous libérez ainsi une place pour un nouvel élève'>A abandonné</button>";
 		echo "</form>";
-		echo "</span>";
-		echo "</div></div></div>";
-		$i++;
 	}
-	if ($i==0) { 
-			echo "<p>Aucun élève</p>";
+	echo "</div></div>";
+}
+
+function montriListon(array $lernantoj, LernantojAPI $lernantojAPI, int $persono_id) {
+	if (!$lernantoj) {
+		echo "<p>Aucun élève.</p>";
+	}
+	foreach ($lernantoj as $lernanto) {
+		montriLernanton($lernanto, $lernantojAPI, $persono_id);
 	}
 }
-include "pagxkapo-old.inc.php";
+
+$nunajLernantoj = $lernantojAPI->lernantoj($persono_id, false);
+$eksajLernantoj = $lernantojAPI->lernantoj($persono_id, true);
+include "pagxkapo.inc.php";
 ?>
-		<div id="enhavo">
-			<ul id="tabnav">
-				<li <?php if ($eksaj=="no") {echo " class='aktiva'";}?>><a href="miajlernantoj.php">élèves en cours</a></li>
-				<li <?php if ($eksaj=="jes") {echo " class='aktiva'";}?>><a href="miajlernantoj.php?eksaj=jes">Anciens élèves</a></li>
-				<li><a href="sxangxiNBlernantoj.php">Modifier le nombre d’élèves</a></li>
+<div class="row">
+	<article class="col s12 l10 offset-l1">
+		<h1>Mes élèves</h1>
+
+		<?php if ($farite=="jes") { ?>
+			<p class="card-panel green lighten-4">Vos données ont été mises à jour.</p>
+		<?php } ?>
+		<p class="gvidilo-ligilo">Pour savoir comment gérer vos élèves, lisez le <a href="gvidilo.php">Guide du correcteur</a>.
+			Pour changer le nombre d’élèves que vous suivez&nbsp;: <a href="sxangxiNBlernantoj.php">modifier le nombre d’élèves</a>.</p>
+
+		<ul class="tabs">
+			<li class="tab"><a href="#nunaj"<?php if (!$eksaj) echo ' class="active"'; ?>>Élèves en cours (<?php echo count($nunajLernantoj); ?>)</a></li>
+			<li class="tab"><a href="#eksaj"<?php if ($eksaj) echo ' class="active"'; ?>>Anciens élèves (<?php echo count($eksajLernantoj); ?>)</a></li>
 		</ul>
-		<div id="kadro">
-			<?php if ($farite=="jes") { ?>
-				<p class="eraro">Vos donn&eacute;es ont &eacute;t&eacute; mises &agrave; jour</p>
-			<?php } ?>
-			<div class="encadre">
-				<p>Pour plus d'informations sur la fa&ccedil;on de g&eacute;rer vos &eacute;l&egrave;ves, 
-				lisez le <a href="helppagxo.php">Guide du correcteur</a>.</p>
-			</div>
-
-    		<?php if ($eksaj=="jes"){
-    			echo "<h2>Anciens élèves</h2>";
-    			listiEksStudantojn();
-			} else {
-				echo "<h2>élèves en cours</h2>";
-				listiStudantojn();
-			}
-			?>
-		</div>
-<?php include "pagxpiedo-old.inc.php";?>                
-
+		<div id="nunaj"><?php montriListon($nunajLernantoj, $lernantojAPI, $persono_id); ?></div>
+		<div id="eksaj"><?php montriListon($eksajLernantoj, $lernantojAPI, $persono_id); ?></div>
+	</article>
+</div>
+<?php include "pagxpiedo.inc.php";?>

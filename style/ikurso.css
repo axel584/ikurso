@@ -1082,6 +1082,46 @@ span.ikurso {
 #eleves .footer .btn {
 	margin-left: 1em;
 }
+.miajlernantoj .tabs {margin-bottom: 1.5rem; background-color: transparent;}
+.miajlernantoj .tabs .tab a {color: #989490;}
+.miajlernantoj .tabs .tab a.active, .miajlernantoj .tabs .tab a:hover {color: #554E47; background-color: transparent;}
+.miajlernantoj .tabs .indicator {background-color: #554E47;}
+.miajlernantoj .lernanto p.etikedo + p,
+.miajlernantoj .lernanto p.etikedo + ul {margin-top: 0;}
+.miajlernantoj .lernanto p + p.etikedo,
+.miajlernantoj .lernanto ul + p.etikedo {margin-top: 1.2rem;}
+.miajlernantoj .lernanto .historio td:last-child, .miajlernantoj .lernanto .historio th:last-child {white-space: nowrap; width: 9rem;}
+.miajlernantoj .card.lernanto {padding: 0;}
+.miajlernantoj .lernanto .kapo {display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;}
+.miajlernantoj .lernanto .kapo .nomo {flex: 1; min-width: 12rem;}
+.miajlernantoj .lernanto .card-title {display: inline; font-weight: 400;}
+.miajlernantoj .lernanto .plena-nomo {color: #75706B;}
+.miajlernantoj .lernanto .tagoj {
+	display: inline-flex; align-items: center; justify-content: center;
+	min-width: 2.6rem; height: 2.6rem; padding: 0 .4rem; border-radius: 1.3rem;
+	color: #fff; font-weight: bold;
+}
+.miajlernantoj .lernanto .leciono {
+	display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+	margin: 1rem 0; padding: .8rem 0; border-top: 1px solid #DDDCDA; border-bottom: 1px solid #DDDCDA;
+}
+.miajlernantoj .lernanto .etikedo {
+	margin: 0 0 .3rem; font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; color: #75706B;
+}
+.miajlernantoj .lernanto .malplena {color: #989490; font-style: italic;}
+.miajlernantoj .lernanto .informoj {margin-bottom: 1rem;}
+.miajlernantoj .lernanto ul.komentoj {margin: 0 0 .5rem;}
+.miajlernantoj .lernanto ul.komentoj i {vertical-align: middle;}
+.miajlernantoj .lernanto .aldoni-noton {display: flex; align-items: flex-start; gap: 1rem;}
+.miajlernantoj .lernanto .aldoni-noton .input-field {flex: 1; margin-top: .5rem;}
+.miajlernantoj .lernanto .aldoni-noton .btn-flat {margin-top: 1rem;}
+.miajlernantoj .lernanto .historio {margin: .5rem 0 0; box-shadow: none;}
+.miajlernantoj .lernanto .historio .collapsible-header {padding: .6rem 1rem; font-size: .95rem;}
+.miajlernantoj .lernanto .historio .collapsible-body {padding: .5rem 1rem; max-height: 22rem; overflow-y: auto;}
+.miajlernantoj .lernanto .historio td, .miajlernantoj .lernanto .historio th {padding: .25rem .5rem;}
+.miajlernantoj .lernanto .card-action {display: flex; justify-content: flex-end; align-items: center; gap: 1rem; flex-wrap: wrap;}
+.miajlernantoj .lernanto .card-action form {margin: 0;}
+.miajlernantoj .lernanto .card-action .ke .input-field {margin: 0; min-width: 14rem;}
 /*************************************/
 /*        page korektiLecionon       */
 /*************************************/
@@ -1289,6 +1329,11 @@ span.bravo {
 	.primaire.fond,
 	.primaire-texte.texte-fond {background-color: #2a2826 !important;}
 	.vortlisto h2 {color: inherit;}
+	.miajlernantoj .lernanto .leciono {border-color: #3a3a3a;}
+	.miajlernantoj .tabs .tab a.active, .miajlernantoj .tabs .tab a:hover {color: #e6e6e6;}
+	.miajlernantoj .tabs .indicator {background-color: #e6e6e6;}
+	.miajlernantoj .lernanto .plena-nomo,
+	.miajlernantoj .lernanto .etikedo {color: #a8a39e;}
 	.vortlisto.bildetoj .eo {color: inherit;}
 	.vortlisto.bildetoj {color: #b5b0ab;}
 	.noto a:hover, .noto a:active {color: #cfcac5;}

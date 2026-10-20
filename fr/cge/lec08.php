@@ -258,13 +258,9 @@ include "dlekkapo.inc.php";
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
-					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/jugxisto.mp3" class="sm2_button"></a><span class="eo">juĝisto</span>&nbsp;: juge</p>
-					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/aserti.mp3" class="sm2_button"></a><span class="eo">aserti</span>&nbsp;: affirmer, prétendre</p>
-					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/akuzato.mp3" class="sm2_button"></a><span class="eo">akuzato</span>&nbsp;: l’accusé</p>
-					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/forkuri.mp3" class="sm2_button"></a><span class="eo">forkuri</span>&nbsp;: se sauver, c-à-d. courir au loin</p>
+					<p class="col s12 m6"><span class="eo">forlasi</span>&nbsp;: quitter, abandonner</p>
 					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/tramo.mp3" class="sm2_button"></a><span class="eo">tramo</span>&nbsp;: tramway</p>
 					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/okulo.mp3" class="sm2_button"></a><span class="eo">okulo</span>&nbsp;: œil</p>
-					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/opinii.mp3" class="sm2_button"></a><span class="eo">opinii</span>&nbsp;: penser, avoir une opinion</p>
 					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/stari.mp3" class="sm2_button"></a><span class="eo">stari</span>&nbsp;: être debout</p>
 					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/laca.mp3" class="sm2_button"></a><span class="eo">laca</span>&nbsp;: fatigué</p>
 					<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/placxi.mp3" class="sm2_button"></a><span class="eo">plaĉi</span>&nbsp;: plaire</p>
@@ -384,9 +380,8 @@ include "dlekkapo.inc.php";
 				<p class="col s12 m6"><span class="eo">ambaŭ</span>&nbsp;: tous deux</p>
 				<p class="col s12 m6"><span class="eo">aŭto-veturado</span>&nbsp;: trajet en voiture</p>
 				<p class="col s12 m6"><span class="eo">azeno</span>&nbsp;: âne</p>
-				<p class="col s12 m6"><span class="eo">daŭre</span>&nbsp;: continuellement</p>
-				<p class="col s12 m6"><span class="eo">estonta</span>&nbsp;: futur (participe futur de <em>esti</em>)</p>
-				<p class="col s12 m6"><span class="eo">inciti</span>&nbsp;: irriter</p>
+				<p class="col s12 m6"><span class="eo">fungo</span>&nbsp;: champignon</p>
+				<p class="col s12 m6"><span class="eo">manĝebla (manĝ-ebl-a)</span>&nbsp;: comestible (qu’on peut manger)</p>
 				<p class="col s12 m6"><span class="eo">foriri (for-iri)</span>&nbsp;: partir</p>
 				<p class="col s12 m6"><span class="eo">hejme</span>&nbsp;: à la maison</p>
 				<p class="col s12 m6"><span class="eo">jam</span>&nbsp;: déjà</p>

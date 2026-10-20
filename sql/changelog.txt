@@ -4518,3 +4518,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- leçon 9 : exercice 9.8 découpé en quatre exercices d'un article (9.4, 9.6, 9.8 et 9.11) : voir sql/15-lecon9-exercices.sql
 --- révision du vocabulaire : synonymes corrects acceptés et traductions ambiguës précisées (9 mots) : voir sql/16-vocabulaire-revision.sql
 --- révision du vocabulaire : 7 mots rares ou expressions longues retirés pour les nouveaux élèves : voir sql/17-vocabulaire-retraits.sql
+--- leçon 8 : deux blagues sexistes remplacées en 8.6 (n° 19) et 8.9 (n° 30) (#936) : voir sql/18-lecon8-blagues.sql

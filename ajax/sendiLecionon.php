@@ -113,7 +113,7 @@ $filename = "../mails/novaleciono.html";
 $fd = fopen($filename, "r");
 $contents = fread($fd, filesize ($filename));
 fclose($fd);
-$url = $urlracine."vidiLecionon.php?numleciono=".$leciono."&kurso=".$kurso."&studanto=".$persono_id;
+$url = rtrim($urlracine, "/")."/vidiLecionon.php?numleciono=".$leciono."&kurso=".$kurso."&studanto=".$persono_id;
 $contents=str_replace("##URL##",$url,$contents);
 mailViaSES($korektantaretadreso,"Nouvelle leçon de ".$persono["enirnomo"],$contents);
 

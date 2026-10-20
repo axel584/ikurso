@@ -196,7 +196,8 @@ function frazoTeksto($frazo) {
   return teksto.replace(/[\s\u00a0\u202f]+/g, " ").trim();
 }
 
-$(document).on("input change", ".frazo-kampo", function () {
+// en quittant un champ, la phrase est aussi enregistrée : une case laissée vide peut être la bonne réponse
+$(document).on("input change focusout", ".frazo-kampo", function () {
   var $frazo = $(this).closest(".frazo");
   $frazo.find("input[name^=res_]").val(frazoTeksto($frazo));
   if ($(this).is("input")) {
@@ -207,7 +208,8 @@ $(document).on("input change", ".frazo-kampo", function () {
 // une seule requête à la fois par phrase, sinon une réponse ancienne peut écraser la dernière en base
 function sendiFrazon($frazo) {
   var respondo = $frazo.find("input[name^=res_]").val();
-  if ($frazo.data("sendata") || respondo === "" || respondo === $frazo.data("sendita")) {
+  var menuoVaka = $frazo.find("select.frazo-kampo").filter(function () { return $(this).val() === ""; }).length > 0;
+  if ($frazo.data("sendata") || respondo === "" || menuoVaka || respondo === $frazo.data("sendita")) {
     return;
   }
   var korektebla = $frazo.data("korektebla") === true;
@@ -236,7 +238,7 @@ function sendiFrazon($frazo) {
   });
 }
 
-$(document).on("change", ".frazo-kampo", function () {
+$(document).on("change focusout", ".frazo-kampo", function () {
   sendiFrazon($(this).closest(".frazo"));
 });
 

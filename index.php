@@ -1,8 +1,10 @@
 <?php
 include "util.php";
 // l'accueil n'a qu'une adresse : /index.php sans paramètre redirige définitivement vers / (#1077)
-if (isset($_SERVER["REQUEST_URI"]) && $_SERVER["REQUEST_URI"] === $cheminAbsolu."index.php") {
-	header("Location: ".$cheminAbsolu, true, 301);
+// ($cheminAbsolu n'est pas défini dans le config.php de prod : le chemin vient de $urlracine)
+$racino = rtrim((string)parse_url($urlracine, PHP_URL_PATH), "/") . "/";
+if (isset($_SERVER["REQUEST_URI"]) && $_SERVER["REQUEST_URI"] === $racino."index.php") {
+	header("Location: ".$racino, true, 301);
 	exit;
 }
 $pagxtitolo="Apprendre l’espéranto gratuitement en ligne";

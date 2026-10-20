@@ -161,9 +161,9 @@ include "dlekkapo.inc.php";
 
 		<p class="parto">Les personnes</p>
 
-		<p><b>IST</b> : <i>profession, activité habituelle</i></p>
+		<p><b>IST</b> : <i>profession, activité habituelle</i>, pour un homme comme pour une femme</p>
 		<div class="row">
-			<p class="col s12"><span class="eo"><span class="marque">•</span> instrui</span>&nbsp;: enseigner&emsp;→&emsp;<span class="eo">instruisto</span>&nbsp;: enseignant</p>
+			<p class="col s12"><span class="eo"><span class="marque">•</span> instrui</span>&nbsp;: enseigner&emsp;→&emsp;<span class="eo">instruisto</span>&nbsp;: enseignant, enseignante</p>
 			<p class="col s12"><span class="eo">piano</span>&nbsp;: piano&emsp;→&emsp;<span class="eo"><span class="marque">•</span> pianisto</span>&nbsp;: pianiste</p>
 			<p class="col s12"><span class="eo">esperantisto</span>&nbsp;: espérantiste</p>
 		</div>
@@ -669,7 +669,7 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/admiri.mp3" class="sm2_button"></a><span class="eo">admiri</span>&nbsp;: admirer<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/admirinda.mp3" class="sm2_button"></a><span class="eo">admirinda</span>&nbsp;: admirable</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/instrui.mp3" class="sm2_button"></a><span class="eo">instrui</span>&nbsp;: enseigner<br>
-							<a href="<?php echo $vojo;?>fr/son/vortoj/instruisto.mp3" class="sm2_button"></a><span class="eo">instruisto</span>&nbsp;: enseignant</p>
+							<a href="<?php echo $vojo;?>fr/son/vortoj/instruisto.mp3" class="sm2_button"></a><span class="eo">instruisto</span>&nbsp;: enseignant, enseignante</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/duonhoro.mp3" class="sm2_button"></a><span class="eo">duonhoro</span>&nbsp;: demi-heure</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/sankta.mp3" class="sm2_button"></a><span class="eo">sankta</span>&nbsp;: saint<br>
 						   <a href="<?php echo $vojo;?>fr/son/vortoj/sanktulo.mp3" class="sm2_button"></a><span class="eo">sanktulo</span>&nbsp;: un saint</p>

@@ -35,7 +35,7 @@ include "dlekkapo.inc.php";
 			<p class="col s4">____-an   ____-on<br>____-ajn  ____-ojn</p>
 		</div>
 		<div class="row">
-			<p class="col s4 eo">Mia patrino</p>
+			<p class="col s4 eo">Mia patro</p>
 			<p class="col s2 eo">bone</p>
 			<p class="col s2 eo">lavas</p>
 			<p class="col s4 eo">mian fraton.</p>

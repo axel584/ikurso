@@ -30,7 +30,7 @@ include "dlekkapo.inc.php";
 							<td>____-is<br>____-as<br>____-os</td>
 							<td>____-an   ____-on<br>____-ajn  ____-ojn</td>
 						</tr>
-						<tr><td>Mia patrino</td><td>lavas</td><td>mian fraton.</td></tr>
+						<tr><td>Mia patro</td><td>lavas</td><td>mian fraton.</td></tr>
 						<tr><td>Niaj fratinoj</td><td>vidis</td><td>viajn instruistojn.</td></tr>
 					</table>
 				</div>

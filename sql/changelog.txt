@@ -4519,3 +4519,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- révision du vocabulaire : synonymes corrects acceptés et traductions ambiguës précisées (9 mots) : voir sql/16-vocabulaire-revision.sql
 --- révision du vocabulaire : 7 mots rares ou expressions longues retirés pour les nouveaux élèves : voir sql/17-vocabulaire-retraits.sql
 --- leçon 8 : deux blagues sexistes remplacées en 8.6 (n° 19) et 8.9 (n° 30) (#936) : voir sql/18-lecon8-blagues.sql
+--- cours élémentaire : stéréotypes sexistes (apparence, tâches ménagères) et métiers en -isto traduits aux deux genres (#917) : voir sql/19-cours-elementaire-stereotypes.sql

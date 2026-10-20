@@ -163,7 +163,7 @@ include "dlekkapo.inc.php";
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/frato.mp3" class="sm2_button"></a> <span class="eo">frato</span>&nbsp;: frère</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/fratino.mp3" class="sm2_button"></a> <span class="eo">fratino</span>&nbsp;: sœur</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/studento.mp3" class="sm2_button"></a> <span class="eo">studento</span>&nbsp;: étudiant</p>
-						<p><a href="<?php echo $vojo;?>fr/son/vortoj/instruisto.mp3" class="sm2_button"></a> <span class="eo">instruisto</span>&nbsp;: instituteur</p>
+						<p><a href="<?php echo $vojo;?>fr/son/vortoj/instruisto.mp3" class="sm2_button"></a> <span class="eo">instruisto</span>&nbsp;: instituteur, institutrice</p>
 						<p><a href="<?php echo $vojo;?>fr/son/vortoj/knabo.mp3" class="sm2_button"></a> <span class="eo">knabo</span>&nbsp;: garçon</p>
 					</div>
 					<div class="col s12 m6 l4">
@@ -565,7 +565,7 @@ include "dlekkapo.inc.php";
 				</div>
 				<div class="col s12 m4">
 					<p><span class="eo">profesio</span>&nbsp;: métier, profession</p>
-					<p><span class="eo">desegnisto</span>&nbsp;: dessinateur</p>
+					<p><span class="eo">desegnisto</span>&nbsp;: dessinateur, dessinatrice</p>
 					<p><span class="eo">psikologo</span>&nbsp;: psychologue</p>
 				</div>
 			</div>
@@ -650,9 +650,9 @@ include "dlekkapo.inc.php";
 					<p><a href="<?php echo $vojo;?>fr/son/vortoj/emerito.mp3" class="sm2_button"></a> <span class="eo">emerito</span>&nbsp;: retraité</p>
 					<p><a href="<?php echo $vojo;?>fr/son/vortoj/funkciulo.mp3" class="sm2_button"></a> <span class="eo">funkciulo</span>&nbsp;: fonctionnaire</p>
 					<p><a href="<?php echo $vojo;?>fr/son/vortoj/jxurnalisto.mp3" class="sm2_button"></a> <span class="eo">ĵurnalisto</span>&nbsp;: journaliste</p>
-					<p><a href="<?php echo $vojo;?>fr/son/vortoj/laboristo.mp3" class="sm2_button"></a> <span class="eo">laboristo</span>&nbsp;: ouvrier</p>
-					<p><a href="<?php echo $vojo;?>fr/son/vortoj/komputilisto.mp3" class="sm2_button"></a> <span class="eo">komputilisto</span>&nbsp;: informaticien</p>
-					<p><a href="<?php echo $vojo;?>fr/son/vortoj/oficisto.mp3" class="sm2_button"></a> <span class="eo">oficisto</span>&nbsp;: employé</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/laboristo.mp3" class="sm2_button"></a> <span class="eo">laboristo</span>&nbsp;: ouvrier, ouvrière</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/komputilisto.mp3" class="sm2_button"></a> <span class="eo">komputilisto</span>&nbsp;: informaticien, informaticienne</p>
+					<p><a href="<?php echo $vojo;?>fr/son/vortoj/oficisto.mp3" class="sm2_button"></a> <span class="eo">oficisto</span>&nbsp;: employé, employée</p>
 					<p><a href="<?php echo $vojo;?>fr/son/vortoj/senlaborulo.mp3" class="sm2_button"></a> <span class="eo">senlaborulo</span>&nbsp;: chômeur</p>
 					<p><b>Pays</b></p>
 					<p><a href="<?php echo $vojo;?>fr/son/vortoj/afriko.mp3" class="sm2_button"></a> <span class="eo">Afriko</span>&nbsp;: Afrique</p>

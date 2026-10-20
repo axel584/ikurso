@@ -4522,3 +4522,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- cours élémentaire : stéréotypes sexistes (apparence, tâches ménagères) et métiers en -isto traduits aux deux genres (#917) : voir sql/19-cours-elementaire-stereotypes.sql
 --- cours élémentaire : une question par phrase en 3.2, 4.11 et 6.17 pour la correction automatique (#962) : voir sql/20-exercices-une-phrase.sql
 --- exercices : nouveaux types plenigu (champ à la place des *) et elektlisto (menu à la place des [a/b]) (#1056) : voir sql/21-types-plenigu-elektlisto.sql
+--- exercices : premiers exercices passés en plenigu (CG 6.17) et elektlisto (Gerda 2 à 8, Paŝoj 1.4) (#1056) : voir sql/22-exercices-plenigu-elektlisto.sql

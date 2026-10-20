@@ -1,5 +1,6 @@
 <?php
 include "../util.php";
+require_once __DIR__ . "/../api/RespondojAPI.php";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $persono = apartigiPersonon($persono_id);
 $lecionero_id=isset($_GET["lecionero_id"])?$_GET["lecionero_id"]:"";
@@ -89,26 +90,9 @@ $fonto.="</head><body>";
 
 // Attention, code commun avec sendiLecionon.php
 
-$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=? and lecionoj.numero=? and kurso=? order by ekzerceroj.numero";
-$stmt = $bdd->prepare($query);
-$stmt->execute([$persono_id, $leciono, $kurso]);
-$result = $stmt;
-$nbReponse = 0;
-$lastKomando = "";
-while ($row=$result->fetch()) {
-	$nbReponse = $nbReponse + 1;
-	// si on n'a jamais mis cette consigne, on l'affiche ici :
-	if ($row["komando"]!=$lastKomando) {
-		$lastKomando=$row["komando"];
-		$fonto .= "<h5>".$lastKomando."</h5>\n";
-	}	
-	$fonto .= "<p>".$row["demando"]."<br>\n";
-	if ($row["gxusta"]==1) {
-		$fonto .= "<span style=\"color:green\">".$row["respondo"]."</span></p>\n";
-	} else {
-		$fonto .= "<span style=\"color:blue\">".$row["respondo"]."</span></p>\n";
-	}
-}
+// réponses de l'élève, avec le lien vers la page de chaque exercice
+list($respondojHtml, $nbReponse) = (new RespondojAPI($bdd))->mesagxo((int)$persono_id, (int)$leciono, $kurso, $urlracine);
+$fonto .= $respondojHtml;
 $fonto .= "<p>Commentaire de l'élève :<br>\n";
 $fonto .= "<span style=\"color:blue\">".$commentaire_pour_correcteur."</span></p>\n";
 $fonto.="</body></html>";

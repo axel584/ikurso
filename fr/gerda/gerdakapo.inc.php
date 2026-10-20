@@ -236,10 +236,23 @@ else
 ($subjekto=="cxap01ek.php")?($jamaligxi="ne"):($jamaligxi="jes");
 
 
+// titre et description pour les moteurs de recherche (#1076)
+require_once __DIR__."/../../api/SeoAPI.php";
 if ($parto=="lasu") {
-	$pagxtitolo="Lasu min paroli plu - ".$titolo;
-} else { 
-	$pagxtitolo="Gerda malaperis - ".$titolo; 
+	$pagxtitolo = "Lasu min paroli plu : textes faciles en espéranto".($titolo!="" ? " – ".$titolo : "");
+	$pagxpriskribo = "Lasu min paroli plu, de Claude Piron : de courts textes faciles en espéranto pour continuer à progresser après le cours débutant.";
+} else if ($subjekto=="vocabula.php") {
+	$pagxtitolo = "Lexique espéranto-français de Gerda malaperis";
+	$pagxpriskribo = "Le lexique de Gerda malaperis, roman de Claude Piron : les mots espéranto du roman avec leur traduction en français.";
+} else if ($nunleciono!=="") {
+	$kanonaSekcio = (isset($section) && ctype_digit((string)$section)) ? (int)$section : 1;
+	$sekcioTitolo = (new SeoAPI($bdd))->sekcioTitolo("GR", (int)$nunleciono, $kanonaSekcio);
+	$pagxtitolo = ($sekcioTitolo ? $sekcioTitolo." – " : "")."Gerda malaperis, ".html_entity_decode($titolo, ENT_QUOTES, "UTF-8");
+	$pagxpriskribo = "Gerda malaperis, roman de Claude Piron pour apprendre l’espéranto en lisant : ".html_entity_decode($titolo, ENT_QUOTES, "UTF-8")
+		.($sekcioTitolo ? ", ".$sekcioTitolo : "").". Cours gratuit, avec un correcteur bénévole si vous le souhaitez.";
+} else {
+	$pagxtitolo = "Gerda malaperis : un roman pour apprendre l’espéranto";
+	$pagxpriskribo = "Gerda malaperis, roman de Claude Piron en 25 chapitres, pour progresser en espéranto après le cours débutant. Cours gratuit, avec un correcteur bénévole si vous le souhaitez.";
 }
 
 include $vojo."pagxkapo.inc.php";

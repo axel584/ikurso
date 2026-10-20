@@ -10,11 +10,20 @@ $aktivigo = isset($_GET['aktivigo']) ? $_GET['aktivigo'] : "";
 $retadreso = isset($_GET['retadreso']) ? $_GET['retadreso'] : "";
 $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = array("enirnomo"=>"","familinomo"=>"","personnomo"=>"","retadreso"=>"","rajtoj"=>"");}
+// référencement : chaque page peut définir $pagxtitolo, $pagxpriskribo et, pour les leçons, $kanonaSekcio
+require_once __DIR__ . "/api/SeoAPI.php";
+$seoTitolo = trim(html_entity_decode(strip_tags(isset($pagxtitolo) ? $pagxtitolo : ""), ENT_QUOTES, "UTF-8"));
+$seoTitolo = ($seoTitolo == "" ? "Apprendre l’espéranto gratuitement en ligne" : $seoTitolo) . " | iKurso";
+$seoPriskribo = (isset($pagxpriskribo) && $pagxpriskribo != "") ? $pagxpriskribo
+	: "Cours d’espéranto gratuits en ligne, pour débutants et confirmés, avec un correcteur bénévole si vous le souhaitez. Proposé par l’association Espéranto-France.";
+$seoKanona = SeoAPI::kanonaUrl($urlracine, isset($_SERVER["REQUEST_URI"]) ? $_SERVER["REQUEST_URI"] : "/", isset($kanonaSekcio) ? (string)$kanonaSekcio : null);
 ?>
 <!DOCTYPE html>
   <html lang="fr">
     <head>
-    <title>Ikurso - Cours d’espéranto gratuit en ligne</title>
+    <title><?php echo htmlspecialchars($seoTitolo, ENT_QUOTES, "UTF-8"); ?></title>
+    <meta name="description" content="<?php echo htmlspecialchars($seoPriskribo, ENT_QUOTES, "UTF-8"); ?>">
+    <link rel="canonical" href="<?php echo htmlspecialchars($seoKanona, ENT_QUOTES, "UTF-8"); ?>">
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
@@ -39,7 +48,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		</script>
 		<script type="text/javascript" src="<?php echo $vojo;?>xAlUtf8.js"></script>	
 		<!--<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>"  media="all"/> -->
-		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>.7"  media="all"/>
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>.8"  media="all"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/impression.css?v=<?php echo $milestone; ?>"  media="print"/>
 
 		<!--Let browser know website is optimized for mobile-->
@@ -65,9 +74,9 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 		<link href="<?php echo $vojo;?>bildoj/icon-normal.png" rel="icon" sizes="128x128" />
 
 		<!-- infos pour facebook -->
-		<meta property="og:url" content="https://ikurso.esperanto-france.org" />
-		<meta property="og:title" content="iKurso" />
-		<meta property="og:description" content="Ici, vous pourrez découvrir ce qu’est la langue internationale Espéranto et l’apprendre en suivant nos cours, à votre rythme. Pour mieux vous aider, l’association Espéranto-France vous propose un service de correction gratuit." />
+		<meta property="og:url" content="<?php echo htmlspecialchars($seoKanona, ENT_QUOTES, "UTF-8"); ?>" />
+		<meta property="og:title" content="<?php echo htmlspecialchars($seoTitolo, ENT_QUOTES, "UTF-8"); ?>" />
+		<meta property="og:description" content="<?php echo htmlspecialchars($seoPriskribo, ENT_QUOTES, "UTF-8"); ?>" />
 		<meta property="og:site_name" content="iKurso" />
 		<meta property="og:image" content="https://ikurso.esperanto-france.org/bildoj/ikurso-home.jpg" />
 		<meta property="fb:app_id" content="150250432081223" />

@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /eo/ppp/
+
+Sitemap: https://ikurso.esperanto-france.org/sitemap.php

@@ -54,7 +54,7 @@ function getTitoloLecionero($kurso,$leciono,$lecionero) {
 	
 	echo '<div class="impression right"><a href="javascript:window.print()" class="waves-effect waves-light btn-floating small blue"><i class="material-icons">print</i></a></div>';
 
-	echo '<h2 id="lec'.$leciono.'.'.$lecionero.'">'.$leciono.'.'.$lecionero.'. '.$titolo.'</h2>';
+	echo '<h1 class="kiel-h2" id="lec'.$leciono.'.'.$lecionero.'">'.$leciono.'.'.$lecionero.'. '.$titolo.'</h1>';
 	if ($dauxro!=null) {
 		echo '<p class="dauro">Temps moyen estimé : '.$dauxro.' minutes</p>';
 	}

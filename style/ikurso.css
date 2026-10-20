@@ -63,6 +63,8 @@
 
 h1 {font-size: calc(1.5rem + 2.5vw); margin: 2rem 0 1rem 0; color: #989490;}
 h2 {font-size: 2.5rem; color: #989490;}
+/* titre principal de la page, avec l'apparence d'un h2 (référencement, #1077) */
+h1.kiel-h2 {font-size: 2.5rem; line-height: 110%; margin: 2.3733333333rem 0 1.424rem 0; font-weight: 400;}
 h3 {font-size: 2rem; margin: 2rem 0 1.5rem 0; color: #554E47;}
 h4 {font-size: 1.5rem; margin: 2rem 0 1.5rem 0; color: #554E47;font-weight: 300;}
 
@@ -1010,8 +1012,9 @@ input[type=range]+.thumb.active .value {
 span.ikurso {
 	font-family: 'Nothing You Could Do', cursive;
 }
-.hejmo #enkonduko h2 {
+.hejmo #enkonduko h1 {
 	margin-top: 10rem;
+	font-weight: 300;
 }
 .hejmo #enkonduko p {
 	font-weight: 300;
@@ -1282,7 +1285,7 @@ body.attestation {margin:10px;text-align:center}
 		margin: 0 auto;
 	}
 	.submenuo {align-self: center;}
-	.hejmo #enkonduko h2 {
+	.hejmo #enkonduko h1 {
 		margin-top: 2rem;
 	}
 

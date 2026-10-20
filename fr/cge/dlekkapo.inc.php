@@ -49,7 +49,18 @@ if ($parto!="intro")
 		}
 	}
 
-$pagxtitolo="Cours d’espéranto en dix leçons"; 
+// titre et description pour les moteurs de recherche (#1076)
+require_once __DIR__."/../../api/SeoAPI.php";
+if ($nunleciono!=="") {
+	$kanonaSekcio = (isset($section) && ctype_digit((string)$section)) ? (int)$section : 1;
+	$sekcioTitolo = (new SeoAPI($bdd))->sekcioTitolo("CG", (int)$nunleciono, $kanonaSekcio);
+	$pagxtitolo = ($sekcioTitolo ? $sekcioTitolo." – " : "")."Leçon ".$nunleciono." du cours d’espéranto";
+	$pagxpriskribo = "Leçon ".$nunleciono." du cours d’espéranto gratuit pour débutants".($sekcioTitolo ? " : ".$sekcioTitolo : "")
+		.". Exercices corrigés automatiquement et, si vous le souhaitez, un correcteur bénévole.";
+} else {
+	$pagxtitolo = "Cours d’espéranto gratuit pour débutants en 10 leçons";
+	$pagxpriskribo = "Apprenez l’espéranto gratuitement en 10 leçons, à votre rythme : exercices corrigés automatiquement et, si vous le souhaitez, un correcteur bénévole.";
+}
 
 include $vojo."pagxkapo.inc.php";
 ?>

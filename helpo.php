@@ -5,6 +5,18 @@ $pagxtitolo="Aide et informations utiles";
 $korpo="informoj";
 $section=isset($_GET["section"])?$_GET["section"]:"";
 if ($section==""){$section="enskribo";}
+// titre et description de chaque rubrique pour les moteurs de recherche (#1076)
+$rubrikoj = array(
+	"enskribo" => array("Comment s’inscrire au cours d’espéranto", "S’inscrire gratuitement au cours d’espéranto en ligne d’iKurso et obtenir l’aide d’un correcteur bénévole."),
+	"kurso" => array("Comment suivre le cours d’espéranto", "Comment se déroule le cours d’espéranto en ligne : leçons, exercices corrigés automatiquement, envoi au correcteur, révision du vocabulaire."),
+	"kajposte" => array("Que faire après le cours d’espéranto ?", "Continuer à apprendre et pratiquer l’espéranto après le cours : lectures, rencontres, correspondance, musique, vidéos et jeux."),
+	"kielskribi" => array("Comment écrire les lettres accentuées de l’espéranto (ĉ, ĝ, ĥ, ĵ, ŝ, ŭ)", "Taper les lettres accentuées de l’espéranto (ĉ, ĝ, ĥ, ĵ, ŝ, ŭ) sur ordinateur, téléphone et tablette, ou les remplacer par le système x."),
+	"kielhelpi" => array("Comment aider iKurso et Espéranto-France", "Aider iKurso : devenir correcteur bénévole, adhérer à l’association Espéranto-France ou faire connaître le cours."),
+);
+if (isset($rubrikoj[$section])) {
+	list($pagxtitolo, $pagxpriskribo) = $rubrikoj[$section];
+	$kanonaSekcio = $section;
+}
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 if ($persono_id!="") {
 	$persono = apartigiPersonon($persono_id);

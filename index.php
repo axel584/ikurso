@@ -1,6 +1,12 @@
 <?php
 include "util.php";
-$pagxtitolo="Bienvenue sur le site d’iKurso !";
+// l'accueil n'a qu'une adresse : /index.php sans paramètre redirige définitivement vers / (#1077)
+if (isset($_SERVER["REQUEST_URI"]) && $_SERVER["REQUEST_URI"] === $cheminAbsolu."index.php") {
+	header("Location: ".$cheminAbsolu, true, 301);
+	exit;
+}
+$pagxtitolo="Apprendre l’espéranto gratuitement en ligne";
+$pagxpriskribo="Apprenez l’espéranto gratuitement en ligne, à votre rythme : un cours pour débutants en 10 leçons, puis un roman, Gerda malaperis. Avec un correcteur bénévole de l’association Espéranto-France si vous le souhaitez.";
 $korpo="hejmo";
 $gxisdatigDato="2016-01-21";
 malfermiDatumbazon();
@@ -35,7 +41,7 @@ include "pagxkapo.inc.php";
 					<h2>ATTENTION</h2>
 					<p>Vous utilisez un navigateur non compatible avec ce site. Veuillez <a href='http://browsehappy.com'>mettre à jour votre navigateur</a> ou contacter votre administrateur réseau pour améliorer votre navigation.</p>
 					<![endif]-->
-					<h2>Bienvenue sur <span class="ikurso">iKurso</span></h2>
+					<h1 class="kiel-h2">Bienvenue sur <span class="ikurso">iKurso</span></h1>
 					<p>Ici, vous pourrez découvrir ce qu’est la <b>langue internationale Espéranto</b>.<br> 
 						Vous pourrez également l’apprendre en suivant nos cours, à votre rythme.<br>
 						<p class="center"><a href="<?=$vojo?>fr/cge/lec01.php" class="btn waves-effect waves-light blue" data-spuro="commencer-cours-debutant">Commencer le cours débutant</a></p>

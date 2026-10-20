@@ -19,6 +19,7 @@ const TYPOS: EkzercoTypo[] = [
   'verkado-1', 'verkado-2', 'verkado-3', 'verkado-4', 'verkado-5', 'verkado-6',
   'stelo-1', 'stelo-2', 'truoj-1', 'truoj-2',
   'kompletigu', 'ordigu', 'elektu',
+  'plenigu', 'elektlisto',
 ]
 
 type FormData = Omit<Ekzerco, 'id'>

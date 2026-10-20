@@ -48,7 +48,7 @@ $seoKanona = SeoAPI::kanonaUrl($urlracine, isset($_SERVER["REQUEST_URI"]) ? $_SE
 		</script>
 		<script type="text/javascript" src="<?php echo $vojo;?>xAlUtf8.js"></script>	
 		<!--<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>"  media="all"/> -->
-		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>.8"  media="all"/>
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>.9"  media="all"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/impression.css?v=<?php echo $milestone; ?>"  media="print"/>
 
 		<!--Let browser know website is optimized for mobile-->

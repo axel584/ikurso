@@ -105,7 +105,13 @@ Exercices rattachés à une section de leçon.
 | `x2u` | TINYINT(1) NOT NULL | Exercice x2u (double points ?) |
 | `korektebla` | TINYINT(1) NOT NULL | Nécessite une correction manuelle |
 
-**Valeurs de `typo` :** `traduko-1`, `traduko-2`, `traduko-3`, `verkado-1` à `verkado-6`, `stelo-1`, `stelo-2`, `truoj-1`, `truoj-2`, `kompletigu`, `ordigu`, `elektu`
+**Valeurs de `typo` :** `traduko-1`, `traduko-2`, `traduko-3`, `verkado-1` à `verkado-6`, `stelo-1`, `stelo-2`, `truoj-1`, `truoj-2`, `kompletigu`, `ordigu`, `elektu`, `plenigu`, `elektlisto`
+
+Les types `plenigu` et `elektlisto` (#1056) affichent chaque question sur une seule ligne, les champs à l'intérieur de la phrase :
+- `plenigu` : chaque `*` de `demando` devient un petit champ de saisie (« La kato est* granda. ») ;
+- `elektlisto` : chaque `[as/is/os]` de `demando` devient un menu déroulant avec ces choix (« La kato est[as/is/os] granda. »).
+
+La réponse enregistrée dans `respondoj.respondo` est la phrase complète reconstituée (« La kato estas granda. ») : `normaligita` contient donc les phrases attendues, comme pour `stelo-1`.
 
 ---
 

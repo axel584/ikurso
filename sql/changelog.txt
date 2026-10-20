@@ -4521,3 +4521,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- leçon 8 : deux blagues sexistes remplacées en 8.6 (n° 19) et 8.9 (n° 30) (#936) : voir sql/18-lecon8-blagues.sql
 --- cours élémentaire : stéréotypes sexistes (apparence, tâches ménagères) et métiers en -isto traduits aux deux genres (#917) : voir sql/19-cours-elementaire-stereotypes.sql
 --- cours élémentaire : une question par phrase en 3.2, 4.11 et 6.17 pour la correction automatique (#962) : voir sql/20-exercices-une-phrase.sql
+--- exercices : nouveaux types plenigu (champ à la place des *) et elektlisto (menu à la place des [a/b]) (#1056) : voir sql/21-types-plenigu-elektlisto.sql

@@ -180,6 +180,66 @@ $(".nekorektebla").focusout( function () {
   }
 });
 
+// exercices « phrase à trous » (plenigu) et « phrase à menus » (elektlisto), #1056 :
+// la phrase complète est recomposée à partir du texte et des champs, puis enregistrée comme une réponse ordinaire
+function frazoTeksto($frazo) {
+  var teksto = "";
+  $frazo.contents().each(function () {
+    if (this.nodeType === 3) {
+      teksto += this.nodeValue;
+    } else if ($(this).is(".frazo-kampo")) {
+      teksto += $(this).val();
+    } else if (!$(this).is("input[type=hidden], i.frazo-bone")) {
+      teksto += $(this).text();
+    }
+  });
+  return teksto.replace(/[\s\u00a0\u202f]+/g, " ").trim();
+}
+
+$(document).on("input change", ".frazo-kampo", function () {
+  var $frazo = $(this).closest(".frazo");
+  $frazo.find("input[name^=res_]").val(frazoTeksto($frazo));
+  if ($(this).is("input")) {
+    $(this).attr("size", Math.max(2, $(this).val().length + 1));
+  }
+});
+
+// une seule requête à la fois par phrase, sinon une réponse ancienne peut écraser la dernière en base
+function sendiFrazon($frazo) {
+  var respondo = $frazo.find("input[name^=res_]").val();
+  if ($frazo.data("sendata") || respondo === "" || respondo === $frazo.data("sendita")) {
+    return;
+  }
+  var korektebla = $frazo.data("korektebla") === true;
+  $frazo.data("sendata", true).data("sendita", respondo);
+  $.ajax({
+    url : $cheminAbsolu+'ajax/memkorektado.php',
+    type : 'GET',
+    dataType : 'json',
+    data : {ekzercero: $frazo.data("ekzercero"), respondo: respondo, korekteblaEkzerco: korektebla ? "true" : "false"},
+    success : function(reponse) {
+      $frazo.find("i.frazo-bone").remove();
+      if (korektebla && reponse && reponse.mesagxo == "ok") {
+        $frazo.addClass("valid").prepend('<i class="material-icons tiny frazo-bone">check</i>');
+      } else {
+        $frazo.removeClass("valid");
+      }
+    },
+    error : function(request, error) {
+      console.log("request : "+request+" / error : "+error);
+      alert("Erreur interne, contactez les administrateurs");
+    },
+    complete : function() {
+      $frazo.data("sendata", false);
+      sendiFrazon($frazo); // la phrase a pu changer pendant l'envoi
+    }
+  });
+}
+
+$(document).on("change", ".frazo-kampo", function () {
+  sendiFrazon($(this).closest(".frazo"));
+});
+
 $(".qcm_ekzameno input[type='radio']").click( function () {
   console.log("radio : ligne 210");
   $ekzercero = $(this).data('ekzercero');

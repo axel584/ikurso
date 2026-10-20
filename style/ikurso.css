@@ -65,6 +65,17 @@ h1 {font-size: calc(1.5rem + 2.5vw); margin: 2rem 0 1rem 0; color: #989490;}
 h2 {font-size: 2.5rem; color: #989490;}
 /* titre principal de la page, avec l'apparence d'un h2 (référencement, #1077) */
 h1.kiel-h2 {font-size: 2.5rem; line-height: 110%; margin: 2.3733333333rem 0 1.424rem 0; font-weight: 400;}
+
+/* exercices plenigu et elektlisto (#1056) : les champs restent dans la phrase, sur la même ligne */
+.frazo-linio {line-height: 2.2;}
+.frazo .frazo-kampo {display: inline-block; width: auto; height: 1.8rem; margin: 0; padding: 0 .15rem;
+	font: inherit; vertical-align: baseline; color: inherit; background-color: transparent;
+	border: none; border-bottom: 2px solid #9e9e9e; border-radius: 0;}
+.frazo input.frazo-kampo {min-width: 2ch; text-align: center;}
+.frazo select.frazo-kampo {padding-right: 0; cursor: pointer;}
+.frazo .frazo-kampo:focus {outline: none; border-bottom-color: #26a69a;}
+.frazo.valid .frazo-kampo {border-bottom-color: #4caf50;}
+.frazo .frazo-bone {color: #4caf50; vertical-align: middle; margin-right: .2rem;}
 h3 {font-size: 2rem; margin: 2rem 0 1.5rem 0; color: #554E47;}
 h4 {font-size: 1.5rem; margin: 2rem 0 1.5rem 0; color: #554E47;font-weight: 300;}
 
@@ -1343,6 +1354,7 @@ span.bravo {
 	.miajlernantoj .lernanto .plena-nomo,
 	.miajlernantoj .lernanto .etikedo {color: #a8a39e;}
 	.vortlisto.bildetoj .eo {color: inherit;}
+	.frazo select.frazo-kampo option {background-color: #2a2826;}
 	.vortlisto.bildetoj {color: #b5b0ab;}
 	.noto a:hover, .noto a:active {color: #cfcac5;}
 

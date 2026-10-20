@@ -23,7 +23,7 @@ CREATE TABLE ekzercoj (
   `lecionero_id` int(11) NOT NULL,
   `komando_detalo` text,
   `ekzemplo` text,
-  `typo` enum('traduko-1','traduko-2','traduko-3','verkado-1','verkado-2','verkado-3','verkado-4','verkado-5','verkado-6','stelo-1','stelo-2','truoj-1','truoj-2','kompletigu','ordigu','elektu') NOT NULL,
+  `typo` enum('traduko-1','traduko-2','traduko-3','verkado-1','verkado-2','verkado-3','verkado-4','verkado-5','verkado-6','stelo-1','stelo-2','truoj-1','truoj-2','kompletigu','ordigu','elektu','plenigu','elektlisto') NOT NULL,
   `x2u` tinyint(1) NOT NULL,
   `korektebla` tinyint(1) NOT NULL,
   PRIMARY KEY (id)

@@ -6,6 +6,7 @@ export type EkzercoTypo =
   | 'stelo-1' | 'stelo-2'
   | 'truoj-1' | 'truoj-2'
   | 'kompletigu' | 'ordigu' | 'elektu'
+  | 'plenigu' | 'elektlisto'
 
 export interface Ekzerco {
   id: number

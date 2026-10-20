@@ -235,6 +235,92 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 
 
 
+// Exercices « une phrase avec des trous » (#1056) : plenigu (chaque * devient un champ à remplir)
+// et elektlisto (chaque [as/is/os] devient un menu déroulant). Découpe la question en morceaux :
+// array("teksto", "...") pour le texte, array("truo") pour un champ, array("elekto", [choix…]) pour un menu.
+function frazoPartoj($demando, $typo) {
+	$partoj = array();
+	$sxablono = ($typo=="plenigu") ? '/\*/' : '/\[([^\]]+)\]/';
+	$pecoj = preg_split($sxablono, $demando, -1, PREG_SPLIT_DELIM_CAPTURE);
+	foreach ($pecoj as $i => $peco) {
+		if ($typo=="plenigu") {
+			if ($i>0) $partoj[] = array("truo");
+			$partoj[] = array("teksto", $peco);
+		} else if ($i % 2 == 0) {
+			$partoj[] = array("teksto", $peco);
+		} else {
+			$partoj[] = array("elekto", array_map("trim", explode("/", $peco)));
+		}
+	}
+	return $partoj;
+}
+
+// Valeurs des champs retrouvées dans la phrase complète enregistrée (array vide si elle ne correspond pas).
+function frazoValoroj($partoj, $respondo) {
+	$sxablono = "";
+	$kampoj = 0;
+	foreach ($partoj as $parto) {
+		if ($parto[0]=="teksto") {
+			$vortoj = preg_split('/\s+/u', frazoTeksto($parto[1]), -1, PREG_SPLIT_NO_EMPTY);
+			$sxablono .= implode('\s+', array_map(function ($v) { return preg_quote($v, '/'); }, $vortoj));
+		} else {
+			$sxablono .= ($parto[0]=="truo") ? '\s*(.*?)\s*' : '\s*(' . implode('|', array_map(function ($c) { return preg_quote($c, '/'); }, $parto[1])) . '|)\s*';
+			$kampoj++;
+		}
+	}
+	$respondo = frazoTeksto($respondo);
+	if ($respondo=="" || !preg_match('/^\s*' . $sxablono . '\s*$/u', $respondo, $trovoj)) {
+		return array();
+	}
+	return array_slice($trovoj, 1, $kampoj);
+}
+
+// Texte brut d'un morceau de question ou d'une réponse enregistrée : sans balises, entités décodées,
+// espaces insécables remplacées par des espaces (comme le fait le JavaScript qui reconstitue la phrase).
+function frazoTeksto($html) {
+	return str_replace(array("\u{00A0}", "\u{202F}"), " ", html_entity_decode(strip_tags((string)$html), ENT_QUOTES, "UTF-8"));
+}
+
+// Une phrase sur une seule ligne, avec ses champs ou ses menus. La phrase complète part dans un champ
+// caché res_<id>, comme les autres exercices : enregistrement, correction et mail au correcteur sont inchangés.
+function montriFrazon($rowEkzercero, $typo, $respondo, $valid, $korektebla, $x2u, $persono_id, $warningNonConnecte) {
+	$partoj = frazoPartoj($rowEkzercero["demando"], $typo);
+	$valoroj = frazoValoroj($partoj, (string)$respondo);
+	$id = $rowEkzercero["id"];
+	echo "<p class='col s12 demando frazo-linio'>".$rowEkzercero["numero"].". ";
+	echo "<span class='frazo ".$valid."' id=\"res_".$id."\" data-ekzercero='".$id."' data-studanto='".(int)$persono_id."' data-korektebla='".($korektebla ? "true" : "false")."'>";
+	if ($valid=="valid") {
+		echo "<i class=\"material-icons tiny frazo-bone\">check</i>";
+	}
+	$n = 0;
+	foreach ($partoj as $parto) {
+		if ($parto[0]=="teksto") {
+			echo $parto[1];
+			continue;
+		}
+		$valoro = isset($valoroj[$n]) ? $valoroj[$n] : "";
+		$n++;
+		if ($parto[0]=="truo") {
+			echo "<input type='text' class='browser-default truo frazo-kampo' autocomplete='off' spellcheck='false' aria-label='mot à compléter n° ".$n."'";
+			echo " size='".max(2, mb_strlen($valoro)+1)."' value=\"".htmlspecialchars($valoro, ENT_QUOTES, "UTF-8")."\"".$warningNonConnecte;
+			if ($x2u==1) {
+				echo " onkeyup='xAlUtf8(this)'";
+			}
+			echo ">";
+		} else {
+			echo "<select class='browser-default elekto frazo-kampo' aria-label='choix n° ".$n."'".($warningNonConnecte ? " disabled" : "").">";
+			echo "<option value=''>…</option>";
+			foreach ($parto[1] as $elekto) {
+				echo "<option".($elekto===$valoro ? " selected" : "").">".htmlspecialchars($elekto, ENT_QUOTES, "UTF-8")."</option>";
+			}
+			echo "</select>";
+		}
+	}
+	echo "<input type='hidden' name=\"res_".$id."\" value=\"".htmlspecialchars(frazoTeksto($respondo), ENT_QUOTES, "UTF-8")."\">";
+	echo "<input type='hidden' name=\"dem_".$id."\" value=\"\">";
+	echo "</span></p>\n";
+}
+
 function getEkzercon($id,$persono_id,$lingvo="fr") {
 	global $bdd;
 		if ($persono_id=="") {
@@ -309,6 +395,11 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 				$valid="valid";
 				$iconprefix="<i class=\"material-icons prefix\" style=\"color:green\">check</i>";
 			} 
+		}
+		// phrase à trous ou à menus : la question et ses champs tiennent sur une seule ligne
+		if ($rowEkzerco["typo"]=="plenigu" || $rowEkzerco["typo"]=="elektlisto") {
+			montriFrazon($rowEkzercero, $rowEkzerco["typo"], $respondo, $valid, $rowEkzerco["korektebla"]==1, $rowEkzerco["x2u"], $persono_id, $warningNonConnecte);
+			continue;
 		}
 		// Cas des QCM
 		$demando = $rowEkzercero["demando"];

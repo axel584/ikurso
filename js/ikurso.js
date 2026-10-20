@@ -1,4 +1,10 @@
   $(document).ready(function(){
+    // mesure d'audience Matomo : un événement par clic sur les boutons marqués data-spuro (page d'accueil)
+    $('[data-spuro]').on('click', function() {
+      if (window._paq) {
+        window._paq.push(['trackEvent', 'Accueil', 'Clic', $(this).data('spuro')]);
+      }
+    });
 
     // méthode pour afficher la popup modale pour choisir un nouveau mot de passe si l'url contient novigiPasvorton
     $url = window.location.href;

@@ -1069,6 +1069,11 @@ span.ikurso {
 
 .dialogo p {
 }
+/* page d'accueil : informations pratiques sur les cours */
+ul.kursinformoj {margin: 0 0 1rem;}
+ul.kursinformoj li {display: flex; gap: .5rem; align-items: flex-start; margin-bottom: .35rem;}
+ul.kursinformoj li i {margin-top: .2rem; color: #2196F3; flex-shrink: 0;}
+
 /*********************************/
 /*        page Mes élèves        */
 /*********************************/

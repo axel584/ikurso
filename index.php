@@ -38,9 +38,9 @@ include "pagxkapo.inc.php";
 					<h2>Bienvenue sur <span class="ikurso">iKurso</span></h2>
 					<p>Ici, vous pourrez découvrir ce qu’est la <b>langue internationale Espéranto</b>.<br> 
 						Vous pourrez également l’apprendre en suivant nos cours, à votre rythme.<br>
-						<p class="center"><a href="<?=$vojo?>fr/cge/lec01.php" class="btn waves-effect waves-light blue">Commencer le cours débutant</a></p>
+						<p class="center"><a href="<?=$vojo?>fr/cge/lec01.php" class="btn waves-effect waves-light blue" data-spuro="commencer-cours-debutant">Commencer le cours débutant</a></p>
 						Pour mieux vous aider, l’association Espéranto-France vous propose un <b>service de correction gratuit</b>. Pour en bénéficier, il suffit de vous inscrire.</p>
-						<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-target="aligxi">s'inscrire gratuitement</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-target="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
+						<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-target="aligxi" data-spuro="sinscrire-gratuitement">s'inscrire gratuitement</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-target="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
 						<p class="center"><a href="#prezento" class="btn-flat small">L’espéranto, qu’est-ce que c’est ?<i class="material-icons right">arrow_drop_down</i></a></p>
 				</div>
 			</div>
@@ -53,13 +53,25 @@ include "pagxkapo.inc.php";
 					<div class="col s12 m5 offset-m1">
 						<h5>Cours en 10 leçons</h5>
 						<p>Cours d’espéranto pour débutants. À suivre avec l’aide d'un correcteur ou en totale autonomie.</p>
-						<p><a href="<?=$vojo?>fr/cge/lec01.php" class="btn waves-effect waves-light blue">voir le cours</a></p>
+						<ul class="kursinformoj">
+							<li><i class="material-icons tiny">event_available</i>Accessible toute l’année&nbsp;: vous commencez quand vous voulez.</li>
+							<li><i class="material-icons tiny">schedule</i>Une heure et demie à deux heures de travail par leçon. Les élèves qui vont jusqu’au bout y passent en général deux mois.</li>
+							<li><i class="material-icons tiny">volunteer_activism</i>Gratuit, avec un correcteur bénévole si vous le souhaitez.</li>
+							<li><i class="material-icons tiny">menu_book</i>Texte du domaine public.</li>
+						</ul>
+						<p><a href="<?=$vojo?>fr/cge/lec01.php" class="btn waves-effect waves-light blue" data-spuro="voir-cours-debutant">voir le cours</a></p>
 					</div>
 						
 					<div class="col s12 m5 offset-m1">
 						<h5>Gerda malaperis</h5>
 						<p>Pour ceux qui connaissent déjà les bases de l’espéranto, par exemple après le cours en 10 leçons. </p>
-						<p><a href="<?=$vojo?>fr/gerda/cxap01.php" class="btn waves-effect waves-light blue">voir le cours</a></p>
+						<ul class="kursinformoj">
+							<li><i class="material-icons tiny">event_available</i>Accessible toute l’année&nbsp;: vous commencez quand vous voulez.</li>
+							<li><i class="material-icons tiny">schedule</i>25 chapitres d’une heure environ, puis un examen de niveau A2. Les élèves qui vont jusqu’au bout y passent en général six mois.</li>
+							<li><i class="material-icons tiny">volunteer_activism</i>Gratuit, avec un correcteur bénévole si vous le souhaitez.</li>
+							<li><i class="material-icons tiny">menu_book</i>Roman de Claude Piron, diffusé pour un usage non commercial.</li>
+						</ul>
+						<p><a href="<?=$vojo?>fr/gerda/cxap01.php" class="btn waves-effect waves-light blue" data-spuro="voir-cours-gerda">voir le cours</a></p>
 					</div>
 						
 				</div>
@@ -189,7 +201,7 @@ include "pagxkapo.inc.php";
 						<div class="card-panel blue lighten-5 center">
 							<h5>Je veux apprendre l’espéranto&nbsp;!</h5>
 							<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression<br>et demander l’aide d’un correcteur.<br>C’est gratuit !</p>
-							<p><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-target="aligxi">créer un compte</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-target="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
+							<p><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-target="aligxi" data-spuro="creer-compte">créer un compte</a>&nbsp;<a href="#tuto-inscription" class="modal-trigger tooltipped" data-position="top" data-delay="50" data-tooltip="voir la vidéo de présentation" data-target="tuto-inscription"><i class="material-icons blue-text">help_outline</i></a></p>
 						</div>
 					</div>
 				</div>

@@ -1,15 +1,15 @@
 <?php
 include "util.php";
 $id=isset($_REQUEST["id"])?$_REQUEST["id"]:"";
-if (!is_numeric($id)) {
-	$response = "Identifiant invalide :".$id;
+if (!ctype_digit((string)$id)) {
+	$response = "Identifiant invalide";
 } else {
 	$persono = apartigiPersonon($id);
 	if (!$persono) {
 		$response = "Identifiant introuvable";
 	} else {
-		$query = "update personoj set stop_rappel='J' where id=".$id;
-		$bdd->exec($query);
+		$stmt = $bdd->prepare("update personoj set stop_rappel='J' where id=?");
+		$stmt->execute(array((int)$id));
 		protokolo($persono["id"],"RAPPEL MAIL OFF",$persono["enirnomo"]." a désactivé ses rappels de mail");
 		$response = "Les messages de rappel ont été désactivés.";
 	}
@@ -23,7 +23,7 @@ if (!is_numeric($id)) {
 </head>
 <body class="popup">
 <div>
-<?=$response?><br/>
+<?=htmlspecialchars($response, ENT_QUOTES, "UTF-8")?><br/>
 </div>
 </body>
 </html>

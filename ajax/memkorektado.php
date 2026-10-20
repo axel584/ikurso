@@ -1,11 +1,12 @@
 <?php
 include "../util.php";
 $ekzercero_id=isset($_GET["ekzercero"])?$_GET["ekzercero"]:"";
-$studanto=isset($_GET["studanto"])?$_GET["studanto"]:"";
+// la réponse est enregistrée pour l'élève connecté, jamais pour un identifiant reçu dans l'URL
+$studanto=isset($_SESSION["persono_id"])?(int)$_SESSION["persono_id"]:0;
 $lernantaRespondo=isset($_GET["respondo"])?htmlspecialchars($_GET["respondo"]):"";
 $korekteblaEkzerco=isset($_GET["korekteblaEkzerco"])?$_GET["korekteblaEkzerco"]=="true":false;
 
-if ($lernantaRespondo=="") {
+if ($lernantaRespondo=="" || $studanto==0) {
 	echo json_encode(null);
 	exit;
 }

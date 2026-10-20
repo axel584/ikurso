@@ -1,6 +1,13 @@
 <?php
 include "../util.php";
-$persono_id=isset($_GET["studanto_id"])?$_GET["studanto_id"]:"";
+$korektanto_id=isset($_SESSION["persono_id"])?(int)$_SESSION["persono_id"]:0;
+$korektanto=$korektanto_id ? apartigiPersonon($korektanto_id) : false;
+if (!$korektanto || ($korektanto["rajtoj"]!='A' && $korektanto["rajtoj"]!='K')) {
+	http_response_code(403);
+	echo json_encode(array("type"=>"rajto","mesagxo"=>"Accès réservé aux correcteurs"));
+	exit();
+}
+$persono_id=isset($_GET["studanto_id"])?(int)$_GET["studanto_id"]:0;
 $lecionero_id=isset($_GET["lecionero_id"])?$_GET["lecionero_id"]:"";
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
 $leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
@@ -9,9 +16,10 @@ $expediteurIkurso = isset($_GET["expediteur_ikurso"])?$_GET["expediteur_ikurso"]
 // Attention, beaucoup de code en commun avec sendiLecionon.php
 
 // vérifier si l'élève a déjà un correcteur pour ce cours :
-$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where nuna_kurso.kurso=? and studanto=?";
+// un correcteur ne renvoie que les leçons de ses propres élèves
+$query = "select * from nuna_kurso join personoj on personoj.id=nuna_kurso.korektanto where nuna_kurso.kurso=? and studanto=? and (nuna_kurso.korektanto=? or ?)";
 $stmt = $bdd->prepare($query);
-$stmt->execute([$kurso, $persono_id]);
+$stmt->execute([$kurso, $persono_id, $korektanto_id, $korektanto["rajtoj"]=='A' ? 1 : 0]);
 $result = $stmt;
 $row = $result->fetch();
 if (!$row) {

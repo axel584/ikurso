@@ -52,15 +52,15 @@ if (checkEmail($_POST['sendinto'])) {
 					<div class="row">	
 						<div class="input-field col s12">
 							Votre adresse &eacute;lectronique :</td>
-							<input name="sendinto" size="50" value="<?php echo $_POST['sendinto'];?>">
+							<input name="sendinto" size="50" value="<?php echo htmlspecialchars($_POST['sendinto'], ENT_QUOTES, 'UTF-8');?>">
 						</div>
 						<div class="input-field col s12">
 							Sujet de votre message : 
-							<input name="temo" size="50" value="<?php echo stripSlashes($_POST['temo']);?>">
+							<input name="temo" size="50" value="<?php echo htmlspecialchars(stripSlashes($_POST['temo']), ENT_QUOTES, 'UTF-8');?>">
 						</div>
 						<div class="input-field col s12">
 							Commentaires / Komentoj / Comments  :
-							<textarea name="komento" class="materialize-textarea"><?php echo stripSlashes($_POST['komento']);?></textarea>
+							<textarea name="komento" class="materialize-textarea"><?php echo htmlspecialchars(stripSlashes($_POST['komento']), ENT_QUOTES, 'UTF-8');?></textarea>
 						</div>
 						<div class='atentigo sukceso'><p class="eraro">Votre message a &eacute;t&eacute; envoy&eacute; aux administrateurs du cours.</p></div>
 					</div>	

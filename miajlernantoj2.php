@@ -1,92 +1,62 @@
 <?php
-require("db.inc.php");
 include "util.php";
-malfermidatumbazon();
-$leciono=$_POST["leciono"];
-$nunleciono=$_POST["nunleciono"];
-$rezultoj=explode("-", $leciono);
+$persono_id=isset($_SESSION["persono_id"])?(int)$_SESSION["persono_id"]:0;
+if ($persono_id==0) {header("Location:index.php?erarkodo=8"); exit;}
+$persono = apartigiPersonon($persono_id);
+if (!$persono || ($persono["rajtoj"]!='A' && $persono["rajtoj"]!='K')) {header("Location:index.php?erarkodo=4"); exit;}
+if ($_SERVER["REQUEST_METHOD"]!="POST") {header("Location:miajlernantoj.php"); exit;}
+
+// leciono vaut "<id de nuna_kurso>-<nouvel état>" : numéro de leçon, N (pas commencé), F (fini) ou H (abandon)
+$rezultoj=explode("-", isset($_POST["leciono"])?$_POST["leciono"]:"", 2);
+$nunaKurso_id=(int)$rezultoj[0];
+$nova=isset($rezultoj[1])?$rezultoj[1]:"";
+if (!in_array($nova, array("N","F","H"), true) && !ctype_digit($nova)) {header("Location:miajlernantoj.php"); exit;}
+
+// un correcteur ne modifie que ses propres élèves
+$stmt = $bdd->prepare("select stato,nunleciono,korektanto from nuna_kurso where id=?");
+$stmt->execute(array($nunaKurso_id));
+$row = $stmt->fetch();
+if (!$row || ($persono["rajtoj"]!='A' && (int)$row["korektanto"]!=$persono_id)) {header("Location:index.php?erarkodo=4"); exit;}
 
 //sxangxi lastan lecionon por iu lernanto
-$query="select stato,nunleciono from nuna_kurso where id=".$rezultoj[0];
-$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
-$row = $result->fetch();
-// se la nunleciono sxangxis (rezultoj 2), ni devus updati la datumbazon
-if ($rezultoj[1]!='F' and $rezultoj[1]!='H' and $rezultoj[1]!='N' and $rezultoj[1]!=$row["nunleciono"]) {
-	$query = "update nuna_kurso set nunleciono=".$rezultoj[1].",stato='K',lastdato=CURDATE() where id=".$rezultoj[0]." and (stato='N' or stato='K')";
-	$result = $bdd->exec($query);
+if (ctype_digit($nova) && $nova!=$row["nunleciono"]) {
+	$stmt = $bdd->prepare("update nuna_kurso set nunleciono=?,stato='K',lastdato=CURDATE() where id=? and (stato='N' or stato='K')");
+	$stmt->execute(array((int)$nova, $nunaKurso_id));
 }
 // se la nova stato estas F(inita), sed la malnova ne estis F, ni updatas ! :-)
-if ($rezultoj[1]=='F' and $row["stato"]!='F') {
-	$query = "update nuna_kurso set stato='F',findato=CURDATE(),lastdato=CURDATE() where id=".$rezultoj[0]." and (stato='N' or stato='K')";
-	$result = $bdd->exec($query);
+if ($nova=='F' and $row["stato"]!='F') {
+	$stmt = $bdd->prepare("update nuna_kurso set stato='F',findato=CURDATE(),lastdato=CURDATE() where id=? and (stato='N' or stato='K')");
+	$stmt->execute(array($nunaKurso_id));
+	//prenu cxiujn informojn pri la studanto, lia kurso kaj lia korektanto
+	$stmt = $bdd->prepare("select s.*, k.nomo as kursnomo, k.kodo, ko.enirnomo as korektanto_nomo
+		from nuna_kurso nk join personoj s on s.id=nk.studanto join kursoj k on k.kodo=nk.kurso join personoj ko on ko.id=nk.korektanto
+		where nk.id=?");
+	$stmt->execute(array($nunaKurso_id));
+	$studanto=$stmt->fetch();
 	// tiam ni sendas retmesagxon al la informistoj
 	$filename = "mails/finiInfFR.html";
-	if (file_exists($filename)) { 
-		$fd = fopen($filename, "r");
-		$contents = fread($fd, filesize ($filename));
-		fclose($fd);
+	if ($studanto && file_exists($filename)) {
+		$contents = file_get_contents($filename);
 		//prenu la liston de cxiuj informistoj
-		$demando="select retadreso from personoj where rajtoj='I'";
-		$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-		$row=$result->fetch();
-		$informistoj=$row["retadreso"]; 
-		while ($row=$result->fetch()) {
-		      $informistoj=$informistoj.",".$row["retadreso"];
+		$informistoj = implode(",", $bdd->query("select retadreso from personoj where rajtoj='I'")->fetchAll(PDO::FETCH_COLUMN));
+		foreach (array("ENIRNOMO"=>"enirnomo","NASKIGXDATO"=>"naskigxdato","PERSONNOMO"=>"personnomo","FAMILINOMO"=>"familinomo","SEKSO"=>"sekso",
+				"RETADRESO"=>"retadreso","ADRESO1"=>"adreso1","ADRESO2"=>"adreso2","LANDO"=>"lando","POSXTKODO"=>"posxtkodo","URBO"=>"urbo",
+				"KURSO"=>"kursnomo","KOREKTANTO"=>"korektanto_nomo") as $sxlosilo=>$kampo) {
+			$contents=str_replace("##".$sxlosilo."##",htmlspecialchars((string)$studanto[$kampo], ENT_QUOTES, "UTF-8"),$contents);
 		}
+		if ($informistoj!="") mailViaSES($informistoj,"un esperantiste de plus !",$contents);
 	}
-	//prenu cxiujn informojn pri la studanto.
-	$demando="select * from personoj,nuna_kurso where nuna_kurso.id=".$rezultoj[0]." and personoj.id=nuna_kurso.studanto";
-	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-	$row=$result->fetch();
-	// on stocke le enirnomo et la retadreso de l'élève pour lui envoyer un mail :
-	$enirnomo = $row["enirnomo"];
-	$retadreso = $row["retadreso"];
-	// on rempli le mail à destination des informateurs
-	$contents=str_replace("##ENIRNOMO##",$row["enirnomo"],$contents);
-	$contents=str_replace("##NASKIGXDATO##",$row["naskigxdato"],$contents);
-	$contents=str_replace("##PERSONNOMO##",$row["personnomo"],$contents);
-	$contents=str_replace("##FAMILINOMO##",$row["familinomo"],$contents);
-	$contents=str_replace("##SEKSO##",$row["sekso"],$contents);
-	$contents=str_replace("##RETADRESO##",$row["retadreso"],$contents);
-	$contents=str_replace("##ADRESO1##",$row["adreso1"],$contents);
-	$contents=str_replace("##ADRESO2##",$row["adreso2"],$contents);
-	$contents=str_replace("##LANDO##",$row["lando"],$contents);
-	$contents=str_replace("##POSXTKODO##",$row["posxtkodo"],$contents);
-	$contents=str_replace("##URBO##",$row["urbo"],$contents);
-	//prenu nomon de lia kurso :
-	$demando="select kursoj.nomo,kursoj.kodo from kursoj,nuna_kurso where kursoj.kodo=nuna_kurso.kurso and nuna_kurso.id=".$rezultoj[0]."";
-	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-	$row=$result->fetch();
-	// on stocke le code du cours pour envoyer un message à l'élève
-	$kurso = strtoupper($row["kodo"]);
-	$contents=str_replace("##KURSO##",$row["nomo"],$contents);
-	//prenu nomon de lia korektanto
-	$demando="select personoj.enirnomo from personoj,nuna_kurso where personoj.id=nuna_kurso.korektanto and nuna_kurso.id=".$rezultoj[0];
-	$result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
-	$row=$result->fetch();
-	$contents=str_replace("##KOREKTANTO##",$row["enirnomo"],$contents);
-	
-	// envoyer le mail aux informateurs
-	//$informistoj="emmanuelle@esperanto-jeunes.org";
-	//mailViaSmtp($informistoj,"ikurso@esperanto-france.org","un esperantiste de plus !",$contents);
-	mailViaSES($informistoj,"un esperantiste de plus !",$contents);
-
-
-	// et on envoit aussi un mail à l'élève
-	$filename = "mails/finiStu".$kurso.".html";
-	$fd = fopen($filename, "r");
-	$contents = fread($fd, filesize ($filename));
-	fclose($fd);
-	$contents=str_replace("##ENIRNOMO##",$enirnomo,$contents);
-	//mailViaSmtp($retadreso,"ikurso@esperanto-france.org","Félicitations !",$contents);
-	mailViaSES($retadreso,"Félicitations !",$contents);
-
-
+	// et on envoie aussi un mail à l'élève (le code du cours vient de la base : on ne garde que des lettres)
+	$filename = "mails/finiStu".preg_replace('/[^A-Z]/', '', strtoupper((string)$studanto["kodo"])).".html";
+	if ($studanto && file_exists($filename)) {
+		$contents=str_replace("##ENIRNOMO##",htmlspecialchars($studanto["enirnomo"], ENT_QUOTES, "UTF-8"),file_get_contents($filename));
+		mailViaSES($studanto["retadreso"],"Félicitations !",$contents);
+	}
 }
 // se la nova stato estas H(altita), sed la malnova ne estis H, ni updatas ! :-)
-if ($rezultoj[1]=='H' and $row["stato"]!='H') {
-	$query = "update nuna_kurso set stato='H',findato=CURDATE(),lastdato=CURDATE() where id=".$rezultoj[0]." and (stato='N' or stato='K')";
-	$result = $bdd->exec($query);
+if ($nova=='H' and $row["stato"]!='H') {
+	$stmt = $bdd->prepare("update nuna_kurso set stato='H',findato=CURDATE(),lastdato=CURDATE() where id=? and (stato='N' or stato='K')");
+	$stmt->execute(array($nunaKurso_id));
 }
 header("Location:miajlernantoj.php"); exit;
-?>                    
+?>

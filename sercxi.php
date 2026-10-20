@@ -21,27 +21,18 @@ header("Pragma: no-cache"); // HTTP/1.0
 function listiSercxadon($personnomo,$familinomo,$celenirnomo,$retadreso,$urbo,$posxtkodo) {
     global $persono_id,$idnoto,$bdd;
 	$wheresql="1=1";
-	if ($personnomo!="") {
-		$wheresql=$wheresql." and personnomo like '%".trim($personnomo)."%'";
-	}
-	if ($familinomo!="") {
-		$wheresql=$wheresql." and familinomo like '%".trim($familinomo)."%'";
-	}
-	if ($celenirnomo!="") {
-		$wheresql=$wheresql." and enirnomo like '%".trim($celenirnomo)."%'";
-	}
-	if ($retadreso!="") {
-		$wheresql=$wheresql." and retadreso like '%".trim($retadreso)."%'";
-	}
-	if ($urbo!="") {
-		$wheresql=$wheresql." and urbo like '%".trim($urbo)."%'";
-	}
-	if ($posxtkodo!="") {
-		$wheresql=$wheresql." and posxtkodo like '".trim($posxtkodo)."%'";
+	$parametroj=array();
+	// posxtkodo est cherché en début de chaîne, les autres champs n'importe où
+	foreach (array("personnomo"=>$personnomo,"familinomo"=>$familinomo,"enirnomo"=>$celenirnomo,"retadreso"=>$retadreso,"urbo"=>$urbo,"posxtkodo"=>$posxtkodo) as $kampo=>$valoro) {
+		if (trim($valoro)!="") {
+			$wheresql.=" and ".$kampo." like ?";
+			$parametroj[]=($kampo=="posxtkodo" ? "" : "%").trim($valoro)."%";
+		}
 	}
 	echo "<table>";
 	$query="select * from personoj where ".$wheresql;
-	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
+	$result = $bdd->prepare($query);
+	$result->execute($parametroj);
 
 	$nbResultat=0;
 	while($row = $result->fetch()) {

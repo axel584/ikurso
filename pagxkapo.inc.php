@@ -145,6 +145,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 						<span id="eniri_pasvorto_helper" class="helper-text"></span>
 					</div>
 				</form>
+				<p>Pas encore de compte&nbsp;? <a href="#aligxi" class="modal-trigger modal-close" data-target="aligxi">Créer un compte gratuitement</a></p>
 				</div>
 				<div id="konektigxi_parto2" class="hide">
 					<p class="chapo">Le message a bien été renvoyé !</p>

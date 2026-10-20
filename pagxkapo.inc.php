@@ -136,7 +136,7 @@ if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = a
 				<form>
 				    <div class="input-field">
 				      <input id="eniri_identigilo" type="text" class="validate" required="" aria-required="true">
-				      <label for="eniri_identigilo">identifiant</label>
+				      <label for="eniri_identigilo">identifiant ou adresse e-mail</label>
 				      <span id="eniri_identigilo_helper" class="helper-text"></span>
 				    </div>
 					<div class="input-field">

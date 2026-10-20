@@ -1,6 +1,7 @@
 <?php
 include "../util.php";
 include "../config.php";
+require_once __DIR__ . "/../api/EnirAPI.php";
 
 $identigilo=isset($_POST['identigilo'])?$_POST['identigilo']:"";
 $pasvorto=isset($_POST['pasvorto'])?stripslashes($_POST['pasvorto']):"";
@@ -11,10 +12,10 @@ $pasvorto=isset($_POST['pasvorto'])?stripslashes($_POST['pasvorto']):"";
 
 $respondo = array();
 
-$stmt = $bdd->prepare("select id,aktivigita,pasvorto_md5,enirnomo,rajtoj from personoj where enirnomo=?");
-$stmt->execute(array($identigilo));
-if (!$row = $stmt->fetch()) { // aucune ligne retournée
-	$respondo["mesagxo"]="Identifiant introuvable, cliquez sur le bouton S'INSCRIRE GRATUITEMENT";
+// on accepte l'identifiant ou l'adresse e-mail
+$row = (new EnirAPI($bdd))->trovi($identigilo, $pasvorto);
+if (!$row) {
+	$respondo["mesagxo"]="Identifiant ou adresse e-mail introuvable, cliquez sur le bouton S'INSCRIRE GRATUITEMENT";
 	$respondo["type"]="identigilo";
 }
 else {
@@ -31,7 +32,7 @@ else {
 			session_regenerate_id(true);
 			$_SESSION["persono_id"]=$row["id"];
 			// on loggue tout ça :
-			protokolo($row["id"],"ENIRO","$identigilo eniris");
+			protokolo($row["id"],"ENIRO",$row["enirnomo"]." eniris");
 			updateLastEniro($row["id"]);
 			// trouver l'url où l'on doit atterir
 			$respondo["url"]=getRedirectionParDroits($row["id"]);

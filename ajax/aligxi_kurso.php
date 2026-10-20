@@ -18,6 +18,13 @@ if ($identigilo=="") {
 	exit();
 }
 
+if (strpos($identigilo, "@") !== false) {
+	$respondo["type"]="identigilo";
+	$respondo["mesagxo"]="Merci de choisir un identifiant qui ne soit pas un e-mail car il serait visible par les autres élèves";
+	echo json_encode($respondo);
+	exit();
+}
+
 
 if ($pasvorto=="") {
 	$respondo["type"]="pasvorto";

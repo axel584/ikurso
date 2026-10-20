@@ -2,6 +2,7 @@
 // AuthentificationAPI.php - Classe pour gérer l'API d'authentification
 
 require_once __DIR__ . '/JWTAuth.php';
+require_once __DIR__ . '/EnirAPI.php';
 
 class AuthentificationAPI {
     private $conn;
@@ -68,12 +69,11 @@ class AuthentificationAPI {
         $respondo = array();
         
         try {
-            $stmt = $this->conn->prepare("SELECT id, aktivigita, pasvorto_md5, enirnomo, rajtoj, retadreso, personnomo, familinomo FROM personoj WHERE enirnomo = ?");
-            $stmt->execute([$identigilo]);
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            // identifiant ou adresse e-mail
+            $row = (new EnirAPI($this->conn))->trovi($identigilo, $pasvorto);
             
             if (!$row) {
-                $this->sendError(401, "Identifiant introuvable");
+                $this->sendError(401, "Identifiant ou adresse e-mail introuvable");
                 return;
             }
             
@@ -95,7 +95,7 @@ class AuthentificationAPI {
             JWTAuth::setCookie($jwt);
             
             // Log de connexion
-            $this->protokolo($row["id"], "ENIRO", $identigilo . " eniris via API");
+            $this->protokolo($row["id"], "ENIRO", $row["enirnomo"] . " eniris via API");
             $this->updateLastEniro($row["id"]);
             
             // Réponse

@@ -1,11 +1,14 @@
 <?php
 include "../util.php";
+require_once __DIR__ . "/../api/EnirAPI.php";
 $identigilo=isset($_GET['identigilo'])?$_GET['identigilo']:"";
 
 // On vérifie si l'utilisateur n'a pas "changé" son identifiant après avoir cliqué sur le lien
 $query = "select id,aktivigita,pasvorto_md5,aktivigo,retadreso from personoj where enirnomo=?";
 $stmt = $bdd->prepare($query);
-$stmt->execute([$identigilo]);
+// la personne a pu saisir son adresse e-mail plutôt que son identifiant (#516)
+$persono = (new EnirAPI($bdd))->trovi($identigilo, "");
+$stmt->execute([$persono ? $persono["enirnomo"] : ""]);
 $result = $stmt;
 if (!$row = $result->fetch()) { // aucune ligne retournée
 	$respondo["mesagxo"]="Arrêtez de faire l'andouille, ça va pas nous aider !";

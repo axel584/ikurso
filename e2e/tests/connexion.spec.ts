@@ -11,6 +11,12 @@ test.describe('Connexion', () => {
     await expect(page).toHaveURL(/fr\/cge\/lec01\.php/)
   })
 
+  test("un élève peut se connecter avec son adresse e-mail (#516)", async ({ page }) => {
+    // la casse de l'adresse ne compte pas
+    await login(page, { login: 'Lernanto1@Mailinator.com', password: USERS.lernanto.password })
+    await expect(page).toHaveURL(/fr\/cge\/lec01\.php/)
+  })
+
   test('un correcteur arrive sur la liste de ses élèves', async ({ page }) => {
     await login(page, USERS.korektanto)
     await expect(page).toHaveURL(/miajlernantoj\.php/)

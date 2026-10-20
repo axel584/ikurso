@@ -266,7 +266,7 @@ $( "#serchi_protokolon_button").click(function() {
        		url : $cheminAbsolu+'ajax/eniri.php',
        		type : 'POST',
        		dataType : 'json',
-       		data : 'identigilo='+$( "#eniri_identigilo" ).val()+"&pasvorto="+encodeURIComponent($( "#eniri_pasvorto" ).val()),
+       		data : 'identigilo='+encodeURIComponent($( "#eniri_identigilo" ).val())+"&pasvorto="+encodeURIComponent($( "#eniri_pasvorto" ).val()),
        		success : function(reponse, statut){ 
            		if (reponse.mesagxo!="ok") {
            			if (reponse.type=="identigilo") {
@@ -427,7 +427,7 @@ $("#sendi_denove_aktivigilo_button").click(function () {
           url : $cheminAbsolu+'ajax/sendiDenoveAktivigilon.php',
           type : 'GET',
           dataType : 'json',
-          data : 'identigilo='+$( "#eniri_identigilo" ).val(),
+          data : 'identigilo='+encodeURIComponent($( "#eniri_identigilo" ).val()),
           success : function(reponse, statut){ 
               if (reponse.mesagxo!="ok") {
                  $("#eniri_identigilo_helper").attr('data-error',reponse.mesagxo);

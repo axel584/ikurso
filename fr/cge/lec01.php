@@ -548,7 +548,7 @@ include "dlekkapo.inc.php";
 	);
 				?>
 			</div>
-			<div class="nurprinto">
+			<div class="onlyprint">
 				<p class="parto">Cet exercice est basé sur la compréhension d’une vidéo. Si vous souhaitez faire cet exercice, 
 					veuillez vous reporter au site internet, à la page https://ikurso.fr/fr/cge/lec01.php?section=8
 				</p>
@@ -764,7 +764,7 @@ include "dlekkapo.inc.php";
 	);
 				?>
 			</div>
-			<div class="nurprinto">
+			<div class="onlyprint">
 				<p>Cette section contient un QCM à faire en ligne sur la page https://ikurso.fr/fr/cge/lec01.php?section=12</p>
 			</div>
 			<?php 

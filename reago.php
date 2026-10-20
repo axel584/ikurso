@@ -34,7 +34,7 @@ include "pagxkapo.inc.php";
 			
 		<p>Avant de poser votre question&nbsp;: n’hésitez pas à lire les <a href="<?php echo $vojo ?>helpo.php">pages d'aide</a>.
 		<?php if (($persono["rajtoj"]=="K")||($persono["rajtoj"]=="A")) {	?>
-			et le <a href="<?php echo $vojo ?>helppagxo.php">Guide du correcteur</a>.
+			et le <a href="<?php echo $vojo ?>gvidilo.php">Guide du correcteur</a>.
 		<?php } ?>
 		
 		Votre réponse y figure peut-être déjà&nbsp;!

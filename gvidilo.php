@@ -141,6 +141,11 @@ $titolo = $row["titolo"];
 			
 			<p class="parto">Les nouveaux élèves sont attribués en priorité aux correcteurs habitant dans le même département (en France) ou dans le même pays (dans les autres pays), puis en priorité aux correcteurs les moins «&nbsp;occupés&nbsp;». </p>
 			<p>Par exemple, si un correcteur accepte 4 élèves et en a déjà 3, sa charge est de 75%. Si un correcteur accepte 10 élèves et en a déjà 6, sa charge est de 60%. C’est donc le deuxième correcteur qui recevra le prochain élève qui s’inscrit même si, dans l’absolu, il a plus d’élèves que le premier.</p>
+			<p>Le nombre que vous indiquez est donc un maximum, qui est rarement atteint&nbsp;: les nouveaux élèves sont répartis entre tous les correcteurs disponibles. 
+				Par exemple, s’il y a 100 élèves en cours et que les correcteurs acceptent au total 200 élèves, chaque correcteur ne recevra en moyenne 
+				qu’environ la moitié du nombre d’élèves qu’il a indiqué.</p>
+			<p>Si vous souhaitez vraiment suivre 3 élèves, il est donc préférable d’en indiquer un peu plus. 
+				Et si vous trouvez que vous n’avez pas assez d’élèves, vous pouvez augmenter temporairement ce nombre.</p>
 			<p class="noto"><strong>Remarques :</strong></p>
 			<p class="noto">Les élèves étant attribués en fonction de la proximité géographique, nous vous recommandons 
 				d’indiquer votre code postal sur votre page 
@@ -377,6 +382,7 @@ $titolo = $row["titolo"];
 				
 			<img src="<?=$vojo?>bildoj/gvidilo/onglet-anciens-eleves.jpg" alt="anciens élèves" class="responsive-img">
 
+			<h4 id="recuperer" class="scrollspy">Comment récupérer un élève qui avait abandonné&nbsp;?</h4>
 			<p>Dans cette liste, vous trouverez tous vos élèves qui ont soit fini le cours, soit «&nbsp;abandonné&nbsp;». 
 				Si un ancien élève qui avait abandonné vous informe de son souhait de rependre, il vous suffit d’aller dans cette liste, 
 				et de cliquer sur le bouton <strong>Récupérer l’élève</strong> :</p>
@@ -388,6 +394,15 @@ $titolo = $row["titolo"];
 			<p class="noto"><strong>Remarque</strong> : il est possible dans ce cas que votre nombre effectif d’élèves soit supérieur au nombre maximal 
 				d’élèves. Si vous ne pouvez pas suivre cet élève en plus, n’hésitez pas à <a href="reago.php">contacter les administrateurs</a> pour qu’un 
 				autre correcteur puisse prendre le relais.</p>
+
+			<h3 id="vacances" class="scrollspy">Que faire si je pars en vacances ou si je veux arrêter de corriger&nbsp;?</h3>
+
+			<p class="parto">Si vous partez en vacances ou si vous souhaitez faire une pause, indiquez 0 comme nombre maximal d’élèves 
+				pour chaque cours (voir <a href="#comment">Comment avoir de nouveaux élèves&nbsp;?</a>). 
+				Vous ne recevrez plus de nouveaux élèves, mais vous garderez ceux que vous suivez déjà.</p>
+			<p>Pensez à prévenir vos élèves de votre absence, pour qu’ils ne s’inquiètent pas de ne pas recevoir leur correction.</p>
+			<p>Si vous souhaitez arrêter de corriger, ou en cas d’imprévu (maladie, accident…), n’hésitez pas à 
+				<a href="reago.php">prévenir les administrateurs</a>&nbsp;: ils pourront confier vos élèves en cours à d’autres correcteurs.</p>
 
 			<h3 id="demandoj" class="scrollspy">Si vous avez d’autres questions…</h3>
 
@@ -451,8 +466,12 @@ $titolo = $row["titolo"];
 								<li><a href="#maj">Comment mettre à jour les informations concernant mes élèves&nbsp;?</a></li>
 								<li><a href="#arret">Que faire si l’élève n’étudie plus&nbsp;?</a></li>
 								<li><a href="#abandon">Que faire si un élève ne répond pas aux relances&nbsp;?</a></li>
+								<li><a href="#recuperer">Comment récupérer un élève qui avait abandonné&nbsp;?</a></li>
+								<li><a href="#vacances">Que faire si je pars en vacances ou si je veux arrêter de corriger&nbsp;?</a></li>
 							</ul>
 						</div>
+					</li>
+					<li>
 						<div class="collapsible-header">Autres questions</div>
 						<div class="collapsible-body">
 							<ul class="collection enhavtabelo">

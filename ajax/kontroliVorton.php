@@ -70,7 +70,7 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 	$query2 = "update personoj_vortoj set nombrilo=nombrilo+1, venontaFojo=DATE_ADD(NOW(),INTERVAL ? DAY),lastfojo=now() where vorto_id=? and persono_id=?";
 	$stmt2 = $bdd->prepare($query2);
 	$stmt2->execute([getInterval($nombrilo), $vorto_id, $persono_id]);
-	memoriRespondon($persono_id,$vorto_id,"TRUE",$lernantaRespondo);
+	memoriRespondon($persono_id,$vorto_id,1,$lernantaRespondo);
 	$respondo["mesagxo"] = "ok";
 	echo json_encode($respondo);
 	exit();
@@ -91,7 +91,7 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 		$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b>".$bonaRespondo."</b>";
 	} else {
 		$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b>".$bonaRespondo."</b> (et pas&nbsp;<strike>".$lernantaRespondo."</strike>)";
-		memoriRespondon($persono_id,$vorto_id,"FALSE",$lernantaRespondo);
+		memoriRespondon($persono_id,$vorto_id,0,$lernantaRespondo);
 	}
 	echo json_encode($respondo);
 	exit();

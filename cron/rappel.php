@@ -1,7 +1,40 @@
 <?php
 include "../db.inc.php";
 include "../util.php";
+require_once "../api/StatistikojAPI.php";
 malfermidatumbazon();
+
+function dauxroTeksto(int $sekundoj): string {
+	$minutoj = (int)round($sekundoj / 60);
+	return $minutoj < 60 ? $minutoj." min" : intdiv($minutoj, 60)." h ".sprintf("%02d", $minutoj % 60);
+}
+
+function laboroHtml(array $linioj): string {
+	if (!$linioj) {
+		return "<p>Aucune page validée hier.</p>";
+	}
+	$pagxoj = array_sum(array_column($linioj, "pagxoj"));
+	$sekundoj = array_sum(array_column($linioj, "sekundoj"));
+	$lernantoj = count(array_unique(array_column($linioj, "enirnomo")));
+	$listo = "";
+	$lecionoj = 0;
+	foreach ($linioj as $linio) {
+		$finitaj = $linio["finitaj"] ? explode(",", $linio["finitaj"]) : array();
+		$lecionoj += count($finitaj);
+		$listo .= "<li>".htmlspecialchars($linio["enirnomo"], ENT_QUOTES, "UTF-8")." (".htmlspecialchars($linio["kurso"], ENT_QUOTES, "UTF-8").") : "
+			.$linio["pagxoj"]." page(s), ".dauxroTeksto((int)$linio["sekundoj"])
+			.($finitaj ? ", leçon(s) ".implode(", ", $finitaj)." terminée(s)" : "")."</li>";
+	}
+	return "<p>".$lernantoj." élève(s) ont validé ".$pagxoj." page(s) et terminé ".$lecionoj." leçon(s), pour ".dauxroTeksto($sekundoj)." de travail.</p><ul>".$listo."</ul>";
+}
+
+function vortojHtml(array $vortoj): string {
+	if ($vortoj["respondoj"] == 0) {
+		return "<p>Aucune révision hier.</p>";
+	}
+	$elcento = round(100 * $vortoj["bonaj"] / $vortoj["respondoj"]);
+	return "<p>".$vortoj["lernantoj"]." élève(s) ont révisé ".$vortoj["respondoj"]." mot(s), avec ".$elcento." % de bonnes réponses.</p>";
+}
 
 function jamFinisKurson($studanto) {
 	global $bdd;
@@ -133,6 +166,9 @@ while($row = $result->fetch()) {
 }
 $rimarkoj .= "</ul>";
 $contents=str_replace("##RIMARKOJ##",$rimarkoj,$contents);
+$statistikoj = new StatistikojAPI($bdd);
+$contents=str_replace("##LABORO##",laboroHtml($statistikoj->laboroHieraux()),$contents);
+$contents=str_replace("##VORTOJ##",vortojHtml($statistikoj->vortojHieraux()),$contents);
 echo $contents;
 // liste des administrateurs :
 $demando="select retadreso from personoj where (rajtoj='A')";

@@ -4,7 +4,7 @@ services:
   web:
     build:
       context: ./php
-    container_name: ikurso_php74
+    container_name: ikurso_php
     volumes:
       - ./:/var/www/html
     ports:

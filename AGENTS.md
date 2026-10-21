@@ -5,9 +5,13 @@ Elles complètent `CLAUDE.md` (architecture, commandes) et `.ai/` (API, schéma,
 
 ## 1. Compatibilité
 
-- **Version cible : PHP 7.4.** Le nouveau code peut utiliser ses fonctionnalités (types scalaires et de retour, propriétés typées, `??`, `??=`, fonctions fléchées, `declare(strict_types=1)` pour les nouveaux fichiers) mais rien qui exige PHP 8 (pas de `match`, d'arguments nommés, de propriétés promues, de `?->` ni de `str_contains`).
-- Le code existant n'est pas encore tout compatible 7.4 : ne pas casser ce qui fonctionne, et corriger les incompatibilités (ex. `each()`, accolades pour les index de chaîne, `get_magic_quotes_*`, syntaxes dépréciées) quand on touche le fichier concerné.
-- `php/Dockerfile` utilise PHP 7.4 par défaut (`ARG PHP_VERSION=7.4`) : tester avec cette version.
+- **Version cible : PHP 8.1** (en prod depuis le 21/10/2026, #1084). Le retour à PHP 7.4 reste possible tant que `php7.4-fpm` est installé sur le serveur (une ligne du `.htaccess`) : d'ici là, le nouveau code reste compatible 7.4 et n'utilise pas les syntaxes propres à PHP 8 (`match`, arguments nommés, propriétés promues, `?->`, `str_contains`, énumérations, `readonly`).
+- Pièges de PHP 8 à garder en tête :
+  - PDO et mysqli lèvent des exceptions par défaut : `db.inc.php` remet explicitement le mode silencieux de PHP 7, sur lequel reposent les `or die(...)` du code existant. Les classes de `api/` utilisent `ERRMODE_EXCEPTION` volontairement.
+  - `htmlspecialchars()` encode l'apostrophe par défaut (`ENT_QUOTES`) : décoder avant de comparer ou de normaliser une réponse (voir `normaligita()`).
+  - Passer `null` à une fonction interne qui attend une chaîne (`explode`, `str_replace`, `stripslashes`…) est déprécié : caster ou tester avant.
+  - Une chaîne vide n'est plus égale à `0`, et `ksort()`, `count()` ou `foreach` sur `null` provoquent une erreur : initialiser les tableaux.
+- `php/Dockerfile` utilise PHP 8.1 par défaut (`ARG PHP_VERSION=8.1`, conteneur `ikurso_php`).
 - Ne jamais introduire de fonctions `mysql_*`. `mysql_compat.php` n'existe que pour le code legacy, à faire disparaître.
 - **Fins de ligne : toujours LF** (`\n`), jamais CRLF, sur Linux comme sur macOS. Tout fichier créé ou entièrement réécrit est en LF. Configurer l'éditeur en conséquence et ne jamais mettre `core.autocrlf=true`.
 - Tout le dépôt a été normalisé en LF (commit `530bc9c9`, ignoré par `git blame` via `.git-blame-ignore-revs`). `.gitattributes` (`* text=auto eol=lf`) et `.editorconfig` (`end_of_line = lf`) maintiennent cette règle : ne pas les contourner. Seule exception : `doc/GERDA-kurso.rtf`, laissé tel quel.
@@ -69,7 +73,7 @@ Elles complètent `CLAUDE.md` (architecture, commandes) et `.ai/` (API, schéma,
 
 Ces vérifications sont obligatoires sur l'environnement Docker local (`docker compose up`, http://localhost:8080) :
 
-1. **Syntaxe** : `docker compose exec -T web php -l <fichier>` pour chaque fichier PHP modifié, avec un conteneur en PHP 7.4 (voir section 1).
+1. **Syntaxe** : `docker compose exec -T web php -l <fichier>` pour chaque fichier PHP modifié, en PHP 8.1 (voir section 1).
 2. **Cas nominal** : tester la fonctionnalité avec les comptes `administranto`, `korektanto1` et `lernanto1` (mot de passe `test`).
 3. **Droits** : vérifier qu'un visiteur anonyme et un compte de rôle insuffisant sont refusés.
 4. **Injection** : tester chaque paramètre avec `'`, `" OR "1"="1`, `1 OR 1=1` et `1 UNION SELECT NULL`. Aucune erreur SQL ni fuite de données ne doit apparaître.

@@ -749,6 +749,12 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 			echo "<li id='intro' class='farita'><a href='".$chemin."antauxklarigo.php'>enkonduko</a></li>";
 		}
 	}
+	// élève connecté : chaque leçon commencée s'ouvre là où il s'est arrêté (#910)
+	$reprenSekcioj = array();
+	if (!empty($_SESSION["persono_id"])) {
+		require_once __DIR__."/api/ProgresoAPI.php";
+		$reprenSekcioj = (new ProgresoAPI($bdd))->reprenSekcioj((int)$_SESSION["persono_id"], $kurso);
+	}
 	$res = $bdd->prepare("select * from lecionoj where kurso=? order by numero");
 	$res->execute(array($kurso));
 	while ($row = $res->fetch()) {
@@ -769,7 +775,8 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 		if ($kurso=='GR' and $numero=='26') {
 			$numero='Ekzameno A2';
 		}
-		echo "<li id='lec".sprintf('%02d',$row["numero"])."' class='".$classe."'><a href='".$chemin.$row["retpagxo"]."'>".$numero."</a></li>";
+		$sekcio = isset($reprenSekcioj[(int)$row["numero"]]) ? "?section=".$reprenSekcioj[(int)$row["numero"]] : "";
+		echo "<li id='lec".sprintf('%02d',$row["numero"])."' class='".$classe."'><a href='".$chemin.$row["retpagxo"].$sekcio."'>".$numero."</a></li>";
 	}
 	if ($kurso=='GR') {
 		if ($leciono==90) {

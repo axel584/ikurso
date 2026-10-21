@@ -119,14 +119,15 @@ $query = "update personoj set rajtoj='S' where id=?"; // cxiukaze igas lin studa
 $stmt = $bdd->prepare($query);
 $stmt->execute([$persono_id]);
 		
-$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso,nunleciono) VALUES (NOW(),NOW(),?,?,?,1)";
+// nunleciono = la leçon envoyée, comme dans sendiLecionon.php : l'élève ne commence pas forcément par la leçon 1 (#897)
+$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso,nunleciono) VALUES (NOW(),NOW(),?,?,?,?)";
 $stmt = $bdd->prepare($query);
-$stmt->execute([$plejTaugaKorektanto, $persono_id, $kurso]);
+$stmt->execute([$plejTaugaKorektanto, $persono_id, $kurso, max(1, (int)$leciono)]);
 
 // sendi mesagxon al la nova studanto
 $filename = "../mails/doniStu".$kurso."FR.html";
 // si le fichier n'existe pas, mets le nom du fichier sans le cours
-if (!file_exists($filename)) { $filename = "mails/doniStuFR.html"; }
+if (!file_exists($filename)) { $filename = "../mails/doniStuFR.html"; }
 
 $fd = fopen($filename, "r");
 $contents = fread($fd, filesize ($filename));

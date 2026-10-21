@@ -9,6 +9,9 @@ function malfermiDatumbazon () {
     global $urlDb,$bdd,$base,$login,$motDePasse;
 	try {
 			$bdd = new PDO('mysql:host='.$urlDb.';dbname='.$base.';charset=utf8', $login, $motDePasse);
+			// depuis PHP 8, PDO lève une exception à chaque erreur SQL : on garde le comportement de PHP 7
+			// (la requête renvoie false), sur lequel reposent les « or die(...) » du code existant (#1084)
+			$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
 			$bdd->query('SET lc_time_names = \'fr_FR\''); // Pour avoir les dates en français
 			// A décommenter pour rendre les erreurs sql plus parlante
 			// $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -27,6 +30,8 @@ function malfermiDatumbazon () {
 
 		// Connexion MySQLi pour les classes DAO /db/*.inc.php (PHP 5.6 et 7.0+)
 		if (!isset($GLOBALS['_mysql_compat_link'])) {
+			// même chose pour mysqli, qui lève des exceptions par défaut depuis PHP 8.1 (#1084)
+			mysqli_report(MYSQLI_REPORT_OFF);
 			$conn = new mysqli($urlDb, $login, $motDePasse, $base);
 			if (!$conn->connect_errno) {
 				$conn->set_charset('utf8');

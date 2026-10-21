@@ -73,6 +73,8 @@ function konvX($buff) {
 }
 
 function normaligita($respondo) {
+	// la réponse peut arriver échappée par htmlspecialchars() : depuis PHP 8.1, l'apostrophe devient &#039; (#1084)
+	$respondo = html_entity_decode((string)$respondo, ENT_QUOTES | ENT_HTML5, "UTF-8");
 	$normaligita = strtolower(konvX($respondo));
 	$trans = array("." => "", "," => "", "'" => "","!" => "","?" => "",":" => "",";" => "","-"=>"",json_decode('"\u2008"')=>' '); // liste des caractères à supprimer pour la comparaison
 	// l'utilisation de json_decode('"\u2008"') est pratique pour convertir des caractères esotérique depuis l'unicode (2008 est un espace de ponctuation...)

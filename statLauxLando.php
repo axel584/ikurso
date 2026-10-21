@@ -3,6 +3,7 @@ $temo="lando";
 include "stat.inc.php";
 function stat_landoj() {
 	global $bdd;
+	$stat = array();
 	echo "<table class=\"stat\">\n<tbody>\n";
 
 	// laux landoj

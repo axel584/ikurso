@@ -58,6 +58,10 @@ if ($aucuneLeciono) {
 } else {
 if ($rajto=='S') { echo "<h1>Correction de la leçon</h1>"; }
 else { echo "<h1>Leçon de ".$studanto["enirnomo"]."</h1>"; }
+// le correcteur peut passer à la correction dès le haut de la page, sans descendre jusqu'au bouton du bas (#944)
+if ($rajto=='A' || $rajto=='I'|| $rajto=='K'){
+	echo "<p class='right-align'><a class='waves-effect waves-light btn light-blue darken-1' href='korektiLecionon.php?numleciono=".urlencode($leciono)."&kurso=".urlencode($kurso)."&studanto=".$studanto_id."'>Corriger cette leçon en ligne</a></p>\n";
+}
 if ($enkonduko) {
 	echo "<div class='card green lighten-4 card-content'>";
 	echo $enkonduko;

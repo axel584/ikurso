@@ -349,7 +349,7 @@ frameborder="0" allowfullscreen></iframe></p>
 
 				<h2>Membre du conseil d’administration</h2>
 				<p class="parto">Notre association se réunit physiquement tous les trois mois pour prendre les décisions nécessaires au fonctionnement et au développement de l’association. C’est à l’occasion de ces réunions du conseil d’administration que l’on choisit les projets qui seront mis en place et que l’on discute des initiatives à soutenir. Prendre part au conseil d’administration, c’est participer activement à l’association. Nos membres du CA sont répartis aux quatre coins de la France et permettent de garder un lien avec le terrain et d’être au courant des différents projets qui peuvent être proposés.</p>
-				<p>Si vous souhaitez vous porter candidat, vous pouvez contacter le bureau de l’association à l’adresse&nbsp;: <a href="estraro@esperanto-france.org">estraro@esperanto-france.org</a></p>
+				<p>Si vous souhaitez vous porter candidat, vous pouvez contacter le bureau de l’association à l’adresse&nbsp;: <a href="mailto:estraro@esperanto-france.org">estraro@esperanto-france.org</a></p>
 
 			</section>
 

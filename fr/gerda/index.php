@@ -238,7 +238,7 @@ include "gerdakapo.inc.php";
 					<p class="col s2 eo"><u>ja</u>ro</p><p class="col s2 eo"><u>ju</u>na</p>
 				</div>
 				<div class="row">
-					<p class="col s1"><a href="../son/s2-08.au"><i class="material-icons">volume_up</i></a></p>
+					<p class="col s1"><a href="../son/s2-08.mp3"><i class="material-icons">volume_up</i></a></p>
 					<p class="col s5"><b>ĵ</b> (j comme dans <i>journal</i>)</p>
 					<p class="col s2 eo">ĵur<u>na</u>lo</p><p class="col s2 eo">ĵa<u>lu</u>za</p><p class="col s2 eo">tea<u>tra</u>ĵo</p>
 				</div>

@@ -73,7 +73,8 @@ h1.kiel-h2 {font-size: 2.5rem; line-height: 110%; margin: 2.3733333333rem 0 1.42
 	border: none; border-bottom: 2px solid #9e9e9e; border-radius: 0;}
 .frazo input.frazo-kampo {min-width: 2ch; text-align: center;}
 .frazo select.frazo-kampo {padding-right: 0; cursor: pointer;}
-.frazo .frazo-kampo:focus {outline: none; border-bottom-color: #26a69a;}
+/* au focus, la couleur du texte : le vert est réservé à la phrase entièrement juste */
+.frazo .frazo-kampo:focus {outline: none; border-bottom-color: currentColor;}
 .frazo.valid .frazo-kampo {border-bottom-color: #4caf50;}
 .frazo .frazo-bone {color: #4caf50; vertical-align: middle; margin-right: .2rem;}
 h3 {font-size: 2rem; margin: 2rem 0 1.5rem 0; color: #554E47;}

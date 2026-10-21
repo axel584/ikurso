@@ -4529,3 +4529,12 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Paŝoj al plena posedo : correction automatique du groupe 2 (4.4 ×2, 6.4, 7.4 ×2, 12.4, 13.4, 14.4, 16.4, 22.4 à 27.4), menus elektlisto, réponses validées par Emmanuelle (#1083) : voir sql/26-pp-correction-automatique-groupe2.sql
 --- Paŝoj al plena posedo : réponses types des 182 questions corrigées automatiquement (#1083) : voir sql/27-pp-reponses-types-auto.sql
 --- Paŝoj al plena posedo : réponses types des leçons 1 à 4 (questions sur le texte, questions à retrouver, phrases à compléter) : voir sql/28-pp-reponses-types-lot1.sql
+--- Paŝoj al plena posedo : réponses types des leçons 5 à 8 (questions sur le texte, questions à retrouver, participes) : voir sql/29-pp-reponses-types-lot2.sql
+--- Paŝoj al plena posedo : réponses types des leçons 9 à 12 (questions sur le texte, adverbes, discours rapporté, sin/lin) : voir sql/30-pp-reponses-types-lot3.sql
+--- Paŝoj al plena posedo : réponses types des leçons 13 à 16 (questions sur le texte, synonymes, vocabulaire) : voir sql/31-pp-reponses-types-lot4.sql
+--- Paŝoj al plena posedo : réponses types des leçons 17 à 20 (questions sur le texte, analyses de langue, proverbes, dérivés) : voir sql/32-pp-reponses-types-lot5.sql
+--- Paŝoj al plena posedo : réponses types des leçons 21 à 24 (questions sur le texte, analyses de langue, phrases à corriger, synonymes) : voir sql/33-pp-reponses-types-lot6.sql
+--- Paŝoj al plena posedo : réponses types des leçons 25 à 28 (questions sur le texte, analyses de langue, passif, phrases à corriger, définitions, proverbes ; énoncé de 28.3 n°8 nettoyé) : voir sql/34-pp-reponses-types-lot7.sql
+--- Paŝoj al plena posedo : réponses types des leçons 25 à 28 (questions sur le texte, analyses de langue, passif, phrases à corriger, définitions, proverbes ; énoncé de 28.3 n°8 nettoyé) : voir sql/34-pp-reponses-types-lot7.sql
+--- Paŝoj al plena posedo : réponses types des leçons 25 à 28 (questions sur le texte, analyses de langue, passif, phrases à corriger, définitions, proverbes ; énoncé de 28.3 n°8 nettoyé) : voir sql/34-pp-reponses-types-lot7.sql
+--- Paŝoj al plena posedo : réponses types des leçons 29 et 30 (questions sur le texte, figures de style, métaphores, phrases à corriger) : voir sql/35-pp-reponses-types-lot8.sql

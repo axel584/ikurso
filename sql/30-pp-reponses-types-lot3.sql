@@ -1,0 +1,104 @@
+-- Paŝoj al plena posedo : réponses types (« corrigé type » montré aux correcteurs), lot 3 : leçons 9 à 12.
+-- Questions sur le texte (9.3, 10.3, 11.3, 12.3), adverbes et groupes de mots (9.4), discours rapporté (10.4),
+-- trois propositions en une (11.4), différences de sens sin/lin/sia/ŝia/ilia (12.4).
+-- Rédigées d'après les textes et les réponses cochées « juste » par les correcteurs ; à relire par Emmanuelle.
+-- Ne remplace pas une réponse type existante ; peut être rejoué sans risque.
+SET NAMES utf8mb4;
+
+UPDATE ekzerceroj SET respondo = 'Proksimume el 100 diversaj partoj.' WHERE id = 1308 AND ekzerco_id = 153 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Proksimume 39 420 km, kio egalas preskaŭ al la longeco de la ekvatoro.' WHERE id = 1309 AND ekzerco_id = 153 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Lokomotivo, kiu funkcias 10 horojn tage je 45 km hore, devus funkcii 89 tagojn por fari la saman vojon, kiun la balanciero faras dum 3 jaroj, kaj 8 900 tagojn (24 jarojn) por ke ĝia akso faru tiom da turniĝoj kiom la pivoto de la balanciero.' WHERE id = 1310 AND ekzerco_id = 153 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĝi valoras kelkoble pli ol sampeza oro.' WHERE id = 1311 AND ekzerco_id = 153 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Fuŝuloj kaj diletantoj pikas en ĝin per kudrilo aŭ tranĉileto, kiam la horloĝo subite ĉesas funkcii.' WHERE id = 1312 AND ekzerco_id = 153 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĝi enpenetras ĉien, eĉ en bone fermitan horloĝon, kaj kaŭzas ĝian malfunkciadon kaj difektiĝon; ju pli malgranda la horloĝo, des malpli da polvo sufiĉas.' WHERE id = 1313 AND ekzerco_id = 153 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĝi estas vera malgranda scienco: oni unue forigu la malnovan ŝmiraĵon, poste oni uzas tri diversspecajn oleojn, flumolecajn kaj likviĝemajn, por ke ili ne gluu. Ne lubriku mem vian horloĝon per maŝin-oleo.' WHERE id = 1314 AND ekzerco_id = 153 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar la observeja kronometro valoras centmilfoje pli: ĝi estas fermita en speciala vitra ujo kun konstanta aerpremo, en ejo kun konstanta varmogrado kaj preskaŭ sen skuoj, dum poŝ- aŭ brakhorloĝo suferas la movojn de la korpo kaj la ŝanĝojn de varmo.' WHERE id = 1315 AND ekzerco_id = 153 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La senĉesa moviĝo de la korpo aŭ de la brako, la ŝanĝiĝoj de varmo (en malvarmo ĝi plirapidiĝas, en varmo ĝi malfruiĝas), fortaj magnetoj kaj la polvo.' WHERE id = 1316 AND ekzerco_id = 153 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Restreĉu ĝin regule, ĉiumatene aŭ ĉiuvespere; dumnokte lasu ĝin en la sama pozicio; gardu ĝin kontraŭ fortaj magnetoj kaj grandaj diferencoj de varmo; ne lubriku ĝin mem; post 1-3 jaroj donu ĝin purigi kaj revizii al vera specialisto.' WHERE id = 1317 AND ekzerco_id = 153 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La enlitiĝonto streĉis sian horloĝon laŭ sia kutimo (aŭ: kiel kutime).' WHERE id = 1318 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La instruisto malpermesis la feston pro malgrandanimeco.' WHERE id = 1319 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La horloĝo difektiĝis pro manko de oleo.' WHERE id = 1320 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Mi volas bati la amason vantan ĝis sango.' WHERE id = 1321 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La fantomoj revivas en la lunlumo, en pejzaĝo antaŭlonge konata.' WHERE id = 1322 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Aprilo baldaŭ trempos foliojn per siaj pluvokisoj.' WHERE id = 1323 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Mateno frapis la nokton per pugnobato al la nazo, kaj ĝia sango ruĝigas la horizonton.' WHERE id = 1324 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Pro sia bruta menso la homoj lin ignoris.' WHERE id = 1325 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Mi ŝutas for mian trezoron, la Vivon, kiun mi gardis kun grincado de dentoj.' WHERE id = 1326 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Blekis la kanonoj, kaj milionoj falis en buĉado de fratoj.' WHERE id = 1327 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Per amo li ribelas kontraŭ la monstro de l’pereo, dirante jes al la vivo.' WHERE id = 1328 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La sklavoj komencis revi pri buĉado: ke baldaŭ venos venĝ-okazo!' WHERE id = 1329 AND ekzerco_id = 154 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Geknabe (aŭ: infane) ni vadis en la maro.' WHERE id = 1330 AND ekzerco_id = 155 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La raketoj brodis la nokton orfadene.' WHERE id = 1331 AND ekzerco_id = 155 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La albatroso larĝflugile ŝvebis super la ondoj.' WHERE id = 1332 AND ekzerco_id = 155 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ŝi forviŝis larmon, kiu aperis okulangule.' WHERE id = 1333 AND ekzerco_id = 155 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ili rimarkis la larmojn, kiuj ardadis survange.' WHERE id = 1334 AND ekzerco_id = 155 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ŝultrotire li indiferente foriris.' WHERE id = 1335 AND ekzerco_id = 155 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La knaboj interpugnis ĝissange.' WHERE id = 1336 AND ekzerco_id = 155 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Mirinda multkolora brulo fontis sur la ĉielo stelkreade.' WHERE id = 1337 AND ekzerco_id = 155 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Zorgoplene li klinis sin denove al la libro.' WHERE id = 1338 AND ekzerco_id = 155 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Horloĝo povas difektiĝi diversinflue.' WHERE id = 1339 AND ekzerco_id = 155 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar la atmosfero en la triaklasa kupeo estis sufoka, multaj horoj da vojaĝo ankoraŭ restis, kaj la babilado de liaj kunvojaĝantoj tute ne interesis lin.' WHERE id = 1342 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Dekjara nigrokula knabino, Sita, kiu ŝajnis enui same kiel li.' WHERE id = 1343 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La unuan fojon, post kelkaj demandoj pri ŝia lernejo, la konversacia materialo estis elĉerpita. La duan fojon li demandis, ĉu ŝi kolektas ion, kaj ŝi respondis, ke ŝi kolektas nenion.' WHERE id = 1344 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Sita demandis, kion li kolektas. Dum li meditis, li vidis tra la fenestro ĉielarkon ĉirkaŭ la vaportufo de la lokomotivo kaj ekkriis “Ĉielarko!”; Sita kredis, ke tio estas la respondo.' WHERE id = 1345 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar ŝi fronte atakis lin per demandoj kaj subokule ekzamenadis lian vizaĝon por malkovri, ĉu li ŝercas.' WHERE id = 1346 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'En sia vilaĝo, kiam li estis apenaŭ kvinjara, ludante kun sia pli aĝa frato kaj aliaj vilaĝaj knaboj.' WHERE id = 1347 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Laŭ lia frato, tiu, kiu sukcesas pasi sub la ĉielarko, ĉiam en la vivo sukcesos plenumi sian deziron.' WHERE id = 1348 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar la suno malleviĝadis kaj la ĉielarko paliĝis ĝis fina malapero, antaŭ ol li atingis ĝin.' WHERE id = 1349 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La malsupra ĉielarko, kun unu flanko sur la tegmentoj de la urbo kaj la alia en la maro, simbolis la ligon inter la urbo kaj la maro. La simbolo estas trafa, ĉar dum jarcentoj la loĝantoj estis navigistoj, fiŝkaptistoj, piratoj, markomercistoj kaj maristoj.' WHERE id = 1350 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Li fotografis ĝin per kolora filmo; krome Nina estis tie kaj povas konfirmi.' WHERE id = 1351 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Pro la alteco ili sentis iom da sufokiĝo.' WHERE id = 1352 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ne: nur malmultaj homoj en la mondo vidis similan fenomenon.' WHERE id = 1353 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'En la iama imperiestra palaco de malproksima lando, nun muzeo, en la ĉambreto, kie oni gardas la kronon. Sunradio tra trueto de la kurteno tuŝis la grandegan brilianton de la krono, kaj centoj da ĉielarketoj kovris la murojn kaj la plafonon.' WHERE id = 1354 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar ĝi estis kreita en glaso da akvo, en kiu lia patrino metis sian falsan dentaron: la dentaro desegnis vicon da montetoj en la ĉielarko.' WHERE id = 1355 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Jes: ĝi estas la unua en ŝia kolekto, donaco de la aŭtoro, kaj ŝi longe kaj intense rigardis ĝin; tian unuan sperton oni ne forgesas.' WHERE id = 1356 AND ekzerco_id = 158 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La domposedanto malgaje raportis, ke ŝtelistoj forportis el lia domo kelkajn valorajn juvelojn.' WHERE id = 1357 AND ekzerco_id = 159 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La domposedanto kriis al la policano, ke ŝtelisto klopodas eniri lian domon, kaj ke li tuj venu.' WHERE id = 1358 AND ekzerco_id = 159 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La junulino plorĝemis, ke se ŝia amanto ne skribos baldaŭ al ŝi, ŝi kredos, ke li forlasis ŝin por ĉiam.' WHERE id = 1359 AND ekzerco_id = 159 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La sciencisto konjektas, ke en la baldaŭa estonteco homoj elpaŝos sur la lunsurfacon.' WHERE id = 1360 AND ekzerco_id = 159 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Mia inkvizitoro demandis, ĉu mi kolektas ĉielarkojn.' WHERE id = 1361 AND ekzerco_id = 159 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kun la okuloj larĝe malfermitaj, mia inkvizitoro demandis, ĉu vere mi kolektas ĉielarkojn.' WHERE id = 1362 AND ekzerco_id = 159 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La knabino demandis, kiel komenci, kaj diris, ke al mi ja estis facile komenci, ĉar mi havis fraton.' WHERE id = 1363 AND ekzerco_id = 159 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Post ioma paŭzo mi daŭrigis, ke ŝi ne kredu, ke ĉiuj ĉielarkoj el mia kolekto estas altvaloraj, kaj ke estas en ĝi ankaŭ kelkaj, kiujn mi kolektis nur pro strangeco.' WHERE id = 1364 AND ekzerco_id = 159 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar ŝi estas blinda de naskiĝo: ŝi lernas en lernejo por blinduloj en la grandurbo kaj revenas hejmen nur somere por la ferio.' WHERE id = 1374 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Tri: Zlatica, ŝia frato Mario kaj ŝia sepjara fratineto Mare.' WHERE id = 1375 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Pri la grandurbo, pri sia unua salajro kaj pri la donacoj, kiujn ŝi aĉetos per ĝi: silkan kaptukon por la patrino, rozolignan pipon por la patro, arĝentan cigaredujon por Mario kaj grandan pupon por Mare.' WHERE id = 1376 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Pasintan printempon tempesto surprizis lin, dum li ĵetis reton en la maron, kaj la maro forglutis lian pipon.' WHERE id = 1377 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Granda ondo frapis la boatpruon kaj ŝprucmalsekigis ŝin.' WHERE id = 1378 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Laŭ la timkrioj de la mevoj, kvankam la suno ankoraŭ brilis; poste ŝi sentis, ke la venteto ĉesis kaj la veloj knarkrakas sub la ventpremo.' WHERE id = 1379 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Pro sia vireca fiero: li ja rimarkis la malboniĝon de la vetero, sed ne volis obei al la “ina saĝo” kaj mokis sian “urbaniĝintan” fratinon.' WHERE id = 1380 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La agrabla venteto ĉesis, la veloj knarkrakis, la ondoj plialtiĝis. Malantaŭ la horizonto aperis verdnigra nubo, kiu fulmrapide pligrandiĝis; fulmoj trakuris la ĉielon kaj tondroj eĥis. La suno malaperis, la vento hurlis kaj la ondoj furioze dancis.' WHERE id = 1381 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Mario kaptis Mare kaj portis ŝin naĝante, kriante al Zlatica, ke ŝi naĝu laŭ lia voĉo; Zlatica naĝis kuraĝe, gvidata de la voĉo de sia frato.' WHERE id = 1382 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ke Mario certe atingos la bordon kaj ke oni venos trovi ŝin; por ne pensi pri droniĝo, ŝi rememoris siajn geamikojn kaj iliajn voĉojn.' WHERE id = 1383 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar ŝi estis okupita per sia hejmlaboro en la ŝtondometo.' WHERE id = 1384 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kelkaj fiŝistoj kun la patro ensaltis la motorboaton de altstatura viro kaj iris serĉi ilin sur la maro.' WHERE id = 1385 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Sur rokpinto de rokinsuleto okcidente de la bordo: li sidis svingante sian ĉemizon kaj premante Mare al sia brusto.' WHERE id = 1386 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Marlupo estas maljuna, sperta maristo aŭ fiŝisto, kiu longe vivis sur la maro. La esprimo estas pitoreska, ĉar ĝi kunigas la maron kaj la lupon, bildon de forta, harda kaj sendependa besto.' WHERE id = 1387 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ŝi luktis tri horojn sola en la ondegoj kaj tiel pruvis, ke ŝi restis vera fiŝista filino, filino de la maro.' WHERE id = 1388 AND ekzerco_id = 162 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La patro, karesante la malsekajn harojn de Mare, kiu silente ploris en lia sino, rigardis la larĝon de la maro.' WHERE id = 1389 AND ekzerco_id = 163 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La motorboato malrapide eniris la havenon, kie mute atendis amaso da homoj.' WHERE id = 1390 AND ekzerco_id = 163 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Zlatican, luktantan kontraŭ la ondegoj, Mario ne plu vidis, nek aŭdis jam delonge.' WHERE id = 1391 AND ekzerco_id = 163 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Forlasonte la havenon, la fiŝistoj eniris la motorboaton, kiu atendis ĉe la bordo.' WHERE id = 1392 AND ekzerco_id = 163 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Palpkaresante la vizaĝojn de la gepatroj, Zlatica malkovros novajn sulkojn, kiujn ŝi antaŭe ne konis.' WHERE id = 1393 AND ekzerco_id = 163 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ŝi ridete imagas, kiel la vilaĝaninoj rigardos dimanĉe ŝian patrinon, portantan tiun kaptukon.' WHERE id = 1394 AND ekzerco_id = 163 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ŝi instinkte antaŭsentis tion, kion ŝia frato ne rimarkis: ili tro malproksimiĝis de la bordo.' WHERE id = 1395 AND ekzerco_id = 163 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La leĝera boato ĉiam pli kaj pli supreniĝas, kvazaŭ ĉevalo transsaltanta barojn.' WHERE id = 1396 AND ekzerco_id = 163 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Gvidata de la voĉo de Mario, ŝi naĝis kuraĝe, kvankam la ondoj fojfoje superiris ŝian kapon.' WHERE id = 1397 AND ekzerco_id = 163 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Forlasinte la fenestron, la patro eniris la kuirejon, kie lia edzino okupiĝis pri lavado.' WHERE id = 1398 AND ekzerco_id = 163 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ne: la dia profesio ne estas profita; li devas pene labori de la mateno, kaj la senfinaj kaj kontraŭdiraj preĝoj de la homoj tedas lin.' WHERE id = 1412 AND ekzerco_id = 168 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉiun matenon (aŭ: kiam la tago komenciĝas) mi devas pene rosi kampan valon.' WHERE id = 1413 AND ekzerco_id = 168 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La akuzativo montras direkton, movon: Peruno pelas la lunon en la stalon. Tiel la luno aperas kiel bruto, kiun oni enirigas en la stalon, kiam ĝia tempo finiĝis.' WHERE id = 1414 AND ekzerco_id = 168 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Al flokoj (de neĝo aŭ de lano) kaj al kokoj, kiujn oni vokas al la nestejo.' WHERE id = 1415 AND ekzerco_id = 168 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ekzemple: “per mi / ekstermi”, “blasfemi / ĉe mi”, “preĝovorto / komforto”, “disdonacu / rekuracu”, “svatu / batu”, “varma / kara”.' WHERE id = 1416 AND ekzerco_id = 168 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Al pikoj de formikoj, kiuj ĝenus la aŭdon: la preĝoj svarmas kaj alarmas, ĝis li preskaŭ surdas.' WHERE id = 1417 AND ekzerco_id = 168 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar la preĝoj estas tro multaj kaj kontraŭdiras unu la alian: oni volas samtempe varman kaj frostan veteron, karan kaj malmultekostan sekalon, pluvon kaj sunon.' WHERE id = 1418 AND ekzerco_id = 168 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Rifuzon kaj ĉagrenon, iom da senpacienco: “Ho ne, ne tion!”' WHERE id = 1419 AND ekzerco_id = 168 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ekzemple: “Tondro ilin batu!” (aŭ: frapu, trafu).' WHERE id = 1420 AND ekzerco_id = 168 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Por ricevi la monon de la asekuro.' WHERE id = 1421 AND ekzerco_id = 168 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = '(a) La malfeliĉulo riproĉis sin mem. (b) La malfeliĉulo riproĉis alian personon.' WHERE id = 1432 AND ekzerco_id = 170 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = '(a) Li liberigis sin mem kaj forkuris el la ĉambro. (b) Li liberigis alian viron kaj mem forkuris el la ĉambro. (c) Li liberigis alian viron kaj igis lin forkuri el la ĉambro. (d) Li liberigis sin mem kaj igis alian viron forkuri el la ĉambro.' WHERE id = 1433 AND ekzerco_id = 170 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = '(a) Ili trovis sian propran novan domon ne tre oportuna. (b) Ili trovis la novan domon de iu virino ne tre oportuna. (c) Ili trovis la novan domon de aliaj personoj ne tre oportuna.' WHERE id = 1434 AND ekzerco_id = 170 AND COALESCE(respondo, '') = '';
+
+-- Vérification
+SELECT ekzerco_id, COUNT(*) AS demandoj, SUM(COALESCE(respondo, '') <> '') AS kun_respondo FROM ekzerceroj
+  WHERE ekzerco_id IN (153, 154, 155, 158, 159, 162, 163, 168, 170) AND forigita = 0 GROUP BY ekzerco_id;

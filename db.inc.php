@@ -1,5 +1,7 @@
 <?php
 include "config.php";
+// config.php ne définit pas toujours l'hôte : PHP 8.1 ne comprend plus « host= » vide comme localhost (#1084)
+if (empty($urlDb)) { $urlDb = "localhost"; }
 include_once __DIR__ . "/mysql_compat.php";
 
 

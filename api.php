@@ -3,6 +3,8 @@
 
 // Inclusion du fichier de configuration
 require_once 'config.php';
+// config.php ne définit pas toujours l'hôte : PHP 8.1 ne comprend plus « host= » vide comme localhost (#1084)
+if (empty($urlDb)) { $urlDb = "localhost"; }
 
 // Mode debug : uniquement en développement (APP_ENV=development dans docker-compose.yml)
 define('DEBUG_MODE', getenv('APP_ENV') === 'development');

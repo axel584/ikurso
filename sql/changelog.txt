@@ -4526,3 +4526,6 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Paŝoj al plena posedo : correction automatique de 8 exercices (16.4, 17.4 ×2, 20.4, 22.4, 24.4, 28.4, 30.4), réponses validées par Emmanuelle (#1083) : voir sql/23-pp-correction-automatique.sql
 --- cours élémentaire et Gerda : deuxième lot d'exercices passés en plenigu (CG 2.5, 4.7, 6.7, 8.4, 8.8, Gerda 9.4, 16.4, 17.4) (#1056) : voir sql/24-exercices-plenigu-lot2.sql
 --- Gerda malaperis : 8.4 (×2), 10.4 et 11.4 découpés en une phrase par question et passés en elektlisto / plenigu (#1056) : voir sql/25-gerda-exercices-decoupes.sql
+--- Paŝoj al plena posedo : correction automatique du groupe 2 (4.4 ×2, 6.4, 7.4 ×2, 12.4, 13.4, 14.4, 16.4, 22.4 à 27.4), menus elektlisto, réponses validées par Emmanuelle (#1083) : voir sql/26-pp-correction-automatique-groupe2.sql
+--- Paŝoj al plena posedo : réponses types des 182 questions corrigées automatiquement (#1083) : voir sql/27-pp-reponses-types-auto.sql
+--- Paŝoj al plena posedo : réponses types des leçons 1 à 4 (questions sur le texte, questions à retrouver, phrases à compléter) : voir sql/28-pp-reponses-types-lot1.sql

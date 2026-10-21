@@ -1,0 +1,110 @@
+-- Paŝoj al plena posedo : réponses types (« corrigé type » montré aux correcteurs), lot 1 : leçons 1 à 4.
+-- Questions sur le texte, questions à retrouver (« Skribu la faritajn demandojn ») et phrases à compléter (3.3).
+-- Rédigées d'après les réponses cochées « juste » par les correcteurs, fautes corrigées ; à relire par Emmanuelle.
+-- Ne remplace pas une réponse type existante ; peut être rejoué sans risque.
+SET NAMES utf8mb4;
+
+UPDATE ekzerceroj SET respondo = 'Ili sidis ĉe blanka tablo kaj trinkadis: sur la tablo ne mankis glasoj.' WHERE id = 896 AND ekzerco_id = 104 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Por aĉeti hejtmaterialon (benzinon) por sia aŭtomobilo.' WHERE id = 897 AND ekzerco_id = 104 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La rano parolis dane.' WHERE id = 898 AND ekzerco_id = 104 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ke Ripsrops estas ŝparema, eĉ iom avara.' WHERE id = 899 AND ekzerco_id = 104 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Li donis al ĝi manĝaĵon kaj akvon.' WHERE id = 900 AND ekzerco_id = 104 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar neniam antaŭe fremdulo dormis en lia familia lito.' WHERE id = 901 AND ekzerco_id = 104 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar lia edzino forestis, kaj la rano estis tre dormema.' WHERE id = 902 AND ekzerco_id = 104 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La rano mirakle fariĝis belega reĝidino.' WHERE id = 903 AND ekzerco_id = 104 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ŝi portis nur noktovestojn: ŝi estis apenaŭ vestita.' WHERE id = 904 AND ekzerco_id = 104 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Lia edzino neatendite revenis hejmen kaj malfermis la pordon de la dormoĉambro.' WHERE id = 905 AND ekzerco_id = 104 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiel nomiĝis la rakontanto?' WHERE id = 906 AND ekzerco_id = 105 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'De kie kaj kien veturis Ripsrops?' WHERE id = 907 AND ekzerco_id = 105 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion faris Ripsrops dum la halto?' WHERE id = 908 AND ekzerco_id = 105 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion promesis la rano al Ripsrops?' WHERE id = 909 AND ekzerco_id = 105 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kial Ripsrops miris, ke la rano frostas?' WHERE id = 910 AND ekzerco_id = 105 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kien Ripsrops metis la ranon por varmigi ĝin?' WHERE id = 911 AND ekzerco_id = 105 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kie la rano volis dormi?' WHERE id = 912 AND ekzerco_id = 105 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiel reagis Ripsrops, kiam li vidis la reĝidinon en sia lito?' WHERE id = 913 AND ekzerco_id = 105 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion diris la reĝidino al Ripsrops?' WHERE id = 914 AND ekzerco_id = 105 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉu vi kredas tiun rakonton?' WHERE id = 915 AND ekzerco_id = 105 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar ŝia amiko Gustavo ankaŭ havis psalmlibron.' WHERE id = 945 AND ekzerco_id = 110 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Li trovis multajn diversajn psalmlibrojn: malgrandajn belajn librojn kun mola bindo kaj orkadraj paĝoj, kaj ankaŭ grandajn librojn kun belaj, simplaj literoj.' WHERE id = 946 AND ekzerco_id = 110 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Li aĉetis la plej malmultekostan libron.' WHERE id = 947 AND ekzerco_id = 110 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Por ke la infano bontempe lernu ŝparemon, precipe en tiaj seriozaj aferoj.' WHERE id = 948 AND ekzerco_id = 110 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Jes, ŝi tre ĝojis pri ĝi: ŝi tuj iris kanti per ĝi antaŭ la spegulo.' WHERE id = 949 AND ekzerco_id = 110 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar li sekrete rigardis Anna-Klaran tra la ŝlosiltruo.' WHERE id = 950 AND ekzerco_id = 110 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ŝi kantis falsvoĉe antaŭ la spegulo, kvazaŭ granda kantistino.' WHERE id = 951 AND ekzerco_id = 110 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Por riproĉi ŝin, ĉar laŭ li ŝi ne uzis la psalmlibron kun la necesa seriozeco.' WHERE id = 952 AND ekzerco_id = 110 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ne, tute ne: fine estis Anna-Klara, kiu riproĉis lin.' WHERE id = 953 AND ekzerco_id = 110 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ŝi rigardis lin sincere kaj diris decidvoĉe, ke oni ne eniras ĉambron antaŭ ol frapi.' WHERE id = 954 AND ekzerco_id = 110 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiom aĝa estis Anna-Klara?' WHERE id = 955 AND ekzerco_id = 111 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiun klason vizitadis Anna-Klara?' WHERE id = 956 AND ekzerco_id = 111 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiu alia ankaŭ havis psalmlibron?' WHERE id = 957 AND ekzerco_id = 111 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion s-ro Z. skribis en la libron?' WHERE id = 958 AND ekzerco_id = 111 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiam s-ro Z. transdonis la libron al Anna-Klara?' WHERE id = 959 AND ekzerco_id = 111 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Tra kio s-ro Z. enrigardis la ĉambron?' WHERE id = 960 AND ekzerco_id = 111 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiel kantis Anna-Klara?' WHERE id = 961 AND ekzerco_id = 111 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kial Anna-Klara de tempo al tempo rigardis en la spegulon?' WHERE id = 962 AND ekzerco_id = 111 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion s-ro Z. volis klarigi al Anna-Klara?' WHERE id = 963 AND ekzerco_id = 111 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion oni faras, antaŭ ol eniri ĉambron?' WHERE id = 964 AND ekzerco_id = 111 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar li estis maljuna kaj malforta: li marŝis per bastono kaj apenaŭ povis stari kontraŭ la vento.' WHERE id = 1018 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĝi staris ekster la vilaĝo, sur la klifsupro.' WHERE id = 1019 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar oni vidis ĝin nur kiam ĝi leviĝis al la supro de giganta ondo, antaŭ ol denove malaperi.' WHERE id = 1020 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Nenion.' WHERE id = 1021 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar ili ne povis resti hejme: ili estis tirataj al la sceno kvazaŭ de magneto.' WHERE id = 1022 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar ĉiuj ŝipetoj de la vilaĝo estis ĉe la fiŝejo preter la insulo, kaj certe ili rapidis al la insula haveno tuj post la radia averto pri ventego.' WHERE id = 1023 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar ĝi forlasis la aliajn por reveni hejmen unu horon antaŭ la radia averto pri ventego.' WHERE id = 1024 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ŝipeto, kies skipo konsistas el membroj de la sama familio (fratoj, kuzoj…).' WHERE id = 1025 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar ĝi alproksimiĝis al preskaŭ certa katastrofo.' WHERE id = 1026 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar la haveno estis malfacile enirebla, kiam la maro estis malkvieta, kaj provi eniri dum tia ventego estis frenezaĵo.' WHERE id = 1027 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Preterveturi la havenon kaj iri kun la ventego, ĝis ĝi forvelkos.' WHERE id = 1028 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La teksto ne diras tion; eble la ŝipestro kredis, ke la haveno estos la plej sekura loko.' WHERE id = 1029 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar la ŝnuro ne povus trapenetri tian ventegon, kaj eĉ se ĝi atingus la ŝipeton, ĝi tuj rompiĝus sub ĝia pezo.' WHERE id = 1030 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar fari ion estis preferinde al la nura atendado.' WHERE id = 1031 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La ŝipeto ne obeis al la direktilo kaj preterpasis la enirejon de la haveno.' WHERE id = 1032 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ili ne ploris: ili staris kun nekovritaj kapoj kaj palaj, senesprimaj vizaĝoj.' WHERE id = 1033 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Silente: la malamo al la maro bolis profunde en iliaj koroj.' WHERE id = 1034 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'En unu tombo sub la ombro de la malnova preĝejo, ĉe la supro de la havena deklivo, fronte al la maro.' WHERE id = 1035 AND ekzerco_id = 118 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Per kio marŝis la maljunulo?' WHERE id = 1036 AND ekzerco_id = 119 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiel la vilaĝanoj ekscias, kiam danĝero minacas ŝipon?' WHERE id = 1037 AND ekzerco_id = 119 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiel komenciĝis la ŝtormo?' WHERE id = 1038 AND ekzerco_id = 119 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kie okazas la rakonto?' WHERE id = 1039 AND ekzerco_id = 119 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiu estis la maljunulo, kiu parolis kun la aŭtoro?' WHERE id = 1040 AND ekzerco_id = 119 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiel nomiĝis la ŝipeto?' WHERE id = 1041 AND ekzerco_id = 119 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiuj estis kun la ŝipestro sur la ŝipeto?' WHERE id = 1042 AND ekzerco_id = 119 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion faris la viroj sur la ŝipeto?' WHERE id = 1043 AND ekzerco_id = 119 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion signifis la gesto de la ŝipestro, kiam li levis la manon?' WHERE id = 1044 AND ekzerco_id = 119 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion faris la viroj kaj la virinoj, kiam ili komprenis, ke la ŝipeto perdiĝos?' WHERE id = 1045 AND ekzerco_id = 119 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Giganto estas homo, kiu estas grandega.' WHERE id = 1076 AND ekzerco_id = 123 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Promontoro estas terpeco, kiu elstaras en la maron.' WHERE id = 1077 AND ekzerco_id = 123 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Muĝo estas bruo, kiun faras bovoj.' WHERE id = 1078 AND ekzerco_id = 123 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Oni ŝatas homojn, kiuj estas afablaj.' WHERE id = 1079 AND ekzerco_id = 123 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Literoj estas signoj, kiujn oni uzas por skribi.' WHERE id = 1080 AND ekzerco_id = 123 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Junuloj, kiuj helpas aliajn, estas ŝatataj.' WHERE id = 1081 AND ekzerco_id = 123 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La ŝipoj, kiuj estis sur la maro, rapidis al la insulo.' WHERE id = 1082 AND ekzerco_id = 123 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La katastrofo, kiun oni antaŭvidis, vere okazis.' WHERE id = 1083 AND ekzerco_id = 123 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kuzo oni nomas tiun, kiu estas filo de onklo aŭ onklino.' WHERE id = 1084 AND ekzerco_id = 123 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'La kadavrojn, kiujn oni trovis post la ŝtormo, oni enterigis en unu tombon.' WHERE id = 1085 AND ekzerco_id = 123 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĝi estis malgranda kaj sufokaera.' WHERE id = 1087 AND ekzerco_id = 125 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kato de fervojisto.' WHERE id = 1088 AND ekzerco_id = 125 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Li estis malalta, sekiĝinta olduleto kun vulpeca vizaĝo de miopulo.' WHERE id = 1089 AND ekzerco_id = 125 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar la vojaĝo postulus kupeŝanĝon (unue ekspreso, poste normala trajno), kaj li ne volis ŝanĝi.' WHERE id = 1090 AND ekzerco_id = 125 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Li deziris kvieton, sen homamaso.' WHERE id = 1091 AND ekzerco_id = 125 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Milionon da biletoj.' WHERE id = 1092 AND ekzerco_id = 125 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar dum sia vivo li vidis ĉiajn pasaĝerojn.' WHERE id = 1093 AND ekzerco_id = 125 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Nur du: tiu de la staciestro kaj tiu de la arbaristo.' WHERE id = 1094 AND ekzerco_id = 125 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar la unua klaso entute ne estis en tiu vagonaro.' WHERE id = 1095 AND ekzerco_id = 125 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ĉar li volis fuĝi kaj pensi pri nenio; verŝajne li kverelis kun sia edzino.' WHERE id = 1096 AND ekzerco_id = 125 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Per kiu klaso la pasaĝero vojaĝu?' WHERE id = 1097 AND ekzerco_id = 126 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion rigardis la kasisto?' WHERE id = 1098 AND ekzerco_id = 126 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion la pasaĝero povus fari tie, laŭ la kasisto?' WHERE id = 1099 AND ekzerco_id = 126 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kiajn trajnojn oni devas preni por iri al Gzdzin?' WHERE id = 1100 AND ekzerco_id = 126 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kion faris la kasisto, dum li serĉis alian celstacion?' WHERE id = 1101 AND ekzerco_id = 126 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kie kaj kiam okazas foiro?' WHERE id = 1102 AND ekzerco_id = 126 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kial la kasisto jesis kompreneme?' WHERE id = 1103 AND ekzerco_id = 126 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kio apartenas al la devoj de la kasisto?' WHERE id = 1104 AND ekzerco_id = 126 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Ekde kiam ne plu estas fiŝistoj en Pustkow?' WHERE id = 1105 AND ekzerco_id = 126 AND COALESCE(respondo, '') = '';
+UPDATE ekzerceroj SET respondo = 'Kial la knabino petis sian patron reveni hejmen?' WHERE id = 1106 AND ekzerco_id = 126 AND COALESCE(respondo, '') = '';
+
+-- Vérification
+
+SELECT ekzerco_id, COUNT(*) AS demandoj, SUM(COALESCE(respondo, '') <> '') AS kun_respondo FROM ekzerceroj
+
+  WHERE ekzerco_id IN (104, 105, 110, 111, 118, 119, 123, 125, 126) AND forigita = 0 GROUP BY ekzerco_id;

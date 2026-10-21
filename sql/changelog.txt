@@ -4539,3 +4539,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Paŝoj al plena posedo : réponses types des leçons 25 à 28 (questions sur le texte, analyses de langue, passif, phrases à corriger, définitions, proverbes ; énoncé de 28.3 n°8 nettoyé) : voir sql/34-pp-reponses-types-lot7.sql
 --- Paŝoj al plena posedo : réponses types des leçons 29 et 30 (questions sur le texte, figures de style, métaphores, phrases à corriger) : voir sql/35-pp-reponses-types-lot8.sql
 --- Paŝoj al plena posedo : coquilles dans l'énoncé de 18.4 n°37 (ad audiloj → aŭ aŭdiloj) : voir sql/36-pp-enonce-18-4.sql
+--- Texte « La kvara pipo » (tekstoj ppp29) : coquilles enmeditigis → enmeditiĝis et ad → aŭ, glossaire corrigé : voir sql/37-ppp29-teksto-kvara-pipo.sql

@@ -78,6 +78,8 @@ function normaligita($respondo) {
 	// l'utilisation de json_decode('"\u2008"') est pratique pour convertir des caractères esotérique depuis l'unicode (2008 est un espace de ponctuation...)
 	// variantes typographiques (tirets de dialogue, apostrophe courbe, guillemets, espaces insécables des claviers Mac)
 	$trans += array("–" => "", "—" => "", "’" => "", "…" => "", "«" => "", "»" => "", "“" => "", "”" => "", "\u{00A0}" => " ", "\u{202F}" => " ");
+	// parenthèses : « Tom estas (eble) la plej… » vaut « Tom estas eble la plej… » (#708)
+	$trans += array("(" => "", ")" => "");
 	$normaligita = trim(strtr($normaligita, $trans));
 	$normaligita = preg_replace("/\s+/", " ", $normaligita); // replace un nombre d'espace supérieur à 1 par un espace simple
 	return $normaligita;
@@ -92,7 +94,9 @@ function kontroliRespondon($lernantaRespondo,$bonaRespondo) {
 		if ($normaligita_lernantaRespondo=="" || $normaligita_bonaRespondo=="") {
 			return false;
 		}
-		return $normaligita_lernantaRespondo==$normaligita_bonaRespondo;	
+		// on compare sans les espaces : ponctuation collée au mot suivant (« biskvitoj.Kiuj »), nombres en un
+		// ou plusieurs mots (dekses / dek ses), « D-ro » (#708)
+		return str_replace(" ", "", $normaligita_lernantaRespondo)==str_replace(" ", "", $normaligita_bonaRespondo);
 	}
 }
 

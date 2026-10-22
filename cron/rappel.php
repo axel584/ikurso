@@ -3,6 +3,7 @@ include "../db.inc.php";
 include "../util.php";
 require_once "../api/StatistikojAPI.php";
 require_once "../api/AgordojAPI.php";
+require_once "../api/SaviezvousAPI.php";
 malfermidatumbazon();
 
 function dauxroTeksto(int $sekundoj): string {
@@ -185,30 +186,23 @@ while ($row=$result->fetch()) { // on récupère les suivants
 mailViaSES($informistoj,"Ikurso : Statistiques quotidiennes",$contents);
 
 
-// le saviez vous
-$query="select distinct personoj_lecioneroj.persono_id,enirnomo,retadreso,saviezvous from personoj_lecioneroj  join personoj on personoj.id=personoj_lecioneroj.persono_id join personoj_agordoj on personoj_agordoj.persono_id=personoj.id and personoj_agordoj.agordo='SAVIEZVOUS' and personoj_agordoj.rajto=1 WHERE date(personoj_lecioneroj.dato)=DATE_SUB(CURDATE(), INTERVAL 1 DAY)";
+// le saviez vous : le prochain message pas encore envoyé, mémorisé dans la liste JSON de l'élève (#891)
+$saviezvousAPI = new SaviezvousAPI($bdd);
+$query="select distinct personoj_lecioneroj.persono_id,enirnomo,retadreso,saviezvous_senditaj from personoj_lecioneroj  join personoj on personoj.id=personoj_lecioneroj.persono_id join personoj_agordoj on personoj_agordoj.persono_id=personoj.id and personoj_agordoj.agordo='SAVIEZVOUS' and personoj_agordoj.rajto=1 WHERE date(personoj_lecioneroj.dato)=DATE_SUB(CURDATE(), INTERVAL 1 DAY)";
 $result = $bdd->query($query);
 while($row = $result->fetch()) {
-	$numero = $row["saviezvous"];
 	$studanto = $row["retadreso"];
-	$persono_id = $row["persono_id"];
-	$numero=$numero+1;
-	$filename = "../mails/saviezvous".sprintf("%03d", $numero).".html";
-	$filenameTitre = "../mails/saviezvous".sprintf("%03d", $numero).".txt";
-	echo ":".$filename."&".$filenameTitre;;
-	if (file_exists($filename) && file_exists($filenameTitre)) { 
-		$fd = fopen($filename, "r");
-		$contents = fread($fd, filesize ($filename));
-		fclose($fd);
-		$fd = fopen($filenameTitre, "r");
-		$contentsTitre = fread($fd, filesize ($filenameTitre));
-		fclose($fd);
+	$persono_id = (int)$row["persono_id"];
+	$numero = $saviezvousAPI->sekva(SaviezvousAPI::malkodi($row["saviezvous_senditaj"]));
+	echo ":".$persono_id."&saviezvous".$numero;
+	if ($numero!==null) {
+		list($contentsTitre, $contents) = $saviezvousAPI->enhavo($numero);
 		// lien de désinscription sous l'anecdote (#920)
-		$malaboni = AgordojAPI::malaboniLigilo((int)$persono_id, "SAVIEZVOUS");
+		$malaboni = AgordojAPI::malaboniLigilo($persono_id, "SAVIEZVOUS");
 		$contents = str_replace("</table>", "</table>\n\t<p style=\"padding:1em 0;font-family:'PT Sans',Arial,sans-serif;font-size:0.8rem;color:#554E47;\">Vous recevez ce message parce que vous avez travaillé hier sur ikurso. Si vous ne souhaitez plus recevoir ces anecdotes, il vous suffit de cliquer sur <a href='".$malaboni."'>« Ne plus recevoir Le saviez-vous »</a>.</p>", $contents);
-		mailViaSES($studanto,"Le Saviez-vous : ".$contentsTitre,$contents,$malaboni);
-		$query2 = "update personoj set saviezvous=saviezvous+1 where id=".$persono_id;
-		$bdd->query($query2);
+		if (mailViaSES($studanto,"Le Saviez-vous : ".$contentsTitre,$contents,$malaboni)) {
+			$saviezvousAPI->registri($persono_id, $numero);
+		}
 	}
 }
 

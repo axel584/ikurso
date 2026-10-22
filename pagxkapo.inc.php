@@ -117,6 +117,9 @@ $seoKanona = SeoAPI::kanonaUrl($urlracine, isset($_SERVER["REQUEST_URI"]) ? $_SE
 		<ul id="menu_cours" class="dropdown-content">
 			<li><a href="<?php echo $vojo;?>fr/cge/intro.php" class="primaire-texte moyen">Cours en 10 leçons</a></li>
 			<li><a href="<?php echo $vojo;?>fr/gerda/index.php" class="primaire-texte moyen">Gerda malaperis</a></li>
+			<?php if ($persono_id) { ?>
+			<li><a href="<?php echo $vojo;?>eo/ppp/index.php" class="primaire-texte moyen">Paŝoj al plena posedo</a></li>
+			<?php } ?>
 			<li class="divider"></li>
 			<li><a href="<?php echo $vojo;?>fr/elsxutoj.php" class="primaire-texte moyen">Téléchargements</a></li>
 		</ul>
@@ -340,6 +343,9 @@ if ($persono_id=="") {
 				<li class="entete">COURS EN LIGNE</li>
 				<li class="retrait"><a href="<?php echo $vojo;?>fr/cge/intro.php">Cours en 10 leçons</a></li>
 				<li class="retrait"><a href="<?php echo $vojo;?>fr/gerda/index.php">Gerda malaperis</a></li>
+				<?php if ($persono_id) { ?>
+				<li class="retrait"><a href="<?php echo $vojo;?>eo/ppp/index.php">Paŝoj al plena posedo</a></li>
+				<?php } ?>
 				<li class="divider"></li>
 				<li class="retrait"><a href="<?php echo $vojo;?>helpo.php?temo=elsxutoj">Téléchargements</a></li>
 				<li class="divider"></li>

@@ -2,6 +2,7 @@
 include "../db.inc.php";
 include "../util.php";
 require_once "../api/StatistikojAPI.php";
+require_once "../api/AgordojAPI.php";
 malfermidatumbazon();
 
 function dauxroTeksto(int $sekundoj): string {
@@ -51,7 +52,7 @@ function jamFinisKurson($studanto) {
 
 
 // Premier rappel au bout de 6 jours
-$query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id where stop_rappel='N' group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 6 DAY)";
+$query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_agordoj on personoj_agordoj.persono_id=personoj.id and personoj_agordoj.agordo='RAPPEL' and personoj_agordoj.rajto=1 join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 6 DAY)";
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
  	// on verifie si l'élève a pas déjà fini son cours :
@@ -70,6 +71,8 @@ $result = $bdd->query($query);
 	// personnalisation :
 	$contents=str_replace("##ID##",$row["id"],$contents);
 	$contents=str_replace("##NOM##",$nomo,$contents);
+	$malaboni = AgordojAPI::malaboniLigilo((int)$row["id"], "RAPPEL");
+	$contents=str_replace("##MALABONI##",$malaboni,$contents);
 
 	$prochaine_lecon = "<a href='".$urlracine.redirigeSectionParUtilisateur($row["id"])."'>Continuer le cours</a>";
 	$contents=str_replace("##LIEN_COURS##",$prochaine_lecon,$contents);
@@ -77,14 +80,13 @@ $result = $bdd->query($query);
 	// ajout d'un commentaire pour les correcteurs
 	$stmt2 = $bdd->prepare("insert into komentoj (studanto, korektanto,dato,teksto) values (?,10,NOW(),'Envoi relance 6ème jour')");
 	$stmt2->execute([$row["id"]]);
-	$bdd->query($query2);
 
 	// envoie de l'email
 	//mailViaSmtp($row["retadreso"],"ikurso@esperanto-france.org","Cours d'espéranto",$contents);
-	mailViaSES($row["retadreso"],"Cours d'espéranto",$contents);
+	mailViaSES($row["retadreso"],"Cours d'espéranto",$contents,$malaboni);
 }
 // Deuxième rappel au bout de 10 jours
-$query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id where stop_rappel='N' group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 10 DAY)";
+$query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_agordoj on personoj_agordoj.persono_id=personoj.id and personoj_agordoj.agordo='RAPPEL' and personoj_agordoj.rajto=1 join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 10 DAY)";
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
  	// on verifie si l'élève a pas déjà fini son cours :
@@ -103,6 +105,8 @@ $result = $bdd->query($query);
 	// personnalisation :
 	$contents=str_replace("##ID##",$row["id"],$contents);
 	$contents=str_replace("##NOM##",$nomo,$contents);
+	$malaboni = AgordojAPI::malaboniLigilo((int)$row["id"], "RAPPEL");
+	$contents=str_replace("##MALABONI##",$malaboni,$contents);
 
 	$prochaine_lecon = "<a href='".$urlracine.redirigeSectionParUtilisateur($row["id"])."'>Continuer le cours</a>";
 	$contents=str_replace("##LIEN_COURS##",$prochaine_lecon,$contents);
@@ -110,11 +114,10 @@ $result = $bdd->query($query);
 	// ajout d'un commentaire pour les correcteurs
 	$stmt2 = $bdd->prepare("insert into komentoj (studanto, korektanto,dato,teksto) values (?,10,NOW(),'Envoi relance 10ème jour')");
 	$stmt2->execute([$row["id"]]);
-	$bdd->query($query2);
 
 		// envoie de l'email
 	//mailViaSmtp($row["retadreso"],"ikurso@esperanto-france.org","Cours d'espéranto",$contents);
-	mailViaSES($row["retadreso"],"Cours d'espéranto",$contents);
+	mailViaSES($row["retadreso"],"Cours d'espéranto",$contents,$malaboni);
  }
 // on selectionne tous les élèves qui n'ont pas envoyé de leçon depuis un an :
 $query = "SELECT korektanto,studanto,kurso FROM nuna_kurso WHERE lastdato<DATE_SUB(NOW(),INTERVAL 1 YEAR) and stato<>'H' and stato<>'F'";
@@ -183,7 +186,7 @@ mailViaSES($informistoj,"Ikurso : Statistiques quotidiennes",$contents);
 
 
 // le saviez vous
-$query="select distinct personoj_lecioneroj.persono_id,enirnomo,retadreso,saviezvous from personoj_lecioneroj  join personoj on personoj.id=personoj_lecioneroj.persono_id WHERE date(dato)=DATE_SUB(CURDATE(), INTERVAL 1 DAY)";
+$query="select distinct personoj_lecioneroj.persono_id,enirnomo,retadreso,saviezvous from personoj_lecioneroj  join personoj on personoj.id=personoj_lecioneroj.persono_id join personoj_agordoj on personoj_agordoj.persono_id=personoj.id and personoj_agordoj.agordo='SAVIEZVOUS' and personoj_agordoj.rajto=1 WHERE date(personoj_lecioneroj.dato)=DATE_SUB(CURDATE(), INTERVAL 1 DAY)";
 $result = $bdd->query($query);
 while($row = $result->fetch()) {
 	$numero = $row["saviezvous"];
@@ -200,7 +203,10 @@ while($row = $result->fetch()) {
 		$fd = fopen($filenameTitre, "r");
 		$contentsTitre = fread($fd, filesize ($filenameTitre));
 		fclose($fd);
-		mailViaSES($studanto,"Le Saviez-vous : ".$contentsTitre,$contents);
+		// lien de désinscription sous l'anecdote (#920)
+		$malaboni = AgordojAPI::malaboniLigilo((int)$persono_id, "SAVIEZVOUS");
+		$contents = str_replace("</table>", "</table>\n\t<p style=\"padding:1em 0;font-family:'PT Sans',Arial,sans-serif;font-size:0.8rem;color:#554E47;\">Vous recevez ce message parce que vous avez travaillé hier sur ikurso. Si vous ne souhaitez plus recevoir ces anecdotes, il vous suffit de cliquer sur <a href='".$malaboni."'>« Ne plus recevoir Le saviez-vous »</a>.</p>", $contents);
+		mailViaSES($studanto,"Le Saviez-vous : ".$contentsTitre,$contents,$malaboni);
 		$query2 = "update personoj set saviezvous=saviezvous+1 where id=".$persono_id;
 		$bdd->query($query2);
 	}

@@ -440,7 +440,10 @@ class AuthentificationAPI {
         try {
             $stmt = $this->conn->prepare("INSERT INTO personoj (enirnomo, pasvorto_md5, retadreso, aktivigo, ekdato) VALUES (?, ?, ?, ?, NOW())");
             $stmt->execute([$enirnomo, md5($pasvorto), $retadreso, $aktivigo]);
-            return $this->conn->lastInsertId();
+            $persono_id = $this->conn->lastInsertId();
+            require_once __DIR__ . '/AgordojAPI.php';
+            (new AgordojAPI($this->conn))->kreiDefauxltajn((int)$persono_id);
+            return $persono_id;
         } catch(PDOException $e) {
             error_log("Erreur kreiPersonon: " . $e->getMessage());
             return false;

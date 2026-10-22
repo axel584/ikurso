@@ -4542,3 +4542,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Texte « La kvara pipo » (tekstoj ppp29) : coquilles enmeditigis → enmeditiĝis et ad → aŭ, glossaire corrigé : voir sql/37-ppp29-teksto-kvara-pipo.sql
 --- Paŝoj al plena posedo : correction automatique du groupe 4 (« trouver l'erreur », 22.4 à 28.4), phrase fautive pré-remplie, réponses validées par Emmanuelle (#1083) : voir sql/38-pp-correction-automatique-groupe4.sql
 --- Correction automatique : 4 réponses attendues erronées corrigées et 226 variantes ajoutées (CG, Gerda, PP), relevées dans les réponses refusées de la prod, les plus tolérantes validées par Emmanuelle (#708) : voir sql/39-correction-automatique-variantes-708.sql
+--- Préférences d'envoi des mails non sollicités (rappels, « Le saviez-vous »), une ligne par personne et par réglage (#920) : voir sql/40-personoj-agordoj-920.sql

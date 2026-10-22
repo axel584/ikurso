@@ -98,6 +98,18 @@ if ($celpersono["sistemo"]!=$sistemo) {
    $stmt->execute([$sistemo, $celpersono_id]);
 }
 
+if ($celpersono_id!="" && isset($_POST["celenirnomo"])) {
+   // préférences d'envoi des mails (#920), par exemple pour un élève qui répond au mail au lieu de cliquer sur le lien
+   require_once "api/AgordojAPI.php";
+   $agordojAPI = new AgordojAPI($bdd);
+   foreach (array("RAPPEL" => "stopRappel", "SAVIEZVOUS" => "stopSaviezvous") as $agordo => $kampo) {
+      $rajto = !isset($_POST[$kampo]);
+      if ($agordojAPI->sxangxi((int)$celpersono_id, $agordo, $rajto)) {
+         protokolo($celpersono_id, "MALABONO", $celpersono["enirnomo"].($rajto ? " reçoit de nouveau " : " ne reçoit plus ").$agordo." (administrateur ".$persono["enirnomo"].")");
+      }
+   }
+}
+
 if ($celpersono["stop_info"]!=$stopInfo) {
 	// update en la normala datumbazo
    $stmt = $bdd->prepare("update personoj set stop_info=? where id=?");

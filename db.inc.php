@@ -61,7 +61,10 @@ function kreiPersonon($enirnomo,$pasvorto,$retadreso,$aktivigo) {
     global $bdd;
     $stmt = $bdd->prepare("insert into personoj (enirnomo,pasvorto_md5,retadreso,aktivigo,ekdato) values (?,?,?,?,now())");
     $stmt->execute(array($enirnomo,md5($pasvorto),$retadreso,$aktivigo));
-    return $bdd->lastInsertId();
+    $persono_id = $bdd->lastInsertId();
+    require_once __DIR__."/api/AgordojAPI.php";
+    (new AgordojAPI($bdd))->kreiDefauxltajn((int)$persono_id);
+    return $persono_id;
 }
 
 // variante de la version au dessus uniquement pour le cours
@@ -69,7 +72,10 @@ function kreiPersononKurso($enirnomo,$pasvorto,$retadreso,$aktivigo) {
         global $bdd;
      $stmt = $bdd->prepare("insert into personoj (enirnomo,pasvorto_md5,retadreso,aktivigo,ekdato,kurso) values (?,?,?,?,now(),'KE')");
      $stmt->execute(array($enirnomo,md5($pasvorto),$retadreso,$aktivigo));
-     return $bdd->lastInsertId();
+     $persono_id = $bdd->lastInsertId();
+     require_once __DIR__."/api/AgordojAPI.php";
+     (new AgordojAPI($bdd))->kreiDefauxltajn((int)$persono_id);
+     return $persono_id;
 }
 
 function updateAktivigo($retadreso,$aktivigo) {

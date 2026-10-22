@@ -156,7 +156,9 @@ else {
 	$enirnomo=$persono["enirnomo"];
 }
 
-function mailViaSES($retadreso,$objekto,$contentsHtml) {
+// $malaboniLigilo : lien de désinscription des mails non sollicités (#920), ajouté en en-tête
+// pour que la messagerie affiche son propre bouton « se désabonner » (RFC 8058)
+function mailViaSES($retadreso,$objekto,$contentsHtml,$malaboniLigilo="") {
     global $hostSmtpSES,$portSmtpSES,$userSES,$passwordSES;
     $mail = new PHPMailer(true);
     $mail->CharSet = 'UTF-8';
@@ -199,6 +201,10 @@ function mailViaSES($retadreso,$objekto,$contentsHtml) {
         $mail->isHTML(true);
         $mail->Subject = $objekto;
         $mail->Body = $contentsHtml;
+        if ($malaboniLigilo!="") {
+            $mail->addCustomHeader("List-Unsubscribe", "<".$malaboniLigilo.">");
+            $mail->addCustomHeader("List-Unsubscribe-Post", "List-Unsubscribe=One-Click");
+        }
         
         $mail->send();
         return 1;

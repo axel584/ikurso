@@ -15,11 +15,11 @@ if (count($elementNaskigxdato)==3) {
 } else {
 	$naskigxdato = "";
 }
-if ($persono["stop_rappel"]=="J") {
-	$checkedStopRappel = " checked ";
-} else {
-	$checkedStopRappel = "";
-}
+// préférences d'envoi des mails (#920)
+require_once "api/AgordojAPI.php";
+$agordoj = (new AgordojAPI($bdd))->legi((int)$persono_id);
+$checkedStopRappel = $agordoj["RAPPEL"] ? "" : " checked ";
+$checkedStopSaviezvous = $agordoj["SAVIEZVOUS"] ? "" : " checked ";
 
 
 if ($persono["stop_info"]=="J") {
@@ -114,6 +114,10 @@ $checkedAboneEsperantoAktiv = $sympa->isMember($persono['retadreso']) ? " checke
 						<label>
 							<input type="checkbox" class="filled-in" id="stopRappel" name="stopRappel" <?php echo $checkedStopRappel; ?>/>
 							<span>Je ne souhaite pas recevoir de message de rappel pour m'inviter à continuer le cours.</span>
+						</label>
+						<label>
+							<input type="checkbox" class="filled-in" id="stopSaviezvous" name="stopSaviezvous" <?php echo $checkedStopSaviezvous; ?>/>
+							<span>Je ne souhaite pas recevoir les anecdotes « Le saviez-vous ? » après chaque journée de travail.</span>
 						</label>
 						<label>
 							<input type="checkbox" class="filled-in" id="aboneEsperantoAktiv" name="aboneEsperantoAktiv" <?php echo $checkedAboneEsperantoAktiv; ?>/>

@@ -547,9 +547,21 @@ include "adminkapo.inc.php";
 							<td nowrap><input type="text" name="retadreso" size="25" value="<?php echo $celpersono["retadreso"]; ?>"></td>
 						</tr>
 						<tr>
-							<td colspan="2" class="col1">&nbsp;stop-rappel</td>
+							<td colspan="2" class="col1">&nbsp;stop-rappel / stop-saviez-vous :</td>
 							<td nowrap>
-								&nbsp;<i>(en construction)</i>
+								<?php if ($celpersono["id"]!="") {
+									// préférences d'envoi des mails (#920)
+									require_once "api/AgordojAPI.php";
+									$celagordoj = (new AgordojAPI($bdd))->legi((int)$celpersono["id"]); ?>
+								<label>
+									<input type="checkbox" class="filled-in" name="stopRappel" <?php if (!$celagordoj["RAPPEL"]) {echo "checked='checked'";}?>>
+									<span>rappels</span>
+								</label>
+								<label>
+									<input type="checkbox" class="filled-in" name="stopSaviezvous" <?php if (!$celagordoj["SAVIEZVOUS"]) {echo "checked='checked'";}?>>
+									<span>le saviez-vous</span>
+								</label>
+								<?php } ?>
 							</td>
 							<td class="col1">stop-mailing :</td>
 							<td>

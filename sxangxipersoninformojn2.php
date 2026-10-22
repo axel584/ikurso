@@ -12,6 +12,7 @@ $form_lando=$_POST["lando"];
 $form_naskigxdato=$_POST["naskigxdato"];
 $form_stopInfo=isset($_POST["stopInfo"])?"J":"N";
 $form_stopRappel=isset($_POST["stopRappel"])?"J":"N";
+$form_stopSaviezvous=isset($_POST["stopSaviezvous"]);
 $form_aboneEsperantoAktiv=isset($_POST["aboneEsperantoAktiv"]);
 $teksto="";
 
@@ -66,6 +67,15 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=4"); exit;} else {
 	if ($teksto!=""){
 		protokolo($persono_id,"UPDATE PERSO",$teksto);
 	}
+  // préférences d'envoi des mails (#920) ; modifiPersonon() garde stop_rappel à jour
+  require_once "api/AgordojAPI.php";
+  $agordojAPI = new AgordojAPI($bdd);
+  if ($agordojAPI->sxangxi((int)$persono_id, "RAPPEL", $form_stopRappel=="N")) {
+    protokolo($persono_id,"MALABONO",$persono["enirnomo"].($form_stopRappel=="N" ? " reçoit de nouveau " : " ne reçoit plus ")."RAPPEL (données personnelles)");
+  }
+  if ($agordojAPI->sxangxi((int)$persono_id, "SAVIEZVOUS", !$form_stopSaviezvous)) {
+    protokolo($persono_id,"MALABONO",$persono["enirnomo"].($form_stopSaviezvous ? " ne reçoit plus " : " reçoit de nouveau ")."SAVIEZVOUS (données personnelles)");
+  }
   modifiPersonon($persono_id,$form_sekso,$form_familinomo,$form_personnomo,$form_adreso1,$form_adreso2,$form_posxtkodo,$form_urbo,$form_lando,$form_naskigxdato_tago,$form_naskigxdato_monato,$form_naskigxdato_jaro,$form_stopInfo,$form_stopRappel);
 
   require_once "api/SympaAPI.php";

@@ -534,6 +534,11 @@ class PersonojAPI {
             $sql = "UPDATE personoj SET " . implode(', ', $update_fields) . " WHERE id = ?";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute($update_values);
+            if (array_key_exists('stop_rappel', $input)) {
+                // préférences d'envoi des mails (#920)
+                require_once __DIR__ . '/AgordojAPI.php';
+                (new AgordojAPI($this->conn))->sxangxi((int)$id, 'RAPPEL', !$input['stop_rappel']);
+            }
             
             // Récupérer les données mises à jour
             $stmt = $this->conn->prepare("SELECT 
@@ -846,7 +851,10 @@ class PersonojAPI {
         $query = "INSERT INTO personoj (enirnomo, pasvorto_md5, retadreso, aktivigo, aktivigita, ekdato) VALUES (?, ?, ?, ?, 0, NOW())";
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$enirnomo, $md5, $retadreso, $aktivigo]);
-        return $this->conn->lastInsertId();
+        $persono_id = $this->conn->lastInsertId();
+        require_once __DIR__ . '/AgordojAPI.php';
+        (new AgordojAPI($this->conn))->kreiDefauxltajn((int)$persono_id);
+        return $persono_id;
     }
 }
 ?>

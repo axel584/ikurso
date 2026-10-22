@@ -21,9 +21,10 @@ class LernantojAPI {
                     TO_DAYS(NOW()) - TO_DAYS(IF(nk.lastdato > 0, nk.lastdato, nk.ekdato)) AS tagoj,
                     p.enirnomo, p.personnomo, p.familinomo, p.naskigxdato, p.retadreso,
                     p.adreso1, p.adreso2, p.posxtkodo, p.urbo, p.lando, p.kialo,
-                    k.nomo AS kursnomo, l.titolo AS leciono_titolo
+                    k.nomo AS kursnomo, l.titolo AS leciono_titolo, pa.rajto AS rappel
              FROM nuna_kurso nk
              JOIN personoj p ON p.id = nk.studanto
+             LEFT JOIN personoj_agordoj pa ON pa.persono_id = nk.studanto AND pa.agordo = 'RAPPEL'
              LEFT JOIN kursoj k ON k.kodo = nk.kurso
              LEFT JOIN lecionoj l ON l.kurso = nk.kurso AND l.numero = nk.nunleciono
              WHERE nk.korektanto = ? AND nk.stato IN (?, ?)

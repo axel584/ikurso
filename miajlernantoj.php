@@ -117,6 +117,10 @@ function montriLernanton(array $lernanto, LernantojAPI $lernantojAPI, int $perso
 		if (trim((string)$linio)!="") $linioj[] = h($linio);
 	}
 	echo "<p class='etikedo'>Coordonnées</p><p>".implode("<br>", $linioj)."</p>";
+	if (!$eksa) {
+		// préférences d'envoi des mails (#920)
+		echo "<p>".($lernanto["rappel"] ? "Reçoit les rappels automatiques" : "<i class='material-icons tiny'>notifications_off</i> Ne reçoit pas les rappels automatiques")."</p>";
+	}
 	echo "</div>";
 	// commentaires
 	echo "<div class='col s12 m8'>";

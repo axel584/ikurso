@@ -123,10 +123,11 @@ function kalkuliStudantojn() {
 			$demando3="INSERT INTO korektebla_kurso (korektanto,kurso,kiom_lernantoj) VALUES ('$persono_id','".$row1["kodo"]."',0)";
 			$bdd->exec($demando3) or die(print_r($bdd->errorInfo()));
 		}
+		$kiom_lernantoj = $row3 ? $row3["kiom_lernantoj"] : 0; // ligne créée juste au-dessus avec 0
 		echo "\t<td>";
-		if ($row2['kiom'] > $row3["kiom_lernantoj"]) {
-			echo "<span style=\"color:red\">".$row3["kiom_lernantoj"]."</span>";
-		}else {echo $row3["kiom_lernantoj"];}
+		if ($row2['kiom'] > $kiom_lernantoj) {
+			echo "<span style=\"color:red\">".$kiom_lernantoj."</span>";
+		}else {echo $kiom_lernantoj;}
 		echo "</td>\n";
 		echo "\t</tr>\n";
 	}

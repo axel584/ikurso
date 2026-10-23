@@ -135,6 +135,8 @@ function listi_Korektantoj_laux_kurso($studanto_id,$kurso,$korektanto_id) {
 	global $bdd;
 	echo "<select name=\"korektanto_id\">";
 	$trovita_korektanto="ne";
+	$lernanteblecoj = array();
+	$procentajxo = array();
 	// repère la dliste du nombre d'élèves qu'un correcteur accepte de corriger. (ex. : correcteur 1 : 8 élèves)
 	$demando =  "select personoj.id,personoj.enirnomo,sum(kiom_lernantoj) as kiom from personoj,korektebla_kurso where personoj.id=korektebla_kurso.korektanto and korektebla_kurso.kurso='".$kurso."' group by enirnomo";
 	//echo "sql : ".$demando."<br>\n";
@@ -739,6 +741,7 @@ include "adminkapo.inc.php";
 										<img src="bildoj/filesaveas.png"  align="middle"></a></td>
 									<td>
 									<?php
+										$plejTaugaKorektanto = "";
 										if ($celpersono["kurso"]!="" && $celpersono["kurso"]!="--") {
 											$plejTaugaKorektanto = troviPlejTauganKorektanton($celpersono["id"],$celpersono["kurso"]);
 											$korektanto = apartigiPersonon($plejTaugaKorektanto);

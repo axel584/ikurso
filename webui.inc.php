@@ -48,8 +48,8 @@ function getTitoloLecionero($kurso,$leciono,$lecionero) {
 	$result = $bdd->prepare("SELECT lecioneroj.titolo,lecioneroj.dauxro FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? and lecioneroj.ordo=?");
 	$result->execute(array($leciono,$kurso,$lecionero));
 	$row = $result->fetch();
-	$titolo = $row['titolo'];
-	$dauxro = $row['dauxro'];
+	$titolo = $row ? $row['titolo'] : "";
+	$dauxro = $row ? $row['dauxro'] : "";
 
 	
 	echo '<div class="impression right"><a href="javascript:window.print()" class="waves-effect waves-light btn-floating small blue"><i class="material-icons">print</i></a></div>';
@@ -194,9 +194,9 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	$result = $bdd->prepare("SELECT lecioneroj.id,lecioneroj.titolo,ordo,lecionoj.retpagxo,lecioneroj.tipo,lecioneroj.lasta FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? and lecioneroj.ordo=? order by ordo ASC");
 	$result->execute(array($leciono,$kurso,$lecionero));
 	$row = $result->fetch();
-	$tipo = $row["tipo"];
-	$lasta = $row["lasta"];
-	$lecionero_id = $row["id"];
+	$tipo = $row ? $row["tipo"] : null;
+	$lasta = $row ? $row["lasta"] : null;
+	$lecionero_id = $row ? $row["id"] : null;
 	// si l'élève n'est pas enregistré
 	if ($persono_id!="") { 
 		// on n'affiche le bouton DEMANDER UN CORRECTEUR que pour les élèves
@@ -1211,6 +1211,10 @@ function statEvolution($persono_id,$nbjours,$nbeleves) {
 	$query = "SELECT personoj_lecioneroj.lecionero_id,lecionoj.kurso FROM personoj_lecioneroj join lecioneroj on lecioneroj.id=personoj_lecioneroj.lecionero_id join lecionoj on lecionoj.id=lecioneroj.leciono_id  WHERE personoj_lecioneroj.persono_id=".(int)$persono_id." order by dato desc limit 1";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	$row = $result->fetch();
+	if (!$row) { // aucune section terminée : graphique vide
+		echo "['Date']";
+		return;
+	}
 	$derniereSection = $row["lecionero_id"];
 	$dernierCours= $row["kurso"];
 	// on regarde les autres élèves qui ont fait cette leçon

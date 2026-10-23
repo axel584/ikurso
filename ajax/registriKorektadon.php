@@ -55,15 +55,16 @@ foreach(array_keys($korektado) as $respondo_id) {
 	}
 	if (!$bonaRespondo) { $bonaRespondo = 0;}
 
-	$korekto = $korektado[$respondo_id]['korekto'];
-	$poentoj = $korektado[$respondo_id]['noto'];
+	// champs absents du formulaire (question sans note ou sans commentaire) : NULL en base
+	$korekto = isset($korektado[$respondo_id]['korekto']) ? $korektado[$respondo_id]['korekto'] : null;
+	$poentoj = isset($korektado[$respondo_id]['noto']) ? $korektado[$respondo_id]['noto'] : null;
 	$requete = $bdd->prepare('update respondoj set gxusta=:bonaRespondo,korekto=:korekto,poentoj=:poentoj where id=:respondo_id');
 	$requete->execute(array('bonaRespondo'=>$bonaRespondo,'korekto'=>$korekto,'poentoj'=>$poentoj,'respondo_id'=>$respondo_id));
 }
 
 // sauvegarde de l'introduction/conclusion sur la leçon de l'élève
 $requete = $bdd->prepare('update personoj_lecionoj set enkonduko=:enkonduko,konkludo=:konkludo,korektita=1 where persono_id=:persono_id and leciono_id=:leciono_id');
-$requete->execute(array('enkonduko'=>$_POST['enkonduko'],'konkludo'=>$_POST['konkludo'],'persono_id'=>$studanto_id,'leciono_id'=>$leciono_id));
+$requete->execute(array('enkonduko'=>isset($_POST['enkonduko'])?$_POST['enkonduko']:null,'konkludo'=>isset($_POST['konkludo'])?$_POST['konkludo']:null,'persono_id'=>$studanto_id,'leciono_id'=>$leciono_id));
 
 // envoyer le mail pour prévenir l'élève
 if (!$neSendiRetmesagxon) {

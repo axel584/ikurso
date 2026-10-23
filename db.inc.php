@@ -294,7 +294,7 @@ function getPrefixeCours($kurso) {
 }
 
 function getCoursElLernanto($lernanto_id) {
-    global $bdd;
+    global $bdd, $vojo;
     $demando = "select stato,nunleciono,kurso,nunleciono from nuna_kurso where studanto=".$lernanto_id;
     $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
     $lasta = ""; $finita = False;

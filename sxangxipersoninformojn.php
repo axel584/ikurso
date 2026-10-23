@@ -9,7 +9,7 @@ $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 include "pagxkapo.inc.php";
 // on converti la chaîne date en truc joliment écrit :
 $nomMois = array("01"=>"Janvier","02"=>"Février","03"=>"Mars","04"=>"Avril","05"=>"Mai","06"=>"Juin","07"=>"Juillet","08"=>"Août","09"=>"Septembre","10"=>"Octobre","11"=>"Novembre","12"=>"Décembre");
-$elementNaskigxdato = explode("-",$persono["naskigxdato"]);
+$elementNaskigxdato = explode("-",(string)$persono["naskigxdato"]);
 if (count($elementNaskigxdato)==3) {
 	$naskigxdato = $elementNaskigxdato[0]."-".$elementNaskigxdato[1]."-".$elementNaskigxdato[2];
 } else {
@@ -68,11 +68,11 @@ $checkedAboneEsperantoAktiv = $sympa->isMember($persono['retadreso']) ? " checke
 
 			<div class="row">
 				<span class="input-field col s12">
-					<input type="text" name="adreso1" value="<?php echo stripslashes($persono['adreso1']);?>" />
+					<input type="text" name="adreso1" value="<?php echo stripslashes((string)$persono['adreso1']);?>" />
 					<label for="adreso1">Adresse</label>
 				</span>
 				<span class="input-field col s12">
-					<input type="text" name="adreso2" value="<?php echo stripslashes($persono['adreso2']);?>" />
+					<input type="text" name="adreso2" value="<?php echo stripslashes((string)$persono['adreso2']);?>" />
 					<label for="adreso2">Adresse (suite)</label>
 				</span>
 			</div>

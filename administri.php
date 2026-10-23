@@ -104,7 +104,7 @@ function listi_kursojn ($kurso) {
 function afixsi_naskigxdaton ($dato) {
 	global $aliavidigito;
 	//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $dato,$nskdt);
-	$nskdt = explode("-",$dato);
+	$nskdt = explode("-",(string)$dato);
 	if (count($nskdt)==1) {$nskdt = array("00","00","0000");}
 	echo "<input type=\"text\" name=\"naskigxdato_tago\" size=\"3\" maxlength=\"2\" value=\"";
 	if ($nskdt[2]!="00") {echo $nskdt[2];}
@@ -255,7 +255,7 @@ function listi_S_laux_K($korektanto_id) {
 		// colonne 1: coordonnees 
 		echo "<div class='lernanto gauche' style='border:solid #888;border-width:0 1px 1px 0;margin-right:10px;'>";
 		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["naskigxdato"],$nskdt);
-		$nskdt=explode("-", $row["naskigxdato"]);
+		$nskdt=explode("-",(string)$row["naskigxdato"]);
 		echo $nskdt[2]."/".$nskdt[1]."/".$nskdt[0]."<br>";
 		echo $row["adreso1"]."<br>";
 		echo $row["adreso2"]."<br>";
@@ -269,7 +269,7 @@ function listi_S_laux_K($korektanto_id) {
 		echo "<em>cours suivi : </em><b>".$row2["kursnomo"]."</b><br>";	
 		echo "<em>inscription le : </em>\n";
 		//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["ekdato"],$ekdt);
-		$ekdt = explode('-',$row["ekdato"]);
+		$ekdt = explode('-',(string)$row["ekdato"]);
 		echo $ekdt[2]."/".$ekdt[1]."/".$ekdt[0]."<br>\n";
 		// derniere lecon (si une derniere lecon est en cours) :
 		$demando3="select lecionoj.titolo, lecionoj.numero from lecionoj where lecionoj.kurso='".$row["kurso"]."' and lecionoj.numero='".$row['nunleciono']."'";
@@ -281,7 +281,7 @@ function listi_S_laux_K($korektanto_id) {
 		}
 		else{
 			//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $row["lastdato"],$lstdt);
-			$lstdt = explode('-',$row["lastdato"]);
+			$lstdt = explode('-',(string)$row["lastdato"]);
 			echo $lstdt[2]."/".$lstdt[1]."/".$lstdt[0]."<br>\n";
 		}
 
@@ -289,7 +289,7 @@ function listi_S_laux_K($korektanto_id) {
 		// colonne 3: commentaires
 		echo "</div><div class='lernanto' clear='both'>";
 		echo "<em>commentaire de l’élève :</em> ";
-		echo stripslashes($row['kialo'])."<br>";
+		echo stripslashes((string)$row['kialo'])."<br>";
 
 		echo "<em>commentaires du correcteur :</em><br>";
 		$demando4 = "select * from komentoj where komentoj.studanto='".$row["id"]."'";
@@ -579,7 +579,7 @@ include "adminkapo.inc.php";
 							<td nowrap colspan="2" class="col1">Inscription : </td>
 							<td nowrap>
 								<?php //ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $celpersono["ekdato"],$ekdt);
-									$ekdt = explode("-",$celpersono["ekdato"]);
+									$ekdt = explode("-",(string)$celpersono["ekdato"]);
 									if (count($ekdt)==3) { // on affiche la date que si on arrive à la découper en 3 (jours, mois, année)
 										echo $ekdt[2]." ";
 										simplaVorto("nomo","monatoj"," where kodo='".$ekdt[1]."'");
@@ -606,7 +606,7 @@ include "adminkapo.inc.php";
 								Commentaire de l'&eacute;l&egrave;ve :
 							</td>
 							<td colspan="3"  valign="top">
-								<textarea name="kialo" cols="90" rows="6"><?php echo stripslashes($celpersono['kialo'])?></textarea>
+								<textarea name="kialo" cols="90" rows="6"><?php echo stripslashes((string)$celpersono['kialo'])?></textarea>
 							</td>
 						</tr>
 					</table>
@@ -699,7 +699,7 @@ include "adminkapo.inc.php";
 											echo $nuna_kurso['lecionoj_titolo'];
 											$lastdato=$nuna_kurso['lastdato'];
 											//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $lastdato,$lstdt);
-											$lstdt=explode("-", $lastdato);
+											$lstdt=explode("-",(string)$lastdato);
 											echo " (".$lstdt[2].".".$lstdt[1].".".$lstdt[0].")";
 										}
 									?>
@@ -716,7 +716,7 @@ include "adminkapo.inc.php";
 												echo $nuna_kurso['lecionoj_titolo'];
 												$lastdato=$nuna_kurso['lastdato'];
 												//ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $lastdato,$lstdt);
-												$lstdt=explode("-", $lastdato);
+												$lstdt=explode("-",(string)$lastdato);
 												echo " (".$lstdt[2].".".$lstdt[1].".".$lstdt[0].")";
 											}
 											if ($nuna_kurso['stato']=='F') {

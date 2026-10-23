@@ -228,7 +228,7 @@ if (isset($_GET["aktivigo"])) {
 				<div class="row">
 				<span class="col s4 label">Date de naissance :</span>
 				<span class="col s6">
-					<?php $nskdt = explode("-",$persono['naskigxdato']);
+					<?php $nskdt = explode("-",(string)$persono['naskigxdato']);
 						if (count($nskdt)==3) {
 							if (($nskdt[0]!="00")&&($nskdt[2]!="0000")) {
 								echo $nskdt[2]." ";

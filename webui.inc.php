@@ -140,7 +140,7 @@ function getLecionoEnhavo($kurso,$leciono) {
 	$result = $bdd->prepare("SELECT lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,'' as persono_id FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? order by ordo");
 	$result->execute(array($leciono,$kurso));
 	while ($row = $result->fetch()) {
-		echo '<li id="'.$leciono.'-'.$row['ordo'].' '.$tipoLecionero.'"><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a></li>';
+		echo '<li id="'.$leciono.'-'.$row['ordo'].' "><a href="'.$row['retpagxo'].'?section='.$row['ordo'].'">'.$leciono.'.'.$row['ordo'].' '.$row['titolo'].'</a></li>';
 	}
 	echo '</li>';
 								
@@ -387,11 +387,11 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 			// afficher ici le contenu de la base pour cet élève
 			$resultRespondo = $bdd->prepare("select id,respondo,korekto,gxusta from respondoj where ekzercero_id=? and persono_id=?");
 			$resultRespondo->execute(array($rowEkzercero["id"],$persono_id));
-			$rowRespondo = $resultRespondo->fetch();
-			if ($rowRespondo["respondo"]!=null) {
+			$rowRespondo = $resultRespondo->fetch() ?: null; // pas encore de réponse : null
+			if ($rowRespondo && $rowRespondo["respondo"]!=null) {
 				$respondo= $rowRespondo["respondo"];
 			}
-			if ($rowRespondo["gxusta"]==1) {
+			if ($rowRespondo && $rowRespondo["gxusta"]==1) {
 				$valid="valid";
 				$iconprefix="<i class=\"material-icons prefix\" style=\"color:green\">check</i>";
 			} 
@@ -453,7 +453,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 				echo " class='materialize-textarea validate ".$valid." ".$styleKorektebla."'>";
 				echo $respondo;
 				echo "</textarea>";
-				if ($rowRespondo['korekto']) {echo "<div class='card green lighten-4 card-content'>".$rowRespondo['korekto']."</div>";}
+				if (!empty($rowRespondo['korekto'])) {echo "<div class='card green lighten-4 card-content'>".$rowRespondo['korekto']."</div>";}
 				echo "</div>";
 			} else { // cas des types d'exercice sur des champs input
 				echo "<div class='input-field col s12'>";
@@ -467,7 +467,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 				
 				echo "\" class='validate ".$valid." ".$styleKorektebla."'";
 				echo ">";
-				if ($rowRespondo['korekto']) {echo "<div class='card green lighten-4 card-content'>".$rowRespondo['korekto']."</div>";}
+				if (!empty($rowRespondo['korekto'])) {echo "<div class='card green lighten-4 card-content'>".$rowRespondo['korekto']."</div>";}
 				echo "</div>";
 			}
 		}

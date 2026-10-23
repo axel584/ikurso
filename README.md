@@ -8,7 +8,7 @@ Le cours initial est dans domaine public et les modifications qui y ont été ap
 
 Nous avons besoin d'aide pour un certain nombre d'améliorations que nous avons en tête (voir la liste des issues pour le détail). Nous avons taggué comme "facile" celles qui sont plus abordables à des débutants dans le projet.
 
-1. INSTALLER EN LOCAL UNE VERSION DU SITE UTILISABLE, il vous suffit d'installer un serveur apache+php+mysql (Wamp fonctionne bien sous Windows).
+1. INSTALLER EN LOCAL UNE VERSION DU SITE UTILISABLE, il vous suffit d'installer un serveur apache+php+mysql (Wamp fonctionne bien sous Windows). Le site tourne en PHP 8.1 (en prod depuis le 21/10/2026, voir `AGENTS.md`) ; le plus simple est d’utiliser Docker (`docker compose up --build`).
 
 2. TÉLÉCHARGER LE COURS. Pour cela vous suffit de le cloner avec la commande : 
 

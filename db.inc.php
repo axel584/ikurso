@@ -241,8 +241,8 @@ function konstruiListon($tabelo,$valuo,$vidigito,$kie) {
 
 	 $i=0;
 	 while($row = $result->fetch()) {
-	 	$menuo[$i]["valuo"] = al_utf8($row["$valuo"]);
-	 	$menuo[$i]["vidigito"] = al_utf8($row["$vidigito"]);
+	 	$menuo[$i]["valuo"] = $row["$valuo"];
+	 	$menuo[$i]["vidigito"] = $row["$vidigito"];
 	 	$i++;
 	}
 	return $menuo;

@@ -11,6 +11,8 @@ if ($lernantaRespondo=="" || $studanto==0) {
 	exit;
 }
 
+$gxusta=null; // exercice non corrigé automatiquement : ni juste ni faux
+$respondo=null;
 if ($korekteblaEkzerco) {
 	$query="SELECT respondo,normaligita FROM ekzerceroj where id=?";
 	$stmt = $bdd->prepare($query);

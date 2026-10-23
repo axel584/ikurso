@@ -2,7 +2,7 @@
 include "util.php";
 $pagxtitolo="Détails leçon";
 $korpo="informoj";
-$persono_id=$_SESSION["persono_id"];
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";

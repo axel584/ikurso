@@ -7,7 +7,7 @@ $kurso=isset($_REQUEST["kurso"])?$_REQUEST["kurso"]:"";
 // $kurso sert aussi à construire des noms de fichiers de mails : code alphanumérique uniquement
 if (!preg_match('/^[A-Za-z0-9]{1,10}$/',$kurso)) {header("Location:index.php?erarkodo=4"); exit;}
 $pagxtitolo="Donn&eacute;es personnelles";
-$persono_id=$_SESSION["persono_id"];
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 $celpersono_id=isset($_REQUEST["celpersono_id"])?(int)$_REQUEST["celpersono_id"]:0;

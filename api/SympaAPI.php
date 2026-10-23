@@ -24,6 +24,7 @@ if (class_exists("SoapClient")) {
             $this->host = $host;
         }
 
+        #[\ReturnTypeWillChange] // signature de PHP 7.4 conservée (commentaire pour PHP 7.4)
         public function __doRequest($request, $location, $action, $version, $one_way = 0) {
             $context = stream_context_create(array(
                 "http" => array(

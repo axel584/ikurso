@@ -90,11 +90,6 @@ if ($celpersono["retadreso"]!=$retadreso) {
    $stmt = $bdd->prepare("update personoj set retadreso=? where id=?");
    $stmt->execute([$retadreso, $celpersono_id]);
 }
-if ($celpersono["sistemo"]!=$sistemo) {
-	// update en la normala datumbazo
-   $stmt = $bdd->prepare("update personoj set sistemo=? where id=?");
-   $stmt->execute([$sistemo, $celpersono_id]);
-}
 
 if ($celpersono_id!="" && isset($_POST["celenirnomo"])) {
    // préférences d'envoi des mails (#920), par exemple pour un élève qui répond au mail au lieu de cliquer sur le lien

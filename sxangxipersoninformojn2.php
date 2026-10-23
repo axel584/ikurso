@@ -1,6 +1,6 @@
 <?php
 include "util.php";
-$persono_id=$_SESSION["persono_id"];
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $form_sekso=isset($_POST["sekso"])?$_POST["sekso"]:"";
 $form_familinomo=$_POST["familinomo"];
 $form_personnomo=$_POST["personnomo"];

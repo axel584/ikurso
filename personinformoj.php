@@ -2,7 +2,7 @@
 include "util.php";
 $pagxtitolo="Données personnelles";
 $korpo="informoj";
-$persono_id=$_SESSION["persono_id"];
+$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 include "pagxkapo.inc.php";

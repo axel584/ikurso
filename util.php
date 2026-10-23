@@ -102,19 +102,6 @@ function kontroliRespondon($lernantaRespondo,$bonaRespondo) {
 	}
 }
 
-/*
- * conversion en utf8 (si page en utf8)
-*/
-function al_utf8($var) {
-	global $defaultCharset;
-	if ($defaultCharset=="utf-8") $var = utf8_encode($var);
-	return $var;
-}
-function el_utf8($var) {
-	global $defaultCharset;
-	if ($defaultCharset=="utf-8") $var = utf8_decode($var);
-	return $var;
-}
 
 
 function kalkuliStudantojn() {

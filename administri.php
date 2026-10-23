@@ -547,29 +547,23 @@ include "adminkapo.inc.php";
 							<td nowrap><input type="text" name="retadreso" size="25" value="<?php echo $celpersono["retadreso"]; ?>"></td>
 						</tr>
 						<tr>
-							<td colspan="2" class="col1">&nbsp;stop-rappel / stop-saviez-vous :</td>
+							<td colspan="2" class="col1">&nbsp;Mails reçus :</td>
 							<td nowrap>
 								<?php if ($celpersono["id"]!="") {
 									// préférences d'envoi des mails (#920)
 									require_once "api/AgordojAPI.php";
 									$celagordoj = (new AgordojAPI($bdd))->legi((int)$celpersono["id"]); ?>
 								<label>
-									<input type="checkbox" class="filled-in" name="stopRappel" <?php if (!$celagordoj["RAPPEL"]) {echo "checked='checked'";}?>>
+									<input type="checkbox" class="filled-in" name="rappel" <?php if ($celagordoj["RAPPEL"]) {echo "checked='checked'";}?>>
 									<span>rappels</span>
 								</label>
 								<label>
-									<input type="checkbox" class="filled-in" name="stopSaviezvous" <?php if (!$celagordoj["SAVIEZVOUS"]) {echo "checked='checked'";}?>>
+									<input type="checkbox" class="filled-in" name="saviezvous" <?php if ($celagordoj["SAVIEZVOUS"]) {echo "checked='checked'";}?>>
 									<span>le saviez-vous</span>
 								</label>
 								<?php } ?>
 							</td>
-							<td class="col1">stop-mailing :</td>
-							<td>
-								<label>
-									<input type="checkbox" class="filled-in" name="stopInfo" <?php if ($celpersono["stop_info"]=="J") {echo "checked='checked'";}?>>
-									<span></span>
-								</label>
-							</td>
+							<td colspan="2"></td>
 						</tr>
 						<tr>
 							<td nowrap colspan="2" class="col1">Date de naissance :</td>

@@ -296,8 +296,7 @@ if ($persono['lando']=="FR" && $persono['posxtkodo']!="") {
 			<div class="row">
 				<div class="col s12">
 					<p class="noto">
-					Les informations vous concernant sont destinées à Espéranto-Jeunes et Espéranto-France. 
-					Nous pouvons être amenés à les transmettre à des tiers (association espérantophone régionale ou thématique, autres membres d’Espéranto-France ou Espéranto-Jeunes) ou utiliser ces coordonnées pour vous envoyer des informations concernant l’association par Internet.
+					Les informations vous concernant sont destinées à Espéranto-France et Espéranto-Jeunes. Elles ne sont pas transmises à des tiers.
 					</p>
 					<p  class="noto">Vous disposez d’un droit d’accès, de modification, de rectification et de suppression des données 
 					qui vous concernent (art. 34 de la loi «Informatique et Libertés») sur la page suivante.

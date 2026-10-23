@@ -18,15 +18,8 @@ if (count($elementNaskigxdato)==3) {
 // préférences d'envoi des mails (#920)
 require_once "api/AgordojAPI.php";
 $agordoj = (new AgordojAPI($bdd))->legi((int)$persono_id);
-$checkedStopRappel = $agordoj["RAPPEL"] ? "" : " checked ";
-$checkedStopSaviezvous = $agordoj["SAVIEZVOUS"] ? "" : " checked ";
-
-
-if ($persono["stop_info"]=="J") {
-	$checkedStopInfo = " checked ";
-} else {
-	$checkedStopInfo = "";
-}
+$checkedRappel = $agordoj["RAPPEL"] ? " checked " : "";
+$checkedSaviezvous = $agordoj["SAVIEZVOUS"] ? " checked " : "";
 
 require_once "api/SympaAPI.php";
 $sympa = new SympaAPI();
@@ -105,19 +98,15 @@ $checkedAboneEsperantoAktiv = $sympa->isMember($persono['retadreso']) ? " checke
 				<div class="row">
 					<div class="col s12">
 						<p class="noto">
-						Les informations vous concernant sont destinées à Espéranto-Jeunes et Espéranto-France. 
-						Nous pouvons être amenés à les transmettre à des tiers (association espérantophone régionale ou thématique, autres membres d’Espéranto-France ou Espéranto-Jeunes) ou utiliser ces coordonnées pour vous envoyer des informations concernant l’association par Internet.<br>
+						Les informations vous concernant sont destinées à Espéranto-France et Espéranto-Jeunes. Elles ne sont pas transmises à des tiers.<br>
+						Mails que je souhaite recevoir :<br>
 						<label>
-							<input type="checkbox" class="filled-in" id="stopInfo" name="stopInfo" <?php echo $checkedStopInfo; ?>/>
-							<span>Je ne souhaite pas que mes données personnelles soit transmises à tiers, ni utilisées pour m’envoyer des informations sur l’association.</span>
+							<input type="checkbox" class="filled-in" id="rappel" name="rappel" <?php echo $checkedRappel; ?>/>
+							<span>Je souhaite recevoir des messages de rappel pour m'inviter à continuer le cours.</span>
 						</label>
 						<label>
-							<input type="checkbox" class="filled-in" id="stopRappel" name="stopRappel" <?php echo $checkedStopRappel; ?>/>
-							<span>Je ne souhaite pas recevoir de message de rappel pour m'inviter à continuer le cours.</span>
-						</label>
-						<label>
-							<input type="checkbox" class="filled-in" id="stopSaviezvous" name="stopSaviezvous" <?php echo $checkedStopSaviezvous; ?>/>
-							<span>Je ne souhaite pas recevoir les anecdotes « Le saviez-vous ? » après chaque journée de travail.</span>
+							<input type="checkbox" class="filled-in" id="saviezvous" name="saviezvous" <?php echo $checkedSaviezvous; ?>/>
+							<span>Je souhaite recevoir les anecdotes « Le saviez-vous ? » après chaque journée de travail.</span>
 						</label>
 						<label>
 							<input type="checkbox" class="filled-in" id="aboneEsperantoAktiv" name="aboneEsperantoAktiv" <?php echo $checkedAboneEsperantoAktiv; ?>/>

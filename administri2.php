@@ -26,8 +26,6 @@ $rajtoj=$_POST["rajtoj"];
 $kialo=addslashes($_POST["kialo"]);
 $noto=isset($_POST["noto"])?$_POST["noto"]:"";
 $kurso=$_POST["kurso"];
-$stopInfo=isset($_POST["stopInfo"])?$_POST["stopInfo"]:"";
-if ($stopInfo=='on') {$stopInfo='J';} else {$stopInfo='N';}
 
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Last-Modified: ".gmdate("D,d M Y H:i:s")." GMT");
@@ -102,18 +100,12 @@ if ($celpersono_id!="" && isset($_POST["celenirnomo"])) {
    // préférences d'envoi des mails (#920), par exemple pour un élève qui répond au mail au lieu de cliquer sur le lien
    require_once "api/AgordojAPI.php";
    $agordojAPI = new AgordojAPI($bdd);
-   foreach (array("RAPPEL" => "stopRappel", "SAVIEZVOUS" => "stopSaviezvous") as $agordo => $kampo) {
-      $rajto = !isset($_POST[$kampo]);
+   foreach (array("RAPPEL" => "rappel", "SAVIEZVOUS" => "saviezvous") as $agordo => $kampo) {
+      $rajto = isset($_POST[$kampo]);
       if ($agordojAPI->sxangxi((int)$celpersono_id, $agordo, $rajto)) {
          protokolo($celpersono_id, "MALABONO", $celpersono["enirnomo"].($rajto ? " reçoit de nouveau " : " ne reçoit plus ").$agordo." (administrateur ".$persono["enirnomo"].")");
       }
    }
-}
-
-if ($celpersono["stop_info"]!=$stopInfo) {
-	// update en la normala datumbazo
-   $stmt = $bdd->prepare("update personoj set stop_info=? where id=?");
-   $stmt->execute([$stopInfo, $celpersono_id]);
 }
 
 if ($celpersono["naskigxdato"]!=$naskigxdato_jaro."-".$naskigxdato_monato."-".$naskigxdato_tago) { 

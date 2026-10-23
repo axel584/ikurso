@@ -3,8 +3,9 @@
 
 class SessionAuth {
 
-    // Durée de vie de la session : 24 h
-    const LIFETIME = 86400;
+    // Durée de vie de la session : 30 jours (cookie, et fichier de session côté serveur :
+    // phpsessionclean lit session.gc_maxlifetime dans /etc/php/8.1/fpm/php.ini, qui doit valoir la même durée)
+    const LIFETIME = 2592000;
 
     private static function isHttps() {
         return (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')

@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # config.php et js/config.js ne sont pas versionnés : valeurs de l'environnement Docker,
       # sans aucun secret de prod (les mails partent dans MailHog, Sympa est injoignable).
@@ -69,7 +69,7 @@ jobs:
           docker exec ikurso_mysql mysql -uikurso_user -pikurso_pass ikurso -N -e 'SELECT COUNT(*) FROM personoj'
           curl --fail --silent --retry 30 --retry-delay 2 --retry-all-errors -o /dev/null http://localhost:8080/index.php -L
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -91,7 +91,7 @@ jobs:
 
       - name: Rapport Playwright
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: playwright-report
           path: |

@@ -48,7 +48,7 @@ L'administration et l'édition du contenu (redaktilo, statistiques) passent en d
 | P1 | Mauvais mot de passe refusé | ✅ |
 | P1 | Identifiant inconnu refusé | ✅ |
 | P1 | La déconnexion ferme la session | ✅ |
-| P2 | Connexion avec l'adresse mail au lieu de l'identifiant (si le site l'accepte) | à vérifier |
+| P2 | Connexion avec l'adresse mail au lieu de l'identifiant (#516) | ✅ |
 
 ### 2. Inscription — `tests/inscription.spec.ts` ✅
 | Prio | Scénario | État |
@@ -57,14 +57,14 @@ L'administration et l'édition du contenu (redaktilo, statistiques) passent en d
 | P1 | Adresse mail déjà utilisée refusée | ✅ |
 | P1 | Identifiant déjà pris refusé | ✅ |
 | P1 | Un compte non activé ne peut pas se connecter (bouton « renvoyer » visible) | ✅ |
-| P2 | « Renvoyer le mail d'activation » envoie un nouveau mail qui fonctionne | à faire |
-| P2 | Lien d'activation avec un mauvais code → message d'erreur | à faire |
+| P2 | « Renvoyer le mail d'activation » envoie un nouveau mail qui fonctionne | ✅ |
+| P2 | Lien d'activation avec un mauvais code → message d'erreur | ✅ |
 | P3 | Inscription au cours « Kurso de Esperanto » (`aligxi.php`) | à faire |
 
-### 3. Mot de passe oublié — `tests/mot-de-passe.spec.ts`
+### 3. Mot de passe oublié — `tests/mot-de-passe.spec.ts` ✅
 | Prio | Scénario | État |
 |---|---|---|
-| P1 | Demande → mail → lien → nouveau mot de passe → connexion avec le nouveau | à faire |
+| P1 | Demande → mail → lien → nouveau mot de passe → connexion avec le nouveau | ✅ |
 | P2 | Adresse inconnue → message d'erreur | à faire |
 
 ### 4. Faire une leçon — `tests/parcours-eleve.spec.ts` (début ✅)
@@ -89,7 +89,7 @@ L'administration et l'édition du contenu (redaktilo, statistiques) passent en d
 | P2 | Plus aucun correcteur disponible (capacité atteinte) → comportement attendu | à faire ¹ |
 | P2 | Un correcteur avec 3 élèves n'en reçoit pas un 4ᵉ | à faire |
 | P2 | Attribution manuelle par un administrateur (`administriNunanKurson.php`) | à faire |
-| P3 | Le correcteur marque un élève « a abandonné » / « a fini », puis le récupère | à faire |
+| P3 | Le correcteur marque un élève « a abandonné », puis le récupère (`tests/correcteur.spec.ts`) | ✅ |
 
 ¹ Le code insère alors `NULL` dans une colonne obligatoire : à vérifier, c'est probablement un bug.
 
@@ -130,8 +130,14 @@ L'administration et l'édition du contenu (redaktilo, statistiques) passent en d
   `http://localhost:8080aktivigi.php?...`. Les tests contournent en ne gardant que le
   chemin (`linkFromMail`).
 
-## Plus tard : GitHub Actions
+## GitHub Actions
 
-Le dépôt est public, donc GitHub Actions est gratuit. Un workflow `.github/workflows/e2e.yml`
-pourra : démarrer `docker compose`, créer `config.php` et `js/config.js` de test,
-lancer `npx playwright test` et garder le rapport HTML en cas d'échec.
+Le workflow `.github/workflows/e2e.yml` lance ces tests à chaque push sur `master`, sur
+chaque pull request, et à la demande (onglet Actions → « Tests e2e » → *Run workflow*).
+Il crée un `config.php` et un `js/config.js` de test (sans aucun secret de prod), installe
+`vendor/` avec Composer, démarre `web`, `db` et `mailhog` avec `docker compose`, attend
+la fin de l'import de `sql/*.sql`, puis lance `npx playwright test`.
+
+En cas d'échec, le rapport Playwright (captures, traces) est disponible dans l'artefact
+`playwright-report` de l'exécution, et les journaux Docker sont affichés dans l'étape
+« Journaux Docker ».

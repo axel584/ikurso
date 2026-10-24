@@ -1,0 +1,100 @@
+name: Tests e2e
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      # config.php et js/config.js ne sont pas versionnés : valeurs de l'environnement Docker,
+      # sans aucun secret de prod (les mails partent dans MailHog, Sympa est injoignable).
+      - name: Configuration de test
+        run: |
+          cat > config.php <<'EOF'
+          <?php
+          $urlDb = "db";
+          $base = "ikurso";
+          $login = "ikurso_user";
+          $motDePasse = "ikurso_pass";
+          $urlracine = "http://localhost:8080/";
+          $cheminAbsolu = "/";
+          $hostSmtp = "mailhog";
+          $portSmtp = 1025;
+          $hostSmtpSES = "mailhog";
+          $portSmtpSES = 1025;
+          $userSES = "USER_SES";
+          $passwordSES = "PASSWORD_SES";
+          $useSmtp = true;
+          $milestone = 1;
+          $INTERNAL_ACCESS_TOKEN = "ci-internal-token";
+          $cookieDomain = "localhost";
+          $sympaSoapUrl = "http://127.0.0.1:8000/sympasoap";
+          $sympaAppName = "Ikurso";
+          $sympaAppPassword = "ci";
+          $JWT_SECRET = "ci-jwt-secret-0123456789abcdef0123456789abcdef0123456789abcdef";
+          ?>
+          EOF
+          cat > js/config.js <<'EOF'
+          $urlracine = "http://localhost:8080/";
+          $cheminAbsolu = "/";
+          EOF
+
+      - name: Dépendances PHP (vendor/)
+        run: composer install --no-interaction --no-progress
+
+      - name: Démarrage de Docker (web, db, mailhog)
+        run: docker compose up -d --build web db mailhog
+
+      # L'image MariaDB rejoue sql/*.sql au premier démarrage : on attend la fin de l'import.
+      - name: Attente de la base et du site
+        run: |
+          for i in $(seq 1 120); do
+            if docker logs ikurso_mysql 2>&1 | grep -q 'init process done' \
+              && docker exec ikurso_mysql mysql -uikurso_user -pikurso_pass ikurso -N -e 'SELECT 1 FROM personoj LIMIT 1' >/dev/null 2>&1; then
+              break
+            fi
+            sleep 2
+          done
+          docker exec ikurso_mysql mysql -uikurso_user -pikurso_pass ikurso -N -e 'SELECT COUNT(*) FROM personoj'
+          curl --fail --silent --retry 30 --retry-delay 2 --retry-all-errors -o /dev/null http://localhost:8080/index.php -L
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Installation de Playwright
+        working-directory: e2e
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Tests
+        working-directory: e2e
+        run: npx playwright test
+
+      - name: Journaux Docker
+        if: failure()
+        run: docker compose logs --no-color web db mailhog | tail -300
+
+      - name: Rapport Playwright
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            e2e/playwright-report/
+            e2e/test-results/
+          retention-days: 14

@@ -14,7 +14,9 @@ function nouvelUtilisateur() {
 
 async function ouvrirInscription(page: import('@playwright/test').Page) {
   await page.goto('index.php')
-  await page.locator('a[data-target="aligxi"]').first().click()
+  // Plusieurs liens portent data-target="aligxi" (menu, modales) : seul celui
+  // réellement affiché peut être cliqué.
+  await page.locator('a[data-target="aligxi"]:visible').first().click()
 }
 
 test.describe('Inscription', () => {
@@ -76,5 +78,43 @@ test.describe('Inscription', () => {
     await page.locator('#eniri_pasvorto').fill(user.password)
     await page.locator('#connection_button').click()
     await expect(page.locator('#sendi_denove_aktivigilo_button')).toBeVisible()
+  })
+
+  test("renvoyer le mail d'activation permet d'activer le compte", async ({ page }) => {
+    const user = nouvelUtilisateur()
+    await ouvrirInscription(page)
+    await page.locator('#aligxi_retadreso').fill(user.email)
+    await page.locator('#aligxi_identigilo').fill(user.login)
+    await page.locator('#aligxi_pasvorto').fill(user.password)
+    await page.locator('#inscription_button').click()
+    await expect(page.locator('#parto2')).toBeVisible()
+
+    // Vider les mails et tenter de renvoyer l'activation depuis le formulaire de connexion
+    await clearMails()
+    await page.goto('index.php')
+    await page.locator('a[href="#konektigxi"]').first().click()
+    await page.locator('#eniri_identigilo').fill(user.login)
+    await page.locator('#eniri_pasvorto').fill(user.password)
+    await page.locator('#connection_button').click()
+    await expect(page.locator('#sendi_denove_aktivigilo_button')).toBeVisible()
+
+    await page.locator('#sendi_denove_aktivigilo_button').click()
+
+    const mail = await waitForMail(user.email, 'Nouvelle activation de votre compte')
+    await page.goto(linkFromMail(mail, 'aktivigi.php'))
+
+    await expect(page).toHaveURL(/personinformoj\.php\?aktivigo=ok/)
+    await expect(page.locator('#novaUzanto')).toBeVisible()
+    expect(sql(`SELECT aktivigita FROM personoj WHERE enirnomo='${user.login}'`)).toBe('1')
+  })
+
+  test("lien d'activation invalide redirige vers la page d'accueil avec une erreur", async ({ page }) => {
+    // Adresse inconnue : erarkodo=19.
+    await page.goto('aktivigi.php?retadreso=inexistant@mailinator.com&aktivigo=mauvaisecle')
+    await expect(page).toHaveURL(/index\.php\?erarkodo=19/)
+
+    // Adresse existante mais mauvaise clé : erarkodo=18.
+    await page.goto('aktivigi.php?retadreso=lernanto1@mailinator.com&aktivigo=mauvaisecle')
+    await expect(page).toHaveURL(/index\.php\?erarkodo=18/)
   })
 })

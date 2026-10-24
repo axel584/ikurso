@@ -34,7 +34,8 @@ test.describe('Connexion', () => {
     await page.locator('#eniri_pasvorto').fill('mauvais')
     await page.locator('#connection_button').click()
     await expect(page.locator('#eniri_pasvorto')).toHaveClass(/invalid/)
-    await expect(page).toHaveURL(/index\.php/)
+    // index.php redirige en 301 vers « / » : l'URL finale n'a pas forcément index.php.
+    await expect(page).toHaveURL(/localhost:8080\/(index\.php)?$/)
   })
 
   test('un identifiant inconnu est refusé', async ({ page }) => {
@@ -49,7 +50,7 @@ test.describe('Connexion', () => {
   test('la déconnexion ferme la session', async ({ page }) => {
     await login(page, USERS.korektanto)
     await page.goto('eliri.php')
-    await expect(page).toHaveURL(/index\.php/)
+    await expect(page).toHaveURL(/localhost:8080\/(index\.php)?$/)
     // La page réservée aux correcteurs renvoie vers l'accueil une fois déconnecté.
     await page.goto('miajlernantoj.php')
     await expect(page).toHaveURL(/index\.php\?erarkodo=/)

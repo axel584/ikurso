@@ -133,7 +133,7 @@ $fd = fopen($filename, "r");
 $contents = fread($fd, filesize ($filename));
 fclose($fd);
 $studAdreso=$persono["retadreso"];
-$contents=str_replace("##KPERSONNOMO##",$korektanto["personnomo"],$contents);
+$contents=str_replace("##KPERSONNOMO##",(string)$korektanto["personnomo"],$contents);
 $contents=str_replace("##KRETADRESO##",$korektanto["retadreso"],$contents);
 $contents=str_replace("##SENIRNOMO##",$persono["enirnomo"],$contents);
 mailViaSES($studAdreso,"Votre correcteur I-kurso",$contents);
@@ -150,7 +150,7 @@ $contents=str_replace("##SENIRNOMO##",$persono["enirnomo"],$contents);
 $contents=str_replace("##SID##",$persono["id"],$contents);
 $contents=str_replace("##SURBO##",$persono["urbo"]." (".$persono["lando"].")",$contents);
 $contents=str_replace("##SRETADRESO##",$persono["retadreso"],$contents);
-$contents=str_replace("##SNASKIGXDATO##",$persono["naskigxdato"],$contents);
+$contents=str_replace("##SNASKIGXDATO##",(string)$persono["naskigxdato"],$contents);
 $contents=str_replace("##KNOMO##",$korektanto["enirnomo"],$contents);
 mailViaSES($korAdreso,"Nouvel élève sur I-kurso",$contents);
 

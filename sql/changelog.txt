@@ -4544,3 +4544,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Correction automatique : 4 réponses attendues erronées corrigées et 226 variantes ajoutées (CG, Gerda, PP), relevées dans les réponses refusées de la prod, les plus tolérantes validées par Emmanuelle (#708) : voir sql/39-correction-automatique-variantes-708.sql
 --- Préférences d'envoi des mails non sollicités (rappels, « Le saviez-vous »), une ligne par personne et par réglage (#920) : voir sql/40-personoj-agordoj-920.sql
 --- « Le saviez-vous » envoyés mémorisés pour chaque élève sous forme de liste JSON (personoj.saviezvous_senditaj), reprise du compteur saviezvous (#891) : voir sql/41-saviezvous-senditaj-891.sql
+--- « Le saviez-vous » : table saviezvous, liste des textes (numéro, titre) ; le contenu reste dans mails/ (#891) : voir sql/42-saviezvous-listo-891.sql

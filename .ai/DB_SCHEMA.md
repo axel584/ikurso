@@ -425,6 +425,17 @@ Table de référence des mois (libellés localisés).
 
 ---
 
+### `saviezvous` — Liste des « Le saviez-vous »
+
+Un texte par ligne (#891). Le contenu est dans `mails/saviezvousNNN.html` et le titre dans `mails/saviezvousNNN.txt` ; l'envoi (`api/SaviezvousAPI.php`, `cron/rappel.php`) lit les fichiers, pas cette table. Les envois par élève sont dans `personoj.saviezvous_senditaj`.
+
+| Colonne | Type | Description |
+|---|---|---|
+| `numero` | SMALLINT UNSIGNED PK | Numéro du texte (NNN du nom de fichier) |
+| `titolo` | VARCHAR(255) NOT NULL | Titre, objet du mail après « Le Saviez-vous : » |
+
+---
+
 ## Relations principales
 
 ```

@@ -73,6 +73,26 @@ test.describe('Mode invité', () => {
     await expect(page.locator('.memorilo_input').first()).toBeVisible()
   })
 
+  test('leçon 1 : les textes de la section 6 suivent visiteur, invité et élève connecté', async ({ page }) => {
+    const sansCompte = page.locator('text=Vous pouvez faire les exercices dès maintenant, sans compte')
+    const eleve = page.locator('text=Pour bénéficier de notre service de correction')
+
+    await page.goto(`${LECON_1}?section=6`)
+    await expect(sansCompte).toBeVisible()
+    await expect(eleve).toHaveCount(0)
+
+    // devenu invité, il garde le texte « sans compte » (avant : celui des élèves connectés)
+    await repondre(page, 1, 'La teo estas varma.')
+    await page.reload()
+    await expect(sansCompte).toBeVisible()
+    await expect(eleve).toHaveCount(0)
+
+    await login(page, USERS.lernanto)
+    await page.goto(`${LECON_1}?section=6`)
+    await expect(eleve).toBeVisible()
+    await expect(sansCompte).toHaveCount(0)
+  })
+
   test("la fin de la leçon propose de créer un compte au lieu de demander un correcteur", async ({ page }) => {
     await page.goto(`${LECON_1}?section=13`)
     await expect(page.locator('#aligxi_por_korektado_button')).toBeVisible()

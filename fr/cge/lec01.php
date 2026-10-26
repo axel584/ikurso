@@ -385,21 +385,22 @@ include "dlekkapo.inc.php";
 				<div class="row noprint">
 					<div class="col s12">
 						<div class="card-panel blue lighten-5">
-						<!-- N'a pas encore de compte -->
-						<?php if ($persono_id=="") { ?>
+						<!-- Pas connecté (visiteur ou invité, #1092) : $persono_id contient aussi l'id d'un invité, on regarde la session -->
+						<?php if (empty($_SESSION["persono_id"])) { ?>
+							<p>Vous pouvez faire les exercices dès maintenant, sans compte&nbsp;: vos réponses sont corrigées automatiquement quand c’est possible et gardées dans ce navigateur.</p>
 							<div class="row">
 								<div class="col s12 m5">
 									<p><b>J'ai déjà un compte&nbsp;:</b></p>
-									<p>Je me connecte pour pouvoir compléter les exercices et demander l’aide d'un correcteur.</p>
+									<p>Je me connecte&nbsp;: ce que j’ai fait sans compte est ajouté à mon compte.</p>
 									<p><a href="#konektigxi" class="btn waves-effect waves-light waves-light blue modal-trigger" data-target="konektigxi">CONNEXION</a></p>
 								</div>
 								<div class="col s12 m7">
 									<p><b>Je n’ai pas encore de compte&nbsp;:</b></p>
-									<p>En créant un compte, vous pourrez suivre nos cours, voir votre progression et demander l’aide d’un correcteur.<br>C’est gratuit&nbsp;!</p>
+									<p>En créant un compte, vous gardez vos réponses et votre progression sur tous vos appareils, et un correcteur vous aide tout au long du cours.<br>C’est gratuit&nbsp;!</p>
 								<p class="center"><a href="#aligxi" class="btn waves-effect waves-light blue modal-trigger" data-target="aligxi">créer un compte</a></p>
 								</div>
 							</div>
-							<p class="noto">Note&nbsp;: vous pouvez également suivre ce cours sans être inscrit sur ce site, mais dans ce cas vous ne pourrez pas bénéficier du suivi et de la correction des exercices.</p>
+							<p class="noto">Note&nbsp;: sans compte, vous ne bénéficiez pas du suivi d’un correcteur, et vos réponses ne sont gardées que dans ce navigateur.</p>
 							<!-- A déjà un compte -->
 							<?php } else { ?>
 								<p>Pour bénéficier de notre service de correction, il vous suffit de compléter les exercices. Cliquez ensuite sur le bouton <b>ENREGISTRER MES RÉPONSES</b>.</p>
@@ -793,7 +794,7 @@ include "dlekkapo.inc.php";
 			<p>Donc à bientôt pour la prochaine leçon&nbsp;!</p>
 
 			<div class="card-panel blue lighten-5">
-				<p>L’inscription n’est indispensable que si vous désirez faire appel à un correcteur. Cette inscription est gratuite.</p>
+				<p>L’inscription n’est indispensable que si vous désirez faire appel à un correcteur. Cette inscription est gratuite.<?php if (empty($_SESSION["persono_id"])) { ?> Si vous avez fait les exercices sans compte, ils seront repris dans votre compte quand vous le créerez ou quand vous vous connecterez.<?php } ?></p>
 				<p>Votre correcteur est là pour répondre à vos questions sur la langue espéranto, mais aussi sur l'utilisation que l’on peut faire de l’espéranto. N’hésitez pas à vous présenter et faire connaissance. En cas d’absence, n’oubliez pas d’en avertir votre correcteur&nbsp;!</p>
 				<p>Bon apprentissage&nbsp;!</p>	
 			</div>

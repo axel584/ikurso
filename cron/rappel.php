@@ -201,6 +201,7 @@ while($row = $result->fetch()) {
 	echo ":".$persono_id."&saviezvous".$numero;
 	if ($numero!==null) {
 		list($contentsTitre, $contents) = $saviezvousAPI->enhavo($numero);
+		$contents = SaviezvousAPI::personigi($contents, $persono_id, $urlracine);
 		// lien de désinscription sous l'anecdote (#920)
 		$malaboni = AgordojAPI::malaboniLigilo($persono_id, "SAVIEZVOUS");
 		$contents = str_replace("</table>", "</table>\n\t<p style=\"padding:1em 0;font-family:'PT Sans',Arial,sans-serif;font-size:0.8rem;color:#554E47;\">Vous recevez ce message parce que vous avez travaillé hier sur ikurso. Si vous ne souhaitez plus recevoir ces anecdotes, il vous suffit de cliquer sur <a href='".$malaboni."'>« Ne plus recevoir Le saviez-vous »</a>.</p>", $contents);

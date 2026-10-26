@@ -32,6 +32,16 @@ test.describe('Le saviez-vous ?', () => {
     await page.goto('saviezvous.php?numero=1')
     await expect(page.locator('.saviezvous-mesagxo')).toContainText('denaskuloj')
     await expect(page.locator('#saviezvous')).not.toContainText('reçu le')
+    // « continuer votre apprentissage » mène à la page où l'élève reprend le cours, comme à la connexion
+    await expect(page.locator('.saviezvous-mesagxo a', { hasText: 'ikurso.esperanto-france.org' }))
+      .toHaveAttribute('href', /\/fr\/cge\/lec\d+\.php(\?section=\d+)?$/)
+  })
+
+  test("pour un administrateur, le lien du message mène à l'accueil", async ({ page }) => {
+    await login(page, USERS.admin)
+    await page.goto('saviezvous.php?numero=1')
+    await expect(page.locator('.saviezvous-mesagxo a', { hasText: 'ikurso.esperanto-france.org' }))
+      .toHaveAttribute('href', /^https?:\/\/[^/]+\/$/)
   })
 
   test("un message pas encore reçu ne s'affiche pas, même par son adresse", async ({ page }) => {

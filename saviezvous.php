@@ -20,6 +20,9 @@ $numero = isset($_GET["numero"]) && ctype_digit((string)$_GET["numero"]) ? (int)
 $korpoMesagxo = null;
 if ($numero !== null && ($cxiujVideblaj || array_key_exists($numero, $ricevitaj))) {
 	$korpoMesagxo = $saviezvous->korpo($numero);
+	if ($korpoMesagxo !== null) {
+		$korpoMesagxo = SaviezvousAPI::personigi($korpoMesagxo, (int)$persono_id, $urlracine);
+	}
 }
 
 include "pagxkapo.inc.php";

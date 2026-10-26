@@ -4,6 +4,9 @@
 // Le compteur personoj.saviezvous reste tenu à jour tant qu'un retour arrière est possible.
 
 class SaviezvousAPI {
+    // Dans les messages, lien « continuer votre apprentissage » : remplacé pour chaque élève (venontaLecionoUrl).
+    const LIGILO = "##URL_VENONTA_LECIONO##";
+
     private $bdd;
     private $dosierujo;
 
@@ -73,6 +76,23 @@ class SaviezvousAPI {
         }
         $html = $this->enhavo($numero)[1];
         return preg_match('#<body[^>]*>(.*)</body>#is', $html, $trovita) ? $trovita[1] : $html;
+    }
+
+    // Page où l'élève reprend le cours (section ou leçon suivante, première leçon s'il n'a pas commencé),
+    // sinon l'accueil du site : administrateurs, correcteurs, cours terminé. Reprend la redirection faite
+    // à la connexion (getRedirectionParDroits, db.inc.php), qui renvoie sinon vers une page du compte.
+    public static function venontaLecionoUrl(int $persono_id, string $urlracine): string {
+        $radiko = rtrim($urlracine, "/") . "/";
+        $pagxo = (string)getRedirectionParDroits($persono_id);
+        if ($pagxo === "" || in_array($pagxo, array("administri.php", "miajlernantoj.php", "personinformoj.php"))) {
+            return $radiko;
+        }
+        return $radiko . $pagxo;
+    }
+
+    // Remplace le lien du message par la page où cet élève reprend le cours.
+    public static function personigi(string $html, int $persono_id, string $urlracine): string {
+        return str_replace(self::LIGILO, htmlspecialchars(self::venontaLecionoUrl($persono_id, $urlracine), ENT_QUOTES, "UTF-8"), $html);
     }
 
     // Ajoute le message à la liste des envois de la personne.

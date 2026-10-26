@@ -37,11 +37,8 @@ if (!$aucuneLeciono) {
 }
 
 // chemin pour accéder aux leçons à partir des sommaires (en haut et celui à droite)
-	if ($kurso=='CG') {
-		$chemin = 'fr/cge/';
-	} else if ($kurso=='GR') {
-		$chemin = 'fr/gerda/';
-	}
+// (tous les cours, dont Paŝoj, qui n'était pas prévu ici : liens cassés et avertissement PHP, #1084)
+$chemin = getPrefixeCours($kurso) ?? '';
 
 if ($rajto=='S') { getListoLecionoj($kurso,$leciono,$chemin); }
 

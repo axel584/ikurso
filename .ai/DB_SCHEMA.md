@@ -156,6 +156,8 @@ Réponses saisies par les étudiants aux questions des exercices.
 | `gxusta` | TINYINT(1) | Réponse correcte (NULL=non corrigé, 0=faux, 1=vrai) |
 | `korekto` | TEXT | Commentaire de correction du correcteur |
 
+Index : `persono_ekzercero` (`persono_id`, `ekzercero_id`) et `ekzercero` (`ekzercero_id`) (#1093).
+
 ---
 
 ### `nuna_kurso` — Inscription et progression en cours
@@ -275,6 +277,8 @@ Suivi de la révision des mots (système de répétition espacée).
 | `dato` | TIMESTAMP | Date de la réponse |
 | `bona` | TINYINT(1) NOT NULL | Réponse correcte (0/1) |
 | `respondo` | VARCHAR(128) NOT NULL | Réponse saisie |
+
+Index : `persono_index` (`persono_id`), `vorto_index` (`vorto_id`), `dato` (`dato`).
 
 ---
 

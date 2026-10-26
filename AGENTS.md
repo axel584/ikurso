@@ -5,7 +5,7 @@ Elles complètent `CLAUDE.md` (architecture, commandes) et `.ai/` (API, schéma,
 
 ## 1. Compatibilité
 
-- **Version cible : PHP 8.1** (en prod depuis le 21/10/2026, #1084). Le retour à PHP 7.4 reste possible tant que `php7.4-fpm` est installé sur le serveur (une ligne du `.htaccess`) : d'ici là, le nouveau code reste compatible 7.4 et n'utilise pas les syntaxes propres à PHP 8 (`match`, arguments nommés, propriétés promues, `?->`, `str_contains`, énumérations, `readonly`).
+- **Version cible : PHP 8.1** (en prod depuis le 21/10/2026, #1084). Le retour à PHP 7.4 n'est plus prévu pour ikurso (décidé le 26/10/2026 ; `php7.4-fpm` reste installé sur le serveur pour d'autres sites) : le nouveau code peut utiliser les syntaxes de PHP 8.0 et 8.1 (`match`, arguments nommés, propriétés promues, `?->`, `str_contains`, énumérations, `readonly`), mais rien de PHP 8.2 ou plus récent.
 - Pièges de PHP 8 à garder en tête :
   - PDO et mysqli lèvent des exceptions par défaut : `db.inc.php` remet explicitement le mode silencieux de PHP 7, sur lequel reposent les `or die(...)` du code existant. Les classes de `api/` utilisent `ERRMODE_EXCEPTION` volontairement.
   - `htmlspecialchars()` encode l'apostrophe par défaut (`ENT_QUOTES`) : décoder avant de comparer ou de normaliser une réponse (voir `normaligita()`).

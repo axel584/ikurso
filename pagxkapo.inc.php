@@ -100,7 +100,7 @@ $seoKanona = SeoAPI::kanonaUrl($urlracine, isset($_SERVER["REQUEST_URI"]) ? $_SE
 <?php } ?>
     </head>
 
-    <body class="<?php echo $korpo;?>">	
+    <body class="<?php echo isset($korpo) ? htmlspecialchars($korpo, ENT_QUOTES, "UTF-8") : ""; // certaines pages ne définissent pas $korpo (#1084) ?>">	
 <!-- google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

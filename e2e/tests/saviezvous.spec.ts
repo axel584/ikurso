@@ -3,9 +3,10 @@ import { login, USERS } from '../helpers/auth'
 import { resetTestData, sql } from '../helpers/db'
 
 // Page « Le saviez-vous ? » (#891) : tous les numéros sont listés, seuls ceux reçus par mail se relisent.
+// Le n° 1 a été envoyé avant le 22/10/2026 : date inconnue (null), il doit quand même compter comme reçu.
 test.beforeEach(() => {
   resetTestData()
-  sql(`UPDATE personoj SET saviezvous_senditaj='[{"numero":1,"dato":"2026-10-19"},{"numero":3,"dato":"2026-10-20"}]' WHERE enirnomo='lernanto1'`)
+  sql(`UPDATE personoj SET saviezvous_senditaj='[{"numero":1,"dato":null},{"numero":3,"dato":"2026-10-20"}]' WHERE enirnomo='lernanto1'`)
 })
 
 test.describe('Le saviez-vous ?', () => {
@@ -26,6 +27,11 @@ test.describe('Le saviez-vous ?', () => {
     await expect(page).toHaveURL(/saviezvous\.php\?numero=3$/)
     await expect(page.locator('.saviezvous-mesagxo')).toContainText('Saviez-vous')
     await expect(page.locator('#saviezvous')).toContainText('reçu le 20/10/2026')
+
+    // reçu à une date inconnue : il se relit, sans date affichée
+    await page.goto('saviezvous.php?numero=1')
+    await expect(page.locator('.saviezvous-mesagxo')).toContainText('denaskuloj')
+    await expect(page.locator('#saviezvous')).not.toContainText('reçu le')
   })
 
   test("un message pas encore reçu ne s'affiche pas, même par son adresse", async ({ page }) => {

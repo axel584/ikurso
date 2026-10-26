@@ -9,7 +9,8 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 
 $saviezvous = new SaviezvousAPI($bdd);
-// numéro => date de réception ; les administrateurs peuvent tout lire
+// numéro => date de réception, null pour les envois d'avant le 22/10/2026 (date inconnue, voir sql/41) :
+// tester avec array_key_exists(), pas isset(). Les administrateurs peuvent tout lire.
 $ricevitaj = array();
 foreach ($saviezvous->senditaj((int)$persono_id) as $sendita) {
 	$ricevitaj[(int)$sendita["numero"]] = $sendita["dato"];
@@ -17,7 +18,7 @@ foreach ($saviezvous->senditaj((int)$persono_id) as $sendita) {
 $cxiujVideblaj = ($persono["rajtoj"]=="A");
 $numero = isset($_GET["numero"]) && ctype_digit((string)$_GET["numero"]) ? (int)$_GET["numero"] : null;
 $korpoMesagxo = null;
-if ($numero !== null && ($cxiujVideblaj || isset($ricevitaj[$numero]))) {
+if ($numero !== null && ($cxiujVideblaj || array_key_exists($numero, $ricevitaj))) {
 	$korpoMesagxo = $saviezvous->korpo($numero);
 }
 
@@ -42,7 +43,7 @@ include "pagxkapo.inc.php";
 			<ul class="collection saviezvous-listo">
 <?php foreach ($saviezvous->listo() as $mesagxo) {
 	$n = (int)$mesagxo["numero"];
-	if ($cxiujVideblaj || isset($ricevitaj[$n])) { ?>
+	if ($cxiujVideblaj || array_key_exists($n, $ricevitaj)) { ?>
 				<li class="collection-item ricevita"><a href="saviezvous.php?numero=<?php echo $n; ?>"><span class="numero"><?php echo $n; ?>.</span> <?php echo htmlspecialchars($mesagxo["titolo"], ENT_QUOTES, "UTF-8"); ?></a></li>
 <?php } else { ?>
 				<li class="collection-item nericevita"><span class="numero"><?php echo $n; ?>.</span> <span class="stato">pas encore reçu</span></li>

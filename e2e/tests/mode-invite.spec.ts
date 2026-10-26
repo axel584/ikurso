@@ -134,6 +134,48 @@ test.describe('Mode invité', () => {
     expect(sql(`SELECT COUNT(*) FROM respondoj WHERE persono_id=${lernanto} AND ekzercero_id IN (1,2,4)`)).toBe('3')
   })
 
+  // Les clients de l'API (futures pages React) partagent la session PHP des pages de cours.
+  const API_ORIGIN = { Origin: 'http://localhost:8080' }
+
+  test('à la connexion par l’API, le travail de l’invité rejoint le compte', async ({ page }) => {
+    const lernanto = LERNANTO_ID()
+    await page.goto(`${LECON_1}?section=6`)
+    await repondre(page, 4, 'Respondo de gasto (e2e API)')
+    const gasto = gastoId()
+
+    const reponse = await page.request.post('api.php?path=auth/login', {
+      headers: API_ORIGIN,
+      data: { identigilo: USERS.lernanto.login, pasvorto: USERS.lernanto.password },
+    })
+    expect(reponse.status()).toBe(200)
+
+    expect(nbGastoj()).toBe('0')
+    expect(sql(`SELECT COUNT(*) FROM respondoj WHERE persono_id=${gasto}`)).toBe('0')
+    expect(sql(`SELECT respondo FROM respondoj WHERE persono_id=${lernanto} AND ekzercero_id=4`)).toBe('Respondo de gasto (e2e API)')
+    // la session est celle du compte : la page de cours affiche sa réponse, sans le bandeau
+    await page.goto(`${LECON_1}?section=6`)
+    await expect(page.locator('#res_4')).toHaveValue('Respondo de gasto (e2e API)')
+    await expect(page.locator('#gasto_avizo')).toHaveCount(0)
+  })
+
+  test("à l'inscription par l'API, l'invité devient le compte", async ({ page }) => {
+    await page.goto(`${LECON_1}?section=6`)
+    await repondre(page, 1, 'La teo estas varma.')
+    const id = gastoId()
+
+    const login = `e2eapigasto${Date.now()}`
+    const reponse = await page.request.post('api.php?path=auth/register', {
+      headers: API_ORIGIN,
+      data: { enirnomo: login, pasvorto: 'motdepasse', retadreso: `${login}@mailinator.com` },
+    })
+    expect(reponse.status()).toBe(201)
+    expect(String((await reponse.json()).user_id)).toBe(id)
+
+    expect(sql(`SELECT CONCAT(enirnomo,' ',rajtoj,' ',aktivigita) FROM personoj WHERE id=${id}`)).toBe(`${login} P 0`)
+    expect(nbGastoj()).toBe('0')
+    expect(sql(`SELECT COUNT(*) FROM respondoj WHERE persono_id=${id}`)).toBe('1')
+  })
+
   test("un invité ne peut pas se connecter avec l'identifiant technique de son compte", async ({ page }) => {
     await page.goto(`${LECON_1}?section=6`)
     await repondre(page, 1, 'La teo estas varma.')

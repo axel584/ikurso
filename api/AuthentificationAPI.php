@@ -3,6 +3,8 @@
 
 require_once __DIR__ . '/JWTAuth.php';
 require_once __DIR__ . '/EnirAPI.php';
+require_once __DIR__ . '/SessionAuth.php';
+require_once __DIR__ . '/GastoAPI.php';
 
 class AuthentificationAPI {
     private $conn;
@@ -90,7 +92,9 @@ class AuthentificationAPI {
             // Authentification réussie
             
             // Session PHP (partagée avec les pages historiques) et JWT (clients qui n'ont pas encore migré)
-            SessionAuth::login($row["id"]);
+            $gasto_id = SessionAuth::login($row["id"]);
+            // ce que la personne a fait sans compte dans ce navigateur rejoint son compte (#1092)
+            (new GastoAPI($this->conn))->transdoni($gasto_id, (int)$row["id"]);
             $jwt = JWTAuth::generate($row);
             JWTAuth::setCookie($jwt);
             
@@ -184,8 +188,14 @@ class AuthentificationAPI {
             // Génération de la clef d'activation
             $aktivigo = md5(uniqid(rand(), true));
             
-            // Création de la personne
-            $persono_id = $this->kreiPersonon($enirnomo, $pasvorto, $retadreso, $aktivigo);
+            // Création de la personne ; un invité qui s'inscrit garde ses réponses et sa progression :
+            // sa ligne devient le compte (#1092)
+            $gasto_id = SessionAuth::takeGastoId();
+            if ($gasto_id > 0 && (new GastoAPI($this->conn))->konverti($gasto_id, $enirnomo, $pasvorto, $retadreso, $aktivigo)) {
+                $persono_id = $gasto_id;
+            } else {
+                $persono_id = $this->kreiPersonon($enirnomo, $pasvorto, $retadreso, $aktivigo);
+            }
             
             if (!$persono_id) {
                 $this->sendError(500, "Erreur lors de la création du compte");

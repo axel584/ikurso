@@ -75,6 +75,11 @@ class GastoAPI {
     public function transdoniAlKonto(int $persono_id): void {
         $gasto_id = isset($_SESSION["gasto_id"]) ? (int)$_SESSION["gasto_id"] : 0;
         unset($_SESSION["gasto_id"]);
+        $this->transdoni($gasto_id, $persono_id);
+    }
+
+    // Pareil quand l'invité a déjà été retiré de la session (connexion par l'API, voir SessionAuth::login).
+    public function transdoni(int $gasto_id, int $persono_id): void {
         if ($gasto_id > 0 && $gasto_id !== $persono_id && $this->estasGasto($gasto_id)) {
             $this->kunfandi($gasto_id, $persono_id);
         }

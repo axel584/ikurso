@@ -148,6 +148,8 @@ Ce token est configuré dans `config.php` via `$INTERNAL_ACCESS_TOKEN`.
 
 Authentifie un utilisateur et pose le cookie JWT.
 
+Si la session du navigateur porte un invité (mode invité, #1092 : `$_SESSION["gasto_id"]`), ses réponses, sa progression et ses mots à réviser sont rattachés au compte, puis la ligne de l'invité est supprimée (`GastoAPI::transdoni`), comme avec la fenêtre de connexion du site.
+
 **Accès** : Public
 
 **Corps**
@@ -192,6 +194,8 @@ Le cookie `access_token` est posé avec une durée de 1 an.
 ### POST /auth/register
 
 Crée un compte et envoie un email d'activation.
+
+Si la session du navigateur porte un invité (#1092), sa ligne `personoj` devient le compte (`GastoAPI::konverti`) : il garde ses réponses et sa progression, et `user_id` est l'id de l'invité.
 
 **Accès** : Public
 

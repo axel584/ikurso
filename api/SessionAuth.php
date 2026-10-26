@@ -61,7 +61,8 @@ class SessionAuth {
         return $id;
     }
 
-    // Connecte la personne : nouvel identifiant de session (anti fixation de session)
+    // Connecte la personne : nouvel identifiant de session (anti fixation de session).
+    // Renvoie l'invité (#1092) que portait la session, ou 0 : c'est à l'appelant de rattacher son travail au compte.
     public static function login($persono_id) {
         $hadSessionCookie = isset($_COOKIE[session_name()]);
         $started = self::open();
@@ -69,9 +70,30 @@ class SessionAuth {
             session_regenerate_id(true);
         }
         $_SESSION['persono_id'] = $persono_id;
+        $gasto_id = self::removeGastoId();
         if ($started) {
             session_write_close();
         }
+        return $gasto_id;
+    }
+
+    // Retire de la session l'invité (#1092) et renvoie son id, ou 0 (à l'inscription : sa ligne devient le compte)
+    public static function takeGastoId() {
+        if (session_status() !== PHP_SESSION_ACTIVE && !isset($_COOKIE[session_name()])) {
+            return 0;
+        }
+        $started = self::open();
+        $gasto_id = self::removeGastoId();
+        if ($started) {
+            session_write_close();
+        }
+        return $gasto_id;
+    }
+
+    private static function removeGastoId() {
+        $gasto_id = isset($_SESSION['gasto_id']) ? (int)$_SESSION['gasto_id'] : 0;
+        unset($_SESSION['gasto_id']);
+        return $gasto_id;
     }
 
     // Déconnecte : détruit la session et supprime son cookie

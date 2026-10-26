@@ -34,7 +34,7 @@ if ($aktivigo==null) {
 	updateAktivigo($retadreso,$aktivigo);
 }
 // on envoit un email avec le lien contenant l'adresse email et le lien d'activation
-$lien = $urlracine."index.php?novigiPasvorton=ok&retadreso=".$retadreso."&aktivigo=".$aktivigo;
+$lien = $urlracine."index.php?novigiPasvorton=ok&retadreso=".urlencode($retadreso)."&aktivigo=".urlencode($aktivigo);
 $filename = "../mails/novigiPasvorton.html";
 $fd = fopen($filename, "r");
 $contents = fread($fd, filesize ($filename));

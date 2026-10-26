@@ -376,7 +376,7 @@ $( "#serchi_protokolon_button").click(function() {
        		url : $cheminAbsolu+'ajax/aligxi.php',
        		type : 'POST',
        		dataType : 'json',
-       		data : 'identigilo='+$( "#aligxi_identigilo" ).val()+"&pasvorto="+encodeURIComponent($( "#aligxi_pasvorto" ).val())+"&retadreso="+$("#aligxi_retadreso").val(),
+       		data : 'identigilo='+encodeURIComponent($( "#aligxi_identigilo" ).val())+"&pasvorto="+encodeURIComponent($( "#aligxi_pasvorto" ).val())+"&retadreso="+encodeURIComponent($("#aligxi_retadreso").val()),
        		success : function(reponse, statut){ 
            		if (reponse.mesagxo!="ok") {
            			if (reponse.type.startsWith("retadreso")) {
@@ -417,7 +417,7 @@ $( "#serchi_protokolon_button").click(function() {
           url : $cheminAbsolu+'ajax/aligxi_kurso.php',
           type : 'GET',
           dataType : 'json',
-          data : 'identigilo='+$( "#aligxi_kurso_identigilo" ).val()+"&pasvorto="+encodeURIComponent($( "#aligxi_kurso_pasvorto" ).val())+"&retadreso="+$("#aligxi_kurso_retadreso").val(),
+          data : 'identigilo='+encodeURIComponent($( "#aligxi_kurso_identigilo" ).val())+"&pasvorto="+encodeURIComponent($( "#aligxi_kurso_pasvorto" ).val())+"&retadreso="+encodeURIComponent($("#aligxi_kurso_retadreso").val()),
           success : function(reponse, statut){ 
               if (reponse.mesagxo!="ok") {
                 if (reponse.type.startsWith("retadreso")) {
@@ -461,7 +461,7 @@ $("#sendi_novan_pasvorton_button").click(function () {
           url : $cheminAbsolu+'ajax/sendiNovanPasvorton.php',
           type : 'GET',
           dataType : 'json',
-          data : 'retadreso='+$("#sendi_novan_pasvorton_retadreso").val(),
+          data : 'retadreso='+encodeURIComponent($("#sendi_novan_pasvorton_retadreso").val()),
           success : function(reponse, statut){ 
               if (reponse.mesagxo!="ok") {
                  $("#sendi_novan_pasvorton_retadreso_helper").attr('data-error',reponse.mesagxo);
@@ -534,7 +534,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
           url : $cheminAbsolu+'ajax/novigiPasvorton.php',
           type : 'GET',
           dataType : 'json',
-          data : 'pasvorto='+encodeURIComponent($("#novigi_pasvorton_pasvorto").val())+"&aktivigo="+$( "#novigi_pasvorton_aktivigo" ).val()+"&retadreso="+$( "#novigi_pasvorton_retadreso" ).val(),
+          data : 'pasvorto='+encodeURIComponent($("#novigi_pasvorton_pasvorto").val())+"&aktivigo="+encodeURIComponent($( "#novigi_pasvorton_aktivigo" ).val())+"&retadreso="+encodeURIComponent($( "#novigi_pasvorton_retadreso" ).val()),
           success : function(reponse, statut){ 
               // la clef d'activation est erronée
               if (reponse.mesagxo!="ok") {

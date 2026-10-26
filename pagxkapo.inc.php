@@ -241,8 +241,8 @@ $seoKanona = SeoAPI::kanonaUrl($urlracine, isset($_SERVER["REQUEST_URI"]) ? $_SE
 				<div id="novigi_pasvorton_parto1">
 				<form>
 					<div class="input-field">
-						<input id="novigi_pasvorton_aktivigo" type="hidden" name="aktivigo" value="<?=$aktivigo?>"/>
-						<input id="novigi_pasvorton_retadreso" type="hidden" name="retadreso" value="<?=$retadreso?>"/>
+						<input id="novigi_pasvorton_aktivigo" type="hidden" name="aktivigo" value="<?=htmlspecialchars($aktivigo, ENT_QUOTES, "UTF-8")?>"/>
+						<input id="novigi_pasvorton_retadreso" type="hidden" name="retadreso" value="<?=htmlspecialchars($retadreso, ENT_QUOTES, "UTF-8")?>"/>
 						<input id="novigi_pasvorton_pasvorto" type="password" class="validate">
 						<label for="novigi_pasvorton_pasvorto">Nouveau mot de passe</label>
 					</div>

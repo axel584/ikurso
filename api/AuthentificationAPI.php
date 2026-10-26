@@ -204,7 +204,7 @@ class AuthentificationAPI {
             
             // Envoi de l'email d'activation
             global $urlracine;
-            $lien = $urlracine . "aktivigi.php?retadreso=" . $retadreso . "&aktivigo=" . $aktivigo;
+            $lien = $urlracine . "aktivigi.php?retadreso=" . urlencode($retadreso) . "&aktivigo=" . urlencode($aktivigo);
             
             // Charger le template d'email
             $filename = __DIR__ . "/../mails/aktivigi.html";
@@ -430,7 +430,7 @@ class AuthentificationAPI {
         if ($email == "") {
             return FALSE;
         }
-        if (!preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{1,}\.[a-z]{2,5}$#", $email)) {
+        if (!preg_match("#^[a-z0-9._+-]+@[a-z0-9._-]{1,}\.[a-z]{2,5}$#", $email)) {
             return FALSE;
         }
         list($Username, $Domain) = explode("@", $email);

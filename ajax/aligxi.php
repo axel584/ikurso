@@ -86,7 +86,7 @@ unset($_SESSION["gasto_id"]);
 
 
 // on envoit le lien
-$lien = $urlracine."aktivigi.php?retadreso=".$retadreso."&aktivigo=".$aktivigo;
+$lien = $urlracine."aktivigi.php?retadreso=".urlencode($retadreso)."&aktivigo=".urlencode($aktivigo);
 // charge le fichier html
 $filename = "../mails/aktivigi.html";
 $fd = fopen($filename, "r");

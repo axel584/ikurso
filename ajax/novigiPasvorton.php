@@ -2,7 +2,8 @@
 include "../util.php";
 $retadreso=isset($_GET["retadreso"])?$_GET["retadreso"]:"";
 $aktivigo=isset($_GET["aktivigo"])?$_GET["aktivigo"]:"";
-$pasvorto=isset($_GET["pasvorto"])?$_GET["pasvorto"]:"";
+// stripslashes() comme ajax/aligxi.php et ajax/eniri.php, sinon un mot de passe avec \ ne permet plus de se connecter (#1097)
+$pasvorto=isset($_GET["pasvorto"])?stripslashes($_GET["pasvorto"]):"";
 
 // on verifie si on a bien un et un seul compte avec cet adresse et cette clef d'activation
 $query = "select count(*) as combien from personoj where retadreso=? and aktivigo=?";

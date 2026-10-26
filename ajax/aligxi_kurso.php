@@ -75,7 +75,7 @@ $persono_id = kreiPersononKurso($identigilo,$pasvorto,$retadreso,$aktivigo);
 
 
 // on envoit le lien
-$lien = $urlracine."aktivigi.php?retadreso=".$retadreso."&aktivigo=".$aktivigo;
+$lien = $urlracine."aktivigi.php?retadreso=".urlencode($retadreso)."&aktivigo=".urlencode($aktivigo);
 $filename = "../mails/aktivigi.html";
 $fd = fopen($filename, "r");
 $contents = fread($fd, filesize ($filename));

@@ -48,7 +48,7 @@ $seoKanona = SeoAPI::kanonaUrl($urlracine, isset($_SERVER["REQUEST_URI"]) ? $_SE
 		</script>
 		<script type="text/javascript" src="<?php echo $vojo;?>xAlUtf8.js"></script>	
 		<!--<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>"  media="all"/> -->
-		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>.10"  media="all"/>
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>.11"  media="all"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/impression.css?v=<?php echo $milestone; ?>"  media="print"/>
 
 		<!--Let browser know website is optimized for mobile-->
@@ -296,6 +296,7 @@ $seoKanona = SeoAPI::kanonaUrl($urlracine, isset($_SERVER["REQUEST_URI"]) ? $_SE
 			<li class="uzanto"><?php echo "<b>".$persono['enirnomo']."</b><br>".$persono['personnomo']." ".$persono['familinomo']."<br><em>".$persono['retadreso']."</em>";?></li>
 			<li class="divider"></li>
 			<li><a href="<?php echo $vojo;?>personinformoj.php" class="primaire-texte moyen">Mes données personnelles</a></li>
+			<li><a href="<?php echo $vojo;?>saviezvous.php" class="primaire-texte moyen">Le saviez-vous ?</a></li>
 			<?php if ($persono["rajtoj"]=="K" || $persono["rajtoj"]=="A" ) { ?>
 				<li><a href="<?php echo $vojo;?>miajlernantoj.php" class="primaire-texte moyen">Mes élèves</a></li>
 			<?php } ?>

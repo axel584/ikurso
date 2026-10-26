@@ -1331,6 +1331,13 @@ span.bravo {
    }
 }
 
+/* « Le saviez-vous ? » (saviezvous.php) : messages déjà reçus en lien, les autres en gris */
+.saviezvous-listo .numero {display: inline-block; min-width: 2.5em; font-weight: bold;}
+.collection.saviezvous-listo .collection-item.nericevita {color: #9e9e9e;}
+.saviezvous-listo .nericevita .stato {font-style: italic;}
+.saviezvous-dato {color: #9e9e9e;}
+.saviezvous-mesagxo {overflow-x: auto;}
+
 /*********************************/
 /*          mode sombre          */
 /*********************************/

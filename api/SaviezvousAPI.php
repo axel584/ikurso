@@ -56,6 +56,25 @@ class SaviezvousAPI {
         );
     }
 
+    // Messages existants (numéro, titre), dans l'ordre, pour la page saviezvous.php : table saviezvous,
+    // limitée aux numéros dont les fichiers existent.
+    public function listo(): array {
+        $ekzistantaj = $this->ekzistantaj();
+        $demando = $this->bdd->query("SELECT numero, titolo FROM saviezvous ORDER BY numero");
+        return array_values(array_filter($demando->fetchAll(PDO::FETCH_ASSOC), function ($vico) use ($ekzistantaj) {
+            return in_array((int)$vico["numero"], $ekzistantaj);
+        }));
+    }
+
+    // Contenu du message sans l'enveloppe du mail (ce qui est entre <body> et </body>), ou null s'il n'existe pas.
+    public function korpo(int $numero): ?string {
+        if (!in_array($numero, $this->ekzistantaj())) {
+            return null;
+        }
+        $html = $this->enhavo($numero)[1];
+        return preg_match('#<body[^>]*>(.*)</body>#is', $html, $trovita) ? $trovita[1] : $html;
+    }
+
     // Ajoute le message à la liste des envois de la personne.
     public function registri(int $persono_id, int $numero): void {
         $senditaj = $this->senditaj($persono_id);

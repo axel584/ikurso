@@ -50,7 +50,7 @@ Elles complètent `CLAUDE.md` (architecture, commandes) et `.ai/` (API, schéma,
 ## 5. Sorties et entrées
 
 - Échapper toute donnée dynamique affichée en HTML : `htmlspecialchars($v, ENT_QUOTES, 'UTF-8')`. Ne pas confondre avec la protection SQL.
-- Valider et convertir les entrées à la frontière : `(int)` pour les identifiants, liste blanche pour les codes de cours (`CG`, `GR`, `PP`, `3N`…), format strict pour les dates.
+- Valider et convertir les entrées à la frontière : `(int)` pour les identifiants, liste blanche pour les codes de cours (`CG`, `GR`, `PP`…), format strict pour les dates.
 - Ne jamais construire un chemin de fichier avec une valeur utilisateur sans la valider (`mails/…`, `include`, `fopen`).
 - Ne pas afficher de requête SQL ni d'erreur PHP à l'utilisateur : pas de `die("... ".$requete)` ni de `print_r($bdd->errorInfo())`. Journaliser côté serveur (`error_log`) et renvoyer un message générique.
 - `display_errors` doit rester désactivé en production.

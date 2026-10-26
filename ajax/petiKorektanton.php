@@ -67,10 +67,6 @@ if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
 	$sujetMail = "gerda cxap".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 } 
-if ($kurso=="3N") {
-	$prefixeKurso = "fr/3n/";
-	$sujetMail = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
-} 
 if ($kurso=="PP") {
 	$prefixeKurso = "eo/ppp/";
 	$sujetMail = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];

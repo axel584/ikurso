@@ -41,8 +41,6 @@ if (!$aucuneLeciono) {
 		$chemin = 'fr/cge/';
 	} else if ($kurso=='GR') {
 		$chemin = 'fr/gerda/';
-	} else if ($kurso=='3N') {
-		$chemin = 'fr/3n/';
 	}
 
 if ($rajto=='S') { getListoLecionoj($kurso,$leciono,$chemin); }

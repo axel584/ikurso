@@ -123,9 +123,6 @@ if ($kurso=="CG") {
 if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
 } 
-if ($kurso=="3N") {
-	$prefixeKurso = "fr/3n/";
-} 
 if ($kurso=="PP") {
 	$prefixeKurso = "eo/ppp/";
 } 

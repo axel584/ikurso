@@ -95,10 +95,6 @@ if ($kurso=="GR") {
 	$prefixeKurso = "fr/gerda/";
 	$subjekto = "gerda cxap".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
 } 
-if ($kurso=="3N") {
-	$prefixeKurso = "fr/3n/";
-	$subjekto = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
-}
 if ($kurso=="PP") {
 	$prefixeKurso = "eo/ppp/";
 	$subjekto = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];

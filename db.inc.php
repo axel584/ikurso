@@ -284,8 +284,6 @@ function getPrefixeCours($kurso) {
         return 'fr/gerda/';
     } elseif($kurso=="CG") {
        return 'fr/cge/';
-    } elseif($kurso=="3N") {
-       return 'fr/3n/';
     } elseif($kurso=="PP") {
        return 'eo/ppp/';
     } else {
@@ -416,8 +414,6 @@ function redirigeParDroits($persono) {
             $prefixe_url ='fr/gerda/';
         } elseif($row['kurso']=="CG") {
             $prefixe_url = 'fr/cge/';
-        } elseif($row['kurso']=="3N") {
-            $prefixe_url = 'fr/3n/';
         } elseif($row['kurso']=="PP") {
             $prefixe_url = 'eo/ppp/';
         }
@@ -474,8 +470,6 @@ function getRedirectionParDroits($persono_id) {
             $prefixe_url ='fr/gerda/';
         } elseif($row['kurso']=="CG") {
             $prefixe_url = 'fr/cge/';
-        } elseif($row['kurso']=="3N") {
-            $prefixe_url = 'fr/3n/';
         } elseif($row['kurso']=="PP") {
             $prefixe_url = 'eo/ppp/';
         }
@@ -636,7 +630,7 @@ function troviPlejTauganKorektanton($persono_id,$kurso) {
     global $bdd;
     $meilleurCorrecteur = 0;
     $OccupationMeilleurCorrecteur = 100.0;
-    if ($kurso=="GR" || $kurso=="3N" || $kurso=="PP") {
+    if ($kurso=="GR" || $kurso=="PP") {
         // cas Gerda, on regarde si l'élève avait déjà un élève pour le 1er cours
         $demando = "select korektanto from nuna_kurso where studanto='".$persono_id."'";
         $result = $bdd->query($demando) or die(print_r($bdd->errorInfo()));
@@ -730,31 +724,6 @@ function aldoniNovajnVortojnEnMemorilo($persono_id) {
         $requete->execute(array(':persono_id'=>$persono_id,':vorto_id'=>$row["id"]));
     }
     // ;
-}
-
-// fonction spécifique au cours de troisième niveau :
-function getHazardaPriskriboDeFilmo($persono_id) {
-    global $bdd;
-    // on va calculer combien y'en a en tout
-    $query = "SELECT count(*) as kiom FROM `respondoj` WHERE kodo='ekz03_01' and lecionero_id=232 and persono_id<>'".$persono_id."'";
-    $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
-    $kiom = $result->fetch()["kiom"];
-    if ($kiom==0) {
-        return null;
-    } else {
-        $hazard = mt_rand(0,$kiom-1);
-        $query = "SELECT persono_id,enirnomo,respondo FROM `respondoj` join personoj on personoj.id=respondoj.persono_id WHERE kodo='ekz03_01' and lecionero_id=232 and persono_id<>'".$persono_id."' order by dato limit ".$hazard.",1";
-        $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
-        $row = $result->fetch();
-        $lernanto_id = $row["persono_id"];
-        $lernanto_nomo = $row["enirnomo"];
-        $priskribo = $row["respondo"];
-        $query = "SELECT respondo FROM `respondoj` WHERE kodo='ekz03_02' and lecionero_id=232 and persono_id='".$lernanto_id."'";
-        $result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
-        $row = $result->fetch();
-        $titolo = $row["respondo"];
-        return Array($lernanto_nomo,$priskribo,$titolo);
-    }
 }
 
 

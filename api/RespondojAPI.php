@@ -4,7 +4,7 @@
 
 class RespondojAPI {
     // Dossier des pages de chaque cours, pour le lien vers la page de l'exercice.
-    const DOSIEROJ = array("CG" => "fr/cge/", "GR" => "fr/gerda/", "PP" => "eo/ppp/", "3N" => "fr/3n/");
+    const DOSIEROJ = array("CG" => "fr/cge/", "GR" => "fr/gerda/", "PP" => "eo/ppp/");
 
     private $bdd;
 

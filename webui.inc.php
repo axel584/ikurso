@@ -745,8 +745,6 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 	}
 	elseif ($kurso=="GR") {
 		echo "<p>Gerda malaperis&nbsp;:</p>";
-	}elseif ($kurso=="3N") {
-		echo "<p>Tria nivela kurso&nbsp;:</p>";
 	}elseif ($kurso=="PP") {
 		echo "<p>Pa&#349;oj al plena posedo:</p>";
 	}

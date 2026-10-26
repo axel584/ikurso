@@ -63,11 +63,15 @@ if ($nunleciono!=="") {
 }
 
 include $vojo."pagxkapo.inc.php";
+// pagxkapo.inc.php ne connaît que la personne connectée : les pages de cours montrent aussi le travail de l'invité (#1092)
+require_once __DIR__."/../../api/GastoAPI.php";
+$persono_id = GastoAPI::lernantoId();
 ?>
 <script type="text/javascript" src="../../xAlUtf8.js"></script>	
 <?php 
 if (isset($leciono)) {
 	getListoLecionoj('CG',$leciono);
 }
+montriGastoAvizon();
 ?>
 

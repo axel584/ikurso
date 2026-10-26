@@ -108,7 +108,7 @@ class PersonojAPI {
             }
             
             // Filtre par droits
-            if (!empty($rajtoj_filter) && in_array($rajtoj_filter, ['P', 'S', 'K', 'A', 'I'])) {
+            if (!empty($rajtoj_filter) && in_array($rajtoj_filter, ['P', 'S', 'K', 'A', 'I', 'G'])) {
                 $where_conditions[] = "rajtoj = ?";
                 $params[] = $rajtoj_filter;
             }
@@ -768,7 +768,8 @@ class PersonojAPI {
             'S' => 'Étudiant',
             'K' => 'Correcteur',
             'A' => 'Administrateur',
-            'I' => 'Inactif'
+            'I' => 'Inactif',
+            'G' => 'Invité (sans compte)'
         ];
         
         return isset($labels[$rajto]) ? $labels[$rajto] : 'Inconnu';

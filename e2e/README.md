@@ -77,8 +77,20 @@ L'administration et l'édition du contenu (redaktilo, statistiques) passent en d
 | P1 | Nouvel élève (inscrit dans le test) qui fait la leçon 1 entière de bout en bout | à faire |
 | P2 | Exercice de rédaction (zone de texte libre) enregistré | à faire |
 | P2 | Saisie des lettres accentuées avec la notation x (`cx` → `ĉ`) acceptée | à faire |
-| P2 | Un visiteur non connecté peut lire une leçon mais pas enregistrer | à faire |
+| P2 | Un visiteur non connecté peut faire les exercices en mode invité (#1092, `tests/mode-invite.spec.ts`) | ✅ |
 | P3 | Cours « Gerda malaperis » : ouvrir un chapitre et répondre | à faire |
+
+### 4 bis. Mode invité (#1092) — `tests/mode-invite.spec.ts` ✅
+| Prio | Scénario | État |
+|---|---|---|
+| P1 | Lire une leçon ne crée pas d'invité | ✅ |
+| P1 | Première réponse → invité créé, réponse corrigée, enregistrée et réaffichée avec le bandeau | ✅ |
+| P1 | « Terminé ! » marque la section, passe à la suivante, ajoute les mots à réviser | ✅ |
+| P1 | Fin de leçon : « Créer un compte pour être corrigé » au lieu de « Demander un correcteur » | ✅ |
+| P1 | Inscription : la ligne de l'invité devient le compte, réponses conservées après activation | ✅ |
+| P1 | Connexion : fusion dans le compte existant (réponse la plus récente, sauf réponse déjà corrigée) | ✅ |
+| P2 | L'identifiant technique d'un invité ne permet pas de se connecter | ✅ |
+| P2 | Le cron `forigi_gastojn.php` supprime les invités inactifs depuis 6 mois | ✅ |
 
 ### 5. Attribution d'un correcteur — `tests/parcours-eleve.spec.ts` (début ✅)
 | Prio | Scénario | État |

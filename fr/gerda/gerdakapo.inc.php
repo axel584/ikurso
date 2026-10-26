@@ -256,6 +256,9 @@ if ($parto=="lasu") {
 }
 
 include $vojo."pagxkapo.inc.php";
+// pagxkapo.inc.php ne connaît que la personne connectée : les pages de cours montrent aussi le travail de l'invité (#1092)
+require_once __DIR__."/../../api/GastoAPI.php";
+$persono_id = GastoAPI::lernantoId();
 /* 
  * recuperation des variables du formulaire si on vient d'une page d'exercice
  */
@@ -281,4 +284,5 @@ if ($parto=="ek") {
 if (isset($leciono)) {
 	getListoLecionoj('GR',$leciono);
 }
+montriGastoAvizon();
 ?>

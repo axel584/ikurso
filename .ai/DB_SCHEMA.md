@@ -28,7 +28,7 @@ Tous les comptes du système (étudiants, correcteurs, administrateurs).
 | `longitudo` | FLOAT(8,6) | Longitude géographique |
 | `retadreso` | VARCHAR(128) NOT NULL | Adresse e-mail |
 | `naskigxdato` | DATE | Date de naissance |
-| `rajtoj` | ENUM('P','S','K','A','I') | Rôle : P=?, S=Étudiant, K=Correcteur, A=Admin, I=? |
+| `rajtoj` | ENUM('P','S','K','A','I','G') | Rôle : P=?, S=Étudiant, K=Correcteur, A=Admin, I=?, G=Invité sans compte (#1092, voir `api/GastoAPI.php`) |
 | `kialo` | TEXT | Raison de l'inscription |
 | `noto` | TEXT | Notes internes |
 | `maksimumo` | INT | Nombre max d'étudiants (pour correcteurs) |

@@ -74,7 +74,15 @@ if ($enirnomo_en_base>0) {
 
 // clef de hachage unique à envoyer par mail et mettre en base
 $aktivigo = md5(uniqid(rand(), true));
-$persono_id = kreiPersonon($identigilo,$pasvorto,$retadreso,$aktivigo);
+// un invité qui s'inscrit garde ses réponses et sa progression : sa ligne devient le compte (#1092)
+require_once __DIR__."/../api/GastoAPI.php";
+$gasto_id = isset($_SESSION["gasto_id"]) ? (int)$_SESSION["gasto_id"] : 0;
+if ($gasto_id > 0 && (new GastoAPI($bdd))->konverti($gasto_id,$identigilo,$pasvorto,$retadreso,$aktivigo)) {
+	$persono_id = $gasto_id;
+} else {
+	$persono_id = kreiPersonon($identigilo,$pasvorto,$retadreso,$aktivigo);
+}
+unset($_SESSION["gasto_id"]);
 
 
 // on envoit le lien

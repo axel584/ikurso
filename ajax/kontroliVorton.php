@@ -1,7 +1,9 @@
 <?php
 include "../util.php";
+require_once __DIR__."/../api/GastoAPI.php";
 $vorto_id=isset($_GET["vorto_id"])?$_GET["vorto_id"]:"";
-$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
+// élève connecté ou invité (#1092)
+$persono_id=GastoAPI::lernantoId();
 if ($persono_id=="") {
 	$respondo["mesagxo"] = "ko";
 	$respondo["eraroj"]="Identifiant de l'élève absent. Ça sent le piratage de bac à sable.";

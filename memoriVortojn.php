@@ -2,10 +2,14 @@
 include "util.php";
 $pagxtitolo="Données personnelles";
 $korpo="informoj";
-$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
-if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
-$persono = apartigiPersonon($persono_id);
+require_once "api/GastoAPI.php";
+// élève connecté ou invité (#1092)
+$lernanto_id=GastoAPI::lernantoId();
+if ($lernanto_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 include "pagxkapo.inc.php";
+// pagxkapo.inc.php ne connaît que la personne connectée
+$persono_id = $lernanto_id;
+$persono = apartigiPersonon($persono_id) ?: $persono;
 ?>
 
 

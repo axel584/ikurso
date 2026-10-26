@@ -138,6 +138,7 @@ Ce token est configuré dans `config.php` via `$INTERNAL_ACCESS_TOKEN`.
 | `K` | Korektanto | Correcteur |
 | `A` | Administranto | Administrateur |
 | `I` | Inaktiva | Compte inactif |
+| `G` | Gasto | Invité : visiteur qui fait les exercices sans compte (#1092), sans e-mail ni mot de passe, jamais connecté |
 
 ---
 
@@ -287,7 +288,7 @@ Liste les utilisateurs avec pagination et filtres.
 | `page` | int | Numéro de page (min 1) | 1 |
 | `limit` | int | Résultats par page (1–100) | 20 |
 | `search` | string | Recherche dans `enirnomo`, `personnomo`, `familinomo`, `retadreso` | — |
-| `rajtoj` | string | Filtre par rôle (P/S/K/A/I) | — |
+| `rajtoj` | string | Filtre par rôle (P/S/K/A/I/G) | — |
 
 **Réponse 200**
 ```json

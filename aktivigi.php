@@ -20,6 +20,9 @@ if (!$row) {
 		protokolo($row["id"],"COMPTE ACTIF",$row["enirnomo"]." a correctement activé son compte");
 		// on met l'identifiant en session :
 		$_SESSION["persono_id"]=$row["id"];
+		// ce qui a été fait sans compte entre l'inscription et l'activation (#1092)
+		require_once __DIR__."/api/GastoAPI.php";
+		(new GastoAPI($bdd))->transdoniAlKonto((int)$row["id"]);
 		header( "Location:personinformoj.php?aktivigo=ok");
 	}
 }

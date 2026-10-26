@@ -15,6 +15,15 @@ export function sql(query: string): string {
   }).trim()
 }
 
+// Lance un script de cron/ dans le conteneur web, comme le fait le crontab du serveur.
+const WEB_CONTAINER = process.env.WEB_CONTAINER ?? 'ikurso_php'
+
+export function cron(script: string): string {
+  return execFileSync('docker', ['exec', '-w', '/var/www/html/cron', WEB_CONTAINER, 'php', script], {
+    encoding: 'utf8',
+  }).trim()
+}
+
 // Remet les comptes de test (administranto, korektanto1, lernanto1) dans leur état initial.
 // 03-create-data-test.sql commence par vider les tables liées aux personnes.
 export function resetTestData(): void {

@@ -1,17 +1,10 @@
 <?php
 include "../util.php";
-$persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
+require_once __DIR__."/../api/GastoAPI.php";
 $leciono=isset($_GET['leciono'])?$_GET['leciono']:"";
 $lecionero_id=isset($_GET['lecionero_id'])?$_GET['lecionero_id']:"";
 $ekdato=isset($_GET['ekdato'])?$_GET['ekdato']:"";
 $kurso=isset($_GET['kurso'])?$_GET['kurso']:"";
-
-if ($persono_id=="") { // personne non connecté, on ressort
-	$respondo["type"]="session";
-	$respondo["mesagxo"]="Session expirée";
-	echo json_encode($respondo);
-	exit();
-}
 
 if ($lecionero_id=="") { // id de la section introuvable
 	$respondo["type"]="lecionero";
@@ -19,6 +12,9 @@ if ($lecionero_id=="") { // id de la section introuvable
 	echo json_encode($respondo);
 	exit();
 }
+
+// élève connecté, ou invité créé à sa première action (#1092)
+$persono_id=(new GastoAPI($bdd))->akiriLernantoId();
 
 // on mémorise la section
 // on vérifie si il y a déjà un enregistrement en base :

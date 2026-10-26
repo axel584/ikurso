@@ -197,40 +197,59 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	$tipo = $row ? $row["tipo"] : null;
 	$lasta = $row ? $row["lasta"] : null;
 	$lecionero_id = $row ? $row["id"] : null;
-	// si l'élève n'est pas enregistré
-	if ($persono_id!="") { 
-		// on n'affiche le bouton DEMANDER UN CORRECTEUR que pour les élèves
+	// visiteur sans compte ou invité (#1092) : mêmes boutons que l'élève, sauf l'envoi au correcteur
+	require_once __DIR__."/api/GastoAPI.php";
+	$rajtoj = "";
+	if ($persono_id!="") {
 		$persono = apartigiPersonon($persono_id);
-
-		if (($persono['rajtoj']=="S")||($persono['rajtoj']=="P")) {
-			// on vérifie si l'élève a déjà fait cette leçon pour n'afficher le bouton que si il n'a pas déjà cliqué sur le bouton :
-			$result = $bdd->prepare("select count(*) as combien from personoj_lecioneroj where persono_id=? and lecionero_id=?");
-			$result->execute(array($persono_id,$lecionero_id));
-			$leconEnCours = $result->fetch()["combien"];
-			if ($leconEnCours>0) {
-				$classeDejaFait="disabled";
-			} else {
-				$classeDejaFait="";
-			}
-			// on vérifie si l'élève a déjà un correcteur :
-			$result = $bdd->prepare("select count(*) as combien from nuna_kurso where kurso=? and studanto=?");
-			$result->execute(array($kurso,$persono_id));
-			$dejaFait = $result->fetch()["combien"];
-			if($tipo=="QCM") { // on vérifie le QCM 
-				echo '<a id="finiLecioneron_button" class="hide waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
-			} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
-				echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
-			} elseif($lasta==1) { // on envoit au correcteur si on a un correcteur, on en demande un dans le cas contraire
-				if ($dejaFait>0) {
-					echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
-				} else { // Pas de correcteur
-					echo '<a id="petiKorektanton_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="Mes exercices lui seront envoyés">Demander un correcteur</a>';
-				}
-			} else { // on indique que la leçon est terminée
-				echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
-			}
+		$rajtoj = $persono ? $persono['rajtoj'] : GastoAPI::RAJTO; // invité supprimé entre-temps
+	}
+	$gasto = ($rajtoj=="" || $rajtoj==GastoAPI::RAJTO);
+	if (!$gasto && $rajtoj!="S" && $rajtoj!="P") {
+		return;
+	}
+	$classeDejaFait="";
+	if ($persono_id!="") {
+		// on vérifie si l'élève a déjà fait cette leçon pour n'afficher le bouton que si il n'a pas déjà cliqué sur le bouton :
+		$result = $bdd->prepare("select count(*) as combien from personoj_lecioneroj where persono_id=? and lecionero_id=?");
+		$result->execute(array($persono_id,$lecionero_id));
+		$leconEnCours = $result->fetch()["combien"];
+		if ($leconEnCours>0) {
+			$classeDejaFait="disabled";
 		}
 	}
+	if($tipo=="QCM") { // on vérifie le QCM 
+		echo '<a id="finiLecioneron_button" class="hide waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
+	} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
+		echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
+	} elseif($lasta==1 && $gasto) { // la correction demande un compte : l'inscription garde le travail déjà fait
+		echo '<a id="aligxi_por_korektado_button" href="#aligxi" class="modal-trigger waves-effect waves-light btn tooltipped light-blue darken-1" data-target="aligxi" data-position="top" data-delay="50" data-tooltip="vos réponses seront conservées">Créer un compte pour être corrigé</a>';
+	} elseif($lasta==1) { // on envoit au correcteur si on a un correcteur, on en demande un dans le cas contraire
+		// on vérifie si l'élève a déjà un correcteur :
+		$result = $bdd->prepare("select count(*) as combien from nuna_kurso where kurso=? and studanto=?");
+		$result->execute(array($kurso,$persono_id));
+		$dejaFait = $result->fetch()["combien"];
+		if ($dejaFait>0) {
+			echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
+		} else { // Pas de correcteur
+			echo '<a id="petiKorektanton_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="Mes exercices lui seront envoyés">Demander un correcteur</a>';
+		}
+	} else { // on indique que la leçon est terminée
+		echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
+	}
+}
+
+// Bandeau des pages de cours pour l'invité (#1092) : son travail n'est gardé que dans ce navigateur.
+function montriGastoAvizon() {
+	if (!empty($_SESSION["persono_id"]) || empty($_SESSION["gasto_id"])) {
+		return;
+	}
+	echo "<div class='row noprint' id='gasto_avizo'><div class='col s12 m10 l7 offset-m1 offset-l1'>";
+	echo "<div class='card-panel blue lighten-5'>";
+	echo "Vous suivez le cours sans compte&nbsp;: vos réponses et votre progression sont gardées dans ce navigateur uniquement. ";
+	echo "<a href='#aligxi' class='modal-trigger' data-target='aligxi'>Créez un compte</a> (gratuit) pour ne pas les perdre et être aidé par un correcteur, ";
+	echo "ou <a href='#konektigxi' class='modal-trigger' data-target='konektigxi'>connectez-vous</a> si vous en avez déjà un&nbsp;: tout sera rattaché à votre compte.";
+	echo "</div></div></div>\n";
 }
 
 
@@ -283,7 +302,7 @@ function frazoTeksto($html) {
 
 // Une phrase sur une seule ligne, avec ses champs ou ses menus. La phrase complète part dans un champ
 // caché res_<id>, comme les autres exercices : enregistrement, correction et mail au correcteur sont inchangés.
-function montriFrazon($rowEkzercero, $typo, $respondo, $valid, $korektebla, $x2u, $persono_id, $warningNonConnecte) {
+function montriFrazon($rowEkzercero, $typo, $respondo, $valid, $korektebla, $x2u, $persono_id) {
 	$partoj = frazoPartoj($rowEkzercero["demando"], $typo);
 	$valoroj = frazoValoroj($partoj, (string)$respondo);
 	$id = $rowEkzercero["id"];
@@ -302,13 +321,13 @@ function montriFrazon($rowEkzercero, $typo, $respondo, $valid, $korektebla, $x2u
 		$n++;
 		if ($parto[0]=="truo") {
 			echo "<input type='text' class='browser-default truo frazo-kampo' autocomplete='off' spellcheck='false' aria-label='mot à compléter n° ".$n."'";
-			echo " size='".max(2, mb_strlen($valoro)+1)."' value=\"".htmlspecialchars($valoro, ENT_QUOTES, "UTF-8")."\"".$warningNonConnecte;
+			echo " size='".max(2, mb_strlen($valoro)+1)."' value=\"".htmlspecialchars($valoro, ENT_QUOTES, "UTF-8")."\"";
 			if ($x2u==1) {
 				echo " onkeyup='xAlUtf8(this)'";
 			}
 			echo ">";
 		} else {
-			echo "<select class='browser-default elekto frazo-kampo' aria-label='choix n° ".$n."'".($warningNonConnecte ? " disabled" : "").">";
+			echo "<select class='browser-default elekto frazo-kampo' aria-label='choix n° ".$n."'>";
 			echo "<option value=''>…</option>";
 			foreach ($parto[1] as $elekto) {
 				echo "<option".($elekto===$valoro ? " selected" : "").">".htmlspecialchars($elekto, ENT_QUOTES, "UTF-8")."</option>";
@@ -382,7 +401,6 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 		$respondo = $rowEkzercero["respondmodelo"];
 		$valid="";
 		$rowRespondo=null;
-		$warningNonConnecte = ($idenfication==False)?" READONLY onClick='window.alert(\"Identifiez-vous en haut à droite pour pouvoir remplir les exercices\");'":"";
 		if ($idenfication) {
 			// afficher ici le contenu de la base pour cet élève
 			$resultRespondo = $bdd->prepare("select id,respondo,korekto,gxusta from respondoj where ekzercero_id=? and persono_id=?");
@@ -398,7 +416,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 		}
 		// phrase à trous ou à menus : la question et ses champs tiennent sur une seule ligne
 		if ($rowEkzerco["typo"]=="plenigu" || $rowEkzerco["typo"]=="elektlisto") {
-			montriFrazon($rowEkzercero, $rowEkzerco["typo"], $respondo, $valid, $rowEkzerco["korektebla"]==1, $rowEkzerco["x2u"], $persono_id, $warningNonConnecte);
+			montriFrazon($rowEkzercero, $rowEkzerco["typo"], $respondo, $valid, $rowEkzerco["korektebla"]==1, $rowEkzerco["x2u"], $persono_id);
 			continue;
 		}
 		// Cas des QCM
@@ -427,7 +445,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 				// TODO : ajouter une marge
 				
 				echo "<label>";
-	        	echo "<input data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." name='res_".$rowEkzercero["id"]."' type='radio' value='".$choix."' ";
+	        	echo "<input data-studanto=".(int)$persono_id." data-ekzercero=".$rowEkzercero["id"]." name='res_".$rowEkzercero["id"]."' type='radio' value='".$choix."' ";
 	        	if ($choix==$respondo) {
 	        		echo "checked";
 	        	}
@@ -446,7 +464,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 			if (($rowEkzerco["typo"]=="traduko-2")||($rowEkzerco["typo"]=="verkado-2")||($rowEkzerco["typo"]=="stelo-2")) { // cas des types d'exercices textarea
 				echo "<div class='input-field col s12'>";
 				echo $iconprefix; // on affiche une marque verte si la réponse est bonne
-				echo "<textarea spellcheck=\"false\" rows='5' data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
+				echo "<textarea spellcheck=\"false\" rows='5' data-studanto=".(int)$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"";
 				if ($rowEkzerco["x2u"]==1) {
 					echo " onkeyup='xAlUtf8(this)'";
 				}
@@ -458,7 +476,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 			} else { // cas des types d'exercice sur des champs input
 				echo "<div class='input-field col s12'>";
 				echo $iconprefix; // on affiche une marque verte si la réponse est bonne
-				echo "<input Autocomplete=\"off\" spellcheck=\"false\" data-studanto=".$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"".$warningNonConnecte;
+				echo "<input Autocomplete=\"off\" spellcheck=\"false\" data-studanto=".(int)$persono_id." data-ekzercero=".$rowEkzercero["id"]." id=\"res_".$rowEkzercero["id"]."\" name=\"res_".$rowEkzercero["id"]."\"";
 				if ($rowEkzerco["x2u"]==1) {
 					echo " onkeyup='xAlUtf8(this)'";
 				}
@@ -704,6 +722,8 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 				echo "<textarea spellcheck=\"false\" name='commentaire_pour_correcteur' class='materialize-textarea'></textarea>";
 				echo "</li>";
 			echo "</ul>";
+		} elseif ($persono===false || $persono['rajtoj']=="G") {
+			echo "L’envoi des exercices à un correcteur est réservé aux élèves inscrits. <a href='#aligxi' class='modal-trigger' data-target='aligxi'>Créez un compte</a> (gratuit)&nbsp;: les réponses que vous avez déjà données seront conservées.";
 		} else {
 			echo "L’envoi des exercices est réservé aux élèves inscrits au cours.";		
 		}
@@ -749,11 +769,13 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 			echo "<li id='intro' class='farita'><a href='".$chemin."antauxklarigo.php'>enkonduko</a></li>";
 		}
 	}
-	// élève connecté : chaque leçon commencée s'ouvre là où il s'est arrêté (#910)
+	// élève connecté ou invité (#1092) : chaque leçon commencée s'ouvre là où il s'est arrêté (#910)
+	require_once __DIR__."/api/GastoAPI.php";
+	$lernanto_id = GastoAPI::lernantoId();
 	$reprenSekcioj = array();
-	if (!empty($_SESSION["persono_id"])) {
+	if ($lernanto_id!=="") {
 		require_once __DIR__."/api/ProgresoAPI.php";
-		$reprenSekcioj = (new ProgresoAPI($bdd))->reprenSekcioj((int)$_SESSION["persono_id"], $kurso);
+		$reprenSekcioj = (new ProgresoAPI($bdd))->reprenSekcioj((int)$lernanto_id, $kurso);
 	}
 	$res = $bdd->prepare("select * from lecionoj where kurso=? order by numero");
 	$res->execute(array($kurso));

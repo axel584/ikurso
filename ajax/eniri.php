@@ -2,6 +2,7 @@
 include "../util.php";
 include "../config.php";
 require_once __DIR__ . "/../api/EnirAPI.php";
+require_once __DIR__ . "/../api/GastoAPI.php";
 
 $identigilo=isset($_POST['identigilo'])?$_POST['identigilo']:"";
 $pasvorto=isset($_POST['pasvorto'])?stripslashes($_POST['pasvorto']):"";
@@ -31,6 +32,7 @@ else {
 			// on memorise l'id en session (nouvel identifiant de session : anti fixation) :
 			session_regenerate_id(true);
 			$_SESSION["persono_id"]=$row["id"];
+			(new GastoAPI($bdd))->transdoniAlKonto((int)$row["id"]);
 			// on loggue tout ça :
 			protokolo($row["id"],"ENIRO",$row["enirnomo"]." eniris");
 			updateLastEniro($row["id"]);

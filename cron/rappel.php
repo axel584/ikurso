@@ -148,9 +148,13 @@ $fd = fopen($filename, "r");
 $contents = fread($fd, filesize ($filename));
 fclose($fd);
 // personnalisation (requetes) :
-$query="SELECT count(*) as kiom FROM personoj where ekdato= DATE_SUB(CONCAT(CURDATE(), ' 00:00:00'), INTERVAL 1 DAY)";
+$query="SELECT count(*) as kiom FROM personoj where ekdato= DATE_SUB(CONCAT(CURDATE(), ' 00:00:00'), INTERVAL 1 DAY) and rajtoj<>'G'";
 $kiom = $bdd->query($query)->fetch()["kiom"];
 $contents=str_replace("##ALIGXIS##",$kiom,$contents);
+// invités (#1092) : visiteurs qui ont commencé le cours sans compte et ne se sont pas encore inscrits
+$query="SELECT count(*) as kiom FROM personoj where ekdato= DATE_SUB(CONCAT(CURDATE(), ' 00:00:00'), INTERVAL 1 DAY) and rajtoj='G'";
+$kiom = $bdd->query($query)->fetch()["kiom"];
+$contents=str_replace("##GASTOJ##",$kiom,$contents);
 $query="SELECT count(*) as kiom FROM personoj where ekdato= DATE_SUB(CONCAT(CURDATE(), ' 00:00:00'), INTERVAL 1 DAY) and aktivigita is true";
 $kiom = $bdd->query($query)->fetch()["kiom"];
 $contents=str_replace("##AKTIVIGXIS##",$kiom,$contents);

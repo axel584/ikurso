@@ -99,5 +99,6 @@ mailViaSES($retadreso,"Activation de votre compte pour apprendre gratuitement l'
 protokolo($persono_id,"ACTIVATION COMPTE",$retadreso." a reçu une clef d'activation");
 
 $respondo["mesagxo"] = "ok";
+$respondo["gasto"] = ($persono_id === $gasto_id); // pour la mesure d'audience (#1094)
 echo json_encode($respondo);
 ?>

@@ -42,6 +42,10 @@ class GastoAPI {
         }
         $gasto_id = $this->krei();
         $_SESSION["gasto_id"] = $gasto_id;
+        // pour la mesure d'audience : le JS envoie l'événement Matomo « Invité créé » (#1094)
+        if (!headers_sent()) {
+            header("X-Ikurso-Gasto: kreita");
+        }
         return $gasto_id;
     }
 

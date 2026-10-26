@@ -176,6 +176,36 @@ test.describe('Mode invité', () => {
     expect(sql(`SELECT COUNT(*) FROM respondoj WHERE persono_id=${id}`)).toBe('1')
   })
 
+  test('les événements Matomo : invité créé, section terminée, inscription depuis le mode invité', async ({ page }) => {
+    // pas de Matomo en développement : un faux _paq relève les événements, y compris d'une page à l'autre
+    const evenements: string[] = []
+    await page.exposeFunction('spuroE2e', (e: string) => { evenements.push(e) })
+    await page.addInitScript(() => {
+      (window as any)._paq = { push: (a: unknown[]) => (window as any).spuroE2e(a.join(' / ')) }
+    })
+
+    await page.goto(`${LECON_1}?section=6`)
+    await repondre(page, 1, 'La teo estas varma.')
+    await repondre(page, 2, 'Via biskvito estas seka.')
+    await expect.poll(() => evenements).toContain('trackEvent / Mode invité / Invité créé / /fr/cge/lec01.php')
+    // un seul invité, donc un seul événement
+    expect(evenements.filter((e) => e.includes('Invité créé'))).toHaveLength(1)
+
+    await page.goto(`${LECON_1}?section=2`)
+    await page.locator('#finiLecioneron_button').click()
+    await expect(page).toHaveURL(/section=3/)
+    expect(evenements).toContain('trackEvent / Cours / Section terminée / CG leçon 1')
+
+    const login = `e2espuro${Date.now()}`
+    await page.locator('#gasto_avizo a[data-target="aligxi"]').click()
+    await page.locator('#aligxi_retadreso').fill(`${login}@mailinator.com`)
+    await page.locator('#aligxi_identigilo').fill(login)
+    await page.locator('#aligxi_pasvorto').fill('motdepasse')
+    await page.locator('#inscription_button').click()
+    await expect(page.locator('#parto2')).toBeVisible()
+    expect(evenements).toContain('trackEvent / Compte / Inscription / depuis le mode invité')
+  })
+
   test("un invité ne peut pas se connecter avec l'identifiant technique de son compte", async ({ page }) => {
     await page.goto(`${LECON_1}?section=6`)
     await repondre(page, 1, 'La teo estas varma.')

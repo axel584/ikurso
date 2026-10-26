@@ -1,8 +1,20 @@
+// mesure d'audience Matomo : un événement (pas de Matomo en développement, _paq n'existe pas)
+function spuri(kategorio, ago, nomo) {
+  if (window._paq) {
+    window._paq.push(['trackEvent', kategorio, ago, nomo]);
+  }
+}
+
   $(document).ready(function(){
-    // mesure d'audience Matomo : un événement par clic sur les boutons marqués data-spuro (page d'accueil)
+    // un événement par clic sur les boutons marqués data-spuro (page d'accueil)
     $('[data-spuro]').on('click', function() {
-      if (window._paq) {
-        window._paq.push(['trackEvent', 'Accueil', 'Clic', $(this).data('spuro')]);
+      spuri('Accueil', 'Clic', $(this).data('spuro'));
+    });
+
+    // première réponse ou premier « Terminé ! » d'un visiteur sans compte : l'invité vient d'être créé (#1092, #1094)
+    $(document).ajaxSuccess(function(event, xhr) {
+      if (xhr.getResponseHeader('X-Ikurso-Gasto') === 'kreita') {
+        spuri('Mode invité', 'Invité créé', window.location.pathname);
       }
     });
 
@@ -384,6 +396,7 @@ $( "#serchi_protokolon_button").click(function() {
            			}
            			return false;
            		} else {
+           			spuri('Compte', 'Inscription', reponse.gasto ? 'depuis le mode invité' : 'directe');
            			// On affiche un message qui indique qu'il faut valider le mail
            			//$('#aligxi').closeModal();
            			$('#parto1').addClass("hide");
@@ -626,6 +639,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        			if (reponse.mesagxo=="aucune url suivante") {
        				alert("leçon suivante inconnu, contactez les administrateurs");
        			} else if (reponse.mesagxo=="ok") {
+       				spuri('Cours', 'Section terminée', $("#finiLecioneron_button").data('kurso')+' leçon '+$("#finiLecioneron_button").data('leciono'));
        				window.location = $urlracine+reponse.url;
        			} else {
        				alert("mauvais message de retour, contactez les administrateurs")

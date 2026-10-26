@@ -54,6 +54,10 @@
 <script type="text/javascript" >	
 <?php	
 // gestion des messages d'erreur en toast
+// beaucoup de pages ne définissent pas $erarkodo : pas de message (#1095)
+	if (!isset($erarkodo)) {
+		$erarkodo = "";
+	}
 	if ($erarkodo==2) {
 		echo "M.toast({html: 'Merci de remplir tous les champs.'});\n";
 	}

@@ -11,10 +11,10 @@ if ($celpersono_id!="") { $celpersono = apartigiPersonon($celpersono_id);}
 if ($persono["rajtoj"]!='A'){header("Location:index.php?erarkodo=4"); exit;}
 $sekso=isset($_POST["sekso"])?$_POST["sekso"]:"";
 $celenirnomo=$_POST["celenirnomo"];
-$familinomo=addslashes($_POST["familinomo"]);
-$personnomo=addslashes($_POST["personnomo"]);
-$adreso1=addslashes($_POST["adreso1"]);
-$adreso2=addslashes($_POST["adreso2"]);
+$familinomo=$_POST["familinomo"];
+$personnomo=$_POST["personnomo"];
+$adreso1=$_POST["adreso1"];
+$adreso2=$_POST["adreso2"];
 $posxtkodo=$_POST["posxtkodo"];
 $urbo=$_POST["urbo"];
 $lando=isset($_POST["lando"])?$_POST["lando"]:"";
@@ -23,7 +23,7 @@ $naskigxdato_jaro=$_POST["naskigxdato_jaro"];
 $naskigxdato_monato=$_POST["naskigxdato_monato"];
 $naskigxdato_tago=$_POST["naskigxdato_tago"];
 $rajtoj=$_POST["rajtoj"];
-$kialo=addslashes($_POST["kialo"]);
+$kialo=$_POST["kialo"];
 $noto=isset($_POST["noto"])?$_POST["noto"]:"";
 $kurso=$_POST["kurso"];
 

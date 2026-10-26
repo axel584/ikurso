@@ -32,6 +32,21 @@ test.describe('Gestion des comptes', () => {
     expect(sql(`SELECT rajto FROM personoj_agordoj WHERE persono_id=${LERNANTO_ID()} AND agordo='SAVIEZVOUS'`)).toBe('0')
   })
 
+  test("une apostrophe reste telle quelle, même enregistrée plusieurs fois (#1096)", async ({ page }) => {
+    await login(page, USERS.admin)
+    await page.goto(`administri.php?celpersono_id=${LERNANTO_ID()}`)
+    await page.locator('#adreso1').fill("rue d'Artois")
+    await page.locator('#kialo').fill("J'ai \"envie\" d'apprendre")
+    await page.getByRole('button', { name: 'Enregistrer' }).click()
+    await expect(page.locator('.card-panel', { hasText: 'correctement mise à jour' })).toBeVisible()
+    await page.getByRole('button', { name: 'Enregistrer' }).click()
+    await expect(page.locator('.card-panel', { hasText: 'correctement mise à jour' })).toBeVisible()
+
+    await expect(page.locator('#adreso1')).toHaveValue("rue d'Artois")
+    expect(sql(`SELECT adreso1 FROM personoj WHERE id=${LERNANTO_ID()}`)).toBe("rue d'Artois")
+    expect(sql(`SELECT kialo FROM personoj WHERE id=${LERNANTO_ID()}`)).toBe("J'ai \"envie\" d'apprendre")
+  })
+
   test('la recherche mène à la fiche', async ({ page }) => {
     await login(page, USERS.admin)
     await page.goto('administri.php')

@@ -4548,3 +4548,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Mode invité : droit G (gasto) dans personoj.rajtoj pour les visiteurs qui font les exercices sans compte (#1092) : voir sql/43-gasto-1092.sql
 --- Index sur respondoj (persono_id + ekzercero_id, ekzercero_id) et personoj_vortoj_respondoj (persono_id) : les requêtes par élève lisaient toute la table (#1093) : voir sql/44-index-respondoj-1093.sql
 --- Suppression du cours prototype de 3e niveau (3N) et de ses données (#1074) : voir sql/45-forigi-3n-1074.sql
+--- Barres obliques inverses supprimées devant les apostrophes et guillemets (nom, prénom, adresse, ville, commentaire de l'élève) ; administri2.php n'en ajoute plus (#1096) : voir sql/46-apostrofoj-1096.sql

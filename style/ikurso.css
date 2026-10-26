@@ -1331,6 +1331,14 @@ span.bravo {
    }
 }
 
+/* gestion des comptes (administri.php) */
+.administri .card-action form.forigi {display: inline;}
+.administri .tabelo {overflow-x: auto;}
+.administri .fiche-numero {font-size: 0.4em;}
+.administri .sekso {margin-right: 1.5rem;}
+.administri .korektanto-formularo .input-field {margin-bottom: 0;}
+.administri .atendantaj .collection-item.active .grey-text {color: inherit !important;}
+
 /* « Le saviez-vous ? » (saviezvous.php) : messages déjà reçus en lien, les autres en gris */
 .saviezvous-listo .numero {display: inline-block; min-width: 2.5em; font-weight: bold;}
 .collection.saviezvous-listo .collection-item.nericevita {color: #9e9e9e;}

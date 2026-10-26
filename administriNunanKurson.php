@@ -33,7 +33,7 @@ $nunleciono=NULL;
 $result = $bdd->prepare("select * from nuna_kurso where studanto=? and kurso=? and (stato='K' or stato='N')");
 $result->execute(array($celpersono_id,$kurso));
 $row=$result->fetch();
-if ($row['korektanto']!="") {
+if ($row && $row['korektanto']!="") {
 	$nunleciono=$row["nunleciono"];
 	if ($row["korektanto"]!=$korektanto_id) { 
 		debug ("c'est un autre : il s'agit d'un changement de correcteur");
@@ -53,9 +53,9 @@ if ($row['korektanto']!="") {
 		$fd = fopen($filename, "r");
 		$contents = fread($fd, filesize ($filename));
 		fclose($fd);
-		$contents=str_replace("##KPERSONNOMO##",$korektantinformoj["personnomo"],$contents);
-		$contents=str_replace("##KRETADRESO##",$korektantinformoj["retadreso"],$contents);
-		$contents=str_replace("##SENIRNOMO##",$studantinformoj["enirnomo"],$contents);
+		$contents=str_replace("##KPERSONNOMO##",(string)$korektantinformoj["personnomo"],$contents);
+		$contents=str_replace("##KRETADRESO##",(string)$korektantinformoj["retadreso"],$contents);
+		$contents=str_replace("##SENIRNOMO##",(string)$studantinformoj["enirnomo"],$contents);
 		//mailViaSmtp($studantinformoj["retadreso"],"ikurso@esperanto-france.org","Votre correcteur I-kurso",$contents);
 		mailViaSES($studantinformoj["retadreso"],"Votre correcteur I-kurso",$contents);
 
@@ -66,12 +66,12 @@ if ($row['korektanto']!="") {
 		$fd = fopen($filename, "r");
 		$contents = fread($fd, filesize ($filename));
 		fclose($fd);
-		$contents=str_replace("##SENIRNOMO##",$studantinformoj["enirnomo"],$contents);
-		$contents=str_replace("##SLANDO##",$studantinformoj["lando"],$contents);
-		$contents=str_replace("##SPOSXTKODO##",$studantinformoj["posxtkodo"],$contents);
-		$contents=str_replace("##SURBO##",$studantinformoj["urbo"],$contents);
-		$contents=str_replace("##SRETADRESO##",$studantinformoj["retadreso"],$contents);
-		$contents=str_replace("##SNASKIGXDATO##",$studantinformoj["naskigxdato"],$contents);
+		$contents=str_replace("##SENIRNOMO##",(string)$studantinformoj["enirnomo"],$contents);
+		$contents=str_replace("##SLANDO##",(string)$studantinformoj["lando"],$contents);
+		$contents=str_replace("##SPOSXTKODO##",(string)$studantinformoj["posxtkodo"],$contents);
+		$contents=str_replace("##SURBO##",(string)$studantinformoj["urbo"],$contents);
+		$contents=str_replace("##SRETADRESO##",(string)$studantinformoj["retadreso"],$contents);
+		$contents=str_replace("##SNASKIGXDATO##",(string)$studantinformoj["naskigxdato"],$contents);
 		mailViaSES($korektantinformoj["retadreso"],"Nouvel élève sur I-kurso",$contents);
 
 	}
@@ -99,9 +99,9 @@ if ($row['korektanto']!="") {
 		$contents = fread($fd, filesize ($filename));
 		fclose($fd);
 		$studAdreso=$studantinformoj["retadreso"];
-		$contents=str_replace("##KPERSONNOMO##",$korektantinformoj["personnomo"],$contents);
-		$contents=str_replace("##KRETADRESO##",$korektantinformoj["retadreso"],$contents);
-		$contents=str_replace("##SENIRNOMO##",$studantinformoj["enirnomo"],$contents);
+		$contents=str_replace("##KPERSONNOMO##",(string)$korektantinformoj["personnomo"],$contents);
+		$contents=str_replace("##KRETADRESO##",(string)$korektantinformoj["retadreso"],$contents);
+		$contents=str_replace("##SENIRNOMO##",(string)$studantinformoj["enirnomo"],$contents);
 		debug ("envoyer le mail à l'éléve (désactivé pour le test)");
 		mailViaSES($studAdreso,"Votre correcteur I-kurso",$contents);
 		
@@ -113,12 +113,11 @@ if ($row['korektanto']!="") {
 		$contents = fread($fd, filesize ($filename));
 		fclose($fd);
 		$korAdreso=$korektantinformoj["retadreso"];
-		$contents=str_replace("##SENIRNOMO##",$studantinformoj["enirnomo"],$contents);
+		$contents=str_replace("##SENIRNOMO##",(string)$studantinformoj["enirnomo"],$contents);
 		$contents=str_replace("##SURBO##",$studantinformoj["urbo"]." (".$studantinformoj["lando"].")",$contents);
-		$contents=str_replace("##SRETADRESO##",$studantinformoj["retadreso"],$contents);
-		$contents=str_replace("##SNASKIGXDATO##",$studantinformoj["naskigxdato"],$contents);
-		$contents=str_replace("##KNOMO##",$korektantinformoj["enirnomo"],$contents);
-		$contents=str_replace("##KPASVORTO##",$korektantinformoj["pasvorto"],$contents);
+		$contents=str_replace("##SRETADRESO##",(string)$studantinformoj["retadreso"],$contents);
+		$contents=str_replace("##SNASKIGXDATO##",(string)$studantinformoj["naskigxdato"],$contents);
+		$contents=str_replace("##KNOMO##",(string)$korektantinformoj["enirnomo"],$contents);
 		mailViaSES($korAdreso,"Nouvel élève sur I-kurso",$contents);
 
 	}

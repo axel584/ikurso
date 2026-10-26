@@ -19,7 +19,7 @@ header("Cache-Control: no-store,no-cache, must-revalidate"); // HTTP/1.1
 header("Pragma: no-cache"); // HTTP/1.0
 
 function listiSercxadon($personnomo,$familinomo,$celenirnomo,$retadreso,$urbo,$posxtkodo) {
-    global $persono_id,$idnoto,$bdd;
+	global $bdd;
 	$wheresql="1=1";
 	$parametroj=array();
 	// posxtkodo est cherché en début de chaîne, les autres champs n'importe où
@@ -29,58 +29,44 @@ function listiSercxadon($personnomo,$familinomo,$celenirnomo,$retadreso,$urbo,$p
 			$parametroj[]=($kampo=="posxtkodo" ? "" : "%").trim($valoro)."%";
 		}
 	}
-	echo "<table>";
-	$query="select * from personoj where ".$wheresql;
+	$query="select * from personoj where ".$wheresql." order by enirnomo";
 	$result = $bdd->prepare($query);
 	$result->execute($parametroj);
+	$rezultoj = $result->fetchAll();
+	$h = function ($teksto) { return htmlspecialchars((string)$teksto, ENT_QUOTES, "UTF-8"); };
 
-	$nbResultat=0;
-	while($row = $result->fetch()) {
-		$nbResultat++;
-		echo "<tr";
-		if ($nbResultat%2==1) { echo " bgcolor=\"#d0d8df\"";}
-        echo "><td>";
-        echo "(".$row["id"].") ";
-		echo "<a href=\"administri.php?celpersono_id=".$row["id"]."\">".$row["enirnomo"]."</a>";
-        echo "&nbsp;n&eacute;(e) le ".$row["naskigxdato"]."<br>";
-		echo "<i>".$row["retadreso"]."</i>";
-        echo "</td><td>";
-        echo $row["personnomo"]." ".$row["familinomo"]."<br>";
-        if ($row["adreso1"]!="") { echo $row["adreso1"]."<br>";}
-        if ($row["adreso2"]!="") {echo $row["adreso2"]."<br>";}
-        echo $row["lando"]."-".$row["posxtkodo"]." ".$row["urbo"]."<br>";
-        echo "</td>";
-
-        echo "</tr>";
-        echo "<tr";
-        if ($nbResultat%2==1) { echo " bgcolor=\"#d0d8df\"";}
-        echo "><td colspan=\"2\">";
-        if ($row["kialo"]!="") { echo $row["kialo"]."<br>"; }
-  		echo "</td></tr>";
+	echo "<p>".count($rezultoj)." compte".(count($rezultoj)>1 ? "s" : "")." trouvé".(count($rezultoj)>1 ? "s" : "")."</p>";
+	if (!$rezultoj) {
+		return;
 	}
-
-	if ($nbResultat==0) {
-		echo "<tr><td>";
-		echo "<h1>Aucun élève</h1>";
-		echo "</tr></td>";
+	echo "<ul class='collection sercxrezultoj'>";
+	foreach ($rezultoj as $row) {
+		echo "<li class='collection-item'>";
+		echo "<span class='title'><a href='administri.php?celpersono_id=".(int)$row["id"]."'>".$h($row["enirnomo"])."</a></span>";
+		echo " <span class='grey-text'>n° ".(int)$row["id"]." · ".$h(isset($row["rajtoj"]) ? $row["rajtoj"] : "")."</span>";
+		echo "<p>";
+		$nomo = trim($row["personnomo"]." ".$row["familinomo"]);
+		if ($nomo!="") { echo $h($nomo); }
+		if ((string)$row["naskigxdato"]!="" && $row["naskigxdato"]!="0000-00-00") { echo ($nomo!="" ? " · " : "")."né(e) le ".$h($row["naskigxdato"]); }
+		if ($nomo!="" || ((string)$row["naskigxdato"]!="" && $row["naskigxdato"]!="0000-00-00")) { echo "<br>"; }
+		echo "<em>".$h($row["retadreso"])."</em><br>";
+		if ($row["adreso1"]!="") { echo $h($row["adreso1"])."<br>"; }
+		if ($row["adreso2"]!="") { echo $h($row["adreso2"])."<br>"; }
+		echo $h(trim($row["lando"]."-".$row["posxtkodo"]." ".$row["urbo"], "- "))."</p>";
+		if ((string)$row["kialo"]!="") { echo "<p class='grey-text'>".$h(stripslashes((string)$row["kialo"]))."</p>"; }
+		echo "</li>";
 	}
-
-	echo "</table>";
+	echo "</ul>";
 }
-include "adminkapo.inc.php";
+$korpo="informoj";
+include "pagxkapo.inc.php";
 ?>
-		<div id="adminejo">
-			<ul id="tabnav">
-				<li class='aktiva'><a href="#">Résultat de recherche</a></li>
-			</ul>
-			<div id="kadro">
-				<?php if ($erarkodo=="9") echo "<div class='atentigo'><p class='eraro'>Cet élève a déjà un correcteur.</p></div>"; ?>
-				<?php if ($erarkodo=="11") echo "<div class='atentigo'><p class='eraro'>Choisissez un correcteur avant de sauvegarder</p></div>"; ?>
-
-			<div id="adminD">
-				<div class="encadre">
-	    			<?php listiSercxadon($personnomo,$familinomo,$celenirnomo,$retadreso,$urbo,$posxtkodo); ?>
-				</div>
-			</div>
-		</div>
+	</form><!-- ferme le formulaire principal ouvert par pagxkapo.inc.php (voir administri.php) -->
+<div class="row">
+	<article class="col s12 m10 l8 offset-m1 offset-l2">
+		<p><a href="administri.php"><i class="material-icons tiny">arrow_back</i> Gérer les utilisateurs</a></p>
+		<h1>Résultat de la recherche</h1>
+		<?php listiSercxadon($personnomo,$familinomo,$celenirnomo,$retadreso,$urbo,$posxtkodo); ?>
+	</article>
+</div>
 <?php include "pagxpiedo.inc.php"; ?>

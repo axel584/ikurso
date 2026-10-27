@@ -302,6 +302,46 @@ $("#pattern").on('keyup', function () {
   rechercherVorton($pattern,$kurso);
 });
 
+// poubelle du lexique et du récapitulatif de la révision : retirer un mot de la révision, ou l'y remettre (#914)
+function forigiVorton(vorto_id, forigi, sukceso) {
+  $.ajax({
+    url : $cheminAbsolu+'ajax/forigiVorton.php',
+    type : 'POST',
+    dataType : 'json',
+    data : {vorto_id: vorto_id, forigi: forigi},
+    success : function(reponse) {
+      if (reponse.mesagxo=="ok") {
+        sukceso();
+      }
+    },
+    error : function() {
+      M.toast({html: "Le mot n'a pas pu être modifié, réessayez plus tard.", displayLength: 4000});
+    }
+  });
+}
+
+$(document).on('click', '#vortlisto .forigi_vorton', function (e) {
+  e.preventDefault();
+  var forigi = $(this).data("forigi");
+  forigiVorton($(this).data("vorto_id"), forigi, function () {
+    M.toast({html: forigi==1 ? "Ce mot ne sera plus proposé à la révision." : "Ce mot est de nouveau proposé à la révision.", displayLength: 3000});
+    rechercherVorton($("#pattern").val(),$("#pattern").data("kurso"));
+  });
+});
+
+$(document).on('click', '#malbonaj_respondoj .forigi_vorton', function (e) {
+  e.preventDefault();
+  var $ligilo = $(this);
+  var forigi = $ligilo.data("forigi");
+  forigiVorton($ligilo.data("vorto_id"), forigi, function () {
+    $ligilo.data("forigi", forigi==1 ? 0 : 1).attr("data-forigi", forigi==1 ? 0 : 1);
+    $ligilo.attr("title", forigi==1 ? "Réviser de nouveau ce mot" : "Ne plus réviser ce mot");
+    $ligilo.attr("aria-label", $ligilo.attr("title"));
+    $ligilo.find("i").text(forigi==1 ? "restore_from_trash" : "delete_outline");
+    $ligilo.closest("li").toggleClass("forigita", forigi==1);
+  });
+});
+
 $("#vortlisto_nivelo").on('change', function () {
   rechercherVorton($("#pattern").val(),$("#pattern").data("kurso"));
 });
@@ -786,7 +826,9 @@ function kontroliVorton(vorto_id,persono_id,respondo) {
                 $encours = $('.memorilo_demando:visible');
                     setTimeout(function(){
                       $("#recapitulatif").removeClass("hide");
-                      $("#malbonaj_respondoj").prepend("<li class='collection-item row'><span>"+reponse.recapitulatif+"</span></li>");
+                      // poubelle : ne plus réviser ce mot (#914)
+                      var forigi = "<a href='#!' class='forigi_vorton secondary-content' data-vorto_id='"+vorto_id+"' data-forigi='1' role='button' aria-label='Ne plus réviser ce mot' title='Ne plus réviser ce mot'><i class='material-icons'>delete_outline</i></a>";
+                      $("#malbonaj_respondoj").prepend("<li class='collection-item row'><span>"+reponse.recapitulatif+"</span>"+forigi+"</li>");
                       $encours.next().removeClass("hide");
                       $encours.addClass("hide");
                       $('.memorilo_input:visible').focus(); // on met le focus sur le champ
@@ -813,6 +855,8 @@ $(".memorilo_button").click(function() {
 
 $('.memorilo_input').keypress(function(e){
     if( e.which == 13 ){
+        // pagxkapo.inc.php entoure la page d'un formulaire : Entrée l'enverrait et rechargerait la page
+        e.preventDefault();
         var $vorto_id=$(this).data('vorto_id');
         var $persono_id=$(this).data('persono_id');
         var $respondo=$(this).val();

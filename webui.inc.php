@@ -900,7 +900,7 @@ function kiomVortojPorMemori($persono_id) {
 	global $bdd;
 	if ($persono_id=="") {return;}
 	// on compte pour savoir si on a 10 cartes ou moins
-	$query= "SELECT count(*) as combien FROM `personoj_vortoj` WHERE persono_id=".(int)$persono_id." and venontaFojo<=NOW()";
+	$query= "SELECT count(*) as combien FROM `personoj_vortoj` WHERE persono_id=".(int)$persono_id." and forigita=0 and venontaFojo<=NOW()";
 	$combien = $bdd->query($query)->fetch()["combien"];
 	return $combien;
 }
@@ -908,7 +908,7 @@ function kiomVortojPorMemori($persono_id) {
 function kiomVortojPorMemoriMorgau($persono_id) {
 	global $bdd;
 	// on compte pour savoir si on a 10 cartes ou moins
-	$query= "SELECT count(*) as combien FROM `personoj_vortoj` WHERE persono_id=".(int)$persono_id." and venontaFojo<=ADDDATE(NOW(),1)";
+	$query= "SELECT count(*) as combien FROM `personoj_vortoj` WHERE persono_id=".(int)$persono_id." and forigita=0 and venontaFojo<=ADDDATE(NOW(),1)";
 	//echo $query;
 	$combien = $bdd->query($query)->fetch()["combien"];
 	return $combien;
@@ -943,7 +943,7 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 	$combien = kiomVortojPorMemori($persono_id);
 	if ($combien>0)
 	{
-		$query= "SELECT vortoj.id,eo,fr,tipo FROM `personoj_vortoj` join vortoj on personoj_vortoj.vorto_id=vortoj.id WHERE persono_id=".(int)$persono_id." and venontaFojo<=NOW() order by RAND()";
+		$query= "SELECT vortoj.id,eo,fr,tipo FROM `personoj_vortoj` join vortoj on personoj_vortoj.vorto_id=vortoj.id WHERE persono_id=".(int)$persono_id." and forigita=0 and venontaFojo<=NOW() order by RAND()";
 		$res = $bdd->query($query);
 		$indice = 1;		
 		echo "<div class='memorilo' id='carousel_qcm'>";
@@ -1019,7 +1019,15 @@ function vortlisto($persono_id,$kurso,$pattern,$nivelo="") {
 			echo "<span class='nivelo ".$row['nivelo']."' role='img' aria-label='".$priskribo."' title='".$priskribo."'></span>";
 		}
 		echo "<span class='eo'>".$VortoEo." ";
-		echo "<span class='numero'> (".$row['numero'].".".$row['ordo'].")</span></span> : ".$row['fr']."</p>\n";
+		echo "<span class='numero'> (".$row['numero'].".".$row['ordo'].")</span></span> : ".$row['fr'];
+		if ($lernanto) {
+			// poubelle : retirer le mot de la révision, ou l'y remettre (#914)
+			$forigita = $row['nivelo']=="forigita";
+			$etikedo = $forigita ? "Réviser de nouveau ce mot" : "Ne plus réviser ce mot";
+			echo " <a href='#!' class='forigi_vorton' data-vorto_id='".(int)$row['id']."' data-forigi='".($forigita ? 0 : 1)."' role='button' aria-label='".$etikedo."' title='".$etikedo."'>";
+			echo "<i class='material-icons tiny'>".($forigita ? "restore_from_trash" : "delete_outline")."</i></a>";
+		}
+		echo "</p>\n";
 	}
 	if (count($vortoj)==0) {
 		echo "<p class='col s12'>Aucun mot ne correspond à votre recherche.</p>";
@@ -1043,7 +1051,8 @@ function vortlistoFiltrilo($persono_id) {
 	foreach (VortojAPI::NIVELOJ as $sxlosilo => $etikedo) {
 		echo "<span><span class='nivelo ".$sxlosilo."'></span>".mb_strtolower($etikedo)."</span> ";
 	}
-	echo "<br>Un mot est « bien connu » après quatre bonnes réponses de suite dans <a href='".$GLOBALS['cheminAbsolu']."memoriVortojn.php'>la révision du vocabulaire</a>.</p>";
+	echo "<br>Un mot est « bien connu » après quatre bonnes réponses de suite dans <a href='".$GLOBALS['cheminAbsolu']."memoriVortojn.php'>la révision du vocabulaire</a>.";
+	echo " La <i class='material-icons tiny'>delete_outline</i> retire un mot de votre révision, <i class='material-icons tiny'>restore_from_trash</i> l'y remet.</p>";
 }
 
 
@@ -1223,7 +1232,7 @@ function listi_tableauHonneur($type,$persono_id) {
 function statMotsParForce($persono_id) {
 	global $bdd;
 	$resultat = array();
-	$query = "SELECT nombrilo  ,count(*) as total FROM personoj_vortoj WHERE persono_id='".(int)$persono_id."' group by nombrilo order by nombrilo";
+	$query = "SELECT nombrilo  ,count(*) as total FROM personoj_vortoj WHERE persono_id='".(int)$persono_id."' and forigita=0 group by nombrilo order by nombrilo";
 	$result = $bdd->query($query) or die(print_r($bdd->errorInfo()));
 	while ($row=$result->fetch()) {
 		if ($row["nombrilo"]==1) {

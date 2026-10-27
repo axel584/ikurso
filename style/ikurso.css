@@ -1211,6 +1211,14 @@ ul.kursinformoj li i {margin-top: .2rem; color: #2196F3; flex-shrink: 0;}
 .korektiLecionon article p.respondo {
 	padding-top: 0;
 }
+/* question sans réponse de l'élève (#1022) */
+.korektiLecionon article p.respondo.mankanta {
+	color: #c62828;
+	font-style: italic;
+}
+.korektiLecionon .mankantaj ul.browser-default {
+	margin: 0 0 0.5rem 0;
+}
 .korektiLecionon article p.parto {
 	margin-left: 0;
 	margin-top: 2em;

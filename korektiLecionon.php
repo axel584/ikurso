@@ -45,7 +45,36 @@ if (!$aucuneLeciono) {
 		</h2>
 <?php if ($aucuneLeciono) { ?>
 		<p>Choisissez une leçon dans le menu ci-contre.</p>
-<?php } else { ?>
+<?php } else {
+	// ce que l'élève n'a pas fait dans cette leçon (#1022)
+	require_once "api/ProgresoAPI.php";
+	$progresoAPI = new ProgresoAPI($bdd);
+	$nefinitajSekcioj = $progresoAPI->nefinitajSekcioj($studanto_id, $kurso, (int)$leciono);
+	$mankantajRespondoj = $progresoAPI->mankantajRespondoj($studanto_id, $kurso, (int)$leciono);
+	if (count($nefinitajSekcioj)>0 || count($mankantajRespondoj)>0) {
+		echo "<div class='card red lighten-4 mankantaj'><div class='card-content'>";
+		echo "<span class='card-title'><i class='material-icons'>warning</i> L'élève n'a pas tout fait dans cette leçon</span>";
+		if (count($nefinitajSekcioj)>0) {
+			echo "<p>Sections non terminées&nbsp;:</p><ul class='browser-default'>";
+			foreach ($nefinitajSekcioj as $sekcio) {
+				echo "<li>".(int)$sekcio["ordo"].". ".htmlspecialchars($sekcio["titolo"])."</li>";
+			}
+			echo "</ul>";
+		}
+		if (count($mankantajRespondoj)>0) {
+			echo "<p>Questions sans réponse&nbsp;:</p><ul class='browser-default'>";
+			foreach ($mankantajRespondoj as $ekzerco_id => $ekzerco) {
+				$komando = trim(strip_tags($ekzerco["komando"]));
+				if (mb_strlen($komando)>80) { $komando = mb_substr($komando, 0, 80)."…"; }
+				$numeroj = $ekzerco["numeroj"];
+				echo "<li><a href='#ekzerco".$ekzerco_id."'>".htmlspecialchars($komando)."</a> (section ".$ekzerco["ordo"].")&nbsp;: ";
+				echo (count($numeroj)>1 ? "questions " : "question ").implode(", ", $numeroj)."</li>";
+			}
+			echo "</ul>";
+		}
+		echo "</div></div>";
+	}
+?>
 		<p class="parto"><strong>Introduction</strong></p>
 
 		<ul class="collapsible expandable">
@@ -64,14 +93,21 @@ $query = "select ekzercoj.id,ekzercoj.komando from ekzercoj join lecioneroj on l
 $result = $bdd->prepare($query);
 $result->execute(array($kurso,$leciono));
 while ($row=$result->fetch()) {
-	echo "<p class=\"parto\">";
+	echo "<p class=\"parto\" id=\"ekzerco".$row["id"]."\">";
 	echo "<strong>EXERCICE : </strong>".$row["komando"];
 	echo "</p>";
 	$ekzerco_id = $row["id"];
-	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.respondo as bona_respondo,ekzerceroj.normaligita as normaligita_bona_respondo,respondoj.respondo,respondoj.normaligita as normaligita_lernanta_respondo,respondoj.gxusta,respondoj.korekto,ekzerceroj.poentoj,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=? and ekzerceroj.ekzerco_id=? order by ekzerceroj.numero";
+	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.respondo as bona_respondo,ekzerceroj.normaligita as normaligita_bona_respondo,respondoj.respondo,respondoj.normaligita as normaligita_lernanta_respondo,respondoj.gxusta,respondoj.korekto,ekzerceroj.poentoj,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id and respondoj.persono_id=? where ekzerceroj.ekzerco_id=? and (ekzerceroj.forigita=0 or respondoj.id is not null) order by ekzerceroj.numero";
 	$result2 = $bdd->prepare($query2);
 	$result2->execute(array($studanto_id,$ekzerco_id));
 	while ($row2=$result2->fetch()) {
+		// question sans réponse : affichée à sa place, sans rien à corriger (#1022)
+		if ($row2["respondo_id"]===null || trim((string)$row2["respondo"])==="") {
+			echo "<p class=\"demando\">".$row2["numero"].". ".$row2["demando"]."</p>";
+			echo "<p class=\"respondo mankanta\">pas de réponse</p>\n";
+			echo "<hr/>";
+			continue;
+		}
 		$gxusta = $row2["gxusta"]==1;
 		if (!$gxusta) {
 			$lernantaRespondo = $row2["normaligita_lernanta_respondo"];

@@ -721,6 +721,13 @@ p.dauro::before {
 .nivelo.lernata { background: linear-gradient(90deg, #43a047 50%, transparent 50%); }
 .nivelo.konata { background: #43a047; }
 .nivelo.forigita { border-style: dashed; border-color: #9e9e9e; }
+/* récapitulatif de la révision : bonne réponse en vert, réponse de l'élève en rouge (#682) */
+#malbonaj_respondoj .bona {
+	color: #2e7d32;
+}
+#malbonaj_respondoj .malbona {
+	color: #c62828;
+}
 /* poubelle : retirer un mot de la révision (#914) */
 #malbonaj_respondoj li.forigita > span {
 	text-decoration: line-through;

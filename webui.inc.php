@@ -1071,6 +1071,7 @@ function vortlisto($persono_id,$kurso,$pattern,$nivelo="") {
 
 // Filtre du lexique par niveau, avec la légende des pastilles : seulement pour un élève ou un invité (#391).
 function vortlistoFiltrilo($persono_id) {
+	global $vojo;
 	if ((int)$persono_id <= 0) {
 		return;
 	}
@@ -1085,7 +1086,7 @@ function vortlistoFiltrilo($persono_id) {
 	foreach (VortojAPI::NIVELOJ as $sxlosilo => $etikedo) {
 		echo "<span><span class='nivelo ".$sxlosilo."'></span>".mb_strtolower($etikedo)."</span> ";
 	}
-	echo "<br>Un mot est « bien connu » après quatre bonnes réponses de suite dans <a href='".$GLOBALS['cheminAbsolu']."memoriVortojn.php'>la révision du vocabulaire</a>.";
+	echo "<br>Un mot est « bien connu » après quatre bonnes réponses de suite dans <a href='".$vojo."memoriVortojn.php'>la révision du vocabulaire</a>.";
 	echo " La <i class='material-icons tiny'>delete_outline</i> retire un mot de votre révision, <i class='material-icons tiny'>restore_from_trash</i> l'y remet.</p>";
 }
 

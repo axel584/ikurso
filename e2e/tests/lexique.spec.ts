@@ -24,6 +24,8 @@ test("l'élève voit son niveau sur chaque mot et filtre le lexique", async ({ p
   await expect(vorto(page, 'granda').locator('.nivelo.lernata')).toBeVisible()
   await expect(vorto(page, 'domo').locator('.nivelo.lernenda')).toBeVisible()
   await expect(vorto(page, 'patro').locator('.nivelo.nevidita')).toBeVisible()
+  // lien de la légende vers la révision, depuis le dossier du cours
+  await expect(page.locator('.vortlisto-legendo a', { hasText: 'la révision du vocabulaire' })).toHaveAttribute('href', '../../memoriVortojn.php')
 
   await page.locator('#vortlisto_nivelo').selectOption('konata', { force: true })
   await expect(vorto(page, 'bona')).toBeVisible()

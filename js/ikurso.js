@@ -283,7 +283,8 @@ function rechercherVorton($pattern,$kurso) {
           url : $cheminAbsolu+'ajax/rechercherVorton.php',
           type : 'GET',
           dataType : 'html',
-          data : "pattern="+$pattern+"&kurso="+$kurso,
+          // niveau choisi dans le filtre du lexique, pour un élève ou un invité (#391)
+          data : {pattern: $pattern, kurso: $kurso, nivelo: $("#vortlisto_nivelo").val() || ""},
           success : function(reponse, statut){ 
               $("#vortlisto").replaceWith(reponse);
           },
@@ -299,6 +300,10 @@ $("#pattern").on('keyup', function () {
   $pattern = $(this).val();
   $kurso = $(this).data("kurso");
   rechercherVorton($pattern,$kurso);
+});
+
+$("#vortlisto_nivelo").on('change', function () {
+  rechercherVorton($("#pattern").val(),$("#pattern").data("kurso"));
 });
 
 $("#button_rechercher").click(function() {

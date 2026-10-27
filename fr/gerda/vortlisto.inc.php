@@ -16,6 +16,7 @@
 					<i class="material-icons prefix">search</i><input type="text" name="pattern" data-kurso="GR" id="pattern">
 					<label for="pattern">chercher dans le lexique</label>
 				</div>
+<?php vortlistoFiltrilo($persono_id); ?>
 			</div>
 <?php
 

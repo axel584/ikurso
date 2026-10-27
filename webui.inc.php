@@ -993,33 +993,57 @@ function pubPPP() {
 	global $vojo;
 	echo '<div class="reklamo"><div class="row"><span class="col s7">Vi povas aĉeti la libron <i>Pa&#349;oj al plena posedo</i> en <a href="https://butiko-esperanto-france.org/methodes-et-manuels/65-pasoj-al-plena-posedo-nova-eld.html">nia butiko</a></span><span class="col s5"><a href="https://butiko-esperanto-france.org/methodes-et-manuels/65-pasoj-al-plena-posedo-nova-eld.html"><img class="responsive-img" src="'.$vojo.'bildoj/butiko/pasoj-al-plena-posedo-nova-eld.jpg" /></</span></div>';
 }
-function vortlisto($persono_id,$kurso,$pattern) {
+// Lexique d'un cours. Pour un élève (ou un invité), une pastille indique son niveau sur chaque mot
+// et $nivelo filtre sur ce niveau (#391).
+function vortlisto($persono_id,$kurso,$pattern,$nivelo="") {
 	global $bdd;
-	$query = "SELECT eo,fr,vortoj.tipo,lecionoj.numero,lecioneroj.ordo FROM vortoj join lecioneroj on vortoj.lecionero_id=lecioneroj.id join lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso=?";
-	$params = array($kurso);
-	if ($pattern!="") {
-		$query .= " and (eo like ? or fr like ?) ";
-		$params[] = $pattern."%";
-		$params[] = $pattern."%";
+	require_once __DIR__."/api/VortojAPI.php";
+	$vortojAPI = new VortojAPI($bdd);
+	$lernanto = (int)$persono_id > 0;
+	if (!$lernanto || !isset(VortojAPI::NIVELOJ[$nivelo])) {
+		$nivelo = "";
 	}
-	$query .= " order by eo";
-	$res = $bdd->prepare($query);
-	$res->execute($params);
+	$vortoj = $vortojAPI->listo((string)$kurso, (int)$persono_id, (string)$pattern, $nivelo);
 	echo "<div class='vortlisto' id='vortlisto'>";
 	echo "<div class='lexique'>";
-	$i=0;
 	echo "<div class='row'>";
-	while ($row = $res->fetch()) {	
+	foreach ($vortoj as $row) {
 		if (strpos($row['eo'],"|")!==false) {
 			$VortoEo = substr($row['eo'], 0,strpos($row['eo'], "|"));
 		} else {
 			$VortoEo = $row['eo'];
 		}
-		echo "<p class='col s12 m6'><span class='eo'>".$VortoEo." ";
+		echo "<p class='col s12 m6'>";
+		if ($lernanto) {
+			$priskribo = mb_strtolower(VortojAPI::NIVELOJ[$row['nivelo']]);
+			echo "<span class='nivelo ".$row['nivelo']."' role='img' aria-label='".$priskribo."' title='".$priskribo."'></span>";
+		}
+		echo "<span class='eo'>".$VortoEo." ";
 		echo "<span class='numero'> (".$row['numero'].".".$row['ordo'].")</span></span> : ".$row['fr']."</p>\n";
-		$i++;
+	}
+	if (count($vortoj)==0) {
+		echo "<p class='col s12'>Aucun mot ne correspond à votre recherche.</p>";
 	}
 	echo "</div></div></div>";
+}
+
+// Filtre du lexique par niveau, avec la légende des pastilles : seulement pour un élève ou un invité (#391).
+function vortlistoFiltrilo($persono_id) {
+	if ((int)$persono_id <= 0) {
+		return;
+	}
+	require_once __DIR__."/api/VortojAPI.php";
+	echo "<div class='input-field col s6 l4'>";
+	echo "<select id='vortlisto_nivelo'><option value=''>Tous les mots</option>";
+	foreach (VortojAPI::NIVELOJ as $sxlosilo => $etikedo) {
+		echo "<option value='".$sxlosilo."'>".$etikedo."</option>";
+	}
+	echo "</select><label for='vortlisto_nivelo'>vos mots</label></div>";
+	echo "<p class='col s12 vortlisto-legendo'>";
+	foreach (VortojAPI::NIVELOJ as $sxlosilo => $etikedo) {
+		echo "<span><span class='nivelo ".$sxlosilo."'></span>".mb_strtolower($etikedo)."</span> ";
+	}
+	echo "<br>Un mot est « bien connu » après quatre bonnes réponses de suite dans <a href='".$GLOBALS['cheminAbsolu']."memoriVortojn.php'>la révision du vocabulaire</a>.</p>";
 }
 
 

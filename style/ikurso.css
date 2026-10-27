@@ -699,6 +699,28 @@ p.dauro::before {
 	color: rgba(0,0,0,0.87);
 	margin: 1.5em 0 0.5em 0;
 }
+/* niveau de l'élève sur chaque mot (#391) */
+.nivelo {
+	display: inline-block;
+	width: 0.7em;
+	height: 0.7em;
+	border-radius: 50%;
+	margin-right: 0.4em;
+	vertical-align: baseline;
+	border: 2px solid #43a047;
+}
+.nivelo.nevidita { border-color: #bdbdbd; }
+.nivelo.lernenda { border-color: #e53935; background: #e53935; }
+.nivelo.lernata { background: linear-gradient(90deg, #43a047 50%, transparent 50%); }
+.nivelo.konata { background: #43a047; }
+.vortlisto-legendo {
+	font-size: 0.9rem;
+	color: #75706B;
+}
+.vortlisto-legendo > span {
+	margin-right: 1em;
+	white-space: nowrap;
+}
 .vortlisto i.material-icons {
 	vertical-align: text-bottom;
 	color: #2196F3;

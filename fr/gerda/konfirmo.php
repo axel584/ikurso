@@ -9,9 +9,6 @@ $korpo="informo";
 if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 include "gerdakapo.inc.php";
 ?>
-<!-- ATTENTION VERRUE DE PROGRAMMATION -->
-<!--Comme on "ouvre" le formulaire dans l'en-tête, on est obligé de le fermer ici -->
-</form>
 <div class="row">
 	<article class="col s12 m10 l6 offset-m1 offset-l3">
 		<section id="leciono-enketo">

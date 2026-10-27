@@ -120,7 +120,8 @@ $checkedAboneEsperantoAktiv = $sympa->isMember($persono['retadreso']) ? " checke
 				<div class="col s12">
 					<input class="btn blue right" type="submit" name="Submit" value="Enregister les modifications">
 				</div>
-			</div>	
+			</div>
+		</form>	
 
 		<div class="rimarko">
 			<p  class="noto">Vous disposez d’un droit d’accès, de modification, de rectification et de suppression des données 

@@ -9,9 +9,6 @@ $korpo="informo";
 if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 include "pppkapo.inc.php";
 ?>
-<!-- ATTENTION VERRUE DE PROGRAMMATION -->
-<!--Comme on "ouvre" le formulaire dans l'en-tête, on est obligé de le fermer ici -->
-</form>
 <div class="row">
 	<article class="col s12 m10 l6 offset-m1 offset-l3">
 		<section id="leciono-enketo">
@@ -45,15 +42,7 @@ include "pppkapo.inc.php";
 				<input type='hidden' name="kurso" value='PP'/>
 				<input type='hidden' name="leciono" value='<?=$leciono?>'/>
 				<div class="tasko enketo">
-					<p>Taksu la plezuron de tiu leciono : de 1 (tedega) al 5 (amuzega) </p>
-					<div class="rating">
-						<p><input name="intereso" type="range" value="3" min="1" max="5" step="1"></p>
-					</div>
-	
-					<p>Taksu la facilecon de tiu leciono : de 1 (facilega) al 5 (malfacilega) </p>
-					<div class="rating">
-						<p><input name="malfacileco" type="range" min="1" max="5" step="1"></p>
-					</div>
+					<?php taksoDemandoj("eo"); ?>
 					<div class="input-field col s12">
 						<textarea name="komento" class="materialize-textarea"></textarea>
 						<label for="komento">(ne devigata) Lasu mesaĝon :</label>

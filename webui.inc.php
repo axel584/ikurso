@@ -598,7 +598,8 @@ function QCM($qcm) {
 
 // questions d'appréciation de la leçon (page konfirmo.php des cours en français) :
 // une liste de boutons radio par critère, la valeur envoyée va de 1 à 5
-function taksoDemandoj() {
+// Questions d'évaluation de fin de leçon (boutons radio) ; $lingvo="eo" pour Paŝoj al plena posedo, page en espéranto.
+function taksoDemandoj($lingvo = "fr") {
 	$demandoj = array(
 		"intereso" => array(
 			"demando" => "Quel est votre ressenti sur l’intérêt de cette leçon&nbsp;?",
@@ -621,6 +622,30 @@ function taksoDemandoj() {
 			),
 		),
 	);
+	if ($lingvo == "eo") {
+		$demandoj = array(
+			"intereso" => array(
+				"demando" => "Kiel interesa estis por vi tiu ĉi leciono?",
+				"respondoj" => array(
+					1 => array("😴", "Tro enuiga"),
+					2 => array("😐", "Iom enuiga"),
+					3 => array("🙂", "Meza"),
+					4 => array("😃", "Sufiĉe interesa"),
+					5 => array("🤩", "Bonega! Mi ŝategis ĝin!"),
+				),
+			),
+			"malfacileco" => array(
+				"demando" => "Kiel malfacila estis por vi tiu ĉi leciono?",
+				"respondoj" => array(
+					1 => array("🔵", "Facilega!"),
+					2 => array("🟢", "Sufiĉe facila"),
+					3 => array("🟡", "Kelkaj malfacilaĵoj, sed entute mi sukcesis"),
+					4 => array("🟠", "Sufiĉe malfacila"),
+					5 => array("🔴", "Tro komplika! Mi preskaŭ elŝiris miajn harojn!"),
+				),
+			),
+		);
+	}
 	foreach ($demandoj as $nomo => $demando) {
 		echo "<fieldset class='takso-demando'>";
 		echo "<legend>".$demando["demando"]."</legend>";

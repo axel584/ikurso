@@ -2,12 +2,16 @@
 include "../util.php";
 // 1 : On récupère les paramètres : le cours, la leçon, les 3 critères d'évaluation, l'id de l'élève
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
-$intereso=isset($_POST["intereso"])?$_POST["intereso"]:"";
-$malfacileco=isset($_POST["malfacileco"])?$_POST["malfacileco"]:"";
+$intereso=isset($_POST["intereso"])?(int)$_POST["intereso"]:0;
+$malfacileco=isset($_POST["malfacileco"])?(int)$_POST["malfacileco"]:0;
 $komento=isset($_POST["komento"])?$_POST["komento"]:"";
 $leciono=isset($_POST["leciono"])?$_POST["leciono"]:"";
 $kurso=isset($_POST["kurso"])?$_POST["kurso"]:"";
 if ($persono_id=="") {header("Location:../index.php?erarkodo=8"); exit;}
+// les deux notes sont obligatoires (boutons radio de 1 à 5) : sans elles, on revient au formulaire
+if ($intereso<1 || $intereso>5 || $malfacileco<1 || $malfacileco>5) {
+	header("Location:".(isset($_SERVER["HTTP_REFERER"])?$_SERVER["HTTP_REFERER"]:"../index.php")); exit;
+}
 
 // 2 : on stocke en base
 // on récupère le leciono_id à partir du cours et du numéro de leçon

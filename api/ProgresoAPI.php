@@ -39,6 +39,29 @@ class ProgresoAPI {
         return $sekcioj;
     }
 
+    // Section où envoyer l'élève quand il termine la section $ordo (#751) : ["ordo" => …, "retpagxo" => …],
+    // la première des sections suivantes qu'il n'a pas terminée ; s'il les a toutes terminées, la section suivante ;
+    // null après la dernière section.
+    public function sekvaSekcio(int $persono_id, string $kurso, int $numero, int $ordo): ?array {
+        $demando = $this->bdd->prepare("SELECT le.ordo, l.retpagxo,
+                EXISTS (SELECT 1 FROM personoj_lecioneroj pl WHERE pl.lecionero_id = le.id AND pl.persono_id = ?) AS farita
+            FROM lecioneroj le
+            JOIN lecionoj l ON l.id = le.leciono_id
+            WHERE l.kurso = ? AND l.numero = ? AND le.ordo > ?
+            ORDER BY le.ordo");
+        $demando->execute(array($persono_id, $kurso, $numero, $ordo));
+        $sekcioj = $demando->fetchAll(PDO::FETCH_ASSOC);
+        if (count($sekcioj) == 0) {
+            return null;
+        }
+        foreach ($sekcioj as $sekcio) {
+            if (!$sekcio["farita"]) {
+                return array("ordo" => (int)$sekcio["ordo"], "retpagxo" => $sekcio["retpagxo"]);
+            }
+        }
+        return array("ordo" => (int)$sekcioj[0]["ordo"], "retpagxo" => $sekcioj[0]["retpagxo"]);
+    }
+
     // La section est-elle la dernière de la leçon (épilogue et envoi au correcteur) ? (#487)
     public function estasLastaSekcio(string $kurso, int $numero, int $ordo): bool {
         $demando = $this->bdd->prepare("SELECT le.lasta FROM lecioneroj le JOIN lecionoj l ON l.id = le.leciono_id

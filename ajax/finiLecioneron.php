@@ -51,13 +51,10 @@ $stmt->execute([$lecionero_id]);
 $result = $stmt;
 $row = $result->fetch();
 $ordo = $row["ordo"];
-// on va ensuite prendre la section qui est dans la même leçon et dont le numéro "ordo" est strictement supérieur 
-$query="SELECT lecioneroj.titolo,ordo,lecionoj.retpagxo FROM lecioneroj,lecionoj WHERE lecioneroj.leciono_id=lecionoj.id and lecionoj.numero=? and lecionoj.kurso=? and lecioneroj.ordo>? order by ordo ASC";
-$stmt = $bdd->prepare($query);
-$stmt->execute([$leciono, $kurso, $ordo]);
-$result = $stmt;
-$row = $result->fetch();
-if ($row!=false) {
+// prochaine section pas encore terminée de la leçon, sinon la section suivante (#751)
+require_once __DIR__."/../api/ProgresoAPI.php";
+$row = (new ProgresoAPI($bdd))->sekvaSekcio((int)$persono_id, $kurso, (int)$leciono, (int)$ordo);
+if ($row!==null) {
 	$respondo["url"] = $prefixeKurso.$row['retpagxo'].'?section='.$row['ordo'];
 	$respondo["mesagxo"] = "ok";
 	echo json_encode($respondo);

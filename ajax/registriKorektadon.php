@@ -77,6 +77,10 @@ if (!$neSendiRetmesagxon) {
 	$contents = fread($fd, filesize ($filename));
 	$url = rtrim($urlracine, "/")."/vidiLecionon.php?numleciono=".$leciono."&kurso=".$kurso;
 	$contents=str_replace("##URL##",$url,$contents);
+	// nom et adresse de la personne qui a corrigé, pour que l'élève puisse lui écrire (#1023)
+	$korektantoNomo = trim($korektanto["personnomo"]." ".$korektanto["familinomo"]);
+	$contents=str_replace("##KPERSONNOMO##",htmlspecialchars($korektantoNomo!="" ? $korektantoNomo : $korektanto["enirnomo"]),$contents);
+	$contents=str_replace("##KRETADRESO##",htmlspecialchars((string)$korektanto["retadreso"]),$contents);
 	fclose($fd);
 	mailViaSES($retadresoStudanto,"Votre leçon a été corrigée",$contents);
 }

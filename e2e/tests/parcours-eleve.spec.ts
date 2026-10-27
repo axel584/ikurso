@@ -103,7 +103,9 @@ test.describe("Leçon 1 du cours élémentaire", () => {
 
     expect(sql(`SELECT korektita FROM personoj_lecionoj WHERE persono_id=${LERNANTO_ID} AND leciono_id=59`)).toBe('1')
     expect(sql(`SELECT korekto FROM respondoj WHERE id=${respondoId}`)).toBe(correction)
-    await waitForMail('lernanto1@mailinator.com', 'Votre leçon a été corrigée')
+    const mailKorektado = await waitForMail('lernanto1@mailinator.com', 'Votre leçon a été corrigée')
+    // l'élève peut écrire à la personne qui a corrigé (#1023)
+    expect(mailKorektado.body).toContain('korektanto1@mailinator.com')
 
     // L'élève voit le commentaire de son correcteur.
     await page.goto('eliri.php')

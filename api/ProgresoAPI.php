@@ -39,6 +39,14 @@ class ProgresoAPI {
         return $sekcioj;
     }
 
+    // La section est-elle la dernière de la leçon (épilogue et envoi au correcteur) ? (#487)
+    public function estasLastaSekcio(string $kurso, int $numero, int $ordo): bool {
+        $demando = $this->bdd->prepare("SELECT le.lasta FROM lecioneroj le JOIN lecionoj l ON l.id = le.leciono_id
+            WHERE l.kurso = ? AND l.numero = ? AND le.ordo = ?");
+        $demando->execute(array($kurso, $numero, $ordo));
+        return (int)$demando->fetchColumn() === 1;
+    }
+
     // Sections d'une leçon que l'élève n'a pas terminées (#1022) : [["ordo" => …, "titolo" => …], …].
     public function nefinitajSekcioj(int $persono_id, string $kurso, int $numero): array {
         $demando = $this->bdd->prepare("SELECT le.ordo, le.titolo

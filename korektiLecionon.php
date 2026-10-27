@@ -64,7 +64,7 @@ if (!$aucuneLeciono) {
 		if (count($mankantajRespondoj)>0) {
 			echo "<p>Questions sans réponse&nbsp;:</p><ul class='browser-default'>";
 			foreach ($mankantajRespondoj as $ekzerco_id => $ekzerco) {
-				$komando = trim(strip_tags($ekzerco["komando"]));
+				$komando = rtrim(trim(strip_tags($ekzerco["komando"])), " .");
 				if (mb_strlen($komando)>80) { $komando = mb_substr($komando, 0, 80)."…"; }
 				$numeroj = $ekzerco["numeroj"];
 				echo "<li><a href='#ekzerco".$ekzerco_id."'>".htmlspecialchars($komando)."</a> (section ".$ekzerco["ordo"].")&nbsp;: ";

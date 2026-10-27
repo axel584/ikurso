@@ -12,6 +12,11 @@ function displayWarningSiLecioneroManquante($persono_id,$kurso,$leciono,$lecione
 	if ($persono_id==null) {
 		return;
 	}
+	// dernière section : l'avertissement est affiché au-dessus du bouton d'envoi, avec les questions sans réponse (#487)
+	require_once __DIR__."/api/ProgresoAPI.php";
+	if ((new ProgresoAPI($bdd))->estasLastaSekcio($kurso, (int)$leciono, (int)$lecionero)) {
+		return;
+	}
 	$query = "SELECT distinct lecioneroj.id,ordo,lecioneroj.titolo,lecioneroj.tipo,lecionoj.retpagxo,personoj_lecioneroj.persono_id,lecioneroj.dauxro  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id LEFT JOIN personoj_lecioneroj on personoj_lecioneroj.lecionero_id=lecioneroj.id and personoj_lecioneroj.persono_id=? WHERE lecionoj.numero=? and lecionoj.kurso=? and ordo<? order by ordo";
 	$result = $bdd->prepare($query);
 	$result->execute(array($persono_id,$leciono,$kurso,$lecionero));
@@ -223,8 +228,14 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
 		echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
 	} elseif($lasta==1 && $gasto) { // la correction demande un compte : l'inscription garde le travail déjà fait
+		if ($classeDejaFait=="") { // pas encore envoyée
+			montriMankantajnAvizon($persono_id,$kurso,$leciono,$lecionero,$row["retpagxo"]);
+		}
 		echo '<a id="aligxi_por_korektado_button" href="#aligxi" class="modal-trigger waves-effect waves-light btn tooltipped light-blue darken-1" data-target="aligxi" data-position="top" data-delay="50" data-tooltip="vos réponses seront conservées">Créer un compte pour être corrigé</a>';
 	} elseif($lasta==1) { // on envoit au correcteur si on a un correcteur, on en demande un dans le cas contraire
+		if ($classeDejaFait=="") { // pas encore envoyée
+			montriMankantajnAvizon($persono_id,$kurso,$leciono,$lecionero,$row["retpagxo"]);
+		}
 		// on vérifie si l'élève a déjà un correcteur :
 		$result = $bdd->prepare("select count(*) as combien from nuna_kurso where kurso=? and studanto=?");
 		$result->execute(array($kurso,$persono_id));
@@ -237,6 +248,46 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 	} else { // on indique que la leçon est terminée
 		echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
 	}
+}
+
+// Avant d'envoyer la leçon (dernière section) : sections pas terminées et questions sans réponse (#487).
+// L'envoi reste possible : le correcteur voit aussi ce qui manque (#1022).
+function montriMankantajnAvizon($persono_id,$kurso,$leciono,$lecionero,$retpagxo) {
+	global $bdd;
+	if ((int)$persono_id<=0) {
+		return;
+	}
+	require_once __DIR__."/api/ProgresoAPI.php";
+	$progresoAPI = new ProgresoAPI($bdd);
+	$sekcioj = array_filter($progresoAPI->nefinitajSekcioj((int)$persono_id, $kurso, (int)$leciono), function ($sekcio) use ($lecionero) {
+		return (int)$sekcio["ordo"]!=(int)$lecionero; // la section d'envoi est marquée terminée à l'envoi
+	});
+	$ekzercoj = $progresoAPI->mankantajRespondoj((int)$persono_id, $kurso, (int)$leciono);
+	if (count($sekcioj)==0 && count($ekzercoj)==0) {
+		return;
+	}
+	echo "<div class='card red lighten-4 mankantaj'><div class='card-content'>";
+	echo "<span class='card-title'><i class='material-icons'>warning</i> Avant d'envoyer cette leçon</span>";
+	if (count($sekcioj)>0) {
+		echo "<p>Vous n'avez pas terminé ces sections&nbsp;:</p><ul class='browser-default'>";
+		foreach ($sekcioj as $sekcio) {
+			echo "<li><a href='".$retpagxo."?section=".(int)$sekcio["ordo"]."'>".(int)$sekcio["ordo"].". ".htmlspecialchars($sekcio["titolo"])."</a></li>";
+		}
+		echo "</ul>";
+	}
+	if (count($ekzercoj)>0) {
+		echo "<p>Ces questions n'ont pas de réponse&nbsp;:</p><ul class='browser-default'>";
+		foreach ($ekzercoj as $ekzerco) {
+			$komando = rtrim(trim(strip_tags($ekzerco["komando"])), " .");
+			if (mb_strlen($komando)>80) { $komando = mb_substr($komando, 0, 80)."…"; }
+			$numeroj = $ekzerco["numeroj"];
+			echo "<li><a href='".$retpagxo."?section=".$ekzerco["ordo"]."'>section ".$ekzerco["ordo"]."</a>, ".htmlspecialchars($komando)."&nbsp;: ";
+			echo (count($numeroj)>1 ? "questions " : "question ").implode(", ", $numeroj)."</li>";
+		}
+		echo "</ul>";
+	}
+	echo "<p>Vous pouvez tout de même envoyer votre leçon&nbsp;: votre correcteur verra ce qui manque.</p>";
+	echo "</div></div>";
 }
 
 // Bandeau des pages de cours pour l'invité (#1092) : son travail n'est gardé que dans ce navigateur.

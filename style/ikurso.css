@@ -1216,7 +1216,10 @@ ul.kursinformoj li i {margin-top: .2rem; color: #2196F3; flex-shrink: 0;}
 	color: #c62828;
 	font-style: italic;
 }
-.korektiLecionon .mankantaj ul.browser-default {
+.mankantaj {
+	text-align: left;
+}
+.mankantaj ul.browser-default {
 	margin: 0 0 0.5rem 0;
 }
 .korektiLecionon article p.parto {

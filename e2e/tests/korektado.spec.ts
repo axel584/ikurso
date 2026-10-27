@@ -62,3 +62,49 @@ test("sans rien de manquant, pas d'encadré", async ({ page }) => {
   await expect(page.locator('.mankantaj')).toHaveCount(0)
   await expect(page.locator('p.respondo.mankanta')).toHaveCount(0)
 })
+
+// Fin de leçon côté élève (#487) : avant d'envoyer, l'élève voit ce qui lui manque.
+test("avant d'envoyer sa leçon, l'élève voit les sections non terminées et les questions sans réponse", async ({ page }) => {
+  // leçon pas encore envoyée : la dernière section (envoi) n'est pas terminée
+  sql(`DELETE FROM personoj_lecionoj WHERE persono_id=${LERNANTO_ID()}`)
+  sql(`DELETE pl FROM personoj_lecioneroj pl JOIN lecioneroj le ON le.id=pl.lecionero_id WHERE pl.persono_id=${LERNANTO_ID()} AND le.leciono_id=${LECIONO_ID()} AND le.ordo=13`)
+  await login(page, USERS.lernanto)
+  await page.goto('fr/cge/lec01.php?section=13')
+  const encadre = page.locator('.mankantaj')
+  await expect(encadre).toHaveCount(1)
+  await expect(encadre).toContainText("Avant d'envoyer cette leçon")
+  await expect(encadre.locator('a[href="lec01.php?section=3"]')).toHaveCount(1)
+  await expect(encadre.locator('a[href="lec01.php?section=4"]')).toHaveCount(1)
+  await expect(encadre.locator('li', { hasText: 'section 6' })).toContainText('questions 2, 3, 4, 5, 6')
+  // l'avertissement du haut de page n'est pas répété sur la dernière section
+  await expect(page.getByText('vous n\'avez pas terminé certaines sections précédentes')).toHaveCount(0)
+  // l'envoi reste possible
+  await expect(page.locator('#petiKorektanton_button:not(.disabled), #sendiLecionon_button:not(.disabled)')).toHaveCount(1)
+
+  await encadre.locator('a[href="lec01.php?section=3"]').click()
+  await expect(page).toHaveURL(/lec01\.php\?section=3$/)
+})
+
+test("l'élève qui a tout fait n'a pas d'avertissement avant d'envoyer sa leçon", async ({ page }) => {
+  const lernanto = LERNANTO_ID()
+  sql(`DELETE FROM personoj_lecionoj WHERE persono_id=${lernanto}`)
+  sql(`DELETE pl FROM personoj_lecioneroj pl JOIN lecioneroj le ON le.id=pl.lecionero_id WHERE pl.persono_id=${lernanto} AND le.leciono_id=${LECIONO_ID()} AND le.ordo=13`)
+  sql(`INSERT INTO personoj_lecioneroj (dato, persono_id, lecionero_id, ekdato)
+    SELECT NOW(), ${lernanto}, id, NOW() FROM lecioneroj WHERE leciono_id=${LECIONO_ID()} AND ordo IN (3, 4)`)
+  sql(`DELETE FROM respondoj WHERE persono_id=${lernanto}`)
+  sql(`INSERT INTO respondoj (persono_id, ekzercero_id, respondo, normaligita)
+    SELECT ${lernanto}, ee.id, 'respondo', 'respondo' FROM ekzerceroj ee JOIN ekzercoj e ON e.id=ee.ekzerco_id
+    JOIN lecioneroj le ON le.id=e.lecionero_id WHERE le.leciono_id=${LECIONO_ID()} AND ee.forigita=0`)
+  await login(page, USERS.lernanto)
+  await page.goto('fr/cge/lec01.php?section=13')
+  await expect(page.locator('#petiKorektanton_button, #sendiLecionon_button')).toHaveCount(1)
+  await expect(page.locator('.mankantaj')).toHaveCount(0)
+})
+
+test("une fois la leçon envoyée, l'avertissement de fin de leçon disparaît", async ({ page }) => {
+  // beforeEach : leçon envoyée, section d'envoi terminée, sections 3 et 4 pas terminées
+  await login(page, USERS.lernanto)
+  await page.goto('fr/cge/lec01.php?section=13')
+  await expect(page.locator('#petiKorektanton_button.disabled, #sendiLecionon_button.disabled')).toHaveCount(1)
+  await expect(page.locator('.mankantaj')).toHaveCount(0)
+})

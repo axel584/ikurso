@@ -375,4 +375,4 @@ if ($persono_id=="") {
 		</div>
 
 	<main>
-	<form id="chefa_form"> <!-- on englobe chaque page d'un formulaire principal -->
+	<div id="chefa_form"> <!-- conteneur des réponses envoyées en AJAX ($("#chefa_form :input").serialize()) ; pas un formulaire : Entrée ne recharge pas la page et les pages gardent leurs propres formulaires (#1098) -->

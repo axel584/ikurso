@@ -1,4 +1,4 @@
-	</form>
+	</div> <!-- chefa_form -->
 	</main>
 	<footer class="primaire fond">
 		<div class="submenuo">

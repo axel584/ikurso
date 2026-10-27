@@ -607,7 +607,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		url : $cheminAbsolu+'ajax/registriEkzercaron.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#registriEkzercaron_button").data('lecionero_id')+"&leciono="+$("#registriEkzercaron_button").data('leciono')+"&kurso="+$("#registriEkzercaron_button").data('kurso')+"&ekdato="+$("#registriEkzercaron_button").data('ekdato'),
+       		data : $("#chefa_form :input").serialize()+"&lecionero_id="+$("#registriEkzercaron_button").data('lecionero_id')+"&leciono="+$("#registriEkzercaron_button").data('leciono')+"&kurso="+$("#registriEkzercaron_button").data('kurso')+"&ekdato="+$("#registriEkzercaron_button").data('ekdato'),
        		success : function(reponse, statut){ 
             if (reponse.type=="pas fini") {
                 //Materialize.toast(reponse.mesagxo, 4000);
@@ -646,7 +646,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		url : $cheminAbsolu+'ajax/registriKorektadon.php',
        		type : 'POST',
        		dataType : 'json',
-       		data : $("#chefa_form").serialize()+"&leciono_id="+$("#registriKorektadon_button").data('leciono_id')+"&studanto_id="+$("#registriKorektadon_button").data('studanto')+"&leciono="+$("#registriKorektadon_button").data('leciono')+"&kurso="+$("#registriKorektadon_button").data('kurso'),
+       		data : $("#chefa_form :input").serialize()+"&leciono_id="+$("#registriKorektadon_button").data('leciono_id')+"&studanto_id="+$("#registriKorektadon_button").data('studanto')+"&leciono="+$("#registriKorektadon_button").data('leciono')+"&kurso="+$("#registriKorektadon_button").data('kurso'),
        		success : function(reponse, statut){ 
 				window.location = $urlracine+reponse.url;
        		},
@@ -701,7 +701,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		url : $cheminAbsolu+'ajax/kontroliQCM.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#kontroliQCM_button").data('lecionero_id')+"&leciono="+$("#kontroliQCM_button").data('leciono')+"&kurso="+$("#kontroliQCM_button").data('kurso')+"&ekdato="+$("#kontroliQCM_button").data('ekdato'),
+       		data : $("#chefa_form :input").serialize()+"&lecionero_id="+$("#kontroliQCM_button").data('lecionero_id')+"&leciono="+$("#kontroliQCM_button").data('leciono')+"&kurso="+$("#kontroliQCM_button").data('kurso')+"&ekdato="+$("#kontroliQCM_button").data('ekdato'),
        		success : function(reponse, statut){ 
        			if (reponse.mesagxo=="ko") {
        				// il y a des erreurs, on va les afficher
@@ -728,7 +728,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		url : $cheminAbsolu+'ajax/petiKorektanton.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#petiKorektanton_button").data('lecionero_id')+"&leciono="+$("#petiKorektanton_button").data('leciono')+"&kurso="+$("#petiKorektanton_button").data('kurso')+"&ekdato="+$("#petiKorektanton_button").data('ekdato'),
+       		data : $("#chefa_form :input").serialize()+"&lecionero_id="+$("#petiKorektanton_button").data('lecionero_id')+"&leciono="+$("#petiKorektanton_button").data('leciono')+"&kurso="+$("#petiKorektanton_button").data('kurso')+"&ekdato="+$("#petiKorektanton_button").data('ekdato'),
        		success : function(reponse, statut){ 
        			if (reponse.mesagxo=="compteNonActif") {
        				alert("Votre compte n'a pas été activé, vous ne pouvez pas demander un correcteur. Vérifier dans vos e-mails et cliquez sur le lien d'activation");
@@ -752,7 +752,7 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        		url : $cheminAbsolu+'ajax/sendiLecionon.php',
        		type : 'GET',
        		dataType : 'json',
-       		data : $("#chefa_form").serialize()+"&lecionero_id="+$("#sendiLecionon_button").data('lecionero_id')+"&leciono="+$("#sendiLecionon_button").data('leciono')+"&kurso="+$("#sendiLecionon_button").data('kurso')+"&ekdato="+$("#sendiLecionon_button").data('ekdato'),
+       		data : $("#chefa_form :input").serialize()+"&lecionero_id="+$("#sendiLecionon_button").data('lecionero_id')+"&leciono="+$("#sendiLecionon_button").data('leciono')+"&kurso="+$("#sendiLecionon_button").data('kurso')+"&ekdato="+$("#sendiLecionon_button").data('ekdato'),
        		success : function(reponse, statut){ 
        			if (reponse.type=="korektanto") {
        				alert("Vous n'avez pas de correcteur d'attribué, veuillez contacter les administrateurs.");
@@ -855,7 +855,7 @@ $(".memorilo_button").click(function() {
 
 $('.memorilo_input').keypress(function(e){
     if( e.which == 13 ){
-        // pagxkapo.inc.php entoure la page d'un formulaire : Entrée l'enverrait et rechargerait la page
+        // la carte suivante s'affiche après la réponse : pas d'autre effet de la touche Entrée
         e.preventDefault();
         var $vorto_id=$(this).data('vorto_id');
         var $persono_id=$(this).data('persono_id');

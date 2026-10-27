@@ -44,9 +44,6 @@ if (isset($section) && $section==1) { ?>
 </div>
 <?php } ?>
 				</div> <!-- kadro -->
-<?php if ($parto=="ek") { ?>
-			</form>
-<?php } ?>
 			</div> <!-- enhavo -->
 
 <?php 

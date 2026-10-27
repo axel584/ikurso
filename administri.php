@@ -73,7 +73,6 @@ if ($celpersono_id && $administranto) {
 
 include "pagxkapo.inc.php";
 ?>
-	</form><!-- ferme le formulaire principal ouvert par pagxkapo.inc.php : cette page a ses propres formulaires, qui ne peuvent pas y être imbriqués -->
 
 <div class="row administri">
 

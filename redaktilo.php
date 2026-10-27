@@ -16,7 +16,6 @@ $ago=isset($_GET["ago"])?$_GET["ago"]:"";
 if (isset($celpersono_id)) {$celpersono = apartigiPersonon($celpersono_id);}
 include "pagxkapo.inc.php";
 ?>
-</form>
 
 <div class="row">
 <form action="redaktilo.php" method="POST">

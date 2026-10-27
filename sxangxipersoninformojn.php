@@ -26,7 +26,6 @@ $sympa = new SympaAPI();
 $checkedAboneEsperantoAktiv = $sympa->isMember($persono['retadreso']) ? " checked " : "";
 
 ?>
-</form> <!-- on ferme le formulaire principal -->
 <div class="row">
 	<article class="col s12 m10 l7 offset-m2 offset-l2">
 		<h1>Données personnelles</h1>

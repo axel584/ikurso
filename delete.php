@@ -8,7 +8,8 @@ $persono = apartigiPersonon($persono_id);
 if ($persono["rajtoj"]!='A') {header("Location:index.php?erarkodo=4"); exit;}
 $celpersono_id=isset($_POST["celpersono_id"])?$_POST["celpersono_id"]:"";
 $celpersono_id=isset($_GET["celpersono_id"])?$_GET["celpersono_id"]:$celpersono_id;
-$validperson=isset($_GET["validperson"])?$_GET["validperson"]:"";
+// envoyé par le formulaire de confirmation (POST) : il passait en GET tant que pagxkapo.inc.php entourait la page d'un formulaire (#1098)
+$validperson=isset($_POST["validperson"])?$_POST["validperson"]:"";
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 $celpersono = apartigiPersonon($celpersono_id);
 if (($celpersono_id!="") && ($validperson==$celpersono["enirnomo"])) {

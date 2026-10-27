@@ -61,7 +61,6 @@ function listiSercxadon($personnomo,$familinomo,$celenirnomo,$retadreso,$urbo,$p
 $korpo="informoj";
 include "pagxkapo.inc.php";
 ?>
-	</form><!-- ferme le formulaire principal ouvert par pagxkapo.inc.php (voir administri.php) -->
 <div class="row">
 	<article class="col s12 m10 l8 offset-m1 offset-l2">
 		<p><a href="administri.php"><i class="material-icons tiny">arrow_back</i> Gérer les utilisateurs</a></p>

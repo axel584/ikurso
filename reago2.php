@@ -5,7 +5,8 @@ $pagxtitolo="Envoi de message";
 // champs absents (envoi direct sans passer par le formulaire) : chaîne vide
 $_POST += array('g-recaptcha-response'=>'', 'sendinto'=>'', 'komento'=>'', 'temo'=>'', 'reagopagxo'=>'');
 // recaptcha google : antispam
-$secret = '6LdTAkwdAAAAACg_m0KMK_mz9N2y1EJTiqiWy-j9';
+// clé secrète dans config.php, jamais dans le dépôt (#1086)
+$secret = isset($RECAPTCHA_SECRET) ? $RECAPTCHA_SECRET : '';
 $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.urlencode($_POST['g-recaptcha-response']));
 $responseCaptcha = json_decode($verifyResponse);
 if (checkEmail($_POST['sendinto'])) {

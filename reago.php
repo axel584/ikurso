@@ -118,7 +118,7 @@ include "pagxkapo.inc.php";
 				</div>
 
 				<div class="card-action">
-					<div class = "g-recaptcha" data-sitekey = "6LdTAkwdAAAAAIjFw2MeC40BV5tneUf47FTrYlfI"></div>
+					<div class = "g-recaptcha" data-sitekey = "<?php echo htmlspecialchars(isset($RECAPTCHA_SITEKEY) ? $RECAPTCHA_SITEKEY : ''); ?>"></div>
 					<input class="btn waves-effect waves-light blue" type="submit" value="envoyer">
 					<input class="btn-flat waves-effect waves-light blue-text" type="reset" value="effacer">
 				</div>

@@ -29,6 +29,8 @@ $portSmtpSES = 587;
 $userSES = "USER_SES";
 $passwordSES = "mot de passe Amazon SES";
 $milestone = 1;
+$RECAPTCHA_SITEKEY = "clé du site reCAPTCHA"; // formulaire de contact (reago.php)
+$RECAPTCHA_SECRET = "clé secrète reCAPTCHA"; // jamais dans le dépôt
 ?>
 ```
 4. DANS LE RÉPERTOIRE js CRÉER LE FICHIER config.js contenant les informations suivantes :

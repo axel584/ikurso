@@ -37,6 +37,8 @@ $base = "ikurso";
 $login = "ikurso_user";
 $motDePasse = "ikurso_pass";
 $JWT_SECRET = "chaîne-aléatoire-de-64-caractères"; // secret de signature des JWT, différent de $motDePasse
+$RECAPTCHA_SITEKEY = "clé du site reCAPTCHA"; // formulaire de contact (reago.php)
+$RECAPTCHA_SECRET = "clé secrète reCAPTCHA"; // vérification dans reago2.php, jamais dans le dépôt
 $urlracine = "http://localhost:8080/";
 $cheminAbsolu = "/";
 // ... other config variables

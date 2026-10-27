@@ -796,23 +796,32 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 	require_once __DIR__."/api/GastoAPI.php";
 	$lernanto_id = GastoAPI::lernantoId();
 	$reprenSekcioj = array();
+	$stato = null;
 	if ($lernanto_id!=="") {
 		require_once __DIR__."/api/ProgresoAPI.php";
-		$reprenSekcioj = (new ProgresoAPI($bdd))->reprenSekcioj((int)$lernanto_id, $kurso);
+		$progresoAPI = new ProgresoAPI($bdd);
+		$reprenSekcioj = $progresoAPI->reprenSekcioj((int)$lernanto_id, $kurso);
+		// en vert les leçons dont toutes les sections sont finies, en rose celles envoyées sans l'être (#909)
+		$stato = $progresoAPI->lecionojStato((int)$lernanto_id, $kurso);
 	}
+	$titoloj = array("farita" => "Leçon terminée", "nekompleta" => "Leçon envoyée, mais certaines sections ne sont pas terminées");
 	$res = $bdd->prepare("select * from lecionoj where kurso=? order by numero");
 	$res->execute(array($kurso));
 	while ($row = $res->fetch()) {
-		// leçon en cours :
-		if ($leciono==$row["numero"]) {
+		$titolo = "";
+		if ($stato!==null) {
+			// élève ou invité : couleur d'après ce qu'il a fait, la leçon affichée est encadrée
+			$classe = isset($stato[(int)$row["numero"]]) ? $stato[(int)$row["numero"]] : 'nova';
+			$titolo = isset($titoloj[$classe]) ? " title='".$titoloj[$classe]."'" : "";
+			if ($leciono==$row["numero"]) {
+				$classe .= ' nuna';
+			}
+		} elseif ($leciono==$row["numero"]) {
+			// visiteur : en vert les leçons avant celle affichée
 			$classe = 'nuna';
-		} 
-		// leçon déjà faite :
-		if ($leciono>$row["numero"]) {
+		} elseif ($leciono>$row["numero"]) {
 			$classe = 'farita';
-		}
-		// leçon par encore faite 
-		if ($leciono<$row["numero"]) {
+		} else {
 			$classe = 'nova';
 		}
 		$numero = $row["numero"];
@@ -821,7 +830,7 @@ function getListoLecionoj($kurso,$leciono,$chemin='') {
 			$numero='Ekzameno A2';
 		}
 		$sekcio = isset($reprenSekcioj[(int)$row["numero"]]) ? "?section=".$reprenSekcioj[(int)$row["numero"]] : "";
-		echo "<li id='lec".sprintf('%02d',$row["numero"])."' class='".$classe."'><a href='".$chemin.$row["retpagxo"].$sekcio."'>".$numero."</a></li>";
+		echo "<li id='lec".sprintf('%02d',$row["numero"])."' class='".$classe."'".$titolo."><a href='".$chemin.$row["retpagxo"].$sekcio."'>".$numero."</a></li>";
 	}
 	if ($kurso=='GR') {
 		if ($leciono==90) {

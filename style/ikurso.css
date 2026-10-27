@@ -486,8 +486,15 @@ ul#lecionoj li.farita {
 	border-color: #9ccc65;
 }
 ul#lecionoj li.nuna {
-	background-color:#FFF;
-	border:1px solid #9ccc65;
+	border:1px solid #558b2f;
+}
+/* leçon envoyée au correcteur alors que des sections ne sont pas finies (#909) : même rose que l'avertissement des sections */
+ul#lecionoj li.nekompleta {
+	background-color: #ffcdd2;
+	border-color: #ffcdd2;
+}
+ul#lecionoj li.nekompleta.nuna {
+	border-color: #e57373;
 }
 ul#lecionoj li a {
 	display: block;

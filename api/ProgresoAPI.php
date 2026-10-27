@@ -38,4 +38,27 @@ class ProgresoAPI {
         }
         return $sekcioj;
     }
+
+    // État de chaque leçon du cours pour l'élève (#909) : [numéro de leçon => "farita" | "nekompleta"].
+    // farita : toutes les sections sont finies ; nekompleta : leçon envoyée au correcteur
+    // (personoj_lecionoj) alors que des sections ne sont pas finies. Les autres leçons sont absentes.
+    public function lecionojStato(int $persono_id, string $kurso): array {
+        $demando = $this->bdd->prepare("SELECT l.numero, COUNT(le.id) AS tuto, COUNT(pl.lecionero_id) AS finitaj,
+                (SELECT COUNT(*) FROM personoj_lecionoj s WHERE s.leciono_id = l.id AND s.persono_id = ?) AS sendita
+            FROM lecionoj l
+            LEFT JOIN lecioneroj le ON le.leciono_id = l.id
+            LEFT JOIN (SELECT DISTINCT lecionero_id FROM personoj_lecioneroj WHERE persono_id = ?) pl ON pl.lecionero_id = le.id
+            WHERE l.kurso = ?
+            GROUP BY l.id, l.numero");
+        $demando->execute(array($persono_id, $persono_id, $kurso));
+        $stato = array();
+        foreach ($demando->fetchAll(PDO::FETCH_ASSOC) as $vico) {
+            if ((int)$vico["tuto"] > 0 && (int)$vico["finitaj"] >= (int)$vico["tuto"]) {
+                $stato[(int)$vico["numero"]] = "farita";
+            } elseif ((int)$vico["sendita"] > 0) {
+                $stato[(int)$vico["numero"]] = "nekompleta";
+            }
+        }
+        return $stato;
+    }
 }

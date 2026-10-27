@@ -86,6 +86,13 @@ include "pagxkapo.inc.php";
 		<?php if ($administriEraro == "11") { ?>
 			<div class="card-panel red lighten-4">Choisissez un correcteur avant de sauvegarder.</div>
 		<?php } ?>
+		<?php // mails envoyés depuis la fiche (#878)
+		if (isset($_GET["sendita"]) && $celpersono) { ?>
+			<div class="card-panel green lighten-4"><?php echo $_GET["sendita"]=="pasvorto" ? "Un lien pour changer de mot de passe" : "Le lien d’activation"; ?> a été envoyé à <?php echo h($celpersono["retadreso"]); ?>.</div>
+		<?php } ?>
+		<?php if ($administriEraro == "sendi") { ?>
+			<div class="card-panel red lighten-4"><?php echo h(isset($_SESSION["administri_eraro"]) ? $_SESSION["administri_eraro"] : "Le mail n’a pas pu être envoyé : ce compte n’a pas d’adresse e-mail."); unset($_SESSION["administri_eraro"]); ?></div>
+		<?php } ?>
 
 <?php if (!$celpersono_id) { ?>
 		<h1>Gérer les utilisateurs</h1>
@@ -146,6 +153,18 @@ include "pagxkapo.inc.php";
 			<div class="card-action">
 				<button type="submit" form="administri2" class="btn waves-effect waves-light"><i class="material-icons left">save</i>Enregistrer</button>
 				<a class="btn-flat waves-effect" href="eniri-por-administranto.php?persono_id=<?php echo $celpersono_id; ?>"><i class="material-icons left">login</i>Se connecter comme <?php echo h($celpersono["enirnomo"]); ?></a>
+				<?php if ((string)$celpersono["retadreso"]!=="") { // mails à renvoyer à l'élève (#878) ?>
+				<?php if ($celpersono["aktivigita"]!=1) { ?>
+				<form method="post" action="administriSendi.php" class="sendi">
+					<input type="hidden" name="celpersono_id" value="<?php echo $celpersono_id; ?>">
+					<button type="submit" name="ago" value="aktivigo" class="btn-flat waves-effect"><i class="material-icons left">mark_email_unread</i>Renvoyer le lien d’activation</button>
+				</form>
+				<?php } ?>
+				<form method="post" action="administriSendi.php" class="sendi">
+					<input type="hidden" name="celpersono_id" value="<?php echo $celpersono_id; ?>">
+					<button type="submit" name="ago" value="pasvorto" class="btn-flat waves-effect"><i class="material-icons left">key</i>Envoyer un lien de mot de passe</button>
+				</form>
+				<?php } ?>
 				<form method="post" action="delete.php" class="forigi">
 					<input type="hidden" name="celpersono_id" value="<?php echo $celpersono_id; ?>">
 					<button type="submit" class="btn-flat waves-effect red-text"><i class="material-icons left">delete</i>Supprimer</button>

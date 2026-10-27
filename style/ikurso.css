@@ -1402,7 +1402,8 @@ span.bravo {
 }
 
 /* gestion des comptes (administri.php) */
-.administri .card-action form.forigi {display: inline;}
+.administri .card-action form.forigi,
+.administri .card-action form.sendi {display: inline;}
 .administri .tabelo {overflow-x: auto;}
 .administri .fiche-numero {font-size: 0.4em;}
 .administri .sekso {margin-right: 1.5rem;}

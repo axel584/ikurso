@@ -52,6 +52,14 @@ function jamFinisKurson($studanto) {
 }
 
 
+// Relance des comptes pas activés, au moins 24 heures après l'inscription, une seule fois (#639)
+require_once "../api/AktivigoAPI.php";
+$aktivigoAPI = new AktivigoAPI($bdd);
+foreach ($aktivigoAPI->rememorigendaj() as $persono_id) {
+	echo $persono_id.":rappel d'activation\n";
+	$aktivigoAPI->sendiAktivigilon($persono_id, "aktivigiRememorigo.html", "Activez votre compte pour commencer à apprendre l'espéranto", "rememorigo", AktivigoAPI::REMEMORIGO);
+}
+
 // Premier rappel au bout de 6 jours
 $query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_agordoj on personoj_agordoj.persono_id=personoj.id and personoj_agordoj.agordo='RAPPEL' and personoj_agordoj.rajto=1 join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 6 DAY)";
 $result = $bdd->query($query);

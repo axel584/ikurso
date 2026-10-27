@@ -100,6 +100,18 @@ section.klarigo ul li {
 	    transform: translateX(-20%);
 	}
 }
+/* #1017 : en dessous de 1280 px, le menu ne tient pas toujours sur une ligne (surtout avec « Espace correcteur »
+   ou des polices plus larges) : il passait sous la barre et cachait la liste des leçons. Menu hamburger comme sur tablette. */
+@media only screen and (min-width: 993px) and (max-width: 1279px)
+{
+	nav ul.hide-on-med-and-down {display: none !important;}
+	nav a.sidenav-trigger.hide-on-large-only {display: block !important;}
+	nav .brand-logo {
+	    left: 20%;
+	    -webkit-transform: translateX(-20%);
+	    transform: translateX(-20%);
+	}
+}
 
 /*----- surcharge modal konektigxi -----*/
 	

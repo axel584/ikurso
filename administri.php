@@ -48,8 +48,12 @@ function listo($nomo, $tabelo, $elektita, $malplena, $ordo = " order by nomo") {
 }
 
 // formulaire d'attribution d'un correcteur (administriNunanKurson.php)
-function korektantoFormularo($celpersono_id, $kurso, $elektita, $api) {
+// $aktuala : correcteur actuel (id, enirnomo) quand on change de correcteur, présélectionné même s'il n'accepte plus d'élèves
+function korektantoFormularo($celpersono_id, $kurso, $elektita, $api, $aktuala = null, $butono = "Attribuer") {
 	$korektantoj = $api->korektantojLauxKurso($kurso);
+	if ($aktuala && !in_array((int)$aktuala["id"], array_column($korektantoj, "id"))) {
+		array_unshift($korektantoj, array("id" => (int)$aktuala["id"], "enirnomo" => $aktuala["enirnomo"], "lernantoj" => "?", "kapablo" => 0, "procento" => "–"));
+	}
 	echo "<form method='post' action='administriNunanKurson.php' class='korektanto-formularo'>";
 	echo "<input type='hidden' name='celpersono_id' value='".(int)$celpersono_id."'>";
 	echo "<input type='hidden' name='kurso' value='".h($kurso)."'>";
@@ -59,7 +63,7 @@ function korektantoFormularo($celpersono_id, $kurso, $elektita, $api) {
 		echo "<option value='".$k["id"]."'".($k["id"] == $elektita ? " selected" : "").">".h($k["enirnomo"])." (".$k["lernantoj"]."/".$k["kapablo"].") ".$k["procento"]."%</option>";
 	}
 	echo "</select><label>Correcteur</label></div>";
-	echo "<button type='submit' class='btn-small waves-effect waves-light'><i class='material-icons left'>save</i>Attribuer</button>";
+	echo "<button type='submit' class='btn-small waves-effect waves-light'><i class='material-icons left'>save</i>".h($butono)."</button>";
 	echo "</form>";
 }
 
@@ -173,9 +177,11 @@ include "pagxkapo.inc.php";
 						<tr>
 							<td><?php echo h($kurso["kurso_nomo"]); ?><?php if ($sekvata) { echo " <span class='new badge' data-badge-caption='en cours'></span>"; } ?></td>
 							<td>
-								<?php if ($sekvata && $celpersono["rajtoj"]=='P' && $administranto) {
-									// élève remis en attente : on peut lui donner un autre correcteur
-									korektantoFormularo($celpersono_id, $kurso["kurso"], 0, $api);
+								<?php if (($kurso["stato"] == 'N' || $kurso["stato"] == 'K') && $administranto) {
+									// cours en cours (élève S, ou remis en attente P) : changement de correcteur (#1021)
+									echo "<p>Actuel&nbsp;: <a href='administri.php?celpersono_id=".(int)$kurso["korektanto_id"]."'>".h($kurso["korektanto_enirnomo"])."</a></p>";
+									korektantoFormularo($celpersono_id, $kurso["kurso"], (int)$kurso["korektanto_id"], $api,
+										array("id" => $kurso["korektanto_id"], "enirnomo" => $kurso["korektanto_enirnomo"]), "Changer de correcteur");
 								} else { ?>
 									<a href="administri.php?celpersono_id=<?php echo (int)$kurso["korektanto_id"]; ?>"><?php echo h($kurso["korektanto_enirnomo"]); ?></a>
 								<?php } ?>

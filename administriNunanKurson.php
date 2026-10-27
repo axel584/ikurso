@@ -40,8 +40,9 @@ if ($row && $row['korektanto']!="") {
 		//echo "cas 1 : changement de correcteur<br>";
 		// la malnova korektanto malsamas la novan elektitan korektanton.
 		// jam havas korektanton : sxangxi la korektanton
-		$result = $bdd->prepare("update nuna_kurso set korektanto=? where studanto=?");
-		$result->execute(array($korektanto_id,$celpersono_id));
+		// seulement le cours en cours : les cours terminés ou abandonnés gardent leur correcteur (diplôme, historique, #1021)
+		$result = $bdd->prepare("update nuna_kurso set korektanto=? where id=?");
+		$result->execute(array($korektanto_id,$row["id"]));
 		
 		// trovi informojn pri studanto kaj korektanto
 		$studantinformoj = apartigiPersonon($celpersono_id);

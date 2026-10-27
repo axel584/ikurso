@@ -74,6 +74,31 @@ test.describe('Gestion des comptes', () => {
     await expect(page.locator('.lernanto .card-title', { hasText: 'lernanto1' })).toBeVisible()
   })
 
+  test("le correcteur d'un élève en cours se change, sans toucher à ses cours terminés (#1021)", async ({ page }) => {
+    const lernanto = LERNANTO_ID()
+    const korektanto1 = KOREKTANTO_ID()
+    sql("INSERT INTO personoj (enirnomo, retadreso, rajtoj, aktivigita, ekdato) VALUES ('korektanto2', 'korektanto2@mailinator.com', 'K', 1, NOW())")
+    const korektanto2 = sql("SELECT id FROM personoj WHERE enirnomo='korektanto2'")
+    sql(`INSERT INTO korektebla_kurso (korektanto, kurso, kiom_lernantoj) VALUES (${korektanto2}, 'CG', 5)`)
+    sql(`UPDATE personoj SET rajtoj='S' WHERE id=${lernanto}`)
+    sql(`INSERT INTO nuna_kurso (ekdato, lastdato, findato, korektanto, studanto, kurso, nunleciono, stato) VALUES
+      (NOW(), NOW(), NOW(), ${korektanto1}, ${lernanto}, 'GR', 25, 'F'),
+      (NOW(), NOW(), NULL, ${korektanto1}, ${lernanto}, 'CG', 3, 'K')`)
+
+    await login(page, USERS.admin)
+    await page.goto(`administri.php?celpersono_id=${lernanto}`)
+    await expect(page.locator('text=Actuel').locator('a', { hasText: 'korektanto1' })).toBeVisible()
+    await page.locator('select[name="korektanto_id"]').selectOption(korektanto2, { force: true })
+    await page.getByRole('button', { name: 'Changer de correcteur' }).click()
+
+    await expect(page.locator('.card-panel', { hasText: 'correctement mise à jour' })).toBeVisible()
+    expect(sql(`SELECT korektanto FROM nuna_kurso WHERE studanto=${lernanto} AND kurso='CG'`)).toBe(korektanto2)
+    // le cours terminé garde son correcteur (le diplôme reprend son nom)
+    expect(sql(`SELECT korektanto FROM nuna_kurso WHERE studanto=${lernanto} AND kurso='GR'`)).toBe(korektanto1)
+    await waitForMail('lernanto1@mailinator.com', 'Votre correcteur I-kurso')
+    await waitForMail('korektanto2@mailinator.com', 'Nouvel élève sur I-kurso')
+  })
+
   test('un commentaire se rajoute et se supprime', async ({ page }) => {
     await login(page, USERS.admin)
     await page.goto(`administri.php?celpersono_id=${LERNANTO_ID()}`)

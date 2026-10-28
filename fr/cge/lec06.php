@@ -318,6 +318,7 @@ include "dlekkapo.inc.php";
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/simio.mp3" class="sm2_button"></a><span class="eo">simio</span>&nbsp;: singe</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/interesa.mp3" class="sm2_button"></a><span class="eo">interesa</span>&nbsp;: intéressant</p>
 				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kompleta.mp3" class="sm2_button"></a><span class="eo">kompleta</span>&nbsp;: complet</p>
+				<p class="col s12 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/povi.mp3" class="sm2_button"></a><span class="eo">povi</span>&nbsp;: pouvoir, être capable de</p>
 			</div>
 			<p><small>[1]</small> par un moyen de locomotion quelconque</p>
 		</fieldset>

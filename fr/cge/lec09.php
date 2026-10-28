@@ -100,6 +100,7 @@ include "dlekkapo.inc.php";
 					<p class="col s6 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/gxis-revido.mp3" class="sm2_button"></a><span class="eo">ĝis revido</span>&nbsp;: au revoir</p>
 					<p class="col s6 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/frauxlo.mp3" class="sm2_button"></a><span class="eo">fraŭlo</span>&nbsp;: homme célibataire</p>
 					<p class="col s6 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/frauxlino.mp3" class="sm2_button"></a><span class="eo">fraŭlino</span>&nbsp;: demoiselle</p>
+					<p class="col s6 m6"><a href="<?php echo $vojo;?>fr/son/vortoj/kara.mp3" class="sm2_button"></a><span class="eo">kara</span>&nbsp;: cher, chère</p>
 				</div>
 			</fieldset>
 

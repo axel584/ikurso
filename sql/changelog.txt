@@ -4555,3 +4555,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Lexique du cours en 10 leçons : « povi » (section 6.9) et « kara » (section 9.1) ajoutés (#967) : voir sql/50-vortoj-povi-kara-967.sql
 --- Gerda leçon 10, phrase 21 de l'exercice « Plenigu ĉiun truon » : « alurben » donné en entier au lieu d'un trou (#967) : voir sql/51-gerda-alurben-967.sql
 --- Nom du cours « Paŝoj al plena posedo » (au lieu de « Pasxoj ») : colonne kursoj.nomo passée en utf8 : voir sql/52-kursoj-nomo-utf8.sql
+--- Correction automatique, CG leçon 4 n° 10 (Nacia Tago) : date sans « de » acceptée (« la dekkvara julio »), « julio » en minuscules dans le corrigé type (#1046) : voir sql/53-nacia-tago-sen-de-1046.sql

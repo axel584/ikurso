@@ -33,6 +33,10 @@ $result = $stmt;
 $row = $result->fetch();
 $bonaRespondo = $row["eo"];
 $francaVorto = $row["fr"];
+// prononciation du mot, jouée après la réponse (#712)
+require_once __DIR__."/../api/VortojAPI.php";
+$sono = $row ? VortojAPI::sono($row["eo"]) : null;
+$respondo["sono"] = $sono ? rtrim($urlracine, "/")."/".$sono : null;
 
 // TODO a remplacer par la version kontroliRespondon dans la page utils.php
 function kontroliVorton($lernantaRespondo,$bonaRespondo) {
@@ -91,9 +95,9 @@ if (kontroliVorton($lernantaRespondo,$bonaRespondo)) { // on compare sans se sou
 	$respondo["eraroj"]="La bonne réponse était&nbsp;<b>".$bonaRespondo."</b>";
 	// bonne réponse en vert, réponse de l'élève en rouge (#682)
 	if ($lernantaRespondo=="") {
-		$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b class='bona'>".$bonaRespondo."</b>";
+		$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b class='bona'>".$bonaRespondo."</b>".($sono ? sonoLigilo($sono) : "");
 	} else {
-		$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b class='bona'>".$bonaRespondo."</b> (et pas&nbsp;<strike class='malbona'>".$lernantaRespondo."</strike>)";
+		$respondo["recapitulatif"]="<b>".$francaVorto."</b>&nbsp;se dit&nbsp;<b class='bona'>".$bonaRespondo."</b>".($sono ? sonoLigilo($sono) : "")." (et pas&nbsp;<strike class='malbona'>".$lernantaRespondo."</strike>)";
 		memoriRespondon($persono_id,$vorto_id,0,$lernantaRespondo);
 	}
 	echo json_encode($respondo);

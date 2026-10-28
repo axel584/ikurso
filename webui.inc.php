@@ -1081,6 +1081,12 @@ function pubPPP() {
 	global $vojo;
 	echo '<div class="reklamo"><div class="row"><span class="col s7">Vi povas aĉeti la libron <i>Pa&#349;oj al plena posedo</i> en <a href="https://butiko-esperanto-france.org/methodes-et-manuels/65-pasoj-al-plena-posedo-nova-eld.html">nia butiko</a></span><span class="col s5"><a href="https://butiko-esperanto-france.org/methodes-et-manuels/65-pasoj-al-plena-posedo-nova-eld.html"><img class="responsive-img" src="'.$vojo.'bildoj/butiko/pasoj-al-plena-posedo-nova-eld.jpg" /></</span></div>';
 }
+// Bouton pour écouter un mot (#712) ; lu par js/ikurso.js (lexique chargé en AJAX, récapitulatif de la révision).
+function sonoLigilo($sono) {
+	global $urlracine;
+	return " <a href='".htmlspecialchars(rtrim($urlracine, "/")."/".$sono)."' class='sono' role='button' aria-label='Écouter' title='Écouter'><i class='material-icons tiny'>volume_up</i></a>";
+}
+
 // Lexique d'un cours. Pour un élève (ou un invité), une pastille indique son niveau sur chaque mot
 // et $nivelo filtre sur ce niveau (#391).
 function vortlisto($persono_id,$kurso,$pattern,$nivelo="") {
@@ -1107,7 +1113,11 @@ function vortlisto($persono_id,$kurso,$pattern,$nivelo="") {
 			echo "<span class='nivelo ".$row['nivelo']."' role='img' aria-label='".$priskribo."' title='".$priskribo."'></span>";
 		}
 		echo "<span class='eo'>".$VortoEo." ";
-		echo "<span class='numero'> (".$row['numero'].".".$row['ordo'].")</span></span> : ".$row['fr'];
+		echo "<span class='numero'> (".$row['numero'].".".$row['ordo'].")</span></span>";
+		if ($row['sono']) {
+			echo sonoLigilo($row['sono']);
+		}
+		echo " : ".$row['fr'];
 		if ($lernanto) {
 			// poubelle : retirer le mot de la révision, ou l'y remettre (#914)
 			$forigita = $row['nivelo']=="forigita";

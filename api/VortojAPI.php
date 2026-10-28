@@ -4,6 +4,7 @@
 // 1 au premier passage et après chaque erreur, +1 à chaque bonne réponse.
 // Mêmes catégories que le graphique de memoriVortojn.php (statMotsParForce).
 // personoj_vortoj.forigita : mot retiré de la révision par l'élève (#914), quel que soit son compteur.
+// Prononciation d'un mot (#712) : fichier de fr/son/vortoj, nommé comme dans les pages de vocabulaire des leçons.
 
 class VortojAPI {
     const NIVELOJ = array(
@@ -14,6 +15,9 @@ class VortojAPI {
         "forigita" => "Retirés de la révision",
     );
 
+    const SONOJ = "fr/son/vortoj/";
+
+    private static $sonoj = null;
     private $bdd;
 
     public function __construct(PDO $bdd) {
@@ -34,7 +38,23 @@ class VortojAPI {
         return (int)$nombrilo < 5 ? "lernata" : "konata";
     }
 
-    // Mots du cours, triés par ordre alphabétique : id, eo, fr, numero (leçon), ordo (section), nivelo.
+    // Fichier son d'un mot (chemin depuis la racine du site), ou null. Le nom du fichier vient de la première
+    // forme, celle qu'affiche le lexique : « ĝis revido » → gxis-revido.mp3, « mi ŝatas ... » → mi-sxatas.mp3,
+    // « ek! » → ek.mp3 ; « Ĉinujo|Ĉinio » n'a pas de son même si cxinio.mp3 existe.
+    public static function sono(string $eo): ?string {
+        if (self::$sonoj === null) {
+            self::$sonoj = array();
+            foreach (glob(__DIR__."/../".self::SONOJ."*.mp3") as $dosiero) {
+                self::$sonoj[strtolower(basename($dosiero, ".mp3"))] = basename($dosiero);
+            }
+        }
+        $formo = explode("|", $eo)[0];
+        $sxlosilo = str_replace(array("...", "…", "!", "?", ",", "."), "", konvX($formo));
+        $sxlosilo = strtolower(trim(preg_replace("/[\s']+/u", "-", trim($sxlosilo)), "-"));
+        return isset(self::$sonoj[$sxlosilo]) ? self::SONOJ.self::$sonoj[$sxlosilo] : null;
+    }
+
+    // Mots du cours, triés par ordre alphabétique : id, eo, fr, numero (leçon), ordo (section), nivelo, sono.
     // $prefikso filtre sur le début du mot espéranto ou français, $nivelo sur le niveau (clé de NIVELOJ).
     public function listo(string $kurso, int $persono_id, string $prefikso = "", string $nivelo = ""): array {
         $demando = "SELECT v.id, v.eo, v.fr, l.numero, le.ordo, pv.nombrilo, pv.forigita
@@ -56,6 +76,7 @@ class VortojAPI {
         $vortoj = array();
         foreach ($rezulto->fetchAll(PDO::FETCH_ASSOC) as $vico) {
             $vico["nivelo"] = self::nivelo($vico["nombrilo"], $vico["forigita"]);
+            $vico["sono"] = self::sono($vico["eo"]);
             unset($vico["nombrilo"], $vico["forigita"]);
             if ($nivelo === "" || $vico["nivelo"] === $nivelo) {
                 $vortoj[] = $vico;

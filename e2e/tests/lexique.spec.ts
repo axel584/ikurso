@@ -109,3 +109,59 @@ test("dans la révision, un mot raté se retire depuis le récapitulatif et n'es
   await page.goto('memoriVortojn.php')
   await expect(page.locator('h3', { hasText: 'Aucun mot à réviser' })).toBeVisible()
 })
+
+// Prononciation des mots (#712) : fichiers de fr/son/vortoj, dans le lexique et après une réponse de la révision.
+// Les sons joués sont notés dans window.sonoj (un fichier déjà joué vient du cache, sans requête).
+async function notiSonojn(page) {
+  await page.addInitScript(() => {
+    const w = window as any
+    w.sonoj = []
+    const Audio0 = w.Audio
+    w.Audio = function (url: string) { w.sonoj.push(url); return new Audio0(url) }
+  })
+}
+const sonoj = (page): Promise<string[]> => page.evaluate(() => (window as any).sonoj)
+
+test('le lexique fait écouter les mots qui ont un enregistrement', async ({ page }) => {
+  await notiSonojn(page)
+  await login(page, USERS.lernanto)
+  await page.goto('fr/cge/vocabula.php')
+  const sono = vorto(page, 'patro').locator('a.sono')
+  await expect(sono).toHaveAttribute('href', /\/fr\/son\/vortoj\/patro\.mp3$/)
+  // pas d'enregistrement pour buseto
+  await expect(vorto(page, 'buseto').locator('a.sono')).toHaveCount(0)
+  const sxargxo = page.waitForResponse(r => r.url().endsWith('/fr/son/vortoj/patro.mp3'))
+  await sono.click()
+  expect((await sxargxo).status()).toBeLessThan(400)
+  // un clic n'ouvre pas le fichier à la place du lexique
+  await expect(page).toHaveURL(/vocabula\.php/)
+
+  // lexique rechargé en AJAX par la recherche : le bouton marche toujours (le fichier vient alors du cache)
+  await page.locator('#pattern').pressSequentially('pat')
+  await expect(vorto(page, 'patrino')).toBeVisible()
+  await expect(vorto(page, 'bona')).toHaveCount(0)
+  await vorto(page, 'patrino').locator('a.sono').click()
+  expect((await sonoj(page)).at(-1)).toMatch(/\/fr\/son\/vortoj\/patrino\.mp3$/)
+  await expect(page).toHaveURL(/vocabula\.php/)
+})
+
+test('dans la révision, le mot se fait entendre après la réponse et dans le récapitulatif', async ({ page }) => {
+  const lernanto = LERNANTO_ID()
+  sql(`INSERT INTO personoj_vortoj (persono_id, vorto_id, nombrilo, venontaFojo)
+    SELECT ${lernanto}, v.id, 2, NOW() + INTERVAL 10 DAY FROM vortoj v
+    WHERE v.lecionero_id IN (SELECT lecionero_id FROM personoj_lecioneroj WHERE persono_id=${lernanto})
+    AND v.id NOT IN (SELECT vorto_id FROM personoj_vortoj WHERE persono_id=${lernanto})`)
+  sql(`UPDATE personoj_vortoj SET venontaFojo = IF(vorto_id=${VORTO_ID('domo')}, NOW() - INTERVAL 1 DAY, NOW() + INTERVAL 10 DAY) WHERE persono_id=${lernanto}`)
+
+  await login(page, USERS.lernanto)
+  await page.goto('memoriVortojn.php')
+  await expect(page.locator('.memorilo_demando:visible h3')).toContainText('maison')
+  // la carte ne donne pas la réponse
+  await expect(page.locator('.memorilo_demando:visible a.sono')).toHaveCount(0)
+  const sxargxo = page.waitForRequest(r => r.url().endsWith('/fr/son/vortoj/domo.mp3'))
+  await page.locator('.memorilo_input:visible').fill('kato')
+  await page.locator('.memorilo_input:visible').press('Enter')
+  await sxargxo
+  const linio = page.locator('#malbonaj_respondoj li', { hasText: 'maison' })
+  await expect(linio.locator('a.sono')).toHaveAttribute('href', /\/fr\/son\/vortoj\/domo\.mp3$/)
+})

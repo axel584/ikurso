@@ -806,6 +806,23 @@ $("#kontroliRespondon_button").click(function() {
 
 // fonction spécifique pour le "memorilo" (révision de vocabulaire)
 
+// prononciation d'un mot (#712) : lexique et récapitulatif de la révision, ajoutés en AJAX après le chargement de la page
+var sonoLudanta = null;
+function ludiSonon(url) {
+  if (sonoLudanta) {
+    sonoLudanta.pause();
+  }
+  sonoLudanta = new Audio(url);
+  var promeso = sonoLudanta.play();
+  if (promeso && promeso.catch) {
+    promeso.catch(function() {}); // lecture refusée par le navigateur : rien à signaler à l'élève
+  }
+}
+$(document).on("click", "a.sono", function(e) {
+  e.preventDefault();
+  ludiSonon($(this).attr("href"));
+});
+
 function kontroliVorton(vorto_id,persono_id,respondo) {
       $.ajax({
           url : $cheminAbsolu+'ajax/kontroliVorton.php',
@@ -813,6 +830,10 @@ function kontroliVorton(vorto_id,persono_id,respondo) {
           dataType : 'json',
           data : "vorto_id="+vorto_id+"&persono_id="+persono_id+"&respondo="+encodeURIComponent(respondo),
           success : function(reponse, statut){ 
+            // après la réponse, juste ou fausse, on entend le mot
+            if (reponse.sono) {
+                ludiSonon(reponse.sono);
+            }
             if (reponse.mesagxo=="ok") {
                 M.toast({html: 'Bravo !', displayLength: 2000, classes: 'bravo'});
                  $encours = $('.memorilo_demando:visible');

@@ -47,7 +47,8 @@ include "pagxkapo.inc.php";
 
 		<div class="row">
 			<div class="col s12">
-				<p>Le <em>Cours en 10 leçons</em> est un cours d’espéranto du domaine public. Les photos accompagnant le cours viennent de banques d’images à diffusion pédagogique. Les prononciations des mots <span class="eo">interreto</span>, <span class="eo">retmesaĝo</span>, <span class="eo">komputilo</span>, <span class="eo">foti</span>, <span class="eo">foto</span> et <span class="eo">ŝafino</span> ont été enregistrées par Lepticed7 pour le projet <a href="https://lingualibre.org/">Lingua Libre</a> et sont diffusées sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>.</p>
+				<p>Le <em>Cours en 10 leçons</em> est un cours d’espéranto du domaine public. Les photos accompagnant le cours viennent de banques d’images à diffusion pédagogique.</p>
+				<p>Les prononciations de nombreux mots du lexique (<em>Cours en 10 leçons</em> et <em>Gerda Malaperis</em>) ont été enregistrées pour le projet <a href="https://lingualibre.org/">Lingua Libre</a>, essentiellement par Lepticed7, et aussi par Robin van der Vliet, Juliano P. Junho, NMaia, Golmore et DanieruOtakuBoy. Elles sont diffusées sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a> (<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.fr">CC0</a> pour celles de Golmore et DanieruOtakuBoy) et ont été converties en MP3. La <a href="<?php echo $vojo;?>fr/son/vortoj/lingua-libre.txt">liste des enregistrements</a> indique l’auteur et la source de chacun.</p>
 			</div>
 		</div>
 

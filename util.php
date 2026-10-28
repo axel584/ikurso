@@ -88,6 +88,7 @@ function normaligita($respondo) {
 }
 
 function kontroliRespondon($lernantaRespondo,$bonaRespondo) {
+	$bonaRespondo = (string)$bonaRespondo; // NULL pour une question sans corrigé type
 	if (strpos($bonaRespondo,"|")!==false) {
 		return kontroliRespondon($lernantaRespondo,substr($bonaRespondo, 0,strpos($bonaRespondo, "|"))) || kontroliRespondon($lernantaRespondo,substr($bonaRespondo, strpos($bonaRespondo, "|")+1));
 	} else {

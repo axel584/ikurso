@@ -150,7 +150,7 @@ $(".korektebla").focusout( function () {
           dataType : 'json',
           data : "ekzercero="+$ekzercero+"&studanto="+$studanto+"&respondo="+encodeURIComponent($respondo)+"&korekteblaEkzerco=true",
           success : function(reponse, statut){ 
-              if (reponse.mesagxo=="ok") {
+              if (reponse && reponse.mesagxo=="ok") {
                 $formulaire.addClass("valid");
                 $formulaire.before( "<i class=\"material-icons prefix\" style=\"color:green;vertical-align:bottom\" >check</i>" );
               } else {

@@ -21,9 +21,11 @@ if ($korekteblaEkzerco) {
 	$stmt->execute([$ekzercero_id]);
 	$result = $stmt;
 	$row = $result->fetch();
-	$bonaRespondo = $row["normaligita"];
+	$bonaRespondo = $row ? trim((string)$row["normaligita"]) : "";
 
-	if (kontroliRespondon($lernantaRespondo,$bonaRespondo)) {
+	if ($bonaRespondo==="") {
+		// question sans corrigé type (phrase libre) : non corrigée, comme dans un exercice non corrigé automatiquement
+	} else if (kontroliRespondon($lernantaRespondo,$bonaRespondo)) {
 		$respondo["mesagxo"] = "ok";
 		$gxusta=1;	 
 	} else {

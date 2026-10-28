@@ -445,9 +445,12 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 
 	echo "<div class='tasko'>";
 	echo "<div class='row'>";
-	$resultEkzercero = $bdd->prepare("SELECT id,numero,demando,respondmodelo,korektebla,bildo,poentoj FROM `ekzerceroj` where ekzerco_id=? and forigita=0 order by numero");
+	$resultEkzercero = $bdd->prepare("SELECT id,numero,demando,respondmodelo,normaligita,korektebla,bildo,poentoj FROM `ekzerceroj` where ekzerco_id=? and forigita=0 order by numero");
 	$resultEkzercero->execute(array($id));
 	while ($rowEkzercero = $resultEkzercero->fetch()) {
+		// une question sans corrigé type (phrase libre au milieu d'un exercice corrigé automatiquement) n'est pas corrigée automatiquement
+		$korekteblaDemando = $rowEkzerco["korektebla"]==1 && trim((string)$rowEkzercero["normaligita"])!=="";
+		$styleKorektebla = $korekteblaDemando ? " korektebla" : " nekorektebla";
 		$iconprefix="";
 		$respondo = $rowEkzercero["respondmodelo"];
 		$valid="";
@@ -467,7 +470,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 		}
 		// phrase à trous ou à menus : la question et ses champs tiennent sur une seule ligne
 		if ($rowEkzerco["typo"]=="plenigu" || $rowEkzerco["typo"]=="elektlisto") {
-			montriFrazon($rowEkzercero, $rowEkzerco["typo"], $respondo, $valid, $rowEkzerco["korektebla"]==1, $rowEkzerco["x2u"], $persono_id);
+			montriFrazon($rowEkzercero, $rowEkzerco["typo"], $respondo, $valid, $korekteblaDemando, $rowEkzerco["x2u"], $persono_id);
 			continue;
 		}
 		// Cas des QCM

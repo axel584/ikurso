@@ -56,8 +56,8 @@ include "gerdakapo.inc.php";
 					fuŝi sian laboron. Li timas, ke ŝi ofte agas fuŝe. Fuŝemaj homoj
 					ekzistas en la mondo. Kial tiu tro parolema flegistino ne estus unu el
 					ili? Ĉu li mispaŝis, kiam li turnis sin al ŝi? Sed al kiu alia li
-					povus sin turni? Ŝi estis la sola flegistino, kiu troviĝis en la
-					universitato. Aŭ ĉu li mispensas?</p>
+					povus sin turni? Ŝi estis la sola flegistino, kiu troviĝis<a href='#notoj'>[1]</a> en la
+					universitato. Aŭ ĉu li mispensas<a href='#notoj'>[2]</a>?</p>
 					<p>Kaj nun li sentas sin ema zorgi pri Linda. Ĉu tiu belega
 					knabino ne troviĝas en danĝero? Li amas ŝin, li eĉ amegas ŝin, pli
 					kaj pli, kaj la ideo, ke danĝeraj homoj povus fari ion al ŝi, apenaŭ
@@ -69,6 +69,14 @@ include "gerdakapo.inc.php";
 				</div>
 			</div>
 		
+
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Trov-iĝ-i</span> : esti (en iu loko).</li>
+				<li><span class="eo">Mis-pens-i</span> : pensi malprave.</li>
+			</ol>
+
 		<?php 
 		} // fin section 1
 		if ($section=="2") {

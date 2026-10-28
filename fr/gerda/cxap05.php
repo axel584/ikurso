@@ -191,7 +191,7 @@ include "gerdakapo.inc.php";
 		?>
 
 			<h3>Ĉu vere vi ne volas labori?</h3>
-			<p>Rigardu, la sukerujo estas malplena. Se iu dezirus sukeron, li ne
+			<p>Rigardu, la sukerujo estas malplena<a href='#notoj'>[1]</a>. Se iu dezirus sukeron, li ne
 			povus havi ĝin. Vi iras promeni kun Izabela, vi parolas kun ŝi dum
 			la tuta tago pri arto kaj scienco, eble, sed eble ankaŭ pri malpli
 			belaj aferoj — la diablo scias, pri kio vi parolas, kiam vi promenas
@@ -213,8 +213,8 @@ include "gerdakapo.inc.php";
 			plenaj.</p>
 			
 			<p>Se mi ne estus kun vi, se mi ne atentus la simplajn aferojn de la
-			labortago, nenio okazus normale. Vi permesas al vi iri promeni, vi
-			iras kaŝi vin en la naturo kun via belulino, kaj vi tute ne
+			labortago<a href='#notoj'>[2]</a>, nenio okazus normale. Vi permesas al vi iri promeni, vi
+			iras kaŝi vin en la naturo kun via belulino<a href='#notoj'>[3]</a>, kaj vi tute ne
 			konsideras, ke vi estas en la universitato por labori mane, ne por
 			deklari vian amon dum tuta tago, ne por rigardi vin en la spegulo por
 			vidi, ĉu vi ne ŝajnas tro malbela por Izabela, ne por komuniki al
@@ -222,23 +222,23 @@ include "gerdakapo.inc.php";
 			
 			<p>Atenti la sukerujojn estas via laboro, ne mia. Se mi permesus al mi
 			agi kiel vi... Ne. Mi tion ne povas imagi. Mi estas serioza, mi ne
-			iras promeni, mi ne iras kaŝe sidi dum la labortago kun bela fortulo.</p>
+			iras promeni, mi ne iras kaŝe sidi dum la labortago kun bela fortulo<a href='#notoj'>[4]</a>.</p>
 			
 			<p>Mi ne plu estas tiel juna, kiel vi, sed tamen... Se vi nur scius, kiel
 			ofte viroj min petas... La viroj, kiuj konas min, konsideras ke...
-			hehe<a href='#notoj'>[1]</a>... Nu, viroj estas viroj, ĉu ne ? Sed mi neniam konsentas. Mi
+			hehe<a href='#notoj'>[5]</a>... Nu, viroj estas viroj, ĉu ne ? Sed mi neniam konsentas. Mi
 			neniam diras «jes». Mi neniam jesas al ili. Ami la virojn ne estas mia
 			specialaĵo. Ne por atenti la virojn la universitato petas min veni,
 			nur por labori. Ne havu strangajn ideojn pri mi. Mi atentas vin, juna
 			viro, nur rilate al via laboro. Ke la sukerujoj estas malplenaj, tio
 			gravas por mi. Sed ke vi parolas bele kaj havas ne malbelan vizaĝon,
-			tio al mi tute ne gravas. Vi povus plibeliĝi de tago al tago, mi ne
+			tio al mi tute ne gravas. Vi povus plibeliĝi<a href='#notoj'>[6]</a> de tago al tago, mi ne
 			atentus vian plibeliĝon, mi atentus vian laboron kaj rigardus —
 			inter-alie — ĉu la sukerujoj estas plenaj, ĉu ili estas malplenaj.
 			Kaj se ili ne estas tute plenaj, permesu, ke mi tion diru al vi.</p>
 			
 			<p>Se mi revidus vin reiri promeni kun Izabela dum la labortago kaj ne
-			atenti vian laboron, mi turnus min<a href='#notoj'>[2]</A> al Profesoro Zuzu kaj dirus la
+			atenti vian laboron, mi turnus min<a href='#notoj'>[7]</a> al Profesoro Zuzu kaj dirus la
 			aferon al li. Ne gravas al vi, ĉu vere? Ĉu vere tion vi respondis?
 			Diable! Bela respondo! Nu, bone! Se vi preferas agi neserioze, se
 			vi preferas ne labori, la dramo okazu. Al mi tute ne gravas. Mi diras
@@ -252,8 +252,8 @@ include "gerdakapo.inc.php";
 			<p>Ĉu laboro pri sukerujoj estas tro malalta por vi? Ĉu vi imagas, ke
 			vi estas en la universitato kiel studento? Kiel profesoro, eble? Ne,
 			ne, kara mia. Vi estas simpla laborulo. Estas tro multe da ideoj en
-			via imago, kaj tro malmulte da laborforto en viaj manoj. Ne.
-			Laborforton vi havas. Mi volis diri: tro malmulte da laborvolo.</p>
+			via imago, kaj tro malmulte da laborforto<a href='#notoj'>[8]</a> en viaj manoj. Ne.
+			Laborforton vi havas. Mi volis diri: tro malmulte da laborvolo<a href='#notoj'>[9]</a>.</p>
 			
 			<p>Tro ofte mi vidas vin promeni kun la manoj en la poŝoj. Ĉu vi estus
 			tiel malforta, ke vi ne plu povus labori nun? Vi eble ne estas tre
@@ -267,16 +267,25 @@ include "gerdakapo.inc.php";
 			konsideras, ke mi parolas tro multe pri aferoj, kiuj ne rilatas al mi.
 			Pardonu, sed tamen permesu, ke mi komuniku al vi miajn ideojn. Rilatoj
 			estas pli bonaj, se tiuj, kiuj laboras kune, estas sinceraj, ĉu ne?
-			Kaj vidi junan viron kiel vi, plenan de forto, promeni tuttage kun
+			Kaj vidi junan viron kiel vi, plenan de forto, promeni tuttage<a href='#notoj'>[10]</a> kun
 			knabino, dum li povus multe labori, kaj dum la sukerujoj estas
 			malplenaj, nu, tio estas tro.</p>
 			
-			<p class="rimarko"><strong>NOTES</strong> : 
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
 		
 			<ol>
+				<li><span class="eo">Mal-plen-a</span> : ne plena ; en ĝi estas nenio.</li>
+				<li><span class="eo">Labor-tag-o</span> : tago, dum kiu oni laboras.</li>
+				<li><span class="eo">Bel-ul-in-o</span> : bela virino, bela knabino.</li>
+				<li><span class="eo">Fort-ul-o</span> : forta viro, forta persono.</li>
 				<li><span class="eo">Hehe</span>: pli malpli kiel ho! (Se vi ne komprenas «hehe», tute ne
 		    	gravas).</li>
+				<li><span class="eo">Pli-bel-iĝ-i</span> : iĝi pli bela.</li>
 				<li><span class="eo">Mi turnus min al</span>: mi irus paroli al.</li>
+				<li><span class="eo">Labor-fort-o</span> : forto por labori.</li>
+				<li><span class="eo">Labor-vol-o</span> : volo labori, deziro labori.</li>
+				<li><span class="eo">Tut-tag-e</span> : dum la tuta tago.</li>
 			</ol>
 
 		<?php 

@@ -66,7 +66,7 @@ include "gerdakapo.inc.php";
 					<p>"Ŝi estis ĉi tie, kaj ne plu estas, sed…"</p>
 					<p>"Sed estas iu alia, kaj <i>li</i> estas senkonscia, ŝajnas al mi. Ĉu vi konas lin?"</p>
 					<p>"Jes, estas mia amiko Bob. Kio okazis al li?"</p>
-					<p>La flegistino iras al Bob, kiu falsidas ĉe la koridora muro.
+					<p>La flegistino iras al Bob, kiu falsidas<a href='#notoj'>[1]</a> ĉe la koridora muro.
 					Ŝi tuŝas lian kapon.</p>
 					<p>"Batita! Oni batis la kapon al li!"</p>
 					<p>"Diable! Bob, Bob! Respondu! Ĉu vi aŭdas min? Diru, mi petas! Kio okazis?”</p>
@@ -76,6 +76,13 @@ include "gerdakapo.inc.php";
 					<img src="bildoj/gerda09-2.gif" class="responsive-img">
 				</div>
 			</div>
+
+
+			<a id="notoj"></a>
+			<p class="rimarko"><strong>NOTOJ</strong> : 
+			<ol>
+				<li><span class="eo">Fal-sid-i</span> : sidi, ĉar oni falis.</li>
+			</ol>
 
 		<?php 
 		} // fin section 1

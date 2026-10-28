@@ -4551,3 +4551,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Barres obliques inverses supprimées devant les apostrophes et guillemets (nom, prénom, adresse, ville, commentaire de l'élève) ; administri2.php n'en ajoute plus (#1096) : voir sql/46-apostrofoj-1096.sql
 --- Mots retirés de la révision du vocabulaire par l'élève : personoj_vortoj.forigita (#914) : voir sql/47-vortoj-forigitaj-914.sql
 --- Questions sans corrigé type dans un exercice corrigé automatiquement : plus corrigées automatiquement, réponses déjà enregistrées comme fausses remises à non corrigées : voir sql/48-frazoj-sen-korekto.sql
+--- Correction automatique, CG leçon 6 exercice 4 : ordres des mots justes ajoutés aux réponses attendues (#945) : voir sql/49-correction-automatique-lec6-945.sql

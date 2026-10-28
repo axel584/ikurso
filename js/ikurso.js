@@ -823,6 +823,13 @@ $(document).on("click", "a.sono", function(e) {
   ludiSonon($(this).attr("href"));
 });
 
+// bouton avec avertissement (data-averto) : l'action n'est faite qu'après confirmation (#641)
+$(document).on("click", "button[data-averto]", function(e) {
+  if (!confirm($(this).data("averto"))) {
+    e.preventDefault();
+  }
+});
+
 function kontroliVorton(vorto_id,persono_id,respondo) {
       $.ajax({
           url : $cheminAbsolu+'ajax/kontroliVorton.php',

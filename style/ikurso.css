@@ -1209,6 +1209,9 @@ ul.kursinformoj li i {margin-top: .2rem; color: #2196F3; flex-shrink: 0;}
 }
 .miajlernantoj .lernanto .malplena {color: #989490; font-style: italic;}
 .miajlernantoj .lernanto .informoj {margin-bottom: 1rem;}
+.miajlernantoj .lernanto form.rememorigoj {margin-top: 0;}
+.miajlernantoj .lernanto .rememorigoj .btn-flat {padding: 0 .5rem; text-transform: none;}
+.miajlernantoj .lernanto .rememorigoj .averto {margin: 0; font-size: .8rem; color: #75706B;}
 .miajlernantoj .lernanto ul.komentoj {margin: 0 0 .5rem;}
 .miajlernantoj .lernanto ul.komentoj i {vertical-align: middle;}
 .miajlernantoj .lernanto .aldoni-noton {display: flex; align-items: flex-start; gap: 1rem;}

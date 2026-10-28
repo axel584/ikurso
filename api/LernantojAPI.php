@@ -33,6 +33,14 @@ class LernantojAPI {
         return $demando->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // L'élève est-il suivi en ce moment par ce correcteur ?
+    public function cxuSekvas(int $korektanto_id, int $studanto): bool {
+        $demando = $this->bdd->prepare(
+            "SELECT 1 FROM nuna_kurso WHERE korektanto = ? AND studanto = ? AND stato IN (?, ?) LIMIT 1");
+        $demando->execute(array_merge(array($korektanto_id, $studanto), self::NUNAJ));
+        return (bool)$demando->fetchColumn();
+    }
+
     // Pages terminées par l'élève dans ce cours, dans l'ordre du cours.
     public function lecioneroj(int $studanto, string $kurso): array {
         $demando = $this->bdd->prepare(

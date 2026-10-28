@@ -119,7 +119,22 @@ function montriLernanton(array $lernanto, LernantojAPI $lernantojAPI, int $perso
 	echo "<p class='etikedo'>Coordonnées</p><p>".implode("<br>", $linioj)."</p>";
 	if (!$eksa) {
 		// préférences d'envoi des mails (#920)
-		echo "<p>".($lernanto["rappel"] ? "Reçoit les rappels automatiques" : "<i class='material-icons tiny'>notifications_off</i> Ne reçoit pas les rappels automatiques")."</p>";
+		// le correcteur peut arrêter ou remettre les rappels de son élève (#641)
+		echo "<form method='POST' action='sxangxiRememorigojn.php' class='rememorigoj'>";
+		echo "<input type='hidden' name='studanto' value='".(int)$lernanto["studanto"]."'>";
+		if ($lernanto["rappel"]) {
+			echo "<input type='hidden' name='rajto' value='0'>";
+			echo "<p>Reçoit les rappels automatiques ";
+			echo "<button type='submit' class='btn-flat waves-effect tooltipped' data-tooltip='L’élève ne recevra plus les messages l’invitant à continuer le cours.'>";
+			echo "<i class='material-icons left'>notifications_off</i>Arrêter les rappels</button></p>";
+		} else {
+			echo "<input type='hidden' name='rajto' value='1'>";
+			echo "<p><i class='material-icons tiny'>notifications_off</i> Ne reçoit pas les rappels automatiques ";
+			echo "<button type='submit' class='btn-flat waves-effect' data-averto='Si c’est l’élève qui a retiré les rappels, ne les remettez pas : il a choisi de ne plus les recevoir. Remettre les rappels ?'>";
+			echo "<i class='material-icons left'>notifications_active</i>Remettre les rappels</button></p>";
+			echo "<p class='averto'>Si c’est l’élève qui a retiré les rappels, ne les remettez pas.</p>";
+		}
+		echo "</form>";
 	}
 	echo "</div>";
 	// commentaires

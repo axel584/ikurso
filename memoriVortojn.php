@@ -76,8 +76,14 @@ $persono = apartigiPersonon($persono_id) ?: $persono;
 			
 			<p><span class="primaire-texte texte-moyen">Dernier cours choisi : </span><?php simplaVorto("nomo","kursoj"," where kodo='".$persono['kurso']."'"); ?></p>
 			<p><span class="primaire-texte texte-moyen">Mon correcteur est :</span><br>
-				<?php $korektanto = getKorektantonElLernanto($persono['id'],$persono['kurso']); echo $korektanto['personnomo']." ".$korektanto['familinomo']; ?>
-				(<a href="mailto:<?php echo $korektanto['retadreso'];?>"><?php echo $korektanto['retadreso'];?></a>)</p>
+				<?php $korektanto = getKorektantonElLernanto($persono['id'],$persono['kurso']);
+				if (!$korektanto) {
+					echo "Pas de correcteur attribué";
+				} else {
+					echo $korektanto['personnomo']." ".$korektanto['familinomo'];
+					echo "&nbsp;(<a href='mailto:".$korektanto['retadreso']."'>".$korektanto['retadreso']."</a>)";
+				}
+				?></p>
 			<h5>Cours suivis :</h5>
 			<?php getCoursElLernanto($persono['id']);?>			
 			<!-- pour les administrateurs ou informateurs ou korekteur --> 

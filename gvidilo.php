@@ -94,7 +94,8 @@ $titolo = $row["titolo"];
 			alors que d’autres ont besoin d’une semaine ou plus pour étudier une leçon. </p>
 			<p>Pour leur éviter de laisser passer trop de temps entre deux séances d’études, ce qui favorise l’oubli des acquis, 
 			des messages automatiques sont envoyés aux élèves pour leur rappeler ce conseil. 
-			L’envoi des messages automatiques peut être désactivé par l’élève.</p>
+			L’envoi des messages automatiques peut être désactivé par l’élève, ou par vous depuis la page 
+			<a href="https://ikurso.esperanto-france.org/miajlernantoj.php">Mes élèves</a> (voir <a href="#arret">Que faire si l’élève n’étudie plus&nbsp;?</a>).</p>
 		
 			<h2 id="correction" class="scrollspy">Correction des exercices</h2>
 			
@@ -201,9 +202,35 @@ $titolo = $row["titolo"];
 				n’a pas envoyé de devoir (en vert&nbsp;: le dernier devoir a été envoyé il y a moins de 10 jours&nbsp;; en jaune&nbsp;: 
 				le dernier devoir a été envoyé entre 10 et 30 jours et en rouge&nbsp;: le dernier devoir a été envoyé il y a plus de 30 jours).</p>
 			<p>On recommande généralement aux élèves de suivre le cours régulièrement et d’envoyer au moins une leçon par semaine. </p>
-			<p class="noto"><strong>Remarque</strong>&nbsp;: Les élèves n’ayant pas envoyé de devoir depuis plus de 7 jours reçoivent 
-				automatiquement un message de rappel envoyé par courrier électronique. Les élèves ont cependant la possibilité 
-				de désactiver ce rappel automatique.</p>
+			<p class="noto"><strong>Remarque</strong>&nbsp;: un élève qui n’a terminé aucune page du cours depuis 6 jours reçoit 
+				automatiquement un message de rappel par courrier électronique, puis un second au bout de 10 jours. 
+				L’élève a la possibilité de désactiver ces rappels&nbsp;; vous pouvez aussi les arrêter ou les remettre depuis sa fiche 
+				(voir <a href="#arret">Que faire si l’élève n’étudie plus&nbsp;?</a>).</p>
+
+			<h3 id="outils" class="scrollspy">Quels outils le site propose-t-il à mes élèves&nbsp;?</h3>
+
+			<p class="parto">En plus des leçons, le site propose aux élèves inscrits plusieurs outils pour progresser entre deux leçons. 
+				N’hésitez pas à les leur rappeler.</p>
+			<ul class="sublisto">
+				<li><strong>La révision du vocabulaire</strong>&nbsp;: les mots à retenir de chaque page terminée sont ajoutés automatiquement 
+				à la liste de l’élève. Dès que des mots sont à revoir, un bouton «&nbsp;… mots à réviser&nbsp;» apparaît au-dessus du sommaire du cours. 
+				Les mots bien connus reviennent de moins en moins souvent, ceux qui posent problème reviennent plus souvent. 
+				L’élève peut aussi écouter la prononciation de nombreux mots.</li>
+				<li><strong>Le lexique</strong>&nbsp;: la liste des mots de chaque cours, avec pour chaque mot le niveau atteint par l’élève.</li>
+				<li><strong>Les statistiques</strong>&nbsp;: depuis ses données personnelles, l’élève peut suivre sa progression 
+				dans les leçons et dans le vocabulaire.</li>
+				<li><strong>«&nbsp;Le saviez-vous&nbsp;?&nbsp;»</strong>&nbsp;: le lendemain de chaque journée où il a travaillé, 
+				l’élève reçoit par courriel une courte anecdote sur l’espéranto. Il peut arrêter ces envois depuis ses données personnelles 
+				ou grâce au lien présent dans chaque message.</li>
+			</ul>
+
+			<h3 id="pasvorto" class="scrollspy">Que faire si mon élève a oublié son mot de passe&nbsp;?</h3>
+
+			<p class="parto">Dans la fenêtre de connexion, le lien <strong>Identifiant ou mot de passe oublié</strong> permet à l’élève 
+				de recevoir par courriel son identifiant et un lien pour choisir un nouveau mot de passe. Il lui suffit d’indiquer 
+				l’adresse électronique utilisée lors de son inscription.</p>
+			<p>Si l’élève ne reçoit pas ce message (conseillez-lui de vérifier le dossier des indésirables) ou s’il ne se souvient plus 
+				de son adresse, <a href="reago.php">contactez les administrateurs</a>&nbsp;: ils peuvent lui envoyer un nouveau lien.</p>
 					
 			<h2>Correction des exercices</h2>
 					
@@ -269,6 +296,19 @@ $titolo = $row["titolo"];
 				car ce cours a pour but de faire pratiquer la langue. Cela n’est cependant pas une obligation absolue et vous pouvez tout à fait 
 				rédiger des explications en français. </p>
 				
+			<h3 id="konsiloj" class="scrollspy">Quelques conseils pour corriger</h3>
+
+			<p class="parto"><strong>Soyez bienveillant.</strong> Apprendre une langue demande des efforts, et une correction 
+				encourageante donne envie de continuer. Commencez par souligner ce qui est réussi&nbsp;: les bonnes réponses, 
+				les progrès depuis la leçon précédente, une tournure bien trouvée.</p>
+			<p>Pour les erreurs, expliquez plutôt que de seulement donner la bonne réponse&nbsp;: rappelez la règle concernée 
+				ou renvoyez l’élève à la page du cours où elle est expliquée.</p>
+			<p class="parto"><strong>Distinguez les erreurs des simples variantes.</strong> Précisez si une tournure est fausse, 
+				ou si elle est correcte mais moins courante. Quand la réponse de l’élève est juste mais qu’une autre formulation 
+				est intéressante, proposez-la comme une alternative, sans la présenter comme une correction.</p>
+			<p>Enfin, n’hésitez pas à répondre aux questions de votre élève, même lorsqu’elles dépassent la leçon du jour&nbsp;: 
+				c’est souvent ce qui rend l’échange avec un correcteur précieux.</p>
+
 			<h3 id="probleme" class="scrollspy">Que faire si je n’ai pas reçu les exercices envoyés&nbsp;?</h3>
 			
 			<p class="parto">Il arrive parfois que certains exercices envoyés par un élève n’arrivent pas à destination. 
@@ -362,8 +402,13 @@ $titolo = $row["titolo"];
 				ou d’un examen à réviser, votre élève n’ait pas eu beaucoup de temps à consacrer à l’espéranto. 
 				Plus le temps passe et plus cela lui sera difficile de s’y remettre ou de vous avouer qu’il veut arrêter. </p>
 			<p>C’est pour cela qu’il est impératif de «&nbsp;relancer&nbsp;» votre élève par différentes tactiques.</p>
-			<p class="parto">Le site ikurso envoie une relance automatique par courriel aux élèves qui n’ont pas envoyé de devoirs depuis plus de 7&nbsp;jours.</p>
-			<p class="noto">Note : l’élève a la possibilité de faire cesser les relances.</p>
+			<p class="parto">Le site ikurso envoie une relance automatique par courriel aux élèves qui n’ont terminé aucune page du cours 
+				depuis 6&nbsp;jours, puis une seconde au bout de 10&nbsp;jours.</p>
+			<p>Sur la fiche de chaque élève, dans la page <a href="https://ikurso.esperanto-france.org/miajlernantoj.php">Mes élèves</a>, 
+				vous voyez s’il reçoit ces relances. Vous pouvez les arrêter avec le bouton <strong>Arrêter les rappels</strong>, 
+				par exemple si l’élève vous a prévenu qu’il faisait une pause, puis les remettre avec le bouton <strong>Remettre les rappels</strong>.</p>
+			<p class="noto"><strong>Attention</strong>&nbsp;: l’élève a lui aussi la possibilité de faire cesser les relances. 
+				Si c’est lui qui les a retirées, ne les remettez pas&nbsp;: il a choisi de ne plus les recevoir.</p>
 			<p>Si malgré les relances, votre élève ne se manifeste pas, n’hésitez pas à lui écrire en lui expliquant que vous êtes 
 				conscient de la difficulté de la leçon concernée, que s’il a besoin d’aide, il n’hésite pas à faire appel à vos services.</p>
 			<p class="parto">Une fois que vous avez relancé un élève, notez que vous avez fait cette relance dans le champ de commentaire 
@@ -435,6 +480,8 @@ $titolo = $row["titolo"];
 								<li><a href="#nouveau">Comment sais-je que j’ai un nouvel élève&nbsp;?</a></li>
 								<li><a href="#quoifaire">Que faire quand je reçois un nouvel élève&nbsp;?</a></li>
 								<li><a href="#info">Comment avoir plus d’informations sur mes élèves&nbsp;?</a></li>
+								<li><a href="#outils">Quels outils le site propose-t-il à mes élèves&nbsp;?</a></li>
+								<li><a href="#pasvorto">Que faire si mon élève a oublié son mot de passe&nbsp;?</a></li>
 							</ul>
 						</div>
 					</li>
@@ -446,6 +493,7 @@ $titolo = $row["titolo"];
 								<li><a href="#courriel">Comment corriger par courriel&nbsp;?</a></li>
 								<li><a href="#online">Comment corriger en ligne&nbsp;?</a></li>
 								<li><a href="#eo-fr">Dois-je écrire en français ou en espéranto&nbsp;?</a></li>
+								<li><a href="#konsiloj">Quelques conseils pour corriger</a></li>
 								<li><a href="#probleme">Que faire si je n’ai pas reçu les exercices envoyés&nbsp;?</a></li>
 							</ul>
 						</div>

@@ -4553,3 +4553,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Questions sans corrigé type dans un exercice corrigé automatiquement : plus corrigées automatiquement, réponses déjà enregistrées comme fausses remises à non corrigées : voir sql/48-frazoj-sen-korekto.sql
 --- Correction automatique, CG leçon 6 exercice 4 : ordres des mots justes ajoutés aux réponses attendues (#945) : voir sql/49-correction-automatique-lec6-945.sql
 --- Lexique du cours en 10 leçons : « povi » (section 6.9) et « kara » (section 9.1) ajoutés (#967) : voir sql/50-vortoj-povi-kara-967.sql
+--- Gerda leçon 10, phrase 21 de l'exercice « Plenigu ĉiun truon » : « alurben » donné en entier au lieu d'un trou (#967) : voir sql/51-gerda-alurben-967.sql

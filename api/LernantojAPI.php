@@ -66,6 +66,20 @@ class LernantojAPI {
         return $demando->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Cours que le correcteur peut corriger : nombre maximum d'élèves voulu et nombre d'élèves en cours.
+    public function korekteblajKursoj(int $korektanto_id): array {
+        $demando = $this->bdd->prepare(
+            "SELECT ku.kodo, ku.nomo, kk.kiom_lernantoj,
+                    (SELECT COUNT(*) FROM nuna_kurso nk
+                     WHERE nk.korektanto = kk.korektanto AND nk.kurso = kk.kurso AND nk.stato IN (?, ?)) AS nunaj
+             FROM korektebla_kurso kk
+             JOIN kursoj ku ON ku.kodo = kk.kurso
+             WHERE kk.korektanto = ?
+             ORDER BY ku.id");
+        $demando->execute(array_merge(self::NUNAJ, array($korektanto_id)));
+        return $demando->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     // Leçons d'un cours, pour avancer un élève à la main (cours KE, sans envoi en ligne).
     public function lecionoj(string $kurso): array {
         $demando = $this->bdd->prepare("SELECT numero, titolo FROM lecionoj WHERE kurso = ? ORDER BY numero");

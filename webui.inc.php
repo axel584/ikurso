@@ -1063,10 +1063,19 @@ function getLigiloAlMemorilo($persono_id) {
 	global $bdd,$vojo;
 	if ($persono_id=="") {return;}
 	$combien = kiomVortojPorMemori($persono_id);
+	// mots ajoutés à la fin de la section précédente (ajax/finiLecioneron.php), affiché une seule fois (#634)
+	$novajVortoj = isset($_SESSION["novajVortoj"]) ? (int)$_SESSION["novajVortoj"] : 0;
+	unset($_SESSION["novajVortoj"]);
 	if ($combien>0) {
-		echo "<p><a href='".$vojo."memoriVortojn.php' class='waves-effect waves-light btn light-blue darken-1 '>".$combien." mot";
-		if ($combien > 1) echo "s";
-		echo " à réviser...</a></p>";
+		$butono = $combien." mot".($combien > 1 ? "s" : "")." à réviser...";
+		if ($novajVortoj>0) {
+			echo "<div class='card-panel red lighten-4 novaj-vortoj'>";
+			echo "<p><i class='material-icons left'>lightbulb_outline</i>";
+			echo $novajVortoj>1 ? $novajVortoj." nouveaux mots viennent d’être ajoutés" : "Un nouveau mot vient d’être ajouté";
+			echo " à votre vocabulaire. Révisez votre vocabulaire régulièrement en cliquant sur «&nbsp;".$butono."&nbsp;».</p>";
+		}
+		echo "<p><a href='".$vojo."memoriVortojn.php' class='waves-effect waves-light btn light-blue darken-1 '>".$butono."</a></p>";
+		if ($novajVortoj>0) echo "</div>";
 	}
 }
 

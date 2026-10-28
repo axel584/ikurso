@@ -30,7 +30,11 @@ if ($combien==0) {
 }
 
 // on ajoute les mots étudiés dans cette section au vocabulaire à apprendre :
-aldoniNovajnVortojnEnMemorilo($persono_id);
+// et on invitera l'élève à les réviser sur la page suivante (#634)
+$novajVortoj = aldoniNovajnVortojnEnMemorilo($persono_id);
+if ($novajVortoj>0) {
+	$_SESSION["novajVortoj"] = $novajVortoj;
+}
 
 
 // on trouve la leçon suivante et on récupère son url :

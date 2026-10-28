@@ -1533,3 +1533,10 @@ span.bravo {
 	/* éditeur de correction : fond clair, le texte y est forcé en noir */
 	.trumbowyg-editor {background-color: #fafafa; color: #000;}
 }
+/* invitation à réviser les mots qui viennent d'être ajoutés (#634) */
+.novaj-vortoj p {
+	margin: 0 0 0.5rem 0;
+}
+.novaj-vortoj p:last-child {
+	margin-bottom: 0;
+}

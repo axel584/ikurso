@@ -81,6 +81,10 @@ $seoKanona = SeoAPI::kanonaUrl($urlracine, isset($_SERVER["REQUEST_URI"]) ? $_SE
 		<meta property="og:image" content="https://ikurso.esperanto-france.org/bildoj/ikurso-home.jpg" />
 		<meta property="fb:app_id" content="150250432081223" />
 		<meta property="og:locale" content="fr_FR" />
+<?php $strukturitajDatumoj = SeoAPI::strukturitajDatumoj($urlracine, $seoKanona);
+if ($strukturitajDatumoj) { ?>
+		<script type="application/ld+json"><?php echo json_encode($strukturitajDatumoj, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG); ?></script>
+<?php } ?>
 <?php if (strpos($urlracine, "localhost") === false) { // pas de statistiques en développement ?>
 <!-- Matomo -->
 <script>

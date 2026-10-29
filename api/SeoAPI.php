@@ -73,4 +73,41 @@ class SeoAPI {
         }
         return rtrim($urlracine, "/") . $vojo . ($gardi ? "?" . http_build_query($gardi) : "");
     }
+
+    // Données structurées schema.org (JSON-LD) d'une page, d'après son adresse de référence, ou null (#1104) :
+    // l'organisme et le site sur l'accueil, un cours (Course) sur la présentation de chaque cours.
+    public static function strukturitajDatumoj(string $urlracine, string $kanona): ?array {
+        $radiko = rtrim($urlracine, "/") . "/";
+        $organizo = array("@type" => "Organization", "name" => "Espéranto-France", "url" => "https://esperanto-france.org/");
+        $kursoj = array(
+            "fr/cge/intro.php" => array("Cours d’espéranto en 10 leçons",
+                "Cours d’espéranto gratuit pour débutants, en 10 leçons : prononciation, grammaire, vocabulaire, exercices et QCM, avec des enregistrements audio. Un correcteur bénévole peut corriger vos exercices.",
+                10, "Beginner"),
+            "fr/gerda/" => array("Gerda malaperis : cours d’espéranto",
+                "Cours d’espéranto gratuit en 25 chapitres, d’après le roman de Claude Piron, pour ceux qui connaissent déjà les bases : lecture, audio, vocabulaire et exercices. Un correcteur bénévole peut corriger vos exercices.",
+                25, "Intermediate"),
+        );
+        if (strpos($kanona, $radiko) !== 0) {
+            return null;
+        }
+        $pagxo = substr($kanona, strlen($radiko));
+        if ($pagxo === "") {
+            return array("@context" => "https://schema.org", "@graph" => array(
+                $organizo + array("logo" => $radiko . "bildoj/largelogo.png"),
+                array("@type" => "WebSite", "name" => "iKurso", "url" => $radiko, "inLanguage" => "fr",
+                    "publisher" => $organizo)));
+        }
+        if (!isset($kursoj[$pagxo])) {
+            return null;
+        }
+        list($nomo, $priskribo, $lecionoj, $nivelo) = $kursoj[$pagxo];
+        return array("@context" => "https://schema.org", "@type" => "Course", "name" => $nomo,
+            "description" => $priskribo, "url" => $kanona, "inLanguage" => "fr", "educationalLevel" => $nivelo,
+            "about" => "Espéranto", "isAccessibleForFree" => true, "provider" => $organizo,
+            "offers" => array("@type" => "Offer", "category" => "Free", "price" => 0, "priceCurrency" => "EUR"),
+            // une leçon par semaine au minimum, 15 minutes par jour (conseils de la page de présentation)
+            "hasCourseInstance" => array("@type" => "CourseInstance", "courseMode" => "Online",
+                "courseSchedule" => array("@type" => "Schedule", "duration" => "PT2H", "repeatFrequency" => "Weekly",
+                    "repeatCount" => $lecionoj)));
+    }
 }

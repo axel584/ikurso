@@ -729,6 +729,7 @@ include "dlekkapo.inc.php";
 		
 	<?php 
 
+	montriKonsilon("révisez votre vocabulaire quelques minutes par jour. Les mots des leçons sont ajoutés automatiquement à la <a href='".$vojo."memoriVortojn.php'>révision du vocabulaire</a>, qui vous les repropose au bon moment, à des intervalles de plus en plus longs.");
 	recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 
 	} // fin section

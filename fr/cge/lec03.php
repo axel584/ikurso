@@ -614,6 +614,7 @@ include "dlekkapo.inc.php";
 			12 mots nouveaux. Qui dit mieux&nbsp;?
 			</p>
 		<?php 
+			montriKonsilon("variez les façons de travailler&nbsp;: lisez les phrases à voix haute, réécrivez les mots à la main, faites-vous un tableau des terminaisons… Et pour un mot qui ne veut pas rentrer, cherchez un moyen mnémotechnique.");
 			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin section 
 		?>	

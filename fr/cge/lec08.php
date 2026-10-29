@@ -438,6 +438,7 @@ include "dlekkapo.inc.php";
 			</p>
 
 		<?php 
+			montriKonsilon("dormez dessus. Le sommeil consolide ce que vous avez appris dans la journée&nbsp;: un quart d’heure de révision le soir, puis une vérification rapide le lendemain matin, c’est très efficace.");
 			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin derniere section
 		?>	

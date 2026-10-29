@@ -800,6 +800,7 @@ include "dlekkapo.inc.php";
 			</div>
 		
 		<?php 
+				montriKonsilon("ce n’est ni un sprint ni un marathon. Pour retenir durablement, mieux vaut étudier 15&nbsp;minutes chaque jour que 2&nbsp;heures une fois par semaine. Choisissez un moment de la journée (au petit déjeuner, dans les transports…) et tenez-vous-y&nbsp;: l’habitude fera le reste.");
 				recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin section
 		?>	

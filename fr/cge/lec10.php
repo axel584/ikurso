@@ -177,6 +177,7 @@ Daŭro de la tuta testo: 1&nbsp;horo kaj 20&nbsp;minutoj  </p>
 		<p>Bonne continuation dans le monde de l’espéranto&nbsp;!</p>
 		
 		<?php 
+			montriKonsilon("lisez des textes faciles, et beaucoup. Lire des textes un peu en dessous de son niveau fait progresser presque sans effort. Le site <a href='https://nilegu.esperanto-france.org/' target='_blank' rel='noopener'>Ni legu</a> a été conçu pour cela&nbsp;: des textes de différents niveaux, avec un enregistrement audio et un dictionnaire intégré. Ensuite, le cours <a href='".$vojo."fr/gerda/'>Gerda malaperis</a> vous fait lire tout un roman, chapitre après chapitre, avec des explications et des exercices.");
 			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin derniere section
 		?>	

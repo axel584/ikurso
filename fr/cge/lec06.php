@@ -557,6 +557,7 @@ include "dlekkapo.inc.php";
 			</p>
 	
 <?php 
+	montriKonsilon("n’ayez pas peur des erreurs. Une réponse fausse suivie de sa correction se retient souvent mieux qu’une réponse juste du premier coup&nbsp;: envoyez vos exercices sans attendre d’être sûr de vous.");
 	recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 } // fin section 
 ?>	

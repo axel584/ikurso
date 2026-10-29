@@ -633,6 +633,7 @@ include "dlekkapo.inc.php";
 			comprendre un petit récit. 
 			</p>
 		<?php 
+			montriKonsilon("testez-vous plutôt que de relire. Cachez la traduction et essayez de retrouver le mot, refaites un exercice sans regarder vos réponses&nbsp;: chercher dans sa mémoire, même en se trompant, fixe bien mieux les connaissances que relire la leçon.");
 			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin section 
 		?>	

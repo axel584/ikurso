@@ -303,6 +303,13 @@ function montriGastoAvizon() {
 	echo "</div></div></div>\n";
 }
 
+// Conseil pour apprendre à la fin d'une leçon, avec un lien vers la page d'aide qui les rassemble (#833).
+function montriKonsilon($teksto) {
+	global $vojo;
+	echo "<div class='card-panel blue-grey lighten-5 konsilo'><p><i class='material-icons left'>lightbulb_outline</i>";
+	echo "<strong>Conseil&nbsp;:</strong> ".$teksto." <a href='".$vojo."helpo.php?section=kurso#konsiloj'>Nos conseils pour apprendre</a></p></div>\n";
+}
+
 // Visiteur qui n'a encore rien fait (ni compte ni invité), souvent arrivé de Google au milieu d'un cours (#1101) :
 // on lui dit que la page fait partie d'un cours, avec un lien vers son début.
 // $kurso : CG (cours en 10 leçons), GR (chapitres de Gerda malaperis) ou LASU (Lasu min paroli plu).

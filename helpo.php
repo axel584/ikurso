@@ -8,7 +8,7 @@ if ($section==""){$section="enskribo";}
 // titre et description de chaque rubrique pour les moteurs de recherche (#1076)
 $rubrikoj = array(
 	"enskribo" => array("Comment s’inscrire au cours d’espéranto", "S’inscrire gratuitement au cours d’espéranto en ligne d’iKurso et obtenir l’aide d’un correcteur bénévole."),
-	"kurso" => array("Comment suivre le cours d’espéranto", "Comment se déroule le cours d’espéranto en ligne : leçons, exercices corrigés automatiquement, envoi au correcteur, révision du vocabulaire."),
+	"kurso" => array("Comment suivre le cours d’espéranto", "Comment se déroule le cours d’espéranto en ligne : leçons, exercices corrigés automatiquement, envoi au correcteur, révision du vocabulaire, et nos conseils pour apprendre."),
 	"kajposte" => array("Que faire après le cours d’espéranto ?", "Continuer à apprendre et pratiquer l’espéranto après le cours : lectures, rencontres, correspondance, musique, vidéos et jeux."),
 	"kielskribi" => array("Comment écrire les lettres accentuées de l’espéranto (ĉ, ĝ, ĥ, ĵ, ŝ, ŭ)", "Taper les lettres accentuées de l’espéranto (ĉ, ĝ, ĥ, ĵ, ŝ, ŭ) sur ordinateur, téléphone et tablette, ou les remplacer par le système x."),
 	"kielhelpi" => array("Comment aider iKurso et Espéranto-France", "Aider iKurso : devenir correcteur bénévole, adhérer à l’association Espéranto-France ou faire connaître le cours."),
@@ -76,14 +76,54 @@ include "pagxkapo.inc.php";
 			</section>
 
 
-			<h3>Quelques conseils pour atteindre vos objectifs&nbsp;:</h3>
-			<ul class="klarigo">
-				<li><strong>Travaillez régulièrement</strong>. Nous conseillons de faire <strong>une leçon par semaine au minimum</strong>. Chaque leçon est composée de plusieurs sections, que vous pouvez étudier à votre rythme. Il est préférable d’étudier 15&nbsp;minutes par jour que 2&nbsp;heures une fois par semaine. Vous pouvez donc répartir l’étude d’une leçon sur plusieurs sessions, en fonction du temps dont vous disposez.</li>
+			<section id="konsiloj" class="scrollspy">
+				<h2>Conseils pour apprendre</h2>
+
+				<h3>Ce n’est ni un sprint ni un marathon</h3>
+				<p>Apprendre une langue prend du temps, même une langue aussi régulière que l’espéranto&nbsp;: on ne l’apprend pas en quelques heures. Les premiers jours, la motivation est souvent très forte, mais pour que le vocabulaire et les règles de grammaire restent en mémoire à long terme, il faut y revenir régulièrement pendant plusieurs semaines.</p>
+				<p>Nous conseillons de faire <strong>une leçon par semaine au minimum</strong>. Il est préférable d’étudier 15&nbsp;minutes par jour que 2&nbsp;heures une fois par semaine&nbsp;: chaque leçon est composée de plusieurs sections, vous pouvez donc la répartir sur plusieurs séances, en fonction du temps dont vous disposez.</p>
+
+				<h3>Créez-vous une habitude</h3>
+				<p>L’idéal est d’étudier toujours au même moment&nbsp;: le matin avant le petit déjeuner, dans le train en allant au travail, l’après-midi en prenant un thé au soleil… En le répétant tous les jours, le geste devient automatique&nbsp;: vous sortirez votre cours d’espéranto (sur papier, sur tablette, etc.) en vous asseyant à votre place dans le train ou en préparant votre thé, sans même y réfléchir. C’est à ce moment-là que votre habitude sera vraiment en place.</p>
+
+				<h3>Révisez au bon moment</h3>
+				<p>On retient mieux un mot quand on le revoit à des intervalles de plus en plus longs, juste avant de l’oublier&nbsp;: c’est la <strong>répétition espacée</strong>. Relire dix fois une liste de mots le même soir est bien moins efficace que de la revoir le lendemain, puis quelques jours plus tard, puis la semaine suivante.</p>
+				<p>C’est ainsi que fonctionne la <a href="<?php echo $vojo;?>memoriVortojn.php">révision du vocabulaire</a> d’iKurso&nbsp;: les mots des leçons y sont ajoutés automatiquement, un mot bien traduit revient de plus en plus tard, et un mot oublié revient tout de suite. Quelques minutes par jour suffisent&nbsp;; le bouton «&nbsp;mots à réviser&nbsp;» vous indique quand des mots vous attendent.</p>
+
+				<h3>Testez-vous plutôt que de relire</h3>
+				<p>Essayer de retrouver un mot ou une règle de mémoire, même en se trompant, fixe bien mieux les connaissances que relire la leçon. Cachez la traduction et essayez de la retrouver, refaites un exercice sans regarder vos réponses, ou essayez de reconstituer de tête le tableau des terminaisons. Les exercices du cours et la révision du vocabulaire reposent sur ce principe.</p>
+
+				<h3>Apprenez les mots en phrases</h3>
+				<p><span class="eo">Mi trinkas kafon</span> se retient mieux que «&nbsp;<span class="eo">trinki</span>&nbsp;: boire&nbsp;». Inventez une phrase avec chaque nouveau mot, si possible sur votre propre vie&nbsp;: votre famille, votre travail, ce que vous avez fait hier.</p>
+
+				<h3>Profitez de la logique de l’espéranto</h3>
+				<p>L’espéranto est construit de façon très régulière&nbsp;: plutôt que d’apprendre des listes, retenez les racines et les affixes. Le préfixe <span class="eo">mal-</span> vous donne d’un coup le contraire de tous les mots que vous connaissez (<span class="eo">bela</span>, beau&nbsp;; <span class="eo">malbela</span>, laid), et les 45 corrélatifs se reconstruisent à partir de cinq débuts et neuf fins.</p>
+
+				<h3>Aidez votre mémoire</h3>
+				<p>Pour un mot qui ne veut pas rentrer, cherchez un <strong>moyen mnémotechnique</strong>&nbsp;: une ressemblance avec un mot que vous connaissez déjà, en français ou dans une autre langue (<span class="eo">lerni</span>, apprendre, rappelle l’anglais <em>to learn</em>&nbsp;; <span class="eo">birdo</span>, oiseau, l’anglais <em>bird</em>), une image ou une petite histoire. Plus l’image est surprenante, mieux on s’en souvient.</p>
+
+				<h3>Variez les façons de travailler</h3>
+				<p>On retient mieux ce qu’on a travaillé de plusieurs manières&nbsp;: <strong>lire</strong> et surligner, faire des schémas ou des tableaux (comme celui des corrélatifs), <strong>écouter</strong> les enregistrements et <strong>répéter à voix haute</strong>, <strong>réécrire à la main</strong> les mots et les phrases, ou même réciter en marchant. Combiner ces méthodes aide tout le monde.</p>
+
+				<h3>N’ayez pas peur des erreurs</h3>
+				<p>Les erreurs font partie de l’apprentissage&nbsp;: une réponse fausse suivie de sa correction se retient souvent mieux qu’une réponse juste du premier coup. N’attendez pas d’être sûr de vous pour envoyer vos exercices à votre correcteur, il est là pour ça.</p>
+
+				<h3>Dormez dessus</h3>
+				<p>Le sommeil consolide ce que vous avez appris dans la journée. Un quart d’heure de révision le soir, puis une vérification rapide le lendemain matin, c’est très efficace.</p>
+
+				<h3>Expliquez à quelqu’un ce que vous avez appris</h3>
+				<p>Raconter à un proche comment fonctionnent les corrélatifs ou l’accusatif oblige à mettre ses idées au clair, et montre tout de suite ce qu’on n’a pas encore bien compris.</p>
+
+				<h3>Lisez des textes faciles</h3>
+				<p>Lire beaucoup de textes un peu en dessous de son niveau fait progresser presque sans effort&nbsp;: on rencontre les mots et les tournures dans leur contexte, encore et encore. Le site <a href="https://nilegu.esperanto-france.org/" target="_blank" rel="noopener">Ni legu</a> a été conçu pour cela&nbsp;: vous y trouverez des textes de différents niveaux, avec un enregistrement audio et un dictionnaire intégré. Après le cours en 10 leçons, les textes de <a href="<?php echo $vojo;?>fr/gerda/lasu00.php">Lasu min paroli plu</a> et le cours <a href="<?php echo $vojo;?>fr/gerda/">Gerda malaperis</a>, un roman à lire chapitre après chapitre, prennent le relais.</p>
+
+				<h3>Et aussi…</h3>
+				<ul class="klarigo">
 				<li><div class="float-right w25"><img class="responsive-img" src="<?=$vojo?>bildoj/notes.jpg" /></div>N’hésitez pas à <strong>prendre des notes</strong>, à recopier les mots de vocabulaire et les utiliser dans de nouvelles phrases. Notez les points qui vous paraissent importants et les questions que vous souhaitez poser à votre correcteur en fin de leçon.</li>
-				<li><strong>Apprenez le vocabulaire</strong> du cours régulièrement, l’idéal étant de pouvoir le réviser tous les jours. Un outil d’apprentissage du vocabulaire est intégré dans ce cours pour vous en faciliter l’apprentissage. Quelques minutes par jour suffiront pour bien l’assimiler.</li>
 				<li><div class="float-right w25"><img class="responsive-img" src="<?=$vojo?>bildoj/babili.png" /></div><strong>Mettez en pratique</strong> la langue dès que vous le pouvez&nbsp;: vous pouvez par exemple écrire quelques phrases en espéranto en commentaire lors de l’envoi de vos exercices. Essayez de parler en espéranto, même si c’est à votre reflet dans le miroir ou à votre chien*.</li>
-			</ul>
-			
+				</ul>
+			</section>
+
 			<p class="renvoi">* si vous avez un canari ou un poisson rouge, ça marche aussi&nbsp;!
 
 

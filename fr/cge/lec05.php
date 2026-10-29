@@ -589,6 +589,7 @@ include "dlekkapo.inc.php";
 		<?php 
 		} // fin section 
 		if ($section=="8") {
+			montriKonsilon("profitez de la logique de l’espéranto. Inutile d’apprendre les 45 corrélatifs par cœur&nbsp;: retenez les cinq débuts (<span class='eo'>ki-, ti-, i-, ĉi-, neni-</span>) et les neuf fins, et vous saurez les reconstruire.");
 			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin section 
 		?>	

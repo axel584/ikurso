@@ -698,6 +698,7 @@ include "dlekkapo.inc.php";
 			</p>
 
 		<?php 
+			montriKonsilon("apprenez les mots en phrases. <span class='eo'>Mi trinkas kafon</span> se retient mieux que «&nbsp;<span class='eo'>trinki</span>&nbsp;: boire&nbsp;». Inventez une phrase avec chaque nouveau mot, si possible sur votre propre vie, par exemple avec les mots que vous venez de créer grâce aux suffixes.");
 			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin derniere section
 		?>	

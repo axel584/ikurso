@@ -449,6 +449,7 @@ frameborder="0" allowfullscreen></iframe></p>
 			</p>
 		
 		<?php 
+			montriKonsilon("expliquez à quelqu’un ce que vous avez appris. Raconter à un proche comment fonctionnent les corrélatifs ou l’accusatif oblige à mettre ses idées au clair, et montre tout de suite ce qu’on n’a pas encore bien compris.");
 			recapitulatif_lecon_avant_envoi('CG',$leciono,$persono_id);
 		} // fin derniere section
 		?>	

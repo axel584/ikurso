@@ -11,6 +11,23 @@ include "pagxkapo.inc.php";
 		<section id="kionova">
 			<h1>Quoi de neuf dans le site ?</h1>
 			<ul class="collection with-header">
+				<li class="collection-header">version 25. Novembre 2026</li>
+				<li class="collection-item">
+					<p>Mode invité&nbsp;: on peut faire les exercices sans compte, le travail est repris à l’inscription.</p>
+					<p>Connexion possible avec son adresse e-mail, et session gardée 30 jours.</p>
+					<p>Nouveaux exercices sur une seule ligne, avec des cases à remplir ou des menus déroulants.</p>
+					<p>Correction automatique plus tolérante (nombreuses variantes acceptées), et étendue au cours <i>Paŝoj al plena posedo</i>.</p>
+					<p>Liste des leçons en couleur (terminées, envoyées), et les boutons de fin de section mènent à la prochaine section à faire.</p>
+					<p>Avant d’envoyer une leçon, rappel des sections non terminées et des questions sans réponse.</p>
+					<p>Le mail «&nbsp;Votre leçon a été corrigée&nbsp;» donne le nom et l’adresse du correcteur.</p>
+					<p>Révision du vocabulaire&nbsp;: prononciation des mots, bonne réponse affichée à côté de l’erreur, mots à retirer de la révision et rappel des nouveaux mots à réviser.</p>
+					<p>Lexique&nbsp;: prononciation et niveau de connaissance de chaque mot.</p>
+					<p><a href="<?php echo $vojo;?>helpo.php?section=kurso#konsiloj">Conseils pour apprendre</a>, et un conseil à la fin de chaque leçon du <i>Cours en dix leçons</i>.</p>
+					<p>Explications plus claires des corrélatifs et des participes, notes sur les mots composés dans <i>Gerda malaperis</i>, sons manquants ajoutés.</p>
+					<p>Page pour relire les «&nbsp;Le saviez-vous&nbsp;?&nbsp;» reçus, et 44 nouveaux numéros.</p>
+					<p>Choix des mails reçus (rappels, «&nbsp;Le saviez-vous&nbsp;?&nbsp;») dans les données personnelles.</p>
+					<p>Corrections diverses de bugs et coquilles…</p>
+				</li>
 				<li class="collection-header">version 24. Octobre 2026</li>
 				<li class="collection-item">
 					<p>Refonte de la <a href="<?php echo $vojo;?>fr/cge/lec07.php?section=1">leçon 7</a> du <i>Cours en dix leçons</i>&nbsp;: seuls les affixes les plus fréquents, présentés sur trois pages, et des exercices plus courts.</p>

@@ -9,7 +9,7 @@ class SeoAPI {
     // Pages publiques hors leçons, pour le plan du site, sous leur adresse de référence (kanonaUrl : sans index.php).
     const PAGXOJ = array("", "fr/cge/intro.php", "fr/gerda/", "fr/gerda/lasu00.php", "fr/gerda/vocabula.php",
         "fr/elsxutoj.php", "helpo.php?section=enskribo", "helpo.php?section=kurso", "helpo.php?section=kielskribi",
-        "helpo.php?section=kajposte", "helpo.php?section=kielhelpi", "kionova.php", "kiujniestas.php", "doc/DLEK.pdf");
+        "helpo.php?section=kajposte", "helpo.php?section=kielhelpi", "kionova.php", "kiujniestas.php", "doc/DLEK.pdf", "doc/ikurso.pdf");
 
     private $bdd;
 

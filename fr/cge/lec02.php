@@ -440,14 +440,14 @@ include "dlekkapo.inc.php";
 				<tbody>
 					<tr>
 						<th>Interrogatif<br /><span class="eo">KI-</span></th>
-						<td><span class="eo">kiu</span><br />qui&nbsp;? lequel&nbsp;?</td>
+						<td><span class="eo">kiu</span><br />qui&nbsp;? quel(le)&nbsp;?<br />lequel, laquelle&nbsp;?</td>
 						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
 						<td><span class="eo">kie</span><br />où&nbsp;?</td>
 						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
 					</tr>
 					<tr>
 						<th>Négatif<br /><span class="eo">NENI-</span></th>
-						<td><span class="eo">neniu</span><br />personne</td>
+						<td><span class="eo">neniu</span><br />personne, nul, aucun</td>
 						<td><span class="eo">nenio</span><br />rien</td>
 						<td><span class="eo">nenie</span><br />nulle part</td>
 						<td><span class="eo">neniam</span><br />jamais</td>
@@ -604,26 +604,26 @@ include "dlekkapo.inc.php";
 				<tbody>
 					<tr>
 						<th>Interrogatif<br /><span class="eo">KI-</span></th>
-						<td><span class="eo">kiu</span><br />qui&nbsp;? lequel&nbsp;?</td>
+						<td><span class="eo">kiu</span><br />qui&nbsp;? quel(le)&nbsp;?<br />lequel, laquelle&nbsp;?</td>
 						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
 						<td><span class="eo">kie</span><br />où&nbsp;?</td>
 						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
-						<td><span class="eo">kiel</span><br />comment&nbsp;?</td>
+						<td><span class="eo">kiel</span><br />comme, comment&nbsp;?</td>
 					</tr>
 					<tr>
 						<th>Négatif<br /><span class="eo">NENI-</span></th>
-						<td><span class="eo">neniu</span><br />personne</td>
+						<td><span class="eo">neniu</span><br />personne, nul, aucun</td>
 						<td><span class="eo">nenio</span><br />rien</td>
 						<td><span class="eo">nenie</span><br />nulle part</td>
 						<td><span class="eo">neniam</span><br />jamais</td>
-						<td><span class="eo">neniel</span><br />impossible</td>
+						<td><span class="eo">neniel</span><br />d’aucune manière</td>
 					</tr>
 					<tr>
 						<th>Démonstratif<br /><span class="eo">TI-</span></th>
-						<td><span class="eo">tiu</span><br />celui-là,<br />celle-là</td>
+						<td><span class="eo">tiu</span><br />ce, cet,<br />celui-là, celle-là</td>
 						<td><span class="eo">tio</span><br />cela</td>
 						<td><span class="eo">tie</span><br />là, là-bas</td>
-						<td><span class="eo">tiam</span><br />à ce moment</td>
+						<td><span class="eo">tiam</span><br />alors</td>
 						<td><span class="eo">tiel</span><br />ainsi</td>
 	
 					</tr>

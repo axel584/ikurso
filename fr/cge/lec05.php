@@ -157,15 +157,15 @@ include "dlekkapo.inc.php";
 			</tr><tr>
 				<td><b>tiam</b></td>
 				<td><span class="eo">TI</span> + <span class="eo">AM</span></td>
-				<td><em>ce, cet(te)</em> + <em>moment</em><br/>à ce moment</td>
+				<td><em>ce, cet(te)</em> + <em>moment</em><br/>à ce moment, alors</td>
 			</tr><tr>
 				<td><b>iam</b></td>
 				<td><span class="eo">I</span> + <span class="eo">AM</span></td>
-				<td><em>indéfini</em> + <em>moment</em><br/>à un moment, un jour</td>
+				<td><em>indéfini</em> + <em>moment</em><br/>un jour, à un moment</td>
 			</tr><tr>
 				<td><b>neniom</b></td>
 				<td><span class="eo">NENI</span> + <span class="eo">OM</span></td>
-				<td><em>aucun</em> + <em>quantité</em><br/>aucune quantité, rien</td>
+				<td><em>aucun</em> + <em>quantité</em><br/>rien du tout, aucune quantité</td>
 			</tr>
 			</tr><tr>
 				<td><b>kiu</b></td>
@@ -231,6 +231,9 @@ include "dlekkapo.inc.php";
 		<p>
 			Nous pouvons compléter notre désormais familier tableau des corrélatifs. Pas d’inquiétude, nous allons poursuivre leur apprentissage progressivement, mais vous pouvez maintenant conserver cette page comme pense-bête&nbsp;!
 		</p>
+		<p>
+			En espéranto, on les appelle d’ailleurs <span class="eo">tabelvortoj</span>, les «&nbsp;mots du tableau&nbsp;». Pour aller plus loin, vous trouverez d’autres exemples sur la page <a href="https://fr.wikiversity.org/wiki/Esp%C3%A9ranto/Vocabulaire/Corr%C3%A9latifs" target="_blank" rel="noopener">Corrélatifs de Wikiversité</a>.
+		</p>
 		<div class="korelativoj noprint">
 			<table class="highlight">
 				<thead>
@@ -240,7 +243,8 @@ include "dlekkapo.inc.php";
 						<th>Possession<br /><span class="eo">-ES</span></th>
 						<th>Chose<br /><span class="eo">-O</span></th>
 						<th>Qualité<br /><span class="eo">-A</span></th>
-						<th>Lieu<br /><span class="eo">-E</span></th>
+						<th>Lieu (on y est)<br /><span class="eo">-E</span></th>
+						<th>Direction (on y va)<br /><span class="eo">-EN</span></th>
 						<th>Temps<br /><span class="eo">-AM</span></th>
 						<th>Manière<br /><span class="eo">-EL</span></th>
 						<th>Cause<br /><span class="eo">-AL</span></th>
@@ -250,67 +254,73 @@ include "dlekkapo.inc.php";
 				<tbody>
 					<tr>
 						<th>Interrogatif<br /><span class="eo">KI-</span></th>
-						<td><span class="eo">kiu</span><br />qui&nbsp;? lequel&nbsp;?</td>
-						<td><span class="eo">kies</span><br />à qui&nbsp;?</td>
+						<td><span class="eo">kiu</span><br />qui&nbsp;? quel(le)&nbsp;?<br />lequel, laquelle&nbsp;?</td>
+						<td><span class="eo">kies</span><br />de qui&nbsp;? dont</td>
 						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
 						<td><span class="eo">kia</span><br />quelle sorte de&nbsp;?</td>
 						<td><span class="eo">kie</span><br />où&nbsp;?</td>
+						<td><span class="eo">kien</span><br />où&nbsp;? (vers quel lieu)</td>
 						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
-						<td><span class="eo">kiel</span><br />comment&nbsp;?</td>
+						<td><span class="eo">kiel</span><br />comme, comment&nbsp;?</td>
 						<td><span class="eo">kial</span><br />pourquoi&nbsp;?</td>
 						<td><span class="eo">kiom</span><br />combien&nbsp;?</td>
 					</tr>
 					<tr>
 						<th>Indéfini<br /><span class="eo">I-</span></th>
-						<td><span class="eo">iu</span><br />quelqu’un</td>
+						<td><span class="eo">iu</span><br />quelqu’un,<br />un(e) certain(e)</td>
 						<td><span class="eo">ies</span><br />de quelqu’un</td>
 						<td><span class="eo">io</span><br />quelque chose</td>
 						<td><span class="eo">ia</span><br />une sorte de</td>
 						<td><span class="eo">ie</span><br />quelque part</td>
-						<td><span class="eo">iam</span><br />à un moment</td>
+						<td><span class="eo">ien</span><br />quelque part</td>
+						<td><span class="eo">iam</span><br />un jour</td>
 						<td><span class="eo">iel</span><br />d’une certaine manière</td>
 						<td><span class="eo">ial</span><br />pour une certaine raison</td>
 						<td><span class="eo">iom</span><br />un peu</td>
 					</tr>
 					<tr>
 						<th>Négatif<br /><span class="eo">NENI-</span></th>
-						<td><span class="eo">neniu</span><br />personne</td>
+						<td><span class="eo">neniu</span><br />personne, nul, aucun</td>
 						<td><span class="eo">nenies</span><br />de personne</td>
 						<td><span class="eo">nenio</span><br />rien</td>
 						<td><span class="eo">nenia</span><br />aucune sorte de</td>
 						<td><span class="eo">nenie</span><br />nulle part</td>
+						<td><span class="eo">nenien</span><br />nulle part</td>
 						<td><span class="eo">neniam</span><br />jamais</td>
-						<td><span class="eo">neniel</span><br />impossible</td>
-						<td><span class="eo">nenial</span><br />sans raison</td>
-						<td><span class="eo">neniom</span><br />aucune quantité, rien</td>
+						<td><span class="eo">neniel</span><br />d’aucune manière</td>
+						<td><span class="eo">nenial</span><br />pour aucune raison</td>
+						<td><span class="eo">neniom</span><br />rien du tout, aucune quantité</td>
 					</tr>
 					<tr>
 						<th>Démonstratif<br /><span class="eo">TI-</span></th>
-						<td><span class="eo">tiu</span><br />celui-là,<br />celle-là</td>
+						<td><span class="eo">tiu</span><br />ce, cet,<br />celui-là, celle-là</td>
 						<td><span class="eo">ties</span><br />de celui-là</td>
 						<td><span class="eo">tio</span><br />cela</td>
-						<td><span class="eo">tia</span><br />cette sorte de</td>
+						<td><span class="eo">tia</span><br />tel, telle,<br />cette sorte de</td>
 						<td><span class="eo">tie</span><br />là, là-bas</td>
-						<td><span class="eo">tiam</span><br />à ce moment</td>
+						<td><span class="eo">tien</span><br />là, là-bas</td>
+						<td><span class="eo">tiam</span><br />alors</td>
 						<td><span class="eo">tiel</span><br />ainsi</td>
-						<td><span class="eo">tial</span><br />pour cette raison</td>
-						<td><span class="eo">tiom</span><br />autant&nbsp;de</td>
+						<td><span class="eo">tial</span><br />aussi, pour cette raison</td>
+						<td><span class="eo">tiom</span><br />tant, autant</td>
 					</tr>
 					<tr>
 						<th>Collectif<br /><span class="eo">ĈI-</span></th>
-						<td><span class="eo">ĉiu</span><br />chacun(e),<br />Chaque</td>
-						<td><span class="eo">ĉies</span><br />de chacun</td>
+						<td><span class="eo">ĉiu</span><br />chacun(e),<br />chaque</td>
+						<td><span class="eo">ĉies</span><br />de tous</td>
 						<td><span class="eo">ĉio</span><br />tout</td>
-						<td><span class="eo">ĉia</span><br />toutes sortes de</td>
+						<td><span class="eo">ĉia</span><br />toute sorte de</td>
 						<td><span class="eo">ĉie</span><br />partout</td>
+						<td><span class="eo">ĉien</span><br />partout</td>
 						<td><span class="eo">ĉiam</span><br />toujours</td>
 						<td><span class="eo">ĉiel</span><br />de toute manière</td>
-						<td><span class="eo">ĉial</span><br />pour toutes sortes de raisons</td>
+						<td><span class="eo">ĉial</span><br />pour toute raison</td>
 						<td><span class="eo">ĉiom</span><br />le tout</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
+		<p class="noto">Les corrélatifs de lieu en <span class="eo">-E</span> prennent la terminaison <span class="eo">-n</span> de l’accusatif pour indiquer la direction (<span class="eo">Kie vi estas?</span> Où es-tu&nbsp;? – <span class="eo">Kien vi iras?</span> Où vas-tu&nbsp;?). Vous verrez cela en détail dans la <a href="lec06.php?section=16">leçon 6</a>.</p>
 		<div class="korelativoj onlyprint">
 			<table class="highlight">
 				<thead>
@@ -320,21 +330,21 @@ include "dlekkapo.inc.php";
 						<th>Possession<br /><span class="eo">-ES</span></th>
 						<th>Chose<br /><span class="eo">-O</span></th>
 						<th>Qualité<br /><span class="eo">-A</span></th>
-						<th>Lieu<br /><span class="eo">-E</span></th>
+						<th>Lieu (on y est)<br /><span class="eo">-E</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<th>Interrogatif<br /><span class="eo">KI-</span></th>
-						<td><span class="eo">kiu</span><br />qui&nbsp;? lequel&nbsp;?</td>
-						<td><span class="eo">kies</span><br />à qui&nbsp;?</td>
+						<td><span class="eo">kiu</span><br />qui&nbsp;? quel(le)&nbsp;?<br />lequel, laquelle&nbsp;?</td>
+						<td><span class="eo">kies</span><br />de qui&nbsp;? dont</td>
 						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
 						<td><span class="eo">kia</span><br />quelle sorte de&nbsp;?</td>
 						<td><span class="eo">kie</span><br />où&nbsp;?</td>
 					</tr>
 					<tr>
 						<th>Indéfini<br /><span class="eo">I-</span></th>
-						<td><span class="eo">iu</span><br />quelqu’un</td>
+						<td><span class="eo">iu</span><br />quelqu’un,<br />un(e) certain(e)</td>
 						<td><span class="eo">ies</span><br />de quelqu’un</td>
 						<td><span class="eo">io</span><br />quelque chose</td>
 						<td><span class="eo">ia</span><br />une sorte de</td>
@@ -342,7 +352,7 @@ include "dlekkapo.inc.php";
 					</tr>
 					<tr>
 						<th>Négatif<br /><span class="eo">NENI-</span></th>
-						<td><span class="eo">neniu</span><br />personne</td>
+						<td><span class="eo">neniu</span><br />personne, nul, aucun</td>
 						<td><span class="eo">nenies</span><br />de personne</td>
 						<td><span class="eo">nenio</span><br />rien</td>
 						<td><span class="eo">nenia</span><br />aucune sorte de</td>
@@ -350,18 +360,18 @@ include "dlekkapo.inc.php";
 					</tr>
 					<tr>
 						<th>Démonstratif<br /><span class="eo">TI-</span></th>
-						<td><span class="eo">tiu</span><br />celui-là,<br />celle-là</td>
+						<td><span class="eo">tiu</span><br />ce, cet,<br />celui-là, celle-là</td>
 						<td><span class="eo">ties</span><br />de celui-là</td>
 						<td><span class="eo">tio</span><br />cela</td>
-						<td><span class="eo">tia</span><br />cette sorte de</td>
+						<td><span class="eo">tia</span><br />tel, telle,<br />cette sorte de</td>
 						<td><span class="eo">tie</span><br />là, là-bas</td>
 					</tr>
 					<tr>
 						<th>Collectif<br /><span class="eo">ĈI-</span></th>
-						<td><span class="eo">ĉiu</span><br />chacun(e),<br />Chaque</td>
-						<td><span class="eo">ĉies</span><br />de chacun</td>
+						<td><span class="eo">ĉiu</span><br />chacun(e),<br />chaque</td>
+						<td><span class="eo">ĉies</span><br />de tous</td>
 						<td><span class="eo">ĉio</span><br />tout</td>
-						<td><span class="eo">ĉia</span><br />toutes sortes de</td>
+						<td><span class="eo">ĉia</span><br />toute sorte de</td>
 						<td><span class="eo">ĉie</span><br />partout</td>
 					</tr>
 				</tbody>
@@ -372,6 +382,7 @@ include "dlekkapo.inc.php";
 				<thead>
 					<tr>
 						<th> </th>
+						<th>Direction (on y va)<br /><span class="eo">-EN</span></th>
 						<th>Temps<br /><span class="eo">-AM</span></th>
 						<th>Manière<br /><span class="eo">-EL</span></th>
 						<th>Cause<br /><span class="eo">-AL</span></th>
@@ -381,37 +392,42 @@ include "dlekkapo.inc.php";
 				<tbody>
 					<tr>
 						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<td><span class="eo">kien</span><br />où&nbsp;? (vers quel lieu)</td>
 						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
-						<td><span class="eo">kiel</span><br />comment&nbsp;?</td>
+						<td><span class="eo">kiel</span><br />comme, comment&nbsp;?</td>
 						<td><span class="eo">kial</span><br />pourquoi&nbsp;?</td>
 						<td><span class="eo">kiom</span><br />combien&nbsp;?</td>
 					</tr>
 					<tr>
 						<th>Indéfini<br /><span class="eo">I-</span></th>
-						<td><span class="eo">iam</span><br />à un moment</td>
+						<td><span class="eo">ien</span><br />quelque part</td>
+						<td><span class="eo">iam</span><br />un jour</td>
 						<td><span class="eo">iel</span><br />d’une certaine manière</td>
 						<td><span class="eo">ial</span><br />pour une certaine raison</td>
 						<td><span class="eo">iom</span><br />un peu</td>
 					</tr>
 					<tr>
 						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<td><span class="eo">nenien</span><br />nulle part</td>
 						<td><span class="eo">neniam</span><br />jamais</td>
-						<td><span class="eo">neniel</span><br />impossible</td>
-						<td><span class="eo">nenial</span><br />sans raison</td>
-						<td><span class="eo">neniom</span><br />aucune quantité, rien</td>
+						<td><span class="eo">neniel</span><br />d’aucune manière</td>
+						<td><span class="eo">nenial</span><br />pour aucune raison</td>
+						<td><span class="eo">neniom</span><br />rien du tout, aucune quantité</td>
 					</tr>
 					<tr>
 						<th>Démonstratif<br /><span class="eo">TI-</span></th>
-						<td><span class="eo">tiam</span><br />à ce moment</td>
+						<td><span class="eo">tien</span><br />là, là-bas</td>
+						<td><span class="eo">tiam</span><br />alors</td>
 						<td><span class="eo">tiel</span><br />ainsi</td>
-						<td><span class="eo">tial</span><br />pour cette raison</td>
-						<td><span class="eo">tiom</span><br />autant&nbsp;de</td>
+						<td><span class="eo">tial</span><br />aussi, pour cette raison</td>
+						<td><span class="eo">tiom</span><br />tant, autant</td>
 					</tr>
 					<tr>
 						<th>Collectif<br /><span class="eo">ĈI-</span></th>
+						<td><span class="eo">ĉien</span><br />partout</td>
 						<td><span class="eo">ĉiam</span><br />toujours</td>
 						<td><span class="eo">ĉiel</span><br />de toute manière</td>
-						<td><span class="eo">ĉial</span><br />pour toutes sortes de raisons</td>
+						<td><span class="eo">ĉial</span><br />pour toute raison</td>
 						<td><span class="eo">ĉiom</span><br />le tout</td>
 					</tr>
 				</tbody>

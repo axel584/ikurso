@@ -54,9 +54,14 @@ require_once __DIR__."/../../api/SeoAPI.php";
 if ($nunleciono!=="") {
 	$kanonaSekcio = (isset($section) && ctype_digit((string)$section)) ? (int)$section : 1;
 	$sekcioTitolo = (new SeoAPI($bdd))->sekcioTitolo("CG", (int)$nunleciono, $kanonaSekcio);
-	$pagxtitolo = ($sekcioTitolo ? $sekcioTitolo." – " : "")."Leçon ".$nunleciono." du cours d’espéranto";
-	$pagxpriskribo = "Leçon ".$nunleciono." du cours d’espéranto gratuit pour débutants".($sekcioTitolo ? " : ".$sekcioTitolo : "")
-		.". Exercices corrigés automatiquement et, si vous le souhaitez, un correcteur bénévole.";
+	$sekcioEsperanto = $sekcioTitolo ? SeoAPI::kunEsperanto($sekcioTitolo) : null;
+	$pagxtitolo = $sekcioEsperanto ? $sekcioEsperanto." – Leçon ".$nunleciono
+		: ($sekcioTitolo ? $sekcioTitolo." – " : "")."Leçon ".$nunleciono." du cours d’espéranto";
+	$pagxpriskribo = SeoAPI::sekcioPriskribo((int)$nunleciono, $kanonaSekcio);
+	if ($pagxpriskribo === null) {
+		$pagxpriskribo = "Leçon ".$nunleciono." du cours d’espéranto gratuit pour débutants".($sekcioTitolo ? " : ".$sekcioTitolo : "")
+			.". Exercices corrigés automatiquement et, si vous le souhaitez, un correcteur bénévole.";
+	}
 } else {
 	$pagxtitolo = "Cours d’espéranto gratuit pour débutants en 10 leçons";
 	$pagxpriskribo = "Apprenez l’espéranto gratuitement en 10 leçons, à votre rythme : exercices corrigés automatiquement et, si vous le souhaitez, un correcteur bénévole.";

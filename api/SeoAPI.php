@@ -26,6 +26,27 @@ class SeoAPI {
         return $titolo === false ? null : trim(html_entity_decode(strip_tags($titolo), ENT_QUOTES, "UTF-8"));
     }
 
+    // Titre pour Google : « Conditionnel et impératif » devient « Conditionnel et impératif en espéranto »,
+    // pour correspondre aux recherches et écarter celles sur la grammaire française (« les diphtongues »).
+    // Les sections sans sujet propre (exercices, QCM, envoi…) gardent leur titre ; renvoie null dans ce cas.
+    public static function kunEsperanto(string $titolo): ?string {
+        if (preg_match('/^(Exercices?|QCM|Épilogue|Envoi|Récapitulatif|Présentation|Klarigoj|Aŭda|Skriba|Un air connu|Un peu de pratique)/u', $titolo)
+            || mb_stripos($titolo, "espéranto") !== false) {
+            return null;
+        }
+        $titolo = preg_replace('/\s*\([^)]*\)|\s*(\?|\.\.\.|…)$/u', "", $titolo);
+        return $titolo . " en espéranto";
+    }
+
+    // Description pour Google d'une section du cours en 10 leçons (SeoPriskriboj.php), ou null.
+    public static function sekcioPriskribo(int $leciono, int $ordo): ?string {
+        static $priskriboj = null;
+        if ($priskriboj === null) {
+            $priskriboj = require __DIR__ . "/SeoPriskriboj.php";
+        }
+        return isset($priskriboj[$leciono . "." . $ordo]) ? $priskriboj[$leciono . "." . $ordo] : null;
+    }
+
     // Adresses (relatives à la racine du site) de toutes les sections des cours ouverts aux moteurs.
     public function lecionojUrl(): array {
         $demando = $this->bdd->query("SELECT l.kurso, l.retpagxo, le.ordo FROM lecioneroj le JOIN lecionoj l ON l.id = le.leciono_id

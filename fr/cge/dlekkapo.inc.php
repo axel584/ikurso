@@ -78,5 +78,9 @@ if (isset($leciono)) {
 	getListoLecionoj('CG',$leciono);
 }
 montriGastoAvizon();
+// visiteur qui n'a encore rien fait, souvent arrivé de Google au milieu du cours (#1101)
+if (isset($leciono) && $leciono>0) {
+	montriVizitantoAvizon('CG', isset($leciono) ? (int)$leciono : 0, isset($section) ? (string)$section : '');
+}
 ?>
 

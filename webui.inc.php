@@ -303,6 +303,44 @@ function montriGastoAvizon() {
 	echo "</div></div></div>\n";
 }
 
+// Visiteur qui n'a encore rien fait (ni compte ni invité), souvent arrivé de Google au milieu d'un cours (#1101) :
+// on lui dit que la page fait partie d'un cours, avec un lien vers son début.
+// $kurso : CG (cours en 10 leçons), GR (chapitres de Gerda malaperis) ou LASU (Lasu min paroli plu).
+function montriVizitantoAvizon($kurso, $leciono, $section) {
+	if (!empty($_SESSION["persono_id"]) || !empty($_SESSION["gasto_id"])) {
+		return;
+	}
+	$cgKomenco = ($kurso=="CG" ? "" : "../cge/")."lec01.php?section=1";
+	$cgPrezento = ($kurso=="CG" ? "" : "../cge/")."intro.php";
+	if ($kurso=="CG" && $leciono==1 && $section=="1") {
+		$teksto = "<strong>Bienvenue au début du cours d’espéranto gratuit en 10 leçons&nbsp;!</strong> Suivez les sections dans l’ordre, "
+			."faites les exercices (sans compte, ils sont corrigés automatiquement) et cliquez sur TERMINÉ en bas de chaque page.";
+		$butono = null;
+	} else if ($kurso=="CG") {
+		$teksto = "<strong>Cette page fait partie d’un cours d’espéranto gratuit en 10 leçons.</strong> Vous pouvez le suivre sans créer de compte, "
+			."avec des exercices corrigés automatiquement et, si vous le souhaitez, l’aide d’un correcteur bénévole.";
+		$butono = array($cgKomenco, "Commencer à la leçon 1");
+	} else if ($kurso=="GR") {
+		$teksto = "<strong>Cette page fait partie de Gerda malaperis</strong>, un roman en 25 chapitres pour progresser en espéranto après le cours débutant, "
+			."avec des explications et des exercices. Vous débutez&nbsp;? Commencez par le <a href='".$cgPrezento."' data-vizitanto='Cours en 10 leçons'>cours gratuit en 10 leçons</a>.";
+		$butono = ($leciono==1 && $section=="1") ? null : array("cxap01.php?section=1", "Commencer au chapitre 1");
+	} else {
+		$teksto = "<strong>Vous voulez apprendre l’espéranto&nbsp;?</strong> Suivez notre cours gratuit en 10 leçons, sans créer de compte, "
+			."avec des exercices corrigés automatiquement et, si vous le souhaitez, l’aide d’un correcteur bénévole.";
+		$butono = array($cgKomenco, "Commencer à la leçon 1");
+	}
+	echo "<div class='row noprint' id='vizitanto_avizo'><div class='col s12 m10 l7 offset-m1 offset-l1'>";
+	echo "<div class='card-panel blue lighten-5'><p>".$teksto."</p>";
+	if ($butono) {
+		echo "<a href='".$butono[0]."' class='btn waves-effect waves-light primaire' data-vizitanto='".$butono[1]."'>"
+			."<i class='material-icons left'>school</i>".$butono[1]."</a>";
+		if ($kurso!="GR") {
+			echo " <a href='".$cgPrezento."' class='btn-flat waves-effect' data-vizitanto='Présentation du cours'>Présentation du cours</a>";
+		}
+	}
+	echo "</div></div></div>\n";
+}
+
 
 
 // Exercices « une phrase avec des trous » (#1056) : plenigu (chaque * devient un champ à remplir)

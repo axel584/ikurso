@@ -11,6 +11,11 @@ function spuri(kategorio, ago, nomo) {
       spuri('Accueil', 'Clic', $(this).data('spuro'));
     });
 
+    // encadré des visiteurs arrivés au milieu d'un cours (#1101) : vers quel lien ils repartent, depuis quelle page
+    $('[data-vizitanto]').on('click', function() {
+      spuri('Nouveau visiteur', $(this).data('vizitanto'), window.location.pathname + window.location.search);
+    });
+
     // première réponse ou premier « Terminé ! » d'un visiteur sans compte : l'invité vient d'être créé (#1092, #1094)
     $(document).ajaxSuccess(function(event, xhr) {
       if (xhr.getResponseHeader('X-Ikurso-Gasto') === 'kreita') {

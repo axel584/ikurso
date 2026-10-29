@@ -90,7 +90,7 @@ include "gerdakapo.inc.php";
 		?>
 
 			<section class="klarigo">
-				<h4>-ita  : <i>participe passé passif</i></h4>
+				<h4>-ita : <i>ce qui a subi l'action (action terminée)</i></h4>
 				<p><span class="eo">fari</span> : faire → <span class="eo">farita : </span>fait</p>
 				<p><span class="eo">vidi</span> : voir → <span class="eo">vidita</span> : vu(e)</p>
 				<p><span class="eo">perdita peco</span> : une pièce perdue</p>

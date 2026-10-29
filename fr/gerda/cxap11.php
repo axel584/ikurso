@@ -85,7 +85,7 @@ include "gerdakapo.inc.php";
 
 			<section class="klarigo">
 	
-				<h4>-ante : <i>participe présent actif, forme adverbiale</i></h4>
+				<h4>-ante : <i>en faisant l'action (au moment où elle a lieu)</i></h4>
 		
 				<p><span class="eo">laborante, li silentas</span> : il reste silencieux en travaillant</p>
 				<p><span class="eo">ni diskutis promenante</span> : nous parlions en nous promenant</p>

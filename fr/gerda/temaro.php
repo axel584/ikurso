@@ -25,11 +25,11 @@ include "gerdakapo.inc.php";
 						<li><a href="cxap05.php?section=2">La terminaison -<b>us</b> (forme conditionnelle du verbe)</a></li>
 						<li><a href="cxap06.php?section=2">Les différents modes dans les phrases interrogatives</a></li>
 						<li><a href="cxap06.php?section=2">-<b>os</b> : forme future du verbe</a></li>
-						<li><a href="cxap09.php?section=2">-<b>ita</b> : participe passé passif</a></li>
-						<li><a href="cxap10.php?section=2">-<b>ante</b> : participe présent actif, forme adverbiale</a></li>
-						<li><a href="cxap13.php?section=2">-<b>ata</b> : participe présent passif</a></li>
-						<li><a href="cxap13.php?section=2">-<b>inta</b> : participe passé passif</a></li>
-						<li><a href="cxap13.php?section=2">Les participes en -<b>ata</b> et -<b>ita</b></a></li>
+						<li><a href="cxap09.php?section=2">-<b>ita</b> : ce qui a subi l'action (action terminée)</a></li>
+						<li><a href="cxap11.php?section=2">-<b>ante</b> : en faisant l'action</a></li>
+						<li><a href="cxap14.php?section=2">-<b>ata</b> : ce qui subit l'action, pendant qu'elle a lieu</a></li>
+						<li><a href="cxap14.php?section=2">-<b>inta</b> : celui qui a fait l'action (action terminée)</a></li>
+						<li><a href="cxap14.php?section=2">Les participes en -<b>ata</b> et -<b>ita</b></a></li>
 						<li><a href="cxap23.php?section=2">Participoj</a></li>
 						<li><a href="cxap24.php?section=2">Participaj adjektivoj, participaj nomoj, participaj adverboj</a></li>
 					</ul>
@@ -55,7 +55,7 @@ include "gerdakapo.inc.php";
 						<li><a href="cxap10.php?section=2">Les suffixes -<b>eg</b>- et -<b>em</b>-</a></li>
 						<li><a href="cxap11.php?section=2">Les suffixes -<b>ig</b>- et -<b>ilo</b></a></li>
 						<li><a href="cxap14.php?section=2">Les suffixes -<b>eco</b> et -<b>iĝ</b>-</a></li>
-						<li><a href="cxap13.php?section=2">Les suffixes -<b>ega</b> et -<b>iga</b></a></li>
+						<li><a href="cxap14.php?section=2">Les suffixes -<b>ega</b> et -<b>iga</b></a></li>
 						<li><a href="cxap15.php?section=2">Les suffixes -<b>aĉ</b>- et -<b>ido</b></a></li>
 						<li><a href="cxap17.php?section=2">Le suffixe -<b>ano</b></a></li>
 						<li><a href="cxap20.php?section=2">Les suffixes -<b>anto</b> et -<b>into</b></a></li>

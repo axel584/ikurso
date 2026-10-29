@@ -65,7 +65,7 @@ include "dlekkapo.inc.php";
 			</p>
 	
 			<div class="row vortlisto">
-				<p class="col s12"><b>Participes actifs</b></p>
+				<p class="col s12"><b>Celui qui fait l’action</b> (participes dits «&nbsp;actifs&nbsp;»)</p>
 				<div class="col s12 row">
 					<p class="col s3 m2 l2">Présent :<br>
 					<b>-ant</b></p>
@@ -88,7 +88,7 @@ include "dlekkapo.inc.php";
 				</div>
 			</div>
 			<div class="row vortlisto">
-				<p class="col s12"><b>Participes passifs</b></p>
+				<p class="col s12"><b>Ce qui subit l’action</b> (participes dits «&nbsp;passifs&nbsp;»)</p>
 				<div class="col s12 row">
 					<p class="col s3 m2 l2">Présent :<br>
 						<b>-at</b></p>
@@ -151,6 +151,11 @@ include "dlekkapo.inc.php";
 				(<span class="eo">la pordo estas ferm<b>at</b>a</span>), 
 				ou si la porte est en position fermée (<span class="eo">la pordo estas ferm<b>it</b>a</span>).
 				</li>
+				<li>Les mots «&nbsp;actif&nbsp;» et «&nbsp;passif&nbsp;» ne désignent pas ici la voix active ou passive de la phrase,
+				comme en grammaire française&nbsp;: ils indiquent si le mot désigne celui qui fait l’action ou ce qui la subit.
+				<span class="eo">Legata</span> s’emploie aussi dans une phrase à la voix active&nbsp;: <span class="eo">Mi prenis la leg<b>at</b>an libron.</span>
+				= J’ai pris le livre qu’on est en train de lire.<br>
+				La voyelle indique le moment de l’action&nbsp;: <b>a</b> en cours, <b>i</b> terminée, <b>o</b> à venir.</li>
 				<li>En combinant le verbe <span class="eo">esti</span> et les 6 formes de participes, 
 				on obtient un grand nombre de formes composées. Sachez toutefois que
 				l’espéranto préfère les formes simples et n’utilise les formes

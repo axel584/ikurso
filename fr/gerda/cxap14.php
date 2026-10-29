@@ -102,15 +102,29 @@ include "gerdakapo.inc.php";
 
 			<section class="klarigo">
 	
-				<h4>-ata : <i>participe présent passif</i></h4>
+				<h4>-ata : <i>ce qui subit l'action, pendant qu'elle a lieu</i></h4>
 			
 				<p><span class="eo">konata</span> : (qui est) connu(e)</p>
 				<p><span class="eo">rigardata</span> : que l'on regarde</p>
+				<p><span class="eo">la manĝata birdo</span> : l'oiseau qu'on est en train de manger</p>
 			
-				<h4>-inta : <i>participe passé actif</i></h4>
+				<h4>-inta : <i>celui qui a fait l'action (action terminée)</i></h4>
 		
 				<p><span class="eo">aminta</span> : ayant aimé</p>
 				<p><span class="eo">laborinta</span> : ayant travaillé</p>
+				<p><span class="eo">la manĝinta birdo</span> : l'oiseau qui a mangé (qui a fini de manger)</p>
+
+				<div class="card-panel blue lighten-5">
+					<p>Les grammaires d'espéranto parlent de participes «&nbsp;actifs&nbsp;» pour celui qui fait l'action
+					(<span class="eo">-anta, -inta, -onta</span>) et de participes «&nbsp;passifs&nbsp;» pour ce qui subit l'action
+					(<span class="eo">-ata, -ita, -ota</span>). Ces mots ne désignent pas la voix active ou passive de la phrase,
+					comme en grammaire française&nbsp;: <span class="eo">konata</span> s'emploie aussi dans une phrase à la voix active
+					(<span class="eo">mi aĉetis konatan libron</span> : j'ai acheté un livre connu).</p>
+					<p>La voyelle indique le moment de l'action&nbsp;: <b>a</b> en cours, <b>i</b> terminée, <b>o</b> à venir.
+					<span class="eo">konata</span> («&nbsp;qui est connu&nbsp;») a donc un sens présent, même si le français le traduit par un participe passé.</p>
+					<p><span class="eo">la manĝanta birdo</span> : l'oiseau qui est en train de manger<br>
+					<span class="eo">la manĝata birdo</span> : l'oiseau qu'on est en train de manger</p>
+				</div>
 		
 				<h4>-eco : <i>nom abstrait de la qualité</i></h4>
 		

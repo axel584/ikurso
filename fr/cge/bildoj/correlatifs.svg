@@ -141,7 +141,7 @@
                         <tspan x="28" y="29">u</tspan>
                     </text>
                     <text id="adjectif" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" letter-spacing="0.75" fill="#616161">
-                        <tspan x="79" y="26">adjectif</tspan>
+                        <tspan x="79" y="26">individu</tspan>
                     </text>
                 </g>
                 <g id="es" transform="translate(80.000000, 150.000000)">

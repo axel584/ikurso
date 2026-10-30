@@ -149,7 +149,7 @@ include "dlekkapo.inc.php";
 			</tr><tr>
 				<td><b>ĉiu</b></td>
 				<td><span class="eo">ĈI</span> + <span class="eo">U</span></td>
-				<td><em>tout(e)</em> + <em>(adjectif)</em><br>«toute chose» => chaque, chacun(e)</td>
+				<td><em>tout(e)</em> + <em>(individu)</em><br>«tout individu» => chaque, chacun(e)</td>
 			</tr><tr>
 				<td><b>tie</b></td>
 				<td><span class="eo">TI</span> + <span class="eo">E</span></td>
@@ -170,11 +170,11 @@ include "dlekkapo.inc.php";
 			</tr><tr>
 				<td><b>kiu</b></td>
 				<td><span class="eo">KI</span> + <span class="eo">U</span></td>
-				<td><em>quel(le), lequel , laquelle</em> + <em>(adjectif)</em><br/>quel(le), lequel , laquelle, qui</td>
+				<td><em>quel(le), lequel , laquelle</em> + <em>(individu)</em><br/>quel(le), lequel , laquelle, qui</td>
 			</tr>
 		</table>
 
-		<p class="parto">Les corrélatifs se terminant par <b>U</b> sont souvent des adjectifs accompagnant un nom&nbsp;:</p>
+		<p class="parto">Les corrélatifs se terminant par <b>U</b> accompagnent souvent un nom&nbsp;:</p>
 		<div class="row">
 			<p class="col s6"><span class="eo"><b>Kiun</b> frukton vi volas?</span></p><p class="col s6"><b>Quel</b> fruit veux-tu&nbsp;?</p>
 			<p class="col s6"><span class="eo">Mi volas <b>tiun</b> frukton.</span></p><p class="col s6">Je veux <b>ce</b> fruit.</p>

@@ -7,7 +7,10 @@ import { login, USERS } from '../helpers/auth'
 async function mezuri(page: Page) {
   return page.evaluate(() => {
     const nav = document.querySelector('nav.primaire')!.getBoundingClientRect()
-    const logo = document.querySelector('#logo')!.getBoundingClientRect()
+    // le texte « iKurso », et non le lien (15 % de la largeur, texte centré), où le menu peut commencer sans rien cacher
+    const teksto = document.createRange()
+    teksto.selectNodeContents(document.querySelector('#logo')!)
+    const logo = teksto.getBoundingClientRect()
     const lis = [...document.querySelectorAll('nav ul.hide-on-med-and-down > li')].map(l => l.getBoundingClientRect())
       .filter(l => l.width > 0)
     return {

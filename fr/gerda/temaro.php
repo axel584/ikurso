@@ -28,7 +28,7 @@ include "gerdakapo.inc.php";
 						<li><a href="cxap09.php?section=2">-<b>ita</b> : ce qui a subi l'action (action terminée)</a></li>
 						<li><a href="cxap11.php?section=2">-<b>ante</b> : en faisant l'action</a></li>
 						<li><a href="cxap14.php?section=2">-<b>ata</b> : ce qui subit l'action, pendant qu'elle a lieu</a></li>
-						<li><a href="cxap14.php?section=2">-<b>inta</b> : celui qui a fait l'action (action terminée)</a></li>
+						<li><a href="cxap14.php?section=2">-<b>inta</b> : ce qui a fait l'action (action terminée)</a></li>
 						<li><a href="cxap14.php?section=2">Les participes en -<b>ata</b> et -<b>ita</b></a></li>
 						<li><a href="cxap23.php?section=2">Participoj</a></li>
 						<li><a href="cxap24.php?section=2">Participaj adjektivoj, participaj nomoj, participaj adverboj</a></li>

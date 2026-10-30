@@ -60,27 +60,26 @@ include "dlekkapo.inc.php";
 
 			<a id="participes" class="scrollspy"></a>
 
-			<p class="parto">Enfin, il reste les <b>participes</b> (mots qui s’emploient comme verbes,
-			adjectifs, adverbes ou noms)&nbsp;:
+			<p class="parto">Enfin, il reste les <b>participes</b> (mots qui s’emploient comme verbes, adjectifs, adverbes ou noms)&nbsp;:
 			</p>
 	
 			<div class="row vortlisto">
-				<p class="col s12"><b>Celui qui fait l’action</b> (participes dits «&nbsp;actifs&nbsp;»)</p>
+				<p class="col s12"><b>Ce qui fait l’action</b> (participes «actifs»)</p>
 				<div class="col s12 row">
-					<p class="col s3 m2 l2">Présent :<br>
+					<p class="col s3 m2 l2">action en cours&nbsp;:<br>
 					<b>-ant</b></p>
 					<p class="col s9 m7 l6"><span class="eo">Ŝi estas leg<b>ant</b>a.</span><br>= Elle est lisant (en train de lire).</p>
 					<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/leganta.jpg" class="responsive-img" alt="Ŝi estas leganta."></p>
 				</div>
 				<div class="col s12 row">
-					<p class="col s3 m2 l2">Passé :<br>
+					<p class="col s3 m2 l2">action terminée&nbsp;:<br>
 						<b>-int</b></p>
 					<p class="col s9 m7 l6"><span class="eo">Ŝi estas leg<b>int</b>a.</span>
 						<br>= Elle est ayant lu (elle a lu, elle a fini de lire).</p>
 					<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/leginta.jpg" class="responsive-img" alt="Ŝi estas leginta."><br></p>
 				</div>
 				<div class="col s12 row">
-					<p class="col s3 m2 l2">Futur :<br>
+					<p class="col s3 m2 l2">action à venir&nbsp;:<br>
 						<b>-ont</b></p>
 					<p class="col s9 m7 l6"><span class="eo">Ŝi estas leg<b>ont</b>a.</span><br>= Elle est devant lire (sur le point de lire).<br>
 					<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/legonta.jpg" class="responsive-img" alt="Ŝi estas legonta.">
@@ -88,25 +87,25 @@ include "dlekkapo.inc.php";
 				</div>
 			</div>
 			<div class="row vortlisto">
-				<p class="col s12"><b>Ce qui subit l’action</b> (participes dits «&nbsp;passifs&nbsp;»)</p>
+				<p class="col s12"><b>Ce qui subit l’action</b> (participes «passifs»)</p>
 				<div class="col s12 row">
-					<p class="col s3 m2 l2">Présent :<br>
+					<p class="col s3 m2 l2">action en cours&nbsp;:<br>
 						<b>-at</b></p>
-					<p class="col s9 m7 l6"><span class="eo">La libro estas leg<b>at</b>a.</span><br>= Le livre est lu (en train d’être lu).</p>
+					<p class="col s9 m7 l6"><span class="eo">La libro estas leg<b>at</b>a.</span><br>= Le livre est en train d’être lu.</p>
 					<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/legata.jpg" class="responsive-img" alt="La libro estas legata.">
 					</p>
 				</div>
 				<div class="col s12 row">
-					<p class="col s3 m2 l2">Passé :<br>
+					<p class="col s3 m2 l2">action terminée&nbsp;:<br>
 						<b>-it</b></p>
 					<p class="col s9 m7 l6"><span class="eo">La libro estas leg<b>it</b>a.</span>
-						<br>= Le livre est lu (ayant été lu).</p>
+						<br>= Le livre a été lu.</p>
 						<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/legita.jpg" class="responsive-img" alt="La libro estas legita."></p>
 				</div>
 				<div class="col s12 row">
-					<p class="col s3 m2 l2">Futur :<br>
+					<p class="col s3 m2 l2">action à venir&nbsp;:<br>
 						<b>-ot</b></p>
-					<p class="col s9 m7 l6"><span class="eo">La libro estas leg<b>ot</b>a.</span><br>= Le livre est devant être lu (à lire).</p>
+					<p class="col s9 m7 l6"><span class="eo">La libro estas leg<b>ot</b>a.</span><br>= Le livre va être lu (à lire).</p>
 					<p class="col s9 offset-s3 m3 l4"><img src="<?php echo $vojo;?>fr/cge/bildoj/legota.jpg" class="responsive-img" alt="La libro estas legota.">
 					</p>
 				</div>
@@ -116,7 +115,7 @@ include "dlekkapo.inc.php";
 			<div class="row">
 				<p class="col s12"><span class="eo">Ili estas legantaj.</span>&nbsp;: Ils sont en train de lire.</p>
 				<p class="col s12"><span class="eo">Ili estas legintaj.</span>&nbsp;: Ils ont lu.</p>
-				<p class="col s12"><span class="eo">La libroj estas legataj.</span>&nbsp;: Les livres sont lus.</p>
+				<p class="col s12"><span class="eo">La libroj estas legataj.</span>&nbsp;: Les livres sont lus (= en train d’être lus).</p>
 			</div>
 
 			<p class="parto">En résumé :</p>
@@ -125,8 +124,8 @@ include "dlekkapo.inc.php";
 				<p class="col s12 l6"><span class="eo">leg<b>ant</b>aj</span> = <span class="eo">kiuj legas</span> = qui lisent, lisant</p>
 			</div>
 			<div class="row">
-				<p class="col s12 l6"><span class="eo">leg<b>int</b>a</span> = <span class="eo">kiu legis</span> = qui a lu, qui lisait, ayant lu</p>
-				<p class="col s12 l6"><span class="eo">leg<b>int</b>aj</span> = <span class="eo">kiuj legis</span> = qui ont lu, qui lisaient, ayant lu</p>
+				<p class="col s12 l6"><span class="eo">leg<b>int</b>a</span> = <span class="eo">kiu legis</span> = qui a lu, ayant lu</p>
+				<p class="col s12 l6"><span class="eo">leg<b>int</b>aj</span> = <span class="eo">kiuj legis</span> = qui ont lu, ayant lu</p>
 			</div>
 			<div class="row">
 				<p class="col s12 l6"><span class="eo">leg<b>ont</b>a</span> = <span class="eo">kiu legos</span> = qui lira</p>
@@ -147,20 +146,22 @@ include "dlekkapo.inc.php";
 	
 			<p class="rimarko"><strong>REMARQUES</strong> : </p>
 			<ol>
-				<li>Le français dit «&nbsp;la porte est fermée&nbsp;» sans distinguer si on est en train de fermer la porte 
-				(<span class="eo">la pordo estas ferm<b>at</b>a</span>), 
+				<li>En français on dit «la porte est fermée» sans distinguer si l’on est en train de fermer la porte 
+				(<span class="eo">la pordo estas ferm<b>at</b>a</span>)
 				ou si la porte est en position fermée (<span class="eo">la pordo estas ferm<b>it</b>a</span>).
 				</li>
-				<li>Les mots «&nbsp;actif&nbsp;» et «&nbsp;passif&nbsp;» ne désignent pas ici la voix active ou passive de la phrase,
-				comme en grammaire française&nbsp;: ils indiquent si le mot désigne celui qui fait l’action ou ce qui la subit.
-				<span class="eo">Legata</span> s’emploie aussi dans une phrase à la voix active&nbsp;: <span class="eo">Mi prenis la leg<b>at</b>an libron.</span>
-				= J’ai pris le livre qu’on est en train de lire.<br>
-				La voyelle indique le moment de l’action&nbsp;: <b>a</b> en cours, <b>i</b> terminée, <b>o</b> à venir.</li>
+				<li>Les mots «actif» et «passif» ne désignent pas ici la voix active ou passive de la phrase,
+				comme en grammaire française&nbsp;: ils indiquent si le mot désigne ce qui fait l’action ou ce qui la subit.
+				Par exemple, dans la phrase suivante, <span class="eo">legata</span> (participe passif) est employé dans une phrase 
+				à la voix active&nbsp;: <span class="eo">Mi prenis la leg<b>at</b>an libron.</span>
+				= J’ai pris le livre qu’on est en train de lire.<br></li>
+				<li>La voyelle indique le moment de l’action&nbsp;: <span class="eo">a</span> en cours, 
+				<span class="eo">i</span> terminée, <span class="eo">o</span> à venir. 
+				Ce moment est fixé par rapport au verbe principal, et non par rapport au présent.</li>
 				<li>En combinant le verbe <span class="eo">esti</span> et les 6 formes de participes, 
-				on obtient un grand nombre de formes composées. Sachez toutefois que
-				l’espéranto préfère les formes simples et n’utilise les formes
-				composées que lorsque ces dernières apportent une précision
-				indispensable.</li>
+				on obtient de nombreuses formes composées. L’espéranto préfère cependant les formes simples 
+				(<span class="eo">ŝi legis</span> plutôt que <span class="eo">ŝi estis leginta</span>) 
+				et n’utilise les formes composées que lorsque ces dernières apportent une précision indispensable.</li>
 			</ol>
 			
 			<p class="parto">Les participes peuvent prendre la forme des adjectifs (terminaison en
@@ -170,9 +171,9 @@ include "dlekkapo.inc.php";
 			les exemples suivants&nbsp;:</p>
 			<div class="row vortlisto">
 				<p class="col s12 eo">La leg<b>ant</b>o havas bonan voĉon, sed la antaŭa leg<b>int</b>o havis pli bonan.</p>
-				<p class="col s11 offset-s1">= Le lecteur a une bonne voix, mais le lecteur précédent (en) avait une meilleure.</p>
+				<p class="col s11 offset-s1">= Le lecteur a une bonne voix, mais le lecteur précédent en avait une meilleure.</p>
 				<p class="col s12 eo">La leg<b>ant</b>ino havas bonan voĉon, sed la antaŭa leg<b>int</b>ino havis pli bonan.</p>
-				<p class="col s11 offset-s1">= La lectrice a une bonne voix, mais la lectrice précédente (en) avait une meilleure.</p>
+				<p class="col s11 offset-s1">= La lectrice a une bonne voix, mais la lectrice précédente en avait une meilleure.</p>
 				<p class="col s12 eo">Mi opinias tamen, ke la leg<b>ont</b>o havos la plej bonan voĉon el ĉiuj.</p>
 				<p class="col s11 offset-s1">= Je suis d’avis, toutefois, que le lecteur à venir aura la meilleure voix de tous.</p>
 				<p class="col s12 eo">Mi opinias tamen, ke la leg<b>ont</b>ino havos la plej bonan voĉon el ĉiuj.</p>
@@ -184,16 +185,16 @@ include "dlekkapo.inc.php";
 				<p class="col s12 eo">La konstru<b>at</b>a domo.</p>
 				<p class="col s11 offset-s1">= La maison en train d’être construite.</p>
 				<p class="col s12 eo">La skrib<b>ot</b>a letero.</p>
-				<p class="col s11 offset-s1">= La lettre à écrire, c-à-d. devant être écrite.</p>
+				<p class="col s11 offset-s1">= La lettre à écrire, c.-à-d. devant être écrite.</p>
 				<p class="col s12 eo">La ferm<b>it</b>a pordo.</p>
-				<p class="col s11 offset-s1">= La porte fermée, c-à-d. qui a été fermée.</p>
+				<p class="col s11 offset-s1">= La porte fermée, c.-à-d. qui a été fermée.</p>
 			</div>
 
 			<fieldset class="vortoj">
 				<legend>VOCABULAIRE À RETENIR</legend>
 				<div>
 					<?php if ($persono) { ?>
-					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d’étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
@@ -259,7 +260,7 @@ include "dlekkapo.inc.php";
 				<legend>VOCABULAIRE À RETENIR</legend>
 				<div>
 					<?php if ($persono) { ?>
-					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d'étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
+					<p class="eo eta">Ces mots seront automatiquement ajoutés à votre vocabulaire à réviser lorsque vous aurez terminé d’étudier cette section. Le nombre de mots à réviser sera indiqué sur le bouton affiché au-dessus du sommaire.</p>
 					<?php } ?>
 				</div>
 				<div class="vortlisto row">
@@ -305,7 +306,7 @@ include "dlekkapo.inc.php";
 			<div class="row">
 				<div class="col s7 m8 l9">
 					<p><b>Mario joue avec son chien.</b></p>
-					<p>Dans cette phrase, <b>son</b> peut se rapporter à lui-même (c’est son propre chien) ou à quelqu’un d’autre (c'est par exemple le chien de son frère ou sa grand-mère).</p>
+					<p>Dans cette phrase, <b>son</b> peut se rapporter à lui-même (c’est son propre chien) ou à quelqu’un d’autre (c’est par exemple le chien de son frère ou sa grand-mère).</p>
 					<p>En espéranto, on utilise dans ce cas des pronoms différents pour indiquer si <b>son</b> se rapporte à lui-même, ou à quelqu’un d’autre.</p>
 			<p>On différencie donc trois cas&nbsp;:</p>
 					

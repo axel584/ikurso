@@ -91,10 +91,10 @@ include "gerdakapo.inc.php";
 
 			<section class="klarigo">
 				<h4>-ita : <i>ce qui a subi l'action (action terminée)</i></h4>
-				<p><span class="eo">fari</span> : faire → <span class="eo">farita : </span>fait</p>
-				<p><span class="eo">vidi</span> : voir → <span class="eo">vidita</span> : vu(e)</p>
+				<p><span class="eo">fari</span> : faire → <span class="eo">farita : </span>(qui a été) fait(e)</p>
+				<p><span class="eo">vidi</span> : voir → <span class="eo">vidita</span> : (qui a été) vu(e)</p>
 				<p><span class="eo">perdita peco</span> : une pièce perdue</p>
-				<p><span class="eo">ni estas informitaj</span> : nous sommes informés</p>
+				<p><span class="eo">ni estas informitaj</span> : nous sommes informé(e)s = nous avons été informé(e)s</p>
 	
 				<h4>-ad-: <i>indique une action particulièrement prolongée ou répétée</i></h4>
 				<p><span class="eo">paroli</span> : parler<span class="eo"> → paroladi</span> : faire un discours, parler longtemps</p>

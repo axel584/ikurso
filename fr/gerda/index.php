@@ -499,7 +499,7 @@ include "gerdakapo.inc.php";
 							<li><a href="cxap07.php">7. En la koridoro</a></li>
 							<li><a href="cxap08.php">8. Linda ne scias, kion fari</a></li>
 							<li><a href="cxap09.php">9. Gerda malaperis</a></li>
-							<li><a href="cxap10.php">10 Nefidinda flegistino</a></li>
+							<li><a href="cxap10.php">10. Nefidinda flegistino</a></li>
 							<li><a href="cxap11.php">11. Linda havas ideon</a></li>
 							<li><a href="cxap12.php">12. Bob ege soifas</a></li>
 							<li><a href="cxap13.php">13. Kara spionino!</a></li>

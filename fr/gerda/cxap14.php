@@ -108,22 +108,27 @@ include "gerdakapo.inc.php";
 				<p><span class="eo">rigardata</span> : que l'on regarde</p>
 				<p><span class="eo">la manĝata birdo</span> : l'oiseau qu'on est en train de manger</p>
 			
-				<h4>-inta : <i>celui qui a fait l'action (action terminée)</i></h4>
+				<h4>-inta : <i>ce qui a fait l'action (action terminée)</i></h4>
 		
 				<p><span class="eo">aminta</span> : ayant aimé</p>
 				<p><span class="eo">laborinta</span> : ayant travaillé</p>
 				<p><span class="eo">la manĝinta birdo</span> : l'oiseau qui a mangé (qui a fini de manger)</p>
 
 				<div class="card-panel blue lighten-5">
-					<p>Les grammaires d'espéranto parlent de participes «&nbsp;actifs&nbsp;» pour celui qui fait l'action
-					(<span class="eo">-anta, -inta, -onta</span>) et de participes «&nbsp;passifs&nbsp;» pour ce qui subit l'action
-					(<span class="eo">-ata, -ita, -ota</span>). Ces mots ne désignent pas la voix active ou passive de la phrase,
-					comme en grammaire française&nbsp;: <span class="eo">konata</span> s'emploie aussi dans une phrase à la voix active
-					(<span class="eo">mi aĉetis konatan libron</span> : j'ai acheté un livre connu).</p>
-					<p>La voyelle indique le moment de l'action&nbsp;: <b>a</b> en cours, <b>i</b> terminée, <b>o</b> à venir.
-					<span class="eo">konata</span> («&nbsp;qui est connu&nbsp;») a donc un sens présent, même si le français le traduit par un participe passé.</p>
-					<p><span class="eo">la manĝanta birdo</span> : l'oiseau qui est en train de manger<br>
-					<span class="eo">la manĝata birdo</span> : l'oiseau qu'on est en train de manger</p>
+					<p><strong>Actif ou passif&nbsp;?</strong></p>
+					<ul>
+						<li>Participes <strong>actifs</strong> (<span class="eo">-anta</span>, <span class="eo">-inta</span>, <span class="eo">-onta</span>) : le nom qualifié <strong>fait</strong> l'action.<br />
+						Exemple : <span class="eo">la manĝanta birdo</span> = l'oiseau qui est en train de manger</li>
+						<li>Participes <strong>passifs</strong> (<span class="eo">-ata</span>, <span class="eo">-ita</span>, <span class="eo">-ota</span>) : le nom qualifié <strong>subit</strong> l'action.<br />
+						Exemple : <span class="eo">la manĝata birdo</span> = l'oiseau qu'on est en train de manger</li>
+					</ul>
+					<p>Un participe actif ou passif ne veut pas dire que la phrase est à la voix active ou passive.<br />
+						Par exemple, <span class="eo">konata</span> (participe passif) peut être employé 
+						dans une phrase à la voix active&nbsp;:
+					<span class="eo">mi aĉetis konatan libron</span> = j'ai acheté un livre connu.
+						(Le livre «subit» l'action de connaître).
+					<p>La voyelle indique le moment de l'action par rapport au verbe principal&nbsp;: <b>a</b> en cours, <b>i</b> terminée, <b>o</b> à venir.
+					Dans l'exemple précédent, <span class="eo">konata</span> («(qui est) connu») a un sens présent, même si le français le traduit par un participe passé.</p>
 				</div>
 		
 				<h4>-eco : <i>nom abstrait de la qualité</i></h4>

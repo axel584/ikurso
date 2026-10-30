@@ -88,8 +88,18 @@ include "gerdakapo.inc.php";
 				<h4>-ante : <i>en faisant l'action (au moment où elle a lieu)</i></h4>
 		
 				<p><span class="eo">laborante, li silentas</span> : il reste silencieux en travaillant</p>
-				<p><span class="eo">ni diskutis promenante</span> : nous parlions en nous promenant</p>
+				<p><span class="eo">ni diskutis promenante</span> : nous discutions en nous promenant</p>
 				<p><span class="eo">vi lernis la lingvon parolante ĝin</span> : vous avez appris la langue en la parlant</p>
+				
+				<div class="card-panel blue lighten-5">
+					<p><span class="eo">-ante</span> correspond au gérondif français («en + participe présent»). 
+						Il indique une action qui se déroule en même temps que celle du verbe principal, 
+						que celui-ci soit au présent ou pas.</p>
+					<p>Ce qui fait l'action en <span class="eo">-ante</span> est le sujet du verbe principal&nbsp;: 
+						dans <span class="eo">Ni diskutis promenante</span>, ce sont «nous» qui nous promenons.</p>
+					<p>Le participe garde la construction de son verbe&nbsp;: 
+						<span class="eo">aroli la lingvo<strong>n</strong></span> → <span class="eo">parolante ĝi<strong>n</strong></span>.
+				</div>
 		
 				<h4>-ig- : <i>rendre, faire devenir</i></h4>
 		

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="1000" height="680">
+  <defs>
+    <!-- Définition de la pointe de la flèche bleue -->
+    <marker id="arrowhead" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#1e90ff" />
+    </marker>
+  </defs>
+
+  <style>
+    .text-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 700; fill: #1e90ff; text-transform: uppercase; letter-spacing: 0.05em; }
+    .text-main { font-family: 'SF Mono', SFMono-Regular, Consolas, monospace; font-size: 16px; font-weight: 700; fill: #1e90ff; }
+    .text-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: #475569; }
+    .text-meaning { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-style: italic; fill: #64748b; }
+    .blue-line { stroke: #1e90ff; stroke-width: 1px; fill: none; }
+    .blue-line-dashed { stroke: #1e90ff; stroke-width: 1px; stroke-dasharray: 4, 4; fill: none; }
+    .blue-bubble { fill: #ffffff; stroke: #1e90ff; stroke-width: 1.5; rx: 12px; ry: 12px; }
+    .center-node { fill: #1e90ff; }
+    .blue-dots { fill: #1e90ff; }
+  </style>
+
+  <!-- Arrière-plan blanc uni -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+
+  <!-- EN-TÊTES DE COLONNES -->
+  <text x="40" y="40" class="text-title">PREMIÈRE PARTIE</text>
+  <text x="390" y="40" class="text-title">SECONDE PARTIE</text>
+  <text x="650" y="40" class="text-title">EXEMPLES</text>
+
+  <!-- LIGNES COURBES FLUIDES (Bloc 1 vers Nœud central Y=330) -->
+  <path d="M 170 93 C 220 93, 220 330, 260 330" class="blue-line" />
+  <path d="M 170 203 C 210 203, 230 330, 260 330" class="blue-line" />
+  <path d="M 170 313 C 210 313, 230 330, 260 330" class="blue-line" />
+  <path d="M 170 423 C 210 423, 230 330, 260 330" class="blue-line" />
+  <path d="M 170 533 C 220 533, 220 330, 260 330" class="blue-line" />
+
+  <!-- LIGNES COURBES FLUIDES (Nœud central Y=330 vers Bloc 2) -->
+  <path d="M 300 330 C 340 330, 340 93, 390 93" class="blue-line" />
+  <path d="M 300 330 C 340 330, 350 153, 390 153" class="blue-line" />
+  <path d="M 300 330 C 340 330, 350 213, 390 213" class="blue-line" />
+  <path d="M 300 330 C 340 330, 350 273, 390 273" class="blue-line" />
+  <path d="M 300 330 C 340 330, 350 333, 390 333" class="blue-line" />
+  <path d="M 300 330 C 340 330, 350 393, 390 393" class="blue-line" />
+  <path d="M 300 330 C 340 330, 350 453, 390 453" class="blue-line" />
+  <path d="M 300 330 C 340 330, 350 513, 390 513" class="blue-line" />
+  <path d="M 300 330 C 340 330, 340 573, 390 573" class="blue-line" />
+
+  <!-- FLÈCHES EN POINTILLÉS HORIZONTALES PARALLÈLES -->
+  <path d="M 570 93 L 642 93" class="blue-line-dashed" marker-end="url(#arrowhead)" />
+  <path d="M 570 153 L 642 153" class="blue-line-dashed" marker-end="url(#arrowhead)" />
+  <path d="M 570 273 L 642 273" class="blue-line-dashed" marker-end="url(#arrowhead)" />
+  <path d="M 570 333 L 642 333" class="blue-line-dashed" marker-end="url(#arrowhead)" />
+  <path d="M 570 453 L 642 453" class="blue-line-dashed" marker-end="url(#arrowhead)" />
+
+  <!-- NŒUD CENTRAL -->
+  <circle cx="280" cy="330" r="20" class="center-node" />
+  <text x="280" y="337" font-family="sans-serif" font-size="22px" font-weight="bold" fill="#ffffff" text-anchor="middle">+</text>
+
+  <!-- COLONNE 1 : PREMIÈRE PARTIE -->
+  <g transform="translate(40, 70)">
+    <g transform="translate(0, 0)">
+      <rect width="130" height="46" class="blue-bubble" />
+      <text x="12" y="28" class="text-main">ki-</text>
+      <text x="48" y="20" class="text-sub">interrogatif /<tspan x="48" y="34">relatif</tspan></text>
+    </g>
+    <g transform="translate(0, 110)">
+      <rect width="130" height="46" class="blue-bubble" />
+      <text x="12" y="28" class="text-main">ti-</text>
+      <text x="45" y="20" class="text-sub">démonstratif<tspan class="text-meaning" x="45" y="34">(ce… là)</tspan></text>
+    </g>
+    <g transform="translate(0, 220)">
+      <rect width="130" height="46" class="blue-bubble" />
+      <text x="15" y="28" class="text-main">i-</text>
+      <text x="55" y="28" class="text-sub">indéfini</text>
+    </g>
+    <g transform="translate(0, 330)">
+      <rect width="130" height="46" class="blue-bubble" />
+      <text x="15" y="28" class="text-main">&#265;i-</text>
+      <text x="55" y="20" class="text-sub">totalité<tspan class="text-meaning" x="55" y="34">(tout, chaque)</tspan></text>
+    </g>
+    <g transform="translate(0, 440)">
+      <rect width="130" height="46" class="blue-bubble" />
+      <text x="12" y="28" class="text-main">neni-</text>
+      <text x="62" y="20" class="text-sub">négatif<tspan class="text-meaning" x="62" y="34">(aucun)</tspan></text>
+    </g>
+  </g>
+
+  <!-- COLONNE 2 : SECONDE PARTIE -->
+  <g transform="translate(390, 70)">
+    <g transform="translate(0, 0)">
+      <rect width="180" height="46" class="blue-bubble" />
+      <text x="15" y="28" class="text-main">-o</text>
+      <text x="50" y="28" class="text-sub">chose</text>
+    </g>
+    <g transform="translate(0, 60)">
+      <rect width="180" height="46" class="blue-bubble" />
+      <text x="15" y="28" class="text-main">-u</text>
+      <text x="50" y="20" class="text-sub">individu <tspan class="text-meaning" x="50" y="34">(pers. ou chose précise)</tspan></text>
+    </g>
+    <g transform="translate(0, 120)">
+      <rect width="180" height="46" class="blue-bubble" />
+      <text x="15" y="28" class="text-main">-a</text>
+      <text x="50" y="28" class="text-sub">qualité <tspan class="text-meaning">(espèce)</tspan></text>
+    </g>
+    <g transform="translate(0, 180)">
+      <rect width="180" height="46" class="blue-bubble" />
+      <text x="15" y="28" class="text-main">-e</text>
+      <text x="50" y="28" class="text-sub">lieu</text>
+    </g>
+    <g transform="translate(0, 240)">
+      <rect width="180" height="46" class="blue-bubble" />
+      <text x="15" y="28" class="text-main">-am</text>
+      <text x="55" y="28" class="text-sub">temps <tspan class="text-meaning">(moment)</tspan></text>
+    </g>
+    <g transform="translate(0, 300)">
+      <rect width="180" height="46" class="blue-bubble" />
+      <text x="15" y="28" class="text-main">-el</text>
+      <text x="55" y="28" class="text-sub">manière</text>
+    </g>
+    <g transform="translate(0, 360)">
+      <rect width="180" height="46" class="blue-bubble" />
+      <text x="15" y="28" class="text-main">-al</text>
+      <text x="55" y="28" class="text-sub">cause</text>
+    </g>
+    <g transform="translate(0, 420)">
+      <rect width="180" height="46" class="blue-bubble" />
+      <text x="15" y="28" class="text-main">-om</text>
+      <text x="55" y="28" class="text-sub">quantité</text>
+    </g>
+    <g transform="translate(0, 480)">
+      <rect width="180" height="46" class="blue-bubble" />
+      <text x="15" y="28" class="text-main">-es</text>
+      <text x="55" y="28" class="text-sub">possession</text>
+    </g>
+  </g>
+
+  <!-- COLONNE 3 : EXEMPLES (LARGEUR RÉDUITE À 220PX) -->
+  <g transform="translate(650, 70)">
+    <!-- kio -->
+    <g transform="translate(0, 0)">
+      <rect width="220" height="46" class="blue-bubble" style="stroke-width: 2px;" />
+      <text x="15" y="28" class="text-main" font-size="18px">kio</text>
+      <text x="55" y="20" class="text-sub" font-weight="700">quoi / qu'est-ce que</text>
+      <text x="55" y="36" class="text-meaning">ki- (interrogatif) + -o (chose)</text>
+    </g>
+    <!-- neniu -->
+    <g transform="translate(0, 60)">
+      <rect width="220" height="46" class="blue-bubble" style="stroke-width: 2px;" />
+      <text x="15" y="28" class="text-main" font-size="18px">neniu</text>
+      <text x="70" y="20" class="text-sub" font-weight="700">personne / aucun</text>
+      <text x="70" y="36" class="text-meaning">neni- (négatif) + -u (individu)</text>
+    </g>
+
+    <!-- PREMIÈRE SÉRIE DE POINTS (Recentré à X=98) -->
+    <g transform="translate(98, 138)">
+      <circle cx="0" cy="0" r="3.5" class="blue-dots" />
+      <circle cx="12" cy="0" r="3.5" class="blue-dots" />
+      <circle cx="24" cy="0" r="3.5" class="blue-dots" />
+    </g>
+
+    <!-- ĉie -->
+    <g transform="translate(0, 180)">
+      <rect width="220" height="46" class="blue-bubble" style="stroke-width: 2px;" />
+      <text x="15" y="28" class="text-main" font-size="18px">ĉie</text>
+      <text x="55" y="20" class="text-sub" font-weight="700">partout</text>
+      <text x="55" y="36" class="text-meaning">&#265;i- (tout) + -e (lieu)</text>
+    </g>
+    <!-- tiam -->
+    <g transform="translate(0, 240)">
+      <rect width="220" height="46" class="blue-bubble" style="stroke-width: 2px;" />
+      <text x="15" y="28" class="text-main" font-size="18px">tiam</text>
+      <text x="60" y="20" class="text-sub" font-weight="700">alors / à ce moment-là</text>
+      <text x="60" y="36" class="text-meaning">ti- (démons.) + -am (temps)</text>
+    </g>
+
+    <!-- SECONDE SÉRIE DE POINTS (Recentré à X=98) -->
+    <g transform="translate(98, 318)">
+      <circle cx="0" cy="0" r="3.5" class="blue-dots" />
+      <circle cx="12" cy="0" r="3.5" class="blue-dots" />
+      <circle cx="24" cy="0" r="3.5" class="blue-dots" />
+    </g>
+
+    <!-- kial -->
+    <g transform="translate(0, 360)">
+      <rect width="220" height="46" class="blue-bubble" style="stroke-width: 2px;" />
+      <text x="15" y="28" class="text-main" font-size="18px">kial</text>
+      <text x="60" y="20" class="text-sub" font-weight="700">pourquoi</text>
+      <text x="60" y="36" class="text-meaning">ki- (interrogatif) + -al (cause)</text>
+    </g>
+
+    <!-- TROISIÈME SÉRIE DE POINTS (Recentré à X=98) -->
+    <g transform="translate(98, 458)">
+      <circle cx="0" cy="0" r="3.5" class="blue-dots" />
+      <circle cx="12" cy="0" r="3.5" class="blue-dots" />
+      <circle cx="24" cy="0" r="3.5" class="blue-dots" />
+    </g>
+  </g>
+</svg>

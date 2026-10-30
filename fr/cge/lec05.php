@@ -110,17 +110,14 @@ include "dlekkapo.inc.php";
 		
 		<p class="parto">
 		Dans les leçons précédentes, vous avez pu découvrir une partie des <b>corrélatifs</b>. 
-		Les corrélatifs sont un ensemble de petits mots reliés
-		entre eux par le sens et par la forme. Ils constituent un bon exemple
-		des avantages que l’on trouve à construire des mots de façon
-		systématique. 
+		Ce sont de petits mots liés entre eux à la fois par le sens et par la forme. 
+		Ils illustrent  l’intérêt de construire les mots de façon systématique.
 		</p>
-
 		<p>
-		Tout corrélatif est la combinaison de deux éléments, présentés dans le schéma suivant&nbsp;: un corrélatif est formé d’un des éléments de la partie de gauche du schéma (<span class="eo"><b>ki</b></span>, <span class="eo"><b>ti</b></span>, <span class="eo"><b>i</b></span>, <span class="eo"><b>ĉi</b></span>, <span class="eo"><b>neni</b></span>) auquel on accole un des éléments de la partie de droite (<span class="eo"><b>o</b></span>, <span class="eo"><b>a</b></span>, <span class="eo"><b>u</b></span>, <span class="eo"><b>es</b></span>, <span class="eo"><b>om</b></span>, <span class="eo"><b>am</b></span>, <span class="eo"><b>al</b></span>, <span class="eo"><b>el</b></span>, <span class="eo"><b>e</b></span>).</p>
-		<p>Par exemple, si nous associons l’élément <span class="eo"><b>ki-</b></span>, qui permet de poser une question, avec l'élément <span class="eo"><b>-am</b></span>, qui a la signification de «temps, moment», on obtient le corrélatif <span class="eo">kiam</span>, qui signifie <em>quand</em>.</p>
+		Chaque corrélatif est formé de deux éléments, présentés dans le schéma ci-dessous : un élément de la <b>première colonne</b> (<span class="eo"><b>ki</b></span>, <span class="eo"><b>ti</b></span>, <span class="eo"><b>i</b></span>, <span class="eo"><b>ĉi</b></span>, <span class="eo"><b>neni</b></span>) suivi d'un élément de la <b>seconde colonne</b> (<span class="eo"><b>o</b></span>, <span class="eo"><b>a</b></span>, <span class="eo"><b>u</b></span>, <span class="eo"><b>es</b></span>, <span class="eo"><b>om</b></span>, <span class="eo"><b>am</b></span>, <span class="eo"><b>al</b></span>, <span class="eo"><b>el</b></span>, <span class="eo"><b>e</b></span>).</p>
+		<p>Par exemple, si nous associons l’élément <span class="eo"><b>ki-</b></span>, qui permet notamment de poser une question, à l'élément <span class="eo"><b>-al</b></span>, qui exprime la cause, on obtient le corrélatif <span class="eo">kial</span>, qui signifie <em>pourquoi</em>.</p>
 
-		<img src="<?php echo $vojo;?>fr/cge/bildoj/correlatifs.svg" class="responsive-img" alt="Schéma des corrélatifs, à gauche nous avons la liste des 5 préfixes : KI/TI/I/ĈI/NENI et à droite la liste des 9 suffixes : O/A/U/ES/OM/AM/AL/EL/E. En combinant un préfixe et un suffixe, on peut former 45 corrélatifs différents">
+		<img src="<?php echo $vojo;?>fr/cge/bildoj/korelativoj.svg" class="responsive-img" alt="Schéma des corrélatifs, à gauche nous avons la liste des 5 préfixes : KI/TI/I/ĈI/NENI et à droite la liste des 9 suffixes : O/A/U/ES/OM/AM/AL/EL/E. En combinant un préfixe et un suffixe, on peut former 45 corrélatifs différents">
 		
 		<p>Voici quelques corrélatifs déjà rencontrés dans les leçons précédentes&nbsp;:</p>
 		<div class="row vortlisto">
@@ -145,36 +142,36 @@ include "dlekkapo.inc.php";
 			<tr>
 				<td width="15%"><b>Corrélatif</b></td>
 				<td width="20%"><b>Composition</b></td>
-				<td width="65%"><b>Exemples</b></td>
+				<td width="65%"><b>Signification</b></td>
 			</tr><tr>
 				<td><b>ĉiu</b></td>
-				<td><span class="eo">ĈI</span> + <span class="eo">U</span></td>
-				<td><em>tout(e)</em> + <em>(individu)</em><br>«tout individu» => chaque, chacun(e)</td>
+				<td><span class="eo">ĉi-</span> + <span class="eo">-u</span></td>
+				<td><em>totalité</em> + <em>individu</em><br>tout individu, «chaque, chacun(e)»</td>
 			</tr><tr>
-				<td><b>tie</b></td>
-				<td><span class="eo">TI</span> + <span class="eo">E</span></td>
-				<td><em>ce, cet(te)</em> + <em>lieu</em><br/>à ce lieu => ici, là</td>
+				<td><b>kie</b></td>
+				<td><span class="eo">ki-</span> + <span class="eo">-e</span></td>
+				<td><em>interrogatif / relatif</em> + <em>lieu</em><br/>où</td>
 			</tr><tr>
-				<td><b>tiam</b></td>
-				<td><span class="eo">TI</span> + <span class="eo">AM</span></td>
-				<td><em>ce, cet(te)</em> + <em>moment</em><br/>à ce moment, alors</td>
+				<td><b>tial</b></td>
+				<td><span class="eo">ti-</span> + <span class="eo">-al</span></td>
+				<td><em>démonstratif</em> + <em>cause</em><br/>c’est pourquoi, pour cette raison</td>
 			</tr><tr>
 				<td><b>iam</b></td>
-				<td><span class="eo">I</span> + <span class="eo">AM</span></td>
+				<td><span class="eo">i-</span> + <span class="eo">-am</span></td>
 				<td><em>indéfini</em> + <em>moment</em><br/>un jour, à un moment</td>
 			</tr><tr>
 				<td><b>neniom</b></td>
-				<td><span class="eo">NENI</span> + <span class="eo">OM</span></td>
-				<td><em>aucun</em> + <em>quantité</em><br/>rien du tout, aucune quantité</td>
+				<td><span class="eo">neni-</span> + <span class="eo">-om</span></td>
+				<td><em>négatif</em> + <em>quantité</em><br/>rien du tout, aucune quantité</td>
 			</tr>
 			</tr><tr>
 				<td><b>kiu</b></td>
-				<td><span class="eo">KI</span> + <span class="eo">U</span></td>
-				<td><em>quel(le), lequel , laquelle</em> + <em>(individu)</em><br/>quel(le), lequel , laquelle, qui</td>
+				<td><span class="eo">ki-</span> + <span class="eo">-u</span></td>
+				<td><em>interrogatif / relatif</em> + <em>individu</em><br/>quel(le), lequel, laquelle, qui</td>
 			</tr>
 		</table>
 
-		<p class="parto">Les corrélatifs se terminant par <b>U</b> accompagnent souvent un nom&nbsp;:</p>
+		<p class="parto">Les corrélatifs se terminant par <b>-u</b> accompagnent souvent un nom&nbsp;:</p>
 		<div class="row">
 			<p class="col s6"><span class="eo"><b>Kiun</b> frukton vi volas?</span></p><p class="col s6"><b>Quel</b> fruit veux-tu&nbsp;?</p>
 			<p class="col s6"><span class="eo">Mi volas <b>tiun</b> frukton.</span></p><p class="col s6">Je veux <b>ce</b> fruit.</p>
@@ -194,7 +191,7 @@ include "dlekkapo.inc.php";
 			<p class="col s6">Voici le fruit <b>que</b> tu voulais.</p>
 		</div>
 		
-		<p>Employé seul, un corrélatif en <b>U</b> est très souvent un <b>pronom</b> qui désigne une personne&nbsp;:</p>
+		<p>Employé seul, un corrélatif en <b>-u</b> est très souvent un <b>pronom</b> qui désigne une personne. Les corrélatifs en <b>-u</b> prennent le pluriel <b>-j</b> et l'accusatif <b>-n</b> comme les adjectifs&nbsp;: <span class="eo">ĉiuj</span>, <span class="eo">tiujn</span>…</p>
 		<div class="row">
 			<p class="col s6"><span class="eo"><b>Kiu</b> venis?</span></p><p class="col s6"><b>Qui</b> est venu&nbsp;?</p>
 			<p class="col s6"><span class="eo">– <b>Iu</b>.</span></p><p class="col s6">– <b>Quelqu’un</b>.</p>
@@ -202,9 +199,9 @@ include "dlekkapo.inc.php";
 			<p class="col s6"><span class="eo">– <b>Ĉiuj</b>.</span></p><p class="col s6">– <b>Tous</b>.</p>
 		</div>
 		
-		<p class="parto">Les corrélatifs en <b>ES</b> sont souvent associés à un pronom en <b>U</b> et marquent alors la possession&nbsp;:</p>
+		<p class="parto">Les corrélatifs en <b>-es</b> marquent la possession. Ils sont équivalents <span class="eo">de</span> + le corrélatif en <b>-u</b> correspondant  à:</p>
 		<div class="row">
-			<p class="col s3"><span class="eo">kies (= de kiu)</span></p><p class="col s9">de qui, à qui, dont, duquel</p>
+			<p class="col s3"><span class="eo">kies (= de kiu, de kiuj)</span></p><p class="col s9">de qui, à qui, dont, duquel</p>
 			<p class="col s3"><span class="eo">ties (= de tiu)</span></p><p class="col s9">de celui-là, à celui-là</p>
 			<p class="col s3"><span class="eo">ies (= de iu)</span></p><p class="col s9">de quelqu’un, à quelqu’un</p>
 			<p class="col s3"><span class="eo">ĉies (= de ĉiu)</span></p><p class="col s9">de chacun, de tout le monde, à tout le monde</p>
@@ -219,12 +216,12 @@ include "dlekkapo.inc.php";
 			<p class="col s6"><span class="eo">La viro, <b>kun kies</b> amiko ni trinkis.</span></p><p class="col s6">L’homme <b>avec</b> l’ami <b>duquel</b> nous avons bu.</p>
 		</div>
 		
-		<p class="parto">Les corrélatifs en <b>-OM</b> (quantité) sont souvent suivi par la préposition <span class="eo">da</span>&nbsp;:</p>
+		<p class="parto">Les corrélatifs en <b>-om</b> (quantité) sont souvent suivis par la préposition <span class="eo">da</span>&nbsp;:</p>
 		<div class="row">
 			<p class="col s6"><span class="eo"><b>Kiom da</b> biskvitoj vi deziras?</span></p><p class="col s6"><b>Combien de</b> biscuits veux-tu&nbsp;?</p>
-			<p class="col s6"><span class="eo">Mi deziras <b>neniom da</b> ili.</span></p><p class="col s6">Je n’en veux <b>aucun</b>.</p>
+			<p class="col s6"><span class="eo">Mi deziras <b>neniom</b>.</span></p><p class="col s6">Je n’en veux <b>aucun</b>.</p>
 			
-			<p class="col s6"><span class="eo">Mi jam manĝis <b>tiom da</b> ili!</span></p><p class="col s6">J’<b>en</b> ai déjà <b>tellement</b> mangé&nbsp;!</p>
+			<p class="col s6"><span class="eo">Mi jam manĝis <b>tiom da</b> biskitoj!</span></p><p class="col s6">J’ai déjà mangé <b>tellement de</b> biscuits&nbsp;!</p>
 		</div>
 
 		<h3>Et notre tableau des corrélatifs, alors&nbsp;?</h3>
@@ -232,30 +229,30 @@ include "dlekkapo.inc.php";
 			Nous pouvons compléter notre désormais familier tableau des corrélatifs. Pas d’inquiétude, nous allons poursuivre leur apprentissage progressivement, mais vous pouvez maintenant conserver cette page comme pense-bête&nbsp;!
 		</p>
 		<p>
-			En espéranto, on les appelle d’ailleurs <span class="eo">tabelvortoj</span>, les «&nbsp;mots du tableau&nbsp;». Pour aller plus loin, vous trouverez d’autres exemples sur la page <a href="https://fr.wikiversity.org/wiki/Esp%C3%A9ranto/Vocabulaire/Corr%C3%A9latifs" target="_blank" rel="noopener">Corrélatifs de Wikiversité</a>.
+			En espéranto, on les appelle d’ailleurs <span class="eo">tabelvortoj</span>, les «&nbsp;mots du tableau&nbsp;». Pour aller plus loin, vous trouverez d’autres exemples sur la page <a href="https://fr.wikiversity.org/wiki/Esp%C3%A9ranto/Vocabulaire/Corr%C3%A9latifs" target="_blank" rel="noopener">Corrélatifs</a> de Wikiversité.
 		</p>
 		<div class="korelativoj noprint">
 			<table class="highlight">
 				<thead>
 					<tr>
 						<th> </th>
-						<th>Individualité<br /><span class="eo">-U</span></th>
-						<th>Possession<br /><span class="eo">-ES</span></th>
-						<th>Chose<br /><span class="eo">-O</span></th>
-						<th>Qualité<br /><span class="eo">-A</span></th>
-						<th>Lieu (on y est)<br /><span class="eo">-E</span></th>
-						<th>Direction (on y va)<br /><span class="eo">-EN</span></th>
-						<th>Temps<br /><span class="eo">-AM</span></th>
-						<th>Manière<br /><span class="eo">-EL</span></th>
-						<th>Cause<br /><span class="eo">-AL</span></th>
-						<th>Quantité<br /><span class="eo">-OM</span></th>
+						<th>Individu<br /><span class="eo">-u</span></th>
+						<th>Possession<br /><span class="eo">-es</span></th>
+						<th>Chose<br /><span class="eo">-o</span></th>
+						<th>Qualité<br /><span class="eo">-a</span></th>
+						<th>Lieu (on y est)<br /><span class="eo">-e</span></th>
+						<th>Direction (on y va)<br /><span class="eo">-en</span></th>
+						<th>Temps<br /><span class="eo">-am</span></th>
+						<th>Manière<br /><span class="eo">-el</span></th>
+						<th>Cause<br /><span class="eo">-al</span></th>
+						<th>Quantité<br /><span class="eo">-om</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<th>Interrogatif<br /><span class="eo">ki-</span></th>
 						<td><span class="eo">kiu</span><br />qui&nbsp;? quel(le)&nbsp;?<br />lequel, laquelle&nbsp;?</td>
-						<td><span class="eo">kies</span><br />de qui&nbsp;? dont</td>
+						<td><span class="eo">kies</span><br />de qui&nbsp;?, à qui&nbsp;?, dont</td>
 						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
 						<td><span class="eo">kia</span><br />quelle sorte de&nbsp;?</td>
 						<td><span class="eo">kie</span><br />où&nbsp;?</td>
@@ -266,52 +263,52 @@ include "dlekkapo.inc.php";
 						<td><span class="eo">kiom</span><br />combien&nbsp;?</td>
 					</tr>
 					<tr>
-						<th>Indéfini<br /><span class="eo">I-</span></th>
+						<th>Indéfini<br /><span class="eo">i-</span></th>
 						<td><span class="eo">iu</span><br />quelqu’un,<br />un(e) certain(e)</td>
 						<td><span class="eo">ies</span><br />de quelqu’un</td>
 						<td><span class="eo">io</span><br />quelque chose</td>
 						<td><span class="eo">ia</span><br />une sorte de</td>
 						<td><span class="eo">ie</span><br />quelque part</td>
-						<td><span class="eo">ien</span><br />quelque part</td>
+						<td><span class="eo">ien</span><br />(vers) quelque part</td>
 						<td><span class="eo">iam</span><br />un jour</td>
 						<td><span class="eo">iel</span><br />d’une certaine manière</td>
 						<td><span class="eo">ial</span><br />pour une certaine raison</td>
 						<td><span class="eo">iom</span><br />un peu</td>
 					</tr>
 					<tr>
-						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<th>Négatif<br /><span class="eo">neni-</span></th>
 						<td><span class="eo">neniu</span><br />personne, nul, aucun</td>
 						<td><span class="eo">nenies</span><br />de personne</td>
 						<td><span class="eo">nenio</span><br />rien</td>
 						<td><span class="eo">nenia</span><br />aucune sorte de</td>
 						<td><span class="eo">nenie</span><br />nulle part</td>
-						<td><span class="eo">nenien</span><br />nulle part</td>
+						<td><span class="eo">nenien</span><br />(vers) nulle part</td>
 						<td><span class="eo">neniam</span><br />jamais</td>
 						<td><span class="eo">neniel</span><br />d’aucune manière</td>
 						<td><span class="eo">nenial</span><br />pour aucune raison</td>
 						<td><span class="eo">neniom</span><br />rien du tout, aucune quantité</td>
 					</tr>
 					<tr>
-						<th>Démonstratif<br /><span class="eo">TI-</span></th>
+						<th>Démonstratif<br /><span class="eo">ti-</span></th>
 						<td><span class="eo">tiu</span><br />ce, cet,<br />celui-là, celle-là</td>
 						<td><span class="eo">ties</span><br />de celui-là</td>
 						<td><span class="eo">tio</span><br />cela</td>
 						<td><span class="eo">tia</span><br />tel, telle,<br />cette sorte de</td>
 						<td><span class="eo">tie</span><br />là, là-bas</td>
-						<td><span class="eo">tien</span><br />là, là-bas</td>
+						<td><span class="eo">tien</span><br />(vers) là-bas</td>
 						<td><span class="eo">tiam</span><br />alors</td>
 						<td><span class="eo">tiel</span><br />ainsi</td>
 						<td><span class="eo">tial</span><br />aussi, pour cette raison</td>
 						<td><span class="eo">tiom</span><br />tant, autant</td>
 					</tr>
 					<tr>
-						<th>Collectif<br /><span class="eo">ĈI-</span></th>
+						<th>Totalité<br /><span class="eo">ĉi-</span></th>
 						<td><span class="eo">ĉiu</span><br />chacun(e),<br />chaque</td>
 						<td><span class="eo">ĉies</span><br />de tous</td>
 						<td><span class="eo">ĉio</span><br />tout</td>
 						<td><span class="eo">ĉia</span><br />toute sorte de</td>
 						<td><span class="eo">ĉie</span><br />partout</td>
-						<td><span class="eo">ĉien</span><br />partout</td>
+						<td><span class="eo">ĉien</span><br />(vers) partout / dans toutes les directions</td>
 						<td><span class="eo">ĉiam</span><br />toujours</td>
 						<td><span class="eo">ĉiel</span><br />de toute manière</td>
 						<td><span class="eo">ĉial</span><br />pour toute raison</td>
@@ -320,38 +317,38 @@ include "dlekkapo.inc.php";
 				</tbody>
 			</table>
 		</div>
-		<p class="noto">Les corrélatifs de lieu en <span class="eo">-E</span> prennent la terminaison <span class="eo">-n</span> de l’accusatif pour indiquer la direction (<span class="eo">Kie vi estas?</span> Où es-tu&nbsp;? – <span class="eo">Kien vi iras?</span> Où vas-tu&nbsp;?). Vous verrez cela en détail dans la <a href="lec06.php?section=16">leçon 6</a>.</p>
+		<p class="noto">Les corrélatifs de lieu en <span class="eo">-e</span> prennent la terminaison <span class="eo">-n</span> de l’accusatif pour indiquer la direction (<span class="eo">Kie vi estas?</span> Où es-tu&nbsp;? – <span class="eo">Kien vi iras?</span> Où vas-tu&nbsp;?). Vous verrez cela en détail dans la <a href="lec06.php?section=16">leçon 6</a>.</p>
 		<div class="korelativoj onlyprint">
 			<table class="highlight">
 				<thead>
 					<tr>
 						<th> </th>
-						<th>Individualité<br /><span class="eo">-U</span></th>
-						<th>Possession<br /><span class="eo">-ES</span></th>
-						<th>Chose<br /><span class="eo">-O</span></th>
-						<th>Qualité<br /><span class="eo">-A</span></th>
-						<th>Lieu (on y est)<br /><span class="eo">-E</span></th>
+						<th>Individu<br /><span class="eo">-u</span></th>
+						<th>Possession<br /><span class="eo">-es</span></th>
+						<th>Chose<br /><span class="eo">-o</span></th>
+						<th>Qualité<br /><span class="eo">-a</span></th>
+						<th>Lieu (on y est)<br /><span class="eo">-e</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<th>Interrogatif<br /><span class="eo">ki-</span></th>
 						<td><span class="eo">kiu</span><br />qui&nbsp;? quel(le)&nbsp;?<br />lequel, laquelle&nbsp;?</td>
-						<td><span class="eo">kies</span><br />de qui&nbsp;? dont</td>
+						<td><span class="eo">kies</span><br />de qui&nbsp;?, à qui&nbsp;?, dont</td>
 						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
 						<td><span class="eo">kia</span><br />quelle sorte de&nbsp;?</td>
 						<td><span class="eo">kie</span><br />où&nbsp;?</td>
 					</tr>
 					<tr>
-						<th>Indéfini<br /><span class="eo">I-</span></th>
+						<th>Indéfini<br /><span class="eo">i-</span></th>
 						<td><span class="eo">iu</span><br />quelqu’un,<br />un(e) certain(e)</td>
 						<td><span class="eo">ies</span><br />de quelqu’un</td>
 						<td><span class="eo">io</span><br />quelque chose</td>
-						<td><span class="eo">ia</span><br />une sorte de</td>
+						<td><span class="eo">ia</span><br />une certaine sorte de, quelque</td>
 						<td><span class="eo">ie</span><br />quelque part</td>
 					</tr>
 					<tr>
-						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<th>Négatif<br /><span class="eo">neni-</span></th>
 						<td><span class="eo">neniu</span><br />personne, nul, aucun</td>
 						<td><span class="eo">nenies</span><br />de personne</td>
 						<td><span class="eo">nenio</span><br />rien</td>
@@ -359,17 +356,17 @@ include "dlekkapo.inc.php";
 						<td><span class="eo">nenie</span><br />nulle part</td>
 					</tr>
 					<tr>
-						<th>Démonstratif<br /><span class="eo">TI-</span></th>
+						<th>Démonstratif<br /><span class="eo">ti-</span></th>
 						<td><span class="eo">tiu</span><br />ce, cet,<br />celui-là, celle-là</td>
-						<td><span class="eo">ties</span><br />de celui-là</td>
+						<td><span class="eo">ties</span><br />de celui-là, de celle-là</td>
 						<td><span class="eo">tio</span><br />cela</td>
 						<td><span class="eo">tia</span><br />tel, telle,<br />cette sorte de</td>
 						<td><span class="eo">tie</span><br />là, là-bas</td>
 					</tr>
 					<tr>
-						<th>Collectif<br /><span class="eo">ĈI-</span></th>
+						<th>Totalité<br /><span class="eo">ĉi-</span></th>
 						<td><span class="eo">ĉiu</span><br />chacun(e),<br />chaque</td>
-						<td><span class="eo">ĉies</span><br />de tous</td>
+						<td><span class="eo">ĉies</span><br />de chacun, de tous</td>
 						<td><span class="eo">ĉio</span><br />tout</td>
 						<td><span class="eo">ĉia</span><br />toute sorte de</td>
 						<td><span class="eo">ĉie</span><br />partout</td>
@@ -382,16 +379,16 @@ include "dlekkapo.inc.php";
 				<thead>
 					<tr>
 						<th> </th>
-						<th>Direction (on y va)<br /><span class="eo">-EN</span></th>
-						<th>Temps<br /><span class="eo">-AM</span></th>
-						<th>Manière<br /><span class="eo">-EL</span></th>
-						<th>Cause<br /><span class="eo">-AL</span></th>
-						<th>Quantité<br /><span class="eo">-OM</span></th>
+						<th>Direction (on y va)<br /><span class="eo">-en</span></th>
+						<th>Temps<br /><span class="eo">-am</span></th>
+						<th>Manière<br /><span class="eo">-el</span></th>
+						<th>Cause<br /><span class="eo">-al</span></th>
+						<th>Quantité<br /><span class="eo">-om</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<th>Interrogatif<br /><span class="eo">ki-</span></th>
 						<td><span class="eo">kien</span><br />où&nbsp;? (vers quel lieu)</td>
 						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
 						<td><span class="eo">kiel</span><br />comme, comment&nbsp;?</td>
@@ -399,36 +396,36 @@ include "dlekkapo.inc.php";
 						<td><span class="eo">kiom</span><br />combien&nbsp;?</td>
 					</tr>
 					<tr>
-						<th>Indéfini<br /><span class="eo">I-</span></th>
-						<td><span class="eo">ien</span><br />quelque part</td>
-						<td><span class="eo">iam</span><br />un jour</td>
+						<th>Indéfini<br /><span class="eo">i-</span></th>
+						<td><span class="eo">ien</span><br />(vers) quelque part</td>
+						<td><span class="eo">iam</span><br />un jour, à un moment (quelconque)</td>
 						<td><span class="eo">iel</span><br />d’une certaine manière</td>
 						<td><span class="eo">ial</span><br />pour une certaine raison</td>
-						<td><span class="eo">iom</span><br />un peu</td>
+						<td><span class="eo">iom</span><br />un peu, une certaine quantité</td>
 					</tr>
 					<tr>
-						<th>Négatif<br /><span class="eo">NENI-</span></th>
-						<td><span class="eo">nenien</span><br />nulle part</td>
+						<th>Négatif<br /><span class="eo">neni-</span></th>
+						<td><span class="eo">nenien</span><br />(vers) nulle part</td>
 						<td><span class="eo">neniam</span><br />jamais</td>
 						<td><span class="eo">neniel</span><br />d’aucune manière</td>
 						<td><span class="eo">nenial</span><br />pour aucune raison</td>
 						<td><span class="eo">neniom</span><br />rien du tout, aucune quantité</td>
 					</tr>
 					<tr>
-						<th>Démonstratif<br /><span class="eo">TI-</span></th>
-						<td><span class="eo">tien</span><br />là, là-bas</td>
+						<th>Démonstratif<br /><span class="eo">ti-</span></th>
+						<td><span class="eo">tien</span><br />(vers) là-bas</td>
 						<td><span class="eo">tiam</span><br />alors</td>
-						<td><span class="eo">tiel</span><br />ainsi</td>
-						<td><span class="eo">tial</span><br />aussi, pour cette raison</td>
-						<td><span class="eo">tiom</span><br />tant, autant</td>
+						<td><span class="eo">tiel</span><br />ainsi, de cette manière, si (tellement)</td>
+						<td><span class="eo">tial</span><br />c'est pourquoi, pour cette raison</td>
+						<td><span class="eo">tiom</span><br />tant, autant, tellement</td>
 					</tr>
 					<tr>
-						<th>Collectif<br /><span class="eo">ĈI-</span></th>
-						<td><span class="eo">ĉien</span><br />partout</td>
+						<th>Totalité<br /><span class="eo">ĉi-</span></th>
+						<td><span class="eo">ĉien</span><br />(vers) partout, dans toutes les directions</td>
 						<td><span class="eo">ĉiam</span><br />toujours</td>
-						<td><span class="eo">ĉiel</span><br />de toute manière</td>
-						<td><span class="eo">ĉial</span><br />pour toute raison</td>
-						<td><span class="eo">ĉiom</span><br />le tout</td>
+						<td><span class="eo">ĉiel</span><br />de toutes les manières</td>
+						<td><span class="eo">ĉial</span><br />pour toutes les raisons</td>
+						<td><span class="eo">ĉiom</span><br />tout (la totalité), toute la quantité</td>
 					</tr>
 				</tbody>
 			</table>
@@ -474,9 +471,9 @@ include "dlekkapo.inc.php";
 		?>
 		
 		<p class="parto">
-		Les corrélatifs terminés par <b>-A</b> et <b>-U</b> prennent la forme de l’accusatif
-		<b>-n</b> et du pluriel <b>-j</b>. Les corrélatifs en <b>-O</b> (<span class="eo">kio</span>,
-		etc.) et en <b>-E</b> prennent le <b>-n</b> de l’accusatif mais jamais le <b>-j</b> du
+		Les corrélatifs terminés par <b>-a</b> et <b>-u</b> prennent la forme de l’accusatif
+		<b>-n</b> et du pluriel <b>-j</b>. Les corrélatifs en <b>-o</b> (<span class="eo">kio</span>,
+		etc.) et en <b>-e</b> prennent le <b>-n</b> de l’accusatif mais jamais le <b>-j</b> du
 		pluriel. Tous les autres sont invariables.
 		</p>
 		<div class="row">

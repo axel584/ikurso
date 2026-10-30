@@ -431,22 +431,22 @@ include "dlekkapo.inc.php";
 				<thead>
 					<tr>
 						<th></th>
-						<th>Individualité<br /><span class="eo">-U</span></th>
-						<th>Chose<br /><span class="eo">-O</span></th>
-						<th>Lieu<br /><span class="eo">-E</span></th>
-						<th>Temps<br /><span class="eo">-AM</span></th>
+						<th>Individu<br /><span class="eo">-u</span></th>
+						<th>Chose<br /><span class="eo">-o</span></th>
+						<th>Lieu<br /><span class="eo">-e</span></th>
+						<th>Temps<br /><span class="eo">-am</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>Interrogatif<br /><span class="eo">KI-</span></th>
+						<th>Interrogatif<br /><span class="eo">ki-</span></th>
 						<td><span class="eo">kiu</span><br />qui&nbsp;? quel(le)&nbsp;?<br />lequel, laquelle&nbsp;?</td>
 						<td><span class="eo">kio</span><br />que&nbsp;? quoi&nbsp;?</td>
 						<td><span class="eo">kie</span><br />où&nbsp;?</td>
 						<td><span class="eo">kiam</span><br />quand&nbsp;?</td>
 					</tr>
 					<tr>
-						<th>Négatif<br /><span class="eo">NENI-</span></th>
+						<th>Négatif<br /><span class="eo">neni-</span></th>
 						<td><span class="eo">neniu</span><br />personne, nul, aucun</td>
 						<td><span class="eo">nenio</span><br />rien</td>
 						<td><span class="eo">nenie</span><br />nulle part</td>

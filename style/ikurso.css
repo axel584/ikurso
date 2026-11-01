@@ -1540,3 +1540,13 @@ span.bravo {
 .novaj-vortoj p:last-child {
 	margin-bottom: 0;
 }
+/* schéma trop détaillé pour la largeur d'un téléphone (corrélatifs, leçon 5) : il garde une taille lisible et défile horizontalement */
+@media only screen and (max-width: 600px) {
+	.skemo-rulumebla {
+		overflow-x: auto;
+	}
+	.skemo-rulumebla img.responsive-img {
+		max-width: none;
+		width: 720px;
+	}
+}

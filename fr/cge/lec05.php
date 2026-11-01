@@ -117,7 +117,8 @@ include "dlekkapo.inc.php";
 		Chaque corrélatif est formé de deux éléments, présentés dans le schéma ci-dessous : un élément de la <b>première colonne</b> (<span class="eo"><b>ki</b></span>, <span class="eo"><b>ti</b></span>, <span class="eo"><b>i</b></span>, <span class="eo"><b>ĉi</b></span>, <span class="eo"><b>neni</b></span>) suivi d'un élément de la <b>seconde colonne</b> (<span class="eo"><b>o</b></span>, <span class="eo"><b>a</b></span>, <span class="eo"><b>u</b></span>, <span class="eo"><b>es</b></span>, <span class="eo"><b>om</b></span>, <span class="eo"><b>am</b></span>, <span class="eo"><b>al</b></span>, <span class="eo"><b>el</b></span>, <span class="eo"><b>e</b></span>).</p>
 		<p>Par exemple, si nous associons l’élément <span class="eo"><b>ki-</b></span>, qui permet notamment de poser une question, à l'élément <span class="eo"><b>-al</b></span>, qui exprime la cause, on obtient le corrélatif <span class="eo">kial</span>, qui signifie <em>pourquoi</em>.</p>
 
-		<img src="<?php echo $vojo;?>fr/cge/bildoj/korelativoj.svg" class="responsive-img" alt="Schéma des corrélatifs, à gauche nous avons la liste des 5 préfixes : KI/TI/I/ĈI/NENI et à droite la liste des 9 suffixes : O/A/U/ES/OM/AM/AL/EL/E. En combinant un préfixe et un suffixe, on peut former 45 corrélatifs différents">
+		<div class="skemo-rulumebla"><img src="<?php echo $vojo;?>fr/cge/bildoj/korelativoj.svg" class="responsive-img" alt="Schéma des corrélatifs, à gauche nous avons la liste des 5 préfixes : KI/TI/I/ĈI/NENI et à droite la liste des 9 suffixes : O/A/U/ES/OM/AM/AL/EL/E. En combinant un préfixe et un suffixe, on peut former 45 corrélatifs différents"></div>
+		<p class="hide-on-med-and-up center-align"><small>(faites défiler le schéma vers la droite)</small></p>
 		
 		<p>Voici quelques corrélatifs déjà rencontrés dans les leçons précédentes&nbsp;:</p>
 		<div class="row vortlisto">
@@ -199,7 +200,7 @@ include "dlekkapo.inc.php";
 			<p class="col s6"><span class="eo">– <b>Ĉiuj</b>.</span></p><p class="col s6">– <b>Tous</b>.</p>
 		</div>
 		
-		<p class="parto">Les corrélatifs en <b>-es</b> marquent la possession. Ils sont équivalents <span class="eo">de</span> + le corrélatif en <b>-u</b> correspondant  à:</p>
+		<p class="parto">Les corrélatifs en <b>-es</b> marquent la possession. Ils équivalent à <span class="eo">de</span> + le corrélatif en <b>-u</b> correspondant&nbsp;:</p>
 		<div class="row">
 			<p class="col s3"><span class="eo">kies (= de kiu, de kiuj)</span></p><p class="col s9">de qui, à qui, dont, duquel</p>
 			<p class="col s3"><span class="eo">ties (= de tiu)</span></p><p class="col s9">de celui-là, à celui-là</p>

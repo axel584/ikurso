@@ -1550,3 +1550,13 @@ span.bravo {
 		width: 720px;
 	}
 }
+
+/* statistiques des correcteurs (statLaux*.php, #1075) */
+.statistikoj .tabs {margin-bottom: 1.5rem; background-color: transparent;}
+.statistikoj .tabs .tab a {color: #989490;}
+.statistikoj .tabs .tab a.active, .statistikoj .tabs .tab a:hover {color: #554E47; background-color: transparent;}
+.statistikoj .tabs .indicator {background-color: #554E47;}
+.statistikoj table.stat {margin-bottom: 1rem;}
+.statistikoj table.stat th, .statistikoj table.stat td {padding: 6px 10px;}
+.statistikoj table.stat tfoot th {border-top: 2px solid #989490;}
+.stat-rulumebla {overflow-x: auto;}

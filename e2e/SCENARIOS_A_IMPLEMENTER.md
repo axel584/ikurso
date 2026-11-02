@@ -79,7 +79,7 @@ Ce document liste les scénarios retenus, par priorité, avec leurs objectifs, p
 
 ## Notes importantes
 - **Bug potentiel P1-6** : "Le code insère alors NULL dans une colonne obligatoire" - à tester en conditions réelles et à consigner le résultat dans le test/commentaire
-- **Mot de passe oublié legacy** : `pasvortoforgesita.php` envoie mot de passe en clair (dangereux) mais existe toujours - ne pas toucher
+- **Mot de passe oublié legacy** : `pasvortoforgesita.php` et `pasvortoforgesita2.php` supprimés (#1075) ; seul le parcours par lien de réinitialisation existe
 - **Notation x** : Spécifique à l'espéranto, logique dans `js/ikurso.js`
 - **MailHog requis** : Docker doit tourner avec mailhog
 - **Base de données partagée** : Tests en série recommandés, reset régulier

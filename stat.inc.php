@@ -1,21 +1,28 @@
 <?php
+// En-tête commun des statistiques des correcteurs (statLaux*.php) : contrôle d'accès et onglets.
+// La page définit $temo avant l'inclusion.
 include "util.php";
-$vojo="";
-include_once ("db.inc.php");
-include_once ("webui.inc.php");
+require_once "api/StatistikojAPI.php";
 $pagxtitolo="Statistiques";
-$persono_id = isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
-header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-header("Last-Modified: ".gmdate("D,d M Y H:i:s")." GMT");
-header("Cache-Control: no-store,no-cache, must-revalidate"); // HTTP/1.1
-header("Pragma: no-cache"); // HTTP/1.0
-include "pagxkapo-old.inc.php";
+$korpo="statistikoj";
+$persono_id=isset($_SESSION["persono_id"])?(int)$_SESSION["persono_id"]:0;
+if ($persono_id==0) {header("Location:index.php?erarkodo=8"); exit;}
+$persono = apartigiPersonon($persono_id);
+if (!$persono || ($persono["rajtoj"]!='A' && $persono["rajtoj"]!='K')) {header("Location:index.php?erarkodo=4"); exit;}
+$statistikojAPI = new StatistikojAPI($bdd);
+$temoj = array("kategorio" => array("statLauxKategorio.php", "Par catégorie"), "monato" => array("statLauxMonato.php", "Par mois"),
+	"lando" => array("statLauxLando.php", "Par pays"), "kurso" => array("statLauxKurso.php", "Par cours"));
+
+function procento(int $kiom, int $entute): string {
+	return $entute > 0 ? number_format(100 * $kiom / $entute, 1, ",", "&nbsp;")."&nbsp;%" : "";
+}
+include "pagxkapo.inc.php";
 ?>
-		<div id="enhavo">
-			<ul id="tabnav">
-				<li <?php if ($temo=="kategorio") {echo " class='aktiva'";}?>><a href="statLauxKategorio.php">par catégorie</a></li>
-				<li <?php if ($temo=="monato") {echo " class='aktiva'";}?>><a href="statLauxMonato.php">par mois</a></li>
-				<li <?php if ($temo=="lando") {echo " class='aktiva'";}?>><a href="statLauxLando.php">par pays</a></li>
-				<li <?php if ($temo=="kurso") {echo " class='aktiva'";}?>><a href="statLauxKurso.php">par cours</a></li>
-			</ul>
-			<div id="kadro">
+<div class="row">
+	<article class="col s12 l10 offset-l1">
+		<h1>Statistiques</h1>
+		<ul class="tabs">
+			<?php foreach ($temoj as $kodo => list($pagxo, $nomo)) { ?>
+			<li class="tab"><a target="_self" href="<?php echo $pagxo; ?>"<?php if ($temo==$kodo) echo ' class="active"'; ?>><?php echo $nomo; ?></a></li>
+			<?php } ?>
+		</ul>

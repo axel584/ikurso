@@ -446,7 +446,7 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 	$resultEkzerco = $bdd->prepare("SELECT komando,komando_detalo,ekzemplo,typo,x2u,korektebla FROM `ekzercoj` where id=?");
 	$resultEkzerco->execute(array($id));
 	$rowEkzerco = $resultEkzerco->fetch();
-	echo "<fieldset class='ekzerco'>";
+	echo "<fieldset class='ekzerco' id='ekzerco_".(int)$id."'>";
 	echo "<legend><strong>";
 	if ($lingvo=="fr") {
 		echo "EXERCICE";
@@ -810,19 +810,22 @@ function recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id) {
 		if (($persono['rajtoj']=="S")||($persono['rajtoj']=="P")) {
 			global $bdd;
 			echo "<h3>Récapitulatif :</h3>";
-			echo "Voilà ce qui sera envoyé à votre correcteur. Si vous souhaitez modifier des réponses, vous pouvez faire les modifications directement dans les pages d'exercices, enregistrer vos réponses puis revenir sur cette page.";
+			echo "Voilà ce qui sera envoyé à votre correcteur. Pour modifier des réponses, cliquez sur «&nbsp;Modifier&nbsp;» en face de l’exercice, enregistrez vos réponses puis revenez sur cette page.";
 			$indiceQuestion= 1;
 			
 			// on récupère les réponses en base
-			$query = "select ekzercoj.komando,ekzerceroj.demando,respondoj.respondo,respondoj.korekto,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=? and lecionoj.numero=? and kurso=? order by ekzerceroj.numero";
+			$query = "select ekzercoj.id as ekzerco_id,ekzercoj.komando,lecioneroj.ordo,lecionoj.retpagxo,ekzerceroj.demando,respondoj.respondo,respondoj.korekto,gxusta from respondoj  join ekzerceroj on ekzerceroj.id=respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id  join lecionoj on lecioneroj.leciono_id=lecionoj.id  where persono_id=? and lecionoj.numero=? and kurso=? order by ekzerceroj.numero";
 			$result = $bdd->prepare($query);
 			$result->execute(array($persono_id,$leciono,$kurso));
 			echo "<ul class='collection'>";
-			$lastKomando = "";
+			$lastEkzerco = null;
 			while ($row=$result->fetch()) {
-				if ($row["komando"]!=$lastKomando) {
-					$lastKomando=$row["komando"];
-					echo "<h6>".$lastKomando."</h6>\n";
+				if ($row["ekzerco_id"]!==$lastEkzerco) {
+					$lastEkzerco=$row["ekzerco_id"];
+					// lien vers l'exercice dans sa section, pour modifier ses réponses avant l'envoi (#750)
+					$ligilo = htmlspecialchars($row["retpagxo"], ENT_QUOTES, "UTF-8")."?section=".(int)$row["ordo"]."#ekzerco_".(int)$row["ekzerco_id"];
+					echo "<div class='recap-ekzerco'><h6>".$row["komando"]."</h6>";
+					echo "<a class='btn-small waves-effect waves-light light-blue darken-1' href='".$ligilo."'><i class='material-icons left'>edit</i>Modifier</a></div>\n";
 				}
 				echo "<li class='collection-item row'>";
 				echo "<b>".$row["demando"]."</b><br/>";

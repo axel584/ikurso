@@ -1560,3 +1560,10 @@ span.bravo {
 .statistikoj table.stat th, .statistikoj table.stat td {padding: 6px 10px;}
 .statistikoj table.stat tfoot th {border-top: 2px solid #989490;}
 .stat-rulumebla {overflow-x: auto;}
+
+/* récapitulatif avant l'envoi : bouton « Modifier » en face de chaque exercice (#750) */
+.recap-ekzerco {display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-top:1rem;}
+.recap-ekzerco h6 {margin:0;}
+.recap-ekzerco .btn-small {flex-shrink:0; text-decoration:none;}
+/* l'exercice visé par le lien n'est pas caché sous le menu fixe */
+fieldset.ekzerco {scroll-margin-top:80px;}

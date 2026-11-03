@@ -7,4 +7,4 @@ require_once "../api/GastoAPI.php";
 malfermidatumbazon();
 
 $kiom = (new GastoAPI($bdd))->forigiNeaktivajn(6);
-echo $kiom." invité(s) supprimé(s)\n";
+echo $kiom.($kiom > 1 ? " invités supprimés" : " invité supprimé")."\n";

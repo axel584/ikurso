@@ -11,6 +11,11 @@ function dauxroTeksto(int $sekundoj): string {
 	return $minutoj < 60 ? $minutoj." min" : intdiv($minutoj, 60)." h ".sprintf("%02d", $minutoj % 60);
 }
 
+// Accord au singulier jusqu'à 1, au pluriel au-delà : « 1 page », « 0 page », « 3 pages ».
+function laux(int $kiom, string $unu, string $pluraj): string {
+	return $kiom > 1 ? $pluraj : $unu;
+}
+
 function laboroHtml(array $linioj): string {
 	if (!$linioj) {
 		return "<p>Aucune page validée hier.</p>";
@@ -18,16 +23,26 @@ function laboroHtml(array $linioj): string {
 	$pagxoj = array_sum(array_column($linioj, "pagxoj"));
 	$sekundoj = array_sum(array_column($linioj, "sekundoj"));
 	$lernantoj = count(array_unique(array_column($linioj, "enirnomo")));
+	// les invités (sans compte) dans une liste à part, sous celle des élèves inscrits
 	$listo = "";
+	$gastoj = "";
 	$lecionoj = 0;
 	foreach ($linioj as $linio) {
 		$finitaj = $linio["finitaj"] ? explode(",", $linio["finitaj"]) : array();
 		$lecionoj += count($finitaj);
-		$listo .= "<li>".htmlspecialchars($linio["enirnomo"], ENT_QUOTES, "UTF-8")." (".htmlspecialchars($linio["kurso"], ENT_QUOTES, "UTF-8").") : "
-			.$linio["pagxoj"]." page(s), ".dauxroTeksto((int)$linio["sekundoj"])
-			.($finitaj ? ", leçon(s) ".implode(", ", $finitaj)." terminée(s)" : "")."</li>";
+		$li = "<li>".htmlspecialchars($linio["enirnomo"], ENT_QUOTES, "UTF-8")." (".htmlspecialchars($linio["kurso"], ENT_QUOTES, "UTF-8").") : "
+			.$linio["pagxoj"]." ".laux((int)$linio["pagxoj"], "page", "pages").", ".dauxroTeksto((int)$linio["sekundoj"])
+			.($finitaj ? ", ".laux(count($finitaj), "leçon", "leçons")." ".implode(", ", $finitaj)." ".laux(count($finitaj), "terminée", "terminées") : "")."</li>";
+		if ($linio["gasto"]) {
+			$gastoj .= $li;
+		} else {
+			$listo .= $li;
+		}
 	}
-	return "<p>".$lernantoj." élève(s) ont validé ".$pagxoj." page(s) et terminé ".$lecionoj." leçon(s), pour ".dauxroTeksto($sekundoj)." de travail.</p><ul>".$listo."</ul>";
+	return "<p>".$lernantoj." ".laux($lernantoj, "élève a", "élèves ont")." validé ".$pagxoj." ".laux($pagxoj, "page", "pages")
+		." et terminé ".$lecionoj." ".laux($lecionoj, "leçon", "leçons").", pour ".dauxroTeksto($sekundoj)." de travail.</p>"
+		.($listo ? "<ul>".$listo."</ul>" : "")
+		.($gastoj ? "<p>Invités (sans compte) :</p><ul>".$gastoj."</ul>" : "");
 }
 
 function vortojHtml(array $vortoj): string {
@@ -35,7 +50,8 @@ function vortojHtml(array $vortoj): string {
 		return "<p>Aucune révision hier.</p>";
 	}
 	$elcento = round(100 * $vortoj["bonaj"] / $vortoj["respondoj"]);
-	return "<p>".$vortoj["lernantoj"]." élève(s) ont révisé ".$vortoj["respondoj"]." mot(s), avec ".$elcento." % de bonnes réponses.</p>";
+	return "<p>".$vortoj["lernantoj"]." ".laux((int)$vortoj["lernantoj"], "élève a", "élèves ont")." révisé ".$vortoj["respondoj"]." ".laux((int)$vortoj["respondoj"], "mot", "mots")
+		.", avec ".$elcento." % de bonnes réponses.</p>";
 }
 
 function jamFinisKurson($studanto) {

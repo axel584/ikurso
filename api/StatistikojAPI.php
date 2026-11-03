@@ -17,9 +17,10 @@ class StatistikojAPI {
     // Par élève et par cours : pages validées hier, temps passé (secondes) et leçons terminées.
     // Une leçon est terminée quand sa dernière page (l'envoi) est validée : personoj_lecionoj.dato
     // ne convient pas, car la colonne est mise à jour quand le correcteur corrige la leçon.
+    // gasto vaut 1 pour un invité (compte G, #1092).
     public function laboroHieraux(): array {
         $demando = $this->bdd->prepare(
-            "SELECT p.enirnomo, l.kurso, COUNT(*) AS pagxoj,
+            "SELECT p.enirnomo, p.rajtoj = 'G' AS gasto, l.kurso, COUNT(*) AS pagxoj,
                     COALESCE(SUM(LEAST(GREATEST(TIMESTAMPDIFF(SECOND, pl.ekdato, pl.dato), 0), ?)), 0) AS sekundoj,
                     GROUP_CONCAT(CASE WHEN le.ordo = (SELECT MAX(le2.ordo) FROM lecioneroj le2 WHERE le2.leciono_id = le.leciono_id)
                                       THEN l.numero END ORDER BY l.numero) AS finitaj
@@ -28,7 +29,7 @@ class StatistikojAPI {
              JOIN lecioneroj le ON le.id = pl.lecionero_id
              JOIN lecionoj l ON l.id = le.leciono_id
              WHERE pl.dato >= CURDATE() - INTERVAL 1 DAY AND pl.dato < CURDATE()
-             GROUP BY p.id, p.enirnomo, l.kurso
+             GROUP BY p.id, p.enirnomo, p.rajtoj, l.kurso
              ORDER BY pagxoj DESC, p.enirnomo");
         $demando->execute(array(self::MAKSIMUMA_DAUXRO));
         return $demando->fetchAll(PDO::FETCH_ASSOC);

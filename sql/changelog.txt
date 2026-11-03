@@ -4556,3 +4556,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Gerda leçon 10, phrase 21 de l'exercice « Plenigu ĉiun truon » : « alurben » donné en entier au lieu d'un trou (#967) : voir sql/51-gerda-alurben-967.sql
 --- Nom du cours « Paŝoj al plena posedo » (au lieu de « Pasxoj ») : colonne kursoj.nomo passée en utf8 : voir sql/52-kursoj-nomo-utf8.sql
 --- Correction automatique, CG leçon 4 n° 10 (Nacia Tago) : date sans « de » acceptée (« la dekkvara julio »), « julio » en minuscules dans le corrigé type (#1046) : voir sql/53-nacia-tago-sen-de-1046.sql
+--- Révision du vocabulaire : synonymes acceptés et traductions précisées d'après les remarques de Jean-Luc (#994) : voir sql/54-vocabulaire-revision-994.sql

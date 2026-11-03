@@ -248,7 +248,7 @@ test.describe('Mode invité', () => {
     const recent = gastoId()
     expect(recent).not.toBe(ancien)
 
-    expect(cron('forigi_gastojn.php')).toContain('1 invité(s) supprimé(s)')
+    expect(cron('forigi_gastojn.php')).toContain('1 invité supprimé')
     expect(sql(`SELECT COUNT(*) FROM personoj WHERE id=${ancien}`)).toBe('0')
     expect(sql(`SELECT COUNT(*) FROM respondoj WHERE persono_id=${ancien}`)).toBe('0')
     expect(sql(`SELECT COUNT(*) FROM personoj WHERE id=${recent}`)).toBe('1')

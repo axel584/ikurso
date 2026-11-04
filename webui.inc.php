@@ -39,13 +39,41 @@ function displayWarningSiLecioneroManquante($persono_id,$kurso,$leciono,$lecione
 	}
 }
 
-function displayLecionoEnhavo($kurso,$leciono,$lecionero) {
-	global $bdd;
-	$result = $bdd->prepare("SELECT enhavo  FROM lecioneroj JOIN lecionoj on lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.numero=? and lecionoj.kurso=? and ordo=?");
-	$result->execute(array($leciono,$kurso,$lecionero));
+// Contenu d'une section, rangé en base dans lecioneroj.enhavo (#1087), avec les marqueurs posés par sql/eltiri-enhavon.php :
+// ##EKZERCO:N##, ##QCM:[json]##, ##QCM_BILDOJ:[json]##, ##RESUMO## et <!--se nekonektita-->…<!--alie-->…<!--/se-->.
+// Les adresses du contenu sont relatives à la racine du site : on les fait précéder de $vojo.
+function montriLecioneron($kurso,$leciono,$section,$persono_id) {
+	global $bdd, $vojo;
+	$result = $bdd->prepare("SELECT lecioneroj.enhavo FROM lecioneroj JOIN lecionoj ON lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso=? AND lecionoj.numero=? AND lecioneroj.ordo=?");
+	$result->execute(array($kurso,$leciono,$section));
 	$row = $result->fetch();
-	echo $row["enhavo"];
-
+	if (!$row) {
+		return;
+	}
+	$konektita = !empty($_SESSION["persono_id"]);
+	$html = preg_replace_callback('~<!--se nekonektita-->(.*?)(?:<!--alie-->(.*?))?<!--/se-->~s', function ($m) use ($konektita) {
+		return $konektita ? (isset($m[2]) ? $m[2] : "") : $m[1];
+	}, (string)$row["enhavo"]);
+	$html = preg_replace('~\b(href|src)=(["\'])(?![a-z]+:|#|/)~i', '$1=$2'.$vojo, $html);
+	$partoj = preg_split('~##(EKZERCO|QCM_BILDOJ|QCM|RESUMO):?(.*?)##~s', $html, -1, PREG_SPLIT_DELIM_CAPTURE);
+	echo $partoj[0];
+	for ($i = 1; $i < count($partoj); $i += 3) {
+		if ($partoj[$i] == "EKZERCO") {
+			getEkzercon((int)$partoj[$i+1],$persono_id);
+		} elseif ($partoj[$i] == "QCM") {
+			QCM(json_decode($partoj[$i+1], true));
+		} elseif ($partoj[$i] == "QCM_BILDOJ") {
+			$qcm = json_decode($partoj[$i+1], true);
+			foreach ($qcm as &$demando) {
+				$demando["bildo"] = $vojo.$demando["bildo"];
+			}
+			unset($demando);
+			QCM_bildoj($qcm);
+		} else {
+			recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id);
+		}
+		echo $partoj[$i+2];
+	}
 }
 
 function getTitoloLecionero($kurso,$leciono,$lecionero) {

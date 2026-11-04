@@ -81,12 +81,24 @@ Sections (parties) composant une leçon.
 | `leciono_id` | INT | Référence vers `lecionoj.id` |
 | `titolo` | TEXT | Titre de la section |
 | `tipo` | ENUM('VORTARO','QCM','TEKSTO','EKZERCARO') | Type de section |
-| `enhavo` | TEXT | Contenu HTML/texte de la section |
+| `enhavo` | TEXT | Contenu HTML de la section (voir ci-dessous) |
 | `ordo` | INT | Ordre d'affichage dans la leçon |
 | `unua` | TINYINT(1) | Première section de la leçon |
 | `lasta` | TINYINT(1) | Dernière section de la leçon |
 | `dauxro` | INT | Durée estimée (secondes) |
 | `android` | TINYINT(1) | Disponible dans l'appli Android |
+
+#### Contenu `enhavo` (#1087)
+
+Le cours en 10 leçons (`CG`) est affiché depuis `enhavo` : `fr/cge/lec01.php` à `lec10.php` ne font qu'inclure le gabarit `fr/cge/leciono.inc.php`, qui appelle `montriLecioneron()` (`webui.inc.php`). Gerda malaperis (`GR`) et Paŝoj (`PP`) sont encore dans leurs fichiers PHP ; `sql/eltiri-enhavon.php` sert à en extraire le contenu.
+
+- HTML seulement : ni PHP ni JavaScript (`<script>`, `onclick`…). Classes du site (Materialize et `ikurso.css`) : `p.parto`, `.eo`, `.row` / `.col`, `fieldset.vortoj`, `.vortlisto`, `table.bordered`, `a.sm2_button` (bouton de lecture d'un son), `.noprint` / `.onlyprint`, etc.
+- Images, sons et liens internes : adresse relative à la racine du site (`fr/son/vortoj/…mp3`, `fr/cge/bildoj/…`, `memoriVortojn.php`). À l'affichage, `href` et `src` reçoivent le préfixe `$vojo` de la page ; les adresses `https:`, `mailto:`, `#…` et `/…` sont laissées telles quelles.
+- Marqueurs remplacés à l'affichage :
+  - `##EKZERCO:N##` : l'exercice `ekzercoj.id = N`, avec les réponses de l'élève ;
+  - `##QCM:[…]##` et `##QCM_BILDOJ:[…]##` : un QCM, questions en JSON (`question` ou `bildo`/`url`/`auteur`, `propositions`, `indices`, `reponse` à partir de 1) ;
+  - `##RESUMO##` : le récapitulatif de la leçon avant l'envoi (dernière section) ;
+  - `<!--se nekonektita-->…<!--alie-->…<!--/se-->` : texte pour le visiteur ou l'invité sans compte, puis (facultatif) pour l'élève connecté.
 
 ---
 

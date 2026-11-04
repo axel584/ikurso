@@ -450,6 +450,20 @@ Un texte par ligne (#891). Le contenu est dans `mails/saviezvousNNN.html` et le 
 | `numero` | SMALLINT UNSIGNED PK | Numéro du texte (NNN du nom de fichier) |
 | `titolo` | VARCHAR(255) NOT NULL | Titre, objet du mail après « Le Saviez-vous : » |
 
+### `renovigaj_sxlosiloj` — Refresh tokens de l'application mobile
+
+Un jeton par connexion de l'application (#1088, `api/RenovigajSxlosilojAPI.php`). InnoDB. Le jeton lui-même n'est jamais gardé.
+
+| Colonne | Type | Description |
+|---|---|---|
+| `id` | INT PK AUTO_INCREMENT | Identifiant |
+| `persono_id` | INT NOT NULL | Référence vers `personoj.id` |
+| `hakajxo` | CHAR(64) NOT NULL UNIQUE | Empreinte SHA-256 du jeton |
+| `kreita` | DATETIME NOT NULL | Création |
+| `eksvalidigxo` | DATETIME NOT NULL | Expiration (60 jours) |
+| `uzita` | DATETIME NULL | Échangé contre un nouveau jeton (rotation) ; un jeton déjà échangé qui revient fait révoquer tous ceux de la personne |
+| `revokita` | DATETIME NULL | Révoqué (déconnexion ou vol probable) |
+
 ---
 
 ## Relations principales

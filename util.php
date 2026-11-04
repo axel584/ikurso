@@ -3,8 +3,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require_once __DIR__ . '/api/SessionAuth.php';
-SessionAuth::configure();
-session_start();    
+// l'API de l'application (#1088), identifiée par un jeton Bearer, n'a ni session ni cookie (voir api.php)
+if (!defined('IKURSO_SEN_SESIO')) {
+	SessionAuth::configure();
+	session_start();
+}
 
 include_once("db.inc.php");
 include_once("webui.inc.php");

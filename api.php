@@ -85,6 +85,18 @@ if (!empty($segments)) {
         // API gestion des sous-exercices
         $api = new EkzerceroiAPI();
         $api->handleRequest();
+    } elseif ($segments[0] === 'lernado') {
+        // API de l'élève, pour l'application mobile (#1088) : util.php donne $bdd et les fonctions
+        // de correction et d'envoi des mails, partagées avec les pages. Session seulement pour l'élève déjà connecté
+        // au site : un cookie de session gardé par l'application ferait refuser ses appels suivants à auth/refresh
+        // (protection CSRF)
+        if (JWTAuth::getBearerToken() !== null || !isset($_COOKIE[session_name()])) {
+            define('IKURSO_SEN_SESIO', true);
+        }
+        require_once 'util.php';
+        require_once 'api/LernadoAPI.php';
+        $api = new LernadoAPI($bdd, $urlracine);
+        $api->handleRequest();
     } else {
         // Endpoint non trouvé
         http_response_code(404);

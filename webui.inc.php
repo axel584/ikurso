@@ -50,10 +50,8 @@ function montriLecioneron($kurso,$leciono,$section,$persono_id) {
 	if (!$row) {
 		return;
 	}
-	$konektita = !empty($_SESSION["persono_id"]);
-	$html = preg_replace_callback('~<!--se nekonektita-->(.*?)(?:<!--alie-->(.*?))?<!--/se-->~s', function ($m) use ($konektita) {
-		return $konektita ? (isset($m[2]) ? $m[2] : "") : $m[1];
-	}, (string)$row["enhavo"]);
+	require_once __DIR__."/api/KursaEnhavoAPI.php";
+	$html = KursaEnhavoAPI::kondicxoj((string)$row["enhavo"], !empty($_SESSION["persono_id"]));
 	$html = preg_replace('~\b(href|src)=(["\'])(?![a-z]+:|#|/)~i', '$1=$2'.$vojo, $html);
 	$partoj = preg_split('~##(EKZERCO|QCM_BILDOJ|QCM|RESUMO):?(.*?)##~s', $html, -1, PREG_SPLIT_DELIM_CAPTURE);
 	echo $partoj[0];

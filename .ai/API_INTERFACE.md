@@ -62,6 +62,7 @@ Description complète de l'API REST générée depuis le code source (`/api/`).
    - [POST /legotajxoj](#post-legotajxoj)
    - [DELETE /legotajxoj/{teksto_id}](#delete-legotajxojteksto_id)
    - [POST /kontakto](#post-kontakto)
+   - [API élève (lernado), application mobile](#api-élève-lernado-application-mobile)
 3. [Authentification détaillée](#authentification-détaillée)
 4. [Codes de réponse](#codes-de-réponse)
 5. [Format des erreurs](#format-des-erreurs)
@@ -82,7 +83,20 @@ Session : `SessionAuth` (`api/SessionAuth.php`) fixe les paramètres du cookie p
 
 Navigateur d'un autre sous-domaine (nilegu) : `fetch(..., { credentials: 'include' })` ; le CORS renvoie l'origine exacte avec `Access-Control-Allow-Credentials: true`.
 
-CSRF : les requêtes POST/PUT/PATCH/DELETE dont l'en-tête `Origin` n'est pas dans `Cors::allowedOrigins()` reçoivent 403. Sans `Origin` (script, curl), elles sont refusées si un cookie d'authentification est envoyé et que le `Referer` n'est pas autorisé.
+CSRF : les requêtes POST/PUT/PATCH/DELETE dont l'en-tête `Origin` n'est pas dans `Cors::allowedOrigins()` reçoivent 403. Sans `Origin` (script, curl, application mobile), elles sont acceptées si elles portent un jeton `Authorization: Bearer` (un autre site ne peut pas l'ajouter, et un jeton faux n'est pas remplacé par la session) ; sinon elles sont refusées si un cookie d'authentification est envoyé et que le `Referer` n'est pas autorisé.
+
+### Application mobile (#1088)
+
+L'application n'utilise ni session ni cookie :
+
+1. `POST /auth/token` (`identigilo`, `pasvorto`) : access token JWT de 15 minutes (`JWTAuth::TTL_MOBILE`) et refresh token de 60 jours.
+2. Chaque appel envoie `Authorization: Bearer <access_token>`.
+3. Sur un 401, `POST /auth/refresh` (`refresh_token`) donne une nouvelle paire ; l'ancien refresh token ne sert plus (rotation). Un refresh token déjà utilisé qui revient fait révoquer tous ceux de la personne (vol probable).
+4. `POST /auth/revoke` (`refresh_token`) : déconnexion.
+
+Refresh tokens : table `renovigaj_sxlosiloj` (`sql/58`), seule leur empreinte SHA-256 est gardée (`api/RenovigajSxlosilojAPI.php`). Les routes `lernado/…` ne démarrent pas de session pour une requête Bearer ni pour un client sans cookie de session (voir `api.php`).
+
+En prod, `/api/` est servi par un autre programme : l'application appelle toujours `api.php?path=…`. Le client TypeScript `react-app/packages/api-client` (généré depuis `api/openapi.yaml`) fait la conversion et le renouvellement des jetons.
 
 ### Connexion unique avec un autre site (nilegu)
 
@@ -99,7 +113,7 @@ La déconnexion (`POST /auth/logout`) ferme la session partagée : l'utilisateur
 ### JWT (la plupart des endpoints)
 
 Token JWT signé HS256. Secret : variable `$JWT_SECRET` de `config.php` (repli temporaire sur `$motDePasse` avec un message dans le journal d'erreurs si elle est absente).
-Émis uniquement par `JWTAuth::generate()` (login `ajax/eniri.php` et `POST /auth/login`), valable 30 jours (`JWTAuth::TTL`).
+Émis uniquement par `JWTAuth::generate()` (login `ajax/eniri.php` et `POST /auth/login`), valable 30 jours (`JWTAuth::TTL`) ; par `POST /auth/token` et `/auth/refresh` (application mobile), valable 15 minutes (`JWTAuth::TTL_MOBILE`).
 Transmis via :
 - Cookie : `access_token` (`HttpOnly`, `Secure`, `SameSite=Lax`, domaine `$cookieDomain`)
 - Header : `Authorization: Bearer {token}`
@@ -1347,6 +1361,33 @@ Envoie un message de contact à tous les administrateurs (+ copie à l'expédite
 **Erreurs**
 - `400` : Email invalide, champs vides, spam détecté
 - `500` : Erreur envoi email
+
+---
+
+### API élève (lernado), application mobile
+
+Référence complète : **`api/openapi.yaml`** (OpenAPI 3.0), d'où sont générés les types du client `react-app/packages/api-client` (`npm run build` dans ce dossier : génération puis vérification `tsc`). Code : `api/LernadoAPI.php` (routes), `KursaEnhavoAPI`, `EkzercadoAPI`, `ProgresoAPI`, `SendadoAPI`, `VortojAPI` (données, partagées avec les pages et `ajax/`). Élève identifié par `JWTAuth::validateJWT()` ; 401 sans identification ou pour un invité.
+
+| Méthode et chemin | Rôle |
+|---|---|
+| `GET /lernado/kursoj` | Les trois cours (CG, GR, PP) avec progression et correcteur |
+| `GET /lernado/kursoj/{kurso}` | Leçons et sections, finies, envoyées, corrigées |
+| `GET /lernado/sekcioj/{id}` | Section : `enhavo` (HTML avec marqueurs, voir `DB_SCHEMA.md`) et exercices **sans les réponses attendues** |
+| `POST /lernado/sekcioj/{id}/fini` | « Terminé ! » : section finie, ses mots entrent dans la révision ; renvoie la section suivante |
+| `POST /lernado/respondoj` | Réponse à une question, enregistrée et corrigée (`gxusta` : true, false ou null) |
+| `GET /lernado/lecionoj/{kurso}/{numero}/resumo` | Sections pas finies et questions sans réponse avant l'envoi |
+| `POST /lernado/lecionoj/{kurso}/{numero}/sendi` | Envoi au correcteur ; au premier envoi du cours, attribution d'un correcteur (`sendita` ou `korektanto_atribuita`, 422 sans réponse) |
+| `GET /lernado/lecionoj/{kurso}/{numero}/korekto` | Correction : introduction, conclusion et correction de chaque réponse |
+| `GET /lernado/vortoj?kurso=` | Lexique et niveau de l'élève (`nivelo`, `prefikso` facultatifs) |
+| `PUT /lernado/vortoj/{id}` | Retirer un mot de la révision ou l'y remettre (`forigita`) |
+| `GET /lernado/revizio` | Mots à réviser maintenant (sans la traduction attendue) |
+| `POST /lernado/revizio` | Traduction proposée pour un mot (`vorto_id`, `respondo`) |
+
+Inscription : `POST /auth/register`, puis activation par le lien reçu par mail. Le choix du cours n'a pas d'appel à lui : l'élève commence le cours qu'il veut, et le correcteur est attribué au premier envoi.
+
+Les QCM d'auto-évaluation (`##QCM:…##` dans `enhavo`) gardent leur bonne réponse : ils se corrigent sur l'appareil, comme sur le site, et ne partent pas au correcteur.
+
+Tests : `e2e/tests/api-lernado.spec.ts` (leçon complète par l'API jusqu'au retour du correcteur, révision, jetons, refus).
 
 ---
 

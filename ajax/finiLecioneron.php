@@ -16,18 +16,9 @@ if ($lecionero_id=="") { // id de la section introuvable
 // élève connecté, ou invité créé à sa première action (#1092)
 $persono_id=(new GastoAPI($bdd))->akiriLernantoId();
 
-// on mémorise la section
-// on vérifie si il y a déjà un enregistrement en base :
-$query ="select count(*) as combien from personoj_lecioneroj where persono_id=? and lecionero_id=?";
-$stmt = $bdd->prepare($query);
-$stmt->execute([$persono_id, $lecionero_id]);
-$result = $stmt;
-$combien = $result->fetch()["combien"];
-// on enregistre si il n'y avait rien en base
-if ($combien==0) {
-	$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id,ekdato) values (now(),:persono_id,:lecionero_id,FROM_UNIXTIME(:ekdato))');
-	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id,'ekdato'=>$ekdato));
-}
+// on mémorise la section (commun avec l'API de l'application, #1088)
+require_once __DIR__."/../api/ProgresoAPI.php";
+(new ProgresoAPI($bdd))->finiSekcion((int)$persono_id, (int)$lecionero_id, is_numeric($ekdato) ? (int)$ekdato : null);
 
 // on ajoute les mots étudiés dans cette section au vocabulaire à apprendre :
 // et on invitera l'élève à les réviser sur la page suivante (#634)

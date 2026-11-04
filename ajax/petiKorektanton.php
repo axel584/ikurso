@@ -1,13 +1,12 @@
 <?php
 include "../util.php";
-require_once __DIR__ . "/../api/RespondojAPI.php";
+require_once __DIR__ . "/../api/SendadoAPI.php";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
-$persono = apartigiPersonon($persono_id);
-$lecionero_id=isset($_GET["lecionero_id"])?$_GET["lecionero_id"]:"";
-$ekdato=isset($_GET['ekdato'])?$_GET['ekdato']:"";
+$lecionero_id=isset($_GET["lecionero_id"])?(int)$_GET["lecionero_id"]:0;
+$ekdato=isset($_GET['ekdato'])&&is_numeric($_GET['ekdato'])?(int)$_GET['ekdato']:null;
 $kurso=isset($_GET["kurso"])?$_GET["kurso"]:"";
-$leciono=isset($_GET["leciono"])?$_GET["leciono"]:"";
-$commentaire_pour_correcteur=isset($_GET["commentaire_pour_correcteur"])?$_GET["commentaire_pour_correcteur"]:"";
+$leciono=isset($_GET["leciono"])?(int)$_GET["leciono"]:0;
+$commentaire_pour_correcteur=isset($_GET["commentaire_pour_correcteur"])?(string)$_GET["commentaire_pour_correcteur"]:"";
 
 if ($persono_id=="") { // personne non connecté, on ressort
 	$respondo["type"]="session";
@@ -15,151 +14,26 @@ if ($persono_id=="") { // personne non connecté, on ressort
 	echo json_encode($respondo);
 	exit();
 }
-
-// si le compte n'est pas activé, on le renvoit
-$query = "select aktivigita from personoj where id=?";
-$stmt = $bdd->prepare($query);
-$stmt->execute([$persono_id]);
-$result = $stmt;
-$aktivigita = $result->fetch()["aktivigita"];
-if($aktivigita==0) {
-	$respondo["mesagxo"] = "compteNonActif";
+if (!isset(SendadoAPI::KURSOJ[$kurso])) {
+	$respondo["type"]="kurso";
+	$respondo["mesagxo"]="Cours inconnu";
 	echo json_encode($respondo);
 	exit();
 }
 
-// on vérifie si l'élève a fait un exercice
-$query = "select count(*) as combien from respondoj join ekzerceroj on ekzerceroj.id = respondoj.ekzercero_id join ekzercoj on ekzercoj.id=ekzerceroj.ekzerco_id join lecioneroj on lecioneroj.id=ekzercoj.lecionero_id join lecionoj on lecioneroj.leciono_id=lecionoj.id where persono_id=? and lecionoj.numero=? and kurso=?";
-$stmt = $bdd->prepare($query);
-$stmt->execute([$persono_id, $leciono, $kurso]);
-$result = $stmt;
-$nbResponses = $result->fetch()["combien"];
-if ($nbResponses==0) {
+// attribution du correcteur et envoi, communs avec l'API de l'application (#1088)
+$rezulto=(new SendadoAPI($bdd, $urlracine))->petiKorektanton((int)$persono_id, $kurso, $leciono, $lecionero_id, $commentaire_pour_correcteur, $ekdato);
+if ($rezulto=="ne_aktivigita") {
+	$respondo["mesagxo"] = "compteNonActif";
+	echo json_encode($respondo);
+	exit();
+}
+if ($rezulto=="neniu_respondo") {
 	$respondo["mesagxo"] = "aucunExercice";
 	echo json_encode($respondo);
-	exit();	
+	exit();
 }
-
-// on mémorise la leçon 
-// on récupère l'id de la leçon à partir du $lecionero_id
-$query ="select leciono_id from lecioneroj where id=?";
-$stmt = $bdd->prepare($query);
-$stmt->execute([$lecionero_id]);
-$result = $stmt;
-$leciono_id = $result->fetch()["leciono_id"];
-$query ="select count(*) as combien from personoj_lecionoj where persono_id=? and leciono_id=?";
-$stmt = $bdd->prepare($query);
-$stmt->execute([$persono_id, $leciono_id]);
-$result = $stmt;
-$combien = $result->fetch()["combien"];
-// on enregistre si il n'y avait rien en base
-if ($combien==0) {
-	$requete = $bdd->prepare('insert into personoj_lecionoj(dato,persono_id,leciono_id) values (now(),:persono_id,:leciono_id)');
-	$requete->execute(array('persono_id'=>$persono_id,'leciono_id'=>$leciono_id));
-}
-
-// on récupère quelques infos sur le cours :
-if ($kurso=="CG") {
-	$prefixeKurso = "fr/cge/";
-	$sujetMail = "lec".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
-} 
-if ($kurso=="GR") {
-	$prefixeKurso = "fr/gerda/";
-	$sujetMail = "gerda cxap".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
-} 
-if ($kurso=="PP") {
-	$prefixeKurso = "eo/ppp/";
-	$sujetMail = "leciono ".sprintf('%02d', $leciono)." de ".$persono["enirnomo"];
-} 
-
-
-// on met le champ "kurso" de l'élève a la bonne valeur et son champ "rajtoj" à P
-$query = "update personoj set kurso=?,rajtoj='P' where id=?";
-$stmt = $bdd->prepare($query);
-$stmt->execute([$kurso, $persono_id]);
-
-// on enregistre ses réponses dans la table 
-$fonto="<html><head><title>Cours d'Espéranto : leçon ".$leciono."</title>\n";
-$fonto.="<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"\n>";
-$fonto.="<style>body{font-family:\"Courier New\", Courier, sans-serif;font-size:small}</style>\n";
-$fonto.="</head><body>";
-
-// Attention, code commun avec sendiLecionon.php
-
-// réponses de l'élève, avec le lien vers la page de chaque exercice
-list($respondojHtml, $nbReponse) = (new RespondojAPI($bdd))->mesagxo((int)$persono_id, (int)$leciono, $kurso, $urlracine);
-$fonto .= $respondojHtml;
-$fonto .= "<p>Commentaire de l'élève :<br>\n";
-$fonto .= "<span style=\"color:blue\">".$commentaire_pour_correcteur."</span></p>\n";
-$fonto.="</body></html>";
-$fonto.="</body></html>";
-
-// indiquer que la dernière section a été faite
-$query ="select count(*) as combien from personoj_lecioneroj where persono_id=? and lecionero_id=?";
-$stmt = $bdd->prepare($query);
-$stmt->execute([$persono_id, $lecionero_id]);
-$result = $stmt;
-$combien = $result->fetch()["combien"];
-// on enregistre si il n'y avait rien en base
-if ($combien==0) {
-	$requete = $bdd->prepare('insert into personoj_lecioneroj(dato,persono_id,lecionero_id,ekdato) values (now(),:persono_id,:lecionero_id,FROM_UNIXTIME(:ekdato))');
-	$requete->execute(array('persono_id'=>$persono_id,'lecionero_id'=>$lecionero_id,'ekdato'=>$ekdato));
-}
-
-// Trouve le correcteur idéal :
-$plejTaugaKorektanto = troviPlejTauganKorektanton($persono_id,$kurso);
-$korektanto = apartigiPersonon($plejTaugaKorektanto);
-
-// Envoyer le mail pour informer du correcteur à l'élève
-$query = "update personoj set rajtoj='S' where id=?"; // cxiukaze igas lin studanto.
-$stmt = $bdd->prepare($query);
-$stmt->execute([$persono_id]);
-		
-// nunleciono = la leçon envoyée, comme dans sendiLecionon.php : l'élève ne commence pas forcément par la leçon 1 (#897)
-$query = "INSERT INTO nuna_kurso (ekdato,lastdato,korektanto,studanto,kurso,nunleciono) VALUES (NOW(),NOW(),?,?,?,?)";
-$stmt = $bdd->prepare($query);
-$stmt->execute([$plejTaugaKorektanto, $persono_id, $kurso, max(1, (int)$leciono)]);
-
-// sendi mesagxon al la nova studanto
-$filename = "../mails/doniStu".$kurso."FR.html";
-// si le fichier n'existe pas, mets le nom du fichier sans le cours
-if (!file_exists($filename)) { $filename = "../mails/doniStuFR.html"; }
-
-$fd = fopen($filename, "r");
-$contents = fread($fd, filesize ($filename));
-fclose($fd);
-$studAdreso=$persono["retadreso"];
-$contents=str_replace("##KPERSONNOMO##",(string)$korektanto["personnomo"],$contents);
-$contents=str_replace("##KRETADRESO##",$korektanto["retadreso"],$contents);
-$contents=str_replace("##SENIRNOMO##",$persono["enirnomo"],$contents);
-mailViaSES($studAdreso,"Votre correcteur I-kurso",$contents);
-		
-// sendi mesagxon al la korektanto
-$filename = "../mails/doniKor".$kurso."FR.html";
-// si le fichier n'existe pas, mets le nom du fichier sans le cours
-if (!file_exists($filename)) { $filename = "../mails/doniKorFR.html"; }
-$fd = fopen($filename, "r");
-$contents = fread($fd, filesize ($filename));
-fclose($fd);
-$korAdreso=$korektanto["retadreso"];
-$contents=str_replace("##SENIRNOMO##",$persono["enirnomo"],$contents);
-$contents=str_replace("##SID##",$persono["id"],$contents);
-$contents=str_replace("##SURBO##",$persono["urbo"]." (".$persono["lando"].")",$contents);
-$contents=str_replace("##SRETADRESO##",$persono["retadreso"],$contents);
-$contents=str_replace("##SNASKIGXDATO##",(string)$persono["naskigxdato"],$contents);
-$contents=str_replace("##KNOMO##",$korektanto["enirnomo"],$contents);
-mailViaSES($korAdreso,"Nouvel élève sur I-kurso",$contents);
-
-// envoyer la leçon au correcteur + copie à l'élève
-mailViaSmtp($korAdreso,$persono["retadreso"],$sujetMail,stripslashes($fonto));
-mailViaSES($persono["retadreso"],"Copie de ".$sujetMail,stripslashes($fonto));
-
-// on loggue dans le protokolo au cas où
-protokolo($persono["id"],"ATTRIBUTION AUTOMATIQUE","l'élève a reçu ".$korektanto["enirnomo"]." comme correcteur");
-
 // Renvoyer la page qui permet d'évaluer la leçon
-// on trouve la leçon suivante et on récupère son url :
-$respondo["url"] = $prefixeKurso."konfirmo.php?kazo=2&lec=".$leciono;
+$respondo["url"] = SendadoAPI::KURSOJ[$kurso]."konfirmo.php?kazo=2&lec=".$leciono;
 $respondo["mesagxo"] = "ok";
 echo json_encode($respondo);
-?>

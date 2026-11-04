@@ -5,6 +5,7 @@ require_once __DIR__ . '/JWTAuth.php';
 require_once __DIR__ . '/EnirAPI.php';
 require_once __DIR__ . '/SessionAuth.php';
 require_once __DIR__ . '/GastoAPI.php';
+require_once __DIR__ . '/RenovigajSxlosilojAPI.php';
 
 class AuthentificationAPI {
     private $conn;
@@ -51,6 +52,12 @@ class AuthentificationAPI {
             $this->register();
         } elseif ($method === 'GET' && $action === 'me') {
             $this->me();
+        } elseif ($method === 'POST' && $action === 'token') {
+            $this->token();
+        } elseif ($method === 'POST' && $action === 'refresh') {
+            $this->refresh();
+        } elseif ($method === 'POST' && $action === 'revoke') {
+            $this->revoke();
         } else {
             $this->sendError(404, "Endpoint non trouvé");
         }
@@ -128,6 +135,90 @@ class AuthentificationAPI {
         }
     }
     
+    // Application mobile (#1088) : ni session ni cookie. Access token de 15 minutes et refresh token,
+    // à renvoyer à auth/refresh pour obtenir les suivants.
+    private function token() {
+        $input = json_decode(file_get_contents('php://input'), true);
+        if (!is_array($input) || !isset($input['identigilo']) || !isset($input['pasvorto'])) {
+            $this->sendError(400, "Paramètres 'identigilo' et 'pasvorto' requis");
+            return;
+        }
+        $pasvorto = stripslashes((string)$input['pasvorto']);
+        try {
+            $row = (new EnirAPI($this->conn))->trovi((string)$input['identigilo'], $pasvorto);
+            if (!$row || !hash_equals((string)$row["pasvorto_md5"], md5($pasvorto))) {
+                $this->sendError(401, "Identifiant ou mot de passe incorrect");
+                return;
+            }
+            if ($row["aktivigita"] == 0) {
+                $this->sendError(403, "Ce compte n'est pas validé, merci de cliquer sur le lien reçu par email");
+                return;
+            }
+            $this->protokolo($row["id"], "ENIRO", $row["enirnomo"] . " eniris via la aplikaĵo");
+            $this->updateLastEniro($row["id"]);
+            $this->sendResponse(200, $this->sxlosiloj($row, (new RenovigajSxlosilojAPI($this->conn))->krei((int)$row["id"])));
+        } catch(PDOException $e) {
+            error_log("auth/token : " . $e->getMessage());
+            $this->sendError(500, "Erreur interne du serveur");
+        }
+    }
+
+    private function refresh() {
+        $input = json_decode(file_get_contents('php://input'), true);
+        $sxlosilo = is_array($input) && isset($input['refresh_token']) ? (string)$input['refresh_token'] : "";
+        if ($sxlosilo === "") {
+            $this->sendError(400, "Paramètre 'refresh_token' requis");
+            return;
+        }
+        try {
+            $renovigo = (new RenovigajSxlosilojAPI($this->conn))->renovigi($sxlosilo);
+            $row = $renovigo ? $this->persono($renovigo["persono_id"]) : null;
+            if (!$row || $row["aktivigita"] == 0) {
+                $this->sendError(401, "Session expirée, merci de vous reconnecter");
+                return;
+            }
+            $this->sendResponse(200, $this->sxlosiloj($row, $renovigo["sxlosilo"]));
+        } catch(PDOException $e) {
+            error_log("auth/refresh : " . $e->getMessage());
+            $this->sendError(500, "Erreur interne du serveur");
+        }
+    }
+
+    // Déconnexion de l'application : le refresh token ne sert plus. L'access token expire tout seul.
+    private function revoke() {
+        $input = json_decode(file_get_contents('php://input'), true);
+        $sxlosilo = is_array($input) && isset($input['refresh_token']) ? (string)$input['refresh_token'] : "";
+        if ($sxlosilo === "") {
+            $this->sendError(400, "Paramètre 'refresh_token' requis");
+            return;
+        }
+        try {
+            (new RenovigajSxlosilojAPI($this->conn))->revoki($sxlosilo);
+            $this->sendResponse(200, array("message" => "Déconnexion réussie"));
+        } catch(PDOException $e) {
+            error_log("auth/revoke : " . $e->getMessage());
+            $this->sendError(500, "Erreur interne du serveur");
+        }
+    }
+
+    private function persono(int $persono_id): ?array {
+        $stmt = $this->conn->prepare("SELECT id, enirnomo, rajtoj, aktivigita FROM personoj WHERE id = ?");
+        $stmt->execute([$persono_id]);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $row ?: null;
+    }
+
+    private function sxlosiloj(array $row, string $renovigaSxlosilo): array {
+        return array(
+            "access_token" => JWTAuth::generate($row, JWTAuth::TTL_MOBILE),
+            "token_type" => "Bearer",
+            "expires_in" => JWTAuth::TTL_MOBILE,
+            "refresh_token" => $renovigaSxlosilo,
+            "refresh_expires_in" => RenovigajSxlosilojAPI::TTL,
+            "user" => array("id" => (int)$row["id"], "enirnomo" => $row["enirnomo"], "rajtoj" => $row["rajtoj"])
+        );
+    }
+
     private function register() {
         // Récupération des données JSON
         $input = json_decode(file_get_contents('php://input'), true);

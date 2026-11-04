@@ -104,4 +104,56 @@ class VortojAPI {
         }
         return true;
     }
+
+    // Mots à réviser maintenant, dans le désordre : id, fr, tipo. Sans la traduction espéranto attendue (#1088).
+    public function revizio(int $persono_id): array {
+        $demando = $this->bdd->prepare("SELECT v.id, v.fr, v.tipo FROM personoj_vortoj pv JOIN vortoj v ON v.id = pv.vorto_id
+            WHERE pv.persono_id = ? AND pv.forigita = 0 AND pv.venontaFojo <= NOW() ORDER BY RAND()");
+        $demando->execute(array($persono_id));
+        return $demando->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // Jours avant de reproposer un mot après la n-ième bonne réponse d'affilée : 1, 6, puis le double à chaque fois.
+    private static function intervalo(int $nombrilo): int {
+        return $nombrilo <= 1 ? 1 : ($nombrilo == 2 ? 6 : 2 * self::intervalo($nombrilo - 1));
+    }
+
+    // Une variante de la réponse attendue (séparées par |) suffit ; casse, ponctuation et système x ignorés.
+    private static function gxustas(string $lernanta, string $bona): bool {
+        $forigendaj = array("." => "", "," => "", "'" => "", "!" => "", "?" => "", "-" => "", "_" => "");
+        foreach (explode("|", $bona) as $varianto) {
+            if (strtolower(konvX(trim(strtr($lernanta, $forigendaj)))) == strtolower(konvX(trim(strtr($varianto, $forigendaj))))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Réponse de l'élève en révision du vocabulaire. Bonne réponse : le mot revient plus tard ; mauvaise : son compteur
+    // repart à 1 et il revient au plus tôt. Renvoie ["gxusta", "fr", "bona_respondo" (première variante), "respondo"
+    // (réponse échappée), "sono"], ou null si le mot n'est pas dans la révision de l'élève.
+    public function kontroli(int $persono_id, int $vorto_id, string $respondo): ?array {
+        $respondo = mb_ereg_replace('\xc2\xa0', ' ', htmlspecialchars($respondo, ENT_QUOTES)); // espaces insécables (#774)
+        $demando = $this->bdd->prepare("SELECT v.fr, v.eo, pv.nombrilo FROM vortoj v
+            JOIN personoj_vortoj pv ON pv.vorto_id = v.id AND pv.persono_id = ? WHERE v.id = ?");
+        $demando->execute(array($persono_id, $vorto_id));
+        $vico = $demando->fetch(PDO::FETCH_ASSOC);
+        if (!$vico) {
+            return null;
+        }
+        $gxusta = self::gxustas($respondo, $vico["eo"]);
+        if ($gxusta) {
+            $this->bdd->prepare("UPDATE personoj_vortoj SET nombrilo = nombrilo + 1, venontaFojo = DATE_ADD(NOW(), INTERVAL ? DAY), lastfojo = NOW()
+                WHERE vorto_id = ? AND persono_id = ?")->execute(array(self::intervalo((int)$vico["nombrilo"]), $vorto_id, $persono_id));
+        } else {
+            $this->bdd->prepare("UPDATE personoj_vortoj SET nombrilo = 1, lastfojo = NOW() WHERE vorto_id = ? AND persono_id = ?")
+                ->execute(array($vorto_id, $persono_id));
+        }
+        if ($gxusta || $respondo !== "") {
+            $this->bdd->prepare("INSERT INTO personoj_vortoj_respondoj (persono_id, vorto_id, dato, bona, respondo) VALUES (?, ?, NOW(), ?, ?)")
+                ->execute(array($persono_id, $vorto_id, $gxusta ? 1 : 0, $respondo));
+        }
+        return array("gxusta" => $gxusta, "fr" => $vico["fr"], "bona_respondo" => explode("|", $vico["eo"])[0],
+            "respondo" => $respondo, "sono" => self::sono($vico["eo"]));
+    }
 }

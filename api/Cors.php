@@ -46,10 +46,14 @@ class Cors {
                 return;
             }
         } else {
-            // Sans en-tête Origin : client non navigateur (script, curl) autorisé seulement s'il
-            // n'envoie pas de cookie d'authentification ; sinon le Referer doit être autorisé.
+            // Sans en-tête Origin : client non navigateur (script, curl, application mobile) autorisé s'il
+            // s'identifie par un jeton Bearer (un autre site ne peut pas l'ajouter à la requête, et un jeton faux
+            // n'est pas remplacé par la session : voir JWTAuth::validateJWT) ou s'il n'envoie pas de cookie
+            // d'authentification ; sinon le Referer doit être autorisé.
+            require_once __DIR__ . '/JWTAuth.php';
+            $hasBearer = JWTAuth::getBearerToken() !== null;
             $hasAuthCookie = isset($_COOKIE[session_name()]) || isset($_COOKIE['access_token']);
-            if (!$hasAuthCookie) {
+            if ($hasBearer || !$hasAuthCookie) {
                 return;
             }
             $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';

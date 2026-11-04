@@ -22,8 +22,11 @@ class JWTAuth {
         return $motDePasse;
     }
 
+    // Durée de l'access token de l'application mobile, renouvelé par un refresh token (#1088)
+    const TTL_MOBILE = 900;
+
     // Génère un jeton pour un utilisateur (ligne de la table personoj)
-    public static function generate($user) {
+    public static function generate($user, $ttl = self::TTL) {
         $now = time();
         $header = array('alg' => 'HS256', 'typ' => 'JWT');
         $payload = array(
@@ -31,7 +34,7 @@ class JWTAuth {
             'enirnomo' => $user['enirnomo'],
             'rajto' => $user['rajtoj'],
             'iat' => $now,
-            'exp' => $now + self::TTL
+            'exp' => $now + $ttl
         );
         $body = self::base64url_encode(json_encode($header)) . '.' . self::base64url_encode(json_encode($payload));
         $signature = self::base64url_encode(hash_hmac('sha256', $body, self::secret(), true));
@@ -124,7 +127,7 @@ class JWTAuth {
         return $payload ? $payload['persono_id'] : null;
     }
 
-    private static function getBearerToken() {
+    public static function getBearerToken() {
         $authHeader = self::getAuthorizationHeader();
         if ($authHeader && preg_match('/Bearer\s+(\S+)/', $authHeader, $matches)) {
             return $matches[1];

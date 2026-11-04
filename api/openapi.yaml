@@ -1,0 +1,695 @@
+openapi: 3.0.3
+info:
+  title: API élève d'iKurso
+  version: 1.0.0
+  description: |
+    API pour suivre un cours d'iKurso sans les pages PHP, faite pour l'application mobile (#1088) :
+    connexion, cours et leçons, sections et exercices, envoi au correcteur, correction, révision du vocabulaire.
+
+    **Adresses.** Les chemins ci-dessous sont relatifs à `/api` : `/api/lernado/kursoj`. Le point d'entrée réel est
+    `api.php?path=…` : `/api/lernado/vortoj?kurso=CG` s'écrit `api.php?path=lernado/vortoj&kurso=CG`. En prod, `/api/`
+    est servi par un autre programme : il faut toujours appeler `api.php?path=…` (le client TypeScript le fait).
+
+    **Authentification.** `POST /auth/token` donne un access token (JWT, 15 minutes) et un refresh token (60 jours).
+    L'access token s'envoie dans `Authorization: Bearer …`. Quand il expire (401), `POST /auth/refresh` donne une
+    nouvelle paire : le refresh token envoyé ne sert plus (rotation). Un refresh token déjà utilisé qui revient fait
+    révoquer tous ceux de la personne. `POST /auth/revoke` déconnecte. Sans en-tête `Origin`, l'API accepte les
+    requêtes qui portent un jeton Bearer (l'application n'a ni cookie ni session).
+
+    **Contenu.** `enhavo` est le HTML d'une section (voir `.ai/DB_SCHEMA.md`). Images, sons et liens y sont relatifs
+    à la racine du site (`fr/son/vortoj/saluton.mp3`). Les marqueurs indiquent où placer :
+    `##EKZERCO:N##` ou `##EKZERCO:N:eo##` l'exercice N (dans `ekzercoj`), `##QCM:[…]##` et `##QCM_BILDOJ:[…]##`
+    un QCM d'auto-évaluation (questions en JSON, bonne réponse comprise : il se corrige sur l'appareil, sans envoi),
+    `##RESUMO##` le récapitulatif avant l'envoi (`GET /lernado/lecionoj/{kurso}/{numero}/resumo`).
+    Les exercices ne contiennent jamais les réponses attendues : la correction se fait sur le serveur.
+
+    **Erreurs.** Réponse `{"error": "message en français"}` avec le code HTTP.
+servers:
+  - url: https://ikurso.esperanto-france.org/api
+  - url: http://localhost:8080/api
+security:
+  - bearer: []
+tags:
+  - name: auth
+  - name: lernado
+paths:
+  /auth/token:
+    post:
+      tags: [auth]
+      summary: Connexion de l'application (identifiant ou adresse e-mail, et mot de passe)
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [identigilo, pasvorto]
+              properties:
+                identigilo: { type: string, description: 'Identifiant ou adresse e-mail' }
+                pasvorto: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Sxlosiloj' }
+        '400': { $ref: '#/components/responses/Eraro' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '403':
+          description: Compte pas encore activé (lien envoyé par mail à l'inscription)
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
+  /auth/refresh:
+    post:
+      tags: [auth]
+      summary: Nouvelle paire de jetons contre le refresh token, qui ne sert plus ensuite
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/RenovigaPeto' }
+      responses:
+        '200': { $ref: '#/components/responses/Sxlosiloj' }
+        '400': { $ref: '#/components/responses/Eraro' }
+        '401':
+          description: 'Refresh token inconnu, expiré, révoqué ou déjà utilisé : se reconnecter'
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
+  /auth/revoke:
+    post:
+      tags: [auth]
+      summary: Déconnexion de l'application (révoque le refresh token)
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/RenovigaPeto' }
+      responses:
+        '200': { $ref: '#/components/responses/Mesagxo' }
+        '400': { $ref: '#/components/responses/Eraro' }
+  /auth/register:
+    post:
+      tags: [auth]
+      summary: Inscription ; un mail contient le lien d'activation, à suivre avant de se connecter
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [enirnomo, pasvorto, retadreso]
+              properties:
+                enirnomo: { type: string, description: 'Identifiant, qui ne doit pas être une adresse e-mail' }
+                pasvorto: { type: string }
+                retadreso: { type: string, format: email }
+      responses:
+        '201':
+          description: Compte créé, mail d'activation envoyé
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [message, user_id]
+                properties:
+                  message: { type: string }
+                  user_id: { type: integer }
+        '400': { $ref: '#/components/responses/Eraro' }
+  /auth/me:
+    get:
+      tags: [auth]
+      summary: La personne connectée
+      responses:
+        '200':
+          description: Personne connectée et son cours actuel
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [user]
+                properties:
+                  user:
+                    type: object
+                    required: [id, enirnomo, rajtoj]
+                    properties:
+                      id: { type: integer }
+                      enirnomo: { type: string }
+                      rajtoj: { $ref: '#/components/schemas/Rajtoj' }
+                      retadreso: { type: string }
+                      personnomo: { type: string, nullable: true }
+                      familinomo: { type: string, nullable: true }
+                      aktivigita: { type: boolean }
+                      ekdato: { type: string, nullable: true }
+                      lasteniro: { type: string, nullable: true }
+        '401': { $ref: '#/components/responses/Eraro' }
+  /lernado/kursoj:
+    get:
+      tags: [lernado]
+      summary: Les cours, avec la progression de l'élève et son correcteur
+      responses:
+        '200':
+          description: Les trois cours
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [kursoj]
+                properties:
+                  kursoj:
+                    type: array
+                    items: { $ref: '#/components/schemas/Kurso' }
+        '401': { $ref: '#/components/responses/Eraro' }
+  /lernado/kursoj/{kurso}:
+    get:
+      tags: [lernado]
+      summary: Leçons d'un cours et leurs sections, avec ce que l'élève a fini et envoyé
+      parameters:
+        - $ref: '#/components/parameters/Kurso'
+      responses:
+        '200':
+          description: Leçons du cours
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [kodo, lecionoj]
+                properties:
+                  kodo: { $ref: '#/components/schemas/KursoKodo' }
+                  lecionoj:
+                    type: array
+                    items: { $ref: '#/components/schemas/Leciono' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '404': { $ref: '#/components/responses/Eraro' }
+  /lernado/sekcioj/{id}:
+    get:
+      tags: [lernado]
+      summary: Une section, son contenu et ses exercices (sans les réponses attendues)
+      parameters:
+        - $ref: '#/components/parameters/SekcioId'
+      responses:
+        '200':
+          description: La section
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Sekcio' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '404': { $ref: '#/components/responses/Eraro' }
+  /lernado/sekcioj/{id}/fini:
+    post:
+      tags: [lernado]
+      summary: Section terminée (bouton « Terminé ! ») ; ses mots entrent dans la révision du vocabulaire
+      parameters:
+        - $ref: '#/components/parameters/SekcioId'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ekdato: { type: integer, description: 'Heure d''ouverture de la section (timestamp Unix) ; maintenant par défaut' }
+      responses:
+        '200':
+          description: Section enregistrée
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [novaj_vortoj, sekva]
+                properties:
+                  novaj_vortoj: { type: integer, description: 'Mots ajoutés à la révision' }
+                  sekva: { type: integer, nullable: true, description: 'Section où aller : la suivante pas encore finie de la leçon, sinon la suivante ; null après la dernière' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '404': { $ref: '#/components/responses/Eraro' }
+  /lernado/respondoj:
+    post:
+      tags: [lernado]
+      summary: Réponse à une question, enregistrée et corrigée tout de suite si l'exercice l'est automatiquement
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [ekzercero_id, respondo]
+              properties:
+                ekzercero_id: { type: integer }
+                respondo:
+                  type: string
+                  description: Texte de la réponse ; pour une phrase à trous ou à menus, la phrase complète ; pour un choix (`elektoj`), le choix tel quel
+      responses:
+        '200':
+          description: Réponse enregistrée
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [ekzercero_id, gxusta]
+                properties:
+                  ekzercero_id: { type: integer }
+                  gxusta: { type: boolean, nullable: true, description: 'null si la question n''est pas corrigée automatiquement' }
+        '400': { $ref: '#/components/responses/Eraro' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '404': { $ref: '#/components/responses/Eraro' }
+  /lernado/lecionoj/{kurso}/{numero}/resumo:
+    get:
+      tags: [lernado]
+      summary: Ce qui manque avant d'envoyer la leçon (sections pas finies, questions sans réponse)
+      parameters:
+        - $ref: '#/components/parameters/Kurso'
+        - $ref: '#/components/parameters/Numero'
+      responses:
+        '200':
+          description: Récapitulatif
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Resumo' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '404': { $ref: '#/components/responses/Eraro' }
+  /lernado/lecionoj/{kurso}/{numero}/sendi:
+    post:
+      tags: [lernado]
+      summary: Envoi de la leçon au correcteur ; au premier envoi du cours, un correcteur est attribué
+      parameters:
+        - $ref: '#/components/parameters/Kurso'
+        - $ref: '#/components/parameters/Numero'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                komento: { type: string, description: 'Message pour le correcteur' }
+      responses:
+        '200':
+          description: Leçon envoyée
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [rezulto]
+                properties:
+                  rezulto:
+                    type: string
+                    enum: [sendita, korektanto_atribuita]
+                    description: '`sendita` : au correcteur de l''élève ; `korektanto_atribuita` : premier envoi, un correcteur vient d''être attribué'
+        '401': { $ref: '#/components/responses/Eraro' }
+        '403':
+          description: Compte pas activé
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
+        '404': { $ref: '#/components/responses/Eraro' }
+        '422':
+          description: Aucune réponse dans la leçon
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
+  /lernado/lecionoj/{kurso}/{numero}/korekto:
+    get:
+      tags: [lernado]
+      summary: La leçon envoyée et sa correction (messages du correcteur, correction de chaque réponse)
+      parameters:
+        - $ref: '#/components/parameters/Kurso'
+        - $ref: '#/components/parameters/Numero'
+      responses:
+        '200':
+          description: Correction
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Korekto' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '404': { $ref: '#/components/responses/Eraro' }
+  /lernado/vortoj:
+    get:
+      tags: [lernado]
+      summary: Lexique d'un cours, avec le niveau de l'élève sur chaque mot
+      parameters:
+        - name: kurso
+          in: query
+          required: true
+          schema: { $ref: '#/components/schemas/KursoKodo' }
+        - name: nivelo
+          in: query
+          required: false
+          schema: { $ref: '#/components/schemas/Nivelo' }
+        - name: prefikso
+          in: query
+          required: false
+          description: Début du mot espéranto ou français
+          schema: { type: string }
+      responses:
+        '200':
+          description: Mots du cours, par ordre alphabétique
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [vortoj]
+                properties:
+                  vortoj:
+                    type: array
+                    items: { $ref: '#/components/schemas/Vorto' }
+        '400': { $ref: '#/components/responses/Eraro' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '404': { $ref: '#/components/responses/Eraro' }
+  /lernado/vortoj/{id}:
+    put:
+      tags: [lernado]
+      summary: Retirer un mot de la révision, ou l'y remettre
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [forigita]
+              properties:
+                forigita: { type: boolean }
+      responses:
+        '200':
+          description: Enregistré
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [id, forigita]
+                properties:
+                  id: { type: integer }
+                  forigita: { type: boolean }
+        '400': { $ref: '#/components/responses/Eraro' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '404': { $ref: '#/components/responses/Eraro' }
+  /lernado/revizio:
+    get:
+      tags: [lernado]
+      summary: Mots à réviser maintenant, dans le désordre (sans la traduction attendue)
+      responses:
+        '200':
+          description: Mots à réviser
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [vortoj]
+                properties:
+                  vortoj:
+                    type: array
+                    items: { $ref: '#/components/schemas/RevizioVorto' }
+        '401': { $ref: '#/components/responses/Eraro' }
+    post:
+      tags: [lernado]
+      summary: Traduction proposée pour un mot ; bonne réponse, le mot revient plus tard ; mauvaise, au plus tôt
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [vorto_id, respondo]
+              properties:
+                vorto_id: { type: integer }
+                respondo: { type: string }
+      responses:
+        '200':
+          description: Réponse corrigée
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [vorto_id, gxusta, fr, bona_respondo, sono]
+                properties:
+                  vorto_id: { type: integer }
+                  gxusta: { type: boolean }
+                  fr: { type: string }
+                  bona_respondo: { type: string, description: 'Traduction attendue (première variante)' }
+                  sono: { type: string, nullable: true, description: 'Prononciation (chemin depuis la racine du site)' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '404': { $ref: '#/components/responses/Eraro' }
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  parameters:
+    Kurso:
+      name: kurso
+      in: path
+      required: true
+      schema: { $ref: '#/components/schemas/KursoKodo' }
+    Numero:
+      name: numero
+      in: path
+      required: true
+      description: Numéro de la leçon dans le cours
+      schema: { type: integer }
+    SekcioId:
+      name: id
+      in: path
+      required: true
+      description: Identifiant de la section (lecioneroj.id)
+      schema: { type: integer }
+  responses:
+    Eraro:
+      description: Erreur
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Eraro' }
+    Mesagxo:
+      description: Fait
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [message]
+            properties:
+              message: { type: string }
+    Sxlosiloj:
+      description: Jetons de l'application
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Sxlosiloj' }
+  schemas:
+    Eraro:
+      type: object
+      required: [error]
+      properties:
+        error: { type: string }
+    Rajtoj:
+      type: string
+      enum: [A, K, S, P, I]
+      description: A administrateur, K correcteur, S élève, P élève sans correcteur, I inactif
+    KursoKodo:
+      type: string
+      enum: [CG, GR, PP]
+      description: CG cours en 10 leçons, GR Gerda malaperis, PP Paŝoj al plena posedo
+    Nivelo:
+      type: string
+      enum: [nevidita, lernenda, lernata, konata, forigita]
+      description: Pas encore vu, à apprendre, en cours, bien connu, retiré de la révision
+    RenovigaPeto:
+      type: object
+      required: [refresh_token]
+      properties:
+        refresh_token: { type: string }
+    Sxlosiloj:
+      type: object
+      required: [access_token, token_type, expires_in, refresh_token, refresh_expires_in, user]
+      properties:
+        access_token: { type: string }
+        token_type: { type: string, enum: [Bearer] }
+        expires_in: { type: integer, description: 'Durée de l''access token en secondes' }
+        refresh_token: { type: string }
+        refresh_expires_in: { type: integer, description: 'Durée du refresh token en secondes' }
+        user:
+          type: object
+          required: [id, enirnomo, rajtoj]
+          properties:
+            id: { type: integer }
+            enirnomo: { type: string }
+            rajtoj: { $ref: '#/components/schemas/Rajtoj' }
+    Kurso:
+      type: object
+      required: [kodo, nomo, lecionoj, sekcioj, finitaj_sekcioj, nuna_leciono, stato, korektanto]
+      properties:
+        kodo: { $ref: '#/components/schemas/KursoKodo' }
+        nomo: { type: string }
+        lecionoj: { type: integer }
+        sekcioj: { type: integer }
+        finitaj_sekcioj: { type: integer }
+        nuna_leciono: { type: integer, nullable: true, description: 'Dernière leçon envoyée au correcteur' }
+        stato:
+          type: string
+          nullable: true
+          enum: [N, K, F, H, null]
+          description: 'Suivi par le correcteur : N nouveau, K en cours, F fini, H abandonné ; null sans correcteur'
+        korektanto:
+          type: object
+          nullable: true
+          required: [enirnomo, personnomo]
+          properties:
+            enirnomo: { type: string }
+            personnomo: { type: string, nullable: true }
+    Leciono:
+      type: object
+      required: [numero, titolo, stato, sendita, korektita, sekcioj]
+      properties:
+        numero: { type: integer }
+        titolo: { type: string, nullable: true }
+        stato:
+          type: string
+          nullable: true
+          enum: [farita, nekompleta, null]
+          description: 'farita : toutes les sections finies ; nekompleta : envoyée avec des sections pas finies'
+        sendita: { type: boolean }
+        korektita: { type: boolean }
+        sekcioj:
+          type: array
+          items: { $ref: '#/components/schemas/SekcioEro' }
+    SekcioTipo:
+      type: string
+      enum: [TEKSTO, VORTARO, QCM, EKZERCARO]
+    SekcioEro:
+      type: object
+      required: [id, ordo, titolo, tipo, dauxro, lasta, finita]
+      properties:
+        id: { type: integer }
+        ordo: { type: integer }
+        titolo: { type: string }
+        tipo: { $ref: '#/components/schemas/SekcioTipo' }
+        dauxro: { type: integer, nullable: true, description: 'Durée estimée en minutes' }
+        lasta: { type: boolean, description: 'Dernière section : épilogue et envoi des exercices' }
+        finita: { type: boolean }
+    Sekcio:
+      type: object
+      required: [id, kurso, leciono, leciono_titolo, ordo, titolo, tipo, dauxro, lasta, finita, antauxa, sekva, enhavo, ekzercoj]
+      properties:
+        id: { type: integer }
+        kurso: { $ref: '#/components/schemas/KursoKodo' }
+        leciono: { type: integer }
+        leciono_titolo: { type: string, nullable: true }
+        ordo: { type: integer }
+        titolo: { type: string }
+        tipo: { $ref: '#/components/schemas/SekcioTipo' }
+        dauxro: { type: integer, nullable: true }
+        lasta: { type: boolean }
+        finita: { type: boolean }
+        antauxa: { type: integer, nullable: true, description: 'Section précédente de la leçon' }
+        sekva: { type: integer, nullable: true, description: 'Section suivante de la leçon' }
+        enhavo: { type: string, description: 'HTML de la section, avec ses marqueurs' }
+        ekzercoj:
+          type: array
+          items: { $ref: '#/components/schemas/Ekzerco' }
+    Ekzerco:
+      type: object
+      required: [id, lingvo, komando, komando_detalo, ekzemplo, typo, x2u, korektebla, demandoj]
+      properties:
+        id: { type: integer }
+        lingvo: { type: string, enum: [fr, eo], description: 'Langue des consignes générées (EXERCICE ou EKZERCO)' }
+        komando: { type: string, description: 'Consigne (HTML)' }
+        komando_detalo: { type: string, nullable: true }
+        ekzemplo: { type: string, nullable: true, description: 'Exemples (HTML)' }
+        typo:
+          type: string
+          description: 'traduko-1, verkado-1… : champ d''une ligne ; traduko-2, verkado-2, stelo-2 : texte long ; plenigu : phrase à trous ; elektlisto : phrase à menus'
+        x2u: { type: boolean, description: 'Système x : cx s''affiche ĉ' }
+        korektebla: { type: boolean, description: 'Exercice corrigé automatiquement' }
+        demandoj:
+          type: array
+          items: { $ref: '#/components/schemas/Demando' }
+    Demando:
+      type: object
+      required: [id, numero, demando, elektoj, partoj, respondmodelo, bildo, poentoj, korektebla, respondo, valoroj, gxusta, korekto, lernantaj_poentoj]
+      properties:
+        id: { type: integer, description: 'Identifiant de la question (ekzercero_id)' }
+        numero: { type: integer }
+        demando: { type: string, description: 'Question (HTML)' }
+        elektoj:
+          type: array
+          nullable: true
+          items: { type: string }
+          description: Choix proposés ; la réponse est l'un d'eux, tel quel
+        partoj:
+          type: array
+          nullable: true
+          items: { $ref: '#/components/schemas/FrazoParto' }
+          description: Phrase à trous ou à menus, morceau par morceau
+        respondmodelo: { type: string, nullable: true, description: 'Texte de départ du champ de réponse' }
+        bildo: { type: string, nullable: true, description: 'Image (chemin depuis la racine du site)' }
+        poentoj: { type: integer, nullable: true, description: 'Points de la question (examens)' }
+        korektebla: { type: boolean, description: 'Question corrigée automatiquement' }
+        respondo: { type: string, nullable: true, description: 'Réponse de l''élève (HTML échappé)' }
+        valoroj:
+          type: array
+          nullable: true
+          items: { type: string }
+          description: Valeurs des trous ou des menus retrouvées dans la réponse de l'élève
+        gxusta: { type: boolean, nullable: true, description: 'Juste ou fausse ; null si pas corrigée' }
+        korekto: { type: string, nullable: true, description: 'Correction écrite par le correcteur' }
+        lernantaj_poentoj: { type: integer, nullable: true, description: 'Points donnés par le correcteur' }
+    FrazoParto:
+      type: object
+      required: [tipo]
+      properties:
+        tipo: { type: string, enum: [teksto, truo, elekto] }
+        teksto: { type: string, description: 'Pour tipo = teksto' }
+        elektoj:
+          type: array
+          items: { type: string }
+          description: Pour tipo = elekto
+    Resumo:
+      type: object
+      required: [nefinitaj_sekcioj, mankantaj_respondoj]
+      properties:
+        nefinitaj_sekcioj:
+          type: array
+          items:
+            type: object
+            required: [ordo, titolo]
+            properties:
+              ordo: { type: integer }
+              titolo: { type: string }
+        mankantaj_respondoj:
+          type: array
+          items:
+            type: object
+            required: [ekzerco_id, komando, ordo, numeroj]
+            properties:
+              ekzerco_id: { type: integer }
+              komando: { type: string }
+              ordo: { type: integer, description: 'Section de l''exercice' }
+              numeroj:
+                type: array
+                items: { type: integer }
+    Korekto:
+      type: object
+      required: [kurso, leciono, sendita, korektita, komento, enkonduko, konkludo, ekzercoj]
+      properties:
+        kurso: { $ref: '#/components/schemas/KursoKodo' }
+        leciono: { type: integer }
+        sendita: { type: string, nullable: true, description: 'Date d''envoi ; null si pas encore envoyée' }
+        korektita: { type: boolean }
+        komento: { type: string, nullable: true, description: 'Message de l''élève à son correcteur' }
+        enkonduko: { type: string, nullable: true, description: 'Introduction du correcteur (HTML)' }
+        konkludo: { type: string, nullable: true, description: 'Conclusion du correcteur (HTML)' }
+        ekzercoj:
+          type: array
+          items: { $ref: '#/components/schemas/Ekzerco' }
+    Vorto:
+      type: object
+      required: [id, eo, fr, leciono, ordo, nivelo, sono]
+      properties:
+        id: { type: integer }
+        eo: { type: string, description: 'Mot espéranto ; variantes séparées par |' }
+        fr: { type: string }
+        leciono: { type: integer }
+        ordo: { type: integer }
+        nivelo: { $ref: '#/components/schemas/Nivelo' }
+        sono: { type: string, nullable: true }
+    RevizioVorto:
+      type: object
+      required: [id, fr, tipo]
+      properties:
+        id: { type: integer }
+        fr: { type: string }
+        tipo: { type: string, nullable: true }

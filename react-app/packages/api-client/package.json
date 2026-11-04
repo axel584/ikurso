@@ -1,0 +1,20 @@
+{
+  "name": "@ikurso/api-client",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Client TypeScript de l'API élève d'iKurso, généré depuis api/openapi.yaml (#1088)",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "generate": "openapi-typescript ../../../api/openapi.yaml -o src/schema.d.ts",
+    "check": "tsc --noEmit",
+    "build": "npm run generate && npm run check"
+  },
+  "dependencies": {
+    "openapi-fetch": "0.17.0"
+  },
+  "devDependencies": {
+    "openapi-typescript": "7.13.0",
+    "typescript": "^5.3.3"
+  }
+}

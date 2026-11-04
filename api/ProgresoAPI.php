@@ -62,6 +62,18 @@ class ProgresoAPI {
         return array("ordo" => (int)$sekcioj[0]["ordo"], "retpagxo" => $sekcioj[0]["retpagxo"]);
     }
 
+    // L'élève a terminé la section (bouton « Terminé ! ») : enregistrée une seule fois, avec l'heure où il l'a ouverte
+    // ($ekdato, timestamp Unix ; maintenant s'il est absent).
+    public function finiSekcion(int $persono_id, int $lecionero_id, ?int $ekdato): void {
+        $demando = $this->bdd->prepare("SELECT COUNT(*) FROM personoj_lecioneroj WHERE persono_id = ? AND lecionero_id = ?");
+        $demando->execute(array($persono_id, $lecionero_id));
+        if ((int)$demando->fetchColumn() > 0) {
+            return;
+        }
+        $this->bdd->prepare("INSERT INTO personoj_lecioneroj (dato, persono_id, lecionero_id, ekdato)
+            VALUES (NOW(), ?, ?, IFNULL(FROM_UNIXTIME(?), NOW()))")->execute(array($persono_id, $lecionero_id, $ekdato));
+    }
+
     // La section est-elle la dernière de la leçon (épilogue et envoi au correcteur) ? (#487)
     public function estasLastaSekcio(string $kurso, int $numero, int $ordo): bool {
         $demando = $this->bdd->prepare("SELECT le.lasta FROM lecioneroj le JOIN lecionoj l ON l.id = le.leciono_id

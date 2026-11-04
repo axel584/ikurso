@@ -34,6 +34,18 @@ test('les exercices, les images et les sons du contenu sont bien placés', async
   expect((await page.request.head('fr/son/frazoj/se-junulo-ne-lernis.mp3')).status()).toBe(200)
 })
 
+test('Gerda malaperis : enregistrement du chapitre, deux parties de Lasu min paroli plu, exercices', async ({ page }) => {
+  await page.goto('fr/gerda/cxap14.php?section=1')
+  await expect(page.locator('#leciono-enhavo audio source')).toHaveAttribute('src', '../../fr/gerda/son/gerda/gerda14.mp3')
+  await page.goto('fr/gerda/cxap14.php?section=5')
+  const sonoj = page.locator('#leciono-enhavo audio source')
+  await expect(sonoj).toHaveCount(2)
+  await expect(sonoj.nth(0)).toHaveAttribute('src', '../../audio/lasumin14a.mp3')
+  await expect(sonoj.nth(1)).toHaveAttribute('src', '../../audio/lasumin14b.mp3')
+  await page.goto('fr/gerda/cxap01.php?section=4')
+  await expect(page.locator('#leciono-enhavo fieldset.ekzerco').first()).toBeVisible()
+})
+
 test('le texte pour le visiteur sans compte ne s’affiche pas pour l’élève connecté', async ({ page }) => {
   const teksto = 'Si vous avez fait les exercices sans compte'
   await page.goto('fr/cge/lec01.php?section=13')

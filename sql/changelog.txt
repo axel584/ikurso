@@ -4558,3 +4558,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Correction automatique, CG leçon 4 n° 10 (Nacia Tago) : date sans « de » acceptée (« la dekkvara julio »), « julio » en minuscules dans le corrigé type (#1046) : voir sql/53-nacia-tago-sen-de-1046.sql
 --- Révision du vocabulaire : synonymes acceptés et traductions précisées d'après les remarques de Jean-Luc (#994) : voir sql/54-vocabulaire-revision-994.sql
 --- Contenu des 120 sections du cours en 10 leçons dans lecioneroj.enhavo ; lec01.php à lec10.php passent par le gabarit fr/cge/leciono.inc.php (#1087) : voir sql/55-contenu-cours-10-lecons-1087.sql
+--- Contenu des 155 sections de Gerda malaperis dans lecioneroj.enhavo ; cxap01.php à cxap25.php et ekzameno_a2.php passent par le gabarit fr/gerda/leciono.inc.php (#1087) : voir sql/56-contenu-gerda-malaperis-1087.sql

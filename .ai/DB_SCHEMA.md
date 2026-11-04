@@ -90,7 +90,7 @@ Sections (parties) composant une leçon.
 
 #### Contenu `enhavo` (#1087)
 
-Le cours en 10 leçons (`CG`) est affiché depuis `enhavo` : `fr/cge/lec01.php` à `lec10.php` ne font qu'inclure le gabarit `fr/cge/leciono.inc.php`, qui appelle `montriLecioneron()` (`webui.inc.php`). Gerda malaperis (`GR`) et Paŝoj (`PP`) sont encore dans leurs fichiers PHP ; `sql/eltiri-enhavon.php` sert à en extraire le contenu.
+Le cours en 10 leçons (`CG`) et Gerda malaperis (`GR`) sont affichés depuis `enhavo` : `fr/cge/lec01.php` à `lec10.php`, `fr/gerda/cxap01.php` à `cxap25.php` et `ekzameno_a2.php` ne font qu'inclure le gabarit `leciono.inc.php` de leur dossier, qui appelle `montriLecioneron()` (`webui.inc.php`). Paŝoj (`PP`) est encore dans ses fichiers PHP ; `sql/eltiri-enhavon.php` sert à en extraire le contenu.
 
 - HTML seulement : ni PHP ni JavaScript (`<script>`, `onclick`…). Classes du site (Materialize et `ikurso.css`) : `p.parto`, `.eo`, `.row` / `.col`, `fieldset.vortoj`, `.vortlisto`, `table.bordered`, `a.sm2_button` (bouton de lecture d'un son), `.noprint` / `.onlyprint`, etc.
 - Images, sons et liens internes : adresse relative à la racine du site (`fr/son/vortoj/…mp3`, `fr/cge/bildoj/…`, `memoriVortojn.php`). À l'affichage, `href` et `src` reçoivent le préfixe `$vojo` de la page ; les adresses `https:`, `mailto:`, `#…` et `/…` sont laissées telles quelles.

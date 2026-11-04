@@ -2,14 +2,14 @@
 // #1087 : extrait le contenu des sections d'un cours de ses fichiers PHP (fr/cge/lec01.php…)
 // et écrit le script SQL qui le range dans lecioneroj.enhavo.
 // À lancer en ligne de commande, dans le conteneur : php sql/eltiri-enhavon.php GR > sql/NN-….sql
-// Fait pour le cours en 10 leçons (sql/55) et Gerda malaperis (sql/56) : leurs pages n'incluent plus qu'un gabarit,
+// Fait pour le cours en 10 leçons (sql/55), Gerda malaperis (sql/56) et Paŝoj (sql/57) : leurs pages n'incluent plus qu'un gabarit,
 // le script ne peut donc être relancé qu'à partir des fichiers d'avant : git show 880ff09f:fr/cge/lec01.php…, et pour Gerda
-// git show 2ac8614a:fr/gerda/cxap01.php…, avec gerdasono.inc.php et lasusono.inc.php (lecteurs audio inclus par les sections).
-// Il servira pour Paŝoj, en ajoutant son dossier dans $kursoj.
+// git show 2ac8614a:fr/gerda/cxap01.php…, avec gerdasono.inc.php et lasusono.inc.php (lecteurs audio inclus par les sections),
+// pour Paŝoj git show 69b63432:eo/ppp/pasxo01.php…
 //
 // Chaque section (bloc if ($section=="N") { … }) est exécutée avec des fonctions de remplacement :
 // les parties dynamiques deviennent des marqueurs que montriLecioneron() (webui.inc.php) remplace à l'affichage :
-//   ##EKZERCO:N##          exercice N (getEkzercon)
+//   ##EKZERCO:N##          exercice N (getEkzercon), ##EKZERCO:N:eo## pour un exercice présenté en espéranto
 //   ##QCM:[json]##         QCM(…), ##QCM_BILDOJ:[json]## pour QCM_bildoj(…)
 //   ##RESUMO##             récapitulatif de la leçon avant l'envoi
 //   <!--se nekonektita-->…<!--alie-->…<!--/se-->   texte selon que l'élève a un compte connecté ou non
@@ -21,6 +21,7 @@ set_error_handler(function ($niveau, $mesagxo, $dosiero, $linio) { throw new Err
 $kursoj = array(
 	"CG" => array("dosierujo" => "fr/cge", "lecionoj" => 10, "dosiero" => fn($n) => sprintf("lec%02d.php", $n)),
 	"GR" => array("dosierujo" => "fr/gerda", "lecionoj" => 26, "dosiero" => fn($n) => $n == 26 ? "ekzameno_a2.php" : sprintf("cxap%02d.php", $n)),
+	"PP" => array("dosierujo" => "eo/ppp", "lecionoj" => 30, "dosiero" => fn($n) => sprintf("pasxo%02d.php", $n)),
 );
 $kurso = isset($argv[1]) ? $argv[1] : "";
 if (!isset($kursoj[$kurso])) { fwrite(STDERR, "usage : php sql/eltiri-enhavon.php CG\n"); exit(1); }
@@ -30,7 +31,7 @@ $VOJO = "@@VOJO@@";
 $vojo = $VOJO; // pour montriKonsilon()
 
 // fonctions de remplacement, appelées par le code des sections
-function getEkzercon($id, $persono_id) { echo "##EKZERCO:".(int)$id."##"; }
+function getEkzercon($id, $persono_id, $lingvo = "fr") { echo "##EKZERCO:".(int)$id.($lingvo == "fr" ? "" : ":".$lingvo)."##"; }
 function QCM($qcm) { echo "##QCM:".json_encode($qcm, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)."##"; }
 function QCM_bildoj($qcm) {
 	global $k;

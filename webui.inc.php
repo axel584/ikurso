@@ -40,7 +40,7 @@ function displayWarningSiLecioneroManquante($persono_id,$kurso,$leciono,$lecione
 }
 
 // Contenu d'une section, rangé en base dans lecioneroj.enhavo (#1087), avec les marqueurs posés par sql/eltiri-enhavon.php :
-// ##EKZERCO:N##, ##QCM:[json]##, ##QCM_BILDOJ:[json]##, ##RESUMO## et <!--se nekonektita-->…<!--alie-->…<!--/se-->.
+// ##EKZERCO:N## (ou ##EKZERCO:N:eo##), ##QCM:[json]##, ##QCM_BILDOJ:[json]##, ##RESUMO## et <!--se nekonektita-->…<!--alie-->…<!--/se-->.
 // Les adresses du contenu sont relatives à la racine du site : on les fait précéder de $vojo.
 function montriLecioneron($kurso,$leciono,$section,$persono_id) {
 	global $bdd, $vojo;
@@ -59,7 +59,9 @@ function montriLecioneron($kurso,$leciono,$section,$persono_id) {
 	echo $partoj[0];
 	for ($i = 1; $i < count($partoj); $i += 3) {
 		if ($partoj[$i] == "EKZERCO") {
-			getEkzercon((int)$partoj[$i+1],$persono_id);
+			// ##EKZERCO:N## ou ##EKZERCO:N:eo## (exercice présenté en espéranto, Paŝoj)
+			$ekzerco = explode(":", $partoj[$i+1]);
+			getEkzercon((int)$ekzerco[0],$persono_id,isset($ekzerco[1]) ? $ekzerco[1] : "fr");
 		} elseif ($partoj[$i] == "QCM") {
 			QCM(json_decode($partoj[$i+1], true));
 		} elseif ($partoj[$i] == "QCM_BILDOJ") {

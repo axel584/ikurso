@@ -46,6 +46,14 @@ test('Gerda malaperis : enregistrement du chapitre, deux parties de Lasu min par
   await expect(page.locator('#leciono-enhavo fieldset.ekzerco').first()).toBeVisible()
 })
 
+test('Paŝoj (réservé aux élèves connectés) : les exercices présentés en espéranto le restent', async ({ page }) => {
+  await login(page, USERS.lernanto)
+  await page.goto('eo/ppp/pasxo02.php?section=3')
+  const ekzercoj = page.locator('#leciono-enhavo fieldset.ekzerco legend')
+  await expect(ekzercoj).toHaveCount(2)
+  await expect(ekzercoj.first()).toContainText('EKZERCO')
+})
+
 test('le texte pour le visiteur sans compte ne s’affiche pas pour l’élève connecté', async ({ page }) => {
   const teksto = 'Si vous avez fait les exercices sans compte'
   await page.goto('fr/cge/lec01.php?section=13')

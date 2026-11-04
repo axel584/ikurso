@@ -90,12 +90,12 @@ Sections (parties) composant une leçon.
 
 #### Contenu `enhavo` (#1087)
 
-Le cours en 10 leçons (`CG`) et Gerda malaperis (`GR`) sont affichés depuis `enhavo` : `fr/cge/lec01.php` à `lec10.php`, `fr/gerda/cxap01.php` à `cxap25.php` et `ekzameno_a2.php` ne font qu'inclure le gabarit `leciono.inc.php` de leur dossier, qui appelle `montriLecioneron()` (`webui.inc.php`). Paŝoj (`PP`) est encore dans ses fichiers PHP ; `sql/eltiri-enhavon.php` sert à en extraire le contenu.
+Les trois cours, en 10 leçons (`CG`), Gerda malaperis (`GR`) et Paŝoj al plena posedo (`PP`), sont affichés depuis `enhavo` : `fr/cge/lec01.php` à `lec10.php`, `fr/gerda/cxap01.php` à `cxap25.php`, `ekzameno_a2.php` et `eo/ppp/pasxo01.php` à `pasxo30.php` ne font qu'inclure le gabarit `leciono.inc.php` de leur dossier, qui appelle `montriLecioneron()` (`webui.inc.php`). Le contenu a été extrait des anciens fichiers par `sql/eltiri-enhavon.php` (`sql/55` à `57`).
 
 - HTML seulement : ni PHP ni JavaScript (`<script>`, `onclick`…). Classes du site (Materialize et `ikurso.css`) : `p.parto`, `.eo`, `.row` / `.col`, `fieldset.vortoj`, `.vortlisto`, `table.bordered`, `a.sm2_button` (bouton de lecture d'un son), `.noprint` / `.onlyprint`, etc.
 - Images, sons et liens internes : adresse relative à la racine du site (`fr/son/vortoj/…mp3`, `fr/cge/bildoj/…`, `memoriVortojn.php`). À l'affichage, `href` et `src` reçoivent le préfixe `$vojo` de la page ; les adresses `https:`, `mailto:`, `#…` et `/…` sont laissées telles quelles.
 - Marqueurs remplacés à l'affichage :
-  - `##EKZERCO:N##` : l'exercice `ekzercoj.id = N`, avec les réponses de l'élève ;
+  - `##EKZERCO:N##` : l'exercice `ekzercoj.id = N`, avec les réponses de l'élève ; `##EKZERCO:N:eo##` le présente en espéranto (consignes, aide à la saisie), comme dans Paŝoj ;
   - `##QCM:[…]##` et `##QCM_BILDOJ:[…]##` : un QCM, questions en JSON (`question` ou `bildo`/`url`/`auteur`, `propositions`, `indices`, `reponse` à partir de 1) ;
   - `##RESUMO##` : le récapitulatif de la leçon avant l'envoi (dernière section) ;
   - `<!--se nekonektita-->…<!--alie-->…<!--/se-->` : texte pour le visiteur ou l'invité sans compte, puis (facultatif) pour l'élève connecté.

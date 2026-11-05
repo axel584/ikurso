@@ -1,6 +1,9 @@
 config.php
 js/config.js
 .htaccess
+# sauf ceux des applications React, qui font partie de leur build (#1089)
+!lernejo/.htaccess
+!react-app/apps/lernejo/public/.htaccess
 python/EvaluationLecon.csv
 __pycache__/
 python/config.py

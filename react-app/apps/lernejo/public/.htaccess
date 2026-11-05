@@ -1,0 +1,5 @@
+# Application lernejo (#1089) : les adresses des écrans (/lernejo/kurso/CG…) sont servies par index.html
+RewriteEngine On
+RewriteBase /lernejo/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [L]

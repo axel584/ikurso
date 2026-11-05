@@ -3,7 +3,7 @@ include "util.php";
 $retadreso=isset($_GET['retadreso'])?$_GET['retadreso']:"";
 $aktivigo=isset($_GET['aktivigo'])?$_GET['aktivigo']:"";
 // d'où vient le lien : relance automatique (#639) ou fiche d'administration (#878)
-$fontoj = array("rememorigo" => " (lien du rappel)", "administranto" => " (lien renvoyé par un administrateur)");
+$fontoj = array("rememorigo" => " (lien du rappel)", "administranto" => " (lien renvoyé par un administrateur)", "aplikajxo" => " (lien renvoyé depuis l’application)");
 $fonto = isset($_GET['fonto']) && isset($fontoj[$_GET['fonto']]) ? $fontoj[$_GET['fonto']] : "";
 
 // on vérifie si l'adresse est déjà utilisée

@@ -2,13 +2,14 @@
 import { useState } from 'react'
 import { KeyboardAvoidingView, Platform, ScrollView, Text, TextInput, View } from 'react-native'
 import * as Linking from 'expo-linking'
+import { router } from 'expo-router'
 import { retadreso } from '@/api/kliento'
 import { Butono } from '@/komponantoj/Bazaj'
 import { useSeanco } from '@/seanco'
 import { koloroj, stiloj } from '@/stiloj'
 
 export default function Ensaluti() {
-  const { ensaluti } = useSeanco()
+  const { ensaluti, gasto } = useSeanco()
   const [identigilo, setIdentigilo] = useState('')
   const [pasvorto, setPasvorto] = useState('')
   const [eraro, setEraro] = useState<string | null>(null)
@@ -67,9 +68,25 @@ export default function Ensaluti() {
           {eraro && <Text style={stiloj.eraro}>{eraro}</Text>}
           <Butono teksto={sendata ? 'Connexion…' : 'Se connecter'} onPress={sendi} malsxaltita={sendata} />
         </View>
+        {gasto ? (
+          <Text style={[stiloj.eta, { textAlign: 'center', maxWidth: 400 }]}>
+            Ce que vous avez fait en invité sera ajouté à votre compte.
+          </Text>
+        ) : (
+          <Text style={[stiloj.eta, { textAlign: 'center', maxWidth: 400 }]}>
+            Pas encore de compte ?{' '}
+            <Text
+              accessibilityRole="link"
+              style={{ color: koloroj.blua }}
+              onPress={() => (router.canGoBack() ? router.back() : router.replace('/bonvenon'))}
+            >
+              Commencer le cours sans compte
+            </Text>
+          </Text>
+        )}
         <Text style={[stiloj.eta, { textAlign: 'center', maxWidth: 400 }]}>
-          Pas encore de compte, ou mot de passe oublié ?{' '}
-          <Text style={{ color: koloroj.blua }} onPress={() => Linking.openURL(retadreso('aligxi.php'))}>
+          Identifiant ou mot de passe oublié ?{' '}
+          <Text accessibilityRole="link" style={{ color: koloroj.blua }} onPress={() => Linking.openURL(retadreso('index.php'))}>
             Rendez-vous sur le site
           </Text>
           .

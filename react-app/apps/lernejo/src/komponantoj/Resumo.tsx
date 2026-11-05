@@ -2,8 +2,11 @@
 import { useState } from 'react'
 import { Text, TextInput, View } from 'react-native'
 import { Link, router } from 'expo-router'
+import { ApiEraro } from '@/api/kliento'
 import { useKurso, useResumo, useSendi, type KursoKodo } from '@/api/demandoj'
+import { useSeanco } from '@/seanco'
 import { Butono, Stato } from './Bazaj'
+import { KontoBezonata } from './Gasto'
 import { HtmlTeksto } from './HtmlTeksto'
 import { koloroj, stiloj } from '@/stiloj'
 
@@ -12,6 +15,9 @@ export function Resumo({ kurso, numero }: { kurso: KursoKodo; numero: number }) 
   const leciono = useKurso(kurso).data?.lecionoj.find((l) => l.numero === numero)
   const sendi = useSendi()
   const [komento, setKomento] = useState('')
+  const { gasto } = useSeanco()
+  // compte créé dans l'application, pas encore activé : le serveur refuse l'envoi (403)
+  const neAktivigita = sendi.error instanceof ApiEraro && sendi.error.stato === 403
 
   const r = resumo.data
   const kompleta = r && r.nefinitaj_sekcioj.length === 0 && r.mankantaj_respondoj.length === 0
@@ -41,7 +47,9 @@ export function Resumo({ kurso, numero }: { kurso: KursoKodo; numero: number }) 
           </View>
         )}
       </Stato>
-      {sendi.data ? (
+      {gasto ? (
+        <KontoBezonata />
+      ) : sendi.data ? (
         <View style={{ gap: 8 }}>
           <Text style={[stiloj.teksto, { color: koloroj.verda, fontWeight: '600' }]} accessibilityLiveRegion="polite">
             {sendi.data.rezulto === 'korektanto_atribuita'
@@ -75,6 +83,11 @@ export function Resumo({ kurso, numero }: { kurso: KursoKodo; numero: number }) 
             onChangeText={setKomento}
           />
           {sendi.error && <Text style={stiloj.eraro}>{sendi.error.message}</Text>}
+          {neAktivigita && (
+            <Text accessibilityRole="link" style={{ color: koloroj.blua, fontSize: 15 }} onPress={() => router.push('/konfirmi')}>
+              Recevoir à nouveau le lien d’activation
+            </Text>
+          )}
           <Butono
             teksto={sendi.isPending ? 'Envoi…' : leciono?.sendita ? 'Envoyer à nouveau' : 'Envoyer la leçon à mon correcteur'}
             malsxaltita={sendi.isPending}

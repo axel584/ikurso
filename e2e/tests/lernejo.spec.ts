@@ -19,7 +19,9 @@ test.beforeEach(() => {
 })
 
 async function ensaluti(page: Page) {
+  // sans session, l'application ouvre l'accueil : « J'ai déjà un compte » mène à la connexion
   await page.goto('lernejo/')
+  await page.getByText('J’ai déjà un compte').click()
   await page.getByLabel('Identifiant ou adresse e-mail').fill('lernanto1')
   await page.getByLabel('Mot de passe').fill('test')
   await page.getByText('Se connecter').click()
@@ -197,11 +199,12 @@ test('session : gardée au rechargement, refusée après déconnexion', async ({
   await page.goto('lernejo/profilo')
   await expect(page.getByText('Identifiant : lernanto1')).toBeVisible()
   await page.getByText('Se déconnecter').click()
-  await expect(page.getByLabel('Mot de passe')).toBeVisible()
+  await expect(page.getByText('Commencer le cours')).toBeVisible()
   expect(sql(`SELECT COUNT(*) FROM renovigaj_sxlosiloj WHERE persono_id = ${LERNANTO} AND revokita IS NULL AND uzita IS NULL`)).toBe('0')
-  // une adresse de l'élève ramène à la connexion
+  // une adresse de l'élève ramène à l'accueil
   await page.goto('lernejo/kurso/CG')
-  await expect(page.getByLabel('Mot de passe')).toBeVisible()
+  await expect(page.getByText('Commencer le cours')).toBeVisible()
+  await page.getByText('J’ai déjà un compte').click()
 
   await page.getByLabel('Identifiant ou adresse e-mail').fill('lernanto1')
   await page.getByLabel('Mot de passe').fill('faux')

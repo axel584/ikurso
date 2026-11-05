@@ -35,7 +35,7 @@ export default function Radiko() {
 }
 
 function Navigilo() {
-  const { sxargxas, ensalutita } = useSeanco()
+  const { sxargxas, ensalutita, gasto } = useSeanco()
   // police du logo iKurso du site ; sans elle (hors ligne…), le logo s'affiche dans la police du système
   const [tiparoPreta, tiparoEraro] = useFonts({ NothingYouCouldDo_400Regular })
   if (sxargxas || !(tiparoPreta || tiparoEraro)) return null
@@ -48,11 +48,21 @@ function Navigilo() {
         contentStyle: { backgroundColor: koloroj.fono },
       }}
     >
-      <Stack.Protected guard={ensalutita}>
+      {/* sans jetons, les adresses de l'élève mènent à l'accueil */}
+      <Stack.Protected guard={ensalutita} redirectTo="/bonvenon">
         <Stack.Screen name="(lernanto)" options={{ headerShown: false }} />
       </Stack.Protected>
+      {/* arrivée dans l'application (#1089) : l'accueil, puis le choix du cours qui crée l'invité */}
       <Stack.Protected guard={!ensalutita}>
-        <Stack.Screen name="ensaluti" options={{ title: 'iKurso', headerShown: false }} />
+        <Stack.Screen name="bonvenon" options={{ headerShown: false }} />
+        <Stack.Screen name="elekti" options={{ title: 'Par où commencer ?' }} />
+      </Stack.Protected>
+      {/* l'invité se connecte à son compte (son travail le rejoint) ou en crée un */}
+      <Stack.Protected guard={!ensalutita || gasto}>
+        <Stack.Screen name="ensaluti" options={{ title: 'Connexion', headerShown: gasto }} />
+      </Stack.Protected>
+      <Stack.Protected guard={gasto}>
+        <Stack.Screen name="aligxi" options={{ title: 'Créer mon compte' }} />
       </Stack.Protected>
     </Stack>
   )

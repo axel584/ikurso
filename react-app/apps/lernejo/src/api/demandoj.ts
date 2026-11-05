@@ -103,3 +103,10 @@ export function useRevizioRespondo() {
     mutationFn: (peto: { vorto_id: number; respondo: string }) => datumoj(kliento.POST('/lernado/revizio', { body: peto })),
   })
 }
+
+// Nouveau lien d'activation par mail, pour le compte créé dans l'application.
+export function useAktivigilo() {
+  return useMutation({
+    mutationFn: () => datumoj(kliento.POST('/lernado/aktivigo')),
+  })
+}

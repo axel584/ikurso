@@ -13,7 +13,10 @@ export interface paths {
         };
         get?: never;
         put?: never;
-        /** Connexion de l'application (identifiant ou adresse e-mail, et mot de passe) */
+        /**
+         * Connexion de l'application (identifiant ou adresse e-mail, et mot de passe)
+         * @description Avec l'access token d'un invité, son travail rejoint le compte et ses jetons sont révoqués.
+         */
         post: {
             parameters: {
                 query?: never;
@@ -126,6 +129,34 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/auth/gasto": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Commencer sans compte (invité de l'application) */
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                201: components["responses"]["Sxlosiloj"];
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/auth/register": {
         parameters: {
             query?: never;
@@ -135,7 +166,10 @@ export interface paths {
         };
         get?: never;
         put?: never;
-        /** Inscription ; un mail contient le lien d'activation, à suivre avant de se connecter */
+        /**
+         * Inscription ; un mail contient le lien d'activation, à suivre avant de se connecter
+         * @description Avec l'access token d'un invité, l'invité devient le compte et garde ses réponses et sa progression.
+         */
         post: {
             parameters: {
                 query?: never;
@@ -781,6 +815,55 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/lernado/aktivigo": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Renvoie le lien d'activation du compte créé dans l'application (#1089) */
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Mail envoyé */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /** @description Adresse à laquelle le mail est parti */
+                            retadreso: string;
+                        };
+                    };
+                };
+                401: components["responses"]["Eraro"];
+                /** @description Invité, ou compte déjà activé */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Eraro"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -789,10 +872,10 @@ export interface components {
             error: string;
         };
         /**
-         * @description A administrateur, K correcteur, S élève, P élève sans correcteur, I inactif
+         * @description A administrateur, K correcteur, S élève, P élève sans correcteur, I inactif, G invité (#1089)
          * @enum {string}
          */
-        Rajtoj: "A" | "K" | "S" | "P" | "I";
+        Rajtoj: "A" | "K" | "S" | "P" | "I" | "G";
         /**
          * @description CG cours en 10 leçons, GR Gerda malaperis, PP Paŝoj al plena posedo
          * @enum {string}

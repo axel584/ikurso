@@ -33,6 +33,17 @@ export interface Sxlosilujo {
   forigi(): Promise<void>
 }
 
+// Secondes avant l'expiration d'un access token (JWT), d'après son champ exp ; 0 s'il est illisible.
+function restantajSekundoj(jwt: string): number {
+  try {
+    const partoj = jwt.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')
+    const { exp } = JSON.parse(atob(partoj + '='.repeat((4 - (partoj.length % 4)) % 4))) as { exp?: number }
+    return typeof exp === 'number' ? exp - Date.now() / 1000 : 0
+  } catch {
+    return 0
+  }
+}
+
 // radiko : adresse du site, par exemple https://ikurso.esperanto-france.org
 export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
   const baseUrl = radiko.replace(/\/$/, '') + '/api'
@@ -56,15 +67,27 @@ export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
     return true
   }
 
+  function renoviguFoje(): Promise<boolean> {
+    renovigo ??= renovigi().finally(() => { renovigo = null })
+    return renovigo
+  }
+
   const mezvaro: Middleware = {
     async onRequest({ request, id }) {
-      const sxlosiloj = await sxlosilujo.akiri()
+      let sxlosiloj = await sxlosilujo.akiri()
+      const vojo = new URL(request.url).pathname
+      // jeton renouvelé juste avant d'expirer : auth/register et auth/token ne réessaient pas après un 401,
+      // et l'invité qui s'inscrit ou se connecte doit y être reconnu par son jeton (#1089)
+      if (sxlosiloj && !/\/api\/auth\/(refresh|revoke)$/.test(vojo) && restantajSekundoj(sxlosiloj.access_token) < 30) {
+        await renoviguFoje()
+        sxlosiloj = await sxlosilujo.akiri()
+      }
       // corps lu d'avance en texte (du JSON) : recopié tel quel (un flux), Chrome ne l'envoie qu'en HTTP/2
       // (ERR_ALPN_NEGOTIATION_FAILED) ; React Native n'a pas request.body
       const teksto = request.method === 'GET' || request.method === 'HEAD' ? '' : await request.text()
       const kapoj = new Headers(request.headers)
-      // pas de Bearer pour obtenir, renouveler ou révoquer les jetons : ils sont dans le corps
-      if (sxlosiloj && !/\/api\/auth\/(token|refresh|revoke)$/.test(new URL(request.url).pathname)) {
+      // pas de Bearer pour renouveler ou révoquer les jetons : le refresh token est dans le corps
+      if (sxlosiloj && !/\/api\/auth\/(refresh|revoke)$/.test(vojo)) {
         kapoj.set('Authorization', 'Bearer ' + sxlosiloj.access_token)
       }
       const init: RequestInit = {
@@ -74,7 +97,8 @@ export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
         signal: request.signal,
       }
       const url = apiPhpUrl(request.url)
-      kopioj.set(id, { url, init })
+      // un 401 de auth/token ou auth/register est un mauvais mot de passe ou un refus : pas de nouvel essai
+      if (!/\/api\/auth\/(token|register)$/.test(vojo)) kopioj.set(id, { url, init })
       return new Request(url, init)
     },
     async onResponse({ response, id }) {
@@ -84,8 +108,7 @@ export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
       const kapoj = kopio?.init.headers as Headers | undefined
       // rien de renvoyé = réponse inchangée (openapi-fetch exige sinon une instance de Response)
       if (response.status !== 401 || !kopio || !kapoj?.has('Authorization')) return
-      renovigo ??= renovigi().finally(() => { renovigo = null })
-      if (!(await renovigo)) return
+      if (!(await renoviguFoje())) return
       const sxlosiloj = await sxlosilujo.akiri()
       kapoj.set('Authorization', 'Bearer ' + sxlosiloj!.access_token)
       const respondo: globalThis.Response = await fetch(kopio.url, kopio.init)
@@ -104,9 +127,22 @@ export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
 
   return {
     kliento,
+    // avec les jetons d'un invité, son travail rejoint le compte (#1089)
     async ensaluti(identigilo: string, pasvorto: string) {
       const { data, error } = await kliento.POST('/auth/token', { body: { identigilo, pasvorto } })
       if (data) await sxlosilujo.konservi(data)
+      return { data, error }
+    },
+    // « Commencer le cours » sans compte : les jetons d'un invité
+    async komenciGaste() {
+      const { data, error } = await kliento.POST('/auth/gasto')
+      if (data) await sxlosilujo.konservi(data)
+      return { data, error }
+    },
+    // L'invité devient le compte ; ses jetons, renouvelés, portent ensuite le compte (pas encore activé)
+    async aligxi(enirnomo: string, retadreso: string, pasvorto: string) {
+      const { data, error } = await kliento.POST('/auth/register', { body: { enirnomo, retadreso, pasvorto } })
+      if (data && (await sxlosilujo.akiri())) await renoviguFoje()
       return { data, error }
     },
     async elsaluti() {

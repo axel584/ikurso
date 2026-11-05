@@ -16,6 +16,12 @@ info:
     révoquer tous ceux de la personne. `POST /auth/revoke` déconnecte. Sans en-tête `Origin`, l'API accepte les
     requêtes qui portent un jeton Bearer (l'application n'a ni cookie ni session).
 
+    **Invité (#1089).** `POST /auth/gasto` donne les jetons d'un invité (`rajtoj` `G`), sans compte : il suit le Cours
+    en 10 leçons et Gerda malaperis (pas Paŝoj, 403) mais n'envoie pas de leçon au correcteur (403). Appelés avec
+    son access token, `POST /auth/register` fait de l'invité le compte (ses jetons restent valables, `rajtoj` `P`
+    au prochain `POST /auth/refresh`) et `POST /auth/token` fusionne son travail dans le compte (ses jetons sont
+    révoqués). Un compte pas encore activé garde sa session ; seul l'envoi d'une leçon attend l'activation (403).
+
     **Contenu.** `enhavo` est le HTML d'une section (voir `.ai/DB_SCHEMA.md`). Images, sons et liens y sont relatifs
     à la racine du site (`fr/son/vortoj/saluton.mp3`). Les marqueurs indiquent où placer :
     `##EKZERCO:N##` ou `##EKZERCO:N:eo##` l'exercice N (dans `ekzercoj`), `##QCM:[…]##` et `##QCM_BILDOJ:[…]##`
@@ -37,7 +43,8 @@ paths:
     post:
       tags: [auth]
       summary: Connexion de l'application (identifiant ou adresse e-mail, et mot de passe)
-      security: []
+      description: Avec l'access token d'un invité, son travail rejoint le compte et ses jetons sont révoqués.
+      security: [{}, { bearer: [] }]
       requestBody:
         required: true
         content:
@@ -84,11 +91,19 @@ paths:
       responses:
         '200': { $ref: '#/components/responses/Mesagxo' }
         '400': { $ref: '#/components/responses/Eraro' }
+  /auth/gasto:
+    post:
+      tags: [auth]
+      summary: Commencer sans compte (invité de l'application)
+      security: []
+      responses:
+        '201': { $ref: '#/components/responses/Sxlosiloj' }
   /auth/register:
     post:
       tags: [auth]
       summary: Inscription ; un mail contient le lien d'activation, à suivre avant de se connecter
-      security: []
+      description: Avec l'access token d'un invité, l'invité devient le compte et garde ses réponses et sa progression.
+      security: [{}, { bearer: [] }]
       requestBody:
         required: true
         content:
@@ -425,6 +440,24 @@ paths:
                   sono: { type: string, nullable: true, description: 'Prononciation (chemin depuis la racine du site)' }
         '401': { $ref: '#/components/responses/Eraro' }
         '404': { $ref: '#/components/responses/Eraro' }
+  /lernado/aktivigo:
+    post:
+      tags: [lernado]
+      summary: Renvoie le lien d'activation du compte créé dans l'application (#1089)
+      responses:
+        '200':
+          description: Mail envoyé
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [retadreso]
+                properties:
+                  retadreso: { type: string, description: 'Adresse à laquelle le mail est parti' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '409':
+          description: Invité, ou compte déjà activé
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
 components:
   securitySchemes:
     bearer:
@@ -477,8 +510,8 @@ components:
         error: { type: string }
     Rajtoj:
       type: string
-      enum: [A, K, S, P, I]
-      description: A administrateur, K correcteur, S élève, P élève sans correcteur, I inactif
+      enum: [A, K, S, P, I, G]
+      description: A administrateur, K correcteur, S élève, P élève sans correcteur, I inactif, G invité (#1089)
     KursoKodo:
       type: string
       enum: [CG, GR, PP]

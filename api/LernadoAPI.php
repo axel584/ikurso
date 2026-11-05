@@ -10,11 +10,17 @@ require_once __DIR__ . "/EkzercadoAPI.php";
 require_once __DIR__ . "/ProgresoAPI.php";
 require_once __DIR__ . "/SendadoAPI.php";
 require_once __DIR__ . "/VortojAPI.php";
+require_once __DIR__ . "/GastoAPI.php";
+require_once __DIR__ . "/AktivigoAPI.php";
 
 class LernadoAPI {
     private $bdd;
     private $urlracine;
     private $persono_id;
+    private $persono;
+
+    // Cours ouverts à l'invité de l'application (#1089) ; Paŝoj est réservé aux comptes, comme sur le site
+    const KURSOJ_POR_GASTOJ = array("CG", "GR");
 
     public function __construct(PDO $bdd, string $urlracine) {
         $this->bdd = $bdd;
@@ -24,16 +30,24 @@ class LernadoAPI {
     public function handleRequest(): void {
         $persono_id = (int)JWTAuth::getPersonoIdFromJWT();
         $persono = $persono_id > 0 ? apartigiPersonon($persono_id) : false;
-        if (!$persono || $persono["rajtoj"] == "G") {
+        // l'invité du site (session) n'a pas de jeton ; celui de l'application en a un (auth/gasto, #1089)
+        if (!$persono || ($persono["rajtoj"] === GastoAPI::RAJTO && JWTAuth::getBearerToken() === null)) {
             $this->eraro(401, "Non authentifié");
         }
         $this->persono_id = $persono_id;
+        $this->persono = $persono;
         $metodo = $_SERVER['REQUEST_METHOD'];
         $s = array_values(array_filter(explode('/', isset($_GET['path']) ? $_GET['path'] : ''), 'strlen'));
         $n = count($s);
         try {
             if ($metodo === 'GET' && $n === 2 && $s[1] === 'kursoj') {
-                $this->respondi(200, array("kursoj" => (new KursaEnhavoAPI($this->bdd))->kursoj($persono_id)));
+                $kursoj = (new KursaEnhavoAPI($this->bdd))->kursoj($persono_id);
+                if ($this->estasGasto()) {
+                    $kursoj = array_values(array_filter($kursoj, function ($k) {
+                        return in_array($k["kodo"], self::KURSOJ_POR_GASTOJ, true);
+                    }));
+                }
+                $this->respondi(200, array("kursoj" => $kursoj));
             } elseif ($metodo === 'GET' && $n === 3 && $s[1] === 'kursoj') {
                 $this->kurso($this->kursoKodo($s[2]));
             } elseif ($metodo === 'GET' && $n === 3 && $s[1] === 'sekcioj') {
@@ -52,6 +66,8 @@ class LernadoAPI {
                 $this->respondi(200, array("vortoj" => (new VortojAPI($this->bdd))->revizio($persono_id)));
             } elseif ($metodo === 'POST' && $n === 2 && $s[1] === 'revizio') {
                 $this->revizioRespondo();
+            } elseif ($metodo === 'POST' && $n === 2 && $s[1] === 'aktivigo') {
+                $this->aktivigilo();
             }
             $this->eraro(404, "Endpoint non trouvé");
         } catch (Throwable $e) {
@@ -64,7 +80,28 @@ class LernadoAPI {
         if (!isset(KursaEnhavoAPI::KURSOJ[$kodo])) {
             $this->eraro(404, "Cours inconnu");
         }
+        $this->kursoPorGasto($kodo);
         return $kodo;
+    }
+
+    private function estasGasto(): bool {
+        return $this->persono["rajtoj"] === GastoAPI::RAJTO;
+    }
+
+    private function kursoPorGasto(string $kodo): void {
+        if ($this->estasGasto() && !in_array($kodo, self::KURSOJ_POR_GASTOJ, true)) {
+            $this->eraro(403, "Ce cours est réservé aux élèves inscrits");
+        }
+    }
+
+    // Nouveau lien d'activation pour le compte créé dans l'application et pas encore activé (#1089).
+    private function aktivigilo(): void {
+        if ($this->estasGasto() || (int)$this->persono["aktivigita"] === 1) {
+            $this->eraro(409, "Ce compte n'a pas besoin d'être activé");
+        }
+        (new AktivigoAPI($this->bdd))->sendiAktivigilon($this->persono_id, "aktivigi.html",
+            "Activation de votre compte pour apprendre gratuitement l'espéranto", "aplikajxo", "ACTIVATION COMPTE");
+        $this->respondi(200, array("retadreso" => $this->persono["retadreso"]));
     }
 
     private function kurso(string $kodo): void {
@@ -76,6 +113,7 @@ class LernadoAPI {
         if ($sekcio === null) {
             $this->eraro(404, "Section introuvable");
         }
+        $this->kursoPorGasto($sekcio["kurso"]);
         $this->respondi(200, $sekcio);
     }
 
@@ -86,6 +124,7 @@ class LernadoAPI {
         if ($sekcio === null) {
             $this->eraro(404, "Section introuvable");
         }
+        $this->kursoPorGasto($sekcio["kurso"]);
         $korpo = $this->korpo();
         $progreso = new ProgresoAPI($this->bdd);
         $progreso->finiSekcion($this->persono_id, $id, isset($korpo["ekdato"]) && is_int($korpo["ekdato"]) ? $korpo["ekdato"] : null);
@@ -137,6 +176,9 @@ class LernadoAPI {
         } elseif ($metodo === 'GET' && $ago === 'korekto') {
             $this->respondi(200, $enhavo->korekto($kurso, $numero, $this->persono_id));
         } elseif ($metodo === 'POST' && $ago === 'sendi') {
+            if ($this->estasGasto()) {
+                $this->eraro(403, "Créez un compte pour envoyer vos leçons à un correcteur");
+            }
             $korpo = $this->korpo();
             // le commentaire part dans le mail du correcteur, en HTML
             $komento = isset($korpo["komento"]) && is_string($korpo["komento"]) ? htmlspecialchars($korpo["komento"], ENT_QUOTES, "UTF-8") : "";

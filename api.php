@@ -42,7 +42,12 @@ $segments = array_filter(explode('/', $path));
 
 if (!empty($segments)) {
     if ($segments[0] === 'auth') {
-        // API d'authentification
+        // API d'authentification ; l'inscription envoie le mail d'activation par util.php, sans la session
+        // du site (SessionAuth s'en occupe pour l'invité du site)
+        if (isset($segments[1]) && $segments[1] === 'register') {
+            define('IKURSO_SEN_SESIO', true);
+            require_once 'util.php';
+        }
         $api = new AuthentificationAPI();
         $api->handleRequest();
     } elseif ($segments[0] === 'tekstoj') {

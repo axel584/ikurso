@@ -1,16 +1,55 @@
 // Profil de l'élève : son compte, et la déconnexion (le refresh token est révoqué sur le serveur).
+// L'invité (#1089) y trouve la création de compte et la connexion ; le compte pas encore activé, son lien d'activation.
+import { useState } from 'react'
 import { ScrollView, Text, View } from 'react-native'
+import { router } from 'expo-router'
 import * as Linking from 'expo-linking'
 import { retadreso } from '@/api/kliento'
 import { useMi } from '@/api/demandoj'
 import { Butono, Stato } from '@/komponantoj/Bazaj'
 import { useSeanco } from '@/seanco'
-import { stiloj } from '@/stiloj'
+import { koloroj, stiloj } from '@/stiloj'
+
+function Gasto() {
+  const { elsaluti } = useSeanco()
+  const [forlasi, setForlasi] = useState(false)
+  return (
+    <>
+      <View style={stiloj.karto}>
+        <Text style={stiloj.subtitolo}>Vous suivez le cours en invité</Text>
+        <Text style={stiloj.teksto}>
+          Votre travail est gardé sur cet appareil. Créez un compte pour être corrigé et le retrouver sur le site ou sur un
+          autre appareil.
+        </Text>
+      </View>
+      <Butono teksto="Créer mon compte" onPress={() => router.push('/aligxi')} />
+      <Butono dua teksto="J’ai déjà un compte : me connecter" onPress={() => router.push('/ensaluti')} />
+      {forlasi ? (
+        <View style={[stiloj.karto, { borderColor: koloroj.rugxa }]}>
+          <Text style={stiloj.teksto}>Sans compte, ce que vous avez fait jusqu’ici sera perdu.</Text>
+          <Butono dua teksto="Quitter et tout effacer" onPress={elsaluti} />
+          <Butono dua teksto="Annuler" onPress={() => setForlasi(false)} />
+        </View>
+      ) : (
+        <Text accessibilityRole="button" style={[stiloj.eta, { textAlign: 'center', padding: 8 }]} onPress={() => setForlasi(true)}>
+          Quitter le mode invité
+        </Text>
+      )}
+    </>
+  )
+}
 
 export default function Profilo() {
-  const { elsaluti } = useSeanco()
+  const { elsaluti, gasto } = useSeanco()
   const { data, isLoading, error } = useMi()
   const u = data?.user
+  if (gasto) {
+    return (
+      <ScrollView style={stiloj.ekrano} contentContainerStyle={stiloj.enhavo}>
+        <Gasto />
+      </ScrollView>
+    )
+  }
   return (
     <ScrollView style={stiloj.ekrano} contentContainerStyle={stiloj.enhavo}>
       <Stato sxargxas={isLoading} eraro={error}>
@@ -20,6 +59,14 @@ export default function Profilo() {
             <Text style={stiloj.teksto}>Identifiant : {u.enirnomo}</Text>
             {u.retadreso && <Text style={stiloj.teksto}>Adresse e-mail : {u.retadreso}</Text>}
             {u.ekdato && <Text style={stiloj.eta}>Inscrit depuis le {new Date(u.ekdato.replace(' ', 'T')).toLocaleDateString('fr-FR')}</Text>}
+          </View>
+        )}
+        {u && u.aktivigita === false && (
+          <View style={[stiloj.karto, { backgroundColor: koloroj.helblua }]}>
+            <Text style={stiloj.teksto}>
+              Votre compte n’est pas encore activé : suivez le lien reçu par mail pour envoyer vos leçons à votre correcteur.
+            </Text>
+            <Butono dua teksto="Recevoir à nouveau le lien" onPress={() => router.push('/konfirmi')} />
           </View>
         )}
       </Stato>

@@ -56,8 +56,9 @@ class GastoAPI {
     }
 
     // Sans e-mail ni mot de passe et jamais activé : la connexion le refuse. enirnomo est obligatoire et unique.
-    private function krei(): int {
-        $demando = $this->bdd->prepare("INSERT INTO personoj (ekdato, enirnomo, retadreso, rajtoj, aktivigita) VALUES (NOW(), ?, '', ?, 0)");
+    // L'application crée le sien par auth/gasto (#1089) : elle le retrouve ensuite par ses jetons, pas par la session.
+    public function krei(): int {
+        $demando = $this->bdd->prepare("INSERT INTO personoj (ekdato, lasteniro, enirnomo, retadreso, rajtoj, aktivigita) VALUES (NOW(), NOW(), ?, '', ?, 0)");
         $demando->execute(array("gasto_" . bin2hex(random_bytes(8)), self::RAJTO));
         return (int)$this->bdd->lastInsertId();
     }

@@ -58,6 +58,8 @@ class AuthentificationAPI {
             $this->refresh();
         } elseif ($method === 'POST' && $action === 'revoke') {
             $this->revoke();
+        } elseif ($method === 'POST' && $action === 'gasto') {
+            $this->gasto();
         } else {
             $this->sendError(404, "Endpoint non trouvé");
         }
@@ -156,7 +158,14 @@ class AuthentificationAPI {
             }
             $this->protokolo($row["id"], "ENIRO", $row["enirnomo"] . " eniris via la aplikaĵo");
             $this->updateLastEniro($row["id"]);
-            $this->sendResponse(200, $this->sxlosiloj($row, (new RenovigajSxlosilojAPI($this->conn))->krei((int)$row["id"])));
+            // ce que la personne a fait en invité dans l'application rejoint son compte (#1089)
+            $renovigaj = new RenovigajSxlosilojAPI($this->conn);
+            $gasto_id = $this->gastoDeLaAplikajxo();
+            if ($gasto_id > 0) {
+                (new GastoAPI($this->conn))->transdoni($gasto_id, (int)$row["id"]);
+                $renovigaj->revokiCxiujn($gasto_id);
+            }
+            $this->sendResponse(200, $this->sxlosiloj($row, $renovigaj->krei((int)$row["id"])));
         } catch(PDOException $e) {
             error_log("auth/token : " . $e->getMessage());
             $this->sendError(500, "Erreur interne du serveur");
@@ -173,9 +182,15 @@ class AuthentificationAPI {
         try {
             $renovigo = (new RenovigajSxlosilojAPI($this->conn))->renovigi($sxlosilo);
             $row = $renovigo ? $this->persono($renovigo["persono_id"]) : null;
-            if (!$row || $row["aktivigita"] == 0) {
+            // l'invité de l'application (G) et le compte qu'il vient de créer, pas encore activé (P),
+            // gardent leur session : seul l'envoi d'une leçon attend l'activation (#1089)
+            if (!$row || ($row["aktivigita"] == 0 && !in_array($row["rajtoj"], array(GastoAPI::RAJTO, "P"), true))) {
                 $this->sendError(401, "Session expirée, merci de vous reconnecter");
                 return;
+            }
+            if ($row["rajtoj"] === GastoAPI::RAJTO) {
+                // lasteniro sert au nettoyage des invités inactifs
+                $this->updateLastEniro($row["id"]);
             }
             $this->sendResponse(200, $this->sxlosiloj($row, $renovigo["sxlosilo"]));
         } catch(PDOException $e) {
@@ -199,6 +214,27 @@ class AuthentificationAPI {
             error_log("auth/revoke : " . $e->getMessage());
             $this->sendError(500, "Erreur interne du serveur");
         }
+    }
+
+    // Application (#1089) : « Commencer le cours » sans compte. Un invité et ses jetons, comme à la connexion ;
+    // auth/register et auth/token, appelés avec son access token, en font un compte ou le fusionnent dans le compte.
+    private function gasto() {
+        try {
+            $persono_id = (new GastoAPI($this->conn))->krei();
+            $row = $this->persono($persono_id);
+            $this->sendResponse(201, $this->sxlosiloj($row, (new RenovigajSxlosilojAPI($this->conn))->krei($persono_id)));
+        } catch(PDOException $e) {
+            error_log("auth/gasto : " . $e->getMessage());
+            $this->sendError(500, "Erreur interne du serveur");
+        }
+    }
+
+    // L'invité de l'application qui appelle, d'après son access token, sinon 0.
+    private function gastoDeLaAplikajxo(): int {
+        $jwt = JWTAuth::getBearerToken();
+        $payload = $jwt !== null ? JWTAuth::validateJWT($jwt) : false;
+        $persono_id = $payload ? (int)$payload['persono_id'] : 0;
+        return $persono_id > 0 && (new GastoAPI($this->conn))->estasGasto($persono_id) ? $persono_id : 0;
     }
 
     private function persono(int $persono_id): ?array {
@@ -282,6 +318,10 @@ class AuthentificationAPI {
             // Création de la personne ; un invité qui s'inscrit garde ses réponses et sa progression :
             // sa ligne devient le compte (#1092)
             $gasto_id = SessionAuth::takeGastoId();
+            if ($gasto_id === 0) {
+                // invité de l'application (#1089)
+                $gasto_id = $this->gastoDeLaAplikajxo();
+            }
             if ($gasto_id > 0 && (new GastoAPI($this->conn))->konverti($gasto_id, $enirnomo, $pasvorto, $retadreso, $aktivigo)) {
                 $persono_id = $gasto_id;
             } else {
@@ -295,7 +335,7 @@ class AuthentificationAPI {
             
             // Envoi de l'email d'activation
             global $urlracine;
-            $lien = $urlracine . "aktivigi.php?retadreso=" . urlencode($retadreso) . "&aktivigo=" . urlencode($aktivigo);
+            $lien = rtrim($urlracine, "/") . "/aktivigi.php?retadreso=" . urlencode($retadreso) . "&aktivigo=" . urlencode($aktivigo);
             
             // Charger le template d'email
             $filename = __DIR__ . "/../mails/aktivigi.html";
@@ -307,8 +347,8 @@ class AuthentificationAPI {
             $contents = file_get_contents($filename);
             $contents = str_replace("##LIEN_ACTIVATION##", $lien, $contents);
             
-            // Envoyer l'email
-            if (!$this->mailViaSES($retadreso, "Activation de votre compte pour apprendre gratuitement l'espéranto", $contents)) {
+            // Envoyer l'email par le même SMTP que le site (mailViaSES de util.php, inclus par api.php)
+            if (!mailViaSES($retadreso, "Activation de votre compte pour apprendre gratuitement l'espéranto", $contents)) {
                 $this->sendError(500, "Erreur lors de l'envoi de l'email d'activation");
                 return;
             }
@@ -458,7 +498,8 @@ class AuthentificationAPI {
                 return;
             }
             
-            if ($user["aktivigita"] == 0) {
+            // l'invité de l'application et le compte pas encore activé ont un profil (#1089)
+            if ($user["aktivigita"] == 0 && !in_array($user["rajtoj"], array(GastoAPI::RAJTO, "P"), true)) {
                 $this->sendError(403, "Compte non activé");
                 return;
             }
@@ -548,35 +589,6 @@ class AuthentificationAPI {
         } catch(PDOException $e) {
             error_log("Erreur kreiPersonon: " . $e->getMessage());
             return false;
-        }
-    }
-    
-    private function mailViaSES($retadreso, $objekto, $contentsHtml) {
-        // Cette méthode utilise Amazon SES pour envoyer des emails
-        // Pour le développement, on va juste logger l'email
-        
-        global $awskey, $awssecret;
-        
-        // En développement, simuler l'envoi réussi
-        if (!$awskey || !$awssecret) {
-            error_log("Email would be sent to: $retadreso with subject: $objekto");
-            return true; // Simuler succès pour les tests
-        }
-        
-        // Version simplifiée - en production utiliser la vraie implémentation AWS SES
-        // Pour les tests, on peut juste logger l'email ou utiliser mail() PHP basique
-        
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers .= "From: ikurso@esperanto-france.org" . "\r\n";
-        
-        // Pour le développement, on peut utiliser mail() PHP ou juste logger
-        if (function_exists('mail')) {
-            return mail($retadreso, $objekto, $contentsHtml, $headers);
-        } else {
-            // Log pour le développement
-            error_log("Email would be sent to: $retadreso with subject: $objekto");
-            return true; // Simuler succès pour les tests
         }
     }
 }

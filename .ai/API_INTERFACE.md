@@ -93,6 +93,7 @@ L'application n'utilise ni session ni cookie :
 2. Chaque appel envoie `Authorization: Bearer <access_token>`.
 3. Sur un 401, `POST /auth/refresh` (`refresh_token`) donne une nouvelle paire ; l'ancien refresh token ne sert plus (rotation). Un refresh token déjà utilisé qui revient fait révoquer tous ceux de la personne (vol probable).
 4. `POST /auth/revoke` (`refresh_token`) : déconnexion.
+5. Sans compte : `POST /auth/gasto` donne les jetons d'un invité (`rajtoj` `G`). Appelés avec son access token, `POST /auth/register` fait de l'invité le compte (`GastoAPI::konverti`, ses jetons restent valables) et `POST /auth/token` fusionne son travail dans le compte (`GastoAPI::transdoni`, ses jetons sont révoqués). L'invité et le compte pas encore activé (`P`) gardent leur session (`/auth/refresh`, `/auth/me`) ; seul l'envoi d'une leçon attend l'activation.
 
 Refresh tokens : table `renovigaj_sxlosiloj` (`sql/58`), seule leur empreinte SHA-256 est gardée (`api/RenovigajSxlosilojAPI.php`). Les routes `lernado/…` ne démarrent pas de session pour une requête Bearer ni pour un client sans cookie de session (voir `api.php`).
 
@@ -1366,7 +1367,7 @@ Envoie un message de contact à tous les administrateurs (+ copie à l'expédite
 
 ### API élève (lernado), application mobile
 
-Référence complète : **`api/openapi.yaml`** (OpenAPI 3.0), d'où sont générés les types du client `react-app/packages/api-client` (`npm run build` dans ce dossier : génération puis vérification `tsc`). Code : `api/LernadoAPI.php` (routes), `KursaEnhavoAPI`, `EkzercadoAPI`, `ProgresoAPI`, `SendadoAPI`, `VortojAPI` (données, partagées avec les pages et `ajax/`). Élève identifié par `JWTAuth::validateJWT()` ; 401 sans identification ou pour un invité.
+Référence complète : **`api/openapi.yaml`** (OpenAPI 3.0), d'où sont générés les types du client `react-app/packages/api-client` (`npm run build` dans ce dossier : génération puis vérification `tsc`). Code : `api/LernadoAPI.php` (routes), `KursaEnhavoAPI`, `EkzercadoAPI`, `ProgresoAPI`, `SendadoAPI`, `VortojAPI` (données, partagées avec les pages et `ajax/`). Élève identifié par `JWTAuth::validateJWT()` ; 401 sans identification ou pour l'invité du site (session). L'invité de l'application (jeton de `POST /auth/gasto`) n'a que le Cours en 10 leçons et Gerda malaperis (403 pour Paŝoj) et n'envoie pas de leçon (403).
 
 | Méthode et chemin | Rôle |
 |---|---|
@@ -1382,12 +1383,13 @@ Référence complète : **`api/openapi.yaml`** (OpenAPI 3.0), d'où sont génér
 | `PUT /lernado/vortoj/{id}` | Retirer un mot de la révision ou l'y remettre (`forigita`) |
 | `GET /lernado/revizio` | Mots à réviser maintenant (sans la traduction attendue) |
 | `POST /lernado/revizio` | Traduction proposée pour un mot (`vorto_id`, `respondo`) |
+| `POST /lernado/aktivigo` | Renvoie le lien d'activation du compte pas encore activé (409 pour un invité ou un compte activé) |
 
 Inscription : `POST /auth/register`, puis activation par le lien reçu par mail. Le choix du cours n'a pas d'appel à lui : l'élève commence le cours qu'il veut, et le correcteur est attribué au premier envoi.
 
 Les QCM d'auto-évaluation (`##QCM:…##` dans `enhavo`) gardent leur bonne réponse : ils se corrigent sur l'appareil, comme sur le site, et ne partent pas au correcteur.
 
-Tests : `e2e/tests/api-lernado.spec.ts` (leçon complète par l'API jusqu'au retour du correcteur, révision, jetons, refus).
+Tests : `e2e/tests/api-lernado.spec.ts` (leçon complète par l'API jusqu'au retour du correcteur, révision, jetons, refus), `e2e/tests/lernejo-gasto.spec.ts` (arrivée dans l'application en invité, inscription, connexion).
 
 ---
 

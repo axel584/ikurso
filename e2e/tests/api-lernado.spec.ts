@@ -157,3 +157,17 @@ test('refus : sans jeton, jeton faux, paramètres invalides', async ({ request }
   }
   expect((await request.get(`${API}lernado/vortoj&kurso=CG&nivelo=${encodeURIComponent("' OR 1=1")}`, kun(at))).status()).toBe(400)
 })
+
+test('titres en texte, même enregistrés avec des entités HTML (comme en prod)', async ({ request }) => {
+  const titolo = sql("SELECT titolo FROM lecionoj WHERE kurso = 'CG' AND numero = 1")
+  sql("UPDATE lecionoj SET titolo = 'Premi&egrave;re le&ccedil;on' WHERE kurso = 'CG' AND numero = 1")
+  try {
+    const { access_token } = await ensaluti(request)
+    const kurso = await (await request.get(`${API}lernado/kursoj/CG`, kun(access_token))).json()
+    expect(kurso.lecionoj[0].titolo).toBe('Première leçon')
+    const sekcio = await (await request.get(`${API}lernado/sekcioj/${kurso.lecionoj[0].sekcioj[0].id}`, kun(access_token))).json()
+    expect(sekcio.leciono_titolo).toBe('Première leçon')
+  } finally {
+    sql(`UPDATE lecionoj SET titolo = '${titolo.replace(/'/g, "''")}' WHERE kurso = 'CG' AND numero = 1`)
+  }
+})

@@ -11,6 +11,12 @@ class KursaEnhavoAPI {
 
     private $bdd;
 
+    // Titres et noms en texte : certains sont enregistrés avec des entités HTML (« Premi&egrave;re le&ccedil;on »),
+    // que les pages du site affichent telles quelles mais pas l'application (#1089)
+    public static function teksto(?string $html): string {
+        return html_entity_decode((string)$html, ENT_QUOTES | ENT_HTML5, "UTF-8");
+    }
+
     public function __construct(PDO $bdd) {
         $this->bdd = $bdd;
     }
@@ -40,7 +46,7 @@ class KursaEnhavoAPI {
         return array_map(function ($v) {
             return array(
                 "kodo" => $v["kodo"],
-                "nomo" => $v["nomo"],
+                "nomo" => self::teksto($v["nomo"]),
                 "lecionoj" => (int)$v["lecionoj"],
                 "sekcioj" => (int)$v["sekcioj"],
                 "finitaj_sekcioj" => (int)$v["finitaj_sekcioj"],
@@ -71,7 +77,7 @@ class KursaEnhavoAPI {
             if (!isset($lecionoj[$numero])) {
                 $lecionoj[$numero] = array(
                     "numero" => $numero,
-                    "titolo" => $v["leciono_titolo"],
+                    "titolo" => self::teksto($v["leciono_titolo"]),
                     "stato" => isset($stato[$numero]) ? $stato[$numero] : null,
                     "sendita" => (bool)$v["sendita"],
                     "korektita" => (bool)$v["korektita"],
@@ -81,7 +87,7 @@ class KursaEnhavoAPI {
             $lecionoj[$numero]["sekcioj"][] = array(
                 "id" => (int)$v["id"],
                 "ordo" => (int)$v["ordo"],
-                "titolo" => $v["titolo"],
+                "titolo" => self::teksto($v["titolo"]),
                 "tipo" => $v["tipo"],
                 "dauxro" => $v["dauxro"] !== null ? (int)$v["dauxro"] : null,
                 "lasta" => (int)$v["lasta"] === 1,
@@ -122,9 +128,9 @@ class KursaEnhavoAPI {
             "id" => (int)$v["id"],
             "kurso" => $v["kurso"],
             "leciono" => (int)$v["numero"],
-            "leciono_titolo" => $v["leciono_titolo"],
+            "leciono_titolo" => self::teksto($v["leciono_titolo"]),
             "ordo" => (int)$v["ordo"],
-            "titolo" => $v["titolo"],
+            "titolo" => self::teksto($v["titolo"]),
             "tipo" => $v["tipo"],
             "dauxro" => $v["dauxro"] !== null ? (int)$v["dauxro"] : null,
             "lasta" => (int)$v["lasta"] === 1,

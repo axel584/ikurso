@@ -1,6 +1,7 @@
 // Écrans de l'élève connecté : les onglets, puis les cours, sections et corrections par-dessus.
 import { useEffect } from 'react'
 import { Stack, router } from 'expo-router'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { datumoj, kliento } from '@/api/kliento'
 import { useSeanco } from '@/seanco'
 import { koloroj } from '@/stiloj'
@@ -11,6 +12,7 @@ export const unstable_settings = {
 
 export default function LernantoArangxo() {
   const { komencota, komencis } = useSeanco()
+  const margxeno = useSafeAreaInsets()
 
   // le nouvel invité arrive directement dans la première section du cours choisi (#1089),
   // par-dessus le sommaire du cours
@@ -32,10 +34,11 @@ export default function LernantoArangxo() {
         headerStyle: { backgroundColor: koloroj.primara },
         headerTintColor: koloroj.blanka,
         headerBackTitle: 'Retour',
-        contentStyle: { backgroundColor: koloroj.fono },
+        // bas des écrans au-dessus des boutons d'Android ; la barre des onglets le fait elle-même
+        contentStyle: { backgroundColor: koloroj.fono, paddingBottom: margxeno.bottom },
       }}
     >
-      <Stack.Screen name="(langetoj)" options={{ headerShown: false }} />
+      <Stack.Screen name="(langetoj)" options={{ headerShown: false, contentStyle: { backgroundColor: koloroj.fono } }} />
       <Stack.Screen name="kurso/[kodo]" options={{ title: 'Cours' }} />
       <Stack.Screen name="sekcio/[id]" options={{ title: 'Section' }} />
       <Stack.Screen name="leciono/[kurso]/[numero]" options={{ title: 'Correction' }} />

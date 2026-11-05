@@ -90,7 +90,9 @@ export default function Sekcio() {
                       radiko={RADIKO}
                       ludi={ludi}
                       malfermi={malfermi}
-                      dom={{ matchContents: true, scrollEnabled: false }}
+                      // pas de défilement dans le morceau : scrollEnabled pour iOS, nestedScrollEnabled pour Android
+                      // (vrai par défaut : la WebView y garde le geste et la page ne défile plus)
+                      dom={{ matchContents: true, scrollEnabled: false, nestedScrollEnabled: false }}
                     />
                   )
                 case 'ekzerco': {

@@ -169,7 +169,7 @@ class LernadoAPI {
             }
             $this->respondi(200, array(
                 "nefinitaj_sekcioj" => array_map(function ($s) {
-                    return array("ordo" => (int)$s["ordo"], "titolo" => $s["titolo"]);
+                    return array("ordo" => (int)$s["ordo"], "titolo" => KursaEnhavoAPI::teksto($s["titolo"]));
                 }, $progreso->nefinitajSekcioj($this->persono_id, $kurso, $numero)),
                 "mankantaj_respondoj" => $mankantaj,
             ));

@@ -2,6 +2,8 @@
 import { useState } from 'react'
 import { Stack, SplashScreen } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
+import { useFonts } from 'expo-font'
+import { NothingYouCouldDo_400Regular } from '@expo-google-fonts/nothing-you-could-do'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ApiEraro } from '@/api/kliento'
 import { SonoProvizanto } from '@/komponantoj/Sono'
@@ -34,12 +36,14 @@ export default function Radiko() {
 
 function Navigilo() {
   const { sxargxas, ensalutita } = useSeanco()
-  if (sxargxas) return null
+  // police du logo iKurso du site ; sans elle (hors ligne…), le logo s'affiche dans la police du système
+  const [tiparoPreta, tiparoEraro] = useFonts({ NothingYouCouldDo_400Regular })
+  if (sxargxas || !(tiparoPreta || tiparoEraro)) return null
   SplashScreen.hide()
   return (
     <Stack
       screenOptions={{
-        headerStyle: { backgroundColor: koloroj.blua },
+        headerStyle: { backgroundColor: koloroj.primara },
         headerTintColor: koloroj.blanka,
         contentStyle: { backgroundColor: koloroj.fono },
       }}

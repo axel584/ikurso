@@ -59,7 +59,9 @@ export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
   const mezvaro: Middleware = {
     async onRequest({ request, id }) {
       const sxlosiloj = await sxlosilujo.akiri()
-      // corps lu d'avance : recopié tel quel (un flux), Chrome ne l'envoie qu'en HTTP/2 (ERR_ALPN_NEGOTIATION_FAILED)
+      // corps lu d'avance en texte (du JSON) : recopié tel quel (un flux), Chrome ne l'envoie qu'en HTTP/2
+      // (ERR_ALPN_NEGOTIATION_FAILED) ; React Native n'a pas request.body
+      const teksto = request.method === 'GET' || request.method === 'HEAD' ? '' : await request.text()
       const kapoj = new Headers(request.headers)
       // pas de Bearer pour obtenir, renouveler ou révoquer les jetons : ils sont dans le corps
       if (sxlosiloj && !/\/api\/auth\/(token|refresh|revoke)$/.test(new URL(request.url).pathname)) {
@@ -68,7 +70,7 @@ export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
       const init: RequestInit = {
         method: request.method,
         headers: kapoj,
-        body: request.body ? await request.arrayBuffer() : undefined,
+        body: teksto || undefined,
         signal: request.signal,
       }
       const url = apiPhpUrl(request.url)
@@ -80,12 +82,20 @@ export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
       kopioj.delete(id)
       // access token expiré : nouveaux jetons, puis la même requête une seconde fois
       const kapoj = kopio?.init.headers as Headers | undefined
-      if (response.status !== 401 || !kopio || !kapoj?.has('Authorization')) return response
+      // rien de renvoyé = réponse inchangée (openapi-fetch exige sinon une instance de Response)
+      if (response.status !== 401 || !kopio || !kapoj?.has('Authorization')) return
       renovigo ??= renovigi().finally(() => { renovigo = null })
-      if (!(await renovigo)) return response
+      if (!(await renovigo)) return
       const sxlosiloj = await sxlosilujo.akiri()
       kapoj.set('Authorization', 'Bearer ' + sxlosiloj!.access_token)
-      return fetch(kopio.url, kopio.init)
+      const respondo: globalThis.Response = await fetch(kopio.url, kopio.init)
+      if ((respondo as unknown) instanceof Response) return respondo
+      // sur Android, le fetch d'Expo renvoie sa propre classe de réponse
+      return new Response(respondo.status === 204 ? null : await respondo.text(), {
+        status: respondo.status,
+        statusText: respondo.statusText,
+        headers: respondo.headers,
+      })
     },
   }
 

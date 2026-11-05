@@ -14,7 +14,7 @@
     "android": {
       "package": "org.esperantofrance.ikurso",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#554E47",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -33,7 +33,8 @@
       "expo-router",
       "expo-secure-store",
       "expo-audio",
-      "expo-asset"
+      "expo-asset",
+      "expo-font"
     ]
   }
 }

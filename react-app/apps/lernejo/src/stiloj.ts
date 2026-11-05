@@ -2,6 +2,9 @@
 import { StyleSheet } from 'react-native'
 
 export const koloroj = {
+  // marron du site (.primaire) : barre du haut, titres, onglets
+  primara: '#554E47',
+  // bleu du site (.contraste-A) : boutons et liens
   blua: '#2196F3',
   malhelblua: '#0d47a1',
   helblua: '#E3F2FD',
@@ -9,8 +12,9 @@ export const koloroj = {
   helverda: '#E8F5E9',
   rugxa: '#c62828',
   helrugxa: '#FFEBEE',
-  griza: '#757575',
-  helgriza: '#eeeeee',
+  // gris chauds du site (.primaire.moyen, .primaire.fond)
+  griza: '#75706B',
+  helgriza: '#DDDCDA',
   teksto: '#212121',
   fono: '#fafafa',
   blanka: '#ffffff',
@@ -20,8 +24,8 @@ export const stiloj = StyleSheet.create({
   ekrano: { flex: 1, backgroundColor: koloroj.fono },
   enhavo: { padding: 16, gap: 12, maxWidth: 800, width: '100%', alignSelf: 'center' },
   centro: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24 },
-  titolo: { fontSize: 22, fontWeight: '600', color: koloroj.teksto },
-  subtitolo: { fontSize: 17, fontWeight: '600', color: koloroj.teksto },
+  titolo: { fontSize: 22, fontWeight: '600', color: koloroj.primara },
+  subtitolo: { fontSize: 17, fontWeight: '600', color: koloroj.primara },
   teksto: { fontSize: 16, lineHeight: 24, color: koloroj.teksto },
   eta: { fontSize: 13, color: koloroj.griza },
   karto: {

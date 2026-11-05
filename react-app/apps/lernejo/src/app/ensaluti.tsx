@@ -29,7 +29,15 @@ export default function Ensaluti() {
   return (
     <KeyboardAvoidingView style={stiloj.ekrano} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <ScrollView contentContainerStyle={[stiloj.centro, { gap: 16 }]} keyboardShouldPersistTaps="handled">
-        <Text style={{ fontSize: 34, fontWeight: '700', color: koloroj.blua }}>iKurso</Text>
+        {/* logo du site (bildoj/largelogo.png) */}
+        <View style={{ backgroundColor: koloroj.primara, borderRadius: 16, paddingHorizontal: 28, paddingVertical: 12 }}>
+          <Text
+            accessibilityRole="header"
+            style={{ fontFamily: 'NothingYouCouldDo_400Regular', fontSize: 52, color: koloroj.blanka, letterSpacing: -2 }}
+          >
+            iKurso
+          </Text>
+        </View>
         <Text style={[stiloj.teksto, { textAlign: 'center' }]}>Cours d’espéranto en ligne, avec un correcteur</Text>
         <View style={[stiloj.karto, { width: '100%', maxWidth: 400, gap: 12 }]}>
           <Text style={stiloj.subtitolo}>Connexion</Text>

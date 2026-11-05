@@ -11,9 +11,9 @@ export default function Langetoj() {
   return (
     <Tabs
       screenOptions={{
-        headerStyle: { backgroundColor: koloroj.blua },
+        headerStyle: { backgroundColor: koloroj.primara },
         headerTintColor: koloroj.blanka,
-        tabBarActiveTintColor: koloroj.blua,
+        tabBarActiveTintColor: koloroj.primara,
         sceneStyle: { backgroundColor: koloroj.fono },
       }}
     >

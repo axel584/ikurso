@@ -10,7 +10,7 @@ export default function LernantoArangxo() {
   return (
     <Stack
       screenOptions={{
-        headerStyle: { backgroundColor: koloroj.blua },
+        headerStyle: { backgroundColor: koloroj.primara },
         headerTintColor: koloroj.blanka,
         headerBackTitle: 'Retour',
         contentStyle: { backgroundColor: koloroj.fono },

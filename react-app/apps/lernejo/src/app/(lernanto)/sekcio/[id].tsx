@@ -1,0 +1,101 @@
+// Une section de leçon : son contenu, ses exercices et QCM, puis « Terminé ! » qui mène à la section suivante.
+import { useCallback, useMemo, useRef, useState } from 'react'
+import { ScrollView, Text, View } from 'react-native'
+import { Stack, router, useLocalSearchParams } from 'expo-router'
+import * as Linking from 'expo-linking'
+import { RADIKO } from '@/api/kliento'
+import { useFini, useSekcio } from '@/api/demandoj'
+import { Butono, Stato } from '@/komponantoj/Bazaj'
+import { Ekzerco } from '@/komponantoj/Ekzerco'
+import HtmlEnhavo from '@/komponantoj/HtmlEnhavo'
+import { Qcm } from '@/komponantoj/Qcm'
+import { Resumo } from '@/komponantoj/Resumo'
+import { useLudi } from '@/komponantoj/Sono'
+import { dividi } from '@/utiloj/enhavo'
+import { koloroj, stiloj } from '@/stiloj'
+
+export default function Sekcio() {
+  const id = Number(useLocalSearchParams<{ id: string }>().id)
+  const { data: s, isLoading, error } = useSekcio(id)
+  const fini = useFini()
+  const ludiSonon = useLudi()
+  const ekdato = useRef(Math.floor(Date.now() / 1000))
+  const [finitajQcm, setFinitajQcm] = useState(0)
+
+  const partoj = useMemo(() => (s ? dividi(s.enhavo) : []), [s])
+  const qcmoj = partoj.filter((p) => p.tipo === 'qcm').length
+  const qcmFinita = useCallback(() => setFinitajQcm((n) => n + 1), [])
+  const ludi = useCallback(async (url: string) => ludiSonon(url), [ludiSonon])
+  const malfermi = useCallback(async (url: string) => {
+    await Linking.openURL(url)
+  }, [])
+
+  function iri(sekva: number | null) {
+    if (sekva) {
+      router.replace({ pathname: '/sekcio/[id]', params: { id: String(sekva) } })
+    } else if (s) {
+      // retour au sommaire du cours déjà ouvert, sans en empiler un second
+      router.dismissTo({ pathname: '/kurso/[kodo]', params: { kodo: s.kurso } })
+    }
+  }
+
+  // comme sur le site, la section d'un QCM se termine une fois le QCM réussi
+  const povasFini = s && (s.finita || finitajQcm >= qcmoj)
+  return (
+    <ScrollView style={stiloj.ekrano} contentContainerStyle={stiloj.enhavo} keyboardShouldPersistTaps="handled">
+      <Stack.Screen options={{ title: s ? `Leçon ${s.leciono}` : 'Section' }} />
+      <Stato sxargxas={isLoading} eraro={error}>
+        {s && (
+          <>
+            <Text style={stiloj.titolo} accessibilityRole="header">
+              {s.leciono}.{s.ordo}. {s.titolo}
+            </Text>
+            {s.dauxro ? <Text style={stiloj.eta}>Temps moyen estimé : {s.dauxro} minutes</Text> : null}
+            {partoj.map((p, i) => {
+              switch (p.tipo) {
+                case 'html':
+                  return (
+                    <HtmlEnhavo
+                      key={`${s.id}-${i}`}
+                      html={p.html}
+                      radiko={RADIKO}
+                      ludi={ludi}
+                      malfermi={malfermi}
+                      dom={{ matchContents: true, scrollEnabled: false }}
+                    />
+                  )
+                case 'ekzerco': {
+                  const ekzerco = s.ekzercoj.find((e) => e.id === p.id)
+                  return ekzerco ? <Ekzerco key={`${s.id}-${i}`} ekzerco={ekzerco} /> : null
+                }
+                case 'qcm':
+                  return <Qcm key={`${s.id}-${i}`} demandoj={p.demandoj} bildoj={p.bildoj} onFinita={qcmFinita} />
+                case 'resumo':
+                  return <Resumo key={`${s.id}-${i}`} kurso={s.kurso} numero={s.leciono} />
+              }
+            })}
+            <View style={{ flexDirection: 'row', gap: 12, marginTop: 8, flexWrap: 'wrap' }}>
+              {s.antauxa && <Butono dua teksto="← Précédent" onPress={() => iri(s.antauxa)} />}
+              {povasFini && (
+                <Butono
+                  stilo={{ flexGrow: 1 }}
+                  teksto={fini.isPending ? '…' : s.finita ? (s.sekva ? 'Section suivante →' : 'Retour au sommaire') : 'Terminé !'}
+                  malsxaltita={fini.isPending}
+                  onPress={() => {
+                    if (s.finita) {
+                      iri(s.sekva)
+                      return
+                    }
+                    fini.mutate({ id: s.id, ekdato: ekdato.current }, { onSuccess: (r) => iri(r.sekva) })
+                  }}
+                />
+              )}
+            </View>
+            {fini.error && <Text style={stiloj.eraro}>{fini.error.message}</Text>}
+            {s.finita && <Text style={[stiloj.eta, { color: koloroj.verda }]}>✓ Section terminée</Text>}
+          </>
+        )}
+      </Stato>
+    </ScrollView>
+  )
+}

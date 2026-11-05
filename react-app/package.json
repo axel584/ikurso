@@ -1,28 +1,13 @@
 {
-  "name": "ikurso-redaktilo",
+  "name": "ikurso-react-app",
   "private": true,
-  "version": "0.1.0",
-  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.15.0",
-    "@mui/material": "^5.15.0",
-    "@tanstack/react-query": "^5.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router": "^7.18.4"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "@vitejs/plugin-react": "^6.0.2",
-    "typescript": "^5.3.3",
-    "vite": "^8.3.5"
+    "build:redaktilo": "npm run build -w ikurso-redaktilo",
+    "build:api-client": "npm run build -w @ikurso/api-client",
+    "build:lernejo": "npm run build -w lernejo"
   }
 }

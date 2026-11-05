@@ -95,6 +95,18 @@ cp -R build/* ../../nilegu
 il faut ajouter "homepage": "/nilegu", dans le package.json
 
 
+APPLICATIONS REACT (react-app/)
+-----
+Monorepo npm (workspaces), à installer une fois avec `npm install` dans `react-app/` :
+
+- `packages/api-client` : client TypeScript de l'API élève, généré depuis `api/openapi.yaml` (`npm run build:api-client`)
+- `apps/redaktilo` : éditeur des cours (Vite + MUI), compilé dans `redaktilo/` (`npm run build:redaktilo`)
+- `apps/lernejo` : application élève (Expo, #1089), compilée pour le web dans `lernejo/` (`npm run build:lernejo`), servie sur `/lernejo`.
+  En développement : `npm run web -w lernejo` (port 8082). Sur un téléphone Android : `npx expo run:android` dans `apps/lernejo`
+  (development build ; `EXPO_PUBLIC_IKURSO_URL` pour viser un autre site que la prod).
+
+Les dossiers compilés `redaktilo/` et `lernejo/` sont versionnés : les recompiler et les commiter avec les sources.
+
 En cas de problème, n'hésitez pas à me contacter : axel584@gmail.com
 
 

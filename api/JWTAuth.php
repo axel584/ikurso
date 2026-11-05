@@ -142,9 +142,10 @@ class JWTAuth {
         } else if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
             return trim($_SERVER["HTTP_AUTHORIZATION"]);
         } else if (function_exists('apache_request_headers')) {
-            $requestHeaders = apache_request_headers();
-            if (isset($requestHeaders['Authorization'])) {
-                return trim($requestHeaders['Authorization']);
+            // le nom d'un en-tête ne dépend pas de la casse : les navigateurs envoient « authorization » (#1089)
+            $requestHeaders = array_change_key_case(apache_request_headers(), CASE_LOWER);
+            if (isset($requestHeaders['authorization'])) {
+                return trim($requestHeaders['authorization']);
             }
         }
         return null;

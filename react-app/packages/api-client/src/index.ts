@@ -36,7 +36,7 @@ export interface Sxlosilujo {
 // radiko : adresse du site, par exemple https://ikurso.esperanto-france.org
 export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
   const baseUrl = radiko.replace(/\/$/, '') + '/api'
-  const kopioj = new Map<string, Request>()
+  const kopioj = new Map<string, { url: string; init: RequestInit }>()
   let renovigo: Promise<boolean> | null = null
 
   // une seule demande de nouveaux jetons à la fois : le refresh token ne sert qu'une fois
@@ -59,23 +59,33 @@ export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
   const mezvaro: Middleware = {
     async onRequest({ request, id }) {
       const sxlosiloj = await sxlosilujo.akiri()
-      const peto = new Request(apiPhpUrl(request.url), request)
-      if (sxlosiloj && !new URL(request.url).pathname.includes('/api/auth/')) {
-        peto.headers.set('Authorization', 'Bearer ' + sxlosiloj.access_token)
+      // corps lu d'avance : recopié tel quel (un flux), Chrome ne l'envoie qu'en HTTP/2 (ERR_ALPN_NEGOTIATION_FAILED)
+      const kapoj = new Headers(request.headers)
+      // pas de Bearer pour obtenir, renouveler ou révoquer les jetons : ils sont dans le corps
+      if (sxlosiloj && !/\/api\/auth\/(token|refresh|revoke)$/.test(new URL(request.url).pathname)) {
+        kapoj.set('Authorization', 'Bearer ' + sxlosiloj.access_token)
       }
-      kopioj.set(id, peto.clone())
-      return peto
+      const init: RequestInit = {
+        method: request.method,
+        headers: kapoj,
+        body: request.body ? await request.arrayBuffer() : undefined,
+        signal: request.signal,
+      }
+      const url = apiPhpUrl(request.url)
+      kopioj.set(id, { url, init })
+      return new Request(url, init)
     },
     async onResponse({ response, id }) {
       const kopio = kopioj.get(id)
       kopioj.delete(id)
       // access token expiré : nouveaux jetons, puis la même requête une seconde fois
-      if (response.status !== 401 || !kopio || !kopio.headers.has('Authorization')) return response
+      const kapoj = kopio?.init.headers as Headers | undefined
+      if (response.status !== 401 || !kopio || !kapoj?.has('Authorization')) return response
       renovigo ??= renovigi().finally(() => { renovigo = null })
       if (!(await renovigo)) return response
       const sxlosiloj = await sxlosilujo.akiri()
-      kopio.headers.set('Authorization', 'Bearer ' + sxlosiloj!.access_token)
-      return fetch(kopio)
+      kapoj.set('Authorization', 'Bearer ' + sxlosiloj!.access_token)
+      return fetch(kopio.url, kopio.init)
     },
   }
 

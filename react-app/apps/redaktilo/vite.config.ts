@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/redaktilo/',
   build: {
-    outDir: '../redaktilo',
+    outDir: '../../../redaktilo',
     emptyOutDir: true,
   },
 })

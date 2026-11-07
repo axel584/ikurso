@@ -108,6 +108,9 @@ test('un élève suit la leçon 1 complète sur /lernejo, jusqu’au retour de s
   await waitForMail('korektanto1@mailinator.com', 'Nouvel élève')
   expect((await waitForMail('korektanto1@mailinator.com', 'lec01 de lernanto1')).body).toContain('Saluton de lernejo !')
   await page.getByText('Terminé !').click()
+  // la dernière section terminée mène à la leçon suivante
+  await expect(page.getByRole('heading', { name: /^2\.1\. / })).toBeVisible()
+  await page.goto('lernejo/kurso/CG')
   await expect(page.getByText('13/13 sections')).toBeVisible()
   await expect(page.getByText('Envoyée', { exact: true })).toBeVisible()
 

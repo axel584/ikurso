@@ -12,10 +12,11 @@ export function useKursoj() {
   })
 }
 
-export function useKurso(kodo: KursoKodo) {
+export function useKurso(kodo: KursoKodo | undefined) {
   return useQuery({
     queryKey: ['kurso', kodo],
-    queryFn: () => datumoj(kliento.GET('/lernado/kursoj/{kurso}', { params: { path: { kurso: kodo } } })),
+    queryFn: () => datumoj(kliento.GET('/lernado/kursoj/{kurso}', { params: { path: { kurso: kodo! } } })),
+    enabled: kodo !== undefined,
   })
 }
 

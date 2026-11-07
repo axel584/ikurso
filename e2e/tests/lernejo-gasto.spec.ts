@@ -130,3 +130,22 @@ test('l’invité qui quitte le mode invité revient à l’accueil', async ({ p
   await page.getByText('Quitter et tout effacer').click()
   await expect(page.getByText('Commencer le cours')).toBeVisible()
 })
+
+test('à la fin d’une leçon, l’invité passe à la leçon suivante', async ({ page }) => {
+  const gasto = await komenciGaste(page)
+  // dernière section de la leçon 1 (1.13, l'envoi au correcteur) : « Terminé ! » mène à la leçon 2
+  await page.goto('lernejo/sekcio/8')
+  await fini(page, 13)
+  await expect(page.getByRole('heading', { name: /^2\.1\. / })).toBeVisible()
+  await page.goto('lernejo/sekcio/8')
+  await expect(page.getByRole('heading', { name: /^1\.13\. / })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Leçon 2 →' })).toBeVisible()
+
+  // la leçon 1 terminée (jamais envoyée par l'invité) : le sommaire ouvre la leçon 2
+  sql(`INSERT IGNORE INTO personoj_lecioneroj (dato, persono_id, lecionero_id, ekdato)
+       SELECT NOW(), ${gasto}, le.id, NOW() FROM lecioneroj le JOIN lecionoj l ON l.id = le.leciono_id
+       WHERE l.kurso = 'CG' AND l.numero = 1`)
+  await page.goto('lernejo/kurso/CG')
+  await expect(page.getByText(/^2\.1\. /)).toBeVisible()
+  await expect(page.getByText(/^1\.1\. /)).toHaveCount(0)
+})

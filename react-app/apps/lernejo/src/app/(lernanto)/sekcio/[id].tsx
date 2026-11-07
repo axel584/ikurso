@@ -5,7 +5,7 @@ import { Stack, router, useLocalSearchParams } from 'expo-router'
 import * as Linking from 'expo-linking'
 import { RADIKO } from '@/api/kliento'
 import { legiAgordon, skribiAgordon } from '@/api/agordoj'
-import { useFini, useKursoj, useSekcio } from '@/api/demandoj'
+import { useFini, useKurso, useKursoj, useSekcio, type KursoKodo } from '@/api/demandoj'
 import { Butono, Stato } from '@/komponantoj/Bazaj'
 import { Ekzerco } from '@/komponantoj/Ekzerco'
 import { GastoStrio, REMEMORIGO, REMEMORIGO_POST, Rememorigo } from '@/komponantoj/Gasto'
@@ -28,6 +28,10 @@ export default function Sekcio() {
   const kursoj = useKursoj()
   // section où aller après le rappel d'inscription de l'invité (undefined : pas de rappel affiché)
   const [post, setPost] = useState<number | null | undefined>(undefined)
+  // après la dernière section d'une leçon : la première section de la leçon suivante
+  const kurso = useKurso(s?.kurso as KursoKodo | undefined)
+  const sekvaLeciono = s ? kurso.data?.lecionoj.find((l) => l.numero > s.leciono) : undefined
+  const unuaDeSekva = sekvaLeciono?.sekcioj[0]?.id ?? null
 
   const partoj = useMemo(() => (s ? dividi(s.enhavo) : []), [s])
   const qcmoj = partoj.filter((p) => p.tipo === 'qcm').length
@@ -110,14 +114,24 @@ export default function Sekcio() {
               {povasFini && (
                 <Butono
                   stilo={{ flexGrow: 1 }}
-                  teksto={fini.isPending ? '…' : s.finita ? (s.sekva ? 'Section suivante →' : 'Retour au sommaire') : 'Terminé !'}
+                  teksto={
+                    fini.isPending
+                      ? '…'
+                      : !s.finita
+                        ? 'Terminé !'
+                        : s.sekva
+                          ? 'Section suivante →'
+                          : unuaDeSekva
+                            ? `Leçon ${sekvaLeciono?.numero} →`
+                            : 'Retour au sommaire'
+                  }
                   malsxaltita={fini.isPending}
                   onPress={() => {
                     if (s.finita) {
-                      iri(s.sekva)
+                      iri(s.sekva ?? unuaDeSekva)
                       return
                     }
-                    fini.mutate({ id: s.id, ekdato: ekdato.current }, { onSuccess: (r) => postFino(r.sekva) })
+                    fini.mutate({ id: s.id, ekdato: ekdato.current }, { onSuccess: (r) => postFino(r.sekva ?? unuaDeSekva) })
                   }}
                 />
               )}

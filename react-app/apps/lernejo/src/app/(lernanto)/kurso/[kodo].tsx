@@ -12,8 +12,9 @@ export default function Kurso() {
   const { kodo } = useLocalSearchParams<{ kodo: KursoKodo }>()
   const { data, isLoading, error } = useKurso(kodo)
   const nomo = useKursoj().data?.kursoj.find((k) => k.kodo === kodo)?.nomo
-  // la première leçon pas encore envoyée est ouverte
-  const unua = data?.lecionoj.find((l) => !l.sendita)?.numero ?? data?.lecionoj[0]?.numero
+  // la première leçon pas encore envoyée ni terminée est ouverte (l'invité n'envoie pas ses leçons)
+  const unua =
+    data?.lecionoj.find((l) => !l.sendita && l.sekcioj.some((s) => !s.finita))?.numero ?? data?.lecionoj[0]?.numero
   const [malfermita, setMalfermita] = useState<number | null>(null)
   const nuna = malfermita ?? unua
 

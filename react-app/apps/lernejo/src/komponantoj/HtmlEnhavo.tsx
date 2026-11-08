@@ -16,10 +16,10 @@ type Props = {
 export default function HtmlEnhavo({ html, radiko, ludi, malfermi }: Props) {
   const ujo = useRef<HTMLDivElement>(null)
   // adresses relatives à la racine du site, comme $vojo dans montriLecioneron()
-  const absoluta = useMemo(
-    () => html.replace(/\b(href|src)=(["'])(?![a-z]+:|#|\/)/gi, `$1=$2${radiko}/`),
-    [html, radiko],
-  )
+  const absoluta = useMemo(() => {
+    const h = html.replace(/\b(href|src)=(["'])(?![a-z]+:|#|\/)/gi, `$1=$2${radiko}/`)
+    return telefone() ? videojKielBildetoj(h) : h
+  }, [html, radiko])
 
   useEffect(() => {
     const elemento = ujo.current
@@ -45,6 +45,21 @@ export default function HtmlEnhavo({ html, radiko, ludi, malfermi }: Props) {
       <style>{STILO}</style>
       <div ref={ujo} className="ikurso-enhavo" dangerouslySetInnerHTML={{ __html: absoluta }} />
     </>
+  )
+}
+
+// Dans la WebView du téléphone (page locale, sans adresse de site), le lecteur YouTube intégré refuse de se charger
+// (« Erreur 153 ») : à sa place, la miniature de la vidéo, qui s'ouvre dans YouTube.
+function telefone(): boolean {
+  return typeof window !== 'undefined' && 'ReactNativeWebView' in window
+}
+
+function videojKielBildetoj(html: string): string {
+  return html.replace(
+    /<iframe[^>]*\bsrc=["']https?:\/\/(?:www\.)?youtube(?:-nocookie)?\.com\/embed\/([\w-]+)[^"']*["'][^>]*>\s*<\/iframe>/gi,
+    (_, id: string) =>
+      `<a class="video-bildeto" href="https://www.youtube.com/watch?v=${id}" aria-label="Regarder la vidéo sur YouTube">` +
+      `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt=""><span class="video-ludi"></span></a>`,
   )
 }
 
@@ -96,6 +111,10 @@ ${kolumnoj('s')}
 .ikurso-enhavo .card-panel{background:#e3f2fd;padding:1em;border-radius:4px;margin:.5em 0}
 .ikurso-enhavo .creditphoto{font-size:.7rem;margin-top:0}
 .ikurso-enhavo .responsive-img{max-width:100%;height:auto}
+.ikurso-enhavo a.video-bildeto{display:block;position:relative;max-width:560px;margin:.5em 0;border-radius:8px;overflow:hidden;background:#000}
+.ikurso-enhavo a.video-bildeto img{display:block;width:100%;height:auto}
+.ikurso-enhavo .video-ludi{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:12px;background:rgba(229,9,20,.9)}
+.ikurso-enhavo .video-ludi:after{content:"";position:absolute;left:27px;top:14px;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff}
 .ikurso-enhavo a.sm2_button{display:inline-block;width:1.6em;height:1.6em;border-radius:50%;background:#2196F3;vertical-align:middle;position:relative;text-decoration:none}
 .ikurso-enhavo a.sm2_button:after{content:"";position:absolute;left:.6em;top:.45em;border-style:solid;border-width:.35em 0 .35em .55em;border-color:transparent transparent transparent #fff}
 `

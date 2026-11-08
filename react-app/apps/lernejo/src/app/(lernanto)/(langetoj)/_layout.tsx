@@ -1,4 +1,4 @@
-// Onglets : cours, révision du vocabulaire, profil.
+// Onglets : cours (avec ses sommaires et ses sections), révision du vocabulaire, profil.
 // Icônes Material, comme sur le site (materialize) : couleur de l'onglet, marron quand il est actif, gris sinon.
 import MaterialIcons from '@expo/vector-icons/MaterialIcons'
 import { Tabs } from 'expo-router'
@@ -26,7 +26,11 @@ export default function Langetoj() {
         sceneStyle: { backgroundColor: koloroj.fono },
       }}
     >
-      <Tabs.Screen name="index" options={{ title: 'Mes cours', tabBarLabel: 'Cours', tabBarIcon: piktogramo('menu-book') }} />
+      {/* l'en-tête vient de la pile de l'onglet (kursoj/_layout) */}
+      <Tabs.Screen
+        name="(kursoj)"
+        options={{ headerShown: false, title: 'Mes cours', tabBarLabel: 'Cours', tabBarIcon: piktogramo('menu-book') }}
+      />
       <Tabs.Screen
         name="revizio"
         options={{ title: 'Révision du vocabulaire', tabBarLabel: 'Révision', tabBarIcon: piktogramo('style') }}

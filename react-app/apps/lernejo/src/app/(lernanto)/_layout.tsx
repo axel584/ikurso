@@ -1,4 +1,4 @@
-// Écrans de l'élève connecté : les onglets, puis les cours, sections et corrections par-dessus.
+// Écrans de l'élève connecté : les onglets (les cours, sections et corrections sont dans l'onglet « Cours »).
 import { useEffect } from 'react'
 import { Stack, router } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -15,7 +15,7 @@ export default function LernantoArangxo() {
   const margxeno = useSafeAreaInsets()
 
   // le nouvel invité arrive directement dans la première section du cours choisi (#1089),
-  // par-dessus le sommaire du cours
+  // au-dessus du sommaire du cours, dans l'onglet « Cours »
   useEffect(() => {
     if (!komencota) return
     komencis()
@@ -39,9 +39,6 @@ export default function LernantoArangxo() {
       }}
     >
       <Stack.Screen name="(langetoj)" options={{ headerShown: false, contentStyle: { backgroundColor: koloroj.fono } }} />
-      <Stack.Screen name="kurso/[kodo]" options={{ title: 'Cours' }} />
-      <Stack.Screen name="sekcio/[id]" options={{ title: 'Section' }} />
-      <Stack.Screen name="leciono/[kurso]/[numero]" options={{ title: 'Correction' }} />
       <Stack.Screen name="konfirmi" options={{ title: 'Votre compte' }} />
     </Stack>
   )

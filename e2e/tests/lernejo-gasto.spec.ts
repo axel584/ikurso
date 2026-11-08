@@ -217,3 +217,28 @@ test('une liste de mots dans un cadre bleu n’a pas de second cadre gris, comme
   await expect(listo).toBeVisible()
   await expect(listo).toHaveCSS('border-top-style', 'none')
 })
+
+test('la barre des onglets reste visible dans le sommaire du cours et dans les sections', async ({ page }) => {
+  await komenciGaste(page)
+  // dans une section : les trois onglets sont là
+  const onglets = page.getByRole('tab')
+  await expect(onglets).toHaveCount(3)
+  await expect(page.getByRole('tab', { name: /Profil/ })).toBeVisible()
+  if (process.env.KAPTI) await page.screenshot({ path: process.env.KAPTI })
+
+  // le profil s'ouvre depuis une section
+  await page.getByRole('tab', { name: /Profil/ }).click()
+  await expect(page.getByText('Vous suivez le cours en invité')).toBeVisible()
+
+  // retour dans l'onglet Cours : on retrouve la section, puis la liste des cours d'un nouvel appui
+  await page.getByRole('tab', { name: /Cours/ }).click()
+  await expect(page.getByRole('heading', { name: /^1\.1\. / })).toBeVisible()
+  await page.getByRole('tab', { name: /Cours/ }).click()
+  await expect(page.getByRole('heading', { name: 'Mes cours' })).toBeVisible()
+  await expect(page.getByRole('link', { name: /^DLEK : Cours en 10 leçons/ })).toBeVisible()
+
+  // le sommaire du cours garde aussi les onglets
+  await page.goto('lernejo/kurso/CG')
+  await expect(page.getByText(/^1\.1\. /)).toBeVisible()
+  await expect(page.getByRole('tab', { name: /Révision/ })).toBeVisible()
+})

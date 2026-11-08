@@ -75,6 +75,8 @@ ${kolumnoj('s')}
 @media (min-width:993px){${kolumnoj('l')}}
 .ikurso-enhavo .center,.ikurso-enhavo .center-align{text-align:center}
 .ikurso-enhavo .hide{display:none}
+/* pour l'impression du site seulement (« QCM à faire en ligne sur la page… », tableaux découpés) */
+.ikurso-enhavo .onlyprint{display:none}
 .ikurso-enhavo .eo{color:#2196F3}
 .ikurso-enhavo .eta{font-size:85%}
 .ikurso-enhavo .tab{padding-left:1em}

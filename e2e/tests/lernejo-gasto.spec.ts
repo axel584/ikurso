@@ -199,3 +199,12 @@ test('schéma des corrélatifs : un début + une fin = le corrélatif et sa trad
   await expect(rezulto).toContainText('alors')
   if (process.env.KAPTI) await skemo.screenshot({ path: process.env.KAPTI })
 })
+
+test('les passages réservés à l’impression du site ne sont pas affichés dans l’application', async ({ page }) => {
+  await komenciGaste(page)
+  await page.goto('lernejo/sekcio/18')
+  await expect(page.getByRole('heading', { name: /^2\.13\. / })).toBeVisible()
+  await expect(page.getByText('Voici un petit exercice de révision')).toBeVisible()
+  await expect(page.getByText(/à faire en ligne sur la page/)).toBeHidden()
+  await expect(page.getByText(/ikurso\.fr\/fr\/cge/)).toBeHidden()
+})

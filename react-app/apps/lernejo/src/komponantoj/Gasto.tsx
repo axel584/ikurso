@@ -1,6 +1,6 @@
 // Ce que voit l'invité (#1089) : le bandeau des sections, le rappel d'inscription et l'invitation à créer
 // un compte pour être corrigé.
-import { Text, View } from 'react-native'
+import { Modal, Text, View } from 'react-native'
 import { router } from 'expo-router'
 import { Butono } from './Bazaj'
 import { koloroj, stiloj } from '@/stiloj'
@@ -22,18 +22,24 @@ export function GastoStrio() {
   )
 }
 
+// En fenêtre par-dessus la section : ajouté en bas de la page, il restait hors de l'écran et « Terminé ! »
+// semblait ne rien faire.
 export function Rememorigo({ onPlusTard, onAligxi }: { onPlusTard: () => void; onAligxi: () => void }) {
   return (
-    <View style={[stiloj.karto, { gap: 10 }]} testID="rememorigo">
-      <Text style={stiloj.subtitolo} accessibilityRole="header">
-        Vous avancez bien !
-      </Text>
-      <Text style={stiloj.teksto}>
-        Créez un compte pour ne pas perdre votre travail et le retrouver sur le site ou sur un autre appareil.
-      </Text>
-      <Butono teksto="Créer mon compte" onPress={onAligxi} />
-      <Butono dua teksto="Plus tard" onPress={onPlusTard} />
-    </View>
+    <Modal transparent animationType="fade" onRequestClose={onPlusTard}>
+      <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.4)', justifyContent: 'center', alignItems: 'center', padding: 16 }}>
+        <View style={[stiloj.karto, { gap: 10, width: '100%', maxWidth: 440 }]} testID="rememorigo" accessibilityViewIsModal>
+          <Text style={stiloj.subtitolo} accessibilityRole="header">
+            Vous avancez bien !
+          </Text>
+          <Text style={stiloj.teksto}>
+            Créez un compte pour ne pas perdre votre travail et le retrouver sur le site ou sur un autre appareil.
+          </Text>
+          <Butono teksto="Créer mon compte" onPress={onAligxi} />
+          <Butono dua teksto="Plus tard" onPress={onPlusTard} />
+        </View>
+      </View>
+    </Modal>
   )
 }
 

@@ -149,3 +149,23 @@ test('à la fin d’une leçon, l’invité passe à la leçon suivante', async 
   await expect(page.getByText(/^2\.1\. /)).toBeVisible()
   await expect(page.getByText(/^1\.1\. /)).toHaveCount(0)
 })
+
+test('le rappel d’inscription s’affiche par-dessus une longue section, et une seule fois', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 })
+  const gasto = await komenciGaste(page)
+  // 1.1 à 1.3 déjà terminées : la 2.2 est la 4e section terminée
+  sql(`INSERT INTO personoj_lecioneroj (dato, persono_id, lecionero_id, ekdato)
+       SELECT NOW(), ${gasto}, le.id, NOW() FROM lecioneroj le JOIN lecionoj l ON l.id = le.leciono_id
+       WHERE l.kurso = 'CG' AND l.numero = 1 AND le.ordo <= 3`)
+  await page.goto('lernejo/sekcio/9')
+  await expect(page.getByRole('heading', { name: /^2\.2\. / })).toBeVisible()
+  await page.getByText('Terminé !').click()
+  await expect(page.getByTestId('rememorigo')).toBeInViewport()
+
+  // quitté sans répondre : il ne revient pas à la section suivante
+  await page.goto('lernejo/sekcio/11')
+  await expect(page.getByRole('heading', { name: /^2\.4\. / })).toBeVisible()
+  await page.getByText('Terminé !').click()
+  await expect(page.getByRole('heading', { name: /^2\.5\. / })).toBeVisible()
+  await expect(page.getByTestId('rememorigo')).toHaveCount(0)
+})

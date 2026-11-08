@@ -54,14 +54,15 @@ export default function Sekcio() {
   async function postFino(sekva: number | null) {
     const finitaj = kursoj.data?.kursoj.find((k) => k.kodo === s?.kurso)?.finitaj_sekcioj ?? 0
     if (gasto && finitaj + 1 >= REMEMORIGO_POST && (await legiAgordon(REMEMORIGO)) !== '1') {
+      // noté comme vu dès qu'il s'affiche : il ne revient pas, même si l'élève quitte la page sans répondre
+      await skribiAgordon(REMEMORIGO, '1')
       setPost(sekva)
       return
     }
     iri(sekva)
   }
 
-  async function finiRememorigon(aligxi: boolean) {
-    await skribiAgordon(REMEMORIGO, '1')
+  function finiRememorigon(aligxi: boolean) {
     const sekva = post ?? null
     setPost(undefined)
     if (aligxi) {

@@ -1,0 +1,8 @@
+# Vidéos des leçons (#1089) : lues par la balise <video> du site et de l'application.
+# Dans l'application sur téléphone, la page des sections est locale : vidéos et sous-titres y sont demandés
+# depuis une autre origine (balise <video crossorigin>), d'où l'en-tête CORS.
+AddType video/mp4 .mp4
+AddType text/vtt .vtt
+<IfModule mod_headers.c>
+	Header set Access-Control-Allow-Origin "*"
+</IfModule>

@@ -1668,3 +1668,13 @@ fieldset.ekzerco {scroll-margin-top:80px;}
 	.korelativa-skemo .ks-karto[aria-pressed="true"] .ks-ero { color: var(--ks-blua); }
 	.korelativa-skemo .ks-rezulto { background: #fff; color: #333; border: 2px solid var(--ks-blua); }
 }
+
+/*---- vidéos des leçons, hébergées dans videos/ (#1089) -----*/
+video.vidbendo {
+	display: block;
+	width: 100%;
+	max-width: 560px;
+	height: auto;
+	margin: .5em 0;
+	background: #000;
+}

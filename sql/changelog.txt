@@ -4562,3 +4562,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Contenu des 177 sections de Paŝoj al plena posedo dans lecioneroj.enhavo ; pasxo01.php à pasxo30.php passent par le gabarit eo/ppp/leciono.inc.php (#1087) : voir sql/57-contenu-pasxoj-1087.sql
 --- Refresh tokens de l'application mobile : table renovigaj_sxlosiloj (empreinte SHA-256, rotation, révocation) (#1088) : voir sql/58-renovigaj-sxlosiloj-1088.sql
 --- Schéma des corrélatifs en HTML, interactif, à la place de l'image korelativoj.svg dans la section 5.2 (#1110) : voir sql/59-correlatifs-interactifs-1110.sql
+--- Vidéos des leçons 1.8, 4.13 et 9.10 hébergées dans videos/ et lues par la balise <video> à la place de YouTube (#1089) : voir sql/60-videos-sur-le-site-1089.sql

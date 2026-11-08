@@ -17,7 +17,7 @@ export default function HtmlEnhavo({ html, radiko, ludi, malfermi }: Props) {
   const ujo = useRef<HTMLDivElement>(null)
   // adresses relatives à la racine du site, comme $vojo dans montriLecioneron()
   const absoluta = useMemo(() => {
-    const h = html.replace(/\b(href|src)=(["'])(?![a-z]+:|#|\/)/gi, `$1=$2${radiko}/`)
+    const h = html.replace(/\b(href|src|poster)=(["'])(?![a-z]+:|#|\/)/gi, `$1=$2${radiko}/`)
     return telefone() ? videojPerRelajso(h, radiko) : h
   }, [html, radiko])
 
@@ -111,6 +111,7 @@ ${kolumnoj('s')}
 .ikurso-enhavo .card-panel{background:#e3f2fd;padding:1em;border-radius:4px;margin:.5em 0}
 .ikurso-enhavo .creditphoto{font-size:.7rem;margin-top:0}
 .ikurso-enhavo .responsive-img{max-width:100%;height:auto}
+.ikurso-enhavo video.vidbendo{display:block;width:100%;max-width:560px;height:auto;margin:.5em 0;background:#000}
 .ikurso-enhavo iframe.video-relajso{display:block;width:100%;max-width:560px;height:auto;aspect-ratio:16/9;border:0;margin:.5em 0;background:#000}
 .ikurso-enhavo a.sm2_button{display:inline-block;width:1.6em;height:1.6em;border-radius:50%;background:#2196F3;vertical-align:middle;position:relative;text-decoration:none}
 .ikurso-enhavo a.sm2_button:after{content:"";position:absolute;left:.6em;top:.45em;border-style:solid;border-width:.35em 0 .35em .55em;border-color:transparent transparent transparent #fff}

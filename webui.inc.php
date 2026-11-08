@@ -53,7 +53,7 @@ function montriLecioneron($kurso,$leciono,$section,$persono_id) {
 	}
 	require_once __DIR__."/api/KursaEnhavoAPI.php";
 	$html = KursaEnhavoAPI::kondicxoj((string)$row["enhavo"], !empty($_SESSION["persono_id"]));
-	$html = preg_replace('~\b(href|src)=(["\'])(?![a-z]+:|#|/)~i', '$1=$2'.$vojo, $html);
+	$html = preg_replace('~\b(href|src|poster)=(["\'])(?![a-z]+:|#|/)~i', '$1=$2'.$vojo, $html);
 	$partoj = preg_split('~##(EKZERCO|QCM_BILDOJ|QCM|KORELATIVOJ|RESUMO):?(.*?)##~s', $html, -1, PREG_SPLIT_DELIM_CAPTURE);
 	echo $partoj[0];
 	for ($i = 1; $i < count($partoj); $i += 3) {

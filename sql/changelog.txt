@@ -4561,3 +4561,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Contenu des 155 sections de Gerda malaperis dans lecioneroj.enhavo ; cxap01.php à cxap25.php et ekzameno_a2.php passent par le gabarit fr/gerda/leciono.inc.php (#1087) : voir sql/56-contenu-gerda-malaperis-1087.sql
 --- Contenu des 177 sections de Paŝoj al plena posedo dans lecioneroj.enhavo ; pasxo01.php à pasxo30.php passent par le gabarit eo/ppp/leciono.inc.php (#1087) : voir sql/57-contenu-pasxoj-1087.sql
 --- Refresh tokens de l'application mobile : table renovigaj_sxlosiloj (empreinte SHA-256, rotation, révocation) (#1088) : voir sql/58-renovigaj-sxlosiloj-1088.sql
+--- Schéma des corrélatifs en HTML, interactif, à la place de l'image korelativoj.svg dans la section 5.2 (#1110) : voir sql/59-correlatifs-interactifs-1110.sql

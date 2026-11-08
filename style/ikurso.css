@@ -1567,3 +1567,106 @@ span.bravo {
 .recap-ekzerco .btn-small {flex-shrink:0; text-decoration:none;}
 /* l'exercice visé par le lien n'est pas caché sous le menu fixe */
 fieldset.ekzerco {scroll-margin-top:80px;}
+
+/*---- schéma des corrélatifs (#1110) : un début + une fin = un corrélatif -----*/
+.korelativa-skemo {
+	--ks-blua: #1e88e5;
+	max-width: 560px;
+	margin: 1.5em auto;
+}
+.korelativa-skemo .ks-titolo {
+	color: var(--ks-blua);
+	font-weight: 700;
+	letter-spacing: .06em;
+	text-transform: uppercase;
+	margin: 0 0 .6em;
+}
+.korelativa-skemo .ks-komencoj,
+.korelativa-skemo .ks-finoj {
+	display: grid;
+	gap: .6em;
+}
+.korelativa-skemo .ks-finoj {
+	grid-template-columns: 1fr 1fr;
+}
+.korelativa-skemo .ks-karto {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	width: 100%;
+	margin: 0;
+	padding: .55em 1em;
+	border: 2px solid var(--ks-blua);
+	border-radius: 12px;
+	background: #fff;
+	color: #333;
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+	transition: background-color .15s, color .15s;
+}
+.korelativa-skemo .ks-karto:not([aria-pressed="true"]):hover {
+	background: #e3f2fd;
+}
+.korelativa-skemo .ks-karto:focus-visible {
+	outline: 3px solid #90caf9;
+	outline-offset: 2px;
+}
+.korelativa-skemo .ks-ero {
+	min-width: 3.2em;
+	color: var(--ks-blua);
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+.korelativa-skemo .ks-komencoj .ks-ero {
+	min-width: 5em;
+}
+.korelativa-skemo .ks-karto[aria-pressed="true"] {
+	background: var(--ks-blua);
+	color: #fff;
+}
+.korelativa-skemo .ks-karto[aria-pressed="true"] .ks-ero {
+	color: #fff;
+}
+.korelativa-skemo .ks-signo {
+	margin: .3em 0;
+	color: var(--ks-blua);
+	font-size: 2.4em;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+}
+.korelativa-skemo .ks-rezulto {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: .3em;
+	padding: 1em;
+	border-radius: 16px;
+	background: var(--ks-blua);
+	color: #fff;
+	text-align: center;
+}
+.korelativa-skemo .ks-kalkulo {
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+	font-size: 1.9em;
+	font-weight: 700;
+	line-height: 1.3;
+}
+.korelativa-skemo .ks-traduko {
+	font-size: 1.1em;
+}
+.korelativa-skemo .ks-konkludo {
+	margin: .8em 0 0;
+	text-align: center;
+}
+@media only screen and (max-width: 360px) {
+	.korelativa-skemo .ks-karto { gap: .5em; padding: .5em .7em; }
+	.korelativa-skemo .ks-kalkulo { font-size: 1.5em; }
+}
+@media print {
+	.korelativa-skemo .ks-karto[aria-pressed="true"] { background: #fff; color: #333; }
+	.korelativa-skemo .ks-karto[aria-pressed="true"] .ks-ero { color: var(--ks-blua); }
+	.korelativa-skemo .ks-rezulto { background: #fff; color: #333; border: 2px solid var(--ks-blua); }
+}

@@ -40,7 +40,8 @@ function displayWarningSiLecioneroManquante($persono_id,$kurso,$leciono,$lecione
 }
 
 // Contenu d'une section, rangé en base dans lecioneroj.enhavo (#1087), avec les marqueurs posés par sql/eltiri-enhavon.php :
-// ##EKZERCO:N## (ou ##EKZERCO:N:eo##), ##QCM:[json]##, ##QCM_BILDOJ:[json]##, ##RESUMO## et <!--se nekonektita-->…<!--alie-->…<!--/se-->.
+// ##EKZERCO:N## (ou ##EKZERCO:N:eo##), ##QCM:[json]##, ##QCM_BILDOJ:[json]##, ##KORELATIVOJ:{json}##, ##RESUMO##
+// et <!--se nekonektita-->…<!--alie-->…<!--/se-->.
 // Les adresses du contenu sont relatives à la racine du site : on les fait précéder de $vojo.
 function montriLecioneron($kurso,$leciono,$section,$persono_id) {
 	global $bdd, $vojo;
@@ -53,7 +54,7 @@ function montriLecioneron($kurso,$leciono,$section,$persono_id) {
 	require_once __DIR__."/api/KursaEnhavoAPI.php";
 	$html = KursaEnhavoAPI::kondicxoj((string)$row["enhavo"], !empty($_SESSION["persono_id"]));
 	$html = preg_replace('~\b(href|src)=(["\'])(?![a-z]+:|#|/)~i', '$1=$2'.$vojo, $html);
-	$partoj = preg_split('~##(EKZERCO|QCM_BILDOJ|QCM|RESUMO):?(.*?)##~s', $html, -1, PREG_SPLIT_DELIM_CAPTURE);
+	$partoj = preg_split('~##(EKZERCO|QCM_BILDOJ|QCM|KORELATIVOJ|RESUMO):?(.*?)##~s', $html, -1, PREG_SPLIT_DELIM_CAPTURE);
 	echo $partoj[0];
 	for ($i = 1; $i < count($partoj); $i += 3) {
 		if ($partoj[$i] == "EKZERCO") {
@@ -69,11 +70,49 @@ function montriLecioneron($kurso,$leciono,$section,$persono_id) {
 			}
 			unset($demando);
 			QCM_bildoj($qcm);
+		} elseif ($partoj[$i] == "KORELATIVOJ") {
+			korelativaSkemo(json_decode($partoj[$i+1], true));
 		} else {
 			recapitulatif_lecon_avant_envoi($kurso,$leciono,$persono_id);
 		}
 		echo $partoj[$i+2];
 	}
+}
+
+// Schéma des corrélatifs (#1110) : un début (ki-, ti-…) + une fin (-o, -u…) = un corrélatif.
+// Les cartes se choisissent (js/ikurso.js) et l'encadré donne le corrélatif obtenu et sa traduction ;
+// sans JavaScript, il garde l'exemple. $d : {"komencoj": [[ero, senco]…], "finoj": [[ero, senco]…],
+// "ekzemplo": [komenco, fino], "vortoj": {korelativo: traduko}}.
+function korelativaSkemo($d) {
+	if (!is_array($d) || empty($d["komencoj"]) || empty($d["finoj"]) || empty($d["vortoj"])) {
+		return;
+	}
+	list($komenco, $fino) = $d["ekzemplo"];
+	$h = function ($t) { return htmlspecialchars($t, ENT_QUOTES, 'UTF-8'); };
+	$karto = function ($speco, $ero, $senco, $elektita) use ($h) {
+		$montro = $speco == "komenco" ? $ero."-" : "-".$ero;
+		return '<button type="button" class="ks-karto" data-'.$speco.'="'.$h($ero).'" aria-pressed="'.($elektita ? 'true' : 'false').'">'
+			.'<span class="ks-ero" lang="eo">'.$h($montro).'</span><span class="ks-senco">'.$h($senco).'</span></button>';
+	};
+	echo '<div class="korelativa-skemo" data-vortoj="'.$h(json_encode($d["vortoj"], JSON_UNESCAPED_UNICODE)).'">';
+	echo '<p class="ks-titolo" id="ks-komencoj">1 · Un début</p>';
+	echo '<div class="ks-komencoj" role="group" aria-labelledby="ks-komencoj">';
+	foreach ($d["komencoj"] as $k) {
+		echo $karto("komenco", $k[0], $k[1], $k[0] === $komenco);
+	}
+	echo '</div><p class="ks-signo" aria-hidden="true">+</p>';
+	echo '<p class="ks-titolo" id="ks-finoj">2 · Une fin</p>';
+	echo '<div class="ks-finoj" role="group" aria-labelledby="ks-finoj">';
+	foreach ($d["finoj"] as $f) {
+		echo $karto("fino", $f[0], $f[1], $f[0] === $fino);
+	}
+	echo '</div><p class="ks-signo" aria-hidden="true">=</p>';
+	$vorto = $komenco.$fino;
+	echo '<div class="ks-rezulto" aria-live="polite"><span class="ks-etikedo">exemple</span>';
+	echo '<span class="ks-kalkulo" lang="eo">'.$h($komenco).'- + -'.$h($fino).' = <b>'.$h($vorto).'</b></span>';
+	echo '<span class="ks-traduko">'.$h(isset($d["vortoj"][$vorto]) ? $d["vortoj"][$vorto] : "").'</span></div>';
+	echo '<p class="ks-konkludo">'.count($d["komencoj"]).' débuts × '.count($d["finoj"]).' fins = '.(count($d["komencoj"]) * count($d["finoj"])).' corrélatifs</p>';
+	echo '</div>';
 }
 
 function getTitoloLecionero($kurso,$leciono,$lecionero) {

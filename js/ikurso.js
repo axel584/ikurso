@@ -986,3 +986,17 @@ $(".delete_evento").click(function(){
 });
 
 });
+
+// Schéma des corrélatifs (#1110) : choisir un début et une fin donne le corrélatif et sa traduction.
+$(document).on('click', '.korelativa-skemo .ks-karto', function () {
+  var $karto = $(this);
+  var $skemo = $karto.closest('.korelativa-skemo');
+  $karto.siblings('.ks-karto').attr('aria-pressed', 'false');
+  $karto.attr('aria-pressed', 'true');
+  var komenco = $skemo.find('.ks-karto[data-komenco][aria-pressed="true"]').data('komenco');
+  var fino = $skemo.find('.ks-karto[data-fino][aria-pressed="true"]').data('fino');
+  var vorto = komenco + fino;
+  var $kalkulo = $skemo.find('.ks-kalkulo').text(komenco + '- + -' + fino + ' = ');
+  $kalkulo.append($('<b>').text(vorto));
+  $skemo.find('.ks-traduko').text($skemo.data('vortoj')[vorto] || '');
+});

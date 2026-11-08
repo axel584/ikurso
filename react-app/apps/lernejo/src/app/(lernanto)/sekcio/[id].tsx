@@ -11,6 +11,7 @@ import { Ekzerco } from '@/komponantoj/Ekzerco'
 import { GastoStrio, REMEMORIGO, REMEMORIGO_POST, Rememorigo } from '@/komponantoj/Gasto'
 import { useSeanco } from '@/seanco'
 import HtmlEnhavo from '@/komponantoj/HtmlEnhavo'
+import { Korelativoj } from '@/komponantoj/Korelativoj'
 import { Qcm } from '@/komponantoj/Qcm'
 import { Resumo } from '@/komponantoj/Resumo'
 import { useLudi } from '@/komponantoj/Sono'
@@ -101,6 +102,8 @@ export default function Sekcio() {
                 }
                 case 'qcm':
                   return <Qcm key={`${s.id}-${i}`} demandoj={p.demandoj} bildoj={p.bildoj} />
+                case 'korelativoj':
+                  return <Korelativoj key={`${s.id}-${i}`} datumoj={p.datumoj} />
                 case 'resumo':
                   return <Resumo key={`${s.id}-${i}`} kurso={s.kurso} numero={s.leciono} />
               }

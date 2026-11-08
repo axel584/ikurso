@@ -1,6 +1,7 @@
 -- Schéma des corrélatifs en HTML, interactif, à la place de l'image korelativoj.svg (#1110) :
 -- section 5.2 du Cours en 10 leçons (« Les corrélatifs »), marqueur ##KORELATIVOJ:{json}## rendu par webui.inc.php.
 -- Rejouable : ne touche que le contenu qui a encore l'image.
+SET NAMES utf8mb4;
 UPDATE lecioneroj le
 JOIN lecionoj l ON l.id = le.leciono_id
 SET le.enhavo = REPLACE(le.enhavo,

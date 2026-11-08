@@ -4,6 +4,7 @@
   "main": "expo-router/entry",
   "dependencies": {
     "@expo-google-fonts/nothing-you-could-do": "^0.4.1",
+    "@expo/vector-icons": "^15.0.2",
     "@ikurso/api-client": "*",
     "@tanstack/react-query": "^5.106.0",
     "expo": "~58.0.23",

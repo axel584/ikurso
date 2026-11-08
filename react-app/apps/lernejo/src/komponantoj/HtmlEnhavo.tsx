@@ -89,6 +89,8 @@ ${kolumnoj('s')}
 .ikurso-enhavo .vortlisto p{margin-bottom:0}
 .ikurso-enhavo fieldset{border:2px double #2196F3;padding:0 1em 1em;margin:1em 0;min-width:0}
 .ikurso-enhavo fieldset legend{padding:0 .5em;color:#2196F3}
+/* liste de mots ou règle dans un cadre bleu : pas de second cadre gris, comme sur le site */
+.ikurso-enhavo fieldset.vortoj div.vortlisto,.ikurso-enhavo fieldset.memoru div.regulo{border:none;padding:0}
 .ikurso-enhavo fieldset.sono{border:2px dotted #64B5F6}
 .ikurso-enhavo audio{width:100%;max-width:400px}
 .ikurso-enhavo .card-panel{background:#e3f2fd;padding:1em;border-radius:4px;margin:.5em 0}

@@ -208,3 +208,12 @@ test('les passages réservés à l’impression du site ne sont pas affichés da
   await expect(page.getByText(/à faire en ligne sur la page/)).toBeHidden()
   await expect(page.getByText(/ikurso\.fr\/fr\/cge/)).toBeHidden()
 })
+
+test('une liste de mots dans un cadre bleu n’a pas de second cadre gris, comme sur le site', async ({ page }) => {
+  await komenciGaste(page)
+  await page.goto('lernejo/sekcio/219')
+  await expect(page.getByRole('heading', { name: /^1\.7\. / })).toBeVisible()
+  const listo = page.locator('fieldset.vortoj .vortlisto').first()
+  await expect(listo).toBeVisible()
+  await expect(listo).toHaveCSS('border-top-style', 'none')
+})

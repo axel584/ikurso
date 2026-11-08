@@ -23,7 +23,6 @@ export default function Sekcio() {
   const fini = useFini()
   const ludiSonon = useLudi()
   const ekdato = useRef(Math.floor(Date.now() / 1000))
-  const [finitajQcm, setFinitajQcm] = useState(0)
   const { gasto } = useSeanco()
   const kursoj = useKursoj()
   // section où aller après le rappel d'inscription de l'invité (undefined : pas de rappel affiché)
@@ -34,8 +33,6 @@ export default function Sekcio() {
   const unuaDeSekva = sekvaLeciono?.sekcioj[0]?.id ?? null
 
   const partoj = useMemo(() => (s ? dividi(s.enhavo) : []), [s])
-  const qcmoj = partoj.filter((p) => p.tipo === 'qcm').length
-  const qcmFinita = useCallback(() => setFinitajQcm((n) => n + 1), [])
   const ludi = useCallback(async (url: string) => ludiSonon(url), [ludiSonon])
   const malfermi = useCallback(async (url: string) => {
     await Linking.openURL(url)
@@ -72,8 +69,6 @@ export default function Sekcio() {
     }
   }
 
-  // comme sur le site, la section d'un QCM se termine une fois le QCM réussi
-  const povasFini = s && (s.finita || finitajQcm >= qcmoj)
   return (
     <ScrollView style={stiloj.ekrano} contentContainerStyle={stiloj.enhavo} keyboardShouldPersistTaps="handled">
       <Stack.Screen options={{ title: s ? `Leçon ${s.leciono}` : 'Section' }} />
@@ -105,37 +100,36 @@ export default function Sekcio() {
                   return ekzerco ? <Ekzerco key={`${s.id}-${i}`} ekzerco={ekzerco} /> : null
                 }
                 case 'qcm':
-                  return <Qcm key={`${s.id}-${i}`} demandoj={p.demandoj} bildoj={p.bildoj} onFinita={qcmFinita} />
+                  return <Qcm key={`${s.id}-${i}`} demandoj={p.demandoj} bildoj={p.bildoj} />
                 case 'resumo':
                   return <Resumo key={`${s.id}-${i}`} kurso={s.kurso} numero={s.leciono} />
               }
             })}
             <View style={{ flexDirection: 'row', gap: 12, marginTop: 8, flexWrap: 'wrap' }}>
               {s.antauxa && <Butono dua teksto="← Précédent" onPress={() => iri(s.antauxa)} />}
-              {povasFini && (
-                <Butono
-                  stilo={{ flexGrow: 1 }}
-                  teksto={
-                    fini.isPending
-                      ? '…'
-                      : !s.finita
-                        ? 'Terminé !'
-                        : s.sekva
-                          ? 'Section suivante →'
-                          : unuaDeSekva
-                            ? `Leçon ${sekvaLeciono?.numero} →`
-                            : 'Retour au sommaire'
+              {/* aussi dans une section à QCM : le QCM est facultatif (#1109) */}
+              <Butono
+                stilo={{ flexGrow: 1 }}
+                teksto={
+                  fini.isPending
+                    ? '…'
+                    : !s.finita
+                      ? 'Terminé !'
+                      : s.sekva
+                        ? 'Section suivante →'
+                        : unuaDeSekva
+                          ? `Leçon ${sekvaLeciono?.numero} →`
+                          : 'Retour au sommaire'
+                }
+                malsxaltita={fini.isPending}
+                onPress={() => {
+                  if (s.finita) {
+                    iri(s.sekva ?? unuaDeSekva)
+                    return
                   }
-                  malsxaltita={fini.isPending}
-                  onPress={() => {
-                    if (s.finita) {
-                      iri(s.sekva ?? unuaDeSekva)
-                      return
-                    }
-                    fini.mutate({ id: s.id, ekdato: ekdato.current }, { onSuccess: (r) => postFino(r.sekva ?? unuaDeSekva) })
-                  }}
-                />
-              )}
+                  fini.mutate({ id: s.id, ekdato: ekdato.current }, { onSuccess: (r) => postFino(r.sekva ?? unuaDeSekva) })
+                }}
+              />
             </View>
             {fini.error && <Text style={stiloj.eraro}>{fini.error.message}</Text>}
             {post !== undefined && <Rememorigo onPlusTard={() => finiRememorigon(false)} onAligxi={() => finiRememorigon(true)} />}

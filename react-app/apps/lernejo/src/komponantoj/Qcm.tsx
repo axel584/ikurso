@@ -8,7 +8,8 @@ import type { QcmDemando } from '@/utiloj/enhavo'
 import { HtmlTeksto } from './HtmlTeksto'
 import { koloroj, stiloj } from '@/stiloj'
 
-export function Qcm({ demandoj, bildoj, onFinita }: { demandoj: QcmDemando[]; bildoj: boolean; onFinita: () => void }) {
+// Facultatif : « Terminé ! » ne l'attend pas (#1109).
+export function Qcm({ demandoj, bildoj }: { demandoj: QcmDemando[]; bildoj: boolean }) {
   const [nuna, setNuna] = useState(0)
   const [mesagxo, setMesagxo] = useState<{ bone: boolean; teksto: string } | null>(null)
   const [elektita, setElektita] = useState<number | null>(null)
@@ -23,10 +24,6 @@ export function Qcm({ demandoj, bildoj, onFinita }: { demandoj: QcmDemando[]; bi
     }, 1000)
     return () => clearTimeout(tempo)
   }, [mesagxo])
-
-  useEffect(() => {
-    if (finita) onFinita()
-  }, [finita, onFinita])
 
   if (finita) {
     return (

@@ -169,3 +169,12 @@ test('le rappel d’inscription s’affiche par-dessus une longue section, et un
   await expect(page.getByRole('heading', { name: /^2\.5\. / })).toBeVisible()
   await expect(page.getByTestId('rememorigo')).toHaveCount(0)
 })
+
+test('section à QCM : « Terminé ! » est là sans faire le QCM, qui reste facultatif (#1109)', async ({ page }) => {
+  await komenciGaste(page)
+  await page.goto('lernejo/sekcio/10')
+  await expect(page.getByRole('heading', { name: /^2\.3\. / })).toBeVisible()
+  await expect(page.getByTestId('qcm')).toBeVisible()
+  await page.getByText('Terminé !').click()
+  await expect(page.getByRole('heading', { name: /^2\.4\. / })).toBeVisible()
+})

@@ -85,8 +85,8 @@ test('un élève suit la leçon 1 complète sur /lernejo, jusqu’au retour de s
       }
     }
     if (await page.getByTestId('qcm').isVisible()) {
-      // comme sur le site, pas de « Terminé ! » avant d'avoir réussi le QCM
-      await expect(page.getByText('Terminé !')).toHaveCount(0)
+      // le QCM est facultatif (#1109) : « Terminé ! » est déjà là
+      await expect(page.getByText('Terminé !')).toBeVisible()
       await solviQcm(page)
     }
     if (ordo < 13) {

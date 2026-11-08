@@ -251,9 +251,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 			$classeDejaFait="disabled";
 		}
 	}
-	if($tipo=="QCM") { // on vérifie le QCM 
-		echo '<a id="finiLecioneron_button" class="hide waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
-	} elseif($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
+	if($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
 		echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
 	} elseif($lasta==1 && $gasto) { // la correction demande un compte : l'inscription garde le travail déjà fait
 		if ($classeDejaFait=="") { // pas encore envoyée
@@ -273,7 +271,7 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 		} else { // Pas de correcteur
 			echo '<a id="petiKorektanton_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="Mes exercices lui seront envoyés">Demander un correcteur</a>';
 		}
-	} else { // on indique que la leçon est terminée
+	} else { // on indique que la section est terminée ; le QCM est facultatif : le bouton est là sans attendre la fin du QCM (#1109)
 		echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
 	}
 }

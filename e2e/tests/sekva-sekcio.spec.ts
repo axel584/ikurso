@@ -40,3 +40,13 @@ test('« Enregistrer mes réponses » mène aussi à la prochaine section pas te
   await page.locator('#registriEkzercaron_button').click()
   await expect(page).toHaveURL(/lec01\.php\?section=10$/)
 })
+
+test('section à QCM : « Terminé ! » est là sans faire le QCM, qui reste facultatif (#1109)', async ({ page }) => {
+  finitaj([1, 2, 3, 4, 5, 6, 7])
+  await login(page, USERS.lernanto)
+  await page.goto('fr/cge/lec01.php?section=8')
+  await expect(page.locator('.qcm_demando').first()).toBeVisible()
+  await expect(page.locator('#finiLecioneron_button')).toBeVisible()
+  await page.locator('#finiLecioneron_button').click()
+  await expect(page).toHaveURL(/lec01\.php\?section=9$/)
+})

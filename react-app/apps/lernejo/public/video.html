@@ -1,0 +1,36 @@
+<!doctype html>
+<!--
+  Page relais des vidéos YouTube pour l'application sur téléphone (#1089).
+  Les sections y sont affichées depuis une page locale, sans adresse de site : YouTube refuse alors son lecteur
+  intégré (« Erreur 153 »). Chargé depuis cette page, le lecteur voit l'adresse du site et accepte la vidéo.
+  Usage : video.html?v=<identifiant YouTube>
+-->
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="robots" content="noindex" />
+    <title>Vidéo – iKurso</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #000; }
+      iframe { display: block; border: 0; width: 100%; height: 100%; }
+    </style>
+  </head>
+  <body>
+    <iframe
+      id="ludilo"
+      title="Vidéo"
+      allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin"
+    ></iframe>
+    <script>
+      // seul un identifiant YouTube est accepté (lettres, chiffres, - et _)
+      var id = new URLSearchParams(location.search).get('v') || ''
+      if (/^[\w-]{6,20}$/.test(id)) {
+        document.getElementById('ludilo').src = 'https://www.youtube.com/embed/' + id + '?rel=0&playsinline=1'
+      }
+    </script>
+  </body>
+</html>

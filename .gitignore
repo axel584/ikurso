@@ -11,5 +11,7 @@ python/nbJoursParEleve.csv
 launch.json
 settings.json
 vendor/
+# sauf dans le build de lernejo : police des icônes de @expo/vector-icons (…/build/vendor/…)
+!lernejo/assets/**/vendor/
 .env
 

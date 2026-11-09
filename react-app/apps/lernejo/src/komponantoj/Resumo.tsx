@@ -1,4 +1,5 @@
-// Récapitulatif avant l'envoi (##RESUMO##) : ce qui manque dans la leçon, un message pour le correcteur, l'envoi.
+// Récapitulatif avant l'envoi (##RESUMO##) : ce qui manque dans la leçon, un message pour le correcteur, l'envoi,
+// puis l'appréciation de la leçon (Takso), comme sur le site.
 import { useState } from 'react'
 import { Text, TextInput, View } from 'react-native'
 import { Link, router } from 'expo-router'
@@ -8,6 +9,7 @@ import { useSeanco } from '@/seanco'
 import { Butono, Stato } from './Bazaj'
 import { KontoBezonata } from './Gasto'
 import { HtmlTeksto } from './HtmlTeksto'
+import { Takso } from './Takso'
 import { koloroj, stiloj } from '@/stiloj'
 
 export function Resumo({ kurso, numero }: { kurso: KursoKodo; numero: number }) {
@@ -56,6 +58,7 @@ export function Resumo({ kurso, numero }: { kurso: KursoKodo; numero: number }) 
               ? 'Leçon envoyée ! Un correcteur vient de vous être attribué : il vous écrira bientôt.'
               : 'Leçon envoyée à votre correcteur !'}
           </Text>
+          <Takso kurso={kurso} numero={numero} />
           <Text
             accessibilityRole="link"
             style={{ color: koloroj.blua, fontSize: 16 }}

@@ -314,6 +314,39 @@ paths:
         '422':
           description: Aucune réponse dans la leçon
           content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
+  /lernado/lecionoj/{kurso}/{numero}/takso:
+    post:
+      tags: [lernado]
+      summary: Appréciation de la leçon envoyée (intérêt et difficulté de 1 à 5, commentaire), lue par les administrateurs
+      parameters:
+        - $ref: '#/components/parameters/Kurso'
+        - $ref: '#/components/parameters/Numero'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [intereso, malfacileco]
+              properties:
+                intereso: { type: integer, minimum: 1, maximum: 5, description: '1 : trop barbant … 5 : génial' }
+                malfacileco: { type: integer, minimum: 1, maximum: 5, description: '1 : très facile … 5 : trop compliqué' }
+                komento: { type: string, description: 'Commentaire facultatif' }
+      responses:
+        '201':
+          description: Appréciation enregistrée
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [intereso, malfacileco]
+                properties:
+                  intereso: { type: integer }
+                  malfacileco: { type: integer }
+        '400': { $ref: '#/components/responses/Eraro' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '403': { $ref: '#/components/responses/Eraro' }
+        '404': { $ref: '#/components/responses/Eraro' }
   /lernado/lecionoj/{kurso}/{numero}/korekto:
     get:
       tags: [lernado]

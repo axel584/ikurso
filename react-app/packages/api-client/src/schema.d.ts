@@ -601,6 +601,64 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/lernado/lecionoj/{kurso}/{numero}/takso": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Appréciation de la leçon envoyée (intérêt et difficulté de 1 à 5, commentaire), lue par les administrateurs */
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    kurso: components["parameters"]["Kurso"];
+                    /** @description Numéro de la leçon dans le cours */
+                    numero: components["parameters"]["Numero"];
+                };
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": {
+                        /** @description 1 : trop barbant … 5 : génial */
+                        intereso: number;
+                        /** @description 1 : très facile … 5 : trop compliqué */
+                        malfacileco: number;
+                        /** @description Commentaire facultatif */
+                        komento?: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description Appréciation enregistrée */
+                201: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            intereso: number;
+                            malfacileco: number;
+                        };
+                    };
+                };
+                400: components["responses"]["Eraro"];
+                401: components["responses"]["Eraro"];
+                403: components["responses"]["Eraro"];
+                404: components["responses"]["Eraro"];
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/lernado/lecionoj/{kurso}/{numero}/korekto": {
         parameters: {
             query?: never;

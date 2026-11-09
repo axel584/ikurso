@@ -107,6 +107,22 @@ test('un élève suit la leçon 1 complète sur /lernejo, jusqu’au retour de s
   await expect(resumo.getByText(/Un correcteur vient de vous être attribué/)).toBeVisible()
   await waitForMail('korektanto1@mailinator.com', 'Nouvel élève')
   expect((await waitForMail('korektanto1@mailinator.com', 'lec01 de lernanto1')).body).toContain('Saluton de lernejo !')
+
+  // appréciation de la leçon, comme la page konfirmo.php du site : les deux notes sont obligatoires
+  const takso = page.getByTestId('takso')
+  await expect(takso.getByText('Évaluez-nous !')).toBeVisible()
+  const sendiTakson = takso.getByRole('button', { name: 'Envoyer mon appréciation' })
+  await expect(sendiTakson).toBeDisabled()
+  await takso.getByRole('radio', { name: 'Assez intéressant' }).click()
+  await expect(sendiTakson).toBeDisabled()
+  await takso.getByRole('radio', { name: 'Assez facile' }).click()
+  await takso.getByLabel('Laissez un commentaire (optionnel) sur la leçon').fill('Bonega leciono')
+  await sendiTakson.click()
+  await expect(resumo.getByText('Merci pour votre appréciation !')).toBeVisible()
+  expect(
+    sql(`SELECT CONCAT(t.intereso, '/', t.malfacileco, ' ', t.komento) FROM takso_leciono t JOIN lecionoj l ON l.id = t.leciono_id
+      WHERE t.persono_id = ${LERNANTO} AND l.kurso = 'CG' AND l.numero = 1 ORDER BY t.id DESC LIMIT 1`),
+  ).toBe('4/2 Bonega leciono')
   await page.getByText('Terminé !').click()
   // la dernière section terminée mène à la leçon suivante
   await expect(page.getByRole('heading', { name: /^2\.1\. / })).toBeVisible()

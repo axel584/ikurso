@@ -190,8 +190,37 @@ class LernadoAPI {
                 $this->eraro(422, "Aucune réponse dans cette leçon");
             }
             $this->respondi(200, array("rezulto" => $rezulto));
+        } elseif ($metodo === 'POST' && $ago === 'takso') {
+            $this->takso($kurso, $numero);
         }
         $this->eraro(404, "Endpoint non trouvé");
+    }
+
+    // Appréciation de la leçon après son envoi, comme la page konfirmo.php du site (fr/taksoLeciono.php) :
+    // intérêt et difficulté de 1 à 5, commentaire facultatif, lus par les administrateurs (pas par le correcteur).
+    private function takso(string $kurso, int $numero): void {
+        if ($this->estasGasto()) {
+            $this->eraro(403, "Créez un compte pour évaluer les leçons");
+        }
+        $korpo = $this->korpo();
+        $notoj = array();
+        foreach (array("intereso", "malfacileco") as $nomo) {
+            $noto = isset($korpo[$nomo]) && is_int($korpo[$nomo]) ? $korpo[$nomo] : 0;
+            if ($noto < 1 || $noto > 5) {
+                $this->eraro(400, "Paramètre '" . $nomo . "' (entier de 1 à 5) requis");
+            }
+            $notoj[$nomo] = $noto;
+        }
+        $komento = isset($korpo["komento"]) && is_string($korpo["komento"]) ? trim($korpo["komento"]) : "";
+        $leciono = $this->bdd->prepare("SELECT id FROM lecionoj WHERE kurso = ? AND numero = ?");
+        $leciono->execute(array($kurso, $numero));
+        $leciono_id = (int)$leciono->fetchColumn();
+        $this->bdd->prepare("INSERT INTO takso_leciono (dato, persono_id, leciono_id, intereso, malfacileco, komento)
+            VALUES (CURRENT_TIMESTAMP, ?, ?, ?, ?, ?)")
+            ->execute(array($this->persono_id, $leciono_id, $notoj["intereso"], $notoj["malfacileco"], $komento));
+        protokolo($this->persono_id, "EVALUATION LECON", "Evaluation de la leçon :" . $numero . " (" . $notoj["intereso"] . "/"
+            . $notoj["malfacileco"] . ") : " . $komento);
+        $this->respondi(201, array("intereso" => $notoj["intereso"], "malfacileco" => $notoj["malfacileco"]));
     }
 
     private function vortoj(): void {

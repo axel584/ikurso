@@ -99,6 +99,19 @@ export function useSendi() {
   })
 }
 
+// Appréciation de la leçon envoyée (comme konfirmo.php sur le site)
+export function useTakso() {
+  return useMutation({
+    mutationFn: (peto: { kurso: KursoKodo; numero: number; intereso: number; malfacileco: number; komento: string }) =>
+      datumoj(
+        kliento.POST('/lernado/lecionoj/{kurso}/{numero}/takso', {
+          params: { path: { kurso: peto.kurso, numero: peto.numero } },
+          body: { intereso: peto.intereso, malfacileco: peto.malfacileco, komento: peto.komento },
+        }),
+      ),
+  })
+}
+
 export function useRevizioRespondo() {
   return useMutation({
     mutationFn: (peto: { vorto_id: number; respondo: string }) => datumoj(kliento.POST('/lernado/revizio', { body: peto })),

@@ -242,3 +242,23 @@ test('la barre des onglets reste visible dans le sommaire du cours et dans les s
   await expect(page.getByText(/^1\.1\. /)).toBeVisible()
   await expect(page.getByRole('tab', { name: /Révision/ })).toBeVisible()
 })
+
+test('méthode « x » et lettres accentuées : pour répondre en espéranto, pas pour répondre en français (#1089)', async ({ page }) => {
+  await komenciGaste(page)
+  // 2.9, exercice « Traduisez les phrases en espéranto » (x2u = 1) : cx donne ĉ, et la consigne l'explique
+  await page.goto('lernejo/sekcio/15')
+  const eo = page.getByLabel(/^Réponse \d+$/).first()
+  await eo.pressSequentially('Cxu ux sxi')
+  await expect(eo).toHaveValue('Ĉu ŭ ŝi')
+  await expect(page.getByText(/tapez la lettre suivie d’un x/)).toBeVisible()
+  // rangée de lettres accentuées sous le champ qui a le focus
+  await expect(page.getByLabel('Insérer ĉ')).toBeVisible()
+
+  // 4.11, exercice « Traduisez en français » (x2u = 0) : « deux », « aux », « jeux » restent intacts
+  await page.goto('lernejo/sekcio/40')
+  const fr = page.getByLabel(/^Réponse \d+$/).first()
+  await fr.pressSequentially('Deux jeux aux enfants, ceux-ci')
+  await expect(fr).toHaveValue('Deux jeux aux enfants, ceux-ci')
+  await expect(page.getByText(/tapez la lettre suivie d’un x/)).toHaveCount(0)
+  await expect(page.getByLabel('Insérer ĉ')).toHaveCount(0)
+})

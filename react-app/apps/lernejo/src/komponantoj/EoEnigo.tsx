@@ -1,5 +1,5 @@
 // Champ de réponse : méthode « x » si l'exercice la prévoit (x2u), et rangée de lettres accentuées
-// (ĉ ĝ ĥ ĵ ŝ ŭ) au-dessus du clavier tant que le champ a le focus.
+// (ĉ ĝ ĥ ĵ ŝ ŭ) au-dessus du clavier tant que le champ a le focus ; ni l'une ni l'autre pour une réponse en français.
 import { useEffect, useRef, useState, type ComponentRef } from 'react'
 import { Pressable, Text, TextInput, View, type TextInputProps } from 'react-native'
 import { SUPERSIGNITAJ, xAlUnikodo } from '@/utiloj/eotajpu'
@@ -59,7 +59,7 @@ export function EoEnigo({ valoro, onSxangxo, x2u, onFocus, onBlur, style, ...ali
           onBlur?.(e)
         }}
       />
-      {fokuso && (
+      {fokuso && x2u && (
         <View style={{ flexDirection: 'row', gap: 6, flexWrap: 'wrap' }}>
           {SUPERSIGNITAJ.map((litero) => (
             <Pressable

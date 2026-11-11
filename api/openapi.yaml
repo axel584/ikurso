@@ -362,6 +362,36 @@ paths:
               schema: { $ref: '#/components/schemas/Korekto' }
         '401': { $ref: '#/components/responses/Eraro' }
         '404': { $ref: '#/components/responses/Eraro' }
+  /lernado/konto/forigi:
+    post:
+      tags: [lernado]
+      summary: Suppression définitive du compte de l'élève (comme forigiKonton.php), confirmée par son mot de passe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [pasvorto]
+              properties:
+                pasvorto: { type: string }
+      responses:
+        '200':
+          description: Compte supprimé (réponses, progression, révision, appréciations et jetons de connexion compris)
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [forigita]
+                properties:
+                  forigita: { type: boolean }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '403':
+          description: Invité, correcteur ou administrateur
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
+        '422':
+          description: Mot de passe incorrect
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
   /lernado/vortoj:
     get:
       tags: [lernado]

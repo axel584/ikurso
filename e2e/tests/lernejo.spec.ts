@@ -230,3 +230,31 @@ test('session : gardée au rechargement, refusée après déconnexion', async ({
   await page.getByText('Se connecter').click()
   await expect(page.getByText(/incorrect|invalide|Identifiants/i)).toBeVisible()
 })
+
+test('suppression du compte depuis le profil de l’application, confirmée par le mot de passe (#1090)', async ({ page }) => {
+  // compte jetable : un élève sans travail, mot de passe « test »
+  sql("DELETE FROM personoj WHERE enirnomo = 'forigoto'")
+  sql(`INSERT INTO personoj (enirnomo, pasvorto_md5, retadreso, rajtoj, ekdato, aktivigita)
+    VALUES ('forigoto', MD5('test'), 'forigoto@mailinator.com', 'S', CURDATE(), 1)`)
+  await page.goto('lernejo/')
+  await page.getByText('J’ai déjà un compte').click()
+  await page.getByLabel('Identifiant ou adresse e-mail').fill('forigoto')
+  await page.getByLabel('Mot de passe').fill('test')
+  await page.getByText('Se connecter').click()
+  await page.getByRole('tab', { name: /Profil/ }).click()
+  await page.getByText('Supprimer mon compte', { exact: true }).click()
+
+  const forigi = page.getByTestId('forigi-konton')
+  const butono = forigi.getByRole('button', { name: 'Supprimer définitivement mon compte' })
+  await expect(butono).toBeDisabled()
+  await forigi.getByLabel('Votre mot de passe, pour confirmer').fill('malgxusta')
+  await butono.click()
+  await expect(forigi.getByText('Mot de passe incorrect')).toBeVisible()
+  expect(sql("SELECT COUNT(*) FROM personoj WHERE enirnomo = 'forigoto'")).toBe('1')
+
+  await forigi.getByLabel('Votre mot de passe, pour confirmer').fill('test')
+  await butono.click()
+  // déconnecté : retour à l'accueil, et le compte n'existe plus
+  await expect(page.getByText('J’ai déjà un compte')).toBeVisible()
+  expect(sql("SELECT COUNT(*) FROM personoj WHERE enirnomo = 'forigoto'")).toBe('0')
+})

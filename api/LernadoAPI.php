@@ -12,6 +12,8 @@ require_once __DIR__ . "/SendadoAPI.php";
 require_once __DIR__ . "/VortojAPI.php";
 require_once __DIR__ . "/GastoAPI.php";
 require_once __DIR__ . "/AktivigoAPI.php";
+require_once __DIR__ . "/KontoAPI.php";
+require_once __DIR__ . "/RenovigajSxlosilojAPI.php";
 
 class LernadoAPI {
     private $bdd;
@@ -68,6 +70,8 @@ class LernadoAPI {
                 $this->revizioRespondo();
             } elseif ($metodo === 'POST' && $n === 2 && $s[1] === 'aktivigo') {
                 $this->aktivigilo();
+            } elseif ($metodo === 'POST' && $n === 3 && $s[1] === 'konto' && $s[2] === 'forigi') {
+                $this->forigiKonton();
             }
             $this->eraro(404, "Endpoint non trouvé");
         } catch (Throwable $e) {
@@ -102,6 +106,26 @@ class LernadoAPI {
         (new AktivigoAPI($this->bdd))->sendiAktivigilon($this->persono_id, "aktivigi.html",
             "Activation de votre compte pour apprendre gratuitement l'espéranto", "aplikajxo", "ACTIVATION COMPTE");
         $this->respondi(200, array("retadreso" => $this->persono["retadreso"]));
+    }
+
+    // Suppression définitive du compte depuis l'application, comme forigiKonton.php sur le site (#1029) :
+    // exigée par Google Play pour une application qui permet de créer un compte (#1090). Mot de passe pour confirmer.
+    private function forigiKonton(): void {
+        if ($this->estasGasto()) {
+            $this->eraro(403, "Le mode invité n'a pas de compte à supprimer");
+        }
+        if (!KontoAPI::rajtasForigi($this->persono)) {
+            $this->eraro(403, "Un compte de correcteur ou d'administrateur se supprime en contactant les administrateurs du cours");
+        }
+        $korpo = $this->korpo();
+        $pasvorto = isset($korpo["pasvorto"]) && is_string($korpo["pasvorto"]) ? $korpo["pasvorto"] : "";
+        $konto = new KontoAPI($this->bdd);
+        if (!$konto->pasvortoGxustas($this->persono_id, $pasvorto)) {
+            $this->eraro(422, "Mot de passe incorrect");
+        }
+        (new RenovigajSxlosilojAPI($this->bdd))->revokiCxiujn($this->persono_id);
+        $konto->forigi($this->persono_id);
+        $this->respondi(200, array("forigita" => true));
     }
 
     private function kurso(string $kodo): void {

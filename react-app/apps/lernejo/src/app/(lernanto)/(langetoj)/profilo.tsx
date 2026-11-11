@@ -1,11 +1,11 @@
-// Profil de l'élève : son compte, et la déconnexion (le refresh token est révoqué sur le serveur).
+// Profil de l'élève : son compte, la déconnexion (le refresh token est révoqué sur le serveur) et la suppression du compte.
 // L'invité (#1089) y trouve la création de compte et la connexion ; le compte pas encore activé, son lien d'activation.
 import { useState } from 'react'
-import { ScrollView, Text, View } from 'react-native'
+import { ScrollView, Text, TextInput, View } from 'react-native'
 import { router } from 'expo-router'
 import * as Linking from 'expo-linking'
 import { retadreso } from '@/api/kliento'
-import { useMi } from '@/api/demandoj'
+import { useForigiKonton, useMi } from '@/api/demandoj'
 import { Butono, Stato } from '@/komponantoj/Bazaj'
 import { useSeanco } from '@/seanco'
 import { koloroj, stiloj } from '@/stiloj'
@@ -36,6 +36,66 @@ function Gasto() {
         </Text>
       )}
     </>
+  )
+}
+
+// Suppression du compte, comme forigiKonton.php sur le site (exigée par Google Play, #1090)
+function ForigiKonton({ rajtoj }: { rajtoj: string }) {
+  const { elsaluti } = useSeanco()
+  const forigi = useForigiKonton()
+  const [malfermita, setMalfermita] = useState(false)
+  const [pasvorto, setPasvorto] = useState('')
+  if (!malfermita) {
+    return (
+      <Text accessibilityRole="button" style={[stiloj.eta, { textAlign: 'center', padding: 8 }]} onPress={() => setMalfermita(true)}>
+        Supprimer mon compte
+      </Text>
+    )
+  }
+  if (rajtoj === 'K' || rajtoj === 'A') {
+    return (
+      <View style={stiloj.karto}>
+        <Text style={stiloj.teksto}>
+          Votre compte est un compte de correcteur ou d’administrateur. Pour le supprimer, contactez les administrateurs du
+          cours, qui confieront vos élèves à un autre correcteur.
+        </Text>
+        <Butono dua teksto="Fermer" onPress={() => setMalfermita(false)} />
+      </View>
+    )
+  }
+  return (
+    <View style={[stiloj.karto, { borderColor: koloroj.rugxa, gap: 10 }]} testID="forigi-konton">
+      <Text style={stiloj.subtitolo}>Supprimer mon compte</Text>
+      <Text style={stiloj.teksto}>
+        La suppression efface définitivement votre compte, vos informations personnelles, vos réponses aux exercices, vos
+        corrections et votre progression dans les cours. Elle ne peut pas être annulée.
+      </Text>
+      <Text style={stiloj.eta}>
+        Si vous pensez reprendre un jour les cours, exportez d’abord vos données depuis{' '}
+        <Text style={{ color: koloroj.blua }} accessibilityRole="link" onPress={() => Linking.openURL(retadreso('personinformoj.php'))}>
+          votre profil sur le site
+        </Text>
+        .
+      </Text>
+      <TextInput
+        style={stiloj.enigo}
+        secureTextEntry
+        autoCapitalize="none"
+        autoComplete="current-password"
+        placeholder="Votre mot de passe, pour confirmer"
+        accessibilityLabel="Votre mot de passe, pour confirmer"
+        value={pasvorto}
+        onChangeText={setPasvorto}
+      />
+      {forigi.error && <Text style={stiloj.eraro}>{forigi.error.message}</Text>}
+      <Butono
+        teksto={forigi.isPending ? 'Suppression…' : 'Supprimer définitivement mon compte'}
+        malsxaltita={pasvorto === '' || forigi.isPending}
+        stilo={{ backgroundColor: koloroj.rugxa }}
+        onPress={() => forigi.mutate(pasvorto, { onSuccess: () => elsaluti() })}
+      />
+      <Butono dua teksto="Annuler" onPress={() => setMalfermita(false)} />
+    </View>
   )
 }
 
@@ -72,6 +132,7 @@ export default function Profilo() {
       </Stato>
       <Butono dua teksto="Modifier mon profil sur le site" onPress={() => Linking.openURL(retadreso('personinformoj.php'))} />
       <Butono teksto="Se déconnecter" onPress={elsaluti} />
+      {u && <ForigiKonton rajtoj={u.rajtoj} />}
     </ScrollView>
   )
 }

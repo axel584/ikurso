@@ -701,6 +701,69 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/lernado/konto/forigi": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Suppression définitive du compte de l'élève (comme forigiKonton.php), confirmée par son mot de passe */
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": {
+                        pasvorto: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description Compte supprimé (réponses, progression, révision, appréciations et jetons de connexion compris) */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            forigita: boolean;
+                        };
+                    };
+                };
+                401: components["responses"]["Eraro"];
+                /** @description Invité, correcteur ou administrateur */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Eraro"];
+                    };
+                };
+                /** @description Mot de passe incorrect */
+                422: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Eraro"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/lernado/vortoj": {
         parameters: {
             query?: never;

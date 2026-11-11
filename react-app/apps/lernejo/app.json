@@ -14,12 +14,12 @@
     "android": {
       "package": "org.esperantofrance.ikurso",
       "adaptiveIcon": {
-        "backgroundColor": "#554E47",
+        "backgroundColor": "#FFFFFF",
         "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundImage": "./assets/android-icon-background.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "versionCode": 4
     },
     "web": {
       "output": "single",
@@ -34,7 +34,8 @@
       "expo-secure-store",
       "expo-audio",
       "expo-asset",
-      "expo-font"
+      "expo-font",
+      "./plugins/subskribo"
     ]
   }
 }

@@ -112,6 +112,13 @@ export function useTakso() {
   })
 }
 
+// Suppression définitive du compte (forigiKonton.php sur le site), confirmée par le mot de passe
+export function useForigiKonton() {
+  return useMutation({
+    mutationFn: (pasvorto: string) => datumoj(kliento.POST('/lernado/konto/forigi', { body: { pasvorto } })),
+  })
+}
+
 export function useRevizioRespondo() {
   return useMutation({
     mutationFn: (peto: { vorto_id: number; respondo: string }) => datumoj(kliento.POST('/lernado/revizio', { body: peto })),

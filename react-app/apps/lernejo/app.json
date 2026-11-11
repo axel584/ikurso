@@ -36,6 +36,13 @@
       "expo-asset",
       "expo-font",
       "./plugins/subskribo",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#554E47"
+        }
+      ],
       "expo-sqlite"
     ]
   }

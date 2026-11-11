@@ -1,9 +1,11 @@
 // Révision du vocabulaire : un mot français à la fois, l'élève tape sa traduction en espéranto.
 // Bonne réponse, le mot revient plus tard ; mauvaise, au plus tôt (calcul fait par le serveur).
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { ScrollView, Text, View } from 'react-native'
 import { useQueryClient } from '@tanstack/react-query'
+import { useFocusEffect } from 'expo-router'
 import { useRevizio, useRevizioRespondo } from '@/api/demandoj'
+import { legiAgordojn, permeso, planigiRevizion } from '@/api/sciigoj'
 import { Butono, Stato } from '@/komponantoj/Bazaj'
 import { EoEnigo } from '@/komponantoj/EoEnigo'
 import { useLudi } from '@/komponantoj/Sono'
@@ -17,6 +19,17 @@ export default function Revizio() {
   const [nuna, setNuna] = useState(0)
   const [respondo, setRespondo] = useState('')
   const [gxustaj, setGxustaj] = useState(0)
+
+  // rappels de révision (#1120) : l'autorisation est demandée ici, où elle a du sens, si le rappel est activé ;
+  // en quittant l'écran, les rappels sont recalculés avec les mots qui restent
+  useFocusEffect(
+    useCallback(() => {
+      legiAgordojn().then((a) => {
+        if (a.sxaltita) permeso(true).then(() => planigiRevizion())
+      })
+      return () => void planigiRevizion()
+    }, []),
+  )
 
   const vortoj = data?.vortoj ?? []
   const vorto = vortoj[nuna]

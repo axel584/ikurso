@@ -113,6 +113,21 @@ class VortojAPI {
         return $demando->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Calendrier des rappels de révision de l'application (#1120) : les mots à réviser maintenant, et ceux qui le seront
+    // dans les 8 prochains jours, regroupés par heure. « tempo » est la fin de l'heure (secondes Unix) : à ce moment,
+    // tous les mots du groupe sont à réviser ; l'application en déduit le nombre de mots à chaque rappel.
+    public function kalendaro(int $persono_id): array {
+        $demando = $this->bdd->prepare("SELECT COUNT(*) FROM personoj_vortoj WHERE persono_id = ? AND forigita = 0 AND venontaFojo <= NOW()");
+        $demando->execute(array($persono_id));
+        $nun = (int)$demando->fetchColumn();
+        $demando = $this->bdd->prepare("SELECT (FLOOR(UNIX_TIMESTAMP(venontaFojo) / 3600) + 1) * 3600 AS tempo, COUNT(*) AS nombro
+            FROM personoj_vortoj WHERE persono_id = ? AND forigita = 0 AND venontaFojo > NOW() AND venontaFojo <= DATE_ADD(NOW(), INTERVAL 8 DAY)
+            GROUP BY tempo ORDER BY tempo");
+        $demando->execute(array($persono_id));
+        $venontaj = array_map(fn($v) => array("tempo" => (int)$v["tempo"], "nombro" => (int)$v["nombro"]), $demando->fetchAll(PDO::FETCH_ASSOC));
+        return array("nun" => $nun, "venontaj" => $venontaj);
+    }
+
     // Jours avant de reproposer un mot après la n-ième bonne réponse d'affilée : 1, 6, puis le double à chaque fois.
     private static function intervalo(int $nombrilo): int {
         return $nombrilo <= 1 ? 1 : ($nombrilo == 2 ? 6 : 2 * self::intervalo($nombrilo - 1));

@@ -860,6 +860,51 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/lernado/revizio/kalendaro": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Calendrier des rappels de révision (#1120) ; mots à réviser maintenant et dans les 8 prochains jours, par heure */
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Nombre de mots à réviser maintenant, puis ceux qui le deviennent, regroupés par heure */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /** @description Mots à réviser maintenant */
+                            nun: number;
+                            venontaj: {
+                                /** @description Fin de l'heure (secondes Unix) : tous ces mots sont alors à réviser */
+                                tempo: number;
+                                nombro: number;
+                            }[];
+                        };
+                    };
+                };
+                401: components["responses"]["Eraro"];
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/lernado/revizio": {
         parameters: {
             query?: never;

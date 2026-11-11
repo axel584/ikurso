@@ -66,6 +66,8 @@ class LernadoAPI {
                 $this->forigiVorton((int)$s[2]);
             } elseif ($metodo === 'GET' && $n === 2 && $s[1] === 'revizio') {
                 $this->respondi(200, array("vortoj" => (new VortojAPI($this->bdd))->revizio($persono_id)));
+            } elseif ($metodo === 'GET' && $n === 3 && $s[1] === 'revizio' && $s[2] === 'kalendaro') {
+                $this->respondi(200, (new VortojAPI($this->bdd))->kalendaro($persono_id));
             } elseif ($metodo === 'POST' && $n === 2 && $s[1] === 'revizio') {
                 $this->revizioRespondo();
             } elseif ($metodo === 'POST' && $n === 2 && $s[1] === 'aktivigo') {

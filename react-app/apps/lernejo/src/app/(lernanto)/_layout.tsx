@@ -1,8 +1,10 @@
 // Écrans de l'élève connecté : les onglets (les cours, sections et corrections sont dans l'onglet « Cours »).
 import { useEffect } from 'react'
+import { AppState } from 'react-native'
 import { Stack, router } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { datumoj, kliento } from '@/api/kliento'
+import { auxskultiSciigojn, planigiRevizion } from '@/api/sciigoj'
 import { useSeanco } from '@/seanco'
 import { koloroj } from '@/stiloj'
 
@@ -13,6 +15,19 @@ export const unstable_settings = {
 export default function LernantoArangxo() {
   const { komencota, komencis } = useSeanco()
   const margxeno = useSafeAreaInsets()
+
+  // rappels de révision (#1120) : recalculés à chaque retour dans l'application ; la notification touchée ouvre la révision
+  useEffect(() => {
+    void planigiRevizion()
+    const abono = AppState.addEventListener('change', (stato) => {
+      if (stato === 'active') void planigiRevizion()
+    })
+    const malabono = auxskultiSciigojn((url) => router.push(url as '/revizio'))
+    return () => {
+      abono.remove()
+      malabono()
+    }
+  }, [])
 
   // le nouvel invité arrive directement dans la première section du cours choisi (#1089),
   // au-dessus du sommaire du cours, dans l'onglet « Cours »

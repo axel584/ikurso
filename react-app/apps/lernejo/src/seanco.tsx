@@ -5,6 +5,7 @@ import { useQueryClient } from '@tanstack/react-query'
 import type { Sxlosiloj } from '@ikurso/api-client'
 import { api, auxskulti, uzanto } from './api/kliento'
 import { forgesiCxion } from './api/kasxmemoro'
+import { nuligiRevizion, planigiRevizion } from './api/sciigoj'
 import type { KursoKodo } from './api/demandoj'
 
 type Uzanto = Sxlosiloj['user']
@@ -53,6 +54,7 @@ export function SeancoProvizanto({ children }: PropsWithChildren) {
       if (!ensalutita) {
         qc.clear()
         void forgesiCxion()
+        void nuligiRevizion()
       }
     })
   }, [qc])
@@ -69,6 +71,7 @@ export function SeancoProvizanto({ children }: PropsWithChildren) {
       if (!data) return mesagxo(error, 'Impossible de commencer le cours, vérifiez votre connexion')
       qc.clear()
       await forgesiCxion()
+      await nuligiRevizion()
       setKomencota(kurso)
       setU(data.user)
       return null
@@ -79,6 +82,8 @@ export function SeancoProvizanto({ children }: PropsWithChildren) {
       // le travail de l'invité a rejoint le compte : tout est à relire
       qc.clear()
       await forgesiCxion()
+      await nuligiRevizion()
+      void planigiRevizion()
       setU(data.user)
       return null
     },
@@ -94,6 +99,7 @@ export function SeancoProvizanto({ children }: PropsWithChildren) {
       setU(null)
       qc.clear()
       await forgesiCxion()
+      await nuligiRevizion()
     },
   }
 

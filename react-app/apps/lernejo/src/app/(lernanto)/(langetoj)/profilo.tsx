@@ -1,4 +1,4 @@
-// Profil de l'élève : son compte, la déconnexion (le refresh token est révoqué sur le serveur) et la suppression du compte.
+// Profil de l'élève : son compte, le rappel de révision (#1120), la déconnexion (le refresh token est révoqué sur le serveur) et la suppression du compte.
 // L'invité (#1089) y trouve la création de compte et la connexion ; le compte pas encore activé, son lien d'activation.
 import { useState } from 'react'
 import { ScrollView, Text, TextInput, View } from 'react-native'
@@ -7,6 +7,7 @@ import * as Linking from 'expo-linking'
 import { retadreso } from '@/api/kliento'
 import { useForigiKonton, useMi } from '@/api/demandoj'
 import { Butono, Stato } from '@/komponantoj/Bazaj'
+import { RevizioRememorigo } from '@/komponantoj/RevizioRememorigo'
 import { useSeanco } from '@/seanco'
 import { koloroj, stiloj } from '@/stiloj'
 
@@ -106,6 +107,7 @@ export default function Profilo() {
   if (gasto) {
     return (
       <ScrollView style={stiloj.ekrano} contentContainerStyle={stiloj.enhavo}>
+        <RevizioRememorigo />
         <Gasto />
       </ScrollView>
     )
@@ -130,6 +132,7 @@ export default function Profilo() {
           </View>
         )}
       </Stato>
+      <RevizioRememorigo />
       <Butono dua teksto="Modifier mon profil sur le site" onPress={() => Linking.openURL(retadreso('personinformoj.php'))} />
       <Butono teksto="Se déconnecter" onPress={elsaluti} />
       {u && <ForigiKonton rajtoj={u.rajtoj} />}

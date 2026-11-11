@@ -457,6 +457,29 @@ paths:
         '400': { $ref: '#/components/responses/Eraro' }
         '401': { $ref: '#/components/responses/Eraro' }
         '404': { $ref: '#/components/responses/Eraro' }
+  /lernado/revizio/kalendaro:
+    get:
+      tags: [lernado]
+      summary: Calendrier des rappels de révision (#1120) ; mots à réviser maintenant et dans les 8 prochains jours, par heure
+      responses:
+        '200':
+          description: Nombre de mots à réviser maintenant, puis ceux qui le deviennent, regroupés par heure
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [nun, venontaj]
+                properties:
+                  nun: { type: integer, description: Mots à réviser maintenant }
+                  venontaj:
+                    type: array
+                    items:
+                      type: object
+                      required: [tempo, nombro]
+                      properties:
+                        tempo: { type: integer, description: "Fin de l'heure (secondes Unix) : tous ces mots sont alors à réviser" }
+                        nombro: { type: integer }
+        '401': { $ref: '#/components/responses/Eraro' }
   /lernado/revizio:
     get:
       tags: [lernado]

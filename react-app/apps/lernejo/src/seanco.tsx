@@ -4,6 +4,7 @@ import { createContext, use, useEffect, useState, type PropsWithChildren } from 
 import { useQueryClient } from '@tanstack/react-query'
 import type { Sxlosiloj } from '@ikurso/api-client'
 import { api, auxskulti, uzanto } from './api/kliento'
+import { forgesiCxion } from './api/kasxmemoro'
 import type { KursoKodo } from './api/demandoj'
 
 type Uzanto = Sxlosiloj['user']
@@ -49,7 +50,10 @@ export function SeancoProvizanto({ children }: PropsWithChildren) {
     // nouveaux jetons (connexion, renouvellement) ou plus de jetons du tout (refresh token refusé)
     return auxskulti((ensalutita) => {
       uzanto().then(setU)
-      if (!ensalutita) qc.clear()
+      if (!ensalutita) {
+        qc.clear()
+        void forgesiCxion()
+      }
     })
   }, [qc])
 
@@ -64,6 +68,7 @@ export function SeancoProvizanto({ children }: PropsWithChildren) {
       const { data, error } = await api.komenciGaste()
       if (!data) return mesagxo(error, 'Impossible de commencer le cours, vérifiez votre connexion')
       qc.clear()
+      await forgesiCxion()
       setKomencota(kurso)
       setU(data.user)
       return null
@@ -73,6 +78,7 @@ export function SeancoProvizanto({ children }: PropsWithChildren) {
       if (!data) return mesagxo(error, 'Connexion impossible')
       // le travail de l'invité a rejoint le compte : tout est à relire
       qc.clear()
+      await forgesiCxion()
       setU(data.user)
       return null
     },
@@ -87,6 +93,7 @@ export function SeancoProvizanto({ children }: PropsWithChildren) {
       await api.elsaluti()
       setU(null)
       qc.clear()
+      await forgesiCxion()
     },
   }
 

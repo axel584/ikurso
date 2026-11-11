@@ -1,8 +1,9 @@
 // Leçons d'un cours et leurs sections : ce que l'élève a fini, envoyé, ce qui est corrigé.
 import { useState } from 'react'
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Pressable, RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native'
 import { Link, Stack, useLocalSearchParams } from 'expo-router'
 import { useKurso, useKursoj, type KursoKodo } from '@/api/demandoj'
+import { malfresxigi } from '@/api/kasxmemoro'
 import { Insigno, Stato } from '@/komponantoj/Bazaj'
 import { koloroj, stiloj } from '@/stiloj'
 
@@ -10,7 +11,7 @@ const TIPOJ = { TEKSTO: 'Leçon', VORTARO: 'Vocabulaire', QCM: 'Quiz', EKZERCARO
 
 export default function Kurso() {
   const { kodo } = useLocalSearchParams<{ kodo: KursoKodo }>()
-  const { data, isLoading, error } = useKurso(kodo)
+  const { data, isLoading, error, refetch, isRefetching } = useKurso(kodo)
   const nomo = useKursoj().data?.kursoj.find((k) => k.kodo === kodo)?.nomo
   // la première leçon pas encore envoyée ni terminée est ouverte (l'invité n'envoie pas ses leçons)
   const unua =
@@ -19,7 +20,14 @@ export default function Kurso() {
   const nuna = malfermita ?? unua
 
   return (
-    <ScrollView style={stiloj.ekrano} contentContainerStyle={stiloj.enhavo}>
+    <ScrollView
+      style={stiloj.ekrano}
+      contentContainerStyle={stiloj.enhavo}
+      // tirer vers le bas : relu sur le serveur, même si le cache a moins d'une semaine (#1123)
+      refreshControl={
+        <RefreshControl refreshing={isRefetching} onRefresh={() => void malfresxigi('kurso/' + kodo).then(() => refetch())} />
+      }
+    >
       <Stack.Screen options={{ title: nomo ?? 'Cours' }} />
       <Stato sxargxas={isLoading} eraro={error}>
         {data?.lecionoj.map((l) => {

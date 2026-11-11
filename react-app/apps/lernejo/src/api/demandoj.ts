@@ -2,20 +2,23 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { components } from '@ikurso/api-client'
 import { datumoj, kliento } from './kliento'
+import { kasxmemorita, malfresxigi } from './kasxmemoro'
 
 export type KursoKodo = components['schemas']['KursoKodo']
 
 export function useKursoj() {
   return useQuery({
     queryKey: ['kursoj'],
-    queryFn: () => datumoj(kliento.GET('/lernado/kursoj')),
+    // gardé sur le téléphone une semaine, et au-delà quand le réseau manque (#1123)
+    queryFn: () => kasxmemorita('kursoj', () => datumoj(kliento.GET('/lernado/kursoj'))),
   })
 }
 
 export function useKurso(kodo: KursoKodo | undefined) {
   return useQuery({
     queryKey: ['kurso', kodo],
-    queryFn: () => datumoj(kliento.GET('/lernado/kursoj/{kurso}', { params: { path: { kurso: kodo! } } })),
+    queryFn: () =>
+      kasxmemorita('kurso/' + kodo, () => datumoj(kliento.GET('/lernado/kursoj/{kurso}', { params: { path: { kurso: kodo! } } }))),
     enabled: kodo !== undefined,
   })
 }
@@ -71,7 +74,9 @@ export function useFini() {
   return useMutation({
     mutationFn: (peto: { id: number; ekdato: number }) =>
       datumoj(kliento.POST('/lernado/sekcioj/{id}/fini', { params: { path: { id: peto.id } }, body: { ekdato: peto.ekdato } })),
-    onSuccess: (_d, peto) => {
+    onSuccess: async (_d, peto) => {
+      // la progression a changé : le cache des cours ne doit plus servir tel quel
+      await malfresxigi('kursoj', 'kurso/')
       qc.invalidateQueries({ queryKey: ['sekcio', peto.id] })
       qc.invalidateQueries({ queryKey: ['kurso'] })
       qc.invalidateQueries({ queryKey: ['kursoj'] })
@@ -91,7 +96,8 @@ export function useSendi() {
           body: { komento: peto.komento },
         }),
       ),
-    onSuccess: () => {
+    onSuccess: async () => {
+      await malfresxigi('kursoj', 'kurso/')
       qc.invalidateQueries({ queryKey: ['kurso'] })
       qc.invalidateQueries({ queryKey: ['kursoj'] })
       qc.invalidateQueries({ queryKey: ['korekto'] })

@@ -35,7 +35,8 @@
       "expo-audio",
       "expo-asset",
       "expo-font",
-      "./plugins/subskribo"
+      "./plugins/subskribo",
+      "expo-sqlite"
     ]
   }
 }

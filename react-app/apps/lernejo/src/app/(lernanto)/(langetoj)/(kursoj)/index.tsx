@@ -2,6 +2,7 @@
 import { Pressable, RefreshControl, ScrollView, Text, View } from 'react-native'
 import { Link } from 'expo-router'
 import { useKursoj } from '@/api/demandoj'
+import { malfresxigi } from '@/api/kasxmemoro'
 import { Stato } from '@/komponantoj/Bazaj'
 import { koloroj, stiloj } from '@/stiloj'
 
@@ -11,7 +12,7 @@ export default function Kursoj() {
     <ScrollView
       style={stiloj.ekrano}
       contentContainerStyle={stiloj.enhavo}
-      refreshControl={<RefreshControl refreshing={isRefetching} onRefresh={() => void refetch()} />}
+      refreshControl={<RefreshControl refreshing={isRefetching} onRefresh={() => void malfresxigi('kursoj').then(() => refetch())} />}
     >
       <Stato sxargxas={isLoading} eraro={error}>
         {data?.kursoj.map((k) => {

@@ -81,7 +81,7 @@ $cheminAbsolu = "/";
 - `/python/` - Analytics and data processing scripts
 
 **Mobile/External:**
-- `/ikurso/` - Cordova-based Android app files
+- `/lernejo/` - Student app (Expo) web build; sources in `react-app/apps/lernejo/`, also built for Android
 - `/soundmanager2/` - External library for MP3 playback
 
 ### Database Schema
@@ -121,9 +121,6 @@ mariadb -u ikurso_user -p ikurso < sql/03-create-data-test.sql
 ```bash
 # Install PHP dependencies
 composer install
-
-# For Cordova mobile app (in /ikurso directory)
-cordova build android
 ```
 
 ### Python Analytics

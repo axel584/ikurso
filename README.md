@@ -119,7 +119,7 @@ Voici une description des répertoires les plus importants :
 - /cron : contient les scripts qui sont appelés toutes les nuits (principalement pour les rappels automatiques).
 - /db : couche "DAO"
 - /fr : contient les cours. Les répertoires les plus importants sont les sous-répertoires /fr/cge et /fr/gerda. Ils ont été historiquement mis dans un sous répertoire /fr dans le but de faire une version par langue, mais ça n'a jamais pris.
-- /ikurso : contient la version "android" du site (pour Cordova)
+- /lernejo : application élève (Expo), version web compilée ; sources dans /react-app/apps/lernejo, aussi publiée sur Android
 - /js : contient les scripts javascript (souvent utilisés avec les fichiers php du répertoire /ajax
 - /mails : il s'agit des "templates" des messages qui sont envoyés automatiquement. On utilise des variables ##VARIABLE## qui sont ensuite remplacés par le code qui envoit les mails. À noter que certains mails se terminent par FR pour indiquer qu'ils sont envoyés à des francophones. Les autres langues ne sont plus utilisées.
 - /python : script python pour faire quelques analyses statistiques sur la base (nécessite un fichier de configuration similaire au config.php mais en python)

@@ -81,8 +81,8 @@ Ce document décrit la stack technique actuelle de l'application, la cible inter
 
 | Composant | Technologie | Version |
 |-----------|-------------|---------|
-| App Android | Apache Cordova | 6.2.3 (dans `/ikurso/`) |
-| Contenu mobile | Subset du contenu web | — |
+| App élève (web + Android) | Expo / React Native | `react-app/apps/lernejo/`, build web dans `/lernejo/` |
+| Contenu mobile | Contenu des leçons en base (`lecioneroj.enhavo`), API élève | — |
 
 ### Analytics / Scripts
 
@@ -403,5 +403,4 @@ Les fichiers buildés dans `/frontend/dist/` sont inclus dans les pages PHP via 
 | CSS | CSS pur | CSS pur (legacy) | Tailwind ou MUI |
 | Tests PHP | Aucun | PHPUnit (nouveaux) | PHPUnit 10 |
 | Tests JS | Aucun | Vitest (nouveaux) | Vitest + RTL |
-| Cordova Android | 6.2.3 | 6.2.3 (non prioritaire) | À évaluer |
 | Python analytics | 3.x | 3.x (inchangé) | 3.x (inchangé) |

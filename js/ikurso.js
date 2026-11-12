@@ -70,7 +70,13 @@ function spuri(kategorio, ago, nomo) {
     });
 
     $( ".qcm_nok" ).click(function() {
-       M.toast({html: 'Mauvaise réponse, essayez encore !'});
+       // indice de la proposition choisie (QCM, champ "indices"), sinon le message habituel
+       var indico = $(this).data("indico");
+       if (indico) {
+         M.toast({html: $("<span>").text("Mauvaise réponse : " + indico).html(), displayLength: 7000});
+       } else {
+         M.toast({html: 'Mauvaise réponse, essayez encore !'});
+       }
     });
 
   // exercice autocorrigé (qui ressemble du coup à un QCM)

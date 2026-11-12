@@ -7,6 +7,7 @@ export type QcmDemando = {
   url?: string
   auteur?: string
   propositions: string[]
+  indices?: string[] // indice pour chaque proposition (dans l'ordre), affiché si elle est choisie à tort ; "" : message habituel
   reponse: number // numéro de la bonne proposition, à partir de 1
 }
 

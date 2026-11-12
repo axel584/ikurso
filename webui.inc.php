@@ -695,6 +695,13 @@ function getEkzercon($id,$persono_id,$lingvo="fr") {
 	echo "</fieldset>";
 }
 
+// Indice affiché quand l'élève choisit une mauvaise proposition : "indices" donne, pour chaque proposition
+// (dans l'ordre, à partir de 0), un texte court ou "" (message par défaut).
+function qcmIndico($question, $indiceProposition) {
+	$indico = isset($question["indices"][$indiceProposition-1]) ? trim((string)$question["indices"][$indiceProposition-1]) : "";
+	return $indico === "" ? "" : " data-indico=\"".htmlspecialchars($indico, ENT_QUOTES, "UTF-8")."\"";
+}
+
 function QCM_bildoj($qcm) {
 	echo "<div class='qcm' id='carousel_qcm'>";
 	$indiceQuestion= 1;
@@ -723,7 +730,7 @@ function QCM_bildoj($qcm) {
 			} else {
 				$lasta = "";
 			}
-			echo "<label for='00".$indiceQuestion."-0".$indiceProposition."'><input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><span>".$proposition."</span></label>";
+			echo "<label for='00".$indiceQuestion."-0".$indiceProposition."'><input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta.qcmIndico($question, $indiceProposition)."/><span>".$proposition."</span></label>";
 			$indiceProposition++;
 		}
 		echo "</div>\n";
@@ -771,7 +778,7 @@ function QCM($qcm) {
 			} else {
 				$lasta = "";
 			}
-			echo "<label for='00".$indiceQuestion."-0".$indiceProposition."'><input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta."/><span>".$proposition."</span></label>";
+			echo "<label for='00".$indiceQuestion."-0".$indiceProposition."'><input type='radio' name='qcm".$indiceQuestion."' value='".$indiceProposition."' id='00".$indiceQuestion."-0".$indiceProposition."' class='".$style."' ".$lasta.qcmIndico($question, $indiceProposition)."/><span>".$proposition."</span></label>";
 			$indiceProposition++;
 		}
 		echo "</div>\n";

@@ -45,7 +45,7 @@ async function solviQcm(page: Page) {
     for (let i = 0; i < (await proponoj.count()); i++) {
       await proponoj.nth(i).click()
       if (await qcm.getByText(/^Bravo/).isVisible()) break
-      await expect(qcm.getByText('Mauvaise réponse, essayez encore !')).toBeVisible()
+      await expect(qcm.getByText(/^Mauvaise réponse/)).toBeVisible() // message habituel ou indice (sql/70)
     }
     // question suivante (ou récapitulatif) au bout d'une seconde
     await expect(page.getByText(demando!, { exact: true })).toHaveCount(0)

@@ -19,6 +19,9 @@ test('site : un QCM sur chaque page 1.1 à 1.5, enregistrements en 1.1', async (
     if (sekcio === 1) {
       const sono = demandoj.first().locator('a.sm2_button')
       await expect(sono).toHaveAttribute('href', /fr\/son\/vortoj\/cxokolado\.mp3$/)
+      // une mauvaise réponse affiche l'indice de cette proposition (sql/70)
+      await demandoj.first().locator('input.qcm_nok').last().check({ force: true })
+      await expect(page.locator('.toast').filter({ hasText: 'Mauvaise réponse : c se prononce « ts »' })).toBeVisible()
     }
     for (let i = 0; i < nombro; i++) {
       await page.locator('.qcm_demando:visible .qcm_ok').first().check({ force: true })
@@ -45,6 +48,9 @@ test('application : bouton « Écouter » dans les questions avec enregistrement
   const sono = page.waitForRequest((r) => /\/fr\/son\/vortoj\/cxokolado\.mp3$/.test(r.url()))
   await qcm.getByTestId('qcm-sono').click()
   expect((await sono).url()).toMatch(/^http:\/\/localhost:8080\/fr\/son\/vortoj\/cxokolado\.mp3$/)
+  // une mauvaise réponse affiche l'indice de cette proposition (sql/70)
+  await qcm.getByRole('radio').first().click()
+  await expect(qcm.getByText('Mauvaise réponse : ŝ se prononce « ch », comme dans « chaud ».')).toBeVisible()
   // les questions sans enregistrement n'ont pas de bouton
   await page.goto('lernejo/sekcio/2')
   await expect(page.getByTestId('qcm')).toBeVisible()

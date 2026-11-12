@@ -92,7 +92,7 @@ export function Qcm({ demandoj, bildoj }: { demandoj: QcmDemando[]; bildoj: bool
               setMesagxo(
                 i + 1 === d.reponse
                   ? { bone: true, teksto: nuna + 1 === demandoj.length ? 'Bravo, vous avez trouvé toutes les bonnes réponses !' : 'Bravo !' }
-                  : { bone: false, teksto: 'Mauvaise réponse, essayez encore !' },
+                  : { bone: false, teksto: d.indices?.[i]?.trim() ? `Mauvaise réponse : ${d.indices[i].trim()}` : 'Mauvaise réponse, essayez encore !' },
               )
             }}
             style={{

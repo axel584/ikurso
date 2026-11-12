@@ -1,4 +1,4 @@
--- Cours élémentaire, leçon 2 : simplifications proposées par un correcteur (Alain), relues par Emmanuelle avant la prod.
+-- Cours élémentaire, leçon 2 : simplifications proposées par un correcteur, relues par Emmanuelle avant la prod.
 -- Moins de jargon grammatical et de précisions inutiles. REGEXP_REPLACE : le HTML en base contient des retours à la ligne.
 SET NAMES utf8mb4;
 

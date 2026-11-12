@@ -14,9 +14,10 @@ class KursaEnhavoAPI {
     private $bdd;
 
     // Titres et noms en texte : certains sont enregistrés avec des entités HTML (« Premi&egrave;re le&ccedil;on »),
-    // que les pages du site affichent telles quelles mais pas l'application (#1089)
+    // que les pages du site affichent telles quelles mais pas l'application (#1089), et parfois des balises
+    // (« Le féminin des noms : <i>-in</i> », sql/64) : on les enlève.
     public static function teksto(?string $html): string {
-        return html_entity_decode((string)$html, ENT_QUOTES | ENT_HTML5, "UTF-8");
+        return html_entity_decode(strip_tags((string)$html), ENT_QUOTES | ENT_HTML5, "UTF-8");
     }
 
     public function __construct(PDO $bdd) {

@@ -4571,3 +4571,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Cours élémentaire, exercices 8.5 et 7.4 : variantes justes ajoutées aux réponses acceptées par la vérification automatique : voir sql/66-variantes-8-5-et-7-4.sql
 --- Cours élémentaire, page 10.1 « Présentation » de l'examen : texte plus rassurant (trois parties, possible en plusieurs fois, plus facile que les leçons 8 et 9, passage direct à Gerda malaperis possible) ; page 10.2 : durée totale du tableau corrigée (1 h 20) : voir sql/67-presentation-examen-cg.sql
 --- Cours élémentaire, leçon 8, section 8.5 réécrite : « le message à Klara » (verbe à la bonne forme, corrigé automatiquement) et production libre (#1132) ; ancien exercice masqué, exercices de la leçon 8 renumérotés : voir sql/68-exercice-8-5-klara-1132.sql
+--- Cours élémentaire, leçon 1 : petit QCM facultatif à la fin des pages 1.1 à 1.5, avec enregistrements en 1.1 (#1114) : voir sql/69-qcm-lecon-1-1114.sql

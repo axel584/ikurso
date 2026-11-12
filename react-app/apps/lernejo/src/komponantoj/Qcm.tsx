@@ -6,6 +6,7 @@ import * as Linking from 'expo-linking'
 import { retadreso } from '@/api/kliento'
 import type { QcmDemando } from '@/utiloj/enhavo'
 import { HtmlTeksto } from './HtmlTeksto'
+import { useLudi } from './Sono'
 import { koloroj, stiloj } from '@/stiloj'
 
 // Facultatif : « Terminé ! » ne l'attend pas (#1109).
@@ -14,6 +15,7 @@ export function Qcm({ demandoj, bildoj }: { demandoj: QcmDemando[]; bildoj: bool
   const [mesagxo, setMesagxo] = useState<{ bone: boolean; teksto: string } | null>(null)
   const [elektita, setElektita] = useState<number | null>(null)
   const finita = nuna >= demandoj.length
+  const ludi = useLudi()
 
   useEffect(() => {
     if (!mesagxo?.bone) return
@@ -56,6 +58,17 @@ export function Qcm({ demandoj, bildoj }: { demandoj: QcmDemando[]; bildoj: bool
         Question {nuna + 1}/{demandoj.length} :
       </Text>
       {d.question && <HtmlTeksto html={d.question} />}
+      {sono(d.question) && (
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Écouter"
+          testID="qcm-sono"
+          onPress={() => ludi(sono(d.question)!)}
+          style={{ flexDirection: 'row', alignItems: 'center', gap: 8, alignSelf: 'flex-start', paddingVertical: 6, paddingHorizontal: 12, borderRadius: 20, backgroundColor: koloroj.blua }}
+        >
+          <Text style={{ color: '#fff', fontWeight: '600' }}>▶ Écouter</Text>
+        </Pressable>
+      )}
       {bildoj && d.bildo && (
         <View style={{ gap: 2 }}>
           <Image source={{ uri: retadreso(d.bildo) }} style={{ width: '100%', maxWidth: 420, aspectRatio: 4 / 3 }} resizeMode="contain" />
@@ -103,4 +116,10 @@ export function Qcm({ demandoj, bildoj }: { demandoj: QcmDemando[]; bildoj: bool
       )}
     </View>
   )
+}
+
+// enregistrement d'une question « Écoutez… » (lien sm2_button du site, #1114) : chemin du fichier audio
+function sono(question?: string): string | null {
+  const m = question?.match(/<a\s[^>]*href=['"]([^'"]+\.mp3)['"][^>]*sm2_button|<a\s[^>]*sm2_button[^>]*href=['"]([^'"]+\.mp3)['"]/)
+  return m ? (m[1] ?? m[2]) : null
 }

@@ -647,6 +647,14 @@ $("#novigi_pasvorton_sendi_button").click(function () {
 	
 	$("#registriKorektadon_button").click(function() {
 		$("#registriKorektadon_button").addClass("disabled");
+		// Trumbowyg ne recopie plus l'éditeur dans le textarea après une composition de caractère restée ouverte
+		// (touche morte « ^ » puis « o » selon le navigateur) : on recopie tout juste avant l'envoi,
+		// sinon la fin de l'introduction, de la conclusion ou d'un commentaire est perdue
+		$("#chefa_form textarea.trumbowyg").each(function() {
+			var redaktilo = $(this).data("trumbowyg");
+			// en mode HTML (éditeur caché), c'est le textarea qui est à jour
+			if (redaktilo && !redaktilo.$box.hasClass("trumbowyg-editor-hidden")) { redaktilo.syncTextarea(); }
+		});
 		$.ajax({
        		url : $cheminAbsolu+'ajax/registriKorektadon.php',
        		type : 'POST',

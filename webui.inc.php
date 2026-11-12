@@ -326,7 +326,7 @@ function montriKorektadajnElektojn($kurso,$leciono,$lecionero_id,$persono_id,$cl
 		echo '<a id="petiKorektanton_button" class="waves-effect waves-light btn light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'">'.$teksto.'</a>';
 	};
 	if ($nuna && (int)$nuna["atendas"]===1) {
-		echo "<div class='card-panel blue lighten-5 korektadaj-elektoj'><p>Vous avez demandé à être corrigé par «&nbsp;".htmlspecialchars((string)$nuna["teksto"])."&nbsp;». "
+		echo "<div class='card-panel blue lighten-5 korektadaj-elektoj' style='text-align:left'><p>Vous avez demandé à être corrigé par «&nbsp;".htmlspecialchars((string)$nuna["teksto"])."&nbsp;». "
 			."Nous le recherchons&nbsp;: vos leçons sont enregistrées et lui seront transmises dès qu'il vous sera attribué.</p></div>";
 		$butono("Enregistrer ma leçon");
 		return;
@@ -336,11 +336,11 @@ function montriKorektadajnElektojn($kurso,$leciono,$lecionero_id,$persono_id,$cl
 	if ($elektita===null || !in_array($elektita, array_column($ebloj, "kodo"), true)) {
 		$elektita = $ebloj[0]["kodo"]; // le même correcteur s'il est proposé, sinon un correcteur bénévole
 	}
-	echo "<div class='card-panel blue lighten-5 korektadaj-elektoj'>";
+	echo "<div class='card-panel blue lighten-5 korektadaj-elektoj' style='text-align:left'>";
 	echo "<p><strong>".($nuna && $nuna["elekto"]==="sen" ? "Vous suivez ce cours sans correcteur. Voulez-vous être corrigé&nbsp;?" : "Qui corrigera vos leçons&nbsp;?")."</strong></p>";
 	foreach ($ebloj as $eblo) {
 		echo "<p><label><input class='with-gap' name='korektada_elekto' type='radio' value='".$eblo["kodo"]."'".($eblo["kodo"]===$elektita ? " checked" : "")."/>"
-			."<span><strong>".htmlspecialchars($eblo["titolo"])."</strong><br><span class='grey-text text-darken-2'>".htmlspecialchars($eblo["priskribo"])."</span></span></label></p>";
+			."<span><strong style='color:#212121'>".htmlspecialchars($eblo["titolo"])."</strong><br><span class='grey-text text-darken-2'>".htmlspecialchars($eblo["priskribo"])."</span></span></label></p>";
 		if ($eblo["kodo"]==="konato") {
 			echo "<div id='konata_korektanto_ujo' class='input-field' style='margin-left:35px".($elektita==="konato" ? "" : ";display:none")."'>"
 				."<input id='konata_korektanto' name='konata_korektanto' type='text' maxlength='255'>"

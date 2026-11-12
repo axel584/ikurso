@@ -21,6 +21,9 @@ class IaKorektadoAPI {
     const MODELO = "anthropic/claude-haiku-5.5";
     const TAGA_LIMO = 1.0;
     const MAKS_PROVOJ = 3;
+    // longueur maximale d'une réponse envoyée au modèle (coût borné) : la plus longue réponse en base en novembre 2026
+    // était une rédaction de Paŝoj de 5 395 caractères ; au-delà, la réponse est coupée et le modèle en est averti
+    const MAKS_LONGECO = 6000;
     // cours que l'IA sait corriger, avec le nom donné au modèle (les mêmes que python/ia/korekti.py) ;
     // api/ia-konsigno.md a des règles pour chacun (langue des explications)
     const KURSOJ = array("CG" => "Cours élémentaire (CG)", "GR" => "Gerda malaperis (GR)", "PP" => "Paŝoj al plena posedo (PP)");
@@ -230,7 +233,7 @@ class IaKorektadoAPI {
                 "demando" => self::senHtml($v["demando"]),
                 "modelo" => self::senHtml($v["respondmodelo"]) ?: self::senHtml($v["modelo"]),
                 "akceptataj" => $v["normaligita"] ? explode("|", $v["normaligita"]) : null,
-                "respondo" => trim((string)$v["respondo"]),
+                "respondo" => self::tondi(trim((string)$v["respondo"])),
             );
         }
         $kurso = $vicoj[0]["kurso"];
@@ -388,6 +391,14 @@ class IaKorektadoAPI {
 
     private function kosto(array $respondo): float {
         return isset($respondo["usage"]["cost"]) ? (float)$respondo["usage"]["cost"] : 0.0;
+    }
+
+    private static function tondi(string $respondo): string {
+        $longeco = mb_strlen($respondo);
+        if ($longeco <= self::MAKS_LONGECO) {
+            return $respondo;
+        }
+        return mb_substr($respondo, 0, self::MAKS_LONGECO)."\n[… réponse coupée : ".$longeco." caractères au total]";
     }
 
     private static function senHtml(?string $t): ?string {

@@ -11,8 +11,9 @@ Mesures automatiques par modèle (sur les leçons corrigées par ce modèle) :
 Écrit aussi la liste des désaccords (malkonsentoj.csv), à faire trancher par des correcteurs : le correcteur
 n'a pas toujours raison (réponse juste oubliée, erreur non vue).
 
-Usage : python3 taksi.py
+Usage : python3 taksi.py [--lecionoj 'GR-*'] (par défaut le cours élémentaire, CG-*)
 """
+import argparse
 import csv
 import json
 import re
@@ -28,17 +29,23 @@ def plata(t):
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--lecionoj', default='CG-*', help='motif des leçons à comparer')
+    a = ap.parse_args()
     homaj = {}
-    for d in sorted((DOSIERUJO / 'datumoj').glob('CG-*.json')):
+    for d in sorted((DOSIERUJO / 'datumoj').glob(a.lecionoj + '.json')):
         leciono = json.loads(d.read_text())
         homaj[d.stem] = {q['id']: (e, q) for e in leciono['ekzercoj'] for q in e['demandoj']}
 
     vicoj, malkonsentoj = [], []
     for dosierujo in sorted((DOSIERUJO / 'rezultoj').iterdir()):
-        rezultoj = [json.loads(f.read_text()) for f in sorted(dosierujo.glob('CG-*.json'))]
+        rezultoj = [json.loads(f.read_text()) for f in sorted(dosierujo.glob(a.lecionoj + '.json'))]
         if not rezultoj:
             continue
+        # le dossier distingue deux passages du même modèle (korekti.py --etikedo)
         modelo = rezultoj[0]['modelo']
+        if '--' in dosierujo.name:
+            modelo += ' (' + dosierujo.name.split('--', 1)[1] + ')'
         formato = konsento = cxiuj = malbonaj_homaj = trovitaj = bonaj_homaj = falsaj = 0
         for r in rezultoj:
             demandoj = homaj[r['leciono']]
@@ -91,12 +98,13 @@ def main():
 
     eligo = DOSIERUJO / 'taksado'
     eligo.mkdir(exist_ok=True)
-    (eligo / 'resumo.json').write_text(json.dumps(vicoj, ensure_ascii=False, indent=1) + '\n')
-    with open(eligo / 'malkonsentoj.csv', 'w', newline='') as f:
+    sufikso = '' if a.lecionoj == 'CG-*' else '-' + ''.join(c for c in a.lecionoj if c.isalnum() or c == '-')
+    (eligo / f'resumo{sufikso}.json').write_text(json.dumps(vicoj, ensure_ascii=False, indent=1) + '\n')
+    with open(eligo / f'malkonsentoj{sufikso}.csv', 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=list(malkonsentoj[0]) if malkonsentoj else ['modelo'])
         w.writeheader()
         w.writerows(malkonsentoj)
-    print(f'{len(malkonsentoj)} désaccords dans {eligo / "malkonsentoj.csv"}')
+    print(f'{len(malkonsentoj)} désaccords dans {eligo / f"malkonsentoj{sufikso}.csv"}')
 
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Banc d'essai de la correction par IA (#1129) : fait corriger les leçons du jeu de test par des modèles, via OpenRouter.
 
-Pour chaque modèle et chaque leçon (fichiers de eltiri_lecionojn.py), envoie la consigne (konsigno.md) et la leçon
+Pour chaque modèle et chaque leçon (fichiers de eltiri_lecionojn.py), envoie la consigne (api/ia-konsigno.md, la même que le site) et la leçon
 SANS la correction humaine, demande une réponse JSON structurée, et garde le résultat avec le nombre de tokens,
 le coût et la durée. Une leçon déjà corrigée par un modèle n'est pas redemandée (relancer reprend où on en était).
 
@@ -20,8 +20,9 @@ from pathlib import Path
 
 DOSIERUJO = Path.home() / 'Documents/ikurso-ia'
 SXLOSILO = Path.home() / '.config/ikurso/openrouter.key'
-KONSIGNO = Path(__file__).with_name('konsigno.md')
+KONSIGNO = Path(__file__).resolve().parents[2] / 'api/ia-konsigno.md'  # la même consigne que le site (#1130)
 URL = 'https://openrouter.ai/api/v1/chat/completions'
+KURSOJ = {'CG': 'Cours élémentaire (CG)', 'GR': 'Gerda malaperis (GR)', 'PP': 'Paŝoj al plena posedo (PP)'}  # comme api/IaKorektadoAPI.php
 
 SKEMO = {
     'name': 'korektado',
@@ -53,9 +54,10 @@ SKEMO = {
 def por_modelo(leciono: dict) -> dict:
     """La leçon telle que la voit le modèle : sans la correction humaine."""
     return {
-        'kurso': 'Cours élémentaire (CG)',
+        'kurso': KURSOJ[leciono['kurso']],
         'leciono': leciono['leciono'],
         'titolo': leciono['titolo'],
+        **({'teksto': leciono['teksto']} if leciono.get('teksto') else {}),
         'ekzercoj': [
             {
                 'sekcio': e['sekcio'],
@@ -143,6 +145,7 @@ def main():
     ap.add_argument('--modeloj', required=True, help='identifiants OpenRouter séparés par des virgules')
     ap.add_argument('--lecionoj', default='CG-*', help='motif des fichiers du jeu de test')
     ap.add_argument('--paralelo', type=int, default=4)
+    ap.add_argument('--etikedo', default='', help='suffixe du dossier de résultats, pour repasser un modèle (ex. une autre consigne)')
     a = ap.parse_args()
 
     sxlosilo = SXLOSILO.read_text().strip()
@@ -151,7 +154,7 @@ def main():
     taskoj = []
     for modelo in a.modeloj.split(','):
         for d in dosieroj:
-            celo = DOSIERUJO / 'rezultoj' / modelo.replace('/', '__') / f'{d.stem}.json'
+            celo = DOSIERUJO / 'rezultoj' / (modelo.replace('/', '__') + (f'--{a.etikedo}' if a.etikedo else '')) / f'{d.stem}.json'
             if not celo.exists():
                 taskoj.append((modelo, d, celo))
     print(f'{len(taskoj)} corrections à demander')

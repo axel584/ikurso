@@ -2,11 +2,13 @@
 // SendadoAPI.php - Envoi d'une leçon au correcteur (ajax/sendiLecionon.php, ajax/petiKorektanton.php et l'API lernado, #1088).
 // Premier envoi d'un cours : un correcteur est attribué automatiquement (troviPlejTauganKorektanton()).
 // Envoi suivant : la leçon part au correcteur de l'élève pour ce cours.
+// Correcteur IA (#1130) : pas de mail au correcteur, la leçon est mise en file pour cron/ia_korektado.php.
 // Utilise les fonctions de util.php et db.inc.php : apartigiPersonon(), troviPlejTauganKorektanton(), protokolo(),
 // mailViaSmtp(), mailViaSES().
 
 require_once __DIR__ . "/RespondojAPI.php";
 require_once __DIR__ . "/ProgresoAPI.php";
+require_once __DIR__ . "/IaKorektadoAPI.php";
 
 class SendadoAPI {
     const KURSOJ = array("CG" => "fr/cge/", "GR" => "fr/gerda/", "PP" => "eo/ppp/");
@@ -48,6 +50,14 @@ class SendadoAPI {
         if ($nombro == 0) {
             return "neniu_respondo";
         }
+        if (IaKorektadoAPI::estasIa($korektanto)) {
+            $leciono_id = $this->memoriLecionon($persono_id, $lecionero_id, $komento);
+            (new IaKorektadoAPI($this->bdd, $this->urlracine))->enviciigi($persono_id, $leciono_id);
+            $this->bdd->prepare("UPDATE nuna_kurso SET nunleciono = ?, stato = 'K', lastdato = CURDATE() WHERE studanto = ? AND kurso = ?")
+                ->execute(array($leciono, $persono_id, $kurso));
+            (new ProgresoAPI($this->bdd))->finiSekcion($persono_id, $lecionero_id, $ekdato);
+            return "sendita";
+        }
         $fonto = $this->kapo($leciono)."<p>Sendu vian korekton al : ".$studanto["retadreso"]."<br>\n".$respondojHtml.$this->komento($komento)."</body></html>";
         $this->memoriLecionon($persono_id, $lecionero_id, $komento);
         $subjekto = $this->subjekto($kurso, $leciono, $studanto["enirnomo"]);
@@ -87,11 +97,11 @@ class SendadoAPI {
             ->execute(array($korektanto_id, $persono_id, $kurso, max(1, $leciono)));
 
         $alStudanto = str_replace(array("##KPERSONNOMO##", "##KRETADRESO##", "##SENIRNOMO##"),
-            array((string)$korektanto["personnomo"], $korektanto["retadreso"], $persono["enirnomo"]), $this->sxablono("doniStu", $kurso));
+            array((string)$korektanto["personnomo"], $korektanto["retadreso"], $persono["enirnomo"]), self::sxablono("doniStu", $kurso));
         mailViaSES($persono["retadreso"], "Votre correcteur I-kurso", $alStudanto);
         $alKorektanto = str_replace(array("##SENIRNOMO##", "##SID##", "##SURBO##", "##SRETADRESO##", "##SNASKIGXDATO##", "##KNOMO##"),
             array($persono["enirnomo"], $persono["id"], $persono["urbo"]." (".$persono["lando"].")", $persono["retadreso"],
-                (string)$persono["naskigxdato"], $korektanto["enirnomo"]), $this->sxablono("doniKor", $kurso));
+                (string)$persono["naskigxdato"], $korektanto["enirnomo"]), self::sxablono("doniKor", $kurso));
         mailViaSES($korektanto["retadreso"], "Nouvel élève sur I-kurso", $alKorektanto);
         // la leçon au correcteur + copie à l'élève
         $subjekto = $this->subjekto($kurso, $leciono, $persono["enirnomo"]);
@@ -113,14 +123,15 @@ class SendadoAPI {
     }
 
     // Leçon envoyée (personoj_lecionoj), une seule fois, avec le commentaire de l'élève au premier envoi à son correcteur.
-    private function memoriLecionon(int $persono_id, int $lecionero_id, ?string $komento): void {
+    // Renvoie l'identifiant de la leçon.
+    private function memoriLecionon(int $persono_id, int $lecionero_id, ?string $komento): int {
         $demando = $this->bdd->prepare("SELECT leciono_id FROM lecioneroj WHERE id = ?");
         $demando->execute(array($lecionero_id));
         $leciono_id = $demando->fetchColumn();
         $demando = $this->bdd->prepare("SELECT COUNT(*) FROM personoj_lecionoj WHERE persono_id = ? AND leciono_id = ?");
         $demando->execute(array($persono_id, $leciono_id));
         if ((int)$demando->fetchColumn() > 0) {
-            return;
+            return (int)$leciono_id;
         }
         if ($komento === null) {
             $this->bdd->prepare("INSERT INTO personoj_lecionoj (dato, persono_id, leciono_id) VALUES (NOW(), ?, ?)")
@@ -129,6 +140,7 @@ class SendadoAPI {
             $this->bdd->prepare("INSERT INTO personoj_lecionoj (dato, persono_id, leciono_id, komentario) VALUES (NOW(), ?, ?, ?)")
                 ->execute(array($persono_id, $leciono_id, $komento));
         }
+        return (int)$leciono_id;
     }
 
     private function kapo(int $leciono): string {
@@ -148,7 +160,7 @@ class SendadoAPI {
     }
 
     // Mail d'attribution du correcteur : modèle propre au cours s'il existe (doniStuCGFR.html), sinon commun (doniStuFR.html).
-    private function sxablono(string $nomo, string $kurso): string {
+    private static function sxablono(string $nomo, string $kurso): string {
         $dosiero = __DIR__."/../mails/".$nomo.(isset(self::KURSOJ[$kurso]) ? $kurso : "")."FR.html";
         if (!file_exists($dosiero)) {
             $dosiero = __DIR__."/../mails/".$nomo."FR.html";

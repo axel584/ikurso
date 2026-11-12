@@ -27,13 +27,15 @@ include "pagxkapo.inc.php";
 			<ul class="browser-default">
 				<li>Vous permettre de suivre les cours et de retrouver votre travail sur le site comme sur l’application.</li>
 				<li>Faire corriger vos leçons par un correcteur bénévole&nbsp;: il voit votre identifiant, votre nom et votre prénom, votre adresse e-mail pour vous répondre, votre ville et votre âge si vous les avez indiqués, et vos réponses.</li>
+				<li>Si vos leçons sont corrigées par intelligence artificielle (voir plus bas), faire corriger vos réponses par un modèle de langue.</li>
 				<li>Vous envoyer les mails liés au cours (activation du compte, corrections, rappels). Vous pouvez arrêter les rappels et les autres envois depuis vos données personnelles ou par le lien présent dans chaque mail.</li>
 				<li>Améliorer les cours, à partir de statistiques globales et de vos appréciations des leçons.</li>
 			</ul>
-			<p>Vos données ne sont ni vendues ni utilisées pour de la publicité. Elles ne sont communiquées à personne en dehors de l’association et de ses correcteurs bénévoles.</p>
+			<p>Vos données ne sont ni vendues ni utilisées pour de la publicité. Elles ne sont communiquées à personne en dehors de l’association et de ses correcteurs bénévoles, à l’exception des réponses corrigées par intelligence artificielle (voir ci-dessous).</p>
 
 			<h2>Où sont vos données</h2>
 			<p>Sur un serveur qui appartient à l’association Espéranto-France, situé en France. Sur le site, la mesure d’audience utilise Matomo, installé sur le serveur de l’association&nbsp;: les visites ne sont transmises à aucune autre société. Le formulaire de contact utilise reCAPTCHA de Google contre les envois automatiques.</p>
+			<p><strong>Correction par intelligence artificielle.</strong> Certaines leçons peuvent être corrigées par un modèle d’intelligence artificielle plutôt que par un correcteur bénévole&nbsp;; le mail de correction l’indique alors. Pour cela, le texte de la leçon et vos réponses sont envoyés à OpenRouter, une société américaine qui les transmet au fournisseur du modèle (par exemple Anthropic, ou Microsoft Azure qui héberge ses modèles). Votre nom, votre identifiant et votre adresse e-mail ne sont pas envoyés&nbsp;; seul ce que vous avez écrit dans vos réponses l’est. Nous demandons des fournisseurs qui ne gardent pas ces données pour entraîner leurs modèles. La correction obtenue est ensuite enregistrée sur notre serveur, comme celle d’un correcteur.</p>
 			<p>Dans l’application, vos jetons de connexion sont gardés dans le stockage sécurisé du téléphone. L’application n’utilise ni publicité, ni outil de mesure d’audience, ni localisation.</p>
 
 			<h2>Combien de temps</h2>

@@ -4564,3 +4564,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Schéma des corrélatifs en HTML, interactif, à la place de l'image korelativoj.svg dans la section 5.2 (#1110) : voir sql/59-correlatifs-interactifs-1110.sql
 --- Vidéos des leçons 1.8, 4.13 et 9.10 hébergées dans videos/ et lues par la balise <video> à la place de YouTube (#1089) : voir sql/60-videos-sur-le-site-1089.sql
 --- Exercice PP 18.5 (traduction en français) : méthode « x » désactivée (#1089) : voir sql/61-pp-traduko-sen-x2u-1089.sql
+--- Correction par IA : compte du correcteur IA (ia-korektanto) et file des leçons à corriger (table ia_korektadoj) (#1130) : voir sql/62-ia-korektado-1130.sql

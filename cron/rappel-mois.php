@@ -4,7 +4,7 @@ include "../util.php";
 malfermidatumbazon();
 
 // Premier rappel le 5 du mois
-$query = "SELECT distinct personoj.id,enirnomo,retadreso,personnomo,familinomo,nuna_kurso.korektanto FROM nuna_kurso,personoj where nuna_kurso.korektanto=personoj.id and nuna_kurso.stato='K' and lastdato<DATE_SUB(CURDATE(), INTERVAL 30 DAY) order by korektanto";
+$query = "SELECT distinct personoj.id,enirnomo,retadreso,personnomo,familinomo,nuna_kurso.korektanto FROM nuna_kurso,personoj where nuna_kurso.korektanto=personoj.id and personoj.retadreso<>'' and nuna_kurso.stato='K' and lastdato<DATE_SUB(CURDATE(), INTERVAL 30 DAY) order by korektanto"; // pas le correcteur IA, sans adresse (#1130)
 $result = $bdd->query($query);
  while($row = $result->fetch()) {
  	protokolo($row["id"],"ENVOIE RAPPEL","Envoie d'un message de rappel au correcteur");

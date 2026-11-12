@@ -39,6 +39,9 @@ $motDePasse = "ikurso_pass";
 $JWT_SECRET = "chaîne-aléatoire-de-64-caractères"; // secret de signature des JWT, différent de $motDePasse
 $RECAPTCHA_SITEKEY = "clé du site reCAPTCHA"; // formulaire de contact (reago.php)
 $RECAPTCHA_SECRET = "clé secrète reCAPTCHA"; // vérification dans reago2.php, jamais dans le dépôt
+$OPENROUTER_KEY = "clé d'API OpenRouter"; // correction par IA (#1130), jamais dans le dépôt
+$IA_MODELO = "anthropic/claude-haiku-5.5"; // modèle OpenRouter du correcteur IA
+$IA_TAGA_LIMO = 1.0; // dépense maximale par jour, en dollars
 $urlracine = "http://localhost:8080/";
 $cheminAbsolu = "/";
 // ... other config variables

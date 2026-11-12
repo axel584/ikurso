@@ -1,10 +1,11 @@
 <?php
 include "../util.php";
+require_once __DIR__ . "/../api/KorektadoAPI.php";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
 $kurso=isset($_POST["kurso"])?$_POST["kurso"]:"";
-$leciono=isset($_POST["leciono"])?$_POST["leciono"]:"";
-$studanto_id=isset($_POST["studanto_id"])?$_POST["studanto_id"]:"";
-$leciono_id=isset($_POST["leciono_id"])?$_POST["leciono_id"]:"";
+$leciono=isset($_POST["leciono"])?(int)$_POST["leciono"]:0;
+$studanto_id=isset($_POST["studanto_id"])?(int)$_POST["studanto_id"]:0;
+$leciono_id=isset($_POST["leciono_id"])?(int)$_POST["leciono_id"]:0;
 $neSendiRetmesagxon=isset($_POST["pas_envoi_email"])?True:False;
 if ($persono_id=="") { // personne non connecté, on ressort
 	$respondo["type"]="session";
@@ -21,70 +22,24 @@ if (!$korektanto || ($korektanto["rajtoj"]!='A' && $korektanto["rajtoj"]!='K')) 
 	exit();
 }
 
+// champs du formulaire : bonaRespondoN (case cochée), korektoN (commentaire), notoN (points), N = respondoj.id ;
+// un champ absent (question sans note ou sans commentaire) donne NULL en base
 $korektado = array();
-
-
 foreach(array_keys($_POST) as $key) {
 	if (startsWith($key,"bonaRespondo")) {
-		$respondo_id = substr($key, 12);
-		if (!array_key_exists($respondo_id,$korektado)) {
-			$korektado[$respondo_id] = array();
-		}
-		$korektado[$respondo_id]['bonaRespondo']=$_POST[$key]=="on"?true:false;
+		$korektado[substr($key, 12)]['gxusta']=$_POST[$key]=="on";
 	} else if (startsWith($key,"korekto")) {
-		$respondo_id = substr($key, 7);
-		if (!array_key_exists($respondo_id,$korektado)) {
-			$korektado[$respondo_id] = array();
-		}
-		$korektado[$respondo_id]['korekto']=$_POST[$key];
+		$korektado[substr($key, 7)]['korekto']=$_POST[$key];
 	} else if (startsWith($key,"noto")) {
-		$respondo_id = substr($key, 4);
-		if (!array_key_exists($respondo_id,$korektado)) {
-			$korektado[$respondo_id] = array();
-		}
-		$korektado[$respondo_id]['noto']=$_POST[$key];
+		$korektado[substr($key, 4)]['noto']=$_POST[$key];
 	}
 }
-
-foreach(array_keys($korektado) as $respondo_id) {
-	
-	if (array_key_exists('bonaRespondo',$korektado[$respondo_id])) {
-		$bonaRespondo = $korektado[$respondo_id]['bonaRespondo'];
-	} else {
-		$bonaRespondo = false;
-	}
-	if (!$bonaRespondo) { $bonaRespondo = 0;}
-
-	// champs absents du formulaire (question sans note ou sans commentaire) : NULL en base
-	$korekto = isset($korektado[$respondo_id]['korekto']) ? $korektado[$respondo_id]['korekto'] : null;
-	$poentoj = isset($korektado[$respondo_id]['noto']) ? $korektado[$respondo_id]['noto'] : null;
-	$requete = $bdd->prepare('update respondoj set gxusta=:bonaRespondo,korekto=:korekto,poentoj=:poentoj where id=:respondo_id');
-	$requete->execute(array('bonaRespondo'=>$bonaRespondo,'korekto'=>$korekto,'poentoj'=>$poentoj,'respondo_id'=>$respondo_id));
+foreach ($korektado as $respondo_id => $k) {
+	$korektado[$respondo_id]['poentoj'] = isset($k['noto']) ? $k['noto'] : null;
 }
 
-// sauvegarde de l'introduction/conclusion sur la leçon de l'élève
-$requete = $bdd->prepare('update personoj_lecionoj set enkonduko=:enkonduko,konkludo=:konkludo,korektita=1 where persono_id=:persono_id and leciono_id=:leciono_id');
-$requete->execute(array('enkonduko'=>isset($_POST['enkonduko'])?$_POST['enkonduko']:null,'konkludo'=>isset($_POST['konkludo'])?$_POST['konkludo']:null,'persono_id'=>$studanto_id,'leciono_id'=>$leciono_id));
-
-// envoyer le mail pour prévenir l'élève
-if (!$neSendiRetmesagxon) {
-	// on récupère son adresse email : 
-	$result = $bdd->prepare("select retadreso from personoj where id=?");
-	$result->execute(array($studanto_id));
-	$retadresoStudanto = $result->fetch()["retadreso"];
-	$filename = "../mails/novakorektado.html";
-	$fd = fopen($filename, "r");
-	$contents = fread($fd, filesize ($filename));
-	$url = rtrim($urlracine, "/")."/vidiLecionon.php?numleciono=".$leciono."&kurso=".$kurso;
-	$contents=str_replace("##URL##",$url,$contents);
-	// nom et adresse de la personne qui a corrigé, pour que l'élève puisse lui écrire (#1023)
-	$korektantoNomo = trim($korektanto["personnomo"]." ".$korektanto["familinomo"]);
-	$contents=str_replace("##KPERSONNOMO##",htmlspecialchars($korektantoNomo!="" ? $korektantoNomo : $korektanto["enirnomo"]),$contents);
-	$contents=str_replace("##KRETADRESO##",htmlspecialchars((string)$korektanto["retadreso"]),$contents);
-	fclose($fd);
-	mailViaSES($retadresoStudanto,"Votre leçon a été corrigée",$contents);
-}
-// TODO : reconstruire l'url de retour à partir du nom de l'élève, sa leçon et son cours
+(new KorektadoAPI($bdd, $urlracine))->registri($korektanto, $studanto_id, $kurso, $leciono, $leciono_id, $korektado,
+	isset($_POST['enkonduko'])?$_POST['enkonduko']:null, isset($_POST['konkludo'])?$_POST['konkludo']:null, !$neSendiRetmesagxon);
 
 $respondo["mesagxo"] = "ok";
 $respondo["url"] = "vidiLecionon.php?kurso=".$kurso."&numleciono=".$leciono."&studanto=".$studanto_id;

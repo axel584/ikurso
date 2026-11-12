@@ -31,6 +31,9 @@ $passwordSES = "mot de passe Amazon SES";
 $milestone = 1;
 $RECAPTCHA_SITEKEY = "clé du site reCAPTCHA"; // formulaire de contact (reago.php)
 $RECAPTCHA_SECRET = "clé secrète reCAPTCHA"; // jamais dans le dépôt
+$OPENROUTER_KEY = "clé d'API OpenRouter"; // correction par IA (#1130), jamais dans le dépôt
+$IA_MODELO = "anthropic/claude-haiku-5.5"; // modèle OpenRouter du correcteur IA
+$IA_TAGA_LIMO = 1.0; // dépense maximale par jour, en dollars
 ?>
 ```
 4. DANS LE RÉPERTOIRE js CRÉER LE FICHIER config.js contenant les informations suivantes :
@@ -116,7 +119,7 @@ Voici une description des répertoires les plus importants :
 
 - /ajax : contient les scripts qui sont appelés par des appels ajax
 - /bildoj : contient les images du sites
-- /cron : contient les scripts qui sont appelés toutes les nuits (principalement pour les rappels automatiques).
+- /cron : contient les scripts qui sont appelés toutes les nuits (principalement pour les rappels automatiques), et `ia_korektado.php`, appelé chaque minute, qui corrige les leçons envoyées au correcteur IA (#1130).
 - /db : couche "DAO"
 - /fr : contient les cours. Les répertoires les plus importants sont les sous-répertoires /fr/cge et /fr/gerda. Ils ont été historiquement mis dans un sous répertoire /fr dans le but de faire une version par langue, mais ça n'a jamais pris.
 - /lernejo : application élève (Expo), version web compilée ; sources dans /react-app/apps/lernejo, aussi publiée sur Android

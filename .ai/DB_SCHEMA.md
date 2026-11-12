@@ -466,6 +466,29 @@ Un jeton par connexion de l'application (#1088, `api/RenovigajSxlosilojAPI.php`)
 
 ---
 
+### `ia_korektadoj` — Leçons envoyées au correcteur IA
+
+Une ligne par leçon envoyée au compte `ia-korektanto` (#1130, `api/IaKorektadoAPI.php`, corrigées par `cron/ia_korektado.php`). InnoDB. Un nouvel envoi de la même leçon remet la ligne en attente.
+
+| Colonne | Type | Description |
+|---|---|---|
+| `id` | INT PK AUTO_INCREMENT | Identifiant |
+| `persono_id` | INT NOT NULL | Élève (`personoj.id`) ; UNIQUE avec `leciono_id` |
+| `leciono_id` | INT NOT NULL | Leçon (`lecionoj.id`) |
+| `stato` | VARCHAR(12) | `atendas` (à corriger), `farita` (corrigée), `malsukcesis` (échec après 3 essais ou cours non pris en charge : administrateurs prévenus par mail, relance par `php cron/ia_korektado.php --relancer`), `transdonita` (un administrateur a attribué un autre correcteur à l'élève), `malplena` (aucune réponse) |
+| `provoj` | INT | Nombre d'essais |
+| `modelo` | VARCHAR(100) | Modèle OpenRouter |
+| `provizanto` | VARCHAR(100) | Fournisseur qui a répondu |
+| `kosto` | DECIMAL(10,6) | Coût en dollars, essais ratés compris |
+| `tokens_eniro`, `tokens_eliro` | INT | Tokens envoyés et reçus |
+| `sekundoj` | DECIMAL(6,1) | Durée de l'appel |
+| `eraro` | TEXT | Dernière erreur |
+| `kreita` | DATETIME NOT NULL | Mise en attente |
+| `lasta_provo` | DATETIME | Dernier essai (plafond de dépense par jour) |
+| `farita` | DATETIME | Correction enregistrée |
+
+---
+
 ## Relations principales
 
 ```

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Banc d'essai de la correction par IA (#1129) : jeu de test tiré de la base de prod, en lecture seule.
 
-Choisit au hasard (graine fixe) des leçons du cours élémentaire (CG) corrigées en ligne par un correcteur
-bénévole (chaque réponse fausse commentée, voir plus bas), 5 par leçon par défaut, et écrit pour chacune un fichier JSON avec :
+Choisit au hasard (graine fixe) des leçons d'un cours (CG par défaut, GR, PP) corrigées en ligne par un correcteur
+bénévole (chaque réponse fausse commentée, voir plus bas), 5 par leçon par défaut (ou --maks au total, réparties
+sur les leçons), et écrit pour chacune un fichier JSON (<cours>-<leçon>-<n>.json) avec :
 - les consignes, les questions et les corrigés types ;
 - les réponses de l'élève ;
 - la correction humaine (bonne réponse ou non, commentaire, introduction et conclusion).
@@ -11,9 +12,10 @@ Aucune donnée personnelle n'est écrite : ni identifiant, ni date. Les noms, pr
 et adresses de l'élève et de son correcteur sont remplacés dans les textes par [PRÉNOM], [NOM], [VILLE]…,
 comme les adresses e-mail, numéros de téléphone et liens. Les fichiers restent hors du dépôt (public).
 
-Usage : python3 eltiri_lecionojn.py [--eligo ~/Documents/ikurso-ia/datumoj] [--po 5] [--de 2025-01-01]
+Usage : python3 eltiri_lecionojn.py [--kurso CG] [--eligo ~/Documents/ikurso-ia/datumoj] [--po 5] [--maks N] [--de 2025-01-01]
 """
 import argparse
+import html
 import json
 import random
 import re
@@ -60,7 +62,7 @@ def sen_html(t):
         return None
     t = re.sub(r'<br\s*/?>', '\n', t, flags=re.I)
     t = re.sub(r'<[^>]+>', '', t)
-    return t.replace('&nbsp;', ' ').replace('&amp;', '&').replace('&lt;', '<').replace('&gt;', '>').strip()
+    return html.unescape(t).replace('\xa0', ' ').strip()
 
 
 def normigi(v: str) -> str:
@@ -168,6 +170,9 @@ class Anonimigilo:
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
+    ap.add_argument('--kurso', default='CG', choices=['CG', 'GR', 'PP'])
+    ap.add_argument('--maks', type=int, help='nombre total de leçons, une par numéro de leçon tiré au hasard')
+    ap.add_argument('--nombri', action='store_true', help='compter seulement les leçons disponibles par numéro')
     ap.add_argument('--eligo', default=str(Path.home() / 'Documents/ikurso-ia/datumoj'))
     ap.add_argument('--po', type=int, default=5, help='leçons tirées par numéro de leçon')
     ap.add_argument('--de', default='2025-01-01', help='leçons corrigées depuis cette date')
@@ -184,15 +189,24 @@ def main():
         JOIN lecioneroj le ON le.leciono_id = l.id JOIN ekzercoj e ON e.lecionero_id = le.id
         JOIN ekzerceroj er ON er.ekzerco_id = e.id
         JOIN respondoj r ON r.ekzercero_id = er.id AND r.persono_id = pl.persono_id
-        WHERE pl.korektita = 1 AND l.kurso = 'CG' AND pl.dato >= '{a.de}'
+        WHERE pl.korektita = 1 AND l.kurso = '{a.kurso}' AND pl.dato >= '{a.de}'
         GROUP BY pl.persono_id, pl.leciono_id, l.numero
         HAVING SUM(r.gxusta = 1) > 0
            AND SUM(r.korekto IS NOT NULL AND TRIM(r.korekto) <> '') > 0
            AND SUM(r.gxusta = 0 AND (r.korekto IS NULL OR TRIM(r.korekto) = '')) = 0
         ORDER BY pl.leciono_id, pl.persono_id""")
+    numeroj = sorted({int(k['numero']) for k in kandidatoj})
+    if a.nombri:
+        for numero in numeroj:
+            print(numero, sum(int(k['numero']) == numero for k in kandidatoj))
+        return
     hazardo = random.Random(GRAINO)
     elektitaj = []
-    for numero in sorted({int(k['numero']) for k in kandidatoj}):
+    if a.maks:
+        # une leçon par numéro, sur --maks numéros tirés au hasard
+        a.po = 1
+        numeroj = sorted(hazardo.sample(numeroj, min(a.maks, len(numeroj))))
+    for numero in numeroj:
         grupo = [k for k in kandidatoj if int(k['numero']) == numero]
         elektitaj += hazardo.sample(grupo, min(a.po, len(grupo)))
 
@@ -207,6 +221,13 @@ def main():
         FROM lecionoj l JOIN lecioneroj le ON le.leciono_id = l.id JOIN ekzercoj e ON e.lecionero_id = le.id
         JOIN ekzerceroj er ON er.ekzerco_id = e.id AND (er.forigita = 0 OR er.forigita IS NULL)
         WHERE l.id IN ({lecionoj}) ORDER BY l.id, le.ordo, e.id, er.numero""")
+
+    # texte de lecture de chaque leçon (Gerda : « Rakonto », Paŝoj : « Legaĵo »), sur lequel portent les questions
+    tekstoj = {}
+    for t in sql(f"""SELECT le.leciono_id, le.titolo, le.enhavo FROM lecioneroj le
+        WHERE le.leciono_id IN ({lecionoj}) ORDER BY le.leciono_id, le.ordo"""):
+        if sen_html(t['titolo']) in ('Rakonto', 'Legaĵo') and t['leciono_id'] not in tekstoj:
+            tekstoj[t['leciono_id']] = re.sub(r'\n{3,}', '\n\n', sen_html(re.sub(r'</p>|</h\d>|</li>', '\n', t['enhavo'] or '')) or '')
 
     # 3. réponses des élèves choisis et correction humaine
     respondoj = sql(f"""
@@ -229,11 +250,11 @@ def main():
             if k and k != '0' and k in personaj:
                 korektantoj_de.setdefault(n['studanto'], []).append(personaj[k])
 
-    # mots du cours, à ne jamais prendre pour un nom (Maria, Petro, Pau…) : tout le cours élémentaire
+    # mots du cours, à ne jamais prendre pour un nom (Maria, Petro, Pau, Gerda…) : tout le cours
     kursaj_vortoj = set()
-    for v in sql("""SELECT e.komando, e.komando_detalo, e.ekzemplo, er.demando, er.respondmodelo, er.respondo, er.normaligita
+    for v in sql(f"""SELECT e.komando, e.komando_detalo, e.ekzemplo, er.demando, er.respondmodelo, er.respondo, er.normaligita
         FROM lecionoj l JOIN lecioneroj le ON le.leciono_id = l.id JOIN ekzercoj e ON e.lecionero_id = le.id
-        JOIN ekzerceroj er ON er.ekzerco_id = e.id WHERE l.kurso = 'CG'"""):
+        JOIN ekzerceroj er ON er.ekzerco_id = e.id WHERE l.kurso = '{a.kurso}'"""):
         for teksto in v.values():
             kursaj_vortoj.update(normigi(m) for m in VORTO.findall(sen_html(teksto) or ''))
 
@@ -252,7 +273,7 @@ def main():
     for k in elektitaj:
         pid, lid, numero = k['persono_id'], k['leciono_id'], int(k['numero'])
         nombriloj[numero] = nombriloj.get(numero, 0) + 1
-        nomo = f'CG-{numero:02d}-{nombriloj[numero]}'
+        nomo = f'{a.kurso}-{numero:02d}-{nombriloj[numero]}'
         anon = Anonimigilo(personaj.get(pid, {}), korektantoj_de.get(pid, []), kursaj_vortoj, aldonaj)
         liaj = {r['ekzercero_id']: r for r in respondoj if r['persono_id'] == pid and r['leciono_id'] == lid}
         homa = next((h for h in lecionoj_homaj if h['persono_id'] == pid and h['leciono_id'] == lid), {})
@@ -290,9 +311,11 @@ def main():
             del e['_id']
         leciono = {
             'nomo': nomo,
-            'kurso': 'CG',
+            'kurso': a.kurso,
             'leciono': numero,
             'titolo': sen_html(next((s['leciono_titolo'] for s in strukturo if s['leciono_id'] == lid), None)),
+            # texte de lecture (contenu du cours, pas de données personnelles), absent du cours élémentaire
+            'teksto': tekstoj.get(lid),
             'ekzercoj': ekzercoj,
             # l'introduction du correcteur (sa présentation : prénom, ville, parcours) n'est pas reprise
             'homa_konkludo': anon(homa.get('konkludo'), True) or None,

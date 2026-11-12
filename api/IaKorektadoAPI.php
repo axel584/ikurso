@@ -105,15 +105,18 @@ class IaKorektadoAPI {
 
     // Corrige les leçons en attente, les plus anciennes d'abord. Renvoie une ligne de compte rendu par leçon.
     public function traktiAtendantajn(int $limo = 10): array {
-        if ($this->sxlosilo === null) {
-            return array("pas de clé OpenRouter (\$OPENROUTER_KEY dans config.php)");
-        }
         $raporto = array();
         // après un échec, nouvel essai 5 min plus tard, puis 10 min : une courte panne ne fait pas passer à un bénévole
         $demando = $this->bdd->prepare("SELECT * FROM ia_korektadoj WHERE stato = 'atendas'
             AND (lasta_provo IS NULL OR lasta_provo < NOW() - INTERVAL (5 * provoj) MINUTE) ORDER BY kreita LIMIT ".(int)$limo);
         $demando->execute();
-        foreach ($demando->fetchAll(PDO::FETCH_ASSOC) as $vico) {
+        $vicoj = $demando->fetchAll(PDO::FETCH_ASSOC);
+        if ($vicoj && $this->sxlosilo === null) { // rien à signaler tant qu'aucune leçon n'attend
+            $this->averti("sen-sxlosilo-".date("Y-m-d"), "Correction par IA : pas de clé OpenRouter",
+                "<p>Des leçons attendent la correction par IA, mais \$OPENROUTER_KEY n'est pas défini dans config.php.</p>");
+            return array("pas de clé OpenRouter (\$OPENROUTER_KEY dans config.php)");
+        }
+        foreach ($vicoj as $vico) {
             if ($this->tagaKosto() >= $this->tagaLimo) {
                 $raporto[] = "plafond du jour atteint (".$this->tagaLimo." \$) : les leçons suivantes attendent demain";
                 $this->averti("plafond-".date("Y-m-d"), "Correction par IA : plafond du jour atteint",

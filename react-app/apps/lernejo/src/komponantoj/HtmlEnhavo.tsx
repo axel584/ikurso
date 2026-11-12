@@ -17,7 +17,7 @@ export default function HtmlEnhavo({ html, radiko, ludi, malfermi }: Props) {
   const ujo = useRef<HTMLDivElement>(null)
   // adresses relatives à la racine du site, comme $vojo dans montriLecioneron()
   const absoluta = useMemo(() => {
-    const h = html.replace(/\b(href|src|poster)=(["'])(?![a-z]+:|#|\/)/gi, `$1=$2${radiko}/`)
+    const h = ikonoj(html).replace(/\b(href|src|poster)=(["'])(?![a-z]+:|#|\/)/gi, `$1=$2${radiko}/`)
     return telefone() ? videojPerRelajso(h, radiko) : h
   }, [html, radiko])
 
@@ -45,6 +45,28 @@ export default function HtmlEnhavo({ html, radiko, ludi, malfermi }: Props) {
       <style>{STILO}</style>
       <div ref={ujo} className="ikurso-enhavo" dangerouslySetInnerHTML={{ __html: absoluta }} />
     </>
+  )
+}
+
+// Icônes Material du site (<i class="material-icons">lightbulb_outline</i>) : la police n'est pas chargée ici
+// (la WebView du téléphone n'a pas d'accès garanti au réseau), le nom de l'icône s'afficherait en texte.
+// On les remplace par un symbole équivalent ; une icône inconnue disparaît.
+const IKONOJ: Record<string, string> = {
+  lightbulb_outline: '💡',
+  star: '★',
+  warning: '⚠️',
+  check: '✓',
+  volume_up: '🔊',
+  school: '🎓',
+  arrow_left: '◀',
+  arrow_right: '▶',
+}
+
+function ikonoj(html: string): string {
+  return html.replace(
+    /<i\b[^>]*\bclass=(["'])[^"']*\bmaterial-icons\b[^"']*\1[^>]*>\s*([a-z_]+)\s*<\/i>/gi,
+    (_, _c: string, nomo: string) =>
+      IKONOJ[nomo] ? `<span class="ikono" aria-hidden="true">${IKONOJ[nomo]}</span>` : '',
   )
 }
 
@@ -109,6 +131,7 @@ ${kolumnoj('s')}
 .ikurso-enhavo fieldset.sono{border:2px dotted #64B5F6}
 .ikurso-enhavo audio{width:100%;max-width:400px}
 .ikurso-enhavo .card-panel{background:#e3f2fd;padding:1em;border-radius:4px;margin:.5em 0}
+.ikurso-enhavo .ikono{margin-right:.35em}
 .ikurso-enhavo .creditphoto{font-size:.7rem;margin-top:0}
 .ikurso-enhavo .responsive-img{max-width:100%;height:auto}
 .ikurso-enhavo video.vidbendo{display:block;width:100%;max-width:560px;height:auto;margin:.5em 0;background:#000}

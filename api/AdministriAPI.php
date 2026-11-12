@@ -3,6 +3,8 @@
 // Les enregistrements restent dans les scripts existants : administri2.php (fiche),
 // administriNunanKurson.php (correcteur), delete.php, aldoniNoton.php, forigiNoton.php.
 
+require_once __DIR__ . "/IaKorektadoAPI.php";
+
 class AdministriAPI {
     private $bdd;
 
@@ -82,6 +84,19 @@ class AdministriAPI {
             return $a["procento"] <=> $b["procento"];
         });
         return $rezulto;
+    }
+
+    // Le correcteur IA (#1130) si l'IA sait corriger ce cours, avec son nombre d'élèves en cours ; sinon null.
+    // Il n'est pas dans korektebla_kurso (jamais attribué automatiquement) : proposé à part dans administri.php.
+    public function iaKorektanto(string $kurso): ?array {
+        if (!isset(IaKorektadoAPI::KURSOJ[$kurso])) {
+            return null;
+        }
+        $demando = $this->bdd->prepare("SELECT p.id, (SELECT COUNT(*) FROM nuna_kurso nk WHERE nk.korektanto = p.id
+                AND nk.kurso = ? AND nk.stato IN ('K', 'N')) AS lernantoj FROM personoj p WHERE p.enirnomo = ?");
+        $demando->execute(array($kurso, IaKorektadoAPI::ENIRNOMO));
+        $vico = $demando->fetch(PDO::FETCH_ASSOC);
+        return $vico ? array("id" => (int)$vico["id"], "lernantoj" => (int)$vico["lernantoj"]) : null;
     }
 
     // Nombre maximum d'élèves accepté par le correcteur, pour chaque cours.

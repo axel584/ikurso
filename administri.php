@@ -51,7 +51,8 @@ function listo($nomo, $tabelo, $elektita, $malplena, $ordo = " order by nomo") {
 // $aktuala : correcteur actuel (id, enirnomo) quand on change de correcteur, présélectionné même s'il n'accepte plus d'élèves
 function korektantoFormularo($celpersono_id, $kurso, $elektita, $api, $aktuala = null, $butono = "Attribuer") {
 	$korektantoj = $api->korektantojLauxKurso($kurso);
-	if ($aktuala && !in_array((int)$aktuala["id"], array_column($korektantoj, "id"))) {
+	$ia = $api->iaKorektanto($kurso); // correcteur IA (#1130), proposé en dernier
+	if ($aktuala && !in_array((int)$aktuala["id"], array_column($korektantoj, "id")) && (!$ia || (int)$aktuala["id"] !== $ia["id"])) {
 		array_unshift($korektantoj, array("id" => (int)$aktuala["id"], "enirnomo" => $aktuala["enirnomo"], "lernantoj" => "?", "kapablo" => 0, "procento" => "–"));
 	}
 	echo "<form method='post' action='administriNunanKurson.php' class='korektanto-formularo'>";
@@ -61,6 +62,9 @@ function korektantoFormularo($celpersono_id, $kurso, $elektita, $api, $aktuala =
 	echo "<option value=''>Pas de correcteur</option>";
 	foreach ($korektantoj as $k) {
 		echo "<option value='".$k["id"]."'".($k["id"] == $elektita ? " selected" : "").">".h($k["enirnomo"])." (".$k["lernantoj"]."/".$k["kapablo"].") ".$k["procento"]."%</option>";
+	}
+	if ($ia) {
+		echo "<option value='".$ia["id"]."'".($ia["id"] == $elektita ? " selected" : "").">IA, correction automatique (".$ia["lernantoj"]." en cours)</option>";
 	}
 	echo "</select><label>Correcteur</label></div>";
 	echo "<button type='submit' class='btn-small waves-effect waves-light'><i class='material-icons left'>save</i>".h($butono)."</button>";

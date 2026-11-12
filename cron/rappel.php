@@ -54,8 +54,13 @@ function vortojHtml(array $vortoj): string {
 		.", avec ".$elcento." % de bonnes réponses.</p>";
 }
 
-function iaHtml(array $ia): string {
+// $radiko : adresse du site, pour le lien vers chaque leçon (vidiLecionon.php, ouvert aux administrateurs)
+function iaHtml(array $ia, string $radiko): string {
 	$h = function ($t) { return htmlspecialchars((string)$t, ENT_QUOTES, "UTF-8"); };
+	$ligilo = function (array $f) use ($h, $radiko) {
+		return "<a href='".$h(rtrim($radiko, "/")."/vidiLecionon.php?kurso=".urlencode($f["kurso"])."&numleciono=".(int)$f["numero"]
+			."&studanto=".(int)$f["persono_id"])."'>leçon ".$h($f["numero"])." (".$h($f["kurso"]).")</a>";
+	};
 	$faritaj = count($ia["faritaj"]);
 	$teksto = "<p>".$faritaj." ".laux($faritaj, "leçon corrigée", "leçons corrigées")." par l'IA hier, sur "
 		.$ia["korektitaj"]." ".laux($ia["korektitaj"], "leçon corrigée", "leçons corrigées")." en tout"
@@ -68,7 +73,7 @@ function iaHtml(array $ia): string {
 	if ($ia["faritaj"]) {
 		$teksto .= "<ul>";
 		foreach ($ia["faritaj"] as $f) {
-			$teksto .= "<li>".$h($f["enirnomo"])." : leçon ".$h($f["numero"])." (".$h($f["kurso"]).")"
+			$teksto .= "<li>".$h($f["enirnomo"])." : ".$ligilo($f)
 				.", ".round((float)$f["sekundoj"])." s, ".number_format((float)$f["kosto"], 4, ",", " ")." $"
 				.($f["provoj"] > 1 ? ", ".$f["provoj"]." essais" : "")."</li>";
 		}
@@ -77,7 +82,7 @@ function iaHtml(array $ia): string {
 	if ($ia["malsukcesoj"]) {
 		$teksto .= "<p>Échecs (à relancer avec <code>php cron/ia_korektado.php --relancer</code> ou à confier à un correcteur) :</p><ul>";
 		foreach ($ia["malsukcesoj"] as $f) {
-			$teksto .= "<li>".$h($f["enirnomo"])." : leçon ".$h($f["numero"])." (".$h($f["kurso"]).") : ".$h(mb_substr((string)$f["eraro"], 0, 200))."</li>";
+			$teksto .= "<li>".$h($f["enirnomo"])." : ".$ligilo($f)." : ".$h(mb_substr((string)$f["eraro"], 0, 200))."</li>";
 		}
 		$teksto .= "</ul>";
 	}
@@ -231,7 +236,7 @@ $contents=str_replace("##RIMARKOJ##",$rimarkoj,$contents);
 $statistikoj = new StatistikojAPI($bdd);
 $contents=str_replace("##LABORO##",laboroHtml($statistikoj->laboroHieraux()),$contents);
 $contents=str_replace("##VORTOJ##",vortojHtml($statistikoj->vortojHieraux()),$contents);
-$contents=str_replace("##IA##",iaHtml($statistikoj->iaHieraux()),$contents);
+$contents=str_replace("##IA##",iaHtml($statistikoj->iaHieraux(), $urlracine),$contents);
 echo $contents;
 // liste des administrateurs :
 $demando="select retadreso from personoj where (rajtoj='A')";

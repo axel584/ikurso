@@ -42,7 +42,7 @@ class StatistikojAPI {
         $hieraux = "BETWEEN CURDATE() - INTERVAL 1 DAY AND CURDATE() - INTERVAL 1 SECOND";
         $listo = function (string $stato, string $kolono) use ($hieraux): array {
             return $this->bdd->query(
-                "SELECT p.enirnomo, l.kurso, l.numero, k.sekundoj, k.kosto, k.provoj, k.eraro
+                "SELECT k.persono_id, p.enirnomo, l.kurso, l.numero, k.sekundoj, k.kosto, k.provoj, k.eraro
                  FROM ia_korektadoj k JOIN personoj p ON p.id = k.persono_id JOIN lecionoj l ON l.id = k.leciono_id
                  WHERE k.stato = '".$stato."' AND k.".$kolono." ".$hieraux." ORDER BY k.".$kolono)->fetchAll(PDO::FETCH_ASSOC);
         };

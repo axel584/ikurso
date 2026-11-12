@@ -3,6 +3,7 @@ function debug($s) {
 	//{echo $s;}
 }
 include "util.php";
+require_once "api/IaKorektadoAPI.php";
 $kurso=isset($_REQUEST["kurso"])?$_REQUEST["kurso"]:"";
 // $kurso sert aussi à construire des noms de fichiers de mails : code alphanumérique uniquement
 if (!preg_match('/^[A-Za-z0-9]{1,10}$/',$kurso)) {header("Location:index.php?erarkodo=4"); exit;}
@@ -25,6 +26,18 @@ if ($korektanto_id=="") {
 	exit;
 }
 $korektanto_id=(int)$korektanto_id;
+// correcteur IA (#1130) : seulement pour les cours que l'IA sait corriger ; pas de mail au « correcteur »,
+// et un mail à l'élève qui explique la correction automatique (mails/doniStuIAFR.html)
+$estasIa = IaKorektadoAPI::estasIa(apartigiPersonon($korektanto_id));
+if ($estasIa && !isset(IaKorektadoAPI::KURSOJ[$kurso])) {
+	header("Location:administri.php?celpersono_id=$celpersono_id&erarkodo=11");
+	exit;
+}
+function sendiIaMesagxon($studantinformoj) {
+	$contents = file_get_contents("mails/doniStuIAFR.html");
+	$contents = str_replace("##SENIRNOMO##", htmlspecialchars((string)$studantinformoj["enirnomo"]), $contents);
+	mailViaSES($studantinformoj["retadreso"], "Votre correcteur I-kurso", $contents);
+}
 
 // cxu la studanto havas jam komencitan kurson ?
 // ER: prise en compte de la derniere lecon envoyee
@@ -47,6 +60,10 @@ if ($row && $row['korektanto']!="") {
 		// trovi informojn pri studanto kaj korektanto
 		$studantinformoj = apartigiPersonon($celpersono_id);
 		$korektantinformoj = apartigiPersonon($korektanto_id);
+		if ($estasIa) {
+			sendiIaMesagxon($studantinformoj);
+			header("Location:administri.php?celpersono_id=$celpersono_id&validi=jes"); exit;
+		}
 		// sendi mesagxon al la nova studanto
 		$filename = "mails/redoniStu".$kurso."FR.html";
 		// si le fichier n'existe pas, mets le nom du fichier sans le cours
@@ -91,6 +108,10 @@ if ($row && $row['korektanto']!="") {
 		// trovi informojn pri studanto kaj korektanto
 		$studantinformoj = apartigiPersonon($celpersono_id);	
 		$korektantinformoj = apartigiPersonon($korektanto_id);
+		if ($estasIa) {
+			sendiIaMesagxon($studantinformoj);
+			header("Location:administri.php?celpersono_id=$celpersono_id&validi=jes"); exit;
+		}
 		// sendi mesagxon al la nova studanto
 		$filename = "mails/doniStu".$kurso."FR.html";
 		// si le fichier n'existe pas, mets le nom du fichier sans le cours

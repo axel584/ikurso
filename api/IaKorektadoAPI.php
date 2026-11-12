@@ -21,10 +21,11 @@ class IaKorektadoAPI {
     const MODELO = "anthropic/claude-haiku-5.5";
     const TAGA_LIMO = 1.0;
     const MAKS_PROVOJ = 3;
-    // cours que l'IA sait corriger, avec le nom donné au modèle ; la consigne est écrite pour le cours élémentaire
-    const KURSOJ = array("CG" => "Cours élémentaire (CG)");
-    // noms des autres cours pour le modèle (banc d'essai, python/ia/korekti.py) ; pas encore corrigés en production
-    // (il faudra aussi envoyer le texte de lecture, « teksto »)
+    // cours que l'IA sait corriger, avec le nom donné au modèle (les mêmes que python/ia/korekti.py) ;
+    // api/ia-konsigno.md a des règles pour chacun (langue des explications)
+    const KURSOJ = array("CG" => "Cours élémentaire (CG)", "GR" => "Gerda malaperis (GR)", "PP" => "Paŝoj al plena posedo (PP)");
+    // titres des sections qui contiennent le texte de lecture sur lequel portent les questions (Gerda, Paŝoj)
+    const TEKSTAJ_SEKCIOJ = array("Rakonto", "Legaĵo");
     const URL = "https://openrouter.ai/api/v1/chat/completions";
     const ENKONDUKO = "<p>Cette leçon a été corrigée automatiquement par une intelligence artificielle. "
         ."Elle peut parfois se tromper : si une correction vous semble fausse, n'hésitez pas à nous le signaler.</p>";
@@ -233,6 +234,7 @@ class IaKorektadoAPI {
             );
         }
         $kurso = $vicoj[0]["kurso"];
+        $teksto = $this->legajxo($leciono_id);
         return array(
             "kurso" => $kurso,
             "numero" => (int)$vicoj[0]["numero"],
@@ -241,9 +243,23 @@ class IaKorektadoAPI {
                 "kurso" => isset(self::KURSOJ[$kurso]) ? self::KURSOJ[$kurso] : $kurso,
                 "leciono" => (int)$vicoj[0]["numero"],
                 "titolo" => self::senHtml($vicoj[0]["leciono_titolo"]),
+            ) + ($teksto !== null ? array("teksto" => $teksto) : array()) + array(
                 "ekzercoj" => $ekzercoj,
             ),
         );
+    }
+
+    // Texte de lecture de la leçon (première section « Rakonto » ou « Legaĵo »), en texte brut ; null s'il n'y en a pas.
+    private function legajxo(int $leciono_id): ?string {
+        $demando = $this->bdd->prepare("SELECT titolo, enhavo FROM lecioneroj WHERE leciono_id = ? ORDER BY ordo");
+        $demando->execute(array($leciono_id));
+        foreach ($demando->fetchAll(PDO::FETCH_ASSOC) as $v) {
+            if (in_array(self::senHtml($v["titolo"]), self::TEKSTAJ_SEKCIOJ, true)) {
+                $teksto = self::senHtml(preg_replace('/<\/(p|h\d|li)>/i', "\n", (string)$v["enhavo"]));
+                return $teksto === null ? null : preg_replace("/\n{3,}/", "\n\n", preg_replace("/[ \t]*\n[ \t]*/", "\n", $teksto));
+            }
+        }
+        return null;
     }
 
     // Appel à OpenRouter. Renvoie ['respondo' => réponse décodée, 'sekundoj' => durée] ; RuntimeException en cas d'erreur.
@@ -255,7 +271,10 @@ class IaKorektadoAPI {
                 array("role" => "user", "content" => json_encode($por_modelo, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT)),
             ),
             "response_format" => array("type" => "json_schema", "json_schema" => self::SKEMO),
-            "max_tokens" => 16000,
+            // la réflexion du modèle compte dans max_tokens : on la limite pour laisser la place à la correction
+            // (sinon une longue leçon de Paŝoj peut être coupée, finish_reason « length »)
+            "max_tokens" => 24000,
+            "reasoning" => array("max_tokens" => 8000),
             "usage" => array("include" => true),
             // seulement des fournisseurs qui respectent le format demandé, ne gardent pas les données
             // et ne s'en servent pas pour l'entraînement

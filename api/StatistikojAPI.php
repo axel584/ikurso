@@ -35,6 +35,31 @@ class StatistikojAPI {
         return $demando->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Correction par IA (#1130) hier : leçons corrigées (élève, cours, leçon, durée, coût), échecs, dépense de la veille,
+    // leçons en attente maintenant, totaux depuis le début, et nombre total de leçons corrigées hier (IA et correcteurs) :
+    // personoj_lecionoj.dato est mise à jour à la correction (voir laboroHieraux).
+    public function iaHieraux(): array {
+        $hieraux = "BETWEEN CURDATE() - INTERVAL 1 DAY AND CURDATE() - INTERVAL 1 SECOND";
+        $listo = function (string $stato, string $kolono) use ($hieraux): array {
+            return $this->bdd->query(
+                "SELECT p.enirnomo, l.kurso, l.numero, k.sekundoj, k.kosto, k.provoj, k.eraro
+                 FROM ia_korektadoj k JOIN personoj p ON p.id = k.persono_id JOIN lecionoj l ON l.id = k.leciono_id
+                 WHERE k.stato = '".$stato."' AND k.".$kolono." ".$hieraux." ORDER BY k.".$kolono)->fetchAll(PDO::FETCH_ASSOC);
+        };
+        $unu = function (string $sql) {
+            return $this->bdd->query($sql)->fetchColumn();
+        };
+        return array(
+            "faritaj" => $listo("farita", "farita"),
+            "malsukcesoj" => $listo("malsukcesis", "lasta_provo"),
+            "kosto" => (float)$unu("SELECT COALESCE(SUM(kosto), 0) FROM ia_korektadoj WHERE lasta_provo ".$hieraux),
+            "atendas" => (int)$unu("SELECT COUNT(*) FROM ia_korektadoj WHERE stato = 'atendas'"),
+            "cxiuj_faritaj" => (int)$unu("SELECT COUNT(*) FROM ia_korektadoj WHERE stato = 'farita'"),
+            "cxiuj_kosto" => (float)$unu("SELECT COALESCE(SUM(kosto), 0) FROM ia_korektadoj"),
+            "korektitaj" => (int)$unu("SELECT COUNT(*) FROM personoj_lecionoj WHERE korektita = 1 AND dato ".$hieraux),
+        );
+    }
+
     // Révision du vocabulaire hier : nombre d'élèves, de réponses et de bonnes réponses.
     public function vortojHieraux(): array {
         $demando = $this->bdd->prepare(

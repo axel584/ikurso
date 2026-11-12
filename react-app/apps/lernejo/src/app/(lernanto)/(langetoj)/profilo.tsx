@@ -1,11 +1,11 @@
-// Profil de l'élève : son compte, le rappel de révision (#1120), la déconnexion (le refresh token est révoqué sur le serveur) et la suppression du compte.
+// Profil de l'élève : son compte, le mode de correction de ses cours (#627), le rappel de révision (#1120), la déconnexion (le refresh token est révoqué sur le serveur) et la suppression du compte.
 // L'invité (#1089) y trouve la création de compte et la connexion ; le compte pas encore activé, son lien d'activation.
 import { useState } from 'react'
 import { ScrollView, Text, TextInput, View } from 'react-native'
 import { router } from 'expo-router'
 import * as Linking from 'expo-linking'
 import { retadreso } from '@/api/kliento'
-import { useForigiKonton, useMi } from '@/api/demandoj'
+import { useForigiKonton, useKursoj, useMi, useSxangxiKorektadon, type KursoKodo } from '@/api/demandoj'
 import { Butono, Stato } from '@/komponantoj/Bazaj'
 import { RevizioRememorigo } from '@/komponantoj/RevizioRememorigo'
 import { useSeanco } from '@/seanco'
@@ -37,6 +37,51 @@ function Gasto() {
         </Text>
       )}
     </>
+  )
+}
+
+// Mode de correction des cours suivis avec un correcteur (#627, #1130) : passer à la correction automatique ou à un
+// correcteur bénévole, comme dans le profil du site (sxangxiKorektadon.php).
+function Korektado() {
+  const { data } = useKursoj()
+  const sxangxi = useSxangxiKorektadon()
+  const [konfirmo, setKonfirmo] = useState<{ kurso: KursoKodo; al: 'ia' | 'volontulo' } | null>(null)
+  const kursoj = (data?.kursoj ?? []).filter((k) => k.korektanto && (k.stato === 'K' || k.stato === 'N'))
+  if (kursoj.length === 0) return null
+  return (
+    <View style={[stiloj.karto, { gap: 8 }]} testID="korektado">
+      <Text style={stiloj.subtitolo}>Correction de mes leçons</Text>
+      {kursoj.map((k) => {
+        const al = k.korektanto?.ia ? 'volontulo' : 'ia'
+        return (
+          <View key={k.kodo} style={{ gap: 4 }}>
+            <Text style={stiloj.teksto}>
+              {k.nomo} : {k.korektanto?.ia ? 'correction automatique' : `${k.korektanto?.personnomo || k.korektanto?.enirnomo}`}
+            </Text>
+            {konfirmo?.kurso === k.kodo ? (
+              <>
+                <Text style={stiloj.eta}>
+                  {al === 'ia'
+                    ? 'Vos prochaines leçons seront corrigées par une intelligence artificielle, et votre correcteur en sera prévenu.'
+                    : 'Un correcteur bénévole vous sera attribué et corrigera vos prochaines leçons.'}
+                </Text>
+                <Butono
+                  teksto={sxangxi.isPending ? 'Changement…' : 'Confirmer'}
+                  malsxaltita={sxangxi.isPending}
+                  onPress={() => sxangxi.mutate(konfirmo, { onSuccess: () => setKonfirmo(null) })}
+                />
+                <Butono dua teksto="Annuler" onPress={() => setKonfirmo(null)} />
+              </>
+            ) : (
+              <Text accessibilityRole="button" style={{ color: koloroj.blua, fontSize: 15 }} onPress={() => setKonfirmo({ kurso: k.kodo, al })}>
+                {al === 'ia' ? 'Passer à la correction automatique' : 'Être corrigé par un correcteur bénévole'}
+              </Text>
+            )}
+          </View>
+        )
+      })}
+      {sxangxi.error && <Text style={stiloj.eraro}>{sxangxi.error.message}</Text>}
+    </View>
   )
 }
 
@@ -132,6 +177,7 @@ export default function Profilo() {
           </View>
         )}
       </Stato>
+      <Korektado />
       <RevizioRememorigo />
       <Butono dua teksto="Modifier mon profil sur le site" onPress={() => Linking.openURL(retadreso('personinformoj.php'))} />
       <Butono teksto="Se déconnecter" onPress={elsaluti} />

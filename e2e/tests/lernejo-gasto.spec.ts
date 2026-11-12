@@ -70,7 +70,7 @@ test('un visiteur commence sans compte, puis crée son compte pour être corrig�
   await page.goto('lernejo/sekcio/8')
   const konto = page.getByTestId('konto-bezonata')
   await expect(konto).toBeVisible()
-  await expect(page.getByText('Envoyer la leçon à mon correcteur')).toHaveCount(0)
+  await expect(page.getByText('Valider et envoyer la leçon')).toHaveCount(0)
   await konto.getByText('Créer mon compte pour être corrigé').click()
 
   const enirnomo = `e2eapp${Date.now()}`
@@ -92,7 +92,7 @@ test('un visiteur commence sans compte, puis crée son compte pour être corrig�
   await page.getByRole('button', { name: 'Continuer le cours' }).click()
   await expect(page.getByTestId('resumo')).toBeVisible()
   await expect(page.getByTestId('gasto-strio')).toHaveCount(0)
-  await page.getByText('Envoyer la leçon à mon correcteur').click()
+  await page.getByText('Valider et envoyer la leçon').click()
   await expect(page.getByText(/pas validé/)).toBeVisible()
   await expect(page.getByText('Recevoir à nouveau le lien d’activation')).toBeVisible()
 
@@ -100,7 +100,7 @@ test('un visiteur commence sans compte, puis crée son compte pour être corrig�
   await page.goto(linkFromMail(mail, 'aktivigi.php'))
   expect(sql(`SELECT aktivigita FROM personoj WHERE id = ${gasto}`)).toBe('1')
   await page.goto('lernejo/sekcio/8')
-  await page.getByText('Envoyer la leçon à mon correcteur').click()
+  await page.getByText('Valider et envoyer la leçon').click()
   await expect(page.getByText(/Leçon envoyée/)).toBeVisible()
 })
 

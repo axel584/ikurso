@@ -298,6 +298,78 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/lernado/kursoj/{kurso}/korektado": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Changer de mode de correction pour ce cours (#627, */
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    kurso: components["parameters"]["Kurso"];
+                };
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": {
+                        /**
+                         * @description ia : correction automatique ; volontulo : un correcteur bénévole
+                         * @enum {string}
+                         */
+                        al: "ia" | "volontulo";
+                    };
+                };
+            };
+            responses: {
+                /** @description Mode de correction changé (ou déjà celui-ci) */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /** @enum {string} */
+                            rezulto: "farita";
+                        };
+                    };
+                };
+                400: components["responses"]["Eraro"];
+                401: components["responses"]["Eraro"];
+                403: components["responses"]["Eraro"];
+                /** @description Pas encore de correcteur pour ce cours, ou aucun correcteur bénévole disponible */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Eraro"];
+                    };
+                };
+                /** @description Correction automatique pas proposée pour ce cours */
+                422: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Eraro"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/lernado/kursoj/{kurso}": {
         parameters: {
             query?: never;
@@ -554,6 +626,13 @@ export interface paths {
                     "application/json": {
                         /** @description Message pour le correcteur */
                         komento?: string;
+                        /**
+                         * @description Mode de correction choisi au premier envoi du cours (#627, voir Resumo.korektado.ebloj) ; absent : le choix déjà fait, sinon un correcteur bénévole
+                         * @enum {string}
+                         */
+                        elekto?: "sama" | "volontulo" | "konato" | "sen" | "ia";
+                        /** @description Pour elekto = konato : prénom, identifiant ou adresse e-mail du correcteur */
+                        teksto?: string;
                     };
                 };
             };
@@ -566,10 +645,10 @@ export interface paths {
                     content: {
                         "application/json": {
                             /**
-                             * @description `sendita` : au correcteur de l'élève ; `korektanto_atribuita` : premier envoi, un correcteur vient d'être attribué
+                             * @description `sendita` : au correcteur de l'élève ; `sendita_ia` : à la correction automatique ; `korektanto_atribuita` : premier envoi, un correcteur vient d'être attribué ; `sen_korektanto` : l'élève continue sans correcteur, rien n'est envoyé ; `atendas_korektanton` : leçon gardée pour le correcteur connu, pas encore retrouvé
                              * @enum {string}
                              */
-                            rezulto: "sendita" | "korektanto_atribuita";
+                            rezulto: "sendita" | "sendita_ia" | "korektanto_atribuita" | "sen_korektanto" | "atendas_korektanton";
                         };
                     };
                 };
@@ -584,7 +663,7 @@ export interface paths {
                     };
                 };
                 404: components["responses"]["Eraro"];
-                /** @description Aucune réponse dans la leçon */
+                /** @description Aucune réponse dans la leçon, correcteur connu non indiqué ou mode de correction inconnu */
                 422: {
                     headers: {
                         [name: string]: unknown;
@@ -1086,7 +1165,14 @@ export interface components {
             korektanto: {
                 enirnomo: string;
                 personnomo: string | null;
+                /** @description Correction automatique (#1130) */
+                ia: boolean;
             } | null;
+            /**
+             * @description Sans correcteur attribué (#627) : sen, l'élève suit le cours seul ; konato, le correcteur qu'il a indiqué n'est pas encore retrouvé
+             * @enum {string|null}
+             */
+            elekto: "sen" | "konato" | null;
         };
         Leciono: {
             numero: number;
@@ -1190,6 +1276,23 @@ export interface components {
             elektoj?: string[];
         };
         Resumo: {
+            /** @description Mode de correction du cours (#627) */
+            korektado: {
+                /** @description Un correcteur (ou l'IA) est attribué pour ce cours */
+                korektanto: boolean;
+                ia: boolean;
+                /** @description Choix déjà fait : sama, volontulo, konato, sen ou ia */
+                elekto: string | null;
+                /** @description Correcteur connu indiqué, pas encore retrouvé */
+                atendas: string | null;
+                /** @description Choix proposés avant le premier envoi (vide s'il y a un correcteur ou une attente) */
+                ebloj: {
+                    /** @enum {string} */
+                    kodo: "sama" | "volontulo" | "konato" | "sen" | "ia";
+                    titolo: string;
+                    priskribo: string;
+                }[];
+            };
             nefinitaj_sekcioj: {
                 ordo: number;
                 titolo: string;

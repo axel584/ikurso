@@ -29,11 +29,17 @@ export default function Kursoj() {
                 </View>
                 {k.korektanto ? (
                   <Text style={stiloj.eta}>
-                    Correcteur : {k.korektanto.personnomo || k.korektanto.enirnomo}
+                    {k.korektanto.ia ? 'Correction automatique' : `Correcteur : ${k.korektanto.personnomo || k.korektanto.enirnomo}`}
                     {k.nuna_leciono ? ` · dernière leçon envoyée : ${k.nuna_leciono}` : ''}
                   </Text>
                 ) : (
-                  <Text style={stiloj.eta}>Un correcteur vous sera attribué à l’envoi de votre première leçon.</Text>
+                  <Text style={stiloj.eta}>
+                    {k.elekto === 'sen'
+                      ? 'Sans correcteur : vous pourrez demander à être corrigé à la fin d’une leçon.'
+                      : k.elekto === 'konato'
+                        ? 'Nous recherchons le correcteur que vous avez indiqué.'
+                        : 'Vous choisirez qui vous corrige à l’envoi de votre première leçon.'}
+                  </Text>
                 )}
               </Pressable>
             </Link>

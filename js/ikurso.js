@@ -735,6 +735,13 @@ $("#novigi_pasvorton_sendi_button").click(function () {
 	});	
 
 
+	// choix du mode de correction (#627) : le champ du correcteur connu n'apparaît que pour cette option
+	$("input[name=korektada_elekto]").change(function() {
+		var konato = $("input[name=korektada_elekto]:checked").val()=="konato";
+		$("#konata_korektanto_ujo").toggle(konato);
+		if (konato) { $("#konata_korektanto").focus(); }
+	});
+
 	$("#petiKorektanton_button").click(function() {
 		$("#petiKorektanton_button").addClass("disabled");
 		$.ajax({
@@ -747,6 +754,9 @@ $("#novigi_pasvorton_sendi_button").click(function () {
        				alert("Votre compte n'a pas été activé, vous ne pouvez pas demander un correcteur. Vérifier dans vos e-mails et cliquez sur le lien d'activation");
        			} else if (reponse.mesagxo=="aucunExercice") {
 					alert("Vous devez d'abord répondre aux exercices avant de demander un correcteur");
+       			} else if (reponse.type=="elekto") { // mode de correction manquant ou incomplet (#627)
+					alert(reponse.mesagxo);
+					$("#petiKorektanton_button").removeClass("disabled");
        			} else if (reponse.mesagxo=="ok") {
        				window.location = $urlracine+reponse.url;
        			} else {

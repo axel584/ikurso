@@ -307,12 +307,48 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 		$dejaFait = $result->fetch()["combien"];
 		if ($dejaFait>0) {
 			echo '<a id="sendiLecionon_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Envoyer à mon correcteur !</a>';
-		} else { // Pas de correcteur
-			echo '<a id="petiKorektanton_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="Mes exercices lui seront envoyés">Demander un correcteur</a>';
+		} else { // Pas de correcteur : choix du mode de correction (#627)
+			montriKorektadajnElektojn($kurso,$leciono,$lecionero_id,$persono_id,$classeDejaFait);
 		}
 	} else { // on indique que la section est terminée ; le QCM est facultatif : le bouton est là sans attendre la fin du QCM (#1109)
 		echo '<a id="finiLecioneron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="j\'ai fini d\'étudier cette section">Terminé !</a>';
 	}
+}
+
+// Fin d'une leçon sans correcteur (#627) : l'élève choisit un mode de correction (KorektadaElektoAPI).
+// Correcteur connu en attente : la leçon est gardée pour lui, pas de nouveau choix.
+function montriKorektadajnElektojn($kurso,$leciono,$lecionero_id,$persono_id,$classeDejaFait) {
+	global $bdd;
+	require_once __DIR__."/api/KorektadaElektoAPI.php";
+	$elektoj = new KorektadaElektoAPI($bdd);
+	$nuna = $elektoj->elekto((int)$persono_id, $kurso);
+	$butono = function ($teksto) use ($kurso,$leciono,$lecionero_id,$classeDejaFait) {
+		echo '<a id="petiKorektanton_button" class="waves-effect waves-light btn light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'">'.$teksto.'</a>';
+	};
+	if ($nuna && (int)$nuna["atendas"]===1) {
+		echo "<div class='card-panel blue lighten-5 korektadaj-elektoj'><p>Vous avez demandé à être corrigé par «&nbsp;".htmlspecialchars((string)$nuna["teksto"])."&nbsp;». "
+			."Nous le recherchons&nbsp;: vos leçons sont enregistrées et lui seront transmises dès qu'il vous sera attribué.</p></div>";
+		$butono("Enregistrer ma leçon");
+		return;
+	}
+	$elektita = $nuna ? $nuna["elekto"] : null;
+	$ebloj = $elektoj->ebloj((int)$persono_id, $kurso);
+	if ($elektita===null || !in_array($elektita, array_column($ebloj, "kodo"), true)) {
+		$elektita = $ebloj[0]["kodo"]; // le même correcteur s'il est proposé, sinon un correcteur bénévole
+	}
+	echo "<div class='card-panel blue lighten-5 korektadaj-elektoj'>";
+	echo "<p><strong>".($nuna && $nuna["elekto"]==="sen" ? "Vous suivez ce cours sans correcteur. Voulez-vous être corrigé&nbsp;?" : "Qui corrigera vos leçons&nbsp;?")."</strong></p>";
+	foreach ($ebloj as $eblo) {
+		echo "<p><label><input class='with-gap' name='korektada_elekto' type='radio' value='".$eblo["kodo"]."'".($eblo["kodo"]===$elektita ? " checked" : "")."/>"
+			."<span><strong>".htmlspecialchars($eblo["titolo"])."</strong><br><span class='grey-text text-darken-2'>".htmlspecialchars($eblo["priskribo"])."</span></span></label></p>";
+		if ($eblo["kodo"]==="konato") {
+			echo "<div id='konata_korektanto_ujo' class='input-field' style='margin-left:35px".($elektita==="konato" ? "" : ";display:none")."'>"
+				."<input id='konata_korektanto' name='konata_korektanto' type='text' maxlength='255'>"
+				."<label for='konata_korektanto'>Prénom, identifiant ou adresse e-mail de votre correcteur</label></div>";
+		}
+	}
+	echo "</div>";
+	$butono("Valider");
 }
 
 // Avant d'envoyer la leçon (dernière section) : sections pas terminées et questions sans réponse (#487).

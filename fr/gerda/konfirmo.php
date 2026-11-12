@@ -19,6 +19,21 @@ include "gerdakapo.inc.php";
 					<p class="white-text">Votre devoir a été envoyé par courriel à votre correcteur. Vous allez recevoir une copie par message.</p>
 				<?php
 				}
+				elseif ($kazo==4) { // correction automatique (#627, #1130)
+				?>
+					<p class="white-text">Votre leçon a été envoyée à la correction automatique. Vous recevrez un message dès qu'elle sera corrigée, en général dans quelques minutes.</p>
+				<?php
+				}
+				elseif ($kazo==5) { // sans correcteur (#627)
+				?>
+					<p class="white-text">Leçon terminée&nbsp;! Vous continuez sans correcteur. À la fin d'une prochaine leçon, vous pourrez demander à être corrigé.</p>
+				<?php
+				}
+				elseif ($kazo==6) { // correcteur connu à retrouver (#627)
+				?>
+					<p class="white-text">Votre leçon est enregistrée. Nous recherchons le correcteur que vous avez indiqué&nbsp;; il recevra vos leçons dès qu'il vous sera attribué.</p>
+				<?php
+				}
 				elseif ($kazo==3) {
 				// le devoir n'a pas pu etre envoye pour des raisons techniques. Il est sauvegarde et sera envoye plus tard	
 				?>

@@ -36,6 +36,6 @@ if ($rezulto=="neniu_respondo") {
 	exit();
 }
 // passer à la page d'évaluation de la leçon ; le kazo 1 correspond au cas où on a déjà un correcteur
-$respondo["url"] = SendadoAPI::KURSOJ[$kurso]."konfirmo.php?kazo=1&lec=".$leciono;
+$respondo["url"] = SendadoAPI::KURSOJ[$kurso]."konfirmo.php?kazo=".($rezulto=="sendita_ia" ? 4 : 1)."&lec=".$leciono; // 4 : correction automatique
 $respondo["mesagxo"] = "ok";
 echo json_encode($respondo);

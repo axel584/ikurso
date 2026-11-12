@@ -5,6 +5,8 @@
 require_once __DIR__ . "/ProgresoAPI.php";
 require_once __DIR__ . "/EkzercadoAPI.php";
 
+require_once __DIR__ . "/IaKorektadoAPI.php";
+
 class KursaEnhavoAPI {
     // cours suivis avec l'application, et dossier de leurs pages (images des exercices)
     const KURSOJ = array("CG" => "fr/cge", "GR" => "fr/gerda", "PP" => "eo/ppp");
@@ -36,13 +38,15 @@ class KursaEnhavoAPI {
                 (SELECT COUNT(DISTINCT pl.lecionero_id) FROM personoj_lecioneroj pl
                     JOIN lecioneroj le ON le.id = pl.lecionero_id JOIN lecionoj l ON l.id = le.leciono_id
                     WHERE l.kurso = k.kodo AND pl.persono_id = ?) AS finitaj_sekcioj,
-                nk.stato, nk.nunleciono, p.enirnomo AS korektanto_enirnomo, p.personnomo AS korektanto_personnomo
+                nk.stato, nk.nunleciono, p.enirnomo AS korektanto_enirnomo, p.personnomo AS korektanto_personnomo,
+                e.elekto, e.atendas
             FROM kursoj k
             LEFT JOIN nuna_kurso nk ON nk.kurso = k.kodo AND nk.studanto = ?
             LEFT JOIN personoj p ON p.id = nk.korektanto
+            LEFT JOIN korektadaj_elektoj e ON e.kurso = k.kodo AND e.persono_id = ?
             WHERE k.kodo IN ('CG', 'GR', 'PP')
             ORDER BY k.id");
-        $demando->execute(array($persono_id, $persono_id));
+        $demando->execute(array($persono_id, $persono_id, $persono_id));
         return array_map(function ($v) {
             return array(
                 "kodo" => $v["kodo"],
@@ -53,7 +57,11 @@ class KursaEnhavoAPI {
                 "nuna_leciono" => $v["nunleciono"] !== null ? (int)$v["nunleciono"] : null,
                 "stato" => $v["stato"],
                 "korektanto" => $v["korektanto_enirnomo"] !== null
-                    ? array("enirnomo" => $v["korektanto_enirnomo"], "personnomo" => $v["korektanto_personnomo"]) : null,
+                    ? array("enirnomo" => $v["korektanto_enirnomo"], "personnomo" => $v["korektanto_personnomo"],
+                        "ia" => $v["korektanto_enirnomo"] === IaKorektadoAPI::ENIRNOMO) : null,
+                // mode de correction choisi sans correcteur attribué (#627) : sen (seul), konato (correcteur connu à retrouver)
+                "elekto" => $v["korektanto_enirnomo"] === null && $v["elekto"] !== null
+                    ? ((int)$v["atendas"] === 1 ? "konato" : ($v["elekto"] === "sen" ? "sen" : null)) : null,
             );
         }, $demando->fetchAll(PDO::FETCH_ASSOC));
     }

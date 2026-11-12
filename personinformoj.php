@@ -7,6 +7,46 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
 include "pagxkapo.inc.php";
 
+// Correcteur du dernier cours choisi et changement de mode de correction (#627, #1130) : sxangxiKorektadon.php.
+function montriKorektadon($persono) {
+	global $bdd;
+	global $urlracine;
+	require_once __DIR__."/api/SendadoAPI.php";
+	$kurso = (string)$persono['kurso'];
+	$korektanto = $kurso != "" ? (new SendadoAPI($bdd, $urlracine))->korektanto((int)$persono['id'], $kurso) : null;
+	$mesagxoj = array("ia" => "Vos prochaines leçons seront corrigées automatiquement.",
+		"volontulo" => "Un correcteur bénévole vous a été attribué : vous allez recevoir ses coordonnées par e-mail.",
+		"neniu_korektanto" => "Aucun correcteur bénévole n'est disponible pour l'instant : écrivez-nous par le formulaire de contact.");
+	if (isset($_GET["korektado"]) && isset($mesagxoj[$_GET["korektado"]])) {
+		echo "<div class='card-panel ".($_GET["korektado"]=="neniu_korektanto" ? "red" : "green")." lighten-4'>".$mesagxoj[$_GET["korektado"]]."</div>";
+	}
+	echo "<p id='korektado'><span class='primaire-texte texte-moyen'>Mon correcteur est :</span><br>";
+	$formularo = function ($al, $teksto, $konfirmo) use ($kurso) {
+		echo "<form method='post' action='sxangxiKorektadon.php' onsubmit=\"return confirm('".$konfirmo."')\">"
+			."<input type='hidden' name='kurso' value='".htmlspecialchars($kurso)."'><input type='hidden' name='al' value='".$al."'>"
+			."<button type='submit' class='btn-flat blue-text'>".$teksto."</button></form>";
+	};
+	if ($korektanto && IaKorektadoAPI::estasIa($korektanto)) {
+		echo "La correction automatique (intelligence artificielle)</p>";
+		$formularo("volontulo", "Être corrigé par un correcteur bénévole", "Un correcteur bénévole corrigera vos prochaines leçons. Continuer ?");
+	} elseif ($korektanto) {
+		echo htmlspecialchars(trim($korektanto['personnomo']." ".$korektanto['familinomo']))
+			."&nbsp;(<a href='mailto:".htmlspecialchars((string)$korektanto['retadreso'])."'>".htmlspecialchars((string)$korektanto['retadreso'])."</a>)</p>";
+		if (isset(IaKorektadoAPI::KURSOJ[$kurso])) {
+			$formularo("ia", "Passer à la correction automatique", "Vos leçons seront corrigées par une intelligence artificielle et votre correcteur en sera prévenu. Continuer ?");
+		}
+	} else {
+		$elekto = $kurso != "" ? (new KorektadaElektoAPI($bdd))->elekto((int)$persono['id'], $kurso) : null;
+		if ($elekto && (int)$elekto["atendas"]) {
+			echo "En attente : nous recherchons «&nbsp;".htmlspecialchars((string)$elekto["teksto"])."&nbsp;», le correcteur que vous avez indiqué.</p>";
+		} elseif ($elekto && $elekto["elekto"]=="sen") {
+			echo "Pas de correcteur : vous suivez ce cours seul. À la fin de votre prochaine leçon, vous pourrez choisir d'être corrigé.</p>";
+		} else {
+			echo "Pas de correcteur attribué</p>";
+		}
+	}
+}
+
 function afficheUrl($url) {
 	echo "<a target='_NEW' href='".$url["url"]."'>".$url["url"]."</a><br/>";
 }
@@ -331,17 +371,7 @@ if ($persono['lando']=="FR" && $persono['posxtkodo']!="") {
 			<h2>Mes cours</h2>
 			
 			<p><span class="primaire-texte texte-moyen">Dernier cours choisi : </span><?php simplaVorto("nomo","kursoj"," where kodo='".$persono['kurso']."'"); ?></p>
-			<p><span class="primaire-texte texte-moyen">Mon correcteur est :</span><br>
-				<?php $korektanto = getKorektantonElLernanto($persono['id'],$persono['kurso']); 
-				if ($korektanto==null) {
-					echo "Pas de correcteur attribué";
-				} else {
-					echo $korektanto['personnomo']." ".$korektanto['familinomo']; 
-					echo "&nbsp;(<a href='mailto:".$korektanto['retadreso']."'>".$korektanto['retadreso']."</a>)";
-				}
-				?>
-				
-				</p>
+			<?php montriKorektadon($persono); ?>
 			<h5>Cours suivis :</h5>
 			<?php getCoursElLernanto($persono['id']);?>			
 			<!-- pour les administrateurs ou informateurs ou korekteur --> 
@@ -360,6 +390,7 @@ if ($persono['lando']=="FR" && $persono['posxtkodo']!="") {
 				$section = redirigeSectionParUtilisateur($persono_id);
 				if ($section!=null) {
 					echo "<a href='".$vojo.$section."' class='btn waves-effect waves-light' >Continuer le cours</a></p>";
+					montriKorektadon($persono); // sans correcteur ou correcteur connu en attente (#627)
 				} else {
 					?>
 					<p>Si vous n'avez jamais suivi de cours d'espéranto, nous vous conseillons de commencer par le <b>Cours en 10 leçons</b>. Vous pourrez le suivre avec l’aide d'un correcteur ou en totale autonomie.<br>

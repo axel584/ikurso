@@ -6,6 +6,7 @@
 include "util.php";
 require_once __DIR__ . "/api/AdministriAPI.php";
 require_once __DIR__ . "/api/AgordojAPI.php";
+require_once __DIR__ . "/api/KorektadaElektoAPI.php";
 $pagxtitolo="Gérer les utilisateurs";
 $korpo="informoj";
 $persono_id=isset($_SESSION["persono_id"])?$_SESSION["persono_id"]:"";
@@ -226,6 +227,13 @@ include "pagxkapo.inc.php";
 							<td><?php echo $kursoKodo != "" && $kursoKodo != "--" ? h($api->kursoNomo($kursoKodo)) : "<span class='grey-text'>Aucun cours choisi</span>"; ?></td>
 							<td>
 								<?php if ($kursoKodo != "" && $kursoKodo != "--") {
+									// mode de correction choisi par l'élève (#627)
+									$elekto = (new KorektadaElektoAPI($bdd))->elekto((int)$celpersono_id, $kursoKodo);
+									if ($elekto) {
+										echo "<p".((int)$elekto["atendas"] ? " class='orange-text text-darken-3'" : "").">Choix de l'élève&nbsp;: ".h(KorektadaElektoAPI::etikedo($elekto["elekto"]))
+											.($elekto["teksto"] ? " «&nbsp;".h($elekto["teksto"])."&nbsp;»" : "").((int)$elekto["atendas"] ? " — à retrouver" : "")
+											." <span class='grey-text'>(".h(dato($elekto["dato"])).")</span></p>";
+									}
 									$plejTauga = troviPlejTauganKorektanton($celpersono_id, $kursoKodo);
 									$idealo = $plejTauga ? apartigiPersonon($plejTauga) : null;
 									if ($idealo) { echo "<p class='grey-text'>Correcteur idéal : ".h($idealo["enirnomo"])."</p>"; }
@@ -351,6 +359,17 @@ include "pagxkapo.inc.php";
 			<?php } ?>
 			<?php if (!$atendantaj) { ?><li class="collection-item grey-text">Aucun élève en attente</li><?php } ?>
 		</ul>
+
+		<?php // élèves qui ont indiqué un correcteur qu'ils connaissent, pas encore retrouvé (#627)
+		$konatoj = (new KorektadaElektoAPI($bdd))->atendantaj();
+		if ($konatoj) { ?>
+		<ul class="collection with-header konatoj">
+			<li class="collection-header"><strong>Correcteurs connus à retrouver</strong> <span class="badge"><?php echo count($konatoj); ?></span></li>
+			<?php foreach ($konatoj as $k) { ?>
+				<a class="collection-item<?php if ($k["persono_id"] == $celpersono_id) { echo " active"; } ?>" href="administri.php?celpersono_id=<?php echo (int)$k["persono_id"]; ?>"><?php echo h($k["enirnomo"]); ?> <span class="grey-text">(<?php echo h($k["kurso"]); ?>) : « <?php echo h($k["teksto"]); ?> »</span></a>
+			<?php } ?>
+		</ul>
+		<?php } ?>
 	</aside>
 </div>
 

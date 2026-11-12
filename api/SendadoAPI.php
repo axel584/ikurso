@@ -3,12 +3,14 @@
 // Premier envoi d'un cours : un correcteur est attribué automatiquement (troviPlejTauganKorektanton()).
 // Envoi suivant : la leçon part au correcteur de l'élève pour ce cours.
 // Correcteur IA (#1130) : pas de mail au correcteur, la leçon est mise en file pour cron/ia_korektado.php.
+// Premier envoi sans correcteur : l'élève choisit d'abord un mode de correction (#627, KorektadaElektoAPI).
 // Utilise les fonctions de util.php et db.inc.php : apartigiPersonon(), troviPlejTauganKorektanton(), protokolo(),
 // mailViaSmtp(), mailViaSES().
 
 require_once __DIR__ . "/RespondojAPI.php";
 require_once __DIR__ . "/ProgresoAPI.php";
 require_once __DIR__ . "/IaKorektadoAPI.php";
+require_once __DIR__ . "/KorektadaElektoAPI.php";
 
 class SendadoAPI {
     const KURSOJ = array("CG" => "fr/cge/", "GR" => "fr/gerda/", "PP" => "eo/ppp/");
@@ -30,13 +32,27 @@ class SendadoAPI {
         return $vico ?: null;
     }
 
-    // Envoie la leçon : au correcteur de l'élève s'il en a un, sinon en lui attribuant un correcteur.
-    // Renvoie "sendita", "korektanto_atribuita", "neniu_respondo" ou "ne_aktivigita".
-    public function sendi(int $persono_id, string $kurso, int $leciono, int $lecionero_id, string $komento, ?int $ekdato): string {
+    // Envoie la leçon : au correcteur de l'élève s'il en a un, sinon selon le mode de correction choisi ($elekto, #627).
+    // Sans $elekto : le choix déjà fait pour ce cours (sans correcteur, correcteur connu en attente), sinon un correcteur
+    // bénévole, comme avant #627 (anciennes versions de l'application).
+    // Renvoie "sendita", "sendita_ia", "korektanto_atribuita", "sen_korektanto", "atendas_korektanton", "konato_malplena",
+    // "nevalida_elekto", "neniu_respondo" ou "ne_aktivigita".
+    public function sendi(int $persono_id, string $kurso, int $leciono, int $lecionero_id, string $komento, ?int $ekdato,
+                          ?string $elekto = null, string $teksto = ""): string {
         if ($this->korektanto($persono_id, $kurso) !== null) {
             return $this->sendiAlKorektanto($persono_id, $kurso, $leciono, $lecionero_id, $komento, $ekdato);
         }
-        return $this->petiKorektanton($persono_id, $kurso, $leciono, $lecionero_id, $komento, $ekdato);
+        if ($elekto === null) {
+            $nuna = (new KorektadaElektoAPI($this->bdd))->elekto($persono_id, $kurso);
+            if ($nuna && $nuna["elekto"] === "sen") {
+                $elekto = "sen";
+            } elseif ($nuna && (int)$nuna["atendas"] === 1) {
+                return $this->atendiKorektanton($persono_id, $kurso, $leciono, $lecionero_id, $ekdato);
+            } else {
+                $elekto = "volontulo";
+            }
+        }
+        return $this->petiKorektanton($persono_id, $kurso, $leciono, $lecionero_id, $komento, $ekdato, $elekto, $teksto);
     }
 
     // Leçon envoyée au correcteur déjà attribué. Renvoie "sendita", "neniu_korektanto" ou "neniu_respondo".
@@ -56,7 +72,7 @@ class SendadoAPI {
             $this->bdd->prepare("UPDATE nuna_kurso SET nunleciono = ?, stato = 'K', lastdato = CURDATE() WHERE studanto = ? AND kurso = ?")
                 ->execute(array($leciono, $persono_id, $kurso));
             (new ProgresoAPI($this->bdd))->finiSekcion($persono_id, $lecionero_id, $ekdato);
-            return "sendita";
+            return "sendita_ia";
         }
         $fonto = $this->kapo($leciono)."<p>Sendu vian korekton al : ".$studanto["retadreso"]."<br>\n".$respondojHtml.$this->komento($komento)."</body></html>";
         $this->memoriLecionon($persono_id, $lecionero_id, $komento);
@@ -73,15 +89,51 @@ class SendadoAPI {
         return "sendita";
     }
 
-    // Premier envoi d'un cours : un correcteur est attribué à l'élève, puis la leçon lui est envoyée.
-    // Renvoie "korektanto_atribuita", "ne_aktivigita" ou "neniu_respondo".
-    public function petiKorektanton(int $persono_id, string $kurso, int $leciono, int $lecionero_id, string $komento, ?int $ekdato): string {
+    // Premier envoi d'un cours, selon le mode de correction choisi (#627) : correcteur attribué puis leçon envoyée,
+    // correction par IA, correcteur connu à retrouver par un administrateur, ou pas de correcteur.
+    // Renvoie "korektanto_atribuita", "sendita_ia", "atendas_korektanton", "sen_korektanto", "konato_malplena",
+    // "nevalida_elekto", "ne_aktivigita" ou "neniu_respondo".
+    public function petiKorektanton(int $persono_id, string $kurso, int $leciono, int $lecionero_id, string $komento, ?int $ekdato,
+                                    string $elekto = "volontulo", string $teksto = ""): string {
         $persono = apartigiPersonon($persono_id);
         if (!$persono || (int)$persono["aktivigita"] === 0) {
             return "ne_aktivigita";
         }
+        $elektoj = new KorektadaElektoAPI($this->bdd);
+        if (!in_array($elekto, KorektadaElektoAPI::ELEKTOJ, true) || ($elekto === "ia" && !isset(IaKorektadoAPI::KURSOJ[$kurso]))) {
+            return "nevalida_elekto";
+        }
+        if ($elekto === "sen") { // l'élève continue seul : la leçon est terminée, rien n'est envoyé
+            $elektoj->registri($persono_id, $kurso, "sen");
+            $this->bdd->prepare("UPDATE personoj SET kurso = ? WHERE id = ?")->execute(array($kurso, $persono_id));
+            (new ProgresoAPI($this->bdd))->finiSekcion($persono_id, $lecionero_id, $ekdato);
+            return "sen_korektanto";
+        }
+        $teksto = trim($teksto);
+        if ($elekto === "konato" && $teksto === "") {
+            return "konato_malplena";
+        }
         if ($this->nombroDeRespondoj($persono_id, $kurso, $leciono) == 0) {
             return "neniu_respondo";
+        }
+        if ($elekto === "ia") {
+            $elektoj->registri($persono_id, $kurso, "ia");
+            return $this->atribuiIan($persono, $kurso, $leciono, $lecionero_id, $komento, $ekdato);
+        }
+        $korektanto_id = null;
+        if ($elekto === "konato") {
+            $korektanto_id = $elektoj->troviKonaton($teksto, $kurso);
+            $elektoj->registri($persono_id, $kurso, "konato", $teksto, $korektanto_id === null);
+            if ($korektanto_id === null) { // un administrateur fera le lien
+                $this->avertiAdministrantojn($persono, $kurso, $teksto);
+                return $this->atendiKorektanton($persono_id, $kurso, $leciono, $lecionero_id, $ekdato);
+            }
+        } elseif ($elekto === "sama") {
+            $sama = $elektoj->samaKorektanto($persono_id, $kurso);
+            $korektanto_id = $sama ? (int)$sama["id"] : null;
+            $elektoj->registri($persono_id, $kurso, "sama");
+        } else {
+            $elektoj->registri($persono_id, $kurso, "volontulo");
         }
         $this->memoriLecionon($persono_id, $lecionero_id, null);
         $this->bdd->prepare("UPDATE personoj SET kurso = ?, rajtoj = 'P' WHERE id = ?")->execute(array($kurso, $persono_id));
@@ -89,7 +141,9 @@ class SendadoAPI {
         $fonto = $this->kapo($leciono).$respondojHtml.$this->komento($komento)."</body></html>";
         (new ProgresoAPI($this->bdd))->finiSekcion($persono_id, $lecionero_id, $ekdato);
 
-        $korektanto_id = troviPlejTauganKorektanton($persono_id, $kurso);
+        if ($korektanto_id === null) {
+            $korektanto_id = troviPlejTauganKorektanton($persono_id, $kurso);
+        }
         $korektanto = apartigiPersonon($korektanto_id);
         $this->bdd->prepare("UPDATE personoj SET rajtoj = 'S' WHERE id = ?")->execute(array($persono_id)); // cxiukaze igas lin studanto
         // nunleciono = la leçon envoyée : l'élève ne commence pas forcément par la leçon 1 (#897)
@@ -107,8 +161,112 @@ class SendadoAPI {
         $subjekto = $this->subjekto($kurso, $leciono, $persono["enirnomo"]);
         mailViaSmtp($korektanto["retadreso"], $persono["retadreso"], $subjekto, stripslashes($fonto));
         mailViaSES($persono["retadreso"], "Copie de ".$subjekto, stripslashes($fonto));
-        protokolo($persono["id"], "ATTRIBUTION AUTOMATIQUE", "l'élève a reçu ".$korektanto["enirnomo"]." comme correcteur");
+        protokolo($persono["id"], "ATTRIBUTION AUTOMATIQUE", "l'élève a reçu ".$korektanto["enirnomo"]." comme correcteur (choix : "
+            .KorektadaElektoAPI::etikedo($elekto).")");
         return "korektanto_atribuita";
+    }
+
+    // Changement de mode de correction depuis le profil (#627, #1130) : du correcteur bénévole à la correction
+    // automatique ($alIa), ou l'inverse. Seulement pour le cours en cours (nuna_kurso K ou N).
+    // Renvoie "farita", "neniu_kurso", "jam" (déjà dans ce mode), "nevalida_kurso" ou "neniu_korektanto".
+    public function sxangxiKorektadon(int $persono_id, string $kurso, bool $alIa): string {
+        $demando = $this->bdd->prepare("SELECT id, korektanto FROM nuna_kurso WHERE studanto = ? AND kurso = ? AND stato IN ('K', 'N')");
+        $demando->execute(array($persono_id, $kurso));
+        $nk = $demando->fetch(PDO::FETCH_ASSOC);
+        if (!$nk) {
+            return "neniu_kurso";
+        }
+        $malnova = apartigiPersonon((int)$nk["korektanto"]);
+        if (IaKorektadoAPI::estasIa($malnova) === $alIa) {
+            return "jam";
+        }
+        $ia = new IaKorektadoAPI($this->bdd, $this->urlracine);
+        $studanto = apartigiPersonon($persono_id);
+        if ($alIa) {
+            if (!isset(IaKorektadoAPI::KURSOJ[$kurso]) || $ia->korektanto() === null) {
+                return "nevalida_kurso";
+            }
+            $nova_id = (int)$ia->korektanto()["id"];
+        } else {
+            $nova_id = troviPlejTauganKorektanton($persono_id, $kurso);
+            if (!$nova_id) {
+                return "neniu_korektanto";
+            }
+        }
+        $this->bdd->prepare("UPDATE nuna_kurso SET korektanto = ? WHERE id = ?")->execute(array($nova_id, $nk["id"]));
+        (new KorektadaElektoAPI($this->bdd))->registri($persono_id, $kurso, $alIa ? "ia" : "volontulo");
+        if ($alIa) {
+            // les leçons pas encore corrigées partent en correction automatique ; l'ancien correcteur est prévenu
+            $demando = $this->bdd->prepare("SELECT pl.leciono_id FROM personoj_lecionoj pl JOIN lecionoj l ON l.id = pl.leciono_id
+                WHERE pl.persono_id = ? AND l.kurso = ? AND pl.korektita = 0");
+            $demando->execute(array($persono_id, $kurso));
+            foreach ($demando->fetchAll(PDO::FETCH_COLUMN) as $leciono_id) {
+                $ia->enviciigi($persono_id, (int)$leciono_id);
+            }
+            mailViaSES($studanto["retadreso"], "Votre correcteur I-kurso",
+                str_replace("##SENIRNOMO##", htmlspecialchars((string)$studanto["enirnomo"]), file_get_contents(__DIR__."/../mails/doniStuIAFR.html")));
+            if ($malnova && $malnova["retadreso"] != "") {
+                mailViaSES($malnova["retadreso"], "Élève passé à la correction automatique",
+                    "<p>Bonjour,</p><p>Votre élève <strong>".htmlspecialchars((string)$studanto["enirnomo"])."</strong> a choisi la correction automatique "
+                    ."pour le cours ".htmlspecialchars($kurso).". Vous n'avez plus à corriger ses leçons de ce cours.</p><p>Merci pour votre aide&nbsp;!</p><p>L'équipe d'I-Kurso</p>");
+            }
+        } else {
+            $nova = apartigiPersonon($nova_id);
+            mailViaSES($studanto["retadreso"], "Votre correcteur I-kurso", str_replace(array("##KPERSONNOMO##", "##KRETADRESO##", "##SENIRNOMO##"),
+                array((string)$nova["personnomo"], (string)$nova["retadreso"], (string)$studanto["enirnomo"]), self::sxablono("redoniStu", $kurso)));
+            mailViaSES($nova["retadreso"], "Nouvel élève sur I-kurso", str_replace(
+                array("##SENIRNOMO##", "##SLANDO##", "##SPOSXTKODO##", "##SURBO##", "##SRETADRESO##", "##SNASKIGXDATO##"),
+                array((string)$studanto["enirnomo"], (string)$studanto["lando"], (string)$studanto["posxtkodo"], (string)$studanto["urbo"],
+                    (string)$studanto["retadreso"], (string)$studanto["naskigxdato"]), self::sxablono("redoniKor", $kurso)));
+        }
+        protokolo($persono_id, "CHANGEMENT DE CORRECTION", "cours ".$kurso." : ".($alIa ? "correction automatique (IA)" : "correcteur bénévole")
+            ." à la place de ".($malnova ? $malnova["enirnomo"] : "?"));
+        return "farita";
+    }
+
+    // Correction par IA choisie par l'élève (#627, #1130) : le correcteur IA lui est attribué et la leçon part en correction.
+    private function atribuiIan(array $persono, string $kurso, int $leciono, int $lecionero_id, string $komento, ?int $ekdato): string {
+        $ia = (new IaKorektadoAPI($this->bdd, $this->urlracine))->korektanto();
+        if ($ia === null) { // compte du correcteur IA absent (sql/62 pas joué)
+            return "nevalida_elekto";
+        }
+        $persono_id = (int)$persono["id"];
+        $leciono_id = $this->memoriLecionon($persono_id, $lecionero_id, $komento !== "" ? $komento : null);
+        $this->bdd->prepare("UPDATE personoj SET kurso = ?, rajtoj = 'S' WHERE id = ?")->execute(array($kurso, $persono_id));
+        $this->bdd->prepare("INSERT INTO nuna_kurso (ekdato, lastdato, korektanto, studanto, kurso, nunleciono, stato) VALUES (NOW(), NOW(), ?, ?, ?, ?, 'K')")
+            ->execute(array($ia["id"], $persono_id, $kurso, max(1, $leciono)));
+        (new ProgresoAPI($this->bdd))->finiSekcion($persono_id, $lecionero_id, $ekdato);
+        (new IaKorektadoAPI($this->bdd, $this->urlracine))->enviciigi($persono_id, $leciono_id);
+        mailViaSES($persono["retadreso"], "Votre correcteur I-kurso",
+            str_replace("##SENIRNOMO##", htmlspecialchars((string)$persono["enirnomo"]), file_get_contents(__DIR__."/../mails/doniStuIAFR.html")));
+        protokolo($persono_id, "ATTRIBUTION AUTOMATIQUE", "l'élève a choisi la correction automatique (IA) pour le cours ".$kurso);
+        return "sendita_ia";
+    }
+
+    // Correcteur connu pas encore retrouvé (#627) : la leçon est gardée (personoj_lecionoj) pour le correcteur
+    // qu'un administrateur attribuera, et la section est terminée.
+    private function atendiKorektanton(int $persono_id, string $kurso, int $leciono, int $lecionero_id, ?int $ekdato): string {
+        if ($this->nombroDeRespondoj($persono_id, $kurso, $leciono) == 0) {
+            return "neniu_respondo";
+        }
+        $this->memoriLecionon($persono_id, $lecionero_id, null);
+        $this->bdd->prepare("UPDATE personoj SET kurso = ?, rajtoj = 'P' WHERE id = ? AND rajtoj <> 'S'")->execute(array($kurso, $persono_id));
+        (new ProgresoAPI($this->bdd))->finiSekcion($persono_id, $lecionero_id, $ekdato);
+        return "atendas_korektanton";
+    }
+
+    // Mail aux administrateurs : un élève attend le correcteur qu'il a indiqué (#627).
+    private function avertiAdministrantojn(array $persono, string $kurso, string $teksto): void {
+        $h = function ($t) { return htmlspecialchars((string)$t, ENT_QUOTES, "UTF-8"); };
+        $url = rtrim($this->urlracine, "/")."/administri.php?celpersono_id=".(int)$persono["id"];
+        $enhavo = "<p>L'élève <strong>".$h($persono["enirnomo"])."</strong> a choisi, pour le cours ".$h($kurso)
+            .", d'être corrigé par un correcteur qu'il connaît : « ".$h($teksto)." ».</p>"
+            ."<p>Aucun correcteur de ce cours ne correspond à ce texte (identifiant ou adresse e-mail). "
+            ."Retrouvez-le et attribuez-le depuis la fiche de l'élève : <a href=\"".$h($url)."\">".$h($url)."</a></p>"
+            ."<p>Ses leçons sont enregistrées en attendant.</p>";
+        foreach ($this->bdd->query("SELECT retadreso FROM personoj WHERE rajtoj = 'A' AND retadreso <> ''")->fetchAll(PDO::FETCH_COLUMN) as $retadreso) {
+            mailViaSES($retadreso, "Correcteur connu à retrouver pour ".$persono["enirnomo"], $enhavo);
+        }
     }
 
     private function nombroDeRespondoj(int $persono_id, string $kurso, int $leciono): int {

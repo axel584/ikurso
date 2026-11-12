@@ -28,4 +28,6 @@ export function cron(script: string): string {
 // 03-create-data-test.sql commence par vider les tables liées aux personnes.
 export function resetTestData(): void {
   sql(readFileSync(seedFile, 'utf8'))
+  // tables créées après le jeu de test (sql/62, sql/63) : 03-create-data-test.sql ne peut pas les vider à l'initialisation
+  sql('DELETE FROM korektadaj_elektoj; DELETE FROM ia_korektadoj')
 }

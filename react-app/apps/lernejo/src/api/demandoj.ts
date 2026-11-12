@@ -89,11 +89,12 @@ export function useFini() {
 export function useSendi() {
   const qc = useQueryClient()
   return useMutation({
-    mutationFn: (peto: { kurso: KursoKodo; numero: number; komento: string }) =>
+    // elekto : mode de correction choisi au premier envoi du cours (#627) ; teksto : le correcteur connu
+    mutationFn: (peto: { kurso: KursoKodo; numero: number; komento: string; elekto?: Elekto; teksto?: string }) =>
       datumoj(
         kliento.POST('/lernado/lecionoj/{kurso}/{numero}/sendi', {
           params: { path: { kurso: peto.kurso, numero: peto.numero } },
-          body: { komento: peto.komento },
+          body: { komento: peto.komento, ...(peto.elekto ? { elekto: peto.elekto, teksto: peto.teksto ?? '' } : {}) },
         }),
       ),
     onSuccess: async () => {
@@ -101,6 +102,22 @@ export function useSendi() {
       qc.invalidateQueries({ queryKey: ['kurso'] })
       qc.invalidateQueries({ queryKey: ['kursoj'] })
       qc.invalidateQueries({ queryKey: ['korekto'] })
+    },
+  })
+}
+
+export type Elekto = 'sama' | 'volontulo' | 'konato' | 'sen' | 'ia'
+
+// Changement de mode de correction depuis le profil (#627, #1130) : correction automatique ou correcteur bénévole
+export function useSxangxiKorektadon() {
+  const qc = useQueryClient()
+  return useMutation({
+    mutationFn: (peto: { kurso: KursoKodo; al: 'ia' | 'volontulo' }) =>
+      datumoj(kliento.POST('/lernado/kursoj/{kurso}/korektado', { params: { path: { kurso: peto.kurso } }, body: { al: peto.al } })),
+    onSuccess: async () => {
+      await malfresxigi('kursoj', 'kurso/')
+      qc.invalidateQueries({ queryKey: ['kursoj'] })
+      qc.invalidateQueries({ queryKey: ['resumo'] })
     },
   })
 }

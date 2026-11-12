@@ -33,6 +33,18 @@ if ($estasIa && !isset(IaKorektadoAPI::KURSOJ[$kurso])) {
 	header("Location:administri.php?celpersono_id=$celpersono_id&erarkodo=11");
 	exit;
 }
+require_once "api/KorektadaElektoAPI.php";
+(new KorektadaElektoAPI($bdd))->solvi($celpersono_id, $kurso); // correcteur connu retrouvé (#627)
+// correcteur IA : les leçons déjà envoyées et pas encore corrigées partent aussi en correction automatique
+function enviciigiAtendantajn($bdd, $urlracine, $celpersono_id, $kurso) {
+	$demando = $bdd->prepare("SELECT pl.leciono_id FROM personoj_lecionoj pl JOIN lecionoj l ON l.id = pl.leciono_id
+		WHERE pl.persono_id = ? AND l.kurso = ? AND pl.korektita = 0");
+	$demando->execute(array($celpersono_id, $kurso));
+	$ia = new IaKorektadoAPI($bdd, $urlracine);
+	foreach ($demando->fetchAll(PDO::FETCH_COLUMN) as $leciono_id) {
+		$ia->enviciigi($celpersono_id, (int)$leciono_id);
+	}
+}
 function sendiIaMesagxon($studantinformoj) {
 	$contents = file_get_contents("mails/doniStuIAFR.html");
 	$contents = str_replace("##SENIRNOMO##", htmlspecialchars((string)$studantinformoj["enirnomo"]), $contents);
@@ -62,6 +74,7 @@ if ($row && $row['korektanto']!="") {
 		$korektantinformoj = apartigiPersonon($korektanto_id);
 		if ($estasIa) {
 			sendiIaMesagxon($studantinformoj);
+			enviciigiAtendantajn($bdd, $urlracine, $celpersono_id, $kurso);
 			header("Location:administri.php?celpersono_id=$celpersono_id&validi=jes"); exit;
 		}
 		// sendi mesagxon al la nova studanto
@@ -110,6 +123,7 @@ if ($row && $row['korektanto']!="") {
 		$korektantinformoj = apartigiPersonon($korektanto_id);
 		if ($estasIa) {
 			sendiIaMesagxon($studantinformoj);
+			enviciigiAtendantajn($bdd, $urlracine, $celpersono_id, $kurso);
 			header("Location:administri.php?celpersono_id=$celpersono_id&validi=jes"); exit;
 		}
 		// sendi mesagxon al la nova studanto

@@ -52,6 +52,8 @@ class LernadoAPI {
                 $this->respondi(200, array("kursoj" => $kursoj));
             } elseif ($metodo === 'GET' && $n === 3 && $s[1] === 'kursoj') {
                 $this->kurso($this->kursoKodo($s[2]));
+            } elseif ($metodo === 'POST' && $n === 4 && $s[1] === 'kursoj' && $s[3] === 'korektado') {
+                $this->sxangxiKorektadon($this->kursoKodo($s[2]));
             } elseif ($metodo === 'GET' && $n === 3 && $s[1] === 'sekcioj') {
                 $this->sekcio((int)$s[2]);
             } elseif ($metodo === 'POST' && $n === 4 && $s[1] === 'sekcioj' && $s[3] === 'fini') {
@@ -198,6 +200,7 @@ class LernadoAPI {
                     return array("ordo" => (int)$s["ordo"], "titolo" => KursaEnhavoAPI::teksto($s["titolo"]));
                 }, $progreso->nefinitajSekcioj($this->persono_id, $kurso, $numero)),
                 "mankantaj_respondoj" => $mankantaj,
+                "korektado" => $this->korektado($kurso),
             ));
         } elseif ($metodo === 'GET' && $ago === 'korekto') {
             $this->respondi(200, $enhavo->korekto($kurso, $numero, $this->persono_id));
@@ -208,7 +211,16 @@ class LernadoAPI {
             $korpo = $this->korpo();
             // le commentaire part dans le mail du correcteur, en HTML
             $komento = isset($korpo["komento"]) && is_string($korpo["komento"]) ? htmlspecialchars($korpo["komento"], ENT_QUOTES, "UTF-8") : "";
-            $rezulto = (new SendadoAPI($this->bdd, $this->urlracine))->sendi($this->persono_id, $kurso, $numero, $lastaSekcio, $komento, null);
+            // mode de correction choisi à la fin de la première leçon (#627) ; absent : choix déjà fait, ou correcteur bénévole
+            $elekto = isset($korpo["elekto"]) && is_string($korpo["elekto"]) ? $korpo["elekto"] : null;
+            $teksto = isset($korpo["teksto"]) && is_string($korpo["teksto"]) ? $korpo["teksto"] : "";
+            $rezulto = (new SendadoAPI($this->bdd, $this->urlracine))->sendi($this->persono_id, $kurso, $numero, $lastaSekcio, $komento, null, $elekto, $teksto);
+            if ($rezulto === "konato_malplena") {
+                $this->eraro(422, "Indiquez le prénom, l'identifiant ou l'adresse e-mail du correcteur que vous connaissez");
+            }
+            if ($rezulto === "nevalida_elekto") {
+                $this->eraro(422, "Mode de correction inconnu pour ce cours");
+            }
             if ($rezulto === "ne_aktivigita") {
                 $this->eraro(403, "Ce compte n'est pas validé, merci de cliquer sur le lien reçu par email");
             }
@@ -220,6 +232,42 @@ class LernadoAPI {
             $this->takso($kurso, $numero);
         }
         $this->eraro(404, "Endpoint non trouvé");
+    }
+
+    // Mode de correction du cours, pour le récapitulatif avant l'envoi (#627) : correcteur attribué (IA ou non),
+    // correcteur connu en attente (atendas), sinon les choix proposés (ebloj), avec le choix déjà fait (elekto).
+    private function korektado(string $kurso): array {
+        $korektanto = (new SendadoAPI($this->bdd, $this->urlracine))->korektanto($this->persono_id, $kurso);
+        $elektoj = new KorektadaElektoAPI($this->bdd);
+        $elekto = $elektoj->elekto($this->persono_id, $kurso);
+        $atendas = !$korektanto && $elekto && (int)$elekto["atendas"] === 1;
+        return array(
+            "korektanto" => $korektanto !== null,
+            "ia" => IaKorektadoAPI::estasIa($korektanto),
+            "elekto" => $elekto ? $elekto["elekto"] : null,
+            "atendas" => $atendas ? (string)$elekto["teksto"] : null,
+            "ebloj" => $korektanto || $atendas || $this->estasGasto() ? array() : $elektoj->ebloj($this->persono_id, $kurso),
+        );
+    }
+
+    // Changement de mode de correction depuis le profil (#627, #1130) : POST lernado/kursoj/{kurso}/korektado {al: ia|volontulo}.
+    private function sxangxiKorektadon(string $kurso): void {
+        if ($this->estasGasto()) {
+            $this->eraro(403, "Créez un compte pour être corrigé");
+        }
+        $korpo = $this->korpo();
+        $al = isset($korpo["al"]) ? $korpo["al"] : "";
+        if ($al !== "ia" && $al !== "volontulo") {
+            $this->eraro(400, "Paramètre 'al' (ia ou volontulo) requis");
+        }
+        $rezulto = (new SendadoAPI($this->bdd, $this->urlracine))->sxangxiKorektadon($this->persono_id, $kurso, $al === "ia");
+        $mesagxoj = array("neniu_kurso" => array(409, "Vous n'avez pas encore de correcteur pour ce cours"),
+            "nevalida_kurso" => array(422, "La correction automatique n'est pas proposée pour ce cours"),
+            "neniu_korektanto" => array(409, "Aucun correcteur bénévole n'est disponible pour l'instant"));
+        if (isset($mesagxoj[$rezulto])) {
+            $this->eraro($mesagxoj[$rezulto][0], $mesagxoj[$rezulto][1]);
+        }
+        $this->respondi(200, array("rezulto" => $rezulto === "jam" ? "farita" : $rezulto));
     }
 
     // Appréciation de la leçon après son envoi, comme la page konfirmo.php du site (fr/taksoLeciono.php) :

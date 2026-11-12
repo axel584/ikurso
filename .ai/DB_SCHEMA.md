@@ -489,6 +489,21 @@ Une ligne par leçon envoyée au compte `ia-korektanto` (#1130, `api/IaKorektado
 
 ---
 
+### `korektadaj_elektoj` — Mode de correction choisi par l'élève
+
+Une ligne par élève et par cours (#627, `api/KorektadaElektoAPI.php`, `sql/63`) : le choix fait à la fin de la première leçon du cours, sur le site (`webui.inc.php`) ou dans l'application (`Resumo.korektado`), ou changé depuis le profil. InnoDB.
+
+| Colonne | Type | Description |
+|---|---|---|
+| `persono_id` | INT NOT NULL | Élève (`personoj.id`) ; PK avec `kurso` |
+| `kurso` | VARCHAR(10) NOT NULL | Code du cours |
+| `elekto` | VARCHAR(10) NOT NULL | `sama` (même correcteur qu'à un autre cours), `volontulo` (correcteur bénévole), `konato` (correcteur que l'élève connaît), `sen` (sans correcteur, rien n'est envoyé), `ia` (correction automatique, #1130) |
+| `teksto` | VARCHAR(255) | Pour `konato` : prénom, identifiant ou adresse e-mail tapé par l'élève |
+| `atendas` | TINYINT(1) | 1 : correcteur connu pas encore retrouvé (liste « Correcteurs connus à retrouver » de `administri.php`, administrateurs prévenus par mail) ; remis à 0 quand un administrateur attribue un correcteur |
+| `dato` | DATETIME NOT NULL | Dernier choix |
+
+---
+
 ## Relations principales
 
 ```

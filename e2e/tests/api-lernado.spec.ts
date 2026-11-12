@@ -62,7 +62,9 @@ test('un élève suit la leçon 1 uniquement par l’API, jusqu’au retour de s
   expect(sekcio6.ekzercoj[0].demandoj[0]).toMatchObject({ id: 1, respondo: 'La teo estas varma.', gxusta: true })
 
   const resumo = await (await request.get(`${API}lernado/lecionoj/CG/1/resumo`, kun(at))).json()
-  expect(resumo).toEqual({ nefinitaj_sekcioj: [], mankantaj_respondoj: [] })
+  expect(resumo).toMatchObject({ nefinitaj_sekcioj: [], mankantaj_respondoj: [] })
+  // premier envoi du cours : choix du mode de correction (#627) ; sans choix, un correcteur bénévole
+  expect(resumo.korektado).toMatchObject({ korektanto: false, elekto: null, atendas: null })
 
   const sendo = await request.post(`${API}lernado/lecionoj/CG/1/sendi`, { ...kun(at), data: { komento: 'Saluton <b>!</b>' } })
   expect(await sendo.json()).toEqual({ rezulto: 'korektanto_atribuita' })
@@ -75,10 +77,10 @@ test('un élève suit la leçon 1 uniquement par l’API, jusqu’au retour de s
   // le correcteur corrige sur le site
   await login(page, USERS.korektanto)
   await page.goto(`korektiLecionon.php?numleciono=1&kurso=CG&studanto=${sql("SELECT id FROM personoj WHERE enirnomo='lernanto1'")}`)
-  await page.locator('textarea[name=konkludo]').evaluate((el) => { (el as HTMLTextAreaElement).value = 'Bonege (e2e)' })
+  await page.locator('textarea[name=konkludo]').evaluate((el) => { (window as any).$(el).trumbowyg('html', 'Bonege (e2e)') })
   const kampo = page.locator('textarea[name^=korekto]').first()
   const respondoId = (await kampo.getAttribute('name'))!.replace('korekto', '')
-  await kampo.evaluate((el) => { (el as HTMLTextAreaElement).value = 'Atentu (e2e)' })
+  await kampo.evaluate((el) => { (window as any).$(el).trumbowyg('html', 'Atentu (e2e)') })
   await page.locator('#pas_envoi_email').uncheck({ force: true })
   await page.locator('#registriKorektadon_button').click()
   await expect(page).toHaveURL(/vidiLecionon\.php/)

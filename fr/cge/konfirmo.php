@@ -20,6 +20,21 @@ if ($persono_id=="") {
 					<p class="white-text">Votre devoir a été envoyé par courriel à votre correcteur. Vous allez en recevoir une copie par message.</p>
 				<?php
 				}
+				elseif ($kazo==4) { // correction automatique (#627, #1130)
+				?>
+					<p class="white-text">Votre leçon a été envoyée à la correction automatique. Vous recevrez un message dès qu'elle sera corrigée, en général dans quelques minutes.</p>
+				<?php
+				}
+				elseif ($kazo==5) { // sans correcteur (#627)
+				?>
+					<p class="white-text">Leçon terminée&nbsp;! Vous continuez sans correcteur. À la fin d'une prochaine leçon, vous pourrez demander à être corrigé.</p>
+				<?php
+				}
+				elseif ($kazo==6) { // correcteur connu à retrouver (#627)
+				?>
+					<p class="white-text">Votre leçon est enregistrée. Nous recherchons le correcteur que vous avez indiqué&nbsp;; il recevra vos leçons dès qu'il vous sera attribué.</p>
+				<?php
+				}
 				elseif ($kazo==2) { // n'a pas encore de correcteur
 				?>
 					<p class="white-text">Votre devoir a été enregistré et sera envoyé à votre correcteur dès que possible.<br>

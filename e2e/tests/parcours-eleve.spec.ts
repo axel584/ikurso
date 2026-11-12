@@ -85,8 +85,9 @@ test.describe("Leçon 1 du cours élémentaire", () => {
     await page.goto(`korektiLecionon.php?numleciono=1&kurso=CG&studanto=${LERNANTO_ID}`)
 
     const commentaire = 'Bravo pour cette première leçon (e2e)'
+    // par l'éditeur (Trumbowyg), comme un correcteur : le textarea est recopié depuis l'éditeur à l'envoi
     await page.locator('textarea[name=konkludo]').evaluate((el, text) => {
-      ;(el as HTMLTextAreaElement).value = text
+      ;(window as any).$(el).trumbowyg('html', text)
     }, commentaire)
 
     // Correction d'une réponse précise.
@@ -94,7 +95,7 @@ test.describe("Leçon 1 du cours élémentaire", () => {
     const respondoId = (await champCorrection.getAttribute('name'))!.replace('korekto', '')
     const correction = 'Attention à l’accord (e2e)'
     await champCorrection.evaluate((el, text) => {
-      ;(el as HTMLTextAreaElement).value = text
+      ;(window as any).$(el).trumbowyg('html', text)
     }, correction)
 
     await page.locator('#pas_envoi_email').uncheck({ force: true })

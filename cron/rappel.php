@@ -4,6 +4,7 @@ include "../util.php";
 require_once "../api/StatistikojAPI.php";
 require_once "../api/AgordojAPI.php";
 require_once "../api/SaviezvousAPI.php";
+require_once "../api/KorektadaElektoAPI.php";
 malfermidatumbazon();
 
 function dauxroTeksto(int $sekundoj): string {
@@ -89,6 +90,16 @@ function iaHtml(array $ia, string $radiko): string {
 	return $teksto;
 }
 
+// Élève qui suit le cours sans correcteur (#627) : pas de correcteur en cours et ce choix enregistré.
+// La première relance ne lui parle pas de leçon envoyée.
+function senKorektanto($studanto): bool {
+	global $bdd;
+	$stmt = $bdd->prepare("SELECT COUNT(*) FROM korektadaj_elektoj e WHERE e.persono_id=? AND e.elekto='sen'
+		AND NOT EXISTS (SELECT 1 FROM nuna_kurso nk WHERE nk.studanto=e.persono_id AND nk.stato IN ('K','N'))");
+	$stmt->execute([$studanto]);
+	return (int)$stmt->fetchColumn() > 0;
+}
+
 function jamFinisKurson($studanto) {
 	global $bdd;
 	$stmt = $bdd->prepare("SELECT stato FROM `nuna_kurso` WHERE studanto=? order by lastdato desc");
@@ -128,6 +139,10 @@ $result = $bdd->query($query);
     $fd = fopen($filename, "r");
 	$contents = fread($fd, filesize ($filename));
 	fclose($fd);
+	if (senKorektanto($row["id"])) {
+		$contents=str_replace(array("vous avez envoyé votre dernière leçon d'espéranto", "d'envoyer au moins une leçon par semaine"),
+			array("vous n'avez pas avancé dans votre cours d'espéranto", "de terminer au moins une leçon par semaine"), $contents);
+	}
 	// personnalisation :
 	$contents=str_replace("##ID##",$row["id"],$contents);
 	$contents=str_replace("##NOM##",$nomo,$contents);
@@ -237,6 +252,15 @@ $statistikoj = new StatistikojAPI($bdd);
 $contents=str_replace("##LABORO##",laboroHtml($statistikoj->laboroHieraux()),$contents);
 $contents=str_replace("##VORTOJ##",vortojHtml($statistikoj->vortojHieraux()),$contents);
 $contents=str_replace("##IA##",iaHtml($statistikoj->iaHieraux(), $urlracine),$contents);
+// modes de correction choisis hier à la fin d'une première leçon (#627)
+$elektojAPI = new KorektadaElektoAPI($bdd);
+$elektoj = array();
+foreach ($elektojAPI->hieraux() as $elekto => $kiom) {
+	$elektoj[] = KorektadaElektoAPI::etikedo($elekto)." : ".$kiom;
+}
+$konatoj = count($elektojAPI->atendantaj());
+$contents=str_replace("##ELEKTOJ##",($elektoj ? "<p>".implode(" ; ", $elektoj).".</p>" : "<p>Aucun choix hier.</p>")
+	.($konatoj ? "<p>".$konatoj." ".laux($konatoj, "élève attend", "élèves attendent")." qu'on retrouve le correcteur qu'".laux($konatoj, "il a", "ils ont")." indiqué (administration, « Correcteurs connus à retrouver »).</p>" : ""),$contents);
 echo $contents;
 // liste des administrateurs :
 $demando="select retadreso from personoj where (rajtoj='A')";

@@ -171,6 +171,40 @@ paths:
                     type: array
                     items: { $ref: '#/components/schemas/Kurso' }
         '401': { $ref: '#/components/responses/Eraro' }
+  /lernado/kursoj/{kurso}/korektado:
+    post:
+      tags: [lernado]
+      summary: Changer de mode de correction pour ce cours (#627, #1130) : correction automatique ou correcteur bénévole
+      parameters:
+        - $ref: '#/components/parameters/Kurso'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [al]
+              properties:
+                al: { type: string, enum: [ia, volontulo], description: 'ia : correction automatique ; volontulo : un correcteur bénévole' }
+      responses:
+        '200':
+          description: Mode de correction changé (ou déjà celui-ci)
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [rezulto]
+                properties:
+                  rezulto: { type: string, enum: [farita] }
+        '400': { $ref: '#/components/responses/Eraro' }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '403': { $ref: '#/components/responses/Eraro' }
+        '409':
+          description: Pas encore de correcteur pour ce cours, ou aucun correcteur bénévole disponible
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
+        '422':
+          description: Correction automatique pas proposée pour ce cours
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
   /lernado/kursoj/{kurso}:
     get:
       tags: [lernado]
@@ -293,6 +327,11 @@ paths:
               type: object
               properties:
                 komento: { type: string, description: 'Message pour le correcteur' }
+                elekto:
+                  type: string
+                  enum: [sama, volontulo, konato, sen, ia]
+                  description: 'Mode de correction choisi au premier envoi du cours (#627, voir Resumo.korektado.ebloj) ; absent : le choix déjà fait, sinon un correcteur bénévole'
+                teksto: { type: string, description: 'Pour elekto = konato : prénom, identifiant ou adresse e-mail du correcteur' }
       responses:
         '200':
           description: Leçon envoyée
@@ -304,15 +343,15 @@ paths:
                 properties:
                   rezulto:
                     type: string
-                    enum: [sendita, korektanto_atribuita]
-                    description: '`sendita` : au correcteur de l''élève ; `korektanto_atribuita` : premier envoi, un correcteur vient d''être attribué'
+                    enum: [sendita, sendita_ia, korektanto_atribuita, sen_korektanto, atendas_korektanton]
+                    description: '`sendita` : au correcteur de l''élève ; `sendita_ia` : à la correction automatique ; `korektanto_atribuita` : premier envoi, un correcteur vient d''être attribué ; `sen_korektanto` : l''élève continue sans correcteur, rien n''est envoyé ; `atendas_korektanton` : leçon gardée pour le correcteur connu, pas encore retrouvé'
         '401': { $ref: '#/components/responses/Eraro' }
         '403':
           description: Compte pas activé
           content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
         '404': { $ref: '#/components/responses/Eraro' }
         '422':
-          description: Aucune réponse dans la leçon
+          description: Aucune réponse dans la leçon, correcteur connu non indiqué ou mode de correction inconnu
           content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
   /lernado/lecionoj/{kurso}/{numero}/takso:
     post:
@@ -629,7 +668,7 @@ components:
             rajtoj: { $ref: '#/components/schemas/Rajtoj' }
     Kurso:
       type: object
-      required: [kodo, nomo, lecionoj, sekcioj, finitaj_sekcioj, nuna_leciono, stato, korektanto]
+      required: [kodo, nomo, lecionoj, sekcioj, finitaj_sekcioj, nuna_leciono, stato, korektanto, elekto]
       properties:
         kodo: { $ref: '#/components/schemas/KursoKodo' }
         nomo: { type: string }
@@ -645,10 +684,16 @@ components:
         korektanto:
           type: object
           nullable: true
-          required: [enirnomo, personnomo]
+          required: [enirnomo, personnomo, ia]
           properties:
             enirnomo: { type: string }
             personnomo: { type: string, nullable: true }
+            ia: { type: boolean, description: 'Correction automatique (#1130)' }
+        elekto:
+          type: string
+          nullable: true
+          enum: [sen, konato, null]
+          description: 'Sans correcteur attribué (#627) : sen, l''élève suit le cours seul ; konato, le correcteur qu''il a indiqué n''est pas encore retrouvé'
     Leciono:
       type: object
       required: [numero, titolo, stato, sendita, korektita, sekcioj]
@@ -758,8 +803,27 @@ components:
           description: Pour tipo = elekto
     Resumo:
       type: object
-      required: [nefinitaj_sekcioj, mankantaj_respondoj]
+      required: [nefinitaj_sekcioj, mankantaj_respondoj, korektado]
       properties:
+        korektado:
+          type: object
+          description: Mode de correction du cours (#627)
+          required: [korektanto, ia, elekto, atendas, ebloj]
+          properties:
+            korektanto: { type: boolean, description: 'Un correcteur (ou l''IA) est attribué pour ce cours' }
+            ia: { type: boolean }
+            elekto: { type: string, nullable: true, description: 'Choix déjà fait : sama, volontulo, konato, sen ou ia' }
+            atendas: { type: string, nullable: true, description: 'Correcteur connu indiqué, pas encore retrouvé' }
+            ebloj:
+              type: array
+              description: 'Choix proposés avant le premier envoi (vide s''il y a un correcteur ou une attente)'
+              items:
+                type: object
+                required: [kodo, titolo, priskribo]
+                properties:
+                  kodo: { type: string, enum: [sama, volontulo, konato, sen, ia] }
+                  titolo: { type: string }
+                  priskribo: { type: string }
         nefinitaj_sekcioj:
           type: array
           items:

@@ -176,6 +176,7 @@ def main():
     ap.add_argument('--eligo', default=str(Path.home() / 'Documents/ikurso-ia/datumoj'))
     ap.add_argument('--po', type=int, default=5, help='leçons tirées par numéro de leçon')
     ap.add_argument('--de', default='2025-01-01', help='leçons corrigées depuis cette date')
+    ap.add_argument('--numero', type=int, help='seulement ce numéro de leçon (par exemple l\'examen : CG 10, GR 26)')
     a = ap.parse_args()
     if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', a.de):
         raise SystemExit('--de : date AAAA-MM-JJ')
@@ -195,6 +196,8 @@ def main():
            AND SUM(r.korekto IS NOT NULL AND TRIM(r.korekto) <> '') > 0
            AND SUM(r.gxusta = 0 AND (r.korekto IS NULL OR TRIM(r.korekto) = '')) = 0
         ORDER BY pl.leciono_id, pl.persono_id""")
+    if a.numero:
+        kandidatoj = [k for k in kandidatoj if int(k['numero']) == a.numero]
     numeroj = sorted({int(k['numero']) for k in kandidatoj})
     if a.nombri:
         for numero in numeroj:
@@ -217,7 +220,7 @@ def main():
     strukturo = sql(f"""
         SELECT l.id leciono_id, l.numero, l.titolo leciono_titolo, le.id lecionero_id, le.titolo lecionero_titolo, le.ordo,
                e.id ekzerco_id, e.komando, e.komando_detalo, e.ekzemplo, e.typo, e.korektebla,
-               er.id ekzercero_id, er.numero demando_numero, er.demando, er.respondmodelo, er.respondo modelo, er.normaligita
+               er.id ekzercero_id, er.numero demando_numero, er.demando, er.respondmodelo, er.respondo modelo, er.normaligita, er.poentoj poentoj_maks
         FROM lecionoj l JOIN lecioneroj le ON le.leciono_id = l.id JOIN ekzercoj e ON e.lecionero_id = le.id
         JOIN ekzerceroj er ON er.ekzerco_id = e.id AND (er.forigita = 0 OR er.forigita IS NULL)
         WHERE l.id IN ({lecionoj}) ORDER BY l.id, le.ordo, e.id, er.numero""")
@@ -300,6 +303,7 @@ def main():
                 'demando': sen_html(s['demando']),
                 'modelo': sen_html(s['respondmodelo']) or sen_html(s['modelo']),
                 'akceptataj': s['normaligita'].split('|') if s['normaligita'] else None,
+                **({'poentoj_maks': int(s['poentoj_maks'])} if int(s['poentoj_maks'] or 0) > 0 else {}),
                 'respondo': anon(r['respondo']),
                 'homa': {
                     'gxusta': None if r['gxusta'] is None else r['gxusta'] == '1',

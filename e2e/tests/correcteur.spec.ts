@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { login, USERS } from '../helpers/auth'
 import { resetTestData, sql } from '../helpers/db'
-import { clearMails } from '../helpers/mailhog'
+import { clearMails, waitForMail } from '../helpers/mailhog'
 
 // L'état de départ (03-create-data-test.sql) ne crée pas de nuna_kurso :
 // lernanto1 est un prospect sans correcteur. Ce fichier teste la gestion
@@ -46,5 +46,17 @@ test.describe('Correcteur - suivi des élèves', () => {
     await page.getByRole('button', { name: 'Récupérer l’élève' }).click()
     await expect(page).toHaveURL(/miajlernantoj\.php/)
     expect(sql(`SELECT stato FROM nuna_kurso WHERE id=${KURSID}`)).toBe('K')
+  })
+
+  test("un élève à la dernière leçon peut être marqué fini : attestation et mail de félicitations", async ({ page }) => {
+    const KURSID = getKursId()
+    sql(`UPDATE nuna_kurso SET nunleciono=10, stato='K' WHERE id=${KURSID}`)
+    await login(page, USERS.korektanto)
+    await page.goto('miajlernantoj.php')
+    await page.getByRole('button', { name: 'A fini' }).click()
+    await expect(page).toHaveURL(/miajlernantoj\.php/)
+    expect(sql(`SELECT stato FROM nuna_kurso WHERE id=${KURSID}`)).toBe('F')
+    const retadreso = sql("SELECT retadreso FROM personoj WHERE enirnomo='lernanto1'")
+    await waitForMail(retadreso, 'Félicitations')
   })
 })

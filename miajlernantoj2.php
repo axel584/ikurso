@@ -1,5 +1,6 @@
 <?php
 include "util.php";
+require_once "api/KursaFinoAPI.php";
 $persono_id=isset($_SESSION["persono_id"])?(int)$_SESSION["persono_id"]:0;
 if ($persono_id==0) {header("Location:index.php?erarkodo=8"); exit;}
 $persono = apartigiPersonon($persono_id);
@@ -25,33 +26,7 @@ if (ctype_digit($nova) && $nova!=$row["nunleciono"]) {
 }
 // se la nova stato estas F(inita), sed la malnova ne estis F, ni updatas ! :-)
 if ($nova=='F' and $row["stato"]!='F') {
-	$stmt = $bdd->prepare("update nuna_kurso set stato='F',findato=CURDATE(),lastdato=CURDATE() where id=? and (stato='N' or stato='K')");
-	$stmt->execute(array($nunaKurso_id));
-	//prenu cxiujn informojn pri la studanto, lia kurso kaj lia korektanto
-	$stmt = $bdd->prepare("select s.*, k.nomo as kursnomo, k.kodo, ko.enirnomo as korektanto_nomo
-		from nuna_kurso nk join personoj s on s.id=nk.studanto join kursoj k on k.kodo=nk.kurso join personoj ko on ko.id=nk.korektanto
-		where nk.id=?");
-	$stmt->execute(array($nunaKurso_id));
-	$studanto=$stmt->fetch();
-	// tiam ni sendas retmesagxon al la informistoj
-	$filename = "mails/finiInfFR.html";
-	if ($studanto && file_exists($filename)) {
-		$contents = file_get_contents($filename);
-		//prenu la liston de cxiuj informistoj
-		$informistoj = implode(",", $bdd->query("select retadreso from personoj where rajtoj='I'")->fetchAll(PDO::FETCH_COLUMN));
-		foreach (array("ENIRNOMO"=>"enirnomo","NASKIGXDATO"=>"naskigxdato","PERSONNOMO"=>"personnomo","FAMILINOMO"=>"familinomo","SEKSO"=>"sekso",
-				"RETADRESO"=>"retadreso","ADRESO1"=>"adreso1","ADRESO2"=>"adreso2","LANDO"=>"lando","POSXTKODO"=>"posxtkodo","URBO"=>"urbo",
-				"KURSO"=>"kursnomo","KOREKTANTO"=>"korektanto_nomo") as $sxlosilo=>$kampo) {
-			$contents=str_replace("##".$sxlosilo."##",htmlspecialchars((string)$studanto[$kampo], ENT_QUOTES, "UTF-8"),$contents);
-		}
-		if ($informistoj!="") mailViaSES($informistoj,"un esperantiste de plus !",$contents);
-	}
-	// et on envoie aussi un mail à l'élève (le code du cours vient de la base : on ne garde que des lettres)
-	$filename = "mails/finiStu".preg_replace('/[^A-Z]/', '', strtoupper((string)$studanto["kodo"])).".html";
-	if ($studanto && file_exists($filename)) {
-		$contents=str_replace("##ENIRNOMO##",htmlspecialchars($studanto["enirnomo"], ENT_QUOTES, "UTF-8"),file_get_contents($filename));
-		mailViaSES($studanto["retadreso"],"Félicitations !",$contents);
-	}
+	(new KursaFinoAPI($bdd))->fini($nunaKurso_id); // stato F et mails aux informateurs et à l'élève
 }
 // se la nova stato estas H(altita), sed la malnova ne estis H, ni updatas ! :-)
 if ($nova=='H' and $row["stato"]!='H') {

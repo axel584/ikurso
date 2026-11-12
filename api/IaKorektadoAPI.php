@@ -6,6 +6,8 @@
 // - cron/ia_korektado.php corrige les leçons en attente : il envoie la consigne (api/ia-konsigno.md) et la leçon
 //   (consignes, questions, corrigés types, réponses de l'élève, sans nom ni adresse), et enregistre la réponse
 //   par KorektadoAPI, comme une correction humaine, avec le mail « Votre leçon a été corrigée ».
+// - Examen (questions avec des points) : le modèle note chaque réponse fausse (« poentoj ») ; après la dernière leçon
+//   d'un cours, l'élève passe en « fini » (KursaFinoAPI), avec l'attestation de réussite et le mail de félicitations.
 // - Après MAKS_PROVOJ échecs, ou pour un cours que l'IA ne corrige pas encore, la leçon reste au correcteur IA et les
 //   administrateurs sont prévenus par mail : ils peuvent attribuer un correcteur bénévole (administri.php), ajouter du
 //   crédit sur OpenRouter, changer de modèle… puis relancer la correction (cron/ia_korektado.php --relancer).
@@ -15,6 +17,7 @@
 // Utilise apartigiPersonon(), protokolo() et mailViaSES() de db.inc.php / util.php.
 
 require_once __DIR__ . "/KorektadoAPI.php";
+require_once __DIR__ . "/KursaFinoAPI.php";
 
 class IaKorektadoAPI {
     const ENIRNOMO = "ia-korektanto";
@@ -46,11 +49,13 @@ class IaKorektadoAPI {
                     "items" => array(
                         "type" => "object",
                         "additionalProperties" => false,
-                        "required" => array("id", "gxusta", "korekto"),
+                        "required" => array("id", "gxusta", "korekto", "poentoj"),
                         "properties" => array(
                             "id" => array("type" => "string"),
                             "gxusta" => array("type" => "boolean"),
                             "korekto" => array("type" => "string"),
+                            // note des questions d'examen (« poentoj_maks » dans la leçon), null pour les autres
+                            "poentoj" => array("type" => array("integer", "null")),
                         ),
                     ),
                 ),
@@ -168,7 +173,7 @@ class IaKorektadoAPI {
         $respondo = null;
         try {
             $respondo = $this->peti($leciono["por_modelo"]);
-            $korektado = $this->analizi($respondo["respondo"], array_keys($leciono["mapo"]));
+            $korektado = $this->analizi($respondo["respondo"], $leciono["mapo"]);
         } catch (RuntimeException $e) {
             $this->bdd->prepare("UPDATE ia_korektadoj SET eraro = ?, kosto = COALESCE(kosto, 0) + ? WHERE id = ?")
                 ->execute(array(mb_substr($e->getMessage(), 0, 2000), $respondo ? $this->kosto($respondo["respondo"]) : 0, $vico["id"]));
@@ -233,6 +238,7 @@ class IaKorektadoAPI {
                 "demando" => self::senHtml($v["demando"]),
                 "modelo" => self::senHtml($v["respondmodelo"]) ?: self::senHtml($v["modelo"]),
                 "akceptataj" => $v["normaligita"] ? explode("|", $v["normaligita"]) : null,
+            ) + ((int)$v["poentoj"] > 0 ? array("poentoj_maks" => (int)$v["poentoj"]) : array()) + array(
                 "respondo" => self::tondi(trim((string)$v["respondo"])),
             );
         }
@@ -313,8 +319,10 @@ class IaKorektadoAPI {
         return array("respondo" => $respondo, "sekundoj" => round(microtime(true) - $komenco, 1));
     }
 
-    // La correction rendue par le modèle, vérifiée : une entrée par question envoyée, et une conclusion.
-    private function analizi(array $respondo, array $idoj): array {
+    // La correction rendue par le modèle, vérifiée : une entrée par question envoyée, une note pour chaque réponse
+    // fausse d'une question d'examen, et une conclusion.
+    private function analizi(array $respondo, array $mapo): array {
+        $idoj = array_keys($mapo);
         $teksto = isset($respondo["choices"][0]["message"]["content"]) ? trim((string)$respondo["choices"][0]["message"]["content"]) : "";
         if (strpos($teksto, "```") === 0) {
             $teksto = trim(preg_replace('/^```(json)?|```$/', "", $teksto));
@@ -328,12 +336,20 @@ class IaKorektadoAPI {
         $respondoj = array();
         foreach ($korektado["respondoj"] as $r) {
             if (is_array($r) && isset($r["id"], $r["gxusta"]) && is_bool($r["gxusta"])) {
-                $respondoj[(string)$r["id"]] = array("gxusta" => $r["gxusta"], "korekto" => isset($r["korekto"]) ? (string)$r["korekto"] : "");
+                $respondoj[(string)$r["id"]] = array("gxusta" => $r["gxusta"], "korekto" => isset($r["korekto"]) ? (string)$r["korekto"] : "",
+                    "poentoj" => isset($r["poentoj"]) && is_int($r["poentoj"]) ? $r["poentoj"] : null);
             }
         }
         $mankas = array_diff($idoj, array_keys($respondoj));
         if ($mankas) {
             throw new RuntimeException(count($mankas)." réponse(s) sans correction");
+        }
+        // sans note, une rédaction d'examen aurait 0 : on préfère un nouvel essai
+        $senNoto = array_filter($idoj, function ($id) use ($mapo, $respondoj) {
+            return $mapo[$id]["poentoj"] > 0 && !$respondoj[$id]["gxusta"] && $respondoj[$id]["poentoj"] === null;
+        });
+        if ($senNoto) {
+            throw new RuntimeException(count($senNoto)." réponse(s) d'examen sans note");
         }
         return array("respondoj" => $respondoj, "konkludo" => $korektado["konkludo"]);
     }
@@ -345,13 +361,20 @@ class IaKorektadoAPI {
             $datumoj[$m["respondo_id"]] = array(
                 "gxusta" => $k["gxusta"],
                 "korekto" => trim($k["korekto"]) === "" ? null : self::alHtml($k["korekto"]),
-                // question notée : tous les points si la réponse est juste, aucun sinon
-                "poentoj" => $m["poentoj"] > 0 ? ($k["gxusta"] ? $m["poentoj"] : 0) : null,
+                "poentoj" => self::poentoj($m["poentoj"], $k),
             );
         }
         $konkludo = trim($korektado["konkludo"]) === "" ? null : "<p>".self::alHtml($korektado["konkludo"])."</p>";
         (new KorektadoAPI($this->bdd, $this->urlracine))->registri($this->korektanto(), $persono_id, $leciono["kurso"],
             $leciono["numero"], $leciono_id, $datumoj, self::ENKONDUKO, $konkludo, true, "novakorektadoIA.html");
+        // dernière leçon (l'examen) : le cours est fini, comme le ferait le correcteur depuis miajlernantoj.php
+        $fino = new KursaFinoAPI($this->bdd);
+        if ($fino->cxuLasta($leciono_id)) {
+            $nunaKurso = $fino->nunaKurso($persono_id, $leciono["kurso"], (int)$this->korektanto()["id"]);
+            if ($nunaKurso !== null && $fino->fini($nunaKurso)) {
+                protokolo($persono_id, "CORRECTION IA", "cours ".$leciono["kurso"]." fini");
+            }
+        }
     }
 
     // La leçon reste en échec, les administrateurs sont prévenus.
@@ -389,6 +412,21 @@ class IaKorektadoAPI {
         foreach ($this->bdd->query("SELECT retadreso FROM personoj WHERE rajtoj = 'A' AND retadreso <> ''")->fetchAll(PDO::FETCH_COLUMN) as $retadreso) {
             mailViaSES($retadreso, $temo, $enhavo);
         }
+    }
+
+    // Note d'une question d'examen : tous les points pour une réponse juste ; pour une réponse fausse, la note du modèle
+    // bornée à 0..maximum-1 (0 s'il n'en donne pas). Null pour une question non notée.
+    private static function poentoj(int $maks, array $korekto): ?int {
+        if ($maks <= 0) {
+            return null;
+        }
+        if ($korekto["gxusta"]) {
+            return $maks;
+        }
+        if ($korekto["poentoj"] === null) {
+            return 0;
+        }
+        return max(0, min($maks - 1, $korekto["poentoj"]));
     }
 
     private function kosto(array $respondo): float {

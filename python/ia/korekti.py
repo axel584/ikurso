@@ -37,11 +37,12 @@ SKEMO = {
                 'items': {
                     'type': 'object',
                     'additionalProperties': False,
-                    'required': ['id', 'gxusta', 'korekto'],
+                    'required': ['id', 'gxusta', 'korekto', 'poentoj'],
                     'properties': {
                         'id': {'type': 'string'},
                         'gxusta': {'type': 'boolean'},
                         'korekto': {'type': 'string'},
+                        'poentoj': {'type': ['integer', 'null']},  # questions d'examen (poentoj_maks)
                     },
                 },
             },
@@ -66,7 +67,8 @@ def por_modelo(leciono: dict) -> dict:
                 'komando': e['komando'],
                 'komando_detalo': e['komando_detalo'],
                 'ekzemplo': e['ekzemplo'],
-                'demandoj': [{k: d[k] for k in ('id', 'demando', 'modelo', 'akceptataj', 'respondo')} for d in e['demandoj']],
+                'demandoj': [{k: d[k] for k in ('id', 'demando', 'modelo', 'akceptataj', 'poentoj_maks', 'respondo') if k in d}
+                             for d in e['demandoj']],
             }
             for e in leciono['ekzercoj']
         ],

@@ -22,6 +22,10 @@ Pour chaque réponse, indique :
 - « korekto » : vide ("") si la réponse est correcte. Sinon :
   - d'abord la réponse corrigée, en gardant au maximum les mots de l'élève ;
   - puis une explication courte (une ou deux phrases), dans la langue des explications de ce cours (voir plus haut : français pour le cours élémentaire).
+- « poentoj » : null, sauf pour une question d'examen, qui a un nombre de points maximum (« poentoj_maks »). Donne alors la note de la réponse, un nombre entier de 0 à « poentoj_maks » :
+  - réponse correcte : tous les points ;
+  - question courte : retire des points selon la gravité des erreurs (sur 2 points : 1 pour une seule petite erreur, comme un accent oublié ou une terminaison fausse ; 0 si la réponse est fausse ou presque) ;
+  - rédaction (texte libre) : note comme un correcteur bienveillant. Un texte compréhensible qui traite le sujet garde la majorité des points même avec plusieurs erreurs : retire environ un point par erreur importante (terminaison, -n, -j, mot inexistant, phrase incompréhensible), sans pénaliser deux fois la même erreur répétée, et un ou deux points si le sujet ou la longueur demandée ne sont pas respectés. 0 seulement pour une réponse vide, hors sujet ou incompréhensible.
 
 ## Comment expliquer
 

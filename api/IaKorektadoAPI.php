@@ -244,6 +244,8 @@ class IaKorektadoAPI {
             "mapo" => $mapo,
             "por_modelo" => array(
                 "kurso" => isset(self::KURSOJ[$kurso]) ? self::KURSOJ[$kurso] : $kurso,
+                // rappelée à côté des données : sans elle, le mot de fin sortait parfois en espéranto pour le cours élémentaire
+                "lingvo_de_klarigoj" => $kurso === "CG" ? "français" : "espéranto",
                 "leciono" => (int)$vicoj[0]["numero"],
                 "titolo" => self::senHtml($vicoj[0]["leciono_titolo"]),
             ) + ($teksto !== null ? array("teksto" => $teksto) : array()) + array(

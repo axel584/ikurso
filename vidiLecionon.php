@@ -94,12 +94,16 @@ while ($row=$result->fetch()) {
 	
 }
 
-// on affiche le commentaire de l'élève qui est stocké en base
-echo "<h3>Commentaire de l'élève</h3>";
-echo $komentario;
+// on affiche le commentaire de l'élève qui est stocké en base (titre seulement s'il y en a un : sinon le mot de fin
+// du correcteur, juste en dessous, passait pour le commentaire de l'élève)
+if (trim(strip_tags((string)$komentario)) !== "") {
+	echo "<h3>Commentaire de l'élève</h3>";
+	echo $komentario;
+}
 
 
 if ($konkludo) {
+	echo "<h3>Mot de fin du correcteur</h3>";
 	echo "<div class='card green lighten-4 card-content'>";
 	echo $konkludo;
 	echo "</div>";

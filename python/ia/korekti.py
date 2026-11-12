@@ -55,6 +55,7 @@ def por_modelo(leciono: dict) -> dict:
     """La leçon telle que la voit le modèle : sans la correction humaine."""
     return {
         'kurso': KURSOJ[leciono['kurso']],
+        'lingvo_de_klarigoj': 'français' if leciono['kurso'] == 'CG' else 'espéranto',  # comme api/IaKorektadoAPI.php
         'leciono': leciono['leciono'],
         'titolo': leciono['titolo'],
         **({'teksto': leciono['teksto']} if leciono.get('teksto') else {}),

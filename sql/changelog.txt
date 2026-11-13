@@ -4577,3 +4577,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Cours élémentaire, leçon 3 : simplifications proposées par un correcteur (3.1, 3.5, 3.8 « Les nombres », 3.10 « Verbes et compléments ») : voir sql/72-lecon-3-simplifications.sql
 --- Cours élémentaire, page 1.1 : encadré « Piège pour les francophones » sur les voyelles nasales, avec cinq mots enregistrés (#1115) : voir sql/73-piege-voyelles-nasales-1115.sql
 --- Cours élémentaire, page 4.4 : encadré « Piège pour les francophones » sur l'accent tonique (avant-dernière syllabe, mots en -io, diphtongues), avec cinq mots enregistrés (#1115) : voir sql/74-piege-accent-tonique-1115.sql
+--- Cours élémentaire, leçons 2 et 3 : petit QCM facultatif avec indices à la fin des pages 2.6, 3.1, 3.5 et 3.10 (#1114) : voir sql/75-qcm-lecons-2-3-1114.sql

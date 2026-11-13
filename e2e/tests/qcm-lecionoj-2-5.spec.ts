@@ -2,16 +2,18 @@ import { test, expect, type Page } from '@playwright/test'
 import { login, USERS } from '../helpers/auth'
 import { resetTestData, sql } from '../helpers/db'
 
-// Leçons 2 à 5 : petits QCM facultatifs avec indices sur les pages où l'on perd le plus d'élèves (#1114, sql/71).
+// Leçons 2 à 5 : petits QCM facultatifs avec indices sur les pages où l'on perd le plus d'élèves (#1114, sql/71),
+// puis sur les dernières pages de grammaire des leçons 2 et 3 (sql/75).
 test.beforeEach(() => resetTestData())
 
 const PAGXOJ: [number, number, number, string | null][] = [
   // leçon, section, nombre de questions, enregistrement de la première question
   [2, 2, 3, null], [2, 4, 3, null], [2, 7, 3, null], [3, 8, 4, 'dudek'], [4, 5, 3, 'lernejo'], [4, 8, 3, null], [5, 2, 3, null],
+  [2, 6, 3, 'maljuna'], [3, 1, 3, null], [3, 5, 3, 'sane'], [3, 10, 3, null],
 ]
 
 test('site : un QCM avec indices sur chaque page visée', async ({ page }) => {
-  test.setTimeout(120_000) // 7 pages, une seconde par question
+  test.setTimeout(180_000) // 11 pages, une seconde par question
   await login(page, USERS.lernanto)
   for (const [leciono, sekcio, nombro, sono] of PAGXOJ) {
     await page.goto(`fr/cge/lec${String(leciono).padStart(2, '0')}.php?section=${sekcio}`)
@@ -30,9 +32,9 @@ test('site : un QCM avec indices sur chaque page visée', async ({ page }) => {
       if (i < nombro - 1) await expect(demandoj.nth(i)).toBeHidden()
     }
     await expect(page.locator('#recapitulatif_qcm')).toBeVisible()
+    // 5.2 : le tableau des corrélatifs est toujours là, au-dessus du QCM
+    if (leciono === 5) await expect(page.locator('.korelativa-skemo')).toBeVisible()
   }
-  // 5.2 : le tableau des corrélatifs est toujours là, au-dessus du QCM
-  await expect(page.locator('.korelativa-skemo')).toBeVisible()
 })
 
 async function ensaluti(page: Page) {

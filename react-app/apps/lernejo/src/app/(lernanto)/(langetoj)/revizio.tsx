@@ -3,7 +3,7 @@
 import { useCallback, useState } from 'react'
 import { ScrollView, Text, View } from 'react-native'
 import { useQueryClient } from '@tanstack/react-query'
-import { useFocusEffect } from 'expo-router'
+import { router, useFocusEffect } from 'expo-router'
 import { useRevizio, useRevizioRespondo } from '@/api/demandoj'
 import { legiAgordojn, permeso, planigiRevizion } from '@/api/sciigoj'
 import { Butono, Stato } from '@/komponantoj/Bazaj'
@@ -32,6 +32,19 @@ export default function Revizio() {
   )
 
   const vortoj = data?.vortoj ?? []
+  const dauxrigi = data?.dauxrigi ?? null
+  // après la révision, retour au cours : section qui suit la dernière terminée, ou début du cours suivant
+  const dauxrigiButono = dauxrigi && (
+    <View style={{ gap: 4 }} testID="revizio-dauxrigi">
+      <Butono
+        teksto={dauxrigi.nova_kurso ? 'Commencer le cours suivant' : 'Continuer le cours'}
+        onPress={() => router.push({ pathname: '/sekcio/[id]', params: { id: String(dauxrigi.sekcio_id) } })}
+      />
+      <Text style={stiloj.eta}>
+        {dauxrigi.nova_kurso ? dauxrigi.kurso_nomo : `Leçon ${dauxrigi.leciono} : ${dauxrigi.titolo}`}
+      </Text>
+    </View>
+  )
   const vorto = vortoj[nuna]
   const rezulto = respondi.data?.vorto_id === vorto?.id ? respondi.data : undefined
 
@@ -70,6 +83,7 @@ export default function Revizio() {
             <Text style={stiloj.teksto}>
               Aucun mot à réviser pour le moment. Les mots des sections de vocabulaire que vous terminez s’ajoutent ici.
             </Text>
+            {dauxrigiButono}
           </View>
         ) : !vorto ? (
           <View style={stiloj.karto} testID="revizio-fino">
@@ -77,7 +91,8 @@ export default function Revizio() {
             <Text style={stiloj.teksto}>
               {gxustaj} bonne{gxustaj > 1 ? 's' : ''} réponse{gxustaj > 1 ? 's' : ''} sur {vortoj.length}.
             </Text>
-            <Butono teksto="Réviser d’autres mots" onPress={rekomenci} />
+            {dauxrigiButono}
+            <Butono teksto="Réviser d’autres mots" onPress={rekomenci} dua={!!dauxrigi} />
           </View>
         ) : (
           <View style={[stiloj.karto, { gap: 12 }]}>

@@ -1201,6 +1201,7 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 		echo "<h3>Bravo, vous avez terminé votre session</h3>";
 		echo "<p>Des sessions de révisions courtes et fréquentes vous aideront à mieux mémoriser le vocabulaire.</p>";
 		echo "<p>Pour votre cerveau, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
+		echo dauxrigiButono($persono_id);
 		echo "</div>\n";
 		echo "</div>";
 	} else {
@@ -1211,8 +1212,24 @@ function kreiKartojnPorMemoriVortojn($persono_id) {
 			echo "<p>Des sessions de révisions courtes et fréquentes vous aideront à mieux mémoriser le vocabulaire.</p>";
 			echo "<p>Pour votre cerveau, <b>souvent</b> est mieux que <b>longtemps</b>.</p>";
 		}
-		echo " Vous pouvez également avancer dans le cours pour découvrir plus de mots.";
+		echo "<p>Vous pouvez également avancer dans le cours pour découvrir plus de mots.</p>";
+		echo dauxrigiButono($persono_id);
 	}
+}
+
+// Bouton « Continuer le cours » vers la section qui suit la dernière terminée, ou vers le cours suivant (fin de la révision).
+function dauxrigiButono($persono_id) {
+	global $bdd, $vojo;
+	require_once __DIR__ . "/api/DauxrigoAPI.php";
+	$sekva = (new DauxrigoAPI($bdd))->sekva((int)$persono_id);
+	if (!$sekva) {
+		return "";
+	}
+	$h = function ($t) { return htmlspecialchars((string)$t, ENT_QUOTES, "UTF-8"); };
+	$butono = $sekva["nova_kurso"] ? "Commencer le cours suivant" : "Continuer le cours";
+	$priskribo = $sekva["nova_kurso"] ? $sekva["kurso_nomo"] : "Leçon ".$sekva["leciono"]." : ".$sekva["titolo"];
+	return "<p class='dauxrigi'><a href='".$h($vojo.$sekva["url"])."' class='waves-effect waves-light btn light-blue darken-1'>".$butono."</a>"
+		."<br><span class='primaire-texte'>".$h($priskribo)."</span></p>";
 }
 
 function getLigiloAlMemorilo($persono_id) {

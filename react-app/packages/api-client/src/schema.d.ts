@@ -1009,6 +1009,18 @@ export interface paths {
                     content: {
                         "application/json": {
                             vortoj: components["schemas"]["RevizioVorto"][];
+                            /** @description Section qui suit la dernière terminée (ou début du cours suivant), pour « Continuer le cours » ; null s'il n'y en a pas */
+                            dauxrigi: {
+                                sekcio_id: number;
+                                /** @description Adresse relative à la racine du site */
+                                url: string;
+                                kurso: string;
+                                kurso_nomo: string;
+                                leciono: number;
+                                titolo: string;
+                                /** @description Vrai si c'est le début du cours suivant */
+                                nova_kurso: boolean;
+                            } | null;
                         };
                     };
                 };

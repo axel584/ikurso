@@ -530,11 +530,24 @@ paths:
             application/json:
               schema:
                 type: object
-                required: [vortoj]
+                required: [vortoj, dauxrigi]
                 properties:
                   vortoj:
                     type: array
                     items: { $ref: '#/components/schemas/RevizioVorto' }
+                  dauxrigi:
+                    description: Section qui suit la dernière terminée (ou début du cours suivant), pour « Continuer le cours » ; null s'il n'y en a pas
+                    nullable: true
+                    type: object
+                    required: [sekcio_id, url, kurso, kurso_nomo, leciono, titolo, nova_kurso]
+                    properties:
+                      sekcio_id: { type: integer }
+                      url: { type: string, description: Adresse relative à la racine du site }
+                      kurso: { type: string }
+                      kurso_nomo: { type: string }
+                      leciono: { type: integer }
+                      titolo: { type: string }
+                      nova_kurso: { type: boolean, description: Vrai si c'est le début du cours suivant }
         '401': { $ref: '#/components/responses/Eraro' }
     post:
       tags: [lernado]

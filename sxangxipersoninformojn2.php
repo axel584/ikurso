@@ -12,6 +12,7 @@ $form_lando=$_POST["lando"];
 $form_naskigxdato=$_POST["naskigxdato"];
 $form_rappel=isset($_POST["rappel"]);
 $form_saviezvous=isset($_POST["saviezvous"]);
+$form_revizio=isset($_POST["revizio"]);
 $form_aboneEsperantoAktiv=isset($_POST["aboneEsperantoAktiv"]);
 $teksto="";
 
@@ -63,7 +64,7 @@ if ($persono_id=="") {header("Location:index.php?erarkodo=4"); exit;} else {
   // préférences d'envoi des mails (#920) ; modifiPersonon() garde stop_rappel à jour
   require_once "api/AgordojAPI.php";
   $agordojAPI = new AgordojAPI($bdd);
-  foreach (array("RAPPEL" => $form_rappel, "SAVIEZVOUS" => $form_saviezvous) as $agordo => $rajto) {
+  foreach (array("RAPPEL" => $form_rappel, "SAVIEZVOUS" => $form_saviezvous, "REVIZIO" => $form_revizio) as $agordo => $rajto) {
     if ($agordojAPI->sxangxi((int)$persono_id, $agordo, $rajto)) {
       protokolo($persono_id,"MALABONO",$persono["enirnomo"].($rajto ? " reçoit de nouveau " : " ne reçoit plus ").$agordo." (données personnelles)");
     }

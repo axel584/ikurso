@@ -5,7 +5,8 @@ $korpo="informoj";
 require_once "api/GastoAPI.php";
 // élève connecté ou invité (#1092)
 $lernanto_id=GastoAPI::lernantoId();
-if ($lernanto_id=="") {header("Location:index.php?erarkodo=8"); exit;}
+// lien du rappel de révision (#1120) : après la connexion, retour sur cette page
+if ($lernanto_id=="") {header("Location:index.php?retour=".urlencode(rtrim($urlracine, "/")."/memoriVortojn.php")); exit;}
 include "pagxkapo.inc.php";
 // pagxkapo.inc.php ne connaît que la personne connectée
 $persono_id = $lernanto_id;

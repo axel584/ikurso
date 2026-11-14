@@ -20,6 +20,7 @@ require_once "api/AgordojAPI.php";
 $agordoj = (new AgordojAPI($bdd))->legi((int)$persono_id);
 $checkedRappel = $agordoj["RAPPEL"] ? " checked " : "";
 $checkedSaviezvous = $agordoj["SAVIEZVOUS"] ? " checked " : "";
+$checkedRevizio = $agordoj["REVIZIO"] ? " checked " : "";
 
 require_once "api/SympaAPI.php";
 $sympa = new SympaAPI();
@@ -106,6 +107,10 @@ $checkedAboneEsperantoAktiv = $sympa->isMember($persono['retadreso']) ? " checke
 						<label>
 							<input type="checkbox" class="filled-in" id="saviezvous" name="saviezvous" <?php echo $checkedSaviezvous; ?>/>
 							<span>Je souhaite recevoir les anecdotes « Le saviez-vous ? » après chaque journée de travail.</span>
+						</label>
+						<label>
+							<input type="checkbox" class="filled-in" id="revizio" name="revizio" <?php echo $checkedRevizio; ?>/>
+							<span>Je souhaite recevoir un rappel quand des mots de vocabulaire attendent d'être révisés.</span>
 						</label>
 						<label>
 							<input type="checkbox" class="filled-in" id="aboneEsperantoAktiv" name="aboneEsperantoAktiv" <?php echo $checkedAboneEsperantoAktiv; ?>/>

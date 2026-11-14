@@ -5,6 +5,7 @@ require_once "../api/StatistikojAPI.php";
 require_once "../api/AgordojAPI.php";
 require_once "../api/SaviezvousAPI.php";
 require_once "../api/KorektadaElektoAPI.php";
+require_once "../api/RevizioRememorigoAPI.php";
 malfermidatumbazon();
 
 function dauxroTeksto(int $sekundoj): string {
@@ -194,6 +195,19 @@ $result = $bdd->query($query);
 	//mailViaSmtp($row["retadreso"],"ikurso@esperanto-france.org","Cours d'espéranto",$contents);
 	mailViaSES($row["retadreso"],"Cours d'espéranto",$contents,$malaboni);
  }
+// Rappel de révision du vocabulaire : des mots attendent depuis 3 jours (#1120)
+$revizioAPI = new RevizioRememorigoAPI($bdd);
+$revizioModelo = file_get_contents("../mails/revizio.html");
+foreach ($revizioAPI->ricevontoj() as $ricevonto) {
+	$persono_id = (int)$ricevonto["id"];
+	echo $persono_id.":rappel de révision (".$ricevonto["kiom"]." mots)\n";
+	$contents = RevizioRememorigoAPI::mesagxo($revizioModelo, $ricevonto, $revizioAPI->ekzemploj($persono_id), $urlracine);
+	if (mailViaSES($ricevonto["retadreso"], "Des mots vous attendent pour votre révision d'espéranto", $contents,
+			AgordojAPI::malaboniLigilo($persono_id, RevizioRememorigoAPI::AGORDO))) {
+		protokolo($persono_id, "ENVOIE RAPPEL", "Rappel de révision du vocabulaire : ".$ricevonto["kiom"]." mots");
+	}
+}
+
 // on selectionne tous les élèves qui n'ont pas envoyé de leçon depuis un an :
 $query = "SELECT korektanto,studanto,kurso FROM nuna_kurso WHERE lastdato<DATE_SUB(NOW(),INTERVAL 1 YEAR) and stato<>'H' and stato<>'F'";
 $result = $bdd->query($query);

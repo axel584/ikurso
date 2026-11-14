@@ -7,6 +7,7 @@ class AgordojAPI {
     const AGORDOJ = array(
         "RAPPEL" => "les messages de rappel pour m'inviter à continuer le cours",
         "SAVIEZVOUS" => "les anecdotes « Le saviez-vous ? » après chaque journée de travail",
+        "REVIZIO" => "les rappels quand des mots de vocabulaire sont à réviser",
     );
 
     private $bdd;

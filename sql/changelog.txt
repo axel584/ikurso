@@ -4579,3 +4579,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Cours élémentaire, page 4.4 : encadré « Piège pour les francophones » sur l'accent tonique (avant-dernière syllabe, mots en -io, diphtongues), avec cinq mots enregistrés (#1115) : voir sql/74-piege-accent-tonique-1115.sql
 --- Cours élémentaire, leçons 2 et 3 : petit QCM facultatif avec indices à la fin des pages 2.6, 3.1, 3.5 et 3.10 (#1114) : voir sql/75-qcm-lecons-2-3-1114.sql
 --- Rappel par mail quand des mots de vocabulaire attendent d'être révisés depuis 3 jours, réglage REVIZIO (#1120) : voir sql/76-rappel-revision-1120.sql
+--- Gerda malaperis, textes « Lasu min paroli plu » : lecteurs audio ajoutés aux chapitres 21, 23 (second texte) et 24 : voir sql/77-lecteurs-audio-lasu-21-23-24.sql

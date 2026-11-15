@@ -224,6 +224,7 @@ gxemi.mp3	ĝemi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:L
 gxenerala.mp3	ĝenerala	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C4%9Denerala.wav
 gxeni.mp3	ĝeni	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C4%9Deni.wav
 gxentila.mp3	ĝentila	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C4%9Dentila.wav
+gxi.mp3	ĝi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C4%9Di.wav
 gxis.mp3	ĝis	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C4%9Dis.wav
 gxoja.mp3	ĝoja	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C4%9Doja.wav
 gxusta.mp3	ĝusta	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C4%9Dusta.wav
@@ -248,6 +249,7 @@ ia.mp3	ia	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143
 iam.mp3	iam	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-iam.wav
 ideo.mp3	ideo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ideo.wav
 ie.mp3	ie	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ie.wav
+ili.mp3	ili	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ili.wav
 imagi.mp3	imagi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-imagi.wav
 imago.mp3	imago	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-imago.wav
 indiki.mp3	indiki	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-indiki.wav
@@ -271,6 +273,7 @@ islamo.mp3	islamo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File
 ja.mp3	ja	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ja.wav
 jarcento.mp3	jarcento	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-jarcento.wav
 je.mp3	je	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-je.wav
+jes.mp3	jes	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-jes.wav
 judo.mp3	judo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-Judo.wav
 junulo.mp3	junulo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-junulo.wav
 justa.mp3	justa	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-justa.wav
@@ -295,6 +298,7 @@ kie-ajn.mp3	kie ajn	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/Fi
 kie.mp3	kie	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kie.wav
 kiel-vi-fartas.mp3	kiel vi fartas ?	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kiel_vi_fartas.wav
 kiel.mp3	kiel	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kiel.wav
+kien.mp3	kien	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kien.wav
 kies.mp3	kies	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kies.wav
 kiom.mp3	kiom	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kiom.wav
 kirurgio.mp3	kirurgio	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kirurgio.wav
@@ -345,6 +349,7 @@ krimo.mp3	krimo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:L
 krom.mp3	krom	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-krom.wav
 krome.mp3	krome	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-krome.wav
 kruro.mp3	kruro	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kruro.wav
+kuiri.mp3	kuiri	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kuiri.wav
 kune.mp3	kune	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kune.wav
 kuraci.mp3	kuraci	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kuraci.wav
 kuracisto.mp3	kuracisto	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-kuracisto.wav
@@ -370,6 +375,7 @@ lasi.mp3	lasi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-
 lasta.mp3	lasta	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-lasta.wav
 laux.mp3	laŭ	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-la%C5%AD.wav
 lauxta.mp3	laŭta	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-la%C5%ADta.wav
+li.mp3	li	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-li.wav
 libera.mp3	libera	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-libera.wav
 lingvistiko.mp3	lingvistiko	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-lingvistiko.wav
 literaturo.mp3	literaturo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-literaturo.wav
@@ -457,6 +463,7 @@ neniom.mp3	neniom	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File
 neniu.mp3	neniu	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-neniu.wav
 normala.mp3	normala	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-normala.wav
 noti.mp3	noti	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-noti.wav
+noto.mp3	noto	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-noto.wav
 nu.mp3	nu	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-nu.wav
 numero.mp3	numero	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-numero.wav
 obei.mp3	obei	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-obei.wav
@@ -594,6 +601,7 @@ sana.mp3	sana	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-
 sata.mp3	sata	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-sata.wav
 savi.mp3	savi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-savi.wav
 se.mp3	se	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-se.wav
+sed.mp3	sed	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-sed.wav
 sekreto.mp3	sekreto	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-sekreto.wav
 sekundo.mp3	sekundo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-sekundo.wav
 sekvi.mp3	sekvi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-sekvi.wav
@@ -608,6 +616,7 @@ seruro.mp3	seruro	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File
 servi.mp3	servi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-servi.wav
 ses.mp3	ses	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ses.wav
 sesdek.mp3	sesdek	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-sesdek.wav
+sia.mp3	sia	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-sia.wav
 signalo.mp3	signalo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-signalo.wav
 signo.mp3	signo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-signo.wav
 silenti.mp3	silenti	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-silenti.wav
@@ -659,6 +668,7 @@ sxajni.mp3	ŝajni	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File
 sxanco.mp3	ŝanco	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C5%9Danco.wav
 sxangxi.mp3	ŝanĝi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C5%9Dan%C4%9Di.wav
 sxangxigxi.mp3	ŝanĝiĝi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C5%9Dan%C4%9Di%C4%9Di.wav
+sxi.mp3	ŝi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C5%9Di.wav
 sxipo.mp3	ŝipo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C5%9Dipo.wav
 sxiri.mp3	ŝiri	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C5%9Diri.wav
 sxoforo.mp3	ŝoforo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-%C5%9Doforo.wav

@@ -18,8 +18,8 @@ UPDATE lecioneroj SET enhavo = REPLACE(enhavo, '<span class="eo">butiko</span>&n
 WHERE id = 14 AND enhavo NOT LIKE '%<p><a href="fr/son/vortoj/glaso.mp3" class="sm2_button"></a> <span class="eo">glaso</span>&nbsp;: verre (à boire)</p>%';
 
 -- 2.8
-UPDATE lecioneroj SET enhavo = REPLACE(enhavo, '<span class="eo">taso</span>&nbsp;: tasse</p>', '<span class="eo">taso</span>&nbsp;: tasse</p>\n\t\t\t\t\t<p> <span class="eo">vino</span>&nbsp;: vin</p>')
-WHERE id = 14 AND enhavo NOT LIKE '%<p> <span class="eo">vino</span>&nbsp;: vin</p>%';
+UPDATE lecioneroj SET enhavo = REPLACE(enhavo, '<span class="eo">taso</span>&nbsp;: tasse</p>', '<span class="eo">taso</span>&nbsp;: tasse</p>\n\t\t\t\t\t<p><a href="fr/son/vortoj/vino.mp3" class="sm2_button"></a> <span class="eo">vino</span>&nbsp;: vin</p>')
+WHERE id = 14 AND enhavo NOT LIKE '%<p><a href="fr/son/vortoj/vino.mp3" class="sm2_button"></a> <span class="eo">vino</span>&nbsp;: vin</p>%';
 
 -- 2.8
 UPDATE lecioneroj SET enhavo = REPLACE(enhavo, '<span class="eo">pura</span>&nbsp;: propre</p>', '<span class="eo">pura</span>&nbsp;: propre</p>\n\t\t\t\t\t<p><a href="fr/son/vortoj/dolcxa.mp3" class="sm2_button"></a> <span class="eo">dolĉa</span>&nbsp;: doux, sucré</p>')
@@ -30,8 +30,8 @@ UPDATE lecioneroj SET enhavo = REPLACE(enhavo, 'vespero</span>&nbsp;: soir, soir
 WHERE id = 22 AND enhavo NOT LIKE '%<p><span class="eo"><a href="fr/son/vortoj/koloro.mp3" class="sm2_button"></a>koloro</span>&nbsp;: couleur</p>%';
 
 -- 3.3
-UPDATE lecioneroj SET enhavo = REPLACE(enhavo, 'verda</span>&nbsp;: vert</p>', 'verda</span>&nbsp;: vert</p>\n\t\t\t\t\t<p><span class="eo">frua</span>&nbsp;: tôt, précoce (contraire&nbsp;: <span class="eo">malfrua</span>, tardif)</p>')
-WHERE id = 22 AND enhavo NOT LIKE '%<p><span class="eo">frua</span>&nbsp;: tôt, précoce (contraire&nbsp;: <span class="eo">malfrua</span>, tardif)</p>%';
+UPDATE lecioneroj SET enhavo = REPLACE(enhavo, 'verda</span>&nbsp;: vert</p>', 'verda</span>&nbsp;: vert</p>\n\t\t\t\t\t<p><span class="eo"><a href="fr/son/vortoj/frua.mp3" class="sm2_button"></a>frua</span>&nbsp;: tôt, précoce (contraire&nbsp;: <span class="eo">malfrua</span>, tardif)</p>')
+WHERE id = 22 AND enhavo NOT LIKE '%<p><span class="eo"><a href="fr/son/vortoj/frua.mp3" class="sm2_button"></a>frua</span>&nbsp;: tôt, précoce (contraire&nbsp;: <span class="eo">malfrua</span>, tardif)</p>%';
 
 -- 4.5
 UPDATE lecioneroj SET enhavo = REPLACE(enhavo, '<span class="eo">plej</span>&nbsp;: plus (superlatif)</p>', '<span class="eo">plej</span>&nbsp;: plus (superlatif)</p>\n\t\t\t\t\t\t<p><a href="fr/son/vortoj/ol.mp3" class="sm2_button"></a><span class="marque">•</span> <span class="eo">ol</span>&nbsp;: que (dans une comparaison&nbsp;: <span class="eo">pli granda ol</span>, plus grand que)</p>')

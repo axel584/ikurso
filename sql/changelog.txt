@@ -4582,3 +4582,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Gerda malaperis, textes « Lasu min paroli plu » : lecteurs audio ajoutés aux chapitres 21, 23 (second texte) et 24 : voir sql/77-lecteurs-audio-lasu-21-23-24.sql
 --- Cours élémentaire : mots fréquents de la méthode de Zagreb et de la Metodo 11 absents du cours, 1er lot de 17 mots en 2.8, 3.3, 4.5, 7.1 à 7.3 et 8.2 (#1117) : voir sql/78-mots-frequents-zagreb-1117.sql
 --- Cours élémentaire : mots fréquents de la méthode de Zagreb et de la Metodo 11 absents du cours, 2e lot de 39 mots : encadré « D’autres mots utiles » en 2.5, 6.7, 6.8, 6.9, 8.6, 9.9 et 9.11, mots ajoutés aux pages de grammaire 3.8, 5.1, 6.6, 8.7 et 9.7 (#1117) : voir sql/79-mots-frequents-zagreb-1117-lot2.sql
+--- Cours élémentaire, page 2.6 (mal-) : droite et gauche remis dans le bon sens dans l'exemple d'introduction (dekstra → maldekstra) : voir sql/80-mal-droite-gauche.sql

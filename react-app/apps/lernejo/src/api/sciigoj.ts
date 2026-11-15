@@ -35,10 +35,23 @@ export async function skribiAgordojn(a: RevizioAgordoj): Promise<void> {
 
 // Autorisation d'afficher des notifications (obligatoire depuis Android 13) ; peti : la demander si elle ne l'a pas été.
 // « blokita » : refusée pour de bon, à changer dans les réglages du téléphone.
-export async function permeso(peti: boolean): Promise<{ donita: boolean; blokita: boolean }> {
+export type Permeso = { donita: boolean; blokita: boolean }
+export async function permeso(peti: boolean): Promise<Permeso> {
   let p = await Notifications.getPermissionsAsync()
   if (!p.granted && p.canAskAgain && peti) p = await Notifications.requestPermissionsAsync()
   return { donita: p.granted, blokita: !p.granted && !p.canAskAgain }
+}
+
+// Proposer les rappels une fois, après la connexion : seulement si le rappel est activé dans l'application
+// et que l'autorisation n'a encore été ni donnée ni refusée pour de bon.
+const PROPONITA = 'revizio.proponita'
+export async function proponendaj(): Promise<boolean> {
+  if ((await legiAgordon(PROPONITA)) === 'jes' || !(await legiAgordojn()).sxaltita) return false
+  const p = await permeso(false)
+  return !p.donita && !p.blokita
+}
+export async function proponitaj(): Promise<void> {
+  await skribiAgordon(PROPONITA, 'jes')
 }
 
 export async function nuligiRevizion(): Promise<void> {

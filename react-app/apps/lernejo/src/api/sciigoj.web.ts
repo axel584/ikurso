@@ -11,9 +11,15 @@ export async function legiAgordojn(): Promise<RevizioAgordoj> {
 
 export async function skribiAgordojn(_a: RevizioAgordoj): Promise<void> {}
 
-export async function permeso(_peti: boolean): Promise<{ donita: boolean; blokita: boolean }> {
+export type Permeso = { donita: boolean; blokita: boolean }
+export async function permeso(_peti: boolean): Promise<Permeso> {
   return { donita: false, blokita: false }
 }
+
+export async function proponendaj(): Promise<boolean> {
+  return false
+}
+export async function proponitaj(): Promise<void> {}
 
 export async function nuligiRevizion(): Promise<void> {}
 

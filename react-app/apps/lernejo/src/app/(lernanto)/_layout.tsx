@@ -1,10 +1,11 @@
 // Écrans de l'élève connecté : les onglets (les cours, sections et corrections sont dans l'onglet « Cours »).
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { AppState } from 'react-native'
 import { Stack, router } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { datumoj, kliento } from '@/api/kliento'
 import { auxskultiSciigojn, planigiRevizion } from '@/api/sciigoj'
+import { RevizioPropono } from '@/komponantoj/RevizioPropono'
 import { useSeanco } from '@/seanco'
 import { koloroj } from '@/stiloj'
 
@@ -15,6 +16,8 @@ export const unstable_settings = {
 export default function LernantoArangxo() {
   const { komencota, komencis } = useSeanco()
   const margxeno = useSafeAreaInsets()
+  // nouvel invité qui part directement dans sa première section : pas de proposition des rappels tout de suite
+  const novaGasto = useRef(komencota !== null).current
 
   // rappels de révision (#1120) : recalculés à chaque retour dans l'application ; la notification touchée ouvre la révision
   useEffect(() => {
@@ -44,6 +47,8 @@ export default function LernantoArangxo() {
   }, [komencota, komencis])
 
   return (
+    <>
+    <RevizioPropono atendi={novaGasto} />
     <Stack
       screenOptions={{
         headerStyle: { backgroundColor: koloroj.primara },
@@ -56,5 +61,6 @@ export default function LernantoArangxo() {
       <Stack.Screen name="(langetoj)" options={{ headerShown: false, contentStyle: { backgroundColor: koloroj.fono } }} />
       <Stack.Screen name="konfirmi" options={{ title: 'Votre compte' }} />
     </Stack>
+    </>
   )
 }

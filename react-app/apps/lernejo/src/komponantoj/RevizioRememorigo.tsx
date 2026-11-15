@@ -1,7 +1,7 @@
 // Réglage du rappel de révision du vocabulaire (#1120), dans le profil : activé ou non, et l'heure (9 h par défaut).
 import { useEffect, useState } from 'react'
-import { Linking, Pressable, Switch, Text, View } from 'react-native'
-import { legiAgordojn, permeso, skribiAgordojn, subtenata, type RevizioAgordoj } from '@/api/sciigoj'
+import { AppState, Linking, Pressable, Switch, Text, View } from 'react-native'
+import { legiAgordojn, permeso, skribiAgordojn, subtenata, type Permeso, type RevizioAgordoj } from '@/api/sciigoj'
 import { Butono } from '@/komponantoj/Bazaj'
 import { koloroj, stiloj } from '@/stiloj'
 
@@ -20,20 +20,30 @@ function HoroButono({ teksto, etikedo, onPress }: { teksto: string; etikedo: str
 
 export function RevizioRememorigo() {
   const [agordoj, setAgordoj] = useState<RevizioAgordoj | null>(null)
-  const [blokita, setBlokita] = useState(false)
+  const [stato, setStato] = useState<Permeso | null>(null)
 
   useEffect(() => {
     if (!subtenata) return
     legiAgordojn().then(setAgordoj)
-    permeso(false).then((p) => setBlokita(p.blokita))
+    permeso(false).then(setStato)
+    // retour depuis les réglages du téléphone : l'autorisation a pu changer
+    const abono = AppState.addEventListener('change', (s) => {
+      if (s === 'active') permeso(false).then(setStato)
+    })
+    return () => abono.remove()
   }, [])
 
   if (!subtenata || !agordoj) return null
 
   async function sxangxi(novaj: RevizioAgordoj) {
     setAgordoj(novaj)
-    if (novaj.sxaltita) setBlokita((await permeso(true)).blokita)
+    if (novaj.sxaltita) setStato(await permeso(true))
     await skribiAgordojn(novaj)
+  }
+
+  async function permesi() {
+    setStato(await permeso(true))
+    await skribiAgordojn(agordoj!)
   }
 
   const horo = `${agordoj.horo} h`
@@ -59,10 +69,16 @@ export function RevizioRememorigo() {
             </Text>
             <HoroButono teksto="+" etikedo="Une heure plus tard" onPress={() => void sxangxi({ ...agordoj, horo: (agordoj.horo + 1) % 24 })} />
           </View>
-          {blokita && (
+          {stato?.blokita && (
             <>
               <Text style={stiloj.eraro}>Les notifications d’iKurso sont bloquées dans les réglages du téléphone.</Text>
               <Butono dua teksto="Ouvrir les réglages" onPress={() => void Linking.openSettings()} />
+            </>
+          )}
+          {stato && !stato.donita && !stato.blokita && (
+            <>
+              <Text style={stiloj.eraro}>Pour recevoir ce rappel, autorisez iKurso à envoyer des notifications.</Text>
+              <Butono teksto="Autoriser les notifications" onPress={() => void permesi()} />
             </>
           )}
         </>

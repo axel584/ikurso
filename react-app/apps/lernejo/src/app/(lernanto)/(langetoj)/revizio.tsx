@@ -1,13 +1,13 @@
 // Révision du vocabulaire : un mot français à la fois, l'élève tape sa traduction en espéranto.
 // Bonne réponse, le mot revient plus tard ; mauvaise, au plus tôt (calcul fait par le serveur).
-import { useCallback, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { ScrollView, Text, View } from 'react-native'
 import { useQueryClient } from '@tanstack/react-query'
 import { router, useFocusEffect } from 'expo-router'
 import { useRevizio, useRevizioRespondo } from '@/api/demandoj'
 import { legiAgordojn, permeso, planigiRevizion } from '@/api/sciigoj'
 import { Butono, Stato } from '@/komponantoj/Bazaj'
-import { EoEnigo } from '@/komponantoj/EoEnigo'
+import { EoEnigo, type EoEnigoRef } from '@/komponantoj/EoEnigo'
 import { useLudi } from '@/komponantoj/Sono'
 import { koloroj, stiloj } from '@/stiloj'
 
@@ -19,6 +19,9 @@ export default function Revizio() {
   const [nuna, setNuna] = useState(0)
   const [respondo, setRespondo] = useState('')
   const [gxustaj, setGxustaj] = useState(0)
+  // le champ garde le focus d'un mot à l'autre : le clavier reste ouvert, l'élève n'a pas à toucher le champ à chaque mot
+  const enigo = useRef<EoEnigoRef>(null)
+  const fokusi = () => setTimeout(() => enigo.current?.focus(), 50)
 
   // rappels de révision (#1120) : l'autorisation est demandée ici, où elle a du sens, si le rappel est activé ;
   // en quittant l'écran, les rappels sont recalculés avec les mots qui restent
@@ -27,7 +30,12 @@ export default function Revizio() {
       legiAgordojn().then((a) => {
         if (a.sxaltita) permeso(true).then(() => planigiRevizion())
       })
-      return () => void planigiRevizion()
+      // retour sur l'onglet : le champ reprend le focus (autoFocus ne joue qu'au premier affichage)
+      const t = fokusi()
+      return () => {
+        clearTimeout(t)
+        void planigiRevizion()
+      }
     }, []),
   )
 
@@ -65,6 +73,7 @@ export default function Revizio() {
     respondi.reset()
     setRespondo('')
     setNuna((n) => n + 1)
+    fokusi()
   }
 
   function rekomenci() {
@@ -103,14 +112,18 @@ export default function Revizio() {
               {vorto.fr}
             </Text>
             {vorto.tipo && <Text style={[stiloj.eta, { textAlign: 'center' }]}>{vorto.tipo}</Text>}
+            {/* le champ reste modifiable pendant l'affichage du résultat (sinon Android ferme le clavier), mais la
+                réponse est figée ; Entrée vérifie, puis passe au mot suivant, sans fermer le clavier */}
             <EoEnigo
+              ref={enigo}
               valoro={respondo}
-              onSxangxo={setRespondo}
+              onSxangxo={rezulto ? () => {} : setRespondo}
               x2u
-              editable={!rezulto}
               placeholder="En espéranto…"
               accessibilityLabel="Traduction en espéranto"
               onSubmitEditing={rezulto ? sekva : kontroli}
+              submitBehavior="submit"
+              returnKeyType="next"
               autoFocus
             />
             {rezulto && (

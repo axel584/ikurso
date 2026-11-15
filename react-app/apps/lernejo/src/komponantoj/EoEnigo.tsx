@@ -1,20 +1,25 @@
 // Champ de réponse : méthode « x » si l'exercice la prévoit (x2u), et rangée de lettres accentuées
 // (ĉ ĝ ĥ ĵ ŝ ŭ) au-dessus du clavier tant que le champ a le focus ; ni l'une ni l'autre pour une réponse en français.
-import { useEffect, useRef, useState, type ComponentRef } from 'react'
+import { useEffect, useImperativeHandle, useRef, useState, type ComponentRef, type Ref } from 'react'
 import { Pressable, Text, TextInput, View, type TextInputProps } from 'react-native'
 import { SUPERSIGNITAJ, xAlUnikodo } from '@/utiloj/eotajpu'
 import { koloroj, stiloj } from '@/stiloj'
+
+// ce que l'écran peut faire du champ : lui redonner le focus (et donc ouvrir le clavier), par ex. au mot suivant
+export type EoEnigoRef = { focus: () => void }
 
 type Props = Omit<TextInputProps, 'value' | 'onChangeText'> & {
   valoro: string
   onSxangxo: (teksto: string) => void
   x2u: boolean
+  ref?: Ref<EoEnigoRef>
 }
 
-export function EoEnigo({ valoro, onSxangxo, x2u, onFocus, onBlur, style, ...aliaj }: Props) {
+export function EoEnigo({ valoro, onSxangxo, x2u, onFocus, onBlur, style, ref, ...aliaj }: Props) {
   const [fokuso, setFokuso] = useState(false)
   const elekto = useRef({ start: valoro.length, end: valoro.length })
   const enigo = useRef<ComponentRef<typeof TextInput>>(null)
+  useImperativeHandle(ref, () => ({ focus: () => enigo.current?.focus() }), [])
   // un appui sur une lettre ne doit pas faire perdre le focus (et donc enregistrer la réponse) au champ
   const literoPremata = useRef(false)
   // la rangée de lettres disparaît un peu après la perte du focus : sinon le bouton suivant remonte sous le doigt

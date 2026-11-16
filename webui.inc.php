@@ -291,7 +291,15 @@ function getBoutonFinSection($kurso,$leciono,$lecionero,$persono_id) {
 		}
 	}
 	if($tipo=="EKZERCARO") { // on memorise (même si on a déjà mémorisé)
-		echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="elles seront envoyées à mon correcteur à la fin de la leçon">Enregistrer mes réponses !</a>';
+		// sans correcteur (toujours le cas en leçon 1), on ne promet pas d'envoi : le correcteur se demande en fin de leçon
+		$korektanto = false;
+		if (!$gasto) {
+			$result = $bdd->prepare("select count(*) from nuna_kurso where kurso=? and studanto=? and korektanto>0");
+			$result->execute(array($kurso,$persono_id));
+			$korektanto = $result->fetchColumn() > 0;
+		}
+		$konsilo = $korektanto ? "elles seront envoyées à mon correcteur à la fin de la leçon" : "à la fin de la leçon, vous pourrez les envoyer à un correcteur";
+		echo '<a id="registriEkzercaron_button" class="waves-effect waves-light btn tooltipped light-blue darken-1 '.$classeDejaFait.'" data-kurso="'.$kurso.'" data-leciono="'.$leciono.'" data-lecionero_id="'.$lecionero_id.'" data-ekdato="'.time().'" data-position="top" data-delay="50" data-tooltip="'.$konsilo.'">Enregistrer mes réponses !</a>';
 	} elseif($lasta==1 && $gasto) { // la correction demande un compte : l'inscription garde le travail déjà fait
 		if ($classeDejaFait=="") { // pas encore envoyée
 			montriMankantajnAvizon($persono_id,$kurso,$leciono,$lecionero,$row["retpagxo"]);

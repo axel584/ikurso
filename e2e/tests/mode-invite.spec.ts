@@ -75,8 +75,8 @@ test.describe('Mode invité', () => {
   })
 
   test('leçon 1 : les textes de la section 6 suivent visiteur, invité et élève connecté', async ({ page }) => {
-    const sansCompte = page.locator('text=Vous pouvez faire les exercices dès maintenant, sans compte')
-    const eleve = page.locator('text=Pour bénéficier de notre service de correction')
+    const sansCompte = page.locator('text=il faut un compte (gratuit)')
+    const eleve = page.locator('text=vous pourrez demander un correcteur bénévole : il recevra ces réponses, vous enverra')
 
     await page.goto(`${LECON_1}?section=6`)
     await expect(sansCompte).toBeVisible()

@@ -139,6 +139,7 @@ diskuto.mp3	diskuto	Robin van der Vliet	CC BY-SA 4.0	https://commons.wikimedia.o
 diversa.mp3	diversa	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-diversa.wav
 doktoro.mp3	doktoro	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-doktoro.wav
 dokumento.mp3	dokumento	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-dokumento.wav
+dolaro.mp3	dolaro	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-dolaro.wav
 dolcxa.mp3	dolĉa	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-dol%C4%89a.wav
 dolori.mp3	dolori	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-dolori.wav
 doloro.mp3	doloro	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-doloro.wav
@@ -157,6 +158,7 @@ due.mp3	due	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q1
 dum.mp3	dum	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-dum.wav
 duone.mp3	duone	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-duone.wav
 ecx.mp3	eĉ	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-e%C4%89.wav
+ekskurso.mp3	ekskurso	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ekskurso.wav
 eksplodi.mp3	eksplodi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-eksplodi.wav
 ekster.mp3	ekster	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ekster.wav
 ekstere.mp3	ekstere	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ekstere.wav
@@ -635,6 +637,7 @@ soldato.mp3	soldato	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/Fi
 solena.mp3	solena	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-solena.wav
 solvi.mp3	solvi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-solvi.wav
 soni.mp3	soni	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-soni.wav
+sovagxa.mp3	sovaĝa	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-sova%C4%9Da.wav
 speciala.mp3	speciala	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-speciala.wav
 speco.mp3	speco	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-speco.wav
 spegulo.mp3	spegulo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-spegulo.wav
@@ -727,6 +730,7 @@ tuta.mp3	tuta	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-
 tute-ne.mp3	tute ne	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-tute_ne.wav
 tute.mp3	tute	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-tute.wav
 ulo.mp3	ulo	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ulo.wav
+universala.mp3	universala	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-universala.wav
 universitato.mp3	universitato	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-universitato.wav
 unu.mp3	unu	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-unu.wav
 unua.mp3	unua	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-unua.wav
@@ -734,6 +738,7 @@ unue.mp3	unue	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-
 unufoje.mp3	unufoje	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-unufoje.wav
 urgxa.mp3	urĝa	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ur%C4%9Da.wav
 usono.mp3	Usono	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-Usono.wav
+utila.mp3	utila	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-utila.wav
 uzi.mp3	uzi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-uzi.wav
 vagono.mp3	vagono	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-vagono.wav
 valori.mp3	valori	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-valori.wav

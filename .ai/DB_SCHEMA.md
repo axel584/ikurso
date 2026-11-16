@@ -27,6 +27,9 @@ Tous les comptes du système (étudiants, correcteurs, administrateurs).
 | `latitudo` | FLOAT(8,6) | Latitude géographique |
 | `longitudo` | FLOAT(8,6) | Longitude géographique |
 | `retadreso` | VARCHAR(128) NOT NULL | Adresse e-mail |
+| `nova_retadreso` | VARCHAR(128) NULL | Nouvelle adresse demandée par l'élève, en attente de validation (#1107, sql/86) ; `retadreso` ne change qu'au clic sur le lien |
+| `nova_retadreso_sxlosilo` | CHAR(64) NULL | Clé du lien de validation (aléatoire, hexadécimal), exclue de l'export |
+| `nova_retadreso_dato` | DATETIME NULL | Date de la demande ; le lien vaut 7 jours (`RetadresoAPI::VALIDECO_TAGOJ`) |
 | `naskigxdato` | DATE | Date de naissance |
 | `rajtoj` | ENUM('P','S','K','A','I','G') | Rôle : P=?, S=Étudiant, K=Correcteur, A=Admin, I=?, G=Invité sans compte (#1092, voir `api/GastoAPI.php`) |
 | `kialo` | TEXT | Raison de l'inscription |

@@ -1384,6 +1384,10 @@ Référence complète : **`api/openapi.yaml`** (OpenAPI 3.0), d'où sont génér
 | `GET /lernado/revizio` | Mots à réviser maintenant (sans la traduction attendue) |
 | `POST /lernado/revizio` | Traduction proposée pour un mot (`vorto_id`, `respondo`) |
 | `POST /lernado/aktivigo` | Renvoie le lien d'activation du compte pas encore activé (409 pour un invité ou un compte activé) |
+| `GET /lernado/retadreso` | Adresse du compte et demande de changement en attente (`atendanta` : `retadreso`, `dato`, `gxis`, ou null) (#1107) |
+| `POST /lernado/retadreso` | Demande de changement d'adresse (`retadreso`, `pasvorto`) : lien envoyé à la nouvelle adresse, l'ancienne reste celle du compte jusqu'au clic (422 : mot de passe, adresse invalide ou déjà utilisée) |
+| `DELETE /lernado/retadreso` | Annule la demande en attente |
+| `POST /lernado/retadreso/resendi` | Renvoie le lien de validation (`resendita` : false sans demande en cours) |
 
 Inscription : `POST /auth/register`, puis activation par le lien reçu par mail. Le choix du cours n'a pas d'appel à lui : l'élève commence le cours qu'il veut, et le correcteur est attribué au premier envoi.
 

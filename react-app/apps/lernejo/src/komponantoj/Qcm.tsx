@@ -6,7 +6,8 @@ import * as Linking from 'expo-linking'
 import { retadreso } from '@/api/kliento'
 import type { QcmDemando } from '@/utiloj/enhavo'
 import { HtmlTeksto } from './HtmlTeksto'
-import { useLudi } from './Sono'
+import { useLudi, useLudiBone } from './Sono'
+import { Steloj } from './Steloj'
 import { koloroj, stiloj } from '@/stiloj'
 
 // Facultatif : « Terminé ! » ne l'attend pas (#1109), mais demande confirmation s'il reste des questions :
@@ -17,6 +18,7 @@ export function Qcm({ demandoj, bildoj, onRestantaj }: { demandoj: QcmDemando[];
   const [elektita, setElektita] = useState<number | null>(null)
   const finita = nuna >= demandoj.length
   const ludi = useLudi()
+  const ludiBone = useLudiBone()
   // une question réussie ne compte plus, même pendant la seconde avant la suivante
   const restantaj = Math.max(0, demandoj.length - nuna - (mesagxo?.bone ? 1 : 0))
   useEffect(() => {
@@ -95,6 +97,7 @@ export function Qcm({ demandoj, bildoj, onRestantaj }: { demandoj: QcmDemando[];
             disabled={mesagxo?.bone}
             onPress={() => {
               setElektita(i + 1)
+              if (i + 1 === d.reponse) ludiBone()
               setMesagxo(
                 i + 1 === d.reponse
                   ? { bone: true, teksto: nuna + 1 === demandoj.length ? 'Bravo, vous avez trouvé toutes les bonnes réponses !' : 'Bravo !' }
@@ -112,6 +115,7 @@ export function Qcm({ demandoj, bildoj, onRestantaj }: { demandoj: QcmDemando[];
           >
             <View style={{ width: 18, height: 18, borderRadius: 9, borderWidth: 2, borderColor: koloroj.blua }} />
             <HtmlTeksto html={p} stilo={{ flex: 1 }} />
+            {jes && mesagxo?.bone && <Steloj stilo={{ left: 17, top: '50%' }} />}
           </Pressable>
         )
       })}

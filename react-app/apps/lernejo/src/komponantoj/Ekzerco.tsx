@@ -9,6 +9,8 @@ import { retadreso } from '@/api/kliento'
 import { useRespondi } from '@/api/demandoj'
 import { EoEnigo } from './EoEnigo'
 import { HtmlTeksto, malkodi, plataTeksto } from './HtmlTeksto'
+import { useLudiBone } from './Sono'
+import { Steloj } from './Steloj'
 import { koloroj, stiloj } from '@/stiloj'
 
 const TEKSTOJ = {
@@ -70,6 +72,10 @@ function Demando({ demando, typo, x2u, t, legebla }: { demando: DemandoT; typo: 
   const respondi = useRespondi()
   const [gxusta, setGxusta] = useState(demando.gxusta)
   const [eraro, setEraro] = useState(false)
+  // bonne réponse qui vient d'être trouvée : étoiles et petit son (une nouvelle clé relance l'effet)
+  const [festo, setFesto] = useState(0)
+  const jamGxusta = useRef(demando.gxusta === true)
+  const ludiBone = useLudiBone()
   const sendita = useRef(demando.respondo !== null ? malkodi(demando.respondo) : null)
   const atendata = useRef<string | null>(null)
 
@@ -87,6 +93,11 @@ function Demando({ demando, typo, x2u, t, legebla }: { demando: DemandoT; typo: 
         onSuccess: (r) => {
           setEraro(false)
           setGxusta(r.gxusta)
+          if (demando.korektebla && r.gxusta === true && !jamGxusta.current) {
+            setFesto((f) => f + 1)
+            ludiBone()
+          }
+          jamGxusta.current = r.gxusta === true
           qc.invalidateQueries({ queryKey: ['resumo'] })
         },
         onError: () => {
@@ -128,6 +139,7 @@ function Demando({ demando, typo, x2u, t, legebla }: { demando: DemandoT; typo: 
           )}
         </>
       )}
+      {festo > 0 && <Steloj key={festo} stilo={{ left: 6, top: 18 }} />}
       {eraro && <Text style={stiloj.eraro}>{t.eraro}</Text>}
       {demando.korekto && (
         <View style={{ backgroundColor: koloroj.helverda, padding: 8, borderRadius: 4 }} testID={`korekto-${demando.id}`}>

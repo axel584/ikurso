@@ -14,6 +14,7 @@ require_once __DIR__ . "/GastoAPI.php";
 require_once __DIR__ . "/AktivigoAPI.php";
 require_once __DIR__ . "/KontoAPI.php";
 require_once __DIR__ . "/RenovigajSxlosilojAPI.php";
+require_once __DIR__ . "/RetadresoAPI.php";
 
 class LernadoAPI {
     private $bdd;
@@ -79,6 +80,11 @@ class LernadoAPI {
                 $this->aktivigilo();
             } elseif ($metodo === 'POST' && $n === 3 && $s[1] === 'konto' && $s[2] === 'forigi') {
                 $this->forigiKonton();
+            } elseif ($n === 2 && $s[1] === 'retadreso') {
+                $this->retadreso($metodo);
+            } elseif ($metodo === 'POST' && $n === 3 && $s[1] === 'retadreso' && $s[2] === 'resendi') {
+                $this->kontroliRetadreson();
+                $this->respondi(200, array("resendita" => (new RetadresoAPI($this->bdd))->resendi($this->persono_id)));
             }
             $this->eraro(404, "Endpoint non trouvé");
         } catch (Throwable $e) {
@@ -133,6 +139,37 @@ class LernadoAPI {
         (new RenovigajSxlosilojAPI($this->bdd))->revokiCxiujn($this->persono_id);
         $konto->forigi($this->persono_id);
         $this->respondi(200, array("forigita" => true));
+    }
+
+    // Changement d'adresse e-mail (#1107), comme retadreso.php sur le site :
+    // GET : adresse du compte et demande en attente ; POST {retadreso, pasvorto} : demande (lien envoyé à la nouvelle adresse) ;
+    // DELETE : annulation. La validation se fait toujours par le lien du mail (retadreso.php).
+    private function retadreso(string $metodo): void {
+        $this->kontroliRetadreson();
+        $api = new RetadresoAPI($this->bdd);
+        if ($metodo === 'POST') {
+            $korpo = $this->korpo();
+            $pasvorto = isset($korpo["pasvorto"]) && is_string($korpo["pasvorto"]) ? $korpo["pasvorto"] : "";
+            $nova = isset($korpo["retadreso"]) && is_string($korpo["retadreso"]) ? $korpo["retadreso"] : "";
+            if (!(new KontoAPI($this->bdd))->pasvortoGxustas($this->persono_id, $pasvorto)) {
+                $this->eraro(422, "Mot de passe incorrect");
+            }
+            $eraro = $api->peti($this->persono_id, $nova);
+            if ($eraro !== "") {
+                $this->eraro(422, $eraro);
+            }
+        } elseif ($metodo === 'DELETE') {
+            $api->nuligi($this->persono_id);
+        } elseif ($metodo !== 'GET') {
+            $this->eraro(405, "Méthode non autorisée");
+        }
+        $this->respondi(200, array("retadreso" => apartigiPersonon($this->persono_id)["retadreso"], "atendanta" => $api->atendanta($this->persono_id)));
+    }
+
+    private function kontroliRetadreson(): void {
+        if ($this->estasGasto()) {
+            $this->eraro(403, "Le mode invité n'a pas d'adresse e-mail");
+        }
     }
 
     private function kurso(string $kodo): void {

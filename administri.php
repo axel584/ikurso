@@ -95,6 +95,25 @@ include "pagxkapo.inc.php";
 		if (isset($_GET["sendita"]) && $celpersono) { ?>
 			<div class="card-panel green lighten-4"><?php echo $_GET["sendita"]=="pasvorto" ? "Un lien pour changer de mot de passe" : "Le lien d’activation"; ?> a été envoyé à <?php echo h($celpersono["retadreso"]); ?>.</div>
 		<?php } ?>
+		<?php // changement d'adresse e-mail demandé par l'élève (#1107)
+		if ($celpersono) {
+			require_once "api/RetadresoAPI.php";
+			$retadresoAtendanta = (new RetadresoAPI($bdd))->atendanta((int)$celpersono_id);
+			$retadresoMesagxoj = array("validi" => "La nouvelle adresse est validée.", "nuligi" => "La demande de changement d’adresse est annulée.",
+				"eraro" => "La nouvelle adresse n’a pas pu être validée (déjà utilisée par un autre compte, ou demande expirée).");
+			if (isset($_GET["retadreso"], $retadresoMesagxoj[$_GET["retadreso"]])) { ?>
+			<div class="card-panel <?php echo $_GET["retadreso"]=="eraro" ? "red" : "green"; ?> lighten-4"><?php echo $retadresoMesagxoj[$_GET["retadreso"]]; ?></div>
+		<?php }
+			if ($retadresoAtendanta) { ?>
+			<div class="card-panel amber lighten-4 retadreso-atendanta">Changement d’adresse en attente&nbsp;: <b><?php echo h($retadresoAtendanta["retadreso"]); ?></b>
+				(demandé le <?php echo date("d/m/Y", strtotime($retadresoAtendanta["dato"])); ?>, lien valable jusqu’au <?php echo date("d/m/Y", strtotime($retadresoAtendanta["gxis"])); ?>)
+				<?php if ($administranto) { ?>
+				<form method="post" action="retadreso.php" style="display:inline"><input type="hidden" name="celpersono_id" value="<?php echo (int)$celpersono_id; ?>"><button type="submit" name="ago" value="validi" class="btn-flat">Valider</button></form>
+				<form method="post" action="retadreso.php" style="display:inline"><input type="hidden" name="celpersono_id" value="<?php echo (int)$celpersono_id; ?>"><button type="submit" name="ago" value="nuligi" class="btn-flat red-text">Annuler</button></form>
+				<?php } ?>
+			</div>
+		<?php }
+		} ?>
 		<?php if ($administriEraro == "sendi") { ?>
 			<div class="card-panel red lighten-4"><?php echo h(isset($_SESSION["administri_eraro"]) ? $_SESSION["administri_eraro"] : "Le mail n’a pas pu être envoyé : ce compte n’a pas d’adresse e-mail."); unset($_SESSION["administri_eraro"]); ?></div>
 		<?php } ?>

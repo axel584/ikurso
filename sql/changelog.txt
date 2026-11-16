@@ -4588,3 +4588,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Cours élémentaire : 41 mots fréquents des leçons 1 à 10 de la méthode de Zagreb absents du cours, écrits dans les pages (1.3, 2.8, 3.3, 3.5, 3.8, 4.5, 5.1, 5.2, 6.8, 6.9, leçon 7, 8.1, 8.6, 9.7, 9.11) et ajoutés au vocabulaire à réviser (#1117) : voir sql/83-mots-zagreb-1117-pages.sql
 --- Lettres accentuées écrites avec un accent combinant (g + ̂ au lieu de ĝ…) remplacées par les caractères précomposés dans les pages des cours élémentaire et PPP et dans quelques exercices : voir sql/84-supersignoj-unikodo.sql
 --- Cours élémentaire : ekde (à partir de, depuis) ajouté à la liste des prépositions de 6.6 et au vocabulaire à réviser, exemple en 7.7 (#1117) : voir sql/85-ekde-1117.sql
+--- Changement d'adresse e-mail par l'élève : nouvelle adresse en attente de validation (#1107) : voir sql/86-retadreso-1107.sql

@@ -262,7 +262,25 @@ if (isset($_GET["aktivigo"])) {
 	
 				<div class="row">
 				<span class="col s4 label">E-mail :</span>
-				<span class="col s6"><?php echo $persono['retadreso'];?></span>
+				<span class="col s6"><?php echo $persono['retadreso'];?>
+<?php
+				// changement d'adresse (#1107) : demande en attente, ou lien pour en faire une
+				require_once "api/RetadresoAPI.php";
+				$retadresoAtendanta = (new RetadresoAPI($bdd))->atendanta((int)$persono['id']);
+				$retadresoMesagxoj = array("petita" => "Un lien de confirmation a été envoyé à la nouvelle adresse.",
+					"resendita" => "Le lien de confirmation a été renvoyé.", "nuligita" => "La demande de changement d’adresse est annulée.");
+				if (isset($_GET['retadreso'], $retadresoMesagxoj[$_GET['retadreso']])) {
+					echo "<br><span class='retadreso-mesagxo green-text'>".$retadresoMesagxoj[$_GET['retadreso']]."</span>";
+				}
+				if ($retadresoAtendanta) { ?>
+					<span class="retadreso-atendanta" style="display:block;margin-top:6px">Adresse en attente de validation&nbsp;: <b><?php echo htmlspecialchars($retadresoAtendanta['retadreso']); ?></b>
+					(lien valable jusqu’au <?php echo date('d/m/Y', strtotime($retadresoAtendanta['gxis'])); ?>)</span>
+					<form method="post" action="retadreso.php" style="display:inline"><input type="hidden" name="ago" value="resendi"><button type="submit" class="btn-flat blue-text" style="padding:0 8px">Renvoyer le lien</button></form>
+					<form method="post" action="retadreso.php" style="display:inline"><input type="hidden" name="ago" value="nuligi"><button type="submit" class="btn-flat red-text" style="padding:0 8px">Annuler</button></form>
+<?php			} else { ?>
+					<br><a href="retadreso.php" class="retadreso-ligilo">Changer d’adresse e-mail</a>
+<?php			} ?>
+				</span>
 			</div>
 	
 				<div class="row">

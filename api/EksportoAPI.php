@@ -9,7 +9,7 @@ class EksportoAPI {
     const VERSIO = 1;
 
     // Ces colonnes ne sont pas exportées : ce sont des secrets, pas des informations sur l'élève.
-    const KASITAJ_KOLUMNOJ = array("pasvorto_md5", "aktivigo");
+    const KASITAJ_KOLUMNOJ = array("pasvorto_md5", "aktivigo", "nova_retadreso_sxlosilo");
 
     // table => [colonne qui désigne l'élève, description]
     const TABELOJ = array(

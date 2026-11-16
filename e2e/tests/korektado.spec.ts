@@ -108,3 +108,32 @@ test("une fois la leçon envoyée, l'avertissement de fin de leçon disparaît",
   await expect(page.locator('#petiKorektanton_button.disabled, #sendiLecionon_button.disabled')).toHaveCount(1)
   await expect(page.locator('.mankantaj')).toHaveCount(0)
 })
+
+// Exercice remanié (questions supprimées puis réécrites) : un élève qui a fait l'ancienne version puis la nouvelle
+// ne doit pas voir les deux mélangées sur la page de correction ; l'ancienne version reste visible si c'est la seule faite.
+test.describe('exercice remanié', () => {
+  const MALNOVA = () => sql("SELECT id FROM ekzerceroj WHERE kodo='ekz07_01' AND forigita=1")
+  const NOVA = () => sql("SELECT id FROM ekzerceroj WHERE kodo='ekz07_35' AND forigita=0")
+  const malnovaRespondo = 'épouse, se marier, ex-mari, mariés'
+  const novaRespondo = 'épouse (nouvelle version)'
+
+  test('les réponses à l’ancienne version sont cachées si l’élève a fait la nouvelle', async ({ page }) => {
+    const lernanto = LERNANTO_ID()
+    sql(`INSERT INTO respondoj (persono_id, ekzercero_id, respondo, normaligita) VALUES
+      (${lernanto}, ${MALNOVA()}, '${malnovaRespondo}', '${malnovaRespondo}'),
+      (${lernanto}, ${NOVA()}, '${novaRespondo}', '${novaRespondo}')`)
+    await login(page, USERS.korektanto)
+    await page.goto(`korektiLecionon.php?numleciono=7&kurso=CG&studanto=${lernanto}`)
+    await expect(page.getByText(novaRespondo, { exact: true })).toHaveCount(1)
+    await expect(page.getByText(malnovaRespondo, { exact: true })).toHaveCount(0)
+  })
+
+  test('les réponses à l’ancienne version restent visibles si c’est la seule faite', async ({ page }) => {
+    const lernanto = LERNANTO_ID()
+    sql(`INSERT INTO respondoj (persono_id, ekzercero_id, respondo, normaligita) VALUES
+      (${lernanto}, ${MALNOVA()}, '${malnovaRespondo}', '${malnovaRespondo}')`)
+    await login(page, USERS.korektanto)
+    await page.goto(`korektiLecionon.php?numleciono=7&kurso=CG&studanto=${lernanto}`)
+    await expect(page.getByText(malnovaRespondo, { exact: true })).toHaveCount(1)
+  })
+})

@@ -97,9 +97,11 @@ while ($row=$result->fetch()) {
 	echo "<strong>EXERCICE : </strong>".$row["komando"];
 	echo "</p>";
 	$ekzerco_id = $row["id"];
-	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.respondo as bona_respondo,ekzerceroj.normaligita as normaligita_bona_respondo,respondoj.respondo,respondoj.normaligita as normaligita_lernanta_respondo,respondoj.gxusta,respondoj.korekto,ekzerceroj.poentoj,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id and respondoj.persono_id=? where ekzerceroj.ekzerco_id=? and (ekzerceroj.forigita=0 or respondoj.id is not null) order by ekzerceroj.numero";
+	// questions supprimées (exercice remanié) : leurs réponses ne s'affichent que si l'élève n'a pas répondu à la
+	// nouvelle version de l'exercice ; sinon les deux versions se mélangeraient, numéro par numéro
+	$query2 = "select respondoj.id as respondo_id,ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.respondo as bona_respondo,ekzerceroj.normaligita as normaligita_bona_respondo,respondoj.respondo,respondoj.normaligita as normaligita_lernanta_respondo,respondoj.gxusta,respondoj.korekto,ekzerceroj.poentoj,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id and respondoj.persono_id=? where ekzerceroj.ekzerco_id=? and (ekzerceroj.forigita=0 or (respondoj.id is not null and not exists (select 1 from ekzerceroj e2 join respondoj r2 on r2.ekzercero_id=e2.id and r2.persono_id=? where e2.ekzerco_id=ekzerceroj.ekzerco_id and e2.forigita=0 and trim(r2.respondo)<>''))) order by ekzerceroj.numero";
 	$result2 = $bdd->prepare($query2);
-	$result2->execute(array($studanto_id,$ekzerco_id));
+	$result2->execute(array($studanto_id,$ekzerco_id,$studanto_id));
 	while ($row2=$result2->fetch()) {
 		// question sans réponse : affichée à sa place, sans rien à corriger (#1022)
 		if ($row2["respondo_id"]===null || trim((string)$row2["respondo"])==="") {

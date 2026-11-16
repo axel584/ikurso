@@ -71,9 +71,10 @@ while ($row=$result->fetch()) {
 	echo "<strong>EXERCICE : </strong>".$row["komando"];
 	echo "</p>";
 	$ekzerco_id = $row["id"];
-	$query2 = "select ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.poentoj,respondoj.respondo,respondoj.gxusta,respondoj.korekto,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=? and ekzerceroj.ekzerco_id=? order by ekzerceroj.numero";
+	// réponses aux questions supprimées seulement si l'élève n'a pas fait la nouvelle version de l'exercice
+	$query2 = "select ekzerceroj.numero,ekzerceroj.demando,ekzerceroj.poentoj,respondoj.respondo,respondoj.gxusta,respondoj.korekto,respondoj.poentoj as lernanta_poentoj from ekzerceroj left join respondoj on ekzerceroj.id=respondoj.ekzercero_id where persono_id=? and ekzerceroj.ekzerco_id=? and (ekzerceroj.forigita=0 or not exists (select 1 from ekzerceroj e2 join respondoj r2 on r2.ekzercero_id=e2.id and r2.persono_id=? where e2.ekzerco_id=ekzerceroj.ekzerco_id and e2.forigita=0 and trim(r2.respondo)<>'')) order by ekzerceroj.numero";
 	$result2 = $bdd->prepare($query2);
-	$result2->execute(array($studanto_id,$ekzerco_id));
+	$result2->execute(array($studanto_id,$ekzerco_id,$studanto_id));
 	while ($row2=$result2->fetch()) {
 		echo "<p>".$row2["numero"].". ".$row2["demando"];
 		// on affiche les points s'il y en a

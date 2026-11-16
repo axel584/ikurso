@@ -202,6 +202,7 @@ class IaKorektadoAPI {
 
     // La leçon telle que la voit le modèle (sans nom ni adresse de l'élève), et pour chaque question envoyée
     // (r1, r2…) la réponse de l'élève en base et le nombre de points de la question. Null s'il n'y a aucune réponse.
+    // Réponses aux questions supprimées (exercice remanié) seulement si l'élève n'a pas fait la nouvelle version.
     public function leciono(int $persono_id, int $leciono_id): ?array {
         $demando = $this->bdd->prepare("SELECT l.kurso, l.numero, l.titolo AS leciono_titolo, le.titolo AS lecionero_titolo,
                 e.id AS ekzerco_id, e.komando, e.komando_detalo, e.ekzemplo, e.typo,
@@ -210,8 +211,11 @@ class IaKorektadoAPI {
             JOIN ekzerceroj er ON er.ekzerco_id = e.id
             JOIN respondoj r ON r.ekzercero_id = er.id AND r.persono_id = ?
             WHERE l.id = ? AND (r.forigita = 0 OR r.forigita IS NULL) AND TRIM(r.respondo) <> ''
+              AND (er.forigita = 0 OR NOT EXISTS (SELECT 1 FROM ekzerceroj er2
+                  JOIN respondoj r2 ON r2.ekzercero_id = er2.id AND r2.persono_id = ?
+                  WHERE er2.ekzerco_id = er.ekzerco_id AND er2.forigita = 0 AND TRIM(r2.respondo) <> ''))
             ORDER BY le.ordo, e.id, er.numero, r.id");
-        $demando->execute(array($persono_id, $leciono_id));
+        $demando->execute(array($persono_id, $leciono_id, $persono_id));
         $vicoj = $demando->fetchAll(PDO::FETCH_ASSOC);
         if (!$vicoj) {
             return null;

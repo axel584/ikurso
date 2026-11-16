@@ -1,4 +1,5 @@
 import { test, expect, type Page } from '@playwright/test'
+import { finiRetejo } from '../helpers/fini'
 import { login, USERS } from '../helpers/auth'
 import { cron, resetTestData, sql } from '../helpers/db'
 import { clearMails, linkFromMail, waitForMail } from '../helpers/mailhog'
@@ -59,7 +60,7 @@ test.describe('Mode invité', () => {
 
   test('« Terminé ! » marque la section, passe à la suivante et ajoute les mots à réviser', async ({ page }) => {
     await page.goto(`${LECON_1}?section=2`)
-    await page.locator('#finiLecioneron_button').click()
+    await finiRetejo(page)
     await expect(page).toHaveURL(/lec01\.php\?section=3/)
 
     const id = gastoId()
@@ -212,7 +213,7 @@ test.describe('Mode invité', () => {
     expect(evenements.filter((e) => e.includes('Invité créé'))).toHaveLength(1)
 
     await page.goto(`${LECON_1}?section=2`)
-    await page.locator('#finiLecioneron_button').click()
+    await finiRetejo(page)
     await expect(page).toHaveURL(/section=3/)
     expect(evenements).toContain('trackEvent / Cours / Section terminée / CG leçon 1')
 

@@ -1,4 +1,5 @@
 import { test, expect, type Page } from '@playwright/test'
+import { finiAplikajxo } from '../helpers/fini'
 import { resetTestData, sql } from '../helpers/db'
 import { clearMails, linkFromMail, waitForMail } from '../helpers/mailhog'
 
@@ -29,7 +30,7 @@ async function komenciGaste(page: Page) {
 
 async function fini(page: Page, ordo: number) {
   await expect(page.getByRole('heading', { name: new RegExp(`^1\\.${ordo}\\. `) })).toBeVisible()
-  await page.getByText('Terminé !').click()
+  await finiAplikajxo(page)
 }
 
 async function respondi(page: Page, teksto: string) {
@@ -159,13 +160,13 @@ test('le rappel d’inscription s’affiche par-dessus une longue section, et un
        WHERE l.kurso = 'CG' AND l.numero = 1 AND le.ordo <= 3`)
   await page.goto('lernejo/sekcio/9')
   await expect(page.getByRole('heading', { name: /^2\.2\. / })).toBeVisible()
-  await page.getByText('Terminé !').click()
+  await finiAplikajxo(page)
   await expect(page.getByTestId('rememorigo')).toBeInViewport()
 
   // quitté sans répondre : il ne revient pas à la section suivante
   await page.goto('lernejo/sekcio/11')
   await expect(page.getByRole('heading', { name: /^2\.4\. / })).toBeVisible()
-  await page.getByText('Terminé !').click()
+  await finiAplikajxo(page)
   await expect(page.getByRole('heading', { name: /^2\.5\. / })).toBeVisible()
   await expect(page.getByTestId('rememorigo')).toHaveCount(0)
 })
@@ -175,7 +176,15 @@ test('section à QCM : « Terminé ! » est là sans faire le QCM, qui reste fac
   await page.goto('lernejo/sekcio/10')
   await expect(page.getByRole('heading', { name: /^2\.3\. / })).toBeVisible()
   await expect(page.getByTestId('qcm')).toBeVisible()
+  // QCM pas fini : confirmation sur la page ; « Finir le QCM » reste, « Passer à la suite » continue
   await page.getByText('Terminé !').click()
+  const konfirmo = page.getByTestId('qcm-konfirmo')
+  await expect(konfirmo).toContainText('Il reste 6 questions au QCM de cette page.')
+  await konfirmo.getByRole('button', { name: 'Finir le QCM' }).click()
+  await expect(konfirmo).toHaveCount(0)
+  await expect(page.getByRole('heading', { name: /^2\.3\. / })).toBeVisible()
+  await page.getByText('Terminé !').click()
+  await page.getByTestId('qcm-konfirmo').getByRole('button', { name: 'Passer à la suite' }).click()
   await expect(page.getByRole('heading', { name: /^2\.4\. / })).toBeVisible()
 })
 

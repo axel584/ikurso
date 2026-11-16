@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import { finiRetejo } from '../helpers/fini'
 import { login, USERS } from '../helpers/auth'
 import { resetTestData } from '../helpers/db'
 
@@ -30,7 +31,7 @@ test('Gerda malaperis et Lasu min paroli plu renvoient vers leur début', async 
 
 test('l’encadré disparaît dès que le visiteur a commencé (invité) et pour un élève connecté', async ({ page }) => {
   await page.goto('fr/cge/lec01.php?section=1')
-  await page.locator('#finiLecioneron_button').click()
+  await finiRetejo(page)
   await expect(page).toHaveURL(/lec01\.php\?section=2$/)
   await expect(page.locator('#gasto_avizo')).toBeVisible()
   await expect(page.locator('#vizitanto_avizo')).toHaveCount(0)

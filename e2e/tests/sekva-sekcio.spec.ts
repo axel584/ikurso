@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import { finiRetejo } from '../helpers/fini'
 import { login, USERS } from '../helpers/auth'
 import { resetTestData, sql } from '../helpers/db'
 
@@ -19,7 +20,7 @@ test('sections 1 et 3 terminées : « Terminé ! » sur la 2 mène à la 4', asy
   finitaj([1, 3])
   await login(page, USERS.lernanto)
   await page.goto('fr/cge/lec01.php?section=2')
-  await page.locator('#finiLecioneron_button').click()
+  await finiRetejo(page)
   await expect(page).toHaveURL(/lec01\.php\?section=4$/)
 })
 
@@ -27,7 +28,7 @@ test('toutes les sections suivantes terminées : « Terminé ! » mène à la se
   finitaj([1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13])
   await login(page, USERS.lernanto)
   await page.goto('fr/cge/lec01.php?section=2')
-  await page.locator('#finiLecioneron_button').click()
+  await finiRetejo(page)
   await expect(page).toHaveURL(/lec01\.php\?section=3$/)
 })
 
@@ -47,6 +48,37 @@ test('section à QCM : « Terminé ! » est là sans faire le QCM, qui reste fac
   await page.goto('fr/cge/lec01.php?section=8')
   await expect(page.locator('.qcm_demando').first()).toBeVisible()
   await expect(page.locator('#finiLecioneron_button')).toBeVisible()
+  // QCM pas fini : confirmation sur la page, puis « Passer à la suite »
   await page.locator('#finiLecioneron_button').click()
+  await expect(page.locator('#qcm_konfirmo')).toContainText('Il reste 10 questions au QCM de cette page.')
+  await expect(page).toHaveURL(/lec01\.php\?section=8$/)
+  await page.locator('#qcm_preterpasi').click()
   await expect(page).toHaveURL(/lec01\.php\?section=9$/)
+})
+
+test('QCM pas fini : « Finir le QCM » reste sur la page, le compte suit les bonnes réponses', async ({ page }) => {
+  finitaj([1, 2, 3, 4, 5, 6, 7])
+  await login(page, USERS.lernanto)
+  await page.goto('fr/cge/lec01.php?section=8')
+  await page.locator('.qcm_demando:visible .qcm_ok').click({ force: true })
+  await expect(page.locator('.qcm_demando').nth(1)).toBeVisible()
+  await page.locator('#finiLecioneron_button').click()
+  await expect(page.locator('#qcm_konfirmo')).toContainText('Il reste 9 questions')
+  await page.locator('#qcm_fini').click()
+  await expect(page.locator('#qcm_konfirmo')).toHaveCount(0)
+  await expect(page).toHaveURL(/lec01\.php\?section=8$/)
+})
+
+test('QCM fini : « Terminé ! » passe directement à la suite', async ({ page }) => {
+  finitaj([1])
+  await login(page, USERS.lernanto)
+  await page.goto('fr/cge/lec01.php?section=2')
+  const demandoj = await page.locator('.qcm_demando').count()
+  for (let i = 0; i < demandoj; i++) {
+    await expect(page.locator('.qcm_demando').nth(i)).toBeVisible()
+    await page.locator('.qcm_demando').nth(i).locator('.qcm_ok').click({ force: true })
+  }
+  await expect(page.locator('#recapitulatif_qcm')).toBeVisible()
+  await page.locator('#finiLecioneron_button').click()
+  await expect(page).toHaveURL(/lec01\.php\?section=3$/)
 })

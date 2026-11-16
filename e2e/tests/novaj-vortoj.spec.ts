@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import { finiRetejo } from '../helpers/fini'
 import { login, USERS } from '../helpers/auth'
 import { resetTestData, sql } from '../helpers/db'
 
@@ -17,7 +18,7 @@ test('après une section avec des mots, l’encadré invite à les réviser une 
   await login(page, USERS.lernanto)
   await page.goto('fr/cge/lec01.php?section=2')
   await expect(page.locator('.novaj-vortoj')).toHaveCount(0)
-  await page.locator('#finiLecioneron_button').click()
+  await finiRetejo(page)
   await expect(page).toHaveURL(/lec01\.php\?section=3$/)
 
   const kadro = page.locator('.novaj-vortoj')
@@ -33,7 +34,7 @@ test('après une section avec des mots, l’encadré invite à les réviser une 
 test('après une section sans mots, pas d’encadré', async ({ page }) => {
   await login(page, USERS.lernanto)
   await page.goto('fr/cge/lec01.php?section=1')
-  await page.locator('#finiLecioneron_button').click()
+  await finiRetejo(page)
   await expect(page).toHaveURL(/lec01\.php\?section=2$/)
   await expect(page.locator('.novaj-vortoj')).toHaveCount(0)
 })

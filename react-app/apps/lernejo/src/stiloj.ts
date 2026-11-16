@@ -12,6 +12,7 @@ export const koloroj = {
   helverda: '#E8F5E9',
   rugxa: '#c62828',
   helrugxa: '#FFEBEE',
+  helflava: '#FFF8E1', // avertissement (confirmation avant de quitter un QCM pas fini)
   // gris chauds du site (.primaire.moyen, .primaire.fond)
   griza: '#75706B',
   helgriza: '#DDDCDA',

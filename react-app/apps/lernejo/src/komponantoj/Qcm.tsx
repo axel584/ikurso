@@ -9,13 +9,19 @@ import { HtmlTeksto } from './HtmlTeksto'
 import { useLudi } from './Sono'
 import { koloroj, stiloj } from '@/stiloj'
 
-// Facultatif : « Terminé ! » ne l'attend pas (#1109).
-export function Qcm({ demandoj, bildoj }: { demandoj: QcmDemando[]; bildoj: boolean }) {
+// Facultatif : « Terminé ! » ne l'attend pas (#1109), mais demande confirmation s'il reste des questions :
+// onRestantaj donne à l'écran le nombre de questions pas encore réussies.
+export function Qcm({ demandoj, bildoj, onRestantaj }: { demandoj: QcmDemando[]; bildoj: boolean; onRestantaj?: (n: number) => void }) {
   const [nuna, setNuna] = useState(0)
   const [mesagxo, setMesagxo] = useState<{ bone: boolean; teksto: string } | null>(null)
   const [elektita, setElektita] = useState<number | null>(null)
   const finita = nuna >= demandoj.length
   const ludi = useLudi()
+  // une question réussie ne compte plus, même pendant la seconde avant la suivante
+  const restantaj = Math.max(0, demandoj.length - nuna - (mesagxo?.bone ? 1 : 0))
+  useEffect(() => {
+    onRestantaj?.(restantaj)
+  }, [restantaj, onRestantaj])
 
   useEffect(() => {
     if (!mesagxo?.bone) return

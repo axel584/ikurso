@@ -1,5 +1,5 @@
 // Une section de leçon : son contenu, ses exercices et QCM, puis « Terminé ! » qui mène à la section suivante.
-import { useCallback, useMemo, useRef, useState } from 'react'
+import { useCallback, useMemo, useRef, useState, type ComponentRef } from 'react'
 import { ScrollView, Text, View } from 'react-native'
 import { Stack, router, useLocalSearchParams } from 'expo-router'
 import * as Linking from 'expo-linking'
@@ -34,6 +34,13 @@ export default function Sekcio() {
   const unuaDeSekva = sekvaLeciono?.sekcioj[0]?.id ?? null
 
   const partoj = useMemo(() => (s ? dividi(s.enhavo) : []), [s])
+  // QCM pas finis (questions restantes par QCM) : « Terminé ! » demande alors confirmation, sur la page
+  const [restantaj, setRestantaj] = useState<Record<number, number>>({})
+  const [konfirmo, setKonfirmo] = useState(false)
+  const rulumo = useRef<ComponentRef<typeof ScrollView>>(null)
+  const qcmY = useRef<Record<number, number>>({})
+  const restantajEntute = Object.values(restantaj).reduce((a, b) => a + b, 0)
+  const onRestantaj = useCallback((i: number, n: number) => setRestantaj((r) => (r[i] === n ? r : { ...r, [i]: n })), [])
   const ludi = useCallback(async (url: string) => ludiSonon(url), [ludiSonon])
   const malfermi = useCallback(async (url: string) => {
     await Linking.openURL(url)
@@ -71,7 +78,7 @@ export default function Sekcio() {
   }
 
   return (
-    <ScrollView style={stiloj.ekrano} contentContainerStyle={stiloj.enhavo} keyboardShouldPersistTaps="handled">
+    <ScrollView ref={rulumo} style={stiloj.ekrano} contentContainerStyle={stiloj.enhavo} keyboardShouldPersistTaps="handled">
       <Stack.Screen options={{ title: s ? `Leçon ${s.leciono}` : 'Section' }} />
       <Stato sxargxas={isLoading} eraro={error}>
         {s && (
@@ -101,7 +108,11 @@ export default function Sekcio() {
                   return ekzerco ? <Ekzerco key={`${s.id}-${i}`} ekzerco={ekzerco} /> : null
                 }
                 case 'qcm':
-                  return <Qcm key={`${s.id}-${i}`} demandoj={p.demandoj} bildoj={p.bildoj} />
+                  return (
+                    <View key={`${s.id}-${i}`} onLayout={(e) => (qcmY.current[i] = e.nativeEvent.layout.y)}>
+                      <Qcm demandoj={p.demandoj} bildoj={p.bildoj} onRestantaj={(n) => onRestantaj(i, n)} />
+                    </View>
+                  )
                 case 'korelativoj':
                   return <Korelativoj key={`${s.id}-${i}`} datumoj={p.datumoj} />
                 case 'resumo':
@@ -130,10 +141,41 @@ export default function Sekcio() {
                     iri(s.sekva ?? unuaDeSekva)
                     return
                   }
+                  if (restantajEntute > 0 && !konfirmo) {
+                    setKonfirmo(true)
+                    return
+                  }
+                  setKonfirmo(false)
                   fini.mutate({ id: s.id, ekdato: ekdato.current }, { onSuccess: (r) => postFino(r.sekva ?? unuaDeSekva) })
                 }}
               />
             </View>
+            {konfirmo && restantajEntute > 0 && !s.finita && (
+              <View style={[stiloj.karto, { backgroundColor: koloroj.helflava, gap: 8 }]} testID="qcm-konfirmo" accessibilityLiveRegion="polite">
+                <Text style={stiloj.teksto}>
+                  {restantajEntute > 1 ? `Il reste ${restantajEntute} questions au QCM de cette page.` : 'Il reste une question au QCM de cette page.'}{' '}
+                  Voulez-vous le terminer avant de passer à la suite ?
+                </Text>
+                <View style={{ flexDirection: 'row', gap: 12, flexWrap: 'wrap' }}>
+                  <Butono
+                    teksto="Finir le QCM"
+                    onPress={() => {
+                      setKonfirmo(false)
+                      const i = Object.keys(restantaj).map(Number).find((k) => restantaj[k] > 0)
+                      if (i !== undefined && qcmY.current[i] !== undefined) rulumo.current?.scrollTo({ y: Math.max(0, qcmY.current[i] - 12), animated: true })
+                    }}
+                  />
+                  <Butono
+                    dua
+                    teksto="Passer à la suite"
+                    onPress={() => {
+                      setKonfirmo(false)
+                      fini.mutate({ id: s.id, ekdato: ekdato.current }, { onSuccess: (r) => postFino(r.sekva ?? unuaDeSekva) })
+                    }}
+                  />
+                </View>
+              </View>
+            )}
             {fini.error && <Text style={stiloj.eraro}>{fini.error.message}</Text>}
             {post !== undefined && <Rememorigo onPlusTard={() => finiRememorigon(false)} onAligxi={() => finiRememorigon(true)} />}
             {s.finita && <Text style={[stiloj.eta, { color: koloroj.verda }]}>✓ Section terminée</Text>}

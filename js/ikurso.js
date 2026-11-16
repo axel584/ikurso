@@ -49,6 +49,7 @@ function spuri(kategorio, ago, nomo) {
 
     // QCM
     $( ".qcm_ok" ).click(function() {
+      $(this).closest(".qcm_demando").addClass("farita"); // compté par la confirmation de « Terminé ! »
       var $lasta = $(this).data("lasta");
       if (!$lasta) {
         M.toast({html: 'Bravo !', classes: 'bravo'});
@@ -91,6 +92,7 @@ function spuri(kategorio, ago, nomo) {
         M.toast({html: 'Mauvaise réponse, essayez encore !'});
       } else {
         // bonne réponse
+        $("#"+$id).closest(".qcm_demando").addClass("farita");
       if (!$lasta) {
         // il reste d'autres questions, on passe à la suite;
         M.toast({html: 'Bravo !', classes: 'bravo'});
@@ -692,6 +694,39 @@ $("#novigi_pasvorton_sendi_button").click(function () {
 
 	
 
+	// « Terminé ! » alors que le QCM de la page n'est pas fini : sans doute un clic par erreur (le QCM a beaucoup
+	// de questions sur certaines pages). Le QCM reste facultatif (#1109) : on demande seulement confirmation, sur la page.
+	$("#finiLecioneron_button").click(function(e) {
+		var restantaj = $(".qcm_demando").not(".farita").length;
+		if (restantaj > 0 && !$(this).data("qcm-akceptita")) {
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			montriQcmKonfirmon(restantaj);
+		}
+	});
+	function montriQcmKonfirmon(restantaj) {
+		$("#qcm_konfirmo").remove();
+		var teksto = restantaj > 1 ? "Il reste " + restantaj + " questions au QCM de cette page." : "Il reste une question au QCM de cette page.";
+		var $kesto = $("<div id='qcm_konfirmo' class='card-panel amber lighten-5' role='alert'></div>")
+			.append($("<p></p>").text(teksto + " Voulez-vous le terminer avant de passer à la suite ?"))
+			.append($("<a href='#!' class='btn waves-effect waves-light light-blue darken-1' id='qcm_fini'>Finir le QCM</a>"))
+			.append(" ")
+			.append($("<a href='#!' class='btn-flat waves-effect' id='qcm_preterpasi'>Passer à la suite</a>"));
+		$("#finiLecioneron_button").after($kesto);
+		$("#qcm_fini").click(function(e) {
+			e.preventDefault();
+			$("#qcm_konfirmo").remove();
+			var $nuna = $(".qcm_demando:visible").first();
+			if ($nuna.length) {
+				$("html, body").animate({scrollTop: Math.max(0, $nuna.offset().top - 80)}, 300);
+			}
+		});
+		$("#qcm_preterpasi").click(function(e) {
+			e.preventDefault();
+			$("#qcm_konfirmo").remove();
+			$("#finiLecioneron_button").data("qcm-akceptita", true).click();
+		});
+	}
 	$("#finiLecioneron_button").click(function() {
 		$("#finiLecioneron_button").addClass("disabled");
 		$.ajax({

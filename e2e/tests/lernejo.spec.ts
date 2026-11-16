@@ -1,4 +1,5 @@
 import { test, expect, type Page } from '@playwright/test'
+import { finiAplikajxo } from '../helpers/fini'
 import { login, USERS } from '../helpers/auth'
 import { resetTestData, sql } from '../helpers/db'
 import { clearMails, waitForMail } from '../helpers/mailhog'
@@ -90,7 +91,7 @@ test('un élève suit la leçon 1 complète sur /lernejo, jusqu’au retour de s
       await solviQcm(page)
     }
     if (ordo < 13) {
-      await page.getByText('Terminé !').click()
+      await finiAplikajxo(page)
     }
   }
 
@@ -128,7 +129,7 @@ test('un élève suit la leçon 1 complète sur /lernejo, jusqu’au retour de s
     sql(`SELECT CONCAT(t.intereso, '/', t.malfacileco, ' ', t.komento) FROM takso_leciono t JOIN lecionoj l ON l.id = t.leciono_id
       WHERE t.persono_id = ${LERNANTO} AND l.kurso = 'CG' AND l.numero = 1 ORDER BY t.id DESC LIMIT 1`),
   ).toBe('4/2 Bonega leciono')
-  await page.getByText('Terminé !').click()
+  await finiAplikajxo(page)
   // la dernière section terminée mène à la leçon suivante
   await expect(page.getByRole('heading', { name: /^2\.1\. / })).toBeVisible()
   await page.goto('lernejo/kurso/CG')
@@ -179,7 +180,7 @@ test('contenu : sons des leçons par le lecteur de l’application, liens et ima
 test('révision du vocabulaire dans l’application', async ({ page }) => {
   await ensaluti(page)
   await page.goto('lernejo/sekcio/3')
-  await page.getByText('Terminé !').click()
+  await finiAplikajxo(page)
   await expect(page.getByRole('heading', { name: /^1\.4\. / })).toBeVisible()
   const nombro = Number(sql(`SELECT COUNT(*) FROM personoj_vortoj WHERE persono_id = ${LERNANTO}`))
   expect(nombro).toBeGreaterThan(0)

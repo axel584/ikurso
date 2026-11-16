@@ -110,7 +110,7 @@ class GastoAPI {
         $this->ekzekuti("UPDATE personoj_vortoj SET persono_id = ? WHERE persono_id = ?", array($persono_id, $gasto_id));
         $this->ekzekuti("UPDATE personoj_vortoj_respondoj SET persono_id = ?, dato = dato WHERE persono_id = ?", array($persono_id, $gasto_id));
 
-        (new KontoAPI($this->bdd))->forigi($gasto_id);
+        (new KontoAPI($this->bdd))->forigi($gasto_id, false);
     }
 
     // Invités sans activité depuis $monatoj mois, supprimés avec leurs données. Renvoie leur nombre.
@@ -120,7 +120,7 @@ class GastoAPI {
         $ids = $demando->fetchAll(PDO::FETCH_COLUMN);
         $konto = new KontoAPI($this->bdd);
         foreach ($ids as $id) {
-            $konto->forigi((int)$id);
+            $konto->forigi((int)$id, false); // un invité n'a pas de correcteur
         }
         return count($ids);
     }

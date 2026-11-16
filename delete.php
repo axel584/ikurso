@@ -12,7 +12,12 @@ $celpersono_id=isset($_GET["celpersono_id"])?$_GET["celpersono_id"]:$celpersono_
 $validperson=isset($_POST["validperson"])?$_POST["validperson"]:"";
 $erarkodo = isset($_GET['erarkodo']) ? $_GET['erarkodo'] : "";
 $celpersono = apartigiPersonon($celpersono_id);
+// correcteurs de l'élève à prévenir (#1108), relevés avant l'effacement ; case cochée par défaut dans le formulaire
+require_once "api/KontoAPI.php";
+$konto = new KontoAPI($bdd);
+$korektantoj = ($celpersono_id!="" && $celpersono && KontoAPI::rajtasForigi($celpersono)) ? $konto->korektantojPorAverti((int)$celpersono_id) : array();
 if (($celpersono_id!="") && ($validperson==$celpersono["enirnomo"])) {
+	$averti = isset($_POST["averti"]) ? $korektantoj : array();
 	$stmt = $bdd->prepare("delete from personoj where id=?");
 	$stmt->execute([$celpersono_id]);
 	$stmt = $bdd->prepare("delete from nuna_kurso where korektanto=?");
@@ -33,6 +38,7 @@ if (($celpersono_id!="") && ($validperson==$celpersono["enirnomo"])) {
 	$stmt->execute([$celpersono_id]);
 	$stmt = $bdd->prepare("delete from personoj_vortoj_respondoj where persono_id=?");
 	$stmt->execute([$celpersono_id]);
+	$konto->avertiKorektantojn($averti);
 	header("Location:administri.php?validi=jes"); exit;
 }
 header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
@@ -46,6 +52,9 @@ include "pagxkapo.inc.php";
 				<form method="post" action="delete.php">
 					<input type="text" name="validperson"> 
 					<input type="hidden" name="celpersono_id" value="<?php echo $celpersono_id?>"> 
+<?php if ($korektantoj) { ?>
+					<p><label><input type="checkbox" name="averti" value="1" checked><span>Prévenir son correcteur de ne plus le contacter (<?php echo htmlspecialchars(implode(", ", array_column($korektantoj, "enirnomo"))); ?>)</span></label></p>
+<?php } ?>
 					<input type="submit" value="Confirmer">
 				</form>
    		</article>

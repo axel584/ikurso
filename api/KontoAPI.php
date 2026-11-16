@@ -6,6 +6,7 @@
 // gardé son export peut ainsi être remis en base à l'identique.
 
 require_once __DIR__ . "/EksportoAPI.php";
+require_once __DIR__ . "/IaKorektadoAPI.php";
 
 class KontoAPI {
     private $bdd;
@@ -26,12 +27,63 @@ class KontoAPI {
         return is_string($md5) && hash_equals($md5, md5($pasvorto));
     }
 
-    public function forigi(int $persono_id): void {
+    // $avertiKorektantojn : prévenir les correcteurs de l'élève (#1108) ; faux pour un invité fusionné dans un vrai compte.
+    public function forigi(int $persono_id, bool $avertiKorektantojn = true): void {
+        // relevés avant l'effacement, qui emporte nuna_kurso et le nom de l'élève
+        $averti = $avertiKorektantojn ? $this->korektantojPorAverti($persono_id) : array();
         // Les tables sont en MyISAM (pas de transaction) : personoj est supprimée en dernier,
         // pour qu'une interruption laisse un compte encore visible et donc à supprimer de nouveau.
         foreach (array_reverse(EksportoAPI::TABELOJ) as $tabelo => list($kolumno)) {
             $demando = $this->bdd->prepare("DELETE FROM `$tabelo` WHERE `$kolumno` = ?");
             $demando->execute(array($persono_id));
+        }
+        $this->avertiKorektantojn($averti);
+    }
+
+    // Correcteurs bénévoles attribués à l'élève (#1108), un par correcteur avec ses cours, et de quoi reconnaître l'élève :
+    // identifiant et prénom (pas son adresse : le mail ne doit pas recréer de données personnelles).
+    // Le correcteur IA n'a personne à prévenir.
+    public function korektantojPorAverti(int $persono_id): array {
+        $demando = $this->bdd->prepare("SELECT k.id, k.enirnomo, k.personnomo, k.retadreso, nk.kurso, ku.nomo AS kursonomo,
+                s.enirnomo AS s_enirnomo, s.personnomo AS s_personnomo
+            FROM nuna_kurso nk
+            JOIN personoj k ON k.id = nk.korektanto
+            JOIN personoj s ON s.id = nk.studanto
+            LEFT JOIN kursoj ku ON ku.kodo = nk.kurso
+            WHERE nk.studanto = ? AND nk.korektanto > 0 AND k.id <> s.id AND k.enirnomo <> ? AND k.retadreso <> ''
+            ORDER BY k.id, nk.id");
+        $demando->execute(array($persono_id, IaKorektadoAPI::ENIRNOMO));
+        $korektantoj = array();
+        foreach ($demando->fetchAll(PDO::FETCH_ASSOC) as $v) {
+            $id = (int)$v["id"];
+            if (!isset($korektantoj[$id])) {
+                $korektantoj[$id] = array("id" => $id, "enirnomo" => $v["enirnomo"], "personnomo" => $v["personnomo"],
+                    "retadreso" => $v["retadreso"], "s_enirnomo" => $v["s_enirnomo"], "s_personnomo" => $v["s_personnomo"],
+                    "kursoj" => array());
+            }
+            $kurso = $v["kursonomo"] !== null && $v["kursonomo"] !== "" ? $v["kursonomo"] : $v["kurso"];
+            if (!in_array($kurso, $korektantoj[$id]["kursoj"], true)) {
+                $korektantoj[$id]["kursoj"][] = $kurso;
+            }
+        }
+        return array_values($korektantoj);
+    }
+
+    // Un mail par correcteur, noté dans son compte rendu (celui de l'élève vient d'être effacé).
+    public function avertiKorektantojn(array $korektantoj): void {
+        if (!$korektantoj) {
+            return;
+        }
+        $sxablono = file_get_contents(__DIR__ . "/../mails/forigitaKonto.html");
+        $h = function ($t) { return htmlspecialchars((string)$t, ENT_QUOTES, "UTF-8"); };
+        foreach ($korektantoj as $k) {
+            $personnomo = trim((string)$k["s_personnomo"]);
+            $kursoj = implode(", ", $k["kursoj"]);
+            $teksto = str_replace(array("##KNOMO##", "##SENIRNOMO##", "##SPERSONNOMO##", "##KURSOJ##"),
+                array($h(trim((string)$k["personnomo"]) !== "" ? $k["personnomo"] : $k["enirnomo"]), $h($k["s_enirnomo"]),
+                    $personnomo !== "" ? " (".$h($personnomo).")" : "", $h($kursoj)), $sxablono);
+            mailViaSES($k["retadreso"], "Votre élève ".$k["s_enirnomo"]." a supprimé son compte", $teksto);
+            protokolo($k["id"], "COMPTE SUPPRIMÉ", "élève ".$k["s_enirnomo"]." (".$kursoj.") a supprimé son compte : correcteur prévenu");
         }
     }
 

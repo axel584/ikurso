@@ -158,6 +158,7 @@ due.mp3	due	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q1
 dum.mp3	dum	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-dum.wav
 duone.mp3	duone	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-duone.wav
 ecx.mp3	eĉ	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-e%C4%89.wav
+ekde.mp3	ekde	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ekde.wav
 ekskurso.mp3	ekskurso	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ekskurso.wav
 eksplodi.mp3	eksplodi	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-eksplodi.wav
 ekster.mp3	ekster	Lepticed7	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:LL-Q143_(epo)-Lepticed7-ekster.wav

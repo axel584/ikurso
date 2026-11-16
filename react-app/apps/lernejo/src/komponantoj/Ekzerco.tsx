@@ -16,9 +16,9 @@ const TEKSTOJ = {
     titolo: 'EXERCICE',
     x2u: 'Pour obtenir une lettre accentuée, tapez la lettre suivie d’un x : cx, sx, ux… donnent ĉ, ŝ, ŭ…',
     korektebla:
-      'Plusieurs réponses sont possibles. Si vous indiquez l’une des bonnes réponses, elle sera marquée en vert. Si elle ne l’est pas, elle n’est pas forcément fausse : votre correcteur vous donnera des explications.',
+      'Plusieurs réponses sont possibles. Si vous indiquez l’une des bonnes réponses, elle sera marquée en vert. Si elle ne l’est pas, elle n’est pas forcément fausse : si vous avez un correcteur, il vous donnera des explications.',
     nekorektebla:
-      'Cet exercice ne peut pas être corrigé automatiquement. Votre correcteur vous donnera des explications sur vos réponses.',
+      'Cet exercice ne peut pas être corrigé automatiquement. Si vous avez un correcteur, il vous donnera des explications sur vos réponses (vous pouvez en demander un à la fin de la leçon).',
     ekzemploj: 'Exemples :',
     bone: 'Bonne réponse',
     eraro: 'Réponse non enregistrée, réessayez.',
@@ -27,8 +27,8 @@ const TEKSTOJ = {
     titolo: 'EKZERCO',
     x2u: 'Por la ĉapelitaj literoj, tajpu la literon kaj x : cx, sx, ux… donas ĉ, ŝ, ŭ…',
     korektebla:
-      'Pluraj respondoj ĝustas. Se vi respondas unu el ili, ĝi verdiĝos. Se via respondo ne verdiĝas, tio ne signifas ke vi eraris : via korektanto klarigos al vi.',
-    nekorektebla: 'Tiu ekzerco ne aŭtomate korekteblas. Via korektanto klarigos al vi ĉu viaj respondoj ĝustas aŭ ne.',
+      'Pluraj respondoj ĝustas. Se vi respondas unu el ili, ĝi verdiĝos. Se via respondo ne verdiĝas, tio ne signifas ke vi eraris : se vi havas korektanton, tiu klarigos al vi.',
+    nekorektebla: 'Tiu ekzerco ne aŭtomate korekteblas. Se vi havas korektanton, tiu klarigos al vi ĉu viaj respondoj ĝustas aŭ ne.',
     ekzemploj: 'Ekzemploj :',
     bone: 'Ĝusta respondo',
     eraro: 'Respondo ne registrita, reprovu.',

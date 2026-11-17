@@ -102,6 +102,13 @@ if (!empty($segments)) {
         require_once 'api/LernadoAPI.php';
         $api = new LernadoAPI($bdd, $urlracine);
         $api->handleRequest();
+    } elseif ($segments[0] === 'qcm') {
+        // Réponses aux QCM des pages (statistiques anonymes) : site et application, avec ou sans compte
+        define('IKURSO_SEN_SESIO', true);
+        require_once 'util.php';
+        require_once 'api/QcmAPI.php';
+        $api = new QcmAPI($bdd);
+        $api->handleRequest();
     } else {
         // Endpoint non trouvé
         http_response_code(404);

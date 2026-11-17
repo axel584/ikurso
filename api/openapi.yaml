@@ -297,6 +297,35 @@ paths:
         '400': { $ref: '#/components/responses/Eraro' }
         '401': { $ref: '#/components/responses/Eraro' }
         '404': { $ref: '#/components/responses/Eraro' }
+  /qcm:
+    post:
+      tags: [lernado]
+      summary: Clic sur une proposition d'un QCM de page, pour les statistiques des questions difficiles (anonymes, sans compte requis)
+      security: [{}, { bearer: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [lecionero_id, demando, propono, provo, fonto]
+              properties:
+                lecionero_id: { type: integer, description: 'Section (lecioneroj.id) qui contient le QCM' }
+                demando: { type: integer, description: 'Rang de la question dans le QCM, à partir de 1' }
+                propono: { type: integer, description: 'Rang de la proposition choisie, à partir de 1' }
+                provo: { type: integer, description: '1 pour le premier essai sur la question, 2 pour le deuxième…' }
+                fonto: { type: string, enum: [retejo, apo] }
+      responses:
+        '200':
+          description: Clic enregistré
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [gxusta]
+                properties:
+                  gxusta: { type: boolean }
+        '400': { $ref: '#/components/responses/Eraro' }
   /lernado/lecionoj/{kurso}/{numero}/resumo:
     get:
       tags: [lernado]

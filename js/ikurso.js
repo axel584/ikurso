@@ -48,7 +48,26 @@ function spuri(kategorio, ago, nomo) {
 
 
     // QCM
+    // Chaque clic sur une proposition est envoyé pour les statistiques des questions difficiles (anonymes,
+    // api/QcmAPI.php) : sans attendre la réponse, et un envoi raté ne change rien pour l'élève.
+    function sendiQcmRespondon($input) {
+      var lecionero = parseInt($input.closest(".qcm").data("lecionero"), 10);
+      if (!lecionero || !window.fetch) return;
+      var $demando = $input.closest(".qcm_demando");
+      var provo = ($demando.data("provoj") || 0) + 1;
+      $demando.data("provoj", provo);
+      try {
+        fetch($cheminAbsolu + "api.php?path=qcm", {
+          method: "POST", credentials: "same-origin", keepalive: true,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ lecionero_id: lecionero, demando: $demando.index() + 1,
+            propono: parseInt($input.val(), 10), provo: provo, fonto: "retejo" })
+        }).catch(function() {});
+      } catch (e) {}
+    }
+
     $( ".qcm_ok" ).click(function() {
+      sendiQcmRespondon($(this));
       $(this).closest(".qcm_demando").addClass("farita"); // compté par la confirmation de « Terminé ! »
       var $lasta = $(this).data("lasta");
       if (!$lasta) {
@@ -71,6 +90,7 @@ function spuri(kategorio, ago, nomo) {
     });
 
     $( ".qcm_nok" ).click(function() {
+       sendiQcmRespondon($(this));
        // indice de la proposition choisie (QCM, champ "indices"), sinon le message habituel
        var indico = $(this).data("indico");
        if (indico) {

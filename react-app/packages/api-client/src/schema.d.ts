@@ -558,6 +558,60 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/qcm": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Clic sur une proposition d'un QCM de page, pour les statistiques des questions difficiles (anonymes, sans compte requis) */
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": {
+                        /** @description Section (lecioneroj.id) qui contient le QCM */
+                        lecionero_id: number;
+                        /** @description Rang de la question dans le QCM, à partir de 1 */
+                        demando: number;
+                        /** @description Rang de la proposition choisie, à partir de 1 */
+                        propono: number;
+                        /** @description 1 pour le premier essai sur la question, 2 pour le deuxième… */
+                        provo: number;
+                        /** @enum {string} */
+                        fonto: "retejo" | "apo";
+                    };
+                };
+            };
+            responses: {
+                /** @description Clic enregistré */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            gxusta: boolean;
+                        };
+                    };
+                };
+                400: components["responses"]["Eraro"];
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/lernado/lecionoj/{kurso}/{numero}/resumo": {
         parameters: {
             query?: never;

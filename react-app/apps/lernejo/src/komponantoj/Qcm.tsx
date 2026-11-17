@@ -1,9 +1,10 @@
 // QCM d'auto-évaluation (##QCM## et ##QCM_BILDOJ##), corrigé sur l'appareil comme sur le site (js/ikurso.js) :
 // une question à la fois, on recommence jusqu'à la bonne réponse, puis le récapitulatif.
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Image, Pressable, Text, View } from 'react-native'
 import * as Linking from 'expo-linking'
 import { retadreso } from '@/api/kliento'
+import { sendiQcmRespondon } from '@/api/demandoj'
 import type { QcmDemando } from '@/utiloj/enhavo'
 import { HtmlTeksto } from './HtmlTeksto'
 import { useLudi, useLudiBone } from './Sono'
@@ -12,13 +13,26 @@ import { koloroj, stiloj } from '@/stiloj'
 
 // Facultatif : « Terminé ! » ne l'attend pas (#1109), mais demande confirmation s'il reste des questions :
 // onRestantaj donne à l'écran le nombre de questions pas encore réussies.
-export function Qcm({ demandoj, bildoj, onRestantaj }: { demandoj: QcmDemando[]; bildoj: boolean; onRestantaj?: (n: number) => void }) {
+// lecioneroId : section du QCM ; chaque clic est envoyé pour les statistiques des questions difficiles (anonymes).
+export function Qcm({
+  demandoj,
+  bildoj,
+  lecioneroId,
+  onRestantaj,
+}: {
+  demandoj: QcmDemando[]
+  bildoj: boolean
+  lecioneroId?: number
+  onRestantaj?: (n: number) => void
+}) {
   const [nuna, setNuna] = useState(0)
   const [mesagxo, setMesagxo] = useState<{ bone: boolean; teksto: string } | null>(null)
   const [elektita, setElektita] = useState<number | null>(null)
   const finita = nuna >= demandoj.length
   const ludi = useLudi()
   const ludiBone = useLudiBone()
+  // essais sur la question en cours (1 au premier clic)
+  const provoj = useRef(0)
   // une question réussie ne compte plus, même pendant la seconde avant la suivante
   const restantaj = Math.max(0, demandoj.length - nuna - (mesagxo?.bone ? 1 : 0))
   useEffect(() => {
@@ -30,6 +44,7 @@ export function Qcm({ demandoj, bildoj, onRestantaj }: { demandoj: QcmDemando[];
     const tempo = setTimeout(() => {
       setMesagxo(null)
       setElektita(null)
+      provoj.current = 0
       setNuna((n) => n + 1)
     }, 1000)
     return () => clearTimeout(tempo)
@@ -97,6 +112,8 @@ export function Qcm({ demandoj, bildoj, onRestantaj }: { demandoj: QcmDemando[];
             disabled={mesagxo?.bone}
             onPress={() => {
               setElektita(i + 1)
+              provoj.current += 1
+              if (lecioneroId) sendiQcmRespondon({ lecionero_id: lecioneroId, demando: nuna + 1, propono: i + 1, provo: provoj.current })
               if (i + 1 === d.reponse) ludiBone()
               setMesagxo(
                 i + 1 === d.reponse

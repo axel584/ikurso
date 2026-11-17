@@ -110,7 +110,7 @@ export default function Sekcio() {
                 case 'qcm':
                   return (
                     <View key={`${s.id}-${i}`} onLayout={(e) => (qcmY.current[i] = e.nativeEvent.layout.y)}>
-                      <Qcm demandoj={p.demandoj} bildoj={p.bildoj} onRestantaj={(n) => onRestantaj(i, n)} />
+                      <Qcm demandoj={p.demandoj} bildoj={p.bildoj} lecioneroId={s.id} onRestantaj={(n) => onRestantaj(i, n)} />
                     </View>
                   )
                 case 'korelativoj':

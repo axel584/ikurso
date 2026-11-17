@@ -154,3 +154,9 @@ export function useAktivigilo() {
     mutationFn: () => datumoj(kliento.POST('/lernado/aktivigo')),
   })
 }
+
+// Clic sur une proposition d'un QCM de page, pour les statistiques des questions difficiles (anonymes) :
+// sans attendre la réponse, et un envoi raté (hors connexion…) ne change rien pour l'élève.
+export function sendiQcmRespondon(peto: { lecionero_id: number; demando: number; propono: number; provo: number }) {
+  kliento.POST('/qcm', { body: { ...peto, fonto: 'apo' } }).catch(() => {})
+}

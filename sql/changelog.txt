@@ -4590,3 +4590,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Cours élémentaire : ekde (à partir de, depuis) ajouté à la liste des prépositions de 6.6 et au vocabulaire à réviser, exemple en 7.7 (#1117) : voir sql/85-ekde-1117.sql
 --- Changement d'adresse e-mail par l'élève : nouvelle adresse en attente de validation (#1107) : voir sql/86-retadreso-1107.sql
 --- Page 1.6 (premier exercice) : ce que deviennent les réponses (vérifiées automatiquement, correcteur à demander à la fin de la leçon, avec un compte) : voir sql/87-pagxo-1-6-korektanto.sql
+--- Réponses aux QCM des pages, pour les statistiques des questions difficiles (anonymes, site et application) : voir sql/88-qcm-respondoj.sql

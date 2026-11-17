@@ -505,6 +505,22 @@ Une ligne par élève et par cours (#627, `api/KorektadaElektoAPI.php`, `sql/63`
 | `atendas` | TINYINT(1) | 1 : correcteur connu pas encore retrouvé (liste « Correcteurs connus à retrouver » de `administri.php`, administrateurs prévenus par mail) ; remis à 0 quand un administrateur attribue un correcteur |
 | `dato` | DATETIME NOT NULL | Dernier choix |
 
+### `qcm_respondoj` — Réponses aux QCM des pages
+
+Une ligne par clic sur une proposition d'un QCM de page (`api/QcmAPI.php`, `sql/88`), sur le site (`js/ikurso.js`) ou dans l'application (`Qcm.tsx`), avec ou sans compte. Statistiques anonymes (pas d'élève), lues par `statLauxQcm.php` (questions les plus difficiles). InnoDB.
+
+| Colonne | Type | Description |
+|---|---|---|
+| `id` | INT AUTO_INCREMENT | PK |
+| `lecionero_id` | INT NOT NULL | Section qui contient le QCM (`lecioneroj.id`, marqueur `##QCM:…##` ou `##QCM_BILDOJ:…##`) |
+| `demando` | TINYINT UNSIGNED | Rang de la question dans le QCM, à partir de 1 |
+| `spuro` | CHAR(32) | md5 de la question (texte, image, propositions, réponse attendue) au moment du clic : une question modifiée repart de zéro |
+| `propono` | TINYINT UNSIGNED | Rang de la proposition choisie, à partir de 1 |
+| `gxusta` | TINYINT(1) | 1 si c'est la bonne réponse (jugé par le serveur) |
+| `provo` | TINYINT UNSIGNED | 1 pour le premier essai sur la question, 2 pour le deuxième… |
+| `fonto` | CHAR(1) | `R` site, `A` application |
+| `dato` | DATETIME | Date du clic |
+
 ---
 
 ## Relations principales

@@ -3,12 +3,13 @@ import { login, USERS } from '../helpers/auth'
 import { resetTestData } from '../helpers/db'
 
 // Statistiques des correcteurs (statLaux*.php), passées sous Materialize (#1075) :
-// quatre onglets, réservés aux correcteurs et aux administrateurs.
+// cinq onglets, réservés aux correcteurs et aux administrateurs.
 const ONGLETS = [
   { nomo: 'Par catégorie', url: /statLauxKategorio\.php/, titolo: 'Élèves et correcteurs par cours' },
   { nomo: 'Par mois', url: /statLauxMonato\.php/, titolo: 'Élèves par mois' },
   { nomo: 'Par pays', url: /statLauxLando\.php/, titolo: 'Élèves en cours par pays' },
   { nomo: 'Par cours', url: /statLauxKurso\.php/, titolo: 'Élèves par cours et par leçon' },
+  { nomo: 'QCM', url: /statLauxQcm\.php/, titolo: 'Questions des QCM les plus difficiles' },
 ]
 
 test.beforeEach(() => {
@@ -32,7 +33,7 @@ test('un élève et un visiteur n’ont pas accès aux statistiques', async ({ p
   expect(anonima.headers()['location']).toContain('erarkodo=8')
   await login(page, USERS.lernanto)
   await page.goto('index.php')
-  for (const pagxo of ['statLauxKategorio.php', 'statLauxMonato.php', 'statLauxLando.php', 'statLauxKurso.php']) {
+  for (const pagxo of ['statLauxKategorio.php', 'statLauxMonato.php', 'statLauxLando.php', 'statLauxKurso.php', 'statLauxQcm.php']) {
     const respondo = await page.request.get(pagxo, { maxRedirects: 0 })
     expect(respondo.headers()['location'], pagxo).toContain('erarkodo=4')
   }

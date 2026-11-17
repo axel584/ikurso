@@ -11,7 +11,8 @@ $persono = apartigiPersonon($persono_id);
 if (!$persono || ($persono["rajtoj"]!='A' && $persono["rajtoj"]!='K')) {header("Location:index.php?erarkodo=4"); exit;}
 $statistikojAPI = new StatistikojAPI($bdd);
 $temoj = array("kategorio" => array("statLauxKategorio.php", "Par catégorie"), "monato" => array("statLauxMonato.php", "Par mois"),
-	"lando" => array("statLauxLando.php", "Par pays"), "kurso" => array("statLauxKurso.php", "Par cours"));
+	"lando" => array("statLauxLando.php", "Par pays"), "kurso" => array("statLauxKurso.php", "Par cours"),
+	"qcm" => array("statLauxQcm.php", "QCM"));
 
 function procento(int $kiom, int $entute): string {
 	return $entute > 0 ? number_format(100 * $kiom / $entute, 1, ",", "&nbsp;")."&nbsp;%" : "";

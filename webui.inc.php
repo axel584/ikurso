@@ -45,7 +45,7 @@ function displayWarningSiLecioneroManquante($persono_id,$kurso,$leciono,$lecione
 // Les adresses du contenu sont relatives à la racine du site : on les fait précéder de $vojo.
 function montriLecioneron($kurso,$leciono,$section,$persono_id) {
 	global $bdd, $vojo;
-	$result = $bdd->prepare("SELECT lecioneroj.enhavo FROM lecioneroj JOIN lecionoj ON lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso=? AND lecionoj.numero=? AND lecioneroj.ordo=?");
+	$result = $bdd->prepare("SELECT lecioneroj.id, lecioneroj.enhavo FROM lecioneroj JOIN lecionoj ON lecioneroj.leciono_id=lecionoj.id WHERE lecionoj.kurso=? AND lecionoj.numero=? AND lecioneroj.ordo=?");
 	$result->execute(array($kurso,$leciono,$section));
 	$row = $result->fetch();
 	if (!$row) {
@@ -62,14 +62,14 @@ function montriLecioneron($kurso,$leciono,$section,$persono_id) {
 			$ekzerco = explode(":", $partoj[$i+1]);
 			getEkzercon((int)$ekzerco[0],$persono_id,isset($ekzerco[1]) ? $ekzerco[1] : "fr");
 		} elseif ($partoj[$i] == "QCM") {
-			QCM(json_decode($partoj[$i+1], true));
+			QCM(json_decode($partoj[$i+1], true), (int)$row["id"]);
 		} elseif ($partoj[$i] == "QCM_BILDOJ") {
 			$qcm = json_decode($partoj[$i+1], true);
 			foreach ($qcm as &$demando) {
 				$demando["bildo"] = $vojo.$demando["bildo"];
 			}
 			unset($demando);
-			QCM_bildoj($qcm);
+			QCM_bildoj($qcm, (int)$row["id"]);
 		} elseif ($partoj[$i] == "KORELATIVOJ") {
 			korelativaSkemo(json_decode($partoj[$i+1], true));
 		} else {
@@ -710,8 +710,9 @@ function qcmIndico($question, $indiceProposition) {
 	return $indico === "" ? "" : " data-indico=\"".htmlspecialchars($indico, ENT_QUOTES, "UTF-8")."\"";
 }
 
-function QCM_bildoj($qcm) {
-	echo "<div class='qcm' id='carousel_qcm'>";
+function QCM_bildoj($qcm, $lecionero_id = 0) {
+	// data-lecionero : page du QCM, pour enregistrer les réponses (api/QcmAPI.php)
+	echo "<div class='qcm' id='carousel_qcm' data-lecionero='".(int)$lecionero_id."'>";
 	$indiceQuestion= 1;
 	foreach ($qcm as $question) {
 		if ($indiceQuestion==1) {
@@ -763,8 +764,9 @@ function QCM_bildoj($qcm) {
 	echo "</div>\n";
 }
 
-function QCM($qcm) {
-	echo "<div class='qcm' id='carousel_qcm'>";
+function QCM($qcm, $lecionero_id = 0) {
+	// data-lecionero : page du QCM, pour enregistrer les réponses (api/QcmAPI.php)
+	echo "<div class='qcm' id='carousel_qcm' data-lecionero='".(int)$lecionero_id."'>";
 	$indiceQuestion= 1;
 	foreach ($qcm as $question) {
 		if ($indiceQuestion==1) {

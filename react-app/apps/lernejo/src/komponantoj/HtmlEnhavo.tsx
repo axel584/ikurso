@@ -155,6 +155,14 @@ ${kolumnoj('s')}
 .ikurso-enhavo .ikono{margin-right:.35em}
 .ikurso-enhavo .creditphoto{font-size:.7rem;margin-top:0}
 .ikurso-enhavo .responsive-img{max-width:100%;height:auto}
+/* images des récits de PP (.rakonto), comme style/ikurso.css sur téléphone : flottantes à droite (flot-d) ou à gauche
+   (flot-g), largeur s-NN % ; les marges négatives écrites dans la page (pour la marge du site) sortaient de l'écran */
+.ikurso-enhavo .rakonto::after{content:"";display:block;clear:both}
+.ikurso-enhavo .flot-d{float:right;margin:0 0 1em 1em!important}
+.ikurso-enhavo .flot-g{float:left;margin:0 1em 1em 0!important}
+.ikurso-enhavo .s-25{max-width:25%}.ikurso-enhavo .s-30{max-width:30%}.ikurso-enhavo .s-40{max-width:40%}
+.ikurso-enhavo .s-50{max-width:50%}.ikurso-enhavo .s-70{max-width:70%}
+.ikurso-enhavo .s-100{max-width:100%;float:none;display:block;margin:0 auto 1em!important}
 .ikurso-enhavo video.vidbendo{display:block;width:100%;max-width:560px;height:auto;margin:.5em 0;background:#000}
 .ikurso-enhavo iframe.video-relajso{display:block;width:100%;max-width:560px;height:auto;aspect-ratio:16/9;border:0;margin:.5em 0;background:#000}
 .ikurso-enhavo a.sm2_button{display:inline-block;width:1.6em;height:1.6em;border-radius:50%;background:#2196F3;vertical-align:middle;position:relative;text-decoration:none}

@@ -1,6 +1,6 @@
 // Données des écrans (TanStack Query) : une fonction par appel de l'API élève.
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import type { components } from '@ikurso/api-client'
+import type { components, Sekcio } from '@ikurso/api-client'
 import { datumoj, kliento } from './kliento'
 import { kasxmemorita, malfresxigi } from './kasxmemoro'
 
@@ -61,10 +61,24 @@ export function useMi() {
 }
 
 // Réponse à une question : enregistrée et corrigée par le serveur.
+// La section gardée en mémoire est mise à jour aussi : en y revenant dans l'application, l'écran repart de cette
+// copie (les champs ne se remplissent qu'à leur création) et sans cela la réponse semblait perdue.
 export function useRespondi() {
+  const qc = useQueryClient()
   return useMutation({
     mutationFn: (peto: { ekzercero_id: number; respondo: string }) =>
       datumoj(kliento.POST('/lernado/respondoj', { body: peto })),
+    onSuccess: (r, peto) => {
+      qc.setQueriesData<Sekcio>({ queryKey: ['sekcio'] }, (s) =>
+        s && {
+          ...s,
+          ekzercoj: s.ekzercoj.map((e) => ({
+            ...e,
+            demandoj: e.demandoj.map((d) => (d.id === peto.ekzercero_id ? { ...d, respondo: peto.respondo, gxusta: r.gxusta } : d)),
+          })),
+        },
+      )
+    },
   })
 }
 

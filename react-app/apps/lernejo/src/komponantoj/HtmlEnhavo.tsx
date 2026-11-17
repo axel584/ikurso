@@ -103,6 +103,9 @@ const STILO = `
 /* la WebView prend la taille de son contenu (matchContents) : un contenu plus large que l'écran l'élargissait,
    et tout le texte de la section sortait de l'écran ; le contenu ne dépasse plus jamais la largeur */
 html,body{margin:0;padding:0;background:transparent;max-width:100%;overflow-x:hidden}
+/* sur le téléphone, Expo place le contenu dans un #root en flex : sans min-width:0, le cadre ne peut pas être plus
+   étroit que son élément le plus large (tableau des corrélatifs, surtout avec une police agrandie) et le texte sort */
+.ikurso-enhavo{flex:1 1 0%;min-width:0;max-width:100%}
 .ikurso-enhavo{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;color:#212121;overflow-wrap:break-word}
 .ikurso-enhavo *{box-sizing:border-box}
 .ikurso-enhavo h1,.ikurso-enhavo h2,.ikurso-enhavo h3{font-weight:500;line-height:1.3;margin:1em 0 .5em}
@@ -116,7 +119,9 @@ html,body{margin:0;padding:0;background:transparent;max-width:100%;overflow-x:hi
 .ikurso-enhavo ul{padding-left:1.5em}
 /* marge négative à gauche seulement : le texte des colonnes reste aligné sur les paragraphes sans dépasser à droite */
 .ikurso-enhavo .row{display:flex;flex-wrap:wrap;margin:0 0 0 -.5rem}
-.ikurso-enhavo .col{width:100%;min-width:0;padding:0 .5rem;overflow-wrap:normal}
+/* une colonne étroite (col s2, s3) n'est jamais plus étroite que son mot le plus long (ĉokolado, fragotorteto avec une police
+   agrandie) : la grille passe à la ligne au lieu que le mot déborde sur la colonne voisine ou hors de l'écran */
+.ikurso-enhavo .col{width:100%;min-width:min-content;padding:0 .5rem;overflow-wrap:normal}
 ${kolumnoj('s')}
 @media (min-width:601px){${kolumnoj('m')}}
 @media (min-width:993px){${kolumnoj('l')}}

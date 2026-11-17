@@ -6,6 +6,7 @@ require_once "../api/AgordojAPI.php";
 require_once "../api/SaviezvousAPI.php";
 require_once "../api/KorektadaElektoAPI.php";
 require_once "../api/RevizioRememorigoAPI.php";
+require_once "../api/RememorigoAPI.php";
 malfermidatumbazon();
 
 function dauxroTeksto(int $sekundoj): string {
@@ -123,10 +124,10 @@ foreach ($aktivigoAPI->rememorigendaj() as $persono_id) {
 	$aktivigoAPI->sendiAktivigilon($persono_id, "aktivigiRememorigo.html", "Activez votre compte pour commencer à apprendre l'espéranto", "rememorigo", AktivigoAPI::REMEMORIGO);
 }
 
+$rememorigoAPI = new RememorigoAPI($bdd);
 // Premier rappel au bout de 6 jours
-$query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_agordoj on personoj_agordoj.persono_id=personoj.id and personoj_agordoj.agordo='RAPPEL' and personoj_agordoj.rajto=1 join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 6 DAY)";
-$result = $bdd->query($query);
- while($row = $result->fetch()) {
+// dernière activité : dernière page terminée ou dernière révision du vocabulaire (api/RememorigoAPI.php)
+foreach ($rememorigoAPI->ricevontoj(6) as $row) {
  	// on verifie si l'élève a pas déjà fini son cours :
  	if (jamFinisKurson($row["id"])) {
  		continue;
@@ -162,9 +163,8 @@ $result = $bdd->query($query);
 	mailViaSES($row["retadreso"],"Cours d'espéranto",$contents,$malaboni);
 }
 // Deuxième rappel au bout de 10 jours
-$query = "select personoj.id,personoj.enirnomo,personoj.personnomo,personoj.familinomo,retadreso, CAST(max(personoj_lecioneroj.dato) as date) as lasteniro from personoj join personoj_agordoj on personoj_agordoj.persono_id=personoj.id and personoj_agordoj.agordo='RAPPEL' and personoj_agordoj.rajto=1 join personoj_lecioneroj on personoj_lecioneroj.persono_id=personoj.id group by id,enirnomo,personnomo,familinomo,retadreso having lasteniro=DATE_SUB(CURDATE(), INTERVAL 10 DAY)";
-$result = $bdd->query($query);
- while($row = $result->fetch()) {
+// dernière activité : dernière page terminée ou dernière révision du vocabulaire (api/RememorigoAPI.php)
+foreach ($rememorigoAPI->ricevontoj(10) as $row) {
  	// on verifie si l'élève a pas déjà fini son cours :
  	if (jamFinisKurson($row["id"])) {
  		continue;

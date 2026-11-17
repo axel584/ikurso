@@ -17,7 +17,7 @@ export default function HtmlEnhavo({ html, radiko, ludi, malfermi }: Props) {
   const ujo = useRef<HTMLDivElement>(null)
   // adresses relatives à la racine du site, comme $vojo dans montriLecioneron()
   const absoluta = useMemo(() => {
-    const h = ikonoj(html).replace(/\b(href|src|poster)=(["'])(?![a-z]+:|#|\/)/gi, `$1=$2${radiko}/`)
+    const h = tabeloj(ikonoj(html)).replace(/\b(href|src|poster)=(["'])(?![a-z]+:|#|\/)/gi, `$1=$2${radiko}/`)
     return telefone() ? videojPerRelajso(h, radiko) : h
   }, [html, radiko])
 
@@ -70,6 +70,12 @@ function ikonoj(html: string): string {
   )
 }
 
+// Un tableau plus large que l'écran (corrélatifs à 5 colonnes…) faisait glisser toute la page de gauche à droite
+// dans la WebView : chaque tableau a maintenant son propre cadre qui défile seul, comme .korelativoj sur le site.
+function tabeloj(html: string): string {
+  return html.replace(/<table\b/gi, '<div class="tabelujo"><table').replace(/<\/table>/gi, '</table></div>')
+}
+
 // Dans la WebView du téléphone (page locale, sans adresse de site), le lecteur YouTube intégré refuse de se charger
 // (« Erreur 153 ») : la vidéo passe par la page relais lernejo/video.html du site, que YouTube accepte.
 function telefone(): boolean {
@@ -94,19 +100,23 @@ const kolumnoj = (prefikso: string) =>
   }).join('')
 
 const STILO = `
-html,body{margin:0;padding:0;background:transparent}
+/* la WebView prend la taille de son contenu (matchContents) : un contenu plus large que l'écran l'élargissait,
+   et tout le texte de la section sortait de l'écran ; le contenu ne dépasse plus jamais la largeur */
+html,body{margin:0;padding:0;background:transparent;max-width:100%;overflow-x:hidden}
 .ikurso-enhavo{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;color:#212121;overflow-wrap:break-word}
 .ikurso-enhavo *{box-sizing:border-box}
 .ikurso-enhavo h1,.ikurso-enhavo h2,.ikurso-enhavo h3{font-weight:500;line-height:1.3;margin:1em 0 .5em}
 .ikurso-enhavo h2{font-size:1.4em}.ikurso-enhavo h3{font-size:1.2em}
 .ikurso-enhavo p{margin:.5em 0}
 .ikurso-enhavo img,.ikurso-enhavo video,.ikurso-enhavo iframe{max-width:100%;height:auto}
-.ikurso-enhavo a{color:#1976d2}
+.ikurso-enhavo a{color:#1976d2;overflow-wrap:anywhere}
+.ikurso-enhavo .tabelujo{max-width:100%;overflow-x:auto;margin:.5em 0}
 .ikurso-enhavo table{border-collapse:collapse;width:100%}
 .ikurso-enhavo td,.ikurso-enhavo th{padding:.4em;border-bottom:1px solid #e0e0e0;text-align:left}
 .ikurso-enhavo ul{padding-left:1.5em}
-.ikurso-enhavo .row{display:flex;flex-wrap:wrap;margin:0 -.5rem}
-.ikurso-enhavo .col{width:100%;padding:0 .5rem;overflow-wrap:normal}
+/* marge négative à gauche seulement : le texte des colonnes reste aligné sur les paragraphes sans dépasser à droite */
+.ikurso-enhavo .row{display:flex;flex-wrap:wrap;margin:0 0 0 -.5rem}
+.ikurso-enhavo .col{width:100%;min-width:0;padding:0 .5rem;overflow-wrap:normal}
 ${kolumnoj('s')}
 @media (min-width:601px){${kolumnoj('m')}}
 @media (min-width:993px){${kolumnoj('l')}}
@@ -121,6 +131,12 @@ ${kolumnoj('s')}
 .ikurso-enhavo p.parto:before{content:"";display:inline-block;width:.6em;height:.6em;background:#2196F3;margin-right:.5em;vertical-align:middle}
 .ikurso-enhavo p.sekva{margin-top:0;padding-top:0}
 .ikurso-enhavo p.rimarko{margin-top:1em}
+/* tableau des corrélatifs, comme style/ikurso.css : colonnes de largeur fixe, première colonne immobile */
+.ikurso-enhavo .korelativoj table{border-collapse:separate;border-spacing:0}
+.ikurso-enhavo .korelativoj th,.ikurso-enhavo .korelativoj td{vertical-align:top;padding:.25em .5em;min-width:7em;border:1px dashed #aaa}
+.ikurso-enhavo .korelativoj th{background:#f6f9fb;border:1px solid #aaa}
+.ikurso-enhavo .korelativoj td{font-size:85%}
+.ikurso-enhavo .korelativoj th:first-child{position:sticky;left:0;z-index:1}
 .ikurso-enhavo span.marque{color:#9ccc65}
 .ikurso-enhavo .vortlisto{border:1px solid #ccc;padding:1em;margin:0}
 .ikurso-enhavo .vortlisto p{margin-bottom:0}

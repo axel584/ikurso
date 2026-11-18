@@ -7,8 +7,10 @@ import { retadreso } from '@/api/kliento'
 import { Butono } from '@/komponantoj/Bazaj'
 import { useSeanco } from '@/seanco'
 import { koloroj, stiloj } from '@/stiloj'
+import { useKlavaroAlteco } from '@/utiloj/klavaro'
 
 export default function Ensaluti() {
+  const klavaro = useKlavaroAlteco()
   const { ensaluti, gasto } = useSeanco()
   const [identigilo, setIdentigilo] = useState('')
   const [pasvorto, setPasvorto] = useState('')
@@ -29,7 +31,7 @@ export default function Ensaluti() {
 
   return (
     <KeyboardAvoidingView style={stiloj.ekrano} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-      <ScrollView contentContainerStyle={[stiloj.centro, { gap: 16 }]} keyboardShouldPersistTaps="handled">
+      <ScrollView contentContainerStyle={[stiloj.centro, { gap: 16, paddingBottom: 24 + klavaro }]} keyboardShouldPersistTaps="handled">
         {/* logo du site (bildoj/largelogo.png) */}
         <View style={{ backgroundColor: koloroj.primara, borderRadius: 16, paddingHorizontal: 28, paddingVertical: 12 }}>
           <Text

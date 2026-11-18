@@ -17,6 +17,7 @@ import { Resumo } from '@/komponantoj/Resumo'
 import { useLudi } from '@/komponantoj/Sono'
 import { dividi } from '@/utiloj/enhavo'
 import { koloroj, stiloj } from '@/stiloj'
+import { useKlavaroAlteco } from '@/utiloj/klavaro'
 
 export default function Sekcio() {
   const id = Number(useLocalSearchParams<{ id: string }>().id)
@@ -38,6 +39,7 @@ export default function Sekcio() {
   const [restantaj, setRestantaj] = useState<Record<number, number>>({})
   const [konfirmo, setKonfirmo] = useState(false)
   const rulumo = useRef<ComponentRef<typeof ScrollView>>(null)
+  const klavaro = useKlavaroAlteco()
   const qcmY = useRef<Record<number, number>>({})
   const restantajEntute = Object.values(restantaj).reduce((a, b) => a + b, 0)
   const onRestantaj = useCallback((i: number, n: number) => setRestantaj((r) => (r[i] === n ? r : { ...r, [i]: n })), [])
@@ -78,7 +80,13 @@ export default function Sekcio() {
   }
 
   return (
-    <ScrollView ref={rulumo} style={stiloj.ekrano} contentContainerStyle={stiloj.enhavo} keyboardShouldPersistTaps="handled">
+    <ScrollView
+      ref={rulumo}
+      style={stiloj.ekrano}
+      contentContainerStyle={[stiloj.enhavo, { paddingBottom: 16 + klavaro }]}
+      keyboardShouldPersistTaps="handled"
+      automaticallyAdjustKeyboardInsets
+    >
       <Stack.Screen options={{ title: s ? `Leçon ${s.leciono}` : 'Section' }} />
       <Stato sxargxas={isLoading} eraro={error}>
         {s && (

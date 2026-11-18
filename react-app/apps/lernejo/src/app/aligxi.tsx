@@ -6,6 +6,7 @@ import { router } from 'expo-router'
 import { Butono } from '@/komponantoj/Bazaj'
 import { useSeanco } from '@/seanco'
 import { koloroj, stiloj } from '@/stiloj'
+import { useKlavaroAlteco } from '@/utiloj/klavaro'
 
 function Kampo({
   etikedo,
@@ -22,6 +23,7 @@ function Kampo({
 }
 
 export default function Aligxi() {
+  const klavaro = useKlavaroAlteco()
   const { aligxi } = useSeanco()
   const [enirnomo, setEnirnomo] = useState('')
   const [retadreso, setRetadreso] = useState('')
@@ -48,7 +50,7 @@ export default function Aligxi() {
 
   return (
     <KeyboardAvoidingView style={stiloj.ekrano} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-      <ScrollView contentContainerStyle={[stiloj.enhavo, { gap: 18 }]} keyboardShouldPersistTaps="handled">
+      <ScrollView contentContainerStyle={[stiloj.enhavo, { gap: 18, paddingBottom: 16 + klavaro }]} keyboardShouldPersistTaps="handled">
         <View
           style={{ flexDirection: 'row', gap: 10, backgroundColor: koloroj.helverda, borderRadius: 10, padding: 12 }}
         >

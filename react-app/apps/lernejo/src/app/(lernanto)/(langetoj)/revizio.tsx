@@ -10,8 +10,10 @@ import { Butono, Stato } from '@/komponantoj/Bazaj'
 import { EoEnigo, type EoEnigoRef } from '@/komponantoj/EoEnigo'
 import { useLudi } from '@/komponantoj/Sono'
 import { koloroj, stiloj } from '@/stiloj'
+import { useKlavaroAlteco } from '@/utiloj/klavaro'
 
 export default function Revizio() {
+  const klavaro = useKlavaroAlteco()
   const qc = useQueryClient()
   const { data, isLoading, error } = useRevizio()
   const respondi = useRevizioRespondo()
@@ -85,7 +87,12 @@ export default function Revizio() {
   }
 
   return (
-    <ScrollView style={stiloj.ekrano} contentContainerStyle={stiloj.enhavo} keyboardShouldPersistTaps="handled">
+    <ScrollView
+      style={stiloj.ekrano}
+      contentContainerStyle={[stiloj.enhavo, { paddingBottom: 16 + klavaro }]}
+      keyboardShouldPersistTaps="handled"
+      automaticallyAdjustKeyboardInsets
+    >
       <Stato sxargxas={isLoading} eraro={error}>
         {vortoj.length === 0 ? (
           <View style={stiloj.karto}>

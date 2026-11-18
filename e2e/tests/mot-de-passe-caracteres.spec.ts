@@ -99,3 +99,59 @@ test("adresse e-mail avec un + : inscription, activation, connexion et mot de pa
   await connecter(page, email, 'nouveau+mdp')
   await expect(page.locator('#uzantomenuo .uzanto')).toContainText(login)
 })
+
+// Tous les chemins avec une série de caractères spéciaux : page d'inscription aligxi.php, application (inscription,
+// connexion), confirmation par mot de passe (changement d'adresse dans l'application). Le # était soupçonné :
+// il passe partout ; la barre oblique inverse échouait après une inscription par la page aligxi.php, et dans les
+// confirmations par mot de passe (EnirAPI::pasvortoGxustas).
+const SPECIAUX = ['mot#passe1', '#debut', 'mot&pa+ss%20e', 'mot passe é€😀', 'mot?pa=ss;e<b>', `a@b#c'd"e`, 'mot\\passe1', 'fin\\']
+const API = 'api.php?path='
+
+for (const motDePasse of SPECIAUX) {
+  test(`page d'inscription aligxi.php puis connexion site et application : ${motDePasse}`, async ({ page, request }) => {
+    const login = `e2epage${Date.now()}`
+    const email = `${login}@mailinator.com`
+    await page.goto('aligxi.php')
+    await page.locator('#aligxi_kurso_retadreso').fill(email)
+    await page.locator('#aligxi_kurso_identigilo').fill(login)
+    await page.locator('#aligxi_kurso_pasvorto').fill(motDePasse)
+    await page.locator('#inscription_kurso_button').click()
+    await expect(page.locator('#parto2_kurso')).toBeVisible()
+    sql(`UPDATE personoj SET aktivigita=1 WHERE enirnomo='${login}'`)
+
+    await connecter(page, login, motDePasse)
+    await expect(page.locator('#uzantomenuo .uzanto')).toContainText(login)
+    const r = await request.post(`${API}auth/token`, { data: { identigilo: login, pasvorto: motDePasse } })
+    expect(r.status()).toBe(200)
+  })
+
+  test(`application : inscription, connexion et confirmation par mot de passe : ${motDePasse}`, async ({ page, request }) => {
+    const login = `e2eapp${Date.now()}`
+    const email = `${login}@mailinator.com`
+    const inscr = await request.post(`${API}auth/register`, { data: { enirnomo: login, pasvorto: motDePasse, retadreso: email } })
+    expect(inscr.status()).toBe(201)
+    sql(`UPDATE personoj SET aktivigita=1, rajtoj='S' WHERE enirnomo='${login}'`)
+
+    const r = await request.post(`${API}auth/token`, { data: { identigilo: email, pasvorto: motDePasse } })
+    expect(r.status()).toBe(200)
+    const { access_token } = await r.json()
+    const auth = { Authorization: `Bearer ${access_token}` }
+    const malbona = await request.post(`${API}lernado/retadreso`, { headers: auth, data: { retadreso: `nova${email}`, pasvorto: 'x' + motDePasse } })
+    expect((await malbona.json()).error).toBe('Mot de passe incorrect')
+    const bona = await request.post(`${API}lernado/retadreso`, { headers: auth, data: { retadreso: `nova${email}`, pasvorto: motDePasse } })
+    expect(bona.status()).toBe(200)
+
+    await connecter(page, login, motDePasse)
+    await expect(page.locator('#uzantomenuo .uzanto')).toContainText(login)
+  })
+}
+
+test('ancien compte de la page aligxi.php avec une barre oblique inverse : la connexion marche', async ({ page, request }) => {
+  // empreinte du mot de passe tel quel, sans stripslashes() (avant la correction)
+  sql("INSERT INTO personoj (ekdato, enirnomo, retadreso, rajtoj, aktivigita, pasvorto_md5) VALUES (NOW(), 'e2emalnova', 'e2emalnova@mailinator.com', 'P', 1, MD5('mot\\\\passe1'))")
+  const r = await request.post(`${API}auth/token`, { data: { identigilo: 'e2emalnova', pasvorto: 'mot\\passe1' } })
+  expect(r.status()).toBe(200)
+  await connecter(page, 'e2emalnova', 'mot\\passe1')
+  await expect(page.locator('#uzantomenuo .uzanto')).toContainText('e2emalnova')
+  sql("DELETE FROM personoj WHERE enirnomo='e2emalnova'")
+})

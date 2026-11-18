@@ -85,7 +85,7 @@ class AuthentificationAPI {
         }
         
         $identigilo = $input['identigilo'];
-        $pasvorto = stripslashes($input['pasvorto']);
+        $pasvorto = (string)$input['pasvorto']; // tel que saisi : EnirAPI::pasvortoGxustas()
         
         $respondo = array();
         
@@ -103,7 +103,7 @@ class AuthentificationAPI {
                 return;
             }
             
-            if (md5($pasvorto) != $row["pasvorto_md5"]) {
+            if (!EnirAPI::pasvortoGxustas($row["pasvorto_md5"], $pasvorto)) {
                 $this->sendError(401, "Mot de passe incorrect");
                 return;
             }
@@ -155,10 +155,10 @@ class AuthentificationAPI {
             $this->sendError(400, "Paramètres 'identigilo' et 'pasvorto' requis");
             return;
         }
-        $pasvorto = stripslashes((string)$input['pasvorto']);
+        $pasvorto = (string)$input['pasvorto']; // tel que saisi : EnirAPI::pasvortoGxustas()
         try {
             $row = (new EnirAPI($this->conn))->trovi((string)$input['identigilo'], $pasvorto);
-            if (!$row || !hash_equals((string)$row["pasvorto_md5"], md5($pasvorto))) {
+            if (!$row || !EnirAPI::pasvortoGxustas($row["pasvorto_md5"], $pasvorto)) {
                 $this->sendError(401, "Identifiant ou mot de passe incorrect");
                 return;
             }

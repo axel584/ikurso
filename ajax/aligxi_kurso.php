@@ -4,7 +4,8 @@
 include "../util.php";
 $retadreso=isset($_GET['retadreso'])?$_GET['retadreso']:"";
 $identigilo=isset($_GET['identigilo'])?$_GET['identigilo']:"";
-$pasvorto=isset($_GET['pasvorto'])?$_GET['pasvorto']:"";
+// stripslashes() comme les autres inscriptions et la connexion (EnirAPI::pasvortoGxustas)
+$pasvorto=isset($_GET['pasvorto'])?stripslashes($_GET['pasvorto']):"";
 
 // on force l'adresse email en minuscule
 $retadreso=strtolower($retadreso);

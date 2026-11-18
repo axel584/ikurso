@@ -5,7 +5,7 @@ require_once __DIR__ . "/../api/EnirAPI.php";
 require_once __DIR__ . "/../api/GastoAPI.php";
 
 $identigilo=isset($_POST['identigilo'])?$_POST['identigilo']:"";
-$pasvorto=isset($_POST['pasvorto'])?stripslashes($_POST['pasvorto']):"";
+$pasvorto=isset($_POST['pasvorto'])?(string)$_POST['pasvorto']:""; // tel que saisi : EnirAPI::pasvortoGxustas()
 
 // echo $pasvorto;
 // echo "::";
@@ -24,7 +24,7 @@ else {
 		$respondo["mesagxo"] = "Ce compte n'est pas validé, merci de cliquer sur le lien reçu par email.";
 		$respondo["type"]="ne_aktivigita";
 	} else {
-		if (md5($pasvorto)!=$row["pasvorto_md5"]) {
+		if (!EnirAPI::pasvortoGxustas($row["pasvorto_md5"], $pasvorto)) {
 			$respondo["mesagxo"] = "Mot de passe incorrect";
 			$respondo["type"]="pasvorto";
 		} else {

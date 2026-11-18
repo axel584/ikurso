@@ -24,7 +24,8 @@ class KontoAPI {
         $demando = $this->bdd->prepare("SELECT pasvorto_md5 FROM personoj WHERE id = ?");
         $demando->execute(array($persono_id));
         $md5 = $demando->fetchColumn();
-        return is_string($md5) && hash_equals($md5, md5($pasvorto));
+        require_once __DIR__ . "/EnirAPI.php";
+        return EnirAPI::pasvortoGxustas(is_string($md5) ? $md5 : null, $pasvorto);
     }
 
     // $avertiKorektantojn : prévenir les correcteurs de l'élève (#1108) ; faux pour un invité fusionné dans un vrai compte.

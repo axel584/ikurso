@@ -43,6 +43,8 @@ jobs:
           $sympaAppName = "Ikurso";
           $sympaAppPassword = "ci";
           $JWT_SECRET = "ci-jwt-secret-0123456789abcdef0123456789abcdef0123456789abcdef";
+          $GOOGLE_CLIENT_ID = "ikurso-e2e.apps.googleusercontent.com";
+          $GOOGLE_CERTS = __DIR__ . "/e2e/.google-test/certs.json";
           ?>
           EOF
           cat > js/config.js <<'EOF'

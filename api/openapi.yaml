@@ -62,6 +62,93 @@ paths:
         '403':
           description: Compte pas encore activé (lien envoyé par mail à l'inscription)
           content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
+  /auth/google/token:
+    post:
+      tags: [auth]
+      summary: Connexion ou inscription de l'application avec un compte Google (#119)
+      description: >
+        credential est le jeton d'identité remis par Google. Compte retrouvé par le compte Google, sinon par l'adresse
+        e-mail (le compte Google lui est alors relié), sinon créé et déjà activé. Tant que elektu_identigilon vaut true,
+        l'application fait choisir l'identifiant (auth/identigilo), en proposant propono. Avec l'access token d'un
+        invité, son travail rejoint le compte et ses jetons sont révoqués.
+      security: [{}, { bearer: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [credential]
+              properties:
+                credential: { type: string, description: "Jeton d'identité Google (JWT RS256)" }
+      responses:
+        '200':
+          description: Jetons, comme auth/token, avec l'état de l'identifiant
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/Sxlosiloj'
+                  - type: object
+                    required: [nova, elektu_identigilon]
+                    properties:
+                      nova: { type: boolean, description: 'Compte créé par cet appel' }
+                      elektu_identigilon: { type: boolean }
+                      propono: { type: string, description: 'Identifiant proposé, quand il reste à choisir' }
+        '400': { $ref: '#/components/responses/Eraro' }
+        '401':
+          description: Jeton refusé (signature, destinataire, expiration ou adresse non vérifiée)
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
+  /auth/identigilo:
+    get:
+      tags: [auth]
+      summary: Identifiant à choisir après l'inscription par Google, et proposition
+      responses:
+        '200':
+          description: État
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [elektu_identigilon, propono]
+                properties:
+                  elektu_identigilon: { type: boolean }
+                  propono: { type: string, nullable: true }
+        '401': { $ref: '#/components/responses/Eraro' }
+    post:
+      tags: [auth]
+      summary: Choix de l'identifiant (une seule fois, après l'inscription par Google)
+      description: Les jetons déjà émis gardent l'ancien identifiant jusqu'au prochain auth/refresh.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [enirnomo]
+              properties:
+                enirnomo: { type: string, maxLength: 32, description: "Pas d'adresse e-mail, unique" }
+      responses:
+        '200':
+          description: Identifiant enregistré
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    type: object
+                    properties:
+                      id: { type: integer }
+                      enirnomo: { type: string }
+                      rajtoj: { type: string }
+        '400':
+          description: Identifiant vide, adresse e-mail, trop long ou déjà pris (message à afficher)
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
+        '401': { $ref: '#/components/responses/Eraro' }
+        '409':
+          description: Identifiant déjà choisi
+          content: { application/json: { schema: { $ref: '#/components/schemas/Eraro' } } }
   /auth/refresh:
     post:
       tags: [auth]

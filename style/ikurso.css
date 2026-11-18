@@ -1679,3 +1679,8 @@ video.vidbendo {
 	background: #000;
 }
 .statistikoj .qcm-stat-bildo {max-width: 80px;}
+/* « Continuer avec Google » (#119) dans les fenêtres de connexion et d'inscription */
+.google-ensaluto {display: flex; flex-direction: column; align-items: center; gap: .5em; margin: 1em 0;}
+.google-ensaluto .google-aux {color: #757575; margin: 0;}
+/* script de Google bloqué ou pas encore chargé : pas de « ou » tout seul */
+.google-ensaluto:has(.g_id_signin:empty) {display: none;}

@@ -10,6 +10,9 @@ $aktivigo = isset($_GET['aktivigo']) ? $_GET['aktivigo'] : "";
 $retadreso = isset($_GET['retadreso']) ? $_GET['retadreso'] : "";
 $persono_id = isset($_SESSION["persono_id"]) ? $_SESSION["persono_id"] : "";
 if ($persono_id) {$persono = apartigiPersonon($persono_id);} else { $persono = array("enirnomo"=>"","familinomo"=>"","personnomo"=>"","retadreso"=>"","rajtoj"=>"");}
+// « Continuer avec Google » (#119) : seulement pour les visiteurs, et si le Client ID est configuré
+require_once __DIR__."/api/GoogleAPI.php";
+$googleKlientoId = $persono_id ? "" : GoogleAPI::klientoId();
 // référencement : chaque page peut définir $pagxtitolo, $pagxpriskribo et, pour les leçons, $kanonaSekcio
 require_once __DIR__ . "/api/SeoAPI.php";
 $seoTitolo = trim(html_entity_decode(strip_tags(isset($pagxtitolo) ? $pagxtitolo : ""), ENT_QUOTES, "UTF-8"));
@@ -48,7 +51,7 @@ $seoKanona = SeoAPI::kanonaUrl($urlracine, isset($_SERVER["REQUEST_URI"]) ? $_SE
 		</script>
 		<script type="text/javascript" src="<?php echo $vojo;?>xAlUtf8.js"></script>	
 		<!--<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>"  media="all"/> -->
-		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>.30"  media="all"/>
+		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/ikurso.css?v=<?php echo $milestone; ?>.31"  media="all"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo $vojo;?>style/impression.css?v=<?php echo $milestone; ?>"  media="print"/>
 
 		<!--Let browser know website is optimized for mobile-->
@@ -151,6 +154,9 @@ if ($strukturitajDatumoj) { ?>
 						<span id="eniri_pasvorto_helper" class="helper-text"></span>
 					</div>
 				</form>
+<?php if ($googleKlientoId !== "") { ?>
+				<div class="google-ensaluto"><p class="google-aux">ou</p><div class="g_id_signin" data-type="standard" data-text="continue_with" data-shape="pill" data-locale="fr"></div></div>
+<?php } ?>
 				<p>Pas encore de compte&nbsp;? <a href="#aligxi" class="modal-trigger modal-close" data-target="aligxi">Créer un compte gratuitement</a></p>
 				</div>
 				<div id="konektigxi_parto2" class="hide">
@@ -176,6 +182,9 @@ if ($strukturitajDatumoj) { ?>
 			<div class="modal-content">
 				<h4 class="primaire-texte texte-moyen">Inscription</h4>
 				<div id="parto1">
+<?php if ($googleKlientoId !== "") { ?>
+					<div class="google-ensaluto"><div class="g_id_signin" data-type="standard" data-text="signup_with" data-shape="pill" data-locale="fr"></div><p class="google-aux">ou avec votre adresse e-mail</p></div>
+<?php } ?>
 					<form>
 					    <div class="input-field">
 							<input id="aligxi_retadreso"  type="email" class="validate" required="" aria-required="true">

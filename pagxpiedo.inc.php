@@ -46,6 +46,9 @@
 	<script src="<?php echo $vojo;?>js/config.js"></script>
 	<script src="<?php echo $vojo;?>js/init.js"></script>
 	<script src="<?php echo $vojo;?>js/ikurso.js?d=<?php echo time(); ?>"></script>
+<?php if (!empty($googleKlientoId)) { // « Continuer avec Google » (#119), sans connexion automatique (One Tap) ; script de Google chargé par sxargiGoogle() (js/ikurso.js) ?>
+	<div id="g_id_onload" data-client_id="<?php echo htmlspecialchars($googleKlientoId, ENT_QUOTES, "UTF-8"); ?>" data-callback="ikursoGoogle" data-auto_prompt="false" data-ux_mode="popup"></div>
+<?php } ?>
 
 
 	<script type="text/javascript">

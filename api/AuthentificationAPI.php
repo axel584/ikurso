@@ -6,6 +6,7 @@ require_once __DIR__ . '/EnirAPI.php';
 require_once __DIR__ . '/SessionAuth.php';
 require_once __DIR__ . '/GastoAPI.php';
 require_once __DIR__ . '/RenovigajSxlosilojAPI.php';
+require_once __DIR__ . '/GoogleAPI.php';
 
 class AuthentificationAPI {
     private $conn;
@@ -43,6 +44,7 @@ class AuthentificationAPI {
         
         $resource = $segments[0]; // 'auth'
         $action = isset($segments[1]) ? $segments[1] : null;
+        $subaction = isset($segments[2]) ? $segments[2] : null;
         
         if ($method === 'POST' && $action === 'login') {
             $this->login();
@@ -60,6 +62,14 @@ class AuthentificationAPI {
             $this->revoke();
         } elseif ($method === 'POST' && $action === 'gasto') {
             $this->gasto();
+        } elseif ($method === 'POST' && $action === 'google' && $subaction === null) {
+            $this->google();
+        } elseif ($method === 'POST' && $action === 'google' && $subaction === 'token') {
+            $this->googleToken();
+        } elseif ($method === 'GET' && $action === 'identigilo') {
+            $this->identigilo();
+        } elseif ($method === 'POST' && $action === 'identigilo') {
+            $this->elektiIdentigilon();
         } else {
             $this->sendError(404, "Endpoint non trouvé");
         }
@@ -214,6 +224,122 @@ class AuthentificationAPI {
             error_log("auth/revoke : " . $e->getMessage());
             $this->sendError(500, "Erreur interne du serveur");
         }
+    }
+
+    // Site (#119) : « Continuer avec Google ». Jeton d'identité de Google → session et cookie, comme auth/login.
+    // Un nouveau compte (ou un compte dont l'identifiant reste à choisir) est envoyé vers elektiIdentigilon.php.
+    private function google() {
+        $konto = $this->googleKonto();
+        $row = $konto["persono"];
+        try {
+            $gasto_id = SessionAuth::login($row["id"]);
+            (new GastoAPI($this->conn))->transdoni($gasto_id, (int)$row["id"]);
+            JWTAuth::setCookie(JWTAuth::generate($row));
+            $this->updateLastEniro($row["id"]);
+            $elektota = (int)$row["enirnomo_elektota"] === 1;
+            if (!$konto["nova"]) {
+                (new GoogleAPI($this->conn))->protokolo((int)$row["id"], "ENIRO", $row["enirnomo"] . " eniris per Google");
+            }
+            $this->sendResponse(200, array(
+                "user" => array("id" => (int)$row["id"], "enirnomo" => $row["enirnomo"], "rajtoj" => $row["rajtoj"]),
+                "nova" => $konto["nova"],
+                "elektu_identigilon" => $elektota,
+                "redirect_url" => $elektota ? "elektiIdentigilon.php" : $this->getRedirectionParDroits($row["id"])
+            ));
+        } catch(PDOException $e) {
+            error_log("auth/google : " . $e->getMessage());
+            $this->sendError(500, "Erreur interne du serveur");
+        }
+    }
+
+    // Application (#119) : pareil avec des jetons, comme auth/token. L'invité de l'application rejoint le compte.
+    private function googleToken() {
+        $konto = $this->googleKonto();
+        $row = $konto["persono"];
+        try {
+            $google = new GoogleAPI($this->conn);
+            if (!$konto["nova"]) {
+                $google->protokolo((int)$row["id"], "ENIRO", $row["enirnomo"] . " eniris per Google via la aplikaĵo");
+            }
+            $this->updateLastEniro($row["id"]);
+            $renovigaj = new RenovigajSxlosilojAPI($this->conn);
+            $gasto_id = $this->gastoDeLaAplikajxo();
+            if ($gasto_id > 0) {
+                (new GastoAPI($this->conn))->transdoni($gasto_id, (int)$row["id"]);
+                $renovigaj->revokiCxiujn($gasto_id);
+            }
+            $respondo = $this->sxlosiloj($row, $renovigaj->krei((int)$row["id"]));
+            $respondo["nova"] = $konto["nova"];
+            $respondo["elektu_identigilon"] = (int)$row["enirnomo_elektota"] === 1;
+            if ($respondo["elektu_identigilon"]) {
+                $respondo["propono"] = $google->proponi((int)$row["id"]);
+            }
+            $this->sendResponse(200, $respondo);
+        } catch(PDOException $e) {
+            error_log("auth/google/token : " . $e->getMessage());
+            $this->sendError(500, "Erreur interne du serveur");
+        }
+    }
+
+    // Jeton reçu → compte (créé si besoin), ou erreur 400/401.
+    private function googleKonto(): array {
+        $input = json_decode(file_get_contents('php://input'), true);
+        $jxetono = is_array($input) && isset($input['credential']) ? (string)$input['credential'] : "";
+        if ($jxetono === "") {
+            $this->sendError(400, "Paramètre 'credential' requis");
+        }
+        try {
+            $google = new GoogleAPI($this->conn);
+            $enhavo = $google->kontroli($jxetono);
+            if ($enhavo === null) {
+                $this->sendError(401, "Connexion Google refusée, merci de réessayer");
+            }
+            return $google->konto($enhavo);
+        } catch(PDOException $e) {
+            error_log("auth/google : " . $e->getMessage());
+            $this->sendError(500, "Erreur interne du serveur");
+        }
+    }
+
+    // Identifiant à choisir après l'inscription par Google (#119) : faut-il le choisir, et proposition.
+    private function identigilo() {
+        $persono_id = (int)JWTAuth::getPersonoIdFromJWT();
+        if ($persono_id <= 0) {
+            $this->sendError(401, "Non authentifié");
+        }
+        $google = new GoogleAPI($this->conn);
+        $elektota = $google->elektota($persono_id);
+        $this->sendResponse(200, array(
+            "elektu_identigilon" => $elektota,
+            "propono" => $elektota ? $google->proponi($persono_id) : null
+        ));
+    }
+
+    private function elektiIdentigilon() {
+        $persono_id = (int)JWTAuth::getPersonoIdFromJWT();
+        if ($persono_id <= 0) {
+            $this->sendError(401, "Non authentifié");
+        }
+        $input = json_decode(file_get_contents('php://input'), true);
+        $enirnomo = is_array($input) && isset($input['enirnomo']) ? (string)$input['enirnomo'] : "";
+        $google = new GoogleAPI($this->conn);
+        if (!$google->elektota($persono_id)) {
+            $this->sendError(409, "L'identifiant de ce compte est déjà choisi");
+        }
+        $eraro = $google->elekti($persono_id, $enirnomo);
+        if ($eraro !== null) {
+            $this->sendError(400, $eraro);
+        }
+        $row = $this->persono($persono_id);
+        $respondo = array(
+            "user" => array("id" => (int)$row["id"], "enirnomo" => $row["enirnomo"], "rajtoj" => $row["rajtoj"]),
+            "redirect_url" => "personinformoj.php?aktivigo=ok"
+        );
+        if (JWTAuth::getBearerToken() === null) {
+            // site : le cookie porte l'identifiant
+            JWTAuth::setCookie(JWTAuth::generate($row));
+        }
+        $this->sendResponse(200, $respondo);
     }
 
     // Application (#1089) : « Commencer le cours » sans compte. Un invité et ses jetons, comme à la connexion ;

@@ -13,6 +13,14 @@ include "pagxkapo.inc.php";
 			<h1 class="col s11 m10 l9 offset-s1 offset-m2 offset-l3">Inscription</h1>
 		</header>
 	<div id="parto1_kurso">
+<?php if ($googleKlientoId !== "") { ?>
+			<div class="row">
+				<div class="col s11 m5 l4 offset-s1 offset-m2 offset-l3 google-ensaluto">
+					<div class="g_id_signin" data-type="standard" data-text="signup_with" data-shape="pill" data-locale="fr"></div>
+					<p class="google-aux">ou avec votre adresse e-mail</p>
+				</div>
+			</div>
+<?php } ?>
 			<div class="row">
 			    <div class="input-field col s11 m5 l4 offset-s1 offset-m2 offset-l3">
 					<input id="aligxi_kurso_retadreso" type="email" class="validate" />

@@ -30,6 +30,8 @@ Tous les comptes du système (étudiants, correcteurs, administrateurs).
 | `nova_retadreso` | VARCHAR(128) NULL | Nouvelle adresse demandée par l'élève, en attente de validation (#1107, sql/86) ; `retadreso` ne change qu'au clic sur le lien |
 | `nova_retadreso_sxlosilo` | CHAR(64) NULL | Clé du lien de validation (aléatoire, hexadécimal), exclue de l'export |
 | `nova_retadreso_dato` | DATETIME NULL | Date de la demande ; le lien vaut 7 jours (`RetadresoAPI::VALIDECO_TAGOJ`) |
+| `google_id` | VARCHAR(64) UNIQUE NULL | Compte Google relié (« sub » du jeton d'identité), pour « Continuer avec Google » (#119, sql/89, `api/GoogleAPI.php`) |
+| `enirnomo_elektota` | TINYINT(1) | 1 tant que l'élève inscrit par Google n'a pas choisi son identifiant (`enirnomo` provisoire `google_…`, page `elektiIdentigilon.php`) |
 | `naskigxdato` | DATE | Date de naissance |
 | `rajtoj` | ENUM('P','S','K','A','I','G') | Rôle : P=?, S=Étudiant, K=Correcteur, A=Admin, I=?, G=Invité sans compte (#1092, voir `api/GastoAPI.php`) |
 | `kialo` | TEXT | Raison de l'inscription |

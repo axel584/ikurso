@@ -1,4 +1,45 @@
 // mesure d'audience Matomo : un événement (pas de Matomo en développement, _paq n'existe pas)
+// « Continuer avec Google » (#119) : Google Identity Services appelle cette fonction avec le jeton d'identité ;
+// le serveur le vérifie, connecte (ou inscrit) la personne et indique la page suivante.
+function ikursoGoogle(respondo) {
+  fetch($cheminAbsolu + 'api.php?path=auth/google', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({credential: respondo.credential})
+  }).then(function (r) {
+    return r.json().then(function (d) { return {ok: r.ok, d: d}; });
+  }).then(function (rezulto) {
+    if (!rezulto.ok) {
+      M.toast({html: $("<span>").text(rezulto.d.error || 'Connexion avec Google impossible').html(), displayLength: 7000});
+      return;
+    }
+    spuri('Compte', rezulto.d.nova ? 'Inscription' : 'Connexion', 'Google');
+    window.location = $cheminAbsolu + rezulto.d.redirect_url;
+  }).catch(function () {
+    M.toast({html: 'Connexion avec Google impossible, merci de réessayer', displayLength: 7000});
+  });
+}
+
+// Le script de Google n'est chargé qu'à l'ouverture des fenêtres de connexion ou d'inscription (ou sur la page
+// d'inscription) : Google ne voit pas les autres pages visitées.
+function sxargiGoogle() {
+  if (window.ikursoGoogleSxargita || !document.getElementById('g_id_onload')) {
+    return;
+  }
+  window.ikursoGoogleSxargita = true;
+  var skripto = document.createElement('script');
+  skripto.src = 'https://accounts.google.com/gsi/client';
+  skripto.async = true;
+  document.head.appendChild(skripto);
+}
+$(document).on('click', 'a[href="#konektigxi"], a[href="#aligxi"], [data-target="konektigxi"], [data-target="aligxi"]', sxargiGoogle);
+$(function () {
+  if ($('main .g_id_signin').length) {
+    sxargiGoogle();
+  }
+});
+
 function spuri(kategorio, ago, nomo) {
   if (window._paq) {
     window._paq.push(['trackEvent', kategorio, ago, nomo]);
@@ -32,6 +73,7 @@ function spuri(kategorio, ago, nomo) {
     // connexion unique : arrivée depuis un autre site (nilegu), on ouvre la fenêtre de connexion
     if ($url.indexOf("retour=")>-1 && $('#konektigxi').length) {
       $('#konektigxi').modal('open');
+      sxargiGoogle();
     }
 
 

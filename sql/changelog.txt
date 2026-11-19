@@ -4592,3 +4592,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Page 1.6 (premier exercice) : ce que deviennent les réponses (vérifiées automatiquement, correcteur à demander à la fin de la leçon, avec un compte) : voir sql/87-pagxo-1-6-korektanto.sql
 --- Réponses aux QCM des pages, pour les statistiques des questions difficiles (anonymes, site et application) : voir sql/88-qcm-respondoj.sql
 --- Inscription et connexion avec un compte Google : compte Google relié (google_id) et identifiant à choisir après l'inscription (enirnomo_elektota) (#119) : voir sql/89-google-1119.sql
+--- Paŝoj al plena posedo, leçon 5 : corrigé type des réponses 7 et 13 de l'exercice sur le texte : voir sql/90-pp-5-korektoj.sql

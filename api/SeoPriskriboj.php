@@ -29,7 +29,7 @@ return array(
     "3.12" => "Demander « qu’est-ce que c’est ? » en espéranto : Kio estas tio? Les mots kio et tio, avec des exemples illustrés.",
     "4.1" => "Poser une question en espéranto avec ĉu, et y répondre par jes ou ne. Exemples de questions et réponses traduites.",
     "4.3" => "L’alphabet de l’espéranto : 28 lettres et une prononciation phonétique. Exercice de lecture à voix haute.",
-    "4.4" => "Les sons complexes (diphtongues) de l’espéranto : aj, ej, oj, uj, aŭ, eŭ. Comment les prononcer, avec des exemples.",
+    "4.4" => "Les voyelles doubles (diphtongues) de l’espéranto : aj, ej, oj, uj, aŭ, eŭ. Comment les prononcer, avec des exemples.",
     "4.5" => "Les sons de l’espéranto : une liste de mots à lire à voix haute pour travailler la prononciation et l’accent tonique.",
     "4.6" => "Les prépositions de lieu en espéranto : apud, ĉe, al, de, el. Leur sens et des exemples traduits.",
     "4.8" => "Dire la date en espéranto : les jours de la semaine, les mois, hier, aujourd’hui, demain, avec les nombres ordinaux.",

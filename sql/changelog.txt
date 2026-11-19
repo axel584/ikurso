@@ -4593,3 +4593,4 @@ UPDATE `ekzerceroj` SET `normaligita` = 'eksprezidantino|eksprezidentino|eksland
 --- Réponses aux QCM des pages, pour les statistiques des questions difficiles (anonymes, site et application) : voir sql/88-qcm-respondoj.sql
 --- Inscription et connexion avec un compte Google : compte Google relié (google_id) et identifiant à choisir après l'inscription (enirnomo_elektota) (#119) : voir sql/89-google-1119.sql
 --- Paŝoj al plena posedo, leçon 5 : corrigé type des réponses 7 et 13 de l'exercice sur le texte : voir sql/90-pp-5-korektoj.sql
+--- Cours élémentaire, leçons 4 à 7 : formulations simplifiées (sons complexes, « le n », fabriquer de nouveaux mots, à la fin du mot…) (#1111) : voir sql/91-lecons-4-7-simplifications-1111.sql

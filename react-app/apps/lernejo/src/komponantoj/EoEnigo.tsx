@@ -4,6 +4,7 @@ import { useEffect, useImperativeHandle, useRef, useState, type ComponentRef, ty
 import { Pressable, Text, TextInput, View, type TextInputProps } from 'react-native'
 import { SUPERSIGNITAJ, xAlUnikodo } from '@/utiloj/eotajpu'
 import { koloroj, stiloj } from '@/stiloj'
+import { fokusSxangxo } from '@/utiloj/klavaro'
 
 // ce que l'écran peut faire du champ : lui redonner le focus (et donc ouvrir le clavier), par ex. au mot suivant
 export type EoEnigoRef = { focus: () => void }
@@ -56,6 +57,7 @@ export function EoEnigo({ valoro, onSxangxo, x2u, onFocus, onBlur, style, ref, .
         onFocus={(e) => {
           clearTimeout(kasxo.current ?? undefined)
           setFokuso(true)
+          fokusSxangxo()
           onFocus?.(e)
         }}
         onBlur={(e) => {

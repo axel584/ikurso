@@ -58,8 +58,9 @@ export default function Revizio() {
   const vorto = vortoj[nuna]
   const rezulto = respondi.data?.vorto_id === vorto?.id ? respondi.data : undefined
 
-  function kontroli() {
-    if (!vorto || respondo.trim() === '' || respondi.isPending) return
+  // champ vide : « Voir la réponse » (l'élève ne trouve pas le mot) ; le mot compte comme à revoir, comme sur le site
+  function kontroli(montri = false) {
+    if (!vorto || (respondo.trim() === '' && !montri) || respondi.isPending) return
     respondi.mutate(
       { vorto_id: vorto.id, respondo: respondo.trim() },
       {
@@ -128,7 +129,7 @@ export default function Revizio() {
               x2u
               placeholder="En espéranto…"
               accessibilityLabel="Traduction en espéranto"
-              onSubmitEditing={rezulto ? sekva : kontroli}
+              onSubmitEditing={rezulto ? sekva : () => kontroli()}
               submitBehavior="submit"
               returnKeyType="next"
               autoFocus
@@ -136,10 +137,11 @@ export default function Revizio() {
             {rezulto && (
               <View
                 accessibilityLiveRegion="polite"
-                style={{ padding: 10, borderRadius: 6, backgroundColor: rezulto.gxusta ? koloroj.helverda : koloroj.helrugxa }}
+                style={{ padding: 10, borderRadius: 6, backgroundColor: rezulto.gxusta ? koloroj.helverda : koloroj.helflava }}
               >
-                <Text style={[stiloj.teksto, { fontWeight: '600', color: rezulto.gxusta ? koloroj.verda : koloroj.rugxa }]}>
-                  {rezulto.gxusta ? 'Bonne réponse !' : 'Ce n’est pas ça.'}
+                {/* erreur : ton neutre, pas de rouge (remarque d'une bêta-testeuse : « ça rappelle les corrections de profs ») */}
+                <Text style={[stiloj.teksto, { fontWeight: '600', color: rezulto.gxusta ? koloroj.verda : koloroj.primara }]}>
+                  {rezulto.gxusta ? 'Bonne réponse !' : 'À retenir :'}
                 </Text>
                 <Text style={stiloj.teksto}>
                   {rezulto.fr} : <Text style={{ color: koloroj.blua, fontWeight: '600' }}>{rezulto.bona_respondo}</Text>
@@ -149,13 +151,23 @@ export default function Revizio() {
                     </Text>
                   )}
                 </Text>
+                {rezulto.aliaj_respondoj && rezulto.aliaj_respondoj.length > 0 && (
+                  <Text style={stiloj.eta} testID="revizio-aliaj">
+                    Aussi accepté : {rezulto.aliaj_respondoj.join(', ')}
+                  </Text>
+                )}
               </View>
             )}
             {respondi.error && <Text style={stiloj.eraro}>{respondi.error.message}</Text>}
             {rezulto ? (
               <Butono teksto="Mot suivant" onPress={sekva} />
             ) : (
-              <Butono teksto="Vérifier" onPress={kontroli} malsxaltita={respondi.isPending || respondo.trim() === ''} />
+              <Butono
+                teksto={respondo.trim() === '' ? 'Voir la réponse' : 'Vérifier'}
+                dua={respondo.trim() === ''}
+                onPress={() => kontroli(true)}
+                malsxaltita={respondi.isPending}
+              />
             )}
           </View>
         )}

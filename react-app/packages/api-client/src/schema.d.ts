@@ -54,6 +54,163 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/auth/google/token": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Connexion ou inscription de l'application avec un compte Google (#119)
+         * @description credential est le jeton d'identité remis par Google. Compte retrouvé par le compte Google, sinon par l'adresse e-mail (le compte Google lui est alors relié), sinon créé et déjà activé. Tant que elektu_identigilon vaut true, l'application fait choisir l'identifiant (auth/identigilo), en proposant propono. Avec l'access token d'un invité, son travail rejoint le compte et ses jetons sont révoqués.
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": {
+                        /** @description Jeton d'identité Google (JWT RS256) */
+                        credential: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description Jetons, comme auth/token, avec l'état de l'identifiant */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Sxlosiloj"] & {
+                            /** @description Compte créé par cet appel */
+                            nova: boolean;
+                            elektu_identigilon: boolean;
+                            /** @description Identifiant proposé, quand il reste à choisir */
+                            propono?: string;
+                        };
+                    };
+                };
+                400: components["responses"]["Eraro"];
+                /** @description Jeton refusé (signature, destinataire, expiration ou adresse non vérifiée) */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Eraro"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/auth/identigilo": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Identifiant à choisir après l'inscription par Google, et proposition */
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description État */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            elektu_identigilon: boolean;
+                            propono: string | null;
+                        };
+                    };
+                };
+                401: components["responses"]["Eraro"];
+            };
+        };
+        put?: never;
+        /**
+         * Choix de l'identifiant (une seule fois, après l'inscription par Google)
+         * @description Les jetons déjà émis gardent l'ancien identifiant jusqu'au prochain auth/refresh.
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": {
+                        /** @description Pas d'adresse e-mail, unique */
+                        enirnomo: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description Identifiant enregistré */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            user?: {
+                                id?: number;
+                                enirnomo?: string;
+                                rajtoj?: string;
+                            };
+                        };
+                    };
+                };
+                /** @description Identifiant vide, adresse e-mail, trop long ou déjà pris (message à afficher) */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Eraro"];
+                    };
+                };
+                401: components["responses"]["Eraro"];
+                /** @description Identifiant déjà choisi */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Eraro"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/auth/refresh": {
         parameters: {
             query?: never;
@@ -1111,6 +1268,8 @@ export interface paths {
                             fr: string;
                             /** @description Traduction attendue (première variante) */
                             bona_respondo: string;
+                            /** @description Autres traductions acceptées (ex. prava, korekta pour ĝusta) */
+                            aliaj_respondoj?: string[];
                             /** @description Prononciation (chemin depuis la racine du site) */
                             sono: string | null;
                         };

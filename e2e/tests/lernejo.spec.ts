@@ -190,9 +190,14 @@ test('révision du vocabulaire dans l’application', async ({ page }) => {
   const fr1 = (await page.getByTestId('revizio-fr').textContent())!
   await page.getByLabel('Traduction en espéranto').fill('malgxusta')
   await page.getByText('Vérifier').click()
-  await expect(page.getByText('Ce n’est pas ça.')).toBeVisible()
+  await expect(page.getByText('À retenir :')).toBeVisible()
   const bona = sql(`SELECT SUBSTRING_INDEX(eo, '|', 1) FROM vortoj WHERE fr = BINARY '${fr1.replace(/'/g, "''")}' LIMIT 1`)
   await expect(page.getByText(bona, { exact: true })).toBeVisible()
+  await page.getByText('Mot suivant').click()
+
+  // champ vide : « Voir la réponse » donne la traduction sans rien taper
+  await page.getByText('Voir la réponse').click()
+  await expect(page.getByText('À retenir :')).toBeVisible()
   await page.getByText('Mot suivant').click()
 
   const fr2 = (await page.getByTestId('revizio-fr').textContent())!

@@ -372,7 +372,7 @@ class LernadoAPI {
             $this->eraro(404, "Ce mot n'est pas dans votre révision");
         }
         $this->respondi(200, array("vorto_id" => $vorto_id, "gxusta" => $rezulto["gxusta"], "fr" => $rezulto["fr"],
-            "bona_respondo" => $rezulto["bona_respondo"], "sono" => $rezulto["sono"]));
+            "bona_respondo" => $rezulto["bona_respondo"], "aliaj_respondoj" => $rezulto["aliaj_respondoj"], "sono" => $rezulto["sono"]));
     }
 
     private function korpo(): array {

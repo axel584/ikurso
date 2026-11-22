@@ -145,7 +145,7 @@ class VortojAPI {
     }
 
     // Réponse de l'élève en révision du vocabulaire. Bonne réponse : le mot revient plus tard ; mauvaise : son compteur
-    // repart à 1 et il revient au plus tôt. Renvoie ["gxusta", "fr", "bona_respondo" (première variante), "respondo"
+    // repart à 1 et il revient au plus tôt. Renvoie ["gxusta", "fr", "bona_respondo" (première variante), "aliaj_respondoj" (autres variantes), "respondo"
     // (réponse échappée), "sono"], ou null si le mot n'est pas dans la révision de l'élève.
     public function kontroli(int $persono_id, int $vorto_id, string $respondo): ?array {
         $respondo = mb_ereg_replace('\xc2\xa0', ' ', htmlspecialchars($respondo, ENT_QUOTES)); // espaces insécables (#774)
@@ -168,7 +168,23 @@ class VortojAPI {
             $this->bdd->prepare("INSERT INTO personoj_vortoj_respondoj (persono_id, vorto_id, dato, bona, respondo) VALUES (?, ?, NOW(), ?, ?)")
                 ->execute(array($persono_id, $vorto_id, $gxusta ? 1 : 0, $respondo));
         }
-        return array("gxusta" => $gxusta, "fr" => $vico["fr"], "bona_respondo" => explode("|", $vico["eo"])[0],
-            "respondo" => $respondo, "sono" => self::sono($vico["eo"]));
+        $variantoj = array_map("trim", explode("|", $vico["eo"]));
+        return array("gxusta" => $gxusta, "fr" => $vico["fr"], "bona_respondo" => $variantoj[0],
+            "aliaj_respondoj" => self::aliajVariantoj($variantoj), "respondo" => $respondo, "sono" => self::sono($vico["eo"]));
+    }
+
+    // Variantes acceptées autres que la première, sans doublon (même mot en notation x ou en majuscules) : l'élève
+    // qui répond « korekta » pour « ĝusta » voit que sa réponse fait partie des réponses acceptées.
+    private static function aliajVariantoj(array $variantoj): array {
+        $viditaj = array(strtolower(konvX($variantoj[0])) => true);
+        $aliaj = array();
+        foreach (array_slice($variantoj, 1) as $varianto) {
+            $sxlosilo = strtolower(konvX($varianto));
+            if ($varianto !== "" && !isset($viditaj[$sxlosilo])) {
+                $viditaj[$sxlosilo] = true;
+                $aliaj[] = $varianto;
+            }
+        }
+        return $aliaj;
     }
 }

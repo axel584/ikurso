@@ -110,10 +110,21 @@ test('révision du vocabulaire par l’API', async ({ request }) => {
   const biskvito = Number(sql("SELECT id FROM vortoj WHERE eo='biskvito'"))
   const malgxusta = await (await request.post(`${API}lernado/revizio`, { ...kun(at), data: { vorto_id: biskvito, respondo: 'kuko' } })).json()
   expect(malgxusta).toMatchObject({ gxusta: false, bona_respondo: 'biskvito', fr: 'biscuit' })
+  expect(malgxusta.aliaj_respondoj).toEqual([])
+  // champ vide (« Voir la réponse ») : la réponse est donnée, le mot reste à revoir
+  const montri = await (await request.post(`${API}lernado/revizio`, { ...kun(at), data: { vorto_id: biskvito, respondo: '' } })).json()
+  expect(montri).toMatchObject({ gxusta: false, bona_respondo: 'biskvito' })
   const gxusta = await (await request.post(`${API}lernado/revizio`, { ...kun(at), data: { vorto_id: biskvito, respondo: 'Biskvito' } })).json()
   expect(gxusta.gxusta).toBe(true)
   const poste = await (await request.get(`${API}lernado/revizio`, kun(at))).json()
   expect(poste.vortoj.map((v: { id: number }) => v.id)).not.toContain(biskvito)
+
+  // mot à plusieurs traductions : une autre que la première est acceptée, et les autres sont renvoyées
+  const gxustaVorto = Number(sql("SELECT id FROM vortoj WHERE eo LIKE '%|korekta|%' LIMIT 1"))
+  const lernanto = Number(sql("SELECT id FROM personoj WHERE enirnomo='lernanto1'"))
+  sql(`INSERT INTO personoj_vortoj (persono_id, vorto_id, nombrilo, venontaFojo) VALUES (${lernanto}, ${gxustaVorto}, 1, NOW())`)
+  const korekta = await (await request.post(`${API}lernado/revizio`, { ...kun(at), data: { vorto_id: gxustaVorto, respondo: 'korekta' } })).json()
+  expect(korekta).toMatchObject({ gxusta: true, bona_respondo: 'ĝusta', aliaj_respondoj: ['prava', 'korekta', 'ekzakta'] })
 
   const forigo = await request.put(`${API}lernado/vortoj/${biskvito}`, { ...kun(at), data: { forigita: true } })
   expect(await forigo.json()).toEqual({ id: biskvito, forigita: true })

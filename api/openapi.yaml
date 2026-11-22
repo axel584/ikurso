@@ -691,6 +691,7 @@ paths:
                   gxusta: { type: boolean }
                   fr: { type: string }
                   bona_respondo: { type: string, description: 'Traduction attendue (première variante)' }
+                  aliaj_respondoj: { type: array, items: { type: string }, description: 'Autres traductions acceptées (ex. prava, korekta pour ĝusta)' }
                   sono: { type: string, nullable: true, description: 'Prononciation (chemin depuis la racine du site)' }
         '401': { $ref: '#/components/responses/Eraro' }
         '404': { $ref: '#/components/responses/Eraro' }

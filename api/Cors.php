@@ -53,7 +53,7 @@ class Cors {
             require_once __DIR__ . '/JWTAuth.php';
             $hasBearer = JWTAuth::getBearerToken() !== null;
             $hasAuthCookie = isset($_COOKIE[session_name()]) || isset($_COOKIE['access_token']);
-            if ($hasBearer || !$hasAuthCookie) {
+            if ($hasBearer || !$hasAuthCookie || self::sensKuketo()) {
                 return;
             }
             $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
@@ -68,6 +68,15 @@ class Cors {
         http_response_code(403);
         echo json_encode(array('error' => 'Origine non autorisée'));
         exit;
+    }
+
+    // Routes de l'application qui ne se servent pas du cookie : elles s'identifient par ce qu'elles envoient
+    // (identifiant et mot de passe, jeton de renouvellement, jeton Google, nouvel invité). L'application Android
+    // garde les cookies que lui renvoie le serveur (un PHPSESSID reçu en chargeant une page du site) : sans cette
+    // exception, sa connexion et le renouvellement de son jeton étaient refusés (403) jusqu'à sa réinstallation.
+    private static function sensKuketo() {
+        $path = isset($_GET['path']) ? trim((string)$_GET['path'], '/') : '';
+        return in_array($path, array('auth/token', 'auth/refresh', 'auth/gasto', 'auth/google/token'), true);
     }
 }
 ?>

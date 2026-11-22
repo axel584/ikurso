@@ -83,7 +83,8 @@ class EkzercadoAPI {
             "elektoj" => $elektoj,
             "partoj" => $partoj,
             "respondmodelo" => $vico["respondmodelo"] !== null && $vico["respondmodelo"] !== "" ? $vico["respondmodelo"] : null,
-            "bildo" => $vico["bildo"] !== "" ? $dosierujo."/".$vico["bildo"] : null,
+            // NULL en prod pour d'anciennes questions : l'application chargeait alors la page du cours comme image
+            "bildo" => trim((string)$vico["bildo"]) !== "" ? $dosierujo."/".$vico["bildo"] : null,
             "poentoj" => $vico["poentoj"] !== null ? (int)$vico["poentoj"] : null,
             // une question sans corrigé type n'est pas corrigée automatiquement, même dans un exercice qui l'est
             "korektebla" => $korektebla && trim((string)$vico["normaligita"]) !== "",

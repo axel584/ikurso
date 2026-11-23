@@ -19,7 +19,7 @@
         "backgroundImage": "./assets/android-icon-background.png"
       },
       "predictiveBackGestureEnabled": false,
-      "versionCode": 6,
+      "versionCode": 7,
       "blockedPermissions": [
         "android.permission.RECORD_AUDIO",
         "android.permission.FOREGROUND_SERVICE",

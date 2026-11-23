@@ -177,7 +177,8 @@ function Kampo({
       multiline={longa}
       numberOfLines={longa ? 5 : 1}
       accessibilityLabel={`Réponse ${demando.numero}`}
-      style={[longa && { minHeight: 110, textAlignVertical: 'top' }, bone && { borderColor: koloroj.verda, borderWidth: 2 }]}
+      // hauteur limitée : au-delà, le texte défile dans le champ, qui garde le curseur visible au-dessus du clavier
+      style={[longa && { minHeight: 110, maxHeight: 200, textAlignVertical: 'top' }, bone && { borderColor: koloroj.verda, borderWidth: 2 }]}
       onBlur={() => registri(valoro)}
       onSubmitEditing={longa ? undefined : () => registri(valoro)}
     />

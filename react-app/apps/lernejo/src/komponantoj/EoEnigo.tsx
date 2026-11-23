@@ -16,7 +16,7 @@ type Props = Omit<TextInputProps, 'value' | 'onChangeText'> & {
   ref?: Ref<EoEnigoRef>
 }
 
-export function EoEnigo({ valoro, onSxangxo, x2u, onFocus, onBlur, style, ref, ...aliaj }: Props) {
+export function EoEnigo({ valoro, onSxangxo, x2u, onFocus, onBlur, onContentSizeChange, style, ref, ...aliaj }: Props) {
   const [fokuso, setFokuso] = useState(false)
   const elekto = useRef({ start: valoro.length, end: valoro.length })
   const enigo = useRef<ComponentRef<typeof TextInput>>(null)
@@ -59,6 +59,12 @@ export function EoEnigo({ valoro, onSxangxo, x2u, onFocus, onBlur, style, ref, .
           setFokuso(true)
           fokusSxangxo()
           onFocus?.(e)
+        }}
+        // long texte : le champ grandit pendant la frappe ; la page le ramène au-dessus du clavier (9.6, remarque
+        // d'une bêta-testeuse : le texte tapé passait sous le clavier)
+        onContentSizeChange={(e) => {
+          if (fokuso) fokusSxangxo()
+          onContentSizeChange?.(e)
         }}
         onBlur={(e) => {
           if (literoPremata.current) return

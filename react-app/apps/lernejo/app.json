@@ -58,7 +58,8 @@
           "color": "#554E47"
         }
       ],
-      "expo-sqlite"
+      "expo-sqlite",
+      "@react-native-google-signin/google-signin"
     ]
   }
 }

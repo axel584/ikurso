@@ -5,13 +5,14 @@ import * as Linking from 'expo-linking'
 import { router } from 'expo-router'
 import { retadreso } from '@/api/kliento'
 import { Butono } from '@/komponantoj/Bazaj'
+import { GoogleButono } from '@/komponantoj/GoogleButono'
 import { useSeanco } from '@/seanco'
 import { koloroj, stiloj } from '@/stiloj'
 import { useKlavaroAlteco } from '@/utiloj/klavaro'
 
 export default function Ensaluti() {
   const klavaro = useKlavaroAlteco()
-  const { ensaluti, gasto } = useSeanco()
+  const { ensaluti, google, gasto } = useSeanco()
   const [identigilo, setIdentigilo] = useState('')
   const [pasvorto, setPasvorto] = useState('')
   const [eraro, setEraro] = useState<string | null>(null)
@@ -25,6 +26,15 @@ export default function Ensaluti() {
     setSendata(true)
     setEraro(null)
     const mesagxo = await ensaluti(identigilo.trim(), pasvorto)
+    setSendata(false)
+    if (mesagxo) setEraro(mesagxo)
+  }
+
+  // compte Google (#119) : connexion, ou création du compte (l'identifiant se choisit ensuite)
+  async function kunGoogle(credential: string) {
+    setSendata(true)
+    setEraro(null)
+    const mesagxo = await google(credential)
     setSendata(false)
     if (mesagxo) setEraro(mesagxo)
   }
@@ -69,6 +79,8 @@ export default function Ensaluti() {
           />
           {eraro && <Text style={stiloj.eraro}>{eraro}</Text>}
           <Butono teksto={sendata ? 'Connexion…' : 'Se connecter'} onPress={sendi} malsxaltita={sendata} />
+          <Text style={[stiloj.eta, { textAlign: 'center' }]}>ou</Text>
+          <GoogleButono onJxetono={kunGoogle} onEraro={setEraro} malsxaltita={sendata} />
         </View>
         {gasto ? (
           <Text style={[stiloj.eta, { textAlign: 'center', maxWidth: 400 }]}>

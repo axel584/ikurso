@@ -4,6 +4,7 @@ import { useState, type ComponentProps } from 'react'
 import { KeyboardAvoidingView, Platform, ScrollView, Text, TextInput, View } from 'react-native'
 import { router } from 'expo-router'
 import { Butono } from '@/komponantoj/Bazaj'
+import { GoogleButono } from '@/komponantoj/GoogleButono'
 import { useSeanco } from '@/seanco'
 import { koloroj, stiloj } from '@/stiloj'
 import { useKlavaroAlteco } from '@/utiloj/klavaro'
@@ -24,7 +25,7 @@ function Kampo({
 
 export default function Aligxi() {
   const klavaro = useKlavaroAlteco()
-  const { aligxi } = useSeanco()
+  const { aligxi, google } = useSeanco()
   const [enirnomo, setEnirnomo] = useState('')
   const [retadreso, setRetadreso] = useState('')
   const [pasvorto, setPasvorto] = useState('')
@@ -48,6 +49,15 @@ export default function Aligxi() {
     router.replace('/konfirmi')
   }
 
+  // compte Google (#119) : pas de mot de passe ni de mail d'activation ; l'identifiant se choisit ensuite
+  async function kunGoogle(credential: string) {
+    setSendata(true)
+    setEraro(null)
+    const mesagxo = await google(credential)
+    setSendata(false)
+    if (mesagxo) setEraro(mesagxo)
+  }
+
   return (
     <KeyboardAvoidingView style={stiloj.ekrano} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <ScrollView contentContainerStyle={[stiloj.enhavo, { gap: 18, paddingBottom: 16 + klavaro }]} keyboardShouldPersistTaps="handled">
@@ -59,6 +69,8 @@ export default function Aligxi() {
             Ce que vous avez fait jusqu’ici (réponses, sections terminées, vocabulaire) sera rattaché à votre compte.
           </Text>
         </View>
+        <GoogleButono onJxetono={kunGoogle} onEraro={setEraro} malsxaltita={sendata} />
+        <Text style={[stiloj.eta, { textAlign: 'center' }]}>ou avec une adresse e-mail et un mot de passe :</Text>
         <Kampo
           etikedo="Identifiant"
           helpo="Il sert à vous connecter et sera visible par votre correcteur."

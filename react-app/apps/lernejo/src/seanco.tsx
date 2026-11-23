@@ -3,7 +3,7 @@
 import { createContext, use, useEffect, useState, type PropsWithChildren } from 'react'
 import { useQueryClient } from '@tanstack/react-query'
 import type { Sxlosiloj } from '@ikurso/api-client'
-import { api, auxskulti, uzanto } from './api/kliento'
+import { api, auxskulti, datumoj, kliento, uzanto } from './api/kliento'
 import { forgesiCxion } from './api/kasxmemoro'
 import { nuligiRevizion, planigiRevizion } from './api/sciigoj'
 import type { KursoKodo } from './api/demandoj'
@@ -21,6 +21,11 @@ type Seanco = {
   komencis: () => void
   komenciGaste: (kurso: KursoKodo) => Promise<string | null>
   ensaluti: (identigilo: string, pasvorto: string) => Promise<string | null>
+  // compte Google (#119) : connexion, ou inscription suivie du choix de l'identifiant
+  google: (credential: string) => Promise<string | null>
+  // nouveau compte Google dont l'identifiant reste à choisir : la proposition du serveur ('' en attendant)
+  elektota: string | null
+  identigiloElektita: () => Promise<void>
   aligxi: (enirnomo: string, retadreso: string, pasvorto: string) => Promise<string | null>
   elsaluti: () => Promise<void>
 }
@@ -42,16 +47,25 @@ export function SeancoProvizanto({ children }: PropsWithChildren) {
   const [sxargxas, setSxargxas] = useState(true)
   const [u, setU] = useState<Uzanto | null>(null)
   const [komencota, setKomencota] = useState<KursoKodo | null>(null)
+  const [elektota, setElektota] = useState<string | null>(null)
 
   useEffect(() => {
     uzanto().then((nuna) => {
       setU(nuna)
       setSxargxas(false)
+      // application fermée après l'inscription par Google, avant le choix de l'identifiant (provisoire : google_…)
+      if (nuna && nuna.rajtoj !== 'G' && nuna.enirnomo.startsWith('google_')) {
+        setElektota('')
+        datumoj(kliento.GET('/auth/identigilo'))
+          .then((r) => setElektota(r.elektu_identigilon ? (r.propono ?? '') : null))
+          .catch(() => {})
+      }
     })
     // nouveaux jetons (connexion, renouvellement) ou plus de jetons du tout (refresh token refusé)
     return auxskulti((ensalutita) => {
       uzanto().then(setU)
       if (!ensalutita) {
+        setElektota(null)
         qc.clear()
         void forgesiCxion()
         void nuligiRevizion()
@@ -87,6 +101,23 @@ export function SeancoProvizanto({ children }: PropsWithChildren) {
       setU(data.user)
       return null
     },
+    async google(credential) {
+      const { data, error } = await api.google(credential)
+      if (!data) return mesagxo(error, 'Connexion Google impossible, merci de réessayer')
+      // comme ensaluti : le travail de l'invité a rejoint le compte, tout est à relire
+      qc.clear()
+      await forgesiCxion()
+      await nuligiRevizion()
+      void planigiRevizion()
+      setElektota(data.elektu_identigilon ? (data.propono ?? '') : null)
+      setU(data.user)
+      return null
+    },
+    elektota,
+    async identigiloElektita() {
+      setElektota(null)
+      setU(await uzanto())
+    },
     async aligxi(enirnomo, retadreso, pasvorto) {
       const { data, error } = await api.aligxi(enirnomo, retadreso, pasvorto)
       if (!data) return mesagxo(error, 'Inscription impossible')
@@ -97,6 +128,7 @@ export function SeancoProvizanto({ children }: PropsWithChildren) {
     async elsaluti() {
       await api.elsaluti()
       setU(null)
+      setElektota(null)
       qc.clear()
       await forgesiCxion()
       await nuligiRevizion()

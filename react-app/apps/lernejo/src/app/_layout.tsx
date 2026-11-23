@@ -36,7 +36,7 @@ export default function Radiko() {
 }
 
 function Navigilo() {
-  const { sxargxas, ensalutita, gasto } = useSeanco()
+  const { sxargxas, ensalutita, gasto, elektota } = useSeanco()
   // police du logo iKurso du site ; sans elle (hors ligne…), le logo s'affiche dans la police du système
   const [tiparoPreta, tiparoEraro] = useFonts({ NothingYouCouldDo_400Regular })
   // l'application dessine sous les barres d'Android (edge-to-edge) : le bas des écrans reste au-dessus des boutons
@@ -52,7 +52,8 @@ function Navigilo() {
       }}
     >
       {/* sans jetons, les adresses de l'élève mènent à l'accueil */}
-      <Stack.Protected guard={ensalutita} redirectTo="/bonvenon">
+      {/* inscription par Google (#119) : l'identifiant est choisi avant d'entrer dans les cours */}
+      <Stack.Protected guard={ensalutita && elektota === null} redirectTo={elektota !== null ? '/identigilo' : '/bonvenon'}>
         <Stack.Screen name="(lernanto)" options={{ headerShown: false, contentStyle: { backgroundColor: koloroj.fono } }} />
       </Stack.Protected>
       {/* arrivée dans l'application (#1089) : l'accueil, puis le choix du cours qui crée l'invité */}
@@ -73,6 +74,9 @@ function Navigilo() {
             contentStyle: { backgroundColor: koloroj.fono, paddingBottom: margxeno.bottom, paddingTop: gasto ? 0 : margxeno.top },
           }}
         />
+      </Stack.Protected>
+      <Stack.Protected guard={ensalutita && elektota !== null}>
+        <Stack.Screen name="identigilo" options={{ title: 'Votre identifiant', headerBackVisible: false, gestureEnabled: false }} />
       </Stack.Protected>
       <Stack.Protected guard={gasto}>
         <Stack.Screen name="aligxi" options={{ title: 'Créer mon compte' }} />

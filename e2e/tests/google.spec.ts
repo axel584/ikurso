@@ -181,3 +181,55 @@ test.describe('Application', () => {
     expect((await request.post(`${API}auth/identigilo`, { data: { enirnomo: 'x' } })).status()).toBe(401)
   })
 })
+
+// Version web de l'application lernejo (/lernejo) : même bouton de Google que sur le site, puis l'écran de choix
+// de l'identifiant. Le bouton appelle window.ikursoGoogle(respondo) ; on l'appelle directement avec notre jeton.
+test.describe('Application, version web', () => {
+  test.use({ viewport: { width: 412, height: 915 } })
+
+  async function googleEnAplikajxo(page: Page, uzanto: GoogleUzanto) {
+    await page.goto('lernejo/')
+    await page.getByText('J’ai déjà un compte').click()
+    await expect(page.getByTestId('google-butono')).toBeVisible()
+    await expect.poll(() => page.evaluate(() => typeof (window as any).ikursoGoogle)).toBe('function')
+    await page.evaluate((credential) => (window as any).ikursoGoogle({ credential }), googleJxetono(uzanto))
+  }
+
+  test('inscription : choix de l’identifiant proposé, puis les cours ; connexion suivante directe', async ({ page }) => {
+    await googleEnAplikajxo(page, MARIE)
+    const kampo = page.getByLabel('Identifiant', { exact: true })
+    await expect(kampo).toHaveValue('marie')
+    // identifiant déjà pris : message du serveur, on reste sur l'écran
+    await kampo.fill('korektanto1')
+    await page.getByText('Valider').click()
+    await expect(page.getByText('Un compte existe déjà avec cet identifiant')).toBeVisible()
+    await kampo.fill('mariino')
+    await page.getByText('Valider').click()
+    await expect(page.getByText('DLEK : Cours en 10 leçons')).toBeVisible()
+    expect(persono(`google_id='${MARIE.sub}'`)).toMatch(/\|mariino\|0\|P\|1\|/)
+    // rechargement : les jetons portent le nouvel identifiant, pas de retour au choix
+    await page.reload()
+    await expect(page.getByText('DLEK : Cours en 10 leçons')).toBeVisible()
+    await expect(page.getByLabel('Identifiant', { exact: true })).toHaveCount(0)
+
+    // déconnexion puis connexion avec Google : directement dans les cours
+    await page.evaluate(() => localStorage.clear())
+    await googleEnAplikajxo(page, MARIE)
+    await expect(page.getByText('DLEK : Cours en 10 leçons')).toBeVisible()
+    expect(sql("SELECT COUNT(*) FROM personoj WHERE retadreso='marie.e2e@gmail.com'")).toBe('1')
+  })
+
+  test('application relancée avant le choix : l’écran de choix revient', async ({ page }) => {
+    await googleEnAplikajxo(page, MARIE)
+    await expect(page.getByLabel('Identifiant', { exact: true })).toHaveValue('marie')
+    await page.reload()
+    await expect(page.getByLabel('Identifiant', { exact: true })).toHaveValue('marie')
+    await expect(page.getByText('DLEK : Cours en 10 leçons')).toHaveCount(0)
+  })
+
+  test('élève déjà inscrit avec la même adresse : son compte, sans choix d’identifiant', async ({ page }) => {
+    await googleEnAplikajxo(page, { sub: '100000000000000000009', email: 'lernanto1@mailinator.com' })
+    await expect(page.getByText('DLEK : Cours en 10 leçons')).toBeVisible()
+    expect(persono("enirnomo='lernanto1'")).toMatch(/\|lernanto1\|0\|P\|1\|100000000000000000009\|/)
+  })
+})

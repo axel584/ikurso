@@ -97,8 +97,8 @@ export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
         signal: request.signal,
       }
       const url = apiPhpUrl(request.url)
-      // un 401 de auth/token ou auth/register est un mauvais mot de passe ou un refus : pas de nouvel essai
-      if (!/\/api\/auth\/(token|register)$/.test(vojo)) kopioj.set(id, { url, init })
+      // un 401 de auth/token, auth/register ou auth/google/token est un mauvais mot de passe ou un refus : pas de nouvel essai
+      if (!/\/api\/auth\/(token|register|google\/token)$/.test(vojo)) kopioj.set(id, { url, init })
       return new Request(url, init)
     },
     async onResponse({ response, id }) {
@@ -131,6 +131,19 @@ export function kreiKlienton(radiko: string, sxlosilujo: Sxlosilujo) {
     async ensaluti(identigilo: string, pasvorto: string) {
       const { data, error } = await kliento.POST('/auth/token', { body: { identigilo, pasvorto } })
       if (data) await sxlosilujo.konservi(data)
+      return { data, error }
+    },
+    // Connexion ou inscription avec un compte Google (#119) : credential est le jeton d'identité remis par Google.
+    // Avec les jetons d'un invité, son travail rejoint le compte. elektu_identigilon : nouveau compte, identifiant à choisir
+    async google(credential: string) {
+      const { data, error } = await kliento.POST('/auth/google/token', { body: { credential } })
+      if (data) await sxlosilujo.konservi(data)
+      return { data, error }
+    },
+    // Choix de l'identifiant après l'inscription par Google ; les jetons, renouvelés, portent ensuite ce nom
+    async elektiIdentigilon(enirnomo: string) {
+      const { data, error } = await kliento.POST('/auth/identigilo', { body: { enirnomo } })
+      if (data) await renoviguFoje()
       return { data, error }
     },
     // « Commencer le cours » sans compte : les jetons d'un invité

@@ -110,8 +110,12 @@ export default function Sekcio() {
                       ludi={ludi}
                       malfermi={malfermi}
                       // pas de défilement dans le morceau : scrollEnabled pour iOS, nestedScrollEnabled pour Android
-                      // (vrai par défaut : la WebView y garde le geste et la page ne défile plus)
-                      dom={{ matchContents: true, scrollEnabled: false, nestedScrollEnabled: false }}
+                      // (vrai par défaut : la WebView y garde le geste et la page ne défile plus).
+                      // matchContents donne au cadre la hauteur ET la largeur mesurées de la page ; la largeur reste
+                      // celle de l'écran (containerStyle passe après) : sur le téléphone d'une bêta-testeuse (9.10,
+                      // police agrandie), le cadre avait pris environ deux fois la largeur de l'écran, la page s'était
+                      // mise en page sur cette largeur et tout le texte sortait des deux côtés
+                      dom={{ matchContents: true, containerStyle: { width: '100%' }, scrollEnabled: false, nestedScrollEnabled: false }}
                     />
                   )
                 case 'ekzerco': {

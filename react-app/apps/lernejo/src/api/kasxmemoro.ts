@@ -1,12 +1,11 @@
 // Cache local (SQLite) des réponses de l'API déjà vues, en prévision du mode hors ligne (#1123).
-// - réponse de moins d'une semaine : prise dans le cache, sans appeler le serveur ;
-// - plus vieille, ou absente : demandée au serveur, puis gardée ;
-// - serveur injoignable (pas de réseau, ou erreur 5xx) : le cache, même trop vieux, plutôt qu'une erreur.
+// - toujours demandée d'abord au serveur, puis gardée : ce que l'élève fait sur le site (sections terminées, leçon
+//   envoyée, correction reçue) apparaît tout de suite dans l'application. Avant, une réponse de moins d'une semaine
+//   était prise dans le cache sans appeler le serveur, et le sommaire restait en retard (remarque d'une bêta-testeuse) ;
+// - serveur injoignable (pas de réseau, ou erreur 5xx) : le cache, même vieux, plutôt qu'une erreur.
 // Chaque ligne appartient à un utilisateur (persono id) : un autre compte sur le même téléphone ne la voit pas.
 import * as SQLite from 'expo-sqlite'
 import { ApiEraro, uzanto } from './kliento'
-
-const SEMAJNO = 7 * 24 * 3600 * 1000
 
 let datumbazo: Promise<SQLite.SQLiteDatabase> | null = null
 
@@ -35,23 +34,23 @@ export async function kasxmemorita<T>(sxlosilo: string, legi: () => Promise<T>):
   const u = await uzanto()
   // personne de connecté : rien à garder
   if (!u) return legi()
-  let linio: { datumoj: string; dato: number } | null = null
-  try {
-    const d = await db()
-    linio = await d.getFirstAsync<{ datumoj: string; dato: number }>(
-      'SELECT datumoj, dato FROM kasxmemoro WHERE persono = ? AND sxlosilo = ?',
-      u.id,
-      sxlosilo,
-    )
-  } catch {
-    // cache illisible : on fait comme s'il était vide
-  }
-  if (linio && Date.now() - linio.dato < SEMAJNO) return JSON.parse(linio.datumoj) as T
   let datumoj: T
   try {
     datumoj = await legi()
   } catch (e) {
-    if (linio && senReto(e)) return JSON.parse(linio.datumoj) as T
+    if (!senReto(e)) throw e
+    let linio: { datumoj: string } | null = null
+    try {
+      const d = await db()
+      linio = await d.getFirstAsync<{ datumoj: string }>(
+        'SELECT datumoj FROM kasxmemoro WHERE persono = ? AND sxlosilo = ?',
+        u.id,
+        sxlosilo,
+      )
+    } catch {
+      // cache illisible : on fait comme s'il était vide
+    }
+    if (linio) return JSON.parse(linio.datumoj) as T
     throw e
   }
   try {
@@ -69,7 +68,7 @@ export async function kasxmemorita<T>(sxlosilo: string, legi: () => Promise<T>):
   return datumoj
 }
 
-// Données changées (section terminée, leçon envoyée) ou rechargement demandé : la prochaine lecture va au serveur.
+// Données changées (section terminée, leçon envoyée) : lignes marquées anciennes (chaque lecture va désormais au serveur).
 // Les lignes restent, pour servir encore si le réseau manque.
 export async function malfresxigi(...prefiksoj: string[]): Promise<void> {
   const u = await uzanto()
@@ -80,7 +79,7 @@ export async function malfresxigi(...prefiksoj: string[]): Promise<void> {
       await d.runAsync("UPDATE kasxmemoro SET dato = 0 WHERE persono = ? AND sxlosilo LIKE ? ESCAPE '\\'", u.id, p.replace(/[\\%_]/g, '\\$&') + '%')
     }
   } catch {
-    // rien à faire : au pire, les données se rafraîchiront au bout d'une semaine
+    // rien à faire : la prochaine lecture va de toute façon au serveur
   }
 }
 

@@ -2,17 +2,17 @@
 import { Pressable, RefreshControl, ScrollView, Text, View } from 'react-native'
 import { Link } from 'expo-router'
 import { useKursoj } from '@/api/demandoj'
-import { malfresxigi } from '@/api/kasxmemoro'
 import { Stato } from '@/komponantoj/Bazaj'
 import { koloroj, stiloj } from '@/stiloj'
 
 export default function Kursoj() {
-  const { data, isLoading, error, refetch, isRefetching } = useKursoj()
+  const { data, isLoading, error, refetch, isRefetching, isPlaceholderData } = useKursoj()
   return (
     <ScrollView
       style={stiloj.ekrano}
       contentContainerStyle={stiloj.enhavo}
-      refreshControl={<RefreshControl refreshing={isRefetching} onRefresh={() => void malfresxigi('kursoj').then(() => refetch())} />}
+      // à l'ouverture, la copie gardée s'affiche pendant la relecture : pas de roue pour ça
+      refreshControl={<RefreshControl refreshing={isRefetching && !isPlaceholderData} onRefresh={() => void refetch()} />}
     >
       <Stato sxargxas={isLoading} eraro={error}>
         {data?.kursoj.map((k) => {

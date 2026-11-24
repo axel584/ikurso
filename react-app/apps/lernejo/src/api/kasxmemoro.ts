@@ -1,8 +1,11 @@
 // Cache local (SQLite) des réponses de l'API déjà vues, en prévision du mode hors ligne (#1123).
-// - toujours demandée d'abord au serveur, puis gardée : ce que l'élève fait sur le site (sections terminées, leçon
-//   envoyée, correction reçue) apparaît tout de suite dans l'application. Avant, une réponse de moins d'une semaine
-//   était prise dans le cache sans appeler le serveur, et le sommaire restait en retard (remarque d'une bêta-testeuse) ;
-// - serveur injoignable (pas de réseau, ou erreur 5xx) : le cache, même vieux, plutôt qu'une erreur.
+// - à l'ouverture, l'écran affiche tout de suite la copie gardée (legiLoke) pendant qu'il redemande au serveur ;
+// - toujours redemandée au serveur, puis gardée : ce que l'élève fait sur le site (sections terminées, leçon
+//   envoyée, correction reçue) apparaît dans l'application une ou deux secondes après. Avant, une réponse de moins
+//   d'une semaine était prise dans le cache sans appeler le serveur, et le sommaire restait en retard (remarque d'une
+//   bêta-testeuse) ;
+// - serveur injoignable (pas de réseau, ou erreur 5xx) : le cache, même vieux, plutôt qu'une erreur ;
+// - changement fait dans l'application (section terminée) : la copie est corrigée sur place (skribi), sans attendre.
 // Chaque ligne appartient à un utilisateur (persono id) : un autre compte sur le même téléphone ne la voit pas.
 import * as SQLite from 'expo-sqlite'
 import { ApiEraro, uzanto } from './kliento'
@@ -30,29 +33,27 @@ function senReto(e: unknown): boolean {
   return !(e instanceof ApiEraro) || e.stato >= 500
 }
 
-export async function kasxmemorita<T>(sxlosilo: string, legi: () => Promise<T>): Promise<T> {
+// Copie gardée sur le téléphone, ou null : pour afficher l'écran sans attendre le serveur.
+export async function legiLoke<T>(sxlosilo: string): Promise<T | null> {
   const u = await uzanto()
-  // personne de connecté : rien à garder
-  if (!u) return legi()
-  let datumoj: T
+  if (!u) return null
   try {
-    datumoj = await legi()
-  } catch (e) {
-    if (!senReto(e)) throw e
-    let linio: { datumoj: string } | null = null
-    try {
-      const d = await db()
-      linio = await d.getFirstAsync<{ datumoj: string }>(
-        'SELECT datumoj FROM kasxmemoro WHERE persono = ? AND sxlosilo = ?',
-        u.id,
-        sxlosilo,
-      )
-    } catch {
-      // cache illisible : on fait comme s'il était vide
-    }
-    if (linio) return JSON.parse(linio.datumoj) as T
-    throw e
+    const d = await db()
+    const linio = await d.getFirstAsync<{ datumoj: string }>(
+      'SELECT datumoj FROM kasxmemoro WHERE persono = ? AND sxlosilo = ?',
+      u.id,
+      sxlosilo,
+    )
+    return linio ? (JSON.parse(linio.datumoj) as T) : null
+  } catch {
+    return null
   }
+}
+
+// Remplace la copie gardée (réponse du serveur, ou changement fait dans l'application).
+export async function skribi(sxlosilo: string, datumoj: unknown): Promise<void> {
+  const u = await uzanto()
+  if (!u) return
   try {
     const d = await db()
     await d.runAsync(
@@ -65,22 +66,20 @@ export async function kasxmemorita<T>(sxlosilo: string, legi: () => Promise<T>):
   } catch {
     // le cache est un plus : l'écran a ses données même s'il n'a pas pu les garder
   }
-  return datumoj
 }
 
-// Données changées (section terminée, leçon envoyée) : lignes marquées anciennes (chaque lecture va désormais au serveur).
-// Les lignes restent, pour servir encore si le réseau manque.
-export async function malfresxigi(...prefiksoj: string[]): Promise<void> {
-  const u = await uzanto()
-  if (!u) return
+export async function kasxmemorita<T>(sxlosilo: string, legi: () => Promise<T>): Promise<T> {
+  let datumoj: T
   try {
-    const d = await db()
-    for (const p of prefiksoj) {
-      await d.runAsync("UPDATE kasxmemoro SET dato = 0 WHERE persono = ? AND sxlosilo LIKE ? ESCAPE '\\'", u.id, p.replace(/[\\%_]/g, '\\$&') + '%')
-    }
-  } catch {
-    // rien à faire : la prochaine lecture va de toute façon au serveur
+    datumoj = await legi()
+  } catch (e) {
+    if (!senReto(e)) throw e
+    const kopio = await legiLoke<T>(sxlosilo)
+    if (kopio !== null) return kopio
+    throw e
   }
+  await skribi(sxlosilo, datumoj)
+  return datumoj
 }
 
 // Déconnexion, suppression du compte, changement d'élève : plus rien ne reste sur le téléphone.

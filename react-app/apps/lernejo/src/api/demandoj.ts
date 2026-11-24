@@ -1,26 +1,76 @@
 // Données des écrans (TanStack Query) : une fonction par appel de l'API élève.
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { useMutation, useQuery, useQueryClient, type QueryClient } from '@tanstack/react-query'
 import type { components, Sekcio } from '@ikurso/api-client'
 import { datumoj, kliento } from './kliento'
-import { kasxmemorita, malfresxigi } from './kasxmemoro'
+import { kasxmemorita, legiLoke, skribi } from './kasxmemoro'
 
 export type KursoKodo = components['schemas']['KursoKodo']
+type Kursoj = Awaited<ReturnType<typeof legiKursojn>>
+type Kurso = Awaited<ReturnType<typeof legiKurson>>
+
+const legiKursojn = () => datumoj(kliento.GET('/lernado/kursoj'))
+const legiKurson = (kodo: KursoKodo) => datumoj(kliento.GET('/lernado/kursoj/{kurso}', { params: { path: { kurso: kodo } } }))
+
+// Copie gardée sur le téléphone (#1123), lue une fois par ouverture de l'application : affichée tout de suite,
+// pendant que la vraie requête relit le serveur (sinon l'écran attend le réseau, long en 3G).
+function useLokaKopio<T>(sxlosilo: string, ebla = true) {
+  return useQuery({
+    queryKey: ['loka', sxlosilo],
+    queryFn: () => legiLoke<T>(sxlosilo),
+    enabled: ebla,
+    staleTime: Infinity,
+    gcTime: 0,
+  }).data ?? undefined
+}
 
 export function useKursoj() {
+  const kopio = useLokaKopio<Kursoj>('kursoj')
   return useQuery({
     queryKey: ['kursoj'],
-    // gardé sur le téléphone une semaine, et au-delà quand le réseau manque (#1123)
-    queryFn: () => kasxmemorita('kursoj', () => datumoj(kliento.GET('/lernado/kursoj'))),
+    // toujours relu sur le serveur, gardé pour l'ouverture suivante et pour quand le réseau manque
+    queryFn: () => kasxmemorita('kursoj', legiKursojn),
+    placeholderData: kopio,
   })
 }
 
 export function useKurso(kodo: KursoKodo | undefined) {
+  const kopio = useLokaKopio<Kurso>('kurso/' + kodo, kodo !== undefined)
   return useQuery({
     queryKey: ['kurso', kodo],
-    queryFn: () =>
-      kasxmemorita('kurso/' + kodo, () => datumoj(kliento.GET('/lernado/kursoj/{kurso}', { params: { path: { kurso: kodo! } } }))),
+    queryFn: () => kasxmemorita('kurso/' + kodo, () => legiKurson(kodo!)),
     enabled: kodo !== undefined,
+    placeholderData: kopio,
   })
+}
+
+// Section terminée dans l'application : cochée tout de suite dans le sommaire (mémoire et copie du téléphone),
+// sans attendre la relecture qui suit ; le cours et sa leçon passent à « terminée » si c'était la dernière.
+function markiFinita(qc: QueryClient, id: number) {
+  let kurso: KursoKodo | null = null
+  for (const [sxlosilo, k] of qc.getQueriesData<Kurso>({ queryKey: ['kurso'] })) {
+    if (!k || !k.lecionoj.some((l) => l.sekcioj.some((s) => s.id === id && !s.finita))) continue
+    kurso = k.kodo
+    const nova: Kurso = {
+      ...k,
+      lecionoj: k.lecionoj.map((l) => {
+        if (!l.sekcioj.some((s) => s.id === id)) return l
+        const sekcioj = l.sekcioj.map((s) => (s.id === id ? { ...s, finita: true } : s))
+        return { ...l, sekcioj, stato: sekcioj.every((s) => s.finita) ? 'farita' : l.stato }
+      }),
+    }
+    qc.setQueryData(sxlosilo, nova)
+    void skribi('kurso/' + k.kodo, nova)
+  }
+  if (!kurso) return
+  const kursoj = qc.getQueryData<Kursoj>(['kursoj'])
+  if (kursoj) {
+    const nova: Kursoj = {
+      ...kursoj,
+      kursoj: kursoj.kursoj.map((k) => (k.kodo === kurso ? { ...k, finitaj_sekcioj: k.finitaj_sekcioj + 1 } : k)),
+    }
+    qc.setQueryData(['kursoj'], nova)
+    void skribi('kursoj', nova)
+  }
 }
 
 export function useSekcio(id: number) {
@@ -88,9 +138,9 @@ export function useFini() {
   return useMutation({
     mutationFn: (peto: { id: number; ekdato: number }) =>
       datumoj(kliento.POST('/lernado/sekcioj/{id}/fini', { params: { path: { id: peto.id } }, body: { ekdato: peto.ekdato } })),
-    onSuccess: async (_d, peto) => {
-      // la progression a changé : le cache des cours ne doit plus servir tel quel
-      await malfresxigi('kursoj', 'kurso/')
+    onSuccess: (_d, peto) => {
+      // la progression a changé : cochée tout de suite, puis relue sur le serveur (le réseau est là : on vient de l'utiliser)
+      markiFinita(qc, peto.id)
       qc.invalidateQueries({ queryKey: ['sekcio', peto.id] })
       qc.invalidateQueries({ queryKey: ['kurso'] })
       qc.invalidateQueries({ queryKey: ['kursoj'] })
@@ -111,8 +161,7 @@ export function useSendi() {
           body: { komento: peto.komento, ...(peto.elekto ? { elekto: peto.elekto, teksto: peto.teksto ?? '' } : {}) },
         }),
       ),
-    onSuccess: async () => {
-      await malfresxigi('kursoj', 'kurso/')
+    onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['kurso'] })
       qc.invalidateQueries({ queryKey: ['kursoj'] })
       qc.invalidateQueries({ queryKey: ['korekto'] })
@@ -128,8 +177,7 @@ export function useSxangxiKorektadon() {
   return useMutation({
     mutationFn: (peto: { kurso: KursoKodo; al: 'ia' | 'volontulo' }) =>
       datumoj(kliento.POST('/lernado/kursoj/{kurso}/korektado', { params: { path: { kurso: peto.kurso } }, body: { al: peto.al } })),
-    onSuccess: async () => {
-      await malfresxigi('kursoj', 'kurso/')
+    onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['kursoj'] })
       qc.invalidateQueries({ queryKey: ['resumo'] })
     },

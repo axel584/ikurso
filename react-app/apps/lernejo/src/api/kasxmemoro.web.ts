@@ -5,6 +5,10 @@ export async function kasxmemorita<T>(_sxlosilo: string, legi: () => Promise<T>)
   return legi()
 }
 
-export async function malfresxigi(..._prefiksoj: string[]): Promise<void> {}
+export async function legiLoke<T>(_sxlosilo: string): Promise<T | null> {
+  return null
+}
+
+export async function skribi(_sxlosilo: string, _datumoj: unknown): Promise<void> {}
 
 export async function forgesiCxion(): Promise<void> {}

@@ -24,6 +24,13 @@ export default function HtmlEnhavo({ html, radiko, ludi, malfermi }: Props) {
   useEffect(() => {
     const elemento = ujo.current
     if (!elemento) return
+    spacoj(elemento)
+    linioj(elemento)
+  }, [absoluta])
+
+  useEffect(() => {
+    const elemento = ujo.current
+    if (!elemento) return
     elemento.querySelectorAll('a.sm2_button').forEach((a) => a.setAttribute('aria-label', 'Écouter'))
     const klako = (e: MouseEvent) => {
       const ligilo = (e.target as Element).closest('a')
@@ -68,6 +75,50 @@ function ikonoj(html: string): string {
     (_, _c: string, nomo: string) =>
       IKONOJ[nomo] ? `<span class="ikono" aria-hidden="true">${IKONOJ[nomo]}</span>` : '',
   )
+}
+
+// Espace insécable avant « : ; ? ! » et à l'intérieur des guillemets, comme en typographie française : dans une colonne
+// étroite, « Énoncé : » passait sur deux lignes, le deux-points seul en dessous.
+function spacoj(elemento: HTMLElement) {
+  const iranto = document.createTreeWalker(elemento, NodeFilter.SHOW_TEXT)
+  for (let n = iranto.nextNode(); n; n = iranto.nextNode()) {
+    const t = n as Text
+    const nova = t.data.replace(/ ([:;?!»])/g, ' $1').replace(/« /g, '« ')
+    if (nova !== t.data) t.data = nova
+  }
+}
+
+// Grille du site sur un écran de téléphone : les colonnes d'une ligne (col s1 + s5 + s2 + s2 + s2, ou s2 « Énoncé : »
+// + s10) ont chacune une largeur fixe en pourcentage, souvent plus étroite que leur mot le plus long sur le téléphone ;
+// la ligne débordait et la dernière colonne passait seule à la ligne suivante (« majo » sous « aj » dans la 4.4, le
+// texte sous « Énoncé : » dans la 4.1). Les colonnes qui forment une ligne (12 unités au plus, décalage compris) sont
+// regroupées ; dans le groupe, chacune prend sa part de la largeur (2, 5, 10…) sans descendre sous son mot le plus
+// long, la plus large cédant la place aux mots des autres. Rien ne change sur un écran plus large (classes m et l).
+function linioj(elemento: HTMLElement) {
+  if (window.innerWidth > 600) return
+  elemento.querySelectorAll<HTMLElement>('.row').forEach((vico) => {
+    const kolumnoj = Array.from(vico.children) as HTMLElement[]
+    if (kolumnoj.length === 0 || kolumnoj.some((k) => !k.classList.contains('col'))) return
+    let linio: HTMLElement | null = null
+    let sumo = 0
+    for (const k of kolumnoj) {
+      const n = unuoj(k, 's')
+      if (!linio || sumo + n + unuoj(k, 'offset-s', 0) > 12) {
+        linio = document.createElement('div')
+        linio.className = 'linio'
+        vico.insertBefore(linio, k)
+        sumo = 0
+      }
+      linio.appendChild(k)
+      sumo += n + unuoj(k, 'offset-s', 0)
+      k.style.flex = `${n} 1 0%`
+    }
+  })
+}
+
+function unuoj(k: HTMLElement, prefikso: string, defauxlto = 12): number {
+  const m = k.className.match(new RegExp(`(?:^|\\s)${prefikso}(\\d+)(?:\\s|$)`))
+  return m ? Number(m[1]) : defauxlto
 }
 
 // Un tableau plus large que l'écran (corrélatifs à 5 colonnes…) faisait glisser toute la page de gauche à droite
@@ -123,6 +174,7 @@ html,body{margin:0;padding:0;background:transparent;max-width:100%;overflow-x:hi
    agrandie) : la grille passe à la ligne au lieu que le mot déborde sur la colonne voisine ou hors de l'écran */
 .ikurso-enhavo .col{width:100%;min-width:min-content;padding:0 .5rem;overflow-wrap:normal}
 ${kolumnoj('s')}
+.ikurso-enhavo .linio{display:flex;flex-wrap:wrap;width:100%}
 @media (min-width:601px){${kolumnoj('m')}}
 @media (min-width:993px){${kolumnoj('l')}}
 .ikurso-enhavo .center,.ikurso-enhavo .center-align{text-align:center}
